@@ -12,5 +12,18 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penx/govuk-react.git"
+  },
+  "author": "Alasdair McLeay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/penx/govuk-react/issues"
+  },
+  "homepage": "https://github.com/penx/govuk-react#readme"
 }
