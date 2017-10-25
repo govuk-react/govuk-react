@@ -1,9 +1,6 @@
 # govuk-react
 
-A port of the [govuk-frontend](https://github.com/alphagov/govuk-frontend)
-https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_buttons.scss
-
- [components](https://github.com/alphagov/govuk-frontend/tree/master/src/components) for [React](https://reactjs.org) using [styled-components](https://www.styled-components.com).
+A port of the [govuk-frontend](https://github.com/alphagov/govuk-frontend) [components](https://github.com/alphagov/govuk-frontend/tree/master/src/components) for [React](https://reactjs.org) using [styled-components](https://www.styled-components.com).
 
 ## Usage
 

@@ -1,3 +1,5 @@
+// See https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_buttons.scss
+// and https://github.com/alphagov/govuk-frontend/tree/master/src/components/button
 import styled from 'styled-components'
 
 const Button = styled.button`
