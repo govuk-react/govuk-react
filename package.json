@@ -10,17 +10,23 @@
   },
   "scripts": {
     "start": "start-storybook -p 9009 -s public",
-    "build": "react-scripts build",
+    "build": "babel src -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "prepare": "npm run build"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
-  "main": "index.js",
+  "main": "build/index.js",
   "devDependencies": {
-    "@storybook/react": "^3.2.13",
     "@storybook/addon-actions": "^3.2.13",
-    "@storybook/addon-links": "^3.2.13"
+    "@storybook/addon-links": "^3.2.13",
+    "@storybook/react": "^3.2.13",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1"
   },
   "repository": {
     "type": "git",

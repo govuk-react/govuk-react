@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import styled from 'styled-components'
 
 const Example = styled.h1`

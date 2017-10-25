@@ -1,2 +1,2 @@
-export Example from './components/example'
-export Button from './components/button'
+export {default as Example} from './components/example'
+export {default as Button} from './components/button'
