@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
     "react-scripts": "1.0.14",
     "styled-components": "^2.2.2"
   },
@@ -12,11 +12,17 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "@storybook/react": "^3.2.13",
+    "@storybook/addon-actions": "^3.2.13",
+    "@storybook/addon-links": "^3.2.13"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/penx/govuk-react.git"
