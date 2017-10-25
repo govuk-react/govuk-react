@@ -15,7 +15,7 @@
     "build-storybook": "build-storybook -s public",
     "prepare": "npm run build"
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "description": "A port of the govuk-frontend components for React using styled-components.",
   "main": "build/index.js",
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.13",
