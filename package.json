@@ -13,6 +13,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "build-storybook": "build-storybook -s public",
+    "deploy-storybook": "storybook-to-ghpages",
     "prepare": "npm run build"
   },
   "description": "A port of the govuk-frontend components for React using styled-components.",
@@ -21,6 +22,7 @@
     "@storybook/addon-actions": "^3.2.13",
     "@storybook/addon-links": "^3.2.13",
     "@storybook/react": "^3.2.13",
+    "@storybook/storybook-deployer": "^2.0.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
