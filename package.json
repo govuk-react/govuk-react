@@ -8,7 +8,7 @@
     "styled-components": "^2.2.2"
   },
   "scripts": {
-    "start": "start-storybook -p 9009 -s public",
+    "start": "start-storybook -p 9009",
     "build": "babel src -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
@@ -27,7 +27,8 @@
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-1": "^6.24.1"
+    "babel-preset-stage-1": "^6.24.1",
+    "normalize.css": "^7.0.0"
   },
   "repository": {
     "type": "git",
