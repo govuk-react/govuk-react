@@ -15,7 +15,7 @@
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "prepare": "npm run build",
-    "patch": "npm run build && npm run test && npm run build-storybook && npm version patch && npm publish && npm deploy-storybook"
+    "patch": "npm run build && npm run test && npm run build-storybook && npm version patch && npm publish && npm run deploy-storybook"
   },
   "description": "A port of the govuk-frontend components for React using styled-components.",
   "main": "build/index.js",
