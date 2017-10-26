@@ -36,11 +36,13 @@ float: left;
 
 const Breadcrumb = ({children, ...props}) => (<BreadcrumbContainer {...props}>
   <BreadcrumbList>
-    {children.map(child =>
+    {children.length && children.map ? children.map(child =>
       <BreadcrumbListItem>
         {child}
       </BreadcrumbListItem>
-    )}
+    ) : <BreadcrumbListItem>
+      {children}
+    </BreadcrumbListItem>}
   </BreadcrumbList>
 </BreadcrumbContainer>)
 
