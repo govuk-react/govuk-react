@@ -7,7 +7,7 @@
 import styled from 'styled-components'
 import {css} from 'styled-components'
 
-import { BUTTON_COLOUR, WHITE } from '../../constants/colours'
+import { BUTTON_COLOUR, WHITE } from 'govuk-colours'
 
 const Button = styled.button`
   -webkit-appearance: none;

@@ -1,5 +1,3 @@
-export * as colours from "./colours"
-
 export const BORDER_WIDTH_MOBILE = "4px";
 export const BORDER_WIDTH_TABLET = "5px";
 export const BORDER_WIDTH_FORM_ELEMENT = "2px";

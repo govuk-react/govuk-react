@@ -2,6 +2,7 @@
   "name": "govuk-react",
   "version": "0.1.3",
   "dependencies": {
+    "govuk-colours": "^1.0.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
     "react-scripts": "1.0.14",
@@ -9,7 +10,7 @@
   },
   "scripts": {
     "start": "start-storybook -p 9009",
-    "build": "babel src -d build",
+    "build": "babel --source-maps -d lib/ src/",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "build-storybook": "build-storybook",
@@ -18,7 +19,8 @@
     "patch": "npm run build && npm run test && npm run build-storybook && npm version patch && npm publish && npm run deploy-storybook"
   },
   "description": "A port of the govuk-frontend components for React using styled-components.",
-  "main": "build/index.js",
+  "main": "lib/index.js",
+  "module": "src/index.js",
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.13",
     "@storybook/addon-links": "^3.2.13",
