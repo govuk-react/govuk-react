@@ -30,9 +30,13 @@ const Button = styled.button`
     text-transform: none;
     font-size: 24px;
     line-height: 1.25;
+    padding: 0.36842em 0.84211em 0.21053em;
+  `}
+  ${props => props.start && props.iconUrl && css`
+    background-image: url(${({iconUrl}) => iconUrl});
     background-repeat: no-repeat;
     background-position: 100% 50%;
-    padding: 0.36842em 0.84211em 0.21053em;
+    padding-right: 2.15789em;
   `}
   ${props => props.disabled && css`
     opacity: 0.5;
