@@ -1,38 +1,44 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/components/breadcrumb/_breadcrumb.scss
 import React from 'react'
-import styled from 'styled-components'
-import {css} from 'styled-components'
+import glamorous from 'glamorous'
 
 
-const BreadcrumbContainer = styled.div`
-padding-top: 15px;
-padding-bottom: 15px;
-font-family: "nta", Arial, sans-serif;
--webkit-font-smoothing: antialiased;
-`;
+const BreadcrumbContainer = glamorous.div({
+backgroundColor: '#999',
+color: '#fff',
+paddingTop: '15px',
+paddingBottom: '15px',
+fontFamily: 'nta, Arial, sans-serif',
+WebkitFontSmoothing: 'antialiased'
+});
 
-const BreadcrumbList = styled.ol`
-margin: 0;
-padding: 0;
-list-style-type: none;
-`;
+const BreadcrumbList = glamorous.ul({
+  margin: 0,
+  padding: 0,
+  listStyleType: 'none',
+  display: 'flex',
+});
 
-const BreadcrumbListItem = styled.li`
-font-size: 16px;
-line-height: 1.25;
-font-family: "nta", Arial, sans-serif;
-font-weight: 400;
-text-transform: none;
-font-size: 14px;
-line-height: 1.14286;
-margin-bottom: 5px;
-margin-left: 10px;
-padding-left: 15px;
-float: left;
-> a {
-  color: #0b0c0c;
-}
-`;
+const BreadcrumbListItem = glamorous.li({
+  fontSize: '16px',
+  lineHeight: '1.25',
+  fontFamily: 'nta, Arial, sans-serif',
+  fontWeight: '400',
+  textTransform: 'none',
+  fontSize: '14px',
+  lineHeight: '1.14286',
+  marginBottom: '5px',
+  marginLeft: '10px',
+  paddingLeft: '15px',
+  '> a': {
+      color: '#fff',
+      textDecoration: 'none',
+      ':hover': {
+        color: '#333'
+      }
+  }
+});
+
 
 const Breadcrumb = ({children, ...props}) => (<BreadcrumbContainer {...props}>
   <BreadcrumbList>
