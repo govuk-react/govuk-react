@@ -25,34 +25,21 @@ const GridCol = glamorous.div({
   // margin: '0 15px',
   border: '4px solid white',
   width: '100%',
-  '> p': {
-  }
 },
-function(props) {
-  if (props.showContent) {
-    return {
-      textIndent: '0',
-      backgroundColor: '',
-      backgroundImage: ''
-    }
-  }
-  if (props.columnOneThird) {
-    return {
-      width: '33.3333%'
-    }
-  }
-  if (props.columnTwoThirds) {
-    return {
-      width: '66.6667%'
-    }
-  }
-  if (props.columnOneQuarter) {
-    return {
-      width: '50%'
-    }
-  }
-}
-);
+({showContent}) => ({
+  textIndent: showContent ? '0' : GridCol.textIndent,
+  backgroundColor: showContent ? '' : GridCol.backgroundColor,
+  backgroundImage: showContent ? '' : GridCol.backgroundImage
+}),
+({columnOneThird}) => ({
+  width: columnOneThird ? '33.3333%' : GridCol.width
+}),
+({columnTwoThirds}) => ({
+  width: columnTwoThirds ? '66.6667%' : GridCol.width
+}),
+({columnOneQuarter}) => ({
+  width: columnOneQuarter ? '50%' : GridCol.width
+}));
 
 const Layout = ({children, ...props}) => (
   <RowWrapper {...props}>

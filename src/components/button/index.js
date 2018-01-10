@@ -35,22 +35,18 @@ const Button = glamorous.button(
       outline: `3px solid ${YELLOW}`
     }
   },
-  props => (
-    {
-      fontWeight: props.start ? '700' : Button.fontWeight,
-      fontSize: props.start ? '24px' : Button.fontSize,
-      lineHeight: props.start ? '1.25' : Button.lineHeight,
-      padding: props.start ? '0.36842em 0.84211em 0.21053em' : Button.padding
-    }
-  ),
-  props => (
-    {
-      backgroundImage: props.iconUrl ? `url( ${props.iconUrl})` : '',
-      backgroundRepeat: props.iconUrl ? 'no-repeat' : '',
-      backgroundPosition: props.iconUrl ? '100% 50%' : '',
-      paddingRight: props.iconUrl ? '2.15789em' : ''
-    }
-  )
+  ({start}) => ({
+    fontWeight: start ? '700' : Button.fontWeight,
+    fontSize: start ? '24px' : Button.fontSize,
+    lineHeight: start ? '1.25' : Button.lineHeight,
+    padding: start ? '0.36842em 0.84211em 0.21053em' : Button.padding
+  }),
+  ({iconUrl}) => ({
+    backgroundImage: iconUrl ? `url( ${iconUrl})` : '',
+    backgroundRepeat: iconUrl ? 'no-repeat' : '',
+    backgroundPosition: iconUrl ? '100% 50%' : '',
+    paddingRight: iconUrl ? '2.15789em' : ''
+  })
 );
 
 Button.defaultProps = {
