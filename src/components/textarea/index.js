@@ -70,7 +70,7 @@ const Label = glamorous.label({
 const Textarea = ({children, ...props}) => (
   <TextareaWrapper>
     <Label htmlFor={props.inputId}>{children}</Label>
-    <TextareaField type="text" id={props.inputId} {...props} />
+    <TextareaField type="text" rows="5" id={props.inputId} {...props} />
   </TextareaWrapper>
 )
 
