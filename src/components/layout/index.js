@@ -13,6 +13,7 @@ const RowWrapper = glamorous.div({
   overflow: 'hidden',
   padding: '20px',
   border: '1px solid #ccc',
+	minWidth: BREAKPOINTS.SMALLSCREEN,
   [mediaQueries.largeScreen]: {
     display: 'flex',
     flexDirection: 'column',
@@ -22,6 +23,7 @@ const RowWrapper = glamorous.div({
 
 const GridRow = glamorous.div({
   margin: '0 -15px',
+	width: '100%',
   [mediaQueries.largeScreen]: {
     display: 'flex',
     maxWidth: SITE_WIDTH

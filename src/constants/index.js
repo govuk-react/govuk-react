@@ -8,6 +8,7 @@ export const FOCUS_WIDTH = "3px";
 export const SITE_WIDTH = "960px";
 export const FULL_WIDTH = "100%";
 export const BREAKPOINTS = {
+  SMALLSCREEN: "320px",
   LARGESCREEN: "641px"
 };
 export const GUTTER_PX = 30;

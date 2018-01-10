@@ -6,18 +6,17 @@
 // https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_buttons.scss
 
 import glamorous from 'glamorous'
-
-import { BUTTON_COLOUR, WHITE, YELLOW } from 'govuk-colours'
+import * as COLOUR from 'govuk-colours'
 
 // const Button
 const Button = glamorous.button(
   {
     WebkitAppearance: 'none',
     WebkitFontSmoothing: 'antialiased',
-    backgroundColor: BUTTON_COLOUR,
+    backgroundColor: COLOUR.BUTTON_COLOUR,
     border: 'none',
-    boxShadow: '0 2px 0 #003618',
-    color: WHITE,
+    boxShadow: `0 2px 0 ${COLOUR.BUTTON_COLOUR_DARKEN_15}`,
+    color: COLOUR.WHITE,
     cursor: 'pointer',
     display: 'inline-block',
     fontSize: '1em',
@@ -32,7 +31,7 @@ const Button = glamorous.button(
       pointerEvents: 'none'
     },
     ':focus': {
-      outline: `3px solid ${YELLOW}`
+      outline: `3px solid ${COLOUR.YELLOW}`
     }
   },
   ({start}) => ({
