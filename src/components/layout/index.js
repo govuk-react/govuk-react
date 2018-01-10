@@ -3,7 +3,7 @@
 
 import React from 'react'
 import glamorous from 'glamorous'
-import { BREAKPOINTS } from '../../constants/index'
+import { BREAKPOINTS, SITE_WIDTH } from '../../constants/index'
 
 const mediaQueries = {
 	largeScreen: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`,
@@ -12,14 +12,20 @@ const mediaQueries = {
 const RowWrapper = glamorous.div({
   overflow: 'hidden',
   padding: '20px',
-  border: '1px solid #ccc'
+  border: '1px solid #ccc',
+  [mediaQueries.largeScreen]: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
+  }
 });
 
 const GridRow = glamorous.div({
   margin: '0 -15px',
   [mediaQueries.largeScreen]: {
-    display: 'flex'
-  },
+    display: 'flex',
+    maxWidth: SITE_WIDTH
+  }
 });
 
 const GridCol = glamorous.div({
