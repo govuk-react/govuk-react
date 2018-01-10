@@ -3,7 +3,11 @@
 
 import React from 'react'
 import glamorous from 'glamorous'
+import { BREAKPOINTS } from '../../constants/index'
 
+const mediaQueries = {
+	largeScreen: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`,
+}
 
 const RowWrapper = glamorous.div({
   overflow: 'hidden',
@@ -12,8 +16,10 @@ const RowWrapper = glamorous.div({
 });
 
 const GridRow = glamorous.div({
-  display: 'flex',
-  margin: '0 -15px'
+  margin: '0 -15px',
+  [mediaQueries.largeScreen]: {
+    display: 'flex'
+  },
 });
 
 const GridCol = glamorous.div({
@@ -32,13 +38,19 @@ const GridCol = glamorous.div({
   backgroundImage: showContent ? '' : GridCol.backgroundImage
 }),
 ({columnOneThird}) => ({
-  width: columnOneThird ? '33.3333%' : GridCol.width
+  [mediaQueries.largeScreen]: {
+    width: columnOneThird ? '33.3333%' : GridCol.width
+  }
 }),
 ({columnTwoThirds}) => ({
-  width: columnTwoThirds ? '66.6667%' : GridCol.width
+  [mediaQueries.largeScreen]: {
+    width: columnTwoThirds ? '66.6667%' : GridCol.width
+  }
 }),
 ({columnOneQuarter}) => ({
-  width: columnOneQuarter ? '50%' : GridCol.width
+  [mediaQueries.largeScreen]: {
+    width: columnOneQuarter ? '50%' : GridCol.width
+  }
 }));
 
 const Layout = ({children, ...props}) => (
