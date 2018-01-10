@@ -6,8 +6,7 @@
     "govuk-colours": "^1.0.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
-    "react-scripts": "1.0.14",
-    "styled-components": "^2.2.2"
+    "react-scripts": "1.0.14"
   },
   "scripts": {
     "start": "start-storybook -p 9009",

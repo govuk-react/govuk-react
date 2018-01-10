@@ -1,4 +1,6 @@
-// https://github.com/alphagov/govuk-frontend/blob/master/src/components/checkbox/_checkbox.scss
+// https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_grid_layout.scss
+// https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
+
 import React from 'react'
 import glamorous from 'glamorous'
 

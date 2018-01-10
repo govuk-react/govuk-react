@@ -7,7 +7,7 @@
 
 import glamorous from 'glamorous'
 
-import { BUTTON_COLOUR, WHITE } from 'govuk-colours'
+import { BUTTON_COLOUR, WHITE, YELLOW } from 'govuk-colours'
 
 // const Button
 const Button = glamorous.button(
@@ -28,8 +28,11 @@ const Button = glamorous.button(
     position: 'relative',
     textDecoration: 'none',
     '[disabled]': {
-      opacity: '.4',
+      opacity: '.5',
       pointerEvents: 'none'
+    },
+    ':focus': {
+      outline: `3px solid ${YELLOW}`
     }
   },
   props => (
