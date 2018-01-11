@@ -1,9 +1,6 @@
 import React from 'react';
-
 import { storiesOf } from '@storybook/react'
-
 import iconPointer from '../../../images/icon-pointer.png'
-
 import Button from '.'
 
 storiesOf('Button', module).add('Button text', () => <Button>Save and continue</Button>);

@@ -63,7 +63,7 @@ const GridCol = glamorous.div({
 
 const Layout = ({children, ...props}) => (
   <RowWrapper {...props}>
-     {children}
+    {children}
   </RowWrapper>)
 
 export { Layout, GridRow, GridCol };
