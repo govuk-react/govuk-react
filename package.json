@@ -2,7 +2,7 @@
   "name": "govuk-react",
   "version": "0.1.3",
   "dependencies": {
-    "govuk-colours": "^1.0.0",
+    "govuk-colours": "^1.0.2",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
     "react-scripts": "1.0.14",
@@ -13,6 +13,7 @@
     "eslint:fix": "eslint --fix ./src",
     "build": "babel --source-maps -d lib/ src/",
     "test": "react-scripts test --env=jsdom",
+    "test:ci": "CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
