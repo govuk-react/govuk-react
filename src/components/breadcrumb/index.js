@@ -1,9 +1,10 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/components/breadcrumb/_breadcrumb.scss
 import React from 'react'
+import PropTypes from 'prop-types'
 import glamorous from 'glamorous'
 
 import * as COLOUR from 'govuk-colours'
-import { BREAKPOINTS, SITE_WIDTH } from '../../constants/index'
+import { BREAKPOINTS } from '../../constants/index'
 
 const mediaQueries = {
 	largeScreen: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`,
@@ -69,16 +70,25 @@ const BreadcrumbListItem = glamorous.li({
 });
 
 
-const Breadcrumb = ({children, ...props}) => (<BreadcrumbContainer {...props}>
-  <BreadcrumbList>
-    {children.length && children.map ? children.map(child =>
-      (<BreadcrumbListItem>
-        {child}
-       </BreadcrumbListItem>)
-    ) : <BreadcrumbListItem>
-      {children}
-    </BreadcrumbListItem>}
-  </BreadcrumbList>
-</BreadcrumbContainer>)
+const Breadcrumb = ({children, ...props}) => (
+  <BreadcrumbContainer {...props}>
+    <BreadcrumbList>
+      {children.length && children.map ? children.map(child =>(
+        <BreadcrumbListItem>
+          {child}
+        </BreadcrumbListItem>
+			 )
+		 ) : (
+  <BreadcrumbListItem>
+    {children}
+  </BreadcrumbListItem>
+		)}
+    </BreadcrumbList>
+  </BreadcrumbContainer>
+)
+
+Breadcrumb.propTypes = {
+	children: PropTypes.node.isRequired
+}
 
 export default Breadcrumb

@@ -4,12 +4,14 @@
   "dependencies": {
     "glamorous": "^4.11.2",
     "govuk-colours": "^1.0.2",
+    "prop-types": "^15.6.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
     "react-scripts": "1.0.14"
   },
   "scripts": {
     "start": "start-storybook -p 9009",
+    "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src",
     "build": "babel --source-maps -d lib/ src/",
     "test": "react-scripts test --env=jsdom",
