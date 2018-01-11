@@ -3,15 +3,17 @@
   "version": "0.1.3",
   "dependencies": {
     "glamorous": "^4.11.2",
-    "govuk-colours": "^1.0.0",
+    "govuk-colours": "^1.0.2",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
     "react-scripts": "1.0.14"
   },
   "scripts": {
     "start": "start-storybook -p 9009",
+    "eslint:fix": "eslint --fix ./src",
     "build": "babel --source-maps -d lib/ src/",
     "test": "react-scripts test --env=jsdom",
+    "test:ci": "CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
@@ -31,7 +33,14 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
-    "normalize.css": "^7.0.0"
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "normalize.css": "^7.0.0",
+    "prettier": "^1.10.2"
   },
   "repository": {
     "type": "git",
