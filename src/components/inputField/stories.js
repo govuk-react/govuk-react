@@ -20,19 +20,19 @@ storiesOf('InputField', module).add('Input with HintText', () => (
 ));
 
 storiesOf('InputField', module).add('Multiple Inputs', () => (
-<div>
-  <InputField name='group1' inputId='id2'>
+  <div>
+    <InputField name='group1' inputId='id2'>
     Your name
-  </InputField>
-  <InputField name='group1' inputId='id3'>
+    </InputField>
+    <InputField name='group1' inputId='id3'>
     Your quest
-  </InputField>
-  <InputField name='group1' inputId='id4'>
+    </InputField>
+    <InputField name='group1' inputId='id4'>
   National Insurance number
-    <HintText>
+      <HintText>
     It's on your National Insurance card, benefit letter, payslip or P60.<br />
     For example, ‘QQ 12 34 56 C’.
-    </HintText>
-  </InputField>
-</div>
+      </HintText>
+    </InputField>
+  </div>
 ));
