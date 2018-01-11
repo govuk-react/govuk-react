@@ -10,7 +10,8 @@ const mediaQueries = {
 	largeScreen: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`,
 }
 
-const SelectWrapper = glamorous.div({
+const SelectWrapper = glamorous.label({
+	display: 'block',
   [mediaQueries.largeScreen]: {
     maxWidth: SITE_WIDTH
   }
@@ -40,7 +41,7 @@ const SelectField = glamorous.select({
   }
 })
 
-const Label = glamorous.label({
+const Label = glamorous.span({
   fontFamily: '"nta", Arial, sans-serif',
   WebkitFontSmoothing: 'antialiased',
   MozOsxFontSmoothing: 'grayscale',
@@ -59,8 +60,8 @@ const Label = glamorous.label({
 
 const Select = ({children, ...props}) => (
   <SelectWrapper>
-    <Label htmlFor={props.inputId}>{props.label}</Label>
-    <SelectField id={props.inputId}>{children}</SelectField>
+    <Label>{props.label}</Label>
+    <SelectField>{children}</SelectField>
   </SelectWrapper>
 )
 

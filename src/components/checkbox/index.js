@@ -10,7 +10,7 @@ const mediaQueries = {
 	largeScreen: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`,
 }
 
-const MultipleChoice = glamorous.div({
+const MultipleChoice = glamorous.label({
   display: 'block',
   float: 'none',
   clear: 'left',
@@ -33,20 +33,20 @@ const Input = glamorous.input({
   '[disabled]': {
     cursor: 'auto',
   },
-  '[disabled] + label': {
+  '[disabled] + span': {
     opacity: '.4',
     cursor: 'auto',
     pointerEvents: 'none'
   },
-  ':checked + label::after': {
+  ':checked + span::after': {
     opacity: 1
   },
-  ':focus + label::before': {
+  ':focus + span::before': {
     boxShadow: `0 0 0 4px ${COLOUR.YELLOW}`
   }
 })
 
-const Label = glamorous.label({
+const Label = glamorous.span({
   fontFamily: '"nta", Arial, sans-serif',
   fontWeight: 400,
   textTransform: 'none',
@@ -87,8 +87,8 @@ const Label = glamorous.label({
 
 const Checkbox = ({children, ...props}) => (
   <MultipleChoice>
-    <Input type="checkbox" id={props.checkboxId} {...props} />
-    <Label htmlFor={props.checkboxId}>{children}</Label>
+    <Input type="checkbox" {...props} />
+    <Label>{children}</Label>
   </MultipleChoice>
 )
 

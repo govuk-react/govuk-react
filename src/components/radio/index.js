@@ -4,7 +4,7 @@ import glamorous from 'glamorous'
 
 import { BUTTON_COLOUR, WHITE, YELLOW } from 'govuk-colours'
 
-const MultipleChoice = glamorous.div({
+const MultipleChoice = glamorous.label({
   display: 'block',
   float: 'none',
   clear: 'left',
@@ -36,20 +36,20 @@ const Input = glamorous.input({
   '[disabled]': {
     cursor: 'auto',
   },
-  '[disabled] + label': {
+  '[disabled] + span': {
     opacity: '.4',
     cursor: 'auto',
     pointerEvents: 'none'
   },
-  ':checked + label::after': {
+  ':checked + span::after': {
     opacity: 1
   },
-  ':focus + label::before': {
+  ':focus + span::before': {
     boxShadow: `0 0 0 4px ${YELLOW}`
   }
 })
 
-const Label = glamorous.label({
+const Label = glamorous.span({
   fontFamily: '"nta", Arial, sans-serif',
   fontWeight: 400,
   textTransform: 'none',
@@ -86,8 +86,8 @@ const Label = glamorous.label({
 
 const Radio = ({children, ...props}) => (
   <MultipleChoice {...props}>
-    <Input type="radio" id={props.radioId} name={props.radioName} {...props} />
-    <Label htmlFor={props.radioId}>{children}</Label>
+    <Input type="radio" name={props.radioName} {...props} />
+    <Label>{children}</Label>
   </MultipleChoice>
 )
 

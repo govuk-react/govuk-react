@@ -10,8 +10,9 @@ const mediaQueries = {
 	largeScreen: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`,
 }
 
-const InputWrapper = glamorous.div({
+const InputWrapper = glamorous.label({
 	marginBottom: '15px',
+	display: 'block',
   [mediaQueries.largeScreen]: {
     maxWidth: SITE_WIDTH,
   	marginBottom: '30px'
@@ -45,7 +46,7 @@ const Input = glamorous.input({
   }
 })
 
-const Label = glamorous.label({
+const Label = glamorous.span({
   fontFamily: '"nta", Arial, sans-serif',
   WebkitFontSmoothing: 'antialiased',
   MozOsxFontSmoothing: 'grayscale',
@@ -64,8 +65,8 @@ const Label = glamorous.label({
 
 const InputField = ({children, ...props}) => (
   <InputWrapper>
-    <Label htmlFor={props.inputId}>{children}</Label>
-    <Input type="text" id={props.inputId} {...props} />
+    <Label>{children}</Label>
+    <Input type="text" {...props} />
   </InputWrapper>
 )
 

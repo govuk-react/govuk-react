@@ -10,7 +10,8 @@ const mediaQueries = {
 	largeScreen: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`,
 }
 
-const TextareaWrapper = glamorous.div({
+const TextareaWrapper = glamorous.label({
+	display: 'block',
   [mediaQueries.largeScreen]: {
     maxWidth: SITE_WIDTH
   }
@@ -51,7 +52,7 @@ const TextareaField = glamorous.textarea({
   }
 })
 
-const Label = glamorous.label({
+const Label = glamorous.span({
   fontFamily: '"nta", Arial, sans-serif',
   WebkitFontSmoothing: 'antialiased',
   MozOsxFontSmoothing: 'grayscale',
@@ -69,8 +70,8 @@ const Label = glamorous.label({
 
 const Textarea = ({children, ...props}) => (
   <TextareaWrapper>
-    <Label htmlFor={props.inputId}>{children}</Label>
-    <TextareaField type="text" rows="5" id={props.inputId} {...props} />
+    <Label>{children}</Label>
+    <TextareaField type="text" rows="5" {...props} />
   </TextareaWrapper>
 )
 
