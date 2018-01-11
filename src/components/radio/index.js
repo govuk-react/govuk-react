@@ -1,14 +1,8 @@
-// https://github.com/alphagov/govuk-frontend/blob/master/src/components/checkbox/_checkbox.scss
-
+// https://github.com/alphagov/govuk-frontend/blob/master/src/components/radios/_radios.scss
 import React from 'react'
 import glamorous from 'glamorous'
 
-import * as COLOUR from 'govuk-colours'
-import { BREAKPOINTS, SITE_WIDTH } from '../../constants/index'
-
-const mediaQueries = {
-	largeScreen: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`,
-}
+import { BUTTON_COLOUR, WHITE, YELLOW } from 'govuk-colours'
 
 const MultipleChoice = glamorous.label({
   display: 'block',
@@ -16,8 +10,17 @@ const MultipleChoice = glamorous.label({
   clear: 'left',
   position: 'relative',
   padding: '0 0 0 38px',
-  marginBottom: '10px'
-})
+  marginBottom: '10px',
+  ':last-child': {
+    marginBottom: 0
+  }
+},
+({inline}) => ({
+  float: inline ? 'left' : 'none',
+  clear: inline ? 'none' : 'left',
+  marginRight: inline ? '30px' : '0',
+  marginBottom: inline ? '0' : MultipleChoice.marginBottom
+}))
 
 const Input = glamorous.input({
   position: 'absolute',
@@ -42,7 +45,7 @@ const Input = glamorous.input({
     opacity: 1
   },
   ':focus + span::before': {
-    boxShadow: `0 0 0 4px ${COLOUR.YELLOW}`
+    boxShadow: `0 0 0 4px ${YELLOW}`
   }
 })
 
@@ -55,41 +58,37 @@ const Label = glamorous.span({
   cursor: 'pointer',
   padding: '8px 10px 9px 12px',
   display: 'block',
-  color: `${COLOUR.BLACK}`,
   ':before': {
     content: ' ',
-    display: 'block',
-    border: `2px solid ${COLOUR.BLACK}`,
-    background: 'transparent',
-    width: '34px',
-    height: '34px',
+    boxSizing: 'border-box',
     position: 'absolute',
     top: 0,
-    left: 0
+    left: 0,
+    width: '2.10526em',
+    height: '2.10526em',
+    border: '2px solid black',
+    borderRadius: '50%',
+    background: 'transparent'
   },
   ':after': {
     content: ' ',
-    border: 'solid',
-    borderWidth: '0 0 5px 5px',
-    background: 'transparent',
-    borderTopColor: 'transparent',
-    width: '17px',
-    height: '7px',
     position: 'absolute',
-    top: '10px',
-    left: '8px',
-    transform: 'rotate(-45deg)',
-    zoom: 1,
+    top: '0.52632em',
+    left: '0.52632em',
+    width: 0,
+    height: 0,
+    border: '0.52632em solid',
+    borderRadius: '50%',
     opacity: 0
   }
 });
 
 
-const Checkbox = ({children, ...props}) => (
-  <MultipleChoice>
-    <Input type="checkbox" {...props} />
+const Radio = ({children, ...props}) => (
+  <MultipleChoice {...props}>
+    <Input type="radio" name={props.radioName} {...props} />
     <Label>{children}</Label>
   </MultipleChoice>
 )
 
-export default Checkbox;
+export default Radio;
