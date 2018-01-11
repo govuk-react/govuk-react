@@ -2,6 +2,7 @@
 // https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
 
 import React from 'react'
+import PropTypes from 'prop-types'
 import glamorous from 'glamorous'
 import { BREAKPOINTS, SITE_WIDTH } from '../../constants/index'
 
@@ -65,5 +66,9 @@ const Layout = ({children, ...props}) => (
   <RowWrapper {...props}>
     {children}
   </RowWrapper>)
+
+Layout.propTypes = {
+	children: PropTypes.node.isRequired
+}
 
 export { Layout, GridRow, GridCol };

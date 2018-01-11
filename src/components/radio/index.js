@@ -1,8 +1,9 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/components/radios/_radios.scss
 import React from 'react'
+import PropTypes from 'prop-types'
 import glamorous from 'glamorous'
 
-import { BUTTON_COLOUR, WHITE, YELLOW } from 'govuk-colours'
+import { YELLOW } from 'govuk-colours'
 
 const MultipleChoice = glamorous.label({
   display: 'block',
@@ -90,5 +91,10 @@ const Radio = ({children, ...props}) => (
     <Label>{children}</Label>
   </MultipleChoice>
 )
+
+Radio.propTypes = {
+	children: PropTypes.node.isRequired,
+  radioName: PropTypes.string.isRequired
+}
 
 export default Radio;

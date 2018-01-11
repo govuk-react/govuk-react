@@ -1,6 +1,7 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/components/input/_input.scss
 
 import React from 'react'
+import PropTypes from 'prop-types'
 import glamorous from 'glamorous'
 
 import * as COLOUR from 'govuk-colours'
@@ -64,5 +65,10 @@ const Select = ({children, ...props}) => (
     <SelectField>{children}</SelectField>
   </SelectWrapper>
 )
+
+Select.propTypes = {
+	children: PropTypes.node.isRequired,
+	label: PropTypes.string .isRequired
+}
 
 export default Select ;

@@ -1,6 +1,7 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/components/input/_input.scss
 
 import React from 'react'
+import PropTypes from 'prop-types'
 import glamorous from 'glamorous'
 
 import * as COLOUR from 'govuk-colours'
@@ -25,7 +26,6 @@ const HintText = glamorous.span({
   lineHeight: '1.25',
   display: 'block',
   color: `${COLOUR.GREY_1}`,
-  fontWeight: 'normal',
   marginTop: 0,
   paddingBottom: 0
 })
@@ -74,5 +74,9 @@ const Textarea = ({children, ...props}) => (
     <TextareaField type="text" rows="5" {...props} />
   </TextareaWrapper>
 )
+
+Textarea.propTypes = {
+	children: PropTypes.node.isRequired
+}
 
 export { Textarea, HintText };
