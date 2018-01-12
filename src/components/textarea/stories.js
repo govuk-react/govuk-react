@@ -13,9 +13,9 @@ storiesOf('Textarea', module).add('Component default', () => (
 storiesOf('Textarea', module).add('Textarea with HintText', () => (
   <Textarea name='group1' inputId='id1'>
   National Insurance number
-  <HintText>
-    It's on your National Insurance card, benefit letter, payslip or P60.<br />
+    <HintText>
+    It&apos;s on your National Insurance card, benefit letter, payslip or P60.<br />
     For example, ‘QQ 12 34 56 C’.
-  </HintText>
-</Textarea>
+    </HintText>
+  </Textarea>
 ));

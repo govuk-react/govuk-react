@@ -1,14 +1,10 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/components/checkbox/_checkbox.scss
 
 import React from 'react'
+import PropTypes from 'prop-types'
 import glamorous from 'glamorous'
 
 import * as COLOUR from 'govuk-colours'
-import { BREAKPOINTS, SITE_WIDTH } from '../../constants/index'
-
-const mediaQueries = {
-	largeScreen: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`,
-}
 
 const MultipleChoice = glamorous.label({
   display: 'block',
@@ -91,5 +87,9 @@ const Checkbox = ({children, ...props}) => (
     <Label>{children}</Label>
   </MultipleChoice>
 )
+
+Checkbox.propTypes = {
+	children: PropTypes.node.isRequired
+}
 
 export default Checkbox;

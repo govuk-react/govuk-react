@@ -1,9 +1,7 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react'
+import { storiesOf } from '@storybook/react';
+
 import Breadcrumb from '.'
-import glamorous from 'glamorous'
-
-
 
 storiesOf('Breadcrumb', module).add('Component default', () => (
   <Breadcrumb>
