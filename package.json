@@ -16,11 +16,21 @@
     "build": "babel --source-maps -d lib/ src/",
     "test": "CI=true npm run test:unit && npm run eslint",
     "test:unit": "react-scripts test --env=jsdom",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --env=jsdom",
+    "coverage": "npm run test:unit -- --coverage",
     "eject": "react-scripts eject",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "prepare": "npm run build",
     "patch": "npm run build && npm run test && npm run build-storybook && npm version patch && npm publish && npm run deploy-storybook"
+  },
+  "jest": {
+    "collectCoverageFrom" : [
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/",
+      "!src/**/stories.js",
+      "!src/stories/*"
+    ]
   },
   "description": "A port of the govuk-frontend components for React using styled-components.",
   "main": "lib/index.js",
