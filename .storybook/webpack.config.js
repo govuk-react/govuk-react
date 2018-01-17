@@ -6,12 +6,8 @@ const genDefaultConfig = require('@storybook/react/dist/server/config/defaults/w
 module.exports = (baseConfig, env) => {
   const config = genDefaultConfig(baseConfig, env);
 
-  // config.module.rules.push({
-  //   test: /\.scss$/,
-  //   loaders: ["style-loader", "css-loader", "sass-loader"],
-  //   include: path.resolve(__dirname, '../')
-  // });
-  // config.resolve.extensions.push('.scss');
+  // configuration for adding specific rules can be found here:
+  // https://storybook.js.org/configurations/custom-webpack-config/#full-control-mode
 
   return config;
 };

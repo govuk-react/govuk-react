@@ -2,7 +2,8 @@
 
 A set of [govuk](https://github.com/alphagov/) components for [React](https://reactjs.org) using ~~styled-components~~ [glamorous](https://glamorous.rocks/).
 
-CSS styling from [GOV.UK/elements](https://github.com/alphagov/govuk_elements) is applied to the components first (where appropriate), then custom styling is applied (if neccessary).
+~~CSS styling from [GOV.UK/elements](https://github.com/alphagov/govuk_elements) is applied to the components first (where appropriate), then custom styling is applied (if neccessary).~~
+CSS styling is derived from [GOV.UK/elements](https://github.com/alphagov/govuk_elements) but modified to suit custom markup. Also flexbox is preferred over floats.
 
 ## Usage
 
