@@ -11,12 +11,12 @@ describe("Checkbox", () => {
   });
 
   it('should render an input type="checkbox"', () => {
-    const output = shallow(<Checkbox />);
+    const output = shallow(<Checkbox>Example</Checkbox>);
     expect(output.find('input[type="checkbox"]')).toBeTruthy();
   });
 
   it("should render a label", () => {
-    const output = shallow(<Checkbox />);
+    const output = shallow(<Checkbox>Example</Checkbox>);
     expect(output.find("label")).toBeTruthy();
   });
 });

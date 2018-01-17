@@ -6,7 +6,8 @@
     "govuk-colours": "^1.0.2",
     "prop-types": "^15.6.0",
     "react": "^15.0.0",
-    "react-dom": "^15.0.0"
+    "react-dom": "^15.0.0",
+    "react-test-renderer": "^15.6.2"
   },
   "scripts": {
     "start": "start-storybook -p 9009",
@@ -24,7 +25,7 @@
     "patch": "npm run build && npm run test && npm run build-storybook && npm version patch && npm publish && npm run deploy-storybook"
   },
   "jest": {
-    "collectCoverageFrom" : [
+    "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!<rootDir>/node_modules/",
       "!src/**/stories.js",
@@ -35,10 +36,10 @@
   "main": "lib/index.js",
   "module": "src/index.js",
   "devDependencies": {
-    "@storybook/addon-actions": "^3.2.13",
-    "@storybook/addon-links": "^3.2.13",
-    "@storybook/react": "^3.2.13",
-    "@storybook/storybook-deployer": "^2.0.0",
+    "@storybook/addon-actions": "^3.3.9",
+    "@storybook/addon-links": "^3.3.9",
+    "@storybook/react": "^3.3.9",
+    "@storybook/storybook-deployer": "^2.2.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
@@ -51,7 +52,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-prettier": "^2.4.0",
+    "eslint-plugin-prettier": "^2.5.0",
     "eslint-plugin-react": "^7.5.1",
     "govuk-elements-sass": "^3.1.2",
     "node-sass": "^4.7.2",
