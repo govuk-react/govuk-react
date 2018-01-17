@@ -4,18 +4,20 @@ import { storiesOf } from '@storybook/react'
 
 import { Textarea, HintText } from '.'
 
-storiesOf('Textarea', module).add('Component default', () => (
-  <Textarea name='group1' inputId='id0'>
-    National Insurance number
+storiesOf('Textarea', module).add('Textarea', () => (
+  <Textarea name='group1'>
+    Description of what you saw 
   </Textarea>
-));
+))
 
 storiesOf('Textarea', module).add('Textarea with HintText', () => (
-  <Textarea name='group1' inputId='id1'>
-  National Insurance number
-  <HintText>
-    It's on your National Insurance card, benefit letter, payslip or P60.<br />
-    For example, ‘QQ 12 34 56 C’.
-  </HintText>
-</Textarea>
-));
+  <Textarea name='group1' hintText={['Enter as many words as you like']}>
+    Description of what you saw
+  </Textarea>
+))
+
+storiesOf('Textarea', module).add('Textarea with HintText & error', () => (
+  <Textarea name='group1' hintText={['Enter as many words as you like']} errorText='Please enter a description'>
+    Description of what you saw
+  </Textarea>
+))

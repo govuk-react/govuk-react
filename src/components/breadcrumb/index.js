@@ -3,7 +3,7 @@ import React from 'react'
 import glamorous from 'glamorous'
 
 import * as COLOUR from 'govuk-colours'
-import { BREAKPOINTS, SITE_WIDTH } from '../../constants/index'
+import { BREAKPOINTS } from '../../constants/index'
 
 const mediaQueries = {
 	largeScreen: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`,
@@ -69,16 +69,18 @@ const BreadcrumbListItem = glamorous.li({
 });
 
 
-const Breadcrumb = ({children, ...props}) => (<BreadcrumbContainer {...props}>
-  <BreadcrumbList>
-    {children.length && children.map ? children.map(child =>
-      (<BreadcrumbListItem>
-        {child}
-       </BreadcrumbListItem>)
-    ) : <BreadcrumbListItem>
-      {children}
-    </BreadcrumbListItem>}
-  </BreadcrumbList>
-</BreadcrumbContainer>)
+const Breadcrumb = ({children, ...props}) => (
+  <BreadcrumbContainer {...props}>
+    <BreadcrumbList>
+      {children.length && children.map ? children.map(child => (
+        <BreadcrumbListItem>
+          {child}
+        </BreadcrumbListItem>)) : 
+      <BreadcrumbListItem>
+        {children}
+      </BreadcrumbListItem>}
+    </BreadcrumbList>
+  </BreadcrumbContainer>
+)
 
 export default Breadcrumb

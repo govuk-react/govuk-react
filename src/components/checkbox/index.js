@@ -4,13 +4,13 @@ import React from 'react'
 import glamorous from 'glamorous'
 
 import * as COLOUR from 'govuk-colours'
-import { BREAKPOINTS, SITE_WIDTH } from '../../constants/index'
+// import { BREAKPOINTS, SITE_WIDTH } from '../../constants/index'
 
-const mediaQueries = {
-	largeScreen: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`,
-}
+// const mediaQueries = {
+// 	largeScreen: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`,
+// }
 
-const MultipleChoice = glamorous.label({
+const MultipleChoice = glamorous.label('multiple-choice', {
   display: 'block',
   float: 'none',
   clear: 'left',
