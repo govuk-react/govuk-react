@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Select from "./";
+import FileUpload from "./";
 
-describe("Select", () => {
+describe("FileUpload", () => {
   it("renders without crashing", () => {
     const div = document.createElement("div");
-    ReactDOM.render(<Select label="Example">Example</Select>, div);
+    ReactDOM.render(<FileUpload>Example</FileUpload>, div);
   });
 });

@@ -1,11 +1,12 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/components/radios/_radios.scss
+// https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
 import React from "react";
 import PropTypes from "prop-types";
 import glamorous from "glamorous";
 
 import { YELLOW } from "govuk-colours";
 
-const MultipleChoice = glamorous.label(
+const Label = glamorous.label(
   {
     display: "block",
     float: "none",
@@ -21,7 +22,7 @@ const MultipleChoice = glamorous.label(
     float: inline ? "left" : "none",
     clear: inline ? "none" : "left",
     marginRight: inline ? "30px" : "0",
-    marginBottom: inline ? "0" : MultipleChoice.marginBottom
+    marginBottom: inline ? "0" : Label.marginBottom
   })
 );
 
@@ -52,7 +53,7 @@ const Input = glamorous.input({
   }
 });
 
-const Label = glamorous.span({
+const LabelText = glamorous.span({
   fontFamily: '"nta", Arial, sans-serif',
   fontWeight: 400,
   textTransform: "none",
@@ -87,10 +88,10 @@ const Label = glamorous.span({
 });
 
 const Radio = ({ children, ...props }) => (
-  <MultipleChoice {...props}>
+  <Label {...props}>
     <Input type="radio" name={props.radioName} {...props} />
-    <Label>{children}</Label>
-  </MultipleChoice>
+    <LabelText>{children}</LabelText>
+  </Label>
 );
 
 Radio.propTypes = {

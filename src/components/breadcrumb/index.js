@@ -1,7 +1,7 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/components/breadcrumb/_breadcrumb.scss
 import React from "react";
-import PropTypes from "prop-types";
 import glamorous from "glamorous";
+import PropTypes from "prop-types";
 
 import * as COLOUR from "govuk-colours";
 import { BREAKPOINTS } from "../../constants/index";

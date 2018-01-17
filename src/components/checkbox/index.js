@@ -6,7 +6,7 @@ import glamorous from "glamorous";
 
 import * as COLOUR from "govuk-colours";
 
-const MultipleChoice = glamorous.label({
+const MultipleChoice = glamorous.label("multiple-choice", {
   display: "block",
   float: "none",
   clear: "left",

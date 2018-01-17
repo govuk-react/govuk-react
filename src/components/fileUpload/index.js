@@ -1,8 +1,9 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/components/input/_input.scss
+// https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
 
 import React from "react";
-import PropTypes from "prop-types";
 import glamorous from "glamorous";
+import PropTypes from "prop-types";
 
 import * as COLOUR from "govuk-colours";
 import { BREAKPOINTS, SITE_WIDTH } from "../../constants/index";
@@ -13,10 +14,12 @@ const mediaQueries = {
 
 const Label = glamorous.label(
   {
+    marginBottom: "15px",
     display: "flex",
     flexDirection: "column",
     [mediaQueries.largeScreen]: {
-      maxWidth: SITE_WIDTH
+      maxWidth: SITE_WIDTH,
+      marginBottom: "30px"
     }
   },
   ({ errorText }) => ({
@@ -35,6 +38,7 @@ const LabelText = glamorous.span(
     fontSize: "16px",
     lineHeight: "1.25",
     color: `${COLOUR.BLACK}`,
+    display: "block",
     paddingBottom: "2px",
     [mediaQueries.largeScreen]: {
       fontSize: "19px",
@@ -61,76 +65,65 @@ const HintText = glamorous.span({
   }
 });
 
-const ErrorText = glamorous.span(
-  {
-    display: "inline-block",
-    fontFamily: '"nta", Arial, sans-serif',
-    WebkitFontSmoothing: "antialiased",
-    MozOsxFontSmoothing: "grayscale",
-    fontWeight: 400,
-    textTransform: "none",
-    fontSize: "16px",
-    lineHeight: "1.25",
-    color: `${COLOUR.ERROR_COLOUR}`,
-    paddingTop: "4px",
-    paddingBottom: "2px",
-    [mediaQueries.largeScreen]: {
-      fontSize: "19px",
-      lineHeight: "1.31579"
-    }
-  },
-  ({ errorText }) => ({
-    fontWeight: errorText ? 700 : HintText.fontWeight
-  })
-);
+const ErrorText = glamorous.span({
+  fontFamily: '"nta", Arial, sans-serif',
+  WebkitFontSmoothing: "antialiased",
+  MozOsxFontSmoothing: "grayscale",
+  fontWeight: 700,
+  textTransform: "none",
+  fontSize: "16px",
+  lineHeight: "1.25",
+  color: `${COLOUR.ERROR_COLOUR}`,
+  paddingTop: "4px",
+  paddingBottom: "2px",
+  [mediaQueries.largeScreen]: {
+    fontSize: "19px",
+    lineHeight: "1.31579"
+  }
+});
 
-const TextareaField = glamorous.textarea(
-  {
-    boxSizing: "border-box",
-    fontFamily: '"nta", Arial, sans-serif',
-    fontWeight: 400,
-    textTransform: "none",
-    fontSize: "16px",
-    lineHeight: "1.25",
-    width: "100%",
-    padding: "5px 4px 4px",
-    border: `2px solid ${COLOUR.BLACK}`,
-    [mediaQueries.largeScreen]: {
-      width: "75%"
-    },
-    "[disabled]": {
-      cursor: "auto"
-    },
-    ":focus": {
-      outline: `3px solid ${COLOUR.YELLOW}`,
-      outlineOffset: 0
-    }
+const Input = glamorous.input({
+  boxSizing: "border-box",
+  fontFamily: '"nta", Arial, sans-serif',
+  fontWeight: 400,
+  textTransform: "none",
+  fontSize: "small",
+  lineHeight: "inherit",
+  width: "100%",
+  padding: "5px 4px 4px",
+  border: `0`,
+  [mediaQueries.largeScreen]: {
+    width: "50%"
   },
-  ({ errorText }) => ({
-    border: errorText
-      ? `4px solid ${COLOUR.ERROR_COLOUR}`
-      : `2px solid ${COLOUR.BLACK}`
-  })
-);
+  "[disabled]": {
+    cursor: "auto"
+  },
+  ":focus": {
+    outline: `3px solid ${COLOUR.YELLOW}`,
+    outlineOffset: 0
+  }
+});
 
-const Textarea = ({ children, ...props }) => (
+const FileUpload = ({ children, ...props }) => (
   <Label {...props}>
     <LabelText {...props}>{children}</LabelText>
     <HintText>{props.hintText}</HintText>
-    <ErrorText {...props}>{props.errorText}</ErrorText>
-    <TextareaField type="text" rows="5" {...props} />
+    <ErrorText>{props.errorText}</ErrorText>
+    <Input type="file" accept={props.acceptedFormats} {...props} />
   </Label>
 );
 
-Textarea.defaultProps = {
+FileUpload.defaultProps = {
   hintText: null,
-  errorText: null
+  errorText: null,
+  acceptedFormats: null
 };
 
-Textarea.propTypes = {
+FileUpload.propTypes = {
   children: PropTypes.node.isRequired,
   hintText: PropTypes.string,
-  errorText: PropTypes.string
+  errorText: PropTypes.string,
+  acceptedFormats: PropTypes.string
 };
 
-export default Textarea;
+export default FileUpload;

@@ -13,3 +13,4 @@ import "../components/radio/stories";
 import "../components/checkbox/stories";
 import "../components/layout/stories";
 import "../components/select/stories";
+import "../components/fileUpload/stories";
