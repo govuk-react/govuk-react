@@ -6,8 +6,7 @@
     "govuk-colours": "^1.0.2",
     "prop-types": "^15.6.0",
     "react": "^15.0.0",
-    "react-dom": "^15.0.0",
-    "react-test-renderer": "^15.6.2"
+    "react-dom": "^15.0.0"
   },
   "scripts": {
     "start": "start-storybook -p 9009",
@@ -59,6 +58,7 @@
     "normalize.css": "^7.0.0",
     "prettier": "^1.10.2",
     "react-scripts": "1.0.14",
+    "react-test-renderer": "^15.5.4",
     "sass-loader": "^6.0.6"
   },
   "repository": {
