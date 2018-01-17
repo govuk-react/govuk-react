@@ -1,15 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { FileUpload } from './';
+import React from "react";
+import ReactDOM from "react-dom";
+import { FileUpload } from "./";
 
-import { shallow, mount, render } from 'enzyme';
-
-
-
-describe('FileUpload', () => {
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
+describe("FileUpload", () => {
+  it("renders without crashing", () => {
+    const div = document.createElement("div");
     ReactDOM.render(<FileUpload>Example</FileUpload>, div);
   });
-
 });

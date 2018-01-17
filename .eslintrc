@@ -1,11 +1,31 @@
 {
   "parser": "babel-eslint",
   "extends": ["airbnb", "prettier"],
+  "plugins": [
+    "prettier"
+  ],
   "env": {
     "es6": true
   },
   "rules": {
+    "prettier/prettier": "error",
     "react/jsx-filename-extension": 0,
     "jsx-a11y/label-has-for": 0,
-  }
+  },
+  "overrides": [
+    {
+      "files": [ "stories.js", "test.js", "src/stories/index.js" ],
+      "rules": {
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+      }
+    },
+    {
+      "files": [ "test.js" ],
+      "env": {
+        "jest": true,
+        "enzyme": true,
+        "browser": true
+      }
+    }
+  ]
 }
