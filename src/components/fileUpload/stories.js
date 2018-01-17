@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { FileUpload } from ".";
+import FileUpload from ".";
 
 storiesOf("FileUpload", module).add("Component default", () => (
   <FileUpload name="group0">Upload a document</FileUpload>

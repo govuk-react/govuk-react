@@ -133,4 +133,4 @@ InputField.propTypes = {
   errorText: PropTypes.string
 };
 
-export { InputField, HintText };
+export default InputField;

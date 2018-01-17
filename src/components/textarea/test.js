@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Textarea } from "./";
+import Textarea from "./";
 
 describe("Textarea", () => {
   it("renders without crashing", () => {

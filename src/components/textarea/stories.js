@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 
-import { Textarea } from ".";
+import Textarea from ".";
 
 storiesOf("Textarea", module).add("Textarea", () => (
   <Textarea name="group1">Description of what you saw</Textarea>
