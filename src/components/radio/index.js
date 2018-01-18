@@ -87,16 +87,16 @@ const LabelText = glamorous.span({
   }
 });
 
-const Radio = ({ children, ...props }) => (
-  <Label {...props}>
-    <Input type="radio" name={props.radioName} {...props} />
+const Radio = ({ children, name }) => (
+  <Label>
+    <Input type="radio" name={name} />
     <LabelText>{children}</LabelText>
   </Label>
 );
 
 Radio.propTypes = {
   children: PropTypes.node.isRequired,
-  radioName: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired
 };
 
 export default Radio;

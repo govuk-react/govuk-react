@@ -113,12 +113,12 @@ const TextareaField = glamorous.textarea(
   })
 );
 
-const Textarea = ({ children, ...props }) => (
-  <Label {...props}>
-    <LabelText {...props}>{children}</LabelText>
-    <HintText>{props.hintText}</HintText>
-    <ErrorText {...props}>{props.errorText}</ErrorText>
-    <TextareaField type="text" rows="5" {...props} />
+const Textarea = ({ children, hintText, errorText }) => (
+  <Label errorText={errorText}>
+    <LabelText errorText={errorText}>{children}</LabelText>
+    <HintText>{hintText}</HintText>
+    <ErrorText errorText={errorText}>{errorText}</ErrorText>
+    <TextareaField type="text" rows="5" errorText={errorText} />
   </Label>
 );
 

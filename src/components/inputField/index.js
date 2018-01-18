@@ -113,12 +113,12 @@ const Input = glamorous.input(
   })
 );
 
-const InputField = ({ children, ...props }) => (
-  <Label {...props}>
-    <LabelText {...props}>{children}</LabelText>
-    <HintText>{props.hintText}</HintText>
-    <ErrorText {...props}>{props.errorText}</ErrorText>
-    <Input type="text" {...props} />
+const InputField = ({ children, errorText, hintText }) => (
+  <Label errorText={errorText}>
+    <LabelText errorText={errorText}>{children}</LabelText>
+    <HintText>{hintText}</HintText>
+    <ErrorText errorText={errorText}>{errorText}</ErrorText>
+    <Input type="text" errorText={errorText} />
   </Label>
 );
 
