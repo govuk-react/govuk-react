@@ -11,18 +11,31 @@ export const BREAKPOINTS = {
   SMALLSCREEN: "320px",
   LARGESCREEN: "641px"
 };
+
+export const MEDIA_QUERIES = {
+  LARGESCREEN: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`
+};
+
 export const GUTTER_PX = 30;
 export const GUTTER = `${GUTTER_PX}px`;
 export const GUTTER_HALF = `${GUTTER_PX / 2}px`;
 export const GUTTER_ONE_THIRD = `${GUTTER_PX / 3}px`;
-export const SPACING_SCALE_1 = "5px";
-export const SPACING_SCALE_2 = "10px";
-export const SPACING_SCALE_3 = "15px";
-export const SPACING_SCALE_4 = "20px";
-export const SPACING_SCALE_5 = "30px";
-export const SPACING_SCALE_6 = "60px";
+export const SPACING = {
+  SCALE_1: "5px",
+  SCALE_2: "10px",
+  SCALE_3: "15px",
+  SCALE_4: "20px",
+  SCALE_5: "30px",
+  SCALE_6: "60px"
+};
+
 export const NTA_LIGHT = `"nta", Arial, sans-serif`;
 export const NTA_LIGHT_TABULAR = `ntatabularnumbers", ${NTA_LIGHT}`;
 export const FONT_STACK = `${NTA_LIGHT} !default`;
 export const FONT_STACK_TABULAR = `${NTA_LIGHT_TABULAR} !default`;
 export const FONT_STACK_PRINT = "sans-serif !default";
+export const FONT_SIZE = {
+  SIZE_14: "14px",
+  SIZE_16: "16px",
+  SIZE_19: "19px"
+};
