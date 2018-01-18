@@ -8,6 +8,6 @@ const buttonEvent = () => {
   action("onClick");
 };
 
-storiesOf("BackLink", module).add("Back Link", () => (
+storiesOf("BackLink", module).add("Component default", () => (
   <BackLink goBack={buttonEvent}>Back</BackLink>
 ));
