@@ -1,6 +1,6 @@
 {
   "name": "govuk-react",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "dependencies": {
     "glamorous": "^4.11.2",
     "govuk-colours": "^1.0.2",
