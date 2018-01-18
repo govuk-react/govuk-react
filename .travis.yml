@@ -5,3 +5,16 @@ cache:
 script:
   - npm run build
   - npm test
+
+before_deploy:
+  - npm run build-storybook
+
+# https://docs.travis-ci.com/user/deployment/pages/
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  local-dir: storybook-static
+  on:
+    branch: master
