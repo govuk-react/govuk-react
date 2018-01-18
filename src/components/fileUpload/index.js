@@ -21,12 +21,12 @@ const ErrorText = glamorous.span(STYLE_DEFAULT.ERROR_TEXT);
 
 const Input = glamorous.input(STYLE_DEFAULT.INPUT);
 
-const FileUpload = ({ children, ...props }) => (
-  <Label {...props}>
-    <LabelText {...props}>{children}</LabelText>
-    <HintText>{props.hintText}</HintText>
-    <ErrorText>{props.errorText}</ErrorText>
-    <Input type="file" accept={props.acceptedFormats} {...props} />
+const FileUpload = ({ children, errorText, hintText, acceptedFormats }) => (
+  <Label errorText={errorText}>
+    <LabelText errorText={errorText}>{children}</LabelText>
+    <HintText>{hintText}</HintText>
+    <ErrorText>{errorText}</ErrorText>
+    <Input type="file" accept={acceptedFormats} errorText={errorText} />
   </Label>
 );
 

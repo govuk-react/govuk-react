@@ -5,15 +5,9 @@ import Checkbox from ".";
 
 storiesOf("Checkbox", module).add("Checkbox", () => (
   <div>
-    <Checkbox name="group1" checkboxId="id0">
-      Waste from animal carcasses
-    </Checkbox>
-    <Checkbox name="group1" checkboxId="id1">
-      Waste from mines or quarries
-    </Checkbox>
-    <Checkbox name="group1" checkboxId="id2">
-      Farm or agricultural waste
-    </Checkbox>
+    <Checkbox>Waste from animal carcasses</Checkbox>
+    <Checkbox>Waste from mines or quarries</Checkbox>
+    <Checkbox>Farm or agricultural waste</Checkbox>
   </div>
 ));
 

@@ -69,8 +69,8 @@ const BreadcrumbListItem = glamorous.li({
   }
 });
 
-const Breadcrumb = ({ children, ...props }) => (
-  <BreadcrumbContainer {...props}>
+const Breadcrumb = ({ children }) => (
+  <BreadcrumbContainer>
     <BreadcrumbList>
       {children.length && children.map ? (
         children.map(child => <BreadcrumbListItem>{child}</BreadcrumbListItem>)

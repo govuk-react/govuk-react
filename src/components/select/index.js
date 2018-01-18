@@ -111,12 +111,12 @@ const Input = glamorous.select(
   })
 );
 
-const Select = ({ children, ...props }) => (
-  <Label {...props}>
-    <LabelText {...props}>{props.label}</LabelText>
-    <HintText>{props.hintText}</HintText>
-    <ErrorText>{props.errorText}</ErrorText>
-    <Input {...props}>{children}</Input>
+const Select = ({ children, hintText, errorText, label }) => (
+  <Label errorText={errorText}>
+    <LabelText errorText={errorText}>{label}</LabelText>
+    <HintText>{hintText}</HintText>
+    <ErrorText>{errorText}</ErrorText>
+    <Input errorText={errorText}>{children}</Input>
   </Label>
 );
 
