@@ -1,14 +1,33 @@
-// https://github.com/alphagov/govuk-frontend/blob/master/src/components/input/_input.scss
-// https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
+// https://github.com/alphagov/govuk-frontend/tree/master/src/components/file-upload
 
 import React from "react";
 import PropTypes from "prop-types";
+import glamorous from "glamorous";
 
 import Label from "../label/index";
 import LabelText from "../labelText/index";
 import ErrorText from "../errorText/index";
 import HintText from "../hintText/index";
-import Input from "../input/index";
+
+import { FONT_SIZE, NTA_LIGHT, MEDIA_QUERIES } from "../../constants/index";
+
+const Input = glamorous.input({
+  boxSizing: "border-box",
+  fontFamily: NTA_LIGHT,
+  WebkitFontSmoothing: "antialiased",
+  MozOsxFontSmoothing: "grayscale",
+  fontWeight: 400,
+  textTransform: "none",
+  fontSize: FONT_SIZE.SIZE_14,
+  width: "100%",
+  padding: "5px 4px 4px",
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    width: "50%"
+  },
+  "[disabled]": {
+    cursor: "auto"
+  }
+});
 
 const FileUpload = ({ children, errorText, hintText, acceptedFormats }) => (
   <Label errorText={errorText}>
