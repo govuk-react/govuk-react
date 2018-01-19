@@ -1,6 +1,6 @@
 import glamorous from "glamorous";
 
-import * as COLOUR from "govuk-colours";
+import { BLACK, YELLOW, ERROR_COLOUR } from "govuk-colours";
 import { FONT_SIZE, MEDIA_QUERIES, NTA_LIGHT } from "../../constants/index";
 
 const Input = glamorous.input(
@@ -15,7 +15,7 @@ const Input = glamorous.input(
     lineHeight: "20px",
     width: "100%",
     padding: "5px 4px 4px",
-    border: `2px solid ${COLOUR.BLACK}`,
+    border: `2px solid ${BLACK}`,
     [MEDIA_QUERIES.LARGESCREEN]: {
       width: "50%",
       fontSize: FONT_SIZE.SIZE_19,
@@ -25,14 +25,12 @@ const Input = glamorous.input(
       cursor: "auto"
     },
     ":focus": {
-      outline: `3px solid ${COLOUR.YELLOW}`,
+      outline: `3px solid ${YELLOW}`,
       outlineOffset: 0
     }
   },
   ({ errorText }) => ({
-    border: errorText
-      ? `4px solid ${COLOUR.ERROR_COLOUR}`
-      : `2px solid ${COLOUR.BLACK}`
+    border: errorText ? `4px solid ${ERROR_COLOUR}` : `2px solid ${BLACK}`
   })
 );
 
