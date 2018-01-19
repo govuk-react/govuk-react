@@ -1,0 +1,51 @@
+// https://github.com/alphagov/govuk-frontend/tree/master/src/components/panel
+import React from "react";
+import glamorous from "glamorous";
+import PropTypes from "prop-types";
+
+import { TURQUOISE, WHITE } from "govuk-colours";
+import { MEDIA_QUERIES } from "../../constants/index";
+
+const PanelInner = glamorous.div({
+  backgroundColor: TURQUOISE,
+  color: WHITE,
+  padding: "25px"
+});
+
+const PanelTitle = glamorous.h2({
+  fontFamily: "nta, Arial, sans-serif",
+  fontWeight: 700,
+  fontSize: "32px",
+  lineHeight: "35px",
+  marginTop: 0,
+  textAlign: "center"
+});
+
+const PanelBody = glamorous.div({
+  fontFamily: "nta, Arial, sans-serif",
+  fontSize: "24px",
+  fontWeight: 400,
+  lineHeight: "25px",
+  marginTop: "15px",
+  marginBottom: "10px",
+  textAlign: "center",
+  WebkitFontSmoothing: "antialiased",
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    fontSize: "16px",
+    lineHeight: "20px"
+  }
+});
+
+const Panel = ({ panelTitle, panelBody }) => (
+  <PanelInner>
+    <PanelTitle>{panelTitle}</PanelTitle>
+    <PanelBody>{panelBody}</PanelBody>
+  </PanelInner>
+);
+
+Panel.propTypes = {
+  panelTitle: PropTypes.string.isRequired,
+  panelBody: PropTypes.string.isRequired
+};
+
+export default Panel;

@@ -15,3 +15,4 @@ import "../components/layout/stories";
 import "../components/select/stories";
 import "../components/fileUpload/stories";
 import "../components/errorText/stories";
+import "../components/panel/stories";
