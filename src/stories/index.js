@@ -7,6 +7,7 @@ import "./styles.css";
 
 import "../components/breadcrumb/stories";
 import "../components/inputField/stories";
+import "../components/dateInput/stories";
 import "../components/textarea/stories";
 import "../components/button/stories";
 import "../components/radio/stories";
