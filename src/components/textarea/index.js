@@ -1,4 +1,4 @@
-// https://github.com/alphagov/govuk-frontend/blob/master/src/components/input/_input.scss
+// https://github.com/alphagov/govuk-frontend/tree/master/src/components/textarea
 
 import React from "react";
 import PropTypes from "prop-types";
