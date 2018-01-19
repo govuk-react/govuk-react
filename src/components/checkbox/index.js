@@ -52,7 +52,7 @@ const Label = glamorous.span({
   padding: "8px 10px 9px 12px",
   display: "block",
   color: `${COLOUR.BLACK}`,
-  ":before": {
+  "::before": {
     content: " ",
     display: "block",
     border: `2px solid ${COLOUR.BLACK}`,
@@ -63,7 +63,7 @@ const Label = glamorous.span({
     top: 0,
     left: 0
   },
-  ":after": {
+  "::after": {
     content: " ",
     border: "solid",
     borderWidth: "0 0 5px 5px",
