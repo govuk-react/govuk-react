@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Radio from "./";
+import Input from "./";
 
-describe("Radio", () => {
+describe("Input", () => {
   it("renders without crashing", () => {
     const div = document.createElement("div");
-    ReactDOM.render(<Radio name="example">Example</Radio>, div);
+    ReactDOM.render(<Input type="text" />, div);
   });
 });

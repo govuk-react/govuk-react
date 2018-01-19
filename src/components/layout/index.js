@@ -65,9 +65,7 @@ const GridCol = glamorous.div(
   })
 );
 
-const Layout = ({ children, ...props }) => (
-  <RowWrapper {...props}>{children}</RowWrapper>
-);
+const Layout = ({ children }) => <RowWrapper>{children}</RowWrapper>;
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired

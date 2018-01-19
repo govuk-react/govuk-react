@@ -2,31 +2,20 @@
 // https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
 
 import React from "react";
-import glamorous from "glamorous";
 import PropTypes from "prop-types";
 
-import { STYLE_DEFAULT } from "../../constants/index";
+import Label from "../label/index";
+import LabelText from "../labelText/index";
+import ErrorText from "../errorText/index";
+import HintText from "../hintText/index";
+import Input from "../input/index";
 
-const Label = glamorous.label(STYLE_DEFAULT.LABEL, ({ errorText }) =>
-  STYLE_DEFAULT.LABEL.ERROR(errorText)
-);
-
-const LabelText = glamorous.span(STYLE_DEFAULT.LABEL_TEXT, ({ errorText }) =>
-  STYLE_DEFAULT.LABEL_TEXT.ERROR(errorText)
-);
-
-const HintText = glamorous.span(STYLE_DEFAULT.HINT_TEXT);
-
-const ErrorText = glamorous.span(STYLE_DEFAULT.ERROR_TEXT);
-
-const Input = glamorous.input(STYLE_DEFAULT.INPUT);
-
-const FileUpload = ({ children, ...props }) => (
-  <Label {...props}>
-    <LabelText {...props}>{children}</LabelText>
-    <HintText>{props.hintText}</HintText>
-    <ErrorText>{props.errorText}</ErrorText>
-    <Input type="file" accept={props.acceptedFormats} {...props} />
+const FileUpload = ({ children, errorText, hintText, acceptedFormats }) => (
+  <Label errorText={errorText}>
+    <LabelText errorText={errorText}>{children}</LabelText>
+    <HintText>{hintText}</HintText>
+    <ErrorText>{errorText}</ErrorText>
+    <Input type="file" accept={acceptedFormats} errorText={errorText} />
   </Label>
 );
 

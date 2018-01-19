@@ -1,9 +1,5 @@
 // References:
-// https://govuk-elements.herokuapp.com/buttons/
-//
-// https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_buttons.scss
-// https://github.com/alphagov/govuk-frontend/blob/master/src/components/button/_button.scss
-// https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_buttons.scss
+// https://github.com/alphagov/govuk-frontend/tree/master/src/components/back-link
 
 import React from "react";
 import PropTypes from "prop-types";

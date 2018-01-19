@@ -80,9 +80,9 @@ const Label = glamorous.span({
   }
 });
 
-const Checkbox = ({ children, ...props }) => (
+const Checkbox = ({ children }) => (
   <MultipleChoice>
-    <Input type="checkbox" {...props} />
+    <Input type="checkbox" />
     <Label>{children}</Label>
   </MultipleChoice>
 );
