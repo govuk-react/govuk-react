@@ -12,13 +12,12 @@ import {
   SPACING
 } from "../../constants/index";
 
-// import Label from "../label/index";
+import Label from "../label/index";
 import LabelText from "../labelText/index";
 import ErrorText from "../errorText/index";
 import HintText from "../hintText/index";
-// import Input from "../input/index";
 
-const Label = glamorous.div(
+const LabelWrapper = glamorous.div(
   {
     display: "flex",
     flexDirection: "column"
@@ -64,8 +63,6 @@ const ListParent = glamorous.div({
   fontFamily: NTA_LIGHT,
   display: "flex",
   "> label": {
-    display: "flex",
-    flexDirection: "column",
     width: "50px",
     marginRight: "20px",
     marginBottom: 0,
@@ -75,8 +72,8 @@ const ListParent = glamorous.div({
   }
 });
 
-const DatePicker = ({ children, ...props }) => (
-  <Label errorText={props.errorText}>
+const DateInput = ({ children, ...props }) => (
+  <LabelWrapper errorText={props.errorText}>
     <LabelText errorText={props.errorText}>{children}</LabelText>
     {props.hintText ? <HintText>{props.hintText}</HintText> : <span />}
     {props.errorText ? (
@@ -85,31 +82,31 @@ const DatePicker = ({ children, ...props }) => (
       <span />
     )}
     <ListParent>
-      <label>
-        <span>Day</span>
-        <Input type="text" errorText={props.errorText} />
-      </label>
-      <label>
-        <span>Month</span>
-        <Input type="text" errorText={props.errorText} />
-      </label>
-      <label className="year">
-        <span>Year</span>
-        <Input type="text" errorText={props.errorText} />
-      </label>
+      <Label>
+        <LabelText>Day</LabelText>
+        <Input type="text" />
+      </Label>
+      <Label>
+        <LabelText>Month</LabelText>
+        <Input type="text" />
+      </Label>
+      <Label className="year">
+        <LabelText>Year</LabelText>
+        <Input type="text" />
+      </Label>
     </ListParent>
-  </Label>
+  </LabelWrapper>
 );
 
-DatePicker.defaultProps = {
+DateInput.defaultProps = {
   hintText: null,
   errorText: null
 };
 
-DatePicker.propTypes = {
+DateInput.propTypes = {
   children: PropTypes.node.isRequired,
   hintText: PropTypes.string,
   errorText: PropTypes.string
 };
 
-export default DatePicker;
+export default DateInput;
