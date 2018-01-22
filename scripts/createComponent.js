@@ -1,9 +1,14 @@
+// TODO consider replacing this with a generator such as:
+// https://github.com/CVarisco/create-component-app
+
 const fs = require("fs");
+const path = require("path");
 const mkdirp = require("mkdirp");
 
 const componentName = process.argv[2];
-const folderName =
-  componentName.charAt(0).toLowerCase() + componentName.slice(1);
+const folderName = `./src/components/${componentName
+  .charAt(0)
+  .toUpperCase()}${componentName.slice(1)}`;
 
 /* eslint no-console: 0 */
 const createFolder = () => {
@@ -15,13 +20,17 @@ const createFolder = () => {
 };
 
 const writeThis = (fileName, contents) => {
-  fs.writeFile(`./${folderName}/${fileName}.js`, `${contents}`, err => {
+  const tempFileName = `${fileName}.js`;
+  const pathName = path.join(folderName, tempFileName);
+
+  fs.writeFile(pathName, `${contents}`, err => {
     if (err) {
       return console.log(err);
     }
     return false;
   });
   console.log(`Created file: ${folderName}/${fileName}.js`);
+  return false;
 };
 
 // write test.js file
@@ -75,7 +84,9 @@ const ${componentName}Inner = glamorous.div({
   width: "100%"
 });
 
-const ${componentName} = ({ children }) => <${componentName}Inner>{children}</${componentName}Inner>;
+const ${componentName} = ({ children }) => (
+  <${componentName}Inner>{children}</${componentName}Inner>
+);
 
 ${componentName}.propTypes = {
   children: PropTypes.node.isRequired
@@ -87,10 +98,19 @@ export default ${componentName};
 };
 
 const init = () => {
+  if (fs.existsSync(path.join(folderName))) {
+    console.log(
+      `❗️❗️ The component "${componentName}" already exists ❗️❗️`
+    );
+    console.log("Please use a different name or delete the existing folder 🆗");
+    return false;
+  }
   createFolder();
   testScript();
   storiesScript();
   indexScript();
+  console.log(`✅ The component "${componentName}" was created successfully`);
+  return false;
 };
 
 init();
