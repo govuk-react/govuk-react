@@ -1,8 +1,7 @@
 # govuk-react
 
-A set of [govuk](https://github.com/alphagov/) components for [React](https://reactjs.org) using ~~styled-components~~ [glamorous](https://glamorous.rocks/).
+A set of [govuk](https://github.com/alphagov/) components for [React](https://reactjs.org) using [glamorous](https://glamorous.rocks/).
 
-~~CSS styling from [GOV.UK/elements](https://github.com/alphagov/govuk_elements) is applied to the components first (where appropriate), then custom styling is applied (if neccessary).~~
 CSS styling is derived from [GOV.UK/elements](https://github.com/alphagov/govuk_elements) but modified to suit custom markup. Also flexbox is preferred over floats.
 
 ## Usage
@@ -18,6 +17,8 @@ const MyComponent = ({title}) => (<div>
 </div>)
 ```
 
+See the [Storybook](https://penx.github.io/govuk-react) for examples of all available components.
+
 ## Assumptions
 
 Use of these components assumes the following from the peer project:
@@ -25,6 +26,10 @@ Use of these components assumes the following from the peer project:
 - Either [normalize.css](https://necolas.github.io/normalize.css/) or [sanitize.css](https://jonathantneal.github.io/sanitize.css/) is used as a CSS reset.
 - The GDS Transport font face is included ([for gov.uk domains only](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk))
 - Other than the reset, no other styles affecting generic elements (without classes, IDs etc) are present in the CSS.
+
+## Why Glamorous/CSS-in-JS?
+
+See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660)
 
 ## Related sites and projects:
 
