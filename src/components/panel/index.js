@@ -42,6 +42,10 @@ const PanelBody = glamorous.div({
 });
 
 const Panel = ({ panelTitle, panelBody }) => (
+  // <div>
+  //   <h2>{panelTitle}</h2>
+  //   <p>{panelBody}</p>
+  // </div>
   <PanelInner>
     <PanelTitle>{panelTitle}</PanelTitle>
     <PanelBody>{panelBody}</PanelBody>
@@ -56,4 +60,4 @@ Panel.propTypes = {
   panelBody: PropTypes.string
 };
 
-export default Panel;
+export { Panel, PanelTitle, PanelBody };
