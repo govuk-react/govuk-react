@@ -13,16 +13,21 @@ const PanelInner = glamorous.div({
 });
 
 const PanelTitle = glamorous.h2({
-  fontFamily: "nta, Arial, sans-serif",
-  fontWeight: 700,
+  fontFamily: "'nta', Arial, sans-serif",
+  fontWeight: "bold",
+  WebkitFontSmoothing: "antialiased",
   fontSize: "32px",
   lineHeight: "35px",
   marginTop: 0,
-  textAlign: "center"
+  textAlign: "center",
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    fontSize: "48px",
+    lineHeight: "50px"
+  }
 });
 
 const PanelBody = glamorous.div({
-  fontFamily: "nta, Arial, sans-serif",
+  fontFamily: "'nta', Arial, sans-serif",
   fontSize: "24px",
   fontWeight: 400,
   lineHeight: "25px",
@@ -31,8 +36,8 @@ const PanelBody = glamorous.div({
   textAlign: "center",
   WebkitFontSmoothing: "antialiased",
   [MEDIA_QUERIES.LARGESCREEN]: {
-    fontSize: "16px",
-    lineHeight: "20px"
+    fontSize: "36px",
+    lineHeight: "40px"
   }
 });
 
@@ -42,10 +47,13 @@ const Panel = ({ panelTitle, panelBody }) => (
     <PanelBody>{panelBody}</PanelBody>
   </PanelInner>
 );
+Panel.defaultProps = {
+  panelBody: null
+};
 
 Panel.propTypes = {
   panelTitle: PropTypes.string.isRequired,
-  panelBody: PropTypes.string.isRequired
+  panelBody: PropTypes.string
 };
 
 export default Panel;
