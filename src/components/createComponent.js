@@ -75,9 +75,7 @@ const ${componentName}Inner = glamorous.div({
   width: "100%"
 });
 
-const ${componentName} = ({ children }) => (
-  <${componentName}Inner>{children}</${componentName}Inner>
-);
+const ${componentName} = ({ children }) => <${componentName}Inner>{children}</${componentName}Inner>;
 
 ${componentName}.propTypes = {
   children: PropTypes.node.isRequired
