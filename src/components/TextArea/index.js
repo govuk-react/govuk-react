@@ -7,10 +7,10 @@ import glamorous from "glamorous";
 import * as COLOUR from "govuk-colours";
 import { BREAKPOINTS } from "../../constants/index";
 
-import Label from "../label/index";
-import LabelText from "../labelText/index";
-import ErrorText from "../errorText/index";
-import HintText from "../hintText/index";
+import Label from "../Label/index";
+import LabelText from "../LabelText/index";
+import ErrorText from "../ErrorText/index";
+import HintText from "../HintText/index";
 
 const mediaQueries = {
   largeScreen: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`
@@ -45,7 +45,7 @@ const TextareaField = glamorous.textarea(
   })
 );
 
-const Textarea = ({ children, hintText, errorText }) => (
+const TextArea = ({ children, hintText, errorText }) => (
   <Label errorText={errorText}>
     <LabelText errorText={errorText}>{children}</LabelText>
     {hintText ? <HintText>{hintText}</HintText> : <span />}
@@ -58,15 +58,15 @@ const Textarea = ({ children, hintText, errorText }) => (
   </Label>
 );
 
-Textarea.defaultProps = {
+TextArea.defaultProps = {
   hintText: null,
   errorText: null
 };
 
-Textarea.propTypes = {
+TextArea.propTypes = {
   children: PropTypes.node.isRequired,
   hintText: PropTypes.string,
   errorText: PropTypes.string
 };
 
-export default Textarea;
+export default TextArea;
