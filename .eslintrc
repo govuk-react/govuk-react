@@ -1,6 +1,6 @@
 {
   "parser": "babel-eslint",
-  "extends": ["airbnb", "prettier"],
+  "extends": ["airbnb", "sonar", "prettier"],
   "plugins": [
     "prettier"
   ],
