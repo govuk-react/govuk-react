@@ -20,8 +20,7 @@ const MyComponent = ({title}) => (<div>
 
 ### Creating a new component
 To create a new component:
-- `cd` into `src/components`
-- `node createComponent.js MyNewComponent` where _MyNewComponent_ is the name of your new component.
+- `npm run create-component -- MyNewComponent` where _MyNewComponent_ is the name of your new component.
 
 This creates a folder named _MyNewComponent_ in `src/components` with the component file (index.js), a basic render test (test.js), and a default story (stories.js). You will need to add this to `src/stories/index.js` to view it in storybook.
 

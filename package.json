@@ -21,7 +21,8 @@
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "prepare": "npm run build",
-    "patch": "npm run build && npm run test && npm run build-storybook && npm version patch && npm publish && npm run deploy-storybook"
+    "patch": "npm run build && npm run test && npm run build-storybook && npm version patch && npm publish && npm run deploy-storybook",
+    "create-component": "node ./scripts/createComponent.js"
   },
   "jest": {
     "collectCoverageFrom": [

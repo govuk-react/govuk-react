@@ -2,8 +2,9 @@ const fs = require("fs");
 const mkdirp = require("mkdirp");
 
 const componentName = process.argv[2];
-const folderName =
-  componentName.charAt(0).toLowerCase() + componentName.slice(1);
+const folderName = `./src/components/${componentName
+  .charAt(0)
+  .toLowerCase()}${componentName.slice(1)}`;
 
 /* eslint no-console: 0 */
 const createFolder = () => {
@@ -15,7 +16,7 @@ const createFolder = () => {
 };
 
 const writeThis = (fileName, contents) => {
-  fs.writeFile(`./${folderName}/${fileName}.js`, `${contents}`, err => {
+  fs.writeFile(`${folderName}/${fileName}.js`, `${contents}`, err => {
     if (err) {
       return console.log(err);
     }
