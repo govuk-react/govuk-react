@@ -1,6 +1,6 @@
 {
   "name": "govuk-react",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "dependencies": {
     "glamorous": "^4.11.2",
     "govuk-colours": "^1.0.2",
@@ -53,6 +53,7 @@
     "eslint": "^4.15.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
+    "eslint-config-sonar": "0.0.5",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.5.0",

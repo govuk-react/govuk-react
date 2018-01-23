@@ -4,10 +4,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import glamorous from "glamorous";
 
-import Label from "../label/index";
-import LabelText from "../labelText/index";
-import ErrorText from "../errorText/index";
-import HintText from "../hintText/index";
+import Label from "../Label/index";
+import LabelText from "../LabelText/index";
+import ErrorText from "../ErrorText/index";
+import HintText from "../HintText/index";
 
 import { FONT_SIZE, NTA_LIGHT, MEDIA_QUERIES } from "../../constants/index";
 
