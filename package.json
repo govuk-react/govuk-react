@@ -6,7 +6,7 @@
     "govuk-colours": "^1.0.2",
     "jest-glamor-react": "^3.3.0",
     "prop-types": "^15.6.0",
-    "react": "^15.0.0"
+    "react": "^15.6.2"
   },
   "scripts": {
     "start": "start-storybook -p 9009",
@@ -16,6 +16,7 @@
     "test": "CI=true npm run test:unit && npm run eslint",
     "test:unit": "react-scripts test --env=jsdom",
     "test:debug": "react-scripts --inspect-brk test --runInBand --env=jsdom",
+    "test:snapshot": "npm run test:unit -- -u",
     "coverage": "npm run test:unit -- --coverage",
     "eject": "react-scripts eject",
     "build-storybook": "build-storybook",
@@ -54,7 +55,7 @@
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-prettier": "^2.5.0",
     "eslint-plugin-react": "^7.5.1",
     "govuk-elements-sass": "^3.1.2",
@@ -63,7 +64,7 @@
     "prettier": "^1.10.2",
     "react-dom": "^15.6.2",
     "react-scripts": "1.0.14",
-    "react-test-renderer": "^15.5.4",
+    "react-test-renderer": "^15.6.2",
     "sass-loader": "^6.0.6"
   },
   "repository": {
