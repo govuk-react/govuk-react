@@ -1,24 +1,24 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 
-import Textarea from ".";
+import TextArea from ".";
 
 storiesOf("Textarea", module).add("Textarea", () => (
-  <Textarea name="group1">Description of what you saw</Textarea>
+  <TextArea name="group1">Description of what you saw</TextArea>
 ));
 
 storiesOf("Textarea", module).add("Textarea with HintText", () => (
-  <Textarea name="group1" hintText={["Enter as many words as you like"]}>
+  <TextArea name="group1" hintText={["Enter as many words as you like"]}>
     Description of what you saw
-  </Textarea>
+  </TextArea>
 ));
 
 storiesOf("Textarea", module).add("Textarea with HintText & error", () => (
-  <Textarea
+  <TextArea
     name="group1"
     hintText={["Enter as many words as you like"]}
     errorText="Please enter a description"
   >
     Description of what you saw
-  </Textarea>
+  </TextArea>
 ));
