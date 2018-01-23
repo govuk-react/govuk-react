@@ -5,8 +5,7 @@
     "glamorous": "^4.11.2",
     "govuk-colours": "^1.0.2",
     "prop-types": "^15.6.0",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0"
+    "react": "^15.6.2"
   },
   "scripts": {
     "start": "start-storybook -p 9009",
@@ -16,6 +15,7 @@
     "test": "CI=true npm run test:unit && npm run eslint",
     "test:unit": "react-scripts test --env=jsdom",
     "test:debug": "react-scripts --inspect-brk test --runInBand --env=jsdom",
+    "test:snapshot": "npm run test:unit -- -u",
     "coverage": "npm run test:unit -- --coverage",
     "eject": "react-scripts eject",
     "build-storybook": "build-storybook",
@@ -29,6 +29,9 @@
       "!<rootDir>/node_modules/",
       "!src/**/stories.js",
       "!src/stories/*"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ]
   },
   "description": "A port of the govuk-frontend components for React using styled-components.",
@@ -46,6 +49,7 @@
     "babel-preset-stage-1": "^6.24.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-15": "^1.0.5",
+    "enzyme-to-json": "^3.3.0",
     "eslint": "^4.15.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -55,11 +59,13 @@
     "eslint-plugin-prettier": "^2.5.0",
     "eslint-plugin-react": "^7.5.1",
     "govuk-elements-sass": "^3.1.2",
+    "jest-glamor-react": "^3.3.0",
     "node-sass": "^4.7.2",
     "normalize.css": "^7.0.0",
     "prettier": "^1.10.2",
+    "react-dom": "^15.6.2",
     "react-scripts": "1.0.14",
-    "react-test-renderer": "^15.5.4",
+    "react-test-renderer": "^15.6.2",
     "sass-loader": "^6.0.6"
   },
   "repository": {
