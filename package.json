@@ -32,7 +32,7 @@
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
-    "govuk-colours": "^1.0.2",
+    "govuk-colours": "^1.0.2"
   },
   "peerDependencies": {
     "glamorous": ">=4",
