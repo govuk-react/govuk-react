@@ -1,12 +1,6 @@
 {
   "name": "govuk-react",
   "version": "0.1.6",
-  "dependencies": {
-    "glamorous": "^4.11.2",
-    "govuk-colours": "^1.0.2",
-    "prop-types": "^15.6.0",
-    "react": "^15.6.2"
-  },
   "scripts": {
     "start": "start-storybook -p 9009",
     "eslint": "eslint ./src",
@@ -37,7 +31,20 @@
   "description": "A port of the govuk-frontend components for React using styled-components.",
   "main": "lib/index.js",
   "module": "src/index.js",
+  "dependencies": {
+    "govuk-colours": "^1.0.2",
+  },
+  "peerDependencies": {
+    "glamorous": ">=4",
+    "prop-types": ">=15",
+    "react": ">=15"
+  },
   "devDependencies": {
+    "glamorous": "^4.11.2",
+    "govuk-colours": "^1.0.2",
+    "prop-types": "^15.6.0",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
     "@storybook/addon-actions": "^3.3.9",
     "@storybook/addon-links": "^3.3.9",
     "@storybook/react": "^3.3.9",
