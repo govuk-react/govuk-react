@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enzyme.mount 1`] = `
+<Panel
+  panelBody="body"
+  panelTitle="Example"
+>
+  <glamorous(div)>
+    <div
+      className="css-c4en63"
+    >
+      <glamorous(h2)>
+        <h2
+          className="css-gf9qal"
+        >
+          Example
+        </h2>
+      </glamorous(h2)>
+      <glamorous(div)>
+        <div
+          className="css-3cbh5b"
+        >
+          body
+        </div>
+      </glamorous(div)>
+    </div>
+  </glamorous(div)>
+</Panel>
+`;
+
+exports[`enzyme.render 1`] = `
+<div
+  class="css-c4en63"
+>
+  <h2
+    class="css-gf9qal"
+  >
+    Example
+  </h2>
+  <div
+    class="css-3cbh5b"
+  >
+    body
+  </div>
+</div>
+`;
+
+exports[`enzyme.shallow 1`] = `
+<glamorous(div)>
+  <glamorous(h2)>
+    Example
+  </glamorous(h2)>
+  <glamorous(div)>
+    body
+  </glamorous(div)>
+</glamorous(div)>
+`;
