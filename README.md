@@ -19,6 +19,12 @@ const MyComponent = ({title}) => (<div>
 
 See the [Storybook](https://penx.github.io/govuk-react) for examples of all available components.
 
+### Creating a new component
+To create a new component:
+- `npm run create-component -- MyNewComponent` where _MyNewComponent_ is the name of your new component.
+
+This creates a folder named _MyNewComponent_ in `src/components` with the component file (index.js), a basic render test (test.js), and a default story (stories.js). You will need to add this to `src/stories/index.js` to view it in storybook.
+
 ## Assumptions
 
 Use of these components assumes the following from the peer project:
