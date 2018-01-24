@@ -20,7 +20,10 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/penx/govuk-react-example.git"
