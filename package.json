@@ -6,6 +6,7 @@
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src",
     "build": "babel --source-maps -d lib/ src/",
+    "clean": "rimraf lib",
     "test": "CI=true npm run test:unit && npm run eslint",
     "test:unit": "react-scripts test --env=jsdom",
     "test:debug": "react-scripts --inspect-brk test --runInBand --env=jsdom",
@@ -14,7 +15,7 @@
     "eject": "react-scripts eject",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "prepare": "npm run build",
+    "prepare": "npm run clean && npm run build",
     "patch": "npm run build && npm run test && npm run build-storybook && npm version patch && npm publish && npm run deploy-storybook",
     "create-component": "node ./scripts/createComponent.js"
   },
@@ -72,6 +73,7 @@
     "react-dom": "^15.6.2",
     "react-scripts": "1.0.14",
     "react-test-renderer": "^15.6.2",
+    "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6",
     "sinon": "^4.2.1"
   },
