@@ -2,7 +2,7 @@
 
 A set of [govuk](https://github.com/alphagov/) components for [React](https://reactjs.org) using ~~styled-components~~ [glamorous](https://glamorous.rocks/).
 
-~~CSS styling from [GOV.UK/elements](https://github.com/alphagov/govuk_elements) is applied to the components first (where appropriate), then custom styling is applied (if neccessary).~~
+~~CSS styling from [GOV.UK/elements](https://github.com/alphagov/govuk_elements) is applied to the components first (where appropriate), then custom styling is applied (if necessary).~~
 CSS styling is derived from [GOV.UK/elements](https://github.com/alphagov/govuk_elements) but modified to suit custom markup. Also flexbox is preferred over floats.
 
 ## Usage
@@ -30,6 +30,11 @@ To run & watch unit tests:
 ```
 $ npm run test:unit
 ```
+### Creating a new component
+To create a new component:
+- `npm run create-component -- MyNewComponent` where _MyNewComponent_ is the name of your new component.
+
+This creates a folder named _MyNewComponent_ in `src/components` with the component file (index.js), a basic render test (test.js), and a default story (stories.js). You will need to add this to `src/stories/index.js` to view it in storybook.
 
 ## Assumptions
 
