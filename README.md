@@ -52,7 +52,8 @@ See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-
 
 ## Why not use GDS styles/classes directly
 
-1. We want to be free to write different DOM structure and/or CSS. e.g. in React you often don't need to specify IDs for field inputs, and can wrap inputs with labels so that they are automatically associated. We want to leave the decision of whether to use input IDs to the parent project. GDS styles don't wrap inputs with labels.
+1. We want to be free to write different DOM structure and/or CSS that is more in keeping with a React and bem-ish architecture. (e.g. in React you often don't need to specify IDs for field inputs, and can wrap inputs with labels so that they are automatically associated. We want to leave the decision of whether to use input IDs to the parent project. GDS styles don't wrap inputs with labels).
+2. We want a parent project to not have to worry about a specific build system (e.g. for handling `import styles.css`) or including certain CSS files. We want a simple `npm install govuk-react` to be enough to get govuk styled components on to your page.
 
 ## Related sites and projects:
 
