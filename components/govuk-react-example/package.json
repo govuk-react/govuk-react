@@ -12,5 +12,23 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penx/govuk-react-example.git"
+  },
+  "keywords": [
+    "react",
+    "govuk",
+    "glamorous"
+  ],
+  "author": "Alasdair McLeay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/penx/govuk-react-example/issues"
+  },
+  "homepage": "https://github.com/penx/govuk-react-example#readme"
 }
