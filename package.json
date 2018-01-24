@@ -72,7 +72,8 @@
     "react-dom": "^15.6.2",
     "react-scripts": "1.0.14",
     "react-test-renderer": "^15.6.2",
-    "sass-loader": "^6.0.6"
+    "sass-loader": "^6.0.6",
+    "sinon": "^4.2.1"
   },
   "repository": {
     "type": "git",

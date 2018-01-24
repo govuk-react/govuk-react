@@ -1,18 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { shallow } from "enzyme";
+import { shallow, mount, render } from "enzyme";
 
 import Breadcrumb from "./";
 
 describe("breadcrumb", () => {
+  const example = "example";
+  const wrapper = <Breadcrumb>{example}</Breadcrumb>;
+
   it("renders without crashing", () => {
     const div = document.createElement("div");
-    ReactDOM.render(<Breadcrumb>Example</Breadcrumb>, div);
+    ReactDOM.render(wrapper, div);
   });
 
   it("should render an unordered list", () => {
-    const output = shallow(<Breadcrumb>Example</Breadcrumb>);
+    const output = shallow(wrapper);
     expect(output.find("ul")).toBeTruthy();
     expect(output.find("ul > li")).toBeTruthy();
+  });
+
+  it("matches snapshot", () => {
+    expect(shallow(wrapper)).toMatchSnapshot(`enzyme.shallow`);
+    expect(mount(wrapper)).toMatchSnapshot(`enzyme.mount`);
+    expect(render(wrapper)).toMatchSnapshot(`enzyme.render`);
   });
 });

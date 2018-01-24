@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enzyme.mount 1`] = `
+<glamorous(button)>
+  <button
+    className="css-1kwqzbl"
+  >
+    example
+  </button>
+</glamorous(button)>
+`;
+
+exports[`enzyme.render 1`] = `
+<button
+  class="css-1kwqzbl"
+>
+  example
+</button>
+`;
+
+exports[`enzyme.shallow 1`] = `
+<button
+  className="css-1kwqzbl"
+>
+  example
+</button>
+`;

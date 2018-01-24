@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enzyme.mount 1`] = `
+<DateInput
+  errorText={null}
+  hintText={null}
+>
+  <glamorous(div)
+    errorText={null}
+  >
+    <div
+      className="css-id7ytt"
+    >
+      <glamorous(span)
+        errorText={null}
+      >
+        <span
+          className="css-yengmq"
+        >
+          example
+        </span>
+      </glamorous(span)>
+      <span />
+      <span />
+      <glamorous(div)>
+        <div
+          className="css-m5vkn2"
+        >
+          <glamorous(label)>
+            <label
+              className="css-1b081ox"
+            >
+              <glamorous(span)>
+                <span
+                  className="css-yengmq"
+                >
+                  Day
+                </span>
+              </glamorous(span)>
+              <glamorous(input)
+                type="text"
+              >
+                <input
+                  className="css-11dt3lb"
+                  type="text"
+                />
+              </glamorous(input)>
+            </label>
+          </glamorous(label)>
+          <glamorous(label)>
+            <label
+              className="css-1b081ox"
+            >
+              <glamorous(span)>
+                <span
+                  className="css-yengmq"
+                >
+                  Month
+                </span>
+              </glamorous(span)>
+              <glamorous(input)
+                type="text"
+              >
+                <input
+                  className="css-11dt3lb"
+                  type="text"
+                />
+              </glamorous(input)>
+            </label>
+          </glamorous(label)>
+          <glamorous(label)
+            className="year"
+          >
+            <label
+              className="css-1b081ox year"
+            >
+              <glamorous(span)>
+                <span
+                  className="css-yengmq"
+                >
+                  Year
+                </span>
+              </glamorous(span)>
+              <glamorous(input)
+                type="text"
+              >
+                <input
+                  className="css-11dt3lb"
+                  type="text"
+                />
+              </glamorous(input)>
+            </label>
+          </glamorous(label)>
+        </div>
+      </glamorous(div)>
+    </div>
+  </glamorous(div)>
+</DateInput>
+`;
+
+exports[`enzyme.render 1`] = `
+<div
+  class="css-id7ytt"
+>
+  <span
+    class="css-yengmq"
+  >
+    example
+  </span>
+  <span>
+    
+  </span>
+  <span>
+    
+  </span>
+  <div
+    class="css-m5vkn2"
+  >
+    <label
+      class="css-1b081ox"
+    >
+      <span
+        class="css-yengmq"
+      >
+        Day
+      </span>
+      <input
+        class="css-11dt3lb"
+        type="text"
+      >
+        
+      </input>
+    </label>
+    <label
+      class="css-1b081ox"
+    >
+      <span
+        class="css-yengmq"
+      >
+        Month
+      </span>
+      <input
+        class="css-11dt3lb"
+        type="text"
+      >
+        
+      </input>
+    </label>
+    <label
+      class="css-1b081ox year"
+    >
+      <span
+        class="css-yengmq"
+      >
+        Year
+      </span>
+      <input
+        class="css-11dt3lb"
+        type="text"
+      >
+        
+      </input>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`enzyme.shallow 1`] = `
+<glamorous(div)
+  errorText={null}
+>
+  <glamorous(span)
+    errorText={null}
+  >
+    example
+  </glamorous(span)>
+  <span />
+  <span />
+  <glamorous(div)>
+    <glamorous(label)>
+      <glamorous(span)>
+        Day
+      </glamorous(span)>
+      <glamorous(input)
+        type="text"
+      />
+    </glamorous(label)>
+    <glamorous(label)>
+      <glamorous(span)>
+        Month
+      </glamorous(span)>
+      <glamorous(input)
+        type="text"
+      />
+    </glamorous(label)>
+    <glamorous(label)
+      className="year"
+    >
+      <glamorous(span)>
+        Year
+      </glamorous(span)>
+      <glamorous(input)
+        type="text"
+      />
+    </glamorous(label)>
+  </glamorous(div)>
+</glamorous(div)>
+`;

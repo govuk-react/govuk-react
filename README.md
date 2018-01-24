@@ -17,6 +17,19 @@ const MyComponent = ({title}) => (<div>
 </div>)
 ```
 
+### Unit testing
+Unit testing follows similar patterns as [Glamorous with Jest](https://github.com/paypal/glamorous/tree/master/examples/with-jest), utilising [Jest _snapshots_](https://facebook.github.io/jest/docs/en/snapshot-testing.html), and [Enzyme](https://github.com/airbnb/enzyme).
+
+To run unit & eslint tests:
+```
+$ npm run test
+```
+
+To run & watch unit tests:
+```
+$ npm run test:unit
+```
+
 See the [Storybook](https://penx.github.io/govuk-react) for examples of all available components.
 
 ### Creating a new component

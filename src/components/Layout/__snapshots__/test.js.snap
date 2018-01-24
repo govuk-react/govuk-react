@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enzyme.mount 1`] = `
+<Layout>
+  <glamorous(div)>
+    <div
+      className="css-hwphr6"
+    >
+      example
+    </div>
+  </glamorous(div)>
+</Layout>
+`;
+
+exports[`enzyme.render 1`] = `
+<div
+  class="css-hwphr6"
+>
+  example
+</div>
+`;
+
+exports[`enzyme.shallow 1`] = `
+<glamorous(div)>
+  example
+</glamorous(div)>
+`;

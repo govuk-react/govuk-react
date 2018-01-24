@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enzyme.mount 1`] = `
+<Radio
+  defaultChecked={null}
+  disabled={null}
+  name="example"
+>
+  <glamorous(label)>
+    <label
+      className="css-1cr83k4"
+    >
+      <glamorous(input)
+        defaultChecked={null}
+        disabled={null}
+        name="example"
+        type="radio"
+      >
+        <input
+          className="css-10svazo"
+          defaultChecked={null}
+          disabled={null}
+          name="example"
+          type="radio"
+        />
+      </glamorous(input)>
+      <glamorous(span)>
+        <span
+          className="css-du12vn"
+        >
+          example
+        </span>
+      </glamorous(span)>
+    </label>
+  </glamorous(label)>
+</Radio>
+`;
+
+exports[`enzyme.render 1`] = `
+<label
+  class="css-1cr83k4"
+>
+  <input
+    class="css-10svazo"
+    name="example"
+    type="radio"
+  >
+    
+  </input>
+  <span
+    class="css-du12vn"
+  >
+    example
+  </span>
+</label>
+`;
+
+exports[`enzyme.shallow 1`] = `
+<glamorous(label)>
+  <glamorous(input)
+    defaultChecked={null}
+    disabled={null}
+    name="example"
+    type="radio"
+  />
+  <glamorous(span)>
+    example
+  </glamorous(span)>
+</glamorous(label)>
+`;
