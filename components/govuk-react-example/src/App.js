@@ -37,14 +37,14 @@ const App = () => (
       />
     </div>
     <Button type="submit" disabled={submitting}>
-            Submit
+      Submit
     </Button>
     <Button
       type="button"
       onClick={reset}
       disabled={submitting || pristine}
     >
-            Reset
+      Reset
     </Button>
     <pre>{JSON.stringify(values, 0, 2)}</pre>
   </form>
