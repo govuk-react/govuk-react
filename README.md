@@ -50,6 +50,10 @@ Use of these components assumes the following from the peer project:
 
 See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660)
 
+## Why not use GDS styles/classes directly
+
+1. We want to be free to write different DOM structure and/or CSS. e.g. in React you often don't need to specify IDs for field inputs, and can wrap inputs with labels so that they are automatically associated. We want to leave the decision of whether to use input IDs to the parent project. GDS styles don't wrap inputs with labels.
+
 ## Related sites and projects:
 
  - [govuk-elements](https://govuk-elements.herokuapp.com/) ([source](https://github.com/alphagov/govuk_elements/))
