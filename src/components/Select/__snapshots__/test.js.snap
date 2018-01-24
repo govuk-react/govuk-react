@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enzyme.mount 1`] = `
+<Select
+  errorText={null}
+  hintText={null}
+  label="example"
+>
+  <glamorous(label)
+    errorText={null}
+  >
+    <label
+      className="css-1b081ox"
+    >
+      <glamorous(span)
+        errorText={null}
+      >
+        <span
+          className="css-yengmq"
+        >
+          example
+        </span>
+      </glamorous(span)>
+      <span />
+      <span />
+      <glamorous(select)
+        errorText={null}
+      >
+        <select
+          className="css-8psxza"
+        >
+          example
+        </select>
+      </glamorous(select)>
+    </label>
+  </glamorous(label)>
+</Select>
+`;
+
+exports[`enzyme.render 1`] = `
+<label
+  class="css-1b081ox"
+>
+  <span
+    class="css-yengmq"
+  >
+    example
+  </span>
+  <span>
+    
+  </span>
+  <span>
+    
+  </span>
+  <select
+    class="css-8psxza"
+  >
+    example
+  </select>
+</label>
+`;
+
+exports[`enzyme.shallow 1`] = `
+<glamorous(label)
+  errorText={null}
+>
+  <glamorous(span)
+    errorText={null}
+  >
+    example
+  </glamorous(span)>
+  <span />
+  <span />
+  <glamorous(select)
+    errorText={null}
+  >
+    example
+  </glamorous(select)>
+</glamorous(label)>
+`;

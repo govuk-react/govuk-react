@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enzyme.mount 1`] = `
+<BackLink
+  goBack={[Function]}
+>
+  <glamorous(button)
+    onClick={[Function]}
+  >
+    <button
+      className="css-16uyu72"
+      onClick={[Function]}
+    >
+      example
+    </button>
+  </glamorous(button)>
+</BackLink>
+`;
+
+exports[`enzyme.render 1`] = `
+<button
+  class="css-16uyu72"
+>
+  example
+</button>
+`;
+
+exports[`enzyme.shallow 1`] = `
+<glamorous(button)
+  onClick={[Function]}
+>
+  example
+</glamorous(button)>
+`;

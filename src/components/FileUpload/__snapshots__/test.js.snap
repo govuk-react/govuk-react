@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enzyme.mount 1`] = `
+<FileUpload
+  acceptedFormats={null}
+  errorText={null}
+  hintText={null}
+>
+  <glamorous(label)
+    errorText={null}
+  >
+    <label
+      className="css-1b081ox"
+    >
+      <glamorous(span)
+        errorText={null}
+      >
+        <span
+          className="css-yengmq"
+        >
+          example
+        </span>
+      </glamorous(span)>
+      <glamorous(span)>
+        <span
+          className="css-1k9f6xb"
+        />
+      </glamorous(span)>
+      <glamorous(span)>
+        <span
+          className="css-110ebyw"
+        />
+      </glamorous(span)>
+      <glamorous(input)
+        accept={null}
+        errorText={null}
+        type="file"
+      >
+        <input
+          accept={null}
+          className="css-svb7gc"
+          type="file"
+        />
+      </glamorous(input)>
+    </label>
+  </glamorous(label)>
+</FileUpload>
+`;
+
+exports[`enzyme.render 1`] = `
+<label
+  class="css-1b081ox"
+>
+  <span
+    class="css-yengmq"
+  >
+    example
+  </span>
+  <span
+    class="css-1k9f6xb"
+  >
+    
+  </span>
+  <span
+    class="css-110ebyw"
+  >
+    
+  </span>
+  <input
+    class="css-svb7gc"
+    type="file"
+  >
+    
+  </input>
+</label>
+`;
+
+exports[`enzyme.shallow 1`] = `
+<glamorous(label)
+  errorText={null}
+>
+  <glamorous(span)
+    errorText={null}
+  >
+    example
+  </glamorous(span)>
+  <glamorous(span) />
+  <glamorous(span) />
+  <glamorous(input)
+    accept={null}
+    errorText={null}
+    type="file"
+  />
+</glamorous(label)>
+`;

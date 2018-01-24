@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enzyme.mount 1`] = `
+<Breadcrumb>
+  <glamorous(div)>
+    <div
+      className="css-v85tod"
+    >
+      <glamorous(ul)>
+        <ul
+          className="css-j76yvj"
+        >
+          <glamorous(li)>
+            <li
+              className="css-uxdkvh"
+            >
+              example
+            </li>
+          </glamorous(li)>
+        </ul>
+      </glamorous(ul)>
+    </div>
+  </glamorous(div)>
+</Breadcrumb>
+`;
+
+exports[`enzyme.render 1`] = `
+<div
+  class="css-v85tod"
+>
+  <ul
+    class="css-j76yvj"
+  >
+    <li
+      class="css-uxdkvh"
+    >
+      example
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`enzyme.shallow 1`] = `
+<glamorous(div)>
+  <glamorous(ul)>
+    <glamorous(li)>
+      example
+    </glamorous(li)>
+  </glamorous(ul)>
+</glamorous(div)>
+`;

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enzyme.mount 1`] = `
+<glamorous(label)>
+  <label
+    className="css-1b081ox"
+  >
+    example
+  </label>
+</glamorous(label)>
+`;
+
+exports[`enzyme.render 1`] = `
+<label
+  class="css-1b081ox"
+>
+  example
+</label>
+`;
+
+exports[`enzyme.shallow 1`] = `
+<label
+  className="css-1b081ox"
+>
+  example
+</label>
+`;
