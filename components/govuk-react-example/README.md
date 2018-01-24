@@ -1,4 +1,4 @@
-# govuk-react-example
+# govuk-react-example
 
 Example usage of [govuk-react](https://github.com/penx/govuk-react)
 
