@@ -31,7 +31,6 @@
   },
   "description": "A port of the govuk-frontend components for React using styled-components.",
   "main": "lib/index.js",
-  "module": "src/index.js",
   "dependencies": {
     "govuk-colours": "^1.0.2"
   },
@@ -62,7 +61,6 @@
     "eslint-plugin-prettier": "^2.5.0",
     "eslint-plugin-react": "^7.5.1",
     "glamorous": "^4.11.2",
-    "govuk-colours": "^1.0.2",
     "govuk-elements-sass": "^3.1.2",
     "jest-glamor-react": "^3.3.0",
     "mkdirp": "^0.5.1",
