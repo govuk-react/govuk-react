@@ -9,7 +9,7 @@
     "clean": "rimraf lib",
     "test": "CI=true npm run test:unit && npm run eslint",
     "test:unit": "node scripts/test.js --env=jsdom",
-    "test:debug": "react-scripts --inspect-brk test --runInBand --env=jsdom",
+    "test:debug": "node  --inspect-brk scripts/test.js --runInBand --env=jsdom",
     "test:snapshot": "npm run test:unit -- -u",
     "coverage": "npm run test:unit -- --coverage",
     "build-storybook": "build-storybook",
