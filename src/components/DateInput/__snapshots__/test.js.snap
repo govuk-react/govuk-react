@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`enzyme.mount 1`] = `
+exports[`DateInput matches snapshot: enzyme.mount 1`] = `
 <DateInput
   errorText={null}
   hintText={null}
@@ -98,7 +98,7 @@ exports[`enzyme.mount 1`] = `
 </DateInput>
 `;
 
-exports[`enzyme.render 1`] = `
+exports[`DateInput matches snapshot: enzyme.render 1`] = `
 <div
   class="css-id7ytt"
 >
@@ -107,12 +107,8 @@ exports[`enzyme.render 1`] = `
   >
     example
   </span>
-  <span>
-    
-  </span>
-  <span>
-    
-  </span>
+  <span />
+  <span />
   <div
     class="css-m5vkn2"
   >
@@ -127,9 +123,7 @@ exports[`enzyme.render 1`] = `
       <input
         class="css-11dt3lb"
         type="text"
-      >
-        
-      </input>
+      />
     </label>
     <label
       class="css-1b081ox"
@@ -142,9 +136,7 @@ exports[`enzyme.render 1`] = `
       <input
         class="css-11dt3lb"
         type="text"
-      >
-        
-      </input>
+      />
     </label>
     <label
       class="css-1b081ox year"
@@ -157,15 +149,13 @@ exports[`enzyme.render 1`] = `
       <input
         class="css-11dt3lb"
         type="text"
-      >
-        
-      </input>
+      />
     </label>
   </div>
 </div>
 `;
 
-exports[`enzyme.shallow 1`] = `
+exports[`DateInput matches snapshot: enzyme.shallow 1`] = `
 <glamorous(div)
   errorText={null}
 >

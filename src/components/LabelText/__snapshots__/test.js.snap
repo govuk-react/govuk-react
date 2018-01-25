@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`enzyme.mount 1`] = `
+exports[`LabelText matches snapshot: enzyme.mount 1`] = `
 <glamorous(span)>
   <span
     className="css-yengmq"
@@ -10,7 +10,7 @@ exports[`enzyme.mount 1`] = `
 </glamorous(span)>
 `;
 
-exports[`enzyme.render 1`] = `
+exports[`LabelText matches snapshot: enzyme.render 1`] = `
 <span
   class="css-yengmq"
 >
@@ -18,7 +18,7 @@ exports[`enzyme.render 1`] = `
 </span>
 `;
 
-exports[`enzyme.shallow 1`] = `
+exports[`LabelText matches snapshot: enzyme.shallow 1`] = `
 <span
   className="css-yengmq"
 >

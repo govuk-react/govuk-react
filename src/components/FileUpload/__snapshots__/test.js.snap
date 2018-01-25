@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`enzyme.mount 1`] = `
+exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
 <FileUpload
   acceptedFormats={null}
   errorText={null}
@@ -47,7 +47,7 @@ exports[`enzyme.mount 1`] = `
 </FileUpload>
 `;
 
-exports[`enzyme.render 1`] = `
+exports[`FileUpload matches snapshot: enzyme.render 1`] = `
 <label
   class="css-1b081ox"
 >
@@ -58,24 +58,18 @@ exports[`enzyme.render 1`] = `
   </span>
   <span
     class="css-1k9f6xb"
-  >
-    
-  </span>
+  />
   <span
     class="css-110ebyw"
-  >
-    
-  </span>
+  />
   <input
     class="css-svb7gc"
     type="file"
-  >
-    
-  </input>
+  />
 </label>
 `;
 
-exports[`enzyme.shallow 1`] = `
+exports[`FileUpload matches snapshot: enzyme.shallow 1`] = `
 <glamorous(label)
   errorText={null}
 >

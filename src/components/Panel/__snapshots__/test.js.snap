@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`enzyme.mount 1`] = `
+exports[`Panel matches snapshot: enzyme.mount 1`] = `
 <Panel
   panelBody="body"
   panelTitle="Example"
@@ -28,7 +28,7 @@ exports[`enzyme.mount 1`] = `
 </Panel>
 `;
 
-exports[`enzyme.render 1`] = `
+exports[`Panel matches snapshot: enzyme.render 1`] = `
 <div
   class="css-c4en63"
 >
@@ -45,7 +45,7 @@ exports[`enzyme.render 1`] = `
 </div>
 `;
 
-exports[`enzyme.shallow 1`] = `
+exports[`Panel matches snapshot: enzyme.shallow 1`] = `
 <glamorous(div)>
   <glamorous(h2)>
     Example
