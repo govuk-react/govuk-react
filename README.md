@@ -4,6 +4,8 @@ A set of [govuk](https://github.com/alphagov/) components for [React](https://re
 
 CSS styling is derived from [GOV.UK/elements](https://github.com/alphagov/govuk_elements) but modified to suit custom markup. Also flexbox is preferred over floats.
 
+https://github.com/penx/govuk-react-example
+
 ## Usage
 
 `npm install govuk-react --save`
@@ -17,6 +19,13 @@ const MyComponent = ({title}) => (<div>
 </div>)
 ```
 
+See the [Storybook](https://penx.github.io/govuk-react) for examples of all available components.
+
+Also see the [example project](https://github.com/penx/govuk-react-example) for basic usage.
+
+
+## Development
+
 ### Unit testing
 Unit testing follows similar patterns as [Glamorous with Jest](https://github.com/paypal/glamorous/tree/master/examples/with-jest), utilising [Jest _snapshots_](https://facebook.github.io/jest/docs/en/snapshot-testing.html), and [Enzyme](https://github.com/airbnb/enzyme).
 
@@ -29,8 +38,6 @@ To run & watch unit tests:
 ```
 $ npm run test:unit
 ```
-
-See the [Storybook](https://penx.github.io/govuk-react) for examples of all available components.
 
 ### Creating a new component
 To create a new component:
