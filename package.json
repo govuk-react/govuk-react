@@ -86,6 +86,7 @@
     "eslint-plugin-react": "^7.5.1",
     "glamorous": "^4.11.2",
     "govuk-elements-sass": "^3.1.2",
+    "jest": "^22.1.2",
     "jest-glamor-react": "^3.3.0",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.7.2",
