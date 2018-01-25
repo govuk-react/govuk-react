@@ -68,7 +68,7 @@ storiesOf("${componentName}", module).add("${componentName}", () => (
 // write index.js file
 const indexScript = () => {
   const filename = "index";
-  const contents = `// INSERT A COMMENT REFERENCE TO EXTERNAL URL IF POSSIBLE
+  const contents = `// TODO INSERT A COMMENT REFERENCE TO EXTERNAL URL IF POSSIBLE
 
 import React from "react";
 import PropTypes from "prop-types";

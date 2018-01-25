@@ -1,11 +1,13 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Layout, GridRow, GridCol } from ".";
+import Layout from ".";
+import GridRow from "../GridRow";
+import GridCol from "../GridCol";
 
 storiesOf("Layout", module).add("Column Full", () => (
   <Layout>
     <GridRow>
-      <GridCol columFull>
+      <GridCol hideContent columFull>
         <p>content</p>
       </GridCol>
     </GridRow>
@@ -15,10 +17,10 @@ storiesOf("Layout", module).add("Column Full", () => (
 storiesOf("Layout", module).add("Column Halves", () => (
   <Layout>
     <GridRow>
-      <GridCol columnOneHalf>
+      <GridCol hideContent columnOneHalf>
         <p>content</p>
       </GridCol>
-      <GridCol columnOneHalf>
+      <GridCol hideContent columnOneHalf>
         <p>content</p>
       </GridCol>
     </GridRow>
@@ -28,13 +30,13 @@ storiesOf("Layout", module).add("Column Halves", () => (
 storiesOf("Layout", module).add("Column Thirds", () => (
   <Layout>
     <GridRow>
-      <GridCol columnOneThird>
+      <GridCol hideContent columnOneThird>
         <p>content</p>
       </GridCol>
-      <GridCol columnOneThird>
+      <GridCol hideContent columnOneThird>
         <p>content</p>
       </GridCol>
-      <GridCol columnOneThird>
+      <GridCol hideContent columnOneThird>
         <p>content</p>
       </GridCol>
     </GridRow>
@@ -44,10 +46,10 @@ storiesOf("Layout", module).add("Column Thirds", () => (
 storiesOf("Layout", module).add("Column Two Thirds / One Third", () => (
   <Layout>
     <GridRow>
-      <GridCol columnTwoThirds>
+      <GridCol hideContent columnTwoThirds>
         <p>content</p>
       </GridCol>
-      <GridCol columnOneThird>
+      <GridCol hideContent columnOneThird>
         <p>content</p>
       </GridCol>
     </GridRow>
@@ -57,10 +59,10 @@ storiesOf("Layout", module).add("Column Two Thirds / One Third", () => (
 storiesOf("Layout", module).add("Column One Third / Two Thirds", () => (
   <Layout>
     <GridRow>
-      <GridCol columnOneThird>
+      <GridCol hideContent columnOneThird>
         <p>content</p>
       </GridCol>
-      <GridCol columnTwoThirds>
+      <GridCol hideContent columnTwoThirds>
         <p>content</p>
       </GridCol>
     </GridRow>
@@ -70,16 +72,16 @@ storiesOf("Layout", module).add("Column One Third / Two Thirds", () => (
 storiesOf("Layout", module).add("Quarters", () => (
   <Layout>
     <GridRow>
-      <GridCol columnOneQuarter>
+      <GridCol hideContent columnOneQuarter>
         <p>content</p>
       </GridCol>
-      <GridCol columnOneQuarter>
+      <GridCol hideContent columnOneQuarter>
         <p>content</p>
       </GridCol>
-      <GridCol columnOneQuarter>
+      <GridCol hideContent columnOneQuarter>
         <p>content</p>
       </GridCol>
-      <GridCol columnOneQuarter>
+      <GridCol hideContent columnOneQuarter>
         <p>content</p>
       </GridCol>
     </GridRow>
@@ -89,7 +91,7 @@ storiesOf("Layout", module).add("Quarters", () => (
 storiesOf("Layout", module).add("Example layout", () => (
   <Layout>
     <GridRow>
-      <GridCol showContent columFull>
+      <GridCol columFull>
         <h2>full column</h2>
         <p>
           This guide shows how to make your service look consistent with the
@@ -99,7 +101,7 @@ storiesOf("Layout", module).add("Example layout", () => (
       </GridCol>
     </GridRow>
     <GridRow>
-      <GridCol showContent columnTwoThirds>
+      <GridCol columnTwoThirds>
         <h2>Two thirds</h2>
         <p>
           This guide shows how to make your service look consistent with the
@@ -107,7 +109,7 @@ storiesOf("Layout", module).add("Example layout", () => (
           typography, colour, images, icons, forms, buttons and data.
         </p>
       </GridCol>
-      <GridCol showContent columnOneThird>
+      <GridCol columnOneThird>
         <h2>One third</h2>
         <p>
           This guide shows how to make your service look consistent with the
@@ -117,7 +119,7 @@ storiesOf("Layout", module).add("Example layout", () => (
       </GridCol>
     </GridRow>
     <GridRow>
-      <GridCol showContent columnOneThird>
+      <GridCol columnOneThird>
         <h2>One third</h2>
         <p>
           This guide shows how to make your service look consistent with the
@@ -125,7 +127,7 @@ storiesOf("Layout", module).add("Example layout", () => (
           typography, colour, images, icons, forms, buttons and data.
         </p>
       </GridCol>
-      <GridCol showContent columnOneThird>
+      <GridCol columnOneThird>
         <h2>One third</h2>
         <p>
           This guide shows how to make your service look consistent with the
@@ -133,7 +135,7 @@ storiesOf("Layout", module).add("Example layout", () => (
           typography, colour, images, icons, forms, buttons and data
         </p>
       </GridCol>
-      <GridCol showContent columnOneThird>
+      <GridCol columnOneThird>
         <h2>One third</h2>
         <p>
           This guide shows how to make your service look consistent with the
@@ -143,7 +145,7 @@ storiesOf("Layout", module).add("Example layout", () => (
       </GridCol>
     </GridRow>
     <GridRow>
-      <GridCol showContent columnOneHalf>
+      <GridCol columnOneHalf>
         <h2>One Half</h2>
         <p>
           This guide shows how to make your service look consistent with the
@@ -151,7 +153,7 @@ storiesOf("Layout", module).add("Example layout", () => (
           typography, colour, images, icons, forms, buttons and data.
         </p>
       </GridCol>
-      <GridCol showContent columnOneHalf>
+      <GridCol columnOneHalf>
         <h2>One Half</h2>
         <p>
           This guide shows how to make your service look consistent with the
@@ -161,7 +163,7 @@ storiesOf("Layout", module).add("Example layout", () => (
       </GridCol>
     </GridRow>
     <GridRow>
-      <GridCol showContent columnOneHalf>
+      <GridCol columnOneHalf>
         <h2>One Half</h2>
         <p>
           This guide shows how to make your service look consistent with the
@@ -169,7 +171,7 @@ storiesOf("Layout", module).add("Example layout", () => (
           typography, colour, images, icons, forms, buttons and data.
         </p>
       </GridCol>
-      <GridCol showContent columnOneQuarter>
+      <GridCol columnOneQuarter>
         <h2>One quarter</h2>
         <p>
           This guide shows how to make your service look consistent with the
@@ -177,7 +179,7 @@ storiesOf("Layout", module).add("Example layout", () => (
           typography, colour, images, icons, forms, buttons and data
         </p>
       </GridCol>
-      <GridCol showContent columnOneQuarter>
+      <GridCol columnOneQuarter>
         <h2>One quarter</h2>
         <p>
           This guide shows how to make your service look consistent with the
@@ -187,7 +189,7 @@ storiesOf("Layout", module).add("Example layout", () => (
       </GridCol>
     </GridRow>
     <GridRow>
-      <GridCol showContent columnOneQuarter>
+      <GridCol columnOneQuarter>
         <h2>One quarter</h2>
         <p>
           This guide shows how to make your service look consistent with the
@@ -195,7 +197,7 @@ storiesOf("Layout", module).add("Example layout", () => (
           typography, colour, images, icons, forms, buttons and data.
         </p>
       </GridCol>
-      <GridCol showContent columnOneQuarter>
+      <GridCol columnOneQuarter>
         <h2>One quarter</h2>
         <p>
           This guide shows how to make your service look consistent with the
@@ -203,7 +205,7 @@ storiesOf("Layout", module).add("Example layout", () => (
           typography, colour, images, icons, forms, buttons and data
         </p>
       </GridCol>
-      <GridCol showContent columnOneQuarter>
+      <GridCol columnOneQuarter>
         <h2>One quarter</h2>
         <p>
           This guide shows how to make your service look consistent with the
@@ -211,7 +213,7 @@ storiesOf("Layout", module).add("Example layout", () => (
           typography, colour, images, icons, forms, buttons and data
         </p>
       </GridCol>
-      <GridCol showContent columnOneQuarter>
+      <GridCol columnOneQuarter>
         <h2>One quarter</h2>
         <p>
           This guide shows how to make your service look consistent with the

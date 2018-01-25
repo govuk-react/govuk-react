@@ -4,22 +4,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 import glamorous from "glamorous";
-import { BREAKPOINTS, MEDIA_QUERIES, SPACING } from "../../constants/index";
+import { MEDIA_QUERIES, SITE_WIDTH } from "../../constants/index";
 
-const LayoutInner = glamorous.div({
-  padding: SPACING.SCALE_2,
-  minWidth: BREAKPOINTS.SMALLSCREEN,
+const GridRowInner = glamorous.div({
+  margin: "0 -15px 15px",
+  width: "100%",
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: "flex",
-    flexDirection: "column",
-    alignItems: "center"
+    maxWidth: SITE_WIDTH
   }
 });
 
-const Layout = ({ children }) => <LayoutInner>{children}</LayoutInner>;
+const GridRow = ({ children }) => <GridRowInner>{children}</GridRowInner>;
 
-Layout.propTypes = {
+GridRow.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-export default Layout;
+export default GridRow;

@@ -4,7 +4,7 @@ exports[`Layout matches snapshot: enzyme.mount 1`] = `
 <Layout>
   <glamorous(div)>
     <div
-      className="css-hwphr6"
+      className="css-1y5mnt6"
     >
       example
     </div>
@@ -14,7 +14,7 @@ exports[`Layout matches snapshot: enzyme.mount 1`] = `
 
 exports[`Layout matches snapshot: enzyme.render 1`] = `
 <div
-  class="css-hwphr6"
+  class="css-1y5mnt6"
 >
   example
 </div>
