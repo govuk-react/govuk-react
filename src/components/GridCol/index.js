@@ -7,19 +7,20 @@ import { MEDIA_QUERIES } from "../../constants/index";
 
 const GridColInner = glamorous.div(
   {
-    backgroundColor: "#7DADD3",
-    backgroundImage:
-      "repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)",
+    backgroundColor: "transparent",
+    backgroundImage: "none",
     marginBottom: "0",
     overflow: "hidden",
-    textIndent: "-999em",
+    textIndent: "0",
     border: "4px solid white",
     width: "100%"
   },
-  ({ showContent }) => ({
-    textIndent: showContent ? "0" : GridColInner.textIndent,
-    backgroundColor: showContent ? "" : GridColInner.backgroundColor,
-    backgroundImage: showContent ? "" : GridColInner.backgroundImage
+  ({ hideContent }) => ({
+    textIndent: hideContent ? "-999em" : GridColInner.textIndent,
+    backgroundColor: hideContent ? "#7DADD3" : GridColInner.backgroundColor,
+    backgroundImage: hideContent
+      ? "repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)"
+      : GridColInner.backgroundImage
   }),
   ({ columnOneThird }) => ({
     [MEDIA_QUERIES.LARGESCREEN]: {
@@ -38,7 +39,9 @@ const GridColInner = glamorous.div(
   })
 );
 
-const GridCol = ({ children }) => <GridColInner>{children}</GridColInner>;
+const GridCol = ({ children, ...props }) => (
+  <GridColInner {...props}>{children}</GridColInner>
+);
 
 GridCol.propTypes = {
   children: PropTypes.node.isRequired

@@ -4,12 +4,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import glamorous from "glamorous";
-import { BREAKPOINTS, MEDIA_QUERIES } from "../../constants/index";
+import { BREAKPOINTS, MEDIA_QUERIES, SPACING } from "../../constants/index";
 
 const LayoutInner = glamorous.div({
-  overflow: "hidden",
-  padding: "20px",
-  border: "1px solid #ccc",
+  padding: SPACING.SCALE_2,
   minWidth: BREAKPOINTS.SMALLSCREEN,
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: "flex",
