@@ -1,4 +1,5 @@
-// INSERT A COMMENT REFERENCE TO EXTERNAL URL IF POSSIBLE
+// https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_grid_layout.scss
+// https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
 
 import React from "react";
 import PropTypes from "prop-types";
