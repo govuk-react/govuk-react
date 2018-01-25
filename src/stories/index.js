@@ -14,6 +14,8 @@ import "../components/Button/stories";
 import "../components/Radio/stories";
 import "../components/Checkbox/stories";
 import "../components/Layout/stories";
+import "../components/GridRow/stories";
+import "../components/GridCol/stories";
 import "../components/Select/stories";
 import "../components/FileUpload/stories";
 import "../components/ErrorText/stories";

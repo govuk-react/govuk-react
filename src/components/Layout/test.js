@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { shallow, mount, render } from "enzyme";
-import { Layout } from "./";
+import Layout from "./";
 
 describe("Layout", () => {
   const example = "example";
