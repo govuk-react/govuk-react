@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`enzyme.mount 1`] = `
+exports[`Back Link matches snapshot: enzyme.mount 1`] = `
 <BackLink
   goBack={[Function]}
 >
@@ -17,7 +17,7 @@ exports[`enzyme.mount 1`] = `
 </BackLink>
 `;
 
-exports[`enzyme.render 1`] = `
+exports[`Back Link matches snapshot: enzyme.render 1`] = `
 <button
   class="css-16uyu72"
 >
@@ -25,7 +25,7 @@ exports[`enzyme.render 1`] = `
 </button>
 `;
 
-exports[`enzyme.shallow 1`] = `
+exports[`Back Link matches snapshot: enzyme.shallow 1`] = `
 <glamorous(button)
   onClick={[Function]}
 >

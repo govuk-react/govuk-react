@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`enzyme.mount 1`] = `
+exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
 <Breadcrumb>
   <glamorous(div)>
     <div
@@ -24,7 +24,7 @@ exports[`enzyme.mount 1`] = `
 </Breadcrumb>
 `;
 
-exports[`enzyme.render 1`] = `
+exports[`breadcrumb matches snapshot: enzyme.render 1`] = `
 <div
   class="css-v85tod"
 >
@@ -40,7 +40,7 @@ exports[`enzyme.render 1`] = `
 </div>
 `;
 
-exports[`enzyme.shallow 1`] = `
+exports[`breadcrumb matches snapshot: enzyme.shallow 1`] = `
 <glamorous(div)>
   <glamorous(ul)>
     <glamorous(li)>

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`enzyme.mount 1`] = `
+exports[`Checkbox matches snapshot: enzyme.mount 1`] = `
 <Checkbox
   defaultChecked={null}
   disabled={null}
@@ -33,16 +33,14 @@ exports[`enzyme.mount 1`] = `
 </Checkbox>
 `;
 
-exports[`enzyme.render 1`] = `
+exports[`Checkbox matches snapshot: enzyme.render 1`] = `
 <label
   class="css-1dbanec multiple-choice"
 >
   <input
     class="css-10svazo"
     type="checkbox"
-  >
-    
-  </input>
+  />
   <span
     class="css-j94lrm"
   >
@@ -51,7 +49,7 @@ exports[`enzyme.render 1`] = `
 </label>
 `;
 
-exports[`enzyme.shallow 1`] = `
+exports[`Checkbox matches snapshot: enzyme.shallow 1`] = `
 <glamorous(label)>
   <glamorous(input)
     defaultChecked={null}

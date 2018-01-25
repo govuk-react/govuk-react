@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`enzyme.mount 1`] = `
+exports[`InputField matches snapshot: enzyme.mount 1`] = `
 <InputField
   errorText={null}
   hintText={null}
@@ -36,7 +36,7 @@ exports[`enzyme.mount 1`] = `
 </InputField>
 `;
 
-exports[`enzyme.render 1`] = `
+exports[`InputField matches snapshot: enzyme.render 1`] = `
 <label
   class="css-1b081ox"
 >
@@ -45,22 +45,16 @@ exports[`enzyme.render 1`] = `
   >
     example
   </span>
-  <span>
-    
-  </span>
-  <span>
-    
-  </span>
+  <span />
+  <span />
   <input
     class="css-opcxs3"
     type="text"
-  >
-    
-  </input>
+  />
 </label>
 `;
 
-exports[`enzyme.shallow 1`] = `
+exports[`InputField matches snapshot: enzyme.shallow 1`] = `
 <glamorous(label)
   errorText={null}
 >

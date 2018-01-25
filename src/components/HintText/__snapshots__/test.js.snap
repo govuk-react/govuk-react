@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`enzyme.mount 1`] = `
+exports[`HintText matches snapshot: enzyme.mount 1`] = `
 <glamorous(span)>
   <span
     className="css-1k9f6xb"
@@ -10,7 +10,7 @@ exports[`enzyme.mount 1`] = `
 </glamorous(span)>
 `;
 
-exports[`enzyme.render 1`] = `
+exports[`HintText matches snapshot: enzyme.render 1`] = `
 <span
   class="css-1k9f6xb"
 >
@@ -18,7 +18,7 @@ exports[`enzyme.render 1`] = `
 </span>
 `;
 
-exports[`enzyme.shallow 1`] = `
+exports[`HintText matches snapshot: enzyme.shallow 1`] = `
 <span
   className="css-1k9f6xb"
 >

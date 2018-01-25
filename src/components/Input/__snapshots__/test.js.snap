@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`enzyme.mount 1`] = `
+exports[`Input matches snapshot: enzyme.mount 1`] = `
 <glamorous(input)
   type="text"
 >
@@ -11,16 +11,14 @@ exports[`enzyme.mount 1`] = `
 </glamorous(input)>
 `;
 
-exports[`enzyme.render 1`] = `
+exports[`Input matches snapshot: enzyme.render 1`] = `
 <input
   class="css-opcxs3"
   type="text"
->
-  
-</input>
+/>
 `;
 
-exports[`enzyme.shallow 1`] = `
+exports[`Input matches snapshot: enzyme.shallow 1`] = `
 <input
   className="css-opcxs3"
   type="text"

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`enzyme.mount 1`] = `
+exports[`Radio matches snapshot: enzyme.mount 1`] = `
 <Radio
   defaultChecked={null}
   disabled={null}
@@ -36,7 +36,7 @@ exports[`enzyme.mount 1`] = `
 </Radio>
 `;
 
-exports[`enzyme.render 1`] = `
+exports[`Radio matches snapshot: enzyme.render 1`] = `
 <label
   class="css-1cr83k4"
 >
@@ -44,9 +44,7 @@ exports[`enzyme.render 1`] = `
     class="css-10svazo"
     name="example"
     type="radio"
-  >
-    
-  </input>
+  />
   <span
     class="css-du12vn"
   >
@@ -55,7 +53,7 @@ exports[`enzyme.render 1`] = `
 </label>
 `;
 
-exports[`enzyme.shallow 1`] = `
+exports[`Radio matches snapshot: enzyme.shallow 1`] = `
 <glamorous(label)>
   <glamorous(input)
     defaultChecked={null}
