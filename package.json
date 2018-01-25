@@ -8,11 +8,10 @@
     "build": "babel --source-maps -d lib/ src/",
     "clean": "rimraf lib",
     "test": "CI=true npm run test:unit && npm run eslint",
-    "test:unit": "react-scripts test --env=jsdom",
+    "test:unit": "node scripts/test.js --env=jsdom",
     "test:debug": "react-scripts --inspect-brk test --runInBand --env=jsdom",
     "test:snapshot": "npm run test:unit -- -u",
     "coverage": "npm run test:unit -- --coverage",
-    "eject": "react-scripts eject",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "prepare": "npm run clean && npm run build",
@@ -25,6 +24,30 @@
       "!<rootDir>/node_modules/",
       "!src/**/stories.js",
       "!src/stories/*"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.js?(x)",
+      "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
@@ -71,11 +94,11 @@
     "prop-types": "^15.6.0",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
-    "react-scripts": "1.0.14",
     "react-test-renderer": "^15.6.2",
     "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6",
-    "sinon": "^4.2.1"
+    "sinon": "^4.2.1",
+    "webpack": "^3.10.0"
   },
   "repository": {
     "type": "git",
