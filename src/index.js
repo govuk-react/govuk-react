@@ -9,6 +9,8 @@ export { default as HintText } from "./components/HintText";
 export { default as Input } from "./components/Input";
 export { default as InputField } from "./components/InputField";
 export { default as Label } from "./components/Label";
+export { default as GridRow } from "./components/GridRow";
+export { default as GridCol } from "./components/GridCol";
 export { default as LabelText } from "./components/LabelText";
 export { default as Layout } from "./components/Layout";
 export { default as Radio } from "./components/Radio";
