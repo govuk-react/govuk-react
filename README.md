@@ -21,28 +21,6 @@ See the [Storybook](https://penx.github.io/govuk-react) for examples of all avai
 
 Also see the [example project](https://github.com/penx/govuk-react-example) for basic usage.
 
-
-## Development
-
-### Unit testing
-Unit testing follows similar patterns as [Glamorous with Jest](https://github.com/paypal/glamorous/tree/master/examples/with-jest), utilising [Jest _snapshots_](https://facebook.github.io/jest/docs/en/snapshot-testing.html), and [Enzyme](https://github.com/airbnb/enzyme).
-
-To run unit & eslint tests:
-```
-$ npm run test
-```
-
-To run & watch unit tests:
-```
-$ npm run test:unit
-```
-
-### Creating a new component
-To create a new component:
-- `npm run create-component -- MyNewComponent` where _MyNewComponent_ is the name of your new component.
-
-This creates a folder named _MyNewComponent_ in `src/components` with the component file (index.js), a basic render test (test.js), and a default story (stories.js). You will need to add this to `src/stories/index.js` to view it in storybook.
-
 ## Assumptions
 
 Use of these components assumes the following from the peer project:
@@ -67,3 +45,25 @@ See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-
  - [govuk-frontend](https://github.com/alphagov/govuk-frontend/)
  - [govuk_template](http://alphagov.github.io/govuk_template/) ([source](https://github.com/alphagov/govuk_template))
  - [GOV.UK Design Patterns](https://www.gov.uk/service-manual/design#find-patterns)
+ 
+## Contributing
+
+### Creating a new component
+To create a new component:
+- `npm run create-component -- MyNewComponent` where _MyNewComponent_ is the name of your new component.
+
+This creates a folder named _MyNewComponent_ in `src/components` with the component file (index.js), a basic render test (test.js), and a default story (stories.js). You will need to add this to `src/stories/index.js` to view it in storybook.
+
+
+### Unit testing
+Unit testing follows similar patterns as [Glamorous with Jest](https://github.com/paypal/glamorous/tree/master/examples/with-jest), utilising [Jest _snapshots_](https://facebook.github.io/jest/docs/en/snapshot-testing.html), and [Enzyme](https://github.com/airbnb/enzyme).
+
+To run unit & eslint tests:
+```
+$ npm run test
+```
+
+To run & watch unit tests:
+```
+$ npm run test:unit
+```
