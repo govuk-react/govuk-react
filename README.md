@@ -4,8 +4,6 @@ A set of [govuk](https://github.com/alphagov/) components for [React](https://re
 
 CSS styling is derived from [GOV.UK/elements](https://github.com/alphagov/govuk_elements) but modified to suit custom markup. Also flexbox is preferred over floats.
 
-https://github.com/penx/govuk-react-example
-
 ## Usage
 
 `npm install govuk-react --save`
