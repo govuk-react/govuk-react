@@ -33,7 +33,7 @@
     "testEnvironment": "node",
     "testURL": "http://localhost",
     "transform": {
-      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest"
+      "^.+\\.(js|jsx)$": "<rootDir>/scripts/babelJest.js"
     },
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
@@ -57,7 +57,7 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "dependencies": {
-    "govuk-colours": "^1.0.2"
+    "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
     "glamorous": ">=4",
@@ -72,6 +72,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
+    "babel-jest": "^22.1.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
