@@ -10,61 +10,30 @@ import ErrorText from "../ErrorText/index";
 import HintText from "../HintText/index";
 import Input from "../Input/index";
 
-// const InputField = ({ children, errorText, hintText, onChange }) => (
-
-class InputField extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-    this.state = { value: "" };
-  }
-
-  handleChange(e) {
-    this.setState({ value: e.target.value });
-    // console.log(this.state);
-  }
-
-  render() {
-    const value = this.state.value;
-    return (
-      <Label errorText={this.props.errorText}>
-        <LabelText errorText={this.props.errorText}>
-          {this.props.children}
-        </LabelText>
-        {this.props.hintText ? (
-          <HintText>{this.props.hintText}</HintText>
-        ) : (
-          <span />
-        )}
-        {this.props.errorText ? (
-          <ErrorText errorText={this.props.errorText}>
-            {this.props.errorText}
-          </ErrorText>
-        ) : (
-          <span />
-        )}
-        <Input
-          type="text"
-          value={this.state.value}
-          errorText={this.props.errorText}
-          onChange={this.props.onChange}
-        />
-      </Label>
-    );
-  }
-}
+const InputField = props => (
+  <Label errorText={props.errorText}>
+    <LabelText errorText={props.errorText}>{props.children}</LabelText>
+    {props.hintText ? <HintText>{props.hintText}</HintText> : <span />}
+    {props.errorText ? (
+      <ErrorText errorText={props.errorText}>{props.errorText}</ErrorText>
+    ) : (
+      <span />
+    )}
+    <Input type="text" {...props.input} errorText={props.errorText} />
+  </Label>
+);
 
 InputField.defaultProps = {
   hintText: null,
   errorText: null,
-  onChange: undefined
+  input: undefined
 };
 
 InputField.propTypes = {
   children: PropTypes.node.isRequired,
   hintText: PropTypes.string,
   errorText: PropTypes.string,
-  onChange: PropTypes.func
+  input: PropTypes.string
 };
 
 export default InputField;

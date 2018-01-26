@@ -1,11 +1,12 @@
 // https://github.com/alphagov/govuk-frontend/tree/master/src/components/
-
+import React from "react";
 import glamorous from "glamorous";
+import PropTypes from "prop-types";
 
 import { BLACK, YELLOW, ERROR_COLOUR } from "govuk-colours";
 import { FONT_SIZE, MEDIA_QUERIES, NTA_LIGHT } from "../../constants/index";
 
-const Input = glamorous.input(
+const InputText = glamorous.input(
   {
     boxSizing: "border-box",
     fontFamily: NTA_LIGHT,
@@ -35,5 +36,18 @@ const Input = glamorous.input(
     border: errorText ? `4px solid ${ERROR_COLOUR}` : `2px solid ${BLACK}`
   })
 );
+
+const Input = ({ value, onChange }) => (
+  <InputText
+    type="text"
+    value={value}
+    onChange={e => onChange(e.target.value)}
+  />
+);
+
+Input.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired
+};
 
 export default Input;
