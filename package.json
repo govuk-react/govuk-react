@@ -1,6 +1,6 @@
 {
   "name": "govuk-react",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "scripts": {
     "start": "start-storybook -p 9009",
     "eslint": "eslint ./src",
