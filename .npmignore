@@ -8,3 +8,10 @@ images
 scripts
 storybook-static
 govuk-react-*.tgz
+/src/stories
+/lib/stories
+/es/stories
+**/stories.js
+**/test.js
+**/__snapshots__
+**/setupTests.js
