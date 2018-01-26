@@ -26,6 +26,7 @@ deploy:
       tags: true
   - provider: releases
     api_key: $GITHUB_TOKEN
+    file_glob: true
     file: "govuk-react-*.tgz"
     skip_cleanup: true
     on:
