@@ -8,6 +8,7 @@
     "glamorous": "^4.11.4",
     "govuk-colours": "^1.0.3",
     "govuk-react": "^0.1.10",
+    "normalize.css": "^7.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-final-form": "^3.0.5",
