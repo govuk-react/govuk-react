@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
-import { Button, DateInput } from 'govuk-react';
+import { Button, DateInput, Layout, GridRow, GridCol } from 'govuk-react';
 
 // based on https://codesandbox.io/s/40mr0v2r87
 const DateInputAdapter = ({ input, meta, ...rest }) => (
@@ -27,26 +27,40 @@ const App = () => (
  handleSubmit, reset, submitting, pristine, values,
 }) => (
   <form onSubmit={handleSubmit}>
-    <div>
-      <Field
-        name="dob"
-        component={DateInputAdapter}
-        validate={required}
-        hintText="Date of birth"
-        labelPosition="right"
-      />
-    </div>
-    <Button type="submit" disabled={submitting}>
-      Submit
-    </Button>
-    <Button
-      type="button"
-      onClick={reset}
-      disabled={submitting || pristine}
-    >
-      Reset
-    </Button>
-    <pre>{JSON.stringify(values, 0, 2)}</pre>
+    <Layout>
+      <GridRow>
+        <GridCol>
+          <Field
+            name="dob"
+            component={DateInputAdapter}
+            validate={required}
+            hintText="Date of birth"
+            labelPosition="right"
+          />
+        </GridCol>
+      </GridRow>
+      <GridRow>
+        <GridCol>
+          <Button type="submit" disabled={submitting}>
+            Submit
+          </Button>
+        </GridCol>
+        <GridCol>
+          <Button
+            type="button"
+            onClick={reset}
+            disabled={submitting || pristine}
+          >
+            Reset
+          </Button>
+        </GridCol>
+      </GridRow>
+      <GridRow>
+        <GridCol>
+          <pre>{JSON.stringify(values, 0, 2)}</pre>
+        </GridCol>
+      </GridRow>
+    </Layout>
   </form>
       )}
     />
