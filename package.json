@@ -58,8 +58,7 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "dependencies": {
-    "govuk-colours": "^1.0.3",
-    "react-final-form-prop-types": "0.0.1"
+    "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
     "glamorous": ">=4",
