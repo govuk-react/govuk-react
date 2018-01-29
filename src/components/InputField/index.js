@@ -3,6 +3,7 @@
 
 import React from "react";
 import PropTypes from "prop-types";
+import { FieldRenderProps } from "react-final-form-prop-types";
 
 import Label from "../Label/index";
 import LabelText from "../LabelText/index";
@@ -31,10 +32,10 @@ InputField.defaultProps = {
 };
 
 InputField.propTypes = {
+  ...FieldRenderProps,
   children: PropTypes.node.isRequired,
   hintText: PropTypes.string,
   errorText: PropTypes.string,
-  input: PropTypes.object.isRequired,
   value: PropTypes.string,
   onChange: PropTypes.func
 };
