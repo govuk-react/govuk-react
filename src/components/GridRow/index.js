@@ -7,7 +7,7 @@ import glamorous from "glamorous";
 import { MEDIA_QUERIES, SITE_WIDTH } from "../../constants/index";
 
 const GridRowInner = glamorous.div({
-  margin: "0 -15px 15px",
+  margin: "0 0 15px",
   width: "100%",
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: "flex",
