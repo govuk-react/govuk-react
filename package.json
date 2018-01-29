@@ -8,7 +8,7 @@
     "build": "nwb build-react-component",
     "clean": "rimraf lib",
     "flow": "flow",
-    "test": "CI=true npm run test:unit && npm run eslint",
+    "test": "CI=true npm run test:unit && npm run eslint && npm run flow",
     "test:unit": "node scripts/test.js --env=jsdom",
     "test:debug": "node  --inspect-brk scripts/test.js --runInBand --env=jsdom",
     "test:snapshot": "npm run test:unit -- -u",
