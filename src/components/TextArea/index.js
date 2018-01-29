@@ -4,17 +4,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import glamorous from "glamorous";
 
-import * as COLOUR from "govuk-colours";
-import { BREAKPOINTS } from "../../constants/index";
+import { BLACK, YELLOW, ERROR_COLOUR } from "govuk-colours";
+import { MEDIA_QUERIES } from "../../constants/index";
 
 import Label from "../Label/index";
 import LabelText from "../LabelText/index";
 import ErrorText from "../ErrorText/index";
 import HintText from "../HintText/index";
-
-const mediaQueries = {
-  largeScreen: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`
-};
 
 const TextareaField = glamorous.textarea(
   {
@@ -26,47 +22,62 @@ const TextareaField = glamorous.textarea(
     lineHeight: "1.25",
     width: "100%",
     padding: "5px 4px 4px",
-    border: `2px solid ${COLOUR.BLACK}`,
-    [mediaQueries.largeScreen]: {
+    border: `2px solid ${BLACK}`,
+    [MEDIA_QUERIES.LARGESCREEN]: {
       width: "75%"
     },
     "[disabled]": {
       cursor: "auto"
     },
     ":focus": {
-      outline: `3px solid ${COLOUR.YELLOW}`,
+      outline: `3px solid ${YELLOW}`,
       outlineOffset: 0
     }
   },
   ({ errorText }) => ({
-    border: errorText
-      ? `4px solid ${COLOUR.ERROR_COLOUR}`
-      : `2px solid ${COLOUR.BLACK}`
+    border: errorText ? `4px solid ${ERROR_COLOUR}` : `2px solid ${BLACK}`
   })
 );
 
-const TextArea = ({ children, hintText, errorText }) => (
-  <Label errorText={errorText}>
-    <LabelText errorText={errorText}>{children}</LabelText>
-    {hintText ? <HintText>{hintText}</HintText> : <span />}
-    {errorText ? (
-      <ErrorText errorText={errorText}>{errorText}</ErrorText>
-    ) : (
-      <span />
-    )}
-    <TextareaField type="text" rows="5" errorText={errorText} />
+const TextArea = props => (
+  <Label error={props.meta.touched && props.meta.error}>
+    <LabelText>{props.children}</LabelText>
+    {props.hint && <HintText>{props.hint}</HintText>}
+    {props.meta.touched &&
+      props.meta.error && <ErrorText>{props.meta.error}</ErrorText>}
+    <TextareaField type="text" rows="5" {...props.input} />
   </Label>
 );
 
 TextArea.defaultProps = {
-  hintText: null,
-  errorText: null
+  hint: null
 };
 
 TextArea.propTypes = {
-  children: PropTypes.node.isRequired,
-  hintText: PropTypes.string,
-  errorText: PropTypes.string
+  hint: PropTypes.string,
+  input: PropTypes.shape({
+    name: PropTypes.string,
+    onBlur: PropTypes.func,
+    onChange: PropTypes.func,
+    onFocus: PropTypes.func,
+    value: PropTypes.any
+  }).isRequired,
+  meta: PropTypes.shape({
+    active: PropTypes.bool,
+    dirty: PropTypes.bool,
+    dirtySinceLastSubmit: PropTypes.bool,
+    error: PropTypes.any,
+    initial: PropTypes.bool,
+    invalid: PropTypes.bool,
+    pristine: PropTypes.bool,
+    submitError: PropTypes.any,
+    submitFailed: PropTypes.bool,
+    submitSucceeded: PropTypes.bool,
+    touched: PropTypes.bool,
+    valid: PropTypes.bool,
+    visited: PropTypes.bool
+  }).isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default TextArea;
