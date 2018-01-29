@@ -38,16 +38,17 @@ const InputText = glamorous.input(
 );
 
 const Input = ({ value, onChange }) => (
-  <InputText
-    type="text"
-    value={value}
-    onChange={e => onChange(e.target.value)}
-  />
+  <InputText type="text" value={value} onChange={onChange} />
 );
 
+Input.defaultProps = {
+  value: undefined,
+  onChange: null
+};
+
 Input.propTypes = {
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired
+  value: PropTypes.string,
+  onChange: PropTypes.func
 };
 
 export default Input;
