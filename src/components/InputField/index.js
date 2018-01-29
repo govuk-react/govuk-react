@@ -19,20 +19,13 @@ const InputField = props => (
     ) : (
       <span />
     )}
-    <Input
-      type="text"
-      {...props.input}
-      onChange={props.onChange}
-      errorText={props.errorText}
-      value={props.value}
-    />
+    <Input type="text" {...props.input} />
   </Label>
 );
 
 InputField.defaultProps = {
   hintText: null,
   errorText: null,
-  input: undefined,
   onChange: null,
   value: undefined
 };
@@ -41,7 +34,7 @@ InputField.propTypes = {
   children: PropTypes.node.isRequired,
   hintText: PropTypes.string,
   errorText: PropTypes.string,
-  input: PropTypes.string,
+  input: PropTypes.object.isRequired,
   value: PropTypes.string,
   onChange: PropTypes.func
 };
