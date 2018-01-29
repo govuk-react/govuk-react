@@ -3,8 +3,6 @@
 
 import "normalize.css";
 
-import "./styles.css";
-
 import "../components/Breadcrumb/stories";
 import "../components/InputField/stories";
 import "../components/DateInput/stories";
