@@ -23,8 +23,8 @@ const LabelText = glamorous.span(
       lineHeight: "1.31579"
     }
   },
-  ({ errorText }) => ({
-    fontWeight: errorText ? 700 : LabelText.fontWeight
+  ({ error }) => ({
+    fontWeight: error ? 700 : LabelText.fontWeight
   })
 );
 
