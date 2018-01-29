@@ -50,7 +50,9 @@ const TextArea = props => (
 );
 
 TextArea.defaultProps = {
-  hint: null
+  hint: null,
+  input: {},
+  meta: {}
 };
 
 TextArea.propTypes = {
@@ -61,7 +63,7 @@ TextArea.propTypes = {
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
     value: PropTypes.any
-  }).isRequired,
+  }),
   meta: PropTypes.shape({
     active: PropTypes.bool,
     dirty: PropTypes.bool,
@@ -76,7 +78,7 @@ TextArea.propTypes = {
     touched: PropTypes.bool,
     valid: PropTypes.bool,
     visited: PropTypes.bool
-  }).isRequired,
+  }),
   children: PropTypes.node.isRequired
 };
 

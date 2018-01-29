@@ -1,14 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input matches snapshot: enzyme.mount 1`] = `
-<glamorous(input)
+<Input
+  onChange={null}
   type="text"
 >
-  <input
-    className="css-opcxs3"
+  <glamorous(input)
+    onChange={null}
     type="text"
-  />
-</glamorous(input)>
+  >
+    <input
+      className="css-opcxs3"
+      onChange={null}
+      type="text"
+    />
+  </glamorous(input)>
+</Input>
 `;
 
 exports[`Input matches snapshot: enzyme.render 1`] = `
@@ -19,8 +26,8 @@ exports[`Input matches snapshot: enzyme.render 1`] = `
 `;
 
 exports[`Input matches snapshot: enzyme.shallow 1`] = `
-<input
-  className="css-opcxs3"
+<glamorous(input)
+  onChange={null}
   type="text"
 />
 `;
