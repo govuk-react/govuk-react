@@ -4,17 +4,23 @@
 import React from "react";
 import PropTypes from "prop-types";
 import glamorous from "glamorous";
-import { MEDIA_QUERIES } from "../../constants/index";
+import { GUTTER_HALF, MEDIA_QUERIES } from "../../constants/index";
 
 const GridColInner = glamorous.div(
   {
     backgroundColor: "transparent",
     backgroundImage: "none",
     marginBottom: "0",
-    overflow: "hidden",
     textIndent: "0",
-    border: "4px solid white",
-    width: "100%"
+    boxSize: "border-box",
+    margin: `0 ${GUTTER_HALF}`,
+    width: "100%",
+    ":first-child": {
+      marginLeft: 0
+    },
+    ":last-child": {
+      marginRight: 0
+    }
   },
   ({ hideContent }) => ({
     textIndent: hideContent ? "-999em" : GridColInner.textIndent,
@@ -44,8 +50,12 @@ const GridCol = ({ children, ...props }) => (
   <GridColInner {...props}>{children}</GridColInner>
 );
 
+GridCol.defaultProps = {
+  children: undefined
+};
+
 GridCol.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node
 };
 
 export default GridCol;
