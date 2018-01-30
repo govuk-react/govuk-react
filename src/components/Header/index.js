@@ -15,7 +15,8 @@ const Header = glamorous(({ level, children, ...props }) =>
 )(
   {
     fontFamily: NTA_LIGHT,
-    fontWeight: 400
+    fontWeight: 400,
+    margin: 0
   },
   ({ level, size = LEVEL_SIZE[level] }) => ({
     fontSize: FONT_SIZES[size][640].fontSize,
