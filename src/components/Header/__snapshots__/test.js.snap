@@ -5,11 +5,11 @@ exports[`Header matches snapshot: enzyme.mount 1`] = `
   level={1}
 >
   <Component
-    className="css-1upwkgl"
+    className="css-dcfn97"
     level={1}
   >
     <h1
-      className="css-1upwkgl"
+      className="css-dcfn97"
     >
       example
     </h1>
@@ -19,7 +19,7 @@ exports[`Header matches snapshot: enzyme.mount 1`] = `
 
 exports[`Header matches snapshot: enzyme.render 1`] = `
 <h1
-  class="css-1upwkgl"
+  class="css-dcfn97"
 >
   example
 </h1>
@@ -27,7 +27,7 @@ exports[`Header matches snapshot: enzyme.render 1`] = `
 
 exports[`Header matches snapshot: enzyme.shallow 1`] = `
 <Component
-  className="css-1upwkgl"
+  className="css-dcfn97"
   level={1}
 >
   example

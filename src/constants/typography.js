@@ -3,10 +3,14 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/globals/scss/core/_typography.scss
 // https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_elements-typography.scss
 
+// using spacing values from https://github.com/alphagov/govuk-frontend/blob/master/src/globals/scss/core/_typography.scss
+import { RESPONSIVE_8, RESPONSIVE_6, RESPONSIVE_4 } from "./spacing";
+
 const FONT_80 = {
   lineHeight: 80 / 80,
   fontSize: 80,
-  640: {
+  spacing: RESPONSIVE_8,
+  mobile: {
     lineHeight: 55 / 53,
     fontSize: 53
   },
@@ -18,7 +22,8 @@ const FONT_80 = {
 const FONT_48 = {
   lineHeight: 50 / 48,
   fontSize: 48,
-  640: {
+  spacing: RESPONSIVE_6,
+  mobile: {
     lineHeight: 35 / 32,
     fontSize: 32
   },
@@ -30,7 +35,8 @@ const FONT_48 = {
 const FONT_36 = {
   lineHeight: 40 / 36,
   fontSize: 36,
-  640: {
+  spacing: RESPONSIVE_4,
+  mobile: {
     lineHeight: 25 / 24,
     fontSize: 24
   },
@@ -42,7 +48,8 @@ const FONT_36 = {
 const FONT_27 = {
   lineHeight: 30 / 27,
   fontSize: 27,
-  640: {
+  spacing: RESPONSIVE_4,
+  mobile: {
     lineHeight: 20 / 18,
     fontSize: 20
   },
@@ -54,7 +61,8 @@ const FONT_27 = {
 const FONT_24 = {
   lineHeight: 30 / 24,
   fontSize: 24,
-  640: {
+  spacing: RESPONSIVE_4,
+  mobile: {
     lineHeight: 24 / 20,
     fontSize: 18
   },
@@ -66,7 +74,8 @@ const FONT_24 = {
 const FONT_19 = {
   lineHeight: 25 / 19,
   fontSize: 19,
-  640: {
+  spacing: RESPONSIVE_4,
+  mobile: {
     lineHeight: 20 / 16,
     fontSize: 16
   },
@@ -78,7 +87,8 @@ const FONT_19 = {
 const FONT_16 = {
   lineHeight: 20 / 16,
   fontSize: 16,
-  640: {
+  spacing: RESPONSIVE_4,
+  mobile: {
     lineHeight: 16 / 14,
     fontSize: 14
   },

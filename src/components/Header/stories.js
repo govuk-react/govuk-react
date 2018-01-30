@@ -6,10 +6,10 @@ import Header, { H1, H2, H3, H4, H5, H6 } from ".";
 storiesOf("Header", module).add("default", () => <Header>Default</Header>);
 storiesOf("Header", module).add("Levels 1-6", () => (
   <div>
-    <Header level={1}>h1</Header>
-    <Header level={2}>h2</Header>
-    <Header level={3}>h3</Header>
-    <Header level={4}>h4</Header>
+    <Header level={1}>A 48px Bold heading</Header>
+    <Header level={2}>A 36px Bold heading</Header>
+    <Header level={3}>A 24px Bold heading</Header>
+    <Header level={4}>A 19px Bold heading</Header>
     <Header level={5}>h5</Header>
     <Header level={6}>h6</Header>
   </div>

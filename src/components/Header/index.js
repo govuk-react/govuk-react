@@ -15,15 +15,17 @@ const Header = glamorous(({ level, children, ...props }) =>
 )(
   {
     fontFamily: NTA_LIGHT,
-    fontWeight: 400,
+    fontWeight: "bold",
     margin: 0
   },
   ({ level, size = LEVEL_SIZE[level] }) => ({
-    fontSize: FONT_SIZES[size][640].fontSize,
-    lineHeight: FONT_SIZES[size][640].lineHeight,
+    fontSize: FONT_SIZES[size].mobile.fontSize,
+    lineHeight: FONT_SIZES[size].mobile.lineHeight,
+    marginBottom: FONT_SIZES[size].spacing.mobile,
     [MEDIA_QUERIES.LARGESCREEN]: {
       fontSize: FONT_SIZES[size].fontSize,
-      lineHeight: FONT_SIZES[size].lineHeight
+      lineHeight: FONT_SIZES[size].lineHeight,
+      marginBottom: FONT_SIZES[size].spacing.tablet
     },
     [MEDIA_QUERIES.PRINT]: {
       fontSize: FONT_SIZES[size].print.fontSize
