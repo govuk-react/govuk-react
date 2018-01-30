@@ -3,7 +3,7 @@
 exports[`LabelText matches snapshot: enzyme.mount 1`] = `
 <glamorous(span)>
   <span
-    className="css-yengmq"
+    className="css-1m1nyko"
   >
     example
   </span>
@@ -12,7 +12,7 @@ exports[`LabelText matches snapshot: enzyme.mount 1`] = `
 
 exports[`LabelText matches snapshot: enzyme.render 1`] = `
 <span
-  class="css-yengmq"
+  class="css-1m1nyko"
 >
   example
 </span>
@@ -20,7 +20,7 @@ exports[`LabelText matches snapshot: enzyme.render 1`] = `
 
 exports[`LabelText matches snapshot: enzyme.shallow 1`] = `
 <span
-  className="css-yengmq"
+  className="css-1m1nyko"
 >
   example
 </span>

@@ -15,7 +15,7 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
         errorText={null}
       >
         <span
-          className="css-yengmq"
+          className="css-1m1nyko"
         >
           example
         </span>
@@ -28,11 +28,11 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
         >
           <glamorous(label)>
             <label
-              className="css-1b081ox"
+              className="css-1dyhx6n"
             >
               <glamorous(span)>
                 <span
-                  className="css-yengmq"
+                  className="css-1m1nyko"
                 >
                   Day
                 </span>
@@ -49,11 +49,11 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
           </glamorous(label)>
           <glamorous(label)>
             <label
-              className="css-1b081ox"
+              className="css-1dyhx6n"
             >
               <glamorous(span)>
                 <span
-                  className="css-yengmq"
+                  className="css-1m1nyko"
                 >
                   Month
                 </span>
@@ -72,11 +72,11 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
             className="year"
           >
             <label
-              className="css-1b081ox year"
+              className="css-1dyhx6n year"
             >
               <glamorous(span)>
                 <span
-                  className="css-yengmq"
+                  className="css-1m1nyko"
                 >
                   Year
                 </span>
@@ -103,7 +103,7 @@ exports[`DateInput matches snapshot: enzyme.render 1`] = `
   class="css-id7ytt"
 >
   <span
-    class="css-yengmq"
+    class="css-1m1nyko"
   >
     example
   </span>
@@ -113,10 +113,10 @@ exports[`DateInput matches snapshot: enzyme.render 1`] = `
     class="css-m5vkn2"
   >
     <label
-      class="css-1b081ox"
+      class="css-1dyhx6n"
     >
       <span
-        class="css-yengmq"
+        class="css-1m1nyko"
       >
         Day
       </span>
@@ -126,10 +126,10 @@ exports[`DateInput matches snapshot: enzyme.render 1`] = `
       />
     </label>
     <label
-      class="css-1b081ox"
+      class="css-1dyhx6n"
     >
       <span
-        class="css-yengmq"
+        class="css-1m1nyko"
       >
         Month
       </span>
@@ -139,10 +139,10 @@ exports[`DateInput matches snapshot: enzyme.render 1`] = `
       />
     </label>
     <label
-      class="css-1b081ox year"
+      class="css-1dyhx6n year"
     >
       <span
-        class="css-yengmq"
+        class="css-1m1nyko"
       >
         Year
       </span>
