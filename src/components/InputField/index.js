@@ -10,13 +10,12 @@ import ErrorText from "../ErrorText/index";
 import HintText from "../HintText/index";
 import Input from "../Input/index";
 
-const InputField = props => (
-  <Label error={props.meta.touched && props.meta.error}>
-    <LabelText>{props.children}</LabelText>
-    {props.hint && <HintText>{props.hint}</HintText>}
-    {props.meta.touched &&
-      props.meta.error && <ErrorText>{props.meta.error}</ErrorText>}
-    <Input type="text" {...props.input} />
+const InputField = ({ meta, children, hint, input }) => (
+  <Label error={meta.touched && meta.error}>
+    <LabelText>{children}</LabelText>
+    {hint && <HintText>{hint}</HintText>}
+    {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
+    <Input type="text" {...input} />
   </Label>
 );
 

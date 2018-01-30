@@ -17,21 +17,14 @@ exports[`InputField matches snapshot: enzyme.mount 1`] = `
           example
         </span>
       </glamorous(span)>
-      <Input
-        onChange={null}
+      <glamorous(input)
         type="text"
       >
-        <glamorous(input)
-          onChange={null}
+        <input
+          className="css-opcxs3"
           type="text"
-        >
-          <input
-            className="css-opcxs3"
-            onChange={null}
-            type="text"
-          />
-        </glamorous(input)>
-      </Input>
+        />
+      </glamorous(input)>
     </label>
   </glamorous(label)>
 </InputField>
@@ -58,8 +51,7 @@ exports[`InputField matches snapshot: enzyme.shallow 1`] = `
   <glamorous(span)>
     example
   </glamorous(span)>
-  <Input
-    onChange={null}
+  <glamorous(input)
     type="text"
   />
 </glamorous(label)>
