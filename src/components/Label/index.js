@@ -16,10 +16,10 @@ const Label = glamorous.label(
       marginBottom: SPACING.SCALE_5
     }
   },
-  ({ errorText }) => ({
-    borderLeft: errorText ? `4px solid ${COLOUR.ERROR_COLOUR}` : "",
-    marginRight: errorText ? SPACING.SCALE_3 : 0,
-    paddingLeft: errorText ? SPACING.SCALE_2 : 0
+  ({ error }) => ({
+    borderLeft: error ? `4px solid ${COLOUR.ERROR_COLOUR}` : "",
+    marginRight: error ? SPACING.SCALE_3 : 0,
+    paddingLeft: error ? SPACING.SCALE_2 : 0
   })
 );
 

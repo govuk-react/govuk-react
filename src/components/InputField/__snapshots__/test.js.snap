@@ -2,28 +2,22 @@
 
 exports[`InputField matches snapshot: enzyme.mount 1`] = `
 <InputField
-  errorText={null}
-  hintText={null}
+  hint={null}
+  input={Object {}}
+  meta={Object {}}
 >
-  <glamorous(label)
-    errorText={null}
-  >
+  <glamorous(label)>
     <label
       className="css-1b081ox"
     >
-      <glamorous(span)
-        errorText={null}
-      >
+      <glamorous(span)>
         <span
           className="css-yengmq"
         >
           example
         </span>
       </glamorous(span)>
-      <span />
-      <span />
       <glamorous(input)
-        errorText={null}
         type="text"
       >
         <input
@@ -45,8 +39,6 @@ exports[`InputField matches snapshot: enzyme.render 1`] = `
   >
     example
   </span>
-  <span />
-  <span />
   <input
     class="css-opcxs3"
     type="text"
@@ -55,18 +47,11 @@ exports[`InputField matches snapshot: enzyme.render 1`] = `
 `;
 
 exports[`InputField matches snapshot: enzyme.shallow 1`] = `
-<glamorous(label)
-  errorText={null}
->
-  <glamorous(span)
-    errorText={null}
-  >
+<glamorous(label)>
+  <glamorous(span)>
     example
   </glamorous(span)>
-  <span />
-  <span />
   <glamorous(input)
-    errorText={null}
     type="text"
   />
 </glamorous(label)>

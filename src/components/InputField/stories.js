@@ -9,7 +9,7 @@ storiesOf("InputField", module).add("Component default", () => (
 storiesOf("InputField", module).add("Input with HintText", () => (
   <InputField
     name="group1"
-    hintText={[
+    hint={[
       "It’s on your National Insurance card, benefit letter, payslip or P60.",
       <br />,
       "For example, ‘QQ 12 34 56 C’."
@@ -22,7 +22,7 @@ storiesOf("InputField", module).add("Input with HintText", () => (
 storiesOf("InputField", module).add("Input with HintText & error", () => (
   <InputField
     name="group1"
-    hintText={[
+    hint={[
       "It’s on your National Insurance card, benefit letter, payslip or P60.",
       <br />,
       "For example, ‘QQ 12 34 56 C’."
@@ -42,7 +42,7 @@ storiesOf("InputField", module).add("Multiple Inputs", () => (
     </InputField>
     <InputField
       name="group1"
-      hintText={[
+      hint={[
         "It’s on your National Insurance card, benefit letter, payslip or P60.",
         <br />,
         "For example, ‘QQ 12 34 56 C’."

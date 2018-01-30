@@ -10,28 +10,46 @@ import ErrorText from "../ErrorText/index";
 import HintText from "../HintText/index";
 import Input from "../Input/index";
 
-const InputField = ({ children, errorText, hintText }) => (
-  <Label errorText={errorText}>
-    <LabelText errorText={errorText}>{children}</LabelText>
-    {hintText ? <HintText>{hintText}</HintText> : <span />}
-    {errorText ? (
-      <ErrorText errorText={errorText}>{errorText}</ErrorText>
-    ) : (
-      <span />
-    )}
-    <Input type="text" errorText={errorText} />
+const InputField = ({ meta, children, hint, input }) => (
+  <Label error={meta.touched && meta.error}>
+    <LabelText>{children}</LabelText>
+    {hint && <HintText>{hint}</HintText>}
+    {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
+    <Input type="text" {...input} />
   </Label>
 );
 
 InputField.defaultProps = {
-  hintText: null,
-  errorText: null
+  hint: null,
+  input: {},
+  meta: {}
 };
 
 InputField.propTypes = {
-  children: PropTypes.node.isRequired,
-  hintText: PropTypes.string,
-  errorText: PropTypes.string
+  hint: PropTypes.string,
+  input: PropTypes.shape({
+    name: PropTypes.string,
+    onBlur: PropTypes.func,
+    onChange: PropTypes.func,
+    onFocus: PropTypes.func,
+    value: PropTypes.any
+  }),
+  meta: PropTypes.shape({
+    active: PropTypes.bool,
+    dirty: PropTypes.bool,
+    dirtySinceLastSubmit: PropTypes.bool,
+    error: PropTypes.any,
+    initial: PropTypes.bool,
+    invalid: PropTypes.bool,
+    pristine: PropTypes.bool,
+    submitError: PropTypes.any,
+    submitFailed: PropTypes.bool,
+    submitSucceeded: PropTypes.bool,
+    touched: PropTypes.bool,
+    valid: PropTypes.bool,
+    visited: PropTypes.bool
+  }),
+  children: PropTypes.node.isRequired
 };
 
 export default InputField;
