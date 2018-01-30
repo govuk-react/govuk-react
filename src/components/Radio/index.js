@@ -19,8 +19,8 @@ const Label = glamorous.label(
     }
   },
   ({ inline }) => ({
-    float: inline ? "left" : "none",
-    clear: inline ? "none" : "left",
+    float: inline ? "left" : Label.float,
+    clear: inline ? "none" : Label.clear,
     marginRight: inline ? "30px" : "0",
     marginBottom: inline ? "0" : Label.marginBottom
   })
@@ -87,21 +87,30 @@ const LabelText = glamorous.span({
   }
 });
 
-const Radio = ({ children, ...props }) => (
-  <Label>
-    <Input type="radio" {...props} />
+const Radio = ({ children, inline, input }) => (
+  <Label inline={inline}>
+    <Input type="radio" {...input} />
     <LabelText>{children}</LabelText>
   </Label>
 );
 
 Radio.defaultProps = {
-  defaultChecked: null,
-  disabled: null
+  inline: undefined,
+  defaultChecked: undefined,
+  disabled: undefined,
+  input: {}
 };
 
 Radio.propTypes = {
   children: PropTypes.node.isRequired,
-  name: PropTypes.string.isRequired,
+  input: PropTypes.shape({
+    name: PropTypes.string,
+    onBlur: PropTypes.func,
+    onChange: PropTypes.func,
+    onFocus: PropTypes.func,
+    value: PropTypes.any
+  }),
+  inline: PropTypes.bool,
   defaultChecked: PropTypes.bool,
   disabled: PropTypes.string
 };

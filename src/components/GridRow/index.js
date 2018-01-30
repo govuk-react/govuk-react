@@ -4,14 +4,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import glamorous from "glamorous";
-import { MEDIA_QUERIES, SITE_WIDTH } from "../../constants/index";
+import { MEDIA_QUERIES, SITE_WIDTH, SPACING } from "../../constants/index";
 
 const GridRowInner = glamorous.div({
-  margin: "0 0 15px",
   width: "100%",
+  clear: "left",
+  margin: `0 0 ${SPACING.SCALE_3}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: "flex",
-    maxWidth: SITE_WIDTH
+    maxWidth: SITE_WIDTH,
+    marginBottom: SPACING.SCALE_5
   }
 });
 
