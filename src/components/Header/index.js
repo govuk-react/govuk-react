@@ -18,7 +18,6 @@ const Header = glamorous(({ level, children, ...props }) =>
     fontWeight: 400
   },
   ({ level, size = LEVEL_SIZE[level] }) => ({
-    // TODO: print
     fontSize: FONT_SIZES[size][640].fontSize,
     lineHeight: FONT_SIZES[size][640].lineHeight,
     [MEDIA_QUERIES.LARGESCREEN]: {
