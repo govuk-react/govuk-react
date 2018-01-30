@@ -1,23 +1,16 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
-import { Button, DateInput, Layout, GridRow, GridCol } from 'govuk-react';
+import { Button, InputField, TextArea, Layout, GridRow, GridCol } from 'govuk-react';
 
-// based on https://codesandbox.io/s/40mr0v2r87
-const DateInputAdapter = ({ input, meta, ...rest }) => (
-  <DateInput
-    {...input}
-    {...rest}
-    onChange={(event, value) => input.onChange(value)}
-    errorText={meta.touched ? meta.error : ''}
-  />
-);
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const onSubmit = async (values) => {
   await sleep(300);
   window.alert(JSON.stringify(values, 0, 2));
 };
+
 const required = value => (value ? undefined : 'Required');
+
 
 const App = () => (
   <div>
@@ -31,26 +24,34 @@ const App = () => (
       <GridRow>
         <GridCol>
           <Field
-            name="dob"
-            component={DateInputAdapter}
+            name="firstName"
+            component={InputField}
             validate={required}
-            hintText="Date of birth"
-            labelPosition="right"
-          />
+          >
+            First name
+          </Field>
+        </GridCol>
+      </GridRow>
+      <GridRow>
+        <GridCol>
+          <Field
+            name="description"
+            component={TextArea}
+            validate={required}
+            hint="Any other information you want to provide"
+          >
+            Description
+          </Field>
         </GridCol>
       </GridRow>
       <GridRow>
         <GridCol>
           <Button type="submit" disabled={submitting}>
-            Submit
+            Log In
           </Button>
         </GridCol>
         <GridCol>
-          <Button
-            type="button"
-            onClick={reset}
-            disabled={submitting || pristine}
-          >
+          <Button onClick={reset} disabled={submitting || pristine}>
             Reset
           </Button>
         </GridCol>
