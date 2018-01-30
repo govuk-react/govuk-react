@@ -10,13 +10,13 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
     errorText={null}
   >
     <label
-      className="css-1b081ox"
+      className="css-1dyhx6n"
     >
       <glamorous(span)
         errorText={null}
       >
         <span
-          className="css-yengmq"
+          className="css-1m1nyko"
         >
           example
         </span>
@@ -39,10 +39,10 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
 
 exports[`Select matches snapshot: enzyme.render 1`] = `
 <label
-  class="css-1b081ox"
+  class="css-1dyhx6n"
 >
   <span
-    class="css-yengmq"
+    class="css-1m1nyko"
   >
     example
   </span>

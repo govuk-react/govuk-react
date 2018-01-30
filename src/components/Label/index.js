@@ -7,13 +7,11 @@ import { MEDIA_QUERIES, SITE_WIDTH, SPACING } from "../../constants/index";
 
 const Label = glamorous.label(
   {
-    marginBottom: SPACING.SCALE_3,
     display: "flex",
     flexDirection: "column",
     boxSizing: "border-box",
     [MEDIA_QUERIES.LARGESCREEN]: {
-      maxWidth: SITE_WIDTH,
-      marginBottom: SPACING.SCALE_5
+      maxWidth: SITE_WIDTH
     }
   },
   ({ error }) => ({

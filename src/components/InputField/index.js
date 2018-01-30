@@ -15,7 +15,7 @@ const InputField = ({ meta, children, hint, input }) => (
     <LabelText>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
-    <Input type="text" {...input} />
+    <Input {...input} />
   </Label>
 );
 

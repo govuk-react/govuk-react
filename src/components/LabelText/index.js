@@ -13,6 +13,8 @@ const LabelText = glamorous.span(
     fontFamily: '"nta", Arial, sans-serif',
     WebkitFontSmoothing: "antialiased",
     MozOsxFontSmoothing: "grayscale",
+    display: "block",
+    clear: "none",
     fontWeight: 400,
     fontSize: "16px",
     lineHeight: "1.25",

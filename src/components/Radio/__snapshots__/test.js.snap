@@ -2,8 +2,7 @@
 
 exports[`Radio matches snapshot: enzyme.mount 1`] = `
 <Radio
-  defaultChecked={null}
-  disabled={null}
+  input={Object {}}
   name="example"
 >
   <glamorous(label)>
@@ -11,16 +10,10 @@ exports[`Radio matches snapshot: enzyme.mount 1`] = `
       className="css-1cr83k4"
     >
       <glamorous(input)
-        defaultChecked={null}
-        disabled={null}
-        name="example"
         type="radio"
       >
         <input
           className="css-10svazo"
-          defaultChecked={null}
-          disabled={null}
-          name="example"
           type="radio"
         />
       </glamorous(input)>
@@ -42,7 +35,6 @@ exports[`Radio matches snapshot: enzyme.render 1`] = `
 >
   <input
     class="css-10svazo"
-    name="example"
     type="radio"
   />
   <span
@@ -56,9 +48,6 @@ exports[`Radio matches snapshot: enzyme.render 1`] = `
 exports[`Radio matches snapshot: enzyme.shallow 1`] = `
 <glamorous(label)>
   <glamorous(input)
-    defaultChecked={null}
-    disabled={null}
-    name="example"
     type="radio"
   />
   <glamorous(span)>
