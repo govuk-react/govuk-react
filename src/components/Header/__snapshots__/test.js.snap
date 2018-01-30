@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header matches snapshot: enzyme.mount 1`] = `
+<glamorous(unknown)
+  level={1}
+>
+  <Component
+    className="css-1d4zj7z"
+    level={1}
+  >
+    <h1
+      className="css-1d4zj7z"
+    >
+      example
+    </h1>
+  </Component>
+</glamorous(unknown)>
+`;
+
+exports[`Header matches snapshot: enzyme.render 1`] = `
+<h1
+  class="css-1d4zj7z"
+>
+  example
+</h1>
+`;
+
+exports[`Header matches snapshot: enzyme.shallow 1`] = `
+<Component
+  className="css-1d4zj7z"
+  level={1}
+>
+  example
+</Component>
+`;
