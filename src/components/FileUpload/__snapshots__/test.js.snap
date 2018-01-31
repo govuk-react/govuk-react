@@ -10,7 +10,7 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
     errorText={null}
   >
     <label
-      className="css-1dyhx6n"
+      className="css-16y5nda"
     >
       <glamorous(span)
         errorText={null}
@@ -49,7 +49,7 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
 
 exports[`FileUpload matches snapshot: enzyme.render 1`] = `
 <label
-  class="css-1dyhx6n"
+  class="css-16y5nda"
 >
   <span
     class="css-1m1nyko"
