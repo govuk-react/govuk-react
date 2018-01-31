@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
-import { Button, GridCol, GridRow, InputField, LabelText, Layout, TextArea, Radio } from 'govuk-react';
+import { Button, Checkbox, GridCol, GridRow, InputField, LabelText, Layout, TextArea, Radio } from 'govuk-react';
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -63,6 +63,43 @@ const App = () => (
             inline
           >
             No
+          </Field>
+        </GridCol>
+      </GridRow>
+      <GridRow>
+        <GridCol>
+          <LabelText>What types of sauces do you like?</LabelText>
+          <Field
+            name="sauces"
+            component={Checkbox}
+            value="Tomato"
+            type="checkbox"
+          >
+            Tomato
+          </Field>
+          <Field
+            name="sauces"
+            component={Checkbox}
+            value="Soy"
+            type="checkbox"
+          >
+            Soy
+          </Field>
+          <Field
+            name="sauces"
+            component={Checkbox}
+            value="Mint"
+            type="checkbox"
+          >
+            Mint
+          </Field>
+          <Field
+            name="sauces"
+            component={Checkbox}
+            value="Mustard"
+            type="checkbox"
+          >
+            Mustard
           </Field>
         </GridCol>
       </GridRow>
