@@ -4,11 +4,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import glamorous from "glamorous";
 
-import * as COLOUR from "govuk-colours";
+import { YELLOW, BLACK } from "govuk-colours";
 
 const MultipleChoice = glamorous.label("multiple-choice", {
-  display: "inline-block",
-  float: "none",
+  display: "block",
+  float: "left",
   clear: "left",
   position: "relative",
   padding: "0 0 0 38px",
@@ -38,7 +38,7 @@ const Input = glamorous.input({
     opacity: 1
   },
   ":focus + span::before": {
-    boxShadow: `0 0 0 4px ${COLOUR.YELLOW}`
+    boxShadow: `0 0 0 4px ${YELLOW}`
   }
 });
 
@@ -51,11 +51,11 @@ const Label = glamorous.span({
   cursor: "pointer",
   padding: "8px 10px 9px 12px",
   display: "block",
-  color: `${COLOUR.BLACK}`,
+  color: `${BLACK}`,
   "::before": {
     content: " ",
     display: "block",
-    border: `2px solid ${COLOUR.BLACK}`,
+    border: `2px solid ${BLACK}`,
     background: "transparent",
     width: "34px",
     height: "34px",

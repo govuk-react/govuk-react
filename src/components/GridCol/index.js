@@ -4,22 +4,25 @@
 import React from "react";
 import PropTypes from "prop-types";
 import glamorous from "glamorous";
-import { GUTTER_HALF, MEDIA_QUERIES } from "../../constants/index";
+import { GUTTER_HALF, MEDIA_QUERIES, SPACING } from "../../constants/index";
 
 const GridColInner = glamorous.div(
   {
     backgroundColor: "transparent",
     backgroundImage: "none",
-    marginBottom: "0",
+    margin: 0,
+    marginBottom: SPACING.SCALE_3,
     textIndent: "0",
     boxSize: "border-box",
-    margin: `0 ${GUTTER_HALF}`,
-    width: "100%",
-    ":first-child": {
-      marginLeft: 0
-    },
-    ":last-child": {
-      marginRight: 0
+    [MEDIA_QUERIES.LARGESCREEN]: {
+      width: "100%",
+      margin: `0 ${GUTTER_HALF}`,
+      ":first-child": {
+        marginLeft: 0
+      },
+      ":last-child": {
+        marginRight: 0
+      }
     }
   },
   ({ hideContent }) => ({

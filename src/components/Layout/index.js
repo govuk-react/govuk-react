@@ -9,6 +9,7 @@ import { BREAKPOINTS, MEDIA_QUERIES, SPACING } from "../../constants/index";
 const LayoutInner = glamorous.div({
   padding: SPACING.SCALE_2,
   minWidth: BREAKPOINTS.SMALLSCREEN,
+  boxSizing: "border-box",
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: "flex",
     flexDirection: "column",
