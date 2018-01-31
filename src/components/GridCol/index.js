@@ -8,9 +8,6 @@ import { GUTTER_HALF, MEDIA_QUERIES } from "../../constants/index";
 
 const GridColInner = glamorous.div(
   {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "flex-start",
     backgroundColor: "transparent",
     backgroundImage: "none",
     marginBottom: "0",
@@ -46,11 +43,6 @@ const GridColInner = glamorous.div(
     [MEDIA_QUERIES.LARGESCREEN]: {
       width: columnOneQuarter ? "50%" : GridColInner.width
     }
-  }),
-  ({ noFlex }) => ({
-    display: noFlex ? "block" : GridColInner.display,
-    flexDirection: noFlex ? "unset" : GridColInner.flexDirection,
-    alignItems: noFlex ? "unset" : GridColInner.alignItems
   })
 );
 
