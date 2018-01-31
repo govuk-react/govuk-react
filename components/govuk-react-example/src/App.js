@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
-import { Button, InputField, TextArea, Layout, GridRow, GridCol } from 'govuk-react';
+import { Button, GridCol, GridRow, InputField, LabelText, Layout, TextArea, Radio } from 'govuk-react';
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -29,6 +29,40 @@ const App = () => (
             validate={required}
           >
             First name
+          </Field>
+        </GridCol>
+      </GridRow>
+      <GridRow>
+        <GridCol>
+          <Field
+            name="lastName"
+            component={InputField}
+            validate={required}
+          >
+            Last name
+          </Field>
+        </GridCol>
+      </GridRow>
+      <GridRow>
+        <GridCol>
+          <LabelText>Do you like animals?</LabelText>
+          <Field
+            name="likesAnimals"
+            component={Radio}
+            value="Yes"
+            type="radio"
+            inline
+          >
+            Yes
+          </Field>
+          <Field
+            name="likesAnimals"
+            component={Radio}
+            value="No"
+            type="radio"
+            inline
+          >
+            No
           </Field>
         </GridCol>
       </GridRow>
