@@ -2,22 +2,17 @@
 
 exports[`Checkbox matches snapshot: enzyme.mount 1`] = `
 <Checkbox
-  defaultChecked={null}
-  disabled={null}
+  input={Object {}}
 >
   <glamorous(label)>
     <label
-      className="css-1dbanec multiple-choice"
+      className="css-w3lb6d multiple-choice"
     >
       <glamorous(input)
-        defaultChecked={null}
-        disabled={null}
         type="checkbox"
       >
         <input
           className="css-10svazo"
-          defaultChecked={null}
-          disabled={null}
           type="checkbox"
         />
       </glamorous(input)>
@@ -35,7 +30,7 @@ exports[`Checkbox matches snapshot: enzyme.mount 1`] = `
 
 exports[`Checkbox matches snapshot: enzyme.render 1`] = `
 <label
-  class="css-1dbanec multiple-choice"
+  class="css-w3lb6d multiple-choice"
 >
   <input
     class="css-10svazo"
@@ -52,8 +47,6 @@ exports[`Checkbox matches snapshot: enzyme.render 1`] = `
 exports[`Checkbox matches snapshot: enzyme.shallow 1`] = `
 <glamorous(label)>
   <glamorous(input)
-    defaultChecked={null}
-    disabled={null}
     type="checkbox"
   />
   <glamorous(span)>

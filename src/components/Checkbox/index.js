@@ -7,7 +7,7 @@ import glamorous from "glamorous";
 import * as COLOUR from "govuk-colours";
 
 const MultipleChoice = glamorous.label("multiple-choice", {
-  display: "block",
+  display: "inline-block",
   float: "none",
   clear: "left",
   position: "relative",
@@ -80,20 +80,30 @@ const Label = glamorous.span({
   }
 });
 
-const Checkbox = ({ children, ...props }) => (
-  <MultipleChoice>
-    <Input type="checkbox" {...props} />
+const Checkbox = ({ children, inline, input }) => (
+  <MultipleChoice inline={inline}>
+    <Input type="checkbox" {...input} />
     <Label>{children}</Label>
   </MultipleChoice>
 );
 
 Checkbox.defaultProps = {
-  defaultChecked: null,
-  disabled: null
+  inline: undefined,
+  defaultChecked: undefined,
+  disabled: undefined,
+  input: {}
 };
 
 Checkbox.propTypes = {
   children: PropTypes.node.isRequired,
+  input: PropTypes.shape({
+    name: PropTypes.string,
+    onBlur: PropTypes.func,
+    onChange: PropTypes.func,
+    onFocus: PropTypes.func,
+    value: PropTypes.any
+  }),
+  inline: PropTypes.bool,
   defaultChecked: PropTypes.bool,
   disabled: PropTypes.string
 };

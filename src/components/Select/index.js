@@ -25,10 +25,12 @@ const Input = glamorous.select(
     fontSize: "16px",
     lineHeight: "1.25",
     width: "100%",
+    height: "33px",
     padding: "5px 4px 4px",
     border: `2px solid ${COLOUR.BLACK}`,
     [mediaQueries.largeScreen]: {
       width: "50%",
+      height: "38px",
       fontSize: "19px",
       lineHeight: "1.31579"
     },
@@ -47,28 +49,48 @@ const Input = glamorous.select(
   })
 );
 
-const Select = ({ children, hintText, errorText, label }) => (
-  <Label errorText={errorText}>
-    <LabelText errorText={errorText}>{label}</LabelText>
-    {hintText ? <HintText>{hintText}</HintText> : <span />}
-    {errorText ? (
-      <ErrorText errorText={errorText}>{errorText}</ErrorText>
-    ) : (
-      <span />
-    )}
-    <Input errorText={errorText}>{children}</Input>
+const Select = ({ children, hint, label, meta, input }) => (
+  <Label error={meta.touched && meta.error}>
+    <LabelText>{label}</LabelText>
+    {hint && <HintText>{hint}</HintText>}
+    {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
+    <Input {...input}>{children}</Input>
   </Label>
 );
 
 Select.defaultProps = {
-  hintText: null,
-  errorText: null
+  hint: undefined,
+  errorText: null,
+  input: {},
+  meta: {}
 };
 
 Select.propTypes = {
+  hint: PropTypes.string,
+  input: PropTypes.shape({
+    name: PropTypes.string,
+    onBlur: PropTypes.func,
+    onChange: PropTypes.func,
+    onFocus: PropTypes.func,
+    value: PropTypes.any
+  }),
+  meta: PropTypes.shape({
+    active: PropTypes.bool,
+    dirty: PropTypes.bool,
+    dirtySinceLastSubmit: PropTypes.bool,
+    error: PropTypes.any,
+    initial: PropTypes.bool,
+    invalid: PropTypes.bool,
+    pristine: PropTypes.bool,
+    submitError: PropTypes.any,
+    submitFailed: PropTypes.bool,
+    submitSucceeded: PropTypes.bool,
+    touched: PropTypes.bool,
+    valid: PropTypes.bool,
+    visited: PropTypes.bool
+  }),
   children: PropTypes.node.isRequired,
   label: PropTypes.string.isRequired,
-  hintText: PropTypes.string,
   errorText: PropTypes.string
 };
 
