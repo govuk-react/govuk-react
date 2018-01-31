@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
-import { Button, Checkbox, GridCol, GridRow, InputField, LabelText, Layout, TextArea, Radio } from 'govuk-react';
+import { Button, Checkbox, GridCol, GridRow, InputField, LabelText, Layout, TextArea, Radio, Select } from 'govuk-react';
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -100,6 +100,24 @@ const App = () => (
             type="checkbox"
           >
             Mustard
+          </Field>
+        </GridCol>
+      </GridRow>
+      <GridRow>
+        <GridCol>
+          <Field
+            name="colour"
+            label="Favourite colour"
+            component={Select}
+            validate={required}
+          >
+            <option />
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+            <option value="orange">Orange</option>
+            <option value="purple">Purple</option>
           </Field>
         </GridCol>
       </GridRow>
