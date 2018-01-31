@@ -10,6 +10,7 @@ const Label = glamorous.label(
     display: "flex",
     flexDirection: "column",
     boxSizing: "border-box",
+    width: "100%",
     [MEDIA_QUERIES.LARGESCREEN]: {
       maxWidth: SITE_WIDTH
     }

@@ -3,31 +3,24 @@
 exports[`Select matches snapshot: enzyme.mount 1`] = `
 <Select
   errorText={null}
-  hintText={null}
+  input={Object {}}
   label="example"
+  meta={Object {}}
 >
-  <glamorous(label)
-    errorText={null}
-  >
+  <glamorous(label)>
     <label
-      className="css-1dyhx6n"
+      className="css-16y5nda"
     >
-      <glamorous(span)
-        errorText={null}
-      >
+      <glamorous(span)>
         <span
           className="css-1m1nyko"
         >
           example
         </span>
       </glamorous(span)>
-      <span />
-      <span />
-      <glamorous(select)
-        errorText={null}
-      >
+      <glamorous(select)>
         <select
-          className="css-8psxza"
+          className="css-61wx1h"
         >
           example
         </select>
@@ -39,17 +32,15 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
 
 exports[`Select matches snapshot: enzyme.render 1`] = `
 <label
-  class="css-1dyhx6n"
+  class="css-16y5nda"
 >
   <span
     class="css-1m1nyko"
   >
     example
   </span>
-  <span />
-  <span />
   <select
-    class="css-8psxza"
+    class="css-61wx1h"
   >
     example
   </select>
@@ -57,19 +48,11 @@ exports[`Select matches snapshot: enzyme.render 1`] = `
 `;
 
 exports[`Select matches snapshot: enzyme.shallow 1`] = `
-<glamorous(label)
-  errorText={null}
->
-  <glamorous(span)
-    errorText={null}
-  >
+<glamorous(label)>
+  <glamorous(span)>
     example
   </glamorous(span)>
-  <span />
-  <span />
-  <glamorous(select)
-    errorText={null}
-  >
+  <glamorous(select)>
     example
   </glamorous(select)>
 </glamorous(label)>
