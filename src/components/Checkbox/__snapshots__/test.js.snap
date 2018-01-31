@@ -6,7 +6,7 @@ exports[`Checkbox matches snapshot: enzyme.mount 1`] = `
 >
   <glamorous(label)>
     <label
-      className="css-w3lb6d multiple-choice"
+      className="css-xzhrfi multiple-choice"
     >
       <glamorous(input)
         type="checkbox"
@@ -30,7 +30,7 @@ exports[`Checkbox matches snapshot: enzyme.mount 1`] = `
 
 exports[`Checkbox matches snapshot: enzyme.render 1`] = `
 <label
-  class="css-w3lb6d multiple-choice"
+  class="css-xzhrfi multiple-choice"
 >
   <input
     class="css-10svazo"
