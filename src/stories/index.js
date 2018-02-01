@@ -18,3 +18,4 @@ import "../components/Select/stories";
 import "../components/FileUpload/stories";
 import "../components/ErrorText/stories";
 import "../components/Panel/stories";
+import "../components/MultiChoice/stories";
