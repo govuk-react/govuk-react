@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { shallow, mount, render } from "enzyme";
 import { generateImage } from "component-image";
+import renderGlamorous from "render-glamorous";
 
 import Button from "./";
 
@@ -35,7 +36,8 @@ describe("button", () => {
       viewport: {
         width: 300,
         height: 200
-      }
+      },
+      renderer: renderGlamorous
     }).then(image => {
       expect(image).toMatchImageSnapshot();
     }));

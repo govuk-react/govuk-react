@@ -58,7 +58,6 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "dependencies": {
-    "component-image": "^1.0.0",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
@@ -79,6 +78,7 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "component-image": "@penx/component-image",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-15": "^1.0.5",
     "enzyme-to-json": "^3.3.0",
@@ -92,6 +92,7 @@
     "eslint-plugin-prettier": "^2.5.0",
     "eslint-plugin-react": "^7.5.1",
     "flow-bin": "^0.64.0",
+    "glamor": "^2.20.40",
     "glamorous": "^4.11.2",
     "govuk-elements-sass": "^3.1.2",
     "inferno": "^3.10.1",
@@ -107,6 +108,7 @@
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
     "react-test-renderer": "^15.6.2",
+    "render-glamorous": "0.0.1",
     "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6",
     "sinon": "^4.2.1",

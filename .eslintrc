@@ -21,7 +21,7 @@
       }
     },
     {
-      "files": [ "test.js" ],
+      "files": [ "test.js", "setupTests.js" ],
       "env": {
         "jest": true,
         "enzyme": true,
