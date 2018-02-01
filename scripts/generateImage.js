@@ -1,4 +1,4 @@
-import { generateImage as gi } from "component-image";
+import { generateImage as gi } from "@penx/component-image";
 import path from "path";
 import renderGlamorous from "render-glamorous";
 

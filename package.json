@@ -66,6 +66,7 @@
     "react": ">=15"
   },
   "devDependencies": {
+    "@penx/component-image": "^1.0.1",
     "@storybook/addon-actions": "^3.3.9",
     "@storybook/addon-links": "^3.3.9",
     "@storybook/react": "^3.3.9",
@@ -78,7 +79,6 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
-    "component-image": "@penx/component-image",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-15": "^1.0.5",
     "enzyme-to-json": "^3.3.0",
