@@ -31,10 +31,10 @@ const FieldSet = glamorous.fieldset(
 );
 
 const MultiChoice = ({ meta, label, children, hint }) => (
-  <FieldSet error={meta.touched && meta.error}>
+  <FieldSet error={meta.touched}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
-    {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
+    {meta.touched && <ErrorText>{meta.error}</ErrorText>}
     {children}
   </FieldSet>
 );
