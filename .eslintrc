@@ -15,13 +15,13 @@
   },
   "overrides": [
     {
-      "files": [ "stories.js", "test.js", "src/stories/index.js", "src/setupTests.js", "scripts/createComponent.js" ],
+      "files": [ "stories.js", "test.js", "src/stories/index.js", "src/setupTests.js", "scripts/*" ],
       "rules": {
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
       }
     },
     {
-      "files": [ "test.js" ],
+      "files": [ "test.js", "setupTests.js" ],
       "env": {
         "jest": true,
         "enzyme": true,

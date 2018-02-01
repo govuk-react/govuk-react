@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { shallow, mount, render } from "enzyme";
-
 import Button from "./";
+
+import generateImage from "../../../scripts/generateImage";
 
 describe("button", () => {
   const example = "example";
@@ -28,4 +29,14 @@ describe("button", () => {
     expect(mount(wrapper)).toMatchSnapshot(`enzyme.mount`);
     expect(render(wrapper)).toMatchSnapshot(`enzyme.render`);
   });
+
+  it("has no visual regressions", () =>
+    generateImage(wrapper, {
+      viewport: {
+        width: 87,
+        height: 35
+      }
+    }).then(image => {
+      expect(image).toMatchImageSnapshot();
+    }));
 });
