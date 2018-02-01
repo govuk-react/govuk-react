@@ -1,10 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { shallow, mount, render } from "enzyme";
-import { generateImage } from "component-image";
-import renderGlamorous from "render-glamorous";
-
 import Button from "./";
+
+import generateImage from "../../../scripts/generateImage";
 
 describe("button", () => {
   const example = "example";
@@ -34,10 +33,9 @@ describe("button", () => {
   it("has no visual regressions", () =>
     generateImage(wrapper, {
       viewport: {
-        width: 300,
-        height: 200
-      },
-      renderer: renderGlamorous
+        width: 87,
+        height: 35
+      }
     }).then(image => {
       expect(image).toMatchImageSnapshot();
     }));
