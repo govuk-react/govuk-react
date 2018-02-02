@@ -10,7 +10,7 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
     errorText={null}
   >
     <label
-      className="css-16y5nda"
+      className="css-wd82g1"
     >
       <glamorous(span)
         errorText={null}
@@ -23,12 +23,12 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
       </glamorous(span)>
       <glamorous(span)>
         <span
-          className="css-1k9f6xb"
+          className="css-3tj0gg"
         />
       </glamorous(span)>
       <glamorous(span)>
         <span
-          className="css-110ebyw"
+          className="css-1fve0n6"
         />
       </glamorous(span)>
       <glamorous(input)
@@ -49,7 +49,7 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
 
 exports[`FileUpload matches snapshot: enzyme.render 1`] = `
 <label
-  class="css-16y5nda"
+  class="css-wd82g1"
 >
   <span
     class="css-1m1nyko"
@@ -57,10 +57,10 @@ exports[`FileUpload matches snapshot: enzyme.render 1`] = `
     example
   </span>
   <span
-    class="css-1k9f6xb"
+    class="css-3tj0gg"
   />
   <span
-    class="css-110ebyw"
+    class="css-1fve0n6"
   />
   <input
     class="css-svb7gc"

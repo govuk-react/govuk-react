@@ -9,7 +9,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
 >
   <glamorous(label)>
     <label
-      className="css-16y5nda"
+      className="css-wd82g1"
     >
       <glamorous(span)>
         <span
@@ -32,7 +32,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
 
 exports[`Select matches snapshot: enzyme.render 1`] = `
 <label
-  class="css-16y5nda"
+  class="css-wd82g1"
 >
   <span
     class="css-1m1nyko"

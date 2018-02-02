@@ -3,7 +3,7 @@
 exports[`ErrorText matches snapshot: enzyme.mount 1`] = `
 <glamorous(span)>
   <span
-    className="css-110ebyw"
+    className="css-1fve0n6"
   >
     example
   </span>
@@ -12,7 +12,7 @@ exports[`ErrorText matches snapshot: enzyme.mount 1`] = `
 
 exports[`ErrorText matches snapshot: enzyme.render 1`] = `
 <span
-  class="css-110ebyw"
+  class="css-1fve0n6"
 >
   example
 </span>
@@ -20,7 +20,7 @@ exports[`ErrorText matches snapshot: enzyme.render 1`] = `
 
 exports[`ErrorText matches snapshot: enzyme.shallow 1`] = `
 <span
-  className="css-110ebyw"
+  className="css-1fve0n6"
 >
   example
 </span>

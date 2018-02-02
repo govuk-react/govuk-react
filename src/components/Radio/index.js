@@ -9,7 +9,7 @@ import { YELLOW } from "govuk-colours";
 const Label = glamorous.label(
   {
     display: "block",
-    float: "none",
+    float: "left",
     clear: "left",
     position: "relative",
     padding: "0 0 0 38px",
@@ -87,9 +87,16 @@ const LabelText = glamorous.span({
   }
 });
 
-const Radio = ({ children, inline, input }) => (
+const Radio = ({ children, inline, defaultChecked, disabled, input }) => (
   <Label inline={inline}>
-    <Input type="radio" {...input} />
+    <Input
+      type="radio"
+      {...input}
+      name={input.name}
+      checked={defaultChecked}
+      disabled={disabled}
+      value={children}
+    />
     <LabelText>{children}</LabelText>
   </Label>
 );
@@ -98,10 +105,14 @@ Radio.defaultProps = {
   inline: undefined,
   defaultChecked: undefined,
   disabled: undefined,
+  value: undefined,
+  onChange: undefined,
   input: {}
 };
 
 Radio.propTypes = {
+  value: PropTypes.string,
+  onChange: PropTypes.func,
   children: PropTypes.node.isRequired,
   input: PropTypes.shape({
     name: PropTypes.string,

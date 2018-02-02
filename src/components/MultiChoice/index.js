@@ -8,33 +8,43 @@ import { ERROR_COLOUR } from "govuk-colours";
 import LabelText from "../LabelText/index";
 import ErrorText from "../ErrorText/index";
 import HintText from "../HintText/index";
-import { MEDIA_QUERIES, SITE_WIDTH, SPACING } from "../../constants/index";
+import {
+  BORDER_WIDTH_MOBILE,
+  MEDIA_QUERIES,
+  SITE_WIDTH,
+  SPACING
+} from "../../constants/index";
 
-const FieldSet = glamorous.fieldset(
+const FieldSet = glamorous.div(
   {
-    display: "flex",
-    flexDirection: "column",
     padding: 0,
     margin: 0,
     border: 0,
     boxSizing: "border-box",
     width: "100%",
+    ":after": {
+      content: "''",
+      display: "table",
+      clear: "both"
+    },
     [MEDIA_QUERIES.LARGESCREEN]: {
       maxWidth: SITE_WIDTH
     }
   },
   ({ error }) => ({
-    borderLeft: error ? `4px solid ${ERROR_COLOUR}` : "",
-    marginRight: error ? SPACING.SCALE_3 : 0,
-    paddingLeft: error ? SPACING.SCALE_2 : 0
+    borderLeft: error
+      ? `${BORDER_WIDTH_MOBILE} solid ${ERROR_COLOUR}`
+      : FieldSet.border,
+    marginRight: error ? SPACING.SCALE_3 : FieldSet.margin,
+    paddingLeft: error ? SPACING.SCALE_2 : FieldSet.padding
   })
 );
 
 const MultiChoice = ({ meta, label, children, hint }) => (
-  <FieldSet error={meta.touched}>
+  <FieldSet error={meta.touched && meta.error}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
-    {meta.touched && <ErrorText>{meta.error}</ErrorText>}
+    {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
     {children}
   </FieldSet>
 );

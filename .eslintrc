@@ -11,7 +11,7 @@
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": 0,
-    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/label-has-for": 0
   },
   "overrides": [
     {

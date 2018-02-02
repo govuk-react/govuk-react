@@ -28,7 +28,7 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
         >
           <glamorous(label)>
             <label
-              className="css-16y5nda"
+              className="css-wd82g1"
             >
               <glamorous(span)>
                 <span
@@ -49,7 +49,7 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
           </glamorous(label)>
           <glamorous(label)>
             <label
-              className="css-16y5nda"
+              className="css-wd82g1"
             >
               <glamorous(span)>
                 <span
@@ -72,7 +72,7 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
             className="year"
           >
             <label
-              className="css-16y5nda year"
+              className="css-wd82g1 year"
             >
               <glamorous(span)>
                 <span
@@ -113,7 +113,7 @@ exports[`DateInput matches snapshot: enzyme.render 1`] = `
     class="css-m5vkn2"
   >
     <label
-      class="css-16y5nda"
+      class="css-wd82g1"
     >
       <span
         class="css-1m1nyko"
@@ -126,7 +126,7 @@ exports[`DateInput matches snapshot: enzyme.render 1`] = `
       />
     </label>
     <label
-      class="css-16y5nda"
+      class="css-wd82g1"
     >
       <span
         class="css-1m1nyko"
@@ -139,7 +139,7 @@ exports[`DateInput matches snapshot: enzyme.render 1`] = `
       />
     </label>
     <label
-      class="css-16y5nda year"
+      class="css-wd82g1 year"
     >
       <span
         class="css-1m1nyko"

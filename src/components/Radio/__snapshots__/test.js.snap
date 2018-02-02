@@ -7,14 +7,16 @@ exports[`Radio matches snapshot: enzyme.mount 1`] = `
 >
   <glamorous(label)>
     <label
-      className="css-1cr83k4"
+      className="css-udpz5g"
     >
       <glamorous(input)
         type="radio"
+        value="example"
       >
         <input
           className="css-10svazo"
           type="radio"
+          value="example"
         />
       </glamorous(input)>
       <glamorous(span)>
@@ -31,11 +33,12 @@ exports[`Radio matches snapshot: enzyme.mount 1`] = `
 
 exports[`Radio matches snapshot: enzyme.render 1`] = `
 <label
-  class="css-1cr83k4"
+  class="css-udpz5g"
 >
   <input
     class="css-10svazo"
     type="radio"
+    value="example"
   />
   <span
     class="css-du12vn"
@@ -49,6 +52,7 @@ exports[`Radio matches snapshot: enzyme.shallow 1`] = `
 <glamorous(label)>
   <glamorous(input)
     type="radio"
+    value="example"
   />
   <glamorous(span)>
     example

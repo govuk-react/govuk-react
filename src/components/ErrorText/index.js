@@ -5,6 +5,7 @@ import { ERROR_COLOUR } from "govuk-colours";
 import { FONT_SIZE, MEDIA_QUERIES, NTA_LIGHT } from "../../constants/index";
 
 const ErrorText = glamorous.span({
+  display: "block",
   fontFamily: NTA_LIGHT,
   WebkitFontSmoothing: "antialiased",
   MozOsxFontSmoothing: "grayscale",
