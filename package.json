@@ -125,8 +125,12 @@
   "homepage": "https://github.com/penx/govuk-react#readme",
   "bundlesize": [
     {
-      "path": "./dist/**.js",
-      "maxSize": "50 kB"
+      "path": "./dist/vendor.*.js",
+      "maxSize": "60 kB"
+    },
+    {
+      "path": "./dist/app.*.js",
+      "maxSize": "20 kB"
     }
   ]
 }
