@@ -1,24 +1,102 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox matches snapshot: enzyme.mount 1`] = `
+.glamor-2,
+[data-glamor-2] {
+  display: block;
+  float: left;
+  clear: left;
+  position: relative;
+  padding: 0 0 0 38px;
+  margin-bottom: 10px;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  position: absolute;
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  width: 38px;
+  height: 38px;
+  z-index: 1;
+  margin: 0;
+  zoom: 1;
+  opacity: 0;
+}
+
+.glamor-0:checked + span::after,
+[data-glamor-0]:checked + span::after {
+  opacity: 1;
+}
+
+.glamor-0:focus + span::before,
+[data-glamor-0]:focus + span::before {
+  box-shadow: 0 0 0 4px #ffbf47;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  cursor: pointer;
+  padding: 8px 10px 9px 12px;
+  display: block;
+  color: #0b0c0c;
+}
+
+.glamor-1::before,
+[data-glamor-1]::before {
+  content: " ";
+  display: block;
+  border: 2px solid #0b0c0c;
+  background: transparent;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glamor-1::after,
+[data-glamor-1]::after {
+  content: " ";
+  border: solid;
+  border-width: 0 0 5px 5px;
+  background: transparent;
+  border-top-color: transparent;
+  width: 17px;
+  height: 7px;
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  transform: rotate(-45deg);
+  zoom: 1;
+  opacity: 0;
+  -webkit-transform: rotate(-45deg);
+}
+
 <Checkbox
   input={Object {}}
 >
   <glamorous(label)>
     <label
-      className="css-xzhrfi multiple-choice"
+      className="glamor-2 multiple-choice"
     >
       <glamorous(input)
         type="checkbox"
       >
         <input
-          className="css-10svazo"
+          className="glamor-0"
           type="checkbox"
         />
       </glamorous(input)>
       <glamorous(span)>
         <span
-          className="css-j94lrm"
+          className="glamor-1"
         >
           example
         </span>
@@ -29,15 +107,93 @@ exports[`Checkbox matches snapshot: enzyme.mount 1`] = `
 `;
 
 exports[`Checkbox matches snapshot: enzyme.render 1`] = `
+.glamor-2,
+[data-glamor-2] {
+  display: block;
+  float: left;
+  clear: left;
+  position: relative;
+  padding: 0 0 0 38px;
+  margin-bottom: 10px;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  position: absolute;
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  width: 38px;
+  height: 38px;
+  z-index: 1;
+  margin: 0;
+  zoom: 1;
+  opacity: 0;
+}
+
+.glamor-0:checked + span::after,
+[data-glamor-0]:checked + span::after {
+  opacity: 1;
+}
+
+.glamor-0:focus + span::before,
+[data-glamor-0]:focus + span::before {
+  box-shadow: 0 0 0 4px #ffbf47;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  cursor: pointer;
+  padding: 8px 10px 9px 12px;
+  display: block;
+  color: #0b0c0c;
+}
+
+.glamor-1::before,
+[data-glamor-1]::before {
+  content: " ";
+  display: block;
+  border: 2px solid #0b0c0c;
+  background: transparent;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glamor-1::after,
+[data-glamor-1]::after {
+  content: " ";
+  border: solid;
+  border-width: 0 0 5px 5px;
+  background: transparent;
+  border-top-color: transparent;
+  width: 17px;
+  height: 7px;
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  transform: rotate(-45deg);
+  zoom: 1;
+  opacity: 0;
+  -webkit-transform: rotate(-45deg);
+}
+
 <label
-  class="css-xzhrfi multiple-choice"
+  class="glamor-2 multiple-choice"
 >
   <input
-    class="css-10svazo"
+    class="glamor-0"
     type="checkbox"
   />
   <span
-    class="css-j94lrm"
+    class="glamor-1"
   >
     example
   </span>
