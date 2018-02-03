@@ -16,17 +16,24 @@ const onSubmit = values => {
 
 const required = value => (value ? undefined : "Required");
 
-const RadioGroup = ({ label, hint, name, inline, validate, ...input }) => (
+const RadioGroup = ({ label, hint, name, options, inline, ...input }) => (
   <Layout>
     <GridRow>
       <GridCol>
         <MultiChoice {...input} label={label} hint={hint}>
-          <Radio type="radio" {...input} inline={inline}>
-            Yes
-          </Radio>
-          <Radio type="radio" {...input} inline={inline}>
-            No
-          </Radio>
+          {options.map(o => (
+            <div key={o.value}>
+              <Radio
+                type="radio"
+                {...input}
+                inline={inline}
+                value={o.value}
+                checked={o.value === input.value}
+              >
+                {o.title}
+              </Radio>
+            </div>
+          ))}
         </MultiChoice>
       </GridCol>
     </GridRow>
@@ -36,8 +43,8 @@ const RadioGroup = ({ label, hint, name, inline, validate, ...input }) => (
 RadioGroup.defaultProps = {
   hint: undefined,
   inline: false,
-  validate: undefined,
-  name: undefined
+  name: undefined,
+  options: {}
 };
 
 RadioGroup.propTypes = {
@@ -45,7 +52,10 @@ RadioGroup.propTypes = {
   hint: PropTypes.string,
   name: PropTypes.string,
   inline: PropTypes.bool,
-  validate: PropTypes.string
+  options: PropTypes.shape({
+    title: PropTypes.string,
+    value: PropTypes.string
+  })
 };
 
 const App = () => (
@@ -63,6 +73,10 @@ const App = () => (
                   hint="You must tell us"
                   component={RadioGroup}
                   type="radio"
+                  options={[
+                    { title: "Yep", value: "yes" },
+                    { title: "Nope", value: "no" }
+                  ]}
                   validate={required}
                   inline
                 />
