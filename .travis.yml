@@ -4,11 +4,12 @@ cache:
     - node_modules
 install:
   - npm install
-  - npm install -g codecov
+  - npm install -g codecov coveralls
 script:
 #  - npm run build # npm install already runs a build via prepare
   - npm test
   - codecov
+  - coveralls
 before_deploy:
   - npm run build-storybook
   - npm pack
