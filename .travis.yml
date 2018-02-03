@@ -9,7 +9,7 @@ script:
 #  - npm run build # npm install already runs a build via prepare
   - npm test
   - codecov
-  - coveralls
+# - coveralls # timing out so disabling for now
 before_deploy:
   - npm run build-storybook
   - npm pack
