@@ -108,6 +108,7 @@ exports[`Radio matches snapshot: enzyme.mount 1`] = `
   </glamorous(label)>
 </Radio>
 `;
+<<<<<<< HEAD
 
 exports[`Radio matches snapshot: enzyme.render 1`] = `
 .glamor-2,
@@ -216,3 +217,5 @@ exports[`Radio matches snapshot: enzyme.shallow 1`] = `
   </glamorous(span)>
 </glamorous(label)>
 `;
+=======
+>>>>>>> master

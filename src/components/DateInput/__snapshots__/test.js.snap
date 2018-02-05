@@ -218,6 +218,7 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
   </glamorous(div)>
 </DateInput>
 `;
+<<<<<<< HEAD
 
 exports[`DateInput matches snapshot: enzyme.render 1`] = `
 .glamor-11,
@@ -438,3 +439,5 @@ exports[`DateInput matches snapshot: enzyme.shallow 1`] = `
   </glamorous(div)>
 </glamorous(div)>
 `;
+=======
+>>>>>>> master

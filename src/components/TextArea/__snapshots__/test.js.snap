@@ -110,6 +110,7 @@ exports[`Textarea matches snapshot: enzyme.mount 1`] = `
   </glamorous(label)>
 </TextArea>
 `;
+<<<<<<< HEAD
 
 exports[`Textarea matches snapshot: enzyme.render 1`] = `
 .glamor-2,
@@ -218,3 +219,5 @@ exports[`Textarea matches snapshot: enzyme.shallow 1`] = `
   />
 </glamorous(label)>
 `;
+=======
+>>>>>>> master

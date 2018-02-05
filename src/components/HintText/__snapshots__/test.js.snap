@@ -30,6 +30,7 @@ exports[`HintText matches snapshot: enzyme.mount 1`] = `
   </span>
 </glamorous(span)>
 `;
+<<<<<<< HEAD
 
 exports[`HintText matches snapshot: enzyme.render 1`] = `
 .glamor-0,
@@ -88,3 +89,5 @@ exports[`HintText matches snapshot: enzyme.shallow 1`] = `
   example
 </span>
 `;
+=======
+>>>>>>> master

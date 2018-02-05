@@ -1,4 +1,4 @@
- {
+{
   "name": "govuk-react",
   "version": "0.1.14",
   "scripts": {
@@ -72,6 +72,7 @@
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.9",
+    "@storybook/addon-knobs": "^3.3.12",
     "@storybook/addon-links": "^3.3.9",
     "@storybook/react": "^3.3.9",
     "@storybook/storybook-deployer": "^2.2.0",

@@ -32,6 +32,7 @@ exports[`ErrorText matches snapshot: enzyme.mount 1`] = `
   </span>
 </glamorous(span)>
 `;
+<<<<<<< HEAD
 
 exports[`ErrorText matches snapshot: enzyme.render 1`] = `
 .glamor-0,
@@ -94,3 +95,5 @@ exports[`ErrorText matches snapshot: enzyme.shallow 1`] = `
   example
 </span>
 `;
+=======
+>>>>>>> master

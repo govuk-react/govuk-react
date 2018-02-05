@@ -41,6 +41,7 @@ exports[`Label matches snapshot: enzyme.mount 1`] = `
   </label>
 </glamorous(label)>
 `;
+<<<<<<< HEAD
 
 exports[`Label matches snapshot: enzyme.render 1`] = `
 .glamor-0,
@@ -121,3 +122,5 @@ exports[`Label matches snapshot: enzyme.shallow 1`] = `
   example
 </label>
 `;
+=======
+>>>>>>> master
