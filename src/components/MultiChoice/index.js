@@ -1,4 +1,13 @@
-// TODO INSERT A COMMENT REFERENCE TO EXTERNAL URL IF POSSIBLE
+// https://govuk-elements.herokuapp.com/errors/
+// https://govuk-elements.herokuapp.com/errors/example-form-validation-single-question-radio
+
+// This is to be used when more than one value of a radio/checkbox group requires validation.
+// e.g. What is your gender?
+// () Male
+// () Female
+// () Other
+
+// Only one is valid, but at least one must be selected. Therefore validation around the set of radios is required.
 
 import React from "react";
 import PropTypes from "prop-types";

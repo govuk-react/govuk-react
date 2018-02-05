@@ -116,7 +116,7 @@ storiesOf("Radio", module).add("Radio disabled", () => (
 
 storiesOf("Radio", module).add("Radio preselected", () => (
   <div>
-    <Radio name="group1" readOnly checked>
+    <Radio name="group1" checked>
       Farm or agricultural waste
     </Radio>
   </div>

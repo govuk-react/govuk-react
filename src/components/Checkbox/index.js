@@ -1,4 +1,4 @@
-// https://github.com/alphagov/govuk-frontend/blob/master/src/components/checkbox/_checkbox.scss
+// https://github.com/alphagov/govuk-frontend/blob/master/src/components/checkboxes/_checkboxes.scss
 
 import React from "react";
 import PropTypes from "prop-types";
