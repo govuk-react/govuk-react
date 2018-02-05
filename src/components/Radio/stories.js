@@ -62,7 +62,6 @@ const App = () => (
               label="Do you like animals?"
               hint="You must tell us"
               component={RadioGroup}
-              value="quail"
               options={[
                 { title: "Yep", value: "yes" },
                 { title: "Nope", value: "no" }
@@ -70,28 +69,6 @@ const App = () => (
               validate={required}
               inline
             />
-            {/* <label>
-              <Field
-                type="radio"
-                component={Radio}
-                value="yes"
-                name="test"
-                validate={required}
-              >
-                Yes
-              </Field>
-            </label>
-            <label>
-              <Field
-                type="radio"
-                component={Radio}
-                value="no"
-                name="test"
-                validate={required}
-              >
-                No
-              </Field>
-            </label> */}
           </div>
           <div>
             <Button type="submit" disabled={submitting}>
@@ -134,7 +111,7 @@ storiesOf("Radio", module).add("Radio inline", () => (
 
 storiesOf("Radio", module).add("Radio disabled", () => (
   <div>
-    <Radio name="group1" disabled>
+    <Radio name="group1" disabled="disabled">
       Disabled checkbox option
     </Radio>
   </div>
@@ -150,7 +127,7 @@ storiesOf("Radio", module).add("Radio preselected", () => (
 
 storiesOf("Radio", module).add("Radio preselected & disabled", () => (
   <div>
-    <Radio name="group1" disabled="disabled" defaultChecked>
+    <Radio name="group1" disabled="disabled" checked>
       Farm or agricultural waste
     </Radio>
   </div>

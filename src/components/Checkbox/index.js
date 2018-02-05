@@ -80,7 +80,7 @@ const Label = glamorous.span({
   }
 });
 
-const Checkbox = ({ children, inline, input }) => (
+const Checkbox = ({ children, inline, ...input }) => (
   <MultipleChoice inline={inline}>
     <Input type="checkbox" {...input} />
     <Label>{children}</Label>
@@ -88,24 +88,12 @@ const Checkbox = ({ children, inline, input }) => (
 );
 
 Checkbox.defaultProps = {
-  inline: undefined,
-  defaultChecked: undefined,
-  disabled: undefined,
-  input: {}
+  inline: undefined
 };
 
 Checkbox.propTypes = {
   children: PropTypes.node.isRequired,
-  input: PropTypes.shape({
-    name: PropTypes.string,
-    onBlur: PropTypes.func,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-    value: PropTypes.any
-  }),
-  inline: PropTypes.bool,
-  defaultChecked: PropTypes.bool,
-  disabled: PropTypes.string
+  inline: PropTypes.bool
 };
 
 export default Checkbox;

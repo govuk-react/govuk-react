@@ -95,20 +95,12 @@ const Radio = ({ inline, children, ...input }) => (
 );
 
 Radio.defaultProps = {
-  inline: undefined,
-  defaultChecked: undefined,
-  disabled: undefined,
-  value: undefined,
-  onChange: undefined
+  inline: undefined
 };
 
 Radio.propTypes = {
-  value: PropTypes.string,
-  onChange: PropTypes.func,
-  children: PropTypes.node.isRequired,
   inline: PropTypes.bool,
-  defaultChecked: PropTypes.bool,
-  disabled: PropTypes.string
+  children: PropTypes.node.isRequired
 };
 
 export default Radio;
