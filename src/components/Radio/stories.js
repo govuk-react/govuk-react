@@ -10,9 +10,9 @@ import Radio from ".";
 
 const required = value => (value ? undefined : "Required");
 
-const RadioGroup = ({ label, hint, options, inline, input }) => (
+const RadioGroup = ({ label, hint, options, inline, input, meta }) => (
   <div>
-    <MultiChoice label={label} hint={hint}>
+    <MultiChoice label={label} hint={hint} meta={meta}>
       {options.map(o => (
         <div key={o.value}>
           <Radio
@@ -31,6 +31,7 @@ const RadioGroup = ({ label, hint, options, inline, input }) => (
 
 RadioGroup.defaultProps = {
   input: {},
+  meta: {},
   hint: undefined,
   inline: false,
   options: {}
@@ -38,6 +39,7 @@ RadioGroup.defaultProps = {
 
 RadioGroup.propTypes = {
   input: PropTypes.shape({}),
+  meta: PropTypes.shape({}),
   label: PropTypes.string.isRequired,
   hint: PropTypes.string,
   inline: PropTypes.bool,
