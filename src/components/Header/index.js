@@ -21,11 +21,11 @@ const Header = glamorous(({ level, children, ...props }) =>
   ({ level, size = LEVEL_SIZE[level] }) => ({
     fontSize: FONT_SIZES[size].mobile.fontSize,
     lineHeight: FONT_SIZES[size].mobile.lineHeight,
-    marginBottom: FONT_SIZES[size].spacing.mobile,
+    marginBottom: FONT_SIZES[size].mobile.spacing,
     [MEDIA_QUERIES.LARGESCREEN]: {
-      fontSize: FONT_SIZES[size].fontSize,
-      lineHeight: FONT_SIZES[size].lineHeight,
-      marginBottom: FONT_SIZES[size].spacing.tablet
+      fontSize: FONT_SIZES[size].tablet.fontSize,
+      lineHeight: FONT_SIZES[size].tablet.lineHeight,
+      marginBottom: FONT_SIZES[size].tablet.spacing
     },
     [MEDIA_QUERIES.PRINT]: {
       fontSize: FONT_SIZES[size].print.fontSize

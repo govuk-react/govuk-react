@@ -7,12 +7,15 @@
 import { RESPONSIVE_8, RESPONSIVE_6, RESPONSIVE_4 } from "./spacing";
 
 const FONT_80 = {
-  lineHeight: 80 / 80,
-  fontSize: 80,
-  spacing: RESPONSIVE_8,
+  tablet: {
+    lineHeight: 80 / 80,
+    fontSize: 80,
+    spacing: RESPONSIVE_8.tablet
+  },
   mobile: {
     lineHeight: 55 / 53,
-    fontSize: 53
+    fontSize: 53,
+    spacing: RESPONSIVE_8.mobile
   },
   print: {
     fontSize: 28
@@ -20,12 +23,15 @@ const FONT_80 = {
 };
 
 const FONT_48 = {
-  lineHeight: 50 / 48,
-  fontSize: 48,
-  spacing: RESPONSIVE_6,
+  tablet: {
+    lineHeight: 50 / 48,
+    fontSize: 48,
+    spacing: RESPONSIVE_6.tablet
+  },
   mobile: {
     lineHeight: 35 / 32,
-    fontSize: 32
+    fontSize: 32,
+    spacing: RESPONSIVE_6.mobile
   },
   print: {
     fontSize: 18
@@ -33,12 +39,15 @@ const FONT_48 = {
 };
 
 const FONT_36 = {
-  lineHeight: 40 / 36,
-  fontSize: 36,
-  spacing: RESPONSIVE_4,
+  tablet: {
+    lineHeight: 40 / 36,
+    fontSize: 36,
+    spacing: RESPONSIVE_4.tablet
+  },
   mobile: {
     lineHeight: 25 / 24,
-    fontSize: 24
+    fontSize: 24,
+    spacing: RESPONSIVE_4.mobile
   },
   print: {
     fontSize: 18
@@ -46,12 +55,15 @@ const FONT_36 = {
 };
 
 const FONT_27 = {
-  lineHeight: 30 / 27,
-  fontSize: 27,
-  spacing: RESPONSIVE_4,
+  tablet: {
+    lineHeight: 30 / 27,
+    fontSize: 27,
+    spacing: RESPONSIVE_4.tablet
+  },
   mobile: {
     lineHeight: 20 / 18,
-    fontSize: 20
+    fontSize: 20,
+    spacing: RESPONSIVE_4.mobile
   },
   print: {
     fontSize: 16
@@ -59,12 +71,15 @@ const FONT_27 = {
 };
 
 const FONT_24 = {
-  lineHeight: 30 / 24,
-  fontSize: 24,
-  spacing: RESPONSIVE_4,
+  tablet: {
+    lineHeight: 30 / 24,
+    fontSize: 24,
+    spacing: RESPONSIVE_4.tablet
+  },
   mobile: {
     lineHeight: 24 / 20,
-    fontSize: 18
+    fontSize: 18,
+    spacing: RESPONSIVE_4.mobile
   },
   print: {
     fontSize: 16
@@ -72,12 +87,15 @@ const FONT_24 = {
 };
 
 const FONT_19 = {
-  lineHeight: 25 / 19,
-  fontSize: 19,
-  spacing: RESPONSIVE_4,
+  tablet: {
+    lineHeight: 25 / 19,
+    fontSize: 19,
+    spacing: RESPONSIVE_4.tablet
+  },
   mobile: {
     lineHeight: 20 / 16,
-    fontSize: 16
+    fontSize: 16,
+    spacing: RESPONSIVE_4.mobile
   },
   print: {
     fontSize: 14
@@ -85,12 +103,15 @@ const FONT_19 = {
 };
 
 const FONT_16 = {
-  lineHeight: 20 / 16,
-  fontSize: 16,
-  spacing: RESPONSIVE_4,
+  tablet: {
+    lineHeight: 20 / 16,
+    fontSize: 16,
+    spacing: RESPONSIVE_4.tablet
+  },
   mobile: {
     lineHeight: 16 / 14,
-    fontSize: 14
+    fontSize: 14,
+    spacing: RESPONSIVE_4.mobile
   },
   print: {
     fontSize: 12
