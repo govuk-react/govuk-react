@@ -9,6 +9,8 @@ script:
 #  - npm run build # npm install already runs a build via prepare
   - npm test
   - codecov
+  - npm run build:dist # the dist build is only used to track bundle sizes
+  - npm run bundlesize
 before_deploy:
   - npm run build-storybook
   - npm pack

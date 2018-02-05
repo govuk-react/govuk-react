@@ -1,24 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Panel matches snapshot: enzyme.mount 1`] = `
+.glamor-2,
+[data-glamor-2] {
+  background-color: #28a197;
+  color: #ffffff;
+  padding: 25px;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  font-family: 'nta', Arial, sans-serif;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  font-size: 32px;
+  line-height: 35px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  font-family: 'nta', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 48px;
+    line-height: 50px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
 <Panel
   panelBody="body"
   panelTitle="Example"
 >
   <glamorous(div)>
     <div
-      className="css-c4en63"
+      className="glamor-2"
     >
       <glamorous(h2)>
         <h2
-          className="css-gf9qal"
+          className="glamor-0"
         >
           Example
         </h2>
       </glamorous(h2)>
       <glamorous(div)>
         <div
-          className="css-3cbh5b"
+          className="glamor-1"
         >
           body
         </div>
@@ -29,16 +75,62 @@ exports[`Panel matches snapshot: enzyme.mount 1`] = `
 `;
 
 exports[`Panel matches snapshot: enzyme.render 1`] = `
+.glamor-2,
+[data-glamor-2] {
+  background-color: #28a197;
+  color: #ffffff;
+  padding: 25px;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  font-family: 'nta', Arial, sans-serif;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  font-size: 32px;
+  line-height: 35px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  font-family: 'nta', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 48px;
+    line-height: 50px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
 <div
-  class="css-c4en63"
+  class="glamor-2"
 >
   <h2
-    class="css-gf9qal"
+    class="glamor-0"
   >
     Example
   </h2>
   <div
-    class="css-3cbh5b"
+    class="glamor-1"
   >
     body
   </div>

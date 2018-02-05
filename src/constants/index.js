@@ -13,7 +13,8 @@ export const BREAKPOINTS = {
 };
 
 export const MEDIA_QUERIES = {
-  LARGESCREEN: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`
+  LARGESCREEN: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`,
+  PRINT: `@media print`
 };
 
 export const GUTTER_PX = 30;

@@ -1,9 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`button matches snapshot: enzyme.mount 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  background-color: #00823b;
+  border: none;
+  box-shadow: 0 2px 0 #003618;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  line-height: 1.25;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+  padding: .526315em .789473em .263157em;
+  position: relative;
+  text-decoration: none;
+  background-image: ;
+  background-repeat: ;
+  background-position: ;
+  padding-right: ;
+}
+
+.glamor-0:focus,
+[data-glamor-0]:focus {
+  outline: 3px solid #ffbf47;
+}
+
 <glamorous(button)>
   <button
-    className="css-1kwqzbl"
+    className="glamor-0"
   >
     example
   </button>
@@ -11,16 +39,72 @@ exports[`button matches snapshot: enzyme.mount 1`] = `
 `;
 
 exports[`button matches snapshot: enzyme.render 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  background-color: #00823b;
+  border: none;
+  box-shadow: 0 2px 0 #003618;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  line-height: 1.25;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+  padding: .526315em .789473em .263157em;
+  position: relative;
+  text-decoration: none;
+  background-image: ;
+  background-repeat: ;
+  background-position: ;
+  padding-right: ;
+}
+
+.glamor-0:focus,
+[data-glamor-0]:focus {
+  outline: 3px solid #ffbf47;
+}
+
 <button
-  class="css-1kwqzbl"
+  class="glamor-0"
 >
   example
 </button>
 `;
 
 exports[`button matches snapshot: enzyme.shallow 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  background-color: #00823b;
+  border: none;
+  box-shadow: 0 2px 0 #003618;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  line-height: 1.25;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+  padding: .526315em .789473em .263157em;
+  position: relative;
+  text-decoration: none;
+  background-image: ;
+  background-repeat: ;
+  background-position: ;
+  padding-right: ;
+}
+
+.glamor-0:focus,
+[data-glamor-0]:focus {
+  outline: 3px solid #ffbf47;
+}
+
 <button
-  className="css-1kwqzbl"
+  className="glamor-0"
 >
   example
 </button>

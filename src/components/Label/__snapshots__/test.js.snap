@@ -1,9 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Label matches snapshot: enzyme.mount 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  border-left: ;
+  margin-right: 0;
+  padding-left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    max-width: 960px;
+  }
+}
+
 <glamorous(label)>
   <label
-    className="css-16y5nda"
+    className="glamor-0"
   >
     example
   </label>
@@ -11,16 +36,66 @@ exports[`Label matches snapshot: enzyme.mount 1`] = `
 `;
 
 exports[`Label matches snapshot: enzyme.render 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  border-left: ;
+  margin-right: 0;
+  padding-left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    max-width: 960px;
+  }
+}
+
 <label
-  class="css-16y5nda"
+  class="glamor-0"
 >
   example
 </label>
 `;
 
 exports[`Label matches snapshot: enzyme.shallow 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  border-left: ;
+  margin-right: 0;
+  padding-left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    max-width: 960px;
+  }
+}
+
 <label
-  className="css-16y5nda"
+  className="glamor-0"
 >
   example
 </label>

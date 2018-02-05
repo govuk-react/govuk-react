@@ -6,8 +6,10 @@
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src",
     "build": "nwb build-react-component",
-    "clean": "rimraf lib",
+    "build:dist": "nwb build-react-app",
+    "clean": "rimraf lib && rimraf es",
     "flow": "flow",
+    "bundlesize": "bundlesize",
     "test": "CI=true npm run test:unit && npm run eslint && npm run flow",
     "test:unit": "node scripts/test.js --env=jsdom",
     "test:debug": "node  --inspect-brk scripts/test.js --runInBand --env=jsdom",
@@ -53,6 +55,7 @@
       "node"
     ],
     "snapshotSerializers": [
+      "jest-glamor-react",
       "enzyme-to-json/serializer"
     ]
   },
@@ -80,6 +83,7 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "bundlesize": "^0.16.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-15": "^1.0.5",
     "enzyme-to-json": "^3.3.0",
@@ -121,5 +125,15 @@
   "bugs": {
     "url": "https://github.com/penx/govuk-react/issues"
   },
-  "homepage": "https://github.com/penx/govuk-react#readme"
+  "homepage": "https://github.com/penx/govuk-react#readme",
+  "bundlesize": [
+    {
+      "path": "./dist/vendor.*.js",
+      "maxSize": "60 kB"
+    },
+    {
+      "path": "./dist/app.*.js",
+      "maxSize": "20 kB"
+    }
+  ]
 }
