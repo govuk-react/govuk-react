@@ -1,15 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header matches snapshot: enzyme.mount 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.09375;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 48px;
+    line-height: 1.0416666666666667;
+    margin-bottom: 30px;
+  }
+}
+
+@media print {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 18px;
+  }
+}
+
 <glamorous(unknown)
   level={1}
 >
   <Component
-    className="css-dcfn97"
+    className="glamor-0"
     level={1}
   >
     <h1
-      className="css-dcfn97"
+      className="glamor-0"
     >
       example
     </h1>
@@ -18,16 +44,68 @@ exports[`Header matches snapshot: enzyme.mount 1`] = `
 `;
 
 exports[`Header matches snapshot: enzyme.render 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.09375;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 48px;
+    line-height: 1.0416666666666667;
+    margin-bottom: 30px;
+  }
+}
+
+@media print {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 18px;
+  }
+}
+
 <h1
-  class="css-dcfn97"
+  class="glamor-0"
 >
   example
 </h1>
 `;
 
 exports[`Header matches snapshot: enzyme.shallow 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.09375;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 48px;
+    line-height: 1.0416666666666667;
+    margin-bottom: 30px;
+  }
+}
+
+@media print {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 18px;
+  }
+}
+
 <Component
-  className="css-dcfn97"
+  className="glamor-0"
   level={1}
 >
   example
