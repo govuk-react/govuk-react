@@ -1,6 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Back Link matches snapshot: enzyme.mount 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  font-family: 'nta', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-block;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 14px;
+  border: 0;
+  color: #0b0c0c;
+  border-bottom: 1px solid #0b0c0c;
+  text-decoration: none;
+}
+
+.glamor-0::before,
+[data-glamor-0]::before {
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
+  border-width: 5px 6px 5px 0;
+  border-right-color: #0b0c0c;
+  content: '';
+  position: absolute;
+  top: -1px;
+  bottom: 1px;
+  left: 0;
+  margin: auto;
+  -webkit-clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
+}
+
+.glamor-0:focus,
+[data-glamor-0]:focus {
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
+}
+
 <BackLink
   goBack={[Function]}
 >
@@ -8,7 +52,7 @@ exports[`Back Link matches snapshot: enzyme.mount 1`] = `
     onClick={[Function]}
   >
     <button
-      className="css-16uyu72"
+      className="glamor-0"
       onClick={[Function]}
     >
       example
@@ -18,8 +62,52 @@ exports[`Back Link matches snapshot: enzyme.mount 1`] = `
 `;
 
 exports[`Back Link matches snapshot: enzyme.render 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  font-family: 'nta', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-block;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 14px;
+  border: 0;
+  color: #0b0c0c;
+  border-bottom: 1px solid #0b0c0c;
+  text-decoration: none;
+}
+
+.glamor-0::before,
+[data-glamor-0]::before {
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
+  border-width: 5px 6px 5px 0;
+  border-right-color: #0b0c0c;
+  content: '';
+  position: absolute;
+  top: -1px;
+  bottom: 1px;
+  left: 0;
+  margin: auto;
+  -webkit-clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
+}
+
+.glamor-0:focus,
+[data-glamor-0]:focus {
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
+}
+
 <button
-  class="css-16uyu72"
+  class="glamor-0"
 >
   example
 </button>

@@ -1,18 +1,95 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
+.glamor-2,
+[data-glamor-2] {
+  font-family: nta, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: block;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  position: relative;
+  display: inline-block;
+  white-space: no-wrap;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  padding-left: 15px;
+}
+
+.glamor-0:first-child,
+[data-glamor-0]:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.glamor-0:first-child::before,
+[data-glamor-0]:first-child::before {
+  display: none;
+}
+
+.glamor-0::before,
+[data-glamor-0]::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: -1px;
+  bottom: 1px;
+  left: -3.31px;
+  width: 7px;
+  height: 7px;
+  margin: auto 0;
+  transform: rotate(45deg);
+  border: solid;
+  border-width: 1px 1px 0 0;
+  border-color: #6f777b;
+  -webkit-transform: rotate(45deg);
+}
+
+.glamor-0> a,
+[data-glamor-0]> a {
+  color: #0b0c0c;
+  text-decoration: underline;
+}
+
+.glamor-0> a:focus,
+[data-glamor-0]> a:focus {
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
 <Breadcrumb>
   <glamorous(div)>
     <div
-      className="css-v85tod"
+      className="glamor-2"
     >
       <glamorous(ul)>
         <ul
-          className="css-j76yvj"
+          className="glamor-1"
         >
           <glamorous(li)>
             <li
-              className="css-uxdkvh"
+              className="glamor-0"
             >
               example
             </li>
@@ -25,14 +102,91 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
 `;
 
 exports[`breadcrumb matches snapshot: enzyme.render 1`] = `
+.glamor-2,
+[data-glamor-2] {
+  font-family: nta, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: block;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  position: relative;
+  display: inline-block;
+  white-space: no-wrap;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  padding-left: 15px;
+}
+
+.glamor-0:first-child,
+[data-glamor-0]:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.glamor-0:first-child::before,
+[data-glamor-0]:first-child::before {
+  display: none;
+}
+
+.glamor-0::before,
+[data-glamor-0]::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: -1px;
+  bottom: 1px;
+  left: -3.31px;
+  width: 7px;
+  height: 7px;
+  margin: auto 0;
+  transform: rotate(45deg);
+  border: solid;
+  border-width: 1px 1px 0 0;
+  border-color: #6f777b;
+  -webkit-transform: rotate(45deg);
+}
+
+.glamor-0> a,
+[data-glamor-0]> a {
+  color: #0b0c0c;
+  text-decoration: underline;
+}
+
+.glamor-0> a:focus,
+[data-glamor-0]> a:focus {
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
 <div
-  class="css-v85tod"
+  class="glamor-2"
 >
   <ul
-    class="css-j76yvj"
+    class="glamor-1"
   >
     <li
-      class="css-uxdkvh"
+      class="glamor-0"
     >
       example
     </li>

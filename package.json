@@ -53,6 +53,7 @@
       "node"
     ],
     "snapshotSerializers": [
+      "jest-glamor-react",
       "enzyme-to-json/serializer"
     ]
   },
