@@ -99,21 +99,13 @@ Radio.defaultProps = {
   defaultChecked: undefined,
   disabled: undefined,
   value: undefined,
-  onChange: undefined,
-  input: {}
+  onChange: undefined
 };
 
 Radio.propTypes = {
   value: PropTypes.string,
   onChange: PropTypes.func,
   children: PropTypes.node.isRequired,
-  input: PropTypes.shape({
-    name: PropTypes.string,
-    onBlur: PropTypes.func,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-    value: PropTypes.any
-  }),
   inline: PropTypes.bool,
   defaultChecked: PropTypes.bool,
   disabled: PropTypes.string

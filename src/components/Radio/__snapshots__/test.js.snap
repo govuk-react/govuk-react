@@ -81,7 +81,6 @@ exports[`Radio matches snapshot: enzyme.mount 1`] = `
 }
 
 <Radio
-  input={Object {}}
   name="example"
 >
   <glamorous(label)>
@@ -89,10 +88,12 @@ exports[`Radio matches snapshot: enzyme.mount 1`] = `
       className="glamor-2"
     >
       <glamorous(input)
+        name="example"
         type="radio"
       >
         <input
           className="glamor-0"
+          name="example"
           type="radio"
         />
       </glamorous(input)>
@@ -193,6 +194,7 @@ exports[`Radio matches snapshot: enzyme.render 1`] = `
 >
   <input
     class="glamor-0"
+    name="example"
     type="radio"
   />
   <span
@@ -206,6 +208,7 @@ exports[`Radio matches snapshot: enzyme.render 1`] = `
 exports[`Radio matches snapshot: enzyme.shallow 1`] = `
 <glamorous(label)>
   <glamorous(input)
+    name="example"
     type="radio"
   />
   <glamorous(span)>
