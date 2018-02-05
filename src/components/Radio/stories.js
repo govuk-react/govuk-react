@@ -5,9 +5,6 @@ import { action } from "@storybook/addon-actions";
 import PropTypes from "prop-types";
 
 import Button from "../Button/index";
-// import GridCol from "../GridCol/index";
-// import GridRow from "../GridRow/index";
-// import Layout from "../Layout/index";
 import MultiChoice from "../MultiChoice/index";
 import Radio from ".";
 
