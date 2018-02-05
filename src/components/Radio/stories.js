@@ -1,43 +1,36 @@
 import React from "react";
 import { Form, Field } from "react-final-form";
 import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 import PropTypes from "prop-types";
 
 import Button from "../Button/index";
-import GridCol from "../GridCol/index";
-import GridRow from "../GridRow/index";
-import Layout from "../Layout/index";
+// import GridCol from "../GridCol/index";
+// import GridRow from "../GridRow/index";
+// import Layout from "../Layout/index";
 import MultiChoice from "../MultiChoice/index";
 import Radio from ".";
-
-const onSubmit = values => {
-  console.log(JSON.stringify(values, 0, 2));
-};
 
 const required = value => (value ? undefined : "Required");
 
 const RadioGroup = ({ label, hint, name, options, inline, ...input }) => (
-  <Layout>
-    <GridRow>
-      <GridCol>
-        <MultiChoice {...input} label={label} hint={hint}>
-          {options.map(o => (
-            <div key={o.value}>
-              <Radio
-                type="radio"
-                {...input}
-                inline={inline}
-                value={o.value}
-                checked={o.value === input.value}
-              >
-                {o.title}
-              </Radio>
-            </div>
-          ))}
-        </MultiChoice>
-      </GridCol>
-    </GridRow>
-  </Layout>
+  <div>
+    <MultiChoice label={label} hint={hint}>
+      {options.map(o => (
+        <div key={o.value}>
+          <Radio
+            type="radio"
+            {...input}
+            inline={inline}
+            value={o.value}
+            checked={o.value === "yes" || o.value === "no"}
+          >
+            <span className="honk">{o.value}</span> {o.title}
+          </Radio>
+        </div>
+      ))}
+    </MultiChoice>
+  </div>
 );
 
 RadioGroup.defaultProps = {
@@ -61,64 +54,61 @@ RadioGroup.propTypes = {
 const App = () => (
   <div>
     <Form
-      onSubmit={onSubmit}
+      onSubmit={action("submit")}
       render={({ handleSubmit, reset, submitting, pristine, values }) => (
         <form onSubmit={handleSubmit}>
-          <Layout>
-            <GridRow>
-              <GridCol>
-                <Field
-                  name="likesAnimals"
-                  label="Do you like animals?"
-                  hint="You must tell us"
-                  component={RadioGroup}
-                  type="radio"
-                  options={[
-                    { title: "Yep", value: "yes" },
-                    { title: "Nope", value: "no" }
-                  ]}
-                  validate={required}
-                  inline
-                />
-                {/* <label>
-                  <Field
-                    type="radio"
-                    component="input"
-                    value="yes"
-                    name="test"
-                  />
-                  Yes
-                </label>
-                <label>
-                  <Field
-                    type="radio"
-                    component="input"
-                    value="no"
-                    name="test"
-                  />
-                  No
-                </label> */}
-              </GridCol>
-            </GridRow>
-            <GridRow>
-              <GridCol>
-                <Button type="submit" disabled={submitting}>
-                  Log In
-                </Button>
-              </GridCol>
-              <GridCol>
-                <Button onClick={reset} disabled={submitting || pristine}>
-                  Reset
-                </Button>
-              </GridCol>
-            </GridRow>
-            <GridRow>
-              <GridCol>
-                <hr />
-                <pre>{JSON.stringify(values, 0, 2)}</pre>
-              </GridCol>
-            </GridRow>
-          </Layout>
+          <div>
+            <Field
+              name="likesAnimals"
+              label="Do you like animals?"
+              hint="You must tell us"
+              component={RadioGroup}
+              type="radio"
+              value="quail"
+              options={[
+                { title: "Yep", value: "yes" },
+                { title: "Nope", value: "no" }
+              ]}
+              validate={required}
+              inline
+            />
+            {/* <label>
+              <Field
+                type="radio"
+                component={Radio}
+                value="yes"
+                name="test"
+                validate={required}
+              >
+                Yes
+              </Field>
+            </label>
+            <label>
+              <Field
+                type="radio"
+                component={Radio}
+                value="no"
+                name="test"
+                validate={required}
+              >
+                No
+              </Field>
+            </label> */}
+          </div>
+          <div>
+            <Button type="submit" disabled={submitting}>
+              Log In
+            </Button>
+          </div>
+          <div>
+            <Button onClick={reset} disabled={submitting || pristine}>
+              Reset
+            </Button>
+          </div>
+          <div>
+            <hr />
+            <pre>{JSON.stringify(values, 0, 2)}</pre>
+          </div>
         </form>
       )}
     />

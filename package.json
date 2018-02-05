@@ -1,4 +1,4 @@
-{
+ {
   "name": "govuk-react",
   "version": "0.1.14",
   "scripts": {
@@ -61,11 +61,9 @@
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
-    "final-form": "^4.2.0",
     "glamorous": ">=4",
     "prop-types": ">=15",
-    "react": ">=15",
-    "react-final-form": "^3.1.0"
+    "react": ">=15"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.9",
@@ -92,6 +90,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.5.0",
     "eslint-plugin-react": "^7.5.1",
+    "final-form": "^4.2.0",
     "flow-bin": "^0.64.0",
     "glamorous": "^4.11.2",
     "govuk-elements-sass": "^3.1.2",
@@ -106,6 +105,7 @@
     "prop-types": "^15.6.0",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
+    "react-final-form": "^3.1.0",
     "react-test-renderer": "^15.6.2",
     "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6",
