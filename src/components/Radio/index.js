@@ -87,23 +87,9 @@ const LabelText = glamorous.span({
   }
 });
 
-const Radio = ({
-  children,
-  inline,
-  defaultChecked,
-  disabled,
-  value,
-  input
-}) => (
+const Radio = ({ inline, children, ...input }) => (
   <Label inline={inline}>
-    <Input
-      type="radio"
-      {...input}
-      name={input.name}
-      checked={defaultChecked}
-      disabled={disabled}
-      value={value}
-    />
+    <Input type="radio" {...input} />
     <LabelText>{children}</LabelText>
   </Label>
 );

@@ -13,19 +13,18 @@ import Radio from ".";
 
 const required = value => (value ? undefined : "Required");
 
-const RadioGroup = ({ label, hint, name, options, inline, ...input }) => (
+const RadioGroup = ({ label, hint, options, inline, input }) => (
   <div>
     <MultiChoice label={label} hint={hint}>
       {options.map(o => (
         <div key={o.value}>
           <Radio
-            type="radio"
             {...input}
-            inline={inline}
             value={o.value}
-            checked={o.value === "yes" || o.value === "no"}
+            inline={inline}
+            checked={o.value === input.value}
           >
-            <span className="honk">{o.value}</span> {o.title}
+            {o.title}
           </Radio>
         </div>
       ))}
@@ -34,16 +33,16 @@ const RadioGroup = ({ label, hint, name, options, inline, ...input }) => (
 );
 
 RadioGroup.defaultProps = {
+  input: {},
   hint: undefined,
   inline: false,
-  name: undefined,
   options: {}
 };
 
 RadioGroup.propTypes = {
+  input: PropTypes.shape({}),
   label: PropTypes.string.isRequired,
   hint: PropTypes.string,
-  name: PropTypes.string,
   inline: PropTypes.bool,
   options: PropTypes.shape({
     title: PropTypes.string,
@@ -63,7 +62,6 @@ const App = () => (
               label="Do you like animals?"
               hint="You must tell us"
               component={RadioGroup}
-              type="radio"
               value="quail"
               options={[
                 { title: "Yep", value: "yes" },
@@ -117,18 +115,18 @@ const App = () => (
 
 storiesOf("Radio", module).add("Radio stacked", () => (
   <div>
-    <Radio input={{ name: "group1" }}>Waste from animal carcasses</Radio>
-    <Radio input={{ name: "group1" }}>Waste from mines or quarries</Radio>
-    <Radio input={{ name: "group1" }}>Farm or agricultural waste</Radio>
+    <Radio name="group1">Waste from animal carcasses</Radio>
+    <Radio name="group1">Waste from mines or quarries</Radio>
+    <Radio name="group1">Farm or agricultural waste</Radio>
   </div>
 ));
 
 storiesOf("Radio", module).add("Radio inline", () => (
   <div>
-    <Radio input={{ name: "group1" }} inline>
+    <Radio name="group1" inline>
       Yes
     </Radio>
-    <Radio input={{ name: "group1" }} inline>
+    <Radio name="group1" inline>
       No
     </Radio>
   </div>
@@ -136,7 +134,7 @@ storiesOf("Radio", module).add("Radio inline", () => (
 
 storiesOf("Radio", module).add("Radio disabled", () => (
   <div>
-    <Radio input={{ name: "group1" }} disabled="disabled">
+    <Radio name="group1" disabled>
       Disabled checkbox option
     </Radio>
   </div>
@@ -144,7 +142,7 @@ storiesOf("Radio", module).add("Radio disabled", () => (
 
 storiesOf("Radio", module).add("Radio preselected", () => (
   <div>
-    <Radio input={{ name: "group1", readOnly: true }} defaultChecked>
+    <Radio name="group1" readOnly checked>
       Farm or agricultural waste
     </Radio>
   </div>
@@ -152,11 +150,7 @@ storiesOf("Radio", module).add("Radio preselected", () => (
 
 storiesOf("Radio", module).add("Radio preselected & disabled", () => (
   <div>
-    <Radio
-      input={{ name: "group1", onChange: null }}
-      disabled="disabled"
-      defaultChecked
-    >
+    <Radio name="group1" disabled="disabled" defaultChecked>
       Farm or agricultural waste
     </Radio>
   </div>
