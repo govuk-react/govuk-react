@@ -1,6 +1,127 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DateInput matches snapshot: enzyme.mount 1`] = `
+.glamor-11,
+[data-glamor-11] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  border-left: ;
+  margin-right: 0;
+  padding-left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+}
+
+.glamor-10,
+[data-glamor-10] {
+  font-family: "nta", Arial, sans-serif;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.glamor-10> label,
+[data-glamor-10]> label {
+  width: 50px;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.glamor-10> label.year,
+[data-glamor-10]> label.year {
+  width: 70px;
+}
+
+.glamor-3,
+[data-glamor-3] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  border-left: ;
+  margin-right: 0;
+  padding-left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-3:after,
+[data-glamor-3]:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  box-sizing: border-box;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+}
+
+.glamor-2:focus,
+[data-glamor-2]:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-3,
+  [data-glamor-3] {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
 <DateInput
   errorText={null}
   hintText={null}
@@ -9,13 +130,13 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
     errorText={null}
   >
     <div
-      className="css-id7ytt"
+      className="glamor-11"
     >
       <glamorous(span)
         errorText={null}
       >
         <span
-          className="css-1m1nyko"
+          className="glamor-0"
         >
           example
         </span>
@@ -24,15 +145,15 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
       <span />
       <glamorous(div)>
         <div
-          className="css-m5vkn2"
+          className="glamor-10"
         >
           <glamorous(label)>
             <label
-              className="css-wd82g1"
+              className="glamor-3"
             >
               <glamorous(span)>
                 <span
-                  className="css-1m1nyko"
+                  className="glamor-0"
                 >
                   Day
                 </span>
@@ -41,7 +162,7 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
                 type="text"
               >
                 <input
-                  className="css-11dt3lb"
+                  className="glamor-2"
                   type="text"
                 />
               </glamorous(input)>
@@ -49,11 +170,11 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
           </glamorous(label)>
           <glamorous(label)>
             <label
-              className="css-wd82g1"
+              className="glamor-3"
             >
               <glamorous(span)>
                 <span
-                  className="css-1m1nyko"
+                  className="glamor-0"
                 >
                   Month
                 </span>
@@ -62,7 +183,7 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
                 type="text"
               >
                 <input
-                  className="css-11dt3lb"
+                  className="glamor-2"
                   type="text"
                 />
               </glamorous(input)>
@@ -72,11 +193,11 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
             className="year"
           >
             <label
-              className="css-wd82g1 year"
+              className="glamor-3 year"
             >
               <glamorous(span)>
                 <span
-                  className="css-1m1nyko"
+                  className="glamor-0"
                 >
                   Year
                 </span>
@@ -85,7 +206,7 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
                 type="text"
               >
                 <input
-                  className="css-11dt3lb"
+                  className="glamor-2"
                   type="text"
                 />
               </glamorous(input)>
@@ -99,55 +220,176 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
 `;
 
 exports[`DateInput matches snapshot: enzyme.render 1`] = `
+.glamor-11,
+[data-glamor-11] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  border-left: ;
+  margin-right: 0;
+  padding-left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+}
+
+.glamor-10,
+[data-glamor-10] {
+  font-family: "nta", Arial, sans-serif;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.glamor-10> label,
+[data-glamor-10]> label {
+  width: 50px;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.glamor-10> label.year,
+[data-glamor-10]> label.year {
+  width: 70px;
+}
+
+.glamor-3,
+[data-glamor-3] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  border-left: ;
+  margin-right: 0;
+  padding-left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-3:after,
+[data-glamor-3]:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  box-sizing: border-box;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+}
+
+.glamor-2:focus,
+[data-glamor-2]:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-3,
+  [data-glamor-3] {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
 <div
-  class="css-id7ytt"
+  class="glamor-11"
 >
   <span
-    class="css-1m1nyko"
+    class="glamor-0"
   >
     example
   </span>
   <span />
   <span />
   <div
-    class="css-m5vkn2"
+    class="glamor-10"
   >
     <label
-      class="css-wd82g1"
+      class="glamor-3"
     >
       <span
-        class="css-1m1nyko"
+        class="glamor-0"
       >
         Day
       </span>
       <input
-        class="css-11dt3lb"
+        class="glamor-2"
         type="text"
       />
     </label>
     <label
-      class="css-wd82g1"
+      class="glamor-3"
     >
       <span
-        class="css-1m1nyko"
+        class="glamor-0"
       >
         Month
       </span>
       <input
-        class="css-11dt3lb"
+        class="glamor-2"
         type="text"
       />
     </label>
     <label
-      class="css-wd82g1 year"
+      class="glamor-3 year"
     >
       <span
-        class="css-1m1nyko"
+        class="glamor-0"
       >
         Year
       </span>
       <input
-        class="css-11dt3lb"
+        class="glamor-2"
         type="text"
       />
     </label>

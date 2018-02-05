@@ -1,26 +1,116 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input matches snapshot: enzyme.mount 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  box-sizing: border-box;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+}
+
+.glamor-0:focus,
+[data-glamor-0]:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    width: 50%;
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
 <glamorous(input)
   type="text"
 >
   <input
-    className="css-opcxs3"
+    className="glamor-0"
     type="text"
   />
 </glamorous(input)>
 `;
 
 exports[`Input matches snapshot: enzyme.render 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  box-sizing: border-box;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+}
+
+.glamor-0:focus,
+[data-glamor-0]:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    width: 50%;
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
 <input
-  class="css-opcxs3"
+  class="glamor-0"
   type="text"
 />
 `;
 
 exports[`Input matches snapshot: enzyme.shallow 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  box-sizing: border-box;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+}
+
+.glamor-0:focus,
+[data-glamor-0]:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    width: 50%;
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
 <input
-  className="css-opcxs3"
+  className="glamor-0"
   type="text"
 />
 `;

@@ -1,9 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ErrorText matches snapshot: enzyme.mount 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #b10e1e;
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
 <glamorous(span)>
   <span
-    className="css-1fve0n6"
+    className="glamor-0"
   >
     example
   </span>
@@ -11,16 +34,62 @@ exports[`ErrorText matches snapshot: enzyme.mount 1`] = `
 `;
 
 exports[`ErrorText matches snapshot: enzyme.render 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #b10e1e;
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
 <span
-  class="css-1fve0n6"
+  class="glamor-0"
 >
   example
 </span>
 `;
 
 exports[`ErrorText matches snapshot: enzyme.shallow 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #b10e1e;
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
 <span
-  className="css-1fve0n6"
+  className="glamor-0"
 >
   example
 </span>

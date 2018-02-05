@@ -1,6 +1,86 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Textarea matches snapshot: enzyme.mount 1`] = `
+.glamor-2,
+[data-glamor-2] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  border-left: ;
+  margin-right: 0;
+  padding-left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-2:after,
+[data-glamor-2]:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  box-sizing: border-box;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+}
+
+.glamor-1:focus,
+[data-glamor-1]:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    width: 75%;
+  }
+}
+
 <TextArea
   hint={null}
   input={Object {}}
@@ -8,11 +88,11 @@ exports[`Textarea matches snapshot: enzyme.mount 1`] = `
 >
   <glamorous(label)>
     <label
-      className="css-wd82g1"
+      className="glamor-2"
     >
       <glamorous(span)>
         <span
-          className="css-1m1nyko"
+          className="glamor-0"
         >
           example
         </span>
@@ -22,7 +102,7 @@ exports[`Textarea matches snapshot: enzyme.mount 1`] = `
         type="text"
       >
         <textarea
-          className="css-1qor5e0"
+          className="glamor-1"
           rows="5"
         />
       </glamorous(textarea)>
@@ -32,16 +112,96 @@ exports[`Textarea matches snapshot: enzyme.mount 1`] = `
 `;
 
 exports[`Textarea matches snapshot: enzyme.render 1`] = `
+.glamor-2,
+[data-glamor-2] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  border-left: ;
+  margin-right: 0;
+  padding-left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-2:after,
+[data-glamor-2]:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  box-sizing: border-box;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+}
+
+.glamor-1:focus,
+[data-glamor-1]:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    width: 75%;
+  }
+}
+
 <label
-  class="css-wd82g1"
+  class="glamor-2"
 >
   <span
-    class="css-1m1nyko"
+    class="glamor-0"
   >
     example
   </span>
   <textarea
-    class="css-1qor5e0"
+    class="glamor-1"
     rows="5"
   />
 </label>
