@@ -1,10 +1,8 @@
 import React from "react";
 import { Field } from "react-final-form";
 import { storiesOf } from "@storybook/react";
-// import { action } from "@storybook/addon-actions";
 import PropTypes from "prop-types";
 
-// import Button from "../Button/index";
 import MultiChoice from "../MultiChoice/index";
 import FinalFormWrapper from "../../stories/components/FinalFormWrapper";
 import Radio from ".";
