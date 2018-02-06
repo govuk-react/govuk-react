@@ -19,6 +19,13 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   -webkit-flex-direction: column;
 }
 
+.glamor-2:after,
+[data-glamor-2]:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 .glamor-0,
 [data-glamor-0] {
   font-family: "nta", Arial, sans-serif;

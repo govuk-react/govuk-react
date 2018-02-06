@@ -19,6 +19,13 @@ exports[`Label matches snapshot: enzyme.mount 1`] = `
   -webkit-flex-direction: column;
 }
 
+.glamor-0:after,
+[data-glamor-0]:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {

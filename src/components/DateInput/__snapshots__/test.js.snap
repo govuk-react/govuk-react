@@ -71,6 +71,13 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
   -webkit-flex-direction: column;
 }
 
+.glamor-3:after,
+[data-glamor-3]:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 .glamor-2,
 [data-glamor-2] {
   box-sizing: border-box;

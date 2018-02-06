@@ -11,6 +11,11 @@ const Label = glamorous.label(
     flexDirection: "column",
     boxSizing: "border-box",
     width: "100%",
+    ":after": {
+      content: "''",
+      display: "table",
+      clear: "both"
+    },
     [MEDIA_QUERIES.LARGESCREEN]: {
       maxWidth: SITE_WIDTH
     }

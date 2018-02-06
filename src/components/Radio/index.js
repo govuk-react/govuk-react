@@ -1,5 +1,6 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/components/radios/_radios.scss
 // https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
+
 import React from "react";
 import PropTypes from "prop-types";
 import glamorous from "glamorous";
@@ -9,7 +10,7 @@ import { YELLOW } from "govuk-colours";
 const Label = glamorous.label(
   {
     display: "block",
-    float: "none",
+    float: "left",
     clear: "left",
     position: "relative",
     padding: "0 0 0 38px",
@@ -87,7 +88,7 @@ const LabelText = glamorous.span({
   }
 });
 
-const Radio = ({ children, inline, input }) => (
+const Radio = ({ inline, children, ...input }) => (
   <Label inline={inline}>
     <Input type="radio" {...input} />
     <LabelText>{children}</LabelText>
@@ -95,24 +96,12 @@ const Radio = ({ children, inline, input }) => (
 );
 
 Radio.defaultProps = {
-  inline: undefined,
-  defaultChecked: undefined,
-  disabled: undefined,
-  input: {}
+  inline: undefined
 };
 
 Radio.propTypes = {
-  children: PropTypes.node.isRequired,
-  input: PropTypes.shape({
-    name: PropTypes.string,
-    onBlur: PropTypes.func,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-    value: PropTypes.any
-  }),
   inline: PropTypes.bool,
-  defaultChecked: PropTypes.bool,
-  disabled: PropTypes.string
+  children: PropTypes.node.isRequired
 };
 
 export default Radio;

@@ -79,9 +79,7 @@ exports[`Checkbox matches snapshot: enzyme.mount 1`] = `
   -webkit-transform: rotate(-45deg);
 }
 
-<Checkbox
-  input={Object {}}
->
+<Checkbox>
   <glamorous(label)>
     <label
       className="glamor-2 multiple-choice"
