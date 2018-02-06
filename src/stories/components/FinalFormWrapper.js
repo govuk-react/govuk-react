@@ -13,7 +13,7 @@ const FinalFormWrapper = ({ children }) => (
         <div>{children}</div>
         <div>
           <Button type="submit" disabled={submitting}>
-            Log In
+            Submit
           </Button>
         </div>
         <div>
