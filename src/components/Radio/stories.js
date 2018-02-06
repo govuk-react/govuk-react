@@ -1,11 +1,12 @@
 import React from "react";
-import { Form, Field } from "react-final-form";
+import { Field } from "react-final-form";
 import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
+// import { action } from "@storybook/addon-actions";
 import PropTypes from "prop-types";
 
-import Button from "../Button/index";
+// import Button from "../Button/index";
 import MultiChoice from "../MultiChoice/index";
+import FinalFormWrapper from "../../stories/components/FinalFormWrapper";
 import Radio from ".";
 
 const required = value => (value ? undefined : "Required");
@@ -48,46 +49,6 @@ RadioGroup.propTypes = {
     value: PropTypes.string
   })
 };
-
-const App = () => (
-  <div>
-    <Form
-      onSubmit={action("submit")}
-      render={({ handleSubmit, reset, submitting, pristine, values }) => (
-        <form onSubmit={handleSubmit}>
-          <div>
-            <Field
-              name="likesAnimals"
-              label="Do you like animals?"
-              hint="You must tell us"
-              component={RadioGroup}
-              options={[
-                { title: "Yep", value: "yes" },
-                { title: "Nope", value: "no" }
-              ]}
-              validate={required}
-              inline
-            />
-          </div>
-          <div>
-            <Button type="submit" disabled={submitting}>
-              Log In
-            </Button>
-          </div>
-          <div>
-            <Button onClick={reset} disabled={submitting || pristine}>
-              Reset
-            </Button>
-          </div>
-          <div>
-            <hr />
-            <pre>{JSON.stringify(values, 0, 2)}</pre>
-          </div>
-        </form>
-      )}
-    />
-  </div>
-);
 
 storiesOf("Radio", module).add("Radio stacked", () => (
   <div>
@@ -134,5 +95,20 @@ storiesOf("Radio", module).add("Radio preselected & disabled", () => (
 
 storiesOf("Radio", module).add(
   "Usage with Final/Redux Form - multi checkbox validation",
-  () => <App />
+  () => (
+    <FinalFormWrapper>
+      <Field
+        name="likesAnimals"
+        label="Do you like animals?"
+        hint="You must tell us"
+        component={RadioGroup}
+        options={[
+          { title: "Yep", value: "yes" },
+          { title: "Nope", value: "no" }
+        ]}
+        validate={required}
+        inline
+      />
+    </FinalFormWrapper>
+  )
 );
