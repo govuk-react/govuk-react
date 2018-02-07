@@ -5,7 +5,7 @@ import { MultiChoice } from "./index";
 
 describe("MultiChoice", () => {
   const example = "example";
-  const wrapper = <MultiChoice>{example}</MultiChoice>;
+  const wrapper = <MultiChoice label={example}>{example}</MultiChoice>;
 
   it("renders without crashing", () => {
     const div = document.createElement("div");

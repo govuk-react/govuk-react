@@ -15,7 +15,10 @@ describe(GridCol, () => {
 
   it("renders without crashing", () => {
     const div = document.createElement("div");
-    ReactDOM.render(wrapper, div);
+    ReactDOM.render(<GridCol hideContent>{example}</GridCol>, div);
+    ReactDOM.render(<GridCol columnOneThird>{example}</GridCol>, div);
+    ReactDOM.render(<GridCol columnTwoThirds>{example}</GridCol>, div);
+    ReactDOM.render(<GridCol columnOneQuarter>{example}</GridCol>, div);
   });
 
   it("passes `props.children` to the rendered `wrapper` as `children`", () => {

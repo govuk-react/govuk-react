@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select matches snapshot: enzyme.mount 1`] = `
-.glamor-2,
-[data-glamor-2] {
+.glamor-3,
+[data-glamor-3] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -11,16 +11,16 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  border-left: ;
-  margin-right: 0;
-  padding-left: 0;
+  border-left: 4px solid #b10e1e;
+  margin-right: 15px;
+  padding-left: 10px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
 }
 
-.glamor-2:after,
-[data-glamor-2]:after {
+.glamor-3:after,
+[data-glamor-3]:after {
   content: '';
   display: table;
   clear: both;
@@ -42,6 +42,21 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
 
 .glamor-1,
 [data-glamor-1] {
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #b10e1e;
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+
+.glamor-2,
+[data-glamor-2] {
   box-sizing: border-box;
   font-family: "nta", Arial, sans-serif;
   font-weight: 400;
@@ -54,15 +69,15 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   border: 2px solid #0b0c0c;
 }
 
-.glamor-1:focus,
-[data-glamor-1]:focus {
+.glamor-2:focus,
+[data-glamor-2]:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
+  .glamor-3,
+  [data-glamor-3] {
     max-width: 960px;
   }
 }
@@ -78,6 +93,14 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
 @media only screen and (min-width: 641px) {
   .glamor-1,
   [data-glamor-1] {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
     width: 50%;
     height: 38px;
     font-size: 19px;
@@ -89,11 +112,18 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   errorText={null}
   input={Object {}}
   label="example"
-  meta={Object {}}
+  meta={
+    Object {
+      "error": "example",
+      "touched": true,
+    }
+  }
 >
-  <glamorous(label)>
+  <glamorous(label)
+    error="example"
+  >
     <label
-      className="glamor-2"
+      className="glamor-3"
     >
       <glamorous(span)>
         <span
@@ -102,9 +132,16 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
           example
         </span>
       </glamorous(span)>
+      <glamorous(span)>
+        <span
+          className="glamor-1"
+        >
+          example
+        </span>
+      </glamorous(span)>
       <glamorous(select)>
         <select
-          className="glamor-1"
+          className="glamor-2"
         >
           example
         </select>

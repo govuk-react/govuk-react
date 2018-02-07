@@ -8,7 +8,7 @@ describe("Input", () => {
 
   it("renders without crashing", () => {
     const div = document.createElement("div");
-    ReactDOM.render(wrapper, div);
+    ReactDOM.render(<Input type="text" errorText="hi" />, div);
   });
 
   it("matches snapshot", () => {

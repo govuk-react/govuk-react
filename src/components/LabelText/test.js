@@ -7,7 +7,7 @@ import LabelText from "./";
 describe("LabelText", () => {
   let props;
   const example = "example";
-  const wrapper = <LabelText>{example}</LabelText>;
+  const wrapper = <LabelText error={example}>{example}</LabelText>;
 
   beforeEach(() => {
     props = {

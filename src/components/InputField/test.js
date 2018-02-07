@@ -7,10 +7,19 @@ import InputField from "./";
 describe("InputField", () => {
   const example = "example";
   const wrapper = <InputField>{example}</InputField>;
+  const meta = {
+    touched: true,
+    error: example
+  };
 
   it("renders without crashing", () => {
     const div = document.createElement("div");
-    ReactDOM.render(wrapper, div);
+    ReactDOM.render(
+      <InputField hint={example} meta={meta}>
+        {example}
+      </InputField>,
+      div
+    );
   });
 
   it('should render an input type="text"', () => {

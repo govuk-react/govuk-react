@@ -7,7 +7,11 @@ import Radio from "./";
 describe("Radio", () => {
   let props;
   const example = "example";
-  const wrapper = <Radio name={example}>{example}</Radio>;
+  const wrapper = (
+    <Radio inline name={example}>
+      {example}
+    </Radio>
+  );
 
   beforeEach(() => {
     props = {

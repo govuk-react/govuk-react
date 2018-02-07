@@ -6,7 +6,15 @@ import Select from "./";
 describe("Select", () => {
   let props;
   const example = "example";
-  const wrapper = <Select label={example}>{example}</Select>;
+  const meta = {
+    touched: true,
+    error: example
+  };
+  const wrapper = (
+    <Select meta={meta} label={example}>
+      {example}
+    </Select>
+  );
 
   beforeEach(() => {
     props = {

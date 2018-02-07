@@ -6,7 +6,11 @@ import Textarea from "./";
 describe("Textarea", () => {
   let props;
   const example = "example";
-  const wrapper = <Textarea>{example}</Textarea>;
+  const meta = {
+    touched: true,
+    error: example
+  };
+  const wrapper = <Textarea meta={meta}>{example}</Textarea>;
 
   beforeEach(() => {
     props = {

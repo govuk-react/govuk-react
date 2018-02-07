@@ -5,11 +5,11 @@ exports[`Radio matches snapshot: enzyme.mount 1`] = `
 [data-glamor-2] {
   display: block;
   float: left;
-  clear: left;
+  clear: none;
   position: relative;
   padding: 0 0 0 38px;
-  margin-bottom: 10px;
-  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-right: 30px;
 }
 
 .glamor-2:last-child,
@@ -81,9 +81,12 @@ exports[`Radio matches snapshot: enzyme.mount 1`] = `
 }
 
 <Radio
+  inline={true}
   name="example"
 >
-  <glamorous(label)>
+  <glamorous(label)
+    inline={true}
+  >
     <label
       className="glamor-2"
     >

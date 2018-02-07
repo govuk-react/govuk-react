@@ -26,4 +26,16 @@ describe("button", () => {
   it("matches snapshot", () => {
     expect(mount(wrapper)).toMatchSnapshot(`enzyme.mount`);
   });
+
+  it("passes `props.start` to the rendered button as `start`", () => {
+    expect(
+      shallow(<Button start>{example}</Button>).find("button")
+    ).toHaveLength(1);
+  });
+
+  it("passes `props.iconUrl` to the rendered button as `iconUrl`", () => {
+    expect(
+      shallow(<Button iconUrl>{example}</Button>).find("button")
+    ).toHaveLength(1);
+  });
 });
