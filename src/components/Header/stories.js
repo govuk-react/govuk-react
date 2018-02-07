@@ -29,9 +29,10 @@ storiesOf("Header", module).add("Differing sizes", () => (
     <Header level={6} size="XXLARGE">
       h6 with XXLARGE style
     </Header>
-    <Header level={6} size="XSMALL">
+    <Header level={2} size="XSMALL">
       h2 with XSMALL style
     </Header>
+    <H3 size="LARGE">h3 with size large</H3>
   </div>
 ));
 storiesOf("Header", module).add("Props pass through", () => (
