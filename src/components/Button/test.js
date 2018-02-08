@@ -23,8 +23,8 @@ describe("button", () => {
     expect(output.find('button[disabled="disabled"]')).toBeTruthy();
   });
 
-  it("matches snapshot", () => {
-    expect(mount(wrapper)).toMatchSnapshot(`enzyme.mount`);
+  it("matches wrapper snapshot", () => {
+    expect(mount(wrapper)).toMatchSnapshot(`wrapper mount`);
   });
 
   it("passes `props.start` to the rendered button as `start`", () => {

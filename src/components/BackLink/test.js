@@ -6,7 +6,6 @@ import sinon from "sinon";
 import BackLink from "./";
 
 describe("Back Link", () => {
-  // TODO use sinon to confirm that the click handler is called when the button is clicked
   const onButtonClick = sinon.spy();
   const example = "example";
   const wrapper = <BackLink goBack={onButtonClick}>{example}</BackLink>;
@@ -23,7 +22,7 @@ describe("Back Link", () => {
     expect(onButtonClick).toHaveProperty("callCount", 1);
   });
 
-  it("matches snapshot", () => {
-    expect(mount(wrapper)).toMatchSnapshot(`enzyme.mount`);
+  it("matches wrapper snapshot", () => {
+    expect(mount(wrapper)).toMatchSnapshot(`wrapper mount`);
   });
 });

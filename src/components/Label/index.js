@@ -2,7 +2,7 @@
 
 import glamorous from "glamorous";
 
-import * as COLOUR from "govuk-colours";
+import { ERROR_COLOUR } from "govuk-colours";
 import { MEDIA_QUERIES, SITE_WIDTH, SPACING } from "../../constants/index";
 
 const Label = glamorous.label(
@@ -21,7 +21,7 @@ const Label = glamorous.label(
     }
   },
   ({ error }) => ({
-    borderLeft: error ? `4px solid ${COLOUR.ERROR_COLOUR}` : "",
+    borderLeft: error ? `4px solid ${ERROR_COLOUR}` : "",
     marginRight: error ? SPACING.SCALE_3 : 0,
     paddingLeft: error ? SPACING.SCALE_2 : 0
   })

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InputField matches snapshot: enzyme.mount 1`] = `
+exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
 .glamor-0,
 [data-glamor-0] {
   font-family: "nta", Arial, sans-serif;
@@ -13,27 +13,6 @@ exports[`InputField matches snapshot: enzyme.mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
-}
-
-.glamor-1,
-[data-glamor-1] {
-  box-sizing: border-box;
-  font-family: "nta", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 20px;
-  width: 100%;
-  padding: 5px 4px 4px;
-  border: 2px solid #0b0c0c;
-}
-
-.glamor-1:focus,
-[data-glamor-1]:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
 }
 
 .glamor-2,
@@ -61,6 +40,27 @@ exports[`InputField matches snapshot: enzyme.mount 1`] = `
   clear: both;
 }
 
+.glamor-1,
+[data-glamor-1] {
+  box-sizing: border-box;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+}
+
+.glamor-1:focus,
+[data-glamor-1]:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
@@ -70,18 +70,18 @@ exports[`InputField matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
   .glamor-1,
   [data-glamor-1] {
     width: 50%;
     font-size: 19px;
     line-height: 25px;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
-    max-width: 960px;
   }
 }
 

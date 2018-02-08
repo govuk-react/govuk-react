@@ -24,7 +24,7 @@ describe("LabelText", () => {
     expect(wrapper.props.children).toBe(props.children);
   });
 
-  it("matches snapshot", () => {
-    expect(mount(wrapper)).toMatchSnapshot(`enzyme.mount`);
+  it("matches wrapper snapshot", () => {
+    expect(mount(wrapper)).toMatchSnapshot(`wrapper mount`);
   });
 });

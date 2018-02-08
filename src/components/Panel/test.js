@@ -27,7 +27,7 @@ describe("Panel", () => {
     expect(wrapper.props.panelBody).toBe(props.bodyExample);
   });
 
-  it("matches snapshot", () => {
-    expect(mount(wrapper)).toMatchSnapshot(`enzyme.mount`);
+  it("matches wrapper snapshot", () => {
+    expect(mount(wrapper)).toMatchSnapshot(`wrapper mount`);
   });
 });

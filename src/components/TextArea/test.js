@@ -10,7 +10,13 @@ describe("Textarea", () => {
     touched: true,
     error: example
   };
-  const wrapper = <Textarea meta={meta}>{example}</Textarea>;
+  const wrapper = <Textarea>{example}</Textarea>;
+  const wrapperErrorText = (
+    <Textarea errorText={example} meta={meta}>
+      {example}
+    </Textarea>
+  );
+  const wrapperHint = <Textarea hint={example}>{example}</Textarea>;
 
   beforeEach(() => {
     props = {
@@ -27,7 +33,15 @@ describe("Textarea", () => {
     expect(wrapper.props.children).toBe(props.children);
   });
 
-  it("matches snapshot", () => {
-    expect(mount(wrapper)).toMatchSnapshot(`enzyme.mount`);
+  it("matches wrapper snapshot", () => {
+    expect(mount(wrapper)).toMatchSnapshot(`wrapper mount`);
+  });
+
+  it("matches snapshot for error", () => {
+    expect(mount(wrapperErrorText)).toMatchSnapshot(`wrapperErrorText mount`);
+  });
+
+  it("matches snapshot for hint", () => {
+    expect(mount(wrapperHint)).toMatchSnapshot(`wrapperHint mount`);
   });
 });

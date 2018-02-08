@@ -35,8 +35,8 @@ describe("DateInput", () => {
     expect(output.find("label")).toBeTruthy();
   });
 
-  it("matches snapshot", () => {
-    expect(mount(wrapper)).toMatchSnapshot(`enzyme.mount`);
+  it("matches wrappersnapshot", () => {
+    expect(mount(wrapper)).toMatchSnapshot(`wrapper mount`);
   });
 
   it("passes `props` to the rendered label", () => {

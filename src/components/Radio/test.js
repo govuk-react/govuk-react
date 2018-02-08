@@ -7,7 +7,10 @@ import Radio from "./";
 describe("Radio", () => {
   let props;
   const example = "example";
-  const wrapper = (
+
+  const wrapper = <Radio name={example}>{example}</Radio>;
+
+  const wrapperInline = (
     <Radio inline name={example}>
       {example}
     </Radio>
@@ -31,6 +34,10 @@ describe("Radio", () => {
   });
 
   it("matches snapshot", () => {
-    expect(mount(wrapper)).toMatchSnapshot(`enzyme.mount`);
+    expect(mount(wrapper)).toMatchSnapshot(`standard mount`);
+  });
+
+  it("matches snapshot for inline", () => {
+    expect(mount(wrapperInline)).toMatchSnapshot(`inline mount`);
   });
 });

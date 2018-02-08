@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LabelText matches snapshot: enzyme.mount 1`] = `
+exports[`LabelText matches wrapper snapshot: wrapper mount 1`] = `
 .glamor-0,
 [data-glamor-0] {
   font-family: "nta", Arial, sans-serif;

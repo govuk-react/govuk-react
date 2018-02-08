@@ -83,15 +83,15 @@ const DateInput = ({ children, ...props }) => (
     <ListParent>
       <Label>
         <LabelText>Day</LabelText>
-        <Input type="text" />
+        <Input errorText={props.errorText} type="text" />
       </Label>
       <Label>
         <LabelText>Month</LabelText>
-        <Input type="text" />
+        <Input errorText={props.errorText} type="text" />
       </Label>
       <Label className="year">
         <LabelText>Year</LabelText>
-        <Input type="text" />
+        <Input errorText={props.errorText} type="text" />
       </Label>
     </ListParent>
   </LabelWrapper>

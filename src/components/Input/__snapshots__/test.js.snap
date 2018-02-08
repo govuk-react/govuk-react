@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input matches snapshot: enzyme.mount 1`] = `
+exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
 .glamor-0,
 [data-glamor-0] {
   box-sizing: border-box;
