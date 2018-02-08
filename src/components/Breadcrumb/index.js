@@ -75,7 +75,7 @@ const Breadcrumb = ({ children }) => (
       {children.length && children.map ? (
         children.map((child, i) => (
           // eslint-disable-next-line react/no-array-index-key
-          <BreadcrumbListItem key={i}>{child}</BreadcrumbListItem>
+          <BreadcrumbListItem key={child.key || i}>{child}</BreadcrumbListItem>
         ))
       ) : (
         <BreadcrumbListItem>{children}</BreadcrumbListItem>
