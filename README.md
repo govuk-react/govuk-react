@@ -2,6 +2,9 @@
 
 A set of [govuk](https://github.com/alphagov/) components for [React](https://reactjs.org) using [glamorous](https://glamorous.rocks/).
 
+[![Build Status](https://travis-ci.org/penx/govuk-react.svg?branch=master)](https://travis-ci.org/penx/govuk-react)
+[![codecov](https://codecov.io/gh/penx/govuk-react/branch/master/graph/badge.svg)](https://codecov.io/gh/penx/govuk-react)
+
 CSS styling is derived from [GOV.UK/elements](https://github.com/alphagov/govuk_elements) but modified to suit custom markup. Also flexbox is preferred over floats.
 
 ## Usage
