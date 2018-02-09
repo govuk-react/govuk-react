@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DateInput matches snapshot: enzyme.mount 1`] = `
-.glamor-11,
-[data-glamor-11] {
+exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
+.glamor-12,
+[data-glamor-12] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
-  border-left: ;
-  margin-right: 0;
-  padding-left: 0;
+  border-left: 4px solid #b10e1e;
+  margin-right: 15px;
+  padding-left: 10px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -31,8 +31,23 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
   padding-bottom: 2px;
 }
 
-.glamor-10,
-[data-glamor-10] {
+.glamor-1,
+[data-glamor-1] {
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #b10e1e;
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+
+.glamor-11,
+[data-glamor-11] {
   font-family: "nta", Arial, sans-serif;
   display: -webkit-box;
   display: -moz-box;
@@ -41,20 +56,20 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
   display: flex;
 }
 
-.glamor-10> label,
-[data-glamor-10]> label {
+.glamor-11> label,
+[data-glamor-11]> label {
   width: 50px;
   margin-right: 20px;
   margin-bottom: 0;
 }
 
-.glamor-10> label.year,
-[data-glamor-10]> label.year {
+.glamor-11> label.year,
+[data-glamor-11]> label.year {
   width: 70px;
 }
 
-.glamor-3,
-[data-glamor-3] {
+.glamor-4,
+[data-glamor-4] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -71,15 +86,15 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
   -webkit-flex-direction: column;
 }
 
-.glamor-3:after,
-[data-glamor-3]:after {
+.glamor-4:after,
+[data-glamor-4]:after {
   content: '';
   display: table;
   clear: both;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.glamor-3,
+[data-glamor-3] {
   box-sizing: border-box;
   font-family: "nta", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -90,11 +105,11 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
   line-height: 20px;
   width: 100%;
   padding: 5px 4px 4px;
-  border: 2px solid #0b0c0c;
+  border: 4px solid #b10e1e;
 }
 
-.glamor-2:focus,
-[data-glamor-2]:focus {
+.glamor-3:focus,
+[data-glamor-3]:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
@@ -108,32 +123,40 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
+  .glamor-1,
+  [data-glamor-1] {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-4,
+  [data-glamor-4] {
     max-width: 960px;
   }
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
+  .glamor-3,
+  [data-glamor-3] {
     font-size: 19px;
     line-height: 25px;
   }
 }
 
 <DateInput
-  errorText={null}
+  errorText="example"
   hintText={null}
 >
   <glamorous(div)
-    errorText={null}
+    errorText="example"
   >
     <div
-      className="glamor-11"
+      className="glamor-12"
     >
       <glamorous(span)
-        errorText={null}
+        errorText="example"
       >
         <span
           className="glamor-0"
@@ -142,14 +165,22 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
         </span>
       </glamorous(span)>
       <span />
-      <span />
+      <glamorous(span)
+        errorText="example"
+      >
+        <span
+          className="glamor-1"
+        >
+          example
+        </span>
+      </glamorous(span)>
       <glamorous(div)>
         <div
-          className="glamor-10"
+          className="glamor-11"
         >
           <glamorous(label)>
             <label
-              className="glamor-3"
+              className="glamor-4"
             >
               <glamorous(span)>
                 <span
@@ -159,10 +190,11 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
                 </span>
               </glamorous(span)>
               <glamorous(input)
+                errorText="example"
                 type="text"
               >
                 <input
-                  className="glamor-2"
+                  className="glamor-3"
                   type="text"
                 />
               </glamorous(input)>
@@ -170,7 +202,7 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
           </glamorous(label)>
           <glamorous(label)>
             <label
-              className="glamor-3"
+              className="glamor-4"
             >
               <glamorous(span)>
                 <span
@@ -180,10 +212,11 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
                 </span>
               </glamorous(span)>
               <glamorous(input)
+                errorText="example"
                 type="text"
               >
                 <input
-                  className="glamor-2"
+                  className="glamor-3"
                   type="text"
                 />
               </glamorous(input)>
@@ -193,7 +226,7 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
             className="year"
           >
             <label
-              className="glamor-3 year"
+              className="glamor-4 year"
             >
               <glamorous(span)>
                 <span
@@ -203,10 +236,11 @@ exports[`DateInput matches snapshot: enzyme.mount 1`] = `
                 </span>
               </glamorous(span)>
               <glamorous(input)
+                errorText="example"
                 type="text"
               >
                 <input
-                  className="glamor-2"
+                  className="glamor-3"
                   type="text"
                 />
               </glamorous(input)>

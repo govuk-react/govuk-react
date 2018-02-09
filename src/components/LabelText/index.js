@@ -2,11 +2,7 @@
 
 import glamorous from "glamorous";
 import { BLACK } from "govuk-colours";
-import { BREAKPOINTS } from "../../constants/index";
-
-const mediaQueries = {
-  largeScreen: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`
-};
+import { MEDIA_QUERIES } from "../../constants/index";
 
 const LabelText = glamorous.span(
   {
@@ -20,7 +16,7 @@ const LabelText = glamorous.span(
     lineHeight: "1.25",
     color: `${BLACK}`,
     paddingBottom: "2px",
-    [mediaQueries.largeScreen]: {
+    [MEDIA_QUERIES.LARGESCREEN]: {
       fontSize: "19px",
       lineHeight: "1.31579"
     }

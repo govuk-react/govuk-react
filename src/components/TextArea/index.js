@@ -34,8 +34,8 @@ const TextareaField = glamorous.textarea(
       outlineOffset: 0
     }
   },
-  ({ errorText }) => ({
-    border: errorText ? `4px solid ${ERROR_COLOUR}` : `2px solid ${BLACK}`
+  ({ error }) => ({
+    border: error ? `4px solid ${ERROR_COLOUR}` : TextareaField.border
   })
 );
 
@@ -45,7 +45,12 @@ const TextArea = props => (
     {props.hint && <HintText>{props.hint}</HintText>}
     {props.meta.touched &&
       props.meta.error && <ErrorText>{props.meta.error}</ErrorText>}
-    <TextareaField type="text" rows="5" {...props.input} />
+    <TextareaField
+      type="text"
+      rows="5"
+      error={props.meta.touched && props.meta.error}
+      {...props.input}
+    />
   </Label>
 );
 

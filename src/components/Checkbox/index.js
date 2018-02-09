@@ -6,7 +6,7 @@ import glamorous from "glamorous";
 
 import { YELLOW, BLACK } from "govuk-colours";
 
-const MultipleChoice = glamorous.label("multiple-choice", {
+const CheckboxWrapper = glamorous.label({
   display: "block",
   float: "left",
   clear: "left",
@@ -81,10 +81,10 @@ const Label = glamorous.span({
 });
 
 const Checkbox = ({ children, inline, ...input }) => (
-  <MultipleChoice inline={inline}>
+  <CheckboxWrapper inline={inline}>
     <Input type="checkbox" {...input} />
     <Label>{children}</Label>
-  </MultipleChoice>
+  </CheckboxWrapper>
 );
 
 Checkbox.defaultProps = {

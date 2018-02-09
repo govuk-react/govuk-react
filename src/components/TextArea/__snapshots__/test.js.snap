@@ -1,6 +1,295 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Textarea matches snapshot: enzyme.mount 1`] = `
+exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+}
+
+.glamor-3,
+[data-glamor-3] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  border-left: 4px solid #b10e1e;
+  margin-right: 15px;
+  padding-left: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-3:after,
+[data-glamor-3]:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #b10e1e;
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  box-sizing: border-box;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 4px solid #b10e1e;
+}
+
+.glamor-2:focus,
+[data-glamor-2]:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-3,
+  [data-glamor-3] {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
+    width: 75%;
+  }
+}
+
+<TextArea
+  errorText="example"
+  hint={null}
+  input={Object {}}
+  meta={
+    Object {
+      "error": "example",
+      "touched": true,
+    }
+  }
+>
+  <glamorous(label)
+    error="example"
+  >
+    <label
+      className="glamor-3"
+    >
+      <glamorous(span)>
+        <span
+          className="glamor-0"
+        >
+          example
+        </span>
+      </glamorous(span)>
+      <glamorous(span)>
+        <span
+          className="glamor-1"
+        >
+          example
+        </span>
+      </glamorous(span)>
+      <glamorous(textarea)
+        error="example"
+        rows="5"
+        type="text"
+      >
+        <textarea
+          className="glamor-2"
+          rows="5"
+        />
+      </glamorous(textarea)>
+    </label>
+  </glamorous(label)>
+</TextArea>
+`;
+
+exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
+.glamor-3,
+[data-glamor-3] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  border-left: ;
+  margin-right: 0;
+  padding-left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-3:after,
+[data-glamor-3]:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  box-sizing: border-box;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+}
+
+.glamor-2:focus,
+[data-glamor-2]:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #6f777b;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-3,
+  [data-glamor-3] {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
+<TextArea
+  hint="example"
+  input={Object {}}
+  meta={Object {}}
+>
+  <glamorous(label)>
+    <label
+      className="glamor-3"
+    >
+      <glamorous(span)>
+        <span
+          className="glamor-0"
+        >
+          example
+        </span>
+      </glamorous(span)>
+      <glamorous(span)>
+        <span
+          className="glamor-1"
+        >
+          example
+        </span>
+      </glamorous(span)>
+      <glamorous(textarea)
+        rows="5"
+        type="text"
+      >
+        <textarea
+          className="glamor-2"
+          rows="5"
+        />
+      </glamorous(textarea)>
+    </label>
+  </glamorous(label)>
+</TextArea>
+`;
+
+exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
 .glamor-2,
 [data-glamor-2] {
   display: -webkit-box;

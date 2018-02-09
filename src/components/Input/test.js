@@ -8,10 +8,10 @@ describe("Input", () => {
 
   it("renders without crashing", () => {
     const div = document.createElement("div");
-    ReactDOM.render(wrapper, div);
+    ReactDOM.render(<Input type="text" />, div);
   });
 
-  it("matches snapshot", () => {
-    expect(mount(wrapper)).toMatchSnapshot(`enzyme.mount`);
+  it("matches wrapper snapshot", () => {
+    expect(mount(wrapper)).toMatchSnapshot(`wrapper mount`);
   });
 });

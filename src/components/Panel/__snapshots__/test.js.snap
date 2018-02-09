@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Panel matches snapshot: enzyme.mount 1`] = `
+exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
 .glamor-2,
 [data-glamor-2] {
   background-color: #28a197;

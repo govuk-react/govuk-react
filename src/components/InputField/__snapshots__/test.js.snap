@@ -1,6 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InputField matches snapshot: enzyme.mount 1`] = `
+exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+}
+
 .glamor-2,
 [data-glamor-2] {
   display: -webkit-box;
@@ -26,20 +40,6 @@ exports[`InputField matches snapshot: enzyme.mount 1`] = `
   clear: both;
 }
 
-.glamor-0,
-[data-glamor-0] {
-  font-family: "nta", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: block;
-  clear: none;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #0b0c0c;
-  padding-bottom: 2px;
-}
-
 .glamor-1,
 [data-glamor-1] {
   box-sizing: border-box;
@@ -62,17 +62,17 @@ exports[`InputField matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
-    max-width: 960px;
-  }
-}
-
-@media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
     font-size: 19px;
     line-height: 1.31579;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
+    max-width: 960px;
   }
 }
 

@@ -6,11 +6,23 @@ import DateInput from "./";
 
 describe("DateInput", () => {
   const example = "example";
-  const wrapper = <DateInput>{example}</DateInput>;
+  const wrapper = <DateInput errorText={example}>{example}</DateInput>;
+  let props;
+
+  beforeEach(() => {
+    props = {
+      children: example
+    };
+  });
 
   it("renders without crashing", () => {
     const div = document.createElement("div");
-    ReactDOM.render(wrapper, div);
+    ReactDOM.render(
+      <DateInput errorText={example} hintText={example}>
+        {example}
+      </DateInput>,
+      div
+    );
   });
 
   it('should render an input type="text"', () => {
@@ -23,7 +35,20 @@ describe("DateInput", () => {
     expect(output.find("label")).toBeTruthy();
   });
 
-  it("matches snapshot", () => {
-    expect(mount(wrapper)).toMatchSnapshot(`enzyme.mount`);
+  it("matches wrappersnapshot", () => {
+    expect(mount(wrapper)).toMatchSnapshot(`wrapper mount`);
+  });
+
+  it("passes `props` to the rendered label", () => {
+    expect(
+      mount(<DateInput errorText={example}>{example}</DateInput>).find("input")
+    ).toHaveLength(3);
+    expect(
+      mount(<DateInput hintText={example}>{example}</DateInput>).find("div")
+    ).toHaveLength(2);
+  });
+
+  it("passes `props.children` to the rendered `wrapper` as `children`", () => {
+    expect(wrapper.props.children).toBe(props.children);
   });
 });

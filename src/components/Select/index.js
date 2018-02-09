@@ -4,17 +4,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import glamorous from "glamorous";
 
-import * as COLOUR from "govuk-colours";
-import { BREAKPOINTS } from "../../constants/index";
+import { BLACK, ERROR_COLOUR, YELLOW } from "govuk-colours";
+import { MEDIA_QUERIES } from "../../constants/index";
 
 import Label from "../Label/index";
 import LabelText from "../LabelText/index";
 import ErrorText from "../ErrorText/index";
 import HintText from "../HintText/index";
-
-const mediaQueries = {
-  largeScreen: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`
-};
 
 const Input = glamorous.select(
   {
@@ -27,8 +23,8 @@ const Input = glamorous.select(
     width: "100%",
     height: "33px",
     padding: "5px 4px 4px",
-    border: `2px solid ${COLOUR.BLACK}`,
-    [mediaQueries.largeScreen]: {
+    border: `2px solid ${BLACK}`,
+    [MEDIA_QUERIES.LARGESCREEN]: {
       width: "50%",
       height: "38px",
       fontSize: "19px",
@@ -38,14 +34,12 @@ const Input = glamorous.select(
       cursor: "auto"
     },
     ":focus": {
-      outline: `3px solid ${COLOUR.YELLOW}`,
+      outline: `3px solid ${YELLOW}`,
       outlineOffset: 0
     }
   },
-  ({ errorText }) => ({
-    border: errorText
-      ? `4px solid ${COLOUR.ERROR_COLOUR}`
-      : `2px solid ${COLOUR.BLACK}`
+  ({ error }) => ({
+    border: error ? `4px solid ${ERROR_COLOUR}` : `2px solid ${BLACK}`
   })
 );
 
@@ -54,7 +48,9 @@ const Select = ({ children, hint, label, meta, input }) => (
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
-    <Input {...input}>{children}</Input>
+    <Input error={meta.touched && meta.error} {...input}>
+      {children}
+    </Input>
   </Label>
 );
 

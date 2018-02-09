@@ -3,12 +3,8 @@ import React from "react";
 import glamorous from "glamorous";
 import PropTypes from "prop-types";
 
-import * as COLOUR from "govuk-colours";
-import { BREAKPOINTS } from "../../constants/index";
-
-const mediaQueries = {
-  largeScreen: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`
-};
+import { BLACK, GREY_1, YELLOW } from "govuk-colours";
+import { MEDIA_QUERIES } from "../../constants/index";
 
 const BreadcrumbContainer = glamorous.div({
   fontFamily: "nta, Arial, sans-serif",
@@ -17,7 +13,7 @@ const BreadcrumbContainer = glamorous.div({
   marginTop: "15px",
   marginBottom: "10px",
   WebkitFontSmoothing: "antialiased",
-  [mediaQueries.largeScreen]: {
+  [MEDIA_QUERIES.LARGESCREEN]: {
     fontSize: "16px",
     lineHeight: "20px"
   }
@@ -57,14 +53,14 @@ const BreadcrumbListItem = glamorous.li({
     transform: "rotate(45deg)",
     border: "solid",
     borderWidth: "1px 1px 0 0",
-    borderColor: `${COLOUR.GREY_1}`
+    borderColor: `${GREY_1}`
   },
   "> a": {
-    color: `${COLOUR.BLACK}`,
+    color: `${BLACK}`,
     textDecoration: "underline",
     ":focus": {
-      backgroundColor: `${COLOUR.YELLOW}`,
-      outline: `3px solid ${COLOUR.YELLOW}`
+      backgroundColor: `${YELLOW}`,
+      outline: `3px solid ${YELLOW}`
     }
   }
 });
@@ -72,8 +68,15 @@ const BreadcrumbListItem = glamorous.li({
 const Breadcrumb = ({ children }) => (
   <BreadcrumbContainer>
     <BreadcrumbList>
+      {/*
+        the data of children doesnt have any IDs (or anything appropriate) so the last resort is to use the index for the key
+        https://reactjs.org/docs/lists-and-keys.html#keys
+        */}
       {children.length && children.map ? (
-        children.map(child => <BreadcrumbListItem>{child}</BreadcrumbListItem>)
+        children.map((child, i) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <BreadcrumbListItem key={child.key || i}>{child}</BreadcrumbListItem>
+        ))
       ) : (
         <BreadcrumbListItem>{children}</BreadcrumbListItem>
       )}

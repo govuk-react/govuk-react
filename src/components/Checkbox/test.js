@@ -23,7 +23,7 @@ describe("Checkbox", () => {
     expect(output.find("label")).toBeTruthy();
   });
 
-  it("matches snapshot", () => {
-    expect(mount(wrapper)).toMatchSnapshot(`enzyme.mount`);
+  it("matches wrapper snapshot", () => {
+    expect(mount(wrapper)).toMatchSnapshot(`wrapper mount`);
   });
 });

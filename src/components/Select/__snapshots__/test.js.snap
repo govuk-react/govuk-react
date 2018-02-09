@@ -1,5 +1,187 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Select matches snapshot for errorText: errorText mount 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+}
+
+.glamor-4,
+[data-glamor-4] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  border-left: 4px solid #b10e1e;
+  margin-right: 15px;
+  padding-left: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-4:after,
+[data-glamor-4]:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #6f777b;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #b10e1e;
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+
+.glamor-3,
+[data-glamor-3] {
+  box-sizing: border-box;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  height: 33px;
+  padding: 5px 4px 4px;
+  border: 4px solid #b10e1e;
+}
+
+.glamor-3:focus,
+[data-glamor-3]:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-4,
+  [data-glamor-4] {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-3,
+  [data-glamor-3] {
+    width: 50%;
+    height: 38px;
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
+
+<Select
+  errorText="example"
+  hint="example"
+  input={Object {}}
+  label="example"
+  meta={
+    Object {
+      "error": "example",
+      "touched": true,
+    }
+  }
+>
+  <glamorous(label)
+    error="example"
+  >
+    <label
+      className="glamor-4"
+    >
+      <glamorous(span)>
+        <span
+          className="glamor-0"
+        >
+          example
+        </span>
+      </glamorous(span)>
+      <glamorous(span)>
+        <span
+          className="glamor-1"
+        >
+          example
+        </span>
+      </glamorous(span)>
+      <glamorous(span)>
+        <span
+          className="glamor-2"
+        >
+          example
+        </span>
+      </glamorous(span)>
+      <glamorous(select)
+        error="example"
+      >
+        <select
+          className="glamor-3"
+        >
+          example
+        </select>
+      </glamorous(select)>
+    </label>
+  </glamorous(label)>
+</Select>
+`;
+
 exports[`Select matches snapshot: enzyme.mount 1`] = `
 .glamor-2,
 [data-glamor-2] {
