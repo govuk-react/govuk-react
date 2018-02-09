@@ -43,9 +43,9 @@ const FieldSet = glamorous.div(
   ({ error }) => ({
     borderLeft: error
       ? `${BORDER_WIDTH_MOBILE} solid ${ERROR_COLOUR}`
-      : FieldSet.border,
-    marginRight: error ? SPACING.SCALE_3 : FieldSet.margin,
-    paddingLeft: error ? SPACING.SCALE_2 : FieldSet.padding
+      : undefined,
+    marginRight: error ? SPACING.SCALE_3 : undefined,
+    paddingLeft: error ? SPACING.SCALE_2 : undefined
   })
 );
 

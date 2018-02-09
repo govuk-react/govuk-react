@@ -22,7 +22,7 @@ const LabelText = glamorous.span(
     }
   },
   ({ error }) => ({
-    fontWeight: error ? 700 : LabelText.fontWeight
+    fontWeight: error ? 700 : undefined
   })
 );
 

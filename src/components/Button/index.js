@@ -39,16 +39,16 @@ const Button = glamorous.button(
     }
   },
   ({ start }) => ({
-    fontWeight: start ? "700" : Button.fontWeight,
-    fontSize: start ? "24px" : Button.fontSize,
-    lineHeight: start ? "1.25" : Button.lineHeight,
-    padding: start ? "0.36842em 0.84211em 0.21053em" : Button.padding
+    fontWeight: start ? "700" : undefined,
+    fontSize: start ? "24px" : undefined,
+    lineHeight: start ? "1.25" : undefined,
+    padding: start ? "0.36842em 0.84211em 0.21053em" : undefined
   }),
   ({ iconUrl }) => ({
     backgroundImage: iconUrl ? `url( ${iconUrl})` : "",
-    backgroundRepeat: iconUrl ? "no-repeat" : "",
-    backgroundPosition: iconUrl ? "100% 50%" : "",
-    paddingRight: iconUrl ? "2.15789em" : ""
+    backgroundRepeat: iconUrl ? "no-repeat" : undefined,
+    backgroundPosition: iconUrl ? "100% 50%" : undefined,
+    paddingRight: iconUrl ? "2.15789em" : undefined
   })
 );
 
