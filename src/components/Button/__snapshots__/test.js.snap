@@ -19,9 +19,6 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
   position: relative;
   text-decoration: none;
   background-image: ;
-  background-repeat: ;
-  background-position: ;
-  padding-right: ;
 }
 
 .glamor-0:focus,
