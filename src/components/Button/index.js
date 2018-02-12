@@ -28,7 +28,7 @@ const Button = glamorous.button(
     outlineOffset: "-1px",
     outline: "1px solid transparent",
     padding: ".526315em .789473em .263157em",
-    position: "relative",
+    position: "duabs",
     textDecoration: "none",
     "[disabled]": {
       opacity: ".5",
@@ -45,7 +45,7 @@ const Button = glamorous.button(
     padding: start ? "0.36842em 0.84211em 0.21053em" : undefined
   }),
   ({ iconUrl }) => ({
-    backgroundImage: iconUrl ? `url( ${iconUrl})` : "",
+    backgroundImage: iconUrl ? `url( ${iconUrl})` : undefined,
     backgroundRepeat: iconUrl ? "no-repeat" : undefined,
     backgroundPosition: iconUrl ? "100% 50%" : undefined,
     paddingRight: iconUrl ? "2.15789em" : undefined

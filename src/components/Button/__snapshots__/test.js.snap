@@ -16,9 +16,8 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
   outline-offset: -1px;
   outline: 1px solid transparent;
   padding: .526315em .789473em .263157em;
-  position: relative;
+  position: duabs;
   text-decoration: none;
-  background-image: ;
 }
 
 .glamor-0:focus,
