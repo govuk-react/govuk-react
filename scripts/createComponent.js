@@ -5,10 +5,12 @@ const fs = require("fs");
 const path = require("path");
 const mkdirp = require("mkdirp");
 
-const componentName = process.argv[2];
-const folderName = `./src/components/${componentName
+const commandLineArgs = process.argv[2];
+const componentName = `${commandLineArgs
   .charAt(0)
-  .toUpperCase()}${componentName.slice(1)}`;
+  .toUpperCase()}${commandLineArgs.slice(1)}`;
+
+const folderName = `./src/components/${componentName}`;
 
 /* eslint no-console: 0 */
 const createFolder = () => {
