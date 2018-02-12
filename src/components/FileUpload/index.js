@@ -29,25 +29,39 @@ const Input = glamorous.input({
   }
 });
 
-const FileUpload = ({ children, errorText, hintText, acceptedFormats }) => (
-  <Label errorText={errorText}>
-    <LabelText errorText={errorText}>{children}</LabelText>
-    <HintText>{hintText}</HintText>
-    <ErrorText>{errorText}</ErrorText>
-    <Input type="file" accept={acceptedFormats} errorText={errorText} />
+const FileUpload = ({ meta, children, hint, acceptedFormats }) => (
+  <Label error={meta.error}>
+    <LabelText error={meta.error}>{children}</LabelText>
+    {hint && <HintText>{hint}</HintText>}
+    {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
+    <Input type="file" accept={acceptedFormats} error={meta.error} />
   </Label>
 );
 
 FileUpload.defaultProps = {
-  hintText: null,
-  errorText: null,
+  hint: null,
+  meta: {},
   acceptedFormats: null
 };
 
 FileUpload.propTypes = {
+  hint: PropTypes.string,
+  meta: PropTypes.shape({
+    active: PropTypes.bool,
+    dirty: PropTypes.bool,
+    dirtySinceLastSubmit: PropTypes.bool,
+    error: PropTypes.any,
+    initial: PropTypes.bool,
+    invalid: PropTypes.bool,
+    pristine: PropTypes.bool,
+    submitError: PropTypes.any,
+    submitFailed: PropTypes.bool,
+    submitSucceeded: PropTypes.bool,
+    touched: PropTypes.bool,
+    valid: PropTypes.bool,
+    visited: PropTypes.bool
+  }),
   children: PropTypes.node.isRequired,
-  hintText: PropTypes.string,
-  errorText: PropTypes.string,
   acceptedFormats: PropTypes.string
 };
 

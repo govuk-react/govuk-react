@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
-.glamor-4,
-[data-glamor-4] {
+.glamor-2,
+[data-glamor-2] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -11,16 +11,13 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  border-left: ;
-  margin-right: 0;
-  padding-left: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
 }
 
-.glamor-4:after,
-[data-glamor-4]:after {
+.glamor-2:after,
+[data-glamor-2]:after {
   content: '';
   display: table;
   clear: both;
@@ -42,34 +39,6 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
 
 .glamor-1,
 [data-glamor-1] {
-  display: block;
-  font-family: "nta", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 20px;
-  color: #6f777b;
-}
-
-.glamor-2,
-[data-glamor-2] {
-  display: block;
-  font-family: "nta", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 700;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 20px;
-  color: #b10e1e;
-  padding-top: 4px;
-  padding-bottom: 2px;
-}
-
-.glamor-3,
-[data-glamor-3] {
   box-sizing: border-box;
   font-family: "nta", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -82,8 +51,8 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-4,
-  [data-glamor-4] {
+  .glamor-2,
+  [data-glamor-2] {
     max-width: 960px;
   }
 }
@@ -99,64 +68,33 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
 @media only screen and (min-width: 641px) {
   .glamor-1,
   [data-glamor-1] {
-    font-size: 19px;
-    line-height: 25px;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
-    font-size: 19px;
-    line-height: 25px;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
     width: 50%;
   }
 }
 
 <FileUpload
   acceptedFormats={null}
-  errorText={null}
-  hintText={null}
+  hint={null}
+  meta={Object {}}
 >
-  <glamorous(label)
-    errorText={null}
-  >
+  <glamorous(label)>
     <label
-      className="glamor-4"
+      className="glamor-2"
     >
-      <glamorous(span)
-        errorText={null}
-      >
+      <glamorous(span)>
         <span
           className="glamor-0"
         >
           example
         </span>
       </glamorous(span)>
-      <glamorous(span)>
-        <span
-          className="glamor-1"
-        />
-      </glamorous(span)>
-      <glamorous(span)>
-        <span
-          className="glamor-2"
-        />
-      </glamorous(span)>
       <glamorous(input)
         accept={null}
-        errorText={null}
         type="file"
       >
         <input
           accept={null}
-          className="glamor-3"
+          className="glamor-1"
           type="file"
         />
       </glamorous(input)>

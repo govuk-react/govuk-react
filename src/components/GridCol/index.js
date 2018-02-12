@@ -26,25 +26,25 @@ const GridColInner = glamorous.div(
     }
   },
   ({ hideContent }) => ({
-    textIndent: hideContent ? "-999em" : GridColInner.textIndent,
-    backgroundColor: hideContent ? "#7DADD3" : GridColInner.backgroundColor,
+    textIndent: hideContent ? "-999em" : undefined,
+    backgroundColor: hideContent ? "#7DADD3" : undefined,
     backgroundImage: hideContent
       ? "repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)"
-      : GridColInner.backgroundImage
+      : undefined
   }),
   ({ columnOneThird }) => ({
     [MEDIA_QUERIES.LARGESCREEN]: {
-      width: columnOneThird ? "33.3333%" : GridColInner.width
+      width: columnOneThird ? "33.3333%" : undefined
     }
   }),
   ({ columnTwoThirds }) => ({
     [MEDIA_QUERIES.LARGESCREEN]: {
-      width: columnTwoThirds ? "66.6667%" : GridColInner.width
+      width: columnTwoThirds ? "66.6667%" : undefined
     }
   }),
   ({ columnOneQuarter }) => ({
     [MEDIA_QUERIES.LARGESCREEN]: {
-      width: columnOneQuarter ? "50%" : GridColInner.width
+      width: columnOneQuarter ? "50%" : undefined
     }
   })
 );

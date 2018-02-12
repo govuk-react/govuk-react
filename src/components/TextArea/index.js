@@ -35,7 +35,7 @@ const TextareaField = glamorous.textarea(
     }
   },
   ({ error }) => ({
-    border: error ? `4px solid ${ERROR_COLOUR}` : TextareaField.border
+    border: error ? `4px solid ${ERROR_COLOUR}` : undefined
   })
 );
 

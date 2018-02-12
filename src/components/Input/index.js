@@ -32,7 +32,7 @@ const Input = glamorous.input(
     }
   },
   ({ error }) => ({
-    border: error ? `4px solid ${ERROR_COLOUR}` : `2px solid ${BLACK}`
+    border: error ? `4px solid ${ERROR_COLOUR}` : undefined
   })
 );
 

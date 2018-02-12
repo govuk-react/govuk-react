@@ -161,9 +161,6 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  border-left: ;
-  margin-right: 0;
-  padding-left: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -300,9 +297,6 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  border-left: ;
-  margin-right: 0;
-  padding-left: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;

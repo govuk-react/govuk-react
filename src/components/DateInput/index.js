@@ -22,9 +22,9 @@ const LabelWrapper = glamorous.div(
     flexDirection: "column"
   },
   ({ errorText }) => ({
-    borderLeft: errorText ? `4px solid ${ERROR_COLOUR}` : "",
-    marginRight: errorText ? SPACING.SCALE_3 : 0,
-    paddingLeft: errorText ? SPACING.SCALE_2 : 0
+    borderLeft: errorText ? `4px solid ${ERROR_COLOUR}` : undefined,
+    marginRight: errorText ? SPACING.SCALE_3 : undefined,
+    paddingLeft: errorText ? SPACING.SCALE_2 : undefined
   })
 );
 

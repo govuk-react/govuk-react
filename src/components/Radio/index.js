@@ -20,10 +20,10 @@ const Label = glamorous.label(
     }
   },
   ({ inline }) => ({
-    float: inline ? "left" : Label.float,
-    clear: inline ? "none" : Label.clear,
+    float: inline ? "left" : undefined,
+    clear: inline ? "none" : undefined,
     marginRight: inline ? "30px" : "0",
-    marginBottom: inline ? "0" : Label.marginBottom
+    marginBottom: inline ? "0" : undefined
   })
 );
 

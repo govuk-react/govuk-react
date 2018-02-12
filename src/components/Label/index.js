@@ -21,9 +21,9 @@ const Label = glamorous.label(
     }
   },
   ({ error }) => ({
-    borderLeft: error ? `4px solid ${ERROR_COLOUR}` : "",
-    marginRight: error ? SPACING.SCALE_3 : 0,
-    paddingLeft: error ? SPACING.SCALE_2 : 0
+    borderLeft: error ? `4px solid ${ERROR_COLOUR}` : undefined,
+    marginRight: error ? SPACING.SCALE_3 : undefined,
+    paddingLeft: error ? SPACING.SCALE_2 : undefined
   })
 );
 

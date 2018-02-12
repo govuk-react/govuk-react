@@ -68,13 +68,8 @@ const BreadcrumbListItem = glamorous.li({
 const Breadcrumb = ({ children }) => (
   <BreadcrumbContainer>
     <BreadcrumbList>
-      {/*
-        the data of children doesnt have any IDs (or anything appropriate) so the last resort is to use the index for the key
-        https://reactjs.org/docs/lists-and-keys.html#keys
-        */}
       {children.length && children.map ? (
         children.map((child, i) => (
-          // eslint-disable-next-line react/no-array-index-key
           <BreadcrumbListItem key={child.key || i}>{child}</BreadcrumbListItem>
         ))
       ) : (
