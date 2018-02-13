@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { mount } from "enzyme";
-import PhaseTag from "./";
 
-const example = "example";
-const wrapper = <PhaseTag level="beta">{example}</PhaseTag>;
+import PhaseBadge from "./";
 
-describe(PhaseTag, () => {
+const wrapper = <PhaseBadge>beta</PhaseBadge>;
+
+describe(PhaseBadge, () => {
   it("renders without crashing", () => {
     const div = document.createElement("div");
     ReactDOM.render(wrapper, div);

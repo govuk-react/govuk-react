@@ -1,4 +1,4 @@
-// TODO INSERT A COMMENT REFERENCE TO EXTERNAL URL IF POSSIBLE
+// https://govuk-elements.herokuapp.com/typography/
 
 import React from "react";
 import PropTypes from "prop-types";

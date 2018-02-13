@@ -1,19 +1,19 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 
-import PhaseTag from ".";
+import PhaseBanner from ".";
 import Anchor from "../Anchor";
 
-storiesOf("PhaseTag", module).add("Alpha phase tag", () => (
-  <PhaseTag level="alpha">
+storiesOf("PhaseBanner", module).add("Alpha phase tag", () => (
+  <PhaseBanner level="alpha">
     This part of GOV.UK is being rebuilt &#8211;{" "}
     <Anchor hyperLink="https://example.com">find out what that means</Anchor>
-  </PhaseTag>
+  </PhaseBanner>
 ));
 
-storiesOf("PhaseTag", module).add("Beta phase tag", () => (
-  <PhaseTag level="beta">
+storiesOf("PhaseBanner", module).add("Beta phase tag", () => (
+  <PhaseBanner level="beta">
     This part of GOV.UK is being rebuilt &#8211;{" "}
     <Anchor hyperLink="https://example.com">find out what that means</Anchor>
-  </PhaseTag>
+  </PhaseBanner>
 ));

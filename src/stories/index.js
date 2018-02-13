@@ -19,5 +19,6 @@ import "../components/Panel/stories";
 import "../components/Radio/stories";
 import "../components/Select/stories";
 import "../components/TextArea/stories";
-import "../components/PhaseTag/stories";
+import "../components/PhaseBadge/stories";
+import "../components/PhaseBanner/stories";
 import "../components/Anchor/stories";

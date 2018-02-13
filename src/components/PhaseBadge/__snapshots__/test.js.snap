@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  display: inline-block;
+  margin: 0 8px 0 0;
+  padding: 2px 5px;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #005ea5;
+  -webkit-font-mmoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 16px;
+    line-height: 1.25;
+    padding-bottom: 0;
+  }
+}
+
+<glamorous(strong)>
+  <strong
+    className="glamor-0"
+  >
+    beta
+  </strong>
+</glamorous(strong)>
+`;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PhaseTag matches wrapper snapshot: wrapper mount 1`] = `
+exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
 .glamor-1,
 [data-glamor-1] {
   border-bottom: 1px solid #bfc1c3;
@@ -54,7 +54,7 @@ exports[`PhaseTag matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<PhaseTag
+<PhaseBanner
   level="beta"
 >
   <glamorous(p)>
@@ -71,5 +71,5 @@ exports[`PhaseTag matches wrapper snapshot: wrapper mount 1`] = `
       example
     </p>
   </glamorous(p)>
-</PhaseTag>
+</PhaseBanner>
 `;

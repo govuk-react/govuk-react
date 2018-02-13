@@ -19,4 +19,5 @@ export { default as Select } from "./components/Select";
 export { default as TextArea } from "./components/TextArea";
 export { default as MultiChoice } from "./components/MultiChoice";
 export { default as Anchor } from "./components/Anchor";
-export { default as PhaseTag } from "./components/PhaseTag";
+export { default as PhaseBadge } from "./components/PhaseBadge";
+export { default as PhaseBanner } from "./components/PhaseBanner";
