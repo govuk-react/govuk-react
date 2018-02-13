@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhaseTag matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  border-bottom: 1px solid #bfc1c3;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  width: 100%;
+}
+
+.glamor-1> a,
+[data-glamor-1]> a {
+  color: #005ea5;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  display: inline-block;
+  margin: 0 8px 0 0;
+  padding: 2px 5px;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #005ea5;
+  -webkit-font-mmoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 16px;
+    line-height: 1.25;
+    padding-bottom: 0;
+  }
+}
+
+<PhaseTag
+  level="beta"
+>
+  <glamorous(p)>
+    <p
+      className="glamor-1"
+    >
+      <glamorous(strong)>
+        <strong
+          className="glamor-0"
+        >
+          beta
+        </strong>
+      </glamorous(strong)>
+      example
+    </p>
+  </glamorous(p)>
+</PhaseTag>
+`;
