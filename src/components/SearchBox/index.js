@@ -4,6 +4,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import glamorous from "glamorous";
 
+import Search from "../../icons/Search/index";
+
 import { LIGHT_BLUE, WHITE, YELLOW } from "govuk-colours";
 
 const SearchBoxWrapper = glamorous.div({
@@ -46,11 +48,9 @@ const SearchButton = glamorous.button({
   display: "block",
   color: "#fff",
   position: "relative",
-  padding: "0",
+  padding: "10px",
   width: "45px",
   height: "40px",
-  backgroundImage:
-    "url(https://govuk-static.herokuapp.com/static/search-button-ca89b2a79f944909ceb7370d3f0b78811d32b96e883348fcd8886f63dd619585.png)",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "2px 50%",
   textIndent: "-5000px",
@@ -64,7 +64,9 @@ const SearchButton = glamorous.button({
 const SearchBox = ({ placeholder }) => (
   <SearchBoxWrapper>
     <InputSearchBox type="search" placeholder={placeholder} />
-    <SearchButton>Search</SearchButton>
+    <SearchButton title="Search">
+      <Search colour="#fff" />
+    </SearchButton>
   </SearchBoxWrapper>
 );
 
