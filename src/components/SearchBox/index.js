@@ -4,26 +4,65 @@ import React from "react";
 import PropTypes from "prop-types";
 import glamorous from "glamorous";
 
-import { WHITE } from "govuk-colours";
+import { LIGHT_BLUE, WHITE, YELLOW } from "govuk-colours";
 
 const SearchBoxWrapper = glamorous.div({
   boxSizing: "border-box",
-  display: "table",
+  display: "flex",
   width: "100%",
   background: WHITE
 });
 
 const InputSearchBox = glamorous.input({
-  color: "blue"
+  width: "100%",
+  height: "40px",
+  padding: "6px",
+  margin: 0,
+  border: "solid 1px #bfc1c3",
+  borderRight: 0,
+  boxSizing: "border-box",
+  fontFamily: "'nta', Arial, sans-serif",
+  fontWeight: 400,
+  textTransform: "none",
+  fontSize: "16px",
+  lineHeight: "1.75",
+  background: "#fff",
+  borderRadius: 0,
+  WebkitAppearance: "none",
+  ":focus": {
+    marginRight: "3px",
+    outline: `3px solid ${YELLOW}`,
+    outlineOffset: 0,
+    " ~ button": {
+      width: "46px"
+    }
+  }
 });
 
 const SearchButton = glamorous.button({
-  color: "red"
+  backgroundColor: LIGHT_BLUE,
+  border: 0,
+  display: "block",
+  color: "#fff",
+  position: "relative",
+  padding: "0",
+  width: "45px",
+  height: "40px",
+  backgroundImage:
+    "url(https://govuk-static.herokuapp.com/static/search-button-ca89b2a79f944909ceb7370d3f0b78811d32b96e883348fcd8886f63dd619585.png)",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "2px 50%",
+  textIndent: "-5000px",
+  overflow: "hidden",
+  ":focus": {
+    outline: `3px solid ${YELLOW}`,
+    outlineOffset: 0
+  }
 });
 
 const SearchBox = ({ placeholder }) => (
   <SearchBoxWrapper>
-    <InputSearchBox placeholder={placeholder} />
+    <InputSearchBox type="search" placeholder={placeholder} />
     <SearchButton>Search</SearchButton>
   </SearchBoxWrapper>
 );
