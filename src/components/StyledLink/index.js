@@ -1,27 +1,25 @@
 // TODO INSERT A COMMENT REFERENCE TO EXTERNAL URL IF POSSIBLE
 
-// import React from "react";
-// import PropTypes from "prop-types";
+import React from "react";
 import glamorous from "glamorous";
-import { Link } from "react-router";
+// import { BrowserRouter, Link } from "react-router";
+import PhaseBadge from "../PhaseBadge/index";
 
-const StyledLink = glamorous(Link)({
-  display: "inline-block",
-  color: "red",
-  marginRight: 20,
-  marginBottom: 20,
-  ".active": {
-    color: "green",
-    fontSize: "1.2em"
-  }
+const StyledLink = glamorous(PhaseBadge)({
+  backgroundColor: "red"
 });
 
-// const StyledLink = ({ label, link }) => (
-//   <StyledLinkInner to={link} label={label} />
+// const StyledLink = () => (
+//   <BrowserRouter>
+//     <div>
+//       <StyledLinkItem exact to="/">
+//         Home
+//       </StyledLinkItem>
+//       <StyledLinkItem exact to="/somewhere">
+//         Somewhere
+//       </StyledLinkItem>
+//     </div>
+//   </BrowserRouter>
 // );
-// StyledLink.propTypes = {
-//   label: PropTypes.string.isRequired,
-//   link: PropTypes.string.isRequired
-// };
 
 export default StyledLink;
