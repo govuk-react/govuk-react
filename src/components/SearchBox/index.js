@@ -13,6 +13,7 @@ const SearchBoxWrapper = glamorous.div({
   background: WHITE
 });
 
+// css normalize is hiding the input:search clear SearchButton
 const InputSearchBox = glamorous.input({
   width: "100%",
   height: "40px",
