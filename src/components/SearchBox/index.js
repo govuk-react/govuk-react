@@ -3,10 +3,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import glamorous from "glamorous";
+import { LIGHT_BLUE, WHITE, YELLOW } from "govuk-colours";
 
 import Search from "../../icons/Search/index";
-
-import { LIGHT_BLUE, WHITE, YELLOW } from "govuk-colours";
 
 const SearchBoxWrapper = glamorous.div({
   boxSizing: "border-box",
