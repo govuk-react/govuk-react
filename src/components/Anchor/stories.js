@@ -1,18 +1,20 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-// import { Link } from "react-router";
+import { BrowserRouter, Link } from "react-router-dom";
 import Anchor from ".";
 
-const ReactLink = <div>stuff</div>;
+const exampleURL = "https://example.com";
+const exampleChild = "example";
 
-storiesOf("Anchor", module).add("Anchor default", () => (
-  <Anchor hyperLink="https://example.com" label="label" target="_blank">
-    Anchor example
+storiesOf("Anchor", module).add("Link", () => (
+  <Anchor>
+    <a href={exampleURL}>{exampleChild}</a>
   </Anchor>
 ));
-
-storiesOf("Anchor", module).add("Link example", () => (
-  <Anchor hyperLink="https://example.com" component={ReactLink}>
-    link example
+storiesOf("Anchor", module).add("Anchor", () => (
+  <Anchor>
+    <BrowserRouter>
+      <Link to={exampleURL}>{exampleChild}</Link>
+    </BrowserRouter>
   </Anchor>
 ));

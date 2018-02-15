@@ -3,23 +3,26 @@
 import React from "react";
 import glamorous from "glamorous";
 // import { BrowserRouter, Link } from "react-router";
-import PhaseBadge from "../PhaseBadge/index";
+// import PhaseBadge from "../PhaseBadge/index";
 
-const StyledLink = glamorous(PhaseBadge)({
-  backgroundColor: "red"
+const StyledLinkItem = glamorous.span({
+  border: "1px solid red"
 });
 
-// const StyledLink = () => (
-//   <BrowserRouter>
-//     <div>
-//       <StyledLinkItem exact to="/">
-//         Home
-//       </StyledLinkItem>
-//       <StyledLinkItem exact to="/somewhere">
-//         Somewhere
-//       </StyledLinkItem>
-//     </div>
-//   </BrowserRouter>
-// );
+function componentWrapper(child) {
+  if (!child.props.child) {
+    return (
+      <a href={child.props.hyperLink} target={child.props.target}>
+        {child.props.children}
+      </a>
+    );
+  }
+
+  return child;
+}
+
+const StyledLink = ({ ...props }) => (
+  <StyledLinkItem>{componentWrapper({ props })}</StyledLinkItem>
+);
 
 export default StyledLink;

@@ -63,7 +63,8 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "dependencies": {
-    "govuk-colours": "^1.0.3"
+    "govuk-colours": "^1.0.3",
+    "react-router-dom": "^4.2.2"
   },
   "peerDependencies": {
     "glamorous": ">=4",
