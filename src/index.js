@@ -18,3 +18,5 @@ export { default as Radio } from "./components/Radio";
 export { default as Select } from "./components/Select";
 export { default as TextArea } from "./components/TextArea";
 export { default as MultiChoice } from "./components/MultiChoice";
+
+export { default as SearchIcon } from "./icons/Search";
