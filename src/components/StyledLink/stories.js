@@ -20,5 +20,5 @@ storiesOf("StyledLink", module).add("StyledLink", () => (
 ));
 
 storiesOf("StyledLink", module).add("StyledLink with Link", () => (
-  <StyledLink component={thing} />
+  <StyledLink hyperLink={exampleURL} component={thing} />
 ));

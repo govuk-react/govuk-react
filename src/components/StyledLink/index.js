@@ -2,15 +2,28 @@
 
 import React from "react";
 import glamorous from "glamorous";
-// import { BrowserRouter, Link } from "react-router";
-// import PhaseBadge from "../PhaseBadge/index";
+import { BLUE, PURPLE, YELLOW } from "govuk-colours";
 
 const StyledLinkItem = glamorous.span({
-  border: "1px solid red"
+  "> a": {
+    color: BLUE,
+    padding: "3px",
+    margin: "-3px",
+    outlineColor: "transparent",
+    display: "inline-block",
+    textDecoration: "underline",
+    ":focus": {
+      backgroundColor: YELLOW,
+      outline: `3px solid ${YELLOW}`
+    },
+    ":visited": {
+      color: PURPLE
+    }
+  }
 });
 
 function componentWrapper(child) {
-  if (!child.props.child) {
+  if (!child.props.component) {
     return (
       <a href={child.props.hyperLink} target={child.props.target}>
         {child.props.children}
