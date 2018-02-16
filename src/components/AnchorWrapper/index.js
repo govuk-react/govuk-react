@@ -23,10 +23,10 @@ const AnchorInner = glamorous.span({
   }
 });
 
-const Anchor = ({ children }) => <AnchorInner>{children}</AnchorInner>;
+const AnchorWrapper = ({ children }) => <AnchorInner>{children}</AnchorInner>;
 
-Anchor.propTypes = {
+AnchorWrapper.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-export default Anchor;
+export default AnchorWrapper;

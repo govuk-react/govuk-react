@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { mount } from "enzyme";
-import Anchor from "./";
+import AnchorWrapper from "./";
 
 const example = "example";
-const wrapper = <Anchor hyperLink={`https://${example}.com`}>{example}</Anchor>;
+const wrapper = <AnchorWrapper hyperLink={`https://${example}.com`}>{example}</AnchorWrapper>;
 
-describe(Anchor, () => {
+describe(AnchorWrapper, () => {
   it("renders without crashing", () => {
     const div = document.createElement("div");
     ReactDOM.render(wrapper, div);

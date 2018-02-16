@@ -21,5 +21,5 @@ import "../components/Select/stories";
 import "../components/TextArea/stories";
 import "../components/PhaseBadge/stories";
 import "../components/PhaseBanner/stories";
-import "../components/Anchor/stories";
+import "../components/AnchorWrapper/stories";
 import "../components/StyledLink/stories";
