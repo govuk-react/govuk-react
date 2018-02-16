@@ -20,3 +20,4 @@ export { default as TextArea } from "./components/TextArea";
 export { default as MultiChoice } from "./components/MultiChoice";
 export { default as PhaseBadge } from "./components/PhaseBadge";
 export { default as PhaseBanner } from "./components/PhaseBanner";
+export { default as SearchIcon } from "./icons/Search";

@@ -13,7 +13,7 @@ const GridColInner = glamorous.div(
     margin: 0,
     marginBottom: SPACING.SCALE_3,
     textIndent: "0",
-    boxSize: "border-box",
+    boxSizing: "border-box",
     [MEDIA_QUERIES.LARGESCREEN]: {
       width: "100%",
       margin: `0 ${GUTTER_HALF}`,
