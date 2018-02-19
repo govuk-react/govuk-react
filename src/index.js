@@ -19,6 +19,8 @@ export { default as Radio } from "./components/Radio";
 export { default as Select } from "./components/Select";
 export { default as TextArea } from "./components/TextArea";
 export { default as MultiChoice } from "./components/MultiChoice";
+export { default as PhaseBadge } from "./components/PhaseBadge";
+export { default as PhaseBanner } from "./components/PhaseBanner";
 
 // Higher Level Components
 export { default as asAnchor } from "./hoc/asAnchor";
