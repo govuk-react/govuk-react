@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`asAnchor matches wrapper snapshot: wrapper mount 1`] = `
+<glamorous(span)>
+  <a
+    href="https://example.com"
+  >
+    Example
+  </a>
+</glamorous(span)>
+`;

@@ -20,6 +20,4 @@ import "../components/Radio/stories";
 import "../components/Select/stories";
 import "../components/TextArea/stories";
 import "../components/SearchBox/stories";
-import "../components/AnchorWrapper/stories";
-import "../components/StyledLink/stories";
 import "../components/asAnchor/stories";
