@@ -1,3 +1,4 @@
+// Components
 export { default as BackLink } from "./components/BackLink";
 export { default as Breadcrumb } from "./components/Breadcrumb";
 export { default as Button } from "./components/Button";
@@ -19,4 +20,8 @@ export { default as Select } from "./components/Select";
 export { default as TextArea } from "./components/TextArea";
 export { default as MultiChoice } from "./components/MultiChoice";
 
+// Higher Level Components
+export { default as asAnchor } from "./hoc/asAnchor";
+
+// Icons
 export { default as SearchIcon } from "./icons/Search";

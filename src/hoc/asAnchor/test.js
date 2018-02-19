@@ -13,6 +13,10 @@ describe(asAnchor, () => {
     ReactDOM.render(wrapper, div);
   });
 
+  it("returns a component", () => {
+    expect(shallow(wrapper).html().toBeTruthy);
+  });
+
   it("matches wrapper snapshot", () => {
     expect(shallow(wrapper)).toMatchSnapshot(`wrapper mount`);
   });
