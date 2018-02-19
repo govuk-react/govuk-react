@@ -1,3 +1,4 @@
+// Components
 export { default as BackLink } from "./components/BackLink";
 export { default as Breadcrumb } from "./components/Breadcrumb";
 export { default as Button } from "./components/Button";
@@ -20,4 +21,9 @@ export { default as TextArea } from "./components/TextArea";
 export { default as MultiChoice } from "./components/MultiChoice";
 export { default as PhaseBadge } from "./components/PhaseBadge";
 export { default as PhaseBanner } from "./components/PhaseBanner";
+
+// Higher Order Components
+export { default as asAnchor } from "./hoc/asAnchor";
+
+// Icons
 export { default as SearchIcon } from "./icons/Search";
