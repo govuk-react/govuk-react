@@ -22,7 +22,7 @@ export { default as MultiChoice } from "./components/MultiChoice";
 export { default as PhaseBadge } from "./components/PhaseBadge";
 export { default as PhaseBanner } from "./components/PhaseBanner";
 
-// Higher Level Components
+// Higher Order Components
 export { default as asAnchor } from "./hoc/asAnchor";
 
 // Icons
