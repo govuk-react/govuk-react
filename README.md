@@ -24,6 +24,27 @@ See the [Storybook](https://penx.github.io/govuk-react) for examples of all avai
 
 Also see the [example project](https://github.com/penx/govuk-react-example) for basic usage.
 
+## Using Anchors/React Router Link
+
+We are using a Higher Order Component (HOC), which takes a component and returns a new component with the original props.
+
+We use the same HOC for an `<a href...>` as we do for a `<Link to...>`. For example;
+```
+import { BrowserRouter, Link } from 'react-router';
+import asAnchor from 'govuk-react';
+
+const MyLink = asAnchor(Link);
+
+const MyComponent = () => {
+  <nav>
+    <BrowserRouter>
+      <MyLink to="https://example.com">example</MyLink>
+    </BrowserRouter>
+  </nav>
+}
+
+```
+
 ## Assumptions
 
 Use of these components assumes the following from the peer project:
@@ -48,7 +69,7 @@ See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-
  - [govuk-frontend](https://github.com/alphagov/govuk-frontend/)
  - [govuk_template](http://alphagov.github.io/govuk_template/) ([source](https://github.com/alphagov/govuk_template))
  - [GOV.UK Design Patterns](https://www.gov.uk/service-manual/design#find-patterns)
- 
+
 ## Contributing
 
 ### Creating a new component

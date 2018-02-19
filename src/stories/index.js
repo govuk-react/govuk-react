@@ -22,3 +22,4 @@ import "../components/TextArea/stories";
 import "../components/SearchBox/stories";
 import "../components/AnchorWrapper/stories";
 import "../components/StyledLink/stories";
+import "../components/asAnchor/stories";
