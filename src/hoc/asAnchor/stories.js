@@ -1,6 +1,5 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { BrowserRouter, Link } from "react-router-dom";
 
 import asAnchor from ".";
