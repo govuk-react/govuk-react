@@ -8,7 +8,7 @@
     "build": "npm run build:lib && npm run build:es",
     "build:lib": "rimraf lib && babel src -d lib",
     "build:es": "rimraf es && babel --config-file ./config/babel/es.json src -d es",
-    "build:dist": "nwb build-react-app",
+    "build:dist": "webpack -p es/index.js dist/index.js",
     "clean": "rimraf lib && rimraf es",
     "flow": "flow",
     "bundlesize": "bundlesize",
@@ -75,11 +75,11 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
     "@babel/core": "^7.0.0-beta.40",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.40",
     "@babel/preset-env": "^7.0.0-beta.40",
     "@babel/preset-flow": "^7.0.0-beta.40",
     "@babel/preset-react": "^7.0.0-beta.40",
     "@babel/preset-stage-1": "^7.0.0-beta.40",
-    "@babel/plugin-transform-runtime": "^7.0.0-beta.40",
     "@storybook/addon-actions": "^3.3.9",
     "@storybook/addon-knobs": "^3.3.12",
     "@storybook/addon-links": "^3.3.9",
@@ -138,12 +138,8 @@
   "homepage": "https://github.com/penx/govuk-react#readme",
   "bundlesize": [
     {
-      "path": "./dist/vendor.*.js",
-      "maxSize": "60 kB"
-    },
-    {
-      "path": "./dist/app.*.js",
-      "maxSize": "20 kB"
+      "path": "./dist/index.js",
+      "maxSize": "120 kB"
     }
   ]
 }
