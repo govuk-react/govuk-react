@@ -1,17 +1,17 @@
 {
   "presets": [
-    ["@babel/env", {
+    ["@babel/preset-env", {
         "loose": true,
         "modules": false
       }],
-    "@babel/react",
-    "@babel/stage-1"
+    "@babel/preset-react",
+    "@babel/preset-stage-1"
   ],
   "plugins": [
     "transform-decorators-legacy",
     ["transform-react-remove-prop-types", { "mode": "wrap" }],
     [
-      "@babel/transform-runtime",
+      "@babel/plugin-transform-runtime",
       { "helpers": false, "polyfill": false, "regenerator": true }
     ]
   ],
