@@ -13,7 +13,7 @@
     "flow": "flow",
     "bundlesize": "bundlesize",
     "test": "CI=true npm run test:unit && npm run eslint && npm run flow",
-    "test:unit": "node scripts/test.js --env=jsdom",
+    "test:unit": "jest --env=jsdom",
     "test:debug": "node  --inspect-brk scripts/test.js --runInBand --env=jsdom",
     "test:snapshot": "npm run test:unit -- -u",
     "coverage": "npm run test:unit -- --coverage",
@@ -40,7 +40,7 @@
     "testEnvironment": "node",
     "testURL": "http://localhost",
     "transform": {
-      "^.+\\.(js|jsx)$": "<rootDir>/scripts/babelJest.js"
+      "^.+\\.(js|jsx)$": "babel-jest"
     },
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
@@ -75,6 +75,7 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
     "@babel/core": "^7.0.0-beta.40",
+    "@babel/node": "^7.0.0-beta.40",
     "@babel/plugin-transform-runtime": "^7.0.0-beta.40",
     "@babel/preset-env": "^7.0.0-beta.40",
     "@babel/preset-flow": "^7.0.0-beta.40",
@@ -85,8 +86,9 @@
     "@storybook/addon-links": "^3.3.9",
     "@storybook/react": "^3.3.9",
     "@storybook/storybook-deployer": "^2.2.0",
-    "babel-eslint": "^8.2.1",
-    "babel-jest": "^22.1.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "^22.4.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-react-remove-prop-types": "^3.0.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
