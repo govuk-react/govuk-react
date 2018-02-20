@@ -13,7 +13,7 @@
     "flow": "flow",
     "bundlesize": "bundlesize",
     "test": "CI=true npm run test:unit && npm run eslint && npm run flow",
-    "test:unit": "jest --env=jsdom",
+    "test:unit": "jest --env=jsdom --forceExit",
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --env=jsdom",
     "test:snapshot": "npm run test:unit -- -u",
     "build-storybook": "build-storybook",
