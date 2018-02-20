@@ -14,7 +14,7 @@
     "bundlesize": "bundlesize",
     "test": "CI=true npm run test:unit && npm run eslint && npm run flow",
     "test:unit": "jest --env=jsdom",
-    "test:debug": "node  --inspect-brk ./node_modules/.bin/jest --env=jsdom",
+    "test:debug": "node --inspect-brk ./node_modules/.bin/jest --env=jsdom",
     "test:snapshot": "npm run test:unit -- -u",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
