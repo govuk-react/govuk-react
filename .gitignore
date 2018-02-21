@@ -22,3 +22,5 @@ yarn-error.log*
 /es
 govuk-react-*.tgz
 /dist
+src/components/**/API.md
+src/components/**/image.png
