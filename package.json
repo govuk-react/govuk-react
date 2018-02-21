@@ -94,7 +94,7 @@
     "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
     "bundlesize": "^0.16.0",
     "enzyme": "^3.3.0",
-    "enzyme-adapter-react-15": "^1.0.5",
+    "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.0",
     "eslint": "^4.15.0",
     "eslint-config-airbnb": "^16.1.0",
