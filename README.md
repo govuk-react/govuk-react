@@ -4,6 +4,7 @@ A set of [govuk](https://github.com/alphagov/) components for [React](https://re
 
 [![Build Status](https://travis-ci.org/penx/govuk-react.svg?branch=master)](https://travis-ci.org/penx/govuk-react)
 [![codecov](https://codecov.io/gh/penx/govuk-react/branch/master/graph/badge.svg)](https://codecov.io/gh/penx/govuk-react)
+[![Greenkeeper badge](https://badges.greenkeeper.io/penx/govuk-react.svg)](https://greenkeeper.io/)
 
 CSS styling is derived from [GOV.UK/elements](https://github.com/alphagov/govuk_elements) but modified to suit custom markup. Also flexbox is preferred over floats.
 
