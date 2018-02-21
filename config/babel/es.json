@@ -1,0 +1,19 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+        "loose": true,
+        "modules": false
+      }],
+    "@babel/preset-react",
+    "@babel/preset-stage-1"
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    ["transform-react-remove-prop-types", { "mode": "wrap" }],
+    [
+      "@babel/plugin-transform-runtime",
+      { "helpers": false, "polyfill": false, "regenerator": true }
+    ]
+  ],
+  "ignore": [".spec.js", ".test.js", "-test.js", "/__tests__/"]
+}
