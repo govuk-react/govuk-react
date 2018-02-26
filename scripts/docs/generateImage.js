@@ -1,5 +1,4 @@
 import { generateImage as gi } from "component-image";
-import path from "path";
 import renderGlamorous from "render-glamorous";
 
 const generateImage = (component, config) =>
@@ -7,10 +6,6 @@ const generateImage = (component, config) =>
     component,
     Object.assign(
       {
-        stylesheet: path.join(
-          __dirname,
-          "../node_modules/normalize.css/normalize.css"
-        ),
         renderer: renderGlamorous
       },
       config

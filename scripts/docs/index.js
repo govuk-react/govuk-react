@@ -5,46 +5,66 @@
 import fs from "fs";
 import path from "path";
 import glob from "glob-promise";
+import chalk from "chalk";
 import { parse } from "react-docgen";
+import { promisify } from "util";
 
 import generateMarkdown from "./markdown/generateMarkdown";
 import loadExample from "./loadExample";
 import generateComponentImage from "./generateComponentImage";
 
-function getMarkdownForComponent(file) {
+const components = require("../../src");
+
+function getComponentNameFromFile(file) {
+  const dirs = path.dirname(file).split(path.sep);
+  return dirs[dirs.length - 1];
+}
+
+function getMarkdownForComponent(file, imagePath) {
   const src = fs.readFileSync(path.resolve(__dirname, file));
   const componentInfo = parse(src);
-  const dirs = path.dirname(file).split(path.sep);
-  const componentName = dirs[dirs.length - 1];
-  return generateMarkdown(componentName, componentInfo);
+  const componentName = getComponentNameFromFile(file);
+  return generateMarkdown(componentName, componentInfo, imagePath);
 }
 
 async function generateApiForFile(file) {
   try {
     const Component = loadExample(file);
-    await generateComponentImage(file, Component);
-    const markdown = getMarkdownForComponent(file);
-    fs.writeFileSync(path.resolve(file, "../API.md"), markdown);
+    const componentName = getComponentNameFromFile(file);
+    const imagePath = `./docs/${componentName}.png`;
+    // await generateComponentImage(file, Component, imagePath);
+    const md = getMarkdownForComponent(file, imagePath);
+    console.log(chalk.green("API Documented:"), componentName);
+    return md;
   } catch (e) {
-    console.log(`Skipping component: ${file}`);
+    console.log(chalk.red("Skipping component:"), file, e.message);
+    return "";
   }
 }
 
+function shouldDocumentComponent(file) {
+  // only document components that are exported from src/index.js
+  const name = getComponentNameFromFile(file);
+  return components.hasOwnProperty(name);
+}
+
 async function generateApiForFiles(files) {
+  let md = "";
   for (let i = 0; i < files.length; i += 1) {
     const file = files[i];
-    await generateApiForFile(file);
+    if (shouldDocumentComponent(file)) {
+      md += await generateApiForFile(file);
+    }
   }
+  return md;
 }
 
 async function docs() {
   const files = await glob(
     path.resolve(__dirname, "../../src/components/**/index.js")
   );
-  console.log(files);
-  generateApiForFiles(files);
+  const md = await generateApiForFiles(files);
+  await promisify(fs.writeFile)("./API.md", md);
 }
-
-export default docs;
 
 docs();

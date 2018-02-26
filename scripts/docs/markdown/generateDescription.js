@@ -1,4 +1,4 @@
-export default function generateDescription(description) {
-  return `![Component Image](./image.png)
+export default function generateDescription(description, imagePath) {
+  return `${imagePath ? `![Component Image](${imagePath})` : ""}
 ${description}\n`;
 }

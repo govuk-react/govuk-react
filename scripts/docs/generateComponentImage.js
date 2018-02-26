@@ -1,15 +1,25 @@
 /* eslint-disable no-console */
 
 import React from "react";
-import path from "path";
+import Jimp from "jimp";
+import chalk from "chalk";
+
 import generateImage from "./generateImage";
 
-export default async function generateComponentImage(file, Component) {
-  console.log(`generating image for ${file}`);
-  await generateImage(React.createElement(Component), {
-    image: {
-      path: path.resolve(file, "../image.png")
-    }
-  });
-  console.log(`generating done`);
+export default async function generateComponentImage(
+  file,
+  Component,
+  imagePath
+) {
+  try {
+    const image = await generateImage(React.createElement(Component), {
+      image: {
+        omitBackground: false
+      }
+    });
+    const jimage = await Jimp.read(image);
+    jimage.autocrop(false).write(imagePath);
+  } catch (e) {
+    console.log(chalk.red("Error generating image:"), file, e.message);
+  }
 }
