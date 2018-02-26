@@ -102,7 +102,8 @@ defaultValue: `null`
 Props
 -----
 
-undefined`FileUpload`
+
+`FileUpload`
 ============
 
 ![Component Image](./docs/FileUpload.png)
@@ -162,7 +163,8 @@ defaultValue: `undefined`
 Props
 -----
 
-undefined`Input`
+
+`Input`
 =======
 
 ![Component Image](./docs/Input.png)
@@ -228,7 +230,8 @@ defaultValue: `{}`
 Props
 -----
 
-undefined`LabelText`
+
+`LabelText`
 ===========
 
 ![Component Image](./docs/LabelText.png)
@@ -237,7 +240,8 @@ undefined`LabelText`
 Props
 -----
 
-undefined`MultiChoice`
+
+`MultiChoice`
 =============
 
 ![Component Image](./docs/MultiChoice.png)
@@ -276,7 +280,8 @@ defaultValue: `{}`
 Props
 -----
 
-undefined`PhaseBanner`
+
+`PhaseBanner`
 =============
 
 ![Component Image](./docs/PhaseBanner.png)
