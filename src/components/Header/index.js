@@ -4,7 +4,7 @@
 // https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_elements-typography.scss
 
 import glamorous from "glamorous";
-import React, { createElement } from "react";
+import { createElement } from "react";
 import PropTypes from "prop-types";
 
 import { MEDIA_QUERIES, NTA_LIGHT } from "../../constants/index";
@@ -44,10 +44,3 @@ Header.propTypes = {
 };
 
 export default Header;
-
-export const H1 = props => <Header level={1} size={LEVEL_SIZE[1]} {...props} />;
-export const H2 = props => <Header level={2} size={LEVEL_SIZE[2]} {...props} />;
-export const H3 = props => <Header level={3} size={LEVEL_SIZE[3]} {...props} />;
-export const H4 = props => <Header level={4} size={LEVEL_SIZE[4]} {...props} />;
-export const H5 = props => <Header level={5} size={LEVEL_SIZE[5]} {...props} />;
-export const H6 = props => <Header level={6} size={LEVEL_SIZE[6]} {...props} />;
