@@ -141,44 +141,54 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
     }
   }
 >
-  <glamorous(label)
+  <Label
     error="example"
   >
-    <label
-      className="glamor-4"
+    <glamorous(label)
+      error="example"
     >
-      <glamorous(span)>
-        <span
-          className="glamor-0"
-        >
-          example
-        </span>
-      </glamorous(span)>
-      <glamorous(span)>
-        <span
-          className="glamor-1"
-        >
-          example
-        </span>
-      </glamorous(span)>
-      <glamorous(span)>
-        <span
-          className="glamor-2"
-        >
-          example
-        </span>
-      </glamorous(span)>
-      <glamorous(select)
-        error="example"
+      <label
+        className="glamor-4"
       >
-        <select
-          className="glamor-3"
+        <LabelText>
+          <glamorous(span)>
+            <span
+              className="glamor-0"
+            >
+              example
+            </span>
+          </glamorous(span)>
+        </LabelText>
+        <HintText>
+          <glamorous(span)>
+            <span
+              className="glamor-1"
+            >
+              example
+            </span>
+          </glamorous(span)>
+        </HintText>
+        <ErrorText>
+          <glamorous(span)>
+            <span
+              className="glamor-2"
+            >
+              example
+            </span>
+          </glamorous(span)>
+        </ErrorText>
+        <glamorous(select)
+          error="example"
         >
-          example
-        </select>
-      </glamorous(select)>
-    </label>
-  </glamorous(label)>
+          <select
+            className="glamor-3"
+          >
+            example
+          </select>
+        </glamorous(select)>
+      </label>
+    </glamorous(label)>
+  </Label>
 </Select>
 `;
 
@@ -270,25 +280,29 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   label="example"
   meta={Object {}}
 >
-  <glamorous(label)>
-    <label
-      className="glamor-2"
-    >
-      <glamorous(span)>
-        <span
-          className="glamor-0"
-        >
-          example
-        </span>
-      </glamorous(span)>
-      <glamorous(select)>
-        <select
-          className="glamor-1"
-        >
-          example
-        </select>
-      </glamorous(select)>
-    </label>
-  </glamorous(label)>
+  <Label>
+    <glamorous(label)>
+      <label
+        className="glamor-2"
+      >
+        <LabelText>
+          <glamorous(span)>
+            <span
+              className="glamor-0"
+            >
+              example
+            </span>
+          </glamorous(span)>
+        </LabelText>
+        <glamorous(select)>
+          <select
+            className="glamor-1"
+          >
+            example
+          </select>
+        </glamorous(select)>
+      </label>
+    </glamorous(label)>
+  </Label>
 </Select>
 `;

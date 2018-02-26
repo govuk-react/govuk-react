@@ -27,18 +27,22 @@ exports[`Header matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<glamorous(unknown)
+<Header
   level={1}
 >
-  <Component
-    className="glamor-0"
+  <glamorous(unknown)
     level={1}
   >
-    <h1
+    <Component
       className="glamor-0"
+      level={1}
     >
-      example
-    </h1>
-  </Component>
-</glamorous(unknown)>
+      <h1
+        className="glamor-0"
+      >
+        example
+      </h1>
+    </Component>
+  </glamorous(unknown)>
+</Header>
 `;

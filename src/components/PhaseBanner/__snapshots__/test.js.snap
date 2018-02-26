@@ -61,13 +61,15 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
     <p
       className="glamor-1"
     >
-      <glamorous(strong)>
-        <strong
-          className="glamor-0"
-        >
-          beta
-        </strong>
-      </glamorous(strong)>
+      <PhaseBadge>
+        <glamorous(strong)>
+          <strong
+            className="glamor-0"
+          >
+            beta
+          </strong>
+        </glamorous(strong)>
+      </PhaseBadge>
       example
     </p>
   </glamorous(p)>
