@@ -6,9 +6,10 @@ export default function generateProps(props) {
 
   return (
     `${title}\n${stringOfLength("-", title.length)}\n` +
-    `\n${Object.keys(props)
-      .sort()
-      .map(propName => generateProp(propName, props[propName]))
-      .join("\n")}`
+    `\n${props &&
+      Object.keys(props)
+        .sort()
+        .map(propName => generateProp(propName, props[propName]))
+        .join("\n")}`
   );
 }
