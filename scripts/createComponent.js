@@ -29,9 +29,9 @@ const writeThis = (fileName, contents) => {
     if (err) {
       return console.log(err);
     }
+    console.log(`Created file: ${folderName}/${fileName}.js`);
     return false;
   });
-  console.log(`Created file: ${folderName}/${fileName}.js`);
   return false;
 };
 
