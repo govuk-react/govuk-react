@@ -99,10 +99,6 @@ defaultValue: `null`
 ![Component Image](./docs/ErrorText.png)
 
 
-Props
------
-
-
 `FileUpload`
 ============
 
@@ -158,10 +154,6 @@ defaultValue: `undefined`
 ==========
 
 ![Component Image](./docs/HintText.png)
-
-
-Props
------
 
 
 `Input`
@@ -227,18 +219,10 @@ defaultValue: `{}`
 ![Component Image](./docs/Label.png)
 
 
-Props
------
-
-
 `LabelText`
 ===========
 
 ![Component Image](./docs/LabelText.png)
-
-
-Props
------
 
 
 `MultiChoice`
@@ -275,10 +259,6 @@ defaultValue: `{}`
 ============
 
 ![Component Image](./docs/PhaseBadge.png)
-
-
-Props
------
 
 
 `PhaseBanner`
