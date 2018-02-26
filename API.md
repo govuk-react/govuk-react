@@ -1,5 +1,5 @@
-`BackLink`
-==========
+BackLink
+========
 
 ![Component Image](./docs/BackLink.png)
 
@@ -21,8 +21,8 @@ A function that is called on click
 type: `func`
 defaultValue: `undefined`
 
-`Breadcrumb`
-============
+Breadcrumb
+==========
 
 ![Component Image](./docs/Breadcrumb.png)
 
@@ -36,8 +36,8 @@ Generally a series of anchors or Link components
 
 type: `node`
 
-`Button`
-========
+Button
+======
 
 ![Component Image](./docs/Button.png)
 
@@ -49,8 +49,8 @@ Props
 
 defaultValue: `"Button"`
 
-`Checkbox`
-==========
+Checkbox
+========
 
 ![Component Image](./docs/Checkbox.png)
 
@@ -68,8 +68,8 @@ type: `node`
 type: `bool`
 defaultValue: `undefined`
 
-`DateInput`
-===========
+DateInput
+=========
 
 ![Component Image](./docs/DateInput.png)
 
@@ -93,14 +93,14 @@ defaultValue: `null`
 type: `string`
 defaultValue: `null`
 
-`ErrorText`
-===========
+ErrorText
+=========
 
 ![Component Image](./docs/ErrorText.png)
 
 
-`FileUpload`
-============
+FileUpload
+==========
 
 ![Component Image](./docs/FileUpload.png)
 
@@ -130,8 +130,8 @@ defaultValue: `null`
 type: `shape[object Object]`
 defaultValue: `{}`
 
-`Header`
-========
+Header
+======
 
 ![Component Image](./docs/Header.png)
 
@@ -150,14 +150,14 @@ defaultValue: `1`
 type: `enumObject.keys(FONT_SIZES)`
 defaultValue: `undefined`
 
-`HintText`
-==========
+HintText
+========
 
 ![Component Image](./docs/HintText.png)
 
 
-`Input`
-=======
+Input
+=====
 
 ![Component Image](./docs/Input.png)
 
@@ -182,8 +182,8 @@ defaultValue: `"text"`
 type: `string`
 defaultValue: `undefined`
 
-`InputField`
-============
+InputField
+==========
 
 ![Component Image](./docs/InputField.png)
 
@@ -213,20 +213,20 @@ defaultValue: `{}`
 type: `shape[object Object]`
 defaultValue: `{}`
 
-`Label`
-=======
+Label
+=====
 
 ![Component Image](./docs/Label.png)
 
 
-`LabelText`
-===========
+LabelText
+=========
 
 ![Component Image](./docs/LabelText.png)
 
 
-`MultiChoice`
-=============
+MultiChoice
+===========
 
 ![Component Image](./docs/MultiChoice.png)
 
@@ -255,14 +255,14 @@ type: `node`
 type: `shape[object Object]`
 defaultValue: `{}`
 
-`PhaseBadge`
-============
+PhaseBadge
+==========
 
 ![Component Image](./docs/PhaseBadge.png)
 
 
-`PhaseBanner`
-=============
+PhaseBanner
+===========
 
 ![Component Image](./docs/PhaseBanner.png)
 
@@ -279,8 +279,8 @@ type: `node`
 
 type: `string`
 
-`Radio`
-=======
+Radio
+=====
 
 ![Component Image](./docs/Radio.png)
 
@@ -298,8 +298,8 @@ type: `node`
 type: `bool`
 defaultValue: `undefined`
 
-`Select`
-========
+Select
+======
 
 ![Component Image](./docs/Select.png)
 
@@ -340,8 +340,8 @@ type: `string`
 type: `shape[object Object]`
 defaultValue: `{}`
 
-`TextArea`
-==========
+TextArea
+========
 
 ![Component Image](./docs/TextArea.png)
 
