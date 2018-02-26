@@ -30,6 +30,7 @@
       "src/**/*.{js,jsx}",
       "!<rootDir>/node_modules/",
       "!src/**/stories.js",
+      "!src/**/example.js",
       "!src/stories/*"
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
