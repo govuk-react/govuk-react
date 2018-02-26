@@ -3,14 +3,14 @@
 exports[`button matches wrapper snapshot: wrapper mount 1`] = `
 .glamor-0,
 [data-glamor-0] {
-  -webkit-appearance: none;
-  -webkit-font-smoothing: antialiased;
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
   font-size: 1em;
   line-height: 1.25;
   outline-offset: -1px;
@@ -18,6 +18,8 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
   padding: .526315em .789473em .263157em;
   position: duabs;
   text-decoration: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
 }
 
 .glamor-0:focus,
