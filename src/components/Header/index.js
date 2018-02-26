@@ -4,13 +4,13 @@
 // https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_elements-typography.scss
 
 import glamorous from "glamorous";
-import { createElement } from "react";
+import React, { createElement } from "react";
 import PropTypes from "prop-types";
 
 import { MEDIA_QUERIES, NTA_LIGHT } from "../../constants/index";
 import { LEVEL_SIZE, FONT_SIZES, LEVEL_TAG } from "../../constants/typography";
 
-const Header = glamorous(({ level, children, ...props }) =>
+const GHeader = glamorous(({ level, children, ...props }) =>
   createElement(LEVEL_TAG[level], props, children)
 )(
   {
@@ -32,6 +32,8 @@ const Header = glamorous(({ level, children, ...props }) =>
     }
   })
 );
+
+const Header = (props = {}) => <GHeader {...props} />;
 
 Header.defaultProps = {
   level: 1,

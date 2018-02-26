@@ -1,11 +1,12 @@
 // https://github.com/alphagov/govuk-frontend/tree/master/src/components/
 
 import glamorous from "glamorous";
+import React from "react";
 
 import { ERROR_COLOUR } from "govuk-colours";
 import { MEDIA_QUERIES, SITE_WIDTH, SPACING } from "../../constants/index";
 
-const Label = glamorous.label(
+const GLabel = glamorous.label(
   {
     display: "flex",
     flexDirection: "column",
@@ -26,5 +27,7 @@ const Label = glamorous.label(
     paddingLeft: error ? SPACING.SCALE_2 : undefined
   })
 );
+
+const Label = (props = {}) => <GLabel {...props} />;
 
 export default Label;

@@ -6,6 +6,8 @@
 // https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_buttons.scss
 
 import glamorous from "glamorous";
+import React from "react";
+
 import {
   BUTTON_COLOUR,
   BUTTON_COLOUR_DARKEN_15,
@@ -13,7 +15,7 @@ import {
   YELLOW
 } from "govuk-colours";
 
-const Button = glamorous.button(
+const GButton = glamorous.button(
   {
     WebkitAppearance: "none",
     WebkitFontSmoothing: "antialiased",
@@ -51,6 +53,8 @@ const Button = glamorous.button(
     paddingRight: iconUrl ? "2.15789em" : undefined
   })
 );
+
+const Button = (props = {}) => <GButton {...props} />;
 
 Button.defaultProps = {
   children: "Button"
