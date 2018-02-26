@@ -32,7 +32,7 @@ async function generateApiForFile(file) {
     const Component = loadExample(file);
     const componentName = getComponentNameFromFile(file);
     const imagePath = `./docs/${componentName}.png`;
-    // await generateComponentImage(file, Component, imagePath);
+    await generateComponentImage(file, Component, imagePath);
     const md = getMarkdownForComponent(file, imagePath);
     console.log(chalk.green("API Documented:"), componentName);
     return md;
