@@ -54,7 +54,7 @@ const GButton = glamorous.button(
   })
 );
 
-const Button = (props = {}) => <GButton {...props} />;
+const Button = (props) => <GButton {...props} />;
 
 Button.defaultProps = {
   children: "Button"

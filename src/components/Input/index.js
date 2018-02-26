@@ -37,7 +37,7 @@ const GInput = glamorous.input(
   })
 );
 
-const Input = (props = {}) => <GInput {...props} />;
+const Input = (props) => <GInput {...props} />;
 
 Input.defaultProps = {
   value: undefined,

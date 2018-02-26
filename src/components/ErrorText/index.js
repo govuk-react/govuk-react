@@ -23,5 +23,5 @@ const GErrorText = glamorous.span({
   }
 });
 
-const ErrorText = (props = {}) => <GErrorText {...props} />;
+const ErrorText = (props) => <GErrorText {...props} />;
 export default ErrorText;

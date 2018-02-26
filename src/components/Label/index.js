@@ -28,6 +28,6 @@ const GLabel = glamorous.label(
   })
 );
 
-const Label = (props = {}) => <GLabel {...props} />;
+const Label = (props) => <GLabel {...props} />;
 
 export default Label;

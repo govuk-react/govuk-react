@@ -33,7 +33,7 @@ const GHeader = glamorous(({ level, children, ...props }) =>
   })
 );
 
-const Header = (props = {}) => <GHeader {...props} />;
+const Header = (props) => <GHeader {...props} />;
 
 Header.defaultProps = {
   level: 1,
