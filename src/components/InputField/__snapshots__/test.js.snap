@@ -87,26 +87,34 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   input={Object {}}
   meta={Object {}}
 >
-  <glamorous(label)>
-    <label
-      className="glamor-2"
-    >
-      <glamorous(span)>
-        <span
-          className="glamor-0"
-        >
-          example
-        </span>
-      </glamorous(span)>
-      <glamorous(input)
-        type="text"
+  <Label>
+    <glamorous(label)>
+      <label
+        className="glamor-2"
       >
-        <input
-          className="glamor-1"
+        <LabelText>
+          <glamorous(span)>
+            <span
+              className="glamor-0"
+            >
+              example
+            </span>
+          </glamorous(span)>
+        </LabelText>
+        <Input
           type="text"
-        />
-      </glamorous(input)>
-    </label>
-  </glamorous(label)>
+        >
+          <glamorous(input)
+            type="text"
+          >
+            <input
+              className="glamor-1"
+              type="text"
+            />
+          </glamorous(input)>
+        </Input>
+      </label>
+    </glamorous(label)>
+  </Label>
 </InputField>
 `;

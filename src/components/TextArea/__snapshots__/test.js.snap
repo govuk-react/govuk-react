@@ -115,38 +115,46 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
     }
   }
 >
-  <glamorous(label)
+  <Label
     error="example"
   >
-    <label
-      className="glamor-3"
+    <glamorous(label)
+      error="example"
     >
-      <glamorous(span)>
-        <span
-          className="glamor-0"
-        >
-          example
-        </span>
-      </glamorous(span)>
-      <glamorous(span)>
-        <span
-          className="glamor-1"
-        >
-          example
-        </span>
-      </glamorous(span)>
-      <glamorous(textarea)
-        error="example"
-        rows="5"
-        type="text"
+      <label
+        className="glamor-3"
       >
-        <textarea
-          className="glamor-2"
+        <LabelText>
+          <glamorous(span)>
+            <span
+              className="glamor-0"
+            >
+              example
+            </span>
+          </glamorous(span)>
+        </LabelText>
+        <ErrorText>
+          <glamorous(span)>
+            <span
+              className="glamor-1"
+            >
+              example
+            </span>
+          </glamorous(span)>
+        </ErrorText>
+        <glamorous(textarea)
+          error="example"
           rows="5"
-        />
-      </glamorous(textarea)>
-    </label>
-  </glamorous(label)>
+          type="text"
+        >
+          <textarea
+            className="glamor-2"
+            rows="5"
+          />
+        </glamorous(textarea)>
+      </label>
+    </glamorous(label)>
+  </Label>
 </TextArea>
 `;
 
@@ -254,35 +262,41 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   input={Object {}}
   meta={Object {}}
 >
-  <glamorous(label)>
-    <label
-      className="glamor-3"
-    >
-      <glamorous(span)>
-        <span
-          className="glamor-0"
-        >
-          example
-        </span>
-      </glamorous(span)>
-      <glamorous(span)>
-        <span
-          className="glamor-1"
-        >
-          example
-        </span>
-      </glamorous(span)>
-      <glamorous(textarea)
-        rows="5"
-        type="text"
+  <Label>
+    <glamorous(label)>
+      <label
+        className="glamor-3"
       >
-        <textarea
-          className="glamor-2"
+        <LabelText>
+          <glamorous(span)>
+            <span
+              className="glamor-0"
+            >
+              example
+            </span>
+          </glamorous(span)>
+        </LabelText>
+        <HintText>
+          <glamorous(span)>
+            <span
+              className="glamor-1"
+            >
+              example
+            </span>
+          </glamorous(span)>
+        </HintText>
+        <glamorous(textarea)
           rows="5"
-        />
-      </glamorous(textarea)>
-    </label>
-  </glamorous(label)>
+          type="text"
+        >
+          <textarea
+            className="glamor-2"
+            rows="5"
+          />
+        </glamorous(textarea)>
+      </label>
+    </glamorous(label)>
+  </Label>
 </TextArea>
 `;
 
@@ -369,27 +383,31 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   input={Object {}}
   meta={Object {}}
 >
-  <glamorous(label)>
-    <label
-      className="glamor-2"
-    >
-      <glamorous(span)>
-        <span
-          className="glamor-0"
-        >
-          example
-        </span>
-      </glamorous(span)>
-      <glamorous(textarea)
-        rows="5"
-        type="text"
+  <Label>
+    <glamorous(label)>
+      <label
+        className="glamor-2"
       >
-        <textarea
-          className="glamor-1"
+        <LabelText>
+          <glamorous(span)>
+            <span
+              className="glamor-0"
+            >
+              example
+            </span>
+          </glamorous(span)>
+        </LabelText>
+        <glamorous(textarea)
           rows="5"
-        />
-      </glamorous(textarea)>
-    </label>
-  </glamorous(label)>
+          type="text"
+        >
+          <textarea
+            className="glamor-1"
+            rows="5"
+          />
+        </glamorous(textarea)>
+      </label>
+    </glamorous(label)>
+  </Label>
 </TextArea>
 `;

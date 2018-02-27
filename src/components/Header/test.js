@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { mount } from "enzyme";
 
-import Header, { H1, H2, H3, H4, H5, H6 } from ".";
+import Header from ".";
+import { H1, H2, H3, H4, H5, H6 } from "./presets";
 
 describe("Header", () => {
   const example = "example";
