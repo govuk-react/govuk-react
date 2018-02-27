@@ -2,11 +2,11 @@ import stringOfLength from "../stringOfLength";
 import generateProp from "./generateProp";
 
 export default function generateProps(props) {
-  const title = "Props";
-
   if (!props) {
     return "";
   }
+
+  const title = "Props";
 
   return (
     `${title}\n${stringOfLength("-", title.length)}\n` +
