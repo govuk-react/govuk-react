@@ -27,11 +27,13 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
   outline: 3px solid #ffbf47;
 }
 
-<glamorous(button)>
-  <button
-    className="glamor-0"
-  >
-    example
-  </button>
-</glamorous(button)>
+<Button>
+  <glamorous(button)>
+    <button
+      className="glamor-0"
+    >
+      example
+    </button>
+  </glamorous(button)>
+</Button>
 `;

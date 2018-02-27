@@ -1,6 +1,7 @@
 // https://govuk-elements.herokuapp.com/alpha-beta-banners/
 
 import glamorous from "glamorous";
+import React from "react";
 
 import { BLUE, WHITE } from "govuk-colours";
 import {
@@ -10,7 +11,7 @@ import {
   NTA_LIGHT
 } from "../../constants/index";
 
-const PhaseBadge = glamorous.strong({
+const GPhaseBadge = glamorous.strong({
   display: "inline-block",
   margin: "0 8px 0 0",
   padding: "2px 5px",
@@ -31,5 +32,7 @@ const PhaseBadge = glamorous.strong({
     paddingBottom: 0
   }
 });
+
+const PhaseBadge = props => <GPhaseBadge {...props} />;
 
 export default PhaseBadge;

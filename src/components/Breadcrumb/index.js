@@ -80,6 +80,9 @@ const Breadcrumb = ({ children }) => (
 );
 
 Breadcrumb.propTypes = {
+  /**
+   * Generally a series of anchors or Link components
+   */
   children: PropTypes.node.isRequired
 };
 

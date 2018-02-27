@@ -28,14 +28,14 @@ describe("button", () => {
   });
 
   it("passes `props.start` to the rendered button as `start`", () => {
-    expect(
-      shallow(<Button start>{example}</Button>).find("button")
-    ).toHaveLength(1);
+    expect(mount(<Button start>{example}</Button>).find("button")).toHaveLength(
+      1
+    );
   });
 
   it("passes `props.iconUrl` to the rendered button as `iconUrl`", () => {
     expect(
-      shallow(<Button iconUrl>{example}</Button>).find("button")
+      mount(<Button iconUrl>{example}</Button>).find("button")
     ).toHaveLength(1);
   });
 });

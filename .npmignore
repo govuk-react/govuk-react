@@ -13,5 +13,6 @@ govuk-react-*.tgz
 /es/stories
 /dist
 **/stories.js
+**/example.js
 **/test.js
 **/__snapshots__
