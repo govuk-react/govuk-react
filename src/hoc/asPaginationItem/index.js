@@ -60,6 +60,8 @@ const PaginationWrapper = glamorous.li(
     " > a div": {
       justifyContent: previousPage ? "flex-start" : undefined,
       " > svg": {
+        height: previousPage ? "13px" : undefined,
+        width: previousPage ? "17px" : undefined,
         marginRight: previousPage ? "10px" : undefined
       }
     }
@@ -71,6 +73,8 @@ const PaginationWrapper = glamorous.li(
     " > a div": {
       justifyContent: nextPage ? "flex-end" : undefined,
       " > svg": {
+        height: nextPage ? "13px" : undefined,
+        width: nextPage ? "17px" : undefined,
         marginLeft: nextPage ? "10px" : undefined
       }
     }
