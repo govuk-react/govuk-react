@@ -22,25 +22,25 @@ const AnchorWrapper = glamorous.span({
 });
 
 const asAnchor = AnchorType => {
-  const component = props => (
+  const Anchor = props => (
     <AnchorWrapper>
       <AnchorType {...props}>{props.children}</AnchorType>
     </AnchorWrapper>
   );
 
-  component.propTypes = {
+  Anchor.propTypes = {
     children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
       .isRequired,
     onClick: PropTypes.func,
     disabled: PropTypes.bool
   };
 
-  component.defaultProps = {
+  Anchor.defaultProps = {
     onClick: undefined,
     disabled: undefined
   };
 
-  return component;
+  return Anchor;
 };
 
 export default asAnchor;

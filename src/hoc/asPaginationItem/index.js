@@ -98,7 +98,7 @@ const PageTitle = glamorous.span({
 });
 
 const asPaginationItem = AnchorType => {
-  const component = props => (
+  const PaginationItem = props => (
     <PaginationWrapper
       previousPage={props.previousPage}
       nextPage={props.nextPage}
@@ -114,7 +114,7 @@ const asPaginationItem = AnchorType => {
     </PaginationWrapper>
   );
 
-  component.propTypes = {
+  PaginationItem.propTypes = {
     children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
       .isRequired,
     previousPage: PropTypes.bool,
@@ -125,7 +125,7 @@ const asPaginationItem = AnchorType => {
     href: PropTypes.string
   };
 
-  component.defaultProps = {
+  PaginationItem.defaultProps = {
     previousPage: undefined,
     nextPage: undefined,
     pageTitle: undefined,
@@ -134,7 +134,7 @@ const asPaginationItem = AnchorType => {
     href: undefined
   };
 
-  return component;
+  return PaginationItem;
 };
 
 export default asPaginationItem;
