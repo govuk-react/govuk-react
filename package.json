@@ -9,7 +9,7 @@
     "build": "npm run build:lib && npm run build:es",
     "build:lib": "rimraf lib && babel src -d lib",
     "build:es": "rimraf es && babel --config-file ./config/babel/es.json src -d es",
-    "build:dist": "npm run build:es && webpack -p es/index.js dist/index.js",
+    "build:dist": "npm run build:es && rimraf dist && webpack -p es/index.js -o dist/index.js",
     "clean": "rimraf lib && rimraf es",
     "flow": "flow",
     "bundlesize": "bundlesize",
@@ -126,7 +126,8 @@
     "render-glamorous": "0.0.1",
     "rimraf": "^2.6.2",
     "sinon": "^4.2.1",
-    "webpack": "^3.10.0"
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.9"
   },
   "repository": {
     "type": "git",
