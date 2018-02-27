@@ -94,23 +94,18 @@ const PageTitle = glamorous.span({
 });
 
 const asPaginationItem = AnchorType => {
-  const component = ({
-    children,
-    previousPage,
-    nextPage,
-    pageTitle,
-    to,
-    href,
-    target
-  }) => (
-    <PaginationWrapper previousPage={previousPage} nextPage={nextPage}>
-      <AnchorType to={to} href={href} target={target}>
+  const component = props => (
+    <PaginationWrapper
+      previousPage={props.previousPage}
+      nextPage={props.nextPage}
+    >
+      <AnchorType to={props.to} href={props.href} target={props.target}>
         <InnerWrap>
-          {previousPage && <PrevPageIcon />}
-          {children}
-          {nextPage && <NextPageIcon />}
+          {props.previousPage && <PrevPageIcon />}
+          {props.children}
+          {props.nextPage && <NextPageIcon />}
         </InnerWrap>
-        {pageTitle && <PageTitle>{pageTitle}</PageTitle>}
+        {props.pageTitle && <PageTitle>{props.pageTitle}</PageTitle>}
       </AnchorType>
     </PaginationWrapper>
   );
