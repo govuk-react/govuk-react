@@ -19,7 +19,7 @@ const PaginationWrapper = glamorous.li(
     margin: 0,
     padding: 0,
     listStyleType: "none",
-    fontFamily: '"nta", Arial, sans-serif',
+    fontFamily: NTA_LIGHT,
     fontWeight: 400,
     textTransform: "none",
     fontSize: FONT_SIZE.SIZE_20,
