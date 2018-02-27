@@ -13,14 +13,13 @@
     "clean": "rimraf lib && rimraf es",
     "flow": "flow",
     "bundlesize": "bundlesize",
-    "test": "CI=true npm run test:unit && npm run eslint && npm run flow",
+    "test": "cross-env CI=true npm run test:unit && npm run eslint && npm run flow",
     "test:unit": "jest --env=jsdom",
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --env=jsdom",
     "test:snapshot": "npm run test:unit -- -u",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "prepare": "npm run clean && npm run build",
-    "patch": "npm run build && npm run test && npm run build-storybook && npm version patch && npm publish && npm run deploy-storybook",
     "create-component": "node ./scripts/createComponent.js"
   },
   "jest": {
@@ -33,22 +32,18 @@
       "!src/**/example.js",
       "!src/stories/*"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
+    "setupTestFrameworkScriptFile": "<rootDir>/scripts/setupTests.js",
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.js?(x)",
       "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
     ],
     "testEnvironment": "node",
-    "testURL": "http://localhost",
     "transform": {
       "^.+\\.(js|jsx)$": "babel-jest"
     },
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
     ],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web"
-    },
     "moduleFileExtensions": [
       "web.js",
       "js",
@@ -82,10 +77,10 @@
     "@babel/preset-flow": "^7.0.0-beta.40",
     "@babel/preset-react": "^7.0.0-beta.40",
     "@babel/preset-stage-1": "^7.0.0-beta.40",
-    "@storybook/addon-actions": "^3.3.9",
+    "@storybook/addon-actions": "^3.3.12",
     "@storybook/addon-knobs": "^3.3.12",
-    "@storybook/addon-links": "^3.3.9",
-    "@storybook/react": "^3.3.9",
+    "@storybook/addon-links": "^3.3.12",
+    "@storybook/react": "^3.3.12",
     "@storybook/storybook-deployer": "^2.2.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.2",
@@ -95,6 +90,7 @@
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
     "bundlesize": "^0.16.0",
+    "cross-env": "^5.1.3",
     "component-image": "^1.1.0",
     "chalk": "^2.3.1",
     "enzyme": "^3.3.0",
@@ -114,13 +110,10 @@
     "glamorous": "^4.11.2",
     "glob": "^7.1.2",
     "glob-promise": "^3.3.0",
-    "govuk-elements-sass": "^3.1.2",
-    "inferno": "^4.0.4",
     "jest": "^22.1.2",
     "jest-glamor-react": "^3.3.0",
     "jimp": "^0.2.28",
     "mkdirp": "^0.5.1",
-    "node-sass": "^4.7.2",
     "normalize.css": "^8.0.0",
     "prettier": "^1.10.2",
     "prop-types": "^15.6.0",
@@ -132,7 +125,6 @@
     "react-test-renderer": "^16.2.0",
     "render-glamorous": "0.0.1",
     "rimraf": "^2.6.2",
-    "sass-loader": "^6.0.6",
     "sinon": "^4.2.1",
     "webpack": "^3.10.0"
   },

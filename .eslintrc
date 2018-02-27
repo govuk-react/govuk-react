@@ -15,7 +15,7 @@
   },
   "overrides": [
     {
-      "files": [ "stories.js", "test.js", "src/setupTests.js", "scripts/**", "src/stories/**" ],
+      "files": [ "stories.js", "test.js", "scripts/**", "src/stories/**" ],
       "rules": {
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
       }

@@ -56,6 +56,7 @@ const GButton = glamorous.button(
   })
 );
 
+// TODO: start and iconUrl props
 const Button = props => <GButton {...props} />;
 
 Button.defaultProps = {

@@ -16,4 +16,3 @@ govuk-react-*.tgz
 **/example.js
 **/test.js
 **/__snapshots__
-**/setupTests.js
