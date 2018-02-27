@@ -29,7 +29,9 @@ storiesOf("asPaginationItem", module).add(
   "asPaginationItem passing in React Router Link",
   () => (
     <BrowserRouter>
-      <PaginationLink to="https://cats.com">asPaginationItem Link example</PaginationLink>
+      <PaginationLink to="https://cats.com">
+        asPaginationItem Link example
+      </PaginationLink>
     </BrowserRouter>
   )
 );
