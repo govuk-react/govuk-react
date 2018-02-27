@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import glamorous from "glamorous";
 import { BLUE, GREY_4, PURPLE, YELLOW, WHITE } from "govuk-colours";
-import { FONT_SIZE, LINE_HEIGHT, SPACING } from "../../constants/index";
+import {
+  FONT_SIZE,
+  LINE_HEIGHT,
+  SPACING,
+  MEDIA_QUERIES,
+  NTA_LIGHT
+} from "../../constants/index";
 
 import NextPageIcon from "../../icons/ArrowRight/index";
 import PrevPageIcon from "../../icons/ArrowLeft/index";
@@ -16,9 +22,13 @@ const PaginationWrapper = glamorous.li(
     fontFamily: '"nta", Arial, sans-serif',
     fontWeight: 400,
     textTransform: "none",
-    fontSize: FONT_SIZE.SIZE_27,
+    fontSize: FONT_SIZE.SIZE_20,
     lineHeight: LINE_HEIGHT.SIZE_16,
     width: "100%",
+    [MEDIA_QUERIES.LARGESCREEN]: {
+      fontSize: FONT_SIZE.SIZE_27,
+      lineHeight: LINE_HEIGHT.SIZE_16
+    },
     "> a": {
       boxSizing: "border-box",
       color: BLUE,
@@ -44,50 +54,63 @@ const PaginationWrapper = glamorous.li(
   },
   ({ previousPage }) => ({
     marginRight: previousPage ? "3px" : undefined,
-    "> a": {
+    " > a": {
       alignItems: previousPage ? "flex-start" : undefined
     },
-    "> a div": {
+    " > a div": {
       justifyContent: previousPage ? "flex-start" : undefined,
-      "> svg": {
-        marginRight: "10px"
+      " > svg": {
+        marginRight: previousPage ? "10px" : undefined
       }
     }
   }),
   ({ nextPage }) => ({
-    "> a": {
+    " > a": {
       alignItems: nextPage ? "flex-end" : undefined
     },
-    "> a div": {
+    " > a div": {
       justifyContent: nextPage ? "flex-end" : undefined,
-      "> svg": {
-        marginLeft: "10px"
+      " > svg": {
+        marginLeft: nextPage ? "10px" : undefined
       }
     }
   })
 );
 
 const InnerWrap = glamorous.div({
-  border: "1px solid red",
   display: "flex",
   alignItems: "center",
   width: "100%"
 });
 
 const PageTitle = glamorous.span({
-  border: "1px solid green"
+  fontSize: FONT_SIZE.SIZE_14,
+  lineHeight: LINE_HEIGHT.SIZE_14,
+  textDecoration: "underline",
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    fontSize: FONT_SIZE.SIZE_16,
+    lineHeight: LINE_HEIGHT.SIZE_16
+  }
 });
 
 const asPaginationItem = AnchorType => {
-  const component = props => (
-    <PaginationWrapper {...props}>
-      <AnchorType {...props}>
+  const component = ({
+    children,
+    previousPage,
+    nextPage,
+    pageTitle,
+    to,
+    href,
+    target
+  }) => (
+    <PaginationWrapper previousPage={previousPage} nextPage={nextPage}>
+      <AnchorType to={to} href={href} target={target}>
         <InnerWrap>
-          {props.previousPage && <PrevPageIcon />}
-          {props.children}
-          {props.nextPage && <NextPageIcon />}
+          {previousPage && <PrevPageIcon />}
+          {children}
+          {nextPage && <NextPageIcon />}
         </InnerWrap>
-        {props.pageTitle && <PageTitle>{props.pageTitle}</PageTitle>}
+        {pageTitle && <PageTitle>{pageTitle}</PageTitle>}
       </AnchorType>
     </PaginationWrapper>
   );
@@ -98,16 +121,18 @@ const asPaginationItem = AnchorType => {
     previousPage: PropTypes.bool,
     nextPage: PropTypes.bool,
     pageTitle: PropTypes.string,
-    onClick: PropTypes.func,
-    disabled: PropTypes.bool
+    to: PropTypes.string,
+    target: PropTypes.string,
+    href: PropTypes.string
   };
 
   component.defaultProps = {
-    onClick: undefined,
-    disabled: undefined,
     previousPage: undefined,
     nextPage: undefined,
-    pageTitle: undefined
+    pageTitle: undefined,
+    to: undefined,
+    target: undefined,
+    href: undefined
   };
 
   return component;

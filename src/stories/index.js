@@ -23,4 +23,5 @@ import "../components/PhaseBadge/stories";
 import "../components/PhaseBanner/stories";
 import "../components/SearchBox/stories";
 import "../hoc/asAnchor/stories";
+import "../hoc/asPaginationItem/stories";
 import "../components/Pagination/stories";

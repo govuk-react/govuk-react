@@ -4,9 +4,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import glamorous from "glamorous";
 
+import { MEDIA_QUERIES } from "../../constants/index";
+
 const PaginationWrapper = glamorous.ul({
   boxSizing: "border-box",
   display: "flex",
+  flexDirection: "column",
   margin: 0,
   padding: "10px",
   justifyContent: "space-between",
@@ -15,7 +18,10 @@ const PaginationWrapper = glamorous.ul({
   textTransform: "none",
   fontSize: "16px",
   lineHeight: "1.25",
-  width: "100%"
+  width: "100%",
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    flexDirection: "row"
+  }
 });
 
 const Pagination = ({ children }) => (
