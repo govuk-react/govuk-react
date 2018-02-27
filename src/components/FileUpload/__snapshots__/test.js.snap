@@ -77,28 +77,32 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
   hint={null}
   meta={Object {}}
 >
-  <glamorous(label)>
-    <label
-      className="glamor-2"
-    >
-      <glamorous(span)>
-        <span
-          className="glamor-0"
-        >
-          example
-        </span>
-      </glamorous(span)>
-      <glamorous(input)
-        accept={null}
-        type="file"
+  <Label>
+    <glamorous(label)>
+      <label
+        className="glamor-2"
       >
-        <input
+        <LabelText>
+          <glamorous(span)>
+            <span
+              className="glamor-0"
+            >
+              example
+            </span>
+          </glamorous(span)>
+        </LabelText>
+        <glamorous(input)
           accept={null}
-          className="glamor-1"
           type="file"
-        />
-      </glamorous(input)>
-    </label>
-  </glamorous(label)>
+        >
+          <input
+            accept={null}
+            className="glamor-1"
+            type="file"
+          />
+        </glamorous(input)>
+      </label>
+    </glamorous(label)>
+  </Label>
 </FileUpload>
 `;

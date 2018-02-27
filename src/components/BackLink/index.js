@@ -50,8 +50,18 @@ const BackLink = ({ children, goBack }) => (
 );
 
 BackLink.propTypes = {
+  /**
+   * Generally the text that will appear in the back link
+   */
   children: PropTypes.node.isRequired,
-  goBack: PropTypes.func.isRequired
+  /**
+   * A function that is called on click
+   */
+  goBack: PropTypes.func // TODO: rename onClick
+};
+
+BackLink.defaultProps = {
+  goBack: undefined
 };
 
 export default BackLink;

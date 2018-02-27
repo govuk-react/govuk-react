@@ -31,12 +31,16 @@ exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<glamorous(input)
+<Input
   type="text"
 >
-  <input
-    className="glamor-0"
+  <glamorous(input)
     type="text"
-  />
-</glamorous(input)>
+  >
+    <input
+      className="glamor-0"
+      type="text"
+    />
+  </glamorous(input)>
+</Input>
 `;

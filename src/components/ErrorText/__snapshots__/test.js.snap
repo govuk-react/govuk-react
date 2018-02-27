@@ -24,11 +24,13 @@ exports[`ErrorText matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<glamorous(span)>
-  <span
-    className="glamor-0"
-  >
-    example
-  </span>
-</glamorous(span)>
+<ErrorText>
+  <glamorous(span)>
+    <span
+      className="glamor-0"
+    >
+      example
+    </span>
+  </glamorous(span)>
+</ErrorText>
 `;

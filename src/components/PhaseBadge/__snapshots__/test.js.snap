@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
+exports[`PhaseBadge matches wrapper snapshot: wrapper mount 1`] = `
 .glamor-0,
 [data-glamor-0] {
   display: inline-block;
@@ -28,11 +28,13 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<glamorous(strong)>
-  <strong
-    className="glamor-0"
-  >
-    beta
-  </strong>
-</glamorous(strong)>
+<PhaseBadge>
+  <glamorous(strong)>
+    <strong
+      className="glamor-0"
+    >
+      beta
+    </strong>
+  </glamorous(strong)>
+</PhaseBadge>
 `;
