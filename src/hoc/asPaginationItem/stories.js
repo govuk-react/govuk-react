@@ -7,9 +7,14 @@ import asPaginationItem from ".";
 const PaginationTag = asPaginationItem("a");
 const PaginationLink = asPaginationItem(Link);
 
-storiesOf("asPaginationItem", module).add("asPaginationItem passing in anchor", () => (
-  <PaginationTag href="https://cats.org">asPaginationItem anchor example</PaginationTag>
-));
+storiesOf("asPaginationItem", module).add(
+  "asPaginationItem passing in anchor",
+  () => (
+    <PaginationTag href="https://cats.org">
+      asPaginationItem anchor example
+    </PaginationTag>
+  )
+);
 
 storiesOf("asPaginationItem", module).add(
   "asPaginationItem passing in anchor target=blank",
