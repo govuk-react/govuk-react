@@ -33,6 +33,6 @@ const GPhaseBadge = glamorous.strong({
   }
 });
 
-const PhaseBadge = (props) => <GPhaseBadge {...props} />;
+const PhaseBadge = props => <GPhaseBadge {...props} />;
 
 export default PhaseBadge;

@@ -21,6 +21,6 @@ const GHintText = glamorous.span({
   }
 });
 
-const HintText = (props) => <GHintText {...props} />;
+const HintText = props => <GHintText {...props} />;
 
 export default HintText;

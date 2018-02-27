@@ -27,6 +27,6 @@ const GLabelText = glamorous.span(
   })
 );
 
-const LabelText = (props) => <GLabelText {...props} />;
+const LabelText = props => <GLabelText {...props} />;
 
 export default LabelText;
