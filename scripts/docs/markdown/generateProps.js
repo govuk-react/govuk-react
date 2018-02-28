@@ -10,10 +10,12 @@ export default function generateProps(props) {
 
   return (
     `${title}\n${stringOfLength("-", title.length)}\n` +
-    `\n${props &&
+    `Prop Name | Required | Default | Type | Description \n` +
+    `:-------- | :------- | :------ | :--- | :---------- \n` +
+    `${props &&
       Object.keys(props)
         .sort()
         .map(propName => generateProp(propName, props[propName]))
-        .join("\n")}`
+        .join("\n")}\n\n`
   );
 }

@@ -4,22 +4,13 @@ BackLink
 ![Component Image](./docs/BackLink.png)
 
 
-Props
+ Props
 -----
+Prop Name | Required | Default | Type | Description 
+:-------- | :------- | :------ | :--- | :---------- 
+ `children` | true | N/A | node | Generally the text that will appear in the back link
+ `goBack` |  | undefined | func | A function that is called on click
 
-### `children` (required)
-
-Generally the text that will appear in the back link
-
-type: `node`
-
-
-### `goBack`
-
-A function that is called on click
-
-type: `func`
-defaultValue: `undefined`
 
 Breadcrumb
 ==========
@@ -27,14 +18,12 @@ Breadcrumb
 ![Component Image](./docs/Breadcrumb.png)
 
 
-Props
+ Props
 -----
+Prop Name | Required | Default | Type | Description 
+:-------- | :------- | :------ | :--- | :---------- 
+ `children` | true | N/A | node | Generally a series of anchors or Link components
 
-### `children` (required)
-
-Generally a series of anchors or Link components
-
-type: `node`
 
 Button
 ======
@@ -42,12 +31,12 @@ Button
 ![Component Image](./docs/Button.png)
 
 
-Props
+ Props
 -----
+Prop Name | Required | Default | Type | Description 
+:-------- | :------- | :------ | :--- | :---------- 
+ `children` |  | "Button" |  | 
 
-### `children`
-
-defaultValue: `"Button"`
 
 Checkbox
 ========
@@ -55,18 +44,13 @@ Checkbox
 ![Component Image](./docs/Checkbox.png)
 
 
-Props
+ Props
 -----
+Prop Name | Required | Default | Type | Description 
+:-------- | :------- | :------ | :--- | :---------- 
+ `children` | true | N/A | node | 
+ `inline` |  | undefined | bool | 
 
-### `children` (required)
-
-type: `node`
-
-
-### `inline`
-
-type: `bool`
-defaultValue: `undefined`
 
 DateInput
 =========
@@ -74,24 +58,14 @@ DateInput
 ![Component Image](./docs/DateInput.png)
 
 
-Props
+ Props
 -----
+Prop Name | Required | Default | Type | Description 
+:-------- | :------- | :------ | :--- | :---------- 
+ `children` | true | N/A | node | 
+ `errorText` |  | null | string | 
+ `hintText` |  | null | string | 
 
-### `children` (required)
-
-type: `node`
-
-
-### `errorText`
-
-type: `string`
-defaultValue: `null`
-
-
-### `hintText`
-
-type: `string`
-defaultValue: `null`
 
 ErrorText
 =========
@@ -99,36 +73,48 @@ ErrorText
 ![Component Image](./docs/ErrorText.png)
 
 
+ 
 FileUpload
 ==========
 
 ![Component Image](./docs/FileUpload.png)
 
 
-Props
+ Props
 -----
-
-### `acceptedFormats`
-
-type: `string`
-defaultValue: `null`
-
-
-### `children` (required)
-
-type: `node`
+Prop Name | Required | Default | Type | Description 
+:-------- | :------- | :------ | :--- | :---------- 
+ `acceptedFormats` |  | null | string | 
+ `children` | true | N/A | node | 
+ `hint` |  | null | string | 
+ `meta` |  | {} | shape[object Object] | 
 
 
-### `hint`
+GridCol
+=======
 
-type: `string`
-defaultValue: `null`
+![Component Image](./docs/GridCol.png)
 
 
-### `meta`
+ Props
+-----
+Prop Name | Required | Default | Type | Description 
+:-------- | :------- | :------ | :--- | :---------- 
+ `children` |  | undefined | node | 
 
-type: `shape[object Object]`
-defaultValue: `{}`
+
+GridRow
+=======
+
+![Component Image](./docs/GridRow.png)
+
+
+ Props
+-----
+Prop Name | Required | Default | Type | Description 
+:-------- | :------- | :------ | :--- | :---------- 
+ `children` | true | N/A | node | 
+
 
 Header
 ======
@@ -136,19 +122,13 @@ Header
 ![Component Image](./docs/Header.png)
 
 
-Props
+ Props
 -----
+Prop Name | Required | Default | Type | Description 
+:-------- | :------- | :------ | :--- | :---------- 
+ `level` |  | 1 | number | 
+ `size` |  | undefined | enumObject.keys(FONT_SIZES) | 
 
-### `level`
-
-type: `number`
-defaultValue: `1`
-
-
-### `size`
-
-type: `enumObject.keys(FONT_SIZES)`
-defaultValue: `undefined`
 
 HintText
 ========
@@ -156,31 +136,21 @@ HintText
 ![Component Image](./docs/HintText.png)
 
 
+ 
 Input
 =====
 
 ![Component Image](./docs/Input.png)
 
 
-Props
+ Props
 -----
+Prop Name | Required | Default | Type | Description 
+:-------- | :------- | :------ | :--- | :---------- 
+ `onChange` |  | undefined | func | 
+ `type` |  | "text" | string | 
+ `value` |  | undefined | string | 
 
-### `onChange`
-
-type: `func`
-defaultValue: `undefined`
-
-
-### `type`
-
-type: `string`
-defaultValue: `"text"`
-
-
-### `value`
-
-type: `string`
-defaultValue: `undefined`
 
 InputField
 ==========
@@ -188,30 +158,15 @@ InputField
 ![Component Image](./docs/InputField.png)
 
 
-Props
+ Props
 -----
+Prop Name | Required | Default | Type | Description 
+:-------- | :------- | :------ | :--- | :---------- 
+ `children` | true | N/A | node | 
+ `hint` |  | null | string | 
+ `input` |  | {} | shape[object Object] | 
+ `meta` |  | {} | shape[object Object] | 
 
-### `children` (required)
-
-type: `node`
-
-
-### `hint`
-
-type: `string`
-defaultValue: `null`
-
-
-### `input`
-
-type: `shape[object Object]`
-defaultValue: `{}`
-
-
-### `meta`
-
-type: `shape[object Object]`
-defaultValue: `{}`
 
 Label
 =====
@@ -219,10 +174,25 @@ Label
 ![Component Image](./docs/Label.png)
 
 
+ 
 LabelText
 =========
 
 ![Component Image](./docs/LabelText.png)
+
+
+ 
+Layout
+======
+
+![Component Image](./docs/Layout.png)
+
+
+ Props
+-----
+Prop Name | Required | Default | Type | Description 
+:-------- | :------- | :------ | :--- | :---------- 
+ `children` | true | N/A | node | 
 
 
 MultiChoice
@@ -231,29 +201,15 @@ MultiChoice
 ![Component Image](./docs/MultiChoice.png)
 
 
-Props
+ Props
 -----
+Prop Name | Required | Default | Type | Description 
+:-------- | :------- | :------ | :--- | :---------- 
+ `children` | true | N/A | node | 
+ `hint` |  | undefined | string | 
+ `label` | true | N/A | node | 
+ `meta` |  | {} | shape[object Object] | 
 
-### `children` (required)
-
-type: `node`
-
-
-### `hint`
-
-type: `string`
-defaultValue: `undefined`
-
-
-### `label` (required)
-
-type: `node`
-
-
-### `meta`
-
-type: `shape[object Object]`
-defaultValue: `{}`
 
 PhaseBadge
 ==========
@@ -261,23 +217,20 @@ PhaseBadge
 ![Component Image](./docs/PhaseBadge.png)
 
 
+ 
 PhaseBanner
 ===========
 
 ![Component Image](./docs/PhaseBanner.png)
 
 
-Props
+ Props
 -----
+Prop Name | Required | Default | Type | Description 
+:-------- | :------- | :------ | :--- | :---------- 
+ `children` | true | N/A | node | 
+ `level` | true | N/A | string | 
 
-### `children` (required)
-
-type: `node`
-
-
-### `level` (required)
-
-type: `string`
 
 Radio
 =====
@@ -285,18 +238,13 @@ Radio
 ![Component Image](./docs/Radio.png)
 
 
-Props
+ Props
 -----
+Prop Name | Required | Default | Type | Description 
+:-------- | :------- | :------ | :--- | :---------- 
+ `children` | true | N/A | node | 
+ `inline` |  | undefined | bool | 
 
-### `children` (required)
-
-type: `node`
-
-
-### `inline`
-
-type: `bool`
-defaultValue: `undefined`
 
 Select
 ======
@@ -304,41 +252,17 @@ Select
 ![Component Image](./docs/Select.png)
 
 
-Props
+ Props
 -----
+Prop Name | Required | Default | Type | Description 
+:-------- | :------- | :------ | :--- | :---------- 
+ `children` | true | N/A | node | 
+ `errorText` |  | null | string | 
+ `hint` |  | undefined | string | 
+ `input` |  | {} | shape[object Object] | 
+ `label` | true | N/A | string | 
+ `meta` |  | {} | shape[object Object] | 
 
-### `children` (required)
-
-type: `node`
-
-
-### `errorText`
-
-type: `string`
-defaultValue: `null`
-
-
-### `hint`
-
-type: `string`
-defaultValue: `undefined`
-
-
-### `input`
-
-type: `shape[object Object]`
-defaultValue: `{}`
-
-
-### `label` (required)
-
-type: `string`
-
-
-### `meta`
-
-type: `shape[object Object]`
-defaultValue: `{}`
 
 TextArea
 ========
@@ -346,28 +270,13 @@ TextArea
 ![Component Image](./docs/TextArea.png)
 
 
-Props
+ Props
 -----
+Prop Name | Required | Default | Type | Description 
+:-------- | :------- | :------ | :--- | :---------- 
+ `children` | true | N/A | node | 
+ `hint` |  | null | string | 
+ `input` |  | {} | shape[object Object] | 
+ `meta` |  | {} | shape[object Object] | 
 
-### `children` (required)
-
-type: `node`
-
-
-### `hint`
-
-type: `string`
-defaultValue: `null`
-
-
-### `input`
-
-type: `shape[object Object]`
-defaultValue: `{}`
-
-
-### `meta`
-
-type: `shape[object Object]`
-defaultValue: `{}`
 
