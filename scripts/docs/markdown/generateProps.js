@@ -6,12 +6,9 @@ export default function generateProps(props) {
     return "";
   }
 
-  const title = "Props";
-
   return (
-    `${title}\n${stringOfLength("-", title.length)}\n` +
-    `Prop Name | Required | Default | Type | Description \n` +
-    `:-------- | :------- | :------ | :--- | :---------- \n` +
+    `Prop | Required | Default | Type | Description \n` +
+    `:--- | :------- | :------ | :--- | :---------- \n` +
     `${props &&
       Object.keys(props)
         .sort()

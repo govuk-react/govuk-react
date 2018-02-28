@@ -4,10 +4,8 @@ BackLink
 ![Component Image](./docs/BackLink.png)
 
 
-Props
------
-Prop Name | Required | Default | Type | Description 
-:-------- | :------- | :------ | :--- | :---------- 
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
  `children` | true |  | node | Generally the text that will appear in the back link
  `goBack` |  | undefined | func | A function that is called on click
 
@@ -18,10 +16,8 @@ Breadcrumb
 ![Component Image](./docs/Breadcrumb.png)
 
 
-Props
------
-Prop Name | Required | Default | Type | Description 
-:-------- | :------- | :------ | :--- | :---------- 
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
  `children` | true |  | node | Generally a series of anchors or Link components
 
 
@@ -31,10 +27,8 @@ Button
 ![Component Image](./docs/Button.png)
 
 
-Props
------
-Prop Name | Required | Default | Type | Description 
-:-------- | :------- | :------ | :--- | :---------- 
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
  `children` |  | "Button" |  | 
 
 
@@ -44,10 +38,8 @@ Checkbox
 ![Component Image](./docs/Checkbox.png)
 
 
-Props
------
-Prop Name | Required | Default | Type | Description 
-:-------- | :------- | :------ | :--- | :---------- 
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
  `children` | true |  | node | 
  `inline` |  | undefined | bool | 
 
@@ -58,10 +50,8 @@ DateInput
 ![Component Image](./docs/DateInput.png)
 
 
-Props
------
-Prop Name | Required | Default | Type | Description 
-:-------- | :------- | :------ | :--- | :---------- 
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
  `children` | true |  | node | 
  `errorText` |  | null | string | 
  `hintText` |  | null | string | 
@@ -80,10 +70,8 @@ FileUpload
 ![Component Image](./docs/FileUpload.png)
 
 
-Props
------
-Prop Name | Required | Default | Type | Description 
-:-------- | :------- | :------ | :--- | :---------- 
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
  `acceptedFormats` |  | null | string | 
  `children` | true |  | node | 
  `hint` |  | null | string | 
@@ -96,10 +84,8 @@ GridCol
 ![Component Image](./docs/GridCol.png)
 
 
-Props
------
-Prop Name | Required | Default | Type | Description 
-:-------- | :------- | :------ | :--- | :---------- 
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
  `children` |  | undefined | node | 
 
 
@@ -109,10 +95,8 @@ GridRow
 ![Component Image](./docs/GridRow.png)
 
 
-Props
------
-Prop Name | Required | Default | Type | Description 
-:-------- | :------- | :------ | :--- | :---------- 
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
  `children` | true |  | node | 
 
 
@@ -122,10 +106,8 @@ Header
 ![Component Image](./docs/Header.png)
 
 
-Props
------
-Prop Name | Required | Default | Type | Description 
-:-------- | :------- | :------ | :--- | :---------- 
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
  `level` |  | 1 | number | 
  `size` |  | undefined | enumObject.keys(FONT_SIZES) | 
 
@@ -143,10 +125,8 @@ Input
 ![Component Image](./docs/Input.png)
 
 
-Props
------
-Prop Name | Required | Default | Type | Description 
-:-------- | :------- | :------ | :--- | :---------- 
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
  `onChange` |  | undefined | func | 
  `type` |  | "text" | string | 
  `value` |  | undefined | string | 
@@ -158,10 +138,8 @@ InputField
 ![Component Image](./docs/InputField.png)
 
 
-Props
------
-Prop Name | Required | Default | Type | Description 
-:-------- | :------- | :------ | :--- | :---------- 
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
  `children` | true |  | node | 
  `hint` |  | null | string | 
  `input` |  | {} | shape[object Object] | 
@@ -188,10 +166,8 @@ Layout
 ![Component Image](./docs/Layout.png)
 
 
-Props
------
-Prop Name | Required | Default | Type | Description 
-:-------- | :------- | :------ | :--- | :---------- 
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
  `children` | true |  | node | 
 
 
@@ -201,10 +177,8 @@ MultiChoice
 ![Component Image](./docs/MultiChoice.png)
 
 
-Props
------
-Prop Name | Required | Default | Type | Description 
-:-------- | :------- | :------ | :--- | :---------- 
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
  `children` | true |  | node | 
  `hint` |  | undefined | string | 
  `label` | true |  | node | 
@@ -224,10 +198,8 @@ PhaseBanner
 ![Component Image](./docs/PhaseBanner.png)
 
 
-Props
------
-Prop Name | Required | Default | Type | Description 
-:-------- | :------- | :------ | :--- | :---------- 
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
  `children` | true |  | node | 
  `level` | true |  | string | 
 
@@ -238,10 +210,8 @@ Radio
 ![Component Image](./docs/Radio.png)
 
 
-Props
------
-Prop Name | Required | Default | Type | Description 
-:-------- | :------- | :------ | :--- | :---------- 
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
  `children` | true |  | node | 
  `inline` |  | undefined | bool | 
 
@@ -252,10 +222,8 @@ Select
 ![Component Image](./docs/Select.png)
 
 
-Props
------
-Prop Name | Required | Default | Type | Description 
-:-------- | :------- | :------ | :--- | :---------- 
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
  `children` | true |  | node | 
  `errorText` |  | null | string | 
  `hint` |  | undefined | string | 
@@ -270,10 +238,8 @@ TextArea
 ![Component Image](./docs/TextArea.png)
 
 
-Props
------
-Prop Name | Required | Default | Type | Description 
-:-------- | :------- | :------ | :--- | :---------- 
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
  `children` | true |  | node | 
  `hint` |  | null | string | 
  `input` |  | {} | shape[object Object] | 
