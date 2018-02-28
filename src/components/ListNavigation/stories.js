@@ -2,11 +2,16 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 
 import ListNavigation from ".";
+import asAnchor from "../../hoc/asAnchor/index";
+
+const AnchorTag = asAnchor("a");
 
 storiesOf("ListNavigation", module).add("ListNavigation", () => (
-  <ListNavigation>
-    <a href="https://example.com">lorem dolor set cetra</a>
-    <a href="https://example.com">Meta logi arche decip con</a>
-    <a href="https://example.com">Ignis prevo don coldo</a>
+  <ListNavigation listStyleType="square">
+    <AnchorTag href="https://example.com/?=1">lorem dolor set cetra</AnchorTag>
+    <AnchorTag href="https://example.com/?=2">
+      Meta logi arche decip con
+    </AnchorTag>
+    <AnchorTag href="https://example.com/?=2">Ignis prevo don coldo</AnchorTag>
   </ListNavigation>
 ));

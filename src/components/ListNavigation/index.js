@@ -2,25 +2,12 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import glamorous from "glamorous";
 
-const ListNavigationInner = glamorous.ul({
-  boxSizing: "border-box",
-  fontFamily: '"nta", Arial, sans-serif',
-  fontWeight: 400,
-  textTransform: "none",
-  fontSize: "16px",
-  lineHeight: "1.25",
-  width: "100%"
-});
+import UnorderedList from "../UnorderedList/index";
+import ListItem from "../ListItem/index";
 
-const ListItem = glamorous.li({
-  listStyleType: "bullet",
-  marginBottom: "5px"
-});
-
-const ListNavigation = ({ children }) => (
-  <ListNavigationInner>
+const ListNavigation = ({ children, listStyleType }) => (
+  <UnorderedList listStyleType={listStyleType}>
     {children.length && children.map ? (
       children.map((child, i) => (
         <ListItem key={child.key || i}>{child}</ListItem>
@@ -28,11 +15,16 @@ const ListNavigation = ({ children }) => (
     ) : (
       <ListItem>{children}</ListItem>
     )}
-  </ListNavigationInner>
+  </UnorderedList>
 );
 
+ListNavigation.defaultProps = {
+  listStyleType: undefined
+};
+
 ListNavigation.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  listStyleType: PropTypes.string
 };
 
 export default ListNavigation;

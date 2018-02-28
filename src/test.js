@@ -1,3 +1,7 @@
+// TODO: this does not currently test the purpose of src/index.js
+// It should:
+// - ensure all components are exported
+// - ensure all exports are components or functions
 import React from "react";
 import ReactDOM from "react-dom";
 

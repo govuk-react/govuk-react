@@ -30,11 +30,13 @@ exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<glamorous(label)>
-  <label
-    className="glamor-0"
-  >
-    example
-  </label>
-</glamorous(label)>
+<Label>
+  <glamorous(label)>
+    <label
+      className="glamor-0"
+    >
+      example
+    </label>
+  </glamorous(label)>
+</Label>
 `;

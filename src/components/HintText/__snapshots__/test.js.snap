@@ -22,11 +22,13 @@ exports[`HintText matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<glamorous(span)>
-  <span
-    className="glamor-0"
-  >
-    example
-  </span>
-</glamorous(span)>
+<HintText>
+  <glamorous(span)>
+    <span
+      className="glamor-0"
+    >
+      example
+    </span>
+  </glamorous(span)>
+</HintText>
 `;

@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import { MEDIA_QUERIES, NTA_LIGHT } from "../../constants/index";
 import { LEVEL_SIZE, FONT_SIZES, LEVEL_TAG } from "../../constants/typography";
 
-const Header = glamorous(({ level, children, ...props }) =>
+const GHeader = glamorous(({ level, children, ...props }) =>
   createElement(LEVEL_TAG[level], props, children)
 )(
   {
@@ -33,6 +33,8 @@ const Header = glamorous(({ level, children, ...props }) =>
   })
 );
 
+const Header = props => <GHeader {...props} />;
+
 Header.defaultProps = {
   level: 1,
   size: undefined
@@ -44,10 +46,3 @@ Header.propTypes = {
 };
 
 export default Header;
-
-export const H1 = props => <Header level={1} size={LEVEL_SIZE[1]} {...props} />;
-export const H2 = props => <Header level={2} size={LEVEL_SIZE[2]} {...props} />;
-export const H3 = props => <Header level={3} size={LEVEL_SIZE[3]} {...props} />;
-export const H4 = props => <Header level={4} size={LEVEL_SIZE[4]} {...props} />;
-export const H5 = props => <Header level={5} size={LEVEL_SIZE[5]} {...props} />;
-export const H6 = props => <Header level={6} size={LEVEL_SIZE[6]} {...props} />;

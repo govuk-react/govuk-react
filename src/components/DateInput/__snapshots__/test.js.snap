@@ -152,97 +152,119 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
     <div
       className="glamor-12"
     >
-      <glamorous(span)
+      <LabelText
         errorText="example"
       >
-        <span
-          className="glamor-0"
+        <glamorous(span)
+          errorText="example"
         >
-          example
-        </span>
-      </glamorous(span)>
+          <span
+            className="glamor-0"
+          >
+            example
+          </span>
+        </glamorous(span)>
+      </LabelText>
       <span />
-      <glamorous(span)
+      <ErrorText
         errorText="example"
       >
-        <span
-          className="glamor-1"
+        <glamorous(span)
+          errorText="example"
         >
-          example
-        </span>
-      </glamorous(span)>
+          <span
+            className="glamor-1"
+          >
+            example
+          </span>
+        </glamorous(span)>
+      </ErrorText>
       <glamorous(div)>
         <div
           className="glamor-11"
         >
-          <glamorous(label)>
-            <label
-              className="glamor-4"
-            >
-              <glamorous(span)>
-                <span
-                  className="glamor-0"
-                >
-                  Day
-                </span>
-              </glamorous(span)>
-              <glamorous(input)
-                errorText="example"
-                type="text"
+          <Label>
+            <glamorous(label)>
+              <label
+                className="glamor-4"
               >
-                <input
-                  className="glamor-3"
+                <LabelText>
+                  <glamorous(span)>
+                    <span
+                      className="glamor-0"
+                    >
+                      Day
+                    </span>
+                  </glamorous(span)>
+                </LabelText>
+                <glamorous(input)
+                  errorText="example"
                   type="text"
-                />
-              </glamorous(input)>
-            </label>
-          </glamorous(label)>
-          <glamorous(label)>
-            <label
-              className="glamor-4"
-            >
-              <glamorous(span)>
-                <span
-                  className="glamor-0"
                 >
-                  Month
-                </span>
-              </glamorous(span)>
-              <glamorous(input)
-                errorText="example"
-                type="text"
+                  <input
+                    className="glamor-3"
+                    type="text"
+                  />
+                </glamorous(input)>
+              </label>
+            </glamorous(label)>
+          </Label>
+          <Label>
+            <glamorous(label)>
+              <label
+                className="glamor-4"
               >
-                <input
-                  className="glamor-3"
+                <LabelText>
+                  <glamorous(span)>
+                    <span
+                      className="glamor-0"
+                    >
+                      Month
+                    </span>
+                  </glamorous(span)>
+                </LabelText>
+                <glamorous(input)
+                  errorText="example"
                   type="text"
-                />
-              </glamorous(input)>
-            </label>
-          </glamorous(label)>
-          <glamorous(label)
+                >
+                  <input
+                    className="glamor-3"
+                    type="text"
+                  />
+                </glamorous(input)>
+              </label>
+            </glamorous(label)>
+          </Label>
+          <Label
             className="year"
           >
-            <label
-              className="glamor-4 year"
+            <glamorous(label)
+              className="year"
             >
-              <glamorous(span)>
-                <span
-                  className="glamor-0"
-                >
-                  Year
-                </span>
-              </glamorous(span)>
-              <glamorous(input)
-                errorText="example"
-                type="text"
+              <label
+                className="glamor-4 year"
               >
-                <input
-                  className="glamor-3"
+                <LabelText>
+                  <glamorous(span)>
+                    <span
+                      className="glamor-0"
+                    >
+                      Year
+                    </span>
+                  </glamorous(span)>
+                </LabelText>
+                <glamorous(input)
+                  errorText="example"
                   type="text"
-                />
-              </glamorous(input)>
-            </label>
-          </glamorous(label)>
+                >
+                  <input
+                    className="glamor-3"
+                    type="text"
+                  />
+                </glamorous(input)>
+              </label>
+            </glamorous(label)>
+          </Label>
         </div>
       </glamorous(div)>
     </div>
