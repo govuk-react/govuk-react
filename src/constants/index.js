@@ -38,7 +38,9 @@ export const FONT_STACK_PRINT = "sans-serif !default";
 export const FONT_SIZE = {
   SIZE_14: "14px",
   SIZE_16: "16px",
-  SIZE_19: "19px"
+  SIZE_19: "19px",
+  SIZE_20: "20px",
+  SIZE_27: "27px"
 };
 
 export const LINE_HEIGHT = {
