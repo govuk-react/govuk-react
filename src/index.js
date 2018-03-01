@@ -16,18 +16,22 @@ export { default as InputField } from './components/InputField';
 export { default as Label } from './components/Label';
 export { default as LabelText } from './components/LabelText';
 export { default as Layout } from './components/Layout';
-export { default as Radio } from './components/Radio';
-export { default as Select } from './components/Select';
-export { default as TextArea } from './components/TextArea';
-export { default as MultiChoice } from './components/MultiChoice';
-export { default as PhaseBadge } from './components/PhaseBadge';
-export { default as PhaseBanner } from './components/PhaseBanner';
-export { default as UnorderedList } from './components/UnorderedList';
 export { default as ListItem } from './components/ListItem';
 export { default as ListNavigation } from './components/ListNavigation';
+export { default as MultiChoice } from './components/MultiChoice';
+export { default as Pagination } from './components/Pagination';
+export { default as Panel } from './components/Panel';
+export { default as PhaseBadge } from './components/PhaseBadge';
+export { default as PhaseBanner } from './components/PhaseBanner';
+export { default as Radio } from './components/Radio';
+export { default as SearchBox } from './components/SearchBox';
+export { default as Select } from './components/Select';
+export { default as TextArea } from './components/TextArea';
+export { default as UnorderedList } from './components/UnorderedList';
 
 // Higher Order Components
 export { default as asAnchor } from './hoc/asAnchor';
+export { default as asPaginationItem } from './hoc/asPaginationItem';
 
 // Icons
 export { default as SearchIcon } from './icons/Search';
