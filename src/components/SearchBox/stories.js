@@ -1,13 +1,13 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
 
-import Layout from "../Layout/index";
-import GridRow from "../GridRow/index";
-import GridCol from "../GridCol/index";
+import Layout from '../Layout/index';
+import GridRow from '../GridRow/index';
+import GridCol from '../GridCol/index';
 
-import SearchBox from ".";
+import SearchBox from '.';
 
-storiesOf("SearchBox", module).add("SearchBox", () => (
+storiesOf('SearchBox', module).add('SearchBox', () => (
   <Layout>
     <GridRow>
       <GridCol>

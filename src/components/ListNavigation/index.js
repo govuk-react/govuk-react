@@ -1,10 +1,10 @@
 // https://govuk-static.herokuapp.com/component-guide/government_navigation
 
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import UnorderedList from "../UnorderedList/index";
-import ListItem from "../ListItem/index";
+import UnorderedList from '../UnorderedList/index';
+import ListItem from '../ListItem/index';
 
 const ListNavigation = ({ children, listStyleType }) => (
   <UnorderedList listStyleType={listStyleType}>
@@ -19,12 +19,12 @@ const ListNavigation = ({ children, listStyleType }) => (
 );
 
 ListNavigation.defaultProps = {
-  listStyleType: undefined
+  listStyleType: undefined,
 };
 
 ListNavigation.propTypes = {
   children: PropTypes.node.isRequired,
-  listStyleType: PropTypes.string
+  listStyleType: PropTypes.string,
 };
 
 export default ListNavigation;

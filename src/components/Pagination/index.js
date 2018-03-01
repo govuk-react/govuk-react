@@ -1,33 +1,33 @@
 // https://govuk-static.herokuapp.com/component-guide/previous_and_next_navigation
 
-import React from "react";
-import PropTypes from "prop-types";
-import glamorous from "glamorous";
+import React from 'react';
+import PropTypes from 'prop-types';
+import glamorous from 'glamorous';
 
 import {
   FONT_SIZE,
   LINE_HEIGHT,
   MEDIA_QUERIES,
   NTA_LIGHT,
-  SPACING
-} from "../../constants/index";
+  SPACING,
+} from '../../constants/index';
 
 const PaginationWrapper = glamorous.ul({
-  boxSizing: "border-box",
-  display: "flex",
-  flexDirection: "column",
+  boxSizing: 'border-box',
+  display: 'flex',
+  flexDirection: 'column',
   margin: 0,
   padding: SPACING.SCALE_2,
-  justifyContent: "space-between",
+  justifyContent: 'space-between',
   fontFamily: NTA_LIGHT,
   fontWeight: 400,
-  textTransform: "none",
+  textTransform: 'none',
   fontSize: FONT_SIZE.SIZE_16,
   lineHeight: LINE_HEIGHT.SIZE_16,
-  width: "100%",
+  width: '100%',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    flexDirection: "row"
-  }
+    flexDirection: 'row',
+  },
 });
 
 const Pagination = ({ children }) => (
@@ -35,7 +35,7 @@ const Pagination = ({ children }) => (
 );
 
 Pagination.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Pagination;

@@ -1,42 +1,42 @@
 // https://github.com/alphagov/govuk-frontend/tree/master/src/components/textarea
 
-import React from "react";
-import PropTypes from "prop-types";
-import glamorous from "glamorous";
+import React from 'react';
+import PropTypes from 'prop-types';
+import glamorous from 'glamorous';
 
-import { BLACK, YELLOW, ERROR_COLOUR } from "govuk-colours";
-import { MEDIA_QUERIES } from "../../constants/index";
+import { BLACK, YELLOW, ERROR_COLOUR } from 'govuk-colours';
+import { MEDIA_QUERIES } from '../../constants/index';
 
-import Label from "../Label/index";
-import LabelText from "../LabelText/index";
-import ErrorText from "../ErrorText/index";
-import HintText from "../HintText/index";
+import Label from '../Label/index';
+import LabelText from '../LabelText/index';
+import ErrorText from '../ErrorText/index';
+import HintText from '../HintText/index';
 
 const TextareaField = glamorous.textarea(
   {
-    boxSizing: "border-box",
+    boxSizing: 'border-box',
     fontFamily: '"nta", Arial, sans-serif',
     fontWeight: 400,
-    textTransform: "none",
-    fontSize: "16px",
-    lineHeight: "1.25",
-    width: "100%",
-    padding: "5px 4px 4px",
+    textTransform: 'none',
+    fontSize: '16px',
+    lineHeight: '1.25',
+    width: '100%',
+    padding: '5px 4px 4px',
     border: `2px solid ${BLACK}`,
     [MEDIA_QUERIES.LARGESCREEN]: {
-      width: "75%"
+      width: '75%',
     },
-    "[disabled]": {
-      cursor: "auto"
+    '[disabled]': {
+      cursor: 'auto',
     },
-    ":focus": {
+    ':focus': {
       outline: `3px solid ${YELLOW}`,
-      outlineOffset: 0
-    }
+      outlineOffset: 0,
+    },
   },
   ({ error }) => ({
-    border: error ? `4px solid ${ERROR_COLOUR}` : undefined
-  })
+    border: error ? `4px solid ${ERROR_COLOUR}` : undefined,
+  }),
 );
 
 const TextArea = props => (
@@ -57,7 +57,7 @@ const TextArea = props => (
 TextArea.defaultProps = {
   hint: null,
   input: {},
-  meta: {}
+  meta: {},
 };
 
 TextArea.propTypes = {
@@ -67,7 +67,7 @@ TextArea.propTypes = {
     onBlur: PropTypes.func,
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
-    value: PropTypes.any
+    value: PropTypes.any,
   }),
   meta: PropTypes.shape({
     active: PropTypes.bool,
@@ -82,9 +82,9 @@ TextArea.propTypes = {
     submitSucceeded: PropTypes.bool,
     touched: PropTypes.bool,
     valid: PropTypes.bool,
-    visited: PropTypes.bool
+    visited: PropTypes.bool,
   }),
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default TextArea;

@@ -1,4 +1,4 @@
-import React from "react";
-import Checkbox from ".";
+import React from 'react';
+import Checkbox from '.';
 
 export default () => <Checkbox>Example</Checkbox>;

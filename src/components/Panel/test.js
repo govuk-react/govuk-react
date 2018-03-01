@@ -1,33 +1,33 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { mount } from "enzyme";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
 
-import Panel from "./";
+import Panel from './';
 
-describe("Panel", () => {
+describe('Panel', () => {
   let props;
-  const titleExample = "Example";
-  const bodyExample = "body";
+  const titleExample = 'Example';
+  const bodyExample = 'body';
   const wrapper = <Panel panelTitle={titleExample} panelBody={bodyExample} />;
 
   beforeEach(() => {
     props = {
       titleExample,
-      bodyExample
+      bodyExample,
     };
   });
 
-  it("renders without crashing", () => {
-    const div = document.createElement("div");
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
     ReactDOM.render(wrapper, div);
   });
 
-  it("passes `props.children` to the rendered `wrapper` as `children`", () => {
+  it('passes `props.children` to the rendered `wrapper` as `children`', () => {
     expect(wrapper.props.panelTitle).toBe(props.titleExample);
     expect(wrapper.props.panelBody).toBe(props.bodyExample);
   });
 
-  it("matches wrapper snapshot", () => {
-    expect(mount(wrapper)).toMatchSnapshot(`wrapper mount`);
+  it('matches wrapper snapshot', () => {
+    expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
   });
 });

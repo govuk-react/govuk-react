@@ -1,27 +1,27 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { shallow, mount } from "enzyme";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { shallow, mount } from 'enzyme';
 
-import DateInput from "./";
+import DateInput from './';
 
-describe("DateInput", () => {
-  const example = "example";
+describe('DateInput', () => {
+  const example = 'example';
   const wrapper = <DateInput errorText={example}>{example}</DateInput>;
   let props;
 
   beforeEach(() => {
     props = {
-      children: example
+      children: example,
     };
   });
 
-  it("renders without crashing", () => {
-    const div = document.createElement("div");
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
     ReactDOM.render(
       <DateInput errorText={example} hintText={example}>
         {example}
       </DateInput>,
-      div
+      div,
     );
   });
 
@@ -30,25 +30,21 @@ describe("DateInput", () => {
     expect(output.find('input[type="text"]')).toBeTruthy();
   });
 
-  it("should render a label", () => {
+  it('should render a label', () => {
     const output = shallow(wrapper);
-    expect(output.find("label")).toBeTruthy();
+    expect(output.find('label')).toBeTruthy();
   });
 
-  it("matches wrappersnapshot", () => {
-    expect(mount(wrapper)).toMatchSnapshot(`wrapper mount`);
+  it('matches wrappersnapshot', () => {
+    expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
   });
 
-  it("passes `props` to the rendered label", () => {
-    expect(
-      mount(<DateInput errorText={example}>{example}</DateInput>).find("input")
-    ).toHaveLength(3);
-    expect(
-      mount(<DateInput hintText={example}>{example}</DateInput>).find("div")
-    ).toHaveLength(2);
+  it('passes `props` to the rendered label', () => {
+    expect(mount(<DateInput errorText={example}>{example}</DateInput>).find('input')).toHaveLength(3);
+    expect(mount(<DateInput hintText={example}>{example}</DateInput>).find('div')).toHaveLength(2);
   });
 
-  it("passes `props.children` to the rendered `wrapper` as `children`", () => {
+  it('passes `props.children` to the rendered `wrapper` as `children`', () => {
     expect(wrapper.props.children).toBe(props.children);
   });
 });

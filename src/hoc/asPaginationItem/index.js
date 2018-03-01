@@ -1,103 +1,103 @@
-import React from "react";
-import PropTypes from "prop-types";
-import glamorous from "glamorous";
-import { BLUE, GREY_4, PURPLE, YELLOW, WHITE } from "govuk-colours";
+import React from 'react';
+import PropTypes from 'prop-types';
+import glamorous from 'glamorous';
+import { BLUE, GREY_4, PURPLE, YELLOW, WHITE } from 'govuk-colours';
 import {
   FONT_SIZE,
   LINE_HEIGHT,
   SPACING,
   MEDIA_QUERIES,
-  NTA_LIGHT
-} from "../../constants/index";
+  NTA_LIGHT,
+} from '../../constants/index';
 
-import NextPageIcon from "../../icons/ArrowRight/index";
-import PrevPageIcon from "../../icons/ArrowLeft/index";
+import NextPageIcon from '../../icons/ArrowRight/index';
+import PrevPageIcon from '../../icons/ArrowLeft/index';
 
 const PaginationWrapper = glamorous.li(
   {
-    boxSizing: "border-box",
+    boxSizing: 'border-box',
     margin: 0,
     padding: 0,
-    listStyleType: "none",
+    listStyleType: 'none',
     fontFamily: NTA_LIGHT,
     fontWeight: 400,
-    textTransform: "none",
+    textTransform: 'none',
     fontSize: FONT_SIZE.SIZE_20,
     lineHeight: LINE_HEIGHT.SIZE_16,
-    width: "100%",
+    width: '100%',
     [MEDIA_QUERIES.LARGESCREEN]: {
       fontSize: FONT_SIZE.SIZE_27,
-      lineHeight: LINE_HEIGHT.SIZE_16
+      lineHeight: LINE_HEIGHT.SIZE_16,
     },
-    "> a": {
-      boxSizing: "border-box",
+    '> a': {
+      boxSizing: 'border-box',
       color: BLUE,
-      fill: "currentColor",
+      fill: 'currentColor',
       padding: SPACING.SCALE_3,
       backgroundColor: WHITE,
-      textDecoration: "none",
-      outlineColor: "transparent",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      width: "100%",
-      ":hover": {
-        backgroundColor: GREY_4
+      textDecoration: 'none',
+      outlineColor: 'transparent',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      width: '100%',
+      ':hover': {
+        backgroundColor: GREY_4,
       },
-      ":focus": {
-        outline: `3px solid ${YELLOW}`
+      ':focus': {
+        outline: `3px solid ${YELLOW}`,
       },
-      ":visited": {
-        color: PURPLE
-      }
-    }
+      ':visited': {
+        color: PURPLE,
+      },
+    },
   },
   ({ previousPage }) => ({
-    marginRight: previousPage ? "3px" : undefined,
-    " > a": {
-      alignItems: previousPage ? "flex-start" : undefined
+    marginRight: previousPage ? '3px' : undefined,
+    ' > a': {
+      alignItems: previousPage ? 'flex-start' : undefined,
     },
-    " > a div": {
-      justifyContent: previousPage ? "flex-start" : undefined,
-      " > svg": {
-        height: previousPage ? "13px" : undefined,
-        width: previousPage ? "17px" : undefined,
-        marginRight: previousPage ? "10px" : undefined
-      }
-    }
+    ' > a div': {
+      justifyContent: previousPage ? 'flex-start' : undefined,
+      ' > svg': {
+        height: previousPage ? '13px' : undefined,
+        width: previousPage ? '17px' : undefined,
+        marginRight: previousPage ? '10px' : undefined,
+      },
+    },
   }),
   ({ nextPage }) => ({
-    " > a": {
-      alignItems: nextPage ? "flex-end" : undefined
+    ' > a': {
+      alignItems: nextPage ? 'flex-end' : undefined,
     },
-    " > a div": {
-      justifyContent: nextPage ? "flex-end" : undefined,
-      " > svg": {
-        height: nextPage ? "13px" : undefined,
-        width: nextPage ? "17px" : undefined,
-        marginLeft: nextPage ? "10px" : undefined
-      }
-    }
-  })
+    ' > a div': {
+      justifyContent: nextPage ? 'flex-end' : undefined,
+      ' > svg': {
+        height: nextPage ? '13px' : undefined,
+        width: nextPage ? '17px' : undefined,
+        marginLeft: nextPage ? '10px' : undefined,
+      },
+    },
+  }),
 );
 
 const InnerWrap = glamorous.div({
-  display: "flex",
-  alignItems: "center",
-  width: "100%"
+  display: 'flex',
+  alignItems: 'center',
+  width: '100%',
 });
 
 const PageTitle = glamorous.span({
   fontSize: FONT_SIZE.SIZE_14,
   lineHeight: LINE_HEIGHT.SIZE_14,
-  textDecoration: "underline",
+  textDecoration: 'underline',
   [MEDIA_QUERIES.LARGESCREEN]: {
     fontSize: FONT_SIZE.SIZE_16,
-    lineHeight: LINE_HEIGHT.SIZE_16
-  }
+    lineHeight: LINE_HEIGHT.SIZE_16,
+  },
 });
 
-const asPaginationItem = AnchorType => {
+const asPaginationItem = (AnchorType) => {
   const PaginationItem = props => (
     <PaginationWrapper
       previousPage={props.previousPage}
@@ -122,7 +122,7 @@ const asPaginationItem = AnchorType => {
     pageTitle: PropTypes.string,
     to: PropTypes.string,
     target: PropTypes.string,
-    href: PropTypes.string
+    href: PropTypes.string,
   };
 
   PaginationItem.defaultProps = {
@@ -131,7 +131,7 @@ const asPaginationItem = AnchorType => {
     pageTitle: undefined,
     to: undefined,
     target: undefined,
-    href: undefined
+    href: undefined,
   };
 
   return PaginationItem;

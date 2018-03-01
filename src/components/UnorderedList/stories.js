@@ -1,25 +1,25 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
 
-import UnorderedList from ".";
+import UnorderedList from '.';
 
-storiesOf("UnorderedList", module).add("UnorderedList default", () => (
+storiesOf('UnorderedList', module).add('UnorderedList default', () => (
   <UnorderedList>
     <li>UnorderedList example</li>
   </UnorderedList>
 ));
 
-storiesOf("UnorderedList", module).add("UnorderedList with square", () => (
+storiesOf('UnorderedList', module).add('UnorderedList with square', () => (
   <UnorderedList listStyleType="square">
     <li>UnorderedList example</li>
   </UnorderedList>
 ));
 
-storiesOf("UnorderedList", module).add(
-  "UnorderedList with no decoration",
+storiesOf('UnorderedList', module).add(
+  'UnorderedList with no decoration',
   () => (
     <UnorderedList listStyleType="none">
       <li>UnorderedList example</li>
     </UnorderedList>
-  )
+  ),
 );

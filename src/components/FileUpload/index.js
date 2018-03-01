@@ -1,35 +1,37 @@
 // https://github.com/alphagov/govuk-frontend/tree/master/src/components/file-upload
 
-import React from "react";
-import PropTypes from "prop-types";
-import glamorous from "glamorous";
+import React from 'react';
+import PropTypes from 'prop-types';
+import glamorous from 'glamorous';
 
-import Label from "../Label/index";
-import LabelText from "../LabelText/index";
-import ErrorText from "../ErrorText/index";
-import HintText from "../HintText/index";
+import Label from '../Label/index';
+import LabelText from '../LabelText/index';
+import ErrorText from '../ErrorText/index';
+import HintText from '../HintText/index';
 
-import { FONT_SIZE, NTA_LIGHT, MEDIA_QUERIES } from "../../constants/index";
+import { FONT_SIZE, NTA_LIGHT, MEDIA_QUERIES } from '../../constants/index';
 
 const Input = glamorous.input({
-  boxSizing: "border-box",
+  boxSizing: 'border-box',
   fontFamily: NTA_LIGHT,
-  WebkitFontSmoothing: "antialiased",
-  MozOsxFontSmoothing: "grayscale",
+  WebkitFontSmoothing: 'antialiased',
+  MozOsxFontSmoothing: 'grayscale',
   fontWeight: 400,
-  textTransform: "none",
+  textTransform: 'none',
   fontSize: FONT_SIZE.SIZE_14,
-  width: "100%",
-  padding: "5px 4px 4px",
+  width: '100%',
+  padding: '5px 4px 4px',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    width: "50%"
+    width: '50%',
   },
-  "[disabled]": {
-    cursor: "auto"
-  }
+  '[disabled]': {
+    cursor: 'auto',
+  },
 });
 
-const FileUpload = ({ meta, children, hint, acceptedFormats }) => (
+const FileUpload = ({
+  meta, children, hint, acceptedFormats,
+}) => (
   <Label error={meta.error}>
     <LabelText error={meta.error}>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
@@ -41,7 +43,7 @@ const FileUpload = ({ meta, children, hint, acceptedFormats }) => (
 FileUpload.defaultProps = {
   hint: null,
   meta: {},
-  acceptedFormats: null
+  acceptedFormats: null,
 };
 
 FileUpload.propTypes = {
@@ -59,10 +61,10 @@ FileUpload.propTypes = {
     submitSucceeded: PropTypes.bool,
     touched: PropTypes.bool,
     valid: PropTypes.bool,
-    visited: PropTypes.bool
+    visited: PropTypes.bool,
   }),
   children: PropTypes.node.isRequired,
-  acceptedFormats: PropTypes.string
+  acceptedFormats: PropTypes.string,
 };
 
 export default FileUpload;

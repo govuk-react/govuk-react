@@ -1,15 +1,13 @@
 {
   "parser": "babel-eslint",
-  "extends": ["airbnb", "sonar", "prettier", "plugin:flowtype/recommended"],
+  "extends": ["airbnb", "sonar", "plugin:flowtype/recommended"],
   "plugins": [
-    "prettier",
     "flowtype"
   ],
   "env": {
     "es6": true
   },
   "rules": {
-    "prettier/prettier": "error",
     "react/jsx-filename-extension": 0,
     "jsx-a11y/label-has-for": 0
   },

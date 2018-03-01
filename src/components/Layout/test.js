@@ -1,29 +1,29 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { mount } from "enzyme";
-import Layout from "./";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
+import Layout from './';
 
-describe("Layout", () => {
+describe('Layout', () => {
   let props;
-  const example = "example";
+  const example = 'example';
   const wrapper = <Layout>{example}</Layout>;
 
   beforeEach(() => {
     props = {
-      children: example
+      children: example,
     };
   });
 
-  it("renders without crashing", () => {
-    const div = document.createElement("div");
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
     ReactDOM.render(<Layout>Example</Layout>, div);
   });
 
-  it("passes `props.children` to the rendered `wrapper` as `children`", () => {
+  it('passes `props.children` to the rendered `wrapper` as `children`', () => {
     expect(wrapper.props.children).toBe(props.children);
   });
 
-  it("matches wrapper snapshot", () => {
-    expect(mount(wrapper)).toMatchSnapshot(`wrapper mount`);
+  it('matches wrapper snapshot', () => {
+    expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
   });
 });
