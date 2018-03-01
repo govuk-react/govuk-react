@@ -67,6 +67,17 @@ storiesOf("${componentName}", module).add("${componentName}", () => (
   writeThis(filename, contents);
 };
 
+// write example.js file
+const exampleScript = () => {
+  const filename = "example";
+  const contents = `import React from "react";
+import ${componentName} from ".";
+
+export default () => <${componentName}>${componentName} example</${componentName}>;
+`;
+  writeThis(filename, contents);
+};
+
 // write index.js file
 const indexScript = () => {
   const filename = "index";
@@ -76,14 +87,25 @@ import React from "react";
 import PropTypes from "prop-types";
 import glamorous from "glamorous";
 
+import {
+  FONT_SIZE,
+  LINE_HEIGHT,
+  MEDIA_QUERIES,
+  NTA_LIGHT
+} from "../../constants/index";
+
 const ${componentName}Inner = glamorous.div({
   boxSizing: "border-box",
-  fontFamily: '"nta", Arial, sans-serif',
+  fontFamily: NTA_LIGHT,
   fontWeight: 400,
   textTransform: "none",
-  fontSize: "16px",
-  lineHeight: "1.25",
-  width: "100%"
+  fontSize: FONT_SIZE.SIZE_14,
+  lineHeight: LINE_HEIGHT.SIZE_14,
+  width: "100%",
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    fontSize: FONT_SIZE.SIZE_16,
+    lineHeight: LINE_HEIGHT.SIZE_16
+  }
 });
 
 const ${componentName} = ({ children }) => (
@@ -110,8 +132,9 @@ const init = () => {
   createFolder();
   testScript();
   storiesScript();
+  exampleScript();
   indexScript();
-  console.log(`✅ The component "${componentName}" was created successfully`);
+  console.log(`✅  The component "${componentName}" was created successfully`);
   return false;
 };
 

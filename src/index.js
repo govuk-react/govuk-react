@@ -22,6 +22,9 @@ export { default as TextArea } from "./components/TextArea";
 export { default as MultiChoice } from "./components/MultiChoice";
 export { default as PhaseBadge } from "./components/PhaseBadge";
 export { default as PhaseBanner } from "./components/PhaseBanner";
+export { default as UnorderedList } from "./components/UnorderedList";
+export { default as ListItem } from "./components/ListItem";
+export { default as ListNavigation } from "./components/ListNavigation";
 
 // Higher Order Components
 export { default as asAnchor } from "./hoc/asAnchor";
