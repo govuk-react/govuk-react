@@ -1,10 +1,10 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
 
-import Radio from "../Radio";
-import MultiChoice from ".";
+import Radio from '../Radio';
+import MultiChoice from '.';
 
-storiesOf("MultiChoice", module).add("MultiChoice", () => (
+storiesOf('MultiChoice', module).add('MultiChoice', () => (
   <MultiChoice label="example">
     <Radio name="group1" inline>
       Yes

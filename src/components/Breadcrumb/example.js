@@ -1,5 +1,5 @@
-import React from "react";
-import Breadcrumb from ".";
+import React from 'react';
+import Breadcrumb from '.';
 
 export default () => (
   <Breadcrumb>

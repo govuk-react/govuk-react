@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const ArrowLeft = ({ colour, title }) => (
   <svg
@@ -9,7 +9,7 @@ const ArrowLeft = ({ colour, title }) => (
     y="0px"
     width="17"
     height="13"
-    style={{ display: "block" }}
+    style={{ display: 'block' }}
     fill={colour}
     viewBox="0 0 17 13"
   >
@@ -20,12 +20,12 @@ const ArrowLeft = ({ colour, title }) => (
 
 ArrowLeft.propTypes = {
   colour: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 ArrowLeft.defaultProps = {
-  colour: "inherit",
-  title: "arrow left"
+  colour: 'inherit',
+  title: 'arrow left',
 };
 
 export default ArrowLeft;

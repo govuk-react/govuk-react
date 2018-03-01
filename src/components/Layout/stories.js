@@ -1,10 +1,10 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import Layout from ".";
-import GridRow from "../GridRow";
-import GridCol from "../GridCol";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import Layout from '.';
+import GridRow from '../GridRow';
+import GridCol from '../GridCol';
 
-storiesOf("Layout", module).add("Column Full", () => (
+storiesOf('Layout', module).add('Column Full', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columFull>
@@ -14,7 +14,7 @@ storiesOf("Layout", module).add("Column Full", () => (
   </Layout>
 ));
 
-storiesOf("Layout", module).add("Column Halves", () => (
+storiesOf('Layout', module).add('Column Halves', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnOneHalf>
@@ -27,7 +27,7 @@ storiesOf("Layout", module).add("Column Halves", () => (
   </Layout>
 ));
 
-storiesOf("Layout", module).add("Column Thirds", () => (
+storiesOf('Layout', module).add('Column Thirds', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnOneThird>
@@ -43,7 +43,7 @@ storiesOf("Layout", module).add("Column Thirds", () => (
   </Layout>
 ));
 
-storiesOf("Layout", module).add("Column Two Thirds / One Third", () => (
+storiesOf('Layout', module).add('Column Two Thirds / One Third', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnTwoThirds>
@@ -56,7 +56,7 @@ storiesOf("Layout", module).add("Column Two Thirds / One Third", () => (
   </Layout>
 ));
 
-storiesOf("Layout", module).add("Column One Third / Two Thirds", () => (
+storiesOf('Layout', module).add('Column One Third / Two Thirds', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnOneThird>
@@ -69,7 +69,7 @@ storiesOf("Layout", module).add("Column One Third / Two Thirds", () => (
   </Layout>
 ));
 
-storiesOf("Layout", module).add("Quarters", () => (
+storiesOf('Layout', module).add('Quarters', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnOneQuarter>
@@ -88,7 +88,7 @@ storiesOf("Layout", module).add("Quarters", () => (
   </Layout>
 ));
 
-storiesOf("Layout", module).add("Example layout", () => (
+storiesOf('Layout', module).add('Example layout', () => (
   <Layout>
     <GridRow>
       <GridCol columFull>

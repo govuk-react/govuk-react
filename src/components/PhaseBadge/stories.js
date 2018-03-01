@@ -1,8 +1,8 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
 
-import PhaseBadge from ".";
+import PhaseBadge from '.';
 
-storiesOf("PhaseBadge", module).add("PhaseBadge", () => (
+storiesOf('PhaseBadge', module).add('PhaseBadge', () => (
   <PhaseBadge>beta</PhaseBadge>
 ));

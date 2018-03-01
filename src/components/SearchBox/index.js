@@ -1,63 +1,63 @@
 // https://govuk-static.herokuapp.com/component-guide/search
 
-import React from "react";
-import PropTypes from "prop-types";
-import glamorous from "glamorous";
-import { LIGHT_BLUE, WHITE, YELLOW } from "govuk-colours";
+import React from 'react';
+import PropTypes from 'prop-types';
+import glamorous from 'glamorous';
+import { LIGHT_BLUE, WHITE, YELLOW } from 'govuk-colours';
 
-import Search from "../../icons/Search/index";
+import Search from '../../icons/Search/index';
 
 const SearchBoxWrapper = glamorous.div({
-  boxSizing: "border-box",
-  display: "flex",
-  width: "100%",
-  background: WHITE
+  boxSizing: 'border-box',
+  display: 'flex',
+  width: '100%',
+  background: WHITE,
 });
 
 // css normalize is hiding the input:search clear SearchButton
 const InputSearchBox = glamorous.input({
-  width: "100%",
-  height: "40px",
-  padding: "6px",
+  width: '100%',
+  height: '40px',
+  padding: '6px',
   margin: 0,
-  border: "solid 1px #bfc1c3",
+  border: 'solid 1px #bfc1c3',
   borderRight: 0,
-  boxSizing: "border-box",
+  boxSizing: 'border-box',
   fontFamily: "'nta', Arial, sans-serif",
   fontWeight: 400,
-  textTransform: "none",
-  fontSize: "16px",
-  lineHeight: "1.75",
-  background: "#fff",
+  textTransform: 'none',
+  fontSize: '16px',
+  lineHeight: '1.75',
+  background: '#fff',
   borderRadius: 0,
-  WebkitAppearance: "none",
-  ":focus": {
-    marginRight: "3px",
+  WebkitAppearance: 'none',
+  ':focus': {
+    marginRight: '3px',
     outline: `3px solid ${YELLOW}`,
     outlineOffset: 0,
-    " ~ button": {
-      width: "46px"
-    }
-  }
+    ' ~ button': {
+      width: '46px',
+    },
+  },
 });
 
 const SearchButton = glamorous.button({
   backgroundColor: LIGHT_BLUE,
   border: 0,
-  display: "block",
-  color: "#fff",
-  position: "relative",
-  padding: "10px",
-  width: "45px",
-  height: "40px",
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "2px 50%",
-  textIndent: "-5000px",
-  overflow: "hidden",
-  ":focus": {
+  display: 'block',
+  color: '#fff',
+  position: 'relative',
+  padding: '10px',
+  width: '45px',
+  height: '40px',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: '2px 50%',
+  textIndent: '-5000px',
+  overflow: 'hidden',
+  ':focus': {
     outline: `3px solid ${YELLOW}`,
-    outlineOffset: 0
-  }
+    outlineOffset: 0,
+  },
 });
 
 const SearchBox = ({ placeholder }) => (
@@ -70,11 +70,11 @@ const SearchBox = ({ placeholder }) => (
 );
 
 SearchBox.defaultProps = {
-  placeholder: undefined
+  placeholder: undefined,
 };
 
 SearchBox.propTypes = {
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
 };
 
 export default SearchBox;

@@ -7,49 +7,52 @@
 // () Female
 // () Other
 
-// Only one is valid, but at least one must be selected. Therefore validation around the set of radios is required.
+// Only one is valid, but at least one must be selected.
+// Therefore validation around the set of radios is required.
 
-import React from "react";
-import PropTypes from "prop-types";
-import glamorous from "glamorous";
-import { ERROR_COLOUR } from "govuk-colours";
+import React from 'react';
+import PropTypes from 'prop-types';
+import glamorous from 'glamorous';
+import { ERROR_COLOUR } from 'govuk-colours';
 
-import LabelText from "../LabelText/index";
-import ErrorText from "../ErrorText/index";
-import HintText from "../HintText/index";
+import LabelText from '../LabelText/index';
+import ErrorText from '../ErrorText/index';
+import HintText from '../HintText/index';
 import {
   BORDER_WIDTH_MOBILE,
   MEDIA_QUERIES,
   SITE_WIDTH,
-  SPACING
-} from "../../constants/index";
+  SPACING,
+} from '../../constants/index';
 
 const FieldSet = glamorous.div(
   {
     padding: 0,
     margin: 0,
     border: 0,
-    boxSizing: "border-box",
-    width: "100%",
-    ":after": {
+    boxSizing: 'border-box',
+    width: '100%',
+    ':after': {
       content: "''",
-      display: "table",
-      clear: "both"
+      display: 'table',
+      clear: 'both',
     },
     [MEDIA_QUERIES.LARGESCREEN]: {
-      maxWidth: SITE_WIDTH
-    }
+      maxWidth: SITE_WIDTH,
+    },
   },
   ({ error }) => ({
     borderLeft: error
       ? `${BORDER_WIDTH_MOBILE} solid ${ERROR_COLOUR}`
       : undefined,
     marginRight: error ? SPACING.SCALE_3 : undefined,
-    paddingLeft: error ? SPACING.SCALE_2 : undefined
-  })
+    paddingLeft: error ? SPACING.SCALE_2 : undefined,
+  }),
 );
 
-const MultiChoice = ({ meta, label, children, hint }) => (
+const MultiChoice = ({
+  meta, label, children, hint,
+}) => (
   <FieldSet error={meta.touched && meta.error}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
@@ -60,7 +63,7 @@ const MultiChoice = ({ meta, label, children, hint }) => (
 
 MultiChoice.defaultProps = {
   hint: undefined,
-  meta: {}
+  meta: {},
 };
 
 MultiChoice.propTypes = {
@@ -77,11 +80,11 @@ MultiChoice.propTypes = {
     submitSucceeded: PropTypes.bool,
     touched: PropTypes.bool,
     valid: PropTypes.bool,
-    visited: PropTypes.bool
+    visited: PropTypes.bool,
   }),
   label: PropTypes.node.isRequired,
   children: PropTypes.node.isRequired,
-  hint: PropTypes.string
+  hint: PropTypes.string,
 };
 
 export default MultiChoice;

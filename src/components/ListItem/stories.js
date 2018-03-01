@@ -1,8 +1,8 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
 
-import ListItem from ".";
+import ListItem from '.';
 
-storiesOf("ListItem", module).add("ListItem", () => (
+storiesOf('ListItem', module).add('ListItem', () => (
   <ListItem>ListItem example</ListItem>
 ));

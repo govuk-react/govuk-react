@@ -1,20 +1,20 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { BrowserRouter, Link } from "react-router-dom";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { BrowserRouter, Link } from 'react-router-dom';
 
-import Breadcrumb from ".";
-import asAnchor from "../../hoc/asAnchor/index";
+import Breadcrumb from '.';
+import asAnchor from '../../hoc/asAnchor/index';
 
-const AnchorTag = asAnchor("a");
+const AnchorTag = asAnchor('a');
 const AnchorLink = asAnchor(Link);
 
-storiesOf("Breadcrumb", module).add("Component default", () => (
+storiesOf('Breadcrumb', module).add('Component default', () => (
   <Breadcrumb>
     <AnchorTag href="/section">Section 1</AnchorTag>
   </Breadcrumb>
 ));
 
-storiesOf("Breadcrumb", module).add("Three levels deep", () => (
+storiesOf('Breadcrumb', module).add('Three levels deep', () => (
   <Breadcrumb>
     <AnchorTag href="/section">Section 1</AnchorTag>
     <AnchorTag href="/section/sub-section">Sub-section</AnchorTag>
@@ -22,8 +22,8 @@ storiesOf("Breadcrumb", module).add("Three levels deep", () => (
   </Breadcrumb>
 ));
 
-storiesOf("Breadcrumb", module).add(
-  "Three levels deep using React Router Link",
+storiesOf('Breadcrumb', module).add(
+  'Three levels deep using React Router Link',
   () => (
     <Breadcrumb>
       <BrowserRouter>
@@ -38,5 +38,5 @@ storiesOf("Breadcrumb", module).add(
         </AnchorLink>
       </BrowserRouter>
     </Breadcrumb>
-  )
+  ),
 );

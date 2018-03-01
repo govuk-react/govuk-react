@@ -1,6 +1,6 @@
-import React from "react";
-import MultiChoice from ".";
-import Radio from "../Radio";
+import React from 'react';
+import MultiChoice from '.';
+import Radio from '../Radio';
 
 export default () => (
   <MultiChoice label="example">

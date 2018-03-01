@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Search = ({ colour }) => (
   <svg
@@ -9,7 +9,7 @@ const Search = ({ colour }) => (
     y="0px"
     width="100%"
     height="100%"
-    style={{ display: "block" }}
+    style={{ display: 'block' }}
     fill={colour}
     viewBox="0 0 56.966 56.966"
   >
@@ -19,11 +19,11 @@ const Search = ({ colour }) => (
 );
 
 Search.propTypes = {
-  colour: PropTypes.string
+  colour: PropTypes.string,
 };
 
 Search.defaultProps = {
-  colour: "#000"
+  colour: '#000',
 };
 
 export default Search;

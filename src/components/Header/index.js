@@ -3,20 +3,19 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/globals/scss/core/_typography.scss
 // https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_elements-typography.scss
 
-import glamorous from "glamorous";
-import React, { createElement } from "react";
-import PropTypes from "prop-types";
+import glamorous from 'glamorous';
+import React, { createElement } from 'react';
+import PropTypes from 'prop-types';
 
-import { MEDIA_QUERIES, NTA_LIGHT } from "../../constants/index";
-import { LEVEL_SIZE, FONT_SIZES, LEVEL_TAG } from "../../constants/typography";
+import { MEDIA_QUERIES, NTA_LIGHT } from '../../constants/index';
+import { LEVEL_SIZE, FONT_SIZES, LEVEL_TAG } from '../../constants/typography';
 
 const GHeader = glamorous(({ level, children, ...props }) =>
-  createElement(LEVEL_TAG[level], props, children)
-)(
+  createElement(LEVEL_TAG[level], props, children))(
   {
     fontFamily: NTA_LIGHT,
-    fontWeight: "bold",
-    margin: 0
+    fontWeight: 'bold',
+    margin: 0,
   },
   ({ level, size = LEVEL_SIZE[level] }) => ({
     fontSize: FONT_SIZES[size].mobile.fontSize,
@@ -25,24 +24,24 @@ const GHeader = glamorous(({ level, children, ...props }) =>
     [MEDIA_QUERIES.LARGESCREEN]: {
       fontSize: FONT_SIZES[size].tablet.fontSize,
       lineHeight: FONT_SIZES[size].tablet.lineHeight,
-      marginBottom: FONT_SIZES[size].tablet.spacing
+      marginBottom: FONT_SIZES[size].tablet.spacing,
     },
     [MEDIA_QUERIES.PRINT]: {
-      fontSize: FONT_SIZES[size].print.fontSize
-    }
-  })
+      fontSize: FONT_SIZES[size].print.fontSize,
+    },
+  }),
 );
 
 const Header = props => <GHeader {...props} />;
 
 Header.defaultProps = {
   level: 1,
-  size: undefined
+  size: undefined,
 };
 
 Header.propTypes = {
   level: PropTypes.number,
-  size: PropTypes.oneOf(Object.keys(FONT_SIZES))
+  size: PropTypes.oneOf(Object.keys(FONT_SIZES)),
 };
 
 export default Header;

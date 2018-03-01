@@ -1,15 +1,17 @@
-import React from "react";
-import { Field } from "react-final-form";
-import { storiesOf } from "@storybook/react";
-import PropTypes from "prop-types";
+import React from 'react';
+import { Field } from 'react-final-form';
+import { storiesOf } from '@storybook/react';
+import PropTypes from 'prop-types';
 
-import MultiChoice from "../MultiChoice/index";
-import FinalFormWrapper from "../../stories/components/FinalFormWrapper";
-import Radio from ".";
+import MultiChoice from '../MultiChoice/index';
+import FinalFormWrapper from '../../stories/components/FinalFormWrapper';
+import Radio from '.';
 
-const required = value => (value ? undefined : "Required");
+const required = value => (value ? undefined : 'Required');
 
-const RadioGroup = ({ label, hint, options, inline, input, meta }) => (
+const RadioGroup = ({
+  label, hint, options, inline, input, meta,
+}) => (
   <div>
     <MultiChoice label={label} hint={hint} meta={meta}>
       {options.map(o => (
@@ -33,7 +35,7 @@ RadioGroup.defaultProps = {
   meta: {},
   hint: undefined,
   inline: false,
-  options: {}
+  options: {},
 };
 
 RadioGroup.propTypes = {
@@ -44,11 +46,11 @@ RadioGroup.propTypes = {
   inline: PropTypes.bool,
   options: PropTypes.shape({
     title: PropTypes.string,
-    value: PropTypes.string
-  })
+    value: PropTypes.string,
+  }),
 };
 
-storiesOf("Radio", module).add("Radio stacked", () => (
+storiesOf('Radio', module).add('Radio stacked', () => (
   <div>
     <Radio name="group1">Waste from animal carcasses</Radio>
     <Radio name="group1">Waste from mines or quarries</Radio>
@@ -56,7 +58,7 @@ storiesOf("Radio", module).add("Radio stacked", () => (
   </div>
 ));
 
-storiesOf("Radio", module).add("Radio inline", () => (
+storiesOf('Radio', module).add('Radio inline', () => (
   <div>
     <Radio name="group1" inline>
       Yes
@@ -67,7 +69,7 @@ storiesOf("Radio", module).add("Radio inline", () => (
   </div>
 ));
 
-storiesOf("Radio", module).add("Radio disabled", () => (
+storiesOf('Radio', module).add('Radio disabled', () => (
   <div>
     <Radio name="group1" disabled="disabled">
       Disabled checkbox option
@@ -75,7 +77,7 @@ storiesOf("Radio", module).add("Radio disabled", () => (
   </div>
 ));
 
-storiesOf("Radio", module).add("Radio preselected", () => (
+storiesOf('Radio', module).add('Radio preselected', () => (
   <div>
     <Radio name="group1" checked>
       Farm or agricultural waste
@@ -83,7 +85,7 @@ storiesOf("Radio", module).add("Radio preselected", () => (
   </div>
 ));
 
-storiesOf("Radio", module).add("Radio preselected & disabled", () => (
+storiesOf('Radio', module).add('Radio preselected & disabled', () => (
   <div>
     <Radio name="group1" disabled="disabled" checked>
       Farm or agricultural waste
@@ -91,8 +93,8 @@ storiesOf("Radio", module).add("Radio preselected & disabled", () => (
   </div>
 ));
 
-storiesOf("Radio", module).add(
-  "Usage with Final/Redux Form - multi checkbox validation",
+storiesOf('Radio', module).add(
+  'Usage with Final/Redux Form - multi checkbox validation',
   () => (
     <FinalFormWrapper>
       <Field
@@ -101,12 +103,12 @@ storiesOf("Radio", module).add(
         hint="You must tell us"
         component={RadioGroup}
         options={[
-          { title: "Yep", value: "yes" },
-          { title: "Nope", value: "no" }
+          { title: 'Yep', value: 'yes' },
+          { title: 'Nope', value: 'no' },
         ]}
         validate={required}
         inline
       />
     </FinalFormWrapper>
-  )
+  ),
 );

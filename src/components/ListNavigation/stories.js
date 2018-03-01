@@ -1,12 +1,12 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
 
-import ListNavigation from ".";
-import asAnchor from "../../hoc/asAnchor/index";
+import ListNavigation from '.';
+import asAnchor from '../../hoc/asAnchor/index';
 
-const AnchorTag = asAnchor("a");
+const AnchorTag = asAnchor('a');
 
-storiesOf("ListNavigation", module).add("ListNavigation", () => (
+storiesOf('ListNavigation', module).add('ListNavigation', () => (
   <ListNavigation listStyleType="square">
     <AnchorTag href="https://example.com/?=1">lorem dolor set cetra</AnchorTag>
     <AnchorTag href="https://example.com/?=2">
