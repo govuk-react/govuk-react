@@ -6,7 +6,7 @@ export default function generateMarkdown(name, reactAPI, imagePath) {
   const markdownString = `${generateTitle(name)}\n${generateDescription(
     reactAPI.description,
     imagePath
-  )}\n${generateProps(reactAPI.props)}`;
+  )}\n${generateProps(reactAPI.props)}\n`;
 
   return markdownString;
 }

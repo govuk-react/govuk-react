@@ -8,5 +8,5 @@ export default function generatePropType(type) {
     values = type.value;
   }
 
-  return `type: \`${type.name}${values || ""}\`\n`;
+  return `${type.name}${values || ""}`;
 }

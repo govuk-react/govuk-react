@@ -4,22 +4,11 @@ BackLink
 ![Component Image](./docs/BackLink.png)
 
 
-Props
------
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `children` | true |  | node | Generally the text that will appear in the back link
+ `goBack` |  | undefined | func | A function that is called on click
 
-### `children` (required)
-
-Generally the text that will appear in the back link
-
-type: `node`
-
-
-### `goBack`
-
-A function that is called on click
-
-type: `func`
-defaultValue: `undefined`
 
 Breadcrumb
 ==========
@@ -27,14 +16,10 @@ Breadcrumb
 ![Component Image](./docs/Breadcrumb.png)
 
 
-Props
------
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `children` | true |  | node | Generally a series of anchors or Link components
 
-### `children` (required)
-
-Generally a series of anchors or Link components
-
-type: `node`
 
 Button
 ======
@@ -42,12 +27,10 @@ Button
 ![Component Image](./docs/Button.png)
 
 
-Props
------
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `children` |  | "Button" |  | 
 
-### `children`
-
-defaultValue: `"Button"`
 
 Checkbox
 ========
@@ -55,18 +38,11 @@ Checkbox
 ![Component Image](./docs/Checkbox.png)
 
 
-Props
------
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `children` | true |  | node | 
+ `inline` |  | undefined | bool | 
 
-### `children` (required)
-
-type: `node`
-
-
-### `inline`
-
-type: `bool`
-defaultValue: `undefined`
 
 DateInput
 =========
@@ -74,29 +50,18 @@ DateInput
 ![Component Image](./docs/DateInput.png)
 
 
-Props
------
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `children` | true |  | node | 
+ `errorText` |  | null | string | 
+ `hintText` |  | null | string | 
 
-### `children` (required)
-
-type: `node`
-
-
-### `errorText`
-
-type: `string`
-defaultValue: `null`
-
-
-### `hintText`
-
-type: `string`
-defaultValue: `null`
 
 ErrorText
 =========
 
 ![Component Image](./docs/ErrorText.png)
+
 
 
 FileUpload
@@ -105,30 +70,13 @@ FileUpload
 ![Component Image](./docs/FileUpload.png)
 
 
-Props
------
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `acceptedFormats` |  | null | string | 
+ `children` | true |  | node | 
+ `hint` |  | null | string | 
+ `meta` |  | {} | shape[object Object] | 
 
-### `acceptedFormats`
-
-type: `string`
-defaultValue: `null`
-
-
-### `children` (required)
-
-type: `node`
-
-
-### `hint`
-
-type: `string`
-defaultValue: `null`
-
-
-### `meta`
-
-type: `shape[object Object]`
-defaultValue: `{}`
 
 GridCol
 =======
@@ -136,13 +84,10 @@ GridCol
 ![Component Image](./docs/GridCol.png)
 
 
-Props
------
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `children` |  | undefined | node | 
 
-### `children`
-
-type: `node`
-defaultValue: `undefined`
 
 GridRow
 =======
@@ -150,12 +95,10 @@ GridRow
 ![Component Image](./docs/GridRow.png)
 
 
-Props
------
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `children` | true |  | node | 
 
-### `children` (required)
-
-type: `node`
 
 Header
 ======
@@ -163,24 +106,17 @@ Header
 ![Component Image](./docs/Header.png)
 
 
-Props
------
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `level` |  | 1 | number | 
+ `size` |  | undefined | enumObject.keys(FONT_SIZES) | 
 
-### `level`
-
-type: `number`
-defaultValue: `1`
-
-
-### `size`
-
-type: `enumObject.keys(FONT_SIZES)`
-defaultValue: `undefined`
 
 HintText
 ========
 
 ![Component Image](./docs/HintText.png)
+
 
 
 Input
@@ -189,25 +125,12 @@ Input
 ![Component Image](./docs/Input.png)
 
 
-Props
------
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `onChange` |  | undefined | func | 
+ `type` |  | "text" | string | 
+ `value` |  | undefined | string | 
 
-### `onChange`
-
-type: `func`
-defaultValue: `undefined`
-
-
-### `type`
-
-type: `string`
-defaultValue: `"text"`
-
-
-### `value`
-
-type: `string`
-defaultValue: `undefined`
 
 InputField
 ==========
@@ -215,35 +138,19 @@ InputField
 ![Component Image](./docs/InputField.png)
 
 
-Props
------
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `children` | true |  | node | 
+ `hint` |  | null | string | 
+ `input` |  | {} | shape[object Object] | 
+ `meta` |  | {} | shape[object Object] | 
 
-### `children` (required)
-
-type: `node`
-
-
-### `hint`
-
-type: `string`
-defaultValue: `null`
-
-
-### `input`
-
-type: `shape[object Object]`
-defaultValue: `{}`
-
-
-### `meta`
-
-type: `shape[object Object]`
-defaultValue: `{}`
 
 Label
 =====
 
 ![Component Image](./docs/Label.png)
+
 
 
 LabelText
@@ -252,50 +159,17 @@ LabelText
 ![Component Image](./docs/LabelText.png)
 
 
+
 Layout
 ======
 
 ![Component Image](./docs/Layout.png)
 
 
-Props
------
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `children` | true |  | node | 
 
-### `children` (required)
-
-type: `node`
-
-ListItem
-========
-
-![Component Image](./docs/ListItem.png)
-
-
-Props
------
-
-### `children` (required)
-
-type: `node`
-
-ListNavigation
-==============
-
-![Component Image](./docs/ListNavigation.png)
-
-
-Props
------
-
-### `children` (required)
-
-type: `node`
-
-
-### `listStyleType`
-
-type: `string`
-defaultValue: `undefined`
 
 MultiChoice
 ===========
@@ -303,34 +177,19 @@ MultiChoice
 ![Component Image](./docs/MultiChoice.png)
 
 
-Props
------
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `children` | true |  | node | 
+ `hint` |  | undefined | string | 
+ `label` | true |  | node | 
+ `meta` |  | {} | shape[object Object] | 
 
-### `children` (required)
-
-type: `node`
-
-
-### `hint`
-
-type: `string`
-defaultValue: `undefined`
-
-
-### `label` (required)
-
-type: `node`
-
-
-### `meta`
-
-type: `shape[object Object]`
-defaultValue: `{}`
 
 PhaseBadge
 ==========
 
 ![Component Image](./docs/PhaseBadge.png)
+
 
 
 PhaseBanner
@@ -339,17 +198,11 @@ PhaseBanner
 ![Component Image](./docs/PhaseBanner.png)
 
 
-Props
------
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `children` | true |  | node | 
+ `level` | true |  | string | 
 
-### `children` (required)
-
-type: `node`
-
-
-### `level` (required)
-
-type: `string`
 
 Radio
 =====
@@ -357,18 +210,11 @@ Radio
 ![Component Image](./docs/Radio.png)
 
 
-Props
------
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `children` | true |  | node | 
+ `inline` |  | undefined | bool | 
 
-### `children` (required)
-
-type: `node`
-
-
-### `inline`
-
-type: `bool`
-defaultValue: `undefined`
 
 Select
 ======
@@ -376,41 +222,15 @@ Select
 ![Component Image](./docs/Select.png)
 
 
-Props
------
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `children` | true |  | node | 
+ `errorText` |  | null | string | 
+ `hint` |  | undefined | string | 
+ `input` |  | {} | shape[object Object] | 
+ `label` | true |  | string | 
+ `meta` |  | {} | shape[object Object] | 
 
-### `children` (required)
-
-type: `node`
-
-
-### `errorText`
-
-type: `string`
-defaultValue: `null`
-
-
-### `hint`
-
-type: `string`
-defaultValue: `undefined`
-
-
-### `input`
-
-type: `shape[object Object]`
-defaultValue: `{}`
-
-
-### `label` (required)
-
-type: `string`
-
-
-### `meta`
-
-type: `shape[object Object]`
-defaultValue: `{}`
 
 TextArea
 ========
@@ -418,47 +238,11 @@ TextArea
 ![Component Image](./docs/TextArea.png)
 
 
-Props
------
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `children` | true |  | node | 
+ `hint` |  | null | string | 
+ `input` |  | {} | shape[object Object] | 
+ `meta` |  | {} | shape[object Object] | 
 
-### `children` (required)
-
-type: `node`
-
-
-### `hint`
-
-type: `string`
-defaultValue: `null`
-
-
-### `input`
-
-type: `shape[object Object]`
-defaultValue: `{}`
-
-
-### `meta`
-
-type: `shape[object Object]`
-defaultValue: `{}`
-
-UnorderedList
-=============
-
-![Component Image](./docs/UnorderedList.png)
-
-
-Props
------
-
-### `children` (required)
-
-type: `node`
-
-
-### `listStyleType`
-
-type: `string`
-defaultValue: `undefined`
 

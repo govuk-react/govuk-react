@@ -8,7 +8,7 @@
     "eslint:fix": "eslint --fix ./src",
     "build": "npm run build:lib && npm run build:es",
     "build:lib": "rimraf lib && babel src -d lib",
-    "build:es": "rimraf es && babel --config-file ./config/babel/es.json src -d es",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es",
     "build:dist": "npm run build:es && webpack -p es/index.js dist/index.js",
     "clean": "rimraf lib && rimraf es",
     "flow": "flow",
