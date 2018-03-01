@@ -7,8 +7,6 @@ const AnchorTag = asAnchor("a");
 
 export default () => (
   <ListNavigation>
-    <ListItem>
-      <AnchorTag href="https://example.com">Example</AnchorTag>
-    </ListItem>
+    <AnchorTag href="https://example.com">Example</AnchorTag>
   </ListNavigation>
 );
