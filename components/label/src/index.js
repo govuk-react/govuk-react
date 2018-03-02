@@ -4,7 +4,7 @@ import glamorous from 'glamorous';
 import React from 'react';
 
 import { ERROR_COLOUR } from 'govuk-colours';
-import { MEDIA_QUERIES, SITE_WIDTH, SPACING } from '@govuk-react/constants/index';
+import { MEDIA_QUERIES, SITE_WIDTH, SPACING } from '@govuk-react/constants';
 
 const GLabel = glamorous.label(
   {

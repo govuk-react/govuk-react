@@ -8,7 +8,7 @@ import {
   SPACING,
   MEDIA_QUERIES,
   NTA_LIGHT,
-} from '../../constants/index';
+} from '@govuk-react/constants';
 
 import NextPageIcon from '../../icons/ArrowRight/index';
 import PrevPageIcon from '../../icons/ArrowLeft/index';

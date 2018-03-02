@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { BLACK, YELLOW, ERROR_COLOUR } from 'govuk-colours';
-import { FONT_SIZE, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants/index';
+import { FONT_SIZE, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants';
 
 const GInput = glamorous.input(
   {

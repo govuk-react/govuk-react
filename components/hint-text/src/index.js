@@ -3,7 +3,7 @@
 import glamorous from 'glamorous';
 import React from 'react';
 import * as COLOUR from 'govuk-colours';
-import { FONT_SIZE, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants/index';
+import { FONT_SIZE, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants';
 
 const GHintText = glamorous.span({
   display: 'block',

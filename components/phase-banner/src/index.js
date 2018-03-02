@@ -9,7 +9,7 @@ import {
   LINE_HEIGHT,
   MEDIA_QUERIES,
   NTA_LIGHT,
-} from '@govuk-react/constants/index';
+} from '@govuk-react/constants';
 
 import PhaseBadge from '../PhaseBadge/index';
 
