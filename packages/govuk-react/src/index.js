@@ -1,37 +1,38 @@
 // Components
-export { default as BackLink } from './components/BackLink';
-export { default as Breadcrumb } from './components/Breadcrumb';
-export { default as Button } from './components/Button';
-export { default as Checkbox } from './components/Checkbox';
-export { default as DateInput } from './components/DateInput';
-export { default as ErrorText } from './components/ErrorText';
-export { default as FileUpload } from './components/FileUpload';
-export { default as GridCol } from './components/GridCol';
-export { default as GridRow } from './components/GridRow';
-export { default as Header } from './components/Header';
-export { H1, H2, H3, H4, H5, H6 } from './components/Header/presets';
-export { default as HintText } from './components/HintText';
-export { default as Input } from './components/Input';
-export { default as InputField } from './components/InputField';
-export { default as Label } from './components/Label';
-export { default as LabelText } from './components/LabelText';
-export { default as Layout } from './components/Layout';
-export { default as ListItem } from './components/ListItem';
-export { default as ListNavigation } from './components/ListNavigation';
-export { default as MultiChoice } from './components/MultiChoice';
-export { default as Pagination } from './components/Pagination';
-export { default as Panel } from './components/Panel';
-export { default as PhaseBadge } from './components/PhaseBadge';
-export { default as PhaseBanner } from './components/PhaseBanner';
-export { default as Radio } from './components/Radio';
-export { default as SearchBox } from './components/SearchBox';
-export { default as Select } from './components/Select';
-export { default as TextArea } from './components/TextArea';
-export { default as UnorderedList } from './components/UnorderedList';
+export { default as BackLink } from '@govuk-react/back-link';
+export { default as Breadcrumb } from '@govuk-react/breadcrumb';
+export { default as Button } from '@govuk-react/button';
+export { default as Checkbox } from '@govuk-react/checkbox';
+export { default as DateInput } from '@govuk-react/date-input';
+export { default as ErrorText } from '@govuk-react/error-text';
+export { default as FileUpload } from '@govuk-react/file-upload';
+export { default as GridCol } from '@govuk-react/grid-col';
+export { default as GridRow } from '@govuk-react/grid-row';
+export { default as Header } from '@govuk-react/header';
+export { default as HintText } from '@govuk-react/hint-text';
+export { default as Input } from '@govuk-react/input';
+export { default as InputField } from '@govuk-react/input-field';
+export { default as Label } from '@govuk-react/label';
+export { default as LabelText } from '@govuk-react/label-text';
+export { default as Layout } from '@govuk-react/layout';
+export { default as ListItem } from '@govuk-react/list-item';
+export { default as ListNavigation } from '@govuk-react/list-navigation';
+export { default as MultiChoice } from '@govuk-react/multi-choice';
+export { default as Pagination } from '@govuk-react/pagination';
+export { default as Panel } from '@govuk-react/panel';
+export { default as PhaseBadge } from '@govuk-react/phase-badge';
+export { default as PhaseBanner } from '@govuk-react/phase-banner';
+export { default as Radio } from '@govuk-react/radio';
+export { default as SearchBox } from '@govuk-react/search-box';
+export { default as Select } from '@govuk-react/select';
+export { default as TextArea } from '@govuk-react/text-area';
+export { default as UnorderedList } from '@govuk-react/unordered-list';
+
+export { H1, H2, H3, H4, H5, H6 } from '@govuk-react/header';
 
 // Higher Order Components
-export { default as asAnchor } from './hoc/asAnchor';
-export { default as asPaginationItem } from './hoc/asPaginationItem';
+export { asAnchor } from '@govuk-react/asAnchor';
+export { asPaginationItem } from '@govuk-react/hoc';
 
 // Icons
-export { default as SearchIcon } from './icons/Search';
+export { Search as SearchIcon } from '@govuk-react/icons';

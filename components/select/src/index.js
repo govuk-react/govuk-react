@@ -8,7 +8,7 @@ import { BLACK, ERROR_COLOUR, YELLOW } from 'govuk-colours';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
 
 import Label from '@govuk-react/label';
-import Label from '@govuk-react/label-text';
+import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import PhaseBanner from '.';
-import asAnchor from '../../hoc/asAnchor/index';
+import { asAnchor } from '@govuk-react/hoc';
 
 const AnchorLink = asAnchor('a');
 

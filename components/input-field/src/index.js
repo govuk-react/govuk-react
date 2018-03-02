@@ -5,10 +5,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Label from '@govuk-react/label';
-import Label from '@govuk-react/label-text';
+import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
-import Input from '../Input/index';
+import Input from '@govuk-react/input';
 
 const InputField = ({
   meta, children, hint, input,

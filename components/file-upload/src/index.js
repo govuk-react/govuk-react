@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
 import Label from '@govuk-react/label';
-import Label from '@govuk-react/label-text';
+import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 

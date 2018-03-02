@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { BrowserRouter, Link } from 'react-router-dom';
 
 import Breadcrumb from '.';
-import asAnchor from '../../hoc/asAnchor/index';
+import { asAnchor } from '@govuk-react/hoc';
 
 const AnchorTag = asAnchor('a');
 const AnchorLink = asAnchor(Link);

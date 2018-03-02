@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Layout from '../Layout';
+import Layout from '@govuk-react/layout';
 import GridRow from '.';
 
 storiesOf('GridRow', module).add('GridRow', () => (

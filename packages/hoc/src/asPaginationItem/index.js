@@ -10,8 +10,8 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-import NextPageIcon from '../../icons/ArrowRight/index';
-import PrevPageIcon from '../../icons/ArrowLeft/index';
+import { NextPageIcon } from '@govuk-react/icons';
+import { PrevPageIcon } from '@govuk-react/icons';
 
 const PaginationWrapper = glamorous.li(
   {

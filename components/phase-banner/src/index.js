@@ -11,7 +11,7 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-import PhaseBadge from '../PhaseBadge/index';
+import PhaseBadge from '@govuk-react/phase-badge';
 
 const PhaseBannerInner = glamorous.p({
   borderBottom: '1px solid #bfc1c3',
