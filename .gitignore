@@ -30,3 +30,4 @@ packages/**/es
 
 packages/**/lib
 
+packages/*/node_modules
