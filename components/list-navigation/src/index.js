@@ -3,8 +3,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import UnorderedList from '../UnorderedList/index';
-import ListItem from '../ListItem/index';
+import UnorderedList from '@govuk-react/unordered-list';
+import ListItem from '@govuk-react/list-item';
 
 const ListNavigation = ({ children, listStyleType }) => (
   <UnorderedList listStyleType={listStyleType}>

@@ -15,9 +15,10 @@ import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 import { ERROR_COLOUR } from 'govuk-colours';
 
-import LabelText from '../LabelText/index';
-import ErrorText from '../ErrorText/index';
-import HintText from '../HintText/index';
+import LabelText from '@govuk-react/label-text';
+import ErrorText from '@govuk-react/error-text';
+import HintText from '@govuk-react/hint-text';
+
 import {
   BORDER_WIDTH_MOBILE,
   MEDIA_QUERIES,

@@ -4,10 +4,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
-import Label from '../Label/index';
-import LabelText from '../LabelText/index';
-import ErrorText from '../ErrorText/index';
-import HintText from '../HintText/index';
+import Label from '@govuk-react/label';
+import Label from '@govuk-react/label-text';
+import ErrorText from '@govuk-react/error-text';
+import HintText from '@govuk-react/hint-text';
 
 import { FONT_SIZE, NTA_LIGHT, MEDIA_QUERIES } from '@govuk-react/constants';
 
