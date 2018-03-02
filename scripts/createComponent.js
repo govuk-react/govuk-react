@@ -1,9 +1,9 @@
 // TODO consider replacing this with a generator such as:
 // https://github.com/CVarisco/create-component-app
 
-const fs = require("fs");
-const path = require("path");
-const mkdirp = require("mkdirp");
+const fs = require('fs');
+const path = require('path');
+const mkdirp = require('mkdirp');
 
 const commandLineArgs = process.argv[2];
 const componentName = `${commandLineArgs
@@ -14,7 +14,7 @@ const folderName = `./src/components/${componentName}`;
 
 /* eslint no-console: 0 */
 const createFolder = () => {
-  mkdirp(folderName, err => {
+  mkdirp(folderName, (err) => {
     if (err) {
       console.error(err);
     }
@@ -25,7 +25,7 @@ const writeThis = (fileName, contents) => {
   const tempFileName = `${fileName}.js`;
   const pathName = path.join(folderName, tempFileName);
 
-  fs.writeFile(pathName, `${contents}`, err => {
+  fs.writeFile(pathName, `${contents}`, (err) => {
     if (err) {
       return console.log(err);
     }
@@ -37,14 +37,14 @@ const writeThis = (fileName, contents) => {
 
 // write test.js file
 const testScript = () => {
-  const filename = "test";
-  const contents = `import React from "react";
-import ReactDOM from "react-dom";
-import ${componentName} from "./";
+  const filename = 'test';
+  const contents = `import React from 'react';
+import ReactDOM from 'react-dom';
+import ${componentName} from './';
 
 describe(${componentName}, () => {
-  it("renders without crashing", () => {
-    const div = document.createElement("div");
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
     ReactDOM.render(<${componentName}>Example</${componentName}>, div);
   });
 });
@@ -54,13 +54,13 @@ describe(${componentName}, () => {
 
 // write stories.js file
 const storiesScript = () => {
-  const filename = "stories";
-  const contents = `import React from "react";
-import { storiesOf } from "@storybook/react";
+  const filename = 'stories';
+  const contents = `import React from 'react';
+import { storiesOf } from '@storybook/react';
 
-import ${componentName} from ".";
+import ${componentName} from '.';
 
-storiesOf("${componentName}", module).add("${componentName}", () => (
+storiesOf('${componentName}', module).add('${componentName}', () => (
   <${componentName}>${componentName} example</${componentName}>
 ));
 `;
@@ -69,9 +69,9 @@ storiesOf("${componentName}", module).add("${componentName}", () => (
 
 // write example.js file
 const exampleScript = () => {
-  const filename = "example";
-  const contents = `import React from "react";
-import ${componentName} from ".";
+  const filename = 'example';
+  const contents = `import React from 'react';
+import ${componentName} from '.';
 
 export default () => <${componentName}>${componentName} example</${componentName}>;
 `;
@@ -80,32 +80,32 @@ export default () => <${componentName}>${componentName} example</${componentName
 
 // write index.js file
 const indexScript = () => {
-  const filename = "index";
+  const filename = 'index';
   const contents = `// TODO INSERT A COMMENT REFERENCE TO EXTERNAL URL IF POSSIBLE
 
-import React from "react";
-import PropTypes from "prop-types";
-import glamorous from "glamorous";
+import React from 'react';
+import PropTypes from 'prop-types';
+import glamorous from 'glamorous';
 
 import {
   FONT_SIZE,
   LINE_HEIGHT,
   MEDIA_QUERIES,
-  NTA_LIGHT
-} from "../../constants/index";
+  NTA_LIGHT,
+} from '../../constants/index';
 
 const ${componentName}Inner = glamorous.div({
-  boxSizing: "border-box",
+  boxSizing: 'border-box',
   fontFamily: NTA_LIGHT,
   fontWeight: 400,
-  textTransform: "none",
+  textTransform: 'none',
   fontSize: FONT_SIZE.SIZE_14,
   lineHeight: LINE_HEIGHT.SIZE_14,
-  width: "100%",
+  width: '100%',
   [MEDIA_QUERIES.LARGESCREEN]: {
     fontSize: FONT_SIZE.SIZE_16,
-    lineHeight: LINE_HEIGHT.SIZE_16
-  }
+    lineHeight: LINE_HEIGHT.SIZE_16,
+  },
 });
 
 const ${componentName} = ({ children }) => (
@@ -113,7 +113,7 @@ const ${componentName} = ({ children }) => (
 );
 
 ${componentName}.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default ${componentName};
@@ -123,10 +123,8 @@ export default ${componentName};
 
 const init = () => {
   if (fs.existsSync(path.join(folderName))) {
-    console.log(
-      `❗️❗️ The component "${componentName}" already exists ❗️❗️`
-    );
-    console.log("Please use a different name or delete the existing folder 🆗");
+    console.log(`❗️❗️ The component '${componentName}' already exists ❗️❗️`);
+    console.log('Please use a different name or delete the existing folder 🆗');
     return false;
   }
   createFolder();
