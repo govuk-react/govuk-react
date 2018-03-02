@@ -28,3 +28,4 @@ import '../components/Pagination/stories';
 import '../components/UnorderedList/stories';
 import '../components/ListItem/stories';
 import '../components/ListNavigation/stories';
+import '../components/Section/stories';

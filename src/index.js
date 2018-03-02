@@ -25,6 +25,7 @@ export { default as PhaseBadge } from './components/PhaseBadge';
 export { default as PhaseBanner } from './components/PhaseBanner';
 export { default as Radio } from './components/Radio';
 export { default as SearchBox } from './components/SearchBox';
+export { default as Section } from './components/Section';
 export { default as Select } from './components/Select';
 export { default as TextArea } from './components/TextArea';
 export { default as UnorderedList } from './components/UnorderedList';
