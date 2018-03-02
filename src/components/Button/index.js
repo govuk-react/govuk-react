@@ -30,7 +30,7 @@ const GButton = glamorous.button(
     outlineOffset: '-1px',
     outline: '1px solid transparent',
     padding: '.526315em .789473em .263157em',
-    position: 'duabs',
+    position: 'relative',
     textDecoration: 'none',
     WebkitAppearance: 'none',
     WebkitFontSmoothing: 'antialiased',
