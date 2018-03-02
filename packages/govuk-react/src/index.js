@@ -31,7 +31,7 @@ export { default as UnorderedList } from '@govuk-react/unordered-list';
 export { H1, H2, H3, H4, H5, H6 } from '@govuk-react/header';
 
 // Higher Order Components
-export { asAnchor } from '@govuk-react/asAnchor';
+export { asAnchor } from '@govuk-react/hoc';
 export { asPaginationItem } from '@govuk-react/hoc';
 
 // Icons

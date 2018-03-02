@@ -10,7 +10,7 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-import { NextPageIcon, PrevPageIcon } from '@govuk-react/icons';
+import { ArrowRight as NextPageIcon, ArrowLeft as PrevPageIcon } from '@govuk-react/icons';
 
 const PaginationWrapper = glamorous.li(
   {
