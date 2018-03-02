@@ -9,7 +9,7 @@ import {
   MEDIA_QUERIES,
   NTA_LIGHT,
   SPACING,
-} from '../../constants/index';
+} from '@govuk-react/constants/index';
 
 import Label from '../Label/index';
 import LabelText from '../LabelText/index';

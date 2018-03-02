@@ -4,7 +4,7 @@ import glamorous from 'glamorous';
 import PropTypes from 'prop-types';
 
 import { BLACK, GREY_1, YELLOW } from 'govuk-colours';
-import { MEDIA_QUERIES } from '../../constants/index';
+import { MEDIA_QUERIES } from '@govuk-react/constants/index';
 
 const BreadcrumbContainer = glamorous.div({
   fontFamily: 'nta, Arial, sans-serif',

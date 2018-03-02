@@ -4,7 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
-import { BREAKPOINTS, MEDIA_QUERIES, SPACING } from '../../constants/index';
+import { BREAKPOINTS, MEDIA_QUERIES, SPACING } from '@govuk-react/constants/index';
 
 const LayoutInner = glamorous.div({
   padding: SPACING.SCALE_2,

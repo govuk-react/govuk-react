@@ -4,7 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
-import { GUTTER_HALF, MEDIA_QUERIES, SPACING } from '../../constants/index';
+import { GUTTER_HALF, MEDIA_QUERIES, SPACING } from '@govuk-react/constants/index';
 
 const GridColInner = glamorous.div(
   {

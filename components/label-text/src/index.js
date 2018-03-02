@@ -3,7 +3,7 @@
 import glamorous from 'glamorous';
 import React from 'react';
 import { BLACK } from 'govuk-colours';
-import { MEDIA_QUERIES } from '../../constants/index';
+import { MEDIA_QUERIES } from '@govuk-react/constants/index';
 
 const GLabelText = glamorous.span(
   {

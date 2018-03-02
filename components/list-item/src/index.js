@@ -6,7 +6,7 @@ import {
   LINE_HEIGHT,
   MEDIA_QUERIES,
   NTA_LIGHT,
-} from '../../constants/index';
+} from '@govuk-react/constants/index';
 
 const GListItem = glamorous.li({
   boxSizing: 'border-box',

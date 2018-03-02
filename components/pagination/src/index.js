@@ -10,7 +10,7 @@ import {
   MEDIA_QUERIES,
   NTA_LIGHT,
   SPACING,
-} from '../../constants/index';
+} from '@govuk-react/constants/index';
 
 const PaginationWrapper = glamorous.ul({
   boxSizing: 'border-box',

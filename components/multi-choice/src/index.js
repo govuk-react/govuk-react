@@ -23,7 +23,7 @@ import {
   MEDIA_QUERIES,
   SITE_WIDTH,
   SPACING,
-} from '../../constants/index';
+} from '@govuk-react/constants/index';
 
 const FieldSet = glamorous.div(
   {

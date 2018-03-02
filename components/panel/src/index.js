@@ -4,7 +4,7 @@ import glamorous from 'glamorous';
 import PropTypes from 'prop-types';
 
 import { TURQUOISE, WHITE } from 'govuk-colours';
-import { MEDIA_QUERIES } from '../../constants/index';
+import { MEDIA_QUERIES } from '@govuk-react/constants/index';
 
 const PanelInner = glamorous.div({
   backgroundColor: TURQUOISE,

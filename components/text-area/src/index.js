@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
 import { BLACK, YELLOW, ERROR_COLOUR } from 'govuk-colours';
-import { MEDIA_QUERIES } from '../../constants/index';
+import { MEDIA_QUERIES } from '@govuk-react/constants/index';
 
 import Label from '../Label/index';
 import LabelText from '../LabelText/index';

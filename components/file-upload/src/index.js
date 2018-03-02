@@ -9,7 +9,7 @@ import LabelText from '../LabelText/index';
 import ErrorText from '../ErrorText/index';
 import HintText from '../HintText/index';
 
-import { FONT_SIZE, NTA_LIGHT, MEDIA_QUERIES } from '../../constants/index';
+import { FONT_SIZE, NTA_LIGHT, MEDIA_QUERIES } from '@govuk-react/constants/index';
 
 const Input = glamorous.input({
   boxSizing: 'border-box',

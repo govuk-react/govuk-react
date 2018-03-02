@@ -4,7 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
-import { MEDIA_QUERIES, SITE_WIDTH, SPACING } from '../../constants/index';
+import { MEDIA_QUERIES, SITE_WIDTH, SPACING } from '@govuk-react/constants/index';
 
 const GridRowInner = glamorous.div({
   width: '100%',

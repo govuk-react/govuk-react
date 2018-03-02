@@ -3,7 +3,7 @@
 import glamorous from 'glamorous';
 import React from 'react';
 import { ERROR_COLOUR } from 'govuk-colours';
-import { FONT_SIZE, MEDIA_QUERIES, NTA_LIGHT } from '../../constants/index';
+import { FONT_SIZE, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants/index';
 
 const GErrorText = glamorous.span({
   display: 'block',
