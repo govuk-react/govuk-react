@@ -9,12 +9,12 @@ import {
   MEDIA_QUERIES,
   NTA_LIGHT,
   SPACING,
-} from '@govuk-react/constants/index';
+} from '@govuk-react/constants';
 
-import Label from '../Label/index';
-import LabelText from '../LabelText/index';
-import ErrorText from '../ErrorText/index';
-import HintText from '../HintText/index';
+import Label from '@govuk-react/label';
+import LabelText from '@govuk-react/label-text';
+import ErrorText from '@govuk-react/error-text';
+import HintText from '@govuk-react/hint-text';
 
 const LabelWrapper = glamorous.div(
   {
