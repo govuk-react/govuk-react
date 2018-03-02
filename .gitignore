@@ -22,3 +22,11 @@ yarn-error.log*
 /es
 govuk-react-*.tgz
 /dist
+components/**/es
+
+components/**/lib
+
+packages/**/es
+
+packages/**/lib
+
