@@ -1,5 +1,3 @@
-// TODO INSERT A COMMENT REFERENCE TO EXTERNAL URL IF POSSIBLE
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
