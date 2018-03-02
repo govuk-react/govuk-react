@@ -6,7 +6,7 @@
     "docs": "babel-node scripts/docs",
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src",
-    "build": "lerna bootstrap && lerna run build",
+    "build": "lerna run build",
     "build:lib": "rimraf lib && babel src -d lib",
     "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es",
     "build:dist": "npm run build:es && webpack -p es/index.js dist/index.js",
@@ -19,7 +19,6 @@
     "test:snapshot": "npm run test:unit -- -u",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "prepare": "npm run clean && npm run build",
     "create-component": "node ./scripts/createComponent.js"
   },
   "jest": {
