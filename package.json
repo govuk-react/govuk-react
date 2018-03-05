@@ -3,7 +3,7 @@
   "version": "0.1.18",
   "scripts": {
     "start": "cd packages/storybook && npm start",
-    "build-storybook": "cd packages/storybook && npm run build-storybook && cp -r storybook-static ../..",
+    "build-storybook": "lerna bootstrap && cd packages/storybook && npm run build-storybook && cp -r storybook-static ../..",
     "bootstrap": "lerna bootstrap",
     "docs": "babel-node scripts/docs",
     "eslint": "eslint ./src",
