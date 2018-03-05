@@ -32,3 +32,4 @@ govuk-react-*.tgz
 
 /packages/*/node_modules
 /lerna-debug.log
+/packages/storybook/storybook-static
