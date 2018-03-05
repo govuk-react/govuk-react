@@ -1,9 +1,12 @@
 language: node_js
 cache:
+  yarn: true
   directories:
     - node_modules
 install:
-  - npm install
+  - yarn
+  - yarn bootstrap
+  - yarn build
   - npm install -g codecov
 script:
 #  - npm run build # npm install already runs a build via prepare

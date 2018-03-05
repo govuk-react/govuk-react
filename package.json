@@ -2,14 +2,16 @@
   "name": "govuk-react",
   "version": "0.1.18",
   "scripts": {
-    "start": "start-storybook -p 9009",
+    "start": "cd packages/storybook && npm start",
+    "build-storybook": "lerna bootstrap && lerna run build && cd packages/storybook && npm run build-storybook && cp -r storybook-static ../..",
+    "bootstrap": "lerna bootstrap",
     "docs": "babel-node scripts/docs",
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src",
-    "build": "npm run build:lib && npm run build:es",
-    "build:lib": "rimraf lib && babel src -d lib",
-    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es",
-    "build:dist": "npm run build:es && webpack -p es/index.js dist/index.js",
+    "build": "lerna run build",
+    "build:lib": "lerna run build:lib",
+    "build:es": "lerna run build:es",
+    "build:dist": "npm run build:es && webpack -p packages/govuk-react/es/index.js dist/index.js",
     "clean": "rimraf lib && rimraf es",
     "flow": "flow",
     "bundlesize": "bundlesize",
@@ -17,9 +19,6 @@
     "test:unit": "jest --env=jsdom",
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --env=jsdom",
     "test:snapshot": "npm run test:unit -- -u",
-    "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages",
-    "prepare": "npm run clean && npm run build",
     "create-component": "node ./scripts/createComponent.js"
   },
   "jest": {
@@ -30,12 +29,23 @@
       "!<rootDir>/node_modules/",
       "!src/**/stories.js",
       "!src/**/example.js",
-      "!src/stories/*"
+      "!src/stories/*",
+      "components/*/src/**/*.{js,jsx}",
+      "!components/*/node_modules",
+      "!components/*/src/**/stories.js",
+      "!components/*/src/**/example.js",
+      "packages/*/src/**/*.{js,jsx}",
+      "!packages/*/node_modules",
+      "!packages/storybook",
+      "!packages/*/src/**/stories.js",
+      "!packages/*/src/**/example.js"
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/scripts/setupTests.js",
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.js?(x)",
-      "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
+      "<rootDir>/src/**/?(*.)(spec|test).js?(x)",
+      "<rootDir>/components/*/src/**/?(*.)(spec|test).js?(x)",
+      "<rootDir>/packages/*/src/**/?(*.)(spec|test).js?(x)"
     ],
     "testEnvironment": "node",
     "transform": {
@@ -77,11 +87,6 @@
     "@babel/preset-flow": "^7.0.0-beta.40",
     "@babel/preset-react": "^7.0.0-beta.40",
     "@babel/preset-stage-1": "^7.0.0-beta.40",
-    "@storybook/addon-actions": "^3.3.12",
-    "@storybook/addon-knobs": "^3.3.12",
-    "@storybook/addon-links": "^3.3.12",
-    "@storybook/react": "^3.3.12",
-    "@storybook/storybook-deployer": "^2.2.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.2",
     "babel-jest": "^22.4.0",
@@ -90,9 +95,9 @@
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
     "bundlesize": "^0.16.0",
-    "cross-env": "^5.1.3",
-    "component-image": "^1.1.0",
     "chalk": "^2.3.1",
+    "component-image": "^1.1.0",
+    "cross-env": "^5.1.3",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.0",
@@ -111,8 +116,8 @@
     "jest": "^22.1.2",
     "jest-glamor-react": "^3.3.0",
     "jimp": "^0.2.28",
+    "lerna": "2",
     "mkdirp": "^0.5.1",
-    "normalize.css": "^8.0.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-docgen": "^3.0.0-beta11",
@@ -140,5 +145,10 @@
       "path": "./dist/index.js",
       "maxSize": "120 kB"
     }
-  ]
+  ],
+  "workspaces": [
+    "components/*",
+    "packages/*"
+  ],
+  "private": true
 }
