@@ -2,5 +2,7 @@ pipeline:
   build:
     image: node:8
     commands:
-      - npm install
-      - npm test
+      - yarn
+      - lerna bootstrap
+      - yarn build
+      - yarn test
