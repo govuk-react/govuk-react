@@ -2,7 +2,7 @@
   "name": "govuk-react",
   "version": "0.1.18",
   "scripts": {
-    "start": "lerna run --restrict-to @govuk-react/storybook start",
+    "start": "cd packages/storybook && npm start",
     "docs": "babel-node scripts/docs",
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src",
@@ -116,7 +116,6 @@
     "jimp": "^0.2.28",
     "lerna": "2",
     "mkdirp": "^0.5.1",
-    "normalize.css": "^8.0.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-docgen": "^3.0.0-beta11",
