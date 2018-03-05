@@ -2,7 +2,7 @@
   "name": "govuk-react",
   "version": "0.1.18",
   "scripts": {
-    "start": "start-storybook -p 9009",
+    "start": "lerna run --restrict-to @govuk-react/storybook start",
     "docs": "babel-node scripts/docs",
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src",
@@ -17,8 +17,6 @@
     "test:unit": "jest --env=jsdom",
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --env=jsdom",
     "test:snapshot": "npm run test:unit -- -u",
-    "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages",
     "create-component": "node ./scripts/createComponent.js"
   },
   "jest": {
@@ -87,11 +85,6 @@
     "@babel/preset-flow": "^7.0.0-beta.40",
     "@babel/preset-react": "^7.0.0-beta.40",
     "@babel/preset-stage-1": "^7.0.0-beta.40",
-    "@storybook/addon-actions": "^3.3.12",
-    "@storybook/addon-knobs": "^3.3.12",
-    "@storybook/addon-links": "^3.3.12",
-    "@storybook/react": "^3.3.12",
-    "@storybook/storybook-deployer": "^2.2.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.2",
     "babel-jest": "^22.4.0",
