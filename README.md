@@ -73,6 +73,25 @@ See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-
 
 ## Contributing
 
+## Running the project locally
+
+[govuk-react](https://github.com/penx/govuk-react) is a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md) using [yarn workspaces](https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/) and [lerna](https://github.com/lerna/lerna).
+
+This is so that components can be published independently and applications can require different versions of a component if a breaking change is introduced in a version of a specific component. We are loosely following the [structure that Jest uses](https://github.com/facebook/jest).
+
+As such, the build process for development is slightly more involved than an `npm install`:
+
+1. Install yarn
+
+2. Install dependencies, link packages, compile and start storybook:
+
+```
+yarn
+yarn bootstrap
+yarn build
+yarn start
+```
+
 ### Creating a new component
 To create a new component:
 - `npm run create-component -- MyNewComponent` where _MyNewComponent_ is the name of your new component.
