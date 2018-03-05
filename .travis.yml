@@ -5,7 +5,7 @@ cache:
     - node_modules
 install:
   - yarn
-  - lerna bootstrap
+  - yarn bootstrap
   - yarn build
   - npm install -g codecov
 script:

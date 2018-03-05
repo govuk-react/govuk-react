@@ -3,6 +3,6 @@ pipeline:
     image: node:8
     commands:
       - yarn
-      - lerna bootstrap
+      - yarn bootstrap
       - yarn build
       - yarn test
