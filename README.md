@@ -10,9 +10,11 @@ CSS styling is derived from [GOV.UK/elements](https://github.com/alphagov/govuk_
 
 ## Usage
 
-`npm install govuk-react --save`
-
+```sh
+npm install govuk-react --save
 ```
+
+```js
 import { Button } from 'govuk-react'
 
 const MyComponent = ({title}) => (<div>
@@ -30,7 +32,7 @@ Also see the [example project](https://github.com/penx/govuk-react-example) for 
 We are using a Higher Order Component (HOC), which takes a component and returns a new component with the original props.
 
 We use the same HOC for an `<a href...>` as we do for a `<Link to...>`. For example;
-```
+```js
 import { BrowserRouter, Link } from 'react-router';
 import asAnchor from 'govuk-react';
 
@@ -85,7 +87,7 @@ As such, the build process for development is slightly more involved than an `np
 
 2. Install dependencies, link packages, compile and start storybook:
 
-```
+```sh
 yarn
 yarn bootstrap
 yarn build
@@ -103,11 +105,11 @@ This creates a folder named _MyNewComponent_ in `src/components` with the compon
 Unit testing follows similar patterns as [Glamorous with Jest](https://github.com/paypal/glamorous/tree/master/examples/with-jest), utilising [Jest _snapshots_](https://facebook.github.io/jest/docs/en/snapshot-testing.html), and [Enzyme](https://github.com/airbnb/enzyme).
 
 To run unit & eslint tests:
-```
-$ npm run test
+```sh
+npm run test
 ```
 
 To run & watch unit tests:
-```
-$ npm run test:unit
+```sh
+npm run test:unit
 ```
