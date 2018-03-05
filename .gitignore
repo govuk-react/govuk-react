@@ -30,4 +30,5 @@ govuk-react-*.tgz
 
 /packages/*/lib
 
-packages/*/node_modules
+/packages/*/node_modules
+/lerna-debug.log
