@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Form } from 'react-final-form';
 import { action } from '@storybook/addon-actions';
 
-import Button from '../../components/Button/index';
+import Button from '@govuk-react/button';
 
 const FinalFormWrapper = ({ children }) => (
   <Form
