@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Layout from '../Layout/index';
-import GridRow from '../GridRow/index';
-import GridCol from '../GridCol/index';
+import Layout from '@govuk-react/layout';
+import GridRow from '@govuk-react/grid-row';
+import GridCol from '@govuk-react/grid-col';
 
 import SearchBox from '.';
 

@@ -2,7 +2,38 @@
   "name": "@govuk-react/storybook",
   "version": "0.1.18",
   "dependencies": {
-    "govuk-colours": "^1.0.3"
+    "normalize.css": "^8.0.0",
+    "govuk-colours": "^1.0.3",
+    "@govuk-react/back-link": "0.1.18",
+    "@govuk-react/breadcrumb": "0.1.18",
+    "@govuk-react/button": "0.1.18",
+    "@govuk-react/checkbox": "0.1.18",
+    "@govuk-react/date-input": "0.1.18",
+    "@govuk-react/error-text": "0.1.18",
+    "@govuk-react/file-upload": "0.1.18",
+    "@govuk-react/grid-col": "0.1.18",
+    "@govuk-react/grid-row": "0.1.18",
+    "@govuk-react/header": "0.1.18",
+    "@govuk-react/input-field": "0.1.18",
+    "@govuk-react/layout": "0.1.18",
+    "@govuk-react/panel": "0.1.18",
+    "@govuk-react/radio": "0.1.18",
+    "@govuk-react/select": "0.1.18",
+    "@govuk-react/text-area": "0.1.18",
+    "@govuk-react/phase-badge": "0.1.18",
+    "@govuk-react/phase-banner": "0.1.18",
+    "@govuk-react/search-box": "0.1.18",
+    "@govuk-react/pagination": "0.1.18",
+    "@govuk-react/unordered-list": "0.1.18",
+    "@govuk-react/list-item": "0.1.18",
+    "@govuk-react/list-navigation": "0.1.18",
+    "@govuk-react/hoc": "0.1.18",
+    "@storybook/addon-actions": "^3.3.12",
+    "@storybook/addon-knobs": "^3.3.12",
+    "@storybook/addon-links": "^3.3.12",
+    "@storybook/react": "^3.3.12",
+    "@storybook/storybook-deployer": "^2.2.0",
+    "react-final-form": "^3.1.0"
   },
   "peerDependencies": {
     "glamorous": ">=4",
@@ -11,12 +42,10 @@
   },
   "devDependencies": {
     "react-dom": "^16.2.0",
-    "enzyme": "^3.3.0",
-    "@storybook/addon-actions": "^3.3.12",
-    "@storybook/addon-knobs": "^3.3.12",
-    "@storybook/addon-links": "^3.3.12",
-    "@storybook/react": "^3.3.12",
-    "@storybook/storybook-deployer": "^2.2.0"
+    "enzyme": "^3.3.0"
+  },
+  "bin": {
+    "govuk-react-storybook": "npm run start"
   },
   "scripts": {
     "start": "start-storybook -p 9009",

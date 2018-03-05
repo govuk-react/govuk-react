@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Layout from '.';
-import GridRow from '../GridRow';
-import GridCol from '../GridCol';
+import GridRow from '@govuk-react/grid-row';
+import GridCol from '@govuk-react/grid-col';
 
 storiesOf('Layout', module).add('Column Full', () => (
   <Layout>

@@ -14,7 +14,9 @@
     "react-dom": "^16.2.0",
     "enzyme": "^3.3.0",
     "@storybook/react": "^3.3.12",
-    "@storybook/addon-actions": "^3.3.12"
+    "@storybook/addon-actions": "^3.3.12",
+    "@govuk-react/grid-col": "0.1.18",
+    "@govuk-react/grid-row": "0.1.18"
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es",
