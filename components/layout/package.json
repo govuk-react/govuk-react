@@ -2,8 +2,8 @@
   "name": "@govuk-react/layout",
   "version": "0.1.18",
   "dependencies": {
-    "govuk-colours": "^1.0.3",
-    "@govuk-react/constants": "0.1.18"
+    "@govuk-react/constants": "0.1.18",
+    "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
     "glamorous": ">=4",
@@ -11,12 +11,14 @@
     "react": ">=15"
   },
   "devDependencies": {
-    "react-dom": "^16.2.0",
-    "enzyme": "^3.3.0",
-    "@storybook/react": "^3.3.12",
-    "@storybook/addon-actions": "^3.3.12",
+    "@babel/cli": "^7.0.0-beta.40",
     "@govuk-react/grid-col": "0.1.18",
-    "@govuk-react/grid-row": "0.1.18"
+    "@govuk-react/grid-row": "0.1.18",
+    "@storybook/addon-actions": "^3.3.12",
+    "@storybook/react": "^3.3.12",
+    "enzyme": "^3.3.0",
+    "react-dom": "^16.2.0",
+    "rimraf": "^2.6.2"
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es",
