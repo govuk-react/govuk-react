@@ -6,6 +6,7 @@ import Label from './';
 describe('Label', () => {
   const example = 'example';
   const wrapper = <Label>{example}</Label>;
+  const withError = <Label error={example}>{example}</Label>;
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
@@ -14,5 +15,9 @@ describe('Label', () => {
 
   it('matches wrapper snapshot', () => {
     expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
+  });
+
+  it('matches withError snapshot', () => {
+    expect(mount(withError)).toMatchSnapshot('with error mount');
   });
 });

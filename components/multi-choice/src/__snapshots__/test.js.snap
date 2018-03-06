@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiChoice matches withError snapshot: with error mount 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.glamor-1:after,
+[data-glamor-1]:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    max-width: 960px;
+  }
+}
+
+<MultiChoice
+  error="example"
+  label="example"
+  meta={Object {}}
+>
+  <glamorous(div)>
+    <div
+      className="glamor-1"
+    >
+      <LabelText>
+        <glamorous(span)>
+          <span
+            className="glamor-0"
+          >
+            example
+          </span>
+        </glamorous(span)>
+      </LabelText>
+      example
+    </div>
+  </glamorous(div)>
+</MultiChoice>
+`;
+
+exports[`MultiChoice matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-3,
+[data-glamor-3] {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  width: 100%;
+  border-left: 4px solid #b10e1e;
+  margin-right: 15px;
+  padding-left: 10px;
+}
+
+.glamor-3:after,
+[data-glamor-3]:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #6f777b;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #b10e1e;
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-3,
+  [data-glamor-3] {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
+<MultiChoice
+  hint="example"
+  label="example"
+  meta={
+    Object {
+      "error": "example",
+      "touched": true,
+    }
+  }
+>
+  <glamorous(div)
+    error="example"
+  >
+    <div
+      className="glamor-3"
+    >
+      <LabelText>
+        <glamorous(span)>
+          <span
+            className="glamor-0"
+          >
+            example
+          </span>
+        </glamorous(span)>
+      </LabelText>
+      <HintText>
+        <glamorous(span)>
+          <span
+            className="glamor-1"
+          >
+            example
+          </span>
+        </glamorous(span)>
+      </HintText>
+      <ErrorText>
+        <glamorous(span)>
+          <span
+            className="glamor-2"
+          >
+            example
+          </span>
+        </glamorous(span)>
+      </ErrorText>
+      example
+    </div>
+  </glamorous(div)>
+</MultiChoice>
+`;
