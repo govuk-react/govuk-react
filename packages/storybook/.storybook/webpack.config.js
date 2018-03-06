@@ -7,11 +7,11 @@ module.exports = (baseConfig, env) => {
   const config = genDefaultConfig(baseConfig, env);
 
   // Include PNGs imported from node_modules
-  config.module.rules.push(  {
-      test: /\.png/,
-      loaders: ["url-loader"],
-      include: path.resolve(__dirname, '../../..')
-    });
+  config.module.rules.push({
+    test: /\.png/,
+    loaders: ["url-loader"],
+    include: path.resolve(__dirname, '../../..')
+  });
   // configuration for adding specific rules can be found here:
   // https://storybook.js.org/configurations/custom-webpack-config/#full-control-mode
 
