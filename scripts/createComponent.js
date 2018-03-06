@@ -57,8 +57,8 @@ const packageJson = () => {
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es",
-    "build:lib": "rimraf lib && babel src -d lib",
-    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es"
+    "build:lib": "rimraf lib && babel src -d lib --source-maps",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps"
   },
   "main": "lib/index.js",
   "module": "es/index.js"
