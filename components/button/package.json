@@ -13,6 +13,7 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
     "@govuk-react/images": "0.1.18",
+    "@storybook/addons": "^3.3.12",
     "@storybook/addon-actions": "^3.3.12",
     "@storybook/addon-knobs":"^3.3.12",
     "@storybook/react": "^3.3.12",

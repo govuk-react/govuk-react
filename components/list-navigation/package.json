@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
+    "@storybook/addons": "^3.3.12",
     "@storybook/addon-actions": "^3.3.12",
     "@storybook/react": "^3.3.12",
     "enzyme": "^3.3.0",
