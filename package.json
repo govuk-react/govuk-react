@@ -36,7 +36,7 @@
       "!components/*/src/**/example.js",
       "packages/*/src/**/*.{js,jsx}",
       "!packages/*/node_modules",
-      "!packages/storybook",
+      "!packages/storybook/**",
       "!packages/*/src/**/stories.js",
       "!packages/*/src/**/example.js"
     ],
