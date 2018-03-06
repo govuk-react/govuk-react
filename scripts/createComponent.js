@@ -1,111 +1,143 @@
 // TODO consider replacing this with a generator such as:
 // https://github.com/CVarisco/create-component-app
 
-const fs = require("fs");
-const path = require("path");
-const mkdirp = require("mkdirp");
+const fs = require('fs');
+const path = require('path');
+const mkdirp = require('mkdirp');
 
-const commandLineArgs = process.argv[2];
-const componentName = `${commandLineArgs
-  .charAt(0)
-  .toUpperCase()}${commandLineArgs.slice(1)}`;
+const componentFolderName = process.argv[2];
+const componentName = `${componentFolderName.charAt(0).toUpperCase()}${componentFolderName.slice(1).replace(/-([a-z])/g, g => g[1].toUpperCase())}`;
 
-const folderName = `./src/components/${componentName}`;
+const folderName = `./components/${componentFolderName}`;
 
 /* eslint no-console: 0 */
-const createFolder = () => {
-  mkdirp(folderName, err => {
+const createFolder = (fName) => {
+  mkdirp(fName, (err) => {
     if (err) {
       console.error(err);
     }
   });
+  mkdirp(`${fName}/src`);
 };
 
-const writeThis = (fileName, contents) => {
-  const tempFileName = `${fileName}.js`;
-  const pathName = path.join(folderName, tempFileName);
-
-  fs.writeFile(pathName, `${contents}`, err => {
+const writeFile = (filename, contents) => {
+  const pathName = path.join(filename === 'package.json' ? folderName : `${folderName}/src`, filename);
+  fs.writeFile(pathName, `${contents}`, (err) => {
     if (err) {
       return console.log(err);
     }
-    console.log(`Created file: ${folderName}/${fileName}.js`);
+    console.log(`Created file: ${pathName}`);
     return false;
   });
   return false;
 };
 
+// write packageJson file
+const packageJson = () => {
+  const filename = 'package.json';
+  const contents = `{
+  "name": "@govuk-react/${componentFolderName}",
+  "version": "0.1.18",
+  "dependencies": {
+    "@govuk-react/constants": "0.1.18",
+    "govuk-colours": "^1.0.3"
+  },
+  "peerDependencies": {
+    "glamorous": ">=4",
+    "prop-types": ">=15",
+    "react": ">=15"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.40",
+    "@storybook/addon-actions": "^3.3.12",
+    "@storybook/react": "^3.3.12",
+    "enzyme": "^3.3.0",
+    "react-dom": "^16.2.0",
+    "rimraf": "^2.6.2"
+  },
+  "scripts": {
+    "build": "npm run build:lib && npm run build:es",
+    "build:lib": "rimraf lib && babel src -d lib",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es"
+  },
+  "main": "lib/index.js",
+  "module": "es/index.js"
+}
+`;
+  writeFile(filename, contents);
+};
+
 // write test.js file
 const testScript = () => {
-  const filename = "test";
-  const contents = `import React from "react";
-import ReactDOM from "react-dom";
-import ${componentName} from "./";
+  const filename = 'test.js';
+  const contents = `import React from 'react';
+import ReactDOM from 'react-dom';
+import ${componentName} from './';
 
 describe(${componentName}, () => {
-  it("renders without crashing", () => {
-    const div = document.createElement("div");
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
     ReactDOM.render(<${componentName}>Example</${componentName}>, div);
   });
 });
 `;
-  writeThis(filename, contents);
+  writeFile(filename, contents);
 };
 
 // write stories.js file
 const storiesScript = () => {
-  const filename = "stories";
-  const contents = `import React from "react";
-import { storiesOf } from "@storybook/react";
+  const filename = 'stories.js';
+  const contents = `import React from 'react';
+import { storiesOf } from '@storybook/react';
 
-import ${componentName} from ".";
+import ${componentName} from '.';
 
-storiesOf("${componentName}", module).add("${componentName}", () => (
+storiesOf('${componentName}', module).add('${componentName}', () => (
   <${componentName}>${componentName} example</${componentName}>
 ));
 `;
-  writeThis(filename, contents);
+  writeFile(filename, contents);
 };
 
 // write example.js file
 const exampleScript = () => {
-  const filename = "example";
-  const contents = `import React from "react";
-import ${componentName} from ".";
+  const filename = 'example.js';
+  const contents = `import React from 'react';
+import ${componentName} from '.';
 
 export default () => <${componentName}>${componentName} example</${componentName}>;
 `;
-  writeThis(filename, contents);
+  writeFile(filename, contents);
 };
 
 // write index.js file
 const indexScript = () => {
-  const filename = "index";
+  const filename = 'index.js';
   const contents = `// TODO INSERT A COMMENT REFERENCE TO EXTERNAL URL IF POSSIBLE
 
-import React from "react";
-import PropTypes from "prop-types";
-import glamorous from "glamorous";
+import React from 'react';
+import PropTypes from 'prop-types';
+import glamorous from 'glamorous';
 
 import {
   FONT_SIZE,
   LINE_HEIGHT,
   MEDIA_QUERIES,
-  NTA_LIGHT
-} from "../../constants/index";
+  NTA_LIGHT,
+} from '@govuk-react/constants';
 
 const ${componentName}Inner = glamorous.div({
-  boxSizing: "border-box",
+  boxSizing: 'border-box',
   fontFamily: NTA_LIGHT,
   fontWeight: 400,
-  textTransform: "none",
+  textTransform: 'none',
   fontSize: FONT_SIZE.SIZE_14,
   lineHeight: LINE_HEIGHT.SIZE_14,
-  width: "100%",
+  width: '100%',
   [MEDIA_QUERIES.LARGESCREEN]: {
     fontSize: FONT_SIZE.SIZE_16,
-    lineHeight: LINE_HEIGHT.SIZE_16
-  }
+    lineHeight: LINE_HEIGHT.SIZE_16,
+  },
 });
 
 const ${componentName} = ({ children }) => (
@@ -113,28 +145,27 @@ const ${componentName} = ({ children }) => (
 );
 
 ${componentName}.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default ${componentName};
 `;
-  writeThis(filename, contents);
+  writeFile(filename, contents);
 };
 
 const init = () => {
   if (fs.existsSync(path.join(folderName))) {
-    console.log(
-      `❗️❗️ The component "${componentName}" already exists ❗️❗️`
-    );
-    console.log("Please use a different name or delete the existing folder 🆗");
+    console.log(`❗️❗️ The component '${componentName}' already exists ❗️❗️
+Please use a different name or delete the existing folder 🆗`);
     return false;
   }
-  createFolder();
+  createFolder(folderName);
+  packageJson();
   testScript();
   storiesScript();
   exampleScript();
   indexScript();
-  console.log(`✅  The component "${componentName}" was created successfully`);
+  console.log(`✅  The component '${componentName}' was created successfully`);
   return false;
 };
 
