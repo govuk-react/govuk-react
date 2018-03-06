@@ -47,9 +47,6 @@
     "react-dom": "^16.2.0",
     "rimraf": "^2.6.2"
   },
-  "bin": {
-    "govuk-react-storybook": "npm run start"
-  },
   "scripts": {
     "start": "start-storybook -p 9009",
     "build": "npm run build:lib && npm run build:es",

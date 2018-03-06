@@ -28,27 +28,14 @@
     "coverageDirectory": "./coverage/",
     "collectCoverage": true,
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
-      "!<rootDir>/node_modules/",
-      "!src/**/stories.js",
-      "!src/**/example.js",
-      "!src/stories/*",
-      "components/*/src/**/*.{js,jsx}",
-      "!components/*/node_modules",
-      "!components/*/src/**/stories.js",
-      "!components/*/src/**/example.js",
-      "packages/*/src/**/*.{js,jsx}",
-      "!packages/*/node_modules",
-      "!packages/storybook/**",
-      "!packages/*/src/**/stories.js",
-      "!packages/*/src/**/example.js"
+      "<rootDir>/{components,packages}/*/src/**/*.js",
+      "!<rootDir>/{components,packages}/*/src/**/{stories,example}.js",
+      "!<rootDir>/packages/storybook/**",
+      "!<rootDir>/packages/storybook-components/**"
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/scripts/setupTests.js",
     "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.js?(x)",
-      "<rootDir>/src/**/?(*.)(spec|test).js?(x)",
-      "<rootDir>/components/*/src/**/?(*.)(spec|test).js?(x)",
-      "<rootDir>/packages/*/src/**/?(*.)(spec|test).js?(x)"
+      "<rootDir>/{components,packages}/*/src/**/?(*.)(spec|test).js?(x)"
     ],
     "testEnvironment": "node",
     "transform": {
