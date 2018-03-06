@@ -12,16 +12,16 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
-    "@storybook/addon-actions": "^3.3.12",
-    "@storybook/react": "^3.3.12",
+    "@storybook/addon-actions": "^3.3.14",
+    "@storybook/react": "^3.3.14",
     "enzyme": "^3.3.0",
     "react-dom": "^16.2.0",
     "rimraf": "^2.6.2"
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es",
-    "build:lib": "rimraf lib && babel src -d lib",
-    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es"
+    "build:lib": "rimraf lib && babel src -d lib --source-maps",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps"
   },
   "main": "lib/index.js",
   "module": "es/index.js"
