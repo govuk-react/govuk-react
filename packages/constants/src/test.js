@@ -10,10 +10,6 @@ describe('Constants', () => {
 
     it(`exports ${key} as valid type`, () => {
       const value = exports[key];
-      // TODO: this would fail if we wanted to export a constant that was `false`
-      // not sure how to do "expect one of" in Jest so leaving for now
-      // as it's possible we'd never need a false constant export
-      expect(value).toBeTruthy();
       expect(okTypes.includes(typeof value)).toBe(true);
     });
   }
