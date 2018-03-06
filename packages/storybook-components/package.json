@@ -1,9 +1,12 @@
 {
-  "name": "@govuk-react/radio",
+  "name": "@govuk-react/storybook-components",
   "version": "0.1.18",
   "dependencies": {
-    "@govuk-react/constants": "0.1.18",
-    "govuk-colours": "^1.0.3"
+    "@govuk-react/button": "0.1.18",
+    "@storybook/addons": "^3.3.14",
+    "@storybook/addon-actions": "^3.3.14",
+    "@storybook/react": "^3.3.14",
+    "react-final-form": "^3.1.0"
   },
   "peerDependencies": {
     "glamorous": ">=4",
@@ -12,13 +15,8 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
-    "@govuk-react/multi-choice": "0.1.18",
-    "@govuk-react/storybook-components": "0.1.18",
-    "@storybook/addon-actions": "^3.3.12",
-    "@storybook/react": "^3.3.12",
     "enzyme": "^3.3.0",
     "react-dom": "^16.2.0",
-    "react-final-form": "^3.1.0",
     "rimraf": "^2.6.2"
   },
   "scripts": {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Field } from 'react-final-form';
 import { storiesOf } from '@storybook/react';
 import PropTypes from 'prop-types';
-import { FinalFormWrapper } from '@govuk-react/storybook';
+import { FinalFormWrapper } from '@govuk-react/storybook-components';
 
 import MultiChoice from '@govuk-react/multi-choice';
 import Radio from '.';
