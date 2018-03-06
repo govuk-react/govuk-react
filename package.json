@@ -113,6 +113,7 @@
     "eslint-plugin-react": "^7.5.1",
     "final-form": "^4.2.0",
     "flow-bin": "^0.66.0",
+    "glamor": "^2.20.40",
     "glamorous": "^4.11.2",
     "glob": "^7.1.2",
     "glob-promise": "^3.3.0",

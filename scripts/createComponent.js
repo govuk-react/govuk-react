@@ -35,6 +35,10 @@ const writeFile = (filename, contents) => {
 // write packageJson file
 const packageJson = () => {
   const filename = 'package.json';
+  // TODO: this should pull in devDependencies version numbers from package.json
+  // in the root or from another component so it doesn't need to be maintained.
+  // also I'm not sure we need the storybook addons for all components,
+  // can be added manually per component perhaps.
   const contents = `{
   "name": "@govuk-react/${componentFolderName}",
   "version": "0.1.18",
@@ -49,8 +53,9 @@ const packageJson = () => {
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
-    "@storybook/addon-actions": "^3.3.12",
-    "@storybook/react": "^3.3.12",
+    "@storybook/addons": "^3.3.14",
+    "@storybook/addon-actions": "^3.3.14",
+    "@storybook/react": "^3.3.14",
     "enzyme": "^3.3.0",
     "react-dom": "^16.2.0",
     "rimraf": "^2.6.2"
