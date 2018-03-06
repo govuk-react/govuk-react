@@ -16,8 +16,8 @@
     "@govuk-react/grid-col": "0.1.18",
     "@govuk-react/grid-row": "0.1.18",
     "@govuk-react/layout": "0.1.18",
-    "@storybook/addon-actions": "^3.3.12",
-    "@storybook/react": "^3.3.12",
+    "@storybook/addon-actions": "^3.3.14",
+    "@storybook/react": "^3.3.14",
     "enzyme": "^3.3.0",
     "react-dom": "^16.2.0",
     "rimraf": "^2.6.2"

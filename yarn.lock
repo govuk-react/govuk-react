@@ -707,7 +707,7 @@
   dependencies:
     samsam "1.3.0"
 
-"@storybook/addon-actions@^3.3.12", "@storybook/addon-actions@^3.3.14":
+"@storybook/addon-actions@^3.3.14":
   version "3.3.14"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.3.14.tgz#b78e707b32130ad16ea8a0af62a66f23b5df502b"
   dependencies:
@@ -718,7 +718,7 @@
     react-inspector "^2.2.2"
     uuid "^3.1.0"
 
-"@storybook/addon-knobs@^3.3.12":
+"@storybook/addon-knobs@^3.3.14":
   version "3.3.14"
   resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-3.3.14.tgz#129b8273006906236882de7c4a8daba416bc9c48"
   dependencies:
@@ -734,7 +734,7 @@
     react-textarea-autosize "^5.2.1"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-links@^3.3.12", "@storybook/addon-links@^3.3.14":
+"@storybook/addon-links@^3.3.14":
   version "3.3.14"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-3.3.14.tgz#1de63e9b3819927fbb2f963fdabc65f86fde33cc"
   dependencies:
@@ -742,7 +742,7 @@
     global "^4.3.2"
     prop-types "^15.5.10"
 
-"@storybook/addons@^3.3.12", "@storybook/addons@^3.3.14":
+"@storybook/addons@^3.3.14":
   version "3.3.14"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.3.14.tgz#20a65085b834898ea6154b9061ebc65a74c6cb33"
 
@@ -817,7 +817,7 @@
   dependencies:
     babel-runtime "^6.5.0"
 
-"@storybook/react@^3.3.12":
+"@storybook/react@^3.3.14":
   version "3.3.14"
   resolved "https://registry.yarnpkg.com/@storybook/react/-/react-3.3.14.tgz#89a11e786846b7bcbca8a2baf8972733b3609ab2"
   dependencies:
