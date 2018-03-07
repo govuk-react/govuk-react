@@ -18,7 +18,7 @@ storiesOf('Breadcrumb', module).add('Three levels deep', () => (
   <Breadcrumb>
     <AnchorTag href="/section">Section 1</AnchorTag>
     <AnchorTag href="/section/sub-section">Sub-section</AnchorTag>
-    <AnchorTag href="/section/three">Three sections and a long line</AnchorTag>
+    Current page
   </Breadcrumb>
 ));
 
@@ -32,11 +32,7 @@ storiesOf('Breadcrumb', module).add(
       <BrowserRouter>
         <AnchorLink to="/section/sub-section">Sub-section</AnchorLink>
       </BrowserRouter>
-      <BrowserRouter>
-        <AnchorLink to="/section/three">
-          Three sections and a long line
-        </AnchorLink>
-      </BrowserRouter>
+      Current page
     </Breadcrumb>
   ),
 );
