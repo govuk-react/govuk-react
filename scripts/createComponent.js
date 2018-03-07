@@ -10,16 +10,6 @@ const componentName = `${componentFolderName.charAt(0).toUpperCase()}${component
 
 const folderName = `./components/${componentFolderName}`;
 
-// /* eslint no-console: 0 */
-// const createFolder = (fName) => {
-//   mkdirp(fName, (err) => {
-//     if (err) {
-//       console.error(err);
-//     }
-//   });
-//   mkdirp(`${fName}/src`);
-// };
-
 const writeFile = (filename, contents) => {
   const pathName = path.join(filename === 'package.json' ? folderName : `${folderName}/src`, filename);
   fs.writeFile(pathName, `${contents}`, (err) => {

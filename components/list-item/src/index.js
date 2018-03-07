@@ -6,15 +6,16 @@ import {
   LINE_HEIGHT,
   MEDIA_QUERIES,
   NTA_LIGHT,
+  SPACING,
 } from '@govuk-react/constants';
 
 const GListItem = glamorous.li({
-  boxSizing: 'border-box',
   fontFamily: NTA_LIGHT,
   fontWeight: 400,
   textTransform: 'none',
   fontSize: FONT_SIZE.SIZE_14,
   lineHeight: LINE_HEIGHT.SIZE_14,
+  marginBottom: SPACING.SCALE_1,
   width: '100%',
   [MEDIA_QUERIES.LARGESCREEN]: {
     fontSize: FONT_SIZE.SIZE_16,

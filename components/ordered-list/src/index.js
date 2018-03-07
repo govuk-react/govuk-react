@@ -6,7 +6,6 @@ import glamorous from 'glamorous';
 
 const GOrderedListInner = glamorous.ol(
   {
-    boxSizing: 'border-box',
     margin: 0,
     padding: 0,
     paddingLeft: '20px',
