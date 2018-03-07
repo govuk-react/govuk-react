@@ -15,6 +15,9 @@ exports[`ListNavigation matches wrapper snapshot: wrapper mount 1`] = `
 .glamor-1,
 [data-glamor-1] {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
   width: 100%;
   list-style-type: square;
 }
