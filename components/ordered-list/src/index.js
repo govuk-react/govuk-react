@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
-const GUnorderedList = glamorous.ul(
+const GOrderedListInner = glamorous.ol(
   {
     boxSizing: 'border-box',
     margin: 0,
@@ -19,19 +19,17 @@ const GUnorderedList = glamorous.ul(
   }),
 );
 
-// listStyleType: normal HTML property values are used here
-// e.g., listStyleType="circle", listStyleType="upper-alpha", listStyleType="none"
-const UnorderedList = ({ children, listStyleType }) => (
-  <GUnorderedList listStyleType={listStyleType}>{children}</GUnorderedList>
+const OrderedList = ({ children, listStyleType }) => (
+  <GOrderedListInner listStyleType={listStyleType}>{children}</GOrderedListInner>
 );
 
-UnorderedList.defaultProps = {
+OrderedList.defaultProps = {
   listStyleType: undefined,
 };
 
-UnorderedList.propTypes = {
+OrderedList.propTypes = {
   children: PropTypes.node.isRequired,
   listStyleType: PropTypes.string,
 };
 
-export default UnorderedList;
+export default OrderedList;

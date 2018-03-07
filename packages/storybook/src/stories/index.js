@@ -23,6 +23,7 @@ import '@govuk-react/phase-badge/lib/stories';
 import '@govuk-react/phase-banner/lib/stories';
 import '@govuk-react/search-box/lib/stories';
 import '@govuk-react/pagination/lib/stories';
+import '@govuk-react/ordered-list/lib/stories';
 import '@govuk-react/unordered-list/lib/stories';
 import '@govuk-react/list-item/lib/stories';
 import '@govuk-react/list-navigation/lib/stories';

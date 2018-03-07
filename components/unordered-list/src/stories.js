@@ -1,17 +1,18 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import ListItem from '@govuk-react/list-item';
 
 import UnorderedList from '.';
 
 storiesOf('UnorderedList', module).add('UnorderedList default', () => (
   <UnorderedList>
-    <li>UnorderedList example</li>
+    <ListItem>UnorderedList example</ListItem>
   </UnorderedList>
 ));
 
 storiesOf('UnorderedList', module).add('UnorderedList with square', () => (
   <UnorderedList listStyleType="square">
-    <li>UnorderedList example</li>
+    <ListItem>UnorderedList example</ListItem>
   </UnorderedList>
 ));
 
@@ -19,7 +20,7 @@ storiesOf('UnorderedList', module).add(
   'UnorderedList with no decoration',
   () => (
     <UnorderedList listStyleType="none">
-      <li>UnorderedList example</li>
+      <ListItem>UnorderedList example</ListItem>
     </UnorderedList>
   ),
 );
