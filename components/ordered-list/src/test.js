@@ -4,24 +4,24 @@ import { mount } from 'enzyme';
 import ListItem from '@govuk-react/list-item';
 import asAnchor from '@govuk-react/hoc/lib/asAnchor';
 
-import UnorderedList from './';
+import OrderedList from './';
 
 const AnchorTag = asAnchor('a');
 
 const wrapper = (
-  <UnorderedList>
+  <OrderedList>
     <ListItem><AnchorTag href="http://example.com">Example 1</AnchorTag></ListItem>
     <ListItem><AnchorTag href="http://example.com">Example 2</AnchorTag></ListItem>
     <ListItem><AnchorTag href="http://example.com">Example 3</AnchorTag></ListItem>
-  </UnorderedList>
+  </OrderedList>
 );
 
-describe(UnorderedList, () => {
-  it('renders with and without props, without crashing', () => {
+describe(OrderedList, () => {
+  it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<UnorderedList>Example</UnorderedList>, div);
+    ReactDOM.render(<OrderedList>Example</OrderedList>, div);
     ReactDOM.render(
-      <UnorderedList listStyleType="none">Example</UnorderedList>,
+      <OrderedList listStyleType="none">Example</OrderedList>,
       div,
     );
   });

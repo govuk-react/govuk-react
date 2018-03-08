@@ -3,22 +3,12 @@
 
 const fs = require('fs');
 const path = require('path');
-const mkdirp = require('mkdirp');
+const mkdirp = require('mkdirp-promise');
 
 const componentFolderName = process.argv[2];
 const componentName = `${componentFolderName.charAt(0).toUpperCase()}${componentFolderName.slice(1).replace(/-([a-z])/g, g => g[1].toUpperCase())}`;
 
 const folderName = `./components/${componentFolderName}`;
-
-/* eslint no-console: 0 */
-const createFolder = (fName) => {
-  mkdirp(fName, (err) => {
-    if (err) {
-      console.error(err);
-    }
-  });
-  mkdirp(`${fName}/src`);
-};
 
 const writeFile = (filename, contents) => {
   const pathName = path.join(filename === 'package.json' ? folderName : `${folderName}/src`, filename);
@@ -164,13 +154,14 @@ const init = () => {
 Please use a different name or delete the existing folder 🆗`);
     return false;
   }
-  createFolder(folderName);
-  packageJson();
-  testScript();
-  storiesScript();
-  exampleScript();
-  indexScript();
-  console.log(`✅  The component '${componentName}' was created successfully`);
+  mkdirp(`${folderName}/src`).then(() => {
+    packageJson();
+    testScript();
+    storiesScript();
+    exampleScript();
+    indexScript();
+    console.log(`✅  The component '${componentName}' was created successfully`);
+  });
   return false;
 };
 

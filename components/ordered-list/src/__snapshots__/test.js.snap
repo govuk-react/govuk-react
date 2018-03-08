@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderedList matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-9,
+[data-glamor-9] {
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  width: 100%;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  width: 100%;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  color: #005ea5;
+  padding: 3px;
+  margin: -3px;
+  outline-color: transparent;
+  display: inline-block;
+  text-decoration: underline;
+}
+
+.glamor-0:focus,
+[data-glamor-0]:focus {
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
+}
+
+.glamor-0:visited,
+[data-glamor-0]:visited {
+  color: #2e358b;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-9,
+  [data-glamor-9] {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 5px;
+  }
+}
+
+<OrderedList>
+  <glamorous(ol)>
+    <ol
+      className="glamor-9"
+    >
+      <ListItem>
+        <glamorous(li)>
+          <li
+            className="glamor-2"
+          >
+            <glamorous(Anchor)
+              href="http://example.com"
+            >
+              <Anchor
+                className="glamor-0"
+                href="http://example.com"
+              >
+                <a
+                  className="glamor-0"
+                  href="http://example.com"
+                >
+                  Example 1
+                </a>
+              </Anchor>
+            </glamorous(Anchor)>
+          </li>
+        </glamorous(li)>
+      </ListItem>
+      <ListItem>
+        <glamorous(li)>
+          <li
+            className="glamor-2"
+          >
+            <glamorous(Anchor)
+              href="http://example.com"
+            >
+              <Anchor
+                className="glamor-0"
+                href="http://example.com"
+              >
+                <a
+                  className="glamor-0"
+                  href="http://example.com"
+                >
+                  Example 2
+                </a>
+              </Anchor>
+            </glamorous(Anchor)>
+          </li>
+        </glamorous(li)>
+      </ListItem>
+      <ListItem>
+        <glamorous(li)>
+          <li
+            className="glamor-2"
+          >
+            <glamorous(Anchor)
+              href="http://example.com"
+            >
+              <Anchor
+                className="glamor-0"
+                href="http://example.com"
+              >
+                <a
+                  className="glamor-0"
+                  href="http://example.com"
+                >
+                  Example 3
+                </a>
+              </Anchor>
+            </glamorous(Anchor)>
+          </li>
+        </glamorous(li)>
+      </ListItem>
+    </ol>
+  </glamorous(ol)>
+</OrderedList>
+`;
