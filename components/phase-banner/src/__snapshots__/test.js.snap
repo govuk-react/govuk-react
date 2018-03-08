@@ -5,13 +5,13 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
 [data-glamor-1] {
   border-bottom: 1px solid #bfc1c3;
   box-sizing: border-box;
+  padding-top: 10px;
   padding-bottom: 10px;
   font-family: "nta", Arial, sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 14px;
   line-height: 1.1428571429;
-  width: 100%;
 }
 
 .glamor-1> a,
@@ -57,8 +57,8 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
 <PhaseBanner
   level="beta"
 >
-  <glamorous(p)>
-    <p
+  <glamorous(div)>
+    <div
       className="glamor-1"
     >
       <PhaseBadge>
@@ -71,7 +71,7 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
         </glamorous(strong)>
       </PhaseBadge>
       example
-    </p>
-  </glamorous(p)>
+    </div>
+  </glamorous(div)>
 </PhaseBanner>
 `;

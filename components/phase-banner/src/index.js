@@ -13,16 +13,16 @@ import {
 
 import PhaseBadge from '@govuk-react/phase-badge';
 
-const PhaseBannerInner = glamorous.p({
+const PhaseBannerInner = glamorous.div({
   borderBottom: '1px solid #bfc1c3',
   boxSizing: 'border-box',
+  paddingTop: '10px',
   paddingBottom: '10px',
   fontFamily: NTA_LIGHT,
   fontWeight: 400,
   textTransform: 'none',
   fontSize: FONT_SIZE.SIZE_14,
   lineHeight: LINE_HEIGHT.SIZE_14,
-  width: '100%',
   [MEDIA_QUERIES.LARGESCREEN]: {
     fontSize: FONT_SIZE.SIZE_16,
     lineHeight: LINE_HEIGHT.SIZE_16,
