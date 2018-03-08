@@ -21,7 +21,6 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
   text-transform: none;
   font-size: 14px;
   line-height: 1.1428571429;
-  margin-bottom: 5px;
   width: 100%;
 }
 
@@ -59,6 +58,7 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
   [data-glamor-2] {
     font-size: 16px;
     line-height: 1.25;
+    margin-bottom: 5px;
   }
 }
 
