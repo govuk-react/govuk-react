@@ -9,7 +9,7 @@ describe('breadcrumb', () => {
   const wrapper = <Breadcrumb>{example}</Breadcrumb>;
   const wrapperMultiple = (
     <Breadcrumb>
-      {example}
+      <a href="/section">Section 1</a>
       {example}
     </Breadcrumb>
   );
@@ -26,6 +26,6 @@ describe('breadcrumb', () => {
   });
 
   it('matches snapshot', () => {
-    expect(mount(wrapper)).toMatchSnapshot('enzyme.mount');
+    expect(mount(wrapperMultiple)).toMatchSnapshot('enzyme.mount');
   });
 });
