@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import ArrowRight from '.';
+import ArrowLeft from '.';
 
-storiesOf('Search', module).add('Search', () => (
-  <ArrowRight title="example">ArrowRight example</ArrowRight>
+storiesOf('Icons', module).add('ArrowLeft', () => (
+  <ArrowLeft title="ArrowLeft example" colour="red">ArrowLeft example</ArrowLeft>
 ));

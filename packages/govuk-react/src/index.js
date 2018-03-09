@@ -26,6 +26,7 @@ export { default as Radio } from '@govuk-react/radio';
 export { default as SearchBox } from '@govuk-react/search-box';
 export { default as Select } from '@govuk-react/select';
 export { default as TextArea } from '@govuk-react/text-area';
+export { default as OrderedList } from '@govuk-react/ordered-list';
 export { default as UnorderedList } from '@govuk-react/unordered-list';
 
 export { H1, H2, H3, H4, H5, H6 } from '@govuk-react/header';
@@ -35,4 +36,4 @@ export { asAnchor } from '@govuk-react/hoc';
 export { asPaginationItem } from '@govuk-react/hoc';
 
 // Icons
-export { Search as SearchIcon } from '@govuk-react/icons';
+export { Search as SearchIcon, ArrowLeft } from '@govuk-react/icons';

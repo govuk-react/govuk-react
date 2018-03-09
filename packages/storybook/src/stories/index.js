@@ -30,3 +30,5 @@ import '@govuk-react/list-navigation/lib/stories';
 
 import '@govuk-react/hoc/lib/asAnchor/stories';
 import '@govuk-react/hoc/lib/asPaginationItem/stories';
+
+import '@govuk-react/icons/lib/ArrowLeft/stories'
