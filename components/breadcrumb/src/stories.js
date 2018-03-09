@@ -1,12 +1,18 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { BrowserRouter, Link } from 'react-router-dom';
+import { asAnchor } from '@govuk-react/hoc';
 
 import Breadcrumb from '.';
-import { asAnchor } from '@govuk-react/hoc';
 
 const AnchorTag = asAnchor('a');
 const AnchorLink = asAnchor(Link);
+
+const crumbsWithDuffChildren = [
+  <AnchorTag href="/section">Section 1</AnchorTag>,
+  '',
+  'Current page',
+];
 
 storiesOf('Breadcrumb', module).add('Component default', () => (
   <Breadcrumb>
@@ -16,9 +22,15 @@ storiesOf('Breadcrumb', module).add('Component default', () => (
 
 storiesOf('Breadcrumb', module).add('Three levels deep', () => (
   <Breadcrumb>
-    <AnchorTag href="/section">Section 1</AnchorTag>
-    <AnchorTag href="/section/sub-section">Sub-section</AnchorTag>
+    <a href="/section">Section 1</a>
+    <a href="/section/sub-section">Sub-section</a>
     Current page
+  </Breadcrumb>
+));
+
+storiesOf('Breadcrumb', module).add('Duff children', () => (
+  <Breadcrumb>
+    {crumbsWithDuffChildren}
   </Breadcrumb>
 ));
 
