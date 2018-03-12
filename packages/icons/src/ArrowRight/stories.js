@@ -3,6 +3,6 @@ import { storiesOf } from '@storybook/react';
 
 import ArrowRight from '.';
 
-storiesOf('Search', module).add('Search', () => (
-  <ArrowRight title="example">ArrowRight example</ArrowRight>
+storiesOf('Icons', module).add('Arrow Right', () => (
+  <ArrowRight title="example" colour="green">ArrowRight example</ArrowRight>
 ));
