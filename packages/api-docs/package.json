@@ -1,0 +1,31 @@
+{
+  "name": "@govuk-react/api-docs",
+  "version": "0.1.18",
+  "dependencies": {
+    "@babel/node": "^7.0.0-beta.40",
+    "chalk": "^2.3.1",
+    "glob": "^7.1.2",
+    "glob-promise": "^3.3.0",
+    "react-docgen": "^3.0.0-beta11",
+    "govuk-react": "0.1.18",
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.40",
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/runtime": "^7.0.0-beta.40",
+    "babel-core": "^7.0.0-bridge.0",
+    "glamorous": "^4.12.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "rimraf": "^2.6.2"
+  },
+  "scripts": {
+    "start": "babel-node src",
+    "build": "npm run build:lib && npm run build:es",
+    "build:lib": "rimraf lib && babel src -d lib --source-maps",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps"
+  },
+  "main": "lib/index.js",
+  "module": "es/index.js"
+}
