@@ -6,6 +6,7 @@
     "build-storybook": "npm run bootstrap && npm run build && cd packages/storybook && npm run build-storybook && cp -r storybook-static ../..",
     "bootstrap": "lerna bootstrap",
     "docs": "lerna run start --scope=@govuk-react/api-docs",
+    "doc-component": "doc-component '../../../components/**/lib/index.js' './API.md'",
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src",
     "build": "lerna run build --parallel",

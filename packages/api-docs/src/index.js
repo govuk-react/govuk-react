@@ -72,10 +72,8 @@ async function generateApiForFiles(files) {
   return md;
 }
 
-async function docs() {
-  const files = await glob(path.resolve(__dirname, '../../../components/**/lib/index.js'));
+export default async function (relDir, outputMd) {
+  const files = await glob(path.resolve(__dirname, relDir));
   const md = await generateApiForFiles(files);
-  await promisify(fs.writeFile)('./API.md', md);
+  await promisify(fs.writeFile)(outputMd, md);
 }
-
-docs();
