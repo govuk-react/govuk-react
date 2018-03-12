@@ -8,11 +8,7 @@ import Breadcrumb from '.';
 const AnchorTag = asAnchor('a');
 const AnchorLink = asAnchor(Link);
 
-const crumbsWithDuffChildren = [
-  <AnchorTag href="/section">Section 1</AnchorTag>,
-  '',
-  'Current page',
-];
+const crumbsWithDuffChildren = [];
 
 storiesOf('Breadcrumb', module).add('Component default', () => (
   <Breadcrumb>
@@ -30,7 +26,9 @@ storiesOf('Breadcrumb', module).add('Three levels deep', () => (
 
 storiesOf('Breadcrumb', module).add('Duff children', () => (
   <Breadcrumb>
+    <AnchorTag href="/section">Section 1</AnchorTag>
     {crumbsWithDuffChildren}
+    Current page
   </Breadcrumb>
 ));
 

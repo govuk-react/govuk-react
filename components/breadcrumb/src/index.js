@@ -70,8 +70,9 @@ const Breadcrumb = ({ children }) => (
     <BreadcrumbList>
       {children.length && children.map ? (
         children.map((child, i) => (
-          child.length || child.props ? <BreadcrumbListItem key={child.key || i}>{child}</BreadcrumbListItem>
- : null
+          child.length || child.props
+            ? <BreadcrumbListItem key={child.key || i}>{child}</BreadcrumbListItem>
+            : null
         ))
       ) : (
         <BreadcrumbListItem>{children}</BreadcrumbListItem>
