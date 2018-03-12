@@ -1,48 +1,85 @@
-// TODO INSERT A COMMENT REFERENCE TO EXTERNAL URL IF POSSIBLE
+// https://govuk-static.herokuapp.com/component-guide/document_footer
 
 import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
+import UnorderedList from '@govuk-react/unordered-list';
 
-import {
-  FONT_SIZE,
-  LINE_HEIGHT,
-  MEDIA_QUERIES,
-  NTA_LIGHT,
-} from '@govuk-react/constants';
-
-const DocumentFooterMetadataInner = glamorous.div({
-  boxSizing: 'border-box',
-  fontFamily: NTA_LIGHT,
-  fontWeight: 400,
-  textTransform: 'none',
-  fontSize: FONT_SIZE.SIZE_14,
-  lineHeight: LINE_HEIGHT.SIZE_14,
-  width: '100%',
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    fontSize: FONT_SIZE.SIZE_16,
-    lineHeight: LINE_HEIGHT.SIZE_16,
+const Definition = glamorous.li({
+  fontSize: '24px',
+  fontWeight: 700,
+  lineHeight: 1.25,
+  '> a': {
+    textDecoration: 'none',
   },
 });
 
-const DocumentFooterMetadata = ({ from, partOf, other }) => (
-  <DocumentFooterMetadataInner>
-    {from.length && from.map ? (
-      from.map((child, i) => (
-        <span key={child.key || i}>{child}</span>
-      ))
-    ) : (
-      <span>{from}</span>
-    )}
-  </DocumentFooterMetadataInner>
-);
+const DocumentFooterMetadata = ({ from, partOf, other }) => {
+  const fromData = (
+    <div>
+      {from && <p style={{ marginBottom: 0 }}>From:</p>}
+      <UnorderedList listStyleType="none">
+        {from && from.map((child, i) => (
+          <Definition key={child.key || i}>{child}</Definition>
+          ))}
+      </UnorderedList>
+    </div>
+  );
+
+  const partOfData = (
+    <div>
+      {partOf &&
+        <div>
+          <p style={{ marginBottom: 0 }}>Part of:</p>
+          <UnorderedList listStyleType="none">
+            {partOf && partOf.map((child, i) => (
+              <Definition key={child.key || i}>{child}</Definition>
+              ))
+            }
+          </UnorderedList>
+        </div>}
+    </div>
+  );
+
+  const otherData = (
+    <div>
+      {other && other.map(item =>
+        (
+          <div key={item.id}>
+            <p style={{ marginBottom: 0 }}>{item.title}:</p>
+            <UnorderedList listStyleType="none">
+              <Definition>
+                {item.content}
+              </Definition>
+            </UnorderedList>
+          </div>
+          ))}
+    </div>
+  );
+
+  return (
+    <div>
+      {fromData}
+      {partOfData}
+      {otherData}
+    </div>
+  );
+};
 
 DocumentFooterMetadata.defaultProps = {
   from: undefined,
+  partOf: undefined,
+  other: undefined,
 };
 
 DocumentFooterMetadata.propTypes = {
-  from: PropTypes.shape({}),
+  from: PropTypes.array,
+  partOf: PropTypes.array,
+  other: PropTypes.shape({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    content: PropTypes.string,
+  }),
 };
 
 export default DocumentFooterMetadata;

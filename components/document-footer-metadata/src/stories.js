@@ -1,24 +1,40 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { asAnchor } from '@govuk-react/hoc';
 
 import DocumentFooterMetadata from '.';
 
+const AnchorTag = asAnchor('a');
+
 const fromData = [
-  <a href="/government/organisations/ministry-of-defence">Ministry of Defence</a>,
-  <a href="/government/organisations/cabinet-office">Cabinet Office</a>,
+  <AnchorTag href="/government/organisations/ministry-of-defence">Ministry of Defence</AnchorTag>,
 ];
 
 const partOfData = [
-  "<a href='/government/topics/energy'>Energy</a>",
-  "<a href='/government/topics/environment'>Environment</a>",
+  <AnchorTag href="/government/topics/energy">Energy</AnchorTag>,
+  <AnchorTag href="/government/topics/environment">Environment</AnchorTag>,
 ];
 
 const otherData = [
   {
-    'Consultation type': "<a href='/government/publications'>Open</a>",
-    Published: '20 January 2012',
-    'Date opened': '1 February 2012',
-    'Date closed': '1 March 2013',
+    id: 0,
+    title: 'Consultation type',
+    content: <AnchorTag href="/government/publications">Open</AnchorTag>,
+  },
+  {
+    id: 1,
+    title: 'Published',
+    content: '20 January 2012',
+  },
+  {
+    id: 2,
+    title: 'Date opened',
+    content: '1 February 2012',
+  },
+  {
+    id: 3,
+    title: 'Date closed',
+    content: '1 March 2013',
   },
 ];
 
@@ -35,7 +51,7 @@ storiesOf('Document Footer Metadata', module).add('DFM From & part of example', 
   />
 ));
 
-storiesOf('Document Footer Metadata', module).add('DFM From and other example', () => (
+storiesOf('Document Footer Metadata', module).add('DFM From & other data example', () => (
   <DocumentFooterMetadata
     from={fromData}
     other={otherData}

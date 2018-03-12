@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  margin: 0;
+  padding: 0;
+  padding-left: 0;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  width: 100%;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.glamor-1> a,
+[data-glamor-1]> a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+<DocumentFooterMetadata
+  partOf={
+    Array [
+      "example",
+      "exampleexample",
+    ]
+  }
+>
+  <div>
+    <div>
+      <UnorderedList
+        listStyleType="none"
+      >
+        <glamorous(ul)
+          listStyleType="none"
+        >
+          <ul
+            className="glamor-0"
+          />
+        </glamorous(ul)>
+      </UnorderedList>
+    </div>
+    <div>
+      <div>
+        <p
+          style={
+            Object {
+              "marginBottom": 0,
+            }
+          }
+        >
+          Part of:
+        </p>
+        <UnorderedList
+          listStyleType="none"
+        >
+          <glamorous(ul)
+            listStyleType="none"
+          >
+            <ul
+              className="glamor-0"
+            >
+              <glamorous(li)
+                key="0"
+              >
+                <li
+                  className="glamor-1"
+                >
+                  example
+                </li>
+              </glamorous(li)>
+              <glamorous(li)
+                key="1"
+              >
+                <li
+                  className="glamor-1"
+                >
+                  exampleexample
+                </li>
+              </glamorous(li)>
+            </ul>
+          </glamorous(ul)>
+        </UnorderedList>
+      </div>
+    </div>
+    <div />
+  </div>
+</DocumentFooterMetadata>
+`;
