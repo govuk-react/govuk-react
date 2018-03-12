@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import UnorderedList from '@govuk-react/unordered-list';
 import ListItem from '@govuk-react/list-item';
 
+// TODO use Context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
 const ListNavigation = ({ children, listStyleType }) => (
   <UnorderedList listStyleType={listStyleType}>
     {children.length && children.map ? (

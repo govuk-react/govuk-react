@@ -33,6 +33,8 @@ const GUnorderedList = glamorous.ul(
   }),
 );
 
+// TODO use Context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
+
 // listStyleType: normal HTML property values are used here
 // e.g., listStyleType="circle", listStyleType="upper-alpha", listStyleType="none"
 const UnorderedList = ({ children, listStyleType }) => (
