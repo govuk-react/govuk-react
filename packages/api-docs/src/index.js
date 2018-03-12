@@ -2,18 +2,18 @@
 
 // TODO: this util should probably be its own node module
 
-import fs from "fs";
-import path from "path";
-import glob from "glob-promise";
-import chalk from "chalk";
-import { parse } from "react-docgen";
-import { promisify } from "util";
+import fs from 'fs';
+import path from 'path';
+import glob from 'glob-promise';
+import chalk from 'chalk';
+import { parse } from 'react-docgen';
+import { promisify } from 'util';
 
-import generateMarkdown from "./markdown/generateMarkdown";
-import loadExample from "./loadExample";
-import generateComponentImage from "./generateComponentImage";
+import generateMarkdown from './markdown/generateMarkdown';
+import loadExample from './loadExample';
+import generateComponentImage from './generateComponentImage';
 
-const components = require("../../src");
+const components = require('../../src');
 
 function getComponentNameFromFile(file) {
   const dirs = path.dirname(file).split(path.sep);
@@ -34,11 +34,11 @@ async function generateApiForFile(file) {
     const imagePath = `./docs/${componentName}.png`;
     await generateComponentImage(file, Component, imagePath);
     const md = getMarkdownForComponent(file, imagePath);
-    console.log(chalk.green("API Documented:"), componentName);
+    console.log(chalk.green('API Documented:'), componentName);
     return md;
   } catch (e) {
-    console.log(chalk.red("Skipping component:"), file, e.message);
-    return "";
+    console.log(chalk.red('Skipping component:'), file, e.message);
+    return '';
   }
 }
 
@@ -49,7 +49,7 @@ function shouldDocumentComponent(file) {
 }
 
 async function generateApiForFiles(files) {
-  let md = "";
+  let md = '';
   for (let i = 0; i < files.length; i += 1) {
     const file = files[i];
     if (shouldDocumentComponent(file)) {
@@ -60,11 +60,9 @@ async function generateApiForFiles(files) {
 }
 
 async function docs() {
-  const files = await glob(
-    path.resolve(__dirname, "../../src/components/**/index.js")
-  );
+  const files = await glob(path.resolve(__dirname, '../../src/components/**/index.js'));
   const md = await generateApiForFiles(files);
-  await promisify(fs.writeFile)("./API.md", md);
+  await promisify(fs.writeFile)('./API.md', md);
 }
 
 docs();
