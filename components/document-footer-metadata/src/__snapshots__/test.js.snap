@@ -3,6 +3,11 @@
 exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
 .glamor-0,
 [data-glamor-0] {
+  font-family: "nta", Arial, sans-serif;
+}
+
+.glamor-3,
+[data-glamor-3] {
   margin: 0;
   padding: 0;
   padding-left: 0;
@@ -29,8 +34,8 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
+  .glamor-3,
+  [data-glamor-3] {
     font-size: 16px;
     line-height: 1.25;
   }
@@ -45,63 +50,63 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
   }
 >
   <div>
-    <div>
-      <UnorderedList
-        listStyleType="none"
+    <glamorous(div)>
+      <div
+        className="glamor-0"
+      />
+    </glamorous(div)>
+    <glamorous(div)>
+      <div
+        className="glamor-0"
       >
-        <glamorous(ul)
-          listStyleType="none"
-        >
-          <ul
-            className="glamor-0"
-          />
-        </glamorous(ul)>
-      </UnorderedList>
-    </div>
-    <div>
-      <div>
-        <p
-          style={
-            Object {
-              "marginBottom": 0,
+        <div>
+          <p
+            style={
+              Object {
+                "marginBottom": 0,
+              }
             }
-          }
-        >
-          Part of:
-        </p>
-        <UnorderedList
-          listStyleType="none"
-        >
-          <glamorous(ul)
+          >
+            Part of:
+          </p>
+          <UnorderedList
             listStyleType="none"
           >
-            <ul
-              className="glamor-0"
+            <glamorous(ul)
+              listStyleType="none"
             >
-              <glamorous(li)
-                key="0"
+              <ul
+                className="glamor-3"
               >
-                <li
-                  className="glamor-1"
+                <glamorous(li)
+                  key="0"
                 >
-                  example
-                </li>
-              </glamorous(li)>
-              <glamorous(li)
-                key="1"
-              >
-                <li
-                  className="glamor-1"
+                  <li
+                    className="glamor-1"
+                  >
+                    example
+                  </li>
+                </glamorous(li)>
+                <glamorous(li)
+                  key="1"
                 >
-                  exampleexample
-                </li>
-              </glamorous(li)>
-            </ul>
-          </glamorous(ul)>
-        </UnorderedList>
+                  <li
+                    className="glamor-1"
+                  >
+                    exampleexample
+                  </li>
+                </glamorous(li)>
+              </ul>
+            </glamorous(ul)>
+          </UnorderedList>
+        </div>
       </div>
-    </div>
-    <div />
+    </glamorous(div)>
+    <glamorous(div)>
+      <div
+        className="glamor-0"
+      />
+    </glamorous(div)>
   </div>
 </DocumentFooterMetadata>
 `;

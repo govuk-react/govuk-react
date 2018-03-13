@@ -22,12 +22,15 @@ const Definition = glamorous.li({
 const DocumentFooterMetadata = ({ from, partOf, other }) => {
   const fromData = (
     <Wrapper>
-      {from && <p style={{ marginBottom: 0 }}>From:</p>}
-      <UnorderedList listStyleType="none">
-        {from && from.map((child, i) => (
-          <Definition key={child.key || i}>{child}</Definition>
-          ))}
-      </UnorderedList>
+      {from &&
+        <div>
+          <p style={{ marginBottom: 0 }}>From:</p>
+          <UnorderedList listStyleType="none">
+            {from && from.map((child, i) => (
+              <Definition key={child.key || i}>{child}</Definition>
+              ))}
+          </UnorderedList>
+        </div>}
     </Wrapper>
   );
 
