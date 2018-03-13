@@ -1,4 +1,4 @@
-// TODO INSERT A COMMENT REFERENCE TO EXTERNAL URL IF POSSIBLE
+// https://govuk-static.herokuapp.com/component-guide/related_items
 
 import React from 'react';
 import PropTypes from 'prop-types';
