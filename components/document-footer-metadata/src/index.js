@@ -4,6 +4,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 import UnorderedList from '@govuk-react/unordered-list';
+import { NTA_LIGHT } from '@govuk-react/constants';
+
+const Wrapper = glamorous.div({
+  fontFamily: NTA_LIGHT,
+});
 
 const Definition = glamorous.li({
   fontSize: '24px',
@@ -16,18 +21,18 @@ const Definition = glamorous.li({
 
 const DocumentFooterMetadata = ({ from, partOf, other }) => {
   const fromData = (
-    <div>
+    <Wrapper>
       {from && <p style={{ marginBottom: 0 }}>From:</p>}
       <UnorderedList listStyleType="none">
         {from && from.map((child, i) => (
           <Definition key={child.key || i}>{child}</Definition>
           ))}
       </UnorderedList>
-    </div>
+    </Wrapper>
   );
 
   const partOfData = (
-    <div>
+    <Wrapper>
       {partOf &&
         <div>
           <p style={{ marginBottom: 0 }}>Part of:</p>
@@ -38,11 +43,11 @@ const DocumentFooterMetadata = ({ from, partOf, other }) => {
             }
           </UnorderedList>
         </div>}
-    </div>
+    </Wrapper>
   );
 
   const otherData = (
-    <div>
+    <Wrapper>
       {other && other.map(item =>
         (
           <div key={item.id}>
@@ -54,7 +59,7 @@ const DocumentFooterMetadata = ({ from, partOf, other }) => {
             </UnorderedList>
           </div>
           ))}
-    </div>
+    </Wrapper>
   );
 
   return (
