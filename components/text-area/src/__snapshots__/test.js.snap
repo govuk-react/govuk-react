@@ -106,7 +106,6 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
 
 <TextArea
   errorText="example"
-  hint={null}
   input={Object {}}
   meta={
     Object {
@@ -116,9 +115,19 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   }
 >
   <Label
+    css={
+      Array [
+        undefined,
+      ]
+    }
     error="example"
   >
     <glamorous(label)
+      css={
+        Array [
+          undefined,
+        ]
+      }
       error="example"
     >
       <label
@@ -262,8 +271,20 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   input={Object {}}
   meta={Object {}}
 >
-  <Label>
-    <glamorous(label)>
+  <Label
+    css={
+      Array [
+        undefined,
+      ]
+    }
+  >
+    <glamorous(label)
+      css={
+        Array [
+          undefined,
+        ]
+      }
+    >
       <label
         className="glamor-3"
       >
@@ -379,12 +400,23 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <TextArea
-  hint={null}
   input={Object {}}
   meta={Object {}}
 >
-  <Label>
-    <glamorous(label)>
+  <Label
+    css={
+      Array [
+        undefined,
+      ]
+    }
+  >
+    <glamorous(label)
+      css={
+        Array [
+          undefined,
+        ]
+      }
+    >
       <label
         className="glamor-2"
       >

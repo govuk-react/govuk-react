@@ -79,7 +79,13 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
 }
 
 <Breadcrumb>
-  <glamorous(div)>
+  <glamorous(div)
+    css={
+      Array [
+        undefined,
+      ]
+    }
+  >
     <div
       className="glamor-3"
     >

@@ -80,8 +80,13 @@ const Label = glamorous.span({
   },
 });
 
-const Checkbox = ({ children, inline, ...input }) => (
-  <CheckboxWrapper inline={inline}>
+const Checkbox = ({
+  children,
+  inline,
+  className,
+  ...input
+}) => (
+  <CheckboxWrapper css={[className]} inline={inline}>
     <Input type="checkbox" {...input} />
     <Label>{children}</Label>
   </CheckboxWrapper>
@@ -89,11 +94,13 @@ const Checkbox = ({ children, inline, ...input }) => (
 
 Checkbox.defaultProps = {
   inline: undefined,
+  className: undefined,
 };
 
 Checkbox.propTypes = {
   children: PropTypes.node.isRequired,
   inline: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 export default Checkbox;

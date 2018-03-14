@@ -28,7 +28,13 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <Button>
-  <glamorous(button)>
+  <glamorous(button)
+    css={
+      Array [
+        undefined,
+      ]
+    }
+  >
     <button
       className="glamor-0"
     >

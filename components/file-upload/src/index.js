@@ -30,9 +30,9 @@ const Input = glamorous.input({
 });
 
 const FileUpload = ({
-  meta, children, hint, acceptedFormats,
+  meta, children, hint, acceptedFormats, className,
 }) => (
-  <Label error={meta.error}>
+  <Label error={meta.error} css={[className]}>
     <LabelText error={meta.error}>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
@@ -41,9 +41,10 @@ const FileUpload = ({
 );
 
 FileUpload.defaultProps = {
-  hint: null,
+  hint: undefined,
   meta: {},
-  acceptedFormats: null,
+  acceptedFormats: undefined,
+  className: undefined,
 };
 
 FileUpload.propTypes = {
@@ -65,6 +66,7 @@ FileUpload.propTypes = {
   }),
   children: PropTypes.node.isRequired,
   acceptedFormats: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default FileUpload;

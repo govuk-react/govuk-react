@@ -17,10 +17,15 @@ const LayoutInner = glamorous.div({
   },
 });
 
-const Layout = ({ children }) => <LayoutInner>{children}</LayoutInner>;
+const Layout = ({ children, className }) => <LayoutInner css={[className]}>{children}</LayoutInner>;
+
+Layout.defaultProps = {
+  className: undefined,
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 };
 
 export default Layout;

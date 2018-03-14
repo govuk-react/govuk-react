@@ -57,7 +57,13 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
 <PhaseBanner
   level="beta"
 >
-  <glamorous(div)>
+  <glamorous(div)
+    css={
+      Array [
+        undefined,
+      ]
+    }
+  >
     <div
       className="glamor-1"
     >

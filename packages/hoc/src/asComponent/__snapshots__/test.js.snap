@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`asComponent matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  border: 2px dashed red;
+}
+
+<RecomposedComponent
+  className="glamor-0"
+>
+  Example
+</RecomposedComponent>
+`;

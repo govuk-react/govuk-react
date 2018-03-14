@@ -41,19 +41,21 @@ const PanelBody = glamorous.div({
   },
 });
 
-const Panel = ({ panelTitle, panelBody }) => (
-  <PanelInner>
+const Panel = ({ panelTitle, panelBody, className }) => (
+  <PanelInner css={[className]}>
     <PanelTitle>{panelTitle}</PanelTitle>
     <PanelBody>{panelBody}</PanelBody>
   </PanelInner>
 );
 Panel.defaultProps = {
-  panelBody: null,
+  panelBody: undefined,
+  className: undefined,
 };
 
 Panel.propTypes = {
   panelTitle: PropTypes.string.isRequired,
   panelBody: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default Panel;

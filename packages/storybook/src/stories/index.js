@@ -27,6 +27,8 @@ import '@govuk-react/ordered-list/lib/stories';
 import '@govuk-react/unordered-list/lib/stories';
 import '@govuk-react/list-item/lib/stories';
 import '@govuk-react/list-navigation/lib/stories';
+// import '@govuk-react/related-items/lib/stories';
 
 import '@govuk-react/hoc/lib/asAnchor/stories';
 import '@govuk-react/hoc/lib/asPaginationItem/stories';
+import '@govuk-react/hoc/lib/asComponent/stories';

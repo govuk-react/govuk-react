@@ -71,41 +71,45 @@ const ListParent = glamorous.div({
   },
 });
 
-const DateInput = ({ children, ...props }) => (
-  <LabelWrapper errorText={props.errorText}>
-    <LabelText errorText={props.errorText}>{children}</LabelText>
-    {props.hintText ? <HintText>{props.hintText}</HintText> : <span />}
-    {props.errorText ? (
-      <ErrorText errorText={props.errorText}>{props.errorText}</ErrorText>
+const DateInput = ({
+  children, errorText, hintText, className,
+}) => (
+  <LabelWrapper errorText={errorText} css={[className]}>
+    <LabelText errorText={errorText}>{children}</LabelText>
+    {hintText ? <HintText>{hintText}</HintText> : <span />}
+    {errorText ? (
+      <ErrorText errorText={errorText}>{errorText}</ErrorText>
     ) : (
       <span />
     )}
     <ListParent>
       <Label>
         <LabelText>Day</LabelText>
-        <Input errorText={props.errorText} type="text" />
+        <Input errorText={errorText} type="text" />
       </Label>
       <Label>
         <LabelText>Month</LabelText>
-        <Input errorText={props.errorText} type="text" />
+        <Input errorText={errorText} type="text" />
       </Label>
       <Label className="year">
         <LabelText>Year</LabelText>
-        <Input errorText={props.errorText} type="text" />
+        <Input errorText={errorText} type="text" />
       </Label>
     </ListParent>
   </LabelWrapper>
 );
 
 DateInput.defaultProps = {
-  hintText: null,
-  errorText: null,
+  hintText: undefined,
+  errorText: undefined,
+  className: undefined,
 };
 
 DateInput.propTypes = {
   children: PropTypes.node.isRequired,
   hintText: PropTypes.string,
   errorText: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default DateInput;

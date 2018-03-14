@@ -51,7 +51,13 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
   panelBody="body"
   panelTitle="Example"
 >
-  <glamorous(div)>
+  <glamorous(div)
+    css={
+      Array [
+        undefined,
+      ]
+    }
+  >
     <div
       className="glamor-2"
     >

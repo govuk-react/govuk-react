@@ -27,7 +27,13 @@ exports[`Layout matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <Layout>
-  <glamorous(div)>
+  <glamorous(div)
+    css={
+      Array [
+        undefined,
+      ]
+    }
+  >
     <div
       className="glamor-0"
     >

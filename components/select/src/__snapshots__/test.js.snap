@@ -142,9 +142,19 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   }
 >
   <Label
+    css={
+      Array [
+        undefined,
+      ]
+    }
     error="example"
   >
     <glamorous(label)
+      css={
+        Array [
+          undefined,
+        ]
+      }
       error="example"
     >
       <label
@@ -275,13 +285,24 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
 }
 
 <Select
-  errorText={null}
   input={Object {}}
   label="example"
   meta={Object {}}
 >
-  <Label>
-    <glamorous(label)>
+  <Label
+    css={
+      Array [
+        undefined,
+      ]
+    }
+  >
+    <glamorous(label)
+      css={
+        Array [
+          undefined,
+        ]
+      }
+    >
       <label
         className="glamor-2"
       >

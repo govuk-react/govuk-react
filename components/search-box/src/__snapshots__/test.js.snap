@@ -69,7 +69,13 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
 <SearchBox
   placeholder="example"
 >
-  <glamorous(div)>
+  <glamorous(div)
+    css={
+      Array [
+        undefined,
+      ]
+    }
+  >
     <div
       className="glamor-2"
     >
