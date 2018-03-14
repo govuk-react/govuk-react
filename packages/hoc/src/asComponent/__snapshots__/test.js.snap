@@ -8,7 +8,6 @@ exports[`asComponent matches wrapper snapshot: wrapper mount 1`] = `
 
 <RecomposedComponent
   className="glamor-0"
-  href="https://example.com"
 >
   Example
 </RecomposedComponent>

@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import asAnchor from './';
+import BackLink from '@govuk-react/back-link';
 
-const AnchorTag = asAnchor('a');
+import asComponent from './';
 
-const wrapper = <AnchorTag href="https://example.com">Example</AnchorTag>;
+const RCBackLink = asComponent(BackLink);
 
-describe(asAnchor, () => {
+const wrapper = <RCBackLink>Example</RCBackLink>;
+
+describe(asComponent, () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(wrapper, div);
