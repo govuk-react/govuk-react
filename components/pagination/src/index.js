@@ -30,12 +30,17 @@ const PaginationWrapper = glamorous.ul({
   },
 });
 
-const Pagination = ({ children }) => (
-  <PaginationWrapper>{children}</PaginationWrapper>
+const Pagination = ({ children, className }) => (
+  <PaginationWrapper css={[className]}>{children}</PaginationWrapper>
 );
+
+Pagination.defaultProps = {
+  className: undefined,
+};
 
 Pagination.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 };
 
 export default Pagination;

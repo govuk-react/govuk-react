@@ -49,6 +49,11 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
   goBack={[Function]}
 >
   <glamorous(button)
+    css={
+      Array [
+        undefined,
+      ]
+    }
     onClick={[Function]}
   >
     <button

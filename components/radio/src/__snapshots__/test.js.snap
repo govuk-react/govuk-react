@@ -85,6 +85,11 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   name="example"
 >
   <glamorous(label)
+    css={
+      Array [
+        undefined,
+      ]
+    }
     inline={true}
   >
     <label
@@ -195,7 +200,13 @@ exports[`Radio matches snapshot: standard mount 1`] = `
 <Radio
   name="example"
 >
-  <glamorous(label)>
+  <glamorous(label)
+    css={
+      Array [
+        undefined,
+      ]
+    }
+  >
     <label
       className="glamor-2"
     >

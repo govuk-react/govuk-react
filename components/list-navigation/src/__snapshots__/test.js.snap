@@ -49,13 +49,24 @@ exports[`ListNavigation matches wrapper snapshot: wrapper mount 1`] = `
     listStyleType="square"
   >
     <glamorous(ul)
+      css={
+        Array [
+          undefined,
+        ]
+      }
       listStyleType="square"
     >
       <ul
         className="glamor-1"
       >
         <ListItem>
-          <glamorous(li)>
+          <glamorous(li)
+            css={
+              Array [
+                undefined,
+              ]
+            }
+          >
             <li
               className="glamor-0"
             >

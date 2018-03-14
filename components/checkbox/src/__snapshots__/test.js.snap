@@ -80,7 +80,13 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <Checkbox>
-  <glamorous(label)>
+  <glamorous(label)
+    css={
+      Array [
+        undefined,
+      ]
+    }
+  >
     <label
       className="glamor-2"
     >

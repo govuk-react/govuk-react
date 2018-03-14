@@ -51,7 +51,13 @@ exports[`MultiChoice matches withError snapshot: with error mount 1`] = `
   label="example"
   meta={Object {}}
 >
-  <glamorous(div)>
+  <glamorous(div)
+    css={
+      Array [
+        undefined,
+      ]
+    }
+  >
     <div
       className="glamor-1"
     >
@@ -174,6 +180,11 @@ exports[`MultiChoice matches wrapper snapshot: wrapper mount 1`] = `
   }
 >
   <glamorous(div)
+    css={
+      Array [
+        undefined,
+      ]
+    }
     error="example"
   >
     <div

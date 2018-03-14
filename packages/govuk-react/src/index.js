@@ -27,12 +27,15 @@ export { default as SearchBox } from '@govuk-react/search-box';
 export { default as Select } from '@govuk-react/select';
 export { default as TextArea } from '@govuk-react/text-area';
 export { default as UnorderedList } from '@govuk-react/unordered-list';
+// export { default as RelatedItems } from '@govuk-react/related-items';
 
 export { H1, H2, H3, H4, H5, H6 } from '@govuk-react/header';
 
 // Higher Order Components
-export { asAnchor } from '@govuk-react/hoc';
-export { asPaginationItem } from '@govuk-react/hoc';
+export {
+  asAnchor,
+  asPaginationItem,
+} from '@govuk-react/hoc';
 
 // Icons
 export { Search as SearchIcon } from '@govuk-react/icons';

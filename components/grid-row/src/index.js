@@ -17,10 +17,17 @@ const GridRowInner = glamorous.div({
   },
 });
 
-const GridRow = ({ children }) => <GridRowInner>{children}</GridRowInner>;
+const GridRow = ({ children, className }) => (
+  <GridRowInner css={[className]}>{children}</GridRowInner>
+);
+
+GridRow.defaultProps = {
+  className: undefined,
+};
 
 GridRow.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 };
 
 export default GridRow;

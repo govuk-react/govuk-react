@@ -66,8 +66,8 @@ const BreadcrumbListItem = glamorous.li({
 });
 
 // TODO use Context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
-const Breadcrumb = ({ children }) => (
-  <BreadcrumbContainer>
+const Breadcrumb = ({ children, className }) => (
+  <BreadcrumbContainer css={[className]}>
     <BreadcrumbList>
       {children.length && children.map ? (
         children.map((child, i) => (
@@ -87,6 +87,11 @@ Breadcrumb.propTypes = {
    * Generally a series of anchors or Link components
    */
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+};
+
+Breadcrumb.defaultProps = {
+  className: undefined,
 };
 
 export default Breadcrumb;

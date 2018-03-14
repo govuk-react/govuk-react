@@ -11,9 +11,9 @@ import HintText from '@govuk-react/hint-text';
 import Input from '@govuk-react/input';
 
 const InputField = ({
-  meta, children, hint, input,
+  meta, children, hint, input, className,
 }) => (
-  <Label error={meta.touched && meta.error}>
+  <Label error={meta.touched && meta.error} css={[className]}>
     <LabelText>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
@@ -22,13 +22,15 @@ const InputField = ({
 );
 
 InputField.defaultProps = {
-  hint: null,
+  hint: undefined,
+  className: undefined,
   input: {},
   meta: {},
 };
 
 InputField.propTypes = {
   hint: PropTypes.string,
+  className: PropTypes.string,
   input: PropTypes.shape({
     name: PropTypes.string,
     onBlur: PropTypes.func,

@@ -63,12 +63,24 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <UnorderedList>
-  <glamorous(ul)>
+  <glamorous(ul)
+    css={
+      Array [
+        undefined,
+      ]
+    }
+  >
     <ul
       className="glamor-9"
     >
       <ListItem>
-        <glamorous(li)>
+        <glamorous(li)
+          css={
+            Array [
+              undefined,
+            ]
+          }
+        >
           <li
             className="glamor-2"
           >
@@ -91,7 +103,13 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
         </glamorous(li)>
       </ListItem>
       <ListItem>
-        <glamorous(li)>
+        <glamorous(li)
+          css={
+            Array [
+              undefined,
+            ]
+          }
+        >
           <li
             className="glamor-2"
           >
@@ -114,7 +132,13 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
         </glamorous(li)>
       </ListItem>
       <ListItem>
-        <glamorous(li)>
+        <glamorous(li)
+          css={
+            Array [
+              undefined,
+            ]
+          }
+        >
           <li
             className="glamor-2"
           >
