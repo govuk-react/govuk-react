@@ -30,5 +30,8 @@
   "license": "MIT",
   "homepage": "https://github.com/penx/govuk-react#readme",
   "description": "govuk-react: A port of the govuk-frontend components for React using Glamorous.",
-  "private": false
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
 }
