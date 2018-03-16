@@ -1,13 +1,13 @@
 {
   "name": "@govuk-react/api-docs",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "dependencies": {
     "@babel/node": "^7.0.0-beta.40",
     "chalk": "^2.3.1",
     "commander": "^2.15.0",
     "glob": "^7.1.2",
     "glob-promise": "^3.3.0",
-    "govuk-react": "0.1.18",
+    "govuk-react": "^0.1.19",
     "lodash": "^4.17.5",
     "react-docgen": "^3.0.0-beta11"
   },

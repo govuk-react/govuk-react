@@ -1,9 +1,9 @@
 {
   "name": "@govuk-react/phase-banner",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "dependencies": {
-    "@govuk-react/constants": "0.1.18",
-    "@govuk-react/phase-badge": "0.1.18",
+    "@govuk-react/constants": "^0.1.19",
+    "@govuk-react/phase-badge": "^0.1.19",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {

@@ -1,8 +1,8 @@
 {
   "name": "@govuk-react/layout",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "dependencies": {
-    "@govuk-react/constants": "0.1.18",
+    "@govuk-react/constants": "^0.1.19",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
@@ -12,8 +12,8 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
-    "@govuk-react/grid-col": "0.1.18",
-    "@govuk-react/grid-row": "0.1.18",
+    "@govuk-react/grid-col": "^0.1.19",
+    "@govuk-react/grid-row": "^0.1.19",
     "@storybook/addon-actions": "^3.3.14",
     "@storybook/react": "^3.3.14",
     "enzyme": "^3.3.0",
