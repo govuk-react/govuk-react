@@ -1,9 +1,9 @@
 ---
-cache:
-  mount:
-    - node_modules
-    - .git
 pipeline:
+  cache:
+    mount:
+      - node_modules
+      - .git
   build:
     commands:
       - yarn
