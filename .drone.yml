@@ -6,3 +6,7 @@ pipeline:
       - yarn bootstrap
       - yarn build
       - yarn test
+cache:
+  mount:
+    - node_modules
+    - .git
