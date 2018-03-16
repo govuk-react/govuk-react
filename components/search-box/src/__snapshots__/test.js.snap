@@ -92,14 +92,17 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
         >
           <Search
             colour="#fff"
+            fill="currentColor"
             title="Search"
           >
             <SVG
               colour="#fff"
+              fill="currentColor"
               title="Search"
             >
               <svg
-                fill="#fff"
+                colour="#fff"
+                fill="currentColor"
                 height="100%"
                 style={
                   Object {

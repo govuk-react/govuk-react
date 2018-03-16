@@ -2,11 +2,11 @@
 
 exports[`ArrowLeft matches wrapper snapshot: wrapper mount 1`] = `
 <ArrowLeft
-  colour="currentColor"
+  fill="currentColor"
   title="arrow left"
 >
   <SVG
-    colour="currentColor"
+    fill="currentColor"
     title="arrow left"
   >
     <svg

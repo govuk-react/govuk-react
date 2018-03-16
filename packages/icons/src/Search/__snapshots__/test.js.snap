@@ -2,11 +2,11 @@
 
 exports[`Search matches wrapper snapshot: wrapper mount 1`] = `
 <Search
-  colour="currentColor"
+  fill="currentColor"
   title="Search"
 >
   <SVG
-    colour="currentColor"
+    fill="currentColor"
     title="Search"
   >
     <svg

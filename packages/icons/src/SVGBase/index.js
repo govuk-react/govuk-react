@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const SVG = ({
-  children, colour, title, ...rest
+  children, fill, title, ...rest
 }) => (
   <svg
     version="1.1"
@@ -12,7 +12,7 @@ const SVG = ({
     width="100%"
     height="100%"
     style={{ display: 'block' }}
-    fill={colour}
+    fill={fill}
     viewBox="-0.2 0 17 14"
     {...rest}
   >
@@ -24,12 +24,12 @@ const SVG = ({
 SVG.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string,
-  colour: PropTypes.string,
+  fill: PropTypes.string,
 };
 
 SVG.defaultProps = {
   title: undefined,
-  colour: 'inherit',
+  fill: 'currentColor',
 };
 
 export default SVG;
