@@ -1,5 +1,5 @@
 {
-  "name": "@govuk-react/govuk-react",
+  "name": "govuk-react",
   "version": "0.1.18",
   "dependencies": {
     "@govuk-react/constants": "0.1.18",
