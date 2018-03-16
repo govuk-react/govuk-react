@@ -1,13 +1,13 @@
+---
 cache:
   mount:
     - node_modules
     - .git
-
 pipeline:
   build:
-    image: node:8
     commands:
       - yarn
-      - yarn bootstrap
-      - yarn build
-      - yarn test
+      - "yarn bootstrap"
+      - "yarn build"
+      - "yarn test"
+    image: "node:8"
