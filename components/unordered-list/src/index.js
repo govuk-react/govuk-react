@@ -37,19 +37,17 @@ const GUnorderedList = glamorous.ul(
 
 // listStyleType: normal HTML property values are used here
 // e.g., listStyleType="circle", listStyleType="upper-alpha", listStyleType="none"
-const UnorderedList = ({ children, listStyleType, className }) => (
-  <GUnorderedList listStyleType={listStyleType} css={[className]}>{children}</GUnorderedList>
+const UnorderedList = ({ children, listStyleType }) => (
+  <GUnorderedList listStyleType={listStyleType}>{children}</GUnorderedList>
 );
 
 UnorderedList.defaultProps = {
   listStyleType: undefined,
-  className: undefined,
 };
 
 UnorderedList.propTypes = {
   children: PropTypes.node.isRequired,
   listStyleType: PropTypes.string,
-  className: PropTypes.string,
 };
 
 export default UnorderedList;

@@ -147,11 +147,6 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
         listStyleType="none"
       >
         <glamorous(ul)
-          css={
-            Array [
-              undefined,
-            ]
-          }
           listStyleType="none"
         >
           <ul

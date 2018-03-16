@@ -63,13 +63,7 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <UnorderedList>
-  <glamorous(ul)
-    css={
-      Array [
-        undefined,
-      ]
-    }
-  >
+  <glamorous(ul)>
     <ul
       className="glamor-9"
     >

@@ -49,11 +49,6 @@ exports[`ListNavigation matches wrapper snapshot: wrapper mount 1`] = `
     listStyleType="square"
   >
     <glamorous(ul)
-      css={
-        Array [
-          undefined,
-        ]
-      }
       listStyleType="square"
     >
       <ul
