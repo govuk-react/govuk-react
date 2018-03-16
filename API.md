@@ -119,19 +119,6 @@ HintText
 
 
 
-Input
-=====
-
-![Component Image](./docs/Input.png)
-
-
-Prop | Required | Default | Type | Description 
-:--- | :------- | :------ | :--- | :---------- 
- `onChange` |  | undefined | func | 
- `type` |  | 'text' | string | 
- `value` |  | undefined | string | 
-
-
 InputField
 ==========
 
@@ -146,17 +133,30 @@ Prop | Required | Default | Type | Description
  `meta` |  | {} | shape[object Object] | 
 
 
-Label
+Input
 =====
 
-![Component Image](./docs/Label.png)
+![Component Image](./docs/Input.png)
 
+
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `onChange` |  | undefined | func | 
+ `type` |  | 'text' | string | 
+ `value` |  | undefined | string | 
 
 
 LabelText
 =========
 
 ![Component Image](./docs/LabelText.png)
+
+
+
+Label
+=====
+
+![Component Image](./docs/Label.png)
 
 
 
@@ -208,6 +208,29 @@ Prop | Required | Default | Type | Description
  `meta` |  | {} | shape[object Object] | 
 
 
+Pagination
+==========
+
+![Component Image](./docs/Pagination.png)
+
+
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `children` | true |  | node | 
+
+
+Panel
+=====
+
+![Component Image](./docs/Panel.png)
+
+
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `panelBody` |  | null | string | 
+ `panelTitle` | true |  | string | 
+
+
 PhaseBadge
 ==========
 
@@ -237,6 +260,17 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :---------- 
  `children` | true |  | node | 
  `inline` |  | undefined | bool | 
+
+
+SearchBox
+=========
+
+![Component Image](./docs/SearchBox.png)
+
+
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `placeholder` |  | undefined | string | 
 
 
 Select
