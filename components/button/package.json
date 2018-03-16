@@ -15,7 +15,7 @@
     "@govuk-react/images": "0.1.18",
     "@storybook/addons": "^3.3.14",
     "@storybook/addon-actions": "^3.3.14",
-    "@storybook/addon-knobs":"^3.3.14",
+    "@storybook/addon-knobs": "^3.3.14",
     "@storybook/react": "^3.3.14",
     "enzyme": "^3.3.0",
     "react-dom": "^16.2.0",
@@ -27,5 +27,10 @@
     "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps"
   },
   "main": "lib/index.js",
-  "module": "es/index.js"
+  "module": "es/index.js",
+  "author": "Alasdair McLeay",
+  "license": "MIT",
+  "homepage": "https://github.com/penx/govuk-react#readme",
+  "description": "govuk-react: A port of the govuk-frontend components for React using Glamorous.",
+  "private": false
 }
