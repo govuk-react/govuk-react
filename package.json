@@ -1,6 +1,6 @@
 {
   "name": "govuk-react",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "scripts": {
     "start": "cd packages/storybook && npm start",
     "build-storybook": "npm run bootstrap && npm run build && cd packages/storybook && npm run build-storybook && cp -r storybook-static ../..",
