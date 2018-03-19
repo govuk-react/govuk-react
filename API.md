@@ -29,7 +29,7 @@ Button
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | 'Button' |  |
+ `children` |  | 'Button' |  | 
 
 
 Checkbox
@@ -40,8 +40,8 @@ Checkbox
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node |
- `inline` |  | undefined | bool |
+ `children` | true |  | node | 
+ `inline` |  | undefined | bool | 
 
 
 DateInput
@@ -52,9 +52,9 @@ DateInput
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node |
- `errorText` |  | null | string |
- `hintText` |  | null | string |
+ `children` | true |  | node | 
+ `errorText` |  | null | string | 
+ `hintText` |  | null | string | 
 
 
 DocumentFooterMetadata
@@ -65,9 +65,9 @@ DocumentFooterMetadata
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `from` |  | undefined | array |
- `other` |  | undefined | array |
- `partOf` |  | undefined | array |
+ `from` |  | undefined | array | 
+ `other` |  | undefined | array | 
+ `partOf` |  | undefined | array | 
 
 
 ErrorText
@@ -85,26 +85,32 @@ FileUpload
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `acceptedFormats` |  | null | string |
- `children` | true |  | node |
- `hint` |  | null | string |
- `meta` |  | {} | shape[object Object] |
+ `acceptedFormats` |  | null | string | 
+ `children` | true |  | node | 
+ `hint` |  | null | string | 
+ `meta` |  | {} | shape[object Object] | 
 
 
 GridCol
 =======
 
+![Component Image](./docs/GridCol.png)
+
+
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | undefined | node |
+ `children` |  | undefined | node | 
 
 
 GridRow
 =======
 
+![Component Image](./docs/GridRow.png)
+
+
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node |
+ `children` | true |  | node | 
 
 
 Header
@@ -115,8 +121,8 @@ Header
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `level` |  | 1 | number |
- `size` |  | undefined | enumObject.keys(FONT_SIZES) |
+ `level` |  | 1 | number | 
+ `size` |  | undefined | enumObject.keys(FONT_SIZES) | 
 
 
 HintText
@@ -134,10 +140,10 @@ InputField
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node |
- `hint` |  | null | string |
- `input` |  | {} | shape[object Object] |
- `meta` |  | {} | shape[object Object] |
+ `children` | true |  | node | 
+ `hint` |  | null | string | 
+ `input` |  | {} | shape[object Object] | 
+ `meta` |  | {} | shape[object Object] | 
 
 
 Input
@@ -148,9 +154,9 @@ Input
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `onChange` |  | undefined | func |
- `type` |  | 'text' | string |
- `value` |  | undefined | string |
+ `onChange` |  | undefined | func | 
+ `type` |  | 'text' | string | 
+ `value` |  | undefined | string | 
 
 
 LabelText
@@ -170,9 +176,12 @@ Label
 Layout
 ======
 
-Prop | Required | Default | Type | Description 
+![Component Image](./docs/Layout.png)
+
+
+Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node |
+ `children` | true |  | node | 
 
 
 ListItem
@@ -183,7 +192,7 @@ ListItem
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node |
+ `children` | true |  | node | 
 
 
 ListNavigation
@@ -194,8 +203,8 @@ ListNavigation
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node |
- `listStyleType` |  | undefined | string |
+ `children` | true |  | node | 
+ `listStyleType` |  | undefined | string | 
 
 
 MultiChoice
@@ -206,10 +215,10 @@ MultiChoice
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node |
- `hint` |  | undefined | string |
- `label` | true |  | node |
- `meta` |  | {} | shape[object Object] |
+ `children` | true |  | node | 
+ `hint` |  | undefined | string | 
+ `label` | true |  | node | 
+ `meta` |  | {} | shape[object Object] | 
 
 
 OrderedList
@@ -220,8 +229,8 @@ OrderedList
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node |
- `listStyleType` |  | undefined | string |
+ `children` | true |  | node | 
+ `listStyleType` |  | undefined | string | 
 
 
 Pagination
@@ -232,7 +241,7 @@ Pagination
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node |
+ `children` | true |  | node | 
 
 
 Panel
@@ -243,8 +252,8 @@ Panel
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `panelBody` |  | null | string |
- `panelTitle` | true |  | string |
+ `panelBody` |  | null | string | 
+ `panelTitle` | true |  | string | 
 
 
 PhaseBadge
@@ -262,8 +271,8 @@ PhaseBanner
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node |
- `level` | true |  | string |
+ `children` | true |  | node | 
+ `level` | true |  | string | 
 
 
 Radio
@@ -274,8 +283,8 @@ Radio
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node |
- `inline` |  | undefined | bool |
+ `children` | true |  | node | 
+ `inline` |  | undefined | bool | 
 
 
 RelatedItems
@@ -286,7 +295,7 @@ RelatedItems
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node |
+ `children` | true |  | node | 
 
 
 SearchBox
@@ -297,7 +306,7 @@ SearchBox
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `placeholder` |  | undefined | string |
+ `placeholder` |  | undefined | string | 
 
 
 Select
@@ -308,12 +317,12 @@ Select
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node |
- `errorText` |  | null | string |
- `hint` |  | undefined | string |
- `input` |  | {} | shape[object Object] |
- `label` | true |  | string |
- `meta` |  | {} | shape[object Object] |
+ `children` | true |  | node | 
+ `errorText` |  | null | string | 
+ `hint` |  | undefined | string | 
+ `input` |  | {} | shape[object Object] | 
+ `label` | true |  | string | 
+ `meta` |  | {} | shape[object Object] | 
 
 
 TextArea
@@ -324,10 +333,10 @@ TextArea
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node |
- `hint` |  | null | string |
- `input` |  | {} | shape[object Object] |
- `meta` |  | {} | shape[object Object] |
+ `children` | true |  | node | 
+ `hint` |  | null | string | 
+ `input` |  | {} | shape[object Object] | 
+ `meta` |  | {} | shape[object Object] | 
 
 
 UnorderedList
@@ -338,5 +347,7 @@ UnorderedList
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node |
- `listStyleType` |  | undefined | string |
+ `children` | true |  | node | 
+ `listStyleType` |  | undefined | string | 
+
+
