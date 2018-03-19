@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-12,
+[data-glamor-12] {
+  border-top: 10px solid #005ea5;
+  padding-top: 5px;
+  width: 100%;
+}
+
+.glamor-12> h3,
+[data-glamor-12]> h3 {
+  margin-bottom: 10px;
+}
+
+.glamor-12> ul,
+[data-glamor-12]> ul {
+  margin-bottom: 20px;
+}
+
+.glamor-12> ul> li,
+[data-glamor-12]> ul> li {
+  margin-bottom: calc(10px + 2px);
+}
+
+.glamor-0,
+[data-glamor-0] {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.glamor-11,
+[data-glamor-11] {
+  margin: 0;
+  padding: 0;
+  padding-left: 0;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  width: 100%;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.glamor-4,
+[data-glamor-4] {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  width: 100%;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  color: #005ea5;
+  padding: 3px;
+  margin: -3px;
+  outline-color: transparent;
+  display: inline-block;
+  text-decoration: underline;
+}
+
+.glamor-2:focus,
+[data-glamor-2]:focus {
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
+}
+
+.glamor-2:visited,
+[data-glamor-2]:visited {
+  color: #2e358b;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-12,
+  [data-glamor-12] {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 24px;
+    line-height: 1.25;
+    margin-bottom: 20px;
+  }
+}
+
+@media print {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-11,
+  [data-glamor-11] {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-4,
+  [data-glamor-4] {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 5px;
+  }
+}
+
+<RelatedItems>
+  <glamorous(div)>
+    <div
+      className="glamor-12"
+    >
+      <Header
+        level={3}
+      >
+        <glamorous(unknown)
+          level={3}
+        >
+          <Component
+            className="glamor-0"
+            level={3}
+          >
+            <h3
+              className="glamor-0"
+            >
+              Travel abroad
+            </h3>
+          </Component>
+        </glamorous(unknown)>
+      </Header>
+      <UnorderedList
+        listStyleType="none"
+      >
+        <glamorous(ul)
+          listStyleType="none"
+        >
+          <ul
+            className="glamor-11"
+          >
+            <ListItem>
+              <glamorous(li)>
+                <li
+                  className="glamor-4"
+                >
+                  <glamorous(Anchor)
+                    href="https://example.com"
+                  >
+                    <Anchor
+                      className="glamor-2"
+                      href="https://example.com"
+                    >
+                      <a
+                        className="glamor-2"
+                        href="https://example.com"
+                      >
+                        Link A
+                      </a>
+                    </Anchor>
+                  </glamorous(Anchor)>
+                </li>
+              </glamorous(li)>
+            </ListItem>
+            <ListItem>
+              <glamorous(li)>
+                <li
+                  className="glamor-4"
+                >
+                  <glamorous(Anchor)
+                    href="https://example.com"
+                  >
+                    <Anchor
+                      className="glamor-2"
+                      href="https://example.com"
+                    >
+                      <a
+                        className="glamor-2"
+                        href="https://example.com"
+                      >
+                        Link B
+                      </a>
+                    </Anchor>
+                  </glamorous(Anchor)>
+                </li>
+              </glamorous(li)>
+            </ListItem>
+            <ListItem>
+              <glamorous(li)>
+                <li
+                  className="glamor-4"
+                >
+                  <glamorous(Anchor)
+                    href="https://example.com"
+                  >
+                    <Anchor
+                      className="glamor-2"
+                      href="https://example.com"
+                    >
+                      <a
+                        className="glamor-2"
+                        href="https://example.com"
+                      >
+                        <strong>
+                          more
+                        </strong>
+                      </a>
+                    </Anchor>
+                  </glamorous(Anchor)>
+                </li>
+              </glamorous(li)>
+            </ListItem>
+          </ul>
+        </glamorous(ul)>
+      </UnorderedList>
+    </div>
+  </glamorous(div)>
+</RelatedItems>
+`;
