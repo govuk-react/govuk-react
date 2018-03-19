@@ -16,6 +16,7 @@ script:
   - npm run bundlesize
 before_deploy:
   - npm run build-storybook
+  - npm run pack
   - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
 deploy:
   - provider: pages # https://docs.travis-ci.com/user/deployment/pages/
@@ -28,5 +29,12 @@ deploy:
   - provider: script
     skip_cleanup: true
     script: lerna exec --no-private --bail=false can-npm-publish && npm publish
+    on:
+      tags: true
+  - provider: releases
+    api_key: $GITHUB_TOKEN
+    file_glob: true
+    file: "{components,packages}/*/govuk-react-*.tgz"
+    skip_cleanup: true
     on:
       tags: true
