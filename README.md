@@ -62,7 +62,7 @@ See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-
 
 We have opted for Glamorous over styled-components or Emotion as we like the JS syntax and would rather not burden either the front end or the transpiler with a CSS parser.
 
-We will see how take up of Glamorous evolves in comparison to other projects. We are also paying attention to the [Interoperable Style Transfer Format (ISTF)](https://github.com/cssinjs/istf-spec), which would allow us to distribute CSS in JS stylesheets without a runtime.
+We will see how take-up of Glamorous evolves in comparison to other projects. We are also paying attention to the [Interoperable Style Transfer Format (ISTF)](https://github.com/cssinjs/istf-spec), which would allow us to distribute CSS in JS stylesheets without a runtime.
 
 ## Why not use GDS styles/classes directly
 
@@ -85,3 +85,9 @@ We will see how take up of Glamorous evolves in comparison to other projects. We
 - [Shopify Polaris](https://github.com/Shopify/polaris)
 - [Atlassian Atlaskit](https://bitbucket.org/atlassian/atlaskit-mk-2)
 - [Carbon Design System](https://github.com/carbon-design-system/carbon-components-react)
+
+## Contributors
+
+- [Alasdair McLeay](https://github.com/penx)
+- [Mark Chambers](https://github.com/marksy)
+- [Steve Sims](https://github.com/stevesims)
