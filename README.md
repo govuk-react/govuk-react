@@ -27,7 +27,7 @@ See the [Storybook](https://penx.github.io/govuk-react) for examples of all avai
 
 Also see the [example project](https://github.com/penx/govuk-react-example) for basic usage.
 
-## Using Anchors/React Router Link
+## Using anchors/React Router Link
 
 We are using a Higher Order Component (HOC), which takes a component and returns a new component with the original props.
 
@@ -58,14 +58,20 @@ Use of these components assumes the following from the peer project:
 
 ## Why Glamorous/CSS-in-JS?
 
-See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660)
+See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
+
+We have opted for Glamorous over styled-components or Emotion as we like the JS syntax and would rather not burden either the front end or the transpiler with a CSS parser.
+
+We will see how take up of Glamorous evolves in comparison to other projects. We are also paying attention to the [Interoperable Style Transfer Format (ISTF)](https://github.com/cssinjs/istf-spec), which would allow us to distribute CSS in JS stylesheets without a runtime.
 
 ## Why not use GDS styles/classes directly
 
 1. We want to be free to write different DOM structure and/or CSS that is more in keeping with a React and bem-ish architecture. (e.g. in React you often don't need to specify IDs for field inputs, and can wrap inputs with labels so that they are automatically associated. We want to leave the decision of whether to use input IDs to the parent project. GDS styles don't wrap inputs with labels and require IDs and for attributes).
 2. We want a parent project to not have to worry about a specific build system (e.g. for handling `import styles.css`, particularly if you want universal support) or including certain CSS files. We want a simple `npm install govuk-react` to be enough to get govuk styled components on to your page, irrespective of your build system.
 
-## Related sites and projects:
+## Related sites and projects
+
+### GOV.UK
 
  - [govuk-elements](https://govuk-elements.herokuapp.com/) ([source](https://github.com/alphagov/govuk_elements/))
  - [govuk_frontend_toolkit](https://github.com/alphagov/govuk_frontend_toolkit/)
@@ -73,43 +79,9 @@ See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-
  - [govuk_template](http://alphagov.github.io/govuk_template/) ([source](https://github.com/alphagov/govuk_template))
  - [GOV.UK Design Patterns](https://www.gov.uk/service-manual/design#find-patterns)
 
-## Contributing
+### Other React component libraries
 
-## Running the project locally
-
-[govuk-react](https://github.com/penx/govuk-react) is a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md) using [yarn workspaces](https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/) and [lerna](https://github.com/lerna/lerna).
-
-This is so that components can be published independently and applications can require different versions of a component if a breaking change is introduced in a version of a specific component. We are loosely following the [structure that Jest uses](https://github.com/facebook/jest).
-
-As such, the build process for development is slightly more involved than an `npm install`:
-
-1. Install yarn
-
-2. Install dependencies, link packages, compile and start storybook:
-
-```sh
-yarn
-yarn bootstrap
-yarn build
-yarn start
-```
-
-### Creating a new component
-To create a new component:
-- `npm run create-component -- MyNewComponent` where _MyNewComponent_ is the name of your new component.
-
-This creates a folder named _MyNewComponent_ in `src/components` with the component file (index.js), a basic render test (test.js), and a default story (stories.js). You will need to add this to `src/stories/index.js` to view it in storybook.
-
-
-### Unit testing
-Unit testing follows similar patterns as [Glamorous with Jest](https://github.com/paypal/glamorous/tree/master/examples/with-jest), utilising [Jest _snapshots_](https://facebook.github.io/jest/docs/en/snapshot-testing.html), and [Enzyme](https://github.com/airbnb/enzyme).
-
-To run unit & eslint tests:
-```sh
-npm run test
-```
-
-To run & watch unit tests:
-```sh
-npm run test:unit
-```
+- [Auth0 Cosmos](https://github.com/auth0/cosmos)
+- [Shopify Polaris](https://github.com/Shopify/polaris)
+- [Atlassian Atlaskit](https://bitbucket.org/atlassian/atlaskit-mk-2)
+- [Carbon Design System](https://github.com/carbon-design-system/carbon-components-react)
