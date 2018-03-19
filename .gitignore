@@ -27,10 +27,13 @@ govuk-react-*.tgz
 /components/*/lib
 
 /packages/*/es
-
 /packages/*/lib
 
 /packages/*/node_modules
 /components/*/node_modules
 /lerna-debug.log
 /packages/storybook/storybook-static
+
+/docs/GridCol.png
+/docs/GridRow.png
+/docs/Layout.png
