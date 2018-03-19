@@ -34,7 +34,6 @@ const packageJson = () => {
   "name": "@govuk-react/${componentFolderName}",
   "version": "${version}",
   "dependencies": {
-    "@govuk-react/constants": "${version}",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
