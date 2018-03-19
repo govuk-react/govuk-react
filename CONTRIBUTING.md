@@ -38,3 +38,26 @@ To run & watch unit tests:
 ```sh
 npm run test:unit
 ```
+
+## Releasing
+
+In order to prepare a release, developers should run the following against master:
+
+`lerna publish --skip-npm`
+
+This will:
+- ask the developer to choose the semver change
+- update all package.json files
+- commit to git and make a tag
+
+...but it will not push these changes to origin. After checking the command was successful, this should be followed up by:
+
+```
+git push
+git push --tags
+```
+
+The CI server will then automatically release tags to npm using lerna exec, see:
+
+- https://github.com/lerna/lerna/issues/1056#issuecomment-374192818
+- https://github.com/lerna/lerna/issues/961
