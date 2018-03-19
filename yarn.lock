@@ -2700,7 +2700,7 @@ camelcase@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
-can-npm-publish@^1.0.2:
+can-npm-publish@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/can-npm-publish/-/can-npm-publish-1.0.2.tgz#c7211bbc32d04597a37f6c57ac9d93ff29d3013f"
   dependencies:
