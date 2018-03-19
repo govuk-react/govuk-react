@@ -221,18 +221,6 @@ Prop | Required | Default | Type | Description
  `meta` |  | {} | shape[object Object] | 
 
 
-OrderedList
-===========
-
-![Component Image](./docs/OrderedList.png)
-
-
-Prop | Required | Default | Type | Description 
-:--- | :------- | :------ | :--- | :---------- 
- `children` | true |  | node | 
- `listStyleType` |  | undefined | string | 
-
-
 Pagination
 ==========
 
@@ -285,17 +273,6 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :---------- 
  `children` | true |  | node | 
  `inline` |  | undefined | bool | 
-
-
-RelatedItems
-============
-
-![Component Image](./docs/RelatedItems.png)
-
-
-Prop | Required | Default | Type | Description 
-:--- | :------- | :------ | :--- | :---------- 
- `children` | true |  | node | 
 
 
 SearchBox
