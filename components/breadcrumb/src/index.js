@@ -65,12 +65,15 @@ const BreadcrumbListItem = glamorous.li({
   },
 });
 
+// TODO use Context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
 const Breadcrumb = ({ children }) => (
   <BreadcrumbContainer>
     <BreadcrumbList>
       {children.length && children.map ? (
         children.map((child, i) => (
-          <BreadcrumbListItem key={child.key || i}>{child}</BreadcrumbListItem>
+          child.length || child.props
+            ? <BreadcrumbListItem key={child.key || i}>{child}</BreadcrumbListItem>
+            : null
         ))
       ) : (
         <BreadcrumbListItem>{children}</BreadcrumbListItem>

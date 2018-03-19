@@ -33,6 +33,7 @@ const GOrderedListInner = glamorous.ol(
   }),
 );
 
+// TODO use Context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
 const OrderedList = ({ children, listStyleType }) => (
   <GOrderedListInner listStyleType={listStyleType}>{children}</GOrderedListInner>
 );
