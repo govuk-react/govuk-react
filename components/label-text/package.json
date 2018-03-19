@@ -1,8 +1,8 @@
 {
   "name": "@govuk-react/label-text",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "dependencies": {
-    "@govuk-react/constants": "0.1.18",
+    "@govuk-react/constants": "^0.1.19",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
@@ -24,5 +24,13 @@
     "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps"
   },
   "main": "lib/index.js",
-  "module": "es/index.js"
+  "module": "es/index.js",
+  "author": "Alasdair McLeay",
+  "license": "MIT",
+  "homepage": "https://github.com/penx/govuk-react#readme",
+  "description": "govuk-react: A port of the govuk-frontend components for React using Glamorous.",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
 }
