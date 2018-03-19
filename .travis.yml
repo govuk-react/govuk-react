@@ -29,4 +29,4 @@ deploy:
     skip_cleanup: true
     script: lerna exec --no-private --bail=false can-npm-publish && npm publish
     on:
-      branch: tags
+      tags: true
