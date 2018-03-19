@@ -57,14 +57,7 @@ git push
 git push --tags
 ```
 
-The CI server will then automatically release tags by running:
+The CI server will then automatically release tags to npm using lerna exec, see:
 
-`lerna exec --no-private -- npm publish`
-
-Unfortunately there is an issue with this at the moment, see:
-
-https://github.com/lerna/lerna/issues/1056#issuecomment-374192818
-
-Also see:
-
-https://github.com/lerna/lerna/issues/961
+- https://github.com/lerna/lerna/issues/1056#issuecomment-374192818
+- https://github.com/lerna/lerna/issues/961

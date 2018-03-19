@@ -16,6 +16,7 @@ script:
   - npm run bundlesize
 before_deploy:
   - npm run build-storybook
+  - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
 deploy:
   - provider: pages # https://docs.travis-ci.com/user/deployment/pages/
     skip-cleanup: true
@@ -24,3 +25,8 @@ deploy:
     local-dir: storybook-static
     on:
       branch: master
+  - provider: script
+    skip_cleanup: true
+    script: lerna exec --no-private --bail=false can-npm-publish && npm publish
+    on:
+      branch: tags
