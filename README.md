@@ -58,7 +58,11 @@ Use of these components assumes the following from the peer project:
 
 ## Why Glamorous/CSS-in-JS?
 
-See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660)
+See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
+
+We have opted for Glamorous over styled-components or Emotion as we like the JS syntax and would rather not burden either the front end or the transpiler with a CSS parser.
+
+We will see how take up of Glamorous evolves in comparison to other projects. We are also paying attention to the [Interoperable Style Transfer Format (ISTF)](https://github.com/cssinjs/istf-spec), which would allow us to distribute CSS in JS stylesheets without a runtime.
 
 ## Why not use GDS styles/classes directly
 
@@ -67,8 +71,17 @@ See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-
 
 ## Related sites and projects:
 
+### GOV.UK
+
  - [govuk-elements](https://govuk-elements.herokuapp.com/) ([source](https://github.com/alphagov/govuk_elements/))
  - [govuk_frontend_toolkit](https://github.com/alphagov/govuk_frontend_toolkit/)
  - [govuk-frontend](https://github.com/alphagov/govuk-frontend/)
  - [govuk_template](http://alphagov.github.io/govuk_template/) ([source](https://github.com/alphagov/govuk_template))
  - [GOV.UK Design Patterns](https://www.gov.uk/service-manual/design#find-patterns)
+
+### Other React component libraries
+
+- [Auth0 Cosmos](https://github.com/auth0/cosmos)
+- [Shopify Polaris](https://github.com/Shopify/polaris)
+- [Atlassian Atlaskit](https://bitbucket.org/atlassian/atlaskit-mk-2)
+- [Carbon Design System](https://github.com/carbon-design-system/carbon-components-react)
