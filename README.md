@@ -27,7 +27,7 @@ See the [Storybook](https://penx.github.io/govuk-react) for examples of all avai
 
 Also see the [example project](https://github.com/penx/govuk-react-example) for basic usage.
 
-## Using Anchors/React Router Link
+## Using anchors/React Router Link
 
 We are using a Higher Order Component (HOC), which takes a component and returns a new component with the original props.
 
@@ -69,7 +69,7 @@ We will see how take up of Glamorous evolves in comparison to other projects. We
 1. We want to be free to write different DOM structure and/or CSS that is more in keeping with a React and bem-ish architecture. (e.g. in React you often don't need to specify IDs for field inputs, and can wrap inputs with labels so that they are automatically associated. We want to leave the decision of whether to use input IDs to the parent project. GDS styles don't wrap inputs with labels and require IDs and for attributes).
 2. We want a parent project to not have to worry about a specific build system (e.g. for handling `import styles.css`, particularly if you want universal support) or including certain CSS files. We want a simple `npm install govuk-react` to be enough to get govuk styled components on to your page, irrespective of your build system.
 
-## Related sites and projects:
+## Related sites and projects
 
 ### GOV.UK
 
