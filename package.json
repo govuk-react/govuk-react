@@ -105,7 +105,7 @@
     "glamor": "^2.20.40",
     "glamorous": "^4.11.2",
     "jest": "^22.1.2",
-    "jest-glamor-react": "^3.3.0",
+    "jest-glamor-react": "^4.0.0",
     "jimp": "^0.2.28",
     "lerna": "2",
     "mkdirp-promise": "^5.0.1",
