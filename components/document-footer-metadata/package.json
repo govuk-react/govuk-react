@@ -1,9 +1,8 @@
 {
-  "name": "govuk-react",
+  "name": "@govuk-react/document-footer-metadata",
   "version": "0.1.18",
   "dependencies": {
     "@govuk-react/constants": "0.1.18",
-    "@govuk-react/icons": "0.1.18",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
@@ -13,6 +12,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
+    "@storybook/addons": "^3.3.14",
     "@storybook/addon-actions": "^3.3.14",
     "@storybook/react": "^3.3.14",
     "enzyme": "^3.3.0",

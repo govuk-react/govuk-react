@@ -28,6 +28,7 @@ export { default as Select } from '@govuk-react/select';
 export { default as TextArea } from '@govuk-react/text-area';
 export { default as UnorderedList } from '@govuk-react/unordered-list';
 export { default as RelatedItems } from '@govuk-react/related-items';
+export { default as DocumentFooterMetadata } from '@govuk-react/document-footer-metadata';
 
 export { H1, H2, H3, H4, H5, H6 } from '@govuk-react/header';
 
