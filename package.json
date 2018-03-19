@@ -12,7 +12,7 @@
     "build:lib": "lerna run build:lib --parallel",
     "build:es": "lerna run build:es --parallel",
     "build:dist": "npm run build:es && webpack -p packages/govuk-react/es/index.js dist/index.js",
-    "pack": "lerna exec -- npm pack",
+    "pack": "lerna exec --parallel -- npm pack",
     "watch": "npm run watch:lib",
     "watch:es": "cross-env BABEL_ENV=es lerna exec --ignore @govuk-react/images --parallel -- babel src -d es -w --source-maps",
     "watch:lib": "lerna exec --ignore @govuk-react/images --parallel -- babel src -d lib -w --source-maps",
