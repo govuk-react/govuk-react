@@ -1,10 +1,10 @@
 {
   "name": "@govuk-react/list-navigation",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "dependencies": {
-    "@govuk-react/constants": "^0.1.19",
-    "@govuk-react/list-item": "^0.1.19",
-    "@govuk-react/unordered-list": "^0.1.19",
+    "@govuk-react/constants": "^0.1.20",
+    "@govuk-react/list-item": "^0.1.20",
+    "@govuk-react/unordered-list": "^0.1.20",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
