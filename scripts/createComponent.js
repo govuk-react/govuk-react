@@ -4,6 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 const mkdirp = require('mkdirp-promise');
+const { version } = require('../package.json');
 
 const componentFolderName = process.argv[2];
 const componentName = `${componentFolderName.charAt(0).toUpperCase()}${componentFolderName.slice(1).replace(/-([a-z])/g, g => g[1].toUpperCase())}`;
@@ -31,9 +32,9 @@ const packageJson = () => {
   // can be added manually per component perhaps.
   const contents = `{
   "name": "@govuk-react/${componentFolderName}",
-  "version": "0.1.18",
+  "version": "${version}",
   "dependencies": {
-    "@govuk-react/constants": "0.1.18",
+    "@govuk-react/constants": "${version}",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {

@@ -57,6 +57,19 @@ Prop | Required | Default | Type | Description
  `hintText` |  | null | string | 
 
 
+DocumentFooterMetadata
+======================
+
+![Component Image](./docs/DocumentFooterMetadata.png)
+
+
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `from` |  | undefined | array | 
+ `other` |  | undefined | array | 
+ `partOf` |  | undefined | array | 
+
+
 ErrorText
 =========
 
@@ -119,19 +132,6 @@ HintText
 
 
 
-Input
-=====
-
-![Component Image](./docs/Input.png)
-
-
-Prop | Required | Default | Type | Description 
-:--- | :------- | :------ | :--- | :---------- 
- `onChange` |  | undefined | func | 
- `type` |  | 'text' | string | 
- `value` |  | undefined | string | 
-
-
 InputField
 ==========
 
@@ -146,17 +146,30 @@ Prop | Required | Default | Type | Description
  `meta` |  | {} | shape[object Object] | 
 
 
-Label
+Input
 =====
 
-![Component Image](./docs/Label.png)
+![Component Image](./docs/Input.png)
 
+
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `onChange` |  | undefined | func | 
+ `type` |  | 'text' | string | 
+ `value` |  | undefined | string | 
 
 
 LabelText
 =========
 
 ![Component Image](./docs/LabelText.png)
+
+
+
+Label
+=====
+
+![Component Image](./docs/Label.png)
 
 
 
@@ -208,6 +221,41 @@ Prop | Required | Default | Type | Description
  `meta` |  | {} | shape[object Object] | 
 
 
+OrderedList
+===========
+
+![Component Image](./docs/OrderedList.png)
+
+
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `children` | true |  | node | 
+ `listStyleType` |  | undefined | string | 
+
+
+Pagination
+==========
+
+![Component Image](./docs/Pagination.png)
+
+
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `children` | true |  | node | 
+
+
+Panel
+=====
+
+![Component Image](./docs/Panel.png)
+
+
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `panelBody` |  | null | string | 
+ `panelTitle` | true |  | string | 
+
+
 PhaseBadge
 ==========
 
@@ -237,6 +285,28 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :---------- 
  `children` | true |  | node | 
  `inline` |  | undefined | bool | 
+
+
+RelatedItems
+============
+
+![Component Image](./docs/RelatedItems.png)
+
+
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `children` | true |  | node | 
+
+
+SearchBox
+=========
+
+![Component Image](./docs/SearchBox.png)
+
+
+Prop | Required | Default | Type | Description 
+:--- | :------- | :------ | :--- | :---------- 
+ `placeholder` |  | undefined | string | 
 
 
 Select
