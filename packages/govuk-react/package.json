@@ -1,9 +1,9 @@
 {
   "name": "govuk-react",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "dependencies": {
-    "@govuk-react/constants": "^0.1.20",
-    "@govuk-react/icons": "^0.1.20",
+    "@govuk-react/constants": "^0.1.21",
+    "@govuk-react/icons": "^0.1.21",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
