@@ -38,4 +38,4 @@ export { asAnchor } from '@govuk-react/hoc';
 export { asPaginationItem } from '@govuk-react/hoc';
 
 // Icons
-export { Search as SearchIcon, ArrowLeft } from '@govuk-react/icons';
+export { Search as SearchIcon, ArrowLeft, Spinner } from '@govuk-react/icons';
