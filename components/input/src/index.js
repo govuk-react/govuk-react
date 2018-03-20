@@ -33,7 +33,7 @@ const GInput = glamorous.input(
     },
   },
   ({ error, errorColour }) => ({
-    border: error ? `4px solid ${errorColour}` : undefined,
+    border: error ? `4px solid ${errorColour || ERROR_COLOUR}` : undefined,
   }),
 );
 
@@ -43,7 +43,7 @@ Input.defaultProps = {
   value: undefined,
   onChange: undefined,
   type: 'text',
-  errorColour: ERROR_COLOUR,
+  errorColour: undefined,
 };
 
 Input.propTypes = {
