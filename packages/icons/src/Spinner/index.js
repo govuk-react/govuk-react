@@ -1,3 +1,5 @@
+// https://govuk-loader-prototype.herokuapp.com/components/loader
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as glamor from 'glamor';
