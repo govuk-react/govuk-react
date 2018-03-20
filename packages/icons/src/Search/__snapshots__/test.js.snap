@@ -8,6 +8,7 @@ exports[`Search matches wrapper snapshot: wrapper mount 1`] = `
   <SVG
     fill="currentColor"
     title="Search"
+    viewBox="0 0 57 57"
   >
     <svg
       fill="currentColor"
@@ -18,7 +19,7 @@ exports[`Search matches wrapper snapshot: wrapper mount 1`] = `
         }
       }
       version="1.1"
-      viewBox="-0.2 0 17 14"
+      viewBox="0 0 57 57"
       width="100%"
       x="0px"
       xmlns="http://www.w3.org/2000/svg"
