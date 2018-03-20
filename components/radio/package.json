@@ -16,6 +16,7 @@
     "@govuk-react/storybook-components": "^0.1.20",
     "@storybook/addon-actions": "^3.3.14",
     "@storybook/react": "^3.3.14",
+    "cross-env": "^5.1.4",
     "enzyme": "^3.3.0",
     "react-dom": "^16.2.0",
     "react-final-form": "^3.1.0",
