@@ -29,7 +29,9 @@ function getMarkdownForComponent(file, imagePath) {
   const src = fs.readFileSync(path.resolve(__dirname, file));
   const componentInfo = parse(src);
   const componentName = getComponentNameFromFile(file);
-  return generateMarkdown(componentName, componentInfo, imagePath);
+  // if imagePath exists
+  const imageExists = fs.existsSync(imagePath);
+  return generateMarkdown(componentName, componentInfo, imageExists ? imagePath : undefined);
 }
 
 function libPathToSrc(libPath, libFolder = '/lib/') {

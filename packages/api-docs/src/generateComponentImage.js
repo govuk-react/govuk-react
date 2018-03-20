@@ -18,7 +18,10 @@ export default async function generateComponentImage(
       },
     });
     const jimage = await Jimp.read(image);
-    jimage.autocrop(false).write(imagePath);
+    const cropped = jimage.autocrop(false);
+    if (cropped.bitmap.width && cropped.bitmap.height) {
+      cropped.write(imagePath);
+    }
   } catch (e) {
     console.log(chalk.red('Error generating image:'), file, e.message);
   }

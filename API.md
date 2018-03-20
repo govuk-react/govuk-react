@@ -94,7 +94,7 @@ Prop | Required | Default | Type | Description
 GridCol
 =======
 
-![Component Image](./docs/GridCol.png)
+
 
 
 Prop | Required | Default | Type | Description
@@ -105,7 +105,7 @@ Prop | Required | Default | Type | Description
 GridRow
 =======
 
-![Component Image](./docs/GridRow.png)
+
 
 
 Prop | Required | Default | Type | Description
@@ -176,7 +176,7 @@ Label
 Layout
 ======
 
-![Component Image](./docs/Layout.png)
+
 
 
 Prop | Required | Default | Type | Description

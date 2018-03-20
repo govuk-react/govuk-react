@@ -5,6 +5,7 @@
     "build-storybook": "npm run bootstrap && npm run build && cd packages/storybook && npm run build-storybook && cp -r storybook-static ../..",
     "bootstrap": "lerna bootstrap",
     "docs": "./packages/api-docs/bin/doc-component.js './components/**/lib/index.js' './API.md'",
+    "docs:components": "lerna run docs --parallel",
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src",
     "build": "lerna run build --parallel",
