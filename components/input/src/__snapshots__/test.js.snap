@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input matches withColouredError snapshot: with error mount 1`] = `
+exports[`Input matches withColouredError snapshot: with coloured error mount 1`] = `
 .glamor-0,
 [data-glamor-0] {
   box-sizing: border-box;

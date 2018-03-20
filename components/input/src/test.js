@@ -28,6 +28,6 @@ describe('Input', () => {
   });
 
   it('matches withColouredError snapshot', () => {
-    expect(mount(withColouredError)).toMatchSnapshot('with error mount');
+    expect(mount(withColouredError)).toMatchSnapshot('with coloured error mount');
   });
 });
