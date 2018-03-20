@@ -73,7 +73,7 @@ async function generateApiForFiles(files) {
 }
 
 export default async function (relDir, outputMd) {
-  const files = await glob(path.resolve(__dirname, relDir));
+  const files = await glob(path.resolve(process.cwd(), relDir));
   const md = await generateApiForFiles(files);
   await promisify(fs.writeFile)(outputMd, md);
 }
