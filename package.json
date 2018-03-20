@@ -1,17 +1,16 @@
 {
   "name": "govuk-react",
-  "version": "0.1.19",
   "scripts": {
     "start": "cd packages/storybook && npm start",
     "build-storybook": "npm run bootstrap && npm run build && cd packages/storybook && npm run build-storybook && cp -r storybook-static ../..",
     "bootstrap": "lerna bootstrap",
-    "docs": "doc-component '../../../components/**/lib/index.js' './API.md'",
+    "docs": "./packages/api-docs/bin/doc-component.js './components/**/lib/index.js' './API.md'",
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src",
     "build": "lerna run build --parallel",
     "build:lib": "lerna run build:lib --parallel",
     "build:es": "lerna run build:es --parallel",
-    "build:dist": "npm run build:es && webpack -p packages/govuk-react/es/index.js dist/index.js",
+    "build:dist": "npm run build:es && rimraf dist && webpack -p packages/govuk-react/es/index.js --output-filename dist/index.js",
     "pack": "lerna exec --parallel -- npm pack",
     "watch": "npm run watch:lib",
     "watch:es": "cross-env BABEL_ENV=es lerna exec --ignore @govuk-react/images --parallel -- babel src -d es -w --source-maps",
@@ -79,7 +78,6 @@
     "@babel/preset-flow": "^7.0.0-beta.40",
     "@babel/preset-react": "^7.0.0-beta.40",
     "@babel/preset-stage-1": "^7.0.0-beta.40",
-    "@govuk-react/api-docs": "0.1.19",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.2",
     "babel-jest": "^22.4.0",
@@ -121,7 +119,8 @@
     "render-glamorous": "0.0.1",
     "rimraf": "^2.6.2",
     "sinon": "^4.2.1",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-cli": "^2.0.12"
   },
   "repository": {
     "type": "git",

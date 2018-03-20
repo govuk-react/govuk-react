@@ -3,6 +3,7 @@
   "version": "0.1.20",
   "dependencies": {
     "@babel/node": "^7.0.0-beta.40",
+    "@babel/runtime": "^7.0.0-beta.40",
     "chalk": "^2.3.1",
     "commander": "^2.15.0",
     "glob": "^7.1.2",
@@ -14,8 +15,8 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
     "@babel/core": "^7.0.0-beta.40",
-    "@babel/runtime": "^7.0.0-beta.40",
     "babel-core": "^7.0.0-bridge.0",
+    "cross-env": "^5.1.4",
     "glamorous": "^4.12.0",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
