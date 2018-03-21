@@ -33,12 +33,12 @@ exports[`Input matches withColouredError snapshot: with coloured error mount 1`]
 
 <Input
   error="example"
-  errorColour="#f47738"
+  errorColor="#f47738"
   type="text"
 >
   <glamorous(input)
     error="example"
-    errorColour="#f47738"
+    errorColor="#f47738"
     type="text"
   >
     <input

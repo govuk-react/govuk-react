@@ -7,7 +7,7 @@ import Input from './';
 describe('Input', () => {
   const wrapper = <Input type="text" />;
   const withError = <Input type="text" error="example" />;
-  const withColouredError = <Input type="text" errorColour={ORANGE} error="example" />;
+  const withColouredError = <Input type="text" errorColor={ORANGE} error="example" />;
 
   it('renders without crashing', () => {
     const div = document.createElement('div');

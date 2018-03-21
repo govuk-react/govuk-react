@@ -9,5 +9,5 @@ storiesOf('Input', module).add('Component default', () => (
 ));
 
 storiesOf('Input', module).add('Custom error colour', () => (
-  <Input type="text" errorColour={ORANGE} error="example" />
+  <Input type="text" errorColor={ORANGE} error="example" />
 ));
