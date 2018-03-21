@@ -1,6 +1,6 @@
 {
   "name": "@govuk-react/icons",
-  "version": "0.1.21",
+  "version": "0.1.22",
   "dependencies": {
     "@govuk-react/constants": "^0.1.21",
     "govuk-colours": "^1.0.3"
