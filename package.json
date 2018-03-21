@@ -118,7 +118,7 @@
     "react-test-renderer": "^16.2.0",
     "render-glamorous": "0.0.1",
     "rimraf": "^2.6.2",
-    "sinon": "^4.2.1",
+    "sinon": "^5.0.0",
     "webpack": "^3.10.0",
     "webpack-cli": "^2.0.12"
   },
