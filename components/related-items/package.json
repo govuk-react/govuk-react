@@ -1,5 +1,9 @@
 {
   "name": "@govuk-react/related-items",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.1.21",
   "dependencies": {
     "@govuk-react/constants": "^0.1.21",
