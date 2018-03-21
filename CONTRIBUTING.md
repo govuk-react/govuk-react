@@ -42,9 +42,9 @@ npm run test:unit
 ## Opening a pull request
 
 - when adding a new component, include a screenshot of the component in the PR
+- when adding new components, try to keep 1 component per PR, unless there are unavoidable interdependencies
 - when fixing a visual issue, include a unit test or snapshot test that proves the issue, and include a screenshot of the component before and after in the PR
 - when fixing a functional issue, include a unit test that proves the issue (fails before PR is merged and succeeds after)
-- when adding new components, try to keep 1 component per PR, unless there are unavoidable interdependencies
 
 ## Releasing
 
