@@ -33,6 +33,10 @@ const packageJson = () => {
   const contents = `{
   "name": "@govuk-react/${componentFolderName}",
   "version": "${version}",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "govuk-colours": "^1.0.3"
   },

@@ -6,24 +6,23 @@ cache:
 install:
   - yarn
   - yarn bootstrap
-  - yarn build
   - npm install -g codecov
 script:
-#  - npm run build # npm install already runs a build via prepare
-  - npm test
+  - yarn build
+  - yarn test
   - codecov
-  - npm run build:dist # the dist build is only used to track bundle sizes
-  - npm run bundlesize
+  - yarn build:dist # the dist build is only used to track bundle size delta
+  - yarn bundlesize
 before_deploy:
-  - npm run build-storybook
-  - npm run pack
-  - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+  - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc # we only want to run this on deploys as this guarantees we have an NPM_TOKEN env var
+  # only create releases folder once, before_deploy gets called before every provider so save time by only doing once
+  - if [ ! -d "releases" ]; then yarn run pack && mkdir releases && mv {components,packages}/*/govuk-react-*.tgz ./releases; fi
 deploy:
   - provider: pages # https://docs.travis-ci.com/user/deployment/pages/
     skip-cleanup: true
     github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
     keep-history: true
-    local-dir: storybook-static
+    local-dir: packages/storybook/storybook-static
     on:
       branch: master
   - provider: script

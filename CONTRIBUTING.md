@@ -41,23 +41,21 @@ npm run test:unit
 
 ## Releasing
 
-In order to prepare a release, developers should run the following against master:
+In order to prepare a release:
 
-`lerna publish --skip-npm`
+- create a branch from master called `release/next`
+- run `lerna publish --skip-npm`. This will:
+  - ask the developer to choose the semver change
+  - update all package.json files
+  - commit to git and make a tag
+- delete the tag that is created locally, don't publish it
+- publish this branch to GitHub
+- open a pull request from this branch to master
+- [Draft a new GitHub release](https://github.com/penx/govuk-react/releases/new) from master and *save as draft*
+- once the PR is merged, [publish the GitHub release you have created in the GitHub UI](https://github.com/penx/govuk-react/releases)
 
-This will:
-- ask the developer to choose the semver change
-- update all package.json files
-- commit to git and make a tag
 
-...but it will not push these changes to origin. After checking the command was successful, this should be followed up by:
-
-```
-git push
-git push --tags
-```
-
-The CI server will then automatically release tags to npm using lerna exec, see:
+When the tag is created, the CI server will automatically release to npm using lerna exec, see:
 
 - https://github.com/lerna/lerna/issues/1056#issuecomment-374192818
 - https://github.com/lerna/lerna/issues/961
