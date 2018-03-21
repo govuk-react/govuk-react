@@ -33,7 +33,7 @@ deploy:
   - provider: releases
     api_key: $GITHUB_TOKEN
     file_glob: true
-    file: "{components,packages}/*/govuk-react-*.tgz"
+    file: "releases/govuk-react-*.tgz"
     skip_cleanup: true
     on:
       tags: true
