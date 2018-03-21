@@ -1,5 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Input matches withColouredError snapshot: with coloured error mount 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  box-sizing: border-box;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 4px solid #f47738;
+}
+
+.glamor-0:focus,
+[data-glamor-0]:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    width: 50%;
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
+<Input
+  error="example"
+  errorColor="#f47738"
+  type="text"
+>
+  <glamorous(input)
+    error="example"
+    errorColor="#f47738"
+    type="text"
+  >
+    <input
+      className="glamor-0"
+      type="text"
+    />
+  </glamorous(input)>
+</Input>
+`;
+
 exports[`Input matches withError snapshot: with error mount 1`] = `
 .glamor-0,
 [data-glamor-0] {

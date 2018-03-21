@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
+import { ORANGE } from 'govuk-colours';
 import Input from './';
 
 describe('Input', () => {
   const wrapper = <Input type="text" />;
   const withError = <Input type="text" error="example" />;
+  const withColouredError = <Input type="text" errorColor={ORANGE} error="example" />;
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
@@ -23,5 +25,9 @@ describe('Input', () => {
 
   it('matches withError snapshot', () => {
     expect(mount(withError)).toMatchSnapshot('with error mount');
+  });
+
+  it('matches withColouredError snapshot', () => {
+    expect(mount(withColouredError)).toMatchSnapshot('with coloured error mount');
   });
 });
