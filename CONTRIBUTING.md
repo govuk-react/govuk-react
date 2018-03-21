@@ -43,7 +43,8 @@ npm run test:unit
 
 In order to prepare a release:
 
-- run `./scripts/release.sh`
+- ensure you have [hub](https://hub.github.com) installed (e.g. `brew install hub`)
+- run `./scripts/release.sh`, you will be asked to choose a semver increment and, if this is the first time running hub, you will be asked for your GitHub credentials
 - this will open a PR on GitHub and draft a release
 - once the PR is merged [publish the draft release corresponding to the new version number in GitHub](https://github.com/penx/govuk-react/releases).
 
