@@ -3,8 +3,8 @@
 exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
 .glamor-0,
 [data-glamor-0] {
-  animation: animation_r499y9 1s infinite linear;
-  -webkit-animation: animation_r499y9 1s infinite linear;
+  animation: animation_1kzvbmm 1s infinite linear;
+  -webkit-animation: animation_1kzvbmm 1s infinite linear;
 }
 
 <Spinner

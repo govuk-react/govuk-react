@@ -9,11 +9,15 @@ import SVG from '../SVGBase/index';
 
 const animationStyles = () => {
   const fadeInOut = glamor.css.keyframes({
-    '0%': { opacity: '1' },
-    '50%': { opacity: '0.2' },
-    '65%': { opacity: '0.2' },
-    '80%': { opacity: '1' },
-    '100%': { opacity: '1' },
+    // '0%': { opacity: '1' },
+    // '50%': { opacity: '0.2' },
+    // '65%': { opacity: '0.2' },
+    // '80%': { opacity: '1' },
+    // '100%': { opacity: '1' },
+    '0%': { opacity: '0.250075' },
+    '0.01%': { opacity: '0.25' },
+    '0.03%': { opacity: '1' },
+    '100%': { opacity: '0.250075' },
   });
   return { animation: `${fadeInOut} 1s infinite linear` };
 };
