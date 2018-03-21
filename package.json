@@ -10,7 +10,7 @@
     "build": "lerna run build",
     "build:lib": "lerna run build:lib --parallel",
     "build:es": "lerna run build:es --parallel",
-    "build:dist": "npm run build:es && rimraf dist && webpack -p packages/govuk-react/es/index.js --output-filename dist/index.js",
+    "build:dist": "npm run build:es && rimraf dist && webpack -p packages/govuk-react/es/index.js -o dist/index.js",
     "pack": "lerna exec --parallel -- npm pack",
     "watch": "npm run watch:lib",
     "watch:es": "cross-env BABEL_ENV=es lerna exec --ignore @govuk-react/images --parallel -- babel src -d es -w --source-maps",
@@ -119,7 +119,7 @@
     "render-glamorous": "0.0.1",
     "rimraf": "^2.6.2",
     "sinon": "^4.2.1",
-    "webpack": "^3.10.0",
+    "webpack": "^4.1.1",
     "webpack-cli": "^2.0.12"
   },
   "repository": {
