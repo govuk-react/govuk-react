@@ -34,6 +34,7 @@
       "!<rootDir>/{components,packages}/*/src/**/{stories,example,fixtures}.js",
       "!<rootDir>/packages/storybook/**",
       "!<rootDir>/packages/api-docs/**",
+      "!<rootDir>/packages/example/**",
       "!<rootDir>/packages/storybook-components/**"
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/scripts/setupTests.js",
