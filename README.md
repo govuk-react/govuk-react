@@ -85,6 +85,7 @@ We will see how take-up of Glamorous evolves in comparison to other projects. We
 - [Shopify Polaris](https://github.com/Shopify/polaris)
 - [Atlassian Atlaskit](https://bitbucket.org/atlassian/atlaskit-mk-2)
 - [Carbon Design System](https://github.com/carbon-design-system/carbon-components-react)
+- [Material UI](https://github.com/mui-org/material-ui)
 
 ## Contributors
 
