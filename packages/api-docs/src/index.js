@@ -60,7 +60,7 @@ async function generateApiForFile(file) {
 function shouldDocumentComponent(file) {
   // only document components that are exported from src/index.js
   const name = getComponentNameFromFile(file);
-  return components.hasOwnProperty(name);
+  return Object.prototype.hasOwnProperty.call(components, name);
 }
 
 async function generateApiForFiles(files) {
