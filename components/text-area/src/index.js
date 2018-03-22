@@ -12,7 +12,7 @@ import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 
-const TextareaField = glamorous.textarea(
+const TextAreaField = glamorous.textarea(
   {
     boxSizing: 'border-box',
     fontFamily: '"nta", Arial, sans-serif',
@@ -45,7 +45,7 @@ const TextArea = props => (
     {props.hint && <HintText>{props.hint}</HintText>}
     {props.meta.touched &&
       props.meta.error && <ErrorText>{props.meta.error}</ErrorText>}
-    <TextareaField
+    <TextAreaField
       type="text"
       rows="5"
       error={props.meta.touched && props.meta.error}
@@ -88,3 +88,4 @@ TextArea.propTypes = {
 };
 
 export default TextArea;
+export { TextAreaField };
