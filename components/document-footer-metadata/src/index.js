@@ -27,7 +27,9 @@ const DocumentFooterMetadata = ({ from, partOf, other }) => {
           <p style={{ marginBottom: 0 }}>From:</p>
           <UnorderedList listStyleType="none">
             {from && from.map((child, i) => (
-              <Definition key={child.key || i}>{child}</Definition>
+              /* eslint-disable react/no-array-index-key */
+              <Definition key={i}>{child}</Definition>
+              /* eslint-enable react/no-array-index-key */
               ))}
           </UnorderedList>
         </div>}
@@ -81,9 +83,13 @@ DocumentFooterMetadata.defaultProps = {
 };
 
 DocumentFooterMetadata.propTypes = {
-  from: PropTypes.shape({}),
-  partOf: PropTypes.shape({}),
-  other: PropTypes.shape({}),
+  from: PropTypes.arrayOf(PropTypes.node),
+  partOf: PropTypes.arrayOf(PropTypes.node),
+  other: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    content: PropTypes.node,
+  })),
 };
 
 export default DocumentFooterMetadata;
