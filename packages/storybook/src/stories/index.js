@@ -33,7 +33,7 @@ import '@govuk-react/document-footer-metadata/lib/stories';
 import '@govuk-react/hoc/lib/asAnchor/stories';
 import '@govuk-react/hoc/lib/asPaginationItem/stories';
 
-import '@govuk-react/icons/lib/ArrowLeft/stories'
-import '@govuk-react/icons/lib/ArrowRight/stories'
-import '@govuk-react/icons/lib/Search/stories'
-import '@govuk-react/icons/lib/Spinner/stories'
+import '@govuk-react/icons/lib/ArrowLeft/stories';
+import '@govuk-react/icons/lib/ArrowRight/stories';
+import '@govuk-react/icons/lib/Search/stories';
+import '@govuk-react/icons/lib/Spinner/stories';

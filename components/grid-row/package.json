@@ -3,6 +3,7 @@
   "version": "0.1.22",
   "dependencies": {
     "@govuk-react/constants": "^0.1.21",
+    "@govuk-react/layout": "^0.1.22",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {

@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '.';
 import { LEVEL_SIZE } from '@govuk-react/constants';
+import Header from '.';
 
 export const H1 = props => <Header level={1} size={LEVEL_SIZE[1]} {...props} />;
 export const H2 = props => <Header level={2} size={LEVEL_SIZE[2]} {...props} />;

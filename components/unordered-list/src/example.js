@@ -1,6 +1,6 @@
 import React from 'react';
+import ListItem from '@govuk-react/list-item';
 import UnorderedList from './index';
-import ListItem from '../ListItem/index';
 
 export default () => (
   <UnorderedList>

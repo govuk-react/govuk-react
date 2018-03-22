@@ -3,6 +3,11 @@
   "version": "0.1.22",
   "dependencies": {
     "@govuk-react/constants": "^0.1.21",
+    "@govuk-react/error-text": "^0.1.22",
+    "@govuk-react/hint-text": "^0.1.22",
+    "@govuk-react/input": "^0.1.22",
+    "@govuk-react/label": "^0.1.22",
+    "@govuk-react/label-text": "^0.1.22",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {

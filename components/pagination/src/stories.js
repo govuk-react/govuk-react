@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { asPaginationItem } from '@govuk-react/hoc';
 
 import Pagination from '.';
-import { asPaginationItem } from '@govuk-react/hoc';
 
 const PaginationTag = asPaginationItem('a');
 const PaginationLink = asPaginationItem(Link);
