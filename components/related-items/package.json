@@ -17,6 +17,10 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
     "@govuk-react/api-docs": "^0.1.22",
+    "@govuk-react/header": "^0.1.22",
+    "@govuk-react/hoc": "^0.1.22",
+    "@govuk-react/list-item": "^0.1.22",
+    "@govuk-react/unordered-list": "^0.1.22",
     "@storybook/addon-actions": "^3.3.14",
     "@storybook/addons": "^3.3.14",
     "@storybook/react": "^3.3.14",
