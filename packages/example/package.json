@@ -1,0 +1,40 @@
+{
+  "name": "@govuk-react/example",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "final-form": "^4.0.4",
+    "glamor": "^2.20.40",
+    "glamorous": "^4.11.4",
+    "govuk-colours": "^1.0.3",
+    "govuk-react": "^0.1.21",
+    "normalize.css": "^7.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-final-form": "^3.0.5",
+    "react-scripts": "1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1"
+  },
+  "keywords": [
+    "react",
+    "govuk",
+    "glamorous"
+  ],
+  "author": "Alasdair McLeay",
+  "license": "ISC"
+}
