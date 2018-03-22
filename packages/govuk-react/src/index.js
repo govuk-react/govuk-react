@@ -1,3 +1,6 @@
+// TODO: eslint needs to be configured to pick up exports that aren't in package.json
+// see https://github.com/benmosher/eslint-plugin-import/issues/1049
+
 // Components
 export { default as BackLink } from '@govuk-react/back-link';
 export { default as Breadcrumb } from '@govuk-react/breadcrumb';

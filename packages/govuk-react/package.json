@@ -14,6 +14,7 @@
     "@govuk-react/grid-row": "^0.1.23",
     "@govuk-react/header": "^0.1.23",
     "@govuk-react/hint-text": "^0.1.23",
+    "@govuk-react/hoc": "^0.1.23",
     "@govuk-react/icons": "^0.1.23",
     "@govuk-react/input": "^0.1.23",
     "@govuk-react/input-field": "^0.1.23",
