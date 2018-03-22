@@ -4985,6 +4985,12 @@ form-data@~2.3.1:
     combined-stream "1.0.6"
     mime-types "^2.1.12"
 
+formatio@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/formatio/-/formatio-1.2.0.tgz#f3b2167d9068c4698a8d51f4f760a39a54d818eb"
+  dependencies:
+    samsam "1.x"
+
 forwarded@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
@@ -9978,7 +9984,7 @@ safe-regex@^1.1.0:
   dependencies:
     ret "~0.1.10"
 
-samsam@1.3.0:
+samsam@1.3.0, samsam@1.x:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/samsam/-/samsam-1.3.0.tgz#8d1d9350e25622da30de3e44ba692b5221ab7c50"
 
@@ -10173,9 +10179,9 @@ simple-get@^2.7.0:
     once "^1.3.1"
     simple-concat "^1.0.0"
 
-sinon@^4.2.1:
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-4.4.2.tgz#c4c41d4bd346e1d33594daec2d5df0548334fc65"
+sinon@^4.4.8:
+  version "4.4.8"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-4.4.8.tgz#0479e0ccb8caa0d737ce9773c8d53d57d38f2d84"
   dependencies:
     "@sinonjs/formatio" "^2.0.0"
     diff "^3.1.0"
@@ -10183,6 +10189,18 @@ sinon@^4.2.1:
     lolex "^2.2.0"
     nise "^1.2.0"
     supports-color "^5.1.0"
+    type-detect "^4.0.5"
+
+sinon@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-5.0.0.tgz#e6de3b3f7fed338b470f8779dc4bab9fca058894"
+  dependencies:
+    diff "^3.1.0"
+    formatio "1.2.0"
+    lodash.get "^4.4.2"
+    lolex "^2.2.0"
+    nise "^1.2.0"
+    supports-color "^4.4.0"
     type-detect "^4.0.5"
 
 slash@^1.0.0:
@@ -10590,7 +10608,7 @@ supports-color@^3.1.2, supports-color@^3.2.3:
   dependencies:
     has-flag "^1.0.0"
 
-supports-color@^4.0.0, supports-color@^4.2.1:
+supports-color@^4.0.0, supports-color@^4.2.1, supports-color@^4.4.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-4.5.0.tgz#be7a0de484dec5c5cddf8b3d59125044912f635b"
   dependencies:

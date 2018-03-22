@@ -81,9 +81,9 @@ DocumentFooterMetadata.defaultProps = {
 };
 
 DocumentFooterMetadata.propTypes = {
-  from: PropTypes.array,
-  partOf: PropTypes.array,
-  other: PropTypes.array,
+  from: PropTypes.shape({}),
+  partOf: PropTypes.shape({}),
+  other: PropTypes.shape({}),
 };
 
 export default DocumentFooterMetadata;
