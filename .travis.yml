@@ -5,10 +5,9 @@ cache:
     - node_modules
 install:
   - yarn
-  - yarn bootstrap
   - npm install -g codecov
 script:
-  - yarn build
+  - yarn build:sync
   - yarn test
   - codecov
   - yarn build:dist # the dist build is only used to track bundle size delta
