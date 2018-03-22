@@ -1,6 +1,6 @@
 import React from 'react';
-import Pagination from '.';
 import { asPaginationItem } from '@govuk-react/hoc';
+import Pagination from '.';
 
 const PaginationTag = asPaginationItem('a');
 

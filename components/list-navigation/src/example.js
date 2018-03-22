@@ -1,6 +1,6 @@
 import React from 'react';
-import ListNavigation from './index';
 import { asAnchor } from '@govuk-react/hoc';
+import ListNavigation from './index';
 
 const AnchorTag = asAnchor('a');
 

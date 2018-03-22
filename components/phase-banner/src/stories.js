@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { asAnchor } from '@govuk-react/hoc';
 
 import PhaseBanner from '.';
-import { asAnchor } from '@govuk-react/hoc';
 
 const AnchorLink = asAnchor('a');
 
