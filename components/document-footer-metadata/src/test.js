@@ -8,8 +8,8 @@ const example = ['example'];
 const multiExample = ['example', 'exampleexample'];
 const otherExample = [{
   id: 0,
-  title: example,
-  content: example,
+  title: 'example',
+  content: ['example'],
 }];
 const wrapper = <DocumentFooterMetadata from={example} />;
 const wrapperMultiple = <DocumentFooterMetadata partOf={multiExample} />;
