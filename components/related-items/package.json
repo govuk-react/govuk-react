@@ -5,6 +5,7 @@
     "access": "public"
   },
   "version": "0.1.23",
+  "license": "MIT",
   "dependencies": {
     "@govuk-react/constants": "^0.1.21",
     "govuk-colours": "^1.0.3"
