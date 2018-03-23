@@ -7,6 +7,7 @@ import Breadcrumb from './';
 describe('breadcrumb', () => {
   const example = 'example';
   const emptyNode = [];
+  const nullNode = null;
   const wrapper = <Breadcrumb>{example}</Breadcrumb>;
   const wrapperMultiple = (
     <Breadcrumb>
@@ -18,6 +19,7 @@ describe('breadcrumb', () => {
     <Breadcrumb>
       <a href="/section">Section 1</a>
       {emptyNode}
+      {nullNode}
       {example}
     </Breadcrumb>
   );
@@ -38,6 +40,13 @@ describe('breadcrumb', () => {
 
   it('should render an unordered list without ghost/duff children', () => {
     expect(mount(wrapperEmptyNode).find('ul li')).toHaveLength(2);
+  });
+
+  it('allows attributes to be set', () => {
+    const output = mount(<Breadcrumb id="test" className="test">Crumb</Breadcrumb>);
+
+    expect(output.hasClass('test')).toBe(true);
+    expect(output.is('#test')).toBe(true);
   });
 
   it('matches snapshot', () => {
