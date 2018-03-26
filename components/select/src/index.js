@@ -93,3 +93,4 @@ Select.propTypes = {
 };
 
 export default Select;
+export { Input as SelectInput };
