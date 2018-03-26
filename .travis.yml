@@ -16,6 +16,7 @@ before_deploy:
   - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc # we only want to run this on deploys as this guarantees we have an NPM_TOKEN env var
   # only create releases folder once, before_deploy gets called before every provider so save time by only doing once
   - if [ ! -d "releases" ]; then yarn run pack && mkdir releases && mv {components,packages}/*/govuk-react-*.tgz ./releases; fi
+  - LERNA_VERSION=$(node -e 'console.log(require("./lerna.json").version)')
 deploy:
   - provider: pages # https://docs.travis-ci.com/user/deployment/pages/
     skip-cleanup: true
@@ -32,7 +33,7 @@ deploy:
   - provider: releases
     api_key: $GITHUB_TOKEN
     file_glob: true
-    file: "releases/govuk-react-*.tgz"
+    file: "releases/govuk-react-*-${LERNA_VERSION}.tgz"
     skip_cleanup: true
     on:
       tags: true
