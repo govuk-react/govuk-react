@@ -50,10 +50,12 @@ npm run test:unit
 
 In order to prepare a release:
 
+- ensure you have lerna installed _globally_ (`npm i -g lerna`)
 - ensure you have [hub](https://hub.github.com) installed (e.g. `brew install hub`)
 - run `./scripts/release.sh`, you will be asked to choose a semver increment and, if this is the first time running hub, you will be asked for your GitHub credentials
 - you will also be asked for a title and description for the draft release, though this can be left blank and filled in on GitHub later
 - this will open a PR on GitHub and draft a release
+- merge the PR
 - once the PR is merged, open the [draft release corresponding to the new version number on GitHub](https://github.com/penx/govuk-react/releases), change the target branch to master, check the title and description and then click `Publish release`.
 
 When the tag is created, the CI server will automatically release to npm using lerna exec, see:
