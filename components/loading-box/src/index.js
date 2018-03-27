@@ -8,13 +8,38 @@ import hexRgb from 'hex-rgb';
 import { Spinner } from '@govuk-react/icons';
 import { GREY_1 } from 'govuk-colours';
 
-const LoadingBoxInner = glamorous.div(({
+const Wrapper = glamorous.div({
+  position: 'relative',
+});
+
+const Innerwrap = glamorous.div({
+  position: 'absolute',
+  height: '100%',
+  top: 0,
+  right: 0,
+  left: 0,
+  bottom: 0,
+  display: 'flex',
+  justifyContent: 'center',
+  '> svg': {
+    position: 'absolute',
+    zIndex: 1,
+    display: 'block',
+    height: '100%',
+    maxHeight: '340px',
+  },
+});
+
+const Overlay = glamorous.div(({
   loading,
   timeIn,
   timeOut,
   backgroundColor,
   backgroundColorOpacity,
 }) => ({
+  ' svg': {
+    transition: `opacity ${timeIn}ms ease-in-out`,
+  },
   position: 'absolute',
   top: 0,
   right: 0,
@@ -29,43 +54,39 @@ const LoadingBoxInner = glamorous.div(({
     backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},0)`,
     // opacity: 0,
     transitionDuration: `${timeIn}ms`,
+    ' svg': {
+      opacity: 0,
+      transitionDuration: `${timeIn}ms`,
+    },
   },
   '.fade-enter-active': {
     backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},${backgroundColorOpacity})`,
     transitionDuration: `${timeIn}ms`,
+    ' svg': {
+      opacity: 1,
+      transitionDuration: `${timeIn}ms`,
+    },
     // opacity: 1,
   },
   '.fade-exit': {
     backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},${backgroundColorOpacity})`,
     transitionDuration: `${timeOut}ms`,
+    ' svg': {
+      opacity: 1,
+      transitionDuration: `${timeOut}ms`,
+    },
     // opacity: 1,
   },
   '.fade-exit-active': {
     backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},0)`,
     transitionDuration: `${timeOut}ms`,
+    ' svg': {
+      opacity: 0,
+      transitionDuration: `${timeOut}ms`,
+    },
     // opacity: 0,
   },
 }));
-// const LoadingBoxInner = glamorous.div(
-//   () => ({
-//     position: 'absolute',
-//     top: 0,
-//     right: 0,
-//     bottom: 0,
-//     left: 0,
-//     overflow: 'hidden',
-//     height: '100%',
-//     width: '100%',
-//   }),
-//   ({ timeIn, backgroundColor }) => ({
-//     backgroundColor,
-//     transition: timeIn ? `background-color ${timeIn}ms` : undefined,
-//   }),
-//   ({ timeOut, backgroundColor, backgroundColorOpacity }) => ({
-//     backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},${backgroundColorOpacity})`,
-//     transition: timeOut ? `background-color ${timeOut}ms` : undefined,
-//   }),
-// );
 
 const LoadingBox = ({
   children,
@@ -76,18 +97,21 @@ const LoadingBox = ({
   timeOut,
   ...props
 }) => (
-  <CSSTransition {...props} timeout={timeIn} classNames="fade" unmountOnExit>
-    <Spinner width="100px" height="100px" />
-    <LoadingBoxInner
-      backgroundColor={backgroundColor}
-      backgroundColorOpacity={backgroundColorOpacity}
-      loading={loading}
-      timeIn={timeIn}
-      timeOut={timeOut}
-    >
-      {children}
-    </LoadingBoxInner>
-  </CSSTransition>
+  <Wrapper>
+    <CSSTransition {...props} timeout={timeIn} classNames="fade" in={loading} unmountOnExit>
+      <Innerwrap>
+        <Spinner fill="white" width="100px" height="100px" />
+        <Overlay
+          backgroundColor={backgroundColor}
+          backgroundColorOpacity={backgroundColorOpacity}
+          loading={loading}
+          timeIn={timeIn}
+          timeOut={timeOut}
+        />
+      </Innerwrap>
+    </CSSTransition>
+    {children}
+  </Wrapper>
 );
 
 LoadingBox.defaultProps = {
