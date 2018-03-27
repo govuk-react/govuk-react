@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Select from '.';
+import LabelText from '@govuk-react/label-text';
+import Select, { SelectInput } from '.';
 
 const meta = {
   touched: true,
@@ -42,4 +43,16 @@ storiesOf('Select', module).add('Select with hintText & error', () => (
     <option value="1">GOV.UK elements option 2</option>
     <option value="2">GOV.UK elements option 3</option>
   </Select>
+));
+
+storiesOf('Select', module).add('Standalone input with inline label', () => (
+  <label>
+    <LabelText>Sort by:&nbsp;
+      <SelectInput>
+        <option value="0">People</option>
+        <option value="1">Animals</option>
+        <option value="2">Vegetables</option>
+      </SelectInput>
+    </LabelText>
+  </label>
 ));
