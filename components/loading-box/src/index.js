@@ -77,6 +77,7 @@ const LoadingBox = ({
   ...props
 }) => (
   <CSSTransition {...props} timeout={timeIn} classNames="fade" unmountOnExit>
+    <Spinner width="100px" height="100px" />
     <LoadingBoxInner
       backgroundColor={backgroundColor}
       backgroundColorOpacity={backgroundColorOpacity}
