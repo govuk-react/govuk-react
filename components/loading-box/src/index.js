@@ -6,13 +6,19 @@ import glamorous from 'glamorous';
 import { CSSTransition } from 'react-transition-group';
 import hexRgb from 'hex-rgb';
 import { Spinner } from '@govuk-react/icons';
-import { GREY_1 } from 'govuk-colours';
+import { GREY_1, WHITE } from 'govuk-colours';
 
 const Wrapper = glamorous.div({
   position: 'relative',
 });
 
-const Innerwrap = glamorous.div({
+const Innerwrap = glamorous.div(({
+  timeIn,
+  timeOut,
+  loading,
+  backgroundColor,
+  backgroundColorOpacity,
+}) => ({
   position: 'absolute',
   height: '100%',
   top: 0,
@@ -24,22 +30,85 @@ const Innerwrap = glamorous.div({
   '> svg': {
     position: 'absolute',
     zIndex: 1,
+    opacity: 1,
     display: 'block',
     height: '100%',
-    maxHeight: '340px',
-  },
-});
-
-const Overlay = glamorous.div(({
-  loading,
-  timeIn,
-  timeOut,
-  backgroundColor,
-  backgroundColorOpacity,
-}) => ({
-  ' svg': {
+    maxHeight: 'calc(50vh + 100px)',
     transition: `opacity ${timeIn}ms ease-in-out`,
   },
+  ' > div': {
+    transition: `background-color ${timeIn}ms ease-in-out`,
+    backgroundColor: loading ? `rgba(
+      ${hexRgb(backgroundColor).red},
+      ${hexRgb(backgroundColor).green},
+      ${hexRgb(backgroundColor).blue},
+      ${backgroundColorOpacity})` : `rgba(
+        ${hexRgb(backgroundColor).red},
+        ${hexRgb(backgroundColor).green},
+        ${hexRgb(backgroundColor).blue},
+        0)`,
+  },
+  '.fade-enter': {
+    ' > div': {
+      backgroundColor: `rgba(
+        ${hexRgb(backgroundColor).red},
+        ${hexRgb(backgroundColor).green},
+        ${hexRgb(backgroundColor).blue},
+        0)`,
+      transitionDuration: `${timeIn}ms`,
+    },
+    ' svg': {
+      opacity: 0,
+      transitionDuration: `${timeIn}ms`,
+      transitionDelay: `${timeIn / 2}ms`,
+    },
+  },
+  '.fade-enter-active': {
+    ' > div': {
+      backgroundColor: `rgba(
+        ${hexRgb(backgroundColor).red},
+        ${hexRgb(backgroundColor).green},
+        ${hexRgb(backgroundColor).blue},
+        ${backgroundColorOpacity})`,
+      transitionDuration: `${timeIn}ms`,
+    },
+    ' svg': {
+      opacity: 1,
+      transitionDuration: `${timeIn}ms`,
+      transitionDelay: `${timeIn / 2}ms`,
+    },
+  },
+  '.fade-exit': {
+    ' > div': {
+      backgroundColor: `rgba(
+        ${hexRgb(backgroundColor).red},
+        ${hexRgb(backgroundColor).green},
+        ${hexRgb(backgroundColor).blue},
+        ${backgroundColorOpacity})`,
+      transitionDuration: `${timeOut}ms`,
+    },
+    ' svg': {
+      opacity: 1,
+      transitionDuration: `${timeOut}ms`,
+    },
+  },
+  '.fade-exit-active': {
+    ' > div': {
+      backgroundColor: `rgba(
+        ${hexRgb(backgroundColor).red},
+        ${hexRgb(backgroundColor).green},
+        ${hexRgb(backgroundColor).blue},
+        0)`,
+      transitionDuration: `${timeOut}ms`,
+    },
+    ' svg': {
+      opacity: 0,
+      transitionDuration: `${timeOut}ms`,
+    },
+  },
+}));
+
+const Overlay = glamorous.div({
   position: 'absolute',
   top: 0,
   right: 0,
@@ -48,66 +117,29 @@ const Overlay = glamorous.div(({
   overflow: 'hidden',
   height: '100%',
   width: '100%',
-  transition: `background-color ${timeIn}ms ease-in-out`,
-  backgroundColor: loading ? `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},${backgroundColorOpacity})` : `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},0)`,
-  '.fade-enter': {
-    backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},0)`,
-    // opacity: 0,
-    transitionDuration: `${timeIn}ms`,
-    ' svg': {
-      opacity: 0,
-      transitionDuration: `${timeIn}ms`,
-    },
-  },
-  '.fade-enter-active': {
-    backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},${backgroundColorOpacity})`,
-    transitionDuration: `${timeIn}ms`,
-    ' svg': {
-      opacity: 1,
-      transitionDuration: `${timeIn}ms`,
-    },
-    // opacity: 1,
-  },
-  '.fade-exit': {
-    backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},${backgroundColorOpacity})`,
-    transitionDuration: `${timeOut}ms`,
-    ' svg': {
-      opacity: 1,
-      transitionDuration: `${timeOut}ms`,
-    },
-    // opacity: 1,
-  },
-  '.fade-exit-active': {
-    backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},0)`,
-    transitionDuration: `${timeOut}ms`,
-    ' svg': {
-      opacity: 0,
-      transitionDuration: `${timeOut}ms`,
-    },
-    // opacity: 0,
-  },
-}));
+});
 
 const LoadingBox = ({
   children,
   backgroundColor,
   backgroundColorOpacity,
   loading,
+  spinnerColor,
   timeIn,
   timeOut,
   ...props
 }) => (
   <Wrapper>
-    <CSSTransition {...props} timeout={timeIn} classNames="fade" in={loading} unmountOnExit>
-      <Innerwrap>
-        <Spinner fill="white" width="100px" height="100px" />
-        <Overlay
-          backgroundColor={backgroundColor}
-          backgroundColorOpacity={backgroundColorOpacity}
-          loading={loading}
-          timeIn={timeIn}
-          timeOut={timeOut}
-        />
+    <CSSTransition {...props} timeout={timeOut} classNames="fade" in={loading} unmountOnExit>
+      <Innerwrap
+        backgroundColor={backgroundColor}
+        backgroundColorOpacity={backgroundColorOpacity}
+        loading={loading}
+        timeIn={timeIn}
+        timeOut={timeOut}
+      >
+        <Spinner fill={spinnerColor} width="100px" height="100px" />
+        <Overlay />
       </Innerwrap>
     </CSSTransition>
     {children}
@@ -115,6 +147,7 @@ const LoadingBox = ({
 );
 
 LoadingBox.defaultProps = {
+  spinnerColor: WHITE,
   backgroundColor: GREY_1,
   backgroundColorOpacity: 0.8,
   loading: true,
@@ -124,6 +157,7 @@ LoadingBox.defaultProps = {
 
 LoadingBox.propTypes = {
   children: PropTypes.node.isRequired,
+  spinnerColor: PropTypes.string,
   // hex colour 3 or 6 characters with or without hash
   backgroundColor: PropTypes.string,
   backgroundColorOpacity: PropTypes.number,
