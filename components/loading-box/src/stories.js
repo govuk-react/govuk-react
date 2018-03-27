@@ -20,9 +20,10 @@ stories.add('LoadingBox with black', () => (
     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <LoadingBox
       in={boolean('show', false)}
-      backgroundColor={text('backgroundColor', '#000')}
-      timeIn={number('timeIn', 1000)}
-      backgroundColorOpacity={number('backgroundColorOpacity', 1)}
+      backgroundColor={text('backgroundColor', '#888')}
+      timeIn={number('timeIn', 500)}
+      timeOut={number('timeOut', 100)}
+      backgroundColorOpacity={number('backgroundColorOpacity', 0.5)}
     >
       <span style={{ color: '#ffffff' }}>LoadingBox example</span>
     </LoadingBox>

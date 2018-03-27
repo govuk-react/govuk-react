@@ -9,7 +9,9 @@ import { Spinner } from '@govuk-react/icons';
 import { GREY_1 } from 'govuk-colours';
 
 const LoadingBoxInner = glamorous.div(({
+  loading,
   timeIn,
+  timeOut,
   backgroundColor,
   backgroundColorOpacity,
 }) => ({
@@ -22,21 +24,25 @@ const LoadingBoxInner = glamorous.div(({
   height: '100%',
   width: '100%',
   transition: `background-color ${timeIn}ms ease-in-out`,
-  backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},${backgroundColorOpacity})`,
+  backgroundColor: loading ? `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},${backgroundColorOpacity})` : `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},0)`,
   '.fade-enter': {
     backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},0)`,
     // opacity: 0,
+    transitionDuration: `${timeIn}ms`,
   },
   '.fade-enter-active': {
     backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},${backgroundColorOpacity})`,
+    transitionDuration: `${timeIn}ms`,
     // opacity: 1,
   },
   '.fade-exit': {
     backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},${backgroundColorOpacity})`,
+    transitionDuration: `${timeOut}ms`,
     // opacity: 1,
   },
   '.fade-exit-active': {
     backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},0)`,
+    transitionDuration: `${timeOut}ms`,
     // opacity: 0,
   },
 }));
