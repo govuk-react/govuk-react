@@ -3,11 +3,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
+import { CSSTransition } from 'react-transition-group';
+import hexRgb from 'hex-rgb';
 import { Spinner } from '@govuk-react/icons';
 import { GREY_1 } from 'govuk-colours';
-import hexRgb from 'hex-rgb';
 
-const LoadingBoxInner = glamorous.div(({ backgroundColor }) => ({
+const LoadingBoxInner = glamorous.div(({
+  timeIn,
+  backgroundColor,
+  backgroundColorOpacity,
+}) => ({
   position: 'absolute',
   top: 0,
   right: 0,
@@ -16,8 +21,45 @@ const LoadingBoxInner = glamorous.div(({ backgroundColor }) => ({
   overflow: 'hidden',
   height: '100%',
   width: '100%',
-  backgroundColor,
+  transition: `background-color ${timeIn}ms ease-in-out`,
+  backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},${backgroundColorOpacity})`,
+  '.fade-enter': {
+    backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},0)`,
+    // opacity: 0,
+  },
+  '.fade-enter-active': {
+    backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},${backgroundColorOpacity})`,
+    // opacity: 1,
+  },
+  '.fade-exit': {
+    backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},${backgroundColorOpacity})`,
+    // opacity: 1,
+  },
+  '.fade-exit-active': {
+    backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},0)`,
+    // opacity: 0,
+  },
 }));
+// const LoadingBoxInner = glamorous.div(
+//   () => ({
+//     position: 'absolute',
+//     top: 0,
+//     right: 0,
+//     bottom: 0,
+//     left: 0,
+//     overflow: 'hidden',
+//     height: '100%',
+//     width: '100%',
+//   }),
+//   ({ timeIn, backgroundColor }) => ({
+//     backgroundColor,
+//     transition: timeIn ? `background-color ${timeIn}ms` : undefined,
+//   }),
+//   ({ timeOut, backgroundColor, backgroundColorOpacity }) => ({
+//     backgroundColor: `rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},${backgroundColorOpacity})`,
+//     transition: timeOut ? `background-color ${timeOut}ms` : undefined,
+//   }),
+// );
 
 const LoadingBox = ({
   children,
@@ -26,15 +68,19 @@ const LoadingBox = ({
   loading,
   timeIn,
   timeOut,
+  ...props
 }) => (
-  <LoadingBoxInner
-    backgroundColor={`rgba(${hexRgb(backgroundColor).red},${hexRgb(backgroundColor).green},${hexRgb(backgroundColor).blue},${backgroundColorOpacity})`}
-    loading={loading}
-    timeIn={timeIn}
-    timeOut={timeOut}
-  >
-    {children}
-  </LoadingBoxInner>
+  <CSSTransition {...props} timeout={timeIn} classNames="fade" unmountOnExit>
+    <LoadingBoxInner
+      backgroundColor={backgroundColor}
+      backgroundColorOpacity={backgroundColorOpacity}
+      loading={loading}
+      timeIn={timeIn}
+      timeOut={timeOut}
+    >
+      {children}
+    </LoadingBoxInner>
+  </CSSTransition>
 );
 
 LoadingBox.defaultProps = {
