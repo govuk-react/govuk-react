@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Select, { SelectInput } from '.';
 import LabelText from '@govuk-react/label-text';
+import Select, { SelectInput } from '.';
 
 const meta = {
   touched: true,
