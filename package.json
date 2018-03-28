@@ -1,7 +1,6 @@
 {
   "name": "govuk-react",
   "scripts": {
-    "yo": "yarn && yarn bootstrap && yarn build && echo WATCH && yarn watch",
     "start": "cd packages/storybook && npm start",
     "bootstrap": "lerna bootstrap",
     "docs": "./packages/api-docs/bin/doc-component.js './components/**/lib/index.js' './API.md'",
