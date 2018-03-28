@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, number, boolean } from '@storybook/addon-knobs/react';
 import Header from '@govuk-react/header';
@@ -21,8 +20,8 @@ stories.add('LoadingBox default', () => (
   <LoadingBox
     loading={boolean('loading', false)}
     backgroundColor={text('backgroundColor', '#fff')}
-    timeIn={number('timeIn', 300)}
-    timeOut={number('timeOut', 800)}
+    timeIn={number('timeIn', 800)}
+    timeOut={number('timeOut', 200)}
     backgroundColorOpacity={number('backgroundColorOpacity', 0.5)}
     spinnerColor={text('spinnerColor', '#000')}
   >
@@ -48,8 +47,8 @@ stories.add('LoadingBox (long)', () => (
   <LoadingBox
     loading={boolean('loading', false)}
     backgroundColor={text('backgroundColor', '#fff')}
-    timeIn={number('timeIn', 300)}
-    timeOut={number('timeOut', 800)}
+    timeIn={number('timeIn', 800)}
+    timeOut={number('timeOut', 200)}
     backgroundColorOpacity={number('backgroundColorOpacity', 0.5)}
     spinnerColor={text('spinnerColor', '#000')}
   >

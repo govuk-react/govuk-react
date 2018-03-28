@@ -150,7 +150,7 @@ LoadingBox.defaultProps = {
   backgroundColor: WHITE,
   backgroundColorOpacity: 0.5,
   loading: false,
-  timeIn: 200,
+  timeIn: 800,
   timeOut: 200,
 };
 
