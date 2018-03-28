@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LoadingBox matches wrapper not loading: wrapper not loading 1`] = `
+exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
 .glamor-14,
 [data-glamor-14] {
   position: relative;
@@ -24,8 +24,8 @@ exports[`LoadingBox matches wrapper not loading: wrapper not loading 1`] = `
   -webkit-justify-content: center;
 }
 
-.glamor-13> svg,
-[data-glamor-13]> svg {
+.glamor-13 > svg,
+[data-glamor-13] > svg {
   position: absolute;
   z-index: 1;
   opacity: 1;
@@ -602,6 +602,190 @@ exports[`LoadingBox matches wrapper not loading: wrapper not loading 1`] = `
             </div>
           </glamorous(div)>
         </Transition>
+      </CSSTransition>
+      example
+    </div>
+  </glamorous(div)>
+</LoadingBox>
+`;
+
+exports[`LoadingBox matches wrapper not loading: wrapper not loading 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  position: relative;
+}
+
+<LoadingBox
+  backgroundColor="#808080"
+  backgroundColorOpacity={0.5}
+  loading={false}
+  spinnerColor="#ffffff"
+  timeIn={200}
+  timeOut={200}
+>
+  <glamorous(div)>
+    <div
+      className="glamor-0"
+    >
+      <CSSTransition
+        classNames="fade"
+        in={false}
+        timeout={200}
+        unmountOnExit={true}
+      >
+        <Transition
+          appear={false}
+          enter={true}
+          exit={true}
+          in={false}
+          mountOnEnter={false}
+          onEnter={[Function]}
+          onEntered={[Function]}
+          onEntering={[Function]}
+          onExit={[Function]}
+          onExited={[Function]}
+          onExiting={[Function]}
+          timeout={200}
+          unmountOnExit={true}
+        />
+      </CSSTransition>
+      example
+    </div>
+  </glamorous(div)>
+</LoadingBox>
+`;
+
+exports[`LoadingBox matches wrapper not loading1: wrapper not loading1 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  position: relative;
+}
+
+<LoadingBox
+  backgroundColor="#000"
+  backgroundColorOpacity={0.5}
+  loading={false}
+  spinnerColor="#ffffff"
+  timeIn={200}
+  timeOut={200}
+>
+  <glamorous(div)>
+    <div
+      className="glamor-0"
+    >
+      <CSSTransition
+        classNames="fade"
+        in={false}
+        timeout={200}
+        unmountOnExit={true}
+      >
+        <Transition
+          appear={false}
+          enter={true}
+          exit={true}
+          in={false}
+          mountOnEnter={false}
+          onEnter={[Function]}
+          onEntered={[Function]}
+          onEntering={[Function]}
+          onExit={[Function]}
+          onExited={[Function]}
+          onExiting={[Function]}
+          timeout={200}
+          unmountOnExit={true}
+        />
+      </CSSTransition>
+      example
+    </div>
+  </glamorous(div)>
+</LoadingBox>
+`;
+
+exports[`LoadingBox matches wrapper not loading2: wrapper not loading2 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  position: relative;
+}
+
+<LoadingBox
+  backgroundColor="#808080"
+  backgroundColorOpacity={0.1}
+  loading={false}
+  spinnerColor="#ffffff"
+  timeIn={200}
+  timeOut={200}
+>
+  <glamorous(div)>
+    <div
+      className="glamor-0"
+    >
+      <CSSTransition
+        classNames="fade"
+        in={false}
+        timeout={200}
+        unmountOnExit={true}
+      >
+        <Transition
+          appear={false}
+          enter={true}
+          exit={true}
+          in={false}
+          mountOnEnter={false}
+          onEnter={[Function]}
+          onEntered={[Function]}
+          onEntering={[Function]}
+          onExit={[Function]}
+          onExited={[Function]}
+          onExiting={[Function]}
+          timeout={200}
+          unmountOnExit={true}
+        />
+      </CSSTransition>
+      example
+    </div>
+  </glamorous(div)>
+</LoadingBox>
+`;
+
+exports[`LoadingBox matches wrapper not loading3: wrapper not loading3 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  position: relative;
+}
+
+<LoadingBox
+  backgroundColor="#808080"
+  backgroundColorOpacity={0.5}
+  loading={false}
+  spinnerColor="#fff"
+  timeIn={333}
+  timeOut={222}
+>
+  <glamorous(div)>
+    <div
+      className="glamor-0"
+    >
+      <CSSTransition
+        classNames="fade"
+        in={false}
+        timeout={222}
+        unmountOnExit={true}
+      >
+        <Transition
+          appear={false}
+          enter={true}
+          exit={true}
+          in={false}
+          mountOnEnter={false}
+          onEnter={[Function]}
+          onEntered={[Function]}
+          onEntering={[Function]}
+          onExit={[Function]}
+          onExited={[Function]}
+          onExiting={[Function]}
+          timeout={222}
+          unmountOnExit={true}
+        />
       </CSSTransition>
       example
     </div>

@@ -6,7 +6,7 @@ import glamorous from 'glamorous';
 import { CSSTransition } from 'react-transition-group';
 import hexRgb from 'hex-rgb';
 import { Spinner } from '@govuk-react/icons';
-import { GREY_1, WHITE } from 'govuk-colours';
+import { WHITE } from 'govuk-colours';
 
 const Wrapper = glamorous.div({
   position: 'relative',
@@ -27,7 +27,7 @@ const Innerwrap = glamorous.div(({
   bottom: 0,
   display: 'flex',
   justifyContent: 'center',
-  '> svg': {
+  ' > svg': {
     position: 'absolute',
     zIndex: 1,
     opacity: 1,
@@ -38,15 +38,11 @@ const Innerwrap = glamorous.div(({
   },
   ' > div': {
     transition: `background-color ${timeIn}ms ease-in-out`,
-    backgroundColor: loading ? `rgba(
+    backgroundColor: `rgba(
       ${hexRgb(backgroundColor).red},
       ${hexRgb(backgroundColor).green},
       ${hexRgb(backgroundColor).blue},
-      ${backgroundColorOpacity})` : `rgba(
-        ${hexRgb(backgroundColor).red},
-        ${hexRgb(backgroundColor).green},
-        ${hexRgb(backgroundColor).blue},
-        0)`,
+      ${backgroundColorOpacity})`,
   },
   '.fade-enter': {
     ' > div': {
@@ -150,7 +146,7 @@ LoadingBox.defaultProps = {
   spinnerColor: WHITE,
   backgroundColor: '#808080',
   backgroundColorOpacity: 0.5,
-  loading: true,
+  loading: false,
   timeIn: 200,
   timeOut: 200,
 };
