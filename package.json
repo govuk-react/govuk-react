@@ -101,7 +101,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
     "final-form": "^4.2.0",
-    "flow-bin": "^0.68.0",
+    "flow-bin": "^0.69.0",
     "glamor": "^2.20.40",
     "glamorous": "^4.11.2",
     "jest": "^22.1.2",
