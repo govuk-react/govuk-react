@@ -33,22 +33,22 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
   display: block;
   height: 100%;
   max-height: calc(50vh + 100px);
-  transition: opacity 200ms ease-in-out;
-  -webkit-transition: opacity 200ms ease-in-out;
-  -moz-transition: opacity 200ms ease-in-out;
+  transition: opacity 800ms ease-in-out;
+  -webkit-transition: opacity 800ms ease-in-out;
+  -moz-transition: opacity 800ms ease-in-out;
 }
 
 .glamor-13 .overlay,
 [data-glamor-13] .overlay {
   z-index: 100;
-  transition: background-color 200ms ease-in-out;
+  transition: background-color 800ms ease-in-out;
   background-color: rgba(
       255,
       255,
       255,
       0.5);
-  -webkit-transition: background-color 200ms ease-in-out;
-  -moz-transition: background-color 200ms ease-in-out;
+  -webkit-transition: background-color 800ms ease-in-out;
+  -moz-transition: background-color 800ms ease-in-out;
 }
 
 .glamor-13.fade-enter .overlay,
@@ -58,17 +58,17 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
         255,
         255,
         0);
-  transition-duration: 200ms;
-  -webkit-transition-duration: 200ms;
+  transition-duration: 800ms;
+  -webkit-transition-duration: 800ms;
 }
 
 .glamor-13.fade-enter .icon-loading,
 [data-glamor-13].fade-enter .icon-loading {
   opacity: 0;
-  transition-duration: 200ms;
-  transition-delay: 100ms;
-  -webkit-transition-duration: 200ms;
-  -webkit-transition-delay: 100ms;
+  transition-duration: 800ms;
+  transition-delay: 400ms;
+  -webkit-transition-duration: 800ms;
+  -webkit-transition-delay: 400ms;
 }
 
 .glamor-13.fade-enter-active .overlay,
@@ -78,17 +78,17 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
         255,
         255,
         0.5);
-  transition-duration: 200ms;
-  -webkit-transition-duration: 200ms;
+  transition-duration: 800ms;
+  -webkit-transition-duration: 800ms;
 }
 
 .glamor-13.fade-enter-active .icon-loading,
 [data-glamor-13].fade-enter-active .icon-loading {
   opacity: 1;
-  transition-duration: 200ms;
-  transition-delay: 100ms;
-  -webkit-transition-duration: 200ms;
-  -webkit-transition-delay: 100ms;
+  transition-duration: 800ms;
+  transition-delay: 400ms;
+  -webkit-transition-duration: 800ms;
+  -webkit-transition-delay: 400ms;
 }
 
 .glamor-13.fade-exit .overlay,
@@ -150,7 +150,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
   backgroundColorOpacity={0.5}
   loading={true}
   spinnerColor="#0b0c0c"
-  timeIn={200}
+  timeIn={800}
   timeOut={200}
 >
   <glamorous(div)>
@@ -182,7 +182,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
             backgroundColor="#ffffff"
             backgroundColorOpacity={0.5}
             loading={true}
-            timeIn={200}
+            timeIn={800}
             timeOut={200}
           >
             <div
