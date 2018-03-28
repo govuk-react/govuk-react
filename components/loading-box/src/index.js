@@ -148,11 +148,11 @@ const LoadingBox = ({
 
 LoadingBox.defaultProps = {
   spinnerColor: WHITE,
-  backgroundColor: GREY_1,
-  backgroundColorOpacity: 0.8,
+  backgroundColor: '#808080',
+  backgroundColorOpacity: 0.5,
   loading: true,
-  timeIn: 500,
-  timeOut: 500,
+  timeIn: 200,
+  timeOut: 200,
 };
 
 LoadingBox.propTypes = {
