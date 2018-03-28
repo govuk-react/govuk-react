@@ -104,7 +104,6 @@
     "flow-bin": "^0.68.0",
     "glamor": "^2.20.40",
     "glamorous": "^4.11.2",
-    "hex-rgb": "^2.0.0",
     "jest": "^22.1.2",
     "jest-glamor-react": "^3.3.0",
     "lerna": "2",
@@ -116,7 +115,6 @@
     "react-final-form": "^3.1.0",
     "react-router-dom": "^4.2.2",
     "react-test-renderer": "^16.2.0",
-    "react-transition-group": "^2.2.1",
     "rimraf": "^2.6.2",
     "webpack": "^3.10.0",
     "webpack-cli": "^2.0.12"

@@ -4,6 +4,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
 .glamor-14,
 [data-glamor-14] {
   position: relative;
+  padding-bottom: 2px;
 }
 
 .glamor-13,
@@ -24,10 +25,10 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
   -webkit-justify-content: center;
 }
 
-.glamor-13 > svg,
-[data-glamor-13] > svg {
+.glamor-13 .icon-loading,
+[data-glamor-13] .icon-loading {
   position: absolute;
-  z-index: 1;
+  z-index: 101;
   opacity: 1;
   display: block;
   height: 100%;
@@ -37,31 +38,32 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
   -moz-transition: opacity 200ms ease-in-out;
 }
 
-.glamor-13 > div,
-[data-glamor-13] > div {
+.glamor-13 .overlay,
+[data-glamor-13] .overlay {
+  z-index: 100;
   transition: background-color 200ms ease-in-out;
   background-color: rgba(
-      128,
-      128,
-      128,
+      255,
+      255,
+      255,
       0.5);
   -webkit-transition: background-color 200ms ease-in-out;
   -moz-transition: background-color 200ms ease-in-out;
 }
 
-.glamor-13.fade-enter > div,
-[data-glamor-13].fade-enter > div {
+.glamor-13.fade-enter .overlay,
+[data-glamor-13].fade-enter .overlay {
   background-color: rgba(
-        128,
-        128,
-        128,
+        255,
+        255,
+        255,
         0);
   transition-duration: 200ms;
   -webkit-transition-duration: 200ms;
 }
 
-.glamor-13.fade-enter svg,
-[data-glamor-13].fade-enter svg {
+.glamor-13.fade-enter .icon-loading,
+[data-glamor-13].fade-enter .icon-loading {
   opacity: 0;
   transition-duration: 200ms;
   transition-delay: 100ms;
@@ -69,19 +71,19 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
   -webkit-transition-delay: 100ms;
 }
 
-.glamor-13.fade-enter-active > div,
-[data-glamor-13].fade-enter-active > div {
+.glamor-13.fade-enter-active .overlay,
+[data-glamor-13].fade-enter-active .overlay {
   background-color: rgba(
-        128,
-        128,
-        128,
+        255,
+        255,
+        255,
         0.5);
   transition-duration: 200ms;
   -webkit-transition-duration: 200ms;
 }
 
-.glamor-13.fade-enter-active svg,
-[data-glamor-13].fade-enter-active svg {
+.glamor-13.fade-enter-active .icon-loading,
+[data-glamor-13].fade-enter-active .icon-loading {
   opacity: 1;
   transition-duration: 200ms;
   transition-delay: 100ms;
@@ -89,37 +91,37 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
   -webkit-transition-delay: 100ms;
 }
 
-.glamor-13.fade-exit > div,
-[data-glamor-13].fade-exit > div {
+.glamor-13.fade-exit .overlay,
+[data-glamor-13].fade-exit .overlay {
   background-color: rgba(
-        128,
-        128,
-        128,
+        255,
+        255,
+        255,
         0.5);
   transition-duration: 200ms;
   -webkit-transition-duration: 200ms;
 }
 
-.glamor-13.fade-exit svg,
-[data-glamor-13].fade-exit svg {
+.glamor-13.fade-exit .icon-loading,
+[data-glamor-13].fade-exit .icon-loading {
   opacity: 1;
   transition-duration: 200ms;
   -webkit-transition-duration: 200ms;
 }
 
-.glamor-13.fade-exit-active > div,
-[data-glamor-13].fade-exit-active > div {
+.glamor-13.fade-exit-active .overlay,
+[data-glamor-13].fade-exit-active .overlay {
   background-color: rgba(
-        128,
-        128,
-        128,
+        255,
+        255,
+        255,
         0);
   transition-duration: 200ms;
   -webkit-transition-duration: 200ms;
 }
 
-.glamor-13.fade-exit-active svg,
-[data-glamor-13].fade-exit-active svg {
+.glamor-13.fade-exit-active .icon-loading,
+[data-glamor-13].fade-exit-active .icon-loading {
   opacity: 0;
   transition-duration: 200ms;
   -webkit-transition-duration: 200ms;
@@ -144,10 +146,10 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
 }
 
 <LoadingBox
-  backgroundColor="#808080"
+  backgroundColor="#ffffff"
   backgroundColorOpacity={0.5}
   loading={true}
-  spinnerColor="#ffffff"
+  spinnerColor="#0b0c0c"
   timeIn={200}
   timeOut={200}
 >
@@ -177,7 +179,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
           unmountOnExit={true}
         >
           <glamorous(div)
-            backgroundColor="#808080"
+            backgroundColor="#ffffff"
             backgroundColorOpacity={0.5}
             loading={true}
             timeIn={200}
@@ -187,13 +189,15 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
               className="glamor-13"
             >
               <Spinner
-                fill="#ffffff"
+                className="icon-loading"
+                fill="#0b0c0c"
                 height="100px"
                 title="Loading"
                 width="100px"
               >
                 <SVG
-                  fill="#ffffff"
+                  className="icon-loading"
+                  fill="#0b0c0c"
                   height="100px"
                   preserveAspectRatio="xMidYMid meet"
                   title="Loading"
@@ -201,7 +205,8 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                   width="100px"
                 >
                   <svg
-                    fill="#ffffff"
+                    className="icon-loading"
+                    fill="#0b0c0c"
                     height="100px"
                     preserveAspectRatio="xMidYMid meet"
                     style={
@@ -220,7 +225,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       Loading
                     </title>
                     <glamorous(rect)
-                      fill="#ffffff"
+                      fill="#0b0c0c"
                       height="5"
                       key="0"
                       opacity="0"
@@ -236,7 +241,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                     >
                       <rect
                         className="glamor-0"
-                        fill="#ffffff"
+                        fill="#0b0c0c"
                         height="5"
                         opacity="0"
                         rx="2.5"
@@ -251,7 +256,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       />
                     </glamorous(rect)>
                     <glamorous(rect)
-                      fill="#ffffff"
+                      fill="#0b0c0c"
                       height="5"
                       key="1"
                       opacity="0"
@@ -267,7 +272,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                     >
                       <rect
                         className="glamor-0"
-                        fill="#ffffff"
+                        fill="#0b0c0c"
                         height="5"
                         opacity="0"
                         rx="2.5"
@@ -282,7 +287,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       />
                     </glamorous(rect)>
                     <glamorous(rect)
-                      fill="#ffffff"
+                      fill="#0b0c0c"
                       height="5"
                       key="2"
                       opacity="0"
@@ -298,7 +303,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                     >
                       <rect
                         className="glamor-0"
-                        fill="#ffffff"
+                        fill="#0b0c0c"
                         height="5"
                         opacity="0"
                         rx="2.5"
@@ -313,7 +318,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       />
                     </glamorous(rect)>
                     <glamorous(rect)
-                      fill="#ffffff"
+                      fill="#0b0c0c"
                       height="5"
                       key="3"
                       opacity="0"
@@ -329,7 +334,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                     >
                       <rect
                         className="glamor-0"
-                        fill="#ffffff"
+                        fill="#0b0c0c"
                         height="5"
                         opacity="0"
                         rx="2.5"
@@ -344,7 +349,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       />
                     </glamorous(rect)>
                     <glamorous(rect)
-                      fill="#ffffff"
+                      fill="#0b0c0c"
                       height="5"
                       key="4"
                       opacity="0"
@@ -360,7 +365,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                     >
                       <rect
                         className="glamor-0"
-                        fill="#ffffff"
+                        fill="#0b0c0c"
                         height="5"
                         opacity="0"
                         rx="2.5"
@@ -375,7 +380,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       />
                     </glamorous(rect)>
                     <glamorous(rect)
-                      fill="#ffffff"
+                      fill="#0b0c0c"
                       height="5"
                       key="5"
                       opacity="0"
@@ -391,7 +396,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                     >
                       <rect
                         className="glamor-0"
-                        fill="#ffffff"
+                        fill="#0b0c0c"
                         height="5"
                         opacity="0"
                         rx="2.5"
@@ -406,7 +411,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       />
                     </glamorous(rect)>
                     <glamorous(rect)
-                      fill="#ffffff"
+                      fill="#0b0c0c"
                       height="5"
                       key="6"
                       opacity="0"
@@ -422,7 +427,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                     >
                       <rect
                         className="glamor-0"
-                        fill="#ffffff"
+                        fill="#0b0c0c"
                         height="5"
                         opacity="0"
                         rx="2.5"
@@ -437,7 +442,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       />
                     </glamorous(rect)>
                     <glamorous(rect)
-                      fill="#ffffff"
+                      fill="#0b0c0c"
                       height="5"
                       key="7"
                       opacity="0"
@@ -453,7 +458,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                     >
                       <rect
                         className="glamor-0"
-                        fill="#ffffff"
+                        fill="#0b0c0c"
                         height="5"
                         opacity="0"
                         rx="2.5"
@@ -468,7 +473,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       />
                     </glamorous(rect)>
                     <glamorous(rect)
-                      fill="#ffffff"
+                      fill="#0b0c0c"
                       height="5"
                       key="8"
                       opacity="0"
@@ -484,7 +489,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                     >
                       <rect
                         className="glamor-0"
-                        fill="#ffffff"
+                        fill="#0b0c0c"
                         height="5"
                         opacity="0"
                         rx="2.5"
@@ -499,7 +504,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       />
                     </glamorous(rect)>
                     <glamorous(rect)
-                      fill="#ffffff"
+                      fill="#0b0c0c"
                       height="5"
                       key="9"
                       opacity="0"
@@ -515,7 +520,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                     >
                       <rect
                         className="glamor-0"
-                        fill="#ffffff"
+                        fill="#0b0c0c"
                         height="5"
                         opacity="0"
                         rx="2.5"
@@ -530,7 +535,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       />
                     </glamorous(rect)>
                     <glamorous(rect)
-                      fill="#ffffff"
+                      fill="#0b0c0c"
                       height="5"
                       key="10"
                       opacity="0"
@@ -546,7 +551,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                     >
                       <rect
                         className="glamor-0"
-                        fill="#ffffff"
+                        fill="#0b0c0c"
                         height="5"
                         opacity="0"
                         rx="2.5"
@@ -561,7 +566,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       />
                     </glamorous(rect)>
                     <glamorous(rect)
-                      fill="#ffffff"
+                      fill="#0b0c0c"
                       height="5"
                       key="11"
                       opacity="0"
@@ -577,7 +582,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                     >
                       <rect
                         className="glamor-0"
-                        fill="#ffffff"
+                        fill="#0b0c0c"
                         height="5"
                         opacity="0"
                         rx="2.5"
@@ -596,7 +601,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
               </Spinner>
               <glamorous(div)>
                 <div
-                  className="glamor-12"
+                  className="glamor-12 overlay"
                 />
               </glamorous(div)>
             </div>

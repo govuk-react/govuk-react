@@ -1,4 +1,4 @@
-// TODO INSERT A COMMENT REFERENCE TO EXTERNAL URL IF POSSIBLE
+// https://govuk-loader-prototype.herokuapp.com/components/loader
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -6,16 +6,18 @@ import glamorous from 'glamorous';
 import { CSSTransition } from 'react-transition-group';
 import hexRgb from 'hex-rgb';
 import { Spinner } from '@govuk-react/icons';
-import { WHITE } from 'govuk-colours';
+import { BLACK, WHITE } from 'govuk-colours';
+
+const spinnerClassName = 'icon-loading';
 
 const Wrapper = glamorous.div({
   position: 'relative',
+  paddingBottom: '2px',
 });
 
 const Innerwrap = glamorous.div(({
   timeIn,
   timeOut,
-  loading,
   backgroundColor,
   backgroundColorOpacity,
 }) => ({
@@ -27,16 +29,17 @@ const Innerwrap = glamorous.div(({
   bottom: 0,
   display: 'flex',
   justifyContent: 'center',
-  ' > svg': {
+  [`& .${spinnerClassName}`]: {
     position: 'absolute',
-    zIndex: 1,
+    zIndex: 101,
     opacity: 1,
     display: 'block',
     height: '100%',
     maxHeight: 'calc(50vh + 100px)',
     transition: `opacity ${timeIn}ms ease-in-out`,
   },
-  ' > div': {
+  '& .overlay': {
+    zIndex: 100,
     transition: `background-color ${timeIn}ms ease-in-out`,
     backgroundColor: `rgba(
       ${hexRgb(backgroundColor).red},
@@ -45,7 +48,7 @@ const Innerwrap = glamorous.div(({
       ${backgroundColorOpacity})`,
   },
   '.fade-enter': {
-    ' > div': {
+    '& .overlay': {
       backgroundColor: `rgba(
         ${hexRgb(backgroundColor).red},
         ${hexRgb(backgroundColor).green},
@@ -53,14 +56,14 @@ const Innerwrap = glamorous.div(({
         0)`,
       transitionDuration: `${timeIn}ms`,
     },
-    ' svg': {
+    [`& .${spinnerClassName}`]: {
       opacity: 0,
       transitionDuration: `${timeIn}ms`,
       transitionDelay: `${timeIn / 2}ms`,
     },
   },
   '.fade-enter-active': {
-    ' > div': {
+    '& .overlay': {
       backgroundColor: `rgba(
         ${hexRgb(backgroundColor).red},
         ${hexRgb(backgroundColor).green},
@@ -68,14 +71,14 @@ const Innerwrap = glamorous.div(({
         ${backgroundColorOpacity})`,
       transitionDuration: `${timeIn}ms`,
     },
-    ' svg': {
+    [`& .${spinnerClassName}`]: {
       opacity: 1,
       transitionDuration: `${timeIn}ms`,
       transitionDelay: `${timeIn / 2}ms`,
     },
   },
   '.fade-exit': {
-    ' > div': {
+    '& .overlay': {
       backgroundColor: `rgba(
         ${hexRgb(backgroundColor).red},
         ${hexRgb(backgroundColor).green},
@@ -83,13 +86,13 @@ const Innerwrap = glamorous.div(({
         ${backgroundColorOpacity})`,
       transitionDuration: `${timeOut}ms`,
     },
-    ' svg': {
+    [`& .${spinnerClassName}`]: {
       opacity: 1,
       transitionDuration: `${timeOut}ms`,
     },
   },
   '.fade-exit-active': {
-    ' > div': {
+    '& .overlay': {
       backgroundColor: `rgba(
         ${hexRgb(backgroundColor).red},
         ${hexRgb(backgroundColor).green},
@@ -97,14 +100,14 @@ const Innerwrap = glamorous.div(({
         0)`,
       transitionDuration: `${timeOut}ms`,
     },
-    ' svg': {
+    [`& .${spinnerClassName}`]: {
       opacity: 0,
       transitionDuration: `${timeOut}ms`,
     },
   },
 }));
 
-const Overlay = glamorous.div({
+const Overlay = glamorous.div('overlay', {
   position: 'absolute',
   top: 0,
   right: 0,
@@ -134,7 +137,7 @@ const LoadingBox = ({
         timeIn={timeIn}
         timeOut={timeOut}
       >
-        <Spinner fill={spinnerColor} width="100px" height="100px" />
+        <Spinner className={spinnerClassName} fill={spinnerColor} width="100px" height="100px" />
         <Overlay />
       </Innerwrap>
     </CSSTransition>
@@ -143,8 +146,8 @@ const LoadingBox = ({
 );
 
 LoadingBox.defaultProps = {
-  spinnerColor: WHITE,
-  backgroundColor: '#808080',
+  spinnerColor: BLACK,
+  backgroundColor: WHITE,
   backgroundColorOpacity: 0.5,
   loading: false,
   timeIn: 200,
@@ -154,12 +157,13 @@ LoadingBox.defaultProps = {
 LoadingBox.propTypes = {
   children: PropTypes.node.isRequired,
   spinnerColor: PropTypes.string,
-  // hex colour 3 or 6 characters with or without hash
+  // hex colour 3 or 6 characters (with or without hash)
   backgroundColor: PropTypes.string,
   backgroundColorOpacity: PropTypes.number,
   loading: PropTypes.bool,
-  // number in milliseconds
+  // length of fade-in animation in milliseconds
   timeIn: PropTypes.number,
+  // length of fade-out animation in milliseconds
   timeOut: PropTypes.number,
 };
 
