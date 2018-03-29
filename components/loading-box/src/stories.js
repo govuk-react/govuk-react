@@ -43,6 +43,33 @@ stories.add('LoadingBox default', () => (
   </LoadingBox>
 ));
 
+stories.add('LoadingBox preset to loading', () => (
+  <LoadingBox
+    loading={boolean('loading', true)}
+    backgroundColor={text('backgroundColor', '#fff')}
+    timeIn={number('timeIn', 800)}
+    timeOut={number('timeOut', 200)}
+    backgroundColorOpacity={number('backgroundColorOpacity', 0.5)}
+    spinnerColor={text('spinnerColor', '#000')}
+  >
+    <div style={{ padding: '0 12px' }}>
+      <PhaseBanner level="alpha">
+      This part of GOV.UK is being rebuilt &#8211;{' '}
+        <AnchorLink href="https://example.com">find out what that means</AnchorLink>
+      </PhaseBanner>
+      {spacer}
+      <Header level={2}>Toggle loading settings under `knobs`</Header>
+      <InputField
+        name="group1"
+      >
+      Email address
+      </InputField>
+      {spacer}
+      <Button start>Continue</Button>
+    </div>
+  </LoadingBox>
+));
+
 stories.add('LoadingBox (long)', () => (
   <LoadingBox
     loading={boolean('loading', false)}
