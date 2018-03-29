@@ -19,8 +19,13 @@ const animationStyles = () => {
 
 const Rect = glamorous.rect(animationStyles);
 
-const Spinner = ({ fill, title, ...rest }) => (
-  <SVG viewBox="-50 -50 100 100" preserveAspectRatio="xMidYMid meet" title={title} fill={fill} {...rest}>
+const Spinner = ({
+  className,
+  fill,
+  title,
+  ...rest
+}) => (
+  <SVG className={className} viewBox="-50 -50 100 100" preserveAspectRatio="xMidYMid meet" title={title} fill={fill} {...rest}>
     {Array(12).fill(1).map((el, i) =>
       /* eslint-disable-next-line react/no-array-index-key */
       <Rect fill={fill} width="12" height="5" rx="2.5" ry="2.5" style={{ animationDelay: `${i * 83}ms` }} transform={`rotate(${i * 30}, 0, 2) translate(10 0)`} opacity="0" key={i} />)}
@@ -28,11 +33,13 @@ const Spinner = ({ fill, title, ...rest }) => (
 );
 
 Spinner.propTypes = {
+  className: PropTypes.string,
   title: PropTypes.string,
   fill: PropTypes.string,
 };
 
 Spinner.defaultProps = {
+  className: 'icon-spinner',
   title: 'Loading',
   fill: 'currentColor',
 };

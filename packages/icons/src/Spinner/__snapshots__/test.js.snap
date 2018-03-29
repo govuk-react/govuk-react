@@ -8,12 +8,14 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <Spinner
+  className="icon-spinner"
   fill="red"
   height="100px"
   title="Loading"
   width="100px"
 >
   <SVG
+    className="icon-spinner"
     fill="red"
     height="100px"
     preserveAspectRatio="xMidYMid meet"
@@ -22,6 +24,7 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
     width="100px"
   >
     <svg
+      className="icon-spinner"
       fill="red"
       height="100px"
       preserveAspectRatio="xMidYMid meet"
