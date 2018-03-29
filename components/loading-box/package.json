@@ -8,8 +8,8 @@
   "dependencies": {
     "@govuk-react/icons": "^0.1.24",
     "govuk-colours": "^1.0.3",
-    "hex-rgb": "^2.0.0",
-    "react-transition-group": "^2.2.1"
+    "react-transition-group": "^2.2.1",
+    "hex-rgb": "^1.0.0"
   },
   "peerDependencies": {
     "glamorous": ">=4",

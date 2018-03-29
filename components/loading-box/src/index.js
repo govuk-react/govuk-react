@@ -42,17 +42,17 @@ const Innerwrap = glamorous.div(({
     zIndex: 100,
     transition: `background-color ${timeIn}ms ease-in-out`,
     backgroundColor: `rgba(
-      ${hexRgb(backgroundColor).red},
-      ${hexRgb(backgroundColor).green},
-      ${hexRgb(backgroundColor).blue},
+      ${hexRgb(backgroundColor)[0]},
+      ${hexRgb(backgroundColor)[1]},
+      ${hexRgb(backgroundColor)[2]},
       ${backgroundColorOpacity})`,
   },
   '.fade-enter': {
     '& .overlay': {
       backgroundColor: `rgba(
-        ${hexRgb(backgroundColor).red},
-        ${hexRgb(backgroundColor).green},
-        ${hexRgb(backgroundColor).blue},
+        ${hexRgb(backgroundColor)[0]},
+        ${hexRgb(backgroundColor)[1]},
+        ${hexRgb(backgroundColor)[2]},
         0)`,
       transitionDuration: `${timeIn}ms`,
     },
@@ -65,9 +65,9 @@ const Innerwrap = glamorous.div(({
   '.fade-enter-active': {
     '& .overlay': {
       backgroundColor: `rgba(
-        ${hexRgb(backgroundColor).red},
-        ${hexRgb(backgroundColor).green},
-        ${hexRgb(backgroundColor).blue},
+        ${hexRgb(backgroundColor)[0]},
+        ${hexRgb(backgroundColor)[1]},
+        ${hexRgb(backgroundColor)[2]},
         ${backgroundColorOpacity})`,
       transitionDuration: `${timeIn}ms`,
     },
@@ -80,9 +80,9 @@ const Innerwrap = glamorous.div(({
   '.fade-exit': {
     '& .overlay': {
       backgroundColor: `rgba(
-        ${hexRgb(backgroundColor).red},
-        ${hexRgb(backgroundColor).green},
-        ${hexRgb(backgroundColor).blue},
+        ${hexRgb(backgroundColor)[0]},
+        ${hexRgb(backgroundColor)[1]},
+        ${hexRgb(backgroundColor)[2]},
         ${backgroundColorOpacity})`,
       transitionDuration: `${timeOut}ms`,
     },
@@ -94,9 +94,9 @@ const Innerwrap = glamorous.div(({
   '.fade-exit-active': {
     '& .overlay': {
       backgroundColor: `rgba(
-        ${hexRgb(backgroundColor).red},
-        ${hexRgb(backgroundColor).green},
-        ${hexRgb(backgroundColor).blue},
+        ${hexRgb(backgroundColor)[0]},
+        ${hexRgb(backgroundColor)[1]},
+        ${hexRgb(backgroundColor)[2]},
         0)`,
       transitionDuration: `${timeOut}ms`,
     },
