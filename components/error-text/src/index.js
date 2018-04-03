@@ -2,6 +2,7 @@
 
 import glamorous from 'glamorous';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { ERROR_COLOUR } from 'govuk-colours';
 import { FONT_SIZE, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants';
 
@@ -23,5 +24,14 @@ const GErrorText = glamorous.span({
   },
 });
 
-const ErrorText = props => <GErrorText {...props} />;
+const ErrorText = ({ children, ...props }) => (
+  <GErrorText {...props}>
+    {children}
+  </GErrorText>
+);
+
+ErrorText.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
 export default ErrorText;

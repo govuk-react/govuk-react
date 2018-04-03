@@ -2,6 +2,7 @@
 
 import glamorous from 'glamorous';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { BLACK } from 'govuk-colours';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
 
@@ -27,6 +28,13 @@ const GLabelText = glamorous.span(
   }),
 );
 
-const LabelText = props => <GLabelText {...props} />;
+const LabelText = ({ children, ...props }) => (
+  <GLabelText {...props}>
+    {children}
+  </GLabelText>);
+
+LabelText.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default LabelText;
