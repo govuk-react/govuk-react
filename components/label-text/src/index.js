@@ -28,8 +28,8 @@ const GLabelText = glamorous.span(
   }),
 );
 
-const LabelText = ({ children }) => (
-  <GLabelText>
+const LabelText = ({ children, ...props }) => (
+  <GLabelText {...props}>
     {children}
   </GLabelText>);
 

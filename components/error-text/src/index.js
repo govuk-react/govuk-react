@@ -24,7 +24,11 @@ const GErrorText = glamorous.span({
   },
 });
 
-const ErrorText = ({ children }) => (<GErrorText>{children}</GErrorText>);
+const ErrorText = ({ children, ...props }) => (
+  <GErrorText {...props}>
+    {children}
+  </GErrorText>
+);
 
 ErrorText.propTypes = {
   children: PropTypes.node.isRequired,

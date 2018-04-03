@@ -22,8 +22,8 @@ const GHintText = glamorous.span({
   },
 });
 
-const HintText = ({ children }) => (
-  <GHintText>
+const HintText = ({ children, ...props }) => (
+  <GHintText {...props}>
     {children}
   </GHintText>);
 
