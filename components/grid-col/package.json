@@ -1,6 +1,6 @@
 {
   "name": "@govuk-react/grid-col",
-  "version": "0.1.24",
+  "version": "0.1.25",
   "dependencies": {
     "@govuk-react/constants": "^0.1.21",
     "govuk-colours": "^1.0.3"
@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
-    "@govuk-react/api-docs": "^0.1.24",
+    "@govuk-react/api-docs": "^0.1.25",
     "@storybook/addon-actions": "^3.3.14",
     "@storybook/react": "^3.3.14",
     "cross-env": "^5.1.4",
