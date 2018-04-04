@@ -65,9 +65,9 @@ DocumentFooterMetadata
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `from` |  | undefined | array | 
- `other` |  | undefined | array | 
- `partOf` |  | undefined | array | 
+ `from` |  | undefined | arrayOf[object Object] | 
+ `other` |  | undefined | arrayOf[object Object] | 
+ `partOf` |  | undefined | arrayOf[object Object] | 
 
 
 ErrorText
@@ -75,6 +75,10 @@ ErrorText
 
 ![Component Image](./docs/ErrorText.png)
 
+
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true |  | node | 
 
 
 FileUpload
@@ -131,6 +135,10 @@ HintText
 ![Component Image](./docs/HintText.png)
 
 
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true |  | node | 
+
 
 InputField
 ==========
@@ -154,6 +162,7 @@ Input
 
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
+ `errorColor` |  | undefined | string | 
  `onChange` |  | undefined | func | 
  `type` |  | 'text' | string | 
  `value` |  | undefined | string | 
@@ -164,6 +173,10 @@ LabelText
 
 ![Component Image](./docs/LabelText.png)
 
+
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true |  | node | 
 
 
 Label
@@ -205,6 +218,23 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true |  | node | 
  `listStyleType` |  | undefined | string | 
+
+
+LoadingBox
+==========
+
+![Component Image](./docs/LoadingBox.png)
+
+
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `backgroundColor` |  | WHITE | string | 
+ `backgroundColorOpacity` |  | 0.5 | number | 
+ `children` | true |  | node | 
+ `loading` |  | false | bool | 
+ `spinnerColor` |  | BLACK | string | 
+ `timeIn` |  | 800 | number | 
+ `timeOut` |  | 200 | number | 
 
 
 MultiChoice
