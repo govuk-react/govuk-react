@@ -62,3 +62,5 @@ export const SPACING_MAP = [
   RESPONSIVE_8,
   RESPONSIVE_9,
 ];
+
+export const SPACING_MAP_INDEX = Array.from(Array(SPACING_MAP.length).keys());

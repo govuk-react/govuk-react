@@ -13,7 +13,7 @@ import Input from '@govuk-react/input';
 const InputField = ({
   meta, children, hint, input, className,
 }) => (
-  <Label css={[className]} error={meta.touched && meta.error}>
+  <Label className={className} error={meta.touched && meta.error}>
     <LabelText>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
