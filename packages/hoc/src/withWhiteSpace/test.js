@@ -3,16 +3,22 @@ import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import InputField from '@govuk-react/input-field';
 
-import asWhitespace from './';
+import withWhiteSpace from './';
 
-const InputFieldWhitespace = asWhitespace(InputField, 5);
+const config = {
+  marginBottom: 0,
+};
 
-const wrapper = <InputFieldWhitespace>Example</InputFieldWhitespace>;
+const InputFieldWithWhiteSpace = withWhiteSpace(config)(InputField);
 
-describe(asWhitespace, () => {
+const wrapper = <InputFieldWithWhiteSpace>Example</InputFieldWithWhiteSpace>;
+const wrapperWithMarginBottom = <InputFieldWithWhiteSpace mb={3}>Example</InputFieldWithWhiteSpace>;
+
+describe(withWhiteSpace, () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(wrapper, div);
+    ReactDOM.render(wrapperWithMarginBottom, div);
   });
 
   it('returns a component', () => {

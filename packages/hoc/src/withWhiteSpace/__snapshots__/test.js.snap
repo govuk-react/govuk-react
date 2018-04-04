@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withWhiteSpace matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    margin-bottom: 0;
+  }
+}
+
+<Whitespace
+  className="glamor-0"
+>
+  Example
+</Whitespace>
+`;
