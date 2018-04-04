@@ -71,8 +71,8 @@ const ListParent = glamorous.div({
   },
 });
 
-const DateInput = ({ children, ...props }) => (
-  <LabelWrapper errorText={props.errorText}>
+const DateInput = ({ children, className, ...props }) => (
+  <LabelWrapper className={className} errorText={props.errorText}>
     <LabelText errorText={props.errorText}>{children}</LabelText>
     {props.hintText ? <HintText>{props.hintText}</HintText> : <span />}
     {props.errorText ? (
@@ -98,12 +98,14 @@ const DateInput = ({ children, ...props }) => (
 );
 
 DateInput.defaultProps = {
-  hintText: null,
-  errorText: null,
+  className: undefined,
+  hintText: undefined,
+  errorText: undefined,
 };
 
 DateInput.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
   hintText: PropTypes.string,
   errorText: PropTypes.string,
 };

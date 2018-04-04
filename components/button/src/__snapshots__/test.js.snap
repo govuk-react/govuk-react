@@ -16,7 +16,6 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
   outline-offset: -1px;
   outline: 1px solid transparent;
   padding: .526315em .789473em .263157em;
-  position: duabs;
   text-decoration: none;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
