@@ -52,7 +52,7 @@ const FieldSet = glamorous.div(
 );
 
 const MultiChoice = ({
-  meta, label, children, hint, className
+  meta, label, children, hint, className,
 }) => (
   <FieldSet className={className} error={meta.touched && meta.error}>
     <LabelText>{label}</LabelText>
