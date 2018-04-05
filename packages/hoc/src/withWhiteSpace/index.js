@@ -20,6 +20,7 @@ const withWhiteSpace = config => (Component) => {
     },
   }));
 
+  // `mb` (Margin Bottom) prop name comes from the naming convention used by https://github.com/jxnblk/grid-styled
   StyledHoc.propTypes = {
     mb: PropTypes.oneOf(SPACING_MAP_INDEX),
   };
