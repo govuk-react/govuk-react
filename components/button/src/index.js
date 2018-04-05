@@ -57,7 +57,7 @@ const GButton = glamorous.button(
 );
 
 // TODO: start and iconUrl props
-const Button = ({ className, ...props }) => <GButton {...props} />;
+const Button = ({ className, ...props }) => <GButton className={className} {...props} />;
 
 Button.propTypes = {
   className: PropTypes.string,

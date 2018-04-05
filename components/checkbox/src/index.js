@@ -8,11 +8,8 @@ import { YELLOW, BLACK } from 'govuk-colours';
 
 const CheckboxWrapper = glamorous.label({
   display: 'block',
-  float: 'left',
-  clear: 'left',
   position: 'relative',
   padding: '0 0 0 38px',
-  marginBottom: '10px',
 });
 
 const Input = glamorous.input({

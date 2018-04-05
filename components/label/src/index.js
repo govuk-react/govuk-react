@@ -2,6 +2,7 @@
 
 import glamorous from 'glamorous';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { ERROR_COLOUR } from 'govuk-colours';
 import { MEDIA_QUERIES, SITE_WIDTH, SPACING } from '@govuk-react/constants';
@@ -28,6 +29,14 @@ const GLabel = glamorous.label(
   }),
 );
 
-const Label = props => <GLabel {...props} />;
+const Label = ({ className, ...props }) => (<GLabel className={className} {...props} />);
+
+Label.defaultProps = {
+  className: undefined,
+};
+
+Label.propTypes = {
+  className: PropTypes.string,
+};
 
 export default Label;

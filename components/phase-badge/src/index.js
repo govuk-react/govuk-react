@@ -2,6 +2,7 @@
 
 import glamorous from 'glamorous';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { BLUE, WHITE } from 'govuk-colours';
 import {
@@ -33,6 +34,16 @@ const GPhaseBadge = glamorous.strong({
   },
 });
 
-const PhaseBadge = props => <GPhaseBadge {...props} />;
+const PhaseBadge = ({ className, ...props }) => (
+  <GPhaseBadge className={className} {...props} />
+);
+
+PhaseBadge.defaultProps = {
+  className: undefined,
+};
+
+PhaseBadge.propTypes = {
+  className: PropTypes.string,
+};
 
 export default PhaseBadge;
