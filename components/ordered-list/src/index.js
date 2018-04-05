@@ -20,7 +20,6 @@ const GOrderedListInner = glamorous.ol(
     textTransform: 'none',
     fontSize: FONT_SIZE.SIZE_14,
     lineHeight: LINE_HEIGHT.SIZE_14,
-    // width: '100%',
     [MEDIA_QUERIES.LARGESCREEN]: {
       fontSize: FONT_SIZE.SIZE_16,
       lineHeight: LINE_HEIGHT.SIZE_16,
