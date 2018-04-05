@@ -44,9 +44,9 @@ const Input = glamorous.select(
 );
 
 const Select = ({
-  children, hint, label, meta, input,
+  children, hint, label, meta, input, className,
 }) => (
-  <Label error={meta.touched && meta.error}>
+  <Label className={className} error={meta.touched && meta.error}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
@@ -58,7 +58,8 @@ const Select = ({
 
 Select.defaultProps = {
   hint: undefined,
-  errorText: null,
+  errorText: undefined,
+  className: undefined,
   input: {},
   meta: {},
 };
@@ -90,6 +91,7 @@ Select.propTypes = {
   children: PropTypes.node.isRequired,
   label: PropTypes.string.isRequired,
   errorText: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default Select;

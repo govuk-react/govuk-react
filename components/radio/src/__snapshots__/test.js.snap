@@ -67,17 +67,12 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
 .glamor-2,
 [data-glamor-2] {
   display: block;
-  float: left;
-  clear: none;
   position: relative;
   padding: 0 0 0 38px;
-  margin-bottom: 0px;
+  float: left;
+  clear: none;
   margin-right: 30px;
-}
-
-.glamor-2:last-child,
-[data-glamor-2]:last-child {
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 
 <Radio
@@ -116,17 +111,9 @@ exports[`Radio matches snapshot: standard mount 1`] = `
 .glamor-2,
 [data-glamor-2] {
   display: block;
-  float: left;
-  clear: left;
   position: relative;
   padding: 0 0 0 38px;
-  margin-bottom: 10px;
   margin-right: 0px;
-}
-
-.glamor-2:last-child,
-[data-glamor-2]:last-child {
-  margin-bottom: 0;
 }
 
 .glamor-0,

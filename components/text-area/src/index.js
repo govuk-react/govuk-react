@@ -39,8 +39,8 @@ const TextAreaField = glamorous.textarea(
   }),
 );
 
-const TextArea = props => (
-  <Label error={props.meta.touched && props.meta.error}>
+const TextArea = ({ className, ...props }) => (
+  <Label className={className} error={props.meta.touched && props.meta.error}>
     <LabelText>{props.children}</LabelText>
     {props.hint && <HintText>{props.hint}</HintText>}
     {props.meta.touched &&
@@ -55,13 +55,15 @@ const TextArea = props => (
 );
 
 TextArea.defaultProps = {
-  hint: null,
+  hint: undefined,
+  className: undefined,
   input: {},
   meta: {},
 };
 
 TextArea.propTypes = {
   hint: PropTypes.string,
+  className: PropTypes.string,
   input: PropTypes.shape({
     name: PropTypes.string,
     onBlur: PropTypes.func,

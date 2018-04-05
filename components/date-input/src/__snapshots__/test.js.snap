@@ -144,7 +144,6 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
 
 <DateInput
   errorText="example"
-  hintText={null}
 >
   <glamorous(div)
     errorText="example"

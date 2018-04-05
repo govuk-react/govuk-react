@@ -12,6 +12,7 @@ const PanelInner = glamorous.div({
   padding: '25px',
 });
 
+// TODO use standard font constants
 const PanelTitle = glamorous.h2({
   fontFamily: "'nta', Arial, sans-serif",
   fontWeight: 'bold',
@@ -26,6 +27,7 @@ const PanelTitle = glamorous.h2({
   },
 });
 
+// TODO use standard font constants
 const PanelBody = glamorous.div({
   fontFamily: "'nta', Arial, sans-serif",
   fontSize: '24px',
@@ -41,19 +43,21 @@ const PanelBody = glamorous.div({
   },
 });
 
-const Panel = ({ panelTitle, panelBody }) => (
-  <PanelInner>
+const Panel = ({ panelTitle, panelBody, className }) => (
+  <PanelInner className={className}>
     <PanelTitle>{panelTitle}</PanelTitle>
     <PanelBody>{panelBody}</PanelBody>
   </PanelInner>
 );
 Panel.defaultProps = {
-  panelBody: null,
+  panelBody: undefined,
+  className: undefined,
 };
 
 Panel.propTypes = {
   panelTitle: PropTypes.string.isRequired,
   panelBody: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default Panel;

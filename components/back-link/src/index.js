@@ -45,8 +45,8 @@ const Anchor = glamorous.button({
   },
 });
 
-const BackLink = ({ children, goBack }) => (
-  <Anchor onClick={goBack}>{children}</Anchor>
+const BackLink = ({ children, className, goBack }) => (
+  <Anchor className={className} onClick={goBack}>{children}</Anchor>
 );
 
 BackLink.propTypes = {
@@ -58,10 +58,12 @@ BackLink.propTypes = {
    * A function that is called on click
    */
   goBack: PropTypes.func, // TODO: rename onClick
+  className: PropTypes.string,
 };
 
 BackLink.defaultProps = {
   goBack: undefined,
+  className: undefined,
 };
 
 export default BackLink;

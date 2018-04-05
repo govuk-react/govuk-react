@@ -31,12 +31,17 @@ const RelatedItemsInner = glamorous.div({
   },
 });
 
-const RelatedItems = ({ children }) => (
-  <RelatedItemsInner>{children}</RelatedItemsInner>
+const RelatedItems = ({ children, className }) => (
+  <RelatedItemsInner className={className}>{children}</RelatedItemsInner>
 );
+
+RelatedItems.defaultProps = {
+  className: undefined,
+};
 
 RelatedItems.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 };
 
 export default RelatedItems;

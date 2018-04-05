@@ -20,7 +20,6 @@ const GUnorderedList = glamorous.ul(
     textTransform: 'none',
     fontSize: FONT_SIZE.SIZE_14,
     lineHeight: LINE_HEIGHT.SIZE_14,
-    width: '100%',
     [MEDIA_QUERIES.LARGESCREEN]: {
       fontSize: FONT_SIZE.SIZE_16,
       lineHeight: LINE_HEIGHT.SIZE_16,
@@ -37,17 +36,19 @@ const GUnorderedList = glamorous.ul(
 
 // listStyleType: normal HTML property values are used here
 // e.g., listStyleType="circle", listStyleType="upper-alpha", listStyleType="none"
-const UnorderedList = ({ children, listStyleType }) => (
-  <GUnorderedList listStyleType={listStyleType}>{children}</GUnorderedList>
+const UnorderedList = ({ children, listStyleType, className }) => (
+  <GUnorderedList className={className} listStyleType={listStyleType}>{children}</GUnorderedList>
 );
 
 UnorderedList.defaultProps = {
   listStyleType: undefined,
+  className: undefined,
 };
 
 UnorderedList.propTypes = {
   children: PropTypes.node.isRequired,
   listStyleType: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default UnorderedList;

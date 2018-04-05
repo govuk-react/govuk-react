@@ -32,16 +32,21 @@ const PhaseBannerInner = glamorous.div({
   },
 });
 
-const PhaseBanner = ({ level, children }) => (
-  <PhaseBannerInner>
+const PhaseBanner = ({ level, children, className }) => (
+  <PhaseBannerInner className={className}>
     <PhaseBadge>{level}</PhaseBadge>
     {children}
   </PhaseBannerInner>
 );
 
+PhaseBanner.defaultProps = {
+  className: undefined,
+};
+
 PhaseBanner.propTypes = {
   children: PropTypes.node.isRequired,
   level: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 export default PhaseBanner;

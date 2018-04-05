@@ -275,7 +275,6 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
 }
 
 <Select
-  errorText={null}
   input={Object {}}
   label="example"
   meta={Object {}}

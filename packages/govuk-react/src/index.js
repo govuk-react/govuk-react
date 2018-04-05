@@ -40,6 +40,7 @@ export { H1, H2, H3, H4, H5, H6 } from '@govuk-react/header';
 // Higher Order Components
 export { asAnchor } from '@govuk-react/hoc';
 export { asPaginationItem } from '@govuk-react/hoc';
+export { withWhiteSpace } from '@govuk-react/hoc';
 
 // Icons
 export { Search as SearchIcon, ArrowLeft, Spinner } from '@govuk-react/icons';

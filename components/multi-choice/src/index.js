@@ -52,9 +52,9 @@ const FieldSet = glamorous.div(
 );
 
 const MultiChoice = ({
-  meta, label, children, hint,
+  meta, label, children, hint, className,
 }) => (
-  <FieldSet error={meta.touched && meta.error}>
+  <FieldSet className={className} error={meta.touched && meta.error}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
@@ -64,6 +64,7 @@ const MultiChoice = ({
 
 MultiChoice.defaultProps = {
   hint: undefined,
+  className: undefined,
   meta: {},
 };
 
@@ -86,6 +87,7 @@ MultiChoice.propTypes = {
   label: PropTypes.node.isRequired,
   children: PropTypes.node.isRequired,
   hint: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default MultiChoice;

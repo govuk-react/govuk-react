@@ -106,7 +106,6 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
 
 <TextArea
   errorText="example"
-  hint={null}
   input={Object {}}
   meta={
     Object {
@@ -379,7 +378,6 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <TextArea
-  hint={null}
   input={Object {}}
   meta={Object {}}
 >

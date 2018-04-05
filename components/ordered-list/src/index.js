@@ -20,7 +20,6 @@ const GOrderedListInner = glamorous.ol(
     textTransform: 'none',
     fontSize: FONT_SIZE.SIZE_14,
     lineHeight: LINE_HEIGHT.SIZE_14,
-    width: '100%',
     [MEDIA_QUERIES.LARGESCREEN]: {
       fontSize: FONT_SIZE.SIZE_16,
       lineHeight: LINE_HEIGHT.SIZE_16,
@@ -34,17 +33,21 @@ const GOrderedListInner = glamorous.ol(
 );
 
 // TODO use Context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
-const OrderedList = ({ children, listStyleType }) => (
-  <GOrderedListInner listStyleType={listStyleType}>{children}</GOrderedListInner>
+const OrderedList = ({ children, listStyleType, className }) => (
+  <GOrderedListInner className={className} listStyleType={listStyleType}>
+    {children}
+  </GOrderedListInner>
 );
 
 OrderedList.defaultProps = {
   listStyleType: undefined,
+  className: undefined,
 };
 
 OrderedList.propTypes = {
   children: PropTypes.node.isRequired,
   listStyleType: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default OrderedList;

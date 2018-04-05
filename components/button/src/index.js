@@ -6,6 +6,7 @@
 // https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_buttons.scss
 
 import glamorous from 'glamorous';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import {
@@ -30,7 +31,6 @@ const GButton = glamorous.button(
     outlineOffset: '-1px',
     outline: '1px solid transparent',
     padding: '.526315em .789473em .263157em',
-    position: 'duabs',
     textDecoration: 'none',
     WebkitAppearance: 'none',
     WebkitFontSmoothing: 'antialiased',
@@ -57,9 +57,15 @@ const GButton = glamorous.button(
 );
 
 // TODO: start and iconUrl props
-const Button = props => <GButton {...props} />;
+const Button = ({ className, ...props }) => <GButton className={className} {...props} />;
+
+Button.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node,
+};
 
 Button.defaultProps = {
+  className: undefined,
   children: 'Button',
 };
 

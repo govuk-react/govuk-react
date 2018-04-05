@@ -49,3 +49,18 @@ export const RESPONSIVE_9 = {
   mobile: 40,
   tablet: 60,
 };
+
+export const SPACING_MAP = [
+  RESPONSIVE_0,
+  RESPONSIVE_1,
+  RESPONSIVE_2,
+  RESPONSIVE_3,
+  RESPONSIVE_4,
+  RESPONSIVE_5,
+  RESPONSIVE_6,
+  RESPONSIVE_7,
+  RESPONSIVE_8,
+  RESPONSIVE_9,
+];
+
+export const SPACING_MAP_INDEX = Array.from(Array(SPACING_MAP.length).keys());

@@ -23,10 +23,17 @@ const GListItem = glamorous.li({
   },
 });
 
-const ListItem = ({ children }) => <GListItem>{children}</GListItem>;
+const ListItem = ({ children, className }) => (
+  <GListItem className={className}>{children}</GListItem>
+);
+
+ListItem.defaultProps = {
+  className: undefined,
+};
 
 ListItem.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 };
 
 export default ListItem;

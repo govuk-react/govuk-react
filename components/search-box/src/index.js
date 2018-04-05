@@ -60,8 +60,8 @@ const SearchButton = glamorous.button({
   },
 });
 
-const SearchBox = ({ placeholder }) => (
-  <SearchBoxWrapper>
+const SearchBox = ({ placeholder, className }) => (
+  <SearchBoxWrapper className={className}>
     <InputSearchBox type="search" placeholder={placeholder} />
     <SearchButton title="Search">
       <Search colour="#fff" />
@@ -71,10 +71,12 @@ const SearchBox = ({ placeholder }) => (
 
 SearchBox.defaultProps = {
   placeholder: undefined,
+  className: undefined,
 };
 
 SearchBox.propTypes = {
   placeholder: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default SearchBox;

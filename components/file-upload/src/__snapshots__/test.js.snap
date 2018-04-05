@@ -73,8 +73,6 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
 }
 
 <FileUpload
-  acceptedFormats={null}
-  hint={null}
   meta={Object {}}
 >
   <Label>
@@ -92,11 +90,9 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
           </glamorous(span)>
         </LabelText>
         <glamorous(input)
-          accept={null}
           type="file"
         >
           <input
-            accept={null}
             className="glamor-1"
             type="file"
           />

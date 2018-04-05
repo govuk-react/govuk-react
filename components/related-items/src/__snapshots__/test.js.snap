@@ -43,7 +43,6 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
   text-transform: none;
   font-size: 14px;
   line-height: 1.1428571429;
-  width: 100%;
   list-style-type: none;
   margin-left: 0;
 }
