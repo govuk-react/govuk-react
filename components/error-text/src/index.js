@@ -5,6 +5,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ERROR_COLOUR } from 'govuk-colours';
 import { FONT_SIZE, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const GErrorText = glamorous.span({
   display: 'block',
@@ -34,4 +35,4 @@ ErrorText.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default ErrorText;
+export default withWhiteSpace({ marginBottom: 0 })(ErrorText);

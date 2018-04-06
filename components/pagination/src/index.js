@@ -11,6 +11,7 @@ import {
   NTA_LIGHT,
   SPACING,
 } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const PaginationWrapper = glamorous.ul({
   boxSizing: 'border-box',
@@ -43,4 +44,4 @@ Pagination.propTypes = {
   className: PropTypes.string,
 };
 
-export default Pagination;
+export default withWhiteSpace({ marginBottom: 0 })(Pagination);

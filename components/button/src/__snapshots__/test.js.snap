@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`button matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
 .glamor-0,
 [data-glamor-0] {
   background-color: #00823b;
@@ -19,6 +24,7 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
   text-decoration: none;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
+  margin-bottom: 0;
 }
 
 .glamor-0:focus,
@@ -26,13 +32,33 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
   outline: 3px solid #ffbf47;
 }
 
-<Button>
-  <glamorous(button)>
-    <button
-      className="glamor-0"
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    margin-bottom: 0;
+  }
+}
+
+<glamorous(Button)>
+  <Button
+    className="glamor-1"
+  >
+    <glamorous(button)
+      className="glamor-1"
     >
-      example
-    </button>
-  </glamorous(button)>
-</Button>
+      <button
+        className="glamor-0"
+      >
+        example
+      </button>
+    </glamorous(button)>
+  </Button>
+</glamorous(Button)>
 `;

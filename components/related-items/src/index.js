@@ -11,6 +11,7 @@ import {
   MEDIA_QUERIES,
   SPACING,
 } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const RelatedItemsInner = glamorous.div({
   borderTop: `10px solid ${COLOUR.BLUE}`,
@@ -44,4 +45,4 @@ RelatedItems.propTypes = {
   className: PropTypes.string,
 };
 
-export default RelatedItems;
+export default withWhiteSpace({ marginBottom: 0 })(RelatedItems);

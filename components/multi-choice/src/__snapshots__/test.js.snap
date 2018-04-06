@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MultiChoice matches withError snapshot: with error mount 1`] = `
+exports[`ThemedComponent matches withError snapshot: with error mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
 .glamor-0,
 [data-glamor-0] {
   font-family: "nta", Arial, sans-serif;
@@ -13,64 +18,9 @@ exports[`MultiChoice matches withError snapshot: with error mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
-.glamor-1,
-[data-glamor-1] {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  box-sizing: border-box;
-  width: 100%;
-}
-
-.glamor-1:after,
-[data-glamor-1]:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    font-size: 19px;
-    line-height: 1.31579;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    max-width: 960px;
-  }
-}
-
-<MultiChoice
-  error="example"
-  label="example"
-  meta={Object {}}
->
-  <glamorous(div)>
-    <div
-      className="glamor-1"
-    >
-      <LabelText>
-        <glamorous(span)>
-          <span
-            className="glamor-0"
-          >
-            example
-          </span>
-        </glamorous(span)>
-      </LabelText>
-      example
-    </div>
-  </glamorous(div)>
-</MultiChoice>
-`;
-
-exports[`MultiChoice matches wrapper snapshot: wrapper mount 1`] = `
 .glamor-3,
 [data-glamor-3] {
   padding: 0;
@@ -78,9 +28,7 @@ exports[`MultiChoice matches wrapper snapshot: wrapper mount 1`] = `
   border: 0;
   box-sizing: border-box;
   width: 100%;
-  border-left: 4px solid #b10e1e;
-  margin-right: 15px;
-  padding-left: 10px;
+  margin-bottom: 0;
 }
 
 .glamor-3:after,
@@ -90,6 +38,94 @@ exports[`MultiChoice matches wrapper snapshot: wrapper mount 1`] = `
   clear: both;
 }
 
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 19px;
+    line-height: 1.31579;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-3,
+  [data-glamor-3] {
+    max-width: 960px;
+    margin-bottom: 0;
+  }
+}
+
+<glamorous(MultiChoice)
+  error="example"
+  label="example"
+>
+  <MultiChoice
+    className="glamor-1"
+    error="example"
+    label="example"
+    meta={Object {}}
+  >
+    <glamorous(div)
+      className="glamor-1"
+    >
+      <div
+        className="glamor-3"
+      >
+        <glamorous(LabelText)>
+          <LabelText
+            className="glamor-1"
+          >
+            <glamorous(span)
+              className="glamor-1"
+            >
+              <span
+                className="glamor-0"
+              >
+                example
+              </span>
+            </glamorous(span)>
+          </LabelText>
+        </glamorous(LabelText)>
+        example
+      </div>
+    </glamorous(div)>
+  </MultiChoice>
+</glamorous(MultiChoice)>
+`;
+
+exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
+.glamor-9,
+[data-glamor-9] {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  width: 100%;
+  border-left: 4px solid #b10e1e;
+  margin-right: 15px;
+  padding-left: 10px;
+  margin-bottom: 0;
+}
+
+.glamor-9:after,
+[data-glamor-9]:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 .glamor-0,
 [data-glamor-0] {
   font-family: "nta", Arial, sans-serif;
@@ -102,10 +138,11 @@ exports[`MultiChoice matches wrapper snapshot: wrapper mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.glamor-3,
+[data-glamor-3] {
   display: block;
   font-family: "nta", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -115,10 +152,11 @@ exports[`MultiChoice matches wrapper snapshot: wrapper mount 1`] = `
   font-size: 16px;
   line-height: 20px;
   color: #6f777b;
+  margin-bottom: 0;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.glamor-6,
+[data-glamor-6] {
   display: block;
   font-family: "nta", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -130,12 +168,21 @@ exports[`MultiChoice matches wrapper snapshot: wrapper mount 1`] = `
   color: #b10e1e;
   padding-top: 4px;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-9,
+  [data-glamor-9] {
     max-width: 960px;
+    margin-bottom: 0;
   }
 }
 
@@ -144,26 +191,29 @@ exports[`MultiChoice matches wrapper snapshot: wrapper mount 1`] = `
   [data-glamor-0] {
     font-size: 19px;
     line-height: 1.31579;
+    margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
+  .glamor-3,
+  [data-glamor-3] {
     font-size: 19px;
     line-height: 25px;
+    margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
+  .glamor-6,
+  [data-glamor-6] {
     font-size: 19px;
     line-height: 25px;
+    margin-bottom: 0;
   }
 }
 
-<MultiChoice
+<glamorous(MultiChoice)
   hint="example"
   label="example"
   meta={
@@ -173,41 +223,72 @@ exports[`MultiChoice matches wrapper snapshot: wrapper mount 1`] = `
     }
   }
 >
-  <glamorous(div)
-    error="example"
+  <MultiChoice
+    className="glamor-1"
+    hint="example"
+    label="example"
+    meta={
+      Object {
+        "error": "example",
+        "touched": true,
+      }
+    }
   >
-    <div
-      className="glamor-3"
+    <glamorous(div)
+      className="glamor-1"
+      error="example"
     >
-      <LabelText>
-        <glamorous(span)>
-          <span
-            className="glamor-0"
-          >
-            example
-          </span>
-        </glamorous(span)>
-      </LabelText>
-      <HintText>
-        <glamorous(span)>
-          <span
+      <div
+        className="glamor-9"
+      >
+        <glamorous(LabelText)>
+          <LabelText
             className="glamor-1"
           >
-            example
-          </span>
-        </glamorous(span)>
-      </HintText>
-      <ErrorText>
-        <glamorous(span)>
-          <span
-            className="glamor-2"
+            <glamorous(span)
+              className="glamor-1"
+            >
+              <span
+                className="glamor-0"
+              >
+                example
+              </span>
+            </glamorous(span)>
+          </LabelText>
+        </glamorous(LabelText)>
+        <glamorous(HintText)>
+          <HintText
+            className="glamor-1"
           >
-            example
-          </span>
-        </glamorous(span)>
-      </ErrorText>
-      example
-    </div>
-  </glamorous(div)>
-</MultiChoice>
+            <glamorous(span)
+              className="glamor-1"
+            >
+              <span
+                className="glamor-3"
+              >
+                example
+              </span>
+            </glamorous(span)>
+          </HintText>
+        </glamorous(HintText)>
+        <glamorous(ErrorText)>
+          <ErrorText
+            className="glamor-1"
+          >
+            <glamorous(span)
+              className="glamor-1"
+            >
+              <span
+                className="glamor-6"
+              >
+                example
+              </span>
+            </glamorous(span)>
+          </ErrorText>
+        </glamorous(ErrorText)>
+        example
+      </div>
+    </glamorous(div)>
+  </MultiChoice>
+</glamorous(MultiChoice)>
 `;

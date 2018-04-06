@@ -8,6 +8,7 @@
 import glamorous from 'glamorous';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 import {
   BUTTON_COLOUR,
@@ -69,4 +70,4 @@ Button.defaultProps = {
   children: 'Button',
 };
 
-export default Button;
+export default withWhiteSpace({ marginBottom: 0 })(Button);

@@ -8,6 +8,7 @@ import {
   NTA_LIGHT,
   SPACING,
 } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const GListItem = glamorous.li({
   fontFamily: NTA_LIGHT,
@@ -36,4 +37,4 @@ ListItem.propTypes = {
   className: PropTypes.string,
 };
 
-export default ListItem;
+export default withWhiteSpace({ marginBottom: 0 })(ListItem);

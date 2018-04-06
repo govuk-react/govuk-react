@@ -2,9 +2,9 @@
 import React from 'react';
 import glamorous from 'glamorous';
 import PropTypes from 'prop-types';
-
 import { BLACK, GREY_1, YELLOW } from 'govuk-colours';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const BreadcrumbContainer = glamorous.div({
   fontFamily: 'nta, Arial, sans-serif',
@@ -94,4 +94,4 @@ Breadcrumb.propTypes = {
   className: PropTypes.string,
 };
 
-export default Breadcrumb;
+export default withWhiteSpace({ marginBottom: 0 })(Breadcrumb);

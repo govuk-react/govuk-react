@@ -5,6 +5,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as COLOUR from 'govuk-colours';
 import { FONT_SIZE, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const GHintText = glamorous.span({
   display: 'block',
@@ -31,4 +32,4 @@ HintText.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default HintText;
+export default withWhiteSpace({ marginBottom: 0 })(HintText);

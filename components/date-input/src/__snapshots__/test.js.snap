@@ -1,8 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
-.glamor-12,
-[data-glamor-12] {
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
+.glamor-28,
+[data-glamor-28] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -12,6 +17,7 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   border-left: 4px solid #b10e1e;
   margin-right: 15px;
   padding-left: 10px;
+  margin-bottom: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -29,10 +35,11 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.glamor-3,
+[data-glamor-3] {
   display: block;
   font-family: "nta", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -44,10 +51,11 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   color: #b10e1e;
   padding-top: 4px;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
-.glamor-11,
-[data-glamor-11] {
+.glamor-27,
+[data-glamor-27] {
   font-family: "nta", Arial, sans-serif;
   display: -webkit-box;
   display: -moz-box;
@@ -56,20 +64,20 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   display: flex;
 }
 
-.glamor-11> label,
-[data-glamor-11]> label {
+.glamor-27> label,
+[data-glamor-27]> label {
   width: 50px;
   margin-right: 20px;
   margin-bottom: 0;
 }
 
-.glamor-11> label.year,
-[data-glamor-11]> label.year {
+.glamor-27> label.year,
+[data-glamor-27]> label.year {
   width: 70px;
 }
 
-.glamor-4,
-[data-glamor-4] {
+.glamor-10,
+[data-glamor-10] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -78,20 +86,21 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
 }
 
-.glamor-4:after,
-[data-glamor-4]:after {
+.glamor-10:after,
+[data-glamor-10]:after {
   content: '';
   display: table;
   clear: both;
 }
 
-.glamor-3,
-[data-glamor-3] {
+.glamor-9,
+[data-glamor-9] {
   box-sizing: border-box;
   font-family: "nta", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -105,10 +114,24 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   border: 4px solid #b10e1e;
 }
 
-.glamor-3:focus,
-[data-glamor-3]:focus {
+.glamor-9:focus,
+[data-glamor-9]:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-28,
+  [data-glamor-28] {
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (min-width: 641px) {
@@ -116,21 +139,7 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   [data-glamor-0] {
     font-size: 19px;
     line-height: 1.31579;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    font-size: 19px;
-    line-height: 25px;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-4,
-  [data-glamor-4] {
-    max-width: 960px;
+    margin-bottom: 0;
   }
 }
 
@@ -139,134 +148,203 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   [data-glamor-3] {
     font-size: 19px;
     line-height: 25px;
+    margin-bottom: 0;
   }
 }
 
-<DateInput
+@media only screen and (min-width: 641px) {
+  .glamor-10,
+  [data-glamor-10] {
+    max-width: 960px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-9,
+  [data-glamor-9] {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
+<glamorous(DateInput)
   errorText="example"
 >
-  <glamorous(div)
+  <DateInput
+    className="glamor-1"
     errorText="example"
   >
-    <div
-      className="glamor-12"
+    <glamorous(div)
+      className="glamor-1"
+      errorText="example"
     >
-      <LabelText
-        errorText="example"
+      <div
+        className="glamor-28"
       >
-        <glamorous(span)
+        <glamorous(LabelText)
           errorText="example"
         >
-          <span
-            className="glamor-0"
-          >
-            example
-          </span>
-        </glamorous(span)>
-      </LabelText>
-      <span />
-      <ErrorText
-        errorText="example"
-      >
-        <glamorous(span)
-          errorText="example"
-        >
-          <span
+          <LabelText
             className="glamor-1"
+            errorText="example"
           >
-            example
-          </span>
-        </glamorous(span)>
-      </ErrorText>
-      <glamorous(div)>
-        <div
-          className="glamor-11"
+            <glamorous(span)
+              className="glamor-1"
+              errorText="example"
+            >
+              <span
+                className="glamor-0"
+              >
+                example
+              </span>
+            </glamorous(span)>
+          </LabelText>
+        </glamorous(LabelText)>
+        <span />
+        <glamorous(ErrorText)
+          errorText="example"
         >
-          <Label>
-            <glamorous(label)>
-              <label
-                className="glamor-4"
-              >
-                <LabelText>
-                  <glamorous(span)>
-                    <span
-                      className="glamor-0"
-                    >
-                      Day
-                    </span>
-                  </glamorous(span)>
-                </LabelText>
-                <glamorous(input)
-                  errorText="example"
-                  type="text"
-                >
-                  <input
-                    className="glamor-3"
-                    type="text"
-                  />
-                </glamorous(input)>
-              </label>
-            </glamorous(label)>
-          </Label>
-          <Label>
-            <glamorous(label)>
-              <label
-                className="glamor-4"
-              >
-                <LabelText>
-                  <glamorous(span)>
-                    <span
-                      className="glamor-0"
-                    >
-                      Month
-                    </span>
-                  </glamorous(span)>
-                </LabelText>
-                <glamorous(input)
-                  errorText="example"
-                  type="text"
-                >
-                  <input
-                    className="glamor-3"
-                    type="text"
-                  />
-                </glamorous(input)>
-              </label>
-            </glamorous(label)>
-          </Label>
-          <Label
-            className="year"
+          <ErrorText
+            className="glamor-1"
+            errorText="example"
           >
-            <glamorous(label)
+            <glamorous(span)
+              className="glamor-1"
+              errorText="example"
+            >
+              <span
+                className="glamor-3"
+              >
+                example
+              </span>
+            </glamorous(span)>
+          </ErrorText>
+        </glamorous(ErrorText)>
+        <glamorous(div)>
+          <div
+            className="glamor-27"
+          >
+            <glamorous(Label)>
+              <Label
+                className="glamor-1"
+              >
+                <glamorous(label)
+                  className="glamor-1"
+                >
+                  <label
+                    className="glamor-10"
+                  >
+                    <glamorous(LabelText)>
+                      <LabelText
+                        className="glamor-1"
+                      >
+                        <glamorous(span)
+                          className="glamor-1"
+                        >
+                          <span
+                            className="glamor-0"
+                          >
+                            Day
+                          </span>
+                        </glamorous(span)>
+                      </LabelText>
+                    </glamorous(LabelText)>
+                    <glamorous(input)
+                      errorText="example"
+                      type="text"
+                    >
+                      <input
+                        className="glamor-9"
+                        type="text"
+                      />
+                    </glamorous(input)>
+                  </label>
+                </glamorous(label)>
+              </Label>
+            </glamorous(Label)>
+            <glamorous(Label)>
+              <Label
+                className="glamor-1"
+              >
+                <glamorous(label)
+                  className="glamor-1"
+                >
+                  <label
+                    className="glamor-10"
+                  >
+                    <glamorous(LabelText)>
+                      <LabelText
+                        className="glamor-1"
+                      >
+                        <glamorous(span)
+                          className="glamor-1"
+                        >
+                          <span
+                            className="glamor-0"
+                          >
+                            Month
+                          </span>
+                        </glamorous(span)>
+                      </LabelText>
+                    </glamorous(LabelText)>
+                    <glamorous(input)
+                      errorText="example"
+                      type="text"
+                    >
+                      <input
+                        className="glamor-9"
+                        type="text"
+                      />
+                    </glamorous(input)>
+                  </label>
+                </glamorous(label)>
+              </Label>
+            </glamorous(Label)>
+            <glamorous(Label)
               className="year"
             >
-              <label
-                className="glamor-4 year"
+              <Label
+                className="glamor-1 year"
               >
-                <LabelText>
-                  <glamorous(span)>
-                    <span
-                      className="glamor-0"
-                    >
-                      Year
-                    </span>
-                  </glamorous(span)>
-                </LabelText>
-                <glamorous(input)
-                  errorText="example"
-                  type="text"
+                <glamorous(label)
+                  className="glamor-1 year"
                 >
-                  <input
-                    className="glamor-3"
-                    type="text"
-                  />
-                </glamorous(input)>
-              </label>
-            </glamorous(label)>
-          </Label>
-        </div>
-      </glamorous(div)>
-    </div>
-  </glamorous(div)>
-</DateInput>
+                  <label
+                    className="glamor-10 year"
+                  >
+                    <glamorous(LabelText)>
+                      <LabelText
+                        className="glamor-1"
+                      >
+                        <glamorous(span)
+                          className="glamor-1"
+                        >
+                          <span
+                            className="glamor-0"
+                          >
+                            Year
+                          </span>
+                        </glamorous(span)>
+                      </LabelText>
+                    </glamorous(LabelText)>
+                    <glamorous(input)
+                      errorText="example"
+                      type="text"
+                    >
+                      <input
+                        className="glamor-9"
+                        type="text"
+                      />
+                    </glamorous(input)>
+                  </label>
+                </glamorous(label)>
+              </Label>
+            </glamorous(Label)>
+          </div>
+        </glamorous(div)>
+      </div>
+    </glamorous(div)>
+  </DateInput>
+</glamorous(DateInput)>
 `;

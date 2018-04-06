@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ListNavigation matches wrapper snapshot: wrapper mount 1`] = `
+exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
 .glamor-0,
 [data-glamor-0] {
   font-family: "nta", Arial, sans-serif;
@@ -9,10 +14,11 @@ exports[`ListNavigation matches wrapper snapshot: wrapper mount 1`] = `
   font-size: 14px;
   line-height: 1.1428571429;
   width: 100%;
+  margin-bottom: 0;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.glamor-3,
+[data-glamor-3] {
   margin: 0;
   padding: 0;
   padding-left: 20px;
@@ -22,6 +28,14 @@ exports[`ListNavigation matches wrapper snapshot: wrapper mount 1`] = `
   font-size: 14px;
   line-height: 1.1428571429;
   list-style-type: square;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (min-width: 641px) {
@@ -29,41 +43,60 @@ exports[`ListNavigation matches wrapper snapshot: wrapper mount 1`] = `
   [data-glamor-0] {
     font-size: 16px;
     line-height: 1.25;
-    margin-bottom: 5px;
+    margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
+  .glamor-3,
+  [data-glamor-3] {
     font-size: 16px;
     line-height: 1.25;
+    margin-bottom: 0;
   }
 }
 
-<ListNavigation
+<glamorous(ListNavigation)
   listStyleType="square"
 >
-  <UnorderedList
+  <ListNavigation
+    className="glamor-1"
     listStyleType="square"
   >
-    <glamorous(ul)
+    <glamorous(UnorderedList)
+      className="glamor-1"
       listStyleType="square"
     >
-      <ul
+      <UnorderedList
         className="glamor-1"
+        listStyleType="square"
       >
-        <ListItem>
-          <glamorous(li)>
-            <li
-              className="glamor-0"
-            >
-              Example
-            </li>
-          </glamorous(li)>
-        </ListItem>
-      </ul>
-    </glamorous(ul)>
-  </UnorderedList>
-</ListNavigation>
+        <glamorous(ul)
+          className="glamor-1"
+          listStyleType="square"
+        >
+          <ul
+            className="glamor-3"
+          >
+            <glamorous(ListItem)>
+              <ListItem
+                className="glamor-1"
+              >
+                <glamorous(li)
+                  className="glamor-1"
+                >
+                  <li
+                    className="glamor-0"
+                  >
+                    Example
+                  </li>
+                </glamorous(li)>
+              </ListItem>
+            </glamorous(ListItem)>
+          </ul>
+        </glamorous(ul)>
+      </UnorderedList>
+    </glamorous(UnorderedList)>
+  </ListNavigation>
+</glamorous(ListNavigation)>
 `;

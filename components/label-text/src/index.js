@@ -5,6 +5,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BLACK } from 'govuk-colours';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const GLabelText = glamorous.span(
   {
@@ -37,4 +38,4 @@ LabelText.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default LabelText;
+export default withWhiteSpace({ marginBottom: 0 })(LabelText);

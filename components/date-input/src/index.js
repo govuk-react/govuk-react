@@ -15,6 +15,7 @@ import Label from '@govuk-react/label';
 import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const LabelWrapper = glamorous.div(
   {
@@ -110,4 +111,4 @@ DateInput.propTypes = {
   errorText: PropTypes.string,
 };
 
-export default DateInput;
+export default withWhiteSpace({ marginBottom: 0 })(DateInput);

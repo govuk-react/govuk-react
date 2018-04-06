@@ -5,6 +5,7 @@
     "@govuk-react/constants": "^0.1.21",
     "@govuk-react/error-text": "^0.1.25",
     "@govuk-react/hint-text": "^0.1.25",
+    "@govuk-react/hoc": "^0.1.25",
     "@govuk-react/label-text": "^0.1.25",
     "govuk-colours": "^1.0.3"
   },

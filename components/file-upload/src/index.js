@@ -10,6 +10,7 @@ import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 
 import { FONT_SIZE, NTA_LIGHT, MEDIA_QUERIES } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const Input = glamorous.input({
   boxSizing: 'border-box',
@@ -69,4 +70,4 @@ FileUpload.propTypes = {
   className: PropTypes.string,
 };
 
-export default FileUpload;
+export default withWhiteSpace({ marginBottom: 0 })(FileUpload);

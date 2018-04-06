@@ -8,6 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "@govuk-react/constants": "^0.1.21",
+    "@govuk-react/hoc": "^0.1.25",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {

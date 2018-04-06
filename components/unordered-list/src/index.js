@@ -9,6 +9,7 @@ import {
   MEDIA_QUERIES,
   NTA_LIGHT,
 } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const GUnorderedList = glamorous.ul(
   {
@@ -51,4 +52,4 @@ UnorderedList.propTypes = {
   className: PropTypes.string,
 };
 
-export default UnorderedList;
+export default withWhiteSpace({ marginBottom: 0 })(UnorderedList);

@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select matches snapshot for errorText: errorText mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
 .glamor-0,
 [data-glamor-0] {
   font-family: "nta", Arial, sans-serif;
@@ -13,6 +18,242 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+.glamor-10,
+[data-glamor-10] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  border-left: 4px solid #b10e1e;
+  margin-right: 15px;
+  padding-left: 10px;
+  margin-bottom: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-10:after,
+[data-glamor-10]:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.glamor-3,
+[data-glamor-3] {
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #6f777b;
+  margin-bottom: 0;
+}
+
+.glamor-6,
+[data-glamor-6] {
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #b10e1e;
+  padding-top: 4px;
+  padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+.glamor-9,
+[data-glamor-9] {
+  box-sizing: border-box;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  height: 33px;
+  padding: 5px 4px 4px;
+  border: 4px solid #b10e1e;
+}
+
+.glamor-9:focus,
+[data-glamor-9]:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 19px;
+    line-height: 1.31579;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-10,
+  [data-glamor-10] {
+    max-width: 960px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-3,
+  [data-glamor-3] {
+    font-size: 19px;
+    line-height: 25px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-6,
+  [data-glamor-6] {
+    font-size: 19px;
+    line-height: 25px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-9,
+  [data-glamor-9] {
+    width: 50%;
+    height: 38px;
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
+
+<glamorous(Select)
+  errorText="example"
+  hint="example"
+  label="example"
+  meta={
+    Object {
+      "error": "example",
+      "touched": true,
+    }
+  }
+>
+  <Select
+    className="glamor-1"
+    errorText="example"
+    hint="example"
+    input={Object {}}
+    label="example"
+    meta={
+      Object {
+        "error": "example",
+        "touched": true,
+      }
+    }
+  >
+    <glamorous(Label)
+      className="glamor-1"
+      error="example"
+    >
+      <Label
+        className="glamor-1"
+        error="example"
+      >
+        <glamorous(label)
+          className="glamor-1"
+          error="example"
+        >
+          <label
+            className="glamor-10"
+          >
+            <glamorous(LabelText)>
+              <LabelText
+                className="glamor-1"
+              >
+                <glamorous(span)
+                  className="glamor-1"
+                >
+                  <span
+                    className="glamor-0"
+                  >
+                    example
+                  </span>
+                </glamorous(span)>
+              </LabelText>
+            </glamorous(LabelText)>
+            <glamorous(HintText)>
+              <HintText
+                className="glamor-1"
+              >
+                <glamorous(span)
+                  className="glamor-1"
+                >
+                  <span
+                    className="glamor-3"
+                  >
+                    example
+                  </span>
+                </glamorous(span)>
+              </HintText>
+            </glamorous(HintText)>
+            <glamorous(ErrorText)>
+              <ErrorText
+                className="glamor-1"
+              >
+                <glamorous(span)
+                  className="glamor-1"
+                >
+                  <span
+                    className="glamor-6"
+                  >
+                    example
+                  </span>
+                </glamorous(span)>
+              </ErrorText>
+            </glamorous(ErrorText)>
+            <glamorous(select)
+              error="example"
+            >
+              <select
+                className="glamor-9"
+              >
+                example
+              </select>
+            </glamorous(select)>
+          </label>
+        </glamorous(label)>
+      </Label>
+    </glamorous(Label)>
+  </Select>
+</glamorous(Select)>
+`;
+
+exports[`Select matches snapshot: enzyme.mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
 }
 
 .glamor-4,
@@ -25,9 +266,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  border-left: 4px solid #b10e1e;
-  margin-right: 15px;
-  padding-left: 10px;
+  margin-bottom: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -40,32 +279,19 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   clear: both;
 }
 
-.glamor-1,
-[data-glamor-1] {
-  display: block;
+.glamor-0,
+[data-glamor-0] {
   font-family: "nta", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
   font-weight: 400;
-  text-transform: none;
   font-size: 16px;
-  line-height: 20px;
-  color: #6f777b;
-}
-
-.glamor-2,
-[data-glamor-2] {
-  display: block;
-  font-family: "nta", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 700;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 20px;
-  color: #b10e1e;
-  padding-top: 4px;
+  line-height: 1.25;
+  color: #0b0c0c;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
 .glamor-3,
@@ -79,7 +305,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   width: 100%;
   height: 33px;
   padding: 5px 4px 4px;
-  border: 4px solid #b10e1e;
+  border: 2px solid #0b0c0c;
 }
 
 .glamor-3:focus,
@@ -89,10 +315,9 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    font-size: 19px;
-    line-height: 1.31579;
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
   }
 }
 
@@ -100,22 +325,16 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   .glamor-4,
   [data-glamor-4] {
     max-width: 960px;
+    margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
+  .glamor-0,
+  [data-glamor-0] {
     font-size: 19px;
-    line-height: 25px;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
-    font-size: 19px;
-    line-height: 25px;
+    line-height: 1.31579;
+    margin-bottom: 0;
   }
 }
 
@@ -129,179 +348,53 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   }
 }
 
-<Select
-  errorText="example"
-  hint="example"
-  input={Object {}}
+<glamorous(Select)
   label="example"
-  meta={
-    Object {
-      "error": "example",
-      "touched": true,
-    }
-  }
 >
-  <Label
-    error="example"
+  <Select
+    className="glamor-1"
+    input={Object {}}
+    label="example"
+    meta={Object {}}
   >
-    <glamorous(label)
-      error="example"
+    <glamorous(Label)
+      className="glamor-1"
     >
-      <label
-        className="glamor-4"
+      <Label
+        className="glamor-1"
       >
-        <LabelText>
-          <glamorous(span)>
-            <span
-              className="glamor-0"
-            >
-              example
-            </span>
-          </glamorous(span)>
-        </LabelText>
-        <HintText>
-          <glamorous(span)>
-            <span
-              className="glamor-1"
-            >
-              example
-            </span>
-          </glamorous(span)>
-        </HintText>
-        <ErrorText>
-          <glamorous(span)>
-            <span
-              className="glamor-2"
-            >
-              example
-            </span>
-          </glamorous(span)>
-        </ErrorText>
-        <glamorous(select)
-          error="example"
+        <glamorous(label)
+          className="glamor-1"
         >
-          <select
-            className="glamor-3"
+          <label
+            className="glamor-4"
           >
-            example
-          </select>
-        </glamorous(select)>
-      </label>
-    </glamorous(label)>
-  </Label>
-</Select>
-`;
-
-exports[`Select matches snapshot: enzyme.mount 1`] = `
-.glamor-2,
-[data-glamor-2] {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  width: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-}
-
-.glamor-2:after,
-[data-glamor-2]:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.glamor-0,
-[data-glamor-0] {
-  font-family: "nta", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: block;
-  clear: none;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #0b0c0c;
-  padding-bottom: 2px;
-}
-
-.glamor-1,
-[data-glamor-1] {
-  box-sizing: border-box;
-  font-family: "nta", Arial, sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
-  width: 100%;
-  height: 33px;
-  padding: 5px 4px 4px;
-  border: 2px solid #0b0c0c;
-}
-
-.glamor-1:focus,
-[data-glamor-1]:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
-    max-width: 960px;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    font-size: 19px;
-    line-height: 1.31579;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    width: 50%;
-    height: 38px;
-    font-size: 19px;
-    line-height: 1.31579;
-  }
-}
-
-<Select
-  input={Object {}}
-  label="example"
-  meta={Object {}}
->
-  <Label>
-    <glamorous(label)>
-      <label
-        className="glamor-2"
-      >
-        <LabelText>
-          <glamorous(span)>
-            <span
-              className="glamor-0"
-            >
-              example
-            </span>
-          </glamorous(span)>
-        </LabelText>
-        <glamorous(select)>
-          <select
-            className="glamor-1"
-          >
-            example
-          </select>
-        </glamorous(select)>
-      </label>
-    </glamorous(label)>
-  </Label>
-</Select>
+            <glamorous(LabelText)>
+              <LabelText
+                className="glamor-1"
+              >
+                <glamorous(span)
+                  className="glamor-1"
+                >
+                  <span
+                    className="glamor-0"
+                  >
+                    example
+                  </span>
+                </glamorous(span)>
+              </LabelText>
+            </glamorous(LabelText)>
+            <glamorous(select)>
+              <select
+                className="glamor-3"
+              >
+                example
+              </select>
+            </glamorous(select)>
+          </label>
+        </glamorous(label)>
+      </Label>
+    </glamorous(Label)>
+  </Select>
+</glamorous(Select)>
 `;

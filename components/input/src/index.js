@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 import { BLACK, YELLOW, ERROR_COLOUR } from 'govuk-colours';
 import { FONT_SIZE, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const GInput = glamorous.input(
   {
@@ -53,4 +54,4 @@ Input.propTypes = {
   errorColor: PropTypes.string,
 };
 
-export default Input;
+export default withWhiteSpace({ marginBottom: 0 })(Input);
