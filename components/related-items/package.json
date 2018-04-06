@@ -4,10 +4,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.1.25",
+  "version": "0.1.26",
   "license": "MIT",
   "dependencies": {
-    "@govuk-react/constants": "^0.1.21",
+    "@govuk-react/constants": "^0.1.26",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
@@ -17,11 +17,11 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
-    "@govuk-react/api-docs": "^0.1.25",
-    "@govuk-react/header": "^0.1.25",
-    "@govuk-react/hoc": "^0.1.25",
-    "@govuk-react/list-item": "^0.1.25",
-    "@govuk-react/unordered-list": "^0.1.25",
+    "@govuk-react/api-docs": "^0.1.26",
+    "@govuk-react/header": "^0.1.26",
+    "@govuk-react/hoc": "^0.1.26",
+    "@govuk-react/list-item": "^0.1.26",
+    "@govuk-react/unordered-list": "^0.1.26",
     "@storybook/addon-actions": "^3.3.14",
     "@storybook/addons": "^3.3.14",
     "@storybook/react": "^3.3.14",
