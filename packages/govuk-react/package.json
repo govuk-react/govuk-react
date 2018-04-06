@@ -23,6 +23,7 @@
     "@govuk-react/layout": "^0.1.25",
     "@govuk-react/list-item": "^0.1.25",
     "@govuk-react/list-navigation": "^0.1.25",
+    "@govuk-react/loading-box": "^0.1.25",
     "@govuk-react/multi-choice": "^0.1.25",
     "@govuk-react/ordered-list": "^0.1.25",
     "@govuk-react/pagination": "^0.1.25",
