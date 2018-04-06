@@ -23,6 +23,7 @@
     "@govuk-react/layout": "^0.1.25",
     "@govuk-react/list-item": "^0.1.25",
     "@govuk-react/list-navigation": "^0.1.25",
+    "@govuk-react/loading-box": "^0.1.25",
     "@govuk-react/multi-choice": "^0.1.25",
     "@govuk-react/ordered-list": "^0.1.25",
     "@govuk-react/pagination": "^0.1.25",
@@ -33,6 +34,7 @@
     "@govuk-react/related-items": "^0.1.25",
     "@govuk-react/search-box": "^0.1.25",
     "@govuk-react/select": "^0.1.25",
+    "@govuk-react/storybook": "^0.1.25",
     "@govuk-react/text-area": "^0.1.25",
     "@govuk-react/unordered-list": "^0.1.25",
     "govuk-colours": "^1.0.3"
