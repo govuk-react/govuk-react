@@ -1,6 +1,6 @@
 {
   "name": "@govuk-react/icons",
-  "version": "0.1.26",
+  "version": "0.1.27",
   "dependencies": {
     "@govuk-react/constants": "^0.1.26",
     "glamor": "^2.20.40",
@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
-    "@govuk-react/button": "^0.1.26",
+    "@govuk-react/button": "^0.1.27",
     "@storybook/addon-actions": "^3.3.14",
     "@storybook/react": "^3.3.14",
     "cross-env": "^5.1.4",
