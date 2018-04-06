@@ -18,7 +18,6 @@ const Anchor = glamorous.button({
   display: 'inline-block',
   position: 'relative',
   marginTop: '15px',
-  marginBottom: '15px',
   paddingLeft: '14px',
   border: 0,
   color: `${BLACK}`,
@@ -67,4 +66,4 @@ BackLink.defaultProps = {
   className: undefined,
 };
 
-export default withWhiteSpace({ marginBottom: 0 })(BackLink);
+export default withWhiteSpace({ marginBottom: 3 })(BackLink);

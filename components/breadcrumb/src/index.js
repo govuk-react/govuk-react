@@ -11,7 +11,6 @@ const BreadcrumbContainer = glamorous.div({
   fontSize: '14px',
   lineHeight: '16px',
   marginTop: '15px',
-  marginBottom: '10px',
   WebkitFontSmoothing: 'antialiased',
   [MEDIA_QUERIES.LARGESCREEN]: {
     fontSize: '16px',
@@ -94,4 +93,4 @@ Breadcrumb.propTypes = {
   className: PropTypes.string,
 };
 
-export default withWhiteSpace({ marginBottom: 0 })(Breadcrumb);
+export default withWhiteSpace({ marginBottom: 2 })(Breadcrumb);

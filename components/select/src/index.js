@@ -95,5 +95,5 @@ Select.propTypes = {
   className: PropTypes.string,
 };
 
-export default withWhiteSpace({ marginBottom: 0 })(Select);
+export default withWhiteSpace({ marginBottom: 6 })(Select);
 export { Input as SelectInput };

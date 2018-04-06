@@ -70,4 +70,4 @@ FileUpload.propTypes = {
   className: PropTypes.string,
 };
 
-export default withWhiteSpace({ marginBottom: 0 })(FileUpload);
+export default withWhiteSpace({ marginBottom: 6 })(FileUpload);

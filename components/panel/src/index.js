@@ -61,4 +61,4 @@ Panel.propTypes = {
   className: PropTypes.string,
 };
 
-export default withWhiteSpace({ marginBottom: 0 })(Panel);
+export default withWhiteSpace({ marginBottom: 3 })(Panel);

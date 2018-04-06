@@ -111,4 +111,4 @@ DateInput.propTypes = {
   errorText: PropTypes.string,
 };
 
-export default withWhiteSpace({ marginBottom: 0 })(DateInput);
+export default withWhiteSpace({ marginBottom: 6 })(DateInput);
