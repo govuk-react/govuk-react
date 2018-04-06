@@ -1,12 +1,12 @@
 {
   "name": "@govuk-react/loading-box",
-  "version": "0.1.25",
+  "version": "0.1.26",
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@govuk-react/icons": "^0.1.25",
+    "@govuk-react/icons": "^0.1.26",
     "govuk-colours": "^1.0.3",
     "hex-rgb": "^1.0.0",
     "react-transition-group": "^2.2.1"
@@ -18,13 +18,13 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
-    "@govuk-react/button": "^0.1.25",
-    "@govuk-react/header": "^0.1.25",
-    "@govuk-react/hoc": "^0.1.25",
-    "@govuk-react/input-field": "^0.1.25",
-    "@govuk-react/label-text": "^0.1.25",
-    "@govuk-react/phase-banner": "^0.1.25",
-    "@govuk-react/radio": "^0.1.25",
+    "@govuk-react/button": "^0.1.26",
+    "@govuk-react/header": "^0.1.26",
+    "@govuk-react/hoc": "^0.1.26",
+    "@govuk-react/input-field": "^0.1.26",
+    "@govuk-react/label-text": "^0.1.26",
+    "@govuk-react/phase-banner": "^0.1.26",
+    "@govuk-react/radio": "^0.1.26",
     "@storybook/addon-actions": "^3.3.14",
     "@storybook/addon-knobs": "^3.3.15",
     "@storybook/addons": "^3.3.14",
