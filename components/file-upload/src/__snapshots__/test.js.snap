@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
-  margin-bottom: 0;
+.glamor-5,
+[data-glamor-5] {
+  margin-bottom: 20px;
 }
 
 .glamor-4,
@@ -16,7 +16,7 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -27,6 +27,11 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
   content: '';
   display: table;
   clear: both;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
 }
 
 .glamor-0,
@@ -58,9 +63,9 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
+  .glamor-5,
+  [data-glamor-5] {
+    margin-bottom: 30px;
   }
 }
 
@@ -68,6 +73,13 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
   .glamor-4,
   [data-glamor-4] {
     max-width: 960px;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
     margin-bottom: 0;
   }
 }
@@ -90,17 +102,17 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
 
 <glamorous(FileUpload)>
   <FileUpload
-    className="glamor-1"
+    className="glamor-5"
     meta={Object {}}
   >
     <glamorous(Label)
-      className="glamor-1"
+      className="glamor-5"
     >
       <Label
-        className="glamor-1"
+        className="glamor-5"
       >
         <glamorous(label)
-          className="glamor-1"
+          className="glamor-5"
         >
           <label
             className="glamor-4"

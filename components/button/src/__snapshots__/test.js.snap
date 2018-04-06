@@ -3,7 +3,7 @@
 exports[`button matches wrapper snapshot: wrapper mount 1`] = `
 .glamor-1,
 [data-glamor-1] {
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 
 .glamor-0,
@@ -24,7 +24,7 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
   text-decoration: none;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 
 .glamor-0:focus,
@@ -35,14 +35,14 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
 @media only screen and (min-width: 641px) {
   .glamor-1,
   [data-glamor-1] {
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
 }
 
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
 }
 

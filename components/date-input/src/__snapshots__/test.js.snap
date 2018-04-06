@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
-  margin-bottom: 0;
+.glamor-29,
+[data-glamor-29] {
+  margin-bottom: 20px;
 }
 
 .glamor-28,
@@ -17,10 +17,15 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   border-left: 4px solid #b10e1e;
   margin-right: 15px;
   padding-left: 10px;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
 }
 
 .glamor-0,
@@ -121,15 +126,22 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
+  .glamor-29,
+  [data-glamor-29] {
+    margin-bottom: 30px;
   }
 }
 
 @media only screen and (min-width: 641px) {
   .glamor-28,
   [data-glamor-28] {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
     margin-bottom: 0;
   }
 }
@@ -172,11 +184,11 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   errorText="example"
 >
   <DateInput
-    className="glamor-1"
+    className="glamor-29"
     errorText="example"
   >
     <glamorous(div)
-      className="glamor-1"
+      className="glamor-29"
       errorText="example"
     >
       <div

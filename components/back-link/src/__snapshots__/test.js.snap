@@ -3,7 +3,7 @@
 exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
 .glamor-1,
 [data-glamor-1] {
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 
 .glamor-0,
@@ -17,12 +17,12 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
   display: inline-block;
   position: relative;
   margin-top: 15px;
-  margin-bottom: 0;
   padding-left: 14px;
   border: 0;
   color: #0b0c0c;
   border-bottom: 1px solid #0b0c0c;
   text-decoration: none;
+  margin-bottom: 15px;
 }
 
 .glamor-0::before,
@@ -53,14 +53,14 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
 @media only screen and (min-width: 641px) {
   .glamor-1,
   [data-glamor-1] {
-    margin-bottom: 0;
+    margin-bottom: 15px;
   }
 }
 
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    margin-bottom: 0;
+    margin-bottom: 15px;
   }
 }
 

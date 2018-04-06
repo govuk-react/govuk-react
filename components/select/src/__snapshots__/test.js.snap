@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select matches snapshot for errorText: errorText mount 1`] = `
+.glamor-11,
+[data-glamor-11] {
+  margin-bottom: 20px;
+}
+
 .glamor-1,
 [data-glamor-1] {
   margin-bottom: 0;
@@ -34,7 +39,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   border-left: 4px solid #b10e1e;
   margin-right: 15px;
   padding-left: 10px;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -98,6 +103,13 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
+  .glamor-11,
+  [data-glamor-11] {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
   .glamor-1,
   [data-glamor-1] {
     margin-bottom: 0;
@@ -117,7 +129,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   .glamor-10,
   [data-glamor-10] {
     max-width: 960px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
 }
 
@@ -161,7 +173,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   }
 >
   <Select
-    className="glamor-1"
+    className="glamor-11"
     errorText="example"
     hint="example"
     input={Object {}}
@@ -174,15 +186,15 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
     }
   >
     <glamorous(Label)
-      className="glamor-1"
+      className="glamor-11"
       error="example"
     >
       <Label
-        className="glamor-1"
+        className="glamor-11"
         error="example"
       >
         <glamorous(label)
-          className="glamor-1"
+          className="glamor-11"
           error="example"
         >
           <label
@@ -251,9 +263,9 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
 `;
 
 exports[`Select matches snapshot: enzyme.mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
-  margin-bottom: 0;
+.glamor-5,
+[data-glamor-5] {
+  margin-bottom: 20px;
 }
 
 .glamor-4,
@@ -266,7 +278,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -277,6 +289,11 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   content: '';
   display: table;
   clear: both;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
 }
 
 .glamor-0,
@@ -315,9 +332,9 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
+  .glamor-5,
+  [data-glamor-5] {
+    margin-bottom: 30px;
   }
 }
 
@@ -325,6 +342,13 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   .glamor-4,
   [data-glamor-4] {
     max-width: 960px;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
     margin-bottom: 0;
   }
 }
@@ -352,19 +376,19 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   label="example"
 >
   <Select
-    className="glamor-1"
+    className="glamor-5"
     input={Object {}}
     label="example"
     meta={Object {}}
   >
     <glamorous(Label)
-      className="glamor-1"
+      className="glamor-5"
     >
       <Label
-        className="glamor-1"
+        className="glamor-5"
       >
         <glamorous(label)
-          className="glamor-1"
+          className="glamor-5"
         >
           <label
             className="glamor-4"
