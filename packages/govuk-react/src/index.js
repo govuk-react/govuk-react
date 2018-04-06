@@ -1,7 +1,5 @@
 // TODO: eslint needs to be configured to pick up exports that aren't in package.json
 // see https://github.com/benmosher/eslint-plugin-import/issues/1049
-// In the meantime we are including @govuk-react/storybook as a dependency,
-//  which will help ensure subdependencies are included.
 
 // Components
 export { default as BackLink } from '@govuk-react/back-link';
