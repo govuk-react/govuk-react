@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import Header from '.';
-import { H1, H2, H3, H4, H5, H6 } from './presets';
+import Header, { H1, H2, H3, H4, H5, H6 } from '.';
 
 storiesOf('Header', module).add('default', () => <Header>Default</Header>);
 storiesOf('Header', module).add('Levels 1-6', () => (
