@@ -41,7 +41,7 @@
     "@govuk-react/text-area": "^0.1.27",
     "@govuk-react/unordered-list": "^0.1.27",
     "@storybook/addon-actions": "^3.3.14",
-    "@storybook/addon-knobs": "^3.4.0",
+    "@storybook/addon-knobs": "^3.3.14",
     "@storybook/react": "^3.3.14",
     "cross-env": "^5.1.4",
     "enzyme": "^3.3.0",
