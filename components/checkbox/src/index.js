@@ -3,6 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 import { YELLOW, BLACK } from 'govuk-colours';
 
@@ -100,4 +101,4 @@ Checkbox.propTypes = {
   inline: PropTypes.bool,
 };
 
-export default Checkbox;
+export default withWhiteSpace({ marginBottom: 2 })(Checkbox);

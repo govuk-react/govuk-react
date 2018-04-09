@@ -1,8 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
+exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
 .glamor-1,
 [data-glamor-1] {
+  margin-bottom: 0;
+}
+
+.glamor-3,
+[data-glamor-3] {
   border-bottom: 1px solid #bfc1c3;
   box-sizing: border-box;
   padding-top: 10px;
@@ -12,10 +17,11 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
   text-transform: none;
   font-size: 14px;
   line-height: 1.1428571429;
+  margin-bottom: 0;
 }
 
-.glamor-1> a,
-[data-glamor-1]> a {
+.glamor-3> a,
+[data-glamor-3]> a {
   color: #005ea5;
 }
 
@@ -35,13 +41,22 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
   background-color: #005ea5;
   -webkit-font-mmoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 641px) {
   .glamor-1,
   [data-glamor-1] {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-3,
+  [data-glamor-3] {
     font-size: 16px;
     line-height: 1.25;
+    margin-bottom: 0;
   }
 }
 
@@ -51,27 +66,41 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
     font-size: 16px;
     line-height: 1.25;
     padding-bottom: 0;
+    margin-bottom: 0;
   }
 }
 
-<PhaseBanner
+<glamorous(PhaseBanner)
   level="beta"
 >
-  <glamorous(div)>
-    <div
+  <PhaseBanner
+    className="glamor-1"
+    level="beta"
+  >
+    <glamorous(div)
       className="glamor-1"
     >
-      <PhaseBadge>
-        <glamorous(strong)>
-          <strong
-            className="glamor-0"
+      <div
+        className="glamor-3"
+      >
+        <glamorous(PhaseBadge)>
+          <PhaseBadge
+            className="glamor-1"
           >
-            beta
-          </strong>
-        </glamorous(strong)>
-      </PhaseBadge>
-      example
-    </div>
-  </glamorous(div)>
-</PhaseBanner>
+            <glamorous(strong)
+              className="glamor-1"
+            >
+              <strong
+                className="glamor-0"
+              >
+                beta
+              </strong>
+            </glamorous(strong)>
+          </PhaseBadge>
+        </glamorous(PhaseBadge)>
+        example
+      </div>
+    </glamorous(div)>
+  </PhaseBanner>
+</glamorous(PhaseBanner)>
 `;

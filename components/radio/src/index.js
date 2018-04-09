@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
 import { YELLOW } from 'govuk-colours';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const Label = glamorous.label(
   {
@@ -17,7 +18,6 @@ const Label = glamorous.label(
     float: inline ? 'left' : undefined,
     clear: inline ? 'none' : undefined,
     marginRight: inline ? '30px' : '0',
-    marginBottom: inline ? '0' : undefined,
   }),
 );
 
@@ -105,4 +105,4 @@ Radio.propTypes = {
   className: PropTypes.string,
 };
 
-export default Radio;
+export default withWhiteSpace({ marginBottom: 2 })(Radio);

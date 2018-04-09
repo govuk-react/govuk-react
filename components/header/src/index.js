@@ -8,6 +8,7 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 
 import { MEDIA_QUERIES, NTA_LIGHT, LEVEL_SIZE, FONT_SIZES, LEVEL_TAG } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const GHeader = glamorous(({ level, children, ...props }) =>
   createElement(LEVEL_TAG[level], props, children))(
@@ -43,4 +44,4 @@ Header.propTypes = {
   size: PropTypes.oneOf(Object.keys(FONT_SIZES)),
 };
 
-export default Header;
+export default withWhiteSpace({ marginBottom: 0 })(Header);

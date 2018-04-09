@@ -25,6 +25,7 @@ import {
   SITE_WIDTH,
   SPACING,
 } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const FieldSet = glamorous.div(
   {
@@ -90,4 +91,4 @@ MultiChoice.propTypes = {
   className: PropTypes.string,
 };
 
-export default MultiChoice;
+export default withWhiteSpace({ marginBottom: 0 })(MultiChoice);

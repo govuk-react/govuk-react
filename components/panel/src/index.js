@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 import { TURQUOISE, WHITE } from 'govuk-colours';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const PanelInner = glamorous.div({
   backgroundColor: TURQUOISE,
@@ -60,4 +61,4 @@ Panel.propTypes = {
   className: PropTypes.string,
 };
 
-export default Panel;
+export default withWhiteSpace({ marginBottom: 3 })(Panel);

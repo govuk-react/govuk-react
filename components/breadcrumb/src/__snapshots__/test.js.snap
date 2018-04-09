@@ -1,14 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
+.glamor-4,
+[data-glamor-4] {
+  margin-bottom: 10px;
+}
+
 .glamor-3,
 [data-glamor-3] {
   font-family: nta, Arial, sans-serif;
   font-size: 14px;
   line-height: 16px;
   margin-top: 15px;
-  margin-bottom: 10px;
   -webkit-font-smoothing: antialiased;
+  margin-bottom: 10px;
 }
 
 .glamor-2,
@@ -71,47 +76,61 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
+  .glamor-4,
+  [data-glamor-4] {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
   .glamor-3,
   [data-glamor-3] {
     font-size: 16px;
     line-height: 20px;
+    margin-bottom: 10px;
   }
 }
 
-<Breadcrumb>
-  <glamorous(div)>
-    <div
-      className="glamor-3"
+<glamorous(Breadcrumb)>
+  <Breadcrumb
+    className="glamor-4"
+  >
+    <glamorous(div)
+      className="glamor-4"
     >
-      <glamorous(ul)>
-        <ul
-          className="glamor-2"
-        >
-          <glamorous(li)
-            key="0"
+      <div
+        className="glamor-3"
+      >
+        <glamorous(ul)>
+          <ul
+            className="glamor-2"
           >
-            <li
-              className="glamor-0"
+            <glamorous(li)
+              key="0"
             >
-              <a
-                href="/section"
+              <li
+                className="glamor-0"
               >
-                Section 1
-              </a>
-            </li>
-          </glamorous(li)>
-          <glamorous(li)
-            key="1"
-          >
-            <li
-              className="glamor-0"
+                <a
+                  href="/section"
+                >
+                  Section 1
+                </a>
+              </li>
+            </glamorous(li)>
+            <glamorous(li)
+              key="1"
             >
-              example
-            </li>
-          </glamorous(li)>
-        </ul>
-      </glamorous(ul)>
-    </div>
-  </glamorous(div)>
-</Breadcrumb>
+              <li
+                className="glamor-0"
+              >
+                example
+              </li>
+            </glamorous(li)>
+          </ul>
+        </glamorous(ul)>
+      </div>
+    </glamorous(div)>
+  </Breadcrumb>
+</glamorous(Breadcrumb)>
 `;

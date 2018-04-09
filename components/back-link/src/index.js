@@ -5,6 +5,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 import { BLACK, YELLOW } from 'govuk-colours';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 // const Button
 const Anchor = glamorous.button({
@@ -17,7 +18,6 @@ const Anchor = glamorous.button({
   display: 'inline-block',
   position: 'relative',
   marginTop: '15px',
-  marginBottom: '15px',
   paddingLeft: '14px',
   border: 0,
   color: `${BLACK}`,
@@ -66,4 +66,4 @@ BackLink.defaultProps = {
   className: undefined,
 };
 
-export default BackLink;
+export default withWhiteSpace({ marginBottom: 3 })(BackLink);

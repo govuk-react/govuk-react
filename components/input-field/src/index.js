@@ -9,6 +9,7 @@ import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 import Input from '@govuk-react/input';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const InputField = ({
   meta, children, hint, input, className,
@@ -56,4 +57,4 @@ InputField.propTypes = {
   className: PropTypes.string,
 };
 
-export default InputField;
+export default withWhiteSpace({ marginBottom: 0 })(InputField);

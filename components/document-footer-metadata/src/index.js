@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 import UnorderedList from '@govuk-react/unordered-list';
 import { NTA_LIGHT } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const Wrapper = glamorous.div({
   fontFamily: NTA_LIGHT,
@@ -92,4 +93,4 @@ DocumentFooterMetadata.propTypes = {
   })),
 };
 
-export default DocumentFooterMetadata;
+export default withWhiteSpace({ marginBottom: 0 })(DocumentFooterMetadata);

@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
 .glamor-0,
 [data-glamor-0] {
   font-family: "nta", Arial, sans-serif;
@@ -13,10 +18,11 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.glamor-6,
+[data-glamor-6] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -25,20 +31,21 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
 }
 
-.glamor-2:after,
-[data-glamor-2]:after {
+.glamor-6:after,
+[data-glamor-6]:after {
   content: '';
   display: table;
   clear: both;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.glamor-3,
+[data-glamor-3] {
   box-sizing: border-box;
   font-family: "nta", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -50,12 +57,20 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   width: 100%;
   padding: 5px 4px 4px;
   border: 2px solid #0b0c0c;
+  margin-bottom: 0;
 }
 
-.glamor-1:focus,
-[data-glamor-1]:focus {
+.glamor-3:focus,
+[data-glamor-3]:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (min-width: 641px) {
@@ -63,58 +78,82 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   [data-glamor-0] {
     font-size: 19px;
     line-height: 1.31579;
+    margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
+  .glamor-6,
+  [data-glamor-6] {
     max-width: 960px;
+    margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
+  .glamor-3,
+  [data-glamor-3] {
     width: 50%;
     font-size: 19px;
     line-height: 25px;
+    margin-bottom: 0;
   }
 }
 
-<InputField
-  hint={null}
-  input={Object {}}
-  meta={Object {}}
->
-  <Label>
-    <glamorous(label)>
-      <label
-        className="glamor-2"
+<glamorous(InputField)>
+  <InputField
+    className="glamor-1"
+    hint={null}
+    input={Object {}}
+    meta={Object {}}
+  >
+    <glamorous(Label)
+      className="glamor-1"
+    >
+      <Label
+        className="glamor-1"
       >
-        <LabelText>
-          <glamorous(span)>
-            <span
-              className="glamor-0"
-            >
-              example
-            </span>
-          </glamorous(span)>
-        </LabelText>
-        <Input
-          type="text"
+        <glamorous(label)
+          className="glamor-1"
         >
-          <glamorous(input)
-            type="text"
+          <label
+            className="glamor-6"
           >
-            <input
-              className="glamor-1"
-              type="text"
-            />
-          </glamorous(input)>
-        </Input>
-      </label>
-    </glamorous(label)>
-  </Label>
-</InputField>
+            <glamorous(LabelText)>
+              <LabelText
+                className="glamor-1"
+              >
+                <glamorous(span)
+                  className="glamor-1"
+                >
+                  <span
+                    className="glamor-0"
+                  >
+                    example
+                  </span>
+                </glamorous(span)>
+              </LabelText>
+            </glamorous(LabelText)>
+            <glamorous(Input)>
+              <Input
+                className="glamor-1"
+                type="text"
+              >
+                <glamorous(input)
+                  className="glamor-1"
+                  type="text"
+                >
+                  <input
+                    className="glamor-3"
+                    type="text"
+                  />
+                </glamorous(input)>
+              </Input>
+            </glamorous(Input)>
+          </label>
+        </glamorous(label)>
+      </Label>
+    </glamorous(Label)>
+  </InputField>
+</glamorous(InputField)>
 `;

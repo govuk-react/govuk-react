@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
+exports[`ThemedComponent matches snapshot: enzyme.mount 1`] = `
+.glamor-4,
+[data-glamor-4] {
+  margin-bottom: 0;
+}
+
 .glamor-0,
 [data-glamor-0] {
   font-family: "nta", Arial, sans-serif;
@@ -18,6 +23,7 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
   line-height: 1.1428571429;
   list-style-type: none;
   margin-left: 0;
+  margin-bottom: 0;
 }
 
 .glamor-1,
@@ -33,14 +39,22 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
+  .glamor-4,
+  [data-glamor-4] {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
   .glamor-3,
   [data-glamor-3] {
     font-size: 16px;
     line-height: 1.25;
+    margin-bottom: 0;
   }
 }
 
-<DocumentFooterMetadata
+<glamorous(DocumentFooterMetadata)
   partOf={
     Array [
       "example",
@@ -48,64 +62,80 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
     ]
   }
 >
-  <div>
-    <glamorous(div)>
-      <div
-        className="glamor-0"
-      />
-    </glamorous(div)>
-    <glamorous(div)>
-      <div
-        className="glamor-0"
-      >
-        <div>
-          <p
-            style={
-              Object {
-                "marginBottom": 0,
+  <DocumentFooterMetadata
+    className="glamor-4"
+    partOf={
+      Array [
+        "example",
+        "exampleexample",
+      ]
+    }
+  >
+    <div>
+      <glamorous(div)>
+        <div
+          className="glamor-0"
+        />
+      </glamorous(div)>
+      <glamorous(div)>
+        <div
+          className="glamor-0"
+        >
+          <div>
+            <p
+              style={
+                Object {
+                  "marginBottom": 0,
+                }
               }
-            }
-          >
-            Part of:
-          </p>
-          <UnorderedList
-            listStyleType="none"
-          >
-            <glamorous(ul)
+            >
+              Part of:
+            </p>
+            <glamorous(UnorderedList)
               listStyleType="none"
             >
-              <ul
-                className="glamor-3"
+              <UnorderedList
+                className="glamor-4"
+                listStyleType="none"
               >
-                <glamorous(li)
-                  key="0"
+                <glamorous(ul)
+                  className="glamor-4"
+                  listStyleType="none"
                 >
-                  <li
-                    className="glamor-1"
+                  <ul
+                    className="glamor-3"
                   >
-                    example
-                  </li>
-                </glamorous(li)>
-                <glamorous(li)
-                  key="1"
-                >
-                  <li
-                    className="glamor-1"
-                  >
-                    exampleexample
-                  </li>
-                </glamorous(li)>
-              </ul>
-            </glamorous(ul)>
-          </UnorderedList>
+                    <glamorous(li)
+                      key="0"
+                    >
+                      <li
+                        className="glamor-1"
+                      >
+                        example
+                      </li>
+                    </glamorous(li)>
+                    <glamorous(li)
+                      key="1"
+                    >
+                      <li
+                        className="glamor-1"
+                      >
+                        exampleexample
+                      </li>
+                    </glamorous(li)>
+                  </ul>
+                </glamorous(ul)>
+              </UnorderedList>
+            </glamorous(UnorderedList)>
+          </div>
         </div>
-      </div>
-    </glamorous(div)>
-    <glamorous(div)>
-      <div
-        className="glamor-0"
-      />
-    </glamorous(div)>
-  </div>
-</DocumentFooterMetadata>
+      </glamorous(div)>
+      <glamorous(div)>
+        <div
+          className="glamor-0"
+        />
+      </glamorous(div)>
+    </div>
+  </DocumentFooterMetadata>
+</glamorous(DocumentFooterMetadata)>
 `;

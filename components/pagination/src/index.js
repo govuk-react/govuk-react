@@ -11,12 +11,13 @@ import {
   NTA_LIGHT,
   SPACING,
 } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const PaginationWrapper = glamorous.ul({
   boxSizing: 'border-box',
   display: 'flex',
   flexDirection: 'column',
-  margin: 0,
+  marginTop: SPACING.SCALE_5,
   padding: SPACING.SCALE_2,
   justifyContent: 'space-between',
   fontFamily: NTA_LIGHT,
@@ -43,4 +44,4 @@ Pagination.propTypes = {
   className: PropTypes.string,
 };
 
-export default Pagination;
+export default withWhiteSpace({ marginBottom: 6 })(Pagination);

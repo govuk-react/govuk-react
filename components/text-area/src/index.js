@@ -11,6 +11,7 @@ import Label from '@govuk-react/label';
 import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const TextAreaField = glamorous.textarea(
   {
@@ -89,5 +90,5 @@ TextArea.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default TextArea;
+export default withWhiteSpace({ marginBottom: 0 })(TextArea);
 export { TextAreaField };

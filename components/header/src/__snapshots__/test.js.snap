@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-2,
+[data-glamor-2] {
+  margin-bottom: 0;
+}
+
 .glamor-0,
 [data-glamor-0] {
   font-family: "nta", Arial, sans-serif;
@@ -8,7 +13,14 @@ exports[`Header matches wrapper snapshot: wrapper mount 1`] = `
   margin: 0;
   font-size: 32px;
   line-height: 1.09375;
-  margin-bottom: 20px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (min-width: 641px) {
@@ -16,7 +28,7 @@ exports[`Header matches wrapper snapshot: wrapper mount 1`] = `
   [data-glamor-0] {
     font-size: 48px;
     line-height: 1.0416666666666667;
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -27,22 +39,26 @@ exports[`Header matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<Header
-  level={1}
->
-  <glamorous(unknown)
+<glamorous(Header)>
+  <Header
+    className="glamor-2"
     level={1}
   >
-    <Component
-      className="glamor-0"
+    <glamorous(unknown)
+      className="glamor-2"
       level={1}
     >
-      <h1
+      <Component
         className="glamor-0"
+        level={1}
       >
-        example
-      </h1>
-    </Component>
-  </glamorous(unknown)>
-</Header>
+        <h1
+          className="glamor-0"
+        >
+          example
+        </h1>
+      </Component>
+    </glamorous(unknown)>
+  </Header>
+</glamorous(Header)>
 `;

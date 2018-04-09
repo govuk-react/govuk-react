@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LabelText matches noError snapshot: no error mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
 .glamor-0,
 [data-glamor-0] {
   font-family: "nta", Arial, sans-serif;
@@ -13,6 +18,14 @@ exports[`LabelText matches noError snapshot: no error mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (min-width: 641px) {
@@ -20,21 +33,33 @@ exports[`LabelText matches noError snapshot: no error mount 1`] = `
   [data-glamor-0] {
     font-size: 19px;
     line-height: 1.31579;
+    margin-bottom: 0;
   }
 }
 
-<LabelText>
-  <glamorous(span)>
-    <span
-      className="glamor-0"
+<glamorous(LabelText)>
+  <LabelText
+    className="glamor-1"
+  >
+    <glamorous(span)
+      className="glamor-1"
     >
-      example
-    </span>
-  </glamorous(span)>
-</LabelText>
+      <span
+        className="glamor-0"
+      >
+        example
+      </span>
+    </glamorous(span)>
+  </LabelText>
+</glamorous(LabelText)>
 `;
 
 exports[`LabelText matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
 .glamor-0,
 [data-glamor-0] {
   font-family: "nta", Arial, sans-serif;
@@ -47,6 +72,14 @@ exports[`LabelText matches wrapper snapshot: wrapper mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (min-width: 641px) {
@@ -54,20 +87,27 @@ exports[`LabelText matches wrapper snapshot: wrapper mount 1`] = `
   [data-glamor-0] {
     font-size: 19px;
     line-height: 1.31579;
+    margin-bottom: 0;
   }
 }
 
-<LabelText
+<glamorous(LabelText)
   error="example"
 >
-  <glamorous(span)
+  <LabelText
+    className="glamor-1"
     error="example"
   >
-    <span
-      className="glamor-0"
+    <glamorous(span)
+      className="glamor-1"
+      error="example"
     >
-      example
-    </span>
-  </glamorous(span)>
-</LabelText>
+      <span
+        className="glamor-0"
+      >
+        example
+      </span>
+    </glamorous(span)>
+  </LabelText>
+</glamorous(LabelText)>
 `;
