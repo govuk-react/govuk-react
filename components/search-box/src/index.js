@@ -13,6 +13,7 @@ import {
 } from '@govuk-react/constants';
 
 import { Search } from '@govuk-react/icons';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const SearchBoxWrapper = glamorous.div({
   boxSizing: 'border-box',
@@ -86,4 +87,4 @@ SearchBox.propTypes = {
   className: PropTypes.string,
 };
 
-export default SearchBox;
+export default withWhiteSpace({ marginBottom: 0 })(SearchBox);

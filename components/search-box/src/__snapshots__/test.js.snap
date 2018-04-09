@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
+exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-3,
+[data-glamor-3] {
+  margin-bottom: 0;
+}
+
 .glamor-2,
 [data-glamor-2] {
   box-sizing: border-box;
@@ -11,6 +16,7 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
   display: flex;
   width: 100%;
   background: #ffffff;
+  margin-bottom: 0;
 }
 
 .glamor-0,
@@ -22,7 +28,7 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
   border: solid 1px #bfc1c3;
   border-right: 0;
   box-sizing: border-box;
-  font-family: 'nta', Arial, sans-serif;
+  font-family: "nta", Arial, sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
@@ -66,69 +72,90 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
   outline-offset: 0;
 }
 
-<SearchBox
+@media only screen and (min-width: 641px) {
+  .glamor-3,
+  [data-glamor-3] {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
+    margin-bottom: 0;
+  }
+}
+
+<glamorous(SearchBox)
   placeholder="example"
 >
-  <glamorous(div)>
-    <div
-      className="glamor-2"
+  <SearchBox
+    className="glamor-3"
+    placeholder="example"
+  >
+    <glamorous(div)
+      className="glamor-3"
     >
-      <glamorous(input)
-        placeholder="example"
-        type="search"
+      <div
+        className="glamor-2"
       >
-        <input
-          className="glamor-0"
+        <glamorous(input)
           placeholder="example"
           type="search"
-        />
-      </glamorous(input)>
-      <glamorous(button)
-        title="Search"
-      >
-        <button
-          className="glamor-1"
+        >
+          <input
+            className="glamor-0"
+            placeholder="example"
+            type="search"
+          />
+        </glamorous(input)>
+        <glamorous(button)
           title="Search"
         >
-          <Search
-            colour="#fff"
-            fill="currentColor"
+          <button
+            className="glamor-1"
             title="Search"
           >
-            <SVG
+            <Search
               colour="#fff"
               fill="currentColor"
               title="Search"
-              viewBox="0 0 57 57"
             >
-              <svg
+              <SVG
                 colour="#fff"
                 fill="currentColor"
-                height="100%"
-                style={
-                  Object {
-                    "display": "block",
-                  }
-                }
-                version="1.1"
+                title="Search"
                 viewBox="0 0 57 57"
-                width="100%"
-                x="0px"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0px"
               >
-                <title>
-                  Search
-                </title>
-                <path
-                  d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23 s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92 c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17 s-17-7.626-17-17S14.61,6,23.984,6z"
-                />
-              </svg>
-            </SVG>
-          </Search>
-        </button>
-      </glamorous(button)>
-    </div>
-  </glamorous(div)>
-</SearchBox>
+                <svg
+                  colour="#fff"
+                  fill="currentColor"
+                  height="100%"
+                  style={
+                    Object {
+                      "display": "block",
+                    }
+                  }
+                  version="1.1"
+                  viewBox="0 0 57 57"
+                  width="100%"
+                  x="0px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0px"
+                >
+                  <title>
+                    Search
+                  </title>
+                  <path
+                    d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23 s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92 c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17 s-17-7.626-17-17S14.61,6,23.984,6z"
+                  />
+                </svg>
+              </SVG>
+            </Search>
+          </button>
+        </glamorous(button)>
+      </div>
+    </glamorous(div)>
+  </SearchBox>
+</glamorous(SearchBox)>
 `;

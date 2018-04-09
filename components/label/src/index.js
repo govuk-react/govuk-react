@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 
 import { ERROR_COLOUR } from 'govuk-colours';
 import { MEDIA_QUERIES, SITE_WIDTH, SPACING } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const GLabel = glamorous.label(
   {
@@ -39,4 +40,4 @@ Label.propTypes = {
   className: PropTypes.string,
 };
 
-export default Label;
+export default withWhiteSpace({ marginBottom: 0 })(Label);

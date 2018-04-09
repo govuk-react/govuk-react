@@ -6,6 +6,7 @@ import glamorous from 'glamorous';
 import { BLACK, YELLOW, ERROR_COLOUR } from 'govuk-colours';
 import {
   FONT_SIZE,
+  LINE_HEIGHT,
   MEDIA_QUERIES,
   NTA_LIGHT,
   SPACING,
@@ -15,6 +16,7 @@ import Label from '@govuk-react/label';
 import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const LabelWrapper = glamorous.div(
   {
@@ -37,14 +39,14 @@ const Input = glamorous.input(
     fontWeight: 400,
     textTransform: 'none',
     fontSize: FONT_SIZE.SIZE_16,
-    lineHeight: '20px',
+    lineHeight: LINE_HEIGHT.SIZE_16,
+    [MEDIA_QUERIES.LARGESCREEN]: {
+      fontSize: FONT_SIZE.SIZE_19,
+      lineHeight: LINE_HEIGHT.SIZE_19,
+    },
     width: '100%',
     padding: '5px 4px 4px',
     border: `2px solid ${BLACK}`,
-    [MEDIA_QUERIES.LARGESCREEN]: {
-      fontSize: FONT_SIZE.SIZE_19,
-      lineHeight: '25px',
-    },
     '[disabled]': {
       cursor: 'auto',
     },
@@ -110,4 +112,4 @@ DateInput.propTypes = {
   errorText: PropTypes.string,
 };
 
-export default DateInput;
+export default withWhiteSpace({ marginBottom: 6 })(DateInput);

@@ -10,6 +10,7 @@ import {
   MEDIA_QUERIES,
   NTA_LIGHT,
 } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 import PhaseBadge from '@govuk-react/phase-badge';
 
@@ -49,4 +50,4 @@ PhaseBanner.propTypes = {
   className: PropTypes.string,
 };
 
-export default PhaseBanner;
+export default withWhiteSpace({ marginBottom: 0 })(PhaseBanner);

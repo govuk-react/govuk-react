@@ -13,9 +13,12 @@ exports[`withWhiteSpace matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<Whitespace
+<InputField
   className="glamor-0"
+  hint={null}
+  input={Object {}}
+  meta={Object {}}
 >
   Example
-</Whitespace>
+</InputField>
 `;

@@ -11,6 +11,7 @@ import {
   MEDIA_QUERIES,
   NTA_LIGHT,
 } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const GPhaseBadge = glamorous.strong({
   display: 'inline-block',
@@ -46,4 +47,4 @@ PhaseBadge.propTypes = {
   className: PropTypes.string,
 };
 
-export default PhaseBadge;
+export default withWhiteSpace({ marginBottom: 0 })(PhaseBadge);

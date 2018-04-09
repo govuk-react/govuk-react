@@ -17,6 +17,7 @@ import Label from '@govuk-react/label';
 import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const TextAreaField = glamorous.textarea(
   {
@@ -24,14 +25,16 @@ const TextAreaField = glamorous.textarea(
     fontFamily: NTA_LIGHT,
     fontWeight: 400,
     textTransform: 'none',
-    fontSize: '16px',
-    lineHeight: '1.25',
+    fontSize: FONT_SIZE.SIZE_16,
+    lineHeight: LINE_HEIGHT.SIZE_16,
+    [MEDIA_QUERIES.LARGESCREEN]: {
+      fontSize: FONT_SIZE.SIZE_19,
+      lineHeight: LINE_HEIGHT.SIZE_19,
+      width: '75%',
+    },
     width: '100%',
     padding: '5px 4px 4px',
     border: `2px solid ${BLACK}`,
-    [MEDIA_QUERIES.LARGESCREEN]: {
-      width: '75%',
-    },
     '[disabled]': {
       cursor: 'auto',
     },
@@ -95,5 +98,5 @@ TextArea.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default TextArea;
+export default withWhiteSpace({ marginBottom: 0 })(TextArea);
 export { TextAreaField };

@@ -3,13 +3,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 import { YELLOW, BLACK } from 'govuk-colours';
 import {
   FONT_SIZE,
+  LINE_HEIGHT,
   MEDIA_QUERIES,
   NTA_LIGHT,
-  SPACING,
 } from '@govuk-react/constants';
 
 const CheckboxWrapper = glamorous.label({
@@ -49,8 +50,12 @@ const Label = glamorous.span({
   fontFamily: NTA_LIGHT,
   fontWeight: 400,
   textTransform: 'none',
-  fontSize: '16px',
-  lineHeight: '1.25',
+  fontSize: FONT_SIZE.SIZE_16,
+  lineHeight: LINE_HEIGHT.SIZE_16,
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    fontSize: FONT_SIZE.SIZE_19,
+    lineHeight: LINE_HEIGHT.SIZE_19,
+  },
   cursor: 'pointer',
   padding: '8px 10px 9px 12px',
   display: 'block',
@@ -106,4 +111,4 @@ Checkbox.propTypes = {
   inline: PropTypes.bool,
 };
 
-export default Checkbox;
+export default withWhiteSpace({ marginBottom: 2 })(Checkbox);

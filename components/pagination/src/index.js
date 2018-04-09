@@ -8,15 +8,16 @@ import {
   FONT_SIZE,
   LINE_HEIGHT,
   MEDIA_QUERIES,
-  NTA_LIGHT,
   SPACING,
+  NTA_LIGHT,
 } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const PaginationWrapper = glamorous.ul({
   boxSizing: 'border-box',
   display: 'flex',
   flexDirection: 'column',
-  margin: 0,
+  marginTop: SPACING.SCALE_5,
   padding: SPACING.SCALE_2,
   justifyContent: 'space-between',
   fontFamily: NTA_LIGHT,
@@ -26,6 +27,8 @@ const PaginationWrapper = glamorous.ul({
   lineHeight: LINE_HEIGHT.SIZE_16,
   width: '100%',
   [MEDIA_QUERIES.LARGESCREEN]: {
+    fontSize: FONT_SIZE.SIZE_19,
+    lineHeight: LINE_HEIGHT.SIZE_19,
     flexDirection: 'row',
   },
 });
@@ -43,4 +46,4 @@ Pagination.propTypes = {
   className: PropTypes.string,
 };
 
-export default Pagination;
+export default withWhiteSpace({ marginBottom: 6 })(Pagination);

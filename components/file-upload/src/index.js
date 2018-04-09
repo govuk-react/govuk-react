@@ -8,8 +8,14 @@ import Label from '@govuk-react/label';
 import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
-import { FONT_SIZE, NTA_LIGHT, MEDIA_QUERIES } from '@govuk-react/constants';
+import {
+  FONT_SIZE,
+  LINE_HEIGHT,
+  NTA_LIGHT,
+  MEDIA_QUERIES,
+} from '@govuk-react/constants';
 
 const Input = glamorous.input({
   boxSizing: 'border-box',
@@ -19,11 +25,14 @@ const Input = glamorous.input({
   fontWeight: 400,
   textTransform: 'none',
   fontSize: FONT_SIZE.SIZE_14,
-  width: '100%',
-  padding: '5px 4px 4px',
+  lineHeight: LINE_HEIGHT.SIZE_14,
   [MEDIA_QUERIES.LARGESCREEN]: {
+    fontSize: FONT_SIZE.SIZE_16,
+    lineHeight: LINE_HEIGHT.SIZE_16,
     width: '50%',
   },
+  width: '100%',
+  padding: '5px 4px 4px',
   '[disabled]': {
     cursor: 'auto',
   },
@@ -69,4 +78,4 @@ FileUpload.propTypes = {
   className: PropTypes.string,
 };
 
-export default FileUpload;
+export default withWhiteSpace({ marginBottom: 6 })(FileUpload);

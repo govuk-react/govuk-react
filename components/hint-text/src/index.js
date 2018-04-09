@@ -4,11 +4,12 @@ import glamorous from 'glamorous';
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as COLOUR from 'govuk-colours';
+import { withWhiteSpace } from '@govuk-react/hoc';
 import {
   FONT_SIZE,
+  LINE_HEIGHT,
   MEDIA_QUERIES,
   NTA_LIGHT,
-  SPACING,
 } from '@govuk-react/constants';
 
 const GHintText = glamorous.span({
@@ -19,12 +20,12 @@ const GHintText = glamorous.span({
   fontWeight: 400,
   textTransform: 'none',
   fontSize: FONT_SIZE.SIZE_16,
-  lineHeight: '20px',
-  color: `${COLOUR.GREY_1}`,
+  lineHeight: LINE_HEIGHT.SIZE_16,
   [MEDIA_QUERIES.LARGESCREEN]: {
     fontSize: FONT_SIZE.SIZE_19,
-    lineHeight: '25px',
+    lineHeight: LINE_HEIGHT.SIZE_19,
   },
+  color: `${COLOUR.GREY_1}`,
 });
 
 const HintText = ({ children, ...props }) => (
@@ -36,4 +37,4 @@ HintText.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default HintText;
+export default withWhiteSpace({ marginBottom: 0 })(HintText);

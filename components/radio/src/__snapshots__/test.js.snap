@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio matches snapshot for inline: inline mount 1`] = `
+.glamor-3,
+[data-glamor-3] {
+  margin-bottom: 10px;
+}
+
 .glamor-0,
 [data-glamor-0] {
   position: absolute;
@@ -72,48 +77,75 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   float: left;
   clear: none;
   margin-right: 30px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 
-<Radio
+@media only screen and (min-width: 641px) {
+  .glamor-3,
+  [data-glamor-3] {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
+    margin-bottom: 10px;
+  }
+}
+
+<glamorous(Radio)
   inline={true}
   name="example"
 >
-  <glamorous(label)
+  <Radio
+    className="glamor-3"
     inline={true}
+    name="example"
   >
-    <label
-      className="glamor-2"
+    <glamorous(label)
+      className="glamor-3"
+      inline={true}
     >
-      <glamorous(input)
-        name="example"
-        type="radio"
+      <label
+        className="glamor-2"
       >
-        <input
-          className="glamor-0"
+        <glamorous(input)
           name="example"
           type="radio"
-        />
-      </glamorous(input)>
-      <glamorous(span)>
-        <span
-          className="glamor-1"
         >
-          example
-        </span>
-      </glamorous(span)>
-    </label>
-  </glamorous(label)>
-</Radio>
+          <input
+            className="glamor-0"
+            name="example"
+            type="radio"
+          />
+        </glamorous(input)>
+        <glamorous(span)>
+          <span
+            className="glamor-1"
+          >
+            example
+          </span>
+        </glamorous(span)>
+      </label>
+    </glamorous(label)>
+  </Radio>
+</glamorous(Radio)>
 `;
 
 exports[`Radio matches snapshot: standard mount 1`] = `
+.glamor-3,
+[data-glamor-3] {
+  margin-bottom: 10px;
+}
+
 .glamor-2,
 [data-glamor-2] {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
   margin-right: 0px;
+  margin-bottom: 10px;
 }
 
 .glamor-0,
@@ -179,31 +211,52 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   opacity: 0;
 }
 
-<Radio
+@media only screen and (min-width: 641px) {
+  .glamor-3,
+  [data-glamor-3] {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
+    margin-bottom: 10px;
+  }
+}
+
+<glamorous(Radio)
   name="example"
 >
-  <glamorous(label)>
-    <label
-      className="glamor-2"
+  <Radio
+    className="glamor-3"
+    name="example"
+  >
+    <glamorous(label)
+      className="glamor-3"
     >
-      <glamorous(input)
-        name="example"
-        type="radio"
+      <label
+        className="glamor-2"
       >
-        <input
-          className="glamor-0"
+        <glamorous(input)
           name="example"
           type="radio"
-        />
-      </glamorous(input)>
-      <glamorous(span)>
-        <span
-          className="glamor-1"
         >
-          example
-        </span>
-      </glamorous(span)>
-    </label>
-  </glamorous(label)>
-</Radio>
+          <input
+            className="glamor-0"
+            name="example"
+            type="radio"
+          />
+        </glamorous(input)>
+        <glamorous(span)>
+          <span
+            className="glamor-1"
+          >
+            example
+          </span>
+        </glamorous(span)>
+      </label>
+    </glamorous(label)>
+  </Radio>
+</glamorous(Radio)>
 `;

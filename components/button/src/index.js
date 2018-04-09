@@ -8,6 +8,9 @@
 import glamorous from 'glamorous';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { withWhiteSpace } from '@govuk-react/hoc';
+
+import { NTA_LIGHT } from '@govuk-react/constants';
 
 import {
   BUTTON_COLOUR,
@@ -16,6 +19,7 @@ import {
   YELLOW,
 } from 'govuk-colours';
 
+// TODO should be using constants for some of the below values
 const GButton = glamorous.button(
   {
     backgroundColor: BUTTON_COLOUR,
@@ -69,4 +73,4 @@ Button.defaultProps = {
   children: 'Button',
 };
 
-export default Button;
+export default withWhiteSpace({ marginBottom: 4 })(Button);

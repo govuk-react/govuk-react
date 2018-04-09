@@ -1,17 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 import { SPACING_MAP, SPACING_MAP_INDEX, MEDIA_QUERIES } from '@govuk-react/constants';
 
 const withWhiteSpace = config => (Component) => {
-  const Whitespace = props => <Component {...props}>{props.children}</Component>;
-
-  Whitespace.propTypes = {
-    children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
-      .isRequired,
-  };
-
-  const StyledHoc = glamorous(Whitespace)(({
+  const StyledHoc = glamorous(Component)(({
     mb: marginBottom = config.marginBottom,
   }) => ({
     marginBottom: marginBottom ? SPACING_MAP[marginBottom].mobile : 0,

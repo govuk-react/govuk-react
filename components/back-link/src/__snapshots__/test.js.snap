@@ -1,23 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 15px;
+}
+
 .glamor-0,
 [data-glamor-0] {
-  font-family: 'nta', Arial, sans-serif;
+  font-family: "nta", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.1428571429;
   display: inline-block;
   position: relative;
   margin-top: 15px;
-  margin-bottom: 15px;
   padding-left: 14px;
   border: 0;
   color: #0b0c0c;
   border-bottom: 1px solid #0b0c0c;
   text-decoration: none;
+  margin-bottom: 15px;
 }
 
 .glamor-0::before,
@@ -45,18 +50,40 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
   outline: 3px solid #ffbf47;
 }
 
-<BackLink
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 15px;
+  }
+}
+
+<glamorous(BackLink)
   goBack={[Function]}
 >
-  <glamorous(button)
-    onClick={[Function]}
+  <BackLink
+    className="glamor-1"
+    goBack={[Function]}
   >
-    <button
-      className="glamor-0"
+    <glamorous(button)
+      className="glamor-1"
       onClick={[Function]}
     >
-      example
-    </button>
-  </glamorous(button)>
-</BackLink>
+      <button
+        className="glamor-0"
+        onClick={[Function]}
+      >
+        example
+      </button>
+    </glamorous(button)>
+  </BackLink>
+</glamorous(BackLink)>
 `;

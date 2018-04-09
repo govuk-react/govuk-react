@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Label matches withError snapshot: with error mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
 .glamor-0,
 [data-glamor-0] {
   display: -webkit-box;
@@ -14,6 +19,7 @@ exports[`Label matches withError snapshot: with error mount 1`] = `
   border-left: 4px solid #b10e1e;
   margin-right: 15px;
   padding-left: 10px;
+  margin-bottom: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -27,28 +33,47 @@ exports[`Label matches withError snapshot: with error mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    max-width: 960px;
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
   }
 }
 
-<Label
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    max-width: 960px;
+    margin-bottom: 0;
+  }
+}
+
+<glamorous(Label)
   error="example"
 >
-  <glamorous(label)
+  <Label
+    className="glamor-1"
     error="example"
   >
-    <label
-      className="glamor-0"
+    <glamorous(label)
+      className="glamor-1"
+      error="example"
     >
-      example
-    </label>
-  </glamorous(label)>
-</Label>
+      <label
+        className="glamor-0"
+      >
+        example
+      </label>
+    </glamorous(label)>
+  </Label>
+</glamorous(Label)>
 `;
 
 exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
 .glamor-0,
 [data-glamor-0] {
   display: -webkit-box;
@@ -59,6 +84,7 @@ exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -72,19 +98,33 @@ exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    max-width: 960px;
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
   }
 }
 
-<Label>
-  <glamorous(label)>
-    <label
-      className="glamor-0"
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    max-width: 960px;
+    margin-bottom: 0;
+  }
+}
+
+<glamorous(Label)>
+  <Label
+    className="glamor-1"
+  >
+    <glamorous(label)
+      className="glamor-1"
     >
-      example
-    </label>
-  </glamorous(label)>
-</Label>
+      <label
+        className="glamor-0"
+      >
+        example
+      </label>
+    </glamorous(label)>
+  </Label>
+</glamorous(Label)>
 `;

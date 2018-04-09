@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
 .glamor-0,
 [data-glamor-0] {
   font-family: "nta", Arial, sans-serif;
@@ -9,14 +14,15 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   display: block;
   clear: none;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: 14px;
+  line-height: 1.1428571429;
   color: #0b0c0c;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
-.glamor-3,
-[data-glamor-3] {
+.glamor-7,
+[data-glamor-7] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -28,35 +34,37 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   border-left: 4px solid #b10e1e;
   margin-right: 15px;
   padding-left: 10px;
+  margin-bottom: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
 }
 
-.glamor-3:after,
-[data-glamor-3]:after {
+.glamor-7:after,
+[data-glamor-7]:after {
   content: '';
   display: table;
   clear: both;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.glamor-3,
+[data-glamor-3] {
   display: block;
   font-family: "nta", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
   text-transform: none;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 1.1428571429;
   color: #b10e1e;
   padding-top: 4px;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.glamor-6,
+[data-glamor-6] {
   box-sizing: border-box;
   font-family: "nta", Arial, sans-serif;
   font-weight: 400;
@@ -68,45 +76,55 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   border: 4px solid #b10e1e;
 }
 
-.glamor-2:focus,
-[data-glamor-2]:focus {
+.glamor-6:focus,
+[data-glamor-6]:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
 @media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    font-size: 19px;
-    line-height: 1.31579;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-7,
+  [data-glamor-7] {
+    max-width: 960px;
+    margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width: 641px) {
   .glamor-3,
   [data-glamor-3] {
-    max-width: 960px;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
+  .glamor-6,
+  [data-glamor-6] {
     font-size: 19px;
-    line-height: 25px;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
     width: 75%;
   }
 }
 
-<TextArea
+<glamorous(TextArea)
   errorText="example"
-  input={Object {}}
   meta={
     Object {
       "error": "example",
@@ -114,52 +132,88 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
     }
   }
 >
-  <Label
-    error="example"
+  <TextArea
+    className="glamor-1"
+    errorText="example"
+    input={Object {}}
+    meta={
+      Object {
+        "error": "example",
+        "touched": true,
+      }
+    }
   >
-    <glamorous(label)
+    <glamorous(Label)
+      className="glamor-1"
       error="example"
     >
-      <label
-        className="glamor-3"
+      <Label
+        className="glamor-1"
+        error="example"
       >
-        <LabelText>
-          <glamorous(span)>
-            <span
-              className="glamor-0"
-            >
-              example
-            </span>
-          </glamorous(span)>
-        </LabelText>
-        <ErrorText>
-          <glamorous(span)>
-            <span
-              className="glamor-1"
-            >
-              example
-            </span>
-          </glamorous(span)>
-        </ErrorText>
-        <glamorous(textarea)
+        <glamorous(label)
+          className="glamor-1"
           error="example"
-          rows="5"
-          type="text"
         >
-          <textarea
-            className="glamor-2"
-            rows="5"
-          />
-        </glamorous(textarea)>
-      </label>
-    </glamorous(label)>
-  </Label>
-</TextArea>
+          <label
+            className="glamor-7"
+          >
+            <glamorous(LabelText)>
+              <LabelText
+                className="glamor-1"
+              >
+                <glamorous(span)
+                  className="glamor-1"
+                >
+                  <span
+                    className="glamor-0"
+                  >
+                    example
+                  </span>
+                </glamorous(span)>
+              </LabelText>
+            </glamorous(LabelText)>
+            <glamorous(ErrorText)>
+              <ErrorText
+                className="glamor-1"
+              >
+                <glamorous(span)
+                  className="glamor-1"
+                >
+                  <span
+                    className="glamor-3"
+                  >
+                    example
+                  </span>
+                </glamorous(span)>
+              </ErrorText>
+            </glamorous(ErrorText)>
+            <glamorous(textarea)
+              error="example"
+              rows="5"
+              type="text"
+            >
+              <textarea
+                className="glamor-6"
+                rows="5"
+              />
+            </glamorous(textarea)>
+          </label>
+        </glamorous(label)>
+      </Label>
+    </glamorous(Label)>
+  </TextArea>
+</glamorous(TextArea)>
 `;
 
 exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
-.glamor-3,
-[data-glamor-3] {
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
+.glamor-7,
+[data-glamor-7] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -168,13 +222,14 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
 }
 
-.glamor-3:after,
-[data-glamor-3]:after {
+.glamor-7:after,
+[data-glamor-7]:after {
   content: '';
   display: table;
   clear: both;
@@ -188,14 +243,15 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   display: block;
   clear: none;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: 14px;
+  line-height: 1.1428571429;
   color: #0b0c0c;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.glamor-6,
+[data-glamor-6] {
   box-sizing: border-box;
   font-family: "nta", Arial, sans-serif;
   font-weight: 400;
@@ -207,101 +263,143 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   border: 2px solid #0b0c0c;
 }
 
-.glamor-2:focus,
-[data-glamor-2]:focus {
+.glamor-6:focus,
+[data-glamor-6]:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.glamor-3,
+[data-glamor-3] {
   display: block;
   font-family: "nta", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   text-transform: none;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 1.1428571429;
   color: #6f777b;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-7,
+  [data-glamor-7] {
+    max-width: 960px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-6,
+  [data-glamor-6] {
+    font-size: 19px;
+    width: 75%;
+  }
 }
 
 @media only screen and (min-width: 641px) {
   .glamor-3,
   [data-glamor-3] {
-    max-width: 960px;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 0;
   }
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    font-size: 19px;
-    line-height: 1.31579;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
-    width: 75%;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    font-size: 19px;
-    line-height: 25px;
-  }
-}
-
-<TextArea
+<glamorous(TextArea)
   hint="example"
-  input={Object {}}
-  meta={Object {}}
 >
-  <Label>
-    <glamorous(label)>
-      <label
-        className="glamor-3"
+  <TextArea
+    className="glamor-1"
+    hint="example"
+    input={Object {}}
+    meta={Object {}}
+  >
+    <glamorous(Label)
+      className="glamor-1"
+    >
+      <Label
+        className="glamor-1"
       >
-        <LabelText>
-          <glamorous(span)>
-            <span
-              className="glamor-0"
-            >
-              example
-            </span>
-          </glamorous(span)>
-        </LabelText>
-        <HintText>
-          <glamorous(span)>
-            <span
-              className="glamor-1"
-            >
-              example
-            </span>
-          </glamorous(span)>
-        </HintText>
-        <glamorous(textarea)
-          rows="5"
-          type="text"
+        <glamorous(label)
+          className="glamor-1"
         >
-          <textarea
-            className="glamor-2"
-            rows="5"
-          />
-        </glamorous(textarea)>
-      </label>
-    </glamorous(label)>
-  </Label>
-</TextArea>
+          <label
+            className="glamor-7"
+          >
+            <glamorous(LabelText)>
+              <LabelText
+                className="glamor-1"
+              >
+                <glamorous(span)
+                  className="glamor-1"
+                >
+                  <span
+                    className="glamor-0"
+                  >
+                    example
+                  </span>
+                </glamorous(span)>
+              </LabelText>
+            </glamorous(LabelText)>
+            <glamorous(HintText)>
+              <HintText
+                className="glamor-1"
+              >
+                <glamorous(span)
+                  className="glamor-1"
+                >
+                  <span
+                    className="glamor-3"
+                  >
+                    example
+                  </span>
+                </glamorous(span)>
+              </HintText>
+            </glamorous(HintText)>
+            <glamorous(textarea)
+              rows="5"
+              type="text"
+            >
+              <textarea
+                className="glamor-6"
+                rows="5"
+              />
+            </glamorous(textarea)>
+          </label>
+        </glamorous(label)>
+      </Label>
+    </glamorous(Label)>
+  </TextArea>
+</glamorous(TextArea)>
 `;
 
 exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
-.glamor-2,
-[data-glamor-2] {
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
+.glamor-4,
+[data-glamor-4] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -310,13 +408,14 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
 }
 
-.glamor-2:after,
-[data-glamor-2]:after {
+.glamor-4:after,
+[data-glamor-4]:after {
   content: '';
   display: table;
   clear: both;
@@ -330,14 +429,15 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   display: block;
   clear: none;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: 14px;
+  line-height: 1.1428571429;
   color: #0b0c0c;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.glamor-3,
+[data-glamor-3] {
   box-sizing: border-box;
   font-family: "nta", Arial, sans-serif;
   font-weight: 400;
@@ -349,63 +449,90 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   border: 2px solid #0b0c0c;
 }
 
-.glamor-1:focus,
-[data-glamor-1]:focus {
+.glamor-3:focus,
+[data-glamor-3]:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-4,
+  [data-glamor-4] {
     max-width: 960px;
+    margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    font-size: 19px;
-    line-height: 1.31579;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
+  .glamor-3,
+  [data-glamor-3] {
+    font-size: 19px;
     width: 75%;
   }
 }
 
-<TextArea
-  input={Object {}}
-  meta={Object {}}
->
-  <Label>
-    <glamorous(label)>
-      <label
-        className="glamor-2"
+<glamorous(TextArea)>
+  <TextArea
+    className="glamor-1"
+    input={Object {}}
+    meta={Object {}}
+  >
+    <glamorous(Label)
+      className="glamor-1"
+    >
+      <Label
+        className="glamor-1"
       >
-        <LabelText>
-          <glamorous(span)>
-            <span
-              className="glamor-0"
-            >
-              example
-            </span>
-          </glamorous(span)>
-        </LabelText>
-        <glamorous(textarea)
-          rows="5"
-          type="text"
+        <glamorous(label)
+          className="glamor-1"
         >
-          <textarea
-            className="glamor-1"
-            rows="5"
-          />
-        </glamorous(textarea)>
-      </label>
-    </glamorous(label)>
-  </Label>
-</TextArea>
+          <label
+            className="glamor-4"
+          >
+            <glamorous(LabelText)>
+              <LabelText
+                className="glamor-1"
+              >
+                <glamorous(span)
+                  className="glamor-1"
+                >
+                  <span
+                    className="glamor-0"
+                  >
+                    example
+                  </span>
+                </glamorous(span)>
+              </LabelText>
+            </glamorous(LabelText)>
+            <glamorous(textarea)
+              rows="5"
+              type="text"
+            >
+              <textarea
+                className="glamor-3"
+                rows="5"
+              />
+            </glamorous(textarea)>
+          </label>
+        </glamorous(label)>
+      </Label>
+    </glamorous(Label)>
+  </TextArea>
+</glamorous(TextArea)>
 `;

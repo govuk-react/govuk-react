@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HintText matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
 .glamor-0,
 [data-glamor-0] {
   display: block;
@@ -10,25 +15,39 @@ exports[`HintText matches wrapper snapshot: wrapper mount 1`] = `
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   color: #6f777b;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
     font-size: 19px;
-    line-height: 25px;
+    margin-bottom: 0;
   }
 }
 
-<HintText>
-  <glamorous(span)>
-    <span
-      className="glamor-0"
+<glamorous(HintText)>
+  <HintText
+    className="glamor-1"
+  >
+    <glamorous(span)
+      className="glamor-1"
     >
-      example
-    </span>
-  </glamorous(span)>
-</HintText>
+      <span
+        className="glamor-0"
+      >
+        example
+      </span>
+    </glamorous(span)>
+  </HintText>
+</glamorous(HintText)>
 `;

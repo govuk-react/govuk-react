@@ -5,14 +5,13 @@ import { mount } from 'enzyme';
 import Breadcrumb from './';
 
 describe('breadcrumb', () => {
-  const example = 'example';
   const emptyNode = [];
   const nullNode = null;
-  const wrapper = <Breadcrumb>{example}</Breadcrumb>;
+  const wrapper = <Breadcrumb>example</Breadcrumb>;
   const wrapperMultiple = (
     <Breadcrumb>
       <a href="/section">Section 1</a>
-      {example}
+      example
     </Breadcrumb>
   );
   const wrapperEmptyNode = (
@@ -20,7 +19,7 @@ describe('breadcrumb', () => {
       <a href="/section">Section 1</a>
       {emptyNode}
       {nullNode}
-      {example}
+      example
     </Breadcrumb>
   );
 

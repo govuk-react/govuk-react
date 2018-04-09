@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PhaseBadge matches wrapper snapshot: wrapper mount 1`] = `
+exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
 .glamor-0,
 [data-glamor-0] {
   display: inline-block;
@@ -17,6 +22,14 @@ exports[`PhaseBadge matches wrapper snapshot: wrapper mount 1`] = `
   background-color: #005ea5;
   -webkit-font-mmoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (min-width: 641px) {
@@ -25,16 +38,23 @@ exports[`PhaseBadge matches wrapper snapshot: wrapper mount 1`] = `
     font-size: 16px;
     line-height: 1.25;
     padding-bottom: 0;
+    margin-bottom: 0;
   }
 }
 
-<PhaseBadge>
-  <glamorous(strong)>
-    <strong
-      className="glamor-0"
+<glamorous(PhaseBadge)>
+  <PhaseBadge
+    className="glamor-1"
+  >
+    <glamorous(strong)
+      className="glamor-1"
     >
-      beta
-    </strong>
-  </glamorous(strong)>
-</PhaseBadge>
+      <strong
+        className="glamor-0"
+      >
+        beta
+      </strong>
+    </glamorous(strong)>
+  </PhaseBadge>
+</glamorous(PhaseBadge)>
 `;

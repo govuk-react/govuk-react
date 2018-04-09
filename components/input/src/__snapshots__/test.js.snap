@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input matches withColouredError snapshot: with coloured error mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
 .glamor-0,
 [data-glamor-0] {
   box-sizing: border-box;
@@ -10,10 +15,11 @@ exports[`Input matches withColouredError snapshot: with coloured error mount 1`]
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   width: 100%;
   padding: 5px 4px 4px;
   border: 4px solid #f47738;
+  margin-bottom: 0;
 }
 
 .glamor-0:focus,
@@ -23,33 +29,52 @@ exports[`Input matches withColouredError snapshot: with coloured error mount 1`]
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    width: 50%;
-    font-size: 19px;
-    line-height: 25px;
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
   }
 }
 
-<Input
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 19px;
+    margin-bottom: 0;
+  }
+}
+
+<glamorous(Input)
   error="example"
   errorColor="#f47738"
   type="text"
 >
-  <glamorous(input)
+  <Input
+    className="glamor-1"
     error="example"
     errorColor="#f47738"
     type="text"
   >
-    <input
-      className="glamor-0"
+    <glamorous(input)
+      className="glamor-1"
+      error="example"
+      errorColor="#f47738"
       type="text"
-    />
-  </glamorous(input)>
-</Input>
+    >
+      <input
+        className="glamor-0"
+        type="text"
+      />
+    </glamorous(input)>
+  </Input>
+</glamorous(Input)>
 `;
 
 exports[`Input matches withError snapshot: with error mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
 .glamor-0,
 [data-glamor-0] {
   box-sizing: border-box;
@@ -59,10 +84,11 @@ exports[`Input matches withError snapshot: with error mount 1`] = `
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   width: 100%;
   padding: 5px 4px 4px;
   border: 4px solid #b10e1e;
+  margin-bottom: 0;
 }
 
 .glamor-0:focus,
@@ -72,31 +98,49 @@ exports[`Input matches withError snapshot: with error mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    width: 50%;
-    font-size: 19px;
-    line-height: 25px;
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
   }
 }
 
-<Input
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 19px;
+    margin-bottom: 0;
+  }
+}
+
+<glamorous(Input)
   error="example"
   type="text"
 >
-  <glamorous(input)
+  <Input
+    className="glamor-1"
     error="example"
     type="text"
   >
-    <input
-      className="glamor-0"
+    <glamorous(input)
+      className="glamor-1"
+      error="example"
       type="text"
-    />
-  </glamorous(input)>
-</Input>
+    >
+      <input
+        className="glamor-0"
+        type="text"
+      />
+    </glamorous(input)>
+  </Input>
+</glamorous(Input)>
 `;
 
 exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
+}
+
 .glamor-0,
 [data-glamor-0] {
   box-sizing: border-box;
@@ -106,10 +150,11 @@ exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   width: 100%;
   padding: 5px 4px 4px;
   border: 2px solid #0b0c0c;
+  margin-bottom: 0;
 }
 
 .glamor-0:focus,
@@ -119,24 +164,36 @@ exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    width: 50%;
-    font-size: 19px;
-    line-height: 25px;
+  .glamor-1,
+  [data-glamor-1] {
+    margin-bottom: 0;
   }
 }
 
-<Input
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    font-size: 19px;
+    margin-bottom: 0;
+  }
+}
+
+<glamorous(Input)
   type="text"
 >
-  <glamorous(input)
+  <Input
+    className="glamor-1"
     type="text"
   >
-    <input
-      className="glamor-0"
+    <glamorous(input)
+      className="glamor-1"
       type="text"
-    />
-  </glamorous(input)>
-</Input>
+    >
+      <input
+        className="glamor-0"
+        type="text"
+      />
+    </glamorous(input)>
+  </Input>
+</glamorous(Input)>
 `;
