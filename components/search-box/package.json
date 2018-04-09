@@ -1,10 +1,10 @@
 {
   "name": "@govuk-react/search-box",
-  "version": "0.1.25",
+  "version": "0.1.27",
   "dependencies": {
-    "@govuk-react/constants": "^0.1.21",
-    "@govuk-react/hoc": "^0.1.25",
-    "@govuk-react/icons": "^0.1.25",
+    "@govuk-react/constants": "^0.1.26",
+    "@govuk-react/hoc": "^0.1.27",
+    "@govuk-react/icons": "^0.1.27",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
@@ -14,10 +14,10 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
-    "@govuk-react/api-docs": "^0.1.25",
-    "@govuk-react/grid-col": "^0.1.25",
-    "@govuk-react/grid-row": "^0.1.25",
-    "@govuk-react/layout": "^0.1.25",
+    "@govuk-react/api-docs": "^0.1.27",
+    "@govuk-react/grid-col": "^0.1.27",
+    "@govuk-react/grid-row": "^0.1.27",
+    "@govuk-react/layout": "^0.1.27",
     "@storybook/addon-actions": "^3.3.14",
     "@storybook/react": "^3.3.14",
     "cross-env": "^5.1.4",

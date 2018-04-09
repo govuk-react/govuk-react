@@ -71,7 +71,7 @@ stories.add('with spacing default size 1', () => (
   </React.Fragment>
 ));
 
-stories.add('with spacing size 2', () => (
+stories.add('with various spacing sizes', () => (
   <React.Fragment>
     <InputFieldWithWhiteSpace mb={number('marginBottom1', 1)} name="group1" hint="hi">Example 1</InputFieldWithWhiteSpace>
     <InputFieldWithWhiteSpace mb={number('marginBottom2', 4)} name="group1" hint="hi">Example 2</InputFieldWithWhiteSpace>
@@ -99,16 +99,16 @@ stories.add('with multiple components', () => (
     <LabelTextWithWhiteSpace mb={number('LabelText marginBottom', 9)}>LabelText Example</LabelTextWithWhiteSpace>
     <ListItemWithWhiteSpace mb={number('ListItem marginBottom', 9)}>ListItem Example</ListItemWithWhiteSpace>
     <ListNavigationWithWhiteSpace mb={number('ListNavigation marginBottom', 9)}>ListNavigation Example</ListNavigationWithWhiteSpace>
-    <MultiChoiceWithWhiteSpace mb={number('MultiChoice marginBottom', 9)}>MultiChoice Example</MultiChoiceWithWhiteSpace>
+    <MultiChoiceWithWhiteSpace label="example" mb={number('MultiChoice marginBottom', 9)}>MultiChoice Example</MultiChoiceWithWhiteSpace>
     <OrderedListWithWhiteSpace mb={number('OrderedList marginBottom', 9)}>OrderedList Example</OrderedListWithWhiteSpace>
     <PaginationWithWhiteSpace mb={number('Pagination marginBottom', 9)}>Pagination Example</PaginationWithWhiteSpace>
-    <PanelWithWhiteSpace mb={number('Panel marginBottom', 9)}>Panel Example</PanelWithWhiteSpace>
-    <PhaseBadgeWithWhiteSpace mb={number('PhaseBadge marginBottom', 9)}>PhaseBadge Example</PhaseBadgeWithWhiteSpace>
-    <PhaseBannerWithWhiteSpace mb={number('PhaseBanner marginBottom', 9)}>PhaseBanner Example</PhaseBannerWithWhiteSpace>
+    <PanelWithWhiteSpace panelTitle="Example" mb={number('Panel marginBottom', 9)}>Panel Example</PanelWithWhiteSpace>
+    <PhaseBadgeWithWhiteSpace mb={number('PhaseBadge marginBottom', 9)}>PhaseBadge</PhaseBadgeWithWhiteSpace>
+    <PhaseBannerWithWhiteSpace level="EXAMPLE" mb={number('PhaseBanner marginBottom', 9)}>PhaseBanner Example</PhaseBannerWithWhiteSpace>
     <RadioWithWhiteSpace mb={number('Radio marginBottom', 9)}>Radio Example</RadioWithWhiteSpace>
     <RelatedItemsWithWhiteSpace mb={number('RelatedItems marginBottom', 9)}>RelatedItems Example</RelatedItemsWithWhiteSpace>
     <SearchBoxWithWhiteSpace mb={number('SearchBox marginBottom', 9)}>SearchBox Example</SearchBoxWithWhiteSpace>
-    <SelectWithWhiteSpace mb={number('Select marginBottom', 9)}>Select Example</SelectWithWhiteSpace>
+    <SelectWithWhiteSpace label="example" mb={number('Select marginBottom', 9)}>Select Example</SelectWithWhiteSpace>
     <TextAreaWithWhiteSpace mb={number('TextArea marginBottom', 9)}>TextArea Example</TextAreaWithWhiteSpace>
     <UnorderedListWithWhiteSpace mb={number('UnorderedList marginBottom', 9)}>UnorderedList Example</UnorderedListWithWhiteSpace>
   </React.Fragment>
