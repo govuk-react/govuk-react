@@ -4,11 +4,16 @@ import glamorous from 'glamorous';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { BLACK } from 'govuk-colours';
-import { MEDIA_QUERIES } from '@govuk-react/constants';
+import {
+  FONT_SIZE,
+  MEDIA_QUERIES,
+  NTA_LIGHT,
+  SPACING,
+} from '@govuk-react/constants';
 
 const GLabelText = glamorous.span(
   {
-    fontFamily: '"nta", Arial, sans-serif',
+    fontFamily: NTA_LIGHT,
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
     display: 'block',

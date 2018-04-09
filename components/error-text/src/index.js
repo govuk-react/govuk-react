@@ -4,7 +4,12 @@ import glamorous from 'glamorous';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ERROR_COLOUR } from 'govuk-colours';
-import { FONT_SIZE, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants';
+import {
+  FONT_SIZE,
+  MEDIA_QUERIES,
+  NTA_LIGHT,
+  SPACING,
+} from '@govuk-react/constants';
 
 const GErrorText = glamorous.span({
   display: 'block',

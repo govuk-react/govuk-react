@@ -5,15 +5,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 import { BLACK, YELLOW } from 'govuk-colours';
+import {
+  FONT_SIZE,
+  LINE_HEIGHT,
+  MEDIA_QUERIES,
+  NTA_LIGHT,
+  SPACING,
+} from '@govuk-react/constants';
 
 // const Button
 const Anchor = glamorous.button({
-  fontFamily: "'nta', Arial, sans-serif",
+  fontFamily: NTA_LIGHT,
   WebkitFontSmoothing: 'antialiased',
   MozOsxFontSmoothing: 'grayscale',
   fontWeight: 400,
-  fontSize: '14px',
-  lineHeight: '16px',
+  fontSize: FONT_SIZE.SIZE_14,
+  lineHeight: LINE_HEIGHT.SIZE_14,
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    fontSize: FONT_SIZE.SIZE_16,
+    lineHeight: LINE_HEIGHT.SIZE_16,
+  },
   display: 'inline-block',
   position: 'relative',
   marginTop: '15px',

@@ -4,7 +4,13 @@ import glamorous from 'glamorous';
 import PropTypes from 'prop-types';
 
 import { TURQUOISE, WHITE } from 'govuk-colours';
-import { MEDIA_QUERIES } from '@govuk-react/constants';
+import {
+  FONT_SIZE,
+  LINE_HEIGHT,
+  MEDIA_QUERIES,
+  NTA_LIGHT,
+  SPACING,
+} from '@govuk-react/constants';
 
 const PanelInner = glamorous.div({
   backgroundColor: TURQUOISE,
@@ -14,7 +20,7 @@ const PanelInner = glamorous.div({
 
 // TODO use standard font constants
 const PanelTitle = glamorous.h2({
-  fontFamily: "'nta', Arial, sans-serif",
+  fontFamily: NTA_LIGHT,
   fontWeight: 'bold',
   WebkitFontSmoothing: 'antialiased',
   fontSize: '32px',
@@ -29,7 +35,7 @@ const PanelTitle = glamorous.h2({
 
 // TODO use standard font constants
 const PanelBody = glamorous.div({
-  fontFamily: "'nta', Arial, sans-serif",
+  fontFamily: NTA_LIGHT,
   fontSize: '24px',
   fontWeight: 400,
   lineHeight: '25px',

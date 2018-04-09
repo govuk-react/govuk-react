@@ -24,7 +24,7 @@ const GButton = glamorous.button(
     color: WHITE,
     cursor: 'pointer',
     display: 'inline-block',
-    fontFamily: '"nta", Arial, sans-serif',
+    fontFamily: NTA_LIGHT,
     fontWeight: 400,
     fontSize: '1em',
     lineHeight: '1.25',

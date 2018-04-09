@@ -5,6 +5,12 @@ import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
 import { YELLOW, BLACK } from 'govuk-colours';
+import {
+  FONT_SIZE,
+  MEDIA_QUERIES,
+  NTA_LIGHT,
+  SPACING,
+} from '@govuk-react/constants';
 
 const CheckboxWrapper = glamorous.label({
   display: 'block',
@@ -40,7 +46,7 @@ const Input = glamorous.input({
 });
 
 const Label = glamorous.span({
-  fontFamily: '"nta", Arial, sans-serif',
+  fontFamily: NTA_LIGHT,
   fontWeight: 400,
   textTransform: 'none',
   fontSize: '16px',

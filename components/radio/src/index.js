@@ -7,6 +7,14 @@ import glamorous from 'glamorous';
 
 import { YELLOW } from 'govuk-colours';
 
+import {
+  FONT_SIZE,
+  LINE_HEIGHT,
+  MEDIA_QUERIES,
+  NTA_LIGHT,
+  SPACING,
+} from '@govuk-react/constants';
+
 const Label = glamorous.label(
   {
     display: 'block',
@@ -49,7 +57,7 @@ const Input = glamorous.input({
 });
 
 const LabelText = glamorous.span({
-  fontFamily: '"nta", Arial, sans-serif',
+  fontFamily: NTA_LIGHT,
   fontWeight: 400,
   textTransform: 'none',
   fontSize: '16px',
