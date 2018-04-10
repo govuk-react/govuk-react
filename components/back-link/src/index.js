@@ -11,7 +11,6 @@ import {
   LINE_HEIGHT,
   MEDIA_QUERIES,
   NTA_LIGHT,
-  SPACING,
 } from '@govuk-react/constants';
 
 // const Button

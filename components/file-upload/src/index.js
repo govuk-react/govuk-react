@@ -3,13 +3,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
-
 import Label from '@govuk-react/label';
 import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 import { withWhiteSpace } from '@govuk-react/hoc';
-
 import {
   FONT_SIZE,
   LINE_HEIGHT,

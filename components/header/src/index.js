@@ -6,8 +6,13 @@
 import glamorous from 'glamorous';
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
-
-import { MEDIA_QUERIES, NTA_LIGHT, LEVEL_SIZE, FONT_SIZES, LEVEL_TAG } from '@govuk-react/constants';
+import {
+  MEDIA_QUERIES,
+  NTA_LIGHT,
+  LEVEL_SIZE,
+  FONT_SIZES,
+  LEVEL_TAG,
+} from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
 const GHeader = glamorous(({ level, children, ...props }) =>

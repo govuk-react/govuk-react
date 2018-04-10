@@ -9,9 +9,7 @@ import glamorous from 'glamorous';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { withWhiteSpace } from '@govuk-react/hoc';
-
 import { NTA_LIGHT } from '@govuk-react/constants';
-
 import {
   BUTTON_COLOUR,
   BUTTON_COLOUR_DARKEN_15,

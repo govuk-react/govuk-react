@@ -4,7 +4,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 import { withWhiteSpace } from '@govuk-react/hoc';
-
 import { YELLOW, BLACK } from 'govuk-colours';
 import {
   FONT_SIZE,
