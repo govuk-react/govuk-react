@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
-import { LIGHT_BLUE, WHITE, YELLOW } from 'govuk-colours';
+import { BLUE, WHITE, YELLOW } from 'govuk-colours';
 
 import { Search } from '@govuk-react/icons';
 import { withWhiteSpace } from '@govuk-react/hoc';
@@ -43,7 +43,7 @@ const InputSearchBox = glamorous.input({
 });
 
 const SearchButton = glamorous.button({
-  backgroundColor: LIGHT_BLUE,
+  backgroundColor: BLUE,
   border: 0,
   display: 'block',
   color: '#fff',

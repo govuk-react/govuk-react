@@ -30,6 +30,7 @@ import '@govuk-react/list-navigation/lib/stories';
 import '@govuk-react/related-items/lib/stories';
 import '@govuk-react/document-footer-metadata/lib/stories';
 import '@govuk-react/loading-box/lib/stories';
+import '@govuk-react/top-nav/lib/stories';
 
 import '@govuk-react/hoc/lib/asAnchor/stories';
 import '@govuk-react/hoc/lib/asPaginationItem/stories';
