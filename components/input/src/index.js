@@ -25,6 +25,7 @@ const GInput = glamorous.input(
     [MEDIA_QUERIES.LARGESCREEN]: {
       fontSize: FONT_SIZE.SIZE_19,
       lineHeight: LINE_HEIGHT.SIZE_19,
+      width: '50%',
     },
     width: '100%',
     padding: '5px 4px 4px',
