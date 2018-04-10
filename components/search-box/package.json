@@ -14,7 +14,6 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
-    "@govuk-react/api-docs": "^0.1.27",
     "@govuk-react/grid-col": "^0.1.27",
     "@govuk-react/grid-row": "^0.1.27",
     "@govuk-react/layout": "^0.1.27",
