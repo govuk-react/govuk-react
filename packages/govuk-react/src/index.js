@@ -43,4 +43,4 @@ export { asPaginationItem } from '@govuk-react/hoc';
 export { withWhiteSpace } from '@govuk-react/hoc';
 
 // Icons
-export { Search as SearchIcon, ArrowLeft, Spinner } from '@govuk-react/icons';
+export { Search as SearchIcon, ArrowLeft, Spinner, GovUK } from '@govuk-react/icons';
