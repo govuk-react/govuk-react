@@ -39,3 +39,4 @@ import '@govuk-react/icons/lib/ArrowLeft/stories';
 import '@govuk-react/icons/lib/ArrowRight/stories';
 import '@govuk-react/icons/lib/Search/stories';
 import '@govuk-react/icons/lib/Spinner/stories';
+import '@govuk-react/icons/lib/GovUK/stories';
