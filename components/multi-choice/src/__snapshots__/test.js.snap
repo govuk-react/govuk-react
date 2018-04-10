@@ -14,8 +14,8 @@ exports[`ThemedComponent matches withError snapshot: with error mount 1`] = `
   display: block;
   clear: none;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.1428571429;
+  font-size: 16px;
+  line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
   margin-bottom: 0;
@@ -48,8 +48,7 @@ exports[`ThemedComponent matches withError snapshot: with error mount 1`] = `
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    font-size: 16px;
-    line-height: 1.25;
+    font-size: 19px;
     margin-bottom: 0;
   }
 }
@@ -134,8 +133,8 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   display: block;
   clear: none;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.1428571429;
+  font-size: 16px;
+  line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
   margin-bottom: 0;
@@ -149,8 +148,8 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   text-transform: none;
-  font-size: 14px;
-  line-height: 1.1428571429;
+  font-size: 16px;
+  line-height: 1.25;
   color: #6f777b;
   margin-bottom: 0;
 }
@@ -163,8 +162,8 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
   text-transform: none;
-  font-size: 14px;
-  line-height: 1.1428571429;
+  font-size: 16px;
+  line-height: 1.25;
   color: #b10e1e;
   padding-top: 4px;
   padding-bottom: 2px;
@@ -189,8 +188,7 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    font-size: 16px;
-    line-height: 1.25;
+    font-size: 19px;
     margin-bottom: 0;
   }
 }
@@ -198,8 +196,7 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
 @media only screen and (min-width: 641px) {
   .glamor-3,
   [data-glamor-3] {
-    font-size: 16px;
-    line-height: 1.25;
+    font-size: 19px;
     margin-bottom: 0;
   }
 }
@@ -207,8 +204,7 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
 @media only screen and (min-width: 641px) {
   .glamor-6,
   [data-glamor-6] {
-    font-size: 16px;
-    line-height: 1.25;
+    font-size: 19px;
     margin-bottom: 0;
   }
 }

@@ -42,8 +42,8 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
   display: block;
   clear: none;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.1428571429;
+  font-size: 16px;
+  line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
   margin-bottom: 0;
@@ -88,8 +88,7 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    font-size: 16px;
-    line-height: 1.25;
+    font-size: 19px;
     margin-bottom: 0;
   }
 }

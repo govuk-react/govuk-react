@@ -39,6 +39,7 @@ exports[`Input matches withColouredError snapshot: with coloured error mount 1`]
   .glamor-0,
   [data-glamor-0] {
     font-size: 19px;
+    width: 50%;
     margin-bottom: 0;
   }
 }
@@ -108,6 +109,7 @@ exports[`Input matches withError snapshot: with error mount 1`] = `
   .glamor-0,
   [data-glamor-0] {
     font-size: 19px;
+    width: 50%;
     margin-bottom: 0;
   }
 }
@@ -174,6 +176,7 @@ exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
   .glamor-0,
   [data-glamor-0] {
     font-size: 19px;
+    width: 50%;
     margin-bottom: 0;
   }
 }
