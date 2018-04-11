@@ -1,30 +1,25 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Search } from '@govuk-react/icons';
+import { asAnchor } from '@govuk-react/hoc';
 
 import TopNav from '.';
 
 const Logo = <Search width="28" />;
+const AnchorTag = asAnchor('a');
 
 storiesOf('TopNav', module).add('default', () => (
   <TopNav logo={Logo} companyTitle="GOV.UK" />
 ));
 
 storiesOf('TopNav', module).add('with service title', () => (
-  <TopNav logo={Logo} companyTitle="GOV.UK" serviceTitle="Service name" />
+  <TopNav logo={Logo} companyTitle="GOV.UK" serviceTitle="Service Name" />
 ));
 
 storiesOf('TopNav', module).add('with propositional navigation', () => (
-  <TopNav logo={Logo} companyTitle="GOV.UK" search searchPlaceholder="Search site...">
-    <a href="https://example.com?q=cat">Departments</a>
-    <a href="https://example.com?q=dog">Worldwide</a>
-    <a href="https://example.com?q=chicken">How government works</a>
-    <a href="https://example.com?q=rabbit">Get involved</a>
-    <a href="https://example.com?q=horse">Policies</a>
-    <a href="https://example.com?q=duck">Publications</a>
-    <a href="https://example.com?q=bear">Consultations</a>
-    <a href="https://example.com?q=pig">Statistics</a>
-    <a href="https://example.com?q=mouse">Annoucements</a>
+  <TopNav logo={Logo} companyTitle="GOV.UK" search searchPlaceholder="Search site..." active="https://example.com?q=cat">
+    <AnchorTag href="https://example.com?q=cat">Navigation item #1</AnchorTag>
+    <AnchorTag href="https://example.com?q=dog">Navigation item #2</AnchorTag>
   </TopNav>
 ));
 

@@ -81,12 +81,14 @@ const RightHandSide = glamorous.div({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'flex-start',
+  marginTop: SPACING.SCALE_2,
   [MEDIA_QUERIES.LARGESCREEN]: {
     ' button': {
       display: 'none',
     },
     width: '66.66%',
     paddingLeft: SPACING.SCALE_3,
+    marginTop: 0,
   },
 });
 
@@ -125,13 +127,11 @@ const Li = glamorous.li(({
   ' a': {
     color: active ? '#1d8feb' : '#fff',
     textDecoration: 'none',
-    ':hover': {
-      textDecoration: 'underline',
-    },
   },
 }));
 
 const TopNav = ({
+  active,
   bgColor,
   color,
   logo,
@@ -143,7 +143,7 @@ const TopNav = ({
   ...props
 }) => (
   <React.Fragment>
-    <TopNavWrapper bgColor={bgColor} color={color} {...props}>
+    <TopNavWrapper active={active} bgColor={bgColor} color={color} {...props}>
       <TopNavInner>
         <LogoSearchWrapper>
           <Company>{logo} {companyTitle}</Company>
@@ -180,6 +180,7 @@ const TopNav = ({
 );
 
 TopNav.defaultProps = {
+  active: undefined,
   bgColor: '#000',
   color: '#fff',
   logo: undefined,
@@ -191,6 +192,7 @@ TopNav.defaultProps = {
 };
 
 TopNav.propTypes = {
+  active: PropTypes.string,
   bgColor: PropTypes.string,
   color: PropTypes.string,
   logo: PropTypes.node,
