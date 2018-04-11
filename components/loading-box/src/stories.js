@@ -121,27 +121,13 @@ stories.add('LoadingBox (long)', () => (
 ));
 
 stories.add('with children that have short height (minHeight 100px)', () => (
-  <LoadingBox
-    loading={boolean('loading', false)}
-    backgroundColor={text('backgroundColor', '#fff')}
-    timeIn={number('timeIn', 800)}
-    timeOut={number('timeOut', 200)}
-    backgroundColorOpacity={number('backgroundColorOpacity', 0.85)}
-    spinnerColor={text('spinnerColor', '#000')}
-  >
+  <LoadingBox loading>
     Lorem ipsum dolor sit amet
   </LoadingBox>
 ));
 
 stories.add('with bolded texts', () => (
-  <LoadingBox
-    loading={boolean('loading', false)}
-    backgroundColor={text('backgroundColor', '#fff')}
-    timeIn={number('timeIn', 800)}
-    timeOut={number('timeOut', 200)}
-    backgroundColorOpacity={number('backgroundColorOpacity', 0.85)}
-    spinnerColor={text('spinnerColor', '#000')}
-  >
+  <LoadingBox loading>
     <H1>Lorem ipsum dolor sit amet</H1>
     <H2>Consectetur adipisicing elit. Quia incidunt, earum molestiae omnis labore adipisci perferendis.</H2>
   </LoadingBox>
