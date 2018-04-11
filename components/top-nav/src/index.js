@@ -64,7 +64,7 @@ const Company = glamorous.div({
   fontWeight: 800,
   alignItems: 'center',
   justifyContent: 'flex-start',
-  fontSize: '28px',
+  fontSize: '30px',
 });
 
 const LogoSearchWrapper = glamorous.div({
@@ -99,15 +99,17 @@ const RightHandSide = glamorous.div({
 //   },
 // });
 
-const Ul = glamorous.ul({
+const Ul = glamorous.ul(({
+  serviceTitle,
+}) => ({
   display: 'flex',
   flexWrap: 'wrap',
   margin: 0,
   padding: 0,
   [MEDIA_QUERIES.LARGESCREEN]: {
-    paddingTop: '28px',
+    paddingTop: serviceTitle ? 0 : '28px',
   },
-});
+}));
 
 const Li = glamorous.li(({
   active,
@@ -159,7 +161,7 @@ const TopNav = ({
           {children &&
           <React.Fragment>
             <Button mb={0}>menu</Button>
-            <Ul>
+            <Ul serviceTitle={serviceTitle}>
               {children.length && children.map ? (
                 children.map((child, i) => (
                   child && (child.length || child.props)

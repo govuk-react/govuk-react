@@ -17,7 +17,14 @@ storiesOf('TopNav', module).add('with service title', () => (
 ));
 
 storiesOf('TopNav', module).add('with propositional navigation', () => (
-  <TopNav logo={Logo} companyTitle="GOV.UK" search searchPlaceholder="Search site..." active="https://example.com?q=cat">
+  <TopNav logo={Logo} companyTitle="GOV.UK" serviceTitle="Service Name" active={0}>
+    <AnchorTag href="https://example.com?q=cat">Navigation item #1</AnchorTag>
+    <AnchorTag href="https://example.com?q=dog">Navigation item #2</AnchorTag>
+  </TopNav>
+));
+
+storiesOf('TopNav', module).add('with propositional navigation no serviceTitle', () => (
+  <TopNav logo={Logo} companyTitle="GOV.UK" active={0}>
     <AnchorTag href="https://example.com?q=cat">Navigation item #1</AnchorTag>
     <AnchorTag href="https://example.com?q=dog">Navigation item #2</AnchorTag>
   </TopNav>
