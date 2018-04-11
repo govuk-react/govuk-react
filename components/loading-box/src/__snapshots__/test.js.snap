@@ -5,6 +5,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
 [data-glamor-14] {
   position: relative;
   padding-bottom: 2px;
+  min-height: 100px;
 }
 
 .glamor-13,
@@ -46,7 +47,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
       255,
       255,
       255,
-      0.5);
+      0.85);
   -webkit-transition: background-color 800ms ease-in-out;
   -moz-transition: background-color 800ms ease-in-out;
 }
@@ -77,7 +78,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
         255,
         255,
         255,
-        0.5);
+        0.85);
   transition-duration: 800ms;
   -webkit-transition-duration: 800ms;
 }
@@ -97,7 +98,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
         255,
         255,
         255,
-        0.5);
+        0.85);
   transition-duration: 200ms;
   -webkit-transition-duration: 200ms;
 }
@@ -147,7 +148,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
 
 <LoadingBox
   backgroundColor="#ffffff"
-  backgroundColorOpacity={0.5}
+  backgroundColorOpacity={0.85}
   loading={true}
   spinnerColor="#0b0c0c"
   timeIn={800}
@@ -180,7 +181,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
         >
           <glamorous(div)
             backgroundColor="#ffffff"
-            backgroundColorOpacity={0.5}
+            backgroundColorOpacity={0.85}
             loading={true}
             timeIn={800}
             timeOut={200}
