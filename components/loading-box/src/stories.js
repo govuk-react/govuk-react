@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, number, boolean } from '@storybook/addon-knobs/react';
-import Header from '@govuk-react/header';
+import Header, { H1, H2 } from '@govuk-react/header';
 import InputField from '@govuk-react/input-field';
 import Button from '@govuk-react/button';
 import LabelText from '@govuk-react/label-text';
@@ -16,13 +16,13 @@ const AnchorLink = asAnchor('a');
 const spacer = <p style={{ marginTop: 0 }}>&nbsp;</p>;
 stories.addDecorator(withKnobs);
 
-stories.add('LoadingBox default', () => (
+stories.add('default', () => (
   <LoadingBox
     loading={boolean('loading', false)}
     backgroundColor={text('backgroundColor', '#fff')}
     timeIn={number('timeIn', 800)}
     timeOut={number('timeOut', 200)}
-    backgroundColorOpacity={number('backgroundColorOpacity', 0.5)}
+    backgroundColorOpacity={number('backgroundColorOpacity', 0.85)}
     spinnerColor={text('spinnerColor', '#000')}
   >
     <div style={{ padding: '0 12px' }}>
@@ -43,13 +43,13 @@ stories.add('LoadingBox default', () => (
   </LoadingBox>
 ));
 
-stories.add('LoadingBox preset to loading', () => (
+stories.add('preset to loading', () => (
   <LoadingBox
     loading={boolean('loading', true)}
     backgroundColor={text('backgroundColor', '#fff')}
     timeIn={number('timeIn', 800)}
     timeOut={number('timeOut', 200)}
-    backgroundColorOpacity={number('backgroundColorOpacity', 0.5)}
+    backgroundColorOpacity={number('backgroundColorOpacity', 0.85)}
     spinnerColor={text('spinnerColor', '#000')}
   >
     <div style={{ padding: '0 12px' }}>
@@ -76,7 +76,7 @@ stories.add('LoadingBox (long)', () => (
     backgroundColor={text('backgroundColor', '#fff')}
     timeIn={number('timeIn', 800)}
     timeOut={number('timeOut', 200)}
-    backgroundColorOpacity={number('backgroundColorOpacity', 0.5)}
+    backgroundColorOpacity={number('backgroundColorOpacity', 0.85)}
     spinnerColor={text('spinnerColor', '#000')}
   >
     <div style={{ padding: '0 12px' }}>
@@ -117,5 +117,18 @@ stories.add('LoadingBox (long)', () => (
       {spacer}
       <Button start>Continue</Button>
     </div>
+  </LoadingBox>
+));
+
+stories.add('with children that have short height (minHeight 100px)', () => (
+  <LoadingBox loading>
+    Lorem ipsum dolor sit amet
+  </LoadingBox>
+));
+
+stories.add('with bolded texts', () => (
+  <LoadingBox loading>
+    <H1>Lorem ipsum dolor sit amet</H1>
+    <H2>Consectetur adipisicing elit. Quia incidunt, earum molestiae omnis labore adipisci.</H2>
   </LoadingBox>
 ));
