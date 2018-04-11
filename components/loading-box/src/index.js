@@ -13,6 +13,7 @@ const spinnerClassName = 'icon-loading';
 const Wrapper = glamorous.div({
   position: 'relative',
   paddingBottom: '2px',
+  minHeight: '100px',
 });
 
 const Innerwrap = glamorous.div(({
@@ -148,7 +149,7 @@ const LoadingBox = ({
 LoadingBox.defaultProps = {
   spinnerColor: BLACK,
   backgroundColor: WHITE,
-  backgroundColorOpacity: 0.5,
+  backgroundColorOpacity: 0.85,
   loading: false,
   timeIn: 800,
   timeOut: 200,
