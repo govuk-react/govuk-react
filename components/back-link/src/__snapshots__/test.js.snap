@@ -8,12 +8,12 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
 
 .glamor-0,
 [data-glamor-0] {
-  font-family: 'nta', Arial, sans-serif;
+  font-family: "nta", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.1428571429;
   display: inline-block;
   position: relative;
   margin-top: 15px;
@@ -60,6 +60,8 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
+    font-size: 16px;
+    line-height: 1.25;
     margin-bottom: 15px;
   }
 }

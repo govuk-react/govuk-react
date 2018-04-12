@@ -10,13 +10,13 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
 [data-glamor-2] {
   background-color: #28a197;
   color: #ffffff;
-  padding: 25px;
+  padding: 30px;
   margin-bottom: 15px;
 }
 
 .glamor-0,
 [data-glamor-0] {
-  font-family: 'nta', Arial, sans-serif;
+  font-family: "nta", Arial, sans-serif;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   font-size: 32px;
@@ -27,7 +27,7 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
 
 .glamor-1,
 [data-glamor-1] {
-  font-family: 'nta', Arial, sans-serif;
+  font-family: "nta", Arial, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 25px;

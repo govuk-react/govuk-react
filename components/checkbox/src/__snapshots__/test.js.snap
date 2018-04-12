@@ -96,6 +96,13 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    font-size: 19px;
+  }
+}
+
 <glamorous(Checkbox)>
   <Checkbox
     className="glamor-3"

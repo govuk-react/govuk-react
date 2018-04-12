@@ -8,9 +8,9 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
 
 .glamor-3,
 [data-glamor-3] {
-  font-family: nta, Arial, sans-serif;
+  font-family: "nta", Arial, sans-serif;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.1428571429;
   margin-top: 15px;
   -webkit-font-smoothing: antialiased;
   margin-bottom: 10px;
@@ -86,7 +86,7 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
   .glamor-3,
   [data-glamor-3] {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 1.25;
     margin-bottom: 10px;
   }
 }

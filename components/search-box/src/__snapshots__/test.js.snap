@@ -28,7 +28,7 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   border: solid 1px #bfc1c3;
   border-right: 0;
   box-sizing: border-box;
-  font-family: 'nta', Arial, sans-serif;
+  font-family: "nta", Arial, sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 16px;

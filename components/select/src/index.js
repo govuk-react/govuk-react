@@ -5,7 +5,13 @@ import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
 import { BLACK, ERROR_COLOUR, YELLOW } from 'govuk-colours';
-import { MEDIA_QUERIES } from '@govuk-react/constants';
+import {
+  FONT_SIZE,
+  LINE_HEIGHT,
+  MEDIA_QUERIES,
+  NTA_LIGHT,
+  SPACING,
+} from '@govuk-react/constants';
 
 import Label from '@govuk-react/label';
 import LabelText from '@govuk-react/label-text';
@@ -16,7 +22,7 @@ import { withWhiteSpace } from '@govuk-react/hoc';
 const Input = glamorous.select(
   {
     boxSizing: 'border-box',
-    fontFamily: '"nta", Arial, sans-serif',
+    fontFamily: NTA_LIGHT,
     fontWeight: 400,
     textTransform: 'none',
     fontSize: '16px',

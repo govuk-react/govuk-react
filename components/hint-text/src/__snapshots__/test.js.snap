@@ -15,7 +15,7 @@ exports[`HintText matches wrapper snapshot: wrapper mount 1`] = `
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   color: #6f777b;
   margin-bottom: 0;
 }
@@ -31,7 +31,6 @@ exports[`HintText matches wrapper snapshot: wrapper mount 1`] = `
   .glamor-0,
   [data-glamor-0] {
     font-size: 19px;
-    line-height: 25px;
     margin-bottom: 0;
   }
 }
