@@ -160,13 +160,15 @@ const Li = glamorous.li(({
     color: active ? LIGHT_BLUE : WHITE,
     textDecoration: 'none',
     borderBottom: '1px solid transparent',
+    fontWeight: 700,
     ':hover': {
-      borderBottom: `1px solid ${WHITE}`,
+      borderBottomColor: active ? LIGHT_BLUE : WHITE,
     },
   },
 }));
 
 const TopNav = ({
+  active,
   bgColor,
   color,
   company,
@@ -197,11 +199,11 @@ const TopNav = ({
               {children.length && children.map ? (
                 children.map((child, i) => (
                   child && (child.length || child.props)
-                    ? <Li key={child.key || i}>{child}</Li>
+                    ? <Li active={active === i ? 'active' : undefined} key={child.key || i}>{child}</Li>
                     : null
                 ))
               ) : (
-                <Li>{children}</Li>
+                <Li active={active}>{children}</Li>
               )}
             </Ul>
           </React.Fragment>

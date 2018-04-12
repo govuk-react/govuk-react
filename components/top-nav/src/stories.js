@@ -44,21 +44,21 @@ storiesOf('TopNav', module).add('search', () => (
 ));
 
 storiesOf('TopNav', module).add('children', () => (
-  <TopNav company={Company} serviceTitle={ServiceTitle}>
+  <TopNav company={Company} serviceTitle={ServiceTitle} active={0}>
     <AnchorTag href="https://example.com?q=catdog">Navigation item #1</AnchorTag>
     <AnchorTag href="https://example.com?q=dogcat">Navigation item #2</AnchorTag>
   </TopNav>
 ));
 
 storiesOf('TopNav', module).add('everything but serviceTitle', () => (
-  <TopNav company={Company} search={Search}>
+  <TopNav company={Company} search={Search} active={0}>
     <AnchorTag href="https://example.com?q=catdog">Navigation item #1</AnchorTag>
     <AnchorTag href="https://example.com?q=dogcat">Navigation item #2</AnchorTag>
   </TopNav>
 ));
 
 storiesOf('TopNav', module).add('everything', () => (
-  <TopNav company={Company} serviceTitle={ServiceTitle} search={Search}>
+  <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
     <AnchorTag href="https://example.com?q=catdog">Navigation item #1</AnchorTag>
     <AnchorTag href="https://example.com?q=dogcat">Navigation item #2</AnchorTag>
   </TopNav>
