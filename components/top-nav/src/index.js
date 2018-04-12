@@ -4,12 +4,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 import Button from '@govuk-react/button';
-import UnorderedList from '@govuk-react/unordered-list';
 import { Search } from '@govuk-react/icons';
-import { H3 } from '@govuk-react/header';
 // import ListItem from '@govuk-react/list-item';
 import SearchBox from '@govuk-react/search-box';
-import { BLUE } from 'govuk-colours';
+import { BLUE, LIGHT_BLUE, BLACK, WHITE, PROPOSITION_BORDER } from 'govuk-colours';
 import {
   FONT_SIZE,
   LINE_HEIGHT,
@@ -40,22 +38,23 @@ const BottomNavWrapper = glamorous.div({
   borderBottom: `10px solid ${BLUE}`,
   maxWidth: '990px',
   margin: '0 auto',
-  width: 'calc(100% - 30px)',
+  width: `calc(100% - ${SPACING.SCALE_3})`,
   [MEDIA_QUERIES.LARGESCREEN]: {
-    width: 'calc(100% - 60px)',
+    width: `calc(100% - ${SPACING.SCALE_6})`,
   },
 });
 
 const TopNavInner = glamorous.div({
   display: 'flex',
   flexDirection: 'column',
-  width: '100%',
+  width: `calc(100% - ${SPACING.SCALE_3})`,
   maxWidth: '990px',
   padding: `${SPACING.SCALE_2} ${SPACING.SCALE_3}`,
   boxSizing: 'border-box',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    padding: `${SPACING.SCALE_2} ${SPACING.SCALE_5}`,
+    padding: `${SPACING.SCALE_2} 0`,
     flexDirection: 'row',
+    width: `calc(100% - ${SPACING.SCALE_6})`,
   },
 });
 
@@ -65,6 +64,23 @@ const Company = glamorous.div({
   alignItems: 'center',
   justifyContent: 'flex-start',
   fontSize: '30px',
+  ' a': {
+    display: 'flex',
+    color: WHITE,
+    textDecoration: 'none',
+    marginBottom: 0,
+    paddingBottom: 0,
+    borderBottom: '1px solid transparent',
+    ':hover': {
+      borderBottom: `1px solid ${WHITE}`,
+    },
+  },
+  ' h1': {
+    fontSize: '30px',
+  },
+  ' svg': {
+    marginRight: SPACING.SCALE_2,
+  },
 });
 
 const LogoSearchWrapper = glamorous.div({
@@ -82,6 +98,16 @@ const RightHandSide = glamorous.div({
   flexDirection: 'column',
   alignItems: 'flex-start',
   marginTop: SPACING.SCALE_2,
+  ' a': {
+    border: 0,
+    textDecoration: 'none',
+    borderBottom: '1px solid transparent',
+    marginBottom: 0,
+    paddingBottom: 0,
+    ':hover': {
+      borderBottom: `1px solid ${WHITE}`,
+    },
+  },
   [MEDIA_QUERIES.LARGESCREEN]: {
     ' button': {
       display: 'none',
@@ -92,12 +118,13 @@ const RightHandSide = glamorous.div({
   },
 });
 
-// const SearchWrapper = glamorous.div({
-//   width: '50%',
-//   [MEDIA_QUERIES.LARGESCREEN]: {
-//     width: '100%',
-//   },
-// });
+const SearchWrapper = glamorous.div({
+  marginTop: SPACING.SCALE_1,
+  width: '50%',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    width: '100%',
+  },
+});
 
 const Ul = glamorous.ul(({
   serviceTitle,
@@ -106,8 +133,11 @@ const Ul = glamorous.ul(({
   flexWrap: 'wrap',
   margin: 0,
   padding: 0,
+  marginTop: SPACING.SCALE_1,
+  width: '100%',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    paddingTop: serviceTitle ? 0 : '28px',
+    paddingTop: serviceTitle ? 0 : SPACING.SCALE_5,
+    width: 'auto',
   },
 }));
 
@@ -119,7 +149,7 @@ const Li = glamorous.li(({
   listStyleType: 'none',
   margin: 0,
   padding: '3px 0',
-  borderBottom: '1px solid #2e3133',
+  borderBottom: `1px solid ${PROPOSITION_BORDER}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
     borderBottom: 0,
     flex: 'none',
@@ -127,37 +157,39 @@ const Li = glamorous.li(({
     paddingRight: SPACING.SCALE_3,
   },
   ' a': {
-    color: active ? '#1d8feb' : '#fff',
+    color: active ? LIGHT_BLUE : WHITE,
     textDecoration: 'none',
+    borderBottom: '1px solid transparent',
+    ':hover': {
+      borderBottom: `1px solid ${WHITE}`,
+    },
   },
 }));
 
 const TopNav = ({
-  active,
   bgColor,
   color,
-  logo,
-  companyTitle,
+  company,
   serviceTitle,
   search,
   children,
-  searchPlaceholder,
   ...props
 }) => (
   <React.Fragment>
-    <TopNavWrapper active={active} bgColor={bgColor} color={color} {...props}>
+    <TopNavWrapper bgColor={bgColor} color={color} {...props}>
       <TopNavInner>
         <LogoSearchWrapper>
-          <Company>{logo} {companyTitle}</Company>
-          {/*
-            search &&
+          <Company>
+            {company}
+          </Company>
+          {search &&
             <SearchWrapper>
-              <SearchBox placeholder={searchPlaceholder}>hi</SearchBox>
+              {search}
             </SearchWrapper>
-          */}
+          }
         </LogoSearchWrapper>
         <RightHandSide>
-          {serviceTitle && <H3>{serviceTitle}</H3>}
+          {serviceTitle}
           {children &&
           <React.Fragment>
             <Button mb={0}>menu</Button>
@@ -183,25 +215,21 @@ const TopNav = ({
 
 TopNav.defaultProps = {
   active: undefined,
-  bgColor: '#000',
-  color: '#fff',
-  logo: undefined,
-  companyTitle: undefined,
+  bgColor: BLACK,
+  color: WHITE,
+  company: undefined,
   serviceTitle: undefined,
-  searchPlaceholder: undefined,
   search: false,
   children: undefined,
 };
 
 TopNav.propTypes = {
-  active: PropTypes.string,
+  active: PropTypes.number,
   bgColor: PropTypes.string,
   color: PropTypes.string,
-  logo: PropTypes.node,
-  companyTitle: PropTypes.string,
-  serviceTitle: PropTypes.string,
-  searchPlaceholder: PropTypes.string,
-  search: PropTypes.bool,
+  company: PropTypes.node,
+  serviceTitle: PropTypes.node,
+  search: PropTypes.node,
   children: PropTypes.node,
 };
 
