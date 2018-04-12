@@ -44,6 +44,7 @@ const TopNav = ({
           <React.Fragment>
             <Button mb={0}>menu</Button>
             <Ul serviceTitle={serviceTitle}>
+              {/* TODO #205 use context api and/or render props here for `active` */}
               {children.length && children.map ? (
                 children.map((child, i) => (
                   child && (child.length || child.props)
