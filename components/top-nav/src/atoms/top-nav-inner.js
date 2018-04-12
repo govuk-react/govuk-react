@@ -1,0 +1,21 @@
+import glamorous from 'glamorous';
+import {
+  MEDIA_QUERIES,
+  SPACING,
+} from '@govuk-react/constants';
+
+const TopNavInner = glamorous.div({
+  display: 'flex',
+  flexDirection: 'column',
+  width: `calc(100% - ${SPACING.SCALE_3})`,
+  maxWidth: '990px',
+  padding: `${SPACING.SCALE_2} ${SPACING.SCALE_3}`,
+  boxSizing: 'border-box',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    padding: `${SPACING.SCALE_2} 0`,
+    flexDirection: 'row',
+    width: `calc(100% - ${SPACING.SCALE_6})`,
+  },
+});
+
+export default TopNavInner;

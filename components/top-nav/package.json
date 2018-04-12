@@ -6,12 +6,16 @@
     "access": "public"
   },
   "dependencies": {
+    "@govuk-react/button": "^0.1.27",
+    "@govuk-react/constants": "^0.1.26",
+    "@govuk-react/icons": "^0.1.27",
+    "@govuk-react/search-box": "^0.1.27",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
     "glamorous": ">=4",
     "prop-types": ">=15",
-    "react": ">=15"
+    "react": ">=16.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",

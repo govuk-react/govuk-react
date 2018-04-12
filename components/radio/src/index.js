@@ -8,13 +8,7 @@ import glamorous from 'glamorous';
 import { YELLOW } from 'govuk-colours';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
-import {
-  FONT_SIZE,
-  LINE_HEIGHT,
-  MEDIA_QUERIES,
-  NTA_LIGHT,
-  SPACING,
-} from '@govuk-react/constants';
+import { NTA_LIGHT } from '@govuk-react/constants';
 
 const Label = glamorous.label(
   {
