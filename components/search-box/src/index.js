@@ -3,7 +3,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
-import { BLUE, WHITE, YELLOW } from 'govuk-colours';
+import { LIGHT_BLUE, GREY_2, WHITE, YELLOW } from 'govuk-colours';
+import { NTA_LIGHT } from '@govuk-react/constants';
 
 import { Search } from '@govuk-react/icons';
 import { withWhiteSpace } from '@govuk-react/hoc';
@@ -21,15 +22,15 @@ const InputSearchBox = glamorous.input({
   height: '40px',
   padding: '6px',
   margin: 0,
-  border: 'solid 1px #bfc1c3',
+  border: `solid 1px ${GREY_2}`,
   borderRight: 0,
   boxSizing: 'border-box',
-  fontFamily: "'nta', Arial, sans-serif",
+  fontFamily: NTA_LIGHT,
   fontWeight: 400,
   textTransform: 'none',
   fontSize: '16px',
   lineHeight: '1.75',
-  background: '#fff',
+  background: WHITE,
   borderRadius: 0,
   WebkitAppearance: 'none',
   ':focus': {
@@ -43,17 +44,17 @@ const InputSearchBox = glamorous.input({
 });
 
 const SearchButton = glamorous.button({
-  backgroundColor: BLUE,
+  backgroundColor: LIGHT_BLUE,
   border: 0,
   display: 'block',
-  color: '#fff',
+  color: WHITE,
   position: 'relative',
   padding: '10px',
   width: '45px',
   height: '40px',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: '2px 50%',
-  textIndent: '-5000px',
+  textIndent: '-999em',
   overflow: 'hidden',
   ':focus': {
     outline: `3px solid ${YELLOW}`,
@@ -65,7 +66,7 @@ const SearchBox = ({ placeholder, className }) => (
   <SearchBoxWrapper className={className}>
     <InputSearchBox type="search" placeholder={placeholder} />
     <SearchButton title="Search">
-      <Search colour="#fff" />
+      <Search fill={WHITE} />
     </SearchButton>
   </SearchBoxWrapper>
 );

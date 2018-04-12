@@ -8,8 +8,8 @@ import {
   FONT_SIZE,
   LINE_HEIGHT,
   MEDIA_QUERIES,
-  NTA_LIGHT,
   SPACING,
+  NTA_LIGHT,
 } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
@@ -27,6 +27,8 @@ const PaginationWrapper = glamorous.ul({
   lineHeight: LINE_HEIGHT.SIZE_16,
   width: '100%',
   [MEDIA_QUERIES.LARGESCREEN]: {
+    fontSize: FONT_SIZE.SIZE_19,
+    lineHeight: LINE_HEIGHT.SIZE_19,
     flexDirection: 'row',
   },
 });

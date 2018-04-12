@@ -7,6 +7,7 @@ import {
   FONT_SIZE,
   LINE_HEIGHT,
   MEDIA_QUERIES,
+  SPACING,
   NTA_LIGHT,
 } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
@@ -15,7 +16,7 @@ const GUnorderedList = glamorous.ul(
   {
     margin: 0,
     padding: 0,
-    paddingLeft: '20px',
+    paddingLeft: SPACING.SCALE_4,
     fontFamily: NTA_LIGHT,
     fontWeight: 400,
     textTransform: 'none',

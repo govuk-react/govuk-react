@@ -15,7 +15,7 @@ exports[`Input matches withColouredError snapshot: with coloured error mount 1`]
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   width: 100%;
   padding: 5px 4px 4px;
   border: 4px solid #f47738;
@@ -38,9 +38,8 @@ exports[`Input matches withColouredError snapshot: with coloured error mount 1`]
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    width: 50%;
     font-size: 19px;
-    line-height: 25px;
+    width: 50%;
     margin-bottom: 0;
   }
 }
@@ -86,7 +85,7 @@ exports[`Input matches withError snapshot: with error mount 1`] = `
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   width: 100%;
   padding: 5px 4px 4px;
   border: 4px solid #b10e1e;
@@ -109,9 +108,8 @@ exports[`Input matches withError snapshot: with error mount 1`] = `
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    width: 50%;
     font-size: 19px;
-    line-height: 25px;
+    width: 50%;
     margin-bottom: 0;
   }
 }
@@ -154,7 +152,7 @@ exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   width: 100%;
   padding: 5px 4px 4px;
   border: 2px solid #0b0c0c;
@@ -177,9 +175,8 @@ exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    width: 50%;
     font-size: 19px;
-    line-height: 25px;
+    width: 50%;
     margin-bottom: 0;
   }
 }

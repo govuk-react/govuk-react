@@ -32,7 +32,6 @@ exports[`LabelText matches noError snapshot: no error mount 1`] = `
   .glamor-0,
   [data-glamor-0] {
     font-size: 19px;
-    line-height: 1.31579;
     margin-bottom: 0;
   }
 }
@@ -86,7 +85,6 @@ exports[`LabelText matches wrapper snapshot: wrapper mount 1`] = `
   .glamor-0,
   [data-glamor-0] {
     font-size: 19px;
-    line-height: 1.31579;
     margin-bottom: 0;
   }
 }

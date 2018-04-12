@@ -28,12 +28,12 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   border: solid 1px #bfc1c3;
   border-right: 0;
   box-sizing: border-box;
-  font-family: 'nta', Arial, sans-serif;
+  font-family: "nta", Arial, sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
   line-height: 1.75;
-  background: #fff;
+  background: #ffffff;
   border-radius: 0;
   -webkit-appearance: none;
 }
@@ -55,14 +55,14 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   background-color: #2b8cc4;
   border: 0;
   display: block;
-  color: #fff;
+  color: #ffffff;
   position: relative;
   padding: 10px;
   width: 45px;
   height: 40px;
   background-repeat: no-repeat;
   background-position: 2px 50%;
-  text-indent: -5000px;
+  text-indent: -999em;
   overflow: hidden;
 }
 
@@ -117,19 +117,16 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
             title="Search"
           >
             <Search
-              colour="#fff"
-              fill="currentColor"
+              fill="#ffffff"
               title="Search"
             >
               <SVG
-                colour="#fff"
-                fill="currentColor"
+                fill="#ffffff"
                 title="Search"
                 viewBox="0 0 57 57"
               >
                 <svg
-                  colour="#fff"
-                  fill="currentColor"
+                  fill="#ffffff"
                   height="100%"
                   style={
                     Object {

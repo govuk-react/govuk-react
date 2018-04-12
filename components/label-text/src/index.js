@@ -4,25 +4,30 @@ import glamorous from 'glamorous';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { BLACK } from 'govuk-colours';
-import { MEDIA_QUERIES } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
+import {
+  FONT_SIZE,
+  LINE_HEIGHT,
+  MEDIA_QUERIES,
+  NTA_LIGHT,
+} from '@govuk-react/constants';
 
 const GLabelText = glamorous.span(
   {
-    fontFamily: '"nta", Arial, sans-serif',
+    fontFamily: NTA_LIGHT,
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
     display: 'block',
     clear: 'none',
     fontWeight: 400,
-    fontSize: '16px',
-    lineHeight: '1.25',
+    fontSize: FONT_SIZE.SIZE_16,
+    lineHeight: LINE_HEIGHT.SIZE_16,
+    [MEDIA_QUERIES.LARGESCREEN]: {
+      fontSize: FONT_SIZE.SIZE_19,
+      lineHeight: LINE_HEIGHT.SIZE_19,
+    },
     color: `${BLACK}`,
     paddingBottom: '2px',
-    [MEDIA_QUERIES.LARGESCREEN]: {
-      fontSize: '19px',
-      lineHeight: '1.31579',
-    },
   },
   ({ error }) => ({
     fontWeight: error ? 700 : undefined,

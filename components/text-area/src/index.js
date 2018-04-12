@@ -5,7 +5,13 @@ import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
 import { BLACK, YELLOW, ERROR_COLOUR } from 'govuk-colours';
-import { MEDIA_QUERIES } from '@govuk-react/constants';
+import {
+  FONT_SIZE,
+  LINE_HEIGHT,
+  MEDIA_QUERIES,
+  NTA_LIGHT,
+  SPACING,
+} from '@govuk-react/constants';
 
 import Label from '@govuk-react/label';
 import LabelText from '@govuk-react/label-text';
@@ -16,17 +22,19 @@ import { withWhiteSpace } from '@govuk-react/hoc';
 const TextAreaField = glamorous.textarea(
   {
     boxSizing: 'border-box',
-    fontFamily: '"nta", Arial, sans-serif',
+    fontFamily: NTA_LIGHT,
     fontWeight: 400,
     textTransform: 'none',
-    fontSize: '16px',
-    lineHeight: '1.25',
+    fontSize: FONT_SIZE.SIZE_16,
+    lineHeight: LINE_HEIGHT.SIZE_16,
+    [MEDIA_QUERIES.LARGESCREEN]: {
+      fontSize: FONT_SIZE.SIZE_19,
+      lineHeight: LINE_HEIGHT.SIZE_19,
+      width: '75%',
+    },
     width: '100%',
     padding: '5px 4px 4px',
     border: `2px solid ${BLACK}`,
-    [MEDIA_QUERIES.LARGESCREEN]: {
-      width: '75%',
-    },
     '[disabled]': {
       cursor: 'auto',
     },

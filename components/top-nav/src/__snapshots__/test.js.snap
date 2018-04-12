@@ -1,0 +1,421 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopNav matches snapshot: enzyme.mount 1`] = `
+.glamor-10,
+[data-glamor-10] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  background-color: #0b0c0c;
+  color: #ffffff;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+}
+
+.glamor-9,
+[data-glamor-9] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 15px);
+  max-width: 990px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-weight: 800;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 30px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+}
+
+.glamor-0 a,
+[data-glamor-0] a {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 1px solid transparent;
+}
+
+.glamor-0 a:hover,
+[data-glamor-0] a:hover {
+  border-bottom: 1px solid #ffffff;
+}
+
+.glamor-0 h1,
+[data-glamor-0] h1 {
+  font-size: 30px;
+}
+
+.glamor-0 svg,
+[data-glamor-0] svg {
+  margin-right: 10px;
+}
+
+.glamor-8,
+[data-glamor-8] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+}
+
+.glamor-8 a,
+[data-glamor-8] a {
+  border: 0;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.glamor-8 a:hover,
+[data-glamor-8] a:hover {
+  border-bottom: 1px solid #ffffff;
+}
+
+.glamor-3,
+[data-glamor-3] {
+  margin-bottom: 0;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  background-color: #00823b;
+  border: none;
+  box-shadow: 0 2px 0 #003618;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.25;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+  padding: .526315em .789473em .263157em;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 0;
+}
+
+.glamor-2:focus,
+[data-glamor-2]:focus {
+  outline: 3px solid #ffbf47;
+}
+
+.glamor-5,
+[data-glamor-5] {
+  flex: 1 0 50%;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+  border-bottom: 1px solid #2e3133;
+  -webkit-flex: 1 0 50%;
+}
+
+.glamor-5 a,
+[data-glamor-5] a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  font-weight: 700;
+}
+
+.glamor-5 a:hover,
+[data-glamor-5] a:hover {
+  border-bottom-color: #ffffff;
+}
+
+.glamor-11,
+[data-glamor-11] {
+  border-bottom: 10px solid #005ea5;
+  max-width: 990px;
+  margin: 0 auto;
+  width: calc(100% - 15px);
+}
+
+.glamor-7,
+[data-glamor-7] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+  width: 100%;
+  -webkit-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+}
+
+.glamor-6,
+[data-glamor-6] {
+  flex: 1 0 50%;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+  border-bottom: 1px solid #2e3133;
+  -webkit-flex: 1 0 50%;
+}
+
+.glamor-6 a,
+[data-glamor-6] a {
+  color: #2b8cc4;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  font-weight: 700;
+}
+
+.glamor-6 a:hover,
+[data-glamor-6] a:hover {
+  border-bottom-color: #2b8cc4;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-10,
+  [data-glamor-10] {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-9,
+  [data-glamor-9] {
+    padding: 10px 0;
+    flex-direction: row;
+    width: calc(100% - 60px);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-1,
+  [data-glamor-1] {
+    display: block;
+    padding-right: 15px;
+    width: 33.33%;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-8,
+  [data-glamor-8] {
+    width: 66.66%;
+    padding-left: 15px;
+    margin-top: 0;
+  }
+
+  .glamor-8 button,
+  [data-glamor-8] button {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-3,
+  [data-glamor-3] {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-5,
+  [data-glamor-5] {
+    border-bottom: 0;
+    flex: none;
+    width: auto;
+    padding-right: 15px;
+    -webkit-flex: none;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-11,
+  [data-glamor-11] {
+    width: calc(100% - 60px);
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-7,
+  [data-glamor-7] {
+    padding-top: 30px;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-6,
+  [data-glamor-6] {
+    border-bottom: 0;
+    flex: none;
+    width: auto;
+    padding-right: 15px;
+    -webkit-flex: none;
+  }
+}
+
+<TopNav
+  active={1}
+  bgColor="#0b0c0c"
+  color="#ffffff"
+  search={false}
+>
+  <glamorous(div)
+    bgColor="#0b0c0c"
+    color="#ffffff"
+  >
+    <div
+      className="glamor-10"
+    >
+      <glamorous(div)>
+        <div
+          className="glamor-9"
+        >
+          <glamorous(div)>
+            <div
+              className="glamor-1"
+            >
+              <glamorous(div)>
+                <div
+                  className="glamor-0"
+                />
+              </glamorous(div)>
+            </div>
+          </glamorous(div)>
+          <glamorous(div)>
+            <div
+              className="glamor-8"
+            >
+              <glamorous(Button)
+                mb={0}
+              >
+                <Button
+                  className="glamor-3"
+                  mb={0}
+                >
+                  <glamorous(button)
+                    className="glamor-3"
+                    mb={0}
+                  >
+                    <button
+                      className="glamor-2"
+                    >
+                      menu
+                    </button>
+                  </glamorous(button)>
+                </Button>
+              </glamorous(Button)>
+              <glamorous(ul)>
+                <ul
+                  className="glamor-7"
+                >
+                  <glamorous(li)
+                    key="0"
+                  >
+                    <li
+                      className="glamor-5"
+                    >
+                      <a
+                        href="/section"
+                      >
+                        Section 1
+                      </a>
+                    </li>
+                  </glamorous(li)>
+                  <glamorous(li)
+                    active="active"
+                    key="1"
+                  >
+                    <li
+                      className="glamor-6"
+                    >
+                      <a
+                        href="/section"
+                      >
+                        Section 1
+                      </a>
+                    </li>
+                  </glamorous(li)>
+                </ul>
+              </glamorous(ul)>
+            </div>
+          </glamorous(div)>
+        </div>
+      </glamorous(div)>
+    </div>
+  </glamorous(div)>
+  <glamorous(div)>
+    <div
+      className="glamor-11"
+    />
+  </glamorous(div)>
+</TopNav>
+`;

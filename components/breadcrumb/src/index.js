@@ -3,19 +3,25 @@ import React from 'react';
 import glamorous from 'glamorous';
 import PropTypes from 'prop-types';
 import { BLACK, GREY_1, YELLOW } from 'govuk-colours';
-import { MEDIA_QUERIES } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
+import {
+  FONT_SIZE,
+  LINE_HEIGHT,
+  MEDIA_QUERIES,
+  NTA_LIGHT,
+  SPACING,
+} from '@govuk-react/constants';
 
 const BreadcrumbContainer = glamorous.div({
-  fontFamily: 'nta, Arial, sans-serif',
-  fontSize: '14px',
-  lineHeight: '16px',
-  marginTop: '15px',
-  WebkitFontSmoothing: 'antialiased',
+  fontFamily: NTA_LIGHT,
+  fontSize: FONT_SIZE.SIZE_14,
+  lineHeight: LINE_HEIGHT.SIZE_14,
   [MEDIA_QUERIES.LARGESCREEN]: {
-    fontSize: '16px',
-    lineHeight: '20px',
+    fontSize: FONT_SIZE.SIZE_16,
+    lineHeight: LINE_HEIGHT.SIZE_16,
   },
+  marginTop: SPACING.SCALE_3,
+  WebkitFontSmoothing: 'antialiased',
 });
 
 const BreadcrumbList = glamorous.ul({
@@ -29,9 +35,9 @@ const BreadcrumbListItem = glamorous.li({
   position: 'relative',
   display: 'inline-block',
   whiteSpace: 'no-wrap',
-  marginBottom: '5px',
-  marginLeft: '10px',
-  paddingLeft: '15px',
+  marginBottom: SPACING.SCALE_1,
+  marginLeft: SPACING.SCALE_2,
+  paddingLeft: SPACING.SCALE_3,
   ':first-child': {
     marginLeft: 0,
     paddingLeft: 0,

@@ -61,7 +61,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   color: #6f777b;
   margin-bottom: 0;
 }
@@ -75,7 +75,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   font-weight: 700;
   text-transform: none;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   color: #b10e1e;
   padding-top: 4px;
   padding-bottom: 2px;
@@ -120,7 +120,6 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   .glamor-0,
   [data-glamor-0] {
     font-size: 19px;
-    line-height: 1.31579;
     margin-bottom: 0;
   }
 }
@@ -137,7 +136,6 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   .glamor-3,
   [data-glamor-3] {
     font-size: 19px;
-    line-height: 25px;
     margin-bottom: 0;
   }
 }
@@ -146,7 +144,6 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   .glamor-6,
   [data-glamor-6] {
     font-size: 19px;
-    line-height: 25px;
     margin-bottom: 0;
   }
 }
@@ -357,7 +354,6 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   .glamor-0,
   [data-glamor-0] {
     font-size: 19px;
-    line-height: 1.31579;
     margin-bottom: 0;
   }
 }
