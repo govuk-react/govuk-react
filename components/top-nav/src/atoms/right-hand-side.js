@@ -8,6 +8,7 @@ const RightHandSide = glamorous.div({
   alignItems: 'flex-start',
   marginTop: SPACING.SCALE_2,
   ' a': {
+    color: WHITE,
     border: 0,
     textDecoration: 'none',
     borderBottom: '1px solid transparent',
