@@ -186,7 +186,7 @@ const LoadingBox = ({
         label={label}
         labelPosition={labelPosition}
       >
-        <Spinner className={spinnerClassName} fill={spinnerColor} width="100px" height="100px" />
+        <Spinner title={label} className={spinnerClassName} fill={spinnerColor} width="100px" height="100px" />
         <Label>{label}</Label>
         <Overlay />
       </Innerwrap>
