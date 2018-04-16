@@ -35,6 +35,7 @@
     "@govuk-react/related-items": "^0.1.27",
     "@govuk-react/search-box": "^0.1.27",
     "@govuk-react/select": "^0.1.27",
+    "@govuk-react/table": "^0.1.27",
     "@govuk-react/text-area": "^0.1.27",
     "@govuk-react/unordered-list": "^0.1.27",
     "govuk-colours": "^1.0.3"
