@@ -132,3 +132,10 @@ stories.add('with bolded texts', () => (
     <H2>Consectetur adipisicing elit. Quia incidunt, earum molestiae omnis labore adipisci.</H2>
   </LoadingBox>
 ));
+
+stories.add('with loading label', () => (
+  <LoadingBox label="Loading..." labelPosition={text('Label position', 'right')} loading>
+    <H1>Lorem ipsum dolor sit amet</H1>
+    <H2>Consectetur adipisicing elit. Quia incidunt, earum molestiae omnis labore adipisci.</H2>
+  </LoadingBox>
+));

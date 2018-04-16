@@ -7,6 +7,12 @@ import { CSSTransition } from 'react-transition-group';
 import hexRgb from 'hex-rgb';
 import { Spinner } from '@govuk-react/icons';
 import { BLACK, WHITE } from 'govuk-colours';
+import {
+  FONT_SIZE,
+  LINE_HEIGHT,
+  MEDIA_QUERIES,
+  NTA_LIGHT,
+} from '@govuk-react/constants';
 
 const spinnerClassName = 'icon-loading';
 
@@ -21,6 +27,7 @@ const Innerwrap = glamorous.div(({
   timeOut,
   backgroundColor,
   backgroundColorOpacity,
+  labelPosition,
 }) => ({
   position: 'absolute',
   height: '100%',
@@ -29,14 +36,19 @@ const Innerwrap = glamorous.div(({
   left: 0,
   bottom: 0,
   display: 'flex',
+  flexDirection: labelPosition === 'bottom' ? 'column' : 'row',
   justifyContent: 'center',
+  alignItems: 'center',
   [`& .${spinnerClassName}`]: {
-    position: 'absolute',
     zIndex: 101,
     opacity: 1,
     display: 'block',
-    height: '100%',
     maxHeight: 'calc(50vh + 100px)',
+    transition: `opacity ${timeIn}ms ease-in-out`,
+  },
+  [`& .${spinnerClassName} + p`]: {
+    zIndex: 101,
+    opacity: 1,
     transition: `opacity ${timeIn}ms ease-in-out`,
   },
   '& .overlay': {
@@ -62,6 +74,11 @@ const Innerwrap = glamorous.div(({
       transitionDuration: `${timeIn}ms`,
       transitionDelay: `${timeIn / 2}ms`,
     },
+    [`& .${spinnerClassName} + p`]: {
+      opacity: 0,
+      transitionDuration: `${timeIn}ms`,
+      transitionDelay: `${timeIn / 2}ms`,
+    },
   },
   '.fade-enter-active': {
     '& .overlay': {
@@ -73,6 +90,11 @@ const Innerwrap = glamorous.div(({
       transitionDuration: `${timeIn}ms`,
     },
     [`& .${spinnerClassName}`]: {
+      opacity: 1,
+      transitionDuration: `${timeIn}ms`,
+      transitionDelay: `${timeIn / 2}ms`,
+    },
+    [`& .${spinnerClassName} + p`]: {
       opacity: 1,
       transitionDuration: `${timeIn}ms`,
       transitionDelay: `${timeIn / 2}ms`,
@@ -105,6 +127,10 @@ const Innerwrap = glamorous.div(({
       opacity: 0,
       transitionDuration: `${timeOut}ms`,
     },
+    [`& .${spinnerClassName} + p`]: {
+      opacity: 0,
+      transitionDuration: `${timeOut}ms`,
+    },
   },
 }));
 
@@ -119,10 +145,30 @@ const Overlay = glamorous.div('overlay', {
   width: '100%',
 });
 
+const Label = glamorous.p({
+  fontFamily: NTA_LIGHT,
+  WebkitFontSmoothing: 'antialiased',
+  MozOsxFontSmoothing: 'grayscale',
+  fontWeight: 400,
+  fontSize: FONT_SIZE.SIZE_14,
+  lineHeight: LINE_HEIGHT.SIZE_14,
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    fontSize: FONT_SIZE.SIZE_16,
+    lineHeight: LINE_HEIGHT.SIZE_16,
+  },
+  color: BLACK,
+  backgroundColor: 'rgba(255,255,255,0.7)',
+  boxShadow: `0 0 3px ${WHITE}`,
+  margin: 0,
+  zIndex: 101,
+});
+
 const LoadingBox = ({
   children,
   backgroundColor,
   backgroundColorOpacity,
+  label,
+  labelPosition,
   loading,
   spinnerColor,
   timeIn,
@@ -137,8 +183,11 @@ const LoadingBox = ({
         loading={loading}
         timeIn={timeIn}
         timeOut={timeOut}
+        label={label}
+        labelPosition={labelPosition}
       >
         <Spinner className={spinnerClassName} fill={spinnerColor} width="100px" height="100px" />
+        <Label>{label}</Label>
         <Overlay />
       </Innerwrap>
     </CSSTransition>
@@ -150,6 +199,8 @@ LoadingBox.defaultProps = {
   spinnerColor: BLACK,
   backgroundColor: WHITE,
   backgroundColorOpacity: 0.85,
+  label: undefined,
+  labelPosition: undefined,
   loading: false,
   timeIn: 800,
   timeOut: 200,
@@ -161,6 +212,9 @@ LoadingBox.propTypes = {
   // hex colour 3 or 6 characters (with or without hash)
   backgroundColor: PropTypes.string,
   backgroundColorOpacity: PropTypes.number,
+  label: PropTypes.string,
+  // labelPosition:  'bottom' || 'right'
+  labelPosition: PropTypes.string,
   loading: PropTypes.bool,
   // length of fade-in animation in milliseconds
   timeIn: PropTypes.number,

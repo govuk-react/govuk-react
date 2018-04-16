@@ -7,6 +7,8 @@ describe(LoadingBox, () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<LoadingBox>example</LoadingBox>, div);
+    ReactDOM.render(<LoadingBox loading labelPosition="right">example</LoadingBox>, div);
+    ReactDOM.render(<LoadingBox loading labelPosition="bottom">example</LoadingBox>, div);
   });
 
   it('should render a SVG when loading', () => {
@@ -19,5 +21,9 @@ describe(LoadingBox, () => {
 
   it('matches wrapper loading', () => {
     expect(mount(<LoadingBox loading>example</LoadingBox>)).toMatchSnapshot('wrapper loading');
+  });
+
+  it('matches wrapper loading', () => {
+    expect(mount(<LoadingBox loading labelPosition="right">example</LoadingBox>)).toMatchSnapshot('wrapper loading');
   });
 });
