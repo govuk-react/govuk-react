@@ -100,6 +100,7 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   .glamor-1,
   [data-glamor-1] {
     font-size: 19px;
+    line-height: 1.3;
   }
 }
 

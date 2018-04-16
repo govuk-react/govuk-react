@@ -1,3 +1,7 @@
+// https://govuk-elements.herokuapp.com/data/
+
+import React from 'react';
+import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 import {
   FONT_SIZE,
@@ -8,7 +12,7 @@ import {
 
 import { GREY_2 } from 'govuk-colours';
 
-const Th = glamorous.th(({
+const CellInner = glamorous.td(({
   alignRight,
 }) => ({
   border: 0,
@@ -29,4 +33,14 @@ const Th = glamorous.th(({
   },
 }));
 
-export default Th;
+const Cell = ({ children, ...props }) => (
+  <CellInner {...props}>
+    {children}
+  </CellInner>
+);
+
+Cell.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Cell;
