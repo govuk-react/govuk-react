@@ -23,7 +23,8 @@
     "test:unit": "jest --env=jsdom",
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --env=jsdom",
     "test:snapshot": "npm run test:unit -- -u",
-    "create-component": "node ./scripts/createComponent.js"
+    "create-component": "node ./scripts/createComponent.js",
+    "chomatic-test": "cd packages/storybook && npm chomatic-test"
   },
   "jest": {
     "coverageDirectory": "./coverage/",

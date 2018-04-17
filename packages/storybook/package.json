@@ -60,7 +60,7 @@
     "storybook": "start-storybook -p 9009",
     "build": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "chromatic": "chromatic test --storybook-addon "
+    "chromatic": "chromatic test --storybook-addon --exit-zero-on-changes"
   },
   "main": "lib/index.js",
   "module": "es/index.js",
