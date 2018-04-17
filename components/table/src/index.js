@@ -10,6 +10,8 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
+import TableHeader from './atoms/TableHeader';
+import TableBody from './atoms/TableBody';
 import Caption from './atoms/Caption';
 
 const TableInner = glamorous.table({
@@ -29,19 +31,27 @@ const TableInner = glamorous.table({
   },
 });
 
-const Table = ({ caption, children, ...props }) => (
+const Table = ({
+  caption,
+  body,
+  head,
+  ...props
+}) => (
   <TableInner {...props}>
     <Caption>{caption}</Caption>
-    {children}
+    {head && <TableHeader>{head}</TableHeader>}
+    <TableBody>{body}</TableBody>
   </TableInner>
 );
 
 Table.defaultProps = {
   caption: undefined,
+  head: undefined,
 };
 
 Table.propTypes = {
-  children: PropTypes.node.isRequired,
+  body: PropTypes.node.isRequired,
+  head: PropTypes.node,
   caption: PropTypes.string,
 };
 

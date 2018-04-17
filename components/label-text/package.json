@@ -13,8 +13,8 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
-    "@storybook/addon-actions": "^3.3.14",
-    "@storybook/react": "^3.3.14",
+    "@storybook/addon-actions": "^3.4.1",
+    "@storybook/react": "^3.4.1",
     "cross-env": "^5.1.4",
     "enzyme": "^3.3.0",
     "react-dom": "^16.2.0",

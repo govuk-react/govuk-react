@@ -47,9 +47,9 @@ const packageJson = () => {
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
-    "@storybook/addons": "^3.3.14",
-    "@storybook/addon-actions": "^3.3.14",
-    "@storybook/react": "^3.3.14",
+    "@storybook/addons": "^3.4.1",
+    "@storybook/addon-actions": "^3.4.1",
+    "@storybook/react": "^3.4.1",
     "enzyme": "^3.3.0",
     "react-dom": "^16.2.0",
     "rimraf": "^2.6.2"
