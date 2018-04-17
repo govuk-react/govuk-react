@@ -110,6 +110,7 @@
     "@govuk-react/select": "^0.1.27",
     "@govuk-react/storybook-components": "^0.1.27",
     "@govuk-react/text-area": "^0.1.27",
+    "@govuk-react/table": "^0.1.27",
     "@govuk-react/unordered-list": "^0.1.27",
     "@storybook/addon-actions": "^3.4.1",
     "@storybook/addon-knobs": "^3.4.1",
