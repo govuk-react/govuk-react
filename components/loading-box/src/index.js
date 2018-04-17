@@ -7,12 +7,6 @@ import { CSSTransition } from 'react-transition-group';
 import hexRgb from 'hex-rgb';
 import { Spinner } from '@govuk-react/icons';
 import { BLACK, WHITE } from 'govuk-colours';
-import {
-  FONT_SIZE,
-  LINE_HEIGHT,
-  MEDIA_QUERIES,
-  NTA_LIGHT,
-} from '@govuk-react/constants';
 
 const spinnerClassName = 'icon-loading';
 

@@ -6,11 +6,8 @@ import glamorous from 'glamorous';
 
 import { BLACK, ERROR_COLOUR, YELLOW } from 'govuk-colours';
 import {
-  FONT_SIZE,
-  LINE_HEIGHT,
   MEDIA_QUERIES,
   NTA_LIGHT,
-  SPACING,
 } from '@govuk-react/constants';
 
 import Label from '@govuk-react/label';
