@@ -83,7 +83,7 @@
     "@govuk-react/grid-col": "^0.1.27",
     "@govuk-react/grid-row": "^0.1.27",
     "@govuk-react/header": "^0.1.27",
-    "@govuk-react/images": "^0.1.27",
+    "@govuk-react/images": "^0.1.20",
     "@govuk-react/input-field": "^0.1.27",
     "@govuk-react/label-text": "^0.1.27",
     "@govuk-react/layout": "^0.1.27",
