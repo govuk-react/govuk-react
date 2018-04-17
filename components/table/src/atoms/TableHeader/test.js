@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Table from '../../';
 import TableHeader from './';
-import CellHeader from '../CellHeader';
-import Row from '../Row';
 
-const example = <Table><TableHeader><Row><CellHeader>hi</CellHeader></Row></TableHeader></Table>;
+const example = <table><TableHeader><tr><th>hi</th></tr></TableHeader></table>;
 
 describe(TableHeader, () => {
   it('renders without crashing', () => {

@@ -1,28 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Table from '../../';
 import CellHeader from './';
-import Row from '../Row';
-import TableBody from '../TableBody';
 
-const example = <Table><TableBody><Row><CellHeader>example</CellHeader></Row></TableBody></Table>;
+const example = <table><tbody><tr><CellHeader>example</CellHeader></tr></tbody></table>;
 const exampleAlignRight = (
-  <Table>
-    <TableBody>
-      <Row>
+  <table>
+    <tbody>
+      <tr>
         <CellHeader alignRight>example</CellHeader>
-      </Row>
-    </TableBody>
-  </Table>
+      </tr>
+    </tbody>
+  </table>
 );
 const exampleBold = (
-  <Table>
-    <TableBody>
-      <Row>
+  <table>
+    <tbody>
+      <tr>
         <CellHeader bold>example</CellHeader>
-      </Row>
-    </TableBody>
-  </Table>
+      </tr>
+    </tbody>
+  </table>
 );
 
 describe(CellHeader, () => {
