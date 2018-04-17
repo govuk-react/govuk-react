@@ -30,11 +30,12 @@ const Innerwrap = glamorous.div(({
   bottom: 0,
   display: 'flex',
   justifyContent: 'center',
-  alignItems: 'center',
   [`& .${spinnerClassName}`]: {
+    position: 'absolute',
     zIndex: 101,
     opacity: 1,
     display: 'block',
+    height: '100%',
     maxHeight: 'calc(50vh + 100px)',
     transition: `opacity ${timeIn}ms ease-in-out`,
   },

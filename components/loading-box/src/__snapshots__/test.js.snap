@@ -22,18 +22,17 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
   display: -webkit-flex;
   display: flex;
   justify-content: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
 }
 
 .glamor-13 .icon-loading,
 [data-glamor-13] .icon-loading {
+  position: absolute;
   z-index: 101;
   opacity: 1;
   display: block;
+  height: 100%;
   max-height: calc(50vh + 100px);
   transition: opacity 800ms ease-in-out;
   -webkit-transition: opacity 800ms ease-in-out;
