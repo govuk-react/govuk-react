@@ -24,6 +24,7 @@ stories.add('default', () => (
     timeOut={number('timeOut', 200)}
     backgroundColorOpacity={number('backgroundColorOpacity', 0.85)}
     spinnerColor={text('spinnerColor', '#000')}
+    title="Hey now!"
   >
     <div style={{ padding: '0 12px' }}>
       <PhaseBanner level="alpha">

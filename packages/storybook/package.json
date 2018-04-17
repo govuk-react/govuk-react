@@ -17,6 +17,7 @@
     "@govuk-react/icons": "^0.1.27",
     "@govuk-react/input-field": "^0.1.27",
     "@govuk-react/layout": "^0.1.27",
+    "@govuk-react/lead-paragraph": "^0.1.27",
     "@govuk-react/list-item": "^0.1.27",
     "@govuk-react/list-navigation": "^0.1.27",
     "@govuk-react/loading-box": "^0.1.27",
