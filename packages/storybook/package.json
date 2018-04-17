@@ -48,6 +48,9 @@
     "prop-types": ">=15",
     "react": ">=15"
   },
+  "devDependencies": {
+    "react-chromatic": "^0.8.1"
+  },
   "scripts": {
     "start": "start-storybook -p 9009",
     "storybook": "start-storybook -p 9009",
