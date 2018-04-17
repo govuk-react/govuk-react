@@ -24,6 +24,7 @@ stories.add('default', () => (
     timeOut={number('timeOut', 200)}
     backgroundColorOpacity={number('backgroundColorOpacity', 0.85)}
     spinnerColor={text('spinnerColor', '#000')}
+    title="Hey now!"
   >
     <div style={{ padding: '0 12px' }}>
       <PhaseBanner level="alpha">
@@ -128,13 +129,6 @@ stories.add('with children that have short height (minHeight 100px)', () => (
 
 stories.add('with bolded texts', () => (
   <LoadingBox loading>
-    <H1>Lorem ipsum dolor sit amet</H1>
-    <H2>Consectetur adipisicing elit. Quia incidunt, earum molestiae omnis labore adipisci.</H2>
-  </LoadingBox>
-));
-
-stories.add('with loading label', () => (
-  <LoadingBox label="Loading..." labelPosition={text('Label position', 'right')} loading>
     <H1>Lorem ipsum dolor sit amet</H1>
     <H2>Consectetur adipisicing elit. Quia incidunt, earum molestiae omnis labore adipisci.</H2>
   </LoadingBox>
