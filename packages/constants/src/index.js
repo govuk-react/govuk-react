@@ -51,6 +51,7 @@ export const FONT_SIZE = {
 export const LINE_HEIGHT = {
   SIZE_14: '1.1428571429',
   SIZE_16: '1.25',
+  SIZE_19: '1.3',
   SIZE_18: '1.3',
   SIZE_24: '1.35',
 };
