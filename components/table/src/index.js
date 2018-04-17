@@ -3,14 +3,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
-import Caption from './atoms/Caption';
-
 import {
   FONT_SIZE,
   LINE_HEIGHT,
   MEDIA_QUERIES,
   NTA_LIGHT,
 } from '@govuk-react/constants';
+
+import Caption from './atoms/Caption';
 
 const TableInner = glamorous.table({
   border: 0,

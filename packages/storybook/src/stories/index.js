@@ -31,6 +31,7 @@ import '@govuk-react/related-items/lib/stories';
 import '@govuk-react/document-footer-metadata/lib/stories';
 import '@govuk-react/loading-box/lib/stories';
 import '@govuk-react/table/lib/stories';
+import '@govuk-react/lead-paragraph/lib/stories';
 
 import '@govuk-react/hoc/lib/asAnchor/stories';
 import '@govuk-react/hoc/lib/asPaginationItem/stories';
