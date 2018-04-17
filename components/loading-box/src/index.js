@@ -38,11 +38,6 @@ const Innerwrap = glamorous.div(({
     maxHeight: 'calc(50vh + 100px)',
     transition: `opacity ${timeIn}ms ease-in-out`,
   },
-  [`& .${spinnerClassName} + p`]: {
-    zIndex: 101,
-    opacity: 1,
-    transition: `opacity ${timeIn}ms ease-in-out`,
-  },
   '& .overlay': {
     zIndex: 100,
     transition: `background-color ${timeIn}ms ease-in-out`,
@@ -66,11 +61,6 @@ const Innerwrap = glamorous.div(({
       transitionDuration: `${timeIn}ms`,
       transitionDelay: `${timeIn / 2}ms`,
     },
-    [`& .${spinnerClassName} + p`]: {
-      opacity: 0,
-      transitionDuration: `${timeIn}ms`,
-      transitionDelay: `${timeIn / 2}ms`,
-    },
   },
   '.fade-enter-active': {
     '& .overlay': {
@@ -82,11 +72,6 @@ const Innerwrap = glamorous.div(({
       transitionDuration: `${timeIn}ms`,
     },
     [`& .${spinnerClassName}`]: {
-      opacity: 1,
-      transitionDuration: `${timeIn}ms`,
-      transitionDelay: `${timeIn / 2}ms`,
-    },
-    [`& .${spinnerClassName} + p`]: {
       opacity: 1,
       transitionDuration: `${timeIn}ms`,
       transitionDelay: `${timeIn / 2}ms`,
@@ -116,10 +101,6 @@ const Innerwrap = glamorous.div(({
       transitionDuration: `${timeOut}ms`,
     },
     [`& .${spinnerClassName}`]: {
-      opacity: 0,
-      transitionDuration: `${timeOut}ms`,
-    },
-    [`& .${spinnerClassName} + p`]: {
       opacity: 0,
       transitionDuration: `${timeOut}ms`,
     },

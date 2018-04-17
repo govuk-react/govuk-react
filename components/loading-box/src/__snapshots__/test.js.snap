@@ -40,15 +40,6 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
   -moz-transition: opacity 800ms ease-in-out;
 }
 
-.glamor-13 .icon-loading + p,
-[data-glamor-13] .icon-loading + p {
-  z-index: 101;
-  opacity: 1;
-  transition: opacity 800ms ease-in-out;
-  -webkit-transition: opacity 800ms ease-in-out;
-  -moz-transition: opacity 800ms ease-in-out;
-}
-
 .glamor-13 .overlay,
 [data-glamor-13] .overlay {
   z-index: 100;
@@ -82,15 +73,6 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
   -webkit-transition-delay: 400ms;
 }
 
-.glamor-13.fade-enter .icon-loading + p,
-[data-glamor-13].fade-enter .icon-loading + p {
-  opacity: 0;
-  transition-duration: 800ms;
-  transition-delay: 400ms;
-  -webkit-transition-duration: 800ms;
-  -webkit-transition-delay: 400ms;
-}
-
 .glamor-13.fade-enter-active .overlay,
 [data-glamor-13].fade-enter-active .overlay {
   background-color: rgba(
@@ -104,15 +86,6 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
 
 .glamor-13.fade-enter-active .icon-loading,
 [data-glamor-13].fade-enter-active .icon-loading {
-  opacity: 1;
-  transition-duration: 800ms;
-  transition-delay: 400ms;
-  -webkit-transition-duration: 800ms;
-  -webkit-transition-delay: 400ms;
-}
-
-.glamor-13.fade-enter-active .icon-loading + p,
-[data-glamor-13].fade-enter-active .icon-loading + p {
   opacity: 1;
   transition-duration: 800ms;
   transition-delay: 400ms;
@@ -151,13 +124,6 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
 
 .glamor-13.fade-exit-active .icon-loading,
 [data-glamor-13].fade-exit-active .icon-loading {
-  opacity: 0;
-  transition-duration: 200ms;
-  -webkit-transition-duration: 200ms;
-}
-
-.glamor-13.fade-exit-active .icon-loading + p,
-[data-glamor-13].fade-exit-active .icon-loading + p {
   opacity: 0;
   transition-duration: 200ms;
   -webkit-transition-duration: 200ms;
