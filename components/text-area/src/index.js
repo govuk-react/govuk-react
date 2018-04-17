@@ -10,7 +10,6 @@ import {
   LINE_HEIGHT,
   MEDIA_QUERIES,
   NTA_LIGHT,
-  SPACING,
 } from '@govuk-react/constants';
 
 import Label from '@govuk-react/label';

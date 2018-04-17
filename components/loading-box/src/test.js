@@ -13,6 +13,10 @@ describe(LoadingBox, () => {
     expect(mount(<LoadingBox loading>example</LoadingBox>).find('svg')).toHaveLength(1);
   });
 
+  it('should render a SVG title when passed the value', () => {
+    expect(mount(<LoadingBox loading title="cat">example</LoadingBox>).find('title').text()).toBe('cat');
+  });
+
   it('shouldnt render a SVG when not loading', () => {
     expect(mount(<LoadingBox loading={false}>example</LoadingBox>).find('svg')).toHaveLength(0);
   });
