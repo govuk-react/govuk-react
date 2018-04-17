@@ -14,9 +14,7 @@ module.exports = (baseConfig, env) => {
   });
   // make babel-loader process components folder
   config.module.rules[0].include.push(path.resolve('../../components'));
-
-  // configuration for adding specific rules can be found here:
-  // https://storybook.js.org/configurations/custom-webpack-config/#full-control-mode
+  config.module.rules[0].include.push(path.resolve('../../packages'));
 
   return config;
 };
