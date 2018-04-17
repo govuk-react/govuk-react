@@ -37,9 +37,8 @@ module.exports = (baseConfig, env) => {
     loaders: ["url-loader"],
     include: path.resolve(__dirname, '../../..')
   });
-  // make babel-loader process components folder
-  config.module.rules[0].include.push(path.resolve('../../components'));
-  config.module.rules[0].include.push(path.resolve('../../packages'));
+  // make babel-loader process components and packages src folder
+  config.module.rules[0].include.push(/\/(packages|components)\/[^/]+\/src/);
 
   // when one component depends on another, we want to webpack to load from the component's src folder so that it auto refreshes when there are changes
   const components = aliasToSrc(dirs('../../components'));
