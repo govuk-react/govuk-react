@@ -2,7 +2,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '@govuk-react/button';
 import { BLACK, WHITE } from 'govuk-colours';
 
 import TopNavWrapper from './atoms/top-nav-wrapper';
@@ -12,8 +11,9 @@ import Company from './atoms/company';
 import LogoSearchWrapper from './atoms/logo-search-wrapper';
 import RightHandSide from './atoms/right-hand-side';
 import SearchWrapper from './atoms/search-wrapper';
-import Ul from './atoms/ul';
-import Li from './atoms/li';
+import UnorderedList from './atoms/unordered-list';
+import ListItem from './atoms/list-item';
+import MenuButton from './atoms/menu-button/';
 
 const TopNav = ({
   active,
@@ -42,19 +42,19 @@ const TopNav = ({
           {serviceTitle}
           {children &&
           <React.Fragment>
-            <Button mb={0}>menu</Button>
-            <Ul serviceTitle={serviceTitle}>
+            <MenuButton />
+            <UnorderedList serviceTitle={serviceTitle}>
               {/* TODO #205 use context api and/or render props here for `active` */}
               {children.length && children.map ? (
                 children.map((child, i) => (
                   child && (child.length || child.props)
-                    ? <Li active={active === i ? 'active' : undefined} key={child.key || i}>{child}</Li>
+                    ? <ListItem active={active === i ? 'active' : undefined} key={child.key || i}>{child}</ListItem>
                     : null
                 ))
               ) : (
-                <Li active={active}>{children}</Li>
+                <ListItem active={active}>{children}</ListItem>
               )}
-            </Ul>
+            </UnorderedList>
           </React.Fragment>
           }
         </RightHandSide>

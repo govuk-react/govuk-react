@@ -7,13 +7,14 @@ import {
 const Ul = glamorous.ul(({
   serviceTitle,
 }) => ({
-  display: 'flex',
+  display: 'none',
   flexWrap: 'wrap',
   margin: 0,
   padding: 0,
   marginTop: SPACING.SCALE_1,
   width: '100%',
   [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'flex',
     paddingTop: serviceTitle ? 0 : SPACING.SCALE_5,
     width: 'auto',
   },

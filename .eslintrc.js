@@ -1,4 +1,6 @@
-{
+const { devDependencies } = require('./package.json');
+
+module.exports = {
   "parser": "babel-eslint",
   "extends": ["airbnb", "sonar", "plugin:flowtype/recommended"],
   "plugins": [
@@ -17,6 +19,9 @@
       "files": [ "stories.js", "test.js", "example.js", "scripts/**", "src/stories/**" ],
       "rules": {
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+      },
+      "settings": {
+        "import/core-modules": Object.keys(devDependencies)
       }
     },
     {

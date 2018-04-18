@@ -41,12 +41,17 @@ export const FONT_STACK_PRINT = 'sans-serif !default';
 export const FONT_SIZE = {
   SIZE_14: '14px',
   SIZE_16: '16px',
+  SIZE_18: '18px',
   SIZE_19: '19px',
   SIZE_20: '20px',
+  SIZE_24: '24px',
   SIZE_27: '27px',
 };
 
 export const LINE_HEIGHT = {
   SIZE_14: '1.1428571429',
   SIZE_16: '1.25',
+  SIZE_19: '1.3',
+  SIZE_18: '1.3',
+  SIZE_24: '1.35',
 };

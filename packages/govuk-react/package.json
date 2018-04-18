@@ -22,6 +22,7 @@
     "@govuk-react/label": "^0.1.27",
     "@govuk-react/label-text": "^0.1.27",
     "@govuk-react/layout": "^0.1.27",
+    "@govuk-react/lead-paragraph": "^0.1.27",
     "@govuk-react/list-item": "^0.1.27",
     "@govuk-react/list-navigation": "^0.1.27",
     "@govuk-react/loading-box": "^0.1.27",
@@ -35,6 +36,7 @@
     "@govuk-react/related-items": "^0.1.27",
     "@govuk-react/search-box": "^0.1.27",
     "@govuk-react/select": "^0.1.27",
+    "@govuk-react/table": "^0.1.27",
     "@govuk-react/text-area": "^0.1.27",
     "@govuk-react/top-nav": "^0.1.27",
     "@govuk-react/unordered-list": "^0.1.27",
@@ -44,15 +46,6 @@
     "glamorous": ">=4",
     "prop-types": ">=15",
     "react": ">=15"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.40",
-    "@storybook/addon-actions": "^3.3.14",
-    "@storybook/react": "^3.3.14",
-    "cross-env": "^5.1.4",
-    "enzyme": "^3.3.0",
-    "react-dom": "^16.2.0",
-    "rimraf": "^2.6.2"
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es",

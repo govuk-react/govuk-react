@@ -5,8 +5,17 @@ import { MEDIA_QUERIES, SPACING } from '@govuk-react/constants';
 const RightHandSide = glamorous.div({
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'flex-start',
+  alignItems: 'flex-end',
   marginTop: SPACING.SCALE_2,
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    alignItems: 'flex-start',
+    width: '66.66%',
+    paddingLeft: SPACING.SCALE_3,
+    marginTop: 0,
+    ' button': {
+      display: 'none',
+    },
+  },
   ' a': {
     color: WHITE,
     border: 0,
@@ -17,14 +26,6 @@ const RightHandSide = glamorous.div({
     ':hover': {
       borderBottom: `1px solid ${WHITE}`,
     },
-  },
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    ' button': {
-      display: 'none',
-    },
-    width: '66.66%',
-    paddingLeft: SPACING.SCALE_3,
-    marginTop: 0,
   },
 });
 

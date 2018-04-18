@@ -123,6 +123,7 @@ const LoadingBox = ({
   children,
   backgroundColor,
   backgroundColorOpacity,
+  title,
   loading,
   spinnerColor,
   timeIn,
@@ -138,7 +139,7 @@ const LoadingBox = ({
         timeIn={timeIn}
         timeOut={timeOut}
       >
-        <Spinner className={spinnerClassName} fill={spinnerColor} width="100px" height="100px" />
+        <Spinner title={title} className={spinnerClassName} fill={spinnerColor} width="100px" height="100px" />
         <Overlay />
       </Innerwrap>
     </CSSTransition>
@@ -150,6 +151,7 @@ LoadingBox.defaultProps = {
   spinnerColor: BLACK,
   backgroundColor: WHITE,
   backgroundColorOpacity: 0.85,
+  title: undefined,
   loading: false,
   timeIn: 800,
   timeOut: 200,
@@ -161,6 +163,7 @@ LoadingBox.propTypes = {
   // hex colour 3 or 6 characters (with or without hash)
   backgroundColor: PropTypes.string,
   backgroundColorOpacity: PropTypes.number,
+  title: PropTypes.string,
   loading: PropTypes.bool,
   // length of fade-in animation in milliseconds
   timeIn: PropTypes.number,

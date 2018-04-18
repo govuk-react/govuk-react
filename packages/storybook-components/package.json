@@ -3,22 +3,15 @@
   "version": "0.1.27",
   "dependencies": {
     "@govuk-react/button": "^0.1.27",
-    "@storybook/addon-actions": "^3.3.14",
-    "@storybook/addons": "^3.3.14",
-    "@storybook/react": "^3.3.14",
+    "@storybook/addon-actions": "^3.4.1",
+    "@storybook/addons": "^3.4.1",
+    "@storybook/react": "^3.4.1",
     "react-final-form": "^3.1.0"
   },
   "peerDependencies": {
     "glamorous": ">=4",
     "prop-types": ">=15",
     "react": ">=15"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.40",
-    "cross-env": "^5.1.4",
-    "enzyme": "^3.3.0",
-    "react-dom": "^16.2.0",
-    "rimraf": "^2.6.2"
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es",

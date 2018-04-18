@@ -3,7 +3,6 @@ pipeline:
   build:
     commands:
       - yarn
-      - "yarn bootstrap"
-      - "yarn build"
-      - "yarn test"
+      - yarn build:sync
+      - yarn test
     image: "node:8"
