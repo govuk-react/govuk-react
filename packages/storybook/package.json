@@ -48,10 +48,15 @@
     "prop-types": ">=15",
     "react": ">=15"
   },
+  "devDependencies": {
+    "react-chromatic": "^0.8.1"
+  },
   "scripts": {
     "start": "start-storybook -p 9009",
+    "storybook": "start-storybook -p 9009",
     "build": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "chromatic-test": "chromatic test --storybook-addon --exit-zero-on-changes"
   },
   "main": "lib/index.js",
   "module": "es/index.js",
