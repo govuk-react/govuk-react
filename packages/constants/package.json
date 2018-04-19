@@ -1,6 +1,6 @@
 {
   "name": "@govuk-react/constants",
-  "version": "0.1.26",
+  "version": "0.1.28",
   "dependencies": {
     "govuk-colours": "^1.0.3"
   },
