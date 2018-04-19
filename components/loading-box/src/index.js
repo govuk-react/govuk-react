@@ -139,7 +139,7 @@ const LoadingBox = ({
         timeIn={timeIn}
         timeOut={timeOut}
       >
-        <Spinner title={title} className={spinnerClassName} fill={spinnerColor} width="100px" height="100px" />
+        <Spinner title={title} className={spinnerClassName} fill={spinnerColor} width="50px" height="50px" />
         <Overlay />
       </Innerwrap>
     </CSSTransition>
