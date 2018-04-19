@@ -16,7 +16,7 @@
   "peerDependencies": {
     "glamorous": ">=4",
     "prop-types": ">=15",
-    "react": ">=15"
+    "react": ">=16.2.0"
   },
   "devDependencies": {
     "react-transition-group": "^2.2.1"
