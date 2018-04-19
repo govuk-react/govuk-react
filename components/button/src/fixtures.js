@@ -1,6 +1,5 @@
 import React from 'react';
 import { text, boolean } from '@storybook/addon-knobs/react';
-// import iconPointer from '@govuk-react/images/icon-pointer.png';
 import { ButtonArrow } from '@govuk-react/icons';
 import Button from '.';
 

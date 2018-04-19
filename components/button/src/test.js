@@ -7,14 +7,16 @@ import Button, {
   ButtonStartIcon,
   ButtonDisabled,
   ButtonDisabledStartIcon,
-} from './fixture';
+} from './fixtures';
 
 describe('button', () => {
   const wrapper = <Button />;
+  const wrapper2 = <ButtonStartIcon />;
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(wrapper, div);
+    ReactDOM.render(wrapper2, div);
   });
 
   it('should render a button', () => {
@@ -35,8 +37,8 @@ describe('button', () => {
     expect(mount(<ButtonStart />).find('button')).toHaveLength(1);
   });
 
-  // it('passes `props.iconUrl` to the rendered button as `iconUrl`', () => {
-  //   expect(mount(<ButtonStartIcon />).find('button')).toHaveLength(1);
+  // it('passes `icon` to the rendered button as `icon`', () => {
+  //   expect(shallow(<ButtonStartIcon />).find('button')).toHaveLength(1);
   // });
 
   // it('passes `props.iconUrl` to the rendered button as `iconUrl`', () => {

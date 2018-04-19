@@ -59,13 +59,6 @@ const GButton = glamorous.button(
   }),
 );
 
-// ({ iconUrl }) => ({
-//   backgroundImage: iconUrl ? `url( ${iconUrl})` : undefined,
-//   backgroundRepeat: iconUrl ? 'no-repeat' : undefined,
-//   backgroundPosition: iconUrl ? '100% 50%' : undefined,
-//   paddingRight: iconUrl ? '2.15789em' : undefined,
-// }),
-
 // TODO: start and iconUrl props
 const Button = ({
   children,

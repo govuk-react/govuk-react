@@ -6,7 +6,7 @@ import Button, {
   ButtonStartIcon,
   ButtonDisabled,
   ButtonDisabledStartIcon,
-} from './fixture';
+} from './fixtures';
 
 const stories = storiesOf('Button', module);
 
