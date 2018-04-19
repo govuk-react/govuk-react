@@ -6,7 +6,6 @@ import Button, {
   ButtonStart,
   ButtonStartIcon,
   ButtonDisabled,
-  ButtonDisabledStartIcon,
 } from './fixtures';
 
 describe('button', () => {
@@ -36,14 +35,4 @@ describe('button', () => {
   it('passes `props.start` to the rendered button as `start`', () => {
     expect(mount(<ButtonStart />).find('button')).toHaveLength(1);
   });
-
-  // it('passes `icon` to the rendered button as `icon`', () => {
-  //   expect(shallow(<ButtonStartIcon />).find('button')).toHaveLength(1);
-  // });
-
-  // it('passes `props.iconUrl` to the rendered button as `iconUrl`', () => {
-  //   const output = shallow(<ButtonDisabledStartIcon />);
-  //   expect(output.find('button')).toHaveLength(1);
-  //   expect(output.find('button[disabled="disabled"]')).toBeTruthy();
-  // });
 });
