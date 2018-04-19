@@ -1,0 +1,616 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
+.glamor-14,
+[data-glamor-14] {
+  position: relative;
+  padding-bottom: 2px;
+  min-height: 100px;
+}
+
+.glamor-13,
+[data-glamor-13] {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+}
+
+.glamor-13 .icon-loading,
+[data-glamor-13] .icon-loading {
+  position: absolute;
+  z-index: 101;
+  opacity: 1;
+  display: block;
+  height: 100%;
+  max-height: calc(50vh + 100px);
+  transition: opacity 800ms ease-in-out;
+  -webkit-transition: opacity 800ms ease-in-out;
+  -moz-transition: opacity 800ms ease-in-out;
+}
+
+.glamor-13 .overlay,
+[data-glamor-13] .overlay {
+  z-index: 100;
+  transition: background-color 800ms ease-in-out;
+  background-color: rgba(
+      255,
+      255,
+      255,
+      0.85);
+  -webkit-transition: background-color 800ms ease-in-out;
+  -moz-transition: background-color 800ms ease-in-out;
+}
+
+.glamor-13.fade-enter .overlay,
+[data-glamor-13].fade-enter .overlay {
+  background-color: rgba(
+        255,
+        255,
+        255,
+        0);
+  transition-duration: 800ms;
+  -webkit-transition-duration: 800ms;
+}
+
+.glamor-13.fade-enter .icon-loading,
+[data-glamor-13].fade-enter .icon-loading {
+  opacity: 0;
+  transition-duration: 800ms;
+  transition-delay: 400ms;
+  -webkit-transition-duration: 800ms;
+  -webkit-transition-delay: 400ms;
+}
+
+.glamor-13.fade-enter-active .overlay,
+[data-glamor-13].fade-enter-active .overlay {
+  background-color: rgba(
+        255,
+        255,
+        255,
+        0.85);
+  transition-duration: 800ms;
+  -webkit-transition-duration: 800ms;
+}
+
+.glamor-13.fade-enter-active .icon-loading,
+[data-glamor-13].fade-enter-active .icon-loading {
+  opacity: 1;
+  transition-duration: 800ms;
+  transition-delay: 400ms;
+  -webkit-transition-duration: 800ms;
+  -webkit-transition-delay: 400ms;
+}
+
+.glamor-13.fade-exit .overlay,
+[data-glamor-13].fade-exit .overlay {
+  background-color: rgba(
+        255,
+        255,
+        255,
+        0.85);
+  transition-duration: 200ms;
+  -webkit-transition-duration: 200ms;
+}
+
+.glamor-13.fade-exit .icon-loading,
+[data-glamor-13].fade-exit .icon-loading {
+  opacity: 1;
+  transition-duration: 200ms;
+  -webkit-transition-duration: 200ms;
+}
+
+.glamor-13.fade-exit-active .overlay,
+[data-glamor-13].fade-exit-active .overlay {
+  background-color: rgba(
+        255,
+        255,
+        255,
+        0);
+  transition-duration: 200ms;
+  -webkit-transition-duration: 200ms;
+}
+
+.glamor-13.fade-exit-active .icon-loading,
+[data-glamor-13].fade-exit-active .icon-loading {
+  opacity: 0;
+  transition-duration: 200ms;
+  -webkit-transition-duration: 200ms;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  animation: animation_1kzvbmm 1s infinite linear;
+  -webkit-animation: animation_1kzvbmm 1s infinite linear;
+}
+
+.glamor-12,
+[data-glamor-12] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+<LoadingBox
+  backgroundColor="#ffffff"
+  backgroundColorOpacity={0.85}
+  loading={true}
+  spinnerColor="#0b0c0c"
+  timeIn={800}
+  timeOut={200}
+>
+  <glamorous(div)>
+    <div
+      className="glamor-14"
+    >
+      <CSSTransition
+        classNames="fade"
+        in={true}
+        timeout={200}
+        unmountOnExit={true}
+      >
+        <Transition
+          appear={false}
+          enter={true}
+          exit={true}
+          in={true}
+          mountOnEnter={false}
+          onEnter={[Function]}
+          onEntered={[Function]}
+          onEntering={[Function]}
+          onExit={[Function]}
+          onExited={[Function]}
+          onExiting={[Function]}
+          timeout={200}
+          unmountOnExit={true}
+        >
+          <glamorous(div)
+            backgroundColor="#ffffff"
+            backgroundColorOpacity={0.85}
+            loading={true}
+            timeIn={800}
+            timeOut={200}
+          >
+            <div
+              className="glamor-13"
+            >
+              <Spinner
+                className="icon-loading"
+                fill="#0b0c0c"
+                height="50px"
+                title="Loading"
+                width="50px"
+              >
+                <SVG
+                  className="icon-loading"
+                  fill="#0b0c0c"
+                  height="50px"
+                  preserveAspectRatio="xMidYMid meet"
+                  title="Loading"
+                  viewBox="-25 -25 50 50"
+                  width="50px"
+                >
+                  <svg
+                    className="icon-loading"
+                    fill="#0b0c0c"
+                    height="50px"
+                    preserveAspectRatio="xMidYMid meet"
+                    style={
+                      Object {
+                        "display": "block",
+                      }
+                    }
+                    version="1.1"
+                    viewBox="-25 -25 50 50"
+                    width="50px"
+                    x="0px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0px"
+                  >
+                    <title>
+                      Loading
+                    </title>
+                    <glamorous(rect)
+                      fill="#0b0c0c"
+                      height="5"
+                      key="0"
+                      opacity="0"
+                      rx="2.5"
+                      ry="2.5"
+                      style={
+                        Object {
+                          "animationDelay": "0ms",
+                        }
+                      }
+                      transform="rotate(0, 0, 2) translate(10 0)"
+                      width="12"
+                    >
+                      <rect
+                        className="glamor-0"
+                        fill="#0b0c0c"
+                        height="5"
+                        opacity="0"
+                        rx="2.5"
+                        ry="2.5"
+                        style={
+                          Object {
+                            "animationDelay": "0ms",
+                          }
+                        }
+                        transform="rotate(0, 0, 2) translate(10 0)"
+                        width="12"
+                      />
+                    </glamorous(rect)>
+                    <glamorous(rect)
+                      fill="#0b0c0c"
+                      height="5"
+                      key="1"
+                      opacity="0"
+                      rx="2.5"
+                      ry="2.5"
+                      style={
+                        Object {
+                          "animationDelay": "83ms",
+                        }
+                      }
+                      transform="rotate(30, 0, 2) translate(10 0)"
+                      width="12"
+                    >
+                      <rect
+                        className="glamor-0"
+                        fill="#0b0c0c"
+                        height="5"
+                        opacity="0"
+                        rx="2.5"
+                        ry="2.5"
+                        style={
+                          Object {
+                            "animationDelay": "83ms",
+                          }
+                        }
+                        transform="rotate(30, 0, 2) translate(10 0)"
+                        width="12"
+                      />
+                    </glamorous(rect)>
+                    <glamorous(rect)
+                      fill="#0b0c0c"
+                      height="5"
+                      key="2"
+                      opacity="0"
+                      rx="2.5"
+                      ry="2.5"
+                      style={
+                        Object {
+                          "animationDelay": "166ms",
+                        }
+                      }
+                      transform="rotate(60, 0, 2) translate(10 0)"
+                      width="12"
+                    >
+                      <rect
+                        className="glamor-0"
+                        fill="#0b0c0c"
+                        height="5"
+                        opacity="0"
+                        rx="2.5"
+                        ry="2.5"
+                        style={
+                          Object {
+                            "animationDelay": "166ms",
+                          }
+                        }
+                        transform="rotate(60, 0, 2) translate(10 0)"
+                        width="12"
+                      />
+                    </glamorous(rect)>
+                    <glamorous(rect)
+                      fill="#0b0c0c"
+                      height="5"
+                      key="3"
+                      opacity="0"
+                      rx="2.5"
+                      ry="2.5"
+                      style={
+                        Object {
+                          "animationDelay": "249ms",
+                        }
+                      }
+                      transform="rotate(90, 0, 2) translate(10 0)"
+                      width="12"
+                    >
+                      <rect
+                        className="glamor-0"
+                        fill="#0b0c0c"
+                        height="5"
+                        opacity="0"
+                        rx="2.5"
+                        ry="2.5"
+                        style={
+                          Object {
+                            "animationDelay": "249ms",
+                          }
+                        }
+                        transform="rotate(90, 0, 2) translate(10 0)"
+                        width="12"
+                      />
+                    </glamorous(rect)>
+                    <glamorous(rect)
+                      fill="#0b0c0c"
+                      height="5"
+                      key="4"
+                      opacity="0"
+                      rx="2.5"
+                      ry="2.5"
+                      style={
+                        Object {
+                          "animationDelay": "332ms",
+                        }
+                      }
+                      transform="rotate(120, 0, 2) translate(10 0)"
+                      width="12"
+                    >
+                      <rect
+                        className="glamor-0"
+                        fill="#0b0c0c"
+                        height="5"
+                        opacity="0"
+                        rx="2.5"
+                        ry="2.5"
+                        style={
+                          Object {
+                            "animationDelay": "332ms",
+                          }
+                        }
+                        transform="rotate(120, 0, 2) translate(10 0)"
+                        width="12"
+                      />
+                    </glamorous(rect)>
+                    <glamorous(rect)
+                      fill="#0b0c0c"
+                      height="5"
+                      key="5"
+                      opacity="0"
+                      rx="2.5"
+                      ry="2.5"
+                      style={
+                        Object {
+                          "animationDelay": "415ms",
+                        }
+                      }
+                      transform="rotate(150, 0, 2) translate(10 0)"
+                      width="12"
+                    >
+                      <rect
+                        className="glamor-0"
+                        fill="#0b0c0c"
+                        height="5"
+                        opacity="0"
+                        rx="2.5"
+                        ry="2.5"
+                        style={
+                          Object {
+                            "animationDelay": "415ms",
+                          }
+                        }
+                        transform="rotate(150, 0, 2) translate(10 0)"
+                        width="12"
+                      />
+                    </glamorous(rect)>
+                    <glamorous(rect)
+                      fill="#0b0c0c"
+                      height="5"
+                      key="6"
+                      opacity="0"
+                      rx="2.5"
+                      ry="2.5"
+                      style={
+                        Object {
+                          "animationDelay": "498ms",
+                        }
+                      }
+                      transform="rotate(180, 0, 2) translate(10 0)"
+                      width="12"
+                    >
+                      <rect
+                        className="glamor-0"
+                        fill="#0b0c0c"
+                        height="5"
+                        opacity="0"
+                        rx="2.5"
+                        ry="2.5"
+                        style={
+                          Object {
+                            "animationDelay": "498ms",
+                          }
+                        }
+                        transform="rotate(180, 0, 2) translate(10 0)"
+                        width="12"
+                      />
+                    </glamorous(rect)>
+                    <glamorous(rect)
+                      fill="#0b0c0c"
+                      height="5"
+                      key="7"
+                      opacity="0"
+                      rx="2.5"
+                      ry="2.5"
+                      style={
+                        Object {
+                          "animationDelay": "581ms",
+                        }
+                      }
+                      transform="rotate(210, 0, 2) translate(10 0)"
+                      width="12"
+                    >
+                      <rect
+                        className="glamor-0"
+                        fill="#0b0c0c"
+                        height="5"
+                        opacity="0"
+                        rx="2.5"
+                        ry="2.5"
+                        style={
+                          Object {
+                            "animationDelay": "581ms",
+                          }
+                        }
+                        transform="rotate(210, 0, 2) translate(10 0)"
+                        width="12"
+                      />
+                    </glamorous(rect)>
+                    <glamorous(rect)
+                      fill="#0b0c0c"
+                      height="5"
+                      key="8"
+                      opacity="0"
+                      rx="2.5"
+                      ry="2.5"
+                      style={
+                        Object {
+                          "animationDelay": "664ms",
+                        }
+                      }
+                      transform="rotate(240, 0, 2) translate(10 0)"
+                      width="12"
+                    >
+                      <rect
+                        className="glamor-0"
+                        fill="#0b0c0c"
+                        height="5"
+                        opacity="0"
+                        rx="2.5"
+                        ry="2.5"
+                        style={
+                          Object {
+                            "animationDelay": "664ms",
+                          }
+                        }
+                        transform="rotate(240, 0, 2) translate(10 0)"
+                        width="12"
+                      />
+                    </glamorous(rect)>
+                    <glamorous(rect)
+                      fill="#0b0c0c"
+                      height="5"
+                      key="9"
+                      opacity="0"
+                      rx="2.5"
+                      ry="2.5"
+                      style={
+                        Object {
+                          "animationDelay": "747ms",
+                        }
+                      }
+                      transform="rotate(270, 0, 2) translate(10 0)"
+                      width="12"
+                    >
+                      <rect
+                        className="glamor-0"
+                        fill="#0b0c0c"
+                        height="5"
+                        opacity="0"
+                        rx="2.5"
+                        ry="2.5"
+                        style={
+                          Object {
+                            "animationDelay": "747ms",
+                          }
+                        }
+                        transform="rotate(270, 0, 2) translate(10 0)"
+                        width="12"
+                      />
+                    </glamorous(rect)>
+                    <glamorous(rect)
+                      fill="#0b0c0c"
+                      height="5"
+                      key="10"
+                      opacity="0"
+                      rx="2.5"
+                      ry="2.5"
+                      style={
+                        Object {
+                          "animationDelay": "830ms",
+                        }
+                      }
+                      transform="rotate(300, 0, 2) translate(10 0)"
+                      width="12"
+                    >
+                      <rect
+                        className="glamor-0"
+                        fill="#0b0c0c"
+                        height="5"
+                        opacity="0"
+                        rx="2.5"
+                        ry="2.5"
+                        style={
+                          Object {
+                            "animationDelay": "830ms",
+                          }
+                        }
+                        transform="rotate(300, 0, 2) translate(10 0)"
+                        width="12"
+                      />
+                    </glamorous(rect)>
+                    <glamorous(rect)
+                      fill="#0b0c0c"
+                      height="5"
+                      key="11"
+                      opacity="0"
+                      rx="2.5"
+                      ry="2.5"
+                      style={
+                        Object {
+                          "animationDelay": "913ms",
+                        }
+                      }
+                      transform="rotate(330, 0, 2) translate(10 0)"
+                      width="12"
+                    >
+                      <rect
+                        className="glamor-0"
+                        fill="#0b0c0c"
+                        height="5"
+                        opacity="0"
+                        rx="2.5"
+                        ry="2.5"
+                        style={
+                          Object {
+                            "animationDelay": "913ms",
+                          }
+                        }
+                        transform="rotate(330, 0, 2) translate(10 0)"
+                        width="12"
+                      />
+                    </glamorous(rect)>
+                  </svg>
+                </SVG>
+              </Spinner>
+              <glamorous(div)>
+                <div
+                  className="glamor-12 overlay"
+                />
+              </glamorous(div)>
+            </div>
+          </glamorous(div)>
+        </Transition>
+      </CSSTransition>
+      example
+    </div>
+  </glamorous(div)>
+</LoadingBox>
+`;
