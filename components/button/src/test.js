@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 
-import Button from './';
+import Button, {
+  ButtonStart,
+  ButtonStartIcon,
+  ButtonDisabled,
+  ButtonDisabledStartIcon,
+} from './fixture';
 
 describe('button', () => {
-  const example = 'example';
-  const wrapper = <Button>{example}</Button>;
+  const wrapper = <Button />;
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
@@ -19,7 +23,7 @@ describe('button', () => {
   });
 
   it('should render a disabled button', () => {
-    const output = shallow(<Button disabled="disabled">{example}</Button>);
+    const output = shallow(<ButtonDisabled />);
     expect(output.find('button[disabled="disabled"]')).toBeTruthy();
   });
 
@@ -28,10 +32,16 @@ describe('button', () => {
   });
 
   it('passes `props.start` to the rendered button as `start`', () => {
-    expect(mount(<Button start>{example}</Button>).find('button')).toHaveLength(1);
+    expect(mount(<ButtonStart />).find('button')).toHaveLength(1);
   });
 
-  it('passes `props.iconUrl` to the rendered button as `iconUrl`', () => {
-    expect(mount(<Button iconUrl>{example}</Button>).find('button')).toHaveLength(1);
-  });
+  // it('passes `props.iconUrl` to the rendered button as `iconUrl`', () => {
+  //   expect(mount(<ButtonStartIcon />).find('button')).toHaveLength(1);
+  // });
+
+  // it('passes `props.iconUrl` to the rendered button as `iconUrl`', () => {
+  //   const output = shallow(<ButtonDisabledStartIcon />);
+  //   expect(output.find('button')).toHaveLength(1);
+  //   expect(output.find('button[disabled="disabled"]')).toBeTruthy();
+  // });
 });
