@@ -192,23 +192,23 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
               <Spinner
                 className="icon-loading"
                 fill="#0b0c0c"
-                height="100px"
+                height="50px"
                 title="Loading"
-                width="100px"
+                width="50px"
               >
                 <SVG
                   className="icon-loading"
                   fill="#0b0c0c"
-                  height="100px"
+                  height="50px"
                   preserveAspectRatio="xMidYMid meet"
                   title="Loading"
-                  viewBox="-50 -50 100 100"
-                  width="100px"
+                  viewBox="-25 -25 50 50"
+                  width="50px"
                 >
                   <svg
                     className="icon-loading"
                     fill="#0b0c0c"
-                    height="100px"
+                    height="50px"
                     preserveAspectRatio="xMidYMid meet"
                     style={
                       Object {
@@ -216,8 +216,8 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       }
                     }
                     version="1.1"
-                    viewBox="-50 -50 100 100"
-                    width="100px"
+                    viewBox="-25 -25 50 50"
+                    width="50px"
                     x="0px"
                     xmlns="http://www.w3.org/2000/svg"
                     y="0px"
