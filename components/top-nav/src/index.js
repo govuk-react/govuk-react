@@ -42,6 +42,7 @@ const TopNav = ({
           {serviceTitle}
           {children &&
           <React.Fragment>
+            {/* TODO fix the position and design of this button */}
             <MenuButton />
             <UnorderedList serviceTitle={serviceTitle}>
               {/* TODO #205 use context api and/or render props here for `active` */}
