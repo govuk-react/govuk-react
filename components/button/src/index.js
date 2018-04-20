@@ -9,7 +9,7 @@ import glamorous from 'glamorous';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { withWhiteSpace } from '@govuk-react/hoc';
-import { NTA_LIGHT } from '@govuk-react/constants';
+import { NTA_LIGHT, SPACING } from '@govuk-react/constants';
 import {
   BUTTON_COLOUR,
   BUTTON_COLOUR_DARKEN_15,
@@ -25,7 +25,9 @@ const GButton = glamorous.button(
     boxShadow: `0 2px 0 ${BUTTON_COLOUR_DARKEN_15}`,
     color: WHITE,
     cursor: 'pointer',
-    display: 'inline-block',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
     fontFamily: NTA_LIGHT,
     fontWeight: 400,
     fontSize: '1em',
@@ -43,32 +45,43 @@ const GButton = glamorous.button(
     ':focus': {
       outline: `3px solid ${YELLOW}`,
     },
+    ' svg': {
+      maxWidth: '15px',
+      marginLeft: SPACING.SCALE_4,
+    },
   },
-  ({ start }) => ({
+  ({ start, icon }) => ({
     fontWeight: start ? '700' : undefined,
     fontSize: start ? '24px' : undefined,
     lineHeight: start ? '1.25' : undefined,
-    padding: start ? '0.36842em 0.84211em 0.21053em' : undefined,
-  }),
-  ({ iconUrl }) => ({
-    backgroundImage: iconUrl ? `url( ${iconUrl})` : undefined,
-    backgroundRepeat: iconUrl ? 'no-repeat' : undefined,
-    backgroundPosition: iconUrl ? '100% 50%' : undefined,
-    paddingRight: iconUrl ? '2.15789em' : undefined,
+    padding: start ? '.36842em .84211em .21053em' : undefined,
+    paddingRight: icon ? '.54211em' : '.84211em',
   }),
 );
 
 // TODO: start and iconUrl props
-const Button = ({ className, ...props }) => <GButton className={className} {...props} />;
+const Button = ({
+  children,
+  icon,
+  className,
+  ...props
+}) => (
+  <GButton icon={icon} className={className} {...props}>
+    {children}
+    {icon}
+  </GButton>
+);
 
 Button.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
+  icon: PropTypes.node,
 };
 
 Button.defaultProps = {
   className: undefined,
   children: 'Button',
+  icon: undefined,
 };
 
 export default withWhiteSpace({ marginBottom: 4 })(Button);

@@ -20,7 +20,7 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
     height="100px"
     preserveAspectRatio="xMidYMid meet"
     title="Loading"
-    viewBox="-50 -50 100 100"
+    viewBox="-25 -25 50 50"
     width="100px"
   >
     <svg
@@ -34,7 +34,7 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
         }
       }
       version="1.1"
-      viewBox="-50 -50 100 100"
+      viewBox="-25 -25 50 50"
       width="100px"
       x="0px"
       xmlns="http://www.w3.org/2000/svg"

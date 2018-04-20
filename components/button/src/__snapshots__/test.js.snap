@@ -13,7 +13,13 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
   box-shadow: 0 2px 0 #003618;
   color: #ffffff;
   cursor: pointer;
-  display: inline-block;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-family: "nta", Arial, sans-serif;
   font-weight: 400;
   font-size: 1em;
@@ -24,12 +30,23 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
   text-decoration: none;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
+  padding-right: .84211em;
   margin-bottom: 15px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
 }
 
 .glamor-0:focus,
 [data-glamor-0]:focus {
   outline: 3px solid #ffbf47;
+}
+
+.glamor-0 svg,
+[data-glamor-0] svg {
+  max-width: 15px;
+  margin-left: 20px;
 }
 
 @media only screen and (min-width: 641px) {
@@ -46,19 +63,21 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<glamorous(Button)>
-  <Button
-    className="glamor-1"
-  >
-    <glamorous(button)
+<_default>
+  <glamorous(Button)>
+    <Button
       className="glamor-1"
     >
-      <button
-        className="glamor-0"
+      <glamorous(button)
+        className="glamor-1"
       >
-        example
-      </button>
-    </glamorous(button)>
-  </Button>
-</glamorous(Button)>
+        <button
+          className="glamor-0"
+        >
+          Save and continue
+        </button>
+      </glamorous(button)>
+    </Button>
+  </glamorous(Button)>
+</_default>
 `;

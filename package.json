@@ -31,7 +31,7 @@
     "collectCoverage": true,
     "collectCoverageFrom": [
       "<rootDir>/{components,packages}/*/src/**.js",
-      "!<rootDir>/{components,packages}/*/src/**/{stories,example}.js",
+      "!<rootDir>/{components,packages}/*/src/**/{stories,example,fixtures}.js",
       "!<rootDir>/packages/storybook/**",
       "!<rootDir>/packages/api-docs/**",
       "!<rootDir>/packages/storybook-components/**"
