@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TopNav matches snapshot: enzyme.mount 1`] = `
-.glamor-8,
-[data-glamor-8] {
+.glamor-9,
+[data-glamor-9] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -19,8 +19,8 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   -webkit-justify-content: center;
 }
 
-.glamor-7,
-[data-glamor-7] {
+.glamor-8,
+[data-glamor-8] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -94,25 +94,26 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   margin-right: 10px;
 }
 
-.glamor-6,
-[data-glamor-6] {
+.glamor-7,
+[data-glamor-7] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   margin-top: 10px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
 }
 
-.glamor-6 a,
-[data-glamor-6] a {
+.glamor-7 a,
+[data-glamor-7] a {
+  color: #ffffff;
   border: 0;
   text-decoration: none;
   border-bottom: 1px solid transparent;
@@ -120,82 +121,24 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   padding-bottom: 0;
 }
 
-.glamor-6 a:hover,
-[data-glamor-6] a:hover {
+.glamor-7 a:hover,
+[data-glamor-7] a:hover {
   border-bottom: 1px solid #ffffff;
-}
-
-.glamor-2,
-[data-glamor-2] {
-  background-color: #00823b;
-  border: none;
-  box-shadow: 0 2px 0 #003618;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "nta", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 1em;
-  line-height: 1.25;
-  outline-offset: -1px;
-  outline: 1px solid transparent;
-  padding: .526315em .789473em .263157em;
-  text-decoration: none;
-  -webkit-appearance: none;
-  -webkit-font-smoothing: antialiased;
-}
-
-.glamor-2:focus,
-[data-glamor-2]:focus {
-  outline: 3px solid #ffbf47;
 }
 
 .glamor-3,
 [data-glamor-3] {
-  flex: 1 0 50%;
-  width: 100%;
-  list-style-type: none;
-  margin: 0;
-  padding: 3px 0;
-  border-bottom: 1px solid #2e3133;
-  -webkit-flex: 1 0 50%;
+  position: absolute;
+  top: -999em;
 }
 
-.glamor-3 a,
-[data-glamor-3] a {
-  color: #ffffff;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  font-weight: 700;
-}
-
-.glamor-3 a:hover,
-[data-glamor-3] a:hover {
-  border-bottom-color: #ffffff;
-}
-
-.glamor-9,
-[data-glamor-9] {
-  border-bottom: 10px solid #005ea5;
-  max-width: 990px;
-  margin: 0 auto;
-  width: calc(100% - 15px);
-}
-
-.glamor-5,
-[data-glamor-5] {
+.glamor-3:checked + ul,
+[data-glamor-3]:checked + ul {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  margin-top: 5px;
-  width: 100%;
-  -webkit-box-lines: multiple;
-  -webkit-flex-wrap: wrap;
 }
 
 .glamor-4,
@@ -211,7 +154,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
 
 .glamor-4 a,
 [data-glamor-4] a {
-  color: #2b8cc4;
+  color: #ffffff;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   font-weight: 700;
@@ -219,20 +162,64 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
 
 .glamor-4 a:hover,
 [data-glamor-4] a:hover {
+  border-bottom-color: #ffffff;
+}
+
+.glamor-10,
+[data-glamor-10] {
+  border-bottom: 10px solid #005ea5;
+  max-width: 990px;
+  margin: 0 auto;
+  width: calc(100% - 15px);
+}
+
+.glamor-6,
+[data-glamor-6] {
+  display: none;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+  width: 100%;
+  -webkit-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+}
+
+.glamor-5,
+[data-glamor-5] {
+  flex: 1 0 50%;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+  border-bottom: 1px solid #2e3133;
+  -webkit-flex: 1 0 50%;
+}
+
+.glamor-5 a,
+[data-glamor-5] a {
+  color: #2b8cc4;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  font-weight: 700;
+}
+
+.glamor-5 a:hover,
+[data-glamor-5] a:hover {
   border-bottom-color: #2b8cc4;
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-8,
-  [data-glamor-8] {
+  .glamor-9,
+  [data-glamor-9] {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-7,
-  [data-glamor-7] {
+  .glamor-8,
+  [data-glamor-8] {
     padding: 10px 0;
     flex-direction: row;
     width: calc(100% - 60px);
@@ -252,15 +239,25 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-6,
-  [data-glamor-6] {
+  .glamor-7,
+  [data-glamor-7] {
+    align-items: flex-start;
     width: 66.66%;
     padding-left: 15px;
     margin-top: 0;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
   }
 
-  .glamor-6 button,
-  [data-glamor-6] button {
+  .glamor-7 button,
+  [data-glamor-7] button {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-2,
+  [data-glamor-2] {
     display: none;
   }
 }
@@ -268,6 +265,13 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
 @media only screen and (min-width: 641px) {
   .glamor-3,
   [data-glamor-3] {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-4,
+  [data-glamor-4] {
     border-bottom: 0;
     flex: none;
     width: auto;
@@ -277,23 +281,28 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-9,
-  [data-glamor-9] {
+  .glamor-10,
+  [data-glamor-10] {
     width: calc(100% - 60px);
   }
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-5,
-  [data-glamor-5] {
+  .glamor-6,
+  [data-glamor-6] {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
     padding-top: 30px;
     width: auto;
   }
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-4,
-  [data-glamor-4] {
+  .glamor-5,
+  [data-glamor-5] {
     border-bottom: 0;
     flex: none;
     width: auto;
@@ -313,11 +322,11 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
     color="#ffffff"
   >
     <div
-      className="glamor-8"
+      className="glamor-9"
     >
       <glamorous(div)>
         <div
-          className="glamor-7"
+          className="glamor-8"
         >
           <glamorous(div)>
             <div
@@ -332,30 +341,42 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
           </glamorous(div)>
           <glamorous(div)>
             <div
-              className="glamor-6"
+              className="glamor-7"
             >
-              <Button
-                mb={0}
-              >
-                <glamorous(button)
-                  mb={0}
+              <MenuButton>
+                <glamorous(label)
+                  htmlFor="dingus"
                 >
-                  <button
+                  <label
                     className="glamor-2"
+                    htmlFor="dingus"
                   >
-                    menu
-                  </button>
-                </glamorous(button)>
-              </Button>
+                    Menu 
+                    <span>
+                      ›
+                    </span>
+                  </label>
+                </glamorous(label)>
+                <glamorous(input)
+                  id="dingus"
+                  type="checkbox"
+                >
+                  <input
+                    className="glamor-3"
+                    id="dingus"
+                    type="checkbox"
+                  />
+                </glamorous(input)>
+              </MenuButton>
               <glamorous(ul)>
                 <ul
-                  className="glamor-5"
+                  className="glamor-6"
                 >
                   <glamorous(li)
                     key="0"
                   >
                     <li
-                      className="glamor-3"
+                      className="glamor-4"
                     >
                       <a
                         href="/section"
@@ -369,7 +390,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
                     key="1"
                   >
                     <li
-                      className="glamor-4"
+                      className="glamor-5"
                     >
                       <a
                         href="/section"
@@ -388,7 +409,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   </glamorous(div)>
   <glamorous(div)>
     <div
-      className="glamor-9"
+      className="glamor-10"
     />
   </glamorous(div)>
 </TopNav>
