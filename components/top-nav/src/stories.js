@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Search as SearchIcon} from '@govuk-react/icons';
+import { Search as SearchIcon } from '@govuk-react/icons';
 import SearchBox from '@govuk-react/search-box';
 import { asAnchor } from '@govuk-react/hoc';
 import Header from '@govuk-react/header';
