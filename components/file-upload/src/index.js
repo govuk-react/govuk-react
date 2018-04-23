@@ -40,7 +40,7 @@ const FileUpload = ({
   meta, children, hint, acceptedFormats, className,
 }) => (
   <Label className={className} error={meta.error}>
-    <LabelText error={meta.error}>{children}</LabelText>
+    <LabelText>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
     <GInput type="file" accept={acceptedFormats} error={meta.error} />
