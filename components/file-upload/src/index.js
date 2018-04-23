@@ -15,7 +15,7 @@ import {
   MEDIA_QUERIES,
 } from '@govuk-react/constants';
 
-const Input = glamorous.input({
+const GInput = glamorous.input({
   boxSizing: 'border-box',
   fontFamily: NTA_LIGHT,
   WebkitFontSmoothing: 'antialiased',
@@ -43,7 +43,7 @@ const FileUpload = ({
     <LabelText error={meta.error}>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
-    <Input type="file" accept={acceptedFormats} error={meta.error} />
+    <GInput type="file" accept={acceptedFormats} error={meta.error} />
   </Label>
 );
 
