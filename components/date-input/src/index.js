@@ -74,7 +74,7 @@ const ListParent = glamorous.div({
 
 const DateInput = ({ children, className, ...props }) => (
   <LabelWrapper className={className} errorText={props.errorText}>
-    <LabelText errorText={props.errorText}>{children}</LabelText>
+    <LabelText>{children}</LabelText>
     {props.hintText ? <HintText>{props.hintText}</HintText> : <span />}
     {props.errorText ? (
       <ErrorText errorText={props.errorText}>{props.errorText}</ErrorText>
