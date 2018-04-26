@@ -14,7 +14,6 @@ As such, the build process for development is slightly more involved than an `np
 
 ```sh
 yarn
-yarn bootstrap
 yarn build
 yarn start
 ```
