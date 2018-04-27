@@ -1,17 +1,23 @@
 # govuk-react
 
-A set of [govuk](https://github.com/alphagov/) components for [React](https://reactjs.org) using [glamorous](https://glamorous.rocks/).
+An implementation of the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital) in [React](https://reactjs.org) using [CSSinJS](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660) (currently [Glamorous](https://glamorous.rocks/)).
 
 [![Build Status](https://travis-ci.org/penx/govuk-react.svg?branch=master)](https://travis-ci.org/penx/govuk-react)
 [![codecov](https://codecov.io/gh/penx/govuk-react/branch/master/graph/badge.svg)](https://codecov.io/gh/penx/govuk-react)
 [![Greenkeeper badge](https://badges.greenkeeper.io/penx/govuk-react.svg)](https://greenkeeper.io/)
 
-CSS styling is derived from [GOV.UK/elements](https://github.com/alphagov/govuk_elements) and [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend) but modified to suit custom markup. Also flexbox is preferred over floats.
+The following projects (in priority order) are used as a guide for what components to implement and how they should look/behave. Where possible we are using the existing CSS as a guide, but often need to modify to suit custom markup. Also flexbox is preferred over floats.
+
+- [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital) ([source](https://github.com/alphagov/govuk-design-system))
+- [GOV.UK Design System Backlog](https://github.com/alphagov/govuk-design-system-backlog) (where there are open tickets in the backlog that reference patterns/components in existing govuk sites)
+- [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend)
+- [GOV.UK/elements](https://github.com/alphagov/govuk_elements)
+- Any other established govuk pattern
 
 ## Usage
 
 ```sh
-npm install govuk-react --save
+npm install govuk-react glamorous --save
 ```
 
 ```js
@@ -60,9 +66,9 @@ Use of these components assumes the following from the peer project:
 
 See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
 
-We have opted for Glamorous over styled-components or Emotion as we like the JS syntax and would rather not burden either the front end or the transpiler with a CSS parser.
+We have opted for [Glamorous](https://glamorous.rocks/) over styled-components as we like the JS syntax and would rather not burden either the front end or the transpiler with a CSS parser. However, there is [an open discussion](https://github.com/penx/govuk-react/issues/219) on whether to use styled-components or Emotion, so this is subject to change.
 
-We will see how take-up of Glamorous evolves in comparison to other projects. We are also paying attention to the [Interoperable Style Transfer Format (ISTF)](https://github.com/cssinjs/istf-spec), which would allow us to distribute CSS in JS stylesheets without a runtime.
+We are also expecting to use [Interoperable Style Transfer Format (ISTF)](https://github.com/cssinjs/istf-spec) once it is finalised and compatible with a CSSinJS library, which would allow us to distribute CSSinJS stylesheets without a runtime.
 
 ## Why not use GDS styles/classes directly
 
