@@ -66,7 +66,7 @@ Use of these components assumes the following from the peer project:
 
 See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
 
-We have opted for [Glamorous](https://glamorous.rocks/) over styled-components as we like the JS syntax and would rather not burden either the front end or the transpiler with a CSS parser. However, there is an open discussion on whether to use styled-components or Emotion, so it is subject to change.
+We have opted for [Glamorous](https://glamorous.rocks/) over styled-components as we like the JS syntax and would rather not burden either the front end or the transpiler with a CSS parser. However, there is [an open discussion](https://github.com/penx/govuk-react/issues/219) on whether to use styled-components or Emotion, so this is subject to change.
 
 We are also expecting to use [Interoperable Style Transfer Format (ISTF)](https://github.com/cssinjs/istf-spec) once it is finalised and compatible with a CSSinJS library, which would allow us to distribute CSSinJS stylesheets without a runtime.
 
