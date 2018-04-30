@@ -38,10 +38,12 @@ const Innerwrap = glamorous.div(({
     height: '100%',
     maxHeight: 'calc(50vh + 100px)',
     transition: `opacity ${timeIn}ms ease-in-out`,
+    willChange: 'opacity',
   },
   '& .overlay': {
     zIndex: 100,
     transition: `background-color ${timeIn}ms ease-in-out`,
+    willChange: 'background-color',
     backgroundColor: `rgba(
       ${hexRgb(backgroundColor)[0]},
       ${hexRgb(backgroundColor)[1]},
