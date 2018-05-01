@@ -1,6 +1,6 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/components/breadcrumb/_breadcrumb.scss
 import React from 'react';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 import { BLACK, GREY_1, YELLOW } from 'govuk-colours';
 import { withWhiteSpace } from '@govuk-react/hoc';
@@ -12,7 +12,7 @@ import {
   SPACING,
 } from '@govuk-react/constants';
 
-const BreadcrumbContainer = glamorous.div({
+const BreadcrumbContainer = styled('div')({
   fontFamily: NTA_LIGHT,
   fontSize: FONT_SIZE.SIZE_14,
   lineHeight: LINE_HEIGHT.SIZE_14,
@@ -24,14 +24,14 @@ const BreadcrumbContainer = glamorous.div({
   WebkitFontSmoothing: 'antialiased',
 });
 
-const BreadcrumbList = glamorous.ul({
+const BreadcrumbList = styled('ul')({
   margin: 0,
   padding: 0,
   listStyleType: 'none',
   display: 'block',
 });
 
-const BreadcrumbListItem = glamorous.li({
+const BreadcrumbListItem = styled('li')({
   position: 'relative',
   display: 'inline-block',
   whiteSpace: 'no-wrap',
