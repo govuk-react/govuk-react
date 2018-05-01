@@ -62,3 +62,18 @@ storiesOf('TopNav', module).add('everything', () => (
     <AnchorTag href="https://example.com?q=dogcat" target="new">Navigation item #2</AnchorTag>
   </TopNav>
 ));
+
+
+storiesOf('TopNav', module).add('everything with 9 nav items', () => (
+  <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
+    <AnchorTag href="https://example.com?q=catdog" target="new">Navigation item</AnchorTag>
+    <AnchorTag href="https://example.com?q=dogcat" target="new">Navigation item</AnchorTag>
+    <AnchorTag href="https://example.com?q=dogcat" target="new">Navigation item</AnchorTag>
+    <AnchorTag href="https://example.com?q=dogcat" target="new">Navigation item</AnchorTag>
+    <AnchorTag href="https://example.com?q=dogcat" target="new">Navigation item</AnchorTag>
+    <AnchorTag href="https://example.com?q=dogcat" target="new">Navigation item</AnchorTag>
+    <AnchorTag href="https://example.com?q=dogcat" target="new">Navigation item</AnchorTag>
+    <AnchorTag href="https://example.com?q=dogcat" target="new">Navigation item</AnchorTag>
+    <AnchorTag href="https://example.com?q=dogcat" target="new">Navigation item</AnchorTag>
+  </TopNav>
+));
