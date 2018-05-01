@@ -2,16 +2,15 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Search as SearchIcon } from '@govuk-react/icons';
 import SearchBox from '@govuk-react/search-box';
-import { asAnchor } from '@govuk-react/hoc';
 import Header from '@govuk-react/header';
 
-import TopNav from '.';
+import TopNav, { asAnchor } from '.';
 
 const AnchorTag = asAnchor('a');
 const link = 'https://example.com?=1';
 
 const Company = (
-  <AnchorTag href={link}>
+  <AnchorTag href={link} target="new">
     <React.Fragment>
       <SearchIcon width="30px" />
       <Header level={1} size="MEDIUM">GOV.UK</Header>
@@ -20,7 +19,7 @@ const Company = (
 );
 
 const ServiceTitle = (
-  <AnchorTag color="#fff" href={link}>
+  <AnchorTag color="#fff" href={link} target="new">
     <React.Fragment>
       <Header level={3}>Service Title</Header>
     </React.Fragment>
@@ -59,7 +58,7 @@ storiesOf('TopNav', module).add('everything but serviceTitle', () => (
 
 storiesOf('TopNav', module).add('everything', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
-    <AnchorTag href="https://example.com?q=catdog">Navigation item #1</AnchorTag>
-    <AnchorTag href="https://example.com?q=dogcat">Navigation item #2</AnchorTag>
+    <AnchorTag href="https://example.com?q=catdog" target="new">Navigation item #1</AnchorTag>
+    <AnchorTag href="https://example.com?q=dogcat" target="new">Navigation item #2</AnchorTag>
   </TopNav>
 ));

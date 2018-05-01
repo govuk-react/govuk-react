@@ -49,11 +49,11 @@ const TopNav = ({
               {children.length && children.map ? (
                 children.map((child, i) => (
                   child && (child.length || child.props)
-                    ? <ListItem active={active === i ? 'active' : undefined} key={child.key || i}>{child}</ListItem>
+                    ? <ListItem key={child.key || i}>{child}</ListItem>
                     : null
                 ))
               ) : (
-                <ListItem active={active}>{children}</ListItem>
+                <ListItem>{children}</ListItem>
               )}
             </UnorderedList>
           </React.Fragment>
@@ -86,3 +86,5 @@ TopNav.propTypes = {
 };
 
 export default TopNav;
+
+export asAnchor from './asAnchor';
