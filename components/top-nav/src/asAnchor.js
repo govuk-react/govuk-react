@@ -11,13 +11,6 @@ const asAnchor = (AnchorType) => {
   Anchor.propTypes = {
     children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
       .isRequired,
-    onClick: PropTypes.func,
-    disabled: PropTypes.bool,
-  };
-
-  Anchor.defaultProps = {
-    onClick: undefined,
-    disabled: undefined,
   };
 
   const StyledHoc = glamorous(Anchor)({

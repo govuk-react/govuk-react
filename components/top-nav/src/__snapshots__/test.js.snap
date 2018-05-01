@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TopNav matches snapshot: enzyme.mount 1`] = `
-.glamor-9,
-[data-glamor-9] {
+.glamor-13,
+[data-glamor-13] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -19,8 +19,8 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   -webkit-justify-content: center;
 }
 
-.glamor-8,
-[data-glamor-8] {
+.glamor-12,
+[data-glamor-12] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -94,8 +94,8 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   margin-right: 10px;
 }
 
-.glamor-7,
-[data-glamor-7] {
+.glamor-11,
+[data-glamor-11] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -111,8 +111,8 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   -webkit-align-items: flex-end;
 }
 
-.glamor-7 a,
-[data-glamor-7] a {
+.glamor-11 a,
+[data-glamor-11] a {
   color: #ffffff;
   border: 0;
   text-decoration: none;
@@ -121,8 +121,8 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   padding-bottom: 0;
 }
 
-.glamor-7 a:hover,
-[data-glamor-7] a:hover {
+.glamor-11 a:hover,
+[data-glamor-11] a:hover {
   border-bottom: 1px solid #ffffff;
 }
 
@@ -141,8 +141,8 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   display: flex;
 }
 
-.glamor-4,
-[data-glamor-4] {
+.glamor-6,
+[data-glamor-6] {
   flex: 1 0 50%;
   width: 100%;
   list-style-type: none;
@@ -152,16 +152,16 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   -webkit-flex: 1 0 50%;
 }
 
-.glamor-10,
-[data-glamor-10] {
+.glamor-14,
+[data-glamor-14] {
   border-bottom: 10px solid #005ea5;
   max-width: 990px;
   margin: 0 auto;
   width: calc(100% - 15px);
 }
 
-.glamor-6,
-[data-glamor-6] {
+.glamor-10,
+[data-glamor-10] {
   display: none;
   flex-wrap: wrap;
   margin: 0;
@@ -172,17 +172,42 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   -webkit-flex-wrap: wrap;
 }
 
+.glamor-4,
+[data-glamor-4] {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  font-weight: 700;
+}
+
+.glamor-4:hover,
+[data-glamor-4]:hover {
+  border-bottom-color: #ffffff;
+}
+
+.glamor-4:focus,
+[data-glamor-4]:focus {
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
+}
+
+.glamor-4:visited,
+[data-glamor-4]:visited {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
 @media only screen and (min-width: 641px) {
-  .glamor-9,
-  [data-glamor-9] {
+  .glamor-13,
+  [data-glamor-13] {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-8,
-  [data-glamor-8] {
+  .glamor-12,
+  [data-glamor-12] {
     padding: 10px 0;
     flex-direction: row;
     width: calc(100% - 60px);
@@ -202,8 +227,8 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-7,
-  [data-glamor-7] {
+  .glamor-11,
+  [data-glamor-11] {
     align-items: flex-start;
     width: 66.66%;
     padding-left: 15px;
@@ -212,8 +237,8 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
     -webkit-align-items: flex-start;
   }
 
-  .glamor-7 button,
-  [data-glamor-7] button {
+  .glamor-11 button,
+  [data-glamor-11] button {
     display: none;
   }
 }
@@ -233,8 +258,8 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-4,
-  [data-glamor-4] {
+  .glamor-6,
+  [data-glamor-6] {
     border-bottom: 0;
     flex: none;
     width: auto;
@@ -244,15 +269,15 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-10,
-  [data-glamor-10] {
+  .glamor-14,
+  [data-glamor-14] {
     width: calc(100% - 60px);
   }
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-6,
-  [data-glamor-6] {
+  .glamor-10,
+  [data-glamor-10] {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -274,11 +299,11 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
     color="#ffffff"
   >
     <div
-      className="glamor-9"
+      className="glamor-13"
     >
       <glamorous(div)>
         <div
-          className="glamor-8"
+          className="glamor-12"
         >
           <glamorous(div)>
             <div
@@ -293,7 +318,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
           </glamorous(div)>
           <glamorous(div)>
             <div
-              className="glamor-7"
+              className="glamor-11"
             >
               <MenuButton>
                 <glamorous(label)
@@ -322,32 +347,52 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
               </MenuButton>
               <glamorous(ul)>
                 <ul
-                  className="glamor-6"
+                  className="glamor-10"
                 >
                   <glamorous(li)
                     key="0"
                   >
                     <li
-                      className="glamor-4"
+                      className="glamor-6"
                     >
-                      <a
+                      <glamorous(Anchor)
                         href="/section"
                       >
-                        Section 1
-                      </a>
+                        <Anchor
+                          className="glamor-4"
+                          href="/section"
+                        >
+                          <a
+                            className="glamor-4"
+                            href="/section"
+                          >
+                            Section 1
+                          </a>
+                        </Anchor>
+                      </glamorous(Anchor)>
                     </li>
                   </glamorous(li)>
                   <glamorous(li)
                     key="1"
                   >
                     <li
-                      className="glamor-4"
+                      className="glamor-6"
                     >
-                      <a
+                      <glamorous(Anchor)
                         href="/section"
                       >
-                        Section 1
-                      </a>
+                        <Anchor
+                          className="glamor-4"
+                          href="/section"
+                        >
+                          <a
+                            className="glamor-4"
+                            href="/section"
+                          >
+                            Section 1
+                          </a>
+                        </Anchor>
+                      </glamorous(Anchor)>
                     </li>
                   </glamorous(li)>
                 </ul>
@@ -360,7 +405,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   </glamorous(div)>
   <glamorous(div)>
     <div
-      className="glamor-10"
+      className="glamor-14"
     />
   </glamorous(div)>
 </TopNav>

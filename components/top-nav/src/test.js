@@ -1,20 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import TopNav from './';
+import TopNav, { asAnchor } from './';
 
 const emptyNode = [];
 const nullNode = null;
+const Anchor = asAnchor('a');
 const wrapper = <TopNav company="example" search="example" serviceTitle="example">example</TopNav>;
 const wrapperMultiple = (
   <TopNav active={1}>
-    <a href="/section">Section 1</a>
-    <a href="/section">Section 1</a>
+    <Anchor href="/section">Section 1</Anchor>
+    <Anchor href="/section">Section 1</Anchor>
   </TopNav>
 );
 const wrapperEmptyNode = (
   <TopNav>
-    <a href="/section">Section 1</a>
+    <Anchor href="/section">Section 1</Anchor>
     {emptyNode}
     {nullNode}
     example
