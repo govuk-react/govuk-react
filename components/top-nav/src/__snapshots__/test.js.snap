@@ -152,19 +152,6 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   -webkit-flex: 1 0 50%;
 }
 
-.glamor-4 a,
-[data-glamor-4] a {
-  color: #ffffff;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  font-weight: 700;
-}
-
-.glamor-4 a:hover,
-[data-glamor-4] a:hover {
-  border-bottom-color: #ffffff;
-}
-
 .glamor-10,
 [data-glamor-10] {
   border-bottom: 10px solid #005ea5;
@@ -183,30 +170,6 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   width: 100%;
   -webkit-box-lines: multiple;
   -webkit-flex-wrap: wrap;
-}
-
-.glamor-5,
-[data-glamor-5] {
-  flex: 1 0 50%;
-  width: 100%;
-  list-style-type: none;
-  margin: 0;
-  padding: 3px 0;
-  border-bottom: 1px solid #2e3133;
-  -webkit-flex: 1 0 50%;
-}
-
-.glamor-5 a,
-[data-glamor-5] a {
-  color: #2b8cc4;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  font-weight: 700;
-}
-
-.glamor-5 a:hover,
-[data-glamor-5] a:hover {
-  border-bottom-color: #2b8cc4;
 }
 
 @media only screen and (min-width: 641px) {
@@ -300,17 +263,6 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   }
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-5,
-  [data-glamor-5] {
-    border-bottom: 0;
-    flex: none;
-    width: auto;
-    padding-right: 15px;
-    -webkit-flex: none;
-  }
-}
-
 <TopNav
   active={1}
   bgColor="#0b0c0c"
@@ -386,11 +338,10 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
                     </li>
                   </glamorous(li)>
                   <glamorous(li)
-                    active="active"
                     key="1"
                   >
                     <li
-                      className="glamor-5"
+                      className="glamor-4"
                     >
                       <a
                         href="/section"
