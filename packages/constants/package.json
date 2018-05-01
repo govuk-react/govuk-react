@@ -1,13 +1,13 @@
 {
   "name": "@govuk-react/constants",
-  "version": "0.1.26",
+  "version": "0.1.28",
   "dependencies": {
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
     "glamorous": ">=4",
     "prop-types": ">=15",
-    "react": ">=15"
+    "react": ">=16.2.0"
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es",

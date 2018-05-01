@@ -1,15 +1,15 @@
 {
   "name": "@govuk-react/header",
-  "version": "0.1.27",
+  "version": "0.1.28",
   "dependencies": {
-    "@govuk-react/constants": "^0.1.26",
-    "@govuk-react/hoc": "^0.1.27",
+    "@govuk-react/constants": "^0.1.28",
+    "@govuk-react/hoc": "^0.1.28",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
     "glamorous": ">=4",
     "prop-types": ">=15",
-    "react": ">=15"
+    "react": ">=16.2.0"
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es",
