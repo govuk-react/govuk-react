@@ -1,5 +1,5 @@
 import React from 'react';
-import { text, boolean } from '@storybook/addon-knobs/react';
+import { boolean } from '@storybook/addon-knobs/react';
 import { ButtonArrow } from '@govuk-react/icons';
 import Button from '.';
 
