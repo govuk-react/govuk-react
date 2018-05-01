@@ -1,20 +1,27 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Search as SearchIcon } from '@govuk-react/icons';
+import CrownIcon from '@govuk-react/icon-crown';
 import SearchBox from '@govuk-react/search-box';
 import Header from '@govuk-react/header';
+import glamorous from 'glamorous';
 
 import TopNav, { asAnchor } from '.';
 
 const AnchorTag = asAnchor('a');
 const link = 'https://example.com?=1';
+// TODO: vertical alignment here needs some work, perhaps should be its own component,
+// icon should be lined up with font baseline, e.g. vertical-align: baseline
+const GovUkLogo = glamorous('div')({
+  display: 'flex',
+  alignItems: 'center',
+});
 
 const Company = (
   <AnchorTag href={link} target="new">
-    <React.Fragment>
-      <SearchIcon width="30px" />
+    <GovUkLogo>
+      <CrownIcon width="36px" />
       <Header level={1} size="MEDIUM">GOV.UK</Header>
-    </React.Fragment>
+    </GovUkLogo>
   </AnchorTag>
 );
 

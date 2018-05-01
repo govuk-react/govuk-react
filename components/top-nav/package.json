@@ -24,5 +24,8 @@
     "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps"
   },
   "main": "lib/index.js",
-  "module": "es/index.js"
+  "module": "es/index.js",
+  "devDependencies": {
+    "@govuk-react/icon-crown": "0.0.4"
+  }
 }

@@ -838,6 +838,10 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
+"@govuk-react/icon-crown@0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@govuk-react/icon-crown/-/icon-crown-0.0.4.tgz#1160d4701558fff6e0f621596e2b129262381174"
+
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
