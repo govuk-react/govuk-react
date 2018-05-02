@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { withWhiteSpace } from '@govuk-react/hoc';
 import { YELLOW, BLACK } from 'govuk-colours';
 import {
@@ -12,13 +12,13 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-const CheckboxWrapper = glamorous.label({
+const StyledCheckbox = styled('label')({
   display: 'block',
   position: 'relative',
   padding: '0 0 0 38px',
 });
 
-const Input = glamorous.input({
+const StyledInput = styled('input')({
   position: 'absolute',
   cursor: 'pointer',
   left: 0,
@@ -37,15 +37,15 @@ const Input = glamorous.input({
     cursor: 'auto',
     pointerEvents: 'none',
   },
-  ':checked + span::after': {
+  ':checked + span:after': {
     opacity: 1,
   },
-  ':focus + span::before': {
+  ':focus + span:before': {
     boxShadow: `0 0 0 4px ${YELLOW}`,
   },
 });
 
-const Label = glamorous.span({
+const StyledLabel = styled('span')({
   fontFamily: NTA_LIGHT,
   fontWeight: 400,
   textTransform: 'none',
@@ -60,7 +60,7 @@ const Label = glamorous.span({
   display: 'block',
   color: `${BLACK}`,
   '::before': {
-    content: ' ',
+    content: '\'\'',
     display: 'block',
     border: `2px solid ${BLACK}`,
     background: 'transparent',
@@ -71,7 +71,7 @@ const Label = glamorous.span({
     left: 0,
   },
   '::after': {
-    content: ' ',
+    content: '\'\'',
     border: 'solid',
     borderWidth: '0 0 5px 5px',
     background: 'transparent',
@@ -93,10 +93,10 @@ const Checkbox = ({
   inline,
   ...input
 }) => (
-  <CheckboxWrapper className={className} inline={inline}>
-    <Input type="checkbox" {...input} />
-    <Label>{children}</Label>
-  </CheckboxWrapper>
+  <StyledCheckbox className={className} inline={inline}>
+    <StyledInput type="checkbox" {...input} />
+    <StyledLabel>{children}</StyledLabel>
+  </StyledCheckbox>
 );
 
 Checkbox.defaultProps = {

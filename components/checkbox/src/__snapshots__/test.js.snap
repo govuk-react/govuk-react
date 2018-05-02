@@ -1,21 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
-.glamor-3,
-[data-glamor-3] {
-  margin-bottom: 10px;
-}
-
-.glamor-2,
-[data-glamor-2] {
+.emotion-3 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
-  margin-bottom: 10px;
 }
 
-.glamor-0,
-[data-glamor-0] {
+.emotion-0 {
   position: absolute;
   cursor: pointer;
   left: 0;
@@ -28,19 +20,26 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   opacity: 0;
 }
 
-.glamor-0:checked + span::after,
-[data-glamor-0]:checked + span::after {
+.emotion-0 [disabled] {
+  cursor: auto;
+}
+
+.emotion-0 [disabled] + span {
+  opacity: .4;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.emotion-0:checked + span:after {
   opacity: 1;
 }
 
-.glamor-0:focus + span::before,
-[data-glamor-0]:focus + span::before {
+.emotion-0:focus + span:before {
   box-shadow: 0 0 0 4px #ffbf47;
 }
 
-.glamor-1,
-[data-glamor-1] {
-  font-family: "nta", Arial, sans-serif;
+.emotion-1 {
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
@@ -51,9 +50,15 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   color: #0b0c0c;
 }
 
-.glamor-1::before,
-[data-glamor-1]::before {
-  content: " ";
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+.emotion-1::before {
+  content: '';
   display: block;
   border: 2px solid #0b0c0c;
   background: transparent;
@@ -64,9 +69,8 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   left: 0;
 }
 
-.glamor-1::after,
-[data-glamor-1]::after {
-  content: " ";
+.emotion-1::after {
+  content: '';
   border: solid;
   border-width: 0 0 5px 5px;
   background: transparent;
@@ -76,17 +80,16 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   position: absolute;
   top: 10px;
   left: 8px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   zoom: 1;
   opacity: 0;
-  -webkit-transform: rotate(-45deg);
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    margin-bottom: 10px;
-  }
+.glamor-2,
+[data-glamor-2] {
+  margin-bottom: 10px;
 }
 
 @media only screen and (min-width: 641px) {
@@ -96,41 +99,33 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-}
-
 <glamorous(Checkbox)>
   <Checkbox
-    className="glamor-3"
+    className="glamor-2"
   >
-    <glamorous(label)
-      className="glamor-3"
+    <Styled(label)
+      className="glamor-2"
     >
       <label
-        className="glamor-2"
+        className="glamor-2 glamor-3"
       >
-        <glamorous(input)
+        <Styled(input)
           type="checkbox"
         >
           <input
             className="glamor-0"
             type="checkbox"
           />
-        </glamorous(input)>
-        <glamorous(span)>
+        </Styled(input)>
+        <Styled(span)>
           <span
             className="glamor-1"
           >
             example
           </span>
-        </glamorous(span)>
+        </Styled(span)>
       </label>
-    </glamorous(label)>
+    </Styled(label)>
   </Checkbox>
 </glamorous(Checkbox)>
 `;

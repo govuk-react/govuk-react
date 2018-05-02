@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
+import { createSerializer } from 'jest-emotion';
+import * as emotion from 'emotion';
 
 import Checkbox from './';
+
+expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('Checkbox', () => {
   const example = 'example';
