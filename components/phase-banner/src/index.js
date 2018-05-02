@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { BLUE } from 'govuk-colours';
 import {
   FONT_SIZE,
@@ -14,7 +14,7 @@ import { withWhiteSpace } from '@govuk-react/hoc';
 
 import PhaseBadge from '@govuk-react/phase-badge';
 
-const PhaseBannerInner = glamorous.div({
+const StyledBanner = styled('div')({
   borderBottom: '1px solid #bfc1c3',
   boxSizing: 'border-box',
   paddingTop: '10px',
@@ -34,10 +34,10 @@ const PhaseBannerInner = glamorous.div({
 });
 
 const PhaseBanner = ({ level, children, className }) => (
-  <PhaseBannerInner className={className}>
+  <StyledBanner className={className}>
     <PhaseBadge>{level}</PhaseBadge>
     {children}
-  </PhaseBannerInner>
+  </StyledBanner>
 );
 
 PhaseBanner.defaultProps = {

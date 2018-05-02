@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
+import { createSerializer } from 'jest-emotion';
+import * as emotion from 'emotion';
+
 import PhaseBanner from './';
+
+expect.addSnapshotSerializer(createSerializer(emotion));
 
 const example = 'example';
 const wrapper = <PhaseBanner level="beta">{example}</PhaseBanner>;

@@ -1,28 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
-  margin-bottom: 0;
-}
-
-.glamor-3,
-[data-glamor-3] {
+.emotion-4 {
   border-bottom: 1px solid #bfc1c3;
   box-sizing: border-box;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 14px;
   line-height: 1.1428571429;
-  margin-bottom: 0;
 }
 
-.glamor-3> a,
-[data-glamor-3]> a {
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.emotion-4 > a {
   color: #005ea5;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
 }
 
 .glamor-0,
@@ -52,15 +56,6 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    font-size: 16px;
-    line-height: 1.25;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
     font-size: 16px;
@@ -77,11 +72,11 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
     className="glamor-1"
     level="beta"
   >
-    <glamorous(div)
+    <Styled(div)
       className="glamor-1"
     >
       <div
-        className="glamor-3"
+        className="glamor-1 glamor-4"
       >
         <glamorous(PhaseBadge)>
           <PhaseBadge
@@ -100,7 +95,7 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
         </glamorous(PhaseBadge)>
         example
       </div>
-    </glamorous(div)>
+    </Styled(div)>
   </PhaseBanner>
 </glamorous(PhaseBanner)>
 `;
