@@ -3,10 +3,10 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { MEDIA_QUERIES, SITE_WIDTH, SPACING } from '@govuk-react/constants';
 
-const GridRowInner = glamorous.div({
+const StyledRow = styled('div')({
   width: '100%',
   clear: 'left',
   margin: `0 0 ${SPACING.SCALE_3}`,
@@ -17,7 +17,7 @@ const GridRowInner = glamorous.div({
   },
 });
 
-const GridRow = ({ children }) => <GridRowInner>{children}</GridRowInner>;
+const GridRow = ({ children }) => <StyledRow>{children}</StyledRow>;
 
 GridRow.propTypes = {
   children: PropTypes.node.isRequired,
