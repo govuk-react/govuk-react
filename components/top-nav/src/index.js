@@ -88,3 +88,5 @@ TopNav.propTypes = {
 export default TopNav;
 
 export asAnchor from './asAnchor';
+
+export IconTitle from './atoms/icon-title';

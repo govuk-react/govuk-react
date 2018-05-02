@@ -26,6 +26,6 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "devDependencies": {
-    "@govuk-react/icon-crown": "0.0.4"
+    "@govuk-react/icon-crown": "0.0.5"
   }
 }

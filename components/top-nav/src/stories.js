@@ -1,27 +1,24 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import CrownIcon from '@govuk-react/icon-crown';
+import { Search as SearchIcon } from '@govuk-react/icons';
 import SearchBox from '@govuk-react/search-box';
 import Header from '@govuk-react/header';
-import glamorous from 'glamorous';
 
-import TopNav, { asAnchor } from '.';
+import TopNav, { asAnchor, IconTitle } from '.';
 
 const AnchorTag = asAnchor('a');
 const link = 'https://example.com?=1';
 // TODO: vertical alignment here needs some work, perhaps should be its own component,
 // icon should be lined up with font baseline, e.g. vertical-align: baseline
-const GovUkLogo = glamorous('div')({
-  display: 'flex',
-  alignItems: 'center',
-});
 
 const Company = (
   <AnchorTag href={link} target="new">
-    <GovUkLogo>
-      <CrownIcon width="36px" />
-      <Header level={1} size="MEDIUM">GOV.UK</Header>
-    </GovUkLogo>
+    <IconTitle
+      icon={<CrownIcon width="36" height="32" />}
+    >
+      GOV.UK
+    </IconTitle>
   </AnchorTag>
 );
 
@@ -40,6 +37,19 @@ const Search = (
 storiesOf('TopNav', module).add('default', () => (
   <TopNav company={Company} />
 ));
+
+storiesOf('TopNav', module).add('custom logo', () => (
+  <TopNav company={
+    <AnchorTag href={link} target="new">
+      <IconTitle
+        icon={<SearchIcon width="32px" />}
+      >
+        Custom Title
+      </IconTitle>
+    </AnchorTag>}
+  />
+));
+
 
 storiesOf('TopNav', module).add('service title', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} />
