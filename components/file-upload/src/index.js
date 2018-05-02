@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import Label from '@govuk-react/label';
 import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
@@ -15,7 +15,7 @@ import {
   MEDIA_QUERIES,
 } from '@govuk-react/constants';
 
-const Input = glamorous.input({
+const StyledInput = styled('input')({
   boxSizing: 'border-box',
   fontFamily: NTA_LIGHT,
   WebkitFontSmoothing: 'antialiased',
@@ -43,7 +43,7 @@ const FileUpload = ({
     <LabelText error={meta.error}>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
-    <Input type="file" accept={acceptedFormats} error={meta.error} />
+    <StyledInput type="file" accept={acceptedFormats} error={meta.error} />
   </Label>
 );
 
