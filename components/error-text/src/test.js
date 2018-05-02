@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import ErrorText from './';
+import { createSerializer } from 'jest-emotion';
+import * as emotion from 'emotion';
+
+expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('ErrorText', () => {
   const example = 'example';
