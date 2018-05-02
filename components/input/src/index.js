@@ -1,5 +1,5 @@
 // https://github.com/alphagov/govuk-frontend/tree/master/src/components/
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -12,7 +12,7 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-const GInput = glamorous.input(
+const StyledInput = styled('input')(
   {
     boxSizing: 'border-box',
     fontFamily: NTA_LIGHT,
@@ -43,7 +43,7 @@ const GInput = glamorous.input(
   }),
 );
 
-const Input = props => <GInput {...props} />;
+const Input = props => <StyledInput {...props} />;
 
 Input.defaultProps = {
   value: undefined,

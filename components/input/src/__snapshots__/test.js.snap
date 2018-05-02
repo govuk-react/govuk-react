@@ -1,15 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input matches withColouredError snapshot: with coloured error mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
-  margin-bottom: 0;
-}
-
-.glamor-0,
-[data-glamor-0] {
+.emotion-1 {
   box-sizing: border-box;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -18,29 +12,35 @@ exports[`Input matches withColouredError snapshot: with coloured error mount 1`]
   line-height: 1.25;
   width: 100%;
   padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
   border: 4px solid #f47738;
-  margin-bottom: 0;
 }
 
-.glamor-0:focus,
-[data-glamor-0]:focus {
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 50%;
+  }
+}
+
+.emotion-1 [disabled] {
+  cursor: auto;
+}
+
+.emotion-1:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
-  }
+.glamor-0,
+[data-glamor-0] {
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    font-size: 19px;
-    line-height: 1.3;
-    width: 50%;
     margin-bottom: 0;
   }
 }
@@ -51,104 +51,30 @@ exports[`Input matches withColouredError snapshot: with coloured error mount 1`]
   type="text"
 >
   <Input
-    className="glamor-1"
+    className="glamor-0"
     error="example"
     errorColor="#f47738"
     type="text"
   >
-    <glamorous(input)
-      className="glamor-1"
+    <Styled(input)
+      className="glamor-0"
       error="example"
       errorColor="#f47738"
       type="text"
     >
       <input
-        className="glamor-0"
+        className="glamor-0 glamor-1"
         type="text"
       />
-    </glamorous(input)>
+    </Styled(input)>
   </Input>
 </glamorous(Input)>
 `;
 
 exports[`Input matches withError snapshot: with error mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
-  margin-bottom: 0;
-}
-
-.glamor-0,
-[data-glamor-0] {
+.emotion-1 {
   box-sizing: border-box;
-  font-family: "nta", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
-  width: 100%;
-  padding: 5px 4px 4px;
-  border: 4px solid #b10e1e;
-  margin-bottom: 0;
-}
-
-.glamor-0:focus,
-[data-glamor-0]:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    font-size: 19px;
-    line-height: 1.3;
-    width: 50%;
-    margin-bottom: 0;
-  }
-}
-
-<glamorous(Input)
-  error="example"
-  type="text"
->
-  <Input
-    className="glamor-1"
-    error="example"
-    type="text"
-  >
-    <glamorous(input)
-      className="glamor-1"
-      error="example"
-      type="text"
-    >
-      <input
-        className="glamor-0"
-        type="text"
-      />
-    </glamorous(input)>
-  </Input>
-</glamorous(Input)>
-`;
-
-exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
-  margin-bottom: 0;
-}
-
-.glamor-0,
-[data-glamor-0] {
-  box-sizing: border-box;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -158,28 +84,101 @@ exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
   width: 100%;
   padding: 5px 4px 4px;
   border: 2px solid #0b0c0c;
-  margin-bottom: 0;
+  border: 4px solid #b10e1e;
 }
 
-.glamor-0:focus,
-[data-glamor-0]:focus {
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 50%;
+  }
+}
+
+.emotion-1 [disabled] {
+  cursor: auto;
+}
+
+.emotion-1:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
-  }
+.glamor-0,
+[data-glamor-0] {
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
+    margin-bottom: 0;
+  }
+}
+
+<glamorous(Input)
+  error="example"
+  type="text"
+>
+  <Input
+    className="glamor-0"
+    error="example"
+    type="text"
+  >
+    <Styled(input)
+      className="glamor-0"
+      error="example"
+      type="text"
+    >
+      <input
+        className="glamor-0 glamor-1"
+        type="text"
+      />
+    </Styled(input)>
+  </Input>
+</glamorous(Input)>
+`;
+
+exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
+.emotion-1 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
     font-size: 19px;
     line-height: 1.3;
     width: 50%;
+  }
+}
+
+.emotion-1 [disabled] {
+  cursor: auto;
+}
+
+.emotion-1:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
     margin-bottom: 0;
   }
 }
@@ -188,18 +187,18 @@ exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
   type="text"
 >
   <Input
-    className="glamor-1"
+    className="glamor-0"
     type="text"
   >
-    <glamorous(input)
-      className="glamor-1"
+    <Styled(input)
+      className="glamor-0"
       type="text"
     >
       <input
-        className="glamor-0"
+        className="glamor-0 glamor-1"
         type="text"
       />
-    </glamorous(input)>
+    </Styled(input)>
   </Input>
 </glamorous(Input)>
 `;
