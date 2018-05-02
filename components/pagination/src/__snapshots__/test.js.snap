@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
+.emotion-1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 30px;
+  padding: 10px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 19px;
+    line-height: 1.3;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+.glamor-0,
+[data-glamor-0] {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 641px) {
+  .glamor-0,
+  [data-glamor-0] {
+    margin-bottom: 30px;
+  }
+}
+
+<glamorous(Pagination)>
+  <Pagination
+    className="glamor-0"
+  >
+    <Styled(ul)
+      className="glamor-0"
+    >
+      <ul
+        className="glamor-0 glamor-1"
+      >
+        Example
+      </ul>
+    </Styled(ul)>
+  </Pagination>
+</glamorous(Pagination)>
+`;
