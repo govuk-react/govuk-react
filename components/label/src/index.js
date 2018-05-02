@@ -1,14 +1,13 @@
 // https://github.com/alphagov/govuk-frontend/tree/master/src/components/
 
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { ERROR_COLOUR } from 'govuk-colours';
 import { MEDIA_QUERIES, SITE_WIDTH, SPACING } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
-const GLabel = glamorous.label(
+const StyledLabel = styled('label')(
   {
     display: 'flex',
     flexDirection: 'column',
@@ -30,7 +29,7 @@ const GLabel = glamorous.label(
   }),
 );
 
-const Label = ({ className, ...props }) => (<GLabel className={className} {...props} />);
+const Label = ({ className, ...props }) => (<StyledLabel className={className} {...props} />);
 
 Label.defaultProps = {
   className: undefined,

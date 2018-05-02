@@ -1,48 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Label matches withError snapshot: with error mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
-  margin-bottom: 0;
-}
-
-.glamor-0,
-[data-glamor-0] {
+.emotion-1 {
   display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
   border-left: 4px solid #b10e1e;
   margin-right: 15px;
   padding-left: 10px;
-  margin-bottom: 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
 }
 
-.glamor-0:after,
-[data-glamor-0]:after {
+.emotion-1:after {
   content: '';
   display: table;
   clear: both;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    max-width: 960px;
   }
+}
+
+.glamor-0,
+[data-glamor-0] {
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    max-width: 960px;
     margin-bottom: 0;
   }
 }
@@ -51,80 +44,73 @@ exports[`Label matches withError snapshot: with error mount 1`] = `
   error="example"
 >
   <Label
-    className="glamor-1"
+    className="glamor-0"
     error="example"
   >
-    <glamorous(label)
-      className="glamor-1"
+    <Styled(label)
+      className="glamor-0"
       error="example"
     >
       <label
-        className="glamor-0"
+        className="glamor-0 glamor-1"
       >
         example
       </label>
-    </glamorous(label)>
+    </Styled(label)>
   </Label>
 </glamorous(Label)>
 `;
 
 exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
-  margin-bottom: 0;
-}
-
-.glamor-0,
-[data-glamor-0] {
+.emotion-1 {
   display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
 }
 
-.glamor-0:after,
-[data-glamor-0]:after {
+.emotion-1:after {
   content: '';
   display: table;
   clear: both;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    max-width: 960px;
   }
+}
+
+.glamor-0,
+[data-glamor-0] {
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    max-width: 960px;
     margin-bottom: 0;
   }
 }
 
 <glamorous(Label)>
   <Label
-    className="glamor-1"
+    className="glamor-0"
   >
-    <glamorous(label)
-      className="glamor-1"
+    <Styled(label)
+      className="glamor-0"
     >
       <label
-        className="glamor-0"
+        className="glamor-0 glamor-1"
       >
         example
       </label>
-    </glamorous(label)>
+    </Styled(label)>
   </Label>
 </glamorous(Label)>
 `;
