@@ -12,9 +12,8 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { ERROR_COLOUR } from 'govuk-colours';
-
 import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
@@ -27,7 +26,7 @@ import {
 } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
-const FieldSet = glamorous.div(
+const StyledFieldset = styled('div')(
   {
     padding: 0,
     margin: 0,
@@ -35,7 +34,7 @@ const FieldSet = glamorous.div(
     boxSizing: 'border-box',
     width: '100%',
     ':after': {
-      content: "''",
+      content: '\'\'',
       display: 'table',
       clear: 'both',
     },
@@ -55,12 +54,12 @@ const FieldSet = glamorous.div(
 const MultiChoice = ({
   meta, label, children, hint, className,
 }) => (
-  <FieldSet className={className} error={meta.touched && meta.error}>
+  <StyledFieldset className={className} error={meta.touched && meta.error}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
     {children}
-  </FieldSet>
+  </StyledFieldset>
 );
 
 MultiChoice.defaultProps = {

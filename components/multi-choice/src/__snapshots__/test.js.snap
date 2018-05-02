@@ -1,6 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ThemedComponent matches withError snapshot: with error mount 1`] = `
+.emotion-4 {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.emotion-4:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    max-width: 960px;
+  }
+}
+
 .glamor-1,
 [data-glamor-1] {
   margin-bottom: 0;
@@ -21,23 +41,6 @@ exports[`ThemedComponent matches withError snapshot: with error mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-3,
-[data-glamor-3] {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  box-sizing: border-box;
-  width: 100%;
-  margin-bottom: 0;
-}
-
-.glamor-3:after,
-[data-glamor-3]:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
 @media only screen and (min-width: 641px) {
   .glamor-1,
   [data-glamor-1] {
@@ -54,14 +57,6 @@ exports[`ThemedComponent matches withError snapshot: with error mount 1`] = `
   }
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    max-width: 960px;
-    margin-bottom: 0;
-  }
-}
-
 <glamorous(MultiChoice)
   error="example"
   label="example"
@@ -72,11 +67,11 @@ exports[`ThemedComponent matches withError snapshot: with error mount 1`] = `
     label="example"
     meta={Object {}}
   >
-    <glamorous(div)
+    <Styled(div)
       className="glamor-1"
     >
       <div
-        className="glamor-3"
+        className="glamor-1 glamor-4"
       >
         <glamorous(LabelText)>
           <LabelText
@@ -95,19 +90,13 @@ exports[`ThemedComponent matches withError snapshot: with error mount 1`] = `
         </glamorous(LabelText)>
         example
       </div>
-    </glamorous(div)>
+    </Styled(div)>
   </MultiChoice>
 </glamorous(MultiChoice)>
 `;
 
 exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
-  margin-bottom: 0;
-}
-
-.glamor-9,
-[data-glamor-9] {
+.emotion-10 {
   padding: 0;
   margin: 0;
   border: 0;
@@ -116,14 +105,23 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   border-left: 4px solid #b10e1e;
   margin-right: 15px;
   padding-left: 10px;
-  margin-bottom: 0;
 }
 
-.glamor-9:after,
-[data-glamor-9]:after {
+.emotion-10:after {
   content: '';
   display: table;
   clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-10 {
+    max-width: 960px;
+  }
+}
+
+.glamor-1,
+[data-glamor-1] {
+  margin-bottom: 0;
 }
 
 .glamor-0,
@@ -179,14 +177,6 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-9,
-  [data-glamor-9] {
-    max-width: 960px;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
     font-size: 19px;
@@ -234,12 +224,12 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
       }
     }
   >
-    <glamorous(div)
+    <Styled(div)
       className="glamor-1"
       error="example"
     >
       <div
-        className="glamor-9"
+        className="glamor-1 glamor-10"
       >
         <glamorous(LabelText)>
           <LabelText
@@ -288,7 +278,7 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
         </glamorous(ErrorText)>
         example
       </div>
-    </glamorous(div)>
+    </Styled(div)>
   </MultiChoice>
 </glamorous(MultiChoice)>
 `;
