@@ -2,16 +2,16 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import UnorderedList from '@govuk-react/unordered-list';
 import { NTA_LIGHT } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
-const Wrapper = glamorous.div({
+const StyledContainer = styled('div')({
   fontFamily: NTA_LIGHT,
 });
 
-const Definition = glamorous.li({
+const StyledDefinition = styled('li')({
   fontSize: '24px',
   fontWeight: 700,
   lineHeight: 1.25,
@@ -22,50 +22,50 @@ const Definition = glamorous.li({
 
 const DocumentFooterMetadata = ({ from, partOf, other }) => {
   const fromData = (
-    <Wrapper>
+    <StyledContainer>
       {from &&
         <div>
           <p style={{ marginBottom: 0 }}>From:</p>
           <UnorderedList listStyleType="none">
             {from && from.map((child, i) => (
               /* eslint-disable react/no-array-index-key */
-              <Definition key={i}>{child}</Definition>
+              <StyledDefinition key={i}>{child}</StyledDefinition>
               /* eslint-enable react/no-array-index-key */
               ))}
           </UnorderedList>
         </div>}
-    </Wrapper>
+    </StyledContainer>
   );
 
   const partOfData = (
-    <Wrapper>
+    <StyledContainer>
       {partOf &&
         <div>
           <p style={{ marginBottom: 0 }}>Part of:</p>
           <UnorderedList listStyleType="none">
             {partOf && partOf.map((child, i) => (
-              <Definition key={child.key || i}>{child}</Definition>
+              <StyledDefinition key={child.key || i}>{child}</StyledDefinition>
               ))
             }
           </UnorderedList>
         </div>}
-    </Wrapper>
+    </StyledContainer>
   );
 
   const otherData = (
-    <Wrapper>
+    <StyledContainer>
       {other && other.map(item =>
         (
           <div key={item.id}>
             <p style={{ marginBottom: 0 }}>{item.title}:</p>
             <UnorderedList listStyleType="none">
-              <Definition>
+              <StyledDefinition>
                 {item.content}
-              </Definition>
+              </StyledDefinition>
             </UnorderedList>
           </div>
           ))}
-    </Wrapper>
+    </StyledContainer>
   );
 
   return (
