@@ -12,7 +12,6 @@
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
-    "glamorous": ">=4",
     "prop-types": ">=15",
     "react": ">=16.2.0"
   },
