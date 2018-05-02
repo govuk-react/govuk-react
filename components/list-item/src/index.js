@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import {
   FONT_SIZE,
   LINE_HEIGHT,
@@ -10,7 +10,7 @@ import {
 } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
-const GListItem = glamorous.li({
+const StyledListItem = styled('li')({
   fontFamily: NTA_LIGHT,
   fontWeight: 400,
   textTransform: 'none',
@@ -25,7 +25,7 @@ const GListItem = glamorous.li({
 });
 
 const ListItem = ({ children, className }) => (
-  <GListItem className={className}>{children}</GListItem>
+  <StyledListItem className={className}>{children}</StyledListItem>
 );
 
 ListItem.defaultProps = {
