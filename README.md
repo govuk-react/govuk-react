@@ -40,17 +40,17 @@ We are using a Higher Order Component (HOC), which takes a component and returns
 We use the same HOC for an `<a href...>` as we do for a `<Link to...>`. For example;
 ```js
 import { BrowserRouter, Link } from 'react-router';
-import asAnchor from 'govuk-react';
+import { asAnchor } from '@govuk-react/hoc';
 
 const MyLink = asAnchor(Link);
 
-const MyComponent = () => {
+const MyComponent = () => (
   <nav>
     <BrowserRouter>
       <MyLink to="https://example.com">example</MyLink>
     </BrowserRouter>
   </nav>
-}
+)
 
 ```
 
