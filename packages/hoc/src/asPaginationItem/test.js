@@ -37,7 +37,7 @@ describe(asPaginationItem, () => {
   });
 
   it('returns a component', () => {
-    expect(shallow(wrapper).html().toBeTruthy);
+    expect(shallow(wrapper).html()).toBeTruthy();
   });
 
   it('matches wrapper snapshot', () => {
