@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
+import { createSerializer } from 'jest-emotion';
+import * as emotion from 'emotion';
 
 import DateInput from './';
+
+expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('DateInput', () => {
   const example = 'example';

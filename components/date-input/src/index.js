@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { BLACK, YELLOW, ERROR_COLOUR } from 'govuk-colours';
 import {
   FONT_SIZE,
@@ -17,7 +17,7 @@ import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
-const LabelWrapper = glamorous.div(
+const StyledContainer = styled('div')(
   {
     display: 'flex',
     flexDirection: 'column',
@@ -29,7 +29,7 @@ const LabelWrapper = glamorous.div(
   }),
 );
 
-const Input = glamorous.input(
+const StyledInput = styled('input')(
   {
     boxSizing: 'border-box',
     fontFamily: NTA_LIGHT,
@@ -59,7 +59,7 @@ const Input = glamorous.input(
   }),
 );
 
-const ListParent = glamorous.div({
+const StyledList = styled('div')({
   fontFamily: NTA_LIGHT,
   display: 'flex',
   '> label': {
@@ -73,7 +73,7 @@ const ListParent = glamorous.div({
 });
 
 const DateInput = ({ children, className, ...props }) => (
-  <LabelWrapper className={className} errorText={props.errorText}>
+  <StyledContainer className={className} errorText={props.errorText}>
     <LabelText errorText={props.errorText}>{children}</LabelText>
     {props.hintText ? <HintText>{props.hintText}</HintText> : <span />}
     {props.errorText ? (
@@ -81,21 +81,21 @@ const DateInput = ({ children, className, ...props }) => (
     ) : (
       <span />
     )}
-    <ListParent>
+    <StyledList>
       <Label>
         <LabelText>Day</LabelText>
-        <Input errorText={props.errorText} type="text" />
+        <StyledInput errorText={props.errorText} type="text" />
       </Label>
       <Label>
         <LabelText>Month</LabelText>
-        <Input errorText={props.errorText} type="text" />
+        <StyledInput errorText={props.errorText} type="text" />
       </Label>
       <Label className="year">
         <LabelText>Year</LabelText>
-        <Input errorText={props.errorText} type="text" />
+        <StyledInput errorText={props.errorText} type="text" />
       </Label>
-    </ListParent>
-  </LabelWrapper>
+    </StyledList>
+  </StyledContainer>
 );
 
 DateInput.defaultProps = {
