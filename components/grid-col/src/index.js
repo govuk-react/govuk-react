@@ -3,10 +3,10 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { GUTTER_HALF, MEDIA_QUERIES, SPACING } from '@govuk-react/constants';
 
-const GridColInner = glamorous.div(
+const StyledColumn = styled('div')(
   {
     backgroundColor: 'transparent',
     backgroundImage: 'none',
@@ -50,7 +50,7 @@ const GridColInner = glamorous.div(
 );
 
 const GridCol = ({ children, ...props }) => (
-  <GridColInner {...props}>{children}</GridColInner>
+  <StyledColumn {...props}>{children}</StyledColumn>
 );
 
 GridCol.defaultProps = {

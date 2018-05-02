@@ -1,6 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
+import { createSerializer } from 'jest-emotion';
+import * as emotion from 'emotion';
+
 import GridCol from './';
+
+expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe(GridCol, () => {
   let props;
@@ -23,5 +29,9 @@ describe(GridCol, () => {
 
   it('passes `props.children` to the rendered `wrapper` as `children`', () => {
     expect(wrapper.props.children).toBe(props.children);
+  });
+
+  it('matches snapshot', () => {
+    expect(mount(wrapper)).toMatchSnapshot('enzyme.mount');
   });
 });

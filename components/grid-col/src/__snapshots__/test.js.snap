@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridCol matches snapshot: enzyme.mount 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  background-image: none;
+  margin: 0;
+  margin-bottom: 15px;
+  text-indent: 0px;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    width: 100%;
+    margin: 0 15px;
+  }
+
+  .emotion-0:first-child {
+    margin-left: 0;
+  }
+
+  .emotion-0:last-child {
+    margin-right: 0;
+  }
+}
+
+<GridCol>
+  <Styled(div)>
+    <div
+      className="emotion-0"
+    >
+      example
+    </div>
+  </Styled(div)>
+</GridCol>
+`;
