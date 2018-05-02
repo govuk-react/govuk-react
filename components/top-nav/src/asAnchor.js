@@ -18,6 +18,7 @@ const asAnchor = (AnchorType) => {
     textDecoration: 'none',
     borderBottom: '1px solid transparent',
     fontWeight: 700,
+    lineHeight: 1,
     ':hover': {
       borderBottomColor: WHITE, // TODO: active state, LIGHT_BLUE
     },
