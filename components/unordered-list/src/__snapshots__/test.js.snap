@@ -1,21 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
-.glamor-3,
-[data-glamor-3] {
-  margin-bottom: 0;
-}
-
-.glamor-15,
-[data-glamor-15] {
+.emotion-16 {
   margin: 0;
   padding: 0;
   padding-left: 20px;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 14px;
   line-height: 1.1428571429;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-16 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.glamor-3,
+[data-glamor-3] {
   margin-bottom: 0;
 }
 
@@ -59,15 +64,6 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-15,
-  [data-glamor-15] {
-    font-size: 16px;
-    line-height: 1.25;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
   .glamor-2,
   [data-glamor-2] {
     font-size: 16px;
@@ -80,11 +76,11 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   <UnorderedList
     className="glamor-3"
   >
-    <glamorous(ul)
+    <Styled(ul)
       className="glamor-3"
     >
       <ul
-        className="glamor-15"
+        className="glamor-3 glamor-16"
       >
         <glamorous(ListItem)>
           <ListItem
@@ -174,7 +170,7 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
           </ListItem>
         </glamorous(ListItem)>
       </ul>
-    </glamorous(ul)>
+    </Styled(ul)>
   </UnorderedList>
 </glamorous(UnorderedList)>
 `;
