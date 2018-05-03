@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
+import { createSerializer } from 'jest-emotion';
+import * as emotion from 'emotion';
+
 import Table from './';
 import Row from './atoms/Row';
 import Cell from './atoms/Cell';
+
+expect.addSnapshotSerializer(createSerializer(emotion));
 
 const example = <Table body={<Row><Cell>Example</Cell></Row>} />;
 const exampleWithHead = (
@@ -12,7 +17,6 @@ const exampleWithHead = (
     head={<Row><Cell>Example</Cell></Row>}
   />
 );
-
 
 describe(Table, () => {
   it('renders without crashing', () => {

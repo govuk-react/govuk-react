@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import {
   FONT_SIZE,
   LINE_HEIGHT,
@@ -14,7 +14,7 @@ import TableHeader from './atoms/TableHeader';
 import TableBody from './atoms/TableBody';
 import Caption from './atoms/Caption';
 
-const TableInner = glamorous.table({
+const StyledTable = styled('table')({
   border: 0,
   borderCollapse: 'collapse',
   boxSizing: 'border-box',
@@ -37,11 +37,11 @@ const Table = ({
   head,
   ...props
 }) => (
-  <TableInner {...props}>
+  <StyledTable {...props}>
     <Caption>{caption}</Caption>
     {head && <TableHeader>{head}</TableHeader>}
     <TableBody>{body}</TableBody>
-  </TableInner>
+  </StyledTable>
 );
 
 Table.defaultProps = {
