@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
+import { createSerializer } from 'jest-emotion';
+import * as emotion from 'emotion';
+
 import Select from './';
+
+expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('Select', () => {
   const example = 'example';

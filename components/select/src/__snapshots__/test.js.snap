@@ -1,6 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select matches snapshot for errorText: errorText mount 1`] = `
+.emotion-9 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  height: 33px;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+  border: 4px solid #b10e1e;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-9 {
+    width: 50%;
+    height: 38px;
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
+
+.emotion-9 [disabled] {
+  cursor: auto;
+}
+
+.emotion-9:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
 .glamor-11,
 [data-glamor-11] {
   margin-bottom: 20px;
@@ -82,26 +114,6 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-9,
-[data-glamor-9] {
-  box-sizing: border-box;
-  font-family: "nta", Arial, sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
-  width: 100%;
-  height: 33px;
-  padding: 5px 4px 4px;
-  border: 4px solid #b10e1e;
-}
-
-.glamor-9:focus,
-[data-glamor-9]:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-}
-
 @media only screen and (min-width: 641px) {
   .glamor-11,
   [data-glamor-11] {
@@ -148,16 +160,6 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
     font-size: 19px;
     line-height: 1.3;
     margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-9,
-  [data-glamor-9] {
-    width: 50%;
-    height: 38px;
-    font-size: 19px;
-    line-height: 1.31579;
   }
 }
 
@@ -245,7 +247,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                 </glamorous(span)>
               </ErrorText>
             </glamorous(ErrorText)>
-            <glamorous(select)
+            <Styled(select)
               error="example"
             >
               <select
@@ -253,7 +255,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
               >
                 example
               </select>
-            </glamorous(select)>
+            </Styled(select)>
           </label>
         </glamorous(label)>
       </Label>
@@ -263,6 +265,37 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
 `;
 
 exports[`Select matches snapshot: enzyme.mount 1`] = `
+.emotion-3 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  height: 33px;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    width: 50%;
+    height: 38px;
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
+
+.emotion-3 [disabled] {
+  cursor: auto;
+}
+
+.emotion-3:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
 .glamor-5,
 [data-glamor-5] {
   margin-bottom: 20px;
@@ -311,26 +344,6 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-3,
-[data-glamor-3] {
-  box-sizing: border-box;
-  font-family: "nta", Arial, sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
-  width: 100%;
-  height: 33px;
-  padding: 5px 4px 4px;
-  border: 2px solid #0b0c0c;
-}
-
-.glamor-3:focus,
-[data-glamor-3]:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-}
-
 @media only screen and (min-width: 641px) {
   .glamor-5,
   [data-glamor-5] {
@@ -359,16 +372,6 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
     font-size: 19px;
     line-height: 1.3;
     margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    width: 50%;
-    height: 38px;
-    font-size: 19px;
-    line-height: 1.31579;
   }
 }
 
@@ -408,13 +411,13 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
                 </glamorous(span)>
               </LabelText>
             </glamorous(LabelText)>
-            <glamorous(select)>
+            <Styled(select)>
               <select
                 className="glamor-3"
               >
                 example
               </select>
-            </glamorous(select)>
+            </Styled(select)>
           </label>
         </glamorous(label)>
       </Label>
