@@ -5,8 +5,12 @@ import Header from '@govuk-react/header';
 import UnorderedList from '@govuk-react/unordered-list';
 import ListItem from '@govuk-react/list-item';
 import asAnchor from '@govuk-react/hoc/lib/asAnchor';
+import { createSerializer } from 'jest-emotion';
+import * as emotion from 'emotion';
 
 import RelatedItems from './';
+
+expect.addSnapshotSerializer(createSerializer(emotion));
 
 const AnchorTag = asAnchor('a');
 
