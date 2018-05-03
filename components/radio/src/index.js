@@ -3,12 +3,12 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { YELLOW } from 'govuk-colours';
 import { withWhiteSpace } from '@govuk-react/hoc';
 import { NTA_LIGHT } from '@govuk-react/constants';
 
-const Label = glamorous.label(
+const Label = styled('label')(
   {
     display: 'block',
     position: 'relative',
@@ -21,7 +21,7 @@ const Label = glamorous.label(
   }),
 );
 
-const Input = glamorous.input({
+const Input = styled('input')({
   position: 'absolute',
   cursor: 'pointer',
   left: 0,
@@ -48,7 +48,7 @@ const Input = glamorous.input({
   },
 });
 
-const LabelText = glamorous.span({
+const LabelText = styled('span')({
   fontFamily: NTA_LIGHT,
   fontWeight: 400,
   textTransform: 'none',
@@ -58,7 +58,7 @@ const LabelText = glamorous.span({
   padding: '8px 10px 9px 12px',
   display: 'block',
   ':before': {
-    content: ' ',
+    content: '\'\'',
     boxSizing: 'border-box',
     position: 'absolute',
     top: 0,
@@ -70,7 +70,7 @@ const LabelText = glamorous.span({
     background: 'transparent',
   },
   ':after': {
-    content: ' ',
+    content: '\'\'',
     position: 'absolute',
     top: '0.52632em',
     left: '0.52632em',

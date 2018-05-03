@@ -1,13 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio matches snapshot for inline: inline mount 1`] = `
-.glamor-3,
-[data-glamor-3] {
-  margin-bottom: 10px;
-}
-
-.glamor-0,
-[data-glamor-0] {
+.emotion-0 {
   position: absolute;
   cursor: pointer;
   left: 0;
@@ -20,19 +14,26 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   opacity: 0;
 }
 
-.glamor-0:checked + span::after,
-[data-glamor-0]:checked + span::after {
+.emotion-0 [disabled] {
+  cursor: auto;
+}
+
+.emotion-0 [disabled] + span {
+  opacity: .4;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.emotion-0:checked + span::after {
   opacity: 1;
 }
 
-.glamor-0:focus + span::before,
-[data-glamor-0]:focus + span::before {
+.emotion-0:focus + span::before {
   box-shadow: 0 0 0 4px #ffbf47;
 }
 
-.glamor-1,
-[data-glamor-1] {
-  font-family: "nta", Arial, sans-serif;
+.emotion-1 {
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
@@ -42,9 +43,8 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   display: block;
 }
 
-.glamor-1:before,
-[data-glamor-1]:before {
-  content: " ";
+.emotion-1:before {
+  content: '';
   box-sizing: border-box;
   position: absolute;
   top: 0;
@@ -56,9 +56,8 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   background: transparent;
 }
 
-.glamor-1:after,
-[data-glamor-1]:after {
-  content: " ";
+.emotion-1:after {
+  content: '';
   position: absolute;
   top: 0.52632em;
   left: 0.52632em;
@@ -69,22 +68,18 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   opacity: 0;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.emotion-3 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
   float: left;
   clear: none;
   margin-right: 30px;
-  margin-bottom: 10px;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    margin-bottom: 10px;
-  }
+.glamor-2,
+[data-glamor-2] {
+  margin-bottom: 10px;
 }
 
 @media only screen and (min-width: 641px) {
@@ -99,18 +94,18 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   name="example"
 >
   <Radio
-    className="glamor-3"
+    className="glamor-2"
     inline={true}
     name="example"
   >
-    <glamorous(label)
-      className="glamor-3"
+    <Styled(label)
+      className="glamor-2"
       inline={true}
     >
       <label
-        className="glamor-2"
+        className="glamor-2 glamor-3"
       >
-        <glamorous(input)
+        <Styled(input)
           name="example"
           type="radio"
         >
@@ -119,37 +114,29 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
             name="example"
             type="radio"
           />
-        </glamorous(input)>
-        <glamorous(span)>
+        </Styled(input)>
+        <Styled(span)>
           <span
             className="glamor-1"
           >
             example
           </span>
-        </glamorous(span)>
+        </Styled(span)>
       </label>
-    </glamorous(label)>
+    </Styled(label)>
   </Radio>
 </glamorous(Radio)>
 `;
 
 exports[`Radio matches snapshot: standard mount 1`] = `
-.glamor-3,
-[data-glamor-3] {
-  margin-bottom: 10px;
-}
-
-.glamor-2,
-[data-glamor-2] {
+.emotion-3 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
   margin-right: 0px;
-  margin-bottom: 10px;
 }
 
-.glamor-0,
-[data-glamor-0] {
+.emotion-0 {
   position: absolute;
   cursor: pointer;
   left: 0;
@@ -162,19 +149,26 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   opacity: 0;
 }
 
-.glamor-0:checked + span::after,
-[data-glamor-0]:checked + span::after {
+.emotion-0 [disabled] {
+  cursor: auto;
+}
+
+.emotion-0 [disabled] + span {
+  opacity: .4;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.emotion-0:checked + span::after {
   opacity: 1;
 }
 
-.glamor-0:focus + span::before,
-[data-glamor-0]:focus + span::before {
+.emotion-0:focus + span::before {
   box-shadow: 0 0 0 4px #ffbf47;
 }
 
-.glamor-1,
-[data-glamor-1] {
-  font-family: "nta", Arial, sans-serif;
+.emotion-1 {
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
@@ -184,9 +178,8 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   display: block;
 }
 
-.glamor-1:before,
-[data-glamor-1]:before {
-  content: " ";
+.emotion-1:before {
+  content: '';
   box-sizing: border-box;
   position: absolute;
   top: 0;
@@ -198,9 +191,8 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   background: transparent;
 }
 
-.glamor-1:after,
-[data-glamor-1]:after {
-  content: " ";
+.emotion-1:after {
+  content: '';
   position: absolute;
   top: 0.52632em;
   left: 0.52632em;
@@ -211,11 +203,9 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   opacity: 0;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    margin-bottom: 10px;
-  }
+.glamor-2,
+[data-glamor-2] {
+  margin-bottom: 10px;
 }
 
 @media only screen and (min-width: 641px) {
@@ -229,16 +219,16 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   name="example"
 >
   <Radio
-    className="glamor-3"
+    className="glamor-2"
     name="example"
   >
-    <glamorous(label)
-      className="glamor-3"
+    <Styled(label)
+      className="glamor-2"
     >
       <label
-        className="glamor-2"
+        className="glamor-2 glamor-3"
       >
-        <glamorous(input)
+        <Styled(input)
           name="example"
           type="radio"
         >
@@ -247,16 +237,16 @@ exports[`Radio matches snapshot: standard mount 1`] = `
             name="example"
             type="radio"
           />
-        </glamorous(input)>
-        <glamorous(span)>
+        </Styled(input)>
+        <Styled(span)>
           <span
             className="glamor-1"
           >
             example
           </span>
-        </glamorous(span)>
+        </Styled(span)>
       </label>
-    </glamorous(label)>
+    </Styled(label)>
   </Radio>
 </glamorous(Radio)>
 `;
