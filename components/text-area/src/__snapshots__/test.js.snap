@@ -1,6 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
+.emotion-6 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+  border: 4px solid #b10e1e;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 75%;
+  }
+}
+
+.emotion-6 [disabled] {
+  cursor: auto;
+}
+
+.emotion-6:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
 .glamor-1,
 [data-glamor-1] {
   margin-bottom: 0;
@@ -63,25 +93,6 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-6,
-[data-glamor-6] {
-  box-sizing: border-box;
-  font-family: "nta", Arial, sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
-  width: 100%;
-  padding: 5px 4px 4px;
-  border: 4px solid #b10e1e;
-}
-
-.glamor-6:focus,
-[data-glamor-6]:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-}
-
 @media only screen and (min-width: 641px) {
   .glamor-1,
   [data-glamor-1] {
@@ -112,15 +123,6 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
     font-size: 19px;
     line-height: 1.3;
     margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-6,
-  [data-glamor-6] {
-    font-size: 19px;
-    line-height: 1.3;
-    width: 75%;
   }
 }
 
@@ -189,7 +191,7 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
                 </glamorous(span)>
               </ErrorText>
             </glamorous(ErrorText)>
-            <glamorous(textarea)
+            <Styled(textarea)
               error="example"
               rows="5"
               type="text"
@@ -197,8 +199,9 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
               <textarea
                 className="glamor-6"
                 rows="5"
+                type="text"
               />
-            </glamorous(textarea)>
+            </Styled(textarea)>
           </label>
         </glamorous(label)>
       </Label>
@@ -208,6 +211,35 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
 `;
 
 exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
+.emotion-6 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 75%;
+  }
+}
+
+.emotion-6 [disabled] {
+  cursor: auto;
+}
+
+.emotion-6:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
 .glamor-1,
 [data-glamor-1] {
   margin-bottom: 0;
@@ -251,25 +283,6 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-6,
-[data-glamor-6] {
-  box-sizing: border-box;
-  font-family: "nta", Arial, sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
-  width: 100%;
-  padding: 5px 4px 4px;
-  border: 2px solid #0b0c0c;
-}
-
-.glamor-6:focus,
-[data-glamor-6]:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-}
-
 .glamor-3,
 [data-glamor-3] {
   display: block;
@@ -305,15 +318,6 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
     font-size: 19px;
     line-height: 1.3;
     margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-6,
-  [data-glamor-6] {
-    font-size: 19px;
-    line-height: 1.3;
-    width: 75%;
   }
 }
 
@@ -377,15 +381,16 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
                 </glamorous(span)>
               </HintText>
             </glamorous(HintText)>
-            <glamorous(textarea)
+            <Styled(textarea)
               rows="5"
               type="text"
             >
               <textarea
                 className="glamor-6"
                 rows="5"
+                type="text"
               />
-            </glamorous(textarea)>
+            </Styled(textarea)>
           </label>
         </glamorous(label)>
       </Label>
@@ -395,6 +400,35 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
 `;
 
 exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
+.emotion-3 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 75%;
+  }
+}
+
+.emotion-3 [disabled] {
+  cursor: auto;
+}
+
+.emotion-3:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
 .glamor-1,
 [data-glamor-1] {
   margin-bottom: 0;
@@ -438,25 +472,6 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-3,
-[data-glamor-3] {
-  box-sizing: border-box;
-  font-family: "nta", Arial, sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
-  width: 100%;
-  padding: 5px 4px 4px;
-  border: 2px solid #0b0c0c;
-}
-
-.glamor-3:focus,
-[data-glamor-3]:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-}
-
 @media only screen and (min-width: 641px) {
   .glamor-1,
   [data-glamor-1] {
@@ -478,15 +493,6 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
     font-size: 19px;
     line-height: 1.3;
     margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    font-size: 19px;
-    line-height: 1.3;
-    width: 75%;
   }
 }
 
@@ -523,15 +529,16 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
                 </glamorous(span)>
               </LabelText>
             </glamorous(LabelText)>
-            <glamorous(textarea)
+            <Styled(textarea)
               rows="5"
               type="text"
             >
               <textarea
                 className="glamor-3"
                 rows="5"
+                type="text"
               />
-            </glamorous(textarea)>
+            </Styled(textarea)>
           </label>
         </glamorous(label)>
       </Label>
