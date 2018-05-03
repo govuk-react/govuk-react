@@ -3,6 +3,7 @@
 import glamorous from 'glamorous';
 
 const TableHeader = glamorous.thead({
+  // TODO: avoid cascade
   ' th': {
     fontWeight: 700,
   },
