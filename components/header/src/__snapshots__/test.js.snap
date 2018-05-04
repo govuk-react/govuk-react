@@ -1,64 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header matches wrapper snapshot: wrapper mount 1`] = `
-.glamor-2,
-[data-glamor-2] {
-  margin-bottom: 0;
-}
-
-.glamor-0,
-[data-glamor-0] {
-  font-family: "nta", Arial, sans-serif;
+.emotion-1 {
+  font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
   font-size: 32px;
   line-height: 1.09375;
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-1 {
     font-size: 48px;
     line-height: 1.0416666666666667;
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
 }
 
 @media print {
+  .emotion-1 {
+    font-size: 18px;
+  }
+}
+
+.glamor-0,
+[data-glamor-0] {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    font-size: 18px;
+    margin-bottom: 0;
   }
 }
 
 <glamorous(Header)>
   <Header
-    className="glamor-2"
+    className="glamor-0"
     level={1}
   >
-    <glamorous(unknown)
-      className="glamor-2"
+    <Styled(Component)
+      className="glamor-0"
       level={1}
     >
       <Component
-        className="glamor-0"
+        className="glamor-0 glamor-1"
         level={1}
       >
         <h1
-          className="glamor-0"
+          className="glamor-0 glamor-1"
         >
           example
         </h1>
       </Component>
-    </glamorous(unknown)>
+    </Styled(Component)>
   </Header>
 </glamorous(Header)>
 `;
