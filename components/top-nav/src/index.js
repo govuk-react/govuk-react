@@ -1,5 +1,5 @@
 // http://alphagov.github.io/govuk_template/example-proposition-menu.html
-
+// TODO: this component is a work in progress and needs to more closely match existing examples
 import React from 'react';
 import PropTypes from 'prop-types';
 import { BLACK, WHITE } from 'govuk-colours';
