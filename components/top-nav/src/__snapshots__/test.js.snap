@@ -65,35 +65,6 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   -webkit-justify-content: flex-start;
 }
 
-.glamor-0 a,
-[data-glamor-0] a {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  color: #ffffff;
-  text-decoration: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: 1px solid transparent;
-}
-
-.glamor-0 a:hover,
-[data-glamor-0] a:hover {
-  border-bottom: 1px solid #ffffff;
-}
-
-.glamor-0 h1,
-[data-glamor-0] h1 {
-  font-size: 30px;
-}
-
-.glamor-0 svg,
-[data-glamor-0] svg {
-  margin-right: 10px;
-}
-
 .glamor-11,
 [data-glamor-11] {
   display: -webkit-box;
@@ -109,21 +80,6 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   -webkit-flex-direction: column;
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
-}
-
-.glamor-11 a,
-[data-glamor-11] a {
-  color: #ffffff;
-  border: 0;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.glamor-11 a:hover,
-[data-glamor-11] a:hover {
-  border-bottom: 1px solid #ffffff;
 }
 
 .glamor-3,
@@ -178,6 +134,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   text-decoration: none;
   border-bottom: 1px solid transparent;
   font-weight: 700;
+  line-height: 1;
 }
 
 .glamor-4:hover,
@@ -235,11 +192,6 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
     margin-top: 0;
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
-  }
-
-  .glamor-11 button,
-  [data-glamor-11] button {
-    display: none;
   }
 }
 
@@ -320,27 +272,30 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
             <div
               className="glamor-11"
             >
-              <MenuButton>
+              <MenuButton
+                title="Menu"
+              >
                 <glamorous(label)
-                  htmlFor="dingus"
+                  htmlFor="govuk-react-menu-button"
                 >
                   <label
                     className="glamor-2"
-                    htmlFor="dingus"
+                    htmlFor="govuk-react-menu-button"
                   >
-                    Menu 
+                    Menu
+                     
                     <span>
                       ›
                     </span>
                   </label>
                 </glamorous(label)>
                 <glamorous(input)
-                  id="dingus"
+                  id="govuk-react-menu-button"
                   type="checkbox"
                 >
                   <input
                     className="glamor-3"
-                    id="dingus"
+                    id="govuk-react-menu-button"
                     type="checkbox"
                   />
                 </glamorous(input)>
