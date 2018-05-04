@@ -29,9 +29,6 @@ const GLabelText = glamorous.span(
     color: `${BLACK}`,
     paddingBottom: '2px',
   },
-  ({ error }) => ({
-    fontWeight: error ? 700 : undefined,
-  }),
 );
 
 const LabelText = ({ children, ...props }) => (
