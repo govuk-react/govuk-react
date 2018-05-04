@@ -26,5 +26,5 @@ describe('Header', () => {
 
   it('matches wrapper snapshot', () => {
     expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
-  })
+  });
 });

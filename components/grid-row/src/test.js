@@ -9,7 +9,6 @@ import GridRow from './';
 expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe(GridRow, () => {
-
   const wrapper = <GridRow />;
 
   it('renders without crashing', () => {

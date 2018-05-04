@@ -15,9 +15,8 @@ import {
 } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
-const StyledHeader = styled(({ level, children, ...props }) => 
-  createElement(LEVEL_TAG[level], props, children)
-)(
+const StyledHeader = styled(({ level, children, ...props }) =>
+  createElement(LEVEL_TAG[level], props, children))(
   {
     fontFamily: NTA_LIGHT,
     fontWeight: 'bold',
