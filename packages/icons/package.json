@@ -3,11 +3,11 @@
   "version": "0.1.28",
   "dependencies": {
     "@govuk-react/constants": "^0.1.28",
-    "glamor": "^2.20.40",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
     "glamorous": ">=4",
+    "glamor": ">=2.20",
     "prop-types": ">=15",
     "react": ">=16.2.0"
   },
