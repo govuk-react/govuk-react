@@ -1,7 +1,7 @@
 // https://govuk-elements.herokuapp.com/data/
 
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 
-const TableBody = glamorous.tbody();
+const TableBody = styled('tbody')();
 
 export default TableBody;

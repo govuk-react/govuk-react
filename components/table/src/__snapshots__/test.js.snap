@@ -21,9 +21,8 @@ exports[`Table matches snapshot for example: example mount 1`] = `
   }
 }
 
-.glamor-0,
-[data-glamor-0] {
-  font-family: "nta", Arial, sans-serif;
+.emotion-0 {
+  font-family: "nta",Arial,sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.25;
@@ -32,11 +31,17 @@ exports[`Table matches snapshot for example: example mount 1`] = `
   width: 100%;
 }
 
-.glamor-1,
-[data-glamor-1] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+.emotion-1 {
   border: 0;
   border-bottom: 1px solid #bfc1c3;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
@@ -45,22 +50,12 @@ exports[`Table matches snapshot for example: example mount 1`] = `
   text-transform: none;
 }
 
-.glamor-1:last-child,
-[data-glamor-1]:last-child {
+.emotion-1:last-child {
   padding-right: 0;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
+@media only screen and (min-width:641px) {
+  .emotion-1 {
     font-size: 19px;
     line-height: 1.3;
   }
@@ -77,36 +72,36 @@ exports[`Table matches snapshot for example: example mount 1`] = `
 >
   <Styled(table)>
     <table
-      className="glamor-4"
+      className="emotion-4"
     >
-      <glamorous(caption)>
+      <Styled(caption)>
         <caption
-          className="glamor-0"
+          className="emotion-0"
         />
-      </glamorous(caption)>
-      <glamorous(tbody)>
+      </Styled(caption)>
+      <Styled(tbody)>
         <tbody
-          className="glamor-2"
+          className="emotion-2"
         >
           <Row>
-            <glamorous(tr)>
+            <Styled(tr)>
               <tr
-                className="glamor-2"
+                className="emotion-2"
               >
                 <Cell>
-                  <glamorous(td)>
+                  <Styled(td)>
                     <td
-                      className="glamor-1"
+                      className="emotion-1"
                     >
                       Example
                     </td>
-                  </glamorous(td)>
+                  </Styled(td)>
                 </Cell>
               </tr>
-            </glamorous(tr)>
+            </Styled(tr)>
           </Row>
         </tbody>
-      </glamorous(tbody)>
+      </Styled(tbody)>
     </table>
   </Styled(table)>
 </Table>
@@ -133,9 +128,8 @@ exports[`Table matches snapshot for exampleWithHead: exampleWithHead mount 1`] =
   }
 }
 
-.glamor-0,
-[data-glamor-0] {
-  font-family: "nta", Arial, sans-serif;
+.emotion-0 {
+  font-family: "nta",Arial,sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.25;
@@ -144,11 +138,17 @@ exports[`Table matches snapshot for exampleWithHead: exampleWithHead mount 1`] =
   width: 100%;
 }
 
-.glamor-1,
-[data-glamor-1] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+.emotion-1 {
   border: 0;
   border-bottom: 1px solid #bfc1c3;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
@@ -157,30 +157,19 @@ exports[`Table matches snapshot for exampleWithHead: exampleWithHead mount 1`] =
   text-transform: none;
 }
 
-.glamor-1:last-child,
-[data-glamor-1]:last-child {
+.emotion-1:last-child {
   padding-right: 0;
 }
 
-.glamor-3 th,
-[data-glamor-3] th {
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+.emotion-3 th {
   font-weight: 700;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    font-size: 19px;
-    line-height: 1.3;
-  }
 }
 
 <Table
@@ -201,59 +190,59 @@ exports[`Table matches snapshot for exampleWithHead: exampleWithHead mount 1`] =
 >
   <Styled(table)>
     <table
-      className="glamor-7"
+      className="emotion-7"
     >
-      <glamorous(caption)>
+      <Styled(caption)>
         <caption
-          className="glamor-0"
+          className="emotion-0"
         />
-      </glamorous(caption)>
-      <glamorous(thead)>
+      </Styled(caption)>
+      <Styled(thead)>
         <thead
-          className="glamor-3"
+          className="emotion-3"
         >
           <Row>
-            <glamorous(tr)>
+            <Styled(tr)>
               <tr
-                className="glamor-2"
+                className="emotion-2"
               >
                 <Cell>
-                  <glamorous(td)>
+                  <Styled(td)>
                     <td
-                      className="glamor-1"
+                      className="emotion-1"
                     >
                       Example
                     </td>
-                  </glamorous(td)>
+                  </Styled(td)>
                 </Cell>
               </tr>
-            </glamorous(tr)>
+            </Styled(tr)>
           </Row>
         </thead>
-      </glamorous(thead)>
-      <glamorous(tbody)>
+      </Styled(thead)>
+      <Styled(tbody)>
         <tbody
-          className="glamor-2"
+          className="emotion-2"
         >
           <Row>
-            <glamorous(tr)>
+            <Styled(tr)>
               <tr
-                className="glamor-2"
+                className="emotion-2"
               >
                 <Cell>
-                  <glamorous(td)>
+                  <Styled(td)>
                     <td
-                      className="glamor-1"
+                      className="emotion-1"
                     >
                       Example
                     </td>
-                  </glamorous(td)>
+                  </Styled(td)>
                 </Cell>
               </tr>
-            </glamorous(tr)>
+            </Styled(tr)>
           </Row>
         </tbody>
-      </glamorous(tbody)>
+      </Styled(tbody)>
     </table>
   </Styled(table)>
 </Table>
