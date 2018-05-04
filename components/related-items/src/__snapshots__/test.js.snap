@@ -1,74 +1,99 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-23 {
+.emotion-29 {
   border-top: 10px solid #005ea5;
   padding-top: 5px;
   width: 100%;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-23 {
+  .emotion-29 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-.emotion-23 > h3 {
+.emotion-29 > h3 {
   margin-bottom: 10px;
 }
 
-.emotion-23 > ul {
+.emotion-29 > ul {
   margin-bottom: 20px;
 }
 
-.emotion-23 > ul > li {
+.emotion-29 > ul > li {
   margin-bottom: calc(10px + 2px);
 }
 
-.glamor-2,
-[data-glamor-2] {
-  margin-bottom: 0;
-}
-
-.glamor-0,
-[data-glamor-0] {
-  font-family: "nta", Arial, sans-serif;
+.emotion-1 {
+  font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
   font-size: 18px;
   line-height: 1.2;
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 
-.glamor-19,
-[data-glamor-19] {
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 24px;
+    line-height: 1.25;
+    margin-bottom: 20px;
+  }
+}
+
+@media print {
+  .emotion-1 {
+    font-size: 16px;
+  }
+}
+
+.emotion-25 {
   margin: 0;
   padding: 0;
-  padding-left: 0;
-  font-family: "nta", Arial, sans-serif;
+  padding-left: 20px;
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 14px;
   line-height: 1.1428571429;
   list-style-type: none;
   margin-left: 0;
-  margin-bottom: 0;
+  padding-left: 0;
 }
 
-.glamor-6,
-[data-glamor-6] {
-  font-family: "nta", Arial, sans-serif;
+@media only screen and (min-width:641px) {
+  .emotion-25 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.emotion-9 {
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 14px;
   line-height: 1.1428571429;
   width: 100%;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-9 {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 5px;
+  }
+}
+
+.glamor-0,
+[data-glamor-0] {
   margin-bottom: 0;
 }
 
-.glamor-4,
-[data-glamor-4] {
+.glamor-6,
+[data-glamor-6] {
   color: #005ea5;
   padding: 3px;
   margin: -3px;
@@ -77,125 +102,91 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   text-decoration: underline;
 }
 
-.glamor-4:focus,
-[data-glamor-4]:focus {
+.glamor-6:focus,
+[data-glamor-6]:focus {
   background-color: #ffbf47;
   outline: 3px solid #ffbf47;
 }
 
-.glamor-4:visited,
-[data-glamor-4]:visited {
+.glamor-6:visited,
+[data-glamor-6]:visited {
   color: #2e358b;
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    font-size: 24px;
-    line-height: 1.25;
-    margin-bottom: 0;
-  }
-}
-
-@media print {
-  .glamor-0,
-  [data-glamor-0] {
-    font-size: 16px;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-19,
-  [data-glamor-19] {
-    font-size: 16px;
-    line-height: 1.25;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-6,
-  [data-glamor-6] {
-    font-size: 16px;
-    line-height: 1.25;
     margin-bottom: 0;
   }
 }
 
 <glamorous(RelatedItems)>
   <RelatedItems
-    className="glamor-2"
+    className="glamor-0"
   >
     <Styled(div)
-      className="glamor-2"
+      className="glamor-0"
     >
       <div
-        className="glamor-2 glamor-23"
+        className="glamor-0 glamor-29"
       >
         <glamorous(Header)
           level={3}
         >
           <Header
-            className="glamor-2"
+            className="glamor-0"
             level={3}
           >
-            <glamorous(unknown)
-              className="glamor-2"
+            <Styled(Component)
+              className="glamor-0"
               level={3}
             >
               <Component
-                className="glamor-0"
+                className="glamor-0 glamor-1"
                 level={3}
               >
                 <h3
-                  className="glamor-0"
+                  className="glamor-0 glamor-1"
                 >
                   Travel abroad
                 </h3>
               </Component>
-            </glamorous(unknown)>
+            </Styled(Component)>
           </Header>
         </glamorous(Header)>
         <glamorous(UnorderedList)
           listStyleType="none"
         >
           <UnorderedList
-            className="glamor-2"
+            className="glamor-0"
             listStyleType="none"
           >
-            <glamorous(ul)
-              className="glamor-2"
+            <Styled(ul)
+              className="glamor-0"
               listStyleType="none"
             >
               <ul
-                className="glamor-19"
+                className="glamor-0 glamor-25"
               >
                 <glamorous(ListItem)>
                   <ListItem
-                    className="glamor-2"
+                    className="glamor-0"
                   >
-                    <glamorous(li)
-                      className="glamor-2"
+                    <Styled(li)
+                      className="glamor-0"
                     >
                       <li
-                        className="glamor-6"
+                        className="glamor-0 glamor-9"
                       >
                         <glamorous(Anchor)
                           href="https://example.com"
                         >
                           <Anchor
-                            className="glamor-4"
+                            className="glamor-6"
                             href="https://example.com"
                           >
                             <a
-                              className="glamor-4"
+                              className="glamor-6"
                               href="https://example.com"
                             >
                               Link A
@@ -203,28 +194,28 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
                           </Anchor>
                         </glamorous(Anchor)>
                       </li>
-                    </glamorous(li)>
+                    </Styled(li)>
                   </ListItem>
                 </glamorous(ListItem)>
                 <glamorous(ListItem)>
                   <ListItem
-                    className="glamor-2"
+                    className="glamor-0"
                   >
-                    <glamorous(li)
-                      className="glamor-2"
+                    <Styled(li)
+                      className="glamor-0"
                     >
                       <li
-                        className="glamor-6"
+                        className="glamor-0 glamor-9"
                       >
                         <glamorous(Anchor)
                           href="https://example.com"
                         >
                           <Anchor
-                            className="glamor-4"
+                            className="glamor-6"
                             href="https://example.com"
                           >
                             <a
-                              className="glamor-4"
+                              className="glamor-6"
                               href="https://example.com"
                             >
                               Link B
@@ -232,28 +223,28 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
                           </Anchor>
                         </glamorous(Anchor)>
                       </li>
-                    </glamorous(li)>
+                    </Styled(li)>
                   </ListItem>
                 </glamorous(ListItem)>
                 <glamorous(ListItem)>
                   <ListItem
-                    className="glamor-2"
+                    className="glamor-0"
                   >
-                    <glamorous(li)
-                      className="glamor-2"
+                    <Styled(li)
+                      className="glamor-0"
                     >
                       <li
-                        className="glamor-6"
+                        className="glamor-0 glamor-9"
                       >
                         <glamorous(Anchor)
                           href="https://example.com"
                         >
                           <Anchor
-                            className="glamor-4"
+                            className="glamor-6"
                             href="https://example.com"
                           >
                             <a
-                              className="glamor-4"
+                              className="glamor-6"
                               href="https://example.com"
                             >
                               <strong>
@@ -263,11 +254,11 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
                           </Anchor>
                         </glamorous(Anchor)>
                       </li>
-                    </glamorous(li)>
+                    </Styled(li)>
                   </ListItem>
                 </glamorous(ListItem)>
               </ul>
-            </glamorous(ul)>
+            </Styled(ul)>
           </UnorderedList>
         </glamorous(UnorderedList)>
       </div>

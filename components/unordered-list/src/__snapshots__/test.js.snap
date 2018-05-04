@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-16 {
+.emotion-19 {
   margin: 0;
   padding: 0;
   padding-left: 20px;
@@ -13,25 +13,31 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-16 {
+  .emotion-19 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-.glamor-3,
-[data-glamor-3] {
-  margin-bottom: 0;
-}
-
-.glamor-2,
-[data-glamor-2] {
-  font-family: "nta", Arial, sans-serif;
+.emotion-3 {
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 14px;
   line-height: 1.1428571429;
   width: 100%;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 5px;
+  }
+}
+
+.glamor-2,
+[data-glamor-2] {
   margin-bottom: 0;
 }
 
@@ -57,40 +63,31 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
   .glamor-2,
   [data-glamor-2] {
-    font-size: 16px;
-    line-height: 1.25;
     margin-bottom: 0;
   }
 }
 
 <glamorous(UnorderedList)>
   <UnorderedList
-    className="glamor-3"
+    className="glamor-2"
   >
     <Styled(ul)
-      className="glamor-3"
+      className="glamor-2"
     >
       <ul
-        className="glamor-3 glamor-16"
+        className="glamor-2 glamor-19"
       >
         <glamorous(ListItem)>
           <ListItem
-            className="glamor-3"
+            className="glamor-2"
           >
-            <glamorous(li)
-              className="glamor-3"
+            <Styled(li)
+              className="glamor-2"
             >
               <li
-                className="glamor-2"
+                className="glamor-2 glamor-3"
               >
                 <glamorous(Anchor)
                   href="http://example.com"
@@ -108,18 +105,18 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
                   </Anchor>
                 </glamorous(Anchor)>
               </li>
-            </glamorous(li)>
+            </Styled(li)>
           </ListItem>
         </glamorous(ListItem)>
         <glamorous(ListItem)>
           <ListItem
-            className="glamor-3"
+            className="glamor-2"
           >
-            <glamorous(li)
-              className="glamor-3"
+            <Styled(li)
+              className="glamor-2"
             >
               <li
-                className="glamor-2"
+                className="glamor-2 glamor-3"
               >
                 <glamorous(Anchor)
                   href="http://example.com"
@@ -137,18 +134,18 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
                   </Anchor>
                 </glamorous(Anchor)>
               </li>
-            </glamorous(li)>
+            </Styled(li)>
           </ListItem>
         </glamorous(ListItem)>
         <glamorous(ListItem)>
           <ListItem
-            className="glamor-3"
+            className="glamor-2"
           >
-            <glamorous(li)
-              className="glamor-3"
+            <Styled(li)
+              className="glamor-2"
             >
               <li
-                className="glamor-2"
+                className="glamor-2 glamor-3"
               >
                 <glamorous(Anchor)
                   href="http://example.com"
@@ -166,7 +163,7 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
                   </Anchor>
                 </glamorous(Anchor)>
               </li>
-            </glamorous(li)>
+            </Styled(li)>
           </ListItem>
         </glamorous(ListItem)>
       </ul>

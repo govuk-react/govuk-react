@@ -1,14 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
-  margin-bottom: 0;
-}
-
-.glamor-0,
-[data-glamor-0] {
-  font-family: "nta", Arial, sans-serif;
+.emotion-1 {
+  font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: block;
@@ -18,36 +12,42 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
-  margin-bottom: 0;
 }
 
-.glamor-6,
-[data-glamor-6] {
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+.emotion-9 {
   display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
 }
 
-.glamor-6:after,
-[data-glamor-6]:after {
+.emotion-9:after {
   content: '';
   display: table;
   clear: both;
 }
 
-.glamor-3,
-[data-glamor-3] {
+@media only screen and (min-width:641px) {
+  .emotion-9 {
+    max-width: 960px;
+  }
+}
+
+.emotion-5 {
   box-sizing: border-box;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -57,101 +57,89 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   width: 100%;
   padding: 5px 4px 4px;
   border: 2px solid #0b0c0c;
-  margin-bottom: 0;
 }
 
-.glamor-3:focus,
-[data-glamor-3]:focus {
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 50%;
+  }
+}
+
+.emotion-5 [disabled] {
+  cursor: auto;
+}
+
+.emotion-5:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
-  }
+.glamor-0,
+[data-glamor-0] {
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    font-size: 19px;
-    line-height: 1.3;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-6,
-  [data-glamor-6] {
-    max-width: 960px;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    font-size: 19px;
-    line-height: 1.3;
-    width: 50%;
     margin-bottom: 0;
   }
 }
 
 <glamorous(InputField)>
   <InputField
-    className="glamor-1"
+    className="glamor-0"
     hint={null}
     input={Object {}}
     meta={Object {}}
   >
     <glamorous(Label)
-      className="glamor-1"
+      className="glamor-0"
     >
       <Label
-        className="glamor-1"
+        className="glamor-0"
       >
-        <glamorous(label)
-          className="glamor-1"
+        <Styled(label)
+          className="glamor-0"
         >
           <label
-            className="glamor-6"
+            className="glamor-0 glamor-9"
           >
             <glamorous(LabelText)>
               <LabelText
-                className="glamor-1"
+                className="glamor-0"
               >
-                <glamorous(span)
-                  className="glamor-1"
+                <Styled(span)
+                  className="glamor-0"
                 >
                   <span
-                    className="glamor-0"
+                    className="glamor-0 glamor-1"
                   >
                     example
                   </span>
-                </glamorous(span)>
+                </Styled(span)>
               </LabelText>
             </glamorous(LabelText)>
             <glamorous(Input)>
               <Input
-                className="glamor-1"
+                className="glamor-0"
                 type="text"
               >
-                <glamorous(input)
-                  className="glamor-1"
+                <Styled(input)
+                  className="glamor-0"
                   type="text"
                 >
                   <input
-                    className="glamor-3"
+                    className="glamor-0 glamor-5"
                     type="text"
                   />
-                </glamorous(input)>
+                </Styled(input)>
               </Input>
             </glamorous(Input)>
           </label>
-        </glamorous(label)>
+        </Styled(label)>
       </Label>
     </glamorous(Label)>
   </InputField>

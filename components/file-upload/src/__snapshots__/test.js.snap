@@ -1,7 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
-.emotion-3 {
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.emotion-6:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    max-width: 960px;
+  }
+}
+
+.emotion-1 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+.emotion-4 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,14 +59,14 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-4 {
     font-size: 16px;
     line-height: 1.25;
     width: 50%;
   }
 }
 
-.emotion-3 [disabled] {
+.emotion-4 [disabled] {
   cursor: auto;
 }
 
@@ -31,46 +75,8 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
   margin-bottom: 20px;
 }
 
-.glamor-4,
-[data-glamor-4] {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  width: 100%;
-  margin-bottom: 20px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-}
-
-.glamor-4:after,
-[data-glamor-4]:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.glamor-1,
-[data-glamor-1] {
-  margin-bottom: 0;
-}
-
 .glamor-0,
 [data-glamor-0] {
-  font-family: "nta", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: block;
-  clear: none;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #0b0c0c;
-  padding-bottom: 2px;
   margin-bottom: 0;
 }
 
@@ -82,25 +88,8 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width: 641px) {
-  .glamor-4,
-  [data-glamor-4] {
-    max-width: 960px;
-    margin-bottom: 30px;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    font-size: 19px;
-    line-height: 1.3;
     margin-bottom: 0;
   }
 }
@@ -116,37 +105,37 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
       <Label
         className="glamor-5"
       >
-        <glamorous(label)
+        <Styled(label)
           className="glamor-5"
         >
           <label
-            className="glamor-4"
+            className="glamor-5 glamor-6"
           >
             <glamorous(LabelText)>
               <LabelText
-                className="glamor-1"
+                className="glamor-0"
               >
-                <glamorous(span)
-                  className="glamor-1"
+                <Styled(span)
+                  className="glamor-0"
                 >
                   <span
-                    className="glamor-0"
+                    className="glamor-0 glamor-1"
                   >
                     example
                   </span>
-                </glamorous(span)>
+                </Styled(span)>
               </LabelText>
             </glamorous(LabelText)>
             <Styled(input)
               type="file"
             >
               <input
-                className="glamor-3"
+                className="glamor-4"
                 type="file"
               />
             </Styled(input)>
           </label>
-        </glamorous(label)>
+        </Styled(label)>
       </Label>
     </glamorous(Label)>
   </FileUpload>

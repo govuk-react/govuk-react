@@ -1,57 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
-  margin-bottom: 0;
-}
-
-.glamor-0,
-[data-glamor-0] {
-  font-family: "nta", Arial, sans-serif;
+.emotion-1 {
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 14px;
   line-height: 1.1428571429;
   width: 100%;
-  margin-bottom: 0;
 }
 
-.glamor-3,
-[data-glamor-3] {
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 5px;
+  }
+}
+
+.emotion-5 {
   margin: 0;
   padding: 0;
   padding-left: 20px;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 14px;
   line-height: 1.1428571429;
   list-style-type: square;
-  margin-bottom: 0;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    font-size: 16px;
+    line-height: 1.25;
   }
+}
+
+.glamor-0,
+[data-glamor-0] {
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    font-size: 16px;
-    line-height: 1.25;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    font-size: 16px;
-    line-height: 1.25;
     margin-bottom: 0;
   }
 }
@@ -60,41 +53,41 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   listStyleType="square"
 >
   <ListNavigation
-    className="glamor-1"
+    className="glamor-0"
     listStyleType="square"
   >
     <glamorous(UnorderedList)
-      className="glamor-1"
+      className="glamor-0"
       listStyleType="square"
     >
       <UnorderedList
-        className="glamor-1"
+        className="glamor-0"
         listStyleType="square"
       >
-        <glamorous(ul)
-          className="glamor-1"
+        <Styled(ul)
+          className="glamor-0"
           listStyleType="square"
         >
           <ul
-            className="glamor-3"
+            className="glamor-0 glamor-5"
           >
             <glamorous(ListItem)>
               <ListItem
-                className="glamor-1"
+                className="glamor-0"
               >
-                <glamorous(li)
-                  className="glamor-1"
+                <Styled(li)
+                  className="glamor-0"
                 >
                   <li
-                    className="glamor-0"
+                    className="glamor-0 glamor-1"
                   >
                     Example
                   </li>
-                </glamorous(li)>
+                </Styled(li)>
               </ListItem>
             </glamorous(ListItem)>
           </ul>
-        </glamorous(ul)>
+        </Styled(ul)>
       </UnorderedList>
     </glamorous(UnorderedList)>
   </ListNavigation>

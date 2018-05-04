@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-4 {
+.emotion-5 {
   border-bottom: 1px solid #bfc1c3;
   box-sizing: border-box;
   padding-top: 10px;
@@ -14,53 +14,53 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-4 {
+  .emotion-5 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-.emotion-4 > a {
+.emotion-5 > a {
   color: #005ea5;
 }
 
-.glamor-1,
-[data-glamor-1] {
-  margin-bottom: 0;
-}
-
-.glamor-0,
-[data-glamor-0] {
+.emotion-1 {
   display: inline-block;
   margin: 0 8px 0 0;
   padding: 2px 5px;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1428571429;
   text-transform: uppercase;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
   letter-spacing: 1px;
+  -webkit-text-decoration: none;
   text-decoration: none;
   color: #ffffff;
   background-color: #005ea5;
   -webkit-font-mmoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-bottom: 0;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 16px;
+    line-height: 1.25;
+    padding-bottom: 0;
   }
+}
+
+.glamor-0,
+[data-glamor-0] {
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 641px) {
   .glamor-0,
   [data-glamor-0] {
-    font-size: 16px;
-    line-height: 1.25;
-    padding-bottom: 0;
     margin-bottom: 0;
   }
 }
@@ -69,28 +69,28 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   level="beta"
 >
   <PhaseBanner
-    className="glamor-1"
+    className="glamor-0"
     level="beta"
   >
     <Styled(div)
-      className="glamor-1"
+      className="glamor-0"
     >
       <div
-        className="glamor-1 glamor-4"
+        className="glamor-0 glamor-5"
       >
         <glamorous(PhaseBadge)>
           <PhaseBadge
-            className="glamor-1"
+            className="glamor-0"
           >
-            <glamorous(strong)
-              className="glamor-1"
+            <Styled(strong)
+              className="glamor-0"
             >
               <strong
-                className="glamor-0"
+                className="glamor-0 glamor-1"
               >
                 beta
               </strong>
-            </glamorous(strong)>
+            </Styled(strong)>
           </PhaseBadge>
         </glamorous(PhaseBadge)>
         example
