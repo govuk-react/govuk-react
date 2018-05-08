@@ -66,7 +66,7 @@ Use of these components assumes the following from the peer project:
 
 See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
 
-We have opted for [Emotion](https://emotion.sh/) over styled-components as we like the [support for JS syntax](https://emotion.sh/docs/object-styles) and would rather not burden either the front end or the transpiler with a CSS parser.
+We have opted for [Emotion](https://emotion.sh/) over styled-components as we like the [support for JS syntax](https://emotion.sh/docs/object-styles).
 
 We are also expecting to use [Interoperable Style Transfer Format (ISTF)](https://github.com/cssinjs/istf-spec) once it is finalised and compatible with a CSSinJS library, which would allow us to distribute CSSinJS stylesheets without a runtime.
 
