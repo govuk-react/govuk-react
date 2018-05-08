@@ -1,12 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import { createSerializer } from 'jest-emotion';
-import * as emotion from 'emotion';
 
 import GridRow from './';
-
-expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe(GridRow, () => {
   const wrapper = <GridRow />;

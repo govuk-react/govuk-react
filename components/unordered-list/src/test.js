@@ -3,12 +3,8 @@ import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import ListItem from '@govuk-react/list-item';
 import asAnchor from '@govuk-react/hoc/lib/asAnchor';
-import { createSerializer } from 'jest-emotion';
-import * as emotion from 'emotion';
 
 import UnorderedList from './';
-
-expect.addSnapshotSerializer(createSerializer(emotion));
 
 const AnchorTag = asAnchor('a');
 

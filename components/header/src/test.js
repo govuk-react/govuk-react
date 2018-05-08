@@ -1,13 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import { createSerializer } from 'jest-emotion';
-import * as emotion from 'emotion';
 
 import Header from '.';
 import { H1, H2, H3, H4, H5, H6 } from './presets';
-
-expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('Header', () => {
   const example = 'example';

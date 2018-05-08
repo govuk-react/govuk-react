@@ -1,12 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createSerializer } from 'jest-emotion';
 import { mount } from 'enzyme';
-import * as emotion from 'emotion';
 
 import Pagination from './';
-
-expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe(Pagination, () => {
   const wrapper = <Pagination>Example</Pagination>;

@@ -2,12 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import sinon from 'sinon';
-import { createSerializer } from 'jest-emotion';
-import * as emotion from 'emotion';
 
 import BackLink from './';
-
-expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('Back Link', () => {
   const onButtonClick = sinon.spy();

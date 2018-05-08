@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
-import { createSerializer } from 'jest-emotion';
-import * as emotion from 'emotion';
 
 import Button, {
   ButtonStart,
   ButtonStartIcon,
   ButtonDisabled,
 } from './fixtures';
-
-expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('button', () => {
   const wrapper = <Button />;

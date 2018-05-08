@@ -1,12 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import { createSerializer } from 'jest-emotion';
-import * as emotion from 'emotion';
 
 import ListNavigation from './';
-
-expect.addSnapshotSerializer(createSerializer(emotion));
 
 const example = 'example';
 const wrapper = <ListNavigation>{example}</ListNavigation>;

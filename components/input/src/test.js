@@ -2,12 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import { ORANGE } from 'govuk-colours';
-import { createSerializer } from 'jest-emotion';
-import * as emotion from 'emotion';
 
 import Input from './';
-
-expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('Input', () => {
   const wrapper = <Input type="text" />;

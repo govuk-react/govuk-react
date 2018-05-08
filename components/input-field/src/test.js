@@ -1,12 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
-import { createSerializer } from 'jest-emotion';
-import * as emotion from 'emotion';
 
 import InputField from './';
-
-expect.addSnapshotSerializer(createSerializer(emotion));
 
 describe('InputField', () => {
   const example = 'example';
