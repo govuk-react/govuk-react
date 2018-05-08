@@ -1,12 +1,22 @@
+import { renderToString } from 'react-dom/server'
+import { renderStylesToString } from 'emotion-server'
+
 import { generateImage as gi } from 'component-image';
-import renderGlamorous from 'render-glamorous';
+
+const renderEmotion = (component) => {
+  const { html, css } = renderStylesToString(() => renderToString(component));
+  return `
+    <style>${css}</style>
+    ${html}
+  `;
+};
 
 const generateImage = (component, config) =>
   gi(
     component,
     Object.assign(
       {
-        renderer: renderGlamorous,
+        renderer: renderEmotion,
       },
       config,
     ),
