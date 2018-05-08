@@ -67,7 +67,6 @@
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
-    "glamorous": ">=4",
     "prop-types": ">=15",
     "react": ">=16.2.0"
   },
@@ -141,11 +140,8 @@
     "eslint-plugin-react": "^7.5.1",
     "final-form": "^4.2.0",
     "flow-bin": "^0.71.0",
-    "glamor": "^2.20.40",
-    "glamorous": "^4.11.2",
     "jest": "^22.1.2",
     "jest-emotion": "^9.1.2",
-    "jest-glamor-react": "^3.3.0",
     "lerna": "2",
     "mkdirp-promise": "^5.0.1",
     "prop-types": "^15.6.0",
