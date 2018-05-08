@@ -41,7 +41,8 @@ const packageJson = () => {
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
-    "glamorous": ">=4",
+    "emotion": ">=9",
+    "react-emotion": ">=9",
     "prop-types": ">=15",
     "react": ">=15"
   },
@@ -107,7 +108,7 @@ const indexScript = () => {
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 
 import {
   FONT_SIZE,
@@ -116,7 +117,7 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-const ${componentName}Inner = glamorous.div({
+const ${componentName}Inner = styled('div')({
   boxSizing: 'border-box',
   fontFamily: NTA_LIGHT,
   fontWeight: 400,
