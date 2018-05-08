@@ -1,5 +1,5 @@
-import { renderToString } from 'react-dom/server'
-import { renderStylesToString } from 'emotion-server'
+import { renderToString } from 'react-dom/server';
+import { renderStylesToString } from 'emotion-server';
 
 import { generateImage as gi } from 'component-image';
 
