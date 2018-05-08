@@ -26,7 +26,7 @@
   "author": "Alasdair McLeay",
   "license": "MIT",
   "homepage": "https://github.com/penx/govuk-react#readme",
-  "description": "govuk-react: A port of the govuk-frontend components for React using Glamorous.",
+  "description": "govuk-react: A port of the govuk-frontend components for React using Emotion.",
   "private": false,
   "publishConfig": {
     "access": "public"
