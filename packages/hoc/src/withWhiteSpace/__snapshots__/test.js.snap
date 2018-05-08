@@ -1,20 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`withWhiteSpace matches wrapper snapshot: wrapper mount 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.emotion-0 {
+  margin-bottom: 0;
   margin-bottom: 0;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
     margin-bottom: 0;
   }
 }
 
 <InputField
-  className="glamor-0"
+  className="emotion-0"
   hint={null}
   input={Object {}}
   meta={Object {}}
