@@ -11,8 +11,8 @@
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
-    "emotion": "^9.1.2",
-    "react-emotion": "^9.1.2",
+    "emotion": ">=9",
+    "react-emotion": ">=9",
     "prop-types": ">=15",
     "react": ">=16.2.0"
   },
