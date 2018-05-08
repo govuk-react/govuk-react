@@ -1,7 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
+exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 .emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
   display: inline-block;
   margin: 0 8px 0 0;
   padding: 2px 5px;
@@ -20,41 +30,36 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   background-color: #005ea5;
   -webkit-font-mmoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-0 {
     font-size: 16px;
     line-height: 1.25;
     padding-bottom: 0;
   }
 }
 
-.glamor-0,
-[data-glamor-0] {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
     margin-bottom: 0;
   }
 }
 
-<glamorous(PhaseBadge)>
+<Styled(PhaseBadge)>
   <PhaseBadge
-    className="glamor-0"
+    className="emotion-1"
   >
     <Styled(strong)
-      className="glamor-0"
+      className="emotion-1"
     >
       <strong
-        className="glamor-0 glamor-1"
+        className="emotion-0"
       >
         beta
       </strong>
     </Styled(strong)>
   </PhaseBadge>
-</glamorous(PhaseBadge)>
+</Styled(PhaseBadge)>
 `;

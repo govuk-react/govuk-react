@@ -2,6 +2,16 @@
 
 exports[`button matches wrapper snapshot: wrapper mount 1`] = `
 .emotion-1 {
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 20px;
+  }
+}
+
+.emotion-0 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -31,49 +41,44 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
   padding-right: .84211em;
+  margin-bottom: 15px;
 }
 
-.emotion-1 [disabled] {
+.emotion-0 [disabled] {
   opacity: .5;
   pointer-events: none;
 }
 
-.emotion-1:focus {
+.emotion-0:focus {
   outline: 3px solid #ffbf47;
 }
 
-.emotion-1 svg {
+.emotion-0 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
-.glamor-0,
-[data-glamor-0] {
-  margin-bottom: 15px;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
     margin-bottom: 20px;
   }
 }
 
 <_default>
-  <glamorous(Button)>
+  <Styled(Button)>
     <Button
-      className="glamor-0"
+      className="emotion-1"
     >
       <Styled(button)
-        className="glamor-0"
+        className="emotion-1"
       >
         <button
-          className="glamor-0 glamor-1"
+          className="emotion-0"
         >
           Save and continue
         </button>
       </Styled(button)>
     </Button>
-  </glamorous(Button)>
+  </Styled(Button)>
 </_default>
 `;

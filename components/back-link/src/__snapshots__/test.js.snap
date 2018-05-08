@@ -2,6 +2,16 @@
 
 exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
 .emotion-1 {
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 15px;
+  }
+}
+
+.emotion-0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,16 +27,17 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
   border-bottom: 1px solid #0b0c0c;
   -webkit-text-decoration: none;
   text-decoration: none;
+  margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-0 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-.emotion-1::before {
+.emotion-0::before {
   display: block;
   width: 0;
   height: 0;
@@ -44,41 +55,35 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
   margin: auto;
 }
 
-.emotion-1:focus {
+.emotion-0:focus {
   background-color: #ffbf47;
   outline: 3px solid #ffbf47;
 }
 
-.glamor-0,
-[data-glamor-0] {
-  margin-bottom: 15px;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
     margin-bottom: 15px;
   }
 }
 
-<glamorous(BackLink)
+<Styled(BackLink)
   goBack={[Function]}
 >
   <BackLink
-    className="glamor-0"
+    className="emotion-1"
     goBack={[Function]}
   >
     <Styled(button)
-      className="glamor-0"
+      className="emotion-1"
       onClick={[Function]}
     >
       <button
-        className="glamor-0 glamor-1"
+        className="emotion-0"
         onClick={[Function]}
       >
         example
       </button>
     </Styled(button)>
   </BackLink>
-</glamorous(BackLink)>
+</Styled(BackLink)>
 `;

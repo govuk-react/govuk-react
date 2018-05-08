@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
+exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
+.emotion-1 {
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 45px;
+  }
+}
+
 .emotion-0 {
   font-family: "nta",Arial,sans-serif;
   font-size: 18px;
@@ -15,29 +25,17 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-.glamor-1,
-[data-glamor-1] {
-  margin-bottom: 15px;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 45px;
-  }
-}
-
-<glamorous(LeadParagraph)>
+<Styled(LeadParagraph)>
   <LeadParagraph
-    className="glamor-1"
+    className="emotion-1"
   >
     <Styled(p)>
       <p
-        className="glamor-0"
+        className="emotion-0"
       >
         example
       </p>
     </Styled(p)>
   </LeadParagraph>
-</glamorous(LeadParagraph)>
+</Styled(LeadParagraph)>
 `;

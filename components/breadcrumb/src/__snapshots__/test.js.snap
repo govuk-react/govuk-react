@@ -2,17 +2,34 @@
 
 exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
 .emotion-4 {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 10px;
+  }
+}
+
+.emotion-3 {
   font-family: "nta",Arial,sans-serif;
   font-size: 14px;
   line-height: 1.1428571429;
   margin-top: 15px;
   -webkit-font-smoothing: antialiased;
+  margin-bottom: 10px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-4 {
+  .emotion-3 {
     font-size: 16px;
     line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 10px;
   }
 }
 
@@ -70,37 +87,25 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
   outline: 3px solid #ffbf47;
 }
 
-.glamor-3,
-[data-glamor-3] {
-  margin-bottom: 10px;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    margin-bottom: 10px;
-  }
-}
-
-<glamorous(Breadcrumb)>
+<Styled(Breadcrumb)>
   <Breadcrumb
-    className="glamor-3"
+    className="emotion-4"
   >
     <Styled(div)
-      className="glamor-3"
+      className="emotion-4"
     >
       <div
-        className="glamor-3 glamor-4"
+        className="emotion-3"
       >
         <Styled(ul)>
           <ul
-            className="glamor-2"
+            className="emotion-2"
           >
             <Styled(li)
               key="0"
             >
               <li
-                className="glamor-0"
+                className="emotion-0"
               >
                 <a
                   href="/section"
@@ -113,7 +118,7 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
               key="1"
             >
               <li
-                className="glamor-0"
+                className="emotion-0"
               >
                 example
               </li>
@@ -123,5 +128,5 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
       </div>
     </Styled(div)>
   </Breadcrumb>
-</glamorous(Breadcrumb)>
+</Styled(Breadcrumb)>
 `;

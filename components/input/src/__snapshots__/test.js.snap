@@ -2,6 +2,16 @@
 
 exports[`Input matches withColouredError snapshot: with coloured error mount 1`] = `
 .emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -14,65 +24,70 @@ exports[`Input matches withColouredError snapshot: with coloured error mount 1`]
   padding: 5px 4px 4px;
   border: 2px solid #0b0c0c;
   border: 4px solid #f47738;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
     width: 50%;
   }
 }
 
-.emotion-1 [disabled] {
+.emotion-0 [disabled] {
   cursor: auto;
 }
 
-.emotion-1:focus {
+.emotion-0:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.glamor-0,
-[data-glamor-0] {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
     margin-bottom: 0;
   }
 }
 
-<glamorous(Input)
+<Styled(Input)
   error="example"
   errorColor="#f47738"
   type="text"
 >
   <Input
-    className="glamor-0"
+    className="emotion-1"
     error="example"
     errorColor="#f47738"
     type="text"
   >
     <Styled(input)
-      className="glamor-0"
+      className="emotion-1"
       error="example"
       errorColor="#f47738"
       type="text"
     >
       <input
-        className="glamor-0 glamor-1"
+        className="emotion-0"
         type="text"
       />
     </Styled(input)>
   </Input>
-</glamorous(Input)>
+</Styled(Input)>
 `;
 
 exports[`Input matches withError snapshot: with error mount 1`] = `
 .emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -85,62 +100,67 @@ exports[`Input matches withError snapshot: with error mount 1`] = `
   padding: 5px 4px 4px;
   border: 2px solid #0b0c0c;
   border: 4px solid #b10e1e;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
     width: 50%;
   }
 }
 
-.emotion-1 [disabled] {
+.emotion-0 [disabled] {
   cursor: auto;
 }
 
-.emotion-1:focus {
+.emotion-0:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.glamor-0,
-[data-glamor-0] {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
     margin-bottom: 0;
   }
 }
 
-<glamorous(Input)
+<Styled(Input)
   error="example"
   type="text"
 >
   <Input
-    className="glamor-0"
+    className="emotion-1"
     error="example"
     type="text"
   >
     <Styled(input)
-      className="glamor-0"
+      className="emotion-1"
       error="example"
       type="text"
     >
       <input
-        className="glamor-0 glamor-1"
+        className="emotion-0"
         type="text"
       />
     </Styled(input)>
   </Input>
-</glamorous(Input)>
+</Styled(Input)>
 `;
 
 exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
 .emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -152,53 +172,48 @@ exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
   width: 100%;
   padding: 5px 4px 4px;
   border: 2px solid #0b0c0c;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
     width: 50%;
   }
 }
 
-.emotion-1 [disabled] {
+.emotion-0 [disabled] {
   cursor: auto;
 }
 
-.emotion-1:focus {
+.emotion-0:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.glamor-0,
-[data-glamor-0] {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
     margin-bottom: 0;
   }
 }
 
-<glamorous(Input)
+<Styled(Input)
   type="text"
 >
   <Input
-    className="glamor-0"
+    className="emotion-1"
     type="text"
   >
     <Styled(input)
-      className="glamor-0"
+      className="emotion-1"
       type="text"
     >
       <input
-        className="glamor-0 glamor-1"
+        className="emotion-0"
         type="text"
       />
     </Styled(input)>
   </Input>
-</glamorous(Input)>
+</Styled(Input)>
 `;

@@ -2,6 +2,16 @@
 
 exports[`LabelText matches noError snapshot: no error mount 1`] = `
 .emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,46 +22,51 @@ exports[`LabelText matches noError snapshot: no error mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
-.glamor-0,
-[data-glamor-0] {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
     margin-bottom: 0;
   }
 }
 
-<glamorous(LabelText)>
+<Styled(LabelText)>
   <LabelText
-    className="glamor-0"
+    className="emotion-1"
   >
     <Styled(span)
-      className="glamor-0"
+      className="emotion-1"
     >
       <span
-        className="glamor-0 glamor-1"
+        className="emotion-0"
       >
         example
       </span>
     </Styled(span)>
   </LabelText>
-</glamorous(LabelText)>
+</Styled(LabelText)>
 `;
 
 exports[`LabelText matches wrapper snapshot: wrapper mount 1`] = `
 .emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -63,44 +78,39 @@ exports[`LabelText matches wrapper snapshot: wrapper mount 1`] = `
   color: #0b0c0c;
   padding-bottom: 2px;
   font-weight: 700;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
-.glamor-0,
-[data-glamor-0] {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
     margin-bottom: 0;
   }
 }
 
-<glamorous(LabelText)
+<Styled(LabelText)
   error="example"
 >
   <LabelText
-    className="glamor-0"
+    className="emotion-1"
     error="example"
   >
     <Styled(span)
-      className="glamor-0"
+      className="emotion-1"
       error="example"
     >
       <span
-        className="glamor-0 glamor-1"
+        className="emotion-0"
       >
         example
       </span>
     </Styled(span)>
   </LabelText>
-</glamorous(LabelText)>
+</Styled(LabelText)>
 `;

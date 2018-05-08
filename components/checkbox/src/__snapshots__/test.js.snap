@@ -2,9 +2,26 @@
 
 exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
 .emotion-3 {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 10px;
+  }
+}
+
+.emotion-2 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-2 {
+    margin-bottom: 10px;
+  }
 }
 
 .emotion-0 {
@@ -87,39 +104,27 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   opacity: 0;
 }
 
-.glamor-2,
-[data-glamor-2] {
-  margin-bottom: 10px;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
-    margin-bottom: 10px;
-  }
-}
-
-<glamorous(Checkbox)>
+<Styled(Checkbox)>
   <Checkbox
-    className="glamor-2"
+    className="emotion-3"
   >
     <Styled(label)
-      className="glamor-2"
+      className="emotion-3"
     >
       <label
-        className="glamor-2 glamor-3"
+        className="emotion-2"
       >
         <Styled(input)
           type="checkbox"
         >
           <input
-            className="glamor-0"
+            className="emotion-0"
             type="checkbox"
           />
         </Styled(input)>
         <Styled(span)>
           <span
-            className="glamor-1"
+            className="emotion-1"
           >
             example
           </span>
@@ -127,5 +132,5 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
       </label>
     </Styled(label)>
   </Checkbox>
-</glamorous(Checkbox)>
+</Styled(Checkbox)>
 `;

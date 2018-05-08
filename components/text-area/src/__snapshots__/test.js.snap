@@ -2,6 +2,33 @@
 
 exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
 .emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-8 {
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,16 +39,23 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
-.emotion-10 {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -34,21 +68,35 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   border-left: 4px solid #b10e1e;
   margin-right: 15px;
   padding-left: 10px;
+  margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-.emotion-10:after {
+.emotion-7:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-10 {
+  .emotion-7 {
     max-width: 960px;
   }
 }
 
-.emotion-5 {
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-3 {
   display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -60,16 +108,23 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   color: #b10e1e;
   padding-top: 4px;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-5 {
+  .emotion-3 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
-.emotion-8 {
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-6 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
@@ -83,35 +138,23 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-8 {
+  .emotion-6 {
     font-size: 19px;
     line-height: 1.3;
     width: 75%;
   }
 }
 
-.emotion-8 [disabled] {
+.emotion-6 [disabled] {
   cursor: auto;
 }
 
-.emotion-8:focus {
+.emotion-6:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.glamor-0,
-[data-glamor-0] {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    margin-bottom: 0;
-  }
-}
-
-<glamorous(TextArea)
+<Styled(TextArea)
   errorText="example"
   meta={
     Object {
@@ -121,7 +164,7 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   }
 >
   <TextArea
-    className="glamor-0"
+    className="emotion-1"
     errorText="example"
     input={Object {}}
     meta={
@@ -131,58 +174,58 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
       }
     }
   >
-    <glamorous(Label)
-      className="glamor-0"
+    <Styled(Label)
+      className="emotion-1"
       error="example"
     >
       <Label
-        className="glamor-0"
+        className="emotion-8"
         error="example"
       >
         <Styled(label)
-          className="glamor-0"
+          className="emotion-8"
           error="example"
         >
           <label
-            className="glamor-0 glamor-10"
+            className="emotion-7"
           >
-            <glamorous(LabelText)>
+            <Styled(LabelText)>
               <LabelText
-                className="glamor-0"
+                className="emotion-1"
               >
                 <Styled(span)
-                  className="glamor-0"
+                  className="emotion-1"
                 >
                   <span
-                    className="glamor-0 glamor-1"
+                    className="emotion-0"
                   >
                     example
                   </span>
                 </Styled(span)>
               </LabelText>
-            </glamorous(LabelText)>
-            <glamorous(ErrorText)>
+            </Styled(LabelText)>
+            <Styled(ErrorText)>
               <ErrorText
-                className="glamor-0"
+                className="emotion-1"
               >
                 <Styled(span)
-                  className="glamor-0"
+                  className="emotion-1"
                 >
                   <span
-                    className="glamor-0 glamor-5"
+                    className="emotion-3"
                   >
                     example
                   </span>
                 </Styled(span)>
               </ErrorText>
-            </glamorous(ErrorText)>
+            </Styled(ErrorText)>
             <Styled(textarea)
               error="example"
               rows="5"
               type="text"
             >
               <textarea
-                className="glamor-8"
+                className="emotion-6"
                 rows="5"
                 type="text"
               />
@@ -190,13 +233,40 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
           </label>
         </Styled(label)>
       </Label>
-    </glamorous(Label)>
+    </Styled(Label)>
   </TextArea>
-</glamorous(TextArea)>
+</Styled(TextArea)>
 `;
 
 exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
-.emotion-10 {
+.emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-8 {
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -206,21 +276,35 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-.emotion-10:after {
+.emotion-7:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-10 {
+  .emotion-7 {
     max-width: 960px;
   }
 }
 
-.emotion-1 {
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -231,16 +315,23 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
-.emotion-8 {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-6 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
@@ -253,23 +344,23 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-8 {
+  .emotion-6 {
     font-size: 19px;
     line-height: 1.3;
     width: 75%;
   }
 }
 
-.emotion-8 [disabled] {
+.emotion-6 [disabled] {
   cursor: auto;
 }
 
-.emotion-8:focus {
+.emotion-6:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.emotion-5 {
+.emotion-3 {
   display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -279,84 +370,79 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   font-size: 16px;
   line-height: 1.25;
   color: #6f777b;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-5 {
+  .emotion-3 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
-.glamor-0,
-[data-glamor-0] {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-3 {
     margin-bottom: 0;
   }
 }
 
-<glamorous(TextArea)
+<Styled(TextArea)
   hint="example"
 >
   <TextArea
-    className="glamor-0"
+    className="emotion-1"
     hint="example"
     input={Object {}}
     meta={Object {}}
   >
-    <glamorous(Label)
-      className="glamor-0"
+    <Styled(Label)
+      className="emotion-1"
     >
       <Label
-        className="glamor-0"
+        className="emotion-8"
       >
         <Styled(label)
-          className="glamor-0"
+          className="emotion-8"
         >
           <label
-            className="glamor-0 glamor-10"
+            className="emotion-7"
           >
-            <glamorous(LabelText)>
+            <Styled(LabelText)>
               <LabelText
-                className="glamor-0"
+                className="emotion-1"
               >
                 <Styled(span)
-                  className="glamor-0"
+                  className="emotion-1"
                 >
                   <span
-                    className="glamor-0 glamor-1"
+                    className="emotion-0"
                   >
                     example
                   </span>
                 </Styled(span)>
               </LabelText>
-            </glamorous(LabelText)>
-            <glamorous(HintText)>
+            </Styled(LabelText)>
+            <Styled(HintText)>
               <HintText
-                className="glamor-0"
+                className="emotion-1"
               >
                 <Styled(span)
-                  className="glamor-0"
+                  className="emotion-1"
                 >
                   <span
-                    className="glamor-0 glamor-5"
+                    className="emotion-3"
                   >
                     example
                   </span>
                 </Styled(span)>
               </HintText>
-            </glamorous(HintText)>
+            </Styled(HintText)>
             <Styled(textarea)
               rows="5"
               type="text"
             >
               <textarea
-                className="glamor-8"
+                className="emotion-6"
                 rows="5"
                 type="text"
               />
@@ -364,13 +450,40 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
           </label>
         </Styled(label)>
       </Label>
-    </glamorous(Label)>
+    </Styled(Label)>
   </TextArea>
-</glamorous(TextArea)>
+</Styled(TextArea)>
 `;
 
 exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-6 {
+.emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-5 {
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -380,21 +493,35 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-.emotion-6:after {
+.emotion-4:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-4 {
     max-width: 960px;
   }
 }
 
-.emotion-1 {
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -405,16 +532,23 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
-.emotion-4 {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-3 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
@@ -427,73 +561,61 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-4 {
+  .emotion-3 {
     font-size: 19px;
     line-height: 1.3;
     width: 75%;
   }
 }
 
-.emotion-4 [disabled] {
+.emotion-3 [disabled] {
   cursor: auto;
 }
 
-.emotion-4:focus {
+.emotion-3:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.glamor-0,
-[data-glamor-0] {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    margin-bottom: 0;
-  }
-}
-
-<glamorous(TextArea)>
+<Styled(TextArea)>
   <TextArea
-    className="glamor-0"
+    className="emotion-1"
     input={Object {}}
     meta={Object {}}
   >
-    <glamorous(Label)
-      className="glamor-0"
+    <Styled(Label)
+      className="emotion-1"
     >
       <Label
-        className="glamor-0"
+        className="emotion-5"
       >
         <Styled(label)
-          className="glamor-0"
+          className="emotion-5"
         >
           <label
-            className="glamor-0 glamor-6"
+            className="emotion-4"
           >
-            <glamorous(LabelText)>
+            <Styled(LabelText)>
               <LabelText
-                className="glamor-0"
+                className="emotion-1"
               >
                 <Styled(span)
-                  className="glamor-0"
+                  className="emotion-1"
                 >
                   <span
-                    className="glamor-0 glamor-1"
+                    className="emotion-0"
                   >
                     example
                   </span>
                 </Styled(span)>
               </LabelText>
-            </glamorous(LabelText)>
+            </Styled(LabelText)>
             <Styled(textarea)
               rows="5"
               type="text"
             >
               <textarea
-                className="glamor-4"
+                className="emotion-3"
                 rows="5"
                 type="text"
               />
@@ -501,7 +623,7 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
           </label>
         </Styled(label)>
       </Label>
-    </glamorous(Label)>
+    </Styled(Label)>
   </TextArea>
-</glamorous(TextArea)>
+</Styled(TextArea)>
 `;

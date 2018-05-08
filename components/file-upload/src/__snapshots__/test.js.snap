@@ -1,7 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
-.emotion-6 {
+.emotion-7 {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-5 {
+  margin-bottom: 0;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11,21 +38,45 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
-.emotion-6:after {
+.emotion-4:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-4 {
     max-width: 960px;
   }
 }
 
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 30px;
+  }
+}
+
 .emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,16 +87,23 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
-.emotion-4 {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-3 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -59,85 +117,61 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-4 {
+  .emotion-3 {
     font-size: 16px;
     line-height: 1.25;
     width: 50%;
   }
 }
 
-.emotion-4 [disabled] {
+.emotion-3 [disabled] {
   cursor: auto;
 }
 
-.glamor-5,
-[data-glamor-5] {
-  margin-bottom: 20px;
-}
-
-.glamor-0,
-[data-glamor-0] {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-5,
-  [data-glamor-5] {
-    margin-bottom: 30px;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    margin-bottom: 0;
-  }
-}
-
-<glamorous(FileUpload)>
+<Styled(FileUpload)>
   <FileUpload
-    className="glamor-5"
+    className="emotion-7"
     meta={Object {}}
   >
-    <glamorous(Label)
-      className="glamor-5"
+    <Styled(Label)
+      className="emotion-7"
     >
       <Label
-        className="glamor-5"
+        className="emotion-5"
       >
         <Styled(label)
-          className="glamor-5"
+          className="emotion-5"
         >
           <label
-            className="glamor-5 glamor-6"
+            className="emotion-4"
           >
-            <glamorous(LabelText)>
+            <Styled(LabelText)>
               <LabelText
-                className="glamor-0"
+                className="emotion-1"
               >
                 <Styled(span)
-                  className="glamor-0"
+                  className="emotion-1"
                 >
                   <span
-                    className="glamor-0 glamor-1"
+                    className="emotion-0"
                   >
                     example
                   </span>
                 </Styled(span)>
               </LabelText>
-            </glamorous(LabelText)>
+            </Styled(LabelText)>
             <Styled(input)
               type="file"
             >
               <input
-                className="glamor-4"
+                className="emotion-3"
                 type="file"
               />
             </Styled(input)>
           </label>
         </Styled(label)>
       </Label>
-    </glamorous(Label)>
+    </Styled(Label)>
   </FileUpload>
-</glamorous(FileUpload)>
+</Styled(FileUpload)>
 `;

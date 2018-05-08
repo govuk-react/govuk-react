@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio matches snapshot for inline: inline mount 1`] = `
+.emotion-3 {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 10px;
+  }
+}
+
 .emotion-0 {
   position: absolute;
   cursor: pointer;
@@ -68,56 +78,51 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   opacity: 0;
 }
 
-.emotion-3 {
+.emotion-2 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
   float: left;
   clear: none;
   margin-right: 30px;
-}
-
-.glamor-2,
-[data-glamor-2] {
   margin-bottom: 10px;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
+@media only screen and (min-width:641px) {
+  .emotion-2 {
     margin-bottom: 10px;
   }
 }
 
-<glamorous(Radio)
+<Styled(Radio)
   inline={true}
   name="example"
 >
   <Radio
-    className="glamor-2"
+    className="emotion-3"
     inline={true}
     name="example"
   >
     <Styled(label)
-      className="glamor-2"
+      className="emotion-3"
       inline={true}
     >
       <label
-        className="glamor-2 glamor-3"
+        className="emotion-2"
       >
         <Styled(input)
           name="example"
           type="radio"
         >
           <input
-            className="glamor-0"
+            className="emotion-0"
             name="example"
             type="radio"
           />
         </Styled(input)>
         <Styled(span)>
           <span
-            className="glamor-1"
+            className="emotion-1"
           >
             example
           </span>
@@ -125,15 +130,32 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
       </label>
     </Styled(label)>
   </Radio>
-</glamorous(Radio)>
+</Styled(Radio)>
 `;
 
 exports[`Radio matches snapshot: standard mount 1`] = `
 .emotion-3 {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 10px;
+  }
+}
+
+.emotion-2 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
   margin-right: 0px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-2 {
+    margin-bottom: 10px;
+  }
 }
 
 .emotion-0 {
@@ -203,44 +225,32 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   opacity: 0;
 }
 
-.glamor-2,
-[data-glamor-2] {
-  margin-bottom: 10px;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
-    margin-bottom: 10px;
-  }
-}
-
-<glamorous(Radio)
+<Styled(Radio)
   name="example"
 >
   <Radio
-    className="glamor-2"
+    className="emotion-3"
     name="example"
   >
     <Styled(label)
-      className="glamor-2"
+      className="emotion-3"
     >
       <label
-        className="glamor-2 glamor-3"
+        className="emotion-2"
       >
         <Styled(input)
           name="example"
           type="radio"
         >
           <input
-            className="glamor-0"
+            className="emotion-0"
             name="example"
             type="radio"
           />
         </Styled(input)>
         <Styled(span)>
           <span
-            className="glamor-1"
+            className="emotion-1"
           >
             example
           </span>
@@ -248,5 +258,5 @@ exports[`Radio matches snapshot: standard mount 1`] = `
       </label>
     </Styled(label)>
   </Radio>
-</glamorous(Radio)>
+</Styled(Radio)>
 `;

@@ -2,6 +2,16 @@
 
 exports[`ErrorText matches wrapper snapshot: wrapper mount 1`] = `
 .emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
   display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -13,40 +23,35 @@ exports[`ErrorText matches wrapper snapshot: wrapper mount 1`] = `
   color: #b10e1e;
   padding-top: 4px;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
-.glamor-0,
-[data-glamor-0] {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
     margin-bottom: 0;
   }
 }
 
-<glamorous(ErrorText)>
+<Styled(ErrorText)>
   <ErrorText
-    className="glamor-0"
+    className="emotion-1"
   >
     <Styled(span)
-      className="glamor-0"
+      className="emotion-1"
     >
       <span
-        className="glamor-0 glamor-1"
+        className="emotion-0"
       >
         example
       </span>
     </Styled(span)>
   </ErrorText>
-</glamorous(ErrorText)>
+</Styled(ErrorText)>
 `;

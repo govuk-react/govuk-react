@@ -1,11 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ThemedComponent matches snapshot: enzyme.mount 1`] = `
+exports[`Styled matches snapshot: enzyme.mount 1`] = `
+.emotion-4 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 0;
+  }
+}
+
 .emotion-0 {
   font-family: "nta",Arial,sans-serif;
 }
 
-.emotion-4 {
+.emotion-3 {
   margin: 0;
   padding: 0;
   padding-left: 20px;
@@ -17,12 +27,19 @@ exports[`ThemedComponent matches snapshot: enzyme.mount 1`] = `
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-4 {
+  .emotion-3 {
     font-size: 16px;
     line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
   }
 }
 
@@ -37,19 +54,7 @@ exports[`ThemedComponent matches snapshot: enzyme.mount 1`] = `
   text-decoration: none;
 }
 
-.glamor-3,
-[data-glamor-3] {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    margin-bottom: 0;
-  }
-}
-
-<glamorous(DocumentFooterMetadata)
+<Styled(DocumentFooterMetadata)
   partOf={
     Array [
       "example",
@@ -58,7 +63,7 @@ exports[`ThemedComponent matches snapshot: enzyme.mount 1`] = `
   }
 >
   <DocumentFooterMetadata
-    className="glamor-3"
+    className="emotion-4"
     partOf={
       Array [
         "example",
@@ -69,12 +74,12 @@ exports[`ThemedComponent matches snapshot: enzyme.mount 1`] = `
     <div>
       <Styled(div)>
         <div
-          className="glamor-0"
+          className="emotion-0"
         />
       </Styled(div)>
       <Styled(div)>
         <div
-          className="glamor-0"
+          className="emotion-0"
         >
           <div>
             <p
@@ -86,25 +91,25 @@ exports[`ThemedComponent matches snapshot: enzyme.mount 1`] = `
             >
               Part of:
             </p>
-            <glamorous(UnorderedList)
+            <Styled(UnorderedList)
               listStyleType="none"
             >
               <UnorderedList
-                className="glamor-3"
+                className="emotion-4"
                 listStyleType="none"
               >
                 <Styled(ul)
-                  className="glamor-3"
+                  className="emotion-4"
                   listStyleType="none"
                 >
                   <ul
-                    className="glamor-3 glamor-4"
+                    className="emotion-3"
                   >
                     <Styled(li)
                       key="0"
                     >
                       <li
-                        className="glamor-1"
+                        className="emotion-1"
                       >
                         example
                       </li>
@@ -113,7 +118,7 @@ exports[`ThemedComponent matches snapshot: enzyme.mount 1`] = `
                       key="1"
                     >
                       <li
-                        className="glamor-1"
+                        className="emotion-1"
                       >
                         exampleexample
                       </li>
@@ -121,16 +126,16 @@ exports[`ThemedComponent matches snapshot: enzyme.mount 1`] = `
                   </ul>
                 </Styled(ul)>
               </UnorderedList>
-            </glamorous(UnorderedList)>
+            </Styled(UnorderedList)>
           </div>
         </div>
       </Styled(div)>
       <Styled(div)>
         <div
-          className="glamor-0"
+          className="emotion-0"
         />
       </Styled(div)>
     </div>
   </DocumentFooterMetadata>
-</glamorous(DocumentFooterMetadata)>
+</Styled(DocumentFooterMetadata)>
 `;

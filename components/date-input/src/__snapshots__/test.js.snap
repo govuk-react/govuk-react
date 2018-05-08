@@ -1,7 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
-.emotion-37 {
+.emotion-29 {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-29 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12,9 +22,26 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   border-left: 4px solid #b10e1e;
   margin-right: 15px;
   padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-28 {
+    margin-bottom: 30px;
+  }
 }
 
 .emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -25,16 +52,23 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
-.emotion-5 {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-3 {
   display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -46,16 +80,23 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   color: #b10e1e;
   padding-top: 4px;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-5 {
+  .emotion-3 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
-.emotion-35 {
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-27 {
   font-family: "nta",Arial,sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
@@ -63,17 +104,17 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   display: flex;
 }
 
-.emotion-35 > label {
+.emotion-27 > label {
   width: 50px;
   margin-right: 20px;
   margin-bottom: 0;
 }
 
-.emotion-35 > label .year {
+.emotion-27 > label .year {
   width: 70px;
 }
 
-.emotion-14 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -83,21 +124,28 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 0;
 }
 
-.emotion-14:after {
+.emotion-10:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-14 {
+  .emotion-10 {
     max-width: 960px;
   }
 }
 
-.emotion-12 {
+@media only screen and (min-width:641px) {
+  .emotion-10 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-9 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -113,222 +161,198 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-12 {
+  .emotion-9 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
-.emotion-12 [disabled] {
+.emotion-9 [disabled] {
   cursor: auto;
 }
 
-.emotion-12:focus {
+.emotion-9:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.glamor-36,
-[data-glamor-36] {
-  margin-bottom: 20px;
-}
-
-.glamor-0,
-[data-glamor-0] {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-36,
-  [data-glamor-36] {
-    margin-bottom: 30px;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    margin-bottom: 0;
-  }
-}
-
-<glamorous(DateInput)
+<Styled(DateInput)
   errorText="example"
 >
   <DateInput
-    className="glamor-36"
+    className="emotion-29"
     errorText="example"
   >
     <Styled(div)
-      className="glamor-36"
+      className="emotion-29"
       errorText="example"
     >
       <div
-        className="glamor-36 glamor-37"
+        className="emotion-28"
       >
-        <glamorous(LabelText)
+        <Styled(LabelText)
           errorText="example"
         >
           <LabelText
-            className="glamor-0"
+            className="emotion-1"
             errorText="example"
           >
             <Styled(span)
-              className="glamor-0"
+              className="emotion-1"
               errorText="example"
             >
               <span
-                className="glamor-0 glamor-1"
+                className="emotion-0"
               >
                 example
               </span>
             </Styled(span)>
           </LabelText>
-        </glamorous(LabelText)>
+        </Styled(LabelText)>
         <span />
-        <glamorous(ErrorText)
+        <Styled(ErrorText)
           errorText="example"
         >
           <ErrorText
-            className="glamor-0"
+            className="emotion-1"
             errorText="example"
           >
             <Styled(span)
-              className="glamor-0"
+              className="emotion-1"
               errorText="example"
             >
               <span
-                className="glamor-0 glamor-5"
+                className="emotion-3"
               >
                 example
               </span>
             </Styled(span)>
           </ErrorText>
-        </glamorous(ErrorText)>
+        </Styled(ErrorText)>
         <Styled(div)>
           <div
-            className="glamor-35"
+            className="emotion-27"
           >
-            <glamorous(Label)>
+            <Styled(Label)>
               <Label
-                className="glamor-0"
+                className="emotion-1"
               >
                 <Styled(label)
-                  className="glamor-0"
+                  className="emotion-1"
                 >
                   <label
-                    className="glamor-0 glamor-14"
+                    className="emotion-10"
                   >
-                    <glamorous(LabelText)>
+                    <Styled(LabelText)>
                       <LabelText
-                        className="glamor-0"
+                        className="emotion-1"
                       >
                         <Styled(span)
-                          className="glamor-0"
+                          className="emotion-1"
                         >
                           <span
-                            className="glamor-0 glamor-1"
+                            className="emotion-0"
                           >
                             Day
                           </span>
                         </Styled(span)>
                       </LabelText>
-                    </glamorous(LabelText)>
+                    </Styled(LabelText)>
                     <Styled(input)
                       errorText="example"
                       type="text"
                     >
                       <input
-                        className="glamor-12"
+                        className="emotion-9"
                         type="text"
                       />
                     </Styled(input)>
                   </label>
                 </Styled(label)>
               </Label>
-            </glamorous(Label)>
-            <glamorous(Label)>
+            </Styled(Label)>
+            <Styled(Label)>
               <Label
-                className="glamor-0"
+                className="emotion-1"
               >
                 <Styled(label)
-                  className="glamor-0"
+                  className="emotion-1"
                 >
                   <label
-                    className="glamor-0 glamor-14"
+                    className="emotion-10"
                   >
-                    <glamorous(LabelText)>
+                    <Styled(LabelText)>
                       <LabelText
-                        className="glamor-0"
+                        className="emotion-1"
                       >
                         <Styled(span)
-                          className="glamor-0"
+                          className="emotion-1"
                         >
                           <span
-                            className="glamor-0 glamor-1"
+                            className="emotion-0"
                           >
                             Month
                           </span>
                         </Styled(span)>
                       </LabelText>
-                    </glamorous(LabelText)>
+                    </Styled(LabelText)>
                     <Styled(input)
                       errorText="example"
                       type="text"
                     >
                       <input
-                        className="glamor-12"
+                        className="emotion-9"
                         type="text"
                       />
                     </Styled(input)>
                   </label>
                 </Styled(label)>
               </Label>
-            </glamorous(Label)>
-            <glamorous(Label)
+            </Styled(Label)>
+            <Styled(Label)
               className="year"
             >
               <Label
-                className="glamor-0 year"
+                className="year emotion-1"
               >
                 <Styled(label)
-                  className="glamor-0 year"
+                  className="year emotion-1"
                 >
                   <label
-                    className="glamor-0 year glamor-14"
+                    className="year emotion-10"
                   >
-                    <glamorous(LabelText)>
+                    <Styled(LabelText)>
                       <LabelText
-                        className="glamor-0"
+                        className="emotion-1"
                       >
                         <Styled(span)
-                          className="glamor-0"
+                          className="emotion-1"
                         >
                           <span
-                            className="glamor-0 glamor-1"
+                            className="emotion-0"
                           >
                             Year
                           </span>
                         </Styled(span)>
                       </LabelText>
-                    </glamorous(LabelText)>
+                    </Styled(LabelText)>
                     <Styled(input)
                       errorText="example"
                       type="text"
                     >
                       <input
-                        className="glamor-12"
+                        className="emotion-9"
                         type="text"
                       />
                     </Styled(input)>
                   </label>
                 </Styled(label)>
               </Label>
-            </glamorous(Label)>
+            </Styled(Label)>
           </div>
         </Styled(div)>
       </div>
     </Styled(div)>
   </DateInput>
-</glamorous(DateInput)>
+</Styled(DateInput)>
 `;
