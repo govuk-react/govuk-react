@@ -14,7 +14,6 @@ const SVG = ({
     className={className}
     style={{ display: 'block' }}
     fill={fill}
-    viewBox="-0.2 0 17 14" // TODO: #238 why?
     {...rest}
   >
     <title>{title}</title>
