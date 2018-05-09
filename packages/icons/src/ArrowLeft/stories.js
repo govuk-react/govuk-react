@@ -8,7 +8,7 @@ const stories = storiesOf('Icons', module);
 stories.addDecorator(withKnobs);
 
 stories.add('ArrowLeft', () => {
-  const fillColour = color('fill', 'red');
+  const fillColour = color('fill', 'black');
   const width = number('width', 100);
   const height = number('height', '');
   return (<ArrowLeft width={width} height={height} fill={fillColour} title="Example ArrowLeft implementation" />);
