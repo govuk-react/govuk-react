@@ -176,17 +176,9 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                     fill="#0b0c0c"
                     height="50px"
                     preserveAspectRatio="xMidYMid meet"
-                    style={
-                      Object {
-                        "display": "block",
-                      }
-                    }
                     version="1.1"
                     viewBox="-25 -25 50 50"
                     width="50px"
-                    x="0px"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0px"
                   >
                     <title>
                       Loading

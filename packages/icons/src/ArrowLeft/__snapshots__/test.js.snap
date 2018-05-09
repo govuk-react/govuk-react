@@ -8,21 +8,12 @@ exports[`ArrowLeft matches wrapper snapshot: wrapper mount 1`] = `
   <SVG
     fill="currentColor"
     title="arrow left"
+    viewBox="0 0 17 14"
   >
     <svg
       fill="currentColor"
-      height="100%"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
       version="1.1"
-      viewBox="-0.2 0 17 14"
-      width="100%"
-      x="0px"
-      xmlns="http://www.w3.org/2000/svg"
-      y="0px"
+      viewBox="0 0 17 14"
     >
       <title>
         arrow left
