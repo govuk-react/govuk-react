@@ -1,13 +1,15 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Button from '@govuk-react/button';
+import { withKnobs, color, number } from '@storybook/addon-knobs/react';
 
 import Spinner from '.';
 
-storiesOf('Icons', module).add('Spinner', () => (
-  <Spinner />
-)).add('Spinner (small)', () => (
-  <Spinner width="50px" height="50px" />
-)).add('Spinner inside button', () => (
-  <Button disabled><span style={{ display: 'flex', alignItems: 'center' }}>Saving<Spinner width="32px" height="32px" fill="white" /></span></Button>
-));
+const stories = storiesOf('Icons', module);
+stories.addDecorator(withKnobs);
+
+stories.add('Spinner', () => {
+  const fillColour = color('fill', 'black');
+  const width = number('width', 100);
+  const height = number('height', '');
+  return (<Spinner width={width} height={height} fill={fillColour} title="Example Search implementation" />);
+});
