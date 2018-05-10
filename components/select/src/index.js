@@ -33,9 +33,6 @@ const StyledSelect = styled('select')(
       fontSize: '19px',
       lineHeight: '1.31579',
     },
-    '[disabled]': {
-      cursor: 'auto',
-    },
     ':focus': {
       outline: `3px solid ${YELLOW}`,
       outlineOffset: 0,
