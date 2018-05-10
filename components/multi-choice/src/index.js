@@ -51,7 +51,9 @@ const StyledFieldset = styled('div')(
   }),
 );
 
-const MultiChoice = ({ meta, label, children, hint, className }) => (
+const MultiChoice = ({
+  meta, label, children, hint, className,
+}) => (
   <StyledFieldset className={className} error={meta.touched && meta.error}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}

@@ -74,7 +74,6 @@ const DateInput = ({
   className,
   errorText,
   hintText,
-  ...props
 }) => (
   <StyledContainer className={className} errorText={errorText}>
     <LabelText errorText={errorText}>{children}</LabelText>
