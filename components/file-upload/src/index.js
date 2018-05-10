@@ -31,9 +31,6 @@ const StyledInput = styled('input')({
   },
   width: '100%',
   padding: '5px 4px 4px',
-  '[disabled]': {
-    cursor: 'auto',
-  },
 });
 
 const FileUpload = ({
