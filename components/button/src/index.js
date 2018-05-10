@@ -38,10 +38,6 @@ const StyledButton = styled('button')(
     textDecoration: 'none',
     WebkitAppearance: 'none',
     WebkitFontSmoothing: 'antialiased',
-    '[disabled]': {
-      opacity: '.5',
-      pointerEvents: 'none',
-    },
     ':focus': {
       outline: `3px solid ${YELLOW}`,
     },
@@ -50,7 +46,9 @@ const StyledButton = styled('button')(
       marginLeft: SPACING.SCALE_4,
     },
   },
-  ({ start, icon }) => ({
+  ({ start, icon, disabled }) => ({
+    opacity: disabled ? '.5' : '1',
+    pointerEvents: disabled ? 'none' : 'auto',
     fontWeight: start ? '700' : undefined,
     fontSize: start ? '24px' : undefined,
     lineHeight: start ? '1.25' : undefined,
