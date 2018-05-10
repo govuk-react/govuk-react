@@ -110,7 +110,7 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-27 > label .year {
+.emotion-27 > label.year {
   width: 70px;
 }
 

@@ -63,9 +63,9 @@ const StyledList = styled('div')({
     width: '50px',
     marginRight: '20px',
     marginBottom: 0,
-    '.year': {
-      width: '70px',
-    },
+  },
+  '> label.year': {
+    width: '70px',
   },
 });
 
