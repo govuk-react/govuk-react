@@ -124,10 +124,6 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
   }
 }
 
-.emotion-3 [disabled] {
-  cursor: auto;
-}
-
 <Styled(FileUpload)>
   <FileUpload
     className="emotion-7"

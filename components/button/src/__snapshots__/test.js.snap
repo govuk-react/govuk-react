@@ -40,13 +40,10 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
   text-decoration: none;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
+  opacity: 1;
+  pointer-events: auto;
   padding-right: .84211em;
   margin-bottom: 15px;
-}
-
-.emotion-0 [disabled] {
-  opacity: .5;
-  pointer-events: none;
 }
 
 .emotion-0:focus {

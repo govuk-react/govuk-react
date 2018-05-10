@@ -145,10 +145,6 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   }
 }
 
-.emotion-6 [disabled] {
-  cursor: auto;
-}
-
 .emotion-6:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
@@ -349,10 +345,6 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
     line-height: 1.3;
     width: 75%;
   }
-}
-
-.emotion-6 [disabled] {
-  cursor: auto;
 }
 
 .emotion-6:focus {
@@ -566,10 +558,6 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
     line-height: 1.3;
     width: 75%;
   }
-}
-
-.emotion-3 [disabled] {
-  cursor: auto;
 }
 
 .emotion-3:focus {

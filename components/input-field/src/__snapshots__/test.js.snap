@@ -116,10 +116,6 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-.emotion-3 [disabled] {
-  cursor: auto;
-}
-
 .emotion-3:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;

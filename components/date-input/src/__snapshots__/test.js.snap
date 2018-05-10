@@ -167,10 +167,6 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   }
 }
 
-.emotion-9 [disabled] {
-  cursor: auto;
-}
-
 .emotion-9:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;

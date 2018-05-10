@@ -59,7 +59,7 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
 }
 
 .emotion-0::before {
-  content: px;
+  content: '';
   display: block;
   position: absolute;
   top: -1px;

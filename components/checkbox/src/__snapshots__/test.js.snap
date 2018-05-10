@@ -26,7 +26,6 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
 
 .emotion-0 {
   position: absolute;
-  cursor: pointer;
   left: 0;
   top: 0;
   width: 38px;
@@ -35,16 +34,7 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   margin: 0;
   zoom: 1;
   opacity: 0;
-}
-
-.emotion-0 [disabled] {
-  cursor: auto;
-}
-
-.emotion-0 [disabled] + span {
-  opacity: .4;
-  cursor: auto;
-  pointer-events: none;
+  cursor: pointer;
 }
 
 .emotion-0:checked + span:after {
@@ -53,6 +43,11 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
 
 .emotion-0:focus + span:before {
   box-shadow: 0 0 0 4px #ffbf47;
+}
+
+.emotion-0 + span {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .emotion-1 {

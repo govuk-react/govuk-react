@@ -22,16 +22,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   margin: 0;
   zoom: 1;
   opacity: 0;
-}
-
-.emotion-0 [disabled] {
-  cursor: auto;
-}
-
-.emotion-0 [disabled] + span {
-  opacity: .4;
-  cursor: auto;
-  pointer-events: none;
+  cursor: pointer;
 }
 
 .emotion-0:checked + span::after {
@@ -40,6 +31,11 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
 
 .emotion-0:focus + span::before {
   box-shadow: 0 0 0 4px #ffbf47;
+}
+
+.emotion-0 + span {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .emotion-1 {
@@ -100,6 +96,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
 >
   <Radio
     className="emotion-3"
+    disabled={false}
     inline={true}
     name="example"
   >
@@ -111,11 +108,13 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
         className="emotion-2"
       >
         <Styled(input)
+          disabled={false}
           name="example"
           type="radio"
         >
           <input
             className="emotion-0"
+            disabled={false}
             name="example"
             type="radio"
           />
@@ -169,16 +168,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   margin: 0;
   zoom: 1;
   opacity: 0;
-}
-
-.emotion-0 [disabled] {
-  cursor: auto;
-}
-
-.emotion-0 [disabled] + span {
-  opacity: .4;
-  cursor: auto;
-  pointer-events: none;
+  cursor: pointer;
 }
 
 .emotion-0:checked + span::after {
@@ -187,6 +177,11 @@ exports[`Radio matches snapshot: standard mount 1`] = `
 
 .emotion-0:focus + span::before {
   box-shadow: 0 0 0 4px #ffbf47;
+}
+
+.emotion-0 + span {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .emotion-1 {
@@ -230,6 +225,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
 >
   <Radio
     className="emotion-3"
+    disabled={false}
     name="example"
   >
     <Styled(label)
@@ -239,11 +235,13 @@ exports[`Radio matches snapshot: standard mount 1`] = `
         className="emotion-2"
       >
         <Styled(input)
+          disabled={false}
           name="example"
           type="radio"
         >
           <input
             className="emotion-0"
+            disabled={false}
             name="example"
             type="radio"
           />
