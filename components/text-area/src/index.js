@@ -33,9 +33,6 @@ const TextAreaField = styled('textarea')(
     width: '100%',
     padding: '5px 4px 4px',
     border: `2px solid ${BLACK}`,
-    '[disabled]': {
-      cursor: 'auto',
-    },
     ':focus': {
       outline: `3px solid ${YELLOW}`,
       outlineOffset: 0,
