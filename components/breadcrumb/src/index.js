@@ -46,7 +46,7 @@ const BreadcrumbListItem = styled('li')({
     },
   },
   '::before': {
-    content: ' ',
+    content: '\'\'',
     display: 'block',
     position: 'absolute',
     top: '-1px',
