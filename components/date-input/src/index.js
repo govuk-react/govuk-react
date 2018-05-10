@@ -69,27 +69,33 @@ const StyledList = styled('div')({
   },
 });
 
-const DateInput = ({ children, className, ...props }) => (
-  <StyledContainer className={className} errorText={props.errorText}>
-    <LabelText errorText={props.errorText}>{children}</LabelText>
-    {props.hintText ? <HintText>{props.hintText}</HintText> : <span />}
-    {props.errorText ? (
-      <ErrorText errorText={props.errorText}>{props.errorText}</ErrorText>
+const DateInput = ({
+  children,
+  className,
+  errorText,
+  hintText,
+  ...props
+}) => (
+  <StyledContainer className={className} errorText={errorText}>
+    <LabelText errorText={errorText}>{children}</LabelText>
+    {hintText ? <HintText>{hintText}</HintText> : <span />}
+    {errorText ? (
+      <ErrorText errorText={errorText}>{errorText}</ErrorText>
     ) : (
       <span />
     )}
     <StyledList>
       <Label>
         <LabelText>Day</LabelText>
-        <StyledInput errorText={props.errorText} type="text" />
+        <StyledInput errorText={errorText} type="text" />
       </Label>
       <Label>
         <LabelText>Month</LabelText>
-        <StyledInput errorText={props.errorText} type="text" />
+        <StyledInput errorText={errorText} type="text" />
       </Label>
       <Label className="year">
         <LabelText>Year</LabelText>
-        <StyledInput errorText={props.errorText} type="text" />
+        <StyledInput errorText={errorText} type="text" />
       </Label>
     </StyledList>
   </StyledContainer>
