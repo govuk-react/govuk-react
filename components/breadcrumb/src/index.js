@@ -46,7 +46,7 @@ const BreadcrumbListItem = styled('li')({
     },
   },
   '::before': {
-    content: '\'\'',
+    content: "''",
     display: 'block',
     position: 'absolute',
     top: '-1px',
@@ -75,11 +75,14 @@ const Breadcrumb = ({ children, className, ...props }) => (
   <BreadcrumbContainer className={className} {...props}>
     <BreadcrumbList>
       {children.length && children.map ? (
-        children.map((child, i) => (
-          child && (child.length || child.props)
-            ? <BreadcrumbListItem key={child.key || i}>{child}</BreadcrumbListItem>
-            : null
-        ))
+        children.map(
+          (child, i) =>
+            child && (child.length || child.props) ? (
+              <BreadcrumbListItem key={child.key || i}>
+                {child}
+              </BreadcrumbListItem>
+            ) : null,
+        )
       ) : (
         <BreadcrumbListItem>{children}</BreadcrumbListItem>
       )}

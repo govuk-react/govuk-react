@@ -60,7 +60,7 @@ const StyledLabel = styled('span')({
   display: 'block',
   color: `${BLACK}`,
   '::before': {
-    content: '\'\'',
+    content: "''",
     display: 'block',
     border: `2px solid ${BLACK}`,
     background: 'transparent',
@@ -71,7 +71,7 @@ const StyledLabel = styled('span')({
     left: 0,
   },
   '::after': {
-    content: '\'\'',
+    content: "''",
     border: 'solid',
     borderWidth: '0 0 5px 5px',
     background: 'transparent',
@@ -87,12 +87,7 @@ const StyledLabel = styled('span')({
   },
 });
 
-const Checkbox = ({
-  children,
-  className,
-  inline,
-  ...input
-}) => (
+const Checkbox = ({ children, className, inline, ...input }) => (
   <StyledCheckbox className={className} inline={inline}>
     <StyledInput type="checkbox" {...input} />
     <StyledLabel>{children}</StyledLabel>

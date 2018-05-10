@@ -59,7 +59,7 @@ const LabelText = styled('span')({
   padding: '8px 10px 9px 12px',
   display: 'block',
   ':before': {
-    content: '\'\'',
+    content: "''",
     boxSizing: 'border-box',
     position: 'absolute',
     top: 0,
@@ -71,7 +71,7 @@ const LabelText = styled('span')({
     background: 'transparent',
   },
   ':after': {
-    content: '\'\'',
+    content: "''",
     position: 'absolute',
     top: '0.52632em',
     left: '0.52632em',
