@@ -39,7 +39,7 @@ const StyledInput = styled('input')(
   ({ disabled }) => ({
     cursor: disabled ? 'auto' : 'pointer',
     ' + span': {
-      opacity: disabled ? '.4' : 'inherit',
+      opacity: disabled ? '.4' : '1',
       pointerEvents: disabled ? 'none' : 'auto',
     },
   }),
