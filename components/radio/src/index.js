@@ -21,32 +21,33 @@ const Label = styled('label')(
   }),
 );
 
-const Input = styled('input')({
-  position: 'absolute',
-  cursor: 'pointer',
-  left: 0,
-  top: 0,
-  width: '38px',
-  height: '38px',
-  zIndex: 1,
-  margin: 0,
-  zoom: 1,
-  opacity: 0,
-  '[disabled]': {
-    cursor: 'auto',
+const Input = styled('input')(
+  {
+    position: 'absolute',
+    cursor: 'pointer',
+    left: 0,
+    top: 0,
+    width: '38px',
+    height: '38px',
+    zIndex: 1,
+    margin: 0,
+    zoom: 1,
+    opacity: 0,
+    ':checked + span::after': {
+      opacity: 1,
+    },
+    ':focus + span::before': {
+      boxShadow: `0 0 0 4px ${YELLOW}`,
+    },
   },
-  '[disabled] + span': {
-    opacity: '.4',
-    cursor: 'auto',
-    pointerEvents: 'none',
-  },
-  ':checked + span::after': {
-    opacity: 1,
-  },
-  ':focus + span::before': {
-    boxShadow: `0 0 0 4px ${YELLOW}`,
-  },
-});
+  ({ disabled }) => ({
+    cursor: disabled ? 'auto' : 'pointer',
+    ' + span': {
+      opacity: disabled ? '.4' : 'inherit',
+      pointerEvents: disabled ? 'none' : 'auto',
+    },
+  }),
+);
 
 const LabelText = styled('span')({
   fontFamily: NTA_LIGHT,
@@ -82,14 +83,9 @@ const LabelText = styled('span')({
   },
 });
 
-const Radio = ({
-  inline,
-  children,
-  className,
-  ...input
-}) => (
+const Radio = ({ inline, children, className, disabled, ...input }) => (
   <Label className={className} inline={inline}>
-    <Input type="radio" {...input} />
+    <Input type="radio" disabled={disabled} {...input} />
     <LabelText>{children}</LabelText>
   </Label>
 );
