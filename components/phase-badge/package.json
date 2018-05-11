@@ -1,16 +1,16 @@
 {
   "name": "@govuk-react/phase-badge",
-  "version": "0.1.28",
+  "version": "0.2.0",
   "dependencies": {
-    "@govuk-react/constants": "^0.1.28",
-    "@govuk-react/hoc": "^0.1.28",
+    "@govuk-react/constants": "^0.2.0",
+    "@govuk-react/hoc": "^0.2.0",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
     "emotion": ">=9",
-    "react-emotion": ">=9",
     "prop-types": ">=15",
-    "react": ">=16.2.0"
+    "react": ">=16.2.0",
+    "react-emotion": ">=9"
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es",
