@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
 import {
@@ -12,7 +12,7 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-const LeadParagraphInner = glamorous.p({
+const StyledParagraph = styled('p')({
   fontFamily: NTA_LIGHT,
   fontSize: FONT_SIZE.SIZE_18,
   lineHeight: LINE_HEIGHT.SIZE_18,
@@ -24,7 +24,7 @@ const LeadParagraphInner = glamorous.p({
 });
 
 const LeadParagraph = ({ children }) => (
-  <LeadParagraphInner>{children}</LeadParagraphInner>
+  <StyledParagraph>{children}</StyledParagraph>
 );
 
 LeadParagraph.propTypes = {

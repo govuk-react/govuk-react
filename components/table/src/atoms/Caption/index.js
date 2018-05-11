@@ -1,6 +1,6 @@
 // https://govuk-elements.herokuapp.com/data/
 
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import {
   FONT_SIZE,
   LINE_HEIGHT,
@@ -8,7 +8,7 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-const Caption = glamorous.caption({
+const Caption = styled('caption')({
   fontFamily: NTA_LIGHT,
   fontWeight: 700,
   fontSize: FONT_SIZE.SIZE_16,

@@ -1,15 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
-.glamor-14,
-[data-glamor-14] {
+.emotion-14 {
   position: relative;
   padding-bottom: 2px;
   min-height: 100px;
 }
 
-.glamor-13,
-[data-glamor-13] {
+.emotion-13 {
   position: absolute;
   height: 100%;
   top: 0;
@@ -17,127 +15,93 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
   left: 0;
   bottom: 0;
   display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-.glamor-13 .icon-loading,
-[data-glamor-13] .icon-loading {
+.emotion-13 .icon-loading {
   position: absolute;
   z-index: 101;
   opacity: 1;
   display: block;
   height: 100%;
   max-height: calc(50vh + 100px);
+  -webkit-transition: opacity 800ms ease-in-out;
   transition: opacity 800ms ease-in-out;
   will-change: opacity;
-  -webkit-transition: opacity 800ms ease-in-out;
-  -moz-transition: opacity 800ms ease-in-out;
 }
 
-.glamor-13 .overlay,
-[data-glamor-13] .overlay {
+.emotion-13 .overlay {
   z-index: 100;
+  -webkit-transition: background-color 800ms ease-in-out;
   transition: background-color 800ms ease-in-out;
   will-change: background-color;
-  background-color: rgba(
-      255,
-      255,
-      255,
-      0.85);
-  -webkit-transition: background-color 800ms ease-in-out;
-  -moz-transition: background-color 800ms ease-in-out;
+  background-color: rgba( 255, 255, 255, 0.85);
 }
 
-.glamor-13.fade-enter .overlay,
-[data-glamor-13].fade-enter .overlay {
-  background-color: rgba(
-        255,
-        255,
-        255,
-        0);
-  transition-duration: 800ms;
+.emotion-13 .fade-enter .overlay {
+  background-color: rgba( 255, 255, 255, 0);
   -webkit-transition-duration: 800ms;
+  transition-duration: 800ms;
 }
 
-.glamor-13.fade-enter .icon-loading,
-[data-glamor-13].fade-enter .icon-loading {
+.emotion-13 .fade-enter .icon-loading {
   opacity: 0;
-  transition-duration: 800ms;
-  transition-delay: 400ms;
   -webkit-transition-duration: 800ms;
+  transition-duration: 800ms;
   -webkit-transition-delay: 400ms;
-}
-
-.glamor-13.fade-enter-active .overlay,
-[data-glamor-13].fade-enter-active .overlay {
-  background-color: rgba(
-        255,
-        255,
-        255,
-        0.85);
-  transition-duration: 800ms;
-  -webkit-transition-duration: 800ms;
-}
-
-.glamor-13.fade-enter-active .icon-loading,
-[data-glamor-13].fade-enter-active .icon-loading {
-  opacity: 1;
-  transition-duration: 800ms;
   transition-delay: 400ms;
+}
+
+.emotion-13 .fade-enter-active .overlay {
+  background-color: rgba( 255, 255, 255, 0.85);
   -webkit-transition-duration: 800ms;
-  -webkit-transition-delay: 400ms;
+  transition-duration: 800ms;
 }
 
-.glamor-13.fade-exit .overlay,
-[data-glamor-13].fade-exit .overlay {
-  background-color: rgba(
-        255,
-        255,
-        255,
-        0.85);
-  transition-duration: 200ms;
-  -webkit-transition-duration: 200ms;
-}
-
-.glamor-13.fade-exit .icon-loading,
-[data-glamor-13].fade-exit .icon-loading {
+.emotion-13 .fade-enter-active .icon-loading {
   opacity: 1;
-  transition-duration: 200ms;
-  -webkit-transition-duration: 200ms;
+  -webkit-transition-duration: 800ms;
+  transition-duration: 800ms;
+  -webkit-transition-delay: 400ms;
+  transition-delay: 400ms;
 }
 
-.glamor-13.fade-exit-active .overlay,
-[data-glamor-13].fade-exit-active .overlay {
-  background-color: rgba(
-        255,
-        255,
-        255,
-        0);
-  transition-duration: 200ms;
+.emotion-13 .fade-exit .overlay {
+  background-color: rgba( 255, 255, 255, 0.85);
   -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
 }
 
-.glamor-13.fade-exit-active .icon-loading,
-[data-glamor-13].fade-exit-active .icon-loading {
+.emotion-13 .fade-exit .icon-loading {
+  opacity: 1;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+.emotion-13 .fade-exit-active .overlay {
+  background-color: rgba( 255, 255, 255, 0);
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+.emotion-13 .fade-exit-active .icon-loading {
   opacity: 0;
-  transition-duration: 200ms;
   -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
 }
 
-.glamor-0,
-[data-glamor-0] {
-  animation: animation_1kzvbmm 1s infinite linear;
-  -webkit-animation: animation_1kzvbmm 1s infinite linear;
+.emotion-0 {
+  -webkit-animation: animation-xh8g2j 1s infinite linear;
+  animation: animation-xh8g2j 1s infinite linear;
 }
 
-.glamor-12,
-[data-glamor-12] {
+.emotion-12 {
   position: absolute;
   top: 0;
   right: 0;
@@ -156,9 +120,9 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
   timeIn={800}
   timeOut={200}
 >
-  <glamorous(div)>
+  <Styled(div)>
     <div
-      className="glamor-14"
+      className="emotion-14"
     >
       <CSSTransition
         classNames="fade"
@@ -181,7 +145,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
           timeout={200}
           unmountOnExit={true}
         >
-          <glamorous(div)
+          <Styled(div)
             backgroundColor="#ffffff"
             backgroundColorOpacity={0.85}
             loading={true}
@@ -189,7 +153,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
             timeOut={200}
           >
             <div
-              className="glamor-13"
+              className="emotion-13"
             >
               <Spinner
                 className="icon-loading"
@@ -227,7 +191,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                     <title>
                       Loading
                     </title>
-                    <glamorous(rect)
+                    <Styled(rect)
                       fill="#0b0c0c"
                       height="5"
                       key="0"
@@ -243,7 +207,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       width="12"
                     >
                       <rect
-                        className="glamor-0"
+                        className="emotion-0"
                         fill="#0b0c0c"
                         height="5"
                         opacity="0"
@@ -257,8 +221,8 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                         transform="rotate(0, 0, 2) translate(10 0)"
                         width="12"
                       />
-                    </glamorous(rect)>
-                    <glamorous(rect)
+                    </Styled(rect)>
+                    <Styled(rect)
                       fill="#0b0c0c"
                       height="5"
                       key="1"
@@ -274,7 +238,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       width="12"
                     >
                       <rect
-                        className="glamor-0"
+                        className="emotion-0"
                         fill="#0b0c0c"
                         height="5"
                         opacity="0"
@@ -288,8 +252,8 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                         transform="rotate(30, 0, 2) translate(10 0)"
                         width="12"
                       />
-                    </glamorous(rect)>
-                    <glamorous(rect)
+                    </Styled(rect)>
+                    <Styled(rect)
                       fill="#0b0c0c"
                       height="5"
                       key="2"
@@ -305,7 +269,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       width="12"
                     >
                       <rect
-                        className="glamor-0"
+                        className="emotion-0"
                         fill="#0b0c0c"
                         height="5"
                         opacity="0"
@@ -319,8 +283,8 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                         transform="rotate(60, 0, 2) translate(10 0)"
                         width="12"
                       />
-                    </glamorous(rect)>
-                    <glamorous(rect)
+                    </Styled(rect)>
+                    <Styled(rect)
                       fill="#0b0c0c"
                       height="5"
                       key="3"
@@ -336,7 +300,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       width="12"
                     >
                       <rect
-                        className="glamor-0"
+                        className="emotion-0"
                         fill="#0b0c0c"
                         height="5"
                         opacity="0"
@@ -350,8 +314,8 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                         transform="rotate(90, 0, 2) translate(10 0)"
                         width="12"
                       />
-                    </glamorous(rect)>
-                    <glamorous(rect)
+                    </Styled(rect)>
+                    <Styled(rect)
                       fill="#0b0c0c"
                       height="5"
                       key="4"
@@ -367,7 +331,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       width="12"
                     >
                       <rect
-                        className="glamor-0"
+                        className="emotion-0"
                         fill="#0b0c0c"
                         height="5"
                         opacity="0"
@@ -381,8 +345,8 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                         transform="rotate(120, 0, 2) translate(10 0)"
                         width="12"
                       />
-                    </glamorous(rect)>
-                    <glamorous(rect)
+                    </Styled(rect)>
+                    <Styled(rect)
                       fill="#0b0c0c"
                       height="5"
                       key="5"
@@ -398,7 +362,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       width="12"
                     >
                       <rect
-                        className="glamor-0"
+                        className="emotion-0"
                         fill="#0b0c0c"
                         height="5"
                         opacity="0"
@@ -412,8 +376,8 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                         transform="rotate(150, 0, 2) translate(10 0)"
                         width="12"
                       />
-                    </glamorous(rect)>
-                    <glamorous(rect)
+                    </Styled(rect)>
+                    <Styled(rect)
                       fill="#0b0c0c"
                       height="5"
                       key="6"
@@ -429,7 +393,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       width="12"
                     >
                       <rect
-                        className="glamor-0"
+                        className="emotion-0"
                         fill="#0b0c0c"
                         height="5"
                         opacity="0"
@@ -443,8 +407,8 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                         transform="rotate(180, 0, 2) translate(10 0)"
                         width="12"
                       />
-                    </glamorous(rect)>
-                    <glamorous(rect)
+                    </Styled(rect)>
+                    <Styled(rect)
                       fill="#0b0c0c"
                       height="5"
                       key="7"
@@ -460,7 +424,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       width="12"
                     >
                       <rect
-                        className="glamor-0"
+                        className="emotion-0"
                         fill="#0b0c0c"
                         height="5"
                         opacity="0"
@@ -474,8 +438,8 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                         transform="rotate(210, 0, 2) translate(10 0)"
                         width="12"
                       />
-                    </glamorous(rect)>
-                    <glamorous(rect)
+                    </Styled(rect)>
+                    <Styled(rect)
                       fill="#0b0c0c"
                       height="5"
                       key="8"
@@ -491,7 +455,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       width="12"
                     >
                       <rect
-                        className="glamor-0"
+                        className="emotion-0"
                         fill="#0b0c0c"
                         height="5"
                         opacity="0"
@@ -505,8 +469,8 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                         transform="rotate(240, 0, 2) translate(10 0)"
                         width="12"
                       />
-                    </glamorous(rect)>
-                    <glamorous(rect)
+                    </Styled(rect)>
+                    <Styled(rect)
                       fill="#0b0c0c"
                       height="5"
                       key="9"
@@ -522,7 +486,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       width="12"
                     >
                       <rect
-                        className="glamor-0"
+                        className="emotion-0"
                         fill="#0b0c0c"
                         height="5"
                         opacity="0"
@@ -536,8 +500,8 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                         transform="rotate(270, 0, 2) translate(10 0)"
                         width="12"
                       />
-                    </glamorous(rect)>
-                    <glamorous(rect)
+                    </Styled(rect)>
+                    <Styled(rect)
                       fill="#0b0c0c"
                       height="5"
                       key="10"
@@ -553,7 +517,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       width="12"
                     >
                       <rect
-                        className="glamor-0"
+                        className="emotion-0"
                         fill="#0b0c0c"
                         height="5"
                         opacity="0"
@@ -567,8 +531,8 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                         transform="rotate(300, 0, 2) translate(10 0)"
                         width="12"
                       />
-                    </glamorous(rect)>
-                    <glamorous(rect)
+                    </Styled(rect)>
+                    <Styled(rect)
                       fill="#0b0c0c"
                       height="5"
                       key="11"
@@ -584,7 +548,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                       width="12"
                     >
                       <rect
-                        className="glamor-0"
+                        className="emotion-0"
                         fill="#0b0c0c"
                         height="5"
                         opacity="0"
@@ -598,21 +562,23 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
                         transform="rotate(330, 0, 2) translate(10 0)"
                         width="12"
                       />
-                    </glamorous(rect)>
+                    </Styled(rect)>
                   </svg>
                 </SVG>
               </Spinner>
-              <glamorous(div)>
+              <Styled(div)
+                className="overlay"
+              >
                 <div
-                  className="glamor-12 overlay"
+                  className="overlay emotion-12"
                 />
-              </glamorous(div)>
+              </Styled(div)>
             </div>
-          </glamorous(div)>
+          </Styled(div)>
         </Transition>
       </CSSTransition>
       example
     </div>
-  </glamorous(div)>
+  </Styled(div)>
 </LoadingBox>
 `;

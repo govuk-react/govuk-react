@@ -14,14 +14,14 @@
     "lodash": "^4.17.5",
     "react": "^16.2.0",
     "react-docgen": "^3.0.0-beta11",
-    "render-glamorous": "0.0.1"
+    "react-dom": "^16.3.2",
+    "emotion-server": "^9.1.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
     "@babel/core": "^7.0.0-beta.40",
     "babel-core": "^7.0.0-bridge.0",
     "cross-env": "^5.1.4",
-    "glamorous": "^4.12.0",
     "prop-types": "^15.6.1",
     "rimraf": "^2.6.2"
   },
@@ -39,7 +39,7 @@
   "author": "Alasdair McLeay",
   "license": "MIT",
   "homepage": "https://github.com/penx/govuk-react#readme",
-  "description": "govuk-react: A port of the govuk-frontend components for React using Glamorous.",
+  "description": "govuk-react: A port of the govuk-frontend components for React using Emotion.",
   "private": false,
   "publishConfig": {
     "access": "public"

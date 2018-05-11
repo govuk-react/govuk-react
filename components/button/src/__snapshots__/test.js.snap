@@ -1,83 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`button matches wrapper snapshot: wrapper mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
+.emotion-1 {
   margin-bottom: 15px;
 }
 
-.glamor-0,
-[data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 20px;
+  }
+}
+
+.emotion-0 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
   color: #ffffff;
   cursor: pointer;
   display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   font-size: 1em;
   line-height: 1.25;
   outline-offset: -1px;
   outline: 1px solid transparent;
   padding: .526315em .789473em .263157em;
+  -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
+  opacity: 1;
+  pointer-events: auto;
   padding-right: .84211em;
   margin-bottom: 15px;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
 }
 
-.glamor-0:focus,
-[data-glamor-0]:focus {
+.emotion-0:focus {
   outline: 3px solid #ffbf47;
 }
 
-.glamor-0 svg,
-[data-glamor-0] svg {
+.emotion-0 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 20px;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
     margin-bottom: 20px;
   }
 }
 
 <_default>
-  <glamorous(Button)>
+  <Styled(Button)>
     <Button
-      className="glamor-1"
+      className="emotion-1"
     >
-      <glamorous(button)
-        className="glamor-1"
+      <Styled(button)
+        className="emotion-1"
       >
         <button
-          className="glamor-0"
+          className="emotion-0"
         >
           Save and continue
         </button>
-      </glamorous(button)>
+      </Styled(button)>
     </Button>
-  </glamorous(Button)>
+  </Styled(Button)>
 </_default>
 `;

@@ -1,14 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
+.emotion-1 {
   margin-bottom: 0;
 }
 
-.glamor-0,
-[data-glamor-0] {
-  font-family: "nta", Arial, sans-serif;
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-8 {
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
+  font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: block;
@@ -21,13 +42,26 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-7,
-[data-glamor-7] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-7 {
   display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
@@ -35,22 +69,36 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   margin-right: 15px;
   padding-left: 10px;
   margin-bottom: 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
+  margin-bottom: 0;
 }
 
-.glamor-7:after,
-[data-glamor-7]:after {
+.emotion-7:after {
   content: '';
   display: table;
   clear: both;
 }
 
-.glamor-3,
-[data-glamor-3] {
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-3 {
   display: block;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
@@ -63,68 +111,46 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-6,
-[data-glamor-6] {
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-6 {
   box-sizing: border-box;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
   line-height: 1.25;
   width: 100%;
   padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
   border: 4px solid #b10e1e;
 }
 
-.glamor-6:focus,
-[data-glamor-6]:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    font-size: 19px;
-    line-height: 1.3;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-7,
-  [data-glamor-7] {
-    max-width: 960px;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    font-size: 19px;
-    line-height: 1.3;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-6,
-  [data-glamor-6] {
+@media only screen and (min-width:641px) {
+  .emotion-6 {
     font-size: 19px;
     line-height: 1.3;
     width: 75%;
   }
 }
 
-<glamorous(TextArea)
+.emotion-6:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+<Styled(TextArea)
   errorText="example"
   meta={
     Object {
@@ -134,7 +160,7 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   }
 >
   <TextArea
-    className="glamor-1"
+    className="emotion-1"
     errorText="example"
     input={Object {}}
     meta={
@@ -144,101 +170,138 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
       }
     }
   >
-    <glamorous(Label)
-      className="glamor-1"
+    <Styled(Label)
+      className="emotion-1"
       error="example"
     >
       <Label
-        className="glamor-1"
+        className="emotion-8"
         error="example"
       >
-        <glamorous(label)
-          className="glamor-1"
+        <Styled(label)
+          className="emotion-8"
           error="example"
         >
           <label
-            className="glamor-7"
+            className="emotion-7"
           >
-            <glamorous(LabelText)>
+            <Styled(LabelText)>
               <LabelText
-                className="glamor-1"
+                className="emotion-1"
               >
-                <glamorous(span)
-                  className="glamor-1"
+                <Styled(span)
+                  className="emotion-1"
                 >
                   <span
-                    className="glamor-0"
+                    className="emotion-0"
                   >
                     example
                   </span>
-                </glamorous(span)>
+                </Styled(span)>
               </LabelText>
-            </glamorous(LabelText)>
-            <glamorous(ErrorText)>
+            </Styled(LabelText)>
+            <Styled(ErrorText)>
               <ErrorText
-                className="glamor-1"
+                className="emotion-1"
               >
-                <glamorous(span)
-                  className="glamor-1"
+                <Styled(span)
+                  className="emotion-1"
                 >
                   <span
-                    className="glamor-3"
+                    className="emotion-3"
                   >
                     example
                   </span>
-                </glamorous(span)>
+                </Styled(span)>
               </ErrorText>
-            </glamorous(ErrorText)>
-            <glamorous(textarea)
+            </Styled(ErrorText)>
+            <Styled(textarea)
               error="example"
               rows="5"
               type="text"
             >
               <textarea
-                className="glamor-6"
+                className="emotion-6"
                 rows="5"
+                type="text"
               />
-            </glamorous(textarea)>
+            </Styled(textarea)>
           </label>
-        </glamorous(label)>
+        </Styled(label)>
       </Label>
-    </glamorous(Label)>
+    </Styled(Label)>
   </TextArea>
-</glamorous(TextArea)>
+</Styled(TextArea)>
 `;
 
 exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
+.emotion-1 {
   margin-bottom: 0;
 }
 
-.glamor-7,
-[data-glamor-7] {
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-8 {
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-7 {
   display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
+  margin-bottom: 0;
 }
 
-.glamor-7:after,
-[data-glamor-7]:after {
+.emotion-7:after {
   content: '';
   display: table;
   clear: both;
 }
 
-.glamor-0,
-[data-glamor-0] {
-  font-family: "nta", Arial, sans-serif;
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
+  font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: block;
@@ -251,10 +314,22 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-6,
-[data-glamor-6] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-6 {
   box-sizing: border-box;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
@@ -264,16 +339,22 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   border: 2px solid #0b0c0c;
 }
 
-.glamor-6:focus,
-[data-glamor-6]:focus {
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 75%;
+  }
+}
+
+.emotion-6:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.glamor-3,
-[data-glamor-3] {
+.emotion-3 {
   display: block;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -284,148 +365,156 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   margin-bottom: 0;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-7,
-  [data-glamor-7] {
-    max-width: 960px;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-3 {
     font-size: 19px;
     line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
     margin-bottom: 0;
   }
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-6,
-  [data-glamor-6] {
-    font-size: 19px;
-    line-height: 1.3;
-    width: 75%;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    font-size: 19px;
-    line-height: 1.3;
-    margin-bottom: 0;
-  }
-}
-
-<glamorous(TextArea)
+<Styled(TextArea)
   hint="example"
 >
   <TextArea
-    className="glamor-1"
+    className="emotion-1"
     hint="example"
     input={Object {}}
     meta={Object {}}
   >
-    <glamorous(Label)
-      className="glamor-1"
+    <Styled(Label)
+      className="emotion-1"
     >
       <Label
-        className="glamor-1"
+        className="emotion-8"
       >
-        <glamorous(label)
-          className="glamor-1"
+        <Styled(label)
+          className="emotion-8"
         >
           <label
-            className="glamor-7"
+            className="emotion-7"
           >
-            <glamorous(LabelText)>
+            <Styled(LabelText)>
               <LabelText
-                className="glamor-1"
+                className="emotion-1"
               >
-                <glamorous(span)
-                  className="glamor-1"
+                <Styled(span)
+                  className="emotion-1"
                 >
                   <span
-                    className="glamor-0"
+                    className="emotion-0"
                   >
                     example
                   </span>
-                </glamorous(span)>
+                </Styled(span)>
               </LabelText>
-            </glamorous(LabelText)>
-            <glamorous(HintText)>
+            </Styled(LabelText)>
+            <Styled(HintText)>
               <HintText
-                className="glamor-1"
+                className="emotion-1"
               >
-                <glamorous(span)
-                  className="glamor-1"
+                <Styled(span)
+                  className="emotion-1"
                 >
                   <span
-                    className="glamor-3"
+                    className="emotion-3"
                   >
                     example
                   </span>
-                </glamorous(span)>
+                </Styled(span)>
               </HintText>
-            </glamorous(HintText)>
-            <glamorous(textarea)
+            </Styled(HintText)>
+            <Styled(textarea)
               rows="5"
               type="text"
             >
               <textarea
-                className="glamor-6"
+                className="emotion-6"
                 rows="5"
+                type="text"
               />
-            </glamorous(textarea)>
+            </Styled(textarea)>
           </label>
-        </glamorous(label)>
+        </Styled(label)>
       </Label>
-    </glamorous(Label)>
+    </Styled(Label)>
   </TextArea>
-</glamorous(TextArea)>
+</Styled(TextArea)>
 `;
 
 exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
+.emotion-1 {
   margin-bottom: 0;
 }
 
-.glamor-4,
-[data-glamor-4] {
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-5 {
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-4 {
   display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
+  margin-bottom: 0;
 }
 
-.glamor-4:after,
-[data-glamor-4]:after {
+.emotion-4:after {
   content: '';
   display: table;
   clear: both;
 }
 
-.glamor-0,
-[data-glamor-0] {
-  font-family: "nta", Arial, sans-serif;
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
+  font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: block;
@@ -438,10 +527,22 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-3,
-[data-glamor-3] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-3 {
   box-sizing: border-box;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
@@ -451,91 +552,66 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   border: 2px solid #0b0c0c;
 }
 
-.glamor-3:focus,
-[data-glamor-3]:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-4,
-  [data-glamor-4] {
-    max-width: 960px;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    font-size: 19px;
-    line-height: 1.3;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
+@media only screen and (min-width:641px) {
+  .emotion-3 {
     font-size: 19px;
     line-height: 1.3;
     width: 75%;
   }
 }
 
-<glamorous(TextArea)>
+.emotion-3:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+<Styled(TextArea)>
   <TextArea
-    className="glamor-1"
+    className="emotion-1"
     input={Object {}}
     meta={Object {}}
   >
-    <glamorous(Label)
-      className="glamor-1"
+    <Styled(Label)
+      className="emotion-1"
     >
       <Label
-        className="glamor-1"
+        className="emotion-5"
       >
-        <glamorous(label)
-          className="glamor-1"
+        <Styled(label)
+          className="emotion-5"
         >
           <label
-            className="glamor-4"
+            className="emotion-4"
           >
-            <glamorous(LabelText)>
+            <Styled(LabelText)>
               <LabelText
-                className="glamor-1"
+                className="emotion-1"
               >
-                <glamorous(span)
-                  className="glamor-1"
+                <Styled(span)
+                  className="emotion-1"
                 >
                   <span
-                    className="glamor-0"
+                    className="emotion-0"
                   >
                     example
                   </span>
-                </glamorous(span)>
+                </Styled(span)>
               </LabelText>
-            </glamorous(LabelText)>
-            <glamorous(textarea)
+            </Styled(LabelText)>
+            <Styled(textarea)
               rows="5"
               type="text"
             >
               <textarea
-                className="glamor-3"
+                className="emotion-3"
                 rows="5"
+                type="text"
               />
-            </glamorous(textarea)>
+            </Styled(textarea)>
           </label>
-        </glamorous(label)>
+        </Styled(label)>
       </Label>
-    </glamorous(Label)>
+    </Styled(Label)>
   </TextArea>
-</glamorous(TextArea)>
+</Styled(TextArea)>
 `;

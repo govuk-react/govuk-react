@@ -1,6 +1,6 @@
 // https://govuk-elements.herokuapp.com/data/
 
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import {
   FONT_SIZE,
   LINE_HEIGHT,
@@ -10,7 +10,7 @@ import {
 
 import { GREY_2 } from 'govuk-colours';
 
-const CellHeader = glamorous.th(({
+const CellHeader = styled('th')(({
   alignRight,
   bold,
 }) => ({

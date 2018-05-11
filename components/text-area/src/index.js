@@ -2,8 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
-
+import styled from 'react-emotion';
 import { BLACK, YELLOW, ERROR_COLOUR } from 'govuk-colours';
 import {
   FONT_SIZE,
@@ -18,7 +17,7 @@ import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
-const TextAreaField = glamorous.textarea(
+const TextAreaField = styled('textarea')(
   {
     boxSizing: 'border-box',
     fontFamily: NTA_LIGHT,
@@ -34,9 +33,6 @@ const TextAreaField = glamorous.textarea(
     width: '100%',
     padding: '5px 4px 4px',
     border: `2px solid ${BLACK}`,
-    '[disabled]': {
-      cursor: 'auto',
-    },
     ':focus': {
       outline: `3px solid ${YELLOW}`,
       outlineOffset: 0,

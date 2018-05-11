@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
+
 import Table from './';
 import Row from './atoms/Row';
 import Cell from './atoms/Cell';
@@ -12,7 +13,6 @@ const exampleWithHead = (
     head={<Row><Cell>Example</Cell></Row>}
   />
 );
-
 
 describe(Table, () => {
   it('renders without crashing', () => {

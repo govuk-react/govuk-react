@@ -1,17 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
-.glamor-3,
-[data-glamor-3] {
+exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
+.emotion-3 {
   margin-bottom: 0;
 }
 
-.glamor-15,
-[data-glamor-15] {
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-15 {
   margin: 0;
   padding: 0;
   padding-left: 20px;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 14px;
@@ -19,9 +23,21 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-2,
-[data-glamor-2] {
-  font-family: "nta", Arial, sans-serif;
+@media only screen and (min-width:641px) {
+  .emotion-15 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-15 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-2 {
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 14px;
@@ -30,151 +46,138 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-0,
-[data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-2 {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-2 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
   color: #005ea5;
   padding: 3px;
   margin: -3px;
   outline-color: transparent;
   display: inline-block;
+  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.glamor-0:focus,
-[data-glamor-0]:focus {
+.emotion-0:focus {
   background-color: #ffbf47;
   outline: 3px solid #ffbf47;
 }
 
-.glamor-0:visited,
-[data-glamor-0]:visited {
+.emotion-0:visited {
   color: #2e358b;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-15,
-  [data-glamor-15] {
-    font-size: 16px;
-    line-height: 1.25;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
-    font-size: 16px;
-    line-height: 1.25;
-    margin-bottom: 0;
-  }
-}
-
-<glamorous(UnorderedList)>
+<Styled(UnorderedList)>
   <UnorderedList
-    className="glamor-3"
+    className="emotion-3"
   >
-    <glamorous(ul)
-      className="glamor-3"
+    <Styled(ul)
+      className="emotion-3"
     >
       <ul
-        className="glamor-15"
+        className="emotion-15"
       >
-        <glamorous(ListItem)>
+        <Styled(ListItem)>
           <ListItem
-            className="glamor-3"
+            className="emotion-3"
           >
-            <glamorous(li)
-              className="glamor-3"
+            <Styled(li)
+              className="emotion-3"
             >
               <li
-                className="glamor-2"
+                className="emotion-2"
               >
-                <glamorous(Anchor)
+                <Styled(Anchor)
                   href="http://example.com"
                 >
                   <Anchor
-                    className="glamor-0"
+                    className="emotion-0"
                     href="http://example.com"
                   >
                     <a
-                      className="glamor-0"
+                      className="emotion-0"
                       href="http://example.com"
                     >
                       Example 1
                     </a>
                   </Anchor>
-                </glamorous(Anchor)>
+                </Styled(Anchor)>
               </li>
-            </glamorous(li)>
+            </Styled(li)>
           </ListItem>
-        </glamorous(ListItem)>
-        <glamorous(ListItem)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
           <ListItem
-            className="glamor-3"
+            className="emotion-3"
           >
-            <glamorous(li)
-              className="glamor-3"
+            <Styled(li)
+              className="emotion-3"
             >
               <li
-                className="glamor-2"
+                className="emotion-2"
               >
-                <glamorous(Anchor)
+                <Styled(Anchor)
                   href="http://example.com"
                 >
                   <Anchor
-                    className="glamor-0"
+                    className="emotion-0"
                     href="http://example.com"
                   >
                     <a
-                      className="glamor-0"
+                      className="emotion-0"
                       href="http://example.com"
                     >
                       Example 2
                     </a>
                   </Anchor>
-                </glamorous(Anchor)>
+                </Styled(Anchor)>
               </li>
-            </glamorous(li)>
+            </Styled(li)>
           </ListItem>
-        </glamorous(ListItem)>
-        <glamorous(ListItem)>
+        </Styled(ListItem)>
+        <Styled(ListItem)>
           <ListItem
-            className="glamor-3"
+            className="emotion-3"
           >
-            <glamorous(li)
-              className="glamor-3"
+            <Styled(li)
+              className="emotion-3"
             >
               <li
-                className="glamor-2"
+                className="emotion-2"
               >
-                <glamorous(Anchor)
+                <Styled(Anchor)
                   href="http://example.com"
                 >
                   <Anchor
-                    className="glamor-0"
+                    className="emotion-0"
                     href="http://example.com"
                   >
                     <a
-                      className="glamor-0"
+                      className="emotion-0"
                       href="http://example.com"
                     >
                       Example 3
                     </a>
                   </Anchor>
-                </glamorous(Anchor)>
+                </Styled(Anchor)>
               </li>
-            </glamorous(li)>
+            </Styled(li)>
           </ListItem>
-        </glamorous(ListItem)>
+        </Styled(ListItem)>
       </ul>
-    </glamorous(ul)>
+    </Styled(ul)>
   </UnorderedList>
-</glamorous(UnorderedList)>
+</Styled(UnorderedList)>
 `;

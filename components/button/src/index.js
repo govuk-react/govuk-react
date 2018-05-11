@@ -5,7 +5,7 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/components/button/_button.scss
 // https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_buttons.scss
 
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { withWhiteSpace } from '@govuk-react/hoc';
@@ -18,7 +18,7 @@ import {
 } from 'govuk-colours';
 
 // TODO should be using constants for some of the below values
-const GButton = glamorous.button(
+const StyledButton = styled('button')(
   {
     backgroundColor: BUTTON_COLOUR,
     border: 'none',
@@ -38,10 +38,6 @@ const GButton = glamorous.button(
     textDecoration: 'none',
     WebkitAppearance: 'none',
     WebkitFontSmoothing: 'antialiased',
-    '[disabled]': {
-      opacity: '.5',
-      pointerEvents: 'none',
-    },
     ':focus': {
       outline: `3px solid ${YELLOW}`,
     },
@@ -50,7 +46,9 @@ const GButton = glamorous.button(
       marginLeft: SPACING.SCALE_4,
     },
   },
-  ({ start, icon }) => ({
+  ({ start, icon, disabled }) => ({
+    opacity: disabled ? '.5' : '1',
+    pointerEvents: disabled ? 'none' : 'auto',
     fontWeight: start ? '700' : undefined,
     fontSize: start ? '24px' : undefined,
     lineHeight: start ? '1.25' : undefined,
@@ -66,10 +64,10 @@ const Button = ({
   className,
   ...props
 }) => (
-  <GButton icon={icon} className={className} {...props}>
+  <StyledButton icon={icon} className={className} {...props}>
     {children}
     {icon}
-  </GButton>
+  </StyledButton>
 );
 
 Button.propTypes = {

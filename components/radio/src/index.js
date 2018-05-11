@@ -3,12 +3,12 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { YELLOW } from 'govuk-colours';
 import { withWhiteSpace } from '@govuk-react/hoc';
 import { NTA_LIGHT } from '@govuk-react/constants';
 
-const Label = glamorous.label(
+const Label = styled('label')(
   {
     display: 'block',
     position: 'relative',
@@ -21,34 +21,35 @@ const Label = glamorous.label(
   }),
 );
 
-const Input = glamorous.input({
-  position: 'absolute',
-  cursor: 'pointer',
-  left: 0,
-  top: 0,
-  width: '38px',
-  height: '38px',
-  zIndex: 1,
-  margin: 0,
-  zoom: 1,
-  opacity: 0,
-  '[disabled]': {
-    cursor: 'auto',
+const Input = styled('input')(
+  {
+    position: 'absolute',
+    cursor: 'pointer',
+    left: 0,
+    top: 0,
+    width: '38px',
+    height: '38px',
+    zIndex: 1,
+    margin: 0,
+    zoom: 1,
+    opacity: 0,
+    ':checked + span::after': {
+      opacity: 1,
+    },
+    ':focus + span::before': {
+      boxShadow: `0 0 0 4px ${YELLOW}`,
+    },
   },
-  '[disabled] + span': {
-    opacity: '.4',
-    cursor: 'auto',
-    pointerEvents: 'none',
-  },
-  ':checked + span::after': {
-    opacity: 1,
-  },
-  ':focus + span::before': {
-    boxShadow: `0 0 0 4px ${YELLOW}`,
-  },
-});
+  ({ disabled }) => ({
+    cursor: disabled ? 'auto' : 'pointer',
+    ' + span': {
+      opacity: disabled ? '.4' : '1',
+      pointerEvents: disabled ? 'none' : 'auto',
+    },
+  }),
+);
 
-const LabelText = glamorous.span({
+const LabelText = styled('span')({
   fontFamily: NTA_LIGHT,
   fontWeight: 400,
   textTransform: 'none',
@@ -58,7 +59,7 @@ const LabelText = glamorous.span({
   padding: '8px 10px 9px 12px',
   display: 'block',
   ':before': {
-    content: ' ',
+    content: "''",
     boxSizing: 'border-box',
     position: 'absolute',
     top: 0,
@@ -70,7 +71,7 @@ const LabelText = glamorous.span({
     background: 'transparent',
   },
   ':after': {
-    content: ' ',
+    content: "''",
     position: 'absolute',
     top: '0.52632em',
     left: '0.52632em',
@@ -83,13 +84,10 @@ const LabelText = glamorous.span({
 });
 
 const Radio = ({
-  inline,
-  children,
-  className,
-  ...input
+  inline, children, className, disabled, ...input
 }) => (
   <Label className={className} inline={inline}>
-    <Input type="radio" {...input} />
+    <Input type="radio" disabled={disabled} {...input} />
     <LabelText>{children}</LabelText>
   </Label>
 );
@@ -97,12 +95,14 @@ const Radio = ({
 Radio.defaultProps = {
   inline: undefined,
   className: undefined,
+  disabled: false,
 };
 
 Radio.propTypes = {
   inline: PropTypes.bool,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  disabled: PropTypes.bool,
 };
 
 export default withWhiteSpace({ marginBottom: 2 })(Radio);

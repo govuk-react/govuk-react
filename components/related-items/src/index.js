@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import * as COLOUR from 'govuk-colours';
 
 import {
@@ -13,7 +13,7 @@ import {
 } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
-const RelatedItemsInner = glamorous.div({
+const StyledRelatedItems = styled('div')({
   borderTop: `10px solid ${COLOUR.BLUE}`,
   paddingTop: SPACING.SCALE_1,
   width: '100%',
@@ -33,7 +33,7 @@ const RelatedItemsInner = glamorous.div({
 });
 
 const RelatedItems = ({ children, className }) => (
-  <RelatedItemsInner className={className}>{children}</RelatedItemsInner>
+  <StyledRelatedItems className={className}>{children}</StyledRelatedItems>
 );
 
 RelatedItems.defaultProps = {

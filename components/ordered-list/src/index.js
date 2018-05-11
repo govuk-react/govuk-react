@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import {
   FONT_SIZE,
   LINE_HEIGHT,
@@ -12,7 +12,7 @@ import {
 } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
-const GOrderedListInner = glamorous.ol(
+const StyledList = styled('ol')(
   {
     margin: 0,
     padding: 0,
@@ -36,9 +36,9 @@ const GOrderedListInner = glamorous.ol(
 
 // TODO use Context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
 const OrderedList = ({ children, listStyleType, className }) => (
-  <GOrderedListInner className={className} listStyleType={listStyleType}>
+  <StyledList className={className} listStyleType={listStyleType}>
     {children}
-  </GOrderedListInner>
+  </StyledList>
 );
 
 OrderedList.defaultProps = {

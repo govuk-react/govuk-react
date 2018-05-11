@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
+
 import GridCol from './';
 
 describe(GridCol, () => {
@@ -23,5 +25,9 @@ describe(GridCol, () => {
 
   it('passes `props.children` to the rendered `wrapper` as `children`', () => {
     expect(wrapper.props.children).toBe(props.children);
+  });
+
+  it('matches snapshot', () => {
+    expect(mount(wrapper)).toMatchSnapshot('enzyme.mount');
   });
 });

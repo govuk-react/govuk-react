@@ -1,6 +1,6 @@
 // https://github.com/alphagov/govuk-frontend/tree/master/src/components/
 
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as COLOUR from 'govuk-colours';
@@ -12,7 +12,7 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-const GHintText = glamorous.span({
+const StyledHint = styled('span')({
   display: 'block',
   fontFamily: NTA_LIGHT,
   WebkitFontSmoothing: 'antialiased',
@@ -29,9 +29,9 @@ const GHintText = glamorous.span({
 });
 
 const HintText = ({ children, ...props }) => (
-  <GHintText {...props}>
+  <StyledHint {...props}>
     {children}
-  </GHintText>);
+  </StyledHint>);
 
 HintText.propTypes = {
   children: PropTypes.node.isRequired,

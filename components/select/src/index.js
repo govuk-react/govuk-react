@@ -2,8 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
-
+import styled from 'react-emotion';
 import { BLACK, ERROR_COLOUR, YELLOW } from 'govuk-colours';
 import {
   MEDIA_QUERIES,
@@ -16,7 +15,7 @@ import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
-const Input = glamorous.select(
+const StyledSelect = styled('select')(
   {
     boxSizing: 'border-box',
     fontFamily: NTA_LIGHT,
@@ -33,9 +32,6 @@ const Input = glamorous.select(
       height: '38px',
       fontSize: '19px',
       lineHeight: '1.31579',
-    },
-    '[disabled]': {
-      cursor: 'auto',
     },
     ':focus': {
       outline: `3px solid ${YELLOW}`,
@@ -54,9 +50,9 @@ const Select = ({
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
-    <Input error={meta.touched && meta.error} {...input}>
+    <StyledSelect error={meta.touched && meta.error} {...input}>
       {children}
-    </Input>
+    </StyledSelect>
   </Label>
 );
 
@@ -99,4 +95,4 @@ Select.propTypes = {
 };
 
 export default withWhiteSpace({ marginBottom: 6 })(Select);
-export { Input as SelectInput };
+export { StyledSelect as SelectInput };

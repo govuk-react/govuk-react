@@ -1,18 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
+exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
+.emotion-1 {
   margin-bottom: 0;
 }
 
-.glamor-3,
-[data-glamor-3] {
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-3 {
   border-bottom: 1px solid #bfc1c3;
   box-sizing: border-box;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 14px;
@@ -20,22 +24,37 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-3> a,
-[data-glamor-3]> a {
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.emotion-3 > a {
   color: #005ea5;
 }
 
-.glamor-0,
-[data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
   display: inline-block;
   margin: 0 8px 0 0;
   padding: 2px 5px;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1428571429;
   text-transform: uppercase;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
   letter-spacing: 1px;
+  -webkit-text-decoration: none;
   text-decoration: none;
   color: #ffffff;
   background-color: #005ea5;
@@ -44,63 +63,51 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    font-size: 16px;
-    line-height: 1.25;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
     font-size: 16px;
     line-height: 1.25;
     padding-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
     margin-bottom: 0;
   }
 }
 
-<glamorous(PhaseBanner)
+<Styled(PhaseBanner)
   level="beta"
 >
   <PhaseBanner
-    className="glamor-1"
+    className="emotion-1"
     level="beta"
   >
-    <glamorous(div)
-      className="glamor-1"
+    <Styled(div)
+      className="emotion-1"
     >
       <div
-        className="glamor-3"
+        className="emotion-3"
       >
-        <glamorous(PhaseBadge)>
+        <Styled(PhaseBadge)>
           <PhaseBadge
-            className="glamor-1"
+            className="emotion-1"
           >
-            <glamorous(strong)
-              className="glamor-1"
+            <Styled(strong)
+              className="emotion-1"
             >
               <strong
-                className="glamor-0"
+                className="emotion-0"
               >
                 beta
               </strong>
-            </glamorous(strong)>
+            </Styled(strong)>
           </PhaseBadge>
-        </glamorous(PhaseBadge)>
+        </Styled(PhaseBadge)>
         example
       </div>
-    </glamorous(div)>
+    </Styled(div)>
   </PhaseBanner>
-</glamorous(PhaseBanner)>
+</Styled(PhaseBanner)>
 `;
