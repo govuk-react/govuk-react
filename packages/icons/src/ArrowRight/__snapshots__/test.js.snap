@@ -12,8 +12,15 @@ exports[`ArrowRight matches wrapper snapshot: wrapper mount 1`] = `
   >
     <svg
       fill="currentColor"
+      height="100%"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
       version="1.1"
       viewBox="0 0 17 14"
+      width="100%"
     >
       <title>
         arrow right
