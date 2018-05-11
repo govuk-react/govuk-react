@@ -48,7 +48,7 @@
     "react": ">=16.2.0"
   },
   "devDependencies": {
-    "react-chromatic": "^0.8.1"
+    "react-chromatic": "^0.8.3"
   },
   "scripts": {
     "start": "start-storybook -p 9009",
