@@ -17,7 +17,7 @@ The following projects (in priority order) are used as a guide for what componen
 ## Usage
 
 ```sh
-npm install govuk-react emotion emotion-react --save
+npm install govuk-react emotion react-emotion --save
 ```
 
 ```js
