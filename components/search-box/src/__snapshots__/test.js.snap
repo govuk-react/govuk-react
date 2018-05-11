@@ -1,26 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
-.glamor-3,
-[data-glamor-3] {
+exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
+.emotion-3 {
   margin-bottom: 0;
 }
 
-.glamor-2,
-[data-glamor-2] {
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-2 {
   box-sizing: border-box;
   display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   background: #ffffff;
   margin-bottom: 0;
 }
 
-.glamor-0,
-[data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-2 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
   width: 100%;
   height: 40px;
   padding: 6px;
@@ -28,7 +36,7 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   border: solid 1px #bfc1c3;
   border-right: 0;
   box-sizing: border-box;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
@@ -38,20 +46,17 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   -webkit-appearance: none;
 }
 
-.glamor-0:focus,
-[data-glamor-0]:focus {
+.emotion-0:focus {
   margin-right: 3px;
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.glamor-0:focus ~ button,
-[data-glamor-0]:focus ~ button {
+.emotion-0:focus ~ button {
   width: 46px;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.emotion-1 {
   background-color: #2b8cc4;
   border: 0;
   display: block;
@@ -66,54 +71,39 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   overflow: hidden;
 }
 
-.glamor-1:focus,
-[data-glamor-1]:focus {
+.emotion-1:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
-    margin-bottom: 0;
-  }
-}
-
-<glamorous(SearchBox)
+<Styled(SearchBox)
   placeholder="example"
 >
   <SearchBox
-    className="glamor-3"
+    className="emotion-3"
     placeholder="example"
   >
-    <glamorous(div)
-      className="glamor-3"
+    <Styled(div)
+      className="emotion-3"
     >
       <div
-        className="glamor-2"
+        className="emotion-2"
       >
-        <glamorous(input)
+        <Styled(input)
           placeholder="example"
           type="search"
         >
           <input
-            className="glamor-0"
+            className="emotion-0"
             placeholder="example"
             type="search"
           />
-        </glamorous(input)>
-        <glamorous(button)
+        </Styled(input)>
+        <Styled(button)
           title="Search"
         >
           <button
-            className="glamor-1"
+            className="emotion-1"
             title="Search"
           >
             <Search
@@ -153,9 +143,9 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
               </SVG>
             </Search>
           </button>
-        </glamorous(button)>
+        </Styled(button)>
       </div>
-    </glamorous(div)>
+    </Styled(div)>
   </SearchBox>
-</glamorous(SearchBox)>
+</Styled(SearchBox)>
 `;

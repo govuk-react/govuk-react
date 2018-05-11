@@ -1,14 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
-.glamor-4,
-[data-glamor-4] {
+.emotion-4 {
   margin-bottom: 10px;
 }
 
-.glamor-3,
-[data-glamor-3] {
-  font-family: "nta", Arial, sans-serif;
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 10px;
+  }
+}
+
+.emotion-3 {
+  font-family: "nta",Arial,sans-serif;
   font-size: 14px;
   line-height: 1.1428571429;
   margin-top: 15px;
@@ -16,16 +20,27 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
   margin-bottom: 10px;
 }
 
-.glamor-2,
-[data-glamor-2] {
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 10px;
+  }
+}
+
+.emotion-2 {
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: block;
 }
 
-.glamor-0,
-[data-glamor-0] {
+.emotion-0 {
   position: relative;
   display: inline-block;
   white-space: no-wrap;
@@ -34,20 +49,17 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
   padding-left: 15px;
 }
 
-.glamor-0:first-child,
-[data-glamor-0]:first-child {
+.emotion-0:first-child {
   margin-left: 0;
   padding-left: 0;
 }
 
-.glamor-0:first-child::before,
-[data-glamor-0]:first-child::before {
+.emotion-0:first-child::before {
   display: none;
 }
 
-.glamor-0::before,
-[data-glamor-0]::before {
-  content: " ";
+.emotion-0::before {
+  content: '';
   display: block;
   position: absolute;
   top: -1px;
@@ -56,60 +68,44 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
   width: 7px;
   height: 7px;
   margin: auto 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   border: solid;
   border-width: 1px 1px 0 0;
   border-color: #6f777b;
-  -webkit-transform: rotate(45deg);
 }
 
-.glamor-0> a,
-[data-glamor-0]> a {
+.emotion-0 > a {
   color: #0b0c0c;
+  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.glamor-0> a:focus,
-[data-glamor-0]> a:focus {
+.emotion-0 > a:focus {
   background-color: #ffbf47;
   outline: 3px solid #ffbf47;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-4,
-  [data-glamor-4] {
-    margin-bottom: 10px;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    font-size: 16px;
-    line-height: 1.25;
-    margin-bottom: 10px;
-  }
-}
-
-<glamorous(Breadcrumb)>
+<Styled(Breadcrumb)>
   <Breadcrumb
-    className="glamor-4"
+    className="emotion-4"
   >
-    <glamorous(div)
-      className="glamor-4"
+    <Styled(div)
+      className="emotion-4"
     >
       <div
-        className="glamor-3"
+        className="emotion-3"
       >
-        <glamorous(ul)>
+        <Styled(ul)>
           <ul
-            className="glamor-2"
+            className="emotion-2"
           >
-            <glamorous(li)
+            <Styled(li)
               key="0"
             >
               <li
-                className="glamor-0"
+                className="emotion-0"
               >
                 <a
                   href="/section"
@@ -117,20 +113,20 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
                   Section 1
                 </a>
               </li>
-            </glamorous(li)>
-            <glamorous(li)
+            </Styled(li)>
+            <Styled(li)
               key="1"
             >
               <li
-                className="glamor-0"
+                className="emotion-0"
               >
                 example
               </li>
-            </glamorous(li)>
+            </Styled(li)>
           </ul>
-        </glamorous(ul)>
+        </Styled(ul)>
       </div>
-    </glamorous(div)>
+    </Styled(div)>
   </Breadcrumb>
-</glamorous(Breadcrumb)>
+</Styled(Breadcrumb)>
 `;

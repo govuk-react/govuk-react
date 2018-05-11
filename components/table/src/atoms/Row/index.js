@@ -2,9 +2,9 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 
-const RowInner = glamorous.tr();
+const RowInner = styled('tr')();
 
 const Row = ({ children, ...props }) => (
   <RowInner {...props}>

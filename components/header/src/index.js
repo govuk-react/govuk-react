@@ -3,7 +3,7 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/globals/scss/core/_typography.scss
 // https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_elements-typography.scss
 
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -15,7 +15,7 @@ import {
 } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
-const GHeader = glamorous(({ level, children, ...props }) =>
+const StyledHeader = styled(({ level, children, ...props }) =>
   createElement(LEVEL_TAG[level], props, children))(
   {
     fontFamily: NTA_LIGHT,
@@ -37,7 +37,7 @@ const GHeader = glamorous(({ level, children, ...props }) =>
   }),
 );
 
-const Header = props => <GHeader {...props} />;
+const Header = props => <StyledHeader {...props} />;
 
 Header.defaultProps = {
   level: 1,

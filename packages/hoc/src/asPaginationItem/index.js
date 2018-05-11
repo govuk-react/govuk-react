@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { BLUE, GREY_4, PURPLE, YELLOW, WHITE } from 'govuk-colours';
 import {
   FONT_SIZE,
@@ -12,7 +12,7 @@ import {
 
 import { ArrowRight as NextPageIcon, ArrowLeft as PrevPageIcon } from '@govuk-react/icons';
 
-const PaginationWrapper = glamorous.li(
+const PaginationWrapper = styled('li')(
   {
     boxSizing: 'border-box',
     margin: 0,
@@ -80,13 +80,13 @@ const PaginationWrapper = glamorous.li(
   }),
 );
 
-const InnerWrap = glamorous.div({
+const InnerWrap = styled('div')({
   display: 'flex',
   alignItems: 'center',
   width: '100%',
 });
 
-const PageTitle = glamorous.span({
+const PageTitle = styled('span')({
   fontSize: FONT_SIZE.SIZE_14,
   lineHeight: LINE_HEIGHT.SIZE_14,
   textDecoration: 'underline',

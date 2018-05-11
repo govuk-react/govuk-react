@@ -1,14 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
+exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
+.emotion-1 {
   margin-bottom: 0;
 }
 
-.glamor-0,
-[data-glamor-0] {
-  font-family: "nta", Arial, sans-serif;
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-4 {
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 14px;
@@ -17,86 +38,94 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-3,
-[data-glamor-3] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-3 {
   margin: 0;
   padding: 0;
   padding-left: 20px;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 14px;
   line-height: 1.1428571429;
   list-style-type: square;
   margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-3 {
     font-size: 16px;
     line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
     margin-bottom: 0;
   }
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    font-size: 16px;
-    line-height: 1.25;
+@media only screen and (min-width:641px) {
+  .emotion-3 {
     margin-bottom: 0;
   }
 }
 
-<glamorous(ListNavigation)
+<Styled(ListNavigation)
   listStyleType="square"
 >
   <ListNavigation
-    className="glamor-1"
+    className="emotion-1"
     listStyleType="square"
   >
-    <glamorous(UnorderedList)
-      className="glamor-1"
+    <Styled(UnorderedList)
+      className="emotion-1"
       listStyleType="square"
     >
       <UnorderedList
-        className="glamor-1"
+        className="emotion-4"
         listStyleType="square"
       >
-        <glamorous(ul)
-          className="glamor-1"
+        <Styled(ul)
+          className="emotion-4"
           listStyleType="square"
         >
           <ul
-            className="glamor-3"
+            className="emotion-3"
           >
-            <glamorous(ListItem)>
+            <Styled(ListItem)>
               <ListItem
-                className="glamor-1"
+                className="emotion-1"
               >
-                <glamorous(li)
-                  className="glamor-1"
+                <Styled(li)
+                  className="emotion-1"
                 >
                   <li
-                    className="glamor-0"
+                    className="emotion-0"
                   >
                     Example
                   </li>
-                </glamorous(li)>
+                </Styled(li)>
               </ListItem>
-            </glamorous(ListItem)>
+            </Styled(ListItem)>
           </ul>
-        </glamorous(ul)>
+        </Styled(ul)>
       </UnorderedList>
-    </glamorous(UnorderedList)>
+    </Styled(UnorderedList)>
   </ListNavigation>
-</glamorous(ListNavigation)>
+</Styled(ListNavigation)>
 `;

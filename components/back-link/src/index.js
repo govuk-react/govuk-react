@@ -3,7 +3,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { BLACK, YELLOW } from 'govuk-colours';
 import { withWhiteSpace } from '@govuk-react/hoc';
 import {
@@ -14,7 +14,7 @@ import {
 } from '@govuk-react/constants';
 
 // const Button
-const Anchor = glamorous.button({
+const Anchor = styled('button')({
   fontFamily: NTA_LIGHT,
   WebkitFontSmoothing: 'antialiased',
   MozOsxFontSmoothing: 'grayscale',

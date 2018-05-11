@@ -1,14 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ThemedComponent matches withError snapshot: with error mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
+exports[`Styled matches withError snapshot: with error mount 1`] = `
+.emotion-1 {
   margin-bottom: 0;
 }
 
-.glamor-0,
-[data-glamor-0] {
-  font-family: "nta", Arial, sans-serif;
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
+  font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: block;
@@ -21,8 +25,20 @@ exports[`ThemedComponent matches withError snapshot: with error mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-3,
-[data-glamor-3] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-3 {
   padding: 0;
   margin: 0;
   border: 0;
@@ -31,83 +47,74 @@ exports[`ThemedComponent matches withError snapshot: with error mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-3:after,
-[data-glamor-3]:after {
+.emotion-3:after {
   content: '';
   display: table;
   clear: both;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
-    font-size: 19px;
-    line-height: 1.3;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
+@media only screen and (min-width:641px) {
+  .emotion-3 {
     max-width: 960px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
     margin-bottom: 0;
   }
 }
 
-<glamorous(MultiChoice)
+<Styled(MultiChoice)
   error="example"
   label="example"
 >
   <MultiChoice
-    className="glamor-1"
+    className="emotion-1"
     error="example"
     label="example"
     meta={Object {}}
   >
-    <glamorous(div)
-      className="glamor-1"
+    <Styled(div)
+      className="emotion-1"
     >
       <div
-        className="glamor-3"
+        className="emotion-3"
       >
-        <glamorous(LabelText)>
+        <Styled(LabelText)>
           <LabelText
-            className="glamor-1"
+            className="emotion-1"
           >
-            <glamorous(span)
-              className="glamor-1"
+            <Styled(span)
+              className="emotion-1"
             >
               <span
-                className="glamor-0"
+                className="emotion-0"
               >
                 example
               </span>
-            </glamorous(span)>
+            </Styled(span)>
           </LabelText>
-        </glamorous(LabelText)>
+        </Styled(LabelText)>
         example
       </div>
-    </glamorous(div)>
+    </Styled(div)>
   </MultiChoice>
-</glamorous(MultiChoice)>
+</Styled(MultiChoice)>
 `;
 
-exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
-.glamor-1,
-[data-glamor-1] {
+exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
+.emotion-1 {
   margin-bottom: 0;
 }
 
-.glamor-9,
-[data-glamor-9] {
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-9 {
   padding: 0;
   margin: 0;
   border: 0;
@@ -119,16 +126,26 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-9:after,
-[data-glamor-9]:after {
+.emotion-9:after {
   content: '';
   display: table;
   clear: both;
 }
 
-.glamor-0,
-[data-glamor-0] {
-  font-family: "nta", Arial, sans-serif;
+@media only screen and (min-width:641px) {
+  .emotion-9 {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-9 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
+  font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: block;
@@ -141,10 +158,22 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-3,
-[data-glamor-3] {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-3 {
   display: block;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -155,10 +184,22 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-.glamor-6,
-[data-glamor-6] {
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-6 {
   display: block;
-  font-family: "nta", Arial, sans-serif;
+  font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
@@ -171,49 +212,20 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-1,
-  [data-glamor-1] {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-9,
-  [data-glamor-9] {
-    max-width: 960px;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-0,
-  [data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-6 {
     font-size: 19px;
     line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
     margin-bottom: 0;
   }
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    font-size: 19px;
-    line-height: 1.3;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-6,
-  [data-glamor-6] {
-    font-size: 19px;
-    line-height: 1.3;
-    margin-bottom: 0;
-  }
-}
-
-<glamorous(MultiChoice)
+<Styled(MultiChoice)
   hint="example"
   label="example"
   meta={
@@ -224,7 +236,7 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
   }
 >
   <MultiChoice
-    className="glamor-1"
+    className="emotion-1"
     hint="example"
     label="example"
     meta={
@@ -234,61 +246,61 @@ exports[`ThemedComponent matches wrapper snapshot: wrapper mount 1`] = `
       }
     }
   >
-    <glamorous(div)
-      className="glamor-1"
+    <Styled(div)
+      className="emotion-1"
       error="example"
     >
       <div
-        className="glamor-9"
+        className="emotion-9"
       >
-        <glamorous(LabelText)>
+        <Styled(LabelText)>
           <LabelText
-            className="glamor-1"
+            className="emotion-1"
           >
-            <glamorous(span)
-              className="glamor-1"
+            <Styled(span)
+              className="emotion-1"
             >
               <span
-                className="glamor-0"
+                className="emotion-0"
               >
                 example
               </span>
-            </glamorous(span)>
+            </Styled(span)>
           </LabelText>
-        </glamorous(LabelText)>
-        <glamorous(HintText)>
+        </Styled(LabelText)>
+        <Styled(HintText)>
           <HintText
-            className="glamor-1"
+            className="emotion-1"
           >
-            <glamorous(span)
-              className="glamor-1"
+            <Styled(span)
+              className="emotion-1"
             >
               <span
-                className="glamor-3"
+                className="emotion-3"
               >
                 example
               </span>
-            </glamorous(span)>
+            </Styled(span)>
           </HintText>
-        </glamorous(HintText)>
-        <glamorous(ErrorText)>
+        </Styled(HintText)>
+        <Styled(ErrorText)>
           <ErrorText
-            className="glamor-1"
+            className="emotion-1"
           >
-            <glamorous(span)
-              className="glamor-1"
+            <Styled(span)
+              className="emotion-1"
             >
               <span
-                className="glamor-6"
+                className="emotion-6"
               >
                 example
               </span>
-            </glamorous(span)>
+            </Styled(span)>
           </ErrorText>
-        </glamorous(ErrorText)>
+        </Styled(ErrorText)>
         example
       </div>
-    </glamorous(div)>
+    </Styled(div)>
   </MultiChoice>
-</glamorous(MultiChoice)>
+</Styled(MultiChoice)>
 `;

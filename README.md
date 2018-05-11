@@ -1,6 +1,6 @@
 # govuk-react
 
-An implementation of the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital) in [React](https://reactjs.org) using [CSSinJS](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660) (currently [Glamorous](https://glamorous.rocks/)).
+An implementation of the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital) in [React](https://reactjs.org) using [CSSinJS](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660) using Object notation (with [Emotion](https://emotion.sh/docs/object-styles)).
 
 [![Build Status](https://travis-ci.org/penx/govuk-react.svg?branch=master)](https://travis-ci.org/penx/govuk-react)
 [![codecov](https://codecov.io/gh/penx/govuk-react/branch/master/graph/badge.svg)](https://codecov.io/gh/penx/govuk-react)
@@ -17,7 +17,7 @@ The following projects (in priority order) are used as a guide for what componen
 ## Usage
 
 ```sh
-npm install govuk-react glamorous --save
+npm install govuk-react emotion emotion-react --save
 ```
 
 ```js
@@ -62,11 +62,11 @@ Use of these components assumes the following from the peer project:
 - The GDS Transport font face is included ([for gov.uk domains only](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk))
 - Other than the reset, no other styles affecting generic elements (without classes, IDs etc) are present in the CSS.
 
-## Why Glamorous/CSS-in-JS?
+## Why Emotion/CSS-in-JS?
 
 See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
 
-We have opted for [Glamorous](https://glamorous.rocks/) over styled-components as we like the JS syntax and would rather not burden either the front end or the transpiler with a CSS parser. However, there is [an open discussion](https://github.com/penx/govuk-react/issues/219) on whether to use styled-components or Emotion, so this is subject to change.
+We have opted for [Emotion](https://emotion.sh/) over styled-components as we like the [support for JS syntax](https://emotion.sh/docs/object-styles).
 
 We are also expecting to use [Interoperable Style Transfer Format (ISTF)](https://github.com/cssinjs/istf-spec) once it is finalised and compatible with a CSSinJS library, which would allow us to distribute CSSinJS stylesheets without a runtime.
 

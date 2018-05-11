@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
+.emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+<Styled(ListItem)>
+  <ListItem
+    className="emotion-1"
+  >
+    <Styled(li)
+      className="emotion-1"
+    >
+      <li
+        className="emotion-0"
+      >
+        example
+      </li>
+    </Styled(li)>
+  </ListItem>
+</Styled(ListItem)>
+`;

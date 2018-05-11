@@ -1,6 +1,6 @@
 // https://github.com/alphagov/govuk-frontend/tree/master/src/components/
 
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { BLACK } from 'govuk-colours';
@@ -12,7 +12,7 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-const GLabelText = glamorous.span(
+const StyledLabelText = styled('span')(
   {
     fontFamily: NTA_LIGHT,
     WebkitFontSmoothing: 'antialiased',
@@ -35,9 +35,9 @@ const GLabelText = glamorous.span(
 );
 
 const LabelText = ({ children, ...props }) => (
-  <GLabelText {...props}>
+  <StyledLabelText {...props}>
     {children}
-  </GLabelText>);
+  </StyledLabelText>);
 
 LabelText.propTypes = {
   children: PropTypes.node.isRequired,
