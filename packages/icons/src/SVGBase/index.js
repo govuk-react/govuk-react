@@ -7,6 +7,9 @@ const SVG = ({
   <svg
     version="1.1"
     fill={fill}
+    width="100%"
+    height="100%"
+    style={{ display: 'block' }}
     {...rest}
   >
     <title>{title}</title>
