@@ -129,9 +129,6 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
                   version="1.1"
                   viewBox="0 0 57 57"
                   width="100%"
-                  x="0px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0px"
                 >
                   <title>
                     Search
