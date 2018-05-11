@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, color, number } from '@storybook/addon-knobs/react';
+import { withKnobs, color, text } from '@storybook/addon-knobs/react';
 
 import Spinner from '.';
 
@@ -9,7 +9,7 @@ stories.addDecorator(withKnobs);
 
 stories.add('Spinner', () => {
   const fillColour = color('fill', 'black');
-  const width = number('width', 100);
-  const height = number('height', '');
+  const width = text('width', '100%');
+  const height = text('height', '100%');
   return (<Spinner width={width} height={height} fill={fillColour} title="Example Search implementation" />);
 });
