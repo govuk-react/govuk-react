@@ -129,3 +129,136 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   </Checkbox>
 </Styled(Checkbox)>
 `;
+
+exports[`Checkbox renders disabled checkbox: disabled 1`] = `
+.emotion-3 {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 10px;
+  }
+}
+
+.emotion-2 {
+  display: block;
+  position: relative;
+  padding: 0 0 0 38px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-2 {
+    margin-bottom: 10px;
+  }
+}
+
+.emotion-1 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  cursor: pointer;
+  padding: 8px 10px 9px 12px;
+  display: block;
+  color: #0b0c0c;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+.emotion-1::before {
+  content: '';
+  display: block;
+  border: 2px solid #0b0c0c;
+  background: transparent;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.emotion-1::after {
+  content: '';
+  border: solid;
+  border-width: 0 0 5px 5px;
+  background: transparent;
+  border-top-color: transparent;
+  width: 17px;
+  height: 7px;
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  zoom: 1;
+  opacity: 0;
+}
+
+.emotion-0 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 38px;
+  height: 38px;
+  z-index: 1;
+  margin: 0;
+  zoom: 1;
+  opacity: 0;
+  cursor: auto;
+}
+
+.emotion-0:checked + span:after {
+  opacity: 1;
+}
+
+.emotion-0:focus + span:before {
+  box-shadow: 0 0 0 4px #ffbf47;
+}
+
+.emotion-0 + span {
+  opacity: .4;
+  pointer-events: none;
+}
+
+<Styled(Checkbox)
+  disabled={true}
+>
+  <Checkbox
+    className="emotion-3"
+    disabled={true}
+  >
+    <Styled(label)
+      className="emotion-3"
+    >
+      <label
+        className="emotion-2"
+      >
+        <Styled(input)
+          disabled={true}
+          type="checkbox"
+        >
+          <input
+            className="emotion-0"
+            disabled={true}
+            type="checkbox"
+          />
+        </Styled(input)>
+        <Styled(span)>
+          <span
+            className="emotion-1"
+          />
+        </Styled(span)>
+      </label>
+    </Styled(label)>
+  </Checkbox>
+</Styled(Checkbox)>
+`;
