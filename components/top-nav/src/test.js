@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import TopNav, { asAnchor } from './';
+import CrownIcon from '@govuk-react/icon-crown';
+
+import TopNav, { asAnchor, IconTitle } from './';
 
 const emptyNode = [];
 const nullNode = null;
@@ -35,4 +37,14 @@ describe(TopNav, () => {
   it('matches snapshot', () => {
     expect(mount(wrapperMultiple)).toMatchSnapshot('enzyme.mount');
   });
+
+  it('with icon title', () => {
+    expect(mount(  <TopNav company={
+      <IconTitle
+        icon={<CrownIcon width="36" height="32" />}
+      >
+        GOV.UK
+      </IconTitle>} />)).toMatchSnapshot('icon title');
+  });
+
 });
