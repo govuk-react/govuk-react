@@ -14,9 +14,10 @@
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
-    "glamorous": ">=4",
+    "emotion": ">=9",
     "prop-types": ">=15",
-    "react": ">=16.2"
+    "react": ">=16.2",
+    "react-emotion": ">=9"
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es",

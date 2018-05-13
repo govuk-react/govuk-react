@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { WHITE, YELLOW } from 'govuk-colours';
 
 const asAnchor = (AnchorType) => {
@@ -13,7 +13,7 @@ const asAnchor = (AnchorType) => {
       .isRequired,
   };
 
-  const StyledHoc = glamorous(Anchor)({
+  const StyledHoc = styled(Anchor)({
     color: WHITE, // TODO: active state, LIGHT_BLUE
     textDecoration: 'none',
     borderBottom: '1px solid transparent',

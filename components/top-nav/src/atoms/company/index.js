@@ -1,7 +1,7 @@
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { WHITE } from 'govuk-colours';
 
-const Company = glamorous.div({
+const Company = styled('div')({
   display: 'flex',
   fontWeight: 800,
   alignItems: 'center',

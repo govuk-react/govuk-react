@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
 
-const Label = glamorous.label({
+const Label = styled('label')({
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'none',
   },
 });
 
-const Input = glamorous.input({
+const Input = styled('input')({
   position: 'absolute',
   top: '-999em',
   // This is reliant on HTML structure of parent component.

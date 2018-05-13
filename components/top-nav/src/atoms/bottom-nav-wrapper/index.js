@@ -1,11 +1,11 @@
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { BLUE } from 'govuk-colours';
 import {
   MEDIA_QUERIES,
   SPACING,
 } from '@govuk-react/constants';
 
-const BottomNavWrapper = glamorous.div({
+const BottomNavWrapper = styled('div')({
   borderBottom: `10px solid ${BLUE}`,
   maxWidth: '990px',
   margin: '0 auto',

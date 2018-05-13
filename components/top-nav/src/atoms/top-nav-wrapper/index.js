@@ -1,4 +1,4 @@
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import {
   FONT_SIZE,
   LINE_HEIGHT,
@@ -6,7 +6,7 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-const TopNavWrapper = glamorous.div(({
+const TopNavWrapper = styled('div')(({
   bgColor,
   color,
 }) => ({

@@ -1,18 +1,18 @@
 import React from 'react';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 
-const Container = glamorous.div({
+const Container = styled('div')({
   // display: 'flex',
   // alignItems: 'center',
   verticalAlign: 'baseline',
 });
-const IconContainer = glamorous.span({
+const IconContainer = styled('span')({
   width: '36px',
   maxHeight: '27px',
   display: 'inline-block',
   marginRight: '7px',
 });
-const TitleContainer = glamorous.span({
+const TitleContainer = styled('span')({
   display: 'inline-block',
 });
 

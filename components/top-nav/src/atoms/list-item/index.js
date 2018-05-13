@@ -1,11 +1,11 @@
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { PROPOSITION_BORDER } from 'govuk-colours';
 import {
   MEDIA_QUERIES,
   SPACING,
 } from '@govuk-react/constants';
 
-const Li = glamorous.li({
+const Li = styled('li')({
   flex: '1 0 50%',
   width: '100%',
   listStyleType: 'none',

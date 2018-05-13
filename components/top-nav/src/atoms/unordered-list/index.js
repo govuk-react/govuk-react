@@ -1,10 +1,10 @@
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import {
   MEDIA_QUERIES,
   SPACING,
 } from '@govuk-react/constants';
 
-const Ul = glamorous.ul(({
+const Ul = styled('ul')(({
   serviceTitle,
 }) => ({
   display: 'none',

@@ -1,10 +1,10 @@
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import {
   MEDIA_QUERIES,
   SPACING,
 } from '@govuk-react/constants';
 
-const TopNavInner = glamorous.div({
+const TopNavInner = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   width: `calc(100% - ${SPACING.SCALE_3})`,

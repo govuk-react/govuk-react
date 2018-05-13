@@ -1,10 +1,10 @@
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import {
   MEDIA_QUERIES,
   SPACING,
 } from '@govuk-react/constants';
 
-const LogoSearchWrapper = glamorous.div({
+const LogoSearchWrapper = styled('div')({
   display: 'flex',
   justifyContent: 'space-between',
   [MEDIA_QUERIES.LARGESCREEN]: {
