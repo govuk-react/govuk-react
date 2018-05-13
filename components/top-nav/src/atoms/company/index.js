@@ -1,5 +1,4 @@
 import styled from 'react-emotion';
-import { WHITE } from 'govuk-colours';
 
 const Company = styled('div')({
   display: 'flex',

@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'react-emotion';
+import PropTypes from 'prop-types';
 
 const Container = styled('div')({
-  // display: 'flex',
-  // alignItems: 'center',
   verticalAlign: 'baseline',
 });
 const IconContainer = styled('span')({
@@ -22,5 +21,14 @@ const IconTitle = ({ icon, children }) => (
     <TitleContainer>{children}</TitleContainer>
   </Container>
 );
+
+IconTitle.propTypes = {
+  icon: PropTypes.node,
+  children: PropTypes.node,
+};
+IconTitle.defaultProps = {
+  icon: undefined,
+  children: undefined,
+};
 
 export default IconTitle;
