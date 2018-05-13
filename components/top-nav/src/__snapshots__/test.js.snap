@@ -34,7 +34,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   width: calc(100% - 15px);
-  max-width: 990px;
+  max-width: 960px;
   padding: 10px 15px;
   box-sizing: border-box;
 }
@@ -160,7 +160,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
 
 .emotion-14 {
   border-bottom: 10px solid #005ea5;
-  max-width: 990px;
+  max-width: 960px;
   margin: 0 auto;
   width: calc(100% - 15px);
 }
@@ -377,7 +377,7 @@ exports[`TopNav with icon title: icon title 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   width: calc(100% - 15px);
-  max-width: 990px;
+  max-width: 960px;
   padding: 10px 15px;
   box-sizing: border-box;
 }
@@ -457,7 +457,7 @@ exports[`TopNav with icon title: icon title 1`] = `
 
 .emotion-8 {
   border-bottom: 10px solid #005ea5;
-  max-width: 990px;
+  max-width: 960px;
   margin: 0 auto;
   width: calc(100% - 15px);
 }
