@@ -39,12 +39,12 @@ describe(TopNav, () => {
   });
 
   it('with icon title', () => {
-    expect(mount(  <TopNav company={
+    expect(mount(<TopNav company={
       <IconTitle
         icon={<CrownIcon width="36" height="32" />}
       >
         GOV.UK
-      </IconTitle>} />)).toMatchSnapshot('icon title');
+      </IconTitle>}
+    />)).toMatchSnapshot('icon title');
   });
-
 });
