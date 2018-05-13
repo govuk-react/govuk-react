@@ -37,6 +37,10 @@ describe('Radio', () => {
     expect(mount(wrapper)).toMatchSnapshot('standard mount');
   });
 
+  it('disabled', () => {
+    expect(mount(<Radio disabled />)).toMatchSnapshot('disabled');
+  });
+
   it('matches snapshot for inline', () => {
     expect(mount(wrapperInline)).toMatchSnapshot('inline mount');
   });
