@@ -875,50 +875,9 @@
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.6.3.tgz#65682e68a82701c70eefb38d7f941a2c0bfa90de"
 
-"@govuk-react/button@^0.1.27":
-  version "0.1.28"
-  resolved "https://registry.yarnpkg.com/@govuk-react/button/-/button-0.1.28.tgz#d4439abff1b659e488e20d47f6f5fc2b4e6ca3f7"
-  dependencies:
-    "@govuk-react/constants" "^0.1.28"
-    "@govuk-react/hoc" "^0.1.28"
-    "@govuk-react/icons" "^0.1.28"
-    "@storybook/addon-knobs" "^3.4.2"
-    govuk-colours "^1.0.3"
-
-"@govuk-react/constants@^0.1.26", "@govuk-react/constants@^0.1.28":
-  version "0.1.28"
-  resolved "https://registry.yarnpkg.com/@govuk-react/constants/-/constants-0.1.28.tgz#7f917e63bdbb20361ef1cfa4547548b9cd71ab6a"
-  dependencies:
-    govuk-colours "^1.0.3"
-
-"@govuk-react/hoc@^0.1.26", "@govuk-react/hoc@^0.1.28":
-  version "0.1.28"
-  resolved "https://registry.yarnpkg.com/@govuk-react/hoc/-/hoc-0.1.28.tgz#b4bf49a6b1a0592ad157cafdd22fe8ba3394403b"
-  dependencies:
-    "@govuk-react/constants" "^0.1.28"
-    "@govuk-react/icons" "^0.1.28"
-    govuk-colours "^1.0.3"
-
 "@govuk-react/icon-crown@0.0.5":
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/@govuk-react/icon-crown/-/icon-crown-0.0.5.tgz#364dfde56c6a839fe962aeb90bb3bcc2a0b876c2"
-
-"@govuk-react/icons@^0.1.27", "@govuk-react/icons@^0.1.28":
-  version "0.1.28"
-  resolved "https://registry.yarnpkg.com/@govuk-react/icons/-/icons-0.1.28.tgz#36e6d9d03996fb230f3cbcf7567581826b64d1b1"
-  dependencies:
-    "@govuk-react/constants" "^0.1.28"
-    glamor "^2.20.40"
-    govuk-colours "^1.0.3"
-
-"@govuk-react/search-box@^0.1.27":
-  version "0.1.28"
-  resolved "https://registry.yarnpkg.com/@govuk-react/search-box/-/search-box-0.1.28.tgz#0dc10e720ebab7568b62a6d5e0f7500974b76fa8"
-  dependencies:
-    "@govuk-react/constants" "^0.1.28"
-    "@govuk-react/hoc" "^0.1.28"
-    "@govuk-react/icons" "^0.1.28"
-    govuk-colours "^1.0.3"
 
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"

@@ -38,7 +38,7 @@
     "@govuk-react/select": "^0.2.0",
     "@govuk-react/table": "^0.2.0",
     "@govuk-react/text-area": "^0.2.0",
-    "@govuk-react/top-nav": "^0.1.26",
+    "@govuk-react/top-nav": "^0.2.0",
     "@govuk-react/unordered-list": "^0.2.0",
     "govuk-colours": "^1.0.3"
   },
