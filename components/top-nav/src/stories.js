@@ -5,7 +5,7 @@ import { Search as SearchIcon } from '@govuk-react/icons';
 import SearchBox from '@govuk-react/search-box';
 import Header from '@govuk-react/header';
 
-import TopNav, { asAnchor, IconTitle } from '.';
+import TopNav, { asAnchor } from '.';
 
 const AnchorTag = asAnchor('a');
 const link = 'https://example.com?=1';
@@ -14,11 +14,11 @@ const link = 'https://example.com?=1';
 
 const Company = (
   <AnchorTag href={link} target="new">
-    <IconTitle
+    <TopNav.IconTitle
       icon={<CrownIcon width="36" height="32" />}
     >
       GOV.UK
-    </IconTitle>
+    </TopNav.IconTitle>
   </AnchorTag>
 );
 
@@ -41,11 +41,11 @@ storiesOf('TopNav', module).add('default', () => (
 storiesOf('TopNav', module).add('custom logo', () => (
   <TopNav company={
     <AnchorTag href={link} target="new">
-      <IconTitle
+      <TopNav.IconTitle
         icon={<SearchIcon width="32px" />}
       >
         Custom Title
-      </IconTitle>
+      </TopNav.IconTitle>
     </AnchorTag>}
   />
 ));

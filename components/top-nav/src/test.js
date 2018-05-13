@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import CrownIcon from '@govuk-react/icon-crown';
 
-import TopNav, { asAnchor, IconTitle } from './';
+import TopNav, { asAnchor } from './';
 
 const emptyNode = [];
 const nullNode = null;
@@ -40,11 +40,11 @@ describe(TopNav, () => {
 
   it('with icon title', () => {
     expect(mount(<TopNav company={
-      <IconTitle
+      <TopNav.IconTitle
         icon={<CrownIcon width="36" height="32" />}
       >
         GOV.UK
-      </IconTitle>}
+      </TopNav.IconTitle>}
     />)).toMatchSnapshot('icon title');
   });
 });

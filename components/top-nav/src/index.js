@@ -17,6 +17,8 @@ import UnorderedList from './atoms/unordered-list';
 import ListItem from './atoms/list-item';
 import MenuButton from './atoms/menu-button/';
 
+import IconTitle from './atoms/icon-title';
+
 const TopNav = ({
   active,
   bgColor,
@@ -87,8 +89,8 @@ TopNav.propTypes = {
   children: PropTypes.node,
 };
 
+TopNav.IconTitle = IconTitle;
+
 export default TopNav;
 
 export asAnchor from './asAnchor';
-
-export IconTitle from './atoms/icon-title';
