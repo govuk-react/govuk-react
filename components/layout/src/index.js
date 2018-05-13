@@ -3,10 +3,10 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { BREAKPOINTS, MEDIA_QUERIES, SPACING } from '@govuk-react/constants';
 
-const LayoutInner = glamorous.div({
+const StyledLayout = styled('div')({
   padding: SPACING.SCALE_2,
   minWidth: BREAKPOINTS.SMALLSCREEN,
   boxSizing: 'border-box',
@@ -17,7 +17,7 @@ const LayoutInner = glamorous.div({
   },
 });
 
-const Layout = ({ children }) => <LayoutInner>{children}</LayoutInner>;
+const Layout = ({ children }) => <StyledLayout>{children}</StyledLayout>;
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

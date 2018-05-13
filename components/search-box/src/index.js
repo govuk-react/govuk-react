@@ -2,14 +2,14 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { LIGHT_BLUE, GREY_2, WHITE, YELLOW } from 'govuk-colours';
 import { NTA_LIGHT } from '@govuk-react/constants';
 
 import { Search } from '@govuk-react/icons';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
-const SearchBoxWrapper = glamorous.div({
+const SearchBoxWrapper = styled('div')({
   boxSizing: 'border-box',
   display: 'flex',
   width: '100%',
@@ -17,7 +17,7 @@ const SearchBoxWrapper = glamorous.div({
 });
 
 // css normalize is hiding the input:search clear SearchButton
-const InputSearchBox = glamorous.input({
+const InputSearchBox = styled('input')({
   width: '100%',
   height: '40px',
   padding: '6px',
@@ -43,7 +43,7 @@ const InputSearchBox = glamorous.input({
   },
 });
 
-const SearchButton = glamorous.button({
+const SearchButton = styled('button')({
   backgroundColor: LIGHT_BLUE,
   border: 0,
   display: 'block',

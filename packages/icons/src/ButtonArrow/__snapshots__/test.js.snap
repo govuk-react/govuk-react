@@ -21,21 +21,17 @@ exports[`ButtonArrow matches wrapper snapshot: wrapper mount 1`] = `
       version="1.1"
       viewBox="0 0 706 860"
       width="100%"
-      x="0px"
-      xmlns="http://www.w3.org/2000/svg"
-      y="0px"
     >
       <title>
         ButtonArrow
       </title>
       <g>
-        <polygon
-          points="0.15234375 0 253.145018 0 705.25342 430 452.260746 430"
+        <path
+          d="M.152 0h252.993l452.108 430H452.261z"
         />
-        <polygon
+        <path
+          d="M0 860h252.993L705.1 430H452.108z"
           fillOpacity="0.5"
-          points="0 430 252.992674 430 705.101076 860 452.108402 860"
-          transform="translate(352.550538, 645.000000) scale(1, -1) translate(-352.550538, -645.000000) "
         />
       </g>
     </svg>

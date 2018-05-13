@@ -1,6 +1,6 @@
 // https://github.com/alphagov/govuk-frontend/tree/master/src/components
 
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ERROR_COLOUR } from 'govuk-colours';
@@ -12,7 +12,7 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-const GErrorText = glamorous.span({
+const StyledError = styled('span')({
   display: 'block',
   fontFamily: NTA_LIGHT,
   WebkitFontSmoothing: 'antialiased',
@@ -31,9 +31,9 @@ const GErrorText = glamorous.span({
 });
 
 const ErrorText = ({ children, ...props }) => (
-  <GErrorText {...props}>
+  <StyledError {...props}>
     {children}
-  </GErrorText>
+  </StyledError>
 );
 
 ErrorText.propTypes = {

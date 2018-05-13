@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio matches snapshot for inline: inline mount 1`] = `
-.glamor-3,
-[data-glamor-3] {
+.emotion-3 {
   margin-bottom: 10px;
 }
 
-.glamor-0,
-[data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 10px;
+  }
+}
+
+.emotion-0 {
   position: absolute;
   cursor: pointer;
   left: 0;
@@ -18,21 +22,24 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   margin: 0;
   zoom: 1;
   opacity: 0;
+  cursor: pointer;
 }
 
-.glamor-0:checked + span::after,
-[data-glamor-0]:checked + span::after {
+.emotion-0:checked + span::after {
   opacity: 1;
 }
 
-.glamor-0:focus + span::before,
-[data-glamor-0]:focus + span::before {
+.emotion-0:focus + span::before {
   box-shadow: 0 0 0 4px #ffbf47;
 }
 
-.glamor-1,
-[data-glamor-1] {
-  font-family: "nta", Arial, sans-serif;
+.emotion-0 + span {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.emotion-1 {
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
@@ -42,9 +49,8 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   display: block;
 }
 
-.glamor-1:before,
-[data-glamor-1]:before {
-  content: " ";
+.emotion-1:before {
+  content: '';
   box-sizing: border-box;
   position: absolute;
   top: 0;
@@ -56,9 +62,8 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   background: transparent;
 }
 
-.glamor-1:after,
-[data-glamor-1]:after {
-  content: " ";
+.emotion-1:after {
+  content: '';
   position: absolute;
   top: 0.52632em;
   left: 0.52632em;
@@ -69,8 +74,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   opacity: 0;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.emotion-2 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
@@ -80,67 +84,66 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   margin-bottom: 10px;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
+@media only screen and (min-width:641px) {
+  .emotion-2 {
     margin-bottom: 10px;
   }
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
-    margin-bottom: 10px;
-  }
-}
-
-<glamorous(Radio)
+<Styled(Radio)
   inline={true}
   name="example"
 >
   <Radio
-    className="glamor-3"
+    className="emotion-3"
+    disabled={false}
     inline={true}
     name="example"
   >
-    <glamorous(label)
-      className="glamor-3"
+    <Styled(label)
+      className="emotion-3"
       inline={true}
     >
       <label
-        className="glamor-2"
+        className="emotion-2"
       >
-        <glamorous(input)
+        <Styled(input)
+          disabled={false}
           name="example"
           type="radio"
         >
           <input
-            className="glamor-0"
+            className="emotion-0"
+            disabled={false}
             name="example"
             type="radio"
           />
-        </glamorous(input)>
-        <glamorous(span)>
+        </Styled(input)>
+        <Styled(span)>
           <span
-            className="glamor-1"
+            className="emotion-1"
           >
             example
           </span>
-        </glamorous(span)>
+        </Styled(span)>
       </label>
-    </glamorous(label)>
+    </Styled(label)>
   </Radio>
-</glamorous(Radio)>
+</Styled(Radio)>
 `;
 
 exports[`Radio matches snapshot: standard mount 1`] = `
-.glamor-3,
-[data-glamor-3] {
+.emotion-3 {
   margin-bottom: 10px;
 }
 
-.glamor-2,
-[data-glamor-2] {
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 10px;
+  }
+}
+
+.emotion-2 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
@@ -148,8 +151,13 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   margin-bottom: 10px;
 }
 
-.glamor-0,
-[data-glamor-0] {
+@media only screen and (min-width:641px) {
+  .emotion-2 {
+    margin-bottom: 10px;
+  }
+}
+
+.emotion-0 {
   position: absolute;
   cursor: pointer;
   left: 0;
@@ -160,21 +168,24 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   margin: 0;
   zoom: 1;
   opacity: 0;
+  cursor: pointer;
 }
 
-.glamor-0:checked + span::after,
-[data-glamor-0]:checked + span::after {
+.emotion-0:checked + span::after {
   opacity: 1;
 }
 
-.glamor-0:focus + span::before,
-[data-glamor-0]:focus + span::before {
+.emotion-0:focus + span::before {
   box-shadow: 0 0 0 4px #ffbf47;
 }
 
-.glamor-1,
-[data-glamor-1] {
-  font-family: "nta", Arial, sans-serif;
+.emotion-0 + span {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.emotion-1 {
+  font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
@@ -184,9 +195,8 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   display: block;
 }
 
-.glamor-1:before,
-[data-glamor-1]:before {
-  content: " ";
+.emotion-1:before {
+  content: '';
   box-sizing: border-box;
   position: absolute;
   top: 0;
@@ -198,9 +208,8 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   background: transparent;
 }
 
-.glamor-1:after,
-[data-glamor-1]:after {
-  content: " ";
+.emotion-1:after {
+  content: '';
   position: absolute;
   top: 0.52632em;
   left: 0.52632em;
@@ -211,52 +220,41 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   opacity: 0;
 }
 
-@media only screen and (min-width: 641px) {
-  .glamor-3,
-  [data-glamor-3] {
-    margin-bottom: 10px;
-  }
-}
-
-@media only screen and (min-width: 641px) {
-  .glamor-2,
-  [data-glamor-2] {
-    margin-bottom: 10px;
-  }
-}
-
-<glamorous(Radio)
+<Styled(Radio)
   name="example"
 >
   <Radio
-    className="glamor-3"
+    className="emotion-3"
+    disabled={false}
     name="example"
   >
-    <glamorous(label)
-      className="glamor-3"
+    <Styled(label)
+      className="emotion-3"
     >
       <label
-        className="glamor-2"
+        className="emotion-2"
       >
-        <glamorous(input)
+        <Styled(input)
+          disabled={false}
           name="example"
           type="radio"
         >
           <input
-            className="glamor-0"
+            className="emotion-0"
+            disabled={false}
             name="example"
             type="radio"
           />
-        </glamorous(input)>
-        <glamorous(span)>
+        </Styled(input)>
+        <Styled(span)>
           <span
-            className="glamor-1"
+            className="emotion-1"
           >
             example
           </span>
-        </glamorous(span)>
+        </Styled(span)>
       </label>
-    </glamorous(label)>
+    </Styled(label)>
   </Radio>
-</glamorous(Radio)>
+</Styled(Radio)>
 `;

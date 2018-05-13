@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import { CSSTransition } from 'react-transition-group';
 import hexRgb from 'hex-rgb';
 import { Spinner } from '@govuk-react/icons';
@@ -10,13 +10,13 @@ import { BLACK, WHITE } from 'govuk-colours';
 
 const spinnerClassName = 'icon-loading';
 
-const Wrapper = glamorous.div({
+const StyledContainer = styled('div')({
   position: 'relative',
   paddingBottom: '2px',
   minHeight: '100px',
 });
 
-const Innerwrap = glamorous.div(({
+const Innerwrap = styled('div')(({
   timeIn,
   timeOut,
   backgroundColor,
@@ -110,7 +110,7 @@ const Innerwrap = glamorous.div(({
   },
 }));
 
-const Overlay = glamorous.div('overlay', {
+const Overlay = styled('div')({
   position: 'absolute',
   top: 0,
   right: 0,
@@ -132,7 +132,7 @@ const LoadingBox = ({
   timeOut,
   ...props
 }) => (
-  <Wrapper>
+  <StyledContainer>
     <CSSTransition {...props} timeout={timeOut} classNames="fade" in={loading} unmountOnExit>
       <Innerwrap
         backgroundColor={backgroundColor}
@@ -142,11 +142,11 @@ const LoadingBox = ({
         timeOut={timeOut}
       >
         <Spinner title={title} className={spinnerClassName} fill={spinnerColor} width="50px" height="50px" />
-        <Overlay />
+        <Overlay className="overlay" />
       </Innerwrap>
     </CSSTransition>
     {children}
-  </Wrapper>
+  </StyledContainer>
 );
 
 LoadingBox.defaultProps = {

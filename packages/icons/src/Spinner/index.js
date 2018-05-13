@@ -2,13 +2,13 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as glamor from 'glamor';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
+import { keyframes } from 'emotion';
 
 import SVG from '../SVGBase/index';
 
 const animationStyles = () => {
-  const fadeInOut = glamor.css.keyframes({
+  const fadeInOut = keyframes({
     '0%': { opacity: '0.250075' },
     '0.01%': { opacity: '0.25' },
     '0.03%': { opacity: '1' },
@@ -17,7 +17,7 @@ const animationStyles = () => {
   return { animation: `${fadeInOut} 1s infinite linear` };
 };
 
-const Rect = glamorous.rect(animationStyles);
+const Rect = styled('rect')(animationStyles);
 
 const Spinner = ({
   className,

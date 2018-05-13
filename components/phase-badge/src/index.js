@@ -1,9 +1,8 @@
 // https://govuk-elements.herokuapp.com/alpha-beta-banners/
 
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { BLUE, WHITE } from 'govuk-colours';
 import {
   FONT_SIZE,
@@ -13,7 +12,7 @@ import {
 } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
-const GPhaseBadge = glamorous.strong({
+const StyledBadge = styled('strong')({
   display: 'inline-block',
   margin: '0 8px 0 0',
   padding: '2px 5px',
@@ -36,7 +35,7 @@ const GPhaseBadge = glamorous.strong({
 });
 
 const PhaseBadge = ({ className, ...props }) => (
-  <GPhaseBadge className={className} {...props} />
+  <StyledBadge className={className} {...props} />
 );
 
 PhaseBadge.defaultProps = {

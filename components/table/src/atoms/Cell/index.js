@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import {
   FONT_SIZE,
   LINE_HEIGHT,
@@ -12,7 +12,7 @@ import {
 
 import { GREY_2 } from 'govuk-colours';
 
-const CellInner = glamorous.td(({
+const CellInner = styled('td')(({
   alignRight,
 }) => ({
   border: 0,

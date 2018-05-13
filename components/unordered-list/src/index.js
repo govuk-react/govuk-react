@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 import {
   FONT_SIZE,
   LINE_HEIGHT,
@@ -12,7 +12,7 @@ import {
 } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
-const GUnorderedList = glamorous.ul(
+const StyledList = styled('ul')(
   {
     margin: 0,
     padding: 0,
@@ -39,7 +39,7 @@ const GUnorderedList = glamorous.ul(
 // listStyleType: normal HTML property values are used here
 // e.g., listStyleType="circle", listStyleType="upper-alpha", listStyleType="none"
 const UnorderedList = ({ children, listStyleType, className }) => (
-  <GUnorderedList className={className} listStyleType={listStyleType}>{children}</GUnorderedList>
+  <StyledList className={className} listStyleType={listStyleType}>{children}</StyledList>
 );
 
 UnorderedList.defaultProps = {

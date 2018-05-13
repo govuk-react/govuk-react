@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'react-emotion';
 
 import {
   FONT_SIZE,
@@ -13,7 +13,7 @@ import {
 } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
-const PaginationWrapper = glamorous.ul({
+const StyledList = styled('ul')({
   boxSizing: 'border-box',
   display: 'flex',
   flexDirection: 'column',
@@ -34,7 +34,7 @@ const PaginationWrapper = glamorous.ul({
 });
 
 const Pagination = ({ children, className }) => (
-  <PaginationWrapper className={className}>{children}</PaginationWrapper>
+  <StyledList className={className}>{children}</StyledList>
 );
 
 Pagination.defaultProps = {
