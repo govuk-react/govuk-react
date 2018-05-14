@@ -41,6 +41,7 @@ const StyledButton = styled('button')(
     ':focus': {
       outline: `3px solid ${YELLOW}`,
     },
+    // TODO: avoid cascade
     ' svg': {
       maxWidth: '15px',
       marginLeft: SPACING.SCALE_4,

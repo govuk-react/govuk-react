@@ -26,11 +26,13 @@ describe('button', () => {
   it('should render a disabled button', () => {
     const output = shallow(<ButtonDisabled />);
     expect(output.find('button[disabled="disabled"]')).toBeTruthy();
+    expect(mount(<ButtonDisabled />)).toMatchSnapshot('disabled button');
   });
 
   it('matches wrapper snapshot', () => {
     expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
   });
+
 
   it('passes `props.start` to the rendered button as `start`', () => {
     expect(mount(<ButtonStart />).find('button')).toHaveLength(1);

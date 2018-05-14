@@ -3,6 +3,7 @@
 import styled from 'react-emotion';
 
 const TableHeader = styled('thead')({
+  // TODO: avoid cascade
   ' th': {
     fontWeight: 700,
   },

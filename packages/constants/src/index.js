@@ -33,6 +33,7 @@ export const SPACING = {
   SCALE_6: '60px',
 };
 
+// TODO: figure out how to optionally include locally installed font, e.g. "GDS Transport Website"
 export const NTA_LIGHT = '"nta", Arial, sans-serif';
 export const NTA_LIGHT_TABULAR = `ntatabularnumbers", ${NTA_LIGHT}`;
 export const FONT_STACK = `${NTA_LIGHT} !default`;

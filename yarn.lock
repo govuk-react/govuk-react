@@ -875,6 +875,10 @@
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.6.3.tgz#65682e68a82701c70eefb38d7f941a2c0bfa90de"
 
+"@govuk-react/icon-crown@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@govuk-react/icon-crown/-/icon-crown-0.0.5.tgz#364dfde56c6a839fe962aeb90bb3bcc2a0b876c2"
+
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"

@@ -1,5 +1,127 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Radio disabled: disabled 1`] = `
+.emotion-3 {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 10px;
+  }
+}
+
+.emotion-2 {
+  display: block;
+  position: relative;
+  padding: 0 0 0 38px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-2 {
+    margin-bottom: 10px;
+  }
+}
+
+.emotion-1 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  cursor: pointer;
+  padding: 8px 10px 9px 12px;
+  display: block;
+}
+
+.emotion-1:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.10526em;
+  height: 2.10526em;
+  border: 2px solid black;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.emotion-1:after {
+  content: '';
+  position: absolute;
+  top: 0.52632em;
+  left: 0.52632em;
+  width: 0;
+  height: 0;
+  border: 0.52632em solid;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.emotion-0 {
+  position: absolute;
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  width: 38px;
+  height: 38px;
+  z-index: 1;
+  margin: 0;
+  zoom: 1;
+  opacity: 0;
+  cursor: auto;
+}
+
+.emotion-0:checked + span::after {
+  opacity: 1;
+}
+
+.emotion-0:focus + span::before {
+  box-shadow: 0 0 0 4px #ffbf47;
+}
+
+.emotion-0 + span {
+  opacity: .4;
+  pointer-events: none;
+}
+
+<Styled(Radio)
+  disabled={true}
+>
+  <Radio
+    className="emotion-3"
+    disabled={true}
+  >
+    <Styled(label)
+      className="emotion-3"
+    >
+      <label
+        className="emotion-2"
+      >
+        <Styled(input)
+          disabled={true}
+          type="radio"
+        >
+          <input
+            className="emotion-0"
+            disabled={true}
+            type="radio"
+          />
+        </Styled(input)>
+        <Styled(span)>
+          <span
+            className="emotion-1"
+          />
+        </Styled(span)>
+      </label>
+    </Styled(label)>
+  </Radio>
+</Styled(Radio)>
+`;
+
 exports[`Radio matches snapshot for inline: inline mount 1`] = `
 .emotion-3 {
   margin-bottom: 10px;

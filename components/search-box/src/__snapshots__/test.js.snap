@@ -41,7 +41,7 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   text-transform: none;
   font-size: 16px;
   line-height: 1.75;
-  background: #fff;
+  background: #ffffff;
   border-radius: 0;
   -webkit-appearance: none;
 }
@@ -60,14 +60,14 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   background-color: #2b8cc4;
   border: 0;
   display: block;
-  color: #fff;
+  color: #ffffff;
   position: relative;
   padding: 10px;
   width: 45px;
   height: 40px;
   background-repeat: no-repeat;
   background-position: 2px 50%;
-  text-indent: -5000px;
+  text-indent: -999em;
   overflow: hidden;
 }
 
@@ -107,19 +107,16 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
             title="Search"
           >
             <Search
-              colour="#fff"
-              fill="currentColor"
+              fill="#ffffff"
               title="Search"
             >
               <SVG
-                colour="#fff"
-                fill="currentColor"
+                fill="#ffffff"
                 title="Search"
                 viewBox="0 0 57 57"
               >
                 <svg
-                  colour="#fff"
-                  fill="currentColor"
+                  fill="#ffffff"
                   height="100%"
                   style={
                     Object {

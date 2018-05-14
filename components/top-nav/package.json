@@ -1,0 +1,32 @@
+{
+  "name": "@govuk-react/top-nav",
+  "version": "0.2.0",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@govuk-react/button": "^0.2.0",
+    "@govuk-react/constants": "^0.2.0",
+    "@govuk-react/hoc": "^0.2.0",
+    "@govuk-react/icons": "^0.2.0",
+    "@govuk-react/search-box": "^0.2.0",
+    "govuk-colours": "^1.0.3"
+  },
+  "peerDependencies": {
+    "emotion": ">=9",
+    "prop-types": ">=15",
+    "react": ">=16.2",
+    "react-emotion": ">=9"
+  },
+  "scripts": {
+    "build": "npm run build:lib && npm run build:es",
+    "build:lib": "rimraf lib && babel src -d lib --source-maps",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps"
+  },
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "devDependencies": {
+    "@govuk-react/icon-crown": "0.0.5"
+  }
+}
