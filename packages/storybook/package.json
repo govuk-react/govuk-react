@@ -32,6 +32,7 @@
     "@govuk-react/select": "^0.2.0",
     "@govuk-react/table": "^0.2.0",
     "@govuk-react/text-area": "^0.2.0",
+    "@govuk-react/top-nav": "^0.2.0",
     "@govuk-react/unordered-list": "^0.2.0",
     "@storybook/addon-actions": "^3.4.1",
     "@storybook/addon-knobs": "^3.4.1",
