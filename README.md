@@ -89,6 +89,7 @@ We are also expecting to use [Interoperable Style Transfer Format (ISTF)](https:
 
 - [Auth0 Cosmos](https://github.com/auth0/cosmos)
 - [Shopify Polaris](https://github.com/Shopify/polaris)
+- [Zendesk Garden](https://github.com/zendeskgarden/react-components)
 - [Atlassian Atlaskit](https://bitbucket.org/atlassian/atlaskit-mk-2)
 - [Carbon Design System](https://github.com/carbon-design-system/carbon-components-react)
 - [Material UI](https://github.com/mui-org/material-ui)
