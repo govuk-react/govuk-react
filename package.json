@@ -109,6 +109,7 @@
     "@govuk-react/select": "*",
     "@govuk-react/storybook-components": "*",
     "@govuk-react/table": "*",
+    "@govuk-react/top-nav": "*",
     "@govuk-react/text-area": "*",
     "@govuk-react/unordered-list": "*",
     "@storybook/addon-actions": "^3.4.1",
