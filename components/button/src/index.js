@@ -75,29 +75,56 @@ const StyledButton = styled('button')(
   }),
 );
 
-// TODO: start and iconUrl props
+/**
+ *
+ * Simple Usage
+ * ```js
+ * <Button>My button text</Button>
+ * ```
+ *
+ * With Icon
+ * ```js
+ * import { ButtonArrow } from '@govuk-react/icons';
+ *
+ * <Button icon={<ButtonArrow />}>My button text</Button>
+ * ```
+ *
+ */
 const Button = ({
   children,
   icon,
-  className,
   ...props
 }) => (
-  <StyledButton icon={icon} className={className} {...props}>
+  <StyledButton icon={icon} {...props}>
     {children}
     {icon}
   </StyledButton>
 );
 
 Button.propTypes = {
-  className: PropTypes.string,
+  /**
+   * Button text
+   */
   children: PropTypes.node,
+  /**
+   * Button icon
+   */
   icon: PropTypes.node,
+  /**
+   * Renders a large button if set to true
+   */
+  start: PropTypes.bool,
+  /**
+   * Renders a disabled button if set to true
+   */
+  disabled: PropTypes.bool,
 };
 
 Button.defaultProps = {
-  className: undefined,
   children: 'Button',
   icon: undefined,
+  disabled: false,
+  start: false,
 };
 
 export default withWhiteSpace({ marginBottom: 4 })(Button);

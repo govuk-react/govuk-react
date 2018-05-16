@@ -1,5 +1,6 @@
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs/react';
+import { withDocs } from 'storybook-readme';
 
 import Button, {
   ButtonStart,
@@ -7,12 +8,14 @@ import Button, {
   ButtonDisabled,
   ButtonDisabledStartIcon,
 } from './fixtures';
+import ReadMe from '../README.md';
 
 const stories = storiesOf('Button', module);
 
 stories.addDecorator(withKnobs);
+stories.addDecorator(withDocs(ReadMe));
 
-stories.add('Button text', Button);
+stories.add('Component Default', Button);
 
 stories.add('Start', ButtonStart);
 
