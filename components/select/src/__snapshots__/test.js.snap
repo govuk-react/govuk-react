@@ -90,12 +90,6 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-10 {
-    max-width: 960px;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-10 {
     margin-bottom: 0;
   }
 }
@@ -335,12 +329,6 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-4 {
-    max-width: 960px;
-  }
 }
 
 @media only screen and (min-width:641px) {

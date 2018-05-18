@@ -80,12 +80,6 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-7 {
-    max-width: 960px;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
     margin-bottom: 0;
   }
 }
@@ -280,12 +274,6 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
-    max-width: 960px;
-  }
 }
 
 @media only screen and (min-width:641px) {
@@ -493,12 +481,6 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-4 {
-    max-width: 960px;
-  }
 }
 
 @media only screen and (min-width:641px) {

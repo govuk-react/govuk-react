@@ -135,12 +135,6 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-10 {
-    max-width: 960px;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-10 {
     margin-bottom: 0;
   }
 }

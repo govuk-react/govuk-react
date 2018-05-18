@@ -35,12 +35,6 @@ exports[`Label matches withError snapshot: with error mount 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
-    max-width: 960px;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
     margin-bottom: 0;
   }
 }
@@ -94,12 +88,6 @@ exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    max-width: 960px;
-  }
 }
 
 @media only screen and (min-width:641px) {
