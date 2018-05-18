@@ -12,7 +12,6 @@ const StyledRow = styled('div')({
   margin: `0 0 ${SPACING.SCALE_3}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'flex',
-    maxWidth: SITE_WIDTH,
     marginBottom: SPACING.SCALE_5,
   },
 });
