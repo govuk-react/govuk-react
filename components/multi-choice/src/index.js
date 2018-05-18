@@ -38,9 +38,6 @@ const StyledFieldset = styled('div')(
       display: 'table',
       clear: 'both',
     },
-    [MEDIA_QUERIES.LARGESCREEN]: {
-      maxWidth: SITE_WIDTH,
-    },
   },
   ({ error }) => ({
     borderLeft: error
