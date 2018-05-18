@@ -1,9 +1,9 @@
 {
   "name": "@govuk-react/input",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "dependencies": {
-    "@govuk-react/constants": "^0.2.0",
-    "@govuk-react/hoc": "^0.2.0",
+    "@govuk-react/constants": "^0.2.1",
+    "@govuk-react/hoc": "^0.2.1",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
