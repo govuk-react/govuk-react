@@ -51,11 +51,11 @@ const Paragraph = ({ children, ...rest }) => (
 
 Paragraph.propTypes = {
   /**
-   * Paragraph content
+   * Paragraph content.
    */
   children: PropTypes.node,
   /**
-   * Is this paragraph supporting text for another paragraph or component
+   * Is this paragraph supporting text for another element?
    */
   supportingText: PropTypes.bool,
 };
