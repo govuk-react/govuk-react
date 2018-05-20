@@ -24,6 +24,7 @@
     "@govuk-react/ordered-list": "^0.2.1",
     "@govuk-react/pagination": "^0.2.1",
     "@govuk-react/panel": "^0.2.1",
+    "@govuk-react/paragraph": "^0.2.1",
     "@govuk-react/phase-badge": "^0.2.1",
     "@govuk-react/phase-banner": "^0.2.1",
     "@govuk-react/radio": "^0.2.1",

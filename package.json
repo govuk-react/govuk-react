@@ -101,6 +101,7 @@
     "@govuk-react/ordered-list": "*",
     "@govuk-react/pagination": "*",
     "@govuk-react/panel": "*",
+    "@govuk-react/paragraph": "*",
     "@govuk-react/phase-badge": "*",
     "@govuk-react/phase-banner": "*",
     "@govuk-react/radio": "*",
