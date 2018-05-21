@@ -13,7 +13,7 @@ script:
   - yarn build:dist # the dist build is only used to track bundle size delta
   - yarn bundlesize
   - if [ $TRAVIS_EVENT_TYPE = 'push' ]; then 
-    - if [ '${CIRCLE_BRANCH}' != 'master' ]; then
+    - if [ $TRAVIS_BRANCH != 'master' ]; then
       yarn chromatic
     else
       # We know any changes that make it to master *must* have been approved
