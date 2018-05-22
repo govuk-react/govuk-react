@@ -15,7 +15,9 @@
     "emotion": ">=9",
     "prop-types": ">=15",
     "react": ">=16.2.0",
-    "react-emotion": ">=9"
+    "react-emotion": ">=9",
+    "react-markdown": ">=3.2",
+    "react-router-dom": ">=4.2"
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es",

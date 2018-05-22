@@ -1,35 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
+import ReactMarkdown from 'react-markdown';
 import { withWhiteSpace } from '@govuk-react/hoc';
-
 import {
   FONT_SIZE,
   LINE_HEIGHT,
   MEDIA_QUERIES,
   NTA_LIGHT,
 } from '@govuk-react/constants';
+import RouterLink from './link-renderer';
 
-/**
- *
- * Simple Usage
- * ```js
- * <Paragraph>Lorem ipsum</Paragraph>
- * ```
- *
- * As supporting text
- * ```js
- * <Paragraph supportingText>Lorem ipsum</Paragraph>
- * ```
- *
- * References;
- * https://govuk-elements.herokuapp.com/typography/#typography-body-copy
- *
- * TODO:
- * - Add test for supporting text
- * - Add story & test with example children that have a link and bold node
- *
- */
 const StyledParagraph = styled('p')(
   {
     fontFamily: NTA_LIGHT,
@@ -45,13 +26,46 @@ const StyledParagraph = styled('p')(
   }),
 );
 
+/**
+ *
+ * Supports bold, italic and links in Markdown ONLY.
+ * This is to ensure we follow GDS as closely as possible.
+ * It is worth noting that GDS recommends avoiding bold and italics.
+ *
+ * Simple Usage with markdown
+ * ```js
+ * <Paragraph>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
+ * ```
+ *
+ * As supporting text
+ * ```js
+ * <Paragraph supportingText>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
+ * ```
+ *
+ * References;
+ * https://govuk-elements.herokuapp.com/typography/#typography-body-copy
+ *
+ * TODO;
+ * - Add GDS styles for links
+ * - Add test for supporting text
+ * - Add test for rendering supported markdown components
+ *
+ */
 const Paragraph = ({ children, ...rest }) => (
-  <StyledParagraph {...rest}>{children}</StyledParagraph>
+  <StyledParagraph {...rest}>
+    <ReactMarkdown
+      source={children}
+      escapeHtml={false}
+      skipHtml
+      allowedTypes={['paragraph', 'emphasis', 'strong', 'link']}
+      renderers={{ link: RouterLink }}
+    />
+  </StyledParagraph>
 );
 
 Paragraph.propTypes = {
   /**
-   * Paragraph content.
+   * Text content supporting markdown
    */
   children: PropTypes.node,
   /**
