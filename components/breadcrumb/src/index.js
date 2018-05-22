@@ -104,8 +104,8 @@ const BreadcrumbListItem = styled('li')({
  * - Consider nested anchors, create an Atom for Breadcrumb links?
  *
  */
-const Breadcrumb = ({ children, className, ...props }) => (
-  <BreadcrumbContainer className={className} {...props}>
+const Breadcrumb = ({ children, ...props }) => (
+  <BreadcrumbContainer {...props}>
     <BreadcrumbList>
       {children.length && children.map ? (
         children.map((child, i) =>
@@ -121,16 +121,11 @@ const Breadcrumb = ({ children, className, ...props }) => (
   </BreadcrumbContainer>
 );
 
-Breadcrumb.defaultProps = {
-  className: undefined,
-};
-
 Breadcrumb.propTypes = {
   /**
    * Breadcrumb contents
    */
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
 };
 
 export default withWhiteSpace({ marginBottom: 2 })(Breadcrumb);

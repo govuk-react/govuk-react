@@ -38,19 +38,17 @@ const StyledList = styled('ul')(
 
 // listStyleType: normal HTML property values are used here
 // e.g., listStyleType="circle", listStyleType="upper-alpha", listStyleType="none"
-const UnorderedList = ({ children, listStyleType, className }) => (
-  <StyledList className={className} listStyleType={listStyleType}>{children}</StyledList>
+const UnorderedList = ({ children, listStyleType, ...props }) => (
+  <StyledList listStyleType={listStyleType} {...props}>{children}</StyledList>
 );
 
 UnorderedList.defaultProps = {
   listStyleType: undefined,
-  className: undefined,
 };
 
 UnorderedList.propTypes = {
   children: PropTypes.node.isRequired,
   listStyleType: PropTypes.string,
-  className: PropTypes.string,
 };
 
 export default withWhiteSpace({ marginBottom: 0 })(UnorderedList);

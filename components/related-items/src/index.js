@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import * as COLOUR from 'govuk-colours';
 
@@ -60,20 +59,6 @@ const StyledRelatedItems = styled('div')({
  * - Replace CSS selectors with imported components
  *
  */
-const RelatedItems = ({ children, className }) => (
-  <StyledRelatedItems className={className}>{children}</StyledRelatedItems>
-);
-
-RelatedItems.defaultProps = {
-  className: undefined,
-};
-
-RelatedItems.propTypes = {
-  /**
-   * Related items content
-   */
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-};
+const RelatedItems = props => <StyledRelatedItems {...props} />;
 
 export default withWhiteSpace({ marginBottom: 0 })(RelatedItems);

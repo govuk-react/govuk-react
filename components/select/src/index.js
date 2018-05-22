@@ -44,9 +44,9 @@ const StyledSelect = styled('select')(
 );
 
 const Select = ({
-  children, hint, label, meta, input, className,
+  children, hint, label, meta, input, ...props
 }) => (
-  <Label className={className} error={meta.touched && meta.error}>
+  <Label error={meta.touched && meta.error} {...props}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
@@ -59,7 +59,6 @@ const Select = ({
 Select.defaultProps = {
   hint: undefined,
   errorText: undefined,
-  className: undefined,
   input: {},
   meta: {},
 };
@@ -91,7 +90,6 @@ Select.propTypes = {
   children: PropTypes.node.isRequired,
   label: PropTypes.string.isRequired,
   errorText: PropTypes.string,
-  className: PropTypes.string,
 };
 
 export default withWhiteSpace({ marginBottom: 6 })(Select);
