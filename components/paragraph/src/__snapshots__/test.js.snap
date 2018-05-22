@@ -19,6 +19,18 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 15px;
 }
 
+.emotion-0 a {
+  color: #005ea5;
+}
+
+.emotion-0 a:hover {
+  color: #2b8cc4;
+}
+
+.emotion-0 a:visited {
+  color: #4c2c92;
+}
+
 @media only screen and (min-width:641px) {
   .emotion-0 {
     font-size: 19px;
@@ -44,7 +56,39 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
       <p
         className="emotion-0"
       >
-        A 19px body copy paragraph. This includes even more text to give a good representation of a more average length paragraph. That way you can see more than one line wrapping.
+        <ReactMarkdown
+          allowedTypes={
+            Array [
+              "paragraph",
+              "emphasis",
+              "strong",
+              "link",
+            ]
+          }
+          astPlugins={Array []}
+          escapeHtml={false}
+          plugins={Array []}
+          rawSourcePos={false}
+          renderers={
+            Object {
+              "link": [Function],
+            }
+          }
+          skipHtml={true}
+          source="A 19px body copy paragraph. This includes even more text to give a good representation of a more average length paragraph. That way you can see more than one line wrapping."
+          sourcePos={false}
+          transformLinkUri={[Function]}
+        >
+          <div
+            key="root-1-1"
+          >
+            <p
+              key="paragraph-1-1"
+            >
+              A 19px body copy paragraph. This includes even more text to give a good representation of a more average length paragraph. That way you can see more than one line wrapping.
+            </p>
+          </div>
+        </ReactMarkdown>
       </p>
     </Styled(p)>
   </Paragraph>
