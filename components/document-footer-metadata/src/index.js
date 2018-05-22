@@ -20,9 +20,11 @@ const StyledDefinition = styled('li')({
   },
 });
 
-const DocumentFooterMetadata = ({ from, partOf, other }) => {
+const DocumentFooterMetadata = ({
+  from, partOf, other, ...props
+}) => {
   const fromData = (
-    <StyledContainer>
+    <StyledContainer {...props}>
       {from &&
         <div>
           <p style={{ marginBottom: 0 }}>From:</p>

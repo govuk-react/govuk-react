@@ -32,17 +32,12 @@ const StyledRelatedItems = styled('div')({
   },
 });
 
-const RelatedItems = ({ children, className }) => (
-  <StyledRelatedItems className={className}>{children}</StyledRelatedItems>
+const RelatedItems = ({ children, ...props }) => (
+  <StyledRelatedItems {...props}>{children}</StyledRelatedItems>
 );
-
-RelatedItems.defaultProps = {
-  className: undefined,
-};
 
 RelatedItems.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
 };
 
 export default withWhiteSpace({ marginBottom: 0 })(RelatedItems);

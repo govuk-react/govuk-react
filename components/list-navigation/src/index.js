@@ -7,8 +7,8 @@ import ListItem from '@govuk-react/list-item';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
 // TODO use Context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
-const ListNavigation = ({ children, className, listStyleType }) => (
-  <UnorderedList className={className} listStyleType={listStyleType}>
+const ListNavigation = ({ children, listStyleType, ...props }) => (
+  <UnorderedList listStyleType={listStyleType} {...props}>
     {children.length && children.map ? (
       children.map((child, i) => (
         <ListItem key={child.key || i}>{child}</ListItem>
@@ -21,13 +21,11 @@ const ListNavigation = ({ children, className, listStyleType }) => (
 
 ListNavigation.defaultProps = {
   listStyleType: undefined,
-  className: undefined,
 };
 
 ListNavigation.propTypes = {
   children: PropTypes.node.isRequired,
   listStyleType: PropTypes.string,
-  className: PropTypes.string,
 };
 
 export default withWhiteSpace({ marginBottom: 0 })(ListNavigation);

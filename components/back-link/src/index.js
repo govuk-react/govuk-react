@@ -55,8 +55,8 @@ const Anchor = styled('button')({
   },
 });
 
-const BackLink = ({ children, className, goBack }) => (
-  <Anchor className={className} onClick={goBack}>{children}</Anchor>
+const BackLink = ({ children, goBack, ...props }) => (
+  <Anchor onClick={goBack} {...props}>{children}</Anchor>
 );
 
 BackLink.propTypes = {
@@ -68,12 +68,10 @@ BackLink.propTypes = {
    * A function that is called on click
    */
   goBack: PropTypes.func, // TODO: rename onClick
-  className: PropTypes.string,
 };
 
 BackLink.defaultProps = {
   goBack: undefined,
-  className: undefined,
 };
 
 export default withWhiteSpace({ marginBottom: 3 })(BackLink);

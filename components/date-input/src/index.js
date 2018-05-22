@@ -71,11 +71,11 @@ const StyledList = styled('div')({
 
 const DateInput = ({
   children,
-  className,
   errorText,
   hintText,
+  ...props
 }) => (
-  <StyledContainer className={className} errorText={errorText}>
+  <StyledContainer errorText={errorText} {...props}>
     <LabelText errorText={errorText}>{children}</LabelText>
     {hintText ? <HintText>{hintText}</HintText> : <span />}
     {errorText ? (
@@ -101,14 +101,12 @@ const DateInput = ({
 );
 
 DateInput.defaultProps = {
-  className: undefined,
   hintText: undefined,
   errorText: undefined,
 };
 
 DateInput.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
   hintText: PropTypes.string,
   errorText: PropTypes.string,
 };

@@ -1,31 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio disabled: disabled 1`] = `
-.emotion-3 {
+.emotion-1 {
   margin-bottom: 10px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-1 {
     margin-bottom: 10px;
   }
 }
 
-.emotion-2 {
+.emotion-3 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
   margin-right: 0px;
-  margin-bottom: 10px;
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-2 {
-    margin-bottom: 10px;
-  }
-}
-
-.emotion-1 {
+.emotion-2 {
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -36,7 +29,7 @@ exports[`Radio disabled: disabled 1`] = `
   display: block;
 }
 
-.emotion-1:before {
+.emotion-2:before {
   content: '';
   box-sizing: border-box;
   position: absolute;
@@ -49,7 +42,7 @@ exports[`Radio disabled: disabled 1`] = `
   background: transparent;
 }
 
-.emotion-1:after {
+.emotion-2:after {
   content: '';
   position: absolute;
   top: 0.52632em;
@@ -73,6 +66,7 @@ exports[`Radio disabled: disabled 1`] = `
   zoom: 1;
   opacity: 0;
   cursor: auto;
+  margin-bottom: 10px;
 }
 
 .emotion-0:checked + span::after {
@@ -88,20 +82,25 @@ exports[`Radio disabled: disabled 1`] = `
   pointer-events: none;
 }
 
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 10px;
+  }
+}
+
 <Styled(Radio)
   disabled={true}
 >
   <Radio
-    className="emotion-3"
+    className="emotion-1"
     disabled={true}
   >
-    <Styled(label)
-      className="emotion-3"
-    >
+    <Styled(label)>
       <label
-        className="emotion-2"
+        className="emotion-3"
       >
         <Styled(input)
+          className="emotion-1"
           disabled={true}
           type="radio"
         >
@@ -113,7 +112,7 @@ exports[`Radio disabled: disabled 1`] = `
         </Styled(input)>
         <Styled(span)>
           <span
-            className="emotion-1"
+            className="emotion-2"
           />
         </Styled(span)>
       </label>
@@ -123,12 +122,12 @@ exports[`Radio disabled: disabled 1`] = `
 `;
 
 exports[`Radio matches snapshot for inline: inline mount 1`] = `
-.emotion-3 {
+.emotion-1 {
   margin-bottom: 10px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-1 {
     margin-bottom: 10px;
   }
 }
@@ -145,6 +144,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   zoom: 1;
   opacity: 0;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .emotion-0:checked + span::after {
@@ -160,7 +160,13 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   pointer-events: auto;
 }
 
-.emotion-1 {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 10px;
+  }
+}
+
+.emotion-2 {
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -171,7 +177,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   display: block;
 }
 
-.emotion-1:before {
+.emotion-2:before {
   content: '';
   box-sizing: border-box;
   position: absolute;
@@ -184,7 +190,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   background: transparent;
 }
 
-.emotion-1:after {
+.emotion-2:after {
   content: '';
   position: absolute;
   top: 0.52632em;
@@ -196,20 +202,13 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   opacity: 0;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
   float: left;
   clear: none;
   margin-right: 30px;
-  margin-bottom: 10px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-2 {
-    margin-bottom: 10px;
-  }
 }
 
 <Styled(Radio)
@@ -217,19 +216,19 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   name="example"
 >
   <Radio
-    className="emotion-3"
+    className="emotion-1"
     disabled={false}
     inline={true}
     name="example"
   >
     <Styled(label)
-      className="emotion-3"
       inline={true}
     >
       <label
-        className="emotion-2"
+        className="emotion-3"
       >
         <Styled(input)
+          className="emotion-1"
           disabled={false}
           name="example"
           type="radio"
@@ -243,7 +242,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
         </Styled(input)>
         <Styled(span)>
           <span
-            className="emotion-1"
+            className="emotion-2"
           >
             example
           </span>
@@ -255,28 +254,21 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
 `;
 
 exports[`Radio matches snapshot: standard mount 1`] = `
-.emotion-3 {
+.emotion-1 {
   margin-bottom: 10px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-1 {
     margin-bottom: 10px;
   }
 }
 
-.emotion-2 {
+.emotion-3 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
   margin-right: 0px;
-  margin-bottom: 10px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-2 {
-    margin-bottom: 10px;
-  }
 }
 
 .emotion-0 {
@@ -291,6 +283,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   zoom: 1;
   opacity: 0;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .emotion-0:checked + span::after {
@@ -306,7 +299,13 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   pointer-events: auto;
 }
 
-.emotion-1 {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 10px;
+  }
+}
+
+.emotion-2 {
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -317,7 +316,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   display: block;
 }
 
-.emotion-1:before {
+.emotion-2:before {
   content: '';
   box-sizing: border-box;
   position: absolute;
@@ -330,7 +329,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   background: transparent;
 }
 
-.emotion-1:after {
+.emotion-2:after {
   content: '';
   position: absolute;
   top: 0.52632em;
@@ -346,17 +345,16 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   name="example"
 >
   <Radio
-    className="emotion-3"
+    className="emotion-1"
     disabled={false}
     name="example"
   >
-    <Styled(label)
-      className="emotion-3"
-    >
+    <Styled(label)>
       <label
-        className="emotion-2"
+        className="emotion-3"
       >
         <Styled(input)
+          className="emotion-1"
           disabled={false}
           name="example"
           type="radio"
@@ -370,7 +368,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
         </Styled(input)>
         <Styled(span)>
           <span
-            className="emotion-1"
+            className="emotion-2"
           >
             example
           </span>

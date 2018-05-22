@@ -71,8 +71,8 @@ const BreadcrumbListItem = styled('li')({
 });
 
 // TODO use Context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
-const Breadcrumb = ({ children, className, ...props }) => (
-  <BreadcrumbContainer className={className} {...props}>
+const Breadcrumb = ({ children, ...props }) => (
+  <BreadcrumbContainer {...props}>
     <BreadcrumbList>
       {children.length && children.map ? (
         children.map((child, i) =>
@@ -88,16 +88,11 @@ const Breadcrumb = ({ children, className, ...props }) => (
   </BreadcrumbContainer>
 );
 
-Breadcrumb.defaultProps = {
-  className: undefined,
-};
-
 Breadcrumb.propTypes = {
   /**
    * Generally a series of anchors or Link components
    */
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
 };
 
 export default withWhiteSpace({ marginBottom: 2 })(Breadcrumb);

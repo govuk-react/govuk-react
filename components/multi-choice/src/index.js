@@ -49,9 +49,9 @@ const StyledFieldset = styled('div')(
 );
 
 const MultiChoice = ({
-  meta, label, children, hint, className,
+  meta, label, children, hint, ...props
 }) => (
-  <StyledFieldset className={className} error={meta.touched && meta.error}>
+  <StyledFieldset error={meta.touched && meta.error} {...props}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
@@ -61,7 +61,6 @@ const MultiChoice = ({
 
 MultiChoice.defaultProps = {
   hint: undefined,
-  className: undefined,
   meta: {},
 };
 
@@ -84,7 +83,6 @@ MultiChoice.propTypes = {
   label: PropTypes.node.isRequired,
   children: PropTypes.node.isRequired,
   hint: PropTypes.string,
-  className: PropTypes.string,
 };
 
 export default withWhiteSpace({ marginBottom: 0 })(MultiChoice);
