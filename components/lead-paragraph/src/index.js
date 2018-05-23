@@ -23,8 +23,8 @@ const StyledParagraph = styled('p')({
   },
 });
 
-const LeadParagraph = ({ children }) => (
-  <StyledParagraph>{children}</StyledParagraph>
+const LeadParagraph = ({ children, ...props }) => (
+  <StyledParagraph {...props}>{children}</StyledParagraph>
 );
 
 LeadParagraph.propTypes = {

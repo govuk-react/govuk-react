@@ -24,17 +24,12 @@ const StyledListItem = styled('li')({
   },
 });
 
-const ListItem = ({ children, className }) => (
-  <StyledListItem className={className}>{children}</StyledListItem>
+const ListItem = ({ children, ...props }) => (
+  <StyledListItem {...props}>{children}</StyledListItem>
 );
-
-ListItem.defaultProps = {
-  className: undefined,
-};
 
 ListItem.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
 };
 
 export default withWhiteSpace({ marginBottom: 0 })(ListItem);

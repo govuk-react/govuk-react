@@ -33,21 +33,16 @@ const StyledBanner = styled('div')({
   },
 });
 
-const PhaseBanner = ({ level, children, className }) => (
-  <StyledBanner className={className}>
+const PhaseBanner = ({ level, children, ...props }) => (
+  <StyledBanner {...props}>
     <PhaseBadge>{level}</PhaseBadge>
     {children}
   </StyledBanner>
 );
 
-PhaseBanner.defaultProps = {
-  className: undefined,
-};
-
 PhaseBanner.propTypes = {
   children: PropTypes.node.isRequired,
   level: PropTypes.string.isRequired,
-  className: PropTypes.string,
 };
 
 export default withWhiteSpace({ marginBottom: 0 })(PhaseBanner);

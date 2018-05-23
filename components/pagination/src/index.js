@@ -33,17 +33,12 @@ const StyledList = styled('ul')({
   },
 });
 
-const Pagination = ({ children, className }) => (
-  <StyledList className={className}>{children}</StyledList>
+const Pagination = ({ children, ...props }) => (
+  <StyledList {...props}>{children}</StyledList>
 );
-
-Pagination.defaultProps = {
-  className: undefined,
-};
 
 Pagination.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
 };
 
 export default withWhiteSpace({ marginBottom: 6 })(Pagination);
