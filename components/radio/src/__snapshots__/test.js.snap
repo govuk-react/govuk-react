@@ -102,8 +102,6 @@ exports[`Radio disabled: disabled 1`] = `
         "onFocus": [Function],
       }
     }
-    name=""
-    value=""
   >
     <Styled(label)
       className="emotion-3"
@@ -114,22 +112,18 @@ exports[`Radio disabled: disabled 1`] = `
       >
         <Styled(input)
           disabled={true}
-          name=""
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
           type="radio"
-          value=""
         >
           <input
             className="emotion-0"
             disabled={true}
-            name=""
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
             type="radio"
-            value=""
           />
         </Styled(input)>
         <Styled(span)>
@@ -249,7 +243,6 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
       }
     }
     name="example"
-    value=""
   >
     <Styled(label)
       className="emotion-3"
@@ -265,7 +258,6 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
           onChange={[Function]}
           onFocus={[Function]}
           type="radio"
-          value=""
         >
           <input
             className="emotion-0"
@@ -275,7 +267,6 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
             onChange={[Function]}
             onFocus={[Function]}
             type="radio"
-            value=""
           />
         </Styled(input)>
         <Styled(span)>
@@ -394,7 +385,6 @@ exports[`Radio matches snapshot: standard mount 1`] = `
       }
     }
     name="example"
-    value=""
   >
     <Styled(label)
       className="emotion-3"
@@ -410,7 +400,6 @@ exports[`Radio matches snapshot: standard mount 1`] = `
           onChange={[Function]}
           onFocus={[Function]}
           type="radio"
-          value=""
         >
           <input
             className="emotion-0"
@@ -420,7 +409,6 @@ exports[`Radio matches snapshot: standard mount 1`] = `
             onChange={[Function]}
             onFocus={[Function]}
             type="radio"
-            value=""
           />
         </Styled(input)>
         <Styled(span)>
