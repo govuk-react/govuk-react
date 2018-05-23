@@ -17,7 +17,7 @@ const RadioGroup = ({
       {options.map(o => (
         <div key={o.value}>
           <Radio
-            {...input}
+            input={input}
             value={o.value}
             inline={inline}
             checked={o.value === input.value}
@@ -98,7 +98,6 @@ storiesOf('Radio', module).add(
   () => (
     <FinalFormWrapper>
       <Field
-        type="radio"
         name="likesAnimals"
         label="Do you like animals?"
         hint="You must tell us"
