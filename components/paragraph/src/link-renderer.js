@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 // Support react-router links
 // https://github.com/rexxars/react-markdown/issues/29#issuecomment-231556543
-function RouterLink({ href, children }) {
+function LinkRenderer({ href, children }) {
   return (
     href.match(/^\//)
       ? <Link to={href}>{children}</Link>
@@ -12,14 +12,14 @@ function RouterLink({ href, children }) {
   );
 }
 
-RouterLink.propTypes = {
+LinkRenderer.propTypes = {
   href: PropTypes.string,
   children: PropTypes.string,
 };
 
-RouterLink.defaultProps = {
+LinkRenderer.defaultProps = {
   href: '',
   children: '',
 };
 
-export default RouterLink;
+export default LinkRenderer;
