@@ -84,10 +84,10 @@ const LabelText = styled('span')({
 });
 
 const Radio = ({
-  inline, children, disabled, checked, value, name, input, ...props
+  inline, children, disabled, checked, name, value, input, ...props
 }) => (
   <Label inline={inline} {...props}>
-    <Input type="radio" checked={checked} disabled={disabled} name={name} {...input} value={value} />
+    <Input type="radio" checked={checked} disabled={disabled} name={name} value={value} {...input} />
     <LabelText>{children}</LabelText>
   </Label>
 );
@@ -96,14 +96,12 @@ Radio.defaultProps = {
   inline: false,
   disabled: '',
   checked: undefined,
-  value: undefined,
   name: '',
+  value: '',
   input: {
-    name: '',
     onBlur: () => {},
     onFocus: () => {},
     onChange: () => {},
-    value: '',
   },
 };
 
@@ -112,11 +110,9 @@ Radio.propTypes = {
   children: PropTypes.node.isRequired,
   disabled: PropTypes.string,
   checked: PropTypes.bool,
-  value: PropTypes.string,
   name: PropTypes.string,
+  value: PropTypes.string,
   input: PropTypes.shape({
-    name: PropTypes.string,
-    value: PropTypes.string,
     onBlur: PropTypes.func,
     onFocus: PropTypes.func,
     onChange: PropTypes.func,
