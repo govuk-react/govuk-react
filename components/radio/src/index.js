@@ -84,10 +84,10 @@ const LabelText = styled('span')({
 });
 
 const Radio = ({
-  inline, children, disabled, ...input
+  inline, children, disabled, name, input, ...props
 }) => (
-  <Label inline={inline}>
-    <Input type="radio" disabled={disabled} {...input} />
+  <Label inline={inline} for={name} {...props} >
+    <Input type="radio" disabled={disabled} name={name} {...input} />
     <LabelText>{children}</LabelText>
   </Label>
 );
@@ -95,12 +95,21 @@ const Radio = ({
 Radio.defaultProps = {
   inline: undefined,
   disabled: false,
+  name: '',
+  input: {},
 };
 
 Radio.propTypes = {
   inline: PropTypes.bool,
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
+  name: PropTypes.string,
+  input: PropTypes.shape({
+    value: PropTypes.string,
+    onChange: PropTypes.func,
+    type: PropTypes.string,
+    errorColor: PropTypes.string,
+  }),
 };
 
 export default withWhiteSpace({ marginBottom: 2 })(Radio);
