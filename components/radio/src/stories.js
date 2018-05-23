@@ -17,8 +17,9 @@ const RadioGroup = ({
       {options.map(o => (
         <div key={o.value}>
           <Radio
-            input={input}
+            name={input.name}
             value={o.value}
+            input={{ onBlur: input.onBlur, onFocus: input.onFocus, onChange: input.onChange }}
             inline={inline}
             checked={o.value === input.value}
           >
