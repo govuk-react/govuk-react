@@ -96,8 +96,8 @@ Radio.defaultProps = {
   inline: false,
   disabled: '',
   checked: undefined,
-  name: '',
-  value: '',
+  name: undefined,
+  value: undefined,
   input: {
     onBlur: () => {},
     onFocus: () => {},
