@@ -9,22 +9,12 @@ import {
   MEDIA_QUERIES,
   NTA_LIGHT,
 } from '@govuk-react/constants';
-import { LINK_COLOUR, LINK_HOVER_COLOUR, LINK_VISITED_COLOUR } from 'govuk-colours';
 import RouterLink from './link-renderer';
 
 const StyledParagraph = styled('p')(
   {
     fontFamily: NTA_LIGHT,
     marginTop: 0,
-    a: {
-      color: LINK_COLOUR,
-    },
-    'a:hover': {
-      color: LINK_HOVER_COLOUR,
-    },
-    'a:visited': {
-      color: LINK_VISITED_COLOUR,
-    },
   },
   ({ supportingText }) => ({
     fontSize: supportingText ? FONT_SIZE.SIZE_14 : FONT_SIZE.SIZE_16,
@@ -56,7 +46,6 @@ const StyledParagraph = styled('p')(
  * https://govuk-elements.herokuapp.com/typography/#typography-body-copy
  *
  * TODO;
- * - Add GDS styles for links
  * - Add test for supporting text
  * - Add test for rendering supported markdown components
  *
