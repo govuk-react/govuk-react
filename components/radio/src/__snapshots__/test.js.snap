@@ -94,12 +94,20 @@ exports[`Radio disabled: disabled 1`] = `
   <Radio
     className="emotion-3"
     disabled={true}
-    input={Object {}}
+    inline={false}
+    input={
+      Object {
+        "onBlur": [Function],
+        "onChange": [Function],
+        "onFocus": [Function],
+      }
+    }
     name=""
+    value=""
   >
     <Styled(label)
       className="emotion-3"
-      for=""
+      inline={false}
     >
       <label
         className="emotion-2"
@@ -107,13 +115,21 @@ exports[`Radio disabled: disabled 1`] = `
         <Styled(input)
           disabled={true}
           name=""
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
           type="radio"
+          value=""
         >
           <input
             className="emotion-0"
             disabled={true}
             name=""
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
             type="radio"
+            value=""
           />
         </Styled(input)>
         <Styled(span)>
@@ -223,29 +239,43 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
 >
   <Radio
     className="emotion-3"
-    disabled={false}
+    disabled=""
     inline={true}
-    input={Object {}}
+    input={
+      Object {
+        "onBlur": [Function],
+        "onChange": [Function],
+        "onFocus": [Function],
+      }
+    }
     name="example"
+    value=""
   >
     <Styled(label)
       className="emotion-3"
-      for="example"
       inline={true}
     >
       <label
         className="emotion-2"
       >
         <Styled(input)
-          disabled={false}
+          disabled=""
           name="example"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
           type="radio"
+          value=""
         >
           <input
             className="emotion-0"
-            disabled={false}
+            disabled=""
             name="example"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
             type="radio"
+            value=""
           />
         </Styled(input)>
         <Styled(span)>
@@ -354,27 +384,43 @@ exports[`Radio matches snapshot: standard mount 1`] = `
 >
   <Radio
     className="emotion-3"
-    disabled={false}
-    input={Object {}}
+    disabled=""
+    inline={false}
+    input={
+      Object {
+        "onBlur": [Function],
+        "onChange": [Function],
+        "onFocus": [Function],
+      }
+    }
     name="example"
+    value=""
   >
     <Styled(label)
       className="emotion-3"
-      for="example"
+      inline={false}
     >
       <label
         className="emotion-2"
       >
         <Styled(input)
-          disabled={false}
+          disabled=""
           name="example"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
           type="radio"
+          value=""
         >
           <input
             className="emotion-0"
-            disabled={false}
+            disabled=""
             name="example"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
             type="radio"
+            value=""
           />
         </Styled(input)>
         <Styled(span)>
