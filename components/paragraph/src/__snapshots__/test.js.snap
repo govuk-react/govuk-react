@@ -19,18 +19,6 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-0 a {
-  color: #005ea5;
-}
-
-.emotion-0 a:hover {
-  color: #2b8cc4;
-}
-
-.emotion-0 a:visited {
-  color: #4c2c92;
-}
-
 @media only screen and (min-width:641px) {
   .emotion-0 {
     font-size: 19px;
