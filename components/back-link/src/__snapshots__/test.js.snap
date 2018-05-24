@@ -1,16 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-1 {
-  margin-bottom: 15px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 15px;
-  }
-}
-
 .emotion-0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -27,7 +17,6 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
   border-bottom: 1px solid #0b0c0c;
   -webkit-text-decoration: none;
   text-decoration: none;
-  margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
@@ -58,12 +47,6 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
 .emotion-0:focus {
   background-color: #ffbf47;
   outline: 3px solid #ffbf47;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 15px;
-  }
 }
 
 <Styled(BackLink)

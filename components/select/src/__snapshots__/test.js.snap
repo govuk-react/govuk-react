@@ -1,43 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select matches snapshot for errorText: errorText mount 1`] = `
-.emotion-13 {
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-13 {
-    margin-bottom: 30px;
-  }
-}
-
-.emotion-11 {
-  margin-bottom: 0;
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-11 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-11 {
-    margin-bottom: 30px;
-  }
-}
-
-.emotion-1 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
 .emotion-0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -49,19 +12,12 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 0;
   }
 }
 
@@ -78,26 +34,12 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   border-left: 4px solid #b10e1e;
   margin-right: 15px;
   padding-left: 10px;
-  margin-bottom: 0;
-  margin-bottom: 20px;
 }
 
 .emotion-10:after {
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-10 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-10 {
-    margin-bottom: 30px;
-  }
 }
 
 .emotion-3 {
@@ -110,19 +52,12 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   font-size: 16px;
   line-height: 1.25;
   color: #6f777b;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-3 {
     font-size: 19px;
     line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
   }
 }
 
@@ -138,19 +73,12 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   color: #b10e1e;
   padding-top: 4px;
   padding-bottom: 2px;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-6 {
     font-size: 19px;
     line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-6 {
-    margin-bottom: 0;
   }
 }
 
@@ -194,7 +122,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   }
 >
   <Select
-    className="emotion-13"
+    className="emotion-1"
     errorText="example"
     hint="example"
     input={Object {}}
@@ -207,15 +135,15 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
     }
   >
     <Styled(Label)
-      className="emotion-13"
+      className="emotion-1"
       error="example"
     >
       <Label
-        className="emotion-11"
+        className="emotion-1"
         error="example"
       >
         <Styled(label)
-          className="emotion-11"
+          className="emotion-1"
           error="example"
         >
           <label
@@ -284,33 +212,6 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
 `;
 
 exports[`Select matches snapshot: enzyme.mount 1`] = `
-.emotion-7 {
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
-    margin-bottom: 30px;
-  }
-}
-
-.emotion-5 {
-  margin-bottom: 0;
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-5 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-5 {
-    margin-bottom: 30px;
-  }
-}
-
 .emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -321,36 +222,12 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 0;
-  margin-bottom: 20px;
 }
 
 .emotion-4:after {
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-4 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-4 {
-    margin-bottom: 30px;
-  }
-}
-
-.emotion-1 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 0;
-  }
 }
 
 .emotion-0 {
@@ -364,19 +241,12 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 0;
   }
 }
 
@@ -411,19 +281,19 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   label="example"
 >
   <Select
-    className="emotion-7"
+    className="emotion-1"
     input={Object {}}
     label="example"
     meta={Object {}}
   >
     <Styled(Label)
-      className="emotion-7"
+      className="emotion-1"
     >
       <Label
-        className="emotion-5"
+        className="emotion-1"
       >
         <Styled(label)
-          className="emotion-5"
+          className="emotion-1"
         >
           <label
             className="emotion-4"

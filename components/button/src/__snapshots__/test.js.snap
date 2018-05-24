@@ -1,16 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`button matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-1 {
-  margin-bottom: 15px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 20px;
-  }
-}
-
 .emotion-0 {
   background-color: #00823b;
   border: none;
@@ -43,7 +33,6 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
   opacity: 1;
   pointer-events: auto;
   padding-right: .84211em;
-  margin-bottom: 15px;
 }
 
 .emotion-0:focus {
@@ -53,12 +42,6 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
 .emotion-0 svg {
   max-width: 15px;
   margin-left: 20px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 20px;
-  }
 }
 
 <_default>
@@ -81,16 +64,6 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
 `;
 
 exports[`button should render a disabled button: disabled button 1`] = `
-.emotion-1 {
-  margin-bottom: 15px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 20px;
-  }
-}
-
 .emotion-0 {
   background-color: #00823b;
   border: none;
@@ -123,7 +96,6 @@ exports[`button should render a disabled button: disabled button 1`] = `
   opacity: .5;
   pointer-events: none;
   padding-right: .84211em;
-  margin-bottom: 15px;
 }
 
 .emotion-0:focus {
@@ -133,12 +105,6 @@ exports[`button should render a disabled button: disabled button 1`] = `
 .emotion-0 svg {
   max-width: 15px;
   margin-left: 20px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 20px;
-  }
 }
 
 <ButtonDisabled>

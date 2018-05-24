@@ -1,33 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
-.emotion-1 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-8 {
-  margin-bottom: 0;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
-    margin-bottom: 0;
-  }
-}
-
 .emotion-0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -39,19 +12,12 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 0;
   }
 }
 
@@ -68,26 +34,12 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   border-left: 4px solid #b10e1e;
   margin-right: 15px;
   padding-left: 10px;
-  margin-bottom: 0;
-  margin-bottom: 0;
 }
 
 .emotion-7:after {
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
-    margin-bottom: 0;
-  }
 }
 
 .emotion-3 {
@@ -102,19 +54,12 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   color: #b10e1e;
   padding-top: 4px;
   padding-bottom: 2px;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-3 {
     font-size: 19px;
     line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
   }
 }
 
@@ -169,11 +114,11 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
       error="example"
     >
       <Label
-        className="emotion-8"
+        className="emotion-1"
         error="example"
       >
         <Styled(label)
-          className="emotion-8"
+          className="emotion-1"
           error="example"
         >
           <label
@@ -229,33 +174,6 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
 `;
 
 exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
-.emotion-1 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-8 {
-  margin-bottom: 0;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
-    margin-bottom: 0;
-  }
-}
-
 .emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -266,26 +184,12 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 0;
-  margin-bottom: 0;
 }
 
 .emotion-7:after {
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
-    margin-bottom: 0;
-  }
 }
 
 .emotion-0 {
@@ -299,19 +203,12 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 0;
   }
 }
 
@@ -350,19 +247,12 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   font-size: 16px;
   line-height: 1.25;
   color: #6f777b;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-3 {
     font-size: 19px;
     line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
   }
 }
 
@@ -379,10 +269,10 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
       className="emotion-1"
     >
       <Label
-        className="emotion-8"
+        className="emotion-1"
       >
         <Styled(label)
-          className="emotion-8"
+          className="emotion-1"
         >
           <label
             className="emotion-7"
@@ -436,33 +326,6 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
 `;
 
 exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-1 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-5 {
-  margin-bottom: 0;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-5 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-5 {
-    margin-bottom: 0;
-  }
-}
-
 .emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -473,26 +336,12 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 0;
-  margin-bottom: 0;
 }
 
 .emotion-4:after {
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-4 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-4 {
-    margin-bottom: 0;
-  }
 }
 
 .emotion-0 {
@@ -506,19 +355,12 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 0;
   }
 }
 
@@ -557,10 +399,10 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
       className="emotion-1"
     >
       <Label
-        className="emotion-5"
+        className="emotion-1"
       >
         <Styled(label)
-          className="emotion-5"
+          className="emotion-1"
         >
           <label
             className="emotion-4"

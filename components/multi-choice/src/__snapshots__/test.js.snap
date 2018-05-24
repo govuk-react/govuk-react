@@ -1,16 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styled matches withError snapshot: with error mount 1`] = `
-.emotion-1 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
 .emotion-0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -22,7 +12,6 @@ exports[`Styled matches withError snapshot: with error mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
@@ -32,31 +21,18 @@ exports[`Styled matches withError snapshot: with error mount 1`] = `
   }
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 0;
-  }
-}
-
 .emotion-3 {
   padding: 0;
   margin: 0;
   border: 0;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 0;
 }
 
 .emotion-3:after {
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
-  }
 }
 
 <Styled(MultiChoice)
@@ -98,16 +74,6 @@ exports[`Styled matches withError snapshot: with error mount 1`] = `
 `;
 
 exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-1 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
 .emotion-9 {
   padding: 0;
   margin: 0;
@@ -117,19 +83,12 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   border-left: 4px solid #b10e1e;
   margin-right: 15px;
   padding-left: 10px;
-  margin-bottom: 0;
 }
 
 .emotion-9:after {
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-9 {
-    margin-bottom: 0;
-  }
 }
 
 .emotion-0 {
@@ -143,19 +102,12 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 0;
   }
 }
 
@@ -169,19 +121,12 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   font-size: 16px;
   line-height: 1.25;
   color: #6f777b;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-3 {
     font-size: 19px;
     line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
   }
 }
 
@@ -197,19 +142,12 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   color: #b10e1e;
   padding-top: 4px;
   padding-bottom: 2px;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-6 {
     font-size: 19px;
     line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-6 {
-    margin-bottom: 0;
   }
 }
 

@@ -1,21 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-2 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-2 {
-    margin-bottom: 0;
-  }
-}
-
 .emotion-22 {
   border-top: 10px solid #005ea5;
   padding-top: 5px;
   width: 100%;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
@@ -37,8 +26,12 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: calc(10px + 2px);
 }
 
+.emotion-2 {
+  margin-bottom: 0;
+}
+
 @media only screen and (min-width:641px) {
-  .emotion-22 {
+  .emotion-2 {
     margin-bottom: 0;
   }
 }
@@ -85,19 +78,12 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-19 {
     font-size: 16px;
     line-height: 1.25;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-19 {
-    margin-bottom: 0;
   }
 }
 
@@ -108,7 +94,6 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   font-size: 14px;
   line-height: 1.1428571429;
   width: 100%;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
@@ -116,12 +101,6 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
     font-size: 16px;
     line-height: 1.25;
     margin-bottom: 5px;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-6 {
-    margin-bottom: 0;
   }
 }
 
@@ -146,10 +125,10 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 
 <Styled(RelatedItems)>
   <RelatedItems
-    className="emotion-2"
+    className="emotion-7"
   >
     <Styled(div)
-      className="emotion-2"
+      className="emotion-7"
     >
       <div
         className="emotion-22"
@@ -182,11 +161,11 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
           listStyleType="none"
         >
           <UnorderedList
-            className="emotion-2"
+            className="emotion-7"
             listStyleType="none"
           >
             <Styled(ul)
-              className="emotion-2"
+              className="emotion-7"
               listStyleType="none"
             >
               <ul
@@ -194,10 +173,10 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
               >
                 <Styled(ListItem)>
                   <ListItem
-                    className="emotion-2"
+                    className="emotion-7"
                   >
                     <Styled(li)
-                      className="emotion-2"
+                      className="emotion-7"
                     >
                       <li
                         className="emotion-6"
@@ -223,10 +202,10 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
                 </Styled(ListItem)>
                 <Styled(ListItem)>
                   <ListItem
-                    className="emotion-2"
+                    className="emotion-7"
                   >
                     <Styled(li)
-                      className="emotion-2"
+                      className="emotion-7"
                     >
                       <li
                         className="emotion-6"
@@ -252,10 +231,10 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
                 </Styled(ListItem)>
                 <Styled(ListItem)>
                   <ListItem
-                    className="emotion-2"
+                    className="emotion-7"
                   >
                     <Styled(li)
-                      className="emotion-2"
+                      className="emotion-7"
                     >
                       <li
                         className="emotion-6"
