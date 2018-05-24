@@ -79,17 +79,26 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <_default>
-  <Styled(Button)>
+  <Styled(Button)
+    disabled={false}
+    start={false}
+  >
     <Button
       className="emotion-1"
+      disabled={false}
+      start={false}
     >
       <Styled(button)
         className="emotion-1"
+        disabled={false}
+        start={false}
       >
         <button
           className="emotion-0"
+          disabled={false}
+          start={false}
         >
-          Save and continue
+          Button
         </button>
       </Styled(button)>
     </Button>
@@ -182,14 +191,17 @@ exports[`button should render a disabled button: disabled button 1`] = `
     <Button
       className="emotion-1"
       disabled={true}
+      start={false}
     >
       <Styled(button)
         className="emotion-1"
         disabled={true}
+        start={false}
       >
         <button
           className="emotion-0"
           disabled={true}
+          start={false}
         >
           Disabled primary button
         </button>
