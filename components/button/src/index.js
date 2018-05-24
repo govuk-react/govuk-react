@@ -43,11 +43,11 @@ const StyledButton = styled('button')(
       backgroundColor: GREEN,
     },
     ':focus': {
-      position: 'absolute',
+      position: 'relative',
       top: '2px',
       backgroundColor: GREEN,
       outline: `3px solid ${YELLOW}`,
-      boxShadow: 'none',
+      boxShadow: '0 0px 0',
     },
     // TODO: avoid cascade
     ' svg': {
