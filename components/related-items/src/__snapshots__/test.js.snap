@@ -1,10 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
+.emotion-7 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    margin-bottom: 0;
+  }
+}
+
 .emotion-22 {
   border-top: 10px solid #005ea5;
   padding-top: 5px;
   width: 100%;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
@@ -26,12 +37,8 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: calc(10px + 2px);
 }
 
-.emotion-2 {
-  margin-bottom: 0;
-}
-
 @media only screen and (min-width:641px) {
-  .emotion-2 {
+  .emotion-22 {
     margin-bottom: 0;
   }
 }
@@ -43,7 +50,6 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   font-size: 18px;
   line-height: 1.2;
   margin-bottom: 15px;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
@@ -60,12 +66,6 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 0;
-  }
-}
-
 .emotion-19 {
   margin: 0;
   padding: 0;
@@ -78,12 +78,19 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-19 {
     font-size: 16px;
     line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-19 {
+    margin-bottom: 0;
   }
 }
 
@@ -94,6 +101,7 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   font-size: 14px;
   line-height: 1.1428571429;
   width: 100%;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
@@ -101,6 +109,12 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
     font-size: 16px;
     line-height: 1.25;
     margin-bottom: 5px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    margin-bottom: 0;
   }
 }
 

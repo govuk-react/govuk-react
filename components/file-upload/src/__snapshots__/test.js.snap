@@ -1,6 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
+.emotion-7 {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-5 {
+  margin-bottom: 0;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    margin-bottom: 30px;
+  }
+}
+
 .emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11,12 +38,36 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 .emotion-4:after {
   content: '';
   display: table;
   clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
 }
 
 .emotion-0 {
@@ -30,12 +81,19 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
   }
 }
 
@@ -62,17 +120,17 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
 
 <Styled(FileUpload)>
   <FileUpload
-    className="emotion-1"
+    className="emotion-7"
     meta={Object {}}
   >
     <Styled(Label)
-      className="emotion-1"
+      className="emotion-7"
     >
       <Label
-        className="emotion-1"
+        className="emotion-5"
       >
         <Styled(label)
-          className="emotion-1"
+          className="emotion-5"
         >
           <label
             className="emotion-4"

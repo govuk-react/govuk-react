@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styled matches snapshot: enzyme.mount 1`] = `
+.emotion-4 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 0;
+  }
+}
+
 .emotion-0 {
   font-family: "nta",Arial,sans-serif;
 }
@@ -17,12 +27,19 @@ exports[`Styled matches snapshot: enzyme.mount 1`] = `
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-3 {
     font-size: 16px;
     line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
   }
 }
 
