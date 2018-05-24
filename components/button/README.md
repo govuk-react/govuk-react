@@ -7,7 +7,9 @@ Button
 ```
 <!-- STORY -->
 
-Simple Usage
+### Usage
+
+Simple
 ```js
 <Button>My button text</Button>
 ```
@@ -18,6 +20,12 @@ import { ButtonArrow } from '@govuk-react/icons';
 
 <Button icon={<ButtonArrow />}>My button text</Button>
 ```
+
+### References:
+- https://govuk-elements.herokuapp.com/buttons/
+- https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_buttons.scss
+- https://github.com/alphagov/govuk-frontend/blob/master/src/components/button/_button.scss
+- https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_buttons.scss
 
 ### Properties
 Prop | Required | Default | Type | Description
