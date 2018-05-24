@@ -44,4 +44,16 @@ describe(LinkRenderer, () => {
 
     expect(testRender.find('Link')).toHaveLength(0);
   });
+
+  it('does not render a react-router `Link` node when an `#anchor` path is provided ', () => {
+    const wrapper = document.createElement('div');
+    const testRender = mount(
+      <MemoryRouter>
+        { LinkRenderer({ href: '#anchor', children: 'Link text' }) }
+      </MemoryRouter>,
+      wrapper,
+    );
+
+    expect(testRender.find('a[href="#anchor"]')).toHaveLength(1);
+  });
 });
