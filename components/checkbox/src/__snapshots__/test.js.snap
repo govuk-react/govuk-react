@@ -102,8 +102,6 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
 <Styled(Checkbox)>
   <Checkbox
     className="emotion-3"
-    defaultChecked={false}
-    disabled={false}
   >
     <Styled(label)
       className="emotion-3"
@@ -112,14 +110,10 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
         className="emotion-2"
       >
         <Styled(input)
-          defaultChecked={false}
-          disabled={false}
           type="checkbox"
         >
           <input
             className="emotion-0"
-            defaultChecked={false}
-            disabled={false}
             type="checkbox"
           />
         </Styled(input)>
@@ -240,7 +234,6 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
 >
   <Checkbox
     className="emotion-3"
-    defaultChecked={false}
     disabled={true}
   >
     <Styled(label)
@@ -250,13 +243,11 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
         className="emotion-2"
       >
         <Styled(input)
-          defaultChecked={false}
           disabled={true}
           type="checkbox"
         >
           <input
             className="emotion-0"
-            defaultChecked={false}
             disabled={true}
             type="checkbox"
           />

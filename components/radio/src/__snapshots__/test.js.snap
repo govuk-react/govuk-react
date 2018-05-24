@@ -95,13 +95,6 @@ exports[`Radio disabled: disabled 1`] = `
     className="emotion-3"
     disabled={true}
     inline={false}
-    input={
-      Object {
-        "onBlur": [Function],
-        "onChange": [Function],
-        "onFocus": [Function],
-      }
-    }
   >
     <Styled(label)
       className="emotion-3"
@@ -112,17 +105,11 @@ exports[`Radio disabled: disabled 1`] = `
       >
         <Styled(input)
           disabled={true}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
           type="radio"
         >
           <input
             className="emotion-0"
             disabled={true}
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
             type="radio"
           />
         </Styled(input)>
@@ -233,15 +220,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
 >
   <Radio
     className="emotion-3"
-    disabled=""
     inline={true}
-    input={
-      Object {
-        "onBlur": [Function],
-        "onChange": [Function],
-        "onFocus": [Function],
-      }
-    }
     name="example"
   >
     <Styled(label)
@@ -252,20 +231,12 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
         className="emotion-2"
       >
         <Styled(input)
-          disabled=""
           name="example"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
           type="radio"
         >
           <input
             className="emotion-0"
-            disabled=""
             name="example"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
             type="radio"
           />
         </Styled(input)>
@@ -375,15 +346,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
 >
   <Radio
     className="emotion-3"
-    disabled=""
     inline={false}
-    input={
-      Object {
-        "onBlur": [Function],
-        "onChange": [Function],
-        "onFocus": [Function],
-      }
-    }
     name="example"
   >
     <Styled(label)
@@ -394,20 +357,12 @@ exports[`Radio matches snapshot: standard mount 1`] = `
         className="emotion-2"
       >
         <Styled(input)
-          disabled=""
           name="example"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
           type="radio"
         >
           <input
             className="emotion-0"
-            disabled=""
             name="example"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
             type="radio"
           />
         </Styled(input)>
