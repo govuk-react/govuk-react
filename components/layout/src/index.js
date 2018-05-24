@@ -17,7 +17,7 @@ const StyledLayout = styled('div')({
   },
 });
 
-const Layout = ({ children, ...props }) => <StyledLayout {...props}>{children}</StyledLayout>;
+const Layout = props => <StyledLayout {...props} />;
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

@@ -88,25 +88,23 @@ const StyledLabel = styled('span')({
 });
 
 const Checkbox = ({
-  children, inline, disabled, defaultChecked, ...props
+  children, className, inline, ...props
 }) => (
-  <StyledCheckbox inline={inline} {...props}>
-    <StyledInput type="checkbox" disabled={disabled} defaultChecked={defaultChecked} />
+  <StyledCheckbox inline={inline} className={className}>
+    <StyledInput type="checkbox" {...props} />
     <StyledLabel>{children}</StyledLabel>
   </StyledCheckbox>
 );
 
 Checkbox.defaultProps = {
+  className: undefined,
   inline: undefined,
-  disabled: false,
-  defaultChecked: false,
 };
 
 Checkbox.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
   inline: PropTypes.bool,
-  disabled: PropTypes.bool,
-  defaultChecked: PropTypes.bool,
 };
 
 export default withWhiteSpace({ marginBottom: 2 })(Checkbox);
