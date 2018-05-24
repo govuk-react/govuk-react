@@ -49,9 +49,7 @@ const StyledColumn = styled('div')(
   }),
 );
 
-const GridCol = ({ children, ...props }) => (
-  <StyledColumn {...props}>{children}</StyledColumn>
-);
+const GridCol = props => <StyledColumn {...props} />;
 
 GridCol.defaultProps = {
   children: undefined,

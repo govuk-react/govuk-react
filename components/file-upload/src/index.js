@@ -36,7 +36,7 @@ const StyledInput = styled('input')({
 const FileUpload = ({
   meta, children, hint, acceptedFormats, ...props
 }) => (
-  <Label error={meta.error} {...props}>
+  <Label {...props} error={meta.touched && meta.error}>
     <LabelText error={meta.error}>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}

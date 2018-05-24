@@ -75,7 +75,7 @@ const DateInput = ({
   hintText,
   ...props
 }) => (
-  <StyledContainer errorText={errorText} {...props}>
+  <StyledContainer {...props} errorText={errorText}>
     <LabelText errorText={errorText}>{children}</LabelText>
     {hintText ? <HintText>{hintText}</HintText> : <span />}
     {errorText ? (

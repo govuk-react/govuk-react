@@ -13,7 +13,7 @@ import { withWhiteSpace } from '@govuk-react/hoc';
 const InputField = ({
   meta, children, hint, input, ...props
 }) => (
-  <Label error={meta.touched && meta.error} {...props}>
+  <Label {...props} error={meta.touched && meta.error}>
     <LabelText>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}

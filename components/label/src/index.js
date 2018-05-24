@@ -25,6 +25,6 @@ const StyledLabel = styled('label')(
   }),
 );
 
-const Label = ({ ...props }) => (<StyledLabel {...props} />);
+const Label = props => <StyledLabel {...props} />;
 
 export default withWhiteSpace({ marginBottom: 0 })(Label);

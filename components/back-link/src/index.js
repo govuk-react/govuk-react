@@ -55,8 +55,8 @@ const Anchor = styled('button')({
   },
 });
 
-const BackLink = ({ children, goBack, ...props }) => (
-  <Anchor onClick={goBack} {...props}>{children}</Anchor>
+const BackLink = ({ goBack, ...props }) => (
+  <Anchor {...props} onClick={goBack} />
 );
 
 BackLink.propTypes = {
