@@ -11,7 +11,7 @@ import {
 } from '@govuk-react/constants';
 import RouterLink from './link-renderer';
 
-const StyledParagraph = styled('p')(
+const StyledParagraph = styled('div')(
   {
     fontFamily: NTA_LIGHT,
     marginTop: 0,

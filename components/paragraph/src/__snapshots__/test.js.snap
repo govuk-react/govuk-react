@@ -37,11 +37,11 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
     className="emotion-1"
     supportingText={false}
   >
-    <Styled(p)
+    <Styled(div)
       className="emotion-1"
       supportingText={false}
     >
-      <p
+      <div
         className="emotion-0"
       >
         <ReactMarkdown
@@ -77,8 +77,8 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
             </p>
           </div>
         </ReactMarkdown>
-      </p>
-    </Styled(p)>
+      </div>
+    </Styled(div)>
   </Paragraph>
 </Styled(Paragraph)>
 `;
