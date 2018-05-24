@@ -38,8 +38,8 @@ const StyledList = styled('ul')(
 
 // listStyleType: normal HTML property values are used here
 // e.g., listStyleType="circle", listStyleType="upper-alpha", listStyleType="none"
-const UnorderedList = ({ children, listStyleType, ...props }) => (
-  <StyledList listStyleType={listStyleType} {...props}>{children}</StyledList>
+const UnorderedList = ({ listStyleType, ...props }) => (
+  <StyledList listStyleType={listStyleType} {...props} />
 );
 
 UnorderedList.defaultProps = {

@@ -24,9 +24,7 @@ const StyledListItem = styled('li')({
   },
 });
 
-const ListItem = ({ children, ...props }) => (
-  <StyledListItem {...props}>{children}</StyledListItem>
-);
+const ListItem = props => <StyledListItem {...props} />;
 
 ListItem.propTypes = {
   children: PropTypes.node.isRequired,
