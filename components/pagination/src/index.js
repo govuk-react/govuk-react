@@ -33,9 +33,7 @@ const StyledList = styled('ul')({
   },
 });
 
-const Pagination = ({ children, ...props }) => (
-  <StyledList {...props}>{children}</StyledList>
-);
+const Pagination = props => <StyledList {...props} />;
 
 Pagination.propTypes = {
   children: PropTypes.node.isRequired,

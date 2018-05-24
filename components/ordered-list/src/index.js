@@ -35,10 +35,8 @@ const StyledList = styled('ol')(
 );
 
 // TODO use Context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
-const OrderedList = ({ children, listStyleType, ...props }) => (
-  <StyledList listStyleType={listStyleType} {...props}>
-    {children}
-  </StyledList>
+const OrderedList = ({ listStyleType, ...props }) => (
+  <StyledList listStyleType={listStyleType} {...props} />
 );
 
 OrderedList.defaultProps = {

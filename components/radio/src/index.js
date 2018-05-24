@@ -84,39 +84,23 @@ const LabelText = styled('span')({
 });
 
 const Radio = ({
-  inline, children, disabled, checked, name, value, input, ...props
+  inline, children, className, ...input
 }) => (
-  <Label inline={inline} {...props}>
-    <Input type="radio" checked={checked} disabled={disabled} name={name} value={value} {...input} />
+  <Label inline={inline} className={className}>
+    <Input type="radio" {...input} />
     <LabelText>{children}</LabelText>
   </Label>
 );
 
 Radio.defaultProps = {
   inline: false,
-  disabled: '',
-  checked: undefined,
-  name: undefined,
-  value: undefined,
-  input: {
-    onBlur: () => {},
-    onFocus: () => {},
-    onChange: () => {},
-  },
+  className: undefined,
 };
 
 Radio.propTypes = {
   inline: PropTypes.bool,
+  className: PropTypes.string,
   children: PropTypes.node.isRequired,
-  disabled: PropTypes.string,
-  checked: PropTypes.bool,
-  name: PropTypes.string,
-  value: PropTypes.string,
-  input: PropTypes.shape({
-    onBlur: PropTypes.func,
-    onFocus: PropTypes.func,
-    onChange: PropTypes.func,
-  }),
 };
 
 export default withWhiteSpace({ marginBottom: 2 })(Radio);

@@ -32,9 +32,7 @@ const StyledRelatedItems = styled('div')({
   },
 });
 
-const RelatedItems = ({ children, ...props }) => (
-  <StyledRelatedItems {...props}>{children}</StyledRelatedItems>
-);
+const RelatedItems = props => <StyledRelatedItems {...props} />;
 
 RelatedItems.propTypes = {
   children: PropTypes.node.isRequired,

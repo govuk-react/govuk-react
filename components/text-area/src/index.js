@@ -48,15 +48,9 @@ const TextArea = ({
 }) => (
   <Label error={meta.touched && meta.error}>
     <LabelText>{children}</LabelText>
-    {hint && <HintText>{hint}</HintText>}
-    {meta.touched &&
-      meta.error && <ErrorText>{meta.error}</ErrorText>}
-    <TextAreaField
-      type="text"
-      rows="5"
-      error={meta.touched && meta.error}
-      {...input}
-    />
+    { hint && <HintText>{hint}</HintText> }
+    { meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText> }
+    <TextAreaField type="text" rows="5" error={meta.touched && meta.error} {...input} />
   </Label>
 );
 
