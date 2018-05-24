@@ -51,11 +51,11 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 .emotion-0:focus {
-  position: absolute;
+  position: relative;
   top: 2px;
   background-color: #006435;
   outline: 3px solid #ffbf47;
-  box-shadow: none;
+  box-shadow: 0 0px 0;
 }
 
 .emotion-0 svg {
@@ -139,11 +139,11 @@ exports[`button should render a disabled button: disabled button 1`] = `
 }
 
 .emotion-0:focus {
-  position: absolute;
+  position: relative;
   top: 2px;
   background-color: #006435;
   outline: 3px solid #ffbf47;
-  box-shadow: none;
+  box-shadow: 0 0px 0;
 }
 
 .emotion-0 svg {
