@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TopNav matches snapshot: enzyme.mount 1`] = `
-.emotion-13 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,13 +19,13 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-13 {
+  .emotion-9 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-.emotion-12 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -35,13 +35,13 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   flex-direction: column;
   width: calc(100% - 15px);
   max-width: 960px;
-  padding: 10px 15px;
+  padding: 8px 15px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-12 {
-    padding: 10px 0;
+  .emotion-8 {
+    padding: 8px 0;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -85,7 +85,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   font-size: 30px;
 }
 
-.emotion-11 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -101,7 +101,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-11 {
+  .emotion-7 {
     -webkit-align-items: flex-start;
     -webkit-box-align: flex-start;
     -ms-flex-align: flex-start;
@@ -136,7 +136,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   }
 }
 
-.emotion-6 {
+.emotion-4 {
   -webkit-flex: 1 0 50%;
   -ms-flex: 1 0 50%;
   flex: 1 0 50%;
@@ -148,7 +148,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-4 {
     border-bottom: 0;
     -webkit-flex: none;
     -ms-flex: none;
@@ -158,7 +158,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   }
 }
 
-.emotion-14 {
+.emotion-10 {
   border-bottom: 10px solid #005ea5;
   max-width: 960px;
   margin: 0 auto;
@@ -166,12 +166,12 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-14 {
+  .emotion-10 {
     width: calc(100% - 60px);
   }
 }
 
-.emotion-10 {
+.emotion-6 {
   display: none;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
@@ -183,7 +183,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-10 {
+  .emotion-6 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -191,29 +191,6 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
     padding-top: 30px;
     width: auto;
   }
-}
-
-.emotion-4 {
-  color: #ffffff;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.emotion-4:hover {
-  border-bottom-color: #ffffff;
-}
-
-.emotion-4:focus {
-  background-color: #ffbf47;
-  outline: 3px solid #ffbf47;
-}
-
-.emotion-4:visited {
-  color: #ffffff;
-  border-bottom-color: #ffffff;
 }
 
 <TopNav
@@ -227,12 +204,12 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
     color="#ffffff"
   >
     <div
-      className="emotion-13"
+      className="emotion-9"
       color="#ffffff"
     >
       <Styled(div)>
         <div
-          className="emotion-12"
+          className="emotion-8"
         >
           <Styled(div)>
             <div
@@ -247,7 +224,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
           </Styled(div)>
           <Styled(div)>
             <div
-              className="emotion-11"
+              className="emotion-7"
             >
               <MenuButton
                 title="Menu"
@@ -279,52 +256,40 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
               </MenuButton>
               <Styled(ul)>
                 <ul
-                  className="emotion-10"
+                  className="emotion-6"
                 >
                   <Styled(li)
                     key="0"
                   >
                     <li
-                      className="emotion-6"
+                      className="emotion-4"
                     >
-                      <Styled(Anchor)
+                      <Anchor
                         href="/section"
                       >
-                        <Anchor
-                          className="emotion-4"
+                        <a
                           href="/section"
                         >
-                          <a
-                            className="emotion-4"
-                            href="/section"
-                          >
-                            Section 1
-                          </a>
-                        </Anchor>
-                      </Styled(Anchor)>
+                          Section 1
+                        </a>
+                      </Anchor>
                     </li>
                   </Styled(li)>
                   <Styled(li)
                     key="1"
                   >
                     <li
-                      className="emotion-6"
+                      className="emotion-4"
                     >
-                      <Styled(Anchor)
+                      <Anchor
                         href="/section"
                       >
-                        <Anchor
-                          className="emotion-4"
+                        <a
                           href="/section"
                         >
-                          <a
-                            className="emotion-4"
-                            href="/section"
-                          >
-                            Section 1
-                          </a>
-                        </Anchor>
-                      </Styled(Anchor)>
+                          Section 1
+                        </a>
+                      </Anchor>
                     </li>
                   </Styled(li)>
                 </ul>
@@ -337,7 +302,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   </Styled(div)>
   <Styled(div)>
     <div
-      className="emotion-14"
+      className="emotion-10"
     />
   </Styled(div)>
 </TopNav>
@@ -378,13 +343,13 @@ exports[`TopNav with icon title: icon title 1`] = `
   flex-direction: column;
   width: calc(100% - 15px);
   max-width: 960px;
-  padding: 10px 15px;
+  padding: 8px 15px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-6 {
-    padding: 10px 0;
+    padding: 8px 0;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
