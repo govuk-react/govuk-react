@@ -9,10 +9,10 @@ const TopNavInner = styled('div')({
   flexDirection: 'column',
   width: `calc(100% - ${SPACING.SCALE_3})`,
   maxWidth: '960px',
-  padding: `${SPACING.SCALE_2} ${SPACING.SCALE_3}`,
+  padding: `8px ${SPACING.SCALE_3}`,
   boxSizing: 'border-box',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    padding: `${SPACING.SCALE_2} 0`,
+    padding: '8px 0',
     flexDirection: 'row',
     width: `calc(100% - ${SPACING.SCALE_6})`,
   },
