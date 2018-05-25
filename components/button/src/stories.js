@@ -10,17 +10,18 @@ import Button, {
 } from './fixtures';
 import ReadMe from '../README.md';
 
-const stories = storiesOf('Button', module);
+const stories = storiesOf('Buttons', module);
+const examples = storiesOf('Buttons/Examples', module);
 
 stories.addDecorator(withKnobs);
 stories.addDecorator(withDocs(ReadMe));
 
 stories.add('Component Default', Button);
 
-stories.add('Start', ButtonStart);
+examples.add('Start', ButtonStart);
 
-stories.add('Start with icon', ButtonStartIcon);
+examples.add('Start with icon', ButtonStartIcon);
 
-stories.add('Disabled', ButtonDisabled);
+examples.add('Disabled', ButtonDisabled);
 
-stories.add('Disabled start with icon', ButtonDisabledStartIcon);
+examples.add('Disabled start with icon', ButtonDisabledStartIcon);
