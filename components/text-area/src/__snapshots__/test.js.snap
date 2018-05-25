@@ -38,7 +38,7 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   }
 }
 
-.emotion-8 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -54,14 +54,14 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-8:after {
+.emotion-7:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-8 {
+  .emotion-7 {
     margin-bottom: 0;
   }
 }
@@ -105,7 +105,6 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   padding: 5px 4px 4px;
   border: 2px solid #0b0c0c;
   border: 4px solid #b10e1e;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
@@ -119,12 +118,6 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
 .emotion-6:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-6 {
-    margin-bottom: 0;
-  }
 }
 
 <Styled(TextArea)
@@ -159,7 +152,7 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
           error="example"
         >
           <label
-            className="emotion-8"
+            className="emotion-7"
           >
             <Styled(LabelText)>
               <LabelText
@@ -192,10 +185,7 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
               </ErrorText>
             </Styled(ErrorText)>
             <Styled(textarea)
-              className="emotion-1"
               error="example"
-              errorText="example"
-              input={Object {}}
               rows="5"
               type="text"
             >
@@ -224,7 +214,7 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   }
 }
 
-.emotion-8 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -237,14 +227,14 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-8:after {
+.emotion-7:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-8 {
+  .emotion-7 {
     margin-bottom: 0;
   }
 }
@@ -286,7 +276,6 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   width: 100%;
   padding: 5px 4px 4px;
   border: 2px solid #0b0c0c;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
@@ -300,12 +289,6 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
 .emotion-6:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-6 {
-    margin-bottom: 0;
-  }
 }
 
 .emotion-3 {
@@ -351,7 +334,7 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
           className="emotion-1"
         >
           <label
-            className="emotion-8"
+            className="emotion-7"
           >
             <Styled(LabelText)>
               <LabelText
@@ -384,8 +367,6 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
               </HintText>
             </Styled(HintText)>
             <Styled(textarea)
-              className="emotion-1"
-              input={Object {}}
               rows="5"
               type="text"
             >
@@ -414,7 +395,7 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-.emotion-5 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -427,14 +408,14 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-5:after {
+.emotion-4:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-5 {
+  .emotion-4 {
     margin-bottom: 0;
   }
 }
@@ -476,7 +457,6 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   width: 100%;
   padding: 5px 4px 4px;
   border: 2px solid #0b0c0c;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
@@ -490,12 +470,6 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
 .emotion-3:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
-  }
 }
 
 <Styled(TextArea)>
@@ -512,7 +486,7 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
           className="emotion-1"
         >
           <label
-            className="emotion-5"
+            className="emotion-4"
           >
             <Styled(LabelText)>
               <LabelText
@@ -530,8 +504,6 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
               </LabelText>
             </Styled(LabelText)>
             <Styled(textarea)
-              className="emotion-1"
-              input={Object {}}
               rows="5"
               type="text"
             >
