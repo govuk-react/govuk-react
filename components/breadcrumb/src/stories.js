@@ -10,13 +10,15 @@ const AnchorLink = asAnchor(Link);
 
 const crumbsWithDuffChildren = [];
 
-storiesOf('Breadcrumb', module).add('Component default', () => (
+const stories = storiesOf('Navigation/Breadcrumb', module);
+
+stories.add('Component default', () => (
   <Breadcrumb>
     <AnchorTag href="/section">Section 1</AnchorTag>
   </Breadcrumb>
 ));
 
-storiesOf('Breadcrumb', module).add('Three levels deep', () => (
+stories.add('Three levels deep', () => (
   <Breadcrumb>
     <a href="/section">Section 1</a>
     <a href="/section/sub-section">Sub-section</a>
@@ -24,7 +26,7 @@ storiesOf('Breadcrumb', module).add('Three levels deep', () => (
   </Breadcrumb>
 ));
 
-storiesOf('Breadcrumb', module).add('Duff children', () => (
+stories.add('Duff children', () => (
   <Breadcrumb>
     <AnchorTag href="/section">Section 1</AnchorTag>
     {crumbsWithDuffChildren}
@@ -32,7 +34,7 @@ storiesOf('Breadcrumb', module).add('Duff children', () => (
   </Breadcrumb>
 ));
 
-storiesOf('Breadcrumb', module).add(
+stories.add(
   'Three levels deep using React Router Link',
   () => (
     <Breadcrumb>

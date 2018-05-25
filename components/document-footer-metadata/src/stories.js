@@ -38,20 +38,22 @@ const otherData = [
   },
 ];
 
-storiesOf('Document Footer Metadata', module).add('DFM From example', () => (
+const stories = storiesOf('Typography/Document Footer Metadata', module);
+
+stories.add('DFM From example', () => (
   <DocumentFooterMetadata
     from={fromData}
   />
 ));
 
-storiesOf('Document Footer Metadata', module).add('DFM From & part of example', () => (
+stories.add('DFM From & part of example', () => (
   <DocumentFooterMetadata
     from={fromData}
     partOf={partOfData}
   />
 ));
 
-storiesOf('Document Footer Metadata', module).add('DFM From & other data example', () => (
+stories.add('DFM From & other data example', () => (
   <DocumentFooterMetadata
     from={fromData}
     other={otherData}

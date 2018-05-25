@@ -3,6 +3,8 @@ import { storiesOf } from '@storybook/react';
 
 import ListItem from '.';
 
-storiesOf('ListItem', module).add('ListItem', () => (
+const stories = storiesOf('Typography/ListItem', module);
+
+stories.add('ListItem', () => (
   <ListItem>ListItem example</ListItem>
 ));

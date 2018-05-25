@@ -7,11 +7,13 @@ import asAnchor from '.';
 const AnchorTag = asAnchor('a');
 const AnchorLink = asAnchor(Link);
 
-storiesOf('asAnchor', module).add('asAnchor passing in anchor', () => (
+const stories = storiesOf('Utilities/asAnchor', module);
+
+stories.add('asAnchor passing in anchor', () => (
   <AnchorTag href="https://cats.org">AsAnchor anchor example</AnchorTag>
 ));
 
-storiesOf('asAnchor', module).add(
+stories.add(
   'asAnchor passing in anchor target=blank',
   () => (
     <AnchorTag href="https://cats.org" target="_blank">
@@ -20,7 +22,7 @@ storiesOf('asAnchor', module).add(
   ),
 );
 
-storiesOf('asAnchor', module).add(
+stories.add(
   'asAnchor passing in React Router Link',
   () => (
     <BrowserRouter>

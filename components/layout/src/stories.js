@@ -4,7 +4,9 @@ import GridRow from '@govuk-react/grid-row';
 import GridCol from '@govuk-react/grid-col';
 import Layout from '.';
 
-storiesOf('Layout', module).add('Column Full', () => (
+const stories = storiesOf('Layout/LayoutComponent', module);
+
+stories.add('Column Full', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columFull>
@@ -14,7 +16,7 @@ storiesOf('Layout', module).add('Column Full', () => (
   </Layout>
 ));
 
-storiesOf('Layout', module).add('Column Halves', () => (
+stories.add('Column Halves', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnOneHalf>
@@ -27,7 +29,7 @@ storiesOf('Layout', module).add('Column Halves', () => (
   </Layout>
 ));
 
-storiesOf('Layout', module).add('Column Thirds', () => (
+stories.add('Column Thirds', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnOneThird>
@@ -43,7 +45,7 @@ storiesOf('Layout', module).add('Column Thirds', () => (
   </Layout>
 ));
 
-storiesOf('Layout', module).add('Column Two Thirds / One Third', () => (
+stories.add('Column Two Thirds / One Third', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnTwoThirds>
@@ -56,7 +58,7 @@ storiesOf('Layout', module).add('Column Two Thirds / One Third', () => (
   </Layout>
 ));
 
-storiesOf('Layout', module).add('Column One Third / Two Thirds', () => (
+stories.add('Column One Third / Two Thirds', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnOneThird>
@@ -69,7 +71,7 @@ storiesOf('Layout', module).add('Column One Third / Two Thirds', () => (
   </Layout>
 ));
 
-storiesOf('Layout', module).add('Quarters', () => (
+stories.add('Quarters', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnOneQuarter>
@@ -88,7 +90,7 @@ storiesOf('Layout', module).add('Quarters', () => (
   </Layout>
 ));
 
-storiesOf('Layout', module).add('Example layout', () => (
+stories.add('Example layout', () => (
   <Layout>
     <GridRow>
       <GridCol columFull>

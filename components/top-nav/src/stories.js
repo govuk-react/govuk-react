@@ -34,11 +34,13 @@ const Search = (
   <SearchBox placeholder="Search">hi</SearchBox>
 );
 
-storiesOf('TopNav', module).add('default', () => (
+const stories = storiesOf('Navigation/TopNav', module);
+
+stories.add('default', () => (
   <TopNav company={Company} />
 ));
 
-storiesOf('TopNav', module).add('custom logo', () => (
+stories.add('custom logo', () => (
   <TopNav company={
     <AnchorTag href={link} target="new">
       <TopNav.IconTitle
@@ -51,29 +53,29 @@ storiesOf('TopNav', module).add('custom logo', () => (
 ));
 
 
-storiesOf('TopNav', module).add('service title', () => (
+stories.add('service title', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} />
 ));
 
-storiesOf('TopNav', module).add('search', () => (
+stories.add('search', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} />
 ));
 
-storiesOf('TopNav', module).add('children', () => (
+stories.add('children', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} active={0}>
     <AnchorTag href="https://example.com?q=catdog">Navigation item #1</AnchorTag>
     <AnchorTag href="https://example.com?q=dogcat">Navigation item #2</AnchorTag>
   </TopNav>
 ));
 
-storiesOf('TopNav', module).add('everything but serviceTitle', () => (
+stories.add('everything but serviceTitle', () => (
   <TopNav company={Company} search={Search} active={0}>
     <AnchorTag href="https://example.com?q=catdog">Navigation item #1</AnchorTag>
     <AnchorTag href="https://example.com?q=dogcat">Navigation item #2</AnchorTag>
   </TopNav>
 ));
 
-storiesOf('TopNav', module).add('everything', () => (
+stories.add('everything', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
     <AnchorTag href="https://example.com?q=catdog" target="new">Navigation item #1</AnchorTag>
     <AnchorTag href="https://example.com?q=dogcat" target="new">Navigation item #2</AnchorTag>
@@ -81,7 +83,7 @@ storiesOf('TopNav', module).add('everything', () => (
 ));
 
 
-storiesOf('TopNav', module).add('everything with 9 nav items', () => (
+stories.add('everything with 9 nav items', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
     <AnchorTag href="https://example.com?q=catdog" target="new">Navigation item</AnchorTag>
     <AnchorTag href="https://example.com?q=dogcat" target="new">Navigation item</AnchorTag>

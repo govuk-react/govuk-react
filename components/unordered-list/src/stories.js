@@ -4,7 +4,9 @@ import ListItem from '@govuk-react/list-item';
 
 import UnorderedList from '.';
 
-storiesOf('UnorderedList', module).add('UnorderedList default', () => (
+const stories = storiesOf('Typography/UnorderedList', module);
+
+stories.add('UnorderedList default', () => (
   <UnorderedList>
     <ListItem>Lorem ipsum dolor sit.</ListItem>
     <ListItem>Consectetur adipiscing elit.</ListItem>
@@ -12,7 +14,7 @@ storiesOf('UnorderedList', module).add('UnorderedList default', () => (
   </UnorderedList>
 ));
 
-storiesOf('UnorderedList', module).add('UnorderedList with square', () => (
+stories.add('UnorderedList with square', () => (
   <UnorderedList listStyleType="square">
     <ListItem>Cras nec quam ut lorem.</ListItem>
     <ListItem>Curabitur porta elit ut ante vehicula.</ListItem>
@@ -20,7 +22,7 @@ storiesOf('UnorderedList', module).add('UnorderedList with square', () => (
   </UnorderedList>
 ));
 
-storiesOf('UnorderedList', module).add(
+stories.add(
   'UnorderedList with no decoration',
   () => (
     <UnorderedList listStyleType="none">

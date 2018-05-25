@@ -6,7 +6,9 @@ import ListNavigation from '.';
 
 const AnchorTag = asAnchor('a');
 
-storiesOf('ListNavigation', module).add('ListNavigation', () => (
+const stories = storiesOf('Navigation/ListNavigation', module);
+
+stories.add('ListNavigation', () => (
   <ListNavigation listStyleType="square">
     <AnchorTag href="https://example.com/?=1">lorem dolor set cetra</AnchorTag>
     <AnchorTag href="https://example.com/?=2">

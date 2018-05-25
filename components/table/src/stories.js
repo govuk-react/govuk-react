@@ -60,10 +60,12 @@ const example2Body = (
   </React.Fragment>
 );
 
-storiesOf('Table', module).add('default', () => (
+const stories = storiesOf('Data/Table', module);
+
+stories.add('default', () => (
   <Table caption="Dates and amounts" body={example1Body} />
 ));
 
-storiesOf('Table', module).add('Numeric tabular data', () => (
+stories.add('Numeric tabular data', () => (
   <Table caption="Attention, I am the caption of this ship!" head={example2Head} body={example2Body} />
 ));

@@ -50,7 +50,9 @@ RadioGroup.propTypes = {
   }),
 };
 
-storiesOf('Radio', module).add('Radio stacked', () => (
+const stories = storiesOf('Form/Radio', module);
+
+stories.add('Radio stacked', () => (
   <div>
     <Radio name="group1">Waste from animal carcasses</Radio>
     <Radio name="group1">Waste from mines or quarries</Radio>
@@ -58,7 +60,7 @@ storiesOf('Radio', module).add('Radio stacked', () => (
   </div>
 ));
 
-storiesOf('Radio', module).add('Radio inline', () => (
+stories.add('Radio inline', () => (
   <div>
     <Radio name="group1" inline>
       Yes
@@ -69,7 +71,7 @@ storiesOf('Radio', module).add('Radio inline', () => (
   </div>
 ));
 
-storiesOf('Radio', module).add('Radio disabled', () => (
+stories.add('Radio disabled', () => (
   <div>
     <Radio name="group1" disabled="disabled">
       Disabled checkbox option
@@ -77,7 +79,7 @@ storiesOf('Radio', module).add('Radio disabled', () => (
   </div>
 ));
 
-storiesOf('Radio', module).add('Radio preselected', () => (
+stories.add('Radio preselected', () => (
   <div>
     <Radio name="group1" checked>
       Farm or agricultural waste
@@ -85,7 +87,7 @@ storiesOf('Radio', module).add('Radio preselected', () => (
   </div>
 ));
 
-storiesOf('Radio', module).add('Radio preselected & disabled', () => (
+stories.add('Radio preselected & disabled', () => (
   <div>
     <Radio name="group1" disabled="disabled" checked>
       Farm or agricultural waste
@@ -93,7 +95,7 @@ storiesOf('Radio', module).add('Radio preselected & disabled', () => (
   </div>
 ));
 
-storiesOf('Radio', module).add(
+stories.add(
   'Usage with Final/Redux Form - multi checkbox validation',
   () => (
     <FinalFormWrapper>

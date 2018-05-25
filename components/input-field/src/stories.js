@@ -7,11 +7,13 @@ const meta = {
   error: 'Example',
 };
 
-storiesOf('InputField', module).add('Component default', () => (
+const stories = storiesOf('Form/InputField', module);
+
+stories.add('Component default', () => (
   <InputField name="group0">National Insurance number</InputField>
 ));
 
-storiesOf('InputField', module).add('Input with HintText', () => (
+stories.add('Input with HintText', () => (
   <InputField
     name="group1"
     hint={[
@@ -24,7 +26,7 @@ storiesOf('InputField', module).add('Input with HintText', () => (
   </InputField>
 ));
 
-storiesOf('InputField', module).add('Input with HintText & error', () => (
+stories.add('Input with HintText & error', () => (
   <InputField
     name="group1"
     hint={[

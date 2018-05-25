@@ -7,11 +7,13 @@ const meta = {
   error: 'Example',
 };
 
-storiesOf('FileUpload', module).add('Component default', () => (
+const stories = storiesOf('Form/FileUpload', module);
+
+stories.add('Component default', () => (
   <FileUpload name="group0">Upload a document</FileUpload>
 ));
 
-storiesOf('FileUpload', module).add('Input with HintText', () => (
+stories.add('Input with HintText', () => (
   <FileUpload
     name="group1"
     acceptedFormats=".jpg, .png"
@@ -21,7 +23,7 @@ storiesOf('FileUpload', module).add('Input with HintText', () => (
   </FileUpload>
 ));
 
-storiesOf('FileUpload', module).add('Input with HintText & error', () => (
+stories.add('Input with HintText & error', () => (
   <FileUpload
     name="group1"
     acceptedFormats=".jpg, .png"

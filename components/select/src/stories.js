@@ -8,8 +8,10 @@ const meta = {
   error: 'Example',
 };
 
+const stories = storiesOf('Form/Select', module);
+
 // TODO add a synthetic onChange event
-storiesOf('Select', module).add('Component default', () => (
+stories.add('Component default', () => (
   <Select name="group1" label="This is a label">
     <option value="0">GOV.UK elements option 1</option>
     <option value="1">GOV.UK elements option 2</option>
@@ -17,7 +19,7 @@ storiesOf('Select', module).add('Component default', () => (
   </Select>
 ));
 
-storiesOf('Select', module).add('Select with hintText', () => (
+stories.add('Select with hintText', () => (
   <Select
     name="group1"
     label="This is a label"
@@ -31,7 +33,7 @@ storiesOf('Select', module).add('Select with hintText', () => (
   </Select>
 ));
 
-storiesOf('Select', module).add('Select with hintText & error', () => (
+stories.add('Select with hintText & error', () => (
   <Select
     name="group1"
     label="This is a label"
@@ -46,7 +48,7 @@ storiesOf('Select', module).add('Select with hintText & error', () => (
   </Select>
 ));
 
-storiesOf('Select', module).add('Standalone input with inline label', () => (
+stories.add('Standalone input with inline label', () => (
   <label>
     <LabelText>Sort by:&nbsp;
       <SelectInput>

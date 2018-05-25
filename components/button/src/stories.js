@@ -10,8 +10,8 @@ import Button, {
 } from './fixtures';
 import ReadMe from '../README.md';
 
-const stories = storiesOf('Buttons', module);
-const examples = storiesOf('Buttons/Examples', module);
+const stories = storiesOf('Form/Buttons', module);
+const examples = storiesOf('Form/Buttons/Examples', module);
 
 stories.addDecorator(withKnobs);
 stories.addDecorator(withDocs(ReadMe));

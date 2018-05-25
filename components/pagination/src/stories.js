@@ -8,7 +8,9 @@ import Pagination from '.';
 const PaginationTag = asPaginationItem('a');
 const PaginationLink = asPaginationItem(Link);
 
-storiesOf('Pagination', module).add('Pagination default (anchor tag)', () => (
+const stories = storiesOf('Navigation/Pagination', module);
+
+stories.add('Pagination default (anchor tag)', () => (
   <Pagination>
     <PaginationTag href="#prev" previousPage>
       Previous page
@@ -19,7 +21,7 @@ storiesOf('Pagination', module).add('Pagination default (anchor tag)', () => (
   </Pagination>
 ));
 
-storiesOf('Pagination', module).add(
+stories.add(
   'Pagination default (React Router Link)',
   () => (
     <Pagination>
@@ -37,7 +39,7 @@ storiesOf('Pagination', module).add(
   ),
 );
 
-storiesOf('Pagination', module).add(
+stories.add(
   'Pagination with numbers (anchor tag)',
   () => (
     <Pagination>
@@ -51,7 +53,7 @@ storiesOf('Pagination', module).add(
   ),
 );
 
-storiesOf('Pagination', module).add(
+stories.add(
   'Pagination with numbers (React Router Link)',
   () => (
     <Pagination>
@@ -69,7 +71,7 @@ storiesOf('Pagination', module).add(
   ),
 );
 
-storiesOf('Pagination', module).add(
+stories.add(
   'Pagination with titles (anchor tag)',
   () => (
     <Pagination>
@@ -91,7 +93,7 @@ storiesOf('Pagination', module).add(
   ),
 );
 
-storiesOf('Pagination', module).add(
+stories.add(
   'Pagination with titles (React Router Link)',
   () => (
     <Pagination>
@@ -117,7 +119,7 @@ storiesOf('Pagination', module).add(
   ),
 );
 
-storiesOf('Pagination', module).add(
+stories.add(
   'Pagination with numbers just with next page (anchor tag)',
   () => (
     <Pagination>
@@ -128,7 +130,7 @@ storiesOf('Pagination', module).add(
   ),
 );
 
-storiesOf('Pagination', module).add(
+stories.add(
   'Pagination with numbers just with next page (React Router Link)',
   () => (
     <Pagination>
@@ -141,7 +143,7 @@ storiesOf('Pagination', module).add(
   ),
 );
 
-storiesOf('Pagination', module).add(
+stories.add(
   'Pagination with numbers just with previous page (anchor tag)',
   () => (
     <Pagination>
@@ -152,7 +154,7 @@ storiesOf('Pagination', module).add(
   ),
 );
 
-storiesOf('Pagination', module).add(
+stories.add(
   'Pagination with numbers just with previous page (React Router Link)',
   () => (
     <Pagination>

@@ -3,7 +3,9 @@ import { storiesOf } from '@storybook/react';
 
 import GridCol from '.';
 
-storiesOf('GridCol', module).add('GridCol', () => (
+const stories = storiesOf('Layout/GridCol', module);
+
+stories.add('GridCol', () => (
   <GridCol columFull>
     <h2>full column</h2>
     <p>Please see Layout for visual examples</p>

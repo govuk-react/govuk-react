@@ -4,7 +4,9 @@ import Radio from '@govuk-react/radio';
 
 import MultiChoice from '.';
 
-storiesOf('MultiChoice', module).add('MultiChoice', () => (
+const stories = storiesOf('Form/MultiChoice', module);
+
+stories.add('MultiChoice', () => (
   <MultiChoice label="example">
     <Radio name="group1" inline>
       Yes

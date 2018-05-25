@@ -7,7 +7,9 @@ import GridCol from '@govuk-react/grid-col';
 
 import SearchBox from '.';
 
-storiesOf('SearchBox', module).add('SearchBox', () => (
+const stories = storiesOf('Form/SearchBox', module);
+
+stories.add('SearchBox', () => (
   <Layout>
     <GridRow>
       <GridCol>

@@ -3,6 +3,8 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import BackLink from '.';
 
-storiesOf('BackLink', module).add('Component default', () => (
+const stories = storiesOf('Navigation/BackLink', module);
+
+stories.add('Component default', () => (
   <BackLink goBack={action('go-back')}>Back</BackLink>
 ));

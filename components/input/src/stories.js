@@ -4,10 +4,12 @@ import { ORANGE } from 'govuk-colours';
 
 import Input from '.';
 
-storiesOf('Input', module).add('Component default', () => (
+const stories = storiesOf('Form/Input', module);
+
+stories.add('Component default', () => (
   <Input type="text" />
 ));
 
-storiesOf('Input', module).add('Custom error colour', () => (
+stories.add('Custom error colour', () => (
   <Input type="text" errorColor={ORANGE} error="example" />
 ));

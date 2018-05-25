@@ -3,6 +3,8 @@ import { storiesOf } from '@storybook/react';
 
 import PhaseBadge from '.';
 
-storiesOf('PhaseBadge', module).add('PhaseBadge', () => (
+const stories = storiesOf('Components/PhaseBadge', module);
+
+stories.add('PhaseBadge', () => (
   <PhaseBadge>beta</PhaseBadge>
 ));
