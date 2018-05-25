@@ -44,7 +44,7 @@ const TextAreaField = styled('textarea')(
 );
 
 const TextArea = ({
-  children, hint, meta, ...input
+  children, hint, meta, input, ...props
 }) => (
   <Label error={meta.touched && meta.error}>
     <LabelText>{children}</LabelText>
