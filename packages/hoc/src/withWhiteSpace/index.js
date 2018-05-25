@@ -4,12 +4,12 @@ import { SPACING_MAP, SPACING_MAP_INDEX, MEDIA_QUERIES } from '@govuk-react/cons
 
 const withWhiteSpace = (config = {}) => (Component) => {
   const StyledHoc = styled(Component)(({ mb: marginBottom = config.marginBottom }) => (
-    marginBottom !== undefined && {
+    marginBottom !== undefined ? {
       marginBottom: marginBottom ? SPACING_MAP[marginBottom].mobile : 0,
       [MEDIA_QUERIES.LARGESCREEN]: {
         marginBottom: marginBottom ? SPACING_MAP[marginBottom].tablet : 0,
       },
-    }
+    } : undefined
   ));
 
   // `mb` (Margin Bottom) prop name comes from the naming convention used by https://github.com/jxnblk/grid-styled
