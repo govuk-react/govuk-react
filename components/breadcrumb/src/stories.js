@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { BrowserRouter, Link } from 'react-router-dom';
 import { asAnchor } from '@govuk-react/hoc';
-import { withDocs } from 'storybook-readme';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
 import Breadcrumb from '.';
 import ReadMe from '../README.md';
@@ -15,7 +15,7 @@ const crumbsWithDuffChildren = [];
 const stories = storiesOf('Navigation/Breadcrumb', module);
 const examples = storiesOf('Navigation/Breadcrumb/Examples', module);
 
-stories.addDecorator(withDocs(ReadMe));
+stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
   <Breadcrumb>

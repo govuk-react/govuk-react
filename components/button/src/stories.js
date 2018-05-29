@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs/react';
-import { withDocs } from 'storybook-readme';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
 import Button, {
   ButtonStart,
@@ -14,7 +14,7 @@ const stories = storiesOf('Form/Buttons', module);
 const examples = storiesOf('Form/Buttons/Examples', module);
 
 stories.addDecorator(withKnobs);
-stories.addDecorator(withDocs(ReadMe));
+stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component Default', Button);
 
