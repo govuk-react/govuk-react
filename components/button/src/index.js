@@ -55,6 +55,9 @@ const StyledButton = styled('button')(
       WebkitBoxShadow: `0 0 0 ${BUTTON_COLOUR}`,
       MozBoxShadow: `0 0 0 ${BUTTON_COLOUR}`,
     },
+    ':visited': {
+      color: BUTTON_COLOUR,
+    },
     // TODO: avoid cascade
     ' svg': {
       maxWidth: '15px',

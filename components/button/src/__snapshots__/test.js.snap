@@ -65,6 +65,10 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
   -moz-box-shadow: 0 0 0 #00823b;
 }
 
+.emotion-0:visited {
+  color: #00823b;
+}
+
 .emotion-0 svg {
   max-width: 15px;
   margin-left: 20px;
@@ -158,6 +162,10 @@ exports[`button should render a disabled button: disabled button 1`] = `
   box-shadow: 0 0 0 #00823b;
   -webkit-box-shadow: 0 0 0 #00823b;
   -moz-box-shadow: 0 0 0 #00823b;
+}
+
+.emotion-0:visited {
+  color: #00823b;
 }
 
 .emotion-0 svg {
