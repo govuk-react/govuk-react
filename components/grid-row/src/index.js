@@ -4,7 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import { MEDIA_QUERIES, SITE_WIDTH, SPACING } from '@govuk-react/constants';
+import { MEDIA_QUERIES, SPACING } from '@govuk-react/constants';
 
 const StyledRow = styled('div')({
   width: '100%',

@@ -1,0 +1,31 @@
+{
+  "name": "@govuk-react/paragraph",
+  "version": "0.2.1",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@storybook/addon-knobs": "^3.4.2"
+  },
+  "dependencies": {
+    "@govuk-react/constants": "^0.2.1",
+    "@govuk-react/hoc": "^0.2.1",
+    "govuk-colours": "^1.0.3"
+  },
+  "peerDependencies": {
+    "emotion": ">=9",
+    "prop-types": ">=15",
+    "react": ">=16.2.0",
+    "react-emotion": ">=9",
+    "react-markdown": ">=3.2",
+    "react-router-dom": ">=4.2"
+  },
+  "scripts": {
+    "build": "npm run build:lib && npm run build:es",
+    "build:lib": "rimraf lib && babel src -d lib --source-maps",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps"
+  },
+  "main": "lib/index.js",
+  "module": "es/index.js"
+}

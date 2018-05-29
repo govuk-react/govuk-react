@@ -20,8 +20,6 @@ import HintText from '@govuk-react/hint-text';
 
 import {
   BORDER_WIDTH_MOBILE,
-  MEDIA_QUERIES,
-  SITE_WIDTH,
   SPACING,
 } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';

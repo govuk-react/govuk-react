@@ -12,11 +12,16 @@ module.exports = {
   "rules": {
     "react/jsx-filename-extension": 0,
     "jsx-a11y/label-has-for": 0,
-    "filenames/match-exported": 0
+    "filenames/match-exported": 0,
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "to", "hrefLeft", "hrefRight" ],
+      "aspects": [ "noHref", "invalidHref", "preferButton" ]
+    }]
   },
   "overrides": [
     {
-      "files": [ "stories.js", "test.js", "example.js", "scripts/**", "src/stories/**" ],
+      "files": [ "stories.js", "test.js", "fixtures.js", "**.test.js", "example.js", "scripts/**", "src/stories/**" ],
       "rules": {
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
       },
@@ -25,7 +30,7 @@ module.exports = {
       }
     },
     {
-      "files": [ "test.js" ],
+      "files": [ "test.js", "**.test.js" ],
       "env": {
         "jest": true,
         "enzyme": true,

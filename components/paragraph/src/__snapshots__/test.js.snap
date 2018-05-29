@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
+.emotion-1 {
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 45px;
+  }
+}
+
+.emotion-0 {
+  font-family: "nta",Arial,sans-serif;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.25;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 45px;
+  }
+}
+
+<Styled(Paragraph)>
+  <Paragraph
+    className="emotion-1"
+    supportingText={false}
+  >
+    <Styled(div)
+      className="emotion-1"
+      supportingText={false}
+    >
+      <div
+        className="emotion-0"
+      >
+        <ReactMarkdown
+          allowedTypes={
+            Array [
+              "paragraph",
+              "emphasis",
+              "strong",
+              "link",
+            ]
+          }
+          astPlugins={Array []}
+          escapeHtml={false}
+          plugins={Array []}
+          rawSourcePos={false}
+          renderers={
+            Object {
+              "link": [Function],
+            }
+          }
+          skipHtml={true}
+          source="A 19px body copy paragraph. This includes even more text to give a good representation of a more average length paragraph. That way you can see more than one line wrapping."
+          sourcePos={false}
+          transformLinkUri={[Function]}
+        >
+          <div
+            key="root-1-1"
+          >
+            <p
+              key="paragraph-1-1"
+            >
+              A 19px body copy paragraph. This includes even more text to give a good representation of a more average length paragraph. That way you can see more than one line wrapping.
+            </p>
+          </div>
+        </ReactMarkdown>
+      </div>
+    </Styled(div)>
+  </Paragraph>
+</Styled(Paragraph)>
+`;

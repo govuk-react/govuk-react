@@ -4,7 +4,7 @@ import styled from 'react-emotion';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ERROR_COLOUR } from 'govuk-colours';
-import { MEDIA_QUERIES, SITE_WIDTH, SPACING } from '@govuk-react/constants';
+import { SPACING } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
 const StyledLabel = styled('label')(
