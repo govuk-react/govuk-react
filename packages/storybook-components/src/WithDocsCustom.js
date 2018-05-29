@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withDocs } from 'storybook-readme';
 
+// Example taken from https://github.com/tuchk4/storybook-readme/blob/master/packages/example-react/stories/index.js
 const WithDocsCustom = withDocs({
   PreviewComponent: ({ children }) => (
     <div
