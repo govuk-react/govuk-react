@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Panel from '.';
 
-const stories = storiesOf('Components/Panel', module);
+const stories = storiesOf('Misc/Panel', module);
 
 stories.add('Panel with header only', () => (
   <Panel panelTitle="Application complete" />

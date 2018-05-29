@@ -11,7 +11,7 @@ import { asAnchor } from '@govuk-react/hoc';
 
 import LoadingBox from '.';
 
-const stories = storiesOf('Components/LoadingBox', module);
+const stories = storiesOf('Misc/LoadingBox', module);
 const AnchorLink = asAnchor('a');
 const spacer = <p style={{ marginTop: 0 }}>&nbsp;</p>;
 stories.addDecorator(withKnobs);

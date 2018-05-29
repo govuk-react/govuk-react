@@ -6,7 +6,7 @@ import PhaseBanner from '.';
 
 const AnchorLink = asAnchor('a');
 
-const stories = storiesOf('Components/PhaseBanner', module);
+const stories = storiesOf('Misc/PhaseBanner', module);
 
 stories.add('Alpha phase tag', () => (
   <PhaseBanner level="alpha">
