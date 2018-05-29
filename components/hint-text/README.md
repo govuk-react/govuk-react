@@ -1,7 +1,17 @@
 HintText
 ========
 
-![Component Image](./docs/HintText.png)
+### Import
+```js
+  import HintText from '@govuk-react/hint-text';
+```
+<!-- STORY -->
 
+
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true |  | node | 
 
 

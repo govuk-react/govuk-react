@@ -1,12 +1,19 @@
 Panel
 =====
 
-![Component Image](./docs/Panel.png)
+### Import
+```js
+  import Panel from '@govuk-react/panel';
+```
+<!-- STORY -->
 
 
+
+### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `panelBody` |  | null | string | 
+ `className` |  | undefined | string | 
+ `panelBody` |  | undefined | string | 
  `panelTitle` | true |  | string | 
 
 
