@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Link } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
 import CrownIcon from '@govuk-react/icon-crown';
 import { Search as SearchIcon } from '@govuk-react/icons';
@@ -9,6 +10,7 @@ import { WithDocsCustom } from '@govuk-react/storybook-components';
 import TopNav, { LogoAnchor, NavLinkAnchor } from '.';
 import ReadMe from '../README.md';
 
+const reactRouterLink = '/section';
 const link = 'https://example.com?=1';
 // TODO: vertical alignment here needs some work, perhaps should be its own component,
 // icon should be lined up with font baseline, e.g. vertical-align: baseline
@@ -56,6 +58,22 @@ examples.add('custom logo', () => (
   />
 ));
 
+storiesOf('TopNav', module).add(
+  'custom logo with React router Link',
+  () => (
+    <BrowserRouter>
+      <TopNav company={
+        <NavLinkAnchor anchorType={Link} to={reactRouterLink}>
+          <TopNav.IconTitle
+            icon={<SearchIcon width="32px" />}
+          >
+            Custom Title
+          </TopNav.IconTitle>
+        </NavLinkAnchor>}
+      />
+    </BrowserRouter>
+  ),
+);
 
 examples.add('service title', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} />

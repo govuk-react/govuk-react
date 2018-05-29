@@ -32,7 +32,7 @@ LogoAnchor.defaultProps = {
 };
 
 LogoAnchor.propTypes = {
-  anchorType: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  anchorType: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
 };
 
 export default LogoAnchor;
