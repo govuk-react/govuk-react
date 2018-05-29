@@ -1,9 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { MemoryRouter } from 'react-router-dom';
 import { mount } from 'enzyme';
 
-import Paragraph from './';
 import LinkRenderer from './link-renderer';
 
 describe(LinkRenderer, () => {
