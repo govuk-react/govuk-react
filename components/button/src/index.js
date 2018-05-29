@@ -13,6 +13,7 @@ import { NTA_LIGHT, SPACING } from '@govuk-react/constants';
 import {
   BUTTON_COLOUR,
   BUTTON_COLOUR_DARKEN_15,
+  GREEN,
   WHITE,
   YELLOW,
 } from 'govuk-colours';
@@ -38,8 +39,15 @@ const StyledButton = styled('button')(
     textDecoration: 'none',
     WebkitAppearance: 'none',
     WebkitFontSmoothing: 'antialiased',
+    ':hover': {
+      backgroundColor: GREEN,
+    },
     ':focus': {
+      position: 'relative',
+      top: '2px',
+      backgroundColor: GREEN,
       outline: `3px solid ${YELLOW}`,
+      boxShadow: '0 0px 0',
     },
     // TODO: avoid cascade
     ' svg': {

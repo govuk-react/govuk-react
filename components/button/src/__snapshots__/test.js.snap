@@ -46,8 +46,16 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 15px;
 }
 
+.emotion-0:hover {
+  background-color: #006435;
+}
+
 .emotion-0:focus {
+  position: relative;
+  top: 2px;
+  background-color: #006435;
   outline: 3px solid #ffbf47;
+  box-shadow: 0 0px 0;
 }
 
 .emotion-0 svg {
@@ -126,8 +134,16 @@ exports[`button should render a disabled button: disabled button 1`] = `
   margin-bottom: 15px;
 }
 
+.emotion-0:hover {
+  background-color: #006435;
+}
+
 .emotion-0:focus {
+  position: relative;
+  top: 2px;
+  background-color: #006435;
   outline: 3px solid #ffbf47;
+  box-shadow: 0 0px 0;
 }
 
 .emotion-0 svg {
