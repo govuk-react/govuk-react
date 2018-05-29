@@ -94,9 +94,11 @@ exports[`Radio disabled: disabled 1`] = `
   <Radio
     className="emotion-3"
     disabled={true}
+    inline={false}
   >
     <Styled(label)
       className="emotion-3"
+      inline={false}
     >
       <label
         className="emotion-2"
@@ -218,7 +220,6 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
 >
   <Radio
     className="emotion-3"
-    disabled={false}
     inline={true}
     name="example"
   >
@@ -230,13 +231,11 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
         className="emotion-2"
       >
         <Styled(input)
-          disabled={false}
           name="example"
           type="radio"
         >
           <input
             className="emotion-0"
-            disabled={false}
             name="example"
             type="radio"
           />
@@ -347,23 +346,22 @@ exports[`Radio matches snapshot: standard mount 1`] = `
 >
   <Radio
     className="emotion-3"
-    disabled={false}
+    inline={false}
     name="example"
   >
     <Styled(label)
       className="emotion-3"
+      inline={false}
     >
       <label
         className="emotion-2"
       >
         <Styled(input)
-          disabled={false}
           name="example"
           type="radio"
         >
           <input
             className="emotion-0"
-            disabled={false}
             name="example"
             type="radio"
           />

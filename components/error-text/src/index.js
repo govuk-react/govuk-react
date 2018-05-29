@@ -30,11 +30,7 @@ const StyledError = styled('span')({
   paddingBottom: '2px',
 });
 
-const ErrorText = ({ children, ...props }) => (
-  <StyledError {...props}>
-    {children}
-  </StyledError>
-);
+const ErrorText = props => <StyledError {...props} />;
 
 ErrorText.propTypes = {
   children: PropTypes.node.isRequired,

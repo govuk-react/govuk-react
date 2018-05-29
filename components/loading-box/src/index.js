@@ -132,8 +132,8 @@ const LoadingBox = ({
   timeOut,
   ...props
 }) => (
-  <StyledContainer>
-    <CSSTransition {...props} timeout={timeOut} classNames="fade" in={loading} unmountOnExit>
+  <StyledContainer {...props}>
+    <CSSTransition timeout={timeOut} classNames="fade" in={loading} unmountOnExit>
       <Innerwrap
         backgroundColor={backgroundColor}
         backgroundColorOpacity={backgroundColorOpacity}

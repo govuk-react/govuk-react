@@ -43,31 +43,25 @@ const TextAreaField = styled('textarea')(
   }),
 );
 
-const TextArea = ({ className, ...props }) => (
-  <Label className={className} error={props.meta.touched && props.meta.error}>
-    <LabelText>{props.children}</LabelText>
-    {props.hint && <HintText>{props.hint}</HintText>}
-    {props.meta.touched &&
-      props.meta.error && <ErrorText>{props.meta.error}</ErrorText>}
-    <TextAreaField
-      type="text"
-      rows="5"
-      error={props.meta.touched && props.meta.error}
-      {...props.input}
-    />
+const TextArea = ({
+  children, hint, meta, ...input
+}) => (
+  <Label error={meta.touched && meta.error}>
+    <LabelText>{children}</LabelText>
+    { hint && <HintText>{hint}</HintText> }
+    { meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText> }
+    <TextAreaField type="text" rows="5" error={meta.touched && meta.error} {...input} />
   </Label>
 );
 
 TextArea.defaultProps = {
   hint: undefined,
-  className: undefined,
   input: {},
   meta: {},
 };
 
 TextArea.propTypes = {
   hint: PropTypes.string,
-  className: PropTypes.string,
   input: PropTypes.shape({
     name: PropTypes.string,
     onBlur: PropTypes.func,

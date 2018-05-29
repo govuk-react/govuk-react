@@ -16,7 +16,7 @@ const StyledRow = styled('div')({
   },
 });
 
-const GridRow = ({ children }) => <StyledRow>{children}</StyledRow>;
+const GridRow = props => <StyledRow {...props} />;
 
 GridRow.propTypes = {
   children: PropTypes.node.isRequired,

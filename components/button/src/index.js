@@ -62,23 +62,20 @@ const StyledButton = styled('button')(
 const Button = ({
   children,
   icon,
-  className,
   ...props
 }) => (
-  <StyledButton icon={icon} className={className} {...props}>
+  <StyledButton {...props} icon={icon}>
     {children}
     {icon}
   </StyledButton>
 );
 
 Button.propTypes = {
-  className: PropTypes.string,
   children: PropTypes.node,
   icon: PropTypes.node,
 };
 
 Button.defaultProps = {
-  className: undefined,
   children: 'Button',
   icon: undefined,
 };
