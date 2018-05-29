@@ -40,14 +40,20 @@ const StyledButton = styled('button')(
     WebkitAppearance: 'none',
     WebkitFontSmoothing: 'antialiased',
     ':hover': {
-      backgroundColor: GREEN,
+      backgroundColor: '#00692f',
+      color: WHITE,
     },
     ':focus': {
+      color: WHITE,
+      backgroundColor: '#00692f',
+      outline: `3px solid ${YELLOW}`,
+    },
+    ':active': {
       position: 'relative',
       top: '2px',
-      backgroundColor: GREEN,
-      outline: `3px solid ${YELLOW}`,
-      boxShadow: '0 0px 0',
+      boxShadow: `0 0 0 ${BUTTON_COLOUR}`,
+      WebkitBoxShadow: `0 0 0 ${BUTTON_COLOUR}`,
+      MozBoxShadow: `0 0 0 ${BUTTON_COLOUR}`,
     },
     // TODO: avoid cascade
     ' svg': {
