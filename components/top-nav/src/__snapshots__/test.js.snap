@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TopNav matches snapshot: enzyme.mount 1`] = `
+exports[`TopNav matches the <TopNav> with a <LogoAnchor> tag snapshot: enzyme.mount 1`] = `
 .emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -136,6 +136,666 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   }
 }
 
+.emotion-6 {
+  display: none;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+  width: 100%;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 30px;
+    width: auto;
+  }
+}
+
+.emotion-5 {
+  -webkit-flex: 1 0 50%;
+  -ms-flex: 1 0 50%;
+  flex: 1 0 50%;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+  border-bottom: 1px solid #2e3133;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    border-bottom: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: auto;
+    padding-right: 15px;
+  }
+}
+
+.emotion-4 {
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  border-bottom: 1px solid transparent;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.emotion-4:hover {
+  border-bottom-color: #ffffff;
+}
+
+.emotion-4:focus {
+  color: #0b0c0c;
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-4:visited {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+.emotion-10 {
+  border-bottom: 10px solid #005ea5;
+  max-width: 960px;
+  margin: 0 auto;
+  width: calc(100% - 15px);
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-10 {
+    width: calc(100% - 60px);
+  }
+}
+
+<TopNav
+  bgColor="#0b0c0c"
+  color="#ffffff"
+  search={false}
+>
+  <Styled(div)
+    bgColor="#0b0c0c"
+    color="#ffffff"
+  >
+    <div
+      className="emotion-9"
+      color="#ffffff"
+    >
+      <Styled(div)>
+        <div
+          className="emotion-8"
+        >
+          <Styled(div)>
+            <div
+              className="emotion-1"
+            >
+              <Styled(div)>
+                <div
+                  className="emotion-0"
+                />
+              </Styled(div)>
+            </div>
+          </Styled(div)>
+          <Styled(div)>
+            <div
+              className="emotion-7"
+            >
+              <MenuButton
+                title="Menu"
+              >
+                <Styled(label)
+                  htmlFor="govuk-react-menu-button"
+                >
+                  <label
+                    className="emotion-2"
+                    htmlFor="govuk-react-menu-button"
+                  >
+                    Menu
+                     
+                    <span>
+                      ›
+                    </span>
+                  </label>
+                </Styled(label)>
+                <Styled(input)
+                  id="govuk-react-menu-button"
+                  type="checkbox"
+                >
+                  <input
+                    className="emotion-3"
+                    id="govuk-react-menu-button"
+                    type="checkbox"
+                  />
+                </Styled(input)>
+              </MenuButton>
+              <Styled(ul)>
+                <ul
+                  className="emotion-6"
+                >
+                  <Styled(li)>
+                    <li
+                      className="emotion-5"
+                    >
+                      <LogoAnchor
+                        anchorType="a"
+                        href="/logo-link"
+                      >
+                        <Styled(a)
+                          href="/logo-link"
+                        >
+                          <a
+                            className="emotion-4"
+                            href="/logo-link"
+                          >
+                            Logo link
+                          </a>
+                        </Styled(a)>
+                      </LogoAnchor>
+                    </li>
+                  </Styled(li)>
+                </ul>
+              </Styled(ul)>
+            </div>
+          </Styled(div)>
+        </div>
+      </Styled(div)>
+    </div>
+  </Styled(div)>
+  <Styled(div)>
+    <div
+      className="emotion-10"
+    />
+  </Styled(div)>
+</TopNav>
+`;
+
+exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme.mount 1`] = `
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #0b0c0c;
+  color: #ffffff;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1428571429;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-9 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: calc(100% - 15px);
+  max-width: 960px;
+  padding: 8px 15px;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    padding: 8px 0;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: calc(100% - 60px);
+  }
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    display: block;
+    padding-right: 15px;
+    width: 33.33%;
+  }
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 800;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  font-size: 30px;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    width: 66.66%;
+    padding-left: 15px;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-2 {
+    display: none;
+  }
+}
+
+.emotion-3 {
+  position: absolute;
+  top: -999em;
+}
+
+.emotion-3:checked + ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    display: none;
+  }
+}
+
+.emotion-6 {
+  display: none;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+  width: 100%;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 30px;
+    width: auto;
+  }
+}
+
+.emotion-5 {
+  -webkit-flex: 1 0 50%;
+  -ms-flex: 1 0 50%;
+  flex: 1 0 50%;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+  border-bottom: 1px solid #2e3133;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    border-bottom: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: auto;
+    padding-right: 15px;
+  }
+}
+
+.emotion-10 {
+  border-bottom: 10px solid #005ea5;
+  max-width: 960px;
+  margin: 0 auto;
+  width: calc(100% - 15px);
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-10 {
+    width: calc(100% - 60px);
+  }
+}
+
+.emotion-4 {
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  border-bottom: 1px solid transparent;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.emotion-4:hover {
+  border-bottom-color: #ffffff;
+}
+
+.emotion-4:focus {
+  color: #0b0c0c;
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-4:focus:hover {
+  border-bottom-color: #0b0c0c;
+}
+
+<TopNav
+  bgColor="#0b0c0c"
+  color="#ffffff"
+  search={false}
+>
+  <Styled(div)
+    bgColor="#0b0c0c"
+    color="#ffffff"
+  >
+    <div
+      className="emotion-9"
+      color="#ffffff"
+    >
+      <Styled(div)>
+        <div
+          className="emotion-8"
+        >
+          <Styled(div)>
+            <div
+              className="emotion-1"
+            >
+              <Styled(div)>
+                <div
+                  className="emotion-0"
+                />
+              </Styled(div)>
+            </div>
+          </Styled(div)>
+          <Styled(div)>
+            <div
+              className="emotion-7"
+            >
+              <MenuButton
+                title="Menu"
+              >
+                <Styled(label)
+                  htmlFor="govuk-react-menu-button"
+                >
+                  <label
+                    className="emotion-2"
+                    htmlFor="govuk-react-menu-button"
+                  >
+                    Menu
+                     
+                    <span>
+                      ›
+                    </span>
+                  </label>
+                </Styled(label)>
+                <Styled(input)
+                  id="govuk-react-menu-button"
+                  type="checkbox"
+                >
+                  <input
+                    className="emotion-3"
+                    id="govuk-react-menu-button"
+                    type="checkbox"
+                  />
+                </Styled(input)>
+              </MenuButton>
+              <Styled(ul)>
+                <ul
+                  className="emotion-6"
+                >
+                  <Styled(li)>
+                    <li
+                      className="emotion-5"
+                    >
+                      <NavLinkAnchor
+                        anchorType="a"
+                        href="/nav-link"
+                      >
+                        <Styled(a)
+                          href="/nav-link"
+                        >
+                          <a
+                            className="emotion-4"
+                            href="/nav-link"
+                          >
+                            Nav link
+                          </a>
+                        </Styled(a)>
+                      </NavLinkAnchor>
+                    </li>
+                  </Styled(li)>
+                </ul>
+              </Styled(ul)>
+            </div>
+          </Styled(div)>
+        </div>
+      </Styled(div)>
+    </div>
+  </Styled(div)>
+  <Styled(div)>
+    <div
+      className="emotion-10"
+    />
+  </Styled(div)>
+</TopNav>
+`;
+
+exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzyme.mount 1`] = `
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #0b0c0c;
+  color: #ffffff;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1428571429;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-9 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: calc(100% - 15px);
+  max-width: 960px;
+  padding: 8px 15px;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    padding: 8px 0;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: calc(100% - 60px);
+  }
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    display: block;
+    padding-right: 15px;
+    width: 33.33%;
+  }
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 800;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  font-size: 30px;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    width: 66.66%;
+    padding-left: 15px;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-2 {
+    display: none;
+  }
+}
+
+.emotion-3 {
+  position: absolute;
+  top: -999em;
+}
+
+.emotion-3:checked + ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    display: none;
+  }
+}
+
+.emotion-6 {
+  display: none;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+  width: 100%;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 30px;
+    width: auto;
+  }
+}
+
 .emotion-4 {
   -webkit-flex: 1 0 50%;
   -ms-flex: 1 0 50%;
@@ -168,28 +828,6 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
 @media only screen and (min-width:641px) {
   .emotion-10 {
     width: calc(100% - 60px);
-  }
-}
-
-.emotion-6 {
-  display: none;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  margin-top: 5px;
-  width: 100%;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-6 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    padding-top: 30px;
-    width: auto;
   }
 }
 
