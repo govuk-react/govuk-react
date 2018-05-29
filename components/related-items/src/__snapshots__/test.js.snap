@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-2 {
+.emotion-7 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-2 {
+  .emotion-7 {
     margin-bottom: 0;
   }
 }
@@ -50,7 +50,6 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   font-size: 18px;
   line-height: 1.2;
   margin-bottom: 15px;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
@@ -64,12 +63,6 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 @media print {
   .emotion-0 {
     font-size: 16px;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 0;
   }
 }
 
@@ -146,10 +139,10 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 
 <Styled(RelatedItems)>
   <RelatedItems
-    className="emotion-2"
+    className="emotion-7"
   >
     <Styled(div)
-      className="emotion-2"
+      className="emotion-7"
     >
       <div
         className="emotion-22"
@@ -182,11 +175,11 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
           listStyleType="none"
         >
           <UnorderedList
-            className="emotion-2"
+            className="emotion-7"
             listStyleType="none"
           >
             <Styled(ul)
-              className="emotion-2"
+              className="emotion-7"
               listStyleType="none"
             >
               <ul
@@ -194,10 +187,10 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
               >
                 <Styled(ListItem)>
                   <ListItem
-                    className="emotion-2"
+                    className="emotion-7"
                   >
                     <Styled(li)
-                      className="emotion-2"
+                      className="emotion-7"
                     >
                       <li
                         className="emotion-6"
@@ -223,10 +216,10 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
                 </Styled(ListItem)>
                 <Styled(ListItem)>
                   <ListItem
-                    className="emotion-2"
+                    className="emotion-7"
                   >
                     <Styled(li)
-                      className="emotion-2"
+                      className="emotion-7"
                     >
                       <li
                         className="emotion-6"
@@ -252,10 +245,10 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
                 </Styled(ListItem)>
                 <Styled(ListItem)>
                   <ListItem
-                    className="emotion-2"
+                    className="emotion-7"
                   >
                     <Styled(li)
-                      className="emotion-2"
+                      className="emotion-7"
                     >
                       <li
                         className="emotion-6"

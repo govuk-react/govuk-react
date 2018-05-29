@@ -49,6 +49,6 @@ Header.propTypes = {
   size: PropTypes.oneOf(Object.keys(FONT_SIZES)),
 };
 
-export default withWhiteSpace({ marginBottom: 0 })(Header);
+export default withWhiteSpace()(Header);
 
 export { H1, H2, H3, H4, H5, H6 } from './presets';

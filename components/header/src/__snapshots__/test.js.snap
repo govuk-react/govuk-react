@@ -1,16 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-2 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-2 {
-    margin-bottom: 0;
-  }
-}
-
 .emotion-0 {
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
@@ -18,7 +8,6 @@ exports[`Header matches wrapper snapshot: wrapper mount 1`] = `
   font-size: 32px;
   line-height: 1.09375;
   margin-bottom: 20px;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
@@ -32,12 +21,6 @@ exports[`Header matches wrapper snapshot: wrapper mount 1`] = `
 @media print {
   .emotion-0 {
     font-size: 18px;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 0;
   }
 }
 
