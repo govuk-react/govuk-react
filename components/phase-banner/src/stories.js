@@ -9,9 +9,9 @@ import ReadMe from '../README.md';
 const AnchorLink = asAnchor('a');
 
 const stories = storiesOf('Misc/PhaseBanner', module);
-const examples = storiesOf('Typography/Paragraph/Examples', module);
+const examples = storiesOf('Misc/PhaseBanner/Examples', module);
 
-examples.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Alpha phase tag', () => (
   <PhaseBanner level="alpha">

@@ -8,6 +8,8 @@ import ReadMe from '../README.md';
 const stories = storiesOf('Misc/Panel', module);
 const examples = storiesOf('Misc/Panel/Examples', module);
 
+stories.addDecorator(WithDocsCustom(ReadMe));
+
 stories.add('Panel with header only', () => (
   <Panel panelTitle="Application complete" />
 ));
