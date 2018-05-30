@@ -60,9 +60,7 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
 .emotion-0:active {
   position: relative;
   top: 2px;
-  box-shadow: 0 0 0 #00823b;
-  -webkit-box-shadow: 0 0 0 #00823b;
-  -moz-box-shadow: 0 0 0 #00823b;
+  box-shadow: 0 0 0 #003618;
 }
 
 .emotion-0:visited {
@@ -159,9 +157,7 @@ exports[`button should render a disabled button: disabled button 1`] = `
 .emotion-0:active {
   position: relative;
   top: 2px;
-  box-shadow: 0 0 0 #00823b;
-  -webkit-box-shadow: 0 0 0 #00823b;
-  -moz-box-shadow: 0 0 0 #00823b;
+  box-shadow: 0 0 0 #003618;
 }
 
 .emotion-0:visited {
