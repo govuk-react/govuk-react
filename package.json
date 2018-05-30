@@ -92,6 +92,7 @@
     "@govuk-react/images": "*",
     "@govuk-react/input": "*",
     "@govuk-react/input-field": "*",
+    "@govuk-react/inset-text": "*",
     "@govuk-react/label": "*",
     "@govuk-react/label-text": "*",
     "@govuk-react/layout": "*",

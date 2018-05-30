@@ -11,10 +11,13 @@ import {
 } from '@govuk-react/constants';
 import RouterLink from './link-renderer';
 
-const StyledParagraph = styled('div')(
+const StyledParagraph = styled(ReactMarkdown)(
   {
     fontFamily: NTA_LIGHT,
-    marginTop: 0,
+    margin: 0,
+    '> p': {
+      margin: 0,
+    },
   },
   ({ supportingText }) => ({
     fontSize: supportingText ? FONT_SIZE.SIZE_14 : FONT_SIZE.SIZE_16,
@@ -51,15 +54,14 @@ const StyledParagraph = styled('div')(
  *
  */
 const Paragraph = ({ children, ...rest }) => (
-  <StyledParagraph {...rest}>
-    <ReactMarkdown
-      source={children}
-      escapeHtml={false}
-      skipHtml
-      allowedTypes={['paragraph', 'emphasis', 'strong', 'link']}
-      renderers={{ link: RouterLink }}
-    />
-  </StyledParagraph>
+  <StyledParagraph
+    source={children}
+    escapeHtml={false}
+    skipHtml
+    allowedTypes={['paragraph', 'emphasis', 'strong', 'link']}
+    renderers={{ link: RouterLink }}
+    {...rest}
+  />
 );
 
 Paragraph.propTypes = {
