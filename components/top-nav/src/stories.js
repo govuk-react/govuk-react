@@ -35,6 +35,24 @@ const Search = (
   <SearchBox placeholder="Search">hi</SearchBox>
 );
 
+const CompanyLink = (
+  <LogoAnchor anchorType={Link} to={reactRouterLink}>
+    <TopNav.IconTitle
+      icon={<CrownIcon width="36" height="32" />}
+    >
+      GOV.UK
+    </TopNav.IconTitle>
+  </LogoAnchor>
+);
+
+const ServiceTitleLink = (
+  <NavLinkAnchor anchorType={Link} to={reactRouterLink}>
+    <Header level={3}>
+      Service Title
+    </Header>
+  </NavLinkAnchor>
+);
+
 storiesOf('TopNav', module).add('default', () => (
   <TopNav company={Company} />
 ));
@@ -52,18 +70,10 @@ storiesOf('TopNav', module).add('custom logo', () => (
 ));
 
 storiesOf('TopNav', module).add(
-  'custom logo with React router Link',
+  'Logo and service title with React router <Link>',
   () => (
     <BrowserRouter>
-      <TopNav company={
-        <NavLinkAnchor anchorType={Link} to={reactRouterLink}>
-          <TopNav.IconTitle
-            icon={<SearchIcon width="32px" />}
-          >
-            Custom Title
-          </TopNav.IconTitle>
-        </NavLinkAnchor>}
-      />
+      <TopNav company={CompanyLink} serviceTitle={ServiceTitleLink} />
     </BrowserRouter>
   ),
 );
