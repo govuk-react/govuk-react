@@ -16,11 +16,11 @@ describe('inset text', () => {
 
   it('should render the InsetText component', () => {
     const output = shallow(<InsetText />);
+    expect(output.find('p')).toBeTruthy();
   });
 
   it("should render the expected text within a 'p' tag", () => {
     const output = mount(<InsetText />);
-    expect(output.find('p')).toBeTruthy();
     expect(output.find('p').text()).toEqual(insetText);
   });
 
@@ -30,6 +30,7 @@ describe('inset text', () => {
 
   it('should render the InsetText component with isNarrow attribute', () => {
     const output = shallow(<InsetTextNarrowBorder />);
+    expect(output.find('p')).toBeTruthy();
   });
 
   it('should have an isNarrow prop set to true', () => {
@@ -38,7 +39,6 @@ describe('inset text', () => {
 
   it("should render the expected text within a 'p' tag", () => {
     const output = mount(<InsetTextNarrowBorder />);
-    expect(output.find('p')).toBeTruthy();
     expect(output.find('p').text()).toEqual(insetText);
   });
 
