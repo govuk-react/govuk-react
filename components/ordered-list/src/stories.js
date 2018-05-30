@@ -1,12 +1,17 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 import ListItem from '@govuk-react/list-item';
 
 import OrderedList from '.';
+import ReadMe from '../README.md';
 
 const stories = storiesOf('Typography/OrderedList', module);
+const examples = storiesOf('Typography/OrderedList/Examples', module);
 
-stories.add('OrderedList default', () => (
+stories.addDecorator(WithDocsCustom(ReadMe));
+
+examples.add('OrderedList default', () => (
   <OrderedList>
     <ListItem>Lorem ipsum dolor sit.</ListItem>
     <ListItem>Consectetur adipiscing elit.</ListItem>
@@ -14,7 +19,7 @@ stories.add('OrderedList default', () => (
   </OrderedList>
 ));
 
-stories.add('OrderedList with alpha', () => (
+examples.add('OrderedList with alpha', () => (
   <OrderedList listStyleType="lower-alpha">
     <ListItem>Cras nec quam ut lorem.</ListItem>
     <ListItem>Curabitur porta elit ut ante vehicula.</ListItem>
@@ -22,7 +27,7 @@ stories.add('OrderedList with alpha', () => (
   </OrderedList>
 ));
 
-stories.add('OrderedList with roman', () => (
+examples.add('OrderedList with roman', () => (
   <OrderedList listStyleType="lower-roman">
     <ListItem>In nisi lectus, mollis sed neque.</ListItem>
     <ListItem>Pellentesque habitant morbi tristique senectus et netus et malesuada.</ListItem>
@@ -32,7 +37,7 @@ stories.add('OrderedList with roman', () => (
   </OrderedList>
 ));
 
-stories.add(
+examples.add(
   'OrderedList with no decoration',
   () => (
     <OrderedList listStyleType="none">

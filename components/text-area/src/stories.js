@@ -1,7 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
 import TextArea from '.';
+import ReadMe from '../README.md';
 
 const meta = {
   touched: true,
@@ -9,6 +11,8 @@ const meta = {
 };
 
 const stories = storiesOf('Form/Textarea', module);
+
+stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Textarea', () => (
   <TextArea name="group1">Description of what you saw</TextArea>

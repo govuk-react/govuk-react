@@ -1,10 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
 import Table from '.';
 import CellHeader from './atoms/CellHeader';
 import Cell from './atoms/Cell';
 import Row from './atoms/Row';
+import ReadMe from '../README.md';
 
 const example1Body = (
   <React.Fragment>
@@ -61,11 +63,14 @@ const example2Body = (
 );
 
 const stories = storiesOf('Data/Table', module);
+const examples = storiesOf('Data/Table/Examples', module);
 
-stories.add('default', () => (
+stories.addDecorator(WithDocsCustom(ReadMe));
+
+stories.add('Component default', () => (
   <Table caption="Dates and amounts" body={example1Body} />
 ));
 
-stories.add('Numeric tabular data', () => (
+examples.add('Numeric tabular data', () => (
   <Table caption="Attention, I am the caption of this ship!" head={example2Head} body={example2Body} />
 ));

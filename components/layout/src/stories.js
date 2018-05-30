@@ -2,9 +2,15 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import GridRow from '@govuk-react/grid-row';
 import GridCol from '@govuk-react/grid-col';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
+
 import Layout from '.';
+import ReadMe from '../README.md';
 
 const stories = storiesOf('Layout/LayoutComponent', module);
+const examples = storiesOf('Layout/LayoutComponent/Examples', module);
+
+stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Column Full', () => (
   <Layout>

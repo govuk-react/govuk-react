@@ -8,15 +8,21 @@ import LabelText from '@govuk-react/label-text';
 import Radio from '@govuk-react/radio';
 import PhaseBanner from '@govuk-react/phase-banner';
 import { asAnchor } from '@govuk-react/hoc';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
 import LoadingBox from '.';
+import ReadMe from '../README.md';
 
 const stories = storiesOf('Misc/LoadingBox', module);
+const examples = storiesOf('Misc/LoadingBox/Examples', module);
+
+stories.addDecorator(WithDocsCustom(ReadMe));
+
 const AnchorLink = asAnchor('a');
 const spacer = <p style={{ marginTop: 0 }}>&nbsp;</p>;
 stories.addDecorator(withKnobs);
 
-stories.add('default', () => (
+stories.add('Component default', () => (
   <LoadingBox
     loading={boolean('loading', false)}
     backgroundColor={text('backgroundColor', '#fff')}
@@ -44,7 +50,7 @@ stories.add('default', () => (
   </LoadingBox>
 ));
 
-stories.add('preset to loading', () => (
+examples.add('preset to loading', () => (
   <LoadingBox
     loading={boolean('loading', true)}
     backgroundColor={text('backgroundColor', '#fff')}
@@ -71,7 +77,7 @@ stories.add('preset to loading', () => (
   </LoadingBox>
 ));
 
-stories.add('LoadingBox (long)', () => (
+examples.add('LoadingBox (long)', () => (
   <LoadingBox
     loading={boolean('loading', false)}
     backgroundColor={text('backgroundColor', '#fff')}
@@ -121,13 +127,13 @@ stories.add('LoadingBox (long)', () => (
   </LoadingBox>
 ));
 
-stories.add('with children that have short height (minHeight 100px)', () => (
+examples.add('with children that have short height (minHeight 100px)', () => (
   <LoadingBox loading>
     Lorem ipsum dolor sit amet
   </LoadingBox>
 ));
 
-stories.add('with bolded texts', () => (
+examples.add('with bolded texts', () => (
   <LoadingBox loading>
     <H1>Lorem ipsum dolor sit amet</H1>
     <H2>Consectetur adipisicing elit. Quia incidunt, earum molestiae omnis labore adipisci.</H2>

@@ -1,7 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
+
 import LabelText from '@govuk-react/label-text';
 import Select, { SelectInput } from '.';
+import ReadMe from '../README.md';
 
 const meta = {
   touched: true,
@@ -9,6 +12,9 @@ const meta = {
 };
 
 const stories = storiesOf('Form/Select', module);
+const examples = storiesOf('Form/Select/Examples', module);
+
+stories.addDecorator(WithDocsCustom(ReadMe));
 
 // TODO add a synthetic onChange event
 stories.add('Component default', () => (
@@ -19,7 +25,7 @@ stories.add('Component default', () => (
   </Select>
 ));
 
-stories.add('Select with hintText', () => (
+examples.add('Select with hintText', () => (
   <Select
     name="group1"
     label="This is a label"
@@ -33,7 +39,7 @@ stories.add('Select with hintText', () => (
   </Select>
 ));
 
-stories.add('Select with hintText & error', () => (
+examples.add('Select with hintText & error', () => (
   <Select
     name="group1"
     label="This is a label"
@@ -48,7 +54,7 @@ stories.add('Select with hintText & error', () => (
   </Select>
 ));
 
-stories.add('Standalone input with inline label', () => (
+examples.add('Standalone input with inline label', () => (
   <label>
     <LabelText>Sort by:&nbsp;
       <SelectInput>
