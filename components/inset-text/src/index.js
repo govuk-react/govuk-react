@@ -27,4 +27,8 @@ InsetText.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
+/** Component is not exported withWhitespace because StyledInsetText is based on a Paragraph,
+ *  which is also exported withWhitespace and therefore takes precedence.
+ * 'mb' is used as a prop instead to override this functionality.
+ */
 export default InsetText;

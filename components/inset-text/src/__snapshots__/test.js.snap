@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`inset text matches wrapperInsetText snapshot: wrapperInsetText mount 1`] = `
+exports[`inset text matches the InsetText snapshot: inset text 1`] = `
 .emotion-2 {
   margin-bottom: 15px;
   box-sizing: border-box;
@@ -121,7 +121,7 @@ exports[`inset text matches wrapperInsetText snapshot: wrapperInsetText mount 1`
 </_default>
 `;
 
-exports[`inset text matches wrapperInsetTextNarrowBorder snapshot: inset text narrow border 1`] = `
+exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narrow border 1`] = `
 .emotion-2 {
   margin-bottom: 15px;
   box-sizing: border-box;
