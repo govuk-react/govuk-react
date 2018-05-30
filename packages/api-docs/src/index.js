@@ -11,7 +11,6 @@ import { promisify } from 'util';
 import _ from 'lodash';
 
 import generateMarkdown from './markdown/generateMarkdown';
-import loadExample from './loadExample';
 
 const components = require('govuk-react');
 
