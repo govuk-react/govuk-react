@@ -15,7 +15,7 @@ const stories = storiesOf('Navigation/RelatedItems', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('RelatedItems', () => (
+stories.add('Component default', () => (
   <RelatedItems>
     <Header level={3}>Travel abroad</Header>
     <UnorderedList listStyleType="none">

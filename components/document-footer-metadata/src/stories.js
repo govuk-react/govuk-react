@@ -45,7 +45,7 @@ const examples = storiesOf('Typography/Document Footer Metadata/Examples', modul
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('DFM From example', () => (
+stories.add('Component default', () => (
   <DocumentFooterMetadata
     from={fromData}
   />

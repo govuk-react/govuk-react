@@ -10,7 +10,7 @@ const stories = storiesOf('Layout/GridRow', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('GridRow', () => (
+stories.add('Component default', () => (
   <Layout>
     <GridRow>GridRow example. Please see Layout for visual examples</GridRow>
   </Layout>

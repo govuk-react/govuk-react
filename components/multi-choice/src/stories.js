@@ -10,7 +10,7 @@ const stories = storiesOf('Form/MultiChoice', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('MultiChoice', () => (
+stories.add('Component default', () => (
   <MultiChoice label="example">
     <Radio name="group1" inline>
       Yes

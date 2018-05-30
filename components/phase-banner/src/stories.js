@@ -13,7 +13,7 @@ const examples = storiesOf('Misc/PhaseBanner/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Alpha phase tag', () => (
+stories.add('Component default', () => (
   <PhaseBanner level="alpha">
     This part of GOV.UK is being rebuilt &#8211;{' '}
     <AnchorLink href="https://example.com">find out what that means</AnchorLink>

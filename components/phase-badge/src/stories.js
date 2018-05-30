@@ -9,6 +9,6 @@ const stories = storiesOf('Misc/PhaseBadge', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('PhaseBadge', () => (
+stories.add('Component default', () => (
   <PhaseBadge>beta</PhaseBadge>
 ));

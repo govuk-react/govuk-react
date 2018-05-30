@@ -12,7 +12,7 @@ const examples = storiesOf('Layout/LayoutComponent/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Column Full', () => (
+stories.add('Component default', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columFull>
@@ -22,7 +22,7 @@ stories.add('Column Full', () => (
   </Layout>
 ));
 
-stories.add('Column Halves', () => (
+examples.add('Column Halves', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnOneHalf>
@@ -35,7 +35,7 @@ stories.add('Column Halves', () => (
   </Layout>
 ));
 
-stories.add('Column Thirds', () => (
+examples.add('Column Thirds', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnOneThird>
@@ -51,7 +51,7 @@ stories.add('Column Thirds', () => (
   </Layout>
 ));
 
-stories.add('Column Two Thirds / One Third', () => (
+examples.add('Column Two Thirds / One Third', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnTwoThirds>
@@ -64,7 +64,7 @@ stories.add('Column Two Thirds / One Third', () => (
   </Layout>
 ));
 
-stories.add('Column One Third / Two Thirds', () => (
+examples.add('Column One Third / Two Thirds', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnOneThird>
@@ -77,7 +77,7 @@ stories.add('Column One Third / Two Thirds', () => (
   </Layout>
 ));
 
-stories.add('Quarters', () => (
+examples.add('Quarters', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnOneQuarter>
@@ -96,7 +96,7 @@ stories.add('Quarters', () => (
   </Layout>
 ));
 
-stories.add('Example layout', () => (
+examples.add('Example layout', () => (
   <Layout>
     <GridRow>
       <GridCol columFull>

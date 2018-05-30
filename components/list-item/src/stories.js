@@ -11,6 +11,6 @@ const stories = storiesOf('Typography/ListItem', module);
 stories.addDecorator(WithDocsCustom(ReadMe));
 stories.addDecorator(withKnobs);
 
-stories.add('ListItem', () => (
+stories.add('Component default', () => (
   <ListItem>{text('Children', 'List item example')}</ListItem>
 ));

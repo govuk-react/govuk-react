@@ -10,7 +10,7 @@ const examples = storiesOf('Form/Checkbox/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Checkbox', () => (
+stories.add('Component default', () => (
   <div>
     <Checkbox>Waste from animal carcasses</Checkbox>
     <Checkbox>Waste from mines or quarries</Checkbox>

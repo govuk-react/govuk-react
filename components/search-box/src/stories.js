@@ -13,7 +13,7 @@ const stories = storiesOf('Form/SearchBox', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('SearchBox', () => (
+stories.add('Component default', () => (
   <Layout>
     <GridRow>
       <GridCol>

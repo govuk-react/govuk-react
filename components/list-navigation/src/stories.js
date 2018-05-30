@@ -12,7 +12,7 @@ const stories = storiesOf('Navigation/ListNavigation', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('ListNavigation', () => (
+stories.add('Component default', () => (
   <ListNavigation listStyleType="square">
     <AnchorTag href="https://example.com/?=1">lorem dolor set cetra</AnchorTag>
     <AnchorTag href="https://example.com/?=2">

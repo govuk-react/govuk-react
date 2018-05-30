@@ -41,7 +41,7 @@ const examples = storiesOf('Page/TopNav/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('default', () => (
+stories.add('Component default', () => (
   <TopNav company={Company} />
 ));
 

@@ -11,7 +11,7 @@ const examples = storiesOf('Typography/OrderedList/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-examples.add('OrderedList default', () => (
+stories.add('Component default', () => (
   <OrderedList>
     <ListItem>Lorem ipsum dolor sit.</ListItem>
     <ListItem>Consectetur adipiscing elit.</ListItem>
