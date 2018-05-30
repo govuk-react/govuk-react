@@ -3,7 +3,7 @@ import { withKnobs } from '@storybook/addon-knobs/react';
 
 import Paragraph, { SupportingParagraph } from './fixtures';
 
-const stories = storiesOf('Paragraph', module);
+const stories = storiesOf('Typography/Paragraph', module);
 
 stories.addDecorator(withKnobs);
 
