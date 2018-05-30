@@ -10,7 +10,7 @@ import styled from 'react-emotion';
 
 import Paragraph from '@govuk-react/paragraph';
 
-import { SPACING_MAP, SPACING } from '@govuk-react/constants';
+import { SPACING } from '@govuk-react/constants';
 import { BORDER_COLOUR } from 'govuk-colours';
 
 const StyledInsetText = styled(Paragraph)(props => ({

@@ -1,11 +1,12 @@
-import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withKnobs } from '@storybook/addon-knobs/react';
 
-import InsetText from '.';
+import InsetText, { InsetTextNarrowBorder } from './fixtures';
 
-storiesOf('InsetText', module).add('InsetText', () => (
-  <InsetText>
-    It can take up to 8 weeks to register a lasting power of attorney
-    if there are no mistakes in the application.
-  </InsetText>
-));
+const stories = storiesOf('InsetText', module);
+
+stories.addDecorator(withKnobs);
+
+stories.add('Default wide border', InsetText);
+
+stories.add('Narrow border', InsetTextNarrowBorder);
