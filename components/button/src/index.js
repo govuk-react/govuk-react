@@ -13,9 +13,12 @@ import { NTA_LIGHT, SPACING } from '@govuk-react/constants';
 import {
   BUTTON_COLOUR,
   BUTTON_COLOUR_DARKEN_15,
+  GREEN,
   WHITE,
   YELLOW,
 } from 'govuk-colours';
+
+const BUTTON_COLOUR_DARKEN_5 = '#00692f'; // darken(#00823b, 5%)
 
 // TODO should be using constants for some of the below values
 const StyledButton = styled('button')(
@@ -38,8 +41,22 @@ const StyledButton = styled('button')(
     textDecoration: 'none',
     WebkitAppearance: 'none',
     WebkitFontSmoothing: 'antialiased',
+    ':hover': {
+      backgroundColor: BUTTON_COLOUR_DARKEN_5,
+      color: WHITE,
+    },
     ':focus': {
+      color: WHITE,
+      backgroundColor: BUTTON_COLOUR_DARKEN_5,
       outline: `3px solid ${YELLOW}`,
+    },
+    ':active': {
+      position: 'relative',
+      top: '2px',
+      boxShadow: `0 0 0 ${BUTTON_COLOUR_DARKEN_15}`,
+    },
+    ':visited': {
+      color: BUTTON_COLOUR,
     },
     // TODO: avoid cascade
     ' svg': {
