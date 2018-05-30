@@ -21,9 +21,7 @@ const StyledInsetText = styled(Paragraph)(props => ({
   padding: SPACING.SCALE_3,
 }));
 
-const InsetText = ({ children, ...props }) => (
-  <StyledInsetText {...props} mb="3">{children}</StyledInsetText>
-);
+const InsetText = props => <StyledInsetText {...props} mb="3" />;
 
 InsetText.propTypes = {
   children: PropTypes.node.isRequired,
