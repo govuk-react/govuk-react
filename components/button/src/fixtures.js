@@ -5,6 +5,7 @@ import Button from '.';
 
 export default () => (
   <Button
+    mb="0"
     disabled={boolean('Disabled', false)}
     start={boolean('Start', false)}
   >
