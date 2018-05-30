@@ -57,7 +57,7 @@ async function generateApiForFile(file) {
 }
 
 function shouldDocumentComponent(file) {
-  // only document components that are exported from src/index.js
+  // only document components that are exported from packages/govuk-react/src/index.js
   const name = getComponentNameFromFile(file);
   return Object.prototype.hasOwnProperty.call(components, name);
 }
