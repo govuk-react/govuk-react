@@ -25,6 +25,11 @@ const InsetText = props => <StyledInsetText {...props} mb="3" />;
 
 InsetText.propTypes = {
   children: PropTypes.node.isRequired,
+  isNarrow: PropTypes.bool,
+};
+
+InsetText.defaultProps = {
+  isNarrow: false,
 };
 
 /** Component is not exported withWhitespace because StyledInsetText is based on a Paragraph,
