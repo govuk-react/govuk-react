@@ -4,8 +4,10 @@ import CrownIcon from '@govuk-react/icon-crown';
 import { Search as SearchIcon } from '@govuk-react/icons';
 import SearchBox from '@govuk-react/search-box';
 import Header from '@govuk-react/header';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
 import TopNav, { asAnchor } from '.';
+import ReadMe from '../README.md';
 
 const AnchorTag = asAnchor('a');
 const link = 'https://example.com?=1';
@@ -34,11 +36,16 @@ const Search = (
   <SearchBox placeholder="Search">hi</SearchBox>
 );
 
-storiesOf('TopNav', module).add('default', () => (
+const stories = storiesOf('Page/TopNav', module);
+const examples = storiesOf('Page/TopNav/Examples', module);
+
+stories.addDecorator(WithDocsCustom(ReadMe));
+
+stories.add('Component default', () => (
   <TopNav company={Company} />
 ));
 
-storiesOf('TopNav', module).add('custom logo', () => (
+examples.add('custom logo', () => (
   <TopNav company={
     <AnchorTag href={link} target="new">
       <TopNav.IconTitle
@@ -51,29 +58,29 @@ storiesOf('TopNav', module).add('custom logo', () => (
 ));
 
 
-storiesOf('TopNav', module).add('service title', () => (
+examples.add('service title', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} />
 ));
 
-storiesOf('TopNav', module).add('search', () => (
+examples.add('search', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} />
 ));
 
-storiesOf('TopNav', module).add('children', () => (
+examples.add('children', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} active={0}>
     <AnchorTag href="https://example.com?q=catdog">Navigation item #1</AnchorTag>
     <AnchorTag href="https://example.com?q=dogcat">Navigation item #2</AnchorTag>
   </TopNav>
 ));
 
-storiesOf('TopNav', module).add('everything but serviceTitle', () => (
+examples.add('everything but serviceTitle', () => (
   <TopNav company={Company} search={Search} active={0}>
     <AnchorTag href="https://example.com?q=catdog">Navigation item #1</AnchorTag>
     <AnchorTag href="https://example.com?q=dogcat">Navigation item #2</AnchorTag>
   </TopNav>
 ));
 
-storiesOf('TopNav', module).add('everything', () => (
+examples.add('everything', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
     <AnchorTag href="https://example.com?q=catdog" target="new">Navigation item #1</AnchorTag>
     <AnchorTag href="https://example.com?q=dogcat" target="new">Navigation item #2</AnchorTag>
@@ -81,7 +88,7 @@ storiesOf('TopNav', module).add('everything', () => (
 ));
 
 
-storiesOf('TopNav', module).add('everything with 9 nav items', () => (
+examples.add('everything with 9 nav items', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
     <AnchorTag href="https://example.com?q=catdog" target="new">Navigation item</AnchorTag>
     <AnchorTag href="https://example.com?q=dogcat" target="new">Navigation item</AnchorTag>

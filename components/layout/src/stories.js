@@ -2,9 +2,17 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import GridRow from '@govuk-react/grid-row';
 import GridCol from '@govuk-react/grid-col';
-import Layout from '.';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-storiesOf('Layout', module).add('Column Full', () => (
+import Layout from '.';
+import ReadMe from '../README.md';
+
+const stories = storiesOf('Layout/LayoutComponent', module);
+const examples = storiesOf('Layout/LayoutComponent/Examples', module);
+
+stories.addDecorator(WithDocsCustom(ReadMe));
+
+stories.add('Component default', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columFull>
@@ -14,7 +22,7 @@ storiesOf('Layout', module).add('Column Full', () => (
   </Layout>
 ));
 
-storiesOf('Layout', module).add('Column Halves', () => (
+examples.add('Column Halves', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnOneHalf>
@@ -27,7 +35,7 @@ storiesOf('Layout', module).add('Column Halves', () => (
   </Layout>
 ));
 
-storiesOf('Layout', module).add('Column Thirds', () => (
+examples.add('Column Thirds', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnOneThird>
@@ -43,7 +51,7 @@ storiesOf('Layout', module).add('Column Thirds', () => (
   </Layout>
 ));
 
-storiesOf('Layout', module).add('Column Two Thirds / One Third', () => (
+examples.add('Column Two Thirds / One Third', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnTwoThirds>
@@ -56,7 +64,7 @@ storiesOf('Layout', module).add('Column Two Thirds / One Third', () => (
   </Layout>
 ));
 
-storiesOf('Layout', module).add('Column One Third / Two Thirds', () => (
+examples.add('Column One Third / Two Thirds', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnOneThird>
@@ -69,7 +77,7 @@ storiesOf('Layout', module).add('Column One Third / Two Thirds', () => (
   </Layout>
 ));
 
-storiesOf('Layout', module).add('Quarters', () => (
+examples.add('Quarters', () => (
   <Layout>
     <GridRow>
       <GridCol hideContent columnOneQuarter>
@@ -88,7 +96,7 @@ storiesOf('Layout', module).add('Quarters', () => (
   </Layout>
 ));
 
-storiesOf('Layout', module).add('Example layout', () => (
+examples.add('Example layout', () => (
   <Layout>
     <GridRow>
       <GridCol columFull>

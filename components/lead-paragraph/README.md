@@ -1,9 +1,9 @@
-PhaseBadge
-==========
+LeadParagraph
+=============
 
 ### Import
 ```js
-  import PhaseBadge from '@govuk-react/phase-badge';
+  import LeadParagraph from '@govuk-react/lead-paragraph';
 ```
 <!-- STORY -->
 
@@ -12,6 +12,6 @@ PhaseBadge
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `className` |  | undefined | string | 
+ `children` | true |  | node | 
 
 

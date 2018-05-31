@@ -1,7 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import HintText from '.';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-storiesOf('HintText', module).add('Component default', () => (
+import HintText from '.';
+import ReadMe from '../README.md';
+
+const stories = storiesOf('Typography/HintText', module);
+stories.addDecorator(WithDocsCustom(ReadMe));
+
+stories.add('Component default', () => (
   <HintText hintText="example">Example</HintText>
 ));

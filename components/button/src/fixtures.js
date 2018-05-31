@@ -1,9 +1,17 @@
 import React from 'react';
-import { boolean } from '@storybook/addon-knobs/react';
+import { boolean, text } from '@storybook/addon-knobs/react';
 import { ButtonArrow } from '@govuk-react/icons';
 import Button from '.';
 
-export default () => <Button>Save and continue</Button>;
+export default () => (
+  <Button
+    mb="0"
+    disabled={boolean('Disabled', false)}
+    start={boolean('Start', false)}
+  >
+    {text('Children', 'Button')}
+  </Button>
+);
 
 export const ButtonStart = () => <Button start={boolean('Start', true)}>Save and continue</Button>;
 

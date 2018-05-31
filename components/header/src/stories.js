@@ -1,10 +1,27 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import Header, { H1, H2, H3, H4, H5, H6 } from '.';
+import { withKnobs, text, number } from '@storybook/addon-knobs/react';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-storiesOf('Header', module).add('default', () => <Header>Default</Header>);
-storiesOf('Header', module).add('Levels 1-6', () => (
+import Header, { H1, H2, H3, H4, H5, H6 } from '.';
+import ReadMe from '../README.md';
+
+const stories = storiesOf('Typography/Header', module);
+const examples = storiesOf('Typography/Header/Examples', module);
+const headingRanges = {
+  range: true,
+  min: 1,
+  max: 6,
+  step: 1,
+};
+
+stories.addDecorator(withKnobs);
+stories.addDecorator(WithDocsCustom(ReadMe));
+
+stories.add('Component default', () => (<Header level={number('level', 6, headingRanges)}>{text('Children', 'Heading text')}</Header>));
+
+examples.add('Levels 1-6', () => (
   <div>
     <Header level={1}>A 48px Bold heading</Header>
     <Header level={2}>A 36px Bold heading</Header>
@@ -14,7 +31,7 @@ storiesOf('Header', module).add('Levels 1-6', () => (
     <Header level={6}>h6</Header>
   </div>
 ));
-storiesOf('Header', module).add('Shortcuts 1-6', () => (
+examples.add('Shortcuts 1-6', () => (
   <div>
     <H1>h1</H1>
     <H2>h2</H2>
@@ -24,7 +41,7 @@ storiesOf('Header', module).add('Shortcuts 1-6', () => (
     <H6>h6</H6>
   </div>
 ));
-storiesOf('Header', module).add('Differing sizes', () => (
+examples.add('Differing sizes', () => (
   <div>
     <Header level={6} size="XXLARGE">
       h6 with XXLARGE style
@@ -35,7 +52,7 @@ storiesOf('Header', module).add('Differing sizes', () => (
     <H3 size="LARGE">h3 with size large</H3>
   </div>
 ));
-storiesOf('Header', module).add('Props pass through', () => (
+examples.add('Props pass through', () => (
   <div>
     <Header onClick={action('header-click')}>Click me</Header>
   </div>

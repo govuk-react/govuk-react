@@ -47,12 +47,16 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
 }
 
 <_default>
-  <InsetText>
+  <InsetText
+    isNarrow={false}
+  >
     <Styled(Paragraph)
+      isNarrow={false}
       mb="3"
     >
       <Paragraph
         className="emotion-2"
+        isNarrow={false}
         mb="3"
         supportingText={false}
       >
@@ -67,6 +71,7 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
           }
           className="emotion-2"
           escapeHtml={false}
+          isNarrow={false}
           mb="3"
           renderers={
             Object {
@@ -89,6 +94,7 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
             astPlugins={Array []}
             className="emotion-0"
             escapeHtml={false}
+            isNarrow={false}
             mb="3"
             plugins={Array []}
             rawSourcePos={false}

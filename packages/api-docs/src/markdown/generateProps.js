@@ -6,6 +6,7 @@ export default function generateProps(props) {
   }
 
   return (
+    '### Properties\n' +
     'Prop | Required | Default | Type | Description\n' +
     ':--- | :------- | :------ | :--- | :----------\n' +
     `${props &&

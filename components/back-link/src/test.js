@@ -7,7 +7,7 @@ import BackLink from './';
 
 describe('Back Link', () => {
   const onButtonClick = sinon.spy();
-  const wrapper = <BackLink goBack={onButtonClick}>example</BackLink>;
+  const wrapper = <BackLink onClick={onButtonClick}>example</BackLink>;
 
   it('renders without crashing', () => {
     const div = document.createElement('div');

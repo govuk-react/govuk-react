@@ -2,21 +2,28 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { BrowserRouter, Link } from 'react-router-dom';
 import { asAnchor } from '@govuk-react/hoc';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
 import Breadcrumb from '.';
+import ReadMe from '../README.md';
 
 const AnchorTag = asAnchor('a');
 const AnchorLink = asAnchor(Link);
 
 const crumbsWithDuffChildren = [];
 
-storiesOf('Breadcrumb', module).add('Component default', () => (
+const stories = storiesOf('Navigation/Breadcrumb', module);
+const examples = storiesOf('Navigation/Breadcrumb/Examples', module);
+
+stories.addDecorator(WithDocsCustom(ReadMe));
+
+stories.add('Component default', () => (
   <Breadcrumb>
     <AnchorTag href="/section">Section 1</AnchorTag>
   </Breadcrumb>
 ));
 
-storiesOf('Breadcrumb', module).add('Three levels deep', () => (
+examples.add('Three levels deep', () => (
   <Breadcrumb>
     <a href="/section">Section 1</a>
     <a href="/section/sub-section">Sub-section</a>
@@ -24,7 +31,7 @@ storiesOf('Breadcrumb', module).add('Three levels deep', () => (
   </Breadcrumb>
 ));
 
-storiesOf('Breadcrumb', module).add('Duff children', () => (
+examples.add('Duff children', () => (
   <Breadcrumb>
     <AnchorTag href="/section">Section 1</AnchorTag>
     {crumbsWithDuffChildren}
@@ -32,7 +39,7 @@ storiesOf('Breadcrumb', module).add('Duff children', () => (
   </Breadcrumb>
 ));
 
-storiesOf('Breadcrumb', module).add(
+examples.add(
   'Three levels deep using React Router Link',
   () => (
     <Breadcrumb>

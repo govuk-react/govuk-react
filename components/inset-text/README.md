@@ -1,9 +1,9 @@
-PhaseBadge
-==========
+InsetText
+=========
 
 ### Import
 ```js
-  import PhaseBadge from '@govuk-react/phase-badge';
+  import InsetText from '@govuk-react/inset-text';
 ```
 <!-- STORY -->
 
@@ -12,6 +12,6 @@ PhaseBadge
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `className` |  | undefined | string | 
+ `children` | true |  | node | 
 
 

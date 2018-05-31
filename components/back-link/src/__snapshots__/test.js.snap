@@ -67,11 +67,11 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <Styled(BackLink)
-  goBack={[Function]}
+  onClick={[Function]}
 >
   <BackLink
     className="emotion-1"
-    goBack={[Function]}
+    onClick={[Function]}
   >
     <Styled(button)
       className="emotion-1"

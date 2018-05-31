@@ -32,7 +32,7 @@ import UnorderedList from '@govuk-react/unordered-list';
 
 import withWhiteSpace from '.';
 
-const stories = storiesOf('withWhiteSpace', module);
+const stories = storiesOf('Utilities/withWhiteSpace', module);
 stories.addDecorator(withKnobs);
 
 const BackLinkWhiteSpace = withWhiteSpace({ marginBottom: 1 })(BackLink);

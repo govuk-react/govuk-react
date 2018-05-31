@@ -2,12 +2,12 @@
 
 exports[`button matches wrapper snapshot: wrapper mount 1`] = `
 .emotion-1 {
-  margin-bottom: 15px;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-1 {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 }
 
@@ -43,7 +43,7 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
   opacity: 1;
   pointer-events: auto;
   padding-right: .84211em;
-  margin-bottom: 15px;
+  margin-bottom: 0;
 }
 
 .emotion-0:hover {
@@ -74,22 +74,34 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 }
 
 <_default>
-  <Styled(Button)>
+  <Styled(Button)
+    disabled={false}
+    mb="0"
+    start={false}
+  >
     <Button
       className="emotion-1"
+      disabled={false}
+      mb="0"
+      start={false}
     >
       <Styled(button)
         className="emotion-1"
+        disabled={false}
+        mb="0"
+        start={false}
       >
         <button
           className="emotion-0"
+          disabled={false}
+          start={false}
         >
-          Save and continue
+          Button
         </button>
       </Styled(button)>
     </Button>
@@ -182,14 +194,17 @@ exports[`button should render a disabled button: disabled button 1`] = `
     <Button
       className="emotion-1"
       disabled={true}
+      start={false}
     >
       <Styled(button)
         className="emotion-1"
         disabled={true}
+        start={false}
       >
         <button
           className="emotion-0"
           disabled={true}
+          start={false}
         >
           Disabled primary button
         </button>

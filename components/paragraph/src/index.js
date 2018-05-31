@@ -31,6 +31,8 @@ const StyledParagraph = styled(ReactMarkdown)(
 
 /**
  *
+ * ### Usage
+ *
  * Supports bold, italic and links in Markdown ONLY.
  * This is to ensure we follow GDS as closely as possible.
  * It is worth noting that GDS recommends avoiding bold and italics.
@@ -45,10 +47,10 @@ const StyledParagraph = styled(ReactMarkdown)(
  * <Paragraph supportingText>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
  * ```
  *
- * References;
- * https://govuk-elements.herokuapp.com/typography/#typography-body-copy
+ * ### References
+ * - https://govuk-elements.herokuapp.com/typography/#typography-body-copy
  *
- * TODO;
+ * ### TODO
  * - Add test for supporting text
  * - Add test for rendering supported markdown components
  *

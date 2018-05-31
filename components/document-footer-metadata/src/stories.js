@@ -1,8 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { asAnchor } from '@govuk-react/hoc';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
 import DocumentFooterMetadata from '.';
+import ReadMe from '../README.md';
 
 const AnchorTag = asAnchor('a');
 
@@ -38,20 +40,25 @@ const otherData = [
   },
 ];
 
-storiesOf('Document Footer Metadata', module).add('DFM From example', () => (
+const stories = storiesOf('Typography/Document Footer Metadata', module);
+const examples = storiesOf('Typography/Document Footer Metadata/Examples', module);
+
+stories.addDecorator(WithDocsCustom(ReadMe));
+
+stories.add('Component default', () => (
   <DocumentFooterMetadata
     from={fromData}
   />
 ));
 
-storiesOf('Document Footer Metadata', module).add('DFM From & part of example', () => (
+examples.add('DFM From & part of example', () => (
   <DocumentFooterMetadata
     from={fromData}
     partOf={partOfData}
   />
 ));
 
-storiesOf('Document Footer Metadata', module).add('DFM From & other data example', () => (
+examples.add('DFM From & other data example', () => (
   <DocumentFooterMetadata
     from={fromData}
     other={otherData}

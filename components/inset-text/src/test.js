@@ -19,6 +19,10 @@ describe('inset text', () => {
     expect(output.find('p')).toBeTruthy();
   });
 
+  it('default to not have an isNarrow property or be false', () => {
+    expect(shallow(<InsetText />).dive().get(0).props.isNarrow).toBeFalsy();
+  });
+
   it("should render the expected text within a 'p' tag", () => {
     const output = mount(<InsetText />);
     expect(output.find('p').text()).toEqual(insetText);

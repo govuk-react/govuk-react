@@ -1,9 +1,15 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
 import GridCol from '.';
+import ReadMe from '../README.md';
 
-storiesOf('GridCol', module).add('GridCol', () => (
+const stories = storiesOf('Layout/GridCol', module);
+
+stories.addDecorator(WithDocsCustom(ReadMe));
+
+stories.add('Component default', () => (
   <GridCol columFull>
     <h2>full column</h2>
     <p>Please see Layout for visual examples</p>

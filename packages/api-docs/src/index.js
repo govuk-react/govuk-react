@@ -11,27 +11,29 @@ import { promisify } from 'util';
 import _ from 'lodash';
 
 import generateMarkdown from './markdown/generateMarkdown';
-import loadExample from './loadExample';
-import generateComponentImage from './generateComponentImage';
 
 const components = require('govuk-react');
 
-function getComponentNameFromFile(file) {
+function getComponentFolderName(file) {
   const dirs = path.dirname(file).split(path.sep);
   let dir = dirs[dirs.length - 1];
   if (dir === 'src' || dir === 'lib') {
     dir = dirs[dirs.length - 2];
   }
-  return _.chain(dir).camelCase().upperFirst().value();
+  return dir;
 }
 
-function getMarkdownForComponent(file, imagePath) {
+function getComponentNameFromFile(file) {
+  const folderName = getComponentFolderName(file);
+  return _.chain(folderName).camelCase().upperFirst().value();
+}
+
+function getMarkdownForComponent(file) {
   const src = fs.readFileSync(path.resolve(__dirname, file));
   const componentInfo = parse(src);
   const componentName = getComponentNameFromFile(file);
-  // if imagePath exists
-  const imageExists = fs.existsSync(imagePath);
-  return generateMarkdown(componentName, componentInfo, imageExists ? imagePath : undefined);
+  const componentFolderName = getComponentFolderName(file);
+  return generateMarkdown(componentName, componentFolderName, componentInfo);
 }
 
 function libPathToSrc(libPath, libFolder = '/lib/') {
@@ -43,12 +45,9 @@ function libPathToSrc(libPath, libFolder = '/lib/') {
 
 async function generateApiForFile(file) {
   try {
-    const Component = loadExample(file);
     const componentName = getComponentNameFromFile(file);
-    const imagePath = `./docs/${componentName}.png`;
-    await generateComponentImage(file, Component, imagePath);
     const src = libPathToSrc(file);
-    const md = getMarkdownForComponent(src, imagePath);
+    const md = getMarkdownForComponent(src);
     console.log(chalk.green('API Documented:'), componentName);
     return md;
   } catch (e) {
@@ -58,7 +57,7 @@ async function generateApiForFile(file) {
 }
 
 function shouldDocumentComponent(file) {
-  // only document components that are exported from src/index.js
+  // only document components that are exported from packages/govuk-react/src/index.js
   const name = getComponentNameFromFile(file);
   return Object.prototype.hasOwnProperty.call(components, name);
 }

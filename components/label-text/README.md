@@ -1,7 +1,17 @@
 LabelText
 =========
 
-![Component Image](./docs/LabelText.png)
+### Import
+```js
+  import LabelText from '@govuk-react/label-text';
+```
+<!-- STORY -->
 
+
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true |  | node | 
 
 

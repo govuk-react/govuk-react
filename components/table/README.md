@@ -1,9 +1,9 @@
-Label
+Table
 =====
 
 ### Import
 ```js
-  import Label from '@govuk-react/label';
+  import Table from '@govuk-react/table';
 ```
 <!-- STORY -->
 
@@ -12,6 +12,8 @@ Label
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `className` |  | undefined | string | 
+ `body` | true |  | node | 
+ `caption` |  | undefined | string | 
+ `head` |  | undefined | node | 
 
 

@@ -1,9 +1,15 @@
 Header
 ======
 
-![Component Image](./docs/Header.png)
+### Import
+```js
+  import Header from '@govuk-react/header';
+```
+<!-- STORY -->
 
 
+
+### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `level` |  | 1 | number | 

@@ -1,6 +1,9 @@
 {
   "name": "@govuk-react/breadcrumb",
   "version": "0.2.1",
+  "devDependencies": {
+    "@govuk-react/storybook-components": "^0.2.0"
+  },
   "dependencies": {
     "@govuk-react/constants": "^0.2.1",
     "@govuk-react/hoc": "^0.2.1",

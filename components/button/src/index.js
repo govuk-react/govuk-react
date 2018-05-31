@@ -13,7 +13,6 @@ import { NTA_LIGHT, SPACING } from '@govuk-react/constants';
 import {
   BUTTON_COLOUR,
   BUTTON_COLOUR_DARKEN_15,
-  GREEN,
   WHITE,
   YELLOW,
 } from 'govuk-colours';
@@ -75,29 +74,64 @@ const StyledButton = styled('button')(
   }),
 );
 
-// TODO: start and iconUrl props
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```js
+ * <Button>My button text</Button>
+ * ```
+ *
+ * With Icon
+ * ```js
+ * import { ButtonArrow } from '@govuk-react/icons';
+ *
+ * <Button icon={<ButtonArrow />}>My button text</Button>
+ * ```
+ *
+ * ### References:
+ * - https://govuk-elements.herokuapp.com/buttons/
+ * - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_buttons.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/button/_button.scss
+ * - https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_buttons.scss
+ *
+ */
 const Button = ({
   children,
   icon,
-  className,
   ...props
 }) => (
-  <StyledButton icon={icon} className={className} {...props}>
+  <StyledButton icon={icon} {...props}>
     {children}
     {icon}
   </StyledButton>
 );
 
 Button.propTypes = {
-  className: PropTypes.string,
+  /**
+   * Button text
+   */
   children: PropTypes.node,
+  /**
+   * Button icon
+   */
   icon: PropTypes.node,
+  /**
+   * Renders a large button if set to true
+   */
+  start: PropTypes.bool,
+  /**
+   * Renders a disabled button if set to true
+   */
+  disabled: PropTypes.bool,
 };
 
 Button.defaultProps = {
-  className: undefined,
   children: 'Button',
   icon: undefined,
+  disabled: false,
+  start: false,
 };
 
 export default withWhiteSpace({ marginBottom: 4 })(Button);

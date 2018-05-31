@@ -1,17 +1,25 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
+
 import FileUpload from '.';
+import ReadMe from '../README.md';
 
 const meta = {
   touched: true,
   error: 'Example',
 };
 
-storiesOf('FileUpload', module).add('Component default', () => (
+const stories = storiesOf('Form/FileUpload', module);
+const examples = storiesOf('Form/FileUpload/Examples', module);
+
+stories.addDecorator(WithDocsCustom(ReadMe));
+
+stories.add('Component default', () => (
   <FileUpload name="group0">Upload a document</FileUpload>
 ));
 
-storiesOf('FileUpload', module).add('Input with HintText', () => (
+examples.add('Input with HintText', () => (
   <FileUpload
     name="group1"
     acceptedFormats=".jpg, .png"
@@ -21,7 +29,7 @@ storiesOf('FileUpload', module).add('Input with HintText', () => (
   </FileUpload>
 ));
 
-storiesOf('FileUpload', module).add('Input with HintText & error', () => (
+examples.add('Input with HintText & error', () => (
   <FileUpload
     name="group1"
     acceptedFormats=".jpg, .png"

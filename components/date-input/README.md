@@ -1,13 +1,20 @@
 DateInput
 =========
 
-![Component Image](./docs/DateInput.png)
+### Import
+```js
+  import DateInput from '@govuk-react/date-input';
+```
+<!-- STORY -->
 
 
+
+### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true |  | node | 
- `errorText` |  | null | string | 
- `hintText` |  | null | string | 
+ `className` |  | undefined | string | 
+ `errorText` |  | undefined | string | 
+ `hintText` |  | undefined | string | 
 
 

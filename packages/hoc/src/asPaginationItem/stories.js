@@ -7,7 +7,9 @@ import asPaginationItem from '.';
 const PaginationTag = asPaginationItem('a');
 const PaginationLink = asPaginationItem(Link);
 
-storiesOf('asPaginationItem', module).add(
+const stories = storiesOf('Utilities/asPaginationItem', module);
+
+stories.add(
   'asPaginationItem passing in anchor',
   () => (
     <PaginationTag href="https://cats.org">
@@ -16,7 +18,7 @@ storiesOf('asPaginationItem', module).add(
   ),
 );
 
-storiesOf('asPaginationItem', module).add(
+stories.add(
   'asPaginationItem passing in anchor target=blank',
   () => (
     <PaginationTag href="https://cats.org" target="_blank">
@@ -25,7 +27,7 @@ storiesOf('asPaginationItem', module).add(
   ),
 );
 
-storiesOf('asPaginationItem', module).add(
+stories.add(
   'asPaginationItem passing in React Router Link',
   () => (
     <BrowserRouter>

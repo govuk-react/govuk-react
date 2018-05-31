@@ -1,13 +1,19 @@
 DocumentFooterMetadata
 ======================
 
-![Component Image](./docs/DocumentFooterMetadata.png)
+### Import
+```js
+  import DocumentFooterMetadata from '@govuk-react/document-footer-metadata';
+```
+<!-- STORY -->
 
 
+
+### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `from` |  | undefined | array | 
- `other` |  | undefined | array | 
- `partOf` |  | undefined | array | 
+ `from` |  | undefined | arrayOf[object Object] | 
+ `other` |  | undefined | arrayOf[object Object] | 
+ `partOf` |  | undefined | arrayOf[object Object] | 
 
 
