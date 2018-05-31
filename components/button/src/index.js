@@ -13,7 +13,6 @@ import { NTA_LIGHT, SPACING } from '@govuk-react/constants';
 import {
   BUTTON_COLOUR,
   BUTTON_COLOUR_DARKEN_15,
-  GREEN,
   WHITE,
   YELLOW,
 } from 'govuk-colours';
