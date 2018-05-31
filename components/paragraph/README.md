@@ -23,10 +23,10 @@ As supporting text
 <Paragraph supportingText>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
 ```
 
-### References;
+### References
 - https://govuk-elements.herokuapp.com/typography/#typography-body-copy
 
-### TODO;
+### TODO
 - Add test for supporting text
 - Add test for rendering supported markdown components
 
