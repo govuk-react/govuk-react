@@ -1,21 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styled matches snapshot: enzyme.mount 1`] = `
-.emotion-4 {
+.emotion-1 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-4 {
+  .emotion-1 {
     margin-bottom: 0;
   }
 }
 
 .emotion-0 {
   font-family: "nta",Arial,sans-serif;
+  margin-bottom: 0;
 }
 
-.emotion-3 {
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-7 {
+  font-family: "nta",Arial,sans-serif;
+}
+
+.emotion-4 {
   margin: 0;
   padding: 0;
   padding-left: 20px;
@@ -31,25 +42,25 @@ exports[`Styled matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-4 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-4 {
     margin-bottom: 0;
   }
 }
 
-.emotion-1 {
+.emotion-2 {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.25;
 }
 
-.emotion-1 > a {
+.emotion-2 > a {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -63,7 +74,7 @@ exports[`Styled matches snapshot: enzyme.mount 1`] = `
   }
 >
   <DocumentFooterMetadata
-    className="emotion-4"
+    className="emotion-1"
     partOf={
       Array [
         "example",
@@ -72,14 +83,16 @@ exports[`Styled matches snapshot: enzyme.mount 1`] = `
     }
   >
     <div>
-      <Styled(div)>
+      <Styled(div)
+        className="emotion-1"
+      >
         <div
           className="emotion-0"
         />
       </Styled(div)>
       <Styled(div)>
         <div
-          className="emotion-0"
+          className="emotion-7"
         >
           <div>
             <p
@@ -95,21 +108,21 @@ exports[`Styled matches snapshot: enzyme.mount 1`] = `
               listStyleType="none"
             >
               <UnorderedList
-                className="emotion-4"
+                className="emotion-1"
                 listStyleType="none"
               >
                 <Styled(ul)
-                  className="emotion-4"
+                  className="emotion-1"
                   listStyleType="none"
                 >
                   <ul
-                    className="emotion-3"
+                    className="emotion-4"
                   >
                     <Styled(li)
                       key="0"
                     >
                       <li
-                        className="emotion-1"
+                        className="emotion-2"
                       >
                         example
                       </li>
@@ -118,7 +131,7 @@ exports[`Styled matches snapshot: enzyme.mount 1`] = `
                       key="1"
                     >
                       <li
-                        className="emotion-1"
+                        className="emotion-2"
                       >
                         exampleexample
                       </li>
@@ -132,7 +145,7 @@ exports[`Styled matches snapshot: enzyme.mount 1`] = `
       </Styled(div)>
       <Styled(div)>
         <div
-          className="emotion-0"
+          className="emotion-7"
         />
       </Styled(div)>
     </div>

@@ -11,9 +11,9 @@ import Input from '@govuk-react/input';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
 const InputField = ({
-  meta, children, hint, input, className,
+  meta, children, hint, input, ...props
 }) => (
-  <Label className={className} error={meta.touched && meta.error}>
+  <Label {...props} error={meta.touched && meta.error}>
     <LabelText>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
@@ -25,7 +25,6 @@ InputField.defaultProps = {
   hint: null,
   input: {},
   meta: {},
-  className: undefined,
 };
 
 InputField.propTypes = {
@@ -53,7 +52,6 @@ InputField.propTypes = {
     visited: PropTypes.bool,
   }),
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
 };
 
 export default withWhiteSpace({ marginBottom: 0 })(InputField);

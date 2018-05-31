@@ -209,14 +209,17 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
     <Styled(Label)
       className="emotion-13"
       error="example"
+      errorText="example"
     >
       <Label
         className="emotion-11"
         error="example"
+        errorText="example"
       >
         <Styled(label)
           className="emotion-11"
           error="example"
+          errorText="example"
         >
           <label
             className="emotion-10"

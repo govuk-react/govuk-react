@@ -88,10 +88,10 @@ const StyledLabel = styled('span')({
 });
 
 const Checkbox = ({
-  children, className, inline, ...input
+  children, className, inline, ...props
 }) => (
-  <StyledCheckbox className={className} inline={inline}>
-    <StyledInput type="checkbox" {...input} />
+  <StyledCheckbox inline={inline} className={className}>
+    <StyledInput type="checkbox" {...props} />
     <StyledLabel>{children}</StyledLabel>
   </StyledCheckbox>
 );

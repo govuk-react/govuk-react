@@ -28,10 +28,7 @@ const StyledHint = styled('span')({
   color: `${COLOUR.GREY_1}`,
 });
 
-const HintText = ({ children, ...props }) => (
-  <StyledHint {...props}>
-    {children}
-  </StyledHint>);
+const HintText = props => <StyledHint {...props} />;
 
 HintText.propTypes = {
   children: PropTypes.node.isRequired,

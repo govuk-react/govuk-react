@@ -47,8 +47,8 @@ const StyledBody = styled('div')({
   },
 });
 
-const Panel = ({ panelTitle, panelBody, className }) => (
-  <StyledPanel className={className}>
+const Panel = ({ panelTitle, panelBody, ...props }) => (
+  <StyledPanel {...props}>
     <StyledTitle>{panelTitle}</StyledTitle>
     <StyledBody>{panelBody}</StyledBody>
   </StyledPanel>

@@ -23,9 +23,7 @@ const StyledParagraph = styled('p')({
   },
 });
 
-const LeadParagraph = ({ children }) => (
-  <StyledParagraph>{children}</StyledParagraph>
-);
+const LeadParagraph = props => <StyledParagraph {...props} />;
 
 LeadParagraph.propTypes = {
   children: PropTypes.node.isRequired,

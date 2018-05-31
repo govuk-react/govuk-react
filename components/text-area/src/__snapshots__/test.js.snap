@@ -11,23 +11,6 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   }
 }
 
-.emotion-8 {
-  margin-bottom: 0;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
-    margin-bottom: 0;
-  }
-}
-
 .emotion-0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -69,19 +52,12 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   margin-right: 15px;
   padding-left: 10px;
   margin-bottom: 0;
-  margin-bottom: 0;
 }
 
 .emotion-7:after {
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
-    margin-bottom: 0;
-  }
 }
 
 @media only screen and (min-width:641px) {
@@ -165,15 +141,14 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
     }
   >
     <Styled(Label)
-      className="emotion-1"
       error="example"
     >
       <Label
-        className="emotion-8"
+        className="emotion-1"
         error="example"
       >
         <Styled(label)
-          className="emotion-8"
+          className="emotion-1"
           error="example"
         >
           <label
@@ -239,23 +214,6 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   }
 }
 
-.emotion-8 {
-  margin-bottom: 0;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
-    margin-bottom: 0;
-  }
-}
-
 .emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -267,19 +225,12 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 0;
-  margin-bottom: 0;
 }
 
 .emotion-7:after {
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
-    margin-bottom: 0;
-  }
 }
 
 @media only screen and (min-width:641px) {
@@ -375,14 +326,12 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
     input={Object {}}
     meta={Object {}}
   >
-    <Styled(Label)
-      className="emotion-1"
-    >
+    <Styled(Label)>
       <Label
-        className="emotion-8"
+        className="emotion-1"
       >
         <Styled(label)
-          className="emotion-8"
+          className="emotion-1"
         >
           <label
             className="emotion-7"
@@ -446,23 +395,6 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-.emotion-5 {
-  margin-bottom: 0;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-5 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-5 {
-    margin-bottom: 0;
-  }
-}
-
 .emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -474,19 +406,12 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 0;
-  margin-bottom: 0;
 }
 
 .emotion-4:after {
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-4 {
-    margin-bottom: 0;
-  }
 }
 
 @media only screen and (min-width:641px) {
@@ -553,14 +478,12 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
     input={Object {}}
     meta={Object {}}
   >
-    <Styled(Label)
-      className="emotion-1"
-    >
+    <Styled(Label)>
       <Label
-        className="emotion-5"
+        className="emotion-1"
       >
         <Styled(label)
-          className="emotion-5"
+          className="emotion-1"
         >
           <label
             className="emotion-4"

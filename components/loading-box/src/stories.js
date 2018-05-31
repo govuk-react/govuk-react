@@ -33,9 +33,7 @@ stories.add('default', () => (
       </PhaseBanner>
       {spacer}
       <Header level={2}>Toggle loading settings under `knobs`</Header>
-      <InputField
-        name="group1"
-      >
+      <InputField>
       Email address
       </InputField>
       {spacer}
@@ -60,9 +58,7 @@ stories.add('preset to loading', () => (
       </PhaseBanner>
       {spacer}
       <Header level={2}>Toggle loading settings under `knobs`</Header>
-      <InputField
-        name="group1"
-      >
+      <InputField>
       Email address
       </InputField>
       {spacer}
@@ -87,15 +83,15 @@ stories.add('LoadingBox (long)', () => (
       </PhaseBanner>
       {spacer}
       <Header level={2}>Toggle loading settings under `knobs`</Header>
-      <InputField name="group1">
+      <InputField>
         First name
       </InputField>
       {spacer}
-      <InputField name="group1">
+      <InputField>
         Last name
       </InputField>
       {spacer}
-      <InputField name="group1">
+      <InputField>
         Email address
       </InputField>
       {spacer}
@@ -110,7 +106,6 @@ stories.add('LoadingBox (long)', () => (
       </div>
       {spacer}
       <InputField
-        name="group1"
         hint="It’s on your National Insurance card"
       >
       National Insurance number

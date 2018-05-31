@@ -34,10 +34,7 @@ const StyledLabelText = styled('span')(
   }),
 );
 
-const LabelText = ({ children, ...props }) => (
-  <StyledLabelText {...props}>
-    {children}
-  </StyledLabelText>);
+const LabelText = props => <StyledLabelText {...props} />;
 
 LabelText.propTypes = {
   children: PropTypes.node.isRequired,

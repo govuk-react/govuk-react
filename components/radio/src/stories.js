@@ -35,7 +35,7 @@ RadioGroup.defaultProps = {
   meta: {},
   hint: undefined,
   inline: false,
-  options: {},
+  options: [],
 };
 
 RadioGroup.propTypes = {
@@ -44,10 +44,10 @@ RadioGroup.propTypes = {
   label: PropTypes.string.isRequired,
   hint: PropTypes.string,
   inline: PropTypes.bool,
-  options: PropTypes.shape({
+  options: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
     value: PropTypes.string,
-  }),
+  })),
 };
 
 storiesOf('Radio', module).add('Radio stacked', () => (
