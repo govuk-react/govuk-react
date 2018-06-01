@@ -29,7 +29,7 @@ const MyComponent = ({title}) => (<div>
 </div>)
 ```
 
-See the [Storybook](https://penx.github.io/govuk-react) for examples of all available components.
+See the [Storybook](https://UKHomeOffice.github.io/govuk-react) for examples of all available components.
 
 Also see the [example project](https://github.com/penx/govuk-react-example) for basic usage.
 
@@ -77,7 +77,7 @@ We are also expecting to use [Interoperable Style Transfer Format (ISTF)](https:
 
 ## About the GDS font
 
-Unfortuantely the GDS transport font has a relatively restrictive license [described on the gov.uk blog](https://designnotes.blog.gov.uk/2015/03/11/can-i-use-the-gov-uk-fonts/). We are investigating rendering an elegant alternative before falling back to Arial on [issue 272](https://github.com/penx/govuk-react/issues/272).
+Unfortuantely the GDS transport font has a relatively restrictive license [described on the gov.uk blog](https://designnotes.blog.gov.uk/2015/03/11/can-i-use-the-gov-uk-fonts/). We are investigating rendering an elegant alternative before falling back to Arial on [issue 272](https://github.com/UKHomeOffice/govuk-react/issues/272).
 
 ## Related sites and projects
 
