@@ -18,6 +18,20 @@ Simple
 </Breadcrumb>
 ```
 
+Using `asAnchor` HOC with, or without React Router
+```jsx
+import { Link } from 'react-router-dom';
+import { asAnchor } from '@govuk-react/hoc';
+
+const AnchorLink = asAnchor(Link);
+const AnchorTag = asAnchor('a');
+
+<Breadcrumb>
+  <AnchorLink to="/section">Section</AnchorLink>
+  <AnchorTag href="/section">Sub-section</AnchorTag>
+</Breadcrumb>
+```
+
 ### References:
 - https://github.com/alphagov/govuk-frontend/blob/master/src/components/breadcrumb/_breadcrumb.scss
 

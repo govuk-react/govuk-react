@@ -31,16 +31,14 @@ const AnchorTag = asAnchor('a');
 
 Using React Router and `asAnchor` HOC for GDS styled links
 ```jsx
-import { BrowserRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { asAnchor } from '@govuk-react/hoc';
 
 const AnchorLink = asAnchor(Link);
 
 <ListNavigation listStyleType="circle">
-  <BrowserRouter>
-    <AnchorLink to="/link-a">Link A</AnchorLink>
-    <AnchorLink to="/link-b">Link B</AnchorLink>
-  </BrowserRouter>
+  <AnchorLink to="/link-a">Link A</AnchorLink>
+  <AnchorLink to="/link-b">Link B</AnchorLink>
 </ListNavigation>
 ```
 
@@ -50,6 +48,7 @@ const AnchorLink = asAnchor(Link);
 ### TODO:
 - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
 - Consider nested anchors, should developers have to use the HOC to preserve link styling?
+- Fix active state overlaping siblings
 
 ### Properties
 Prop | Required | Default | Type | Description
