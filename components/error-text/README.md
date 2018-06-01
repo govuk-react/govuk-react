@@ -7,7 +7,16 @@ ErrorText
 ```
 <!-- STORY -->
 
+### Usage
 
+
+Simple
+```js
+<ErrorText errorText="example">Example</ErrorText>
+```
+
+### References
+- https://github.com/alphagov/govuk-frontend/tree/master/src/components
 
 ### Properties
 Prop | Required | Default | Type | Description

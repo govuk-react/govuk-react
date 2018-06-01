@@ -29,6 +29,19 @@ const StyledError = styled('span')({
   paddingBottom: '2px',
 });
 
+/**
+ *
+ * ### Usage
+ *
+ *
+ * Simple
+ * ```js
+ * <ErrorText errorText="example">Example</ErrorText>
+ * ```
+ *
+ * ### References
+ * - https://github.com/alphagov/govuk-frontend/tree/master/src/components
+ */
 const ErrorText = props => <StyledError {...props} />;
 
 export default withWhiteSpace({ marginBottom: 0 })(ErrorText);
