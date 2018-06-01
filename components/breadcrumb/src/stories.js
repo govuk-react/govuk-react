@@ -20,6 +20,8 @@ stories.addDecorator(WithDocsCustom(ReadMe));
 stories.add('Component default', () => (
   <Breadcrumb>
     <AnchorTag href="/section">Section 1</AnchorTag>
+    <a href="/section/sub-section">Sub-section</a>
+    Current page
   </Breadcrumb>
 ));
 
@@ -27,14 +29,6 @@ examples.add('Three levels deep', () => (
   <Breadcrumb>
     <a href="/section">Section 1</a>
     <a href="/section/sub-section">Sub-section</a>
-    Current page
-  </Breadcrumb>
-));
-
-examples.add('Duff children', () => (
-  <Breadcrumb>
-    <AnchorTag href="/section">Section 1</AnchorTag>
-    {crumbsWithDuffChildren}
     Current page
   </Breadcrumb>
 ));

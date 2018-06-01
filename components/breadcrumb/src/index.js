@@ -1,4 +1,3 @@
-// https://github.com/alphagov/govuk-frontend/blob/master/src/components/breadcrumb/_breadcrumb.scss
 import React from 'react';
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
@@ -70,7 +69,27 @@ const BreadcrumbListItem = styled('li')({
   },
 });
 
-// TODO use Context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```js
+ * <Breadcrumb>
+ *   <a href="/section">Section</a>
+ *   <a href="/section/sub-section">Sub-section</a>
+ *   Current page
+ * </Breadcrumb>
+ * ```
+ *
+ * ### References:
+ * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/breadcrumb/_breadcrumb.scss
+ *
+ * ### TODO:
+ * - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
+ * - Consider nested anchors, create an Atom for Breadcrumb links?
+ *
+ */
 const Breadcrumb = ({ children, className, ...props }) => (
   <BreadcrumbContainer className={className} {...props}>
     <BreadcrumbList>
@@ -94,7 +113,7 @@ Breadcrumb.defaultProps = {
 
 Breadcrumb.propTypes = {
   /**
-   * Generally a series of anchors or Link components
+   * Breadcrumb contents
    */
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
