@@ -7,13 +7,26 @@ BackLink
 ```
 <!-- STORY -->
 
+### Usage
 
+Simple
+```js
+<BackLink>Back</BackLink>
+```
+
+With custom click hanler
+```js
+<BackLink onClick={this.myCustomFunction}>Back</BackLink>
+```
+
+### References:
+- https://github.com/alphagov/govuk-frontend/tree/master/src/components/back-link
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` |  | 'Back' | string | Text that will appear in the back link
  `className` |  | undefined | string | 
- `onClick` |  | undefined | func | A function that is called on click
+ `onClick` |  | undefined | func | Custom function to run when the `onClick` event is fired
 
 

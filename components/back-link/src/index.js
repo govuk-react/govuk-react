@@ -1,6 +1,3 @@
-// References:
-// https://github.com/alphagov/govuk-frontend/tree/master/src/components/back-link
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
@@ -13,7 +10,6 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-// const Button
 const Anchor = styled('button')({
   fontFamily: NTA_LIGHT,
   WebkitFontSmoothing: 'antialiased',
@@ -55,6 +51,24 @@ const Anchor = styled('button')({
   },
 });
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```js
+ * <BackLink>Back</BackLink>
+ * ```
+ * 
+ * With custom click hanler
+ * ```js
+ * <BackLink onClick={this.myCustomFunction}>Back</BackLink>
+ * ```
+ *
+ * ### References:
+ * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/back-link
+ *
+ */
 const BackLink = ({ children, className, onClick }) => (
   <Anchor className={className} onClick={onClick}>{children}</Anchor>
 );
@@ -65,7 +79,7 @@ BackLink.propTypes = {
    */
   children: PropTypes.string,
   /**
-   * A function that is called on click
+   * Custom function to run when the `onClick` event is fired
    */
   onClick: PropTypes.func,
   className: PropTypes.string,
