@@ -32,16 +32,14 @@ import { withWhiteSpace } from '@govuk-react/hoc';
  *
  * Using React Router and `asAnchor` HOC for GDS styled links
  * ```jsx
- * import { BrowserRouter, Link } from 'react-router-dom';
+ * import { Link } from 'react-router-dom';
  * import { asAnchor } from '@govuk-react/hoc';
  *
  * const AnchorLink = asAnchor(Link);
  *
  * <ListNavigation listStyleType="circle">
- *   <BrowserRouter>
- *     <AnchorLink to="/link-a">Link A</AnchorLink>
- *     <AnchorLink to="/link-b">Link B</AnchorLink>
- *   </BrowserRouter>
+ *   <AnchorLink to="/link-a">Link A</AnchorLink>
+ *   <AnchorLink to="/link-b">Link B</AnchorLink>
  * </ListNavigation>
  * ```
  *
