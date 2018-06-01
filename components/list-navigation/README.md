@@ -17,7 +17,7 @@ Simple
 </ListNavigation>
 ```
 
-Current recommended approach using the asAnchor HoC for GDS styled links
+Current recommended approach using the `asAnchor` HoC for GDS styled links
 ```jsx
 import { asAnchor } from '@govuk-react/hoc';
 
@@ -29,7 +29,7 @@ const AnchorTag = asAnchor('a');
 </ListNavigation>
 ```
 
-Using React Router and asAnchor HOC for GDS styled links
+Using React Router and `asAnchor` HOC for GDS styled links
 ```jsx
 import { BrowserRouter, Link } from 'react-router-dom';
 import { asAnchor } from '@govuk-react/hoc';
