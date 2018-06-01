@@ -36,6 +36,7 @@ const StyledRelatedItems = styled('div')({
  *
  * Simple
  * ```jsx
+ * import Header from '@govuk-react/header';
  * import UnorderedList from '@govuk-react/unordered-list';
  * import ListItem from '@govuk-react/list-item';
  * import { asAnchor } from '@govuk-react/hoc';
