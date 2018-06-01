@@ -16,25 +16,22 @@ import { asPaginationItem } from '@govuk-react/hoc';
 const PaginationAnchor = asPaginationItem('a');
 
 <Pagination>
-  <PaginationTag href="#prev" previousPage>
+  <PaginationAnchor href="#prev" previousPage>
     Previous page
-  </PaginationTag>
-  <PaginationTag href="#next" nextPage>
+  </PaginationAnchor>
+  <PaginationAnchor href="#next" nextPage>
     Next page
-  </PaginationTag>
+  </PaginationAnchor>
 </Pagination>
 ```
 
 ### References:
 - https://govuk-static.herokuapp.com/component-guide/previous_and_next_navigation
 
-### TODO:
--
-
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
+ `children` | true |  | node | `asPaginationItem` nodes
  `className` |  | undefined | string | 
 
 

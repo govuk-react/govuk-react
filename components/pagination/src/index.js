@@ -42,12 +42,12 @@ const StyledList = styled('ul')({
  * const PaginationAnchor = asPaginationItem('a');
  *
  * <Pagination>
- *   <PaginationTag href="#prev" previousPage>
+ *   <PaginationAnchor href="#prev" previousPage>
  *     Previous page
- *   </PaginationTag>
- *   <PaginationTag href="#next" nextPage>
+ *   </PaginationAnchor>
+ *   <PaginationAnchor href="#next" nextPage>
  *     Next page
- *   </PaginationTag>
+ *   </PaginationAnchor>
  * </Pagination>
  * ```
  *
@@ -64,6 +64,9 @@ Pagination.defaultProps = {
 };
 
 Pagination.propTypes = {
+  /**
+   * `asPaginationItem` nodes
+   */
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
 };
