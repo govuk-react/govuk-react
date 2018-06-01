@@ -75,7 +75,6 @@ const StyledList = styled('ul')(
  * - https://govuk-static.herokuapp.com/component-guide/government_navigation
  */
 // TODO use Context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
-
 // listStyleType: normal HTML property values are used here
 // e.g., listStyleType="circle", listStyleType="upper-alpha", listStyleType="none"
 const UnorderedList = ({ listStyleType, ...props }) => (
