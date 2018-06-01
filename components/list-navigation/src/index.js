@@ -51,7 +51,7 @@ import { withWhiteSpace } from '@govuk-react/hoc';
  * ### TODO:
  * - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
  * - Consider nested anchors, should developers have to use the HOC to preserve link styling?
- *
+ * - Fix active state overlaping siblings
  */
 const ListNavigation = ({ children, className, listStyleType }) => (
   <UnorderedList className={className} listStyleType={listStyleType}>
