@@ -1,5 +1,3 @@
-// https://govuk-static.herokuapp.com/component-guide/previous_and_next_navigation
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
@@ -33,6 +31,30 @@ const StyledList = styled('ul')({
   },
 });
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple usage with `asPaginationItem` HOC
+ * ```jsx
+ * import { asPaginationItem } from '@govuk-react/hoc';
+ *
+ * const PaginationAnchor = asPaginationItem('a');
+ *
+ * <Pagination>
+ *   <PaginationTag href="#prev" previousPage>
+ *     Previous page
+ *   </PaginationTag>
+ *   <PaginationTag href="#next" nextPage>
+ *     Next page
+ *   </PaginationTag>
+ * </Pagination>
+ * ```
+ *
+ * ### References:
+ * - https://govuk-static.herokuapp.com/component-guide/previous_and_next_navigation
+ *
+ */
 const Pagination = ({ children, className }) => (
   <StyledList className={className}>{children}</StyledList>
 );
