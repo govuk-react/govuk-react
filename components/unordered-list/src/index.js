@@ -34,6 +34,46 @@ const StyledList = styled('ul')(
   }),
 );
 
+/**
+ *
+ * ### Usage
+ *
+ *
+ * Simple
+ * ```js
+ * import ListItem from '@govuk-react/list-item';
+ *
+ * <UnorderedList>
+ *   <ListItem>Lorem ipsum dolor sit.</ListItem>
+ *   <ListItem>Consectetur adipiscing elit.</ListItem>
+ *   <ListItem>Curabitur et libero nec.</ListItem>
+ * </UnorderedList>
+ * ```
+ *
+ * with Square
+ * ```js
+ * import ListItem from '@govuk-react/list-item';
+ *
+ * <UnorderedList listStyleType="square">
+ *   <ListItem>Lorem ipsum dolor sit.</ListItem>
+ *   <ListItem>Consectetur adipiscing elit.</ListItem>
+ *   <ListItem>Curabitur et libero nec.</ListItem>
+ * </UnorderedList>
+ * ```
+ *
+ * with no decoration
+ * ```js
+ * import ListItem from '@govuk-react/list-item';
+ *
+ * <UnorderedList listStyleType="none">
+ *   <ListItem>Lorem ipsum dolor sit.</ListItem>
+ *   <ListItem>Consectetur adipiscing elit.</ListItem>
+ *   <ListItem>Curabitur et libero nec.</ListItem>
+ * </UnorderedList>
+ * ```
+ * ### References
+ * - https://govuk-static.herokuapp.com/component-guide/government_navigation
+ */
 // TODO use Context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
 
 // listStyleType: normal HTML property values are used here

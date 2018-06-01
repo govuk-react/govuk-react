@@ -24,6 +24,19 @@ const StyledListItem = styled('li')({
   },
 });
 
+/**
+ *
+ * ### Usage
+ *
+ *
+ * Simple
+ * ```js
+ * <ListItem>List item example</ListItem>
+ * ```
+ *
+ * ### References
+ * - https://github.com/alphagov/govuk-frontend/tree/master/src/components
+ */
 const ListItem = ({ children, className }) => (
   <StyledListItem className={className}>{children}</StyledListItem>
 );
