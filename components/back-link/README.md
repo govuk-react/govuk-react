@@ -10,12 +10,12 @@ BackLink
 ### Usage
 
 Simple
-```js
+```jsx
 <BackLink>Back</BackLink>
 ```
 
 With custom click handler
-```js
+```jsx
 <BackLink onClick={this.myCustomFunction}>Back</BackLink>
 ```
 

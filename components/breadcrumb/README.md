@@ -10,7 +10,7 @@ Breadcrumb
 ### Usage
 
 Simple
-```js
+```jsx
 <Breadcrumb>
   <a href="/section">Section</a>
   <a href="/section/sub-section">Sub-section</a>
