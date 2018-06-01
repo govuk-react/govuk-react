@@ -23,6 +23,19 @@ const StyledListItem = styled('li')({
   },
 });
 
+/**
+ *
+ * ### Usage
+ *
+ *
+ * Simple
+ * ```js
+ * <ListItem>List item example</ListItem>
+ * ```
+ *
+ * ### References
+ * - https://github.com/alphagov/govuk-frontend/tree/master/src/components
+ */
 const ListItem = props => <StyledListItem {...props} />;
 
 export default withWhiteSpace({ marginBottom: 0 })(ListItem);

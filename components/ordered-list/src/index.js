@@ -34,6 +34,57 @@ const StyledList = styled('ol')(
   }),
 );
 
+/**
+ *
+ * ### Usage
+ *
+ *
+ * Simple
+ * ```js
+ * import ListItem from '@govuk-react/list-item';
+ *
+ * <OrderedList>
+ *   <ListItem>Lorem ipsum dolor sit.</ListItem>
+ *   <ListItem>Consectetur adipiscing elit.</ListItem>
+ *   <ListItem>Curabitur et libero nec.</ListItem>
+ * </OrderedList>
+ * ```
+ *
+ * with Alpha
+ * ```js
+ * import ListItem from '@govuk-react/list-item';
+ *
+ * <OrderedList listStyleType="lower-alpha">
+ *   <ListItem>Lorem ipsum dolor sit.</ListItem>
+ *   <ListItem>Consectetur adipiscing elit.</ListItem>
+ *   <ListItem>Curabitur et libero nec.</ListItem>
+ * </OrderedList>
+ * ```
+ *
+ * with Roman
+ * ```js
+ * import ListItem from '@govuk-react/list-item';
+ *
+ * <OrderedList listStyleType="lower-roman">
+ *   <ListItem>Lorem ipsum dolor sit.</ListItem>
+ *   <ListItem>Consectetur adipiscing elit.</ListItem>
+ *   <ListItem>Curabitur et libero nec.</ListItem>
+ * </OrderedList>
+ * ```
+ *
+ * with no decoration
+ * ```js
+ * import ListItem from '@govuk-react/list-item';
+ *
+ * <OrderedList listStyleType="none">
+ *   <ListItem>Lorem ipsum dolor sit.</ListItem>
+ *   <ListItem>Consectetur adipiscing elit.</ListItem>
+ *   <ListItem>Curabitur et libero nec.</ListItem>
+ * </OrderedList>
+ * ```
+ * ### References
+ * - https://govuk-static.herokuapp.com/component-guide/government_navigation
+ */
 // TODO use Context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
 const OrderedList = ({ listStyleType, ...props }) => (
   <StyledList listStyleType={listStyleType} {...props} />
