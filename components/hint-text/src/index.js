@@ -28,6 +28,19 @@ const StyledHint = styled('span')({
   color: `${COLOUR.GREY_1}`,
 });
 
+/**
+ *
+ * ### Usage
+ *
+ *
+ * Simple
+ * ```js
+ * <HintText hintText="example">Example</HintText>
+ * ```
+ *
+ * ### References
+ * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/
+ */
 const HintText = ({ children, ...props }) => (
   <StyledHint {...props}>
     {children}

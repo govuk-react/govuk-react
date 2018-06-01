@@ -1,6 +1,5 @@
 // References:
 // https://govuk-elements.herokuapp.com/typography/#typography-inset-text
-//
 // https://github.com/alphagov/govuk-frontend/blob/master/src/components/inset-text/_inset-text.scss
 // https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_panels.scss
 
@@ -21,6 +20,26 @@ const StyledInsetText = styled(Paragraph)(props => ({
   padding: SPACING.SCALE_3,
 }));
 
+/**
+ *
+ * ### Usage
+ *
+ *
+ * Simple
+ * ```js
+ * <InsetText>Hello</InsetText>
+ * ```
+ *
+ * Narrow border
+ * ```js
+ * <InsetText isNarrow>Hello</InsetText>
+ * ```
+ *
+ * ### References
+ * - https://govuk-elements.herokuapp.com/typography/#typography-inset-text
+ * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/inset-text/_inset-text.scss
+ * - https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_panels.scss
+ */
 const InsetText = props => <StyledInsetText {...props} mb="3" />;
 
 InsetText.propTypes = {
