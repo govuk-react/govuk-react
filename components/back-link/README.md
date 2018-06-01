@@ -14,7 +14,7 @@ Simple
 <BackLink>Back</BackLink>
 ```
 
-With custom click hanler
+With custom click handler
 ```js
 <BackLink onClick={this.myCustomFunction}>Back</BackLink>
 ```
