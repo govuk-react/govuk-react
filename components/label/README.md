@@ -7,6 +7,14 @@ Label
 ```
 <!-- STORY -->
 
+### Usage
 
+Simple
+```jsx
+<Label>Example</Label>
+```
+
+### References:
+- https://github.com/alphagov/govuk-frontend/tree/master/src/components/
 
 

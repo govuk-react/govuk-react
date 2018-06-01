@@ -46,6 +46,29 @@ const StyledFieldset = styled('div')(
   }),
 );
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * import Radio from '@govuk-react/radio';
+ *
+ * <MultiChoice label="example">
+ *    <Radio name="group1" inline>
+ *      Yes
+ *    </Radio>
+ *    <Radio name="group1" inline>
+ *      No
+ *    </Radio>
+ * </MultiChoice>
+ * ```
+ *
+ * ### References:
+ * - https://govuk-elements.herokuapp.com/errors/
+ * - https://govuk-elements.herokuapp.com/errors/example-form-validation-single-question-radio
+ *
+ */
 const MultiChoice = ({
   meta, label, children, hint, ...props
 }) => (
