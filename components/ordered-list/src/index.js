@@ -38,7 +38,6 @@ const StyledList = styled('ol')(
  *
  * ### Usage
  *
- *
  * Simple
  * ```jsx
  * import ListItem from '@govuk-react/list-item';
@@ -63,8 +62,10 @@ const StyledList = styled('ol')(
  *
  * ### References
  * - https://govuk-static.herokuapp.com/component-guide/government_navigation
+ *
+ * ### TODO
+ * - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
  */
-// TODO use Context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
 const OrderedList = ({ listStyleType, ...props }) => (
   <StyledList listStyleType={listStyleType} {...props} />
 );
@@ -74,7 +75,9 @@ OrderedList.defaultProps = {
 };
 
 OrderedList.propTypes = {
-  children: PropTypes.node.isRequired,
+  /**
+   * CSS value for `list-style-type`
+   */
   listStyleType: PropTypes.string,
 };
 
