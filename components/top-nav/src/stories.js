@@ -66,18 +66,18 @@ examples.add('custom logo', () => (
   />
 ));
 
+examples.add('service title', () => (
+  <TopNav company={Company} serviceTitle={ServiceTitle} />
+));
+
 examples.add(
-  'Logo and service title with React router <Link>',
+  'logo and service title with React router <Link>',
   () => (
     <BrowserRouter>
       <TopNav company={CompanyLink} serviceTitle={ServiceTitleLink} />
     </BrowserRouter>
   ),
 );
-
-examples.add('service title', () => (
-  <TopNav company={Company} serviceTitle={ServiceTitle} />
-));
 
 examples.add('search', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} />
