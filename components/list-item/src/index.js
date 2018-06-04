@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import {
   FONT_SIZE,
@@ -25,9 +24,5 @@ const StyledListItem = styled('li')({
 });
 
 const ListItem = props => <StyledListItem {...props} />;
-
-ListItem.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default withWhiteSpace({ marginBottom: 0 })(ListItem);

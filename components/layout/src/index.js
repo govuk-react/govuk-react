@@ -2,7 +2,6 @@
 // https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { BREAKPOINTS, MEDIA_QUERIES, SPACING } from '@govuk-react/constants';
 
@@ -18,9 +17,5 @@ const StyledLayout = styled('div')({
 });
 
 const Layout = props => <StyledLayout {...props} />;
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default Layout;

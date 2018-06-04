@@ -47,7 +47,6 @@ UnorderedList.defaultProps = {
 };
 
 UnorderedList.propTypes = {
-  children: PropTypes.node.isRequired,
   listStyleType: PropTypes.string,
 };
 
