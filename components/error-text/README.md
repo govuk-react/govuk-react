@@ -7,15 +7,6 @@ ErrorText
 ```
 <!-- STORY -->
 
-### Usage
 
-
-Simple
-```jsx
-<ErrorText errorText="example">Example</ErrorText>
-```
-
-### References
-- https://github.com/alphagov/govuk-frontend/tree/master/src/components
 
 

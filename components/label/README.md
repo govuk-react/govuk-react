@@ -17,9 +17,4 @@ Simple
 ### References:
 - https://github.com/alphagov/govuk-frontend/tree/master/src/components/
 
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `className` |  | undefined | string | 
-
 
