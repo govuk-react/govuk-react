@@ -12,8 +12,6 @@ UnorderedList
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
- `className` |  | undefined | string | 
  `listStyleType` |  | undefined | string | 
 
 

@@ -9,9 +9,4 @@ HintText
 
 
 
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
-
 

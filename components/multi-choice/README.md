@@ -13,7 +13,6 @@ MultiChoice
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true |  | node | 
- `className` |  | undefined | string | 
  `hint` |  | undefined | string | 
  `label` | true |  | node | 
  `meta` |  | {} | shape[object Object] | 

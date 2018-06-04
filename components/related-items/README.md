@@ -34,10 +34,4 @@ const AnchorTag = asAnchor('a');
 ### TODO:
 - Replace CSS selectors with imported components
 
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | Related items content
- `className` |  | undefined | string | 
-
 

@@ -28,10 +28,4 @@ const PaginationAnchor = asPaginationItem('a');
 ### References:
 - https://govuk-static.herokuapp.com/component-guide/previous_and_next_navigation
 
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | `asPaginationItem` nodes
- `className` |  | undefined | string | 
-
 
