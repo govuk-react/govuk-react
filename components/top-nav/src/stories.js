@@ -37,6 +37,24 @@ const Search = (
   <SearchBox placeholder="Search">hi</SearchBox>
 );
 
+const CompanyLink = (
+  <LogoAnchor anchorType={Link} to={reactRouterLink}>
+    <TopNav.IconTitle
+      icon={<CrownIcon width="36" height="32" />}
+    >
+      GOV.UK
+    </TopNav.IconTitle>
+  </LogoAnchor>
+);
+
+const ServiceTitleLink = (
+  <NavLinkAnchor anchorType={Link} to={reactRouterLink}>
+    <Header level={3}>
+      Service Title
+    </Header>
+  </NavLinkAnchor>
+);
+
 const stories = storiesOf('Page/TopNav', module);
 const examples = storiesOf('Page/TopNav/Examples', module);
 
@@ -58,19 +76,11 @@ examples.add('custom logo', () => (
   />
 ));
 
-storiesOf('TopNav', module).add(
-  'custom logo with React router Link',
+examples.add(
+  'Logo and service title with React router <Link>',
   () => (
     <BrowserRouter>
-      <TopNav company={
-        <NavLinkAnchor anchorType={Link} to={reactRouterLink}>
-          <TopNav.IconTitle
-            icon={<SearchIcon width="32px" />}
-          >
-            Custom Title
-          </TopNav.IconTitle>
-        </NavLinkAnchor>}
-      />
+      <TopNav company={CompanyLink} serviceTitle={ServiceTitleLink} />
     </BrowserRouter>
   ),
 );
@@ -103,7 +113,6 @@ examples.add('everything', () => (
     <NavLinkAnchor href="https://example.com?q=dogcat" target="new">Navigation item #2</NavLinkAnchor>
   </TopNav>
 ));
-
 
 examples.add('everything with 9 nav items', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
