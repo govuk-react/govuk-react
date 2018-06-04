@@ -38,7 +38,6 @@ const StyledList = styled('ul')(
  *
  * ### Usage
  *
- *
  * Simple
  * ```jsx
  * import ListItem from '@govuk-react/list-item';
@@ -50,7 +49,7 @@ const StyledList = styled('ul')(
  * </UnorderedList>
  * ```
  *
- * with Square
+ * With listStyleType option
  * ```jsx
  * import ListItem from '@govuk-react/list-item';
  *
@@ -63,10 +62,10 @@ const StyledList = styled('ul')(
  *
  * ### References
  * - https://govuk-static.herokuapp.com/component-guide/government_navigation
+ *
+ * ### TODO
+ * - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
  */
-// TODO use Context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
-// listStyleType: normal HTML property values are used here
-// e.g., listStyleType="circle", listStyleType="upper-alpha", listStyleType="none"
 const UnorderedList = ({ listStyleType, ...props }) => (
   <StyledList listStyleType={listStyleType} {...props} />
 );
@@ -76,6 +75,9 @@ UnorderedList.defaultProps = {
 };
 
 UnorderedList.propTypes = {
+  /**
+   * CSS value for `list-style-type`
+   */
   listStyleType: PropTypes.string,
 };
 
