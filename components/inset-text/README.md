@@ -28,7 +28,6 @@ Narrow border
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
- `isNarrow` |  | false | bool | 
+ `isNarrow` |  | false | bool | Renders a narrow border following GDS guides if set to true
 
 

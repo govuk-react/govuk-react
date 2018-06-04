@@ -37,13 +37,15 @@ const StyledInsetText = styled(Paragraph)(props => ({
  */
 const InsetText = props => <StyledInsetText {...props} mb="3" />;
 
-InsetText.propTypes = {
-  children: PropTypes.node.isRequired,
-  isNarrow: PropTypes.bool,
-};
-
 InsetText.defaultProps = {
   isNarrow: false,
+};
+
+InsetText.propTypes = {
+  /**
+   * Renders a narrow border following GDS guides if set to true
+   */
+  isNarrow: PropTypes.bool,
 };
 
 /** Component is not exported withWhitespace because StyledInsetText is based on a Paragraph,
