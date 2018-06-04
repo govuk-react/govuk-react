@@ -11,7 +11,7 @@ UnorderedList
 
 
 Simple
-```js
+```jsx
 import ListItem from '@govuk-react/list-item';
 
 <UnorderedList>
@@ -22,7 +22,7 @@ import ListItem from '@govuk-react/list-item';
 ```
 
 with Square
-```js
+```jsx
 import ListItem from '@govuk-react/list-item';
 
 <UnorderedList listStyleType="square">
@@ -32,16 +32,6 @@ import ListItem from '@govuk-react/list-item';
 </UnorderedList>
 ```
 
-with no decoration
-```js
-import ListItem from '@govuk-react/list-item';
-
-<UnorderedList listStyleType="none">
-  <ListItem>Lorem ipsum dolor sit.</ListItem>
-  <ListItem>Consectetur adipiscing elit.</ListItem>
-  <ListItem>Curabitur et libero nec.</ListItem>
-</UnorderedList>
-```
 ### References
 - https://govuk-static.herokuapp.com/component-guide/government_navigation
 

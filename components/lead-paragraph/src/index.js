@@ -28,7 +28,7 @@ const StyledParagraph = styled('p')({
  *
  *
  * Simple
- * ```js
+ * ```jsx
  * <LeadParagraph>LeadParagraph example</LeadParagraph>
  * ```
  *

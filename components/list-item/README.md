@@ -11,8 +11,17 @@ ListItem
 
 
 Simple
-```js
+```jsx
 <ListItem>List item example</ListItem>
+```
+
+With anchor
+```jsx
+import { asAnchor } from '@govuk-react/hoc';
+
+<ListItem>
+  <AnchorTag href="https://www.google.com/">{text('Children', 'List item example')}</AnchorTag>
+</ListItem>
 ```
 
 ### References

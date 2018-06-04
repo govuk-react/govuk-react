@@ -33,8 +33,8 @@ const StyledHint = styled('span')({
  *
  *
  * Simple
- * ```js
- * <HintText hintText="example">Example</HintText>
+ * ```jsx
+ * <HintText>Example</HintText>
  * ```
  *
  * ### References

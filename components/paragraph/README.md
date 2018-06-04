@@ -14,12 +14,12 @@ This is to ensure we follow GDS as closely as possible.
 It is worth noting that GDS recommends avoiding bold and italics.
 
 Simple Usage with markdown
-```js
+```jsx
 <Paragraph>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
 ```
 
 As supporting text
-```js
+```jsx
 <Paragraph supportingText>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
 ```
 

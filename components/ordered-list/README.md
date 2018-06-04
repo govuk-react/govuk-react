@@ -11,7 +11,7 @@ OrderedList
 
 
 Simple
-```js
+```jsx
 import ListItem from '@govuk-react/list-item';
 
 <OrderedList>
@@ -21,19 +21,8 @@ import ListItem from '@govuk-react/list-item';
 </OrderedList>
 ```
 
-with Alpha
-```js
-import ListItem from '@govuk-react/list-item';
-
-<OrderedList listStyleType="lower-alpha">
-  <ListItem>Lorem ipsum dolor sit.</ListItem>
-  <ListItem>Consectetur adipiscing elit.</ListItem>
-  <ListItem>Curabitur et libero nec.</ListItem>
-</OrderedList>
-```
-
 with Roman
-```js
+```jsx
 import ListItem from '@govuk-react/list-item';
 
 <OrderedList listStyleType="lower-roman">
@@ -43,16 +32,6 @@ import ListItem from '@govuk-react/list-item';
 </OrderedList>
 ```
 
-with no decoration
-```js
-import ListItem from '@govuk-react/list-item';
-
-<OrderedList listStyleType="none">
-  <ListItem>Lorem ipsum dolor sit.</ListItem>
-  <ListItem>Consectetur adipiscing elit.</ListItem>
-  <ListItem>Curabitur et libero nec.</ListItem>
-</OrderedList>
-```
 ### References
 - https://govuk-static.herokuapp.com/component-guide/government_navigation
 
