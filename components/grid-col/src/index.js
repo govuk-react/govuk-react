@@ -2,7 +2,6 @@
 // https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { GUTTER_HALF, MEDIA_QUERIES, SPACING } from '@govuk-react/constants';
 
@@ -49,16 +48,6 @@ const StyledColumn = styled('div')(
   }),
 );
 
-const GridCol = ({ children, ...props }) => (
-  <StyledColumn {...props}>{children}</StyledColumn>
-);
-
-GridCol.defaultProps = {
-  children: undefined,
-};
-
-GridCol.propTypes = {
-  children: PropTypes.node,
-};
+const GridCol = props => <StyledColumn {...props} />;
 
 export default GridCol;

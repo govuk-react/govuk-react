@@ -69,26 +69,19 @@ const Anchor = styled('button')({
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/back-link
  *
  */
-const BackLink = ({ children, className, onClick }) => (
-  <Anchor className={className} onClick={onClick}>{children}</Anchor>
+const BackLink = ({ onClick, ...props }) => (
+  <Anchor onClick={onClick} {...props} />
 );
 
 BackLink.propTypes = {
   /**
-   * Text that will appear in the back link
-   */
-  children: PropTypes.string,
-  /**
    * Custom function to run when the `onClick` event is fired
    */
   onClick: PropTypes.func,
-  className: PropTypes.string,
 };
 
 BackLink.defaultProps = {
   onClick: undefined,
-  className: undefined,
-  children: 'Back',
 };
 
 export default withWhiteSpace({ marginBottom: 3 })(BackLink);

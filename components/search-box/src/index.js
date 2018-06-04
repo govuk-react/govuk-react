@@ -62,8 +62,8 @@ const SearchButton = styled('button')({
   },
 });
 
-const SearchBox = ({ placeholder, className }) => (
-  <SearchBoxWrapper className={className}>
+const SearchBox = ({ placeholder, ...props }) => (
+  <SearchBoxWrapper {...props}>
     <InputSearchBox type="search" placeholder={placeholder} />
     <SearchButton title="Search">
       <Search fill={WHITE} />
@@ -73,12 +73,10 @@ const SearchBox = ({ placeholder, className }) => (
 
 SearchBox.defaultProps = {
   placeholder: undefined,
-  className: undefined,
 };
 
 SearchBox.propTypes = {
   placeholder: PropTypes.string,
-  className: PropTypes.string,
 };
 
 export default withWhiteSpace({ marginBottom: 0 })(SearchBox);

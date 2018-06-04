@@ -11,23 +11,6 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   }
 }
 
-.emotion-8 {
-  margin-bottom: 0;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
-    margin-bottom: 0;
-  }
-}
-
 .emotion-0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -69,19 +52,12 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   margin-right: 15px;
   padding-left: 10px;
   margin-bottom: 0;
-  margin-bottom: 0;
 }
 
 .emotion-7:after {
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
-    margin-bottom: 0;
-  }
 }
 
 @media only screen and (min-width:641px) {
@@ -144,8 +120,9 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   outline-offset: 0;
 }
 
-<Styled(TextArea)
+<TextArea
   errorText="example"
+  input={Object {}}
   meta={
     Object {
       "error": "example",
@@ -153,79 +130,69 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
     }
   }
 >
-  <TextArea
-    className="emotion-1"
+  <Styled(Label)
+    error="example"
     errorText="example"
-    input={Object {}}
-    meta={
-      Object {
-        "error": "example",
-        "touched": true,
-      }
-    }
   >
-    <Styled(Label)
+    <Label
       className="emotion-1"
       error="example"
+      errorText="example"
     >
-      <Label
-        className="emotion-8"
+      <Styled(label)
+        className="emotion-1"
         error="example"
+        errorText="example"
       >
-        <Styled(label)
-          className="emotion-8"
-          error="example"
+        <label
+          className="emotion-7"
         >
-          <label
-            className="emotion-7"
+          <Styled(LabelText)>
+            <LabelText
+              className="emotion-1"
+            >
+              <Styled(span)
+                className="emotion-1"
+              >
+                <span
+                  className="emotion-0"
+                >
+                  example
+                </span>
+              </Styled(span)>
+            </LabelText>
+          </Styled(LabelText)>
+          <Styled(ErrorText)>
+            <ErrorText
+              className="emotion-1"
+            >
+              <Styled(span)
+                className="emotion-1"
+              >
+                <span
+                  className="emotion-3"
+                >
+                  example
+                </span>
+              </Styled(span)>
+            </ErrorText>
+          </Styled(ErrorText)>
+          <Styled(textarea)
+            error="example"
+            rows="5"
+            type="text"
           >
-            <Styled(LabelText)>
-              <LabelText
-                className="emotion-1"
-              >
-                <Styled(span)
-                  className="emotion-1"
-                >
-                  <span
-                    className="emotion-0"
-                  >
-                    example
-                  </span>
-                </Styled(span)>
-              </LabelText>
-            </Styled(LabelText)>
-            <Styled(ErrorText)>
-              <ErrorText
-                className="emotion-1"
-              >
-                <Styled(span)
-                  className="emotion-1"
-                >
-                  <span
-                    className="emotion-3"
-                  >
-                    example
-                  </span>
-                </Styled(span)>
-              </ErrorText>
-            </Styled(ErrorText)>
-            <Styled(textarea)
-              error="example"
+            <textarea
+              className="emotion-6"
               rows="5"
               type="text"
-            >
-              <textarea
-                className="emotion-6"
-                rows="5"
-                type="text"
-              />
-            </Styled(textarea)>
-          </label>
-        </Styled(label)>
-      </Label>
-    </Styled(Label)>
-  </TextArea>
-</Styled(TextArea)>
+            />
+          </Styled(textarea)>
+        </label>
+      </Styled(label)>
+    </Label>
+  </Styled(Label)>
+</TextArea>
 `;
 
 exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
@@ -235,23 +202,6 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-8 {
-  margin-bottom: 0;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
     margin-bottom: 0;
   }
 }
@@ -267,19 +217,12 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 0;
-  margin-bottom: 0;
 }
 
 .emotion-7:after {
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
-    margin-bottom: 0;
-  }
 }
 
 @media only screen and (min-width:641px) {
@@ -366,73 +309,66 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   }
 }
 
-<Styled(TextArea)
+<TextArea
   hint="example"
+  input={Object {}}
+  meta={Object {}}
 >
-  <TextArea
-    className="emotion-1"
-    hint="example"
-    input={Object {}}
-    meta={Object {}}
-  >
-    <Styled(Label)
+  <Styled(Label)>
+    <Label
       className="emotion-1"
     >
-      <Label
-        className="emotion-8"
+      <Styled(label)
+        className="emotion-1"
       >
-        <Styled(label)
-          className="emotion-8"
+        <label
+          className="emotion-7"
         >
-          <label
-            className="emotion-7"
+          <Styled(LabelText)>
+            <LabelText
+              className="emotion-1"
+            >
+              <Styled(span)
+                className="emotion-1"
+              >
+                <span
+                  className="emotion-0"
+                >
+                  example
+                </span>
+              </Styled(span)>
+            </LabelText>
+          </Styled(LabelText)>
+          <Styled(HintText)>
+            <HintText
+              className="emotion-1"
+            >
+              <Styled(span)
+                className="emotion-1"
+              >
+                <span
+                  className="emotion-3"
+                >
+                  example
+                </span>
+              </Styled(span)>
+            </HintText>
+          </Styled(HintText)>
+          <Styled(textarea)
+            rows="5"
+            type="text"
           >
-            <Styled(LabelText)>
-              <LabelText
-                className="emotion-1"
-              >
-                <Styled(span)
-                  className="emotion-1"
-                >
-                  <span
-                    className="emotion-0"
-                  >
-                    example
-                  </span>
-                </Styled(span)>
-              </LabelText>
-            </Styled(LabelText)>
-            <Styled(HintText)>
-              <HintText
-                className="emotion-1"
-              >
-                <Styled(span)
-                  className="emotion-1"
-                >
-                  <span
-                    className="emotion-3"
-                  >
-                    example
-                  </span>
-                </Styled(span)>
-              </HintText>
-            </Styled(HintText)>
-            <Styled(textarea)
+            <textarea
+              className="emotion-6"
               rows="5"
               type="text"
-            >
-              <textarea
-                className="emotion-6"
-                rows="5"
-                type="text"
-              />
-            </Styled(textarea)>
-          </label>
-        </Styled(label)>
-      </Label>
-    </Styled(Label)>
-  </TextArea>
-</Styled(TextArea)>
+            />
+          </Styled(textarea)>
+        </label>
+      </Styled(label)>
+    </Label>
+  </Styled(Label)>
+</TextArea>
 `;
 
 exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
@@ -442,23 +378,6 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-5 {
-  margin-bottom: 0;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-5 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-5 {
     margin-bottom: 0;
   }
 }
@@ -474,19 +393,12 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 0;
-  margin-bottom: 0;
 }
 
 .emotion-4:after {
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-4 {
-    margin-bottom: 0;
-  }
 }
 
 @media only screen and (min-width:641px) {
@@ -547,53 +459,48 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   outline-offset: 0;
 }
 
-<Styled(TextArea)>
-  <TextArea
-    className="emotion-1"
-    input={Object {}}
-    meta={Object {}}
-  >
-    <Styled(Label)
+<TextArea
+  input={Object {}}
+  meta={Object {}}
+>
+  <Styled(Label)>
+    <Label
       className="emotion-1"
     >
-      <Label
-        className="emotion-5"
+      <Styled(label)
+        className="emotion-1"
       >
-        <Styled(label)
-          className="emotion-5"
+        <label
+          className="emotion-4"
         >
-          <label
-            className="emotion-4"
-          >
-            <Styled(LabelText)>
-              <LabelText
+          <Styled(LabelText)>
+            <LabelText
+              className="emotion-1"
+            >
+              <Styled(span)
                 className="emotion-1"
               >
-                <Styled(span)
-                  className="emotion-1"
+                <span
+                  className="emotion-0"
                 >
-                  <span
-                    className="emotion-0"
-                  >
-                    example
-                  </span>
-                </Styled(span)>
-              </LabelText>
-            </Styled(LabelText)>
-            <Styled(textarea)
+                  example
+                </span>
+              </Styled(span)>
+            </LabelText>
+          </Styled(LabelText)>
+          <Styled(textarea)
+            rows="5"
+            type="text"
+          >
+            <textarea
+              className="emotion-3"
               rows="5"
               type="text"
-            >
-              <textarea
-                className="emotion-3"
-                rows="5"
-                type="text"
-              />
-            </Styled(textarea)>
-          </label>
-        </Styled(label)>
-      </Label>
-    </Styled(Label)>
-  </TextArea>
-</Styled(TextArea)>
+            />
+          </Styled(textarea)>
+        </label>
+      </Styled(label)>
+    </Label>
+  </Styled(Label)>
+</TextArea>
 `;

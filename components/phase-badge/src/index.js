@@ -34,16 +34,6 @@ const StyledBadge = styled('strong')({
   },
 });
 
-const PhaseBadge = ({ className, ...props }) => (
-  <StyledBadge className={className} {...props} />
-);
-
-PhaseBadge.defaultProps = {
-  className: undefined,
-};
-
-PhaseBadge.propTypes = {
-  className: PropTypes.string,
-};
+const PhaseBadge = props => <StyledBadge {...props} />;
 
 export default withWhiteSpace({ marginBottom: 0 })(PhaseBadge);

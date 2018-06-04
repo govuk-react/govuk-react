@@ -2,7 +2,6 @@
 
 import styled from 'react-emotion';
 import React from 'react';
-import PropTypes from 'prop-types';
 import { BLACK } from 'govuk-colours';
 import { withWhiteSpace } from '@govuk-react/hoc';
 import {
@@ -34,13 +33,6 @@ const StyledLabelText = styled('span')(
   }),
 );
 
-const LabelText = ({ children, ...props }) => (
-  <StyledLabelText {...props}>
-    {children}
-  </StyledLabelText>);
-
-LabelText.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+const LabelText = props => <StyledLabelText {...props} />;
 
 export default withWhiteSpace({ marginBottom: 0 })(LabelText);

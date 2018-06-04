@@ -35,21 +35,17 @@ const StyledList = styled('ol')(
 );
 
 // TODO use Context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
-const OrderedList = ({ children, listStyleType, className }) => (
-  <StyledList className={className} listStyleType={listStyleType}>
-    {children}
-  </StyledList>
+const OrderedList = ({ listStyleType, ...props }) => (
+  <StyledList listStyleType={listStyleType} {...props} />
 );
 
 OrderedList.defaultProps = {
   listStyleType: undefined,
-  className: undefined,
 };
 
 OrderedList.propTypes = {
   children: PropTypes.node.isRequired,
   listStyleType: PropTypes.string,
-  className: PropTypes.string,
 };
 
 export default withWhiteSpace({ marginBottom: 0 })(OrderedList);

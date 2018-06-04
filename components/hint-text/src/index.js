@@ -2,7 +2,6 @@
 
 import styled from 'react-emotion';
 import React from 'react';
-import PropTypes from 'prop-types';
 import * as COLOUR from 'govuk-colours';
 import { withWhiteSpace } from '@govuk-react/hoc';
 import {
@@ -28,13 +27,6 @@ const StyledHint = styled('span')({
   color: `${COLOUR.GREY_1}`,
 });
 
-const HintText = ({ children, ...props }) => (
-  <StyledHint {...props}>
-    {children}
-  </StyledHint>);
-
-HintText.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+const HintText = props => <StyledHint {...props} />;
 
 export default withWhiteSpace({ marginBottom: 0 })(HintText);

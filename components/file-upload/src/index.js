@@ -34,9 +34,9 @@ const StyledInput = styled('input')({
 });
 
 const FileUpload = ({
-  meta, children, hint, acceptedFormats, className,
+  meta, children, hint, acceptedFormats, ...props
 }) => (
-  <Label className={className} error={meta.error}>
+  <Label {...props} error={meta.touched && meta.error}>
     <LabelText error={meta.error}>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
@@ -48,7 +48,6 @@ FileUpload.defaultProps = {
   hint: undefined,
   meta: {},
   acceptedFormats: undefined,
-  className: undefined,
 };
 
 FileUpload.propTypes = {
@@ -70,7 +69,6 @@ FileUpload.propTypes = {
   }),
   children: PropTypes.node.isRequired,
   acceptedFormats: PropTypes.string,
-  className: PropTypes.string,
 };
 
 export default withWhiteSpace({ marginBottom: 6 })(FileUpload);

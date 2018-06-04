@@ -1,5 +1,3 @@
-// https://govuk-static.herokuapp.com/component-guide/government_navigation
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import UnorderedList from '@govuk-react/unordered-list';
@@ -51,8 +49,8 @@ import { withWhiteSpace } from '@govuk-react/hoc';
  * - Consider nested anchors, should developers have to use the HOC to preserve link styling?
  * - Fix active state overlaping siblings
  */
-const ListNavigation = ({ children, className, listStyleType }) => (
-  <UnorderedList className={className} listStyleType={listStyleType}>
+const ListNavigation = ({ children, listStyleType, ...props }) => (
+  <UnorderedList listStyleType={listStyleType} {...props}>
     {children.length && children.map ? (
       children.map((child, i) => (
         <ListItem key={child.key || i}>{child}</ListItem>
@@ -65,7 +63,6 @@ const ListNavigation = ({ children, className, listStyleType }) => (
 
 ListNavigation.defaultProps = {
   listStyleType: undefined,
-  className: undefined,
 };
 
 ListNavigation.propTypes = {
@@ -77,7 +74,6 @@ ListNavigation.propTypes = {
    * CSS value for `list-style-type`
    */
   listStyleType: PropTypes.string,
-  className: PropTypes.string,
 };
 
 export default withWhiteSpace({ marginBottom: 0 })(ListNavigation);

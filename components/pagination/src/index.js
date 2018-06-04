@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 
 import {
@@ -55,20 +54,6 @@ const StyledList = styled('ul')({
  * - https://govuk-static.herokuapp.com/component-guide/previous_and_next_navigation
  *
  */
-const Pagination = ({ children, className }) => (
-  <StyledList className={className}>{children}</StyledList>
-);
-
-Pagination.defaultProps = {
-  className: undefined,
-};
-
-Pagination.propTypes = {
-  /**
-   * `asPaginationItem` nodes
-   */
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-};
+const Pagination = props => <StyledList {...props} />;
 
 export default withWhiteSpace({ marginBottom: 6 })(Pagination);

@@ -1,7 +1,6 @@
 // https://govuk-static.herokuapp.com/component-guide/lead_paragraph
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
@@ -23,12 +22,6 @@ const StyledParagraph = styled('p')({
   },
 });
 
-const LeadParagraph = ({ children }) => (
-  <StyledParagraph>{children}</StyledParagraph>
-);
-
-LeadParagraph.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+const LeadParagraph = props => <StyledParagraph {...props} />;
 
 export default withWhiteSpace({ marginBottom: 5 })(LeadParagraph);
