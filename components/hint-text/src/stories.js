@@ -9,5 +9,5 @@ const stories = storiesOf('Typography/HintText', module);
 stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
-  <HintText hintText="example">Example</HintText>
+  <HintText>Example</HintText>
 ));

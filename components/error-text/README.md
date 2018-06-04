@@ -11,7 +11,7 @@ ErrorText
 
 
 Simple
-```js
+```jsx
 <ErrorText errorText="example">Example</ErrorText>
 ```
 

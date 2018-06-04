@@ -36,7 +36,7 @@ const StyledError = styled('span')({
  *
  *
  * Simple
- * ```js
+ * ```jsx
  * <ErrorText errorText="example">Example</ErrorText>
  * ```
  *

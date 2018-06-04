@@ -11,12 +11,12 @@ InsetText
 
 
 Simple
-```js
+```jsx
 <InsetText>Hello</InsetText>
 ```
 
 Narrow border
-```js
+```jsx
 <InsetText isNarrow>Hello</InsetText>
 ```
 

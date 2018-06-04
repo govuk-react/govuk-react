@@ -34,20 +34,13 @@ const StyledHint = styled('span')({
  *
  *
  * Simple
- * ```js
- * <HintText hintText="example">Example</HintText>
+ * ```jsx
+ * <HintText>Example</HintText>
  * ```
  *
  * ### References
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/
  */
-const HintText = ({ children, ...props }) => (
-  <StyledHint {...props}>
-    {children}
-  </StyledHint>);
-
-HintText.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+const HintText = props => <StyledHint {...props} />;
 
 export default withWhiteSpace({ marginBottom: 0 })(HintText);
