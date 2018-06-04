@@ -1,38 +1,16 @@
 import styled from 'react-emotion';
-import React from 'react';
-import PropTypes from 'prop-types';
-import { WHITE, YELLOW, BLACK } from 'govuk-colours';
+import { YELLOW, BLACK } from 'govuk-colours';
+import { asTopNavAnchor } from '../..';
 
-const LogoAnchor = ({ anchorType, ...props }) => {
-  const StyledLogoAnchor = styled(anchorType)({
-    color: WHITE, // TODO: active state, LIGHT_BLUE
-    textDecoration: 'none',
-    textDecorationSkipInk: 'none',
-    borderBottom: '1px solid transparent',
-    fontWeight: 700,
-    lineHeight: 1,
-    ':hover': {
-      borderBottomColor: WHITE, // TODO: active state, LIGHT_BLUE
-    },
+const asLogoAnchor = (AnchorType) => {
+  const Anchor = asTopNavAnchor(AnchorType);
+
+  const StyledLogoAnchor = styled(Anchor)({
     ':focus': {
-      color: BLACK,
       outline: `3px solid ${YELLOW}`,
     },
-    ':visited': {
-      color: WHITE, // TODO: active state, LIGHT_BLUE
-      borderBottomColor: WHITE, // TODO: active state, LIGHT_BLUE
-    },
   });
-
-  return <StyledLogoAnchor {...props} />;
+  return StyledLogoAnchor;
 };
 
-LogoAnchor.defaultProps = {
-  anchorType: 'a',
-};
-
-LogoAnchor.propTypes = {
-  anchorType: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-};
-
-export default LogoAnchor;
+export default asLogoAnchor;

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TopNav matches the <TopNav> with a <LogoAnchor> tag snapshot: enzyme.mount 1`] = `
-.emotion-9 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,13 +19,13 @@ exports[`TopNav matches the <TopNav> with a <LogoAnchor> tag snapshot: enzyme.mo
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-9 {
+  .emotion-10 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -35,13 +35,13 @@ exports[`TopNav matches the <TopNav> with a <LogoAnchor> tag snapshot: enzyme.mo
   flex-direction: column;
   width: calc(100% - 15px);
   max-width: 960px;
-  padding: 8px 15px;
+  padding: calc(10px * 0.8) 15px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-8 {
-    padding: 8px 0;
+  .emotion-9 {
+    padding: calc(10px * 0.8) 0;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -85,7 +85,7 @@ exports[`TopNav matches the <TopNav> with a <LogoAnchor> tag snapshot: enzyme.mo
   font-size: 30px;
 }
 
-.emotion-7 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -101,7 +101,7 @@ exports[`TopNav matches the <TopNav> with a <LogoAnchor> tag snapshot: enzyme.mo
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-7 {
+  .emotion-8 {
     -webkit-align-items: flex-start;
     -webkit-box-align: flex-start;
     -ms-flex-align: flex-start;
@@ -136,7 +136,7 @@ exports[`TopNav matches the <TopNav> with a <LogoAnchor> tag snapshot: enzyme.mo
   }
 }
 
-.emotion-6 {
+.emotion-7 {
   display: none;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
@@ -148,7 +148,7 @@ exports[`TopNav matches the <TopNav> with a <LogoAnchor> tag snapshot: enzyme.mo
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-7 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -158,7 +158,7 @@ exports[`TopNav matches the <TopNav> with a <LogoAnchor> tag snapshot: enzyme.mo
   }
 }
 
-.emotion-5 {
+.emotion-6 {
   -webkit-flex: 1 0 50%;
   -ms-flex: 1 0 50%;
   flex: 1 0 50%;
@@ -170,7 +170,7 @@ exports[`TopNav matches the <TopNav> with a <LogoAnchor> tag snapshot: enzyme.mo
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-5 {
+  .emotion-6 {
     border-bottom: 0;
     -webkit-flex: none;
     -ms-flex: none;
@@ -196,16 +196,10 @@ exports[`TopNav matches the <TopNav> with a <LogoAnchor> tag snapshot: enzyme.mo
 }
 
 .emotion-4:focus {
-  color: #0b0c0c;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-4:visited {
-  color: #ffffff;
-  border-bottom-color: #ffffff;
-}
-
-.emotion-10 {
+.emotion-11 {
   border-bottom: 10px solid #005ea5;
   max-width: 960px;
   margin: 0 auto;
@@ -213,7 +207,7 @@ exports[`TopNav matches the <TopNav> with a <LogoAnchor> tag snapshot: enzyme.mo
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-10 {
+  .emotion-11 {
     width: calc(100% - 60px);
   }
 }
@@ -228,12 +222,12 @@ exports[`TopNav matches the <TopNav> with a <LogoAnchor> tag snapshot: enzyme.mo
     color="#ffffff"
   >
     <div
-      className="emotion-9"
+      className="emotion-10"
       color="#ffffff"
     >
       <Styled(div)>
         <div
-          className="emotion-8"
+          className="emotion-9"
         >
           <Styled(div)>
             <div
@@ -248,7 +242,7 @@ exports[`TopNav matches the <TopNav> with a <LogoAnchor> tag snapshot: enzyme.mo
           </Styled(div)>
           <Styled(div)>
             <div
-              className="emotion-7"
+              className="emotion-8"
             >
               <MenuButton
                 title="Menu"
@@ -280,17 +274,17 @@ exports[`TopNav matches the <TopNav> with a <LogoAnchor> tag snapshot: enzyme.mo
               </MenuButton>
               <Styled(ul)>
                 <ul
-                  className="emotion-6"
+                  className="emotion-7"
                 >
                   <Styled(li)>
                     <li
-                      className="emotion-5"
+                      className="emotion-6"
                     >
-                      <LogoAnchor
-                        anchorType="a"
+                      <Styled(Anchor)
                         href="/logo-link"
                       >
-                        <Styled(a)
+                        <Anchor
+                          className="emotion-4"
                           href="/logo-link"
                         >
                           <a
@@ -299,8 +293,8 @@ exports[`TopNav matches the <TopNav> with a <LogoAnchor> tag snapshot: enzyme.mo
                           >
                             Logo link
                           </a>
-                        </Styled(a)>
-                      </LogoAnchor>
+                        </Anchor>
+                      </Styled(Anchor)>
                     </li>
                   </Styled(li)>
                 </ul>
@@ -313,14 +307,14 @@ exports[`TopNav matches the <TopNav> with a <LogoAnchor> tag snapshot: enzyme.mo
   </Styled(div)>
   <Styled(div)>
     <div
-      className="emotion-10"
+      className="emotion-11"
     />
   </Styled(div)>
 </TopNav>
 `;
 
 exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme.mount 1`] = `
-.emotion-9 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -338,13 +332,13 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-9 {
+  .emotion-10 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -354,13 +348,13 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
   flex-direction: column;
   width: calc(100% - 15px);
   max-width: 960px;
-  padding: 8px 15px;
+  padding: calc(10px * 0.8) 15px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-8 {
-    padding: 8px 0;
+  .emotion-9 {
+    padding: calc(10px * 0.8) 0;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -404,7 +398,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
   font-size: 30px;
 }
 
-.emotion-7 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -420,7 +414,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-7 {
+  .emotion-8 {
     -webkit-align-items: flex-start;
     -webkit-box-align: flex-start;
     -ms-flex-align: flex-start;
@@ -455,7 +449,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
   }
 }
 
-.emotion-6 {
+.emotion-7 {
   display: none;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
@@ -467,7 +461,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-7 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -477,7 +471,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
   }
 }
 
-.emotion-5 {
+.emotion-6 {
   -webkit-flex: 1 0 50%;
   -ms-flex: 1 0 50%;
   flex: 1 0 50%;
@@ -489,7 +483,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-5 {
+  .emotion-6 {
     border-bottom: 0;
     -webkit-flex: none;
     -ms-flex: none;
@@ -499,7 +493,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
   }
 }
 
-.emotion-10 {
+.emotion-11 {
   border-bottom: 10px solid #005ea5;
   max-width: 960px;
   margin: 0 auto;
@@ -507,7 +501,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-10 {
+  .emotion-11 {
     width: calc(100% - 60px);
   }
 }
@@ -547,12 +541,12 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
     color="#ffffff"
   >
     <div
-      className="emotion-9"
+      className="emotion-10"
       color="#ffffff"
     >
       <Styled(div)>
         <div
-          className="emotion-8"
+          className="emotion-9"
         >
           <Styled(div)>
             <div
@@ -567,7 +561,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
           </Styled(div)>
           <Styled(div)>
             <div
-              className="emotion-7"
+              className="emotion-8"
             >
               <MenuButton
                 title="Menu"
@@ -599,17 +593,17 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
               </MenuButton>
               <Styled(ul)>
                 <ul
-                  className="emotion-6"
+                  className="emotion-7"
                 >
                   <Styled(li)>
                     <li
-                      className="emotion-5"
+                      className="emotion-6"
                     >
-                      <NavLinkAnchor
-                        anchorType="a"
+                      <Styled(Anchor)
                         href="/nav-link"
                       >
-                        <Styled(a)
+                        <Anchor
+                          className="emotion-4"
                           href="/nav-link"
                         >
                           <a
@@ -618,8 +612,8 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                           >
                             Nav link
                           </a>
-                        </Styled(a)>
-                      </NavLinkAnchor>
+                        </Anchor>
+                      </Styled(Anchor)>
                     </li>
                   </Styled(li)>
                 </ul>
@@ -632,14 +626,14 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
   </Styled(div)>
   <Styled(div)>
     <div
-      className="emotion-10"
+      className="emotion-11"
     />
   </Styled(div)>
 </TopNav>
 `;
 
 exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzyme.mount 1`] = `
-.emotion-9 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -657,13 +651,13 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-9 {
+  .emotion-13 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-.emotion-8 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -673,13 +667,13 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
   flex-direction: column;
   width: calc(100% - 15px);
   max-width: 960px;
-  padding: 8px 15px;
+  padding: calc(10px * 0.8) 15px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-8 {
-    padding: 8px 0;
+  .emotion-12 {
+    padding: calc(10px * 0.8) 0;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -723,7 +717,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
   font-size: 30px;
 }
 
-.emotion-7 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -739,7 +733,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-7 {
+  .emotion-11 {
     -webkit-align-items: flex-start;
     -webkit-box-align: flex-start;
     -ms-flex-align: flex-start;
@@ -774,7 +768,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
   }
 }
 
-.emotion-6 {
+.emotion-10 {
   display: none;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
@@ -786,7 +780,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-10 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -796,7 +790,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
   }
 }
 
-.emotion-4 {
+.emotion-6 {
   -webkit-flex: 1 0 50%;
   -ms-flex: 1 0 50%;
   flex: 1 0 50%;
@@ -808,7 +802,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-4 {
+  .emotion-6 {
     border-bottom: 0;
     -webkit-flex: none;
     -ms-flex: none;
@@ -818,7 +812,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
   }
 }
 
-.emotion-10 {
+.emotion-14 {
   border-bottom: 10px solid #005ea5;
   max-width: 960px;
   margin: 0 auto;
@@ -826,9 +820,24 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-10 {
+  .emotion-14 {
     width: calc(100% - 60px);
   }
+}
+
+.emotion-4 {
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  border-bottom: 1px solid transparent;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.emotion-4:hover {
+  border-bottom-color: #ffffff;
 }
 
 <TopNav
@@ -842,12 +851,12 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
     color="#ffffff"
   >
     <div
-      className="emotion-9"
+      className="emotion-13"
       color="#ffffff"
     >
       <Styled(div)>
         <div
-          className="emotion-8"
+          className="emotion-12"
         >
           <Styled(div)>
             <div
@@ -862,7 +871,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
           </Styled(div)>
           <Styled(div)>
             <div
-              className="emotion-7"
+              className="emotion-11"
             >
               <MenuButton
                 title="Menu"
@@ -894,40 +903,52 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
               </MenuButton>
               <Styled(ul)>
                 <ul
-                  className="emotion-6"
+                  className="emotion-10"
                 >
                   <Styled(li)
                     key="0"
                   >
                     <li
-                      className="emotion-4"
+                      className="emotion-6"
                     >
-                      <Anchor
+                      <Styled(Anchor)
                         href="/section"
                       >
-                        <a
+                        <Anchor
+                          className="emotion-4"
                           href="/section"
                         >
-                          Section 1
-                        </a>
-                      </Anchor>
+                          <a
+                            className="emotion-4"
+                            href="/section"
+                          >
+                            Section 1
+                          </a>
+                        </Anchor>
+                      </Styled(Anchor)>
                     </li>
                   </Styled(li)>
                   <Styled(li)
                     key="1"
                   >
                     <li
-                      className="emotion-4"
+                      className="emotion-6"
                     >
-                      <Anchor
+                      <Styled(Anchor)
                         href="/section"
                       >
-                        <a
+                        <Anchor
+                          className="emotion-4"
                           href="/section"
                         >
-                          Section 1
-                        </a>
-                      </Anchor>
+                          <a
+                            className="emotion-4"
+                            href="/section"
+                          >
+                            Section 1
+                          </a>
+                        </Anchor>
+                      </Styled(Anchor)>
                     </li>
                   </Styled(li)>
                 </ul>
@@ -940,7 +961,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
   </Styled(div)>
   <Styled(div)>
     <div
-      className="emotion-10"
+      className="emotion-14"
     />
   </Styled(div)>
 </TopNav>
@@ -981,13 +1002,13 @@ exports[`TopNav with icon title: icon title 1`] = `
   flex-direction: column;
   width: calc(100% - 15px);
   max-width: 960px;
-  padding: 8px 15px;
+  padding: calc(10px * 0.8) 15px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-6 {
-    padding: 8px 0;
+    padding: calc(10px * 0.8) 0;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;

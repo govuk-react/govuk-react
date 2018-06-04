@@ -7,8 +7,14 @@ import SearchBox from '@govuk-react/search-box';
 import Header from '@govuk-react/header';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-import TopNav, { LogoAnchor, NavLinkAnchor } from '.';
+import TopNav, { asLogoAnchor, asNavLinkAnchor } from '.';
 import ReadMe from '../README.md';
+
+const LogoAnchor = asLogoAnchor('a');
+const NavAnchor = asNavLinkAnchor('a');
+
+const LogoLink = asLogoAnchor(Link);
+const NavLink = asNavLinkAnchor(Link);
 
 const reactRouterLink = '/section';
 const link = 'https://example.com?=1';
@@ -17,20 +23,14 @@ const link = 'https://example.com?=1';
 
 const Company = (
   <LogoAnchor href={link} target="new">
-    <TopNav.IconTitle
-      icon={<CrownIcon width="36" height="32" />}
-    >
-      GOV.UK
-    </TopNav.IconTitle>
+    <TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</TopNav.IconTitle>
   </LogoAnchor>
 );
 
 const ServiceTitle = (
-  <NavLinkAnchor href={link} target="new">
-    <Header level={3}>
-        Service Title
-    </Header>
-  </NavLinkAnchor>
+  <NavAnchor href={link} target="new">
+    <Header mb="0" level={3}>Service Title</Header>
+  </NavAnchor>
 );
 
 const Search = (
@@ -38,21 +38,15 @@ const Search = (
 );
 
 const CompanyLink = (
-  <LogoAnchor anchorType={Link} to={reactRouterLink}>
-    <TopNav.IconTitle
-      icon={<CrownIcon width="36" height="32" />}
-    >
-      GOV.UK
-    </TopNav.IconTitle>
-  </LogoAnchor>
+  <LogoLink to={reactRouterLink}>
+    <TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</TopNav.IconTitle>
+  </LogoLink>
 );
 
 const ServiceTitleLink = (
-  <NavLinkAnchor anchorType={Link} to={reactRouterLink}>
-    <Header level={3}>
-      Service Title
-    </Header>
-  </NavLinkAnchor>
+  <NavLink to={reactRouterLink}>
+    <Header mb="0" level={3}>Service Title</Header>
+  </NavLink>
 );
 
 const stories = storiesOf('Page/TopNav', module);
@@ -66,13 +60,9 @@ stories.add('Component default', () => (
 
 examples.add('custom logo', () => (
   <TopNav company={
-    <NavLinkAnchor href={link} target="new">
-      <TopNav.IconTitle
-        icon={<SearchIcon width="32px" />}
-      >
-        Custom Title
-      </TopNav.IconTitle>
-    </NavLinkAnchor>}
+    <NavAnchor href={link} target="new">
+      <TopNav.IconTitle icon={<SearchIcon width="32px" />}>Custom Title</TopNav.IconTitle>
+    </NavAnchor>}
   />
 ));
 
@@ -95,35 +85,35 @@ examples.add('search', () => (
 
 examples.add('children', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} active={0}>
-    <NavLinkAnchor href="https://example.com?q=catdog">Navigation item #1</NavLinkAnchor>
-    <NavLinkAnchor href="https://example.com?q=dogcat">Navigation item #2</NavLinkAnchor>
+    <NavAnchor href="https://example.com?q=catdog">Navigation item #1</NavAnchor>
+    <NavAnchor href="https://example.com?q=dogcat">Navigation item #2</NavAnchor>
   </TopNav>
 ));
 
 examples.add('everything but serviceTitle', () => (
   <TopNav company={Company} search={Search} active={0}>
-    <NavLinkAnchor href="https://example.com?q=catdog">Navigation item #1</NavLinkAnchor>
-    <NavLinkAnchor href="https://example.com?q=dogcat">Navigation item #2</NavLinkAnchor>
+    <NavAnchor href="https://example.com?q=catdog">Navigation item #1</NavAnchor>
+    <NavAnchor href="https://example.com?q=dogcat">Navigation item #2</NavAnchor>
   </TopNav>
 ));
 
 examples.add('everything', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
-    <NavLinkAnchor href="https://example.com?q=catdog" target="new">Navigation item #1</NavLinkAnchor>
-    <NavLinkAnchor href="https://example.com?q=dogcat" target="new">Navigation item #2</NavLinkAnchor>
+    <NavAnchor href="https://example.com?q=catdog" target="new">Navigation item #1</NavAnchor>
+    <NavAnchor href="https://example.com?q=dogcat" target="new">Navigation item #2</NavAnchor>
   </TopNav>
 ));
 
 examples.add('everything with 9 nav items', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
-    <NavLinkAnchor href="https://example.com?q=catdog" target="new">Navigation item</NavLinkAnchor>
-    <NavLinkAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavLinkAnchor>
-    <NavLinkAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavLinkAnchor>
-    <NavLinkAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavLinkAnchor>
-    <NavLinkAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavLinkAnchor>
-    <NavLinkAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavLinkAnchor>
-    <NavLinkAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavLinkAnchor>
-    <NavLinkAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavLinkAnchor>
-    <NavLinkAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavLinkAnchor>
+    <NavAnchor href="https://example.com?q=catdog" target="new">Navigation item</NavAnchor>
+    <NavAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavAnchor>
+    <NavAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavAnchor>
+    <NavAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavAnchor>
+    <NavAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavAnchor>
+    <NavAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavAnchor>
+    <NavAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavAnchor>
+    <NavAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavAnchor>
+    <NavAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavAnchor>
   </TopNav>
 ));
