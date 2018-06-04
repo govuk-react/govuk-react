@@ -1,5 +1,3 @@
-// https://govuk-static.herokuapp.com/component-guide/government_navigation
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';

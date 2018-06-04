@@ -1,5 +1,3 @@
-// https://govuk-static.herokuapp.com/component-guide/lead_paragraph
-
 import React from 'react';
 import styled from 'react-emotion';
 import { withWhiteSpace } from '@govuk-react/hoc';

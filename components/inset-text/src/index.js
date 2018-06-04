@@ -1,8 +1,3 @@
-// References:
-// https://govuk-elements.herokuapp.com/typography/#typography-inset-text
-// https://github.com/alphagov/govuk-frontend/blob/master/src/components/inset-text/_inset-text.scss
-// https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_panels.scss
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
