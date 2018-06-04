@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import CrownIcon from '@govuk-react/icon-crown';
 
-import TopNav, { asAnchor, LogoAnchor, NavLinkAnchor } from './';
+import TopNav, { asTopNavAnchor, asLogoAnchor, asNavLinkAnchor } from './';
 
 const emptyNode = [];
 const nullNode = null;
-const Anchor = asAnchor('a');
+const Anchor = asTopNavAnchor('a');
+const LogoAnchor = asLogoAnchor('a');
+const NavLinkAnchor = asNavLinkAnchor('a');
+
 const wrapper = <TopNav company="example" search="example" serviceTitle="example">example</TopNav>;
 const wrapperMultiple = (
   <TopNav active={1}>

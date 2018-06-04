@@ -93,6 +93,6 @@ TopNav.IconTitle = IconTitle;
 
 export default TopNav;
 
-export asAnchor from './asAnchor';
-export LogoAnchor from './atoms/logo-anchor';
-export NavLinkAnchor from './atoms/nav-link-anchor';
+export asTopNavAnchor from './asTopNavAnchor';
+export asLogoAnchor from './atoms/logo-anchor';
+export asNavLinkAnchor from './atoms/nav-link-anchor';
