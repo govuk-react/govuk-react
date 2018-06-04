@@ -15,7 +15,6 @@ import Label from '@govuk-react/label';
 import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
-import { withWhiteSpace } from '@govuk-react/hoc';
 
 const TextAreaField = styled('textarea')(
   {
@@ -87,5 +86,8 @@ TextArea.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default withWhiteSpace({ marginBottom: 0 })(TextArea);
+/** Component is not exported withWhitespace because Label
+ *  is also exported withWhitespace and therefore takes precedence.
+ */
+export default TextArea;
 export { TextAreaField };
