@@ -18,9 +18,4 @@ Simple
 ### References
 - https://govuk-static.herokuapp.com/component-guide/lead_paragraph
 
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
-
 

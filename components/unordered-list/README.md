@@ -9,7 +9,6 @@ UnorderedList
 
 ### Usage
 
-
 Simple
 ```jsx
 import ListItem from '@govuk-react/list-item';
@@ -21,7 +20,7 @@ import ListItem from '@govuk-react/list-item';
 </UnorderedList>
 ```
 
-with Square
+With listStyleType option
 ```jsx
 import ListItem from '@govuk-react/list-item';
 
@@ -35,11 +34,12 @@ import ListItem from '@govuk-react/list-item';
 ### References
 - https://govuk-static.herokuapp.com/component-guide/government_navigation
 
+### TODO
+- Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
+
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
- `className` |  | undefined | string | 
- `listStyleType` |  | undefined | string | 
+ `listStyleType` |  | undefined | string | CSS value for `list-style-type`
 
 

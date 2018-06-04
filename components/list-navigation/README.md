@@ -17,7 +17,7 @@ Simple
 </ListNavigation>
 ```
 
-Current recommended approach using the `asAnchor` HoC for GDS styled links
+Current recommended approach using the `asAnchor` HOC for GDS styled links
 ```jsx
 import { asAnchor } from '@govuk-react/hoc';
 
@@ -54,7 +54,6 @@ const AnchorLink = asAnchor(Link);
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true |  | node | List navigation content
- `className` |  | undefined | string | 
  `listStyleType` |  | undefined | string | CSS value for `list-style-type`
 
 

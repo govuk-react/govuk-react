@@ -14,7 +14,6 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `acceptedFormats` |  | undefined | string | 
  `children` | true |  | node | 
- `className` |  | undefined | string | 
  `hint` |  | undefined | string | 
  `meta` |  | {} | shape[object Object] | 
 
