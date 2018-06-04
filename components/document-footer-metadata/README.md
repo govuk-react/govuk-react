@@ -28,14 +28,13 @@ const fromData = [
 DFM From & part of example
 ```jsx
 import { asAnchor } from '@govuk-react/hoc';
-const AnchorTag = asAnchor('a');
 
+const AnchorTag = asAnchor('a');
 const fromData = [
   <AnchorTag href="/government/organisations/ministry-of-defence">
     Ministry of Defence
   </AnchorTag>,
 ];
-
 const partOfData = [
   <AnchorTag href="/government/topics/energy">Energy</AnchorTag>,
   <AnchorTag href="/government/topics/environment">Environment</AnchorTag>,
@@ -48,14 +47,13 @@ const partOfData = [
 DFM From & other data example
 ```jsx
 import { asAnchor } from '@govuk-react/hoc';
-const AnchorTag = asAnchor('a');
 
+const AnchorTag = asAnchor('a');
 const fromData = [
   <AnchorTag href="/government/organisations/ministry-of-defence">
     Ministry of Defence
   </AnchorTag>,
 ];
-
 const otherData = [
   {
     id: 0,
@@ -78,8 +76,8 @@ const otherData = [
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `from` |  | undefined | arrayOf[object Object] | 
- `other` |  | undefined | arrayOf[object Object] | 
- `partOf` |  | undefined | arrayOf[object Object] | 
+ `from` |  | undefined | arrayOf[object Object] | Array of JSX nodes to render underneath the `from:` title
+ `other` |  | undefined | arrayOf[object Object] | Array of Objects for any additional items, each object should contain an `id`, `title` and `content` property
+ `partOf` |  | undefined | arrayOf[object Object] | Array of JSX nodes to render underneath the `part of:` title
 
 

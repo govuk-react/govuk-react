@@ -1,5 +1,3 @@
-// https://govuk-static.herokuapp.com/component-guide/document_footer
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
@@ -43,14 +41,13 @@ const StyledDefinition = styled('li')({
  * DFM From & part of example
  * ```jsx
  * import { asAnchor } from '@govuk-react/hoc';
- * const AnchorTag = asAnchor('a');
  *
+ * const AnchorTag = asAnchor('a');
  * const fromData = [
  *   <AnchorTag href="/government/organisations/ministry-of-defence">
  *     Ministry of Defence
  *   </AnchorTag>,
  * ];
- *
  * const partOfData = [
  *   <AnchorTag href="/government/topics/energy">Energy</AnchorTag>,
  *   <AnchorTag href="/government/topics/environment">Environment</AnchorTag>,
@@ -63,14 +60,13 @@ const StyledDefinition = styled('li')({
  * DFM From & other data example
  * ```jsx
  * import { asAnchor } from '@govuk-react/hoc';
- * const AnchorTag = asAnchor('a');
  *
+ * const AnchorTag = asAnchor('a');
  * const fromData = [
  *   <AnchorTag href="/government/organisations/ministry-of-defence">
  *     Ministry of Defence
  *   </AnchorTag>,
  * ];
- *
  * const otherData = [
  *   {
  *     id: 0,
@@ -156,8 +152,19 @@ DocumentFooterMetadata.defaultProps = {
 };
 
 DocumentFooterMetadata.propTypes = {
+  /**
+   * Array of JSX nodes to render underneath the `from:` title
+   */
   from: PropTypes.arrayOf(PropTypes.node),
+  /**
+   * Array of JSX nodes to render underneath the `part of:` title
+   */
   partOf: PropTypes.arrayOf(PropTypes.node),
+  /* eslint-disable max-len */
+  /**
+   * Array of Objects for any additional items, each object should contain an `id`, `title` and `content` property
+   */
+  /* eslint-enable max-len */
   other: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number,
     title: PropTypes.string,
