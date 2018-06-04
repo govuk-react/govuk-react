@@ -18,7 +18,7 @@ import { withWhiteSpace } from '@govuk-react/hoc';
  * </ListNavigation>
  * ```
  *
- * Current recommended approach using the `asAnchor` HoC for GDS styled links
+ * Current recommended approach using the `asAnchor` HOC for GDS styled links
  * ```jsx
  * import { asAnchor } from '@govuk-react/hoc';
  *
