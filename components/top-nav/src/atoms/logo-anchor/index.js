@@ -1,5 +1,5 @@
 import styled from 'react-emotion';
-import { YELLOW, BLACK } from 'govuk-colours';
+import { YELLOW } from 'govuk-colours';
 import { asTopNavAnchor } from '../..';
 
 const asLogoAnchor = (AnchorType) => {
