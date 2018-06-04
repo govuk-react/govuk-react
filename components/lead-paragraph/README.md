@@ -11,7 +11,7 @@ LeadParagraph
 
 
 Simple
-```js
+```jsx
 <LeadParagraph>LeadParagraph example</LeadParagraph>
 ```
 

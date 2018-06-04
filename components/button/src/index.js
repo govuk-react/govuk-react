@@ -79,12 +79,12 @@ const StyledButton = styled('button')(
  * ### Usage
  *
  * Simple
- * ```js
+ * ```jsx
  * <Button>My button text</Button>
  * ```
  *
  * With Icon
- * ```js
+ * ```jsx
  * import { ButtonArrow } from '@govuk-react/icons';
  *
  * <Button icon={<ButtonArrow />}>My button text</Button>

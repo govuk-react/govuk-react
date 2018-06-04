@@ -11,23 +11,22 @@ DocumentFooterMetadata
 
 
 Simple
-```js
+```jsx
 import { asAnchor } from '@govuk-react/hoc';
-const AnchorTag = asAnchor('a');
 
+const AnchorTag = asAnchor('a');
 const fromData = [
   <AnchorTag href="/government/organisations/ministry-of-defence">
     Ministry of Defence
   </AnchorTag>,
 ];
 
-
 <DocumentFooterMetadata from={fromData} />
 ```
 
 
 DFM From & part of example
-```js
+```jsx
 import { asAnchor } from '@govuk-react/hoc';
 const AnchorTag = asAnchor('a');
 
@@ -47,7 +46,7 @@ const partOfData = [
 
 
 DFM From & other data example
-```js
+```jsx
 import { asAnchor } from '@govuk-react/hoc';
 const AnchorTag = asAnchor('a');
 

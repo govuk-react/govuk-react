@@ -40,7 +40,7 @@ const StyledList = styled('ul')(
  *
  *
  * Simple
- * ```js
+ * ```jsx
  * import ListItem from '@govuk-react/list-item';
  *
  * <UnorderedList>
@@ -51,7 +51,7 @@ const StyledList = styled('ul')(
  * ```
  *
  * with Square
- * ```js
+ * ```jsx
  * import ListItem from '@govuk-react/list-item';
  *
  * <UnorderedList listStyleType="square">
@@ -61,16 +61,6 @@ const StyledList = styled('ul')(
  * </UnorderedList>
  * ```
  *
- * with no decoration
- * ```js
- * import ListItem from '@govuk-react/list-item';
- *
- * <UnorderedList listStyleType="none">
- *   <ListItem>Lorem ipsum dolor sit.</ListItem>
- *   <ListItem>Consectetur adipiscing elit.</ListItem>
- *   <ListItem>Curabitur et libero nec.</ListItem>
- * </UnorderedList>
- * ```
  * ### References
  * - https://govuk-static.herokuapp.com/component-guide/government_navigation
  */
