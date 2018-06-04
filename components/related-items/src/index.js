@@ -1,5 +1,3 @@
-// https://govuk-static.herokuapp.com/component-guide/related_items
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
@@ -32,6 +30,36 @@ const StyledRelatedItems = styled('div')({
   },
 });
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * import Header from '@govuk-react/header';
+ * import UnorderedList from '@govuk-react/unordered-list';
+ * import ListItem from '@govuk-react/list-item';
+ * import { asAnchor } from '@govuk-react/hoc';
+ *
+ * const AnchorTag = asAnchor('a');
+ *
+ * <RelatedItems>
+ *   <Header level={3}>Example header</Header>
+ *   <UnorderedList listStyleType="none">
+ *     <ListItem>
+ *       <AnchorTag href="https://example.com">Link A</AnchorTag>
+ *     </ListItem>
+ *   </UnorderedList>
+ * </RelatedItems>
+ * ```
+ *
+ * ### References:
+ * - https://govuk-static.herokuapp.com/component-guide/related_items
+ *
+ * ### TODO:
+ * - Replace CSS selectors with imported components
+ *
+ */
 const RelatedItems = ({ children, className }) => (
   <StyledRelatedItems className={className}>{children}</StyledRelatedItems>
 );
@@ -41,6 +69,9 @@ RelatedItems.defaultProps = {
 };
 
 RelatedItems.propTypes = {
+  /**
+   * Related items content
+   */
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
 };
