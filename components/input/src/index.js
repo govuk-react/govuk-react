@@ -1,7 +1,6 @@
-// https://github.com/alphagov/govuk-frontend/tree/master/src/components/
-import styled from 'react-emotion';
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'react-emotion';
 
 import { BLACK, YELLOW, ERROR_COLOUR } from 'govuk-colours';
 import { withWhiteSpace } from '@govuk-react/hoc';
@@ -40,20 +39,32 @@ const StyledInput = styled('input')(
   }),
 );
 
-const Input = props => <StyledInput {...props} />;
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * <Input />
+ * ```
+ *
+ * ### References:
+ * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/
+ *
+ * ### TODO:
+ * - Remove `errorColor` and provide examples on how to extend the component
+ */
+const Input = ({ type, ...props }) => <StyledInput type={type} {...props} />;
 
 Input.defaultProps = {
-  value: undefined,
-  onChange: undefined,
   type: 'text',
-  errorColor: undefined,
 };
 
 Input.propTypes = {
-  value: PropTypes.string,
-  onChange: PropTypes.func,
+  /**
+   * HTML `<Input />` type
+   */
   type: PropTypes.string,
-  errorColor: PropTypes.string,
 };
 
 export default withWhiteSpace({ marginBottom: 0 })(Input);

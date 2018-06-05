@@ -1,5 +1,3 @@
-// https://github.com/alphagov/govuk-frontend/tree/master/src/components/date-input
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
@@ -69,6 +67,36 @@ const StyledList = styled('div')({
   },
 });
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * <DateInput>What is your date of birth?</DateInput>
+ * ```
+ *
+ * Date with hint text
+ * ```jsx
+ * <DateInput hintText="For example, 31 03 1980">
+ *   What is your date of birth?
+ * </DateInput>
+ * ```
+ *
+ * Date with hint text & error
+ * ```jsx
+ * <DateInput
+ *   hintText="For example, 31 03 1980"
+ *   errorText="Error message goes here"
+ * >
+ *   What is your date of birth?
+ * </DateInput>
+ * ```
+ *
+ * ### References:
+ * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/date-input
+ *
+ */
 const DateInput = ({
   children,
   errorText,
@@ -107,7 +135,13 @@ DateInput.defaultProps = {
 
 DateInput.propTypes = {
   children: PropTypes.node.isRequired,
+  /**
+   * Optional hint text
+   */
   hintText: PropTypes.string,
+  /**
+   * Error text
+   */
   errorText: PropTypes.string,
 };
 

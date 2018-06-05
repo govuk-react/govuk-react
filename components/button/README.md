@@ -27,6 +27,10 @@ import { ButtonArrow } from '@govuk-react/icons';
 - https://github.com/alphagov/govuk-frontend/blob/master/src/components/button/_button.scss
 - https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_buttons.scss
 
+### TODO:
+- Use constants for some of the values cssinjs values
+- Remove cascade styling for nested elements such as `svg`
+
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------

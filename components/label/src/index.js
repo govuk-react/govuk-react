@@ -25,6 +25,19 @@ const StyledLabel = styled('label')(
   }),
 );
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * <Label>Example</Label>
+ * ```
+ *
+ * ### References:
+ * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/
+ *
+ */
 const Label = props => <StyledLabel {...props} />;
 
 export default withWhiteSpace({ marginBottom: 0 })(Label);
