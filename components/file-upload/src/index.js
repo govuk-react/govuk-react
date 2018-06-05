@@ -1,5 +1,3 @@
-// https://github.com/alphagov/govuk-frontend/tree/master/src/components/file-upload
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
@@ -45,12 +43,12 @@ const StyledInput = styled('input')({
  * Input with hint text
  * ```jsx
  * <FileUpload
- *    name="group1"
- *    acceptedFormats=".jpg, .png"
- *    hint={['This can be in either JPG or PNG format']}
- *  >
- *    Upload a photo
- *  </FileUpload>
+ *   name="group1"
+ *   acceptedFormats=".jpg, .png"
+ *   hint={['This can be in either JPG or PNG format']}
+ * >
+ *   Upload a photo
+ * </FileUpload>
  * ```
  *
  * Input with hint text & error
@@ -92,7 +90,13 @@ FileUpload.defaultProps = {
 };
 
 FileUpload.propTypes = {
+  /**
+   * Optional hint text
+   */
   hint: PropTypes.string,
+  /**
+   * Final form meta object, pending adjustment/removal
+   */
   meta: PropTypes.shape({
     active: PropTypes.bool,
     dirty: PropTypes.bool,

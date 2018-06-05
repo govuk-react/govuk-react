@@ -17,12 +17,12 @@ Simple
 Input with hint text
 ```jsx
 <FileUpload
-   name="group1"
-   acceptedFormats=".jpg, .png"
-   hint={['This can be in either JPG or PNG format']}
- >
-   Upload a photo
- </FileUpload>
+  name="group1"
+  acceptedFormats=".jpg, .png"
+  hint={['This can be in either JPG or PNG format']}
+>
+  Upload a photo
+</FileUpload>
 ```
 
 Input with hint text & error
@@ -50,7 +50,7 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `acceptedFormats` |  | undefined | string | 
  `children` | true |  | node | 
- `hint` |  | undefined | string | 
+ `hint` |  | undefined | string | Optional hint text
  `meta` |  | {} | shape[object Object] | 
 
 
