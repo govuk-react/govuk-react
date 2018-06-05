@@ -9,9 +9,4 @@ PhaseBadge
 
 
 
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `className` |  | undefined | string | 
-
 

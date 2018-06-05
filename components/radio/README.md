@@ -14,7 +14,6 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true |  | node | 
  `className` |  | undefined | string | 
- `disabled` |  | false | bool | 
- `inline` |  | undefined | bool | 
+ `inline` |  | false | bool | 
 
 

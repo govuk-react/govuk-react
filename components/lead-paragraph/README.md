@@ -7,11 +7,15 @@ LeadParagraph
 ```
 <!-- STORY -->
 
+### Usage
 
 
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
+Simple
+```jsx
+<LeadParagraph>LeadParagraph example</LeadParagraph>
+```
+
+### References
+- https://govuk-static.herokuapp.com/component-guide/lead_paragraph
 
 

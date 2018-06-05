@@ -7,11 +7,15 @@ ErrorText
 ```
 <!-- STORY -->
 
+### Usage
 
 
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
+Simple
+```jsx
+<ErrorText errorText="example">Example</ErrorText>
+```
+
+### References
+- https://github.com/alphagov/govuk-frontend/tree/master/src/components
 
 

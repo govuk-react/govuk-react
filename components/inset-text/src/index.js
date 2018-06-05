@@ -1,9 +1,3 @@
-// References:
-// https://govuk-elements.herokuapp.com/typography/#typography-inset-text
-//
-// https://github.com/alphagov/govuk-frontend/blob/master/src/components/inset-text/_inset-text.scss
-// https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_panels.scss
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
@@ -21,15 +15,37 @@ const StyledInsetText = styled(Paragraph)(props => ({
   padding: SPACING.SCALE_3,
 }));
 
+/**
+ *
+ * ### Usage
+ *
+ *
+ * Simple
+ * ```jsx
+ * <InsetText>Hello</InsetText>
+ * ```
+ *
+ * Narrow border
+ * ```jsx
+ * <InsetText isNarrow>Hello</InsetText>
+ * ```
+ *
+ * ### References
+ * - https://govuk-elements.herokuapp.com/typography/#typography-inset-text
+ * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/inset-text/_inset-text.scss
+ * - https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_panels.scss
+ */
 const InsetText = props => <StyledInsetText {...props} mb="3" />;
-
-InsetText.propTypes = {
-  children: PropTypes.node.isRequired,
-  isNarrow: PropTypes.bool,
-};
 
 InsetText.defaultProps = {
   isNarrow: false,
+};
+
+InsetText.propTypes = {
+  /**
+   * Renders a narrow border following GDS guides if set to true
+   */
+  isNarrow: PropTypes.bool,
 };
 
 /** Component is not exported withWhitespace because StyledInsetText is based on a Paragraph,

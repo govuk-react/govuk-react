@@ -13,7 +13,6 @@ DateInput
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true |  | node | 
- `className` |  | undefined | string | 
  `errorText` |  | undefined | string | 
  `hintText` |  | undefined | string | 
 
