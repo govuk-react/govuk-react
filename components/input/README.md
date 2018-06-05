@@ -11,16 +11,18 @@ Input
 
 Simple
 ```jsx
-<Input type="text" />
+<Input />
 ```
 
-Custom error colour
-```jsx
-import { ORANGE } from 'govuk-colours';
-
-<Input type="text" errorColor={ORANGE} error="example" />
-```
 ### References:
 - https://github.com/alphagov/govuk-frontend/tree/master/src/components/
+
+### TODO:
+- Remove `errorColor` and provide examples on how to extend the component
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `type` |  | 'text' | string | HTML `<Input />` type
 
 
