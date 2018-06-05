@@ -27,7 +27,7 @@ const Company = (
 const ServiceTitle = (
   <AnchorTag color="#fff" href={link} target="new">
     <React.Fragment>
-      <Header level={3}>Service Title</Header>
+      <Header mb="0" level={3}>Service Title</Header>
     </React.Fragment>
   </AnchorTag>
 );

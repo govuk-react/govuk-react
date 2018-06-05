@@ -1,5 +1,3 @@
-// https://govuk-elements.herokuapp.com/alpha-beta-banners/
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
@@ -33,6 +31,30 @@ const StyledBanner = styled('div')({
   },
 });
 
+/**
+ *
+ * ### Usage
+ *
+ * Alpha
+ * ```jsx
+ * <PhaseBanner level="alpha">
+ *    This part of GOV.UK is being rebuilt &#8211;{' '}
+ *    <AnchorLink href="https://example.com">find out what that means</AnchorLink>
+ *  </PhaseBanner>
+ * ```
+ *
+ * Beta
+ * ```jsx
+ * <PhaseBanner level="beta">
+ *    This part of GOV.UK is being rebuilt &#8211;{' '}
+ *    <AnchorLink href="https://example.com">find out what that means</AnchorLink>
+ *  </PhaseBanner>
+ * ```
+ *
+ * ### References:
+ * - https://govuk-elements.herokuapp.com/alpha-beta-banners/
+ *
+ */
 const PhaseBanner = ({ level, children, ...props }) => (
   <StyledBanner {...props}>
     <PhaseBadge>{level}</PhaseBadge>

@@ -1,5 +1,3 @@
-// https://govuk-elements.herokuapp.com/alpha-beta-banners/
-
 import styled from 'react-emotion';
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -34,6 +32,19 @@ const StyledBadge = styled('strong')({
   },
 });
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * <PhaseBadge>beta</PhaseBadge>
+ * ```
+ *
+ * ### References:
+ * - https://govuk-elements.herokuapp.com/alpha-beta-banners/
+ *
+ */
 const PhaseBadge = props => <StyledBadge {...props} />;
 
 export default withWhiteSpace({ marginBottom: 0 })(PhaseBadge);

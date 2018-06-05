@@ -7,11 +7,14 @@ PhaseBadge
 ```
 <!-- STORY -->
 
+### Usage
 
+Simple
+```jsx
+<PhaseBadge>beta</PhaseBadge>
+```
 
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `className` |  | undefined | string | 
+### References:
+- https://govuk-elements.herokuapp.com/alpha-beta-banners/
 
 

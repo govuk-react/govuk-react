@@ -1,4 +1,3 @@
-// http://alphagov.github.io/govuk_template/example-proposition-menu.html
 // TODO: this component is a work in progress and needs to more closely match existing examples
 // TODO: is TopNav the right name? What's it called in other GDS styles/patterns?
 // (The name Header is ambiguous)
@@ -19,6 +18,18 @@ import MenuButton from './atoms/menu-button/';
 
 import IconTitle from './atoms/icon-title';
 
+/**
+ *
+ * ### Usage
+ *
+ * TopNav
+ * ```jsx
+ * ```
+ *
+ * ### References:
+ * - http://alphagov.github.io/govuk_template/example-proposition-menu.html
+ *
+ */
 const TopNav = ({
   active,
   bgColor,

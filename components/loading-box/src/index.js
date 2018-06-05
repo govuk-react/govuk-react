@@ -1,5 +1,3 @@
-// https://govuk-loader-prototype.herokuapp.com/components/loader
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
@@ -121,6 +119,35 @@ const Overlay = styled('div')({
   width: '100%',
 });
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * <LoadingBox loading>
+ *   Lorem ipsum dolor sit amet
+ * </LoadingBox>
+ * ```
+ *
+ * Loading box complex
+ * ```jsx
+ * <LoadingBox
+ *    loading={false}
+ *    backgroundColor={'#fff'}
+ *    timeIn={800)}
+ *    timeOut={200)}
+ *    backgroundColorOpacity={0.85}
+ *    spinnerColor={'#000'}
+ * >
+ *   Lorem ipsum dolor sit amet
+ * </LoadingBox>
+ * ```
+ *
+ * ### References:
+ * - https://govuk-loader-prototype.herokuapp.com/components/loader
+ *
+ */
 const LoadingBox = ({
   children,
   backgroundColor,

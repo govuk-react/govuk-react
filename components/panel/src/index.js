@@ -1,4 +1,3 @@
-// https://github.com/alphagov/govuk-frontend/tree/master/src/components/panel
 import React from 'react';
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
@@ -47,6 +46,27 @@ const StyledBody = styled('div')({
   },
 });
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * <Panel panelTitle="Application complete" />
+ * ```
+ *
+ * Panel with header and HTML body
+ * ```jsx
+ * <Panel
+ *    panelTitle="Application complete"
+ *    panelBody={['Your reference number', <br />, <strong>HDJ2123F</strong>]}
+ *  />
+ * ```
+ *
+ * ### References:
+ * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/panel
+ *
+ */
 const Panel = ({ panelTitle, panelBody, ...props }) => (
   <StyledPanel {...props}>
     <StyledTitle>{panelTitle}</StyledTitle>
