@@ -1,5 +1,3 @@
-// https://github.com/alphagov/govuk-frontend/tree/master/src/components/
-
 import styled from 'react-emotion';
 import React from 'react';
 import { BLACK } from 'govuk-colours';
@@ -33,6 +31,19 @@ const StyledLabelText = styled('span')(
   }),
 );
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * <LabelText>Example</LabelText>
+ * ```
+ *
+ * ### References:
+ * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/
+ *
+ */
 const LabelText = props => <StyledLabelText {...props} />;
 
 export default withWhiteSpace({ marginBottom: 0 })(LabelText);

@@ -1,5 +1,3 @@
-// https://govuk-static.herokuapp.com/component-guide/lead_paragraph
-
 import React from 'react';
 import styled from 'react-emotion';
 import { withWhiteSpace } from '@govuk-react/hoc';
@@ -22,6 +20,19 @@ const StyledParagraph = styled('p')({
   },
 });
 
+/**
+ *
+ * ### Usage
+ *
+ *
+ * Simple
+ * ```jsx
+ * <LeadParagraph>LeadParagraph example</LeadParagraph>
+ * ```
+ *
+ * ### References
+ * - https://govuk-static.herokuapp.com/component-guide/lead_paragraph
+ */
 const LeadParagraph = props => <StyledParagraph {...props} />;
 
 export default withWhiteSpace({ marginBottom: 5 })(LeadParagraph);

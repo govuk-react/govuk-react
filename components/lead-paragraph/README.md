@@ -7,6 +7,15 @@ LeadParagraph
 ```
 <!-- STORY -->
 
+### Usage
 
+
+Simple
+```jsx
+<LeadParagraph>LeadParagraph example</LeadParagraph>
+```
+
+### References
+- https://govuk-static.herokuapp.com/component-guide/lead_paragraph
 
 

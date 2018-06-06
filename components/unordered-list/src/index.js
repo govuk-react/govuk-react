@@ -1,5 +1,3 @@
-// https://govuk-static.herokuapp.com/component-guide/government_navigation
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
@@ -34,10 +32,38 @@ const StyledList = styled('ul')(
   }),
 );
 
-// TODO use Context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
-
-// listStyleType: normal HTML property values are used here
-// e.g., listStyleType="circle", listStyleType="upper-alpha", listStyleType="none"
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * import ListItem from '@govuk-react/list-item';
+ *
+ * <UnorderedList>
+ *   <ListItem>Lorem ipsum dolor sit.</ListItem>
+ *   <ListItem>Consectetur adipiscing elit.</ListItem>
+ *   <ListItem>Curabitur et libero nec.</ListItem>
+ * </UnorderedList>
+ * ```
+ *
+ * With listStyleType option
+ * ```jsx
+ * import ListItem from '@govuk-react/list-item';
+ *
+ * <UnorderedList listStyleType="square">
+ *   <ListItem>Lorem ipsum dolor sit.</ListItem>
+ *   <ListItem>Consectetur adipiscing elit.</ListItem>
+ *   <ListItem>Curabitur et libero nec.</ListItem>
+ * </UnorderedList>
+ * ```
+ *
+ * ### References
+ * - https://govuk-static.herokuapp.com/component-guide/government_navigation
+ *
+ * ### TODO
+ * - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
+ */
 const UnorderedList = ({ listStyleType, ...props }) => (
   <StyledList listStyleType={listStyleType} {...props} />
 );
@@ -47,6 +73,9 @@ UnorderedList.defaultProps = {
 };
 
 UnorderedList.propTypes = {
+  /**
+   * CSS value for `list-style-type`
+   */
   listStyleType: PropTypes.string,
 };
 
