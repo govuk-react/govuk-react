@@ -2,12 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 
-import Paragraph from '@govuk-react/paragraph';
-
 import { SPACING } from '@govuk-react/constants';
 import { BORDER_COLOUR } from 'govuk-colours';
 
-const StyledInsetText = styled(Paragraph)(props => ({
+const StyledInsetText = styled('div')(props => ({
   boxSizing: 'border-box',
   borderLeftStyle: 'solid',
   borderLeftWidth: props.isNarrow ? '5px' : '10px',
@@ -22,12 +20,20 @@ const StyledInsetText = styled(Paragraph)(props => ({
  *
  * Simple
  * ```jsx
- * <InsetText>Hello</InsetText>
+ * import Paragraph from '@govuk-react/paragraph';
+ *
+ * <InsetText>
+ *  <Paragraph mb={0}>Hello</Paragraph>
+ * </InsetText>
  * ```
  *
  * Narrow border
  * ```jsx
- * <InsetText isNarrow>Hello</InsetText>
+ * import Paragraph from '@govuk-react/paragraph';
+ *
+ * <InsetText isNarrow>
+ *  <Paragraph mb={0}>Hello</Paragraph>
+ * </InsetText>
  * ```
  *
  * ### References
@@ -35,7 +41,7 @@ const StyledInsetText = styled(Paragraph)(props => ({
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/inset-text/_inset-text.scss
  * - https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_panels.scss
  */
-const InsetText = props => <StyledInsetText {...props} mb="3" />;
+const InsetText = props => <StyledInsetText {...props} />;
 
 InsetText.defaultProps = {
   isNarrow: false,
