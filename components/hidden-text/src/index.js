@@ -3,16 +3,24 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 
 import InsetText from '@govuk-react/inset-text';
-import { BLUE } from 'govuk-colours';
+import { BLUE, LIGHT_BLUE } from 'govuk-colours';
 import { NTA_LIGHT } from '@govuk-react/constants';
 
 const StyledSummary = styled('summary')({
   display: 'inline-block',
   color: BLUE,
+  cursor: 'pointer',
   textDecoration: 'underline',
+  textDecorationSkipInk: 'none',
   fontFamily: NTA_LIGHT,
-  padding: '3px',
-  margin: '-3px',
+  position: 'relative',
+  marginBottom: '0.26316em',
+  ':hover': {
+    color: LIGHT_BLUE,
+  },
+  ':focus': {
+    outline: '3px solid #ffbf47',
+  },
 });
 
 /**

@@ -15,8 +15,8 @@ export default () => (
   <HiddenText summaryText={summaryText}>
     { paragraphs.map((paragraphText, index) =>
       (index === paragraphs.length - 1
-       ? <Paragraph mb={0}>{text(`paragraphText${index + 1}`, paragraphText)}</Paragraph>
-       : <Paragraph>{text(`paragraphText${index + 1}`, paragraphText)}</Paragraph>
+       ? <Paragraph key={`paragraphText${index + 1}`} mb={0}>{text(`paragraphText${index + 1}`, paragraphText)}</Paragraph>
+       : <Paragraph key={`paragraphText${index + 1}`}>{text(`paragraphText${index + 1}`, paragraphText)}</Paragraph>
       ))}
   </HiddenText>
 );

@@ -1,10 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HiddenText from './';
+import ReactMarkdown from 'react-markdown';
+import { shallow, mount } from 'enzyme';
 
-describe(HiddenText, () => {
+import Paragraph from '@govuk-react/paragraph';
+import HiddenText, { summaryText, paragraphs } from './fixtures';
+
+describe('hidden text', () => {
+  const wrapperHiddenText = mount(<HiddenText />);
+
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<HiddenText>Example</HiddenText>, div);
+    ReactDOM.render(<HiddenText />, div);
+  });
+
+  it('should render the HiddenText component', () => {
+    const output = shallow(<HiddenText />);
+    expect(output.find(Paragraph).length).toEqual(paragraphs.length);
+  });
+
+  it('should render the summary text', () => {
+    const output = shallow(<HiddenText />);
+    expect(output.get(0).props.summaryText).toEqual(summaryText);
+  });
+
+  it('should render the expected text in each of the Paragraph components', () => {
+    const output = shallow(<HiddenText />);
+    const paragraphList = output.find(Paragraph);
+
+    paragraphList.forEach((paragraph, index) => {
+      expect(paragraph.get(0).props.children).toEqual(paragraphs[index]);
+    });
+  });
+
+  it('matches the HiddenText snapshot', () => {
+    expect(wrapperHiddenText).toMatchSnapshot('hidden text');
   });
 });
