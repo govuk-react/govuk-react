@@ -82,4 +82,4 @@ Paragraph.defaultProps = {
   supportingText: false,
 };
 
-export default withWhiteSpace({ marginBottom: 5 })(Paragraph);
+export default withWhiteSpace({ marginBottom: 4 })(Paragraph);
