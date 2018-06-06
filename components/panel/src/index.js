@@ -75,13 +75,11 @@ const Panel = ({ panelTitle, panelBody, ...props }) => (
 );
 Panel.defaultProps = {
   panelBody: undefined,
-  className: undefined,
 };
 
 Panel.propTypes = {
   panelTitle: PropTypes.string.isRequired,
   panelBody: PropTypes.string,
-  className: PropTypes.string,
 };
 
 export default withWhiteSpace({ marginBottom: 3 })(Panel);
