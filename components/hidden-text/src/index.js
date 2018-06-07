@@ -6,12 +6,17 @@ import InsetText from '@govuk-react/inset-text';
 import { BLUE, LIGHT_BLUE } from 'govuk-colours';
 import { NTA_LIGHT } from '@govuk-react/constants';
 
-const StyledSummary = styled('summary')({
-  display: 'inline-block',
-  color: BLUE,
-  cursor: 'pointer',
+const StyledSpan = styled('span')({
   textDecoration: 'underline',
   textDecorationSkipInk: 'none',
+});
+
+const StyledSummary = styled('summary')({
+  display: 'inline-block',
+  cursor: 'pointer',
+  textDecoration: 'underline',
+  textDecorationSkipInk: 'auto',
+  color: BLUE,
   fontFamily: NTA_LIGHT,
   position: 'relative',
   marginBottom: '0.26316em',
@@ -42,7 +47,7 @@ const StyledSummary = styled('summary')({
  */
 const HiddenText = ({ summaryText, ...props }) => (
   <details open>
-    <StyledSummary>{ summaryText }</StyledSummary>
+    <StyledSummary><StyledSpan>{ summaryText }</StyledSpan></StyledSummary>
     <InsetText isNarrow {...props} />
   </details>
 );
