@@ -4,14 +4,11 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
 .emotion-1 {
   display: inline-block;
   cursor: pointer;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  -webkit-text-decoration-skip-ink: auto;
-  text-decoration-skip-ink: auto;
   color: #005ea5;
   font-family: "nta",Arial,sans-serif;
+  font-size: 19px;
   position: relative;
-  margin-bottom: 0.26316em;
+  margin-bottom: 5px;
 }
 
 .emotion-1:hover {
@@ -20,6 +17,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
 
 .emotion-1:focus {
   outline: 3px solid #ffbf47;
+  outline-offset: -1px;
 }
 
 .emotion-0 {

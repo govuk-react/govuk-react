@@ -1,12 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`inset text matches the InsetText snapshot: inset text 1`] = `
+.emotion-5 {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    margin-bottom: 30px;
+  }
+}
+
 .emotion-4 {
   box-sizing: border-box;
   border-left-style: solid;
   border-left-width: 10px;
   border-color: #bfc1c3;
   padding: 15px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 30px;
+  }
 }
 
 .emotion-2 {
@@ -45,45 +62,29 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
 }
 
 <_default>
-  <InsetText
+  <Styled(InsetText)
     isNarrow={false}
   >
-    <Styled(div)
+    <InsetText
+      className="emotion-5"
       isNarrow={false}
     >
-      <div
-        className="emotion-4"
+      <Styled(div)
+        className="emotion-5"
+        isNarrow={false}
       >
-        <Styled(Paragraph)
-          mb={0}
+        <div
+          className="emotion-4"
         >
-          <Paragraph
-            className="emotion-2"
+          <Styled(Paragraph)
             mb={0}
-            supportingText={false}
           >
-            <Styled(ReactMarkdown)
-              allowedTypes={
-                Array [
-                  "paragraph",
-                  "emphasis",
-                  "strong",
-                  "link",
-                ]
-              }
+            <Paragraph
               className="emotion-2"
-              escapeHtml={false}
               mb={0}
-              renderers={
-                Object {
-                  "link": [Function],
-                }
-              }
-              skipHtml={true}
-              source="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
               supportingText={false}
             >
-              <ReactMarkdown
+              <Styled(ReactMarkdown)
                 allowedTypes={
                   Array [
                     "paragraph",
@@ -92,12 +93,9 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
                     "link",
                   ]
                 }
-                astPlugins={Array []}
-                className="emotion-0"
+                className="emotion-2"
                 escapeHtml={false}
                 mb={0}
-                plugins={Array []}
-                rawSourcePos={false}
                 renderers={
                   Object {
                     "link": [Function],
@@ -105,31 +103,66 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
                 }
                 skipHtml={true}
                 source="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
-                sourcePos={false}
                 supportingText={false}
-                transformLinkUri={[Function]}
               >
-                <div
+                <ReactMarkdown
+                  allowedTypes={
+                    Array [
+                      "paragraph",
+                      "emphasis",
+                      "strong",
+                      "link",
+                    ]
+                  }
+                  astPlugins={Array []}
                   className="emotion-0"
-                  key="root-1-1"
+                  escapeHtml={false}
+                  mb={0}
+                  plugins={Array []}
+                  rawSourcePos={false}
+                  renderers={
+                    Object {
+                      "link": [Function],
+                    }
+                  }
+                  skipHtml={true}
+                  source="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
+                  sourcePos={false}
+                  supportingText={false}
+                  transformLinkUri={[Function]}
                 >
-                  <p
-                    key="paragraph-1-1"
+                  <div
+                    className="emotion-0"
+                    key="root-1-1"
                   >
-                    It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
-                  </p>
-                </div>
-              </ReactMarkdown>
-            </Styled(ReactMarkdown)>
-          </Paragraph>
-        </Styled(Paragraph)>
-      </div>
-    </Styled(div)>
-  </InsetText>
+                    <p
+                      key="paragraph-1-1"
+                    >
+                      It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+                    </p>
+                  </div>
+                </ReactMarkdown>
+              </Styled(ReactMarkdown)>
+            </Paragraph>
+          </Styled(Paragraph)>
+        </div>
+      </Styled(div)>
+    </InsetText>
+  </Styled(InsetText)>
 </_default>
 `;
 
 exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narrow border 1`] = `
+.emotion-5 {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    margin-bottom: 30px;
+  }
+}
+
 .emotion-2 {
   margin-bottom: 0;
 }
@@ -171,48 +204,39 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
   border-left-width: 5px;
   border-color: #bfc1c3;
   padding: 15px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 30px;
+  }
 }
 
 <InsetTextNarrowBorder>
-  <InsetText
+  <Styled(InsetText)
     isNarrow={true}
   >
-    <Styled(div)
+    <InsetText
+      className="emotion-5"
       isNarrow={true}
     >
-      <div
-        className="emotion-4"
+      <Styled(div)
+        className="emotion-5"
+        isNarrow={true}
       >
-        <Styled(Paragraph)
-          mb={0}
+        <div
+          className="emotion-4"
         >
-          <Paragraph
-            className="emotion-2"
+          <Styled(Paragraph)
             mb={0}
-            supportingText={false}
           >
-            <Styled(ReactMarkdown)
-              allowedTypes={
-                Array [
-                  "paragraph",
-                  "emphasis",
-                  "strong",
-                  "link",
-                ]
-              }
+            <Paragraph
               className="emotion-2"
-              escapeHtml={false}
               mb={0}
-              renderers={
-                Object {
-                  "link": [Function],
-                }
-              }
-              skipHtml={true}
-              source="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
               supportingText={false}
             >
-              <ReactMarkdown
+              <Styled(ReactMarkdown)
                 allowedTypes={
                   Array [
                     "paragraph",
@@ -221,12 +245,9 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
                     "link",
                   ]
                 }
-                astPlugins={Array []}
-                className="emotion-0"
+                className="emotion-2"
                 escapeHtml={false}
                 mb={0}
-                plugins={Array []}
-                rawSourcePos={false}
                 renderers={
                   Object {
                     "link": [Function],
@@ -234,26 +255,51 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
                 }
                 skipHtml={true}
                 source="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
-                sourcePos={false}
                 supportingText={false}
-                transformLinkUri={[Function]}
               >
-                <div
+                <ReactMarkdown
+                  allowedTypes={
+                    Array [
+                      "paragraph",
+                      "emphasis",
+                      "strong",
+                      "link",
+                    ]
+                  }
+                  astPlugins={Array []}
                   className="emotion-0"
-                  key="root-1-1"
+                  escapeHtml={false}
+                  mb={0}
+                  plugins={Array []}
+                  rawSourcePos={false}
+                  renderers={
+                    Object {
+                      "link": [Function],
+                    }
+                  }
+                  skipHtml={true}
+                  source="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
+                  sourcePos={false}
+                  supportingText={false}
+                  transformLinkUri={[Function]}
                 >
-                  <p
-                    key="paragraph-1-1"
+                  <div
+                    className="emotion-0"
+                    key="root-1-1"
                   >
-                    It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
-                  </p>
-                </div>
-              </ReactMarkdown>
-            </Styled(ReactMarkdown)>
-          </Paragraph>
-        </Styled(Paragraph)>
-      </div>
-    </Styled(div)>
-  </InsetText>
+                    <p
+                      key="paragraph-1-1"
+                    >
+                      It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+                    </p>
+                  </div>
+                </ReactMarkdown>
+              </Styled(ReactMarkdown)>
+            </Paragraph>
+          </Styled(Paragraph)>
+        </div>
+      </Styled(div)>
+    </InsetText>
+  </Styled(InsetText)>
 </InsetTextNarrowBorder>
 `;
