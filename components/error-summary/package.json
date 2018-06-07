@@ -1,0 +1,24 @@
+{
+  "name": "@govuk-react/error-summary",
+  "version": "0.2.2",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "govuk-colours": "^1.0.3"
+  },
+  "peerDependencies": {
+    "emotion": ">=9",
+    "react-emotion": ">=9",
+    "prop-types": ">=15",
+    "react": ">=15"
+  },
+  "scripts": {
+    "build": "npm run build:lib && npm run build:es",
+    "build:lib": "rimraf lib && babel src -d lib --source-maps",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps"
+  },
+  "main": "lib/index.js",
+  "module": "es/index.js"
+}
