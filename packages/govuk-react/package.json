@@ -14,6 +14,7 @@
     "@govuk-react/grid-col": "^0.2.2",
     "@govuk-react/grid-row": "^0.2.2",
     "@govuk-react/header": "^0.2.2",
+    "@govuk-react/hidden-text": "^0.2.2",
     "@govuk-react/hint-text": "^0.2.2",
     "@govuk-react/hoc": "^0.2.2",
     "@govuk-react/icons": "^0.2.2",

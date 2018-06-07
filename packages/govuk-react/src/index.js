@@ -12,6 +12,7 @@ export { default as FileUpload } from '@govuk-react/file-upload';
 export { default as GridCol } from '@govuk-react/grid-col';
 export { default as GridRow } from '@govuk-react/grid-row';
 export { default as Header } from '@govuk-react/header';
+export { default as HiddenText } from '@govuk-react/hidden-text';
 export { default as HintText } from '@govuk-react/hint-text';
 export { default as Input } from '@govuk-react/input';
 export { default as InputField } from '@govuk-react/input-field';

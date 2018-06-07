@@ -12,12 +12,20 @@ InsetText
 
 Simple
 ```jsx
-<InsetText>Hello</InsetText>
+import Paragraph from '@govuk-react/paragraph';
+
+<InsetText>
+ <Paragraph mb={0}>Hello</Paragraph>
+</InsetText>
 ```
 
 Narrow border
 ```jsx
-<InsetText isNarrow>Hello</InsetText>
+import Paragraph from '@govuk-react/paragraph';
+
+<InsetText isNarrow>
+ <Paragraph mb={0}>Hello</Paragraph>
+</InsetText>
 ```
 
 ### References
