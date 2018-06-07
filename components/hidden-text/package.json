@@ -1,17 +1,17 @@
 {
   "name": "@govuk-react/hidden-text",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "dependencies": {
     "@govuk-react/constants": "^0.2.2",
-    "@govuk-react/inset-text": "^0.2.2",
-    "@govuk-react/paragraph": "^0.2.2",
+    "@govuk-react/inset-text": "^0.2.3",
+    "@govuk-react/paragraph": "^0.2.3",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
     "emotion": ">=9",
-    "react-emotion": ">=9",
     "prop-types": ">=15",
-    "react": ">=15"
+    "react": ">=15",
+    "react-emotion": ">=9"
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es",
