@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 
 import InsetText from '@govuk-react/inset-text';
-import { BLUE, LIGHT_BLUE } from 'govuk-colours';
-import { NTA_LIGHT } from '@govuk-react/constants';
+import { LINK_COLOUR, LINK_HOVER_COLOUR, FOCUS_COLOUR } from 'govuk-colours';
+import { FOCUS_WIDTH, FONT_SIZE, SPACING, NTA_LIGHT } from '@govuk-react/constants';
 
 const StyledSpan = styled('span')({
   textDecoration: 'underline',
@@ -14,17 +14,17 @@ const StyledSpan = styled('span')({
 const StyledSummary = styled('summary')({
   display: 'inline-block',
   cursor: 'pointer',
-  textDecoration: 'underline',
-  textDecorationSkipInk: 'auto',
-  color: BLUE,
+  color: LINK_COLOUR,
   fontFamily: NTA_LIGHT,
+  fontSize: FONT_SIZE.SIZE_19,
   position: 'relative',
-  marginBottom: '0.26316em',
+  marginBottom: SPACING.SCALE_1,
   ':hover': {
-    color: LIGHT_BLUE,
+    color: LINK_HOVER_COLOUR,
   },
   ':focus': {
-    outline: '3px solid #ffbf47',
+    outline: `${FOCUS_WIDTH} solid ${FOCUS_COLOUR}`,
+    outlineOffset: '-1px',
   },
 });
 

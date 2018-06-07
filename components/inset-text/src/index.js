@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 
 import { SPACING } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 import { BORDER_COLOUR } from 'govuk-colours';
 
 const StyledInsetText = styled('div')(props => ({
@@ -54,8 +55,4 @@ InsetText.propTypes = {
   isNarrow: PropTypes.bool,
 };
 
-/** Component is not exported withWhitespace because StyledInsetText is based on a Paragraph,
- *  which is also exported withWhitespace and therefore takes precedence.
- * 'mb' is used as a prop instead to override this functionality.
- */
-export default InsetText;
+export default withWhiteSpace({ marginBottom: 6 })(InsetText);
