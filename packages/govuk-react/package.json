@@ -43,6 +43,7 @@
     "@govuk-react/text-area": "^0.2.2",
     "@govuk-react/top-nav": "^0.2.2",
     "@govuk-react/unordered-list": "^0.2.2",
+    "@govuk-react/warning-text": "0.2.3",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
