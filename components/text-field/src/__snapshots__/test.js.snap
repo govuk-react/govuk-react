@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextField matches wrapper snapshot: wrapper mount 1`] = `
+.emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-10 {
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-10 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-10 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-9 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-9 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-3 {
+  display: block;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #6f777b;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 50%;
+  }
+}
+
+.emotion-6:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    margin-bottom: 0;
+  }
+}
+
+<_default>
+  <Styled(TextField)
+    hint="It’s on your National Insurance card, benefit letter, payslip or P60."
+    meta={
+      Object {
+        "error": "",
+      }
+    }
+  >
+    <TextField
+      className="emotion-1"
+      hint="It’s on your National Insurance card, benefit letter, payslip or P60."
+      input={Object {}}
+      meta={
+        Object {
+          "error": "",
+        }
+      }
+    >
+      <Styled(Label)
+        className="emotion-1"
+        error=""
+      >
+        <Label
+          className="emotion-10"
+          error=""
+        >
+          <Styled(label)
+            className="emotion-10"
+            error=""
+          >
+            <label
+              className="emotion-9"
+            >
+              <Styled(LabelText)>
+                <LabelText
+                  className="emotion-1"
+                >
+                  <Styled(span)
+                    className="emotion-1"
+                  >
+                    <span
+                      className="emotion-0"
+                    >
+                      National Insurance number
+                    </span>
+                  </Styled(span)>
+                </LabelText>
+              </Styled(LabelText)>
+              <Styled(HintText)>
+                <HintText
+                  className="emotion-1"
+                >
+                  <Styled(span)
+                    className="emotion-1"
+                  >
+                    <span
+                      className="emotion-3"
+                    >
+                      It’s on your National Insurance card, benefit letter, payslip or P60.
+                    </span>
+                  </Styled(span)>
+                </HintText>
+              </Styled(HintText)>
+              <Styled(Input)
+                error=""
+              >
+                <Input
+                  className="emotion-1"
+                  error=""
+                  type="text"
+                >
+                  <Styled(input)
+                    className="emotion-1"
+                    error=""
+                    type="text"
+                  >
+                    <input
+                      className="emotion-6"
+                      type="text"
+                    />
+                  </Styled(input)>
+                </Input>
+              </Styled(Input)>
+            </label>
+          </Styled(label)>
+        </Label>
+      </Styled(Label)>
+    </TextField>
+  </Styled(TextField)>
+</_default>
+`;

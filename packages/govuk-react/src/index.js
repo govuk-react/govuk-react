@@ -41,6 +41,7 @@ export { default as DocumentFooterMetadata } from '@govuk-react/document-footer-
 export { default as LoadingBox } from '@govuk-react/loading-box';
 export { default as TopNav } from '@govuk-react/top-nav';
 export { default as Table } from '@govuk-react/table';
+export { default as TextField } from '@govuk-react/text-field';
 export { default as LeadParagraph } from '@govuk-react/lead-paragraph';
 export { default as WarningText } from '@govuk-react/warning-text';
 export { default as SupportingHeader } from '@govuk-react/supporting-header';

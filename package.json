@@ -117,6 +117,7 @@
     "@govuk-react/supporting-header": "*",
     "@govuk-react/table": "*",
     "@govuk-react/text-area": "*",
+    "@govuk-react/text-field": "*",
     "@govuk-react/top-nav": "*",
     "@govuk-react/unordered-list": "*",
     "@govuk-react/warning-text": "*",
