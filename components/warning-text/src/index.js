@@ -25,6 +25,20 @@ const WarningTextInner = styled('div')({
   },
 });
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * <WarningText>Example</WarningText>
+ * ```
+ *
+ * ### References:
+ * - https://govuk-elements.herokuapp.com/typography/#typography-warning-text
+ * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/warning-text
+ *
+ */
 const WarningText = ({ children }) => (
   <WarningTextInner>{children}</WarningTextInner>
 );
