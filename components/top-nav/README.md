@@ -12,12 +12,12 @@ TopNav
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `active` |  | undefined | number | 
- `bgColor` |  | BLACK | string | 
- `children` |  | undefined | node | 
- `color` |  | WHITE | string | 
- `company` |  | undefined | node | 
- `search` |  | false | node | 
- `serviceTitle` |  | undefined | node | 
+ `active` |  | ```undefined``` | number | 
+ `bgColor` |  | ```BLACK``` | string | 
+ `children` |  | ```undefined``` | node | 
+ `color` |  | ```WHITE``` | string | 
+ `company` |  | ```undefined``` | node | 
+ `search` |  | ```false``` | node | 
+ `serviceTitle` |  | ```undefined``` | node | 
 
 

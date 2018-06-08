@@ -34,9 +34,9 @@ import { ButtonArrow } from '@govuk-react/icons';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | 'Button' | node | Button text
- `disabled` |  | false | bool | Renders a disabled button if set to true
- `icon` |  | undefined | node | Button icon
- `start` |  | false | bool | Renders a large button if set to true
+ `children` |  | ```'Button'``` | node | Button text
+ `disabled` |  | ```false``` | bool | Renders a disabled button if set to true
+ `icon` |  | ```undefined``` | node | Button icon
+ `start` |  | ```false``` | bool | Renders a large button if set to true
 
 

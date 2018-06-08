@@ -43,9 +43,9 @@ const meta = {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
- `hint` |  | undefined | string | 
- `input` |  | {} | shape[object Object] | 
- `meta` |  | {} | shape[object Object] | 
+ `children` | true | `````` | node | 
+ `hint` |  | ```undefined``` | string | 
+ `input` |  | ```{}``` | shape[object Object] | 
+ `meta` |  | ```{}``` | shape[object Object] | 
 
 

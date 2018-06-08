@@ -48,9 +48,9 @@ const meta = {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `acceptedFormats` |  | undefined | string | 
- `children` | true |  | node | 
- `hint` |  | undefined | string | Optional hint text
- `meta` |  | {} | shape[object Object] | Final form meta object, pending adjustment/removal
+ `acceptedFormats` |  | ```undefined``` | string | 
+ `children` | true | `````` | node | 
+ `hint` |  | ```undefined``` | string | Optional hint text
+ `meta` |  | ```{}``` | shape[object Object] | Final form meta object, pending adjustment/removal
 
 

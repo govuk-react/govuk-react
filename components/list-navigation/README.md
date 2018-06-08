@@ -53,7 +53,7 @@ const AnchorLink = asAnchor(Link);
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | List navigation content
- `listStyleType` |  | undefined | string | CSS value for `list-style-type`
+ `children` | true | `````` | node | List navigation content
+ `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`
 
 

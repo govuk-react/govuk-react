@@ -30,6 +30,6 @@ import GridCol from '@govuk-react/grid-col';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `placeholder` |  | undefined | string | 
+ `placeholder` |  | ```undefined``` | string | 
 
 

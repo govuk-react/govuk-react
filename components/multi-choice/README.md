@@ -30,9 +30,9 @@ import Radio from '@govuk-react/radio';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
- `hint` |  | undefined | string | 
- `label` | true |  | node | 
- `meta` |  | {} | shape[object Object] | 
+ `children` | true | `````` | node | 
+ `hint` |  | ```undefined``` | string | 
+ `label` | true | `````` | node | 
+ `meta` |  | ```{}``` | shape[object Object] | 
 
 

@@ -23,6 +23,6 @@ Simple
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `type` |  | 'text' | string | HTML `<Input />` type
+ `type` |  | ```'text'``` | string | HTML `<Input />` type
 
 
