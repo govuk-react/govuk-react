@@ -89,6 +89,7 @@
     "@govuk-react/grid-col": "*",
     "@govuk-react/grid-row": "*",
     "@govuk-react/header": "*",
+    "@govuk-react/hidden-text": "*",
     "@govuk-react/hint-text": "*",
     "@govuk-react/images": "*",
     "@govuk-react/input": "*",

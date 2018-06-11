@@ -393,7 +393,6 @@ Prop | Required | Default | Type | Description
 
 
 ErrorText
-=========
 
 ### Import
 ```js
@@ -404,6 +403,7 @@ ErrorText
 ### Usage
 
 
+=======
 Simple
 ```jsx
 <ErrorText errorText="example">Example</ErrorText>
@@ -556,6 +556,107 @@ Prop | Required | Default | Type | Description
  `size` |  | undefined | enumObject.keys(FONT_SIZES) | Visual size level, accepts   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XSMALL`
 
 
+HiddenText
+==========
+
+### Import
+```js
+  import HiddenText from '@govuk-react/hidden-text';
+```
+<!-- STORY -->
+
+### Usage
+
+Simple
+```jsx
+import Paragraph from '@govuk-react/paragraph';
+
+<HiddenText summaryText={'Help with nationality'}>
+  <Paragraph mb={0}>I am a paragraph. Please read me.</Paragraph>
+</HiddenText>
+```
+
+### References
+- https://govuk-elements.herokuapp.com/typography/#typography-hidden-text
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `summaryText` |  | '' | string | 
+
+
+InsetText
+=========
+
+### Import
+```js
+  import InsetText from '@govuk-react/inset-text';
+```
+<!-- STORY -->
+
+### Usage
+
+
+Simple
+```jsx
+<InsetText>Hello</InsetText>
+```
+
+Narrow border
+```jsx
+<InsetText isNarrow>Hello</InsetText>
+```
+
+### References
+- https://govuk-elements.herokuapp.com/typography/#typography-inset-text
+- https://github.com/alphagov/govuk-frontend/blob/master/src/components/inset-text/_inset-text.scss
+- https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_panels.scss
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `isNarrow` |  | false | bool | Renders a narrow border following GDS guides if set to true
+
+
+Paragraph
+=========
+
+### Import
+```js
+  import Paragraph from '@govuk-react/paragraph';
+```
+<!-- STORY -->
+
+### Usage
+
+Supports bold, italic and links in Markdown ONLY.
+This is to ensure we follow GDS as closely as possible.
+It is worth noting that GDS recommends avoiding bold and italics.
+
+Simple Usage with markdown
+```jsx
+<Paragraph>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
+```
+
+As supporting text
+```jsx
+<Paragraph supportingText>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
+```
+
+### References
+- https://govuk-elements.herokuapp.com/typography/#typography-body-copy
+
+### TODO
+- Add test for supporting text
+- Add test for rendering supported markdown components
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` |  | '' | node | Text content supporting markdown
+ `supportingText` |  | false | bool | Is this paragraph supporting text for another element?
+
+
 HintText
 ========
 
@@ -681,12 +782,20 @@ InsetText
 
 Simple
 ```jsx
-<InsetText>Hello</InsetText>
+import Paragraph from '@govuk-react/paragraph';
+
+<InsetText>
+ <Paragraph mb={0}>Hello</Paragraph>
+</InsetText>
 ```
 
 Narrow border
 ```jsx
-<InsetText isNarrow>Hello</InsetText>
+import Paragraph from '@govuk-react/paragraph';
+
+<InsetText isNarrow>
+ <Paragraph mb={0}>Hello</Paragraph>
+</InsetText>
 ```
 
 ### References
