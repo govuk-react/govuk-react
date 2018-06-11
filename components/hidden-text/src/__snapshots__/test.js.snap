@@ -126,9 +126,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
   <HiddenText
     summaryText="Help with nationality"
   >
-    <details
-      open={true}
-    >
+    <details>
       <Styled(summary)>
         <summary
           className="emotion-1"
