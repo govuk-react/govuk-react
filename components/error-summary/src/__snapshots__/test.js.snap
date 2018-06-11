@@ -374,14 +374,17 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                           >
                             <Styled(Anchor)
                               onClick={[Function]}
+                              tabIndex={-1}
                             >
                               <Anchor
                                 className="emotion-8"
                                 onClick={[Function]}
+                                tabIndex={-1}
                               >
                                 <a
                                   className="emotion-8"
                                   onClick={[Function]}
+                                  tabIndex={-1}
                                 >
                                   Descriptive link to the target question with an error
                                 </a>
@@ -405,14 +408,17 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                           >
                             <Styled(Anchor)
                               onClick={[Function]}
+                              tabIndex={-1}
                             >
                               <Anchor
                                 className="emotion-8"
                                 onClick={[Function]}
+                                tabIndex={-1}
                               >
                                 <a
                                   className="emotion-8"
                                   onClick={[Function]}
+                                  tabIndex={-1}
                                 >
                                   Descriptive link to the other target question with an error
                                 </a>
@@ -439,15 +445,9 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
         Target Question
       </div>
     </Styled(div)>
-    <Styled(div)
-      innerRef={[Function]}
-    >
-      <div
-        className="emotion-24"
-      >
-        Other Target Question
-      </div>
-    </Styled(div)>
+    <div>
+      Other Target Question
+    </div>
   </div>
 </ErrorSummaryExample>
 `;
