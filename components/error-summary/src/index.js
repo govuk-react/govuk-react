@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 
-import { NTA_LIGHT, TEXT_COLOUR, ERROR_COLOUR, FOCUS_COLOUR } from 'govuk-colours';
+import { TEXT_COLOUR, ERROR_COLOUR, FOCUS_COLOUR } from 'govuk-colours';
 
 import Header from '@govuk-react/header';
 import Paragraph from '@govuk-react/paragraph';
@@ -12,6 +12,7 @@ import UnorderedList from '@govuk-react/unordered-list';
 import ListItem from '@govuk-react/list-item';
 
 import {
+  NTA_LIGHT,
   FONT_SIZE,
   BORDER_WIDTH,
   BORDER_WIDTH_MOBILE,
@@ -73,7 +74,7 @@ const ErrorSummary = ({
     { errors.length > 0 &&
       <UnorderedList listStyleType="none">
         { errors.map(error => (
-          <ListItem>
+          <ListItem key={error.id}>
             <StyledErrorText href={error.target}>{error.text}</StyledErrorText>
           </ListItem>
           ))
@@ -91,7 +92,7 @@ ErrorSummary.defaultProps = {
 ErrorSummary.propTypes = {
   heading: PropTypes.string.isRequired,
   description: PropTypes.string,
-  errors: PropTypes.arrayOf(PropTypes.shape({ target: PropTypes.string, text: PropTypes.string })),
+  errors: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.number, target: PropTypes.string, text: PropTypes.string })),
 };
 
 export default withWhiteSpace({ marginBottom: 6 })(ErrorSummary);
