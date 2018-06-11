@@ -31,11 +31,11 @@ import { withWhiteSpace } from '@govuk-react/hoc';
 const TextField = ({
   hint, input, meta, children, ...props
 }) => (
-  <Label error={meta.error} {...props}>
+  <Label error={meta.touched && meta.error} {...props}>
     <LabelText>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
-    {meta.error && <ErrorText>{meta.error}</ErrorText>}
-    <Input error={meta.error} {...input} />
+    {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
+    <Input error={meta.touched && meta.error} {...input} />
   </Label>
 );
 
