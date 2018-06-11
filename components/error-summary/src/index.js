@@ -69,6 +69,9 @@ const StyledErrorSummary = styled('div')({
  *
  * Simple
  * ```jsx
+ * import React from 'react';
+ * import styled from 'react-emotion';
+ *
  * export const heading = 'Message to alert the user to a problem goes here';
  * export const description = 'Optional description of the errors and how to correct them';
  *
@@ -101,9 +104,9 @@ const StyledErrorSummary = styled('div')({
  *         <StyledDiv innerRef={(node) => { this.targetQuestion = node; }}>
  *           Target Question
  *         </StyledDiv>
- *         <StyledDiv innerRef={(node) => { this.otherTargetQuestion = node; }}>
+ *         <div ref={(node) => { this.otherTargetQuestion = node; }}>
  *           Other Target Question
- *         </StyledDiv>
+ *         </div>
  *       </div>
  *     );
  *   }

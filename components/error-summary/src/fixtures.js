@@ -40,9 +40,9 @@ export default class ErrorSummaryExample extends React.Component {
         <StyledDiv innerRef={(node) => { this.targetQuestion = node; }}>
           Target Question
         </StyledDiv>
-        <StyledDiv innerRef={(node) => { this.otherTargetQuestion = node; }}>
+        <div ref={(node) => { this.otherTargetQuestion = node; }}>
           Other Target Question
-        </StyledDiv>
+        </div>
       </div>
     );
   }
