@@ -34,7 +34,7 @@ describe('error summary', () => {
     const output = mount(<ErrorSummary />);
 
     output.find('UnorderedList').find('ListItem').forEach((listItem, index) => {
-      expect(listItem.text()).toEqual(errors[index].text);
+      expect(listItem.text()).toEqual(errors[index]);
     });
   });
 

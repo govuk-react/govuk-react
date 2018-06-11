@@ -203,24 +203,24 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 }
 
 .emotion-24 {
-  margin-bottom: 600px;
+  margin-bottom: 150px;
 }
 
-<_default>
+<ErrorSummaryExample>
   <div>
     <Styled(ErrorSummary)
       description="Optional description of the errors and how to correct them"
       errors={
         Array [
           Object {
+            "handleScrollToElement": [Function],
             "id": 0,
-            "target": "#target",
-            "text": "Descriptive link to the question with an error",
+            "text": "Descriptive link to the target question with an error",
           },
           Object {
+            "handleScrollToElement": [Function],
             "id": 1,
-            "target": "#target",
-            "text": "Descriptive link to the question with an error",
+            "text": "Descriptive link to the other target question with an error",
           },
         ]
       }
@@ -232,14 +232,14 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
         errors={
           Array [
             Object {
+              "handleScrollToElement": [Function],
               "id": 0,
-              "target": "#target",
-              "text": "Descriptive link to the question with an error",
+              "text": "Descriptive link to the target question with an error",
             },
             Object {
+              "handleScrollToElement": [Function],
               "id": 1,
-              "target": "#target",
-              "text": "Descriptive link to the question with an error",
+              "text": "Descriptive link to the other target question with an error",
             },
           ]
         }
@@ -373,17 +373,17 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                             className="emotion-10"
                           >
                             <Styled(Anchor)
-                              href="#target"
+                              onClick={[Function]}
                             >
                               <Anchor
                                 className="emotion-8"
-                                href="#target"
+                                onClick={[Function]}
                               >
                                 <a
                                   className="emotion-8"
-                                  href="#target"
+                                  onClick={[Function]}
                                 >
-                                  Descriptive link to the question with an error
+                                  Descriptive link to the target question with an error
                                 </a>
                               </Anchor>
                             </Styled(Anchor)>
@@ -404,17 +404,17 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                             className="emotion-10"
                           >
                             <Styled(Anchor)
-                              href="#target"
+                              onClick={[Function]}
                             >
                               <Anchor
                                 className="emotion-8"
-                                href="#target"
+                                onClick={[Function]}
                               >
                                 <a
                                   className="emotion-8"
-                                  href="#target"
+                                  onClick={[Function]}
                                 >
-                                  Descriptive link to the question with an error
+                                  Descriptive link to the other target question with an error
                                 </a>
                               </Anchor>
                             </Styled(Anchor)>
@@ -431,15 +431,23 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
       </ErrorSummary>
     </Styled(ErrorSummary)>
     <Styled(div)
-      id="target"
+      innerRef={[Function]}
     >
       <div
         className="emotion-24"
-        id="target"
       >
         Target Question
       </div>
     </Styled(div)>
+    <Styled(div)
+      innerRef={[Function]}
+    >
+      <div
+        className="emotion-24"
+      >
+        Other Target Question
+      </div>
+    </Styled(div)>
   </div>
-</_default>
+</ErrorSummaryExample>
 `;

@@ -75,7 +75,9 @@ const ErrorSummary = ({
       <UnorderedList listStyleType="none">
         { errors.map(error => (
           <ListItem key={error.id}>
-            <StyledErrorText href={error.target}>{error.text}</StyledErrorText>
+            <StyledErrorText onClick={error.handleScrollToElement}>
+              {error.text}
+            </StyledErrorText>
           </ListItem>
           ))
         }
@@ -92,7 +94,11 @@ ErrorSummary.defaultProps = {
 ErrorSummary.propTypes = {
   heading: PropTypes.string.isRequired,
   description: PropTypes.string,
-  errors: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.number, target: PropTypes.string, text: PropTypes.string })),
+  errors: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    handleScrollToElement: PropTypes.func,
+    text: PropTypes.string,
+  })),
 };
 
 export default withWhiteSpace({ marginBottom: 6 })(ErrorSummary);
