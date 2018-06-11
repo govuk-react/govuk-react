@@ -879,6 +879,14 @@
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/@govuk-react/icon-crown/-/icon-crown-0.0.5.tgz#364dfde56c6a839fe962aeb90bb3bcc2a0b876c2"
 
+"@govuk-react/paragraph@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@govuk-react/paragraph/-/paragraph-0.2.3.tgz#8903d7596b5d1e0f74d68ee4bb4cd325441b3219"
+  dependencies:
+    "@govuk-react/constants" "^0.2.2"
+    "@govuk-react/hoc" "^0.2.2"
+    govuk-colours "^1.0.3"
+
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
