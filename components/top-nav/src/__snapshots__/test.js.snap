@@ -33,7 +33,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: calc(100% - 15px);
+  width: calc(100% - 30px);
   max-width: 960px;
   padding: 10px 15px;
   box-sizing: border-box;
@@ -162,7 +162,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   border-bottom: 10px solid #005ea5;
   max-width: 960px;
   margin: 0 auto;
-  width: calc(100% - 15px);
+  width: calc(100% - 30px);
 }
 
 @media only screen and (min-width:641px) {
@@ -376,7 +376,7 @@ exports[`TopNav with icon title: icon title 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: calc(100% - 15px);
+  width: calc(100% - 30px);
   max-width: 960px;
   padding: 10px 15px;
   box-sizing: border-box;
@@ -459,7 +459,7 @@ exports[`TopNav with icon title: icon title 1`] = `
   border-bottom: 10px solid #005ea5;
   max-width: 960px;
   margin: 0 auto;
-  width: calc(100% - 15px);
+  width: calc(100% - 30px);
 }
 
 @media only screen and (min-width:641px) {
