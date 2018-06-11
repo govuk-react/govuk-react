@@ -64,15 +64,34 @@ const StyledErrorSummary = styled('div')({
   },
 });
 
-const ErrorSummary = props => (
+const ErrorSummary = ({
+  heading, description, errors, ...props
+}) => (
   <StyledErrorSummary tabIndex={-1} {...props}>
-    <Header level={2}>Message to alert the user to a problem goes here</Header>
-    <Paragraph mb={2}>Optional description of the errors and how to correct them</Paragraph>
-    <UnorderedList listStyleType="none">
-      <ListItem><StyledErrorText href="#target">Descriptive link to the question with an error</StyledErrorText></ListItem>
-      <ListItem><StyledErrorText href="#target">Descriptive link to the question with an error</StyledErrorText></ListItem>
-    </UnorderedList>
+    <Header level={2}>{ heading }</Header>
+    { description && <Paragraph mb={2}>{ description }</Paragraph> }
+    { errors.length > 0 &&
+      <UnorderedList listStyleType="none">
+        { errors.map(error => (
+          <ListItem>
+            <StyledErrorText href={error.target}>{error.text}</StyledErrorText>
+          </ListItem>
+          ))
+        }
+      </UnorderedList>
+    }
   </StyledErrorSummary>
 );
+
+ErrorSummary.defaultProps = {
+  description: undefined,
+  errors: [],
+};
+
+ErrorSummary.propTypes = {
+  heading: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  errors: PropTypes.arrayOf(PropTypes.shape({ target: PropTypes.string, text: PropTypes.string })),
+};
 
 export default withWhiteSpace({ marginBottom: 6 })(ErrorSummary);
