@@ -4,6 +4,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 
+import { IconImportant } from '@govuk-react/icons';
+import { withWhiteSpace } from '@govuk-react/hoc';
+
 import {
   FONT_SIZE,
   LINE_HEIGHT,
@@ -11,17 +14,29 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-const WarningTextInner = styled('div')({
+const StyledWarningText = styled('div')({
+  alignItems: 'center',
   boxSizing: 'border-box',
-  fontFamily: NTA_LIGHT,
-  fontWeight: 400,
-  textTransform: 'none',
-  fontSize: FONT_SIZE.SIZE_14,
-  lineHeight: LINE_HEIGHT.SIZE_14,
+  display: 'flex',
   width: '100%',
+});
+
+const IconImportantWrapper = styled('i')({
+  flex: 'none',
+  height: '35px',
+  marginRight: '15px',
+  width: '35px',
+});
+
+const WarningTextWrapper = styled('strong')({
+  fontFamily: NTA_LIGHT,
+  fontSize: FONT_SIZE.SIZE_16,
+  fontWeight: 700,
+  lineHeight: LINE_HEIGHT.SIZE_16,
+  textTransform: 'none',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    fontSize: FONT_SIZE.SIZE_16,
-    lineHeight: LINE_HEIGHT.SIZE_16,
+    fontSize: FONT_SIZE.SIZE_19,
+    lineHeight: LINE_HEIGHT.SIZE_19,
   },
 });
 
@@ -40,11 +55,16 @@ const WarningTextInner = styled('div')({
  *
  */
 const WarningText = ({ children }) => (
-  <WarningTextInner>{children}</WarningTextInner>
+  <StyledWarningText>
+    <IconImportantWrapper>
+      <IconImportant />
+    </IconImportantWrapper>
+    <WarningTextWrapper>{children}</WarningTextWrapper>
+  </StyledWarningText>
 );
 
 WarningText.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default WarningText;
+export default withWhiteSpace({ marginBottom: 0 })(WarningText);

@@ -1,10 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
 import WarningText from './';
 
-describe(WarningText, () => {
+describe('WarningText', () => {
+  const exampleText =
+    'A very long warning message. This includes a lot of text to give a good representation of a more average length warning. That way you can see more than one line wrapping.';
+  let wrapper;
+
   it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<WarningText>Example</WarningText>, div);
+    wrapper = mount(<WarningText>{exampleText}</WarningText>);
+  });
+  it('renders an SVG', () => {
+    expect(wrapper.find('svg')).toHaveLength(1);
+  });
+  it('renders expected strong text', () => {
+    expect(wrapper.find('strong').text()).toBe(exampleText);
+  });
+  it('renders consistently', () => {
+    expect(wrapper).toMatchSnapshot();
   });
 });
