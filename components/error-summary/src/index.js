@@ -67,7 +67,7 @@ const StyledErrorSummary = styled('div')({
 const ErrorSummary = props => (
   <StyledErrorSummary tabIndex={-1} {...props}>
     <Header level={2}>Message to alert the user to a problem goes here</Header>
-    <Paragraph mb={6}>Optional description of the errors and how to correct them</Paragraph>
+    <Paragraph mb={2}>Optional description of the errors and how to correct them</Paragraph>
     <UnorderedList listStyleType="none">
       <ListItem><StyledErrorText href="#target">Descriptive link to the question with an error</StyledErrorText></ListItem>
       <ListItem><StyledErrorText href="#target">Descriptive link to the question with an error</StyledErrorText></ListItem>
