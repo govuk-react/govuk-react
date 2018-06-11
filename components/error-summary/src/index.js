@@ -128,7 +128,7 @@ const ErrorSummary = ({
       <UnorderedList listStyleType="none">
         { errors.map(error => (
           <ListItem key={error.id}>
-            <StyledErrorText onClick={error.handleScrollToElement}>
+            <StyledErrorText tabIndex={-1} onClick={error.handleScrollToElement}>
               {error.text}
             </StyledErrorText>
           </ListItem>
