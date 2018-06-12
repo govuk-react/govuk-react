@@ -5,7 +5,7 @@ import { mount } from 'enzyme';
 import ErrorSummary, { heading, description, errors } from './fixtures';
 
 describe('error summary', () => {
-  const wrapperInsetText = mount(<ErrorSummary />);
+  const wrapperErrorSummary = mount(<ErrorSummary />);
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
@@ -34,11 +34,11 @@ describe('error summary', () => {
     const output = mount(<ErrorSummary />);
 
     output.find('UnorderedList').find('ListItem').forEach((listItem, index) => {
-      expect(listItem.text()).toEqual(errors[index]);
+      expect(listItem.text()).toEqual(errors[index].text);
     });
   });
 
   it('matches the ErrorSummary snapshot', () => {
-    expect(wrapperInsetText).toMatchSnapshot('error summary');
+    expect(wrapperErrorSummary).toMatchSnapshot('error summary');
   });
 });

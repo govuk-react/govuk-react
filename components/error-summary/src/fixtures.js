@@ -1,49 +1,41 @@
 import React from 'react';
 import { text } from '@storybook/addon-knobs/react';
-import styled from 'react-emotion';
+import InputField from '@govuk-react/input-field';
+import TextArea from '@govuk-react/text-area';
 
 import ErrorSummary from '.';
 
 export const heading = 'Message to alert the user to a problem goes here';
 export const description = 'Optional description of the errors and how to correct them';
 export const errors = [
-  'Descriptive link to the target question with an error',
-  'Descriptive link to the other target question with an error',
+  {
+    targetName: 'national-insurance-number',
+    text: 'National Insurance number error',
+  },
+  {
+    targetName: 'description',
+    text: 'Description of what you saw error',
+  },
 ];
 
-const StyledDiv = styled('div')({
-  marginBottom: '150px',
-});
-
-export default class ErrorSummaryExample extends React.Component {
-  errors = [
-    {
-      id: 0,
-      handleScrollToElement: () => this.targetQuestion.scrollIntoView(),
-      text: 'Descriptive link to the target question with an error',
-    },
-    {
-      id: 1,
-      handleScrollToElement: () => this.otherTargetQuestion.scrollIntoView(),
-      text: 'Descriptive link to the other target question with an error',
-    },
-  ];
-
-  render() {
-    return (
-      <div>
-        <ErrorSummary
-          heading={text('heading', heading)}
-          description={text('description', description)}
-          errors={this.errors}
-        />
-        <StyledDiv innerRef={(node) => { this.targetQuestion = node; }}>
-          Target Question
-        </StyledDiv>
-        <div ref={(node) => { this.otherTargetQuestion = node; }}>
-          Other Target Question
-        </div>
-      </div>
-    );
-  }
-}
+export default () => (
+  <div>
+    <ErrorSummary
+      heading={text('heading', heading)}
+      description={text('description', description)}
+      errors={errors}
+    />
+    <InputField
+      name="national-insurance-number"
+      hint={[
+        'It’s on your National Insurance card, benefit letter, payslip or P60.',
+        <br />,
+        'For example, ‘QQ 12 34 56 C’.',
+      ]}
+    >
+      National Insurance number
+    </InputField>
+    <br />
+    <TextArea name="description">Description of what you saw</TextArea>
+  </div>
+);

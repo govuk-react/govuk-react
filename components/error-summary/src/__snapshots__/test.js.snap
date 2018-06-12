@@ -202,25 +202,205 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   }
 }
 
-.emotion-24 {
-  margin-bottom: 150px;
+.emotion-34 {
+  margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-<ErrorSummaryExample>
+@media only screen and (min-width:641px) {
+  .emotion-34 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-34 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-33 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+.emotion-33:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-33 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-33 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-24 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-24 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-24 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-27 {
+  display: block;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #6f777b;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-27 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-27 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-30 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-30 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 50%;
+  }
+}
+
+.emotion-30:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-30 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-42 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.emotion-42:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-42 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-41 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-41 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 75%;
+  }
+}
+
+.emotion-41:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+<_default>
   <div>
     <Styled(ErrorSummary)
       description="Optional description of the errors and how to correct them"
       errors={
         Array [
           Object {
-            "handleScrollToElement": [Function],
-            "id": 0,
-            "text": "Descriptive link to the target question with an error",
+            "targetName": "national-insurance-number",
+            "text": "National Insurance number error",
           },
           Object {
-            "handleScrollToElement": [Function],
-            "id": 1,
-            "text": "Descriptive link to the other target question with an error",
+            "targetName": "description",
+            "text": "Description of what you saw error",
           },
         ]
       }
@@ -232,14 +412,12 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
         errors={
           Array [
             Object {
-              "handleScrollToElement": [Function],
-              "id": 0,
-              "text": "Descriptive link to the target question with an error",
+              "targetName": "national-insurance-number",
+              "text": "National Insurance number error",
             },
             Object {
-              "handleScrollToElement": [Function],
-              "id": 1,
-              "text": "Descriptive link to the other target question with an error",
+              "targetName": "description",
+              "text": "Description of what you saw error",
             },
           ]
         }
@@ -361,7 +539,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                     className="emotion-18"
                   >
                     <Styled(ListItem)
-                      key="0"
+                      key="national-insurance-number"
                     >
                       <ListItem
                         className="emotion-11"
@@ -386,7 +564,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                                   onClick={[Function]}
                                   tabIndex={-1}
                                 >
-                                  Descriptive link to the target question with an error
+                                  National Insurance number error
                                 </a>
                               </Anchor>
                             </Styled(Anchor)>
@@ -395,7 +573,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       </ListItem>
                     </Styled(ListItem)>
                     <Styled(ListItem)
-                      key="1"
+                      key="description"
                     >
                       <ListItem
                         className="emotion-11"
@@ -420,7 +598,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                                   onClick={[Function]}
                                   tabIndex={-1}
                                 >
-                                  Descriptive link to the other target question with an error
+                                  Description of what you saw error
                                 </a>
                               </Anchor>
                             </Styled(Anchor)>
@@ -436,18 +614,150 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
         </Styled(div)>
       </ErrorSummary>
     </Styled(ErrorSummary)>
-    <Styled(div)
-      innerRef={[Function]}
+    <Styled(InputField)
+      hint={
+        Array [
+          "It’s on your National Insurance card, benefit letter, payslip or P60.",
+          <br />,
+          "For example, ‘QQ 12 34 56 C’.",
+        ]
+      }
+      name="national-insurance-number"
     >
-      <div
-        className="emotion-24"
+      <InputField
+        className="emotion-11"
+        hint={
+          Array [
+            "It’s on your National Insurance card, benefit letter, payslip or P60.",
+            <br />,
+            "For example, ‘QQ 12 34 56 C’.",
+          ]
+        }
+        input={Object {}}
+        meta={Object {}}
+        name="national-insurance-number"
       >
-        Target Question
-      </div>
-    </Styled(div)>
-    <div>
-      Other Target Question
-    </div>
+        <Styled(Label)
+          className="emotion-11"
+          name="national-insurance-number"
+        >
+          <Label
+            className="emotion-34"
+            name="national-insurance-number"
+          >
+            <Styled(label)
+              className="emotion-34"
+              name="national-insurance-number"
+            >
+              <label
+                className="emotion-33"
+                name="national-insurance-number"
+              >
+                <Styled(LabelText)>
+                  <LabelText
+                    className="emotion-11"
+                  >
+                    <Styled(span)
+                      className="emotion-11"
+                    >
+                      <span
+                        className="emotion-24"
+                      >
+                        National Insurance number
+                      </span>
+                    </Styled(span)>
+                  </LabelText>
+                </Styled(LabelText)>
+                <Styled(HintText)>
+                  <HintText
+                    className="emotion-11"
+                  >
+                    <Styled(span)
+                      className="emotion-11"
+                    >
+                      <span
+                        className="emotion-27"
+                      >
+                        It’s on your National Insurance card, benefit letter, payslip or P60.
+                        <br />
+                        For example, ‘QQ 12 34 56 C’.
+                      </span>
+                    </Styled(span)>
+                  </HintText>
+                </Styled(HintText)>
+                <Styled(Input)>
+                  <Input
+                    className="emotion-11"
+                    type="text"
+                  >
+                    <Styled(input)
+                      className="emotion-11"
+                      type="text"
+                    >
+                      <input
+                        className="emotion-30"
+                        type="text"
+                      />
+                    </Styled(input)>
+                  </Input>
+                </Styled(Input)>
+              </label>
+            </Styled(label)>
+          </Label>
+        </Styled(Label)>
+      </InputField>
+    </Styled(InputField)>
+    <br />
+    <TextArea
+      input={Object {}}
+      meta={Object {}}
+      name="description"
+    >
+      <Styled(Label)
+        name="description"
+      >
+        <Label
+          className="emotion-11"
+          name="description"
+        >
+          <Styled(label)
+            className="emotion-11"
+            name="description"
+          >
+            <label
+              className="emotion-42"
+              name="description"
+            >
+              <Styled(LabelText)>
+                <LabelText
+                  className="emotion-11"
+                >
+                  <Styled(span)
+                    className="emotion-11"
+                  >
+                    <span
+                      className="emotion-24"
+                    >
+                      Description of what you saw
+                    </span>
+                  </Styled(span)>
+                </LabelText>
+              </Styled(LabelText)>
+              <Styled(textarea)
+                rows="5"
+                type="text"
+              >
+                <textarea
+                  className="emotion-41"
+                  rows="5"
+                  type="text"
+                />
+              </Styled(textarea)>
+            </label>
+          </Styled(label)>
+        </Label>
+      </Styled(Label)>
+    </TextArea>
   </div>
-</ErrorSummaryExample>
+</_default>
 `;

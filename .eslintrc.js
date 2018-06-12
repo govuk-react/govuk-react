@@ -7,6 +7,7 @@ module.exports = {
     "flowtype"
   ],
   "env": {
+    "browser": true,
     "es6": true
   },
   "rules": {

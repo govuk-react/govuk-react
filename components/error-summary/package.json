@@ -5,8 +5,10 @@
     "@govuk-react/constants": "^0.2.2",
     "@govuk-react/header": "^0.2.2",
     "@govuk-react/hoc": "^0.2.2",
+    "@govuk-react/input-field": "^0.2.2",
     "@govuk-react/list-item": "^0.2.2",
     "@govuk-react/paragraph": "^0.2.3",
+    "@govuk-react/text-area": "^0.2.2",
     "@govuk-react/unordered-list": "^0.2.2",
     "govuk-colours": "^1.0.3"
   },

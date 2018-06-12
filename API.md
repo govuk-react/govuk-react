@@ -297,48 +297,40 @@ ErrorSummary
 
 Simple
 ```jsx
-import React from 'react';
-import styled from 'react-emotion';
-
 export const heading = 'Message to alert the user to a problem goes here';
 export const description = 'Optional description of the errors and how to correct them';
+export const errors = [
+  {
+    targetName: 'national-insurance-number',
+    text: 'National Insurance number error',
+  },
+  {
+    targetName: 'description',
+    text: 'Description of what you saw error',
+  },
+];
 
-const StyledDiv = styled('div')({
-  marginBottom: '150px',
-});
-
-export default class ErrorSummaryExample extends React.Component {
-  errors = [
-    {
-      id: 0,
-      handleScrollToElement: () => this.targetQuestion.scrollIntoView(),
-      text: 'Descriptive link to the target question with an error',
-    },
-    {
-      id: 1,
-      handleScrollToElement: () => this.otherTargetQuestion.scrollIntoView(),
-      text: 'Descriptive link to the other target question with an error',
-    },
-  ];
-
-  render() {
-    return (
-      <div>
-        <ErrorSummary
-          heading={heading}
-          description={description}
-          errors={this.errors}
-        />
-        <StyledDiv innerRef={(node) => { this.targetQuestion = node; }}>
-          Target Question
-        </StyledDiv>
-        <div ref={(node) => { this.otherTargetQuestion = node; }}>
-          Other Target Question
-        </div>
-      </div>
-    );
-  }
-}
+export default () => (
+  <div>
+    <ErrorSummary
+      heading={heading}
+      description={description}
+      errors={errors}
+    />
+    <InputField
+      name="national-insurance-number"
+      hint={[
+        'It’s on your National Insurance card, benefit letter, payslip or P60.',
+        <br />,
+        'For example, ‘QQ 12 34 56 C’.',
+      ]}
+    >
+      National Insurance number
+    </InputField>
+    <br />
+    <TextArea name="description">Description of what you saw</TextArea>
+  </div>
+);
 ```
 
 ### References:
@@ -353,46 +345,8 @@ Prop | Required | Default | Type | Description
  `heading` | true |  | string | 
 
 
-Paragraph
-=========
-
-### Import
-```js
-  import Paragraph from '@govuk-react/paragraph';
-```
-<!-- STORY -->
-
-### Usage
-
-Supports bold, italic and links in Markdown ONLY.
-This is to ensure we follow GDS as closely as possible.
-It is worth noting that GDS recommends avoiding bold and italics.
-
-Simple Usage with markdown
-```jsx
-<Paragraph>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
-```
-
-As supporting text
-```jsx
-<Paragraph supportingText>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
-```
-
-### References
-- https://govuk-elements.herokuapp.com/typography/#typography-body-copy
-
-### TODO
-- Add test for supporting text
-- Add test for rendering supported markdown components
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `children` |  | '' | node | Text content supporting markdown
- `supportingText` |  | false | bool | Is this paragraph supporting text for another element?
-
-
 ErrorText
+=========
 
 ### Import
 ```js
@@ -403,7 +357,6 @@ ErrorText
 ### Usage
 
 
-=======
 Simple
 ```jsx
 <ErrorText errorText="example">Example</ErrorText>
@@ -567,6 +520,7 @@ HiddenText
 
 ### Usage
 
+
 Simple
 ```jsx
 import Paragraph from '@govuk-react/paragraph';
@@ -583,78 +537,6 @@ import Paragraph from '@govuk-react/paragraph';
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `summaryText` |  | '' | string | 
-
-
-InsetText
-=========
-
-### Import
-```js
-  import InsetText from '@govuk-react/inset-text';
-```
-<!-- STORY -->
-
-### Usage
-
-
-Simple
-```jsx
-<InsetText>Hello</InsetText>
-```
-
-Narrow border
-```jsx
-<InsetText isNarrow>Hello</InsetText>
-```
-
-### References
-- https://govuk-elements.herokuapp.com/typography/#typography-inset-text
-- https://github.com/alphagov/govuk-frontend/blob/master/src/components/inset-text/_inset-text.scss
-- https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_panels.scss
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `isNarrow` |  | false | bool | Renders a narrow border following GDS guides if set to true
-
-
-Paragraph
-=========
-
-### Import
-```js
-  import Paragraph from '@govuk-react/paragraph';
-```
-<!-- STORY -->
-
-### Usage
-
-Supports bold, italic and links in Markdown ONLY.
-This is to ensure we follow GDS as closely as possible.
-It is worth noting that GDS recommends avoiding bold and italics.
-
-Simple Usage with markdown
-```jsx
-<Paragraph>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
-```
-
-As supporting text
-```jsx
-<Paragraph supportingText>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
-```
-
-### References
-- https://govuk-elements.herokuapp.com/typography/#typography-body-copy
-
-### TODO
-- Add test for supporting text
-- Add test for rendering supported markdown components
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `children` |  | '' | node | Text content supporting markdown
- `supportingText` |  | false | bool | Is this paragraph supporting text for another element?
 
 
 HintText
