@@ -33,7 +33,7 @@ As supporting text
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | '' | node | Text content supporting markdown
- `supportingText` |  | false | bool | Is this paragraph supporting text for another element?
+ `children` |  | ```''``` | node | Text content supporting markdown
+ `supportingText` |  | ```false``` | bool | Is this paragraph supporting text for another element?
 
 

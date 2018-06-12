@@ -52,7 +52,7 @@ Props pass through
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `level` |  | 1 | number | Semantic heading level value between 1 and 6
- `size` |  | undefined | enumObject.keys(FONT_SIZES) | Visual size level, accepts   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XSMALL`
+ `level` |  | ```1``` | number | Semantic heading level value between 1 and 6
+ `size` |  | ```undefined``` | enumObject.keys(FONT_SIZES) | Visual size level, accepts   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XSMALL`
 
 
