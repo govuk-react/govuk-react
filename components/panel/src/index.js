@@ -78,7 +78,9 @@ Panel.defaultProps = {
 };
 
 Panel.propTypes = {
+  /** Panel title text */
   panelTitle: PropTypes.string.isRequired,
+  /** Panel body text */
   panelBody: PropTypes.string,
 };
 

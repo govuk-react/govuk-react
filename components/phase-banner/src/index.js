@@ -63,7 +63,9 @@ const PhaseBanner = ({ level, children, ...props }) => (
 );
 
 PhaseBanner.propTypes = {
+  /** Children text and links */
   children: PropTypes.node.isRequired,
+  /** Alpha or beta banner */
   level: PropTypes.string.isRequired,
 };
 

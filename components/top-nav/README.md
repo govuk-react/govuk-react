@@ -11,7 +11,6 @@ TopNav
 
 TopNav with logo, service title and navigation items
 ```jsx
-import { BrowserRouter, Link } from 'react-router-dom';
 import CrownIcon from '@govuk-react/icon-crown';
 import SearchBox from '@govuk-react/search-box';
 import Header from '@govuk-react/header';
@@ -45,6 +44,7 @@ const Search = (
 ```
 
 ```jsx
+import { BrowserRouter, Link } from 'react-router-dom';
 import CrownIcon from '@govuk-react/icon-crown';
 import Header from '@govuk-react/header';
 import TopNav, { asLogoAnchor, asNavLinkAnchor } from '@govuk-react/top-nav';
@@ -73,15 +73,23 @@ const ServiceTitleLink = (
 ### References:
 - http://alphagov.github.io/govuk_template/example-proposition-menu.html
 
+### TODO:
+- TODO: this component is a work in progress and needs to more closely match existing examples
+- TODO: is TopNav the right name? What's it called in other GDS styles/patterns?
+- TODO: (The name Header is ambiguous)
+- TODO: Fix the position and design of this button
+- TODO: #205 Use context api and/or render props for `active` navigation items
+- TODO: Vertical alignment here needs some work, perhaps should be its own component
+- TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
+
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `active` |  | undefined | number | 
- `bgColor` |  | BLACK | string | 
- `children` |  | undefined | node | 
- `color` |  | WHITE | string | 
- `company` |  | undefined | node | 
- `search` |  | false | node | 
- `serviceTitle` |  | undefined | node | 
+ `bgColor` |  | BLACK | string | Top nav background color
+ `children` |  | undefined | node | List Navigation items with anchor tags e.g. NavAnchor components
+ `color` |  | WHITE | string | Top nav text color
+ `company` |  | undefined | node | Company component e.g. GOV UK
+ `search` |  | false | node | Search component
+ `serviceTitle` |  | undefined | node | Service title component e.g. Food Standards Authority
 
 

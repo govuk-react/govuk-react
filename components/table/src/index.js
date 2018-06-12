@@ -130,8 +130,11 @@ Table.defaultProps = {
 };
 
 Table.propTypes = {
+  /** Table body rows and cells */
   body: PropTypes.node.isRequired,
+  /** Table header rows and cells */
   head: PropTypes.node,
+  /** Table caption title */
   caption: PropTypes.string,
 };
 

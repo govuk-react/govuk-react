@@ -1,6 +1,3 @@
-// TODO: this component is a work in progress and needs to more closely match existing examples
-// TODO: is TopNav the right name? What's it called in other GDS styles/patterns?
-// (The name Header is ambiguous)
 import React from 'react';
 import PropTypes from 'prop-types';
 import { BLACK, WHITE } from 'govuk-colours';
@@ -86,9 +83,16 @@ import IconTitle from './atoms/icon-title';
  * ### References:
  * - http://alphagov.github.io/govuk_template/example-proposition-menu.html
  *
+ * ### TODO:
+ * - TODO: this component is a work in progress and needs to more closely match existing examples
+ * - TODO: is TopNav the right name? What's it called in other GDS styles/patterns?
+ * - TODO: (The name Header is ambiguous)
+ * - TODO: Fix the position and design of this button
+ * - TODO: #205 Use context api and/or render props for `active` navigation items
+ * - TODO: Vertical alignment here needs some work, perhaps should be its own component
+ * - TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
  */
 const TopNav = ({
-  active,
   bgColor,
   color,
   company,
@@ -138,7 +142,6 @@ const TopNav = ({
 );
 
 TopNav.defaultProps = {
-  active: undefined,
   bgColor: BLACK,
   color: WHITE,
   company: undefined,
@@ -148,12 +151,17 @@ TopNav.defaultProps = {
 };
 
 TopNav.propTypes = {
-  active: PropTypes.number,
+  /** Top nav background color */
   bgColor: PropTypes.string,
+  /** Top nav text color */
   color: PropTypes.string,
+  /** Company component e.g. GOV UK */
   company: PropTypes.node,
+  /** Service title component e.g. Food Standards Authority */
   serviceTitle: PropTypes.node,
+  /** Search component */
   search: PropTypes.node,
+  /** List Navigation items with anchor tags e.g. NavAnchor components */
   children: PropTypes.node,
 };
 

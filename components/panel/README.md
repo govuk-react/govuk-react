@@ -28,7 +28,7 @@ Panel with header and HTML body
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `panelBody` |  | undefined | string | 
- `panelTitle` | true |  | string | 
+ `panelBody` |  | undefined | string | Panel body text
+ `panelTitle` | true |  | string | Panel title text
 
 
