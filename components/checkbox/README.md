@@ -34,7 +34,7 @@ Checkbox preselected & disabled
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | Text content for checkbox
- `className` |  | undefined | string | CSS Classname for outermost container
+ `children` | true | `````` | node | Text content for checkbox
+ `className` |  | ```undefined``` | string | CSS Classname for outermost container
 
 

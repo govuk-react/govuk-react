@@ -12,7 +12,7 @@ PhaseBanner
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
- `level` | true |  | string | 
+ `children` | true | `````` | node | 
+ `level` | true | `````` | string | 
 
 

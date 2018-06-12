@@ -36,6 +36,6 @@ import Paragraph from '@govuk-react/paragraph';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `isNarrow` |  | false | bool | Renders a narrow border following GDS guides if set to true
+ `isNarrow` |  | ```false``` | bool | Renders a narrow border following GDS guides if set to true
 
 

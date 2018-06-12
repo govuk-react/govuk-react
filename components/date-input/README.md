@@ -37,8 +37,8 @@ Date with hint text & error
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
- `errorText` |  | undefined | string | Error text
- `hintText` |  | undefined | string | Optional hint text
+ `children` | true | `````` | node | 
+ `errorText` |  | ```undefined``` | string | Error text
+ `hintText` |  | ```undefined``` | string | Optional hint text
 
 

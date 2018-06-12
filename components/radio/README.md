@@ -68,8 +68,8 @@ Radio preselected & disabled
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
- `className` |  | undefined | string | 
- `inline` |  | false | bool | 
+ `children` | true | `````` | node | 
+ `className` |  | ```undefined``` | string | 
+ `inline` |  | ```false``` | bool | 
 
 

@@ -12,8 +12,8 @@ Table
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `body` | true |  | node | 
- `caption` |  | undefined | string | 
- `head` |  | undefined | node | 
+ `body` | true | `````` | node | 
+ `caption` |  | ```undefined``` | string | 
+ `head` |  | ```undefined``` | node | 
 
 

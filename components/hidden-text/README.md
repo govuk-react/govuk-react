@@ -25,6 +25,6 @@ import Paragraph from '@govuk-react/paragraph';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `summaryText` |  | '' | string | 
+ `summaryText` |  | ```''``` | string | 
 
 
