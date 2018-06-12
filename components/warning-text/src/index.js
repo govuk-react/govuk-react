@@ -12,6 +12,7 @@ import {
   LINE_HEIGHT,
   MEDIA_QUERIES,
   NTA_LIGHT,
+  SPACING,
 } from '@govuk-react/constants';
 
 const StyledWarningText = styled('div')({
@@ -21,10 +22,10 @@ const StyledWarningText = styled('div')({
   width: '100%',
 });
 
-const IconImportantWrapper = styled('i')({
+const IconImportantWrapper = styled('div')({
   flex: 'none',
   height: '35px',
-  marginRight: '15px',
+  marginRight: SPACING.SCALE_3,
   width: '35px',
 });
 
@@ -41,7 +42,7 @@ const WarningTextWrapper = styled('strong')({
 });
 
 /**
- *
+ *storybook knobs
  * ### Usage
  *
  * Simple
@@ -54,8 +55,8 @@ const WarningTextWrapper = styled('strong')({
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/warning-text
  *
  */
-const WarningText = ({ children }) => (
-  <StyledWarningText>
+const WarningText = ({ children, ...props }) => (
+  <StyledWarningText {...props}>
     <IconImportantWrapper>
       <IconImportant />
     </IconImportantWrapper>
@@ -64,6 +65,9 @@ const WarningText = ({ children }) => (
 );
 
 WarningText.propTypes = {
+  /**
+   * Warning text to be displayed
+   */
   children: PropTypes.node.isRequired,
 };
 

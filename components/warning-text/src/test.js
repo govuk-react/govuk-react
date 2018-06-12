@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import WarningText from './';
+import WarningText from './fixtures';
 
 describe('WarningText', () => {
   const exampleText =
@@ -16,7 +16,7 @@ describe('WarningText', () => {
   it('renders expected strong text', () => {
     expect(wrapper.find('strong').text()).toBe(exampleText);
   });
-  it('renders consistently', () => {
+  it('to match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });

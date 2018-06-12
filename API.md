@@ -1398,6 +1398,7 @@ WarningText
 ```
 <!-- STORY -->
 
+storybook knobs
 ### Usage
 
 Simple
@@ -1412,6 +1413,6 @@ Simple
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
+ `children` | true |  | node | Warning text to be displayed
 
 
