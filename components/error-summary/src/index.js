@@ -69,9 +69,9 @@ const StyledErrorSummary = styled('div')({
  *
  * Simple
  * ```jsx
- * export const heading = 'Message to alert the user to a problem goes here';
- * export const description = 'Optional description of the errors and how to correct them';
- * export const errors = [
+ * const heading = 'Message to alert the user to a problem goes here';
+ * const description = 'Optional description of the errors and how to correct them';
+ * const errors = [
  *   {
  *     targetName: 'national-insurance-number',
  *     text: 'National Insurance number error',
@@ -82,27 +82,25 @@ const StyledErrorSummary = styled('div')({
  *   },
  * ];
  *
- * export default () => (
- *   <div>
- *     <ErrorSummary
- *       heading={heading}
- *       description={description}
- *       errors={errors}
- *     />
- *     <InputField
- *       name="national-insurance-number"
- *       hint={[
- *         'It’s on your National Insurance card, benefit letter, payslip or P60.',
- *         <br />,
- *         'For example, ‘QQ 12 34 56 C’.',
- *       ]}
- *     >
- *       National Insurance number
- *     </InputField>
- *     <br />
- *     <TextArea name="description">Description of what you saw</TextArea>
- *   </div>
- * );
+ * <div>
+ *   <ErrorSummary
+ *     heading={heading}
+ *     description={description}
+ *     errors={errors}
+ *   />
+ *   <InputField
+ *     name="national-insurance-number"
+ *     hint={[
+ *       'It’s on your National Insurance card, benefit letter, payslip or P60.',
+ *       <br />,
+ *       'For example, ‘QQ 12 34 56 C’.',
+ *     ]}
+ *   >
+ *     National Insurance number
+ *   </InputField>
+ *   <br />
+ *   <TextArea name="description">Description of what you saw</TextArea>
+ * </div>
  * ```
  *
  * ### References:
