@@ -7,7 +7,7 @@ import {
 const TopNavInner = styled('div')({
   display: 'flex',
   flexDirection: 'column',
-  width: `calc(100% - ${SPACING.SCALE_3})`,
+  width: `calc(100% - ${SPACING.SCALE_5})`,
   maxWidth: '960px',
   padding: `${SPACING.SCALE_2} ${SPACING.SCALE_3}`,
   boxSizing: 'border-box',
