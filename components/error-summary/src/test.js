@@ -2,39 +2,58 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
-import ErrorSummary, { heading, description, errors } from './fixtures';
+import ErrorSummary from '.';
+import ErrorSummaryExample, { heading, description, errors } from './fixtures';
 
 describe('error summary', () => {
-  const wrapperErrorSummary = mount(<ErrorSummary />);
+  const wrapperErrorSummary = mount(<ErrorSummaryExample />);
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<ErrorSummary />, div);
+    ReactDOM.render(<ErrorSummaryExample />, div);
   });
 
   it('should render the ErrorSummary component', () => {
-    const output = mount(<ErrorSummary />);
-    expect(output.find('Header')).toBeTruthy();
-    expect(output.find('Paragraph')).toBeTruthy();
-    expect(output.find('UnorderedList')).toBeTruthy();
-    expect(output.find('UnorderedList').find('ListItem').length).toEqual(errors.length);
+    expect(wrapperErrorSummary.find('Header').exists()).toBe(true);
+    expect(wrapperErrorSummary.find('Paragraph').exists()).toBe(true);
+    expect(wrapperErrorSummary.find('UnorderedList').exists()).toBe(true);
+    expect(wrapperErrorSummary.find('UnorderedList').find('ListItem').length).toEqual(errors.length);
   });
 
   it('should render the heading', () => {
-    const output = mount(<ErrorSummary />);
-    expect(output.find('Header').text()).toEqual(heading);
+    expect(wrapperErrorSummary.find('Header').text()).toEqual(heading);
   });
 
   it('should render the optional description', () => {
-    const output = mount(<ErrorSummary />);
-    expect(output.find('Paragraph').text()).toEqual(description);
+    expect(wrapperErrorSummary.find('Paragraph').text()).toEqual(description);
   });
 
   it('should render the list of errors', () => {
-    const output = mount(<ErrorSummary />);
-
-    output.find('UnorderedList').find('ListItem').forEach((listItem, index) => {
+    wrapperErrorSummary.find('UnorderedList').find('ListItem').forEach((listItem, index) => {
       expect(listItem.text()).toEqual(errors[index].text);
+    });
+  });
+
+  it('should click on the error', () => {
+    const mockOnHandleErrorClickCallback = jest.fn();
+
+    const ErrorSummaryClick = () => (
+      <ErrorSummary
+        heading={heading}
+        description={description}
+        onHandleErrorClick={mockOnHandleErrorClickCallback}
+        errors={errors}
+      />
+    );
+
+    const wrapperErrorSummaryClickMock = mount(<ErrorSummaryClick />);
+
+    let timesClicked = 0;
+
+    wrapperErrorSummaryClickMock.find('UnorderedList').find('ListItem').forEach((listItem) => {
+      listItem.find('Anchor').simulate('click');
+      timesClicked += 1;
+      expect(mockOnHandleErrorClickCallback.mock.calls.length).toBe(timesClicked);
     });
   });
 

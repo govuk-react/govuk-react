@@ -84,10 +84,15 @@ const StyledErrorSummary = styled('div')({
  *   },
  * ];
  *
+ * const onHandleErrorClick = (targetName) => {
+ *   document.getElementsByName(targetName)[0].scrollIntoView();
+ * };
+ *
  * <div>
  *   <ErrorSummary
  *     heading={heading}
  *     description={description}
+ *     onHandleErrorClick={onHandleErrorClick}
  *     errors={errors}
  *   />
  *   <InputField
@@ -113,7 +118,7 @@ const StyledErrorSummary = styled('div')({
  * - Swap out browser dependancy for context API to help with React Native support
  */
 const ErrorSummary = ({
-  heading, description, errors, ...props
+  onHandleErrorClick, heading, description, errors, ...props
 }) => (
   <StyledErrorSummary tabIndex={-1} {...props}>
     <Header level={2}>{ heading }</Header>
@@ -124,7 +129,7 @@ const ErrorSummary = ({
           <ListItem key={error.targetName}>
             <StyledErrorText
               tabIndex={-1}
-              onClick={() => document.getElementsByName(error.targetName)[0].scrollIntoView()}
+              onClick={() => onHandleErrorClick(error.targetName)}
             >
               {error.text}
             </StyledErrorText>
@@ -137,11 +142,14 @@ const ErrorSummary = ({
 );
 
 ErrorSummary.defaultProps = {
+  onHandleErrorClick: () => {},
   description: undefined,
   errors: [],
 };
 
 ErrorSummary.propTypes = {
+  /** onClick function to scroll the target element into view */
+  onHandleErrorClick: PropTypes.func,
   /** Heading text */
   heading: PropTypes.string.isRequired,
   /** Optional description of the errors */
