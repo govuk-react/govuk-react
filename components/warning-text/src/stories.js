@@ -14,4 +14,4 @@ stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => <WarningText />);
 
-examples.add('With a very long warning', () => <WarningWithLongtext />);
+examples.add('With a very long warning', () => <WarningWithLongText />);

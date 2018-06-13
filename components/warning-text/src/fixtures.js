@@ -1,11 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { text } from '@storybook/addon-knobs/react';
 
 import WarningText from '.';
 
-export default ({ children = 'Example text' }) => (
+const WarningTextWithKnobs = ({ children = 'Example text' }) => (
   <WarningText>{text('Children', `${children}`)}</WarningText>
 );
+
+WarningTextWithKnobs.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default WarningTextWithKnobs;
 
 export const WarningWithLongText = () => (
   <WarningText>

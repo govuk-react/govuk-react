@@ -55,7 +55,7 @@ exports[`WarningText to match snapshot 1`] = `
   }
 }
 
-<_default>
+<WarningTextWithKnobs>
   <Styled(WarningText)>
     <WarningText
       className="emotion-3"
@@ -122,5 +122,5 @@ exports[`WarningText to match snapshot 1`] = `
       </Styled(div)>
     </WarningText>
   </Styled(WarningText)>
-</_default>
+</WarningTextWithKnobs>
 `;
