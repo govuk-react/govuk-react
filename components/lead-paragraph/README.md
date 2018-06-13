@@ -9,4 +9,9 @@ LeadParagraph
 
 
 
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true |  | node | Text in the Lead paragraph
+
 

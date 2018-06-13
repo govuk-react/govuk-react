@@ -9,4 +9,9 @@ Layout
 
 
 
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true |  | node | GridRow and GridCol children nodes
+
 

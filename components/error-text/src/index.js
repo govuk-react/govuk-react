@@ -2,6 +2,7 @@
 
 import styled from 'react-emotion';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { ERROR_COLOUR } from 'govuk-colours';
 import { withWhiteSpace } from '@govuk-react/hoc';
 import {
@@ -30,5 +31,10 @@ const StyledError = styled('span')({
 });
 
 const ErrorText = props => <StyledError {...props} />;
+
+ErrorText.propTypes = {
+  /** Text to describe the error */
+  children: PropTypes.string.isRequired,
+};
 
 export default withWhiteSpace({ marginBottom: 0 })(ErrorText);

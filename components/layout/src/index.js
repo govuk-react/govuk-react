@@ -3,6 +3,7 @@
 
 import React from 'react';
 import styled from 'react-emotion';
+import PropTypes from 'prop-types';
 import { BREAKPOINTS, MEDIA_QUERIES, SPACING } from '@govuk-react/constants';
 
 const StyledLayout = styled('div')({
@@ -17,5 +18,10 @@ const StyledLayout = styled('div')({
 });
 
 const Layout = props => <StyledLayout {...props} />;
+
+Layout.propTypes = {
+  /** GridRow and GridCol children nodes */
+  children: PropTypes.node.isRequired,
+};
 
 export default Layout;

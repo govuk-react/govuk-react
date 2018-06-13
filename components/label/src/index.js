@@ -2,6 +2,7 @@
 
 import styled from 'react-emotion';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { ERROR_COLOUR } from 'govuk-colours';
 import { SPACING } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
@@ -26,5 +27,10 @@ const StyledLabel = styled('label')(
 );
 
 const Label = props => <StyledLabel {...props} />;
+
+Label.propTypes = {
+  /** Text for the label */
+  children: PropTypes.node.isRequired,
+};
 
 export default withWhiteSpace({ marginBottom: 0 })(Label);

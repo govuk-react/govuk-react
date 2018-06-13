@@ -74,6 +74,8 @@ const BackLink = ({ onClick, ...props }) => (
 );
 
 BackLink.propTypes = {
+  /** Text that will appear in the back link */
+  children: PropTypes.string,
   /**
    * Custom function to run when the `onClick` event is fired
    */
@@ -81,6 +83,7 @@ BackLink.propTypes = {
 };
 
 BackLink.defaultProps = {
+  children: 'Back',
   onClick: undefined,
 };
 

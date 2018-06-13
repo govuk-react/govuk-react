@@ -42,12 +42,14 @@ const UnorderedList = ({ listStyleType, ...props }) => (
   <StyledList listStyleType={listStyleType} {...props} />
 );
 
-UnorderedList.defaultProps = {
-  listStyleType: undefined,
+UnorderedList.propTypes = {
+  /** One or more ListItem components */
+  children: PropTypes.node.isRequired,
+  listStyleType: PropTypes.string,
 };
 
-UnorderedList.propTypes = {
-  listStyleType: PropTypes.string,
+UnorderedList.defaultProps = {
+  listStyleType: undefined,
 };
 
 export default withWhiteSpace({ marginBottom: 0 })(UnorderedList);

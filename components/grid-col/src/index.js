@@ -3,6 +3,7 @@
 
 import React from 'react';
 import styled from 'react-emotion';
+import PropTypes from 'prop-types';
 import { GUTTER_HALF, MEDIA_QUERIES, SPACING } from '@govuk-react/constants';
 
 const StyledColumn = styled('div')(
@@ -49,5 +50,14 @@ const StyledColumn = styled('div')(
 );
 
 const GridCol = props => <StyledColumn {...props} />;
+
+GridCol.propTypes = {
+  /** GridCol content */
+  children: PropTypes.node,
+};
+
+GridCol.defaultProps = {
+  children: undefined,
+};
 
 export default GridCol;

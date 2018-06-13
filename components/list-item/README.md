@@ -9,4 +9,9 @@ ListItem
 
 
 
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true |  | node | List item content
+
 

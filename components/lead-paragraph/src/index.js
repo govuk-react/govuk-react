@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styled from 'react-emotion';
+import PropTypes from 'prop-types';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
 import {
@@ -23,5 +24,10 @@ const StyledParagraph = styled('p')({
 });
 
 const LeadParagraph = props => <StyledParagraph {...props} />;
+
+LeadParagraph.propTypes = {
+  /** Text in the Lead paragraph */
+  children: PropTypes.node.isRequired,
+};
 
 export default withWhiteSpace({ marginBottom: 5 })(LeadParagraph);
