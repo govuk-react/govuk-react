@@ -35,9 +35,7 @@ export { default as TextArea } from '@govuk-react/text-area';
 export { default as OrderedList } from '@govuk-react/ordered-list';
 export { default as UnorderedList } from '@govuk-react/unordered-list';
 export { default as RelatedItems } from '@govuk-react/related-items';
-export {
-  default as DocumentFooterMetadata,
-} from '@govuk-react/document-footer-metadata';
+export { default as DocumentFooterMetadata } from '@govuk-react/document-footer-metadata';
 export { default as LoadingBox } from '@govuk-react/loading-box';
 export { default as TopNav } from '@govuk-react/top-nav';
 export { default as Table } from '@govuk-react/table';
