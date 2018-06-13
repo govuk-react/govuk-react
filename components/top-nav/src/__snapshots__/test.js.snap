@@ -223,6 +223,7 @@ exports[`TopNav matches snapshot: enzyme.mount 1`] = `
   search={false}
 >
   <Styled(div)
+    active={1}
     bgColor="#0b0c0c"
     color="#ffffff"
   >
