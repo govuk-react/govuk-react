@@ -356,7 +356,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: calc(100% - 15px);
+  width: calc(100% - 30px);
   max-width: 960px;
   padding: calc(10px * 0.8) 15px;
   box-sizing: border-box;
@@ -507,7 +507,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
   border-bottom: 10px solid #005ea5;
   max-width: 960px;
   margin: 0 auto;
-  width: calc(100% - 15px);
+  width: calc(100% - 30px);
 }
 
 @media only screen and (min-width:641px) {
