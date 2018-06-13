@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconImportant matches wrapper snapshot: wrapper mount 1`] = `
+<IconImportant
+  fill="currentColor"
+  title="icon important"
+>
+  <SVG
+    fill="currentColor"
+    preserveAspectRatio="xMidYMid meet"
+    title="icon important"
+    viewBox="0 0 35.000000 35.000000"
+  >
+    <svg
+      fill="currentColor"
+      height="100%"
+      preserveAspectRatio="xMidYMid meet"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      version="1.1"
+      viewBox="0 0 35.000000 35.000000"
+      width="100%"
+    >
+      <title>
+        icon important
+      </title>
+      <g
+        transform="translate(0.000000,35.000000) scale(0.100000,-0.100000)"
+      >
+        <path
+          d="M100 332 c-87 -48 -125 -155 -82 -232 48 -87 155 -125 232 -82 87 48
+125 155 82 232 -48 87 -155 125 -232 82z m100 -122 c0 -53 -2 -60 -20 -60 -18
+0 -20 7 -20 60 0 53 2 60 20 60 18 0 20 -7 20 -60z m0 -111 c0 -12 -7 -19 -20
+-19 -19 0 -28 28 -14 43 11 11 34 -5 34 -24z"
+        />
+      </g>
+    </svg>
+  </SVG>
+</IconImportant>
+`;

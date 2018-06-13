@@ -41,6 +41,7 @@ export { default as LoadingBox } from '@govuk-react/loading-box';
 export { default as TopNav } from '@govuk-react/top-nav';
 export { default as Table } from '@govuk-react/table';
 export { default as LeadParagraph } from '@govuk-react/lead-paragraph';
+export { default as WarningText } from '@govuk-react/warning-text';
 
 export { H1, H2, H3, H4, H5, H6 } from '@govuk-react/header';
 

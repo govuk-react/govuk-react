@@ -116,6 +116,7 @@
     "@govuk-react/text-area": "*",
     "@govuk-react/top-nav": "*",
     "@govuk-react/unordered-list": "*",
+    "@govuk-react/warning-text": "*",
     "@storybook/addon-actions": "^3.4.1",
     "@storybook/addon-knobs": "^3.4.1",
     "@storybook/addons": "^3.4.1",

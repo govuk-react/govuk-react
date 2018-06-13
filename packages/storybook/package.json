@@ -38,6 +38,7 @@
     "@govuk-react/text-area": "^0.2.2",
     "@govuk-react/top-nav": "^0.2.2",
     "@govuk-react/unordered-list": "^0.2.2",
+    "@govuk-react/warning-text": "0.2.3",
     "@storybook/addon-actions": "^3.4.1",
     "@storybook/addon-knobs": "^3.4.1",
     "@storybook/addon-links": "^3.4.1",
