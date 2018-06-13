@@ -42,6 +42,6 @@ const AnchorTag = asAnchor('a');
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Breadcrumb contents
+ `children` | true |  | node | Breadcrumb contents
 
 

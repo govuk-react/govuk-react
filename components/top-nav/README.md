@@ -14,9 +14,9 @@ TopNav with logo, service title and navigation items
 import CrownIcon from '@govuk-react/icon-crown';
 import SearchBox from '@govuk-react/search-box';
 import Header from '@govuk-react/header';
-import TopNav, { asLogoAnchor, asNavLinkAnchor } from '@govuk-react/top-nav';
+import TopNav, { asNavLinkAnchor, asTopNavAnchor } from '@govuk-react/top-nav';
 
-const LogoAnchor = asLogoAnchor('a');
+const LogoAnchor = asTopNavAnchor('a');
 const NavAnchor = asNavLinkAnchor('a');
 
 const link = 'https://example.com?=1';
@@ -49,7 +49,7 @@ import CrownIcon from '@govuk-react/icon-crown';
 import Header from '@govuk-react/header';
 import TopNav, { asLogoAnchor, asNavLinkAnchor } from '@govuk-react/top-nav';
 
-const LogoLink = asLogoAnchor(Link);
+const LogoLink = asTopNavAnchor(Link);
 const NavLink= asNavLinkAnchor(Link);
 
 const reactRouterLink = '/section';

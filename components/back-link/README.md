@@ -25,6 +25,6 @@ With custom click handler
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `onClick` |  | ```undefined``` | func | Custom function to run when the `onClick` event is fired
+ `onClick` |  | undefined | func | Custom function to run when the `onClick` event is fired
 
 
