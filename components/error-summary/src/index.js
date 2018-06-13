@@ -1,3 +1,5 @@
+/* eslint-env browser */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
@@ -107,6 +109,8 @@ const StyledErrorSummary = styled('div')({
  * - https://govuk-elements.herokuapp.com/errors/#summarise-errors
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/error-summary
  *
+ * ### TODO:
+ * - Swap out browser dependancy for context API to help with React Native support
  */
 const ErrorSummary = ({
   heading, description, errors, ...props
