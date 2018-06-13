@@ -284,6 +284,65 @@ Prop | Required | Default | Type | Description
  `partOf` |  | undefined | arrayOf[object Object] | Array of JSX nodes to render underneath the `part of:` title
 
 
+ErrorSummary
+============
+
+### Import
+```js
+  import ErrorSummary from '@govuk-react/error-summary';
+```
+<!-- STORY -->
+
+### Usage
+
+Simple
+```jsx
+const heading = 'Message to alert the user to a problem goes here';
+const description = 'Optional description of the errors and how to correct them';
+const errors = [
+  {
+    targetName: 'national-insurance-number',
+    text: 'National Insurance number error',
+  },
+  {
+    targetName: 'description',
+    text: 'Description of what you saw error',
+  },
+];
+
+<div>
+  <ErrorSummary
+    heading={heading}
+    description={description}
+    errors={errors}
+  />
+  <InputField
+    name="national-insurance-number"
+    hint={[
+      'It’s on your National Insurance card, benefit letter, payslip or P60.',
+      <br />,
+      'For example, ‘QQ 12 34 56 C’.',
+    ]}
+  >
+    National Insurance number
+  </InputField>
+  <br />
+  <TextArea name="description">Description of what you saw</TextArea>
+</div>
+```
+
+### References:
+- https://govuk-elements.herokuapp.com/errors/#summarise-errors
+- https://github.com/alphagov/govuk-frontend/tree/master/src/components/error-summary
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `description` |  | undefined | string | 
+ `errors` |  | [] | arrayOf[object Object] | 
+ `heading` | true |  | string | 
+
+
 ErrorText
 =========
 
@@ -476,78 +535,6 @@ import Paragraph from '@govuk-react/paragraph';
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `summaryText` |  | '' | string | 
-
-
-InsetText
-=========
-
-### Import
-```js
-  import InsetText from '@govuk-react/inset-text';
-```
-<!-- STORY -->
-
-### Usage
-
-
-Simple
-```jsx
-<InsetText>Hello</InsetText>
-```
-
-Narrow border
-```jsx
-<InsetText isNarrow>Hello</InsetText>
-```
-
-### References
-- https://govuk-elements.herokuapp.com/typography/#typography-inset-text
-- https://github.com/alphagov/govuk-frontend/blob/master/src/components/inset-text/_inset-text.scss
-- https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_panels.scss
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `isNarrow` |  | false | bool | Renders a narrow border following GDS guides if set to true
-
-
-Paragraph
-=========
-
-### Import
-```js
-  import Paragraph from '@govuk-react/paragraph';
-```
-<!-- STORY -->
-
-### Usage
-
-Supports bold, italic and links in Markdown ONLY.
-This is to ensure we follow GDS as closely as possible.
-It is worth noting that GDS recommends avoiding bold and italics.
-
-Simple Usage with markdown
-```jsx
-<Paragraph>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
-```
-
-As supporting text
-```jsx
-<Paragraph supportingText>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
-```
-
-### References
-- https://govuk-elements.herokuapp.com/typography/#typography-body-copy
-
-### TODO
-- Add test for supporting text
-- Add test for rendering supported markdown components
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `children` |  | '' | node | Text content supporting markdown
- `supportingText` |  | false | bool | Is this paragraph supporting text for another element?
 
 
 HintText

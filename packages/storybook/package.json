@@ -8,6 +8,7 @@
     "@govuk-react/checkbox": "^0.2.2",
     "@govuk-react/date-input": "^0.2.2",
     "@govuk-react/document-footer-metadata": "^0.2.2",
+    "@govuk-react/error-summary": "^0.2.2",
     "@govuk-react/error-text": "^0.2.2",
     "@govuk-react/file-upload": "^0.2.2",
     "@govuk-react/grid-col": "^0.2.2",

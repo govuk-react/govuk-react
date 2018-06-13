@@ -7,6 +7,7 @@ export { default as Breadcrumb } from '@govuk-react/breadcrumb';
 export { default as Button } from '@govuk-react/button';
 export { default as Checkbox } from '@govuk-react/checkbox';
 export { default as DateInput } from '@govuk-react/date-input';
+export { default as ErrorSummary } from '@govuk-react/error-summary';
 export { default as ErrorText } from '@govuk-react/error-text';
 export { default as FileUpload } from '@govuk-react/file-upload';
 export { default as GridCol } from '@govuk-react/grid-col';
