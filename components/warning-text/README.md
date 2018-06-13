@@ -7,7 +7,6 @@ WarningText
 ```
 <!-- STORY -->
 
-storybook knobs
 ### Usage
 
 Simple
