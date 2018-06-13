@@ -1,5 +1,3 @@
-// https://govuk-loader-prototype.herokuapp.com/components/loader
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
@@ -121,6 +119,35 @@ const Overlay = styled('div')({
   width: '100%',
 });
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * <LoadingBox loading>
+ *   Lorem ipsum dolor sit amet
+ * </LoadingBox>
+ * ```
+ *
+ * Loading box complex
+ * ```jsx
+ * <LoadingBox
+ *    loading={false}
+ *    backgroundColor={'#fff'}
+ *    timeIn={800}
+ *    timeOut={200}
+ *    backgroundColorOpacity={0.85}
+ *    spinnerColor={'#000'}
+ * >
+ *   Lorem ipsum dolor sit amet
+ * </LoadingBox>
+ * ```
+ *
+ * ### References:
+ * - https://govuk-loader-prototype.herokuapp.com/components/loader
+ *
+ */
 const LoadingBox = ({
   children,
   backgroundColor,
@@ -160,16 +187,37 @@ LoadingBox.defaultProps = {
 };
 
 LoadingBox.propTypes = {
+  /**
+   * One or more children nodes that loading box will overlay
+  */
   children: PropTypes.node.isRequired,
+  /**
+   * Color (3 or 6 Hex char) of loading spinner
+  */
   spinnerColor: PropTypes.string,
-  // hex colour 3 or 6 characters (with or without hash)
+  /**
+   * Background color (3 or 6 Hex char) of loading spinner overlay when loading is true.
+  */
   backgroundColor: PropTypes.string,
+  /**
+   * Opacity of loading spinner backgroud colour when loading is true
+  */
   backgroundColorOpacity: PropTypes.number,
+  /**
+   * Loading spinner title text
+  */
   title: PropTypes.string,
+  /**
+   * Whether loading is currently set to true or false
+  */
   loading: PropTypes.bool,
-  // length of fade-in animation in milliseconds
+  /**
+   * Length of fade-in animation in milliseconds
+  */
   timeIn: PropTypes.number,
-  // length of fade-out animation in milliseconds
+  /**
+   * Length of fade-out animation in milliseconds
+  */
   timeOut: PropTypes.number,
 };
 

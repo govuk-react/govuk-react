@@ -1,5 +1,3 @@
-// https://github.com/alphagov/govuk-frontend/blob/master/src/components/checkboxes/_checkboxes.scss
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
@@ -87,10 +85,37 @@ const StyledLabel = styled('span')({
   },
 });
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * <Checkbox>Text displayed next to checkbox</Checkbox>
+ * ```
+ *
+ * With disabled state
+ * ```jsx
+ * <Checkbox disabled="disabled">Disabled checkbox option</Checkbox>
+ * ```
+ *
+ * Checkbox preselected
+ * ```jsx
+ * <Checkbox defaultChecked>Farm or agricultural waste</Checkbox>
+ * ```
+ *
+ * Checkbox preselected & disabled
+ * ```jsx
+ * <Checkbox disabled="disabled" defaultChecked>Farm or agricultural waste</Checkbox>
+ * ```
+ * ### References:
+ * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/checkboxes/_checkboxes.scss
+ *
+ */
 const Checkbox = ({
-  children, className, inline, ...props
+  children, className, ...props
 }) => (
-  <StyledCheckbox inline={inline} className={className}>
+  <StyledCheckbox className={className}>
     <StyledInput type="checkbox" {...props} />
     <StyledLabel>{children}</StyledLabel>
   </StyledCheckbox>
@@ -98,13 +123,17 @@ const Checkbox = ({
 
 Checkbox.defaultProps = {
   className: undefined,
-  inline: undefined,
 };
 
 Checkbox.propTypes = {
+  /**
+   * Text content for checkbox
+   */
   children: PropTypes.node.isRequired,
+  /**
+   * CSS Classname for outermost container
+   */
   className: PropTypes.string,
-  inline: PropTypes.bool,
 };
 
 export default withWhiteSpace({ marginBottom: 2 })(Checkbox);

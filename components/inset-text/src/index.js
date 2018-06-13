@@ -1,19 +1,12 @@
-// References:
-// https://govuk-elements.herokuapp.com/typography/#typography-inset-text
-//
-// https://github.com/alphagov/govuk-frontend/blob/master/src/components/inset-text/_inset-text.scss
-// https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_panels.scss
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 
-import Paragraph from '@govuk-react/paragraph';
-
 import { SPACING } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 import { BORDER_COLOUR } from 'govuk-colours';
 
-const StyledInsetText = styled(Paragraph)(props => ({
+const StyledInsetText = styled('div')(props => ({
   boxSizing: 'border-box',
   borderLeftStyle: 'solid',
   borderLeftWidth: props.isNarrow ? '5px' : '10px',
@@ -21,19 +14,45 @@ const StyledInsetText = styled(Paragraph)(props => ({
   padding: SPACING.SCALE_3,
 }));
 
-const InsetText = props => <StyledInsetText {...props} mb="3" />;
-
-InsetText.propTypes = {
-  children: PropTypes.node.isRequired,
-  isNarrow: PropTypes.bool,
-};
+/**
+ *
+ * ### Usage
+ *
+ *
+ * Simple
+ * ```jsx
+ * import Paragraph from '@govuk-react/paragraph';
+ *
+ * <InsetText>
+ *  <Paragraph mb={0}>Hello</Paragraph>
+ * </InsetText>
+ * ```
+ *
+ * Narrow border
+ * ```jsx
+ * import Paragraph from '@govuk-react/paragraph';
+ *
+ * <InsetText isNarrow>
+ *  <Paragraph mb={0}>Hello</Paragraph>
+ * </InsetText>
+ * ```
+ *
+ * ### References
+ * - https://govuk-elements.herokuapp.com/typography/#typography-inset-text
+ * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/inset-text/_inset-text.scss
+ * - https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_panels.scss
+ */
+const InsetText = props => <StyledInsetText {...props} />;
 
 InsetText.defaultProps = {
   isNarrow: false,
 };
 
-/** Component is not exported withWhitespace because StyledInsetText is based on a Paragraph,
- *  which is also exported withWhitespace and therefore takes precedence.
- * 'mb' is used as a prop instead to override this functionality.
- */
-export default InsetText;
+InsetText.propTypes = {
+  /**
+   * Renders a narrow border following GDS guides if set to true
+   */
+  isNarrow: PropTypes.bool,
+};
+
+export default withWhiteSpace({ marginBottom: 6 })(InsetText);

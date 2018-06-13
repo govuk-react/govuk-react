@@ -1,5 +1,3 @@
-// https://govuk-static.herokuapp.com/component-guide/lead_paragraph
-
 import React from 'react';
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
@@ -23,6 +21,19 @@ const StyledParagraph = styled('p')({
   },
 });
 
+/**
+ *
+ * ### Usage
+ *
+ *
+ * Simple
+ * ```jsx
+ * <LeadParagraph>LeadParagraph example</LeadParagraph>
+ * ```
+ *
+ * ### References
+ * - https://govuk-static.herokuapp.com/component-guide/lead_paragraph
+ */
 const LeadParagraph = props => <StyledParagraph {...props} />;
 
 LeadParagraph.propTypes = {

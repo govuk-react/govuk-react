@@ -1,10 +1,3 @@
-// References:
-// https://govuk-elements.herokuapp.com/buttons/
-//
-// https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_buttons.scss
-// https://github.com/alphagov/govuk-frontend/blob/master/src/components/button/_button.scss
-// https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_buttons.scss
-
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -19,7 +12,6 @@ import {
 
 const BUTTON_COLOUR_DARKEN_5 = '#00692f'; // darken(#00823b, 5%)
 
-// TODO should be using constants for some of the below values
 const StyledButton = styled('button')(
   {
     backgroundColor: BUTTON_COLOUR,
@@ -57,7 +49,6 @@ const StyledButton = styled('button')(
     ':visited': {
       color: BUTTON_COLOUR,
     },
-    // TODO: avoid cascade
     ' svg': {
       maxWidth: '15px',
       marginLeft: SPACING.SCALE_4,
@@ -79,12 +70,12 @@ const StyledButton = styled('button')(
  * ### Usage
  *
  * Simple
- * ```js
+ * ```jsx
  * <Button>My button text</Button>
  * ```
  *
  * With Icon
- * ```js
+ * ```jsx
  * import { ButtonArrow } from '@govuk-react/icons';
  *
  * <Button icon={<ButtonArrow />}>My button text</Button>
@@ -96,6 +87,9 @@ const StyledButton = styled('button')(
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/button/_button.scss
  * - https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_buttons.scss
  *
+ * ### TODO:
+ * - Use constants for some of the values cssinjs values
+ * - Remove cascade styling for nested elements such as `svg`
  */
 const Button = ({
   children,

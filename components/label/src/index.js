@@ -26,6 +26,19 @@ const StyledLabel = styled('label')(
   }),
 );
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * <Label>Example</Label>
+ * ```
+ *
+ * ### References:
+ * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/
+ *
+ */
 const Label = props => <StyledLabel {...props} />;
 
 Label.propTypes = {

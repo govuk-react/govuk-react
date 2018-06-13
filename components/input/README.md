@@ -7,14 +7,22 @@ Input
 ```
 <!-- STORY -->
 
+### Usage
 
+Simple
+```jsx
+<Input />
+```
+
+### References:
+- https://github.com/alphagov/govuk-frontend/tree/master/src/components/
+
+### TODO:
+- Remove `errorColor` and provide examples on how to extend the component
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `errorColor` |  | undefined | string | 
- `onChange` |  | undefined | func | 
- `type` |  | 'text' | string | 
- `value` |  | undefined | string | 
+ `type` |  | ```'text'``` | string | HTML `<Input />` type
 
 

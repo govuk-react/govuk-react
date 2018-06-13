@@ -1,9 +1,9 @@
 {
   "name": "@govuk-react/label-text",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "dependencies": {
-    "@govuk-react/constants": "^0.2.1",
-    "@govuk-react/hoc": "^0.2.1",
+    "@govuk-react/constants": "^0.2.2",
+    "@govuk-react/hoc": "^0.2.2",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {

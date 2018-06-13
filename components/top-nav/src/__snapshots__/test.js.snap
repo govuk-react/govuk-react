@@ -33,7 +33,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: calc(100% - 15px);
+  width: calc(100% - 30px);
   max-width: 960px;
   padding: calc(10px * 0.8) 15px;
   box-sizing: border-box;
@@ -213,7 +213,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
   border-bottom: 10px solid #005ea5;
   max-width: 960px;
   margin: 0 auto;
-  width: calc(100% - 15px);
+  width: calc(100% - 30px);
 }
 
 @media only screen and (min-width:641px) {
@@ -542,6 +542,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
   search={false}
 >
   <Styled(div)
+    active={1}
     bgColor="#0b0c0c"
     color="#ffffff"
   >
@@ -695,7 +696,7 @@ exports[`TopNav with icon title: icon title 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: calc(100% - 15px);
+  width: calc(100% - 30px);
   max-width: 960px;
   padding: calc(10px * 0.8) 15px;
   box-sizing: border-box;
@@ -778,7 +779,7 @@ exports[`TopNav with icon title: icon title 1`] = `
   border-bottom: 10px solid #005ea5;
   max-width: 960px;
   margin: 0 auto;
-  width: calc(100% - 15px);
+  width: calc(100% - 30px);
 }
 
 @media only screen and (min-width:641px) {

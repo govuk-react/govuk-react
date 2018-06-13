@@ -38,12 +38,12 @@ const StyledParagraph = styled(ReactMarkdown)(
  * It is worth noting that GDS recommends avoiding bold and italics.
  *
  * Simple Usage with markdown
- * ```js
+ * ```jsx
  * <Paragraph>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
  * ```
  *
  * As supporting text
- * ```js
+ * ```jsx
  * <Paragraph supportingText>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
  * ```
  *
@@ -82,4 +82,4 @@ Paragraph.defaultProps = {
   supportingText: false,
 };
 
-export default withWhiteSpace({ marginBottom: 5 })(Paragraph);
+export default withWhiteSpace({ marginBottom: 4 })(Paragraph);

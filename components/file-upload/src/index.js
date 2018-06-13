@@ -1,5 +1,3 @@
-// https://github.com/alphagov/govuk-frontend/tree/master/src/components/file-upload
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
@@ -33,6 +31,47 @@ const StyledInput = styled('input')({
   padding: '5px 4px 4px',
 });
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * <FileUpload name="group0">Upload a document</FileUpload>
+ * ```
+ *
+ * Input with hint text
+ * ```jsx
+ * <FileUpload
+ *   name="group1"
+ *   acceptedFormats=".jpg, .png"
+ *   hint={['This can be in either JPG or PNG format']}
+ * >
+ *   Upload a photo
+ * </FileUpload>
+ * ```
+ *
+ * Input with hint text & error
+ * ```jsx
+ * const meta = {
+ *   touched: true,
+ *   error: 'Example',
+ * };
+ *
+ * <FileUpload
+ *   name="group1"
+ *   acceptedFormats=".jpg, .png"
+ *   hint={['This can be in either JPG or PNG format']}
+ *   meta={meta}
+ * >
+ *   Upload a photo
+ * </FileUpload>
+ * ```
+ *
+ * ### References:
+ * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/file-upload
+ *
+ */
 const FileUpload = ({
   meta, children, hint, acceptedFormats, ...props
 }) => (
@@ -51,7 +90,13 @@ FileUpload.defaultProps = {
 };
 
 FileUpload.propTypes = {
+  /**
+   * Optional hint text
+   */
   hint: PropTypes.string,
+  /**
+   * Final form meta object, pending adjustment/removal
+   */
   meta: PropTypes.shape({
     active: PropTypes.bool,
     dirty: PropTypes.bool,

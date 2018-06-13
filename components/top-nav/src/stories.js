@@ -19,7 +19,7 @@ const NavLink = asNavLinkAnchor(Link);
 const reactRouterLink = '/section';
 const link = 'https://example.com?=1';
 // TODO: vertical alignment here needs some work, perhaps should be its own component,
-// icon should be lined up with font baseline, e.g. vertical-align: baseline
+// TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
 
 const Company = (
   <LogoAnchor href={link} target="new">

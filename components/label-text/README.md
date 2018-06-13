@@ -7,7 +7,15 @@ LabelText
 ```
 <!-- STORY -->
 
+### Usage
 
+Simple
+```jsx
+<LabelText>Example</LabelText>
+```
+
+### References:
+- https://github.com/alphagov/govuk-frontend/tree/master/src/components/
 
 ### Properties
 Prop | Required | Default | Type | Description

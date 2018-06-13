@@ -1,5 +1,3 @@
-// https://github.com/alphagov/govuk-frontend/tree/master/src/components
-
 import styled from 'react-emotion';
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -30,6 +28,19 @@ const StyledError = styled('span')({
   paddingBottom: '2px',
 });
 
+/**
+ *
+ * ### Usage
+ *
+ *
+ * Simple
+ * ```jsx
+ * <ErrorText errorText="example">Example</ErrorText>
+ * ```
+ *
+ * ### References
+ * - https://github.com/alphagov/govuk-frontend/tree/master/src/components
+ */
 const ErrorText = props => <StyledError {...props} />;
 
 ErrorText.propTypes = {

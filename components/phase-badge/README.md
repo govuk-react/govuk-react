@@ -7,6 +7,14 @@ PhaseBadge
 ```
 <!-- STORY -->
 
+### Usage
 
+Simple
+```jsx
+<PhaseBadge>beta</PhaseBadge>
+```
+
+### References:
+- https://govuk-elements.herokuapp.com/alpha-beta-banners/
 
 
