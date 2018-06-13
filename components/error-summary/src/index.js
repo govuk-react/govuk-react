@@ -142,8 +142,11 @@ ErrorSummary.defaultProps = {
 };
 
 ErrorSummary.propTypes = {
+  /** Heading text */
   heading: PropTypes.string.isRequired,
+  /** Optional description of the errors */
   description: PropTypes.string,
+  /** Array of errors with text and target element name to scroll into view when clicked */
   errors: PropTypes.arrayOf(PropTypes.shape({
     targetName: PropTypes.string,
     text: PropTypes.string,

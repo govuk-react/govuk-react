@@ -49,11 +49,14 @@ const errors = [
 - https://govuk-elements.herokuapp.com/errors/#summarise-errors
 - https://github.com/alphagov/govuk-frontend/tree/master/src/components/error-summary
 
+### TODO:
+- Swap out browser dependancy for context API to help with React Native support
+
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `description` |  | undefined | string | 
- `errors` |  | [] | arrayOf[object Object] | 
- `heading` | true |  | string | 
+ `description` |  | undefined | string | Optional description of the errors
+ `errors` |  | [] | arrayOf[object Object] | Array of errors with text and target element name to scroll into view when clicked
+ `heading` | true |  | string | Heading text
 
 
