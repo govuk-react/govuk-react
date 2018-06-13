@@ -29,7 +29,7 @@ const Company = (
 
 const ServiceTitle = (
   <NavAnchor href={link} target="new">
-    <Header mb="0" level={3}>Service Title</Header>
+    <Header mb={0} level={3}>Service Title</Header>
   </NavAnchor>
 );
 
@@ -45,7 +45,7 @@ const CompanyLink = (
 
 const ServiceTitleLink = (
   <NavLink to={reactRouterLink}>
-    <Header mb="0" level={3}>Service Title</Header>
+    <Header mb={0} level={3}>Service Title</Header>
   </NavLink>
 );
 
