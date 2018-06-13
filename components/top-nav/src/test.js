@@ -8,20 +8,13 @@ import TopNav, { asTopNavAnchor, asLogoAnchor, asNavLinkAnchor } from './';
 const emptyNode = [];
 const nullNode = null;
 const Anchor = asTopNavAnchor('a');
-const LogoAnchor = asLogoAnchor('a');
 const NavLinkAnchor = asNavLinkAnchor('a');
 
 const wrapper = <TopNav company="example" search="example" serviceTitle="example">example</TopNav>;
-const wrapperMultiple = (
+const wrapperMultipleTopNavAnchor = (
   <TopNav active={1}>
     <Anchor href="/section">Section 1</Anchor>
     <Anchor href="/section">Section 1</Anchor>
-  </TopNav>
-);
-
-const wrapperLogoAnchor = (
-  <TopNav>
-    <LogoAnchor href="/logo-link">Logo link</LogoAnchor>
   </TopNav>
 );
 
@@ -40,9 +33,8 @@ const wrapperEmptyNode = (
   </TopNav>
 );
 
-const WrapperLogoAnchor = mount(wrapperLogoAnchor);
 const WrapperNavLinkAnchor = mount(wrapperNavLinkAnchor);
-const WrapperMultiple = mount(wrapperMultiple);
+const WrapperMultipleTopNavAnchor = mount(wrapperMultipleTopNavAnchor);
 
 describe(TopNav, () => {
   it('renders without crashing', () => {
@@ -55,23 +47,14 @@ describe(TopNav, () => {
   });
 
   it('matches the <TopNav> with multiple <Anchor> tags snapshot', () => {
-    expect(WrapperMultiple).toMatchSnapshot('enzyme.mount');
+    expect(WrapperMultipleTopNavAnchor).toMatchSnapshot('enzyme.mount');
   });
 
   it('matches the props passed to the list of Anchor tags', () => {
-    WrapperMultiple.find(Anchor).forEach((anchor) => {
+    WrapperMultipleTopNavAnchor.find(Anchor).forEach((anchor) => {
       expect(anchor.props().href).toEqual('/section');
       expect(anchor.props().children).toEqual('Section 1');
     });
-  });
-
-  it('matches the <TopNav> with a <LogoAnchor> tag snapshot', () => {
-    expect(WrapperLogoAnchor).toMatchSnapshot('enzyme.mount');
-  });
-
-  it('matches the props passed to LogoAnchor', () => {
-    expect(WrapperLogoAnchor.find(LogoAnchor).props().href).toEqual('/logo-link');
-    expect(WrapperLogoAnchor.find(LogoAnchor).props().children).toEqual('Logo link');
   });
 
   it('matches the <TopNav> with a <NavLinkAnchor> tag snapshot', () => {
