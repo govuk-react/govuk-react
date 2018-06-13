@@ -12,7 +12,7 @@ import ReadMe from '../README.md';
 const AnchorTag = asAnchor('a');
 const link = 'https://example.com?=1';
 // TODO: vertical alignment here needs some work, perhaps should be its own component,
-// icon should be lined up with font baseline, e.g. vertical-align: baseline
+// TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
 
 const Company = (
   <AnchorTag href={link} target="new">
@@ -27,7 +27,7 @@ const Company = (
 const ServiceTitle = (
   <AnchorTag color="#fff" href={link} target="new">
     <React.Fragment>
-      <Header level={3}>Service Title</Header>
+      <Header mb="0" level={3}>Service Title</Header>
     </React.Fragment>
   </AnchorTag>
 );
@@ -67,29 +67,28 @@ examples.add('search', () => (
 ));
 
 examples.add('children', () => (
-  <TopNav company={Company} serviceTitle={ServiceTitle} active={0}>
+  <TopNav company={Company} serviceTitle={ServiceTitle}>
     <AnchorTag href="https://example.com?q=catdog">Navigation item #1</AnchorTag>
     <AnchorTag href="https://example.com?q=dogcat">Navigation item #2</AnchorTag>
   </TopNav>
 ));
 
 examples.add('everything but serviceTitle', () => (
-  <TopNav company={Company} search={Search} active={0}>
+  <TopNav company={Company} search={Search}>
     <AnchorTag href="https://example.com?q=catdog">Navigation item #1</AnchorTag>
     <AnchorTag href="https://example.com?q=dogcat">Navigation item #2</AnchorTag>
   </TopNav>
 ));
 
 examples.add('everything', () => (
-  <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
+  <TopNav company={Company} serviceTitle={ServiceTitle} search={Search}>
     <AnchorTag href="https://example.com?q=catdog" target="new">Navigation item #1</AnchorTag>
     <AnchorTag href="https://example.com?q=dogcat" target="new">Navigation item #2</AnchorTag>
   </TopNav>
 ));
 
-
 examples.add('everything with 9 nav items', () => (
-  <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
+  <TopNav company={Company} serviceTitle={ServiceTitle} search={Search}>
     <AnchorTag href="https://example.com?q=catdog" target="new">Navigation item</AnchorTag>
     <AnchorTag href="https://example.com?q=dogcat" target="new">Navigation item</AnchorTag>
     <AnchorTag href="https://example.com?q=dogcat" target="new">Navigation item</AnchorTag>
