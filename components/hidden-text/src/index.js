@@ -46,8 +46,8 @@ const StyledSummary = styled('summary')({
  * - https://govuk-elements.herokuapp.com/typography/#typography-hidden-text
  */
 const HiddenText = ({ summaryText, ...props }) => (
-  <details open>
-    <StyledSummary><StyledSpan>{ summaryText }</StyledSpan></StyledSummary>
+  <details>
+    <StyledSummary><StyledSpan>{summaryText}</StyledSpan></StyledSummary>
     <InsetText isNarrow {...props} />
   </details>
 );

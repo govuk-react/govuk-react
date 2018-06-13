@@ -32,6 +32,13 @@ describe('hidden text', () => {
     });
   });
 
+  it('should be closed by default', () => {
+    const output = mount(<HiddenText />);
+    const detailsElement = output.find('details');
+
+    expect(detailsElement.get(0).props.open).toEqual(undefined);
+  });
+
   it('matches the HiddenText snapshot', () => {
     expect(wrapperHiddenText).toMatchSnapshot('hidden text');
   });
