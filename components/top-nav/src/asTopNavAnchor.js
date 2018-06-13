@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
-import { WHITE } from 'govuk-colours';
+import { WHITE, YELLOW } from 'govuk-colours';
 
 const asTopNavAnchor = (AnchorType) => {
   const Anchor = props => (
@@ -17,6 +17,9 @@ const asTopNavAnchor = (AnchorType) => {
     lineHeight: 1,
     ':hover': {
       borderBottomColor: WHITE, // TODO: active state, LIGHT_BLUE
+    },
+    ':focus': {
+      outline: `3px solid ${YELLOW}`,
     },
   });
 

@@ -7,13 +7,13 @@ import SearchBox from '@govuk-react/search-box';
 import Header from '@govuk-react/header';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-import TopNav, { asLogoAnchor, asNavLinkAnchor } from '.';
+import TopNav, { asNavLinkAnchor, asTopNavAnchor } from '.';
 import ReadMe from '../README.md';
 
-const LogoAnchor = asLogoAnchor('a');
+const LogoAnchor = asTopNavAnchor('a');
 const NavAnchor = asNavLinkAnchor('a');
 
-const LogoLink = asLogoAnchor(Link);
+const LogoLink = asTopNavAnchor(Link);
 const NavLink = asNavLinkAnchor(Link);
 
 const reactRouterLink = '/section';
