@@ -1,17 +1,17 @@
 {
   "name": "@govuk-react/warning-text",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "dependencies": {
     "@govuk-react/constants": "^0.2.2",
-    "@govuk-react/hoc": "^0.2.2",
-    "@govuk-react/icons": "^0.2.2",
+    "@govuk-react/hoc": "^0.2.4",
+    "@govuk-react/icons": "^0.2.4",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
     "emotion": ">=9",
-    "react-emotion": ">=9",
     "prop-types": ">=15",
-    "react": ">=15"
+    "react": ">=15",
+    "react-emotion": ">=9"
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es",
