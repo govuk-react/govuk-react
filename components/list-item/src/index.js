@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
+import PropTypes from 'prop-types';
 import {
   FONT_SIZE,
   LINE_HEIGHT,
@@ -46,5 +47,10 @@ const StyledListItem = styled('li')({
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components
  */
 const ListItem = props => <StyledListItem {...props} />;
+
+ListItem.propTypes = {
+  /** List item content */
+  children: PropTypes.node.isRequired,
+};
 
 export default withWhiteSpace({ marginBottom: 0 })(ListItem);

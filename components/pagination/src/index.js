@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
+import PropTypes from 'prop-types';
 
 import {
   FONT_SIZE,
@@ -55,5 +56,10 @@ const StyledList = styled('ul')({
  *
  */
 const Pagination = props => <StyledList {...props} />;
+
+Pagination.propTypes = {
+  /** `asPaginationItem` nodes */
+  children: PropTypes.node.isRequired,
+};
 
 export default withWhiteSpace({ marginBottom: 6 })(Pagination);

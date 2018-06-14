@@ -169,4 +169,5 @@ TopNav.IconTitle = IconTitle;
 
 export default TopNav;
 
-export asAnchor from './asAnchor';
+export asTopNavAnchor from './hoc/asTopNavAnchor';
+export asNavLinkAnchor from './hoc/asNavLinkAnchor';

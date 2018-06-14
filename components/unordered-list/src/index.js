@@ -68,15 +68,15 @@ const UnorderedList = ({ listStyleType, ...props }) => (
   <StyledList listStyleType={listStyleType} {...props} />
 );
 
-UnorderedList.defaultProps = {
-  listStyleType: undefined,
+UnorderedList.propTypes = {
+  /** One or more ListItem components */
+  children: PropTypes.node.isRequired,
+  /** CSS value for `list-style-type` */
+  listStyleType: PropTypes.string,
 };
 
-UnorderedList.propTypes = {
-  /**
-   * CSS value for `list-style-type`
-   */
-  listStyleType: PropTypes.string,
+UnorderedList.defaultProps = {
+  listStyleType: undefined,
 };
 
 export default withWhiteSpace({ marginBottom: 0 })(UnorderedList);

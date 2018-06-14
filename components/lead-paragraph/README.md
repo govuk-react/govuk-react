@@ -9,7 +9,6 @@ LeadParagraph
 
 ### Usage
 
-
 Simple
 ```jsx
 <LeadParagraph>LeadParagraph example</LeadParagraph>
@@ -18,4 +17,9 @@ Simple
 ### References
 - https://govuk-static.herokuapp.com/component-guide/lead_paragraph
 
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true |  | node | Text in the Lead paragraph
 
+ 

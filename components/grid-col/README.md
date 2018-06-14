@@ -15,4 +15,9 @@ See Layout for code examples
 - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_grid_layout.scss
 - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
 
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` |  | undefined | node | GridCol content
+
 

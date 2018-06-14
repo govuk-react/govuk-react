@@ -3,18 +3,27 @@ import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import CrownIcon from '@govuk-react/icon-crown';
 
-import TopNav, { asAnchor } from './';
+import TopNav, { asTopNavAnchor, asLogoAnchor, asNavLinkAnchor } from './';
 
 const emptyNode = [];
 const nullNode = null;
-const Anchor = asAnchor('a');
+const Anchor = asTopNavAnchor('a');
+const NavLinkAnchor = asNavLinkAnchor('a');
+
 const wrapper = <TopNav company="example" search="example" serviceTitle="example">example</TopNav>;
-const wrapperMultiple = (
+const wrapperMultipleTopNavAnchor = (
   <TopNav active={1}>
     <Anchor href="/section">Section 1</Anchor>
     <Anchor href="/section">Section 1</Anchor>
   </TopNav>
 );
+
+const wrapperNavLinkAnchor = (
+  <TopNav>
+    <NavLinkAnchor href="/nav-link">Nav link</NavLinkAnchor>
+  </TopNav>
+);
+
 const wrapperEmptyNode = (
   <TopNav>
     <Anchor href="/section">Section 1</Anchor>
@@ -23,6 +32,9 @@ const wrapperEmptyNode = (
     example
   </TopNav>
 );
+
+const WrapperNavLinkAnchor = mount(wrapperNavLinkAnchor);
+const WrapperMultipleTopNavAnchor = mount(wrapperMultipleTopNavAnchor);
 
 describe(TopNav, () => {
   it('renders without crashing', () => {
@@ -34,8 +46,24 @@ describe(TopNav, () => {
     expect(mount(wrapperEmptyNode).find('ul li')).toHaveLength(2);
   });
 
-  it('matches snapshot', () => {
-    expect(mount(wrapperMultiple)).toMatchSnapshot('enzyme.mount');
+  it('matches the <TopNav> with multiple <Anchor> tags snapshot', () => {
+    expect(WrapperMultipleTopNavAnchor).toMatchSnapshot('enzyme.mount');
+  });
+
+  it('matches the props passed to the list of Anchor tags', () => {
+    WrapperMultipleTopNavAnchor.find(Anchor).forEach((anchor) => {
+      expect(anchor.props().href).toEqual('/section');
+      expect(anchor.props().children).toEqual('Section 1');
+    });
+  });
+
+  it('matches the <TopNav> with a <NavLinkAnchor> tag snapshot', () => {
+    expect(WrapperNavLinkAnchor).toMatchSnapshot('enzyme.mount');
+  });
+
+  it('matches the props passed to NavLinkAnchor', () => {
+    expect(WrapperNavLinkAnchor.find(NavLinkAnchor).props().href).toEqual('/nav-link');
+    expect(WrapperNavLinkAnchor.find(NavLinkAnchor).props().children).toEqual('Nav link');
   });
 
   it('with icon title', () => {
