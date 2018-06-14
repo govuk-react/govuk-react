@@ -405,6 +405,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
         ]
       }
       heading="Message to alert the user to a problem goes here"
+      onHandleErrorClick={[Function]}
     >
       <ErrorSummary
         className="emotion-22"
@@ -422,6 +423,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
           ]
         }
         heading="Message to alert the user to a problem goes here"
+        onHandleErrorClick={[Function]}
       >
         <Styled(div)
           className="emotion-22"

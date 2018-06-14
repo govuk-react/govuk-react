@@ -1,3 +1,5 @@
+/* eslint-env browser */
+
 import React from 'react';
 import { text } from '@storybook/addon-knobs/react';
 import InputField from '@govuk-react/input-field';
@@ -18,11 +20,16 @@ export const errors = [
   },
 ];
 
+const onHandleErrorClick = (targetName) => {
+  document.getElementsByName(targetName)[0].scrollIntoView();
+};
+
 export default () => (
   <div>
     <ErrorSummary
       heading={text('heading', heading)}
       description={text('description', description)}
+      onHandleErrorClick={onHandleErrorClick}
       errors={errors}
     />
     <InputField
