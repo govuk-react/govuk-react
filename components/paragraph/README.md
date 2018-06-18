@@ -39,8 +39,8 @@ With a block of code
 
 ### TODO
 - Add test for supporting text
-- Add test for rendering supported markdown components
 - Review code snippet styling
+- Remove magic numbers from inline code styling blocks
 
 ### Properties
 Prop | Required | Default | Type | Description
