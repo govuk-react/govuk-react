@@ -1,31 +1,30 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import InputField from '@govuk-react/input-field';
-
 import withWhiteSpace from './';
 
-const config = {
-  marginBottom: 0,
-};
+const WithoutConfig = withWhiteSpace()(InputField);
+const WithConfig = withWhiteSpace({ marginBottom: 0 })(InputField);
+let wrapper;
 
-const InputFieldWithWhiteSpace = withWhiteSpace(config)(InputField);
-
-const wrapper = <InputFieldWithWhiteSpace>Example</InputFieldWithWhiteSpace>;
-const wrapperWithMarginBottom = <InputFieldWithWhiteSpace mb={3}>Example</InputFieldWithWhiteSpace>;
-
-describe(withWhiteSpace, () => {
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(wrapper, div);
-    ReactDOM.render(wrapperWithMarginBottom, div);
+describe('withWhiteSpace', () => {
+  it('renders without config without crashing', () => {
+    shallow(<WithoutConfig>Example</WithoutConfig>);
   });
 
-  it('returns a component', () => {
-    expect(shallow(wrapper).html()).toBeTruthy();
+  it('renders with config without crashing', () => {
+    shallow(<WithConfig>Example</WithConfig>);
+  });
+
+  it('renders with props without crashing', () => {
+    wrapper = shallow(<WithConfig mb={5}>Example</WithConfig>);
+  });
+
+  it('renders an InputField', () => {
+    expect(wrapper.find('InputField').exists()).toBe(true);
   });
 
   it('matches wrapper snapshot', () => {
-    expect(shallow(wrapper)).toMatchSnapshot('wrapper mount');
+    expect(wrapper).toMatchSnapshot();
   });
 });

@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`withWhiteSpace matches wrapper snapshot: wrapper mount 1`] = `
+exports[`withWhiteSpace matches wrapper snapshot 1`] = `
 .emotion-0 {
-  margin-bottom: 0;
-  margin-bottom: 0;
+  margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
-    margin-bottom: 0;
+    margin-bottom: 45px;
   }
 }
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
-    margin-bottom: 0;
+    margin-bottom: 45px;
   }
 }
 
@@ -22,6 +22,7 @@ exports[`withWhiteSpace matches wrapper snapshot: wrapper mount 1`] = `
   className="emotion-0"
   hint={null}
   input={Object {}}
+  mb={5}
   meta={Object {}}
 >
   Example
