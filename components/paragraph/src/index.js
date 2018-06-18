@@ -88,7 +88,7 @@ const StyledParagraph = styled(ReactMarkdown)(
  * ### TODO
  * - Add test for supporting text
  * - Review code snippet styling
- *
+ * - Remove magic numbers from inline code styling blocks
  */
 const Paragraph = ({ children, ...rest }) => (
   <StyledParagraph
