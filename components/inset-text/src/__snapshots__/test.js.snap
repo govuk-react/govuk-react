@@ -48,6 +48,33 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
   margin: 0;
 }
 
+.emotion-0 > p > code {
+  padding: 0.2em 0.4em;
+  margin: 0px;
+  font-size: 85%;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3px;
+}
+
+.emotion-0 > pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.emotion-0 > pre > code {
+  display: inline;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+}
+
 @media only screen and (min-width:641px) {
   .emotion-0 {
     font-size: 19px;
@@ -91,6 +118,8 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
                     "emphasis",
                     "strong",
                     "link",
+                    "inlineCode",
+                    "code",
                   ]
                 }
                 className="emotion-2"
@@ -112,6 +141,8 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
                       "emphasis",
                       "strong",
                       "link",
+                      "inlineCode",
+                      "code",
                     ]
                   }
                   astPlugins={Array []}
@@ -185,6 +216,33 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
   margin: 0;
 }
 
+.emotion-0 > p > code {
+  padding: 0.2em 0.4em;
+  margin: 0px;
+  font-size: 85%;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3px;
+}
+
+.emotion-0 > pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.emotion-0 > pre > code {
+  display: inline;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+}
+
 @media only screen and (min-width:641px) {
   .emotion-0 {
     font-size: 19px;
@@ -243,6 +301,8 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
                     "emphasis",
                     "strong",
                     "link",
+                    "inlineCode",
+                    "code",
                   ]
                 }
                 className="emotion-2"
@@ -264,6 +324,8 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
                       "emphasis",
                       "strong",
                       "link",
+                      "inlineCode",
+                      "code",
                     ]
                   }
                   astPlugins={Array []}
