@@ -1,10 +1,35 @@
 import React from 'react';
 import { text, boolean } from '@storybook/addon-knobs/react';
+
 import Paragraph from '.';
 
-const exampleText = 'A 19px body copy paragraph. This supports markdown to allow for **bold** text and *italics*, as well as [links](https://en.wikipedia.org/wiki/Markdown). This includes even more text to give a good representation of a more average length paragraph. That way you can see more than one line wrapping.';
-const exampleSupportingText = 'A 16px supporting text paragraph. This supports markdown to allow for **bold** text and *italics*, as well as [links](https://en.wikipedia.org/wiki/Markdown). This includes even more text to give a good representation of a more average length paragraph. That way you can see more than one line wrapping.';
+const exampleParagraph =
+  'Paragraph fields support markdown and allow for **bold** text and *italics*, as well as [links](https://en.wikipedia.org/wiki/Markdown). `Inline` code snippets are also supported, as well as code blocks PROVIDED they start on their own line';
 
-export default () => <Paragraph supportingText={boolean('supportingText', false)}>{text('children', exampleText)}</Paragraph>;
+const exampleCodeBlock = `\`\`\`
+  Example code block
+  \`\`\``;
 
-export const SupportingParagraph = () => <Paragraph supportingText>{text('children', exampleSupportingText)}</Paragraph>;
+const ParagraphWithKnobs = () => (
+  <Paragraph supportingText={boolean('supportingText', false)}>
+    {text('children', exampleParagraph)}
+  </Paragraph>
+);
+
+const SupportingParagraph = () => (
+  <Paragraph supportingText>{text('children', exampleParagraph)}</Paragraph>
+);
+
+const ParagraphWithCodeBlock = () => (
+  <Paragraph supportingText>{text('children', exampleCodeBlock)}</Paragraph>
+);
+
+export default Paragraph;
+
+export {
+  ParagraphWithKnobs,
+  SupportingParagraph,
+  ParagraphWithCodeBlock,
+  exampleParagraph,
+  exampleCodeBlock,
+};

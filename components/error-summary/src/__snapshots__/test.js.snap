@@ -81,6 +81,33 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   margin: 0;
 }
 
+.emotion-4 > p > code {
+  padding: 0.2em 0.4em;
+  margin: 0px;
+  font-size: 85%;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3px;
+}
+
+.emotion-4 > pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.emotion-4 > pre > code {
+  display: inline;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+}
+
 @media only screen and (min-width:641px) {
   .emotion-4 {
     font-size: 19px;
@@ -472,6 +499,8 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       "emphasis",
                       "strong",
                       "link",
+                      "inlineCode",
+                      "code",
                     ]
                   }
                   className="emotion-6"
@@ -493,6 +522,8 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                         "emphasis",
                         "strong",
                         "link",
+                        "inlineCode",
+                        "code",
                       ]
                     }
                     astPlugins={Array []}

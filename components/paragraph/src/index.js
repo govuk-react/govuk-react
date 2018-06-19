@@ -18,6 +18,30 @@ const StyledParagraph = styled(ReactMarkdown)(
     '> p': {
       margin: 0,
     },
+    '> p > code': {
+      padding: '0.2em 0.4em',
+      margin: '0',
+      fontSize: '85%',
+      backgroundColor: 'rgba(27,31,35,0.05)',
+      borderRadius: '3px',
+    },
+    '> pre': {
+      padding: '16px',
+      overflow: 'auto',
+      fontSize: '85%',
+      lineHeight: '1.45',
+      backgroundColor: '#f6f8fa',
+      borderRadius: '3px',
+    },
+    '> pre > code': {
+      display: 'inline',
+      padding: '0',
+      margin: '0',
+      border: '0',
+      overflow: 'visible',
+      lineHeight: 'inherit',
+      wordWrap: 'normal',
+    },
   },
   ({ supportingText }) => ({
     fontSize: supportingText ? FONT_SIZE.SIZE_14 : FONT_SIZE.SIZE_16,
@@ -33,34 +57,45 @@ const StyledParagraph = styled(ReactMarkdown)(
  *
  * ### Usage
  *
- * Supports bold, italic and links in Markdown ONLY.
+ * Supports bold, italic, links, inline code and block code in Markdown ONLY.
  * This is to ensure we follow GDS as closely as possible.
  * It is worth noting that GDS recommends avoiding bold and italics.
  *
  * Simple Usage with markdown
  * ```jsx
- * <Paragraph>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
+ * <Paragraph>Lorem `ipsum` **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
  * ```
  *
  * As supporting text
  * ```jsx
- * <Paragraph supportingText>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
+ * <Paragraph supportingText>Lorem `ipsum` **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
  * ```
+ *
+ * With a block of code
+ * ````jsx
+ * <Paragraph>
+ *   Some other text...
+ *   ```
+ *   Some Code Block
+ *   ```
+ *   Some more text.
+ * </Paragraph>
+ * ````
  *
  * ### References
  * - https://govuk-elements.herokuapp.com/typography/#typography-body-copy
  *
  * ### TODO
  * - Add test for supporting text
- * - Add test for rendering supported markdown components
- *
+ * - Review code snippet styling
+ * - Remove magic numbers from inline code styling blocks
  */
 const Paragraph = ({ children, ...rest }) => (
   <StyledParagraph
     source={children}
     escapeHtml={false}
     skipHtml
-    allowedTypes={['paragraph', 'emphasis', 'strong', 'link']}
+    allowedTypes={['paragraph', 'emphasis', 'strong', 'link', 'inlineCode', 'code']}
     renderers={{ link: RouterLink }}
     {...rest}
   />
