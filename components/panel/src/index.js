@@ -9,41 +9,41 @@ import {
   SPACING,
 } from '@govuk-react/constants';
 
-const StyledPanel = styled('div')({
+const StyledPanel = styled("div")({
   backgroundColor: TURQUOISE,
   color: WHITE,
-  padding: SPACING.SCALE_5,
+  padding: SPACING.SCALE_5
 });
 
 // TODO use standard font constants
-const StyledTitle = styled('h2')({
+const StyledTitle = styled("h2")({
   fontFamily: NTA_LIGHT,
-  fontWeight: 'bold',
-  WebkitFontSmoothing: 'antialiased',
-  fontSize: '32px',
-  lineHeight: '35px',
+  fontWeight: "bold",
+  WebkitFontSmoothing: "antialiased",
+  fontSize: "32px",
+  lineHeight: "35px",
   marginTop: 0,
-  textAlign: 'center',
+  textAlign: "center",
   [MEDIA_QUERIES.LARGESCREEN]: {
-    fontSize: '48px',
-    lineHeight: '50px',
-  },
+    fontSize: "48px",
+    lineHeight: "50px"
+  }
 });
 
 // TODO use standard font constants
-const StyledBody = styled('div')({
+const StyledBody = styled("div")({
   fontFamily: NTA_LIGHT,
-  fontSize: '24px',
+  fontSize: "24px",
   fontWeight: 400,
-  lineHeight: '25px',
+  lineHeight: "25px",
   marginTop: SPACING.SCALE_3,
   marginBottom: SPACING.SCALE_2,
-  textAlign: 'center',
-  WebkitFontSmoothing: 'antialiased',
+  textAlign: "center",
+  WebkitFontSmoothing: "antialiased",
   [MEDIA_QUERIES.LARGESCREEN]: {
-    fontSize: '36px',
-    lineHeight: '40px',
-  },
+    fontSize: "36px",
+    lineHeight: "40px"
+  }
 });
 
 /**
@@ -70,18 +70,24 @@ const StyledBody = styled('div')({
 const Panel = ({ panelTitle, panelBody, ...props }) => (
   <StyledPanel {...props}>
     <StyledTitle>{panelTitle}</StyledTitle>
-    <StyledBody>{panelBody}</StyledBody>
+    <StyledBody>
+      {Array.isArray(panelBody)
+        ? panelBody.map((element, index) => (
+          <React.Fragment key={index}>{element}</React.Fragment>
+        ))
+        : panelBody}
+    </StyledBody>
   </StyledPanel>
 );
 Panel.defaultProps = {
-  panelBody: undefined,
+  panelBody: undefined
 };
 
 Panel.propTypes = {
   /** Panel title text */
   panelTitle: PropTypes.string.isRequired,
   /** Panel body text */
-  panelBody: PropTypes.string,
+  panelBody: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
 };
 
 export default withWhiteSpace({ marginBottom: 3 })(Panel);
