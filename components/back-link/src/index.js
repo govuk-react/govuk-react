@@ -26,6 +26,7 @@ const Anchor = styled('button')({
   marginTop: '15px',
   paddingLeft: '14px',
   border: 0,
+  backgroundColor: 'transparent',
   color: `${BLACK}`,
   borderBottom: `1px solid ${BLACK}`,
   textDecoration: 'none',
