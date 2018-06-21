@@ -36,7 +36,7 @@ exports[`Main matches wrapper snapshot 1`] = `
           className="emotion-0"
         >
           <div>
-            Exmaple
+            Example
           </div>
         </div>
       </Styled(div)>

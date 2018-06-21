@@ -22,7 +22,7 @@
   },
   "main": "lib/index.js",
   "module": "es/index.js",
-  "author": "Alasdair McLeay",
+  "author": "Toby Brancher",
   "license": "MIT",
   "homepage": "https://github.com/UKHomeOffice/govuk-react#readme",
   "description": "govuk-react: A port of the govuk-frontend components for React using Emotion.",

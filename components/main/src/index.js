@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { MEDIA_QUERIES, SPACING, SITE_WIDTH } from '@govuk-react/constants';
 
-const OutterContainer = styled('div')({
+const OuterContainer = styled('div')({
   paddingTop: SPACING.SCALE_5,
   textAlign: 'center',
 });
@@ -32,9 +32,9 @@ const InnerContainer = styled('div')({
  *
  * Simple usage
  * ```jsx
- * <main>
+ * <Main>
  *   ... nested nodes
- * </main>
+ * </Main>
  * ```
  * 
  * ### TODO
@@ -42,9 +42,9 @@ const InnerContainer = styled('div')({
  *
  */
 const Main = ({ children, ...props }) => (
-  <OutterContainer {...props}>
+  <OuterContainer {...props}>
     <InnerContainer>{children}</InnerContainer>
-  </OutterContainer>
+  </OuterContainer>
 );
 
 Main.propTypes = {
@@ -55,7 +55,7 @@ Main.propTypes = {
 };
 
 Main.defaultProps = {
-  children: null,
+  children: undefined,
 };
 
 export default Main;
