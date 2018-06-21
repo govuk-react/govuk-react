@@ -37,6 +37,6 @@ const AnchorTag = asAnchor('a');
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | Related items content
+ `children` | true | `````` | node | Related items content
 
 

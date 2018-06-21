@@ -90,5 +90,6 @@ import GridCol from '@govuk-react/grid-col';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | GridRow and GridCol children nodes
+ `children` | true | `````` | node | GridRow and GridCol children nodes
+
 

@@ -85,11 +85,11 @@ const ServiceTitleLink = (
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `bgColor` |  | BLACK | string | Top nav background color
- `children` |  | undefined | node | List Navigation items with anchor tags e.g. NavAnchor components
- `color` |  | WHITE | string | Top nav text color
- `company` |  | undefined | node | Company component e.g. GOV UK
- `search` |  | false | node | Search component
- `serviceTitle` |  | undefined | node | Service title component e.g. Food Standards Authority
+ `bgColor` |  | ```BLACK``` | string | Top nav background color
+ `children` |  | ```undefined``` | node | List Navigation items with anchor tags e.g. NavAnchor components
+ `color` |  | ```WHITE``` | string | Top nav text color
+ `company` |  | ```undefined``` | node | Company component e.g. GOV UK
+ `search` |  | ```false``` | node | Search component
+ `serviceTitle` |  | ```undefined``` | node | Service title component e.g. Food Standards Authority
 
 

@@ -18,6 +18,6 @@ See Layout for code examples
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | undefined | node | GridCol content
+ `children` |  | ```undefined``` | node | GridCol content
 
 

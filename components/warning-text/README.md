@@ -21,6 +21,6 @@ Simple
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | Warning text to be displayed
+ `children` | true | `````` | node | Warning text to be displayed
 
 

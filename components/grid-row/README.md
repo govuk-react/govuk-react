@@ -18,10 +18,6 @@ See Layout for code examples
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-<<<<<<< HEAD
- `children` | true |  | node | One or more GridCol nodes
-=======
- `children` | true | `````` | node | 
->>>>>>> master
+ `children` | true | `````` | node | One or more GridCol nodes
 
 

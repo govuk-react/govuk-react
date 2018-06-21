@@ -9,6 +9,7 @@ LeadParagraph
 
 ### Usage
 
+
 Simple
 ```jsx
 <LeadParagraph>LeadParagraph example</LeadParagraph>
@@ -20,6 +21,6 @@ Simple
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | Text in the Lead paragraph
+ `children` | true | `````` | node | Text in the Lead paragraph
 
- 
+

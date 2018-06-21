@@ -9,6 +9,7 @@ ListItem
 
 ### Usage
 
+
 Simple
 ```jsx
 <ListItem>List item example</ListItem>
@@ -29,5 +30,6 @@ import { asAnchor } from '@govuk-react/hoc';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | List item content
+ `children` | true | `````` | node | List item content
+
 
