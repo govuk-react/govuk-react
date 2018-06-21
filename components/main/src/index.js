@@ -36,7 +36,7 @@ const InnerContainer = styled('div')({
  *   ... nested nodes
  * </Main>
  * ```
- * 
+ *
  * ### TODO
  * - Implement the 1020px min-width MQ to constants
  *
