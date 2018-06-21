@@ -100,6 +100,7 @@
     "@govuk-react/layout": "*",
     "@govuk-react/list-item": "*",
     "@govuk-react/list-navigation": "*",
+    "@govuk-react/main": "*",
     "@govuk-react/multi-choice": "*",
     "@govuk-react/ordered-list": "*",
     "@govuk-react/pagination": "*",

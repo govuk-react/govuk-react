@@ -23,6 +23,7 @@ export { default as LabelText } from '@govuk-react/label-text';
 export { default as Layout } from '@govuk-react/layout';
 export { default as ListItem } from '@govuk-react/list-item';
 export { default as ListNavigation } from '@govuk-react/list-navigation';
+export { default as Main } from '@govuk-react/main';
 export { default as MultiChoice } from '@govuk-react/multi-choice';
 export { default as Pagination } from '@govuk-react/pagination';
 export { default as Panel } from '@govuk-react/panel';
