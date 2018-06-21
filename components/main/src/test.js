@@ -11,7 +11,8 @@ describe(Main, () => {
   });
 
   it('can render a child node', () => {
-    wrapper = mount(<Main><div>Example</div></Main>);
+    wrapper = mount(<Main><span>Example</span></Main>);
+    expect(wrapper.find('span')).toHaveLength(1);
   });
 
   it('matches wrapper snapshot', () => {
