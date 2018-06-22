@@ -37,7 +37,7 @@ describe('Panel', () => {
 
   it('should render a panel body that is an array', () => {
     const output = mount(wrapperArray);
-    bodyExampleArray.forEach(textString => {
+    bodyExampleArray.forEach((textString) => {
       expect(output.text().includes(textString)).toBe(true);
     });
   });

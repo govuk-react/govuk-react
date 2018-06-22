@@ -67,13 +67,18 @@ const StyledBody = styled('div')({
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/panel
  *
  */
+
+const generatePanelBodyKey = () => {
+  return `panelBody_${Math.floor(Math.random() * Math.floor(1000000))}`;
+}
+
 const Panel = ({ panelTitle, panelBody, ...props }) => (
   <StyledPanel {...props}>
     <StyledTitle>{panelTitle}</StyledTitle>
     <StyledBody>
       {Array.isArray(panelBody)
-        ? panelBody.map((element, index) => (
-          <Fragment key={index}>{element}</Fragment>
+        ? panelBody.map((element) => (
+          <Fragment key={generatePanelBodyKey()}>{element}</Fragment>
         ))
         : panelBody}
     </StyledBody>
@@ -87,7 +92,7 @@ Panel.propTypes = {
   /** Panel title text */
   panelTitle: PropTypes.string.isRequired,
   /** Panel body text */
-  panelBody: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
+  panelBody: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
 };
 
 export default withWhiteSpace({ marginBottom: 3 })(Panel);
