@@ -1,9 +1,9 @@
 {
   "name": "@govuk-react/lead-paragraph",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "dependencies": {
     "@govuk-react/constants": "^0.2.2",
-    "@govuk-react/hoc": "^0.2.4",
+    "@govuk-react/hoc": "^0.2.5",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
