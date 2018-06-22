@@ -1,10 +1,10 @@
 {
   "name": "@govuk-react/hidden-text",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "dependencies": {
     "@govuk-react/constants": "^0.2.2",
-    "@govuk-react/inset-text": "^0.2.4",
-    "@govuk-react/paragraph": "^0.2.4",
+    "@govuk-react/inset-text": "^0.2.5",
+    "@govuk-react/paragraph": "^0.2.5",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
