@@ -25,7 +25,8 @@ With custom click handler
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `onClick` |  | undefined | func | Custom function to run when the `onClick` event is fired
+ `children` |  | ```'Back'``` | string | Text that will appear in the back link
+ `onClick` |  | ```undefined``` | func | Custom function to run when the `onClick` event is fired
 
 
 Breadcrumb
@@ -72,7 +73,7 @@ const AnchorTag = asAnchor('a');
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | Breadcrumb contents
+ `children` | true | `````` | node | Breadcrumb contents
 
 
 Button
@@ -111,10 +112,10 @@ import { ButtonArrow } from '@govuk-react/icons';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | 'Button' | node | Button text
- `disabled` |  | false | bool | Renders a disabled button if set to true
- `icon` |  | undefined | node | Button icon
- `start` |  | false | bool | Renders a large button if set to true
+ `children` |  | ```'Button'``` | node | Button text
+ `disabled` |  | ```false``` | bool | Renders a disabled button and removes pointer events if set to true
+ `icon` |  | ```undefined``` | node | Button icon
+ `start` |  | ```false``` | bool | Renders a large button if set to true
 
 
 Checkbox
@@ -153,8 +154,8 @@ Checkbox preselected & disabled
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | Text content for checkbox
- `className` |  | undefined | string | CSS Classname for outermost container
+ `children` | true | `````` | node | Text content for checkbox
+ `className` |  | ```undefined``` | string | CSS Classname for outermost container
 
 
 DateInput
@@ -196,9 +197,9 @@ Date with hint text & error
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
- `errorText` |  | undefined | string | Error text
- `hintText` |  | undefined | string | Optional hint text
+ `children` | true | `````` | node | 
+ `errorText` |  | ```undefined``` | string | Error text
+ `hintText` |  | ```undefined``` | string | Optional hint text
 
 
 DocumentFooterMetadata
@@ -279,9 +280,9 @@ const otherData = [
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `from` |  | undefined | arrayOf[object Object] | Array of JSX nodes to render underneath the `from:` title
- `other` |  | undefined | arrayOf[object Object] | Array of Objects for any additional items, each object should contain an `id`, `title` and `content` property
- `partOf` |  | undefined | arrayOf[object Object] | Array of JSX nodes to render underneath the `part of:` title
+ `from` |  | ```undefined``` | arrayOf[object Object] | Array of JSX nodes to render underneath the `from:` title
+ `other` |  | ```undefined``` | arrayOf[object Object] | Array of Objects for any additional items, each object should contain an `id`, `title` and `content` property
+ `partOf` |  | ```undefined``` | arrayOf[object Object] | Array of JSX nodes to render underneath the `part of:` title
 
 
 ErrorSummary
@@ -310,19 +311,20 @@ const errors = [
   },
 ];
 
+const onHandleErrorClick = (targetName) => {
+  document.getElementsByName(targetName)[0].scrollIntoView();
+};
+
 <div>
   <ErrorSummary
     heading={heading}
     description={description}
+    onHandleErrorClick={onHandleErrorClick}
     errors={errors}
   />
   <InputField
     name="national-insurance-number"
-    hint={[
-      'It’s on your National Insurance card, benefit letter, payslip or P60.',
-      <br />,
-      'For example, ‘QQ 12 34 56 C’.',
-    ]}
+    hint="It’s on your National Insurance card, benefit letter, payslip or P60."
   >
     National Insurance number
   </InputField>
@@ -335,12 +337,16 @@ const errors = [
 - https://govuk-elements.herokuapp.com/errors/#summarise-errors
 - https://github.com/alphagov/govuk-frontend/tree/master/src/components/error-summary
 
+### TODO:
+- Swap out browser dependancy for context API to help with React Native support
+
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `description` |  | undefined | string | 
- `errors` |  | [] | arrayOf[object Object] | 
- `heading` | true |  | string | 
+ `description` |  | ```undefined``` | string | Optional description of the errors
+ `errors` |  | ```[]``` | arrayOf[object Object] | Array of errors with text and target element name to scroll into view when clicked
+ `heading` | true | `````` | string | Heading text
+ `onHandleErrorClick` |  | ```() => {}``` | func | onClick function to scroll the target element into view
 
 
 ErrorText
@@ -362,6 +368,11 @@ Simple
 
 ### References
 - https://github.com/alphagov/govuk-frontend/tree/master/src/components
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true | `````` | string | Text to describe the error
 
 
 FileUpload
@@ -414,10 +425,10 @@ const meta = {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `acceptedFormats` |  | undefined | string | 
- `children` | true |  | node | 
- `hint` |  | undefined | string | Optional hint text
- `meta` |  | {} | shape[object Object] | Final form meta object, pending adjustment/removal
+ `acceptedFormats` |  | ```undefined``` | string | 
+ `children` | true | `````` | node | 
+ `hint` |  | ```undefined``` | string | Optional hint text
+ `meta` |  | ```{}``` | shape[object Object] | Final form meta object, pending adjustment/removal
 
 
 GridCol
@@ -429,7 +440,18 @@ GridCol
 ```
 <!-- STORY -->
 
+### Usage
 
+See Layout for code examples
+
+### References:
+- https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_grid_layout.scss
+- https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` |  | ```undefined``` | node | GridCol content
 
 
 GridRow
@@ -441,12 +463,18 @@ GridRow
 ```
 <!-- STORY -->
 
+### Usage
 
+See Layout for code examples
+
+### References:
+- https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_grid_layout.scss
+- https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
+ `children` | true | `````` | node | One or more GridCol nodes
 
 
 Header
@@ -503,8 +531,8 @@ Props pass through
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `level` |  | 1 | number | Semantic heading level value between 1 and 6
- `size` |  | undefined | enumObject.keys(FONT_SIZES) | Visual size level, accepts   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XSMALL`
+ `level` |  | ```1``` | number | Semantic heading level value between 1 and 6
+ `size` |  | ```undefined``` | enumObject.keys(FONT_SIZES) | Visual size level, accepts   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XSMALL`
 
 
 HiddenText
@@ -534,7 +562,7 @@ import Paragraph from '@govuk-react/paragraph';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `summaryText` |  | '' | string | 
+ `summaryText` |  | ```''``` | string | 
 
 
 HintText
@@ -556,6 +584,11 @@ Simple
 
 ### References
 - https://github.com/alphagov/govuk-frontend/tree/master/src/components/
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true | `````` | node | Text for the hint
 
 
 InputField
@@ -614,10 +647,10 @@ Input with hint text & error
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
- `hint` |  | null | string | 
- `input` |  | {} | shape[object Object] | 
- `meta` |  | {} | shape[object Object] | 
+ `children` | true | `````` | node | 
+ `hint` |  | ```undefined``` | node | 
+ `input` |  | ```{}``` | shape[object Object] | 
+ `meta` |  | ```{}``` | shape[object Object] | 
 
 
 Input
@@ -645,7 +678,7 @@ Simple
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `type` |  | 'text' | string | HTML `<Input />` type
+ `type` |  | ```'text'``` | string | HTML `<Input />` type
 
 
 InsetText
@@ -686,7 +719,7 @@ import Paragraph from '@govuk-react/paragraph';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `isNarrow` |  | false | bool | Renders a narrow border following GDS guides if set to true
+ `isNarrow` |  | ```false``` | bool | Renders a narrow border following GDS guides if set to true
 
 
 LabelText
@@ -708,6 +741,11 @@ Simple
 ### References:
 - https://github.com/alphagov/govuk-frontend/tree/master/src/components/
 
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true | `````` | node | Text for the label
+
 
 Label
 =====
@@ -728,6 +766,11 @@ Simple
 ### References:
 - https://github.com/alphagov/govuk-frontend/tree/master/src/components/
 
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true | `````` | node | Text for the label
+
 
 Layout
 ======
@@ -738,7 +781,90 @@ Layout
 ```
 <!-- STORY -->
 
+### Usage
 
+Simple
+```jsx
+import GridRow from '@govuk-react/grid-row';
+import GridCol from '@govuk-react/grid-col';
+
+<Layout>
+   <GridRow>
+     <GridCol hideContent columFull>
+       <p>content</p>
+     </GridCol>
+   </GridRow>
+ </Layout>
+```
+
+Column Halves
+```jsx
+import GridRow from '@govuk-react/grid-row';
+import GridCol from '@govuk-react/grid-col';
+
+<Layout>
+  <GridRow>
+    <GridCol hideContent columnOneHalf>
+      <p>content</p>
+    </GridCol>
+    <GridCol hideContent columnOneHalf>
+      <p>content</p>
+    </GridCol>
+  </GridRow>
+</Layout>
+```
+
+Column Thirds
+```jsx
+import GridRow from '@govuk-react/grid-row';
+import GridCol from '@govuk-react/grid-col';
+
+<Layout>
+  <GridRow>
+     <GridCol hideContent columnOneThird>
+       <p>content</p>
+     </GridCol>
+     <GridCol hideContent columnOneThird>
+       <p>content</p>
+     </GridCol>
+     <GridCol hideContent columnOneThird>
+       <p>content</p>
+     </GridCol>
+   </GridRow>
+</Layout>
+```
+
+Column Quarters
+```jsx
+import GridRow from '@govuk-react/grid-row';
+import GridCol from '@govuk-react/grid-col';
+
+<Layout>
+  <GridRow>
+     <GridCol hideContent columnOneQuarter>
+       <p>content</p>
+     </GridCol>
+     <GridCol hideContent columnOneQuarter>
+       <p>content</p>
+     </GridCol>
+     <GridCol hideContent columnOneQuarter>
+       <p>content</p>
+     </GridCol>
+     <GridCol hideContent columnOneQuarter>
+       <p>content</p>
+     </GridCol>
+   </GridRow>
+</Layout>
+```
+
+### References:
+- https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_grid_layout.scss
+- https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true | `````` | node | GridRow and GridCol children nodes
 
 
 LeadParagraph
@@ -760,6 +886,11 @@ Simple
 
 ### References
 - https://govuk-static.herokuapp.com/component-guide/lead_paragraph
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true | `````` | node | Text in the Lead paragraph
 
 
 ListItem
@@ -790,6 +921,11 @@ import { asAnchor } from '@govuk-react/hoc';
 
 ### References
 - https://github.com/alphagov/govuk-frontend/tree/master/src/components
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true | `````` | node | List item content
 
 
 ListNavigation
@@ -847,8 +983,8 @@ const AnchorLink = asAnchor(Link);
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | List navigation content
- `listStyleType` |  | undefined | string | CSS value for `list-style-type`
+ `children` | true | `````` | node | List navigation content
+ `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`
 
 
 LoadingBox
@@ -860,19 +996,73 @@ LoadingBox
 ```
 <!-- STORY -->
 
+### Usage
 
+Simple
+```jsx
+<LoadingBox loading>
+  Lorem ipsum dolor sit amet
+</LoadingBox>
+```
+
+Loading box complex
+```jsx
+<LoadingBox
+   loading={false}
+   backgroundColor={'#fff'}
+   timeIn={800}
+   timeOut={200}
+   backgroundColorOpacity={0.85}
+   spinnerColor={'#000'}
+>
+  Lorem ipsum dolor sit amet
+</LoadingBox>
+```
+
+### References:
+- https://govuk-loader-prototype.herokuapp.com/components/loader
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `backgroundColor` |  | WHITE | string | 
- `backgroundColorOpacity` |  | 0.85 | number | 
- `children` | true |  | node | 
- `loading` |  | false | bool | 
- `spinnerColor` |  | BLACK | string | 
- `timeIn` |  | 800 | number | 
- `timeOut` |  | 200 | number | 
- `title` |  | undefined | string | 
+ `backgroundColor` |  | ```WHITE``` | string | Background color (3 or 6 Hex char) of loading spinner overlay when loading is true.
+ `backgroundColorOpacity` |  | ```0.85``` | number | Opacity of loading spinner backgroud colour when loading is true
+ `children` | true | `````` | node | One or more children nodes that loading box will overlay
+ `loading` |  | ```false``` | bool | Whether loading is currently set to true or false
+ `spinnerColor` |  | ```BLACK``` | string | Color (3 or 6 Hex char) of loading spinner
+ `timeIn` |  | ```800``` | number | Length of fade-in animation in milliseconds
+ `timeOut` |  | ```200``` | number | Length of fade-out animation in milliseconds
+ `title` |  | ```undefined``` | string | Loading spinner title text
+
+
+Main
+====
+
+### Import
+```js
+  import Main from '@govuk-react/main';
+```
+<!-- STORY -->
+
+### Usage
+
+Provides a container which aligns to the topNav component,
+is centered, and provides top padding
+
+Simple usage
+```jsx
+<Main>
+  ... nested nodes
+</Main>
+```
+
+### TODO
+- Implement the 1020px min-width MQ to constants
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` |  | ```undefined``` | node | Child nodes for the page being built
 
 
 MultiChoice
@@ -907,10 +1097,10 @@ import Radio from '@govuk-react/radio';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
- `hint` |  | undefined | string | 
- `label` | true |  | node | 
- `meta` |  | {} | shape[object Object] | 
+ `children` | true | `````` | node | 
+ `hint` |  | ```undefined``` | string | 
+ `label` | true | `````` | node | 
+ `meta` |  | ```{}``` | shape[object Object] | 
 
 
 OrderedList
@@ -955,7 +1145,7 @@ import ListItem from '@govuk-react/list-item';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `listStyleType` |  | undefined | string | CSS value for `list-style-type`
+ `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`
 
 
 Pagination
@@ -988,6 +1178,11 @@ const PaginationAnchor = asPaginationItem('a');
 ### References:
 - https://govuk-static.herokuapp.com/component-guide/previous_and_next_navigation
 
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true | `````` | node | `asPaginationItem` nodes
+
 
 Panel
 =====
@@ -998,14 +1193,29 @@ Panel
 ```
 <!-- STORY -->
 
+### Usage
 
+Simple
+```jsx
+<Panel panelTitle="Application complete" />
+```
+
+Panel with header and HTML body
+```jsx
+<Panel
+   panelTitle="Application complete"
+   panelBody={['Your reference number', <br />, <strong>HDJ2123F</strong>]}
+ />
+```
+
+### References:
+- https://github.com/alphagov/govuk-frontend/tree/master/src/components/panel
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `className` |  | undefined | string | 
- `panelBody` |  | undefined | string | 
- `panelTitle` | true |  | string | 
+ `panelBody` |  | ```undefined``` | union(string|array) | Panel body text
+ `panelTitle` | true | `````` | string | Panel title text
 
 
 Paragraph
@@ -1019,32 +1229,44 @@ Paragraph
 
 ### Usage
 
-Supports bold, italic and links in Markdown ONLY.
+Supports bold, italic, links, inline code and block code in Markdown ONLY.
 This is to ensure we follow GDS as closely as possible.
 It is worth noting that GDS recommends avoiding bold and italics.
 
 Simple Usage with markdown
 ```jsx
-<Paragraph>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
+<Paragraph>Lorem `ipsum` **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
 ```
 
 As supporting text
 ```jsx
-<Paragraph supportingText>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
+<Paragraph supportingText>Lorem `ipsum` **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
 ```
+
+With a block of code
+````jsx
+<Paragraph>
+  Some other text...
+  ```
+  Some Code Block
+  ```
+  Some more text.
+</Paragraph>
+````
 
 ### References
 - https://govuk-elements.herokuapp.com/typography/#typography-body-copy
 
 ### TODO
 - Add test for supporting text
-- Add test for rendering supported markdown components
+- Review code snippet styling
+- Remove magic numbers from inline code styling blocks
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | '' | node | Text content supporting markdown
- `supportingText` |  | false | bool | Is this paragraph supporting text for another element?
+ `children` |  | ```''``` | node | Text content supporting markdown
+ `supportingText` |  | ```false``` | bool | Is this paragraph supporting text for another element?
 
 
 PhaseBadge
@@ -1056,7 +1278,15 @@ PhaseBadge
 ```
 <!-- STORY -->
 
+### Usage
 
+Simple
+```jsx
+<PhaseBadge>beta</PhaseBadge>
+```
+
+### References:
+- https://govuk-elements.herokuapp.com/alpha-beta-banners/
 
 
 PhaseBanner
@@ -1068,13 +1298,32 @@ PhaseBanner
 ```
 <!-- STORY -->
 
+### Usage
 
+Alpha
+```jsx
+<PhaseBanner level="alpha">
+   This part of GOV.UK is being rebuilt &#8211;{' '}
+   <AnchorLink href="https://example.com">find out what that means</AnchorLink>
+ </PhaseBanner>
+```
+
+Beta
+```jsx
+<PhaseBanner level="beta">
+   This part of GOV.UK is being rebuilt &#8211;{' '}
+   <AnchorLink href="https://example.com">find out what that means</AnchorLink>
+ </PhaseBanner>
+```
+
+### References:
+- https://govuk-elements.herokuapp.com/alpha-beta-banners/
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
- `level` | true |  | string | 
+ `children` | true | `````` | node | Children text and links
+ `level` | true | `````` | string | Alpha or beta banner
 
 
 Radio
@@ -1147,9 +1396,9 @@ Radio preselected & disabled
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
- `className` |  | undefined | string | 
- `inline` |  | false | bool | 
+ `children` | true | `````` | node | 
+ `className` |  | ```undefined``` | string | 
+ `inline` |  | ```false``` | bool | 
 
 
 RelatedItems
@@ -1188,6 +1437,11 @@ const AnchorTag = asAnchor('a');
 ### TODO:
 - Replace CSS selectors with imported components
 
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true | `````` | node | Related items content
+
 
 SearchBox
 =========
@@ -1221,7 +1475,7 @@ import GridCol from '@govuk-react/grid-col';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `placeholder` |  | undefined | string | 
+ `placeholder` |  | ```undefined``` | string | 
 
 
 Select
@@ -1302,12 +1556,12 @@ import { SelectInput } '@govuk-react/select';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
- `errorText` |  | undefined | string | 
- `hint` |  | undefined | string | 
- `input` |  | {} | shape[object Object] | 
- `label` | true |  | string | 
- `meta` |  | {} | shape[object Object] | 
+ `children` | true | `````` | node | 
+ `errorText` |  | ```undefined``` | string | 
+ `hint` |  | ```undefined``` | string | 
+ `input` |  | ```{}``` | shape[object Object] | 
+ `label` | true | `````` | string | 
+ `meta` |  | ```{}``` | shape[object Object] | 
 
 
 Table
@@ -1319,14 +1573,85 @@ Table
 ```
 <!-- STORY -->
 
+### Usage
 
+Component default
+```jsx
+const example1Body = (
+ <React.Fragment>
+   <Table.Row>
+     <Table.CellHeader>First 6 weeks</Table.CellHeader>
+     <Table.Cell>£109.80 per week</Table.Cell>
+   </Table.Row>
+   <Table.Row>
+     <Table.Cell>Next 33 weeks</Table.Cell>
+     <Table.Cell>£109.80 per week</Table.Cell>
+   </Table.Row>
+   <Table.Row>
+     <Table.Cell>Total estimated pay</Table.Cell>
+     <Table.Cell>£4,282.20</Table.Cell>
+   </Table.Row>
+   <Table.Row>
+     <Table.Cell>Tell the mother&rsquo;s employer</Table.Cell>
+     <Table.Cell>28 days before they want to start maternity pay</Table.Cell>
+   </Table.Row>
+ </React.Fragment>
+);
+
+<Table caption="Dates and amounts" body={example1Body} />
+```
+
+Numeric tabular data
+```jsx
+const example2Head = (
+  <Table.Row>
+    <Table.CellHeader>Month you apply</Table.CellHeader>
+    <Table.CellHeader alignRight>Rate for vehicles</Table.CellHeader>
+    <Table.CellHeader alignRight>Rate for bicycles</Table.CellHeader>
+  </Table.Row>
+);
+
+const example2Body = (
+  <React.Fragment>
+    <Table.Row>
+      <Table.CellHeader>January</Table.CellHeader>
+      <Table.Cell alignRight>£165.00</Table.Cell>
+      <Table.Cell alignRight>£85.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.CellHeader>February</Table.CellHeader>
+      <Table.Cell alignRight>£165.00</Table.Cell>
+      <Table.Cell alignRight>£85.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.CellHeader>March</Table.CellHeader>
+      <Table.Cell alignRight>£151.00</Table.Cell>
+      <Table.Cell alignRight>£77.00</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.CellHeader>April</Table.CellHeader>
+      <Table.Cell alignRight>£136.00</Table.Cell>
+      <Table.Cell alignRight>£70.00</Table.Cell>
+    </Table.Row>
+  </React.Fragment>
+);
+
+<Table
+ caption="Attention, I am the caption of this ship!"
+ head={example2Head}
+ body={example2Body}
+/>
+```
+
+### References:
+- https://govuk-elements.herokuapp.com/alpha-beta-banners/
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `body` | true |  | node | 
- `caption` |  | undefined | string | 
- `head` |  | undefined | node | 
+ `body` | true | `````` | node | Table body rows and cells
+ `caption` |  | ```undefined``` | string | Table caption title
+ `head` |  | ```undefined``` | node | Table header rows and cells
 
 
 TextArea
@@ -1374,10 +1699,10 @@ const meta = {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
- `hint` |  | undefined | string | 
- `input` |  | {} | shape[object Object] | 
- `meta` |  | {} | shape[object Object] | 
+ `children` | true | `````` | node | 
+ `hint` |  | ```undefined``` | string | 
+ `input` |  | ```{}``` | shape[object Object] | 
+ `meta` |  | ```{}``` | shape[object Object] | 
 
 
 TopNav
@@ -1389,18 +1714,90 @@ TopNav
 ```
 <!-- STORY -->
 
+### Usage
 
+TopNav with logo, service title and navigation items
+```jsx
+import CrownIcon from '@govuk-react/icon-crown';
+import SearchBox from '@govuk-react/search-box';
+import Header from '@govuk-react/header';
+import TopNav, { asNavLinkAnchor, asTopNavAnchor } from '@govuk-react/top-nav';
+
+const LogoAnchor = asTopNavAnchor('a');
+const NavAnchor = asNavLinkAnchor('a');
+
+const link = 'https://example.com?=1';
+
+const Company = (
+  <LogoAnchor href={link} target="new">
+    <TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</TopNav.IconTitle>
+  </LogoAnchor>
+);
+
+const ServiceTitle = (
+  <NavAnchor href={link} target="new">
+    <Header mb="0" level={3}>Service Title</Header>
+  </NavAnchor>
+);
+
+const Search = (
+  <SearchBox placeholder="Search">hi</SearchBox>
+);
+
+<TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
+  <NavAnchor href="https://example.com?q=catdog" target="new">Navigation item #1</NavAnchor>
+  <NavAnchor href="https://example.com?q=dogcat" target="new">Navigation item #2</NavAnchor>
+</TopNav>
+```
+
+```jsx
+import { BrowserRouter, Link } from 'react-router-dom';
+import CrownIcon from '@govuk-react/icon-crown';
+import Header from '@govuk-react/header';
+import TopNav, { asLogoAnchor, asNavLinkAnchor } from '@govuk-react/top-nav';
+
+const LogoLink = asTopNavAnchor(Link);
+const NavLink= asNavLinkAnchor(Link);
+
+const reactRouterLink = '/section';
+const CompanyLink = (
+  <LogoLink to={reactRouterLink}>
+    <TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</TopNav.IconTitle>
+  </LogoLink>
+);
+
+const ServiceTitleLink = (
+  <NavLink to={reactRouterLink}>
+    <Header mb="0" level={3}>Service Title</Header>
+  </NavLink>
+);
+
+<BrowserRouter>
+  <TopNav company={CompanyLink} serviceTitle={ServiceTitleLink} />
+</BrowserRouter>
+```
+
+### References:
+- http://alphagov.github.io/govuk_template/example-proposition-menu.html
+
+### TODO:
+- TODO: this component is a work in progress and needs to more closely match existing examples
+- TODO: is TopNav the right name? What's it called in other GDS styles/patterns?
+- TODO: (The name Header is ambiguous)
+- TODO: Fix the position and design of this button
+- TODO: #205 Use context api and/or render props for `active` navigation items
+- TODO: Vertical alignment here needs some work, perhaps should be its own component
+- TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `active` |  | undefined | number | 
- `bgColor` |  | BLACK | string | 
- `children` |  | undefined | node | 
- `color` |  | WHITE | string | 
- `company` |  | undefined | node | 
- `search` |  | false | node | 
- `serviceTitle` |  | undefined | node | 
+ `bgColor` |  | ```BLACK``` | string | Top nav background color
+ `children` |  | ```undefined``` | node | List Navigation items with anchor tags e.g. NavAnchor components
+ `color` |  | ```WHITE``` | string | Top nav text color
+ `company` |  | ```undefined``` | node | Company component e.g. GOV UK
+ `search` |  | ```false``` | node | Search component
+ `serviceTitle` |  | ```undefined``` | node | Service title component e.g. Food Standards Authority
 
 
 UnorderedList
@@ -1445,7 +1842,8 @@ import ListItem from '@govuk-react/list-item';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `listStyleType` |  | undefined | string | CSS value for `list-style-type`
+ `children` | true | `````` | node | One or more ListItem components
+ `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`
 
 
 WarningText
@@ -1471,6 +1869,6 @@ Simple
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | Warning text to be displayed
+ `children` | true | `````` | node | Warning text to be displayed
 
 
