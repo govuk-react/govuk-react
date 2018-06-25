@@ -21,7 +21,9 @@ exports[`GridRow matches snapshot: enzyme.mount 1`] = `
   <Styled(div)>
     <div
       className="emotion-0"
-    />
+    >
+      Example
+    </div>
   </Styled(div)>
 </GridRow>
 `;

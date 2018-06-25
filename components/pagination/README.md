@@ -31,6 +31,6 @@ const PaginationAnchor = asPaginationItem('a');
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | `asPaginationItem` nodes
+ `children` | true | `````` | node | `asPaginationItem` nodes
 
 

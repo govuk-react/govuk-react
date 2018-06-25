@@ -40,7 +40,6 @@ import ListItem from '@govuk-react/list-item';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | 
  `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`
 
 

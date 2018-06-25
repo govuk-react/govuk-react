@@ -68,13 +68,13 @@ const InputField = ({
 );
 
 InputField.defaultProps = {
-  hint: null,
+  hint: undefined,
   input: {},
   meta: {},
 };
 
 InputField.propTypes = {
-  hint: PropTypes.string,
+  hint: PropTypes.node,
   input: PropTypes.shape({
     name: PropTypes.string,
     onBlur: PropTypes.func,

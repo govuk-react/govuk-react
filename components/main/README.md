@@ -14,9 +14,9 @@ is centered, and provides top padding
 
 Simple usage
 ```jsx
-<main>
+<Main>
   ... nested nodes
-</main>
+</Main>
 ```
 
 ### TODO
@@ -25,6 +25,6 @@ Simple usage
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | ```null``` | node | Child nodes for the page being built
+ `children` |  | ```undefined``` | node | Child nodes for the page being built
 
 

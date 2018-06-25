@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 import Button, {
   ButtonStart,
@@ -9,32 +8,65 @@ import Button, {
 } from './fixtures';
 
 describe('button', () => {
-  const wrapper = <Button />;
-  const wrapper2 = <ButtonStartIcon />;
+  let wrapper;
 
   it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(wrapper, div);
-    ReactDOM.render(wrapper2, div);
+    wrapper = mount(<Button>Example</Button>);
   });
 
   it('should render a button', () => {
-    const output = shallow(wrapper);
-    expect(output.find('button')).toBeTruthy();
+    expect(wrapper.find('button')).toBeTruthy();
   });
 
-  it('should render a disabled button', () => {
-    const output = shallow(<ButtonDisabled />);
-    expect(output.find('button[disabled="disabled"]')).toBeTruthy();
-    expect(mount(<ButtonDisabled />)).toMatchSnapshot('disabled button');
+  it('matches snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+
+describe('disabled button', () => {
+  let wrapper;
+
+  it('renders without crashing', () => {
+    wrapper = mount(<ButtonDisabled />);
   });
 
-  it('matches wrapper snapshot', () => {
-    expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
+  it('should render a button with the disabled attribute', () => {
+    expect(wrapper.find('button').prop('disabled')).toBeTruthy();
   });
 
+  it('matches snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+});
 
-  it('passes `props.start` to the rendered button as `start`', () => {
-    expect(mount(<ButtonStart />).find('button')).toHaveLength(1);
+describe('start button', () => {
+  let wrapper;
+
+  it('renders without crashing', () => {
+    wrapper = mount(<ButtonStart />);
+  });
+
+  it('should render a button with the isStart prop', () => {
+    expect(wrapper.find('button').parent().prop('isStart')).toBeTruthy();
+  });
+
+  it('matches snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+
+describe('button with icon', () => {
+  let wrapper;
+
+  it('renders without crashing', () => {
+    wrapper = mount(<ButtonStartIcon />);
+  });
+
+  it('should render an SVG icon within the button', () => {
+    expect(wrapper.find('SVG')).toHaveLength(1);
+  });
+
+  it('matches snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
   });
 });

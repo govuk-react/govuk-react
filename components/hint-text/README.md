@@ -9,6 +9,7 @@ HintText
 
 ### Usage
 
+
 Simple
 ```jsx
 <HintText>Example</HintText>
@@ -20,6 +21,6 @@ Simple
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | node | Text for the hint
+ `children` | true | `````` | node | Text for the hint
 
- 
+

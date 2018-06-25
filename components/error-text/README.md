@@ -9,6 +9,7 @@ ErrorText
 
 ### Usage
 
+
 Simple
 ```jsx
 <ErrorText errorText="example">Example</ErrorText>
@@ -20,6 +21,6 @@ Simple
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true |  | string | Text to describe the error
+ `children` | true | `````` | string | Text to describe the error
 
 

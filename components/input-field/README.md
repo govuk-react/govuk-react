@@ -55,7 +55,7 @@ Input with hint text & error
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | node | 
- `hint` |  | ```null``` | string | 
+ `hint` |  | ```undefined``` | node | 
  `input` |  | ```{}``` | shape[object Object] | 
  `meta` |  | ```{}``` | shape[object Object] | 
 

@@ -54,13 +54,13 @@ const StyledButton = styled('button')(
       marginLeft: SPACING.SCALE_4,
     },
   },
-  ({ start, icon, disabled }) => ({
+  ({ isStart, disabled, icon }) => ({
     opacity: disabled ? '.5' : '1',
     pointerEvents: disabled ? 'none' : 'auto',
-    fontWeight: start ? '700' : undefined,
-    fontSize: start ? '24px' : undefined,
-    lineHeight: start ? '1.25' : undefined,
-    padding: start ? '.36842em .84211em .21053em' : undefined,
+    fontWeight: isStart ? '700' : undefined,
+    fontSize: isStart ? '24px' : undefined,
+    lineHeight: isStart ? '1.25' : undefined,
+    padding: isStart ? '.36842em .84211em .21053em' : undefined,
     paddingRight: icon ? '.54211em' : '.84211em',
   }),
 );
@@ -92,11 +92,12 @@ const StyledButton = styled('button')(
  * - Remove cascade styling for nested elements such as `svg`
  */
 const Button = ({
+  start,
   children,
   icon,
   ...props
 }) => (
-  <StyledButton {...props} icon={icon}>
+  <StyledButton isStart={start} icon={icon} {...props}>
     {children}
     {icon}
   </StyledButton>
@@ -116,7 +117,7 @@ Button.propTypes = {
    */
   start: PropTypes.bool,
   /**
-   * Renders a disabled button if set to true
+   * Renders a disabled button and removes pointer events if set to true
    */
   disabled: PropTypes.bool,
 };

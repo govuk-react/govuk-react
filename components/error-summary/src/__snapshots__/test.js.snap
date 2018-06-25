@@ -648,24 +648,12 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
       </ErrorSummary>
     </Styled(ErrorSummary)>
     <Styled(InputField)
-      hint={
-        Array [
-          "It’s on your National Insurance card, benefit letter, payslip or P60.",
-          <br />,
-          "For example, ‘QQ 12 34 56 C’.",
-        ]
-      }
+      hint="It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
       name="national-insurance-number"
     >
       <InputField
         className="emotion-11"
-        hint={
-          Array [
-            "It’s on your National Insurance card, benefit letter, payslip or P60.",
-            <br />,
-            "For example, ‘QQ 12 34 56 C’.",
-          ]
-        }
+        hint="It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
         input={Object {}}
         meta={Object {}}
         name="national-insurance-number"
@@ -711,9 +699,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       <span
                         className="emotion-27"
                       >
-                        It’s on your National Insurance card, benefit letter, payslip or P60.
-                        <br />
-                        For example, ‘QQ 12 34 56 C’.
+                        It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
                       </span>
                     </Styled(span)>
                   </HintText>

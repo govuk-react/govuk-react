@@ -27,6 +27,6 @@ describe('Checkbox', () => {
     expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
   });
   it('renders disabled checkbox', () => {
-    expect(mount(<Checkbox disabled />)).toMatchSnapshot('disabled');
+    expect(mount(<Checkbox disabled>Example</Checkbox>)).toMatchSnapshot('disabled');
   });
 });

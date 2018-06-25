@@ -83,8 +83,8 @@ const example2Body = (
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `body` | true |  | node | Table body rows and cells
- `caption` |  | undefined | string | Table caption title
- `head` |  | undefined | node | Table header rows and cells
+ `body` | true | `````` | node | Table body rows and cells
+ `caption` |  | ```undefined``` | string | Table caption title
+ `head` |  | ```undefined``` | node | Table header rows and cells
 
 

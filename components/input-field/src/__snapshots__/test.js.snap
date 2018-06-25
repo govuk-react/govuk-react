@@ -124,7 +124,6 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
 <Styled(InputField)>
   <InputField
     className="emotion-1"
-    hint={null}
     input={Object {}}
     meta={Object {}}
   >

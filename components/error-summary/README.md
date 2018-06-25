@@ -24,19 +24,20 @@ const errors = [
   },
 ];
 
+const onHandleErrorClick = (targetName) => {
+  document.getElementsByName(targetName)[0].scrollIntoView();
+};
+
 <div>
   <ErrorSummary
     heading={heading}
     description={description}
+    onHandleErrorClick={onHandleErrorClick}
     errors={errors}
   />
   <InputField
     name="national-insurance-number"
-    hint={[
-      'It’s on your National Insurance card, benefit letter, payslip or P60.',
-      <br />,
-      'For example, ‘QQ 12 34 56 C’.',
-    ]}
+    hint="It’s on your National Insurance card, benefit letter, payslip or P60."
   >
     National Insurance number
   </InputField>
@@ -55,8 +56,9 @@ const errors = [
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `description` |  | undefined | string | Optional description of the errors
- `errors` |  | [] | arrayOf[object Object] | Array of errors with text and target element name to scroll into view when clicked
- `heading` | true |  | string | Heading text
+ `description` |  | ```undefined``` | string | Optional description of the errors
+ `errors` |  | ```[]``` | arrayOf[object Object] | Array of errors with text and target element name to scroll into view when clicked
+ `heading` | true | `````` | string | Heading text
+ `onHandleErrorClick` |  | ```() => {}``` | func | onClick function to scroll the target element into view
 
 

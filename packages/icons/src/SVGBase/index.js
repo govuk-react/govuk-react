@@ -18,12 +18,13 @@ const SVG = ({
 );
 
 SVG.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   title: PropTypes.string,
   fill: PropTypes.string,
 };
 
 SVG.defaultProps = {
+  children: undefined,
   title: undefined,
   fill: 'currentColor',
 };
