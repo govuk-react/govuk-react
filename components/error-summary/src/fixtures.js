@@ -34,11 +34,7 @@ export default () => (
     />
     <InputField
       name="national-insurance-number"
-      hint={[
-        'It’s on your National Insurance card, benefit letter, payslip or P60.',
-        <br />,
-        'For example, ‘QQ 12 34 56 C’.',
-      ]}
+      hint="It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
     >
       National Insurance number
     </InputField>
