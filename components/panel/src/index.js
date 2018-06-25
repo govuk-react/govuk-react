@@ -68,17 +68,14 @@ const StyledBody = styled('div')({
  *
  */
 
-const generatePanelBodyKey = () => {
-  return `panelBody_${Math.floor(Math.random() * Math.floor(1000000))}`;
-}
-
 const Panel = ({ panelTitle, panelBody, ...props }) => (
   <StyledPanel {...props}>
     <StyledTitle>{panelTitle}</StyledTitle>
     <StyledBody>
       {Array.isArray(panelBody)
-        ? panelBody.map((element) => (
-          <Fragment key={generatePanelBodyKey()}>{element}</Fragment>
+        ? panelBody.map((element, index) => (
+          /* eslint-disable-next-line react/no-array-index-key */
+          <Fragment key={index}>{element}</Fragment>
         ))
         : panelBody}
     </StyledBody>
