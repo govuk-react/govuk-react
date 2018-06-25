@@ -1,9 +1,10 @@
 import React from 'react';
 import { boolean, text } from '@storybook/addon-knobs/react';
 import { ButtonArrow } from '@govuk-react/icons';
+
 import Button from '.';
 
-export default () => (
+const ButtonWithKnobs = () => (
   <Button
     mb="0"
     disabled={boolean('Disabled', false)}
@@ -13,22 +14,28 @@ export default () => (
   </Button>
 );
 
-export const ButtonStart = () => <Button start={boolean('Start', true)}>Save and continue</Button>;
+const ButtonStart = () => <Button start>Save and continue</Button>;
 
-export const ButtonStartIcon = () => (
-  <Button icon={<ButtonArrow />} start={boolean('Start', true)}>
+const ButtonStartIcon = () => (
+  <Button icon={<ButtonArrow />} start>
     Start now
   </Button>
 );
 
-export const ButtonDisabled = () => <Button disabled={boolean('Disabled', true)}>Disabled primary button</Button>;
+const ButtonDisabled = () => <Button disabled>Disabled primary button</Button>;
 
-export const ButtonDisabledStartIcon = () => (
-  <Button
-    disabled={boolean('Disabled', true)}
-    start={boolean('Start', true)}
-    icon={<ButtonArrow />}
-  >
+const ButtonDisabledStartIcon = () => (
+  <Button disabled start icon={<ButtonArrow />}>
     Start now
   </Button>
 );
+
+export default Button;
+
+export {
+  ButtonWithKnobs,
+  ButtonStart,
+  ButtonStartIcon,
+  ButtonDisabled,
+  ButtonDisabledStartIcon,
+};

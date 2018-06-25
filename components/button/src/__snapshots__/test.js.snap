@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`button matches wrapper snapshot: wrapper mount 1`] = `
+exports[`button matches snapshot 1`] = `
 .emotion-1 {
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-1 {
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
 }
 
@@ -43,7 +43,7 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
   opacity: 1;
   pointer-events: auto;
   padding-right: .84211em;
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 
 .emotion-0:hover {
@@ -74,42 +74,195 @@ exports[`button matches wrapper snapshot: wrapper mount 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
 }
 
-<_default>
-  <Styled(Button)
+<Styled(Button)>
+  <Button
+    className="emotion-1"
     disabled={false}
-    mb="0"
     start={false}
+  >
+    <Styled(button)
+      className="emotion-1"
+      disabled={false}
+      isStart={false}
+    >
+      <button
+        className="emotion-0"
+        disabled={false}
+      >
+        Example
+      </button>
+    </Styled(button)>
+  </Button>
+</Styled(Button)>
+`;
+
+exports[`button with icon matches snapshot 1`] = `
+.emotion-1 {
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 20px;
+  }
+}
+
+.emotion-0 {
+  background-color: #00823b;
+  border: none;
+  box-shadow: 0 2px 0 #003618;
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.25;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+  padding: .526315em .789473em .263157em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  opacity: 1;
+  pointer-events: auto;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.25;
+  padding: .36842em .84211em .21053em;
+  padding-right: .54211em;
+  margin-bottom: 15px;
+}
+
+.emotion-0:hover {
+  background-color: #00692f;
+  color: #ffffff;
+}
+
+.emotion-0:focus {
+  color: #ffffff;
+  background-color: #00692f;
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-0:active {
+  position: relative;
+  top: 2px;
+  box-shadow: 0 0 0 #003618;
+}
+
+.emotion-0:visited {
+  color: #00823b;
+}
+
+.emotion-0 svg {
+  max-width: 15px;
+  margin-left: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 20px;
+  }
+}
+
+<ButtonStartIcon>
+  <Styled(Button)
+    icon={
+      <ButtonArrow
+        fill="currentColor"
+        title="ButtonArrow"
+      />
+    }
+    start={true}
   >
     <Button
       className="emotion-1"
       disabled={false}
-      mb="0"
-      start={false}
+      icon={
+        <ButtonArrow
+          fill="currentColor"
+          title="ButtonArrow"
+        />
+      }
+      start={true}
     >
       <Styled(button)
         className="emotion-1"
         disabled={false}
-        mb="0"
-        start={false}
+        icon={
+          <ButtonArrow
+            fill="currentColor"
+            title="ButtonArrow"
+          />
+        }
+        isStart={true}
       >
         <button
           className="emotion-0"
           disabled={false}
-          start={false}
         >
-          Button
+          Start now
+          <ButtonArrow
+            fill="currentColor"
+            title="ButtonArrow"
+          >
+            <SVG
+              fill="currentColor"
+              title="ButtonArrow"
+              viewBox="0 0 706 860"
+            >
+              <svg
+                fill="currentColor"
+                height="100%"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                version="1.1"
+                viewBox="0 0 706 860"
+                width="100%"
+              >
+                <title>
+                  ButtonArrow
+                </title>
+                <g>
+                  <path
+                    d="M.152 0h252.993l452.108 430H452.261z"
+                  />
+                  <path
+                    d="M0 860h252.993L705.1 430H452.108z"
+                    fillOpacity="0.5"
+                  />
+                </g>
+              </svg>
+            </SVG>
+          </ButtonArrow>
         </button>
       </Styled(button)>
     </Button>
   </Styled(Button)>
-</_default>
+</ButtonStartIcon>
 `;
 
-exports[`button should render a disabled button: disabled button 1`] = `
+exports[`disabled button matches snapshot 1`] = `
 .emotion-1 {
   margin-bottom: 15px;
 }
@@ -199,12 +352,11 @@ exports[`button should render a disabled button: disabled button 1`] = `
       <Styled(button)
         className="emotion-1"
         disabled={true}
-        start={false}
+        isStart={false}
       >
         <button
           className="emotion-0"
           disabled={true}
-          start={false}
         >
           Disabled primary button
         </button>
@@ -212,4 +364,112 @@ exports[`button should render a disabled button: disabled button 1`] = `
     </Button>
   </Styled(Button)>
 </ButtonDisabled>
+`;
+
+exports[`start button matches snapshot 1`] = `
+.emotion-1 {
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 20px;
+  }
+}
+
+.emotion-0 {
+  background-color: #00823b;
+  border: none;
+  box-shadow: 0 2px 0 #003618;
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.25;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+  padding: .526315em .789473em .263157em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  opacity: 1;
+  pointer-events: auto;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.25;
+  padding: .36842em .84211em .21053em;
+  padding-right: .84211em;
+  margin-bottom: 15px;
+}
+
+.emotion-0:hover {
+  background-color: #00692f;
+  color: #ffffff;
+}
+
+.emotion-0:focus {
+  color: #ffffff;
+  background-color: #00692f;
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-0:active {
+  position: relative;
+  top: 2px;
+  box-shadow: 0 0 0 #003618;
+}
+
+.emotion-0:visited {
+  color: #00823b;
+}
+
+.emotion-0 svg {
+  max-width: 15px;
+  margin-left: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 20px;
+  }
+}
+
+<ButtonStart>
+  <Styled(Button)
+    start={true}
+  >
+    <Button
+      className="emotion-1"
+      disabled={false}
+      start={true}
+    >
+      <Styled(button)
+        className="emotion-1"
+        disabled={false}
+        isStart={true}
+      >
+        <button
+          className="emotion-0"
+          disabled={false}
+        >
+          Save and continue
+        </button>
+      </Styled(button)>
+    </Button>
+  </Styled(Button)>
+</ButtonStart>
 `;
