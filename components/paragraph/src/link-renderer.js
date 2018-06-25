@@ -13,12 +13,12 @@ const LinkRenderer = ({ href, children }) => (
 
 LinkRenderer.propTypes = {
   href: PropTypes.string,
-  children: PropTypes.string,
+  children: PropTypes.node,
 };
 
 LinkRenderer.defaultProps = {
   href: '',
-  children: '',
+  children: undefined,
 };
 
 export default LinkRenderer;

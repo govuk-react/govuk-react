@@ -116,7 +116,9 @@ exports[`Radio disabled: disabled 1`] = `
         <Styled(span)>
           <span
             className="emotion-1"
-          />
+          >
+            Example
+          </span>
         </Styled(span)>
       </label>
     </Styled(label)>
