@@ -23,7 +23,6 @@ describe('button', () => {
   });
 });
 
-// Test it takes disabled prop and renders disabled button
 describe('disabled button', () => {
   let wrapper;
 
