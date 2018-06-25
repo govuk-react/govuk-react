@@ -8,7 +8,11 @@ describe('Panel', () => {
   let props;
   const titleExample = 'Example';
   const bodyExample = 'body';
+  const bodyExampleArray = ['body', 'body2'];
   const wrapper = <Panel panelTitle={titleExample} panelBody={bodyExample} />;
+  const wrapperArray = (
+    <Panel panelTitle={titleExample} panelBody={bodyExampleArray} />
+  );
 
   beforeEach(() => {
     props = {
@@ -29,5 +33,17 @@ describe('Panel', () => {
 
   it('matches wrapper snapshot', () => {
     expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
+  });
+
+  it('should render a panel body that is an array', () => {
+    const output = mount(wrapperArray);
+    bodyExampleArray.forEach((textString) => {
+      expect(output.text().includes(textString)).toBe(true);
+    });
+  });
+
+  it('should render a panel body that is a string', () => {
+    const output = mount(wrapper);
+    expect(output.text().includes(bodyExample)).toBe(true);
   });
 });

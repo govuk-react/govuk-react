@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 import { TURQUOISE, WHITE } from 'govuk-colours';
@@ -67,10 +67,18 @@ const StyledBody = styled('div')({
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/panel
  *
  */
+
 const Panel = ({ panelTitle, panelBody, ...props }) => (
   <StyledPanel {...props}>
     <StyledTitle>{panelTitle}</StyledTitle>
-    <StyledBody>{panelBody}</StyledBody>
+    <StyledBody>
+      {Array.isArray(panelBody)
+        ? panelBody.map((element, index) => (
+          /* eslint-disable-next-line react/no-array-index-key */
+          <Fragment key={index}>{element}</Fragment>
+        ))
+        : panelBody}
+    </StyledBody>
   </StyledPanel>
 );
 Panel.defaultProps = {
@@ -81,7 +89,7 @@ Panel.propTypes = {
   /** Panel title text */
   panelTitle: PropTypes.string.isRequired,
   /** Panel body text */
-  panelBody: PropTypes.string,
+  panelBody: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
 };
 
 export default withWhiteSpace({ marginBottom: 3 })(Panel);
