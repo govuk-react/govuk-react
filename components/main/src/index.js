@@ -32,8 +32,15 @@ const InnerContainer = styled('div')({
  *
  * Simple usage
  * ```jsx
+ * import GridRow from '@govuk-react/grid-row';
+ * import GridCol from '@govuk-react/grid-col';
+ *
  * <Main>
- *   ... nested nodes
+ *   <GridRow>
+ *     <GridCol>
+ *       ...
+ *     </GridCol>
+ *   </GridRow>
  * </Main>
  * ```
  *
