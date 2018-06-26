@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
+.emotion-13 {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-13 {
+    margin-bottom: 30px;
+  }
+}
+
 .emotion-1 {
   display: inline-block;
   cursor: pointer;
@@ -16,8 +26,8 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
 }
 
 .emotion-1:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: -1px;
+  outline: calc(3px + 1px) solid #ffbf47;
+  background: #ffbf47;
 }
 
 .emotion-0 {
@@ -27,13 +37,13 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
   text-decoration-skip-ink: none;
 }
 
-.emotion-11 {
-  margin-bottom: 20px;
+.emotion-8 {
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-11 {
-    margin-bottom: 30px;
+  .emotion-8 {
+    margin-bottom: 0;
   }
 }
 
@@ -43,12 +53,12 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
   border-left-width: 5px;
   border-color: #bfc1c3;
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-10 {
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -114,16 +124,6 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
   }
 }
 
-.emotion-8 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
-    margin-bottom: 0;
-  }
-}
-
 .emotion-6 {
   font-family: "nta",Arial,sans-serif;
   margin: 0;
@@ -177,67 +177,54 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
 }
 
 <_default>
-  <HiddenText
+  <Styled(HiddenText)
     summaryText="Help with nationality"
   >
-    <details>
-      <Styled(summary)>
-        <summary
-          className="emotion-1"
-        >
-          <Styled(span)>
-            <span
-              className="emotion-0"
-            >
-              Help with nationality
-            </span>
-          </Styled(span)>
-        </summary>
-      </Styled(summary)>
-      <Styled(InsetText)
-        isNarrow={true}
+    <HiddenText
+      className="emotion-13"
+      summaryText="Help with nationality"
+    >
+      <details
+        className="emotion-13"
       >
-        <InsetText
-          className="emotion-11"
-          isNarrow={true}
-        >
-          <Styled(div)
-            className="emotion-11"
-            isNarrow={true}
+        <Styled(summary)>
+          <summary
+            className="emotion-1"
           >
-            <div
-              className="emotion-10"
-            >
-              <Styled(Paragraph)
-                key="paragraphText1"
+            <Styled(span)>
+              <span
+                className="emotion-0"
               >
-                <Paragraph
-                  className="emotion-4"
-                  supportingText={false}
+                Help with nationality
+              </span>
+            </Styled(span)>
+          </summary>
+        </Styled(summary)>
+        <Styled(InsetText)
+          isNarrow={true}
+          mb={0}
+        >
+          <InsetText
+            className="emotion-8"
+            isNarrow={true}
+            mb={0}
+          >
+            <Styled(div)
+              className="emotion-8"
+              isNarrow={true}
+              mb={0}
+            >
+              <div
+                className="emotion-10"
+              >
+                <Styled(Paragraph)
+                  key="paragraphText1"
                 >
-                  <Styled(ReactMarkdown)
-                    allowedTypes={
-                      Array [
-                        "paragraph",
-                        "emphasis",
-                        "strong",
-                        "link",
-                        "inlineCode",
-                        "code",
-                      ]
-                    }
+                  <Paragraph
                     className="emotion-4"
-                    escapeHtml={false}
-                    renderers={
-                      Object {
-                        "link": [Function],
-                      }
-                    }
-                    skipHtml={true}
-                    source="If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card."
                     supportingText={false}
                   >
-                    <ReactMarkdown
+                    <Styled(ReactMarkdown)
                       allowedTypes={
                         Array [
                           "paragraph",
@@ -248,11 +235,8 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                           "code",
                         ]
                       }
-                      astPlugins={Array []}
-                      className="emotion-2"
+                      className="emotion-4"
                       escapeHtml={false}
-                      plugins={Array []}
-                      rawSourcePos={false}
                       renderers={
                         Object {
                           "link": [Function],
@@ -260,57 +244,59 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                       }
                       skipHtml={true}
                       source="If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card."
-                      sourcePos={false}
                       supportingText={false}
-                      transformLinkUri={[Function]}
                     >
-                      <div
+                      <ReactMarkdown
+                        allowedTypes={
+                          Array [
+                            "paragraph",
+                            "emphasis",
+                            "strong",
+                            "link",
+                            "inlineCode",
+                            "code",
+                          ]
+                        }
+                        astPlugins={Array []}
                         className="emotion-2"
-                        key="root-1-1"
+                        escapeHtml={false}
+                        plugins={Array []}
+                        rawSourcePos={false}
+                        renderers={
+                          Object {
+                            "link": [Function],
+                          }
+                        }
+                        skipHtml={true}
+                        source="If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card."
+                        sourcePos={false}
+                        supportingText={false}
+                        transformLinkUri={[Function]}
                       >
-                        <p
-                          key="paragraph-1-1"
+                        <div
+                          className="emotion-2"
+                          key="root-1-1"
                         >
-                          If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
-                        </p>
-                      </div>
-                    </ReactMarkdown>
-                  </Styled(ReactMarkdown)>
-                </Paragraph>
-              </Styled(Paragraph)>
-              <Styled(Paragraph)
-                key="paragraphText2"
-                mb={0}
-              >
-                <Paragraph
-                  className="emotion-8"
+                          <p
+                            key="paragraph-1-1"
+                          >
+                            If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+                          </p>
+                        </div>
+                      </ReactMarkdown>
+                    </Styled(ReactMarkdown)>
+                  </Paragraph>
+                </Styled(Paragraph)>
+                <Styled(Paragraph)
+                  key="paragraphText2"
                   mb={0}
-                  supportingText={false}
                 >
-                  <Styled(ReactMarkdown)
-                    allowedTypes={
-                      Array [
-                        "paragraph",
-                        "emphasis",
-                        "strong",
-                        "link",
-                        "inlineCode",
-                        "code",
-                      ]
-                    }
+                  <Paragraph
                     className="emotion-8"
-                    escapeHtml={false}
                     mb={0}
-                    renderers={
-                      Object {
-                        "link": [Function],
-                      }
-                    }
-                    skipHtml={true}
-                    source="We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post."
                     supportingText={false}
                   >
-                    <ReactMarkdown
+                    <Styled(ReactMarkdown)
                       allowedTypes={
                         Array [
                           "paragraph",
@@ -321,12 +307,9 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                           "code",
                         ]
                       }
-                      astPlugins={Array []}
-                      className="emotion-6"
+                      className="emotion-8"
                       escapeHtml={false}
                       mb={0}
-                      plugins={Array []}
-                      rawSourcePos={false}
                       renderers={
                         Object {
                           "link": [Function],
@@ -334,29 +317,56 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                       }
                       skipHtml={true}
                       source="We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post."
-                      sourcePos={false}
                       supportingText={false}
-                      transformLinkUri={[Function]}
                     >
-                      <div
+                      <ReactMarkdown
+                        allowedTypes={
+                          Array [
+                            "paragraph",
+                            "emphasis",
+                            "strong",
+                            "link",
+                            "inlineCode",
+                            "code",
+                          ]
+                        }
+                        astPlugins={Array []}
                         className="emotion-6"
-                        key="root-1-1"
+                        escapeHtml={false}
+                        mb={0}
+                        plugins={Array []}
+                        rawSourcePos={false}
+                        renderers={
+                          Object {
+                            "link": [Function],
+                          }
+                        }
+                        skipHtml={true}
+                        source="We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post."
+                        sourcePos={false}
+                        supportingText={false}
+                        transformLinkUri={[Function]}
                       >
-                        <p
-                          key="paragraph-1-1"
+                        <div
+                          className="emotion-6"
+                          key="root-1-1"
                         >
-                          We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
-                        </p>
-                      </div>
-                    </ReactMarkdown>
-                  </Styled(ReactMarkdown)>
-                </Paragraph>
-              </Styled(Paragraph)>
-            </div>
-          </Styled(div)>
-        </InsetText>
-      </Styled(InsetText)>
-    </details>
-  </HiddenText>
+                          <p
+                            key="paragraph-1-1"
+                          >
+                            We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+                          </p>
+                        </div>
+                      </ReactMarkdown>
+                    </Styled(ReactMarkdown)>
+                  </Paragraph>
+                </Styled(Paragraph)>
+              </div>
+            </Styled(div)>
+          </InsetText>
+        </Styled(InsetText)>
+      </details>
+    </HiddenText>
+  </Styled(HiddenText)>
 </_default>
 `;
