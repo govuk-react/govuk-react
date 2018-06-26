@@ -5,6 +5,7 @@ import styled from 'react-emotion';
 import InsetText from '@govuk-react/inset-text';
 import { LINK_COLOUR, LINK_HOVER_COLOUR, FOCUS_COLOUR } from 'govuk-colours';
 import { FOCUS_WIDTH, FONT_SIZE, SPACING, NTA_LIGHT } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
 const StyledSpan = styled('span')({
   textDecoration: 'underline',
@@ -23,8 +24,9 @@ const StyledSummary = styled('summary')({
     color: LINK_HOVER_COLOUR,
   },
   ':focus': {
-    outline: `${FOCUS_WIDTH} solid ${FOCUS_COLOUR}`,
-    outlineOffset: '-1px',
+    outline: `calc(${FOCUS_WIDTH} + 1px) solid ${FOCUS_COLOUR}`,
+    // outlineOffset: '-1px', In alpha/govuk-frontend but causes arrow icon to be hidden when open
+    background: FOCUS_COLOUR,
   },
 });
 
@@ -45,19 +47,21 @@ const StyledSummary = styled('summary')({
  * ### References
  * - https://govuk-elements.herokuapp.com/typography/#typography-hidden-text
  */
-const HiddenText = ({ summaryText, ...props }) => (
-  <details>
+const HiddenText = ({ summaryText, children, ...props }) => (
+  <details {...props}>
     <StyledSummary><StyledSpan>{summaryText}</StyledSpan></StyledSummary>
-    <InsetText isNarrow {...props} />
+    <InsetText mb={0} isNarrow>{ children }</InsetText>
   </details>
 );
 
 HiddenText.defaultProps = {
+  children: undefined,
   summaryText: '',
 };
 
 HiddenText.propTypes = {
+  children: PropTypes.node,
   summaryText: PropTypes.string,
 };
 
-export default HiddenText;
+export default withWhiteSpace({ marginBottom: 6 })(HiddenText);
