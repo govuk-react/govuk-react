@@ -19,6 +19,11 @@ With custom click handler
 <BackLink onClick={this.myCustomFunction}>Back</BackLink>
 ```
 
+With `href` attribute
+```jsx
+<BackLink href='#'>Back</BackLink>
+```
+
 ### References:
 - https://github.com/alphagov/govuk-frontend/tree/master/src/components/back-link
 

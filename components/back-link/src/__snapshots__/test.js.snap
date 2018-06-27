@@ -73,17 +73,17 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
     className="emotion-1"
     onClick={[Function]}
   >
-    <Styled(button)
+    <Styled(a)
       className="emotion-1"
       onClick={[Function]}
     >
-      <button
+      <a
         className="emotion-0"
         onClick={[Function]}
       >
         example
-      </button>
-    </Styled(button)>
+      </a>
+    </Styled(a)>
   </BackLink>
 </Styled(BackLink)>
 `;

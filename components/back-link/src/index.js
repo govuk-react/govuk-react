@@ -10,7 +10,7 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-const Anchor = styled('button')({
+const Anchor = styled('a')({
   fontFamily: NTA_LIGHT,
   WebkitFontSmoothing: 'antialiased',
   MozOsxFontSmoothing: 'grayscale',
@@ -63,6 +63,11 @@ const Anchor = styled('button')({
  * With custom click handler
  * ```jsx
  * <BackLink onClick={this.myCustomFunction}>Back</BackLink>
+ * ```
+ * 
+ * With `href` attribute
+ * ```jsx
+ * <BackLink href='#'>Back</BackLink>
  * ```
  *
  * ### References:

@@ -16,7 +16,7 @@ describe('Back Link', () => {
 
   it('simulates click events', () => {
     mount(wrapper)
-      .find('button')
+      .find('a')
       .simulate('click');
     expect(onButtonClick).toHaveProperty('callCount', 1);
   });
