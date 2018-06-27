@@ -7,6 +7,8 @@ import { LINK_COLOUR, LINK_HOVER_COLOUR, FOCUS_COLOUR } from 'govuk-colours';
 import { FOCUS_WIDTH, FONT_SIZE, SPACING, NTA_LIGHT } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
+const HIDDEN_TEXT_FOCUS_WIDTH = `${parseInt(FOCUS_WIDTH.split('px')[0], 10) + 1}px`;
+
 const StyledSpan = styled('span')({
   textDecoration: 'underline',
   textDecorationSkipInk: 'none',
@@ -24,7 +26,7 @@ const StyledSummary = styled('summary')({
     color: LINK_HOVER_COLOUR,
   },
   ':focus': {
-    outline: `calc(${FOCUS_WIDTH} + 1px) solid ${FOCUS_COLOUR}`,
+    outline: `${HIDDEN_TEXT_FOCUS_WIDTH} solid ${FOCUS_COLOUR}`,
     // outlineOffset: '-1px', In alpha/govuk-frontend but causes arrow icon to be hidden when open
     background: FOCUS_COLOUR,
   },
