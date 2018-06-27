@@ -46,6 +46,7 @@ const StyledSummary = styled('summary')({
  *
  * ### References
  * - https://govuk-elements.herokuapp.com/typography/#typography-hidden-text
+ * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/details/_details.scss
  */
 const HiddenText = ({ summaryText, children, ...props }) => (
   <details {...props}>
@@ -56,12 +57,13 @@ const HiddenText = ({ summaryText, children, ...props }) => (
 
 HiddenText.defaultProps = {
   children: undefined,
-  summaryText: '',
 };
 
 HiddenText.propTypes = {
+  /**  The nodes that will be displayed within the InsetText component */
   children: PropTypes.node,
-  summaryText: PropTypes.string,
+  /** Text for the summary button link e.g. Help with nationality */
+  summaryText: PropTypes.string.isRequired,
 };
 
 export default withWhiteSpace({ marginBottom: 6 })(HiddenText);
