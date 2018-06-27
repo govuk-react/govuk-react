@@ -26,7 +26,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
 }
 
 .emotion-1:focus {
-  outline: calc(3px + 1px) solid #ffbf47;
+  outline: 4px solid #ffbf47;
   background: #ffbf47;
 }
 
