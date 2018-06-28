@@ -2,10 +2,8 @@
 
 exports[`GridCol matches snapshot: enzyme.mount 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  background-image: none;
-  margin: 0;
-  margin-bottom: 15px;
+  background: transparent;
+  margin: 0 0 15px;
   text-indent: 0px;
   box-sizing: border-box;
 }
@@ -25,8 +23,18 @@ exports[`GridCol matches snapshot: enzyme.mount 1`] = `
   }
 }
 
-<GridCol>
-  <Styled(div)>
+<GridCol
+  columnOneHalf={false}
+  columnOneQuarter={false}
+  columnOneThird={false}
+  columnTwoThirds={false}
+>
+  <Styled(div)
+    columnOneHalf={false}
+    columnOneQuarter={false}
+    columnOneThird={false}
+    columnTwoThirds={false}
+  >
     <div
       className="emotion-0"
     >
