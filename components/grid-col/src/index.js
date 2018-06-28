@@ -56,6 +56,10 @@ const StyledColumn = styled('div')(
  *
  * ### Usage
  *
+ * Example
+ * * https://codesandbox.io/s/x917knwm4z
+ *
+ * Simple
  * ```jsx
  * import GridRow from '@govuk-react/grid-row';
  * import GridCol from '@govuk-react/grid-col';

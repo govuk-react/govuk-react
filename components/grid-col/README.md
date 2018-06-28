@@ -7,12 +7,15 @@ GridCol
 ```
 <!-- STORY -->
 
-### Usage
-
 Should always be wrapped by `GridRow`. Will always render a column at 100% width if
 the browser width is below the `LARGESCREEN` breakpoint.
 
+### Usage
+
 Example
+* https://codesandbox.io/s/x917knwm4z
+
+Simple
 ```jsx
 import GridRow from '@govuk-react/grid-row';
 import GridCol from '@govuk-react/grid-col';

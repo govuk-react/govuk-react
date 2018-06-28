@@ -18,7 +18,22 @@ const StyledRow = styled('div')({
  *
  * ### Usage
  *
- * See Layout for code examples
+ * Example
+ * * https://codesandbox.io/s/x917knwm4z
+ *
+ * Simple
+ * ```jsx
+ * import GridRow from '@govuk-react/grid-row';
+ * import GridCol from '@govuk-react/grid-col';
+ *
+ * <Fragment>
+ *   <GridRow>
+ *     <GridCol>
+ *       ...
+ *     </GridCol>
+ *   </GridRow>
+ * </Fragment>
+ * ```
  *
  * ### References:
  * - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_grid_layout.scss

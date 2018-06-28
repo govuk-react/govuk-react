@@ -10,6 +10,17 @@ const StyledLayout = styled('div')({
 
 /**
  *
+ * THIS COMPONENT IS NO LONGER REQUIRED TO ACHIEVE LAYOUT;
+ * 1. `GridCol` contains the required gutters, we do not need to provide additional gutter
+ * to build an accurate grid layout.
+ *
+ * 2. `GridRow` contains the required `display: flex;` and associated properties for `GridCol`.
+ *
+ * 3. `Main` contains the required properties to center a container that matches up with `TopNav`
+ * and house the remaining body of content for the page.
+ *
+ * If you feel you may still need a `Layout` component, please do raise a ticket on [Github](https://github.com/UKHomeOffice/govuk-react/issues/177)
+ *
  * ### Usage
  *
  * This component provides default padding.

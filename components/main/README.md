@@ -7,12 +7,16 @@ Main
 ```
 <!-- STORY -->
 
+Provides a container which aligns to the topNav component,
+is centered, and provides top padding.
+
+
 ### Usage
 
-Provides a container which aligns to the topNav component,
-is centered, and provides top padding
+Example
+* https://codesandbox.io/s/x917knwm4z
 
-Simple usage
+Simple
 ```jsx
 import GridRow from '@govuk-react/grid-row';
 import GridCol from '@govuk-react/grid-col';
