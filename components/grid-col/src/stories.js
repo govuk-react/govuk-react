@@ -2,7 +2,11 @@ import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-import { GridRow, H2, Paragraph } from 'govuk-react';
+// Can't seem to overcome import/no-extraneous-dependencies with the following line;
+// import { GridRow, H2, Paragraph } from 'govuk-react';
+import GridRow from '@govuk-react/grid-row';
+import { H2 } from '@govuk-react/header';
+import Paragraph from '@govuk-react/paragraph';
 
 import GridCol from '.';
 import ReadMe from '../README.md';
