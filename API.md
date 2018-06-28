@@ -440,9 +440,41 @@ GridCol
 ```
 <!-- STORY -->
 
+Should always be wrapped by `GridRow`. Will always render a column at 100% width if
+the browser width is below the `LARGESCREEN` breakpoint.
+
 ### Usage
 
-See Layout for code examples
+```jsx
+import GridRow from '@govuk-react/grid-row';
+import GridCol from '@govuk-react/grid-col';
+
+<Fragment>
+  <GridRow>
+    <GridCol>
+      ...
+    </GridCol>
+  </GridRow>
+  <GridRow>
+    <GridCol columnOneHalf>
+      ...
+    </GridCol>
+    <GridCol columnOneQuarter>
+      ...
+    </GridCol>
+    <GridCol columnOneQuarter>
+      ...
+    </GridCol>
+  <GridRow>
+    <GridCol columnOneThird>
+      ...
+    </GridCol>
+    <GridCol columnTwoThirds>
+      ...
+    </GridCol>
+  </GridRow>
+</Fragment>
+```
 
 ### References:
 - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_grid_layout.scss
@@ -452,6 +484,10 @@ See Layout for code examples
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` |  | ```undefined``` | node | GridCol content
+ `columnOneHalf` |  | ```false``` | bool | Dimension setting for the column
+ `columnOneQuarter` |  | ```false``` | bool | Dimension setting for the column
+ `columnOneThird` |  | ```false``` | bool | Dimension setting for the column
+ `columnTwoThirds` |  | ```false``` | bool | Dimension setting for the column
 
 
 GridRow
@@ -783,77 +819,20 @@ Layout
 
 ### Usage
 
-Simple
-```jsx
-import GridRow from '@govuk-react/grid-row';
-import GridCol from '@govuk-react/grid-col';
+This component provides default padding.
+You can use this component to wrap Grid components however it is not required.
 
-<Layout>
-   <GridRow>
-     <GridCol hideContent columFull>
-       <p>content</p>
-     </GridCol>
-   </GridRow>
- </Layout>
-```
-
-Column Halves
+Simple usage
 ```jsx
 import GridRow from '@govuk-react/grid-row';
 import GridCol from '@govuk-react/grid-col';
 
 <Layout>
   <GridRow>
-    <GridCol hideContent columnOneHalf>
-      <p>content</p>
-    </GridCol>
-    <GridCol hideContent columnOneHalf>
-      <p>content</p>
+    <GridCol>
+      ...
     </GridCol>
   </GridRow>
-</Layout>
-```
-
-Column Thirds
-```jsx
-import GridRow from '@govuk-react/grid-row';
-import GridCol from '@govuk-react/grid-col';
-
-<Layout>
-  <GridRow>
-     <GridCol hideContent columnOneThird>
-       <p>content</p>
-     </GridCol>
-     <GridCol hideContent columnOneThird>
-       <p>content</p>
-     </GridCol>
-     <GridCol hideContent columnOneThird>
-       <p>content</p>
-     </GridCol>
-   </GridRow>
-</Layout>
-```
-
-Column Quarters
-```jsx
-import GridRow from '@govuk-react/grid-row';
-import GridCol from '@govuk-react/grid-col';
-
-<Layout>
-  <GridRow>
-     <GridCol hideContent columnOneQuarter>
-       <p>content</p>
-     </GridCol>
-     <GridCol hideContent columnOneQuarter>
-       <p>content</p>
-     </GridCol>
-     <GridCol hideContent columnOneQuarter>
-       <p>content</p>
-     </GridCol>
-     <GridCol hideContent columnOneQuarter>
-       <p>content</p>
-     </GridCol>
-   </GridRow>
 </Layout>
 ```
 
@@ -1051,8 +1030,15 @@ is centered, and provides top padding
 
 Simple usage
 ```jsx
+import GridRow from '@govuk-react/grid-row';
+import GridCol from '@govuk-react/grid-col';
+
 <Main>
-  ... nested nodes
+  <GridRow>
+    <GridCol>
+      ...
+    </GridCol>
+  </GridRow>
 </Main>
 ```
 
