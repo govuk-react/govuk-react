@@ -94,14 +94,14 @@ const StyledParagraph = styled(ReactMarkdown)(
  * - Review code snippet styling
  * - Remove magic numbers from inline code styling blocks
  */
-const Paragraph = ({ children, ...rest }) => (
+const Paragraph = ({ children, ...props }) => (
   <StyledParagraph
     source={children}
     escapeHtml={false}
     skipHtml
     allowedTypes={['paragraph', 'emphasis', 'strong', 'link', 'inlineCode', 'code']}
     renderers={{ link: RouterLink }}
-    {...rest}
+    {...props}
   />
 );
 
