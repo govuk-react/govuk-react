@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 import GridRow from '@govuk-react/grid-row';
 import GridCol from '@govuk-react/grid-col';
@@ -7,97 +7,23 @@ import { WithDocsCustom } from '@govuk-react/storybook-components';
 import Layout from '.';
 import ReadMe from '../README.md';
 
-const stories = storiesOf('Layout/LayoutComponent', module);
-const examples = storiesOf('Layout/LayoutComponent/Examples', module);
+const stories = storiesOf('Layout/', module);
+const examples = storiesOf('Layout/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
-  <Layout>
+  <Fragment>
     <GridRow>
       <GridCol hideContent columFull>
         <p>content</p>
       </GridCol>
     </GridRow>
-  </Layout>
-));
-
-examples.add('Column Halves', () => (
-  <Layout>
-    <GridRow>
-      <GridCol hideContent columnOneHalf>
-        <p>content</p>
-      </GridCol>
-      <GridCol hideContent columnOneHalf>
-        <p>content</p>
-      </GridCol>
-    </GridRow>
-  </Layout>
-));
-
-examples.add('Column Thirds', () => (
-  <Layout>
-    <GridRow>
-      <GridCol hideContent columnOneThird>
-        <p>content</p>
-      </GridCol>
-      <GridCol hideContent columnOneThird>
-        <p>content</p>
-      </GridCol>
-      <GridCol hideContent columnOneThird>
-        <p>content</p>
-      </GridCol>
-    </GridRow>
-  </Layout>
-));
-
-examples.add('Column Two Thirds / One Third', () => (
-  <Layout>
-    <GridRow>
-      <GridCol hideContent columnTwoThirds>
-        <p>content</p>
-      </GridCol>
-      <GridCol hideContent columnOneThird>
-        <p>content</p>
-      </GridCol>
-    </GridRow>
-  </Layout>
-));
-
-examples.add('Column One Third / Two Thirds', () => (
-  <Layout>
-    <GridRow>
-      <GridCol hideContent columnOneThird>
-        <p>content</p>
-      </GridCol>
-      <GridCol hideContent columnTwoThirds>
-        <p>content</p>
-      </GridCol>
-    </GridRow>
-  </Layout>
-));
-
-examples.add('Quarters', () => (
-  <Layout>
-    <GridRow>
-      <GridCol hideContent columnOneQuarter>
-        <p>content</p>
-      </GridCol>
-      <GridCol hideContent columnOneQuarter>
-        <p>content</p>
-      </GridCol>
-      <GridCol hideContent columnOneQuarter>
-        <p>content</p>
-      </GridCol>
-      <GridCol hideContent columnOneQuarter>
-        <p>content</p>
-      </GridCol>
-    </GridRow>
-  </Layout>
+  </Fragment>
 ));
 
 examples.add('Example layout', () => (
-  <Layout>
+  <Fragment>
     <GridRow>
       <GridCol columFull>
         <h2>full column</h2>
@@ -230,5 +156,5 @@ examples.add('Example layout', () => (
         </p>
       </GridCol>
     </GridRow>
-  </Layout>
+  </Fragment>
 ));
