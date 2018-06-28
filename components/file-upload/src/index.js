@@ -102,7 +102,7 @@ FileUpload.propTypes = {
     dirty: PropTypes.bool,
     dirtySinceLastSubmit: PropTypes.bool,
     error: PropTypes.any,
-    initial: PropTypes.bool,
+    initial: PropTypes.any,
     invalid: PropTypes.bool,
     pristine: PropTypes.bool,
     submitError: PropTypes.any,
