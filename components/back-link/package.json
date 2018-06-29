@@ -1,13 +1,13 @@
 {
   "name": "@govuk-react/back-link",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "devDependencies": {
-    "@govuk-react/storybook-components": "^0.2.6",
+    "@govuk-react/storybook-components": "^0.2.7",
     "@storybook/addon-knobs": "^3.4.2"
   },
   "dependencies": {
-    "@govuk-react/constants": "^0.2.2",
-    "@govuk-react/hoc": "^0.2.6",
+    "@govuk-react/constants": "^0.2.7",
+    "@govuk-react/hoc": "^0.2.7",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
