@@ -1,17 +1,15 @@
-// https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_grid_layout.scss
-// https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { MEDIA_QUERIES, SPACING } from '@govuk-react/constants';
 
 const StyledRow = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
   width: '100%',
-  clear: 'left',
   margin: `0 0 ${SPACING.SCALE_3}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
-    display: 'flex',
+    flexDirection: 'row',
     marginBottom: SPACING.SCALE_5,
   },
 });
@@ -20,7 +18,22 @@ const StyledRow = styled('div')({
  *
  * ### Usage
  *
- * See Layout for code examples
+ * Example
+ * * https://codesandbox.io/s/x917knwm4z
+ *
+ * Simple
+ * ```jsx
+ * import GridRow from '@govuk-react/grid-row';
+ * import GridCol from '@govuk-react/grid-col';
+ *
+ * <Fragment>
+ *   <GridRow>
+ *     <GridCol>
+ *       ...
+ *     </GridCol>
+ *   </GridRow>
+ * </Fragment>
+ * ```
  *
  * ### References:
  * - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_grid_layout.scss

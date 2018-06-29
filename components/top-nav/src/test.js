@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import CrownIcon from '@govuk-react/icon-crown';
 
-import TopNav, { asTopNavAnchor, asLogoAnchor, asNavLinkAnchor } from './';
+import TopNav, { asTopNavAnchor, asNavLinkAnchor } from './';
 
 const emptyNode = [];
 const nullNode = null;

@@ -63,7 +63,8 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "dependencies": {
-    "govuk-colours": "^1.0.3"
+    "govuk-colours": "^1.0.3",
+    "react-markdown": "^3.3.2"
   },
   "peerDependencies": {
     "prop-types": ">=15",

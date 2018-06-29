@@ -55,13 +55,17 @@ const StyledParagraph = styled(ReactMarkdown)(
 
 /**
  *
- * ### Usage
- *
  * Supports bold, italic, links, inline code and block code in Markdown ONLY.
  * This is to ensure we follow GDS as closely as possible.
  * It is worth noting that GDS recommends avoiding bold and italics.
  *
- * Simple Usage with markdown
+ * Bold should be avoided in general as not only can it dilute the message, it will also
+ * cause Screenreaders to increase the volume of any bold text to reflect the increase in
+ * font-weight.
+ *
+ * ### Usage
+ *
+ * Simple
  * ```jsx
  * <Paragraph>Lorem `ipsum` **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
  * ```
@@ -90,14 +94,14 @@ const StyledParagraph = styled(ReactMarkdown)(
  * - Review code snippet styling
  * - Remove magic numbers from inline code styling blocks
  */
-const Paragraph = ({ children, ...rest }) => (
+const Paragraph = ({ children, ...props }) => (
   <StyledParagraph
     source={children}
     escapeHtml={false}
     skipHtml
     allowedTypes={['paragraph', 'emphasis', 'strong', 'link', 'inlineCode', 'code']}
     renderers={{ link: RouterLink }}
-    {...rest}
+    {...props}
   />
 );
 
