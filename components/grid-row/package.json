@@ -1,9 +1,9 @@
 {
   "name": "@govuk-react/grid-row",
-  "version": "0.2.4",
+  "version": "0.2.6",
   "dependencies": {
     "@govuk-react/constants": "^0.2.2",
-    "@govuk-react/layout": "^0.2.4",
+    "@govuk-react/layout": "^0.2.6",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
