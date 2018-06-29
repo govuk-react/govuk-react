@@ -5,6 +5,9 @@ import styled from 'react-emotion';
 import InsetText from '@govuk-react/inset-text';
 import { LINK_COLOUR, LINK_HOVER_COLOUR, FOCUS_COLOUR } from 'govuk-colours';
 import { FOCUS_WIDTH, FONT_SIZE, SPACING, NTA_LIGHT } from '@govuk-react/constants';
+import { withWhiteSpace } from '@govuk-react/hoc';
+
+const HIDDEN_TEXT_FOCUS_WIDTH = `${parseInt(FOCUS_WIDTH.split('px')[0], 10) + 1}px`;
 
 const StyledSpan = styled('span')({
   textDecoration: 'underline',
@@ -23,8 +26,9 @@ const StyledSummary = styled('summary')({
     color: LINK_HOVER_COLOUR,
   },
   ':focus': {
-    outline: `${FOCUS_WIDTH} solid ${FOCUS_COLOUR}`,
-    outlineOffset: '-1px',
+    outline: `${HIDDEN_TEXT_FOCUS_WIDTH} solid ${FOCUS_COLOUR}`,
+    // outlineOffset: '-1px', In alpha/govuk-frontend but causes arrow icon to be hidden when open
+    background: FOCUS_COLOUR,
   },
 });
 
@@ -44,20 +48,24 @@ const StyledSummary = styled('summary')({
  *
  * ### References
  * - https://govuk-elements.herokuapp.com/typography/#typography-hidden-text
+ * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/details/_details.scss
  */
-const HiddenText = ({ summaryText, ...props }) => (
-  <details>
+const HiddenText = ({ summaryText, children, ...props }) => (
+  <details {...props}>
     <StyledSummary><StyledSpan>{summaryText}</StyledSpan></StyledSummary>
-    <InsetText isNarrow {...props} />
+    <InsetText mb={0} isNarrow>{ children }</InsetText>
   </details>
 );
 
 HiddenText.defaultProps = {
-  summaryText: '',
+  children: undefined,
 };
 
 HiddenText.propTypes = {
-  summaryText: PropTypes.string,
+  /**  The nodes that will be displayed within the InsetText component */
+  children: PropTypes.node,
+  /** Text for the summary button link e.g. Help with nationality */
+  summaryText: PropTypes.string.isRequired,
 };
 
-export default HiddenText;
+export default withWhiteSpace({ marginBottom: 6 })(HiddenText);
