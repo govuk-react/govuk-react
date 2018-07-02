@@ -445,6 +445,10 @@ the browser width is below the `LARGESCREEN` breakpoint.
 
 ### Usage
 
+Example
+* https://codesandbox.io/s/x917knwm4z
+
+Simple
 ```jsx
 import GridRow from '@govuk-react/grid-row';
 import GridCol from '@govuk-react/grid-col';
@@ -501,7 +505,22 @@ GridRow
 
 ### Usage
 
-See Layout for code examples
+Example
+* https://codesandbox.io/s/x917knwm4z
+
+Simple
+```jsx
+import GridRow from '@govuk-react/grid-row';
+import GridCol from '@govuk-react/grid-col';
+
+<Fragment>
+  <GridRow>
+    <GridCol>
+      ...
+    </GridCol>
+  </GridRow>
+</Fragment>
+```
 
 ### References:
 - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_grid_layout.scss
@@ -601,86 +620,6 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` |  | ```undefined``` | node | The nodes that will be displayed within the InsetText component
  `summaryText` | true | `````` | string | Text for the summary button link e.g. Help with nationality
-
-
-InsetText
-=========
-
-### Import
-```js
-  import InsetText from '@govuk-react/inset-text';
-```
-<!-- STORY -->
-
-### Usage
-
-
-Simple
-```jsx
-import Paragraph from '@govuk-react/paragraph';
-
-<InsetText>
- <Paragraph mb={0}>Hello</Paragraph>
-</InsetText>
-```
-
-Narrow border
-```jsx
-import Paragraph from '@govuk-react/paragraph';
-
-<InsetText isNarrow>
- <Paragraph mb={0}>Hello</Paragraph>
-</InsetText>
-```
-
-### References
-- https://govuk-elements.herokuapp.com/typography/#typography-inset-text
-- https://github.com/alphagov/govuk-frontend/blob/master/src/components/inset-text/_inset-text.scss
-- https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_panels.scss
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `isNarrow` |  | ```false``` | bool | Renders a narrow border following GDS guides if set to true
-
-
-Paragraph
-=========
-
-### Import
-```js
-  import Paragraph from '@govuk-react/paragraph';
-```
-<!-- STORY -->
-
-### Usage
-
-Supports bold, italic and links in Markdown ONLY.
-This is to ensure we follow GDS as closely as possible.
-It is worth noting that GDS recommends avoiding bold and italics.
-
-Simple Usage with markdown
-```jsx
-<Paragraph>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
-```
-
-As supporting text
-```jsx
-<Paragraph supportingText>Lorem ipsum **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
-```
-
-### References
-- https://govuk-elements.herokuapp.com/typography/#typography-body-copy
-
-### TODO
-- Add test for supporting text
-- Add test for rendering supported markdown components
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `children` |  | ```''``` | node | Text content supporting markdown
- `supportingText` |  | ```false``` | bool | Is this paragraph supporting text for another element?
 
 
 HintText
@@ -899,6 +838,17 @@ Layout
 ```
 <!-- STORY -->
 
+THIS COMPONENT IS NO LONGER REQUIRED TO ACHIEVE LAYOUT;
+1. `GridCol` contains the required gutters, we do not need to provide additional gutter
+to build an accurate grid layout.
+
+2. `GridRow` contains the required `display: flex;` and associated properties for `GridCol`.
+
+3. `Main` contains the required properties to center a container that matches up with `TopNav`
+and house the remaining body of content for the page.
+
+If you feel you may still need a `Layout` component, please do raise a ticket on [Github](https://github.com/UKHomeOffice/govuk-react/issues/177)
+
 ### Usage
 
 This component provides default padding.
@@ -1105,12 +1055,16 @@ Main
 ```
 <!-- STORY -->
 
+Provides a container which aligns to the topNav component,
+is centered, and provides top padding.
+
+
 ### Usage
 
-Provides a container which aligns to the topNav component,
-is centered, and provides top padding
+Example
+* https://codesandbox.io/s/x917knwm4z
 
-Simple usage
+Simple
 ```jsx
 import GridRow from '@govuk-react/grid-row';
 import GridCol from '@govuk-react/grid-col';
@@ -1295,13 +1249,17 @@ Paragraph
 ```
 <!-- STORY -->
 
-### Usage
-
 Supports bold, italic, links, inline code and block code in Markdown ONLY.
 This is to ensure we follow GDS as closely as possible.
 It is worth noting that GDS recommends avoiding bold and italics.
 
-Simple Usage with markdown
+Bold should be avoided in general as not only can it dilute the message, it will also
+cause Screenreaders to increase the volume of any bold text to reflect the increase in
+font-weight.
+
+### Usage
+
+Simple
 ```jsx
 <Paragraph>Lorem `ipsum` **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
 ```
