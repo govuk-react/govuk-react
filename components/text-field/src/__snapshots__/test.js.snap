@@ -121,16 +121,18 @@ exports[`TextField matches wrapper snapshot 1`] = `
   }
 }
 
-<Styled(TextField)>
+<Styled(TextField)
+  input={
+    Object {
+      "name": "NI_Number",
+    }
+  }
+>
   <TextField
     className="emotion-1"
     input={
       Object {
-        "name": undefined,
-        "onBlur": undefined,
-        "onChange": undefined,
-        "onFocus": undefined,
-        "value": undefined,
+        "name": "NI_Number",
       }
     }
     meta={
@@ -175,22 +177,27 @@ exports[`TextField matches wrapper snapshot 1`] = `
                   <span
                     className="govuk-react--label-text emotion-0"
                   >
-                    Label text
+                    National Insurance number
                   </span>
                 </Styled(span)>
               </LabelText>
             </Styled(LabelText)>
-            <Styled(Input)>
+            <Styled(Input)
+              name="NI_Number"
+            >
               <Input
                 className="emotion-1"
+                name="NI_Number"
                 type="text"
               >
                 <Styled(input)
                   className="emotion-1"
+                  name="NI_Number"
                   type="text"
                 >
                   <input
                     className="emotion-3"
+                    name="NI_Number"
                     type="text"
                   />
                 </Styled(input)>
@@ -215,19 +222,19 @@ exports[`TextField with error matches snapshot 1`] = `
   }
 }
 
-.emotion-10 {
+.emotion-13 {
   margin-bottom: 0;
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-10 {
+  .emotion-13 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-10 {
+  .emotion-13 {
     margin-bottom: 0;
   }
 }
@@ -259,7 +266,33 @@ exports[`TextField with error matches snapshot 1`] = `
   }
 }
 
-.emotion-9 {
+.emotion-3 {
+  display: block;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #6f777b;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -276,25 +309,25 @@ exports[`TextField with error matches snapshot 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-9:after {
+.emotion-12:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-9 {
+  .emotion-12 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-9 {
+  .emotion-12 {
     margin-bottom: 0;
   }
 }
 
-.emotion-3 {
+.emotion-6 {
   display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -310,19 +343,19 @@ exports[`TextField with error matches snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-6 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-6 {
     margin-bottom: 0;
   }
 }
 
-.emotion-6 {
+.emotion-9 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -339,35 +372,37 @@ exports[`TextField with error matches snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-9 {
     font-size: 19px;
     line-height: 1.3;
     width: 50%;
   }
 }
 
-.emotion-6:focus {
+.emotion-9:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-9 {
     margin-bottom: 0;
   }
 }
 
 <TextFieldWithError>
   <Styled(TextField)
+    hint="It’s on your National Insurance card, benefit letter, payslip or P60."
     meta={
       Object {
-        "error": "Error text",
+        "error": "Required",
         "touched": true,
       }
     }
   >
     <TextField
       className="emotion-1"
+      hint="It’s on your National Insurance card, benefit letter, payslip or P60."
       input={
         Object {
           "name": undefined,
@@ -379,25 +414,25 @@ exports[`TextField with error matches snapshot 1`] = `
       }
       meta={
         Object {
-          "error": "Error text",
+          "error": "Required",
           "touched": true,
         }
       }
     >
       <Styled(Label)
         className="emotion-1"
-        error="Error text"
+        error="Required"
       >
         <Label
-          className="emotion-10"
-          error="Error text"
+          className="emotion-13"
+          error="Required"
         >
           <Styled(label)
-            className="emotion-10"
-            error="Error text"
+            className="emotion-13"
+            error="Required"
           >
             <label
-              className="emotion-9"
+              className="emotion-12"
             >
               <Styled(LabelText)
                 className="govuk-react--label-text"
@@ -411,11 +446,28 @@ exports[`TextField with error matches snapshot 1`] = `
                     <span
                       className="govuk-react--label-text emotion-0"
                     >
-                      Label text
+                      National Insurance number
                     </span>
                   </Styled(span)>
                 </LabelText>
               </Styled(LabelText)>
+              <Styled(HintText)
+                className="govuk-react--hint-text"
+              >
+                <HintText
+                  className="govuk-react--hint-text emotion-1"
+                >
+                  <Styled(span)
+                    className="govuk-react--hint-text emotion-1"
+                  >
+                    <span
+                      className="govuk-react--hint-text emotion-3"
+                    >
+                      It’s on your National Insurance card, benefit letter, payslip or P60.
+                    </span>
+                  </Styled(span)>
+                </HintText>
+              </Styled(HintText)>
               <Styled(ErrorText)
                 className="govuk-react--error-text"
               >
@@ -426,28 +478,28 @@ exports[`TextField with error matches snapshot 1`] = `
                     className="govuk-react--error-text emotion-1"
                   >
                     <span
-                      className="govuk-react--error-text emotion-3"
+                      className="govuk-react--error-text emotion-6"
                     >
-                      Error text
+                      Required
                     </span>
                   </Styled(span)>
                 </ErrorText>
               </Styled(ErrorText)>
               <Styled(Input)
-                error="Error text"
+                error="Required"
               >
                 <Input
                   className="emotion-1"
-                  error="Error text"
+                  error="Required"
                   type="text"
                 >
                   <Styled(input)
                     className="emotion-1"
-                    error="Error text"
+                    error="Required"
                     type="text"
                   >
                     <input
-                      className="emotion-6"
+                      className="emotion-9"
                       type="text"
                     />
                   </Styled(input)>
@@ -611,11 +663,11 @@ exports[`TextField with hint matches snapshot 1`] = `
 
 <TextFieldWithHint>
   <Styled(TextField)
-    hint="Hint text"
+    hint="It’s on your National Insurance card, benefit letter, payslip or P60."
   >
     <TextField
       className="emotion-1"
-      hint="Hint text"
+      hint="It’s on your National Insurance card, benefit letter, payslip or P60."
       input={
         Object {
           "name": undefined,
@@ -667,7 +719,7 @@ exports[`TextField with hint matches snapshot 1`] = `
                     <span
                       className="govuk-react--label-text emotion-0"
                     >
-                      Label text
+                      National Insurance number
                     </span>
                   </Styled(span)>
                 </LabelText>
@@ -684,7 +736,7 @@ exports[`TextField with hint matches snapshot 1`] = `
                     <span
                       className="govuk-react--hint-text emotion-3"
                     >
-                      Hint text
+                      It’s on your National Insurance card, benefit letter, payslip or P60.
                     </span>
                   </Styled(span)>
                 </HintText>

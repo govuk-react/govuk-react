@@ -5,42 +5,43 @@ import { FinalFormWrapper } from '@govuk-react/storybook-components';
 
 import TextField from '.';
 
-const exampleLabelText = 'Label text';
-const exampleErrorText = 'Error text';
-const exampleHintText = 'Hint text';
+const exampleFieldName = 'NI_Number';
+const exampleLabelText = 'National Insurance number';
+const exampleErrorText = 'Required';
+const exampleHintText = 'It’s on your National Insurance card, benefit letter, payslip or P60.';
 
 const TextFieldWithKnobs = () => (
   <TextField
-    hint={text('hint', 'It’s on your National Insurance card, benefit letter, payslip or P60.')}
+    hint={text('hint', exampleHintText )}
     meta={
       {
-        error: text('meta.error', ''),
+        error: text('meta.error', '' ),
       }
     }
   >
-    {text('label', 'National Insurance number')}
+    {text('label', exampleLabelText)}
   </TextField>
 );
 const TextFieldWithHint = () => <TextField hint={exampleHintText}>{ exampleLabelText }</TextField>;
 const TextFieldWithError = () => (
-  <TextField meta={{ error: exampleErrorText, touched: true }}>
-    { exampleLabelText }
+  <TextField hint={exampleHintText} meta={{ error: exampleErrorText, touched: true }}>
+    {exampleLabelText}
   </TextField>
 );
 
 // Simple validator for final form example
-const required = value => (value ? undefined : 'Required');
+const required = value => (value ? undefined : exampleErrorText);
 
 const TextFieldFinalForm = () => (
   <FinalFormWrapper>
     <Field
-      name="likesAnimals"
-      hint="You must tell us"
+      name={exampleFieldName}
+      hint={exampleHintText}
       component={TextField}
       validate={required}
       mb="4"
     >
-      Do you like animals?
+      { exampleLabelText }
     </Field>
   </FinalFormWrapper>
 );
@@ -48,6 +49,7 @@ const TextFieldFinalForm = () => (
 export default TextField;
 
 export {
+  exampleFieldName,
   exampleLabelText,
   exampleErrorText,
   exampleHintText,

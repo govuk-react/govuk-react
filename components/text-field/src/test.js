@@ -2,6 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import TextField, {
+  exampleFieldName,
   exampleLabelText,
   exampleHintText,
   exampleErrorText,
@@ -13,10 +14,10 @@ describe('TextField', () => {
   let wrapper;
 
   it('renders without crashing', () => {
-    wrapper = mount(<TextField>{exampleLabelText}</TextField>);
+    wrapper = mount(<TextField input={{ name: exampleFieldName }}>{exampleLabelText}</TextField>);
   });
 
-  it('should render an input type="text"', () => {
+  it('should render an input with `type="text"`', () => {
     expect(wrapper.find('input[type="text"]')).toHaveLength(1);
   });
 
@@ -26,6 +27,10 @@ describe('TextField', () => {
 
   it('should render an input', () => {
     expect(wrapper.find('input')).toHaveLength(1);
+  });
+
+  it('input has `name` attribute', () => {
+    expect(wrapper.find(`input[name="${exampleFieldName}"]`)).toHaveLength(1);
   });
 
   it('label has a css class', () => {
@@ -75,4 +80,3 @@ describe('TextField with error', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
-
