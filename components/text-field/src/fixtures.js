@@ -39,7 +39,7 @@ const TextFieldFinalForm = () => (
       hint={exampleHintText}
       component={TextField}
       validate={required}
-      mb="4"
+      mb={4}
     >
       { exampleLabelText }
     </Field>

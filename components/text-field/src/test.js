@@ -8,6 +8,7 @@ import TextField, {
   exampleErrorText,
   TextFieldWithHint,
   TextFieldWithError,
+  TextFieldFinalForm,
 } from './fixtures';
 
 describe('TextField', () => {
@@ -74,6 +75,31 @@ describe('TextField with error', () => {
   it('should render error text', () => {
     const errorTextValue = wrapper.find('.govuk-react--error-text').last().text();
     expect(errorTextValue).toBe(exampleErrorText);
+  });
+
+  it('matches snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+
+describe('Textfield rendered with FinalForm', () => {
+  let wrapper;
+
+  it('renders without crashing', () => {
+    wrapper = mount(<TextFieldFinalForm />);
+  });
+
+  it('should render an input with `type="text"`', () => {
+    expect(wrapper.find('input[type="text"]')).toHaveLength(1);
+  });
+
+  it('input has `name` attribute', () => {
+    expect(wrapper.find(`input[name="${exampleFieldName}"]`)).toHaveLength(1);
+  });
+
+  it('should render hint text', () => {
+    const hintTextValue = wrapper.find('.govuk-react--hint-text').last().text();
+    expect(hintTextValue).toBe(exampleHintText);
   });
 
   it('matches snapshot', () => {

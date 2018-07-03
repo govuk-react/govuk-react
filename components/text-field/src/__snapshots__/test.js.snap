@@ -765,3 +765,544 @@ exports[`TextField with hint matches snapshot 1`] = `
   </Styled(TextField)>
 </TextFieldWithHint>
 `;
+
+exports[`Textfield rendered with FinalForm matches snapshot 1`] = `
+.emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 50%;
+  }
+}
+
+.emotion-6:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-3 {
+  display: block;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #6f777b;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-12 {
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-12 {
+    margin-bottom: 20px;
+  }
+}
+
+.emotion-10 {
+  margin-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-10 {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-10 {
+    margin-bottom: 20px;
+  }
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.emotion-9:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-9 {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-9 {
+    margin-bottom: 20px;
+  }
+}
+
+.emotion-14 {
+  background-color: #00823b;
+  border: none;
+  box-shadow: 0 2px 0 #003618;
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.25;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+  padding: .526315em .789473em .263157em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  opacity: 1;
+  pointer-events: auto;
+  padding-right: .84211em;
+  margin-bottom: 15px;
+}
+
+.emotion-14:hover {
+  background-color: #00692f;
+  color: #ffffff;
+}
+
+.emotion-14:focus {
+  color: #ffffff;
+  background-color: #00692f;
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-14:active {
+  position: relative;
+  top: 2px;
+  box-shadow: 0 0 0 #003618;
+}
+
+.emotion-14:visited {
+  color: #00823b;
+}
+
+.emotion-14 svg {
+  max-width: 15px;
+  margin-left: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-14 {
+    margin-bottom: 20px;
+  }
+}
+
+.emotion-17 {
+  background-color: #00823b;
+  border: none;
+  box-shadow: 0 2px 0 #003618;
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.25;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+  padding: .526315em .789473em .263157em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  opacity: .5;
+  pointer-events: none;
+  padding-right: .84211em;
+  margin-bottom: 15px;
+}
+
+.emotion-17:hover {
+  background-color: #00692f;
+  color: #ffffff;
+}
+
+.emotion-17:focus {
+  color: #ffffff;
+  background-color: #00692f;
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-17:active {
+  position: relative;
+  top: 2px;
+  box-shadow: 0 0 0 #003618;
+}
+
+.emotion-17:visited {
+  color: #00823b;
+}
+
+.emotion-17 svg {
+  max-width: 15px;
+  margin-left: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-17 {
+    margin-bottom: 20px;
+  }
+}
+
+<TextFieldFinalForm>
+  <FinalFormWrapper>
+    <ReactFinalForm
+      onSubmit={[Function]}
+      render={[Function]}
+    >
+      <form
+        onSubmit={[Function]}
+      >
+        <div>
+          <Field
+            component={[Function]}
+            format={[Function]}
+            hint="It’s on your National Insurance card, benefit letter, payslip or P60."
+            mb={4}
+            name="NI_Number"
+            parse={[Function]}
+            validate={[Function]}
+          >
+            <Styled(TextField)
+              hint="It’s on your National Insurance card, benefit letter, payslip or P60."
+              input={
+                Object {
+                  "name": "NI_Number",
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "value": "",
+                }
+              }
+              mb={4}
+              meta={
+                Object {
+                  "active": false,
+                  "data": Object {},
+                  "dirty": false,
+                  "dirtySinceLastSubmit": false,
+                  "error": "Required",
+                  "initial": undefined,
+                  "invalid": true,
+                  "pristine": true,
+                  "submitError": undefined,
+                  "submitFailed": false,
+                  "submitSucceeded": false,
+                  "touched": false,
+                  "valid": false,
+                  "visited": false,
+                }
+              }
+            >
+              <TextField
+                className="emotion-12"
+                hint="It’s on your National Insurance card, benefit letter, payslip or P60."
+                input={
+                  Object {
+                    "name": "NI_Number",
+                    "onBlur": [Function],
+                    "onChange": [Function],
+                    "onFocus": [Function],
+                    "value": "",
+                  }
+                }
+                mb={4}
+                meta={
+                  Object {
+                    "active": false,
+                    "data": Object {},
+                    "dirty": false,
+                    "dirtySinceLastSubmit": false,
+                    "error": "Required",
+                    "initial": undefined,
+                    "invalid": true,
+                    "pristine": true,
+                    "submitError": undefined,
+                    "submitFailed": false,
+                    "submitSucceeded": false,
+                    "touched": false,
+                    "valid": false,
+                    "visited": false,
+                  }
+                }
+              >
+                <Styled(Label)
+                  className="emotion-12"
+                  error={false}
+                  mb={4}
+                >
+                  <Label
+                    className="emotion-10"
+                    error={false}
+                    mb={4}
+                  >
+                    <Styled(label)
+                      className="emotion-10"
+                      error={false}
+                      mb={4}
+                    >
+                      <label
+                        className="emotion-9"
+                      >
+                        <Styled(LabelText)
+                          className="govuk-react--label-text"
+                        >
+                          <LabelText
+                            className="govuk-react--label-text emotion-1"
+                          >
+                            <Styled(span)
+                              className="govuk-react--label-text emotion-1"
+                            >
+                              <span
+                                className="govuk-react--label-text emotion-0"
+                              >
+                                National Insurance number
+                              </span>
+                            </Styled(span)>
+                          </LabelText>
+                        </Styled(LabelText)>
+                        <Styled(HintText)
+                          className="govuk-react--hint-text"
+                        >
+                          <HintText
+                            className="govuk-react--hint-text emotion-1"
+                          >
+                            <Styled(span)
+                              className="govuk-react--hint-text emotion-1"
+                            >
+                              <span
+                                className="govuk-react--hint-text emotion-3"
+                              >
+                                It’s on your National Insurance card, benefit letter, payslip or P60.
+                              </span>
+                            </Styled(span)>
+                          </HintText>
+                        </Styled(HintText)>
+                        <Styled(Input)
+                          error={false}
+                          name="NI_Number"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          value=""
+                        >
+                          <Input
+                            className="emotion-1"
+                            error={false}
+                            name="NI_Number"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            type="text"
+                            value=""
+                          >
+                            <Styled(input)
+                              className="emotion-1"
+                              error={false}
+                              name="NI_Number"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onFocus={[Function]}
+                              type="text"
+                              value=""
+                            >
+                              <input
+                                className="emotion-6"
+                                name="NI_Number"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                onFocus={[Function]}
+                                type="text"
+                                value=""
+                              />
+                            </Styled(input)>
+                          </Input>
+                        </Styled(Input)>
+                      </label>
+                    </Styled(label)>
+                  </Label>
+                </Styled(Label)>
+              </TextField>
+            </Styled(TextField)>
+          </Field>
+        </div>
+        <div>
+          <Styled(Button)
+            disabled={false}
+            type="submit"
+          >
+            <Button
+              className="emotion-12"
+              disabled={false}
+              start={false}
+              type="submit"
+            >
+              <Styled(button)
+                className="emotion-12"
+                disabled={false}
+                isStart={false}
+                type="submit"
+              >
+                <button
+                  className="emotion-14"
+                  disabled={false}
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </Styled(button)>
+            </Button>
+          </Styled(Button)>
+        </div>
+        <div>
+          <Styled(Button)
+            disabled={true}
+            onClick={[Function]}
+          >
+            <Button
+              className="emotion-12"
+              disabled={true}
+              onClick={[Function]}
+              start={false}
+            >
+              <Styled(button)
+                className="emotion-12"
+                disabled={true}
+                isStart={false}
+                onClick={[Function]}
+              >
+                <button
+                  className="emotion-17"
+                  disabled={true}
+                  onClick={[Function]}
+                >
+                  Reset
+                </button>
+              </Styled(button)>
+            </Button>
+          </Styled(Button)>
+        </div>
+        <div>
+          <hr />
+          <pre>
+            {}
+          </pre>
+        </div>
+      </form>
+    </ReactFinalForm>
+  </FinalFormWrapper>
+</TextFieldFinalForm>
+`;
