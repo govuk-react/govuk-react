@@ -32,9 +32,9 @@ const TextField = ({
   hint, input, meta, children, ...props
 }) => (
   <Label error={meta.touched && meta.error} {...props}>
-    <LabelText>{children}</LabelText>
-    {hint && <HintText>{hint}</HintText>}
-    {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
+    <LabelText className="govuk-react--label-text">{children}</LabelText>
+    {hint && <HintText className="govuk-react--hint-text">{hint}</HintText>}
+    {meta.touched && meta.error && <ErrorText className="govuk-react--error-text">{meta.error}</ErrorText>}
     <Input error={meta.touched && meta.error} {...input} />
   </Label>
 );
@@ -66,7 +66,7 @@ TextField.propTypes = {
     dirty: PropTypes.bool,
     dirtySinceLastSubmit: PropTypes.bool,
     error: PropTypes.any,
-    initial: PropTypes.bool,
+    initial: PropTypes.any,
     invalid: PropTypes.bool,
     pristine: PropTypes.bool,
     submitError: PropTypes.any,
