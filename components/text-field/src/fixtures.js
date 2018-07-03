@@ -5,7 +5,11 @@ import { FinalFormWrapper } from '@govuk-react/storybook-components';
 
 import TextField from '.';
 
-export default () => (
+const exampleLabelText = 'Label text';
+const exampleErrorText = 'Error text';
+const exampleHintText = 'Hint text';
+
+const TextFieldWithKnobs = () => (
   <TextField
     hint={text('hint', 'It’s on your National Insurance card, benefit letter, payslip or P60.')}
     meta={
@@ -17,14 +21,17 @@ export default () => (
     {text('label', 'National Insurance number')}
   </TextField>
 );
-
-export const TextFieldWithHint = () => <TextField hint="Hint text">Label text</TextField>;
-export const TextFieldWithError = () => <TextField meta={{ error: 'Error text', touched: true }}>Label text</TextField>;
+const TextFieldWithHint = () => <TextField hint={exampleHintText}>{ exampleLabelText }</TextField>;
+const TextFieldWithError = () => (
+  <TextField meta={{ error: exampleErrorText, touched: true }}>
+    { exampleLabelText }
+  </TextField>
+);
 
 // Simple validator for final form example
 const required = value => (value ? undefined : 'Required');
 
-export const TextFieldFinalForm = () => (
+const TextFieldFinalForm = () => (
   <FinalFormWrapper>
     <Field
       name="likesAnimals"
@@ -37,3 +44,16 @@ export const TextFieldFinalForm = () => (
     </Field>
   </FinalFormWrapper>
 );
+
+export default TextField;
+
+export {
+  exampleLabelText,
+  exampleErrorText,
+  exampleHintText,
+  TextFieldWithKnobs,
+  TextFieldWithHint,
+  TextFieldWithError,
+  TextFieldFinalForm,
+};
+

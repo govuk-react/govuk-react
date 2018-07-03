@@ -1,41 +1,78 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 import TextField, {
+  exampleLabelText,
+  exampleHintText,
+  exampleErrorText,
   TextFieldWithHint,
   TextFieldWithError,
 } from './fixtures';
 
 describe('TextField', () => {
-  const example = 'example';
-  const wrapper = <TextField>{example}</TextField>;
-  const meta = {
-    touched: true,
-    error: example,
-  };
+  let wrapper;
 
   it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(
-      <TextField hint={example} meta={meta}>
-        {example}
-      </TextField>,
-      div,
-    );
+    wrapper = mount(<TextField>{exampleLabelText}</TextField>);
   });
 
   it('should render an input type="text"', () => {
-    const output = shallow(wrapper);
-    expect(output.find('input[type="text"]')).toBeTruthy();
+    expect(wrapper.find('input[type="text"]')).toHaveLength(1);
   });
 
   it('should render a label', () => {
-    const output = shallow(wrapper);
-    expect(output.find('label')).toBeTruthy();
+    expect(wrapper.find('label')).toHaveLength(1);
+  });
+
+  it('should render an input', () => {
+    expect(wrapper.find('input')).toHaveLength(1);
+  });
+
+  it('label has a css class', () => {
+    expect(wrapper.find('.govuk-react--label-text').length).toBeGreaterThan(1);
+  });
+
+  it('should render label text', () => {
+    const labelTextValue = wrapper.find('.govuk-react--label-text').last().text();
+    expect(labelTextValue).toBe(exampleLabelText);
   });
 
   it('matches wrapper snapshot', () => {
-    expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
+    expect(wrapper).toMatchSnapshot();
   });
 });
+
+describe('TextField with hint', () => {
+  let wrapper;
+
+  it('renders without crashing', () => {
+    wrapper = mount(<TextFieldWithHint />);
+  });
+
+  it('should render hint text', () => {
+    const hintTextValue = wrapper.find('.govuk-react--hint-text').last().text();
+    expect(hintTextValue).toBe(exampleHintText);
+  });
+
+  it('matches snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+
+describe('TextField with error', () => {
+  let wrapper;
+
+  it('renders without crashing', () => {
+    wrapper = mount(<TextFieldWithError />);
+  });
+
+  it('should render error text', () => {
+    const errorTextValue = wrapper.find('.govuk-react--error-text').last().text();
+    expect(errorTextValue).toBe(exampleErrorText);
+  });
+
+  it('matches snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+

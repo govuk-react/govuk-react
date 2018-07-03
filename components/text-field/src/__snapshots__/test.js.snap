@@ -1,6 +1,468 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextField matches wrapper snapshot: wrapper mount 1`] = `
+exports[`TextField matches wrapper snapshot 1`] = `
+.emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-7 {
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+.emotion-6:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 50%;
+  }
+}
+
+.emotion-3:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+<Styled(TextField)>
+  <TextField
+    className="emotion-1"
+    input={
+      Object {
+        "name": undefined,
+        "onBlur": undefined,
+        "onChange": undefined,
+        "onFocus": undefined,
+        "value": undefined,
+      }
+    }
+    meta={
+      Object {
+        "active": undefined,
+        "dirty": undefined,
+        "dirtySinceLastSubmit": undefined,
+        "error": undefined,
+        "initial": undefined,
+        "invalid": undefined,
+        "pristine": undefined,
+        "submitError": undefined,
+        "submitFailed": undefined,
+        "submitSucceeded": undefined,
+        "touched": undefined,
+        "valid": undefined,
+        "visited": undefined,
+      }
+    }
+  >
+    <Styled(Label)
+      className="emotion-1"
+    >
+      <Label
+        className="emotion-7"
+      >
+        <Styled(label)
+          className="emotion-7"
+        >
+          <label
+            className="emotion-6"
+          >
+            <Styled(LabelText)
+              className="govuk-react--label-text"
+            >
+              <LabelText
+                className="govuk-react--label-text emotion-1"
+              >
+                <Styled(span)
+                  className="govuk-react--label-text emotion-1"
+                >
+                  <span
+                    className="govuk-react--label-text emotion-0"
+                  >
+                    Label text
+                  </span>
+                </Styled(span)>
+              </LabelText>
+            </Styled(LabelText)>
+            <Styled(Input)>
+              <Input
+                className="emotion-1"
+                type="text"
+              >
+                <Styled(input)
+                  className="emotion-1"
+                  type="text"
+                >
+                  <input
+                    className="emotion-3"
+                    type="text"
+                  />
+                </Styled(input)>
+              </Input>
+            </Styled(Input)>
+          </label>
+        </Styled(label)>
+      </Label>
+    </Styled(Label)>
+  </TextField>
+</Styled(TextField)>
+`;
+
+exports[`TextField with error matches snapshot 1`] = `
+.emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-10 {
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-10 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-10 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  border-left: 4px solid #b10e1e;
+  margin-right: 15px;
+  padding-left: 10px;
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+.emotion-9:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-9 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-9 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-3 {
+  display: block;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #b10e1e;
+  padding-top: 4px;
+  padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+  border: 4px solid #b10e1e;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 50%;
+  }
+}
+
+.emotion-6:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    margin-bottom: 0;
+  }
+}
+
+<TextFieldWithError>
+  <Styled(TextField)
+    meta={
+      Object {
+        "error": "Error text",
+        "touched": true,
+      }
+    }
+  >
+    <TextField
+      className="emotion-1"
+      input={
+        Object {
+          "name": undefined,
+          "onBlur": undefined,
+          "onChange": undefined,
+          "onFocus": undefined,
+          "value": undefined,
+        }
+      }
+      meta={
+        Object {
+          "error": "Error text",
+          "touched": true,
+        }
+      }
+    >
+      <Styled(Label)
+        className="emotion-1"
+        error="Error text"
+      >
+        <Label
+          className="emotion-10"
+          error="Error text"
+        >
+          <Styled(label)
+            className="emotion-10"
+            error="Error text"
+          >
+            <label
+              className="emotion-9"
+            >
+              <Styled(LabelText)
+                className="govuk-react--label-text"
+              >
+                <LabelText
+                  className="govuk-react--label-text emotion-1"
+                >
+                  <Styled(span)
+                    className="govuk-react--label-text emotion-1"
+                  >
+                    <span
+                      className="govuk-react--label-text emotion-0"
+                    >
+                      Label text
+                    </span>
+                  </Styled(span)>
+                </LabelText>
+              </Styled(LabelText)>
+              <Styled(ErrorText)
+                className="govuk-react--error-text"
+              >
+                <ErrorText
+                  className="govuk-react--error-text emotion-1"
+                >
+                  <Styled(span)
+                    className="govuk-react--error-text emotion-1"
+                  >
+                    <span
+                      className="govuk-react--error-text emotion-3"
+                    >
+                      Error text
+                    </span>
+                  </Styled(span)>
+                </ErrorText>
+              </Styled(ErrorText)>
+              <Styled(Input)
+                error="Error text"
+              >
+                <Input
+                  className="emotion-1"
+                  error="Error text"
+                  type="text"
+                >
+                  <Styled(input)
+                    className="emotion-1"
+                    error="Error text"
+                    type="text"
+                  >
+                    <input
+                      className="emotion-6"
+                      type="text"
+                    />
+                  </Styled(input)>
+                </Input>
+              </Styled(Input)>
+            </label>
+          </Styled(label)>
+        </Label>
+      </Styled(Label)>
+    </TextField>
+  </Styled(TextField)>
+</TextFieldWithError>
+`;
+
+exports[`TextField with hint matches snapshot 1`] = `
 .emotion-1 {
   margin-bottom: 0;
 }
@@ -42,6 +504,12 @@ exports[`TextField matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
+.emotion-9:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 @media only screen and (min-width:641px) {
   .emotion-9 {
     margin-bottom: 0;
@@ -59,6 +527,7 @@ exports[`TextField matches wrapper snapshot: wrapper mount 1`] = `
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: block;
+  clear: none;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
@@ -76,32 +545,6 @@ exports[`TextField matches wrapper snapshot: wrapper mount 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-3 {
-  display: block;
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #6f777b;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
     margin-bottom: 0;
   }
 }
@@ -140,81 +583,119 @@ exports[`TextField matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<_default>
+.emotion-3 {
+  display: block;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #6f777b;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+<TextFieldWithHint>
   <Styled(TextField)
-    hint="It’s on your National Insurance card, benefit letter, payslip or P60."
-    meta={
-      Object {
-        "error": "",
-      }
-    }
+    hint="Hint text"
   >
     <TextField
       className="emotion-1"
-      hint="It’s on your National Insurance card, benefit letter, payslip or P60."
-      input={Object {}}
+      hint="Hint text"
+      input={
+        Object {
+          "name": undefined,
+          "onBlur": undefined,
+          "onChange": undefined,
+          "onFocus": undefined,
+          "value": undefined,
+        }
+      }
       meta={
         Object {
-          "error": "",
+          "active": undefined,
+          "dirty": undefined,
+          "dirtySinceLastSubmit": undefined,
+          "error": undefined,
+          "initial": undefined,
+          "invalid": undefined,
+          "pristine": undefined,
+          "submitError": undefined,
+          "submitFailed": undefined,
+          "submitSucceeded": undefined,
+          "touched": undefined,
+          "valid": undefined,
+          "visited": undefined,
         }
       }
     >
       <Styled(Label)
         className="emotion-1"
-        error=""
       >
         <Label
           className="emotion-10"
-          error=""
         >
           <Styled(label)
             className="emotion-10"
-            error=""
           >
             <label
               className="emotion-9"
             >
-              <Styled(LabelText)>
+              <Styled(LabelText)
+                className="govuk-react--label-text"
+              >
                 <LabelText
-                  className="emotion-1"
+                  className="govuk-react--label-text emotion-1"
                 >
                   <Styled(span)
-                    className="emotion-1"
+                    className="govuk-react--label-text emotion-1"
                   >
                     <span
-                      className="emotion-0"
+                      className="govuk-react--label-text emotion-0"
                     >
-                      National Insurance number
+                      Label text
                     </span>
                   </Styled(span)>
                 </LabelText>
               </Styled(LabelText)>
-              <Styled(HintText)>
+              <Styled(HintText)
+                className="govuk-react--hint-text"
+              >
                 <HintText
-                  className="emotion-1"
+                  className="govuk-react--hint-text emotion-1"
                 >
                   <Styled(span)
-                    className="emotion-1"
+                    className="govuk-react--hint-text emotion-1"
                   >
                     <span
-                      className="emotion-3"
+                      className="govuk-react--hint-text emotion-3"
                     >
-                      It’s on your National Insurance card, benefit letter, payslip or P60.
+                      Hint text
                     </span>
                   </Styled(span)>
                 </HintText>
               </Styled(HintText)>
-              <Styled(Input)
-                error=""
-              >
+              <Styled(Input)>
                 <Input
                   className="emotion-1"
-                  error=""
                   type="text"
                 >
                   <Styled(input)
                     className="emotion-1"
-                    error=""
                     type="text"
                   >
                     <input
@@ -230,5 +711,5 @@ exports[`TextField matches wrapper snapshot: wrapper mount 1`] = `
       </Styled(Label)>
     </TextField>
   </Styled(TextField)>
-</_default>
+</TextFieldWithHint>
 `;
