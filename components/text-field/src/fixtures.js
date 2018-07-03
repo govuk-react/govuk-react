@@ -12,10 +12,11 @@ const exampleHintText = 'It’s on your National Insurance card, benefit letter,
 
 const TextFieldWithKnobs = () => (
   <TextField
-    hint={text('hint', exampleHintText )}
+    hint={text('hint', exampleHintText)}
     meta={
       {
-        error: text('meta.error', '' ),
+        touched: true,
+        error: text('meta.error', ''),
       }
     }
   >
@@ -41,7 +42,7 @@ const TextFieldFinalForm = () => (
       validate={required}
       mb={4}
     >
-      { exampleLabelText }
+      {exampleLabelText}
     </Field>
   </FinalFormWrapper>
 );
