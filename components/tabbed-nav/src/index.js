@@ -52,11 +52,31 @@ const ClearFix = styled('li')`
  * ### Usage
  *
  * ```jsx
- * <TabbedNav
-    handleNavChange={this.handleNavChange}
-    activeNavTab={this.state.activeNavTab}
-    navItems={['Example tab 1', 'Example tab 2', 'Example tab 3']}
-  >
+ const props = {
+  handleNavChange: () => { },
+  activeNavTab: 'Example tab 1',
+  navItems: ['Example tab 1', 'Example tab 2'],
+  };
+
+  const childComponentOne = () => (
+    <div>
+      First child component
+    </div>
+  );
+
+  const childComponentTwo = () => (
+    <div>
+      Second child component
+    </div>
+  );
+
+ <TabbedNav {...props}>
+    {props.activeNavTab === 'Example tab 1' ?
+      <childComponentOne />
+      :
+      <childComponentTwo />
+    }
+  </TabbedNav>
  * ```
  */
 
