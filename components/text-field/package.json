@@ -1,14 +1,14 @@
 {
   "name": "@govuk-react/text-field",
-  "version": "0.2.2",
+  "version": "0.2.7",
   "dependencies": {
-    "@govuk-react/constants": "^0.2.2",
-    "@govuk-react/error-text": "^0.2.2",
-    "@govuk-react/hint-text": "^0.2.2",
-    "@govuk-react/hoc": "^0.2.2",
-    "@govuk-react/input": "^0.2.2",
-    "@govuk-react/label": "^0.2.2",
-    "@govuk-react/label-text": "^0.2.2",
+    "@govuk-react/constants": "^0.2.7",
+    "@govuk-react/error-text": "^0.2.7",
+    "@govuk-react/hint-text": "^0.2.7",
+    "@govuk-react/hoc": "^0.2.7",
+    "@govuk-react/input": "^0.2.7",
+    "@govuk-react/label": "^0.2.7",
+    "@govuk-react/label-text": "^0.2.7",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
