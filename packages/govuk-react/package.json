@@ -44,6 +44,7 @@
     "@govuk-react/supporting-header": "^0.2.9",
     "@govuk-react/table": "^0.2.7",
     "@govuk-react/text-area": "^0.2.9",
+    "@govuk-react/text-field": "^0.2.7",
     "@govuk-react/top-nav": "^0.2.7",
     "@govuk-react/unordered-list": "^0.2.7",
     "@govuk-react/warning-text": "^0.2.7",
