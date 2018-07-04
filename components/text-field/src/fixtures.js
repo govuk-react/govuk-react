@@ -12,6 +12,7 @@ const exampleHintText = 'It’s on your National Insurance card, benefit letter,
 
 const TextFieldWithKnobs = () => (
   <TextField
+    label={text('label', exampleLabelText)}
     hint={text('hint', exampleHintText)}
     meta={
       {
@@ -19,15 +20,26 @@ const TextFieldWithKnobs = () => (
         error: text('meta.error', ''),
       }
     }
-  >
-    {text('label', exampleLabelText)}
-  </TextField>
+  />
 );
-const TextFieldWithHint = () => <TextField hint={exampleHintText}>{ exampleLabelText }</TextField>;
+const TextFieldWithName = () => (
+  <TextField
+    label={exampleLabelText} 
+    input={{ name: exampleFieldName }}
+  />
+);
+const TextFieldWithHint = () => (
+  <TextField
+    label={exampleLabelText}
+    hint={exampleHintText}
+  />
+);
 const TextFieldWithError = () => (
-  <TextField hint={exampleHintText} meta={{ error: exampleErrorText, touched: true }}>
-    {exampleLabelText}
-  </TextField>
+  <TextField
+    label={exampleLabelText}
+    hint={exampleHintText}
+    meta={{ error: exampleErrorText, touched: true }}
+  />
 );
 
 // Simple validator for final form example
@@ -36,14 +48,13 @@ const required = value => (value ? undefined : exampleErrorText);
 const TextFieldFinalForm = () => (
   <FinalFormWrapper>
     <Field
+      label={exampleLabelText}
       name={exampleFieldName}
       hint={exampleHintText}
       component={TextField}
       validate={required}
       mb={4}
-    >
-      {exampleLabelText}
-    </Field>
+    />
   </FinalFormWrapper>
 );
 
@@ -55,6 +66,7 @@ export {
   exampleErrorText,
   exampleHintText,
   TextFieldWithKnobs,
+  TextFieldWithName,
   TextFieldWithHint,
   TextFieldWithError,
   TextFieldFinalForm,

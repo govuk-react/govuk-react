@@ -12,12 +12,12 @@ import InputMessaging from './atoms/input-messaging';
  *
  * Simple
  * ```jsx
- * <TextField>Label text</TextField>
+ * <TextField label="Label text" />
  * ```
  *
  * With hint and an example error
  * ```jsx
- * <TextField hint="hint text" meta={{error: "some error information"}}>Label text</TextField>
+ * <TextField label="Label text" hint="hint text" meta={{error: "some error information"}} />
  * ```
  *
  * ### References:
@@ -28,10 +28,10 @@ import InputMessaging from './atoms/input-messaging';
  * - https://redux-form.com/7.1.2/docs/api/field.md/#meta-props
  */
 const TextField = ({
-  hint, input, meta, children, ...props
+  label, hint, input, meta, ...props
 }) => (
   <Label error={meta.touched && meta.error} {...props}>
-    <InputMessaging label={children} hint={hint} meta={meta} />
+    <InputMessaging label={label} hint={hint} meta={meta} />
     <Input error={meta.touched && meta.error} {...input} />
   </Label>
 );
@@ -40,7 +40,7 @@ TextField.propTypes = {
   /**
    * The text label presented to a user
    */
-  children: PropTypes.string,
+  label: PropTypes.string,
   /**
    * An optional text string to help a user enter form data
    */
@@ -76,7 +76,7 @@ TextField.propTypes = {
 };
 
 TextField.defaultProps = {
-  children: undefined,
+  label: undefined,
   hint: undefined,
   input: {
     name: undefined,

@@ -11,12 +11,12 @@ TextField
 
 Simple
 ```jsx
-<TextField>Label text</TextField>
+<TextField label="Label text" />
 ```
 
 With hint and an example error
 ```jsx
-<TextField hint="hint text" meta={{error: "some error information"}}>Label text</TextField>
+<TextField label="Label text" hint="hint text" meta={{error: "some error information"}} />
 ```
 
 ### References:
@@ -29,9 +29,9 @@ With hint and an example error
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | ```undefined``` | string | The text label presented to a user
  `hint` |  | ```undefined``` | string | An optional text string to help a user enter form data
  `input` |  | ```{   name: undefined,   onBlur: undefined,   onChange: undefined,   onFocus: undefined,   value: undefined, }``` | shape[object Object] | An input object based off https://redux-form.com/7.1.2/docs/api/field.md/#input-props
+ `label` |  | ```undefined``` | string | The text label presented to a user
  `meta` |  | ```{   active: undefined,   dirty: undefined,   dirtySinceLastSubmit: undefined,   error: undefined,   initial: undefined,   invalid: undefined,   pristine: undefined,   submitError: undefined,   submitFailed: undefined,   submitSucceeded: undefined,   touched: undefined,   valid: undefined,   visited: undefined, }``` | shape[object Object] | A meta object based off https://redux-form.com/7.1.2/docs/api/field.md/#meta-props
 
 

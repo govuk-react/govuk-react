@@ -1,11 +1,12 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import TextField, {
+import {
   exampleFieldName,
   exampleLabelText,
   exampleHintText,
   exampleErrorText,
+  TextFieldWithName,
   TextFieldWithHint,
   TextFieldWithError,
   TextFieldFinalForm,
@@ -15,7 +16,7 @@ describe('TextField', () => {
   let wrapper;
 
   it('renders without crashing', () => {
-    wrapper = mount(<TextField input={{ name: exampleFieldName }}>{exampleLabelText}</TextField>);
+    wrapper = mount(<TextFieldWithName />);
   });
 
   it('should render an input with `type="text"`', () => {

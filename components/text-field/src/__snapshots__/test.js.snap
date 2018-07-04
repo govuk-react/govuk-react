@@ -121,115 +121,119 @@ exports[`TextField matches wrapper snapshot 1`] = `
   }
 }
 
-<Styled(TextField)
-  input={
-    Object {
-      "name": "NI_Number",
-    }
-  }
->
-  <TextField
-    className="emotion-1"
+<TextFieldWithName>
+  <Styled(TextField)
     input={
       Object {
         "name": "NI_Number",
       }
     }
-    meta={
-      Object {
-        "active": undefined,
-        "dirty": undefined,
-        "dirtySinceLastSubmit": undefined,
-        "error": undefined,
-        "initial": undefined,
-        "invalid": undefined,
-        "pristine": undefined,
-        "submitError": undefined,
-        "submitFailed": undefined,
-        "submitSucceeded": undefined,
-        "touched": undefined,
-        "valid": undefined,
-        "visited": undefined,
-      }
-    }
+    label="National Insurance number"
   >
-    <Styled(Label)
+    <TextField
       className="emotion-1"
+      input={
+        Object {
+          "name": "NI_Number",
+        }
+      }
+      label="National Insurance number"
+      meta={
+        Object {
+          "active": undefined,
+          "dirty": undefined,
+          "dirtySinceLastSubmit": undefined,
+          "error": undefined,
+          "initial": undefined,
+          "invalid": undefined,
+          "pristine": undefined,
+          "submitError": undefined,
+          "submitFailed": undefined,
+          "submitSucceeded": undefined,
+          "touched": undefined,
+          "valid": undefined,
+          "visited": undefined,
+        }
+      }
     >
-      <Label
-        className="emotion-7"
+      <Styled(Label)
+        className="emotion-1"
       >
-        <Styled(label)
+        <Label
           className="emotion-7"
         >
-          <label
-            className="emotion-6"
+          <Styled(label)
+            className="emotion-7"
           >
-            <InputMessaging
-              label="National Insurance number"
-              meta={
-                Object {
-                  "active": undefined,
-                  "dirty": undefined,
-                  "dirtySinceLastSubmit": undefined,
-                  "error": undefined,
-                  "initial": undefined,
-                  "invalid": undefined,
-                  "pristine": undefined,
-                  "submitError": undefined,
-                  "submitFailed": undefined,
-                  "submitSucceeded": undefined,
-                  "touched": undefined,
-                  "valid": undefined,
-                  "visited": undefined,
-                }
-              }
+            <label
+              className="emotion-6"
             >
-              <Styled(LabelText)
-                className="govuk-react--label-text"
+              <InputMessaging
+                label="National Insurance number"
+                meta={
+                  Object {
+                    "active": undefined,
+                    "dirty": undefined,
+                    "dirtySinceLastSubmit": undefined,
+                    "error": undefined,
+                    "initial": undefined,
+                    "invalid": undefined,
+                    "pristine": undefined,
+                    "submitError": undefined,
+                    "submitFailed": undefined,
+                    "submitSucceeded": undefined,
+                    "touched": undefined,
+                    "valid": undefined,
+                    "visited": undefined,
+                  }
+                }
               >
-                <LabelText
-                  className="govuk-react--label-text emotion-1"
+                <Styled(LabelText)
+                  className="govuk-react--label-text"
                 >
-                  <Styled(span)
+                  <LabelText
                     className="govuk-react--label-text emotion-1"
                   >
-                    <span
-                      className="govuk-react--label-text emotion-0"
+                    <Styled(span)
+                      className="govuk-react--label-text emotion-1"
                     >
-                      National Insurance number
-                    </span>
-                  </Styled(span)>
-                </LabelText>
-              </Styled(LabelText)>
-            </InputMessaging>
-            <Styled(Input)
-              name="NI_Number"
-            >
-              <Input
-                className="emotion-1"
+                      <span
+                        className="govuk-react--label-text emotion-0"
+                      >
+                        National Insurance number
+                      </span>
+                    </Styled(span)>
+                  </LabelText>
+                </Styled(LabelText)>
+              </InputMessaging>
+              <Styled(Input)
                 name="NI_Number"
-                type="text"
               >
-                <Styled(input)
+                <Input
                   className="emotion-1"
                   name="NI_Number"
                   type="text"
                 >
-                  <input
-                    className="emotion-3"
+                  <Styled(input)
+                    className="emotion-1"
                     name="NI_Number"
                     type="text"
-                  />
-                </Styled(input)>
-              </Input>
-            </Styled(Input)>
-          </label>
-        </Styled(label)>
-      </Label>
-    </Styled(Label)>
-  </TextField>
-</Styled(TextField)>
+                  >
+                    <input
+                      className="emotion-3"
+                      name="NI_Number"
+                      type="text"
+                    />
+                  </Styled(input)>
+                </Input>
+              </Styled(Input)>
+            </label>
+          </Styled(label)>
+        </Label>
+      </Styled(Label)>
+    </TextField>
+  </Styled(TextField)>
+</TextFieldWithName>
 `;
 
 exports[`TextField with error matches snapshot 1`] = `
@@ -414,6 +418,7 @@ exports[`TextField with error matches snapshot 1`] = `
 <TextFieldWithError>
   <Styled(TextField)
     hint="It’s on your National Insurance card, benefit letter, payslip or P60."
+    label="National Insurance number"
     meta={
       Object {
         "error": "Required",
@@ -433,6 +438,7 @@ exports[`TextField with error matches snapshot 1`] = `
           "value": undefined,
         }
       }
+      label="National Insurance number"
       meta={
         Object {
           "error": "Required",
@@ -696,6 +702,7 @@ exports[`TextField with hint matches snapshot 1`] = `
 <TextFieldWithHint>
   <Styled(TextField)
     hint="It’s on your National Insurance card, benefit letter, payslip or P60."
+    label="National Insurance number"
   >
     <TextField
       className="emotion-1"
@@ -709,6 +716,7 @@ exports[`TextField with hint matches snapshot 1`] = `
           "value": undefined,
         }
       }
+      label="National Insurance number"
       meta={
         Object {
           "active": undefined,
@@ -1125,6 +1133,7 @@ exports[`Textfield rendered with FinalForm matches snapshot 1`] = `
             component={[Function]}
             format={[Function]}
             hint="It’s on your National Insurance card, benefit letter, payslip or P60."
+            label="National Insurance number"
             mb={4}
             name="NI_Number"
             parse={[Function]}
@@ -1141,6 +1150,7 @@ exports[`Textfield rendered with FinalForm matches snapshot 1`] = `
                   "value": "",
                 }
               }
+              label="National Insurance number"
               mb={4}
               meta={
                 Object {
@@ -1173,6 +1183,7 @@ exports[`Textfield rendered with FinalForm matches snapshot 1`] = `
                     "value": "",
                   }
                 }
+                label="National Insurance number"
                 mb={4}
                 meta={
                   Object {
