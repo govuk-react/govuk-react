@@ -165,23 +165,44 @@ exports[`TextField matches wrapper snapshot 1`] = `
           <label
             className="emotion-6"
           >
-            <Styled(LabelText)
-              className="govuk-react--label-text"
+            <InputMessaging
+              label="National Insurance number"
+              meta={
+                Object {
+                  "active": undefined,
+                  "dirty": undefined,
+                  "dirtySinceLastSubmit": undefined,
+                  "error": undefined,
+                  "initial": undefined,
+                  "invalid": undefined,
+                  "pristine": undefined,
+                  "submitError": undefined,
+                  "submitFailed": undefined,
+                  "submitSucceeded": undefined,
+                  "touched": undefined,
+                  "valid": undefined,
+                  "visited": undefined,
+                }
+              }
             >
-              <LabelText
-                className="govuk-react--label-text emotion-1"
+              <Styled(LabelText)
+                className="govuk-react--label-text"
               >
-                <Styled(span)
+                <LabelText
                   className="govuk-react--label-text emotion-1"
                 >
-                  <span
-                    className="govuk-react--label-text emotion-0"
+                  <Styled(span)
+                    className="govuk-react--label-text emotion-1"
                   >
-                    National Insurance number
-                  </span>
-                </Styled(span)>
-              </LabelText>
-            </Styled(LabelText)>
+                    <span
+                      className="govuk-react--label-text emotion-0"
+                    >
+                      National Insurance number
+                    </span>
+                  </Styled(span)>
+                </LabelText>
+              </Styled(LabelText)>
+            </InputMessaging>
             <Styled(Input)
               name="NI_Number"
             >
@@ -434,57 +455,68 @@ exports[`TextField with error matches snapshot 1`] = `
             <label
               className="emotion-12"
             >
-              <Styled(LabelText)
-                className="govuk-react--label-text"
+              <InputMessaging
+                hint="It’s on your National Insurance card, benefit letter, payslip or P60."
+                label="National Insurance number"
+                meta={
+                  Object {
+                    "error": "Required",
+                    "touched": true,
+                  }
+                }
               >
-                <LabelText
-                  className="govuk-react--label-text emotion-1"
+                <Styled(LabelText)
+                  className="govuk-react--label-text"
                 >
-                  <Styled(span)
+                  <LabelText
                     className="govuk-react--label-text emotion-1"
                   >
-                    <span
-                      className="govuk-react--label-text emotion-0"
+                    <Styled(span)
+                      className="govuk-react--label-text emotion-1"
                     >
-                      National Insurance number
-                    </span>
-                  </Styled(span)>
-                </LabelText>
-              </Styled(LabelText)>
-              <Styled(HintText)
-                className="govuk-react--hint-text"
-              >
-                <HintText
-                  className="govuk-react--hint-text emotion-1"
+                      <span
+                        className="govuk-react--label-text emotion-0"
+                      >
+                        National Insurance number
+                      </span>
+                    </Styled(span)>
+                  </LabelText>
+                </Styled(LabelText)>
+                <Styled(HintText)
+                  className="govuk-react--hint-text"
                 >
-                  <Styled(span)
+                  <HintText
                     className="govuk-react--hint-text emotion-1"
                   >
-                    <span
-                      className="govuk-react--hint-text emotion-3"
+                    <Styled(span)
+                      className="govuk-react--hint-text emotion-1"
                     >
-                      It’s on your National Insurance card, benefit letter, payslip or P60.
-                    </span>
-                  </Styled(span)>
-                </HintText>
-              </Styled(HintText)>
-              <Styled(ErrorText)
-                className="govuk-react--error-text"
-              >
-                <ErrorText
-                  className="govuk-react--error-text emotion-1"
+                      <span
+                        className="govuk-react--hint-text emotion-3"
+                      >
+                        It’s on your National Insurance card, benefit letter, payslip or P60.
+                      </span>
+                    </Styled(span)>
+                  </HintText>
+                </Styled(HintText)>
+                <Styled(ErrorText)
+                  className="govuk-react--error-text"
                 >
-                  <Styled(span)
+                  <ErrorText
                     className="govuk-react--error-text emotion-1"
                   >
-                    <span
-                      className="govuk-react--error-text emotion-6"
+                    <Styled(span)
+                      className="govuk-react--error-text emotion-1"
                     >
-                      Required
-                    </span>
-                  </Styled(span)>
-                </ErrorText>
-              </Styled(ErrorText)>
+                      <span
+                        className="govuk-react--error-text emotion-6"
+                      >
+                        Required
+                      </span>
+                    </Styled(span)>
+                  </ErrorText>
+                </Styled(ErrorText)>
+              </InputMessaging>
               <Styled(Input)
                 error="Required"
               >
@@ -707,40 +739,62 @@ exports[`TextField with hint matches snapshot 1`] = `
             <label
               className="emotion-9"
             >
-              <Styled(LabelText)
-                className="govuk-react--label-text"
+              <InputMessaging
+                hint="It’s on your National Insurance card, benefit letter, payslip or P60."
+                label="National Insurance number"
+                meta={
+                  Object {
+                    "active": undefined,
+                    "dirty": undefined,
+                    "dirtySinceLastSubmit": undefined,
+                    "error": undefined,
+                    "initial": undefined,
+                    "invalid": undefined,
+                    "pristine": undefined,
+                    "submitError": undefined,
+                    "submitFailed": undefined,
+                    "submitSucceeded": undefined,
+                    "touched": undefined,
+                    "valid": undefined,
+                    "visited": undefined,
+                  }
+                }
               >
-                <LabelText
-                  className="govuk-react--label-text emotion-1"
+                <Styled(LabelText)
+                  className="govuk-react--label-text"
                 >
-                  <Styled(span)
+                  <LabelText
                     className="govuk-react--label-text emotion-1"
                   >
-                    <span
-                      className="govuk-react--label-text emotion-0"
+                    <Styled(span)
+                      className="govuk-react--label-text emotion-1"
                     >
-                      National Insurance number
-                    </span>
-                  </Styled(span)>
-                </LabelText>
-              </Styled(LabelText)>
-              <Styled(HintText)
-                className="govuk-react--hint-text"
-              >
-                <HintText
-                  className="govuk-react--hint-text emotion-1"
+                      <span
+                        className="govuk-react--label-text emotion-0"
+                      >
+                        National Insurance number
+                      </span>
+                    </Styled(span)>
+                  </LabelText>
+                </Styled(LabelText)>
+                <Styled(HintText)
+                  className="govuk-react--hint-text"
                 >
-                  <Styled(span)
+                  <HintText
                     className="govuk-react--hint-text emotion-1"
                   >
-                    <span
-                      className="govuk-react--hint-text emotion-3"
+                    <Styled(span)
+                      className="govuk-react--hint-text emotion-1"
                     >
-                      It’s on your National Insurance card, benefit letter, payslip or P60.
-                    </span>
-                  </Styled(span)>
-                </HintText>
-              </Styled(HintText)>
+                      <span
+                        className="govuk-react--hint-text emotion-3"
+                      >
+                        It’s on your National Insurance card, benefit letter, payslip or P60.
+                      </span>
+                    </Styled(span)>
+                  </HintText>
+                </Styled(HintText)>
+              </InputMessaging>
               <Styled(Input)>
                 <Input
                   className="emotion-1"
@@ -1157,40 +1211,63 @@ exports[`Textfield rendered with FinalForm matches snapshot 1`] = `
                       <label
                         className="emotion-9"
                       >
-                        <Styled(LabelText)
-                          className="govuk-react--label-text"
+                        <InputMessaging
+                          hint="It’s on your National Insurance card, benefit letter, payslip or P60."
+                          label="National Insurance number"
+                          meta={
+                            Object {
+                              "active": false,
+                              "data": Object {},
+                              "dirty": false,
+                              "dirtySinceLastSubmit": false,
+                              "error": "Required",
+                              "initial": undefined,
+                              "invalid": true,
+                              "pristine": true,
+                              "submitError": undefined,
+                              "submitFailed": false,
+                              "submitSucceeded": false,
+                              "touched": false,
+                              "valid": false,
+                              "visited": false,
+                            }
+                          }
                         >
-                          <LabelText
-                            className="govuk-react--label-text emotion-1"
+                          <Styled(LabelText)
+                            className="govuk-react--label-text"
                           >
-                            <Styled(span)
+                            <LabelText
                               className="govuk-react--label-text emotion-1"
                             >
-                              <span
-                                className="govuk-react--label-text emotion-0"
+                              <Styled(span)
+                                className="govuk-react--label-text emotion-1"
                               >
-                                National Insurance number
-                              </span>
-                            </Styled(span)>
-                          </LabelText>
-                        </Styled(LabelText)>
-                        <Styled(HintText)
-                          className="govuk-react--hint-text"
-                        >
-                          <HintText
-                            className="govuk-react--hint-text emotion-1"
+                                <span
+                                  className="govuk-react--label-text emotion-0"
+                                >
+                                  National Insurance number
+                                </span>
+                              </Styled(span)>
+                            </LabelText>
+                          </Styled(LabelText)>
+                          <Styled(HintText)
+                            className="govuk-react--hint-text"
                           >
-                            <Styled(span)
+                            <HintText
                               className="govuk-react--hint-text emotion-1"
                             >
-                              <span
-                                className="govuk-react--hint-text emotion-3"
+                              <Styled(span)
+                                className="govuk-react--hint-text emotion-1"
                               >
-                                It’s on your National Insurance card, benefit letter, payslip or P60.
-                              </span>
-                            </Styled(span)>
-                          </HintText>
-                        </Styled(HintText)>
+                                <span
+                                  className="govuk-react--hint-text emotion-3"
+                                >
+                                  It’s on your National Insurance card, benefit letter, payslip or P60.
+                                </span>
+                              </Styled(span)>
+                            </HintText>
+                          </Styled(HintText)>
+                        </InputMessaging>
                         <Styled(Input)
                           error={false}
                           name="NI_Number"
