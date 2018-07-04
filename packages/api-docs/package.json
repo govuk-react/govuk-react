@@ -2,8 +2,8 @@
   "name": "@govuk-react/api-docs",
   "version": "0.2.7",
   "dependencies": {
-    "@babel/node": "^7.0.0-beta.40",
-    "@babel/runtime": "^7.0.0-beta.40",
+    "@babel/node": "7.0.0-beta.44",
+    "@babel/runtime": "7.0.0-beta.44",
     "chalk": "^2.3.1",
     "commander": "^2.15.0",
     "component-image": "^2.0.0",
@@ -18,8 +18,8 @@
     "react-dom": "^16.3.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.40",
-    "@babel/core": "^7.0.0-beta.40",
+    "@babel/cli": "7.0.0-beta.44",
+    "@babel/core": "7.0.0-beta.44",
     "babel-core": "^7.0.0-bridge.0",
     "cross-env": "^5.1.4",
     "prop-types": "^15.6.1",
