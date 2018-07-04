@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@babel/cli@^7.0.0-beta.40":
+"@babel/cli@7.0.0-beta.44", "@babel/cli@^7.0.0-beta.40":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.0.0-beta.44.tgz#635a7f04277ab71a9b5be625667aaf1e33a31a09"
   dependencies:
@@ -23,7 +23,7 @@
   dependencies:
     "@babel/highlight" "7.0.0-beta.44"
 
-"@babel/core@^7.0.0-beta.40":
+"@babel/core@7.0.0-beta.44", "@babel/core@^7.0.0-beta.40":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.0.0-beta.44.tgz#90bb9e897427e7ebec2a1b857f458ff74ca28057"
   dependencies:
@@ -215,7 +215,7 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@babel/node@^7.0.0-beta.40":
+"@babel/node@7.0.0-beta.44", "@babel/node@^7.0.0-beta.40":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/node/-/node-7.0.0-beta.44.tgz#aa729d285b71bfd1d221c6d925430b86b4c965cb"
   dependencies:
@@ -640,7 +640,7 @@
   dependencies:
     regenerator-transform "^0.12.3"
 
-"@babel/plugin-transform-runtime@^7.0.0-beta.40":
+"@babel/plugin-transform-runtime@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-runtime/-/plugin-transform-runtime-7.0.0-beta.44.tgz#13c7289c393425cc3bc99c9a0e836ca45f014c1f"
   dependencies:
@@ -694,7 +694,7 @@
     core-js "^2.5.3"
     regenerator-runtime "^0.11.1"
 
-"@babel/preset-env@^7.0.0-beta.40":
+"@babel/preset-env@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.0.0-beta.44.tgz#9d3df27d81b134cae8a52a36279402aadad6d5d2"
   dependencies:
@@ -738,14 +738,14 @@
     invariant "^2.2.2"
     semver "^5.3.0"
 
-"@babel/preset-flow@^7.0.0-beta.40":
+"@babel/preset-flow@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/preset-flow/-/preset-flow-7.0.0-beta.44.tgz#0adc4674743a29e6f303dc542d2d35eaec095673"
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0-beta.44"
     "@babel/plugin-transform-flow-strip-types" "7.0.0-beta.44"
 
-"@babel/preset-react@^7.0.0-beta.40":
+"@babel/preset-react@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/preset-react/-/preset-react-7.0.0-beta.44.tgz#ab57e92f41518f871d82d62791c84383cfd9691a"
   dependencies:
@@ -756,7 +756,7 @@
     "@babel/plugin-transform-react-jsx-self" "7.0.0-beta.44"
     "@babel/plugin-transform-react-jsx-source" "7.0.0-beta.44"
 
-"@babel/preset-stage-1@^7.0.0-beta.40":
+"@babel/preset-stage-1@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/preset-stage-1/-/preset-stage-1-7.0.0-beta.44.tgz#ee741bdfd873654cd985dce7d77e47b5c30c289a"
   dependencies:
