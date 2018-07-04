@@ -24,7 +24,7 @@ const TextFieldWithKnobs = () => (
 );
 const TextFieldWithName = () => (
   <TextField
-    label={exampleLabelText} 
+    label={exampleLabelText}
     input={{ name: exampleFieldName }}
   />
 );
