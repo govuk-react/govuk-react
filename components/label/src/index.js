@@ -12,7 +12,6 @@ const StyledLabel = styled('label')(
     display: 'flex',
     flexDirection: 'column',
     boxSizing: 'border-box',
-    width: '100%',
     ':after': {
       content: "''",
       display: 'table',
