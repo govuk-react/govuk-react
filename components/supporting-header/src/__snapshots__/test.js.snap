@@ -14,13 +14,16 @@ exports[`SupportingHeader matches wrapper snapshot 1`] = `
 .emotion-0 {
   font-family: "nta",Arial,sans-serif;
   font-size: 20px;
+  line-height: 1.11111;
   color: #6f777b;
+  padding-bottom: 7px;
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
     font-size: 27px;
+    padding-bottom: 7px;
   }
 }
 
