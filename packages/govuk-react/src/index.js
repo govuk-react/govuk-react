@@ -43,6 +43,7 @@ export { default as TopNav } from '@govuk-react/top-nav';
 export { default as Table } from '@govuk-react/table';
 export { default as LeadParagraph } from '@govuk-react/lead-paragraph';
 export { default as WarningText } from '@govuk-react/warning-text';
+export { default as SupportingHeader } from '@govuk-react/supporting-header';
 
 export { H1, H2, H3, H4, H5, H6 } from '@govuk-react/header';
 
