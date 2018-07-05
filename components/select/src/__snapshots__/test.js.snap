@@ -74,7 +74,6 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   box-sizing: border-box;
-  width: 100%;
   border-left: 4px solid #b10e1e;
   margin-right: 15px;
   padding-left: 10px;
@@ -323,7 +322,6 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   box-sizing: border-box;
-  width: 100%;
   margin-bottom: 0;
   margin-bottom: 20px;
 }
