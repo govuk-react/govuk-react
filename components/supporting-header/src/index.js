@@ -13,7 +13,7 @@ import {
 // The line-height and padding for supporting headers does not follow any pre-existing patterns
 const customLineHeight = '1.11111';
 const smallPaddingBottom = '7px';
-const largePaddingBottom = '7px';
+const largePaddingBottom = '6px';
 
 const StyledHeader = styled('span')({
   fontFamily: NTA_LIGHT,

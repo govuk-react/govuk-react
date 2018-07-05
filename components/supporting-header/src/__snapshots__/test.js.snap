@@ -23,7 +23,7 @@ exports[`SupportingHeader matches wrapper snapshot 1`] = `
 @media only screen and (min-width:641px) {
   .emotion-0 {
     font-size: 27px;
-    padding-bottom: 7px;
+    padding-bottom: 6px;
   }
 }
 
