@@ -10,14 +10,21 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
+// The line-height and padding for supporting headers does not follow any pre-existing patterns
+const customLineHeight = '1.11111';
+const smallPaddingBottom = '7px';
+const largePaddingBottom = '7px';
+
 const StyledHeader = styled('span')({
   fontFamily: NTA_LIGHT,
   fontSize: FONT_SIZE.SIZE_20,
-  lineHeight: LINE_HEIGHT.SIZE_20,
+  lineHeight: customLineHeight,
   color: GREY_1,
+  paddingBottom: smallPaddingBottom,
   [MEDIA_QUERIES.LARGESCREEN]: {
     fontSize: FONT_SIZE.SIZE_27,
     lineHeight: LINE_HEIGHT.SIZE_27,
+    paddingBottom: largePaddingBottom,
   },
 });
 
