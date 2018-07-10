@@ -114,6 +114,7 @@
     "@govuk-react/search-box": "*",
     "@govuk-react/select": "*",
     "@govuk-react/storybook-components": "*",
+    "@govuk-react/supporting-header": "*",
     "@govuk-react/table": "*",
     "@govuk-react/text-area": "*",
     "@govuk-react/top-nav": "*",
