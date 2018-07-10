@@ -1,6 +1,6 @@
 {
   "name": "@govuk-react/paragraph",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "devDependencies": {
     "@storybook/addon-knobs": "^3.4.2"
   },
