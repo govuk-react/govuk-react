@@ -112,7 +112,7 @@ const DateInput = ({
     day = 'dateInputDay',
     month = 'dateInputMonth',
     year = 'dateInputYear',
-  } = {},
+  },
   ...props
 }) => (
   <StyledContainer {...props} errorText={errorText}>
