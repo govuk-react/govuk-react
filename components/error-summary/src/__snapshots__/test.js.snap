@@ -40,22 +40,22 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
-  font-size: 24px;
-  line-height: 1.0416666666666667;
+  font-size: 18px;
+  line-height: 1.2;
   margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
-    font-size: 36px;
-    line-height: 1.1111111111111112;
+    font-size: 24px;
+    line-height: 1.25;
     margin-bottom: 20px;
   }
 }
 
 @media print {
   .emotion-0 {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -461,25 +461,25 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
             tabIndex={-1}
           >
             <Styled(Header)
-              level={2}
+              level={3}
             >
               <Header
                 className="emotion-2"
-                level={2}
+                level={3}
               >
                 <Styled(Component)
                   className="emotion-2"
-                  level={2}
+                  level={3}
                 >
                   <Component
                     className="emotion-0"
-                    level={2}
+                    level={3}
                   >
-                    <h2
+                    <h3
                       className="emotion-0"
                     >
                       Message to alert the user to a problem goes here
-                    </h2>
+                    </h3>
                   </Component>
                 </Styled(Component)>
               </Header>
