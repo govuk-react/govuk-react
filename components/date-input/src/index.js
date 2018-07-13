@@ -144,9 +144,9 @@ DateInput.defaultProps = {
   hintText: undefined,
   errorText: undefined,
   inputNames: {
-    day: 'dateInputDay',
-    month: 'dateInputMonth',
-    year: 'dateInputYear',
+    day: undefined,
+    month: undefined,
+    year: undefined,
   },
 };
 
