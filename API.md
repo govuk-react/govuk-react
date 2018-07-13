@@ -19,6 +19,11 @@ With custom click handler
 <BackLink onClick={this.myCustomFunction}>Back</BackLink>
 ```
 
+With `href` attribute
+```jsx
+<BackLink href='#'>Back</BackLink>
+```
+
 ### References:
 - https://github.com/alphagov/govuk-frontend/tree/master/src/components/back-link
 
@@ -191,6 +196,13 @@ Date with hint text & error
 </DateInput>
 ```
 
+With custom input name props
+```jsx
+<DateInput inputNames={{ day: 'dayInputName' }} hintText="For example, 31 03 1980">
+  What is your date of birth?
+</DateInput>
+```
+
 ### References:
 - https://github.com/alphagov/govuk-frontend/tree/master/src/components/date-input
 
@@ -200,6 +212,7 @@ Prop | Required | Default | Type | Description
  `children` | true | `````` | node | 
  `errorText` |  | ```undefined``` | string | Error text
  `hintText` |  | ```undefined``` | string | Optional hint text
+ `inputNames` |  | ```{   day: 'dateInputDay',   month: 'dateInputMonth',   year: 'dateInputYear', }``` | shape[object Object] | Input name attributes
 
 
 DocumentFooterMetadata
@@ -1588,6 +1601,39 @@ Prop | Required | Default | Type | Description
  `input` |  | ```{}``` | shape[object Object] | 
  `label` | true | `````` | string | 
  `meta` |  | ```{}``` | shape[object Object] | 
+
+
+SupportingHeader
+================
+
+### Import
+```js
+  import SupportingHeader from '@govuk-react/supporting-header';
+```
+<!-- STORY -->
+
+### Usage
+
+Simple
+```jsx
+<SupportingHeader>Heading text</SupportingHeader>
+```
+
+With another header
+```jsx
+import { H1 } from '@govuk-react/header';
+
+<SupportingHeader>Supporting header text</SupportingHeader>
+<H1>Main header text</H1>
+```
+
+### References
+- https://govuk-elements.herokuapp.com/typography/
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true | `````` | string | Text to be rendered as a supporting header
 
 
 Table

@@ -93,6 +93,13 @@ const StyledList = styled('div')({
  * </DateInput>
  * ```
  *
+ * With custom input name props
+ * ```jsx
+ * <DateInput inputNames={{ day: 'dayInputName' }} hintText="For example, 31 03 1980">
+ *   What is your date of birth?
+ * </DateInput>
+ * ```
+ *
  * ### References:
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/date-input
  *
@@ -101,6 +108,11 @@ const DateInput = ({
   children,
   errorText,
   hintText,
+  inputNames: {
+    day = 'dateInputDay',
+    month = 'dateInputMonth',
+    year = 'dateInputYear',
+  },
   ...props
 }) => (
   <StyledContainer {...props} errorText={errorText}>
@@ -114,15 +126,15 @@ const DateInput = ({
     <StyledList>
       <Label>
         <LabelText>Day</LabelText>
-        <StyledInput errorText={errorText} type="text" />
+        <StyledInput name={day} errorText={errorText} type="text" />
       </Label>
       <Label>
         <LabelText>Month</LabelText>
-        <StyledInput errorText={errorText} type="text" />
+        <StyledInput name={month} errorText={errorText} type="text" />
       </Label>
       <Label className="year">
         <LabelText>Year</LabelText>
-        <StyledInput errorText={errorText} type="text" />
+        <StyledInput name={year} errorText={errorText} type="text" />
       </Label>
     </StyledList>
   </StyledContainer>
@@ -131,6 +143,11 @@ const DateInput = ({
 DateInput.defaultProps = {
   hintText: undefined,
   errorText: undefined,
+  inputNames: {
+    day: undefined,
+    month: undefined,
+    year: undefined,
+  },
 };
 
 DateInput.propTypes = {
@@ -143,6 +160,14 @@ DateInput.propTypes = {
    * Error text
    */
   errorText: PropTypes.string,
+  /**
+   * Input name attributes
+   */
+  inputNames: PropTypes.shape({
+    day: PropTypes.string,
+    month: PropTypes.string,
+    year: PropTypes.string,
+  }),
 };
 
 export default withWhiteSpace({ marginBottom: 6 })(DateInput);

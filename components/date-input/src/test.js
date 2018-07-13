@@ -6,7 +6,7 @@ import DateInput from './';
 
 describe('DateInput', () => {
   const example = 'example';
-  const wrapper = <DateInput errorText={example}>{example}</DateInput>;
+  const wrapper = <DateInput inputNames={{ day: 'dayInputName' }} errorText={example}>{example}</DateInput>;
   let props;
 
   beforeEach(() => {
@@ -28,6 +28,11 @@ describe('DateInput', () => {
   it('should render an input type="text"', () => {
     const output = shallow(wrapper);
     expect(output.find('input[type="text"]')).toBeTruthy();
+  });
+
+  it('should render three name attributes', () => {
+    const output = mount(wrapper);
+    expect(output.find('input[name]')).toHaveLength(3);
   });
 
   it('should render a label', () => {
