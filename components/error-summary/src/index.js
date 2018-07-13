@@ -115,29 +115,29 @@ const StyledErrorSummary = styled('div')({
 const ErrorSummary = ({
   onHandleErrorClick, heading, description, errors, ...props
 }) => (
-    <StyledErrorSummary tabIndex={-1} {...props}>
-      <Header level={3}>{heading}</Header>
-      {description && <Paragraph mb={2}>{description}</Paragraph>}
-      {errors.length > 0 &&
-        <UnorderedList listStyleType="none">
-          {errors.map(error => (
-            <ListItem key={error.targetName}>
-              <StyledErrorText
-                tabIndex={-1}
-                onClick={() => onHandleErrorClick(error.targetName)}
-              >
-                {error.text}
-              </StyledErrorText>
-            </ListItem>
+  <StyledErrorSummary tabIndex={-1} {...props}>
+    <Header level={2}>{ heading }</Header>
+    { description && <Paragraph mb={2}>{ description }</Paragraph> }
+    { errors.length > 0 &&
+      <UnorderedList listStyleType="none">
+        { errors.map(error => (
+          <ListItem key={error.targetName}>
+            <StyledErrorText
+              tabIndex={-1}
+              onClick={() => onHandleErrorClick(error.targetName)}
+            >
+              {error.text}
+            </StyledErrorText>
+          </ListItem>
           ))
-          }
-        </UnorderedList>
-      }
-    </StyledErrorSummary>
-  );
+        }
+      </UnorderedList>
+    }
+  </StyledErrorSummary>
+);
 
 ErrorSummary.defaultProps = {
-  onHandleErrorClick: () => { },
+  onHandleErrorClick: () => {},
   description: undefined,
   errors: [],
 };
