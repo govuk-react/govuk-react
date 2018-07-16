@@ -1,6 +1,6 @@
 {
   "name": "@govuk-react/label",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "dependencies": {
     "@govuk-react/constants": "^0.2.7",
     "@govuk-react/hoc": "^0.2.7",
