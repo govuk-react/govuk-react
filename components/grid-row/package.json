@@ -1,6 +1,6 @@
 {
   "name": "@govuk-react/grid-row",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "dependencies": {
     "@govuk-react/constants": "^0.2.7",
     "@govuk-react/layout": "^0.2.7",
