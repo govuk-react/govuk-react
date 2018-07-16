@@ -60,12 +60,12 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 }
 
 .emotion-6 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-6 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 }
 
@@ -74,7 +74,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   margin: 0;
   font-size: 16px;
   line-height: 1.25;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .emotion-4 > p {
@@ -117,7 +117,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-4 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 }
 
@@ -485,11 +485,11 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
               </Header>
             </Styled(Header)>
             <Styled(Paragraph)
-              mb={2}
+              mb={3}
             >
               <Paragraph
                 className="emotion-6"
-                mb={2}
+                mb={3}
                 supportingText={false}
               >
                 <Styled(ReactMarkdown)
@@ -505,7 +505,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                   }
                   className="emotion-6"
                   escapeHtml={false}
-                  mb={2}
+                  mb={3}
                   renderers={
                     Object {
                       "link": [Function],
@@ -529,7 +529,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                     astPlugins={Array []}
                     className="emotion-4"
                     escapeHtml={false}
-                    mb={2}
+                    mb={3}
                     plugins={Array []}
                     rawSourcePos={false}
                     renderers={
