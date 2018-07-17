@@ -268,13 +268,13 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
                       defaultValue=""
                       errorText="example"
                       name="dayInputName"
-                      type="text"
+                      type="number"
                     >
                       <input
                         className="emotion-21 emotion-22"
                         defaultValue=""
                         name="dayInputName"
-                        type="text"
+                        type="number"
                       />
                     </StyledInput>
                   </label>
@@ -310,13 +310,13 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
                       defaultValue=""
                       errorText="example"
                       name="dateInputMonth"
-                      type="text"
+                      type="number"
                     >
                       <input
                         className="emotion-21 emotion-22"
                         defaultValue=""
                         name="dateInputMonth"
-                        type="text"
+                        type="number"
                       />
                     </StyledInput>
                   </label>
@@ -354,13 +354,13 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
                       defaultValue=""
                       errorText="example"
                       name="dateInputYear"
-                      type="text"
+                      type="number"
                     >
                       <input
                         className="emotion-21 emotion-22"
                         defaultValue=""
                         name="dateInputYear"
-                        type="text"
+                        type="number"
                       />
                     </StyledInput>
                   </label>

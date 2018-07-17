@@ -131,15 +131,15 @@ const DateInput = ({
     <StyledList>
       <Label>
         <LabelText>Day</LabelText>
-        <StyledInput name={day} errorText={errorText} type="text" defaultValue={defaultDay} />
+        <StyledInput name={day} errorText={errorText} type="number" defaultValue={defaultDay} />
       </Label>
       <Label>
         <LabelText>Month</LabelText>
-        <StyledInput name={month} errorText={errorText} type="text" defaultValue={defaultMonth} />
+        <StyledInput name={month} errorText={errorText} type="number" defaultValue={defaultMonth} />
       </Label>
       <Label className="year">
         <LabelText>Year</LabelText>
-        <StyledInput name={year} errorText={errorText} type="text" defaultValue={defaultYear} />
+        <StyledInput name={year} errorText={errorText} type="number" defaultValue={defaultYear} />
       </Label>
     </StyledList>
   </StyledContainer>
