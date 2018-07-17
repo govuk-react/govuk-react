@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
-.emotion-67 {
+.emotion-29 {
   margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-67 {
+  .emotion-29 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-65 {
+.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,22 +26,22 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-65 {
+  .emotion-28 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-3 {
+.emotion-1 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-1 {
     margin-bottom: 0;
   }
 }
 
-.emotion-1 {
+.emotion-0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -56,19 +56,19 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-0 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-0 {
     margin-bottom: 0;
   }
 }
 
-.emotion-8 {
+.emotion-3 {
   display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -84,19 +84,19 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-8 {
+  .emotion-3 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-8 {
+  .emotion-3 {
     margin-bottom: 0;
   }
 }
 
-.emotion-62 {
+.emotion-27 {
   font-family: "nta",Arial,sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
@@ -104,17 +104,17 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   display: flex;
 }
 
-.emotion-62 > label {
+.emotion-27 > label {
   width: 50px;
   margin-right: 20px;
   margin-bottom: 0;
 }
 
-.emotion-62 > label.year {
+.emotion-27 > label.year {
   width: 70px;
 }
 
-.emotion-24 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -126,19 +126,19 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-24:after {
+.emotion-10:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-24 {
+  .emotion-10 {
     margin-bottom: 0;
   }
 }
 
-.emotion-21 {
+.emotion-9 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -154,18 +154,18 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-21 {
+  .emotion-9 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
-.emotion-21:focus {
+.emotion-9:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-<StyledHoc
+<Styled(DateInput)
   errorText="example"
   inputNames={
     Object {
@@ -174,14 +174,7 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   }
 >
   <DateInput
-    className="emotion-67 emotion-0"
-    defaultValues={
-      Object {
-        "defaultDay": undefined,
-        "defaultMonth": undefined,
-        "defaultYear": undefined,
-      }
-    }
+    className="emotion-29"
     errorText="example"
     inputNames={
       Object {
@@ -189,188 +182,180 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
       }
     }
   >
-    <StyledContainer
-      className="emotion-67 emotion-0"
+    <Styled(div)
+      className="emotion-29"
       errorText="example"
     >
       <div
-        className="emotion-0 emotion-65 emotion-66"
+        className="emotion-28"
       >
-        <StyledHoc
+        <Styled(LabelText)
           errorText="example"
         >
           <LabelText
-            className="emotion-3 emotion-0"
+            className="emotion-1"
             errorText="example"
           >
-            <StyledLabelText
-              className="emotion-3 emotion-0"
+            <Styled(span)
+              className="emotion-1"
               errorText="example"
             >
               <span
-                className="emotion-0 emotion-1 emotion-2"
+                className="emotion-0"
               >
                 example
               </span>
-            </StyledLabelText>
+            </Styled(span)>
           </LabelText>
-        </StyledHoc>
+        </Styled(LabelText)>
         <span />
-        <StyledHoc
+        <Styled(ErrorText)
           errorText="example"
         >
           <ErrorText
-            className="emotion-3 emotion-0"
+            className="emotion-1"
             errorText="example"
           >
-            <StyledError
-              className="emotion-3 emotion-0"
+            <Styled(span)
+              className="emotion-1"
               errorText="example"
             >
               <span
-                className="emotion-0 emotion-8 emotion-2"
+                className="emotion-3"
               >
                 example
               </span>
-            </StyledError>
+            </Styled(span)>
           </ErrorText>
-        </StyledHoc>
-        <StyledList>
+        </Styled(ErrorText)>
+        <Styled(div)>
           <div
-            className="emotion-62 emotion-63"
+            className="emotion-27"
           >
-            <StyledHoc>
+            <Styled(Label)>
               <Label
-                className="emotion-3 emotion-0"
+                className="emotion-1"
               >
-                <StyledLabel
-                  className="emotion-3 emotion-0"
+                <Styled(label)
+                  className="emotion-1"
                 >
                   <label
-                    className="emotion-0 emotion-24 emotion-2"
+                    className="emotion-10"
                   >
-                    <StyledHoc>
+                    <Styled(LabelText)>
                       <LabelText
-                        className="emotion-3 emotion-0"
+                        className="emotion-1"
                       >
-                        <StyledLabelText
-                          className="emotion-3 emotion-0"
+                        <Styled(span)
+                          className="emotion-1"
                         >
                           <span
-                            className="emotion-0 emotion-1 emotion-2"
+                            className="emotion-0"
                           >
                             Day
                           </span>
-                        </StyledLabelText>
+                        </Styled(span)>
                       </LabelText>
-                    </StyledHoc>
-                    <StyledInput
-                      defaultValue=""
+                    </Styled(LabelText)>
+                    <Styled(input)
                       errorText="example"
                       name="dayInputName"
                       type="number"
                     >
                       <input
-                        className="emotion-21 emotion-22"
-                        defaultValue=""
+                        className="emotion-9"
                         name="dayInputName"
                         type="number"
                       />
-                    </StyledInput>
+                    </Styled(input)>
                   </label>
-                </StyledLabel>
+                </Styled(label)>
               </Label>
-            </StyledHoc>
-            <StyledHoc>
+            </Styled(Label)>
+            <Styled(Label)>
               <Label
-                className="emotion-3 emotion-0"
+                className="emotion-1"
               >
-                <StyledLabel
-                  className="emotion-3 emotion-0"
+                <Styled(label)
+                  className="emotion-1"
                 >
                   <label
-                    className="emotion-0 emotion-24 emotion-2"
+                    className="emotion-10"
                   >
-                    <StyledHoc>
+                    <Styled(LabelText)>
                       <LabelText
-                        className="emotion-3 emotion-0"
+                        className="emotion-1"
                       >
-                        <StyledLabelText
-                          className="emotion-3 emotion-0"
+                        <Styled(span)
+                          className="emotion-1"
                         >
                           <span
-                            className="emotion-0 emotion-1 emotion-2"
+                            className="emotion-0"
                           >
                             Month
                           </span>
-                        </StyledLabelText>
+                        </Styled(span)>
                       </LabelText>
-                    </StyledHoc>
-                    <StyledInput
-                      defaultValue=""
+                    </Styled(LabelText)>
+                    <Styled(input)
                       errorText="example"
                       name="dateInputMonth"
                       type="number"
                     >
                       <input
-                        className="emotion-21 emotion-22"
-                        defaultValue=""
+                        className="emotion-9"
                         name="dateInputMonth"
                         type="number"
                       />
-                    </StyledInput>
+                    </Styled(input)>
                   </label>
-                </StyledLabel>
+                </Styled(label)>
               </Label>
-            </StyledHoc>
-            <StyledHoc
-              className="year"
-            >
+            </Styled(Label)>
+            <Styled(Label)>
               <Label
-                className="year emotion-3 emotion-0"
+                className="emotion-1"
               >
-                <StyledLabel
-                  className="year emotion-3 emotion-0"
+                <Styled(label)
+                  className="emotion-1"
                 >
                   <label
-                    className="year emotion-0 emotion-24 emotion-2"
+                    className="emotion-10"
                   >
-                    <StyledHoc>
+                    <Styled(LabelText)>
                       <LabelText
-                        className="emotion-3 emotion-0"
+                        className="emotion-1"
                       >
-                        <StyledLabelText
-                          className="emotion-3 emotion-0"
+                        <Styled(span)
+                          className="emotion-1"
                         >
                           <span
-                            className="emotion-0 emotion-1 emotion-2"
+                            className="emotion-0"
                           >
                             Year
                           </span>
-                        </StyledLabelText>
+                        </Styled(span)>
                       </LabelText>
-                    </StyledHoc>
-                    <StyledInput
-                      defaultValue=""
+                    </Styled(LabelText)>
+                    <Styled(input)
                       errorText="example"
                       name="dateInputYear"
                       type="number"
                     >
                       <input
-                        className="emotion-21 emotion-22"
-                        defaultValue=""
+                        className="emotion-9"
                         name="dateInputYear"
                         type="number"
                       />
-                    </StyledInput>
+                    </Styled(input)>
                   </label>
-                </StyledLabel>
+                </Styled(label)>
               </Label>
-            </StyledHoc>
+            </Styled(Label)>
           </div>
-        </StyledList>
+        </Styled(div)>
       </div>
-    </StyledContainer>
+    </Styled(div)>
   </DateInput>
-</StyledHoc>
+</Styled(DateInput)>
 `;
