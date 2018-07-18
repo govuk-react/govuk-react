@@ -583,17 +583,17 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                           >
                             <Styled(Anchor)
                               onClick={[Function]}
-                              tabIndex={-1}
+                              tabIndex={1}
                             >
                               <Anchor
                                 className="emotion-8"
                                 onClick={[Function]}
-                                tabIndex={-1}
+                                tabIndex={1}
                               >
                                 <a
                                   className="emotion-8"
                                   onClick={[Function]}
-                                  tabIndex={-1}
+                                  tabIndex={1}
                                 >
                                   National Insurance number error
                                 </a>
@@ -617,17 +617,17 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                           >
                             <Styled(Anchor)
                               onClick={[Function]}
-                              tabIndex={-1}
+                              tabIndex={2}
                             >
                               <Anchor
                                 className="emotion-8"
                                 onClick={[Function]}
-                                tabIndex={-1}
+                                tabIndex={2}
                               >
                                 <a
                                   className="emotion-8"
                                   onClick={[Function]}
-                                  tabIndex={-1}
+                                  tabIndex={2}
                                 >
                                   Description of what you saw error
                                 </a>
