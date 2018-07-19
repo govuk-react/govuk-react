@@ -44,6 +44,7 @@
     "@storybook/addon-actions": "^3.4.1",
     "@storybook/addon-knobs": "^3.4.1",
     "@storybook/addon-links": "^3.4.1",
+    "@storybook/addon-options": "^3.4.8",
     "@storybook/addons": "^3.4.1",
     "@storybook/react": "^3.4.1",
     "@storybook/storybook-deployer": "^2.2.0",
