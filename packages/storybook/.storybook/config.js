@@ -3,7 +3,7 @@ import 'react-chromatic/storybook-addon';
 import { setOptions } from '@storybook/addon-options';
 
 setOptions({
-  name: 'testing',
+  name: 'govuk-react',
   sortStoriesByKind: true,
 });
 
