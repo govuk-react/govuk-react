@@ -25,13 +25,14 @@ const StyledColumn = styled('div')(
       },
     },
   },
-  ({ hideContent }) => ({
-    textIndent: hideContent ? '-999em' : undefined,
-    backgroundColor: hideContent ? '#7DADD3' : undefined,
-    backgroundImage: hideContent
-      ? 'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)'
-      : undefined,
-  }),
+  ({ hideContent }) => {
+    if (!hideContent) { return false; }
+    return ({
+      textIndent: '-999em',
+      backgroundColor: '#7DADD3',
+      backgroundImage: 'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)',
+    });
+  },
   (...args) => {
     let widthValue = 'auto';
     let hasRequestedWidth = false;
