@@ -110,3 +110,17 @@ examples.add('Quarters', () => (
     </GridRow>
   </Fragment>
 ));
+
+examples.add('One Quarter and autoFill', () => (
+  <Fragment>
+    <GridRow>
+      <GridCol hideContent columnOneQuarter>
+        <p>content</p>
+      </GridCol>
+      <GridCol hideContent autoFill>
+        <p>content</p>
+      </GridCol>
+    </GridRow>
+  </Fragment>
+));
+
