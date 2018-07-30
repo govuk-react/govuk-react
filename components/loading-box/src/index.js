@@ -8,13 +8,11 @@ import { BLACK, WHITE } from 'govuk-colours';
 
 const spinnerClassName = 'icon-loading';
 
-const StyledContainer = styled('div')(({
-  loading,
-}) => ({
+const StyledContainer = styled('div')({
   position: 'relative',
   paddingBottom: '2px',
-  minHeight: loading ? '100px' : undefined,
-}));
+  minHeight: '10px',
+});
 
 const Innerwrap = styled('div')(({
   timeIn,
@@ -161,7 +159,7 @@ const LoadingBox = ({
   timeOut,
   ...props
 }) => (
-  <StyledContainer loading={loading} {...props}>
+  <StyledContainer {...props}>
     <CSSTransition timeout={timeOut} classNames="fade" in={loading} unmountOnExit>
       <Innerwrap
         backgroundColor={backgroundColor}
