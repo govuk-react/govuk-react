@@ -1,6 +1,6 @@
 {
   "name": "@govuk-react/grid-col",
-  "version": "0.2.7",
+  "version": "0.2.10",
   "dependencies": {
     "@govuk-react/constants": "^0.2.7",
     "govuk-colours": "^1.0.3"
