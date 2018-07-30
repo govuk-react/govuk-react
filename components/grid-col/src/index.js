@@ -33,11 +33,11 @@ const StyledColumn = styled('div')(
       backgroundImage: 'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)',
     });
   },
-  (...args) => {
+  (props) => {
     let widthValue = 'auto';
     let hasRequestedWidth = false;
 
-    Object.entries(args[0]).forEach(([key, value]) => {
+    Object.entries(props).forEach(([key, value]) => {
       if (colValues[key] && value === true) {
         widthValue = colValues[key];
         hasRequestedWidth = true;
