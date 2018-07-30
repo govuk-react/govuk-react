@@ -1,6 +1,6 @@
 {
   "name": "@govuk-react/error-summary",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "dependencies": {
     "@govuk-react/constants": "^0.2.7",
     "@govuk-react/header": "^0.2.7",

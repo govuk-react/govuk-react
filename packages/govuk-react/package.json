@@ -1,6 +1,6 @@
 {
   "name": "govuk-react",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "dependencies": {
     "@govuk-react/back-link": "^0.2.9",
     "@govuk-react/breadcrumb": "^0.2.7",
@@ -9,10 +9,10 @@
     "@govuk-react/constants": "^0.2.7",
     "@govuk-react/date-input": "^0.2.9",
     "@govuk-react/document-footer-metadata": "^0.2.7",
-    "@govuk-react/error-summary": "^0.2.9",
+    "@govuk-react/error-summary": "^0.2.10",
     "@govuk-react/error-text": "^0.2.7",
     "@govuk-react/file-upload": "^0.2.9",
-    "@govuk-react/grid-col": "^0.2.7",
+    "@govuk-react/grid-col": "^0.2.10",
     "@govuk-react/grid-row": "^0.2.9",
     "@govuk-react/header": "^0.2.7",
     "@govuk-react/hidden-text": "^0.2.9",
