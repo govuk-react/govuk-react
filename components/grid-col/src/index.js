@@ -3,15 +3,20 @@ import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 import { GUTTER_HALF, MEDIA_QUERIES, SPACING } from '@govuk-react/constants';
 
+const colValues = {
+  columnOneThird: '33.3333%',
+  columnTwoThirds: '66.6667%',
+  columnOneQuarter: '25%',
+  columnOneHalf: '50%',
+};
+
 const StyledColumn = styled('div')(
   {
-    background: 'transparent',
-    margin: `0 0 ${SPACING.SCALE_3}`,
-    textIndent: '0',
+    marginBottom: SPACING.SCALE_3,
     boxSizing: 'border-box',
     [MEDIA_QUERIES.LARGESCREEN]: {
-      width: '100%',
-      margin: `0 ${GUTTER_HALF}`,
+      marginRight: GUTTER_HALF,
+      marginLeft: GUTTER_HALF,
       ':first-child': {
         marginLeft: 0,
       },
@@ -20,33 +25,31 @@ const StyledColumn = styled('div')(
       },
     },
   },
-  ({ hideContent }) => ({
-    textIndent: hideContent ? '-999em' : undefined,
-    backgroundColor: hideContent ? '#7DADD3' : undefined,
-    backgroundImage: hideContent
-      ? 'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)'
-      : undefined,
-  }),
-  ({ columnOneThird }) => ({
-    [MEDIA_QUERIES.LARGESCREEN]: {
-      width: columnOneThird ? '33.3333%' : undefined,
-    },
-  }),
-  ({ columnTwoThirds }) => ({
-    [MEDIA_QUERIES.LARGESCREEN]: {
-      width: columnTwoThirds ? '66.6667%' : undefined,
-    },
-  }),
-  ({ columnOneQuarter }) => ({
-    [MEDIA_QUERIES.LARGESCREEN]: {
-      width: columnOneQuarter ? '25%' : undefined,
-    },
-  }),
-  ({ columnOneHalf }) => ({
-    [MEDIA_QUERIES.LARGESCREEN]: {
-      width: columnOneHalf ? '50%' : undefined,
-    },
-  }),
+  ({ hideContent }) => {
+    if (!hideContent) { return false; }
+    return ({
+      textIndent: '-999em',
+      backgroundColor: '#7DADD3',
+      backgroundImage: 'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)',
+    });
+  },
+  (props) => {
+    let widthValue = 'auto';
+    let hasRequestedWidth = false;
+
+    Object.entries(props).forEach(([key, value]) => {
+      if (colValues[key] && value === true) {
+        widthValue = colValues[key];
+        hasRequestedWidth = true;
+      }
+    });
+    return ({
+      [MEDIA_QUERIES.LARGESCREEN]: {
+        flexGrow: hasRequestedWidth ? 0 : 1,
+        width: widthValue,
+      },
+    });
+  },
 );
 
 /**
