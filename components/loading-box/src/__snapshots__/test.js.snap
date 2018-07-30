@@ -120,7 +120,9 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
   timeIn={800}
   timeOut={200}
 >
-  <Styled(div)>
+  <Styled(div)
+    loading={true}
+  >
     <div
       className="emotion-14"
     >
