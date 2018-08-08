@@ -95,7 +95,13 @@ const StyledList = styled('div')({
  *
  * With custom input name props
  * ```jsx
- * <DateInput inputNames={{ day: 'dayInputName' }} hintText="For example, 31 03 1980">
+ * <DateInput hintText="For example, 31 03 1980"
+ *   inputNames={{
+ *     day: 'dayInputName',
+ *     month: 'monthInputName',
+ *     year: 'yearInputName',
+ *   }}
+ *  >
  *   What is your date of birth?
  * </DateInput>
  * ```
