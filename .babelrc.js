@@ -8,7 +8,7 @@ const presets = [
 
 const plugins =  [
   "transform-decorators-legacy",
-  ["transform-react-remove-prop-types", { "mode": "wrap" }],
+  ["transform-react-remove-prop-types"],
   [
     "@babel/plugin-transform-runtime",
     { "helpers": false, "polyfill": false, "regenerator": true }
