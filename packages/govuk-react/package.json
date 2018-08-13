@@ -50,8 +50,10 @@
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
+    "emotion": "^9.1.2",
     "prop-types": ">=15",
-    "react": ">=16.2.0"
+    "react": ">=16.2.0",
+    "react-emotion": "^9.1.2"
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es",
