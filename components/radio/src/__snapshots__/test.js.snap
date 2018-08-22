@@ -42,8 +42,8 @@ exports[`Radio disabled: disabled 1`] = `
   position: absolute;
   top: 0;
   left: 0;
-  width: 25pt;
-  height: 25pt;
+  width: 33px;
+  height: 33px;
   border: 2px solid black;
   border-radius: 50%;
   background: transparent;
@@ -52,8 +52,8 @@ exports[`Radio disabled: disabled 1`] = `
 .emotion-1:after {
   content: '';
   position: absolute;
-  top: 6pt;
-  left: 6pt;
+  top: 8px;
+  left: 8px;
   width: 0;
   height: 0;
   border: 8.5px solid;
@@ -181,8 +181,8 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   position: absolute;
   top: 0;
   left: 0;
-  width: 25pt;
-  height: 25pt;
+  width: 33px;
+  height: 33px;
   border: 2px solid black;
   border-radius: 50%;
   background: transparent;
@@ -191,8 +191,8 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
 .emotion-1:after {
   content: '';
   position: absolute;
-  top: 6pt;
-  left: 6pt;
+  top: 8px;
+  left: 8px;
   width: 0;
   height: 0;
   border: 8.5px solid;
@@ -324,8 +324,8 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   position: absolute;
   top: 0;
   left: 0;
-  width: 25pt;
-  height: 25pt;
+  width: 33px;
+  height: 33px;
   border: 2px solid black;
   border-radius: 50%;
   background: transparent;
@@ -334,8 +334,8 @@ exports[`Radio matches snapshot: standard mount 1`] = `
 .emotion-1:after {
   content: '';
   position: absolute;
-  top: 6pt;
-  left: 6pt;
+  top: 8px;
+  left: 8px;
   width: 0;
   height: 0;
   border: 8.5px solid;
