@@ -26,8 +26,8 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react#readme",
-  "description": "govuk-react: A port of the govuk-frontend components for React using Emotion.",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/date-input#readme",
+  "description": "Date input component displaying day, month and year and featuring several configurable options.",
   "private": false,
   "publishConfig": {
     "access": "public"

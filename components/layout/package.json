@@ -21,8 +21,8 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react#readme",
-  "description": "govuk-react: A port of the govuk-frontend components for React using Emotion.",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/layout#readme",
+  "description": "Component intended to surround grid layouts but now no longer used/required.",
   "private": false,
   "publishConfig": {
     "access": "public"

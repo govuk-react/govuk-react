@@ -27,8 +27,8 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react#readme",
-  "description": "govuk-react: A port of the govuk-frontend components for React using Emotion.",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/input-field#readme",
+  "description": "Styled composite component displaying an input with a label and hint text and error text depending on props.",
   "private": false,
   "publishConfig": {
     "access": "public"

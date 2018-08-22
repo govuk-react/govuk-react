@@ -22,8 +22,8 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react#readme",
-  "description": "govuk-react: A port of the govuk-frontend components for React using Emotion.",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/pagination#readme",
+  "description": "Renders a styled list using flexbox, along with PaginationAnchor items expected to be provided as children.",
   "private": false,
   "publishConfig": {
     "access": "public"

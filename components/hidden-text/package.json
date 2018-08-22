@@ -24,8 +24,8 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react#readme",
-  "description": "govuk-react: A port of the govuk-frontend components for React using Emotion.",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/hidden-text#readme",
+  "description": "Renders a styled details element along with summary from prop and children rendered as contents.",
   "private": false,
   "publishConfig": {
     "access": "public"

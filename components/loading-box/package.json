@@ -28,8 +28,8 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react#readme",
-  "description": "govuk-react: A port of the govuk-frontend components for React using Emotion.",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/loading-box#readme",
+  "description": "Absolutely positioned loading overlay with spinner and numerous configurable options.",
   "private": false,
   "publishConfig": {
     "access": "public"
