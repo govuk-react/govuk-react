@@ -12,7 +12,6 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
 }
 
 .emotion-1 {
-  display: inline-block;
   cursor: pointer;
   color: #005ea5;
   font-family: "nta",Arial,sans-serif;
