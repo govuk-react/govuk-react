@@ -1,11 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { ReadMeHidePreview } from '@govuk-react/storybook-components';
 import 'normalize.css';
 import './styles.css';
-import readme from '../../../../README.md';
+import ReadMe from '../../../../README.md';
 
-// eslint-disable-next-line react/no-danger
-storiesOf(' Welcome', module).add('to govuk-react', () => <div style={{ padding: '10px' }} className="markdown-body" dangerouslySetInnerHTML={{ __html: readme }} />);
+const stories = storiesOf(' Welcome', module);
+stories.addDecorator(ReadMeHidePreview(ReadMe));
+
+stories.add('to govuk-react', () => <div />);
 
 const req = require.context('../../../../', true, /(packages|components)\/[^/]+\/src\/([^/]+\/)*stories.js$/);
 req.keys().forEach(req);

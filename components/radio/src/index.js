@@ -1,6 +1,3 @@
-// https://github.com/alphagov/govuk-frontend/blob/master/src/components/radios/_radios.scss
-// https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
