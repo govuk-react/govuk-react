@@ -22,7 +22,7 @@
   "module": "es/index.js",
   "author": "Toby Brancher",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/supporting-header#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/supporting-header",
   "description": "Renders children passed inside a styled span element.",
   "private": false,
   "publishConfig": {

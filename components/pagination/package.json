@@ -22,7 +22,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/pagination#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/pagination",
   "description": "Renders a styled list using flexbox, along with PaginationAnchor items expected to be provided as children.",
   "private": false,
   "publishConfig": {

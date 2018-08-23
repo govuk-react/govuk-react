@@ -22,7 +22,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/label-text#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/label-text",
   "description": "Styled span element with children displayed as text.",
   "private": false,
   "publishConfig": {

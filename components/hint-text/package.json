@@ -22,7 +22,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/hint-text#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/hint-text",
   "description": "Renders a styled span element with children provided.",
   "private": false,
   "publishConfig": {

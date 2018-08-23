@@ -23,7 +23,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/document-footer-metadata#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/document-footer-metadata",
   "description": "Renders styled document footer metadata from props provided.",
   "private": false,
   "publishConfig": {

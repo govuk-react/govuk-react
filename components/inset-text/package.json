@@ -23,7 +23,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/inset-text#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/inset-text",
   "description": "Renders a styled div containing children with a left hand border, wide or narrow depending on prop passed.",
   "private": false,
   "publishConfig": {

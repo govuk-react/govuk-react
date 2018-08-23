@@ -21,7 +21,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/table#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/table",
   "description": "A styled table supporting a 'construction kit' approach and rendering children as constituent parts.",
   "private": false,
   "publishConfig": {

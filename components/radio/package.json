@@ -22,7 +22,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/radio#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/radio",
   "description": "Styled radio button with several configurable props.",
   "private": false,
   "publishConfig": {

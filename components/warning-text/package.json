@@ -23,7 +23,7 @@
   "module": "es/index.js",
   "author": "Gavin Orland",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/warning-text#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/warning-text",
   "description": "Styles children passed within a div and strong element, also positioning an 'Important' icon to the left.",
   "private": false,
   "publishConfig": {

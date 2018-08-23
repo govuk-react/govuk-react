@@ -26,6 +26,6 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "author": "Alasdair McLeay",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/related-items#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/related-items",
   "description": "Container which expects to receive a heading and list and styles them accordingly."
 }

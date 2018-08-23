@@ -22,7 +22,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/ordered-list#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/ordered-list",
   "description": "Renders an ordered list containing children passed - also supports listStyleType prop.",
   "private": false,
   "publishConfig": {

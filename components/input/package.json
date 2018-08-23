@@ -22,7 +22,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/input#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/input",
   "description": "Styled input component with optional type prop, defaulting to 'text'.",
   "private": false,
   "publishConfig": {

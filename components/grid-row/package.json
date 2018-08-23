@@ -22,7 +22,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/grid-row#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/grid-row",
   "description": "GridRow component for use around GridCol components - includes media query breakpoints.",
   "private": false,
   "publishConfig": {

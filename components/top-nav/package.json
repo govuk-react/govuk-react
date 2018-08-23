@@ -28,7 +28,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/top-nav#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/top-nav",
   "description": "Styled top navigation header with numerous constituent parts input as props.",
   "private": false,
   "publishConfig": {

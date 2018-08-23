@@ -22,7 +22,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/lead-paragraph#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/lead-paragraph",
   "description": "Renders children passed inside a styled paragraph element.",
   "private": false,
   "publishConfig": {

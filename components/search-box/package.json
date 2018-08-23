@@ -23,7 +23,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/search-box#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/search-box",
   "description": "Styled input and button, also accepting placeholder text.",
   "private": false,
   "publishConfig": {

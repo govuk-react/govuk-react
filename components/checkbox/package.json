@@ -22,7 +22,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/checkbox#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/checkbox",
   "description": "Styled checkbox component, also displaying label.",
   "private": false,
   "publishConfig": {

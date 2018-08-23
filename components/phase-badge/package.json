@@ -22,7 +22,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/phase-badge#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/phase-badge",
   "description": "Badge with solid background and bold text, rendered from children.",
   "private": false,
   "publishConfig": {

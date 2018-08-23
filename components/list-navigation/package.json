@@ -27,7 +27,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/list-navigation#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/list-navigation",
   "description": "Renders ListItems in an UnorderedList from children sent, with optional list style type.",
   "private": false,
   "publishConfig": {

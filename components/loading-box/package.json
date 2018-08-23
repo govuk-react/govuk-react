@@ -28,7 +28,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/loading-box#readme",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/loading-box",
   "description": "Absolutely positioned loading overlay with spinner and numerous configurable options.",
   "private": false,
   "publishConfig": {
