@@ -35,6 +35,7 @@
     "@govuk-react/related-items": "^0.2.7",
     "@govuk-react/search-box": "^0.2.7",
     "@govuk-react/select": "^0.2.9",
+    "@govuk-react/storybook-components": "^0.2.7",
     "@govuk-react/supporting-header": "^0.2.9",
     "@govuk-react/table": "^0.2.7",
     "@govuk-react/text-area": "^0.2.9",
