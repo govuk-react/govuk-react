@@ -104,3 +104,5 @@ Unfortuantely the GDS transport font has a relatively restrictive license [descr
 - [Mark Chambers](https://github.com/marksy)
 - [Steve Sims](https://github.com/stevesims)
 - [Taran Chauhan](https://github.com/taranchauhan)
+- [Toby Brancher](https://github.com/Loque-)
+- [Gavin Orland](https://github.com/gavinorland)
