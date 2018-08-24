@@ -12,7 +12,7 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 .emotion-2 {
-  display: block;
+  display: table;
   position: relative;
   padding: 0 0 0 38px;
   margin-bottom: 10px;
@@ -142,7 +142,7 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
 }
 
 .emotion-2 {
-  display: block;
+  display: table;
   position: relative;
   padding: 0 0 0 38px;
   margin-bottom: 10px;

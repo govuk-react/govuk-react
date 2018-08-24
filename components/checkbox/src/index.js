@@ -11,7 +11,7 @@ import {
 } from '@govuk-react/constants';
 
 const StyledCheckbox = styled('label')({
-  display: 'block',
+  display: 'table',
   position: 'relative',
   padding: '0 0 0 38px',
 });
