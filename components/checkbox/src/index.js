@@ -10,8 +10,7 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-const StyledCheckbox = styled('label')({
-  display: 'table',
+const StyledCheckbox = styled('div')({
   position: 'relative',
   padding: '0 0 0 38px',
 });
@@ -27,10 +26,10 @@ const StyledInput = styled('input')(
     margin: 0,
     zoom: 1,
     opacity: 0,
-    ':checked + span:after': {
+    ':checked + label:after': {
       opacity: 1,
     },
-    ':focus + span:before': {
+    ':focus + label:before': {
       boxShadow: `0 0 0 4px ${YELLOW}`,
     },
   },
@@ -43,7 +42,7 @@ const StyledInput = styled('input')(
   }),
 );
 
-const StyledLabel = styled('span')({
+const StyledLabel = styled('label')({
   fontFamily: NTA_LIGHT,
   fontWeight: 400,
   textTransform: 'none',
@@ -55,7 +54,7 @@ const StyledLabel = styled('span')({
   },
   cursor: 'pointer',
   padding: '8px 10px 9px 12px',
-  display: 'block',
+  display: 'inline-block',
   color: `${BLACK}`,
   '::before': {
     content: "''",
@@ -113,13 +112,12 @@ const StyledLabel = styled('span')({
  *
  */
 const Checkbox = ({
-  children, className, ...props
+  children, className, id, ...props
 }) => (
   <StyledCheckbox className={className}>
-    <StyledInput type="checkbox" {...props} />
-    <StyledLabel>{children}</StyledLabel>
-  </StyledCheckbox>
-);
+    <StyledInput id={id} type="checkbox" {...props} />
+    <StyledLabel htmlFor={id}>{children}</StyledLabel>
+  </StyledCheckbox>);
 
 Checkbox.defaultProps = {
   className: undefined,
@@ -134,6 +132,10 @@ Checkbox.propTypes = {
    * CSS Classname for outermost container
    */
   className: PropTypes.string,
+  /**
+   * ID - for label to use
+   */
+  id: PropTypes.string.isRequired,
 };
 
 export default withWhiteSpace({ marginBottom: 2 })(Checkbox);

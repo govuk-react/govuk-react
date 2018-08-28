@@ -36,5 +36,6 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | node | Text content for checkbox
  `className` |  | ```undefined``` | string | CSS Classname for outermost container
+ `id` | true | `````` | string | ID - for label to use
 
 

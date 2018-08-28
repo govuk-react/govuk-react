@@ -12,7 +12,6 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 .emotion-2 {
-  display: table;
   position: relative;
   padding: 0 0 0 38px;
   margin-bottom: 10px;
@@ -37,11 +36,11 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   cursor: pointer;
 }
 
-.emotion-0:checked + span:after {
+.emotion-0:checked + label:after {
   opacity: 1;
 }
 
-.emotion-0:focus + span:before {
+.emotion-0:focus + label:before {
   box-shadow: 0 0 0 4px #ffbf47;
 }
 
@@ -58,7 +57,7 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   line-height: 1.25;
   cursor: pointer;
   padding: 8px 10px 9px 12px;
-  display: block;
+  display: inline-block;
   color: #0b0c0c;
 }
 
@@ -103,10 +102,10 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   <Checkbox
     className="emotion-3"
   >
-    <Styled(label)
+    <Styled(div)
       className="emotion-3"
     >
-      <label
+      <div
         className="emotion-2"
       >
         <Styled(input)
@@ -117,15 +116,15 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
             type="checkbox"
           />
         </Styled(input)>
-        <Styled(span)>
-          <span
+        <Styled(label)>
+          <label
             className="emotion-1"
           >
             example
-          </span>
-        </Styled(span)>
-      </label>
-    </Styled(label)>
+          </label>
+        </Styled(label)>
+      </div>
+    </Styled(div)>
   </Checkbox>
 </Styled(Checkbox)>
 `;
@@ -142,7 +141,6 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
 }
 
 .emotion-2 {
-  display: table;
   position: relative;
   padding: 0 0 0 38px;
   margin-bottom: 10px;
@@ -162,7 +160,7 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
   line-height: 1.25;
   cursor: pointer;
   padding: 8px 10px 9px 12px;
-  display: block;
+  display: inline-block;
   color: #0b0c0c;
 }
 
@@ -216,11 +214,11 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
   cursor: auto;
 }
 
-.emotion-0:checked + span:after {
+.emotion-0:checked + label:after {
   opacity: 1;
 }
 
-.emotion-0:focus + span:before {
+.emotion-0:focus + label:before {
   box-shadow: 0 0 0 4px #ffbf47;
 }
 
@@ -236,10 +234,10 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
     className="emotion-3"
     disabled={true}
   >
-    <Styled(label)
+    <Styled(div)
       className="emotion-3"
     >
-      <label
+      <div
         className="emotion-2"
       >
         <Styled(input)
@@ -252,15 +250,15 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
             type="checkbox"
           />
         </Styled(input)>
-        <Styled(span)>
-          <span
+        <Styled(label)>
+          <label
             className="emotion-1"
           >
             Example
-          </span>
-        </Styled(span)>
-      </label>
-    </Styled(label)>
+          </label>
+        </Styled(label)>
+      </div>
+    </Styled(div)>
   </Checkbox>
 </Styled(Checkbox)>
 `;

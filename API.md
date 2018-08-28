@@ -161,6 +161,7 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | node | Text content for checkbox
  `className` |  | ```undefined``` | string | CSS Classname for outermost container
+ `id` | true | `````` | string | ID - for label to use
 
 
 DateInput
@@ -212,7 +213,7 @@ Prop | Required | Default | Type | Description
  `children` | true | `````` | node | 
  `errorText` |  | ```undefined``` | string | Error text
  `hintText` |  | ```undefined``` | string | Optional hint text
- `inputNames` |  | ```{   day: 'dateInputDay',   month: 'dateInputMonth',   year: 'dateInputYear', }``` | shape[object Object] | Input name attributes
+ `inputNames` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` | shape[object Object] | Input name attributes
 
 
 DocumentFooterMetadata
