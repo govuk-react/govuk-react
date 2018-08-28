@@ -12,9 +12,9 @@ stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
   <div>
-    <Checkbox id="waste-animal">Waste from animal carcasses</Checkbox>
-    <Checkbox id="waste-mines">Waste from mines or quarries</Checkbox>
-    <Checkbox id="waste-farm">Farm or agricultural waste</Checkbox>
+    <Checkbox>Waste from animal carcasses</Checkbox>
+    <Checkbox>Waste from mines or quarries</Checkbox>
+    <Checkbox>Farm or agricultural waste</Checkbox>
   </div>
 ));
 
