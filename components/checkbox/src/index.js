@@ -11,7 +11,7 @@ import {
 } from '@govuk-react/constants';
 
 const StyledCheckbox = styled('label')({
-  display: 'table',
+  display: 'inline-block',
   position: 'relative',
   padding: '0 0 0 38px',
 });
@@ -115,10 +115,12 @@ const StyledLabel = styled('span')({
 const Checkbox = ({
   children, className, ...props
 }) => (
-  <StyledCheckbox className={className}>
-    <StyledInput type="checkbox" {...props} />
-    <StyledLabel>{children}</StyledLabel>
-  </StyledCheckbox>
+  <div>
+    <StyledCheckbox className={className}>
+      <StyledInput type="checkbox" {...props} />
+      <StyledLabel>{children}</StyledLabel>
+    </StyledCheckbox>
+  </div>
 );
 
 Checkbox.defaultProps = {
