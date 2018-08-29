@@ -10,7 +10,9 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-const StyledCheckbox = styled('label')({
+const StyledContainer = styled('div')();
+
+const StyledLabel = styled('label')({
   display: 'inline-block',
   position: 'relative',
   padding: '0 0 0 38px',
@@ -43,7 +45,7 @@ const StyledInput = styled('input')(
   }),
 );
 
-const StyledLabel = styled('span')({
+const StyledSpan = styled('span')({
   fontFamily: NTA_LIGHT,
   fontWeight: 400,
   textTransform: 'none',
@@ -115,12 +117,12 @@ const StyledLabel = styled('span')({
 const Checkbox = ({
   children, className, ...props
 }) => (
-  <div>
-    <StyledCheckbox className={className}>
+  <StyledContainer className={className}>
+    <StyledLabel>
       <StyledInput type="checkbox" {...props} />
-      <StyledLabel>{children}</StyledLabel>
-    </StyledCheckbox>
-  </div>
+      <StyledSpan>{children}</StyledSpan>
+    </StyledLabel>
+  </StyledContainer>
 );
 
 Checkbox.defaultProps = {
