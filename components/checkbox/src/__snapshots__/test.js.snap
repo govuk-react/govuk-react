@@ -96,35 +96,31 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   <Checkbox
     className="emotion-3"
   >
-    <Styled(div)
+    <div
       className="emotion-3"
     >
-      <div
-        className="emotion-3"
-      >
-        <Styled(label)>
-          <label
-            className="emotion-2"
+      <Styled(label)>
+        <label
+          className="emotion-2"
+        >
+          <Styled(input)
+            type="checkbox"
           >
-            <Styled(input)
+            <input
+              className="emotion-0"
               type="checkbox"
+            />
+          </Styled(input)>
+          <Styled(span)>
+            <span
+              className="emotion-1"
             >
-              <input
-                className="emotion-0"
-                type="checkbox"
-              />
-            </Styled(input)>
-            <Styled(span)>
-              <span
-                className="emotion-1"
-              >
-                example
-              </span>
-            </Styled(span)>
-          </label>
-        </Styled(label)>
-      </div>
-    </Styled(div)>
+              example
+            </span>
+          </Styled(span)>
+        </label>
+      </Styled(label)>
+    </div>
   </Checkbox>
 </Styled(Checkbox)>
 `;
@@ -228,37 +224,33 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
     className="emotion-3"
     disabled={true}
   >
-    <Styled(div)
+    <div
       className="emotion-3"
     >
-      <div
-        className="emotion-3"
-      >
-        <Styled(label)>
-          <label
-            className="emotion-2"
+      <Styled(label)>
+        <label
+          className="emotion-2"
+        >
+          <Styled(input)
+            disabled={true}
+            type="checkbox"
           >
-            <Styled(input)
+            <input
+              className="emotion-0"
               disabled={true}
               type="checkbox"
+            />
+          </Styled(input)>
+          <Styled(span)>
+            <span
+              className="emotion-1"
             >
-              <input
-                className="emotion-0"
-                disabled={true}
-                type="checkbox"
-              />
-            </Styled(input)>
-            <Styled(span)>
-              <span
-                className="emotion-1"
-              >
-                Example
-              </span>
-            </Styled(span)>
-          </label>
-        </Styled(label)>
-      </div>
-    </Styled(div)>
+              Example
+            </span>
+          </Styled(span)>
+        </label>
+      </Styled(label)>
+    </div>
   </Checkbox>
 </Styled(Checkbox)>
 `;
