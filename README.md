@@ -101,6 +101,8 @@ Unfortuantely the GDS transport font has a relatively restrictive license [descr
 ## Contributors
 
 - [Alasdair McLeay](https://github.com/penx)
+- [Gavin Orland](https://github.com/gavinorland)
 - [Mark Chambers](https://github.com/marksy)
 - [Steve Sims](https://github.com/stevesims)
 - [Taran Chauhan](https://github.com/taranchauhan)
+- [Toby Brancher](https://github.com/Loque-)
