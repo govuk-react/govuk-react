@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Label from '@govuk-react/label';
 import Input from '@govuk-react/input';
+import LabelText from '@govuk-react/label-text';
+import ErrorText from '@govuk-react/error-text';
+import HintText from '@govuk-react/hint-text';
 import { withWhiteSpace } from '@govuk-react/hoc';
-
-import InputMessaging from './atoms/input-messaging';
 
 /**
  *
@@ -31,7 +32,9 @@ const TextField = ({
   label, hint, input, meta, ...props
 }) => (
   <Label error={meta.touched && meta.error} {...props}>
-    <InputMessaging label={label} hint={hint} meta={meta} />
+    <LabelText className="govuk-react--label-text">{label}</LabelText>
+    {hint && <HintText className="govuk-react--hint-text">{hint}</HintText>}
+    {meta.touched && meta.error && <ErrorText className="govuk-react--error-text">{meta.error}</ErrorText>}
     <Input error={meta.touched && meta.error} {...input} />
   </Label>
 );
