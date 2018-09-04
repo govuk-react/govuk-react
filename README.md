@@ -97,6 +97,10 @@ Unfortuantely the GDS transport font has a relatively restrictive license [descr
 - [Carbon Design System](https://github.com/carbon-design-system/carbon-components-react)
 - [Material UI](https://github.com/mui-org/material-ui)
 
+## Acknowledgements
+
+We use [Chromaticqa](https://www.chromaticqa.com/) for visual regression testing and it is awesome, you should too!
+
 ## Contributors
 
 - [Alasdair McLeay](https://github.com/penx)
