@@ -10,8 +10,8 @@ const meta = {
   error: 'Example',
 };
 
-const stories = storiesOf('Form/InputField', module);
-const examples = storiesOf('Form/InputField/Examples', module);
+const stories = storiesOf('Form/- Legacy/InputField', module);
+const examples = storiesOf('Form/- Legacy/InputField/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 

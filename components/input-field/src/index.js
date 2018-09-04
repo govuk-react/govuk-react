@@ -1,6 +1,3 @@
-// https://github.com/alphagov/govuk-frontend/blob/master/src/components/input/_input.scss
-// https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Label from '@govuk-react/label';
@@ -11,6 +8,8 @@ import Input from '@govuk-react/input';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
 /**
+ *
+ * Deprecated, please use Field/TextField
  *
  * ### Usage
  *

@@ -7,6 +7,8 @@ InputField
 ```
 <!-- STORY -->
 
+Deprecated, please use Field/TextField
+
 ### Usage
 
 Simple
