@@ -12,7 +12,7 @@ const PreviewComponent = ({ children }) => (
       boxShadow: '0 0 40px rgba(0, 0, 0, 0.1)',
     }}
   >
-    { children }
+    {children}
   </div>
 );
 
