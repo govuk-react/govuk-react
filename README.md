@@ -4,7 +4,6 @@ An implementation of the [GOV.UK Design System](https://govuk-design-system-prod
 
 [![Build Status](https://travis-ci.org/UKHomeOffice/govuk-react.svg?branch=master)](https://travis-ci.org/UKHomeOffice/govuk-react)
 [![codecov](https://codecov.io/gh/UKHomeOffice/govuk-react/branch/master/graph/badge.svg)](https://codecov.io/gh/UKHomeOffice/govuk-react)
-[![Greenkeeper badge](https://badges.greenkeeper.io/UKHomeOffice/govuk-react.svg)](https://greenkeeper.io/)
 
 The following projects (in priority order) are used as a guide for what components to implement and how they should look/behave. Where possible we are using the existing CSS as a guide, but often need to modify to suit custom markup. Also flexbox is preferred over floats.
 
