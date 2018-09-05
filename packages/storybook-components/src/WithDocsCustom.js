@@ -16,12 +16,12 @@ const PreviewComponent = ({ children }) => (
   </div>
 );
 
-const WithDocsCustom = withDocs({
-  PreviewComponent,
-});
+const withDocsCustom = !navigator.userAgent.match(/Chromatic/) ?
+  withDocs({ PreviewComponent }) :
+  component => PreviewComponent(component);
 
 PreviewComponent.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default WithDocsCustom;
+export default withDocsCustom;
