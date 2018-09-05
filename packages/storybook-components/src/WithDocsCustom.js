@@ -12,13 +12,11 @@ const PreviewComponent = ({ children }) => (
       boxShadow: '0 0 40px rgba(0, 0, 0, 0.1)',
     }}
   >
-    {children}
+    { children }
   </div>
 );
 
-const withDocsCustom = !navigator.userAgent.match(/Chromatic/) ?
-  withDocs({ PreviewComponent }) :
-  component => PreviewComponent(component);
+const withDocsCustom = (readme, ...rest) => withDocs({ PreviewComponent })(navigator.userAgent.match(/Chromatic/) ? '' : readme, ...rest);
 
 PreviewComponent.propTypes = {
   children: PropTypes.node.isRequired,
