@@ -4,6 +4,7 @@ import { withDocs } from 'storybook-readme';
 
 // Example taken from https://github.com/tuchk4/storybook-readme/blob/master/packages/example-react/stories/index.js
 const PreviewComponent = ({ children }) => (
+  navigator.userAgent.match(/Chromatic/) ? children :
   <div
     style={{
       textAlign: 'left',
