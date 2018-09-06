@@ -10,6 +10,5 @@ if (!navigator.userAgent.match(/Chromatic/)) {
   stories.addDecorator(ReadMeHidePreview(ReadMe));
   stories.add('to govuk-react', () => <div />);
 }
-
 const req = require.context('../../../../', true, /(packages|components)\/[^/]+\/src\/([^/]+\/)*stories.js$/);
 req.keys().forEach(req);
