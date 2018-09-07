@@ -1,22 +1,19 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withKnobs } from '@storybook/addon-knobs/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-import Radio from '@govuk-react/radio';
-import MultiChoice from '.';
+import MultiChoiceWithKnobs,
+{ MultiChoiceWithKnobsHint, MultiChoiceWithKnobsError } from './fixtures';
+
 import ReadMe from '../README.md';
 
 const stories = storiesOf('Form/MultiChoice', module);
-
+stories.addDecorator(withKnobs);
 stories.addDecorator(WithDocsCustom(ReadMe));
+stories.add('Component default', () => <MultiChoiceWithKnobs />);
 
-stories.add('Component default', () => (
-  <MultiChoice label="example">
-    <Radio name="group1" inline>
-      Yes
-    </Radio>
-    <Radio name="group1" inline>
-      No
-    </Radio>
-  </MultiChoice>
-));
+const examples = storiesOf('Form/MultiChoice/Examples', module);
+examples.addDecorator(withKnobs);
+examples.add('With a hint', () => <MultiChoiceWithKnobsHint />);
+examples.add('With an error', () => <MultiChoiceWithKnobsError />);

@@ -1,33 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Styled matches snapshot: should not have ErrorText 1`] = `
+exports[`MultiChoice matches snapshot 1`] = `
 .emotion-1 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-6 {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  box-sizing: border-box;
-  width: 100%;
-  margin-bottom: 0;
-}
-
-.emotion-6:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-6 {
     margin-bottom: 0;
   }
 }
@@ -85,98 +64,7 @@ exports[`Styled matches snapshot: should not have ErrorText 1`] = `
   }
 }
 
-<Styled(MultiChoice)
-  hint="Hint"
-  label="Label"
->
-  <MultiChoice
-    className="emotion-1"
-    hint="Hint"
-    label="Label"
-    meta={Object {}}
-  >
-    <Styled(div)
-      className="emotion-1"
-    >
-      <div
-        className="emotion-6"
-      >
-        <Styled(LabelText)>
-          <LabelText
-            className="emotion-1"
-          >
-            <Styled(span)
-              className="emotion-1"
-            >
-              <span
-                className="emotion-0"
-              >
-                Label
-              </span>
-            </Styled(span)>
-          </LabelText>
-        </Styled(LabelText)>
-        <Styled(HintText)>
-          <HintText
-            className="emotion-1"
-          >
-            <Styled(span)
-              className="emotion-1"
-            >
-              <span
-                className="emotion-3"
-              >
-                Hint
-              </span>
-            </Styled(span)>
-          </HintText>
-        </Styled(HintText)>
-        Example
-      </div>
-    </Styled(div)>
-  </MultiChoice>
-</Styled(MultiChoice)>
-`;
-
-exports[`Styled matches withError snapshot: should have ErrorText 1`] = `
-.emotion-1 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-0 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: block;
-  clear: none;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #0b0c0c;
-  padding-bottom: 2px;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-6 {
+.emotion-9 {
   padding: 0;
   margin: 0;
   border: 0;
@@ -188,19 +76,19 @@ exports[`Styled matches withError snapshot: should have ErrorText 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-6:after {
+.emotion-9:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-9 {
     margin-bottom: 0;
   }
 }
 
-.emotion-3 {
+.emotion-6 {
   display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -216,20 +104,21 @@ exports[`Styled matches withError snapshot: should have ErrorText 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-6 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-6 {
     margin-bottom: 0;
   }
 }
 
 <Styled(MultiChoice)
-  label="Label"
+  hint="Example hint"
+  label="Example label"
   meta={
     Object {
       "error": "Example error",
@@ -239,7 +128,8 @@ exports[`Styled matches withError snapshot: should have ErrorText 1`] = `
 >
   <MultiChoice
     className="emotion-1"
-    label="Label"
+    hint="Example hint"
+    label="Example label"
     meta={
       Object {
         "error": "Example error",
@@ -252,7 +142,7 @@ exports[`Styled matches withError snapshot: should have ErrorText 1`] = `
       error="Example error"
     >
       <div
-        className="emotion-6"
+        className="emotion-9"
       >
         <Styled(LabelText)>
           <LabelText
@@ -264,13 +154,13 @@ exports[`Styled matches withError snapshot: should have ErrorText 1`] = `
               <span
                 className="emotion-0"
               >
-                Label
+                Example label
               </span>
             </Styled(span)>
           </LabelText>
         </Styled(LabelText)>
-        <Styled(ErrorText)>
-          <ErrorText
+        <Styled(HintText)>
+          <HintText
             className="emotion-1"
           >
             <Styled(span)
@@ -279,12 +169,26 @@ exports[`Styled matches withError snapshot: should have ErrorText 1`] = `
               <span
                 className="emotion-3"
               >
+                Example hint
+              </span>
+            </Styled(span)>
+          </HintText>
+        </Styled(HintText)>
+        <Styled(ErrorText)>
+          <ErrorText
+            className="emotion-1"
+          >
+            <Styled(span)
+              className="emotion-1"
+            >
+              <span
+                className="emotion-6"
+              >
                 Example error
               </span>
             </Styled(span)>
           </ErrorText>
         </Styled(ErrorText)>
-        Example
       </div>
     </Styled(div)>
   </MultiChoice>
