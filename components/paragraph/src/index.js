@@ -9,7 +9,8 @@ import {
   MEDIA_QUERIES,
   NTA_LIGHT,
 } from '@govuk-react/constants';
-import RouterLink from './link-renderer';
+
+import Anchor from './atoms/anchor';
 
 const StyledParagraph = styled(ReactMarkdown)(
   {
@@ -100,7 +101,7 @@ const Paragraph = ({ children, ...props }) => (
     escapeHtml={false}
     skipHtml
     allowedTypes={['paragraph', 'emphasis', 'strong', 'link', 'inlineCode', 'code']}
-    renderers={{ link: RouterLink }}
+    renderers={{ link: props.linkRenderer }}
     {...props}
   />
 );
@@ -114,11 +115,13 @@ Paragraph.propTypes = {
    * Is this paragraph supporting text for another element?
    */
   supportingText: PropTypes.bool,
+  linkRenderer: PropTypes.func,
 };
 
 Paragraph.defaultProps = {
   children: '',
   supportingText: false,
+  linkRenderer: props => <Anchor {...props} />,
 };
 
 export default withWhiteSpace({ marginBottom: 4 })(Paragraph);
