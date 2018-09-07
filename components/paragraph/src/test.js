@@ -1,8 +1,20 @@
 import React from 'react';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, Link } from 'react-router-dom';
 import { mount } from 'enzyme';
+import PropTypes from 'prop-types';
 
 import Paragraph, { exampleText, exampleCodeBlock } from './fixtures';
+
+const ReactRouterLinkRenderer = ({ href, children }) => (
+  href.match(/^\//)
+    ? <Link to={href}>{children}</Link>
+    : <a href={href}>{children}</a>
+);
+
+ReactRouterLinkRenderer.propTypes = {
+  href: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};
 
 describe(Paragraph, () => {
   const examplePlain = 'Some basic text';
@@ -38,12 +50,20 @@ describe(Paragraph, () => {
     expect(wrapper.find('strong')).toHaveLength(1);
   });
 
-  it('renders internal links', () => {
-    wrapper = mount(<MemoryRouter><Paragraph>{exampleInternalLink}</Paragraph></MemoryRouter>);
-    expect(wrapper.find('Link')).toHaveLength(1);
+  it('renders react router links with custom renderer', () => {
+    wrapper = mount((
+      <MemoryRouter>
+        <Paragraph linkRenderer={ReactRouterLinkRenderer}>{exampleInternalLink}</Paragraph>
+      </MemoryRouter>));
+    expect(wrapper.find('a')).toHaveLength(1);
   });
 
-  it('renders external links', () => {
+  it('renders internal links as anchors', () => {
+    wrapper = mount(<MemoryRouter><Paragraph>{exampleInternalLink}</Paragraph></MemoryRouter>);
+    expect(wrapper.find('a')).toHaveLength(1);
+  });
+
+  it('renders external links as anchors', () => {
     wrapper = mount(<Paragraph>{exampleExternalLink}</Paragraph>);
     expect(wrapper.find('a')).toHaveLength(1);
   });
