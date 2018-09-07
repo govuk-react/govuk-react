@@ -5,9 +5,11 @@ import 'normalize.css';
 import './styles.css';
 import ReadMe from '../../../../README.md';
 
-const stories = storiesOf(' Welcome', module);
-stories.addDecorator(ReadMeHidePreview(ReadMe));
-stories.add('to govuk-react', () => <div />);
+if (!navigator.userAgent.match(/Chromatic/)) {
+  const stories = storiesOf(' Welcome', module);
+  stories.addDecorator(ReadMeHidePreview(ReadMe));
+  stories.add('to govuk-react', () => <div />);
+}
 
 const req = require.context('../../../../', true, /(packages|components)\/[^/]+\/src\/([^/]+\/)*stories.js$/);
 req.keys().forEach(req);
