@@ -87,6 +87,20 @@ const StyledParagraph = styled(ReactMarkdown)(
  * </Paragraph>
  * ````
  *
+ * With React router
+ *
+ * ```jsx
+ * const ReactRouterLinkRenderer = ({ href, children }) => (
+ *   href.match(/^\//)
+ *     ? <Link to={href}>{children}</Link>
+ *     : <a href={href}>{children}</a>
+ * );
+ *
+ * <Paragraph linkRenderer={ReactRouterLinkRenderer}>
+ *   ...
+ * </Paragraph>
+ * ```
+ *
  * ### References
  * - https://govuk-elements.herokuapp.com/typography/#typography-body-copy
  *
