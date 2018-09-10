@@ -22,8 +22,8 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react#readme",
-  "description": "govuk-react: A port of the govuk-frontend components for React using Emotion.",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/panel",
+  "description": "Styled panel accepting a heading string and an array of body text as strings or mark-up.",
   "private": false,
   "publishConfig": {
     "access": "public"
