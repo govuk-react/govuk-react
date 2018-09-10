@@ -38,6 +38,20 @@ With a block of code
 </Paragraph>
 ````
 
+With React router
+
+```jsx
+const ReactRouterLinkRenderer = ({ href, children }) => (
+  href.match(/^\//)
+    ? <Link to={href}>{children}</Link>
+    : <a href={href}>{children}</a>
+);
+
+<Paragraph linkRenderer={ReactRouterLinkRenderer}>
+  ...
+</Paragraph>
+```
+
 ### References
 - https://govuk-elements.herokuapp.com/typography/#typography-body-copy
 
@@ -50,6 +64,7 @@ With a block of code
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` |  | ```''``` | node | Text content supporting markdown
+ `linkRenderer` |  | ```props => <Anchor {...props} />``` | func | 
  `supportingText` |  | ```false``` | bool | Is this paragraph supporting text for another element?
 
 
