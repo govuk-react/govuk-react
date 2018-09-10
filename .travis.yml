@@ -10,6 +10,7 @@ script:
   - yarn build:sync
   - yarn test
   - codecov
+  - cat ./coverage/lcov.info | codacy-coverage
   - yarn build:dist # the dist build is only used to track bundle size delta
   - yarn bundlesize
   - if [ $TRAVIS_EVENT_TYPE = 'push' ]; then yarn chromatic-test; fi
