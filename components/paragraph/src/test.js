@@ -52,6 +52,11 @@ describe(Paragraph, () => {
     wrapper = mount(<Paragraph>{exampleText}</Paragraph>);
   });
 
+  it('renders as supporting text', () => {
+    wrapper = mount(<Paragraph supportingText>{exampleText}</Paragraph>);
+    expect(wrapper.prop('supportingText')).toBe(true);
+  });
+
   it('matches wrapper snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
