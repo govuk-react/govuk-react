@@ -11,7 +11,7 @@ const spinnerClassName = 'icon-loading';
 const StyledContainer = styled('div')({
   position: 'relative',
   paddingBottom: '2px',
-  minHeight: '100px',
+  minHeight: '10px',
 });
 
 const Innerwrap = styled('div')(({

@@ -122,7 +122,7 @@ examples.add('LoadingBox (long)', () => (
   </LoadingBox>
 ));
 
-examples.add('with children that have short height (minHeight 100px)', () => (
+examples.add('with children that have short height (minHeight 10px)', () => (
   <LoadingBox loading>
     Lorem ipsum dolor sit amet
   </LoadingBox>

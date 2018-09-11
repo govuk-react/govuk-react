@@ -10,9 +10,10 @@ script:
   - yarn build:sync
   - yarn test
   - codecov
+  - cat ./coverage/lcov.info | codacy-coverage
   - yarn build:dist # the dist build is only used to track bundle size delta
   - yarn bundlesize
-  # - if [ $TRAVIS_EVENT_TYPE = 'push' ]; then yarn chromatic-test; fi
+  - if [ $TRAVIS_EVENT_TYPE = 'push' ]; then yarn chromatic-test; fi
 before_deploy:
   - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc # we only want to run this on deploys as this guarantees we have an NPM_TOKEN env var
   # only create releases folder once, before_deploy gets called before every provider so save time by only doing once

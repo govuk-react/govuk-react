@@ -4,7 +4,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
 .emotion-14 {
   position: relative;
   padding-bottom: 2px;
-  min-height: 100px;
+  min-height: 10px;
 }
 
 .emotion-13 {

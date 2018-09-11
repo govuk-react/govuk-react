@@ -1,6 +1,6 @@
 {
   "name": "@govuk-react/grid-row",
-  "version": "0.2.7",
+  "version": "0.2.9",
   "dependencies": {
     "@govuk-react/constants": "^0.2.7",
     "@govuk-react/layout": "^0.2.7",
@@ -22,8 +22,8 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react#readme",
-  "description": "govuk-react: A port of the govuk-frontend components for React using Emotion.",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/grid-row",
+  "description": "GridRow component for use around GridCol components - includes media query breakpoints.",
   "private": false,
   "publishConfig": {
     "access": "public"

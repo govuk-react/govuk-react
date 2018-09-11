@@ -1,137 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Styled matches withError snapshot: with error mount 1`] = `
+exports[`MultiChoice matches snapshot 1`] = `
 .emotion-1 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-3 {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  box-sizing: border-box;
-  width: 100%;
-  border-left: 4px solid #b10e1e;
-  margin-right: 15px;
-  padding-left: 10px;
-  margin-bottom: 0;
-}
-
-.emotion-3:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-0 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: block;
-  clear: none;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #0b0c0c;
-  padding-bottom: 2px;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 0;
-  }
-}
-
-<Styled(MultiChoice)
-  error="example"
-  label="example"
->
-  <MultiChoice
-    className="emotion-1"
-    error="example"
-    label="example"
-    meta={Object {}}
-  >
-    <Styled(div)
-      className="emotion-1"
-      error="example"
-    >
-      <div
-        className="emotion-3"
-      >
-        <Styled(LabelText)>
-          <LabelText
-            className="emotion-1"
-          >
-            <Styled(span)
-              className="emotion-1"
-            >
-              <span
-                className="emotion-0"
-              >
-                example
-              </span>
-            </Styled(span)>
-          </LabelText>
-        </Styled(LabelText)>
-        example
-      </div>
-    </Styled(div)>
-  </MultiChoice>
-</Styled(MultiChoice)>
-`;
-
-exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-1 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-9 {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  box-sizing: border-box;
-  width: 100%;
-  border-left: 4px solid #b10e1e;
-  margin-right: 15px;
-  padding-left: 10px;
-  margin-bottom: 0;
-}
-
-.emotion-9:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-9 {
     margin-bottom: 0;
   }
 }
@@ -189,6 +64,30 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
+.emotion-9 {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  width: 100%;
+  border-left: 4px solid #b10e1e;
+  margin-right: 15px;
+  padding-left: 10px;
+  margin-bottom: 0;
+}
+
+.emotion-9:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-9 {
+    margin-bottom: 0;
+  }
+}
+
 .emotion-6 {
   display: block;
   font-family: "nta",Arial,sans-serif;
@@ -218,29 +117,29 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <Styled(MultiChoice)
-  hint="example"
-  label="example"
+  hint="Example hint"
+  label="Example label"
   meta={
     Object {
-      "error": "example",
+      "error": "Example error",
       "touched": true,
     }
   }
 >
   <MultiChoice
     className="emotion-1"
-    hint="example"
-    label="example"
+    hint="Example hint"
+    label="Example label"
     meta={
       Object {
-        "error": "example",
+        "error": "Example error",
         "touched": true,
       }
     }
   >
     <Styled(div)
       className="emotion-1"
-      error="example"
+      error="Example error"
     >
       <div
         className="emotion-9"
@@ -255,7 +154,7 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
               <span
                 className="emotion-0"
               >
-                example
+                Example label
               </span>
             </Styled(span)>
           </LabelText>
@@ -270,7 +169,7 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
               <span
                 className="emotion-3"
               >
-                example
+                Example hint
               </span>
             </Styled(span)>
           </HintText>
@@ -285,12 +184,11 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
               <span
                 className="emotion-6"
               >
-                example
+                Example error
               </span>
             </Styled(span)>
           </ErrorText>
         </Styled(ErrorText)>
-        example
       </div>
     </Styled(div)>
   </MultiChoice>

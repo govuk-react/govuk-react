@@ -31,6 +31,13 @@ Date with hint text & error
 </DateInput>
 ```
 
+With custom input name props
+```jsx
+<DateInput inputNames={{ day: 'dayInputName' }} hintText="For example, 31 03 1980">
+  What is your date of birth?
+</DateInput>
+```
+
 ### References:
 - https://github.com/alphagov/govuk-frontend/tree/master/src/components/date-input
 
@@ -40,5 +47,6 @@ Prop | Required | Default | Type | Description
  `children` | true | `````` | node | 
  `errorText` |  | ```undefined``` | string | Error text
  `hintText` |  | ```undefined``` | string | Optional hint text
+ `inputNames` |  | ```{   day: 'dateInputDay',   month: 'dateInputMonth',   year: 'dateInputYear', }``` | shape[object Object] | Input name attributes
 
 

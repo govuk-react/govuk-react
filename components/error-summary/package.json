@@ -1,14 +1,14 @@
 {
   "name": "@govuk-react/error-summary",
-  "version": "0.2.7",
+  "version": "0.2.10",
   "dependencies": {
     "@govuk-react/constants": "^0.2.7",
     "@govuk-react/header": "^0.2.7",
     "@govuk-react/hoc": "^0.2.7",
-    "@govuk-react/input-field": "^0.2.7",
+    "@govuk-react/input-field": "^0.2.9",
     "@govuk-react/list-item": "^0.2.7",
-    "@govuk-react/paragraph": "^0.2.7",
-    "@govuk-react/text-area": "^0.2.7",
+    "@govuk-react/paragraph": "^0.2.9",
+    "@govuk-react/text-area": "^0.2.9",
     "@govuk-react/unordered-list": "^0.2.7",
     "govuk-colours": "^1.0.3"
   },
@@ -28,8 +28,8 @@
   "module": "es/index.js",
   "author": "Tarandeep Singh Chauhan",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react#readme",
-  "description": "govuk-react: A port of the govuk-frontend components for React using Emotion.",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/error-summary",
+  "description": "Notice used to display form errors to user - also includes anchors to jump to relevant form sections.",
   "private": false,
   "publishConfig": {
     "access": "public"

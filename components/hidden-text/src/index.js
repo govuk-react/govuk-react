@@ -15,7 +15,6 @@ const StyledSpan = styled('span')({
 });
 
 const StyledSummary = styled('summary')({
-  display: 'inline-block',
   cursor: 'pointer',
   color: LINK_COLOUR,
   fontFamily: NTA_LIGHT,

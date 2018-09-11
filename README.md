@@ -2,9 +2,8 @@
 
 An implementation of the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital) in [React](https://reactjs.org) using [CSSinJS](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660) using Object notation (with [Emotion](https://emotion.sh/docs/object-styles)).
 
-[![Build Status](https://travis-ci.org/penx/govuk-react.svg?branch=master)](https://travis-ci.org/penx/govuk-react)
-[![codecov](https://codecov.io/gh/penx/govuk-react/branch/master/graph/badge.svg)](https://codecov.io/gh/penx/govuk-react)
-[![Greenkeeper badge](https://badges.greenkeeper.io/penx/govuk-react.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/UKHomeOffice/govuk-react.svg?branch=master)](https://travis-ci.org/UKHomeOffice/govuk-react)
+[![codecov](https://codecov.io/gh/UKHomeOffice/govuk-react/branch/master/graph/badge.svg)](https://codecov.io/gh/UKHomeOffice/govuk-react)
 
 The following projects (in priority order) are used as a guide for what components to implement and how they should look/behave. Where possible we are using the existing CSS as a guide, but often need to modify to suit custom markup. Also flexbox is preferred over floats.
 
@@ -98,9 +97,16 @@ Unfortuantely the GDS transport font has a relatively restrictive license [descr
 - [Carbon Design System](https://github.com/carbon-design-system/carbon-components-react)
 - [Material UI](https://github.com/mui-org/material-ui)
 
+## Acknowledgements
+
+We use [Chromaticqa](https://www.chromaticqa.com/) for visual regression testing and it is awesome, you should too!
+
 ## Contributors
 
 - [Alasdair McLeay](https://github.com/penx)
+- [Gavin Orland](https://github.com/gavinorland)
 - [Mark Chambers](https://github.com/marksy)
 - [Steve Sims](https://github.com/stevesims)
 - [Taran Chauhan](https://github.com/taranchauhan)
+- [Toby Brancher](https://github.com/Loque-)
+ 

@@ -1,6 +1,3 @@
-// https://github.com/alphagov/govuk-frontend/blob/master/src/components/radios/_radios.scss
-// https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
@@ -64,8 +61,8 @@ const LabelText = styled('span')({
     position: 'absolute',
     top: 0,
     left: 0,
-    width: '2.10526em',
-    height: '2.10526em',
+    width: '33px',
+    height: '33px',
     border: '2px solid black',
     borderRadius: '50%',
     background: 'transparent',
@@ -73,11 +70,11 @@ const LabelText = styled('span')({
   ':after': {
     content: "''",
     position: 'absolute',
-    top: '0.52632em',
-    left: '0.52632em',
+    top: '8px',
+    left: '8px',
     width: 0,
     height: 0,
-    border: '0.52632em solid',
+    border: '8.5px solid',
     borderRadius: '50%',
     opacity: 0,
   },

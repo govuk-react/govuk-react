@@ -117,13 +117,13 @@ const ErrorSummary = ({
 }) => (
   <StyledErrorSummary tabIndex={-1} {...props}>
     <Header level={2}>{ heading }</Header>
-    { description && <Paragraph mb={2}>{ description }</Paragraph> }
+    { description && <Paragraph mb={3}>{ description }</Paragraph> }
     { errors.length > 0 &&
       <UnorderedList listStyleType="none">
-        { errors.map(error => (
+        { errors.map((error, index) => (
           <ListItem key={error.targetName}>
             <StyledErrorText
-              tabIndex={-1}
+              tabIndex={index + 1}
               onClick={() => onHandleErrorClick(error.targetName)}
             >
               {error.text}
