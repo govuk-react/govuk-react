@@ -115,30 +115,30 @@ const DateInput = ({
   },
   ...props
 }) => (
-  <StyledContainer {...props} errorText={errorText}>
-    <LabelText errorText={errorText}>{children}</LabelText>
-    {hintText ? <HintText>{hintText}</HintText> : <span />}
-    {errorText ? (
-      <ErrorText errorText={errorText}>{errorText}</ErrorText>
-    ) : (
-      <span />
-    )}
-    <StyledList>
-      <Label>
-        <LabelText>Day</LabelText>
-        <StyledInput name={day} errorText={errorText} type="text" />
-      </Label>
-      <Label>
-        <LabelText>Month</LabelText>
-        <StyledInput name={month} errorText={errorText} type="text" />
-      </Label>
-      <Label className="year">
-        <LabelText>Year</LabelText>
-        <StyledInput name={year} errorText={errorText} type="text" />
-      </Label>
-    </StyledList>
-  </StyledContainer>
-);
+    <StyledContainer {...props} errorText={errorText}>
+      <LabelText errorText={errorText}>{children}</LabelText>
+      {hintText ? <HintText>{hintText}</HintText> : <span />}
+      {errorText ? (
+        <ErrorText errorText={errorText}>{errorText}</ErrorText>
+      ) : (
+          <span />
+        )}
+      <StyledList>
+        <Label>
+          <LabelText>Day</LabelText>
+          <StyledInput name={day} errorText={errorText} type="text" />
+        </Label>
+        <Label>
+          <LabelText>Month</LabelText>
+          <StyledInput name={month} errorText={errorText} type="text" />
+        </Label>
+        <Label className="year">
+          <LabelText>Year</LabelText>
+          <StyledInput name={year} errorText={errorText} type="text" />
+        </Label>
+      </StyledList>
+    </StyledContainer>
+  );
 
 DateInput.defaultProps = {
   hintText: undefined,
@@ -168,6 +168,7 @@ DateInput.propTypes = {
     month: PropTypes.string,
     year: PropTypes.string,
   }),
+  value: PropTypes.any,
 };
 
 export default withWhiteSpace({ marginBottom: 6 })(DateInput);
