@@ -175,6 +175,13 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
 >
   <DateInput
     className="emotion-29"
+    defaultValues={
+      Object {
+        "defaultDay": undefined,
+        "defaultMonth": undefined,
+        "defaultYear": undefined,
+      }
+    }
     errorText="example"
     inputNames={
       Object {
@@ -258,12 +265,14 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
                       </LabelText>
                     </Styled(LabelText)>
                     <Styled(input)
+                      defaultValue=""
                       errorText="example"
                       name="dayInputName"
                       type="text"
                     >
                       <input
                         className="emotion-9"
+                        defaultValue=""
                         name="dayInputName"
                         type="text"
                       />
@@ -298,12 +307,14 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
                       </LabelText>
                     </Styled(LabelText)>
                     <Styled(input)
+                      defaultValue=""
                       errorText="example"
                       name="dateInputMonth"
                       type="text"
                     >
                       <input
                         className="emotion-9"
+                        defaultValue=""
                         name="dateInputMonth"
                         type="text"
                       />
@@ -340,12 +351,14 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
                       </LabelText>
                     </Styled(LabelText)>
                     <Styled(input)
+                      defaultValue=""
                       errorText="example"
                       name="dateInputYear"
                       type="text"
                     >
                       <input
                         className="emotion-9"
+                        defaultValue=""
                         name="dateInputYear"
                         type="text"
                       />

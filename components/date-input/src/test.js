@@ -35,6 +35,11 @@ describe('DateInput', () => {
     expect(output.find('input[name]')).toHaveLength(3);
   });
 
+  it('should render three defaultValue attributes', () => {
+    const output = mount(wrapper);
+    expect(output.find('input[defaultValue]')).toHaveLength(3);
+  });
+
   it('should render a label', () => {
     const output = shallow(wrapper);
     expect(output.find('label')).toBeTruthy();

@@ -20,6 +20,12 @@ examples.add('Date with hint text', () => (
   </DateInput>
 ));
 
+examples.add('Date with default values', () => (
+  <DateInput defaultValues={{ defaultDay: "01", defaultMonth: "02", defaultYear: "2018" }}>
+    What is your date of birth ?
+  </DateInput >
+));
+
 examples.add('Date with hint text & error', () => (
   <DateInput
     hintText="For example, 31 03 1980"
