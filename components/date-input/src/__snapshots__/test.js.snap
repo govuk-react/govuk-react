@@ -177,9 +177,9 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
     className="emotion-29"
     defaultValues={
       Object {
+        "defaultDay": undefined,
         "defaultMonth": undefined,
         "defaultYear": undefined,
-        "defualtDay": undefined,
       }
     }
     errorText="example"
