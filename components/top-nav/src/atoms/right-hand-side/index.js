@@ -1,7 +1,7 @@
 import styled from 'react-emotion';
 import { MEDIA_QUERIES, SPACING } from '@govuk-react/constants';
 
-const RightHandSide = styled("div")({
+const RightHandSide = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'flex-start',
