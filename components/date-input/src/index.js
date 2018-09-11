@@ -55,17 +55,16 @@ const StyledInput = styled('input')(
   }),
 );
 
+const StyledLabel = styled(Label)({
+  marginRight: '20px',
+  marginBottom: 0,
+}, ({ year }) => ({
+  width: year ? '70px' : '50px',
+}));
+
 const StyledList = styled('div')({
   fontFamily: NTA_LIGHT,
   display: 'flex',
-  '> label': {
-    width: '50px',
-    marginRight: '20px',
-    marginBottom: 0,
-  },
-  '> label.year': {
-    width: '70px',
-  },
 });
 
 /**
@@ -136,7 +135,7 @@ const DateInput = ({
       <span />
       )}
     <StyledList>
-      <Label>
+      <StyledLabel>
         <LabelText>Day</LabelText>
         <StyledInput name={day} errorText={errorText} type="number" defaultValue={defaultDay} />
       </Label>
