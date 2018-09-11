@@ -120,30 +120,30 @@ const DateInput = ({
   },
   ...props
 }) => (
-    <StyledContainer {...props} errorText={errorText}>
-      <LabelText errorText={errorText}>{children}</LabelText>
-      {hintText ? <HintText>{hintText}</HintText> : <span />}
-      {errorText ? (
-        <ErrorText errorText={errorText}>{errorText}</ErrorText>
-      ) : (
-          <span />
-        )}
-      <StyledList>
-        <Label>
-          <LabelText>Day</LabelText>
-          <StyledInput name={day} errorText={errorText} type="text" defaultValue={defaultDay} />
-        </Label>
-        <Label>
-          <LabelText>Month</LabelText>
-          <StyledInput name={month} errorText={errorText} type="text" defaultValue={defaultMonth} />
-        </Label>
-        <Label className="year">
-          <LabelText>Year</LabelText>
-          <StyledInput name={year} errorText={errorText} type="text" defaultValue={defaultYear} />
-        </Label>
-      </StyledList>
-    </StyledContainer>
-  );
+  <StyledContainer {...props} errorText={errorText}>
+    <LabelText errorText={errorText}>{children}</LabelText>
+    {hintText ? <HintText>{hintText}</HintText> : <span />}
+    {errorText ? (
+      <ErrorText errorText={errorText}>{errorText}</ErrorText>
+    ) : (
+        <span />
+      )}
+    <StyledList>
+      <Label>
+        <LabelText>Day</LabelText>
+        <StyledInput name={day} errorText={errorText} type="text" defaultValue={defaultDay} />
+      </Label>
+      <Label>
+        <LabelText>Month</LabelText>
+        <StyledInput name={month} errorText={errorText} type="text" defaultValue={defaultMonth} />
+      </Label>
+      <Label className="year">
+        <LabelText>Year</LabelText>
+        <StyledInput name={year} errorText={errorText} type="text" defaultValue={defaultYear} />
+      </Label>
+    </StyledList>
+  </StyledContainer>
+);
 
 DateInput.defaultProps = {
   hintText: undefined,
