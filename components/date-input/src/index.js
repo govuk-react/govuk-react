@@ -154,7 +154,7 @@ DateInput.defaultProps = {
     year: undefined,
   },
   defaultValues: {
-    defualtDay: undefined,
+    defaultDay: undefined,
     defaultMonth: undefined,
     defaultYear: undefined,
   },
@@ -179,7 +179,7 @@ DateInput.propTypes = {
     year: PropTypes.string,
   }),
   defaultValues: {
-    defualtDay: PropTypes.any,
+    defaultDay: PropTypes.any,
     defaultMonth: PropTypes.any,
     defaultYear: PropTypes.any,
   },
