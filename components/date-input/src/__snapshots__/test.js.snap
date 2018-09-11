@@ -104,14 +104,17 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   display: flex;
 }
 
-.emotion-27 > label {
-  width: 50px;
+.emotion-11 {
+  margin-bottom: 0;
   margin-right: 20px;
   margin-bottom: 0;
+  width: 50px;
 }
 
-.emotion-27 > label.year {
-  width: 70px;
+@media only screen and (min-width:641px) {
+  .emotion-11 {
+    margin-bottom: 0;
+  }
 }
 
 .emotion-10 {
@@ -124,6 +127,9 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   margin-bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  width: 50px;
 }
 
 .emotion-10:after {
@@ -163,6 +169,46 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
 .emotion-9:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
+}
+
+.emotion-25 {
+  margin-bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  width: 70px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-25 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-24 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  width: 70px;
+}
+
+.emotion-24:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-24 {
+    margin-bottom: 0;
+  }
 }
 
 <Styled(DateInput)
@@ -234,10 +280,10 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
           >
             <Styled(Label)>
               <Label
-                className="emotion-1"
+                className="emotion-11"
               >
                 <Styled(label)
-                  className="emotion-1"
+                  className="emotion-11"
                 >
                   <label
                     className="emotion-10"
@@ -274,10 +320,10 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
             </Styled(Label)>
             <Styled(Label)>
               <Label
-                className="emotion-1"
+                className="emotion-11"
               >
                 <Styled(label)
-                  className="emotion-1"
+                  className="emotion-11"
                 >
                   <label
                     className="emotion-10"
@@ -312,15 +358,19 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
                 </Styled(label)>
               </Label>
             </Styled(Label)>
-            <Styled(Label)>
+            <Styled(Label)
+              year={true}
+            >
               <Label
-                className="emotion-1"
+                className="emotion-25"
+                year={true}
               >
                 <Styled(label)
-                  className="emotion-1"
+                  className="emotion-25"
+                  year={true}
                 >
                   <label
-                    className="emotion-10"
+                    className="emotion-24"
                   >
                     <Styled(LabelText)>
                       <LabelText
