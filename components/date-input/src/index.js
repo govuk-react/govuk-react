@@ -126,7 +126,7 @@ const DateInput = ({
     {errorText ? (
       <ErrorText errorText={errorText}>{errorText}</ErrorText>
     ) : (
-        <span />
+      <span />
       )}
     <StyledList>
       <Label>
