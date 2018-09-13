@@ -1,329 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme.mount 1`] = `
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background-color: #0b0c0c;
-  color: #ffffff;
-  font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.1428571429;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-10 {
-    font-size: 16px;
-    line-height: 1.25;
-  }
-}
-
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: calc(100% - 30px);
-  max-width: 960px;
-  padding: calc(10px * 0.8) 15px;
-  box-sizing: border-box;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-9 {
-    padding: calc(10px * 0.8) 0;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    width: calc(100% - 60px);
-  }
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    display: block;
-    padding-right: 15px;
-    width: 33.33%;
-  }
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-weight: 800;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  font-size: 30px;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  margin-top: 10px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-    width: 66.66%;
-    padding-left: 15px;
-    margin-top: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-2 {
-    display: none;
-  }
-}
-
-.emotion-3 {
-  position: absolute;
-  top: -999em;
-}
-
-.emotion-3:checked + ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    display: none;
-  }
-}
-
-.emotion-7 {
-  display: none;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  margin-top: 5px;
-  width: 100%;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    padding-top: 30px;
-    width: auto;
-  }
-}
-
-.emotion-6 {
-  -webkit-flex: 1 0 50%;
-  -ms-flex: 1 0 50%;
-  flex: 1 0 50%;
-  width: 100%;
-  list-style-type: none;
-  margin: 0;
-  padding: 3px 0;
-  border-bottom: 1px solid #2e3133;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-6 {
-    border-bottom: 0;
-    -webkit-flex: none;
-    -ms-flex: none;
-    flex: none;
-    width: auto;
-    padding-right: 15px;
-  }
-}
-
-.emotion-4 {
-  color: #ffffff;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-text-decoration-skip-ink: none;
-  text-decoration-skip-ink: none;
-  border-bottom: 1px solid transparent;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.emotion-4:hover {
-  border-bottom-color: #ffffff;
-}
-
-.emotion-4:focus {
-  outline: 3px solid #ffbf47;
-}
-
-.emotion-4:focus {
-  color: #0b0c0c;
-  background-color: #ffbf47;
-  outline: 3px solid #ffbf47;
-}
-
-.emotion-4:focus:hover {
-  border-bottom-color: #0b0c0c;
-}
-
-.emotion-11 {
-  border-bottom: 10px solid #005ea5;
-  max-width: 960px;
-  margin: 0 auto;
-  width: calc(100% - 30px);
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-11 {
-    width: calc(100% - 60px);
-  }
-}
-
-<TopNav
-  bgColor="#0b0c0c"
-  color="#ffffff"
-  search={false}
->
-  <Styled(div)
-    bgColor="#0b0c0c"
-    color="#ffffff"
-  >
-    <div
-      className="emotion-10"
-      color="#ffffff"
-    >
-      <Styled(div)>
-        <div
-          className="emotion-9"
-        >
-          <Styled(div)>
-            <div
-              className="emotion-1"
-            >
-              <Styled(div)>
-                <div
-                  className="emotion-0"
-                />
-              </Styled(div)>
-            </div>
-          </Styled(div)>
-          <Styled(div)>
-            <div
-              className="emotion-8"
-            >
-              <MenuButton
-                title="Menu"
-              >
-                <Styled(label)
-                  htmlFor="govuk-react-menu-button"
-                >
-                  <label
-                    className="emotion-2"
-                    htmlFor="govuk-react-menu-button"
-                  >
-                    Menu
-                     
-                    <span>
-                      ›
-                    </span>
-                  </label>
-                </Styled(label)>
-                <Styled(input)
-                  id="govuk-react-menu-button"
-                  type="checkbox"
-                >
-                  <input
-                    className="emotion-3"
-                    id="govuk-react-menu-button"
-                    type="checkbox"
-                  />
-                </Styled(input)>
-              </MenuButton>
-              <Styled(ul)>
-                <ul
-                  className="emotion-7"
-                >
-                  <Styled(li)>
-                    <li
-                      className="emotion-6"
-                    >
-                      <Styled(Anchor)
-                        href="/nav-link"
-                      >
-                        <Anchor
-                          className="emotion-4"
-                          href="/nav-link"
-                        >
-                          <a
-                            className="emotion-4"
-                            href="/nav-link"
-                          >
-                            Nav link
-                          </a>
-                        </Anchor>
-                      </Styled(Anchor)>
-                    </li>
-                  </Styled(li)>
-                </ul>
-              </Styled(ul)>
-            </div>
-          </Styled(div)>
-        </div>
-      </Styled(div)>
-    </div>
-  </Styled(div)>
-  <Styled(div)>
-    <div
-      className="emotion-11"
-    />
-  </Styled(div)>
-</TopNav>
-`;
-
-exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzyme.mount 1`] = `
 .emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -413,50 +90,109 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-top: 10px;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-11 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-align-items: flex-start;
     -webkit-box-align: flex-start;
     -ms-flex-align: flex-start;
     align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     width: 66.66%;
     padding-left: 15px;
     margin-top: 0;
   }
 }
 
+.emotion-2 {
+  width: 50%;
+}
+
 @media only screen and (min-width:641px) {
   .emotion-2 {
+    width: auto;
+  }
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  width: 50%;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    width: auto;
+  }
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
     display: none;
   }
 }
 
 .emotion-3 {
-  position: absolute;
-  top: -999em;
+  cursor: default;
 }
 
-.emotion-3:checked + ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    display: none;
-  }
+.emotion-4 {
+  content: "";
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-color: transparent;
+  -webkit-clip-path: polygon(0% 0%,50% 100%,100% 0%);
+  clip-path: polygon(0% 0%,50% 100%,100% 0%);
+  border-width: 8.66px 5px 0 5px;
+  margin-left: 5px;
+  border-top-color: inherit;
+  border-bottom-color: inherit;
 }
 
 .emotion-10 {
@@ -481,7 +217,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
   }
 }
 
-.emotion-6 {
+.emotion-9 {
   -webkit-flex: 1 0 50%;
   -ms-flex: 1 0 50%;
   flex: 1 0 50%;
@@ -493,7 +229,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-9 {
     border-bottom: 0;
     -webkit-flex: none;
     -ms-flex: none;
@@ -501,6 +237,36 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
     width: auto;
     padding-right: 15px;
   }
+}
+
+.emotion-7 {
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  border-bottom: 1px solid transparent;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-block;
+}
+
+.emotion-7:hover {
+  border-bottom-color: #ffffff;
+}
+
+.emotion-7:focus {
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-7:focus {
+  color: #0b0c0c;
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-7:focus:hover {
+  border-bottom-color: #0b0c0c;
 }
 
 .emotion-14 {
@@ -516,35 +282,16 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
   }
 }
 
-.emotion-4 {
-  color: #ffffff;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-text-decoration-skip-ink: none;
-  text-decoration-skip-ink: none;
-  border-bottom: 1px solid transparent;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.emotion-4:hover {
-  border-bottom-color: #ffffff;
-}
-
-.emotion-4:focus {
-  outline: 3px solid #ffbf47;
-}
-
 <TopNav
-  active={1}
   bgColor="#0b0c0c"
   color="#ffffff"
+  defaultOpen={false}
   search={false}
 >
   <Styled(div)
-    active={1}
     bgColor="#0b0c0c"
     color="#ffffff"
+    defaultOpen={false}
   >
     <div
       className="emotion-13"
@@ -569,79 +316,72 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
             <div
               className="emotion-11"
             >
-              <MenuButton
-                title="Menu"
-              >
-                <Styled(label)
-                  htmlFor="govuk-react-menu-button"
+              <Styled(div)>
+                <div
+                  className="emotion-2"
+                />
+              </Styled(div)>
+              <Styled(div)>
+                <div
+                  className="emotion-6"
                 >
-                  <label
-                    className="emotion-2"
-                    htmlFor="govuk-react-menu-button"
+                  <MenuButton
+                    onClick={[Function]}
+                    open={false}
+                    title="Menu"
                   >
-                    Menu
-                     
-                    <span>
-                      ›
-                    </span>
-                  </label>
-                </Styled(label)>
-                <Styled(input)
-                  id="govuk-react-menu-button"
-                  type="checkbox"
-                >
-                  <input
-                    className="emotion-3"
-                    id="govuk-react-menu-button"
-                    type="checkbox"
-                  />
-                </Styled(input)>
-              </MenuButton>
-              <Styled(ul)>
+                    <Styled(div)
+                      onClick={[Function]}
+                    >
+                      <div
+                        className="emotion-5"
+                        onClick={[Function]}
+                      >
+                        <Styled(div)>
+                          <div
+                            className="emotion-3"
+                          >
+                            Menu
+                          </div>
+                        </Styled(div)>
+                        <Styled(div)
+                          open={false}
+                        >
+                          <div
+                            className="emotion-4"
+                            open={false}
+                          />
+                        </Styled(div)>
+                      </div>
+                    </Styled(div)>
+                  </MenuButton>
+                </div>
+              </Styled(div)>
+              <Styled(ul)
+                id="govuk-react-menu"
+                open={false}
+              >
                 <ul
                   className="emotion-10"
+                  id="govuk-react-menu"
+                  open={false}
                 >
-                  <Styled(li)
-                    key="0"
-                  >
+                  <Styled(li)>
                     <li
-                      className="emotion-6"
+                      className="emotion-9"
                     >
                       <Styled(Anchor)
-                        href="/section"
+                        href="/nav-link"
                       >
                         <Anchor
-                          className="emotion-4"
-                          href="/section"
+                          className="emotion-7"
+                          href="/nav-link"
                         >
                           <a
-                            className="emotion-4"
-                            href="/section"
+                            className="emotion-7"
+                            href="/nav-link"
                           >
-                            Section 1
-                          </a>
-                        </Anchor>
-                      </Styled(Anchor)>
-                    </li>
-                  </Styled(li)>
-                  <Styled(li)
-                    key="1"
-                  >
-                    <li
-                      className="emotion-6"
-                    >
-                      <Styled(Anchor)
-                        href="/section"
-                      >
-                        <Anchor
-                          className="emotion-4"
-                          href="/section"
-                        >
-                          <a
-                            className="emotion-4"
-                            href="/section"
-                          >
-                            Section 1
+                            Nav link
                           </a>
                         </Anchor>
                       </Styled(Anchor)>
@@ -663,8 +403,8 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 </TopNav>
 `;
 
-exports[`TopNav with icon title: icon title 1`] = `
-.emotion-7 {
+exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzyme.mount 1`] = `
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -682,13 +422,13 @@ exports[`TopNav with icon title: icon title 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-7 {
+  .emotion-16 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-.emotion-6 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -703,7 +443,426 @@ exports[`TopNav with icon title: icon title 1`] = `
 }
 
 @media only screen and (min-width:641px) {
+  .emotion-15 {
+    padding: calc(10px * 0.8) 0;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: calc(100% - 60px);
+  }
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    display: block;
+    padding-right: 15px;
+    width: 33.33%;
+  }
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 800;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  font-size: 30px;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-14 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: 66.66%;
+    padding-left: 15px;
+    margin-top: 0;
+  }
+}
+
+.emotion-2 {
+  width: 50%;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-2 {
+    width: auto;
+  }
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  width: 50%;
+}
+
+@media only screen and (min-width:641px) {
   .emotion-6 {
+    width: auto;
+  }
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    display: none;
+  }
+}
+
+.emotion-3 {
+  cursor: default;
+}
+
+.emotion-3:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-4 {
+  content: "";
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-color: transparent;
+  -webkit-clip-path: polygon(0% 0%,50% 100%,100% 0%);
+  clip-path: polygon(0% 0%,50% 100%,100% 0%);
+  border-width: 8.66px 5px 0 5px;
+  margin-left: 5px;
+  border-top-color: inherit;
+  border-bottom-color: inherit;
+}
+
+.emotion-13 {
+  display: none;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+  width: 100%;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-13 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 30px;
+    width: auto;
+  }
+}
+
+.emotion-9 {
+  -webkit-flex: 1 0 50%;
+  -ms-flex: 1 0 50%;
+  flex: 1 0 50%;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+  border-bottom: 1px solid #2e3133;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-9 {
+    border-bottom: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: auto;
+    padding-right: 15px;
+  }
+}
+
+.emotion-17 {
+  border-bottom: 10px solid #005ea5;
+  max-width: 960px;
+  margin: 0 auto;
+  width: calc(100% - 30px);
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-17 {
+    width: calc(100% - 60px);
+  }
+}
+
+.emotion-7 {
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  border-bottom: 1px solid transparent;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.emotion-7:hover {
+  border-bottom-color: #ffffff;
+}
+
+.emotion-7:focus {
+  outline: 3px solid #ffbf47;
+}
+
+<TopNav
+  active={1}
+  bgColor="#0b0c0c"
+  color="#ffffff"
+  defaultOpen={false}
+  search={false}
+>
+  <Styled(div)
+    active={1}
+    bgColor="#0b0c0c"
+    color="#ffffff"
+    defaultOpen={false}
+  >
+    <div
+      className="emotion-16"
+      color="#ffffff"
+    >
+      <Styled(div)>
+        <div
+          className="emotion-15"
+        >
+          <Styled(div)>
+            <div
+              className="emotion-1"
+            >
+              <Styled(div)>
+                <div
+                  className="emotion-0"
+                />
+              </Styled(div)>
+            </div>
+          </Styled(div)>
+          <Styled(div)>
+            <div
+              className="emotion-14"
+            >
+              <Styled(div)>
+                <div
+                  className="emotion-2"
+                />
+              </Styled(div)>
+              <Styled(div)>
+                <div
+                  className="emotion-6"
+                >
+                  <MenuButton
+                    onClick={[Function]}
+                    open={false}
+                    title="Menu"
+                  >
+                    <Styled(div)
+                      onClick={[Function]}
+                    >
+                      <div
+                        className="emotion-5"
+                        onClick={[Function]}
+                      >
+                        <Styled(div)>
+                          <div
+                            className="emotion-3"
+                          >
+                            Menu
+                          </div>
+                        </Styled(div)>
+                        <Styled(div)
+                          open={false}
+                        >
+                          <div
+                            className="emotion-4"
+                            open={false}
+                          />
+                        </Styled(div)>
+                      </div>
+                    </Styled(div)>
+                  </MenuButton>
+                </div>
+              </Styled(div)>
+              <Styled(ul)
+                id="govuk-react-menu"
+                open={false}
+              >
+                <ul
+                  className="emotion-13"
+                  id="govuk-react-menu"
+                  open={false}
+                >
+                  <Styled(li)
+                    key="0"
+                  >
+                    <li
+                      className="emotion-9"
+                    >
+                      <Styled(Anchor)
+                        href="/section"
+                      >
+                        <Anchor
+                          className="emotion-7"
+                          href="/section"
+                        >
+                          <a
+                            className="emotion-7"
+                            href="/section"
+                          >
+                            Section 1
+                          </a>
+                        </Anchor>
+                      </Styled(Anchor)>
+                    </li>
+                  </Styled(li)>
+                  <Styled(li)
+                    key="1"
+                  >
+                    <li
+                      className="emotion-9"
+                    >
+                      <Styled(Anchor)
+                        href="/section"
+                      >
+                        <Anchor
+                          className="emotion-7"
+                          href="/section"
+                        >
+                          <a
+                            className="emotion-7"
+                            href="/section"
+                          >
+                            Section 1
+                          </a>
+                        </Anchor>
+                      </Styled(Anchor)>
+                    </li>
+                  </Styled(li)>
+                </ul>
+              </Styled(ul)>
+            </div>
+          </Styled(div)>
+        </div>
+      </Styled(div)>
+    </div>
+  </Styled(div)>
+  <Styled(div)>
+    <div
+      className="emotion-17"
+    />
+  </Styled(div)>
+</TopNav>
+`;
+
+exports[`TopNav with icon title: icon title 1`] = `
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #0b0c0c;
+  color: #ffffff;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1428571429;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: calc(100% - 30px);
+  max-width: 960px;
+  padding: calc(10px * 0.8) 15px;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
     padding: calc(10px * 0.8) 0;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -748,34 +907,54 @@ exports[`TopNav with icon title: icon title 1`] = `
   font-size: 30px;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-top: 10px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-5 {
+  .emotion-6 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-align-items: flex-start;
     -webkit-box-align: flex-start;
     -ms-flex-align: flex-start;
     align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     width: 66.66%;
     padding-left: 15px;
     margin-top: 0;
   }
 }
 
-.emotion-8 {
+.emotion-5 {
+  width: 50%;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    width: auto;
+  }
+}
+
+.emotion-9 {
   border-bottom: 10px solid #005ea5;
   max-width: 960px;
   margin: 0 auto;
@@ -783,7 +962,7 @@ exports[`TopNav with icon title: icon title 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-8 {
+  .emotion-9 {
     width: calc(100% - 60px);
   }
 }
@@ -820,19 +999,21 @@ exports[`TopNav with icon title: icon title 1`] = `
       GOV.UK
     </IconTitle>
   }
+  defaultOpen={false}
   search={false}
 >
   <Styled(div)
     bgColor="#0b0c0c"
     color="#ffffff"
+    defaultOpen={false}
   >
     <div
-      className="emotion-7"
+      className="emotion-8"
       color="#ffffff"
     >
       <Styled(div)>
         <div
-          className="emotion-6"
+          className="emotion-7"
         >
           <Styled(div)>
             <div
@@ -915,8 +1096,14 @@ exports[`TopNav with icon title: icon title 1`] = `
           </Styled(div)>
           <Styled(div)>
             <div
-              className="emotion-5"
-            />
+              className="emotion-6"
+            >
+              <Styled(div)>
+                <div
+                  className="emotion-5"
+                />
+              </Styled(div)>
+            </div>
           </Styled(div)>
         </div>
       </Styled(div)>
@@ -924,7 +1111,7 @@ exports[`TopNav with icon title: icon title 1`] = `
   </Styled(div)>
   <Styled(div)>
     <div
-      className="emotion-8"
+      className="emotion-9"
     />
   </Styled(div)>
 </TopNav>
