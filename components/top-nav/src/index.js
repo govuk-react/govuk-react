@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { BLACK, WHITE } from 'govuk-colours';
+import { MEDIA_QUERIES } from '@govuk-react/constants';
+
+import styled from 'react-emotion';
 
 import TopNavWrapper from './atoms/top-nav-wrapper';
 import TopNavInner from './atoms/top-nav-inner';
@@ -14,6 +17,25 @@ import ListItem from './atoms/list-item';
 import MenuButton from './atoms/menu-button/';
 
 import IconTitle from './atoms/icon-title';
+
+// Layout/position of ServiceTitle
+const ServiceTitleWrapper = styled('div')({
+  width: '50%',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    width: 'auto',
+  },
+});
+
+// Layout/position of MenuButtonWrapper
+const MenuButtonWrapper = styled('div')({
+  display: 'flex',
+  justifyContent: 'flex-end',
+  alignItems: 'flex-end',
+  width: '50%',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    width: 'auto',
+  },
+});
 
 /**
  *
@@ -82,64 +104,86 @@ import IconTitle from './atoms/icon-title';
  *
  * ### References:
  * - http://alphagov.github.io/govuk_template/example-proposition-menu.html
+ * - https://design-system.service.gov.uk/components/header/
  *
  * ### TODO:
  * - TODO: this component is a work in progress and needs to more closely match existing examples
  * - TODO: is TopNav the right name? What's it called in other GDS styles/patterns?
  * - TODO: (The name Header is ambiguous)
- * - TODO: Fix the position and design of this button
  * - TODO: #205 Use context api and/or render props for `active` navigation items
  * - TODO: Vertical alignment here needs some work, perhaps should be its own component
  * - TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
  */
-const TopNav = ({
-  bgColor,
-  color,
-  company,
-  serviceTitle,
-  search,
-  children,
-  ...props
-}) => (
-  <React.Fragment>
-    <TopNavWrapper bgColor={bgColor} color={color} {...props}>
-      <TopNavInner>
-        <LogoSearchWrapper>
-          <Company>
-            {company}
-          </Company>
-          {search &&
-            <SearchWrapper>
-              {search}
-            </SearchWrapper>
-          }
-        </LogoSearchWrapper>
-        <RightHandSide>
-          {serviceTitle}
-          {children &&
-          <React.Fragment>
-            {/* TODO fix the position and design of this button */}
-            <MenuButton />
-            <UnorderedList serviceTitle={serviceTitle}>
-              {/* TODO #205 use context api and/or render props here for `active` */}
-              {children.length && children.map ? (
-                children.map((child, i) => (
-                  child && (child.length || child.props)
-                    ? <ListItem key={child.key || i}>{child}</ListItem>
-                    : null
-                ))
-              ) : (
-                <ListItem>{children}</ListItem>
-              )}
-            </UnorderedList>
-          </React.Fragment>
-          }
-        </RightHandSide>
-      </TopNavInner>
-    </TopNavWrapper>
-    <BottomNavWrapper />
-  </React.Fragment>
-);
+class TopNav extends Component {
+  state = {
+    navigationOpen: this.props.defaultOpen,
+  }
+
+  toggleNavigationOpen = () => {
+    this.setState({
+      navigationOpen: !this.state.navigationOpen,
+    });
+  };
+
+  render() {
+    const {
+      bgColor,
+      color,
+      company,
+      serviceTitle,
+      search,
+      children,
+      ...props
+    } = this.props;
+
+    return (
+      <React.Fragment>
+        <TopNavWrapper bgColor={bgColor} color={color} {...props}>
+          <TopNavInner>
+            <LogoSearchWrapper>
+              <Company>
+                {company}
+              </Company>
+              {search &&
+                <SearchWrapper>
+                  {search}
+                </SearchWrapper>
+              }
+            </LogoSearchWrapper>
+            <RightHandSide>
+              <ServiceTitleWrapper>
+                {serviceTitle}
+              </ServiceTitleWrapper>
+              {children &&
+              <React.Fragment>
+                <MenuButtonWrapper>
+                  <MenuButton
+                    open={this.state.navigationOpen}
+                    onClick={this.toggleNavigationOpen}
+                  />
+                </MenuButtonWrapper>
+                <UnorderedList id="govuk-react-menu" serviceTitle={serviceTitle} open={this.state.navigationOpen}>
+                  {/* TODO #205 use context api and/or render props here for `active` */}
+                  {children.length && children.map ? (
+                    children.map((child, i) => (
+                      child && (child.length || child.props)
+                        ? <ListItem key={child.key || i}>{child}</ListItem>
+                        : null
+                    ))
+                  ) : (
+                    <ListItem>{children}</ListItem>
+                  )}
+                </UnorderedList>
+              </React.Fragment>
+              }
+            </RightHandSide>
+          </TopNavInner>
+        </TopNavWrapper>
+        <BottomNavWrapper />
+      </React.Fragment>
+    );
+  }
+}
 
 TopNav.defaultProps = {
   bgColor: BLACK,
@@ -148,6 +192,7 @@ TopNav.defaultProps = {
   serviceTitle: undefined,
   search: false,
   children: undefined,
+  defaultOpen: false,
 };
 
 TopNav.propTypes = {
@@ -155,6 +200,8 @@ TopNav.propTypes = {
   bgColor: PropTypes.string,
   /** Top nav text color */
   color: PropTypes.string,
+  /** Is the mobile navigation open by default? */
+  defaultOpen: PropTypes.bool,
   /** Company component e.g. GOV UK */
   company: PropTypes.node,
   /** Service title component e.g. Food Standards Authority */

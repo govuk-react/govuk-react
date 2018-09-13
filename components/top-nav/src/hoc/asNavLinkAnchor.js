@@ -6,6 +6,7 @@ const asNavLinkAnchor = (AnchorType) => {
   const Anchor = asTopNavAnchor(AnchorType);
 
   const StyledNavLinkAnchor = styled(Anchor)({
+    display: 'inline-block',
     ':focus': {
       color: BLACK,
       backgroundColor: YELLOW,
