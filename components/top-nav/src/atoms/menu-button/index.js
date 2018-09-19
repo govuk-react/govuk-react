@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
 
-const Button = styled('div')({
+// Label to be linked to checkbox in parent component
+// in order to provide toggle function of mobile menu
+// when javascript is not present.
+const Button = styled('label')({
   display: 'flex',
   alignItems: 'center',
   [MEDIA_QUERIES.LARGESCREEN]: {
@@ -35,7 +38,7 @@ const ButtonIcon = styled('div')(({
 }));
 
 const MenuButton = ({ title, open, onClick }) => (
-  <Button onClick={onClick}>
+  <Button onClick={onClick} htmlFor="govuk-react-menu-button">
     <ButtonText>
       {title}
     </ButtonText>

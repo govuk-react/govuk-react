@@ -37,6 +37,19 @@ const MenuButtonWrapper = styled('div')({
   },
 });
 
+// Provides a fallback for the mobile menu toggle
+// functionality when javascrcipt is unavailable
+const Input = styled('input')({
+  position: 'absolute',
+  top: '-999em',
+  ':checked + ul': {
+    display: 'flex',
+  },
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'none',
+  },
+});
+
 /**
  *
  * ### Usage
@@ -162,6 +175,8 @@ class TopNav extends Component {
                     onClick={this.toggleNavigationOpen}
                   />
                 </MenuButtonWrapper>
+                {/* Referenced in MenuButton */}
+                <Input id="govuk-react-menu-button" type="checkbox" />
                 <UnorderedList id="govuk-react-menu" serviceTitle={serviceTitle} open={this.state.navigationOpen}>
                   {/* TODO #205 use context api and/or render props here for `active` */}
                   {children.length && children.map ? (
