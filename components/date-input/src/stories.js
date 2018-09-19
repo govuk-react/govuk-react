@@ -11,7 +11,7 @@ const examples = storiesOf('Form/Date input/Examples', module);
 stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
-  <DateInput>What is your date of birth?</DateInput>
+  <DateInput inputNames={{ day: 'dayInputName' }}>What is your date of birth?</DateInput>
 ));
 
 examples.add('Date with hint text', () => (

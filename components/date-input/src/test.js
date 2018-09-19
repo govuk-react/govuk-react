@@ -6,7 +6,7 @@ import DateInput from './';
 
 describe('DateInput', () => {
   const example = 'example';
-  const wrapper = <DateInput inputNames={{ day: 'dayInputName' }} errorText={example}>{example}</DateInput>;
+  const wrapper = <DateInput errorText={example}>{example}</DateInput>;
   let props;
 
   beforeEach(() => {
@@ -30,14 +30,19 @@ describe('DateInput', () => {
     expect(output.find('input[type="text"]')).toBeTruthy();
   });
 
-  it('should render three name attributes', () => {
-    const output = mount(wrapper);
-    expect(output.find('input[name]')).toHaveLength(3);
+  it('should render one input with name attributes if only a day input name is passed', () => {
+    const output = mount(<DateInput inputNames={{ day: 'dayInputName' }} errorText={example}>{example}</DateInput>);
+    expect(output.find('input[name]')).toHaveLength(1);
   });
 
-  it('should render three defaultValue attributes', () => {
+  it('should render no defaultValue attributes if defaultValues are not passed', () => {
     const output = mount(wrapper);
-    expect(output.find('input[defaultValue]')).toHaveLength(3);
+    expect(output.find('input[defaultValue]')).toHaveLength(0);
+  });
+
+  it('should render two defaultValue attributes if two defaultValues are passed', () => {
+    const output = mount(<DateInput defaultValues={{ day: '1', month: '2' }} errorText={example}>{example}</DateInput>);
+    expect(output.find('input[defaultValue]')).toHaveLength(2);
   });
 
   it('should render a label', () => {
