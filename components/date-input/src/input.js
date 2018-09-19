@@ -56,16 +56,16 @@ const StyledInput = styled('input')(
 class OptionalDateInput extends React.Component {
   inputs = {}
 
-  renderInput(label, key, defaultValue, error) {
+  renderInput(label, name, key, defaultValue, error) {
     return (
       <Label>
         {label}:
         <StyledInput
-          name={key}
+          name={name}
           error={error}
           type="text"
           defaultValue={defaultValue}
-          value={(this.props.value && this.props.value[key]) || ''}
+          value={(this.props.value ? this.props.value[key] : undefined)}
           onChange={e => this.props.onChange(e, key)}
           onBlur={e => this.props.onBlur(e, key)}
           onFocus={e => this.props.onFocus(e, key)}
@@ -81,9 +81,9 @@ class OptionalDateInput extends React.Component {
     return (
       <StyledList>
         {/* TODO: text should be configurable  */}
-        {this.renderInput(labels.day, names.day, defaultValues.day, error)}
-        {this.renderInput(labels.month, names.month, defaultValues.month, error)}
-        {this.renderInput(labels.year, names.year, defaultValues.year, error)}
+        {this.renderInput(labels.day, names.day, 'day', defaultValues.day, error)}
+        {this.renderInput(labels.month, names.month, 'month', defaultValues.month, error)}
+        {this.renderInput(labels.year, names.year, 'year', defaultValues.year, error)}
       </StyledList>
     );
   }
@@ -118,11 +118,7 @@ OptionalDateInput.propTypes = {
 };
 
 OptionalDateInput.defaultProps = {
-  value: {
-    day: null,
-    month: null,
-    year: null,
-  },
+  value: undefined,
   names: {
     day: 'dateInputDay',
     month: 'dateInputMonth',

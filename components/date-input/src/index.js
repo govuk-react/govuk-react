@@ -161,17 +161,16 @@ DateInput.defaultProps = {
     defaultMonth: undefined,
     defaultYear: undefined,
   },
+  refs: () => null,
+  input: {
+    onChange: () => null,
+    onBlur: () => null,
+    onFocus: () => null,
+    value: undefined,
+  },
 };
 
 DateInput.propTypes = {
-  /**
-   * When the form field is controlled, this sets the value of the day, month and year inputs
-   */
-  value: PropTypes.shape({
-    day: PropTypes.number,
-    month: PropTypes.number,
-    year: PropTypes.number,
-  }),
   children: PropTypes.node.isRequired,
   /**
    * Optional hint text
@@ -210,21 +209,15 @@ DateInput.propTypes = {
      * (does not get called when moving between inputs in the same datefield)
      */
     onFocus: PropTypes.func,
+    /**
+     * When the form field is controlled, this sets the value of the day, month and year inputs
+     */
+    value: PropTypes.shape({
+      day: PropTypes.number,
+      month: PropTypes.number,
+      year: PropTypes.number,
+    }),
   }),
-};
-
-DateInput.defaultProps = {
-  value: {
-    day: null,
-    month: null,
-    year: null,
-  },
-  refs: () => null,
-  input: {
-    onChange: () => null,
-    onBlur: () => null,
-    onFocus: () => null,
-  },
 };
 
 export default withWhiteSpace({ marginBottom: 6 })(multiInputInput(DateInput));
