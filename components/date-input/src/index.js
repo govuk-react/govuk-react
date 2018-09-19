@@ -157,9 +157,9 @@ DateInput.defaultProps = {
     year: undefined,
   },
   defaultValues: {
-    defaultDay: undefined,
-    defaultMonth: undefined,
-    defaultYear: undefined,
+    day: undefined,
+    month: undefined,
+    year: undefined,
   },
   refs: () => null,
   input: {
@@ -189,9 +189,9 @@ DateInput.propTypes = {
     year: PropTypes.string,
   }),
   defaultValues: {
-    defaultDay: PropTypes.any,
-    defaultMonth: PropTypes.any,
-    defaultYear: PropTypes.any,
+    day: PropTypes.any,
+    month: PropTypes.any,
+    year: PropTypes.any,
   },
   refs: PropTypes.func,
   input: PropTypes.shape({
