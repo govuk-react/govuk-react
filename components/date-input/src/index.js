@@ -16,6 +16,8 @@ import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
+import multiInputInput from 'multi-input-input';
+
 const StyledContainer = styled('div')(
   {
     display: 'flex',
@@ -167,6 +169,14 @@ DateInput.defaultProps = {
 };
 
 DateInput.propTypes = {
+  /**
+   * When the form field is controlled, this sets the value of the day, month and year inputs
+   */
+  value: PropTypes.shape({
+    day: PropTypes.number,
+    month: PropTypes.number,
+    year: PropTypes.number,
+  }),
   children: PropTypes.node.isRequired,
   /**
    * Optional hint text
@@ -189,6 +199,30 @@ DateInput.propTypes = {
     defaultMonth: PropTypes.any,
     defaultYear: PropTypes.any,
   },
+  refs: PropTypes.func,
+  /**
+   * Called when the day, month or year changes
+   */
+  onChange: PropTypes.func,
+  /**
+   * Called when the day, month or year fields are blurred
+   * (does not get called when moving between inputs in the same datefield)
+   * @type {[type]}
+   */
+  onBlur: PropTypes.func,
+  onFocus: PropTypes.func,
 };
 
-export default withWhiteSpace({ marginBottom: 6 })(DateInput);
+DateInput.defaultProps = {
+  value: {
+    day: null,
+    month: null,
+    year: null,
+  },
+  refs: () => null,
+  onChange: () => null,
+  onBlur: () => null,
+  onFocus: () => null,
+};
+
+export default withWhiteSpace({ marginBottom: 6 })(multiInputInput(DateInput));
