@@ -18,6 +18,8 @@ import { withWhiteSpace } from '@govuk-react/hoc';
 
 import multiInputInput from 'multi-input-input';
 
+import Input from './input';
+
 const StyledContainer = styled('div')(
   {
     display: 'flex',
@@ -116,16 +118,8 @@ const DateInput = ({
   children,
   errorText,
   hintText,
-  inputNames: {
-    day = 'dateInputDay',
-    month = 'dateInputMonth',
-    year = 'dateInputYear',
-  },
-  defaultValues: {
-    defaultDay = '',
-    defaultMonth = '',
-    defaultYear = '',
-  },
+  inputNames,
+  defaultValues,
   ...props
 }) => (
   <StyledContainer {...props} errorText={errorText}>
@@ -207,9 +201,12 @@ DateInput.propTypes = {
   /**
    * Called when the day, month or year fields are blurred
    * (does not get called when moving between inputs in the same datefield)
-   * @type {[type]}
    */
   onBlur: PropTypes.func,
+  /**
+   * Called when the day, month or year fields are focussed
+   * (does not get called when moving between inputs in the same datefield)
+   */
   onFocus: PropTypes.func,
 };
 
