@@ -26,7 +26,6 @@ const StyledList = styled('div')({
   },
 });
 
-
 const StyledInput = styled('input')(
   {
     boxSizing: 'border-box',

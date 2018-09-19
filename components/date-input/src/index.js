@@ -120,6 +120,7 @@ const DateInput = ({
   hintText,
   inputNames,
   defaultValues,
+  input,
   ...props
 }) => (
   <StyledContainer {...props} errorText={errorText}>
@@ -194,20 +195,22 @@ DateInput.propTypes = {
     defaultYear: PropTypes.any,
   },
   refs: PropTypes.func,
-  /**
-   * Called when the day, month or year changes
-   */
-  onChange: PropTypes.func,
-  /**
-   * Called when the day, month or year fields are blurred
-   * (does not get called when moving between inputs in the same datefield)
-   */
-  onBlur: PropTypes.func,
-  /**
-   * Called when the day, month or year fields are focussed
-   * (does not get called when moving between inputs in the same datefield)
-   */
-  onFocus: PropTypes.func,
+  input: PropTypes.shape({
+    /**
+     * Called when the day, month or year changes
+     */
+    onChange: PropTypes.func,
+    /**
+     * Called when the day, month or year fields are blurred
+     * (does not get called when moving between inputs in the same datefield)
+     */
+    onBlur: PropTypes.func,
+    /**
+     * Called when the day, month or year fields are focussed
+     * (does not get called when moving between inputs in the same datefield)
+     */
+    onFocus: PropTypes.func,
+  }),
 };
 
 DateInput.defaultProps = {
@@ -217,9 +220,11 @@ DateInput.defaultProps = {
     year: null,
   },
   refs: () => null,
-  onChange: () => null,
-  onBlur: () => null,
-  onFocus: () => null,
+  input: {
+    onChange: () => null,
+    onBlur: () => null,
+    onFocus: () => null,
+  },
 };
 
 export default withWhiteSpace({ marginBottom: 6 })(multiInputInput(DateInput));

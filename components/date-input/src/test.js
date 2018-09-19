@@ -57,4 +57,10 @@ describe('DateInput', () => {
   it('passes `props.children` to the rendered `wrapper` as `children`', () => {
     expect(wrapper.props.children).toBe(props.children);
   });
+
+
+  // TODO: works controlled and uncontrolled
+  // TODO: onBlur, onChange work as expected when tabbing between fields,
+  //       both controlled and uncontrolled
+  // TODO: defaultValues work controlled and uncontrolled
 });

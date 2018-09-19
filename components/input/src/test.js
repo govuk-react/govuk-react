@@ -20,6 +20,4 @@ describe('Input', () => {
   it('matches withColouredError snapshot', () => {
     expect(mount(withColouredError)).toMatchSnapshot('with coloured error mount');
   });
-
-  // TODO: works controlled and uncontrolled
 });
