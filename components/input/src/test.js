@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import { ORANGE } from 'govuk-colours';
 
@@ -9,16 +8,6 @@ describe('Input', () => {
   const wrapper = <Input type="text" />;
   const withError = <Input type="text" error="example" />;
   const withColouredError = <Input type="text" errorColor={ORANGE} error="example" />;
-
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(wrapper, div);
-  });
-
-  it('renders with error', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(withError, div);
-  });
 
   it('matches wrapper snapshot', () => {
     expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
@@ -31,4 +20,6 @@ describe('Input', () => {
   it('matches withColouredError snapshot', () => {
     expect(mount(withColouredError)).toMatchSnapshot('with coloured error mount');
   });
+
+  // TODO: works controlled and uncontrolled
 });
