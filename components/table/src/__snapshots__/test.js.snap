@@ -48,6 +48,7 @@ exports[`Table matches snapshot for example: example mount 1`] = `
   padding: 0.63158em 1.05263em 0.47368em 0;
   text-align: left;
   text-transform: none;
+  word-break: break-word;
 }
 
 .emotion-1:last-child {
@@ -155,6 +156,7 @@ exports[`Table matches snapshot for exampleWithHead: exampleWithHead mount 1`] =
   padding: 0.63158em 1.05263em 0.47368em 0;
   text-align: left;
   text-transform: none;
+  word-break: break-word;
 }
 
 .emotion-1:last-child {

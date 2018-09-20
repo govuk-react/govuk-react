@@ -24,6 +24,7 @@ const CellInner = styled('td')(({
   padding: '0.63158em 1.05263em 0.47368em 0',
   textAlign: alignRight ? 'right' : 'left',
   textTransform: 'none',
+  wordBreak: 'break-word',
   ':last-child': {
     paddingRight: 0,
   },
