@@ -163,12 +163,12 @@ Prop | Required | Default | Type | Description
  `className` |  | ```undefined``` | string | CSS Classname for outermost container
 
 
-DateInput
+DateField
 =========
 
 ### Import
 ```js
-  import DateInput from '@govuk-react/date-input';
+  import DateField from '@govuk-react/date-field';
 ```
 <!-- STORY -->
 
@@ -176,35 +176,35 @@ DateInput
 
 Simple
 ```jsx
-<DateInput>What is your date of birth?</DateInput>
+<DateField>What is your date of birth?</DateField>
 ```
 
 Date with hint text
 ```jsx
-<DateInput hintText="For example, 31 03 1980">
+<DateField hintText="For example, 31 03 1980">
   What is your date of birth?
-</DateInput>
+</DateField>
 ```
 
 Date with hint text & error
 ```jsx
-<DateInput
+<DateField
   hintText="For example, 31 03 1980"
   errorText="Error message goes here"
 >
   What is your date of birth?
-</DateInput>
+</DateField>
 ```
 
 With custom input name props
 ```jsx
-<DateInput inputNames={{ day: 'dayInputName' }} hintText="For example, 31 03 1980">
+<DateField inputNames={{ day: 'dayInputName' }} hintText="For example, 31 03 1980">
   What is your date of birth?
-</DateInput>
+</DateField>
 ```
 
 ### References:
-- https://github.com/alphagov/govuk-frontend/tree/master/src/components/date-input
+- https://github.com/alphagov/govuk-frontend/tree/master/src/components/date-field
 
 ### Properties
 Prop | Required | Default | Type | Description
@@ -212,7 +212,7 @@ Prop | Required | Default | Type | Description
  `children` | true | `````` | node | 
  `errorText` |  | ```undefined``` | string | Error text
  `hintText` |  | ```undefined``` | string | Optional hint text
- `inputNames` |  | ```{   day: 'dateInputDay',   month: 'dateInputMonth',   year: 'dateInputYear', }``` | shape[object Object] | Input name attributes
+ `inputNames` |  | ```{   day: 'DateFieldDay',   month: 'DateFieldMonth',   year: 'DateFieldYear', }``` | shape[object Object] | Input name attributes
 
 
 DocumentFooterMetadata

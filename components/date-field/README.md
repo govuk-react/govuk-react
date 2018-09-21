@@ -3,7 +3,7 @@ DateField
 
 ### Import
 ```js
-  import DateField from '@govuk-react/date-input';
+  import DateField from '@govuk-react/date-field';
 ```
 <!-- STORY -->
 
@@ -45,7 +45,7 @@ With custom input name props
 ```
 
 ### References:
-- https://github.com/alphagov/govuk-frontend/tree/master/src/components/date-input
+- https://github.com/alphagov/govuk-frontend/tree/master/src/components/date-field
 
 ### Properties
 Prop | Required | Default | Type | Description
