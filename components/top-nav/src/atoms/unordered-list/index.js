@@ -5,9 +5,9 @@ import {
 } from '@govuk-react/constants';
 
 const Ul = styled('ul')(({
-  serviceTitle,
+  serviceTitle, open,
 }) => ({
-  display: 'none',
+  display: open ? 'flex' : 'none',
   flexWrap: 'wrap',
   margin: 0,
   padding: 0,

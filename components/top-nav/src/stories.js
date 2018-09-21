@@ -99,8 +99,12 @@ examples.add('everything but serviceTitle', () => (
 
 examples.add('everything', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
-    <NavAnchor href="https://example.com?q=catdog" target="new">Navigation item #1</NavAnchor>
-    <NavAnchor href="https://example.com?q=dogcat" target="new">Navigation item #2</NavAnchor>
+    <NavAnchor href="https://example.com?q=catdog" target="new">Navigation item</NavAnchor>
+    <NavAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavAnchor>
+    <NavAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavAnchor>
+    <NavAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavAnchor>
+    <NavAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavAnchor>
+    <NavAnchor href="https://example.com?q=dogcat" target="new">Navigation item</NavAnchor>
   </TopNav>
 ));
 
