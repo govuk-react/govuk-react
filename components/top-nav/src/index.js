@@ -176,7 +176,7 @@ class TopNav extends Component {
                   />
                 </MenuButtonWrapper>
                 {/* Referenced in MenuButton */}
-                <Input id="govuk-react-menu-button" type="checkbox" />
+                <Input id="govuk-react-menu-button" type="checkbox" checked={this.state.navigationOpen} />
                 <UnorderedList id="govuk-react-menu" serviceTitle={serviceTitle} open={this.state.navigationOpen}>
                   {/* TODO #205 use context api and/or render props here for `active` */}
                   {children.length && children.map ? (

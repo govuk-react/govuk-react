@@ -378,10 +378,12 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                 </div>
               </Styled(div)>
               <Styled(input)
+                checked={false}
                 id="govuk-react-menu-button"
                 type="checkbox"
               >
                 <input
+                  checked={false}
                   className="emotion-7"
                   id="govuk-react-menu-button"
                   type="checkbox"
@@ -802,10 +804,12 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                 </div>
               </Styled(div)>
               <Styled(input)
+                checked={false}
                 id="govuk-react-menu-button"
                 type="checkbox"
               >
                 <input
+                  checked={false}
                   className="emotion-7"
                   id="govuk-react-menu-button"
                   type="checkbox"
