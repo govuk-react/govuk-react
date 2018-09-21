@@ -53,7 +53,7 @@ const StyledInput = styled('input')(
   }),
 );
 
-class OptionalDateInput extends React.Component {
+class OptionalDateField extends React.Component {
   inputs = {}
 
   renderInput(label, name, key, defaultValue, error) {
@@ -89,7 +89,7 @@ class OptionalDateInput extends React.Component {
   }
 }
 
-OptionalDateInput.propTypes = {
+OptionalDateField.propTypes = {
   names: PropTypes.shape({
     day: PropTypes.string,
     month: PropTypes.string,
@@ -117,12 +117,12 @@ OptionalDateInput.propTypes = {
   error: PropTypes.bool,
 };
 
-OptionalDateInput.defaultProps = {
+OptionalDateField.defaultProps = {
   value: undefined,
   names: {
-    day: 'dateInputDay',
-    month: 'dateInputMonth',
-    year: 'dateInputYear',
+    day: 'DateFieldDay',
+    month: 'DateFieldMonth',
+    year: 'DateFieldYear',
   },
   defaultValues: {
     day: '',
@@ -142,4 +142,4 @@ OptionalDateInput.defaultProps = {
 };
 
 // This component is dependent on multiInputInput HOC so we always export with HOC
-export default multiInputInput(OptionalDateInput);
+export default multiInputInput(OptionalDateField);

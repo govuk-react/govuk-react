@@ -1,5 +1,5 @@
 {
-  "name": "@govuk-react/date-input",
+  "name": "@govuk-react/date-field",
   "version": "0.2.12",
   "dependencies": {
     "@govuk-react/constants": "^0.2.7",
@@ -27,8 +27,8 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/date-input",
-  "description": "Date input component displaying day, month and year and featuring several configurable options.",
+  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/date-field",
+  "description": "Date field component displaying day, month and year and featuring several configurable options.",
   "private": false,
   "publishConfig": {
     "access": "public"

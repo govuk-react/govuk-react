@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 
-import DateInput from './';
+import DateField from './';
 
-describe('DateInput', () => {
+describe('DateField', () => {
   const example = 'example';
-  const wrapper = <DateInput errorText={example}>{example}</DateInput>;
+  const wrapper = <DateField errorText={example}>{example}</DateField>;
   let props;
 
   beforeEach(() => {
@@ -18,9 +18,9 @@ describe('DateInput', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
-      <DateInput errorText={example} hintText={example}>
+      <DateField errorText={example} hintText={example}>
         {example}
-      </DateInput>,
+      </DateField>,
       div,
     );
   });
@@ -31,7 +31,7 @@ describe('DateInput', () => {
   });
 
   it('should render one input with name attributes if only a day input name is passed', () => {
-    const output = mount(<DateInput inputNames={{ day: 'dayInputName' }} errorText={example}>{example}</DateInput>);
+    const output = mount(<DateField inputNames={{ day: 'dayInputName' }} errorText={example}>{example}</DateField>);
     expect(output.find('input[name]')).toHaveLength(1);
   });
 
@@ -41,7 +41,7 @@ describe('DateInput', () => {
   });
 
   it('should render two defaultValue attributes if two defaultValues are passed', () => {
-    const output = mount(<DateInput defaultValues={{ day: '1', month: '2' }} errorText={example}>{example}</DateInput>);
+    const output = mount(<DateField defaultValues={{ day: '1', month: '2' }} errorText={example}>{example}</DateField>);
     expect(output.find('input[defaultValue]')).toHaveLength(2);
   });
 
@@ -55,8 +55,8 @@ describe('DateInput', () => {
   });
 
   it('passes `props` to the rendered label', () => {
-    expect(mount(<DateInput errorText={example}>{example}</DateInput>).find('input')).toHaveLength(3);
-    expect(mount(<DateInput hintText={example}>{example}</DateInput>).find('div')).toHaveLength(2);
+    expect(mount(<DateField errorText={example}>{example}</DateField>).find('input')).toHaveLength(3);
+    expect(mount(<DateField hintText={example}>{example}</DateField>).find('div')).toHaveLength(2);
   });
 
   it('passes `props.children` to the rendered `wrapper` as `children`', () => {
