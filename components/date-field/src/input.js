@@ -110,10 +110,13 @@ OptionalDateField.propTypes = {
     month: PropTypes.string,
     year: PropTypes.string,
   }),
-  refs: PropTypes.func,
-  onChange: PropTypes.func,
-  onBlur: PropTypes.func,
-  onFocus: PropTypes.func,
+  /**
+   * This comes from the multiInputInput HOC and is needed to track all 3 inputs
+   */
+  refs: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onBlur: PropTypes.func.isRequired,
+  onFocus: PropTypes.func.isRequired,
   error: PropTypes.bool,
 };
 
@@ -135,10 +138,6 @@ OptionalDateField.defaultProps = {
     year: 'Year',
   },
   error: false,
-  refs: () => null,
-  onChange: () => null,
-  onBlur: () => null,
-  onFocus: () => null,
 };
 
 // This component is dependent on multiInputInput HOC so we always export with HOC
