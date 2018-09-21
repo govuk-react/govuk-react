@@ -186,14 +186,6 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
         }
       }
       errorText="example"
-      input={
-        Object {
-          "onBlur": [Function],
-          "onChange": [Function],
-          "onFocus": [Function],
-          "value": undefined,
-        }
-      }
       inputNames={
         Object {
           "day": undefined,
