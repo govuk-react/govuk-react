@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
-.emotion-31 {
+.emotion-13 {
   margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-31 {
+  .emotion-13 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   cursor: pointer;
   color: #005ea5;
   font-family: "nta",Arial,sans-serif;
@@ -20,11 +20,11 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
   margin-bottom: 5px;
 }
 
-.emotion-2:hover {
+.emotion-1:hover {
   color: #2b8cc4;
 }
 
-.emotion-2:focus {
+.emotion-1:focus {
   outline: 4px solid #ffbf47;
   background: #ffbf47;
 }
@@ -36,17 +36,17 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
   text-decoration-skip-ink: none;
 }
 
-.emotion-20 {
+.emotion-8 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-20 {
+  .emotion-8 {
     margin-bottom: 0;
   }
 }
 
-.emotion-25 {
+.emotion-10 {
   box-sizing: border-box;
   border-left-style: solid;
   border-left-width: 5px;
@@ -56,22 +56,22 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-25 {
+  .emotion-10 {
     margin-bottom: 0;
   }
 }
 
-.emotion-10 {
+.emotion-4 {
   margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-10 {
+  .emotion-4 {
     margin-bottom: 20px;
   }
 }
 
-.emotion-5 {
+.emotion-2 {
   font-family: "nta",Arial,sans-serif;
   margin: 0;
   font-size: 16px;
@@ -79,11 +79,11 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-5 > p {
+.emotion-2 > p {
   margin: 0;
 }
 
-.emotion-5 > p > code {
+.emotion-2 > p > code {
   padding: 0.2em 0.4em;
   margin: 0px;
   font-size: 85%;
@@ -91,7 +91,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
   border-radius: 3px;
 }
 
-.emotion-5 > pre {
+.emotion-2 > pre {
   padding: 16px;
   overflow: auto;
   font-size: 85%;
@@ -100,7 +100,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
   border-radius: 3px;
 }
 
-.emotion-5 > pre > code {
+.emotion-2 > pre > code {
   display: inline;
   padding: 0px;
   margin: 0px;
@@ -111,19 +111,19 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-5 {
+  .emotion-2 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-5 {
+  .emotion-2 {
     margin-bottom: 20px;
   }
 }
 
-.emotion-15 {
+.emotion-6 {
   font-family: "nta",Arial,sans-serif;
   margin: 0;
   font-size: 16px;
@@ -131,11 +131,11 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-15 > p {
+.emotion-6 > p {
   margin: 0;
 }
 
-.emotion-15 > p > code {
+.emotion-6 > p > code {
   padding: 0.2em 0.4em;
   margin: 0px;
   font-size: 85%;
@@ -143,7 +143,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
   border-radius: 3px;
 }
 
-.emotion-15 > pre {
+.emotion-6 > pre {
   padding: 16px;
   overflow: auto;
   font-size: 85%;
@@ -152,7 +152,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
   border-radius: 3px;
 }
 
-.emotion-15 > pre > code {
+.emotion-6 > pre > code {
   display: inline;
   padding: 0px;
   margin: 0px;
@@ -163,68 +163,67 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-15 {
+  .emotion-6 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-15 {
+  .emotion-6 {
     margin-bottom: 0;
   }
 }
 
 <_default>
-  <StyledHoc
+  <Styled(HiddenText)
     summaryText="Help with nationality"
   >
     <HiddenText
-      className="emotion-31 emotion-4"
+      className="emotion-13"
       summaryText="Help with nationality"
     >
       <details
-        className="emotion-31 emotion-4"
+        className="emotion-13"
       >
-        <StyledSummary>
+        <Styled(summary)>
           <summary
-            className="emotion-2 emotion-3"
+            className="emotion-1"
           >
-            <StyledSpan>
+            <Styled(span)>
               <span
-                className="emotion-0 emotion-1"
+                className="emotion-0"
               >
                 Help with nationality
               </span>
-            </StyledSpan>
+            </Styled(span)>
           </summary>
-        </StyledSummary>
-        <StyledHoc
+        </Styled(summary)>
+        <Styled(InsetText)
           isNarrow={true}
           mb={0}
         >
           <InsetText
-            className="emotion-20 emotion-4"
+            className="emotion-8"
             isNarrow={true}
             mb={0}
           >
-            <StyledInsetText
-              className="emotion-20 emotion-4"
+            <Styled(div)
+              className="emotion-8"
               isNarrow={true}
               mb={0}
             >
               <div
-                className="emotion-4 emotion-25 emotion-6"
+                className="emotion-10"
               >
-                <StyledHoc
+                <Styled(Paragraph)
                   key="paragraphText1"
                 >
                   <Paragraph
-                    className="emotion-10 emotion-4"
-                    linkRenderer={[Function]}
+                    className="emotion-4"
                     supportingText={false}
                   >
-                    <StyledParagraph
+                    <Styled(ReactMarkdown)
                       allowedTypes={
                         Array [
                           "paragraph",
@@ -235,9 +234,8 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                           "code",
                         ]
                       }
-                      className="emotion-10 emotion-4"
+                      className="emotion-4"
                       escapeHtml={false}
-                      linkRenderer={[Function]}
                       renderers={
                         Object {
                           "link": [Function],
@@ -259,9 +257,8 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                           ]
                         }
                         astPlugins={Array []}
-                        className="emotion-4 emotion-5 emotion-6"
+                        className="emotion-2"
                         escapeHtml={false}
-                        linkRenderer={[Function]}
                         plugins={Array []}
                         rawSourcePos={false}
                         renderers={
@@ -276,7 +273,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                         transformLinkUri={[Function]}
                       >
                         <div
-                          className="emotion-4 emotion-5 emotion-6"
+                          className="emotion-2"
                           key="root-1-1"
                         >
                           <p
@@ -286,20 +283,19 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                           </p>
                         </div>
                       </ReactMarkdown>
-                    </StyledParagraph>
+                    </Styled(ReactMarkdown)>
                   </Paragraph>
-                </StyledHoc>
-                <StyledHoc
+                </Styled(Paragraph)>
+                <Styled(Paragraph)
                   key="paragraphText2"
                   mb={0}
                 >
                   <Paragraph
-                    className="emotion-20 emotion-4"
-                    linkRenderer={[Function]}
+                    className="emotion-8"
                     mb={0}
                     supportingText={false}
                   >
-                    <StyledParagraph
+                    <Styled(ReactMarkdown)
                       allowedTypes={
                         Array [
                           "paragraph",
@@ -310,9 +306,8 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                           "code",
                         ]
                       }
-                      className="emotion-20 emotion-4"
+                      className="emotion-8"
                       escapeHtml={false}
-                      linkRenderer={[Function]}
                       mb={0}
                       renderers={
                         Object {
@@ -335,9 +330,8 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                           ]
                         }
                         astPlugins={Array []}
-                        className="emotion-4 emotion-15 emotion-6"
+                        className="emotion-6"
                         escapeHtml={false}
-                        linkRenderer={[Function]}
                         mb={0}
                         plugins={Array []}
                         rawSourcePos={false}
@@ -353,7 +347,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                         transformLinkUri={[Function]}
                       >
                         <div
-                          className="emotion-4 emotion-15 emotion-6"
+                          className="emotion-6"
                           key="root-1-1"
                         >
                           <p
@@ -363,15 +357,15 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                           </p>
                         </div>
                       </ReactMarkdown>
-                    </StyledParagraph>
+                    </Styled(ReactMarkdown)>
                   </Paragraph>
-                </StyledHoc>
+                </Styled(Paragraph)>
               </div>
-            </StyledInsetText>
+            </Styled(div)>
           </InsetText>
-        </StyledHoc>
+        </Styled(InsetText)>
       </details>
     </HiddenText>
-  </StyledHoc>
+  </Styled(HiddenText)>
 </_default>
 `;
