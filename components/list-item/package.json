@@ -1,8 +1,8 @@
 {
   "name": "@govuk-react/list-item",
-  "version": "0.2.7",
+  "version": "0.2.12",
   "devDependencies": {
-    "@govuk-react/storybook-components": "^0.2.7",
+    "@govuk-react/storybook-components": "^0.2.12",
     "@storybook/addon-knobs": "^3.4.2"
   },
   "dependencies": {
