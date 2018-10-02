@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { action } from '@storybook/addon-actions';
 
 import DateField from '.';
 import ReadMe from '../README.md';
@@ -8,10 +9,43 @@ import ReadMe from '../README.md';
 const stories = storiesOf('Form/Date field', module);
 const examples = storiesOf('Form/Date field/Examples', module);
 
+class ManagedDateField extends React.Component {
+  state = {
+    value: {
+      day: 0,
+      month: 1,
+      year: 2,
+    },
+  }
+  render() {
+    const input = {
+      ...(this.props.input),
+      value: this.state.value,
+      onChange: (value) => {
+        this.setState({
+          value,
+        });
+      },
+    };
+    return <DateField {...this.props} input={input} />;
+  }
+}
+
+
 stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
-  <DateField inputNames={{ day: 'dayInputName' }}>What is your date of birth?</DateField>
+  <ManagedDateField
+    input={{
+      onFocus: action('date-focus'),
+      onBlur: action('date-blur'),
+      onChange: action('date-change'),
+
+    }}
+    inputNames={{ day: 'dayInputName' }}
+  >
+    What is your date of birth?
+  </ManagedDateField>
 ));
 
 examples.add('Date with hint text', () => (
