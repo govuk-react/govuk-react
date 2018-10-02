@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow, mount } from 'enzyme';
+import { shallow, mount, render } from 'enzyme';
+import sinon from 'sinon';
 
 import DateField from './';
 
@@ -63,9 +64,64 @@ describe('DateField', () => {
     expect(wrapper.props.children).toBe(props.children);
   });
 
+  it('calls onBlur', () => {
+    const spy = sinon.spy();
+
+    mount(<DateField onBlur={spy} />)
+      .find('input').first()
+      .simulate('blur');
+    expect(spy).toHaveProperty('callCount', 1);
+  });
+
+  it('calls onFocus', () => {
+    const spy = sinon.spy();
+
+    mount(<DateField onFocus={spy} />)
+      .find('input').first()
+      .simulate('focus');
+    expect(spy).toHaveProperty('callCount', 1);
+  });
+
+  it('does not call onFocus when moving between fields ', () => {
+    const spy = sinon.spy();
+
+    const inst = mount(<DateField input={{
+        onFocus: (...rest) => {
+          spy(...rest);
+        },
+      }}
+    />);
+    const input1 = inst.find('input').first();
+    const input2 = inst.find('input').at(1);
+
+    // Focus first input
+    input1
+      .simulate('focus', {
+      });
+    // Then simulate tab to second input, first by blurring first input
+    input1
+      .simulate('blur', {
+        relatedTarget: input2.instance(), // relatedTarget for blur is what will next receive focus
+      });
+    // Then focus the new input
+    input2
+      .simulate('focus', {
+        relatedTarget: input1.instance(), // relatedTarget for focus is what has lost focus
+      });
+    expect(spy).toHaveProperty('callCount', 1);
+  });
+
+  it('calls onChange', () => {
+    const spy = sinon.spy();
+
+    mount(<DateField onChange={spy} />)
+      .find('input').first()
+      .simulate('change');
+    expect(spy).toHaveProperty('callCount', 1);
+  });
 
   // TODO: works controlled and uncontrolled
-  // TODO: onBlur, onChange work as expected when tabbing between fields,
+  // TODO: onBlur, onChange, onFocus work as expected when tabbing between fields,
   //       both controlled and uncontrolled
   // TODO: defaultValues work controlled and uncontrolled
 });

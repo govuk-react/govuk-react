@@ -300,6 +300,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                         :
                         <Styled(input)
                           error={true}
+                          innerRef={[Function]}
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -331,6 +332,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                         :
                         <Styled(input)
                           error={true}
+                          innerRef={[Function]}
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -362,6 +364,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                         :
                         <Styled(input)
                           error={true}
+                          innerRef={[Function]}
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
