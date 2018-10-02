@@ -69,7 +69,7 @@ class OptionalDateField extends React.Component {
           onChange={e => this.props.onChange(e, key)}
           onBlur={e => this.props.onBlur(e, key)}
           onFocus={e => this.props.onFocus(e, key)}
-          ref={(input) => { this.inputs[key] = input; this.props.refs(this.inputs); }}
+          innerRef={(input) => { this.inputs[key] = input; this.props.refs(this.inputs); }}
         />
       </Label>);
   }
