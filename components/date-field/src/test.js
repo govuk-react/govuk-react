@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow, mount, render } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 
 import DateField from './';
+
+// TODO: all snapshot tests in this file should be moved to fixtures and included in stories
 
 describe('DateField', () => {
   const example = 'example';
