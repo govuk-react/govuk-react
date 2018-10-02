@@ -55,6 +55,17 @@ describe('DateField', () => {
     expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
   });
 
+  it('should support setting value', () => {
+    const output = mount(<DateField input={{ value: { day: '1', month: '2', year: '3' } }} />);
+    expect(output).toMatchSnapshot('value 1 2 3');
+    expect(output.find('input').first().props().value).toBe('1');
+  });
+
+  it('should support null value', () => {
+    const output = mount(<DateField input={{ value: null }} />);
+    expect(output).toMatchSnapshot('null value');
+  });
+
   it('passes `props` to the rendered label', () => {
     expect(mount(<DateField errorText={example}>{example}</DateField>).find('input')).toHaveLength(3);
     expect(mount(<DateField hintText={example}>{example}</DateField>).find('div')).toHaveLength(2);

@@ -207,9 +207,9 @@ DateField.propTypes = {
      * When the form field is controlled, this sets the value of the day, month and year inputs
      */
     value: PropTypes.shape({
-      day: PropTypes.number,
-      month: PropTypes.number,
-      year: PropTypes.number,
+      day: PropTypes.string,
+      month: PropTypes.string,
+      year: PropTypes.string,
     }),
   }),
 };

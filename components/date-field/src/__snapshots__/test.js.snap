@@ -391,3 +391,717 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
   </DateField>
 </Styled(DateField)>
 `;
+
+exports[`DateField should support null value: null value 1`] = `
+.emotion-17 {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-17 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-15 {
+  font-family: "nta",Arial,sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-15 > label {
+  width: 50px;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.emotion-15 > label.year {
+  width: 70px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+.emotion-4:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-16 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+  border: 2px solid #0b0c0c;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+.emotion-3:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+<Styled(DateField)
+  input={
+    Object {
+      "value": null,
+    }
+  }
+>
+  <DateField
+    className="emotion-17"
+    defaultValues={
+      Object {
+        "day": undefined,
+        "month": undefined,
+        "year": undefined,
+      }
+    }
+    input={
+      Object {
+        "value": null,
+      }
+    }
+    inputNames={
+      Object {
+        "day": undefined,
+        "month": undefined,
+        "year": undefined,
+      }
+    }
+  >
+    <Styled(div)
+      className="emotion-17"
+    >
+      <div
+        className="emotion-16"
+      >
+        <Styled(LabelText)>
+          <LabelText
+            className="emotion-1"
+          >
+            <Styled(span)
+              className="emotion-1"
+            >
+              <span
+                className="emotion-0"
+              />
+            </Styled(span)>
+          </LabelText>
+        </Styled(LabelText)>
+        <span />
+        <span />
+        <MultiInputInput
+          defaultValues={
+            Object {
+              "day": undefined,
+              "month": undefined,
+              "year": undefined,
+            }
+          }
+          error={false}
+          names={
+            Object {
+              "day": undefined,
+              "month": undefined,
+              "year": undefined,
+            }
+          }
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          value={null}
+        >
+          <OptionalDateField
+            defaultValues={
+              Object {
+                "day": undefined,
+                "month": undefined,
+                "year": undefined,
+              }
+            }
+            error={false}
+            labels={
+              Object {
+                "day": "Day",
+                "month": "Month",
+                "year": "Year",
+              }
+            }
+            names={
+              Object {
+                "day": undefined,
+                "month": undefined,
+                "year": undefined,
+              }
+            }
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            refs={[Function]}
+            value={null}
+          >
+            <Styled(div)>
+              <div
+                className="emotion-15"
+              >
+                <Styled(Label)>
+                  <Label
+                    className="emotion-1"
+                  >
+                    <Styled(label)
+                      className="emotion-1"
+                    >
+                      <label
+                        className="emotion-4"
+                      >
+                        Day
+                        :
+                        <Styled(input)
+                          error={false}
+                          innerRef={[Function]}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="text"
+                        >
+                          <input
+                            className="emotion-3"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            type="text"
+                          />
+                        </Styled(input)>
+                      </label>
+                    </Styled(label)>
+                  </Label>
+                </Styled(Label)>
+                <Styled(Label)>
+                  <Label
+                    className="emotion-1"
+                  >
+                    <Styled(label)
+                      className="emotion-1"
+                    >
+                      <label
+                        className="emotion-4"
+                      >
+                        Month
+                        :
+                        <Styled(input)
+                          error={false}
+                          innerRef={[Function]}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="text"
+                        >
+                          <input
+                            className="emotion-3"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            type="text"
+                          />
+                        </Styled(input)>
+                      </label>
+                    </Styled(label)>
+                  </Label>
+                </Styled(Label)>
+                <Styled(Label)>
+                  <Label
+                    className="emotion-1"
+                  >
+                    <Styled(label)
+                      className="emotion-1"
+                    >
+                      <label
+                        className="emotion-4"
+                      >
+                        Year
+                        :
+                        <Styled(input)
+                          error={false}
+                          innerRef={[Function]}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="text"
+                        >
+                          <input
+                            className="emotion-3"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            type="text"
+                          />
+                        </Styled(input)>
+                      </label>
+                    </Styled(label)>
+                  </Label>
+                </Styled(Label)>
+              </div>
+            </Styled(div)>
+          </OptionalDateField>
+        </MultiInputInput>
+      </div>
+    </Styled(div)>
+  </DateField>
+</Styled(DateField)>
+`;
+
+exports[`DateField should support setting value: value 1 2 3 1`] = `
+.emotion-17 {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-17 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-1 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-0 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-15 {
+  font-family: "nta",Arial,sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-15 > label {
+  width: 50px;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.emotion-15 > label.year {
+  width: 70px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+.emotion-4:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-4 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-16 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+  border: 2px solid #0b0c0c;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+.emotion-3:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+<Styled(DateField)
+  input={
+    Object {
+      "value": Object {
+        "day": "1",
+        "month": "2",
+        "year": "3",
+      },
+    }
+  }
+>
+  <DateField
+    className="emotion-17"
+    defaultValues={
+      Object {
+        "day": undefined,
+        "month": undefined,
+        "year": undefined,
+      }
+    }
+    input={
+      Object {
+        "value": Object {
+          "day": "1",
+          "month": "2",
+          "year": "3",
+        },
+      }
+    }
+    inputNames={
+      Object {
+        "day": undefined,
+        "month": undefined,
+        "year": undefined,
+      }
+    }
+  >
+    <Styled(div)
+      className="emotion-17"
+    >
+      <div
+        className="emotion-16"
+      >
+        <Styled(LabelText)>
+          <LabelText
+            className="emotion-1"
+          >
+            <Styled(span)
+              className="emotion-1"
+            >
+              <span
+                className="emotion-0"
+              />
+            </Styled(span)>
+          </LabelText>
+        </Styled(LabelText)>
+        <span />
+        <span />
+        <MultiInputInput
+          defaultValues={
+            Object {
+              "day": undefined,
+              "month": undefined,
+              "year": undefined,
+            }
+          }
+          error={false}
+          names={
+            Object {
+              "day": undefined,
+              "month": undefined,
+              "year": undefined,
+            }
+          }
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          value={
+            Object {
+              "day": "1",
+              "month": "2",
+              "year": "3",
+            }
+          }
+        >
+          <OptionalDateField
+            defaultValues={
+              Object {
+                "day": undefined,
+                "month": undefined,
+                "year": undefined,
+              }
+            }
+            error={false}
+            labels={
+              Object {
+                "day": "Day",
+                "month": "Month",
+                "year": "Year",
+              }
+            }
+            names={
+              Object {
+                "day": undefined,
+                "month": undefined,
+                "year": undefined,
+              }
+            }
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            refs={[Function]}
+            value={
+              Object {
+                "day": "1",
+                "month": "2",
+                "year": "3",
+              }
+            }
+          >
+            <Styled(div)>
+              <div
+                className="emotion-15"
+              >
+                <Styled(Label)>
+                  <Label
+                    className="emotion-1"
+                  >
+                    <Styled(label)
+                      className="emotion-1"
+                    >
+                      <label
+                        className="emotion-4"
+                      >
+                        Day
+                        :
+                        <Styled(input)
+                          error={false}
+                          innerRef={[Function]}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="text"
+                          value="1"
+                        >
+                          <input
+                            className="emotion-3"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            type="text"
+                            value="1"
+                          />
+                        </Styled(input)>
+                      </label>
+                    </Styled(label)>
+                  </Label>
+                </Styled(Label)>
+                <Styled(Label)>
+                  <Label
+                    className="emotion-1"
+                  >
+                    <Styled(label)
+                      className="emotion-1"
+                    >
+                      <label
+                        className="emotion-4"
+                      >
+                        Month
+                        :
+                        <Styled(input)
+                          error={false}
+                          innerRef={[Function]}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="text"
+                          value="2"
+                        >
+                          <input
+                            className="emotion-3"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            type="text"
+                            value="2"
+                          />
+                        </Styled(input)>
+                      </label>
+                    </Styled(label)>
+                  </Label>
+                </Styled(Label)>
+                <Styled(Label)>
+                  <Label
+                    className="emotion-1"
+                  >
+                    <Styled(label)
+                      className="emotion-1"
+                    >
+                      <label
+                        className="emotion-4"
+                      >
+                        Year
+                        :
+                        <Styled(input)
+                          error={false}
+                          innerRef={[Function]}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="text"
+                          value="3"
+                        >
+                          <input
+                            className="emotion-3"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            type="text"
+                            value="3"
+                          />
+                        </Styled(input)>
+                      </label>
+                    </Styled(label)>
+                  </Label>
+                </Styled(Label)>
+              </div>
+            </Styled(div)>
+          </OptionalDateField>
+        </MultiInputInput>
+      </div>
+    </Styled(div)>
+  </DateField>
+</Styled(DateField)>
+`;
