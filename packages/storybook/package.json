@@ -6,7 +6,7 @@
     "@govuk-react/breadcrumb": "^0.2.12",
     "@govuk-react/button": "^0.2.12",
     "@govuk-react/checkbox": "^0.2.12",
-    "@govuk-react/date-field": "^0.2.9",
+    "@govuk-react/date-field": "^0.2.12",
     "@govuk-react/document-footer-metadata": "^0.2.12",
     "@govuk-react/error-summary": "^0.2.12",
     "@govuk-react/error-text": "^0.2.12",
