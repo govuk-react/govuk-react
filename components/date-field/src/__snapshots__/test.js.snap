@@ -212,7 +212,6 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
             </Styled(span)>
           </LabelText>
         </Styled(LabelText)>
-        <span />
         <Styled(ErrorText)
           errorText="example"
         >
@@ -574,8 +573,6 @@ exports[`DateField should support null value: null value 1`] = `
             </Styled(span)>
           </LabelText>
         </Styled(LabelText)>
-        <span />
-        <span />
         <MultiInputInput
           defaultValues={
             Object {
@@ -926,8 +923,6 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
             </Styled(span)>
           </LabelText>
         </Styled(LabelText)>
-        <span />
-        <span />
         <MultiInputInput
           defaultValues={
             Object {

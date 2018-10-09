@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
-import sinon from 'sinon';
 
 import DateField from './';
 
@@ -78,25 +77,25 @@ describe('DateField', () => {
   });
 
   it('calls onBlur', () => {
-    const spy = sinon.spy();
+    const spy = jest.fn();
 
     mount(<DateField onBlur={spy} />)
       .find('input').first()
       .simulate('blur');
-    expect(spy).toHaveProperty('callCount', 1);
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 
   it('calls onFocus', () => {
-    const spy = sinon.spy();
+    const spy = jest.fn();
 
     mount(<DateField onFocus={spy} />)
       .find('input').first()
       .simulate('focus');
-    expect(spy).toHaveProperty('callCount', 1);
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 
   it('does not call onFocus when moving between fields ', () => {
-    const spy = sinon.spy();
+    const spy = jest.fn();
 
     const inst = mount(<DateField input={{
         onFocus: (...rest) => {
@@ -121,16 +120,16 @@ describe('DateField', () => {
       .simulate('focus', {
         relatedTarget: input1.instance(), // relatedTarget for focus is what has lost focus
       });
-    expect(spy).toHaveProperty('callCount', 1);
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 
   it('calls onChange', () => {
-    const spy = sinon.spy();
+    const spy = jest.fn();
 
     mount(<DateField onChange={spy} />)
       .find('input').first()
       .simulate('change');
-    expect(spy).toHaveProperty('callCount', 1);
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 
   // TODO: works controlled and uncontrolled
