@@ -12,7 +12,8 @@ const plugins =  [
   [
     "@babel/plugin-transform-runtime",
     { "helpers": false, "polyfill": false, "regenerator": true }
-  ]
+  ],
+  ["emotion", { "autoLabel": true }]
 ];
 
 const ignore = [".spec.js", ".test.js", "-test.js", "/__tests__/"];
