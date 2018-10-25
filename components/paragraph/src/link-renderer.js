@@ -6,7 +6,7 @@ import Anchor from './atoms/anchor';
 // Support react-router links
 // https://github.com/rexxars/react-markdown/issues/29#issuecomment-231556543
 const LinkRenderer = ({ href, children }) => (
-  href.match(/^\//)
+  /^\//.test(href)
     ? <Link to={href}>{children}</Link>
     : <Anchor href={href}>{children}</Anchor>
 );
