@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-3 {
+.emotion-7 {
   margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-7 {
     margin-bottom: 15px;
   }
 }
 
-.emotion-2 {
+.emotion-5 {
   background-color: #28a197;
   color: #ffffff;
   padding: 30px;
@@ -19,7 +19,7 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-2 {
+  .emotion-5 {
     margin-bottom: 15px;
   }
 }
@@ -41,7 +41,7 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-.emotion-1 {
+.emotion-2 {
   font-family: "nta",Arial,sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -53,43 +53,43 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-2 {
     font-size: 36px;
     line-height: 40px;
   }
 }
 
-<Styled(Panel)
+<StyledHoc
   panelBody="body"
   panelTitle="Example"
 >
   <Panel
-    className="emotion-3"
+    className="emotion-7 emotion-4"
     panelBody="body"
     panelTitle="Example"
   >
-    <Styled(div)
-      className="emotion-3"
+    <StyledPanel
+      className="emotion-7 emotion-4"
     >
       <div
-        className="emotion-2"
+        className="emotion-4 emotion-5 emotion-6"
       >
-        <Styled(h2)>
+        <StyledTitle>
           <h2
-            className="emotion-0"
+            className="emotion-0 emotion-1"
           >
             Example
           </h2>
-        </Styled(h2)>
-        <Styled(div)>
+        </StyledTitle>
+        <StyledBody>
           <div
-            className="emotion-1"
+            className="emotion-2 emotion-3"
           >
             body
           </div>
-        </Styled(div)>
+        </StyledBody>
       </div>
-    </Styled(div)>
+    </StyledPanel>
   </Panel>
-</Styled(Panel)>
+</StyledHoc>
 `;

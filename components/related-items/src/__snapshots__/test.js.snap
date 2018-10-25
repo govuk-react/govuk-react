@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-7 {
+.emotion-17 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-7 {
+  .emotion-17 {
     margin-bottom: 0;
   }
 }
 
-.emotion-22 {
+.emotion-51 {
   border-top: 10px solid #005ea5;
   padding-top: 5px;
   width: 100%;
@@ -19,31 +19,31 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-22 {
+  .emotion-51 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-.emotion-22 > h3 {
+.emotion-51 > h3 {
   margin-bottom: 10px;
 }
 
-.emotion-22 > ul {
+.emotion-51 > ul {
   margin-bottom: 20px;
 }
 
-.emotion-22 > ul > li {
+.emotion-51 > ul > li {
   margin-bottom: calc(10px + 2px);
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-22 {
+  .emotion-51 {
     margin-bottom: 0;
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
@@ -53,7 +53,7 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 24px;
     line-height: 1.25;
     margin-bottom: 20px;
@@ -61,12 +61,12 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media print {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 16px;
   }
 }
 
-.emotion-19 {
+.emotion-44 {
   margin: 0;
   padding: 0;
   padding-left: 20px;
@@ -82,19 +82,19 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-19 {
+  .emotion-44 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-19 {
+  .emotion-44 {
     margin-bottom: 0;
   }
 }
 
-.emotion-6 {
+.emotion-15 {
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -105,7 +105,7 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-15 {
     font-size: 16px;
     line-height: 1.25;
     margin-bottom: 5px;
@@ -113,12 +113,12 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-15 {
     margin-bottom: 0;
   }
 }
 
-.emotion-4 {
+.emotion-10 {
   color: #005ea5;
   padding: 3px;
   margin: -3px;
@@ -128,140 +128,140 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   text-decoration: underline;
 }
 
-.emotion-4:focus {
+.emotion-10:focus {
   background-color: #ffbf47;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-4:visited {
+.emotion-10:visited {
   color: #2e358b;
 }
 
-<Styled(RelatedItems)>
+<StyledHoc>
   <RelatedItems
-    className="emotion-7"
+    className="emotion-17 emotion-0"
   >
-    <Styled(div)
-      className="emotion-7"
+    <StyledRelatedItems
+      className="emotion-17 emotion-0"
     >
       <div
-        className="emotion-22"
+        className="emotion-0 emotion-51 emotion-52"
       >
-        <Styled(Header)
+        <StyledHoc
           level={3}
         >
           <Header
-            className="emotion-2"
+            className="emotion-6 emotion-0"
             level={3}
           >
-            <Styled(Component)
-              className="emotion-2"
+            <StyledHeader
+              className="emotion-6 emotion-0"
               level={3}
             >
               <Component
-                className="emotion-0"
+                className="emotion-0 emotion-1 emotion-2"
                 level={3}
               >
                 <h3
-                  className="emotion-0"
+                  className="emotion-0 emotion-1 emotion-2"
                 >
                   Travel abroad
                 </h3>
               </Component>
-            </Styled(Component)>
+            </StyledHeader>
           </Header>
-        </Styled(Header)>
-        <Styled(UnorderedList)
+        </StyledHoc>
+        <StyledHoc
           listStyleType="none"
         >
           <UnorderedList
-            className="emotion-7"
+            className="emotion-17 emotion-0"
             listStyleType="none"
           >
-            <Styled(ul)
-              className="emotion-7"
+            <StyledList
+              className="emotion-17 emotion-0"
               listStyleType="none"
             >
               <ul
-                className="emotion-19"
+                className="emotion-0 emotion-44 emotion-2"
               >
-                <Styled(ListItem)>
+                <StyledHoc>
                   <ListItem
-                    className="emotion-7"
+                    className="emotion-17 emotion-0"
                   >
-                    <Styled(li)
-                      className="emotion-7"
+                    <StyledListItem
+                      className="emotion-17 emotion-0"
                     >
                       <li
-                        className="emotion-6"
+                        className="emotion-0 emotion-15 emotion-2"
                       >
-                        <Styled(Anchor)
+                        <StyledHoc
                           href="https://example.com"
                         >
                           <Anchor
-                            className="emotion-4"
+                            className="emotion-10 emotion-11"
                             href="https://example.com"
                           >
                             <a
-                              className="emotion-4"
+                              className="emotion-10 emotion-11"
                               href="https://example.com"
                             >
                               Link A
                             </a>
                           </Anchor>
-                        </Styled(Anchor)>
+                        </StyledHoc>
                       </li>
-                    </Styled(li)>
+                    </StyledListItem>
                   </ListItem>
-                </Styled(ListItem)>
-                <Styled(ListItem)>
+                </StyledHoc>
+                <StyledHoc>
                   <ListItem
-                    className="emotion-7"
+                    className="emotion-17 emotion-0"
                   >
-                    <Styled(li)
-                      className="emotion-7"
+                    <StyledListItem
+                      className="emotion-17 emotion-0"
                     >
                       <li
-                        className="emotion-6"
+                        className="emotion-0 emotion-15 emotion-2"
                       >
-                        <Styled(Anchor)
+                        <StyledHoc
                           href="https://example.com"
                         >
                           <Anchor
-                            className="emotion-4"
+                            className="emotion-10 emotion-11"
                             href="https://example.com"
                           >
                             <a
-                              className="emotion-4"
+                              className="emotion-10 emotion-11"
                               href="https://example.com"
                             >
                               Link B
                             </a>
                           </Anchor>
-                        </Styled(Anchor)>
+                        </StyledHoc>
                       </li>
-                    </Styled(li)>
+                    </StyledListItem>
                   </ListItem>
-                </Styled(ListItem)>
-                <Styled(ListItem)>
+                </StyledHoc>
+                <StyledHoc>
                   <ListItem
-                    className="emotion-7"
+                    className="emotion-17 emotion-0"
                   >
-                    <Styled(li)
-                      className="emotion-7"
+                    <StyledListItem
+                      className="emotion-17 emotion-0"
                     >
                       <li
-                        className="emotion-6"
+                        className="emotion-0 emotion-15 emotion-2"
                       >
-                        <Styled(Anchor)
+                        <StyledHoc
                           href="https://example.com"
                         >
                           <Anchor
-                            className="emotion-4"
+                            className="emotion-10 emotion-11"
                             href="https://example.com"
                           >
                             <a
-                              className="emotion-4"
+                              className="emotion-10 emotion-11"
                               href="https://example.com"
                             >
                               <strong>
@@ -269,17 +269,17 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
                               </strong>
                             </a>
                           </Anchor>
-                        </Styled(Anchor)>
+                        </StyledHoc>
                       </li>
-                    </Styled(li)>
+                    </StyledListItem>
                   </ListItem>
-                </Styled(ListItem)>
+                </StyledHoc>
               </ul>
-            </Styled(ul)>
+            </StyledList>
           </UnorderedList>
-        </Styled(UnorderedList)>
+        </StyledHoc>
       </div>
-    </Styled(div)>
+    </StyledRelatedItems>
   </RelatedItems>
-</Styled(RelatedItems)>
+</StyledHoc>
 `;

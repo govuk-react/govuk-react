@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-0 {
+.emotion-1 {
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
@@ -11,7 +11,7 @@ exports[`Header matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 48px;
     line-height: 1.0416666666666667;
     margin-bottom: 30px;
@@ -19,31 +19,31 @@ exports[`Header matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media print {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 18px;
   }
 }
 
-<Styled(Header)>
+<StyledHoc>
   <Header
-    className="emotion-2"
+    className="emotion-6 emotion-0"
     level={1}
   >
-    <Styled(Component)
-      className="emotion-2"
+    <StyledHeader
+      className="emotion-6 emotion-0"
       level={1}
     >
       <Component
-        className="emotion-0"
+        className="emotion-0 emotion-1 emotion-2"
         level={1}
       >
         <h1
-          className="emotion-0"
+          className="emotion-0 emotion-1 emotion-2"
         >
           example
         </h1>
       </Component>
-    </Styled(Component)>
+    </StyledHeader>
   </Header>
-</Styled(Header)>
+</StyledHoc>
 `;

@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-3 {
+.emotion-7 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-7 {
     margin-bottom: 0;
   }
 }
 
-.emotion-2 {
+.emotion-5 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -23,7 +23,7 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-2 {
+  .emotion-5 {
     margin-bottom: 0;
   }
 }
@@ -56,7 +56,7 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   width: 46px;
 }
 
-.emotion-1 {
+.emotion-2 {
   background-color: #2b8cc4;
   border: 0;
   display: block;
@@ -71,39 +71,39 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   overflow: hidden;
 }
 
-.emotion-1:focus {
+.emotion-2:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-<Styled(SearchBox)
+<StyledHoc
   placeholder="example"
 >
   <SearchBox
-    className="emotion-3"
+    className="emotion-7 emotion-4"
     placeholder="example"
   >
-    <Styled(div)
-      className="emotion-3"
+    <SearchBoxWrapper
+      className="emotion-7 emotion-4"
     >
       <div
-        className="emotion-2"
+        className="emotion-4 emotion-5 emotion-6"
       >
-        <Styled(input)
+        <InputSearchBox
           placeholder="example"
           type="search"
         >
           <input
-            className="emotion-0"
+            className="emotion-0 emotion-1"
             placeholder="example"
             type="search"
           />
-        </Styled(input)>
-        <Styled(button)
+        </InputSearchBox>
+        <SearchButton
           title="Search"
         >
           <button
-            className="emotion-1"
+            className="emotion-2 emotion-3"
             title="Search"
           >
             <Search
@@ -137,9 +137,9 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
               </SVG>
             </Search>
           </button>
-        </Styled(button)>
+        </SearchButton>
       </div>
-    </Styled(div)>
+    </SearchBoxWrapper>
   </SearchBox>
-</Styled(SearchBox)>
+</StyledHoc>
 `;

@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styled matches wrapper snapshot 1`] = `
-.emotion-2 {
+.emotion-6 {
   margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-2 {
+  .emotion-6 {
     margin-bottom: 20px;
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   font-family: "nta",Arial,sans-serif;
   margin: 0;
   font-size: 14px;
@@ -19,11 +19,11 @@ exports[`Styled matches wrapper snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-0 > p {
+.emotion-1 > p {
   margin: 0;
 }
 
-.emotion-0 > p > code {
+.emotion-1 > p > code {
   padding: 0.2em 0.4em;
   margin: 0px;
   font-size: 85%;
@@ -31,7 +31,7 @@ exports[`Styled matches wrapper snapshot 1`] = `
   border-radius: 3px;
 }
 
-.emotion-0 > pre {
+.emotion-1 > pre {
   padding: 16px;
   overflow: auto;
   font-size: 85%;
@@ -40,7 +40,7 @@ exports[`Styled matches wrapper snapshot 1`] = `
   border-radius: 3px;
 }
 
-.emotion-0 > pre > code {
+.emotion-1 > pre > code {
   display: inline;
   padding: 0px;
   margin: 0px;
@@ -51,26 +51,26 @@ exports[`Styled matches wrapper snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     margin-bottom: 20px;
   }
 }
 
-<Styled(Paragraph)
+<StyledHoc
   supportingText={true}
 >
   <Paragraph
-    className="emotion-2"
+    className="emotion-6 emotion-0"
     supportingText={true}
   >
-    <Styled(ReactMarkdown)
+    <StyledParagraph
       allowedTypes={
         Array [
           "paragraph",
@@ -81,7 +81,7 @@ exports[`Styled matches wrapper snapshot 1`] = `
           "code",
         ]
       }
-      className="emotion-2"
+      className="emotion-6 emotion-0"
       escapeHtml={false}
       renderers={
         Object {
@@ -104,7 +104,7 @@ exports[`Styled matches wrapper snapshot 1`] = `
           ]
         }
         astPlugins={Array []}
-        className="emotion-0"
+        className="emotion-0 emotion-1 emotion-2"
         escapeHtml={false}
         plugins={Array []}
         rawSourcePos={false}
@@ -120,11 +120,11 @@ exports[`Styled matches wrapper snapshot 1`] = `
         transformLinkUri={[Function]}
       >
         <div
-          className="emotion-0"
+          className="emotion-0 emotion-1 emotion-2"
           key="root-1-1"
         />
       </ReactMarkdown>
-    </Styled(ReactMarkdown)>
+    </StyledParagraph>
   </Paragraph>
-</Styled(Paragraph)>
+</StyledHoc>
 `;

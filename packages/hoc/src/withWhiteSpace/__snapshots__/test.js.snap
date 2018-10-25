@@ -19,7 +19,7 @@ exports[`withWhiteSpace matches wrapper snapshot 1`] = `
 }
 
 <InputField
-  className="emotion-0"
+  className="emotion-0 emotion-1"
   input={Object {}}
   mb={5}
   meta={Object {}}

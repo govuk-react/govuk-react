@@ -1,34 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
+.emotion-3 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-12 {
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-12 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-12 {
+    margin-bottom: 0;
+  }
+}
+
 .emotion-1 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-4 {
-  margin-bottom: 0;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-4 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-4 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-0 {
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -39,7 +39,7 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 16px;
     line-height: 1.25;
     margin-bottom: 5px;
@@ -47,12 +47,12 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     margin-bottom: 0;
   }
 }
 
-.emotion-3 {
+.emotion-9 {
   margin: 0;
   padding: 0;
   padding-left: 20px;
@@ -67,65 +67,65 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-9 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-9 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-9 {
     margin-bottom: 0;
   }
 }
 
-<Styled(ListNavigation)
+<StyledHoc
   listStyleType="square"
 >
   <ListNavigation
-    className="emotion-1"
+    className="emotion-3 emotion-0"
     listStyleType="square"
   >
-    <Styled(UnorderedList)
-      className="emotion-1"
+    <StyledHoc
+      className="emotion-3 emotion-0"
       listStyleType="square"
     >
       <UnorderedList
-        className="emotion-4"
+        className="emotion-0 emotion-12 emotion-0"
         listStyleType="square"
       >
-        <Styled(ul)
-          className="emotion-4"
+        <StyledList
+          className="emotion-0 emotion-12 emotion-0"
           listStyleType="square"
         >
           <ul
-            className="emotion-3"
+            className="emotion-0 emotion-0 emotion-9 emotion-2"
           >
-            <Styled(ListItem)>
+            <StyledHoc>
               <ListItem
-                className="emotion-1"
+                className="emotion-3 emotion-0"
               >
-                <Styled(li)
-                  className="emotion-1"
+                <StyledListItem
+                  className="emotion-3 emotion-0"
                 >
                   <li
-                    className="emotion-0"
+                    className="emotion-0 emotion-1 emotion-2"
                   >
                     Example
                   </li>
-                </Styled(li)>
+                </StyledListItem>
               </ListItem>
-            </Styled(ListItem)>
+            </StyledHoc>
           </ul>
-        </Styled(ul)>
+        </StyledList>
       </UnorderedList>
-    </Styled(UnorderedList)>
+    </StyledHoc>
   </ListNavigation>
-</Styled(ListNavigation)>
+</StyledHoc>
 `;

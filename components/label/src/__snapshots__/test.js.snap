@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Label matches withError snapshot: with error mount 1`] = `
-.emotion-1 {
+.emotion-3 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-3 {
     margin-bottom: 0;
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,42 +26,10 @@ exports[`Label matches withError snapshot: with error mount 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-0:after {
+.emotion-1:after {
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 0;
-  }
-}
-
-<Styled(Label)
-  error="example"
->
-  <Label
-    className="emotion-1"
-    error="example"
-  >
-    <Styled(label)
-      className="emotion-1"
-      error="example"
-    >
-      <label
-        className="emotion-0"
-      >
-        example
-      </label>
-    </Styled(label)>
-  </Label>
-</Styled(Label)>
-`;
-
-exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-1 {
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
@@ -70,7 +38,39 @@ exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-.emotion-0 {
+<StyledHoc
+  error="example"
+>
+  <Label
+    className="emotion-3 emotion-0"
+    error="example"
+  >
+    <StyledLabel
+      className="emotion-3 emotion-0"
+      error="example"
+    >
+      <label
+        className="emotion-0 emotion-1 emotion-2"
+      >
+        example
+      </label>
+    </StyledLabel>
+  </Label>
+</StyledHoc>
+`;
+
+exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
+.emotion-3 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -82,31 +82,31 @@ exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-0:after {
+.emotion-1:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     margin-bottom: 0;
   }
 }
 
-<Styled(Label)>
+<StyledHoc>
   <Label
-    className="emotion-1"
+    className="emotion-3 emotion-0"
   >
-    <Styled(label)
-      className="emotion-1"
+    <StyledLabel
+      className="emotion-3 emotion-0"
     >
       <label
-        className="emotion-0"
+        className="emotion-0 emotion-1 emotion-2"
       >
         example
       </label>
-    </Styled(label)>
+    </StyledLabel>
   </Label>
-</Styled(Label)>
+</StyledHoc>
 `;

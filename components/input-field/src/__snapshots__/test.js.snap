@@ -1,34 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
+.emotion-3 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-19 {
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-19 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-19 {
+    margin-bottom: 0;
+  }
+}
+
 .emotion-1 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-7 {
-  margin-bottom: 0;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -43,19 +43,19 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     margin-bottom: 0;
   }
 }
 
-.emotion-6 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -68,25 +68,25 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-6:after {
+.emotion-16:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-16 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-16 {
     margin-bottom: 0;
   }
 }
 
-.emotion-3 {
+.emotion-8 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -102,77 +102,77 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-8 {
     font-size: 19px;
     line-height: 1.3;
     width: 50%;
   }
 }
 
-.emotion-3:focus {
+.emotion-8:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-8 {
     margin-bottom: 0;
   }
 }
 
-<Styled(InputField)>
+<StyledHoc>
   <InputField
-    className="emotion-1"
+    className="emotion-3 emotion-0"
     input={Object {}}
     meta={Object {}}
   >
-    <Styled(Label)
-      className="emotion-1"
+    <StyledHoc
+      className="emotion-3 emotion-0"
     >
       <Label
-        className="emotion-7"
+        className="emotion-0 emotion-19 emotion-0"
       >
-        <Styled(label)
-          className="emotion-7"
+        <StyledLabel
+          className="emotion-0 emotion-19 emotion-0"
         >
           <label
-            className="emotion-6"
+            className="emotion-0 emotion-0 emotion-16 emotion-2"
           >
-            <Styled(LabelText)>
+            <StyledHoc>
               <LabelText
-                className="emotion-1"
+                className="emotion-3 emotion-0"
               >
-                <Styled(span)
-                  className="emotion-1"
+                <StyledLabelText
+                  className="emotion-3 emotion-0"
                 >
                   <span
-                    className="emotion-0"
+                    className="emotion-0 emotion-1 emotion-2"
                   >
                     example
                   </span>
-                </Styled(span)>
+                </StyledLabelText>
               </LabelText>
-            </Styled(LabelText)>
-            <Styled(Input)>
+            </StyledHoc>
+            <StyledHoc>
               <Input
-                className="emotion-1"
+                className="emotion-3 emotion-0"
                 type="text"
               >
-                <Styled(input)
-                  className="emotion-1"
+                <StyledInput
+                  className="emotion-3 emotion-0"
                   type="text"
                 >
                   <input
-                    className="emotion-3"
+                    className="emotion-0 emotion-8 emotion-2"
                     type="text"
                   />
-                </Styled(input)>
+                </StyledInput>
               </Input>
-            </Styled(Input)>
+            </StyledHoc>
           </label>
-        </Styled(label)>
+        </StyledLabel>
       </Label>
-    </Styled(Label)>
+    </StyledHoc>
   </InputField>
-</Styled(InputField)>
+</StyledHoc>
 `;

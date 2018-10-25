@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-1 {
+.emotion-3 {
   margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-3 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -36,7 +36,7 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 19px;
     line-height: 1.3;
     -webkit-flex-direction: row;
@@ -46,24 +46,24 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     margin-bottom: 30px;
   }
 }
 
-<Styled(Pagination)>
+<StyledHoc>
   <Pagination
-    className="emotion-1"
+    className="emotion-3 emotion-0"
   >
-    <Styled(ul)
-      className="emotion-1"
+    <StyledList
+      className="emotion-3 emotion-0"
     >
       <ul
-        className="emotion-0"
+        className="emotion-0 emotion-1 emotion-2"
       >
         Example
       </ul>
-    </Styled(ul)>
+    </StyledList>
   </Pagination>
-</Styled(Pagination)>
+</StyledHoc>
 `;

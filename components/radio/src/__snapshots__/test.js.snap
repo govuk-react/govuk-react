@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio disabled: disabled 1`] = `
-.emotion-3 {
+.emotion-7 {
   margin-bottom: 10px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-7 {
     margin-bottom: 10px;
   }
 }
 
-.emotion-2 {
+.emotion-5 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
@@ -20,12 +20,12 @@ exports[`Radio disabled: disabled 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-2 {
+  .emotion-5 {
     margin-bottom: 10px;
   }
 }
 
-.emotion-1 {
+.emotion-2 {
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -36,7 +36,7 @@ exports[`Radio disabled: disabled 1`] = `
   display: block;
 }
 
-.emotion-1:before {
+.emotion-2:before {
   content: '';
   box-sizing: border-box;
   position: absolute;
@@ -49,7 +49,7 @@ exports[`Radio disabled: disabled 1`] = `
   background: transparent;
 }
 
-.emotion-1:after {
+.emotion-2:after {
   content: '';
   position: absolute;
   top: 8px;
@@ -88,51 +88,51 @@ exports[`Radio disabled: disabled 1`] = `
   pointer-events: none;
 }
 
-<Styled(Radio)
+<StyledHoc
   disabled={true}
 >
   <Radio
-    className="emotion-3"
+    className="emotion-7 emotion-4"
     disabled={true}
     inline={false}
   >
-    <Styled(label)
-      className="emotion-3"
+    <Label
+      className="emotion-7 emotion-4"
       inline={false}
     >
       <label
-        className="emotion-2"
+        className="emotion-4 emotion-5 emotion-6"
       >
-        <Styled(input)
+        <Input
           disabled={true}
           type="radio"
         >
           <input
-            className="emotion-0"
+            className="emotion-0 emotion-1"
             disabled={true}
             type="radio"
           />
-        </Styled(input)>
-        <Styled(span)>
+        </Input>
+        <LabelText>
           <span
-            className="emotion-1"
+            className="emotion-2 emotion-3"
           >
             Example
           </span>
-        </Styled(span)>
+        </LabelText>
       </label>
-    </Styled(label)>
+    </Label>
   </Radio>
-</Styled(Radio)>
+</StyledHoc>
 `;
 
 exports[`Radio matches snapshot for inline: inline mount 1`] = `
-.emotion-3 {
+.emotion-7 {
   margin-bottom: 10px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-7 {
     margin-bottom: 10px;
   }
 }
@@ -164,7 +164,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   pointer-events: auto;
 }
 
-.emotion-1 {
+.emotion-2 {
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -175,7 +175,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   display: block;
 }
 
-.emotion-1:before {
+.emotion-2:before {
   content: '';
   box-sizing: border-box;
   position: absolute;
@@ -188,7 +188,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   background: transparent;
 }
 
-.emotion-1:after {
+.emotion-2:after {
   content: '';
   position: absolute;
   top: 8px;
@@ -200,7 +200,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   opacity: 0;
 }
 
-.emotion-2 {
+.emotion-5 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
@@ -211,62 +211,62 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-2 {
+  .emotion-5 {
     margin-bottom: 10px;
   }
 }
 
-<Styled(Radio)
+<StyledHoc
   inline={true}
   name="example"
 >
   <Radio
-    className="emotion-3"
+    className="emotion-7 emotion-4"
     inline={true}
     name="example"
   >
-    <Styled(label)
-      className="emotion-3"
+    <Label
+      className="emotion-7 emotion-4"
       inline={true}
     >
       <label
-        className="emotion-2"
+        className="emotion-4 emotion-5 emotion-6"
       >
-        <Styled(input)
+        <Input
           name="example"
           type="radio"
         >
           <input
-            className="emotion-0"
+            className="emotion-0 emotion-1"
             name="example"
             type="radio"
           />
-        </Styled(input)>
-        <Styled(span)>
+        </Input>
+        <LabelText>
           <span
-            className="emotion-1"
+            className="emotion-2 emotion-3"
           >
             example
           </span>
-        </Styled(span)>
+        </LabelText>
       </label>
-    </Styled(label)>
+    </Label>
   </Radio>
-</Styled(Radio)>
+</StyledHoc>
 `;
 
 exports[`Radio matches snapshot: standard mount 1`] = `
-.emotion-3 {
+.emotion-7 {
   margin-bottom: 10px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-7 {
     margin-bottom: 10px;
   }
 }
 
-.emotion-2 {
+.emotion-5 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
@@ -275,7 +275,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-2 {
+  .emotion-5 {
     margin-bottom: 10px;
   }
 }
@@ -307,7 +307,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   pointer-events: auto;
 }
 
-.emotion-1 {
+.emotion-2 {
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -318,7 +318,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   display: block;
 }
 
-.emotion-1:before {
+.emotion-2:before {
   content: '';
   box-sizing: border-box;
   position: absolute;
@@ -331,7 +331,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   background: transparent;
 }
 
-.emotion-1:after {
+.emotion-2:after {
   content: '';
   position: absolute;
   top: 8px;
@@ -343,40 +343,40 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   opacity: 0;
 }
 
-<Styled(Radio)
+<StyledHoc
   name="example"
 >
   <Radio
-    className="emotion-3"
+    className="emotion-7 emotion-4"
     inline={false}
     name="example"
   >
-    <Styled(label)
-      className="emotion-3"
+    <Label
+      className="emotion-7 emotion-4"
       inline={false}
     >
       <label
-        className="emotion-2"
+        className="emotion-4 emotion-5 emotion-6"
       >
-        <Styled(input)
+        <Input
           name="example"
           type="radio"
         >
           <input
-            className="emotion-0"
+            className="emotion-0 emotion-1"
             name="example"
             type="radio"
           />
-        </Styled(input)>
-        <Styled(span)>
+        </Input>
+        <LabelText>
           <span
-            className="emotion-1"
+            className="emotion-2 emotion-3"
           >
             example
           </span>
-        </Styled(span)>
+        </LabelText>
       </label>
-    </Styled(label)>
+    </Label>
   </Radio>
-</Styled(Radio)>
+</StyledHoc>
 `;

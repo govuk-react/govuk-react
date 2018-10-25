@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`inset text matches the InsetText snapshot: inset text 1`] = `
-.emotion-5 {
+.emotion-13 {
   margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-5 {
+  .emotion-13 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-4 {
+.emotion-11 {
   box-sizing: border-box;
   border-left-style: solid;
   border-left-width: 10px;
@@ -21,22 +21,22 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-4 {
+  .emotion-11 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-2 {
+.emotion-6 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-2 {
+  .emotion-6 {
     margin-bottom: 0;
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   font-family: "nta",Arial,sans-serif;
   margin: 0;
   font-size: 16px;
@@ -44,11 +44,11 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-0 > p {
+.emotion-1 > p {
   margin: 0;
 }
 
-.emotion-0 > p > code {
+.emotion-1 > p > code {
   padding: 0.2em 0.4em;
   margin: 0px;
   font-size: 85%;
@@ -56,7 +56,7 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
   border-radius: 3px;
 }
 
-.emotion-0 > pre {
+.emotion-1 > pre {
   padding: 16px;
   overflow: auto;
   font-size: 85%;
@@ -65,7 +65,7 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
   border-radius: 3px;
 }
 
-.emotion-0 > pre > code {
+.emotion-1 > pre > code {
   display: inline;
   padding: 0px;
   margin: 0px;
@@ -76,42 +76,42 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     margin-bottom: 0;
   }
 }
 
 <_default>
-  <Styled(InsetText)
+  <StyledHoc
     isNarrow={false}
   >
     <InsetText
-      className="emotion-5"
+      className="emotion-13 emotion-0"
       isNarrow={false}
     >
-      <Styled(div)
-        className="emotion-5"
+      <StyledInsetText
+        className="emotion-13 emotion-0"
         isNarrow={false}
       >
         <div
-          className="emotion-4"
+          className="emotion-0 emotion-11 emotion-12"
         >
-          <Styled(Paragraph)
+          <StyledHoc
             mb={0}
           >
             <Paragraph
-              className="emotion-2"
+              className="emotion-6 emotion-0"
               mb={0}
               supportingText={false}
             >
-              <Styled(ReactMarkdown)
+              <StyledParagraph
                 allowedTypes={
                   Array [
                     "paragraph",
@@ -122,7 +122,7 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
                     "code",
                   ]
                 }
-                className="emotion-2"
+                className="emotion-6 emotion-0"
                 escapeHtml={false}
                 mb={0}
                 renderers={
@@ -146,7 +146,7 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
                     ]
                   }
                   astPlugins={Array []}
-                  className="emotion-0"
+                  className="emotion-0 emotion-1 emotion-2"
                   escapeHtml={false}
                   mb={0}
                   plugins={Array []}
@@ -163,7 +163,7 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
                   transformLinkUri={[Function]}
                 >
                   <div
-                    className="emotion-0"
+                    className="emotion-0 emotion-1 emotion-2"
                     key="root-1-1"
                   >
                     <p
@@ -173,38 +173,38 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
                     </p>
                   </div>
                 </ReactMarkdown>
-              </Styled(ReactMarkdown)>
+              </StyledParagraph>
             </Paragraph>
-          </Styled(Paragraph)>
+          </StyledHoc>
         </div>
-      </Styled(div)>
+      </StyledInsetText>
     </InsetText>
-  </Styled(InsetText)>
+  </StyledHoc>
 </_default>
 `;
 
 exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narrow border 1`] = `
-.emotion-5 {
+.emotion-13 {
   margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-5 {
+  .emotion-13 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-2 {
+.emotion-6 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-2 {
+  .emotion-6 {
     margin-bottom: 0;
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   font-family: "nta",Arial,sans-serif;
   margin: 0;
   font-size: 16px;
@@ -212,11 +212,11 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
   margin-bottom: 0;
 }
 
-.emotion-0 > p {
+.emotion-1 > p {
   margin: 0;
 }
 
-.emotion-0 > p > code {
+.emotion-1 > p > code {
   padding: 0.2em 0.4em;
   margin: 0px;
   font-size: 85%;
@@ -224,7 +224,7 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
   border-radius: 3px;
 }
 
-.emotion-0 > pre {
+.emotion-1 > pre {
   padding: 16px;
   overflow: auto;
   font-size: 85%;
@@ -233,7 +233,7 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
   border-radius: 3px;
 }
 
-.emotion-0 > pre > code {
+.emotion-1 > pre > code {
   display: inline;
   padding: 0px;
   margin: 0px;
@@ -244,19 +244,19 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     margin-bottom: 0;
   }
 }
 
-.emotion-4 {
+.emotion-11 {
   box-sizing: border-box;
   border-left-style: solid;
   border-left-width: 5px;
@@ -266,35 +266,35 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-4 {
+  .emotion-11 {
     margin-bottom: 30px;
   }
 }
 
 <InsetTextNarrowBorder>
-  <Styled(InsetText)
+  <StyledHoc
     isNarrow={true}
   >
     <InsetText
-      className="emotion-5"
+      className="emotion-13 emotion-0"
       isNarrow={true}
     >
-      <Styled(div)
-        className="emotion-5"
+      <StyledInsetText
+        className="emotion-13 emotion-0"
         isNarrow={true}
       >
         <div
-          className="emotion-4"
+          className="emotion-0 emotion-11 emotion-12"
         >
-          <Styled(Paragraph)
+          <StyledHoc
             mb={0}
           >
             <Paragraph
-              className="emotion-2"
+              className="emotion-6 emotion-0"
               mb={0}
               supportingText={false}
             >
-              <Styled(ReactMarkdown)
+              <StyledParagraph
                 allowedTypes={
                   Array [
                     "paragraph",
@@ -305,7 +305,7 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
                     "code",
                   ]
                 }
-                className="emotion-2"
+                className="emotion-6 emotion-0"
                 escapeHtml={false}
                 mb={0}
                 renderers={
@@ -329,7 +329,7 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
                     ]
                   }
                   astPlugins={Array []}
-                  className="emotion-0"
+                  className="emotion-0 emotion-1 emotion-2"
                   escapeHtml={false}
                   mb={0}
                   plugins={Array []}
@@ -346,7 +346,7 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
                   transformLinkUri={[Function]}
                 >
                   <div
-                    className="emotion-0"
+                    className="emotion-0 emotion-1 emotion-2"
                     key="root-1-1"
                   >
                     <p
@@ -356,12 +356,12 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
                     </p>
                   </div>
                 </ReactMarkdown>
-              </Styled(ReactMarkdown)>
+              </StyledParagraph>
             </Paragraph>
-          </Styled(Paragraph)>
+          </StyledHoc>
         </div>
-      </Styled(div)>
+      </StyledInsetText>
     </InsetText>
-  </Styled(InsetText)>
+  </StyledHoc>
 </InsetTextNarrowBorder>
 `;

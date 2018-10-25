@@ -21,7 +21,7 @@ exports[`asAnchor matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <Anchor
-  className="emotion-0"
+  className="emotion-0 emotion-1"
   href="https://example.com"
 >
   Example

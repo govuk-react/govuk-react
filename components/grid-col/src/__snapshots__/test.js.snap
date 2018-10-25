@@ -37,17 +37,17 @@ exports[`GridCol matches snapshot: enzyme.mount 1`] = `
   columnOneThird={false}
   columnTwoThirds={false}
 >
-  <Styled(div)
+  <StyledColumn
     columnOneHalf={false}
     columnOneQuarter={false}
     columnOneThird={false}
     columnTwoThirds={false}
   >
     <div
-      className="emotion-0"
+      className="emotion-0 emotion-1"
     >
       example
     </div>
-  </Styled(div)>
+  </StyledColumn>
 </GridCol>
 `;

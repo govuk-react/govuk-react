@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-1 {
+.emotion-3 {
   margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-3 {
     margin-bottom: 15px;
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,13 +32,13 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-.emotion-0::before {
+.emotion-1::before {
   display: block;
   width: 0;
   height: 0;
@@ -56,35 +56,35 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
   margin: auto;
 }
 
-.emotion-0:focus {
+.emotion-1:focus {
   background-color: #ffbf47;
   outline: 3px solid #ffbf47;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     margin-bottom: 15px;
   }
 }
 
-<Styled(BackLink)
+<StyledHoc
   onClick={[Function]}
 >
   <BackLink
-    className="emotion-1"
+    className="emotion-3 emotion-0"
     onClick={[Function]}
   >
-    <Styled(a)
-      className="emotion-1"
+    <Anchor
+      className="emotion-3 emotion-0"
       onClick={[Function]}
     >
       <a
-        className="emotion-0"
+        className="emotion-0 emotion-1 emotion-2"
         onClick={[Function]}
       >
         example
       </a>
-    </Styled(a)>
+    </Anchor>
   </BackLink>
-</Styled(BackLink)>
+</StyledHoc>
 `;
