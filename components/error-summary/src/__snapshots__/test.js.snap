@@ -1,42 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
-.emotion-22 {
+.emotion-52 {
   margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-22 {
+  .emotion-52 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-21 {
+.emotion-50 {
   color: #0b0c0c;
   padding: 15px;
   border: 4px solid #b10e1e;
   margin-bottom: 20px;
 }
 
-.emotion-21:focus {
+.emotion-50:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-21 {
+  .emotion-50 {
     padding: 20px;
     border: 5px solid #b10e1e;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-21 {
+  .emotion-50 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
@@ -46,7 +46,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 36px;
     line-height: 1.1111111111111112;
     margin-bottom: 20px;
@@ -54,22 +54,22 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 }
 
 @media print {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 18px;
   }
 }
 
-.emotion-6 {
+.emotion-16 {
   margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-16 {
     margin-bottom: 15px;
   }
 }
 
-.emotion-4 {
+.emotion-11 {
   font-family: "nta",Arial,sans-serif;
   margin: 0;
   font-size: 16px;
@@ -77,11 +77,11 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-4 > p {
+.emotion-11 > p {
   margin: 0;
 }
 
-.emotion-4 > p > code {
+.emotion-11 > p > code {
   padding: 0.2em 0.4em;
   margin: 0px;
   font-size: 85%;
@@ -89,7 +89,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   border-radius: 3px;
 }
 
-.emotion-4 > pre {
+.emotion-11 > pre {
   padding: 16px;
   overflow: auto;
   font-size: 85%;
@@ -98,7 +98,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   border-radius: 3px;
 }
 
-.emotion-4 > pre > code {
+.emotion-11 > pre > code {
   display: inline;
   padding: 0px;
   margin: 0px;
@@ -109,29 +109,29 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-4 {
+  .emotion-11 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-4 {
+  .emotion-11 {
     margin-bottom: 15px;
   }
 }
 
-.emotion-11 {
+.emotion-27 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-11 {
+  .emotion-27 {
     margin-bottom: 0;
   }
 }
 
-.emotion-18 {
+.emotion-43 {
   margin: 0;
   padding: 0;
   padding-left: 20px;
@@ -147,19 +147,19 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-18 {
+  .emotion-43 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-18 {
+  .emotion-43 {
     margin-bottom: 0;
   }
 }
 
-.emotion-10 {
+.emotion-25 {
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -170,7 +170,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-10 {
+  .emotion-25 {
     font-size: 16px;
     line-height: 1.25;
     margin-bottom: 5px;
@@ -178,12 +178,12 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-10 {
+  .emotion-25 {
     margin-bottom: 0;
   }
 }
 
-.emotion-8 {
+.emotion-20 {
   color: #005ea5;
   padding: 3px;
   margin: -3px;
@@ -209,44 +209,44 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   padding-bottom: 2px;
 }
 
-.emotion-8:focus {
+.emotion-20:focus {
   background-color: #ffbf47;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-8:visited {
+.emotion-20:visited {
   color: #2e358b;
 }
 
-.emotion-8:visited {
+.emotion-20:visited {
   color: #b10e1e;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-8 {
+  .emotion-20 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
-.emotion-34 {
+.emotion-82 {
   margin-bottom: 0;
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-34 {
+  .emotion-82 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-34 {
+  .emotion-82 {
     margin-bottom: 0;
   }
 }
 
-.emotion-33 {
+.emotion-79 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -259,25 +259,25 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-33:after {
+.emotion-79:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-33 {
+  .emotion-79 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-33 {
+  .emotion-79 {
     margin-bottom: 0;
   }
 }
 
-.emotion-24 {
+.emotion-57 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -292,19 +292,19 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-24 {
+  .emotion-57 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-24 {
+  .emotion-57 {
     margin-bottom: 0;
   }
 }
 
-.emotion-27 {
+.emotion-64 {
   display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -318,19 +318,19 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-27 {
+  .emotion-64 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-27 {
+  .emotion-64 {
     margin-bottom: 0;
   }
 }
 
-.emotion-30 {
+.emotion-71 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -346,25 +346,25 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-30 {
+  .emotion-71 {
     font-size: 19px;
     line-height: 1.3;
     width: 50%;
   }
 }
 
-.emotion-30:focus {
+.emotion-71:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-30 {
+  .emotion-71 {
     margin-bottom: 0;
   }
 }
 
-.emotion-42 {
+.emotion-101 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -376,19 +376,19 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-42:after {
+.emotion-101:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-42 {
+  .emotion-101 {
     margin-bottom: 0;
   }
 }
 
-.emotion-41 {
+.emotion-98 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
@@ -401,21 +401,21 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-41 {
+  .emotion-98 {
     font-size: 19px;
     line-height: 1.3;
     width: 75%;
   }
 }
 
-.emotion-41:focus {
+.emotion-98:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
 <_default>
   <div>
-    <Styled(ErrorSummary)
+    <StyledHoc
       description="Optional description of the errors and how to correct them"
       errors={
         Array [
@@ -433,7 +433,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
       onHandleErrorClick={[Function]}
     >
       <ErrorSummary
-        className="emotion-22"
+        className="emotion-52 emotion-0"
         description="Optional description of the errors and how to correct them"
         errors={
           Array [
@@ -450,47 +450,48 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
         heading="Message to alert the user to a problem goes here"
         onHandleErrorClick={[Function]}
       >
-        <Styled(div)
-          className="emotion-22"
+        <StyledErrorSummary
+          className="emotion-52 emotion-0"
           tabIndex={-1}
         >
           <div
-            className="emotion-21"
+            className="emotion-0 emotion-50 emotion-51"
             tabIndex={-1}
           >
-            <Styled(Header)
+            <StyledHoc
               level={2}
             >
               <Header
-                className="emotion-2"
+                className="emotion-6 emotion-0"
                 level={2}
               >
-                <Styled(Component)
-                  className="emotion-2"
+                <StyledHeader
+                  className="emotion-6 emotion-0"
                   level={2}
                 >
                   <Component
-                    className="emotion-0"
+                    className="emotion-0 emotion-1 emotion-2"
                     level={2}
                   >
                     <h2
-                      className="emotion-0"
+                      className="emotion-0 emotion-1 emotion-2"
                     >
                       Message to alert the user to a problem goes here
                     </h2>
                   </Component>
-                </Styled(Component)>
+                </StyledHeader>
               </Header>
-            </Styled(Header)>
-            <Styled(Paragraph)
+            </StyledHoc>
+            <StyledHoc
               mb={3}
             >
               <Paragraph
-                className="emotion-6"
+                className="emotion-16 emotion-0"
+                linkRenderer={[Function]}
                 mb={3}
                 supportingText={false}
               >
-                <Styled(ReactMarkdown)
+                <StyledParagraph
                   allowedTypes={
                     Array [
                       "paragraph",
@@ -501,8 +502,9 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       "code",
                     ]
                   }
-                  className="emotion-6"
+                  className="emotion-16 emotion-0"
                   escapeHtml={false}
+                  linkRenderer={[Function]}
                   mb={3}
                   renderers={
                     Object {
@@ -525,8 +527,9 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       ]
                     }
                     astPlugins={Array []}
-                    className="emotion-4"
+                    className="emotion-0 emotion-11 emotion-2"
                     escapeHtml={false}
+                    linkRenderer={[Function]}
                     mb={3}
                     plugins={Array []}
                     rawSourcePos={false}
@@ -542,7 +545,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                     transformLinkUri={[Function]}
                   >
                     <div
-                      className="emotion-4"
+                      className="emotion-0 emotion-11 emotion-2"
                       key="root-1-1"
                     >
                       <p
@@ -552,228 +555,228 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       </p>
                     </div>
                   </ReactMarkdown>
-                </Styled(ReactMarkdown)>
+                </StyledParagraph>
               </Paragraph>
-            </Styled(Paragraph)>
-            <Styled(UnorderedList)
+            </StyledHoc>
+            <StyledHoc
               listStyleType="none"
             >
               <UnorderedList
-                className="emotion-11"
+                className="emotion-27 emotion-0"
                 listStyleType="none"
               >
-                <Styled(ul)
-                  className="emotion-11"
+                <StyledList
+                  className="emotion-27 emotion-0"
                   listStyleType="none"
                 >
                   <ul
-                    className="emotion-18"
+                    className="emotion-0 emotion-43 emotion-2"
                   >
-                    <Styled(ListItem)
+                    <StyledHoc
                       key="national-insurance-number"
                     >
                       <ListItem
-                        className="emotion-11"
+                        className="emotion-27 emotion-0"
                       >
-                        <Styled(li)
-                          className="emotion-11"
+                        <StyledListItem
+                          className="emotion-27 emotion-0"
                         >
                           <li
-                            className="emotion-10"
+                            className="emotion-0 emotion-25 emotion-2"
                           >
-                            <Styled(Anchor)
+                            <StyledErrorText
                               onClick={[Function]}
                               tabIndex={1}
                             >
                               <Anchor
-                                className="emotion-8"
+                                className="emotion-20 emotion-21"
                                 onClick={[Function]}
                                 tabIndex={1}
                               >
                                 <a
-                                  className="emotion-8"
+                                  className="emotion-20 emotion-21"
                                   onClick={[Function]}
                                   tabIndex={1}
                                 >
                                   National Insurance number error
                                 </a>
                               </Anchor>
-                            </Styled(Anchor)>
+                            </StyledErrorText>
                           </li>
-                        </Styled(li)>
+                        </StyledListItem>
                       </ListItem>
-                    </Styled(ListItem)>
-                    <Styled(ListItem)
+                    </StyledHoc>
+                    <StyledHoc
                       key="description"
                     >
                       <ListItem
-                        className="emotion-11"
+                        className="emotion-27 emotion-0"
                       >
-                        <Styled(li)
-                          className="emotion-11"
+                        <StyledListItem
+                          className="emotion-27 emotion-0"
                         >
                           <li
-                            className="emotion-10"
+                            className="emotion-0 emotion-25 emotion-2"
                           >
-                            <Styled(Anchor)
+                            <StyledErrorText
                               onClick={[Function]}
                               tabIndex={2}
                             >
                               <Anchor
-                                className="emotion-8"
+                                className="emotion-20 emotion-21"
                                 onClick={[Function]}
                                 tabIndex={2}
                               >
                                 <a
-                                  className="emotion-8"
+                                  className="emotion-20 emotion-21"
                                   onClick={[Function]}
                                   tabIndex={2}
                                 >
                                   Description of what you saw error
                                 </a>
                               </Anchor>
-                            </Styled(Anchor)>
+                            </StyledErrorText>
                           </li>
-                        </Styled(li)>
+                        </StyledListItem>
                       </ListItem>
-                    </Styled(ListItem)>
+                    </StyledHoc>
                   </ul>
-                </Styled(ul)>
+                </StyledList>
               </UnorderedList>
-            </Styled(UnorderedList)>
+            </StyledHoc>
           </div>
-        </Styled(div)>
+        </StyledErrorSummary>
       </ErrorSummary>
-    </Styled(ErrorSummary)>
-    <Styled(InputField)
+    </StyledHoc>
+    <StyledHoc
       hint="It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
       name="national-insurance-number"
     >
       <InputField
-        className="emotion-11"
+        className="emotion-27 emotion-0"
         hint="It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
         input={Object {}}
         meta={Object {}}
         name="national-insurance-number"
       >
-        <Styled(Label)
-          className="emotion-11"
+        <StyledHoc
+          className="emotion-27 emotion-0"
           name="national-insurance-number"
         >
           <Label
-            className="emotion-34"
+            className="emotion-0 emotion-82 emotion-0"
             name="national-insurance-number"
           >
-            <Styled(label)
-              className="emotion-34"
+            <StyledLabel
+              className="emotion-0 emotion-82 emotion-0"
               name="national-insurance-number"
             >
               <label
-                className="emotion-33"
+                className="emotion-0 emotion-0 emotion-79 emotion-2"
                 name="national-insurance-number"
               >
-                <Styled(LabelText)>
+                <StyledHoc>
                   <LabelText
-                    className="emotion-11"
+                    className="emotion-27 emotion-0"
                   >
-                    <Styled(span)
-                      className="emotion-11"
+                    <StyledLabelText
+                      className="emotion-27 emotion-0"
                     >
                       <span
-                        className="emotion-24"
+                        className="emotion-0 emotion-57 emotion-2"
                       >
                         National Insurance number
                       </span>
-                    </Styled(span)>
+                    </StyledLabelText>
                   </LabelText>
-                </Styled(LabelText)>
-                <Styled(HintText)>
+                </StyledHoc>
+                <StyledHoc>
                   <HintText
-                    className="emotion-11"
+                    className="emotion-27 emotion-0"
                   >
-                    <Styled(span)
-                      className="emotion-11"
+                    <StyledHint
+                      className="emotion-27 emotion-0"
                     >
                       <span
-                        className="emotion-27"
+                        className="emotion-0 emotion-64 emotion-2"
                       >
                         It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
                       </span>
-                    </Styled(span)>
+                    </StyledHint>
                   </HintText>
-                </Styled(HintText)>
-                <Styled(Input)>
+                </StyledHoc>
+                <StyledHoc>
                   <Input
-                    className="emotion-11"
+                    className="emotion-27 emotion-0"
                     type="text"
                   >
-                    <Styled(input)
-                      className="emotion-11"
+                    <StyledInput
+                      className="emotion-27 emotion-0"
                       type="text"
                     >
                       <input
-                        className="emotion-30"
+                        className="emotion-0 emotion-71 emotion-2"
                         type="text"
                       />
-                    </Styled(input)>
+                    </StyledInput>
                   </Input>
-                </Styled(Input)>
+                </StyledHoc>
               </label>
-            </Styled(label)>
+            </StyledLabel>
           </Label>
-        </Styled(Label)>
+        </StyledHoc>
       </InputField>
-    </Styled(InputField)>
+    </StyledHoc>
     <br />
     <TextArea
       input={Object {}}
       meta={Object {}}
       name="description"
     >
-      <Styled(Label)
+      <StyledHoc
         name="description"
       >
         <Label
-          className="emotion-11"
+          className="emotion-27 emotion-0"
           name="description"
         >
-          <Styled(label)
-            className="emotion-11"
+          <StyledLabel
+            className="emotion-27 emotion-0"
             name="description"
           >
             <label
-              className="emotion-42"
+              className="emotion-0 emotion-101 emotion-2"
               name="description"
             >
-              <Styled(LabelText)>
+              <StyledHoc>
                 <LabelText
-                  className="emotion-11"
+                  className="emotion-27 emotion-0"
                 >
-                  <Styled(span)
-                    className="emotion-11"
+                  <StyledLabelText
+                    className="emotion-27 emotion-0"
                   >
                     <span
-                      className="emotion-24"
+                      className="emotion-0 emotion-57 emotion-2"
                     >
                       Description of what you saw
                     </span>
-                  </Styled(span)>
+                  </StyledLabelText>
                 </LabelText>
-              </Styled(LabelText)>
-              <Styled(textarea)
+              </StyledHoc>
+              <TextAreaField
                 rows="5"
                 type="text"
               >
                 <textarea
-                  className="emotion-41"
+                  className="emotion-98 emotion-2"
                   rows="5"
                   type="text"
                 />
-              </Styled(textarea)>
+              </TextAreaField>
             </label>
-          </Styled(label)>
+          </StyledLabel>
         </Label>
-      </Styled(Label)>
+      </StyledHoc>
     </TextArea>
   </div>
 </_default>
