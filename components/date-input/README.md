@@ -33,7 +33,13 @@ Date with hint text & error
 
 With custom input name props
 ```jsx
-<DateInput inputNames={{ day: 'dayInputName' }} hintText="For example, 31 03 1980">
+<DateInput hintText="For example, 31 03 1980"
+  inputNames={{
+    day: 'dayInputName',
+    month: 'monthInputName',
+    year: 'yearInputName',
+  }}
+ >
   What is your date of birth?
 </DateInput>
 ```
@@ -47,6 +53,6 @@ Prop | Required | Default | Type | Description
  `children` | true | `````` | node | 
  `errorText` |  | ```undefined``` | string | Error text
  `hintText` |  | ```undefined``` | string | Optional hint text
- `inputNames` |  | ```{   day: 'dateInputDay',   month: 'dateInputMonth',   year: 'dateInputYear', }``` | shape[object Object] | Input name attributes
+ `inputNames` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` | shape[object Object] | Input name attributes
 
 

@@ -9,6 +9,7 @@ import {
   NTA_LIGHT,
   SPACING,
 } from '@govuk-react/constants';
+
 import Label from '@govuk-react/label';
 import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
@@ -54,17 +55,16 @@ const StyledInput = styled('input')(
   }),
 );
 
+const StyledLabel = styled(Label)({
+  marginRight: '20px',
+  marginBottom: 0,
+}, ({ year }) => ({
+  width: year ? '70px' : '50px',
+}));
+
 const StyledList = styled('div')({
   fontFamily: NTA_LIGHT,
   display: 'flex',
-  '> label': {
-    width: '50px',
-    marginRight: '20px',
-    marginBottom: 0,
-  },
-  '> label.year': {
-    width: '70px',
-  },
 });
 
 /**
@@ -95,7 +95,13 @@ const StyledList = styled('div')({
  *
  * With custom input name props
  * ```jsx
- * <DateInput inputNames={{ day: 'dayInputName' }} hintText="For example, 31 03 1980">
+ * <DateInput hintText="For example, 31 03 1980"
+ *   inputNames={{
+ *     day: 'dayInputName',
+ *     month: 'monthInputName',
+ *     year: 'yearInputName',
+ *   }}
+ *  >
  *   What is your date of birth?
  * </DateInput>
  * ```
@@ -129,18 +135,18 @@ const DateInput = ({
       <span />
       )}
     <StyledList>
-      <Label>
+      <StyledLabel>
         <LabelText>Day</LabelText>
-        <StyledInput name={day} errorText={errorText} type="text" defaultValue={defaultDay} />
-      </Label>
-      <Label>
+        <StyledInput name={day} errorText={errorText} type="number" defaultValue={defaultDay} />
+      </StyledLabel>
+      <StyledLabel>
         <LabelText>Month</LabelText>
-        <StyledInput name={month} errorText={errorText} type="text" defaultValue={defaultMonth} />
-      </Label>
-      <Label className="year">
+        <StyledInput name={month} errorText={errorText} type="number" defaultValue={defaultMonth} />
+      </StyledLabel>
+      <StyledLabel year>
         <LabelText>Year</LabelText>
-        <StyledInput name={year} errorText={errorText} type="text" defaultValue={defaultYear} />
-      </Label>
+        <StyledInput name={year} errorText={errorText} type="number" defaultValue={defaultYear} />
+      </StyledLabel>
     </StyledList>
   </StyledContainer>
 );

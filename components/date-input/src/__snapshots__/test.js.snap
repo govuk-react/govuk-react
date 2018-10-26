@@ -104,14 +104,17 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   display: flex;
 }
 
-.emotion-62 > label {
-  width: 50px;
+.emotion-26 {
+  margin-bottom: 0;
   margin-right: 20px;
   margin-bottom: 0;
+  width: 50px;
 }
 
-.emotion-62 > label.year {
-  width: 70px;
+@media only screen and (min-width:641px) {
+  .emotion-26 {
+    margin-bottom: 0;
+  }
 }
 
 .emotion-24 {
@@ -124,6 +127,9 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   margin-bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  width: 50px;
 }
 
 .emotion-24:after {
@@ -163,6 +169,46 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
 .emotion-21:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
+}
+
+.emotion-58 {
+  margin-bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  width: 70px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-58 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-56 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  width: 70px;
+}
+
+.emotion-56:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-56 {
+    margin-bottom: 0;
+  }
 }
 
 <StyledHoc
@@ -239,15 +285,15 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
           <div
             className="emotion-62 emotion-63"
           >
-            <StyledHoc>
+            <StyledLabel>
               <Label
-                className="emotion-3 emotion-0"
+                className="emotion-26 emotion-23"
               >
                 <StyledLabel
-                  className="emotion-3 emotion-0"
+                  className="emotion-26 emotion-23"
                 >
                   <label
-                    className="emotion-0 emotion-24 emotion-2"
+                    className="emotion-23 emotion-24 emotion-2"
                   >
                     <StyledHoc>
                       <LabelText
@@ -268,28 +314,28 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
                       defaultValue=""
                       errorText="example"
                       name="dayInputName"
-                      type="text"
+                      type="number"
                     >
                       <input
                         className="emotion-21 emotion-22"
                         defaultValue=""
                         name="dayInputName"
-                        type="text"
+                        type="number"
                       />
                     </StyledInput>
                   </label>
                 </StyledLabel>
               </Label>
-            </StyledHoc>
-            <StyledHoc>
+            </StyledLabel>
+            <StyledLabel>
               <Label
-                className="emotion-3 emotion-0"
+                className="emotion-26 emotion-23"
               >
                 <StyledLabel
-                  className="emotion-3 emotion-0"
+                  className="emotion-26 emotion-23"
                 >
                   <label
-                    className="emotion-0 emotion-24 emotion-2"
+                    className="emotion-23 emotion-24 emotion-2"
                   >
                     <StyledHoc>
                       <LabelText
@@ -310,30 +356,32 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
                       defaultValue=""
                       errorText="example"
                       name="dateInputMonth"
-                      type="text"
+                      type="number"
                     >
                       <input
                         className="emotion-21 emotion-22"
                         defaultValue=""
                         name="dateInputMonth"
-                        type="text"
+                        type="number"
                       />
                     </StyledInput>
                   </label>
                 </StyledLabel>
               </Label>
-            </StyledHoc>
-            <StyledHoc
-              className="year"
+            </StyledLabel>
+            <StyledLabel
+              year={true}
             >
               <Label
-                className="year emotion-3 emotion-0"
+                className="emotion-58 emotion-23"
+                year={true}
               >
                 <StyledLabel
-                  className="year emotion-3 emotion-0"
+                  className="emotion-58 emotion-23"
+                  year={true}
                 >
                   <label
-                    className="year emotion-0 emotion-24 emotion-2"
+                    className="emotion-23 emotion-56 emotion-2"
                   >
                     <StyledHoc>
                       <LabelText
@@ -354,19 +402,19 @@ exports[`DateInput matches wrappersnapshot: wrapper mount 1`] = `
                       defaultValue=""
                       errorText="example"
                       name="dateInputYear"
-                      type="text"
+                      type="number"
                     >
                       <input
                         className="emotion-21 emotion-22"
                         defaultValue=""
                         name="dateInputYear"
-                        type="text"
+                        type="number"
                       />
                     </StyledInput>
                   </label>
                 </StyledLabel>
               </Label>
-            </StyledHoc>
+            </StyledLabel>
           </div>
         </StyledList>
       </div>
