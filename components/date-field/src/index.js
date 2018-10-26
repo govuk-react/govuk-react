@@ -15,11 +15,13 @@ const StyledContainer = styled('div')(
     display: 'flex',
     flexDirection: 'column',
   },
-  ({ errorText }) => ({
-    borderLeft: errorText ? `4px solid ${ERROR_COLOUR}` : undefined,
-    marginRight: errorText ? SPACING.SCALE_3 : undefined,
-    paddingLeft: errorText ? SPACING.SCALE_2 : undefined,
-  }),
+  ({ errorText }) => (
+    errorText ? {
+      borderLeft: `4px solid ${ERROR_COLOUR}`,
+      marginRight: SPACING.SCALE_3,
+      paddingLeft: SPACING.SCALE_2,
+    } : undefined
+  ),
 );
 
 /**

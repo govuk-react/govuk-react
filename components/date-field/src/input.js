@@ -54,7 +54,7 @@ const StyledList = styled('div')({
 });
 
 
-class OptionalDateField extends React.Component {
+class Input extends React.Component {
   inputs = {}
 
   renderInput(label, name, key, defaultValue, error) {
@@ -90,7 +90,7 @@ class OptionalDateField extends React.Component {
   }
 }
 
-OptionalDateField.propTypes = {
+Input.propTypes = {
   names: PropTypes.shape({
     day: PropTypes.string,
     month: PropTypes.string,
@@ -121,7 +121,7 @@ OptionalDateField.propTypes = {
   error: PropTypes.bool,
 };
 
-OptionalDateField.defaultProps = {
+Input.defaultProps = {
   value: undefined,
   names: {
     day: 'DateFieldDay',
@@ -142,4 +142,4 @@ OptionalDateField.defaultProps = {
 };
 
 // This component is dependent on multiInputInput HOC so we always export with HOC
-export default multiInputInput(OptionalDateField);
+export default multiInputInput(Input);
