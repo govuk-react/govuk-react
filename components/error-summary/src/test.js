@@ -57,6 +57,16 @@ describe('error summary', () => {
     });
   });
 
+  it('renders with defaultProps', () => {
+    const wrapper = mount(<ErrorSummary
+      heading={heading}
+      errors={errors}
+    />);
+    const anchor = wrapper.find('Anchor').first();
+    expect(anchor.props().onClick).toBeInstanceOf(Function);
+    anchor.simulate('click');
+  });
+
   it('matches the ErrorSummary snapshot', () => {
     expect(wrapperErrorSummary).toMatchSnapshot('error summary');
   });
