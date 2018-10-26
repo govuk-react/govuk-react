@@ -132,7 +132,7 @@ DateField.propTypes = {
     year: PropTypes.any,
   },
   /**
-   * Properties that are sent to the input, matching final form input type
+   * Properties that are sent to the input, matching final form and redux form input type
    */
   input: PropTypes.shape({
     /**
