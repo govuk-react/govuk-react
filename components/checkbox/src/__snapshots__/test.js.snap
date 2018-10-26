@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-3 {
+.emotion-7 {
   margin-bottom: 10px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-7 {
     margin-bottom: 10px;
   }
 }
 
-.emotion-2 {
+.emotion-5 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
@@ -19,7 +19,7 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-2 {
+  .emotion-5 {
     margin-bottom: 10px;
   }
 }
@@ -50,7 +50,7 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   pointer-events: auto;
 }
 
-.emotion-1 {
+.emotion-2 {
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -63,13 +63,13 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-2 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
-.emotion-1::before {
+.emotion-2::before {
   content: '';
   display: block;
   border: 2px solid #0b0c0c;
@@ -81,7 +81,7 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   left: 0;
 }
 
-.emotion-1::after {
+.emotion-2::after {
   content: '';
   border: solid;
   border-width: 0 0 5px 5px;
@@ -99,49 +99,49 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   opacity: 0;
 }
 
-<Styled(Checkbox)>
+<StyledHoc>
   <Checkbox
-    className="emotion-3"
+    className="emotion-7 emotion-4"
   >
-    <Styled(label)
-      className="emotion-3"
+    <StyledCheckbox
+      className="emotion-7 emotion-4"
     >
       <label
-        className="emotion-2"
+        className="emotion-4 emotion-5 emotion-6"
       >
-        <Styled(input)
+        <StyledInput
           type="checkbox"
         >
           <input
-            className="emotion-0"
+            className="emotion-0 emotion-1"
             type="checkbox"
           />
-        </Styled(input)>
-        <Styled(span)>
+        </StyledInput>
+        <StyledLabel>
           <span
-            className="emotion-1"
+            className="emotion-2 emotion-3"
           >
             example
           </span>
-        </Styled(span)>
+        </StyledLabel>
       </label>
-    </Styled(label)>
+    </StyledCheckbox>
   </Checkbox>
-</Styled(Checkbox)>
+</StyledHoc>
 `;
 
 exports[`Checkbox renders disabled checkbox: disabled 1`] = `
-.emotion-3 {
+.emotion-7 {
   margin-bottom: 10px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-7 {
     margin-bottom: 10px;
   }
 }
 
-.emotion-2 {
+.emotion-5 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
@@ -149,12 +149,12 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-2 {
+  .emotion-5 {
     margin-bottom: 10px;
   }
 }
 
-.emotion-1 {
+.emotion-2 {
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -167,13 +167,13 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-2 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
-.emotion-1::before {
+.emotion-2::before {
   content: '';
   display: block;
   border: 2px solid #0b0c0c;
@@ -185,7 +185,7 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
   left: 0;
 }
 
-.emotion-1::after {
+.emotion-2::after {
   content: '';
   border: solid;
   border-width: 0 0 5px 5px;
@@ -229,38 +229,38 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
   pointer-events: none;
 }
 
-<Styled(Checkbox)
+<StyledHoc
   disabled={true}
 >
   <Checkbox
-    className="emotion-3"
+    className="emotion-7 emotion-4"
     disabled={true}
   >
-    <Styled(label)
-      className="emotion-3"
+    <StyledCheckbox
+      className="emotion-7 emotion-4"
     >
       <label
-        className="emotion-2"
+        className="emotion-4 emotion-5 emotion-6"
       >
-        <Styled(input)
+        <StyledInput
           disabled={true}
           type="checkbox"
         >
           <input
-            className="emotion-0"
+            className="emotion-0 emotion-1"
             disabled={true}
             type="checkbox"
           />
-        </Styled(input)>
-        <Styled(span)>
+        </StyledInput>
+        <StyledLabel>
           <span
-            className="emotion-1"
+            className="emotion-2 emotion-3"
           >
             Example
           </span>
-        </Styled(span)>
+        </StyledLabel>
       </label>
-    </Styled(label)>
+    </StyledCheckbox>
   </Checkbox>
-</Styled(Checkbox)>
+</StyledHoc>
 `;

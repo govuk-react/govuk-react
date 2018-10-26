@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
-.emotion-4 {
+.emotion-9 {
   margin-bottom: 10px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-4 {
+  .emotion-9 {
     margin-bottom: 10px;
   }
 }
 
-.emotion-3 {
+.emotion-7 {
   font-family: "nta",Arial,sans-serif;
   font-size: 14px;
   line-height: 1.1428571429;
@@ -21,19 +21,19 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-7 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-7 {
     margin-bottom: 10px;
   }
 }
 
-.emotion-2 {
+.emotion-4 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -87,25 +87,25 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
   outline: 3px solid #ffbf47;
 }
 
-<Styled(Breadcrumb)>
+<StyledHoc>
   <Breadcrumb
-    className="emotion-4"
+    className="emotion-9 emotion-6"
   >
-    <Styled(div)
-      className="emotion-4"
+    <BreadcrumbContainer
+      className="emotion-9 emotion-6"
     >
       <div
-        className="emotion-3"
+        className="emotion-6 emotion-7 emotion-8"
       >
-        <Styled(ul)>
+        <BreadcrumbList>
           <ul
-            className="emotion-2"
+            className="emotion-4 emotion-5"
           >
-            <Styled(li)
+            <BreadcrumbListItem
               key="0"
             >
               <li
-                className="emotion-0"
+                className="emotion-0 emotion-1"
               >
                 <a
                   href="/section"
@@ -113,20 +113,20 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
                   Section 1
                 </a>
               </li>
-            </Styled(li)>
-            <Styled(li)
+            </BreadcrumbListItem>
+            <BreadcrumbListItem
               key="1"
             >
               <li
-                className="emotion-0"
+                className="emotion-0 emotion-1"
               >
                 example
               </li>
-            </Styled(li)>
+            </BreadcrumbListItem>
           </ul>
-        </Styled(ul)>
+        </BreadcrumbList>
       </div>
-    </Styled(div)>
+    </BreadcrumbContainer>
   </Breadcrumb>
-</Styled(Breadcrumb)>
+</StyledHoc>
 `;

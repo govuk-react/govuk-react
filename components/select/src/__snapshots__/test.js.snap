@@ -1,44 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select matches snapshot for errorText: errorText mount 1`] = `
-.emotion-13 {
+.emotion-33 {
   margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-13 {
+  .emotion-33 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-11 {
+.emotion-28 {
   margin-bottom: 0;
   margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-11 {
+  .emotion-28 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-11 {
+  .emotion-28 {
     margin-bottom: 30px;
+  }
+}
+
+.emotion-3 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
   }
 }
 
 .emotion-1 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -53,19 +53,19 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     margin-bottom: 0;
   }
 }
 
-.emotion-10 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -81,25 +81,25 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   margin-bottom: 20px;
 }
 
-.emotion-10:after {
+.emotion-25:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-10 {
+  .emotion-25 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-10 {
+  .emotion-25 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-3 {
+.emotion-8 {
   display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -113,19 +113,19 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-8 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-8 {
     margin-bottom: 0;
   }
 }
 
-.emotion-6 {
+.emotion-15 {
   display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -141,19 +141,19 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-15 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-15 {
     margin-bottom: 0;
   }
 }
 
-.emotion-9 {
+.emotion-21 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
@@ -168,7 +168,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-9 {
+  .emotion-21 {
     width: 50%;
     height: 38px;
     font-size: 19px;
@@ -176,12 +176,12 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   }
 }
 
-.emotion-9:focus {
+.emotion-21:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-<Styled(Select)
+<StyledHoc
   errorText="example"
   hint="example"
   label="example"
@@ -193,7 +193,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   }
 >
   <Select
-    className="emotion-13"
+    className="emotion-33 emotion-0"
     errorText="example"
     hint="example"
     input={Object {}}
@@ -205,115 +205,115 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
       }
     }
   >
-    <Styled(Label)
-      className="emotion-13"
+    <StyledHoc
+      className="emotion-33 emotion-0"
       error="example"
       errorText="example"
     >
       <Label
-        className="emotion-11"
+        className="emotion-0 emotion-28 emotion-0"
         error="example"
         errorText="example"
       >
-        <Styled(label)
-          className="emotion-11"
+        <StyledLabel
+          className="emotion-0 emotion-28 emotion-0"
           error="example"
           errorText="example"
         >
           <label
-            className="emotion-10"
+            className="emotion-0 emotion-0 emotion-25 emotion-2"
           >
-            <Styled(LabelText)>
+            <StyledHoc>
               <LabelText
-                className="emotion-1"
+                className="emotion-3 emotion-0"
               >
-                <Styled(span)
-                  className="emotion-1"
+                <StyledLabelText
+                  className="emotion-3 emotion-0"
                 >
                   <span
-                    className="emotion-0"
+                    className="emotion-0 emotion-1 emotion-2"
                   >
                     example
                   </span>
-                </Styled(span)>
+                </StyledLabelText>
               </LabelText>
-            </Styled(LabelText)>
-            <Styled(HintText)>
+            </StyledHoc>
+            <StyledHoc>
               <HintText
-                className="emotion-1"
+                className="emotion-3 emotion-0"
               >
-                <Styled(span)
-                  className="emotion-1"
+                <StyledHint
+                  className="emotion-3 emotion-0"
                 >
                   <span
-                    className="emotion-3"
+                    className="emotion-0 emotion-8 emotion-2"
                   >
                     example
                   </span>
-                </Styled(span)>
+                </StyledHint>
               </HintText>
-            </Styled(HintText)>
-            <Styled(ErrorText)>
+            </StyledHoc>
+            <StyledHoc>
               <ErrorText
-                className="emotion-1"
+                className="emotion-3 emotion-0"
               >
-                <Styled(span)
-                  className="emotion-1"
+                <StyledError
+                  className="emotion-3 emotion-0"
                 >
                   <span
-                    className="emotion-6"
+                    className="emotion-0 emotion-15 emotion-2"
                   >
                     example
                   </span>
-                </Styled(span)>
+                </StyledError>
               </ErrorText>
-            </Styled(ErrorText)>
-            <Styled(select)
+            </StyledHoc>
+            <StyledSelect
               error="example"
             >
               <select
-                className="emotion-9"
+                className="emotion-21 emotion-22"
               >
                 example
               </select>
-            </Styled(select)>
+            </StyledSelect>
           </label>
-        </Styled(label)>
+        </StyledLabel>
       </Label>
-    </Styled(Label)>
+    </StyledHoc>
   </Select>
-</Styled(Select)>
+</StyledHoc>
 `;
 
 exports[`Select matches snapshot: enzyme.mount 1`] = `
-.emotion-7 {
+.emotion-19 {
   margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-7 {
+  .emotion-19 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-5 {
+.emotion-14 {
   margin-bottom: 0;
   margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-5 {
+  .emotion-14 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-5 {
+  .emotion-14 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-4 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -326,35 +326,35 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   margin-bottom: 20px;
 }
 
-.emotion-4:after {
+.emotion-11:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-4 {
+  .emotion-11 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-4 {
+  .emotion-11 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-1 {
+.emotion-3 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-3 {
     margin-bottom: 0;
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -369,19 +369,19 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     margin-bottom: 0;
   }
 }
 
-.emotion-3 {
+.emotion-7 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
@@ -395,7 +395,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-7 {
     width: 50%;
     height: 38px;
     font-size: 19px;
@@ -403,58 +403,58 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   }
 }
 
-.emotion-3:focus {
+.emotion-7:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-<Styled(Select)
+<StyledHoc
   label="example"
 >
   <Select
-    className="emotion-7"
+    className="emotion-19 emotion-0"
     input={Object {}}
     label="example"
     meta={Object {}}
   >
-    <Styled(Label)
-      className="emotion-7"
+    <StyledHoc
+      className="emotion-19 emotion-0"
     >
       <Label
-        className="emotion-5"
+        className="emotion-0 emotion-14 emotion-0"
       >
-        <Styled(label)
-          className="emotion-5"
+        <StyledLabel
+          className="emotion-0 emotion-14 emotion-0"
         >
           <label
-            className="emotion-4"
+            className="emotion-0 emotion-0 emotion-11 emotion-2"
           >
-            <Styled(LabelText)>
+            <StyledHoc>
               <LabelText
-                className="emotion-1"
+                className="emotion-3 emotion-0"
               >
-                <Styled(span)
-                  className="emotion-1"
+                <StyledLabelText
+                  className="emotion-3 emotion-0"
                 >
                   <span
-                    className="emotion-0"
+                    className="emotion-0 emotion-1 emotion-2"
                   >
                     example
                   </span>
-                </Styled(span)>
+                </StyledLabelText>
               </LabelText>
-            </Styled(LabelText)>
-            <Styled(select)>
+            </StyledHoc>
+            <StyledSelect>
               <select
-                className="emotion-3"
+                className="emotion-7 emotion-8"
               >
                 example
               </select>
-            </Styled(select)>
+            </StyledSelect>
           </label>
-        </Styled(label)>
+        </StyledLabel>
       </Label>
-    </Styled(Label)>
+    </StyledHoc>
   </Select>
-</Styled(Select)>
+</StyledHoc>
 `;

@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-3 {
+.emotion-7 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-7 {
     margin-bottom: 0;
   }
 }
 
-.emotion-15 {
+.emotion-34 {
   margin: 0;
   padding: 0;
   padding-left: 20px;
@@ -24,19 +24,19 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-15 {
+  .emotion-34 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-15 {
+  .emotion-34 {
     margin-bottom: 0;
   }
 }
 
-.emotion-2 {
+.emotion-5 {
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -47,7 +47,7 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-2 {
+  .emotion-5 {
     font-size: 16px;
     line-height: 1.25;
     margin-bottom: 5px;
@@ -55,7 +55,7 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-2 {
+  .emotion-5 {
     margin-bottom: 0;
   }
 }
@@ -79,105 +79,105 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   color: #2e358b;
 }
 
-<Styled(OrderedList)>
+<StyledHoc>
   <OrderedList
-    className="emotion-3"
+    className="emotion-7 emotion-4"
   >
-    <Styled(ol)
-      className="emotion-3"
+    <StyledList
+      className="emotion-7 emotion-4"
     >
       <ol
-        className="emotion-15"
+        className="emotion-4 emotion-34 emotion-35"
       >
-        <Styled(ListItem)>
+        <StyledHoc>
           <ListItem
-            className="emotion-3"
+            className="emotion-7 emotion-4"
           >
-            <Styled(li)
-              className="emotion-3"
+            <StyledListItem
+              className="emotion-7 emotion-4"
             >
               <li
-                className="emotion-2"
+                className="emotion-4 emotion-5 emotion-6"
               >
-                <Styled(Anchor)
+                <StyledHoc
                   href="http://example.com"
                 >
                   <Anchor
-                    className="emotion-0"
+                    className="emotion-0 emotion-1"
                     href="http://example.com"
                   >
                     <a
-                      className="emotion-0"
+                      className="emotion-0 emotion-1"
                       href="http://example.com"
                     >
                       Example 1
                     </a>
                   </Anchor>
-                </Styled(Anchor)>
+                </StyledHoc>
               </li>
-            </Styled(li)>
+            </StyledListItem>
           </ListItem>
-        </Styled(ListItem)>
-        <Styled(ListItem)>
+        </StyledHoc>
+        <StyledHoc>
           <ListItem
-            className="emotion-3"
+            className="emotion-7 emotion-4"
           >
-            <Styled(li)
-              className="emotion-3"
+            <StyledListItem
+              className="emotion-7 emotion-4"
             >
               <li
-                className="emotion-2"
+                className="emotion-4 emotion-5 emotion-6"
               >
-                <Styled(Anchor)
+                <StyledHoc
                   href="http://example.com"
                 >
                   <Anchor
-                    className="emotion-0"
+                    className="emotion-0 emotion-1"
                     href="http://example.com"
                   >
                     <a
-                      className="emotion-0"
+                      className="emotion-0 emotion-1"
                       href="http://example.com"
                     >
                       Example 2
                     </a>
                   </Anchor>
-                </Styled(Anchor)>
+                </StyledHoc>
               </li>
-            </Styled(li)>
+            </StyledListItem>
           </ListItem>
-        </Styled(ListItem)>
-        <Styled(ListItem)>
+        </StyledHoc>
+        <StyledHoc>
           <ListItem
-            className="emotion-3"
+            className="emotion-7 emotion-4"
           >
-            <Styled(li)
-              className="emotion-3"
+            <StyledListItem
+              className="emotion-7 emotion-4"
             >
               <li
-                className="emotion-2"
+                className="emotion-4 emotion-5 emotion-6"
               >
-                <Styled(Anchor)
+                <StyledHoc
                   href="http://example.com"
                 >
                   <Anchor
-                    className="emotion-0"
+                    className="emotion-0 emotion-1"
                     href="http://example.com"
                   >
                     <a
-                      className="emotion-0"
+                      className="emotion-0 emotion-1"
                       href="http://example.com"
                     >
                       Example 3
                     </a>
                   </Anchor>
-                </Styled(Anchor)>
+                </StyledHoc>
               </li>
-            </Styled(li)>
+            </StyledListItem>
           </ListItem>
-        </Styled(ListItem)>
+        </StyledHoc>
       </ol>
-    </Styled(ol)>
+    </StyledList>
   </OrderedList>
-</Styled(OrderedList)>
+</StyledHoc>
 `;

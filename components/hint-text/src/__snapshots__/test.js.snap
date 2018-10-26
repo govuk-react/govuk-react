@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HintText matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-1 {
+.emotion-3 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-3 {
     margin-bottom: 0;
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -25,31 +25,31 @@ exports[`HintText matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     margin-bottom: 0;
   }
 }
 
-<Styled(HintText)>
+<StyledHoc>
   <HintText
-    className="emotion-1"
+    className="emotion-3 emotion-0"
   >
-    <Styled(span)
-      className="emotion-1"
+    <StyledHint
+      className="emotion-3 emotion-0"
     >
       <span
-        className="emotion-0"
+        className="emotion-0 emotion-1 emotion-2"
       >
         example
       </span>
-    </Styled(span)>
+    </StyledHint>
   </HintText>
-</Styled(HintText)>
+</StyledHoc>
 `;

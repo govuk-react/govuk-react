@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-1 {
+.emotion-3 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-3 {
     margin-bottom: 0;
   }
 }
 
-.emotion-3 {
+.emotion-8 {
   border-bottom: 1px solid #bfc1c3;
   box-sizing: border-box;
   padding-top: 10px;
@@ -25,23 +25,23 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-8 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-.emotion-3 > a {
+.emotion-8 > a {
   color: #005ea5;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-8 {
     margin-bottom: 0;
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   display: inline-block;
   margin: 0 8px 0 0;
   padding: 2px 5px;
@@ -64,7 +64,7 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 16px;
     line-height: 1.25;
     padding-bottom: 0;
@@ -72,42 +72,42 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     margin-bottom: 0;
   }
 }
 
-<Styled(PhaseBanner)
+<StyledHoc
   level="beta"
 >
   <PhaseBanner
-    className="emotion-1"
+    className="emotion-3 emotion-0"
     level="beta"
   >
-    <Styled(div)
-      className="emotion-1"
+    <StyledBanner
+      className="emotion-3 emotion-0"
     >
       <div
-        className="emotion-3"
+        className="emotion-0 emotion-8 emotion-9"
       >
-        <Styled(PhaseBadge)>
+        <StyledHoc>
           <PhaseBadge
-            className="emotion-1"
+            className="emotion-3 emotion-0"
           >
-            <Styled(strong)
-              className="emotion-1"
+            <StyledBadge
+              className="emotion-3 emotion-0"
             >
               <strong
-                className="emotion-0"
+                className="emotion-0 emotion-1 emotion-2"
               >
                 beta
               </strong>
-            </Styled(strong)>
+            </StyledBadge>
           </PhaseBadge>
-        </Styled(PhaseBadge)>
+        </StyledHoc>
         example
       </div>
-    </Styled(div)>
+    </StyledBanner>
   </PhaseBanner>
-</Styled(PhaseBanner)>
+</StyledHoc>
 `;

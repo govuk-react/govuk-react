@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-1 {
+.emotion-3 {
   margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-3 {
     margin-bottom: 45px;
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   font-family: "nta",Arial,sans-serif;
   font-size: 18px;
   line-height: 1.3;
@@ -20,31 +20,31 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 24px;
     line-height: 1.35;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     margin-bottom: 45px;
   }
 }
 
-<Styled(LeadParagraph)>
+<StyledHoc>
   <LeadParagraph
-    className="emotion-1"
+    className="emotion-3 emotion-0"
   >
-    <Styled(p)
-      className="emotion-1"
+    <StyledParagraph
+      className="emotion-3 emotion-0"
     >
       <p
-        className="emotion-0"
+        className="emotion-0 emotion-1 emotion-2"
       >
         example
       </p>
-    </Styled(p)>
+    </StyledParagraph>
   </LeadParagraph>
-</Styled(LeadParagraph)>
+</StyledHoc>
 `;

@@ -1,34 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
-.emotion-7 {
+.emotion-19 {
   margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-7 {
+  .emotion-19 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-5 {
+.emotion-14 {
   margin-bottom: 0;
   margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-5 {
+  .emotion-14 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-5 {
+  .emotion-14 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-4 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -41,35 +41,35 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
   margin-bottom: 20px;
 }
 
-.emotion-4:after {
+.emotion-11:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-4 {
+  .emotion-11 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-4 {
+  .emotion-11 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-1 {
+.emotion-3 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-3 {
     margin-bottom: 0;
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -84,19 +84,19 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     margin-bottom: 0;
   }
 }
 
-.emotion-3 {
+.emotion-7 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -110,57 +110,57 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-7 {
     font-size: 16px;
     line-height: 1.25;
     width: 50%;
   }
 }
 
-<Styled(FileUpload)>
+<StyledHoc>
   <FileUpload
-    className="emotion-7"
+    className="emotion-19 emotion-0"
     meta={Object {}}
   >
-    <Styled(Label)
-      className="emotion-7"
+    <StyledHoc
+      className="emotion-19 emotion-0"
     >
       <Label
-        className="emotion-5"
+        className="emotion-0 emotion-14 emotion-0"
       >
-        <Styled(label)
-          className="emotion-5"
+        <StyledLabel
+          className="emotion-0 emotion-14 emotion-0"
         >
           <label
-            className="emotion-4"
+            className="emotion-0 emotion-0 emotion-11 emotion-2"
           >
-            <Styled(LabelText)>
+            <StyledHoc>
               <LabelText
-                className="emotion-1"
+                className="emotion-3 emotion-0"
               >
-                <Styled(span)
-                  className="emotion-1"
+                <StyledLabelText
+                  className="emotion-3 emotion-0"
                 >
                   <span
-                    className="emotion-0"
+                    className="emotion-0 emotion-1 emotion-2"
                   >
                     example
                   </span>
-                </Styled(span)>
+                </StyledLabelText>
               </LabelText>
-            </Styled(LabelText)>
-            <Styled(input)
+            </StyledHoc>
+            <StyledInput
               type="file"
             >
               <input
-                className="emotion-3"
+                className="emotion-7 emotion-8"
                 type="file"
               />
-            </Styled(input)>
+            </StyledInput>
           </label>
-        </Styled(label)>
+        </StyledLabel>
       </Label>
-    </Styled(Label)>
+    </StyledHoc>
   </FileUpload>
-</Styled(FileUpload)>
+</StyledHoc>
 `;

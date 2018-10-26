@@ -7,12 +7,12 @@ exports[`Layout matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <Layout>
-  <Styled(div)>
+  <StyledLayout>
     <div
-      className="emotion-0"
+      className="emotion-0 emotion-1"
     >
       example
     </div>
-  </Styled(div)>
+  </StyledLayout>
 </Layout>
 `;

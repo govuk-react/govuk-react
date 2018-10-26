@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`button matches snapshot 1`] = `
-.emotion-1 {
+.emotion-3 {
   margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-3 {
     margin-bottom: 20px;
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -46,63 +46,30 @@ exports[`button matches snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-0:focus {
+.emotion-1:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-0:active {
+.emotion-1:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-0:visited {
+.emotion-1:visited {
   color: #00823b;
 }
 
-.emotion-0 svg {
+.emotion-1 svg {
   max-width: 15px;
   margin-left: 20px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 20px;
-  }
-}
-
-<Styled(Button)>
-  <Button
-    className="emotion-1"
-    disabled={false}
-    start={false}
-  >
-    <Styled(button)
-      className="emotion-1"
-      disabled={false}
-      isStart={false}
-    >
-      <button
-        className="emotion-0"
-        disabled={false}
-      >
-        Example
-      </button>
-    </Styled(button)>
-  </Button>
-</Styled(Button)>
-`;
-
-exports[`button with icon matches snapshot 1`] = `
-.emotion-1 {
-  margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
@@ -111,7 +78,40 @@ exports[`button with icon matches snapshot 1`] = `
   }
 }
 
-.emotion-0 {
+<StyledHoc>
+  <Button
+    className="emotion-3 emotion-0"
+    disabled={false}
+    start={false}
+  >
+    <StyledButton
+      className="emotion-3 emotion-0"
+      disabled={false}
+      isStart={false}
+    >
+      <button
+        className="emotion-0 emotion-1 emotion-2"
+        disabled={false}
+      >
+        Example
+      </button>
+    </StyledButton>
+  </Button>
+</StyledHoc>
+`;
+
+exports[`button with icon matches snapshot 1`] = `
+.emotion-3 {
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 20px;
+  }
+}
+
+.emotion-1 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -150,40 +150,40 @@ exports[`button with icon matches snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-0:focus {
+.emotion-1:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-0:active {
+.emotion-1:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-0:visited {
+.emotion-1:visited {
   color: #00823b;
 }
 
-.emotion-0 svg {
+.emotion-1 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     margin-bottom: 20px;
   }
 }
 
 <ButtonStartIcon>
-  <Styled(Button)
+  <StyledHoc
     icon={
       <ButtonArrow
         fill="currentColor"
@@ -193,7 +193,7 @@ exports[`button with icon matches snapshot 1`] = `
     start={true}
   >
     <Button
-      className="emotion-1"
+      className="emotion-3 emotion-0"
       disabled={false}
       icon={
         <ButtonArrow
@@ -203,8 +203,8 @@ exports[`button with icon matches snapshot 1`] = `
       }
       start={true}
     >
-      <Styled(button)
-        className="emotion-1"
+      <StyledButton
+        className="emotion-3 emotion-0"
         disabled={false}
         icon={
           <ButtonArrow
@@ -215,7 +215,7 @@ exports[`button with icon matches snapshot 1`] = `
         isStart={true}
       >
         <button
-          className="emotion-0"
+          className="emotion-0 emotion-1 emotion-2"
           disabled={false}
         >
           Start now
@@ -256,24 +256,24 @@ exports[`button with icon matches snapshot 1`] = `
             </SVG>
           </ButtonArrow>
         </button>
-      </Styled(button)>
+      </StyledButton>
     </Button>
-  </Styled(Button)>
+  </StyledHoc>
 </ButtonStartIcon>
 `;
 
 exports[`disabled button matches snapshot 1`] = `
-.emotion-1 {
+.emotion-3 {
   margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-3 {
     margin-bottom: 20px;
   }
 }
 
-.emotion-0 {
+.emotion-1 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -308,67 +308,30 @@ exports[`disabled button matches snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-0:focus {
+.emotion-1:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-0:active {
+.emotion-1:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-0:visited {
+.emotion-1:visited {
   color: #00823b;
 }
 
-.emotion-0 svg {
+.emotion-1 svg {
   max-width: 15px;
   margin-left: 20px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 20px;
-  }
-}
-
-<ButtonDisabled>
-  <Styled(Button)
-    disabled={true}
-  >
-    <Button
-      className="emotion-1"
-      disabled={true}
-      start={false}
-    >
-      <Styled(button)
-        className="emotion-1"
-        disabled={true}
-        isStart={false}
-      >
-        <button
-          className="emotion-0"
-          disabled={true}
-        >
-          Disabled primary button
-        </button>
-      </Styled(button)>
-    </Button>
-  </Styled(Button)>
-</ButtonDisabled>
-`;
-
-exports[`start button matches snapshot 1`] = `
-.emotion-1 {
-  margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
@@ -377,7 +340,44 @@ exports[`start button matches snapshot 1`] = `
   }
 }
 
-.emotion-0 {
+<ButtonDisabled>
+  <StyledHoc
+    disabled={true}
+  >
+    <Button
+      className="emotion-3 emotion-0"
+      disabled={true}
+      start={false}
+    >
+      <StyledButton
+        className="emotion-3 emotion-0"
+        disabled={true}
+        isStart={false}
+      >
+        <button
+          className="emotion-0 emotion-1 emotion-2"
+          disabled={true}
+        >
+          Disabled primary button
+        </button>
+      </StyledButton>
+    </Button>
+  </StyledHoc>
+</ButtonDisabled>
+`;
+
+exports[`start button matches snapshot 1`] = `
+.emotion-3 {
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 20px;
+  }
+}
+
+.emotion-1 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -416,60 +416,60 @@ exports[`start button matches snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-0:focus {
+.emotion-1:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-0:active {
+.emotion-1:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-0:visited {
+.emotion-1:visited {
   color: #00823b;
 }
 
-.emotion-0 svg {
+.emotion-1 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-1 {
     margin-bottom: 20px;
   }
 }
 
 <ButtonStart>
-  <Styled(Button)
+  <StyledHoc
     start={true}
   >
     <Button
-      className="emotion-1"
+      className="emotion-3 emotion-0"
       disabled={false}
       start={true}
     >
-      <Styled(button)
-        className="emotion-1"
+      <StyledButton
+        className="emotion-3 emotion-0"
         disabled={false}
         isStart={true}
       >
         <button
-          className="emotion-0"
+          className="emotion-0 emotion-1 emotion-2"
           disabled={false}
         >
           Save and continue
         </button>
-      </Styled(button)>
+      </StyledButton>
     </Button>
-  </Styled(Button)>
+  </StyledHoc>
 </ButtonStart>
 `;

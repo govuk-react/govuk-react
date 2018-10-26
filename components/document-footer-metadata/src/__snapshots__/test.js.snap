@@ -1,7 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Styled matches snapshot: enzyme.mount 1`] = `
+.emotion-3 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
 .emotion-1 {
+  font-family: "nta",Arial,sans-serif;
   margin-bottom: 0;
 }
 
@@ -11,22 +22,11 @@ exports[`Styled matches snapshot: enzyme.mount 1`] = `
   }
 }
 
-.emotion-0 {
-  font-family: "nta",Arial,sans-serif;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-7 {
+.emotion-16 {
   font-family: "nta",Arial,sans-serif;
 }
 
-.emotion-4 {
+.emotion-10 {
   margin: 0;
   padding: 0;
   padding-left: 20px;
@@ -42,30 +42,30 @@ exports[`Styled matches snapshot: enzyme.mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-4 {
+  .emotion-10 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-4 {
+  .emotion-10 {
     margin-bottom: 0;
   }
 }
 
-.emotion-2 {
+.emotion-5 {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.25;
 }
 
-.emotion-2 > a {
+.emotion-5 > a {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<Styled(DocumentFooterMetadata)
+<StyledHoc
   partOf={
     Array [
       "example",
@@ -74,7 +74,7 @@ exports[`Styled matches snapshot: enzyme.mount 1`] = `
   }
 >
   <DocumentFooterMetadata
-    className="emotion-1"
+    className="emotion-3 emotion-0"
     partOf={
       Array [
         "example",
@@ -83,16 +83,16 @@ exports[`Styled matches snapshot: enzyme.mount 1`] = `
     }
   >
     <div>
-      <Styled(div)
-        className="emotion-1"
+      <StyledContainer
+        className="emotion-3 emotion-0"
       >
         <div
-          className="emotion-0"
+          className="emotion-0 emotion-1 emotion-2"
         />
-      </Styled(div)>
-      <Styled(div)>
+      </StyledContainer>
+      <StyledContainer>
         <div
-          className="emotion-7"
+          className="emotion-16 emotion-2"
         >
           <div>
             <p
@@ -104,51 +104,51 @@ exports[`Styled matches snapshot: enzyme.mount 1`] = `
             >
               Part of:
             </p>
-            <Styled(UnorderedList)
+            <StyledHoc
               listStyleType="none"
             >
               <UnorderedList
-                className="emotion-1"
+                className="emotion-3 emotion-0"
                 listStyleType="none"
               >
-                <Styled(ul)
-                  className="emotion-1"
+                <StyledList
+                  className="emotion-3 emotion-0"
                   listStyleType="none"
                 >
                   <ul
-                    className="emotion-4"
+                    className="emotion-0 emotion-10 emotion-11"
                   >
-                    <Styled(li)
+                    <StyledDefinition
                       key="0"
                     >
                       <li
-                        className="emotion-2"
+                        className="emotion-5 emotion-6"
                       >
                         example
                       </li>
-                    </Styled(li)>
-                    <Styled(li)
+                    </StyledDefinition>
+                    <StyledDefinition
                       key="1"
                     >
                       <li
-                        className="emotion-2"
+                        className="emotion-5 emotion-6"
                       >
                         exampleexample
                       </li>
-                    </Styled(li)>
+                    </StyledDefinition>
                   </ul>
-                </Styled(ul)>
+                </StyledList>
               </UnorderedList>
-            </Styled(UnorderedList)>
+            </StyledHoc>
           </div>
         </div>
-      </Styled(div)>
-      <Styled(div)>
+      </StyledContainer>
+      <StyledContainer>
         <div
-          className="emotion-7"
+          className="emotion-16 emotion-2"
         />
-      </Styled(div)>
+      </StyledContainer>
     </div>
   </DocumentFooterMetadata>
-</Styled(DocumentFooterMetadata)>
+</StyledHoc>
 `;

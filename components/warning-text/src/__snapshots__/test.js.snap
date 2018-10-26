@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`WarningText to match snapshot 1`] = `
-.emotion-3 {
+.emotion-7 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-7 {
     margin-bottom: 0;
   }
 }
 
-.emotion-2 {
+.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -26,7 +26,7 @@ exports[`WarningText to match snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-2 {
+  .emotion-5 {
     margin-bottom: 0;
   }
 }
@@ -40,7 +40,7 @@ exports[`WarningText to match snapshot 1`] = `
   width: 35px;
 }
 
-.emotion-1 {
+.emotion-2 {
   font-family: "nta",Arial,sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -49,26 +49,26 @@ exports[`WarningText to match snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .emotion-2 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 <WarningTextWithKnobs>
-  <Styled(WarningText)>
+  <StyledHoc>
     <WarningText
-      className="emotion-3"
+      className="emotion-7 emotion-4"
     >
-      <Styled(div)
-        className="emotion-3"
+      <StyledWarningText
+        className="emotion-7 emotion-4"
       >
         <div
-          className="emotion-2"
+          className="emotion-4 emotion-5 emotion-6"
         >
-          <Styled(div)>
+          <IconImportantWrapper>
             <div
-              className="emotion-0"
+              className="emotion-0 emotion-1"
             >
               <IconImportant
                 fill="currentColor"
@@ -110,17 +110,17 @@ exports[`WarningText to match snapshot 1`] = `
                 </SVG>
               </IconImportant>
             </div>
-          </Styled(div)>
-          <Styled(strong)>
+          </IconImportantWrapper>
+          <WarningTextWrapper>
             <strong
-              className="emotion-1"
+              className="emotion-2 emotion-3"
             >
               A very long warning message. This includes a lot of text to give a good representation of a more average length warning. That way you can see more than one line wrapping.
             </strong>
-          </Styled(strong)>
+          </WarningTextWrapper>
         </div>
-      </Styled(div)>
+      </StyledWarningText>
     </WarningText>
-  </Styled(WarningText)>
+  </StyledHoc>
 </WarningTextWithKnobs>
 `;
