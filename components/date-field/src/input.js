@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { BLACK, YELLOW, ERROR_COLOUR } from 'govuk-colours';
 
+import LabelText from '@govuk-react/label-text';
 import Label from '@govuk-react/label';
 import {
   NTA_LIGHT,
@@ -12,19 +13,6 @@ import {
 } from '@govuk-react/constants';
 
 import multiInputInput from 'multi-input-input';
-
-const StyledList = styled('div')({
-  fontFamily: NTA_LIGHT,
-  display: 'flex',
-  '> label': {
-    width: '50px',
-    marginRight: '20px',
-    marginBottom: 0,
-  },
-  '> label.year': {
-    width: '70px',
-  },
-});
 
 const StyledInput = styled('input')(
   {
@@ -53,17 +41,30 @@ const StyledInput = styled('input')(
   }),
 );
 
+const StyledLabel = styled(Label)({
+  marginRight: '20px',
+  marginBottom: 0,
+}, ({ year }) => ({
+  width: year ? '70px' : '50px',
+}));
+
+const StyledList = styled('div')({
+  fontFamily: NTA_LIGHT,
+  display: 'flex',
+});
+
+
 class OptionalDateField extends React.Component {
   inputs = {}
 
   renderInput(label, name, key, defaultValue, error) {
     return (
-      <Label>
-        {label}:
+      <StyledLabel year={key === 'year'}>
+        <LabelText>{label}</LabelText>
         <StyledInput
           name={name}
           error={error}
-          type="text"
+          type="number"
           defaultValue={defaultValue}
           value={(this.props.value ? this.props.value[key] : undefined)}
           onChange={e => this.props.onChange(e, key)}
@@ -71,7 +72,7 @@ class OptionalDateField extends React.Component {
           onFocus={e => this.props.onFocus(e, key)}
           innerRef={(input) => { this.inputs[key] = input; this.props.refs(this.inputs); }}
         />
-      </Label>);
+      </StyledLabel>);
   }
 
   render() {
