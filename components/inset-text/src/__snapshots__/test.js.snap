@@ -108,6 +108,7 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
           >
             <Paragraph
               className="emotion-6 emotion-0"
+              linkRenderer={[Function]}
               mb={0}
               supportingText={false}
             >
@@ -124,6 +125,7 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
                 }
                 className="emotion-6 emotion-0"
                 escapeHtml={false}
+                linkRenderer={[Function]}
                 mb={0}
                 renderers={
                   Object {
@@ -148,6 +150,7 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
                   astPlugins={Array []}
                   className="emotion-0 emotion-1 emotion-2"
                   escapeHtml={false}
+                  linkRenderer={[Function]}
                   mb={0}
                   plugins={Array []}
                   rawSourcePos={false}
@@ -291,6 +294,7 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
           >
             <Paragraph
               className="emotion-6 emotion-0"
+              linkRenderer={[Function]}
               mb={0}
               supportingText={false}
             >
@@ -307,6 +311,7 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
                 }
                 className="emotion-6 emotion-0"
                 escapeHtml={false}
+                linkRenderer={[Function]}
                 mb={0}
                 renderers={
                   Object {
@@ -331,6 +336,7 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
                   astPlugins={Array []}
                   className="emotion-0 emotion-1 emotion-2"
                   escapeHtml={false}
+                  linkRenderer={[Function]}
                   mb={0}
                   plugins={Array []}
                   rawSourcePos={false}
