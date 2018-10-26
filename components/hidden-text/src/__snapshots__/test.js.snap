@@ -221,6 +221,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                 >
                   <Paragraph
                     className="emotion-10 emotion-4"
+                    linkRenderer={[Function]}
                     supportingText={false}
                   >
                     <StyledParagraph
@@ -236,6 +237,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                       }
                       className="emotion-10 emotion-4"
                       escapeHtml={false}
+                      linkRenderer={[Function]}
                       renderers={
                         Object {
                           "link": [Function],
@@ -259,6 +261,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                         astPlugins={Array []}
                         className="emotion-4 emotion-5 emotion-6"
                         escapeHtml={false}
+                        linkRenderer={[Function]}
                         plugins={Array []}
                         rawSourcePos={false}
                         renderers={
@@ -292,6 +295,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                 >
                   <Paragraph
                     className="emotion-20 emotion-4"
+                    linkRenderer={[Function]}
                     mb={0}
                     supportingText={false}
                   >
@@ -308,6 +312,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                       }
                       className="emotion-20 emotion-4"
                       escapeHtml={false}
+                      linkRenderer={[Function]}
                       mb={0}
                       renderers={
                         Object {
@@ -332,6 +337,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                         astPlugins={Array []}
                         className="emotion-4 emotion-15 emotion-6"
                         escapeHtml={false}
+                        linkRenderer={[Function]}
                         mb={0}
                         plugins={Array []}
                         rawSourcePos={false}

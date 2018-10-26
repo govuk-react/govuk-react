@@ -9,7 +9,8 @@ import {
   MEDIA_QUERIES,
   NTA_LIGHT,
 } from '@govuk-react/constants';
-import RouterLink from './link-renderer';
+
+import Anchor from './atoms/anchor';
 
 const StyledParagraph = styled(ReactMarkdown)(
   {
@@ -86,6 +87,20 @@ const StyledParagraph = styled(ReactMarkdown)(
  * </Paragraph>
  * ````
  *
+ * With React router
+ *
+ * ```jsx
+ * const ReactRouterLinkRenderer = ({ href, children }) => (
+ *   href.match(/^\//)
+ *     ? <Link to={href}>{children}</Link>
+ *     : <a href={href}>{children}</a>
+ * );
+ *
+ * <Paragraph linkRenderer={ReactRouterLinkRenderer}>
+ *   ...
+ * </Paragraph>
+ * ```
+ *
  * ### References
  * - https://govuk-elements.herokuapp.com/typography/#typography-body-copy
  *
@@ -100,7 +115,7 @@ const Paragraph = ({ children, ...props }) => (
     escapeHtml={false}
     skipHtml
     allowedTypes={['paragraph', 'emphasis', 'strong', 'link', 'inlineCode', 'code']}
-    renderers={{ link: RouterLink }}
+    renderers={{ link: props.linkRenderer }}
     {...props}
   />
 );
@@ -114,11 +129,13 @@ Paragraph.propTypes = {
    * Is this paragraph supporting text for another element?
    */
   supportingText: PropTypes.bool,
+  linkRenderer: PropTypes.func,
 };
 
 Paragraph.defaultProps = {
   children: '',
   supportingText: false,
+  linkRenderer: props => <Anchor {...props} />,
 };
 
 export default withWhiteSpace({ marginBottom: 4 })(Paragraph);
