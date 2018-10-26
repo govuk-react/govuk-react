@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
-.emotion-74 {
+.emotion-67 {
   margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-74 {
+  .emotion-67 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-72 {
+.emotion-65 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,7 +26,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-72 {
+  .emotion-65 {
     margin-bottom: 30px;
   }
 }
@@ -96,7 +96,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
   }
 }
 
-.emotion-69 {
+.emotion-62 {
   font-family: "nta",Arial,sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
@@ -104,7 +104,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
   display: flex;
 }
 
-.emotion-33 {
+.emotion-26 {
   margin-bottom: 0;
   margin-right: 20px;
   margin-bottom: 0;
@@ -112,12 +112,12 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-33 {
+  .emotion-26 {
     margin-bottom: 0;
   }
 }
 
-.emotion-31 {
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -132,19 +132,19 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
   width: 50px;
 }
 
-.emotion-31:after {
+.emotion-24:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-31 {
+  .emotion-24 {
     margin-bottom: 0;
   }
 }
 
-.emotion-28 {
+.emotion-21 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -160,18 +160,18 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-28 {
+  .emotion-21 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
-.emotion-28:focus {
+.emotion-21:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.emotion-65 {
+.emotion-58 {
   margin-bottom: 0;
   margin-right: 20px;
   margin-bottom: 0;
@@ -179,12 +179,12 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-65 {
+  .emotion-58 {
     margin-bottom: 0;
   }
 }
 
-.emotion-63 {
+.emotion-56 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -199,14 +199,14 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
   width: 70px;
 }
 
-.emotion-63:after {
+.emotion-56:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-63 {
+  .emotion-56 {
     margin-bottom: 0;
   }
 }
@@ -215,7 +215,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
   errorText="example"
 >
   <DateField
-    className="emotion-74 emotion-0"
+    className="emotion-67 emotion-0"
     defaultValues={
       Object {
         "day": undefined,
@@ -233,11 +233,11 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
     }
   >
     <StyledContainer
-      className="emotion-74 emotion-0"
+      className="emotion-67 emotion-0"
       errorText="example"
     >
       <div
-        className="emotion-0 emotion-72 emotion-73"
+        className="emotion-0 emotion-65 emotion-66"
       >
         <StyledHoc
           errorText="example"
@@ -257,26 +257,6 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
               </span>
             </StyledLabelText>
           </LabelText>
-        </StyledHoc>
-        <span />
-        <StyledHoc
-          errorText="example"
-        >
-          <ErrorText
-            className="emotion-3 emotion-0"
-            errorText="example"
-          >
-            <StyledError
-              className="emotion-3 emotion-0"
-              errorText="example"
-            >
-              <span
-                className="emotion-0 emotion-8 emotion-2"
-              >
-                example
-              </span>
-            </StyledError>
-          </ErrorText>
         </StyledHoc>
         <StyledHoc
           errorText="example"
@@ -349,21 +329,21 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
           >
             <StyledList>
               <div
-                className="emotion-69 emotion-70"
+                className="emotion-62 emotion-63"
               >
                 <StyledLabel
                   year={false}
                 >
                   <Label
-                    className="emotion-33 emotion-30"
+                    className="emotion-26 emotion-23"
                     year={false}
                   >
                     <StyledLabel
-                      className="emotion-33 emotion-30"
+                      className="emotion-26 emotion-23"
                       year={false}
                     >
                       <label
-                        className="emotion-30 emotion-31 emotion-2"
+                        className="emotion-23 emotion-24 emotion-2"
                       >
                         <StyledHoc>
                           <LabelText
@@ -389,7 +369,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                           type="number"
                         >
                           <input
-                            className="emotion-28 emotion-29"
+                            className="emotion-21 emotion-22"
                             onBlur={[Function]}
                             onChange={[Function]}
                             onFocus={[Function]}
@@ -404,15 +384,15 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                   year={false}
                 >
                   <Label
-                    className="emotion-33 emotion-30"
+                    className="emotion-26 emotion-23"
                     year={false}
                   >
                     <StyledLabel
-                      className="emotion-33 emotion-30"
+                      className="emotion-26 emotion-23"
                       year={false}
                     >
                       <label
-                        className="emotion-30 emotion-31 emotion-2"
+                        className="emotion-23 emotion-24 emotion-2"
                       >
                         <StyledHoc>
                           <LabelText
@@ -438,7 +418,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                           type="number"
                         >
                           <input
-                            className="emotion-28 emotion-29"
+                            className="emotion-21 emotion-22"
                             onBlur={[Function]}
                             onChange={[Function]}
                             onFocus={[Function]}
@@ -453,15 +433,15 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                   year={true}
                 >
                   <Label
-                    className="emotion-65 emotion-30"
+                    className="emotion-58 emotion-23"
                     year={true}
                   >
                     <StyledLabel
-                      className="emotion-65 emotion-30"
+                      className="emotion-58 emotion-23"
                       year={true}
                     >
                       <label
-                        className="emotion-30 emotion-63 emotion-2"
+                        className="emotion-23 emotion-56 emotion-2"
                       >
                         <StyledHoc>
                           <LabelText
@@ -487,7 +467,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                           type="number"
                         >
                           <input
-                            className="emotion-28 emotion-29"
+                            className="emotion-21 emotion-22"
                             onBlur={[Function]}
                             onChange={[Function]}
                             onFocus={[Function]}
@@ -736,8 +716,6 @@ exports[`DateField should support null value: null value 1`] = `
             </StyledLabelText>
           </LabelText>
         </StyledHoc>
-        <span />
-        <span />
         <MultiInputInput
           defaultValues={
             Object {
@@ -1185,8 +1163,6 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
             </StyledLabelText>
           </LabelText>
         </StyledHoc>
-        <span />
-        <span />
         <MultiInputInput
           defaultValues={
             Object {

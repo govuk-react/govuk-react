@@ -76,12 +76,6 @@ const DateField = ({
 }) => (
   <StyledContainer {...props} errorText={errorText}>
     <LabelText errorText={errorText}>{children}</LabelText>
-    {hintText ? <HintText>{hintText}</HintText> : <span />}
-    {errorText ? (
-      <ErrorText errorText={errorText}>{errorText}</ErrorText>
-    ) : (
-      <span />
-      )}
     {hintText && <HintText>{hintText}</HintText>}
     {errorText && <ErrorText errorText={errorText}>{errorText}</ErrorText>}
     <Input
