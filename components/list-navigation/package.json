@@ -1,14 +1,14 @@
 {
   "name": "@govuk-react/list-navigation",
-  "version": "0.2.12",
+  "version": "0.3.0",
   "devDependencies": {
-    "@govuk-react/storybook-components": "^0.2.12"
+    "@govuk-react/storybook-components": "^0.3.0"
   },
   "dependencies": {
     "@govuk-react/constants": "^0.2.7",
-    "@govuk-react/hoc": "^0.2.7",
-    "@govuk-react/list-item": "^0.2.12",
-    "@govuk-react/unordered-list": "^0.2.12",
+    "@govuk-react/hoc": "^0.3.0",
+    "@govuk-react/list-item": "^0.3.0",
+    "@govuk-react/unordered-list": "^0.3.0",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {

@@ -1,9 +1,9 @@
 {
   "name": "@govuk-react/checkbox",
-  "version": "0.2.12",
+  "version": "0.3.0",
   "dependencies": {
     "@govuk-react/constants": "^0.2.7",
-    "@govuk-react/hoc": "^0.2.7",
+    "@govuk-react/hoc": "^0.3.0",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
