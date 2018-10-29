@@ -77,6 +77,7 @@ We are also expecting to use [Interoperable Style Transfer Format (ISTF)](https:
 
 1. We want to be free to write different DOM structure and/or CSS that is more in keeping with a React and bem-ish architecture. (e.g. in React you often don't need to specify IDs for field inputs, and can wrap inputs with labels so that they are automatically associated. We want to leave the decision of whether to use input IDs to the parent project. GDS styles don't wrap inputs with labels and require IDs and for attributes).
 2. We want a parent project to not have to worry about a specific build system (e.g. for handling `import styles.css`, particularly if you want universal support) or including certain CSS files. We want a simple `npm install govuk-react` to be enough to get govuk styled components on to your page, irrespective of your build system.
+3. We want to distribute React applications as modules that have self contained styles. CSS in JS allows all styles to be contained in distributable JS modules that can be ported across projects.
 
 ## About the GDS font
 
@@ -114,4 +115,3 @@ We use [Chromaticqa](https://www.chromaticqa.com/) for visual regression testing
 - [Steve Sims](https://github.com/stevesims)
 - [Taran Chauhan](https://github.com/taranchauhan)
 - [Toby Brancher](https://github.com/Loque-)
- 

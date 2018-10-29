@@ -8355,6 +8355,10 @@ ms@2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
 
+multi-input-input@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/multi-input-input/-/multi-input-input-0.0.3.tgz#7e23f9d12bd0d7101c7d1658bc460cee9626c4e8"
+
 multimatch@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/multimatch/-/multimatch-2.1.0.tgz#9c7906a22fb4c02919e2f5f75161b4cdbd4b2a2b"

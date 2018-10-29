@@ -6,7 +6,7 @@ export { default as BackLink } from '@govuk-react/back-link';
 export { default as Breadcrumb } from '@govuk-react/breadcrumb';
 export { default as Button } from '@govuk-react/button';
 export { default as Checkbox } from '@govuk-react/checkbox';
-export { default as DateInput } from '@govuk-react/date-input';
+export { default as DateField } from '@govuk-react/date-field';
 export { default as ErrorSummary } from '@govuk-react/error-summary';
 export { default as ErrorText } from '@govuk-react/error-text';
 export { default as FileUpload } from '@govuk-react/file-upload';

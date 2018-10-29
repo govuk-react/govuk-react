@@ -83,7 +83,7 @@
     "@govuk-react/breadcrumb": "*",
     "@govuk-react/button": "*",
     "@govuk-react/checkbox": "*",
-    "@govuk-react/date-input": "*",
+    "@govuk-react/date-field": "*",
     "@govuk-react/error-summary": "*",
     "@govuk-react/error-text": "*",
     "@govuk-react/file-upload": "*",

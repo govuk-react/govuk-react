@@ -1,9 +1,9 @@
-DateInput
+DateField
 =========
 
 ### Import
 ```js
-  import DateInput from '@govuk-react/date-input';
+  import DateField from '@govuk-react/date-field';
 ```
 <!-- STORY -->
 
@@ -11,24 +11,24 @@ DateInput
 
 Simple
 ```jsx
-<DateInput>What is your date of birth?</DateInput>
+<DateField>What is your date of birth?</DateField>
 ```
 
 Date with hint text
 ```jsx
-<DateInput hintText="For example, 31 03 1980">
+<DateField hintText="For example, 31 03 1980">
   What is your date of birth?
-</DateInput>
+</DateField>
 ```
 
 Date with hint text & error
 ```jsx
-<DateInput
+<DateField
   hintText="For example, 31 03 1980"
   errorText="Error message goes here"
 >
   What is your date of birth?
-</DateInput>
+</DateField>
 ```
 
 With custom input name props
@@ -41,18 +41,20 @@ With custom input name props
   }}
  >
   What is your date of birth?
-</DateInput>
+</DateField>
 ```
 
 ### References:
-- https://github.com/alphagov/govuk-frontend/tree/master/src/components/date-input
+- https://github.com/alphagov/govuk-frontend/tree/master/src/components/date-field
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | node | 
+ `defaultValues` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` | custom | 
  `errorText` |  | ```undefined``` | string | Error text
  `hintText` |  | ```undefined``` | string | Optional hint text
+ `input` |  | ```undefined``` | shape[object Object] | Properties that are sent to the input, matching final form input type
  `inputNames` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` | shape[object Object] | Input name attributes
 
 

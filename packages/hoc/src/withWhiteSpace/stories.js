@@ -5,7 +5,7 @@ import BackLink from '@govuk-react/back-link';
 import Breadcrumb from '@govuk-react/breadcrumb';
 import Button from '@govuk-react/button';
 import Checkbox from '@govuk-react/checkbox';
-import DateInput from '@govuk-react/date-input';
+import DateField from '@govuk-react/date-field';
 import ErrorText from '@govuk-react/error-text';
 import FileUpload from '@govuk-react/file-upload';
 import Header from '@govuk-react/header';
@@ -39,7 +39,7 @@ const BackLinkWhiteSpace = withWhiteSpace({ marginBottom: 1 })(BackLink);
 const BreadcrumbWhiteSpace = withWhiteSpace({ marginBottom: 1 })(Breadcrumb);
 const ButtonWhiteSpace = withWhiteSpace({ marginBottom: 1 })(Button);
 const CheckboxWhiteSpace = withWhiteSpace({ marginBottom: 1 })(Checkbox);
-const DateInputWhiteSpace = withWhiteSpace({ marginBottom: 1 })(DateInput);
+const DateFieldWhiteSpace = withWhiteSpace({ marginBottom: 1 })(DateField);
 const ErrorTextWhiteSpace = withWhiteSpace({ marginBottom: 1 })(ErrorText);
 const FileUploadWhiteSpace = withWhiteSpace({ marginBottom: 1 })(FileUpload);
 const HeaderWhiteSpace = withWhiteSpace({ marginBottom: 1 })(Header);
@@ -87,7 +87,7 @@ stories.add('with multiple components', () => (
     <BreadcrumbWhiteSpace mb={number('Breadcrumb marginBottom', 9)}>Example</BreadcrumbWhiteSpace>
     <ButtonWhiteSpace mb={number('Button marginBottom', 9)}>Example</ButtonWhiteSpace>
     <CheckboxWhiteSpace mb={number('Checkbox marginBottom', 9)}>Example</CheckboxWhiteSpace>
-    <DateInputWhiteSpace mb={number('DateInput marginBottom', 9)}>Example</DateInputWhiteSpace>
+    <DateFieldWhiteSpace mb={number('DateField marginBottom', 9)}>Example</DateFieldWhiteSpace>
     <ErrorTextWhiteSpace mb={number('ErrorText marginBottom', 9)}>Example</ErrorTextWhiteSpace>
     <FileUploadWhiteSpace mb={number('File Upload marginBottom', 9)}>Example</FileUploadWhiteSpace>
     <HeaderWhiteSpace mb={number('Header marginBottom', 9)}>Example</HeaderWhiteSpace>

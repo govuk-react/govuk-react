@@ -163,12 +163,12 @@ Prop | Required | Default | Type | Description
  `className` |  | ```undefined``` | string | CSS Classname for outermost container
 
 
-DateInput
+DateField
 =========
 
 ### Import
 ```js
-  import DateInput from '@govuk-react/date-input';
+  import DateField from '@govuk-react/date-field';
 ```
 <!-- STORY -->
 
@@ -176,43 +176,51 @@ DateInput
 
 Simple
 ```jsx
-<DateInput>What is your date of birth?</DateInput>
+<DateField>What is your date of birth?</DateField>
 ```
 
 Date with hint text
 ```jsx
-<DateInput hintText="For example, 31 03 1980">
+<DateField hintText="For example, 31 03 1980">
   What is your date of birth?
-</DateInput>
+</DateField>
 ```
 
 Date with hint text & error
 ```jsx
-<DateInput
+<DateField
   hintText="For example, 31 03 1980"
   errorText="Error message goes here"
 >
   What is your date of birth?
-</DateInput>
+</DateField>
 ```
 
 With custom input name props
 ```jsx
-<DateInput inputNames={{ day: 'dayInputName' }} hintText="For example, 31 03 1980">
+<DateInput hintText="For example, 31 03 1980"
+  inputNames={{
+    day: 'dayInputName',
+    month: 'monthInputName',
+    year: 'yearInputName',
+  }}
+ >
   What is your date of birth?
-</DateInput>
+</DateField>
 ```
 
 ### References:
-- https://github.com/alphagov/govuk-frontend/tree/master/src/components/date-input
+- https://github.com/alphagov/govuk-frontend/tree/master/src/components/date-field
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | node | 
+ `defaultValues` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` | custom | 
  `errorText` |  | ```undefined``` | string | Error text
  `hintText` |  | ```undefined``` | string | Optional hint text
- `inputNames` |  | ```{   day: 'dateInputDay',   month: 'dateInputMonth',   year: 'dateInputYear', }``` | shape[object Object] | Input name attributes
+ `input` |  | ```undefined``` | shape[object Object] | Properties that are sent to the input, matching final form input type
+ `inputNames` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` | shape[object Object] | Input name attributes
 
 
 DocumentFooterMetadata
@@ -1866,12 +1874,12 @@ const ServiceTitleLink = (
 
 ### References:
 - http://alphagov.github.io/govuk_template/example-proposition-menu.html
+- https://design-system.service.gov.uk/components/header/
 
 ### TODO:
 - TODO: this component is a work in progress and needs to more closely match existing examples
 - TODO: is TopNav the right name? What's it called in other GDS styles/patterns?
 - TODO: (The name Header is ambiguous)
-- TODO: Fix the position and design of this button
 - TODO: #205 Use context api and/or render props for `active` navigation items
 - TODO: Vertical alignment here needs some work, perhaps should be its own component
 - TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
@@ -1883,6 +1891,7 @@ Prop | Required | Default | Type | Description
  `children` |  | ```undefined``` | node | List Navigation items with anchor tags e.g. NavAnchor components
  `color` |  | ```WHITE``` | string | Top nav text color
  `company` |  | ```undefined``` | node | Company component e.g. GOV UK
+ `defaultOpen` |  | ```false``` | bool | Is the mobile navigation open by default?
  `search` |  | ```false``` | node | Search component
  `serviceTitle` |  | ```undefined``` | node | Service title component e.g. Food Standards Authority
 

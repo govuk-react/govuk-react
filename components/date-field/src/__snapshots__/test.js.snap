@@ -1,0 +1,1393 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
+.emotion-67 {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-67 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-65 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-left: 4px solid #b10e1e;
+  margin-right: 15px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-65 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-3 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-1 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-8 {
+  display: block;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #b10e1e;
+  padding-top: 4px;
+  padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-62 {
+  font-family: "nta",Arial,sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-26 {
+  margin-bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  width: 50px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-26 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-24 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  width: 50px;
+}
+
+.emotion-24:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-24 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-21 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+  border: 4px solid #b10e1e;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-21 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+.emotion-21:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+.emotion-58 {
+  margin-bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  width: 70px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-58 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-56 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  width: 70px;
+}
+
+.emotion-56:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-56 {
+    margin-bottom: 0;
+  }
+}
+
+<StyledHoc
+  errorText="example"
+>
+  <DateField
+    className="emotion-67 emotion-0"
+    defaultValues={
+      Object {
+        "day": undefined,
+        "month": undefined,
+        "year": undefined,
+      }
+    }
+    errorText="example"
+    inputNames={
+      Object {
+        "day": undefined,
+        "month": undefined,
+        "year": undefined,
+      }
+    }
+  >
+    <StyledContainer
+      className="emotion-67 emotion-0"
+      errorText="example"
+    >
+      <div
+        className="emotion-0 emotion-65 emotion-66"
+      >
+        <StyledHoc
+          errorText="example"
+        >
+          <LabelText
+            className="emotion-3 emotion-0"
+            errorText="example"
+          >
+            <StyledLabelText
+              className="emotion-3 emotion-0"
+              errorText="example"
+            >
+              <span
+                className="emotion-0 emotion-1 emotion-2"
+              >
+                example
+              </span>
+            </StyledLabelText>
+          </LabelText>
+        </StyledHoc>
+        <StyledHoc
+          errorText="example"
+        >
+          <ErrorText
+            className="emotion-3 emotion-0"
+            errorText="example"
+          >
+            <StyledError
+              className="emotion-3 emotion-0"
+              errorText="example"
+            >
+              <span
+                className="emotion-0 emotion-8 emotion-2"
+              >
+                example
+              </span>
+            </StyledError>
+          </ErrorText>
+        </StyledHoc>
+        <MultiInputInput
+          defaultValues={
+            Object {
+              "day": undefined,
+              "month": undefined,
+              "year": undefined,
+            }
+          }
+          error={true}
+          names={
+            Object {
+              "day": undefined,
+              "month": undefined,
+              "year": undefined,
+            }
+          }
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          value={Object {}}
+        >
+          <Input
+            defaultValues={
+              Object {
+                "day": undefined,
+                "month": undefined,
+                "year": undefined,
+              }
+            }
+            error={true}
+            labels={
+              Object {
+                "day": "Day",
+                "month": "Month",
+                "year": "Year",
+              }
+            }
+            names={
+              Object {
+                "day": undefined,
+                "month": undefined,
+                "year": undefined,
+              }
+            }
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            refs={[Function]}
+            value={Object {}}
+          >
+            <StyledList>
+              <div
+                className="emotion-62 emotion-63"
+              >
+                <StyledLabel
+                  year={false}
+                >
+                  <Label
+                    className="emotion-26 emotion-23"
+                    year={false}
+                  >
+                    <StyledLabel
+                      className="emotion-26 emotion-23"
+                      year={false}
+                    >
+                      <label
+                        className="emotion-23 emotion-24 emotion-2"
+                      >
+                        <StyledHoc>
+                          <LabelText
+                            className="emotion-3 emotion-0"
+                          >
+                            <StyledLabelText
+                              className="emotion-3 emotion-0"
+                            >
+                              <span
+                                className="emotion-0 emotion-1 emotion-2"
+                              >
+                                Day
+                              </span>
+                            </StyledLabelText>
+                          </LabelText>
+                        </StyledHoc>
+                        <StyledInput
+                          error={true}
+                          innerRef={[Function]}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="number"
+                        >
+                          <input
+                            className="emotion-21 emotion-22"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            type="number"
+                          />
+                        </StyledInput>
+                      </label>
+                    </StyledLabel>
+                  </Label>
+                </StyledLabel>
+                <StyledLabel
+                  year={false}
+                >
+                  <Label
+                    className="emotion-26 emotion-23"
+                    year={false}
+                  >
+                    <StyledLabel
+                      className="emotion-26 emotion-23"
+                      year={false}
+                    >
+                      <label
+                        className="emotion-23 emotion-24 emotion-2"
+                      >
+                        <StyledHoc>
+                          <LabelText
+                            className="emotion-3 emotion-0"
+                          >
+                            <StyledLabelText
+                              className="emotion-3 emotion-0"
+                            >
+                              <span
+                                className="emotion-0 emotion-1 emotion-2"
+                              >
+                                Month
+                              </span>
+                            </StyledLabelText>
+                          </LabelText>
+                        </StyledHoc>
+                        <StyledInput
+                          error={true}
+                          innerRef={[Function]}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="number"
+                        >
+                          <input
+                            className="emotion-21 emotion-22"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            type="number"
+                          />
+                        </StyledInput>
+                      </label>
+                    </StyledLabel>
+                  </Label>
+                </StyledLabel>
+                <StyledLabel
+                  year={true}
+                >
+                  <Label
+                    className="emotion-58 emotion-23"
+                    year={true}
+                  >
+                    <StyledLabel
+                      className="emotion-58 emotion-23"
+                      year={true}
+                    >
+                      <label
+                        className="emotion-23 emotion-56 emotion-2"
+                      >
+                        <StyledHoc>
+                          <LabelText
+                            className="emotion-3 emotion-0"
+                          >
+                            <StyledLabelText
+                              className="emotion-3 emotion-0"
+                            >
+                              <span
+                                className="emotion-0 emotion-1 emotion-2"
+                              >
+                                Year
+                              </span>
+                            </StyledLabelText>
+                          </LabelText>
+                        </StyledHoc>
+                        <StyledInput
+                          error={true}
+                          innerRef={[Function]}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="number"
+                        >
+                          <input
+                            className="emotion-21 emotion-22"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            type="number"
+                          />
+                        </StyledInput>
+                      </label>
+                    </StyledLabel>
+                  </Label>
+                </StyledLabel>
+              </div>
+            </StyledList>
+          </Input>
+        </MultiInputInput>
+      </div>
+    </StyledContainer>
+  </DateField>
+</StyledHoc>
+`;
+
+exports[`DateField should support null value: null value 1`] = `
+.emotion-60 {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-60 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-3 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-1 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-55 {
+  font-family: "nta",Arial,sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-19 {
+  margin-bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  width: 50px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-19 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  width: 50px;
+}
+
+.emotion-17:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-17 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-51 {
+  margin-bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  width: 70px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-51 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-49 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  width: 70px;
+}
+
+.emotion-49:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-49 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-58 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-58 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+  border: 2px solid #0b0c0c;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-14 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+.emotion-14:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+<StyledHoc
+  input={
+    Object {
+      "value": null,
+    }
+  }
+>
+  <DateField
+    className="emotion-60 emotion-0"
+    defaultValues={
+      Object {
+        "day": undefined,
+        "month": undefined,
+        "year": undefined,
+      }
+    }
+    input={
+      Object {
+        "value": null,
+      }
+    }
+    inputNames={
+      Object {
+        "day": undefined,
+        "month": undefined,
+        "year": undefined,
+      }
+    }
+  >
+    <StyledContainer
+      className="emotion-60 emotion-0"
+    >
+      <div
+        className="emotion-0 emotion-58 emotion-59"
+      >
+        <StyledHoc>
+          <LabelText
+            className="emotion-3 emotion-0"
+          >
+            <StyledLabelText
+              className="emotion-3 emotion-0"
+            >
+              <span
+                className="emotion-0 emotion-1 emotion-2"
+              />
+            </StyledLabelText>
+          </LabelText>
+        </StyledHoc>
+        <MultiInputInput
+          defaultValues={
+            Object {
+              "day": undefined,
+              "month": undefined,
+              "year": undefined,
+            }
+          }
+          error={false}
+          names={
+            Object {
+              "day": undefined,
+              "month": undefined,
+              "year": undefined,
+            }
+          }
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          value={null}
+        >
+          <Input
+            defaultValues={
+              Object {
+                "day": undefined,
+                "month": undefined,
+                "year": undefined,
+              }
+            }
+            error={false}
+            labels={
+              Object {
+                "day": "Day",
+                "month": "Month",
+                "year": "Year",
+              }
+            }
+            names={
+              Object {
+                "day": undefined,
+                "month": undefined,
+                "year": undefined,
+              }
+            }
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            refs={[Function]}
+            value={null}
+          >
+            <StyledList>
+              <div
+                className="emotion-55 emotion-56"
+              >
+                <StyledLabel
+                  year={false}
+                >
+                  <Label
+                    className="emotion-19 emotion-16"
+                    year={false}
+                  >
+                    <StyledLabel
+                      className="emotion-19 emotion-16"
+                      year={false}
+                    >
+                      <label
+                        className="emotion-16 emotion-17 emotion-2"
+                      >
+                        <StyledHoc>
+                          <LabelText
+                            className="emotion-3 emotion-0"
+                          >
+                            <StyledLabelText
+                              className="emotion-3 emotion-0"
+                            >
+                              <span
+                                className="emotion-0 emotion-1 emotion-2"
+                              >
+                                Day
+                              </span>
+                            </StyledLabelText>
+                          </LabelText>
+                        </StyledHoc>
+                        <StyledInput
+                          error={false}
+                          innerRef={[Function]}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="number"
+                        >
+                          <input
+                            className="emotion-14 emotion-15"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            type="number"
+                          />
+                        </StyledInput>
+                      </label>
+                    </StyledLabel>
+                  </Label>
+                </StyledLabel>
+                <StyledLabel
+                  year={false}
+                >
+                  <Label
+                    className="emotion-19 emotion-16"
+                    year={false}
+                  >
+                    <StyledLabel
+                      className="emotion-19 emotion-16"
+                      year={false}
+                    >
+                      <label
+                        className="emotion-16 emotion-17 emotion-2"
+                      >
+                        <StyledHoc>
+                          <LabelText
+                            className="emotion-3 emotion-0"
+                          >
+                            <StyledLabelText
+                              className="emotion-3 emotion-0"
+                            >
+                              <span
+                                className="emotion-0 emotion-1 emotion-2"
+                              >
+                                Month
+                              </span>
+                            </StyledLabelText>
+                          </LabelText>
+                        </StyledHoc>
+                        <StyledInput
+                          error={false}
+                          innerRef={[Function]}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="number"
+                        >
+                          <input
+                            className="emotion-14 emotion-15"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            type="number"
+                          />
+                        </StyledInput>
+                      </label>
+                    </StyledLabel>
+                  </Label>
+                </StyledLabel>
+                <StyledLabel
+                  year={true}
+                >
+                  <Label
+                    className="emotion-51 emotion-16"
+                    year={true}
+                  >
+                    <StyledLabel
+                      className="emotion-51 emotion-16"
+                      year={true}
+                    >
+                      <label
+                        className="emotion-16 emotion-49 emotion-2"
+                      >
+                        <StyledHoc>
+                          <LabelText
+                            className="emotion-3 emotion-0"
+                          >
+                            <StyledLabelText
+                              className="emotion-3 emotion-0"
+                            >
+                              <span
+                                className="emotion-0 emotion-1 emotion-2"
+                              >
+                                Year
+                              </span>
+                            </StyledLabelText>
+                          </LabelText>
+                        </StyledHoc>
+                        <StyledInput
+                          error={false}
+                          innerRef={[Function]}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="number"
+                        >
+                          <input
+                            className="emotion-14 emotion-15"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            type="number"
+                          />
+                        </StyledInput>
+                      </label>
+                    </StyledLabel>
+                  </Label>
+                </StyledLabel>
+              </div>
+            </StyledList>
+          </Input>
+        </MultiInputInput>
+      </div>
+    </StyledContainer>
+  </DateField>
+</StyledHoc>
+`;
+
+exports[`DateField should support setting value: value 1 2 3 1`] = `
+.emotion-60 {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-60 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-3 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-1 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-55 {
+  font-family: "nta",Arial,sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-19 {
+  margin-bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  width: 50px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-19 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  width: 50px;
+}
+
+.emotion-17:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-17 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-51 {
+  margin-bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  width: 70px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-51 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-49 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  width: 70px;
+}
+
+.emotion-49:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-49 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-58 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-58 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-14 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+  border: 2px solid #0b0c0c;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-14 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+.emotion-14:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+<StyledHoc
+  input={
+    Object {
+      "value": Object {
+        "day": "1",
+        "month": "2",
+        "year": "3",
+      },
+    }
+  }
+>
+  <DateField
+    className="emotion-60 emotion-0"
+    defaultValues={
+      Object {
+        "day": undefined,
+        "month": undefined,
+        "year": undefined,
+      }
+    }
+    input={
+      Object {
+        "value": Object {
+          "day": "1",
+          "month": "2",
+          "year": "3",
+        },
+      }
+    }
+    inputNames={
+      Object {
+        "day": undefined,
+        "month": undefined,
+        "year": undefined,
+      }
+    }
+  >
+    <StyledContainer
+      className="emotion-60 emotion-0"
+    >
+      <div
+        className="emotion-0 emotion-58 emotion-59"
+      >
+        <StyledHoc>
+          <LabelText
+            className="emotion-3 emotion-0"
+          >
+            <StyledLabelText
+              className="emotion-3 emotion-0"
+            >
+              <span
+                className="emotion-0 emotion-1 emotion-2"
+              />
+            </StyledLabelText>
+          </LabelText>
+        </StyledHoc>
+        <MultiInputInput
+          defaultValues={
+            Object {
+              "day": undefined,
+              "month": undefined,
+              "year": undefined,
+            }
+          }
+          error={false}
+          names={
+            Object {
+              "day": undefined,
+              "month": undefined,
+              "year": undefined,
+            }
+          }
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          value={
+            Object {
+              "day": "1",
+              "month": "2",
+              "year": "3",
+            }
+          }
+        >
+          <Input
+            defaultValues={
+              Object {
+                "day": undefined,
+                "month": undefined,
+                "year": undefined,
+              }
+            }
+            error={false}
+            labels={
+              Object {
+                "day": "Day",
+                "month": "Month",
+                "year": "Year",
+              }
+            }
+            names={
+              Object {
+                "day": undefined,
+                "month": undefined,
+                "year": undefined,
+              }
+            }
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            refs={[Function]}
+            value={
+              Object {
+                "day": "1",
+                "month": "2",
+                "year": "3",
+              }
+            }
+          >
+            <StyledList>
+              <div
+                className="emotion-55 emotion-56"
+              >
+                <StyledLabel
+                  year={false}
+                >
+                  <Label
+                    className="emotion-19 emotion-16"
+                    year={false}
+                  >
+                    <StyledLabel
+                      className="emotion-19 emotion-16"
+                      year={false}
+                    >
+                      <label
+                        className="emotion-16 emotion-17 emotion-2"
+                      >
+                        <StyledHoc>
+                          <LabelText
+                            className="emotion-3 emotion-0"
+                          >
+                            <StyledLabelText
+                              className="emotion-3 emotion-0"
+                            >
+                              <span
+                                className="emotion-0 emotion-1 emotion-2"
+                              >
+                                Day
+                              </span>
+                            </StyledLabelText>
+                          </LabelText>
+                        </StyledHoc>
+                        <StyledInput
+                          error={false}
+                          innerRef={[Function]}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="number"
+                          value="1"
+                        >
+                          <input
+                            className="emotion-14 emotion-15"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            type="number"
+                            value="1"
+                          />
+                        </StyledInput>
+                      </label>
+                    </StyledLabel>
+                  </Label>
+                </StyledLabel>
+                <StyledLabel
+                  year={false}
+                >
+                  <Label
+                    className="emotion-19 emotion-16"
+                    year={false}
+                  >
+                    <StyledLabel
+                      className="emotion-19 emotion-16"
+                      year={false}
+                    >
+                      <label
+                        className="emotion-16 emotion-17 emotion-2"
+                      >
+                        <StyledHoc>
+                          <LabelText
+                            className="emotion-3 emotion-0"
+                          >
+                            <StyledLabelText
+                              className="emotion-3 emotion-0"
+                            >
+                              <span
+                                className="emotion-0 emotion-1 emotion-2"
+                              >
+                                Month
+                              </span>
+                            </StyledLabelText>
+                          </LabelText>
+                        </StyledHoc>
+                        <StyledInput
+                          error={false}
+                          innerRef={[Function]}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="number"
+                          value="2"
+                        >
+                          <input
+                            className="emotion-14 emotion-15"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            type="number"
+                            value="2"
+                          />
+                        </StyledInput>
+                      </label>
+                    </StyledLabel>
+                  </Label>
+                </StyledLabel>
+                <StyledLabel
+                  year={true}
+                >
+                  <Label
+                    className="emotion-51 emotion-16"
+                    year={true}
+                  >
+                    <StyledLabel
+                      className="emotion-51 emotion-16"
+                      year={true}
+                    >
+                      <label
+                        className="emotion-16 emotion-49 emotion-2"
+                      >
+                        <StyledHoc>
+                          <LabelText
+                            className="emotion-3 emotion-0"
+                          >
+                            <StyledLabelText
+                              className="emotion-3 emotion-0"
+                            >
+                              <span
+                                className="emotion-0 emotion-1 emotion-2"
+                              >
+                                Year
+                              </span>
+                            </StyledLabelText>
+                          </LabelText>
+                        </StyledHoc>
+                        <StyledInput
+                          error={false}
+                          innerRef={[Function]}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          type="number"
+                          value="3"
+                        >
+                          <input
+                            className="emotion-14 emotion-15"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            type="number"
+                            value="3"
+                          />
+                        </StyledInput>
+                      </label>
+                    </StyledLabel>
+                  </Label>
+                </StyledLabel>
+              </div>
+            </StyledList>
+          </Input>
+        </MultiInputInput>
+      </div>
+    </StyledContainer>
+  </DateField>
+</StyledHoc>
+`;
