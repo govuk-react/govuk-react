@@ -8,16 +8,16 @@ exports[`GridCol matches snapshot: enzyme.mount 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
-    margin-right: 15px;
-    margin-left: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   .emotion-0:first-child {
-    margin-left: 0;
+    padding-left: 0;
   }
 
   .emotion-0:last-child {
-    margin-right: 0;
+    padding-right: 0;
   }
 }
 

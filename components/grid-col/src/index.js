@@ -15,13 +15,13 @@ const StyledColumn = styled('div')(
     marginBottom: SPACING.SCALE_3,
     boxSizing: 'border-box',
     [MEDIA_QUERIES.LARGESCREEN]: {
-      marginRight: GUTTER_HALF,
-      marginLeft: GUTTER_HALF,
+      paddingRight: GUTTER_HALF,
+      paddingLeft: GUTTER_HALF,
       ':first-child': {
-        marginLeft: 0,
+        paddingLeft: 0,
       },
       ':last-child': {
-        marginRight: 0,
+        paddingRight: 0,
       },
     },
   },
