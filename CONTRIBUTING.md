@@ -64,6 +64,8 @@ When the tag is created, the CI server will automatically release to npm using l
 
 ## Conventions
 
+The following conventions are planned but not fully implemented. We should be consistent on these before releasing version 1. At the point where the library is consistent, the conventions should be moved to README.md rather than CONTRIBUTING.md.
+
 ### Fields vs. Inputs
 
 For the purpose of this project:
@@ -76,3 +78,10 @@ More details in https://github.com/UKHomeOffice/govuk-react/issues/164.
 ### Anchors
 
 We want to be router agnostic. We want to support parent projects using React Router or Reach Router, without introducing either as a dependency of this project. As such we provide an `as` prop on components that we expect can be used as React Router Links or NavLinks. We recommend using the [`asNavLink` HOC](https://www.npmjs.com/package/as-nav-link). More details in https://github.com/UKHomeOffice/govuk-react/issues/423.
+
+
+### White Space
+
+Components are built to have no white space around them, and are then wrapped with the withWhiteSpace HOC where we can provide some default values. This allows the parent application to override the defaults with e.g. an `mb` prop.
+
+More details in https://github.com/UKHomeOffice/govuk-react/issues/173
