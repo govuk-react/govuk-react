@@ -46,6 +46,7 @@ const StyledColumn = styled('div')(
     return ({
       [MEDIA_QUERIES.LARGESCREEN]: {
         flexGrow: hasRequestedWidth ? 0 : 1,
+        flexShrink: hasRequestedWidth ? 0 : 1,
         width: widthValue,
       },
     });
