@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import styled from 'react-emotion';
 import { storiesOf } from '@storybook/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 import GridCol from '@govuk-react/grid-col';
@@ -10,11 +11,17 @@ const stories = storiesOf('Layout/GridRow', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
+const Content = styled('div')({
+  textIndent: '-999em',
+  backgroundColor: '#7DADD3',
+  backgroundImage: 'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)',
+});
+
 stories.add('Component default', () => (
   <Fragment>
     <GridRow>
-      <GridCol hideContent>
-        Example
+      <GridCol>
+        <Content>Example</Content>
       </GridCol>
     </GridRow>
   </Fragment>

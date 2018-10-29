@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'react-emotion';
 import { storiesOf } from '@storybook/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 
@@ -10,6 +11,12 @@ import Paragraph from '@govuk-react/paragraph';
 
 import GridCol from '.';
 import ReadMe from '../README.md';
+
+const Content = styled('div')({
+  textIndent: '-999em',
+  backgroundColor: '#7DADD3',
+  backgroundImage: 'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)',
+});
 
 const stories = storiesOf('Layout/GridCol', module);
 const examples = storiesOf('Layout/GridCol/Examples', module);
@@ -39,76 +46,75 @@ stories.add('Component default', () => (
 
 examples.add('Column Halves', () => (
   <GridRow>
-    <GridCol hideContent columnOneHalf>
-      <p>content</p>
+    <GridCol columnOneHalf>
+      <Content>content</Content>
     </GridCol>
-    <GridCol hideContent columnOneHalf>
-      <p>content</p>
+    <GridCol columnOneHalf>
+      <Content>content</Content>
     </GridCol>
   </GridRow>
 ));
 
 examples.add('Column Thirds', () => (
   <GridRow>
-    <GridCol hideContent columnOneThird>
-      <p>content</p>
+    <GridCol columnOneThird>
+      <Content>content</Content>
     </GridCol>
-    <GridCol hideContent columnOneThird>
-      <p>content</p>
+    <GridCol columnOneThird>
+      <Content>content</Content>
     </GridCol>
-    <GridCol hideContent columnOneThird>
-      <p>content</p>
+    <GridCol columnOneThird>
+      <Content>content</Content>
     </GridCol>
   </GridRow>
 ));
 
 examples.add('Column Two Thirds / One Third', () => (
   <GridRow>
-    <GridCol hideContent columnTwoThirds>
-      <p>content</p>
+    <GridCol columnTwoThirds>
+      <Content>content</Content>
     </GridCol>
-    <GridCol hideContent columnOneThird>
-      <p>content</p>
+    <GridCol columnOneThird>
+      <Content>content</Content>
     </GridCol>
   </GridRow>
 ));
 
 examples.add('Column One Third / Two Thirds', () => (
   <GridRow>
-    <GridCol hideContent columnOneThird>
-      <p>content</p>
+    <GridCol columnOneThird>
+      <Content>content</Content>
     </GridCol>
-    <GridCol hideContent columnTwoThirds>
-      <p>content</p>
+    <GridCol columnTwoThirds>
+      <Content>content</Content>
     </GridCol>
   </GridRow>
 ));
 
 examples.add('Quarters', () => (
   <GridRow>
-    <GridCol hideContent columnOneQuarter>
-      <p>content</p>
+    <GridCol columnOneQuarter>
+      <Content>content</Content>
     </GridCol>
-    <GridCol hideContent columnOneQuarter>
-      <p>content</p>
+    <GridCol columnOneQuarter>
+      <Content>content</Content>
     </GridCol>
-    <GridCol hideContent columnOneQuarter>
-      <p>content</p>
+    <GridCol columnOneQuarter>
+      <Content>content</Content>
     </GridCol>
-    <GridCol hideContent columnOneQuarter>
-      <p>content</p>
+    <GridCol columnOneQuarter>
+      <Content>content</Content>
     </GridCol>
   </GridRow>
 ));
 
 examples.add('One Quarter and autoFill', () => (
   <GridRow>
-    <GridCol hideContent columnOneQuarter>
-      <p>content</p>
+    <GridCol columnOneQuarter>
+      <Content>content</Content>
     </GridCol>
-    <GridCol hideContent autoFill>
-      <p>content</p>
+    <GridCol autoFill>
+      <Content>content</Content>
     </GridCol>
   </GridRow>
 ));
-

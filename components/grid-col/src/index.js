@@ -17,21 +17,7 @@ const StyledColumn = styled('div')(
     [MEDIA_QUERIES.LARGESCREEN]: {
       paddingRight: GUTTER_HALF,
       paddingLeft: GUTTER_HALF,
-      ':first-child': {
-        paddingLeft: 0,
-      },
-      ':last-child': {
-        paddingRight: 0,
-      },
     },
-  },
-  ({ hideContent }) => {
-    if (!hideContent) { return false; }
-    return ({
-      textIndent: '-999em',
-      backgroundColor: '#7DADD3',
-      backgroundImage: 'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)',
-    });
   },
   (props) => {
     let widthValue = 'auto';
