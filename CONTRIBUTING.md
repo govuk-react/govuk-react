@@ -54,7 +54,8 @@ In order to prepare a release:
 - run `./scripts/release.sh`, you will be asked to choose a semver increment and, if this is the first time running hub, you will be asked for your GitHub credentials
 - you will also be asked for a title and description for the draft release, though this can be left blank and filled in on GitHub later
 - this will open a PR on GitHub and draft a release
-- merge the PR
+- Edit the PR and write the release notes in the PR description
+- get approval for the PR (reviewers should be reviewing the release notes in the PR description) then merge the PR
 - once the PR is merged, open the [draft release corresponding to the new version number on GitHub](https://github.com/penx/govuk-react/releases), change the target branch to master, check the title and description and then click `Publish release`.
 
 When the tag is created, the CI server will automatically release to npm using lerna exec, see:
