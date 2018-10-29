@@ -8,16 +8,8 @@ exports[`GridCol matches snapshot: enzyme.mount 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
-    margin-right: 15px;
-    margin-left: 15px;
-  }
-
-  .emotion-0:first-child {
-    margin-left: 0;
-  }
-
-  .emotion-0:last-child {
-    margin-right: 0;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
@@ -27,6 +19,9 @@ exports[`GridCol matches snapshot: enzyme.mount 1`] = `
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
     width: auto;
   }
 }

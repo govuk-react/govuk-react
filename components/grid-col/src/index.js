@@ -15,23 +15,9 @@ const StyledColumn = styled('div')(
     marginBottom: SPACING.SCALE_3,
     boxSizing: 'border-box',
     [MEDIA_QUERIES.LARGESCREEN]: {
-      marginRight: GUTTER_HALF,
-      marginLeft: GUTTER_HALF,
-      ':first-child': {
-        marginLeft: 0,
-      },
-      ':last-child': {
-        marginRight: 0,
-      },
+      paddingRight: GUTTER_HALF,
+      paddingLeft: GUTTER_HALF,
     },
-  },
-  ({ hideContent }) => {
-    if (!hideContent) { return false; }
-    return ({
-      textIndent: '-999em',
-      backgroundColor: '#7DADD3',
-      backgroundImage: 'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)',
-    });
   },
   (props) => {
     let widthValue = 'auto';
@@ -46,6 +32,7 @@ const StyledColumn = styled('div')(
     return ({
       [MEDIA_QUERIES.LARGESCREEN]: {
         flexGrow: hasRequestedWidth ? 0 : 1,
+        flexShrink: hasRequestedWidth ? 0 : 1,
         width: widthValue,
       },
     });
