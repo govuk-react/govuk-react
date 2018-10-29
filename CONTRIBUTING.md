@@ -61,3 +61,18 @@ When the tag is created, the CI server will automatically release to npm using l
 
 - https://github.com/lerna/lerna/issues/1056#issuecomment-374192818
 - https://github.com/lerna/lerna/issues/961
+
+## Conventions
+
+### Fields vs. Inputs
+
+For the purpose of this project:
+
+- A field is the combination of a label, input(s) and validation/error messages. The Field components used by this project should follow the prop structure of Final Form and Redux Form fields, in that they accept an `input` prop and a `meta` prop.
+- An input is just the form control that the user enters data in to, without a label or error/validation message. Inputs are normally associated with a Field and should be used on their own by importing the Field then using `<FieldName.Input />`. Inputs follow the prop structure of Final Form and Redux Form inputs.
+
+More details in https://github.com/UKHomeOffice/govuk-react/issues/164.
+
+### Anchors
+
+We want to be router agnostic. We want to support parent projects using React Router or Reach Router, without introducing either as a dependency of this project. As such we provide an `as` prop on components that we expect can be used as React Router Links or NavLinks. We recommend using the [`asNavLink` HOC](https://www.npmjs.com/package/as-nav-link). More details in https://github.com/UKHomeOffice/govuk-react/issues/423.
