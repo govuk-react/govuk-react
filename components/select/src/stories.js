@@ -16,7 +16,7 @@ const examples = storiesOf('Form/Select/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-// TODO add a synthetic onChange event
+// TODO: add a synthetic onChange event
 stories.add('Component default', () => (
   <Select name="group1" label="This is a label">
     <option value="0">GOV.UK elements option 1</option>
