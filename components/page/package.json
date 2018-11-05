@@ -1,6 +1,6 @@
 {
   "name": "@govuk-react/page",
-  "version": "0.3.0",
+  "version": "0.3.0-prerelease",
   "private": false,
   "publishConfig": {
     "access": "public"
