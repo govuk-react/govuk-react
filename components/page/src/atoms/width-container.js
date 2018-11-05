@@ -9,7 +9,6 @@ const WidthContainer = styled('div')({
   [MEDIA_QUERIES.LARGESCREEN]: {
     margin: `0 ${SPACING.SCALE_5}`,
   },
-  // TODO: add to MEDIA_QUERIES
   [MEDIA_QUERIES.MAX]: {
     margin: '0 auto',
   },

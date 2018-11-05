@@ -16,12 +16,12 @@ import WidthContainer from './atoms/width-container';
 const PageWrapper = styled('div')();
 
 // TODO: replace with actual footer component once built
-const Footer = styled('div')({
-  width: '100%',
-  height: '80px',
-  borderTop: '1px solid #a1acb2',
-  backgroundColor: '#dee0e2',
-});
+// const Footer = styled('footer')({
+//   width: '100%',
+//   height: '80px',
+//   borderTop: '1px solid #a1acb2',
+//   backgroundColor: '#dee0e2',
+// });
 
 const Page = ({ header, footer, children }) => (
   <PageWrapper>
@@ -42,7 +42,7 @@ Page.propTypes = {
 Page.defaultProps = {
   children: undefined,
   header: <TopNav />,
-  footer: <Footer />,
+  footer: undefined, // <Footer />, // TODO: add Footer component once built
 };
 
 Page.Main = Main;
