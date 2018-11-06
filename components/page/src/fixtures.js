@@ -7,13 +7,9 @@ const MyPage = () => (
     header={<TopNav />}
     // TODO: no footer component yet
     // footer={<Footer />}
+    beforeChildren={<BackLink href="#" />}
   >
-    <React.Fragment>
-      <BackLink href="#" />
-      <Page.Main>
-        <H1>Page Title</H1>
-      </Page.Main>
-    </React.Fragment>
+    <H1>Page Title</H1>
   </Page>);
 
 export default MyPage;
