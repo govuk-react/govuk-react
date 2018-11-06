@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { BLACK, WHITE } from 'govuk-colours';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
+import CrownIcon from '@govuk-react/icon-crown';
 
 import styled from 'react-emotion';
 
@@ -203,13 +204,14 @@ class TopNav extends Component {
 TopNav.defaultProps = {
   bgColor: BLACK,
   color: WHITE,
-  company: undefined,
+  company: <IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</IconTitle>,
   serviceTitle: undefined,
   search: false,
   children: undefined,
   defaultOpen: false,
 };
 
+// TODO: prop names should mirror nunjucks macro options at https://design-system.service.gov.uk/components/header/
 TopNav.propTypes = {
   /** Top nav background color */
   bgColor: PropTypes.string,
