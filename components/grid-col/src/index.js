@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
-import { GUTTER_HALF, MEDIA_QUERIES, SPACING } from '@govuk-react/constants';
+import { GUTTER_HALF, MEDIA_QUERIES } from '@govuk-react/constants';
 
 const colValues = {
   columnOneThird: '33.3333%',
@@ -12,7 +12,6 @@ const colValues = {
 
 const StyledColumn = styled('div')(
   {
-    marginBottom: SPACING.SCALE_3,
     boxSizing: 'border-box',
     [MEDIA_QUERIES.LARGESCREEN]: {
       paddingRight: GUTTER_HALF,

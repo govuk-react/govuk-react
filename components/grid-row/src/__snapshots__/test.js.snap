@@ -9,7 +9,7 @@ exports[`GridRow matches snapshot: enzyme.mount 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin: 0 -15px 15px;
+  margin: 0 -15px;
 }
 
 @media only screen and (min-width:641px) {
@@ -17,7 +17,6 @@ exports[`GridRow matches snapshot: enzyme.mount 1`] = `
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    margin-bottom: 30px;
   }
 }
 
