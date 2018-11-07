@@ -1,4 +1,4 @@
-// TODO consider replacing this with a generator such as:
+// TODO: consider replacing this with a generator such as:
 // https://github.com/CVarisco/create-component-app
 
 const fs = require('fs');
@@ -63,12 +63,12 @@ const testScript = () => {
   const filename = 'test.js';
   const contents = `import React from 'react';
 import ReactDOM from 'react-dom';
-import ${componentName} from './';
+import Example from './fixtures';
 
 describe(${componentName}, () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<${componentName}>Example</${componentName}>, div);
+    ReactDOM.render(<Example />, div);
   });
 });
 `;
@@ -78,21 +78,18 @@ describe(${componentName}, () => {
 // write stories.js file
 const storiesScript = () => {
   const filename = 'stories.js';
-  const contents = `import React from 'react';
-import { storiesOf } from '@storybook/react';
+  const contents = `import { storiesOf } from '@storybook/react';
 
-import ${componentName} from '.';
+import Example from './fixtures';
 
-storiesOf('${componentName}', module).add('${componentName}', () => (
-  <${componentName}>${componentName} example</${componentName}>
-));
+storiesOf('${componentName}', module).add('${componentName}', Example);
 `;
   writeFile(filename, contents);
 };
 
 // write example.js file
 const exampleScript = () => {
-  const filename = 'example.js';
+  const filename = 'fixtures.js';
   const contents = `import React from 'react';
 import ${componentName} from '.';
 
@@ -104,7 +101,7 @@ export default () => <${componentName}>${componentName} example</${componentName
 // write index.js file
 const indexScript = () => {
   const filename = 'index.js';
-  const contents = `// TODO INSERT A COMMENT REFERENCE TO EXTERNAL URL IF POSSIBLE
+  const contents = `// TODO: INSERT A COMMENT REFERENCE TO EXTERNAL URL IF POSSIBLE
 
 import React from 'react';
 import PropTypes from 'prop-types';

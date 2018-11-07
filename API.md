@@ -219,7 +219,7 @@ Prop | Required | Default | Type | Description
  `defaultValues` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` | custom | 
  `errorText` |  | ```undefined``` | string | Error text
  `hintText` |  | ```undefined``` | string | Optional hint text
- `input` |  | ```undefined``` | shape[object Object] | Properties that are sent to the input, matching final form input type
+ `input` |  | ```undefined``` | shape[object Object] | Properties that are sent to the input, matching final form and redux form input type
  `inputNames` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` | shape[object Object] | Input name attributes
 
 
@@ -1191,6 +1191,29 @@ Prop | Required | Default | Type | Description
  `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`
 
 
+Page
+====
+
+### Import
+```js
+  import Page from '@govuk-react/page';
+```
+<!-- STORY -->
+
+
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `beforeChildren` |  | ```undefined``` | node | Add content that needs to appear outside `<main>` element.
+For example: The back link component, phase banner component
+ `children` |  | ```undefined``` | node | Add content that needs to appear centered in the `<main>` element
+ `container` |  | ```({ children }) => <WidthContainer>{children}</WidthContainer>``` | func | Render props to allow the width container element to be overriden
+ `footer` |  | ```undefined``` | node | Override the default footer component.
+ `header` |  | ```<TopNav />``` | node | Override the default header (top nav) component.
+ `main` |  | ```({ children, beforeChildren }) => (   <React.Fragment>     {beforeChildren}     <Page.Main>       {children}     </Page.Main>   </React.Fragment> )``` | func | Render props for the main section, provides chilren and beforeChildren props
+
+
 Pagination
 ==========
 
@@ -1890,7 +1913,7 @@ Prop | Required | Default | Type | Description
  `bgColor` |  | ```BLACK``` | string | Top nav background color
  `children` |  | ```undefined``` | node | List Navigation items with anchor tags e.g. NavAnchor components
  `color` |  | ```WHITE``` | string | Top nav text color
- `company` |  | ```undefined``` | node | Company component e.g. GOV UK
+ `company` |  | ```<IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</IconTitle>``` | node | Company component e.g. GOV UK
  `defaultOpen` |  | ```false``` | bool | Is the mobile navigation open by default?
  `search` |  | ```false``` | node | Search component
  `serviceTitle` |  | ```undefined``` | node | Service title component e.g. Food Standards Authority

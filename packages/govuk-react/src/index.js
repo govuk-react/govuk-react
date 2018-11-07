@@ -25,6 +25,7 @@ export { default as ListItem } from '@govuk-react/list-item';
 export { default as ListNavigation } from '@govuk-react/list-navigation';
 export { default as Main } from '@govuk-react/main';
 export { default as MultiChoice } from '@govuk-react/multi-choice';
+export { default as Page } from '@govuk-react/page';
 export { default as Pagination } from '@govuk-react/pagination';
 export { default as Panel } from '@govuk-react/panel';
 export { default as Paragraph } from '@govuk-react/paragraph';

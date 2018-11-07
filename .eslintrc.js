@@ -26,7 +26,10 @@ module.exports = {
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
       },
       "settings": {
-        "import/core-modules": Object.keys(devDependencies)
+        "import/core-modules": [
+          'govuk-react',
+          ...Object.keys(devDependencies)
+        ]
       }
     },
     {

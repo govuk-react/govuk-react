@@ -32,6 +32,7 @@
     "@govuk-react/main": "^0.3.0",
     "@govuk-react/multi-choice": "^0.3.0",
     "@govuk-react/ordered-list": "^0.3.0",
+    "@govuk-react/page": "^0.3.0",
     "@govuk-react/pagination": "^0.3.0",
     "@govuk-react/panel": "^0.3.0",
     "@govuk-react/paragraph": "^0.3.0",

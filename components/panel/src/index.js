@@ -15,7 +15,7 @@ const StyledPanel = styled('div')({
   padding: SPACING.SCALE_5,
 });
 
-// TODO use standard font constants
+// TODO: use standard font constants
 const StyledTitle = styled('h2')({
   fontFamily: NTA_LIGHT,
   fontWeight: 'bold',
@@ -30,7 +30,7 @@ const StyledTitle = styled('h2')({
   },
 });
 
-// TODO use standard font constants
+// TODO: use standard font constants
 const StyledBody = styled('div')({
   fontFamily: NTA_LIGHT,
   fontSize: '24px',
