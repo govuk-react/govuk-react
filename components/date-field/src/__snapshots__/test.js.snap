@@ -171,46 +171,6 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
   outline-offset: 0;
 }
 
-.emotion-58 {
-  margin-bottom: 0;
-  margin-right: 20px;
-  margin-bottom: 0;
-  width: 70px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-58 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-56 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  box-sizing: border-box;
-  margin-bottom: 0;
-  margin-right: 20px;
-  margin-bottom: 0;
-  width: 70px;
-}
-
-.emotion-56:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-56 {
-    margin-bottom: 0;
-  }
-}
-
 <StyledHoc
   defaultValues={
     Object {
@@ -345,16 +305,12 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
               <div
                 className="emotion-62 emotion-63"
               >
-                <StyledLabel
-                  year={false}
-                >
+                <StyledLabel>
                   <Label
                     className="emotion-26 emotion-23"
-                    year={false}
                   >
                     <StyledLabel
                       className="emotion-26 emotion-23"
-                      year={false}
                     >
                       <label
                         className="emotion-23 emotion-24 emotion-25"
@@ -394,16 +350,12 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                     </StyledLabel>
                   </Label>
                 </StyledLabel>
-                <StyledLabel
-                  year={false}
-                >
+                <StyledLabel>
                   <Label
                     className="emotion-26 emotion-23"
-                    year={false}
                   >
                     <StyledLabel
                       className="emotion-26 emotion-23"
-                      year={false}
                     >
                       <label
                         className="emotion-23 emotion-24 emotion-25"
@@ -443,19 +395,15 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                     </StyledLabel>
                   </Label>
                 </StyledLabel>
-                <StyledLabel
-                  year={true}
-                >
+                <StyledLabel>
                   <Label
-                    className="emotion-58 emotion-23"
-                    year={true}
+                    className="emotion-26 emotion-23"
                   >
                     <StyledLabel
-                      className="emotion-58 emotion-23"
-                      year={true}
+                      className="emotion-26 emotion-23"
                     >
                       <label
-                        className="emotion-23 emotion-56 emotion-25"
+                        className="emotion-23 emotion-24 emotion-25"
                       >
                         <StyledHoc>
                           <LabelText
@@ -594,46 +542,6 @@ exports[`DateField should support null value: null value 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-17 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-51 {
-  margin-bottom: 0;
-  margin-right: 20px;
-  margin-bottom: 0;
-  width: 70px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-51 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-49 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  box-sizing: border-box;
-  margin-bottom: 0;
-  margin-right: 20px;
-  margin-bottom: 0;
-  width: 70px;
-}
-
-.emotion-49:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-49 {
     margin-bottom: 0;
   }
 }
@@ -798,16 +706,12 @@ exports[`DateField should support null value: null value 1`] = `
               <div
                 className="emotion-55 emotion-56"
               >
-                <StyledLabel
-                  year={false}
-                >
+                <StyledLabel>
                   <Label
                     className="emotion-19 emotion-16"
-                    year={false}
                   >
                     <StyledLabel
                       className="emotion-19 emotion-16"
-                      year={false}
                     >
                       <label
                         className="emotion-16 emotion-17 emotion-18"
@@ -847,16 +751,12 @@ exports[`DateField should support null value: null value 1`] = `
                     </StyledLabel>
                   </Label>
                 </StyledLabel>
-                <StyledLabel
-                  year={false}
-                >
+                <StyledLabel>
                   <Label
                     className="emotion-19 emotion-16"
-                    year={false}
                   >
                     <StyledLabel
                       className="emotion-19 emotion-16"
-                      year={false}
                     >
                       <label
                         className="emotion-16 emotion-17 emotion-18"
@@ -896,19 +796,15 @@ exports[`DateField should support null value: null value 1`] = `
                     </StyledLabel>
                   </Label>
                 </StyledLabel>
-                <StyledLabel
-                  year={true}
-                >
+                <StyledLabel>
                   <Label
-                    className="emotion-51 emotion-16"
-                    year={true}
+                    className="emotion-19 emotion-16"
                   >
                     <StyledLabel
-                      className="emotion-51 emotion-16"
-                      year={true}
+                      className="emotion-19 emotion-16"
                     >
                       <label
-                        className="emotion-16 emotion-49 emotion-18"
+                        className="emotion-16 emotion-17 emotion-18"
                       >
                         <StyledHoc>
                           <LabelText
@@ -1047,46 +943,6 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-17 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-51 {
-  margin-bottom: 0;
-  margin-right: 20px;
-  margin-bottom: 0;
-  width: 70px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-51 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-49 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  box-sizing: border-box;
-  margin-bottom: 0;
-  margin-right: 20px;
-  margin-bottom: 0;
-  width: 70px;
-}
-
-.emotion-49:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-49 {
     margin-bottom: 0;
   }
 }
@@ -1271,16 +1127,12 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
               <div
                 className="emotion-55 emotion-56"
               >
-                <StyledLabel
-                  year={false}
-                >
+                <StyledLabel>
                   <Label
                     className="emotion-19 emotion-16"
-                    year={false}
                   >
                     <StyledLabel
                       className="emotion-19 emotion-16"
-                      year={false}
                     >
                       <label
                         className="emotion-16 emotion-17 emotion-18"
@@ -1322,16 +1174,12 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                     </StyledLabel>
                   </Label>
                 </StyledLabel>
-                <StyledLabel
-                  year={false}
-                >
+                <StyledLabel>
                   <Label
                     className="emotion-19 emotion-16"
-                    year={false}
                   >
                     <StyledLabel
                       className="emotion-19 emotion-16"
-                      year={false}
                     >
                       <label
                         className="emotion-16 emotion-17 emotion-18"
@@ -1373,19 +1221,15 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                     </StyledLabel>
                   </Label>
                 </StyledLabel>
-                <StyledLabel
-                  year={true}
-                >
+                <StyledLabel>
                   <Label
-                    className="emotion-51 emotion-16"
-                    year={true}
+                    className="emotion-19 emotion-16"
                   >
                     <StyledLabel
-                      className="emotion-51 emotion-16"
-                      year={true}
+                      className="emotion-19 emotion-16"
                     >
                       <label
-                        className="emotion-16 emotion-49 emotion-18"
+                        className="emotion-16 emotion-17 emotion-18"
                       >
                         <StyledHoc>
                           <LabelText

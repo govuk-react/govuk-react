@@ -59,7 +59,7 @@ class Input extends React.Component {
 
   renderInput(label, name, key, defaultValue, error) {
     return (
-      <StyledLabel year={key === 'year'}>
+      <StyledLabel>
         <LabelText>{label}</LabelText>
         <StyledInput
           name={name}
