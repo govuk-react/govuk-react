@@ -1,4 +1,4 @@
-if [ $TRAVIS_EVENT_TYPE = 'push' ];
+if [[ $TRAVIS_EVENT_TYPE != 'pull_request' -o  $TRAVIS_PULL_REQUEST_SLUG != $TRAVIS_REPO_SLUG ]];
 then
    if [ "${TRAVIS_BRANCH}" != "master" ];
    then
