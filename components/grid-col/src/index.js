@@ -13,10 +13,8 @@ const colValues = {
 const StyledColumn = styled('div')(
   {
     boxSizing: 'border-box',
-    [MEDIA_QUERIES.LARGESCREEN]: {
-      paddingRight: GUTTER_HALF,
-      paddingLeft: GUTTER_HALF,
-    },
+    paddingRight: GUTTER_HALF,
+    paddingLeft: GUTTER_HALF,
   },
   (props) => {
     let widthValue = 'auto';
