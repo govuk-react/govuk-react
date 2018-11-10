@@ -82,7 +82,8 @@ if (!esModules) {
   }];
 }
 
-module.exports = function () {
+module.exports = function (api) {
+  const env = api.cache(() => process.env.NODE_ENV);
   return {
     presets,
     plugins,

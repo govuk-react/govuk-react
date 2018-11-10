@@ -7,8 +7,6 @@
     "docs:components": "lerna run docs --parallel",
     "eslint": "eslint ./{components,packages}/*/src/{*.js,**/*.js}",
     "eslint:fix": "eslint --fix ./{components,packages}/*/src/{*.js,**/*.js}",
-    "babel": "babel",
-    "build:test": "lerna run build:test",
     "build": "lerna run build --parallel",
     "build:sync": "lerna run build",
     "build:lib": "lerna run build:lib --parallel",
