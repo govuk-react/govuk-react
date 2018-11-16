@@ -41,6 +41,7 @@
       "<rootDir>/{components,packages}/*/src/**/?(*.)(spec|test).js?(x)"
     ],
     "testEnvironment": "node",
+    "testUrl": "http://localhost",
     "transform": {
       "^.+\\.(js|jsx)$": "babel-jest"
     },
