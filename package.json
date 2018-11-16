@@ -11,20 +11,20 @@
     "build:sync": "lerna run build",
     "build:lib": "lerna run build:lib --parallel",
     "build:es": "lerna run build:es --parallel",
-    "build:dist": "npm run build:es && rimraf dist && webpack -p packages/govuk-react/es/index.js --output-filename dist/index.js",
+    "build:dist": "yarn build:es && rimraf dist && webpack -p packages/govuk-react/es/index.js --output-filename dist/index.js",
     "pack": "lerna exec --parallel -- npm pack",
-    "watch": "npm run watch:lib",
+    "watch": "yarn watch:lib",
     "watch:es": "cross-env BABEL_ENV=es lerna exec --ignore @govuk-react/images --parallel -- babel src -d es -w --source-maps",
     "watch:lib": "lerna exec --ignore @govuk-react/images --parallel -- babel src -d lib -w --source-maps",
     "clean": "rimraf lib && rimraf es",
     "flow": "flow",
     "bundlesize": "bundlesize",
-    "test": "cross-env CI=true npm run test:unit && npm run eslint && npm run flow",
+    "test": "cross-env CI=true yarn test:unit && yarn eslint && yarn flow",
     "test:unit": "jest --env=jsdom",
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --env=jsdom",
-    "test:snapshot": "npm run test:unit -- -u",
+    "test:snapshot": "yarn test:unit -- -u",
     "create-component": "node ./scripts/createComponent.js",
-    "chromatic-test": "cd packages/storybook && npm run chromatic-test"
+    "chromatic-test": "cd packages/storybook && yarn chromatic-test"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
@@ -41,7 +41,7 @@
       "<rootDir>/{components,packages}/*/src/**/?(*.)(spec|test).js?(x)"
     ],
     "testEnvironment": "node",
-    "testUrl": "http://localhost",
+    "testURL": "http://localhost",
     "transform": {
       "^.+\\.(js|jsx)$": "babel-jest"
     },
@@ -73,7 +73,7 @@
   },
   "devDependencies": {
     "@babel/cli": "7.1.5",
-    "@babel/core": "7.1.5",
+    "@babel/core": "7.1.6",
     "@babel/node": "7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-proposal-decorators": "^7.1.2",
@@ -92,7 +92,7 @@
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/plugin-transform-runtime": "7.1.0",
-    "@babel/preset-env": "7.1.5",
+    "@babel/preset-env": "7.1.6",
     "@babel/preset-flow": "7.0.0",
     "@babel/preset-react": "7.0.0",
     "@govuk-react/back-link": "*",
