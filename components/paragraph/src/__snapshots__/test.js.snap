@@ -64,6 +64,7 @@ exports[`Styled matches wrapper snapshot 1`] = `
 }
 
 <StyledHoc
+  linkRenderer={[Function]}
   supportingText={true}
 >
   <Paragraph
@@ -82,9 +83,12 @@ exports[`Styled matches wrapper snapshot 1`] = `
           "code",
         ]
       }
+      astPlugins={Array []}
       className="emotion-6 emotion-0"
       escapeHtml={false}
       linkRenderer={[Function]}
+      plugins={Array []}
+      rawSourcePos={false}
       renderers={
         Object {
           "link": [Function],
@@ -92,7 +96,9 @@ exports[`Styled matches wrapper snapshot 1`] = `
       }
       skipHtml={true}
       source=""
+      sourcePos={false}
       supportingText={true}
+      transformLinkUri={[Function]}
     >
       <ReactMarkdown
         allowedTypes={

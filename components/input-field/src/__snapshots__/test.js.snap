@@ -120,7 +120,10 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<StyledHoc>
+<StyledHoc
+  input={Object {}}
+  meta={Object {}}
+>
   <InputField
     className="emotion-3 emotion-0"
     input={Object {}}
@@ -153,7 +156,9 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                 </StyledLabelText>
               </LabelText>
             </StyledHoc>
-            <StyledHoc>
+            <StyledHoc
+              type="text"
+            >
               <Input
                 className="emotion-3 emotion-0"
                 type="text"

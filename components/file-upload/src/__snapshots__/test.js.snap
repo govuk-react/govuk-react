@@ -117,7 +117,9 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
   }
 }
 
-<StyledHoc>
+<StyledHoc
+  meta={Object {}}
+>
   <FileUpload
     className="emotion-19 emotion-0"
     meta={Object {}}

@@ -212,7 +212,21 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
 }
 
 <StyledHoc
+  defaultValues={
+    Object {
+      "day": undefined,
+      "month": undefined,
+      "year": undefined,
+    }
+  }
   errorText="example"
+  inputNames={
+    Object {
+      "day": undefined,
+      "month": undefined,
+      "year": undefined,
+    }
+  }
 >
   <DateField
     className="emotion-67 emotion-0"
@@ -669,9 +683,23 @@ exports[`DateField should support null value: null value 1`] = `
 }
 
 <StyledHoc
+  defaultValues={
+    Object {
+      "day": undefined,
+      "month": undefined,
+      "year": undefined,
+    }
+  }
   input={
     Object {
       "value": null,
+    }
+  }
+  inputNames={
+    Object {
+      "day": undefined,
+      "month": undefined,
+      "year": undefined,
     }
   }
 >
@@ -1108,6 +1136,13 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
 }
 
 <StyledHoc
+  defaultValues={
+    Object {
+      "day": undefined,
+      "month": undefined,
+      "year": undefined,
+    }
+  }
   input={
     Object {
       "value": Object {
@@ -1115,6 +1150,13 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
         "month": "2",
         "year": "3",
       },
+    }
+  }
+  inputNames={
+    Object {
+      "day": undefined,
+      "month": undefined,
+      "year": undefined,
     }
   }
 >

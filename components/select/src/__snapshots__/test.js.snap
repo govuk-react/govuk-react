@@ -184,6 +184,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
 <StyledHoc
   errorText="example"
   hint="example"
+  input={Object {}}
   label="example"
   meta={
     Object {
@@ -409,7 +410,9 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
 }
 
 <StyledHoc
+  input={Object {}}
   label="example"
+  meta={Object {}}
 >
   <Select
     className="emotion-19 emotion-0"

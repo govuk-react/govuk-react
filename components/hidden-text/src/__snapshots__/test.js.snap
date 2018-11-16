@@ -218,6 +218,8 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
               >
                 <StyledHoc
                   key="paragraphText1"
+                  linkRenderer={[Function]}
+                  supportingText={false}
                 >
                   <Paragraph
                     className="emotion-10 emotion-4"
@@ -235,9 +237,12 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                           "code",
                         ]
                       }
+                      astPlugins={Array []}
                       className="emotion-10 emotion-4"
                       escapeHtml={false}
                       linkRenderer={[Function]}
+                      plugins={Array []}
+                      rawSourcePos={false}
                       renderers={
                         Object {
                           "link": [Function],
@@ -245,7 +250,9 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                       }
                       skipHtml={true}
                       source="If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card."
+                      sourcePos={false}
                       supportingText={false}
+                      transformLinkUri={[Function]}
                     >
                       <ReactMarkdown
                         allowedTypes={
@@ -291,7 +298,9 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                 </StyledHoc>
                 <StyledHoc
                   key="paragraphText2"
+                  linkRenderer={[Function]}
                   mb={0}
+                  supportingText={false}
                 >
                   <Paragraph
                     className="emotion-20 emotion-4"
@@ -310,10 +319,13 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                           "code",
                         ]
                       }
+                      astPlugins={Array []}
                       className="emotion-20 emotion-4"
                       escapeHtml={false}
                       linkRenderer={[Function]}
                       mb={0}
+                      plugins={Array []}
+                      rawSourcePos={false}
                       renderers={
                         Object {
                           "link": [Function],
@@ -321,7 +333,9 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                       }
                       skipHtml={true}
                       source="We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post."
+                      sourcePos={false}
                       supportingText={false}
+                      transformLinkUri={[Function]}
                     >
                       <ReactMarkdown
                         allowedTypes={

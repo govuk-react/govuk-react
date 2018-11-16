@@ -24,7 +24,9 @@ exports[`Header matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<StyledHoc>
+<StyledHoc
+  level={1}
+>
   <Header
     className="emotion-6 emotion-0"
     level={1}
