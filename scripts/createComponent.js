@@ -47,7 +47,7 @@ const packageJson = () => {
     "react": ">=15"
   },
   "scripts": {
-    "build": "npm run build:lib && npm run build:es",
+    "build": "yarn build:lib && yarn build:es",
     "build:lib": "rimraf lib && babel src -d lib --source-maps --config-file ../../babel.config.js",
     "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps --config-file ../../babel.config.js"
   },
