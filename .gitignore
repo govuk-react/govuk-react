@@ -37,3 +37,4 @@ govuk-react-*.tgz
 /docs/GridCol.png
 /docs/GridRow.png
 /docs/Layout.png
+/packages/storybook/.cache

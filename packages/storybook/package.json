@@ -42,12 +42,12 @@
     "@govuk-react/top-nav": "^0.3.1",
     "@govuk-react/unordered-list": "^0.3.1",
     "@govuk-react/warning-text": "^0.3.1",
-    "@storybook/addon-actions": "^3.4.1",
-    "@storybook/addon-knobs": "^3.4.1",
-    "@storybook/addon-links": "^3.4.1",
-    "@storybook/addon-options": "^3.4.8",
-    "@storybook/addons": "^3.4.1",
-    "@storybook/react": "^3.4.1",
+    "@storybook/addon-actions": "^4.0.7",
+    "@storybook/addon-knobs": "^4.0.7",
+    "@storybook/addon-links": "^4.0.7",
+    "@storybook/addon-options": "^4.0.7",
+    "@storybook/addons": "^4.0.7",
+    "@storybook/react": "^4.0.7",
     "@storybook/storybook-deployer": "^2.2.0",
     "govuk-colours": "^1.0.3",
     "normalize.css": "^8.0.0",
@@ -59,6 +59,7 @@
   },
   "devDependencies": {
     "babel-plugin-emotion": "^9.2.11",
+    "babel-loader": "^8.0.4",
     "react-chromatic": "^0.8.3"
   },
   "scripts": {

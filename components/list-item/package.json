@@ -3,7 +3,7 @@
   "version": "0.3.1",
   "devDependencies": {
     "@govuk-react/storybook-components": "^0.3.1",
-    "@storybook/addon-knobs": "^3.4.2"
+    "@storybook/addon-knobs": "^4.0.7"
   },
   "dependencies": {
     "@govuk-react/constants": "^0.3.1",
