@@ -78,7 +78,10 @@ exports[`button matches snapshot 1`] = `
   }
 }
 
-<StyledHoc>
+<StyledHoc
+  disabled={false}
+  start={false}
+>
   <Button
     className="emotion-3 emotion-0"
     disabled={false}
@@ -184,6 +187,7 @@ exports[`button with icon matches snapshot 1`] = `
 
 <ButtonStartIcon>
   <StyledHoc
+    disabled={false}
     icon={
       <ButtonArrow
         fill="currentColor"
@@ -343,6 +347,7 @@ exports[`disabled button matches snapshot 1`] = `
 <ButtonDisabled>
   <StyledHoc
     disabled={true}
+    start={false}
   >
     <Button
       className="emotion-3 emotion-0"
@@ -450,6 +455,7 @@ exports[`start button matches snapshot 1`] = `
 
 <ButtonStart>
   <StyledHoc
+    disabled={false}
     start={true}
   >
     <Button

@@ -90,6 +90,7 @@ exports[`Radio disabled: disabled 1`] = `
 
 <StyledHoc
   disabled={true}
+  inline={false}
 >
   <Radio
     className="emotion-7 emotion-4"
@@ -344,6 +345,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
 }
 
 <StyledHoc
+  inline={false}
   name="example"
 >
   <Radio

@@ -483,7 +483,9 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
               </Header>
             </StyledHoc>
             <StyledHoc
+              linkRenderer={[Function]}
               mb={3}
+              supportingText={false}
             >
               <Paragraph
                 className="emotion-16 emotion-0"
@@ -502,10 +504,13 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       "code",
                     ]
                   }
+                  astPlugins={Array []}
                   className="emotion-16 emotion-0"
                   escapeHtml={false}
                   linkRenderer={[Function]}
                   mb={3}
+                  plugins={Array []}
+                  rawSourcePos={false}
                   renderers={
                     Object {
                       "link": [Function],
@@ -513,7 +518,9 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                   }
                   skipHtml={true}
                   source="Optional description of the errors and how to correct them"
+                  sourcePos={false}
                   supportingText={false}
+                  transformLinkUri={[Function]}
                 >
                   <ReactMarkdown
                     allowedTypes={
@@ -650,6 +657,8 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
     </StyledHoc>
     <StyledHoc
       hint="It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
+      input={Object {}}
+      meta={Object {}}
       name="national-insurance-number"
     >
       <InputField
@@ -705,7 +714,9 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                     </StyledHint>
                   </HintText>
                 </StyledHoc>
-                <StyledHoc>
+                <StyledHoc
+                  type="text"
+                >
                   <Input
                     className="emotion-27 emotion-0"
                     type="text"

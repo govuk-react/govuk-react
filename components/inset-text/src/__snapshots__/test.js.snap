@@ -104,7 +104,9 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
           className="emotion-0 emotion-11 emotion-12"
         >
           <StyledHoc
+            linkRenderer={[Function]}
             mb={0}
+            supportingText={false}
           >
             <Paragraph
               className="emotion-6 emotion-0"
@@ -123,10 +125,13 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
                     "code",
                   ]
                 }
+                astPlugins={Array []}
                 className="emotion-6 emotion-0"
                 escapeHtml={false}
                 linkRenderer={[Function]}
                 mb={0}
+                plugins={Array []}
+                rawSourcePos={false}
                 renderers={
                   Object {
                     "link": [Function],
@@ -134,7 +139,9 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
                 }
                 skipHtml={true}
                 source="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
+                sourcePos={false}
                 supportingText={false}
+                transformLinkUri={[Function]}
               >
                 <ReactMarkdown
                   allowedTypes={
@@ -290,7 +297,9 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
           className="emotion-0 emotion-11 emotion-12"
         >
           <StyledHoc
+            linkRenderer={[Function]}
             mb={0}
+            supportingText={false}
           >
             <Paragraph
               className="emotion-6 emotion-0"
@@ -309,10 +318,13 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
                     "code",
                   ]
                 }
+                astPlugins={Array []}
                 className="emotion-6 emotion-0"
                 escapeHtml={false}
                 linkRenderer={[Function]}
                 mb={0}
+                plugins={Array []}
+                rawSourcePos={false}
                 renderers={
                   Object {
                     "link": [Function],
@@ -320,7 +332,9 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
                 }
                 skipHtml={true}
                 source="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
+                sourcePos={false}
                 supportingText={false}
+                transformLinkUri={[Function]}
               >
                 <ReactMarkdown
                   allowedTypes={
