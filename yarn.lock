@@ -462,7 +462,7 @@
     "@babel/helper-wrap-function" "7.0.0-beta.44"
     "@babel/plugin-syntax-function-sent" "7.0.0-beta.44"
 
-"@babel/plugin-proposal-json-strings@^7.0.0":
+"@babel/plugin-proposal-json-strings@7.0.0", "@babel/plugin-proposal-json-strings@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-json-strings/-/plugin-proposal-json-strings-7.0.0.tgz#3b4d7b5cf51e1f2e70f52351d28d44fc2970d01e"
   dependencies:
@@ -1304,44 +1304,6 @@
     "@babel/plugin-transform-react-jsx" "^7.0.0"
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
-
-"@babel/preset-stage-1@7.0.0-beta.44":
-  version "7.0.0-beta.44"
-  resolved "http://registry.npmjs.org/@babel/preset-stage-1/-/preset-stage-1-7.0.0-beta.44.tgz#ee741bdfd873654cd985dce7d77e47b5c30c289a"
-  dependencies:
-    "@babel/helper-plugin-utils" "7.0.0-beta.44"
-    "@babel/plugin-proposal-decorators" "7.0.0-beta.44"
-    "@babel/plugin-proposal-do-expressions" "7.0.0-beta.44"
-    "@babel/plugin-proposal-export-default-from" "7.0.0-beta.44"
-    "@babel/plugin-proposal-logical-assignment-operators" "7.0.0-beta.44"
-    "@babel/plugin-proposal-nullish-coalescing-operator" "7.0.0-beta.44"
-    "@babel/plugin-proposal-optional-chaining" "7.0.0-beta.44"
-    "@babel/plugin-proposal-pipeline-operator" "7.0.0-beta.44"
-    "@babel/preset-stage-2" "7.0.0-beta.44"
-
-"@babel/preset-stage-2@7.0.0-beta.44":
-  version "7.0.0-beta.44"
-  resolved "http://registry.npmjs.org/@babel/preset-stage-2/-/preset-stage-2-7.0.0-beta.44.tgz#1e435afc4d47acdee54fc6ba6a107c84eebf16f5"
-  dependencies:
-    "@babel/helper-plugin-utils" "7.0.0-beta.44"
-    "@babel/plugin-proposal-export-namespace-from" "7.0.0-beta.44"
-    "@babel/plugin-proposal-function-sent" "7.0.0-beta.44"
-    "@babel/plugin-proposal-numeric-separator" "7.0.0-beta.44"
-    "@babel/plugin-proposal-throw-expressions" "7.0.0-beta.44"
-    "@babel/preset-stage-3" "7.0.0-beta.44"
-
-"@babel/preset-stage-3@7.0.0-beta.44":
-  version "7.0.0-beta.44"
-  resolved "http://registry.npmjs.org/@babel/preset-stage-3/-/preset-stage-3-7.0.0-beta.44.tgz#954e485be21bd76627aa449b15b9a748757ac440"
-  dependencies:
-    "@babel/helper-plugin-utils" "7.0.0-beta.44"
-    "@babel/plugin-proposal-async-generator-functions" "7.0.0-beta.44"
-    "@babel/plugin-proposal-class-properties" "7.0.0-beta.44"
-    "@babel/plugin-proposal-object-rest-spread" "7.0.0-beta.44"
-    "@babel/plugin-proposal-optional-catch-binding" "7.0.0-beta.44"
-    "@babel/plugin-proposal-unicode-property-regex" "7.0.0-beta.44"
-    "@babel/plugin-syntax-dynamic-import" "7.0.0-beta.44"
-    "@babel/plugin-syntax-import-meta" "7.0.0-beta.44"
 
 "@babel/register@7.0.0-beta.44":
   version "7.0.0-beta.44"
