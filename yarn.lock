@@ -9771,7 +9771,7 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-chromatic@^0.8.3:
+react-chromatic@^0.8.4:
   version "0.8.4"
   resolved "https://registry.yarnpkg.com/react-chromatic/-/react-chromatic-0.8.4.tgz#0aed07fb89ccdb6c3e77d3362d3a2c4520e493d9"
   dependencies:
