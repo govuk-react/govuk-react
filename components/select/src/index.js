@@ -1,46 +1,43 @@
 // https://github.com/alphagov/govuk-frontend/tree/master/src/components/select
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'react-emotion';
-import { BLACK, ERROR_COLOUR, YELLOW } from 'govuk-colours';
-import {
-  MEDIA_QUERIES,
-  NTA_LIGHT,
-} from '@govuk-react/constants';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "react-emotion";
+import { BLACK, ERROR_COLOUR, YELLOW } from "govuk-colours";
+import { MEDIA_QUERIES, NTA_LIGHT } from "@govuk-react/constants";
 
-import Label from '@govuk-react/label';
-import LabelText from '@govuk-react/label-text';
-import ErrorText from '@govuk-react/error-text';
-import HintText from '@govuk-react/hint-text';
-import { withWhiteSpace } from '@govuk-react/hoc';
+import Label from "@govuk-react/label";
+import LabelText from "@govuk-react/label-text";
+import ErrorText from "@govuk-react/error-text";
+import HintText from "@govuk-react/hint-text";
+import { withWhiteSpace } from "@govuk-react/hoc";
 
-const StyledSelect = styled('select')(
+const StyledSelect = styled("select")(
   {
-    boxSizing: 'border-box',
+    boxSizing: "border-box",
     fontFamily: NTA_LIGHT,
     fontWeight: 400,
-    textTransform: 'none',
-    fontSize: '16px',
-    lineHeight: '1.25',
-    width: '100%',
-    height: '33px',
-    padding: '5px 4px 4px',
+    textTransform: "none",
+    fontSize: "16px",
+    lineHeight: "1.25",
+    width: "100%",
+    height: "33px",
+    padding: "5px 4px 4px",
     border: `2px solid ${BLACK}`,
     [MEDIA_QUERIES.LARGESCREEN]: {
-      width: '50%',
-      height: '38px',
-      fontSize: '19px',
-      lineHeight: '1.31579',
+      width: "50%",
+      height: "38px",
+      fontSize: "19px",
+      lineHeight: "1.31579"
     },
-    ':focus': {
+    ":focus": {
       outline: `3px solid ${YELLOW}`,
-      outlineOffset: 0,
-    },
+      outlineOffset: 0
+    }
   },
   ({ error }) => ({
-    border: error ? `4px solid ${ERROR_COLOUR}` : undefined,
-  }),
+    border: error ? `4px solid ${ERROR_COLOUR}` : undefined
+  })
 );
 
 /**
@@ -112,9 +109,7 @@ const StyledSelect = styled('select')(
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/select
  *
  */
-const Select = ({
-  children, hint, label, meta, input, ...props
-}) => (
+const Select = ({ children, hint, label, meta, input, ...props }) => (
   <Label {...props} error={meta.touched && meta.error}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
@@ -129,7 +124,7 @@ Select.defaultProps = {
   hint: undefined,
   errorText: undefined,
   input: {},
-  meta: {},
+  meta: {}
 };
 
 Select.propTypes = {
@@ -140,6 +135,7 @@ Select.propTypes = {
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
     value: PropTypes.any,
+    selected: PropTypes.any
   }),
   meta: PropTypes.shape({
     active: PropTypes.bool,
@@ -154,11 +150,11 @@ Select.propTypes = {
     submitSucceeded: PropTypes.bool,
     touched: PropTypes.bool,
     valid: PropTypes.bool,
-    visited: PropTypes.bool,
+    visited: PropTypes.bool
   }),
   children: PropTypes.node.isRequired,
   label: PropTypes.string.isRequired,
-  errorText: PropTypes.string,
+  errorText: PropTypes.string
 };
 
 export default withWhiteSpace({ marginBottom: 6 })(Select);
