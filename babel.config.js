@@ -1,42 +1,3 @@
-// const esModules = (process.env["BABEL_ENV"] === "es");
-//
-// const presets = [
-//   "@babel/preset-env",
-//   "@babel/preset-react",
-//   "@babel/preset-stage-1"
-// ];
-//
-// const plugins =  [
-//   "transform-decorators-legacy",
-//   ["transform-react-remove-prop-types"],
-//   [
-//     "@babel/plugin-transform-runtime",
-//     { "helpers": false, "polyfill": false, "regenerator": true }
-//   ],
-//   ["emotion", { "autoLabel": true }]
-// ];
-//
-// const ignore = [".spec.js", ".test.js", "-test.js", "/__tests__/"];
-//
-// if (!esModules) {
-//   presets[0] = ["@babel/preset-env", {
-//     "loose": true,
-//     "modules": "commonjs"
-//   }];
-//   plugins.push("add-module-exports")
-// } else {
-//   presets[0] = ["@babel/preset-env", {
-//     "loose": true,
-//     "modules": false
-//   }];
-// }
-//
-// module.exports = {
-//   presets,
-//   plugins,
-//   ignore
-// }
-
 const esModules = (process.env.BABEL_ENV === 'es');
 
 const presets = [
@@ -66,12 +27,14 @@ const plugins = [
   ['@babel/plugin-proposal-class-properties', { loose: false }],
   '@babel/plugin-proposal-json-strings',
 
+
+  '@babel/plugin-proposal-object-rest-spread',
+
   ['transform-react-remove-prop-types'],
   [
     '@babel/plugin-transform-runtime',
-    { helpers: false, /* polyfill: false, */ regenerator: true },
+    { helpers: false, regenerator: true },
   ],
-
   ['emotion', { autoLabel: true }],
 ];
 
