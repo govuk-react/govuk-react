@@ -65,6 +65,13 @@ const plugins = [
   '@babel/plugin-syntax-import-meta',
   ['@babel/plugin-proposal-class-properties', { loose: false }],
   '@babel/plugin-proposal-json-strings',
+
+  ['transform-react-remove-prop-types'],
+  [
+    '@babel/plugin-transform-runtime',
+    { helpers: false, /* polyfill: false, */ regenerator: true },
+  ],
+
   ['emotion', { autoLabel: true }],
 ];
 
