@@ -222,7 +222,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
           errorText="example"
         >
           <label
-            className="emotion-0 emotion-0 emotion-25 emotion-2"
+            className="emotion-0 emotion-0 emotion-25 emotion-26"
           >
             <StyledHoc>
               <LabelText
@@ -247,7 +247,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                   className="emotion-3 emotion-0"
                 >
                   <span
-                    className="emotion-0 emotion-8 emotion-2"
+                    className="emotion-0 emotion-8 emotion-9"
                   >
                     example
                   </span>
@@ -262,7 +262,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                   className="emotion-3 emotion-0"
                 >
                   <span
-                    className="emotion-0 emotion-15 emotion-2"
+                    className="emotion-0 emotion-15 emotion-16"
                   >
                     example
                   </span>
@@ -430,7 +430,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
           className="emotion-0 emotion-14 emotion-0"
         >
           <label
-            className="emotion-0 emotion-0 emotion-11 emotion-2"
+            className="emotion-0 emotion-0 emotion-11 emotion-12"
           >
             <StyledHoc>
               <LabelText

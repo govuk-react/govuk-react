@@ -284,7 +284,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
               errorText="example"
             >
               <span
-                className="emotion-0 emotion-8 emotion-2"
+                className="emotion-0 emotion-8 emotion-9"
               >
                 example
               </span>
@@ -357,7 +357,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                       year={false}
                     >
                       <label
-                        className="emotion-23 emotion-24 emotion-2"
+                        className="emotion-23 emotion-24 emotion-25"
                       >
                         <StyledHoc>
                           <LabelText
@@ -406,7 +406,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                       year={false}
                     >
                       <label
-                        className="emotion-23 emotion-24 emotion-2"
+                        className="emotion-23 emotion-24 emotion-25"
                       >
                         <StyledHoc>
                           <LabelText
@@ -455,7 +455,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                       year={true}
                     >
                       <label
-                        className="emotion-23 emotion-56 emotion-2"
+                        className="emotion-23 emotion-56 emotion-25"
                       >
                         <StyledHoc>
                           <LabelText
@@ -810,7 +810,7 @@ exports[`DateField should support null value: null value 1`] = `
                       year={false}
                     >
                       <label
-                        className="emotion-16 emotion-17 emotion-2"
+                        className="emotion-16 emotion-17 emotion-18"
                       >
                         <StyledHoc>
                           <LabelText
@@ -859,7 +859,7 @@ exports[`DateField should support null value: null value 1`] = `
                       year={false}
                     >
                       <label
-                        className="emotion-16 emotion-17 emotion-2"
+                        className="emotion-16 emotion-17 emotion-18"
                       >
                         <StyledHoc>
                           <LabelText
@@ -908,7 +908,7 @@ exports[`DateField should support null value: null value 1`] = `
                       year={true}
                     >
                       <label
-                        className="emotion-16 emotion-49 emotion-2"
+                        className="emotion-16 emotion-49 emotion-18"
                       >
                         <StyledHoc>
                           <LabelText
@@ -1283,7 +1283,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                       year={false}
                     >
                       <label
-                        className="emotion-16 emotion-17 emotion-2"
+                        className="emotion-16 emotion-17 emotion-18"
                       >
                         <StyledHoc>
                           <LabelText
@@ -1334,7 +1334,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                       year={false}
                     >
                       <label
-                        className="emotion-16 emotion-17 emotion-2"
+                        className="emotion-16 emotion-17 emotion-18"
                       >
                         <StyledHoc>
                           <LabelText
@@ -1385,7 +1385,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                       year={true}
                     >
                       <label
-                        className="emotion-16 emotion-49 emotion-2"
+                        className="emotion-16 emotion-49 emotion-18"
                       >
                         <StyledHoc>
                           <LabelText

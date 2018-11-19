@@ -144,7 +144,7 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
         errorText="example"
       >
         <label
-          className="emotion-0 emotion-17 emotion-2"
+          className="emotion-0 emotion-17 emotion-18"
         >
           <StyledHoc>
             <LabelText
@@ -169,7 +169,7 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
                 className="emotion-3 emotion-0"
               >
                 <span
-                  className="emotion-0 emotion-8 emotion-2"
+                  className="emotion-0 emotion-8 emotion-9"
                 >
                   example
                 </span>
@@ -320,7 +320,7 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
         className="emotion-3 emotion-0"
       >
         <label
-          className="emotion-0 emotion-17 emotion-2"
+          className="emotion-0 emotion-17 emotion-18"
         >
           <StyledHoc>
             <LabelText
@@ -345,7 +345,7 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
                 className="emotion-3 emotion-0"
               >
                 <span
-                  className="emotion-0 emotion-8 emotion-2"
+                  className="emotion-0 emotion-8 emotion-9"
                 >
                   example
                 </span>
@@ -468,7 +468,7 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
         className="emotion-3 emotion-0"
       >
         <label
-          className="emotion-0 emotion-10 emotion-2"
+          className="emotion-0 emotion-10 emotion-11"
         >
           <StyledHoc>
             <LabelText

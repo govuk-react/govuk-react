@@ -58,9 +58,9 @@
     "react": ">=16.2.0"
   },
   "devDependencies": {
-    "babel-plugin-emotion": "^9.2.11",
     "babel-loader": "^8.0.4",
-    "react-chromatic": "^0.8.3"
+    "babel-plugin-emotion": "^9.2.11",
+    "react-chromatic": "^0.8.4"
   },
   "scripts": {
     "start": "start-storybook -p 9009",

@@ -167,7 +167,7 @@ exports[`MultiChoice matches snapshot 1`] = `
               className="emotion-3 emotion-0"
             >
               <span
-                className="emotion-0 emotion-8 emotion-2"
+                className="emotion-0 emotion-8 emotion-9"
               >
                 Example hint
               </span>
@@ -182,7 +182,7 @@ exports[`MultiChoice matches snapshot 1`] = `
               className="emotion-3 emotion-0"
             >
               <span
-                className="emotion-0 emotion-15 emotion-2"
+                className="emotion-0 emotion-15 emotion-16"
               >
                 Example error
               </span>

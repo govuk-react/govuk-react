@@ -134,7 +134,7 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
           className="emotion-0 emotion-14 emotion-0"
         >
           <label
-            className="emotion-0 emotion-0 emotion-11 emotion-2"
+            className="emotion-0 emotion-0 emotion-11 emotion-12"
           >
             <StyledHoc>
               <LabelText

@@ -2,8 +2,8 @@
   "name": "@govuk-react/api-docs",
   "version": "0.3.1",
   "dependencies": {
-    "@babel/node": "7.0.0-beta.44",
-    "@babel/runtime": "7.0.0-beta.44",
+    "@babel/node": "7.0.0",
+    "@babel/runtime": "7.1.5",
     "chalk": "^2.3.1",
     "commander": "^2.15.0",
     "component-image": "^2.0.0",
@@ -18,9 +18,8 @@
     "react-dom": "^16.3.2"
   },
   "devDependencies": {
-    "@babel/cli": "7.0.0-beta.44",
-    "@babel/core": "7.0.0-beta.44",
-    "babel-core": "^7.0.0-bridge.0",
+    "@babel/cli": "7.1.5",
+    "@babel/core": "7.1.6",
     "cross-env": "^5.1.4",
     "prop-types": "^15.6.1",
     "rimraf": "^2.6.2"
@@ -30,9 +29,9 @@
   },
   "scripts": {
     "start": "babel-node src",
-    "build": "npm run build:lib && npm run build:es",
-    "build:lib": "rimraf lib && babel src -d lib --source-maps",
-    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps"
+    "build": "yarn build:lib && yarn build:es",
+    "build:lib": "rimraf lib && babel src -d lib --source-maps --config-file ../../babel.config.js",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps --config-file ../../babel.config.js"
   },
   "main": "lib/index.js",
   "module": "es/index.js",

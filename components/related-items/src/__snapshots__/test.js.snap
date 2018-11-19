@@ -183,7 +183,7 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
               listStyleType="none"
             >
               <ul
-                className="emotion-0 emotion-44 emotion-2"
+                className="emotion-0 emotion-44 emotion-45"
               >
                 <StyledHoc>
                   <ListItem
@@ -193,7 +193,7 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
                       className="emotion-17 emotion-0"
                     >
                       <li
-                        className="emotion-0 emotion-15 emotion-2"
+                        className="emotion-0 emotion-15 emotion-16"
                       >
                         <StyledHoc
                           href="https://example.com"
@@ -222,7 +222,7 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
                       className="emotion-17 emotion-0"
                     >
                       <li
-                        className="emotion-0 emotion-15 emotion-2"
+                        className="emotion-0 emotion-15 emotion-16"
                       >
                         <StyledHoc
                           href="https://example.com"
@@ -251,7 +251,7 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
                       className="emotion-17 emotion-0"
                     >
                       <li
-                        className="emotion-0 emotion-15 emotion-2"
+                        className="emotion-0 emotion-15 emotion-16"
                       >
                         <StyledHoc
                           href="https://example.com"
