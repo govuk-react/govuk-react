@@ -139,7 +139,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
           className="emotion-0 emotion-19 emotion-0"
         >
           <label
-            className="emotion-0 emotion-0 emotion-16 emotion-2"
+            className="emotion-0 emotion-0 emotion-16 emotion-17"
           >
             <StyledHoc>
               <LabelText
@@ -168,7 +168,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                   type="text"
                 >
                   <input
-                    className="emotion-0 emotion-8 emotion-2"
+                    className="emotion-0 emotion-8 emotion-9"
                     type="text"
                   />
                 </StyledInput>

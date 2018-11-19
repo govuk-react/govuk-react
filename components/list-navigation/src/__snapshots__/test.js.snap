@@ -105,7 +105,7 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
           listStyleType="square"
         >
           <ul
-            className="emotion-0 emotion-0 emotion-9 emotion-2"
+            className="emotion-0 emotion-0 emotion-9 emotion-10"
           >
             <StyledHoc>
               <ListItem

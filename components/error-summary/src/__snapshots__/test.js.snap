@@ -534,7 +534,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       ]
                     }
                     astPlugins={Array []}
-                    className="emotion-0 emotion-11 emotion-2"
+                    className="emotion-0 emotion-11 emotion-12"
                     escapeHtml={false}
                     linkRenderer={[Function]}
                     mb={3}
@@ -552,7 +552,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                     transformLinkUri={[Function]}
                   >
                     <div
-                      className="emotion-0 emotion-11 emotion-2"
+                      className="emotion-0 emotion-11 emotion-12"
                       key="root-1-1"
                     >
                       <p
@@ -577,7 +577,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                   listStyleType="none"
                 >
                   <ul
-                    className="emotion-0 emotion-43 emotion-2"
+                    className="emotion-0 emotion-43 emotion-44"
                   >
                     <StyledHoc
                       key="national-insurance-number"
@@ -589,7 +589,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                           className="emotion-27 emotion-0"
                         >
                           <li
-                            className="emotion-0 emotion-25 emotion-2"
+                            className="emotion-0 emotion-25 emotion-26"
                           >
                             <StyledErrorText
                               onClick={[Function]}
@@ -623,7 +623,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                           className="emotion-27 emotion-0"
                         >
                           <li
-                            className="emotion-0 emotion-25 emotion-2"
+                            className="emotion-0 emotion-25 emotion-26"
                           >
                             <StyledErrorText
                               onClick={[Function]}
@@ -681,7 +681,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
               name="national-insurance-number"
             >
               <label
-                className="emotion-0 emotion-0 emotion-79 emotion-2"
+                className="emotion-0 emotion-0 emotion-79 emotion-80"
                 name="national-insurance-number"
               >
                 <StyledHoc>
@@ -692,7 +692,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       className="emotion-27 emotion-0"
                     >
                       <span
-                        className="emotion-0 emotion-57 emotion-2"
+                        className="emotion-0 emotion-57 emotion-58"
                       >
                         National Insurance number
                       </span>
@@ -707,7 +707,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       className="emotion-27 emotion-0"
                     >
                       <span
-                        className="emotion-0 emotion-64 emotion-2"
+                        className="emotion-0 emotion-64 emotion-65"
                       >
                         It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
                       </span>
@@ -726,7 +726,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       type="text"
                     >
                       <input
-                        className="emotion-0 emotion-71 emotion-2"
+                        className="emotion-0 emotion-71 emotion-72"
                         type="text"
                       />
                     </StyledInput>
@@ -756,7 +756,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
             name="description"
           >
             <label
-              className="emotion-0 emotion-101 emotion-2"
+              className="emotion-0 emotion-101 emotion-80"
               name="description"
             >
               <StyledHoc>
@@ -767,7 +767,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                     className="emotion-27 emotion-0"
                   >
                     <span
-                      className="emotion-0 emotion-57 emotion-2"
+                      className="emotion-0 emotion-57 emotion-58"
                     >
                       Description of what you saw
                     </span>
@@ -779,7 +779,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                 type="text"
               >
                 <textarea
-                  className="emotion-98 emotion-2"
+                  className="emotion-98 emotion-99"
                   rows="5"
                   type="text"
                 />
