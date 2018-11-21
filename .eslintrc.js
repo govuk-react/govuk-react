@@ -17,7 +17,10 @@ module.exports = {
       "components": [ "Link" ],
       "specialLink": [ "to", "hrefLeft", "hrefRight" ],
       "aspects": [ "noHref", "invalidHref", "preferButton" ]
-    }]
+    }],
+  },
+  "settings": {
+    "import/core-modules": ['prop-types']
   },
   "overrides": [
     {

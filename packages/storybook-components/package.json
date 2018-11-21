@@ -10,7 +10,6 @@
     "storybook-readme": "^4.0.2"
   },
   "peerDependencies": {
-    "prop-types": ">=15",
     "react": ">=16.2.0"
   },
   "scripts": {
