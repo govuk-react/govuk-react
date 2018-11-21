@@ -15,11 +15,11 @@ const plugins = [
   // '@babel/plugin-proposal-do-expressions',
 
   // Stage 2
-  ['@babel/plugin-proposal-decorators', { legacy: true }],
-  '@babel/plugin-proposal-function-sent',
+  // ['@babel/plugin-proposal-decorators', { legacy: true }],
+  // '@babel/plugin-proposal-function-sent',
   '@babel/plugin-proposal-export-namespace-from',
-  '@babel/plugin-proposal-numeric-separator',
-  '@babel/plugin-proposal-throw-expressions',
+  // '@babel/plugin-proposal-numeric-separator',
+  // '@babel/plugin-proposal-throw-expressions',
 
   // Stage 3
   '@babel/plugin-syntax-dynamic-import',
@@ -28,6 +28,7 @@ const plugins = [
   '@babel/plugin-proposal-json-strings',
 
 
+  // Stage 4
   '@babel/plugin-proposal-object-rest-spread',
 
   ['transform-react-remove-prop-types'],
