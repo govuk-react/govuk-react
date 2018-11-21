@@ -16,6 +16,8 @@ module.exports = (baseConfig, env, defaultConfig) => {
   });
   // make babel-loader process components and packages src folder
   defaultConfig.module.rules[0].include.push(/\/(packages|components)\/[^/]+\/src/);
+  // use babel.config.js from the monorepo root by telling babel to search upward beyond storybook package.json
+  defaultConfig.module.rules[0].use[0].options.rootMode = "upward";
 
   // when one component depends on another, we want to webpack to load from the component's src folder so that it auto refreshes when there are changes
   defaultConfig.resolve.alias = {
