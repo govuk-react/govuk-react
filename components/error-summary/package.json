@@ -14,7 +14,6 @@
   },
   "peerDependencies": {
     "emotion": ">=9",
-    "prop-types": ">=15",
     "react": ">=15",
     "react-emotion": ">=9"
   },

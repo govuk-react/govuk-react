@@ -43,7 +43,6 @@ const packageJson = () => {
   "peerDependencies": {
     "emotion": ">=9",
     "react-emotion": ">=9",
-    "prop-types": ">=15",
     "react": ">=15"
   },
   "scripts": {
