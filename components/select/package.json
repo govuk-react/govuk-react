@@ -25,7 +25,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/select",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/select",
   "description": "Styled select menu, taking its options as children and with various configurable parameters via props.",
   "private": false,
   "publishConfig": {

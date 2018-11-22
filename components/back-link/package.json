@@ -25,7 +25,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/back-link",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/back-link",
   "description": "Styled anchor with left-pointing triangle, children rendered as text and optional click handler.",
   "private": false,
   "publishConfig": {

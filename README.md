@@ -2,8 +2,8 @@
 
 An implementation of the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital) in [React](https://reactjs.org) using [CSSinJS](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660) using Object notation (with [Emotion](https://emotion.sh/docs/object-styles)).
 
-[![Build Status](https://travis-ci.org/UKHomeOffice/govuk-react.svg?branch=master)](https://travis-ci.org/UKHomeOffice/govuk-react)
-[![codecov](https://codecov.io/gh/UKHomeOffice/govuk-react/branch/master/graph/badge.svg)](https://codecov.io/gh/UKHomeOffice/govuk-react)
+[![Build Status](https://travis-ci.org/govuk-react/govuk-react.svg?branch=master)](https://travis-ci.org/govuk-react/govuk-react)
+[![codecov](https://codecov.io/gh/govuk-react/govuk-react/branch/master/graph/badge.svg)](https://codecov.io/gh/govuk-react/govuk-react)
 
 The following projects (in priority order) are used as a guide for what components to implement and how they should look/behave. Where possible we are using the existing CSS as a guide, but often need to modify to suit custom markup. Also flexbox is preferred over floats.
 
@@ -81,7 +81,7 @@ We are also expecting to use [Interoperable Style Transfer Format (ISTF)](https:
 
 ## About the GDS font
 
-Unfortuantely the GDS transport font has a relatively restrictive license [described on the gov.uk blog](https://designnotes.blog.gov.uk/2015/03/11/can-i-use-the-gov-uk-fonts/). We are investigating rendering an elegant alternative before falling back to Arial on [issue 272](https://github.com/UKHomeOffice/govuk-react/issues/272).
+Unfortuantely the GDS transport font has a relatively restrictive license [described on the gov.uk blog](https://designnotes.blog.gov.uk/2015/03/11/can-i-use-the-gov-uk-fonts/). We are investigating rendering an elegant alternative before falling back to Arial on [issue 272](https://github.com/govuk-react/govuk-react/issues/272).
 
 ## Related sites and projects
 

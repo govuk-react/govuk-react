@@ -21,7 +21,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/header",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/header",
   "description": "Outputs a styled heading tag of provided level, rendering children as contents.",
   "private": false,
   "publishConfig": {
