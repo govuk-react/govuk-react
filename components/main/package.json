@@ -23,7 +23,7 @@
   "module": "es/index.js",
   "author": "Toby Brancher",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/main",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/main",
   "description": "Styled container which aligns to topNav component, is centered, and provides top padding.",
   "private": false,
   "publishConfig": {

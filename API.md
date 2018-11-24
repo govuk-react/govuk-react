@@ -868,7 +868,7 @@ to build an accurate grid layout.
 3. `Main` contains the required properties to center a container that matches up with `TopNav`
 and house the remaining body of content for the page.
 
-If you feel you may still need a `Layout` component, please do raise a ticket on [Github](https://github.com/UKHomeOffice/govuk-react/issues/177)
+If you feel you may still need a `Layout` component, please do raise a ticket on [Github](https://github.com/govuk-react/govuk-react/issues/177)
 
 ### Usage
 

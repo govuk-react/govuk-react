@@ -25,7 +25,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/paragraph",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/paragraph",
   "description": "Renders a styled paragraph around children, also supporting and styling sub-elements from markdown and accepting several optional props.",
   "private": false,
   "publishConfig": {

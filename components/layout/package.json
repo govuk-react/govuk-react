@@ -20,7 +20,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/layout",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/layout",
   "description": "Component intended to surround grid layouts but now no longer used/required.",
   "private": false,
   "publishConfig": {

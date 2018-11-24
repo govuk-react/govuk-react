@@ -21,7 +21,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/UKHomeOffice/govuk-react/tree/master/components/label",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/label",
   "description": "Styled label with children displayed as text.",
   "private": false,
   "publishConfig": {

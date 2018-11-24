@@ -5,7 +5,7 @@ import { setOptions } from '@storybook/addon-options';
 setOptions({
   name: 'govuk-react',
   sortStoriesByKind: true,
-  url: 'https://github.com/UKHomeOffice/govuk-react'
+  url: 'https://github.com/govuk-react/govuk-react'
 });
 
 function loadStories() {
