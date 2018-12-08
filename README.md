@@ -5,12 +5,13 @@ An implementation of the [GOV.UK Design System](https://govuk-design-system-prod
 [![Build Status](https://travis-ci.org/govuk-react/govuk-react.svg?branch=master)](https://travis-ci.org/govuk-react/govuk-react)
 [![codecov](https://codecov.io/gh/govuk-react/govuk-react/branch/master/graph/badge.svg)](https://codecov.io/gh/govuk-react/govuk-react)
 
-The following projects (in priority order) are used as a guide for what components to implement and how they should look/behave. Where possible we are using the existing CSS as a guide, but often need to modify to suit custom markup. Also flexbox is preferred over floats.
+We aim to track the following projects (in priority order) as to which components to implement and how they should look/behave. Where possible we are using the existing CSS as a guide. When we need to modify to suit custom markup, we aim to provide a comment in our code as to why this was done.
 
-- [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital) ([source](https://github.com/alphagov/govuk-design-system))
-- [GOV.UK Design System Backlog](https://github.com/alphagov/govuk-design-system-backlog) (where there are open tickets in the backlog that reference patterns/components in existing govuk sites)
 - [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend)
+- [GOV.UK Design System](https://design-system.service.gov.uk) ([source](https://github.com/alphagov/govuk-design-system))
+- [GOV.UK Design System Backlog](https://github.com/alphagov/govuk-design-system-backlog) (where there are open tickets in the backlog that reference patterns/components in existing govuk sites)
 - [GOV.UK/elements](https://github.com/alphagov/govuk_elements)
+- [GOV.UK Publishing Components](https://govuk-publishing-components.herokuapp.com/component-guide)
 - Any other established govuk pattern
 
 ## Usage
