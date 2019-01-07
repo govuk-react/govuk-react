@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { withDocs } from 'storybook-readme';
 
 const PreviewComponent = ({ children }) => (
-  navigator.userAgent.match(/Chromatic/) ? children :
   <div
     style={{
       display: 'none',
@@ -13,7 +12,7 @@ const PreviewComponent = ({ children }) => (
   </div>
 );
 
-const ReadMeHidePreview = (readme, ...rest) => withDocs({ PreviewComponent })(navigator.userAgent.match(/Chromatic/) ? '' : readme, ...rest);
+const ReadMeHidePreview = (readme, ...rest) => withDocs({ PreviewComponent })(readme, ...rest);
 
 PreviewComponent.propTypes = {
   children: PropTypes.node.isRequired,
