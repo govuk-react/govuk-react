@@ -36,7 +36,7 @@
       "!<rootDir>/packages/api-docs/**",
       "!<rootDir>/packages/storybook-components/**"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/scripts/setupTests.js",
+    "setupFilesAfterEnv": ["<rootDir>/scripts/setupTests.js"],
     "testMatch": [
       "<rootDir>/{components,packages}/*/src/**/?(*.)(spec|test).js?(x)"
     ],
