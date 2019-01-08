@@ -46,7 +46,7 @@ exports[`Radio disabled: disabled 1`] = `
   height: 33px;
   border: 2px solid black;
   border-radius: 50%;
-  background: transparent;
+  background: white;
 }
 
 .emotion-2:after {
@@ -186,7 +186,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   height: 33px;
   border: 2px solid black;
   border-radius: 50%;
-  background: transparent;
+  background: white;
 }
 
 .emotion-2:after {
@@ -329,7 +329,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   height: 33px;
   border: 2px solid black;
   border-radius: 50%;
-  background: transparent;
+  background: white;
 }
 
 .emotion-2:after {

@@ -73,7 +73,7 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   content: '';
   display: block;
   border: 2px solid #0b0c0c;
-  background: transparent;
+  background: white;
   width: 34px;
   height: 34px;
   position: absolute;
@@ -177,7 +177,7 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
   content: '';
   display: block;
   border: 2px solid #0b0c0c;
-  background: transparent;
+  background: white;
   width: 34px;
   height: 34px;
   position: absolute;
