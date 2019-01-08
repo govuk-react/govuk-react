@@ -10,7 +10,9 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-const Anchor = styled('a')({
+const Anchor = styled('a')(({
+  href, onClick,
+}) => ({
   fontFamily: NTA_LIGHT,
   WebkitFontSmoothing: 'antialiased',
   MozOsxFontSmoothing: 'grayscale',
@@ -28,7 +30,7 @@ const Anchor = styled('a')({
   border: 0,
   backgroundColor: 'transparent',
   color: `${BLACK}`,
-  borderBottom: `1px solid ${BLACK}`,
+  borderBottom: href ? `1px solid ${BLACK}` : 'none',
   textDecoration: 'none',
   '::before': {
     display: 'block',
@@ -50,7 +52,7 @@ const Anchor = styled('a')({
     backgroundColor: `${YELLOW}`,
     outline: `3px solid ${YELLOW}`,
   },
-});
+}));
 
 /**
  *
@@ -75,8 +77,8 @@ const Anchor = styled('a')({
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/back-link
  *
  */
-const BackLink = ({ onClick, ...props }) => (
-  <Anchor onClick={onClick} {...props} />
+const BackLink = ({ onClick, href, ...props }) => (
+  <Anchor onClick={onClick} href={onClick && !href ? '#' : href} {...props} />
 );
 
 BackLink.propTypes = {

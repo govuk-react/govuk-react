@@ -21,3 +21,11 @@ examples.add('With href', () => (
   <BackLink href="#">Back</BackLink>
 ));
 
+examples.add('Without href', () => (
+  <BackLink>Back</BackLink>
+));
+
+examples.add('With onClick handler and no href', () => (
+  // eslint-disable-next-line no-alert, no-undef
+  <BackLink onClick={() => {}}>Back</BackLink>
+));
