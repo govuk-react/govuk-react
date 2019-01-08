@@ -61,7 +61,7 @@ const StyledLabel = styled('span')({
     content: "''",
     display: 'block',
     border: `2px solid ${BLACK}`,
-    background: 'transparent',
+    background: 'white',
     width: '34px',
     height: '34px',
     position: 'absolute',

@@ -65,7 +65,7 @@ const LabelText = styled('span')({
     height: '33px',
     border: '2px solid black',
     borderRadius: '50%',
-    background: 'transparent',
+    background: 'white',
   },
   ':after': {
     content: "''",
