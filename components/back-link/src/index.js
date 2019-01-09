@@ -10,9 +10,7 @@ import {
   NTA_LIGHT,
 } from '@govuk-react/constants';
 
-const Anchor = styled('a')(({
-  href, onClick,
-}) => ({
+const Anchor = styled('a')({
   fontFamily: NTA_LIGHT,
   WebkitFontSmoothing: 'antialiased',
   MozOsxFontSmoothing: 'grayscale',
@@ -30,8 +28,10 @@ const Anchor = styled('a')(({
   border: 0,
   backgroundColor: 'transparent',
   color: `${BLACK}`,
-  borderBottom: href ? `1px solid ${BLACK}` : 'none',
   textDecoration: 'none',
+  '&[href]': {
+    borderBottom: `1px solid ${BLACK}`,
+  },
   '::before': {
     display: 'block',
     width: 0,
@@ -52,7 +52,7 @@ const Anchor = styled('a')(({
     backgroundColor: `${YELLOW}`,
     outline: `3px solid ${YELLOW}`,
   },
-}));
+});
 
 /**
  *

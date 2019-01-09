@@ -25,7 +25,6 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
   border: 0;
   background-color: transparent;
   color: #0b0c0c;
-  border-bottom: 1px solid #0b0c0c;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-bottom: 15px;
@@ -36,6 +35,10 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
     font-size: 16px;
     line-height: 1.25;
   }
+}
+
+.emotion-1[href] {
+  border-bottom: 1px solid #0b0c0c;
 }
 
 .emotion-1::before {
@@ -76,7 +79,7 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
       ],
       "results": Array [
         Object {
-          "isThrow": false,
+          "type": "return",
           "value": undefined,
         },
       ],
@@ -93,7 +96,7 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
         ],
@@ -110,7 +113,7 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
           ],
           "results": Array [
             Object {
-              "isThrow": false,
+              "type": "return",
               "value": undefined,
             },
           ],
@@ -127,7 +130,7 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
             ],
             "results": Array [
               Object {
-                "isThrow": false,
+                "type": "return",
                 "value": undefined,
               },
             ],
