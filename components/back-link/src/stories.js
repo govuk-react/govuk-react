@@ -26,6 +26,5 @@ examples.add('Without href', () => (
 ));
 
 examples.add('With onClick handler and no href', () => (
-  // eslint-disable-next-line no-alert, no-undef
   <BackLink onClick={() => {}}>Back</BackLink>
 ));
