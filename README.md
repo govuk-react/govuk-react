@@ -17,7 +17,7 @@ We aim to track the following projects (in priority order) as to which component
 ## Usage
 
 ```sh
-npm install govuk-react emotion react-emotion --save
+npm install govuk-react @emotion/core @emotion/styled --save
 ```
 
 ```js

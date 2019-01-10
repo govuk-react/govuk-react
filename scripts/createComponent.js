@@ -42,7 +42,6 @@ const packageJson = () => {
   },
   "peerDependencies": {
     "@emotion/styled": ">=10",
-    "react-emotion": ">=9",
     "react": ">=15"
   },
   "scripts": {
@@ -104,7 +103,7 @@ const indexScript = () => {
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 import {
   FONT_SIZE,
