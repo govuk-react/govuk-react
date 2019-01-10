@@ -5,7 +5,7 @@ import ButtonArrow from './';
 
 const wrapper = <ButtonArrow>Example</ButtonArrow>;
 
-describe(ButtonArrow, () => {
+describe('ButtonArrow', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(wrapper, div);

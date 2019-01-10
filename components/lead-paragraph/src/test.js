@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 
 import LeadParagraph from './';
 
-describe(LeadParagraph, () => {
+describe('LeadParagraph', () => {
   const example = 'example';
   const wrapper = <LeadParagraph>{example}</LeadParagraph>;
 

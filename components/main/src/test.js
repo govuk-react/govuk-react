@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 
 import Main from '.';
 
-describe(Main, () => {
+describe('Main', () => {
   let wrapper;
 
   it('renders without crashing', () => {

@@ -14,7 +14,7 @@ const exampleWithHead = (
   />
 );
 
-describe(Table, () => {
+describe('Table', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(example, div);

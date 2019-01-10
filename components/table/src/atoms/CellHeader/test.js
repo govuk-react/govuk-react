@@ -22,7 +22,7 @@ const exampleBold = (
   </table>
 );
 
-describe(CellHeader, () => {
+describe('CellHeader', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(example, div);

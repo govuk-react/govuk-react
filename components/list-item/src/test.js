@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 
 import ListItem from './';
 
-describe(ListItem, () => {
+describe('ListItem', () => {
   const example = 'example';
   const wrapper = <ListItem>{example}</ListItem>;
 

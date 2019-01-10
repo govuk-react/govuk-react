@@ -7,7 +7,7 @@ import SearchBox from './';
 const example = 'example';
 const wrapper = <SearchBox placeholder={example}>{example}</SearchBox>;
 
-describe(SearchBox, () => {
+describe('SearchBox', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(wrapper, div);

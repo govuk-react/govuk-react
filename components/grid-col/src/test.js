@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 
 import GridCol from './';
 
-describe(GridCol, () => {
+describe('GridCol', () => {
   let props;
   const example = 'example';
   const wrapper = <GridCol>{example}</GridCol>;

@@ -27,7 +27,7 @@ const wrapper = (
   </RelatedItems>
 );
 
-describe(RelatedItems, () => {
+describe('RelatedItems', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(wrapper, div);

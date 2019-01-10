@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 
 import GridRow from './';
 
-describe(GridRow, () => {
+describe('GridRow', () => {
   const wrapper = <GridRow>Example</GridRow>;
 
   it('renders without crashing', () => {

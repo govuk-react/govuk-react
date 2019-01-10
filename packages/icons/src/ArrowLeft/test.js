@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import ArrowRight from './';
+import ArrowLeft from './';
 
-const wrapper = <ArrowRight>Example</ArrowRight>;
+const wrapper = <ArrowLeft>Example</ArrowLeft>;
 
-describe(ArrowRight, () => {
+describe('ArrowLeft', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(wrapper, div);

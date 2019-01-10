@@ -9,7 +9,7 @@ const wrapper = (
   <PaginationTag href="https://example.com">Example</PaginationTag>
 );
 
-describe(asPaginationItem, () => {
+describe('asPaginationItem', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(wrapper, div);
