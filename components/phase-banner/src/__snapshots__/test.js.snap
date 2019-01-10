@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
+exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
 .emotion-3 {
   margin-bottom: 0;
 }
