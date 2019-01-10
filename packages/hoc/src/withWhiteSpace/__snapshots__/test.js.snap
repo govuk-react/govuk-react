@@ -1,29 +1,219 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`withWhiteSpace matches wrapper snapshot 1`] = `
-.emotion-0 {
+.emotion-3 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-3 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-1 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-8 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 50%;
+  }
+}
+
+.emotion-8:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-24 {
   margin-bottom: 15px;
   margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-24 {
     margin-bottom: 45px;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .emotion-24 {
     margin-bottom: 45px;
   }
 }
 
-<InputField
-  className="emotion-0 emotion-1"
+.emotion-19 {
+  margin-bottom: 15px;
+  margin-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-19 {
+    margin-bottom: 45px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-19 {
+    margin-bottom: 45px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-19 {
+    margin-bottom: 45px;
+  }
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  margin-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.emotion-16:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-16 {
+    margin-bottom: 45px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-16 {
+    margin-bottom: 45px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-16 {
+    margin-bottom: 45px;
+  }
+}
+
+<StyledHoc
   input={Object {}}
   mb={5}
   meta={Object {}}
 >
-  Example
-</InputField>
+  <InputField
+    className="emotion-24 emotion-0"
+    input={Object {}}
+    mb={5}
+    meta={Object {}}
+  >
+    <StyledHoc
+      className="emotion-24 emotion-0"
+      mb={5}
+    >
+      <Label
+        className="emotion-0 emotion-19 emotion-0"
+        mb={5}
+      >
+        <StyledLabel
+          className="emotion-0 emotion-19 emotion-0"
+          mb={5}
+        >
+          <label
+            className="emotion-0 emotion-0 emotion-16 emotion-17"
+          >
+            <StyledHoc>
+              <LabelText
+                className="emotion-3 emotion-0"
+              >
+                <StyledLabelText
+                  className="emotion-3 emotion-0"
+                >
+                  <span
+                    className="emotion-0 emotion-1 emotion-2"
+                  >
+                    Example
+                  </span>
+                </StyledLabelText>
+              </LabelText>
+            </StyledHoc>
+            <StyledHoc
+              type="text"
+            >
+              <Input
+                className="emotion-3 emotion-0"
+                type="text"
+              >
+                <StyledInput
+                  className="emotion-3 emotion-0"
+                  type="text"
+                >
+                  <input
+                    className="emotion-0 emotion-8 emotion-9"
+                    type="text"
+                  />
+                </StyledInput>
+              </Input>
+            </StyledHoc>
+          </label>
+        </StyledLabel>
+      </Label>
+    </StyledHoc>
+  </InputField>
+</StyledHoc>
 `;
