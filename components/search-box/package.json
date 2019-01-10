@@ -9,8 +9,7 @@
   },
   "peerDependencies": {
     "@emotion/styled": ">=10",
-    "react": ">=16.2.0",
-    "react-emotion": ">=9"
+    "react": ">=16.2.0"
   },
   "scripts": {
     "build": "yarn build:lib && yarn build:es",

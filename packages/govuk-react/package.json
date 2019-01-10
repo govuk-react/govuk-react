@@ -53,8 +53,7 @@
   "peerDependencies": {
     "@emotion/styled": ">=10",
     "@emotion/core": ">=10",
-    "react": ">=16.2.0",
-    "react-emotion": "^9.1.2"
+    "react": ">=16.2.0"
   },
   "scripts": {
     "build": "yarn build:lib && yarn build:es",

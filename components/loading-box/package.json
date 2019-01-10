@@ -11,8 +11,7 @@
   },
   "peerDependencies": {
     "@emotion/styled": ">=10",
-    "react": ">=16.2.0",
-    "react-emotion": ">=9"
+    "react": ">=16.2.0"
   },
   "devDependencies": {
     "react-transition-group": "^2.2.1"

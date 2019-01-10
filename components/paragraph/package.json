@@ -12,7 +12,6 @@
   "peerDependencies": {
     "@emotion/styled": ">=10",
     "react": ">=16.2.0",
-    "react-emotion": ">=9",
     "react-markdown": ">=3.2"
   },
   "scripts": {
