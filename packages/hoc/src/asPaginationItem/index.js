@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { BLUE, GREY_4, PURPLE, YELLOW, WHITE } from 'govuk-colours';
 import {
   FONT_SIZE,

@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 import { MEDIA_QUERIES, SPACING, SITE_WIDTH } from '@govuk-react/constants';
 

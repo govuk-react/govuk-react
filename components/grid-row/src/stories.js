@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { storiesOf } from '@storybook/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 import GridCol from '@govuk-react/grid-col';

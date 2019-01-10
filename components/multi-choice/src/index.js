@@ -12,7 +12,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { ERROR_COLOUR } from 'govuk-colours';
 import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';

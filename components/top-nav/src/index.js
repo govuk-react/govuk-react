@@ -4,7 +4,7 @@ import { BLACK, WHITE } from 'govuk-colours';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
 import CrownIcon from '@govuk-react/icon-crown';
 
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 import TopNavWrapper from './atoms/top-nav-wrapper';
 import TopNavInner from './atoms/top-nav-inner';

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { YELLOW } from 'govuk-colours';
 import { withWhiteSpace } from '@govuk-react/hoc';
 import { NTA_LIGHT } from '@govuk-react/constants';

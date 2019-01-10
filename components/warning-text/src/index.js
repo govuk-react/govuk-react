@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 import { IconImportant } from '@govuk-react/icons';
 import { withWhiteSpace } from '@govuk-react/hoc';

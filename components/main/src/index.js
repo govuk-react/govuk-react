@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { MEDIA_QUERIES, SPACING, SITE_WIDTH } from '@govuk-react/constants';
 
 const OuterContainer = styled('div')({

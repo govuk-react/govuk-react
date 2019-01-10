@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 import InsetText from '@govuk-react/inset-text';
 import { LINK_COLOUR, LINK_HOVER_COLOUR, FOCUS_COLOUR } from 'govuk-colours';
