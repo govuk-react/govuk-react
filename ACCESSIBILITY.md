@@ -28,7 +28,7 @@ Also of note:
 
 ## WCAG
 
-We are not aware of any WCAG 2.0 or 2.1 guidelines that prevent client side rendering being deemed not accessibible, however using server side or universal rendering could help improve accessibility under the 'robustness' principle.
+We are not aware of any WCAG 2.0 or 2.1 guidelines that prevent client side-only rendering being deemed accessible, however using server side or universal rendering could help improve accessibility under the 'robustness' principle.
 
 https://www.w3.org/TR/WCAG20/#robust
 
