@@ -41,7 +41,7 @@ const packageJson = () => {
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
-    "emotion": ">=9",
+    "@emotion/styled": ">=10",
     "react-emotion": ">=9",
     "react": ">=15"
   },

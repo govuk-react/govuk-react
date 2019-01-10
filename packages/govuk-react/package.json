@@ -51,7 +51,8 @@
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
-    "emotion": "^9.1.2",
+    "@emotion/styled": ">=10",
+    "@emotion/core": ">=10",
     "react": ">=16.2.0",
     "react-emotion": "^9.1.2"
   },

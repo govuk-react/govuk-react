@@ -11,7 +11,7 @@
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
-    "emotion": ">=9",
+    "@emotion/styled": ">=10",
     "react": ">=15",
     "react-emotion": ">=9"
   },

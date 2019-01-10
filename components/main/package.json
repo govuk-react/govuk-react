@@ -9,7 +9,7 @@
     "@govuk-react/hoc": "^0.3.1"
   },
   "peerDependencies": {
-    "emotion": ">=9",
+    "@emotion/styled": ">=10",
     "react": ">=16.2.0",
     "react-emotion": ">=9"
   },
