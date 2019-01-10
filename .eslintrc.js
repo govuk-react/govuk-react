@@ -4,7 +4,8 @@ module.exports = {
   "parser": "babel-eslint",
   "extends": ["airbnb", "sonar", "plugin:flowtype/recommended"],
   "plugins": [
-    "flowtype"
+    "flowtype",
+    "emotion"
   ],
   "env": {
     "es6": true
@@ -18,6 +19,10 @@ module.exports = {
       "specialLink": [ "to", "hrefLeft", "hrefRight" ],
       "aspects": [ "noHref", "invalidHref", "preferButton" ]
     }],
+    "emotion/jsx-import": "error",
+    "emotion/no-vanilla": "error",
+    "emotion/import-from-emotion": "error",
+    "emotion/styled-import": "error"
   },
   "settings": {
     "import/core-modules": ['prop-types']
