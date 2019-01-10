@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { PROPOSITION_BORDER } from 'govuk-colours';
 import {
   MEDIA_QUERIES,

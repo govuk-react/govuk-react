@@ -1,6 +1,6 @@
 // https://govuk-elements.herokuapp.com/data/
 
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 const TableBody = styled('tbody')();
 
