@@ -85,7 +85,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
 
 .emotion-5 > p > code {
   padding: 0.2em 0.4em;
-  margin: 0px;
+  margin: 0;
   font-size: 85%;
   background-color: rgba(27,31,35,0.05);
   border-radius: 3px;
@@ -102,9 +102,9 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
 
 .emotion-5 > pre > code {
   display: inline;
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
+  padding: 0;
+  margin: 0;
+  border: 0;
   overflow: visible;
   line-height: inherit;
   word-wrap: normal;
@@ -137,7 +137,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
 
 .emotion-15 > p > code {
   padding: 0.2em 0.4em;
-  margin: 0px;
+  margin: 0;
   font-size: 85%;
   background-color: rgba(27,31,35,0.05);
   border-radius: 3px;
@@ -154,9 +154,9 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
 
 .emotion-15 > pre > code {
   display: inline;
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
+  padding: 0;
+  margin: 0;
+  border: 0;
   overflow: visible;
   line-height: inherit;
   word-wrap: normal;

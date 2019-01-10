@@ -15,7 +15,7 @@ exports[`Radio disabled: disabled 1`] = `
   display: block;
   position: relative;
   padding: 0 0 0 38px;
-  margin-right: 0px;
+  margin-right: 0;
   margin-bottom: 10px;
 }
 
@@ -271,7 +271,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   display: block;
   position: relative;
   padding: 0 0 0 38px;
-  margin-right: 0px;
+  margin-right: 0;
   margin-bottom: 10px;
 }
 

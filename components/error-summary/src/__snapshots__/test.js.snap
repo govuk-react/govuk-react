@@ -20,7 +20,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 
 .emotion-50:focus {
   outline: 3px solid #ffbf47;
-  outline-offset: 0px;
+  outline-offset: 0;
 }
 
 @media only screen and (min-width:641px) {
@@ -83,7 +83,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 
 .emotion-11 > p > code {
   padding: 0.2em 0.4em;
-  margin: 0px;
+  margin: 0;
   font-size: 85%;
   background-color: rgba(27,31,35,0.05);
   border-radius: 3px;
@@ -100,9 +100,9 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 
 .emotion-11 > pre > code {
   display: inline;
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
+  padding: 0;
+  margin: 0;
+  border: 0;
   overflow: visible;
   line-height: inherit;
   word-wrap: normal;

@@ -50,7 +50,7 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
 
 .emotion-1 > p > code {
   padding: 0.2em 0.4em;
-  margin: 0px;
+  margin: 0;
   font-size: 85%;
   background-color: rgba(27,31,35,0.05);
   border-radius: 3px;
@@ -67,9 +67,9 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
 
 .emotion-1 > pre > code {
   display: inline;
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
+  padding: 0;
+  margin: 0;
+  border: 0;
   overflow: visible;
   line-height: inherit;
   word-wrap: normal;
@@ -228,7 +228,7 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
 
 .emotion-1 > p > code {
   padding: 0.2em 0.4em;
-  margin: 0px;
+  margin: 0;
   font-size: 85%;
   background-color: rgba(27,31,35,0.05);
   border-radius: 3px;
@@ -245,9 +245,9 @@ exports[`inset text matches the InsetTextNarrowBorder snapshot: inset text narro
 
 .emotion-1 > pre > code {
   display: inline;
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
+  padding: 0;
+  margin: 0;
+  border: 0;
   overflow: visible;
   line-height: inherit;
   word-wrap: normal;

@@ -198,8 +198,8 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 .emotion-14 {
   content: "";
   display: inline-block;
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   border-style: solid;
   border-color: transparent;
   -webkit-clip-path: polygon(0% 0%,50% 100%,100% 0%);
@@ -730,8 +730,8 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 .emotion-14 {
   content: "";
   display: inline-block;
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   border-style: solid;
   border-color: transparent;
   -webkit-clip-path: polygon(0% 0%,50% 100%,100% 0%);
