@@ -27,7 +27,7 @@ export const RESPONSIVE_4 = {
 
 export const RESPONSIVE_5 = {
   mobile: 15,
-  tablet: 45,
+  tablet: 25,
 };
 
 export const RESPONSIVE_6 = {
