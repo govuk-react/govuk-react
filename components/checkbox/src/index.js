@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { withWhiteSpace } from '@govuk-react/hoc';
-import { YELLOW, BLACK } from 'govuk-colours';
+import { FOCUS_COLOUR } from 'govuk-colours';
 import {
   FONT_SIZE,
   LINE_HEIGHT,
@@ -11,49 +11,12 @@ import {
   SPACING,
   BORDER_WIDTH,
   FOCUS_WIDTH,
+  BORDER_WIDTH_FORM_ELEMENT,
 } from '@govuk-react/constants';
 
 const govukCheckboxSize = '40px';
 
 const StyledCheckbox = styled('label')({
-  display: 'block',
-  position: 'relative',
-  minHeight: govukCheckboxSize,
-  marginBottom: SPACING.SCALE_2,
-  padding: `0 0 0 ${govukCheckboxSize}`,
-  clear: 'left',
-});
-
-const StyledInput = styled('input')(
-  {
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    width: govukCheckboxSize,
-    height: govukCheckboxSize,
-    zIndex: 1,
-    margin: 0,
-    zoom: 1,
-    opacity: 0,
-    ':checked + span:after': {
-      opacity: 1,
-    },
-    ':focus + span:before': {
-      outline: `${FOCUS_WIDTH} solid transparent`,
-      outlineOffset: FOCUS_WIDTH,
-      boxShadow: `0 0 0 ${FOCUS_WIDTH} ${YELLOW}`,
-    },
-  },
-  ({ disabled }) => ({
-    cursor: disabled ? 'auto' : 'pointer',
-    ' + span': {
-      opacity: disabled ? '.4' : '1',
-      pointerEvents: disabled ? 'none' : 'auto',
-    },
-  }),
-);
-
-const StyledLabel = styled('span')({
   fontFamily: NTA_LIGHT,
   fontWeight: 400,
   textTransform: 'none',
@@ -63,10 +26,44 @@ const StyledLabel = styled('span')({
     fontSize: FONT_SIZE.SIZE_19,
     lineHeight: LINE_HEIGHT.SIZE_19,
   },
+  display: 'block',
+  position: 'relative',
+  minHeight: govukCheckboxSize,
+  padding: `0 0 0 ${govukCheckboxSize}`,
+  clear: 'left',
+});
+
+const StyledInput = styled('input')(
+  {
+    position: 'absolute',
+    zIndex: 1,
+    top: 0,
+    left: 0,
+    width: govukCheckboxSize,
+    height: govukCheckboxSize,
+    opacity: 0,
+    ':checked + span:after': {
+      opacity: 1,
+    },
+    ':focus + span:before': {
+      outline: `${FOCUS_WIDTH} solid transparent`,
+      outlineOffset: FOCUS_WIDTH,
+      boxShadow: `0 0 0 ${FOCUS_WIDTH} ${FOCUS_COLOUR}`,
+    },
+  },
+  ({ disabled }) => ({
+    cursor: disabled ? 'default' : 'pointer',
+    ' + span': {
+      opacity: disabled ? '.5' : '1',
+      pointerEvents: disabled ? 'none' : 'auto',
+    },
+  }),
+);
+
+const StyledLabel = styled('span')({
+  display: 'inline-block',
   cursor: 'pointer',
   padding: `8px ${SPACING.SCALE_3} ${SPACING.SCALE_1}`,
-  display: 'inline-block',
-  color: `${BLACK}`,
   '::before': {
     content: "''",
     boxSizing: 'border-box',
@@ -75,7 +72,7 @@ const StyledLabel = styled('span')({
     left: 0,
     width: govukCheckboxSize,
     height: govukCheckboxSize,
-    border: `2px solid ${BLACK}`,
+    border: `${BORDER_WIDTH_FORM_ELEMENT} solid black`,
     background: 'transparent',
   },
   '::after': {
@@ -90,7 +87,6 @@ const StyledLabel = styled('span')({
     borderWidth: `0 0 ${BORDER_WIDTH} ${BORDER_WIDTH}`,
     borderTopColor: 'transparent',
     background: 'transparent',
-    zoom: 1,
     opacity: 0,
   },
 });

@@ -12,13 +12,24 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 .emotion-5 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
   display: block;
   position: relative;
   min-height: 40px;
-  margin-bottom: 10px;
   padding: 0 0 0 40px;
   clear: left;
   margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
 }
 
 @media only screen and (min-width:641px) {
@@ -29,13 +40,11 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
 
 .emotion-0 {
   position: absolute;
-  left: 0;
+  z-index: 1;
   top: 0;
+  left: 0;
   width: 40px;
   height: 40px;
-  z-index: 1;
-  margin: 0;
-  zoom: 1;
   opacity: 0;
   cursor: pointer;
 }
@@ -56,22 +65,9 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 .emotion-2 {
-  font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
+  display: inline-block;
   cursor: pointer;
   padding: 8px 15px 5px;
-  display: inline-block;
-  color: #0b0c0c;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-2 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
 }
 
 .emotion-2::before {
@@ -82,7 +78,7 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   left: 0;
   width: 40px;
   height: 40px;
-  border: 2px solid #0b0c0c;
+  border: 2px solid black;
   background: transparent;
 }
 
@@ -100,7 +96,6 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   border-width: 0 0 5px 5px;
   border-top-color: transparent;
   background: transparent;
-  zoom: 1;
   opacity: 0;
 }
 
@@ -147,13 +142,24 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
 }
 
 .emotion-5 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
   display: block;
   position: relative;
   min-height: 40px;
-  margin-bottom: 10px;
   padding: 0 0 0 40px;
   clear: left;
   margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
 }
 
 @media only screen and (min-width:641px) {
@@ -163,22 +169,9 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
 }
 
 .emotion-2 {
-  font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
+  display: inline-block;
   cursor: pointer;
   padding: 8px 15px 5px;
-  display: inline-block;
-  color: #0b0c0c;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-2 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
 }
 
 .emotion-2::before {
@@ -189,7 +182,7 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
   left: 0;
   width: 40px;
   height: 40px;
-  border: 2px solid #0b0c0c;
+  border: 2px solid black;
   background: transparent;
 }
 
@@ -207,21 +200,18 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
   border-width: 0 0 5px 5px;
   border-top-color: transparent;
   background: transparent;
-  zoom: 1;
   opacity: 0;
 }
 
 .emotion-0 {
   position: absolute;
-  left: 0;
+  z-index: 1;
   top: 0;
+  left: 0;
   width: 40px;
   height: 40px;
-  z-index: 1;
-  margin: 0;
-  zoom: 1;
   opacity: 0;
-  cursor: auto;
+  cursor: default;
 }
 
 .emotion-0:checked + span:after {
@@ -235,7 +225,7 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
 }
 
 .emotion-0 + span {
-  opacity: .4;
+  opacity: .5;
   pointer-events: none;
 }
 
