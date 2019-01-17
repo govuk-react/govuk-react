@@ -12,11 +12,23 @@ exports[`Radio disabled: disabled 1`] = `
 }
 
 .emotion-5 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
   display: block;
   position: relative;
-  padding: 0 0 0 38px;
-  margin-right: 0px;
+  min-height: 40px;
+  padding: 0 0 0 40px;
+  clear: left;
   margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
 }
 
 @media only screen and (min-width:641px) {
@@ -26,14 +38,10 @@ exports[`Radio disabled: disabled 1`] = `
 }
 
 .emotion-2 {
-  font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 8px 15px 5px;
   cursor: pointer;
-  padding: 8px 10px 9px 12px;
-  display: block;
 }
 
 .emotion-2:before {
@@ -42,8 +50,8 @@ exports[`Radio disabled: disabled 1`] = `
   position: absolute;
   top: 0;
   left: 0;
-  width: 33px;
-  height: 33px;
+  width: 40px;
+  height: 40px;
   border: 2px solid black;
   border-radius: 50%;
   background: transparent;
@@ -52,25 +60,23 @@ exports[`Radio disabled: disabled 1`] = `
 .emotion-2:after {
   content: '';
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 10px;
+  left: 10px;
   width: 0;
   height: 0;
-  border: 8.5px solid;
+  border: 10px solid;
   border-radius: 50%;
   opacity: 0;
 }
 
 .emotion-0 {
   position: absolute;
-  cursor: pointer;
-  left: 0;
-  top: 0;
-  width: 38px;
-  height: 38px;
   z-index: 1;
-  margin: 0;
-  zoom: 1;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
   opacity: 0;
   cursor: auto;
 }
@@ -80,11 +86,13 @@ exports[`Radio disabled: disabled 1`] = `
 }
 
 .emotion-0:focus + span::before {
+  outline: 3px solid transparent;
+  outline-offset: 3px;
   box-shadow: 0 0 0 4px #ffbf47;
 }
 
 .emotion-0 + span {
-  opacity: .4;
+  opacity: .5;
   pointer-events: none;
 }
 
@@ -140,14 +148,12 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
 
 .emotion-0 {
   position: absolute;
-  cursor: pointer;
-  left: 0;
-  top: 0;
-  width: 38px;
-  height: 38px;
   z-index: 1;
-  margin: 0;
-  zoom: 1;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
   opacity: 0;
   cursor: pointer;
 }
@@ -157,6 +163,8 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
 }
 
 .emotion-0:focus + span::before {
+  outline: 3px solid transparent;
+  outline-offset: 3px;
   box-shadow: 0 0 0 4px #ffbf47;
 }
 
@@ -166,14 +174,10 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
 }
 
 .emotion-2 {
-  font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 8px 15px 5px;
   cursor: pointer;
-  padding: 8px 10px 9px 12px;
-  display: block;
 }
 
 .emotion-2:before {
@@ -182,8 +186,8 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   position: absolute;
   top: 0;
   left: 0;
-  width: 33px;
-  height: 33px;
+  width: 40px;
+  height: 40px;
   border: 2px solid black;
   border-radius: 50%;
   background: transparent;
@@ -192,23 +196,41 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
 .emotion-2:after {
   content: '';
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 10px;
+  left: 10px;
   width: 0;
   height: 0;
-  border: 8.5px solid;
+  border: 10px solid;
   border-radius: 50%;
   opacity: 0;
 }
 
 .emotion-5 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
   display: block;
   position: relative;
-  padding: 0 0 0 38px;
-  float: left;
-  clear: none;
-  margin-right: 30px;
+  min-height: 40px;
+  padding: 0 0 0 40px;
+  clear: left;
   margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    float: left;
+    clear: none;
+    margin-right: 20px;
+  }
 }
 
 @media only screen and (min-width:641px) {
@@ -268,11 +290,23 @@ exports[`Radio matches snapshot: standard mount 1`] = `
 }
 
 .emotion-5 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
   display: block;
   position: relative;
-  padding: 0 0 0 38px;
-  margin-right: 0px;
+  min-height: 40px;
+  padding: 0 0 0 40px;
+  clear: left;
   margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
 }
 
 @media only screen and (min-width:641px) {
@@ -283,14 +317,12 @@ exports[`Radio matches snapshot: standard mount 1`] = `
 
 .emotion-0 {
   position: absolute;
-  cursor: pointer;
-  left: 0;
-  top: 0;
-  width: 38px;
-  height: 38px;
   z-index: 1;
-  margin: 0;
-  zoom: 1;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
   opacity: 0;
   cursor: pointer;
 }
@@ -300,6 +332,8 @@ exports[`Radio matches snapshot: standard mount 1`] = `
 }
 
 .emotion-0:focus + span::before {
+  outline: 3px solid transparent;
+  outline-offset: 3px;
   box-shadow: 0 0 0 4px #ffbf47;
 }
 
@@ -309,14 +343,10 @@ exports[`Radio matches snapshot: standard mount 1`] = `
 }
 
 .emotion-2 {
-  font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 8px 15px 5px;
   cursor: pointer;
-  padding: 8px 10px 9px 12px;
-  display: block;
 }
 
 .emotion-2:before {
@@ -325,8 +355,8 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   position: absolute;
   top: 0;
   left: 0;
-  width: 33px;
-  height: 33px;
+  width: 40px;
+  height: 40px;
   border: 2px solid black;
   border-radius: 50%;
   background: transparent;
@@ -335,11 +365,11 @@ exports[`Radio matches snapshot: standard mount 1`] = `
 .emotion-2:after {
   content: '';
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 10px;
+  left: 10px;
   width: 0;
   height: 0;
-  border: 8.5px solid;
+  border: 10px solid;
   border-radius: 50%;
   opacity: 0;
 }
