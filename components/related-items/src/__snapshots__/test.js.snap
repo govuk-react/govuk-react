@@ -45,24 +45,33 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 
 .emotion-1 {
   font-family: "nta",Arial,sans-serif;
-  font-weight: bold;
-  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 1.1111111111111112;
+  display: block;
+  margin-top: 0;
   margin-bottom: 15px;
+}
+
+@media print {
+  .emotion-1 {
+    font-size: 18px;
+    line-height: 1.15;
+  }
 }
 
 @media only screen and (min-width:641px) {
   .emotion-1 {
     font-size: 24px;
     line-height: 1.25;
-    margin-bottom: 20px;
   }
 }
 
-@media print {
+@media only screen and (min-width:641px) {
   .emotion-1 {
-    font-size: 16px;
+    margin-bottom: 20px;
   }
 }
 

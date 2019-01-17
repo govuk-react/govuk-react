@@ -20,6 +20,8 @@ describe('Header', () => {
     ReactDOM.render(<H6>{example}</H6>, div);
   });
 
+  // TODO add test that only valid GDS font sizes can be used
+
   it('matches wrapper snapshot', () => {
     expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
   });

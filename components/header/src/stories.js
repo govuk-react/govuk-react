@@ -19,7 +19,7 @@ const headingRanges = {
 stories.addDecorator(withKnobs);
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Component default', () => (<Header level={number('level', 6, headingRanges)}>{text('Children', 'Heading text')}</Header>));
+stories.add('Component default', () => (<Header level={number('level', 2, headingRanges)}>{text('Children', 'Heading text')}</Header>));
 
 examples.add('Levels 1-6', () => (
   <div>
@@ -43,10 +43,10 @@ examples.add('Shortcuts 1-6', () => (
 ));
 examples.add('Differing sizes', () => (
   <div>
-    <Header level={6} size="XXLARGE">
+    <Header level={6} size={80}>
       h6 with XXLARGE style
     </Header>
-    <Header level={2} size="XSMALL">
+    <Header level={2} size={16}>
       h2 with XSMALL style
     </Header>
     <H3 size="LARGE">h3 with size large</H3>

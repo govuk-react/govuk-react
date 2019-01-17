@@ -3,24 +3,33 @@
 exports[`Header matches wrapper snapshot: wrapper mount 1`] = `
 .emotion-1 {
   font-family: "nta",Arial,sans-serif;
-  font-weight: bold;
-  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
   font-size: 32px;
   line-height: 1.09375;
-  margin-bottom: 20px;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+@media print {
+  .emotion-1 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
 }
 
 @media only screen and (min-width:641px) {
   .emotion-1 {
     font-size: 48px;
     line-height: 1.0416666666666667;
-    margin-bottom: 30px;
   }
 }
 
-@media print {
+@media only screen and (min-width:641px) {
   .emotion-1 {
-    font-size: 18px;
+    margin-bottom: 50px;
   }
 }
 
