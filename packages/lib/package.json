@@ -2,7 +2,8 @@
   "name": "@govuk-react/lib",
   "version": "0.4.0",
   "dependencies": {
-    "@govuk-react/constants": "^0.4.0"
+    "@govuk-react/constants": "^0.4.0",
+    "govuk-colours": "^1.0.3"
   },
   "scripts": {
     "build": "yarn build:lib && yarn build:es",

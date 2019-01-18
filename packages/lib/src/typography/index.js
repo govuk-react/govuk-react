@@ -6,10 +6,18 @@ import {
   MEDIA_QUERIES,
   TYPOGRAPHY_SCALE,
 } from '@govuk-react/constants';
+import { BLACK } from 'govuk-colours';
 
-// TODO add govuk-text-colour
+export const textColour = {
+  color: BLACK,
+  [MEDIA_QUERIES.PRINT]: {
+    color: '#000',
+  },
+};
 
-export function govukTypographyCommon(fontFamily = FONT_STACK) {
+export const textColor = textColour;
+
+export function common(fontFamily = FONT_STACK) {
   return {
     fontFamily,
     WebkitFontSmoothing: 'antialiased',
@@ -27,7 +35,7 @@ function getSizeStyle(scale, lineHeight = scale.lineHeight) {
   };
 }
 
-export function govukTypographyResponsive(size, overrideLineHeight) {
+export function responsive(size, overrideLineHeight) {
   const scale = TYPOGRAPHY_SCALE[size];
 
   if (!scale) {
@@ -44,13 +52,13 @@ export function govukTypographyResponsive(size, overrideLineHeight) {
   );
 }
 
-export function govukFont({
+export function font({
   size, weight = 'regular', tabular = false, lineHeight,
-}) {
+} = {}) {
   return Object.assign(
     {},
-    govukTypographyCommon(tabular ? FONT_STACK_TABULAR : undefined),
+    common(tabular ? FONT_STACK_TABULAR : undefined),
     FONT_WEIGHTS[weight] ? { fontWeight: FONT_WEIGHTS[weight] } : undefined,
-    size ? govukTypographyResponsive(size, lineHeight) : undefined,
+    size ? responsive(size, lineHeight) : undefined,
   );
 }

@@ -8,7 +8,7 @@ import {
   MEDIA_QUERIES,
   TYPOGRAPHY_SCALE,
 } from '@govuk-react/constants';
-import { govukFont } from '@govuk-react/lib';
+import { typography } from '@govuk-react/lib';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
 // use `size` only with string for XLARGE, SMALL etc and number for px size
@@ -19,7 +19,7 @@ const StyledHeader = styled(({
   level, children, size, ...props
 }) =>
   createElement(LEVEL_TAG[level], props, children))(
-  // TODO add in govuk-text-colour
+  typography.textColour,
   ({ level, size = LEVEL_SIZE[level] }) => {
     const actualSize = Number.isNaN(Number(size)) ? HEADING_SIZES[size] : size;
 
@@ -29,7 +29,7 @@ const StyledHeader = styled(({
 
     return Object.assign(
       {},
-      govukFont({ size: actualSize, weight: 'bold' }),
+      typography.font({ size: actualSize, weight: 'bold' }),
     );
   },
   {
