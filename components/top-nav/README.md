@@ -88,7 +88,7 @@ Prop | Required | Default | Type | Description
  `bgColor` |  | ```BLACK``` | string | Top nav background color
  `children` |  | ```undefined``` | node | List Navigation items with anchor tags e.g. NavAnchor components
  `color` |  | ```WHITE``` | string | Top nav text color
- `company` |  | ```undefined``` | node | Company component e.g. GOV UK
+ `company` |  | ```<IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</IconTitle>``` | node | Company component e.g. GOV UK
  `defaultOpen` |  | ```false``` | bool | Is the mobile navigation open by default?
  `search` |  | ```false``` | node | Search component
  `serviceTitle` |  | ```undefined``` | node | Service title component e.g. Food Standards Authority

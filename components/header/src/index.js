@@ -110,7 +110,7 @@ Header.propTypes = {
   level: PropTypes.number,
   /**
    * Visual size level, accepts:
-   *    `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, 'XL', 'L', 'M', 'S'
+   *    `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`
    *    or a numeric size that fits in the GDS font scale list
    */
   size: PropTypes.oneOf([...Object.keys(HEADING_SIZES), ...Object.keys(TYPOGRAPHY_SCALE)]),

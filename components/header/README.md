@@ -29,13 +29,13 @@ import { H1, H2, H3, H4, H5, H6 } from "@govuk-react/header";
 
 Differing sizes
 ```jsx
-<Header level={6} size="XXLARGE">
-  h6 with XXLARGE style
+<Header level={6} size={80}>
+  h6 with font size 80
 </Header>
-<Header level={2} size="XSMALL">
-  h2 with XSMALL style
+<Header level={2} size="SMALL">
+  h2 with SMALL size
 </Header>
-<H3 size="LARGE">h3 with LARGE style</H3>
+<H3 size="LARGE">h3 with LARGE size</H3>
 ```
 
 Props pass through
@@ -53,6 +53,6 @@ Props pass through
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `level` |  | ```1``` | number | Semantic heading level value between 1 and 6
- `size` |  | ```undefined``` | enumObject.keys(FONT_SIZES) | Visual size level, accepts   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XSMALL`
+ `size` |  | ```undefined``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
 
 

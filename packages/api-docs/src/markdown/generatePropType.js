@@ -3,7 +3,7 @@ export default function generatePropType(type) {
   if (Array.isArray(type.value)) {
     values = `(${type.value
       .map(typeValue => typeValue.name || typeValue.value)
-      .join('|')})`;
+      .join(' \\| ')})`;
   } else {
     values = type.value;
   }

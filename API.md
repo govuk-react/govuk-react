@@ -198,7 +198,7 @@ Date with hint text & error
 
 With custom input name props
 ```jsx
-<DateInput hintText="For example, 31 03 1980"
+<DateField hintText="For example, 31 03 1980"
   inputNames={{
     day: 'dayInputName',
     month: 'monthInputName',
@@ -584,13 +584,13 @@ import { H1, H2, H3, H4, H5, H6 } from "@govuk-react/header";
 
 Differing sizes
 ```jsx
-<Header level={6} size="XXLARGE">
-  h6 with XXLARGE style
+<Header level={6} size={80}>
+  h6 with font size 80
 </Header>
-<Header level={2} size="XSMALL">
-  h2 with XSMALL style
+<Header level={2} size="SMALL">
+  h2 with SMALL size
 </Header>
-<H3 size="LARGE">h3 with LARGE style</H3>
+<H3 size="LARGE">h3 with LARGE size</H3>
 ```
 
 Props pass through
@@ -608,7 +608,7 @@ Props pass through
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `level` |  | ```1``` | number | Semantic heading level value between 1 and 6
- `size` |  | ```undefined``` | enumObject.keys(FONT_SIZES) | Visual size level, accepts   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XSMALL`
+ `size` |  | ```undefined``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
 
 
 HiddenText
@@ -1205,8 +1205,7 @@ Page
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `beforeChildren` |  | ```undefined``` | node | Add content that needs to appear outside `<main>` element.
-For example: The back link component, phase banner component
+ `beforeChildren` |  | ```undefined``` | node | Add content that needs to appear outside `<main>` element.<br/>For example: The back link component, phase banner component
  `children` |  | ```undefined``` | node | Add content that needs to appear centered in the `<main>` element
  `container` |  | ```({ children }) => <WidthContainer>{children}</WidthContainer>``` | func | Render props to allow the width container element to be overriden
  `footer` |  | ```undefined``` | node | Override the default footer component.
@@ -1280,7 +1279,7 @@ Panel with header and HTML body
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `panelBody` |  | ```undefined``` | union(string|array) | Panel body text
+ `panelBody` |  | ```undefined``` | union(string \| array) | Panel body text
  `panelTitle` | true | `````` | string | Panel title text
 
 
