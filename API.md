@@ -1836,7 +1836,6 @@ TopNav with logo, service title and navigation items
 ```jsx
 import CrownIcon from '@govuk-react/icon-crown';
 import SearchBox from '@govuk-react/search-box';
-import Header from '@govuk-react/header';
 import TopNav, { asNavLinkAnchor, asTopNavAnchor } from '@govuk-react/top-nav';
 
 const LogoAnchor = asTopNavAnchor('a');
@@ -1852,7 +1851,7 @@ const Company = (
 
 const ServiceTitle = (
   <NavAnchor href={link} target="new">
-    <Header mb="0" level={3}>Service Title</Header>
+    Service Title
   </NavAnchor>
 );
 
@@ -1869,7 +1868,6 @@ const Search = (
 ```jsx
 import { BrowserRouter, Link } from 'react-router-dom';
 import CrownIcon from '@govuk-react/icon-crown';
-import Header from '@govuk-react/header';
 import TopNav, { asLogoAnchor, asNavLinkAnchor } from '@govuk-react/top-nav';
 
 const LogoLink = asTopNavAnchor(Link);
@@ -1884,7 +1882,7 @@ const CompanyLink = (
 
 const ServiceTitleLink = (
   <NavLink to={reactRouterLink}>
-    <Header mb="0" level={3}>Service Title</Header>
+    Service Title
   </NavLink>
 );
 
