@@ -120,6 +120,11 @@ const StyledCheckboxHint = styled(HintText)({
  * ```jsx
  * <Checkbox disabled="disabled" defaultChecked>Farm or agricultural waste</Checkbox>
  * ```
+ *
+ * Checkbox with hint text
+ * ```jsx
+ * <Checkbox hint="including English, Scottish, Welsh and Northern Irish">British</Checkbox>
+ *```
  * ### References:
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/checkboxes/_checkboxes.scss
  *
@@ -132,7 +137,6 @@ const Checkbox = ({
     <StyledLabel>{children}</StyledLabel>
     {hint && <StyledCheckboxHint>{hint}</StyledCheckboxHint>}
   </StyledCheckbox>
-    
 );
 
 Checkbox.defaultProps = {
