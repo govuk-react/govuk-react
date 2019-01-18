@@ -138,7 +138,27 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }
 
 .emotion-10 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.1111111111111112;
   width: 50%;
+}
+
+@media print {
+  .emotion-10 {
+    font-size: 18px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-10 {
+    font-size: 24px;
+    line-height: 1.25;
+  }
 }
 
 @media only screen and (min-width:641px) {
@@ -670,7 +690,27 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }
 
 .emotion-10 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.1111111111111112;
   width: 50%;
+}
+
+@media print {
+  .emotion-10 {
+    font-size: 18px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-10 {
+    font-size: 24px;
+    line-height: 1.25;
+  }
 }
 
 @media only screen and (min-width:641px) {
@@ -1218,7 +1258,27 @@ exports[`TopNav with icon title: icon title 1`] = `
 }
 
 .emotion-10 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.1111111111111112;
   width: 50%;
+}
+
+@media print {
+  .emotion-10 {
+    font-size: 18px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-10 {
+    font-size: 24px;
+    line-height: 1.25;
+  }
 }
 
 @media only screen and (min-width:641px) {

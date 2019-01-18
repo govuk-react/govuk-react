@@ -7,6 +7,7 @@
     "@govuk-react/hoc": "^0.4.0",
     "@govuk-react/icon-crown": "0.0.5",
     "@govuk-react/icons": "^0.4.0",
+    "@govuk-react/lib": "^0.4.0",
     "@govuk-react/search-box": "^0.4.0",
     "govuk-colours": "^1.0.3"
   },
