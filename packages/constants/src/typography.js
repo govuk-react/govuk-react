@@ -1,9 +1,8 @@
-// https://govuk-elements.herokuapp.com/typography/#typography-headings
-// https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_typography.scss
-// https://github.com/alphagov/govuk-frontend/blob/master/src/globals/scss/core/_typography.scss
-// https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_elements-typography.scss
+// https://design-system.service.gov.uk/styles/typography/
+// https://github.com/alphagov/govuk-frontend/blob/master/src/settings/_typography-responsive.scss
+// https://github.com/alphagov/govuk-frontend/blob/master/src/settings/_typography-font.scss
+// https://github.com/alphagov/govuk-frontend/blob/master/src/core/_typography.scss
 
-// using spacing values from https://github.com/alphagov/govuk-frontend/blob/master/src/globals/scss/core/_typography.scss
 import { RESPONSIVE_8, RESPONSIVE_6, RESPONSIVE_4 } from './spacing';
 
 export const TYPOGRAPHY_SCALE = {

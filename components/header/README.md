@@ -44,10 +44,9 @@ Props pass through
 ```
 
 ### References:
-- https://govuk-elements.herokuapp.com/typography/#typography-headings
+- https://design-system.service.gov.uk/styles/typography/#headings
 - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_typography.scss
-- https://github.com/alphagov/govuk-frontend/blob/master/src/globals/scss/core/_typography.scss
-- https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_elements-typography.scss
+- https://github.com/alphagov/govuk-frontend/blob/master/src/core/_typography.scss
 
 ### Properties
 Prop | Required | Default | Type | Description
