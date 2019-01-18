@@ -37,6 +37,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 }
 
 .emotion-1 {
+  color: #0b0c0c;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -46,6 +47,12 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   display: block;
   margin-top: 0;
   margin-bottom: 20px;
+}
+
+@media print {
+  .emotion-1 {
+    color: #000;
+  }
 }
 
 @media print {
