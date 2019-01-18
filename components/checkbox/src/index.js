@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { withWhiteSpace } from '@govuk-react/hoc';
+import HintText from '@govuk-react/hint-text';
 import { FOCUS_COLOUR } from 'govuk-colours';
 import {
   FONT_SIZE,
@@ -91,6 +92,11 @@ const StyledLabel = styled('span')({
   },
 });
 
+const StyledCheckboxHint = styled(HintText)({
+  padding: `0 ${SPACING.SCALE_3} 0`,
+
+});
+
 /**
  *
  * ### Usage
@@ -119,19 +125,23 @@ const StyledLabel = styled('span')({
  *
  */
 const Checkbox = ({
-  children, className, ...props
+  children, className, hint, ...props
 }) => (
   <StyledCheckbox className={className}>
     <StyledInput type="checkbox" {...props} />
     <StyledLabel>{children}</StyledLabel>
+    {hint && <StyledCheckboxHint>{hint}</StyledCheckboxHint>}
   </StyledCheckbox>
+    
 );
 
 Checkbox.defaultProps = {
+  hint: undefined,
   className: undefined,
 };
 
 Checkbox.propTypes = {
+  hint: PropTypes.node,
   /**
    * Text content for checkbox
    */

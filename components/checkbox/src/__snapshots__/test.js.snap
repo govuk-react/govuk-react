@@ -1,5 +1,191 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Checkbox can render with hint text: hint text 1`] = `
+.emotion-14 {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-14 {
+    margin-bottom: 10px;
+  }
+}
+
+.emotion-12 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  display: block;
+  position: relative;
+  min-height: 40px;
+  padding: 0 0 0 40px;
+  clear: left;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-12 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-12 {
+    margin-bottom: 10px;
+  }
+}
+
+.emotion-0 {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.emotion-0:checked + span:after {
+  opacity: 1;
+}
+
+.emotion-0:focus + span:before {
+  outline: 3px solid transparent;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px #ffbf47;
+}
+
+.emotion-0 + span {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.emotion-2 {
+  display: inline-block;
+  cursor: pointer;
+  padding: 8px 15px 5px;
+}
+
+.emotion-2::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+  background: transparent;
+}
+
+.emotion-2::after {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 9px;
+  width: 18px;
+  height: 7px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  border: solid;
+  border-width: 0 0 5px 5px;
+  border-top-color: transparent;
+  background: transparent;
+  opacity: 0;
+}
+
+.emotion-7 {
+  margin-bottom: 0;
+  padding: 0 15px 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-5 {
+  display: block;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #6f777b;
+  margin-bottom: 0;
+  padding: 0 15px 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    margin-bottom: 0;
+  }
+}
+
+<StyledHoc
+  hint="Hint text"
+>
+  <Checkbox
+    className="emotion-14 emotion-11"
+    hint="Hint text"
+  >
+    <StyledCheckbox
+      className="emotion-14 emotion-11"
+    >
+      <label
+        className="emotion-11 emotion-12 emotion-13"
+      >
+        <StyledInput
+          type="checkbox"
+        >
+          <input
+            className="emotion-0 emotion-1"
+            type="checkbox"
+          />
+        </StyledInput>
+        <StyledLabel>
+          <span
+            className="emotion-2 emotion-3"
+          >
+            Example with hint text
+          </span>
+        </StyledLabel>
+        <StyledCheckboxHint>
+          <HintText
+            className="emotion-7 emotion-4"
+          >
+            <StyledHint
+              className="emotion-7 emotion-4"
+            >
+              <span
+                className="emotion-4 emotion-5 emotion-6"
+              >
+                Hint text
+              </span>
+            </StyledHint>
+          </HintText>
+        </StyledCheckboxHint>
+      </label>
+    </StyledCheckbox>
+  </Checkbox>
+</StyledHoc>
+`;
+
 exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
 .emotion-7 {
   margin-bottom: 10px;
