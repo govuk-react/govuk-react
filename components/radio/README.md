@@ -61,6 +61,19 @@ Radio preselected & disabled
    </Radio>
  </div>
 ```
+
+Radio with hint text
+```jsx
+ <div>
+   <Radio
+    name="group1"
+    hint="You'll have a user ID if you've registered for Self Assessment or filed a tax return
+          online before."
+   >
+     Sign in with Government Gateway
+   </Radio>
+ </div>
+```
 ### References:
 - https://github.com/alphagov/govuk-frontend/blob/master/src/components/radios/_radios.scss
 - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss

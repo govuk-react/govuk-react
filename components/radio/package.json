@@ -3,6 +3,7 @@
   "version": "0.4.0",
   "dependencies": {
     "@govuk-react/constants": "^0.4.0",
+    "@govuk-react/hint-text": "^0.4.0",
     "@govuk-react/hoc": "^0.4.0",
     "govuk-colours": "^1.0.3"
   },

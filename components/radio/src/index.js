@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { FOCUS_COLOUR } from 'govuk-colours';
 import { withWhiteSpace } from '@govuk-react/hoc';
+import HintText from '@govuk-react/hint-text';
 import {
   NTA_LIGHT,
   FONT_SIZE,
@@ -98,6 +99,10 @@ const LabelText = styled('span')({
   },
 });
 
+const StyledRadioHint = styled(HintText)({
+  padding: `0 ${SPACING.SCALE_3} 0`,
+});
+
 /**
  *
  * ### Usage
@@ -154,25 +159,40 @@ const LabelText = styled('span')({
  *    </Radio>
  *  </div>
  * ```
+ * Radio with hint text
+ * ```jsx
+ * <div>
+ *   <Radio
+ *    name="group1"
+ *    hint="You'll have a user ID if you've registered for Self Assessment or filed a tax return
+ *          online before."
+ *   >
+ *     Sign in with Government Gateway
+ *   </Radio>
+ * </div>
+ * ```
  * ### References:
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/radios/_radios.scss
  * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
  */
 const Radio = ({
-  inline, children, className, ...input
+  inline, children, className, hint, ...input
 }) => (
   <Label inline={inline} className={className}>
     <Input type="radio" {...input} />
     <LabelText>{children}</LabelText>
+    {hint && <StyledRadioHint>{hint}</StyledRadioHint>}
   </Label>
 );
 
 Radio.defaultProps = {
+  hint: undefined,
   inline: false,
   className: undefined,
 };
 
 Radio.propTypes = {
+  hint: PropTypes.node,
   inline: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node.isRequired,

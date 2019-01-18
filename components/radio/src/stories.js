@@ -59,7 +59,7 @@ stories.addDecorator(withKnobs);
 stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
-  <Radio name="group1">{text('children', 'radio button text example')}</Radio>
+  <Radio name="group1">Radio button text example</Radio>
 ));
 
 examples.add('Radio stacked', () => (
@@ -101,6 +101,23 @@ examples.add('Radio preselected & disabled', () => (
   <div>
     <Radio name="group1" disabled="disabled" checked>
       Farm or agricultural waste
+    </Radio>
+  </div>
+));
+
+examples.add('Radio with hint text', () => (
+  <div>
+    <Radio
+      name="group1"
+      hint="You'll have a user ID if you've registered for Self Assessment or filed a tax return online before."
+    >
+      Sign in with Government Gateway
+    </Radio>
+    <Radio
+      name="group1"
+      hint="You'll have an account if you've already proved your identity with either Barclays, CitizenSafe, Digidentity, Experian, Post Office, Royal Mail or SecureIdentity."
+    >
+      Sign in with GOV.UK Verify
     </Radio>
   </div>
 ));

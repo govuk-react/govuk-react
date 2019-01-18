@@ -1,5 +1,191 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Radio can render with hint text: hint text 1`] = `
+.emotion-14 {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-14 {
+    margin-bottom: 10px;
+  }
+}
+
+.emotion-12 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  display: block;
+  position: relative;
+  min-height: 40px;
+  padding: 0 0 0 40px;
+  clear: left;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-12 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-12 {
+    margin-bottom: 10px;
+  }
+}
+
+.emotion-0 {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.emotion-0:checked + span::after {
+  opacity: 1;
+}
+
+.emotion-0:focus + span::before {
+  outline: 3px solid transparent;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px #ffbf47;
+}
+
+.emotion-0 + span {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.emotion-2 {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 8px 15px 5px;
+  cursor: pointer;
+}
+
+.emotion-2:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.emotion-2:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 0;
+  height: 0;
+  border: 10px solid;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.emotion-7 {
+  margin-bottom: 0;
+  padding: 0 15px 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-5 {
+  display: block;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #6f777b;
+  margin-bottom: 0;
+  padding: 0 15px 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-5 {
+    margin-bottom: 0;
+  }
+}
+
+<StyledHoc
+  hint="Hint text"
+  inline={false}
+>
+  <Radio
+    className="emotion-14 emotion-11"
+    hint="Hint text"
+    inline={false}
+  >
+    <Label
+      className="emotion-14 emotion-11"
+      inline={false}
+    >
+      <label
+        className="emotion-11 emotion-12 emotion-13"
+      >
+        <Input
+          type="radio"
+        >
+          <input
+            className="emotion-0 emotion-1"
+            type="radio"
+          />
+        </Input>
+        <LabelText>
+          <span
+            className="emotion-2 emotion-3"
+          >
+            Example with hint text
+          </span>
+        </LabelText>
+        <StyledRadioHint>
+          <HintText
+            className="emotion-7 emotion-4"
+          >
+            <StyledHint
+              className="emotion-7 emotion-4"
+            >
+              <span
+                className="emotion-4 emotion-5 emotion-6"
+              >
+                Hint text
+              </span>
+            </StyledHint>
+          </HintText>
+        </StyledRadioHint>
+      </label>
+    </Label>
+  </Radio>
+</StyledHoc>
+`;
+
 exports[`Radio disabled: disabled 1`] = `
 .emotion-7 {
   margin-bottom: 10px;
