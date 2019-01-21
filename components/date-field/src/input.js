@@ -1,45 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import { BLACK, YELLOW, ERROR_COLOUR } from 'govuk-colours';
 
+import { StyledInput } from '@govuk-react/input';
 import LabelText from '@govuk-react/label-text';
 import Label from '@govuk-react/label';
-import {
-  NTA_LIGHT,
-  FONT_SIZE,
-  LINE_HEIGHT,
-  MEDIA_QUERIES,
-} from '@govuk-react/constants';
 
 import multiInputInput from 'multi-input-input';
-
-const StyledInput = styled('input')(
-  {
-    boxSizing: 'border-box',
-    fontFamily: NTA_LIGHT,
-    WebkitFontSmoothing: 'antialiased',
-    MozOsxFontSmoothing: 'grayscale',
-    fontWeight: 400,
-    textTransform: 'none',
-    fontSize: FONT_SIZE.SIZE_16,
-    lineHeight: LINE_HEIGHT.SIZE_16,
-    [MEDIA_QUERIES.LARGESCREEN]: {
-      fontSize: FONT_SIZE.SIZE_19,
-      lineHeight: LINE_HEIGHT.SIZE_19,
-    },
-    width: '100%',
-    padding: '5px 4px 4px',
-    border: `2px solid ${BLACK}`,
-    ':focus': {
-      outline: `3px solid ${YELLOW}`,
-      outlineOffset: 0,
-    },
-  },
-  ({ error }) => ({
-    border: error ? `4px solid ${ERROR_COLOUR}` : `2px solid ${BLACK}`,
-  }),
-);
 
 const StyledLabel = styled(Label)({
   marginRight: '20px',
@@ -49,10 +16,8 @@ const StyledLabel = styled(Label)({
 }));
 
 const StyledList = styled('div')({
-  fontFamily: NTA_LIGHT,
   display: 'flex',
 });
-
 
 class Input extends React.Component {
   inputs = {}
