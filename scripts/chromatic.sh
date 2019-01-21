@@ -3,7 +3,7 @@
 if [[ $TRAVIS_EVENT_TYPE != 'pull_request' || $TRAVIS_PULL_REQUEST_SLUG != $TRAVIS_REPO_SLUG ]];
 # For external PRs (PRs from forks of your repo), the above code will ensure Chromatic does run on the pr build, because Travis does not trigger push builds in such cases.
 then
-   if [[ $TRAVIS_BRANCH != 'master' || $TRAVIS_PULL_REQUEST_SLUG != $TRAVIS_REPO_SLUG ]];
+   if [[ $TRAVIS_BRANCH != 'master' || $TRAVIS_EVENT_TYPE == 'pull_request' ]];
    then
      yarn chromatic-test;
    else
