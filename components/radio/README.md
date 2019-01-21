@@ -61,18 +61,17 @@ Radio preselected & disabled
    </Radio>
  </div>
 ```
-
 Radio with hint text
 ```jsx
- <div>
-   <Radio
-    name="group1"
-    hint="You'll have a user ID if you've registered for Self Assessment or filed a tax return
-          online before."
-   >
-     Sign in with Government Gateway
-   </Radio>
- </div>
+<div>
+  <Radio
+   name="group1"
+   hint="You'll have a user ID if you've registered for Self Assessment or filed a tax return
+         online before."
+  >
+    Sign in with Government Gateway
+  </Radio>
+</div>
 ```
 ### References:
 - https://github.com/alphagov/govuk-frontend/blob/master/src/components/radios/_radios.scss
@@ -83,6 +82,7 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | node | 
  `className` |  | ```undefined``` | string | 
+ `hint` |  | ```undefined``` | node | 
  `inline` |  | ```false``` | bool | 
 
 
