@@ -2,34 +2,54 @@ import styled from 'react-emotion';
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import {
-  MEDIA_QUERIES,
-  NTA_LIGHT,
+  HEADING_SIZES,
   LEVEL_SIZE,
-  FONT_SIZES,
   LEVEL_TAG,
+  MEDIA_QUERIES,
+  TYPOGRAPHY_SCALE,
 } from '@govuk-react/constants';
+import { typography } from '@govuk-react/lib';
 import { withWhiteSpace } from '@govuk-react/hoc';
 
-const StyledHeader = styled(({ level, children, ...props }) =>
+// use `size` only with string for XLARGE, SMALL etc and number for px size
+// so if `size` is a string, we find a numeric size based off `HEADING_SIZES`
+// but if `size` is a number we just send through that number
+
+const StyledHeader = styled(({
+  level, children, size, ...props
+}) =>
   createElement(LEVEL_TAG[level], props, children))(
-  {
-    fontFamily: NTA_LIGHT,
-    fontWeight: 'bold',
-    margin: 0,
+  typography.textColour,
+  ({ level, size = LEVEL_SIZE[level] }) => {
+    const actualSize = Number.isNaN(Number(size)) ? HEADING_SIZES[size] : size;
+
+    if (!actualSize) {
+      throw Error(`Unknown size ${size} used for header.`);
+    }
+
+    return Object.assign(
+      {},
+      typography.font({ size: actualSize, weight: 'bold' }),
+    );
   },
-  ({ level, size = LEVEL_SIZE[level] }) => ({
-    fontSize: FONT_SIZES[size].mobile.fontSize,
-    lineHeight: FONT_SIZES[size].mobile.lineHeight,
-    marginBottom: FONT_SIZES[size].mobile.spacing,
-    [MEDIA_QUERIES.LARGESCREEN]: {
-      fontSize: FONT_SIZES[size].tablet.fontSize,
-      lineHeight: FONT_SIZES[size].tablet.lineHeight,
-      marginBottom: FONT_SIZES[size].tablet.spacing,
-    },
-    [MEDIA_QUERIES.PRINT]: {
-      fontSize: FONT_SIZES[size].print.fontSize,
-    },
-  }),
+  {
+    display: 'block',
+    marginTop: 0,
+  },
+  ({ level, size = LEVEL_SIZE[level] }) => {
+    const actualSize = Number.isNaN(Number(size)) ? HEADING_SIZES[size] : size;
+    const scaleInfo = TYPOGRAPHY_SCALE[actualSize];
+
+    return Object.assign(
+      {},
+      {
+        marginBottom: scaleInfo.mobile.spacing,
+        [MEDIA_QUERIES.TABLET]: {
+          marginBottom: scaleInfo.tablet.spacing,
+        },
+      },
+    );
+  },
 );
 
 /**
@@ -56,13 +76,13 @@ const StyledHeader = styled(({ level, children, ...props }) =>
  *
  * Differing sizes
  * ```jsx
- * <Header level={6} size="XXLARGE">
- *   h6 with XXLARGE style
+ * <Header level={6} size={80}>
+ *   h6 with font size 80
  * </Header>
- * <Header level={2} size="XSMALL">
- *   h2 with XSMALL style
+ * <Header level={2} size="SMALL">
+ *   h2 with SMALL size
  * </Header>
- * <H3 size="LARGE">h3 with LARGE style</H3>
+ * <H3 size="LARGE">h3 with LARGE size</H3>
  * ```
  *
  * Props pass through
@@ -71,10 +91,9 @@ const StyledHeader = styled(({ level, children, ...props }) =>
  * ```
  *
  * ### References:
- * - https://govuk-elements.herokuapp.com/typography/#typography-headings
+ * - https://design-system.service.gov.uk/styles/typography/#headings
  * - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_typography.scss
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/globals/scss/core/_typography.scss
- * - https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_elements-typography.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/master/src/core/_typography.scss
  */
 const Header = props => <StyledHeader {...props} />;
 
@@ -89,9 +108,11 @@ Header.propTypes = {
    */
   level: PropTypes.number,
   /**
-   * Visual size level, accepts   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XSMALL`
+   * Visual size level, accepts:
+   *    `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`
+   *    or a numeric size that fits in the GDS font scale list
    */
-  size: PropTypes.oneOf(Object.keys(FONT_SIZES)),
+  size: PropTypes.oneOf([...Object.keys(HEADING_SIZES), ...Object.keys(TYPOGRAPHY_SCALE)]),
 };
 
 export default withWhiteSpace()(Header);

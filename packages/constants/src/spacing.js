@@ -1,4 +1,4 @@
-// https://github.com/alphagov/govuk-frontend/blob/master/src/globals/scss/settings/_spacing.scss
+// https://github.com/alphagov/govuk-frontend/blob/master/src/settings/_spacing.scss
 
 export const RESPONSIVE_0 = {
   mobile: 0,

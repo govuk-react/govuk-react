@@ -13,7 +13,6 @@ TopNav with logo, service title and navigation items
 ```jsx
 import CrownIcon from '@govuk-react/icon-crown';
 import SearchBox from '@govuk-react/search-box';
-import Header from '@govuk-react/header';
 import TopNav, { asNavLinkAnchor, asTopNavAnchor } from '@govuk-react/top-nav';
 
 const LogoAnchor = asTopNavAnchor('a');
@@ -29,7 +28,7 @@ const Company = (
 
 const ServiceTitle = (
   <NavAnchor href={link} target="new">
-    <Header mb="0" level={3}>Service Title</Header>
+    Service Title
   </NavAnchor>
 );
 
@@ -46,7 +45,6 @@ const Search = (
 ```jsx
 import { BrowserRouter, Link } from 'react-router-dom';
 import CrownIcon from '@govuk-react/icon-crown';
-import Header from '@govuk-react/header';
 import TopNav, { asLogoAnchor, asNavLinkAnchor } from '@govuk-react/top-nav';
 
 const LogoLink = asTopNavAnchor(Link);
@@ -61,7 +59,7 @@ const CompanyLink = (
 
 const ServiceTitleLink = (
   <NavLink to={reactRouterLink}>
-    <Header mb="0" level={3}>Service Title</Header>
+    Service Title
   </NavLink>
 );
 
@@ -88,7 +86,7 @@ Prop | Required | Default | Type | Description
  `bgColor` |  | ```BLACK``` | string | Top nav background color
  `children` |  | ```undefined``` | node | List Navigation items with anchor tags e.g. NavAnchor components
  `color` |  | ```WHITE``` | string | Top nav text color
- `company` |  | ```undefined``` | node | Company component e.g. GOV UK
+ `company` |  | ```<IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</IconTitle>``` | node | Company component e.g. GOV UK
  `defaultOpen` |  | ```false``` | bool | Is the mobile navigation open by default?
  `search` |  | ```false``` | node | Search component
  `serviceTitle` |  | ```undefined``` | node | Service title component e.g. Food Standards Authority

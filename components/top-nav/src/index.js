@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { BLACK, WHITE } from 'govuk-colours';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
+import { typography } from '@govuk-react/lib';
 import CrownIcon from '@govuk-react/icon-crown';
 
 import styled from 'react-emotion';
@@ -20,12 +21,15 @@ import MenuButton from './atoms/menu-button/';
 import IconTitle from './atoms/icon-title';
 
 // Layout/position of ServiceTitle
-const ServiceTitleWrapper = styled('div')({
-  width: '50%',
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    width: 'auto',
+const ServiceTitleWrapper = styled('div')(
+  typography.font({ size: 24 }),
+  {
+    width: '50%',
+    [MEDIA_QUERIES.LARGESCREEN]: {
+      width: 'auto',
+    },
   },
-});
+);
 
 // Layout/position of MenuButtonWrapper
 const MenuButtonWrapper = styled('div')({
@@ -59,7 +63,6 @@ const Input = styled('input')({
  * ```jsx
  * import CrownIcon from '@govuk-react/icon-crown';
  * import SearchBox from '@govuk-react/search-box';
- * import Header from '@govuk-react/header';
  * import TopNav, { asNavLinkAnchor, asTopNavAnchor } from '@govuk-react/top-nav';
  *
  * const LogoAnchor = asTopNavAnchor('a');
@@ -75,7 +78,7 @@ const Input = styled('input')({
  *
  * const ServiceTitle = (
  *   <NavAnchor href={link} target="new">
- *     <Header mb="0" level={3}>Service Title</Header>
+ *     Service Title
  *   </NavAnchor>
  * );
  *
@@ -92,7 +95,6 @@ const Input = styled('input')({
  * ```jsx
  * import { BrowserRouter, Link } from 'react-router-dom';
  * import CrownIcon from '@govuk-react/icon-crown';
- * import Header from '@govuk-react/header';
  * import TopNav, { asLogoAnchor, asNavLinkAnchor } from '@govuk-react/top-nav';
  *
  * const LogoLink = asTopNavAnchor(Link);
@@ -107,7 +109,7 @@ const Input = styled('input')({
  *
  * const ServiceTitleLink = (
  *   <NavLink to={reactRouterLink}>
- *     <Header mb="0" level={3}>Service Title</Header>
+ *     Service Title
  *   </NavLink>
  * );
  *
