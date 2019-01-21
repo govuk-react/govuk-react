@@ -8,13 +8,13 @@ exports[`withWhiteSpace matches wrapper snapshot 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
-    margin-bottom: 45px;
+    margin-bottom: 25px;
   }
 }
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
-    margin-bottom: 45px;
+    margin-bottom: 25px;
   }
 }
 

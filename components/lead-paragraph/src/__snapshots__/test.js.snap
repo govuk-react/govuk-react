@@ -2,33 +2,50 @@
 
 exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 .emotion-3 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-3 {
-    margin-bottom: 45px;
+    margin-bottom: 30px;
   }
 }
 
 .emotion-1 {
+  color: #0b0c0c;
   font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
   font-size: 18px;
-  line-height: 1.3;
+  line-height: 1.1111111111111112;
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+@media print {
+  .emotion-1 {
+    color: #000;
+  }
+}
+
+@media print {
+  .emotion-1 {
+    font-size: 18px;
+    line-height: 1.15;
+  }
 }
 
 @media only screen and (min-width:641px) {
   .emotion-1 {
     font-size: 24px;
-    line-height: 1.35;
+    line-height: 1.25;
   }
 }
 
 @media only screen and (min-width:641px) {
   .emotion-1 {
-    margin-bottom: 45px;
+    margin-bottom: 30px;
   }
 }
 
