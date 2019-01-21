@@ -153,6 +153,11 @@ Checkbox preselected & disabled
 ```jsx
 <Checkbox disabled="disabled" defaultChecked>Farm or agricultural waste</Checkbox>
 ```
+
+Checkbox with hint text
+```jsx
+<Checkbox hint="including English, Scottish, Welsh and Northern Irish">British</Checkbox>
+```
 ### References:
 - https://github.com/alphagov/govuk-frontend/blob/master/src/components/checkboxes/_checkboxes.scss
 
@@ -161,6 +166,7 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | node | Text content for checkbox
  `className` |  | ```undefined``` | string | CSS Classname for outermost container
+ `hint` |  | ```undefined``` | node | 
 
 
 DateField
@@ -1472,6 +1478,18 @@ Radio preselected & disabled
    </Radio>
  </div>
 ```
+Radio with hint text
+```jsx
+<div>
+  <Radio
+   name="group1"
+   hint="You'll have a user ID if you've registered for Self Assessment or filed a tax return
+         online before."
+  >
+    Sign in with Government Gateway
+  </Radio>
+</div>
+```
 ### References:
 - https://github.com/alphagov/govuk-frontend/blob/master/src/components/radios/_radios.scss
 - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
@@ -1481,6 +1499,7 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | node | 
  `className` |  | ```undefined``` | string | 
+ `hint` |  | ```undefined``` | node | 
  `inline` |  | ```false``` | bool | 
 
 
