@@ -44,4 +44,8 @@ describe('Radio', () => {
   it('matches snapshot for inline', () => {
     expect(mount(wrapperInline)).toMatchSnapshot('inline mount');
   });
+
+  it('can render with hint text', () => {
+    expect(mount(<Radio hint="Hint text">Example with hint text</Radio>)).toMatchSnapshot('hint text');
+  });
 });

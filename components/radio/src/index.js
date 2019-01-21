@@ -1,83 +1,106 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import { YELLOW } from 'govuk-colours';
+import { FOCUS_COLOUR } from 'govuk-colours';
 import { withWhiteSpace } from '@govuk-react/hoc';
-import { NTA_LIGHT } from '@govuk-react/constants';
+import HintText from '@govuk-react/hint-text';
+import {
+  NTA_LIGHT,
+  FONT_SIZE,
+  MEDIA_QUERIES,
+  LINE_HEIGHT,
+  SPACING,
+  BORDER_WIDTH_FORM_ELEMENT,
+  FOCUS_WIDTH,
+} from '@govuk-react/constants';
+
+const govukRadioSize = '40px';
 
 const Label = styled('label')(
   {
+    fontFamily: NTA_LIGHT,
+    fontWeight: 400,
+    fontSize: FONT_SIZE.SIZE_16,
+    lineHeight: LINE_HEIGHT.SIZE_16,
+    [MEDIA_QUERIES.LARGESCREEN]: {
+      fontSize: FONT_SIZE.SIZE_19,
+      lineHeight: LINE_HEIGHT.SIZE_19,
+    },
     display: 'block',
     position: 'relative',
-    padding: '0 0 0 38px',
+    minHeight: govukRadioSize,
+    padding: `0 0 0 ${govukRadioSize}`,
+    clear: 'left',
   },
-  ({ inline }) => ({
-    float: inline ? 'left' : undefined,
-    clear: inline ? 'none' : undefined,
-    marginRight: inline ? '30px' : '0',
+  ({ inline }) => (inline && {
+    [MEDIA_QUERIES.LARGESCREEN]: {
+      float: 'left',
+      clear: 'none',
+      marginRight: SPACING.SCALE_4,
+    },
   }),
 );
 
 const Input = styled('input')(
   {
     position: 'absolute',
-    cursor: 'pointer',
-    left: 0,
-    top: 0,
-    width: '38px',
-    height: '38px',
     zIndex: 1,
-    margin: 0,
-    zoom: 1,
+    top: 0,
+    left: 0,
+    width: govukRadioSize,
+    height: govukRadioSize,
+    cursor: 'pointer',
     opacity: 0,
     ':checked + span::after': {
       opacity: 1,
     },
     ':focus + span::before': {
-      boxShadow: `0 0 0 4px ${YELLOW}`,
+      outline: `${FOCUS_WIDTH} solid transparent`,
+      outlineOffset: FOCUS_WIDTH,
+      boxShadow: `0 0 0 4px ${FOCUS_COLOUR}`,
     },
   },
   ({ disabled }) => ({
     cursor: disabled ? 'auto' : 'pointer',
     ' + span': {
-      opacity: disabled ? '.4' : '1',
+      opacity: disabled ? '.5' : '1',
       pointerEvents: disabled ? 'none' : 'auto',
     },
   }),
 );
 
 const LabelText = styled('span')({
-  fontFamily: NTA_LIGHT,
-  fontWeight: 400,
-  textTransform: 'none',
-  fontSize: '16px',
-  lineHeight: '1.25',
+  display: 'inline-block',
+  marginBottom: 0,
+  padding: `8px ${SPACING.SCALE_3} ${SPACING.SCALE_1}`,
   cursor: 'pointer',
-  padding: '8px 10px 9px 12px',
-  display: 'block',
   ':before': {
     content: "''",
     boxSizing: 'border-box',
     position: 'absolute',
     top: 0,
     left: 0,
-    width: '33px',
-    height: '33px',
-    border: '2px solid black',
+    width: govukRadioSize,
+    height: govukRadioSize,
+    border: `${BORDER_WIDTH_FORM_ELEMENT} solid black`,
     borderRadius: '50%',
     background: 'transparent',
   },
   ':after': {
     content: "''",
     position: 'absolute',
-    top: '8px',
-    left: '8px',
+    top: SPACING.SCALE_2,
+    left: SPACING.SCALE_2,
     width: 0,
     height: 0,
-    border: '8.5px solid',
+    border: `${SPACING.SCALE_2} solid`,
     borderRadius: '50%',
     opacity: 0,
   },
+});
+
+const StyledRadioHint = styled(HintText)({
+  padding: `0 ${SPACING.SCALE_3} 0`,
 });
 
 /**
@@ -136,25 +159,40 @@ const LabelText = styled('span')({
  *    </Radio>
  *  </div>
  * ```
+ * Radio with hint text
+ * ```jsx
+ * <div>
+ *   <Radio
+ *    name="group1"
+ *    hint="You'll have a user ID if you've registered for Self Assessment or filed a tax return
+ *          online before."
+ *   >
+ *     Sign in with Government Gateway
+ *   </Radio>
+ * </div>
+ * ```
  * ### References:
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/radios/_radios.scss
  * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
  */
 const Radio = ({
-  inline, children, className, ...input
+  inline, children, className, hint, ...input
 }) => (
   <Label inline={inline} className={className}>
     <Input type="radio" {...input} />
     <LabelText>{children}</LabelText>
+    {hint && <StyledRadioHint>{hint}</StyledRadioHint>}
   </Label>
 );
 
 Radio.defaultProps = {
+  hint: undefined,
   inline: false,
   className: undefined,
 };
 
 Radio.propTypes = {
+  hint: PropTypes.node,
   inline: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
