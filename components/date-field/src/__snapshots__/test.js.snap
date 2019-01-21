@@ -97,7 +97,6 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
 }
 
 .emotion-62 {
-  font-family: "nta",Arial,sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -145,30 +144,52 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
 }
 
 .emotion-21 {
-  box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  text-transform: none;
   font-size: 16px;
   line-height: 1.25;
+  box-sizing: border-box;
   width: 100%;
-  padding: 5px 4px 4px;
+  height: 40px;
+  margin-top: 0;
+  padding: 5px;
   border: 2px solid #0b0c0c;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: 4px solid #b10e1e;
+}
+
+@media print {
+  .emotion-21 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
 }
 
 @media only screen and (min-width:641px) {
   .emotion-21 {
     font-size: 19px;
-    line-height: 1.3;
+    line-height: 1.3157894736842106;
   }
 }
 
 .emotion-21:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
+}
+
+.emotion-21::-webkit-outer-spin-button,
+.emotion-21::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.emotion-21[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .emotion-58 {
@@ -551,7 +572,6 @@ exports[`DateField should support null value: null value 1`] = `
 }
 
 .emotion-55 {
-  font-family: "nta",Arial,sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -656,30 +676,51 @@ exports[`DateField should support null value: null value 1`] = `
 }
 
 .emotion-14 {
-  box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  text-transform: none;
   font-size: 16px;
   line-height: 1.25;
+  box-sizing: border-box;
   width: 100%;
-  padding: 5px 4px 4px;
+  height: 40px;
+  margin-top: 0;
+  padding: 5px;
   border: 2px solid #0b0c0c;
-  border: 2px solid #0b0c0c;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+@media print {
+  .emotion-14 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
 }
 
 @media only screen and (min-width:641px) {
   .emotion-14 {
     font-size: 19px;
-    line-height: 1.3;
+    line-height: 1.3157894736842106;
   }
 }
 
 .emotion-14:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
+}
+
+.emotion-14::-webkit-outer-spin-button,
+.emotion-14::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.emotion-14[type="number"] {
+  -moz-appearance: textfield;
 }
 
 <StyledHoc
@@ -1004,7 +1045,6 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
 }
 
 .emotion-55 {
-  font-family: "nta",Arial,sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1109,30 +1149,51 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
 }
 
 .emotion-14 {
-  box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  text-transform: none;
   font-size: 16px;
   line-height: 1.25;
+  box-sizing: border-box;
   width: 100%;
-  padding: 5px 4px 4px;
+  height: 40px;
+  margin-top: 0;
+  padding: 5px;
   border: 2px solid #0b0c0c;
-  border: 2px solid #0b0c0c;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+@media print {
+  .emotion-14 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
 }
 
 @media only screen and (min-width:641px) {
   .emotion-14 {
     font-size: 19px;
-    line-height: 1.3;
+    line-height: 1.3157894736842106;
   }
 }
 
 .emotion-14:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
+}
+
+.emotion-14::-webkit-outer-spin-button,
+.emotion-14::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.emotion-14[type="number"] {
+  -moz-appearance: textfield;
 }
 
 <StyledHoc

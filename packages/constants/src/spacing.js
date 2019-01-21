@@ -64,3 +64,16 @@ export const SPACING_MAP = [
 ];
 
 export const SPACING_MAP_INDEX = Array.from(Array(SPACING_MAP.length).keys());
+
+export const SPACING_POINTS = {
+  0: 0,
+  1: '5px',
+  2: '10px',
+  3: '15px',
+  4: '20px',
+  5: '25px',
+  6: '30px',
+  7: '40px',
+  8: '50px',
+  9: '60px',
+};
