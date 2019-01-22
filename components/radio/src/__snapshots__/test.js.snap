@@ -13,6 +13,8 @@ exports[`Radio can render with hint text: hint text 1`] = `
 
 .emotion-12 {
   font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
@@ -24,10 +26,17 @@ exports[`Radio can render with hint text: hint text 1`] = `
   margin-bottom: 10px;
 }
 
+@media print {
+  .emotion-12 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
 @media only screen and (min-width:641px) {
   .emotion-12 {
     font-size: 19px;
-    line-height: 1.3;
+    line-height: 1.3157894736842106;
   }
 }
 
@@ -69,6 +78,8 @@ exports[`Radio can render with hint text: hint text 1`] = `
   margin-bottom: 0;
   padding: 8px 15px 5px;
   cursor: pointer;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 .emotion-2:before {
@@ -98,7 +109,9 @@ exports[`Radio can render with hint text: hint text 1`] = `
 
 .emotion-7 {
   margin-bottom: 0;
-  padding: 0 15px 0;
+  display: block;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @media only screen and (min-width:641px) {
@@ -108,23 +121,31 @@ exports[`Radio can render with hint text: hint text 1`] = `
 }
 
 .emotion-5 {
-  display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  text-transform: none;
   font-size: 16px;
   line-height: 1.25;
+  display: block;
   color: #6f777b;
   margin-bottom: 0;
-  padding: 0 15px 0;
+  display: block;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media print {
+  .emotion-5 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
 }
 
 @media only screen and (min-width:641px) {
   .emotion-5 {
     font-size: 19px;
-    line-height: 1.3;
+    line-height: 1.3157894736842106;
   }
 }
 
@@ -199,6 +220,8 @@ exports[`Radio disabled: disabled 1`] = `
 
 .emotion-5 {
   font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
@@ -210,10 +233,17 @@ exports[`Radio disabled: disabled 1`] = `
   margin-bottom: 10px;
 }
 
+@media print {
+  .emotion-5 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
 @media only screen and (min-width:641px) {
   .emotion-5 {
     font-size: 19px;
-    line-height: 1.3;
+    line-height: 1.3157894736842106;
   }
 }
 
@@ -228,6 +258,8 @@ exports[`Radio disabled: disabled 1`] = `
   margin-bottom: 0;
   padding: 8px 15px 5px;
   cursor: pointer;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 .emotion-2:before {
@@ -364,6 +396,8 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   margin-bottom: 0;
   padding: 8px 15px 5px;
   cursor: pointer;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 .emotion-2:before {
@@ -393,6 +427,8 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
 
 .emotion-5 {
   font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
@@ -404,10 +440,17 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   margin-bottom: 10px;
 }
 
+@media print {
+  .emotion-5 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
 @media only screen and (min-width:641px) {
   .emotion-5 {
     font-size: 19px;
-    line-height: 1.3;
+    line-height: 1.3157894736842106;
   }
 }
 
@@ -477,6 +520,8 @@ exports[`Radio matches snapshot: standard mount 1`] = `
 
 .emotion-5 {
   font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
@@ -488,10 +533,17 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   margin-bottom: 10px;
 }
 
+@media print {
+  .emotion-5 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
 @media only screen and (min-width:641px) {
   .emotion-5 {
     font-size: 19px;
-    line-height: 1.3;
+    line-height: 1.3157894736842106;
   }
 }
 
@@ -533,6 +585,8 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   margin-bottom: 0;
   padding: 8px 15px 5px;
   cursor: pointer;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 .emotion-2:before {

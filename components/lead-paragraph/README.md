@@ -16,7 +16,7 @@ Simple
 ```
 
 ### References
-- https://govuk-static.herokuapp.com/component-guide/lead_paragraph
+- https://design-system.service.gov.uk/styles/typography/#paragraphs
 
 ### Properties
 Prop | Required | Default | Type | Description
