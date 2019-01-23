@@ -17,7 +17,7 @@ We aim to track the following projects (in priority order) as to which component
 ## Usage
 
 ```sh
-npm install govuk-react emotion react-emotion --save
+npm install govuk-react emotion@9 react-emotion@9 --save
 ```
 
 ```js
@@ -29,7 +29,7 @@ const MyComponent = ({title}) => (<div>
 </div>)
 ```
 
-See the [Storybook](https://UKHomeOffice.github.io/govuk-react) for examples of all available components.
+See the [Storybook](https://govuk-react.github.io/govuk-react) for examples of all available components.
 
 Also see the [example project](https://github.com/penx/govuk-react-example) for basic usage.
 
