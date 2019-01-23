@@ -5,34 +5,26 @@ import { withWhiteSpace } from '@govuk-react/hoc';
 import HintText from '@govuk-react/hint-text';
 import { FOCUS_COLOUR } from 'govuk-colours';
 import {
-  FONT_SIZE,
-  LINE_HEIGHT,
-  MEDIA_QUERIES,
-  NTA_LIGHT,
-  SPACING,
   BORDER_WIDTH,
-  FOCUS_WIDTH,
   BORDER_WIDTH_FORM_ELEMENT,
+  FOCUS_WIDTH,
+  SPACING_POINTS,
 } from '@govuk-react/constants';
+import { typography } from '@govuk-react/lib';
 
-const govukCheckboxSize = '40px';
+const checkboxSize = SPACING_POINTS[7];
+const labelPaddingLeftRight = SPACING_POINTS[3];
 
-const StyledCheckbox = styled('label')({
-  fontFamily: NTA_LIGHT,
-  fontWeight: 400,
-  textTransform: 'none',
-  fontSize: FONT_SIZE.SIZE_16,
-  lineHeight: LINE_HEIGHT.SIZE_16,
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    fontSize: FONT_SIZE.SIZE_19,
-    lineHeight: LINE_HEIGHT.SIZE_19,
+const StyledCheckbox = styled('label')(
+  typography.font({ size: 19 }),
+  {
+    display: 'block',
+    position: 'relative',
+    minHeight: checkboxSize,
+    padding: `0 0 0 ${checkboxSize}`,
+    clear: 'left',
   },
-  display: 'block',
-  position: 'relative',
-  minHeight: govukCheckboxSize,
-  padding: `0 0 0 ${govukCheckboxSize}`,
-  clear: 'left',
-});
+);
 
 const StyledInput = styled('input')(
   {
@@ -40,8 +32,8 @@ const StyledInput = styled('input')(
     zIndex: 1,
     top: 0,
     left: 0,
-    width: govukCheckboxSize,
-    height: govukCheckboxSize,
+    width: checkboxSize,
+    height: checkboxSize,
     opacity: 0,
     ':checked + span:after': {
       opacity: 1,
@@ -64,15 +56,17 @@ const StyledInput = styled('input')(
 const StyledLabel = styled('span')({
   display: 'inline-block',
   cursor: 'pointer',
-  padding: `8px ${SPACING.SCALE_3} ${SPACING.SCALE_1}`,
+  padding: `8px ${labelPaddingLeftRight} ${SPACING_POINTS[1]}`,
+  MsTouchAction: 'manipulation',
+  touchAction: 'manipulation',
   '::before': {
     content: "''",
     boxSizing: 'border-box',
     position: 'absolute',
     top: 0,
     left: 0,
-    width: govukCheckboxSize,
-    height: govukCheckboxSize,
+    width: checkboxSize,
+    height: checkboxSize,
     border: `${BORDER_WIDTH_FORM_ELEMENT} solid black`,
     background: 'transparent',
   },
@@ -93,8 +87,9 @@ const StyledLabel = styled('span')({
 });
 
 const StyledCheckboxHint = styled(HintText)({
-  padding: `0 ${SPACING.SCALE_3} 0`,
-
+  display: 'block',
+  paddingLeft: labelPaddingLeftRight,
+  paddingRight: labelPaddingLeftRight,
 });
 
 /**

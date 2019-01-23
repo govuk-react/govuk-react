@@ -3,40 +3,36 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { FOCUS_COLOUR } from 'govuk-colours';
 import { withWhiteSpace } from '@govuk-react/hoc';
+import { typography } from '@govuk-react/lib';
 import HintText from '@govuk-react/hint-text';
 import {
-  NTA_LIGHT,
-  FONT_SIZE,
-  MEDIA_QUERIES,
-  LINE_HEIGHT,
-  SPACING,
   BORDER_WIDTH_FORM_ELEMENT,
   FOCUS_WIDTH,
+  FOCUS_WIDTH_RAW,
+  MEDIA_QUERIES,
+  SPACING_POINTS,
 } from '@govuk-react/constants';
 
-const govukRadioSize = '40px';
+const radioSize = SPACING_POINTS[7];
+const labelPaddingLeftRight = SPACING_POINTS[3];
+// When the default focus width is used on a curved edge it looks visually smaller.
+// So for the circular radios we bump the default to make it look visually consistent.
+const RADIOS_FOCUS_WIDTH = `${FOCUS_WIDTH_RAW + 1}px`;
 
 const Label = styled('label')(
+  typography.font({ size: 19 }),
   {
-    fontFamily: NTA_LIGHT,
-    fontWeight: 400,
-    fontSize: FONT_SIZE.SIZE_16,
-    lineHeight: LINE_HEIGHT.SIZE_16,
-    [MEDIA_QUERIES.LARGESCREEN]: {
-      fontSize: FONT_SIZE.SIZE_19,
-      lineHeight: LINE_HEIGHT.SIZE_19,
-    },
     display: 'block',
     position: 'relative',
-    minHeight: govukRadioSize,
-    padding: `0 0 0 ${govukRadioSize}`,
+    minHeight: radioSize,
+    padding: `0 0 0 ${radioSize}`,
     clear: 'left',
   },
   ({ inline }) => (inline && {
     [MEDIA_QUERIES.LARGESCREEN]: {
       float: 'left',
       clear: 'none',
-      marginRight: SPACING.SCALE_4,
+      marginRight: SPACING_POINTS[4],
     },
   }),
 );
@@ -47,8 +43,8 @@ const Input = styled('input')(
     zIndex: 1,
     top: 0,
     left: 0,
-    width: govukRadioSize,
-    height: govukRadioSize,
+    width: radioSize,
+    height: radioSize,
     cursor: 'pointer',
     opacity: 0,
     ':checked + span::after': {
@@ -57,7 +53,7 @@ const Input = styled('input')(
     ':focus + span::before': {
       outline: `${FOCUS_WIDTH} solid transparent`,
       outlineOffset: FOCUS_WIDTH,
-      boxShadow: `0 0 0 4px ${FOCUS_COLOUR}`,
+      boxShadow: `0 0 0 ${RADIOS_FOCUS_WIDTH} ${FOCUS_COLOUR}`,
     },
   },
   ({ disabled }) => ({
@@ -72,16 +68,18 @@ const Input = styled('input')(
 const LabelText = styled('span')({
   display: 'inline-block',
   marginBottom: 0,
-  padding: `8px ${SPACING.SCALE_3} ${SPACING.SCALE_1}`,
+  padding: `8px ${labelPaddingLeftRight} ${SPACING_POINTS[1]}`,
   cursor: 'pointer',
+  MsTouchAction: 'manipulation',
+  touchAction: 'manipulation',
   ':before': {
     content: "''",
     boxSizing: 'border-box',
     position: 'absolute',
     top: 0,
     left: 0,
-    width: govukRadioSize,
-    height: govukRadioSize,
+    width: radioSize,
+    height: radioSize,
     border: `${BORDER_WIDTH_FORM_ELEMENT} solid black`,
     borderRadius: '50%',
     background: 'transparent',
@@ -89,18 +87,20 @@ const LabelText = styled('span')({
   ':after': {
     content: "''",
     position: 'absolute',
-    top: SPACING.SCALE_2,
-    left: SPACING.SCALE_2,
+    top: SPACING_POINTS[2],
+    left: SPACING_POINTS[2],
     width: 0,
     height: 0,
-    border: `${SPACING.SCALE_2} solid`,
+    border: `${SPACING_POINTS[2]} solid`,
     borderRadius: '50%',
     opacity: 0,
   },
 });
 
 const StyledRadioHint = styled(HintText)({
-  padding: `0 ${SPACING.SCALE_3} 0`,
+  display: 'block',
+  paddingLeft: labelPaddingLeftRight,
+  paddingRight: labelPaddingLeftRight,
 });
 
 /**

@@ -4,6 +4,7 @@
 import { FOCUS_COLOUR } from 'govuk-colours';
 
 export const FOCUS_WIDTH = '3px';
+export const FOCUS_WIDTH_RAW = 3;
 
 export const FOCUSABLE = {
   '&:focus': {
