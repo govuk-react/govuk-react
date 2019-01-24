@@ -21,6 +21,7 @@ const StyledButton = styled('button')(
   ({ isStart }) => typography.font({
     size: isStart ? 24 : 19,
     lineHeight: isStart ? '1' : '19px',
+    weight: isStart ? 'bold' : undefined,
   }),
   FOCUSABLE,
 

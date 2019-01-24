@@ -170,7 +170,7 @@ exports[`button with icon matches snapshot 1`] = `
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 18px;
   line-height: 1;
   box-sizing: border-box;
@@ -550,7 +550,7 @@ exports[`start button matches snapshot 1`] = `
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 18px;
   line-height: 1;
   box-sizing: border-box;
