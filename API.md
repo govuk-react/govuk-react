@@ -105,18 +105,22 @@ import { ButtonArrow } from '@govuk-react/icons';
 ```
 
 ### References:
-- https://govuk-elements.herokuapp.com/buttons/
-- https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_buttons.scss
+- https://design-system.service.gov.uk/components/button/
 - https://github.com/alphagov/govuk-frontend/blob/master/src/components/button/_button.scss
-- https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_buttons.scss
 
 ### TODO:
-- Use constants for some of the values cssinjs values
-- Remove cascade styling for nested elements such as `svg`
+- Remove cascade styling for nested elements, specifically `svg`
+- Consider ensuring text colour automatically switches between black/white based on WCAG guidance
+  - see https://www.w3.org/TR/WCAG20-TECHS/G18.html
+  - can use Polished's `readableColor` call, but translate their black to govuk's black
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
+ `buttonColour` |  | ```undefined``` | string | Override for default button colour
+ `buttonHoverColour` |  | ```undefined``` | string | Override for default button hover colour,<br/>which defaults to `buttonColour` darkened by 5%
+ `buttonShadowColour` |  | ```undefined``` | string | Override for default button shadow colour,<br/>which defaults to `buttonColour` darkened by 15%
+ `buttonTextColour` |  | ```undefined``` | string | Override for default button text colour,<br/>which defaults to govuk white
  `children` |  | ```'Button'``` | node | Button text
  `disabled` |  | ```false``` | bool | Renders a disabled button and removes pointer events if set to true
  `icon` |  | ```undefined``` | node | Button icon

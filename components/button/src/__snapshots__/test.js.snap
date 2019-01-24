@@ -2,69 +2,121 @@
 
 exports[`button matches snapshot 1`] = `
 .emotion-3 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-3 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 
 .emotion-1 {
-  background-color: #00823b;
-  border: none;
-  box-shadow: 0 2px 0 #003618;
-  color: #ffffff;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  font-size: 1em;
-  line-height: 1.25;
-  outline-offset: -1px;
-  outline: 1px solid transparent;
-  padding: .526315em .789473em .263157em;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
-  opacity: 1;
-  pointer-events: auto;
-  padding-right: .84211em;
-  margin-bottom: 15px;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+  padding: 7px 10px;
+  border: 2px solid transparent;
+  border-radius: 0;
+  color: #ffffff;
+  background-color: #00823b;
+  box-shadow: 0 2px 0 #003518;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-bottom: 20px;
 }
 
-.emotion-1:hover {
-  background-color: #00692f;
-  color: #ffffff;
+@media print {
+  .emotion-1 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 19px;
+    line-height: 19px;
+  }
 }
 
 .emotion-1:focus {
-  color: #ffffff;
-  background-color: #00692f;
   outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    width: auto;
+  }
+}
+
+.emotion-1:link,
+.emotion-1:visited,
+.emotion-1:active,
+.emotion-1:hover {
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-1::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.emotion-1:hover,
+.emotion-1:focus {
+  background-color: #00692f;
 }
 
 .emotion-1:active {
-  position: relative;
   top: 2px;
-  box-shadow: 0 0 0 #003618;
+  box-shadow: none;
 }
 
-.emotion-1:visited {
-  color: #00823b;
+.emotion-1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -4px;
+  left: -2px;
+  background: transparent;
+}
+
+.emotion-1:active::before {
+  top: -4px;
+}
+
+.emotion-1:disabled {
+  opacity: 0.5;
+  background: #00823b;
+}
+
+.emotion-1:disabled:hover {
+  background-color: #00823b;
+  cursor: default;
+}
+
+.emotion-1:disabled:focus {
+  outline: none;
+}
+
+.emotion-1:disabled:active {
+  top: 0;
+  box-shadow: 0 2px 0 #003518;
 }
 
 .emotion-1 svg {
@@ -74,7 +126,7 @@ exports[`button matches snapshot 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-1 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 
@@ -105,21 +157,37 @@ exports[`button matches snapshot 1`] = `
 
 exports[`button with icon matches snapshot 1`] = `
 .emotion-3 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-3 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 
 .emotion-1 {
-  background-color: #00823b;
-  border: none;
-  box-shadow: 0 2px 0 #003618;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+  padding: 7px 10px;
+  border: 2px solid transparent;
+  border-radius: 0;
   color: #ffffff;
+  background-color: #00823b;
+  box-shadow: 0 2px 0 #003518;
+  text-align: center;
+  vertical-align: top;
   cursor: pointer;
+  -webkit-appearance: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -132,46 +200,90 @@ exports[`button with icon matches snapshot 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  font-size: 1em;
-  line-height: 1.25;
-  outline-offset: -1px;
-  outline: 1px solid transparent;
-  padding: .526315em .789473em .263157em;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-appearance: none;
-  -webkit-font-smoothing: antialiased;
-  opacity: 1;
-  pointer-events: auto;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.25;
-  padding: .36842em .84211em .21053em;
-  padding-right: .54211em;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-.emotion-1:hover {
-  background-color: #00692f;
-  color: #ffffff;
+@media print {
+  .emotion-1 {
+    font-size: 18px;
+    line-height: 1;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 24px;
+    line-height: 1;
+  }
 }
 
 .emotion-1:focus {
-  color: #ffffff;
-  background-color: #00692f;
   outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    width: auto;
+  }
+}
+
+.emotion-1:link,
+.emotion-1:visited,
+.emotion-1:active,
+.emotion-1:hover {
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-1::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.emotion-1:hover,
+.emotion-1:focus {
+  background-color: #00692f;
 }
 
 .emotion-1:active {
-  position: relative;
   top: 2px;
-  box-shadow: 0 0 0 #003618;
+  box-shadow: none;
 }
 
-.emotion-1:visited {
-  color: #00823b;
+.emotion-1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -4px;
+  left: -2px;
+  background: transparent;
+}
+
+.emotion-1:active::before {
+  top: -4px;
+}
+
+.emotion-1:disabled {
+  opacity: 0.5;
+  background: #00823b;
+}
+
+.emotion-1:disabled:hover {
+  background-color: #00823b;
+  cursor: default;
+}
+
+.emotion-1:disabled:focus {
+  outline: none;
+}
+
+.emotion-1:disabled:active {
+  top: 0;
+  box-shadow: 0 2px 0 #003518;
 }
 
 .emotion-1 svg {
@@ -181,7 +293,7 @@ exports[`button with icon matches snapshot 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-1 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 
@@ -268,69 +380,121 @@ exports[`button with icon matches snapshot 1`] = `
 
 exports[`disabled button matches snapshot 1`] = `
 .emotion-3 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-3 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 
 .emotion-1 {
-  background-color: #00823b;
-  border: none;
-  box-shadow: 0 2px 0 #003618;
-  color: #ffffff;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  font-size: 1em;
-  line-height: 1.25;
-  outline-offset: -1px;
-  outline: 1px solid transparent;
-  padding: .526315em .789473em .263157em;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
-  opacity: .5;
-  pointer-events: none;
-  padding-right: .84211em;
-  margin-bottom: 15px;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+  padding: 7px 10px;
+  border: 2px solid transparent;
+  border-radius: 0;
+  color: #ffffff;
+  background-color: #00823b;
+  box-shadow: 0 2px 0 #003518;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-bottom: 20px;
 }
 
-.emotion-1:hover {
-  background-color: #00692f;
-  color: #ffffff;
+@media print {
+  .emotion-1 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 19px;
+    line-height: 19px;
+  }
 }
 
 .emotion-1:focus {
-  color: #ffffff;
-  background-color: #00692f;
   outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    width: auto;
+  }
+}
+
+.emotion-1:link,
+.emotion-1:visited,
+.emotion-1:active,
+.emotion-1:hover {
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-1::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.emotion-1:hover,
+.emotion-1:focus {
+  background-color: #00692f;
 }
 
 .emotion-1:active {
-  position: relative;
   top: 2px;
-  box-shadow: 0 0 0 #003618;
+  box-shadow: none;
 }
 
-.emotion-1:visited {
-  color: #00823b;
+.emotion-1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -4px;
+  left: -2px;
+  background: transparent;
+}
+
+.emotion-1:active::before {
+  top: -4px;
+}
+
+.emotion-1:disabled {
+  opacity: 0.5;
+  background: #00823b;
+}
+
+.emotion-1:disabled:hover {
+  background-color: #00823b;
+  cursor: default;
+}
+
+.emotion-1:disabled:focus {
+  outline: none;
+}
+
+.emotion-1:disabled:active {
+  top: 0;
+  box-shadow: 0 2px 0 #003518;
 }
 
 .emotion-1 svg {
@@ -340,7 +504,7 @@ exports[`disabled button matches snapshot 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-1 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 
@@ -373,73 +537,121 @@ exports[`disabled button matches snapshot 1`] = `
 
 exports[`start button matches snapshot 1`] = `
 .emotion-3 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-3 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 
 .emotion-1 {
-  background-color: #00823b;
-  border: none;
-  box-shadow: 0 2px 0 #003618;
-  color: #ffffff;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  font-size: 1em;
-  line-height: 1.25;
-  outline-offset: -1px;
-  outline: 1px solid transparent;
-  padding: .526315em .789473em .263157em;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
-  opacity: 1;
-  pointer-events: auto;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.25;
-  padding: .36842em .84211em .21053em;
-  padding-right: .84211em;
-  margin-bottom: 15px;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+  padding: 7px 10px;
+  border: 2px solid transparent;
+  border-radius: 0;
+  color: #ffffff;
+  background-color: #00823b;
+  box-shadow: 0 2px 0 #003518;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-bottom: 20px;
 }
 
-.emotion-1:hover {
-  background-color: #00692f;
-  color: #ffffff;
+@media print {
+  .emotion-1 {
+    font-size: 18px;
+    line-height: 1;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 24px;
+    line-height: 1;
+  }
 }
 
 .emotion-1:focus {
-  color: #ffffff;
-  background-color: #00692f;
   outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    width: auto;
+  }
+}
+
+.emotion-1:link,
+.emotion-1:visited,
+.emotion-1:active,
+.emotion-1:hover {
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-1::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.emotion-1:hover,
+.emotion-1:focus {
+  background-color: #00692f;
 }
 
 .emotion-1:active {
-  position: relative;
   top: 2px;
-  box-shadow: 0 0 0 #003618;
+  box-shadow: none;
 }
 
-.emotion-1:visited {
-  color: #00823b;
+.emotion-1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -4px;
+  left: -2px;
+  background: transparent;
+}
+
+.emotion-1:active::before {
+  top: -4px;
+}
+
+.emotion-1:disabled {
+  opacity: 0.5;
+  background: #00823b;
+}
+
+.emotion-1:disabled:hover {
+  background-color: #00823b;
+  cursor: default;
+}
+
+.emotion-1:disabled:focus {
+  outline: none;
+}
+
+.emotion-1:disabled:active {
+  top: 0;
+  box-shadow: 0 2px 0 #003518;
 }
 
 .emotion-1 svg {
@@ -449,7 +661,7 @@ exports[`start button matches snapshot 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-1 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 

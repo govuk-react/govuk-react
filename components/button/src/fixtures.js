@@ -1,6 +1,7 @@
 import React from 'react';
 import { boolean, text } from '@storybook/addon-knobs/react';
 import { ButtonArrow } from '@govuk-react/icons';
+import { BLUE, TEXT_COLOUR, YELLOW, GREY_3, ORANGE } from 'govuk-colours';
 
 import Button from '.';
 
@@ -30,6 +31,19 @@ const ButtonDisabledStartIcon = () => (
   </Button>
 );
 
+const ButtonBlue = () => <Button buttonColour={BLUE}>Blue button</Button>;
+
+const ButtonWacky = () => (
+  <Button
+    buttonColour={GREY_3}
+    buttonHoverColour={YELLOW}
+    buttonShadowColour={ORANGE}
+    buttonTextColour={TEXT_COLOUR}
+  >
+    Wacky colours
+  </Button>
+);
+
 export default Button;
 
 export {
@@ -38,4 +52,6 @@ export {
   ButtonStartIcon,
   ButtonDisabled,
   ButtonDisabledStartIcon,
+  ButtonBlue,
+  ButtonWacky,
 };

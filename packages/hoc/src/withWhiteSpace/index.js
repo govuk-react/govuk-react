@@ -2,6 +2,12 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { SPACING_MAP, SPACING_MAP_INDEX, MEDIA_QUERIES } from '@govuk-react/constants';
 
+// TODO add support for other white-space options
+// and also `adjustment` value (e.g. see Button)
+// https://github.com/alphagov/govuk-frontend/blob/master/src/helpers/_spacing.scss
+// https://github.com/alphagov/govuk-frontend/blob/master/src/overrides/_spacing.scss
+// https://github.com/alphagov/govuk-frontend/blob/master/src/settings/_spacing.scss
+
 const withWhiteSpace = (config = {}) => (Component) => {
   const StyledHoc = styled(Component)(({ mb: marginBottom = config.marginBottom }) => (
     marginBottom !== undefined ? {
@@ -21,4 +27,3 @@ const withWhiteSpace = (config = {}) => (Component) => {
 };
 
 export default withWhiteSpace;
-

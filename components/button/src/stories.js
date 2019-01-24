@@ -8,6 +8,8 @@ import {
   ButtonStartIcon,
   ButtonDisabled,
   ButtonDisabledStartIcon,
+  ButtonBlue,
+  ButtonWacky,
 } from './fixtures';
 import ReadMe from '../README.md';
 
@@ -26,3 +28,7 @@ examples.add('Start with icon', ButtonStartIcon);
 examples.add('Disabled', ButtonDisabled);
 
 examples.add('Disabled start with icon', ButtonDisabledStartIcon);
+
+examples.add('Custom colour', ButtonBlue);
+
+examples.add('Custom colours (all options)', ButtonWacky);
