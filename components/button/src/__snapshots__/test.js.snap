@@ -178,7 +178,7 @@ exports[`button with icon matches snapshot 1`] = `
   position: relative;
   width: 100%;
   margin-top: 0;
-  padding: 7px 10px;
+  padding: 8px 15px;
   border: 2px solid transparent;
   border-radius: 0;
   color: #ffffff;
@@ -558,7 +558,7 @@ exports[`start button matches snapshot 1`] = `
   position: relative;
   width: 100%;
   margin-top: 0;
-  padding: 7px 10px;
+  padding: 8px 15px;
   border: 2px solid transparent;
   border-radius: 0;
   color: #ffffff;

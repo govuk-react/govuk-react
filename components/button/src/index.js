@@ -16,6 +16,11 @@ import {
 import { darken, stripUnit } from 'polished';
 
 const BUTTON_SHADOW_SIZE = BORDER_WIDTH_FORM_ELEMENT;
+const RAW_SPACING_2 = stripUnit(SPACING_POINTS[2]);
+const RAW_BORDER_WIDTH = stripUnit(BORDER_WIDTH_FORM_ELEMENT);
+const RAW_SHADOW = stripUnit(BUTTON_SHADOW_SIZE);
+const HALF_SHADOW = RAW_SHADOW / 2;
+const BASE_PAD = RAW_SPACING_2 - RAW_BORDER_WIDTH;
 
 const StyledButton = styled('button')(
   ({ isStart }) => typography.font({
@@ -30,17 +35,16 @@ const StyledButton = styled('button')(
     buttonHoverColour = darken(0.05, buttonColour),
     buttonShadowColour = darken(0.15, buttonColour),
     buttonTextColour = WHITE,
+    isStart,
   }) => ({
     boxSizing: 'border-box',
     display: 'inline-block',
     position: 'relative',
     width: '100%',
     marginTop: 0,
-    padding: `${
-      stripUnit(SPACING_POINTS[2])
-      - stripUnit(BORDER_WIDTH_FORM_ELEMENT)
-      - (stripUnit(BUTTON_SHADOW_SIZE) / 2)
-    }px ${SPACING_POINTS[2]}`,
+    padding: isStart ? // differs from govuk-frontend owing to how icons displayed
+      `${BASE_PAD}px ${SPACING_POINTS[3]}`
+      : `${BASE_PAD - HALF_SHADOW}px ${SPACING_POINTS[2]}`,
     border: `${BORDER_WIDTH_FORM_ELEMENT} solid transparent`,
     borderRadius: 0,
     color: buttonTextColour,
@@ -83,13 +87,13 @@ const StyledButton = styled('button')(
       position: 'absolute',
       top: `-${BORDER_WIDTH_FORM_ELEMENT}`,
       right: `-${BORDER_WIDTH_FORM_ELEMENT}`,
-      bottom: `-${stripUnit(BORDER_WIDTH_FORM_ELEMENT) + stripUnit(BUTTON_SHADOW_SIZE)}px`,
+      bottom: `-${RAW_BORDER_WIDTH + RAW_SHADOW}px`,
       left: `-${BORDER_WIDTH_FORM_ELEMENT}`,
       background: 'transparent',
     },
 
     '&:active::before': {
-      top: `-${stripUnit(BORDER_WIDTH_FORM_ELEMENT) + stripUnit(BUTTON_SHADOW_SIZE)}px`,
+      top: `-${RAW_BORDER_WIDTH + RAW_SHADOW}px`,
     },
 
     ':disabled': {
