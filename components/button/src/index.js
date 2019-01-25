@@ -114,7 +114,9 @@ const StyledButton = styled('button')(
 
     ' svg': {
       maxWidth: '15px',
-      marginLeft: SPACING_POINTS[4],
+      [MEDIA_QUERIES.TABLET]: {
+        marginLeft: SPACING_POINTS[2],
+      },
     },
   }),
 
@@ -131,6 +133,10 @@ const StyledButton = styled('button')(
     return undefined;
   },
 );
+
+const ButtonContents = styled('span')({
+  flexGrow: 1,
+});
 
 /**
  *
@@ -165,7 +171,7 @@ const Button = ({
   ...props
 }) => (
   <StyledButton isStart={start} icon={icon} {...props}>
-    {children}
+    {icon ? <ButtonContents>{children}</ButtonContents> : children}
     {icon}
   </StyledButton>
 );
