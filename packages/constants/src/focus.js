@@ -12,3 +12,11 @@ export const FOCUSABLE = {
     outlineOffset: 0,
   },
 };
+
+export const FOCUSABLE_FILL = {
+  '&:focus': {
+    outline: `${FOCUS_WIDTH} solid ${FOCUS_COLOUR}`,
+    outlineOffset: 0,
+    backgroundColor: FOCUS_COLOUR,
+  },
+};
