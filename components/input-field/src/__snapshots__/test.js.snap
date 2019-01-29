@@ -11,23 +11,6 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-.emotion-19 {
-  margin-bottom: 0;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-19 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-19 {
-    margin-bottom: 0;
-  }
-}
-
 .emotion-1 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -55,7 +38,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-.emotion-16 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -65,23 +48,16 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   margin-bottom: 0;
-  margin-bottom: 0;
 }
 
-.emotion-16:after {
+.emotion-15:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-16 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-16 {
+  .emotion-15 {
     margin-bottom: 0;
   }
 }
@@ -141,64 +117,56 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<StyledHoc
+<InputField
   input={Object {}}
   meta={Object {}}
 >
-  <InputField
-    className="emotion-3 emotion-0"
-    input={Object {}}
-    meta={Object {}}
-  >
-    <StyledHoc
+  <StyledHoc>
+    <Label
       className="emotion-3 emotion-0"
     >
-      <Label
-        className="emotion-0 emotion-19 emotion-0"
+      <StyledLabel
+        className="emotion-3 emotion-0"
       >
-        <StyledLabel
-          className="emotion-0 emotion-19 emotion-0"
+        <label
+          className="emotion-0 emotion-15 emotion-16"
         >
-          <label
-            className="emotion-0 emotion-0 emotion-16 emotion-17"
-          >
-            <StyledHoc>
-              <LabelText
+          <StyledHoc>
+            <LabelText
+              className="emotion-3 emotion-0"
+            >
+              <StyledLabelText
                 className="emotion-3 emotion-0"
               >
-                <StyledLabelText
-                  className="emotion-3 emotion-0"
+                <span
+                  className="emotion-0 emotion-1 emotion-2"
                 >
-                  <span
-                    className="emotion-0 emotion-1 emotion-2"
-                  >
-                    example
-                  </span>
-                </StyledLabelText>
-              </LabelText>
-            </StyledHoc>
-            <StyledHoc
+                  example
+                </span>
+              </StyledLabelText>
+            </LabelText>
+          </StyledHoc>
+          <StyledHoc
+            type="text"
+          >
+            <Input
+              className="emotion-3 emotion-0"
               type="text"
             >
-              <Input
+              <StyledInput
                 className="emotion-3 emotion-0"
                 type="text"
               >
-                <StyledInput
-                  className="emotion-3 emotion-0"
+                <input
+                  className="emotion-0 emotion-8 emotion-9"
                   type="text"
-                >
-                  <input
-                    className="emotion-0 emotion-8 emotion-9"
-                    type="text"
-                  />
-                </StyledInput>
-              </Input>
-            </StyledHoc>
-          </label>
-        </StyledLabel>
-      </Label>
-    </StyledHoc>
-  </InputField>
-</StyledHoc>
+                />
+              </StyledInput>
+            </Input>
+          </StyledHoc>
+        </label>
+      </StyledLabel>
+    </Label>
+  </StyledHoc>
+</InputField>
 `;

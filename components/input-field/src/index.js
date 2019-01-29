@@ -8,7 +8,6 @@ import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 import Input from '@govuk-react/input';
-import { withWhiteSpace } from '@govuk-react/hoc';
 
 /**
  *
@@ -100,4 +99,7 @@ InputField.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default withWhiteSpace({ marginBottom: 0 })(InputField);
+/** Component is not exported withWhitespace because Label
+ *  is also exported withWhitespace and therefore takes precedence.
+ */
+export default InputField;
