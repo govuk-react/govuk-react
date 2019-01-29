@@ -69,30 +69,29 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
 }
 
 .emotion-8 {
-  display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
-  text-transform: none;
   font-size: 16px;
   line-height: 1.25;
+  display: block;
+  margin-bottom: 15px;
+  clear: both;
   color: #b10e1e;
-  padding-top: 4px;
-  padding-bottom: 2px;
-  margin-bottom: 0;
 }
 
-@media only screen and (min-width:641px) {
+@media print {
   .emotion-8 {
-    font-size: 19px;
-    line-height: 1.3;
+    font-size: 14px;
+    line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
   .emotion-8 {
-    margin-bottom: 0;
+    font-size: 19px;
+    line-height: 1.3157894736842106;
   }
 }
 
@@ -297,11 +296,11 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
           errorText="example"
         >
           <ErrorText
-            className="emotion-3 emotion-0"
+            className="emotion-10 emotion-0"
             errorText="example"
           >
             <StyledError
-              className="emotion-3 emotion-0"
+              className="emotion-10 emotion-0"
               errorText="example"
             >
               <span

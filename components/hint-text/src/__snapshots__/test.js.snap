@@ -1,16 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HintText matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-3 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
-  }
-}
-
 .emotion-1 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -19,8 +9,8 @@ exports[`HintText matches wrapper snapshot: wrapper mount 1`] = `
   font-size: 16px;
   line-height: 1.25;
   display: block;
+  margin-bottom: 15px;
   color: #6f777b;
-  margin-bottom: 0;
 }
 
 @media print {
@@ -34,12 +24,6 @@ exports[`HintText matches wrapper snapshot: wrapper mount 1`] = `
   .emotion-1 {
     font-size: 19px;
     line-height: 1.3157894736842106;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 0;
   }
 }
 

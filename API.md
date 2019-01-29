@@ -670,7 +670,7 @@ Simple
 ```
 
 ### References
-- https://github.com/alphagov/govuk-frontend/tree/master/src/components/
+- https://github.com/alphagov/govuk-frontend/blob/master/src/components/hint/_hint.scss
 
 ### Properties
 Prop | Required | Default | Type | Description
