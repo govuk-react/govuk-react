@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
-import Breadcrumb from './';
+import Breadcrumb from '.';
 
 describe('breadcrumb', () => {
   const emptyNode = [];
@@ -28,17 +28,17 @@ describe('breadcrumb', () => {
     ReactDOM.render(wrapper, div);
   });
 
-  it('should render an item in unordered list', () => {
+  it('should render an item in ordered list', () => {
     const output = mount(wrapper);
-    expect(output.find('ul')).toHaveLength(1);
+    expect(output.find('ol')).toHaveLength(1);
   });
 
-  it('should render multiple items in unordered list', () => {
-    expect(mount(wrapperMultiple).find('ul li')).toHaveLength(2);
+  it('should render multiple items in ordered list', () => {
+    expect(mount(wrapperMultiple).find('ol li')).toHaveLength(2);
   });
 
-  it('should render an unordered list without ghost/duff children', () => {
-    expect(mount(wrapperEmptyNode).find('ul li')).toHaveLength(2);
+  it('should render an ordered list without ghost/duff children', () => {
+    expect(mount(wrapperEmptyNode).find('ol li')).toHaveLength(2);
   });
 
   it('allows attributes to be set', () => {
