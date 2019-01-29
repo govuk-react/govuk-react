@@ -24,7 +24,9 @@
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --env=jsdom",
     "test:snapshot": "yarn test:unit -- -u",
     "create-component": "node ./scripts/createComponent.js",
-    "chromatic-test": "cd packages/storybook && yarn chromatic-test"
+    "chromatic-test": "cd packages/storybook && yarn chromatic-test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
@@ -65,7 +67,8 @@
   "module": "es/index.js",
   "dependencies": {
     "govuk-colours": "^1.0.3",
-    "react-markdown": "^3.3.2"
+    "react-markdown": "^3.3.2",
+    "snyk": "^1.123.0"
   },
   "peerDependencies": {
     "react": ">=16.2.0"
@@ -193,5 +196,6 @@
     "components/*",
     "packages/*"
   ],
-  "private": true
+  "private": true,
+  "snyk": true
 }
