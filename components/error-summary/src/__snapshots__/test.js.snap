@@ -245,24 +245,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   }
 }
 
-.emotion-82 {
-  margin-bottom: 0;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-82 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-82 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-79 {
+.emotion-78 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -272,23 +255,16 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   flex-direction: column;
   box-sizing: border-box;
   margin-bottom: 0;
-  margin-bottom: 0;
 }
 
-.emotion-79:after {
+.emotion-78:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-79 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-79 {
+  .emotion-78 {
     margin-bottom: 0;
   }
 }
@@ -401,31 +377,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   }
 }
 
-.emotion-101 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  box-sizing: border-box;
-  margin-bottom: 0;
-}
-
-.emotion-101:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-101 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-98 {
+.emotion-91 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
@@ -438,14 +390,14 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-98 {
+  .emotion-91 {
     font-size: 19px;
     line-height: 1.3;
     width: 75%;
   }
 }
 
-.emotion-98:focus {
+.emotion-91:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
@@ -692,89 +644,80 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
         </StyledErrorSummary>
       </ErrorSummary>
     </StyledHoc>
-    <StyledHoc
+    <InputField
       hint="It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
       input={Object {}}
       meta={Object {}}
       name="national-insurance-number"
     >
-      <InputField
-        className="emotion-27 emotion-0"
-        hint="It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
-        input={Object {}}
-        meta={Object {}}
+      <StyledHoc
         name="national-insurance-number"
       >
-        <StyledHoc
+        <Label
           className="emotion-27 emotion-0"
           name="national-insurance-number"
         >
-          <Label
-            className="emotion-0 emotion-82 emotion-0"
+          <StyledLabel
+            className="emotion-27 emotion-0"
             name="national-insurance-number"
           >
-            <StyledLabel
-              className="emotion-0 emotion-82 emotion-0"
+            <label
+              className="emotion-0 emotion-78 emotion-79"
               name="national-insurance-number"
             >
-              <label
-                className="emotion-0 emotion-0 emotion-79 emotion-80"
-                name="national-insurance-number"
-              >
-                <StyledHoc>
-                  <LabelText
+              <StyledHoc>
+                <LabelText
+                  className="emotion-27 emotion-0"
+                >
+                  <StyledLabelText
                     className="emotion-27 emotion-0"
                   >
-                    <StyledLabelText
-                      className="emotion-27 emotion-0"
+                    <span
+                      className="emotion-0 emotion-57 emotion-58"
                     >
-                      <span
-                        className="emotion-0 emotion-57 emotion-58"
-                      >
-                        National Insurance number
-                      </span>
-                    </StyledLabelText>
-                  </LabelText>
-                </StyledHoc>
-                <StyledHoc>
-                  <HintText
+                      National Insurance number
+                    </span>
+                  </StyledLabelText>
+                </LabelText>
+              </StyledHoc>
+              <StyledHoc>
+                <HintText
+                  className="emotion-6 emotion-0"
+                >
+                  <StyledHint
                     className="emotion-6 emotion-0"
                   >
-                    <StyledHint
-                      className="emotion-6 emotion-0"
+                    <span
+                      className="emotion-0 emotion-64 emotion-65"
                     >
-                      <span
-                        className="emotion-0 emotion-64 emotion-65"
-                      >
-                        It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
-                      </span>
-                    </StyledHint>
-                  </HintText>
-                </StyledHoc>
-                <StyledHoc
+                      It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
+                    </span>
+                  </StyledHint>
+                </HintText>
+              </StyledHoc>
+              <StyledHoc
+                type="text"
+              >
+                <Input
+                  className="emotion-27 emotion-0"
                   type="text"
                 >
-                  <Input
+                  <StyledInput
                     className="emotion-27 emotion-0"
                     type="text"
                   >
-                    <StyledInput
-                      className="emotion-27 emotion-0"
+                    <input
+                      className="emotion-0 emotion-71 emotion-72"
                       type="text"
-                    >
-                      <input
-                        className="emotion-0 emotion-71 emotion-72"
-                        type="text"
-                      />
-                    </StyledInput>
-                  </Input>
-                </StyledHoc>
-              </label>
-            </StyledLabel>
-          </Label>
-        </StyledHoc>
-      </InputField>
-    </StyledHoc>
+                    />
+                  </StyledInput>
+                </Input>
+              </StyledHoc>
+            </label>
+          </StyledLabel>
+        </Label>
+      </StyledHoc>
+    </InputField>
     <br />
     <TextArea
       input={Object {}}
@@ -793,7 +736,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
             name="description"
           >
             <label
-              className="emotion-0 emotion-101 emotion-80"
+              className="emotion-0 emotion-78 emotion-79"
               name="description"
             >
               <StyledHoc>
@@ -816,7 +759,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                 type="text"
               >
                 <textarea
-                  className="emotion-98 emotion-99"
+                  className="emotion-91 emotion-92"
                   rows="5"
                   type="text"
                 />
