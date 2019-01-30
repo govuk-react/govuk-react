@@ -1,37 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Styled matches wrapper snapshot 1`] = `
-.emotion-6 {
-  margin-bottom: 15px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-6 {
-    margin-bottom: 20px;
-  }
-}
-
-.emotion-1 {
+exports[`Paragraph matches wrapper snapshot 1`] = `
+.c1 {
   font-family: "nta",Arial,sans-serif;
   margin: 0;
   font-size: 14px;
   line-height: 1.1428571429;
-  margin-bottom: 15px;
 }
 
-.emotion-1 > p {
+.c1 > p {
   margin: 0;
 }
 
-.emotion-1 > p > code {
+.c1 > p > code {
   padding: 0.2em 0.4em;
-  margin: 0px;
+  margin: 0;
   font-size: 85%;
   background-color: rgba(27,31,35,0.05);
   border-radius: 3px;
 }
 
-.emotion-1 > pre {
+.c1 > pre {
   padding: 16px;
   overflow: auto;
   font-size: 85%;
@@ -40,67 +29,74 @@ exports[`Styled matches wrapper snapshot 1`] = `
   border-radius: 3px;
 }
 
-.emotion-1 > pre > code {
+.c1 > pre > code {
   display: inline;
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
+  padding: 0;
+  margin: 0;
+  border: 0;
   overflow: visible;
   line-height: inherit;
   word-wrap: normal;
 }
 
+.c0 {
+  margin-bottom: 15px;
+}
+
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c1 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c0 {
     margin-bottom: 20px;
   }
 }
 
-<StyledHoc
-  linkRenderer={[Function]}
+<Styled(Paragraph)
   supportingText={true}
 >
-  <Paragraph
-    className="emotion-6 emotion-0"
-    linkRenderer={[Function]}
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-EHOje",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(Paragraph)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-EHOje",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
     supportingText={true}
   >
-    <StyledParagraph
-      allowedTypes={
-        Array [
-          "paragraph",
-          "emphasis",
-          "strong",
-          "link",
-          "inlineCode",
-          "code",
-        ]
-      }
-      astPlugins={Array []}
-      className="emotion-6 emotion-0"
-      escapeHtml={false}
+    <Paragraph
+      className="c0"
       linkRenderer={[Function]}
-      plugins={Array []}
-      rawSourcePos={false}
-      renderers={
-        Object {
-          "link": [Function],
-        }
-      }
-      skipHtml={true}
-      source=""
-      sourcePos={false}
       supportingText={true}
-      transformLinkUri={[Function]}
     >
-      <ReactMarkdown
+      <Styled(ReactMarkdown)
         allowedTypes={
           Array [
             "paragraph",
@@ -111,12 +107,9 @@ exports[`Styled matches wrapper snapshot 1`] = `
             "code",
           ]
         }
-        astPlugins={Array []}
-        className="emotion-0 emotion-1 emotion-2"
+        className="c0"
         escapeHtml={false}
         linkRenderer={[Function]}
-        plugins={Array []}
-        rawSourcePos={false}
         renderers={
           Object {
             "link": [Function],
@@ -124,16 +117,155 @@ exports[`Styled matches wrapper snapshot 1`] = `
         }
         skipHtml={true}
         source=""
-        sourcePos={false}
         supportingText={true}
-        transformLinkUri={[Function]}
       >
-        <div
-          className="emotion-0 emotion-1 emotion-2"
-          key="root-1-1"
-        />
-      </ReactMarkdown>
-    </StyledParagraph>
-  </Paragraph>
-</StyledHoc>
+        <StyledComponent
+          allowedTypes={
+            Array [
+              "paragraph",
+              "emphasis",
+              "strong",
+              "link",
+              "inlineCode",
+              "code",
+            ]
+          }
+          className="c0"
+          escapeHtml={false}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-ifAKCX",
+                "isStatic": false,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "font-family: \\"nta\\", Arial, sans-serif; margin: 0; > p {
+  margin: 0;
+} > p > code {
+  padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: rgba(27,31,35,0.05); border-radius: 3px;
+} > pre {
+  padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #f6f8fa; border-radius: 3px;
+} > pre > code {
+  display: inline; padding: 0; margin: 0; border: 0; overflow: visible; line-height: inherit; word-wrap: normal;
+}",
+                  [Function],
+                ],
+              },
+              "displayName": "Styled(ReactMarkdown)",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "renderers": Object {
+                "blockquote": "blockquote",
+                "break": "br",
+                "code": [Function],
+                "definition": [Function],
+                "delete": "del",
+                "emphasis": "em",
+                "heading": [Function],
+                "html": [Function],
+                "image": "img",
+                "imageReference": "img",
+                "inlineCode": [Function],
+                "link": "a",
+                "linkReference": "a",
+                "list": [Function],
+                "listItem": [Function],
+                "paragraph": "p",
+                "root": "div",
+                "strong": "strong",
+                "table": [Function],
+                "tableBody": [Function],
+                "tableCell": [Function],
+                "tableHead": [Function],
+                "tableRow": [Function],
+                "thematicBreak": "hr",
+                "virtualHtml": [Function],
+              },
+              "styledComponentId": "sc-ifAKCX",
+              "target": [Function],
+              "toString": [Function],
+              "types": Array [
+                "root",
+                "break",
+                "paragraph",
+                "emphasis",
+                "strong",
+                "thematicBreak",
+                "blockquote",
+                "delete",
+                "link",
+                "image",
+                "linkReference",
+                "imageReference",
+                "table",
+                "tableHead",
+                "tableBody",
+                "tableRow",
+                "tableCell",
+                "list",
+                "listItem",
+                "definition",
+                "heading",
+                "inlineCode",
+                "code",
+                "html",
+                "virtualHtml",
+              ],
+              "uriTransformer": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+              Symbol(Symbol.hasInstance): [Function],
+            }
+          }
+          forwardedRef={null}
+          linkRenderer={[Function]}
+          renderers={
+            Object {
+              "link": [Function],
+            }
+          }
+          skipHtml={true}
+          source=""
+          supportingText={true}
+        >
+          <ReactMarkdown
+            allowedTypes={
+              Array [
+                "paragraph",
+                "emphasis",
+                "strong",
+                "link",
+                "inlineCode",
+                "code",
+              ]
+            }
+            astPlugins={Array []}
+            className="c0 c1"
+            escapeHtml={false}
+            linkRenderer={[Function]}
+            plugins={Array []}
+            rawSourcePos={false}
+            renderers={
+              Object {
+                "link": [Function],
+              }
+            }
+            skipHtml={true}
+            source=""
+            sourcePos={false}
+            supportingText={true}
+            transformLinkUri={[Function]}
+          >
+            <div
+              className="c0 c1"
+              key="root-1-1"
+            />
+          </ReactMarkdown>
+        </StyledComponent>
+      </Styled(ReactMarkdown)>
+    </Paragraph>
+  </StyledComponent>
+</Styled(Paragraph)>
 `;

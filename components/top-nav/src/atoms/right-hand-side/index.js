@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import { MEDIA_QUERIES, SPACING } from '@govuk-react/constants';
 
 const RightHandSide = styled('div')({

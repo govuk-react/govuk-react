@@ -1,17 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-3 {
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.c1:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.c0 {
   margin-bottom: 0;
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-1 {
+.c3 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,47 +33,13 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
+}
+
+.c2 {
   margin-bottom: 0;
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  box-sizing: border-box;
-  margin-bottom: 0;
-}
-
-.emotion-15:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-15 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-8 {
+.c5 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -79,40 +56,62 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.c5:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+.c5::-webkit-outer-spin-button,
+.c5::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.c5[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c4 {
   margin-bottom: 0;
 }
 
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c3 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c2 {
+    margin-bottom: 0;
+  }
+}
+
 @media print {
-  .emotion-8 {
+  .c5 {
     font-size: 14px;
     line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-8 {
+  .c5 {
     font-size: 19px;
     line-height: 1.3157894736842106;
   }
 }
 
-.emotion-8:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-}
-
-.emotion-8::-webkit-outer-spin-button,
-.emotion-8::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-}
-
-.emotion-8[type="number"] {
-  -moz-appearance: textfield;
-}
-
 @media only screen and (min-width:641px) {
-  .emotion-8 {
+  .c4 {
     margin-bottom: 0;
   }
 }
@@ -121,52 +120,247 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   input={Object {}}
   meta={Object {}}
 >
-  <StyledHoc>
-    <Label
-      className="emotion-3 emotion-0"
+  <Styled(Label)>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-ifAKCX",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              [Function],
+            ],
+          },
+          "displayName": "Styled(Label)",
+          "foldedComponentIds": Array [],
+          "propTypes": Object {
+            "margin": [Function],
+            "mb": [Function],
+            "padding": [Function],
+          },
+          "render": [Function],
+          "styledComponentId": "sc-ifAKCX",
+          "target": [Function],
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <StyledLabel
-        className="emotion-3 emotion-0"
+      <Label
+        className="c0"
       >
-        <label
-          className="emotion-0 emotion-15 emotion-16"
+        <styled.label
+          className="c0"
         >
-          <StyledHoc>
-            <LabelText
-              className="emotion-3 emotion-0"
-            >
-              <StyledLabelText
-                className="emotion-3 emotion-0"
-              >
-                <span
-                  className="emotion-0 emotion-1 emotion-2"
-                >
-                  example
-                </span>
-              </StyledLabelText>
-            </LabelText>
-          </StyledHoc>
-          <StyledHoc
-            type="text"
+          <StyledComponent
+            className="c0"
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bxivhb",
+                  "isStatic": false,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "display: flex; flex-direction: column; box-sizing: border-box; :after {
+  content: ''; display: table; clear: both;
+}",
+                    [Function],
+                  ],
+                },
+                "displayName": "styled.label",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bxivhb",
+                "target": "label",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
           >
-            <Input
-              className="emotion-3 emotion-0"
-              type="text"
+            <label
+              className="c0 c1"
             >
-              <StyledInput
-                className="emotion-3 emotion-0"
-                type="text"
-              >
-                <input
-                  className="emotion-0 emotion-8 emotion-9"
-                  type="text"
-                />
-              </StyledInput>
-            </Input>
-          </StyledHoc>
-        </label>
-      </StyledLabel>
-    </Label>
-  </StyledHoc>
+              <Styled(LabelText)>
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bZQynM",
+                        "isStatic": false,
+                        "lastClassName": "c2",
+                        "rules": Array [
+                          [Function],
+                        ],
+                      },
+                      "displayName": "Styled(LabelText)",
+                      "foldedComponentIds": Array [],
+                      "propTypes": Object {
+                        "margin": [Function],
+                        "mb": [Function],
+                        "padding": [Function],
+                      },
+                      "render": [Function],
+                      "styledComponentId": "sc-bZQynM",
+                      "target": [Function],
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                      Symbol(Symbol.hasInstance): [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                >
+                  <LabelText
+                    className="c2"
+                  >
+                    <styled.span
+                      className="c2"
+                    >
+                      <StyledComponent
+                        className="c2"
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-EHOje",
+                              "isStatic": false,
+                              "lastClassName": "c3",
+                              "rules": Array [
+                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display: block; clear: none; font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3;
+} color: #0b0c0c; padding-bottom: 2px;",
+                                [Function],
+                              ],
+                            },
+                            "displayName": "styled.span",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-EHOje",
+                            "target": "span",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                      >
+                        <span
+                          className="c2 c3"
+                        >
+                          example
+                        </span>
+                      </StyledComponent>
+                    </styled.span>
+                  </LabelText>
+                </StyledComponent>
+              </Styled(LabelText)>
+              <Styled(Input)>
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-gqjmRU",
+                        "isStatic": false,
+                        "lastClassName": "c4",
+                        "rules": Array [
+                          [Function],
+                        ],
+                      },
+                      "displayName": "Styled(Input)",
+                      "foldedComponentIds": Array [],
+                      "propTypes": Object {
+                        "margin": [Function],
+                        "mb": [Function],
+                        "padding": [Function],
+                      },
+                      "render": [Function],
+                      "styledComponentId": "sc-gqjmRU",
+                      "target": [Function],
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                      Symbol(Symbol.hasInstance): [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                >
+                  <Input
+                    className="c4"
+                    type="text"
+                  >
+                    <styled.input
+                      className="c4"
+                      type="text"
+                    >
+                      <StyledComponent
+                        className="c4"
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-gZMcBi",
+                              "isStatic": false,
+                              "lastClassName": "c5",
+                              "rules": Array [
+                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
+}",
+                                "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0;
+}",
+                                "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+  margin: 0; -webkit-appearance: none;
+} &[type=\\"number\\"] {
+  -moz-appearance: textfield;
+}",
+                                [Function],
+                              ],
+                            },
+                            "displayName": "styled.input",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-gZMcBi",
+                            "target": "input",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                        type="text"
+                      >
+                        <input
+                          className="c4 c5"
+                          type="text"
+                        />
+                      </StyledComponent>
+                    </styled.input>
+                  </Input>
+                </StyledComponent>
+              </Styled(Input)>
+            </label>
+          </StyledComponent>
+        </styled.label>
+      </Label>
+    </StyledComponent>
+  </Styled(Label)>
 </InputField>
 `;

@@ -1,17 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LabelText matches noError snapshot: no error mount 1`] = `
-.emotion-3 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-1 {
+.c1 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,51 +12,106 @@ exports[`LabelText matches noError snapshot: no error mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
+}
+
+.c0 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c1 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c0 {
     margin-bottom: 0;
   }
 }
 
-<StyledHoc>
-  <LabelText
-    className="emotion-3 emotion-0"
+<Styled(LabelText)>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-ifAKCX",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(LabelText)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-ifAKCX",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
   >
-    <StyledLabelText
-      className="emotion-3 emotion-0"
+    <LabelText
+      className="c0"
     >
-      <span
-        className="emotion-0 emotion-1 emotion-2"
+      <styled.span
+        className="c0"
       >
-        example
-      </span>
-    </StyledLabelText>
-  </LabelText>
-</StyledHoc>
+        <StyledComponent
+          className="c0"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": false,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display: block; clear: none; font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3;
+} color: #0b0c0c; padding-bottom: 2px;",
+                  [Function],
+                ],
+              },
+              "displayName": "styled.span",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "span",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+        >
+          <span
+            className="c0 c1"
+          >
+            example
+          </span>
+        </StyledComponent>
+      </styled.span>
+    </LabelText>
+  </StyledComponent>
+</Styled(LabelText)>
 `;
 
 exports[`LabelText matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-3 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-1 {
+.c1 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -78,39 +123,106 @@ exports[`LabelText matches wrapper snapshot: wrapper mount 1`] = `
   color: #0b0c0c;
   padding-bottom: 2px;
   font-weight: 700;
+}
+
+.c0 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c1 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c0 {
     margin-bottom: 0;
   }
 }
 
-<StyledHoc
+<Styled(LabelText)
   error="example"
 >
-  <LabelText
-    className="emotion-3 emotion-0"
+  <StyledComponent
     error="example"
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-ifAKCX",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(LabelText)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-ifAKCX",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
   >
-    <StyledLabelText
-      className="emotion-3 emotion-0"
+    <LabelText
+      className="c0"
       error="example"
     >
-      <span
-        className="emotion-0 emotion-1 emotion-2"
+      <styled.span
+        className="c0"
+        error="example"
       >
-        example
-      </span>
-    </StyledLabelText>
-  </LabelText>
-</StyledHoc>
+        <StyledComponent
+          className="c0"
+          error="example"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": false,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display: block; clear: none; font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3;
+} color: #0b0c0c; padding-bottom: 2px;",
+                  [Function],
+                ],
+              },
+              "displayName": "styled.span",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "span",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+        >
+          <span
+            className="c0 c1"
+          >
+            example
+          </span>
+        </StyledComponent>
+      </styled.span>
+    </LabelText>
+  </StyledComponent>
+</Styled(LabelText)>
 `;

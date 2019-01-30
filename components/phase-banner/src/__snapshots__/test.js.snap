@@ -1,47 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-3 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-8 {
-  border-bottom: 1px solid #bfc1c3;
-  box-sizing: border-box;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 14px;
-  line-height: 1.1428571429;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
-    font-size: 16px;
-    line-height: 1.25;
-  }
-}
-
-.emotion-8 > a {
-  color: #005ea5;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-1 {
+exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
+.c3 {
   display: inline-block;
   margin: 0 8px 0 0;
   padding: 2px 5px;
@@ -60,11 +20,34 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   background-color: #005ea5;
   -webkit-font-mmoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.c2 {
+  margin-bottom: 0;
+}
+
+.c1 {
+  border-bottom: 1px solid #bfc1c3;
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.1428571429;
+}
+
+.c1 > a {
+  color: #005ea5;
+}
+
+.c0 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c3 {
     font-size: 16px;
     line-height: 1.25;
     padding-bottom: 0;
@@ -72,42 +55,180 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c2 {
     margin-bottom: 0;
   }
 }
 
-<StyledHoc
+@media only screen and (min-width:641px) {
+  .c1 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-bottom: 0;
+  }
+}
+
+<Styled(PhaseBanner)
   level="beta"
 >
-  <PhaseBanner
-    className="emotion-3 emotion-0"
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bZQynM",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(PhaseBanner)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-bZQynM",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
     level="beta"
   >
-    <StyledBanner
-      className="emotion-3 emotion-0"
+    <PhaseBanner
+      className="c0"
+      level="beta"
     >
-      <div
-        className="emotion-0 emotion-8 emotion-9"
+      <styled.div
+        className="c0"
       >
-        <StyledHoc>
-          <PhaseBadge
-            className="emotion-3 emotion-0"
+        <StyledComponent
+          className="c0"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-EHOje",
+                "isStatic": true,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "border-bottom: 1px solid #bfc1c3; box-sizing: border-box; padding-top: 10px; padding-bottom: 10px; font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 14px; line-height: 1.1428571429; @media only screen and (min-width: 641px) {
+  font-size: 16px; line-height: 1.25;
+} > a {
+  color: #005ea5;
+}",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-EHOje",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+        >
+          <div
+            className="c0 c1"
           >
-            <StyledBadge
-              className="emotion-3 emotion-0"
-            >
-              <strong
-                className="emotion-0 emotion-1 emotion-2"
+            <Styled(PhaseBadge)>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-ifAKCX",
+                      "isStatic": false,
+                      "lastClassName": "c2",
+                      "rules": Array [
+                        [Function],
+                      ],
+                    },
+                    "displayName": "Styled(PhaseBadge)",
+                    "foldedComponentIds": Array [],
+                    "propTypes": Object {
+                      "margin": [Function],
+                      "mb": [Function],
+                      "padding": [Function],
+                    },
+                    "render": [Function],
+                    "styledComponentId": "sc-ifAKCX",
+                    "target": [Function],
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                    Symbol(Symbol.hasInstance): [Function],
+                  }
+                }
+                forwardedRef={null}
               >
-                beta
-              </strong>
-            </StyledBadge>
-          </PhaseBadge>
-        </StyledHoc>
-        example
-      </div>
-    </StyledBanner>
-  </PhaseBanner>
-</StyledHoc>
+                <PhaseBadge
+                  className="c2"
+                >
+                  <styled.strong
+                    className="c2"
+                  >
+                    <StyledComponent
+                      className="c2"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bxivhb",
+                            "isStatic": true,
+                            "lastClassName": "c3",
+                            "rules": Array [
+                              "display: inline-block; margin: 0 8px 0 0; padding: 2px 5px; font-family: \\"nta\\", Arial, sans-serif; font-weight: 700; font-size: 14px; line-height: 1.1428571429; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; color: #ffffff; background-color: #005ea5; -webkit-font-mmoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media only screen and (min-width: 641px) {
+  font-size: 16px; line-height: 1.25; padding-bottom: 0;
+}",
+                            ],
+                          },
+                          "displayName": "styled.strong",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bxivhb",
+                          "target": "strong",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                    >
+                      <strong
+                        className="c2 c3"
+                      >
+                        beta
+                      </strong>
+                    </StyledComponent>
+                  </styled.strong>
+                </PhaseBadge>
+              </StyledComponent>
+            </Styled(PhaseBadge)>
+            example
+          </div>
+        </StyledComponent>
+      </styled.div>
+    </PhaseBanner>
+  </StyledComponent>
+</Styled(PhaseBanner)>
 `;

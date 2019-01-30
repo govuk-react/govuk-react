@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from 'styled-components';
 
 import { StyledInput } from '@govuk-react/input';
 import LabelText from '@govuk-react/label-text';
@@ -35,7 +35,7 @@ class Input extends React.Component {
           onChange={e => this.props.onChange(e, key)}
           onBlur={e => this.props.onBlur(e, key)}
           onFocus={e => this.props.onFocus(e, key)}
-          innerRef={(input) => { this.inputs[key] = input; this.props.refs(this.inputs); }}
+          ref={(input) => { this.inputs[key] = input; this.props.refs(this.inputs); }}
         />
       </StyledLabel>);
   }

@@ -1,13 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Cell from './';
+import { mount } from 'enzyme';
 
-const example = <table><tbody><tr><Cell alignRight>Example</Cell></tr></tbody></table>;
+import Cell from '.';
 
-describe(Cell, () => {
+describe('Cell', () => {
   it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<table><tbody><tr><Cell>Example</Cell></tr></tbody></table>, div);
-    ReactDOM.render(example, div);
+    mount(<table><tbody><tr><Cell alignRight>Example</Cell></tr></tbody></table>);
+
+    mount(<table><tbody><tr><Cell>Example</Cell></tr></tbody></table>);
   });
 });

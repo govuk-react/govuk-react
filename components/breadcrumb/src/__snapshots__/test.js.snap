@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
-.emotion-7 {
+exports[`breadcrumb matches snapshot: breadcrumb 1`] = `
+.c0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,34 +13,14 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
   margin-bottom: 10px;
 }
 
-@media print {
-  .emotion-7 {
-    font-size: 14px;
-    line-height: 1.2;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
-    font-size: 16px;
-    line-height: 1.25;
-  }
-}
-
-@media print {
-  .emotion-7 {
-    color: #000;
-  }
-}
-
-.emotion-4 {
+.c1 {
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: block;
 }
 
-.emotion-0 {
+.c2 {
   display: inline-block;
   position: relative;
   margin-bottom: 5px;
@@ -48,7 +28,7 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
   padding-left: 15.655000000000001px;
 }
 
-.emotion-0::before {
+.c2::before {
   content: '';
   display: block;
   position: absolute;
@@ -66,68 +46,257 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
   border-color: #6f777b;
 }
 
-.emotion-0:first-child {
+.c2:first-child {
   margin-left: 0;
   padding-left: 0;
 }
 
-.emotion-0:first-child::before {
+.c2:first-child::before {
   content: none;
   display: none;
 }
 
-.emotion-0 > a {
+.c2 > a {
   color: #0b0c0c;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0 > a:focus {
+.c2 > a:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
   background-color: #ffbf47;
 }
 
-<StyledHoc>
-  <Breadcrumb
-    className="emotion-9 emotion-6"
+@media print {
+  .c0 {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .c0 {
+    color: #000;
+  }
+}
+
+<Styled(Breadcrumb)>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bZQynM",
+          "isStatic": false,
+          "lastClassName": "bOrPFB",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(Breadcrumb)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-bZQynM",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
   >
-    <BreadcrumbContainer
-      className="emotion-9 emotion-6"
+    <Breadcrumb
+      className=""
     >
-      <div
-        className="emotion-6 emotion-7 emotion-8"
+      <styled.div
+        className=""
       >
-        <BreadcrumbList>
-          <ol
-            className="emotion-4 emotion-5"
+        <StyledComponent
+          className=""
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": true,
+                "lastClassName": "c0",
+                "rules": Array [
+                  "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.2;
+} font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
+  font-size: 16px; line-height: 1.25;
+}",
+                  "color: #0b0c0c; @media print {
+  color: #000;
+}",
+                  "margin-top: 15px; margin-bottom: 10px;",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+        >
+          <div
+            className="c0"
           >
-            <BreadcrumbListItem
-              key="0"
-            >
-              <li
-                className="emotion-0 emotion-1"
+            <styled.ol>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-ifAKCX",
+                      "isStatic": true,
+                      "lastClassName": "c1",
+                      "rules": Array [
+                        "margin: 0; padding: 0; list-style-type: none; display: block;",
+                      ],
+                    },
+                    "displayName": "styled.ol",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-ifAKCX",
+                    "target": "ol",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
               >
-                <a
-                  href="/section"
+                <ol
+                  className="c1"
                 >
-                  Section 1
-                </a>
-              </li>
-            </BreadcrumbListItem>
-            <BreadcrumbListItem
-              key="1"
-            >
-              <li
-                className="emotion-0 emotion-1"
-              >
-                example
-              </li>
-            </BreadcrumbListItem>
-          </ol>
-        </BreadcrumbList>
-      </div>
-    </BreadcrumbContainer>
-  </Breadcrumb>
-</StyledHoc>
+                  <styled.li
+                    key="0"
+                  >
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-EHOje",
+                            "isStatic": true,
+                            "lastClassName": "c2",
+                            "rules": Array [
+                              "display: inline-block; position: relative; margin-bottom: 5px; margin-left: 10px; padding-left: 15.655000000000001px; ::before {
+  content: ''; display: block; position: absolute; top: -1px; bottom: 1px; left: -3.3100000000000005px; width: 7px; height: 7px; margin: auto 0; transform: rotate(45deg); border: solid; border-width: 1px 1px 0 0; border-color: #6f777b;
+} :first-child {
+  margin-left: 0; padding-left: 0; ::before {
+  content: none; display: none;
+}
+} > a {
+  color: #0b0c0c; text-decoration: underline; &:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}
+}",
+                            ],
+                          },
+                          "displayName": "styled.li",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-EHOje",
+                          "target": "li",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                    >
+                      <li
+                        className="c2"
+                      >
+                        <a
+                          href="/section"
+                        >
+                          Section 1
+                        </a>
+                      </li>
+                    </StyledComponent>
+                  </styled.li>
+                  <styled.li
+                    key="1"
+                  >
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-EHOje",
+                            "isStatic": true,
+                            "lastClassName": "c2",
+                            "rules": Array [
+                              "display: inline-block; position: relative; margin-bottom: 5px; margin-left: 10px; padding-left: 15.655000000000001px; ::before {
+  content: ''; display: block; position: absolute; top: -1px; bottom: 1px; left: -3.3100000000000005px; width: 7px; height: 7px; margin: auto 0; transform: rotate(45deg); border: solid; border-width: 1px 1px 0 0; border-color: #6f777b;
+} :first-child {
+  margin-left: 0; padding-left: 0; ::before {
+  content: none; display: none;
+}
+} > a {
+  color: #0b0c0c; text-decoration: underline; &:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}
+}",
+                            ],
+                          },
+                          "displayName": "styled.li",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-EHOje",
+                          "target": "li",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                    >
+                      <li
+                        className="c2"
+                      >
+                        <a
+                          href="/section2"
+                        >
+                          Section 2
+                        </a>
+                      </li>
+                    </StyledComponent>
+                  </styled.li>
+                </ol>
+              </StyledComponent>
+            </styled.ol>
+          </div>
+        </StyledComponent>
+      </styled.div>
+    </Breadcrumb>
+  </StyledComponent>
+</Styled(Breadcrumb)>
 `;

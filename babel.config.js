@@ -7,6 +7,7 @@ const presets = [
 ];
 
 const plugins = [
+  'babel-plugin-styled-components',
   // Stage 1
   '@babel/plugin-proposal-export-default-from',
   // '@babel/plugin-proposal-logical-assignment-operators',
@@ -37,7 +38,6 @@ const plugins = [
     '@babel/plugin-transform-runtime',
     { helpers: false, regenerator: true },
   ],
-  ['emotion', { autoLabel: true }],
 ];
 
 const ignore = ['.spec.js', '.test.js', '-test.js', '/__tests__/'];

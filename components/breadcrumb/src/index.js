@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { BLACK, SECONDARY_TEXT_COLOUR } from 'govuk-colours';
 import { withWhiteSpace } from '@govuk-react/hoc';
@@ -64,13 +64,11 @@ const BreadcrumbListItem = styled('li')({
   },
 
   // Additions to help ensure links get coloured as we expect
-  '> a': [
-    {
-      color: `${BLACK}`,
-      textDecoration: 'underline',
-    },
-    FOCUSABLE_FILL,
-  ],
+  '> a': {
+    color: `${BLACK}`,
+    textDecoration: 'underline',
+    ...FOCUSABLE_FILL,
+  },
 });
 
 /**

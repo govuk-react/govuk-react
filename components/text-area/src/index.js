@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import { BLACK, YELLOW, ERROR_COLOUR } from 'govuk-colours';
 import {
   FONT_SIZE,

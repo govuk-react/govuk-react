@@ -1,44 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
-.emotion-3 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-1 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: block;
-  clear: none;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #0b0c0c;
-  padding-bottom: 2px;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-17 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -50,22 +13,36 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   border-left: 4px solid #b10e1e;
   margin-right: 15px;
   padding-left: 10px;
-  margin-bottom: 0;
 }
 
-.emotion-17:after {
+.c1:after {
   content: '';
   display: table;
   clear: both;
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-17 {
-    margin-bottom: 0;
-  }
+.c0 {
+  margin-bottom: 0;
 }
 
-.emotion-8 {
+.c3 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+}
+
+.c2 {
+  margin-bottom: 0;
+}
+
+.c4 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -78,21 +55,7 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   color: #b10e1e;
 }
 
-@media print {
-  .emotion-8 {
-    font-size: 14px;
-    line-height: 1.15;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
-    font-size: 19px;
-    line-height: 1.3157894736842106;
-  }
-}
-
-.emotion-14 {
+.c5 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
@@ -105,17 +68,50 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   border: 4px solid #b10e1e;
 }
 
+.c5:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
 @media only screen and (min-width:641px) {
-  .emotion-14 {
+  .c0 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c3 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c2 {
+    margin-bottom: 0;
+  }
+}
+
+@media print {
+  .c4 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c4 {
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c5 {
     font-size: 19px;
     line-height: 1.3;
     width: 75%;
   }
-}
-
-.emotion-14:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
 }
 
 <TextArea
@@ -128,83 +124,299 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
     }
   }
 >
-  <StyledHoc
+  <Styled(Label)
     error="example"
     errorText="example"
   >
-    <Label
-      className="emotion-3 emotion-0"
+    <StyledComponent
       error="example"
       errorText="example"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-ifAKCX",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              [Function],
+            ],
+          },
+          "displayName": "Styled(Label)",
+          "foldedComponentIds": Array [],
+          "propTypes": Object {
+            "margin": [Function],
+            "mb": [Function],
+            "padding": [Function],
+          },
+          "render": [Function],
+          "styledComponentId": "sc-ifAKCX",
+          "target": [Function],
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <StyledLabel
-        className="emotion-3 emotion-0"
+      <Label
+        className="c0"
         error="example"
         errorText="example"
       >
-        <label
-          className="emotion-0 emotion-17 emotion-18"
+        <styled.label
+          className="c0"
+          error="example"
+          errorText="example"
         >
-          <StyledHoc>
-            <LabelText
-              className="emotion-3 emotion-0"
-            >
-              <StyledLabelText
-                className="emotion-3 emotion-0"
-              >
-                <span
-                  className="emotion-0 emotion-1 emotion-2"
-                >
-                  example
-                </span>
-              </StyledLabelText>
-            </LabelText>
-          </StyledHoc>
-          <StyledHoc>
-            <ErrorText
-              className="emotion-10 emotion-0"
-            >
-              <StyledError
-                className="emotion-10 emotion-0"
-              >
-                <span
-                  className="emotion-0 emotion-8 emotion-9"
-                >
-                  example
-                </span>
-              </StyledError>
-            </ErrorText>
-          </StyledHoc>
-          <TextAreaField
+          <StyledComponent
+            className="c0"
             error="example"
-            rows="5"
-            type="text"
+            errorText="example"
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bxivhb",
+                  "isStatic": false,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "display: flex; flex-direction: column; box-sizing: border-box; :after {
+  content: ''; display: table; clear: both;
+}",
+                    [Function],
+                  ],
+                },
+                "displayName": "styled.label",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bxivhb",
+                "target": "label",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
           >
-            <textarea
-              className="emotion-14 emotion-15"
-              rows="5"
-              type="text"
-            />
-          </TextAreaField>
-        </label>
-      </StyledLabel>
-    </Label>
-  </StyledHoc>
+            <label
+              className="c0 c1"
+            >
+              <Styled(LabelText)>
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bZQynM",
+                        "isStatic": false,
+                        "lastClassName": "c2",
+                        "rules": Array [
+                          [Function],
+                        ],
+                      },
+                      "displayName": "Styled(LabelText)",
+                      "foldedComponentIds": Array [],
+                      "propTypes": Object {
+                        "margin": [Function],
+                        "mb": [Function],
+                        "padding": [Function],
+                      },
+                      "render": [Function],
+                      "styledComponentId": "sc-bZQynM",
+                      "target": [Function],
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                      Symbol(Symbol.hasInstance): [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                >
+                  <LabelText
+                    className="c2"
+                  >
+                    <styled.span
+                      className="c2"
+                    >
+                      <StyledComponent
+                        className="c2"
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-EHOje",
+                              "isStatic": false,
+                              "lastClassName": "c3",
+                              "rules": Array [
+                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display: block; clear: none; font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3;
+} color: #0b0c0c; padding-bottom: 2px;",
+                                [Function],
+                              ],
+                            },
+                            "displayName": "styled.span",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-EHOje",
+                            "target": "span",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                      >
+                        <span
+                          className="c2 c3"
+                        >
+                          example
+                        </span>
+                      </StyledComponent>
+                    </styled.span>
+                  </LabelText>
+                </StyledComponent>
+              </Styled(LabelText)>
+              <Styled(ErrorText)>
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-htoDjs",
+                        "isStatic": false,
+                        "lastClassName": "bZzhDu",
+                        "rules": Array [
+                          [Function],
+                        ],
+                      },
+                      "displayName": "Styled(ErrorText)",
+                      "foldedComponentIds": Array [],
+                      "propTypes": Object {
+                        "margin": [Function],
+                        "mb": [Function],
+                        "padding": [Function],
+                      },
+                      "render": [Function],
+                      "styledComponentId": "sc-htoDjs",
+                      "target": [Function],
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                      Symbol(Symbol.hasInstance): [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                >
+                  <ErrorText
+                    className=""
+                  >
+                    <styled.span
+                      className=""
+                    >
+                      <StyledComponent
+                        className=""
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-gzVnrw",
+                              "isStatic": true,
+                              "lastClassName": "c4",
+                              "rules": Array [
+                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 700; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
+}",
+                                "display: block; margin-bottom: 15px; clear: both; color: #b10e1e;",
+                              ],
+                            },
+                            "displayName": "styled.span",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-gzVnrw",
+                            "target": "span",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                      >
+                        <span
+                          className="c4"
+                        >
+                          example
+                        </span>
+                      </StyledComponent>
+                    </styled.span>
+                  </ErrorText>
+                </StyledComponent>
+              </Styled(ErrorText)>
+              <styled.textarea
+                error="example"
+                rows="5"
+                type="text"
+              >
+                <StyledComponent
+                  error="example"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-gZMcBi",
+                        "isStatic": false,
+                        "lastClassName": "c5",
+                        "rules": Array [
+                          "box-sizing: border-box; font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3; width: 75%;
+} width: 100%; padding: 5px 4px 4px; border: 2px solid #0b0c0c; :focus {
+  outline: 3px solid #ffbf47; outline-offset: 0;
+}",
+                          [Function],
+                        ],
+                      },
+                      "displayName": "styled.textarea",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-gZMcBi",
+                      "target": "textarea",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  rows="5"
+                  type="text"
+                >
+                  <textarea
+                    className="c5"
+                    rows="5"
+                    type="text"
+                  />
+                </StyledComponent>
+              </styled.textarea>
+            </label>
+          </StyledComponent>
+        </styled.label>
+      </Label>
+    </StyledComponent>
+  </Styled(Label)>
 </TextArea>
 `;
 
 exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
-.emotion-3 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-17 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -213,22 +425,19 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   box-sizing: border-box;
-  margin-bottom: 0;
 }
 
-.emotion-17:after {
+.c1:after {
   content: '';
   display: table;
   clear: both;
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-17 {
-    margin-bottom: 0;
-  }
+.c0 {
+  margin-bottom: 0;
 }
 
-.emotion-1 {
+.c3 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -239,48 +448,13 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   line-height: 1.25;
   color: #0b0c0c;
   padding-bottom: 2px;
+}
+
+.c2 {
   margin-bottom: 0;
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-14 {
-  box-sizing: border-box;
-  font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
-  width: 100%;
-  padding: 5px 4px 4px;
-  border: 2px solid #0b0c0c;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-14 {
-    font-size: 19px;
-    line-height: 1.3;
-    width: 75%;
-  }
-}
-
-.emotion-14:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-}
-
-.emotion-8 {
+.c4 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -292,145 +466,7 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   color: #6f777b;
 }
 
-@media print {
-  .emotion-8 {
-    font-size: 14px;
-    line-height: 1.15;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-8 {
-    font-size: 19px;
-    line-height: 1.3157894736842106;
-  }
-}
-
-<TextArea
-  hint="example"
-  input={Object {}}
-  meta={Object {}}
->
-  <StyledHoc>
-    <Label
-      className="emotion-3 emotion-0"
-    >
-      <StyledLabel
-        className="emotion-3 emotion-0"
-      >
-        <label
-          className="emotion-0 emotion-17 emotion-18"
-        >
-          <StyledHoc>
-            <LabelText
-              className="emotion-3 emotion-0"
-            >
-              <StyledLabelText
-                className="emotion-3 emotion-0"
-              >
-                <span
-                  className="emotion-0 emotion-1 emotion-2"
-                >
-                  example
-                </span>
-              </StyledLabelText>
-            </LabelText>
-          </StyledHoc>
-          <StyledHoc>
-            <HintText
-              className="emotion-10 emotion-0"
-            >
-              <StyledHint
-                className="emotion-10 emotion-0"
-              >
-                <span
-                  className="emotion-0 emotion-8 emotion-9"
-                >
-                  example
-                </span>
-              </StyledHint>
-            </HintText>
-          </StyledHoc>
-          <TextAreaField
-            rows="5"
-            type="text"
-          >
-            <textarea
-              className="emotion-14 emotion-15"
-              rows="5"
-              type="text"
-            />
-          </TextAreaField>
-        </label>
-      </StyledLabel>
-    </Label>
-  </StyledHoc>
-</TextArea>
-`;
-
-exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-3 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  box-sizing: border-box;
-  margin-bottom: 0;
-}
-
-.emotion-10:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-10 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-1 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: block;
-  clear: none;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #0b0c0c;
-  padding-bottom: 2px;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-7 {
+.c5 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
@@ -442,61 +478,617 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   border: 2px solid #0b0c0c;
 }
 
+.c5:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
 @media only screen and (min-width:641px) {
-  .emotion-7 {
+  .c0 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c3 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c2 {
+    margin-bottom: 0;
+  }
+}
+
+@media print {
+  .c4 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c4 {
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c5 {
     font-size: 19px;
     line-height: 1.3;
     width: 75%;
   }
 }
 
-.emotion-7:focus {
+<TextArea
+  hint="example"
+  input={Object {}}
+  meta={Object {}}
+>
+  <Styled(Label)>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-ifAKCX",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              [Function],
+            ],
+          },
+          "displayName": "Styled(Label)",
+          "foldedComponentIds": Array [],
+          "propTypes": Object {
+            "margin": [Function],
+            "mb": [Function],
+            "padding": [Function],
+          },
+          "render": [Function],
+          "styledComponentId": "sc-ifAKCX",
+          "target": [Function],
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <Label
+        className="c0"
+      >
+        <styled.label
+          className="c0"
+        >
+          <StyledComponent
+            className="c0"
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bxivhb",
+                  "isStatic": false,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "display: flex; flex-direction: column; box-sizing: border-box; :after {
+  content: ''; display: table; clear: both;
+}",
+                    [Function],
+                  ],
+                },
+                "displayName": "styled.label",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bxivhb",
+                "target": "label",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <label
+              className="c0 c1"
+            >
+              <Styled(LabelText)>
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bZQynM",
+                        "isStatic": false,
+                        "lastClassName": "c2",
+                        "rules": Array [
+                          [Function],
+                        ],
+                      },
+                      "displayName": "Styled(LabelText)",
+                      "foldedComponentIds": Array [],
+                      "propTypes": Object {
+                        "margin": [Function],
+                        "mb": [Function],
+                        "padding": [Function],
+                      },
+                      "render": [Function],
+                      "styledComponentId": "sc-bZQynM",
+                      "target": [Function],
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                      Symbol(Symbol.hasInstance): [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                >
+                  <LabelText
+                    className="c2"
+                  >
+                    <styled.span
+                      className="c2"
+                    >
+                      <StyledComponent
+                        className="c2"
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-EHOje",
+                              "isStatic": false,
+                              "lastClassName": "c3",
+                              "rules": Array [
+                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display: block; clear: none; font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3;
+} color: #0b0c0c; padding-bottom: 2px;",
+                                [Function],
+                              ],
+                            },
+                            "displayName": "styled.span",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-EHOje",
+                            "target": "span",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                      >
+                        <span
+                          className="c2 c3"
+                        >
+                          example
+                        </span>
+                      </StyledComponent>
+                    </styled.span>
+                  </LabelText>
+                </StyledComponent>
+              </Styled(LabelText)>
+              <Styled(HintText)>
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-iwsKbI",
+                        "isStatic": false,
+                        "lastClassName": "jQhHGA",
+                        "rules": Array [
+                          [Function],
+                        ],
+                      },
+                      "displayName": "Styled(HintText)",
+                      "foldedComponentIds": Array [],
+                      "propTypes": Object {
+                        "margin": [Function],
+                        "mb": [Function],
+                        "padding": [Function],
+                      },
+                      "render": [Function],
+                      "styledComponentId": "sc-iwsKbI",
+                      "target": [Function],
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                      Symbol(Symbol.hasInstance): [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                >
+                  <HintText
+                    className=""
+                  >
+                    <styled.span
+                      className=""
+                    >
+                      <StyledComponent
+                        className=""
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-dnqmqq",
+                              "isStatic": true,
+                              "lastClassName": "c4",
+                              "rules": Array [
+                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
+}",
+                                "display: block; margin-bottom: 15px; color: #6f777b;",
+                              ],
+                            },
+                            "displayName": "styled.span",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-dnqmqq",
+                            "target": "span",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                      >
+                        <span
+                          className="c4"
+                        >
+                          example
+                        </span>
+                      </StyledComponent>
+                    </styled.span>
+                  </HintText>
+                </StyledComponent>
+              </Styled(HintText)>
+              <styled.textarea
+                rows="5"
+                type="text"
+              >
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-gZMcBi",
+                        "isStatic": false,
+                        "lastClassName": "c5",
+                        "rules": Array [
+                          "box-sizing: border-box; font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3; width: 75%;
+} width: 100%; padding: 5px 4px 4px; border: 2px solid #0b0c0c; :focus {
+  outline: 3px solid #ffbf47; outline-offset: 0;
+}",
+                          [Function],
+                        ],
+                      },
+                      "displayName": "styled.textarea",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-gZMcBi",
+                      "target": "textarea",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  rows="5"
+                  type="text"
+                >
+                  <textarea
+                    className="c5"
+                    rows="5"
+                    type="text"
+                  />
+                </StyledComponent>
+              </styled.textarea>
+            </label>
+          </StyledComponent>
+        </styled.label>
+      </Label>
+    </StyledComponent>
+  </Styled(Label)>
+</TextArea>
+`;
+
+exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.c1:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.c0 {
+  margin-bottom: 0;
+}
+
+.c3 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+}
+
+.c2 {
+  margin-bottom: 0;
+}
+
+.c4 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+}
+
+.c4:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c3 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c2 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c4 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 75%;
+  }
 }
 
 <TextArea
   input={Object {}}
   meta={Object {}}
 >
-  <StyledHoc>
-    <Label
-      className="emotion-3 emotion-0"
+  <Styled(Label)>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-ifAKCX",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              [Function],
+            ],
+          },
+          "displayName": "Styled(Label)",
+          "foldedComponentIds": Array [],
+          "propTypes": Object {
+            "margin": [Function],
+            "mb": [Function],
+            "padding": [Function],
+          },
+          "render": [Function],
+          "styledComponentId": "sc-ifAKCX",
+          "target": [Function],
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <StyledLabel
-        className="emotion-3 emotion-0"
+      <Label
+        className="c0"
       >
-        <label
-          className="emotion-0 emotion-10 emotion-11"
+        <styled.label
+          className="c0"
         >
-          <StyledHoc>
-            <LabelText
-              className="emotion-3 emotion-0"
-            >
-              <StyledLabelText
-                className="emotion-3 emotion-0"
-              >
-                <span
-                  className="emotion-0 emotion-1 emotion-2"
-                >
-                  example
-                </span>
-              </StyledLabelText>
-            </LabelText>
-          </StyledHoc>
-          <TextAreaField
-            rows="5"
-            type="text"
+          <StyledComponent
+            className="c0"
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bxivhb",
+                  "isStatic": false,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "display: flex; flex-direction: column; box-sizing: border-box; :after {
+  content: ''; display: table; clear: both;
+}",
+                    [Function],
+                  ],
+                },
+                "displayName": "styled.label",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bxivhb",
+                "target": "label",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
           >
-            <textarea
-              className="emotion-7 emotion-8"
-              rows="5"
-              type="text"
-            />
-          </TextAreaField>
-        </label>
-      </StyledLabel>
-    </Label>
-  </StyledHoc>
+            <label
+              className="c0 c1"
+            >
+              <Styled(LabelText)>
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bZQynM",
+                        "isStatic": false,
+                        "lastClassName": "c2",
+                        "rules": Array [
+                          [Function],
+                        ],
+                      },
+                      "displayName": "Styled(LabelText)",
+                      "foldedComponentIds": Array [],
+                      "propTypes": Object {
+                        "margin": [Function],
+                        "mb": [Function],
+                        "padding": [Function],
+                      },
+                      "render": [Function],
+                      "styledComponentId": "sc-bZQynM",
+                      "target": [Function],
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                      Symbol(Symbol.hasInstance): [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                >
+                  <LabelText
+                    className="c2"
+                  >
+                    <styled.span
+                      className="c2"
+                    >
+                      <StyledComponent
+                        className="c2"
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-EHOje",
+                              "isStatic": false,
+                              "lastClassName": "c3",
+                              "rules": Array [
+                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display: block; clear: none; font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3;
+} color: #0b0c0c; padding-bottom: 2px;",
+                                [Function],
+                              ],
+                            },
+                            "displayName": "styled.span",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-EHOje",
+                            "target": "span",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                      >
+                        <span
+                          className="c2 c3"
+                        >
+                          example
+                        </span>
+                      </StyledComponent>
+                    </styled.span>
+                  </LabelText>
+                </StyledComponent>
+              </Styled(LabelText)>
+              <styled.textarea
+                rows="5"
+                type="text"
+              >
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-gZMcBi",
+                        "isStatic": false,
+                        "lastClassName": "c4",
+                        "rules": Array [
+                          "box-sizing: border-box; font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3; width: 75%;
+} width: 100%; padding: 5px 4px 4px; border: 2px solid #0b0c0c; :focus {
+  outline: 3px solid #ffbf47; outline-offset: 0;
+}",
+                          [Function],
+                        ],
+                      },
+                      "displayName": "styled.textarea",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-gZMcBi",
+                      "target": "textarea",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  rows="5"
+                  type="text"
+                >
+                  <textarea
+                    className="c4"
+                    rows="5"
+                    type="text"
+                  />
+                </StyledComponent>
+              </styled.textarea>
+            </label>
+          </StyledComponent>
+        </styled.label>
+      </Label>
+    </StyledComponent>
+  </Styled(Label)>
 </TextArea>
 `;

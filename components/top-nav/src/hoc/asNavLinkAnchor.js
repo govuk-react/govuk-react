@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import { YELLOW, BLACK } from 'govuk-colours';
 import { asTopNavAnchor } from '../';
 

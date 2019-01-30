@@ -5,7 +5,7 @@ import SVG from './';
 
 const wrapper = <SVG>Example</SVG>;
 
-describe(SVG, () => {
+describe('SVG', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(wrapper, div);

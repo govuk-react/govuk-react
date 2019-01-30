@@ -10,9 +10,9 @@
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
-    "emotion": ">=9",
+
     "react": ">=16.2.0",
-    "react-emotion": ">=9",
+    "styled-components": ">=4",
     "react-markdown": ">=3.2"
   },
   "scripts": {

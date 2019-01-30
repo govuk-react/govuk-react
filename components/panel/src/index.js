@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { TURQUOISE, WHITE } from 'govuk-colours';
 import { withWhiteSpace } from '@govuk-react/hoc';

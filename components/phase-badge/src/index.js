@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import React from 'react';
 import { BLUE, WHITE } from 'govuk-colours';
 import {

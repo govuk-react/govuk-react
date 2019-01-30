@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from 'styled-components';
 
 import { BLACK, ERROR_COLOUR } from 'govuk-colours';
 import { withWhiteSpace } from '@govuk-react/hoc';

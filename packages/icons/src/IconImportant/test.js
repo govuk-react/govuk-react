@@ -5,7 +5,7 @@ import IconImportant from './';
 
 const wrapper = <IconImportant>Example</IconImportant>;
 
-describe(IconImportant, () => {
+describe('IconImportant', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(wrapper, div);

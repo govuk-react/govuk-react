@@ -16,7 +16,7 @@ const wrapper = (
   </UnorderedList>
 );
 
-describe(UnorderedList, () => {
+describe('UnorderedList', () => {
   it('renders with and without props, without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<UnorderedList>Example</UnorderedList>, div);

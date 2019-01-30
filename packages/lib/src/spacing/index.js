@@ -24,7 +24,7 @@ export function simple(size) {
 }
 
 function styleForDirection(size, property, direction) {
-  // NB emotion automatically sets style to include `px` if needed
+  // NB styled-components automatically sets style to include `px` if needed
   return {
     [(direction && direction !== 'all') ? `${property}-${direction}` : property]: size,
   };

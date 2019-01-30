@@ -5,7 +5,7 @@ import { MEDIA_QUERIES } from '@govuk-react/constants';
 import { typography } from '@govuk-react/lib';
 import CrownIcon from '@govuk-react/icon-crown';
 
-import styled from 'react-emotion';
+import styled from 'styled-components';
 
 import TopNavWrapper from './atoms/top-nav-wrapper';
 import TopNavInner from './atoms/top-nav-inner';

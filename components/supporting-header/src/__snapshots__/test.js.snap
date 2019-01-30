@@ -1,51 +1,105 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SupportingHeader matches wrapper snapshot 1`] = `
-.emotion-3 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-1 {
+.c1 {
   font-family: "nta",Arial,sans-serif;
   font-size: 20px;
   line-height: 1.11111;
   color: #6f777b;
   padding-bottom: 7px;
+}
+
+.c0 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c1 {
     font-size: 27px;
     padding-bottom: 6px;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c0 {
     margin-bottom: 0;
   }
 }
 
-<StyledHoc>
-  <SupportingHeader
-    className="emotion-3 emotion-0"
+<Styled(SupportingHeader)>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-ifAKCX",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(SupportingHeader)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-ifAKCX",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
   >
-    <StyledHeader
-      className="emotion-3 emotion-0"
+    <SupportingHeader
+      className="c0"
     >
-      <span
-        className="emotion-0 emotion-1 emotion-2"
+      <styled.span
+        className="c0"
       >
-        Heading text
-      </span>
-    </StyledHeader>
-  </SupportingHeader>
-</StyledHoc>
+        <StyledComponent
+          className="c0"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": true,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "font-family: \\"nta\\", Arial, sans-serif; font-size: 20px; line-height: 1.11111; color: #6f777b; padding-bottom: 7px; @media only screen and (min-width: 641px) {
+  font-size: 27px; padding-bottom: 6px;
+}",
+                ],
+              },
+              "displayName": "styled.span",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "span",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+        >
+          <span
+            className="c0 c1"
+          >
+            Heading text
+          </span>
+        </StyledComponent>
+      </styled.span>
+    </SupportingHeader>
+  </StyledComponent>
+</Styled(SupportingHeader)>
 `;

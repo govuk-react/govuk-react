@@ -5,7 +5,7 @@ import Search from './';
 
 const wrapper = <Search>Example</Search>;
 
-describe(Search, () => {
+describe('Search', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(wrapper, div);

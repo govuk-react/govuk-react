@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
-import Table from './';
+import Table from '.';
 import Row from './atoms/Row';
 import Cell from './atoms/Cell';
 
@@ -14,7 +14,7 @@ const exampleWithHead = (
   />
 );
 
-describe(Table, () => {
+describe('Table', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(example, div);

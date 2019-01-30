@@ -1,28 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-3 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-1 {
+exports[`ListItem matches wrapper snapshot: wrapper mount 1`] = `
+.c1 {
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
   font-size: 14px;
   line-height: 1.1428571429;
   width: 100%;
+}
+
+.c0 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c1 {
     font-size: 16px;
     line-height: 1.25;
     margin-bottom: 5px;
@@ -30,24 +23,85 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c0 {
     margin-bottom: 0;
   }
 }
 
-<StyledHoc>
-  <ListItem
-    className="emotion-3 emotion-0"
+<Styled(ListItem)>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-ifAKCX",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(ListItem)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-ifAKCX",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
   >
-    <StyledListItem
-      className="emotion-3 emotion-0"
+    <ListItem
+      className="c0"
     >
-      <li
-        className="emotion-0 emotion-1 emotion-2"
+      <styled.li
+        className="c0"
       >
-        example
-      </li>
-    </StyledListItem>
-  </ListItem>
-</StyledHoc>
+        <StyledComponent
+          className="c0"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": true,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 14px; line-height: 1.1428571429; width: 100%; @media only screen and (min-width: 641px) {
+  font-size: 16px; line-height: 1.25; margin-bottom: 5px;
+}",
+                ],
+              },
+              "displayName": "styled.li",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "li",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+        >
+          <li
+            className="c0 c1"
+          >
+            example
+          </li>
+        </StyledComponent>
+      </styled.li>
+    </ListItem>
+  </StyledComponent>
+</Styled(ListItem)>
 `;
