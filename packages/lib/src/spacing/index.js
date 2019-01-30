@@ -19,8 +19,9 @@ export function simple(size) {
 }
 
 function styleForDirection(size, property, direction) {
+  // NB emotion automatically sets style to include `px` if needed
   return {
-    [(direction && direction !== 'all') ? `${property}-${direction}` : property]: `${size}px`,
+    [(direction && direction !== 'all') ? `${property}-${direction}` : property]: size,
   };
 }
 
@@ -63,13 +64,25 @@ export function responsive({
   );
 }
 
-export function responsiveMargin({ size, direction, adjustment }) {
+export function responsiveMargin(value) {
+  if (Number.isInteger(value)) {
+    return responsive({ size: value, property: 'margin' });
+  }
+
+  const { size, direction, adjustment } = value;
+
   return responsive({
     size, property: 'margin', direction, adjustment,
   });
 }
 
-export function responsivePadding({ size, direction, adjustment }) {
+export function responsivePadding(value) {
+  if (Number.isInteger(value)) {
+    return responsive({ size: value, property: 'padding' });
+  }
+
+  const { size, direction, adjustment } = value;
+
   return responsive({
     size, property: 'padding', direction, adjustment,
   });
