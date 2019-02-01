@@ -118,4 +118,104 @@ describe('spacing lib', () => {
       });
     });
   });
+
+  describe('withWhiteSpace', () => {
+    it('generates an executable white-space styling function with no config', () => {
+      const whiteSpaceFunc = spacing.withWhiteSpace();
+
+      expect(() => whiteSpaceFunc()).not.toThrow();
+    });
+
+    describe('marginBottom/mb config and props', () => {
+      it('works with marginBottom config', () => {
+        const whiteSpaceFunc = spacing.withWhiteSpace({ marginBottom: 2 });
+
+        expect(whiteSpaceFunc()).toEqual(expect.arrayContaining([
+          expect.objectContaining({ 'margin-bottom': SPACING_MAP[2].mobile }),
+        ]));
+      });
+
+      it('when marginBottom config set, mb prop changes marginBottom', () => {
+        const whiteSpaceFunc = spacing.withWhiteSpace({ marginBottom: 2 });
+
+        expect(whiteSpaceFunc({ mb: 4 })).toEqual(expect.arrayContaining([
+          expect.objectContaining({ 'margin-bottom': SPACING_MAP[4].mobile }),
+        ]));
+      });
+
+      it('when no marginBottom config set, mb prop changes marginBottom', () => {
+        const whiteSpaceFunc = spacing.withWhiteSpace();
+
+        expect(whiteSpaceFunc({ mb: 4 })).toEqual(expect.arrayContaining([
+          expect.objectContaining({ 'margin-bottom': SPACING_MAP[4].mobile }),
+        ]));
+      });
+    });
+
+    describe('margin config/props', () => {
+      it('works with simple margin config value', () => {
+        const whiteSpaceFunc = spacing.withWhiteSpace({ margin: 4 });
+
+        expect(whiteSpaceFunc()).toEqual(expect.arrayContaining([
+          expect.objectContaining({ margin: SPACING_MAP[4].mobile }),
+        ]));
+      });
+
+      it('accepts a margin prop to override config', () => {
+        const whiteSpaceFunc = spacing.withWhiteSpace({ margin: 1 });
+
+        expect(whiteSpaceFunc({ margin: 4 })).toEqual(expect.arrayContaining([
+          expect.objectContaining({ margin: SPACING_MAP[4].mobile }),
+        ]));
+      });
+
+      it('accepts an array of margins', () => {
+        const whiteSpaceFunc = spacing.withWhiteSpace({ margin: [1, { direction: 'top', size: 3 }] });
+
+        // styles need to be flattened for checking
+        const result = [].concat(...whiteSpaceFunc());
+
+        expect(result).toEqual(expect.arrayContaining([
+          expect.objectContaining({ margin: SPACING_MAP[1].mobile }),
+        ]));
+
+        expect(result).toEqual(expect.arrayContaining([
+          expect.objectContaining({ 'margin-top': SPACING_MAP[3].mobile }),
+        ]));
+      });
+    });
+
+    describe('padding config/props', () => {
+      it('works with simple padding config value', () => {
+        const whiteSpaceFunc = spacing.withWhiteSpace({ padding: 4 });
+
+        expect(whiteSpaceFunc()).toEqual(expect.arrayContaining([
+          expect.objectContaining({ padding: SPACING_MAP[4].mobile }),
+        ]));
+      });
+
+      it('accepts a padding prop to override config', () => {
+        const whiteSpaceFunc = spacing.withWhiteSpace({ padding: 1 });
+
+        expect(whiteSpaceFunc({ padding: 4 })).toEqual(expect.arrayContaining([
+          expect.objectContaining({ padding: SPACING_MAP[4].mobile }),
+        ]));
+      });
+
+      it('accepts an array of paddings', () => {
+        const whiteSpaceFunc = spacing.withWhiteSpace({ padding: [1, { direction: 'top', size: 3 }] });
+
+        // styles need to be flattened for checking
+        const result = [].concat(...whiteSpaceFunc());
+
+        expect(result).toEqual(expect.arrayContaining([
+          expect.objectContaining({ padding: SPACING_MAP[1].mobile }),
+        ]));
+
+        expect(result).toEqual(expect.arrayContaining([
+          expect.objectContaining({ 'padding-top': SPACING_MAP[3].mobile }),
+        ]));
+      });
+    });
+  });
 });
