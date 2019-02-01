@@ -304,8 +304,8 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   font-size: 16px;
   line-height: 1.25;
   display: block;
+  margin-bottom: 15px;
   color: #6f777b;
-  margin-bottom: 0;
 }
 
 @media print {
@@ -319,12 +319,6 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   .emotion-64 {
     font-size: 19px;
     line-height: 1.3157894736842106;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-64 {
-    margin-bottom: 0;
   }
 }
 
@@ -688,10 +682,10 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
               </StyledHoc>
               <StyledHoc>
                 <HintText
-                  className="emotion-27 emotion-0"
+                  className="emotion-6 emotion-0"
                 >
                   <StyledHint
-                    className="emotion-27 emotion-0"
+                    className="emotion-6 emotion-0"
                   >
                     <span
                       className="emotion-0 emotion-64 emotion-65"

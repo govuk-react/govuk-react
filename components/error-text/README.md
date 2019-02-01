@@ -12,11 +12,11 @@ ErrorText
 
 Simple
 ```jsx
-<ErrorText errorText="example">Example</ErrorText>
+<ErrorText>Example</ErrorText>
 ```
 
 ### References
-- https://github.com/alphagov/govuk-frontend/tree/master/src/components
+- https://github.com/alphagov/govuk-frontend/blob/master/src/components/error-message/_error-message.scss
 
 ### Properties
 Prop | Required | Default | Type | Description

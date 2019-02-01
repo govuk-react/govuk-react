@@ -108,16 +108,9 @@ exports[`Radio can render with hint text: hint text 1`] = `
 }
 
 .emotion-7 {
-  margin-bottom: 0;
   display: block;
   padding-left: 15px;
   padding-right: 15px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
-    margin-bottom: 0;
-  }
 }
 
 .emotion-5 {
@@ -128,8 +121,8 @@ exports[`Radio can render with hint text: hint text 1`] = `
   font-size: 16px;
   line-height: 1.25;
   display: block;
+  margin-bottom: 15px;
   color: #6f777b;
-  margin-bottom: 0;
   display: block;
   padding-left: 15px;
   padding-right: 15px;
@@ -146,12 +139,6 @@ exports[`Radio can render with hint text: hint text 1`] = `
   .emotion-5 {
     font-size: 19px;
     line-height: 1.3157894736842106;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-5 {
-    margin-bottom: 0;
   }
 }
 
