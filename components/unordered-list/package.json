@@ -2,12 +2,12 @@
   "name": "@govuk-react/unordered-list",
   "version": "0.5.1",
   "dependencies": {
-    "@govuk-react/constants": "^0.5.1",
-    "@govuk-react/hoc": "^0.5.1",
-    "govuk-colours": "^1.0.3"
+    "@govuk-react/ordered-list": "^0.5.1"
+  },
+  "devDependencies": {
+    "@govuk-react/hoc": "^0.5.1"
   },
   "peerDependencies": {
-
     "react": ">=16.2.0",
     "styled-components": ">=4"
   },

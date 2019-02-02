@@ -21,7 +21,7 @@ describe('UnorderedList', () => {
     const div = document.createElement('div');
     ReactDOM.render(<UnorderedList>Example</UnorderedList>, div);
     ReactDOM.render(
-      <UnorderedList listStyleType="none">Example</UnorderedList>,
+      <UnorderedList listStyleType="number">Example</UnorderedList>,
       div,
     );
   });

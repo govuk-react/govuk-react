@@ -11,6 +11,7 @@ OrderedList
 
 Simple
 ```jsx
+import OrderedList from '@govuk-react/ordered-list';
 import ListItem from '@govuk-react/list-item';
 
 <OrderedList>
@@ -22,6 +23,7 @@ import ListItem from '@govuk-react/list-item';
 
 with Roman
 ```jsx
+import OrderedList from '@govuk-react/ordered-list';
 import ListItem from '@govuk-react/list-item';
 
 <OrderedList listStyleType="lower-roman">
@@ -32,7 +34,8 @@ import ListItem from '@govuk-react/list-item';
 ```
 
 ### References
-- https://govuk-static.herokuapp.com/component-guide/government_navigation
+- https://design-system.service.gov.uk/styles/typography/#lists
+- https://github.com/alphagov/govuk-frontend/blob/master/src/core/_lists.scss
 
 ### TODO
 - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
@@ -40,6 +43,7 @@ import ListItem from '@govuk-react/list-item';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`
+ `children` | true | `````` | node | One or more ListItem components
+ `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend
 
 

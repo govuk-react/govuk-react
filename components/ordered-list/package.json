@@ -4,10 +4,11 @@
   "dependencies": {
     "@govuk-react/constants": "^0.5.1",
     "@govuk-react/hoc": "^0.5.1",
+    "@govuk-react/lib": "^0.5.1",
+    "@govuk-react/list-item": "^0.5.1",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
-
     "react": ">=16.2.0",
     "styled-components": ">=4"
   },
