@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 
 import Pagination from './';
 
-describe(Pagination, () => {
+describe('Pagination', () => {
   const wrapper = <Pagination>Example</Pagination>;
 
   it('renders without crashing', () => {

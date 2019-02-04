@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ERROR_COLOUR } from 'govuk-colours';

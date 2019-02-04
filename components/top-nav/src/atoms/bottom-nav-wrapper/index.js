@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import { BLUE } from 'govuk-colours';
 import {
   MEDIA_QUERIES,

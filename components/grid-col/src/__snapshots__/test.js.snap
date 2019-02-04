@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`GridCol matches snapshot: enzyme.mount 1`] = `
-.emotion-0 {
+.c0 {
   box-sizing: border-box;
   padding-right: 15px;
   padding-left: 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .c0 {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
@@ -26,17 +26,48 @@ exports[`GridCol matches snapshot: enzyme.mount 1`] = `
   columnOneThird={false}
   columnTwoThirds={false}
 >
-  <StyledColumn
+  <styled.div
     columnOneHalf={false}
     columnOneQuarter={false}
     columnOneThird={false}
     columnTwoThirds={false}
   >
-    <div
-      className="emotion-0 emotion-1"
+    <StyledComponent
+      columnOneHalf={false}
+      columnOneQuarter={false}
+      columnOneThird={false}
+      columnTwoThirds={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "box-sizing: border-box; padding-right: 15px; padding-left: 15px;",
+              [Function],
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      example
-    </div>
-  </StyledColumn>
+      <div
+        className="c0"
+      >
+        example
+      </div>
+    </StyledComponent>
+  </styled.div>
 </GridCol>
 `;

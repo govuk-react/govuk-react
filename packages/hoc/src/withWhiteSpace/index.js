@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import { spacing } from '@govuk-react/lib';
 
 // NB withWhiteSpace HOC is DEPRECATED

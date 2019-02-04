@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, number, object, text } from '@storybook/addon-knobs/react';
 

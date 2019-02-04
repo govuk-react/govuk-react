@@ -1,17 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-7 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-5 {
+exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
+.c1 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -19,16 +9,9 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   display: flex;
   width: 100%;
   background: #ffffff;
-  margin-bottom: 0;
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-5 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-0 {
+.c2 {
   width: 100%;
   height: 40px;
   padding: 6px;
@@ -46,17 +29,17 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   -webkit-appearance: none;
 }
 
-.emotion-0:focus {
+.c2:focus {
   margin-right: 3px;
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.emotion-0:focus ~ button {
+.c2:focus ~ button {
   width: 46px;
 }
 
-.emotion-2 {
+.c3 {
   background-color: #2b8cc4;
   border: 0;
   display: block;
@@ -71,75 +54,206 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   overflow: hidden;
 }
 
-.emotion-2:focus {
+.c3:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-<StyledHoc
+.c0 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-bottom: 0;
+  }
+}
+
+<Styled(SearchBox)
   placeholder="example"
 >
-  <SearchBox
-    className="emotion-7 emotion-4"
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bZQynM",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(SearchBox)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-bZQynM",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
     placeholder="example"
   >
-    <SearchBoxWrapper
-      className="emotion-7 emotion-4"
+    <SearchBox
+      className="c0"
+      placeholder="example"
     >
-      <div
-        className="emotion-4 emotion-5 emotion-6"
+      <styled.div
+        className="c0"
       >
-        <InputSearchBox
-          placeholder="example"
-          type="search"
+        <StyledComponent
+          className="c0"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": true,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "box-sizing: border-box; display: flex; width: 100%; background: #ffffff;",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
         >
-          <input
-            className="emotion-0 emotion-1"
-            placeholder="example"
-            type="search"
-          />
-        </InputSearchBox>
-        <SearchButton
-          title="Search"
-        >
-          <button
-            className="emotion-2 emotion-3"
-            title="Search"
+          <div
+            className="c0 c1"
           >
-            <Search
-              fill="#ffffff"
+            <styled.input
+              placeholder="example"
+              type="search"
+            >
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-ifAKCX",
+                      "isStatic": true,
+                      "lastClassName": "c2",
+                      "rules": Array [
+                        "width: 100%; height: 40px; padding: 6px; margin: 0; border: solid 1px #bfc1c3; border-right: 0; box-sizing: border-box; font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 16px; line-height: 1.75; background: #ffffff; border-radius: 0; -webkit-appearance: none; :focus {
+  margin-right: 3px; outline: 3px solid #ffbf47; outline-offset: 0;  ~ button {
+  width: 46px;
+}
+}",
+                      ],
+                    },
+                    "displayName": "styled.input",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-ifAKCX",
+                    "target": "input",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                placeholder="example"
+                type="search"
+              >
+                <input
+                  className="c2"
+                  placeholder="example"
+                  type="search"
+                />
+              </StyledComponent>
+            </styled.input>
+            <styled.button
               title="Search"
             >
-              <SVG
-                fill="#ffffff"
-                title="Search"
-                viewBox="0 0 57 57"
-              >
-                <svg
-                  fill="#ffffff"
-                  height="100%"
-                  style={
-                    Object {
-                      "display": "block",
-                    }
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-EHOje",
+                      "isStatic": true,
+                      "lastClassName": "c3",
+                      "rules": Array [
+                        "background-color: #2b8cc4; border: 0; display: block; color: #ffffff; position: relative; padding: 10px; width: 45px; height: 40px; background-repeat: no-repeat; background-position: 2px 50%; text-indent: -999em; overflow: hidden; :focus {
+  outline: 3px solid #ffbf47; outline-offset: 0;
+}",
+                      ],
+                    },
+                    "displayName": "styled.button",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-EHOje",
+                    "target": "button",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
                   }
-                  version="1.1"
-                  viewBox="0 0 57 57"
-                  width="100%"
+                }
+                forwardedRef={null}
+                title="Search"
+              >
+                <button
+                  className="c3"
+                  title="Search"
                 >
-                  <title>
-                    Search
-                  </title>
-                  <path
-                    d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23 s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92 c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17 s-17-7.626-17-17S14.61,6,23.984,6z"
-                  />
-                </svg>
-              </SVG>
-            </Search>
-          </button>
-        </SearchButton>
-      </div>
-    </SearchBoxWrapper>
-  </SearchBox>
-</StyledHoc>
+                  <Search
+                    fill="#ffffff"
+                    title="Search"
+                  >
+                    <SVG
+                      fill="#ffffff"
+                      title="Search"
+                      viewBox="0 0 57 57"
+                    >
+                      <svg
+                        fill="#ffffff"
+                        height="100%"
+                        style={
+                          Object {
+                            "display": "block",
+                          }
+                        }
+                        version="1.1"
+                        viewBox="0 0 57 57"
+                        width="100%"
+                      >
+                        <title>
+                          Search
+                        </title>
+                        <path
+                          d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23 s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92 c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17 s-17-7.626-17-17S14.61,6,23.984,6z"
+                        />
+                      </svg>
+                    </SVG>
+                  </Search>
+                </button>
+              </StyledComponent>
+            </styled.button>
+          </div>
+        </StyledComponent>
+      </styled.div>
+    </SearchBox>
+  </StyledComponent>
+</Styled(SearchBox)>
 `;

@@ -1,121 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox can render with hint text: hint text 1`] = `
-.emotion-14 {
-  margin-bottom: 10px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-14 {
-    margin-bottom: 10px;
-  }
-}
-
-.emotion-12 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  display: block;
-  position: relative;
-  min-height: 40px;
-  padding: 0 0 0 40px;
-  clear: left;
-  margin-bottom: 10px;
-}
-
-@media print {
-  .emotion-12 {
-    font-size: 14px;
-    line-height: 1.15;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-12 {
-    font-size: 19px;
-    line-height: 1.3157894736842106;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-12 {
-    margin-bottom: 10px;
-  }
-}
-
-.emotion-0 {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.emotion-0:checked + span:after {
-  opacity: 1;
-}
-
-.emotion-0:focus + span:before {
-  outline: 3px solid transparent;
-  outline-offset: 3px;
-  box-shadow: 0 0 0 3px #ffbf47;
-}
-
-.emotion-0 + span {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.emotion-2 {
-  display: inline-block;
-  cursor: pointer;
-  padding: 8px 15px 5px;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-}
-
-.emotion-2::before {
-  content: '';
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  border: 2px solid black;
-  background: transparent;
-}
-
-.emotion-2::after {
-  content: '';
-  position: absolute;
-  top: 11px;
-  left: 9px;
-  width: 18px;
-  height: 7px;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  border: solid;
-  border-width: 0 0 5px 5px;
-  border-top-color: transparent;
-  background: transparent;
-  opacity: 0;
-}
-
-.emotion-7 {
-  display: block;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.emotion-5 {
+.c5 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -125,86 +11,9 @@ exports[`Checkbox can render with hint text: hint text 1`] = `
   display: block;
   margin-bottom: 15px;
   color: #6f777b;
-  display: block;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
-@media print {
-  .emotion-5 {
-    font-size: 14px;
-    line-height: 1.15;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-5 {
-    font-size: 19px;
-    line-height: 1.3157894736842106;
-  }
-}
-
-<StyledHoc
-  hint="Hint text"
->
-  <Checkbox
-    className="emotion-14 emotion-11"
-    hint="Hint text"
-  >
-    <StyledCheckbox
-      className="emotion-14 emotion-11"
-    >
-      <label
-        className="emotion-11 emotion-12 emotion-13"
-      >
-        <StyledInput
-          type="checkbox"
-        >
-          <input
-            className="emotion-0 emotion-1"
-            type="checkbox"
-          />
-        </StyledInput>
-        <StyledLabel>
-          <span
-            className="emotion-2 emotion-3"
-          >
-            Example with hint text
-          </span>
-        </StyledLabel>
-        <StyledCheckboxHint>
-          <HintText
-            className="emotion-7 emotion-4"
-          >
-            <StyledHint
-              className="emotion-7 emotion-4"
-            >
-              <span
-                className="emotion-4 emotion-5 emotion-6"
-              >
-                Hint text
-              </span>
-            </StyledHint>
-          </HintText>
-        </StyledCheckboxHint>
-      </label>
-    </StyledCheckbox>
-  </Checkbox>
-</StyledHoc>
-`;
-
-exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-7 {
-  margin-bottom: 10px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
-    margin-bottom: 10px;
-  }
-}
-
-.emotion-5 {
+.c1 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -216,30 +25,9 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   min-height: 40px;
   padding: 0 0 0 40px;
   clear: left;
-  margin-bottom: 10px;
 }
 
-@media print {
-  .emotion-5 {
-    font-size: 14px;
-    line-height: 1.15;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-5 {
-    font-size: 19px;
-    line-height: 1.3157894736842106;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-5 {
-    margin-bottom: 10px;
-  }
-}
-
-.emotion-0 {
+.c2 {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -250,22 +38,22 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   cursor: pointer;
 }
 
-.emotion-0:checked + span:after {
+.c2:checked + span:after {
   opacity: 1;
 }
 
-.emotion-0:focus + span:before {
+.c2:focus + span:before {
   outline: 3px solid transparent;
   outline-offset: 3px;
   box-shadow: 0 0 0 3px #ffbf47;
 }
 
-.emotion-0 + span {
+.c2 + span {
   opacity: 1;
   pointer-events: auto;
 }
 
-.emotion-2 {
+.c3 {
   display: inline-block;
   cursor: pointer;
   padding: 8px 15px 5px;
@@ -273,7 +61,7 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   touch-action: manipulation;
 }
 
-.emotion-2::before {
+.c3::before {
   content: '';
   box-sizing: border-box;
   position: absolute;
@@ -285,7 +73,7 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   background: transparent;
 }
 
-.emotion-2::after {
+.c3::after {
   content: '';
   position: absolute;
   top: 11px;
@@ -302,49 +90,295 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
   opacity: 0;
 }
 
-<StyledHoc>
-  <Checkbox
-    className="emotion-7 emotion-4"
-  >
-    <StyledCheckbox
-      className="emotion-7 emotion-4"
-    >
-      <label
-        className="emotion-4 emotion-5 emotion-6"
-      >
-        <StyledInput
-          type="checkbox"
-        >
-          <input
-            className="emotion-0 emotion-1"
-            type="checkbox"
-          />
-        </StyledInput>
-        <StyledLabel>
-          <span
-            className="emotion-2 emotion-3"
-          >
-            example
-          </span>
-        </StyledLabel>
-      </label>
-    </StyledCheckbox>
-  </Checkbox>
-</StyledHoc>
-`;
+.c4 {
+  display: block;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
-exports[`Checkbox renders disabled checkbox: disabled 1`] = `
-.emotion-7 {
+.c0 {
   margin-bottom: 10px;
 }
 
+@media print {
+  .c5 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
 @media only screen and (min-width:641px) {
-  .emotion-7 {
+  .c5 {
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
+@media print {
+  .c1 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c1 {
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
     margin-bottom: 10px;
   }
 }
 
-.emotion-5 {
+<Styled(Checkbox)
+  hint="Hint text"
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-dnqmqq",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(Checkbox)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-dnqmqq",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
+    hint="Hint text"
+  >
+    <Checkbox
+      className="c0"
+      hint="Hint text"
+    >
+      <styled.label
+        className="c0"
+      >
+        <StyledComponent
+          className="c0"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-EHOje",
+                "isStatic": true,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
+}",
+                  "display: block; position: relative; min-height: 40px; padding: 0 0 0 40px; clear: left;",
+                ],
+              },
+              "displayName": "styled.label",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-EHOje",
+              "target": "label",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+        >
+          <label
+            className="c0 c1"
+          >
+            <styled.input
+              type="checkbox"
+            >
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bZQynM",
+                      "isStatic": false,
+                      "lastClassName": "c2",
+                      "rules": Array [
+                        "position: absolute; z-index: 1; top: 0; left: 0; width: 40px; height: 40px; opacity: 0; :checked + span:after {
+  opacity: 1;
+} :focus + span:before {
+  outline: 3px solid transparent; outline-offset: 3px; box-shadow: 0 0 0 3px #ffbf47;
+}",
+                        [Function],
+                      ],
+                    },
+                    "displayName": "styled.input",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bZQynM",
+                    "target": "input",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                type="checkbox"
+              >
+                <input
+                  className="c2"
+                  type="checkbox"
+                />
+              </StyledComponent>
+            </styled.input>
+            <styled.span>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-gzVnrw",
+                      "isStatic": true,
+                      "lastClassName": "c3",
+                      "rules": Array [
+                        "display: inline-block; cursor: pointer; padding: 8px 15px 5px; -ms-touch-action: manipulation; touch-action: manipulation; ::before {
+  content: ''; box-sizing: border-box; position: absolute; top: 0; left: 0; width: 40px; height: 40px; border: 2px solid black; background: transparent;
+} ::after {
+  content: ''; position: absolute; top: 11px; left: 9px; width: 18px; height: 7px; transform: rotate(-45deg); border: solid; border-width: 0 0 5px 5px; border-top-color: transparent; background: transparent; opacity: 0;
+}",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-gzVnrw",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <span
+                  className="c3"
+                >
+                  Example with hint text
+                </span>
+              </StyledComponent>
+            </styled.span>
+            <Styled(Styled(HintText))>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-htoDjs",
+                      "isStatic": false,
+                      "lastClassName": "c4",
+                      "rules": Array [
+                        [Function],
+                        "display: block; padding-left: 15px; padding-right: 15px;",
+                      ],
+                    },
+                    "displayName": "Styled(Styled(HintText))",
+                    "foldedComponentIds": Array [
+                      "sc-ifAKCX",
+                    ],
+                    "propTypes": Object {
+                      "margin": [Function],
+                      "mb": [Function],
+                      "padding": [Function],
+                    },
+                    "render": [Function],
+                    "styledComponentId": "sc-htoDjs",
+                    "target": [Function],
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                    Symbol(Symbol.hasInstance): [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <HintText
+                  className="c4"
+                >
+                  <styled.span
+                    className="c4"
+                  >
+                    <StyledComponent
+                      className="c4"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bxivhb",
+                            "isStatic": true,
+                            "lastClassName": "c5",
+                            "rules": Array [
+                              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
+}",
+                              "display: block; margin-bottom: 15px; color: #6f777b;",
+                            ],
+                          },
+                          "displayName": "styled.span",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bxivhb",
+                          "target": "span",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                    >
+                      <span
+                        className="c4 c5"
+                      >
+                        Hint text
+                      </span>
+                    </StyledComponent>
+                  </styled.span>
+                </HintText>
+              </StyledComponent>
+            </Styled(Styled(HintText))>
+          </label>
+        </StyledComponent>
+      </styled.label>
+    </Checkbox>
+  </StyledComponent>
+</Styled(Checkbox)>
+`;
+
+exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
+.c1 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -356,30 +390,35 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
   min-height: 40px;
   padding: 0 0 0 40px;
   clear: left;
-  margin-bottom: 10px;
 }
 
-@media print {
-  .emotion-5 {
-    font-size: 14px;
-    line-height: 1.15;
-  }
+.c2 {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  cursor: pointer;
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-5 {
-    font-size: 19px;
-    line-height: 1.3157894736842106;
-  }
+.c2:checked + span:after {
+  opacity: 1;
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-5 {
-    margin-bottom: 10px;
-  }
+.c2:focus + span:before {
+  outline: 3px solid transparent;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px #ffbf47;
 }
 
-.emotion-2 {
+.c2 + span {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.c3 {
   display: inline-block;
   cursor: pointer;
   padding: 8px 15px 5px;
@@ -387,7 +426,7 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
   touch-action: manipulation;
 }
 
-.emotion-2::before {
+.c3::before {
   content: '';
   box-sizing: border-box;
   position: absolute;
@@ -399,7 +438,7 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
   background: transparent;
 }
 
-.emotion-2::after {
+.c3::after {
   content: '';
   position: absolute;
   top: 11px;
@@ -416,7 +455,203 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
   opacity: 0;
 }
 
-.emotion-0 {
+.c0 {
+  margin-bottom: 10px;
+}
+
+@media print {
+  .c1 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c1 {
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-bottom: 10px;
+  }
+}
+
+<Styled(Checkbox)>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-dnqmqq",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(Checkbox)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-dnqmqq",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
+  >
+    <Checkbox
+      className="c0"
+    >
+      <styled.label
+        className="c0"
+      >
+        <StyledComponent
+          className="c0"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-EHOje",
+                "isStatic": true,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
+}",
+                  "display: block; position: relative; min-height: 40px; padding: 0 0 0 40px; clear: left;",
+                ],
+              },
+              "displayName": "styled.label",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-EHOje",
+              "target": "label",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+        >
+          <label
+            className="c0 c1"
+          >
+            <styled.input
+              type="checkbox"
+            >
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bZQynM",
+                      "isStatic": false,
+                      "lastClassName": "c2",
+                      "rules": Array [
+                        "position: absolute; z-index: 1; top: 0; left: 0; width: 40px; height: 40px; opacity: 0; :checked + span:after {
+  opacity: 1;
+} :focus + span:before {
+  outline: 3px solid transparent; outline-offset: 3px; box-shadow: 0 0 0 3px #ffbf47;
+}",
+                        [Function],
+                      ],
+                    },
+                    "displayName": "styled.input",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bZQynM",
+                    "target": "input",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                type="checkbox"
+              >
+                <input
+                  className="c2"
+                  type="checkbox"
+                />
+              </StyledComponent>
+            </styled.input>
+            <styled.span>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-gzVnrw",
+                      "isStatic": true,
+                      "lastClassName": "c3",
+                      "rules": Array [
+                        "display: inline-block; cursor: pointer; padding: 8px 15px 5px; -ms-touch-action: manipulation; touch-action: manipulation; ::before {
+  content: ''; box-sizing: border-box; position: absolute; top: 0; left: 0; width: 40px; height: 40px; border: 2px solid black; background: transparent;
+} ::after {
+  content: ''; position: absolute; top: 11px; left: 9px; width: 18px; height: 7px; transform: rotate(-45deg); border: solid; border-width: 0 0 5px 5px; border-top-color: transparent; background: transparent; opacity: 0;
+}",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-gzVnrw",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <span
+                  className="c3"
+                >
+                  example
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </label>
+        </StyledComponent>
+      </styled.label>
+    </Checkbox>
+  </StyledComponent>
+</Styled(Checkbox)>
+`;
+
+exports[`Checkbox renders disabled checkbox: disabled 1`] = `
+.c1 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  display: block;
+  position: relative;
+  min-height: 40px;
+  padding: 0 0 0 40px;
+  clear: left;
+}
+
+.c2 {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -427,53 +662,242 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
   cursor: default;
 }
 
-.emotion-0:checked + span:after {
+.c2:checked + span:after {
   opacity: 1;
 }
 
-.emotion-0:focus + span:before {
+.c2:focus + span:before {
   outline: 3px solid transparent;
   outline-offset: 3px;
   box-shadow: 0 0 0 3px #ffbf47;
 }
 
-.emotion-0 + span {
+.c2 + span {
   opacity: .5;
   pointer-events: none;
 }
 
-<StyledHoc
+.c3 {
+  display: inline-block;
+  cursor: pointer;
+  padding: 8px 15px 5px;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+.c3::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+  background: transparent;
+}
+
+.c3::after {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 9px;
+  width: 18px;
+  height: 7px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  border: solid;
+  border-width: 0 0 5px 5px;
+  border-top-color: transparent;
+  background: transparent;
+  opacity: 0;
+}
+
+.c0 {
+  margin-bottom: 10px;
+}
+
+@media print {
+  .c1 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c1 {
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-bottom: 10px;
+  }
+}
+
+<Styled(Checkbox)
   disabled={true}
 >
-  <Checkbox
-    className="emotion-7 emotion-4"
+  <StyledComponent
     disabled={true}
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-dnqmqq",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(Checkbox)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-dnqmqq",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
   >
-    <StyledCheckbox
-      className="emotion-7 emotion-4"
+    <Checkbox
+      className="c0"
+      disabled={true}
     >
-      <label
-        className="emotion-4 emotion-5 emotion-6"
+      <styled.label
+        className="c0"
       >
-        <StyledInput
-          disabled={true}
-          type="checkbox"
+        <StyledComponent
+          className="c0"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-EHOje",
+                "isStatic": true,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
+}",
+                  "display: block; position: relative; min-height: 40px; padding: 0 0 0 40px; clear: left;",
+                ],
+              },
+              "displayName": "styled.label",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-EHOje",
+              "target": "label",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
         >
-          <input
-            className="emotion-0 emotion-1"
-            disabled={true}
-            type="checkbox"
-          />
-        </StyledInput>
-        <StyledLabel>
-          <span
-            className="emotion-2 emotion-3"
+          <label
+            className="c0 c1"
           >
-            Example
-          </span>
-        </StyledLabel>
-      </label>
-    </StyledCheckbox>
-  </Checkbox>
-</StyledHoc>
+            <styled.input
+              disabled={true}
+              type="checkbox"
+            >
+              <StyledComponent
+                disabled={true}
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bZQynM",
+                      "isStatic": false,
+                      "lastClassName": "c2",
+                      "rules": Array [
+                        "position: absolute; z-index: 1; top: 0; left: 0; width: 40px; height: 40px; opacity: 0; :checked + span:after {
+  opacity: 1;
+} :focus + span:before {
+  outline: 3px solid transparent; outline-offset: 3px; box-shadow: 0 0 0 3px #ffbf47;
+}",
+                        [Function],
+                      ],
+                    },
+                    "displayName": "styled.input",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bZQynM",
+                    "target": "input",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                type="checkbox"
+              >
+                <input
+                  className="c2"
+                  disabled={true}
+                  type="checkbox"
+                />
+              </StyledComponent>
+            </styled.input>
+            <styled.span>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-gzVnrw",
+                      "isStatic": true,
+                      "lastClassName": "c3",
+                      "rules": Array [
+                        "display: inline-block; cursor: pointer; padding: 8px 15px 5px; -ms-touch-action: manipulation; touch-action: manipulation; ::before {
+  content: ''; box-sizing: border-box; position: absolute; top: 0; left: 0; width: 40px; height: 40px; border: 2px solid black; background: transparent;
+} ::after {
+  content: ''; position: absolute; top: 11px; left: 9px; width: 18px; height: 7px; transform: rotate(-45deg); border: solid; border-width: 0 0 5px 5px; border-top-color: transparent; background: transparent; opacity: 0;
+}",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-gzVnrw",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <span
+                  className="c3"
+                >
+                  Example
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </label>
+        </StyledComponent>
+      </styled.label>
+    </Checkbox>
+  </StyledComponent>
+</Styled(Checkbox)>
 `;

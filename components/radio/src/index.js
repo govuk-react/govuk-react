@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import { FOCUS_COLOUR } from 'govuk-colours';
 import { withWhiteSpace } from '@govuk-react/hoc';
 import { typography } from '@govuk-react/lib';

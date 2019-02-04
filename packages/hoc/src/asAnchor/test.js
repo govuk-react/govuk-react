@@ -7,7 +7,7 @@ const AnchorTag = asAnchor('a');
 
 const wrapper = <AnchorTag href="https://example.com">Example</AnchorTag>;
 
-describe(asAnchor, () => {
+describe('asAnchor', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(wrapper, div);

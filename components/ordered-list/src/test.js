@@ -16,7 +16,7 @@ const wrapper = (
   </OrderedList>
 );
 
-describe(OrderedList, () => {
+describe('OrderedList', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<OrderedList>Example</OrderedList>, div);

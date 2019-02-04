@@ -1,20 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`withWhiteSpace matches wrapper snapshot 1`] = `
-.emotion-0 {
+.c0 {
   margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-0 {
+  .c0 {
     margin-bottom: 25px;
   }
 }
 
-<Component
-  className="emotion-0 emotion-1"
+<Styled(styled.div)
   mb={5}
 >
-  Example
-</Component>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bxivhb",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "",
+            [Function],
+          ],
+        },
+        "displayName": "Styled(styled.div)",
+        "foldedComponentIds": Array [
+          "sc-htpNat",
+        ],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-bxivhb",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    mb={5}
+  >
+    <div
+      className="c0"
+    >
+      Example
+    </div>
+  </StyledComponent>
+</Styled(styled.div)>
 `;

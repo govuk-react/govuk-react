@@ -1,13 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
-.emotion-28 {
+.c2 {
+  -webkit-animation: caisTa 1s infinite linear;
+  animation: caisTa 1s infinite linear;
+}
+
+.c0 {
   position: relative;
   padding-bottom: 2px;
   min-height: 10px;
 }
 
-.emotion-26 {
+.c1 {
   position: absolute;
   height: 100%;
   top: 0;
@@ -24,7 +29,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
   justify-content: center;
 }
 
-.emotion-26 .icon-loading {
+.c1 .icon-loading {
   position: absolute;
   z-index: 101;
   opacity: 1;
@@ -36,7 +41,7 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
   will-change: opacity;
 }
 
-.emotion-26 .overlay {
+.c1 .overlay {
   z-index: 100;
   -webkit-transition: background-color 800ms ease-in-out;
   transition: background-color 800ms ease-in-out;
@@ -44,13 +49,13 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
   background-color: rgba( 255, 255, 255, 0.85);
 }
 
-.emotion-26 .fade-enter .overlay {
+.c1 .fade-enter .overlay {
   background-color: rgba( 255, 255, 255, 0);
   -webkit-transition-duration: 800ms;
   transition-duration: 800ms;
 }
 
-.emotion-26 .fade-enter .icon-loading {
+.c1 .fade-enter .icon-loading {
   opacity: 0;
   -webkit-transition-duration: 800ms;
   transition-duration: 800ms;
@@ -58,13 +63,13 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
   transition-delay: 400ms;
 }
 
-.emotion-26 .fade-enter-active .overlay {
+.c1 .fade-enter-active .overlay {
   background-color: rgba( 255, 255, 255, 0.85);
   -webkit-transition-duration: 800ms;
   transition-duration: 800ms;
 }
 
-.emotion-26 .fade-enter-active .icon-loading {
+.c1 .fade-enter-active .icon-loading {
   opacity: 1;
   -webkit-transition-duration: 800ms;
   transition-duration: 800ms;
@@ -72,36 +77,31 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
   transition-delay: 400ms;
 }
 
-.emotion-26 .fade-exit .overlay {
+.c1 .fade-exit .overlay {
   background-color: rgba( 255, 255, 255, 0.85);
   -webkit-transition-duration: 200ms;
   transition-duration: 200ms;
 }
 
-.emotion-26 .fade-exit .icon-loading {
+.c1 .fade-exit .icon-loading {
   opacity: 1;
   -webkit-transition-duration: 200ms;
   transition-duration: 200ms;
 }
 
-.emotion-26 .fade-exit-active .overlay {
+.c1 .fade-exit-active .overlay {
   background-color: rgba( 255, 255, 255, 0);
   -webkit-transition-duration: 200ms;
   transition-duration: 200ms;
 }
 
-.emotion-26 .fade-exit-active .icon-loading {
+.c1 .fade-exit-active .icon-loading {
   opacity: 0;
   -webkit-transition-duration: 200ms;
   transition-duration: 200ms;
 }
 
-.emotion-0 {
-  -webkit-animation: animation-rk2h0o-fadeInOut 1s infinite linear;
-  animation: animation-rk2h0o-fadeInOut 1s infinite linear;
-}
-
-.emotion-24 {
+.c3 {
   position: absolute;
   top: 0;
   right: 0;
@@ -120,462 +120,1134 @@ exports[`LoadingBox matches wrapper loading: wrapper loading 1`] = `
   timeIn={800}
   timeOut={200}
 >
-  <StyledContainer>
-    <div
-      className="emotion-28 emotion-29"
+  <styled.div>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": true,
+            "lastClassName": "c0",
+            "rules": Array [
+              "position: relative; padding-bottom: 2px; min-height: 10px;",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <CSSTransition
-        classNames="fade"
-        in={true}
-        timeout={200}
-        unmountOnExit={true}
+      <div
+        className="c0"
       >
-        <Transition
-          appear={false}
-          enter={true}
-          exit={true}
+        <CSSTransition
+          classNames="fade"
           in={true}
-          mountOnEnter={false}
-          onEnter={[Function]}
-          onEntered={[Function]}
-          onEntering={[Function]}
-          onExit={[Function]}
-          onExited={[Function]}
-          onExiting={[Function]}
           timeout={200}
           unmountOnExit={true}
         >
-          <Innerwrap
-            backgroundColor="#ffffff"
-            backgroundColorOpacity={0.85}
-            loading={true}
-            timeIn={800}
-            timeOut={200}
+          <Transition
+            appear={false}
+            enter={true}
+            exit={true}
+            in={true}
+            mountOnEnter={false}
+            onEnter={[Function]}
+            onEntered={[Function]}
+            onEntering={[Function]}
+            onExit={[Function]}
+            onExited={[Function]}
+            onExiting={[Function]}
+            timeout={200}
+            unmountOnExit={true}
           >
-            <div
-              className="emotion-26 emotion-27"
+            <styled.div
+              backgroundColor="#ffffff"
+              backgroundColorOpacity={0.85}
+              loading={true}
+              timeIn={800}
+              timeOut={200}
             >
-              <Spinner
-                className="icon-loading"
-                fill="#0b0c0c"
-                height="50px"
-                title="Loading"
-                width="50px"
+              <StyledComponent
+                backgroundColor="#ffffff"
+                backgroundColorOpacity={0.85}
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bwzfXH",
+                      "isStatic": false,
+                      "lastClassName": "c1",
+                      "rules": Array [
+                        [Function],
+                      ],
+                    },
+                    "displayName": "styled.div",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bwzfXH",
+                    "target": "div",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                loading={true}
+                timeIn={800}
+                timeOut={200}
               >
-                <SVG
-                  className="icon-loading"
-                  fill="#0b0c0c"
-                  height="50px"
-                  preserveAspectRatio="xMidYMid meet"
-                  title="Loading"
-                  viewBox="-25 -25 50 50"
-                  width="50px"
+                <div
+                  className="c1"
                 >
-                  <svg
+                  <Spinner
                     className="icon-loading"
                     fill="#0b0c0c"
                     height="50px"
-                    preserveAspectRatio="xMidYMid meet"
-                    style={
-                      Object {
-                        "display": "block",
-                      }
-                    }
-                    version="1.1"
-                    viewBox="-25 -25 50 50"
+                    title="Loading"
                     width="50px"
                   >
-                    <title>
-                      Loading
-                    </title>
-                    <Rect
+                    <SVG
+                      className="icon-loading"
                       fill="#0b0c0c"
-                      height="5"
-                      key="0"
-                      opacity="0"
-                      rx="2.5"
-                      ry="2.5"
-                      style={
-                        Object {
-                          "animationDelay": "0ms",
-                        }
-                      }
-                      transform="rotate(0, 0, 2) translate(10 0)"
-                      width="12"
+                      height="50px"
+                      preserveAspectRatio="xMidYMid meet"
+                      title="Loading"
+                      viewBox="-25 -25 50 50"
+                      width="50px"
                     >
-                      <rect
-                        className="emotion-0 emotion-1"
+                      <svg
+                        className="icon-loading"
                         fill="#0b0c0c"
-                        height="5"
-                        opacity="0"
-                        rx="2.5"
-                        ry="2.5"
+                        height="50px"
+                        preserveAspectRatio="xMidYMid meet"
                         style={
                           Object {
-                            "animationDelay": "0ms",
+                            "display": "block",
                           }
                         }
-                        transform="rotate(0, 0, 2) translate(10 0)"
-                        width="12"
-                      />
-                    </Rect>
-                    <Rect
-                      fill="#0b0c0c"
-                      height="5"
-                      key="1"
-                      opacity="0"
-                      rx="2.5"
-                      ry="2.5"
-                      style={
+                        version="1.1"
+                        viewBox="-25 -25 50 50"
+                        width="50px"
+                      >
+                        <title>
+                          Loading
+                        </title>
+                        <Spinner__Rect
+                          fill="#0b0c0c"
+                          height="5"
+                          key="0"
+                          opacity="0"
+                          rx="2.5"
+                          ry="2.5"
+                          style={
+                            Object {
+                              "animationDelay": "0ms",
+                            }
+                          }
+                          transform="rotate(0, 0, 2) translate(10 0)"
+                          width="12"
+                        >
+                          <StyledComponent
+                            fill="#0b0c0c"
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                  "isStatic": true,
+                                  "lastClassName": "c2",
+                                  "rules": Array [
+                                    "animation:",
+                                    Keyframes {
+                                      "id": "sc-keyframes-caisTa",
+                                      "inject": [Function],
+                                      "name": "caisTa",
+                                      "rules": Array [
+                                        "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                        "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                      ],
+                                      "toString": [Function],
+                                    },
+                                    " 1s infinite linear;",
+                                  ],
+                                },
+                                "displayName": "Spinner__Rect",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                "target": "rect",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            height="5"
+                            opacity="0"
+                            rx="2.5"
+                            ry="2.5"
+                            style={
+                              Object {
+                                "animationDelay": "0ms",
+                              }
+                            }
+                            transform="rotate(0, 0, 2) translate(10 0)"
+                            width="12"
+                          >
+                            <rect
+                              className="c2"
+                              fill="#0b0c0c"
+                              height="5"
+                              opacity="0"
+                              rx="2.5"
+                              ry="2.5"
+                              style={
+                                Object {
+                                  "animationDelay": "0ms",
+                                }
+                              }
+                              transform="rotate(0, 0, 2) translate(10 0)"
+                              width="12"
+                            />
+                          </StyledComponent>
+                        </Spinner__Rect>
+                        <Spinner__Rect
+                          fill="#0b0c0c"
+                          height="5"
+                          key="1"
+                          opacity="0"
+                          rx="2.5"
+                          ry="2.5"
+                          style={
+                            Object {
+                              "animationDelay": "83ms",
+                            }
+                          }
+                          transform="rotate(30, 0, 2) translate(10 0)"
+                          width="12"
+                        >
+                          <StyledComponent
+                            fill="#0b0c0c"
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                  "isStatic": true,
+                                  "lastClassName": "c2",
+                                  "rules": Array [
+                                    "animation:",
+                                    Keyframes {
+                                      "id": "sc-keyframes-caisTa",
+                                      "inject": [Function],
+                                      "name": "caisTa",
+                                      "rules": Array [
+                                        "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                        "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                      ],
+                                      "toString": [Function],
+                                    },
+                                    " 1s infinite linear;",
+                                  ],
+                                },
+                                "displayName": "Spinner__Rect",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                "target": "rect",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            height="5"
+                            opacity="0"
+                            rx="2.5"
+                            ry="2.5"
+                            style={
+                              Object {
+                                "animationDelay": "83ms",
+                              }
+                            }
+                            transform="rotate(30, 0, 2) translate(10 0)"
+                            width="12"
+                          >
+                            <rect
+                              className="c2"
+                              fill="#0b0c0c"
+                              height="5"
+                              opacity="0"
+                              rx="2.5"
+                              ry="2.5"
+                              style={
+                                Object {
+                                  "animationDelay": "83ms",
+                                }
+                              }
+                              transform="rotate(30, 0, 2) translate(10 0)"
+                              width="12"
+                            />
+                          </StyledComponent>
+                        </Spinner__Rect>
+                        <Spinner__Rect
+                          fill="#0b0c0c"
+                          height="5"
+                          key="2"
+                          opacity="0"
+                          rx="2.5"
+                          ry="2.5"
+                          style={
+                            Object {
+                              "animationDelay": "166ms",
+                            }
+                          }
+                          transform="rotate(60, 0, 2) translate(10 0)"
+                          width="12"
+                        >
+                          <StyledComponent
+                            fill="#0b0c0c"
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                  "isStatic": true,
+                                  "lastClassName": "c2",
+                                  "rules": Array [
+                                    "animation:",
+                                    Keyframes {
+                                      "id": "sc-keyframes-caisTa",
+                                      "inject": [Function],
+                                      "name": "caisTa",
+                                      "rules": Array [
+                                        "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                        "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                      ],
+                                      "toString": [Function],
+                                    },
+                                    " 1s infinite linear;",
+                                  ],
+                                },
+                                "displayName": "Spinner__Rect",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                "target": "rect",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            height="5"
+                            opacity="0"
+                            rx="2.5"
+                            ry="2.5"
+                            style={
+                              Object {
+                                "animationDelay": "166ms",
+                              }
+                            }
+                            transform="rotate(60, 0, 2) translate(10 0)"
+                            width="12"
+                          >
+                            <rect
+                              className="c2"
+                              fill="#0b0c0c"
+                              height="5"
+                              opacity="0"
+                              rx="2.5"
+                              ry="2.5"
+                              style={
+                                Object {
+                                  "animationDelay": "166ms",
+                                }
+                              }
+                              transform="rotate(60, 0, 2) translate(10 0)"
+                              width="12"
+                            />
+                          </StyledComponent>
+                        </Spinner__Rect>
+                        <Spinner__Rect
+                          fill="#0b0c0c"
+                          height="5"
+                          key="3"
+                          opacity="0"
+                          rx="2.5"
+                          ry="2.5"
+                          style={
+                            Object {
+                              "animationDelay": "249ms",
+                            }
+                          }
+                          transform="rotate(90, 0, 2) translate(10 0)"
+                          width="12"
+                        >
+                          <StyledComponent
+                            fill="#0b0c0c"
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                  "isStatic": true,
+                                  "lastClassName": "c2",
+                                  "rules": Array [
+                                    "animation:",
+                                    Keyframes {
+                                      "id": "sc-keyframes-caisTa",
+                                      "inject": [Function],
+                                      "name": "caisTa",
+                                      "rules": Array [
+                                        "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                        "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                      ],
+                                      "toString": [Function],
+                                    },
+                                    " 1s infinite linear;",
+                                  ],
+                                },
+                                "displayName": "Spinner__Rect",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                "target": "rect",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            height="5"
+                            opacity="0"
+                            rx="2.5"
+                            ry="2.5"
+                            style={
+                              Object {
+                                "animationDelay": "249ms",
+                              }
+                            }
+                            transform="rotate(90, 0, 2) translate(10 0)"
+                            width="12"
+                          >
+                            <rect
+                              className="c2"
+                              fill="#0b0c0c"
+                              height="5"
+                              opacity="0"
+                              rx="2.5"
+                              ry="2.5"
+                              style={
+                                Object {
+                                  "animationDelay": "249ms",
+                                }
+                              }
+                              transform="rotate(90, 0, 2) translate(10 0)"
+                              width="12"
+                            />
+                          </StyledComponent>
+                        </Spinner__Rect>
+                        <Spinner__Rect
+                          fill="#0b0c0c"
+                          height="5"
+                          key="4"
+                          opacity="0"
+                          rx="2.5"
+                          ry="2.5"
+                          style={
+                            Object {
+                              "animationDelay": "332ms",
+                            }
+                          }
+                          transform="rotate(120, 0, 2) translate(10 0)"
+                          width="12"
+                        >
+                          <StyledComponent
+                            fill="#0b0c0c"
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                  "isStatic": true,
+                                  "lastClassName": "c2",
+                                  "rules": Array [
+                                    "animation:",
+                                    Keyframes {
+                                      "id": "sc-keyframes-caisTa",
+                                      "inject": [Function],
+                                      "name": "caisTa",
+                                      "rules": Array [
+                                        "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                        "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                      ],
+                                      "toString": [Function],
+                                    },
+                                    " 1s infinite linear;",
+                                  ],
+                                },
+                                "displayName": "Spinner__Rect",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                "target": "rect",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            height="5"
+                            opacity="0"
+                            rx="2.5"
+                            ry="2.5"
+                            style={
+                              Object {
+                                "animationDelay": "332ms",
+                              }
+                            }
+                            transform="rotate(120, 0, 2) translate(10 0)"
+                            width="12"
+                          >
+                            <rect
+                              className="c2"
+                              fill="#0b0c0c"
+                              height="5"
+                              opacity="0"
+                              rx="2.5"
+                              ry="2.5"
+                              style={
+                                Object {
+                                  "animationDelay": "332ms",
+                                }
+                              }
+                              transform="rotate(120, 0, 2) translate(10 0)"
+                              width="12"
+                            />
+                          </StyledComponent>
+                        </Spinner__Rect>
+                        <Spinner__Rect
+                          fill="#0b0c0c"
+                          height="5"
+                          key="5"
+                          opacity="0"
+                          rx="2.5"
+                          ry="2.5"
+                          style={
+                            Object {
+                              "animationDelay": "415ms",
+                            }
+                          }
+                          transform="rotate(150, 0, 2) translate(10 0)"
+                          width="12"
+                        >
+                          <StyledComponent
+                            fill="#0b0c0c"
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                  "isStatic": true,
+                                  "lastClassName": "c2",
+                                  "rules": Array [
+                                    "animation:",
+                                    Keyframes {
+                                      "id": "sc-keyframes-caisTa",
+                                      "inject": [Function],
+                                      "name": "caisTa",
+                                      "rules": Array [
+                                        "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                        "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                      ],
+                                      "toString": [Function],
+                                    },
+                                    " 1s infinite linear;",
+                                  ],
+                                },
+                                "displayName": "Spinner__Rect",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                "target": "rect",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            height="5"
+                            opacity="0"
+                            rx="2.5"
+                            ry="2.5"
+                            style={
+                              Object {
+                                "animationDelay": "415ms",
+                              }
+                            }
+                            transform="rotate(150, 0, 2) translate(10 0)"
+                            width="12"
+                          >
+                            <rect
+                              className="c2"
+                              fill="#0b0c0c"
+                              height="5"
+                              opacity="0"
+                              rx="2.5"
+                              ry="2.5"
+                              style={
+                                Object {
+                                  "animationDelay": "415ms",
+                                }
+                              }
+                              transform="rotate(150, 0, 2) translate(10 0)"
+                              width="12"
+                            />
+                          </StyledComponent>
+                        </Spinner__Rect>
+                        <Spinner__Rect
+                          fill="#0b0c0c"
+                          height="5"
+                          key="6"
+                          opacity="0"
+                          rx="2.5"
+                          ry="2.5"
+                          style={
+                            Object {
+                              "animationDelay": "498ms",
+                            }
+                          }
+                          transform="rotate(180, 0, 2) translate(10 0)"
+                          width="12"
+                        >
+                          <StyledComponent
+                            fill="#0b0c0c"
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                  "isStatic": true,
+                                  "lastClassName": "c2",
+                                  "rules": Array [
+                                    "animation:",
+                                    Keyframes {
+                                      "id": "sc-keyframes-caisTa",
+                                      "inject": [Function],
+                                      "name": "caisTa",
+                                      "rules": Array [
+                                        "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                        "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                      ],
+                                      "toString": [Function],
+                                    },
+                                    " 1s infinite linear;",
+                                  ],
+                                },
+                                "displayName": "Spinner__Rect",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                "target": "rect",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            height="5"
+                            opacity="0"
+                            rx="2.5"
+                            ry="2.5"
+                            style={
+                              Object {
+                                "animationDelay": "498ms",
+                              }
+                            }
+                            transform="rotate(180, 0, 2) translate(10 0)"
+                            width="12"
+                          >
+                            <rect
+                              className="c2"
+                              fill="#0b0c0c"
+                              height="5"
+                              opacity="0"
+                              rx="2.5"
+                              ry="2.5"
+                              style={
+                                Object {
+                                  "animationDelay": "498ms",
+                                }
+                              }
+                              transform="rotate(180, 0, 2) translate(10 0)"
+                              width="12"
+                            />
+                          </StyledComponent>
+                        </Spinner__Rect>
+                        <Spinner__Rect
+                          fill="#0b0c0c"
+                          height="5"
+                          key="7"
+                          opacity="0"
+                          rx="2.5"
+                          ry="2.5"
+                          style={
+                            Object {
+                              "animationDelay": "581ms",
+                            }
+                          }
+                          transform="rotate(210, 0, 2) translate(10 0)"
+                          width="12"
+                        >
+                          <StyledComponent
+                            fill="#0b0c0c"
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                  "isStatic": true,
+                                  "lastClassName": "c2",
+                                  "rules": Array [
+                                    "animation:",
+                                    Keyframes {
+                                      "id": "sc-keyframes-caisTa",
+                                      "inject": [Function],
+                                      "name": "caisTa",
+                                      "rules": Array [
+                                        "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                        "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                      ],
+                                      "toString": [Function],
+                                    },
+                                    " 1s infinite linear;",
+                                  ],
+                                },
+                                "displayName": "Spinner__Rect",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                "target": "rect",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            height="5"
+                            opacity="0"
+                            rx="2.5"
+                            ry="2.5"
+                            style={
+                              Object {
+                                "animationDelay": "581ms",
+                              }
+                            }
+                            transform="rotate(210, 0, 2) translate(10 0)"
+                            width="12"
+                          >
+                            <rect
+                              className="c2"
+                              fill="#0b0c0c"
+                              height="5"
+                              opacity="0"
+                              rx="2.5"
+                              ry="2.5"
+                              style={
+                                Object {
+                                  "animationDelay": "581ms",
+                                }
+                              }
+                              transform="rotate(210, 0, 2) translate(10 0)"
+                              width="12"
+                            />
+                          </StyledComponent>
+                        </Spinner__Rect>
+                        <Spinner__Rect
+                          fill="#0b0c0c"
+                          height="5"
+                          key="8"
+                          opacity="0"
+                          rx="2.5"
+                          ry="2.5"
+                          style={
+                            Object {
+                              "animationDelay": "664ms",
+                            }
+                          }
+                          transform="rotate(240, 0, 2) translate(10 0)"
+                          width="12"
+                        >
+                          <StyledComponent
+                            fill="#0b0c0c"
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                  "isStatic": true,
+                                  "lastClassName": "c2",
+                                  "rules": Array [
+                                    "animation:",
+                                    Keyframes {
+                                      "id": "sc-keyframes-caisTa",
+                                      "inject": [Function],
+                                      "name": "caisTa",
+                                      "rules": Array [
+                                        "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                        "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                      ],
+                                      "toString": [Function],
+                                    },
+                                    " 1s infinite linear;",
+                                  ],
+                                },
+                                "displayName": "Spinner__Rect",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                "target": "rect",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            height="5"
+                            opacity="0"
+                            rx="2.5"
+                            ry="2.5"
+                            style={
+                              Object {
+                                "animationDelay": "664ms",
+                              }
+                            }
+                            transform="rotate(240, 0, 2) translate(10 0)"
+                            width="12"
+                          >
+                            <rect
+                              className="c2"
+                              fill="#0b0c0c"
+                              height="5"
+                              opacity="0"
+                              rx="2.5"
+                              ry="2.5"
+                              style={
+                                Object {
+                                  "animationDelay": "664ms",
+                                }
+                              }
+                              transform="rotate(240, 0, 2) translate(10 0)"
+                              width="12"
+                            />
+                          </StyledComponent>
+                        </Spinner__Rect>
+                        <Spinner__Rect
+                          fill="#0b0c0c"
+                          height="5"
+                          key="9"
+                          opacity="0"
+                          rx="2.5"
+                          ry="2.5"
+                          style={
+                            Object {
+                              "animationDelay": "747ms",
+                            }
+                          }
+                          transform="rotate(270, 0, 2) translate(10 0)"
+                          width="12"
+                        >
+                          <StyledComponent
+                            fill="#0b0c0c"
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                  "isStatic": true,
+                                  "lastClassName": "c2",
+                                  "rules": Array [
+                                    "animation:",
+                                    Keyframes {
+                                      "id": "sc-keyframes-caisTa",
+                                      "inject": [Function],
+                                      "name": "caisTa",
+                                      "rules": Array [
+                                        "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                        "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                      ],
+                                      "toString": [Function],
+                                    },
+                                    " 1s infinite linear;",
+                                  ],
+                                },
+                                "displayName": "Spinner__Rect",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                "target": "rect",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            height="5"
+                            opacity="0"
+                            rx="2.5"
+                            ry="2.5"
+                            style={
+                              Object {
+                                "animationDelay": "747ms",
+                              }
+                            }
+                            transform="rotate(270, 0, 2) translate(10 0)"
+                            width="12"
+                          >
+                            <rect
+                              className="c2"
+                              fill="#0b0c0c"
+                              height="5"
+                              opacity="0"
+                              rx="2.5"
+                              ry="2.5"
+                              style={
+                                Object {
+                                  "animationDelay": "747ms",
+                                }
+                              }
+                              transform="rotate(270, 0, 2) translate(10 0)"
+                              width="12"
+                            />
+                          </StyledComponent>
+                        </Spinner__Rect>
+                        <Spinner__Rect
+                          fill="#0b0c0c"
+                          height="5"
+                          key="10"
+                          opacity="0"
+                          rx="2.5"
+                          ry="2.5"
+                          style={
+                            Object {
+                              "animationDelay": "830ms",
+                            }
+                          }
+                          transform="rotate(300, 0, 2) translate(10 0)"
+                          width="12"
+                        >
+                          <StyledComponent
+                            fill="#0b0c0c"
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                  "isStatic": true,
+                                  "lastClassName": "c2",
+                                  "rules": Array [
+                                    "animation:",
+                                    Keyframes {
+                                      "id": "sc-keyframes-caisTa",
+                                      "inject": [Function],
+                                      "name": "caisTa",
+                                      "rules": Array [
+                                        "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                        "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                      ],
+                                      "toString": [Function],
+                                    },
+                                    " 1s infinite linear;",
+                                  ],
+                                },
+                                "displayName": "Spinner__Rect",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                "target": "rect",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            height="5"
+                            opacity="0"
+                            rx="2.5"
+                            ry="2.5"
+                            style={
+                              Object {
+                                "animationDelay": "830ms",
+                              }
+                            }
+                            transform="rotate(300, 0, 2) translate(10 0)"
+                            width="12"
+                          >
+                            <rect
+                              className="c2"
+                              fill="#0b0c0c"
+                              height="5"
+                              opacity="0"
+                              rx="2.5"
+                              ry="2.5"
+                              style={
+                                Object {
+                                  "animationDelay": "830ms",
+                                }
+                              }
+                              transform="rotate(300, 0, 2) translate(10 0)"
+                              width="12"
+                            />
+                          </StyledComponent>
+                        </Spinner__Rect>
+                        <Spinner__Rect
+                          fill="#0b0c0c"
+                          height="5"
+                          key="11"
+                          opacity="0"
+                          rx="2.5"
+                          ry="2.5"
+                          style={
+                            Object {
+                              "animationDelay": "913ms",
+                            }
+                          }
+                          transform="rotate(330, 0, 2) translate(10 0)"
+                          width="12"
+                        >
+                          <StyledComponent
+                            fill="#0b0c0c"
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                  "isStatic": true,
+                                  "lastClassName": "c2",
+                                  "rules": Array [
+                                    "animation:",
+                                    Keyframes {
+                                      "id": "sc-keyframes-caisTa",
+                                      "inject": [Function],
+                                      "name": "caisTa",
+                                      "rules": Array [
+                                        "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                        "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
+                                      ],
+                                      "toString": [Function],
+                                    },
+                                    " 1s infinite linear;",
+                                  ],
+                                },
+                                "displayName": "Spinner__Rect",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
+                                "target": "rect",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            height="5"
+                            opacity="0"
+                            rx="2.5"
+                            ry="2.5"
+                            style={
+                              Object {
+                                "animationDelay": "913ms",
+                              }
+                            }
+                            transform="rotate(330, 0, 2) translate(10 0)"
+                            width="12"
+                          >
+                            <rect
+                              className="c2"
+                              fill="#0b0c0c"
+                              height="5"
+                              opacity="0"
+                              rx="2.5"
+                              ry="2.5"
+                              style={
+                                Object {
+                                  "animationDelay": "913ms",
+                                }
+                              }
+                              transform="rotate(330, 0, 2) translate(10 0)"
+                              width="12"
+                            />
+                          </StyledComponent>
+                        </Spinner__Rect>
+                      </svg>
+                    </SVG>
+                  </Spinner>
+                  <styled.div
+                    className="overlay"
+                  >
+                    <StyledComponent
+                      className="overlay"
+                      forwardedComponent={
                         Object {
-                          "animationDelay": "83ms",
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-htpNat",
+                            "isStatic": true,
+                            "lastClassName": "c3",
+                            "rules": Array [
+                              "position: absolute; top: 0; right: 0; bottom: 0; left: 0; overflow: hidden; height: 100%; width: 100%;",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-htpNat",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
                         }
                       }
-                      transform="rotate(30, 0, 2) translate(10 0)"
-                      width="12"
+                      forwardedRef={null}
                     >
-                      <rect
-                        className="emotion-0 emotion-1"
-                        fill="#0b0c0c"
-                        height="5"
-                        opacity="0"
-                        rx="2.5"
-                        ry="2.5"
-                        style={
-                          Object {
-                            "animationDelay": "83ms",
-                          }
-                        }
-                        transform="rotate(30, 0, 2) translate(10 0)"
-                        width="12"
+                      <div
+                        className="overlay c3"
                       />
-                    </Rect>
-                    <Rect
-                      fill="#0b0c0c"
-                      height="5"
-                      key="2"
-                      opacity="0"
-                      rx="2.5"
-                      ry="2.5"
-                      style={
-                        Object {
-                          "animationDelay": "166ms",
-                        }
-                      }
-                      transform="rotate(60, 0, 2) translate(10 0)"
-                      width="12"
-                    >
-                      <rect
-                        className="emotion-0 emotion-1"
-                        fill="#0b0c0c"
-                        height="5"
-                        opacity="0"
-                        rx="2.5"
-                        ry="2.5"
-                        style={
-                          Object {
-                            "animationDelay": "166ms",
-                          }
-                        }
-                        transform="rotate(60, 0, 2) translate(10 0)"
-                        width="12"
-                      />
-                    </Rect>
-                    <Rect
-                      fill="#0b0c0c"
-                      height="5"
-                      key="3"
-                      opacity="0"
-                      rx="2.5"
-                      ry="2.5"
-                      style={
-                        Object {
-                          "animationDelay": "249ms",
-                        }
-                      }
-                      transform="rotate(90, 0, 2) translate(10 0)"
-                      width="12"
-                    >
-                      <rect
-                        className="emotion-0 emotion-1"
-                        fill="#0b0c0c"
-                        height="5"
-                        opacity="0"
-                        rx="2.5"
-                        ry="2.5"
-                        style={
-                          Object {
-                            "animationDelay": "249ms",
-                          }
-                        }
-                        transform="rotate(90, 0, 2) translate(10 0)"
-                        width="12"
-                      />
-                    </Rect>
-                    <Rect
-                      fill="#0b0c0c"
-                      height="5"
-                      key="4"
-                      opacity="0"
-                      rx="2.5"
-                      ry="2.5"
-                      style={
-                        Object {
-                          "animationDelay": "332ms",
-                        }
-                      }
-                      transform="rotate(120, 0, 2) translate(10 0)"
-                      width="12"
-                    >
-                      <rect
-                        className="emotion-0 emotion-1"
-                        fill="#0b0c0c"
-                        height="5"
-                        opacity="0"
-                        rx="2.5"
-                        ry="2.5"
-                        style={
-                          Object {
-                            "animationDelay": "332ms",
-                          }
-                        }
-                        transform="rotate(120, 0, 2) translate(10 0)"
-                        width="12"
-                      />
-                    </Rect>
-                    <Rect
-                      fill="#0b0c0c"
-                      height="5"
-                      key="5"
-                      opacity="0"
-                      rx="2.5"
-                      ry="2.5"
-                      style={
-                        Object {
-                          "animationDelay": "415ms",
-                        }
-                      }
-                      transform="rotate(150, 0, 2) translate(10 0)"
-                      width="12"
-                    >
-                      <rect
-                        className="emotion-0 emotion-1"
-                        fill="#0b0c0c"
-                        height="5"
-                        opacity="0"
-                        rx="2.5"
-                        ry="2.5"
-                        style={
-                          Object {
-                            "animationDelay": "415ms",
-                          }
-                        }
-                        transform="rotate(150, 0, 2) translate(10 0)"
-                        width="12"
-                      />
-                    </Rect>
-                    <Rect
-                      fill="#0b0c0c"
-                      height="5"
-                      key="6"
-                      opacity="0"
-                      rx="2.5"
-                      ry="2.5"
-                      style={
-                        Object {
-                          "animationDelay": "498ms",
-                        }
-                      }
-                      transform="rotate(180, 0, 2) translate(10 0)"
-                      width="12"
-                    >
-                      <rect
-                        className="emotion-0 emotion-1"
-                        fill="#0b0c0c"
-                        height="5"
-                        opacity="0"
-                        rx="2.5"
-                        ry="2.5"
-                        style={
-                          Object {
-                            "animationDelay": "498ms",
-                          }
-                        }
-                        transform="rotate(180, 0, 2) translate(10 0)"
-                        width="12"
-                      />
-                    </Rect>
-                    <Rect
-                      fill="#0b0c0c"
-                      height="5"
-                      key="7"
-                      opacity="0"
-                      rx="2.5"
-                      ry="2.5"
-                      style={
-                        Object {
-                          "animationDelay": "581ms",
-                        }
-                      }
-                      transform="rotate(210, 0, 2) translate(10 0)"
-                      width="12"
-                    >
-                      <rect
-                        className="emotion-0 emotion-1"
-                        fill="#0b0c0c"
-                        height="5"
-                        opacity="0"
-                        rx="2.5"
-                        ry="2.5"
-                        style={
-                          Object {
-                            "animationDelay": "581ms",
-                          }
-                        }
-                        transform="rotate(210, 0, 2) translate(10 0)"
-                        width="12"
-                      />
-                    </Rect>
-                    <Rect
-                      fill="#0b0c0c"
-                      height="5"
-                      key="8"
-                      opacity="0"
-                      rx="2.5"
-                      ry="2.5"
-                      style={
-                        Object {
-                          "animationDelay": "664ms",
-                        }
-                      }
-                      transform="rotate(240, 0, 2) translate(10 0)"
-                      width="12"
-                    >
-                      <rect
-                        className="emotion-0 emotion-1"
-                        fill="#0b0c0c"
-                        height="5"
-                        opacity="0"
-                        rx="2.5"
-                        ry="2.5"
-                        style={
-                          Object {
-                            "animationDelay": "664ms",
-                          }
-                        }
-                        transform="rotate(240, 0, 2) translate(10 0)"
-                        width="12"
-                      />
-                    </Rect>
-                    <Rect
-                      fill="#0b0c0c"
-                      height="5"
-                      key="9"
-                      opacity="0"
-                      rx="2.5"
-                      ry="2.5"
-                      style={
-                        Object {
-                          "animationDelay": "747ms",
-                        }
-                      }
-                      transform="rotate(270, 0, 2) translate(10 0)"
-                      width="12"
-                    >
-                      <rect
-                        className="emotion-0 emotion-1"
-                        fill="#0b0c0c"
-                        height="5"
-                        opacity="0"
-                        rx="2.5"
-                        ry="2.5"
-                        style={
-                          Object {
-                            "animationDelay": "747ms",
-                          }
-                        }
-                        transform="rotate(270, 0, 2) translate(10 0)"
-                        width="12"
-                      />
-                    </Rect>
-                    <Rect
-                      fill="#0b0c0c"
-                      height="5"
-                      key="10"
-                      opacity="0"
-                      rx="2.5"
-                      ry="2.5"
-                      style={
-                        Object {
-                          "animationDelay": "830ms",
-                        }
-                      }
-                      transform="rotate(300, 0, 2) translate(10 0)"
-                      width="12"
-                    >
-                      <rect
-                        className="emotion-0 emotion-1"
-                        fill="#0b0c0c"
-                        height="5"
-                        opacity="0"
-                        rx="2.5"
-                        ry="2.5"
-                        style={
-                          Object {
-                            "animationDelay": "830ms",
-                          }
-                        }
-                        transform="rotate(300, 0, 2) translate(10 0)"
-                        width="12"
-                      />
-                    </Rect>
-                    <Rect
-                      fill="#0b0c0c"
-                      height="5"
-                      key="11"
-                      opacity="0"
-                      rx="2.5"
-                      ry="2.5"
-                      style={
-                        Object {
-                          "animationDelay": "913ms",
-                        }
-                      }
-                      transform="rotate(330, 0, 2) translate(10 0)"
-                      width="12"
-                    >
-                      <rect
-                        className="emotion-0 emotion-1"
-                        fill="#0b0c0c"
-                        height="5"
-                        opacity="0"
-                        rx="2.5"
-                        ry="2.5"
-                        style={
-                          Object {
-                            "animationDelay": "913ms",
-                          }
-                        }
-                        transform="rotate(330, 0, 2) translate(10 0)"
-                        width="12"
-                      />
-                    </Rect>
-                  </svg>
-                </SVG>
-              </Spinner>
-              <Overlay
-                className="overlay"
-              >
-                <div
-                  className="overlay emotion-24 emotion-25"
-                />
-              </Overlay>
-            </div>
-          </Innerwrap>
-        </Transition>
-      </CSSTransition>
-      example
-    </div>
-  </StyledContainer>
+                    </StyledComponent>
+                  </styled.div>
+                </div>
+              </StyledComponent>
+            </styled.div>
+          </Transition>
+        </CSSTransition>
+        example
+      </div>
+    </StyledComponent>
+  </styled.div>
 </LoadingBox>
 `;

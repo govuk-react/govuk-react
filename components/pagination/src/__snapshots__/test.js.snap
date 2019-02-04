@@ -1,17 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-3 {
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 30px;
-  }
-}
-
-.emotion-1 {
+exports[`Pagination matches wrapper snapshot: wrapper mount 1`] = `
+.c1 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -32,11 +22,14 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   font-size: 16px;
   line-height: 1.25;
   width: 100%;
+}
+
+.c0 {
   margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c1 {
     font-size: 19px;
     line-height: 1.3;
     -webkit-flex-direction: row;
@@ -46,24 +39,85 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c0 {
     margin-bottom: 30px;
   }
 }
 
-<StyledHoc>
-  <Pagination
-    className="emotion-3 emotion-0"
+<Styled(Pagination)>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-ifAKCX",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(Pagination)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-ifAKCX",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
   >
-    <StyledList
-      className="emotion-3 emotion-0"
+    <Pagination
+      className="c0"
     >
-      <ul
-        className="emotion-0 emotion-1 emotion-2"
+      <styled.ul
+        className="c0"
       >
-        Example
-      </ul>
-    </StyledList>
-  </Pagination>
-</StyledHoc>
+        <StyledComponent
+          className="c0"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": true,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "box-sizing: border-box; display: flex; flex-direction: column; margin-top: 30px; padding: 10px; justify-content: space-between; font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 16px; line-height: 1.25; width: 100%; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3; flex-direction: row;
+}",
+                ],
+              },
+              "displayName": "styled.ul",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "ul",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+        >
+          <ul
+            className="c0 c1"
+          >
+            Example
+          </ul>
+        </StyledComponent>
+      </styled.ul>
+    </Pagination>
+  </StyledComponent>
+</Styled(Pagination)>
 `;

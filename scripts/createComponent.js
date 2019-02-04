@@ -41,8 +41,7 @@ const packageJson = () => {
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
-    "emotion": ">=9",
-    "react-emotion": ">=9",
+    "styled-components": ">=4",
     "react": ">=15"
   },
   "scripts": {
@@ -104,7 +103,7 @@ const indexScript = () => {
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from 'styled-components';
 
 import {
   FONT_SIZE,

@@ -1,30 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-7 {
-  margin-bottom: 15px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-7 {
-    margin-bottom: 15px;
-  }
-}
-
-.emotion-5 {
+.c1 {
   background-color: #28a197;
   color: #ffffff;
   padding: 30px;
-  margin-bottom: 15px;
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-5 {
-    margin-bottom: 15px;
-  }
-}
-
-.emotion-0 {
+.c2 {
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
@@ -34,14 +17,7 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
   text-align: center;
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    font-size: 48px;
-    line-height: 50px;
-  }
-}
-
-.emotion-2 {
+.c3 {
   font-family: "nta",Arial,sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -52,44 +28,178 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
+.c0 {
+  margin-bottom: 15px;
+}
+
 @media only screen and (min-width:641px) {
-  .emotion-2 {
+  .c2 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c3 {
     font-size: 36px;
     line-height: 40px;
   }
 }
 
-<StyledHoc
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-bottom: 15px;
+  }
+}
+
+<Styled(Panel)
   panelBody="body"
   panelTitle="Example"
 >
-  <Panel
-    className="emotion-7 emotion-4"
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bZQynM",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(Panel)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-bZQynM",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
     panelBody="body"
     panelTitle="Example"
   >
-    <StyledPanel
-      className="emotion-7 emotion-4"
+    <Panel
+      className="c0"
+      panelBody="body"
+      panelTitle="Example"
     >
-      <div
-        className="emotion-4 emotion-5 emotion-6"
+      <styled.div
+        className="c0"
       >
-        <StyledTitle>
-          <h2
-            className="emotion-0 emotion-1"
-          >
-            Example
-          </h2>
-        </StyledTitle>
-        <StyledBody>
+        <StyledComponent
+          className="c0"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": true,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "background-color: #28a197; color: #ffffff; padding: 30px;",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+        >
           <div
-            className="emotion-2 emotion-3"
+            className="c0 c1"
           >
-            body
+            <styled.h2>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-ifAKCX",
+                      "isStatic": true,
+                      "lastClassName": "c2",
+                      "rules": Array [
+                        "font-family: \\"nta\\", Arial, sans-serif; font-weight: bold; -webkit-font-smoothing: antialiased; font-size: 32px; line-height: 35px; margin-top: 0; text-align: center; @media only screen and (min-width: 641px) {
+  font-size: 48px; line-height: 50px;
+}",
+                      ],
+                    },
+                    "displayName": "styled.h2",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-ifAKCX",
+                    "target": "h2",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <h2
+                  className="c2"
+                >
+                  Example
+                </h2>
+              </StyledComponent>
+            </styled.h2>
+            <styled.div>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-EHOje",
+                      "isStatic": true,
+                      "lastClassName": "c3",
+                      "rules": Array [
+                        "font-family: \\"nta\\", Arial, sans-serif; font-size: 24px; font-weight: 400; line-height: 25px; margin-top: 15px; margin-bottom: 10px; text-align: center; -webkit-font-smoothing: antialiased; @media only screen and (min-width: 641px) {
+  font-size: 36px; line-height: 40px;
+}",
+                      ],
+                    },
+                    "displayName": "styled.div",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-EHOje",
+                    "target": "div",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <div
+                  className="c3"
+                >
+                  body
+                </div>
+              </StyledComponent>
+            </styled.div>
           </div>
-        </StyledBody>
-      </div>
-    </StyledPanel>
-  </Panel>
-</StyledHoc>
+        </StyledComponent>
+      </styled.div>
+    </Panel>
+  </StyledComponent>
+</Styled(Panel)>
 `;

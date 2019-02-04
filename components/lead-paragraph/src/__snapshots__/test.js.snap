@@ -1,17 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-3 {
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 30px;
-  }
-}
-
-.emotion-1 {
+exports[`LeadParagraph matches wrapper snapshot: wrapper mount 1`] = `
+.c1 {
   color: #0b0c0c;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -20,48 +10,118 @@ exports[`Styled matches wrapper snapshot: wrapper mount 1`] = `
   font-size: 18px;
   line-height: 1.1111111111111112;
   margin-top: 0;
+}
+
+.c0 {
   margin-bottom: 20px;
 }
 
 @media print {
-  .emotion-1 {
+  .c1 {
     color: #000;
   }
 }
 
 @media print {
-  .emotion-1 {
+  .c1 {
     font-size: 18px;
     line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c1 {
     font-size: 24px;
     line-height: 1.25;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c0 {
     margin-bottom: 30px;
   }
 }
 
-<StyledHoc>
-  <LeadParagraph
-    className="emotion-3 emotion-0"
+<Styled(LeadParagraph)>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-ifAKCX",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(LeadParagraph)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-ifAKCX",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
   >
-    <StyledParagraph
-      className="emotion-3 emotion-0"
+    <LeadParagraph
+      className="c0"
     >
-      <p
-        className="emotion-0 emotion-1 emotion-2"
+      <styled.p
+        className="c0"
       >
-        example
-      </p>
-    </StyledParagraph>
-  </LeadParagraph>
-</StyledHoc>
+        <StyledComponent
+          className="c0"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": true,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "color: #0b0c0c; @media print {
+  color: #000;
+}",
+                  "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 18px; line-height: 1.15;
+} font-weight: 400; font-size: 18px; line-height: 1.1111111111111112; @media only screen and (min-width: 641px) {
+  font-size: 24px; line-height: 1.25;
+}",
+                  "margin-top: 0;",
+                ],
+              },
+              "displayName": "styled.p",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "p",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+        >
+          <p
+            className="c0 c1"
+          >
+            example
+          </p>
+        </StyledComponent>
+      </styled.p>
+    </LeadParagraph>
+  </StyledComponent>
+</Styled(LeadParagraph)>
 `;

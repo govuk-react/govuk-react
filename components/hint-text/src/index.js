@@ -1,6 +1,6 @@
 // https://github.com/alphagov/govuk-frontend/tree/master/src/components/
 
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';

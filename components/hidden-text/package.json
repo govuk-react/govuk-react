@@ -9,9 +9,8 @@
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
-    "emotion": ">=9",
     "react": ">=15",
-    "react-emotion": ">=9"
+    "styled-components": ">=4"
   },
   "scripts": {
     "build": "yarn build:lib && yarn build:es",

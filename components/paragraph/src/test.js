@@ -16,7 +16,7 @@ ReactRouterLinkRenderer.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-describe(Paragraph, () => {
+describe('Paragraph', () => {
   const examplePlain = 'Some basic text';
   const exampleInlineCode = '`Some inline code example`';
   const exampleEmphasis = '*Some emphasis example*';

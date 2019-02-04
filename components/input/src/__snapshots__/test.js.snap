@@ -1,17 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input matches withColouredError snapshot: with coloured error mount 1`] = `
-.emotion-3 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-1 {
+.c1 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -29,82 +19,153 @@ exports[`Input matches withColouredError snapshot: with coloured error mount 1`]
   -moz-appearance: none;
   appearance: none;
   border: 4px solid #f47738;
+}
+
+.c1:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+.c1::-webkit-outer-spin-button,
+.c1::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.c1[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c0 {
   margin-bottom: 0;
 }
 
 @media print {
-  .emotion-1 {
+  .c1 {
     font-size: 14px;
     line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c1 {
     font-size: 19px;
     line-height: 1.3157894736842106;
   }
 }
 
-.emotion-1:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-}
-
-.emotion-1::-webkit-outer-spin-button,
-.emotion-1::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-}
-
-.emotion-1[type="number"] {
-  -moz-appearance: textfield;
-}
-
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c0 {
     margin-bottom: 0;
   }
 }
 
-<StyledHoc
+<Styled(Input)
   error="example"
   errorColor="#f47738"
   type="text"
 >
-  <Input
-    className="emotion-3 emotion-0"
+  <StyledComponent
     error="example"
     errorColor="#f47738"
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-ifAKCX",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(Input)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-ifAKCX",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
     type="text"
   >
-    <StyledInput
-      className="emotion-3 emotion-0"
+    <Input
+      className="c0"
       error="example"
       errorColor="#f47738"
       type="text"
     >
-      <input
-        className="emotion-0 emotion-1 emotion-2"
+      <styled.input
+        className="c0"
+        error="example"
+        errorColor="#f47738"
         type="text"
-      />
-    </StyledInput>
-  </Input>
-</StyledHoc>
+      >
+        <StyledComponent
+          className="c0"
+          error="example"
+          errorColor="#f47738"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": false,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
+}",
+                  "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0;
+}",
+                  "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+  margin: 0; -webkit-appearance: none;
+} &[type=\\"number\\"] {
+  -moz-appearance: textfield;
+}",
+                  [Function],
+                ],
+              },
+              "displayName": "styled.input",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "input",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          type="text"
+        >
+          <input
+            className="c0 c1"
+            type="text"
+          />
+        </StyledComponent>
+      </styled.input>
+    </Input>
+  </StyledComponent>
+</Styled(Input)>
 `;
 
 exports[`Input matches withError snapshot: with error mount 1`] = `
-.emotion-3 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-1 {
+.c1 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -122,79 +183,148 @@ exports[`Input matches withError snapshot: with error mount 1`] = `
   -moz-appearance: none;
   appearance: none;
   border: 4px solid #b10e1e;
+}
+
+.c1:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+.c1::-webkit-outer-spin-button,
+.c1::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.c1[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c0 {
   margin-bottom: 0;
 }
 
 @media print {
-  .emotion-1 {
+  .c1 {
     font-size: 14px;
     line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c1 {
     font-size: 19px;
     line-height: 1.3157894736842106;
   }
 }
 
-.emotion-1:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-}
-
-.emotion-1::-webkit-outer-spin-button,
-.emotion-1::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-}
-
-.emotion-1[type="number"] {
-  -moz-appearance: textfield;
-}
-
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c0 {
     margin-bottom: 0;
   }
 }
 
-<StyledHoc
+<Styled(Input)
   error="example"
   type="text"
 >
-  <Input
-    className="emotion-3 emotion-0"
+  <StyledComponent
     error="example"
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-ifAKCX",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(Input)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-ifAKCX",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
     type="text"
   >
-    <StyledInput
-      className="emotion-3 emotion-0"
+    <Input
+      className="c0"
       error="example"
       type="text"
     >
-      <input
-        className="emotion-0 emotion-1 emotion-2"
+      <styled.input
+        className="c0"
+        error="example"
         type="text"
-      />
-    </StyledInput>
-  </Input>
-</StyledHoc>
+      >
+        <StyledComponent
+          className="c0"
+          error="example"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": false,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
+}",
+                  "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0;
+}",
+                  "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+  margin: 0; -webkit-appearance: none;
+} &[type=\\"number\\"] {
+  -moz-appearance: textfield;
+}",
+                  [Function],
+                ],
+              },
+              "displayName": "styled.input",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "input",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          type="text"
+        >
+          <input
+            className="c0 c1"
+            type="text"
+          />
+        </StyledComponent>
+      </styled.input>
+    </Input>
+  </StyledComponent>
+</Styled(Input)>
 `;
 
 exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-3 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-1 {
+.c1 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -211,60 +341,137 @@ exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.c1:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+.c1::-webkit-outer-spin-button,
+.c1::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.c1[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.c0 {
   margin-bottom: 0;
 }
 
 @media print {
-  .emotion-1 {
+  .c1 {
     font-size: 14px;
     line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c1 {
     font-size: 19px;
     line-height: 1.3157894736842106;
   }
 }
 
-.emotion-1:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-}
-
-.emotion-1::-webkit-outer-spin-button,
-.emotion-1::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-}
-
-.emotion-1[type="number"] {
-  -moz-appearance: textfield;
-}
-
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c0 {
     margin-bottom: 0;
   }
 }
 
-<StyledHoc
+<Styled(Input)
   type="text"
 >
-  <Input
-    className="emotion-3 emotion-0"
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-ifAKCX",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(Input)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-ifAKCX",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
     type="text"
   >
-    <StyledInput
-      className="emotion-3 emotion-0"
+    <Input
+      className="c0"
       type="text"
     >
-      <input
-        className="emotion-0 emotion-1 emotion-2"
+      <styled.input
+        className="c0"
         type="text"
-      />
-    </StyledInput>
-  </Input>
-</StyledHoc>
+      >
+        <StyledComponent
+          className="c0"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": false,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
+}",
+                  "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0;
+}",
+                  "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+  margin: 0; -webkit-appearance: none;
+} &[type=\\"number\\"] {
+  -moz-appearance: textfield;
+}",
+                  [Function],
+                ],
+              },
+              "displayName": "styled.input",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "input",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          type="text"
+        >
+          <input
+            className="c0 c1"
+            type="text"
+          />
+        </StyledComponent>
+      </styled.input>
+    </Input>
+  </StyledComponent>
+</Styled(Input)>
 `;

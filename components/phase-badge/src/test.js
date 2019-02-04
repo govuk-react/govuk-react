@@ -6,7 +6,7 @@ import PhaseBadge from './';
 
 const wrapper = <PhaseBadge>beta</PhaseBadge>;
 
-describe(PhaseBadge, () => {
+describe('PhaseBadge', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(wrapper, div);

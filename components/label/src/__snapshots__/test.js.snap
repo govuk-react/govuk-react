@@ -1,17 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Label matches withError snapshot: with error mount 1`] = `
-.emotion-3 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-1 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -23,54 +13,111 @@ exports[`Label matches withError snapshot: with error mount 1`] = `
   border-left: 4px solid #b10e1e;
   margin-right: 15px;
   padding-left: 10px;
-  margin-bottom: 0;
 }
 
-.emotion-1:after {
+.c1:after {
   content: '';
   display: table;
   clear: both;
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 0;
-  }
-}
-
-<StyledHoc
-  error="example"
->
-  <Label
-    className="emotion-3 emotion-0"
-    error="example"
-  >
-    <StyledLabel
-      className="emotion-3 emotion-0"
-      error="example"
-    >
-      <label
-        className="emotion-0 emotion-1 emotion-2"
-      >
-        example
-      </label>
-    </StyledLabel>
-  </Label>
-</StyledHoc>
-`;
-
-exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-3 {
+.c0 {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .c0 {
     margin-bottom: 0;
   }
 }
 
-.emotion-1 {
+<Styled(Label)
+  error="example"
+>
+  <StyledComponent
+    error="example"
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-ifAKCX",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(Label)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-ifAKCX",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
+  >
+    <Label
+      className="c0"
+      error="example"
+    >
+      <styled.label
+        className="c0"
+        error="example"
+      >
+        <StyledComponent
+          className="c0"
+          error="example"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": false,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "display: flex; flex-direction: column; box-sizing: border-box; :after {
+  content: ''; display: table; clear: both;
+}",
+                  [Function],
+                ],
+              },
+              "displayName": "styled.label",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "label",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+        >
+          <label
+            className="c0 c1"
+          >
+            example
+          </label>
+        </StyledComponent>
+      </styled.label>
+    </Label>
+  </StyledComponent>
+</Styled(Label)>
+`;
+
+exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -79,34 +126,99 @@ exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   box-sizing: border-box;
-  margin-bottom: 0;
 }
 
-.emotion-1:after {
+.c1:after {
   content: '';
   display: table;
   clear: both;
 }
 
+.c0 {
+  margin-bottom: 0;
+}
+
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c0 {
     margin-bottom: 0;
   }
 }
 
-<StyledHoc>
-  <Label
-    className="emotion-3 emotion-0"
+<Styled(Label)>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-ifAKCX",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(Label)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-ifAKCX",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
   >
-    <StyledLabel
-      className="emotion-3 emotion-0"
+    <Label
+      className="c0"
     >
-      <label
-        className="emotion-0 emotion-1 emotion-2"
+      <styled.label
+        className="c0"
       >
-        example
-      </label>
-    </StyledLabel>
-  </Label>
-</StyledHoc>
+        <StyledComponent
+          className="c0"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": false,
+                "lastClassName": "c1",
+                "rules": Array [
+                  "display: flex; flex-direction: column; box-sizing: border-box; :after {
+  content: ''; display: table; clear: both;
+}",
+                  [Function],
+                ],
+              },
+              "displayName": "styled.label",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "label",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+        >
+          <label
+            className="c0 c1"
+          >
+            example
+          </label>
+        </StyledComponent>
+      </styled.label>
+    </Label>
+  </StyledComponent>
+</Styled(Label)>
 `;

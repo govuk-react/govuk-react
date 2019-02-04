@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import { LINK_COLOUR, LINK_HOVER_COLOUR, LINK_VISITED_COLOUR } from 'govuk-colours';
 
 const Anchor = styled('a')({

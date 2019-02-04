@@ -12,7 +12,7 @@ import TopNav from '@govuk-react/top-nav';
 import Main from './atoms/main';
 import WidthContainer from './atoms/width-container';
 
-// const PageWrapper = styled('div')();
+// const PageWrapper = styled('div')({});
 
 // TODO: replace with actual footer component once built
 // const Footer = styled('footer')({

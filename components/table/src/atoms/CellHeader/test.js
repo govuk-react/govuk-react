@@ -1,6 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import CellHeader from './';
+import { mount } from 'enzyme';
+
+import CellHeader from '.';
 
 const example = <table><tbody><tr><CellHeader>example</CellHeader></tr></tbody></table>;
 const exampleAlignRight = (
@@ -22,11 +23,10 @@ const exampleBold = (
   </table>
 );
 
-describe(CellHeader, () => {
+describe('CellHeader', () => {
   it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(example, div);
-    ReactDOM.render(exampleAlignRight, div);
-    ReactDOM.render(exampleBold, div);
+    mount(example);
+    mount(exampleAlignRight);
+    mount(exampleBold);
   });
 });

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-1 {
+.c0 {
   color: #0b0c0c;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,53 +15,117 @@ exports[`Header matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media print {
-  .emotion-1 {
+  .c0 {
     color: #000;
   }
 }
 
 @media print {
-  .emotion-1 {
+  .c0 {
     font-size: 32px;
     line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c0 {
     font-size: 48px;
     line-height: 1.0416666666666667;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c0 {
     margin-bottom: 50px;
   }
 }
 
-<StyledHoc
-  level={1}
->
-  <Header
-    className="emotion-6 emotion-0"
-    level={1}
+<Styled(Header)>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-ifAKCX",
+          "isStatic": false,
+          "lastClassName": "cFlEyZ",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(Header)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-ifAKCX",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
   >
-    <StyledHeader
-      className="emotion-6 emotion-0"
+    <Header
+      className=""
       level={1}
     >
-      <Component
-        className="emotion-0 emotion-1 emotion-2"
+      <Styled(Component)
+        className=""
         level={1}
       >
-        <h1
-          className="emotion-0 emotion-1 emotion-2"
+        <StyledComponent
+          className=""
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": false,
+                "lastClassName": "c0",
+                "rules": Array [
+                  "color: #0b0c0c; @media print {
+  color: #000;
+}",
+                  [Function],
+                  "display: block; margin-top: 0;",
+                  [Function],
+                ],
+              },
+              "displayName": "Styled(Component)",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": [Function],
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+              Symbol(Symbol.hasInstance): [Function],
+            }
+          }
+          forwardedRef={null}
+          level={1}
         >
-          example
-        </h1>
-      </Component>
-    </StyledHeader>
-  </Header>
-</StyledHoc>
+          <Component
+            className="c0"
+            level={1}
+          >
+            <h1
+              className="c0"
+            >
+              example
+            </h1>
+          </Component>
+        </StyledComponent>
+      </Styled(Component)>
+    </Header>
+  </StyledComponent>
+</Styled(Header)>
 `;

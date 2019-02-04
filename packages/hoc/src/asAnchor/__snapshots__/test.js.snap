@@ -1,29 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`asAnchor matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-0 {
-  color: #005ea5;
-  padding: 3px;
-  margin: -3px;
-  outline-color: transparent;
-  display: inline-block;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-0:focus {
-  background-color: #ffbf47;
-  outline: 3px solid #ffbf47;
-}
-
-.emotion-0:visited {
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": true,
+        "lastClassName": "jmKSeD",
+        "rules": Array [
+          "color: #005ea5; padding: 3px; margin: -3px; outline-color: transparent; display: inline-block; text-decoration: underline; :focus {
+  background-color: #ffbf47; outline: 3px solid #ffbf47;
+} :visited {
   color: #2e358b;
-}
-
-<Anchor
-  className="emotion-0 emotion-1"
+}",
+        ],
+      },
+      "displayName": "Styled(Anchor)",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": [Function],
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+      Symbol(Symbol.hasInstance): [Function],
+    }
+  }
+  forwardedRef={null}
   href="https://example.com"
 >
   Example
-</Anchor>
+</StyledComponent>
 `;

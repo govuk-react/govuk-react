@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`asPaginationItem matches wrapper snapshot: wrapper mount 1`] = `
-<PaginationWrapper>
+<styled.li>
   <a
     href="https://example.com"
   >
-    <InnerWrap>
+    <styled.div>
       Example
-    </InnerWrap>
+    </styled.div>
   </a>
-</PaginationWrapper>
+</styled.li>
 `;

@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { withWhiteSpace } from '@govuk-react/hoc';

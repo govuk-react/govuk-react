@@ -2,22 +2,20 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
-import { keyframes } from 'emotion';
+import styled, { keyframes } from 'styled-components';
 
 import SVG from '../SVGBase/index';
 
-const animationStyles = () => {
-  const fadeInOut = keyframes({
-    '0%': { opacity: '0.250075' },
-    '0.01%': { opacity: '0.25' },
-    '0.03%': { opacity: '1' },
-    '100%': { opacity: '0.250075' },
-  });
-  return { animation: `${fadeInOut} 1s infinite linear` };
-};
+const fadeInOut = keyframes`
+  0% { opacity: 0.250075; }
+  0.01% { opacity: 0.25; }
+  0.03% { opacity: 1; }
+  100% { opacity: 0.250075; }
+`;
 
-const Rect = styled('rect')(animationStyles);
+const Rect = styled.rect`
+  animation: ${fadeInOut} 1s infinite linear;
+`;
 
 const Spinner = ({
   className,

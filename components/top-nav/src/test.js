@@ -36,7 +36,7 @@ const wrapperEmptyNode = (
 const WrapperNavLinkAnchor = mount(wrapperNavLinkAnchor);
 const WrapperMultipleTopNavAnchor = mount(wrapperMultipleTopNavAnchor);
 
-describe(TopNav, () => {
+describe('TopNav', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(wrapper, div);

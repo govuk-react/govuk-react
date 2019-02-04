@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArrowLeft matches wrapper snapshot: wrapper mount 1`] = `
+exports[`ArrowRight matches wrapper snapshot: wrapper mount 1`] = `
 <ArrowLeft
   fill="currentColor"
   title="arrow left"

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HintText matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-1 {
+.c0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,32 +14,96 @@ exports[`HintText matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 @media print {
-  .emotion-1 {
+  .c0 {
     font-size: 14px;
     line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-1 {
+  .c0 {
     font-size: 19px;
     line-height: 1.3157894736842106;
   }
 }
 
-<StyledHoc>
-  <HintText
-    className="emotion-3 emotion-0"
+<Styled(HintText)>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-ifAKCX",
+          "isStatic": false,
+          "lastClassName": "cFlEyZ",
+          "rules": Array [
+            [Function],
+          ],
+        },
+        "displayName": "Styled(HintText)",
+        "foldedComponentIds": Array [],
+        "propTypes": Object {
+          "margin": [Function],
+          "mb": [Function],
+          "padding": [Function],
+        },
+        "render": [Function],
+        "styledComponentId": "sc-ifAKCX",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
+      }
+    }
+    forwardedRef={null}
   >
-    <StyledHint
-      className="emotion-3 emotion-0"
+    <HintText
+      className=""
     >
-      <span
-        className="emotion-0 emotion-1 emotion-2"
+      <styled.span
+        className=""
       >
-        example
-      </span>
-    </StyledHint>
-  </HintText>
-</StyledHoc>
+        <StyledComponent
+          className=""
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": true,
+                "lastClassName": "c0",
+                "rules": Array [
+                  "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
+}",
+                  "display: block; margin-bottom: 15px; color: #6f777b;",
+                ],
+              },
+              "displayName": "styled.span",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "span",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+        >
+          <span
+            className="c0"
+          >
+            example
+          </span>
+        </StyledComponent>
+      </styled.span>
+    </HintText>
+  </StyledComponent>
+</Styled(HintText)>
 `;

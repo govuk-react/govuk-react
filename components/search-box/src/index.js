@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import { LIGHT_BLUE, GREY_2, WHITE, YELLOW } from 'govuk-colours';
 import { NTA_LIGHT } from '@govuk-react/constants';
 

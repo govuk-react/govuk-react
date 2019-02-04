@@ -1,54 +1,54 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
 import Breadcrumb from '.';
 
 describe('breadcrumb', () => {
-  const emptyNode = [];
-  const nullNode = null;
-  const wrapper = <Breadcrumb>example</Breadcrumb>;
-  const wrapperMultiple = (
-    <Breadcrumb>
-      <a href="/section">Section 1</a>
-      example
-    </Breadcrumb>
-  );
-  const wrapperEmptyNode = (
-    <Breadcrumb>
-      <a href="/section">Section 1</a>
-      {emptyNode}
-      {nullNode}
-      example
-    </Breadcrumb>
-  );
-
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(wrapper, div);
-  });
-
   it('should render an item in ordered list', () => {
-    const output = mount(wrapper);
-    expect(output.find('ol')).toHaveLength(1);
+    const wrapper = mount(<Breadcrumb>example</Breadcrumb>);
+
+    expect(wrapper.find('ol')).toHaveLength(1);
   });
 
   it('should render multiple items in ordered list', () => {
-    expect(mount(wrapperMultiple).find('ol li')).toHaveLength(2);
+    const wrapper = mount((
+      <Breadcrumb>
+        <a href="/section">Section 1</a>
+        example
+      </Breadcrumb>
+    ));
+
+    expect(wrapper.find('ol li')).toHaveLength(2);
   });
 
   it('should render an ordered list without ghost/duff children', () => {
-    expect(mount(wrapperEmptyNode).find('ol li')).toHaveLength(2);
+    const wrapper = mount((
+      <Breadcrumb>
+        <a href="/section">Section 1</a>
+        {[] /* empty node */}
+        {null /* null node */}
+        example
+      </Breadcrumb>
+    ));
+
+    expect(wrapper.find('ol li')).toHaveLength(2);
   });
 
   it('allows attributes to be set', () => {
-    const output = mount(<Breadcrumb id="test" className="test">Crumb</Breadcrumb>);
+    const wrapper = mount(<Breadcrumb id="test" className="test">Crumb</Breadcrumb>);
 
-    expect(output.hasClass('test')).toBe(true);
-    expect(output.is('#test')).toBe(true);
+    expect(wrapper.hasClass('test')).toBe(true);
+    expect(wrapper.is('#test')).toBe(true);
   });
 
   it('matches snapshot', () => {
-    expect(mount(wrapperMultiple)).toMatchSnapshot('enzyme.mount');
+    const wrapper = mount((
+      <Breadcrumb>
+        <a href="/section">Section 1</a>
+        <a href="/section2">Section 2</a>
+      </Breadcrumb>
+    ));
+
+    expect(wrapper).toMatchSnapshot('breadcrumb');
   });
 });

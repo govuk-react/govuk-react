@@ -1,6 +1,6 @@
 // https://govuk-elements.herokuapp.com/data/
 
-import styled from 'react-emotion';
+import styled from 'styled-components';
 import {
   FONT_SIZE,
   LINE_HEIGHT,
