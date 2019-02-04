@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tag matches wrapper snapshot: wrapper mount 1`] = `
+.c0 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.25;
+  display: inline-block;
+  padding: 4px 8px;
+  padding-bottom: 1px;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  color: #ffffff;
+  background-color: #005ea5;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media print {
+  .c0 {
+    font-size: 14px;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+<DocumentedTag
+  inactive={false}
+>
+  <styled.strong
+    inactive={false}
+  >
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.25;
+} font-weight: 700; font-size: 14px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 16px; line-height: 1.25;
+}",
+              "display: inline-block; padding: 4px 8px; padding-bottom: 1px; outline: 2px solid transparent; outline-offset: -2px; color: #ffffff; background-color: #005ea5; letter-spacing: 1px; text-decoration: none; text-transform: uppercase;",
+              [Function],
+            ],
+          },
+          "defaultProps": Object {
+            "inactive": false,
+          },
+          "displayName": "styled.strong",
+          "foldedComponentIds": Array [],
+          "propTypes": undefined,
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "strong",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      inactive={false}
+    >
+      <strong
+        className="c0"
+      >
+        beta
+      </strong>
+    </StyledComponent>
+  </styled.strong>
+</DocumentedTag>
+`;
