@@ -1,12 +1,12 @@
 {
   "name": "@govuk-react/main",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "devDependencies": {
     "@storybook/addon-knobs": "^4.0.7"
   },
   "dependencies": {
-    "@govuk-react/constants": "^0.5.0",
-    "@govuk-react/hoc": "^0.5.0"
+    "@govuk-react/constants": "^0.5.1",
+    "@govuk-react/hoc": "^0.5.1"
   },
   "peerDependencies": {
     "emotion": ">=9",

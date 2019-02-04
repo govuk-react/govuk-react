@@ -1,10 +1,10 @@
 {
   "name": "@govuk-react/hoc",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "dependencies": {
-    "@govuk-react/constants": "^0.5.0",
-    "@govuk-react/icons": "^0.5.0",
-    "@govuk-react/lib": "^0.5.0",
+    "@govuk-react/constants": "^0.5.1",
+    "@govuk-react/icons": "^0.5.1",
+    "@govuk-react/lib": "^0.5.1",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
