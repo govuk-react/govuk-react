@@ -65,6 +65,10 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
+.emotion-1[href] {
+  border-bottom: 1px solid #0b0c0c;
+}
+
 .emotion-1::before {
   display: block;
   width: 0;
@@ -84,19 +88,71 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <StyledHoc
-  onClick={[Function]}
+  href="#"
+  onClick={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
 >
   <BackLink
     className="emotion-3 emotion-0"
-    onClick={[Function]}
+    href="#"
+    onClick={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
   >
     <Anchor
       className="emotion-3 emotion-0"
-      onClick={[Function]}
+      href="#"
+      onClick={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": undefined,
+            },
+          ],
+        }
+      }
     >
       <a
         className="emotion-0 emotion-1 emotion-2"
-        onClick={[Function]}
+        href="#"
+        onClick={
+          [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": undefined,
+              },
+            ],
+          }
+        }
       >
         example
       </a>
