@@ -10,7 +10,7 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
   line-height: 1.25;
   box-sizing: border-box;
   margin-bottom: 15px;
-  padding: NaNpx;
+  padding: 25px;
   border: 5px solid transparent;
   text-align: center;
   color: #ffffff;
@@ -57,7 +57,7 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
 
 @media only screen and (min-width:641px) {
   .c0 {
-    padding: NaNpx;
+    padding: 35px;
   }
 }
 
@@ -108,8 +108,8 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
 } font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
   font-size: 19px; line-height: 1.3157894736842106;
 }",
-              "box-sizing: border-box; margin-bottom: 15px; padding: NaNpx; border: 5px solid transparent; text-align: center; @media only screen and (min-width: 641px) {
-  padding: NaNpx;
+              "box-sizing: border-box; margin-bottom: 15px; padding: 25px; border: 5px solid transparent; text-align: center; @media only screen and (min-width: 641px) {
+  padding: 35px;
 } color: #ffffff; background: #28a197;",
               [Function],
             ],

@@ -8,6 +8,9 @@ import {
   MEDIA_QUERIES,
   SPACING_POINTS,
 } from '@govuk-react/constants';
+import { stripUnit } from 'polished';
+
+const RAW_BORDER_WIDTH = stripUnit(BORDER_WIDTH);
 
 const StyledPanel = styled('div')(
   typography.font({ size: 19 }),
@@ -16,7 +19,7 @@ const StyledPanel = styled('div')(
 
     marginBottom: SPACING_POINTS[3],
     // NB govuk-frontend has this element styled tablet-first
-    padding: SPACING_POINTS[6] - BORDER_WIDTH,
+    padding: SPACING_POINTS[6] - RAW_BORDER_WIDTH,
 
     border: `${BORDER_WIDTH} solid transparent`,
 
@@ -24,7 +27,7 @@ const StyledPanel = styled('div')(
 
     // NB govuk-frontend has this media query as an `until tablet` (thus for mobile)
     [MEDIA_QUERIES.TABLET]: {
-      padding: SPACING_POINTS[7] - BORDER_WIDTH,
+      padding: SPACING_POINTS[7] - RAW_BORDER_WIDTH,
     },
 
     color: WHITE,
