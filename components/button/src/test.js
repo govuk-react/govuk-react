@@ -5,68 +5,80 @@ import Button, {
   ButtonStart,
   ButtonStartIcon,
   ButtonDisabled,
+  ButtonBlue,
+  ButtonWacky,
 } from './fixtures';
 
 describe('button', () => {
-  let wrapper;
+  describe('basics', () => {
+    it('should render a button', () => {
+      const wrapper = mount(<Button>Example</Button>);
 
-  it('renders without crashing', () => {
-    wrapper = mount(<Button>Example</Button>);
+      expect(wrapper.find('button')).toBeTruthy();
+    });
+
+    it('matches snapshot', () => {
+      const wrapper = mount(<Button>Example</Button>);
+
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 
-  it('should render a button', () => {
-    expect(wrapper.find('button')).toBeTruthy();
+  describe('disabled', () => {
+    it('should render a button with the disabled attribute', () => {
+      const wrapper = mount(<ButtonDisabled />);
+
+      expect(wrapper.find('button').prop('disabled')).toBeTruthy();
+    });
+
+    it('matches snapshot', () => {
+      const wrapper = mount(<ButtonDisabled />);
+
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 
-  it('matches snapshot', () => {
-    expect(wrapper).toMatchSnapshot();
-  });
-});
+  describe('start button', () => {
+    it('should render a button with the isStart prop', () => {
+      const wrapper = mount(<ButtonStart />);
 
-describe('disabled button', () => {
-  let wrapper;
+      expect(wrapper.find('button').parent().prop('isStart')).toBeTruthy();
+    });
 
-  it('renders without crashing', () => {
-    wrapper = mount(<ButtonDisabled />);
-  });
+    it('matches snapshot', () => {
+      const wrapper = mount(<ButtonStart />);
 
-  it('should render a button with the disabled attribute', () => {
-    expect(wrapper.find('button').prop('disabled')).toBeTruthy();
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 
-  it('matches snapshot', () => {
-    expect(wrapper).toMatchSnapshot();
-  });
-});
+  describe('button with icon', () => {
+    it('should render an SVG icon within the button', () => {
+      const wrapper = mount(<ButtonStartIcon />);
 
-describe('start button', () => {
-  let wrapper;
+      expect(wrapper.find('SVG')).toHaveLength(1);
+    });
 
-  it('renders without crashing', () => {
-    wrapper = mount(<ButtonStart />);
-  });
+    it('matches snapshot', () => {
+      const wrapper = mount(<ButtonStartIcon />);
 
-  it('should render a button with the isStart prop', () => {
-    expect(wrapper.find('button').parent().prop('isStart')).toBeTruthy();
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 
-  it('matches snapshot', () => {
-    expect(wrapper).toMatchSnapshot();
-  });
-});
+  describe('blue button, with automatic colours', () => {
+    it('matches snapshot', () => {
+      const wrapper = mount(<ButtonBlue />);
 
-describe('button with icon', () => {
-  let wrapper;
-
-  it('renders without crashing', () => {
-    wrapper = mount(<ButtonStartIcon />);
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 
-  it('should render an SVG icon within the button', () => {
-    expect(wrapper.find('SVG')).toHaveLength(1);
-  });
+  describe('custom colours', () => {
+    it('matches snapshot', () => {
+      const wrapper = mount(<ButtonWacky />);
 
-  it('matches snapshot', () => {
-    expect(wrapper).toMatchSnapshot();
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 });

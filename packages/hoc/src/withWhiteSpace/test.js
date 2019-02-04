@@ -1,11 +1,10 @@
 import React from 'react';
+import styled from 'react-emotion';
 import { shallow } from 'enzyme';
-import InputField from '@govuk-react/input-field';
-import withWhiteSpace from './';
+import withWhiteSpace from '.';
 
-const WithoutConfig = withWhiteSpace()(InputField);
-const WithConfig = withWhiteSpace({ marginBottom: 0 })(InputField);
-let wrapper;
+const WithoutConfig = withWhiteSpace()(styled('div'));
+const WithConfig = withWhiteSpace({ marginBottom: 0 })(styled('div'));
 
 describe('withWhiteSpace', () => {
   it('renders without config without crashing', () => {
@@ -16,15 +15,24 @@ describe('withWhiteSpace', () => {
     shallow(<WithConfig>Example</WithConfig>);
   });
 
-  it('renders with props without crashing', () => {
-    wrapper = shallow(<WithConfig mb={5}>Example</WithConfig>);
+  it('renders with simple mb prop without crashing', () => {
+    shallow(<WithConfig mb={5}>Example</WithConfig>);
   });
 
-  it('renders an InputField', () => {
-    expect(wrapper.find('InputField').exists()).toBe(true);
+  it('renders with a margin prop without crashing', () => {
+    shallow(<WithConfig margin={{ size: 5 }}>Example</WithConfig>);
+    shallow(<WithConfig margin={5}>Example</WithConfig>);
+    shallow(<WithConfig margin={[5, { size: 2, direction: 'top' }]}>Example</WithConfig>);
+  });
+
+  it('renders with a padding prop without crashing', () => {
+    shallow(<WithConfig padding={{ size: 5 }}>Example</WithConfig>);
+    shallow(<WithConfig padding={5}>Example</WithConfig>);
+    shallow(<WithConfig padding={[5, { size: 2, direction: 'top' }]}>Example</WithConfig>);
   });
 
   it('matches wrapper snapshot', () => {
+    const wrapper = shallow(<WithConfig mb={5}>Example</WithConfig>);
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -54,7 +54,7 @@ Prop | Required | Default | Type | Description
  `defaultValues` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` | custom | 
  `errorText` |  | ```undefined``` | string | Error text
  `hintText` |  | ```undefined``` | string | Optional hint text
- `input` |  | ```undefined``` | shape[object Object] | Properties that are sent to the input, matching final form input type
+ `input` |  | ```undefined``` | shape[object Object] | Properties that are sent to the input, matching final form and redux form input type
  `inputNames` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` | shape[object Object] | Input name attributes
 
 

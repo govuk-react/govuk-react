@@ -105,18 +105,22 @@ import { ButtonArrow } from '@govuk-react/icons';
 ```
 
 ### References:
-- https://govuk-elements.herokuapp.com/buttons/
-- https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_buttons.scss
+- https://design-system.service.gov.uk/components/button/
 - https://github.com/alphagov/govuk-frontend/blob/master/src/components/button/_button.scss
-- https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_buttons.scss
 
 ### TODO:
-- Use constants for some of the values cssinjs values
-- Remove cascade styling for nested elements such as `svg`
+- Remove cascade styling for nested elements, specifically `svg`
+- Consider ensuring text colour automatically switches between black/white based on WCAG guidance
+  - see https://www.w3.org/TR/WCAG20-TECHS/G18.html
+  - can use Polished's `readableColor` call, but translate their black to govuk's black
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
+ `buttonColour` |  | ```undefined``` | string | Override for default button colour
+ `buttonHoverColour` |  | ```undefined``` | string | Override for default button hover colour,<br/>which defaults to `buttonColour` darkened by 5%
+ `buttonShadowColour` |  | ```undefined``` | string | Override for default button shadow colour,<br/>which defaults to `buttonColour` darkened by 15%
+ `buttonTextColour` |  | ```undefined``` | string | Override for default button text colour,<br/>which defaults to govuk white
  `children` |  | ```'Button'``` | node | Button text
  `disabled` |  | ```false``` | bool | Renders a disabled button and removes pointer events if set to true
  `icon` |  | ```undefined``` | node | Button icon
@@ -153,6 +157,11 @@ Checkbox preselected & disabled
 ```jsx
 <Checkbox disabled="disabled" defaultChecked>Farm or agricultural waste</Checkbox>
 ```
+
+Checkbox with hint text
+```jsx
+<Checkbox hint="including English, Scottish, Welsh and Northern Irish">British</Checkbox>
+```
 ### References:
 - https://github.com/alphagov/govuk-frontend/blob/master/src/components/checkboxes/_checkboxes.scss
 
@@ -161,6 +170,7 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | node | Text content for checkbox
  `className` |  | ```undefined``` | string | CSS Classname for outermost container
+ `hint` |  | ```undefined``` | node | 
 
 
 DateField
@@ -198,7 +208,7 @@ Date with hint text & error
 
 With custom input name props
 ```jsx
-<DateInput hintText="For example, 31 03 1980"
+<DateField hintText="For example, 31 03 1980"
   inputNames={{
     day: 'dayInputName',
     month: 'monthInputName',
@@ -384,11 +394,11 @@ ErrorText
 
 Simple
 ```jsx
-<ErrorText errorText="example">Example</ErrorText>
+<ErrorText>Example</ErrorText>
 ```
 
 ### References
-- https://github.com/alphagov/govuk-frontend/tree/master/src/components
+- https://github.com/alphagov/govuk-frontend/blob/master/src/components/error-message/_error-message.scss
 
 ### Properties
 Prop | Required | Default | Type | Description
@@ -584,13 +594,13 @@ import { H1, H2, H3, H4, H5, H6 } from "@govuk-react/header";
 
 Differing sizes
 ```jsx
-<Header level={6} size="XXLARGE">
-  h6 with XXLARGE style
+<Header level={6} size={80}>
+  h6 with font size 80
 </Header>
-<Header level={2} size="XSMALL">
-  h2 with XSMALL style
+<Header level={2} size="SMALL">
+  h2 with SMALL size
 </Header>
-<H3 size="LARGE">h3 with LARGE style</H3>
+<H3 size="LARGE">h3 with LARGE size</H3>
 ```
 
 Props pass through
@@ -599,16 +609,15 @@ Props pass through
 ```
 
 ### References:
-- https://govuk-elements.herokuapp.com/typography/#typography-headings
+- https://design-system.service.gov.uk/styles/typography/#headings
 - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_typography.scss
-- https://github.com/alphagov/govuk-frontend/blob/master/src/globals/scss/core/_typography.scss
-- https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_elements-typography.scss
+- https://github.com/alphagov/govuk-frontend/blob/master/src/core/_typography.scss
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `level` |  | ```1``` | number | Semantic heading level value between 1 and 6
- `size` |  | ```undefined``` | enumObject.keys(FONT_SIZES) | Visual size level, accepts   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XSMALL`
+ `size` |  | ```undefined``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
 
 
 HiddenText
@@ -661,7 +670,7 @@ Simple
 ```
 
 ### References
-- https://github.com/alphagov/govuk-frontend/tree/master/src/components/
+- https://github.com/alphagov/govuk-frontend/blob/master/src/components/hint/_hint.scss
 
 ### Properties
 Prop | Required | Default | Type | Description
@@ -917,7 +926,7 @@ Simple
 ```
 
 ### References
-- https://govuk-static.herokuapp.com/component-guide/lead_paragraph
+- https://design-system.service.gov.uk/styles/typography/#paragraphs
 
 ### Properties
 Prop | Required | Default | Type | Description
@@ -1205,8 +1214,7 @@ Page
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `beforeChildren` |  | ```undefined``` | node | Add content that needs to appear outside `<main>` element.
-For example: The back link component, phase banner component
+ `beforeChildren` |  | ```undefined``` | node | Add content that needs to appear outside `<main>` element.<br/>For example: The back link component, phase banner component
  `children` |  | ```undefined``` | node | Add content that needs to appear centered in the `<main>` element
  `container` |  | ```({ children }) => <WidthContainer>{children}</WidthContainer>``` | func | Render props to allow the width container element to be overriden
  `footer` |  | ```undefined``` | node | Override the default footer component.
@@ -1280,7 +1288,7 @@ Panel with header and HTML body
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `panelBody` |  | ```undefined``` | union(string|array) | Panel body text
+ `panelBody` |  | ```undefined``` | union(string \| array) | Panel body text
  `panelTitle` | true | `````` | string | Panel title text
 
 
@@ -1474,6 +1482,18 @@ Radio preselected & disabled
    </Radio>
  </div>
 ```
+Radio with hint text
+```jsx
+<div>
+  <Radio
+   name="group1"
+   hint="You'll have a user ID if you've registered for Self Assessment or filed a tax return
+         online before."
+  >
+    Sign in with Government Gateway
+  </Radio>
+</div>
+```
 ### References:
 - https://github.com/alphagov/govuk-frontend/blob/master/src/components/radios/_radios.scss
 - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
@@ -1483,6 +1503,7 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | node | 
  `className` |  | ```undefined``` | string | 
+ `hint` |  | ```undefined``` | node | 
  `inline` |  | ```false``` | bool | 
 
 
@@ -1838,7 +1859,6 @@ TopNav with logo, service title and navigation items
 ```jsx
 import CrownIcon from '@govuk-react/icon-crown';
 import SearchBox from '@govuk-react/search-box';
-import Header from '@govuk-react/header';
 import TopNav, { asNavLinkAnchor, asTopNavAnchor } from '@govuk-react/top-nav';
 
 const LogoAnchor = asTopNavAnchor('a');
@@ -1854,7 +1874,7 @@ const Company = (
 
 const ServiceTitle = (
   <NavAnchor href={link} target="new">
-    <Header mb="0" level={3}>Service Title</Header>
+    Service Title
   </NavAnchor>
 );
 
@@ -1871,7 +1891,6 @@ const Search = (
 ```jsx
 import { BrowserRouter, Link } from 'react-router-dom';
 import CrownIcon from '@govuk-react/icon-crown';
-import Header from '@govuk-react/header';
 import TopNav, { asLogoAnchor, asNavLinkAnchor } from '@govuk-react/top-nav';
 
 const LogoLink = asTopNavAnchor(Link);
@@ -1886,7 +1905,7 @@ const CompanyLink = (
 
 const ServiceTitleLink = (
   <NavLink to={reactRouterLink}>
-    <Header mb="0" level={3}>Service Title</Header>
+    Service Title
   </NavLink>
 );
 

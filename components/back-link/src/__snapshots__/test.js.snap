@@ -1,33 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
-.emotion-3 {
-  margin-bottom: 15px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-3 {
-    margin-bottom: 15px;
-  }
-}
-
 .emotion-1 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.1428571429;
+  line-height: 1.1428571428571428;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   display: inline-block;
   position: relative;
   margin-top: 15px;
+  margin-bottom: 15px;
   padding-left: 14px;
-  border: 0;
-  background-color: transparent;
-  color: #0b0c0c;
+  border-bottom: 1px solid #0b0c0c;
   -webkit-text-decoration: none;
   text-decoration: none;
-  margin-bottom: 15px;
+}
+
+@media print {
+  .emotion-1 {
+    font-size: 14px;
+    line-height: 1.2;
+  }
 }
 
 @media only screen and (min-width:641px) {
@@ -37,8 +35,34 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-.emotion-1[href] {
-  border-bottom: 1px solid #0b0c0c;
+@media print {
+  .emotion-1 {
+    font-family: sans-serif;
+  }
+}
+
+.emotion-1:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+  background-color: #ffbf47;
+}
+
+.emotion-1:link,
+.emotion-1:visited,
+.emotion-1:hover,
+.emotion-1:active,
+.emotion-1:focus {
+  color: #0b0c0c;
+}
+
+@media print {
+  .emotion-1:link,
+  .emotion-1:visited,
+  .emotion-1:hover,
+  .emotion-1:active,
+  .emotion-1:focus {
+    color: #000;
+  }
 }
 
 .emotion-1::before {
@@ -59,83 +83,20 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
   margin: auto;
 }
 
-.emotion-1:focus {
-  background-color: #ffbf47;
-  outline: 3px solid #ffbf47;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 15px;
-  }
-}
-
 <StyledHoc
-  href="#"
-  onClick={
-    [MockFunction] {
-      "calls": Array [
-        Array [],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
+  onClick={[Function]}
 >
   <BackLink
     className="emotion-3 emotion-0"
-    href="#"
-    onClick={
-      [MockFunction] {
-        "calls": Array [
-          Array [],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
-        ],
-      }
-    }
+    onClick={[Function]}
   >
     <Anchor
       className="emotion-3 emotion-0"
-      href="#"
-      onClick={
-        [MockFunction] {
-          "calls": Array [
-            Array [],
-          ],
-          "results": Array [
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-          ],
-        }
-      }
+      onClick={[Function]}
     >
       <a
         className="emotion-0 emotion-1 emotion-2"
-        href="#"
-        onClick={
-          [MockFunction] {
-            "calls": Array [
-              Array [],
-            ],
-            "results": Array [
-              Object {
-                "type": "return",
-                "value": undefined,
-              },
-            ],
-          }
-        }
+        onClick={[Function]}
       >
         example
       </a>

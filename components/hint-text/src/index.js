@@ -3,30 +3,23 @@
 import styled from 'react-emotion';
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as COLOUR from 'govuk-colours';
+import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
+import { SPACING_POINTS } from '@govuk-react/constants';
 import { withWhiteSpace } from '@govuk-react/hoc';
-import {
-  FONT_SIZE,
-  LINE_HEIGHT,
-  MEDIA_QUERIES,
-  NTA_LIGHT,
-} from '@govuk-react/constants';
+import { typography } from '@govuk-react/lib';
 
-const StyledHint = styled('span')({
-  display: 'block',
-  fontFamily: NTA_LIGHT,
-  WebkitFontSmoothing: 'antialiased',
-  MozOsxFontSmoothing: 'grayscale',
-  fontWeight: 400,
-  textTransform: 'none',
-  fontSize: FONT_SIZE.SIZE_16,
-  lineHeight: LINE_HEIGHT.SIZE_16,
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    fontSize: FONT_SIZE.SIZE_19,
-    lineHeight: LINE_HEIGHT.SIZE_19,
+const StyledHint = styled('span')(
+  typography.font({ size: 19 }),
+  {
+    display: 'block',
+    // NB non-responsive marginBottom here
+    marginBottom: SPACING_POINTS[3],
+    color: `${SECONDARY_TEXT_COLOUR}`,
   },
-  color: `${COLOUR.GREY_1}`,
-});
+);
+
+// NB govuk-frontend has styling adjustments for when hint-text is placed next to some other
+// components - we have not tried to replicate that here
 
 /**
  *
@@ -39,7 +32,7 @@ const StyledHint = styled('span')({
  * ```
  *
  * ### References
- * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/
+ * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/hint/_hint.scss
  */
 const HintText = props => <StyledHint {...props} />;
 
@@ -48,4 +41,4 @@ HintText.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default withWhiteSpace({ marginBottom: 0 })(HintText);
+export default withWhiteSpace()(HintText);

@@ -3,27 +3,18 @@
 exports[`withWhiteSpace matches wrapper snapshot 1`] = `
 .emotion-0 {
   margin-bottom: 15px;
-  margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-0 {
-    margin-bottom: 45px;
+    margin-bottom: 25px;
   }
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-0 {
-    margin-bottom: 45px;
-  }
-}
-
-<InputField
+<Component
   className="emotion-0 emotion-1"
-  input={Object {}}
   mb={5}
-  meta={Object {}}
 >
   Example
-</InputField>
+</Component>
 `;

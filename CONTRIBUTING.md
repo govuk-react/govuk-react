@@ -83,6 +83,15 @@ We want to be router agnostic. We want to support parent projects using React Ro
 
 ### White Space
 
-Components are built to have no white space around them, and are then wrapped with the withWhiteSpace HOC where we can provide some default values. This allows the parent application to override the defaults with e.g. an `mb` prop.
+Historically components were build to have no white space around them. They were then wrapped with the `withWhiteSpace` HOC to set the default spacing below the component and also provide support for an `mb` prop to allow the parent application to override this spacing.
+
+We have found that the use of the `withWhiteSpace` HOC can be problematic when it comes to applying complex styling rules involving descendent selectors, and thus it's use is now deprecated. Instead equivalent and enhanced facilities have been added to the `spacing` library in `@govuk-react/lib`.
+
+At the time of writing we are at the beginning of the process of transitioning to this new spacing method.
+
+Components are built to have white space around them to match their equivalents in [govuk-frontend](https://github.com/alphagov/govuk-frontend). To assist with this, styling utility function are provided in the `spacing` library in `@govuk-react/lib`. Typically a component will use the `withWhiteSpace` function within a component to generate a styling function to apply to a styled component.
+
+The `withWhiteSpace` function accepts default values for both `padding` and `margin`, and also provides support for overriding those defaults with equivalently named props. Spacing styles created are responsive and adjust for mobile/tablet sizes. For backward compatibility with the `withWhiteSpace` HOC it also supports a `marginBottom` config and `mb` prop.
 
 More details in https://github.com/govuk-react/govuk-react/issues/173
+and https://github.com/govuk-react/govuk-react/pull/523

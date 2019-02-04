@@ -2,7 +2,7 @@ import React from 'react';
 import { Field } from 'react-final-form';
 import { storiesOf } from '@storybook/react';
 import PropTypes from 'prop-types';
-import { withKnobs, text } from '@storybook/addon-knobs/react';
+import { withKnobs } from '@storybook/addon-knobs/react';
 import { FinalFormWrapper, WithDocsCustom } from '@govuk-react/storybook-components';
 
 import MultiChoice from '@govuk-react/multi-choice';
@@ -59,7 +59,7 @@ stories.addDecorator(withKnobs);
 stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
-  <Radio name="group1">{text('children', 'radio button text example')}</Radio>
+  <Radio name="group1">Radio button text example</Radio>
 ));
 
 examples.add('Radio stacked', () => (
@@ -101,6 +101,23 @@ examples.add('Radio preselected & disabled', () => (
   <div>
     <Radio name="group1" disabled="disabled" checked>
       Farm or agricultural waste
+    </Radio>
+  </div>
+));
+
+examples.add('Radio with hint text', () => (
+  <div>
+    <Radio
+      name="group1"
+      hint="You'll have a user ID if you've registered for Self Assessment or filed a tax return online before."
+    >
+      Sign in with Government Gateway
+    </Radio>
+    <Radio
+      name="group1"
+      hint="You'll have an account if you've already proved your identity with either Barclays, CitizenSafe, Digidentity, Experian, Post Office, Royal Mail or SecureIdentity."
+    >
+      Sign in with GOV.UK Verify
     </Radio>
   </div>
 ));

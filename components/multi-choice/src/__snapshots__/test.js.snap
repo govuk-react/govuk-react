@@ -39,28 +39,28 @@ exports[`MultiChoice matches snapshot 1`] = `
 }
 
 .emotion-8 {
-  display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  text-transform: none;
   font-size: 16px;
   line-height: 1.25;
+  display: block;
+  margin-bottom: 15px;
   color: #6f777b;
-  margin-bottom: 0;
 }
 
-@media only screen and (min-width:641px) {
+@media print {
   .emotion-8 {
-    font-size: 19px;
-    line-height: 1.3;
+    font-size: 14px;
+    line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
   .emotion-8 {
-    margin-bottom: 0;
+    font-size: 19px;
+    line-height: 1.3157894736842106;
   }
 }
 
@@ -89,30 +89,29 @@ exports[`MultiChoice matches snapshot 1`] = `
 }
 
 .emotion-15 {
-  display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
-  text-transform: none;
   font-size: 16px;
   line-height: 1.25;
+  display: block;
+  margin-bottom: 15px;
+  clear: both;
   color: #b10e1e;
-  padding-top: 4px;
-  padding-bottom: 2px;
-  margin-bottom: 0;
 }
 
-@media only screen and (min-width:641px) {
+@media print {
   .emotion-15 {
-    font-size: 19px;
-    line-height: 1.3;
+    font-size: 14px;
+    line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
   .emotion-15 {
-    margin-bottom: 0;
+    font-size: 19px;
+    line-height: 1.3157894736842106;
   }
 }
 
@@ -161,10 +160,10 @@ exports[`MultiChoice matches snapshot 1`] = `
         </StyledHoc>
         <StyledHoc>
           <HintText
-            className="emotion-3 emotion-0"
+            className="emotion-10 emotion-0"
           >
             <StyledHint
-              className="emotion-3 emotion-0"
+              className="emotion-10 emotion-0"
             >
               <span
                 className="emotion-0 emotion-8 emotion-9"
@@ -176,10 +175,10 @@ exports[`MultiChoice matches snapshot 1`] = `
         </StyledHoc>
         <StyledHoc>
           <ErrorText
-            className="emotion-3 emotion-0"
+            className="emotion-10 emotion-0"
           >
             <StyledError
-              className="emotion-3 emotion-0"
+              className="emotion-10 emotion-0"
             >
               <span
                 className="emotion-0 emotion-15 emotion-16"

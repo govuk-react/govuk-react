@@ -52,7 +52,7 @@ const StyledContainer = styled('div')(
  *
  * With custom input name props
  * ```jsx
- * <DateInput hintText="For example, 31 03 1980"
+ * <DateField hintText="For example, 31 03 1980"
  *   inputNames={{
  *     day: 'dayInputName',
  *     month: 'monthInputName',

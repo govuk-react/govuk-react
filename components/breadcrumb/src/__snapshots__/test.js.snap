@@ -1,23 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
-.emotion-9 {
-  margin-bottom: 10px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-9 {
-    margin-bottom: 10px;
-  }
-}
-
 .emotion-7 {
   font-family: "nta",Arial,sans-serif;
-  font-size: 14px;
-  line-height: 1.1428571429;
-  margin-top: 15px;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1428571428571428;
+  color: #0b0c0c;
+  margin-top: 15px;
   margin-bottom: 10px;
+}
+
+@media print {
+  .emotion-7 {
+    font-size: 14px;
+    line-height: 1.2;
+  }
 }
 
 @media only screen and (min-width:641px) {
@@ -27,9 +27,9 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
   }
 }
 
-@media only screen and (min-width:641px) {
+@media print {
   .emotion-7 {
-    margin-bottom: 10px;
+    color: #000;
   }
 }
 
@@ -41,21 +41,11 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
 }
 
 .emotion-0 {
-  position: relative;
   display: inline-block;
-  white-space: no-wrap;
+  position: relative;
   margin-bottom: 5px;
   margin-left: 10px;
-  padding-left: 15px;
-}
-
-.emotion-0:first-child {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.emotion-0:first-child::before {
-  display: none;
+  padding-left: 15.655000000000001px;
 }
 
 .emotion-0::before {
@@ -64,7 +54,7 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
   position: absolute;
   top: -1px;
   bottom: 1px;
-  left: -3.31px;
+  left: -3.3100000000000005px;
   width: 7px;
   height: 7px;
   margin: auto 0;
@@ -76,6 +66,16 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
   border-color: #6f777b;
 }
 
+.emotion-0:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.emotion-0:first-child::before {
+  content: none;
+  display: none;
+}
+
 .emotion-0 > a {
   color: #0b0c0c;
   -webkit-text-decoration: underline;
@@ -83,8 +83,9 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
 }
 
 .emotion-0 > a:focus {
-  background-color: #ffbf47;
   outline: 3px solid #ffbf47;
+  outline-offset: 0;
+  background-color: #ffbf47;
 }
 
 <StyledHoc>
@@ -98,7 +99,7 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
         className="emotion-6 emotion-7 emotion-8"
       >
         <BreadcrumbList>
-          <ul
+          <ol
             className="emotion-4 emotion-5"
           >
             <BreadcrumbListItem
@@ -123,7 +124,7 @@ exports[`breadcrumb matches snapshot: enzyme.mount 1`] = `
                 example
               </li>
             </BreadcrumbListItem>
-          </ul>
+          </ol>
         </BreadcrumbList>
       </div>
     </BreadcrumbContainer>

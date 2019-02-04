@@ -2,87 +2,94 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { withWhiteSpace } from '@govuk-react/hoc';
-import { YELLOW, BLACK } from 'govuk-colours';
+import HintText from '@govuk-react/hint-text';
+import { FOCUS_COLOUR } from 'govuk-colours';
 import {
-  FONT_SIZE,
-  LINE_HEIGHT,
-  MEDIA_QUERIES,
-  NTA_LIGHT,
+  BORDER_WIDTH,
+  BORDER_WIDTH_FORM_ELEMENT,
+  FOCUS_WIDTH,
+  SPACING_POINTS,
 } from '@govuk-react/constants';
+import { typography } from '@govuk-react/lib';
 
-const StyledCheckbox = styled('label')({
-  display: 'block',
-  position: 'relative',
-  padding: '0 0 0 38px',
-});
+const checkboxSize = SPACING_POINTS[7];
+const labelPaddingLeftRight = SPACING_POINTS[3];
+
+const StyledCheckbox = styled('label')(
+  typography.font({ size: 19 }),
+  {
+    display: 'block',
+    position: 'relative',
+    minHeight: checkboxSize,
+    padding: `0 0 0 ${checkboxSize}`,
+    clear: 'left',
+  },
+);
 
 const StyledInput = styled('input')(
   {
     position: 'absolute',
-    left: 0,
-    top: 0,
-    width: '38px',
-    height: '38px',
     zIndex: 1,
-    margin: 0,
-    zoom: 1,
+    top: 0,
+    left: 0,
+    width: checkboxSize,
+    height: checkboxSize,
     opacity: 0,
     ':checked + span:after': {
       opacity: 1,
     },
     ':focus + span:before': {
-      boxShadow: `0 0 0 4px ${YELLOW}`,
+      outline: `${FOCUS_WIDTH} solid transparent`,
+      outlineOffset: FOCUS_WIDTH,
+      boxShadow: `0 0 0 ${FOCUS_WIDTH} ${FOCUS_COLOUR}`,
     },
   },
   ({ disabled }) => ({
-    cursor: disabled ? 'auto' : 'pointer',
+    cursor: disabled ? 'default' : 'pointer',
     ' + span': {
-      opacity: disabled ? '.4' : '1',
+      opacity: disabled ? '.5' : '1',
       pointerEvents: disabled ? 'none' : 'auto',
     },
   }),
 );
 
 const StyledLabel = styled('span')({
-  fontFamily: NTA_LIGHT,
-  fontWeight: 400,
-  textTransform: 'none',
-  fontSize: FONT_SIZE.SIZE_16,
-  lineHeight: LINE_HEIGHT.SIZE_16,
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    fontSize: FONT_SIZE.SIZE_19,
-    lineHeight: LINE_HEIGHT.SIZE_19,
-  },
+  display: 'inline-block',
   cursor: 'pointer',
-  padding: '8px 10px 9px 12px',
-  display: 'block',
-  color: `${BLACK}`,
+  padding: `8px ${labelPaddingLeftRight} ${SPACING_POINTS[1]}`,
+  MsTouchAction: 'manipulation',
+  touchAction: 'manipulation',
   '::before': {
     content: "''",
-    display: 'block',
-    border: `2px solid ${BLACK}`,
-    background: 'transparent',
-    width: '34px',
-    height: '34px',
+    boxSizing: 'border-box',
     position: 'absolute',
     top: 0,
     left: 0,
+    width: checkboxSize,
+    height: checkboxSize,
+    border: `${BORDER_WIDTH_FORM_ELEMENT} solid black`,
+    background: 'transparent',
   },
   '::after': {
     content: "''",
-    border: 'solid',
-    borderWidth: '0 0 5px 5px',
-    background: 'transparent',
-    borderTopColor: 'transparent',
-    width: '17px',
-    height: '7px',
     position: 'absolute',
-    top: '10px',
-    left: '8px',
+    top: '11px',
+    left: '9px',
+    width: '18px',
+    height: '7px',
     transform: 'rotate(-45deg)',
-    zoom: 1,
+    border: 'solid',
+    borderWidth: `0 0 ${BORDER_WIDTH} ${BORDER_WIDTH}`,
+    borderTopColor: 'transparent',
+    background: 'transparent',
     opacity: 0,
   },
+});
+
+const StyledCheckboxHint = styled(HintText)({
+  display: 'block',
+  paddingLeft: labelPaddingLeftRight,
+  paddingRight: labelPaddingLeftRight,
 });
 
 /**
@@ -108,24 +115,32 @@ const StyledLabel = styled('span')({
  * ```jsx
  * <Checkbox disabled="disabled" defaultChecked>Farm or agricultural waste</Checkbox>
  * ```
+ *
+ * Checkbox with hint text
+ * ```jsx
+ * <Checkbox hint="including English, Scottish, Welsh and Northern Irish">British</Checkbox>
+ *```
  * ### References:
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/checkboxes/_checkboxes.scss
  *
  */
 const Checkbox = ({
-  children, className, ...props
+  children, className, hint, ...props
 }) => (
   <StyledCheckbox className={className}>
     <StyledInput type="checkbox" {...props} />
     <StyledLabel>{children}</StyledLabel>
+    {hint && <StyledCheckboxHint>{hint}</StyledCheckboxHint>}
   </StyledCheckbox>
 );
 
 Checkbox.defaultProps = {
+  hint: undefined,
   className: undefined,
 };
 
 Checkbox.propTypes = {
+  hint: PropTypes.node,
   /**
    * Text content for checkbox
    */

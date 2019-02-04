@@ -4,7 +4,6 @@ import { storiesOf } from '@storybook/react';
 import CrownIcon from '@govuk-react/icon-crown';
 import { Search as SearchIcon } from '@govuk-react/icons';
 import SearchBox from '@govuk-react/search-box';
-import Header from '@govuk-react/header';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 
 import TopNav, { asNavLinkAnchor, asTopNavAnchor } from '.';
@@ -29,7 +28,7 @@ const Company = (
 
 const ServiceTitle = (
   <NavAnchor href={link} target="new">
-    <Header mb={0} level={3}>Service Title</Header>
+    Service Title
   </NavAnchor>
 );
 
@@ -45,7 +44,7 @@ const CompanyLink = (
 
 const ServiceTitleLink = (
   <NavLink to={reactRouterLink}>
-    <Header mb={0} level={3}>Service Title</Header>
+    Service Title
   </NavLink>
 );
 

@@ -1,10 +1,10 @@
 {
   "name": "@govuk-react/document-footer-metadata",
-  "version": "0.3.1",
+  "version": "0.5.0",
   "dependencies": {
-    "@govuk-react/constants": "^0.3.1",
-    "@govuk-react/hoc": "^0.3.1",
-    "@govuk-react/unordered-list": "^0.3.1",
+    "@govuk-react/constants": "^0.5.0",
+    "@govuk-react/hoc": "^0.5.0",
+    "@govuk-react/unordered-list": "^0.5.0",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {

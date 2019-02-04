@@ -1,4 +1,4 @@
-// https://github.com/alphagov/govuk-frontend/blob/master/src/globals/scss/settings/_spacing.scss
+// https://github.com/alphagov/govuk-frontend/blob/master/src/settings/_spacing.scss
 
 export const RESPONSIVE_0 = {
   mobile: 0,
@@ -27,7 +27,7 @@ export const RESPONSIVE_4 = {
 
 export const RESPONSIVE_5 = {
   mobile: 15,
-  tablet: 45,
+  tablet: 25,
 };
 
 export const RESPONSIVE_6 = {
@@ -64,3 +64,16 @@ export const SPACING_MAP = [
 ];
 
 export const SPACING_MAP_INDEX = Array.from(Array(SPACING_MAP.length).keys());
+
+export const SPACING_POINTS = {
+  0: 0,
+  1: '5px',
+  2: '10px',
+  3: '15px',
+  4: '20px',
+  5: '25px',
+  6: '30px',
+  7: '40px',
+  8: '50px',
+  9: '60px',
+};
