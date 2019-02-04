@@ -1,50 +1,53 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { TURQUOISE, WHITE } from 'govuk-colours';
-import { withWhiteSpace } from '@govuk-react/hoc';
+import { spacing, typography } from '@govuk-react/lib';
 import {
+  BORDER_WIDTH,
   MEDIA_QUERIES,
-  NTA_LIGHT,
-  SPACING,
+  SPACING_POINTS,
 } from '@govuk-react/constants';
 
-const StyledPanel = styled('div')({
-  backgroundColor: TURQUOISE,
-  color: WHITE,
-  padding: SPACING.SCALE_5,
-});
+const StyledPanel = styled('div')(
+  typography.font({ size: 19 }),
+  {
+    boxSizing: 'border-box',
 
-// TODO: use standard font constants
-const StyledTitle = styled('h2')({
-  fontFamily: NTA_LIGHT,
-  fontWeight: 'bold',
-  WebkitFontSmoothing: 'antialiased',
-  fontSize: '32px',
-  lineHeight: '35px',
-  marginTop: 0,
-  textAlign: 'center',
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    fontSize: '48px',
-    lineHeight: '50px',
-  },
-});
+    marginBottom: SPACING_POINTS[3],
+    // NB govuk-frontend has this element styled tablet-first
+    padding: SPACING_POINTS[6] - BORDER_WIDTH,
 
-// TODO: use standard font constants
-const StyledBody = styled('div')({
-  fontFamily: NTA_LIGHT,
-  fontSize: '24px',
-  fontWeight: 400,
-  lineHeight: '25px',
-  marginTop: SPACING.SCALE_3,
-  marginBottom: SPACING.SCALE_2,
-  textAlign: 'center',
-  WebkitFontSmoothing: 'antialiased',
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    fontSize: '36px',
-    lineHeight: '40px',
+    border: `${BORDER_WIDTH} solid transparent`,
+
+    textAlign: 'center',
+
+    // NB govuk-frontend has this media query as an `until tablet` (thus for mobile)
+    [MEDIA_QUERIES.TABLET]: {
+      padding: SPACING_POINTS[7] - BORDER_WIDTH,
+    },
+
+    color: WHITE,
+    background: TURQUOISE,
   },
-});
+  spacing.withWhiteSpace(),
+);
+
+// NB govuk-frontend allows for the headingLevel to change, but defaults to h1
+// we're not supporting headingLevel at this time
+const StyledTitle = styled('h1')(
+  {
+    marginTop: 0,
+    marginBottom: SPACING_POINTS[6],
+
+    ':last-child': {
+      marginBottom: 0,
+    },
+  },
+  typography.font({ size: 48, weight: 'bold' }),
+);
+
+const StyledBody = styled('div')(typography.font({ size: 36 }));
 
 /**
  *
@@ -52,15 +55,15 @@ const StyledBody = styled('div')({
  *
  * Simple
  * ```jsx
- * <Panel panelTitle="Application complete" />
+ * <Panel title="Application complete" />
  * ```
  *
  * Panel with header and HTML body
  * ```jsx
- * <Panel
- *    panelTitle="Application complete"
- *    panelBody={['Your reference number', <br />, <strong>HDJ2123F</strong>]}
- *  />
+ * <Panel title="Application complete">
+ *   Your reference number<br />
+ *   <strong>HDJ2123F</strong>
+ * </Panel>
  * ```
  *
  * ### References:
@@ -68,28 +71,21 @@ const StyledBody = styled('div')({
  *
  */
 
-const Panel = ({ panelTitle, panelBody, ...props }) => (
+const Panel = ({ title, children, ...props }) => (
   <StyledPanel {...props}>
-    <StyledTitle>{panelTitle}</StyledTitle>
-    <StyledBody>
-      {Array.isArray(panelBody)
-        ? panelBody.map((element, index) => (
-          /* eslint-disable-next-line react/no-array-index-key */
-          <Fragment key={index}>{element}</Fragment>
-        ))
-        : panelBody}
-    </StyledBody>
+    <StyledTitle>{title}</StyledTitle>
+    { children && <StyledBody>{children}</StyledBody> }
   </StyledPanel>
 );
 Panel.defaultProps = {
-  panelBody: undefined,
+  children: undefined,
 };
 
 Panel.propTypes = {
   /** Panel title text */
-  panelTitle: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   /** Panel body text */
-  panelBody: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  children: PropTypes.node,
 };
 
-export default withWhiteSpace({ marginBottom: 3 })(Panel);
+export default Panel;

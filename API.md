@@ -1271,15 +1271,15 @@ Panel
 
 Simple
 ```jsx
-<Panel panelTitle="Application complete" />
+<Panel title="Application complete" />
 ```
 
 Panel with header and HTML body
 ```jsx
-<Panel
-   panelTitle="Application complete"
-   panelBody={['Your reference number', <br />, <strong>HDJ2123F</strong>]}
- />
+<Panel title="Application complete">
+  Your reference number<br />
+  <strong>HDJ2123F</strong>
+</Panel>
 ```
 
 ### References:
@@ -1288,8 +1288,8 @@ Panel with header and HTML body
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `panelBody` |  | ```undefined``` | union(string \| array) | Panel body text
- `panelTitle` | true | `````` | string | Panel title text
+ `children` |  | ```undefined``` | node | Panel body text
+ `title` | true | `````` | string | Panel title text
 
 
 Paragraph
