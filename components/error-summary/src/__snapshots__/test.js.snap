@@ -76,6 +76,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   color: #0b0c0c;
   margin-top: 0;
   margin-bottom: 15px;
+  margin-bottom: 0;
   list-style-type: none;
   padding-left: 0;
 }
@@ -323,6 +324,12 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 @media only screen and (min-width:641px) {
   .c6 {
     margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c6 {
+    margin-bottom: 0;
   }
 }
 
@@ -844,10 +851,12 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                 </Styled(Paragraph)>
                 <UnorderedList
                   listStyleType="none"
+                  mb={0}
                 >
                   <styled.ol
                     as="ul"
                     listStyleType="none"
+                    mb={0}
                   >
                     <StyledComponent
                       as="ul"
@@ -891,6 +900,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       }
                       forwardedRef={null}
                       listStyleType="none"
+                      mb={0}
                     >
                       <ul
                         className="c5 c6"
