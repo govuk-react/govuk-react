@@ -233,6 +233,37 @@ Prop | Required | Default | Type | Description
  `inputNames` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` | shape[object Object] | Input name attributes
 
 
+Details
+=======
+
+### Import
+```js
+  import Details from '@govuk-react/details';
+```
+<!-- STORY -->
+
+### Usage
+
+
+Simple
+```jsx
+<Details summary="Help with nationality">
+  I am a paragraph of hidden details, to be revealed when summary is clicked
+</Details>
+```
+
+### References
+- https://design-system.service.gov.uk/components/details/
+- https://github.com/alphagov/govuk-frontend/blob/master/src/components/details/_details.scss
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` |  | ```undefined``` | node | The content that will be displayed when details are revealed
+ `open` |  | ```false``` | bool | Flag to indicate whether to show component open by default
+ `summary` | true | `````` | node | Text for the details summary link e.g. Help with nationality
+
+
 DocumentFooterMetadata
 ======================
 
@@ -618,38 +649,6 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `level` |  | ```1``` | number | Semantic heading level value between 1 and 6
  `size` |  | ```undefined``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
-
-
-HiddenText
-==========
-
-### Import
-```js
-  import HiddenText from '@govuk-react/hidden-text';
-```
-<!-- STORY -->
-
-### Usage
-
-
-Simple
-```jsx
-import Paragraph from '@govuk-react/paragraph';
-
-<HiddenText summaryText={'Help with nationality'}>
-  <Paragraph mb={0}>I am a paragraph. Please read me.</Paragraph>
-</HiddenText>
-```
-
-### References
-- https://govuk-elements.herokuapp.com/typography/#typography-hidden-text
-- https://github.com/alphagov/govuk-frontend/blob/master/src/components/details/_details.scss
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `children` |  | ```undefined``` | node | The nodes that will be displayed within the InsetText component
- `summaryText` | true | `````` | string | Text for the summary button link e.g. Help with nationality
 
 
 HintText
