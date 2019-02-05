@@ -4,7 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 const mkdirp = require('mkdirp-promise');
-const { version } = require('../lerna.json')
+const { version } = require('../lerna.json');
 
 const componentFolderName = process.argv[2];
 const componentName = `${componentFolderName.charAt(0).toUpperCase()}${componentFolderName.slice(1).replace(/-([a-z])/g, g => g[1].toUpperCase())}`;
@@ -33,24 +33,30 @@ const packageJson = () => {
   const contents = `{
   "name": "@govuk-react/${componentFolderName}",
   "version": "${version}",
-  "private": false,
-  "publishConfig": {
-    "access": "public"
-  },
   "dependencies": {
+    "@govuk-react/lib": "^${version}",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
-    "styled-components": ">=4",
-    "react": ">=15"
+    "react": ">=16.2.0",
+    "styled-components": ">=4"
   },
   "scripts": {
     "build": "yarn build:lib && yarn build:es",
     "build:lib": "rimraf lib && babel src -d lib --source-maps --config-file ../../babel.config.js",
-    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps --config-file ../../babel.config.js"
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps --config-file ../../babel.config.js",
+    "docs": "doc-component ./lib/index.js ./README.md"
   },
   "main": "lib/index.js",
-  "module": "es/index.js"
+  "module": "es/index.js",
+  "author": "Alasdair McLeay",
+  "license": "MIT",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/${componentFolderName}",
+  "description": "govuk-react ${componentName} component.",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
 }
 `;
   writeFile(filename, contents);
@@ -60,13 +66,13 @@ const packageJson = () => {
 const testScript = () => {
   const filename = 'test.js';
   const contents = `import React from 'react';
-import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
+
 import Example from './fixtures';
 
-describe(${componentName}, () => {
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Example />, div);
+describe('${componentName}', () => {
+  it('matches snapshot', () => {
+    expect(mount(<Example />)).toMatchSnapshot('${componentName}');
   });
 });
 `;
@@ -77,15 +83,21 @@ describe(${componentName}, () => {
 const storiesScript = () => {
   const filename = 'stories.js';
   const contents = `import { storiesOf } from '@storybook/react';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-import Example from './fixtures';
+import ${componentName} from './fixtures';
 
-storiesOf('${componentName}', module).add('${componentName}', Example);
+import ReadMe from '../README.md';
+
+const stories = storiesOf('${componentName}', module);
+stories.addDecorator(WithDocsCustom(ReadMe));
+
+stories.add('Component default', ${componentName});
 `;
   writeFile(filename, contents);
 };
 
-// write example.js file
+// write fixtures.js file
 const exampleScript = () => {
   const filename = 'fixtures.js';
   const contents = `import React from 'react';
@@ -99,41 +111,37 @@ export default () => <${componentName}>${componentName} example</${componentName
 // write index.js file
 const indexScript = () => {
   const filename = 'index.js';
-  const contents = `// TODO: INSERT A COMMENT REFERENCE TO EXTERNAL URL IF POSSIBLE
-
-import React from 'react';
+  const contents = `import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { spacing, typography } from '@govuk-react/lib';
 
-import {
-  FONT_SIZE,
-  LINE_HEIGHT,
-  MEDIA_QUERIES,
-  NTA_LIGHT,
-} from '@govuk-react/constants';
-
-const ${componentName}Inner = styled('div')({
-  boxSizing: 'border-box',
-  fontFamily: NTA_LIGHT,
-  fontWeight: 400,
-  textTransform: 'none',
-  fontSize: FONT_SIZE.SIZE_14,
-  lineHeight: LINE_HEIGHT.SIZE_14,
-  width: '100%',
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    fontSize: FONT_SIZE.SIZE_16,
-    lineHeight: LINE_HEIGHT.SIZE_16,
-  },
-});
-
-const ${componentName} = ({ children }) => (
-  <${componentName}Inner>{children}</${componentName}Inner>
+const ${componentName} = styled('div')(
+  typography.font({ size: 16 }),
+  spacing.withWhiteSpace(),
 );
 
-${componentName}.propTypes = {
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * \`\`\`jsx
+ * <${componentName}>Example</${componentName}>
+ * \`\`\`
+ *
+ * ### References
+ * - TODO: INSERT A REFERENCE TO EXTERNAL URL IF POSSIBLE
+ */
+const ${componentName}Documented = props => <${componentName} {...props} />;
+
+${componentName}Documented.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
+${componentName}.propTypes = ${componentName}Documented.propTypes;
+
+export { ${componentName}Documented };
 export default ${componentName};
 `;
   writeFile(filename, contents);
