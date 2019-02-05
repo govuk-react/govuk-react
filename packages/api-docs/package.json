@@ -12,7 +12,7 @@
     "jimp": "^0.2.28",
     "lodash": "^4.17.5",
     "react": "^16.2.0",
-    "react-docgen": "^3.0.0-beta11",
+    "react-docgen": "^3.0.0",
     "react-dom": "^16.3.2"
   },
   "devDependencies": {

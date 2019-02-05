@@ -47,5 +47,7 @@ DocumentedInsetText.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
+InsetText.propTypes = DocumentedInsetText.propTypes;
+
 export { DocumentedInsetText };
 export default InsetText;

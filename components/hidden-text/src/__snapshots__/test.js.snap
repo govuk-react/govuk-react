@@ -304,6 +304,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                   },
                   "displayName": "styled.div",
                   "foldedComponentIds": Array [],
+                  "propTypes": undefined,
                   "render": [Function],
                   "styledComponentId": "sc-bZQynM",
                   "target": "div",
