@@ -21,6 +21,7 @@
     "@govuk-react/inset-text": "^0.6.0-alpha.1",
     "@govuk-react/layout": "^0.6.0-alpha.1",
     "@govuk-react/lead-paragraph": "^0.6.0-alpha.1",
+    "@govuk-react/link": "^0.6.0-alpha.1",
     "@govuk-react/list-item": "^0.6.0-alpha.1",
     "@govuk-react/list-navigation": "^0.6.0-alpha.1",
     "@govuk-react/loading-box": "^0.6.0-alpha.1",
