@@ -1,205 +1,213 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
-.c1 {
-  background-color: #28a197;
+.c0 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  padding: 25px;
+  border: 5px solid transparent;
+  text-align: center;
   color: #ffffff;
-  padding: 30px;
+  background: #28a197;
+}
+
+.c1 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.09375;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
 }
 
 .c2 {
   font-family: "nta",Arial,sans-serif;
-  font-weight: bold;
   -webkit-font-smoothing: antialiased;
-  font-size: 32px;
-  line-height: 35px;
-  margin-top: 0;
-  text-align: center;
-}
-
-.c3 {
-  font-family: "nta",Arial,sans-serif;
-  font-size: 24px;
+  -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  line-height: 25px;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
+  font-size: 24px;
+  line-height: 1.0416666666666667;
 }
 
-.c0 {
-  margin-bottom: 15px;
-}
-
-@media only screen and (min-width:641px) {
-  .c2 {
-    font-size: 48px;
-    line-height: 50px;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c3 {
-    font-size: 36px;
-    line-height: 40px;
+@media print {
+  .c0 {
+    font-size: 14px;
+    line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
   .c0 {
-    margin-bottom: 15px;
+    font-size: 19px;
+    line-height: 1.3157894736842106;
   }
 }
 
-<Styled(Panel)
-  panelBody="body"
-  panelTitle="Example"
+@media only screen and (min-width:641px) {
+  .c0 {
+    padding: 35px;
+  }
+}
+
+@media print {
+  .c1 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c1 {
+    font-size: 48px;
+    line-height: 1.0416666666666667;
+  }
+}
+
+@media print {
+  .c2 {
+    font-size: 24px;
+    line-height: 1.05;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c2 {
+    font-size: 36px;
+    line-height: 1.1111111111111112;
+  }
+}
+
+<Panel
+  title="Example"
 >
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-bZQynM",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            [Function],
-          ],
-        },
-        "displayName": "Styled(Panel)",
-        "foldedComponentIds": Array [],
-        "propTypes": Object {
-          "margin": [Function],
-          "mb": [Function],
-          "padding": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "sc-bZQynM",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
+  <styled.div>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
+}",
+              "box-sizing: border-box; margin-bottom: 15px; padding: 25px; border: 5px solid transparent; text-align: center; @media only screen and (min-width: 641px) {
+  padding: 35px;
+} color: #ffffff; background: #28a197;",
+              [Function],
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
       }
-    }
-    forwardedRef={null}
-    panelBody="body"
-    panelTitle="Example"
-  >
-    <Panel
-      className="c0"
-      panelBody="body"
-      panelTitle="Example"
+      forwardedRef={null}
     >
-      <styled.div
+      <div
         className="c0"
       >
-        <StyledComponent
-          className="c0"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-bxivhb",
-                "isStatic": true,
-                "lastClassName": "c1",
-                "rules": Array [
-                  "background-color: #28a197; color: #ffffff; padding: 30px;",
-                ],
-              },
-              "displayName": "styled.div",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "sc-bxivhb",
-              "target": "div",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
+        <styled.h1>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bwzfXH",
+                  "isStatic": true,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "margin-top: 0; margin-bottom: 30px; :last-child {
+  margin-bottom: 0;
+}",
+                    "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 32px; line-height: 1.15;
+} font-weight: 700; font-size: 32px; line-height: 1.09375; @media only screen and (min-width: 641px) {
+  font-size: 48px; line-height: 1.0416666666666667;
+}",
+                  ],
+                },
+                "displayName": "styled.h1",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bwzfXH",
+                "target": "h1",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
             }
-          }
-          forwardedRef={null}
-        >
-          <div
-            className="c0 c1"
+            forwardedRef={null}
           >
-            <styled.h2>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-ifAKCX",
-                      "isStatic": true,
-                      "lastClassName": "c2",
-                      "rules": Array [
-                        "font-family: \\"nta\\", Arial, sans-serif; font-weight: bold; -webkit-font-smoothing: antialiased; font-size: 32px; line-height: 35px; margin-top: 0; text-align: center; @media only screen and (min-width: 641px) {
-  font-size: 48px; line-height: 50px;
+            <h1
+              className="c1"
+            >
+              Example
+            </h1>
+          </StyledComponent>
+        </styled.h1>
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-htpNat",
+                  "isStatic": true,
+                  "lastClassName": "c2",
+                  "rules": Array [
+                    "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 24px; line-height: 1.05;
+} font-weight: 400; font-size: 24px; line-height: 1.0416666666666667; @media only screen and (min-width: 641px) {
+  font-size: 36px; line-height: 1.1111111111111112;
 }",
-                      ],
-                    },
-                    "displayName": "styled.h2",
-                    "foldedComponentIds": Array [],
-                    "render": [Function],
-                    "styledComponentId": "sc-ifAKCX",
-                    "target": "h2",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
-              >
-                <h2
-                  className="c2"
-                >
-                  Example
-                </h2>
-              </StyledComponent>
-            </styled.h2>
-            <styled.div>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-EHOje",
-                      "isStatic": true,
-                      "lastClassName": "c3",
-                      "rules": Array [
-                        "font-family: \\"nta\\", Arial, sans-serif; font-size: 24px; font-weight: 400; line-height: 25px; margin-top: 15px; margin-bottom: 10px; text-align: center; -webkit-font-smoothing: antialiased; @media only screen and (min-width: 641px) {
-  font-size: 36px; line-height: 40px;
-}",
-                      ],
-                    },
-                    "displayName": "styled.div",
-                    "foldedComponentIds": Array [],
-                    "render": [Function],
-                    "styledComponentId": "sc-EHOje",
-                    "target": "div",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
-              >
-                <div
-                  className="c3"
-                >
-                  body
-                </div>
-              </StyledComponent>
-            </styled.div>
-          </div>
-        </StyledComponent>
-      </styled.div>
-    </Panel>
-  </StyledComponent>
-</Styled(Panel)>
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-htpNat",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="c2"
+            >
+              body
+            </div>
+          </StyledComponent>
+        </styled.div>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</Panel>
 `;

@@ -11,12 +11,12 @@ const examples = storiesOf('Misc/Panel/Examples', module);
 stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
-  <Panel panelTitle="Application complete" />
+  <Panel title="Application complete" />
 ));
 
 examples.add('Panel with header and HTML body', () => (
-  <Panel
-    panelTitle="Application complete"
-    panelBody={['Your reference number', <br />, <strong>HDJ2123F</strong>]}
-  />
+  <Panel title="Application complete">
+    Your reference number<br />
+    <strong>HDJ2123F</strong>
+  </Panel>
 ));

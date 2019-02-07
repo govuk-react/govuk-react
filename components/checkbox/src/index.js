@@ -21,7 +21,7 @@ const StyledCheckbox = styled('label')(
     display: 'block',
     position: 'relative',
     minHeight: checkboxSize,
-    padding: `0 0 0 ${checkboxSize}`,
+    padding: `0 0 0 ${checkboxSize}px`,
     clear: 'left',
   },
 );
@@ -56,7 +56,7 @@ const StyledInput = styled('input')(
 const StyledLabel = styled('span')({
   display: 'inline-block',
   cursor: 'pointer',
-  padding: `8px ${labelPaddingLeftRight} ${SPACING_POINTS[1]}`,
+  padding: `8px ${labelPaddingLeftRight}px ${SPACING_POINTS[1]}px`,
   MsTouchAction: 'manipulation',
   touchAction: 'manipulation',
   '::before': {

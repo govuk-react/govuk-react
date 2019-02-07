@@ -25,7 +25,7 @@ const Label = styled('label')(
     display: 'block',
     position: 'relative',
     minHeight: radioSize,
-    padding: `0 0 0 ${radioSize}`,
+    padding: `0 0 0 ${radioSize}px`,
     clear: 'left',
   },
   ({ inline }) => (inline && {
@@ -68,7 +68,7 @@ const Input = styled('input')(
 const LabelText = styled('span')({
   display: 'inline-block',
   marginBottom: 0,
-  padding: `8px ${labelPaddingLeftRight} ${SPACING_POINTS[1]}`,
+  padding: `8px ${labelPaddingLeftRight}px ${SPACING_POINTS[1]}px`,
   cursor: 'pointer',
   MsTouchAction: 'manipulation',
   touchAction: 'manipulation',
@@ -91,7 +91,7 @@ const LabelText = styled('span')({
     left: SPACING_POINTS[2],
     width: 0,
     height: 0,
-    border: `${SPACING_POINTS[2]} solid`,
+    border: `${SPACING_POINTS[2]}px solid`,
     borderRadius: '50%',
     opacity: 0,
   },
