@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionBreak matches snapshot: section break 1`] = `
+.c0 {
+  margin: 0;
+  border: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #bfc1c3;
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+<_default>
+  <SectionBreakDocumented
+    level="LARGE"
+    visible={true}
+  >
+    <styled.hr
+      level="LARGE"
+      visible={true}
+    >
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "margin: 0; border: 0;",
+                [Function],
+                [Function],
+              ],
+            },
+            "defaultProps": Object {
+              "visible": undefined,
+            },
+            "displayName": "styled.hr",
+            "foldedComponentIds": Array [],
+            "propTypes": undefined,
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "hr",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        level="LARGE"
+        visible={true}
+      >
+        <hr
+          className="c0"
+        />
+      </StyledComponent>
+    </styled.hr>
+  </SectionBreakDocumented>
+</_default>
+`;
