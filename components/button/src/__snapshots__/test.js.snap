@@ -13,7 +13,7 @@ exports[`button basics matches snapshot 1`] = `
   position: relative;
   width: 100%;
   margin-top: 0;
-  padding: 7px 10px;
+  padding: 22px 10px;
   border: 2px solid transparent;
   border-radius: 0;
   color: #ffffff;
@@ -229,7 +229,7 @@ exports[`button blue button, with automatic colours matches snapshot 1`] = `
   position: relative;
   width: 100%;
   margin-top: 0;
-  padding: 7px 10px;
+  padding: 22px 10px;
   border: 2px solid transparent;
   border-radius: 0;
   color: #ffffff;
@@ -453,7 +453,7 @@ exports[`button button with icon matches snapshot 1`] = `
   position: relative;
   width: 100%;
   margin-top: 0;
-  padding: 8px 15px;
+  padding: 23px 15px;
   border: 2px solid transparent;
   border-radius: 0;
   color: #ffffff;
@@ -791,7 +791,7 @@ exports[`button custom colours matches snapshot 1`] = `
   position: relative;
   width: 100%;
   margin-top: 0;
-  padding: 7px 10px;
+  padding: 22px 10px;
   border: 2px solid transparent;
   border-radius: 0;
   color: #0b0c0c;
@@ -1030,7 +1030,7 @@ exports[`button disabled matches snapshot 1`] = `
   position: relative;
   width: 100%;
   margin-top: 0;
-  padding: 7px 10px;
+  padding: 22px 10px;
   border: 2px solid transparent;
   border-radius: 0;
   color: #ffffff;
@@ -1251,7 +1251,7 @@ exports[`button start button matches snapshot 1`] = `
   position: relative;
   width: 100%;
   margin-top: 0;
-  padding: 8px 15px;
+  padding: 23px 15px;
   border: 2px solid transparent;
   border-radius: 0;
   color: #ffffff;

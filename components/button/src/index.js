@@ -17,7 +17,7 @@ import {
 import { darken, stripUnit } from 'polished';
 
 const BUTTON_SHADOW_SIZE = BORDER_WIDTH_FORM_ELEMENT;
-const RAW_SPACING_2 = SPACING_POINTS[2];
+const RAW_SPACING_2 = SPACING_POINTS[5];
 const RAW_BORDER_WIDTH = stripUnit(BORDER_WIDTH_FORM_ELEMENT);
 const RAW_SHADOW = stripUnit(BUTTON_SHADOW_SIZE);
 const HALF_SHADOW = RAW_SHADOW / 2;
