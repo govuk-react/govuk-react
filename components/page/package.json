@@ -1,17 +1,16 @@
 {
   "name": "@govuk-react/page",
-  "version": "0.5.1",
+  "version": "0.6.0-alpha.0",
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@govuk-react/constants": "^0.5.1",
-    "@govuk-react/top-nav": "^0.5.1",
+    "@govuk-react/constants": "^0.6.0-alpha.0",
+    "@govuk-react/top-nav": "^0.6.0-alpha.0",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
-
     "react": ">=15",
     "styled-components": ">=4"
   },

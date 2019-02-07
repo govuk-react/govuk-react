@@ -1,14 +1,13 @@
 {
   "name": "@govuk-react/hoc",
-  "version": "0.5.1",
+  "version": "0.6.0-alpha.0",
   "dependencies": {
-    "@govuk-react/constants": "^0.5.1",
-    "@govuk-react/icons": "^0.5.1",
-    "@govuk-react/lib": "^0.5.1",
+    "@govuk-react/constants": "^0.6.0-alpha.0",
+    "@govuk-react/icons": "^0.6.0-alpha.0",
+    "@govuk-react/lib": "^0.6.0-alpha.0",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
-
     "react": ">=16.2.0",
     "styled-components": ">=4"
   },
