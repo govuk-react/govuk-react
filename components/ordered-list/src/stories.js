@@ -37,6 +37,18 @@ examples.add('OrderedList with roman', () => (
   </OrderedList>
 ));
 
+examples.add('OrderedList with bullet with nested number list', () => (
+  <OrderedList listStyleType="bullet">
+    <ListItem>In nisi lectus, mollis sed neque.</ListItem>
+    <ListItem>Pellentesque habitant morbi tristique senectus et netus et malesuada.</ListItem>
+    <OrderedList listStyleType="number">
+      <ListItem>Vestibulum ante ipsum.</ListItem>
+      <ListItem>Maecenas cursus rutrum nunc.</ListItem>
+    </OrderedList>
+    <ListItem>Nullam laoreet turpis eu odio gravida.</ListItem>
+  </OrderedList>
+));
+
 examples.add(
   'OrderedList with no decoration',
   () => (

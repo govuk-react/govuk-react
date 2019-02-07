@@ -11,6 +11,7 @@ UnorderedList
 
 Simple
 ```jsx
+import UnorderedList from '@govuk-react/unordered-list';
 import ListItem from '@govuk-react/list-item';
 
 <UnorderedList>
@@ -20,11 +21,12 @@ import ListItem from '@govuk-react/list-item';
 </UnorderedList>
 ```
 
-With listStyleType option
+with Roman
 ```jsx
+import UnorderedList from '@govuk-react/unordered-list';
 import ListItem from '@govuk-react/list-item';
 
-<UnorderedList listStyleType="square">
+<UnorderedList listStyleType="lower-roman">
   <ListItem>Lorem ipsum dolor sit.</ListItem>
   <ListItem>Consectetur adipiscing elit.</ListItem>
   <ListItem>Curabitur et libero nec.</ListItem>
@@ -32,15 +34,13 @@ import ListItem from '@govuk-react/list-item';
 ```
 
 ### References
-- https://govuk-static.herokuapp.com/component-guide/government_navigation
-
-### TODO
-- Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
+- https://design-system.service.gov.uk/styles/typography/#lists
+- https://github.com/alphagov/govuk-frontend/blob/master/src/core/_lists.scss
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | node | One or more ListItem components
- `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`
+ `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend
 
 
