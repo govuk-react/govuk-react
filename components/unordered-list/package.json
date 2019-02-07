@@ -2,9 +2,7 @@
   "name": "@govuk-react/unordered-list",
   "version": "0.6.0-alpha.0",
   "dependencies": {
-    "@govuk-react/constants": "^0.6.0-alpha.0",
-    "@govuk-react/hoc": "^0.6.0-alpha.0",
-    "govuk-colours": "^1.0.3"
+    "@govuk-react/ordered-list": "^0.6.0-alpha.0"
   },
   "peerDependencies": {
     "react": ">=16.2.0",

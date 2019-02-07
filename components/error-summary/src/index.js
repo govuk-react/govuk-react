@@ -119,7 +119,7 @@ const ErrorSummary = ({
     <Header level={2}>{ heading }</Header>
     { description && <Paragraph mb={3}>{ description }</Paragraph> }
     { errors.length > 0 &&
-      <UnorderedList listStyleType="none">
+      <UnorderedList mb={0} listStyleType="none">
         { errors.map((error, index) => (
           <ListItem key={error.targetName}>
             <StyledErrorText

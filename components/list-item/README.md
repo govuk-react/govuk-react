@@ -25,7 +25,7 @@ import { asAnchor } from '@govuk-react/hoc';
 ```
 
 ### References
-- https://github.com/alphagov/govuk-frontend/tree/master/src/components
+- https://github.com/alphagov/govuk-frontend/blob/master/src/core/_lists.scss
 
 ### Properties
 Prop | Required | Default | Type | Description

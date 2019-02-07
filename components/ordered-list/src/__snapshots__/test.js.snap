@@ -3,30 +3,49 @@
 exports[`OrderedList matches wrapper snapshot: wrapper mount 1`] = `
 .c3 {
   font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  text-transform: none;
-  font-size: 14px;
-  line-height: 1.1428571429;
-  width: 100%;
-}
-
-.c2 {
-  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.25;
+  margin-bottom: 5px;
 }
 
 .c1 {
-  margin: 0;
-  padding: 0;
-  padding-left: 20px;
   font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  text-transform: none;
-  font-size: 14px;
-  line-height: 1.1428571429;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding-left: 20px;
 }
 
-.c0 {
+.c1 .c0 {
+  margin-top: 10px;
+}
+
+.c1 > .c2 {
+  margin-bottom: 5px;
+}
+
+.c5 .c0 {
+  margin-top: 10px;
+}
+
+.c5 > .c2 {
   margin-bottom: 0;
+}
+
+.c6 .c0 {
+  margin-top: 10px;
+}
+
+.c6 > .c2 {
+  margin-bottom: 5px;
 }
 
 .c4 {
@@ -48,473 +67,358 @@ exports[`OrderedList matches wrapper snapshot: wrapper mount 1`] = `
   color: #2e358b;
 }
 
-@media only screen and (min-width:641px) {
+@media print {
   .c3 {
-    font-size: 16px;
-    line-height: 1.25;
-    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c2 {
-    margin-bottom: 0;
+  .c3 {
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
+@media print {
+  .c1 {
+    font-size: 14px;
+    line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
   .c1 {
-    font-size: 16px;
-    line-height: 1.25;
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
+@media print {
+  .c1 {
+    color: #000;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c0 {
-    margin-bottom: 0;
+  .c1 {
+    margin-bottom: 20px;
   }
 }
 
-<Styled(OrderedList)>
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-bZQynM",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            [Function],
-          ],
-        },
-        "displayName": "Styled(OrderedList)",
-        "foldedComponentIds": Array [],
-        "propTypes": Object {
-          "margin": [Function],
-          "mb": [Function],
-          "padding": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "sc-bZQynM",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
+@media only screen and (min-width:641px) {
+  .c5 > .c2 {
+    margin-bottom: 5px;
+  }
+}
+
+<DocumentedComponent>
+  <styled.ol>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "c0",
+            "isStatic": false,
+            "lastClassName": "c1",
+            "rules": Array [
+              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
+}",
+              "color: #0b0c0c; @media print {
+  color: #000;
+}",
+              "margin-top: 0; & & {
+  margin-top: 10px;
+}",
+              [Function],
+              [Function],
+            ],
+          },
+          "defaultProps": Object {
+            "listStyleType": undefined,
+          },
+          "displayName": "styled.ol",
+          "foldedComponentIds": Array [],
+          "propTypes": undefined,
+          "render": [Function],
+          "styledComponentId": "c0",
+          "target": "ol",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
       }
-    }
-    forwardedRef={null}
-  >
-    <OrderedList
-      className="c0"
+      forwardedRef={null}
     >
-      <styled.ol
-        className="c0"
+      <ol
+        className="c0 c1"
       >
-        <StyledComponent
-          className="c0"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-EHOje",
-                "isStatic": false,
-                "lastClassName": "c1",
-                "rules": Array [
-                  "margin: 0; padding: 0; padding-left: 20px; font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 14px; line-height: 1.1428571429; @media only screen and (min-width: 641px) {
-  font-size: 16px; line-height: 1.25;
+        <styled.li>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "c2",
+                  "isStatic": false,
+                  "lastClassName": "c3",
+                  "rules": Array [
+                    "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
 }",
-                  [Function],
-                ],
-              },
-              "displayName": "styled.ol",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "sc-EHOje",
-              "target": "ol",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
+                    "margin-bottom: 5px;",
+                    [Function],
+                  ],
+                },
+                "displayName": "styled.li",
+                "foldedComponentIds": Array [],
+                "propTypes": undefined,
+                "render": [Function],
+                "styledComponentId": "c2",
+                "target": "li",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
             }
-          }
-          forwardedRef={null}
-        >
-          <ol
-            className="c0 c1"
+            forwardedRef={null}
           >
-            <Styled(ListItem)>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-ifAKCX",
-                      "isStatic": false,
-                      "lastClassName": "c2",
-                      "rules": Array [
-                        [Function],
-                      ],
-                    },
-                    "displayName": "Styled(ListItem)",
-                    "foldedComponentIds": Array [],
-                    "propTypes": Object {
-                      "margin": [Function],
-                      "mb": [Function],
-                      "padding": [Function],
-                    },
-                    "render": [Function],
-                    "styledComponentId": "sc-ifAKCX",
-                    "target": [Function],
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                    Symbol(Symbol.hasInstance): [Function],
-                  }
-                }
-                forwardedRef={null}
+            <li
+              className="c2 c3"
+            >
+              <Styled(Anchor)
+                href="http://example.com"
               >
-                <ListItem
-                  className="c2"
-                >
-                  <styled.li
-                    className="c2"
-                  >
-                    <StyledComponent
-                      className="c2"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "sc-bxivhb",
-                            "isStatic": true,
-                            "lastClassName": "c3",
-                            "rules": Array [
-                              "font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 14px; line-height: 1.1428571429; width: 100%; @media only screen and (min-width: 641px) {
-  font-size: 16px; line-height: 1.25; margin-bottom: 5px;
-}",
-                            ],
-                          },
-                          "displayName": "styled.li",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "sc-bxivhb",
-                          "target": "li",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                    >
-                      <li
-                        className="c2 c3"
-                      >
-                        <Styled(Anchor)
-                          href="http://example.com"
-                        >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-gzVnrw",
-                                  "isStatic": true,
-                                  "lastClassName": "c4",
-                                  "rules": Array [
-                                    "color: #005ea5; padding: 3px; margin: -3px; outline-color: transparent; display: inline-block; text-decoration: underline; :focus {
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-htpNat",
+                        "isStatic": true,
+                        "lastClassName": "c4",
+                        "rules": Array [
+                          "color: #005ea5; padding: 3px; margin: -3px; outline-color: transparent; display: inline-block; text-decoration: underline; :focus {
   background-color: #ffbf47; outline: 3px solid #ffbf47;
 } :visited {
   color: #2e358b;
 }",
-                                  ],
-                                },
-                                "displayName": "Styled(Anchor)",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-gzVnrw",
-                                "target": [Function],
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            href="http://example.com"
-                          >
-                            <Anchor
-                              className="c4"
-                              href="http://example.com"
-                            >
-                              <a
-                                className="c4"
-                                href="http://example.com"
-                              >
-                                Example 1
-                              </a>
-                            </Anchor>
-                          </StyledComponent>
-                        </Styled(Anchor)>
-                      </li>
-                    </StyledComponent>
-                  </styled.li>
-                </ListItem>
-              </StyledComponent>
-            </Styled(ListItem)>
-            <Styled(ListItem)>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-ifAKCX",
-                      "isStatic": false,
-                      "lastClassName": "c2",
-                      "rules": Array [
-                        [Function],
-                      ],
-                    },
-                    "displayName": "Styled(ListItem)",
-                    "foldedComponentIds": Array [],
-                    "propTypes": Object {
-                      "margin": [Function],
-                      "mb": [Function],
-                      "padding": [Function],
-                    },
-                    "render": [Function],
-                    "styledComponentId": "sc-ifAKCX",
-                    "target": [Function],
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                    Symbol(Symbol.hasInstance): [Function],
+                        ],
+                      },
+                      "displayName": "Styled(Anchor)",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-htpNat",
+                      "target": [Function],
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                      Symbol(Symbol.hasInstance): [Function],
+                    }
                   }
-                }
-                forwardedRef={null}
-              >
-                <ListItem
-                  className="c2"
+                  forwardedRef={null}
+                  href="http://example.com"
                 >
-                  <styled.li
-                    className="c2"
+                  <Anchor
+                    className="c4"
+                    href="http://example.com"
                   >
-                    <StyledComponent
-                      className="c2"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "sc-bxivhb",
-                            "isStatic": true,
-                            "lastClassName": "c3",
-                            "rules": Array [
-                              "font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 14px; line-height: 1.1428571429; width: 100%; @media only screen and (min-width: 641px) {
-  font-size: 16px; line-height: 1.25; margin-bottom: 5px;
-}",
-                            ],
-                          },
-                          "displayName": "styled.li",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "sc-bxivhb",
-                          "target": "li",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
+                    <a
+                      className="c4"
+                      href="http://example.com"
                     >
-                      <li
-                        className="c2 c3"
-                      >
-                        <Styled(Anchor)
-                          href="http://example.com"
-                        >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-gzVnrw",
-                                  "isStatic": true,
-                                  "lastClassName": "c4",
-                                  "rules": Array [
-                                    "color: #005ea5; padding: 3px; margin: -3px; outline-color: transparent; display: inline-block; text-decoration: underline; :focus {
+                      Example 1
+                    </a>
+                  </Anchor>
+                </StyledComponent>
+              </Styled(Anchor)>
+            </li>
+          </StyledComponent>
+        </styled.li>
+        <styled.li>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "c2",
+                  "isStatic": false,
+                  "lastClassName": "c3",
+                  "rules": Array [
+                    "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
+}",
+                    "margin-bottom: 5px;",
+                    [Function],
+                  ],
+                },
+                "displayName": "styled.li",
+                "foldedComponentIds": Array [],
+                "propTypes": undefined,
+                "render": [Function],
+                "styledComponentId": "c2",
+                "target": "li",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <li
+              className="c2 c3"
+            >
+              <Styled(Anchor)
+                href="http://example.com"
+              >
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-htpNat",
+                        "isStatic": true,
+                        "lastClassName": "c4",
+                        "rules": Array [
+                          "color: #005ea5; padding: 3px; margin: -3px; outline-color: transparent; display: inline-block; text-decoration: underline; :focus {
   background-color: #ffbf47; outline: 3px solid #ffbf47;
 } :visited {
   color: #2e358b;
 }",
-                                  ],
-                                },
-                                "displayName": "Styled(Anchor)",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-gzVnrw",
-                                "target": [Function],
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            href="http://example.com"
-                          >
-                            <Anchor
-                              className="c4"
-                              href="http://example.com"
-                            >
-                              <a
-                                className="c4"
-                                href="http://example.com"
-                              >
-                                Example 2
-                              </a>
-                            </Anchor>
-                          </StyledComponent>
-                        </Styled(Anchor)>
-                      </li>
-                    </StyledComponent>
-                  </styled.li>
-                </ListItem>
-              </StyledComponent>
-            </Styled(ListItem)>
-            <Styled(ListItem)>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-ifAKCX",
-                      "isStatic": false,
-                      "lastClassName": "c2",
-                      "rules": Array [
-                        [Function],
-                      ],
-                    },
-                    "displayName": "Styled(ListItem)",
-                    "foldedComponentIds": Array [],
-                    "propTypes": Object {
-                      "margin": [Function],
-                      "mb": [Function],
-                      "padding": [Function],
-                    },
-                    "render": [Function],
-                    "styledComponentId": "sc-ifAKCX",
-                    "target": [Function],
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                    Symbol(Symbol.hasInstance): [Function],
+                        ],
+                      },
+                      "displayName": "Styled(Anchor)",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-htpNat",
+                      "target": [Function],
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                      Symbol(Symbol.hasInstance): [Function],
+                    }
                   }
-                }
-                forwardedRef={null}
-              >
-                <ListItem
-                  className="c2"
+                  forwardedRef={null}
+                  href="http://example.com"
                 >
-                  <styled.li
-                    className="c2"
+                  <Anchor
+                    className="c4"
+                    href="http://example.com"
                   >
-                    <StyledComponent
-                      className="c2"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "sc-bxivhb",
-                            "isStatic": true,
-                            "lastClassName": "c3",
-                            "rules": Array [
-                              "font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 14px; line-height: 1.1428571429; width: 100%; @media only screen and (min-width: 641px) {
-  font-size: 16px; line-height: 1.25; margin-bottom: 5px;
-}",
-                            ],
-                          },
-                          "displayName": "styled.li",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "sc-bxivhb",
-                          "target": "li",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
+                    <a
+                      className="c4"
+                      href="http://example.com"
                     >
-                      <li
-                        className="c2 c3"
-                      >
-                        <Styled(Anchor)
-                          href="http://example.com"
-                        >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-gzVnrw",
-                                  "isStatic": true,
-                                  "lastClassName": "c4",
-                                  "rules": Array [
-                                    "color: #005ea5; padding: 3px; margin: -3px; outline-color: transparent; display: inline-block; text-decoration: underline; :focus {
+                      Example 2
+                    </a>
+                  </Anchor>
+                </StyledComponent>
+              </Styled(Anchor)>
+            </li>
+          </StyledComponent>
+        </styled.li>
+        <styled.li>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "c2",
+                  "isStatic": false,
+                  "lastClassName": "c3",
+                  "rules": Array [
+                    "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
+}",
+                    "margin-bottom: 5px;",
+                    [Function],
+                  ],
+                },
+                "displayName": "styled.li",
+                "foldedComponentIds": Array [],
+                "propTypes": undefined,
+                "render": [Function],
+                "styledComponentId": "c2",
+                "target": "li",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <li
+              className="c2 c3"
+            >
+              <Styled(Anchor)
+                href="http://example.com"
+              >
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-htpNat",
+                        "isStatic": true,
+                        "lastClassName": "c4",
+                        "rules": Array [
+                          "color: #005ea5; padding: 3px; margin: -3px; outline-color: transparent; display: inline-block; text-decoration: underline; :focus {
   background-color: #ffbf47; outline: 3px solid #ffbf47;
 } :visited {
   color: #2e358b;
 }",
-                                  ],
-                                },
-                                "displayName": "Styled(Anchor)",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-gzVnrw",
-                                "target": [Function],
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                                Symbol(Symbol.hasInstance): [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            href="http://example.com"
-                          >
-                            <Anchor
-                              className="c4"
-                              href="http://example.com"
-                            >
-                              <a
-                                className="c4"
-                                href="http://example.com"
-                              >
-                                Example 3
-                              </a>
-                            </Anchor>
-                          </StyledComponent>
-                        </Styled(Anchor)>
-                      </li>
-                    </StyledComponent>
-                  </styled.li>
-                </ListItem>
-              </StyledComponent>
-            </Styled(ListItem)>
-          </ol>
-        </StyledComponent>
-      </styled.ol>
-    </OrderedList>
-  </StyledComponent>
-</Styled(OrderedList)>
+                        ],
+                      },
+                      "displayName": "Styled(Anchor)",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-htpNat",
+                      "target": [Function],
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                      Symbol(Symbol.hasInstance): [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  href="http://example.com"
+                >
+                  <Anchor
+                    className="c4"
+                    href="http://example.com"
+                  >
+                    <a
+                      className="c4"
+                      href="http://example.com"
+                    >
+                      Example 3
+                    </a>
+                  </Anchor>
+                </StyledComponent>
+              </Styled(Anchor)>
+            </li>
+          </StyledComponent>
+        </styled.li>
+      </ol>
+    </StyledComponent>
+  </styled.ol>
+</DocumentedComponent>
 `;

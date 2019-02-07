@@ -8,7 +8,6 @@ import {
   SPACING_POINTS,
 } from '@govuk-react/constants';
 import { typography } from '@govuk-react/lib';
-import { stripUnit } from 'polished';
 
 // Constants for chevron sourced from govuk-frontend
 const CHEVRON_SIZE = 7;
@@ -38,7 +37,7 @@ const BreadcrumbListItem = styled('li')({
   position: 'relative',
   marginBottom: SPACING_POINTS[1],
   marginLeft: SPACING_POINTS[2],
-  paddingLeft: stripUnit(SPACING_POINTS[2]) + CHEVRON_ALTITUDE_CALCULATED,
+  paddingLeft: SPACING_POINTS[2] + CHEVRON_ALTITUDE_CALCULATED,
   '::before': {
     content: "''",
     display: 'block',

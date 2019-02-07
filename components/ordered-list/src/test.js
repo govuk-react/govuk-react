@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 import ListItem from '@govuk-react/list-item';
 import asAnchor from '@govuk-react/hoc/lib/asAnchor';
 
-import OrderedList from './';
+import { DocumentedComponent as OrderedList } from '.';
 
 const AnchorTag = asAnchor('a');
 
@@ -20,6 +20,10 @@ describe('OrderedList', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<OrderedList>Example</OrderedList>, div);
+    ReactDOM.render(
+      <OrderedList listStyleType="number">Example</OrderedList>,
+      div,
+    );
     ReactDOM.render(
       <OrderedList listStyleType="none">Example</OrderedList>,
       div,

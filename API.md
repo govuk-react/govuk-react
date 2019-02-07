@@ -233,6 +233,37 @@ Prop | Required | Default | Type | Description
  `inputNames` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` | shape[object Object] | Input name attributes
 
 
+Details
+=======
+
+### Import
+```js
+  import Details from '@govuk-react/details';
+```
+<!-- STORY -->
+
+### Usage
+
+
+Simple
+```jsx
+<Details summary="Help with nationality">
+  I am a paragraph of hidden details, to be revealed when summary is clicked
+</Details>
+```
+
+### References
+- https://design-system.service.gov.uk/components/details/
+- https://github.com/alphagov/govuk-frontend/blob/master/src/components/details/_details.scss
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` |  | ```undefined``` | node | The content that will be displayed when details are revealed
+ `open` |  | ```false``` | bool | Flag to indicate whether to show component open by default
+ `summary` | true | `````` | node | Text for the details summary link e.g. Help with nationality
+
+
 DocumentFooterMetadata
 ======================
 
@@ -620,38 +651,6 @@ Prop | Required | Default | Type | Description
  `size` |  | ```undefined``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
 
 
-HiddenText
-==========
-
-### Import
-```js
-  import HiddenText from '@govuk-react/hidden-text';
-```
-<!-- STORY -->
-
-### Usage
-
-
-Simple
-```jsx
-import Paragraph from '@govuk-react/paragraph';
-
-<HiddenText summaryText={'Help with nationality'}>
-  <Paragraph mb={0}>I am a paragraph. Please read me.</Paragraph>
-</HiddenText>
-```
-
-### References
-- https://govuk-elements.herokuapp.com/typography/#typography-hidden-text
-- https://github.com/alphagov/govuk-frontend/blob/master/src/components/details/_details.scss
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `children` |  | ```undefined``` | node | The nodes that will be displayed within the InsetText component
- `summaryText` | true | `````` | string | Text for the summary button link e.g. Help with nationality
-
-
 HintText
 ========
 
@@ -947,7 +946,7 @@ import { asAnchor } from '@govuk-react/hoc';
 ```
 
 ### References
-- https://github.com/alphagov/govuk-frontend/tree/master/src/components
+- https://github.com/alphagov/govuk-frontend/blob/master/src/core/_lists.scss
 
 ### Properties
 Prop | Required | Default | Type | Description
@@ -1154,6 +1153,7 @@ OrderedList
 
 Simple
 ```jsx
+import OrderedList from '@govuk-react/ordered-list';
 import ListItem from '@govuk-react/list-item';
 
 <OrderedList>
@@ -1165,6 +1165,7 @@ import ListItem from '@govuk-react/list-item';
 
 with Roman
 ```jsx
+import OrderedList from '@govuk-react/ordered-list';
 import ListItem from '@govuk-react/list-item';
 
 <OrderedList listStyleType="lower-roman">
@@ -1175,7 +1176,8 @@ import ListItem from '@govuk-react/list-item';
 ```
 
 ### References
-- https://govuk-static.herokuapp.com/component-guide/government_navigation
+- https://design-system.service.gov.uk/styles/typography/#lists
+- https://github.com/alphagov/govuk-frontend/blob/master/src/core/_lists.scss
 
 ### TODO
 - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
@@ -1183,7 +1185,8 @@ import ListItem from '@govuk-react/list-item';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`
+ `children` | true | `````` | node | One or more ListItem components
+ `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend
 
 
 Page
@@ -1257,15 +1260,15 @@ Panel
 
 Simple
 ```jsx
-<Panel panelTitle="Application complete" />
+<Panel title="Application complete" />
 ```
 
 Panel with header and HTML body
 ```jsx
-<Panel
-   panelTitle="Application complete"
-   panelBody={['Your reference number', <br />, <strong>HDJ2123F</strong>]}
- />
+<Panel title="Application complete">
+  Your reference number<br />
+  <strong>HDJ2123F</strong>
+</Panel>
 ```
 
 ### References:
@@ -1274,8 +1277,8 @@ Panel with header and HTML body
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `panelBody` |  | ```undefined``` | union(string \| array) | Panel body text
- `panelTitle` | true | `````` | string | Panel title text
+ `children` |  | ```undefined``` | node | Panel body text
+ `title` | true | `````` | string | Panel title text
 
 
 Paragraph
@@ -1971,6 +1974,7 @@ UnorderedList
 
 Simple
 ```jsx
+import UnorderedList from '@govuk-react/unordered-list';
 import ListItem from '@govuk-react/list-item';
 
 <UnorderedList>
@@ -1980,11 +1984,12 @@ import ListItem from '@govuk-react/list-item';
 </UnorderedList>
 ```
 
-With listStyleType option
+with Roman
 ```jsx
+import UnorderedList from '@govuk-react/unordered-list';
 import ListItem from '@govuk-react/list-item';
 
-<UnorderedList listStyleType="square">
+<UnorderedList listStyleType="lower-roman">
   <ListItem>Lorem ipsum dolor sit.</ListItem>
   <ListItem>Consectetur adipiscing elit.</ListItem>
   <ListItem>Curabitur et libero nec.</ListItem>
@@ -1992,16 +1997,14 @@ import ListItem from '@govuk-react/list-item';
 ```
 
 ### References
-- https://govuk-static.herokuapp.com/component-guide/government_navigation
-
-### TODO
-- Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
+- https://design-system.service.gov.uk/styles/typography/#lists
+- https://github.com/alphagov/govuk-frontend/blob/master/src/core/_lists.scss
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | node | One or more ListItem components
- `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`
+ `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend
 
 
 WarningText
