@@ -1,13 +1,13 @@
 {
   "name": "@govuk-react/breadcrumb",
-  "version": "0.6.0-alpha.0",
+  "version": "0.6.0-alpha.1",
   "devDependencies": {
-    "@govuk-react/storybook-components": "^0.6.0-alpha.0"
+    "@govuk-react/storybook-components": "^0.6.0-alpha.1"
   },
   "dependencies": {
-    "@govuk-react/constants": "^0.6.0-alpha.0",
-    "@govuk-react/hoc": "^0.6.0-alpha.0",
-    "@govuk-react/lib": "^0.6.0-alpha.0",
+    "@govuk-react/constants": "^0.6.0-alpha.1",
+    "@govuk-react/hoc": "^0.6.0-alpha.1",
+    "@govuk-react/lib": "^0.6.0-alpha.1",
     "govuk-colours": "^1.0.3",
     "polished": "^2.3.3"
   },
