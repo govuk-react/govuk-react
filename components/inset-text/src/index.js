@@ -2,57 +2,52 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { SPACING } from '@govuk-react/constants';
-import { withWhiteSpace } from '@govuk-react/hoc';
+import { BORDER_WIDTH_WIDE, SPACING_POINTS } from '@govuk-react/constants';
+import { spacing, typography } from '@govuk-react/lib';
 import { BORDER_COLOUR } from 'govuk-colours';
 
-const StyledInsetText = styled('div')(props => ({
-  boxSizing: 'border-box',
-  borderLeftStyle: 'solid',
-  borderLeftWidth: props.isNarrow ? '5px' : '10px',
-  borderColor: BORDER_COLOUR,
-  padding: SPACING.SCALE_3,
-}));
+const InsetText = styled('div')(
+  typography.font({ size: 19 }),
+  typography.textColour,
+  {
+    padding: SPACING_POINTS[3],
+  },
+  spacing.withWhiteSpace({ margin: { size: 6, direction: ['top', 'bottom'] } }),
+  {
+    clear: 'both',
+    borderLeft: `${BORDER_WIDTH_WIDE} solid ${BORDER_COLOUR}`,
+
+    ':first-child': {
+      marginTop: 0,
+    },
+
+    ':only-child,:last-child': {
+      marginBottom: 0,
+    },
+  },
+);
 
 /**
  *
  * ### Usage
  *
- *
- * Simple
  * ```jsx
- * import Paragraph from '@govuk-react/paragraph';
- *
  * <InsetText>
- *  <Paragraph mb={0}>Hello</Paragraph>
- * </InsetText>
- * ```
- *
- * Narrow border
- * ```jsx
- * import Paragraph from '@govuk-react/paragraph';
- *
- * <InsetText isNarrow>
- *  <Paragraph mb={0}>Hello</Paragraph>
+ *  Hello
  * </InsetText>
  * ```
  *
  * ### References
- * - https://govuk-elements.herokuapp.com/typography/#typography-inset-text
+ * - https://design-system.service.gov.uk/components/inset-text/
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/inset-text/_inset-text.scss
- * - https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_panels.scss
  */
-const InsetText = props => <StyledInsetText {...props} />;
+const DocumentedInsetText = props => <InsetText {...props} />;
 
-InsetText.defaultProps = {
-  isNarrow: false,
+DocumentedInsetText.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
-InsetText.propTypes = {
-  /**
-   * Renders a narrow border following GDS guides if set to true
-   */
-  isNarrow: PropTypes.bool,
-};
+InsetText.propTypes = DocumentedInsetText.propTypes;
 
-export default withWhiteSpace({ marginBottom: 6 })(InsetText);
+export { DocumentedInsetText };
+export default InsetText;
