@@ -1,14 +1,13 @@
 {
   "name": "@govuk-react/warning-text",
-  "version": "0.5.1",
+  "version": "0.6.0-alpha.0",
   "dependencies": {
-    "@govuk-react/constants": "^0.5.1",
-    "@govuk-react/hoc": "^0.5.1",
-    "@govuk-react/icons": "^0.5.1",
+    "@govuk-react/constants": "^0.6.0-alpha.0",
+    "@govuk-react/hoc": "^0.6.0-alpha.0",
+    "@govuk-react/icons": "^0.6.0-alpha.0",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
-
     "react": ">=15",
     "styled-components": ">=4"
   },

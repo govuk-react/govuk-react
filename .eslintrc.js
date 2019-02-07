@@ -1,4 +1,5 @@
 const { devDependencies } = require('./package.json');
+const { dependencies: gukd } = require('./packages/govuk-react/package.json');
 
 module.exports = {
   "parser": "babel-eslint",
@@ -31,7 +32,9 @@ module.exports = {
       "settings": {
         "import/core-modules": [
           'govuk-react',
-          ...Object.keys(devDependencies)
+          '@govuk-react/storybook-components',
+          ...Object.keys(devDependencies),
+          ...Object.keys(gukd).filter(dep => dep.startsWith('@govuk-react/'))
         ]
       }
     },
