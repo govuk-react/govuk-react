@@ -22,12 +22,12 @@ import MultiChoice from '@govuk-react/multi-choice';
 import OrderedList from '@govuk-react/ordered-list';
 import Pagination from '@govuk-react/pagination';
 import Panel from '@govuk-react/panel';
-import PhaseBadge from '@govuk-react/phase-badge';
 import PhaseBanner from '@govuk-react/phase-banner';
 import Radio from '@govuk-react/radio';
 import RelatedItems from '@govuk-react/related-items';
 import SearchBox from '@govuk-react/search-box';
 import Select from '@govuk-react/select';
+import Tag from '@govuk-react/tag';
 import TextArea from '@govuk-react/text-area';
 import UnorderedList from '@govuk-react/unordered-list';
 
@@ -137,12 +137,12 @@ stories.add('multiple existing components', () => (
     <OrderedList mb={number('OrderedList marginBottom', 9)}>OrderedList Example</OrderedList>
     <Pagination mb={number('Pagination marginBottom', 9)}>Pagination Example</Pagination>
     <Panel panelTitle="Example" mb={number('Panel marginBottom', 9)}>Panel Example</Panel>
-    <PhaseBadge mb={number('PhaseBadge marginBottom', 9)}>PhaseBadge</PhaseBadge>
     <PhaseBanner level="EXAMPLE" mb={number('PhaseBanner marginBottom', 9)}>PhaseBanner Example</PhaseBanner>
     <Radio mb={number('Radio marginBottom', 9)}>Radio Example</Radio>
     <RelatedItems mb={number('RelatedItems marginBottom', 9)}>RelatedItems Example</RelatedItems>
     <SearchBox mb={number('SearchBox marginBottom', 9)}>SearchBox Example</SearchBox>
     <Select label="example" mb={number('Select marginBottom', 9)}>Select Example</Select>
+    <Tag mb={number('Tag marginBottom', 9)}>Tag</Tag>
     <TextArea mb={number('TextArea marginBottom', 9)}>TextArea Example</TextArea>
     <UnorderedList mb={number('UnorderedList marginBottom', 9)}>UnorderedList Example</UnorderedList>
   </Fragment>

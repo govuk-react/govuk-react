@@ -2,61 +2,73 @@
 
 exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
 .c3 {
-  display: inline-block;
-  margin: 0 8px 0 0;
-  padding: 2px 5px;
   font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.1428571429;
-  text-transform: uppercase;
+  line-height: 1.25;
+  display: inline-block;
+  padding: 4px 8px;
+  padding-bottom: 1px;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  color: #ffffff;
+  background-color: #005ea5;
   -webkit-letter-spacing: 1px;
   -moz-letter-spacing: 1px;
   -ms-letter-spacing: 1px;
   letter-spacing: 1px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #ffffff;
-  background-color: #005ea5;
-  -webkit-font-mmoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.c2 {
-  margin-bottom: 0;
-}
-
-.c1 {
-  border-bottom: 1px solid #bfc1c3;
-  box-sizing: border-box;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 14px;
-  line-height: 1.1428571429;
-}
-
-.c1 > a {
-  color: #005ea5;
+  text-transform: uppercase;
 }
 
 .c0 {
-  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #bfc1c3;
+}
+
+.c1 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1428571428571428;
+  color: #0b0c0c;
+  display: table;
+  margin: 0;
+}
+
+.c1 .c2 {
+  margin-right: 10px;
+}
+
+.c4 {
+  display: table-cell;
+  vertical-align: baseline;
+}
+
+@media print {
+  .c3 {
+    font-size: 14px;
+    line-height: 1.25;
+  }
 }
 
 @media only screen and (min-width:641px) {
   .c3 {
     font-size: 16px;
     line-height: 1.25;
-    padding-bottom: 0;
   }
 }
 
-@media only screen and (min-width:641px) {
-  .c2 {
-    margin-bottom: 0;
+@media print {
+  .c1 {
+    font-size: 14px;
+    line-height: 1.2;
   }
 }
 
@@ -67,168 +79,168 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-@media only screen and (min-width:641px) {
-  .c0 {
-    margin-bottom: 0;
+@media print {
+  .c1 {
+    color: #000;
   }
 }
 
-<Styled(PhaseBanner)
+<PhaseBanner
   level="beta"
 >
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-bZQynM",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            [Function],
-          ],
-        },
-        "displayName": "Styled(PhaseBanner)",
-        "foldedComponentIds": Array [],
-        "propTypes": Object {
-          "margin": [Function],
-          "mb": [Function],
-          "padding": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "sc-bZQynM",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
+  <styled.div>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bwzfXH",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #bfc1c3;",
+              [Function],
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bwzfXH",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
       }
-    }
-    forwardedRef={null}
-    level="beta"
-  >
-    <PhaseBanner
-      className="c0"
-      level="beta"
+      forwardedRef={null}
     >
-      <styled.div
+      <div
         className="c0"
       >
-        <StyledComponent
-          className="c0"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-EHOje",
-                "isStatic": true,
-                "lastClassName": "c1",
-                "rules": Array [
-                  "border-bottom: 1px solid #bfc1c3; box-sizing: border-box; padding-top: 10px; padding-bottom: 10px; font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 14px; line-height: 1.1428571429; @media only screen and (min-width: 641px) {
+        <styled.p>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-htpNat",
+                  "isStatic": true,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.2;
+} font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
   font-size: 16px; line-height: 1.25;
-} > a {
-  color: #005ea5;
 }",
-                ],
-              },
-              "displayName": "styled.div",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "sc-EHOje",
-              "target": "div",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
+                    "color: #0b0c0c; @media print {
+  color: #000;
+}",
+                    "display: table; margin: 0; .c2 {
+  margin-right: 10px;
+}",
+                  ],
+                },
+                "displayName": "styled.p",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-htpNat",
+                "target": "p",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
             }
-          }
-          forwardedRef={null}
-        >
-          <div
-            className="c0 c1"
+            forwardedRef={null}
           >
-            <Styled(PhaseBadge)>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-ifAKCX",
-                      "isStatic": false,
-                      "lastClassName": "c2",
-                      "rules": Array [
-                        [Function],
-                      ],
-                    },
-                    "displayName": "Styled(PhaseBadge)",
-                    "foldedComponentIds": Array [],
-                    "propTypes": Object {
-                      "margin": [Function],
-                      "mb": [Function],
-                      "padding": [Function],
-                    },
-                    "render": [Function],
-                    "styledComponentId": "sc-ifAKCX",
-                    "target": [Function],
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                    Symbol(Symbol.hasInstance): [Function],
-                  }
-                }
-                forwardedRef={null}
+            <p
+              className="c1"
+            >
+              <styled.strong
+                inactive={false}
               >
-                <PhaseBadge
-                  className="c2"
-                >
-                  <styled.strong
-                    className="c2"
-                  >
-                    <StyledComponent
-                      className="c2"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "sc-bxivhb",
-                            "isStatic": true,
-                            "lastClassName": "c3",
-                            "rules": Array [
-                              "display: inline-block; margin: 0 8px 0 0; padding: 2px 5px; font-family: \\"nta\\", Arial, sans-serif; font-weight: 700; font-size: 14px; line-height: 1.1428571429; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; color: #ffffff; background-color: #005ea5; -webkit-font-mmoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media only screen and (min-width: 641px) {
-  font-size: 16px; line-height: 1.25; padding-bottom: 0;
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "c2",
+                        "isStatic": false,
+                        "lastClassName": "c3",
+                        "rules": Array [
+                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.25;
+} font-weight: 700; font-size: 14px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 16px; line-height: 1.25;
 }",
-                            ],
-                          },
-                          "displayName": "styled.strong",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "sc-bxivhb",
-                          "target": "strong",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                    >
-                      <strong
-                        className="c2 c3"
-                      >
-                        beta
-                      </strong>
-                    </StyledComponent>
-                  </styled.strong>
-                </PhaseBadge>
-              </StyledComponent>
-            </Styled(PhaseBadge)>
-            example
-          </div>
-        </StyledComponent>
-      </styled.div>
-    </PhaseBanner>
-  </StyledComponent>
-</Styled(PhaseBanner)>
+                          "display: inline-block; padding: 4px 8px; padding-bottom: 1px; outline: 2px solid transparent; outline-offset: -2px; color: #ffffff; background-color: #005ea5; letter-spacing: 1px; text-decoration: none; text-transform: uppercase;",
+                          [Function],
+                        ],
+                      },
+                      "defaultProps": Object {
+                        "inactive": false,
+                      },
+                      "displayName": "styled.strong",
+                      "foldedComponentIds": Array [],
+                      "propTypes": undefined,
+                      "render": [Function],
+                      "styledComponentId": "c2",
+                      "target": "strong",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  inactive={false}
+                >
+                  <strong
+                    className="c2 c3"
+                  >
+                    beta
+                  </strong>
+                </StyledComponent>
+              </styled.strong>
+              <styled.span>
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bxivhb",
+                        "isStatic": true,
+                        "lastClassName": "c4",
+                        "rules": Array [
+                          "display: table-cell; vertical-align: baseline;",
+                        ],
+                      },
+                      "displayName": "styled.span",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bxivhb",
+                      "target": "span",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                >
+                  <span
+                    className="c4"
+                  >
+                    example
+                  </span>
+                </StyledComponent>
+              </styled.span>
+            </p>
+          </StyledComponent>
+        </styled.p>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</PhaseBanner>
 `;

@@ -2,16 +2,19 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-import InsetText, { InsetTextWithParagraph } from './fixtures';
+import {
+  TagWithKnobs,
+  TagInactive,
+} from './fixtures';
 import ReadMe from '../README.md';
 
-const stories = storiesOf('Typography/InsetText', module);
-const examples = storiesOf('Typography/InsetText/Examples', module);
+const stories = storiesOf('Misc/Tag', module);
+const examples = storiesOf('Misc/Tag/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 stories.addDecorator(withKnobs);
 examples.addDecorator(withKnobs);
 
-stories.add('Component default', InsetText);
+stories.add('Component default', TagWithKnobs);
 
-examples.add('Using a Paragraph for contents', InsetTextWithParagraph);
+examples.add('Inactive', TagInactive);

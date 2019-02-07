@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
-.c6 {
+.c5 {
   font-family: "nta",Arial,sans-serif;
   margin: 0;
   font-size: 16px;
   line-height: 1.25;
 }
 
-.c6 > p {
+.c5 > p {
   margin: 0;
 }
 
-.c6 > p > code {
+.c5 > p > code {
   padding: 0.2em 0.4em;
   margin: 0;
   font-size: 85%;
@@ -20,7 +20,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
   border-radius: 3px;
 }
 
-.c6 > pre {
+.c5 > pre {
   padding: 16px;
   overflow: auto;
   font-size: 85%;
@@ -29,7 +29,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
   border-radius: 3px;
 }
 
-.c6 > pre > code {
+.c5 > pre > code {
   display: inline;
   padding: 0;
   margin: 0;
@@ -39,23 +39,36 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
   word-wrap: normal;
 }
 
-.c5 {
+.c4 {
   margin-bottom: 15px;
 }
 
-.c7 {
+.c6 {
   margin-bottom: 0;
 }
 
-.c4 {
-  box-sizing: border-box;
-  border-left-style: solid;
-  border-left-width: 5px;
-  border-color: #bfc1c3;
+.c3 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
   padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-bottom: 0;
+  clear: both;
+  border-left: 10px solid #bfc1c3;
 }
 
-.c3 {
+.c3:first-child {
+  margin-top: 0;
+}
+
+.c3:only-child,
+.c3:last-child {
   margin-bottom: 0;
 }
 
@@ -89,21 +102,48 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .c6 {
+  .c5 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c5 {
+  .c4 {
     margin-bottom: 20px;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c7 {
+  .c6 {
     margin-bottom: 0;
+  }
+}
+
+@media print {
+  .c3 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c3 {
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
+@media print {
+  .c3 {
+    color: #000;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
 
@@ -129,7 +169,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
+            "componentId": "sc-dnqmqq",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -144,7 +184,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
             "padding": [Function],
           },
           "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
+          "styledComponentId": "sc-dnqmqq",
           "target": [Function],
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -169,7 +209,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-dnqmqq",
+                    "componentId": "sc-htoDjs",
                     "isStatic": true,
                     "lastClassName": "c1",
                     "rules": Array [
@@ -183,7 +223,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                   "displayName": "styled.summary",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-dnqmqq",
+                  "styledComponentId": "sc-htoDjs",
                   "target": "summary",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -202,7 +242,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-htoDjs",
+                          "componentId": "sc-gzVnrw",
                           "isStatic": true,
                           "lastClassName": "c2",
                           "rules": Array [
@@ -212,7 +252,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                         "displayName": "styled.span",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-htoDjs",
+                        "styledComponentId": "sc-gzVnrw",
                         "target": "span",
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -231,7 +271,7 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
               </summary>
             </StyledComponent>
           </styled.summary>
-          <Styled(InsetText)
+          <styled.div
             isNarrow={true}
             mb={0}
           >
@@ -241,159 +281,351 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-gzVnrw",
+                    "componentId": "sc-bZQynM",
                     "isStatic": false,
                     "lastClassName": "c3",
                     "rules": Array [
+                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
+}",
+                      "color: #0b0c0c; @media print {
+  color: #000;
+}",
+                      "padding: 15px;",
                       [Function],
+                      "clear: both; border-left: 10px solid #bfc1c3; :first-child {
+  margin-top: 0;
+} :only-child,:last-child {
+  margin-bottom: 0;
+}",
                     ],
                   },
-                  "displayName": "Styled(InsetText)",
+                  "displayName": "styled.div",
                   "foldedComponentIds": Array [],
-                  "propTypes": Object {
-                    "margin": [Function],
-                    "mb": [Function],
-                    "padding": [Function],
-                  },
+                  "propTypes": undefined,
                   "render": [Function],
-                  "styledComponentId": "sc-gzVnrw",
-                  "target": [Function],
+                  "styledComponentId": "sc-bZQynM",
+                  "target": "div",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
-                  Symbol(Symbol.hasInstance): [Function],
                 }
               }
               forwardedRef={null}
               isNarrow={true}
               mb={0}
             >
-              <InsetText
+              <div
                 className="c3"
-                isNarrow={true}
-                mb={0}
               >
-                <styled.div
-                  className="c3"
-                  isNarrow={true}
-                  mb={0}
+                <Styled(Paragraph)
+                  key="paragraphText1"
                 >
                   <StyledComponent
-                    className="c3"
                     forwardedComponent={
                       Object {
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-bZQynM",
+                          "componentId": "sc-EHOje",
                           "isStatic": false,
-                          "lastClassName": "c4",
+                          "lastClassName": "c6",
                           "rules": Array [
                             [Function],
                           ],
                         },
-                        "displayName": "styled.div",
+                        "displayName": "Styled(Paragraph)",
                         "foldedComponentIds": Array [],
+                        "propTypes": Object {
+                          "margin": [Function],
+                          "mb": [Function],
+                          "padding": [Function],
+                        },
                         "render": [Function],
-                        "styledComponentId": "sc-bZQynM",
-                        "target": "div",
+                        "styledComponentId": "sc-EHOje",
+                        "target": [Function],
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
                         "withComponent": [Function],
+                        Symbol(Symbol.hasInstance): [Function],
                       }
                     }
                     forwardedRef={null}
-                    isNarrow={true}
+                  >
+                    <Paragraph
+                      className="c4"
+                      linkRenderer={[Function]}
+                      supportingText={false}
+                    >
+                      <Styled(ReactMarkdown)
+                        allowedTypes={
+                          Array [
+                            "paragraph",
+                            "emphasis",
+                            "strong",
+                            "link",
+                            "inlineCode",
+                            "code",
+                          ]
+                        }
+                        className="c4"
+                        escapeHtml={false}
+                        linkRenderer={[Function]}
+                        renderers={
+                          Object {
+                            "link": [Function],
+                          }
+                        }
+                        skipHtml={true}
+                        source="If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card."
+                        supportingText={false}
+                      >
+                        <StyledComponent
+                          allowedTypes={
+                            Array [
+                              "paragraph",
+                              "emphasis",
+                              "strong",
+                              "link",
+                              "inlineCode",
+                              "code",
+                            ]
+                          }
+                          className="c4"
+                          escapeHtml={false}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-ifAKCX",
+                                "isStatic": false,
+                                "lastClassName": "c5",
+                                "rules": Array [
+                                  "font-family: \\"nta\\", Arial, sans-serif; margin: 0; > p {
+  margin: 0;
+} > p > code {
+  padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: rgba(27,31,35,0.05); border-radius: 3px;
+} > pre {
+  padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #f6f8fa; border-radius: 3px;
+} > pre > code {
+  display: inline; padding: 0; margin: 0; border: 0; overflow: visible; line-height: inherit; word-wrap: normal;
+}",
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "Styled(ReactMarkdown)",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "renderers": Object {
+                                "blockquote": "blockquote",
+                                "break": "br",
+                                "code": [Function],
+                                "definition": [Function],
+                                "delete": "del",
+                                "emphasis": "em",
+                                "heading": [Function],
+                                "html": [Function],
+                                "image": "img",
+                                "imageReference": "img",
+                                "inlineCode": [Function],
+                                "link": "a",
+                                "linkReference": "a",
+                                "list": [Function],
+                                "listItem": [Function],
+                                "paragraph": "p",
+                                "root": "div",
+                                "strong": "strong",
+                                "table": [Function],
+                                "tableBody": [Function],
+                                "tableCell": [Function],
+                                "tableHead": [Function],
+                                "tableRow": [Function],
+                                "thematicBreak": "hr",
+                                "virtualHtml": [Function],
+                              },
+                              "styledComponentId": "sc-ifAKCX",
+                              "target": [Function],
+                              "toString": [Function],
+                              "types": Array [
+                                "root",
+                                "break",
+                                "paragraph",
+                                "emphasis",
+                                "strong",
+                                "thematicBreak",
+                                "blockquote",
+                                "delete",
+                                "link",
+                                "image",
+                                "linkReference",
+                                "imageReference",
+                                "table",
+                                "tableHead",
+                                "tableBody",
+                                "tableRow",
+                                "tableCell",
+                                "list",
+                                "listItem",
+                                "definition",
+                                "heading",
+                                "inlineCode",
+                                "code",
+                                "html",
+                                "virtualHtml",
+                              ],
+                              "uriTransformer": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                              Symbol(Symbol.hasInstance): [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          linkRenderer={[Function]}
+                          renderers={
+                            Object {
+                              "link": [Function],
+                            }
+                          }
+                          skipHtml={true}
+                          source="If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card."
+                          supportingText={false}
+                        >
+                          <ReactMarkdown
+                            allowedTypes={
+                              Array [
+                                "paragraph",
+                                "emphasis",
+                                "strong",
+                                "link",
+                                "inlineCode",
+                                "code",
+                              ]
+                            }
+                            astPlugins={Array []}
+                            className="c4 c5"
+                            escapeHtml={false}
+                            linkRenderer={[Function]}
+                            plugins={Array []}
+                            rawSourcePos={false}
+                            renderers={
+                              Object {
+                                "link": [Function],
+                              }
+                            }
+                            skipHtml={true}
+                            source="If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card."
+                            sourcePos={false}
+                            supportingText={false}
+                            transformLinkUri={[Function]}
+                          >
+                            <div
+                              className="c4 c5"
+                              key="root-1-1"
+                            >
+                              <p
+                                key="paragraph-1-1"
+                              >
+                                If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+                              </p>
+                            </div>
+                          </ReactMarkdown>
+                        </StyledComponent>
+                      </Styled(ReactMarkdown)>
+                    </Paragraph>
+                  </StyledComponent>
+                </Styled(Paragraph)>
+                <Styled(Paragraph)
+                  key="paragraphText2"
+                  mb={0}
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-EHOje",
+                          "isStatic": false,
+                          "lastClassName": "c6",
+                          "rules": Array [
+                            [Function],
+                          ],
+                        },
+                        "displayName": "Styled(Paragraph)",
+                        "foldedComponentIds": Array [],
+                        "propTypes": Object {
+                          "margin": [Function],
+                          "mb": [Function],
+                          "padding": [Function],
+                        },
+                        "render": [Function],
+                        "styledComponentId": "sc-EHOje",
+                        "target": [Function],
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                        Symbol(Symbol.hasInstance): [Function],
+                      }
+                    }
+                    forwardedRef={null}
                     mb={0}
                   >
-                    <div
-                      className="c3 c4"
+                    <Paragraph
+                      className="c6"
+                      linkRenderer={[Function]}
+                      mb={0}
+                      supportingText={false}
                     >
-                      <Styled(Paragraph)
-                        key="paragraphText1"
+                      <Styled(ReactMarkdown)
+                        allowedTypes={
+                          Array [
+                            "paragraph",
+                            "emphasis",
+                            "strong",
+                            "link",
+                            "inlineCode",
+                            "code",
+                          ]
+                        }
+                        className="c6"
+                        escapeHtml={false}
+                        linkRenderer={[Function]}
+                        mb={0}
+                        renderers={
+                          Object {
+                            "link": [Function],
+                          }
+                        }
+                        skipHtml={true}
+                        source="We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post."
+                        supportingText={false}
                       >
                         <StyledComponent
+                          allowedTypes={
+                            Array [
+                              "paragraph",
+                              "emphasis",
+                              "strong",
+                              "link",
+                              "inlineCode",
+                              "code",
+                            ]
+                          }
+                          className="c6"
+                          escapeHtml={false}
                           forwardedComponent={
                             Object {
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-EHOje",
+                                "componentId": "sc-ifAKCX",
                                 "isStatic": false,
-                                "lastClassName": "c7",
+                                "lastClassName": "c5",
                                 "rules": Array [
-                                  [Function],
-                                ],
-                              },
-                              "displayName": "Styled(Paragraph)",
-                              "foldedComponentIds": Array [],
-                              "propTypes": Object {
-                                "margin": [Function],
-                                "mb": [Function],
-                                "padding": [Function],
-                              },
-                              "render": [Function],
-                              "styledComponentId": "sc-EHOje",
-                              "target": [Function],
-                              "toString": [Function],
-                              "warnTooManyClasses": [Function],
-                              "withComponent": [Function],
-                              Symbol(Symbol.hasInstance): [Function],
-                            }
-                          }
-                          forwardedRef={null}
-                        >
-                          <Paragraph
-                            className="c5"
-                            linkRenderer={[Function]}
-                            supportingText={false}
-                          >
-                            <Styled(ReactMarkdown)
-                              allowedTypes={
-                                Array [
-                                  "paragraph",
-                                  "emphasis",
-                                  "strong",
-                                  "link",
-                                  "inlineCode",
-                                  "code",
-                                ]
-                              }
-                              className="c5"
-                              escapeHtml={false}
-                              linkRenderer={[Function]}
-                              renderers={
-                                Object {
-                                  "link": [Function],
-                                }
-                              }
-                              skipHtml={true}
-                              source="If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card."
-                              supportingText={false}
-                            >
-                              <StyledComponent
-                                allowedTypes={
-                                  Array [
-                                    "paragraph",
-                                    "emphasis",
-                                    "strong",
-                                    "link",
-                                    "inlineCode",
-                                    "code",
-                                  ]
-                                }
-                                className="c5"
-                                escapeHtml={false}
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-ifAKCX",
-                                      "isStatic": false,
-                                      "lastClassName": "c6",
-                                      "rules": Array [
-                                        "font-family: \\"nta\\", Arial, sans-serif; margin: 0; > p {
+                                  "font-family: \\"nta\\", Arial, sans-serif; margin: 0; > p {
   margin: 0;
 } > p > code {
   padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: rgba(27,31,35,0.05); border-radius: 3px;
@@ -402,359 +634,135 @@ exports[`hidden text matches the HiddenText snapshot: hidden text 1`] = `
 } > pre > code {
   display: inline; padding: 0; margin: 0; border: 0; overflow: visible; line-height: inherit; word-wrap: normal;
 }",
-                                        [Function],
-                                      ],
-                                    },
-                                    "displayName": "Styled(ReactMarkdown)",
-                                    "foldedComponentIds": Array [],
-                                    "render": [Function],
-                                    "renderers": Object {
-                                      "blockquote": "blockquote",
-                                      "break": "br",
-                                      "code": [Function],
-                                      "definition": [Function],
-                                      "delete": "del",
-                                      "emphasis": "em",
-                                      "heading": [Function],
-                                      "html": [Function],
-                                      "image": "img",
-                                      "imageReference": "img",
-                                      "inlineCode": [Function],
-                                      "link": "a",
-                                      "linkReference": "a",
-                                      "list": [Function],
-                                      "listItem": [Function],
-                                      "paragraph": "p",
-                                      "root": "div",
-                                      "strong": "strong",
-                                      "table": [Function],
-                                      "tableBody": [Function],
-                                      "tableCell": [Function],
-                                      "tableHead": [Function],
-                                      "tableRow": [Function],
-                                      "thematicBreak": "hr",
-                                      "virtualHtml": [Function],
-                                    },
-                                    "styledComponentId": "sc-ifAKCX",
-                                    "target": [Function],
-                                    "toString": [Function],
-                                    "types": Array [
-                                      "root",
-                                      "break",
-                                      "paragraph",
-                                      "emphasis",
-                                      "strong",
-                                      "thematicBreak",
-                                      "blockquote",
-                                      "delete",
-                                      "link",
-                                      "image",
-                                      "linkReference",
-                                      "imageReference",
-                                      "table",
-                                      "tableHead",
-                                      "tableBody",
-                                      "tableRow",
-                                      "tableCell",
-                                      "list",
-                                      "listItem",
-                                      "definition",
-                                      "heading",
-                                      "inlineCode",
-                                      "code",
-                                      "html",
-                                      "virtualHtml",
-                                    ],
-                                    "uriTransformer": [Function],
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
-                                    Symbol(Symbol.hasInstance): [Function],
-                                  }
-                                }
-                                forwardedRef={null}
-                                linkRenderer={[Function]}
-                                renderers={
-                                  Object {
-                                    "link": [Function],
-                                  }
-                                }
-                                skipHtml={true}
-                                source="If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card."
-                                supportingText={false}
-                              >
-                                <ReactMarkdown
-                                  allowedTypes={
-                                    Array [
-                                      "paragraph",
-                                      "emphasis",
-                                      "strong",
-                                      "link",
-                                      "inlineCode",
-                                      "code",
-                                    ]
-                                  }
-                                  astPlugins={Array []}
-                                  className="c5 c6"
-                                  escapeHtml={false}
-                                  linkRenderer={[Function]}
-                                  plugins={Array []}
-                                  rawSourcePos={false}
-                                  renderers={
-                                    Object {
-                                      "link": [Function],
-                                    }
-                                  }
-                                  skipHtml={true}
-                                  source="If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card."
-                                  sourcePos={false}
-                                  supportingText={false}
-                                  transformLinkUri={[Function]}
-                                >
-                                  <div
-                                    className="c5 c6"
-                                    key="root-1-1"
-                                  >
-                                    <p
-                                      key="paragraph-1-1"
-                                    >
-                                      If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
-                                    </p>
-                                  </div>
-                                </ReactMarkdown>
-                              </StyledComponent>
-                            </Styled(ReactMarkdown)>
-                          </Paragraph>
-                        </StyledComponent>
-                      </Styled(Paragraph)>
-                      <Styled(Paragraph)
-                        key="paragraphText2"
-                        mb={0}
-                      >
-                        <StyledComponent
-                          forwardedComponent={
-                            Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "attrs": Array [],
-                              "componentStyle": ComponentStyle {
-                                "componentId": "sc-EHOje",
-                                "isStatic": false,
-                                "lastClassName": "c7",
-                                "rules": Array [
                                   [Function],
                                 ],
                               },
-                              "displayName": "Styled(Paragraph)",
+                              "displayName": "Styled(ReactMarkdown)",
                               "foldedComponentIds": Array [],
-                              "propTypes": Object {
-                                "margin": [Function],
-                                "mb": [Function],
-                                "padding": [Function],
-                              },
                               "render": [Function],
-                              "styledComponentId": "sc-EHOje",
+                              "renderers": Object {
+                                "blockquote": "blockquote",
+                                "break": "br",
+                                "code": [Function],
+                                "definition": [Function],
+                                "delete": "del",
+                                "emphasis": "em",
+                                "heading": [Function],
+                                "html": [Function],
+                                "image": "img",
+                                "imageReference": "img",
+                                "inlineCode": [Function],
+                                "link": "a",
+                                "linkReference": "a",
+                                "list": [Function],
+                                "listItem": [Function],
+                                "paragraph": "p",
+                                "root": "div",
+                                "strong": "strong",
+                                "table": [Function],
+                                "tableBody": [Function],
+                                "tableCell": [Function],
+                                "tableHead": [Function],
+                                "tableRow": [Function],
+                                "thematicBreak": "hr",
+                                "virtualHtml": [Function],
+                              },
+                              "styledComponentId": "sc-ifAKCX",
                               "target": [Function],
                               "toString": [Function],
+                              "types": Array [
+                                "root",
+                                "break",
+                                "paragraph",
+                                "emphasis",
+                                "strong",
+                                "thematicBreak",
+                                "blockquote",
+                                "delete",
+                                "link",
+                                "image",
+                                "linkReference",
+                                "imageReference",
+                                "table",
+                                "tableHead",
+                                "tableBody",
+                                "tableRow",
+                                "tableCell",
+                                "list",
+                                "listItem",
+                                "definition",
+                                "heading",
+                                "inlineCode",
+                                "code",
+                                "html",
+                                "virtualHtml",
+                              ],
+                              "uriTransformer": [Function],
                               "warnTooManyClasses": [Function],
                               "withComponent": [Function],
                               Symbol(Symbol.hasInstance): [Function],
                             }
                           }
                           forwardedRef={null}
+                          linkRenderer={[Function]}
                           mb={0}
+                          renderers={
+                            Object {
+                              "link": [Function],
+                            }
+                          }
+                          skipHtml={true}
+                          source="We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post."
+                          supportingText={false}
                         >
-                          <Paragraph
-                            className="c7"
+                          <ReactMarkdown
+                            allowedTypes={
+                              Array [
+                                "paragraph",
+                                "emphasis",
+                                "strong",
+                                "link",
+                                "inlineCode",
+                                "code",
+                              ]
+                            }
+                            astPlugins={Array []}
+                            className="c6 c5"
+                            escapeHtml={false}
                             linkRenderer={[Function]}
                             mb={0}
+                            plugins={Array []}
+                            rawSourcePos={false}
+                            renderers={
+                              Object {
+                                "link": [Function],
+                              }
+                            }
+                            skipHtml={true}
+                            source="We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post."
+                            sourcePos={false}
                             supportingText={false}
+                            transformLinkUri={[Function]}
                           >
-                            <Styled(ReactMarkdown)
-                              allowedTypes={
-                                Array [
-                                  "paragraph",
-                                  "emphasis",
-                                  "strong",
-                                  "link",
-                                  "inlineCode",
-                                  "code",
-                                ]
-                              }
-                              className="c7"
-                              escapeHtml={false}
-                              linkRenderer={[Function]}
-                              mb={0}
-                              renderers={
-                                Object {
-                                  "link": [Function],
-                                }
-                              }
-                              skipHtml={true}
-                              source="We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post."
-                              supportingText={false}
+                            <div
+                              className="c6 c5"
+                              key="root-1-1"
                             >
-                              <StyledComponent
-                                allowedTypes={
-                                  Array [
-                                    "paragraph",
-                                    "emphasis",
-                                    "strong",
-                                    "link",
-                                    "inlineCode",
-                                    "code",
-                                  ]
-                                }
-                                className="c7"
-                                escapeHtml={false}
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-ifAKCX",
-                                      "isStatic": false,
-                                      "lastClassName": "c6",
-                                      "rules": Array [
-                                        "font-family: \\"nta\\", Arial, sans-serif; margin: 0; > p {
-  margin: 0;
-} > p > code {
-  padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: rgba(27,31,35,0.05); border-radius: 3px;
-} > pre {
-  padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #f6f8fa; border-radius: 3px;
-} > pre > code {
-  display: inline; padding: 0; margin: 0; border: 0; overflow: visible; line-height: inherit; word-wrap: normal;
-}",
-                                        [Function],
-                                      ],
-                                    },
-                                    "displayName": "Styled(ReactMarkdown)",
-                                    "foldedComponentIds": Array [],
-                                    "render": [Function],
-                                    "renderers": Object {
-                                      "blockquote": "blockquote",
-                                      "break": "br",
-                                      "code": [Function],
-                                      "definition": [Function],
-                                      "delete": "del",
-                                      "emphasis": "em",
-                                      "heading": [Function],
-                                      "html": [Function],
-                                      "image": "img",
-                                      "imageReference": "img",
-                                      "inlineCode": [Function],
-                                      "link": "a",
-                                      "linkReference": "a",
-                                      "list": [Function],
-                                      "listItem": [Function],
-                                      "paragraph": "p",
-                                      "root": "div",
-                                      "strong": "strong",
-                                      "table": [Function],
-                                      "tableBody": [Function],
-                                      "tableCell": [Function],
-                                      "tableHead": [Function],
-                                      "tableRow": [Function],
-                                      "thematicBreak": "hr",
-                                      "virtualHtml": [Function],
-                                    },
-                                    "styledComponentId": "sc-ifAKCX",
-                                    "target": [Function],
-                                    "toString": [Function],
-                                    "types": Array [
-                                      "root",
-                                      "break",
-                                      "paragraph",
-                                      "emphasis",
-                                      "strong",
-                                      "thematicBreak",
-                                      "blockquote",
-                                      "delete",
-                                      "link",
-                                      "image",
-                                      "linkReference",
-                                      "imageReference",
-                                      "table",
-                                      "tableHead",
-                                      "tableBody",
-                                      "tableRow",
-                                      "tableCell",
-                                      "list",
-                                      "listItem",
-                                      "definition",
-                                      "heading",
-                                      "inlineCode",
-                                      "code",
-                                      "html",
-                                      "virtualHtml",
-                                    ],
-                                    "uriTransformer": [Function],
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
-                                    Symbol(Symbol.hasInstance): [Function],
-                                  }
-                                }
-                                forwardedRef={null}
-                                linkRenderer={[Function]}
-                                mb={0}
-                                renderers={
-                                  Object {
-                                    "link": [Function],
-                                  }
-                                }
-                                skipHtml={true}
-                                source="We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post."
-                                supportingText={false}
+                              <p
+                                key="paragraph-1-1"
                               >
-                                <ReactMarkdown
-                                  allowedTypes={
-                                    Array [
-                                      "paragraph",
-                                      "emphasis",
-                                      "strong",
-                                      "link",
-                                      "inlineCode",
-                                      "code",
-                                    ]
-                                  }
-                                  astPlugins={Array []}
-                                  className="c7 c6"
-                                  escapeHtml={false}
-                                  linkRenderer={[Function]}
-                                  mb={0}
-                                  plugins={Array []}
-                                  rawSourcePos={false}
-                                  renderers={
-                                    Object {
-                                      "link": [Function],
-                                    }
-                                  }
-                                  skipHtml={true}
-                                  source="We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post."
-                                  sourcePos={false}
-                                  supportingText={false}
-                                  transformLinkUri={[Function]}
-                                >
-                                  <div
-                                    className="c7 c6"
-                                    key="root-1-1"
-                                  >
-                                    <p
-                                      key="paragraph-1-1"
-                                    >
-                                      We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
-                                    </p>
-                                  </div>
-                                </ReactMarkdown>
-                              </StyledComponent>
-                            </Styled(ReactMarkdown)>
-                          </Paragraph>
+                                We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+                              </p>
+                            </div>
+                          </ReactMarkdown>
                         </StyledComponent>
-                      </Styled(Paragraph)>
-                    </div>
+                      </Styled(ReactMarkdown)>
+                    </Paragraph>
                   </StyledComponent>
-                </styled.div>
-              </InsetText>
+                </Styled(Paragraph)>
+              </div>
             </StyledComponent>
-          </Styled(InsetText)>
+          </styled.div>
         </details>
       </HiddenText>
     </StyledComponent>

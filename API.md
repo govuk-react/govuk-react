@@ -779,34 +779,20 @@ InsetText
 
 ### Usage
 
-
-Simple
 ```jsx
-import Paragraph from '@govuk-react/paragraph';
-
 <InsetText>
- <Paragraph mb={0}>Hello</Paragraph>
-</InsetText>
-```
-
-Narrow border
-```jsx
-import Paragraph from '@govuk-react/paragraph';
-
-<InsetText isNarrow>
- <Paragraph mb={0}>Hello</Paragraph>
+ Hello
 </InsetText>
 ```
 
 ### References
-- https://govuk-elements.herokuapp.com/typography/#typography-inset-text
+- https://design-system.service.gov.uk/components/inset-text/
 - https://github.com/alphagov/govuk-frontend/blob/master/src/components/inset-text/_inset-text.scss
-- https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/public/sass/elements/_panels.scss
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `isNarrow` |  | ```false``` | bool | Renders a narrow border following GDS guides if set to true
+ `children` | true | `````` | node | 
 
 
 LabelText
@@ -1362,26 +1348,6 @@ Prop | Required | Default | Type | Description
  `supportingText` |  | ```false``` | bool | Is this paragraph supporting text for another element?
 
 
-PhaseBadge
-==========
-
-### Import
-```js
-  import PhaseBadge from '@govuk-react/phase-badge';
-```
-<!-- STORY -->
-
-### Usage
-
-Simple
-```jsx
-<PhaseBadge>beta</PhaseBadge>
-```
-
-### References:
-- https://govuk-elements.herokuapp.com/alpha-beta-banners/
-
-
 PhaseBanner
 ===========
 
@@ -1410,7 +1376,8 @@ Beta
 ```
 
 ### References:
-- https://govuk-elements.herokuapp.com/alpha-beta-banners/
+- https://github.com/alphagov/govuk-frontend/tree/master/src/components/phase-banner
+- https://design-system.service.gov.uk/components/phase-banner/
 
 ### Properties
 Prop | Required | Default | Type | Description
@@ -1818,6 +1785,32 @@ Prop | Required | Default | Type | Description
  `body` | true | `````` | node | Table body rows and cells
  `caption` |  | ```undefined``` | string | Table caption title
  `head` |  | ```undefined``` | node | Table header rows and cells
+
+
+Tag
+===
+
+### Import
+```js
+  import Tag from '@govuk-react/tag';
+```
+<!-- STORY -->
+
+### Usage
+
+Simple
+```jsx
+<Tag>beta</Tag>
+```
+
+### References:
+- https://design-system.service.gov.uk/components/tag/
+- https://github.com/alphagov/govuk-frontend/blob/master/src/components/tag/_tag.scss
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `inactive` |  | ```false``` | bool | 
 
 
 TextArea
