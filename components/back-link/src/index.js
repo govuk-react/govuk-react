@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { BLACK } from 'govuk-colours';
 import { withWhiteSpace } from '@govuk-react/hoc';
 import { SPACING_POINTS } from '@govuk-react/constants';
-import { link, typography } from '@govuk-react/lib';
+import { link, shape, typography } from '@govuk-react/lib';
 
 const Anchor = styled('a')(
   typography.font({ size: 16 }),
@@ -20,16 +20,7 @@ const Anchor = styled('a')(
     borderBottom: `1px solid ${BLACK}`,
     textDecoration: 'none',
     '::before': {
-      // TODO use an equivalent of govuk-shape-arrow here
-      // @include govuk-shape-arrow($direction: left, $base: 10px, $height: 6px);
-      display: 'block',
-      width: 0,
-      height: 0,
-      borderStyle: 'solid',
-      borderColor: 'transparent',
-      clipPath: 'polygon(0% 50%, 100% 100%, 100% 0%)',
-      borderWidth: '5px 6px 5px 0',
-      borderRightColor: `${BLACK}`,
+      ...shape.arrow({ direction: 'left', base: 10, height: 6 }),
 
       content: "''",
       position: 'absolute',

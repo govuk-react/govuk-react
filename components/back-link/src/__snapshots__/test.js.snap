@@ -44,7 +44,7 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
   -webkit-clip-path: polygon(0% 50%,100% 100%,100% 0%);
   clip-path: polygon(0% 50%,100% 100%,100% 0%);
   border-width: 5px 6px 5px 0;
-  border-right-color: #0b0c0c;
+  border-right-color: inherit;
   content: '';
   position: absolute;
   top: -1px;
@@ -154,7 +154,7 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
 }
 }",
                   "display: inline-block; position: relative; margin-top: 15px; margin-bottom: 15px; padding-left: 14px; border-bottom: 1px solid #0b0c0c; text-decoration: none; ::before {
-  display: block; width: 0; height: 0; border-style: solid; border-color: transparent; clip-path: polygon(0% 50%, 100% 100%, 100% 0%); border-width: 5px 6px 5px 0; border-right-color: #0b0c0c; content: ''; position: absolute; top: -1px; bottom: 1px; left: 0; margin: auto;
+  display: block; width: 0; height: 0; border-style: solid; border-color: transparent; clip-path: polygon(0% 50%, 100% 100%, 100% 0%); border-width: 5px 6px 5px 0; border-right-color: inherit; content: ''; position: absolute; top: -1px; bottom: 1px; left: 0; margin: auto;
 }",
                 ],
               },
