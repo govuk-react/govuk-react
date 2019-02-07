@@ -1,9 +1,8 @@
 {
-  "name": "@govuk-react/phase-badge",
+  "name": "@govuk-react/tag",
   "version": "0.6.0-alpha.0",
   "dependencies": {
-    "@govuk-react/constants": "^0.6.0-alpha.0",
-    "@govuk-react/hoc": "^0.6.0-alpha.0",
+    "@govuk-react/lib": "^0.6.0-alpha.0",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
@@ -20,7 +19,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/phase-badge",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/tag",
   "description": "Badge with solid background and bold text, rendered from children.",
   "private": false,
   "publishConfig": {

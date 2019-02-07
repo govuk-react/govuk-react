@@ -26,7 +26,8 @@ Beta
 ```
 
 ### References:
-- https://govuk-elements.herokuapp.com/alpha-beta-banners/
+- https://github.com/alphagov/govuk-frontend/tree/master/src/components/phase-banner
+- https://design-system.service.gov.uk/components/phase-banner/
 
 ### Properties
 Prop | Required | Default | Type | Description

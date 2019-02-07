@@ -1,19 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
-import PhaseBanner from './';
-
-const example = 'example';
-const wrapper = <PhaseBanner level="beta">{example}</PhaseBanner>;
+import PhaseBanner from '.';
 
 describe('PhaseBanner', () => {
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(wrapper, div);
-  });
-
   it('matches wrapper snapshot', () => {
-    expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
+    expect(mount(<PhaseBanner level="beta">example</PhaseBanner>)).toMatchSnapshot('wrapper mount');
   });
 });

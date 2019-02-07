@@ -29,7 +29,6 @@ export { default as Page } from '@govuk-react/page';
 export { default as Pagination } from '@govuk-react/pagination';
 export { default as Panel } from '@govuk-react/panel';
 export { default as Paragraph } from '@govuk-react/paragraph';
-export { default as PhaseBadge } from '@govuk-react/phase-badge';
 export { default as PhaseBanner } from '@govuk-react/phase-banner';
 export { default as Radio } from '@govuk-react/radio';
 export { default as SearchBox } from '@govuk-react/search-box';
@@ -42,6 +41,7 @@ export { default as DocumentFooterMetadata } from '@govuk-react/document-footer-
 export { default as LoadingBox } from '@govuk-react/loading-box';
 export { default as TopNav } from '@govuk-react/top-nav';
 export { default as Table } from '@govuk-react/table';
+export { default as Tag } from '@govuk-react/tag';
 export { default as LeadParagraph } from '@govuk-react/lead-paragraph';
 export { default as WarningText } from '@govuk-react/warning-text';
 export { default as SupportingHeader } from '@govuk-react/supporting-header';

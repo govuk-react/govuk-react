@@ -1,34 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { BLUE } from 'govuk-colours';
-import {
-  FONT_SIZE,
-  LINE_HEIGHT,
-  MEDIA_QUERIES,
-  NTA_LIGHT,
-} from '@govuk-react/constants';
-import { withWhiteSpace } from '@govuk-react/hoc';
+import { BORDER_COLOUR } from 'govuk-colours';
+import { SPACING_POINTS } from '@govuk-react/constants';
+import { spacing, typography } from '@govuk-react/lib';
+import Tag from '@govuk-react/tag';
 
-import PhaseBadge from '@govuk-react/phase-badge';
+const StyledBanner = styled('div')(
+  {
+    paddingTop: SPACING_POINTS[2],
+    paddingBottom: SPACING_POINTS[2],
 
-const StyledBanner = styled('div')({
-  borderBottom: '1px solid #bfc1c3',
-  boxSizing: 'border-box',
-  paddingTop: '10px',
-  paddingBottom: '10px',
-  fontFamily: NTA_LIGHT,
-  fontWeight: 400,
-  textTransform: 'none',
-  fontSize: FONT_SIZE.SIZE_14,
-  lineHeight: LINE_HEIGHT.SIZE_14,
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    fontSize: FONT_SIZE.SIZE_16,
-    lineHeight: LINE_HEIGHT.SIZE_16,
+    borderBottom: `1px solid ${BORDER_COLOUR}`,
   },
-  '> a': {
-    color: BLUE,
+  spacing.withWhiteSpace(),
+);
+
+const BannerContent = styled('p')(
+  typography.font({ size: 16 }),
+  typography.textColour,
+  {
+    display: 'table',
+    margin: 0,
+
+    [Tag]: {
+      marginRight: SPACING_POINTS[2],
+    },
   },
+);
+
+const BannerText = styled('span')({
+  display: 'table-cell',
+  verticalAlign: 'baseline',
 });
 
 /**
@@ -52,13 +55,16 @@ const StyledBanner = styled('div')({
  * ```
  *
  * ### References:
- * - https://govuk-elements.herokuapp.com/alpha-beta-banners/
+ * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/phase-banner
+ * - https://design-system.service.gov.uk/components/phase-banner/
  *
  */
 const PhaseBanner = ({ level, children, ...props }) => (
   <StyledBanner {...props}>
-    <PhaseBadge>{level}</PhaseBadge>
-    {children}
+    <BannerContent>
+      <Tag>{level}</Tag>
+      <BannerText>{children}</BannerText>
+    </BannerContent>
   </StyledBanner>
 );
 
@@ -69,4 +75,4 @@ PhaseBanner.propTypes = {
   level: PropTypes.string.isRequired,
 };
 
-export default withWhiteSpace({ marginBottom: 0 })(PhaseBanner);
+export default PhaseBanner;
