@@ -108,7 +108,7 @@ const StyledTable = styled('table')({
  * ```
  *
  * ### References:
- * - https://govuk-elements.herokuapp.com/alpha-beta-banners/
+ * - https://govuk-elements.herokuapp.com/data/
  *
  */
 const Table = ({
