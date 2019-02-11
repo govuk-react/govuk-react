@@ -2,7 +2,7 @@
 
 ## Running the project locally
 
-[govuk-react](https://github.com/penx/govuk-react) is a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md) using [yarn workspaces](https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/) and [lerna](https://github.com/lerna/lerna).
+[govuk-react](https://github.com/govuk-react/govuk-react) is a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md) using [yarn workspaces](https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/) and [lerna](https://github.com/lerna/lerna).
 
 This is so that components can be published independently and applications can require different versions of a component if a breaking change is introduced in a version of a specific component. We are loosely following the [structure that Jest uses](https://github.com/facebook/jest).
 
@@ -56,7 +56,7 @@ In order to prepare a release:
 - this will open a PR on GitHub and draft a release
 - Edit the PR and write the release notes in the PR description
 - get approval for the PR (reviewers should be reviewing the release notes in the PR description) then merge the PR
-- once the PR is merged, open the [draft release corresponding to the new version number on GitHub](https://github.com/penx/govuk-react/releases), change the target branch to master, check the title and description and then click `Publish release`.
+- once the PR is merged, open the [draft release corresponding to the new version number on GitHub](https://github.com/govuk-react/govuk-react/releases), change the target branch to master, check the title and description and then click `Publish release`.
 
 When the tag is created, the CI server will automatically release to npm using lerna exec, see:
 

@@ -1780,7 +1780,7 @@ const example2Body = (
 ```
 
 ### References:
-- https://govuk-elements.herokuapp.com/alpha-beta-banners/
+- https://govuk-elements.herokuapp.com/data/
 
 ### Properties
 Prop | Required | Default | Type | Description

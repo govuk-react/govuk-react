@@ -133,14 +133,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/penx/govuk-react.git"
+    "url": "git+https://github.com/govuk-react/govuk-react.git"
   },
   "author": "Alasdair McLeay",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/penx/govuk-react/issues"
+    "url": "https://github.com/govuk-react/govuk-react/issues"
   },
-  "homepage": "https://github.com/penx/govuk-react#readme",
+  "homepage": "https://github.com/govuk-react/govuk-react#readme",
   "bundlesize": [
     {
       "path": "./dist/index.js",
