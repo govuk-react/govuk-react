@@ -65,7 +65,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-EHOje",
+          "componentId": "sc-bZQynM",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -80,7 +80,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
           "padding": [Function],
         },
         "render": [Function],
-        "styledComponentId": "sc-EHOje",
+        "styledComponentId": "sc-bZQynM",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -137,7 +137,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-ifAKCX",
+                "componentId": "sc-EHOje",
                 "isStatic": false,
                 "lastClassName": "c1",
                 "rules": Array [
@@ -183,7 +183,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
                 "thematicBreak": "hr",
                 "virtualHtml": [Function],
               },
-              "styledComponentId": "sc-ifAKCX",
+              "styledComponentId": "sc-EHOje",
               "target": [Function],
               "toString": [Function],
               "types": Array [

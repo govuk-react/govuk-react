@@ -115,7 +115,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bZQynM",
+            "componentId": "sc-gzVnrw",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -140,7 +140,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
           "foldedComponentIds": Array [],
           "propTypes": undefined,
           "render": [Function],
-          "styledComponentId": "sc-bZQynM",
+          "styledComponentId": "sc-gzVnrw",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -161,7 +161,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-EHOje",
+                  "componentId": "sc-bZQynM",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -176,7 +176,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                   "padding": [Function],
                 },
                 "render": [Function],
-                "styledComponentId": "sc-EHOje",
+                "styledComponentId": "sc-bZQynM",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -235,7 +235,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-ifAKCX",
+                        "componentId": "sc-EHOje",
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -281,7 +281,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                         "thematicBreak": "hr",
                         "virtualHtml": [Function],
                       },
-                      "styledComponentId": "sc-ifAKCX",
+                      "styledComponentId": "sc-EHOje",
                       "target": [Function],
                       "toString": [Function],
                       "types": Array [
@@ -441,7 +441,7 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bZQynM",
+              "componentId": "sc-gzVnrw",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
@@ -466,7 +466,7 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
             "foldedComponentIds": Array [],
             "propTypes": undefined,
             "render": [Function],
-            "styledComponentId": "sc-bZQynM",
+            "styledComponentId": "sc-gzVnrw",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],

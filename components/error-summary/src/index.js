@@ -7,6 +7,7 @@ import { TEXT_COLOUR, ERROR_COLOUR, FOCUS_COLOUR } from 'govuk-colours';
 import Header from '@govuk-react/header';
 import Paragraph from '@govuk-react/paragraph';
 import UnorderedList from '@govuk-react/unordered-list';
+import Link from '@govuk-react/link';
 import ListItem from '@govuk-react/list-item';
 
 import {
@@ -21,11 +22,9 @@ import {
   RESPONSIVE_4,
 } from '@govuk-react/constants';
 
-import { asAnchor, withWhiteSpace } from '@govuk-react/hoc';
+import { withWhiteSpace } from '@govuk-react/hoc';
 
-const AnchorTag = asAnchor('a');
-
-const StyledErrorText = styled(AnchorTag)({
+const StyledErrorText = styled(Link)({
   fontFamily: NTA_LIGHT,
   WebkitFontSmoothing: 'antialiased',
   MozOsxFontSmoothing: 'grayscale',

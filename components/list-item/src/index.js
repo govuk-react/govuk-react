@@ -22,12 +22,12 @@ const ListItem = styled('li')(
  * <ListItem>List item example</ListItem>
  * ```
  *
- * With anchor
+ * With a link
  * ```jsx
- * import { asAnchor } from '@govuk-react/hoc';
+ * import { Link } from '@govuk-react/link';
  *
  * <ListItem>
- *   <AnchorTag href="https://www.google.com/">{text('Children', 'List item example')}</AnchorTag>
+ *   <Link href="https://www.google.com/">List item example</Link>
  * </ListItem>
  * ```
  *

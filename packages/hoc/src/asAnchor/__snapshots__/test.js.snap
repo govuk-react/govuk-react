@@ -1,37 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`asAnchor matches wrapper snapshot: wrapper mount 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "sc-bdVaJa",
-        "isStatic": true,
-        "lastClassName": "jmKSeD",
-        "rules": Array [
-          "color: #005ea5; padding: 3px; margin: -3px; outline-color: transparent; display: inline-block; text-decoration: underline; :focus {
-  background-color: #ffbf47; outline: 3px solid #ffbf47;
-} :visited {
-  color: #2e358b;
-}",
-        ],
-      },
-      "displayName": "Styled(Anchor)",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "sc-bdVaJa",
-      "target": [Function],
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-      Symbol(Symbol.hasInstance): [Function],
-    }
-  }
-  forwardedRef={null}
+<styled.a
+  as="a"
   href="https://example.com"
+  muted={false}
+  noVisitedState={false}
+  textColour={false}
 >
   Example
-</StyledComponent>
+</styled.a>
 `;

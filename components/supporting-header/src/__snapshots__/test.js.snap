@@ -33,7 +33,7 @@ exports[`SupportingHeader matches wrapper snapshot 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-ifAKCX",
+          "componentId": "sc-EHOje",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -48,7 +48,7 @@ exports[`SupportingHeader matches wrapper snapshot 1`] = `
           "padding": [Function],
         },
         "render": [Function],
-        "styledComponentId": "sc-ifAKCX",
+        "styledComponentId": "sc-EHOje",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -71,7 +71,7 @@ exports[`SupportingHeader matches wrapper snapshot 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bxivhb",
+                "componentId": "sc-ifAKCX",
                 "isStatic": true,
                 "lastClassName": "c1",
                 "rules": Array [
@@ -83,7 +83,7 @@ exports[`SupportingHeader matches wrapper snapshot 1`] = `
               "displayName": "styled.span",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-bxivhb",
+              "styledComponentId": "sc-ifAKCX",
               "target": "span",
               "toString": [Function],
               "warnTooManyClasses": [Function],

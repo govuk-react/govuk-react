@@ -3,25 +3,23 @@ import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import Header from '@govuk-react/header';
 import UnorderedList from '@govuk-react/unordered-list';
+import Link from '@govuk-react/link';
 import ListItem from '@govuk-react/list-item';
-import asAnchor from '@govuk-react/hoc/lib/asAnchor';
 
 import RelatedItems from './';
-
-const AnchorTag = asAnchor('a');
 
 const wrapper = (
   <RelatedItems>
     <Header level={3}>Travel abroad</Header>
     <UnorderedList listStyleType="none">
       <ListItem>
-        <AnchorTag href="https://example.com">Link A</AnchorTag>
+        <Link href="https://example.com">Link A</Link>
       </ListItem>
       <ListItem>
-        <AnchorTag href="https://example.com">Link B</AnchorTag>
+        <Link href="https://example.com">Link B</Link>
       </ListItem>
       <ListItem>
-        <AnchorTag href="https://example.com"><strong>more</strong></AnchorTag>
+        <Link href="https://example.com"><strong>more</strong></Link>
       </ListItem>
     </UnorderedList>
   </RelatedItems>

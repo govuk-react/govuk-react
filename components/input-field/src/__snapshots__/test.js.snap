@@ -127,7 +127,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-ifAKCX",
+            "componentId": "sc-EHOje",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -142,7 +142,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
             "padding": [Function],
           },
           "render": [Function],
-          "styledComponentId": "sc-ifAKCX",
+          "styledComponentId": "sc-EHOje",
           "target": [Function],
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -165,7 +165,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bxivhb",
+                  "componentId": "sc-ifAKCX",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -178,7 +178,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                 "displayName": "styled.label",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bxivhb",
+                "styledComponentId": "sc-ifAKCX",
                 "target": "label",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -197,7 +197,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-bZQynM",
+                        "componentId": "sc-gzVnrw",
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -212,7 +212,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                         "padding": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-bZQynM",
+                      "styledComponentId": "sc-gzVnrw",
                       "target": [Function],
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -235,7 +235,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-EHOje",
+                              "componentId": "sc-bZQynM",
                               "isStatic": false,
                               "lastClassName": "c3",
                               "rules": Array [
@@ -248,7 +248,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                             "displayName": "styled.span",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-EHOje",
+                            "styledComponentId": "sc-bZQynM",
                             "target": "span",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -274,7 +274,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-gqjmRU",
+                        "componentId": "sc-VigVT",
                         "isStatic": false,
                         "lastClassName": "c4",
                         "rules": Array [
@@ -289,7 +289,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                         "padding": [Function],
                       },
                       "render": [Function],
-                      "styledComponentId": "sc-gqjmRU",
+                      "styledComponentId": "sc-VigVT",
                       "target": [Function],
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -314,7 +314,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "sc-gqjmRU",
                               "isStatic": false,
                               "lastClassName": "c5",
                               "rules": Array [
@@ -337,7 +337,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                             "displayName": "styled.input",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "sc-gqjmRU",
                             "target": "input",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],

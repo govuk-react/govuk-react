@@ -63,6 +63,7 @@ const BreadcrumbListItem = styled('li')({
   },
 
   // Additions to help ensure links get coloured as we expect
+  // NB specificity of this should override default in Link component
   '> a': {
     color: `${BLACK}`,
     textDecoration: 'underline',
@@ -76,33 +77,28 @@ const BreadcrumbListItem = styled('li')({
  *
  * Simple
  * ```jsx
+ * import Link from '@govuk-react/link';
+ *
  * <Breadcrumb>
- *   <a href="/section">Section</a>
- *   <a href="/section/sub-section">Sub-section</a>
+ *   <Link href="/section">Section</Link>
+ *   <Link href="/section/sub-section">Sub-section</Link>
  *   Current page
  * </Breadcrumb>
  * ```
  *
- * Using `asAnchor` HOC with, or without React Router
+ * Using `Link` with, or without React Router
  * ```jsx
- * import { Link } from 'react-router-dom';
- * import { asAnchor } from '@govuk-react/hoc';
- *
- * const AnchorLink = asAnchor(Link);
- * const AnchorTag = asAnchor('a');
+ * import { Link as RouterLink } from 'react-router-dom';
+ * import { Link } from '@govuk-react/link';
  *
  * <Breadcrumb>
- *   <AnchorLink to="/section">Section</AnchorLink>
- *   <AnchorTag href="/section">Sub-section</AnchorTag>
+ *   <Link as={RouterLink} to="/section">Section</Link>
+ *   <Link href="/section">Sub-section</Link>
  * </Breadcrumb>
  * ```
  *
  * ### References:
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/breadcrumb/_breadcrumb.scss
- *
- * ### TODO:
- * - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
- * - Consider nested anchors, create an Atom for Breadcrumb links?
  *
  */
 const Breadcrumb = ({ children, ...props }) => (

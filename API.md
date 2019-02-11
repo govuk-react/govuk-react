@@ -47,33 +47,28 @@ Breadcrumb
 
 Simple
 ```jsx
+import Link from '@govuk-react/link';
+
 <Breadcrumb>
-  <a href="/section">Section</a>
-  <a href="/section/sub-section">Sub-section</a>
+  <Link href="/section">Section</Link>
+  <Link href="/section/sub-section">Sub-section</Link>
   Current page
 </Breadcrumb>
 ```
 
-Using `asAnchor` HOC with, or without React Router
+Using `Link` with, or without React Router
 ```jsx
-import { Link } from 'react-router-dom';
-import { asAnchor } from '@govuk-react/hoc';
-
-const AnchorLink = asAnchor(Link);
-const AnchorTag = asAnchor('a');
+import { Link as RouterLink } from 'react-router-dom';
+import { Link } from '@govuk-react/link';
 
 <Breadcrumb>
-  <AnchorLink to="/section">Section</AnchorLink>
-  <AnchorTag href="/section">Sub-section</AnchorTag>
+  <Link as={RouterLink} to="/section">Section</Link>
+  <Link href="/section">Sub-section</Link>
 </Breadcrumb>
 ```
 
 ### References:
 - https://github.com/alphagov/govuk-frontend/blob/master/src/components/breadcrumb/_breadcrumb.scss
-
-### TODO:
-- Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
-- Consider nested anchors, create an Atom for Breadcrumb links?
 
 ### Properties
 Prop | Required | Default | Type | Description
@@ -278,13 +273,12 @@ DocumentFooterMetadata
 
 Simple
 ```jsx
-import { asAnchor } from '@govuk-react/hoc';
+import { Link } from '@govuk-react/link';
 
-const AnchorTag = asAnchor('a');
 const fromData = [
-  <AnchorTag href="/government/organisations/ministry-of-defence">
+  <Link href="/government/organisations/ministry-of-defence">
     Ministry of Defence
-  </AnchorTag>,
+  </Link>,
 ];
 
 <DocumentFooterMetadata from={fromData} />
@@ -293,17 +287,16 @@ const fromData = [
 
 DFM From & part of example
 ```jsx
-import { asAnchor } from '@govuk-react/hoc';
+import { Link } from '@govuk-react/link';
 
-const AnchorTag = asAnchor('a');
 const fromData = [
-  <AnchorTag href="/government/organisations/ministry-of-defence">
+  <Link href="/government/organisations/ministry-of-defence">
     Ministry of Defence
-  </AnchorTag>,
+  </Link>,
 ];
 const partOfData = [
-  <AnchorTag href="/government/topics/energy">Energy</AnchorTag>,
-  <AnchorTag href="/government/topics/environment">Environment</AnchorTag>,
+  <Link href="/government/topics/energy">Energy</Link>,
+  <Link href="/government/topics/environment">Environment</Link>,
 ];
 
 <DocumentFooterMetadata from={fromData} partOf={partOfData} />
@@ -312,19 +305,18 @@ const partOfData = [
 
 DFM From & other data example
 ```jsx
-import { asAnchor } from '@govuk-react/hoc';
+import { Link } from '@govuk-react/link';
 
-const AnchorTag = asAnchor('a');
 const fromData = [
-  <AnchorTag href="/government/organisations/ministry-of-defence">
+  <Link href="/government/organisations/ministry-of-defence">
     Ministry of Defence
-  </AnchorTag>,
+  </Link>,
 ];
 const otherData = [
   {
     id: 0,
     title: 'Consultation type',
-    content: <AnchorTag href="/government/publications">Open</AnchorTag>,
+    content: <Link href="/government/publications">Open</Link>,
   },
   {
     id: 1,
@@ -975,12 +967,12 @@ Simple
 <ListItem>List item example</ListItem>
 ```
 
-With anchor
+With a link
 ```jsx
-import { asAnchor } from '@govuk-react/hoc';
+import { Link } from '@govuk-react/link';
 
 <ListItem>
-  <AnchorTag href="https://www.google.com/">{text('Children', 'List item example')}</AnchorTag>
+  <Link href="https://www.google.com/">List item example</Link>
 </ListItem>
 ```
 
@@ -1006,34 +998,22 @@ ListNavigation
 
 Simple
 ```jsx
+import Link from '@govuk-react/link';
+
 <ListNavigation>
-  <a href="/section-a">Section A</a>
-  <a href="/section-b">Section B</a>
+  <Link href="/section-a">Section A</Link>
+  <Link href="/section-b">Section B</Link>
 </ListNavigation>
 ```
 
-Current recommended approach using the `asAnchor` HOC for GDS styled links
+Using React Router with `Link` component for GDS styled links
 ```jsx
-import { asAnchor } from '@govuk-react/hoc';
-
-const AnchorTag = asAnchor('a');
-
-<ListNavigation listStyleType="square">
-  <AnchorTag href="https://example.com/link-a">Link A</AnchorTag>
-  <AnchorTag href="https://example.com/link-b">Link B</AnchorTag>
-</ListNavigation>
-```
-
-Using React Router and `asAnchor` HOC for GDS styled links
-```jsx
-import { Link } from 'react-router-dom';
-import { asAnchor } from '@govuk-react/hoc';
-
-const AnchorLink = asAnchor(Link);
+import { Link as RouterLink } from 'react-router-dom';
+import { Link } from '@govuk-react/link';
 
 <ListNavigation listStyleType="circle">
-  <AnchorLink to="/link-a">Link A</AnchorLink>
-  <AnchorLink to="/link-b">Link B</AnchorLink>
+  <Link as={RouterLink} to="/link-a">Link A</Link>
+  <Link as={RouterLink} to="/link-b">Link B</Link>
 </ListNavigation>
 ```
 
@@ -1042,7 +1022,6 @@ const AnchorLink = asAnchor(Link);
 
 ### TODO:
 - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
-- Consider nested anchors, should developers have to use the HOC to preserve link styling?
 - Fix active state overlaping siblings
 
 ### Properties
@@ -1531,16 +1510,14 @@ Simple
 ```jsx
 import Header from '@govuk-react/header';
 import UnorderedList from '@govuk-react/unordered-list';
+import Link from '@govuk-react/link';
 import ListItem from '@govuk-react/list-item';
-import { asAnchor } from '@govuk-react/hoc';
-
-const AnchorTag = asAnchor('a');
 
 <RelatedItems>
   <Header level={3}>Example header</Header>
   <UnorderedList listStyleType="none">
     <ListItem>
-      <AnchorTag href="https://example.com">Link A</AnchorTag>
+      <Link href="https://example.com">Link A</Link>
     </ListItem>
   </UnorderedList>
 </RelatedItems>

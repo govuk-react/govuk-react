@@ -141,7 +141,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-dnqmqq",
+          "componentId": "sc-iwsKbI",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -156,7 +156,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
           "padding": [Function],
         },
         "render": [Function],
-        "styledComponentId": "sc-dnqmqq",
+        "styledComponentId": "sc-iwsKbI",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -183,7 +183,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-EHOje",
+                "componentId": "sc-bZQynM",
                 "isStatic": false,
                 "lastClassName": "c1",
                 "rules": Array [
@@ -199,7 +199,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
               "displayName": "styled.label",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-EHOje",
+              "styledComponentId": "sc-bZQynM",
               "target": "label",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -221,7 +221,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bZQynM",
+                      "componentId": "sc-gzVnrw",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
@@ -236,7 +236,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
                     "displayName": "styled.input",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bZQynM",
+                    "styledComponentId": "sc-gzVnrw",
                     "target": "input",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -259,7 +259,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-gzVnrw",
+                      "componentId": "sc-htoDjs",
                       "isStatic": true,
                       "lastClassName": "c3",
                       "rules": Array [
@@ -273,7 +273,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
                     "displayName": "styled.span",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-gzVnrw",
+                    "styledComponentId": "sc-htoDjs",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -296,7 +296,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htoDjs",
+                      "componentId": "sc-dnqmqq",
                       "isStatic": false,
                       "lastClassName": "c4",
                       "rules": Array [
@@ -306,7 +306,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
                     },
                     "displayName": "Styled(Styled(HintText))",
                     "foldedComponentIds": Array [
-                      "sc-ifAKCX",
+                      "sc-EHOje",
                     ],
                     "propTypes": Object {
                       "margin": [Function],
@@ -314,7 +314,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
                       "padding": [Function],
                     },
                     "render": [Function],
-                    "styledComponentId": "sc-htoDjs",
+                    "styledComponentId": "sc-dnqmqq",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -337,7 +337,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-bxivhb",
+                            "componentId": "sc-ifAKCX",
                             "isStatic": true,
                             "lastClassName": "c5",
                             "rules": Array [
@@ -352,7 +352,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
                           "displayName": "styled.span",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-bxivhb",
+                          "styledComponentId": "sc-ifAKCX",
                           "target": "span",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -489,7 +489,7 @@ exports[`Radio disabled: disabled 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-dnqmqq",
+          "componentId": "sc-iwsKbI",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -504,7 +504,7 @@ exports[`Radio disabled: disabled 1`] = `
           "padding": [Function],
         },
         "render": [Function],
-        "styledComponentId": "sc-dnqmqq",
+        "styledComponentId": "sc-iwsKbI",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -530,7 +530,7 @@ exports[`Radio disabled: disabled 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-EHOje",
+                "componentId": "sc-bZQynM",
                 "isStatic": false,
                 "lastClassName": "c1",
                 "rules": Array [
@@ -546,7 +546,7 @@ exports[`Radio disabled: disabled 1`] = `
               "displayName": "styled.label",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-EHOje",
+              "styledComponentId": "sc-bZQynM",
               "target": "label",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -570,7 +570,7 @@ exports[`Radio disabled: disabled 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bZQynM",
+                      "componentId": "sc-gzVnrw",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
@@ -585,7 +585,7 @@ exports[`Radio disabled: disabled 1`] = `
                     "displayName": "styled.input",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bZQynM",
+                    "styledComponentId": "sc-gzVnrw",
                     "target": "input",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -609,7 +609,7 @@ exports[`Radio disabled: disabled 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-gzVnrw",
+                      "componentId": "sc-htoDjs",
                       "isStatic": true,
                       "lastClassName": "c3",
                       "rules": Array [
@@ -623,7 +623,7 @@ exports[`Radio disabled: disabled 1`] = `
                     "displayName": "styled.span",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-gzVnrw",
+                    "styledComponentId": "sc-htoDjs",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -765,7 +765,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-dnqmqq",
+          "componentId": "sc-iwsKbI",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -780,7 +780,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
           "padding": [Function],
         },
         "render": [Function],
-        "styledComponentId": "sc-dnqmqq",
+        "styledComponentId": "sc-iwsKbI",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -808,7 +808,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-EHOje",
+                "componentId": "sc-bZQynM",
                 "isStatic": false,
                 "lastClassName": "c1",
                 "rules": Array [
@@ -824,7 +824,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
               "displayName": "styled.label",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-EHOje",
+              "styledComponentId": "sc-bZQynM",
               "target": "label",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -847,7 +847,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bZQynM",
+                      "componentId": "sc-gzVnrw",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
@@ -862,7 +862,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
                     "displayName": "styled.input",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bZQynM",
+                    "styledComponentId": "sc-gzVnrw",
                     "target": "input",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -887,7 +887,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-gzVnrw",
+                      "componentId": "sc-htoDjs",
                       "isStatic": true,
                       "lastClassName": "c3",
                       "rules": Array [
@@ -901,7 +901,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
                     "displayName": "styled.span",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-gzVnrw",
+                    "styledComponentId": "sc-htoDjs",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -1034,7 +1034,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-dnqmqq",
+          "componentId": "sc-iwsKbI",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -1049,7 +1049,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
           "padding": [Function],
         },
         "render": [Function],
-        "styledComponentId": "sc-dnqmqq",
+        "styledComponentId": "sc-iwsKbI",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -1076,7 +1076,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-EHOje",
+                "componentId": "sc-bZQynM",
                 "isStatic": false,
                 "lastClassName": "c1",
                 "rules": Array [
@@ -1092,7 +1092,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
               "displayName": "styled.label",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-EHOje",
+              "styledComponentId": "sc-bZQynM",
               "target": "label",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -1115,7 +1115,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bZQynM",
+                      "componentId": "sc-gzVnrw",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
@@ -1130,7 +1130,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
                     "displayName": "styled.input",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bZQynM",
+                    "styledComponentId": "sc-gzVnrw",
                     "target": "input",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -1155,7 +1155,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-gzVnrw",
+                      "componentId": "sc-htoDjs",
                       "isStatic": true,
                       "lastClassName": "c3",
                       "rules": Array [
@@ -1169,7 +1169,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
                     "displayName": "styled.span",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-gzVnrw",
+                    "styledComponentId": "sc-htoDjs",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
