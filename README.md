@@ -1,6 +1,6 @@
 # govuk-react
 
-An implementation of the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital) in [React](https://reactjs.org) using [CSSinJS](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660) using Object notation (with [Emotion](https://emotion.sh/docs/object-styles)).
+An implementation of the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital) in [React](https://reactjs.org) using [CSSinJS](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660) using Object notation (with [styled-components](https://www.styled-components.com/docs/advanced#style-objects)).
 
 [![Build Status](https://travis-ci.org/govuk-react/govuk-react.svg?branch=master)](https://travis-ci.org/govuk-react/govuk-react)
 [![codecov](https://codecov.io/gh/govuk-react/govuk-react/branch/master/graph/badge.svg)](https://codecov.io/gh/govuk-react/govuk-react)
@@ -17,7 +17,7 @@ We aim to track the following projects (in priority order) as to which component
 ## Usage
 
 ```sh
-npm install govuk-react emotion@9 react-emotion@9 --save
+npm install govuk-react styled-components --save
 ```
 
 ```js
@@ -68,11 +68,7 @@ See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-
 
 This project is part of a larger initiative to componetise large scale React applications. Using CSSinJS allows us to include styles inside a module bundle that can be published (using `npm publish`) and consumed by a peer application, without putting dependencies on the peer application to implement a specific CSS build system.
 
-# Why Emotion?
-
-We opted for [Emotion](https://emotion.sh/) over styled-components as we like the [support for JS syntax](https://emotion.sh/docs/object-styles). This has since been added to styled-components. We would not be against moving to styled-components in the future if there was a clear advantage, but at the moment both libraries have great features and communities.
-
-We are also expecting to use [Interoperable Style Transfer Format (ISTF)](https://github.com/cssinjs/istf-spec) once it is finalised and compatible with a CSSinJS library, which would allow us to distribute CSSinJS stylesheets without a runtime.
+We are expecting to use [Interoperable Style Transfer Format (ISTF)](https://github.com/cssinjs/istf-spec) once it is finalised and compatible with a CSSinJS library, which would allow us to distribute CSSinJS stylesheets without a runtime.
 
 ## Why not use GDS styles/classes directly
 
