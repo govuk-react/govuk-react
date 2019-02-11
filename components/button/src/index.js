@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { withWhiteSpace } from '@govuk-react/hoc';
 import {
   BORDER_WIDTH_FORM_ELEMENT,
   FOCUSABLE,
   MEDIA_QUERIES,
   SPACING_POINTS,
 } from '@govuk-react/constants';
-import { typography } from '@govuk-react/lib';
+import { spacing, typography } from '@govuk-react/lib';
 import {
   BUTTON_COLOUR,
   BUTTON_COLOUR_DARKEN_15,
@@ -134,6 +133,8 @@ const StyledButton = styled('button')(
 
     return undefined;
   },
+
+  spacing.withWhiteSpace({ margin: { direction: 'bottom', size: 6, adjustment: RAW_SHADOW } }),
 );
 
 const ButtonContents = styled('span')({
@@ -182,7 +183,7 @@ Button.propTypes = {
   /**
    * Button text
    */
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   /**
    * Button icon
    */
@@ -217,7 +218,6 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  children: 'Button',
   icon: undefined,
   disabled: false,
   start: false,
@@ -227,4 +227,4 @@ Button.defaultProps = {
   buttonTextColour: undefined,
 };
 
-export default withWhiteSpace({ marginBottom: 6, adjustment: BUTTON_SHADOW_SIZE })(Button);
+export default Button;
