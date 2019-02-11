@@ -121,7 +121,7 @@ Prop | Required | Default | Type | Description
  `buttonHoverColour` |  | ```undefined``` | string | Override for default button hover colour,<br/>which defaults to `buttonColour` darkened by 5%
  `buttonShadowColour` |  | ```undefined``` | string | Override for default button shadow colour,<br/>which defaults to `buttonColour` darkened by 15%
  `buttonTextColour` |  | ```undefined``` | string | Override for default button text colour,<br/>which defaults to govuk white
- `children` |  | ```'Button'``` | node | Button text
+ `children` | true | `````` | node | Button text
  `disabled` |  | ```false``` | bool | Renders a disabled button and removes pointer events if set to true
  `icon` |  | ```undefined``` | node | Button icon
  `start` |  | ```false``` | bool | Renders a large button if set to true
@@ -1780,7 +1780,7 @@ const example2Body = (
 ```
 
 ### References:
-- https://govuk-elements.herokuapp.com/alpha-beta-banners/
+- https://govuk-elements.herokuapp.com/data/
 
 ### Properties
 Prop | Required | Default | Type | Description

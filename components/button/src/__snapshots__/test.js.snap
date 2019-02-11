@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`button basics matches snapshot 1`] = `
-.c1 {
+.c0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,38 +23,39 @@ exports[`button basics matches snapshot 1`] = `
   vertical-align: top;
   cursor: pointer;
   -webkit-appearance: none;
+  margin-bottom: 22px;
 }
 
-.c1:focus {
+.c0:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.c1:link,
-.c1:visited,
-.c1:active,
-.c1:hover {
+.c0:link,
+.c0:visited,
+.c0:active,
+.c0:hover {
   color: #ffffff;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c1::-moz-focus-inner {
+.c0::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
-.c1:hover,
-.c1:focus {
+.c0:hover,
+.c0:focus {
   background-color: #00692f;
 }
 
-.c1:active {
+.c0:active {
   top: 2px;
   box-shadow: none;
 }
 
-.c1::before {
+.c0::before {
   content: "";
   display: block;
   position: absolute;
@@ -65,383 +66,301 @@ exports[`button basics matches snapshot 1`] = `
   background: transparent;
 }
 
-.c1:active::before {
+.c0:active::before {
   top: -4px;
 }
 
-.c1:disabled {
+.c0:disabled {
   opacity: 0.5;
   background: #00823b;
 }
 
-.c1:disabled:hover {
+.c0:disabled:hover {
   background-color: #00823b;
   cursor: default;
 }
 
-.c1:disabled:focus {
+.c0:disabled:focus {
   outline: none;
 }
 
-.c1:disabled:active {
+.c0:disabled:active {
   top: 0;
   box-shadow: 0 2px 0 #003618;
 }
 
-.c1 svg {
+.c0 svg {
   max-width: 15px;
 }
 
-.c0 {
-  margin-bottom: 20px;
-}
-
 @media print {
-  .c1 {
+  .c0 {
     font-size: 14px;
     line-height: 19px;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c1 {
+  .c0 {
     font-size: 19px;
     line-height: 19px;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c1 {
+  .c0 {
     width: auto;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c1 svg {
+  .c0 svg {
     margin-left: 10px;
   }
 }
 
 @media only screen and (min-width:641px) {
   .c0 {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 }
 
-<Styled(Button)>
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-EHOje",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            [Function],
-          ],
-        },
-        "displayName": "Styled(Button)",
-        "foldedComponentIds": Array [],
-        "propTypes": Object {
-          "margin": [Function],
-          "mb": [Function],
-          "padding": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "sc-EHOje",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      }
-    }
-    forwardedRef={null}
-  >
-    <Button
-      className="c0"
-      disabled={false}
-      start={false}
-    >
-      <styled.button
-        className="c0"
-        disabled={false}
-        isStart={false}
-      >
-        <StyledComponent
-          className="c0"
-          disabled={false}
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-bxivhb",
-                "isStatic": false,
-                "lastClassName": "c1",
-                "rules": Array [
-                  [Function],
-                  "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
-}",
-                  [Function],
-                  [Function],
-                ],
-              },
-              "displayName": "styled.button",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "sc-bxivhb",
-              "target": "button",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
-          isStart={false}
-        >
-          <button
-            className="c0 c1"
-            disabled={false}
-          >
-            Example
-          </button>
-        </StyledComponent>
-      </styled.button>
-    </Button>
-  </StyledComponent>
-</Styled(Button)>
-`;
-
-exports[`button blue button, with automatic colours matches snapshot 1`] = `
-.c1 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  box-sizing: border-box;
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  margin-top: 0;
-  padding: 7px 10px;
-  border: 2px solid transparent;
-  border-radius: 0;
-  color: #ffffff;
-  background-color: #005ea5;
-  box-shadow: 0 2px 0 #003259;
-  text-align: center;
-  vertical-align: top;
-  cursor: pointer;
-  -webkit-appearance: none;
-}
-
-.c1:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-}
-
-.c1:link,
-.c1:visited,
-.c1:active,
-.c1:hover {
-  color: #ffffff;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c1::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-
-.c1:hover,
-.c1:focus {
-  background-color: #004f8c;
-}
-
-.c1:active {
-  top: 2px;
-  box-shadow: none;
-}
-
-.c1::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -2px;
-  right: -2px;
-  bottom: -4px;
-  left: -2px;
-  background: transparent;
-}
-
-.c1:active::before {
-  top: -4px;
-}
-
-.c1:disabled {
-  opacity: 0.5;
-  background: #005ea5;
-}
-
-.c1:disabled:hover {
-  background-color: #005ea5;
-  cursor: default;
-}
-
-.c1:disabled:focus {
-  outline: none;
-}
-
-.c1:disabled:active {
-  top: 0;
-  box-shadow: 0 2px 0 #003259;
-}
-
-.c1 svg {
-  max-width: 15px;
-}
-
-.c0 {
-  margin-bottom: 20px;
-}
-
-@media print {
-  .c1 {
-    font-size: 14px;
-    line-height: 19px;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c1 {
-    font-size: 19px;
-    line-height: 19px;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c1 {
-    width: auto;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c1 svg {
-    margin-left: 10px;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c0 {
-    margin-bottom: 30px;
-  }
-}
-
-<ButtonBlue>
-  <Styled(Button)
-    buttonColour="#005ea5"
+<Button
+  disabled={false}
+  start={false}
+>
+  <styled.button
+    disabled={false}
+    isStart={false}
   >
     <StyledComponent
-      buttonColour="#005ea5"
+      disabled={false}
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-EHOje",
+            "componentId": "sc-bdVaJa",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               [Function],
+              "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0;
+}",
+              [Function],
+              [Function],
+              [Function],
             ],
           },
-          "displayName": "Styled(Button)",
+          "displayName": "styled.button",
           "foldedComponentIds": Array [],
-          "propTypes": Object {
-            "margin": [Function],
-            "mb": [Function],
-            "padding": [Function],
-          },
           "render": [Function],
-          "styledComponentId": "sc-EHOje",
-          "target": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "button",
           "toString": [Function],
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
-          Symbol(Symbol.hasInstance): [Function],
         }
       }
       forwardedRef={null}
+      isStart={false}
     >
-      <Button
-        buttonColour="#005ea5"
+      <button
         className="c0"
         disabled={false}
-        start={false}
       >
-        <styled.button
-          buttonColour="#005ea5"
-          className="c0"
-          disabled={false}
-          isStart={false}
-        >
-          <StyledComponent
-            buttonColour="#005ea5"
-            className="c0"
-            disabled={false}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-bxivhb",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    [Function],
-                    "&:focus {
+        Example
+      </button>
+    </StyledComponent>
+  </styled.button>
+</Button>
+`;
+
+exports[`button blue button, with automatic colours matches snapshot 1`] = `
+.c0 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+  padding: 7px 10px;
+  border: 2px solid transparent;
+  border-radius: 0;
+  color: #ffffff;
+  background-color: #005ea5;
+  box-shadow: 0 2px 0 #003259;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-bottom: 22px;
+}
+
+.c0:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+.c0:link,
+.c0:visited,
+.c0:active,
+.c0:hover {
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.c0:hover,
+.c0:focus {
+  background-color: #004f8c;
+}
+
+.c0:active {
+  top: 2px;
+  box-shadow: none;
+}
+
+.c0::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -4px;
+  left: -2px;
+  background: transparent;
+}
+
+.c0:active::before {
+  top: -4px;
+}
+
+.c0:disabled {
+  opacity: 0.5;
+  background: #005ea5;
+}
+
+.c0:disabled:hover {
+  background-color: #005ea5;
+  cursor: default;
+}
+
+.c0:disabled:focus {
+  outline: none;
+}
+
+.c0:disabled:active {
+  top: 0;
+  box-shadow: 0 2px 0 #003259;
+}
+
+.c0 svg {
+  max-width: 15px;
+}
+
+@media print {
+  .c0 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    font-size: 19px;
+    line-height: 19px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    width: auto;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 svg {
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-bottom: 32px;
+  }
+}
+
+<ButtonBlue>
+  <Button
+    buttonColour="#005ea5"
+    disabled={false}
+    start={false}
+  >
+    <styled.button
+      buttonColour="#005ea5"
+      disabled={false}
+      isStart={false}
+    >
+      <StyledComponent
+        buttonColour="#005ea5"
+        disabled={false}
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                [Function],
+                "&:focus {
   outline: 3px solid #ffbf47; outline-offset: 0;
 }",
-                    [Function],
-                    [Function],
-                  ],
-                },
-                "displayName": "styled.button",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-bxivhb",
-                "target": "button",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            isStart={false}
-          >
-            <button
-              className="c0 c1"
-              disabled={false}
-            >
-              Blue button
-            </button>
-          </StyledComponent>
-        </styled.button>
-      </Button>
-    </StyledComponent>
-  </Styled(Button)>
+                [Function],
+                [Function],
+                [Function],
+              ],
+            },
+            "displayName": "styled.button",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "button",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        isStart={false}
+      >
+        <button
+          className="c0"
+          disabled={false}
+        >
+          Blue button
+        </button>
+      </StyledComponent>
+    </styled.button>
+  </Button>
 </ButtonBlue>
 `;
 
 exports[`button button with icon matches snapshot 1`] = `
-.c1 {
+.c0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -475,38 +394,39 @@ exports[`button button with icon matches snapshot 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-bottom: 22px;
 }
 
-.c1:focus {
+.c0:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.c1:link,
-.c1:visited,
-.c1:active,
-.c1:hover {
+.c0:link,
+.c0:visited,
+.c0:active,
+.c0:hover {
   color: #ffffff;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c1::-moz-focus-inner {
+.c0::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
-.c1:hover,
-.c1:focus {
+.c0:hover,
+.c0:focus {
   background-color: #00692f;
 }
 
-.c1:active {
+.c0:active {
   top: 2px;
   box-shadow: none;
 }
 
-.c1::before {
+.c0::before {
   content: "";
   display: block;
   position: absolute;
@@ -517,78 +437,75 @@ exports[`button button with icon matches snapshot 1`] = `
   background: transparent;
 }
 
-.c1:active::before {
+.c0:active::before {
   top: -4px;
 }
 
-.c1:disabled {
+.c0:disabled {
   opacity: 0.5;
   background: #00823b;
 }
 
-.c1:disabled:hover {
+.c0:disabled:hover {
   background-color: #00823b;
   cursor: default;
 }
 
-.c1:disabled:focus {
+.c0:disabled:focus {
   outline: none;
 }
 
-.c1:disabled:active {
+.c0:disabled:active {
   top: 0;
   box-shadow: 0 2px 0 #003618;
 }
 
-.c1 svg {
+.c0 svg {
   max-width: 15px;
 }
 
-.c2 {
+.c1 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-.c0 {
-  margin-bottom: 20px;
-}
-
 @media print {
-  .c1 {
+  .c0 {
     font-size: 18px;
     line-height: 1;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c1 {
+  .c0 {
     font-size: 24px;
     line-height: 1;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c1 {
+  .c0 {
     width: auto;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c1 svg {
+  .c0 svg {
     margin-left: 10px;
   }
 }
 
 @media only screen and (min-width:641px) {
   .c0 {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 }
 
 <ButtonStartIcon>
-  <Styled(Button)
+  <Button
+    disabled={false}
     icon={
       <ButtonArrow
         fill="currentColor"
@@ -597,189 +514,137 @@ exports[`button button with icon matches snapshot 1`] = `
     }
     start={true}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-EHOje",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              [Function],
-            ],
-          },
-          "displayName": "Styled(Button)",
-          "foldedComponentIds": Array [],
-          "propTypes": Object {
-            "margin": [Function],
-            "mb": [Function],
-            "padding": [Function],
-          },
-          "render": [Function],
-          "styledComponentId": "sc-EHOje",
-          "target": [Function],
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-          Symbol(Symbol.hasInstance): [Function],
-        }
-      }
-      forwardedRef={null}
+    <styled.button
+      disabled={false}
       icon={
         <ButtonArrow
           fill="currentColor"
           title="ButtonArrow"
         />
       }
-      start={true}
+      isStart={true}
     >
-      <Button
-        className="c0"
+      <StyledComponent
         disabled={false}
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                [Function],
+                "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0;
+}",
+                [Function],
+                [Function],
+                [Function],
+              ],
+            },
+            "displayName": "styled.button",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "button",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
         icon={
           <ButtonArrow
             fill="currentColor"
             title="ButtonArrow"
           />
         }
-        start={true}
+        isStart={true}
       >
-        <styled.button
+        <button
           className="c0"
           disabled={false}
-          icon={
-            <ButtonArrow
+        >
+          <styled.span>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": true,
+                    "lastClassName": "c1",
+                    "rules": Array [
+                      "flex-grow: 1;",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <span
+                className="c1"
+              >
+                Start now
+              </span>
+            </StyledComponent>
+          </styled.span>
+          <ButtonArrow
+            fill="currentColor"
+            title="ButtonArrow"
+          >
+            <SVG
               fill="currentColor"
               title="ButtonArrow"
-            />
-          }
-          isStart={true}
-        >
-          <StyledComponent
-            className="c0"
-            disabled={false}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-bxivhb",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    [Function],
-                    "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
-}",
-                    [Function],
-                    [Function],
-                  ],
-                },
-                "displayName": "styled.button",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-bxivhb",
-                "target": "button",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            icon={
-              <ButtonArrow
-                fill="currentColor"
-                title="ButtonArrow"
-              />
-            }
-            isStart={true}
-          >
-            <button
-              className="c0 c1"
-              disabled={false}
+              viewBox="0 0 706 860"
             >
-              <styled.span>
-                <StyledComponent
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-ifAKCX",
-                        "isStatic": true,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "flex-grow: 1;",
-                        ],
-                      },
-                      "displayName": "styled.span",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-ifAKCX",
-                      "target": "span",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                >
-                  <span
-                    className="c2"
-                  >
-                    Start now
-                  </span>
-                </StyledComponent>
-              </styled.span>
-              <ButtonArrow
+              <svg
                 fill="currentColor"
-                title="ButtonArrow"
+                height="100%"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+                version="1.1"
+                viewBox="0 0 706 860"
+                width="100%"
               >
-                <SVG
-                  fill="currentColor"
-                  title="ButtonArrow"
-                  viewBox="0 0 706 860"
-                >
-                  <svg
-                    fill="currentColor"
-                    height="100%"
-                    style={
-                      Object {
-                        "display": "block",
-                      }
-                    }
-                    version="1.1"
-                    viewBox="0 0 706 860"
-                    width="100%"
-                  >
-                    <title>
-                      ButtonArrow
-                    </title>
-                    <g>
-                      <path
-                        d="M.152 0h252.993l452.108 430H452.261z"
-                      />
-                      <path
-                        d="M0 860h252.993L705.1 430H452.108z"
-                        fillOpacity="0.5"
-                      />
-                    </g>
-                  </svg>
-                </SVG>
-              </ButtonArrow>
-            </button>
-          </StyledComponent>
-        </styled.button>
-      </Button>
-    </StyledComponent>
-  </Styled(Button)>
+                <title>
+                  ButtonArrow
+                </title>
+                <g>
+                  <path
+                    d="M.152 0h252.993l452.108 430H452.261z"
+                  />
+                  <path
+                    d="M0 860h252.993L705.1 430H452.108z"
+                    fillOpacity="0.5"
+                  />
+                </g>
+              </svg>
+            </SVG>
+          </ButtonArrow>
+        </button>
+      </StyledComponent>
+    </styled.button>
+  </Button>
 </ButtonStartIcon>
 `;
 
 exports[`button custom colours matches snapshot 1`] = `
-.c1 {
+.c0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -801,38 +666,39 @@ exports[`button custom colours matches snapshot 1`] = `
   vertical-align: top;
   cursor: pointer;
   -webkit-appearance: none;
+  margin-bottom: 22px;
 }
 
-.c1:focus {
+.c0:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.c1:link,
-.c1:visited,
-.c1:active,
-.c1:hover {
+.c0:link,
+.c0:visited,
+.c0:active,
+.c0:hover {
   color: #0b0c0c;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c1::-moz-focus-inner {
+.c0::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
-.c1:hover,
-.c1:focus {
+.c0:hover,
+.c0:focus {
   background-color: #ffbf47;
 }
 
-.c1:active {
+.c0:active {
   top: 2px;
   box-shadow: none;
 }
 
-.c1::before {
+.c0::before {
   content: "";
   display: block;
   position: absolute;
@@ -843,182 +709,133 @@ exports[`button custom colours matches snapshot 1`] = `
   background: transparent;
 }
 
-.c1:active::before {
+.c0:active::before {
   top: -4px;
 }
 
-.c1:disabled {
+.c0:disabled {
   opacity: 0.5;
   background: #dee0e2;
 }
 
-.c1:disabled:hover {
+.c0:disabled:hover {
   background-color: #dee0e2;
   cursor: default;
 }
 
-.c1:disabled:focus {
+.c0:disabled:focus {
   outline: none;
 }
 
-.c1:disabled:active {
+.c0:disabled:active {
   top: 0;
   box-shadow: 0 2px 0 #f47738;
 }
 
-.c1 svg {
+.c0 svg {
   max-width: 15px;
 }
 
-.c0 {
-  margin-bottom: 20px;
-}
-
 @media print {
-  .c1 {
+  .c0 {
     font-size: 14px;
     line-height: 19px;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c1 {
+  .c0 {
     font-size: 19px;
     line-height: 19px;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c1 {
+  .c0 {
     width: auto;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c1 svg {
+  .c0 svg {
     margin-left: 10px;
   }
 }
 
 @media only screen and (min-width:641px) {
   .c0 {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 }
 
 <ButtonWacky>
-  <Styled(Button)
+  <Button
     buttonColour="#dee0e2"
     buttonHoverColour="#ffbf47"
     buttonShadowColour="#f47738"
     buttonTextColour="#0b0c0c"
+    disabled={false}
+    start={false}
   >
-    <StyledComponent
+    <styled.button
       buttonColour="#dee0e2"
       buttonHoverColour="#ffbf47"
       buttonShadowColour="#f47738"
       buttonTextColour="#0b0c0c"
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-EHOje",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              [Function],
-            ],
-          },
-          "displayName": "Styled(Button)",
-          "foldedComponentIds": Array [],
-          "propTypes": Object {
-            "margin": [Function],
-            "mb": [Function],
-            "padding": [Function],
-          },
-          "render": [Function],
-          "styledComponentId": "sc-EHOje",
-          "target": [Function],
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-          Symbol(Symbol.hasInstance): [Function],
-        }
-      }
-      forwardedRef={null}
+      disabled={false}
+      isStart={false}
     >
-      <Button
+      <StyledComponent
         buttonColour="#dee0e2"
         buttonHoverColour="#ffbf47"
         buttonShadowColour="#f47738"
         buttonTextColour="#0b0c0c"
-        className="c0"
         disabled={false}
-        start={false}
-      >
-        <styled.button
-          buttonColour="#dee0e2"
-          buttonHoverColour="#ffbf47"
-          buttonShadowColour="#f47738"
-          buttonTextColour="#0b0c0c"
-          className="c0"
-          disabled={false}
-          isStart={false}
-        >
-          <StyledComponent
-            buttonColour="#dee0e2"
-            buttonHoverColour="#ffbf47"
-            buttonShadowColour="#f47738"
-            buttonTextColour="#0b0c0c"
-            className="c0"
-            disabled={false}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-bxivhb",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    [Function],
-                    "&:focus {
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                [Function],
+                "&:focus {
   outline: 3px solid #ffbf47; outline-offset: 0;
 }",
-                    [Function],
-                    [Function],
-                  ],
-                },
-                "displayName": "styled.button",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-bxivhb",
-                "target": "button",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            isStart={false}
-          >
-            <button
-              className="c0 c1"
-              disabled={false}
-            >
-              Wacky colours
-            </button>
-          </StyledComponent>
-        </styled.button>
-      </Button>
-    </StyledComponent>
-  </Styled(Button)>
+                [Function],
+                [Function],
+                [Function],
+              ],
+            },
+            "displayName": "styled.button",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "button",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        isStart={false}
+      >
+        <button
+          className="c0"
+          disabled={false}
+        >
+          Wacky colours
+        </button>
+      </StyledComponent>
+    </styled.button>
+  </Button>
 </ButtonWacky>
 `;
 
 exports[`button disabled matches snapshot 1`] = `
-.c1 {
+.c0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1040,38 +857,39 @@ exports[`button disabled matches snapshot 1`] = `
   vertical-align: top;
   cursor: pointer;
   -webkit-appearance: none;
+  margin-bottom: 22px;
 }
 
-.c1:focus {
+.c0:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.c1:link,
-.c1:visited,
-.c1:active,
-.c1:hover {
+.c0:link,
+.c0:visited,
+.c0:active,
+.c0:hover {
   color: #ffffff;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c1::-moz-focus-inner {
+.c0::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
-.c1:hover,
-.c1:focus {
+.c0:hover,
+.c0:focus {
   background-color: #00692f;
 }
 
-.c1:active {
+.c0:active {
   top: 2px;
   box-shadow: none;
 }
 
-.c1::before {
+.c0::before {
   content: "";
   display: block;
   position: absolute;
@@ -1082,164 +900,121 @@ exports[`button disabled matches snapshot 1`] = `
   background: transparent;
 }
 
-.c1:active::before {
+.c0:active::before {
   top: -4px;
 }
 
-.c1:disabled {
+.c0:disabled {
   opacity: 0.5;
   background: #00823b;
 }
 
-.c1:disabled:hover {
+.c0:disabled:hover {
   background-color: #00823b;
   cursor: default;
 }
 
-.c1:disabled:focus {
+.c0:disabled:focus {
   outline: none;
 }
 
-.c1:disabled:active {
+.c0:disabled:active {
   top: 0;
   box-shadow: 0 2px 0 #003618;
 }
 
-.c1 svg {
+.c0 svg {
   max-width: 15px;
 }
 
-.c0 {
-  margin-bottom: 20px;
-}
-
 @media print {
-  .c1 {
+  .c0 {
     font-size: 14px;
     line-height: 19px;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c1 {
+  .c0 {
     font-size: 19px;
     line-height: 19px;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c1 {
+  .c0 {
     width: auto;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c1 svg {
+  .c0 svg {
     margin-left: 10px;
   }
 }
 
 @media only screen and (min-width:641px) {
   .c0 {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 }
 
 <ButtonDisabled>
-  <Styled(Button)
+  <Button
     disabled={true}
+    start={false}
   >
-    <StyledComponent
+    <styled.button
       disabled={true}
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-EHOje",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              [Function],
-            ],
-          },
-          "displayName": "Styled(Button)",
-          "foldedComponentIds": Array [],
-          "propTypes": Object {
-            "margin": [Function],
-            "mb": [Function],
-            "padding": [Function],
-          },
-          "render": [Function],
-          "styledComponentId": "sc-EHOje",
-          "target": [Function],
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-          Symbol(Symbol.hasInstance): [Function],
-        }
-      }
-      forwardedRef={null}
+      isStart={false}
     >
-      <Button
-        className="c0"
+      <StyledComponent
         disabled={true}
-        start={false}
-      >
-        <styled.button
-          className="c0"
-          disabled={true}
-          isStart={false}
-        >
-          <StyledComponent
-            className="c0"
-            disabled={true}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-bxivhb",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    [Function],
-                    "&:focus {
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                [Function],
+                "&:focus {
   outline: 3px solid #ffbf47; outline-offset: 0;
 }",
-                    [Function],
-                    [Function],
-                  ],
-                },
-                "displayName": "styled.button",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-bxivhb",
-                "target": "button",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            isStart={false}
-          >
-            <button
-              className="c0 c1"
-              disabled={true}
-            >
-              Disabled primary button
-            </button>
-          </StyledComponent>
-        </styled.button>
-      </Button>
-    </StyledComponent>
-  </Styled(Button)>
+                [Function],
+                [Function],
+                [Function],
+              ],
+            },
+            "displayName": "styled.button",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "button",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        isStart={false}
+      >
+        <button
+          className="c0"
+          disabled={true}
+        >
+          Disabled primary button
+        </button>
+      </StyledComponent>
+    </styled.button>
+  </Button>
 </ButtonDisabled>
 `;
 
 exports[`button start button matches snapshot 1`] = `
-.c1 {
+.c0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1261,38 +1036,39 @@ exports[`button start button matches snapshot 1`] = `
   vertical-align: top;
   cursor: pointer;
   -webkit-appearance: none;
+  margin-bottom: 22px;
 }
 
-.c1:focus {
+.c0:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.c1:link,
-.c1:visited,
-.c1:active,
-.c1:hover {
+.c0:link,
+.c0:visited,
+.c0:active,
+.c0:hover {
   color: #ffffff;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c1::-moz-focus-inner {
+.c0::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
-.c1:hover,
-.c1:focus {
+.c0:hover,
+.c0:focus {
   background-color: #00692f;
 }
 
-.c1:active {
+.c0:active {
   top: 2px;
   box-shadow: none;
 }
 
-.c1::before {
+.c0::before {
   content: "";
   display: block;
   position: absolute;
@@ -1303,158 +1079,115 @@ exports[`button start button matches snapshot 1`] = `
   background: transparent;
 }
 
-.c1:active::before {
+.c0:active::before {
   top: -4px;
 }
 
-.c1:disabled {
+.c0:disabled {
   opacity: 0.5;
   background: #00823b;
 }
 
-.c1:disabled:hover {
+.c0:disabled:hover {
   background-color: #00823b;
   cursor: default;
 }
 
-.c1:disabled:focus {
+.c0:disabled:focus {
   outline: none;
 }
 
-.c1:disabled:active {
+.c0:disabled:active {
   top: 0;
   box-shadow: 0 2px 0 #003618;
 }
 
-.c1 svg {
+.c0 svg {
   max-width: 15px;
 }
 
-.c0 {
-  margin-bottom: 20px;
-}
-
 @media print {
-  .c1 {
+  .c0 {
     font-size: 18px;
     line-height: 1;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c1 {
+  .c0 {
     font-size: 24px;
     line-height: 1;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c1 {
+  .c0 {
     width: auto;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c1 svg {
+  .c0 svg {
     margin-left: 10px;
   }
 }
 
 @media only screen and (min-width:641px) {
   .c0 {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 }
 
 <ButtonStart>
-  <Styled(Button)
+  <Button
+    disabled={false}
     start={true}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-EHOje",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              [Function],
-            ],
-          },
-          "displayName": "Styled(Button)",
-          "foldedComponentIds": Array [],
-          "propTypes": Object {
-            "margin": [Function],
-            "mb": [Function],
-            "padding": [Function],
-          },
-          "render": [Function],
-          "styledComponentId": "sc-EHOje",
-          "target": [Function],
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-          Symbol(Symbol.hasInstance): [Function],
-        }
-      }
-      forwardedRef={null}
-      start={true}
+    <styled.button
+      disabled={false}
+      isStart={true}
     >
-      <Button
-        className="c0"
+      <StyledComponent
         disabled={false}
-        start={true}
-      >
-        <styled.button
-          className="c0"
-          disabled={false}
-          isStart={true}
-        >
-          <StyledComponent
-            className="c0"
-            disabled={false}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-bxivhb",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    [Function],
-                    "&:focus {
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                [Function],
+                "&:focus {
   outline: 3px solid #ffbf47; outline-offset: 0;
 }",
-                    [Function],
-                    [Function],
-                  ],
-                },
-                "displayName": "styled.button",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-bxivhb",
-                "target": "button",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            isStart={true}
-          >
-            <button
-              className="c0 c1"
-              disabled={false}
-            >
-              Save and continue
-            </button>
-          </StyledComponent>
-        </styled.button>
-      </Button>
-    </StyledComponent>
-  </Styled(Button)>
+                [Function],
+                [Function],
+                [Function],
+              ],
+            },
+            "displayName": "styled.button",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "button",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        isStart={true}
+      >
+        <button
+          className="c0"
+          disabled={false}
+        >
+          Save and continue
+        </button>
+      </StyledComponent>
+    </styled.button>
+  </Button>
 </ButtonStart>
 `;
