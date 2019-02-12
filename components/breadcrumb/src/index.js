@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { BLACK, SECONDARY_TEXT_COLOUR } from 'govuk-colours';
-import { withWhiteSpace } from '@govuk-react/hoc';
-import {
-  FOCUSABLE_FILL,
-  SPACING_POINTS,
-} from '@govuk-react/constants';
-import { typography } from '@govuk-react/lib';
+import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
+import { SPACING_POINTS } from '@govuk-react/constants';
+import { spacing, typography } from '@govuk-react/lib';
+
+import Link from './atoms/link';
 
 // Constants for chevron sourced from govuk-frontend
 const CHEVRON_SIZE = 7;
@@ -23,6 +21,7 @@ const BreadcrumbContainer = styled('div')(
     marginTop: SPACING_POINTS[3],
     marginBottom: SPACING_POINTS[2],
   },
+  spacing.withWhiteSpace(),
 );
 
 const BreadcrumbList = styled('ol')({
@@ -61,14 +60,6 @@ const BreadcrumbListItem = styled('li')({
       display: 'none',
     },
   },
-
-  // Additions to help ensure links get coloured as we expect
-  // NB specificity of this should override default in Link component
-  '> a': {
-    color: `${BLACK}`,
-    textDecoration: 'underline',
-    ...FOCUSABLE_FILL,
-  },
 });
 
 /**
@@ -77,23 +68,20 @@ const BreadcrumbListItem = styled('li')({
  *
  * Simple
  * ```jsx
- * import Link from '@govuk-react/link';
- *
  * <Breadcrumb>
- *   <Link href="/section">Section</Link>
- *   <Link href="/section/sub-section">Sub-section</Link>
+ *   <Breadcrumb.Link href="/section">Section</Breadcrumb.Link>
+ *   <Breadcrumb.Link href="/section/sub-section">Sub-section</Breadcrumb.Link>
  *   Current page
  * </Breadcrumb>
  * ```
  *
- * Using `Link` with, or without React Router
+ * Providing links with, or without React Router
  * ```jsx
- * import { Link as RouterLink } from 'react-router-dom';
- * import { Link } from '@govuk-react/link';
+ * import { Link } from 'react-router-dom';
  *
  * <Breadcrumb>
- *   <Link as={RouterLink} to="/section">Section</Link>
- *   <Link href="/section">Sub-section</Link>
+ *   <Breadcrumb.Link as={Link} to="/section">Section</Breadcrumb.Link>
+ *   <Breadcrumb.Link href="/section">Sub-section</Breadcrumb.Link>
  * </Breadcrumb>
  * ```
  *
@@ -125,4 +113,6 @@ Breadcrumb.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default withWhiteSpace()(Breadcrumb);
+Breadcrumb.Link = Link;
+
+export default Breadcrumb;

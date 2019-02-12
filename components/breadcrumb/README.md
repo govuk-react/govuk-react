@@ -11,23 +11,20 @@ Breadcrumb
 
 Simple
 ```jsx
-import Link from '@govuk-react/link';
-
 <Breadcrumb>
-  <Link href="/section">Section</Link>
-  <Link href="/section/sub-section">Sub-section</Link>
+  <Breadcrumb.Link href="/section">Section</Breadcrumb.Link>
+  <Breadcrumb.Link href="/section/sub-section">Sub-section</Breadcrumb.Link>
   Current page
 </Breadcrumb>
 ```
 
-Using `Link` with, or without React Router
+Providing links with, or without React Router
 ```jsx
-import { Link as RouterLink } from 'react-router-dom';
-import { Link } from '@govuk-react/link';
+import { Link } from 'react-router-dom';
 
 <Breadcrumb>
-  <Link as={RouterLink} to="/section">Section</Link>
-  <Link href="/section">Sub-section</Link>
+  <Breadcrumb.Link as={Link} to="/section">Section</Breadcrumb.Link>
+  <Breadcrumb.Link href="/section">Sub-section</Breadcrumb.Link>
 </Breadcrumb>
 ```
 

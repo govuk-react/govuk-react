@@ -13,7 +13,7 @@ describe('breadcrumb', () => {
   it('should render multiple items in ordered list', () => {
     const wrapper = mount((
       <Breadcrumb>
-        <a href="/section">Section 1</a>
+        <Breadcrumb.Link href="/section">Section 1</Breadcrumb.Link>
         example
       </Breadcrumb>
     ));
@@ -24,7 +24,7 @@ describe('breadcrumb', () => {
   it('should render an ordered list without ghost/duff children', () => {
     const wrapper = mount((
       <Breadcrumb>
-        <a href="/section">Section 1</a>
+        <Breadcrumb.Link href="/section">Section 1</Breadcrumb.Link>
         {[] /* empty node */}
         {null /* null node */}
         example
@@ -44,8 +44,8 @@ describe('breadcrumb', () => {
   it('matches snapshot', () => {
     const wrapper = mount((
       <Breadcrumb>
-        <a href="/section">Section 1</a>
-        <a href="/section2">Section 2</a>
+        <Breadcrumb.Link href="/section">Section 1</Breadcrumb.Link>
+        <Breadcrumb.Link href="/section2">Section 2</Breadcrumb.Link>
       </Breadcrumb>
     ));
 

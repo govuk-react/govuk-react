@@ -11,8 +11,8 @@ stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
   <Breadcrumb>
-    <a href="/section">Section</a>
-    <a href="/section/sub-section">Sub-section</a>
+    <Breadcrumb.Link href="/section">Section</Breadcrumb.Link>
+    <Breadcrumb.Link href="/section/sub-section">Sub-section</Breadcrumb.Link>
     Current page
   </Breadcrumb>
 ));
