@@ -1,19 +1,7 @@
-// https://govuk-elements.herokuapp.com/data/
+// https://github.com/alphagov/govuk-frontend/blob/master/src/components/table/_table.scss
 
-import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const RowInner = styled('tr')({});
-
-const Row = ({ children, ...props }) => (
-  <RowInner {...props}>
-    {children}
-  </RowInner>
-);
-
-Row.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+const Row = styled('tr')({});
 
 export default Row;

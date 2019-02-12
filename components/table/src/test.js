@@ -1,31 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
-import Table from '.';
-import Row from './atoms/Row';
-import Cell from './atoms/Cell';
-
-const example = <Table body={<Row><Cell>Example</Cell></Row>} />;
-const exampleWithHead = (
-  <Table
-    body={<Row><Cell>Example</Cell></Row>}
-    head={<Row><Cell>Example</Cell></Row>}
-  />
-);
+import Table, { TableSimple, TableWithCaption, TableWithHeadAndNumerics } from './fixtures';
 
 describe('Table', () => {
   it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(example, div);
-    ReactDOM.render(exampleWithHead, div);
+    mount(<Table />);
   });
 
-  it('matches snapshot for example', () => {
-    expect(mount(example)).toMatchSnapshot('example mount');
+  it('renders a simple example matching snapshot', () => {
+    expect(mount(<TableSimple />)).toMatchSnapshot('simple table');
   });
 
-  it('matches snapshot for exampleWithHead', () => {
-    expect(mount(exampleWithHead)).toMatchSnapshot('exampleWithHead mount');
+  it('renders a table with a caption matching snapshot', () => {
+    expect(mount(<TableWithCaption />)).toMatchSnapshot('table with caption');
+  });
+
+  it('renders a table with head and numerics matching snapshot', () => {
+    expect(mount(<TableWithHeadAndNumerics />)).toMatchSnapshot('table with head and numerics');
   });
 });

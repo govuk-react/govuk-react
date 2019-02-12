@@ -1,27 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Table matches snapshot for example: example mount 1`] = `
+exports[`Table renders a simple example matching snapshot: simple table 1`] = `
 .c1 {
-  font-family: "nta",Arial,sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.25;
+  padding: 10px 20px 10px 0;
+  border-bottom: 1px solid #bfc1c3;
   text-align: left;
-  text-transform: none;
-  width: 100%;
+  font-weight: 700;
+}
+
+.c1:last-child {
+  padding-right: 0;
 }
 
 .c2 {
-  border: 0;
+  padding: 10px 20px 10px 0;
   border-bottom: 1px solid #bfc1c3;
-  font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  padding: 0.63158em 1.05263em 0.47368em 0;
   text-align: left;
-  text-transform: none;
-  word-break: break-word;
 }
 
 .c2:last-child {
@@ -29,142 +23,107 @@ exports[`Table matches snapshot for example: example mount 1`] = `
 }
 
 .c0 {
-  border: 0;
-  border-collapse: collapse;
-  box-sizing: border-box;
-  border-spacing: 0;
   font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  text-transform: none;
-  font-size: 14px;
-  line-height: 1.1428571429;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
   width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 
-@media only screen and (min-width:641px) {
-  .c1 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c2 {
-    font-size: 19px;
-    line-height: 1.3;
+@media print {
+  .c0 {
+    font-size: 14px;
+    line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
   .c0 {
-    font-size: 16px;
-    line-height: 1.25;
+    font-size: 19px;
+    line-height: 1.3157894736842106;
   }
 }
 
-<Table
-  body={
-    <Row>
-      <Cell>
-        Example
-      </Cell>
-    </Row>
+@media print {
+  .c0 {
+    color: #000;
   }
->
-  <styled.table>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bZQynM",
-            "isStatic": true,
-            "lastClassName": "c0",
-            "rules": Array [
-              "border: 0; border-collapse: collapse; box-sizing: border-box; border-spacing: 0; font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 14px; line-height: 1.1428571429; width: 100%; @media only screen and (min-width: 641px) {
-  font-size: 16px; line-height: 1.25;
+}
+
+<TableSimple>
+  <Table>
+    <styled.table>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-EHOje",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
 }",
-            ],
-          },
-          "displayName": "styled.table",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bZQynM",
-          "target": "table",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
+                "color: #0b0c0c; @media print {
+  color: #000;
+}",
+                "width: 100%; border-spacing: 0; border-collapse: collapse;",
+                [Function],
+              ],
+            },
+            "displayName": "styled.table",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-EHOje",
+            "target": "table",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
         }
-      }
-      forwardedRef={null}
-    >
-      <table
-        className="c0"
+        forwardedRef={null}
       >
-        <styled.caption>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-htpNat",
-                  "isStatic": true,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "font-family: \\"nta\\", Arial, sans-serif; font-weight: 700; font-size: 16px; line-height: 1.25; text-align: left; text-transform: none; width: 100%; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3;
-}",
-                  ],
-                },
-                "displayName": "styled.caption",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-htpNat",
-                "target": "caption",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
+        <table
+          className="c0"
+        >
+          <styled.tbody>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": true,
+                    "lastClassName": "uTxCW",
+                    "rules": Array [
+                      "",
+                    ],
+                  },
+                  "displayName": "styled.tbody",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "tbody",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
               }
-            }
-            forwardedRef={null}
-          >
-            <caption
-              className="c1"
-            />
-          </StyledComponent>
-        </styled.caption>
-        <styled.tbody>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-bwzfXH",
-                  "isStatic": true,
-                  "lastClassName": "uTxCW",
-                  "rules": Array [
-                    "",
-                  ],
-                },
-                "displayName": "styled.tbody",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-bwzfXH",
-                "target": "tbody",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-          >
-            <tbody
-              className=""
+              forwardedRef={null}
             >
-              <Row>
+              <tbody
+                className=""
+              >
                 <styled.tr>
                   <StyledComponent
                     forwardedComponent={
@@ -172,9 +131,9 @@ exports[`Table matches snapshot for example: example mount 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-EHOje",
+                          "componentId": "sc-ifAKCX",
                           "isStatic": true,
-                          "lastClassName": "jvzENE",
+                          "lastClassName": "cFlEyZ",
                           "rules": Array [
                             "",
                           ],
@@ -182,7 +141,7 @@ exports[`Table matches snapshot for example: example mount 1`] = `
                         "displayName": "styled.tr",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-EHOje",
+                        "styledComponentId": "sc-ifAKCX",
                         "target": "tr",
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -194,25 +153,38 @@ exports[`Table matches snapshot for example: example mount 1`] = `
                     <tr
                       className=""
                     >
-                      <Cell>
-                        <styled.td>
+                      <CellHeader>
+                        <styled.td
+                          as="th"
+                          bold={true}
+                          isHeader={true}
+                        >
                           <StyledComponent
+                            as="th"
+                            bold={true}
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-ifAKCX",
+                                  "componentId": "sc-bxivhb",
                                   "isStatic": false,
                                   "lastClassName": "c2",
                                   "rules": Array [
+                                    [Function],
                                     [Function],
                                   ],
                                 },
                                 "displayName": "styled.td",
                                 "foldedComponentIds": Array [],
+                                "propTypes": Object {
+                                  "alignRight": [Function],
+                                  "children": [Function],
+                                  "isHeader": [Function],
+                                  "numeric": [Function],
+                                },
                                 "render": [Function],
-                                "styledComponentId": "sc-ifAKCX",
+                                "styledComponentId": "sc-bxivhb",
                                 "target": "td",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -220,54 +192,454 @@ exports[`Table matches snapshot for example: example mount 1`] = `
                               }
                             }
                             forwardedRef={null}
+                            isHeader={true}
                           >
-                            <td
-                              className="c2"
+                            <th
+                              className="c1"
                             >
-                              Example
-                            </td>
+                              First 6 weeks
+                            </th>
                           </StyledComponent>
                         </styled.td>
-                      </Cell>
+                      </CellHeader>
+                      <styled.td>
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "c2",
+                                "rules": Array [
+                                  [Function],
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "styled.td",
+                              "foldedComponentIds": Array [],
+                              "propTypes": Object {
+                                "alignRight": [Function],
+                                "children": [Function],
+                                "isHeader": [Function],
+                                "numeric": [Function],
+                              },
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "td",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <td
+                            className="c2"
+                          >
+                            £109.80 per week
+                          </td>
+                        </StyledComponent>
+                      </styled.td>
                     </tr>
                   </StyledComponent>
                 </styled.tr>
-              </Row>
-            </tbody>
-          </StyledComponent>
-        </styled.tbody>
-      </table>
-    </StyledComponent>
-  </styled.table>
-</Table>
+                <styled.tr>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-ifAKCX",
+                          "isStatic": true,
+                          "lastClassName": "cFlEyZ",
+                          "rules": Array [
+                            "",
+                          ],
+                        },
+                        "displayName": "styled.tr",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-ifAKCX",
+                        "target": "tr",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                  >
+                    <tr
+                      className=""
+                    >
+                      <CellHeader>
+                        <styled.td
+                          as="th"
+                          bold={true}
+                          isHeader={true}
+                        >
+                          <StyledComponent
+                            as="th"
+                            bold={true}
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bxivhb",
+                                  "isStatic": false,
+                                  "lastClassName": "c2",
+                                  "rules": Array [
+                                    [Function],
+                                    [Function],
+                                  ],
+                                },
+                                "displayName": "styled.td",
+                                "foldedComponentIds": Array [],
+                                "propTypes": Object {
+                                  "alignRight": [Function],
+                                  "children": [Function],
+                                  "isHeader": [Function],
+                                  "numeric": [Function],
+                                },
+                                "render": [Function],
+                                "styledComponentId": "sc-bxivhb",
+                                "target": "td",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            isHeader={true}
+                          >
+                            <th
+                              className="c1"
+                            >
+                              Next 33 weeks
+                            </th>
+                          </StyledComponent>
+                        </styled.td>
+                      </CellHeader>
+                      <styled.td>
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "c2",
+                                "rules": Array [
+                                  [Function],
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "styled.td",
+                              "foldedComponentIds": Array [],
+                              "propTypes": Object {
+                                "alignRight": [Function],
+                                "children": [Function],
+                                "isHeader": [Function],
+                                "numeric": [Function],
+                              },
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "td",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <td
+                            className="c2"
+                          >
+                            £109.80 per week
+                          </td>
+                        </StyledComponent>
+                      </styled.td>
+                    </tr>
+                  </StyledComponent>
+                </styled.tr>
+                <styled.tr>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-ifAKCX",
+                          "isStatic": true,
+                          "lastClassName": "cFlEyZ",
+                          "rules": Array [
+                            "",
+                          ],
+                        },
+                        "displayName": "styled.tr",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-ifAKCX",
+                        "target": "tr",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                  >
+                    <tr
+                      className=""
+                    >
+                      <CellHeader>
+                        <styled.td
+                          as="th"
+                          bold={true}
+                          isHeader={true}
+                        >
+                          <StyledComponent
+                            as="th"
+                            bold={true}
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bxivhb",
+                                  "isStatic": false,
+                                  "lastClassName": "c2",
+                                  "rules": Array [
+                                    [Function],
+                                    [Function],
+                                  ],
+                                },
+                                "displayName": "styled.td",
+                                "foldedComponentIds": Array [],
+                                "propTypes": Object {
+                                  "alignRight": [Function],
+                                  "children": [Function],
+                                  "isHeader": [Function],
+                                  "numeric": [Function],
+                                },
+                                "render": [Function],
+                                "styledComponentId": "sc-bxivhb",
+                                "target": "td",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            isHeader={true}
+                          >
+                            <th
+                              className="c1"
+                            >
+                              Total estimated pay
+                            </th>
+                          </StyledComponent>
+                        </styled.td>
+                      </CellHeader>
+                      <styled.td>
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "c2",
+                                "rules": Array [
+                                  [Function],
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "styled.td",
+                              "foldedComponentIds": Array [],
+                              "propTypes": Object {
+                                "alignRight": [Function],
+                                "children": [Function],
+                                "isHeader": [Function],
+                                "numeric": [Function],
+                              },
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "td",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <td
+                            className="c2"
+                          >
+                            £4,282.20
+                          </td>
+                        </StyledComponent>
+                      </styled.td>
+                    </tr>
+                  </StyledComponent>
+                </styled.tr>
+                <styled.tr>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-ifAKCX",
+                          "isStatic": true,
+                          "lastClassName": "cFlEyZ",
+                          "rules": Array [
+                            "",
+                          ],
+                        },
+                        "displayName": "styled.tr",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-ifAKCX",
+                        "target": "tr",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                  >
+                    <tr
+                      className=""
+                    >
+                      <CellHeader>
+                        <styled.td
+                          as="th"
+                          bold={true}
+                          isHeader={true}
+                        >
+                          <StyledComponent
+                            as="th"
+                            bold={true}
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bxivhb",
+                                  "isStatic": false,
+                                  "lastClassName": "c2",
+                                  "rules": Array [
+                                    [Function],
+                                    [Function],
+                                  ],
+                                },
+                                "displayName": "styled.td",
+                                "foldedComponentIds": Array [],
+                                "propTypes": Object {
+                                  "alignRight": [Function],
+                                  "children": [Function],
+                                  "isHeader": [Function],
+                                  "numeric": [Function],
+                                },
+                                "render": [Function],
+                                "styledComponentId": "sc-bxivhb",
+                                "target": "td",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            isHeader={true}
+                          >
+                            <th
+                              className="c1"
+                            >
+                              Tell the mother’s employer
+                            </th>
+                          </StyledComponent>
+                        </styled.td>
+                      </CellHeader>
+                      <styled.td>
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "c2",
+                                "rules": Array [
+                                  [Function],
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "styled.td",
+                              "foldedComponentIds": Array [],
+                              "propTypes": Object {
+                                "alignRight": [Function],
+                                "children": [Function],
+                                "isHeader": [Function],
+                                "numeric": [Function],
+                              },
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "td",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <td
+                            className="c2"
+                          >
+                            28 days before they want to start maternity pay
+                          </td>
+                        </StyledComponent>
+                      </styled.td>
+                    </tr>
+                  </StyledComponent>
+                </styled.tr>
+              </tbody>
+            </StyledComponent>
+          </styled.tbody>
+        </table>
+      </StyledComponent>
+    </styled.table>
+  </Table>
+</TableSimple>
 `;
 
-exports[`Table matches snapshot for exampleWithHead: exampleWithHead mount 1`] = `
-.c2 th {
+exports[`Table renders a table with a caption matching snapshot: table with caption 1`] = `
+.c1 {
+  font-weight: 700;
+  display: table-caption;
+  text-align: left;
+}
+
+.c2 {
+  padding: 10px 20px 10px 0;
+  border-bottom: 1px solid #bfc1c3;
+  text-align: left;
   font-weight: 700;
 }
 
-.c1 {
-  font-family: "nta",Arial,sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.25;
-  text-align: left;
-  text-transform: none;
-  width: 100%;
+.c2:last-child {
+  padding-right: 0;
 }
 
 .c3 {
-  border: 0;
+  padding: 10px 20px 10px 0;
   border-bottom: 1px solid #bfc1c3;
-  font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  padding: 0.63158em 1.05263em 0.47368em 0;
   text-align: left;
-  text-transform: none;
-  word-break: break-word;
 }
 
 .c3:last-child {
@@ -275,151 +647,746 @@ exports[`Table matches snapshot for exampleWithHead: exampleWithHead mount 1`] =
 }
 
 .c0 {
-  border: 0;
-  border-collapse: collapse;
-  box-sizing: border-box;
-  border-spacing: 0;
   font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  text-transform: none;
-  font-size: 14px;
-  line-height: 1.1428571429;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
   width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 
-@media only screen and (min-width:641px) {
-  .c1 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c3 {
-    font-size: 19px;
-    line-height: 1.3;
+@media print {
+  .c0 {
+    font-size: 14px;
+    line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
   .c0 {
-    font-size: 16px;
-    line-height: 1.25;
+    font-size: 19px;
+    line-height: 1.3157894736842106;
   }
 }
 
-<Table
-  body={
-    <Row>
-      <Cell>
-        Example
-      </Cell>
-    </Row>
+@media print {
+  .c0 {
+    color: #000;
   }
-  head={
-    <Row>
-      <Cell>
-        Example
-      </Cell>
-    </Row>
-  }
->
-  <styled.table>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bZQynM",
-            "isStatic": true,
-            "lastClassName": "c0",
-            "rules": Array [
-              "border: 0; border-collapse: collapse; box-sizing: border-box; border-spacing: 0; font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 14px; line-height: 1.1428571429; width: 100%; @media only screen and (min-width: 641px) {
-  font-size: 16px; line-height: 1.25;
+}
+
+<TableWithCaption>
+  <Table
+    body={
+      <React.Fragment>
+        <ForwardRef>
+          <CellHeader>
+            First 6 weeks
+          </CellHeader>
+          <ForwardRef>
+            £109.80 per week
+          </ForwardRef>
+        </ForwardRef>
+        <ForwardRef>
+          <CellHeader>
+            Next 33 weeks
+          </CellHeader>
+          <ForwardRef>
+            £109.80 per week
+          </ForwardRef>
+        </ForwardRef>
+        <ForwardRef>
+          <CellHeader>
+            Total estimated pay
+          </CellHeader>
+          <ForwardRef>
+            £4,282.20
+          </ForwardRef>
+        </ForwardRef>
+      </React.Fragment>
+    }
+    caption="Dates and amounts"
+  >
+    <styled.table>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-EHOje",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
 }",
-            ],
-          },
-          "displayName": "styled.table",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bZQynM",
-          "target": "table",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
+                "color: #0b0c0c; @media print {
+  color: #000;
+}",
+                "width: 100%; border-spacing: 0; border-collapse: collapse;",
+                [Function],
+              ],
+            },
+            "displayName": "styled.table",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-EHOje",
+            "target": "table",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
         }
-      }
-      forwardedRef={null}
-    >
-      <table
-        className="c0"
+        forwardedRef={null}
       >
-        <styled.caption>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-htpNat",
-                  "isStatic": true,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "font-family: \\"nta\\", Arial, sans-serif; font-weight: 700; font-size: 16px; line-height: 1.25; text-align: left; text-transform: none; width: 100%; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3;
-}",
-                  ],
-                },
-                "displayName": "styled.caption",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-htpNat",
-                "target": "caption",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
+        <table
+          className="c0"
+        >
+          <styled.caption>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-htpNat",
+                    "isStatic": true,
+                    "lastClassName": "c1",
+                    "rules": Array [
+                      "font-weight: 700; display: table-caption; text-align: left;",
+                    ],
+                  },
+                  "displayName": "styled.caption",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-htpNat",
+                  "target": "caption",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
               }
-            }
-            forwardedRef={null}
-          >
-            <caption
-              className="c1"
-            />
-          </StyledComponent>
-        </styled.caption>
-        <styled.thead>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-bdVaJa",
-                  "isStatic": true,
-                  "lastClassName": "c2",
-                  "rules": Array [
-                    " th {
+              forwardedRef={null}
+            >
+              <caption
+                className="c1"
+              >
+                Dates and amounts
+              </caption>
+            </StyledComponent>
+          </styled.caption>
+          <styled.tbody>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": true,
+                    "lastClassName": "uTxCW",
+                    "rules": Array [
+                      "",
+                    ],
+                  },
+                  "displayName": "styled.tbody",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "tbody",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <tbody
+                className=""
+              >
+                <styled.tr>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-ifAKCX",
+                          "isStatic": true,
+                          "lastClassName": "cFlEyZ",
+                          "rules": Array [
+                            "",
+                          ],
+                        },
+                        "displayName": "styled.tr",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-ifAKCX",
+                        "target": "tr",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                  >
+                    <tr
+                      className=""
+                    >
+                      <CellHeader>
+                        <styled.td
+                          as="th"
+                          bold={true}
+                          isHeader={true}
+                        >
+                          <StyledComponent
+                            as="th"
+                            bold={true}
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bxivhb",
+                                  "isStatic": false,
+                                  "lastClassName": "c3",
+                                  "rules": Array [
+                                    [Function],
+                                    [Function],
+                                  ],
+                                },
+                                "displayName": "styled.td",
+                                "foldedComponentIds": Array [],
+                                "propTypes": Object {
+                                  "alignRight": [Function],
+                                  "children": [Function],
+                                  "isHeader": [Function],
+                                  "numeric": [Function],
+                                },
+                                "render": [Function],
+                                "styledComponentId": "sc-bxivhb",
+                                "target": "td",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            isHeader={true}
+                          >
+                            <th
+                              className="c2"
+                            >
+                              First 6 weeks
+                            </th>
+                          </StyledComponent>
+                        </styled.td>
+                      </CellHeader>
+                      <styled.td>
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "c3",
+                                "rules": Array [
+                                  [Function],
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "styled.td",
+                              "foldedComponentIds": Array [],
+                              "propTypes": Object {
+                                "alignRight": [Function],
+                                "children": [Function],
+                                "isHeader": [Function],
+                                "numeric": [Function],
+                              },
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "td",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <td
+                            className="c3"
+                          >
+                            £109.80 per week
+                          </td>
+                        </StyledComponent>
+                      </styled.td>
+                    </tr>
+                  </StyledComponent>
+                </styled.tr>
+                <styled.tr>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-ifAKCX",
+                          "isStatic": true,
+                          "lastClassName": "cFlEyZ",
+                          "rules": Array [
+                            "",
+                          ],
+                        },
+                        "displayName": "styled.tr",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-ifAKCX",
+                        "target": "tr",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                  >
+                    <tr
+                      className=""
+                    >
+                      <CellHeader>
+                        <styled.td
+                          as="th"
+                          bold={true}
+                          isHeader={true}
+                        >
+                          <StyledComponent
+                            as="th"
+                            bold={true}
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bxivhb",
+                                  "isStatic": false,
+                                  "lastClassName": "c3",
+                                  "rules": Array [
+                                    [Function],
+                                    [Function],
+                                  ],
+                                },
+                                "displayName": "styled.td",
+                                "foldedComponentIds": Array [],
+                                "propTypes": Object {
+                                  "alignRight": [Function],
+                                  "children": [Function],
+                                  "isHeader": [Function],
+                                  "numeric": [Function],
+                                },
+                                "render": [Function],
+                                "styledComponentId": "sc-bxivhb",
+                                "target": "td",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            isHeader={true}
+                          >
+                            <th
+                              className="c2"
+                            >
+                              Next 33 weeks
+                            </th>
+                          </StyledComponent>
+                        </styled.td>
+                      </CellHeader>
+                      <styled.td>
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "c3",
+                                "rules": Array [
+                                  [Function],
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "styled.td",
+                              "foldedComponentIds": Array [],
+                              "propTypes": Object {
+                                "alignRight": [Function],
+                                "children": [Function],
+                                "isHeader": [Function],
+                                "numeric": [Function],
+                              },
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "td",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <td
+                            className="c3"
+                          >
+                            £109.80 per week
+                          </td>
+                        </StyledComponent>
+                      </styled.td>
+                    </tr>
+                  </StyledComponent>
+                </styled.tr>
+                <styled.tr>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-ifAKCX",
+                          "isStatic": true,
+                          "lastClassName": "cFlEyZ",
+                          "rules": Array [
+                            "",
+                          ],
+                        },
+                        "displayName": "styled.tr",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-ifAKCX",
+                        "target": "tr",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                  >
+                    <tr
+                      className=""
+                    >
+                      <CellHeader>
+                        <styled.td
+                          as="th"
+                          bold={true}
+                          isHeader={true}
+                        >
+                          <StyledComponent
+                            as="th"
+                            bold={true}
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bxivhb",
+                                  "isStatic": false,
+                                  "lastClassName": "c3",
+                                  "rules": Array [
+                                    [Function],
+                                    [Function],
+                                  ],
+                                },
+                                "displayName": "styled.td",
+                                "foldedComponentIds": Array [],
+                                "propTypes": Object {
+                                  "alignRight": [Function],
+                                  "children": [Function],
+                                  "isHeader": [Function],
+                                  "numeric": [Function],
+                                },
+                                "render": [Function],
+                                "styledComponentId": "sc-bxivhb",
+                                "target": "td",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            isHeader={true}
+                          >
+                            <th
+                              className="c2"
+                            >
+                              Total estimated pay
+                            </th>
+                          </StyledComponent>
+                        </styled.td>
+                      </CellHeader>
+                      <styled.td>
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "c3",
+                                "rules": Array [
+                                  [Function],
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "styled.td",
+                              "foldedComponentIds": Array [],
+                              "propTypes": Object {
+                                "alignRight": [Function],
+                                "children": [Function],
+                                "isHeader": [Function],
+                                "numeric": [Function],
+                              },
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "td",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <td
+                            className="c3"
+                          >
+                            £4,282.20
+                          </td>
+                        </StyledComponent>
+                      </styled.td>
+                    </tr>
+                  </StyledComponent>
+                </styled.tr>
+              </tbody>
+            </StyledComponent>
+          </styled.tbody>
+        </table>
+      </StyledComponent>
+    </styled.table>
+  </Table>
+</TableWithCaption>
+`;
+
+exports[`Table renders a table with head and numerics matching snapshot: table with head and numerics 1`] = `
+.c1 {
   font-weight: 700;
+  display: table-caption;
+  text-align: left;
+}
+
+.c2 {
+  padding: 10px 20px 10px 0;
+  border-bottom: 1px solid #bfc1c3;
+  text-align: left;
+  font-weight: 700;
+}
+
+.c2:last-child {
+  padding-right: 0;
+}
+
+.c3 {
+  padding: 10px 20px 10px 0;
+  border-bottom: 1px solid #bfc1c3;
+  text-align: right;
+  font-weight: 700;
+}
+
+.c3:last-child {
+  padding-right: 0;
+}
+
+.c4 {
+  padding: 10px 20px 10px 0;
+  border-bottom: 1px solid #bfc1c3;
+  text-align: right;
+  font-family: "ntatabularnumbers","nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+}
+
+.c4:last-child {
+  padding-right: 0;
+}
+
+.c0 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+@media print {
+  .c4 {
+    font-family: sans-serif;
+  }
+}
+
+@media print {
+  .c0 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
+@media print {
+  .c0 {
+    color: #000;
+  }
+}
+
+<TableWithHeadAndNumerics>
+  <Table
+    caption="Attention, I am the caption of this ship!"
+    head={
+      <ForwardRef>
+        <CellHeader>
+          Month you apply
+        </CellHeader>
+        <CellHeader
+          numeric={true}
+        >
+          Rate for vehicles
+        </CellHeader>
+        <CellHeader
+          numeric={true}
+        >
+          Rate for bicycles
+        </CellHeader>
+      </ForwardRef>
+    }
+  >
+    <styled.table>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-EHOje",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
 }",
-                  ],
-                },
-                "displayName": "styled.thead",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-bdVaJa",
-                "target": "thead",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
+                "color: #0b0c0c; @media print {
+  color: #000;
+}",
+                "width: 100%; border-spacing: 0; border-collapse: collapse;",
+                [Function],
+              ],
+            },
+            "displayName": "styled.table",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-EHOje",
+            "target": "table",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <table
+          className="c0"
+        >
+          <styled.caption>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-htpNat",
+                    "isStatic": true,
+                    "lastClassName": "c1",
+                    "rules": Array [
+                      "font-weight: 700; display: table-caption; text-align: left;",
+                    ],
+                  },
+                  "displayName": "styled.caption",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-htpNat",
+                  "target": "caption",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
               }
-            }
-            forwardedRef={null}
-          >
-            <thead
-              className="c2"
+              forwardedRef={null}
             >
-              <Row>
+              <caption
+                className="c1"
+              >
+                Attention, I am the caption of this ship!
+              </caption>
+            </StyledComponent>
+          </styled.caption>
+          <styled.thead>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bdVaJa",
+                    "isStatic": true,
+                    "lastClassName": "bDWFJH",
+                    "rules": Array [
+                      "",
+                    ],
+                  },
+                  "displayName": "styled.thead",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bdVaJa",
+                  "target": "thead",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <thead
+                className=""
+              >
                 <styled.tr>
                   <StyledComponent
                     forwardedComponent={
@@ -427,9 +1394,9 @@ exports[`Table matches snapshot for exampleWithHead: exampleWithHead mount 1`] =
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-EHOje",
+                          "componentId": "sc-ifAKCX",
                           "isStatic": true,
-                          "lastClassName": "jvzENE",
+                          "lastClassName": "cFlEyZ",
                           "rules": Array [
                             "",
                           ],
@@ -437,7 +1404,7 @@ exports[`Table matches snapshot for exampleWithHead: exampleWithHead mount 1`] =
                         "displayName": "styled.tr",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-EHOje",
+                        "styledComponentId": "sc-ifAKCX",
                         "target": "tr",
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -449,25 +1416,38 @@ exports[`Table matches snapshot for exampleWithHead: exampleWithHead mount 1`] =
                     <tr
                       className=""
                     >
-                      <Cell>
-                        <styled.td>
+                      <CellHeader>
+                        <styled.td
+                          as="th"
+                          bold={true}
+                          isHeader={true}
+                        >
                           <StyledComponent
+                            as="th"
+                            bold={true}
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-ifAKCX",
+                                  "componentId": "sc-bxivhb",
                                   "isStatic": false,
-                                  "lastClassName": "c3",
+                                  "lastClassName": "c4",
                                   "rules": Array [
+                                    [Function],
                                     [Function],
                                   ],
                                 },
                                 "displayName": "styled.td",
                                 "foldedComponentIds": Array [],
+                                "propTypes": Object {
+                                  "alignRight": [Function],
+                                  "children": [Function],
+                                  "isHeader": [Function],
+                                  "numeric": [Function],
+                                },
                                 "render": [Function],
-                                "styledComponentId": "sc-ifAKCX",
+                                "styledComponentId": "sc-bxivhb",
                                 "target": "td",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -475,52 +1455,157 @@ exports[`Table matches snapshot for exampleWithHead: exampleWithHead mount 1`] =
                               }
                             }
                             forwardedRef={null}
+                            isHeader={true}
                           >
-                            <td
-                              className="c3"
+                            <th
+                              className="c2"
                             >
-                              Example
-                            </td>
+                              Month you apply
+                            </th>
                           </StyledComponent>
                         </styled.td>
-                      </Cell>
+                      </CellHeader>
+                      <CellHeader
+                        numeric={true}
+                      >
+                        <styled.td
+                          as="th"
+                          bold={true}
+                          isHeader={true}
+                          numeric={true}
+                        >
+                          <StyledComponent
+                            as="th"
+                            bold={true}
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bxivhb",
+                                  "isStatic": false,
+                                  "lastClassName": "c4",
+                                  "rules": Array [
+                                    [Function],
+                                    [Function],
+                                  ],
+                                },
+                                "displayName": "styled.td",
+                                "foldedComponentIds": Array [],
+                                "propTypes": Object {
+                                  "alignRight": [Function],
+                                  "children": [Function],
+                                  "isHeader": [Function],
+                                  "numeric": [Function],
+                                },
+                                "render": [Function],
+                                "styledComponentId": "sc-bxivhb",
+                                "target": "td",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            isHeader={true}
+                            numeric={true}
+                          >
+                            <th
+                              className="c3"
+                            >
+                              Rate for vehicles
+                            </th>
+                          </StyledComponent>
+                        </styled.td>
+                      </CellHeader>
+                      <CellHeader
+                        numeric={true}
+                      >
+                        <styled.td
+                          as="th"
+                          bold={true}
+                          isHeader={true}
+                          numeric={true}
+                        >
+                          <StyledComponent
+                            as="th"
+                            bold={true}
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bxivhb",
+                                  "isStatic": false,
+                                  "lastClassName": "c4",
+                                  "rules": Array [
+                                    [Function],
+                                    [Function],
+                                  ],
+                                },
+                                "displayName": "styled.td",
+                                "foldedComponentIds": Array [],
+                                "propTypes": Object {
+                                  "alignRight": [Function],
+                                  "children": [Function],
+                                  "isHeader": [Function],
+                                  "numeric": [Function],
+                                },
+                                "render": [Function],
+                                "styledComponentId": "sc-bxivhb",
+                                "target": "td",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            isHeader={true}
+                            numeric={true}
+                          >
+                            <th
+                              className="c3"
+                            >
+                              Rate for bicycles
+                            </th>
+                          </StyledComponent>
+                        </styled.td>
+                      </CellHeader>
                     </tr>
                   </StyledComponent>
                 </styled.tr>
-              </Row>
-            </thead>
-          </StyledComponent>
-        </styled.thead>
-        <styled.tbody>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-bwzfXH",
-                  "isStatic": true,
-                  "lastClassName": "uTxCW",
-                  "rules": Array [
-                    "",
-                  ],
-                },
-                "displayName": "styled.tbody",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-bwzfXH",
-                "target": "tbody",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
+              </thead>
+            </StyledComponent>
+          </styled.thead>
+          <styled.tbody>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": true,
+                    "lastClassName": "uTxCW",
+                    "rules": Array [
+                      "",
+                    ],
+                  },
+                  "displayName": "styled.tbody",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "tbody",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
               }
-            }
-            forwardedRef={null}
-          >
-            <tbody
-              className=""
+              forwardedRef={null}
             >
-              <Row>
+              <tbody
+                className=""
+              >
                 <styled.tr>
                   <StyledComponent
                     forwardedComponent={
@@ -528,9 +1613,9 @@ exports[`Table matches snapshot for exampleWithHead: exampleWithHead mount 1`] =
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-EHOje",
+                          "componentId": "sc-ifAKCX",
                           "isStatic": true,
-                          "lastClassName": "jvzENE",
+                          "lastClassName": "cFlEyZ",
                           "rules": Array [
                             "",
                           ],
@@ -538,7 +1623,7 @@ exports[`Table matches snapshot for exampleWithHead: exampleWithHead mount 1`] =
                         "displayName": "styled.tr",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-EHOje",
+                        "styledComponentId": "sc-ifAKCX",
                         "target": "tr",
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -550,25 +1635,38 @@ exports[`Table matches snapshot for exampleWithHead: exampleWithHead mount 1`] =
                     <tr
                       className=""
                     >
-                      <Cell>
-                        <styled.td>
+                      <CellHeader>
+                        <styled.td
+                          as="th"
+                          bold={true}
+                          isHeader={true}
+                        >
                           <StyledComponent
+                            as="th"
+                            bold={true}
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-ifAKCX",
+                                  "componentId": "sc-bxivhb",
                                   "isStatic": false,
-                                  "lastClassName": "c3",
+                                  "lastClassName": "c4",
                                   "rules": Array [
+                                    [Function],
                                     [Function],
                                   ],
                                 },
                                 "displayName": "styled.td",
                                 "foldedComponentIds": Array [],
+                                "propTypes": Object {
+                                  "alignRight": [Function],
+                                  "children": [Function],
+                                  "isHeader": [Function],
+                                  "numeric": [Function],
+                                },
                                 "render": [Function],
-                                "styledComponentId": "sc-ifAKCX",
+                                "styledComponentId": "sc-bxivhb",
                                 "target": "td",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -576,24 +1674,612 @@ exports[`Table matches snapshot for exampleWithHead: exampleWithHead mount 1`] =
                               }
                             }
                             forwardedRef={null}
+                            isHeader={true}
                           >
-                            <td
-                              className="c3"
+                            <th
+                              className="c2"
                             >
-                              Example
-                            </td>
+                              January
+                            </th>
                           </StyledComponent>
                         </styled.td>
-                      </Cell>
+                      </CellHeader>
+                      <styled.td
+                        numeric={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "c4",
+                                "rules": Array [
+                                  [Function],
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "styled.td",
+                              "foldedComponentIds": Array [],
+                              "propTypes": Object {
+                                "alignRight": [Function],
+                                "children": [Function],
+                                "isHeader": [Function],
+                                "numeric": [Function],
+                              },
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "td",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          numeric={true}
+                        >
+                          <td
+                            className="c4"
+                          >
+                            £165.00
+                          </td>
+                        </StyledComponent>
+                      </styled.td>
+                      <styled.td
+                        numeric={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "c4",
+                                "rules": Array [
+                                  [Function],
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "styled.td",
+                              "foldedComponentIds": Array [],
+                              "propTypes": Object {
+                                "alignRight": [Function],
+                                "children": [Function],
+                                "isHeader": [Function],
+                                "numeric": [Function],
+                              },
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "td",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          numeric={true}
+                        >
+                          <td
+                            className="c4"
+                          >
+                            £85.00
+                          </td>
+                        </StyledComponent>
+                      </styled.td>
                     </tr>
                   </StyledComponent>
                 </styled.tr>
-              </Row>
-            </tbody>
-          </StyledComponent>
-        </styled.tbody>
-      </table>
-    </StyledComponent>
-  </styled.table>
-</Table>
+                <styled.tr>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-ifAKCX",
+                          "isStatic": true,
+                          "lastClassName": "cFlEyZ",
+                          "rules": Array [
+                            "",
+                          ],
+                        },
+                        "displayName": "styled.tr",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-ifAKCX",
+                        "target": "tr",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                  >
+                    <tr
+                      className=""
+                    >
+                      <CellHeader>
+                        <styled.td
+                          as="th"
+                          bold={true}
+                          isHeader={true}
+                        >
+                          <StyledComponent
+                            as="th"
+                            bold={true}
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bxivhb",
+                                  "isStatic": false,
+                                  "lastClassName": "c4",
+                                  "rules": Array [
+                                    [Function],
+                                    [Function],
+                                  ],
+                                },
+                                "displayName": "styled.td",
+                                "foldedComponentIds": Array [],
+                                "propTypes": Object {
+                                  "alignRight": [Function],
+                                  "children": [Function],
+                                  "isHeader": [Function],
+                                  "numeric": [Function],
+                                },
+                                "render": [Function],
+                                "styledComponentId": "sc-bxivhb",
+                                "target": "td",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            isHeader={true}
+                          >
+                            <th
+                              className="c2"
+                            >
+                              February
+                            </th>
+                          </StyledComponent>
+                        </styled.td>
+                      </CellHeader>
+                      <styled.td
+                        numeric={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "c4",
+                                "rules": Array [
+                                  [Function],
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "styled.td",
+                              "foldedComponentIds": Array [],
+                              "propTypes": Object {
+                                "alignRight": [Function],
+                                "children": [Function],
+                                "isHeader": [Function],
+                                "numeric": [Function],
+                              },
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "td",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          numeric={true}
+                        >
+                          <td
+                            className="c4"
+                          >
+                            £165.00
+                          </td>
+                        </StyledComponent>
+                      </styled.td>
+                      <styled.td
+                        numeric={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "c4",
+                                "rules": Array [
+                                  [Function],
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "styled.td",
+                              "foldedComponentIds": Array [],
+                              "propTypes": Object {
+                                "alignRight": [Function],
+                                "children": [Function],
+                                "isHeader": [Function],
+                                "numeric": [Function],
+                              },
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "td",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          numeric={true}
+                        >
+                          <td
+                            className="c4"
+                          >
+                            £85.00
+                          </td>
+                        </StyledComponent>
+                      </styled.td>
+                    </tr>
+                  </StyledComponent>
+                </styled.tr>
+                <styled.tr>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-ifAKCX",
+                          "isStatic": true,
+                          "lastClassName": "cFlEyZ",
+                          "rules": Array [
+                            "",
+                          ],
+                        },
+                        "displayName": "styled.tr",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-ifAKCX",
+                        "target": "tr",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                  >
+                    <tr
+                      className=""
+                    >
+                      <CellHeader>
+                        <styled.td
+                          as="th"
+                          bold={true}
+                          isHeader={true}
+                        >
+                          <StyledComponent
+                            as="th"
+                            bold={true}
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bxivhb",
+                                  "isStatic": false,
+                                  "lastClassName": "c4",
+                                  "rules": Array [
+                                    [Function],
+                                    [Function],
+                                  ],
+                                },
+                                "displayName": "styled.td",
+                                "foldedComponentIds": Array [],
+                                "propTypes": Object {
+                                  "alignRight": [Function],
+                                  "children": [Function],
+                                  "isHeader": [Function],
+                                  "numeric": [Function],
+                                },
+                                "render": [Function],
+                                "styledComponentId": "sc-bxivhb",
+                                "target": "td",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            isHeader={true}
+                          >
+                            <th
+                              className="c2"
+                            >
+                              March
+                            </th>
+                          </StyledComponent>
+                        </styled.td>
+                      </CellHeader>
+                      <styled.td
+                        numeric={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "c4",
+                                "rules": Array [
+                                  [Function],
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "styled.td",
+                              "foldedComponentIds": Array [],
+                              "propTypes": Object {
+                                "alignRight": [Function],
+                                "children": [Function],
+                                "isHeader": [Function],
+                                "numeric": [Function],
+                              },
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "td",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          numeric={true}
+                        >
+                          <td
+                            className="c4"
+                          >
+                            £151.00
+                          </td>
+                        </StyledComponent>
+                      </styled.td>
+                      <styled.td
+                        numeric={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "c4",
+                                "rules": Array [
+                                  [Function],
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "styled.td",
+                              "foldedComponentIds": Array [],
+                              "propTypes": Object {
+                                "alignRight": [Function],
+                                "children": [Function],
+                                "isHeader": [Function],
+                                "numeric": [Function],
+                              },
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "td",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          numeric={true}
+                        >
+                          <td
+                            className="c4"
+                          >
+                            £77.00
+                          </td>
+                        </StyledComponent>
+                      </styled.td>
+                    </tr>
+                  </StyledComponent>
+                </styled.tr>
+                <styled.tr>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-ifAKCX",
+                          "isStatic": true,
+                          "lastClassName": "cFlEyZ",
+                          "rules": Array [
+                            "",
+                          ],
+                        },
+                        "displayName": "styled.tr",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-ifAKCX",
+                        "target": "tr",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                  >
+                    <tr
+                      className=""
+                    >
+                      <CellHeader>
+                        <styled.td
+                          as="th"
+                          bold={true}
+                          isHeader={true}
+                        >
+                          <StyledComponent
+                            as="th"
+                            bold={true}
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bxivhb",
+                                  "isStatic": false,
+                                  "lastClassName": "c4",
+                                  "rules": Array [
+                                    [Function],
+                                    [Function],
+                                  ],
+                                },
+                                "displayName": "styled.td",
+                                "foldedComponentIds": Array [],
+                                "propTypes": Object {
+                                  "alignRight": [Function],
+                                  "children": [Function],
+                                  "isHeader": [Function],
+                                  "numeric": [Function],
+                                },
+                                "render": [Function],
+                                "styledComponentId": "sc-bxivhb",
+                                "target": "td",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            isHeader={true}
+                          >
+                            <th
+                              className="c2"
+                            >
+                              April
+                            </th>
+                          </StyledComponent>
+                        </styled.td>
+                      </CellHeader>
+                      <styled.td
+                        numeric={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "c4",
+                                "rules": Array [
+                                  [Function],
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "styled.td",
+                              "foldedComponentIds": Array [],
+                              "propTypes": Object {
+                                "alignRight": [Function],
+                                "children": [Function],
+                                "isHeader": [Function],
+                                "numeric": [Function],
+                              },
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "td",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          numeric={true}
+                        >
+                          <td
+                            className="c4"
+                          >
+                            £136.00
+                          </td>
+                        </StyledComponent>
+                      </styled.td>
+                      <styled.td
+                        numeric={true}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bxivhb",
+                                "isStatic": false,
+                                "lastClassName": "c4",
+                                "rules": Array [
+                                  [Function],
+                                  [Function],
+                                ],
+                              },
+                              "displayName": "styled.td",
+                              "foldedComponentIds": Array [],
+                              "propTypes": Object {
+                                "alignRight": [Function],
+                                "children": [Function],
+                                "isHeader": [Function],
+                                "numeric": [Function],
+                              },
+                              "render": [Function],
+                              "styledComponentId": "sc-bxivhb",
+                              "target": "td",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                          numeric={true}
+                        >
+                          <td
+                            className="c4"
+                          >
+                            £70.00
+                          </td>
+                        </StyledComponent>
+                      </styled.td>
+                    </tr>
+                  </StyledComponent>
+                </styled.tr>
+              </tbody>
+            </StyledComponent>
+          </styled.tbody>
+        </table>
+      </StyledComponent>
+    </styled.table>
+  </Table>
+</TableWithHeadAndNumerics>
 `;

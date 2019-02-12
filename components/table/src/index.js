@@ -1,14 +1,9 @@
-// https://govuk-elements.herokuapp.com/data/
+// https://github.com/alphagov/govuk-frontend/blob/master/src/components/table/_table.scss
 
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import {
-  FONT_SIZE,
-  LINE_HEIGHT,
-  MEDIA_QUERIES,
-  NTA_LIGHT,
-} from '@govuk-react/constants';
+import { spacing, typography } from '@govuk-react/lib';
 
 import TableHeader from './atoms/TableHeader';
 import TableBody from './atoms/TableBody';
@@ -18,51 +13,43 @@ import CellHeader from './atoms/CellHeader';
 import Cell from './atoms/Cell';
 import Row from './atoms/Row';
 
-const StyledTable = styled('table')({
-  border: 0,
-  borderCollapse: 'collapse',
-  boxSizing: 'border-box',
-  borderSpacing: 0,
-  fontFamily: NTA_LIGHT,
-  fontWeight: 400,
-  textTransform: 'none',
-  fontSize: FONT_SIZE.SIZE_14,
-  lineHeight: LINE_HEIGHT.SIZE_14,
-  width: '100%',
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    fontSize: FONT_SIZE.SIZE_16,
-    lineHeight: LINE_HEIGHT.SIZE_16,
+const StyledTable = styled('table')(
+  typography.font({ size: 19 }),
+  typography.textColour,
+  {
+    width: '100%',
+    borderSpacing: 0,
+    borderCollapse: 'collapse',
   },
-});
+  spacing.withWhiteSpace({ mb: 6 }),
+);
 
 /**
  *
  * ### Usage
  *
+ * The Table component provides a construction kit of elements to create a table
+ *
  * Component default
  * ```jsx
- * const example1Body = (
- *  <React.Fragment>
- *    <Table.Row>
- *      <Table.CellHeader>First 6 weeks</Table.CellHeader>
- *      <Table.Cell>£109.80 per week</Table.Cell>
- *    </Table.Row>
- *    <Table.Row>
- *      <Table.Cell>Next 33 weeks</Table.Cell>
- *      <Table.Cell>£109.80 per week</Table.Cell>
- *    </Table.Row>
- *    <Table.Row>
- *      <Table.Cell>Total estimated pay</Table.Cell>
- *      <Table.Cell>£4,282.20</Table.Cell>
- *    </Table.Row>
- *    <Table.Row>
- *      <Table.Cell>Tell the mother&rsquo;s employer</Table.Cell>
- *      <Table.Cell>28 days before they want to start maternity pay</Table.Cell>
- *    </Table.Row>
- *  </React.Fragment>
- * );
- *
- * <Table caption="Dates and amounts" body={example1Body} />
+ * <Table caption="Dates and amounts">
+ *  <Table.Row>
+ *    <Table.CellHeader>First 6 weeks</Table.CellHeader>
+ *    <Table.Cell>£109.80 per week</Table.Cell>
+ *  </Table.Row>
+ *  <Table.Row>
+ *    <Table.CellHeader>Next 33 weeks</Table.CellHeader>
+ *    <Table.Cell>£109.80 per week</Table.Cell>
+ *  </Table.Row>
+ *  <Table.Row>
+ *    <Table.CellHeader>Total estimated pay</Table.CellHeader>
+ *    <Table.Cell>£4,282.20</Table.Cell>
+ *  </Table.Row>
+ *  <Table.Row>
+ *    <Table.CellHeader>Tell the mother&rsquo;s employer</Table.CellHeader>
+ *    <Table.Cell>28 days before they want to start maternity pay</Table.Cell>
+ *  </Table.Row>
+ * </Table>
  * ```
  *
  * Numeric tabular data
@@ -70,68 +57,99 @@ const StyledTable = styled('table')({
  * const example2Head = (
  *   <Table.Row>
  *     <Table.CellHeader>Month you apply</Table.CellHeader>
- *     <Table.CellHeader alignRight>Rate for vehicles</Table.CellHeader>
- *     <Table.CellHeader alignRight>Rate for bicycles</Table.CellHeader>
+ *     <Table.CellHeader numeric>Rate for vehicles</Table.CellHeader>
+ *     <Table.CellHeader numeric>Rate for bicycles</Table.CellHeader>
  *   </Table.Row>
- * );
- *
- * const example2Body = (
- *   <React.Fragment>
- *     <Table.Row>
- *       <Table.CellHeader>January</Table.CellHeader>
- *       <Table.Cell alignRight>£165.00</Table.Cell>
- *       <Table.Cell alignRight>£85.00</Table.Cell>
- *     </Table.Row>
- *     <Table.Row>
- *       <Table.CellHeader>February</Table.CellHeader>
- *       <Table.Cell alignRight>£165.00</Table.Cell>
- *       <Table.Cell alignRight>£85.00</Table.Cell>
- *     </Table.Row>
- *     <Table.Row>
- *       <Table.CellHeader>March</Table.CellHeader>
- *       <Table.Cell alignRight>£151.00</Table.Cell>
- *       <Table.Cell alignRight>£77.00</Table.Cell>
- *     </Table.Row>
- *     <Table.Row>
- *       <Table.CellHeader>April</Table.CellHeader>
- *       <Table.Cell alignRight>£136.00</Table.Cell>
- *       <Table.Cell alignRight>£70.00</Table.Cell>
- *     </Table.Row>
- *   </React.Fragment>
  * );
  *
  * <Table
  *  caption="Attention, I am the caption of this ship!"
  *  head={example2Head}
- *  body={example2Body}
- * />
+ * >
+ *   <Table.Row>
+ *     <Table.CellHeader>January</Table.CellHeader>
+ *     <Table.Cell numeric>£165.00</Table.Cell>
+ *     <Table.Cell numeric>£85.00</Table.Cell>
+ *   </Table.Row>
+ *   <Table.Row>
+ *     <Table.CellHeader>February</Table.CellHeader>
+ *     <Table.Cell numeric>£165.00</Table.Cell>
+ *     <Table.Cell numeric>£85.00</Table.Cell>
+ *   </Table.Row>
+ *   <Table.Row>
+ *     <Table.CellHeader>March</Table.CellHeader>
+ *     <Table.Cell numeric>£151.00</Table.Cell>
+ *     <Table.Cell numeric>£77.00</Table.Cell>
+ *   </Table.Row>
+ *   <Table.Row>
+ *     <Table.CellHeader>April</Table.CellHeader>
+ *     <Table.Cell numeric>£136.00</Table.Cell>
+ *     <Table.Cell numeric>£70.00</Table.Cell>
+ *   </Table.Row>
+ * </Table>
+ * ```
+ *
+ * NB The govuk-frontend table component describes a way of setting custom column widths
+ * via width override classes. Currently govuk-react does not provide a direct equivalent of this
+ * functionality out of the box, however if this behaviour is desired then custom widths
+ * can be set by re-styling a component.
+ *
+ * For example;
+ * ```jsx
+ * import styled from 'styled-components';
+ *
+ * const CustomHeader = styled(Table.CellHeader)({
+ *   width: '50%',
+ * });
+ *
+ * <Table
+ *   caption="Custom header"
+ *   head={
+ *     <Table.Row>
+ *       <CustomHeader>Wide header</CustomHeader>
+ *       <Table.CellHeader>Regular</Table.CellHeader>
+ *       <Table.CellHeader>Normal</Table.CellHeader>
+ *     </Table.Row>
+ *   }
+ * >
+ *   <Table.Row>
+ *     <Table.Cell>Custom header provides a wide column here</Table.Cell>
+ *     <Table.Cell>Some value</Table.Cell>
+ *     <Table.Cell>Another</Table.Cell>
+ *   </Table.Row>
+ * </Table>
  * ```
  *
  * ### References:
- * - https://govuk-elements.herokuapp.com/data/
+ * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/table/_table.scss
  *
  */
 const Table = ({
   caption,
-  body,
+  children,
+  body = children,
   head,
   ...props
 }) => (
   <StyledTable {...props}>
-    <Caption>{caption}</Caption>
+    {caption && <Caption>{caption}</Caption>}
     {head && <TableHeader>{head}</TableHeader>}
     <TableBody>{body}</TableBody>
   </StyledTable>
 );
 
 Table.defaultProps = {
+  body: undefined,
   caption: undefined,
+  children: undefined,
   head: undefined,
 };
 
 Table.propTypes = {
-  /** Table body rows and cells */
-  body: PropTypes.node.isRequired,
+  /** Table body rows and cells (for backward compatibility) */
+  body: PropTypes.node,
+  /** Table body rows and cells (recommended way) */
+  children: PropTypes.node,
   /** Table header rows and cells */
   head: PropTypes.node,
   /** Table caption title */
@@ -141,5 +159,6 @@ Table.propTypes = {
 Table.CellHeader = CellHeader;
 Table.Row = Row;
 Table.Cell = Cell;
+Table.Header = CellHeader;
 
 export default Table;
