@@ -1,25 +1,12 @@
-// https://govuk-elements.herokuapp.com/data/
+// https://github.com/alphagov/govuk-frontend/blob/master/src/components/table/_table.scss
 
 import styled from 'styled-components';
-import {
-  FONT_SIZE,
-  LINE_HEIGHT,
-  MEDIA_QUERIES,
-  NTA_LIGHT,
-} from '@govuk-react/constants';
+import { FONT_WEIGHTS } from '@govuk-react/constants';
 
 const Caption = styled('caption')({
-  fontFamily: NTA_LIGHT,
-  fontWeight: 700,
-  fontSize: FONT_SIZE.SIZE_16,
-  lineHeight: LINE_HEIGHT.SIZE_16,
+  fontWeight: FONT_WEIGHTS.bold,
+  display: 'table-caption',
   textAlign: 'left',
-  textTransform: 'none',
-  width: '100%',
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    fontSize: FONT_SIZE.SIZE_19,
-    lineHeight: LINE_HEIGHT.SIZE_19,
-  },
 });
 
 export default Caption;
