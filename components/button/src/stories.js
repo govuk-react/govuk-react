@@ -10,6 +10,7 @@ import {
   ButtonDisabledStartIcon,
   ButtonBlue,
   ButtonWacky,
+  ButtonAsLink,
 } from './fixtures';
 import ReadMe from '../README.md';
 
@@ -32,3 +33,5 @@ examples.add('Disabled start with icon', ButtonDisabledStartIcon);
 examples.add('Custom colour', ButtonBlue);
 
 examples.add('Custom colours (all options)', ButtonWacky);
+
+examples.add('Router link button', ButtonAsLink);

@@ -2,6 +2,7 @@ import React from 'react';
 import { boolean, text } from '@storybook/addon-knobs/react';
 import { ButtonArrow } from '@govuk-react/icons';
 import { BLUE, TEXT_COLOUR, YELLOW, GREY_3, ORANGE } from 'govuk-colours';
+import { MemoryRouter, Route, Link } from 'react-router-dom';
 
 import Button from '.';
 
@@ -44,6 +45,17 @@ const ButtonWacky = () => (
   </Button>
 );
 
+const ButtonAsLink = () => (
+  <MemoryRouter>
+    <div>
+      <Button as={Link} to="/">Home Link button</Button><br />
+      <Button as={Link} to="/test">Test Link button</Button><br />
+      <Route path="/" exact render={() => <div>Home path</div>} />
+      <Route path="/test" render={() => <div>Test path</div>} />
+    </div>
+  </MemoryRouter>
+);
+
 export default Button;
 
 export {
@@ -54,4 +66,5 @@ export {
   ButtonDisabledStartIcon,
   ButtonBlue,
   ButtonWacky,
+  ButtonAsLink,
 };
