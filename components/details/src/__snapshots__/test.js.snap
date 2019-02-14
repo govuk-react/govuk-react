@@ -121,7 +121,7 @@ exports[`details matches the Details snapshot: details 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bZQynM",
+              "componentId": "sc-gzVnrw",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
@@ -140,7 +140,7 @@ exports[`details matches the Details snapshot: details 1`] = `
             "displayName": "styled.details",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bZQynM",
+            "styledComponentId": "sc-gzVnrw",
             "target": "details",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -161,7 +161,7 @@ exports[`details matches the Details snapshot: details 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-gzVnrw",
+                    "componentId": "sc-htoDjs",
                     "isStatic": true,
                     "lastClassName": "c1",
                     "rules": Array [
@@ -181,7 +181,7 @@ exports[`details matches the Details snapshot: details 1`] = `
                   "displayName": "styled.summary",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-gzVnrw",
+                  "styledComponentId": "sc-htoDjs",
                   "target": "summary",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -200,7 +200,7 @@ exports[`details matches the Details snapshot: details 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-htoDjs",
+                          "componentId": "sc-dnqmqq",
                           "isStatic": true,
                           "lastClassName": "c2",
                           "rules": Array [
@@ -210,7 +210,7 @@ exports[`details matches the Details snapshot: details 1`] = `
                         "displayName": "styled.span",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-htoDjs",
+                        "styledComponentId": "sc-dnqmqq",
                         "target": "span",
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -236,7 +236,7 @@ exports[`details matches the Details snapshot: details 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-dnqmqq",
+                    "componentId": "sc-iwsKbI",
                     "isStatic": true,
                     "lastClassName": "c3",
                     "rules": Array [
@@ -250,7 +250,7 @@ exports[`details matches the Details snapshot: details 1`] = `
                   "displayName": "styled.div",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-dnqmqq",
+                  "styledComponentId": "sc-iwsKbI",
                   "target": "div",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],

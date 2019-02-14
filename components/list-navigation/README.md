@@ -11,34 +11,22 @@ ListNavigation
 
 Simple
 ```jsx
+import Link from '@govuk-react/link';
+
 <ListNavigation>
-  <a href="/section-a">Section A</a>
-  <a href="/section-b">Section B</a>
+  <Link href="/section-a">Section A</Link>
+  <Link href="/section-b">Section B</Link>
 </ListNavigation>
 ```
 
-Current recommended approach using the `asAnchor` HOC for GDS styled links
+Using React Router with `Link` component for GDS styled links
 ```jsx
-import { asAnchor } from '@govuk-react/hoc';
-
-const AnchorTag = asAnchor('a');
-
-<ListNavigation listStyleType="square">
-  <AnchorTag href="https://example.com/link-a">Link A</AnchorTag>
-  <AnchorTag href="https://example.com/link-b">Link B</AnchorTag>
-</ListNavigation>
-```
-
-Using React Router and `asAnchor` HOC for GDS styled links
-```jsx
-import { Link } from 'react-router-dom';
-import { asAnchor } from '@govuk-react/hoc';
-
-const AnchorLink = asAnchor(Link);
+import { Link as RouterLink } from 'react-router-dom';
+import { Link } from '@govuk-react/link';
 
 <ListNavigation listStyleType="circle">
-  <AnchorLink to="/link-a">Link A</AnchorLink>
-  <AnchorLink to="/link-b">Link B</AnchorLink>
+  <Link as={RouterLink} to="/link-a">Link A</Link>
+  <Link as={RouterLink} to="/link-b">Link B</Link>
 </ListNavigation>
 ```
 
@@ -47,7 +35,6 @@ const AnchorLink = asAnchor(Link);
 
 ### TODO:
 - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
-- Consider nested anchors, should developers have to use the HOC to preserve link styling?
 - Fix active state overlaping siblings
 
 ### Properties

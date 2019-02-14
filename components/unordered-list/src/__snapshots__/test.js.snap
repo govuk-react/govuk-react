@@ -1,6 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
+.c4 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c4:link {
+  color: #005ea5;
+}
+
+.c4:visited {
+  color: #4c2c92;
+}
+
+.c4:hover {
+  color: #2b8cc4;
+}
+
+.c4:active {
+  color: #2b8cc4;
+}
+
+.c4:focus {
+  color: #0b0c0c;
+}
+
+.c4:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+  background-color: #ffbf47;
+}
+
 .c3 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -40,23 +72,20 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-.c4 {
-  color: #005ea5;
-  padding: 3px;
-  margin: -3px;
-  outline-color: transparent;
-  display: inline-block;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+@media print {
+  .c4 {
+    font-family: sans-serif;
+  }
 }
 
-.c4:focus {
-  background-color: #ffbf47;
-  outline: 3px solid #ffbf47;
-}
-
-.c4:visited {
-  color: #2e358b;
+@media print {
+  .c4[href^="/"]::after,
+  .c4[href^="http://"]::after,
+  .c4[href^="https://"]::after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    word-wrap: break-word;
+  }
 }
 
 @media print {
@@ -190,8 +219,11 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
             <li
               className="c2 c3"
             >
-              <Styled(Anchor)
+              <styled.a
                 href="http://example.com"
+                muted={false}
+                noVisitedState={false}
+                textColour={false}
               >
                 <StyledComponent
                   forwardedComponent={
@@ -199,44 +231,70 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-htpNat",
-                        "isStatic": true,
+                        "componentId": "sc-bdVaJa",
+                        "isStatic": false,
                         "lastClassName": "c4",
                         "rules": Array [
-                          "color: #005ea5; padding: 3px; margin: -3px; outline-color: transparent; display: inline-block; text-decoration: underline; :focus {
-  background-color: #ffbf47; outline: 3px solid #ffbf47;
-} :visited {
-  color: #2e358b;
+                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
 }",
+                          ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                          "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                          "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                          [Function],
+                          [Function],
+                          [Function],
                         ],
                       },
-                      "displayName": "Styled(Anchor)",
+                      "defaultProps": Object {
+                        "muted": false,
+                        "noVisitedState": false,
+                        "textColour": false,
+                      },
+                      "displayName": "styled.a",
                       "foldedComponentIds": Array [],
+                      "propTypes": undefined,
                       "render": [Function],
-                      "styledComponentId": "sc-htpNat",
-                      "target": [Function],
+                      "styledComponentId": "sc-bdVaJa",
+                      "target": "a",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
-                      Symbol(Symbol.hasInstance): [Function],
                     }
                   }
                   forwardedRef={null}
                   href="http://example.com"
+                  muted={false}
+                  noVisitedState={false}
+                  textColour={false}
                 >
-                  <Anchor
+                  <a
                     className="c4"
                     href="http://example.com"
+                    muted={false}
                   >
-                    <a
-                      className="c4"
-                      href="http://example.com"
-                    >
-                      Example 1
-                    </a>
-                  </Anchor>
+                    Example 1
+                  </a>
                 </StyledComponent>
-              </Styled(Anchor)>
+              </styled.a>
             </li>
           </StyledComponent>
         </styled.li>
@@ -276,8 +334,11 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
             <li
               className="c2 c3"
             >
-              <Styled(Anchor)
+              <styled.a
                 href="http://example.com"
+                muted={false}
+                noVisitedState={false}
+                textColour={false}
               >
                 <StyledComponent
                   forwardedComponent={
@@ -285,44 +346,70 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-htpNat",
-                        "isStatic": true,
+                        "componentId": "sc-bdVaJa",
+                        "isStatic": false,
                         "lastClassName": "c4",
                         "rules": Array [
-                          "color: #005ea5; padding: 3px; margin: -3px; outline-color: transparent; display: inline-block; text-decoration: underline; :focus {
-  background-color: #ffbf47; outline: 3px solid #ffbf47;
-} :visited {
-  color: #2e358b;
+                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
 }",
+                          ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                          "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                          "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                          [Function],
+                          [Function],
+                          [Function],
                         ],
                       },
-                      "displayName": "Styled(Anchor)",
+                      "defaultProps": Object {
+                        "muted": false,
+                        "noVisitedState": false,
+                        "textColour": false,
+                      },
+                      "displayName": "styled.a",
                       "foldedComponentIds": Array [],
+                      "propTypes": undefined,
                       "render": [Function],
-                      "styledComponentId": "sc-htpNat",
-                      "target": [Function],
+                      "styledComponentId": "sc-bdVaJa",
+                      "target": "a",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
-                      Symbol(Symbol.hasInstance): [Function],
                     }
                   }
                   forwardedRef={null}
                   href="http://example.com"
+                  muted={false}
+                  noVisitedState={false}
+                  textColour={false}
                 >
-                  <Anchor
+                  <a
                     className="c4"
                     href="http://example.com"
+                    muted={false}
                   >
-                    <a
-                      className="c4"
-                      href="http://example.com"
-                    >
-                      Example 2
-                    </a>
-                  </Anchor>
+                    Example 2
+                  </a>
                 </StyledComponent>
-              </Styled(Anchor)>
+              </styled.a>
             </li>
           </StyledComponent>
         </styled.li>
@@ -362,8 +449,11 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
             <li
               className="c2 c3"
             >
-              <Styled(Anchor)
+              <styled.a
                 href="http://example.com"
+                muted={false}
+                noVisitedState={false}
+                textColour={false}
               >
                 <StyledComponent
                   forwardedComponent={
@@ -371,44 +461,70 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-htpNat",
-                        "isStatic": true,
+                        "componentId": "sc-bdVaJa",
+                        "isStatic": false,
                         "lastClassName": "c4",
                         "rules": Array [
-                          "color: #005ea5; padding: 3px; margin: -3px; outline-color: transparent; display: inline-block; text-decoration: underline; :focus {
-  background-color: #ffbf47; outline: 3px solid #ffbf47;
-} :visited {
-  color: #2e358b;
+                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
 }",
+                          ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                          "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                          "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                          [Function],
+                          [Function],
+                          [Function],
                         ],
                       },
-                      "displayName": "Styled(Anchor)",
+                      "defaultProps": Object {
+                        "muted": false,
+                        "noVisitedState": false,
+                        "textColour": false,
+                      },
+                      "displayName": "styled.a",
                       "foldedComponentIds": Array [],
+                      "propTypes": undefined,
                       "render": [Function],
-                      "styledComponentId": "sc-htpNat",
-                      "target": [Function],
+                      "styledComponentId": "sc-bdVaJa",
+                      "target": "a",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
-                      Symbol(Symbol.hasInstance): [Function],
                     }
                   }
                   forwardedRef={null}
                   href="http://example.com"
+                  muted={false}
+                  noVisitedState={false}
+                  textColour={false}
                 >
-                  <Anchor
+                  <a
                     className="c4"
                     href="http://example.com"
+                    muted={false}
                   >
-                    <a
-                      className="c4"
-                      href="http://example.com"
-                    >
-                      Example 3
-                    </a>
-                  </Anchor>
+                    Example 3
+                  </a>
                 </StyledComponent>
-              </Styled(Anchor)>
+              </styled.a>
             </li>
           </StyledComponent>
         </styled.li>

@@ -1,42 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { BLUE, PURPLE, YELLOW } from 'govuk-colours';
+import Link from '@govuk-react/link';
 
-const asAnchor = (AnchorType) => {
-  const Anchor = props => (
-    <AnchorType {...props}>{props.children}</AnchorType>
-  );
-
-  Anchor.propTypes = {
-    children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
-      .isRequired,
-    onClick: PropTypes.func,
-    disabled: PropTypes.bool,
-  };
-
-  Anchor.defaultProps = {
-    onClick: undefined,
-    disabled: undefined,
-  };
-
-  const StyledHoc = styled(Anchor)({
-    color: BLUE,
-    padding: '3px',
-    margin: '-3px',
-    outlineColor: 'transparent',
-    display: 'inline-block',
-    textDecoration: 'underline',
-    ':focus': {
-      backgroundColor: YELLOW,
-      outline: `3px solid ${YELLOW}`,
-    },
-    ':visited': {
-      color: PURPLE,
-    },
-  });
-
-  return StyledHoc;
-};
+const asAnchor = AnchorType => (props => <Link as={AnchorType} {...props} />);
 
 export default asAnchor;

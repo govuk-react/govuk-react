@@ -5,9 +5,9 @@ import Header, { H1, H2 } from '@govuk-react/header';
 import InputField from '@govuk-react/input-field';
 import Button from '@govuk-react/button';
 import LabelText from '@govuk-react/label-text';
+import Link from '@govuk-react/link';
 import Radio from '@govuk-react/radio';
 import PhaseBanner from '@govuk-react/phase-banner';
-import { asAnchor } from '@govuk-react/hoc';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 
 import LoadingBox from '.';
@@ -18,7 +18,6 @@ const examples = storiesOf('Misc/LoadingBox/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-const AnchorLink = asAnchor('a');
 const spacer = <p style={{ marginTop: 0 }}>&nbsp;</p>;
 stories.addDecorator(withKnobs);
 
@@ -35,7 +34,7 @@ stories.add('Component default', () => (
     <div style={{ padding: '0 12px' }}>
       <PhaseBanner level="alpha">
       This part of GOV.UK is being rebuilt &#8211;{' '}
-        <AnchorLink href="https://example.com">find out what that means</AnchorLink>
+        <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {spacer}
       <Header level={2}>Toggle loading settings under `knobs`</Header>
@@ -60,7 +59,7 @@ examples.add('preset to loading', () => (
     <div style={{ padding: '0 12px' }}>
       <PhaseBanner level="alpha">
       This part of GOV.UK is being rebuilt &#8211;{' '}
-        <AnchorLink href="https://example.com">find out what that means</AnchorLink>
+        <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {spacer}
       <Header level={2}>Toggle loading settings under `knobs`</Header>
@@ -85,7 +84,7 @@ examples.add('LoadingBox (long)', () => (
     <div style={{ padding: '0 12px' }}>
       <PhaseBanner level="alpha">
       This part of GOV.UK is being rebuilt &#8211;{' '}
-        <AnchorLink href="https://example.com">find out what that means</AnchorLink>
+        <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {spacer}
       <Header level={2}>Toggle loading settings under `knobs`</Header>

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
-import ListNavigation from './';
+import ListNavigation from '.';
 
 const example = 'example';
 const wrapper = <ListNavigation>{example}</ListNavigation>;

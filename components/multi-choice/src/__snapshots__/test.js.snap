@@ -127,7 +127,7 @@ exports[`MultiChoice matches snapshot 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-iwsKbI",
+          "componentId": "sc-gZMcBi",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -142,7 +142,7 @@ exports[`MultiChoice matches snapshot 1`] = `
           "padding": [Function],
         },
         "render": [Function],
-        "styledComponentId": "sc-iwsKbI",
+        "styledComponentId": "sc-gZMcBi",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -183,7 +183,7 @@ exports[`MultiChoice matches snapshot 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-dnqmqq",
+                "componentId": "sc-iwsKbI",
                 "isStatic": false,
                 "lastClassName": "c1",
                 "rules": Array [
@@ -196,7 +196,7 @@ exports[`MultiChoice matches snapshot 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-dnqmqq",
+              "styledComponentId": "sc-iwsKbI",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -215,7 +215,7 @@ exports[`MultiChoice matches snapshot 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-ifAKCX",
+                      "componentId": "sc-EHOje",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
@@ -230,7 +230,7 @@ exports[`MultiChoice matches snapshot 1`] = `
                       "padding": [Function],
                     },
                     "render": [Function],
-                    "styledComponentId": "sc-ifAKCX",
+                    "styledComponentId": "sc-EHOje",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -253,7 +253,7 @@ exports[`MultiChoice matches snapshot 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-bxivhb",
+                            "componentId": "sc-ifAKCX",
                             "isStatic": false,
                             "lastClassName": "c3",
                             "rules": Array [
@@ -266,7 +266,7 @@ exports[`MultiChoice matches snapshot 1`] = `
                           "displayName": "styled.span",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-bxivhb",
+                          "styledComponentId": "sc-ifAKCX",
                           "target": "span",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -292,9 +292,9 @@ exports[`MultiChoice matches snapshot 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htoDjs",
+                      "componentId": "sc-dnqmqq",
                       "isStatic": false,
-                      "lastClassName": "bZzhDu",
+                      "lastClassName": "bDsesi",
                       "rules": Array [
                         [Function],
                       ],
@@ -307,7 +307,7 @@ exports[`MultiChoice matches snapshot 1`] = `
                       "padding": [Function],
                     },
                     "render": [Function],
-                    "styledComponentId": "sc-htoDjs",
+                    "styledComponentId": "sc-dnqmqq",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -330,7 +330,7 @@ exports[`MultiChoice matches snapshot 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-gzVnrw",
+                            "componentId": "sc-htoDjs",
                             "isStatic": true,
                             "lastClassName": "c4",
                             "rules": Array [
@@ -345,7 +345,7 @@ exports[`MultiChoice matches snapshot 1`] = `
                           "displayName": "styled.span",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-gzVnrw",
+                          "styledComponentId": "sc-htoDjs",
                           "target": "span",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -371,9 +371,9 @@ exports[`MultiChoice matches snapshot 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bZQynM",
+                      "componentId": "sc-gzVnrw",
                       "isStatic": false,
-                      "lastClassName": "bOrPFB",
+                      "lastClassName": "ibZhkv",
                       "rules": Array [
                         [Function],
                       ],
@@ -386,7 +386,7 @@ exports[`MultiChoice matches snapshot 1`] = `
                       "padding": [Function],
                     },
                     "render": [Function],
-                    "styledComponentId": "sc-bZQynM",
+                    "styledComponentId": "sc-gzVnrw",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -409,7 +409,7 @@ exports[`MultiChoice matches snapshot 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-EHOje",
+                            "componentId": "sc-bZQynM",
                             "isStatic": true,
                             "lastClassName": "c5",
                             "rules": Array [
@@ -424,7 +424,7 @@ exports[`MultiChoice matches snapshot 1`] = `
                           "displayName": "styled.span",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-EHOje",
+                          "styledComponentId": "sc-bZQynM",
                           "target": "span",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],

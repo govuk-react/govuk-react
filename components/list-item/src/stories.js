@@ -2,12 +2,11 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
-import { asAnchor } from '@govuk-react/hoc';
+import Link from '@govuk-react/link';
 
 import ListItem from '.';
 import ReadMe from '../README.md';
 
-const AnchorTag = asAnchor('a');
 const stories = storiesOf('Typography/ListItem', module);
 const examples = storiesOf('Typography/ListItem/Examples', module);
 
@@ -20,6 +19,6 @@ stories.add('Component default', () => (
 
 examples.add('With anchor', () => (
   <ListItem>
-    <AnchorTag href="https://www.google.com/">{text('Children', 'List item example')}</AnchorTag>
+    <Link href="https://www.google.com/">{text('Children', 'List item example')}</Link>
   </ListItem>
 ));

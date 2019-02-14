@@ -63,7 +63,7 @@ describe('error summary', () => {
     });
   });
 
-  it('renders with defaultProps', () => {
+  it.skip('renders with defaultProps', () => {
     const wrapper = mount(<ErrorSummary
       heading={heading}
       errors={errors}

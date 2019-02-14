@@ -12,13 +12,12 @@ DocumentFooterMetadata
 
 Simple
 ```jsx
-import { asAnchor } from '@govuk-react/hoc';
+import { Link } from '@govuk-react/link';
 
-const AnchorTag = asAnchor('a');
 const fromData = [
-  <AnchorTag href="/government/organisations/ministry-of-defence">
+  <Link href="/government/organisations/ministry-of-defence">
     Ministry of Defence
-  </AnchorTag>,
+  </Link>,
 ];
 
 <DocumentFooterMetadata from={fromData} />
@@ -27,17 +26,16 @@ const fromData = [
 
 DFM From & part of example
 ```jsx
-import { asAnchor } from '@govuk-react/hoc';
+import { Link } from '@govuk-react/link';
 
-const AnchorTag = asAnchor('a');
 const fromData = [
-  <AnchorTag href="/government/organisations/ministry-of-defence">
+  <Link href="/government/organisations/ministry-of-defence">
     Ministry of Defence
-  </AnchorTag>,
+  </Link>,
 ];
 const partOfData = [
-  <AnchorTag href="/government/topics/energy">Energy</AnchorTag>,
-  <AnchorTag href="/government/topics/environment">Environment</AnchorTag>,
+  <Link href="/government/topics/energy">Energy</Link>,
+  <Link href="/government/topics/environment">Environment</Link>,
 ];
 
 <DocumentFooterMetadata from={fromData} partOf={partOfData} />
@@ -46,19 +44,18 @@ const partOfData = [
 
 DFM From & other data example
 ```jsx
-import { asAnchor } from '@govuk-react/hoc';
+import { Link } from '@govuk-react/link';
 
-const AnchorTag = asAnchor('a');
 const fromData = [
-  <AnchorTag href="/government/organisations/ministry-of-defence">
+  <Link href="/government/organisations/ministry-of-defence">
     Ministry of Defence
-  </AnchorTag>,
+  </Link>,
 ];
 const otherData = [
   {
     id: 0,
     title: 'Consultation type',
-    content: <AnchorTag href="/government/publications">Open</AnchorTag>,
+    content: <Link href="/government/publications">Open</Link>,
   },
   {
     id: 1,

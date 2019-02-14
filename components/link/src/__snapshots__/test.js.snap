@@ -1,0 +1,322 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link all options view matches snapshot: link with all options 1`] = `
+.c0 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0:link {
+  color: #005ea5;
+}
+
+.c0:visited {
+  color: #4c2c92;
+}
+
+.c0:hover {
+  color: #2b8cc4;
+}
+
+.c0:active {
+  color: #2b8cc4;
+}
+
+.c0:focus {
+  color: #0b0c0c;
+}
+
+.c0:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+  background-color: #ffbf47;
+}
+
+.c0:link,
+.c0:visited,
+.c0:hover,
+.c0:active {
+  color: #6f777b;
+}
+
+.c0:focus {
+  color: #0b0c0c;
+}
+
+.c0:link,
+.c0:visited,
+.c0:hover,
+.c0:active,
+.c0:focus {
+  color: #0b0c0c;
+}
+
+.c0:link {
+  color: #005ea5;
+}
+
+.c0:visited {
+  color: #005ea5;
+}
+
+.c0:hover {
+  color: #2b8cc4;
+}
+
+.c0:active {
+  color: #2b8cc4;
+}
+
+.c0:focus {
+  color: #0b0c0c;
+}
+
+@media print {
+  .c0 {
+    font-family: sans-serif;
+  }
+}
+
+@media print {
+  .c0[href^="/"]::after,
+  .c0[href^="http://"]::after,
+  .c0[href^="https://"]::after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    word-wrap: break-word;
+  }
+}
+
+@media print {
+  .c0:link,
+  .c0:visited,
+  .c0:hover,
+  .c0:active,
+  .c0:focus {
+    color: #000;
+  }
+}
+
+<LinkWithAllOptionsOn>
+  <LinkDocumented
+    href="#"
+    muted={true}
+    noVisitedState={true}
+    textColour={true}
+  >
+    <styled.a
+      href="#"
+      muted={true}
+      noVisitedState={true}
+      textColour={true}
+    >
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                [Function],
+                [Function],
+                [Function],
+              ],
+            },
+            "defaultProps": Object {
+              "muted": false,
+              "noVisitedState": false,
+              "textColour": false,
+            },
+            "displayName": "styled.a",
+            "foldedComponentIds": Array [],
+            "propTypes": undefined,
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "a",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        href="#"
+        muted={true}
+        noVisitedState={true}
+        textColour={true}
+      >
+        <a
+          className="c0"
+          href="#"
+          muted={true}
+        >
+          Link example
+        </a>
+      </StyledComponent>
+    </styled.a>
+  </LinkDocumented>
+</LinkWithAllOptionsOn>
+`;
+
+exports[`Link basic view matches snapshot: plain link 1`] = `
+.c0 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0:link {
+  color: #005ea5;
+}
+
+.c0:visited {
+  color: #4c2c92;
+}
+
+.c0:hover {
+  color: #2b8cc4;
+}
+
+.c0:active {
+  color: #2b8cc4;
+}
+
+.c0:focus {
+  color: #0b0c0c;
+}
+
+.c0:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+  background-color: #ffbf47;
+}
+
+@media print {
+  .c0 {
+    font-family: sans-serif;
+  }
+}
+
+@media print {
+  .c0[href^="/"]::after,
+  .c0[href^="http://"]::after,
+  .c0[href^="https://"]::after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    word-wrap: break-word;
+  }
+}
+
+<_default>
+  <LinkDocumented
+    href="#"
+    muted={false}
+    noVisitedState={false}
+    textColour={false}
+  >
+    <styled.a
+      href="#"
+      muted={false}
+      noVisitedState={false}
+      textColour={false}
+    >
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                [Function],
+                [Function],
+                [Function],
+              ],
+            },
+            "defaultProps": Object {
+              "muted": false,
+              "noVisitedState": false,
+              "textColour": false,
+            },
+            "displayName": "styled.a",
+            "foldedComponentIds": Array [],
+            "propTypes": undefined,
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "a",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        href="#"
+        muted={false}
+        noVisitedState={false}
+        textColour={false}
+      >
+        <a
+          className="c0"
+          href="#"
+          muted={false}
+        >
+          Link example
+        </a>
+      </StyledComponent>
+    </styled.a>
+  </LinkDocumented>
+</_default>
+`;

@@ -170,7 +170,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-gqjmRU",
+          "componentId": "sc-VigVT",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -185,7 +185,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
           "padding": [Function],
         },
         "render": [Function],
-        "styledComponentId": "sc-gqjmRU",
+        "styledComponentId": "sc-VigVT",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -230,7 +230,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-ifAKCX",
+                "componentId": "sc-EHOje",
                 "isStatic": false,
                 "lastClassName": "c1",
                 "rules": Array [
@@ -245,7 +245,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                 "padding": [Function],
               },
               "render": [Function],
-              "styledComponentId": "sc-ifAKCX",
+              "styledComponentId": "sc-EHOje",
               "target": [Function],
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -274,7 +274,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bxivhb",
+                      "componentId": "sc-ifAKCX",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
@@ -287,7 +287,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                     "displayName": "styled.label",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bxivhb",
+                    "styledComponentId": "sc-ifAKCX",
                     "target": "label",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -306,7 +306,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-bZQynM",
+                            "componentId": "sc-gzVnrw",
                             "isStatic": false,
                             "lastClassName": "c3",
                             "rules": Array [
@@ -321,7 +321,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                             "padding": [Function],
                           },
                           "render": [Function],
-                          "styledComponentId": "sc-bZQynM",
+                          "styledComponentId": "sc-gzVnrw",
                           "target": [Function],
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -344,7 +344,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-EHOje",
+                                  "componentId": "sc-bZQynM",
                                   "isStatic": false,
                                   "lastClassName": "c4",
                                   "rules": Array [
@@ -357,7 +357,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                                 "displayName": "styled.span",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-EHOje",
+                                "styledComponentId": "sc-bZQynM",
                                 "target": "span",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -383,9 +383,9 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-iwsKbI",
+                            "componentId": "sc-gZMcBi",
                             "isStatic": false,
-                            "lastClassName": "jQhHGA",
+                            "lastClassName": "giNnHm",
                             "rules": Array [
                               [Function],
                             ],
@@ -398,7 +398,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                             "padding": [Function],
                           },
                           "render": [Function],
-                          "styledComponentId": "sc-iwsKbI",
+                          "styledComponentId": "sc-gZMcBi",
                           "target": [Function],
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -421,7 +421,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-dnqmqq",
+                                  "componentId": "sc-iwsKbI",
                                   "isStatic": true,
                                   "lastClassName": "c5",
                                   "rules": Array [
@@ -436,7 +436,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                                 "displayName": "styled.span",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-dnqmqq",
+                                "styledComponentId": "sc-iwsKbI",
                                 "target": "span",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -462,9 +462,9 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-htoDjs",
+                            "componentId": "sc-dnqmqq",
                             "isStatic": false,
-                            "lastClassName": "bZzhDu",
+                            "lastClassName": "bDsesi",
                             "rules": Array [
                               [Function],
                             ],
@@ -477,7 +477,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                             "padding": [Function],
                           },
                           "render": [Function],
-                          "styledComponentId": "sc-htoDjs",
+                          "styledComponentId": "sc-dnqmqq",
                           "target": [Function],
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -500,7 +500,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-gzVnrw",
+                                  "componentId": "sc-htoDjs",
                                   "isStatic": true,
                                   "lastClassName": "c6",
                                   "rules": Array [
@@ -515,7 +515,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                                 "displayName": "styled.span",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-gzVnrw",
+                                "styledComponentId": "sc-htoDjs",
                                 "target": "span",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -544,7 +544,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-gZMcBi",
+                            "componentId": "sc-gqjmRU",
                             "isStatic": false,
                             "lastClassName": "c7",
                             "rules": Array [
@@ -559,7 +559,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                           "displayName": "styled.select",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-gZMcBi",
+                          "styledComponentId": "sc-gqjmRU",
                           "target": "select",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -690,7 +690,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-gqjmRU",
+          "componentId": "sc-VigVT",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -705,7 +705,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
           "padding": [Function],
         },
         "render": [Function],
-        "styledComponentId": "sc-gqjmRU",
+        "styledComponentId": "sc-VigVT",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -732,7 +732,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-ifAKCX",
+                "componentId": "sc-EHOje",
                 "isStatic": false,
                 "lastClassName": "c1",
                 "rules": Array [
@@ -747,7 +747,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
                 "padding": [Function],
               },
               "render": [Function],
-              "styledComponentId": "sc-ifAKCX",
+              "styledComponentId": "sc-EHOje",
               "target": [Function],
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -770,7 +770,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bxivhb",
+                      "componentId": "sc-ifAKCX",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
@@ -783,7 +783,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
                     "displayName": "styled.label",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bxivhb",
+                    "styledComponentId": "sc-ifAKCX",
                     "target": "label",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -802,7 +802,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-bZQynM",
+                            "componentId": "sc-gzVnrw",
                             "isStatic": false,
                             "lastClassName": "c3",
                             "rules": Array [
@@ -817,7 +817,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
                             "padding": [Function],
                           },
                           "render": [Function],
-                          "styledComponentId": "sc-bZQynM",
+                          "styledComponentId": "sc-gzVnrw",
                           "target": [Function],
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -840,7 +840,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-EHOje",
+                                  "componentId": "sc-bZQynM",
                                   "isStatic": false,
                                   "lastClassName": "c4",
                                   "rules": Array [
@@ -853,7 +853,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
                                 "displayName": "styled.span",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-EHOje",
+                                "styledComponentId": "sc-bZQynM",
                                 "target": "span",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -879,7 +879,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-gZMcBi",
+                            "componentId": "sc-gqjmRU",
                             "isStatic": false,
                             "lastClassName": "c5",
                             "rules": Array [
@@ -894,7 +894,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
                           "displayName": "styled.select",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-gZMcBi",
+                          "styledComponentId": "sc-gqjmRU",
                           "target": "select",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],

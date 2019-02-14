@@ -90,13 +90,9 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 }
 
 .c9 {
-  color: #005ea5;
-  padding: 3px;
-  margin: -3px;
-  outline-color: transparent;
-  display: inline-block;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -115,13 +111,30 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   padding-bottom: 2px;
 }
 
-.c9:focus {
-  background-color: #ffbf47;
-  outline: 3px solid #ffbf47;
+.c9:link {
+  color: #005ea5;
 }
 
 .c9:visited {
-  color: #2e358b;
+  color: #4c2c92;
+}
+
+.c9:hover {
+  color: #2b8cc4;
+}
+
+.c9:active {
+  color: #2b8cc4;
+}
+
+.c9:focus {
+  color: #0b0c0c;
+}
+
+.c9:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+  background-color: #ffbf47;
 }
 
 .c9:visited {
@@ -330,6 +343,22 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 @media only screen and (min-width:641px) {
   .c6 {
     margin-bottom: 0;
+  }
+}
+
+@media print {
+  .c9 {
+    font-family: sans-serif;
+  }
+}
+
+@media print {
+  .c9[href^="/"]::after,
+  .c9[href^="http://"]::after,
+  .c9[href^="https://"]::after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    word-wrap: break-word;
   }
 }
 
@@ -545,9 +574,9 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-ifAKCX",
+                          "componentId": "sc-EHOje",
                           "isStatic": false,
-                          "lastClassName": "cFlEyZ",
+                          "lastClassName": "jvzENE",
                           "rules": Array [
                             [Function],
                           ],
@@ -560,7 +589,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                           "padding": [Function],
                         },
                         "render": [Function],
-                        "styledComponentId": "sc-ifAKCX",
+                        "styledComponentId": "sc-EHOje",
                         "target": [Function],
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -586,7 +615,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-bxivhb",
+                                "componentId": "sc-ifAKCX",
                                 "isStatic": false,
                                 "lastClassName": "c2",
                                 "rules": Array [
@@ -601,7 +630,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                               "displayName": "Styled(Component)",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-bxivhb",
+                              "styledComponentId": "sc-ifAKCX",
                               "target": [Function],
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -636,7 +665,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-gzVnrw",
+                          "componentId": "sc-htoDjs",
                           "isStatic": false,
                           "lastClassName": "c3",
                           "rules": Array [
@@ -651,7 +680,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                           "padding": [Function],
                         },
                         "render": [Function],
-                        "styledComponentId": "sc-gzVnrw",
+                        "styledComponentId": "sc-htoDjs",
                         "target": [Function],
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -710,7 +739,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-bZQynM",
+                                "componentId": "sc-gzVnrw",
                                 "isStatic": false,
                                 "lastClassName": "c4",
                                 "rules": Array [
@@ -756,7 +785,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                                 "thematicBreak": "hr",
                                 "virtualHtml": [Function],
                               },
-                              "styledComponentId": "sc-bZQynM",
+                              "styledComponentId": "sc-gzVnrw",
                               "target": [Function],
                               "toString": [Function],
                               "types": Array [
@@ -943,9 +972,12 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                             <li
                               className="c7 c8"
                             >
-                              <Styled(Styled(Anchor))
+                              <Styled(styled.a)
+                                muted={false}
+                                noVisitedState={false}
                                 onClick={[Function]}
                                 tabIndex={1}
+                                textColour={false}
                               >
                                 <StyledComponent
                                   forwardedComponent={
@@ -954,14 +986,36 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-gZMcBi",
-                                        "isStatic": true,
+                                        "isStatic": false,
                                         "lastClassName": "c9",
                                         "rules": Array [
-                                          "color: #005ea5; padding: 3px; margin: -3px; outline-color: transparent; display: inline-block; text-decoration: underline; :focus {
-  background-color: #ffbf47; outline: 3px solid #ffbf47;
-} :visited {
-  color: #2e358b;
+                                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
 }",
+                                          ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                                          "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                                          "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                                          [Function],
+                                          [Function],
+                                          [Function],
                                           "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-weight: 700; margin-bottom: 5px; text-decoration: underline; text-decoration-skip-ink: none; text-transform: none; cursor: pointer; font-size: 16px; line-height: 1.25; :visited {
   color: #b10e1e;
 } @media only screen and (min-width: 641px) {
@@ -969,38 +1023,41 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 } color: #b10e1e; padding-top: 4px; padding-bottom: 2px;",
                                         ],
                                       },
-                                      "displayName": "Styled(Styled(Anchor))",
+                                      "defaultProps": Object {
+                                        "muted": false,
+                                        "noVisitedState": false,
+                                        "textColour": false,
+                                      },
+                                      "displayName": "Styled(styled.a)",
                                       "foldedComponentIds": Array [
-                                        "sc-iwsKbI",
+                                        "sc-bdVaJa",
                                       ],
+                                      "propTypes": undefined,
                                       "render": [Function],
                                       "styledComponentId": "sc-gZMcBi",
-                                      "target": [Function],
+                                      "target": "a",
                                       "toString": [Function],
                                       "warnTooManyClasses": [Function],
                                       "withComponent": [Function],
-                                      Symbol(Symbol.hasInstance): [Function],
                                     }
                                   }
                                   forwardedRef={null}
+                                  muted={false}
+                                  noVisitedState={false}
                                   onClick={[Function]}
                                   tabIndex={1}
+                                  textColour={false}
                                 >
-                                  <Anchor
+                                  <a
                                     className="c9"
+                                    muted={false}
                                     onClick={[Function]}
                                     tabIndex={1}
                                   >
-                                    <a
-                                      className="c9"
-                                      onClick={[Function]}
-                                      tabIndex={1}
-                                    >
-                                      National Insurance number error
-                                    </a>
-                                  </Anchor>
+                                    National Insurance number error
+                                  </a>
                                 </StyledComponent>
-                              </Styled(Styled(Anchor))>
+                              </Styled(styled.a)>
                             </li>
                           </StyledComponent>
                         </styled.li>
@@ -1042,9 +1099,12 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                             <li
                               className="c7 c8"
                             >
-                              <Styled(Styled(Anchor))
+                              <Styled(styled.a)
+                                muted={false}
+                                noVisitedState={false}
                                 onClick={[Function]}
                                 tabIndex={2}
+                                textColour={false}
                               >
                                 <StyledComponent
                                   forwardedComponent={
@@ -1053,14 +1113,36 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-gZMcBi",
-                                        "isStatic": true,
+                                        "isStatic": false,
                                         "lastClassName": "c9",
                                         "rules": Array [
-                                          "color: #005ea5; padding: 3px; margin: -3px; outline-color: transparent; display: inline-block; text-decoration: underline; :focus {
-  background-color: #ffbf47; outline: 3px solid #ffbf47;
-} :visited {
-  color: #2e358b;
+                                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
 }",
+                                          ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                                          "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                                          "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                                          [Function],
+                                          [Function],
+                                          [Function],
                                           "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-weight: 700; margin-bottom: 5px; text-decoration: underline; text-decoration-skip-ink: none; text-transform: none; cursor: pointer; font-size: 16px; line-height: 1.25; :visited {
   color: #b10e1e;
 } @media only screen and (min-width: 641px) {
@@ -1068,38 +1150,41 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 } color: #b10e1e; padding-top: 4px; padding-bottom: 2px;",
                                         ],
                                       },
-                                      "displayName": "Styled(Styled(Anchor))",
+                                      "defaultProps": Object {
+                                        "muted": false,
+                                        "noVisitedState": false,
+                                        "textColour": false,
+                                      },
+                                      "displayName": "Styled(styled.a)",
                                       "foldedComponentIds": Array [
-                                        "sc-iwsKbI",
+                                        "sc-bdVaJa",
                                       ],
+                                      "propTypes": undefined,
                                       "render": [Function],
                                       "styledComponentId": "sc-gZMcBi",
-                                      "target": [Function],
+                                      "target": "a",
                                       "toString": [Function],
                                       "warnTooManyClasses": [Function],
                                       "withComponent": [Function],
-                                      Symbol(Symbol.hasInstance): [Function],
                                     }
                                   }
                                   forwardedRef={null}
+                                  muted={false}
+                                  noVisitedState={false}
                                   onClick={[Function]}
                                   tabIndex={2}
+                                  textColour={false}
                                 >
-                                  <Anchor
+                                  <a
                                     className="c9"
+                                    muted={false}
                                     onClick={[Function]}
                                     tabIndex={2}
                                   >
-                                    <a
-                                      className="c9"
-                                      onClick={[Function]}
-                                      tabIndex={2}
-                                    >
-                                      Description of what you saw error
-                                    </a>
-                                  </Anchor>
+                                    Description of what you saw error
+                                  </a>
                                 </StyledComponent>
-                              </Styled(Styled(Anchor))>
+                              </Styled(styled.a)>
                             </li>
                           </StyledComponent>
                         </styled.li>

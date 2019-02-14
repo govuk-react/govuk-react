@@ -190,7 +190,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-jzJRlG",
+          "componentId": "sc-cSHVUG",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -205,7 +205,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
           "padding": [Function],
         },
         "render": [Function],
-        "styledComponentId": "sc-jzJRlG",
+        "styledComponentId": "sc-cSHVUG",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -245,7 +245,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-fjdhpX",
+                "componentId": "sc-jzJRlG",
                 "isStatic": false,
                 "lastClassName": "c1",
                 "rules": Array [
@@ -256,7 +256,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-fjdhpX",
+              "styledComponentId": "sc-jzJRlG",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -278,7 +278,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-ifAKCX",
+                      "componentId": "sc-EHOje",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
@@ -293,7 +293,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                       "padding": [Function],
                     },
                     "render": [Function],
-                    "styledComponentId": "sc-ifAKCX",
+                    "styledComponentId": "sc-EHOje",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -319,7 +319,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-bxivhb",
+                            "componentId": "sc-ifAKCX",
                             "isStatic": false,
                             "lastClassName": "c3",
                             "rules": Array [
@@ -332,7 +332,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                           "displayName": "styled.span",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-bxivhb",
+                          "styledComponentId": "sc-ifAKCX",
                           "target": "span",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -361,9 +361,9 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bZQynM",
+                      "componentId": "sc-gzVnrw",
                       "isStatic": false,
-                      "lastClassName": "bOrPFB",
+                      "lastClassName": "ibZhkv",
                       "rules": Array [
                         [Function],
                       ],
@@ -376,7 +376,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                       "padding": [Function],
                     },
                     "render": [Function],
-                    "styledComponentId": "sc-bZQynM",
+                    "styledComponentId": "sc-gzVnrw",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -402,7 +402,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-EHOje",
+                            "componentId": "sc-bZQynM",
                             "isStatic": true,
                             "lastClassName": "c4",
                             "rules": Array [
@@ -417,7 +417,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                           "displayName": "styled.span",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-EHOje",
+                          "styledComponentId": "sc-bZQynM",
                           "target": "span",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -493,7 +493,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-jTzLTM",
+                          "componentId": "sc-fjdhpX",
                           "isStatic": true,
                           "lastClassName": "c5",
                           "rules": Array [
@@ -503,7 +503,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                         "displayName": "styled.div",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-jTzLTM",
+                        "styledComponentId": "sc-fjdhpX",
                         "target": "div",
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -524,7 +524,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-VigVT",
+                                "componentId": "sc-jTzLTM",
                                 "isStatic": false,
                                 "lastClassName": "c9",
                                 "rules": Array [
@@ -535,7 +535,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                               },
                               "displayName": "Styled(Styled(Label))",
                               "foldedComponentIds": Array [
-                                "sc-gqjmRU",
+                                "sc-VigVT",
                               ],
                               "propTypes": Object {
                                 "margin": [Function],
@@ -543,7 +543,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                 "padding": [Function],
                               },
                               "render": [Function],
-                              "styledComponentId": "sc-VigVT",
+                              "styledComponentId": "sc-jTzLTM",
                               "target": [Function],
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -569,7 +569,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-gZMcBi",
+                                      "componentId": "sc-gqjmRU",
                                       "isStatic": false,
                                       "lastClassName": "c7",
                                       "rules": Array [
@@ -582,7 +582,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                     "displayName": "styled.label",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-gZMcBi",
+                                    "styledComponentId": "sc-gqjmRU",
                                     "target": "label",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -602,7 +602,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-ifAKCX",
+                                            "componentId": "sc-EHOje",
                                             "isStatic": false,
                                             "lastClassName": "c2",
                                             "rules": Array [
@@ -617,7 +617,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                             "padding": [Function],
                                           },
                                           "render": [Function],
-                                          "styledComponentId": "sc-ifAKCX",
+                                          "styledComponentId": "sc-EHOje",
                                           "target": [Function],
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -640,7 +640,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-bxivhb",
+                                                  "componentId": "sc-ifAKCX",
                                                   "isStatic": false,
                                                   "lastClassName": "c3",
                                                   "rules": Array [
@@ -653,7 +653,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                                 "displayName": "styled.span",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-bxivhb",
+                                                "styledComponentId": "sc-ifAKCX",
                                                 "target": "span",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -686,7 +686,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-dnqmqq",
+                                            "componentId": "sc-iwsKbI",
                                             "isStatic": false,
                                             "lastClassName": "c8",
                                             "rules": Array [
@@ -709,7 +709,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                           "displayName": "styled.input",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-dnqmqq",
+                                          "styledComponentId": "sc-iwsKbI",
                                           "target": "input",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -746,7 +746,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-VigVT",
+                                "componentId": "sc-jTzLTM",
                                 "isStatic": false,
                                 "lastClassName": "c9",
                                 "rules": Array [
@@ -757,7 +757,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                               },
                               "displayName": "Styled(Styled(Label))",
                               "foldedComponentIds": Array [
-                                "sc-gqjmRU",
+                                "sc-VigVT",
                               ],
                               "propTypes": Object {
                                 "margin": [Function],
@@ -765,7 +765,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                 "padding": [Function],
                               },
                               "render": [Function],
-                              "styledComponentId": "sc-VigVT",
+                              "styledComponentId": "sc-jTzLTM",
                               "target": [Function],
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -791,7 +791,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-gZMcBi",
+                                      "componentId": "sc-gqjmRU",
                                       "isStatic": false,
                                       "lastClassName": "c7",
                                       "rules": Array [
@@ -804,7 +804,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                     "displayName": "styled.label",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-gZMcBi",
+                                    "styledComponentId": "sc-gqjmRU",
                                     "target": "label",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -824,7 +824,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-ifAKCX",
+                                            "componentId": "sc-EHOje",
                                             "isStatic": false,
                                             "lastClassName": "c2",
                                             "rules": Array [
@@ -839,7 +839,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                             "padding": [Function],
                                           },
                                           "render": [Function],
-                                          "styledComponentId": "sc-ifAKCX",
+                                          "styledComponentId": "sc-EHOje",
                                           "target": [Function],
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -862,7 +862,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-bxivhb",
+                                                  "componentId": "sc-ifAKCX",
                                                   "isStatic": false,
                                                   "lastClassName": "c3",
                                                   "rules": Array [
@@ -875,7 +875,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                                 "displayName": "styled.span",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-bxivhb",
+                                                "styledComponentId": "sc-ifAKCX",
                                                 "target": "span",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -908,7 +908,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-dnqmqq",
+                                            "componentId": "sc-iwsKbI",
                                             "isStatic": false,
                                             "lastClassName": "c8",
                                             "rules": Array [
@@ -931,7 +931,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                           "displayName": "styled.input",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-dnqmqq",
+                                          "styledComponentId": "sc-iwsKbI",
                                           "target": "input",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -968,7 +968,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-VigVT",
+                                "componentId": "sc-jTzLTM",
                                 "isStatic": false,
                                 "lastClassName": "c9",
                                 "rules": Array [
@@ -979,7 +979,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                               },
                               "displayName": "Styled(Styled(Label))",
                               "foldedComponentIds": Array [
-                                "sc-gqjmRU",
+                                "sc-VigVT",
                               ],
                               "propTypes": Object {
                                 "margin": [Function],
@@ -987,7 +987,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                 "padding": [Function],
                               },
                               "render": [Function],
-                              "styledComponentId": "sc-VigVT",
+                              "styledComponentId": "sc-jTzLTM",
                               "target": [Function],
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -1013,7 +1013,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-gZMcBi",
+                                      "componentId": "sc-gqjmRU",
                                       "isStatic": false,
                                       "lastClassName": "c7",
                                       "rules": Array [
@@ -1026,7 +1026,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                     "displayName": "styled.label",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-gZMcBi",
+                                    "styledComponentId": "sc-gqjmRU",
                                     "target": "label",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -1046,7 +1046,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-ifAKCX",
+                                            "componentId": "sc-EHOje",
                                             "isStatic": false,
                                             "lastClassName": "c2",
                                             "rules": Array [
@@ -1061,7 +1061,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                             "padding": [Function],
                                           },
                                           "render": [Function],
-                                          "styledComponentId": "sc-ifAKCX",
+                                          "styledComponentId": "sc-EHOje",
                                           "target": [Function],
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -1084,7 +1084,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-bxivhb",
+                                                  "componentId": "sc-ifAKCX",
                                                   "isStatic": false,
                                                   "lastClassName": "c3",
                                                   "rules": Array [
@@ -1097,7 +1097,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                                 "displayName": "styled.span",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-bxivhb",
+                                                "styledComponentId": "sc-ifAKCX",
                                                 "target": "span",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -1130,7 +1130,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-dnqmqq",
+                                            "componentId": "sc-iwsKbI",
                                             "isStatic": false,
                                             "lastClassName": "c8",
                                             "rules": Array [
@@ -1153,7 +1153,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                           "displayName": "styled.input",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-dnqmqq",
+                                          "styledComponentId": "sc-iwsKbI",
                                           "target": "input",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -1356,7 +1356,7 @@ exports[`DateField should support null value: null value 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-jzJRlG",
+          "componentId": "sc-cSHVUG",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -1371,7 +1371,7 @@ exports[`DateField should support null value: null value 1`] = `
           "padding": [Function],
         },
         "render": [Function],
-        "styledComponentId": "sc-jzJRlG",
+        "styledComponentId": "sc-cSHVUG",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -1418,7 +1418,7 @@ exports[`DateField should support null value: null value 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-fjdhpX",
+                "componentId": "sc-jzJRlG",
                 "isStatic": false,
                 "lastClassName": "c1",
                 "rules": Array [
@@ -1429,7 +1429,7 @@ exports[`DateField should support null value: null value 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-fjdhpX",
+              "styledComponentId": "sc-jzJRlG",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -1448,7 +1448,7 @@ exports[`DateField should support null value: null value 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-ifAKCX",
+                      "componentId": "sc-EHOje",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
@@ -1463,7 +1463,7 @@ exports[`DateField should support null value: null value 1`] = `
                       "padding": [Function],
                     },
                     "render": [Function],
-                    "styledComponentId": "sc-ifAKCX",
+                    "styledComponentId": "sc-EHOje",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -1486,7 +1486,7 @@ exports[`DateField should support null value: null value 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-bxivhb",
+                            "componentId": "sc-ifAKCX",
                             "isStatic": false,
                             "lastClassName": "c3",
                             "rules": Array [
@@ -1499,7 +1499,7 @@ exports[`DateField should support null value: null value 1`] = `
                           "displayName": "styled.span",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-bxivhb",
+                          "styledComponentId": "sc-ifAKCX",
                           "target": "span",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -1573,7 +1573,7 @@ exports[`DateField should support null value: null value 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-jTzLTM",
+                          "componentId": "sc-fjdhpX",
                           "isStatic": true,
                           "lastClassName": "c4",
                           "rules": Array [
@@ -1583,7 +1583,7 @@ exports[`DateField should support null value: null value 1`] = `
                         "displayName": "styled.div",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-jTzLTM",
+                        "styledComponentId": "sc-fjdhpX",
                         "target": "div",
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -1604,7 +1604,7 @@ exports[`DateField should support null value: null value 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-VigVT",
+                                "componentId": "sc-jTzLTM",
                                 "isStatic": false,
                                 "lastClassName": "c8",
                                 "rules": Array [
@@ -1615,7 +1615,7 @@ exports[`DateField should support null value: null value 1`] = `
                               },
                               "displayName": "Styled(Styled(Label))",
                               "foldedComponentIds": Array [
-                                "sc-gqjmRU",
+                                "sc-VigVT",
                               ],
                               "propTypes": Object {
                                 "margin": [Function],
@@ -1623,7 +1623,7 @@ exports[`DateField should support null value: null value 1`] = `
                                 "padding": [Function],
                               },
                               "render": [Function],
-                              "styledComponentId": "sc-VigVT",
+                              "styledComponentId": "sc-jTzLTM",
                               "target": [Function],
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -1649,7 +1649,7 @@ exports[`DateField should support null value: null value 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-gZMcBi",
+                                      "componentId": "sc-gqjmRU",
                                       "isStatic": false,
                                       "lastClassName": "c6",
                                       "rules": Array [
@@ -1662,7 +1662,7 @@ exports[`DateField should support null value: null value 1`] = `
                                     "displayName": "styled.label",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-gZMcBi",
+                                    "styledComponentId": "sc-gqjmRU",
                                     "target": "label",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -1682,7 +1682,7 @@ exports[`DateField should support null value: null value 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-ifAKCX",
+                                            "componentId": "sc-EHOje",
                                             "isStatic": false,
                                             "lastClassName": "c2",
                                             "rules": Array [
@@ -1697,7 +1697,7 @@ exports[`DateField should support null value: null value 1`] = `
                                             "padding": [Function],
                                           },
                                           "render": [Function],
-                                          "styledComponentId": "sc-ifAKCX",
+                                          "styledComponentId": "sc-EHOje",
                                           "target": [Function],
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -1720,7 +1720,7 @@ exports[`DateField should support null value: null value 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-bxivhb",
+                                                  "componentId": "sc-ifAKCX",
                                                   "isStatic": false,
                                                   "lastClassName": "c3",
                                                   "rules": Array [
@@ -1733,7 +1733,7 @@ exports[`DateField should support null value: null value 1`] = `
                                                 "displayName": "styled.span",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-bxivhb",
+                                                "styledComponentId": "sc-ifAKCX",
                                                 "target": "span",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -1766,7 +1766,7 @@ exports[`DateField should support null value: null value 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-dnqmqq",
+                                            "componentId": "sc-iwsKbI",
                                             "isStatic": false,
                                             "lastClassName": "c7",
                                             "rules": Array [
@@ -1789,7 +1789,7 @@ exports[`DateField should support null value: null value 1`] = `
                                           "displayName": "styled.input",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-dnqmqq",
+                                          "styledComponentId": "sc-iwsKbI",
                                           "target": "input",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -1826,7 +1826,7 @@ exports[`DateField should support null value: null value 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-VigVT",
+                                "componentId": "sc-jTzLTM",
                                 "isStatic": false,
                                 "lastClassName": "c8",
                                 "rules": Array [
@@ -1837,7 +1837,7 @@ exports[`DateField should support null value: null value 1`] = `
                               },
                               "displayName": "Styled(Styled(Label))",
                               "foldedComponentIds": Array [
-                                "sc-gqjmRU",
+                                "sc-VigVT",
                               ],
                               "propTypes": Object {
                                 "margin": [Function],
@@ -1845,7 +1845,7 @@ exports[`DateField should support null value: null value 1`] = `
                                 "padding": [Function],
                               },
                               "render": [Function],
-                              "styledComponentId": "sc-VigVT",
+                              "styledComponentId": "sc-jTzLTM",
                               "target": [Function],
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -1871,7 +1871,7 @@ exports[`DateField should support null value: null value 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-gZMcBi",
+                                      "componentId": "sc-gqjmRU",
                                       "isStatic": false,
                                       "lastClassName": "c6",
                                       "rules": Array [
@@ -1884,7 +1884,7 @@ exports[`DateField should support null value: null value 1`] = `
                                     "displayName": "styled.label",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-gZMcBi",
+                                    "styledComponentId": "sc-gqjmRU",
                                     "target": "label",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -1904,7 +1904,7 @@ exports[`DateField should support null value: null value 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-ifAKCX",
+                                            "componentId": "sc-EHOje",
                                             "isStatic": false,
                                             "lastClassName": "c2",
                                             "rules": Array [
@@ -1919,7 +1919,7 @@ exports[`DateField should support null value: null value 1`] = `
                                             "padding": [Function],
                                           },
                                           "render": [Function],
-                                          "styledComponentId": "sc-ifAKCX",
+                                          "styledComponentId": "sc-EHOje",
                                           "target": [Function],
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -1942,7 +1942,7 @@ exports[`DateField should support null value: null value 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-bxivhb",
+                                                  "componentId": "sc-ifAKCX",
                                                   "isStatic": false,
                                                   "lastClassName": "c3",
                                                   "rules": Array [
@@ -1955,7 +1955,7 @@ exports[`DateField should support null value: null value 1`] = `
                                                 "displayName": "styled.span",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-bxivhb",
+                                                "styledComponentId": "sc-ifAKCX",
                                                 "target": "span",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -1988,7 +1988,7 @@ exports[`DateField should support null value: null value 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-dnqmqq",
+                                            "componentId": "sc-iwsKbI",
                                             "isStatic": false,
                                             "lastClassName": "c7",
                                             "rules": Array [
@@ -2011,7 +2011,7 @@ exports[`DateField should support null value: null value 1`] = `
                                           "displayName": "styled.input",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-dnqmqq",
+                                          "styledComponentId": "sc-iwsKbI",
                                           "target": "input",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -2048,7 +2048,7 @@ exports[`DateField should support null value: null value 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-VigVT",
+                                "componentId": "sc-jTzLTM",
                                 "isStatic": false,
                                 "lastClassName": "c8",
                                 "rules": Array [
@@ -2059,7 +2059,7 @@ exports[`DateField should support null value: null value 1`] = `
                               },
                               "displayName": "Styled(Styled(Label))",
                               "foldedComponentIds": Array [
-                                "sc-gqjmRU",
+                                "sc-VigVT",
                               ],
                               "propTypes": Object {
                                 "margin": [Function],
@@ -2067,7 +2067,7 @@ exports[`DateField should support null value: null value 1`] = `
                                 "padding": [Function],
                               },
                               "render": [Function],
-                              "styledComponentId": "sc-VigVT",
+                              "styledComponentId": "sc-jTzLTM",
                               "target": [Function],
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -2093,7 +2093,7 @@ exports[`DateField should support null value: null value 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-gZMcBi",
+                                      "componentId": "sc-gqjmRU",
                                       "isStatic": false,
                                       "lastClassName": "c6",
                                       "rules": Array [
@@ -2106,7 +2106,7 @@ exports[`DateField should support null value: null value 1`] = `
                                     "displayName": "styled.label",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-gZMcBi",
+                                    "styledComponentId": "sc-gqjmRU",
                                     "target": "label",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -2126,7 +2126,7 @@ exports[`DateField should support null value: null value 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-ifAKCX",
+                                            "componentId": "sc-EHOje",
                                             "isStatic": false,
                                             "lastClassName": "c2",
                                             "rules": Array [
@@ -2141,7 +2141,7 @@ exports[`DateField should support null value: null value 1`] = `
                                             "padding": [Function],
                                           },
                                           "render": [Function],
-                                          "styledComponentId": "sc-ifAKCX",
+                                          "styledComponentId": "sc-EHOje",
                                           "target": [Function],
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -2164,7 +2164,7 @@ exports[`DateField should support null value: null value 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-bxivhb",
+                                                  "componentId": "sc-ifAKCX",
                                                   "isStatic": false,
                                                   "lastClassName": "c3",
                                                   "rules": Array [
@@ -2177,7 +2177,7 @@ exports[`DateField should support null value: null value 1`] = `
                                                 "displayName": "styled.span",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-bxivhb",
+                                                "styledComponentId": "sc-ifAKCX",
                                                 "target": "span",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -2210,7 +2210,7 @@ exports[`DateField should support null value: null value 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-dnqmqq",
+                                            "componentId": "sc-iwsKbI",
                                             "isStatic": false,
                                             "lastClassName": "c7",
                                             "rules": Array [
@@ -2233,7 +2233,7 @@ exports[`DateField should support null value: null value 1`] = `
                                           "displayName": "styled.input",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-dnqmqq",
+                                          "styledComponentId": "sc-iwsKbI",
                                           "target": "input",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -2440,7 +2440,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-jzJRlG",
+          "componentId": "sc-cSHVUG",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -2455,7 +2455,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
           "padding": [Function],
         },
         "render": [Function],
-        "styledComponentId": "sc-jzJRlG",
+        "styledComponentId": "sc-cSHVUG",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -2510,7 +2510,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-fjdhpX",
+                "componentId": "sc-jzJRlG",
                 "isStatic": false,
                 "lastClassName": "c1",
                 "rules": Array [
@@ -2521,7 +2521,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-fjdhpX",
+              "styledComponentId": "sc-jzJRlG",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -2540,7 +2540,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-ifAKCX",
+                      "componentId": "sc-EHOje",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
@@ -2555,7 +2555,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                       "padding": [Function],
                     },
                     "render": [Function],
-                    "styledComponentId": "sc-ifAKCX",
+                    "styledComponentId": "sc-EHOje",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -2578,7 +2578,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-bxivhb",
+                            "componentId": "sc-ifAKCX",
                             "isStatic": false,
                             "lastClassName": "c3",
                             "rules": Array [
@@ -2591,7 +2591,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                           "displayName": "styled.span",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-bxivhb",
+                          "styledComponentId": "sc-ifAKCX",
                           "target": "span",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -2677,7 +2677,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-jTzLTM",
+                          "componentId": "sc-fjdhpX",
                           "isStatic": true,
                           "lastClassName": "c4",
                           "rules": Array [
@@ -2687,7 +2687,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                         "displayName": "styled.div",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-jTzLTM",
+                        "styledComponentId": "sc-fjdhpX",
                         "target": "div",
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -2708,7 +2708,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-VigVT",
+                                "componentId": "sc-jTzLTM",
                                 "isStatic": false,
                                 "lastClassName": "c8",
                                 "rules": Array [
@@ -2719,7 +2719,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                               },
                               "displayName": "Styled(Styled(Label))",
                               "foldedComponentIds": Array [
-                                "sc-gqjmRU",
+                                "sc-VigVT",
                               ],
                               "propTypes": Object {
                                 "margin": [Function],
@@ -2727,7 +2727,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                 "padding": [Function],
                               },
                               "render": [Function],
-                              "styledComponentId": "sc-VigVT",
+                              "styledComponentId": "sc-jTzLTM",
                               "target": [Function],
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -2753,7 +2753,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-gZMcBi",
+                                      "componentId": "sc-gqjmRU",
                                       "isStatic": false,
                                       "lastClassName": "c6",
                                       "rules": Array [
@@ -2766,7 +2766,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                     "displayName": "styled.label",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-gZMcBi",
+                                    "styledComponentId": "sc-gqjmRU",
                                     "target": "label",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -2786,7 +2786,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-ifAKCX",
+                                            "componentId": "sc-EHOje",
                                             "isStatic": false,
                                             "lastClassName": "c2",
                                             "rules": Array [
@@ -2801,7 +2801,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                             "padding": [Function],
                                           },
                                           "render": [Function],
-                                          "styledComponentId": "sc-ifAKCX",
+                                          "styledComponentId": "sc-EHOje",
                                           "target": [Function],
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -2824,7 +2824,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-bxivhb",
+                                                  "componentId": "sc-ifAKCX",
                                                   "isStatic": false,
                                                   "lastClassName": "c3",
                                                   "rules": Array [
@@ -2837,7 +2837,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                                 "displayName": "styled.span",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-bxivhb",
+                                                "styledComponentId": "sc-ifAKCX",
                                                 "target": "span",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -2871,7 +2871,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-dnqmqq",
+                                            "componentId": "sc-iwsKbI",
                                             "isStatic": false,
                                             "lastClassName": "c7",
                                             "rules": Array [
@@ -2894,7 +2894,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                           "displayName": "styled.input",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-dnqmqq",
+                                          "styledComponentId": "sc-iwsKbI",
                                           "target": "input",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -2933,7 +2933,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-VigVT",
+                                "componentId": "sc-jTzLTM",
                                 "isStatic": false,
                                 "lastClassName": "c8",
                                 "rules": Array [
@@ -2944,7 +2944,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                               },
                               "displayName": "Styled(Styled(Label))",
                               "foldedComponentIds": Array [
-                                "sc-gqjmRU",
+                                "sc-VigVT",
                               ],
                               "propTypes": Object {
                                 "margin": [Function],
@@ -2952,7 +2952,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                 "padding": [Function],
                               },
                               "render": [Function],
-                              "styledComponentId": "sc-VigVT",
+                              "styledComponentId": "sc-jTzLTM",
                               "target": [Function],
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -2978,7 +2978,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-gZMcBi",
+                                      "componentId": "sc-gqjmRU",
                                       "isStatic": false,
                                       "lastClassName": "c6",
                                       "rules": Array [
@@ -2991,7 +2991,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                     "displayName": "styled.label",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-gZMcBi",
+                                    "styledComponentId": "sc-gqjmRU",
                                     "target": "label",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -3011,7 +3011,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-ifAKCX",
+                                            "componentId": "sc-EHOje",
                                             "isStatic": false,
                                             "lastClassName": "c2",
                                             "rules": Array [
@@ -3026,7 +3026,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                             "padding": [Function],
                                           },
                                           "render": [Function],
-                                          "styledComponentId": "sc-ifAKCX",
+                                          "styledComponentId": "sc-EHOje",
                                           "target": [Function],
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -3049,7 +3049,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-bxivhb",
+                                                  "componentId": "sc-ifAKCX",
                                                   "isStatic": false,
                                                   "lastClassName": "c3",
                                                   "rules": Array [
@@ -3062,7 +3062,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                                 "displayName": "styled.span",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-bxivhb",
+                                                "styledComponentId": "sc-ifAKCX",
                                                 "target": "span",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -3096,7 +3096,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-dnqmqq",
+                                            "componentId": "sc-iwsKbI",
                                             "isStatic": false,
                                             "lastClassName": "c7",
                                             "rules": Array [
@@ -3119,7 +3119,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                           "displayName": "styled.input",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-dnqmqq",
+                                          "styledComponentId": "sc-iwsKbI",
                                           "target": "input",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -3158,7 +3158,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-VigVT",
+                                "componentId": "sc-jTzLTM",
                                 "isStatic": false,
                                 "lastClassName": "c8",
                                 "rules": Array [
@@ -3169,7 +3169,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                               },
                               "displayName": "Styled(Styled(Label))",
                               "foldedComponentIds": Array [
-                                "sc-gqjmRU",
+                                "sc-VigVT",
                               ],
                               "propTypes": Object {
                                 "margin": [Function],
@@ -3177,7 +3177,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                 "padding": [Function],
                               },
                               "render": [Function],
-                              "styledComponentId": "sc-VigVT",
+                              "styledComponentId": "sc-jTzLTM",
                               "target": [Function],
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -3203,7 +3203,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-gZMcBi",
+                                      "componentId": "sc-gqjmRU",
                                       "isStatic": false,
                                       "lastClassName": "c6",
                                       "rules": Array [
@@ -3216,7 +3216,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                     "displayName": "styled.label",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-gZMcBi",
+                                    "styledComponentId": "sc-gqjmRU",
                                     "target": "label",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -3236,7 +3236,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-ifAKCX",
+                                            "componentId": "sc-EHOje",
                                             "isStatic": false,
                                             "lastClassName": "c2",
                                             "rules": Array [
@@ -3251,7 +3251,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                             "padding": [Function],
                                           },
                                           "render": [Function],
-                                          "styledComponentId": "sc-ifAKCX",
+                                          "styledComponentId": "sc-EHOje",
                                           "target": [Function],
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -3274,7 +3274,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-bxivhb",
+                                                  "componentId": "sc-ifAKCX",
                                                   "isStatic": false,
                                                   "lastClassName": "c3",
                                                   "rules": Array [
@@ -3287,7 +3287,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                                 "displayName": "styled.span",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-bxivhb",
+                                                "styledComponentId": "sc-ifAKCX",
                                                 "target": "span",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -3321,7 +3321,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-dnqmqq",
+                                            "componentId": "sc-iwsKbI",
                                             "isStatic": false,
                                             "lastClassName": "c7",
                                             "rules": Array [
@@ -3344,7 +3344,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                           "displayName": "styled.input",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-dnqmqq",
+                                          "styledComponentId": "sc-iwsKbI",
                                           "target": "input",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],

@@ -33,25 +33,22 @@ See the [Storybook](https://govuk-react.github.io/govuk-react) for examples of a
 
 Also see the [example project](https://github.com/penx/govuk-react-example) for basic usage.
 
-## Using anchors/React Router Link
+## Using Link with a Router Link
 
-We are using a Higher Order Component (HOC), which takes a component and returns a new component with the original props.
+We provide a Link component which creates an element styled as a GDS link. As we are using styled-components it is possible to apply that style to an existing component using the `as` prop. Other props will be passed through.
 
-We use the same HOC for an `<a href...>` as we do for a `<Link to...>`. For example;
+For example;
 ```js
-import { BrowserRouter, Link } from 'react-router';
-import { asAnchor } from '@govuk-react/hoc';
-
-const MyLink = asAnchor(Link);
+import { BrowserRouter, Link as RouterLink } from 'react-router';
+import { Link } from '@govuk-react/link';
 
 const MyComponent = () => (
   <nav>
     <BrowserRouter>
-      <MyLink to="https://example.com">example</MyLink>
+      <Link as={RouterLink} to="https://example.com">example</Link>
     </BrowserRouter>
   </nav>
-)
-
+);
 ```
 
 ## Assumptions

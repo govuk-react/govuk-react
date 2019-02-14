@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { BLACK, SECONDARY_TEXT_COLOUR } from 'govuk-colours';
-import { withWhiteSpace } from '@govuk-react/hoc';
-import {
-  FOCUSABLE_FILL,
-  SPACING_POINTS,
-} from '@govuk-react/constants';
-import { typography } from '@govuk-react/lib';
+import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
+import { SPACING_POINTS } from '@govuk-react/constants';
+import { spacing, typography } from '@govuk-react/lib';
+
+import Link from './atoms/link';
 
 // Constants for chevron sourced from govuk-frontend
 const CHEVRON_SIZE = 7;
@@ -23,6 +21,7 @@ const BreadcrumbContainer = styled('div')(
     marginTop: SPACING_POINTS[3],
     marginBottom: SPACING_POINTS[2],
   },
+  spacing.withWhiteSpace(),
 );
 
 const BreadcrumbList = styled('ol')({
@@ -61,13 +60,6 @@ const BreadcrumbListItem = styled('li')({
       display: 'none',
     },
   },
-
-  // Additions to help ensure links get coloured as we expect
-  '> a': {
-    color: `${BLACK}`,
-    textDecoration: 'underline',
-    ...FOCUSABLE_FILL,
-  },
 });
 
 /**
@@ -77,32 +69,24 @@ const BreadcrumbListItem = styled('li')({
  * Simple
  * ```jsx
  * <Breadcrumb>
- *   <a href="/section">Section</a>
- *   <a href="/section/sub-section">Sub-section</a>
+ *   <Breadcrumb.Link href="/section">Section</Breadcrumb.Link>
+ *   <Breadcrumb.Link href="/section/sub-section">Sub-section</Breadcrumb.Link>
  *   Current page
  * </Breadcrumb>
  * ```
  *
- * Using `asAnchor` HOC with, or without React Router
+ * Providing links with, or without React Router
  * ```jsx
  * import { Link } from 'react-router-dom';
- * import { asAnchor } from '@govuk-react/hoc';
- *
- * const AnchorLink = asAnchor(Link);
- * const AnchorTag = asAnchor('a');
  *
  * <Breadcrumb>
- *   <AnchorLink to="/section">Section</AnchorLink>
- *   <AnchorTag href="/section">Sub-section</AnchorTag>
+ *   <Breadcrumb.Link as={Link} to="/section">Section</Breadcrumb.Link>
+ *   <Breadcrumb.Link href="/section">Sub-section</Breadcrumb.Link>
  * </Breadcrumb>
  * ```
  *
  * ### References:
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/breadcrumb/_breadcrumb.scss
- *
- * ### TODO:
- * - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
- * - Consider nested anchors, create an Atom for Breadcrumb links?
  *
  */
 const Breadcrumb = ({ children, ...props }) => (
@@ -129,4 +113,6 @@ Breadcrumb.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default withWhiteSpace()(Breadcrumb);
+Breadcrumb.Link = Link;
+
+export default Breadcrumb;
