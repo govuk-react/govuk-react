@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { BrowserRouter, Link, NavLink as RRNavLink } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
 import CrownIcon from '@govuk-react/icon-crown';
 import { Search as SearchIcon } from '@govuk-react/icons';
@@ -8,6 +8,7 @@ import { WithDocsCustom } from '@govuk-react/storybook-components';
 
 import TopNav, { asNavLinkAnchor, asTopNavAnchor } from '.';
 import ReadMe from '../README.md';
+import reactRouterNavLink from './stories/react-router-nav-link';
 
 const LogoAnchor = asTopNavAnchor('a');
 const NavAnchor = asNavLinkAnchor('a');
@@ -76,6 +77,11 @@ examples.add(
       <TopNav company={CompanyLink} serviceTitle={ServiceTitleLink} />
     </BrowserRouter>
   ),
+);
+
+examples.add(
+  'with React router <NavLink>',
+  reactRouterNavLink,
 );
 
 examples.add('search', () => (
