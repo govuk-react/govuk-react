@@ -30,7 +30,7 @@ deploy:
       branch: master
   - provider: script
     skip_cleanup: true
-    script: lerna exec --no-private --bail=false -- "\\$LERNA_ROOT_PATH/scripts/travisPublish.sh"
+    script: lerna exec --no-private --bail=false -- "$TRAVIS_BUILD_DIR/scripts/travisPublish.sh"
     on:
       tags: true
   - provider: releases
