@@ -1,13 +1,13 @@
 {
   "name": "@govuk-react/page",
-  "version": "0.6.0-alpha.3",
+  "version": "0.6.0-alpha.4",
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@govuk-react/constants": "^0.6.0-alpha.3",
-    "@govuk-react/top-nav": "^0.6.0-alpha.3",
+    "@govuk-react/constants": "^0.6.0-alpha.4",
+    "@govuk-react/top-nav": "^0.6.0-alpha.4",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
