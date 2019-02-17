@@ -55,7 +55,7 @@ const MyComponent = () => (
 
 Use of these components assumes the following from the peer project:
 
-- Either [normalize.css](https://necolas.github.io/normalize.css/) or [sanitize.css](https://jonathantneal.github.io/sanitize.css/) is used as a CSS reset.
+- Either [normalize.css](https://necolas.github.io/normalize.css/) or [sanitize.css](https://csstools.github.io/sanitize.css/) is used as a CSS reset.
 - The GDS Transport font face is included ([for gov.uk domains only](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk))
 - Other than the reset, no other styles affecting generic elements (without classes, IDs etc) are present in the CSS.
 
