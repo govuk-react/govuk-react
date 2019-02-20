@@ -1,35 +1,24 @@
 import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BLACK } from 'govuk-colours';
-import { withWhiteSpace } from '@govuk-react/hoc';
-import {
-  FONT_SIZE,
-  LINE_HEIGHT,
-  MEDIA_QUERIES,
-  NTA_LIGHT,
-} from '@govuk-react/constants';
+import { spacing, typography } from '@govuk-react/lib';
+
+// TODO should `LabelText` and `Label` be consolidated?
+// TODO add support for differing font sizes, as per govuk-frontend - see:
+// https://github.com/alphagov/govuk-frontend/blob/master/src/components/label/_label.scss
 
 const StyledLabelText = styled('span')(
+  typography.font({ size: 19 }),
+  typography.textColour,
   {
-    fontFamily: NTA_LIGHT,
-    WebkitFontSmoothing: 'antialiased',
-    MozOsxFontSmoothing: 'grayscale',
     display: 'block',
     clear: 'none',
-    fontWeight: 400,
-    fontSize: FONT_SIZE.SIZE_16,
-    lineHeight: LINE_HEIGHT.SIZE_16,
-    [MEDIA_QUERIES.LARGESCREEN]: {
-      fontSize: FONT_SIZE.SIZE_19,
-      lineHeight: LINE_HEIGHT.SIZE_19,
-    },
-    color: `${BLACK}`,
     paddingBottom: '2px',
   },
   ({ error }) => ({
     fontWeight: error ? 700 : undefined,
   }),
+  spacing.withWhiteSpace({ marginBottom: 0 }),
 );
 
 /**
@@ -52,4 +41,4 @@ LabelText.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default withWhiteSpace({ marginBottom: 0 })(LabelText);
+export default LabelText;

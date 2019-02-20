@@ -83,103 +83,64 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<Styled(BackLink)
+<BackLink
   onClick={[Function]}
 >
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-EHOje",
-          "isStatic": false,
-          "lastClassName": "jvzENE",
-          "rules": Array [
-            [Function],
-          ],
-        },
-        "displayName": "Styled(BackLink)",
-        "foldedComponentIds": Array [],
-        "propTypes": Object {
-          "margin": [Function],
-          "mb": [Function],
-          "padding": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "sc-EHOje",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      }
-    }
-    forwardedRef={null}
+  <styled.a
     onClick={[Function]}
   >
-    <BackLink
-      className=""
-      onClick={[Function]}
-    >
-      <styled.a
-        className=""
-        onClick={[Function]}
-      >
-        <StyledComponent
-          className=""
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-ifAKCX",
-                "isStatic": true,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-size: 14px; line-height: 1.2;
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
   font-size: 16px; line-height: 1.25;
 }",
-                  "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-family: sans-serif;
 }",
-                  "&:focus {
+              "&:focus {
   outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
 }",
-                  "&:link, &:visited, &:hover, &:active, &:focus {
+              "&:link, &:visited, &:hover, &:active, &:focus {
   color: #0b0c0c; @media print {
   color: #000;
 }
 }",
-                  "display: inline-block; position: relative; margin-top: 15px; margin-bottom: 15px; padding-left: 14px; border-bottom: 1px solid #0b0c0c; text-decoration: none; ::before {
+              "display: inline-block; position: relative; margin-top: 15px; margin-bottom: 15px; padding-left: 14px; border-bottom: 1px solid #0b0c0c; text-decoration: none; ::before {
   display: block; width: 0; height: 0; border-style: solid; border-color: transparent; clip-path: polygon(0% 50%, 100% 100%, 100% 0%); border-width: 5px 6px 5px 0; border-right-color: inherit; content: ''; position: absolute; top: -1px; bottom: 1px; left: 0; margin: auto;
 }",
-                ],
-              },
-              "displayName": "styled.a",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "sc-ifAKCX",
-              "target": "a",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
-          onClick={[Function]}
-        >
-          <a
-            className="c0"
-            onClick={[Function]}
-          >
-            example
-          </a>
-        </StyledComponent>
-      </styled.a>
-    </BackLink>
-  </StyledComponent>
-</Styled(BackLink)>
+              [Function],
+            ],
+          },
+          "displayName": "styled.a",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "a",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      onClick={[Function]}
+    >
+      <a
+        className="c0"
+        onClick={[Function]}
+      >
+        example
+      </a>
+    </StyledComponent>
+  </styled.a>
+</BackLink>
 `;

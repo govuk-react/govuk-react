@@ -6,7 +6,7 @@ import { SPACING } from '@govuk-react/constants';
 import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
-import { withWhiteSpace } from '@govuk-react/hoc';
+import { spacing } from '@govuk-react/lib';
 
 import Input from './input';
 
@@ -22,6 +22,7 @@ const StyledContainer = styled('div')(
       paddingLeft: SPACING.SCALE_2,
     } : undefined
   ),
+  spacing.withWhiteSpace({ marginBottom: 6 }),
 );
 
 /**
@@ -160,4 +161,4 @@ DateField.propTypes = {
   }),
 };
 
-export default withWhiteSpace({ marginBottom: 6 })(DateField);
+export default DateField;

@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FOCUS_COLOUR } from 'govuk-colours';
-import { withWhiteSpace } from '@govuk-react/hoc';
-import { typography } from '@govuk-react/lib';
+import { spacing, typography } from '@govuk-react/lib';
 import HintText from '@govuk-react/hint-text';
 import {
   BORDER_WIDTH_FORM_ELEMENT,
@@ -35,6 +34,7 @@ const Label = styled('label')(
       marginRight: SPACING_POINTS[4],
     },
   }),
+  spacing.withWhiteSpace({ marginBottom: 2 }),
 );
 
 const Input = styled('input')(
@@ -198,4 +198,4 @@ Radio.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default withWhiteSpace({ marginBottom: 2 })(Radio);
+export default Radio;

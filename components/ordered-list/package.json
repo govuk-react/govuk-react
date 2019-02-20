@@ -4,8 +4,7 @@
   "dependencies": {
     "@govuk-react/constants": "^0.6.0-alpha.4",
     "@govuk-react/lib": "^0.6.0-alpha.4",
-    "@govuk-react/list-item": "^0.6.0-alpha.4",
-    "govuk-colours": "^1.0.3"
+    "@govuk-react/list-item": "^0.6.0-alpha.4"
   },
   "peerDependencies": {
     "react": ">=16.2.0",

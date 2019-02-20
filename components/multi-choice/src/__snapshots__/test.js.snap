@@ -1,24 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MultiChoice matches snapshot 1`] = `
-.c3 {
+.c1 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: block;
-  clear: none;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
   color: #0b0c0c;
+  display: block;
+  clear: none;
   padding-bottom: 2px;
-}
-
-.c2 {
   margin-bottom: 0;
 }
 
-.c5 {
+.c3 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -31,7 +28,7 @@ exports[`MultiChoice matches snapshot 1`] = `
   color: #b10e1e;
 }
 
-.c4 {
+.c2 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -43,7 +40,7 @@ exports[`MultiChoice matches snapshot 1`] = `
   color: #6f777b;
 }
 
-.c1 {
+.c0 {
   padding: 0;
   margin: 0;
   border: 0;
@@ -52,54 +49,64 @@ exports[`MultiChoice matches snapshot 1`] = `
   border-left: 4px solid #b10e1e;
   margin-right: 15px;
   padding-left: 10px;
+  margin-bottom: 0;
 }
 
-.c1:after {
+.c0:after {
   content: '';
   display: table;
   clear: both;
 }
 
-.c0 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .c3 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c2 {
-    margin-bottom: 0;
-  }
-}
-
 @media print {
-  .c5 {
+  .c1 {
     font-size: 14px;
     line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c5 {
+  .c1 {
     font-size: 19px;
     line-height: 1.3157894736842106;
   }
 }
 
 @media print {
-  .c4 {
+  .c1 {
+    color: #000;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c1 {
+    margin-bottom: 0;
+  }
+}
+
+@media print {
+  .c3 {
     font-size: 14px;
     line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c4 {
+  .c3 {
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
+@media print {
+  .c2 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c2 {
     font-size: 19px;
     line-height: 1.3157894736842106;
   }
@@ -111,7 +118,7 @@ exports[`MultiChoice matches snapshot 1`] = `
   }
 }
 
-<Styled(MultiChoice)
+<MultiChoice
   hint="Example hint"
   label="Example label"
   meta={
@@ -121,332 +128,171 @@ exports[`MultiChoice matches snapshot 1`] = `
     }
   }
 >
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-gZMcBi",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            [Function],
-          ],
-        },
-        "displayName": "Styled(MultiChoice)",
-        "foldedComponentIds": Array [],
-        "propTypes": Object {
-          "margin": [Function],
-          "mb": [Function],
-          "padding": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "sc-gZMcBi",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      }
-    }
-    forwardedRef={null}
-    hint="Example hint"
-    label="Example label"
-    meta={
-      Object {
-        "error": "Example error",
-        "touched": true,
-      }
-    }
+  <styled.div
+    error="Example error"
   >
-    <MultiChoice
-      className="c0"
-      hint="Example hint"
-      label="Example label"
-      meta={
+    <StyledComponent
+      error="Example error"
+      forwardedComponent={
         Object {
-          "error": "Example error",
-          "touched": true,
-        }
-      }
-    >
-      <styled.div
-        className="c0"
-        error="Example error"
-      >
-        <StyledComponent
-          className="c0"
-          error="Example error"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-iwsKbI",
-                "isStatic": false,
-                "lastClassName": "c1",
-                "rules": Array [
-                  "padding: 0; margin: 0; border: 0; box-sizing: border-box; width: 100%; :after {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bxivhb",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "padding: 0; margin: 0; border: 0; box-sizing: border-box; width: 100%; :after {
   content: ''; display: table; clear: both;
 }",
-                  [Function],
-                ],
-              },
-              "displayName": "styled.div",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "sc-iwsKbI",
-              "target": "div",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
-        >
-          <div
-            className="c0 c1"
-          >
-            <Styled(LabelText)>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-EHOje",
-                      "isStatic": false,
-                      "lastClassName": "c2",
-                      "rules": Array [
-                        [Function],
-                      ],
-                    },
-                    "displayName": "Styled(LabelText)",
-                    "foldedComponentIds": Array [],
-                    "propTypes": Object {
-                      "margin": [Function],
-                      "mb": [Function],
-                      "padding": [Function],
-                    },
-                    "render": [Function],
-                    "styledComponentId": "sc-EHOje",
-                    "target": [Function],
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                    Symbol(Symbol.hasInstance): [Function],
-                  }
-                }
-                forwardedRef={null}
-              >
-                <LabelText
-                  className="c2"
-                >
-                  <styled.span
-                    className="c2"
-                  >
-                    <StyledComponent
-                      className="c2"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "sc-ifAKCX",
-                            "isStatic": false,
-                            "lastClassName": "c3",
-                            "rules": Array [
-                              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display: block; clear: none; font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3;
-} color: #0b0c0c; padding-bottom: 2px;",
-                              [Function],
-                            ],
-                          },
-                          "displayName": "styled.span",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "sc-ifAKCX",
-                          "target": "span",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                    >
-                      <span
-                        className="c2 c3"
-                      >
-                        Example label
-                      </span>
-                    </StyledComponent>
-                  </styled.span>
-                </LabelText>
-              </StyledComponent>
-            </Styled(LabelText)>
-            <Styled(HintText)>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-dnqmqq",
-                      "isStatic": false,
-                      "lastClassName": "bDsesi",
-                      "rules": Array [
-                        [Function],
-                      ],
-                    },
-                    "displayName": "Styled(HintText)",
-                    "foldedComponentIds": Array [],
-                    "propTypes": Object {
-                      "margin": [Function],
-                      "mb": [Function],
-                      "padding": [Function],
-                    },
-                    "render": [Function],
-                    "styledComponentId": "sc-dnqmqq",
-                    "target": [Function],
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                    Symbol(Symbol.hasInstance): [Function],
-                  }
-                }
-                forwardedRef={null}
-              >
-                <HintText
-                  className=""
-                >
-                  <styled.span
-                    className=""
-                  >
-                    <StyledComponent
-                      className=""
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "sc-htoDjs",
-                            "isStatic": true,
-                            "lastClassName": "c4",
-                            "rules": Array [
-                              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+              [Function],
+              [Function],
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bxivhb",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <div
+        className="c0"
+      >
+        <LabelText>
+          <styled.span>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bdVaJa",
+                    "isStatic": false,
+                    "lastClassName": "c1",
+                    "rules": Array [
+                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-size: 14px; line-height: 1.15;
 } font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
   font-size: 19px; line-height: 1.3157894736842106;
 }",
-                              "display: block; margin-bottom: 15px; color: #6f777b;",
-                            ],
-                          },
-                          "displayName": "styled.span",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "sc-htoDjs",
-                          "target": "span",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                    >
-                      <span
-                        className="c4"
-                      >
-                        Example hint
-                      </span>
-                    </StyledComponent>
-                  </styled.span>
-                </HintText>
-              </StyledComponent>
-            </Styled(HintText)>
-            <Styled(ErrorText)>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-gzVnrw",
-                      "isStatic": false,
-                      "lastClassName": "ibZhkv",
-                      "rules": Array [
-                        [Function],
-                      ],
-                    },
-                    "displayName": "Styled(ErrorText)",
-                    "foldedComponentIds": Array [],
-                    "propTypes": Object {
-                      "margin": [Function],
-                      "mb": [Function],
-                      "padding": [Function],
-                    },
-                    "render": [Function],
-                    "styledComponentId": "sc-gzVnrw",
-                    "target": [Function],
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                    Symbol(Symbol.hasInstance): [Function],
-                  }
+                      "color: #0b0c0c; @media print {
+  color: #000;
+}",
+                      "display: block; clear: none; padding-bottom: 2px;",
+                      [Function],
+                      [Function],
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bdVaJa",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
                 }
-                forwardedRef={null}
+              }
+              forwardedRef={null}
+            >
+              <span
+                className="c1"
               >
-                <ErrorText
-                  className=""
-                >
-                  <styled.span
-                    className=""
-                  >
-                    <StyledComponent
-                      className=""
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "sc-bZQynM",
-                            "isStatic": true,
-                            "lastClassName": "c5",
-                            "rules": Array [
-                              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+                Example label
+              </span>
+            </StyledComponent>
+          </styled.span>
+        </LabelText>
+        <HintText>
+          <styled.span>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-htpNat",
+                    "isStatic": false,
+                    "lastClassName": "c2",
+                    "rules": Array [
+                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
+}",
+                      "display: block; margin-bottom: 15px; color: #6f777b;",
+                      [Function],
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-htpNat",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <span
+                className="c2"
+              >
+                Example hint
+              </span>
+            </StyledComponent>
+          </styled.span>
+        </HintText>
+        <ErrorText>
+          <styled.span>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "c3",
+                    "rules": Array [
+                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-size: 14px; line-height: 1.15;
 } font-weight: 700; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
   font-size: 19px; line-height: 1.3157894736842106;
 }",
-                              "display: block; margin-bottom: 15px; clear: both; color: #b10e1e;",
-                            ],
-                          },
-                          "displayName": "styled.span",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "sc-bZQynM",
-                          "target": "span",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                    >
-                      <span
-                        className="c5"
-                      >
-                        Example error
-                      </span>
-                    </StyledComponent>
-                  </styled.span>
-                </ErrorText>
-              </StyledComponent>
-            </Styled(ErrorText)>
-          </div>
-        </StyledComponent>
-      </styled.div>
-    </MultiChoice>
-  </StyledComponent>
-</Styled(MultiChoice)>
+                      "display: block; margin-bottom: 15px; clear: both; color: #b10e1e;",
+                      [Function],
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <span
+                className="c3"
+              >
+                Example error
+              </span>
+            </StyledComponent>
+          </styled.span>
+        </ErrorText>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</MultiChoice>
 `;

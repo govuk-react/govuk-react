@@ -1,105 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SupportingHeader matches wrapper snapshot 1`] = `
-.c1 {
-  font-family: "nta",Arial,sans-serif;
-  font-size: 20px;
-  line-height: 1.11111;
-  color: #6f777b;
-  padding-bottom: 7px;
-}
-
 .c0 {
-  margin-bottom: 0;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.1111111111111112;
+  color: #6f777b;
+  margin-bottom: 5px;
 }
 
-@media only screen and (min-width:641px) {
-  .c1 {
-    font-size: 27px;
-    padding-bottom: 6px;
+@media print {
+  .c0 {
+    font-size: 18px;
+    line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
   .c0 {
-    margin-bottom: 0;
+    font-size: 27px;
+    line-height: 1.1111111111111112;
   }
 }
 
-<Styled(SupportingHeader)>
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-EHOje",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            [Function],
-          ],
-        },
-        "displayName": "Styled(SupportingHeader)",
-        "foldedComponentIds": Array [],
-        "propTypes": Object {
-          "margin": [Function],
-          "mb": [Function],
-          "padding": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "sc-EHOje",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
+<SupportingHeader>
+  <styled.span>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 18px; line-height: 1.15;
+} font-weight: 400; font-size: 18px; line-height: 1.1111111111111112; @media only screen and (min-width: 641px) {
+  font-size: 27px; line-height: 1.1111111111111112;
+}",
+              "color: #6f777b; margin-bottom: 5px;",
+              [Function],
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
       }
-    }
-    forwardedRef={null}
-  >
-    <SupportingHeader
-      className="c0"
+      forwardedRef={null}
     >
-      <styled.span
+      <span
         className="c0"
       >
-        <StyledComponent
-          className="c0"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-ifAKCX",
-                "isStatic": true,
-                "lastClassName": "c1",
-                "rules": Array [
-                  "font-family: \\"nta\\", Arial, sans-serif; font-size: 20px; line-height: 1.11111; color: #6f777b; padding-bottom: 7px; @media only screen and (min-width: 641px) {
-  font-size: 27px; padding-bottom: 6px;
-}",
-                ],
-              },
-              "displayName": "styled.span",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "sc-ifAKCX",
-              "target": "span",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
-        >
-          <span
-            className="c0 c1"
-          >
-            Heading text
-          </span>
-        </StyledComponent>
-      </styled.span>
-    </SupportingHeader>
-  </StyledComponent>
-</Styled(SupportingHeader)>
+        Heading text
+      </span>
+    </StyledComponent>
+  </styled.span>
+</SupportingHeader>
 `;

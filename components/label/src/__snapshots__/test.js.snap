@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Label matches withError snapshot: with error mount 1`] = `
-.c1 {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13,16 +13,13 @@ exports[`Label matches withError snapshot: with error mount 1`] = `
   border-left: 4px solid #b10e1e;
   margin-right: 15px;
   padding-left: 10px;
+  margin-bottom: 0;
 }
 
-.c1:after {
+.c0:after {
   content: '';
   display: table;
   clear: both;
-}
-
-.c0 {
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
@@ -31,93 +28,54 @@ exports[`Label matches withError snapshot: with error mount 1`] = `
   }
 }
 
-<Styled(Label)
+<Label
   error="example"
 >
-  <StyledComponent
+  <styled.label
     error="example"
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-EHOje",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            [Function],
-          ],
-        },
-        "displayName": "Styled(Label)",
-        "foldedComponentIds": Array [],
-        "propTypes": Object {
-          "margin": [Function],
-          "mb": [Function],
-          "padding": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "sc-EHOje",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      }
-    }
-    forwardedRef={null}
   >
-    <Label
-      className="c0"
+    <StyledComponent
       error="example"
-    >
-      <styled.label
-        className="c0"
-        error="example"
-      >
-        <StyledComponent
-          className="c0"
-          error="example"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-ifAKCX",
-                "isStatic": false,
-                "lastClassName": "c1",
-                "rules": Array [
-                  "display: flex; flex-direction: column; box-sizing: border-box; :after {
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "display: flex; flex-direction: column; box-sizing: border-box; :after {
   content: ''; display: table; clear: both;
 }",
-                  [Function],
-                ],
-              },
-              "displayName": "styled.label",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "sc-ifAKCX",
-              "target": "label",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
-        >
-          <label
-            className="c0 c1"
-          >
-            example
-          </label>
-        </StyledComponent>
-      </styled.label>
-    </Label>
-  </StyledComponent>
-</Styled(Label)>
+              [Function],
+              [Function],
+            ],
+          },
+          "displayName": "styled.label",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "label",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <label
+        className="c0"
+      >
+        example
+      </label>
+    </StyledComponent>
+  </styled.label>
+</Label>
 `;
 
 exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
-.c1 {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -126,16 +84,13 @@ exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   box-sizing: border-box;
+  margin-bottom: 0;
 }
 
-.c1:after {
+.c0:after {
   content: '';
   display: table;
   clear: both;
-}
-
-.c0 {
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
@@ -144,81 +99,43 @@ exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<Styled(Label)>
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-EHOje",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            [Function],
-          ],
-        },
-        "displayName": "Styled(Label)",
-        "foldedComponentIds": Array [],
-        "propTypes": Object {
-          "margin": [Function],
-          "mb": [Function],
-          "padding": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "sc-EHOje",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      }
-    }
-    forwardedRef={null}
-  >
-    <Label
-      className="c0"
-    >
-      <styled.label
-        className="c0"
-      >
-        <StyledComponent
-          className="c0"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-ifAKCX",
-                "isStatic": false,
-                "lastClassName": "c1",
-                "rules": Array [
-                  "display: flex; flex-direction: column; box-sizing: border-box; :after {
+<Label>
+  <styled.label>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "display: flex; flex-direction: column; box-sizing: border-box; :after {
   content: ''; display: table; clear: both;
 }",
-                  [Function],
-                ],
-              },
-              "displayName": "styled.label",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "sc-ifAKCX",
-              "target": "label",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
-        >
-          <label
-            className="c0 c1"
-          >
-            example
-          </label>
-        </StyledComponent>
-      </styled.label>
-    </Label>
-  </StyledComponent>
-</Styled(Label)>
+              [Function],
+              [Function],
+            ],
+          },
+          "displayName": "styled.label",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "label",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <label
+        className="c0"
+      >
+        example
+      </label>
+    </StyledComponent>
+  </styled.label>
+</Label>
 `;

@@ -3,14 +3,13 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { BLACK, ERROR_COLOUR } from 'govuk-colours';
-import { withWhiteSpace } from '@govuk-react/hoc';
 import {
   BORDER_WIDTH_FORM_ELEMENT,
   BORDER_WIDTH_FORM_ELEMENT_ERROR,
   FOCUSABLE,
   SPACING_POINTS,
 } from '@govuk-react/constants';
-import { typography } from '@govuk-react/lib';
+import { spacing, typography } from '@govuk-react/lib';
 
 export const StyledInput = styled('input')(
   typography.font({ size: 19 }),
@@ -40,6 +39,7 @@ export const StyledInput = styled('input')(
   ({ error, errorColor }) => ({
     border: error ? `${BORDER_WIDTH_FORM_ELEMENT_ERROR} solid ${errorColor || ERROR_COLOUR}` : undefined,
   }),
+  spacing.withWhiteSpace({ marginBottom: 0 }),
 );
 
 /**
@@ -70,4 +70,4 @@ Input.propTypes = {
   type: PropTypes.string,
 };
 
-export default withWhiteSpace({ marginBottom: 0 })(Input);
+export default Input;

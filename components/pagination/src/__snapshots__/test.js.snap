@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pagination matches wrapper snapshot: wrapper mount 1`] = `
-.c1 {
+.c0 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -10,28 +16,32 @@ exports[`Pagination matches wrapper snapshot: wrapper mount 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 25px;
   padding: 10px;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
   width: 100%;
-}
-
-.c0 {
   margin-bottom: 20px;
 }
 
+@media print {
+  .c0 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
 @media only screen and (min-width:641px) {
-  .c1 {
+  .c0 {
     font-size: 19px;
-    line-height: 1.3;
+    line-height: 1.3157894736842106;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -44,80 +54,47 @@ exports[`Pagination matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<Styled(Pagination)>
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-EHOje",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            [Function],
-          ],
-        },
-        "displayName": "Styled(Pagination)",
-        "foldedComponentIds": Array [],
-        "propTypes": Object {
-          "margin": [Function],
-          "mb": [Function],
-          "padding": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "sc-EHOje",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
+<Pagination>
+  <styled.ul>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
+}",
+              "box-sizing: border-box; display: flex; flex-direction: column; margin-top: 25px; padding: 10px; justify-content: space-between; width: 100%; @media only screen and (min-width: 641px) {
+  flex-direction: row;
+}",
+              [Function],
+            ],
+          },
+          "displayName": "styled.ul",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "ul",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
       }
-    }
-    forwardedRef={null}
-  >
-    <Pagination
-      className="c0"
+      forwardedRef={null}
     >
-      <styled.ul
+      <ul
         className="c0"
       >
-        <StyledComponent
-          className="c0"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-ifAKCX",
-                "isStatic": true,
-                "lastClassName": "c1",
-                "rules": Array [
-                  "box-sizing: border-box; display: flex; flex-direction: column; margin-top: 30px; padding: 10px; justify-content: space-between; font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 16px; line-height: 1.25; width: 100%; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3; flex-direction: row;
-}",
-                ],
-              },
-              "displayName": "styled.ul",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "sc-ifAKCX",
-              "target": "ul",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
-        >
-          <ul
-            className="c0 c1"
-          >
-            Example
-          </ul>
-        </StyledComponent>
-      </styled.ul>
-    </Pagination>
-  </StyledComponent>
-</Styled(Pagination)>
+        Example
+      </ul>
+    </StyledComponent>
+  </styled.ul>
+</Pagination>
 `;

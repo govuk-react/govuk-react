@@ -5,8 +5,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
 import { SPACING_POINTS } from '@govuk-react/constants';
-import { withWhiteSpace } from '@govuk-react/hoc';
-import { typography } from '@govuk-react/lib';
+import { spacing, typography } from '@govuk-react/lib';
 
 const StyledHint = styled('span')(
   typography.font({ size: 19 }),
@@ -16,6 +15,7 @@ const StyledHint = styled('span')(
     marginBottom: SPACING_POINTS[3],
     color: `${SECONDARY_TEXT_COLOUR}`,
   },
+  spacing.withWhiteSpace(),
 );
 
 // NB govuk-frontend has styling adjustments for when hint-text is placed next to some other
@@ -41,4 +41,4 @@ HintText.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default withWhiteSpace()(HintText);
+export default HintText;

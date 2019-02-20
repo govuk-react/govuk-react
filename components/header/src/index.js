@@ -8,8 +8,7 @@ import {
   MEDIA_QUERIES,
   TYPOGRAPHY_SCALE,
 } from '@govuk-react/constants';
-import { typography } from '@govuk-react/lib';
-import { withWhiteSpace } from '@govuk-react/hoc';
+import { spacing, typography } from '@govuk-react/lib';
 
 // use `size` only with string for XLARGE, SMALL etc and number for px size
 // so if `size` is a string, we find a numeric size based off `HEADING_SIZES`
@@ -50,6 +49,7 @@ const StyledHeader = styled(({
       },
     );
   },
+  spacing.withWhiteSpace(),
 );
 
 /**
@@ -115,6 +115,6 @@ Header.propTypes = {
   size: PropTypes.oneOf([...Object.keys(HEADING_SIZES), ...Object.keys(TYPOGRAPHY_SCALE)]),
 };
 
-export default withWhiteSpace()(Header);
+export default Header;
 
 export { H1, H2, H3, H4, H5, H6 } from './presets';

@@ -2,19 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
-import { withWhiteSpace } from '@govuk-react/hoc';
-import {
-  FONT_SIZE,
-  LINE_HEIGHT,
-  MEDIA_QUERIES,
-  NTA_LIGHT,
-} from '@govuk-react/constants';
-
-import Anchor from './atoms/anchor';
+import { spacing, typography } from '@govuk-react/lib';
+import Link from '@govuk-react/link';
 
 const StyledParagraph = styled(ReactMarkdown)(
   {
-    fontFamily: NTA_LIGHT,
     margin: 0,
     '> p': {
       margin: 0,
@@ -44,14 +36,8 @@ const StyledParagraph = styled(ReactMarkdown)(
       wordWrap: 'normal',
     },
   },
-  ({ supportingText }) => ({
-    fontSize: supportingText ? FONT_SIZE.SIZE_14 : FONT_SIZE.SIZE_16,
-    lineHeight: supportingText ? LINE_HEIGHT.SIZE_14 : LINE_HEIGHT.SIZE_16,
-    [MEDIA_QUERIES.LARGESCREEN]: {
-      fontSize: supportingText ? FONT_SIZE.SIZE_16 : FONT_SIZE.SIZE_19,
-      lineHeight: supportingText ? LINE_HEIGHT.SIZE_16 : LINE_HEIGHT.SIZE_19,
-    },
-  }),
+  ({ supportingText }) => (typography.font({ size: supportingText ? 16 : 19 })),
+  spacing.withWhiteSpace({ marginBottom: 4 }),
 );
 
 /**
@@ -135,7 +121,7 @@ Paragraph.propTypes = {
 Paragraph.defaultProps = {
   children: '',
   supportingText: false,
-  linkRenderer: props => <Anchor {...props} />,
+  linkRenderer: props => <Link {...props} />,
 };
 
-export default withWhiteSpace({ marginBottom: 4 })(Paragraph);
+export default Paragraph;

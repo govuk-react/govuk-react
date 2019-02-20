@@ -4,8 +4,8 @@
   "dependencies": {
     "@govuk-react/constants": "^0.6.0-alpha.4",
     "@govuk-react/header": "^0.6.0-alpha.4",
-    "@govuk-react/hoc": "^0.6.0-alpha.4",
     "@govuk-react/input-field": "^0.6.0-alpha.4",
+    "@govuk-react/lib": "^0.6.0-alpha.4",
     "@govuk-react/link": "^0.6.0-alpha.4",
     "@govuk-react/list-item": "^0.6.0-alpha.4",
     "@govuk-react/paragraph": "^0.6.0-alpha.4",
