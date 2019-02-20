@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
-.c1 {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13,13 +13,13 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
   margin-bottom: 0;
 }
 
-.c1:after {
+.c0:after {
   content: '';
   display: table;
   clear: both;
 }
 
-.c2 {
+.c1 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -33,7 +33,7 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
+.c2 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -46,8 +46,30 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
   padding: 5px 4px 4px;
 }
 
-.c0 {
-  margin-bottom: 20px;
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-bottom: 0;
+  }
+}
+
+@media print {
+  .c1 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c1 {
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
+@media print {
+  .c1 {
+    color: #000;
+  }
 }
 
 @media only screen and (min-width:641px) {
@@ -56,208 +78,136 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
   }
 }
 
-@media print {
-  .c2 {
-    font-size: 14px;
-    line-height: 1.15;
-  }
-}
-
 @media only screen and (min-width:641px) {
   .c2 {
-    font-size: 19px;
-    line-height: 1.3157894736842106;
-  }
-}
-
-@media print {
-  .c2 {
-    color: #000;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c2 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c3 {
     font-size: 16px;
     line-height: 1.25;
     width: 50%;
   }
 }
 
-@media only screen and (min-width:641px) {
-  .c0 {
-    margin-bottom: 30px;
-  }
-}
-
-<Styled(FileUpload)>
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-dnqmqq",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            [Function],
-          ],
-        },
-        "displayName": "Styled(FileUpload)",
-        "foldedComponentIds": Array [],
-        "propTypes": Object {
-          "margin": [Function],
-          "mb": [Function],
-          "padding": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "sc-dnqmqq",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      }
-    }
-    forwardedRef={null}
-  >
-    <FileUpload
-      className="c0"
-      meta={Object {}}
-    >
-      <Label
-        className="c0"
-      >
-        <styled.label
-          className="c0"
-        >
-          <StyledComponent
-            className="c0"
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-bdVaJa",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "display: flex; flex-direction: column; box-sizing: border-box; :after {
+<FileUpload
+  meta={Object {}}
+>
+  <Label>
+    <styled.label>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "display: flex; flex-direction: column; box-sizing: border-box; :after {
   content: ''; display: table; clear: both;
 }",
-                    [Function],
-                    [Function],
-                  ],
-                },
-                "displayName": "styled.label",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-bdVaJa",
-                "target": "label",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-          >
-            <label
-              className="c0 c1"
-            >
-              <LabelText>
-                <styled.span>
-                  <StyledComponent
-                    forwardedComponent={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "attrs": Array [],
-                        "componentStyle": ComponentStyle {
-                          "componentId": "sc-bwzfXH",
-                          "isStatic": false,
-                          "lastClassName": "c2",
-                          "rules": Array [
-                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+                [Function],
+                [Function],
+              ],
+            },
+            "displayName": "styled.label",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "label",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <label
+          className="c0"
+        >
+          <LabelText>
+            <styled.span>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bwzfXH",
+                      "isStatic": false,
+                      "lastClassName": "c1",
+                      "rules": Array [
+                        "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-size: 14px; line-height: 1.15;
 } font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
   font-size: 19px; line-height: 1.3157894736842106;
 }",
-                            "color: #0b0c0c; @media print {
+                        "color: #0b0c0c; @media print {
   color: #000;
 }",
-                            "display: block; clear: none; padding-bottom: 2px;",
-                            [Function],
-                            [Function],
-                          ],
-                        },
-                        "displayName": "styled.span",
-                        "foldedComponentIds": Array [],
-                        "render": [Function],
-                        "styledComponentId": "sc-bwzfXH",
-                        "target": "span",
-                        "toString": [Function],
-                        "warnTooManyClasses": [Function],
-                        "withComponent": [Function],
-                      }
-                    }
-                    forwardedRef={null}
-                  >
-                    <span
-                      className="c2"
-                    >
-                      example
-                    </span>
-                  </StyledComponent>
-                </styled.span>
-              </LabelText>
-              <styled.input
-                type="file"
+                        "display: block; clear: none; padding-bottom: 2px;",
+                        [Function],
+                        [Function],
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bwzfXH",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
               >
-                <StyledComponent
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-htoDjs",
-                        "isStatic": true,
-                        "lastClassName": "c3",
-                        "rules": Array [
-                          "box-sizing: border-box; font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-weight: 400; text-transform: none; font-size: 14px; line-height: 1.1428571429; @media only screen and (min-width: 641px) {
+                <span
+                  className="c1"
+                >
+                  example
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </LabelText>
+          <styled.input
+            type="file"
+          >
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-ifAKCX",
+                    "isStatic": true,
+                    "lastClassName": "c2",
+                    "rules": Array [
+                      "box-sizing: border-box; font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-weight: 400; text-transform: none; font-size: 14px; line-height: 1.1428571429; @media only screen and (min-width: 641px) {
   font-size: 16px; line-height: 1.25; width: 50%;
 } width: 100%; padding: 5px 4px 4px;",
-                        ],
-                      },
-                      "displayName": "styled.input",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-htoDjs",
-                      "target": "input",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  type="file"
-                >
-                  <input
-                    className="c3"
-                    type="file"
-                  />
-                </StyledComponent>
-              </styled.input>
-            </label>
-          </StyledComponent>
-        </styled.label>
-      </Label>
-    </FileUpload>
-  </StyledComponent>
-</Styled(FileUpload)>
+                    ],
+                  },
+                  "displayName": "styled.input",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-ifAKCX",
+                  "target": "input",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              type="file"
+            >
+              <input
+                className="c2"
+                type="file"
+              />
+            </StyledComponent>
+          </styled.input>
+        </label>
+      </StyledComponent>
+    </styled.label>
+  </Label>
+</FileUpload>
 `;

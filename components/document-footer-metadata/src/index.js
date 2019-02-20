@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import UnorderedList from '@govuk-react/unordered-list';
 import { NTA_LIGHT } from '@govuk-react/constants';
-import { withWhiteSpace } from '@govuk-react/hoc';
+import { spacing } from '@govuk-react/lib';
 
-const StyledContainer = styled('div')({
-  fontFamily: NTA_LIGHT,
-});
+const StyledContainer = styled('div')(
+  { fontFamily: NTA_LIGHT },
+  spacing.withWhiteSpace(),
+);
 
 const StyledDefinition = styled('li')({
   fontSize: '24px',
@@ -87,7 +88,7 @@ const DocumentFooterMetadata = ({
   from, partOf, other, ...props
 }) => {
   const fromData = (
-    <StyledContainer {...props}>
+    <StyledContainer>
       {from &&
         <div>
           <p style={{ marginBottom: 0 }}>From:</p>
@@ -134,11 +135,11 @@ const DocumentFooterMetadata = ({
   );
 
   return (
-    <div>
+    <StyledContainer {...props}>
       {fromData}
       {partOfData}
       {otherData}
-    </div>
+    </StyledContainer>
   );
 };
 
@@ -169,4 +170,4 @@ DocumentFooterMetadata.propTypes = {
   })),
 };
 
-export default withWhiteSpace({ marginBottom: 0 })(DocumentFooterMetadata);
+export default DocumentFooterMetadata;
