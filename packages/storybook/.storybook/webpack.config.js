@@ -15,7 +15,8 @@ module.exports = (baseConfig, env, defaultConfig) => {
     include: path.resolve(__dirname, '../../..')
   });
   // make babel-loader process components and packages src folder
-  defaultConfig.module.rules[0].include.push(/\/(packages|components)\/[^/]+\/src/);
+  const pathRegex = new RegExp(`\\${path.sep}(packages|components)\\${path.sep}[^\\${path.sep}]+\\${path.sep}src`)
+  defaultConfig.module.rules[0].include.push(pathRegex);
   // use babel.config.js from the monorepo root by telling babel to search upward beyond storybook package.json
   defaultConfig.module.rules[0].use[0].options.rootMode = "upward";
 
