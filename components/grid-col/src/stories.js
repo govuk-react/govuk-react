@@ -108,12 +108,12 @@ examples.add('Quarters', () => (
   </GridRow>
 ));
 
-examples.add('One Quarter and autoFill', () => (
+examples.add('One Quarter and auto-fill', () => (
   <GridRow>
     <GridCol columnOneQuarter>
       <Content>content</Content>
     </GridCol>
-    <GridCol autoFill>
+    <GridCol>
       <Content>content</Content>
     </GridCol>
   </GridRow>

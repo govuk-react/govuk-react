@@ -33,6 +33,7 @@ exports[`Table renders a simple example matching snapshot: simple table 1`] = `
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
 @media print {
@@ -52,6 +53,12 @@ exports[`Table renders a simple example matching snapshot: simple table 1`] = `
 @media print {
   .c0 {
     color: #000;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-bottom: 30px;
   }
 }
 
@@ -173,6 +180,7 @@ exports[`Table renders a simple example matching snapshot: simple table 1`] = `
                                   "rules": Array [
                                     [Function],
                                     [Function],
+                                    [Function],
                                   ],
                                 },
                                 "displayName": "styled.td",
@@ -213,6 +221,7 @@ exports[`Table renders a simple example matching snapshot: simple table 1`] = `
                                 "isStatic": false,
                                 "lastClassName": "c2",
                                 "rules": Array [
+                                  [Function],
                                   [Function],
                                   [Function],
                                 ],
@@ -292,6 +301,7 @@ exports[`Table renders a simple example matching snapshot: simple table 1`] = `
                                   "isStatic": false,
                                   "lastClassName": "c2",
                                   "rules": Array [
+                                    [Function],
                                     [Function],
                                     [Function],
                                   ],
@@ -336,6 +346,7 @@ exports[`Table renders a simple example matching snapshot: simple table 1`] = `
                                 "rules": Array [
                                   [Function],
                                   [Function],
+                                  [Function],
                                 ],
                               },
                               "displayName": "styled.td",
@@ -415,6 +426,7 @@ exports[`Table renders a simple example matching snapshot: simple table 1`] = `
                                   "rules": Array [
                                     [Function],
                                     [Function],
+                                    [Function],
                                   ],
                                 },
                                 "displayName": "styled.td",
@@ -455,6 +467,7 @@ exports[`Table renders a simple example matching snapshot: simple table 1`] = `
                                 "isStatic": false,
                                 "lastClassName": "c2",
                                 "rules": Array [
+                                  [Function],
                                   [Function],
                                   [Function],
                                 ],
@@ -536,6 +549,7 @@ exports[`Table renders a simple example matching snapshot: simple table 1`] = `
                                   "rules": Array [
                                     [Function],
                                     [Function],
+                                    [Function],
                                   ],
                                 },
                                 "displayName": "styled.td",
@@ -576,6 +590,7 @@ exports[`Table renders a simple example matching snapshot: simple table 1`] = `
                                 "isStatic": false,
                                 "lastClassName": "c2",
                                 "rules": Array [
+                                  [Function],
                                   [Function],
                                   [Function],
                                 ],
@@ -657,6 +672,7 @@ exports[`Table renders a table with a caption matching snapshot: table with capt
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
 @media print {
@@ -676,6 +692,12 @@ exports[`Table renders a table with a caption matching snapshot: table with capt
 @media print {
   .c0 {
     color: #000;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-bottom: 30px;
   }
 }
 
@@ -860,6 +882,7 @@ exports[`Table renders a table with a caption matching snapshot: table with capt
                                   "rules": Array [
                                     [Function],
                                     [Function],
+                                    [Function],
                                   ],
                                 },
                                 "displayName": "styled.td",
@@ -900,6 +923,7 @@ exports[`Table renders a table with a caption matching snapshot: table with capt
                                 "isStatic": false,
                                 "lastClassName": "c3",
                                 "rules": Array [
+                                  [Function],
                                   [Function],
                                   [Function],
                                 ],
@@ -979,6 +1003,7 @@ exports[`Table renders a table with a caption matching snapshot: table with capt
                                   "isStatic": false,
                                   "lastClassName": "c3",
                                   "rules": Array [
+                                    [Function],
                                     [Function],
                                     [Function],
                                   ],
@@ -1023,6 +1048,7 @@ exports[`Table renders a table with a caption matching snapshot: table with capt
                                 "rules": Array [
                                   [Function],
                                   [Function],
+                                  [Function],
                                 ],
                               },
                               "displayName": "styled.td",
@@ -1102,6 +1128,7 @@ exports[`Table renders a table with a caption matching snapshot: table with capt
                                   "rules": Array [
                                     [Function],
                                     [Function],
+                                    [Function],
                                   ],
                                 },
                                 "displayName": "styled.td",
@@ -1142,6 +1169,7 @@ exports[`Table renders a table with a caption matching snapshot: table with capt
                                 "isStatic": false,
                                 "lastClassName": "c3",
                                 "rules": Array [
+                                  [Function],
                                   [Function],
                                   [Function],
                                 ],
@@ -1238,6 +1266,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
 @media print {
@@ -1263,6 +1292,12 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
 @media print {
   .c0 {
     color: #000;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-bottom: 30px;
   }
 }
 
@@ -1436,6 +1471,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
                                   "rules": Array [
                                     [Function],
                                     [Function],
+                                    [Function],
                                   ],
                                 },
                                 "displayName": "styled.td",
@@ -1486,6 +1522,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
                                   "isStatic": false,
                                   "lastClassName": "c4",
                                   "rules": Array [
+                                    [Function],
                                     [Function],
                                     [Function],
                                   ],
@@ -1539,6 +1576,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
                                   "isStatic": false,
                                   "lastClassName": "c4",
                                   "rules": Array [
+                                    [Function],
                                     [Function],
                                     [Function],
                                   ],
@@ -1655,6 +1693,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
                                   "rules": Array [
                                     [Function],
                                     [Function],
+                                    [Function],
                                   ],
                                 },
                                 "displayName": "styled.td",
@@ -1699,6 +1738,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
                                 "rules": Array [
                                   [Function],
                                   [Function],
+                                  [Function],
                                 ],
                               },
                               "displayName": "styled.td",
@@ -1740,6 +1780,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
                                 "isStatic": false,
                                 "lastClassName": "c4",
                                 "rules": Array [
+                                  [Function],
                                   [Function],
                                   [Function],
                                 ],
@@ -1820,6 +1861,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
                                   "isStatic": false,
                                   "lastClassName": "c4",
                                   "rules": Array [
+                                    [Function],
                                     [Function],
                                     [Function],
                                   ],
@@ -1866,6 +1908,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
                                 "rules": Array [
                                   [Function],
                                   [Function],
+                                  [Function],
                                 ],
                               },
                               "displayName": "styled.td",
@@ -1907,6 +1950,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
                                 "isStatic": false,
                                 "lastClassName": "c4",
                                 "rules": Array [
+                                  [Function],
                                   [Function],
                                   [Function],
                                 ],
@@ -1989,6 +2033,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
                                   "rules": Array [
                                     [Function],
                                     [Function],
+                                    [Function],
                                   ],
                                 },
                                 "displayName": "styled.td",
@@ -2033,6 +2078,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
                                 "rules": Array [
                                   [Function],
                                   [Function],
+                                  [Function],
                                 ],
                               },
                               "displayName": "styled.td",
@@ -2074,6 +2120,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
                                 "isStatic": false,
                                 "lastClassName": "c4",
                                 "rules": Array [
+                                  [Function],
                                   [Function],
                                   [Function],
                                 ],
@@ -2156,6 +2203,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
                                   "rules": Array [
                                     [Function],
                                     [Function],
+                                    [Function],
                                   ],
                                 },
                                 "displayName": "styled.td",
@@ -2200,6 +2248,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
                                 "rules": Array [
                                   [Function],
                                   [Function],
+                                  [Function],
                                 ],
                               },
                               "displayName": "styled.td",
@@ -2241,6 +2290,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
                                 "isStatic": false,
                                 "lastClassName": "c4",
                                 "rules": Array [
+                                  [Function],
                                   [Function],
                                   [Function],
                                 ],

@@ -77,3 +77,12 @@ export const SPACING_POINTS = {
   8: 50,
   9: 60,
 };
+
+export const WIDTHS = {
+  'one-quarter': '25%',
+  'one-third': '33.3333%',
+  'one-half': '50%',
+  'two-thirds': '66.6666%',
+  'three-quarters': '75%',
+  full: '100%',
+};

@@ -4,11 +4,17 @@ import PropTypes from 'prop-types';
 import { GUTTER_HALF, MEDIA_QUERIES } from '@govuk-react/constants';
 
 const colValues = {
-  columnOneThird: '33.3333%',
-  columnTwoThirds: '66.6667%',
   columnOneQuarter: '25%',
+  columnOneThird: '33.3333%',
   columnOneHalf: '50%',
+  columnTwoThirds: '66.6667%',
+  columnThreeQuarters: '75%',
+  columnFull: '100%',
 };
+
+// TODO: govuk-frontend supports "from-desktop" classes
+// which will apply sizes using MQ for desktop
+// TODO: rethink width props - consider using `withWidth`
 
 const StyledColumn = styled('div')(
   {
@@ -27,7 +33,7 @@ const StyledColumn = styled('div')(
       }
     });
     return ({
-      [MEDIA_QUERIES.LARGESCREEN]: {
+      [MEDIA_QUERIES.TABLET]: {
         flexGrow: hasRequestedWidth ? 0 : 1,
         flexShrink: hasRequestedWidth ? 0 : 1,
         width: widthValue,
@@ -83,41 +89,33 @@ const StyledColumn = styled('div')(
  * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
  *
  */
-const GridCol = ({
-  columnOneThird,
-  columnTwoThirds,
-  columnOneQuarter,
-  columnOneHalf,
-  ...props
-}) => (
-  <StyledColumn
-    columnOneThird={columnOneThird}
-    columnTwoThirds={columnTwoThirds}
-    columnOneQuarter={columnOneQuarter}
-    columnOneHalf={columnOneHalf}
-    {...props}
-  />
-);
+const GridCol = props => <StyledColumn {...props} />;
 
 GridCol.propTypes = {
   /** GridCol content */
   children: PropTypes.node,
   /** Dimension setting for the column */
+  columnOneQuarter: PropTypes.bool,
+  /** Dimension setting for the column */
   columnOneThird: PropTypes.bool,
+  /** Dimension setting for the column */
+  columnOneHalf: PropTypes.bool,
   /** Dimension setting for the column */
   columnTwoThirds: PropTypes.bool,
   /** Dimension setting for the column */
-  columnOneQuarter: PropTypes.bool,
+  columnThreeQuarters: PropTypes.bool,
   /** Dimension setting for the column */
-  columnOneHalf: PropTypes.bool,
+  columnFull: PropTypes.bool,
 };
 
 GridCol.defaultProps = {
   children: undefined,
-  columnOneThird: false,
-  columnTwoThirds: false,
   columnOneQuarter: false,
+  columnOneThird: false,
   columnOneHalf: false,
+  columnTwoThirds: false,
+  columnThreeQuarters: false,
+  columnFull: false,
 };
 
 export default GridCol;

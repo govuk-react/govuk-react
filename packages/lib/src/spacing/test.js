@@ -3,6 +3,7 @@ import {
   SPACING_MAP,
   SPACING_MAP_INDEX,
   SPACING_POINTS,
+  WIDTHS,
 } from '@govuk-react/constants';
 
 import * as spacing from '.';
@@ -215,6 +216,81 @@ describe('spacing lib', () => {
         expect(result).toEqual(expect.arrayContaining([
           expect.objectContaining({ 'padding-top': SPACING_MAP[3].mobile }),
         ]));
+      });
+    });
+  });
+
+  describe('withWidth', () => {
+    it('generates an executable styling function with no config', () => {
+      const widthFunc = spacing.withWidth();
+
+      expect(() => widthFunc()).not.toThrow();
+    });
+
+    it('creates no style when config/prop not provided', () => {
+      const widthFunc = spacing.withWidth();
+
+      expect(widthFunc()).toBeUndefined();
+    });
+
+    it('accepts a width config value of a size string', () => {
+      Object.entries(WIDTHS).forEach(([width, value]) => {
+        const widthFunc = spacing.withWidth({ width });
+        const widthStyle = widthFunc();
+
+        expect(widthStyle).toEqual(expect.objectContaining({
+          width: '100%',
+          [MEDIA_QUERIES.TABLET]: { width: value },
+        }));
+      });
+    });
+
+    it('accepts a setWidth prop', () => {
+      const widthFunc = spacing.withWidth();
+
+      ['95%', '200px'].forEach((setWidth) => {
+        const widthStyle = widthFunc({ setWidth });
+
+        expect(widthStyle).toEqual(expect.objectContaining({
+          width: '100%',
+          [MEDIA_QUERIES.TABLET]: { width: setWidth },
+        }));
+      });
+
+      Object.entries(WIDTHS).forEach(([setWidth, value]) => {
+        const widthStyle = widthFunc({ setWidth });
+
+        expect(widthStyle).toEqual(expect.objectContaining({
+          width: '100%',
+          [MEDIA_QUERIES.TABLET]: { width: value },
+        }));
+      });
+    });
+
+    it('accepts a setWidth prop to override a width config', () => {
+      const widthFunc = spacing.withWidth({ width: Object.keys(WIDTHS)[0] });
+
+      expect(widthFunc()).toEqual(expect.objectContaining({
+        width: '100%',
+        [MEDIA_QUERIES.TABLET]: { width: Object.values(WIDTHS)[0] },
+      }));
+
+      ['95%', '200px'].forEach((setWidth) => {
+        const widthStyle = widthFunc({ setWidth });
+
+        expect(widthStyle).toEqual(expect.objectContaining({
+          width: '100%',
+          [MEDIA_QUERIES.TABLET]: { width: setWidth },
+        }));
+      });
+
+      Object.entries(WIDTHS).forEach(([setWidth, value]) => {
+        const widthStyle = widthFunc({ setWidth });
+
+        expect(widthStyle).toEqual(expect.objectContaining({
+          width: '100%',
+          [MEDIA_QUERIES.TABLET]: { width: value },
+        }));
       });
     });
   });

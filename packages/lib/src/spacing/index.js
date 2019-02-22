@@ -11,6 +11,7 @@ import {
   SPACING_MAP,
   SPACING_MAP_INDEX,
   SPACING_POINTS,
+  WIDTHS,
 } from '@govuk-react/constants';
 
 export function simple(size) {
@@ -159,3 +160,22 @@ withWhiteSpace.propTypes = {
     PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, SpacingShape])),
   ]),
 };
+
+export function withWidth(config = {}) {
+  return ({
+    setWidth = config.width,
+  } = {}) => {
+    if (setWidth) {
+      const width = WIDTHS[setWidth] || setWidth;
+
+      return {
+        width: '100%',
+        [MEDIA_QUERIES.TABLET]: {
+          width,
+        },
+      };
+    }
+
+    return undefined;
+  };
+}

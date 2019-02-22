@@ -539,9 +539,11 @@ import GridCol from '@govuk-react/grid-col';
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` |  | ```undefined``` | node | GridCol content
+ `columnFull` |  | ```false``` | bool | Dimension setting for the column
  `columnOneHalf` |  | ```false``` | bool | Dimension setting for the column
  `columnOneQuarter` |  | ```false``` | bool | Dimension setting for the column
  `columnOneThird` |  | ```false``` | bool | Dimension setting for the column
+ `columnThreeQuarters` |  | ```false``` | bool | Dimension setting for the column
  `columnTwoThirds` |  | ```false``` | bool | Dimension setting for the column
 
 
@@ -1785,32 +1787,21 @@ const example2Head = (
 </Table>
 ```
 
-NB The govuk-frontend table component describes a way of setting custom column widths
-via width override classes. Currently govuk-react does not provide a direct equivalent of this
-functionality out of the box, however if this behaviour is desired then custom widths
-can be set by re-styling a component.
-
-For example;
+Setting custom column widths
 ```jsx
-import styled from 'styled-components';
-
-const CustomHeader = styled(Table.CellHeader)({
-  width: '50%',
-});
-
 <Table
   caption="Custom header"
   head={
     <Table.Row>
-      <CustomHeader>Wide header</CustomHeader>
-      <Table.CellHeader>Regular</Table.CellHeader>
+      <Table.CellHeader setWidth="one-half>Wide header</Table.CellHeader>
+      <Table.CellHeader setWidth="30%">Regular</Table.CellHeader>
       <Table.CellHeader>Normal</Table.CellHeader>
     </Table.Row>
   }
 >
   <Table.Row>
-    <Table.Cell>Custom header provides a wide column here</Table.Cell>
-    <Table.Cell>Some value</Table.Cell>
+    <Table.Cell>Header makes this column one-half wide</Table.Cell>
+    <Table.Cell>And this one 30%</Table.Cell>
     <Table.Cell>Another</Table.Cell>
   </Table.Row>
 </Table>

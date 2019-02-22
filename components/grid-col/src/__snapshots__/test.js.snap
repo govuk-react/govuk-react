@@ -21,21 +21,27 @@ exports[`GridCol matches snapshot: enzyme.mount 1`] = `
 }
 
 <GridCol
+  columnFull={false}
   columnOneHalf={false}
   columnOneQuarter={false}
   columnOneThird={false}
+  columnThreeQuarters={false}
   columnTwoThirds={false}
 >
   <styled.div
+    columnFull={false}
     columnOneHalf={false}
     columnOneQuarter={false}
     columnOneThird={false}
+    columnThreeQuarters={false}
     columnTwoThirds={false}
   >
     <StyledComponent
+      columnFull={false}
       columnOneHalf={false}
       columnOneQuarter={false}
       columnOneThird={false}
+      columnThreeQuarters={false}
       columnTwoThirds={false}
       forwardedComponent={
         Object {

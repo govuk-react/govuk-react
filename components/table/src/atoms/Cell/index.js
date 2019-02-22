@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { BORDER_COLOUR } from 'govuk-colours';
 import { FONT_WEIGHTS, SPACING_POINTS } from '@govuk-react/constants';
-import { typography } from '@govuk-react/lib';
+import { spacing, typography } from '@govuk-react/lib';
 
 const Cell = styled('td')(
   ({
@@ -23,6 +23,7 @@ const Cell = styled('td')(
   ({ numeric, isHeader }) => (
     (numeric && !isHeader) ? typography.font({ tabular: true }) : undefined
   ),
+  spacing.withWidth(),
 );
 
 Cell.propTypes = {

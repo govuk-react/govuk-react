@@ -55,9 +55,11 @@ import GridCol from '@govuk-react/grid-col';
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` |  | ```undefined``` | node | GridCol content
+ `columnFull` |  | ```false``` | bool | Dimension setting for the column
  `columnOneHalf` |  | ```false``` | bool | Dimension setting for the column
  `columnOneQuarter` |  | ```false``` | bool | Dimension setting for the column
  `columnOneThird` |  | ```false``` | bool | Dimension setting for the column
+ `columnThreeQuarters` |  | ```false``` | bool | Dimension setting for the column
  `columnTwoThirds` |  | ```false``` | bool | Dimension setting for the column
 
 

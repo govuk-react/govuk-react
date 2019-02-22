@@ -105,11 +105,31 @@ const TableWithCustomHeader = () => (
   </Table>
 );
 
+const TableWithCustomWidths = () => (
+  <Table
+    caption="Custom widths"
+    head={
+      <Table.Row>
+        <Table.CellHeader setWidth="one-half">one-half</Table.CellHeader>
+        <Table.CellHeader setWidth="22%">22%</Table.CellHeader>
+        <Table.CellHeader>Normal</Table.CellHeader>
+      </Table.Row>
+    }
+  >
+    <Table.Row>
+      <Table.Cell>Column uses setWidth=&quot;one-half&quot; in header</Table.Cell>
+      <Table.Cell>setWidth=&quot;22%&quot;</Table.Cell>
+      <Table.Cell>Not specified</Table.Cell>
+    </Table.Row>
+  </Table>
+);
+
 export {
   TableSimple,
   TableWithCaption,
   TableWithHeadAndNumerics,
   TableWithCustomHeader,
+  TableWithCustomWidths,
 };
 
 export default Table;

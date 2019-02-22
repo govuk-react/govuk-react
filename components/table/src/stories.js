@@ -7,6 +7,7 @@ import {
   TableWithCaption,
   TableWithCustomHeader,
   TableWithHeadAndNumerics,
+  TableWithCustomWidths,
 } from './fixtures';
 import ReadMe from '../README.md';
 
@@ -29,4 +30,8 @@ examples.add('With a custom header element', () => (
 
 examples.add('With a head row and numeric tabular data', () => (
   <TableWithHeadAndNumerics />
+));
+
+examples.add('With a custom column widths', () => (
+  <TableWithCustomWidths />
 ));

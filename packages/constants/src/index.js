@@ -44,6 +44,7 @@ export const MEDIA_QUERIES = {
   MAX: `@media only screen and (min-width: ${SITE_WIDTH_PLUS_GUTTERS})`,
   PRINT: '@media print',
   TABLET: `@media only screen and (min-width: ${BREAKPOINTS.TABLET})`,
+  DESKTOP: `@media only screen and (min-width: ${BREAKPOINTS.DESKTOP})`,
 };
 
 // TODO: figure out how to optionally include locally installed font, e.g. "GDS Transport Website"
