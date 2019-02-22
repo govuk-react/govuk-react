@@ -293,5 +293,25 @@ describe('spacing lib', () => {
         }));
       });
     });
+
+    it('accepts a noDefault config which removes default 100% width', () => {
+      const widthFunc = spacing.withWidth({ noDefault: true });
+
+      ['95%', '200px'].forEach((setWidth) => {
+        const widthStyle = widthFunc({ setWidth });
+
+        expect(widthStyle).not.toEqual(expect.objectContaining({
+          width: '100%',
+        }));
+      });
+
+      Object.values(WIDTHS).forEach((setWidth) => {
+        const widthStyle = widthFunc({ setWidth });
+
+        expect(widthStyle).not.toEqual(expect.objectContaining({
+          width: '100%',
+        }));
+      });
+    });
   });
 });

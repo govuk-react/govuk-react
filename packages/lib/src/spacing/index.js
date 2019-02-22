@@ -167,10 +167,11 @@ export function withWidth(config = {}) {
   } = {}) => {
     if (setWidth) {
       const width = WIDTHS[setWidth] || setWidth;
+      const { mediaQuery = MEDIA_QUERIES.TABLET, noDefault } = config;
 
       return {
-        width: '100%',
-        [MEDIA_QUERIES.TABLET]: {
+        width: noDefault ? undefined : '100%',
+        [mediaQuery]: {
           width,
         },
       };

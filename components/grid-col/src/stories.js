@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-// Can't seem to overcome import/no-extraneous-dependencies with the following line;
-// import { GridRow, H2, Paragraph } from 'govuk-react';
 import GridRow from '@govuk-react/grid-row';
 import { H2 } from '@govuk-react/header';
 import Paragraph from '@govuk-react/paragraph';
@@ -25,7 +23,7 @@ stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
   <GridRow>
-    <GridCol columnOneHalf>
+    <GridCol setWidth="one-half">
       <H2>Half column</H2>
       <Paragraph>
         This guide shows how to make your service look consistent with the rest of
@@ -33,7 +31,7 @@ stories.add('Component default', () => (
         colour, images, icons, forms, buttons and data.
       </Paragraph>
     </GridCol>
-    <GridCol columnOneHalf>
+    <GridCol setWidth="one-half">
       <H2>Half column</H2>
       <Paragraph>
         This guide shows how to make your service look consistent with the rest of
@@ -46,10 +44,10 @@ stories.add('Component default', () => (
 
 examples.add('Column Halves', () => (
   <GridRow>
-    <GridCol columnOneHalf>
+    <GridCol setWidth="one-half">
       <Content>content</Content>
     </GridCol>
-    <GridCol columnOneHalf>
+    <GridCol setWidth="one-half">
       <Content>content</Content>
     </GridCol>
   </GridRow>
@@ -57,13 +55,13 @@ examples.add('Column Halves', () => (
 
 examples.add('Column Thirds', () => (
   <GridRow>
-    <GridCol columnOneThird>
+    <GridCol setWidth="one-third">
       <Content>content</Content>
     </GridCol>
-    <GridCol columnOneThird>
+    <GridCol setWidth="one-third">
       <Content>content</Content>
     </GridCol>
-    <GridCol columnOneThird>
+    <GridCol setWidth="one-third">
       <Content>content</Content>
     </GridCol>
   </GridRow>
@@ -71,10 +69,10 @@ examples.add('Column Thirds', () => (
 
 examples.add('Column Two Thirds / One Third', () => (
   <GridRow>
-    <GridCol columnTwoThirds>
+    <GridCol setWidth="two-thirds">
       <Content>content</Content>
     </GridCol>
-    <GridCol columnOneThird>
+    <GridCol setWidth="one-third">
       <Content>content</Content>
     </GridCol>
   </GridRow>
@@ -82,38 +80,63 @@ examples.add('Column Two Thirds / One Third', () => (
 
 examples.add('Column One Third / Two Thirds', () => (
   <GridRow>
-    <GridCol columnOneThird>
+    <GridCol setWidth="one-third">
       <Content>content</Content>
     </GridCol>
-    <GridCol columnTwoThirds>
-      <Content>content</Content>
-    </GridCol>
-  </GridRow>
-));
-
-examples.add('Quarters', () => (
-  <GridRow>
-    <GridCol columnOneQuarter>
-      <Content>content</Content>
-    </GridCol>
-    <GridCol columnOneQuarter>
-      <Content>content</Content>
-    </GridCol>
-    <GridCol columnOneQuarter>
-      <Content>content</Content>
-    </GridCol>
-    <GridCol columnOneQuarter>
+    <GridCol setWidth="two-thirds">
       <Content>content</Content>
     </GridCol>
   </GridRow>
 ));
 
-examples.add('One Quarter and auto-fill', () => (
+examples.add('Column Four Quarters', () => (
   <GridRow>
-    <GridCol columnOneQuarter>
+    <GridCol setWidth="one-quarter">
+      <Content>content</Content>
+    </GridCol>
+    <GridCol setWidth="one-quarter">
+      <Content>content</Content>
+    </GridCol>
+    <GridCol setWidth="one-quarter">
+      <Content>content</Content>
+    </GridCol>
+    <GridCol setWidth="one-quarter">
+      <Content>content</Content>
+    </GridCol>
+  </GridRow>
+));
+
+examples.add('Column One Quarter and auto-fill', () => (
+  <GridRow>
+    <GridCol setWidth="one-quarter">
       <Content>content</Content>
     </GridCol>
     <GridCol>
+      <Content>content</Content>
+    </GridCol>
+  </GridRow>
+));
+
+examples.add('Column widths differing between tablet and desktop', () => (
+  <GridRow>
+    <GridCol setWidth="one-quarter" setDesktopWidth="one-third">
+      <Content>content</Content>
+    </GridCol>
+    <GridCol setWidth="three-quarters" setDesktopWidth="auto">
+      <Content>content</Content>
+    </GridCol>
+  </GridRow>
+));
+
+examples.add('Custom widths, differing between tablet and desktop', () => (
+  <GridRow>
+    <GridCol setWidth="60%" setDesktopWidth="auto">
+      <Content>content</Content>
+    </GridCol>
+    <GridCol setWidth="30%" setDesktopWidth="18%">
+      <Content>content</Content>
+    </GridCol>
+    <GridCol setWidth="auto" setDesktopWidth="400px">
       <Content>content</Content>
     </GridCol>
   </GridRow>

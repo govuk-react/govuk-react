@@ -1,6 +1,429 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GridCol matches snapshot: enzyme.mount 1`] = `
+exports[`GridCol renders custom widths matching snapshot: GridCol custom widths example 1`] = `
+Array [
+  .c0 {
+  box-sizing: border-box;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    width: 25%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+}
+
+<GridCol
+    columnFull={false}
+    columnOneHalf={false}
+    columnOneQuarter={false}
+    columnOneThird={false}
+    columnThreeQuarters={false}
+    columnTwoThirds={false}
+    setWidth="one-quarter"
+  >
+    <styled.div
+      columnFull={false}
+      columnOneHalf={false}
+      columnOneQuarter={false}
+      columnOneThird={false}
+      columnThreeQuarters={false}
+      columnTwoThirds={false}
+      setWidth="one-quarter"
+    >
+      <StyledComponent
+        columnFull={false}
+        columnOneHalf={false}
+        columnOneQuarter={false}
+        columnOneThird={false}
+        columnThreeQuarters={false}
+        columnTwoThirds={false}
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "hfwjaA",
+              "rules": Array [
+                "box-sizing: border-box; padding-right: 15px; padding-left: 15px;",
+                [Function],
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        setWidth="one-quarter"
+      >
+        <div
+          className="c0"
+        >
+          example
+        </div>
+      </StyledComponent>
+    </styled.div>
+  </GridCol>,
+  .c0 {
+  box-sizing: border-box;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    width: 75%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+}
+
+<GridCol
+    columnFull={false}
+    columnOneHalf={false}
+    columnOneQuarter={false}
+    columnOneThird={false}
+    columnThreeQuarters={false}
+    columnTwoThirds={false}
+    setWidth="three-quarters"
+  >
+    <styled.div
+      columnFull={false}
+      columnOneHalf={false}
+      columnOneQuarter={false}
+      columnOneThird={false}
+      columnThreeQuarters={false}
+      columnTwoThirds={false}
+      setWidth="three-quarters"
+    >
+      <StyledComponent
+        columnFull={false}
+        columnOneHalf={false}
+        columnOneQuarter={false}
+        columnOneThird={false}
+        columnThreeQuarters={false}
+        columnTwoThirds={false}
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "hfwjaA",
+              "rules": Array [
+                "box-sizing: border-box; padding-right: 15px; padding-left: 15px;",
+                [Function],
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        setWidth="three-quarters"
+      >
+        <div
+          className="c0"
+        >
+          example
+        </div>
+      </StyledComponent>
+    </styled.div>
+  </GridCol>,
+  .c0 {
+  box-sizing: border-box;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    width: 90%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+}
+
+<GridCol
+    columnFull={false}
+    columnOneHalf={false}
+    columnOneQuarter={false}
+    columnOneThird={false}
+    columnThreeQuarters={false}
+    columnTwoThirds={false}
+    setWidth="90%"
+  >
+    <styled.div
+      columnFull={false}
+      columnOneHalf={false}
+      columnOneQuarter={false}
+      columnOneThird={false}
+      columnThreeQuarters={false}
+      columnTwoThirds={false}
+      setWidth="90%"
+    >
+      <StyledComponent
+        columnFull={false}
+        columnOneHalf={false}
+        columnOneQuarter={false}
+        columnOneThird={false}
+        columnThreeQuarters={false}
+        columnTwoThirds={false}
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "hfwjaA",
+              "rules": Array [
+                "box-sizing: border-box; padding-right: 15px; padding-left: 15px;",
+                [Function],
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        setWidth="90%"
+      >
+        <div
+          className="c0"
+        >
+          example
+        </div>
+      </StyledComponent>
+    </styled.div>
+  </GridCol>,
+  .c0 {
+  box-sizing: border-box;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    width: 33.3333%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+}
+
+@media only screen and (min-width:769px) {
+  .c0 {
+    width: 25%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+}
+
+<GridCol
+    columnFull={false}
+    columnOneHalf={false}
+    columnOneQuarter={false}
+    columnOneThird={false}
+    columnThreeQuarters={false}
+    columnTwoThirds={false}
+    setDesktopWidth="one-quarter"
+    setWidth="one-third"
+  >
+    <styled.div
+      columnFull={false}
+      columnOneHalf={false}
+      columnOneQuarter={false}
+      columnOneThird={false}
+      columnThreeQuarters={false}
+      columnTwoThirds={false}
+      setDesktopWidth="one-quarter"
+      setWidth="one-third"
+    >
+      <StyledComponent
+        columnFull={false}
+        columnOneHalf={false}
+        columnOneQuarter={false}
+        columnOneThird={false}
+        columnThreeQuarters={false}
+        columnTwoThirds={false}
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "hfwjaA",
+              "rules": Array [
+                "box-sizing: border-box; padding-right: 15px; padding-left: 15px;",
+                [Function],
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        setDesktopWidth="one-quarter"
+        setWidth="one-third"
+      >
+        <div
+          className="c0"
+        >
+          example
+        </div>
+      </StyledComponent>
+    </styled.div>
+  </GridCol>,
+  .c0 {
+  box-sizing: border-box;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+  }
+}
+
+@media only screen and (min-width:769px) {
+  .c0 {
+    width: 33.3333%;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+}
+
+<GridCol
+    columnFull={false}
+    columnOneHalf={false}
+    columnOneQuarter={false}
+    columnOneThird={false}
+    columnThreeQuarters={false}
+    columnTwoThirds={false}
+    setDesktopWidth="one-third"
+  >
+    <styled.div
+      columnFull={false}
+      columnOneHalf={false}
+      columnOneQuarter={false}
+      columnOneThird={false}
+      columnThreeQuarters={false}
+      columnTwoThirds={false}
+      setDesktopWidth="one-third"
+    >
+      <StyledComponent
+        columnFull={false}
+        columnOneHalf={false}
+        columnOneQuarter={false}
+        columnOneThird={false}
+        columnThreeQuarters={false}
+        columnTwoThirds={false}
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "box-sizing: border-box; padding-right: 15px; padding-left: 15px;",
+                [Function],
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        setDesktopWidth="one-third"
+      >
+        <div
+          className="c0"
+        >
+          example
+        </div>
+      </StyledComponent>
+    </styled.div>
+  </GridCol>,
+]
+`;
+
+exports[`GridCol simple render matches snapshot: GridCol simple example 1`] = `
 .c0 {
   box-sizing: border-box;
   padding-right: 15px;
@@ -16,7 +439,6 @@ exports[`GridCol matches snapshot: enzyme.mount 1`] = `
     -webkit-flex-shrink: 1;
     -ms-flex-negative: 1;
     flex-shrink: 1;
-    width: auto;
   }
 }
 

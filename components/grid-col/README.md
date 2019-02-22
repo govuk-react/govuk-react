@@ -7,13 +7,13 @@ GridCol
 ```
 <!-- STORY -->
 
-Should always be wrapped by `GridRow`. Will always render a column at 100% width if
-the browser width is below the `LARGESCREEN` breakpoint.
+Should always be wrapped by `GridRow`. Will always render a column at full width if
+the browser width is below the `TABLET` breakpoint.
+
+NB our grid is based on flex-box, which differs from govuk-frontend, which instead uses
+floats, however it is otherwise similar to use.
 
 ### Usage
-
-Example
-* https://codesandbox.io/s/x917knwm4z
 
 Simple
 ```jsx
@@ -27,20 +27,28 @@ import GridCol from '@govuk-react/grid-col';
     </GridCol>
   </GridRow>
   <GridRow>
-    <GridCol columnOneHalf>
+    <GridCol setWidth="one-half">
       ...
     </GridCol>
-    <GridCol columnOneQuarter>
+    <GridCol setWidth="one-quarter">
       ...
     </GridCol>
-    <GridCol columnOneQuarter>
+    <GridCol setWidth="one-quarter">
       ...
     </GridCol>
   <GridRow>
-    <GridCol columnOneThird>
+    <GridCol setWidth="one-third">
       ...
     </GridCol>
-    <GridCol columnTwoThirds>
+    <GridCol setWidth="two-thirds">
+      ...
+    </GridCol>
+  </GridRow>
+  <GridRow>
+    <GridCol setWidth="one-third" setDesktopWidth="one-quarter">
+      ...
+    </GridCol>
+    <GridCol setWidth="two-thirds" setDesktopWidth="auto">
       ...
     </GridCol>
   </GridRow>
@@ -55,11 +63,13 @@ import GridCol from '@govuk-react/grid-col';
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` |  | ```undefined``` | node | GridCol content
- `columnFull` |  | ```false``` | bool | Dimension setting for the column
- `columnOneHalf` |  | ```false``` | bool | Dimension setting for the column
- `columnOneQuarter` |  | ```false``` | bool | Dimension setting for the column
- `columnOneThird` |  | ```false``` | bool | Dimension setting for the column
- `columnThreeQuarters` |  | ```false``` | bool | Dimension setting for the column
- `columnTwoThirds` |  | ```false``` | bool | Dimension setting for the column
+ `columnFull` |  | ```false``` | bool | Dimension setting for the column (deprecated)
+ `columnOneHalf` |  | ```false``` | bool | Dimension setting for the column (deprecated)
+ `columnOneQuarter` |  | ```false``` | bool | Dimension setting for the column (deprecated)
+ `columnOneThird` |  | ```false``` | bool | Dimension setting for the column (deprecated)
+ `columnThreeQuarters` |  | ```false``` | bool | Dimension setting for the column (deprecated)
+ `columnTwoThirds` |  | ```false``` | bool | Dimension setting for the column (deprecated)
+ `setDesktopWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set desktop column to width using value or descriptive string<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
+ `setWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set column to width using value or descriptive string<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
 
 

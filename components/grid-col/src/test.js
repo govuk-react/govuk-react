@@ -1,32 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { Fragment } from 'react';
 import { mount } from 'enzyme';
 
-import GridCol from './';
+import GridCol from '.';
 
 describe('GridCol', () => {
-  let props;
-  const example = 'example';
-  const wrapper = <GridCol>{example}</GridCol>;
-
-  beforeEach(() => {
-    props = {
-      children: example,
-    };
-  });
-
   it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<GridCol columnOneThird>{example}</GridCol>, div);
-    ReactDOM.render(<GridCol columnTwoThirds>{example}</GridCol>, div);
-    ReactDOM.render(<GridCol columnOneQuarter>{example}</GridCol>, div);
+    mount(<GridCol>example</GridCol>);
+    mount(<GridCol columnOneThird>example</GridCol>);
+    mount(<GridCol columnTwoThirds>example</GridCol>);
+    mount(<GridCol columnOneQuarter>example</GridCol>);
   });
 
-  it('passes `props.children` to the rendered `wrapper` as `children`', () => {
-    expect(wrapper.props.children).toBe(props.children);
+  it('simple render matches snapshot', () => {
+    const wrapper = mount(<GridCol>example</GridCol>);
+
+    expect(wrapper).toMatchSnapshot('GridCol simple example');
   });
 
-  it('matches snapshot', () => {
-    expect(mount(wrapper)).toMatchSnapshot('enzyme.mount');
+  it('renders custom widths matching snapshot', () => {
+    const example = (
+      <Fragment>
+        <GridCol setWidth="one-quarter">example</GridCol>
+        <GridCol setWidth="three-quarters">example</GridCol>
+        <GridCol setWidth="90%">example</GridCol>
+        <GridCol setWidth="one-third" setDesktopWidth="one-quarter">example</GridCol>
+        <GridCol setDesktopWidth="one-third">example</GridCol>
+      </Fragment>
+    );
+    const wrapper = mount(example);
+
+    expect(wrapper).toMatchSnapshot('GridCol custom widths example');
   });
 });
