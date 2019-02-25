@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Caption matches wrapper snapshot 1`] = `
+.c0 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.1111111111111112;
+  margin-bottom: 5px;
+  color: #6f777b;
+}
+
+@media print {
+  .c0 {
+    font-size: 18px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    font-size: 27px;
+    line-height: 1.1111111111111112;
+  }
+}
+
+<Caption
+  size="XL"
+>
+  <styled.span
+    size="XL"
+  >
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              [Function],
+              [Function],
+              "color: #6f777b;",
+              [Function],
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      size="XL"
+    >
+      <span
+        className="c0"
+        size="XL"
+      >
+        Heading text
+      </span>
+    </StyledComponent>
+  </styled.span>
+</Caption>
+`;

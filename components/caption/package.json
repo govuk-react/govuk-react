@@ -1,9 +1,10 @@
 {
-  "name": "@govuk-react/grid-col",
+  "name": "@govuk-react/caption",
   "version": "0.6.0-alpha.4",
   "dependencies": {
     "@govuk-react/constants": "^0.6.0-alpha.4",
-    "@govuk-react/lib": "^0.6.0-alpha.4"
+    "@govuk-react/lib": "^0.6.0-alpha.4",
+    "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
     "react": ">=16.2.0",
@@ -17,10 +18,10 @@
   },
   "main": "lib/index.js",
   "module": "es/index.js",
-  "author": "Alasdair McLeay",
+  "author": "Steve Sims",
   "license": "MIT",
-  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/grid-col",
-  "description": "GridCol component for use inside GridRow component - includes media query breakpoints.",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/caption",
+  "description": "Renders children passed inside a styled span element.",
   "private": false,
   "publishConfig": {
     "access": "public"

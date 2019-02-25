@@ -77,3 +77,13 @@ export const SPACING_POINTS = {
   8: 50,
   9: 60,
 };
+
+// Ref: https://github.com/alphagov/govuk-frontend/blob/68bd09bb3e54b7ef4b4084ad2b3336858923a041/src/settings/_measurements.scss#L23
+export const WIDTHS = {
+  'one-quarter': '25%',
+  'one-third': '33.3333%',
+  'one-half': '50%',
+  'two-thirds': '66.6666%',
+  'three-quarters': '75%',
+  full: '100%',
+};
