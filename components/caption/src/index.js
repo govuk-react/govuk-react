@@ -23,11 +23,10 @@ const StyledCaption = styled('span')(
     const marginResponsiveStyle = actualSize === 24 ?
       { [MEDIA_QUERIES.TABLET]: { marginBottom: 0 } } : undefined;
 
-    return Object.assign(
-      {},
-      marginStyle,
-      marginResponsiveStyle,
-    );
+    return {
+      ...marginStyle,
+      ...marginResponsiveStyle,
+    };
   },
   {
     color: SECONDARY_TEXT_COLOUR,
