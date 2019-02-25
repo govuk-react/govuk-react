@@ -5,6 +5,7 @@
     "@govuk-react/back-link": "^0.6.0-alpha.4",
     "@govuk-react/breadcrumb": "^0.6.0-alpha.4",
     "@govuk-react/button": "^0.6.0-alpha.4",
+    "@govuk-react/caption": "^0.6.0-alpha.4",
     "@govuk-react/checkbox": "^0.6.0-alpha.4",
     "@govuk-react/date-field": "^0.6.0-alpha.4",
     "@govuk-react/details": "^0.6.0-alpha.4",
