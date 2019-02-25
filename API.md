@@ -526,13 +526,13 @@ GridCol
 ```
 <!-- STORY -->
 
-Should always be wrapped by `GridRow`. Will always render a column at 100% width if
-the browser width is below the `LARGESCREEN` breakpoint.
+Should always be wrapped by `GridRow`. Will always render a column at full width if
+the browser width is below the `TABLET` breakpoint.
+
+NB our grid is based on flex-box, which differs from govuk-frontend, which instead uses
+floats, however it is otherwise similar to use.
 
 ### Usage
-
-Example
-* https://codesandbox.io/s/x917knwm4z
 
 Simple
 ```jsx
@@ -546,20 +546,28 @@ import GridCol from '@govuk-react/grid-col';
     </GridCol>
   </GridRow>
   <GridRow>
-    <GridCol columnOneHalf>
+    <GridCol setWidth="one-half">
       ...
     </GridCol>
-    <GridCol columnOneQuarter>
+    <GridCol setWidth="one-quarter">
       ...
     </GridCol>
-    <GridCol columnOneQuarter>
+    <GridCol setWidth="one-quarter">
       ...
     </GridCol>
   <GridRow>
-    <GridCol columnOneThird>
+    <GridCol setWidth="one-third">
       ...
     </GridCol>
-    <GridCol columnTwoThirds>
+    <GridCol setWidth="two-thirds">
+      ...
+    </GridCol>
+  </GridRow>
+  <GridRow>
+    <GridCol setWidth="one-third" setDesktopWidth="one-quarter">
+      ...
+    </GridCol>
+    <GridCol setWidth="two-thirds" setDesktopWidth="auto">
       ...
     </GridCol>
   </GridRow>
@@ -574,10 +582,14 @@ import GridCol from '@govuk-react/grid-col';
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` |  | ```undefined``` | node | GridCol content
- `columnOneHalf` |  | ```false``` | bool | Dimension setting for the column
- `columnOneQuarter` |  | ```false``` | bool | Dimension setting for the column
- `columnOneThird` |  | ```false``` | bool | Dimension setting for the column
- `columnTwoThirds` |  | ```false``` | bool | Dimension setting for the column
+ `columnFull` |  | ```false``` | bool | Dimension setting for the column (deprecated)
+ `columnOneHalf` |  | ```false``` | bool | Dimension setting for the column (deprecated)
+ `columnOneQuarter` |  | ```false``` | bool | Dimension setting for the column (deprecated)
+ `columnOneThird` |  | ```false``` | bool | Dimension setting for the column (deprecated)
+ `columnThreeQuarters` |  | ```false``` | bool | Dimension setting for the column (deprecated)
+ `columnTwoThirds` |  | ```false``` | bool | Dimension setting for the column (deprecated)
+ `setDesktopWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set desktop column to width using value or descriptive string<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
+ `setWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set column to width using value or descriptive string<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
 
 
 GridRow
@@ -1820,32 +1832,21 @@ const example2Head = (
 </Table>
 ```
 
-NB The govuk-frontend table component describes a way of setting custom column widths
-via width override classes. Currently govuk-react does not provide a direct equivalent of this
-functionality out of the box, however if this behaviour is desired then custom widths
-can be set by re-styling a component.
-
-For example;
+Setting custom column widths
 ```jsx
-import styled from 'styled-components';
-
-const CustomHeader = styled(Table.CellHeader)({
-  width: '50%',
-});
-
 <Table
   caption="Custom header"
   head={
     <Table.Row>
-      <CustomHeader>Wide header</CustomHeader>
-      <Table.CellHeader>Regular</Table.CellHeader>
+      <Table.CellHeader setWidth="one-half>Wide header</Table.CellHeader>
+      <Table.CellHeader setWidth="30%">Regular</Table.CellHeader>
       <Table.CellHeader>Normal</Table.CellHeader>
     </Table.Row>
   }
 >
   <Table.Row>
-    <Table.Cell>Custom header provides a wide column here</Table.Cell>
-    <Table.Cell>Some value</Table.Cell>
+    <Table.Cell>Header makes this column one-half wide</Table.Cell>
+    <Table.Cell>And this one 30%</Table.Cell>
     <Table.Cell>Another</Table.Cell>
   </Table.Row>
 </Table>
