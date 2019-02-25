@@ -1,18 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`inset text can render with a paragraph: inset text with paragraph 1`] = `
-.c2 {
-  font-family: "nta",Arial,sans-serif;
+.c1 {
   margin: 0;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
+  margin-bottom: 0;
 }
 
-.c2 > p {
+.c1 > p {
   margin: 0;
 }
 
-.c2 > p > code {
+.c1 > p > code {
   padding: 0.2em 0.4em;
   margin: 0;
   font-size: 85%;
@@ -20,7 +24,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
   border-radius: 3px;
 }
 
-.c2 > pre {
+.c1 > pre {
   padding: 16px;
   overflow: auto;
   font-size: 85%;
@@ -29,7 +33,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
   border-radius: 3px;
 }
 
-.c2 > pre > code {
+.c1 > pre > code {
   display: inline;
   padding: 0;
   margin: 0;
@@ -37,10 +41,6 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
   overflow: visible;
   line-height: inherit;
   word-wrap: normal;
-}
-
-.c1 {
-  margin-bottom: 0;
 }
 
 .c0 {
@@ -67,10 +67,17 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
   margin-bottom: 0;
 }
 
+@media print {
+  .c1 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
 @media only screen and (min-width:641px) {
-  .c2 {
+  .c1 {
     font-size: 19px;
-    line-height: 1.3;
+    line-height: 1.3157894736842106;
   }
 }
 
@@ -115,7 +122,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gzVnrw",
+            "componentId": "sc-htpNat",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -140,7 +147,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
           "foldedComponentIds": Array [],
           "propTypes": undefined,
           "render": [Function],
-          "styledComponentId": "sc-gzVnrw",
+          "styledComponentId": "sc-htpNat",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -152,48 +159,147 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
       <div
         className="c0"
       >
-        <Styled(Paragraph)
+        <Paragraph
+          linkRenderer={[Function]}
           mb={0}
+          supportingText={false}
         >
-          <StyledComponent
-            forwardedComponent={
+          <Styled(ReactMarkdown)
+            allowedTypes={
+              Array [
+                "paragraph",
+                "emphasis",
+                "strong",
+                "link",
+                "inlineCode",
+                "code",
+              ]
+            }
+            escapeHtml={false}
+            linkRenderer={[Function]}
+            mb={0}
+            renderers={
               Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-bZQynM",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    [Function],
-                  ],
-                },
-                "displayName": "Styled(Paragraph)",
-                "foldedComponentIds": Array [],
-                "propTypes": Object {
-                  "margin": [Function],
-                  "mb": [Function],
-                  "padding": [Function],
-                },
-                "render": [Function],
-                "styledComponentId": "sc-bZQynM",
-                "target": [Function],
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-                Symbol(Symbol.hasInstance): [Function],
+                "link": [Function],
               }
             }
-            forwardedRef={null}
-            mb={0}
+            skipHtml={true}
+            source="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
+            supportingText={false}
           >
-            <Paragraph
-              className="c1"
+            <StyledComponent
+              allowedTypes={
+                Array [
+                  "paragraph",
+                  "emphasis",
+                  "strong",
+                  "link",
+                  "inlineCode",
+                  "code",
+                ]
+              }
+              escapeHtml={false}
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "c1",
+                    "rules": Array [
+                      "margin: 0; > p {
+  margin: 0;
+} > p > code {
+  padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: rgba(27,31,35,0.05); border-radius: 3px;
+} > pre {
+  padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #f6f8fa; border-radius: 3px;
+} > pre > code {
+  display: inline; padding: 0; margin: 0; border: 0; overflow: visible; line-height: inherit; word-wrap: normal;
+}",
+                      [Function],
+                      [Function],
+                    ],
+                  },
+                  "displayName": "Styled(ReactMarkdown)",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "renderers": Object {
+                    "blockquote": "blockquote",
+                    "break": "br",
+                    "code": [Function],
+                    "definition": [Function],
+                    "delete": "del",
+                    "emphasis": "em",
+                    "heading": [Function],
+                    "html": [Function],
+                    "image": "img",
+                    "imageReference": "img",
+                    "inlineCode": [Function],
+                    "link": "a",
+                    "linkReference": "a",
+                    "list": [Function],
+                    "listItem": [Function],
+                    "paragraph": "p",
+                    "root": "div",
+                    "strong": "strong",
+                    "table": [Function],
+                    "tableBody": [Function],
+                    "tableCell": [Function],
+                    "tableHead": [Function],
+                    "tableRow": [Function],
+                    "thematicBreak": "hr",
+                    "virtualHtml": [Function],
+                  },
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": [Function],
+                  "toString": [Function],
+                  "types": Array [
+                    "root",
+                    "break",
+                    "paragraph",
+                    "emphasis",
+                    "strong",
+                    "thematicBreak",
+                    "blockquote",
+                    "delete",
+                    "link",
+                    "image",
+                    "linkReference",
+                    "imageReference",
+                    "table",
+                    "tableHead",
+                    "tableBody",
+                    "tableRow",
+                    "tableCell",
+                    "list",
+                    "listItem",
+                    "definition",
+                    "heading",
+                    "inlineCode",
+                    "code",
+                    "html",
+                    "virtualHtml",
+                  ],
+                  "uriTransformer": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                  Symbol(Symbol.hasInstance): [Function],
+                }
+              }
+              forwardedRef={null}
               linkRenderer={[Function]}
               mb={0}
+              renderers={
+                Object {
+                  "link": [Function],
+                }
+              }
+              skipHtml={true}
+              source="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
               supportingText={false}
             >
-              <Styled(ReactMarkdown)
+              <ReactMarkdown
                 allowedTypes={
                   Array [
                     "paragraph",
@@ -204,10 +310,13 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                     "code",
                   ]
                 }
+                astPlugins={Array []}
                 className="c1"
                 escapeHtml={false}
                 linkRenderer={[Function]}
                 mb={0}
+                plugins={Array []}
+                rawSourcePos={false}
                 renderers={
                   Object {
                     "link": [Function],
@@ -215,165 +324,24 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                 }
                 skipHtml={true}
                 source="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
+                sourcePos={false}
                 supportingText={false}
+                transformLinkUri={[Function]}
               >
-                <StyledComponent
-                  allowedTypes={
-                    Array [
-                      "paragraph",
-                      "emphasis",
-                      "strong",
-                      "link",
-                      "inlineCode",
-                      "code",
-                    ]
-                  }
+                <div
                   className="c1"
-                  escapeHtml={false}
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-EHOje",
-                        "isStatic": false,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "font-family: \\"nta\\", Arial, sans-serif; margin: 0; > p {
-  margin: 0;
-} > p > code {
-  padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: rgba(27,31,35,0.05); border-radius: 3px;
-} > pre {
-  padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #f6f8fa; border-radius: 3px;
-} > pre > code {
-  display: inline; padding: 0; margin: 0; border: 0; overflow: visible; line-height: inherit; word-wrap: normal;
-}",
-                          [Function],
-                        ],
-                      },
-                      "displayName": "Styled(ReactMarkdown)",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "renderers": Object {
-                        "blockquote": "blockquote",
-                        "break": "br",
-                        "code": [Function],
-                        "definition": [Function],
-                        "delete": "del",
-                        "emphasis": "em",
-                        "heading": [Function],
-                        "html": [Function],
-                        "image": "img",
-                        "imageReference": "img",
-                        "inlineCode": [Function],
-                        "link": "a",
-                        "linkReference": "a",
-                        "list": [Function],
-                        "listItem": [Function],
-                        "paragraph": "p",
-                        "root": "div",
-                        "strong": "strong",
-                        "table": [Function],
-                        "tableBody": [Function],
-                        "tableCell": [Function],
-                        "tableHead": [Function],
-                        "tableRow": [Function],
-                        "thematicBreak": "hr",
-                        "virtualHtml": [Function],
-                      },
-                      "styledComponentId": "sc-EHOje",
-                      "target": [Function],
-                      "toString": [Function],
-                      "types": Array [
-                        "root",
-                        "break",
-                        "paragraph",
-                        "emphasis",
-                        "strong",
-                        "thematicBreak",
-                        "blockquote",
-                        "delete",
-                        "link",
-                        "image",
-                        "linkReference",
-                        "imageReference",
-                        "table",
-                        "tableHead",
-                        "tableBody",
-                        "tableRow",
-                        "tableCell",
-                        "list",
-                        "listItem",
-                        "definition",
-                        "heading",
-                        "inlineCode",
-                        "code",
-                        "html",
-                        "virtualHtml",
-                      ],
-                      "uriTransformer": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                      Symbol(Symbol.hasInstance): [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  linkRenderer={[Function]}
-                  mb={0}
-                  renderers={
-                    Object {
-                      "link": [Function],
-                    }
-                  }
-                  skipHtml={true}
-                  source="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
-                  supportingText={false}
+                  key="root-1-1"
                 >
-                  <ReactMarkdown
-                    allowedTypes={
-                      Array [
-                        "paragraph",
-                        "emphasis",
-                        "strong",
-                        "link",
-                        "inlineCode",
-                        "code",
-                      ]
-                    }
-                    astPlugins={Array []}
-                    className="c1 c2"
-                    escapeHtml={false}
-                    linkRenderer={[Function]}
-                    mb={0}
-                    plugins={Array []}
-                    rawSourcePos={false}
-                    renderers={
-                      Object {
-                        "link": [Function],
-                      }
-                    }
-                    skipHtml={true}
-                    source="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
-                    sourcePos={false}
-                    supportingText={false}
-                    transformLinkUri={[Function]}
+                  <p
+                    key="paragraph-1-1"
                   >
-                    <div
-                      className="c1 c2"
-                      key="root-1-1"
-                    >
-                      <p
-                        key="paragraph-1-1"
-                      >
-                        It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
-                      </p>
-                    </div>
-                  </ReactMarkdown>
-                </StyledComponent>
-              </Styled(ReactMarkdown)>
-            </Paragraph>
-          </StyledComponent>
-        </Styled(Paragraph)>
+                    It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+                  </p>
+                </div>
+              </ReactMarkdown>
+            </StyledComponent>
+          </Styled(ReactMarkdown)>
+        </Paragraph>
       </div>
     </StyledComponent>
   </styled.div>
@@ -441,7 +409,7 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-gzVnrw",
+              "componentId": "sc-htpNat",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
@@ -466,7 +434,7 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
             "foldedComponentIds": Array [],
             "propTypes": undefined,
             "render": [Function],
-            "styledComponentId": "sc-gzVnrw",
+            "styledComponentId": "sc-htpNat",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`WarningText to match snapshot 1`] = `
-.c1 {
+.c0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -12,9 +12,10 @@ exports[`WarningText to match snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  margin-bottom: 0;
 }
 
-.c2 {
+.c1 {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
@@ -23,23 +24,13 @@ exports[`WarningText to match snapshot 1`] = `
   width: 35px;
 }
 
-.c3 {
+.c2 {
   font-family: "nta",Arial,sans-serif;
-  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
+  font-size: 16px;
   line-height: 1.25;
-  text-transform: none;
-}
-
-.c0 {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .c3 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
 }
 
 @media only screen and (min-width:641px) {
@@ -48,185 +39,163 @@ exports[`WarningText to match snapshot 1`] = `
   }
 }
 
+@media print {
+  .c2 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c2 {
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
 <WarningTextWithKnobs>
-  <Styled(WarningText)>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-gzVnrw",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              [Function],
-            ],
-          },
-          "displayName": "Styled(WarningText)",
-          "foldedComponentIds": Array [],
-          "propTypes": Object {
-            "margin": [Function],
-            "mb": [Function],
-            "padding": [Function],
-          },
-          "render": [Function],
-          "styledComponentId": "sc-gzVnrw",
-          "target": [Function],
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-          Symbol(Symbol.hasInstance): [Function],
+  <WarningText>
+    <styled.div>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "align-items: center; box-sizing: border-box; display: flex; width: 100%;",
+                [Function],
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
         }
-      }
-      forwardedRef={null}
-    >
-      <WarningText
-        className="c0"
+        forwardedRef={null}
       >
-        <styled.div
+        <div
           className="c0"
         >
-          <StyledComponent
-            className="c0"
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-ifAKCX",
-                  "isStatic": true,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "align-items: center; box-sizing: border-box; display: flex; width: 100%;",
-                  ],
-                },
-                "displayName": "styled.div",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-ifAKCX",
-                "target": "div",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
+          <styled.div>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": true,
+                    "lastClassName": "c1",
+                    "rules": Array [
+                      "flex: none; height: 35px; margin-right: 15px; width: 35px;",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
               }
-            }
-            forwardedRef={null}
-          >
-            <div
-              className="c0 c1"
+              forwardedRef={null}
             >
-              <styled.div>
-                <StyledComponent
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-EHOje",
-                        "isStatic": true,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "flex: none; height: 35px; margin-right: 15px; width: 35px;",
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-EHOje",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
+              <div
+                className="c1"
+              >
+                <IconImportant
+                  fill="currentColor"
+                  title="icon important"
                 >
-                  <div
-                    className="c2"
+                  <SVG
+                    fill="currentColor"
+                    preserveAspectRatio="xMidYMid meet"
+                    title="icon important"
+                    viewBox="0 0 35.000000 35.000000"
                   >
-                    <IconImportant
+                    <svg
                       fill="currentColor"
-                      title="icon important"
+                      height="100%"
+                      preserveAspectRatio="xMidYMid meet"
+                      style={
+                        Object {
+                          "display": "block",
+                        }
+                      }
+                      version="1.1"
+                      viewBox="0 0 35.000000 35.000000"
+                      width="100%"
                     >
-                      <SVG
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        title="icon important"
-                        viewBox="0 0 35.000000 35.000000"
+                      <title>
+                        icon important
+                      </title>
+                      <g
+                        transform="translate(0.000000,35.000000) scale(0.100000,-0.100000)"
                       >
-                        <svg
-                          fill="currentColor"
-                          height="100%"
-                          preserveAspectRatio="xMidYMid meet"
-                          style={
-                            Object {
-                              "display": "block",
-                            }
-                          }
-                          version="1.1"
-                          viewBox="0 0 35.000000 35.000000"
-                          width="100%"
-                        >
-                          <title>
-                            icon important
-                          </title>
-                          <g
-                            transform="translate(0.000000,35.000000) scale(0.100000,-0.100000)"
-                          >
-                            <path
-                              d="M100 332 c-87 -48 -125 -155 -82 -232 48 -87 155 -125 232 -82 87 48
+                        <path
+                          d="M100 332 c-87 -48 -125 -155 -82 -232 48 -87 155 -125 232 -82 87 48
 125 155 82 232 -48 87 -155 125 -232 82z m100 -122 c0 -53 -2 -60 -20 -60 -18
 0 -20 7 -20 60 0 53 2 60 20 60 18 0 20 -7 20 -60z m0 -111 c0 -12 -7 -19 -20
 -19 -19 0 -28 28 -14 43 11 11 34 -5 34 -24z"
-                            />
-                          </g>
-                        </svg>
-                      </SVG>
-                    </IconImportant>
-                  </div>
-                </StyledComponent>
-              </styled.div>
-              <styled.strong>
-                <StyledComponent
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bZQynM",
-                        "isStatic": true,
-                        "lastClassName": "c3",
-                        "rules": Array [
-                          "font-family: \\"nta\\", Arial, sans-serif; font-size: 16px; font-weight: 700; line-height: 1.25; text-transform: none; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3;
+                        />
+                      </g>
+                    </svg>
+                  </SVG>
+                </IconImportant>
+              </div>
+            </StyledComponent>
+          </styled.div>
+          <styled.strong>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-htpNat",
+                    "isStatic": true,
+                    "lastClassName": "c2",
+                    "rules": Array [
+                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.15;
+} font-weight: 700; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
+  font-size: 19px; line-height: 1.3157894736842106;
 }",
-                        ],
-                      },
-                      "displayName": "styled.strong",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-bZQynM",
-                      "target": "strong",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                >
-                  <strong
-                    className="c3"
-                  >
-                    A very long warning message. This includes a lot of text to give a good representation of a more average length warning. That way you can see more than one line wrapping.
-                  </strong>
-                </StyledComponent>
-              </styled.strong>
-            </div>
-          </StyledComponent>
-        </styled.div>
-      </WarningText>
-    </StyledComponent>
-  </Styled(WarningText)>
+                    ],
+                  },
+                  "displayName": "styled.strong",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-htpNat",
+                  "target": "strong",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <strong
+                className="c2"
+              >
+                A very long warning message. This includes a lot of text to give a good representation of a more average length warning. That way you can see more than one line wrapping.
+              </strong>
+            </StyledComponent>
+          </styled.strong>
+        </div>
+      </StyledComponent>
+    </styled.div>
+  </WarningText>
 </WarningTextWithKnobs>
 `;

@@ -13,7 +13,7 @@ const CUSTOM_FOCUS_WIDTH = `${stripUnit(FOCUS_WIDTH) + 1}px`;
 const StyledDetails = styled('details')(
   typography.font({ size: 19 }),
   typography.textColour,
-  spacing.withWhiteSpace({ mb: 6 }),
+  spacing.withWhiteSpace({ marginBottom: 6 }),
   {
     display: 'block',
   },
@@ -27,7 +27,7 @@ const StyledSummary = styled('summary')({
   color: LINK_COLOUR,
   cursor: 'pointer',
 
-  ':hover:': {
+  ':hover': {
     color: LINK_HOVER_COLOUR,
   },
 

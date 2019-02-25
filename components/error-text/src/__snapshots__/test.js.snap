@@ -28,83 +28,45 @@ exports[`ErrorText matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<Styled(ErrorText)>
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-EHOje",
-          "isStatic": false,
-          "lastClassName": "jvzENE",
-          "rules": Array [
-            [Function],
-          ],
-        },
-        "displayName": "Styled(ErrorText)",
-        "foldedComponentIds": Array [],
-        "propTypes": Object {
-          "margin": [Function],
-          "mb": [Function],
-          "padding": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "sc-EHOje",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      }
-    }
-    forwardedRef={null}
-  >
-    <ErrorText
-      className=""
-    >
-      <styled.span
-        className=""
-      >
-        <StyledComponent
-          className=""
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-ifAKCX",
-                "isStatic": true,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+<ErrorText>
+  <styled.span>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-size: 14px; line-height: 1.15;
 } font-weight: 700; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
   font-size: 19px; line-height: 1.3157894736842106;
 }",
-                  "display: block; margin-bottom: 15px; clear: both; color: #b10e1e;",
-                ],
-              },
-              "displayName": "styled.span",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "sc-ifAKCX",
-              "target": "span",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
-        >
-          <span
-            className="c0"
-          >
-            example
-          </span>
-        </StyledComponent>
-      </styled.span>
-    </ErrorText>
-  </StyledComponent>
-</Styled(ErrorText)>
+              "display: block; margin-bottom: 15px; clear: both; color: #b10e1e;",
+              [Function],
+            ],
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <span
+        className="c0"
+      >
+        example
+      </span>
+    </StyledComponent>
+  </styled.span>
+</ErrorText>
 `;

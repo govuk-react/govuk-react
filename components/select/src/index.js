@@ -4,25 +4,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { BLACK, ERROR_COLOUR, YELLOW } from 'govuk-colours';
-import {
-  MEDIA_QUERIES,
-  NTA_LIGHT,
-} from '@govuk-react/constants';
+import { MEDIA_QUERIES } from '@govuk-react/constants';
+import { typography } from '@govuk-react/lib';
 
 import Label from '@govuk-react/label';
 import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
-import { withWhiteSpace } from '@govuk-react/hoc';
 
 const StyledSelect = styled('select')(
+  typography.font({ size: 19 }),
   {
     boxSizing: 'border-box',
-    fontFamily: NTA_LIGHT,
-    fontWeight: 400,
-    textTransform: 'none',
-    fontSize: '16px',
-    lineHeight: '1.25',
     width: '100%',
     height: '33px',
     padding: '5px 4px 4px',
@@ -30,8 +23,6 @@ const StyledSelect = styled('select')(
     [MEDIA_QUERIES.LARGESCREEN]: {
       width: '50%',
       height: '38px',
-      fontSize: '19px',
-      lineHeight: '1.31579',
     },
     ':focus': {
       outline: `3px solid ${YELLOW}`,
@@ -161,5 +152,5 @@ Select.propTypes = {
   errorText: PropTypes.string,
 };
 
-export default withWhiteSpace({ marginBottom: 6 })(Select);
+export default Select;
 export { StyledSelect as SelectInput };

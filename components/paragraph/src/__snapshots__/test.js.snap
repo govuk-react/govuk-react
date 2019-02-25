@@ -1,18 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Paragraph matches wrapper snapshot 1`] = `
-.c1 {
+.c0 {
+  margin: 0;
   font-family: "nta",Arial,sans-serif;
-  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
   font-size: 14px;
-  line-height: 1.1428571429;
+  line-height: 1.1428571428571428;
+  margin-bottom: 15px;
 }
 
-.c1 > p {
+.c0 > p {
   margin: 0;
 }
 
-.c1 > p > code {
+.c0 > p > code {
   padding: 0.2em 0.4em;
   margin: 0;
   font-size: 85%;
@@ -20,7 +24,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
   border-radius: 3px;
 }
 
-.c1 > pre {
+.c0 > pre {
   padding: 16px;
   overflow: auto;
   font-size: 85%;
@@ -29,7 +33,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
   border-radius: 3px;
 }
 
-.c1 > pre > code {
+.c0 > pre > code {
   display: inline;
   padding: 0;
   margin: 0;
@@ -39,12 +43,15 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
   word-wrap: normal;
 }
 
-.c0 {
-  margin-bottom: 15px;
+@media print {
+  .c0 {
+    font-size: 14px;
+    line-height: 1.2;
+  }
 }
 
 @media only screen and (min-width:641px) {
-  .c1 {
+  .c0 {
     font-size: 16px;
     line-height: 1.25;
   }
@@ -56,47 +63,144 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
   }
 }
 
-<Styled(Paragraph)
+<Paragraph
+  linkRenderer={[Function]}
   supportingText={true}
 >
-  <StyledComponent
-    forwardedComponent={
+  <Styled(ReactMarkdown)
+    allowedTypes={
+      Array [
+        "paragraph",
+        "emphasis",
+        "strong",
+        "link",
+        "inlineCode",
+        "code",
+      ]
+    }
+    escapeHtml={false}
+    linkRenderer={[Function]}
+    renderers={
       Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-bZQynM",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            [Function],
-          ],
-        },
-        "displayName": "Styled(Paragraph)",
-        "foldedComponentIds": Array [],
-        "propTypes": Object {
-          "margin": [Function],
-          "mb": [Function],
-          "padding": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "sc-bZQynM",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
+        "link": [Function],
       }
     }
-    forwardedRef={null}
+    skipHtml={true}
+    source=""
     supportingText={true}
   >
-    <Paragraph
-      className="c0"
+    <StyledComponent
+      allowedTypes={
+        Array [
+          "paragraph",
+          "emphasis",
+          "strong",
+          "link",
+          "inlineCode",
+          "code",
+        ]
+      }
+      escapeHtml={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bwzfXH",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "margin: 0; > p {
+  margin: 0;
+} > p > code {
+  padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: rgba(27,31,35,0.05); border-radius: 3px;
+} > pre {
+  padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #f6f8fa; border-radius: 3px;
+} > pre > code {
+  display: inline; padding: 0; margin: 0; border: 0; overflow: visible; line-height: inherit; word-wrap: normal;
+}",
+              [Function],
+              [Function],
+            ],
+          },
+          "displayName": "Styled(ReactMarkdown)",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "renderers": Object {
+            "blockquote": "blockquote",
+            "break": "br",
+            "code": [Function],
+            "definition": [Function],
+            "delete": "del",
+            "emphasis": "em",
+            "heading": [Function],
+            "html": [Function],
+            "image": "img",
+            "imageReference": "img",
+            "inlineCode": [Function],
+            "link": "a",
+            "linkReference": "a",
+            "list": [Function],
+            "listItem": [Function],
+            "paragraph": "p",
+            "root": "div",
+            "strong": "strong",
+            "table": [Function],
+            "tableBody": [Function],
+            "tableCell": [Function],
+            "tableHead": [Function],
+            "tableRow": [Function],
+            "thematicBreak": "hr",
+            "virtualHtml": [Function],
+          },
+          "styledComponentId": "sc-bwzfXH",
+          "target": [Function],
+          "toString": [Function],
+          "types": Array [
+            "root",
+            "break",
+            "paragraph",
+            "emphasis",
+            "strong",
+            "thematicBreak",
+            "blockquote",
+            "delete",
+            "link",
+            "image",
+            "linkReference",
+            "imageReference",
+            "table",
+            "tableHead",
+            "tableBody",
+            "tableRow",
+            "tableCell",
+            "list",
+            "listItem",
+            "definition",
+            "heading",
+            "inlineCode",
+            "code",
+            "html",
+            "virtualHtml",
+          ],
+          "uriTransformer": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        }
+      }
+      forwardedRef={null}
       linkRenderer={[Function]}
+      renderers={
+        Object {
+          "link": [Function],
+        }
+      }
+      skipHtml={true}
+      source=""
       supportingText={true}
     >
-      <Styled(ReactMarkdown)
+      <ReactMarkdown
         allowedTypes={
           Array [
             "paragraph",
@@ -107,9 +211,12 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
             "code",
           ]
         }
+        astPlugins={Array []}
         className="c0"
         escapeHtml={false}
         linkRenderer={[Function]}
+        plugins={Array []}
+        rawSourcePos={false}
         renderers={
           Object {
             "link": [Function],
@@ -117,155 +224,16 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
         }
         skipHtml={true}
         source=""
+        sourcePos={false}
         supportingText={true}
+        transformLinkUri={[Function]}
       >
-        <StyledComponent
-          allowedTypes={
-            Array [
-              "paragraph",
-              "emphasis",
-              "strong",
-              "link",
-              "inlineCode",
-              "code",
-            ]
-          }
+        <div
           className="c0"
-          escapeHtml={false}
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-EHOje",
-                "isStatic": false,
-                "lastClassName": "c1",
-                "rules": Array [
-                  "font-family: \\"nta\\", Arial, sans-serif; margin: 0; > p {
-  margin: 0;
-} > p > code {
-  padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: rgba(27,31,35,0.05); border-radius: 3px;
-} > pre {
-  padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #f6f8fa; border-radius: 3px;
-} > pre > code {
-  display: inline; padding: 0; margin: 0; border: 0; overflow: visible; line-height: inherit; word-wrap: normal;
-}",
-                  [Function],
-                ],
-              },
-              "displayName": "Styled(ReactMarkdown)",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "renderers": Object {
-                "blockquote": "blockquote",
-                "break": "br",
-                "code": [Function],
-                "definition": [Function],
-                "delete": "del",
-                "emphasis": "em",
-                "heading": [Function],
-                "html": [Function],
-                "image": "img",
-                "imageReference": "img",
-                "inlineCode": [Function],
-                "link": "a",
-                "linkReference": "a",
-                "list": [Function],
-                "listItem": [Function],
-                "paragraph": "p",
-                "root": "div",
-                "strong": "strong",
-                "table": [Function],
-                "tableBody": [Function],
-                "tableCell": [Function],
-                "tableHead": [Function],
-                "tableRow": [Function],
-                "thematicBreak": "hr",
-                "virtualHtml": [Function],
-              },
-              "styledComponentId": "sc-EHOje",
-              "target": [Function],
-              "toString": [Function],
-              "types": Array [
-                "root",
-                "break",
-                "paragraph",
-                "emphasis",
-                "strong",
-                "thematicBreak",
-                "blockquote",
-                "delete",
-                "link",
-                "image",
-                "linkReference",
-                "imageReference",
-                "table",
-                "tableHead",
-                "tableBody",
-                "tableRow",
-                "tableCell",
-                "list",
-                "listItem",
-                "definition",
-                "heading",
-                "inlineCode",
-                "code",
-                "html",
-                "virtualHtml",
-              ],
-              "uriTransformer": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-              Symbol(Symbol.hasInstance): [Function],
-            }
-          }
-          forwardedRef={null}
-          linkRenderer={[Function]}
-          renderers={
-            Object {
-              "link": [Function],
-            }
-          }
-          skipHtml={true}
-          source=""
-          supportingText={true}
-        >
-          <ReactMarkdown
-            allowedTypes={
-              Array [
-                "paragraph",
-                "emphasis",
-                "strong",
-                "link",
-                "inlineCode",
-                "code",
-              ]
-            }
-            astPlugins={Array []}
-            className="c0 c1"
-            escapeHtml={false}
-            linkRenderer={[Function]}
-            plugins={Array []}
-            rawSourcePos={false}
-            renderers={
-              Object {
-                "link": [Function],
-              }
-            }
-            skipHtml={true}
-            source=""
-            sourcePos={false}
-            supportingText={true}
-            transformLinkUri={[Function]}
-          >
-            <div
-              className="c0 c1"
-              key="root-1-1"
-            />
-          </ReactMarkdown>
-        </StyledComponent>
-      </Styled(ReactMarkdown)>
-    </Paragraph>
-  </StyledComponent>
-</Styled(Paragraph)>
+          key="root-1-1"
+        />
+      </ReactMarkdown>
+    </StyledComponent>
+  </Styled(ReactMarkdown)>
+</Paragraph>
 `;

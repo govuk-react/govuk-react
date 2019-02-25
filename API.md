@@ -1409,7 +1409,7 @@ const ReactRouterLinkRenderer = ({ href, children }) => (
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` |  | ```''``` | node | Text content supporting markdown
- `linkRenderer` |  | ```props => <Anchor {...props} />``` | func | 
+ `linkRenderer` |  | ```props => <Link {...props} />``` | func | 
  `supportingText` |  | ```false``` | bool | Is this paragraph supporting text for another element?
 
 

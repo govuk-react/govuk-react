@@ -9,6 +9,7 @@ exports[`details matches the Details snapshot: details 1`] = `
   font-size: 16px;
   line-height: 1.25;
   color: #0b0c0c;
+  margin-bottom: 20px;
   display: block;
 }
 
@@ -21,7 +22,7 @@ exports[`details matches the Details snapshot: details 1`] = `
   cursor: pointer;
 }
 
-.c1:hover: {
+.c1:hover {
   color: #2b8cc4;
 }
 
@@ -107,6 +108,12 @@ exports[`details matches the Details snapshot: details 1`] = `
   }
 }
 
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-bottom: 30px;
+  }
+}
+
 <DetailsSimple>
   <Details
     open={false}
@@ -121,7 +128,7 @@ exports[`details matches the Details snapshot: details 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-gzVnrw",
+              "componentId": "sc-htpNat",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
@@ -140,7 +147,7 @@ exports[`details matches the Details snapshot: details 1`] = `
             "displayName": "styled.details",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-gzVnrw",
+            "styledComponentId": "sc-htpNat",
             "target": "details",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -161,11 +168,11 @@ exports[`details matches the Details snapshot: details 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-htoDjs",
+                    "componentId": "sc-bxivhb",
                     "isStatic": true,
                     "lastClassName": "c1",
                     "rules": Array [
-                      "display: inline-block; position: relative; margin-bottom: 5px; padding-left: 25px; color: #005ea5; cursor: pointer; :hover: {
+                      "display: inline-block; position: relative; margin-bottom: 5px; padding-left: 25px; color: #005ea5; cursor: pointer; :hover {
   color: #2b8cc4;
 } :focus {
   outline: 4px solid #ffbf47; outline-offset: -1px; color: #0b0c0c; background: #ffbf47;
@@ -181,7 +188,7 @@ exports[`details matches the Details snapshot: details 1`] = `
                   "displayName": "styled.summary",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-htoDjs",
+                  "styledComponentId": "sc-bxivhb",
                   "target": "summary",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -200,7 +207,7 @@ exports[`details matches the Details snapshot: details 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-dnqmqq",
+                          "componentId": "sc-ifAKCX",
                           "isStatic": true,
                           "lastClassName": "c2",
                           "rules": Array [
@@ -210,7 +217,7 @@ exports[`details matches the Details snapshot: details 1`] = `
                         "displayName": "styled.span",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-dnqmqq",
+                        "styledComponentId": "sc-ifAKCX",
                         "target": "span",
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -236,7 +243,7 @@ exports[`details matches the Details snapshot: details 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-iwsKbI",
+                    "componentId": "sc-EHOje",
                     "isStatic": true,
                     "lastClassName": "c3",
                     "rules": Array [
@@ -250,7 +257,7 @@ exports[`details matches the Details snapshot: details 1`] = `
                   "displayName": "styled.div",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-iwsKbI",
+                  "styledComponentId": "sc-EHOje",
                   "target": "div",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],

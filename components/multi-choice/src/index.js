@@ -22,7 +22,7 @@ import {
   BORDER_WIDTH_MOBILE,
   SPACING,
 } from '@govuk-react/constants';
-import { withWhiteSpace } from '@govuk-react/hoc';
+import { spacing } from '@govuk-react/lib';
 
 const StyledFieldset = styled('div')(
   {
@@ -44,6 +44,7 @@ const StyledFieldset = styled('div')(
     marginRight: error ? SPACING.SCALE_3 : undefined,
     paddingLeft: error ? SPACING.SCALE_2 : undefined,
   }),
+  spacing.withWhiteSpace({ marginBottom: 0 }),
 );
 
 /**
@@ -106,4 +107,4 @@ MultiChoice.propTypes = {
   hint: PropTypes.string,
 };
 
-export default withWhiteSpace({ marginBottom: 0 })(MultiChoice);
+export default MultiChoice;

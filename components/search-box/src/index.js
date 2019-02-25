@@ -7,14 +7,17 @@ import { LIGHT_BLUE, GREY_2, WHITE, YELLOW } from 'govuk-colours';
 import { NTA_LIGHT } from '@govuk-react/constants';
 
 import { Search } from '@govuk-react/icons';
-import { withWhiteSpace } from '@govuk-react/hoc';
+import { spacing } from '@govuk-react/lib';
 
-const SearchBoxWrapper = styled('div')({
-  boxSizing: 'border-box',
-  display: 'flex',
-  width: '100%',
-  background: WHITE,
-});
+const SearchBoxWrapper = styled('div')(
+  {
+    boxSizing: 'border-box',
+    display: 'flex',
+    width: '100%',
+    background: WHITE,
+  },
+  spacing.withWhiteSpace({ marginBottom: 0 }),
+);
 
 // css normalize is hiding the input:search clear SearchButton
 const InputSearchBox = styled('input')({
@@ -102,4 +105,4 @@ SearchBox.propTypes = {
   placeholder: PropTypes.string,
 };
 
-export default withWhiteSpace({ marginBottom: 0 })(SearchBox);
+export default SearchBox;

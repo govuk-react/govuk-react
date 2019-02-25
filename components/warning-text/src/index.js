@@ -3,41 +3,28 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { IconImportant } from '@govuk-react/icons';
-import { withWhiteSpace } from '@govuk-react/hoc';
+import { spacing, typography } from '@govuk-react/lib';
 
-import {
-  FONT_SIZE,
-  LINE_HEIGHT,
-  MEDIA_QUERIES,
-  NTA_LIGHT,
-  SPACING,
-} from '@govuk-react/constants';
+import { SPACING_POINTS } from '@govuk-react/constants';
 
-const StyledWarningText = styled('div')({
-  alignItems: 'center',
-  boxSizing: 'border-box',
-  display: 'flex',
-  width: '100%',
-});
+const StyledWarningText = styled('div')(
+  {
+    alignItems: 'center',
+    boxSizing: 'border-box',
+    display: 'flex',
+    width: '100%',
+  },
+  spacing.withWhiteSpace({ marginBottom: 0 }),
+);
 
 const IconImportantWrapper = styled('div')({
   flex: 'none',
-  height: '35px',
-  marginRight: SPACING.SCALE_3,
-  width: '35px',
+  height: 35,
+  marginRight: SPACING_POINTS[3],
+  width: 35,
 });
 
-const WarningTextWrapper = styled('strong')({
-  fontFamily: NTA_LIGHT,
-  fontSize: FONT_SIZE.SIZE_16,
-  fontWeight: 700,
-  lineHeight: LINE_HEIGHT.SIZE_16,
-  textTransform: 'none',
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    fontSize: FONT_SIZE.SIZE_19,
-    lineHeight: LINE_HEIGHT.SIZE_19,
-  },
-});
+const WarningTextWrapper = styled('strong')(typography.font({ size: 19, weight: 'bold' }));
 
 /**
  *
@@ -69,4 +56,4 @@ WarningText.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default withWhiteSpace({ marginBottom: 0 })(WarningText);
+export default WarningText;

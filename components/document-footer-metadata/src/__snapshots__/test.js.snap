@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
-.c3 {
+.c2 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -15,66 +15,56 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
   padding-left: 0;
 }
 
-.c3 .c2 {
+.c2 .c1 {
   margin-top: 10px;
 }
 
-.c3 > .c5 {
+.c2 > .c4 {
   margin-bottom: 5px;
 }
 
-.c1 {
+.c0 {
   font-family: "nta",Arial,sans-serif;
 }
 
-.c4 {
+.c3 {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.25;
 }
 
-.c4 > a {
+.c3 > a {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c0 {
-  margin-bottom: 0;
-}
-
 @media print {
-  .c3 {
+  .c2 {
     font-size: 14px;
     line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c3 {
+  .c2 {
     font-size: 19px;
     line-height: 1.3157894736842106;
   }
 }
 
 @media print {
-  .c3 {
+  .c2 {
     color: #000;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c3 {
+  .c2 {
     margin-bottom: 20px;
   }
 }
 
-@media only screen and (min-width:641px) {
-  .c0 {
-    margin-bottom: 0;
-  }
-}
-
-<Styled(DocumentFooterMetadata)
+<DocumentFooterMetadata
   partOf={
     Array [
       "example",
@@ -82,74 +72,55 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
     ]
   }
 >
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-htoDjs",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            [Function],
-          ],
-        },
-        "displayName": "Styled(DocumentFooterMetadata)",
-        "foldedComponentIds": Array [],
-        "propTypes": Object {
-          "margin": [Function],
-          "mb": [Function],
-          "padding": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "sc-htoDjs",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
+  <styled.div>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htpNat",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "font-family: \\"nta\\", Arial, sans-serif;",
+              [Function],
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htpNat",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
       }
-    }
-    forwardedRef={null}
-    partOf={
-      Array [
-        "example",
-        "exampleexample",
-      ]
-    }
-  >
-    <DocumentFooterMetadata
-      className="c0"
-      partOf={
-        Array [
-          "example",
-          "exampleexample",
-        ]
-      }
+      forwardedRef={null}
     >
-      <div>
-        <styled.div
-          className="c0"
-        >
+      <div
+        className="c0"
+      >
+        <styled.div>
           <StyledComponent
-            className="c0"
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bZQynM",
-                  "isStatic": true,
-                  "lastClassName": "c1",
+                  "componentId": "sc-htpNat",
+                  "isStatic": false,
+                  "lastClassName": "c0",
                   "rules": Array [
                     "font-family: \\"nta\\", Arial, sans-serif;",
+                    [Function],
                   ],
                 },
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bZQynM",
+                "styledComponentId": "sc-htpNat",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -159,7 +130,7 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
             forwardedRef={null}
           >
             <div
-              className="c0 c1"
+              className="c0"
             />
           </StyledComponent>
         </styled.div>
@@ -170,17 +141,18 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bZQynM",
-                  "isStatic": true,
-                  "lastClassName": "c1",
+                  "componentId": "sc-htpNat",
+                  "isStatic": false,
+                  "lastClassName": "c0",
                   "rules": Array [
                     "font-family: \\"nta\\", Arial, sans-serif;",
+                    [Function],
                   ],
                 },
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bZQynM",
+                "styledComponentId": "sc-htpNat",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -190,7 +162,7 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
             forwardedRef={null}
           >
             <div
-              className="c1"
+              className="c0"
             >
               <div>
                 <p
@@ -216,9 +188,9 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "c2",
+                            "componentId": "c1",
                             "isStatic": false,
-                            "lastClassName": "c3",
+                            "lastClassName": "c2",
                             "rules": Array [
                               "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-size: 14px; line-height: 1.15;
@@ -242,7 +214,7 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
                           "foldedComponentIds": Array [],
                           "propTypes": undefined,
                           "render": [Function],
-                          "styledComponentId": "c2",
+                          "styledComponentId": "c1",
                           "target": "ol",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -253,7 +225,7 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
                       listStyleType="none"
                     >
                       <ul
-                        className="c2 c3"
+                        className="c1 c2"
                       >
                         <styled.li
                           key="0"
@@ -264,9 +236,9 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-gzVnrw",
+                                  "componentId": "sc-bxivhb",
                                   "isStatic": true,
-                                  "lastClassName": "c4",
+                                  "lastClassName": "c3",
                                   "rules": Array [
                                     "font-size: 24px; font-weight: 700; line-height: 1.25; > a {
   text-decoration: none;
@@ -276,7 +248,7 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
                                 "displayName": "styled.li",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-gzVnrw",
+                                "styledComponentId": "sc-bxivhb",
                                 "target": "li",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -286,7 +258,7 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
                             forwardedRef={null}
                           >
                             <li
-                              className="c4"
+                              className="c3"
                             >
                               example
                             </li>
@@ -301,9 +273,9 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-gzVnrw",
+                                  "componentId": "sc-bxivhb",
                                   "isStatic": true,
-                                  "lastClassName": "c4",
+                                  "lastClassName": "c3",
                                   "rules": Array [
                                     "font-size: 24px; font-weight: 700; line-height: 1.25; > a {
   text-decoration: none;
@@ -313,7 +285,7 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
                                 "displayName": "styled.li",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-gzVnrw",
+                                "styledComponentId": "sc-bxivhb",
                                 "target": "li",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -323,7 +295,7 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
                             forwardedRef={null}
                           >
                             <li
-                              className="c4"
+                              className="c3"
                             >
                               exampleexample
                             </li>
@@ -344,17 +316,18 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bZQynM",
-                  "isStatic": true,
-                  "lastClassName": "c1",
+                  "componentId": "sc-htpNat",
+                  "isStatic": false,
+                  "lastClassName": "c0",
                   "rules": Array [
                     "font-family: \\"nta\\", Arial, sans-serif;",
+                    [Function],
                   ],
                 },
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bZQynM",
+                "styledComponentId": "sc-htpNat",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -364,12 +337,12 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
             forwardedRef={null}
           >
             <div
-              className="c1"
+              className="c0"
             />
           </StyledComponent>
         </styled.div>
       </div>
-    </DocumentFooterMetadata>
-  </StyledComponent>
-</Styled(DocumentFooterMetadata)>
+    </StyledComponent>
+  </styled.div>
+</DocumentFooterMetadata>
 `;

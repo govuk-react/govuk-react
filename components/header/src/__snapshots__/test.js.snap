@@ -40,92 +40,56 @@ exports[`Header matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<Styled(Header)>
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-EHOje",
-          "isStatic": false,
-          "lastClassName": "jvzENE",
-          "rules": Array [
-            [Function],
-          ],
-        },
-        "displayName": "Styled(Header)",
-        "foldedComponentIds": Array [],
-        "propTypes": Object {
-          "margin": [Function],
-          "mb": [Function],
-          "padding": [Function],
-        },
-        "render": [Function],
-        "styledComponentId": "sc-EHOje",
-        "target": [Function],
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      }
-    }
-    forwardedRef={null}
+<Header
+  level={1}
+>
+  <Styled(Component)
+    level={1}
   >
-    <Header
-      className=""
-      level={1}
-    >
-      <Styled(Component)
-        className=""
-        level={1}
-      >
-        <StyledComponent
-          className=""
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-ifAKCX",
-                "isStatic": false,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "color: #0b0c0c; @media print {
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "color: #0b0c0c; @media print {
   color: #000;
 }",
-                  [Function],
-                  "display: block; margin-top: 0;",
-                  [Function],
-                ],
-              },
-              "displayName": "Styled(Component)",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "sc-ifAKCX",
-              "target": [Function],
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-              Symbol(Symbol.hasInstance): [Function],
-            }
-          }
-          forwardedRef={null}
-          level={1}
+              [Function],
+              "display: block; margin-top: 0;",
+              [Function],
+              [Function],
+            ],
+          },
+          "displayName": "Styled(Component)",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": [Function],
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        }
+      }
+      forwardedRef={null}
+      level={1}
+    >
+      <Component
+        className="c0"
+        level={1}
+      >
+        <h1
+          className="c0"
         >
-          <Component
-            className="c0"
-            level={1}
-          >
-            <h1
-              className="c0"
-            >
-              example
-            </h1>
-          </Component>
-        </StyledComponent>
-      </Styled(Component)>
-    </Header>
-  </StyledComponent>
-</Styled(Header)>
+          example
+        </h1>
+      </Component>
+    </StyledComponent>
+  </Styled(Component)>
+</Header>
 `;

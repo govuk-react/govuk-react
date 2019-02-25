@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { BLACK } from 'govuk-colours';
-import { withWhiteSpace } from '@govuk-react/hoc';
 import { SPACING_POINTS } from '@govuk-react/constants';
-import { link, shape, typography } from '@govuk-react/lib';
+import { link, shape, spacing, typography } from '@govuk-react/lib';
 
 const Anchor = styled('a')(
   typography.font({ size: 16 }),
@@ -30,6 +29,7 @@ const Anchor = styled('a')(
       margin: 'auto',
     },
   },
+  spacing.withWhiteSpace(),
 );
 
 /**
@@ -55,8 +55,8 @@ const Anchor = styled('a')(
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/back-link
  *
  */
-const BackLink = ({ onClick, ...props }) => (
-  <Anchor onClick={onClick} {...props} />
+const BackLink = props => (
+  <Anchor {...props} />
 );
 
 BackLink.propTypes = {
@@ -73,4 +73,4 @@ BackLink.defaultProps = {
   onClick: undefined,
 };
 
-export default withWhiteSpace()(BackLink);
+export default BackLink;
