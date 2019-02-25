@@ -121,7 +121,6 @@ exports[`details matches the Details snapshot: details 1`] = `
   >
     <styled.details
       open={false}
-      role="group"
     >
       <StyledComponent
         forwardedComponent={
@@ -157,16 +156,12 @@ exports[`details matches the Details snapshot: details 1`] = `
         }
         forwardedRef={null}
         open={false}
-        role="group"
       >
         <details
           className="c0"
           open={false}
-          role="group"
         >
-          <styled.summary
-            role="button"
-          >
+          <styled.summary>
             <StyledComponent
               forwardedComponent={
                 Object {
@@ -201,11 +196,9 @@ exports[`details matches the Details snapshot: details 1`] = `
                 }
               }
               forwardedRef={null}
-              role="button"
             >
               <summary
                 className="c1"
-                role="button"
               >
                 <styled.span>
                   <StyledComponent

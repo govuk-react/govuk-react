@@ -92,8 +92,8 @@ const DetailsText = styled('div')({
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/details/_details.scss
  */
 const Details = ({ summary, children, ...props }) => (
-  <StyledDetails {...props} role="group">
-    <StyledSummary role="button"><SummaryText>{summary}</SummaryText></StyledSummary>
+  <StyledDetails {...props}>
+    <StyledSummary><SummaryText>{summary}</SummaryText></StyledSummary>
     <DetailsText>{ children }</DetailsText>
   </StyledDetails>
 );
