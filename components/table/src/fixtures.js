@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Table from '.';
 
@@ -82,25 +81,19 @@ const TableWithHeadAndNumerics = () => (
   </Table>
 );
 
-const CustomHeader = styled(Table.CellHeader)({
-  width: '50%',
-});
-
-const TableWithCustomHeader = () => (
+const TableThreeQuartersOneQuarter = () => (
   <Table
-    caption="Custom header"
+    caption="Three quarters, one quarter"
     head={
       <Table.Row>
-        <CustomHeader>Wide header</CustomHeader>
-        <Table.CellHeader>Regular</Table.CellHeader>
-        <Table.CellHeader>Normal</Table.CellHeader>
+        <Table.CellHeader setWidth="three-quarters">three-quarters</Table.CellHeader>
+        <Table.CellHeader setWidth="one-quarter">one-quarter</Table.CellHeader>
       </Table.Row>
     }
   >
     <Table.Row>
-      <Table.Cell>Custom header provides a wide column here</Table.Cell>
-      <Table.Cell>Some value</Table.Cell>
-      <Table.Cell>Another</Table.Cell>
+      <Table.Cell>Column uses setWidth=&quot;three-quarters&quot; in header</Table.Cell>
+      <Table.Cell>setWidth=&quot;one-quarter&quot;</Table.Cell>
     </Table.Row>
   </Table>
 );
@@ -128,8 +121,8 @@ export {
   TableSimple,
   TableWithCaption,
   TableWithHeadAndNumerics,
-  TableWithCustomHeader,
   TableWithCustomWidths,
+  TableThreeQuartersOneQuarter,
 };
 
 export default Table;
