@@ -40,56 +40,58 @@ exports[`Header matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<Header
-  level={1}
->
-  <Styled(Component)
+<_class>
+  <Header
     level={1}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "color: #0b0c0c; @media print {
-  color: #000;
-}",
-              [Function],
-              "display: block; margin-top: 0;",
-              [Function],
-              [Function],
-            ],
-          },
-          "displayName": "Styled(Component)",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": [Function],
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-          Symbol(Symbol.hasInstance): [Function],
-        }
-      }
-      forwardedRef={null}
+    <Styled(Component)
       level={1}
     >
-      <Component
-        className="c0"
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-ifAKCX",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "color: #0b0c0c; @media print {
+  color: #000;
+}",
+                [Function],
+                "display: block; margin-top: 0;",
+                [Function],
+                [Function],
+              ],
+            },
+            "displayName": "Styled(Component)",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-ifAKCX",
+            "target": [Function],
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+            Symbol(Symbol.hasInstance): [Function],
+          }
+        }
+        forwardedRef={null}
         level={1}
       >
-        <h1
+        <Component
           className="c0"
+          level={1}
         >
-          example
-        </h1>
-      </Component>
-    </StyledComponent>
-  </Styled(Component)>
-</Header>
+          <h1
+            className="c0"
+          >
+            example
+          </h1>
+        </Component>
+      </StyledComponent>
+    </Styled(Component)>
+  </Header>
+</_class>
 `;
