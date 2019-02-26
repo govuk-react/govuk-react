@@ -9,6 +9,7 @@ exports[`Caption matches wrapper snapshot 1`] = `
   font-size: 18px;
   line-height: 1.1111111111111112;
   margin-bottom: 5px;
+  display: block;
   color: #6f777b;
 }
 
@@ -44,7 +45,7 @@ exports[`Caption matches wrapper snapshot 1`] = `
             "rules": Array [
               [Function],
               [Function],
-              "color: #6f777b;",
+              "display: block; color: #6f777b;",
               [Function],
             ],
           },
