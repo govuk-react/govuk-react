@@ -40,6 +40,7 @@ export { default as SectionBreak } from '@govuk-react/section-break';
 export { default as Select } from '@govuk-react/select';
 export { default as SupportingHeader } from '@govuk-react/supporting-header';
 export { default as Table } from '@govuk-react/table';
+export { Tab, TabList, TabPanel, Tabs, TabsTitle } from '@govuk-react/tabs';
 export { default as Tag } from '@govuk-react/tag';
 export { default as TextArea } from '@govuk-react/text-area';
 export { default as TopNav } from '@govuk-react/top-nav';
