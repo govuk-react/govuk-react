@@ -1068,12 +1068,15 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
       name="national-insurance-number"
     >
       <Label
+        error={false}
         name="national-insurance-number"
       >
         <styled.label
+          error={false}
           name="national-insurance-number"
         >
           <StyledComponent
+            error={false}
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
@@ -1258,12 +1261,15 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
       name="description"
     >
       <Label
+        error={false}
         name="description"
       >
         <styled.label
+          error={false}
           name="description"
         >
           <StyledComponent
+            error={false}
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
