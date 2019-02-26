@@ -48,6 +48,16 @@ const Label = props => <StyledLabel {...props} />;
 Label.propTypes = {
   /** Text for the label */
   children: PropTypes.node.isRequired,
+  /**
+   * Apply error state styling to the component
+   */
+  error: PropTypes.bool,
+  // NB these propTypes don't get documented :(
+  ...spacing.withWhiteSpace.propTypes,
+};
+
+Label.defaultProps = {
+  error: false,
 };
 
 export default Label;
