@@ -31,6 +31,6 @@ SupportingHeader.propTypes = {
   children: PropTypes.string.isRequired,
 };
 
-export { SupportingHeader };
+export { SupportingHeader as DocumentedSupportingHeader };
 
 export default deprecated(SupportingHeader, 'please use the Caption component instead');
