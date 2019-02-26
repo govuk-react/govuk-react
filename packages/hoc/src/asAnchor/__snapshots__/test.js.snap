@@ -1,13 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`asAnchor matches wrapper snapshot: wrapper mount 1`] = `
-<styled.a
-  as="a"
+<Component
   href="https://example.com"
-  muted={false}
-  noVisitedState={false}
-  textColour={false}
 >
   Example
-</styled.a>
+</Component>
 `;
