@@ -508,7 +508,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
             className="c0"
             tabIndex={-1}
           >
-            <Header
+            <Heading
               level={2}
             >
               <Styled(Component)
@@ -559,7 +559,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                   </Component>
                 </StyledComponent>
               </Styled(Component)>
-            </Header>
+            </Heading>
             <Paragraph
               linkRenderer={[Function]}
               mb={3}

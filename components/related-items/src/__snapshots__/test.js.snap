@@ -231,7 +231,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
       <div
         className="c0"
       >
-        <Header
+        <Heading
           level={3}
         >
           <Styled(Component)
@@ -282,7 +282,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
               </Component>
             </StyledComponent>
           </Styled(Component)>
-        </Header>
+        </Heading>
         <UnorderedList
           listStyleType="none"
         >
