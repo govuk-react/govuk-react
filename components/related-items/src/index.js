@@ -39,13 +39,13 @@ const StyledRelatedItems = styled('div')(
  *
  * Simple
  * ```jsx
- * import Header from '@govuk-react/header';
+ * import Heading from '@govuk-react/heading';
  * import UnorderedList from '@govuk-react/unordered-list';
  * import Link from '@govuk-react/link';
  * import ListItem from '@govuk-react/list-item';
  *
  * <RelatedItems>
- *   <Header level={3}>Example header</Header>
+ *   <Heading level={3}>Example heading</Heading>
  *   <UnorderedList listStyleType="none">
  *     <ListItem>
  *       <Link href="https://example.com">Link A</Link>

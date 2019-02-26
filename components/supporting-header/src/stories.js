@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-import { H1 } from '@govuk-react/header';
+import { H1 } from '@govuk-react/heading';
 
 import SupportingHeader, { SupportingHeaderWithKnobs } from './fixtures';
 import ReadMe from '../README.md';

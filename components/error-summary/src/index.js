@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { TEXT_COLOUR, ERROR_COLOUR, FOCUS_COLOUR } from 'govuk-colours';
 
-import Header from '@govuk-react/header';
+import Heading from '@govuk-react/heading';
 import Paragraph from '@govuk-react/paragraph';
 import UnorderedList from '@govuk-react/unordered-list';
 import Link from '@govuk-react/link';
@@ -118,7 +118,7 @@ const ErrorSummary = ({
   onHandleErrorClick, heading, description, errors, ...props
 }) => (
   <StyledErrorSummary tabIndex={-1} {...props}>
-    <Header level={2}>{ heading }</Header>
+    <Heading level={2}>{ heading }</Heading>
     { description && <Paragraph mb={3}>{ description }</Paragraph> }
     { errors.length > 0 &&
       <UnorderedList mb={0} listStyleType="none">
