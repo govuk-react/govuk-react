@@ -1,8 +1,8 @@
 {
   "name": "@govuk-react/lead-paragraph",
-  "version": "0.6.0-alpha.4",
+  "version": "0.6.0-pre.1",
   "dependencies": {
-    "@govuk-react/lib": "^0.6.0-alpha.4"
+    "@govuk-react/lib": "^0.6.0-pre.1"
   },
   "peerDependencies": {
     "react": ">=16.2.0",

@@ -1,11 +1,11 @@
 {
   "name": "@govuk-react/checkbox",
-  "version": "0.6.0-alpha.4",
+  "version": "0.6.0-pre.1",
   "dependencies": {
-    "@govuk-react/constants": "^0.6.0-alpha.4",
-    "@govuk-react/hint-text": "^0.6.0-alpha.4",
-    "@govuk-react/hoc": "^0.6.0-alpha.4",
-    "@govuk-react/lib": "^0.6.0-alpha.4",
+    "@govuk-react/constants": "^0.6.0-pre.1",
+    "@govuk-react/hint-text": "^0.6.0-pre.1",
+    "@govuk-react/hoc": "^0.6.0-pre.1",
+    "@govuk-react/lib": "^0.6.0-pre.1",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
