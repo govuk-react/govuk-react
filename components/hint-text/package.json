@@ -1,9 +1,9 @@
 {
   "name": "@govuk-react/hint-text",
-  "version": "0.6.0-alpha.4",
+  "version": "0.6.0-rc.1",
   "dependencies": {
-    "@govuk-react/constants": "^0.6.0-alpha.4",
-    "@govuk-react/lib": "^0.6.0-alpha.4",
+    "@govuk-react/constants": "^0.6.0-rc.1",
+    "@govuk-react/lib": "^0.6.0-rc.1",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {

@@ -1,8 +1,8 @@
 {
   "name": "@govuk-react/section-break",
-  "version": "0.6.0-alpha.4",
+  "version": "0.6.0-rc.1",
   "dependencies": {
-    "@govuk-react/lib": "^0.6.0-alpha.4",
+    "@govuk-react/lib": "^0.6.0-rc.1",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
