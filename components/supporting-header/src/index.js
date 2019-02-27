@@ -5,7 +5,7 @@ import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
 import { spacing, typography } from '@govuk-react/lib';
 import { SPACING_POINTS } from '@govuk-react/constants';
 
-import { deprecated } from '@govuk-react/hoc';
+import { deprecate } from '@govuk-react/hoc';
 
 const StyledHeader = styled('span')(
   typography.font({ size: 27 }),
@@ -33,4 +33,4 @@ SupportingHeader.propTypes = {
 
 export { SupportingHeader as DocumentedSupportingHeader };
 
-export default deprecated(SupportingHeader, 'please use the Caption component instead');
+export default deprecate(SupportingHeader, 'please use the Caption component instead');

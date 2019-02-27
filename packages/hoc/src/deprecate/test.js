@@ -1,9 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import deprecated from '.';
+import deprecate from '.';
 
-describe('deprecated HOC', () => {
+describe('deprecate HOC', () => {
   const OLD_ENV = process.env;
   // eslint-disable-next-line no-console
   const nativeWarn = console.warn;
@@ -27,7 +27,7 @@ describe('deprecated HOC', () => {
 
   it('should warn when using a deprecated component when not in production', () => {
     process.env.NODE_ENV = 'development';
-    const Comp = deprecated(() => <div>Test</div>);
+    const Comp = deprecate(() => <div>Test</div>);
 
     mount(<Comp />);
 
@@ -36,7 +36,7 @@ describe('deprecated HOC', () => {
 
   it('should not warn when using a deprecated component when in production', () => {
     process.env.NODE_ENV = 'production';
-    const Comp = deprecated(() => <div>Test</div>);
+    const Comp = deprecate(() => <div>Test</div>);
 
     mount(<Comp />);
 

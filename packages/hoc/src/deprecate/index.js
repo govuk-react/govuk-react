@@ -2,7 +2,7 @@
 // https://whawker.github.io/2016/07/15/deprecating-react-components-with-higher-order-components.html
 import React, { Component } from 'react';
 
-const deprecated = (InnerComponent, msg = '') => class extends Component {
+const deprecate = (InnerComponent, msg = '') => class extends Component {
   componentWillMount() {
     if (process.env.NODE_ENV !== 'production') {
       // eslint-disable-next-line no-console
@@ -18,4 +18,4 @@ const deprecated = (InnerComponent, msg = '') => class extends Component {
   }
 };
 
-export default deprecated;
+export default deprecate;
