@@ -3,7 +3,7 @@
   "scripts": {
     "start": "cd packages/storybook && npm start",
     "bootstrap": "lerna bootstrap",
-    "docs": "./packages/api-docs/bin/doc-component.js './components/**/lib/index.js' './API.md'",
+    "docs": "doc-component './components/**/lib/index.js' './API.md'",
     "docs:components": "lerna run docs --parallel",
     "eslint": "eslint ./{components,packages}/*/src/{*.js,**/*.js}",
     "eslint:fix": "eslint --fix ./{components,packages}/*/src/{*.js,**/*.js}",

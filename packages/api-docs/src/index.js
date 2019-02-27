@@ -15,7 +15,7 @@ import generateMarkdown from './markdown/generateMarkdown';
 const components = require('govuk-react');
 
 function getComponentFolderName(file) {
-  const dirs = path.dirname(file).split(path.sep);
+  const dirs = path.dirname(file).split('/');
   let dir = dirs[dirs.length - 1];
   if (dir === 'src' || dir === 'lib') {
     dir = dirs[dirs.length - 2];
@@ -74,7 +74,7 @@ async function generateApiForFiles(files) {
 }
 
 export default async function (relDir, outputMd) {
-  const files = await glob(path.resolve(process.cwd(), relDir));
+  const files = await glob(path.resolve(process.cwd(), relDir.replace(/^'/, '').replace(/'$/, '')));
   const md = await generateApiForFiles(files);
-  await promisify(fs.writeFile)(outputMd, md);
+  await promisify(fs.writeFile)(outputMd.replace(/^'/, '').replace(/'$/, ''), md);
 }
