@@ -124,9 +124,14 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   input={Object {}}
   meta={Object {}}
 >
-  <Label>
-    <styled.label>
+  <Label
+    error={false}
+  >
+    <styled.label
+      error={false}
+    >
       <StyledComponent
+        error={false}
         forwardedComponent={
           Object {
             "$$typeof": Symbol(react.forward_ref),

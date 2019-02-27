@@ -432,9 +432,14 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   input={Object {}}
   meta={Object {}}
 >
-  <Label>
-    <styled.label>
+  <Label
+    error={false}
+  >
+    <styled.label
+      error={false}
+    >
       <StyledComponent
+        error={false}
         forwardedComponent={
           Object {
             "$$typeof": Symbol(react.forward_ref),
@@ -696,9 +701,14 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   input={Object {}}
   meta={Object {}}
 >
-  <Label>
-    <styled.label>
+  <Label
+    error={false}
+  >
+    <styled.label
+      error={false}
+    >
       <StyledComponent
+        error={false}
         forwardedComponent={
           Object {
             "$$typeof": Symbol(react.forward_ref),
