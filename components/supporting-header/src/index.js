@@ -29,7 +29,7 @@ const StyledHeader = styled('span')(
  *
  * With another header
  * ```jsx
- * import { H1 } from '@govuk-react/header';
+ * import { H1 } from '@govuk-react/heading';
  *
  * <SupportingHeader>Supporting header text</SupportingHeader>
  * <H1>Main header text</H1>

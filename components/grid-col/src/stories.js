@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 
 import GridRow from '@govuk-react/grid-row';
-import { H2 } from '@govuk-react/header';
+import { H2 } from '@govuk-react/heading';
 import Paragraph from '@govuk-react/paragraph';
 
 import GridCol from '.';

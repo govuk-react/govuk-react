@@ -13,6 +13,7 @@ export { default as FileUpload } from '@govuk-react/file-upload';
 export { default as GridCol } from '@govuk-react/grid-col';
 export { default as GridRow } from '@govuk-react/grid-row';
 export { default as Header } from '@govuk-react/header';
+export { default as Heading } from '@govuk-react/heading';
 export { default as HintText } from '@govuk-react/hint-text';
 export { default as Input } from '@govuk-react/input';
 export { default as InputField } from '@govuk-react/input-field';
@@ -46,7 +47,7 @@ export { default as TopNav } from '@govuk-react/top-nav';
 export { default as UnorderedList } from '@govuk-react/unordered-list';
 export { default as WarningText } from '@govuk-react/warning-text';
 
-export { H1, H2, H3, H4, H5, H6 } from '@govuk-react/header';
+export { H1, H2, H3, H4, H5, H6 } from '@govuk-react/heading';
 
 // Higher Order Components
 export { asAnchor } from '@govuk-react/hoc';

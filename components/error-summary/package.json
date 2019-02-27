@@ -3,7 +3,7 @@
   "version": "0.6.0-alpha.4",
   "dependencies": {
     "@govuk-react/constants": "^0.6.0-alpha.4",
-    "@govuk-react/header": "^0.6.0-alpha.4",
+    "@govuk-react/heading": "^0.6.0-alpha.4",
     "@govuk-react/input-field": "^0.6.0-alpha.4",
     "@govuk-react/lib": "^0.6.0-alpha.4",
     "@govuk-react/link": "^0.6.0-alpha.4",

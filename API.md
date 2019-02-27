@@ -137,7 +137,7 @@ Simple
 
 With another header
 ```jsx
-import { H1 } from '@govuk-react/header';
+import { H1 } from '@govuk-react/heading';
 
 <Caption size="XL">Supporting header text</Caption>
 <H1>Main header text</H1>
@@ -641,15 +641,37 @@ Header
 
 ### Usage
 
+This component is DEPRECATED.
+
+Please use the Heading component instead.
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `level` |  | ```1``` | number | Semantic heading level value between 1 and 6
+ `size` |  | ```undefined``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
+
+
+Heading
+=======
+
+### Import
+```js
+  import Heading from '@govuk-react/heading';
+```
+<!-- STORY -->
+
+### Usage
+
 
 Simple
 ```jsx
-<Header level={1}>Heading text</Header>
+<Heading level={1}>Heading text</Heading>
 ```
 
 Using shortcuts
 ```jsx
-import { H1, H2, H3, H4, H5, H6 } from "@govuk-react/header";
+import { H1, H2, H3, H4, H5, H6 } from "@govuk-react/heading";
 
 <H1>h1</H1>
 <H2>h2</H2>
@@ -661,18 +683,18 @@ import { H1, H2, H3, H4, H5, H6 } from "@govuk-react/header";
 
 Differing sizes
 ```jsx
-<Header level={6} size={80}>
+<Heading level={6} size={80}>
   h6 with font size 80
-</Header>
-<Header level={2} size="SMALL">
+</Heading>
+<Heading level={2} size="SMALL">
   h2 with SMALL size
-</Header>
+</Heading>
 <H3 size="LARGE">h3 with LARGE size</H3>
 ```
 
 Props pass through
 ```jsx
-<Header onClick={() => { console.log('clicked'); }}>Click me</Header>
+<Heading onClick={() => { console.log('clicked'); }}>Click me</Heading>
 ```
 
 ### References:
@@ -1552,13 +1574,13 @@ RelatedItems
 
 Simple
 ```jsx
-import Header from '@govuk-react/header';
+import Heading from '@govuk-react/heading';
 import UnorderedList from '@govuk-react/unordered-list';
 import Link from '@govuk-react/link';
 import ListItem from '@govuk-react/list-item';
 
 <RelatedItems>
-  <Header level={3}>Example header</Header>
+  <Heading level={3}>Example heading</Heading>
   <UnorderedList listStyleType="none">
     <ListItem>
       <Link href="https://example.com">Link A</Link>
@@ -1745,7 +1767,7 @@ Simple
 
 With another header
 ```jsx
-import { H1 } from '@govuk-react/header';
+import { H1 } from '@govuk-react/heading';
 
 <SupportingHeader>Supporting header text</SupportingHeader>
 <H1>Main header text</H1>

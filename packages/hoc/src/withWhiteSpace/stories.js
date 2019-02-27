@@ -10,7 +10,7 @@ import Checkbox from '@govuk-react/checkbox';
 import DateField from '@govuk-react/date-field';
 import ErrorText from '@govuk-react/error-text';
 import FileUpload from '@govuk-react/file-upload';
-import Header from '@govuk-react/header';
+import Heading from '@govuk-react/heading';
 import HintText from '@govuk-react/hint-text';
 import Input from '@govuk-react/input';
 import InputField from '@govuk-react/input-field';
@@ -125,7 +125,7 @@ stories.add('multiple existing components', () => (
     <DateField mb={number('DateField marginBottom', 9)}>Example</DateField>
     <ErrorText mb={number('ErrorText marginBottom', 9)}>Example</ErrorText>
     <FileUpload mb={number('File Upload marginBottom', 9)}>Example</FileUpload>
-    <Header mb={number('Header marginBottom', 9)}>Example</Header>
+    <Heading mb={number('Heading marginBottom', 9)}>Example</Heading>
     <HintText mb={number('HintText marginBottom', 9)}>Example</HintText>
     <Input mb={number('Input marginBottom', 9)} />
     <InputField mb={number('Input-text marginBottom', 9)}>Example</InputField>

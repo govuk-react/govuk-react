@@ -16,7 +16,7 @@ Simple
 
 With another header
 ```jsx
-import { H1 } from '@govuk-react/header';
+import { H1 } from '@govuk-react/heading';
 
 <Caption size="XL">Supporting header text</Caption>
 <H1>Main header text</H1>

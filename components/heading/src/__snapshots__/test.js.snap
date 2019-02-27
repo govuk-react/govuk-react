@@ -1,37 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Caption matches wrapper snapshot 1`] = `
+exports[`Heading matches wrapper snapshot: wrapper mount 1`] = `
 .c0 {
+  color: #0b0c0c;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.1111111111111112;
-  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.09375;
   display: block;
-  color: #6f777b;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 @media print {
   .c0 {
-    font-size: 18px;
+    color: #000;
+  }
+}
+
+@media print {
+  .c0 {
+    font-size: 32px;
     line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
   .c0 {
-    font-size: 27px;
-    line-height: 1.1111111111111112;
+    font-size: 48px;
+    line-height: 1.0416666666666667;
   }
 }
 
-<Caption
-  size="XL"
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin-bottom: 50px;
+  }
+}
+
+<Heading
+  level={1}
 >
-  <styled.span
-    size="XL"
+  <Styled(Component)
+    level={1}
   >
     <StyledComponent
       forwardedComponent={
@@ -43,32 +56,40 @@ exports[`Caption matches wrapper snapshot 1`] = `
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
+              "color: #0b0c0c; @media print {
+  color: #000;
+}",
               [Function],
+              "display: block; margin-top: 0;",
               [Function],
-              "display: block; color: #6f777b;",
               [Function],
             ],
           },
-          "displayName": "styled.span",
+          "displayName": "Styled(Component)",
           "foldedComponentIds": Array [],
           "render": [Function],
           "styledComponentId": "sc-bdVaJa",
-          "target": "span",
+          "target": [Function],
           "toString": [Function],
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
+          Symbol(Symbol.hasInstance): [Function],
         }
       }
       forwardedRef={null}
-      size="XL"
+      level={1}
     >
-      <span
+      <Component
         className="c0"
-        size="XL"
+        level={1}
       >
-        Heading text
-      </span>
+        <h1
+          className="c0"
+        >
+          example
+        </h1>
+      </Component>
     </StyledComponent>
-  </styled.span>
-</Caption>
+  </Styled(Component)>
+</Heading>
 `;
