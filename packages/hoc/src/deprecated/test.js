@@ -25,7 +25,7 @@ describe('deprecated HOC', () => {
     process.env = OLD_ENV;
   });
 
-  it('should warn when using a deprecated component when in development', () => {
+  it('should warn when using a deprecated component when not in production', () => {
     process.env.NODE_ENV = 'development';
     const Comp = deprecated(() => <div>Test</div>);
 
@@ -34,8 +34,8 @@ describe('deprecated HOC', () => {
     expect(warnCallCount).toEqual(1);
   });
 
-  it('should not warn when using a deprecated component, unless in development', () => {
-    process.env.NODE_ENV = 'definitely-not-development';
+  it('should not warn when using a deprecated component when in production', () => {
+    process.env.NODE_ENV = 'production';
     const Comp = deprecated(() => <div>Test</div>);
 
     mount(<Comp />);

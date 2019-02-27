@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 
 const deprecated = (InnerComponent, msg = '') => class extends Component {
   componentWillMount() {
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV !== 'production') {
       // eslint-disable-next-line no-console
       console.warn(`${InnerComponent.name} is deprecated`, msg);
     }
