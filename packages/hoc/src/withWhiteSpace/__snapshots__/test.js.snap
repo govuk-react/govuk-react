@@ -11,7 +11,7 @@ exports[`withWhiteSpace matches wrapper snapshot 1`] = `
   }
 }
 
-<Styled(styled.div)
+<Styled(_class)
   mb={5}
 >
   <StyledComponent
@@ -24,14 +24,11 @@ exports[`withWhiteSpace matches wrapper snapshot 1`] = `
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
-            "",
             [Function],
           ],
         },
-        "displayName": "Styled(styled.div)",
-        "foldedComponentIds": Array [
-          "sc-htpNat",
-        ],
+        "displayName": "Styled(_class)",
+        "foldedComponentIds": Array [],
         "propTypes": Object {
           "margin": [Function],
           "mb": [Function],
@@ -39,20 +36,59 @@ exports[`withWhiteSpace matches wrapper snapshot 1`] = `
         },
         "render": [Function],
         "styledComponentId": "sc-bxivhb",
-        "target": "div",
+        "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
         "withComponent": [Function],
+        Symbol(Symbol.hasInstance): [Function],
       }
     }
     forwardedRef={null}
     mb={5}
   >
-    <div
+    <_class
       className="c0"
+      mb={5}
     >
-      Example
-    </div>
+      <styled.div
+        className="c0"
+        mb={5}
+      >
+        <StyledComponent
+          className="c0"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-htpNat",
+                "isStatic": true,
+                "lastClassName": "KtFsv",
+                "rules": Array [
+                  "",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-htpNat",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          mb={5}
+        >
+          <div
+            className="c0 "
+          >
+            Example
+          </div>
+        </StyledComponent>
+      </styled.div>
+    </_class>
   </StyledComponent>
-</Styled(styled.div)>
+</Styled(_class)>
 `;

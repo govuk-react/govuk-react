@@ -5,9 +5,7 @@ import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
 import { spacing, typography } from '@govuk-react/lib';
 import { SPACING_POINTS } from '@govuk-react/constants';
 
-// TODO this should be replaced with a `Caption` component
-// and support sizes XL, L and M
-// see https://github.com/alphagov/govuk-frontend/blob/master/src/core/_typography.scss
+import { deprecate } from '@govuk-react/hoc';
 
 const StyledHeader = styled('span')(
   typography.font({ size: 27 }),
@@ -21,23 +19,11 @@ const StyledHeader = styled('span')(
 /**
  *
  * ### Usage
+  *
+ * This component is DEPRECATED.
  *
- * Simple
- * ```jsx
- * <SupportingHeader>Heading text</SupportingHeader>
- * ```
- *
- * With another header
- * ```jsx
- * import { H1 } from '@govuk-react/heading';
- *
- * <SupportingHeader>Supporting header text</SupportingHeader>
- * <H1>Main header text</H1>
- * ```
- *
- * ### References
- * - https://govuk-elements.herokuapp.com/typography/
- */
+ * Please use the `Caption` component instead.
+*/
 const SupportingHeader = props => <StyledHeader {...props} />;
 
 SupportingHeader.propTypes = {
@@ -45,4 +31,6 @@ SupportingHeader.propTypes = {
   children: PropTypes.string.isRequired,
 };
 
-export default SupportingHeader;
+export { SupportingHeader as DocumentedSupportingHeader };
+
+export default deprecate(SupportingHeader, 'please use the Caption component instead');

@@ -9,6 +9,7 @@ import {
   TYPOGRAPHY_SCALE,
 } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
+import { deprecate } from '@govuk-react/hoc';
 
 // use `size` only with string for XLARGE, SMALL etc and number for px size
 // so if `size` is a string, we find a numeric size based off `HEADING_SIZES`
@@ -58,7 +59,7 @@ const StyledHeader = styled(({
  *
  * This component is DEPRECATED.
  *
- * Please use the Heading component instead.
+ * Please use the `Heading` component instead.
  *
  */
 const Header = props => <StyledHeader {...props} />;
@@ -81,6 +82,7 @@ Header.propTypes = {
   size: PropTypes.oneOf([...Object.keys(HEADING_SIZES), ...Object.keys(TYPOGRAPHY_SCALE)]),
 };
 
-export default Header;
+export default deprecate(Header, 'please use the Heading component instead');
 
+export { Header as DocumentedHeader };
 export { H1, H2, H3, H4, H5, H6 } from './presets';

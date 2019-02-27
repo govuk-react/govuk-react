@@ -643,7 +643,7 @@ Header
 
 This component is DEPRECATED.
 
-Please use the Heading component instead.
+Please use the `Heading` component instead.
 
 ### Properties
 Prop | Required | Default | Type | Description
@@ -1761,21 +1761,9 @@ SupportingHeader
 
 ### Usage
 
-Simple
-```jsx
-<SupportingHeader>Heading text</SupportingHeader>
-```
+This component is DEPRECATED.
 
-With another header
-```jsx
-import { H1 } from '@govuk-react/heading';
-
-<SupportingHeader>Supporting header text</SupportingHeader>
-<H1>Main header text</H1>
-```
-
-### References
-- https://govuk-elements.herokuapp.com/typography/
+Please use the `Caption` component instead.
 
 ### Properties
 Prop | Required | Default | Type | Description

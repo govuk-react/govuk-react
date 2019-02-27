@@ -11,7 +11,7 @@ Header
 
 This component is DEPRECATED.
 
-Please use the Heading component instead.
+Please use the `Heading` component instead.
 
 ### Properties
 Prop | Required | Default | Type | Description
