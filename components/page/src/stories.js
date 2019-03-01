@@ -1,6 +1,13 @@
 // import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-import Example from './fixtures';
+import ReadMe from '../README.md';
 
-storiesOf('Page', module).add('Page', Example);
+import Page from './fixtures';
+
+const stories = storiesOf('Layout/Page', module);
+
+stories.addDecorator(WithDocsCustom(ReadMe));
+
+stories.add('Component default', Page);
