@@ -22,7 +22,6 @@ class TableTabs extends Component {
     tabIndex: 0,
   }
 
-
   setTabIndex = tabIndex => this.setState({
     tabIndex,
   })
@@ -87,6 +86,7 @@ class TableTabs extends Component {
   }
 }
 
+/* eslint-disable-next-line react/no-multi-comp */
 class SimpleTabs extends Component {
   constructor() {
     super();
@@ -127,6 +127,7 @@ class SimpleTabs extends Component {
   }
 }
 
+/* eslint-disable-next-line react/no-multi-comp */
 class SimpleMapTabs extends Component {
   constructor() {
     super();
@@ -188,6 +189,7 @@ class SimpleMapTabs extends Component {
   }
 }
 
+/* eslint-disable-next-line react/no-multi-comp */
 class ProposedClassPropertiesPlugin extends Component {
   state = { tabIndex: 0 };
 
