@@ -16,11 +16,13 @@ const examples = storiesOf('Layout/Page/Examples', module);
 stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
-  <Page
-    beforeChildren={<BackLink href="#" />}
-  >
-    <H1>Page Title</H1>
-  </Page>
+  <div>
+    <Page
+      beforeChildren={<BackLink href="#" />}
+    >
+      <H1>Page Title</H1>
+    </Page>
+  </div>
 ));
 
 const WideContainer = styled(Page.WidthContainer)({
@@ -31,9 +33,11 @@ const WideContainer = styled(Page.WidthContainer)({
 });
 
 examples.add('Custom width container (no width limit)', () => (
-  <Page container={WideContainer}>
-    <H3>Page container has no maxWidth</H3>
-  </Page>
+  <div>
+    <Page container={WideContainer}>
+      <H3>Page container has no maxWidth</H3>
+    </Page>
+  </div>
 ));
 
 const MainContainer = styled(Page.Main)({
@@ -41,13 +45,17 @@ const MainContainer = styled(Page.Main)({
 });
 
 examples.add('Custom main container (background colour)', () => (
-  <Page main={MainContainer}>
-    <H3>Main container with custom background colour</H3>
-  </Page>
+  <div>
+    <Page main={MainContainer}>
+      <H3>Main container with custom background colour</H3>
+    </Page>
+  </div>
 ));
 
 examples.add('Custom main container (adjusted padding)', () => (
-  <Page main={props => <Page.Main padding={{ size: 1 }} {...props} />}>
-    <H3>Main container with adjusted padding using withWhiteSpace padding prop</H3>
-  </Page>
+  <div>
+    <Page main={props => <Page.Main padding={{ size: 1 }} {...props} />}>
+      <H3>Main container with adjusted padding using withWhiteSpace padding prop</H3>
+    </Page>
+  </div>
 ));
