@@ -2,65 +2,17 @@
 
 exports[`Tabs matches wrapper snapshot 1`] = `
 <DocumentFragment>
-  .c7 {
-  color: #0b0c0c;
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.0416666666666667;
-  display: block;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-.c9 {
-  padding: 10px 20px 10px 0;
-  border-bottom: 1px solid #bfc1c3;
-  text-align: left;
-  font-weight: 700;
-}
-
-.c9:last-child {
-  padding-right: 0;
-}
-
-.c10 {
-  padding: 10px 20px 10px 0;
-  border-bottom: 1px solid #bfc1c3;
-  text-align: left;
-}
-
-.c10:last-child {
-  padding-right: 0;
-}
-
-.c8 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #0b0c0c;
-  width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-.c3 {
+  .c2 {
   margin-left: 25px;
 }
 
-.c3:before {
+.c2:before {
   content: '— ';
-  margin-left: -5;
+  margin-left: -25px;
   padding-right: 5px;
 }
 
-.c4 {
+.c3 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -76,6 +28,47 @@ exports[`Tabs matches wrapper snapshot 1`] = `
   color: #0b0c0c;
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c3:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+  background-color: #ffbf47;
+}
+
+.c3:link {
+  color: #005ea5;
+}
+
+.c3:visited {
+  color: #4c2c92;
+}
+
+.c3:hover {
+  color: #2b8cc4;
+}
+
+.c3:active {
+  color: #2b8cc4;
+}
+
+.c3:focus {
+  color: #0b0c0c;
+}
+
+.c4 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .c4:focus {
@@ -104,55 +97,22 @@ exports[`Tabs matches wrapper snapshot 1`] = `
   color: #0b0c0c;
 }
 
-.c5 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: inline-block;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.c5:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-  background-color: #ffbf47;
-}
-
-.c5:link {
-  color: #005ea5;
-}
-
-.c5:visited {
-  color: #4c2c92;
-}
-
-.c5:hover {
-  color: #2b8cc4;
-}
-
-.c5:active {
-  color: #2b8cc4;
-}
-
-.c5:focus {
-  color: #0b0c0c;
-}
-
-.c2 {
+.c1 {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.c2 marginBottom {
+.c1 marginBottom {
   margin-bottom: 20px;
+}
+
+.c5 {
+  display: block;
+}
+
+.c5 marginBottom {
+  mobile-bottom: 30px;
 }
 
 .c6 {
@@ -160,14 +120,6 @@ exports[`Tabs matches wrapper snapshot 1`] = `
 }
 
 .c6 marginBottom {
-  mobile-bottom: 30px;
-}
-
-.c11 {
-  display: block;
-}
-
-.c11 marginBottom {
   mobile-bottom: 30px;
 }
 
@@ -189,102 +141,45 @@ exports[`Tabs matches wrapper snapshot 1`] = `
   margin-bottom: 20px;
 }
 
-.c1 {
-  font-size: 19px;
-  margin-bottom: 5px;
-}
-
-@media print {
-  .c7 {
-    color: #000;
-  }
-}
-
-@media print {
-  .c7 {
-    font-size: 24px;
-    line-height: 1.05;
-  }
-}
-
 @media only screen and (min-width:641px) {
-  .c7 {
-    font-size: 36px;
-    line-height: 1.1111111111111112;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c7 {
-    margin-bottom: 30px;
-  }
-}
-
-@media print {
-  .c8 {
-    font-size: 14px;
-    line-height: 1.15;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c8 {
-    font-size: 19px;
-    line-height: 1.3157894736842106;
-  }
-}
-
-@media print {
-  .c8 {
-    color: #000;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c8 {
-    margin-bottom: 30px;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c3 {
+  .c2 {
     margin-left: 0;
   }
 
-  .c3:before {
+  .c2:before {
     content: none;
   }
 }
 
 @media print {
-  .c4 {
+  .c3 {
     font-size: 14px;
     line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c4 {
+  .c3 {
     font-size: 19px;
     line-height: 1.3157894736842106;
   }
 }
 
 @media print {
-  .c4 {
+  .c3 {
     font-family: sans-serif;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c4 {
+  .c3 {
     margin-right: 5px;
     float: left;
     color: #0b0c0c;
     text-align: center;
     -webkit-text-decoration: none;
     text-decoration: none;
-    margin-top: -5;
+    margin-top: -5px;
     margin-bottom: -1px;
     padding-top: 14px;
     padding-right: 19px;
@@ -295,37 +190,37 @@ exports[`Tabs matches wrapper snapshot 1`] = `
     background-color: #ffffff;
   }
 
-  .c4:link {
+  .c3:link {
     color: #0b0c0c;
   }
 
-  .c4:focus {
+  .c3:focus {
     background-color: transparent;
   }
 }
 
 @media print {
-  .c5 {
+  .c4 {
     font-size: 14px;
     line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c5 {
+  .c4 {
     font-size: 19px;
     line-height: 1.3157894736842106;
   }
 }
 
 @media print {
-  .c5 {
+  .c4 {
     font-family: sans-serif;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c5 {
+  .c4 {
     margin-right: 5px;
     float: left;
     color: #0b0c0c;
@@ -334,33 +229,56 @@ exports[`Tabs matches wrapper snapshot 1`] = `
     text-decoration: none;
     padding-right: 20px;
     padding-left: 20px;
+    border-bottom: 1px;
     background-color: #f8f8f8;
   }
 
-  .c5:link {
+  .c4:link {
     color: #0b0c0c;
   }
 
-  .c5:focus {
+  .c4:focus {
     background-color: #f8f8f8;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c2 marginBottom {
+  .c1 marginBottom {
     margin-bottom: 30px;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c2 {
+  .c1 {
     border-bottom: 1px solid #bfc1c3;
   }
 
-  .c2::after {
+  .c1::after {
     content: '';
     display: block;
     clear: both;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c5 marginBottom {
+    mobile-bottom: 50px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c5 {
+    margin-bottom: 0;
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    border: 1px solid #bfc1c3;
+    border-top: 0;
+  }
+
+  .c5 >:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -387,29 +305,7 @@ exports[`Tabs matches wrapper snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .c11 marginBottom {
-    mobile-bottom: 50px;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c11 {
-    margin-bottom: 0;
-    padding-top: 30px;
-    padding-right: 20px;
-    padding-bottom: 30px;
-    padding-left: 20px;
-    border: 1px solid #bfc1c3;
-    border-top: 0;
-  }
-
-  .c11 >:last-child {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c11 {
+  .c6 {
     display: none;
   }
 }
@@ -440,455 +336,44 @@ exports[`Tabs matches wrapper snapshot 1`] = `
   }
 }
 
-@media only screen and (min-width:641px) {
-  .c1 {
-    display: none;
-  }
-}
-
 <div
     class="c0"
   >
-    <h2
+    <ul
       class="c1"
     >
-      Content
-    </h2>
-    <ul
-      class="c2"
-    >
       <li
-        class="c3"
+        class="c2"
+      >
+        <a
+          class="c3"
+          href="#first-panel"
+        >
+          Title 1
+        </a>
+      </li>
+      <li
+        class="c2"
       >
         <a
           class="c4"
-          href="#"
+          href="#second-panel"
         >
-          Past day
-        </a>
-      </li>
-      <li
-        class="c3"
-      >
-        <a
-          class="c5"
-          href="#"
-        >
-          Past week
-        </a>
-      </li>
-      <li
-        class="c3"
-      >
-        <a
-          class="c5"
-          href="#"
-        >
-          Past month
-        </a>
-      </li>
-      <li
-        class="c3"
-      >
-        <a
-          class="c5"
-          href="#"
-        >
-          Past year
+          Title 2
         </a>
       </li>
     </ul>
     <section
+      class="c5"
+      id="first-panel"
+    >
+      TabPanel content 1
+    </section>
+    <section
       class="c6"
-      id="past-day"
+      id="second-panel"
     >
-      <h2
-        class="c7"
-      >
-        Past day
-      </h2>
-      <table
-        class="c8"
-      >
-        <thead
-          class=""
-        >
-          <tr
-            class=""
-          >
-            <th
-              class="c9"
-            >
-              Case manager
-            </th>
-            <th
-              class="c9"
-            >
-              Cases opened
-            </th>
-            <th
-              class="c9"
-            >
-              Cases closed
-            </th>
-          </tr>
-        </thead>
-        <tbody
-          class=""
-        >
-          <tr
-            class=""
-          >
-            <td
-              class="c10"
-            >
-              David Francis
-            </td>
-            <td
-              class="c10"
-            >
-              3
-            </td>
-            <td
-              class="c10"
-            >
-              0
-            </td>
-          </tr>
-          <tr
-            class=""
-          >
-            <td
-              class="c10"
-            >
-              Paul Farmer
-            </td>
-            <td
-              class="c10"
-            >
-              1
-            </td>
-            <td
-              class="c10"
-            >
-              0
-            </td>
-          </tr>
-          <tr
-            class=""
-          >
-            <td
-              class="c10"
-            >
-              Rita Patel
-            </td>
-            <td
-              class="c10"
-            >
-              2
-            </td>
-            <td
-              class="c10"
-            >
-              0
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section
-      class="c11"
-      id="past-week"
-    >
-      <h2
-        class="c7"
-      >
-        Past week
-      </h2>
-      <table
-        class="c8"
-      >
-        <thead
-          class=""
-        >
-          <tr
-            class=""
-          >
-            <th
-              class="c9"
-            >
-              Case manager
-            </th>
-            <th
-              class="c9"
-            >
-              Cases opened
-            </th>
-            <th
-              class="c9"
-            >
-              Cases closed
-            </th>
-          </tr>
-        </thead>
-        <tbody
-          class=""
-        >
-          <tr
-            class=""
-          >
-            <td
-              class="c10"
-            >
-              David Francis
-            </td>
-            <td
-              class="c10"
-            >
-              24
-            </td>
-            <td
-              class="c10"
-            >
-              18
-            </td>
-          </tr>
-          <tr
-            class=""
-          >
-            <td
-              class="c10"
-            >
-              Paul Farmer
-            </td>
-            <td
-              class="c10"
-            >
-              16
-            </td>
-            <td
-              class="c10"
-            >
-              20
-            </td>
-          </tr>
-          <tr
-            class=""
-          >
-            <td
-              class="c10"
-            >
-              Rita Patel
-            </td>
-            <td
-              class="c10"
-            >
-              24
-            </td>
-            <td
-              class="c10"
-            >
-              27
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section
-      class="c11"
-      id="past-month"
-    >
-      <h2
-        class="c7"
-      >
-        Past month
-      </h2>
-      <table
-        class="c8"
-      >
-        <thead
-          class=""
-        >
-          <tr
-            class=""
-          >
-            <th
-              class="c9"
-            >
-              Case manager
-            </th>
-            <th
-              class="c9"
-            >
-              Cases opened
-            </th>
-            <th
-              class="c9"
-            >
-              Cases closed
-            </th>
-          </tr>
-        </thead>
-        <tbody
-          class=""
-        >
-          <tr
-            class=""
-          >
-            <td
-              class="c10"
-            >
-              David Francis
-            </td>
-            <td
-              class="c10"
-            >
-              98
-            </td>
-            <td
-              class="c10"
-            >
-              95
-            </td>
-          </tr>
-          <tr
-            class=""
-          >
-            <td
-              class="c10"
-            >
-              Paul Farmer
-            </td>
-            <td
-              class="c10"
-            >
-              122
-            </td>
-            <td
-              class="c10"
-            >
-              131
-            </td>
-          </tr>
-          <tr
-            class=""
-          >
-            <td
-              class="c10"
-            >
-              Rita Patel
-            </td>
-            <td
-              class="c10"
-            >
-              126
-            </td>
-            <td
-              class="c10"
-            >
-              142
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section
-      class="c11"
-      id="past-year"
-    >
-      <h2
-        class="c7"
-      >
-        Past year
-      </h2>
-      <table
-        class="c8"
-      >
-        <thead
-          class=""
-        >
-          <tr
-            class=""
-          >
-            <th
-              class="c9"
-            >
-              Case manager
-            </th>
-            <th
-              class="c9"
-            >
-              Cases opened
-            </th>
-            <th
-              class="c9"
-            >
-              Cases closed
-            </th>
-          </tr>
-        </thead>
-        <tbody
-          class=""
-        >
-          <tr
-            class=""
-          >
-            <td
-              class="c10"
-            >
-              David Francis
-            </td>
-            <td
-              class="c10"
-            >
-              1380
-            </td>
-            <td
-              class="c10"
-            >
-              1472
-            </td>
-          </tr>
-          <tr
-            class=""
-          >
-            <td
-              class="c10"
-            >
-              Paul Farmer
-            </td>
-            <td
-              class="c10"
-            >
-              1129
-            </td>
-            <td
-              class="c10"
-            >
-              1083
-            </td>
-          </tr>
-          <tr
-            class=""
-          >
-            <td
-              class="c10"
-            >
-              Rita Patel
-            </td>
-            <td
-              class="c10"
-            >
-              1539
-            </td>
-            <td
-              class="c10"
-            >
-              1265
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      TabPanel content 2
     </section>
   </div>
 </DocumentFragment>

@@ -85,13 +85,16 @@ const Tab = ({
 
 Tab.defaultProps = {
   isActive: false,
-  href: '#',
 };
 
 Tab.propTypes = {
+  /** Different stylings for the Tab displaying content */
   isActive: PropTypes.bool,
-  href: PropTypes.string,
+  /** Join the panel and header together with corresponding panel id. Required for mobile use  */
+  href: PropTypes.string.isRequired,
+  /** The content to display within the Tab Header */
   children: PropTypes.node.isRequired,
+  /** The function to passed to prevent default href behaviour */
   onClick: PropTypes.func.isRequired,
 };
 

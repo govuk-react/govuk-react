@@ -1,15 +1,13 @@
 import React from 'react';
 import { cleanup, render } from 'react-testing-library';
 
-import { TableTabs } from './fixtures';
+import { SimpleTabs } from './fixtures';
 
 afterEach(cleanup);
 
 describe('Tabs', () => {
   it('matches wrapper snapshot', () => {
-    const {
-      asFragment,
-    } = render(<TableTabs />);
+    const { asFragment } = render(<SimpleTabs />);
     expect(asFragment()).toMatchSnapshot();
   });
 

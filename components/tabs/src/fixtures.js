@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { H2 } from '@govuk-react/header';
+import { H2, H4 } from '@govuk-react/header';
+import SectionBreak from '@govuk-react/section-break';
 import Table from '@govuk-react/table';
 
 import Tabs from '.';
-
-const { Tab, TabList, TabPanel, TabsContainer, TabsTitle } = Tabs;
 
 const arrTitles = ['Past day', 'Past week', 'Past month', 'Past year'];
 
@@ -18,33 +17,32 @@ const tableHead = (
     <Table.CellHeader>Cases closed</Table.CellHeader>
   </Table.Row>
 );
-
 class TableTabs extends Component {
   state = {
     tabIndex: 0,
   }
 
 
-  setTabIndex = newTabIndex => this.setState({
-    tabIndex: newTabIndex,
+  setTabIndex = tabIndex => this.setState({
+    tabIndex,
   })
 
   render() {
     const { tabIndex } = this.state;
     return (
-      <TabsContainer>
-        <TabsTitle>Content</TabsTitle>
-        <TabList>
+      <Tabs.TabsContainer>
+        <Tabs.TabsTitle>Content</Tabs.TabsTitle>
+        <Tabs.TabList>
           {arrTitles.map((label, index) => (
-            <Tab
+            <Tabs.Tab
               key={`${label}-tabHeader`}
               onClick={() => this.setTabIndex(index)}
               isActive={tabIndex === index}
             >
               {label}
-            </Tab>
+            </Tabs.Tab>
           ))}
-        </TabList>
+        </Tabs.TabList>
         {[
           {
             title: 'Past day',
@@ -67,7 +65,7 @@ class TableTabs extends Component {
             id: 'past-year',
           },
         ].map(({ arr, id, title }, index) => (
-          <TabPanel isActive={tabIndex === index} key={`${title}-tabPanel`} id={id}>
+          <Tabs.TabPanel isActive={tabIndex === index} key={`${title}-tabPanel`} id={id}>
             <H2>{title}</H2>
             <Table
               head={tableHead}
@@ -82,9 +80,9 @@ class TableTabs extends Component {
                   </Table.Row>
                 ))}
             </Table>
-          </TabPanel>
+          </Tabs.TabPanel>
         ))}
-      </TabsContainer>
+      </Tabs.TabsContainer>
     );
   }
 }
@@ -96,35 +94,35 @@ class SimpleTabs extends Component {
     this.setTabIndex = this.setTabIndex.bind(this);
   }
 
-  setTabIndex(newTabIndex) {
+  setTabIndex(tabIndex) {
     this.setState({
-      tabIndex: newTabIndex,
+      tabIndex,
     });
   }
 
   render() {
     const { tabIndex } = this.state;
     return (
-      <TabsContainer>
-        <TabList>
-          <Tab
+      <Tabs.TabsContainer>
+        <Tabs.TabList>
+          <Tabs.Tab
             onClick={() => this.setTabIndex(0)}
             isActive={tabIndex === 0}
             href="#first-panel"
           >
             Title 1
-          </Tab>
-          <Tab
+          </Tabs.Tab>
+          <Tabs.Tab
             onClick={() => this.setTabIndex(1)}
             isActive={tabIndex === 1}
             href="#second-panel"
           >
             Title 2
-          </Tab>
-        </TabList>
-        <TabPanel isActive={tabIndex === 0} id="first-panel">TabPanel content 1</TabPanel>
-        <TabPanel isActive={tabIndex === 1} id="second-panel" >TabPanel content 2</TabPanel>
-      </TabsContainer>
+          </Tabs.Tab>
+        </Tabs.TabList>
+        <Tabs.TabPanel isActive={tabIndex === 0} id="first-panel">TabPanel content 1</Tabs.TabPanel>
+        <Tabs.TabPanel isActive={tabIndex === 1} id="second-panel" >TabPanel content 2</Tabs.TabPanel>
+      </Tabs.TabsContainer>
     );
   }
 }
@@ -136,111 +134,113 @@ class SimpleMapTabs extends Component {
     this.setTabIndex = this.setTabIndex.bind(this);
   }
 
-  setTabIndex(newTabIndex) {
+  setTabIndex(tabIndex) {
     this.setState({
-      tabIndex: newTabIndex,
+      tabIndex,
     });
   }
 
   render() {
     const { tabIndex } = this.state;
     return (
-      <TabsContainer>
-        <TabList>
+      <Tabs.TabsContainer>
+        <Tabs.TabList>
           {[
             {
               content: 'Title 1',
-              href: '#first-panel'
+              href: '#first-panel',
             },
             {
               content: 'Title 2',
-              href: '#second-panel'
+              href: '#second-panel',
             },
           ].map(({ content, href }, index) => (
-              <Tab
-                onClick={() => this.setTabIndex(index)}
-                isActive={tabIndex === index}
-                href={href}
-              >
-                {content}
-              </Tab>
+            <Tabs.Tab
+              onClick={() => this.setTabIndex(index)}
+              isActive={tabIndex === index}
+              href={href}
+            >
+              {content}
+            </Tabs.Tab>
             ))
           }
-        </TabList>
+        </Tabs.TabList>
         {[
             {
-              content: 'TabPanel content 1',
-              id: 'first-panel'
+              content: 'Mapped TabPanel content 1',
+              id: 'first-panel',
             },
             {
-              content: 'TabPanel content 2',
-              id: 'second-panel'
+              content: 'Mapped TabPanel content 2',
+              id: 'second-panel',
             },
           ].map(({ content, id }, index) => (
-              <TabPanel
-                isActive={tabIndex === index}
-                id={id}
-              >
-                {content}
-              </TabPanel>
+            <Tabs.TabPanel
+              isActive={tabIndex === index}
+              id={id}
+            >
+              <H4>{content}</H4>
+            </Tabs.TabPanel>
             ))
           }
-        </TabsContainer>
+      </Tabs.TabsContainer>
     );
   }
 }
 
 class ProposedClassPropertiesPlugin extends Component {
   state = { tabIndex: 0 };
-  
-  setTabIndex = newTabIndex => this.setState({
-    tabIndex: newTabIndex,
+
+  setTabIndex = tabIndex => this.setState({
+    tabIndex,
   });
 
   render() {
     const { tabIndex } = this.state;
     return (
-      <Tabs>
-        <TabList>
+      <Tabs.TabsContainer>
+        <Tabs.TabList>
           {[
             {
               content: 'Title 1',
-              href: '#first-panel'
+              href: '#first-panel',
             },
             {
               content: 'Title 2',
-              href: '#second-panel'
+              href: '#second-panel',
             },
           ].map(({ content, href }, index) => (
-              <Tab
-                onClick={() => this.setTabIndex(index)}
-                isActive={tabIndex === index}
-                href={href}
-              >
-                {content}
-              </Tab>
+            <Tabs.Tab
+              onClick={() => this.setTabIndex(index)}
+              isActive={tabIndex === index}
+              href={href}
+            >
+              {content}
+            </Tabs.Tab>
             ))
           }
-        </TabList>
+        </Tabs.TabList>
         {[
             {
               content: 'TabPanel content 1',
-              id: 'first-panel'
+              id: 'first-panel',
             },
             {
               content: 'TabPanel content 2',
-              id: 'second-panel'
+              id: 'second-panel',
             },
           ].map(({ content, id }, index) => (
-              <TabPanel
-                isActive={tabIndex === index}
-                id={id}
-              >
-                {content}
-              </TabPanel>
+            <Tabs.TabPanel
+              isActive={tabIndex === index}
+              id={id}
+            >
+              <H2>with Babel Plugin</H2>
+              <SectionBreak level="L" visible />
+              {content}
+            </Tabs.TabPanel>
             ))
           }
-        </Tabs>
+      </Tabs.TabsContainer>
     );
   }
 }
