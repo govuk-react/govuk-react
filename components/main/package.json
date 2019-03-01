@@ -1,8 +1,8 @@
 {
   "name": "@govuk-react/main",
-  "version": "0.6.0-rc.1",
+  "version": "0.6.0",
   "dependencies": {
-    "@govuk-react/constants": "^0.6.0-rc.1"
+    "@govuk-react/constants": "^0.6.0"
   },
   "peerDependencies": {
     "react": ">=16.2.0",

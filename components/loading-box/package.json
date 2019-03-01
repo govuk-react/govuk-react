@@ -1,9 +1,9 @@
 {
   "name": "@govuk-react/loading-box",
-  "version": "0.6.0-rc.1",
+  "version": "0.6.0",
   "dependencies": {
-    "@govuk-react/constants": "^0.6.0-rc.1",
-    "@govuk-react/icons": "^0.6.0-rc.1",
+    "@govuk-react/constants": "^0.6.0",
+    "@govuk-react/icons": "^0.6.0",
     "govuk-colours": "^1.0.3",
     "hex-rgb": "^1.0.0",
     "react-transition-group": "^2.2.1"
