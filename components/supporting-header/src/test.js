@@ -1,13 +1,13 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import SupportingHeader, { exampleHeading } from './fixtures';
+import SupportingHeader from '.';
 
 describe('SupportingHeader', () => {
   let wrapper;
 
   it('renders without crashing', () => {
-    wrapper = mount(<SupportingHeader>{exampleHeading}</SupportingHeader>);
+    wrapper = mount(<SupportingHeader>Heading text</SupportingHeader>);
   });
 
   it('matches wrapper snapshot', () => {

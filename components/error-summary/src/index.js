@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { TEXT_COLOUR, ERROR_COLOUR, FOCUS_COLOUR } from 'govuk-colours';
 
-import Header from '@govuk-react/header';
+import Heading from '@govuk-react/heading';
 import Paragraph from '@govuk-react/paragraph';
 import UnorderedList from '@govuk-react/unordered-list';
 import Link from '@govuk-react/link';
@@ -22,7 +22,7 @@ import {
   RESPONSIVE_4,
 } from '@govuk-react/constants';
 
-import { withWhiteSpace } from '@govuk-react/hoc';
+import { spacing } from '@govuk-react/lib';
 
 const StyledErrorText = styled(Link)({
   fontFamily: NTA_LIGHT,
@@ -48,19 +48,22 @@ const StyledErrorText = styled(Link)({
   paddingBottom: '2px',
 });
 
-const StyledErrorSummary = styled('div')({
-  color: TEXT_COLOUR,
-  padding: RESPONSIVE_4.mobile,
-  border: `${BORDER_WIDTH_MOBILE} solid ${ERROR_COLOUR}`,
-  '&:focus': {
-    outline: `${FOCUS_WIDTH} solid ${FOCUS_COLOUR}`,
-    outlineOffset: '0',
+const StyledErrorSummary = styled('div')(
+  {
+    color: TEXT_COLOUR,
+    padding: RESPONSIVE_4.mobile,
+    border: `${BORDER_WIDTH_MOBILE} solid ${ERROR_COLOUR}`,
+    '&:focus': {
+      outline: `${FOCUS_WIDTH} solid ${FOCUS_COLOUR}`,
+      outlineOffset: '0',
+    },
+    [MEDIA_QUERIES.LARGESCREEN]: {
+      padding: RESPONSIVE_4.tablet,
+      border: `${BORDER_WIDTH} solid ${ERROR_COLOUR}`,
+    },
   },
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    padding: RESPONSIVE_4.tablet,
-    border: `${BORDER_WIDTH} solid ${ERROR_COLOUR}`,
-  },
-});
+  spacing.withWhiteSpace({ marginBottom: 6 }),
+);
 
 
 /**
@@ -115,7 +118,7 @@ const ErrorSummary = ({
   onHandleErrorClick, heading, description, errors, ...props
 }) => (
   <StyledErrorSummary tabIndex={-1} {...props}>
-    <Header level={2}>{ heading }</Header>
+    <Heading level={2}>{ heading }</Heading>
     { description && <Paragraph mb={3}>{ description }</Paragraph> }
     { errors.length > 0 &&
       <UnorderedList mb={0} listStyleType="none">
@@ -155,4 +158,4 @@ ErrorSummary.propTypes = {
   })),
 };
 
-export default withWhiteSpace({ marginBottom: 6 })(ErrorSummary);
+export default ErrorSummary;

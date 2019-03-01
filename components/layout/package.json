@@ -1,9 +1,8 @@
 {
   "name": "@govuk-react/layout",
-  "version": "0.6.0-alpha.4",
+  "version": "0.6.0",
   "dependencies": {
-    "@govuk-react/constants": "^0.6.0-alpha.4",
-    "govuk-colours": "^1.0.3"
+    "@govuk-react/constants": "^0.6.0"
   },
   "peerDependencies": {
     "react": ">=16.2.0",

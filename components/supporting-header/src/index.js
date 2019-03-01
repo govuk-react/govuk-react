@@ -1,53 +1,29 @@
 import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GREY_1 } from 'govuk-colours';
-import { withWhiteSpace } from '@govuk-react/hoc';
-import {
-  FONT_SIZE,
-  LINE_HEIGHT,
-  MEDIA_QUERIES,
-  NTA_LIGHT,
-} from '@govuk-react/constants';
+import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
+import { spacing, typography } from '@govuk-react/lib';
+import { SPACING_POINTS } from '@govuk-react/constants';
 
-// The line-height and padding for supporting headers does not follow any pre-existing patterns
-const customLineHeight = '1.11111';
-const smallPaddingBottom = '7px';
-const largePaddingBottom = '6px';
+import { deprecate } from '@govuk-react/hoc';
 
-const StyledHeader = styled('span')({
-  fontFamily: NTA_LIGHT,
-  fontSize: FONT_SIZE.SIZE_20,
-  lineHeight: customLineHeight,
-  color: GREY_1,
-  paddingBottom: smallPaddingBottom,
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    fontSize: FONT_SIZE.SIZE_27,
-    lineHeight: LINE_HEIGHT.SIZE_27,
-    paddingBottom: largePaddingBottom,
+const StyledHeader = styled('span')(
+  typography.font({ size: 27 }),
+  {
+    color: SECONDARY_TEXT_COLOUR,
+    marginBottom: SPACING_POINTS[1],
   },
-});
+  spacing.withWhiteSpace(),
+);
 
 /**
  *
  * ### Usage
+  *
+ * This component is DEPRECATED.
  *
- * Simple
- * ```jsx
- * <SupportingHeader>Heading text</SupportingHeader>
- * ```
- *
- * With another header
- * ```jsx
- * import { H1 } from '@govuk-react/header';
- *
- * <SupportingHeader>Supporting header text</SupportingHeader>
- * <H1>Main header text</H1>
- * ```
- *
- * ### References
- * - https://govuk-elements.herokuapp.com/typography/
- */
+ * Please use the `Caption` component instead.
+*/
 const SupportingHeader = props => <StyledHeader {...props} />;
 
 SupportingHeader.propTypes = {
@@ -55,4 +31,6 @@ SupportingHeader.propTypes = {
   children: PropTypes.string.isRequired,
 };
 
-export default withWhiteSpace({ marginBottom: 0 })(SupportingHeader);
+export { SupportingHeader as DocumentedSupportingHeader };
+
+export default deprecate(SupportingHeader, 'please use the Caption component instead');

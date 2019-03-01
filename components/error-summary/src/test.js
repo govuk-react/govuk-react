@@ -18,7 +18,7 @@ describe('error summary', () => {
   // Some tests have been disabled
 
   it.skip('should render the ErrorSummary component', () => {
-    expect(wrapperErrorSummary.find('Header').exists()).toBe(true);
+    expect(wrapperErrorSummary.find('Heading').exists()).toBe(true);
     expect(wrapperErrorSummary.find('Paragraph').exists()).toBe(true);
     // NB This fails with latest UnorderedList, and is testing implement
     expect(wrapperErrorSummary.find('UnorderedList').exists()).toBe(true);
@@ -27,7 +27,7 @@ describe('error summary', () => {
   });
 
   it('should render the heading', () => {
-    expect(wrapperErrorSummary.find('Header').text()).toEqual(heading);
+    expect(wrapperErrorSummary.find('Heading').text()).toEqual(heading);
   });
 
   it('should render the optional description', () => {

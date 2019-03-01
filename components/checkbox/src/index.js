@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { withWhiteSpace } from '@govuk-react/hoc';
 import HintText from '@govuk-react/hint-text';
 import { FOCUS_COLOUR } from 'govuk-colours';
 import {
@@ -10,7 +9,7 @@ import {
   FOCUS_WIDTH,
   SPACING_POINTS,
 } from '@govuk-react/constants';
-import { typography } from '@govuk-react/lib';
+import { spacing, typography } from '@govuk-react/lib';
 
 const checkboxSize = SPACING_POINTS[7];
 const labelPaddingLeftRight = SPACING_POINTS[3];
@@ -24,6 +23,7 @@ const StyledCheckbox = styled('label')(
     padding: `0 0 0 ${checkboxSize}px`,
     clear: 'left',
   },
+  spacing.withWhiteSpace({ marginBottom: 2 }),
 );
 
 const StyledInput = styled('input')(
@@ -151,4 +151,4 @@ Checkbox.propTypes = {
   className: PropTypes.string,
 };
 
-export default withWhiteSpace({ marginBottom: 2 })(Checkbox);
+export default Checkbox;

@@ -2,9 +2,8 @@ import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ERROR_COLOUR } from 'govuk-colours';
-import { withWhiteSpace } from '@govuk-react/hoc';
 import { SPACING_POINTS } from '@govuk-react/constants';
-import { typography } from '@govuk-react/lib';
+import { spacing, typography } from '@govuk-react/lib';
 
 const StyledError = styled('span')(
   typography.font({ size: 19, weight: 'bold' }),
@@ -15,6 +14,7 @@ const StyledError = styled('span')(
     clear: 'both',
     color: ERROR_COLOUR,
   },
+  spacing.withWhiteSpace(),
 );
 
 /**
@@ -37,4 +37,4 @@ ErrorText.propTypes = {
   children: PropTypes.string.isRequired,
 };
 
-export default withWhiteSpace()(ErrorText);
+export default ErrorText;

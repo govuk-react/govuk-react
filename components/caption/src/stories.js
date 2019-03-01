@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { text, withKnobs } from '@storybook/addon-knobs/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-import Header from '@govuk-react/header';
+import Heading from '@govuk-react/heading';
 
 import Caption, { CaptionWithKnobs } from './fixtures';
 import ReadMe from '../README.md';
@@ -21,18 +21,27 @@ stories.add('Component default', () => (
 
 examples.add('Placed with a heading component', () => (
   <div>
-    <Caption size={text('size', 'XL')}>{text('children', 'Supporting header text')}</Caption>
-    <Header size={text('header size', 'XL')}>{text('children', 'Main header text')}</Header>
+    <Caption size={text('size', 'XL')}>{text('children', 'Supporting heading text')}</Caption>
+    <Heading size={text('heading size', 'XL')}>{text('heading', 'Main heading text')}</Heading>
+  </div>
+));
+
+examples.add('Placed inside a heading component', () => (
+  <div>
+    <Heading size={text('heading size', 'XL')}>
+      <Caption size={text('size', 'XL')}>{text('children', 'Supporting heading text')}</Caption>
+      {text('heading', 'Main heading text')}
+    </Heading>
   </div>
 ));
 
 examples.add('Showing all standard caption sizes, with headings', () => (
   <div>
-    <Caption size="XL">Supporting header size XL</Caption>
-    <Header size="XL">Main header size XL</Header>
-    <Caption size="L">Supporting header size L</Caption>
-    <Header size="L">Main header size L</Header>
-    <Caption size="M">Supporting header size M</Caption>
-    <Header size="M">Main header size M</Header>
+    <Caption size="XL">Supporting heading size XL</Caption>
+    <Heading size="XL">Main heading size XL</Heading>
+    <Caption size="L">Supporting heading size L</Caption>
+    <Heading size="L">Main heading size L</Heading>
+    <Caption size="M">Supporting heading size M</Caption>
+    <Heading size="M">Main heading size M</Heading>
   </div>
 ));

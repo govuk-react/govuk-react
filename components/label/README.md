@@ -21,5 +21,6 @@ Simple
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | node | Text for the label
+ `error` |  | ```false``` | bool | Apply error state styling to the component
 
 

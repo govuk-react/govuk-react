@@ -8,8 +8,8 @@ import {
   MEDIA_QUERIES,
   TYPOGRAPHY_SCALE,
 } from '@govuk-react/constants';
-import { typography } from '@govuk-react/lib';
-import { withWhiteSpace } from '@govuk-react/hoc';
+import { spacing, typography } from '@govuk-react/lib';
+import { deprecate } from '@govuk-react/hoc';
 
 // use `size` only with string for XLARGE, SMALL etc and number for px size
 // so if `size` is a string, we find a numeric size based off `HEADING_SIZES`
@@ -50,50 +50,17 @@ const StyledHeader = styled(({
       },
     );
   },
+  spacing.withWhiteSpace(),
 );
 
 /**
  *
  * ### Usage
  *
+ * This component is DEPRECATED.
  *
- * Simple
- * ```jsx
- * <Header level={1}>Heading text</Header>
- * ```
+ * Please use the `Heading` component instead.
  *
- * Using shortcuts
- * ```jsx
- * import { H1, H2, H3, H4, H5, H6 } from "@govuk-react/header";
- *
- * <H1>h1</H1>
- * <H2>h2</H2>
- * <H3>h3</H3>
- * <H4>h4</H4>
- * <H5>h5</H5>
- * <H6>h6</H6>
- * ```
- *
- * Differing sizes
- * ```jsx
- * <Header level={6} size={80}>
- *   h6 with font size 80
- * </Header>
- * <Header level={2} size="SMALL">
- *   h2 with SMALL size
- * </Header>
- * <H3 size="LARGE">h3 with LARGE size</H3>
- * ```
- *
- * Props pass through
- * ```jsx
- * <Header onClick={() => { console.log('clicked'); }}>Click me</Header>
- * ```
- *
- * ### References:
- * - https://design-system.service.gov.uk/styles/typography/#headings
- * - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_typography.scss
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/core/_typography.scss
  */
 const Header = props => <StyledHeader {...props} />;
 
@@ -115,6 +82,7 @@ Header.propTypes = {
   size: PropTypes.oneOf([...Object.keys(HEADING_SIZES), ...Object.keys(TYPOGRAPHY_SCALE)]),
 };
 
-export default withWhiteSpace()(Header);
+export default deprecate(Header, 'please use the Heading component instead');
 
+export { Header as DocumentedHeader };
 export { H1, H2, H3, H4, H5, H6 } from './presets';

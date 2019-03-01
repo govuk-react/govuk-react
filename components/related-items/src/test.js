@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import Header from '@govuk-react/header';
+import Heading from '@govuk-react/heading';
 import UnorderedList from '@govuk-react/unordered-list';
 import Link from '@govuk-react/link';
 import ListItem from '@govuk-react/list-item';
@@ -10,7 +10,7 @@ import RelatedItems from './';
 
 const wrapper = (
   <RelatedItems>
-    <Header level={3}>Travel abroad</Header>
+    <Heading level={3}>Travel abroad</Heading>
     <UnorderedList listStyleType="none">
       <ListItem>
         <Link href="https://example.com">Link A</Link>
