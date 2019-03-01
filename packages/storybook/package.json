@@ -40,6 +40,7 @@
     "@govuk-react/storybook-components": "^0.6.0",
     "@govuk-react/supporting-header": "^0.6.0",
     "@govuk-react/table": "^0.6.0",
+    "@govuk-react/tabs": "^0.6.0",
     "@govuk-react/tag": "^0.6.0",
     "@govuk-react/text-area": "^0.6.0",
     "@govuk-react/top-nav": "^0.6.0",

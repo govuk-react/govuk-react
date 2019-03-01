@@ -1,0 +1,380 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs matches wrapper snapshot 1`] = `
+<DocumentFragment>
+  .c2 {
+  margin-left: 25px;
+}
+
+.c2:before {
+  content: '— ';
+  margin-left: -25px;
+  padding-right: 5px;
+}
+
+.c3 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #0b0c0c;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+  background-color: #ffbf47;
+}
+
+.c3:link {
+  color: #005ea5;
+}
+
+.c3:visited {
+  color: #4c2c92;
+}
+
+.c3:hover {
+  color: #2b8cc4;
+}
+
+.c3:active {
+  color: #2b8cc4;
+}
+
+.c3:focus {
+  color: #0b0c0c;
+}
+
+.c4 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.c4:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+  background-color: #ffbf47;
+}
+
+.c4:link {
+  color: #005ea5;
+}
+
+.c4:visited {
+  color: #4c2c92;
+}
+
+.c4:hover {
+  color: #2b8cc4;
+}
+
+.c4:active {
+  color: #2b8cc4;
+}
+
+.c4:focus {
+  color: #0b0c0c;
+}
+
+.c1 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.c1 marginBottom {
+  margin-bottom: 20px;
+}
+
+.c5 {
+  display: block;
+}
+
+.c5 marginBottom {
+  mobile-bottom: 30px;
+}
+
+.c6 {
+  display: block;
+}
+
+.c6 marginBottom {
+  mobile-bottom: 30px;
+}
+
+.c0 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+}
+
+.c0 marginTop {
+  margin-top: 5px;
+}
+
+.c0 marginBottom {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .c2 {
+    margin-left: 0;
+  }
+
+  .c2:before {
+    content: none;
+  }
+}
+
+@media print {
+  .c3 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c3 {
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
+@media print {
+  .c3 {
+    font-family: sans-serif;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c3 {
+    margin-right: 5px;
+    float: left;
+    color: #0b0c0c;
+    text-align: center;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    margin-top: -5px;
+    margin-bottom: -1px;
+    padding-top: 14px;
+    padding-right: 19px;
+    padding-bottom: 16px;
+    padding-left: 19px;
+    border: 1px solid #bfc1c3;
+    border-bottom: 0;
+    background-color: #ffffff;
+  }
+
+  .c3:link {
+    color: #0b0c0c;
+  }
+
+  .c3:focus {
+    background-color: transparent;
+  }
+}
+
+@media print {
+  .c4 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c4 {
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
+@media print {
+  .c4 {
+    font-family: sans-serif;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c4 {
+    margin-right: 5px;
+    float: left;
+    color: #0b0c0c;
+    text-align: center;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-bottom: 1px;
+    background-color: #f8f8f8;
+  }
+
+  .c4:link {
+    color: #0b0c0c;
+  }
+
+  .c4:focus {
+    background-color: #f8f8f8;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c1 marginBottom {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c1 {
+    border-bottom: 1px solid #bfc1c3;
+  }
+
+  .c1::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c5 marginBottom {
+    mobile-bottom: 50px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c5 {
+    margin-bottom: 0;
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    border: 1px solid #bfc1c3;
+    border-top: 0;
+  }
+
+  .c5 >:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c6 marginBottom {
+    mobile-bottom: 50px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c6 {
+    margin-bottom: 0;
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    border: 1px solid #bfc1c3;
+    border-top: 0;
+  }
+
+  .c6 >:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c6 {
+    display: none;
+  }
+}
+
+@media print {
+  .c0 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 marginTop {
+    margin-top: 5px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 marginBottom {
+    margin-bottom: 30px;
+  }
+}
+
+<div
+    class="c0"
+  >
+    <ul
+      class="c1"
+    >
+      <li
+        class="c2"
+      >
+        <a
+          class="c3"
+          href="#first-panel"
+        >
+          Title 1
+        </a>
+      </li>
+      <li
+        class="c2"
+      >
+        <a
+          class="c4"
+          href="#second-panel"
+        >
+          Title 2
+        </a>
+      </li>
+    </ul>
+    <section
+      class="c5"
+      id="first-panel"
+    >
+      TabPanel content 1
+    </section>
+    <section
+      class="c6"
+      id="second-panel"
+    >
+      TabPanel content 2
+    </section>
+  </div>
+</DocumentFragment>
+`;
