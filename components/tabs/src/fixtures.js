@@ -29,7 +29,7 @@ class TableTabs extends Component {
   render() {
     const { tabIndex } = this.state;
     return (
-      <Tabs.TabsContainer>
+      <Tabs>
         <Tabs.TabsTitle>Content</Tabs.TabsTitle>
         <Tabs.TabList>
           {arrTitles.map((label, index) => (
@@ -81,7 +81,7 @@ class TableTabs extends Component {
             </Table>
           </Tabs.TabPanel>
         ))}
-      </Tabs.TabsContainer>
+      </Tabs>
     );
   }
 }
@@ -103,7 +103,8 @@ class SimpleTabs extends Component {
   render() {
     const { tabIndex } = this.state;
     return (
-      <Tabs.TabsContainer>
+      <Tabs>
+        <Tabs.TabsTitle>Content</Tabs.TabsTitle>
         <Tabs.TabList>
           <Tabs.Tab
             onClick={() => this.setTabIndex(0)}
@@ -122,7 +123,7 @@ class SimpleTabs extends Component {
         </Tabs.TabList>
         <Tabs.TabPanel isActive={tabIndex === 0} id="first-panel">TabPanel content 1</Tabs.TabPanel>
         <Tabs.TabPanel isActive={tabIndex === 1} id="second-panel" >TabPanel content 2</Tabs.TabPanel>
-      </Tabs.TabsContainer>
+      </Tabs>
     );
   }
 }
@@ -144,7 +145,8 @@ class SimpleMapTabs extends Component {
   render() {
     const { tabIndex } = this.state;
     return (
-      <Tabs.TabsContainer>
+      <Tabs>
+        <Tabs.TabsTitle>Content</Tabs.TabsTitle>
         <Tabs.TabList>
           {[
             {
@@ -184,7 +186,7 @@ class SimpleMapTabs extends Component {
             </Tabs.TabPanel>
             ))
           }
-      </Tabs.TabsContainer>
+      </Tabs>
     );
   }
 }
@@ -200,7 +202,8 @@ class ProposedClassPropertiesPlugin extends Component {
   render() {
     const { tabIndex } = this.state;
     return (
-      <Tabs.TabsContainer>
+      <Tabs>
+        <Tabs.TabsTitle>Content</Tabs.TabsTitle>
         <Tabs.TabList>
           {[
             {
@@ -242,7 +245,7 @@ class ProposedClassPropertiesPlugin extends Component {
             </Tabs.TabPanel>
             ))
           }
-      </Tabs.TabsContainer>
+      </Tabs>
     );
   }
 }

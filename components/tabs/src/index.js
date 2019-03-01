@@ -23,7 +23,7 @@ const Tabs = styled('div')(
  *
  * ### Import
  * ```js
- * import Tabs, { Tab, TabList, TabPanel } from '@govuk-react/tabs';
+ * import Tabs, { Tab, TabList, TabPanel, TabsTitle } from '@govuk-react/tabs';
  * ```
  *
  * ##### Simple Example
@@ -51,6 +51,7 @@ const Tabs = styled('div')(
  *     const { tabIndex } = this.state;
  *     return (
  *       <Tabs>
+ *         <TabsTitle>Content</TabsTitle>
  *         <TabList>
  *           <Tab
  *             onClick={() => this.setTabIndex(0)}
@@ -84,6 +85,7 @@ const Tabs = styled('div')(
  *
  *  return (
  * <Tabs>
+ *   <Tabs.TabsTitle>Content</Tabs.TabsTitle>
  *   <Tabs.TabList>
  *     {[
  *       {

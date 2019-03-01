@@ -2,58 +2,14 @@
 
 exports[`Tabs matches wrapper snapshot 1`] = `
 <DocumentFragment>
-  .c2 {
+  .c3 {
   margin-left: 25px;
 }
 
-.c2:before {
+.c3:before {
   content: '— ';
   margin-left: -25px;
   padding-right: 5px;
-}
-
-.c3 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: inline-block;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: #0b0c0c;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c3:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-  background-color: #ffbf47;
-}
-
-.c3:link {
-  color: #005ea5;
-}
-
-.c3:visited {
-  color: #4c2c92;
-}
-
-.c3:hover {
-  color: #2b8cc4;
-}
-
-.c3:active {
-  color: #2b8cc4;
-}
-
-.c3:focus {
-  color: #0b0c0c;
 }
 
 .c4 {
@@ -69,6 +25,9 @@ exports[`Tabs matches wrapper snapshot 1`] = `
   display: inline-block;
   padding-top: 10px;
   padding-bottom: 10px;
+  color: #0b0c0c;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c4:focus {
@@ -97,22 +56,55 @@ exports[`Tabs matches wrapper snapshot 1`] = `
   color: #0b0c0c;
 }
 
-.c1 {
+.c5 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.c5:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+  background-color: #ffbf47;
+}
+
+.c5:link {
+  color: #005ea5;
+}
+
+.c5:visited {
+  color: #4c2c92;
+}
+
+.c5:hover {
+  color: #2b8cc4;
+}
+
+.c5:active {
+  color: #2b8cc4;
+}
+
+.c5:focus {
+  color: #0b0c0c;
+}
+
+.c2 {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.c1 marginBottom {
+.c2 marginBottom {
   margin-bottom: 20px;
-}
-
-.c5 {
-  display: block;
-}
-
-.c5 marginBottom {
-  mobile-bottom: 30px;
 }
 
 .c6 {
@@ -121,6 +113,19 @@ exports[`Tabs matches wrapper snapshot 1`] = `
 
 .c6 marginBottom {
   mobile-bottom: 30px;
+}
+
+.c7 {
+  display: block;
+}
+
+.c7 marginBottom {
+  mobile-bottom: 30px;
+}
+
+.c1 {
+  font-size: 19px;
+  margin-bottom: 5px;
 }
 
 .c0 {
@@ -142,37 +147,37 @@ exports[`Tabs matches wrapper snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .c2 {
+  .c3 {
     margin-left: 0;
   }
 
-  .c2:before {
+  .c3:before {
     content: none;
   }
 }
 
 @media print {
-  .c3 {
+  .c4 {
     font-size: 14px;
     line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c3 {
+  .c4 {
     font-size: 19px;
     line-height: 1.3157894736842106;
   }
 }
 
 @media print {
-  .c3 {
+  .c4 {
     font-family: sans-serif;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c3 {
+  .c4 {
     margin-right: 5px;
     float: left;
     color: #0b0c0c;
@@ -190,37 +195,37 @@ exports[`Tabs matches wrapper snapshot 1`] = `
     background-color: #ffffff;
   }
 
-  .c3:link {
+  .c4:link {
     color: #0b0c0c;
   }
 
-  .c3:focus {
+  .c4:focus {
     background-color: transparent;
   }
 }
 
 @media print {
-  .c4 {
+  .c5 {
     font-size: 14px;
     line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c4 {
+  .c5 {
     font-size: 19px;
     line-height: 1.3157894736842106;
   }
 }
 
 @media print {
-  .c4 {
+  .c5 {
     font-family: sans-serif;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c4 {
+  .c5 {
     margin-right: 5px;
     float: left;
     color: #0b0c0c;
@@ -233,52 +238,30 @@ exports[`Tabs matches wrapper snapshot 1`] = `
     background-color: #f8f8f8;
   }
 
-  .c4:link {
+  .c5:link {
     color: #0b0c0c;
   }
 
-  .c4:focus {
+  .c5:focus {
     background-color: #f8f8f8;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c1 marginBottom {
+  .c2 marginBottom {
     margin-bottom: 30px;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c1 {
+  .c2 {
     border-bottom: 1px solid #bfc1c3;
   }
 
-  .c1::after {
+  .c2::after {
     content: '';
     display: block;
     clear: both;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c5 marginBottom {
-    mobile-bottom: 50px;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c5 {
-    margin-bottom: 0;
-    padding-top: 30px;
-    padding-right: 20px;
-    padding-bottom: 30px;
-    padding-left: 20px;
-    border: 1px solid #bfc1c3;
-    border-top: 0;
-  }
-
-  .c5 >:last-child {
-    margin-bottom: 0;
   }
 }
 
@@ -305,7 +288,35 @@ exports[`Tabs matches wrapper snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .c6 {
+  .c7 marginBottom {
+    mobile-bottom: 50px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c7 {
+    margin-bottom: 0;
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    border: 1px solid #bfc1c3;
+    border-top: 0;
+  }
+
+  .c7 >:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c7 {
+    display: none;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c1 {
     display: none;
   }
 }
@@ -339,24 +350,29 @@ exports[`Tabs matches wrapper snapshot 1`] = `
 <div
     class="c0"
   >
-    <ul
+    <h2
       class="c1"
     >
+      Content
+    </h2>
+    <ul
+      class="c2"
+    >
       <li
-        class="c2"
+        class="c3"
       >
         <a
-          class="c3"
+          class="c4"
           href="#first-panel"
         >
           Title 1
         </a>
       </li>
       <li
-        class="c2"
+        class="c3"
       >
         <a
-          class="c4"
+          class="c5"
           href="#second-panel"
         >
           Title 2
@@ -364,13 +380,13 @@ exports[`Tabs matches wrapper snapshot 1`] = `
       </li>
     </ul>
     <section
-      class="c5"
+      class="c6"
       id="first-panel"
     >
       TabPanel content 1
     </section>
     <section
-      class="c6"
+      class="c7"
       id="second-panel"
     >
       TabPanel content 2
