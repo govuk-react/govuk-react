@@ -1,10 +1,10 @@
 {
   "name": "@govuk-react/button",
-  "version": "0.6.0-rc.1",
+  "version": "0.6.0",
   "dependencies": {
-    "@govuk-react/constants": "^0.6.0-rc.1",
-    "@govuk-react/icons": "^0.6.0-rc.1",
-    "@govuk-react/lib": "^0.6.0-rc.1",
+    "@govuk-react/constants": "^0.6.0",
+    "@govuk-react/icons": "^0.6.0",
+    "@govuk-react/lib": "^0.6.0",
     "govuk-colours": "^1.0.3",
     "polished": "^2.3.3"
   },
