@@ -15,7 +15,8 @@ const StyledLegend = styled('legend')(
     maxWidth: '100%',
     marginBottom: SPACING_POINTS[2],
     padding: 0,
-    overflow: 'hidden',
+    // Disabling this as per https://github.com/alphagov/govuk-frontend/issues/1239
+    // overflow: 'hidden',
     whiteSpace: 'normal',
   },
   ({ size }) => {
