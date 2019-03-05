@@ -12,8 +12,11 @@ Heading
 
 Simple
 ```jsx
-<Heading level={1}>Heading text</Heading>
+<Heading>Heading text</Heading>
 ```
+
+To pick different heading levels it is recommended to use the shortcut versions as
+that will pick the appropriate tag as well as set the appropriate corresponding font size.
 
 Using shortcuts
 ```jsx
@@ -29,13 +32,13 @@ import { H1, H2, H3, H4, H5, H6 } from "@govuk-react/heading";
 
 Differing sizes
 ```jsx
-<Heading level={6} size={80}>
-  h6 with font size 80
+<H6 size={80}>
+  H6 with font size 80
+</H6>
+<Heading as="h2" size="SMALL">
+  Heading as h2 with SMALL size
 </Heading>
-<Heading level={2} size="SMALL">
-  h2 with SMALL size
-</Heading>
-<H3 size="LARGE">h3 with LARGE size</H3>
+<H3 size="LARGE">H3 with LARGE size</H3>
 ```
 
 Props pass through
@@ -51,7 +54,8 @@ Props pass through
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `level` |  | ```1``` | number | Semantic heading level value between 1 and 6
- `size` |  | ```undefined``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
+ `as` |  | ```undefined``` | string | Semantic heading tag to use (e.g. 'h3')<br/>By default element used will be an 'h1'
+ `level` |  | ```undefined``` | number | Semantic heading level value between 1 and 6 (deprecated)
+ `size` |  | ```'XLARGE'``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
 
 
