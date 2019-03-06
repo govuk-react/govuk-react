@@ -45,6 +45,7 @@ export { default as Tag } from '@govuk-react/tag';
 export { default as TextArea } from '@govuk-react/text-area';
 export { default as TopNav } from '@govuk-react/top-nav';
 export { default as UnorderedList } from '@govuk-react/unordered-list';
+export { default as VisuallyHidden } from '@govuk-react/visually-hidden';
 export { default as WarningText } from '@govuk-react/warning-text';
 
 export { H1, H2, H3, H4, H5, H6 } from '@govuk-react/heading';
