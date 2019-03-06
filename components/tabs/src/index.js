@@ -4,10 +4,10 @@ import styled from 'styled-components';
 import { TEXT_COLOUR } from 'govuk-colours';
 import { spacing, typography } from '@govuk-react/lib';
 
-import Tab from './atoms/Tab';
-import TabList from './atoms/TabList';
-import TabPanel from './atoms/TabPanel';
-import TabsTitle from './atoms/TabsTitle';
+import Tab from './atoms/tab';
+import TabList from './atoms/tab-list';
+import TabPanel from './atoms/tab-panel';
+import TabsTitle from './atoms/tabs-title';
 
 const Tabs = styled('div')(
   typography.font({ size: 19 }),

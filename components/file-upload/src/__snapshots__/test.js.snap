@@ -89,14 +89,9 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
 <FileUpload
   meta={Object {}}
 >
-  <Label
-    error={false}
-  >
-    <styled.label
-      error={false}
-    >
+  <Label>
+    <styled.label>
       <StyledComponent
-        error={false}
         forwardedComponent={
           Object {
             "$$typeof": Symbol(react.forward_ref),
