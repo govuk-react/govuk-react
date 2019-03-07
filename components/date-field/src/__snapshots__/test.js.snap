@@ -446,14 +446,17 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                     >
                       <Label
                         className="c4"
+                        error={false}
                         year={false}
                       >
                         <styled.label
                           className="c4"
+                          error={false}
                           year={false}
                         >
                           <StyledComponent
                             className="c4"
+                            error={false}
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -630,14 +633,17 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                     >
                       <Label
                         className="c4"
+                        error={false}
                         year={false}
                       >
                         <styled.label
                           className="c4"
+                          error={false}
                           year={false}
                         >
                           <StyledComponent
                             className="c4"
+                            error={false}
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -814,14 +820,17 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                     >
                       <Label
                         className="c7"
+                        error={false}
                         year={true}
                       >
                         <styled.label
                           className="c7"
+                          error={false}
                           year={true}
                         >
                           <StyledComponent
                             className="c7"
+                            error={false}
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -1339,14 +1348,17 @@ exports[`DateField should support null value: null value 1`] = `
                     >
                       <Label
                         className="c3"
+                        error={false}
                         year={false}
                       >
                         <styled.label
                           className="c3"
+                          error={false}
                           year={false}
                         >
                           <StyledComponent
                             className="c3"
+                            error={false}
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -1523,14 +1535,17 @@ exports[`DateField should support null value: null value 1`] = `
                     >
                       <Label
                         className="c3"
+                        error={false}
                         year={false}
                       >
                         <styled.label
                           className="c3"
+                          error={false}
                           year={false}
                         >
                           <StyledComponent
                             className="c3"
+                            error={false}
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -1707,14 +1722,17 @@ exports[`DateField should support null value: null value 1`] = `
                     >
                       <Label
                         className="c6"
+                        error={false}
                         year={true}
                       >
                         <styled.label
                           className="c6"
+                          error={false}
                           year={true}
                         >
                           <StyledComponent
                             className="c6"
+                            error={false}
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -2248,14 +2266,17 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                     >
                       <Label
                         className="c3"
+                        error={false}
                         year={false}
                       >
                         <styled.label
                           className="c3"
+                          error={false}
                           year={false}
                         >
                           <StyledComponent
                             className="c3"
+                            error={false}
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -2435,14 +2456,17 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                     >
                       <Label
                         className="c3"
+                        error={false}
                         year={false}
                       >
                         <styled.label
                           className="c3"
+                          error={false}
                           year={false}
                         >
                           <StyledComponent
                             className="c3"
+                            error={false}
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
@@ -2622,14 +2646,17 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                     >
                       <Label
                         className="c6"
+                        error={false}
                         year={true}
                       >
                         <styled.label
                           className="c6"
+                          error={false}
                           year={true}
                         >
                           <StyledComponent
                             className="c6"
+                            error={false}
                             forwardedComponent={
                               Object {
                                 "$$typeof": Symbol(react.forward_ref),
