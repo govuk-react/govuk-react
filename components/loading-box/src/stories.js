@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, number, boolean } from '@storybook/addon-knobs/react';
-import Heading, { H1, H2 } from '@govuk-react/heading';
+import { H1, H2 } from '@govuk-react/heading';
 import InputField from '@govuk-react/input-field';
 import Button from '@govuk-react/button';
 import LabelText from '@govuk-react/label-text';
@@ -37,7 +37,7 @@ stories.add('Component default', () => (
         <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {spacer}
-      <Heading level={2}>Toggle loading settings under `knobs`</Heading>
+      <H2>Toggle loading settings under `knobs`</H2>
       <InputField>
       Email address
       </InputField>
@@ -62,7 +62,7 @@ examples.add('preset to loading', () => (
         <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {spacer}
-      <Heading level={2}>Toggle loading settings under `knobs`</Heading>
+      <H2>Toggle loading settings under `knobs`</H2>
       <InputField>
       Email address
       </InputField>
@@ -87,7 +87,7 @@ examples.add('LoadingBox (long)', () => (
         <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {spacer}
-      <Heading level={2}>Toggle loading settings under `knobs`</Heading>
+      <H2>Toggle loading settings under `knobs`</H2>
       <InputField>
         First name
       </InputField>

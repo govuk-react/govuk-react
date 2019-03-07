@@ -231,58 +231,58 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
       <div
         className="c0"
       >
-        <Heading
-          level={3}
-        >
-          <Styled(Component)
-            level={3}
+        <H3>
+          <Heading
+            as="h3"
+            size="MEDIUM"
           >
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-bdVaJa",
-                    "isStatic": false,
-                    "lastClassName": "c1",
-                    "rules": Array [
-                      "color: #0b0c0c; @media print {
+            <styled.h1
+              as="h3"
+              size="MEDIUM"
+            >
+              <StyledComponent
+                as="h3"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bdVaJa",
+                      "isStatic": false,
+                      "lastClassName": "c1",
+                      "rules": Array [
+                        "color: #0b0c0c; @media print {
   color: #000;
 }",
-                      [Function],
-                      "display: block; margin-top: 0;",
-                      [Function],
-                      [Function],
-                    ],
-                  },
-                  "displayName": "Styled(Component)",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-bdVaJa",
-                  "target": [Function],
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                  Symbol(Symbol.hasInstance): [Function],
+                        [Function],
+                        "display: block; margin-top: 0;",
+                        [Function],
+                        [Function],
+                      ],
+                    },
+                    "displayName": "styled.h1",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bdVaJa",
+                    "target": "h1",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
                 }
-              }
-              forwardedRef={null}
-              level={3}
-            >
-              <Component
-                className="c1"
-                level={3}
+                forwardedRef={null}
+                size="MEDIUM"
               >
                 <h3
                   className="c1"
+                  size="MEDIUM"
                 >
                   Travel abroad
                 </h3>
-              </Component>
-            </StyledComponent>
-          </Styled(Component)>
-        </Heading>
+              </StyledComponent>
+            </styled.h1>
+          </Heading>
+        </H3>
         <UnorderedList
           listStyleType="none"
         >

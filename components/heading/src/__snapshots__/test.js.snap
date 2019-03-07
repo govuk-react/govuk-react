@@ -41,10 +41,10 @@ exports[`Heading matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <Heading
-  level={1}
+  size="XLARGE"
 >
-  <Styled(Component)
-    level={1}
+  <styled.h1
+    size="XLARGE"
   >
     <StyledComponent
       forwardedComponent={
@@ -65,31 +65,26 @@ exports[`Heading matches wrapper snapshot: wrapper mount 1`] = `
               [Function],
             ],
           },
-          "displayName": "Styled(Component)",
+          "displayName": "styled.h1",
           "foldedComponentIds": Array [],
           "render": [Function],
           "styledComponentId": "sc-bdVaJa",
-          "target": [Function],
+          "target": "h1",
           "toString": [Function],
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
-          Symbol(Symbol.hasInstance): [Function],
         }
       }
       forwardedRef={null}
-      level={1}
+      size="XLARGE"
     >
-      <Component
+      <h1
         className="c0"
-        level={1}
+        size="XLARGE"
       >
-        <h1
-          className="c0"
-        >
-          example
-        </h1>
-      </Component>
+        example
+      </h1>
     </StyledComponent>
-  </Styled(Component)>
+  </styled.h1>
 </Heading>
 `;
