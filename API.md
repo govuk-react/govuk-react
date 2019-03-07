@@ -1304,17 +1304,33 @@ Page
 ```
 <!-- STORY -->
 
+### Usage
 
+Simple
+```jsx
+import BackLink from '@govuk-react/back-link';
+import { H1 } from '@govuk-react/heading';
+
+<Page beforeChildren={<BackLink href="#" />}>
+  <H1>Page title</H1>
+</Page>
+```
+
+### References
+- https://design-system.service.gov.uk/styles/page-template/
+- https://design-system.service.gov.uk/styles/layout/#page-wrappers
+- https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_main-wrapper.scss
+- https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_width-container.scss
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `beforeChildren` |  | ```undefined``` | node | Add content that needs to appear outside `<main>` element.<br/>For example: The back link component, phase banner component
- `children` |  | ```undefined``` | node | Add content that needs to appear centered in the `<main>` element
- `container` |  | ```({ children }) => <WidthContainer>{children}</WidthContainer>``` | func | Render props to allow the width container element to be overriden
- `footer` |  | ```undefined``` | node | Override the default footer component.
- `header` |  | ```<TopNav />``` | node | Override the default header (top nav) component.
- `main` |  | ```({ children, beforeChildren }) => (   <React.Fragment>     {beforeChildren}     <Page.Main>       {children}     </Page.Main>   </React.Fragment> )``` | func | Render props for the main section, provides chilren and beforeChildren props
+ `beforeChildren` |  | ```undefined``` | node | Content that needs to appear outside the main page wrapper (see `main`).<br/>For example: A back link component, breadcrumbs, phase banner component
+ `children` |  | ```undefined``` | node | Page contents
+ `container` |  | ```Page.WidthContainer``` | func | Override the default page container component.<br/>`beforeChildren` and `children` (wrapped in `main`) will be placed inside this component.
+ `footer` |  | ```undefined``` | node | Override the default page footer component.
+ `header` |  | ```<TopNav />``` | node | Override the default page header component.
+ `main` |  | ```Page.Main``` | func | Override the default wrapper component for main page content
 
 
 Pagination
