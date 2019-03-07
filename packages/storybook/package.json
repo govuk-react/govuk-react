@@ -13,6 +13,7 @@
     "@govuk-react/document-footer-metadata": "^0.6.0",
     "@govuk-react/error-summary": "^0.6.0",
     "@govuk-react/error-text": "^0.6.0",
+    "@govuk-react/fieldset": "^0.6.0",
     "@govuk-react/file-upload": "^0.6.0",
     "@govuk-react/grid-col": "^0.6.0",
     "@govuk-react/grid-row": "^0.6.0",

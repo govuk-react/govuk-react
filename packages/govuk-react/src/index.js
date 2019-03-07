@@ -10,6 +10,7 @@ export { default as Details } from '@govuk-react/details';
 export { default as DocumentFooterMetadata } from '@govuk-react/document-footer-metadata';
 export { default as ErrorSummary } from '@govuk-react/error-summary';
 export { default as ErrorText } from '@govuk-react/error-text';
+export { default as Fieldset } from '@govuk-react/fieldset';
 export { default as FileUpload } from '@govuk-react/file-upload';
 export { default as GridCol } from '@govuk-react/grid-col';
 export { default as GridRow } from '@govuk-react/grid-row';
