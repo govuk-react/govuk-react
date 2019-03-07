@@ -1,6 +1,7 @@
 // Components
 export { default as BackLink } from '@govuk-react/back-link';
 export { default as Breadcrumb } from '@govuk-react/breadcrumb';
+export { default as Breadcrumbs } from '@govuk-react/breadcrumbs';
 export { default as Button } from '@govuk-react/button';
 export { default as Caption } from '@govuk-react/caption';
 export { default as Checkbox } from '@govuk-react/checkbox';

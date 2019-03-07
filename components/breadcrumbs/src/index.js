@@ -5,8 +5,6 @@ import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
 import { SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 
-import { deprecate } from '@govuk-react/hoc';
-
 import Link from './atoms/link';
 
 // Constants for chevron sourced from govuk-frontend
@@ -15,7 +13,7 @@ const CHEVRON_BORDER_WIDTH = 1;
 const CHEVRON_BORDER_COLOUR = SECONDARY_TEXT_COLOUR;
 const CHEVRON_ALTITUDE_CALCULATED = 5.655;
 
-const BreadcrumbContainer = styled('div')(
+const BreadcrumbsContainer = styled('div')(
   typography.font({ size: 16 }),
   typography.textColour,
   {
@@ -26,14 +24,14 @@ const BreadcrumbContainer = styled('div')(
   spacing.withWhiteSpace(),
 );
 
-const BreadcrumbList = styled('ol')({
+const BreadcrumbsList = styled('ol')({
   margin: 0,
   padding: 0,
   listStyleType: 'none',
   display: 'block',
 });
 
-const BreadcrumbListItem = styled('li')({
+const BreadcrumbsListItem = styled('li')({
   display: 'inline-block',
   position: 'relative',
   marginBottom: SPACING_POINTS[1],
@@ -68,39 +66,53 @@ const BreadcrumbListItem = styled('li')({
  *
  * ### Usage
  *
- * This component is DEPRECATED.
+ * Simple
+ * ```jsx
+ * <Breadcrumbs>
+ *   <Breadcrumbs.Link href="/section">Section</Breadcrumbs.Link>
+ *   <Breadcrumbs.Link href="/section/sub-section">Sub-section</Breadcrumbs.Link>
+ *   Current page
+ * </Breadcrumbs>
+ * ```
  *
- * Please use the `Breadcrumbs` component instead.
+ * Providing links with, or without React Router
+ * ```jsx
+ * import { Link } from 'react-router-dom';
+ *
+ * <Breadcrumbs>
+ *   <Breadcrumbs.Link as={Link} to="/section">Section</Breadcrumbs.Link>
+ *   <Breadcrumbs.Link href="/section">Sub-section</Breadcrumbs.Link>
+ * </Breadcrumbs>
+ * ```
+ *
+ * ### References:
+ * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/breadcrumbs/_breadcrumbs.scss
  *
  */
-const BreadcrumbComponent = ({ children, ...props }) => (
-  <BreadcrumbContainer {...props}>
-    <BreadcrumbList>
+const Breadcrumbs = ({ children, ...props }) => (
+  <BreadcrumbsContainer {...props}>
+    <BreadcrumbsList>
       {children.length && children.map ? (
         children.map((child, i) =>
           (child && (child.length || child.props) ? (
-            <BreadcrumbListItem key={child.key || i}>
+            <BreadcrumbsListItem key={child.key || i}>
               {child}
-            </BreadcrumbListItem>
+            </BreadcrumbsListItem>
           ) : null))
       ) : (
-        <BreadcrumbListItem>{children}</BreadcrumbListItem>
+        <BreadcrumbsListItem>{children}</BreadcrumbsListItem>
       )}
-    </BreadcrumbList>
-  </BreadcrumbContainer>
+    </BreadcrumbsList>
+  </BreadcrumbsContainer>
 );
 
-BreadcrumbComponent.propTypes = {
+Breadcrumbs.propTypes = {
   /**
-   * Breadcrumb contents
+   * Breadcrumbs contents
    */
   children: PropTypes.node.isRequired,
 };
 
-const Breadcrumb = deprecate(BreadcrumbComponent, 'please use the Breadcumbs component instead');
+Breadcrumbs.Link = Link;
 
-Breadcrumb.Link = Link;
-
-export { BreadcrumbComponent };
-
-export default Breadcrumb;
+export default Breadcrumbs;
