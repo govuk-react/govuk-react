@@ -125,7 +125,7 @@ exports[`button basics matches snapshot 1`] = `
   }
 }
 
-<Button
+<ForwardRef
   disabled={false}
   start={false}
 >
@@ -174,7 +174,7 @@ exports[`button basics matches snapshot 1`] = `
       </button>
     </StyledComponent>
   </styled.button>
-</Button>
+</ForwardRef>
 `;
 
 exports[`button blue button, with automatic colours matches snapshot 1`] = `
@@ -303,7 +303,7 @@ exports[`button blue button, with automatic colours matches snapshot 1`] = `
 }
 
 <ButtonBlue>
-  <Button
+  <ForwardRef
     buttonColour="#005ea5"
     disabled={false}
     start={false}
@@ -355,7 +355,7 @@ exports[`button blue button, with automatic colours matches snapshot 1`] = `
         </button>
       </StyledComponent>
     </styled.button>
-  </Button>
+  </ForwardRef>
 </ButtonBlue>
 `;
 
@@ -504,7 +504,7 @@ exports[`button button with icon matches snapshot 1`] = `
 }
 
 <ButtonStartIcon>
-  <Button
+  <ForwardRef
     disabled={false}
     icon={
       <ButtonArrow
@@ -639,7 +639,7 @@ exports[`button button with icon matches snapshot 1`] = `
         </button>
       </StyledComponent>
     </styled.button>
-  </Button>
+  </ForwardRef>
 </ButtonStartIcon>
 `;
 
@@ -769,7 +769,7 @@ exports[`button custom colours matches snapshot 1`] = `
 }
 
 <ButtonWacky>
-  <Button
+  <ForwardRef
     buttonColour="#dee0e2"
     buttonHoverColour="#ffbf47"
     buttonShadowColour="#f47738"
@@ -830,7 +830,7 @@ exports[`button custom colours matches snapshot 1`] = `
         </button>
       </StyledComponent>
     </styled.button>
-  </Button>
+  </ForwardRef>
 </ButtonWacky>
 `;
 
@@ -960,7 +960,7 @@ exports[`button disabled matches snapshot 1`] = `
 }
 
 <ButtonDisabled>
-  <Button
+  <ForwardRef
     disabled={true}
     start={false}
   >
@@ -1009,7 +1009,7 @@ exports[`button disabled matches snapshot 1`] = `
         </button>
       </StyledComponent>
     </styled.button>
-  </Button>
+  </ForwardRef>
 </ButtonDisabled>
 `;
 
@@ -1139,7 +1139,7 @@ exports[`button start button matches snapshot 1`] = `
 }
 
 <ButtonStart>
-  <Button
+  <ForwardRef
     disabled={false}
     start={true}
   >
@@ -1188,6 +1188,6 @@ exports[`button start button matches snapshot 1`] = `
         </button>
       </StyledComponent>
     </styled.button>
-  </Button>
+  </ForwardRef>
 </ButtonStart>
 `;

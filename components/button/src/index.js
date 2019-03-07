@@ -167,17 +167,17 @@ const ButtonContents = styled('span')({
  *   - see https://www.w3.org/TR/WCAG20-TECHS/G18.html
  *   - can use Polished's `readableColor` call, but translate their black to govuk's black
  */
-const Button = ({
+const Button = React.forwardRef(({
   start,
   children,
   icon,
   ...props
-}) => (
-  <StyledButton isStart={start} icon={icon} {...props}>
+}, ref) => (
+  <StyledButton ref={ref} isStart={start} icon={icon} {...props}>
     {icon ? <ButtonContents>{children}</ButtonContents> : children}
     {icon}
   </StyledButton>
-);
+));
 
 Button.propTypes = {
   /**
