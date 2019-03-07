@@ -52,8 +52,9 @@ examples.add(
   'Focussed focusable',
   () => (
     <Focusable>Focussed focusable VisuallyHidden element</Focusable>
-  ), {
-    chromatic: { delay: 100 },
+  ),
+  {
+    chromatic: { delay: 300 },
   },
 );
 
@@ -63,6 +64,6 @@ examples.add(
     <Focusable as={Button}>VisuallyHidden as Button (focusable)</Focusable>
   ),
   {
-    chromatic: { delay: 100 },
+    chromatic: { delay: 300 },
   },
 );
