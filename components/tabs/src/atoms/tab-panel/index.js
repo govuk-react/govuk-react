@@ -20,17 +20,17 @@ const TabPanel = styled('section')(
       },
     },
   },
-  ({ isActive }) => ({
+  ({ selected }) => ({
     display: 'block',
     [MEDIA_QUERIES.TABLET]: {
-      display: !isActive && 'none',
+      display: !selected && 'none',
     },
   }),
 );
 
 TabPanel.PropTypes = {
   /** determine which panel is displayed */
-  isActive: PropTypes.bool.isRequired,
+  selected: PropTypes.bool.isRequired,
 };
 
 export default TabPanel;

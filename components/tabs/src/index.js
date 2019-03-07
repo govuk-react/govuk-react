@@ -55,21 +55,21 @@ const Tabs = styled('div')(
  *         <TabList>
  *           <Tab
  *             onClick={() => this.setTabIndex(0)}
- *             isActive={tabIndex === 0}
+ *             selected={tabIndex === 0}
  *             href="#first-panel"
  *           >
  *             Title 1
  *           </Tab>
  *           <Tab
  *             onClick={() => this.setTabIndex(1)}
- *             isActive={tabIndex === 1}
+ *             selected={tabIndex === 1}
  *             href="#second-panel"
  *           >
  *             Title 2
  *           </Tab>
  *         </TabList>
- *         <TabPanel isActive={tabIndex === 0} id="first-panel">TabPanel content 1</TabPanel>
- *         <TabPanel isActive={tabIndex === 1} id="second-panel" >TabPanel content 2</TabPanel>
+ *         <TabPanel selected={tabIndex === 0} id="first-panel">TabPanel content 1</TabPanel>
+ *         <TabPanel selected={tabIndex === 1} id="second-panel" >TabPanel content 2</TabPanel>
  *       </Tabs>
  *     );
  *   }
@@ -99,7 +99,7 @@ const Tabs = styled('div')(
  *     ].map(({ content, href }, index) => (
  *       <Tabs.Tab
  *           onClick={() => this.setTabIndex(index)}
- *           isActive={tabIndex === index}
+ *           selected={tabIndex === index}
  *           href={href}
  *         >
  *           {content}
@@ -118,7 +118,7 @@ const Tabs = styled('div')(
  *       },
  *     ].map(({ content, id }, index) => (
  *       <Tabs.TabPanel
- *           isActive={tabIndex === index}
+ *           selected={tabIndex === index}
  *           id={id}
  *         >
  *           {content}

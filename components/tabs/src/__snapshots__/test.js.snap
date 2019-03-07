@@ -25,9 +25,6 @@ exports[`Tabs matches wrapper snapshot 1`] = `
   display: inline-block;
   padding-top: 10px;
   padding-bottom: 10px;
-  color: #0b0c0c;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c4:focus {
@@ -98,13 +95,9 @@ exports[`Tabs matches wrapper snapshot 1`] = `
 }
 
 .c2 {
-  margin: 0;
+  margin: 0 0 [object Object] 0;
   padding: 0;
   list-style: none;
-}
-
-.c2 marginBottom {
-  margin-bottom: 20px;
 }
 
 .c6 {
@@ -124,7 +117,12 @@ exports[`Tabs matches wrapper snapshot 1`] = `
 }
 
 .c1 {
-  font-size: 19px;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
   margin-bottom: 5px;
 }
 
@@ -180,7 +178,6 @@ exports[`Tabs matches wrapper snapshot 1`] = `
   .c4 {
     margin-right: 5px;
     float: left;
-    color: #0b0c0c;
     text-align: center;
     -webkit-text-decoration: none;
     text-decoration: none;
@@ -228,7 +225,6 @@ exports[`Tabs matches wrapper snapshot 1`] = `
   .c5 {
     margin-right: 5px;
     float: left;
-    color: #0b0c0c;
     text-align: center;
     -webkit-text-decoration: none;
     text-decoration: none;
@@ -244,12 +240,6 @@ exports[`Tabs matches wrapper snapshot 1`] = `
 
   .c5:focus {
     background-color: #f8f8f8;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c2 marginBottom {
-    margin-bottom: 30px;
   }
 }
 
@@ -315,6 +305,20 @@ exports[`Tabs matches wrapper snapshot 1`] = `
   }
 }
 
+@media print {
+  .c1 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c1 {
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
 @media only screen and (min-width:641px) {
   .c1 {
     display: none;
@@ -353,7 +357,7 @@ exports[`Tabs matches wrapper snapshot 1`] = `
     <h2
       class="c1"
     >
-      Content
+      Contents
     </h2>
     <ul
       class="c2"

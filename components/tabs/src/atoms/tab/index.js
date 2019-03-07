@@ -36,42 +36,39 @@ const StyledHyperLink = styled('a')(
     paddingTop: spacingSimple2,
     paddingBottom: spacingSimple2,
   },
-  ({ isActive }) => ({
-    color: isActive && BLACK,
-    textDecoration: isActive ? 'none' : undefined,
-
+  ({ selected }) => ({
     [MEDIA_QUERIES.TABLET]: {
       marginRight: spacingSimple1,
       float: 'left',
-      color: BLACK,
+      // color: BLACK,
       textAlign: 'center',
       textDecoration: 'none',
       ':link': {
         color: BLACK,
       },
-      marginTop: isActive ? -(spacingSimple1) : undefined,
-      marginBottom: isActive ? -1 : undefined,
+      marginTop: selected ? -(spacingSimple1) : undefined,
+      marginBottom: selected ? -1 : undefined,
 
-      paddingTop: isActive ? (spacingSimple3 - 1) : undefined,
-      paddingRight: isActive ? (spacingSimple4 - 1) : spacingSimple4,
-      paddingBottom: isActive ? (spacingSimple3 + 1) : undefined,
-      paddingLeft: isActive ? (spacingSimple4 - 1) : spacingSimple4,
-      border: isActive && `1px solid ${BORDER_COLOUR}`,
-      borderBottom: isActive ? 0 : 1,
-      backgroundColor: isActive ? WHITE : GREY_4,
+      paddingTop: selected ? (spacingSimple3 - 1) : undefined,
+      paddingRight: selected ? (spacingSimple4 - 1) : spacingSimple4,
+      paddingBottom: selected ? (spacingSimple3 + 1) : undefined,
+      paddingLeft: selected ? (spacingSimple4 - 1) : spacingSimple4,
+      border: selected && `1px solid ${BORDER_COLOUR}`,
+      borderBottom: selected ? 0 : 1,
+      backgroundColor: selected ? WHITE : GREY_4,
       ':focus': {
-        backgroundColor: isActive ? 'transparent' : GREY_4,
+        backgroundColor: selected ? 'transparent' : GREY_4,
       },
     },
   }),
 );
 
 const Tab = ({
-  children, isActive, href, onClick,
+  children, href, onClick, selected,
 }) => (
   <StyledListItem>
     <StyledHyperLink
-      isActive={isActive}
+      selected={selected}
       onClick={(e) => {
         e.preventDefault();
         return onClick(e);
@@ -84,12 +81,12 @@ const Tab = ({
 );
 
 Tab.defaultProps = {
-  isActive: false,
+  selected: false,
 };
 
 Tab.propTypes = {
   /** Different stylings for the Tab displaying content */
-  isActive: PropTypes.bool,
+  selected: PropTypes.bool,
   /** Join the panel and header together with corresponding panel id. Required for mobile use  */
   href: PropTypes.string.isRequired,
   /** The content to display within the Tab Header */

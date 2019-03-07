@@ -12,8 +12,7 @@ const clearfix = {
 };
 
 const TabList = styled('ul')({
-  margin: 0,
-  marginBottom: spacing.responsive({ size: 6, property: 'margin', direction: 'bottom' }),
+  margin: `0 0 ${spacing.responsive({ size: 6, property: 'margin', direction: 'bottom' })} 0`,
   padding: 0,
   listStyle: 'none',
 

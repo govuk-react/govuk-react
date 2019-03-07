@@ -5,7 +5,28 @@ import Table from '@govuk-react/table';
 
 import Tabs from '.';
 
-const arrTitles = ['Past day', 'Past week', 'Past month', 'Past year'];
+const arrTabularTabs = [
+  {
+    title: 'Past day',
+    arr: [[3, 1, 2], [0, 0, 0]],
+    id: 'past-day',
+  },
+  {
+    title: 'Past week',
+    arr: [[24, 16, 24], [18, 20, 27]],
+    id: 'past-week',
+  },
+  {
+    title: 'Past month',
+    arr: [[98, 122, 126], [95, 131, 142]],
+    id: 'past-month',
+  },
+  {
+    title: 'Past year',
+    arr: [[1380, 1129, 1539], [1472, 1083, 1265]],
+    id: 'past-year',
+  },
+];
 
 const flip2dArray = (prev, next) =>
   next.map((item, i) => [...(prev[i] || []), next[i]]);
@@ -30,41 +51,21 @@ class TableTabs extends Component {
     const { tabIndex } = this.state;
     return (
       <Tabs>
-        <Tabs.TabsTitle>Content</Tabs.TabsTitle>
+        <Tabs.TabsTitle>Contents</Tabs.TabsTitle>
         <Tabs.TabList>
-          {arrTitles.map((label, index) => (
+          {arrTabularTabs.map(({ id, title }, index) => (
             <Tabs.Tab
-              key={`${label}-tabHeader`}
+              key={`${title}-tabHeader`}
               onClick={() => this.setTabIndex(index)}
-              isActive={tabIndex === index}
+              href={`#${id}`}
+              selected={tabIndex === index}
             >
-              {label}
+              {title}
             </Tabs.Tab>
           ))}
         </Tabs.TabList>
-        {[
-          {
-            title: 'Past day',
-            arr: [[3, 1, 2], [0, 0, 0]],
-            id: 'past-day',
-          },
-          {
-            title: 'Past week',
-            arr: [[24, 16, 24], [18, 20, 27]],
-            id: 'past-week',
-          },
-          {
-            title: 'Past month',
-            arr: [[98, 122, 126], [95, 131, 142]],
-            id: 'past-month',
-          },
-          {
-            title: 'Past year',
-            arr: [[1380, 1129, 1539], [1472, 1083, 1265]],
-            id: 'past-year',
-          },
-        ].map(({ arr, id, title }, index) => (
-          <Tabs.TabPanel isActive={tabIndex === index} key={`${title}-tabPanel`} id={id}>
+        {arrTabularTabs.map(({ arr, id, title }, index) => (
+          <Tabs.TabPanel selected={tabIndex === index} key={`${title}-tabPanel`} id={id}>
             <H2>{title}</H2>
             <Table
               head={tableHead}
@@ -104,25 +105,25 @@ class SimpleTabs extends Component {
     const { tabIndex } = this.state;
     return (
       <Tabs>
-        <Tabs.TabsTitle>Content</Tabs.TabsTitle>
+        <Tabs.TabsTitle>Contents</Tabs.TabsTitle>
         <Tabs.TabList>
           <Tabs.Tab
             onClick={() => this.setTabIndex(0)}
-            isActive={tabIndex === 0}
+            selected={tabIndex === 0}
             href="#first-panel"
           >
             Title 1
           </Tabs.Tab>
           <Tabs.Tab
             onClick={() => this.setTabIndex(1)}
-            isActive={tabIndex === 1}
+            selected={tabIndex === 1}
             href="#second-panel"
           >
             Title 2
           </Tabs.Tab>
         </Tabs.TabList>
-        <Tabs.TabPanel isActive={tabIndex === 0} id="first-panel">TabPanel content 1</Tabs.TabPanel>
-        <Tabs.TabPanel isActive={tabIndex === 1} id="second-panel" >TabPanel content 2</Tabs.TabPanel>
+        <Tabs.TabPanel selected={tabIndex === 0} id="first-panel">TabPanel content 1</Tabs.TabPanel>
+        <Tabs.TabPanel selected={tabIndex === 1} id="second-panel" >TabPanel content 2</Tabs.TabPanel>
       </Tabs>
     );
   }
@@ -146,7 +147,7 @@ class SimpleMapTabs extends Component {
     const { tabIndex } = this.state;
     return (
       <Tabs>
-        <Tabs.TabsTitle>Content</Tabs.TabsTitle>
+        <Tabs.TabsTitle>Contents</Tabs.TabsTitle>
         <Tabs.TabList>
           {[
             {
@@ -160,7 +161,7 @@ class SimpleMapTabs extends Component {
           ].map(({ content, href }, index) => (
             <Tabs.Tab
               onClick={() => this.setTabIndex(index)}
-              isActive={tabIndex === index}
+              selected={tabIndex === index}
               href={href}
             >
               {content}
@@ -179,7 +180,7 @@ class SimpleMapTabs extends Component {
             },
           ].map(({ content, id }, index) => (
             <Tabs.TabPanel
-              isActive={tabIndex === index}
+              selected={tabIndex === index}
               id={id}
             >
               <H4>{content}</H4>
@@ -203,7 +204,7 @@ class ProposedClassPropertiesPlugin extends Component {
     const { tabIndex } = this.state;
     return (
       <Tabs>
-        <Tabs.TabsTitle>Content</Tabs.TabsTitle>
+        <Tabs.TabsTitle>Contents</Tabs.TabsTitle>
         <Tabs.TabList>
           {[
             {
@@ -217,7 +218,7 @@ class ProposedClassPropertiesPlugin extends Component {
           ].map(({ content, href }, index) => (
             <Tabs.Tab
               onClick={() => this.setTabIndex(index)}
-              isActive={tabIndex === index}
+              selected={tabIndex === index}
               href={href}
             >
               {content}
@@ -236,7 +237,7 @@ class ProposedClassPropertiesPlugin extends Component {
             },
           ].map(({ content, id }, index) => (
             <Tabs.TabPanel
-              isActive={tabIndex === index}
+              selected={tabIndex === index}
               id={id}
             >
               <H2>with Babel Plugin</H2>
