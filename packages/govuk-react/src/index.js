@@ -41,6 +41,7 @@ export { default as RelatedItems } from '@govuk-react/related-items';
 export { default as SearchBox } from '@govuk-react/search-box';
 export { default as SectionBreak } from '@govuk-react/section-break';
 export { default as Select } from '@govuk-react/select';
+export { default as SkipLink } from '@govuk-react/skip-link';
 export { default as SupportingHeader } from '@govuk-react/supporting-header';
 export { default as Table } from '@govuk-react/table';
 export { default as Tag } from '@govuk-react/tag';

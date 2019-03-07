@@ -47,6 +47,7 @@
     "@govuk-react/search-box": "^0.6.0",
     "@govuk-react/section-break": "^0.6.0",
     "@govuk-react/select": "^0.6.0",
+    "@govuk-react/skip-link": "^0.6.0",
     "@govuk-react/supporting-header": "^0.6.0",
     "@govuk-react/table": "^0.6.0",
     "@govuk-react/tag": "^0.6.0",
