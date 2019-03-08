@@ -37,3 +37,42 @@ stories.add(
     </FormGroup>
   ),
 );
+
+stories.add(
+  'Error prop set',
+  () => (
+    <FormGroup error>
+      <Checkbox name="group-1">Example</Checkbox>
+    </FormGroup>
+  ),
+);
+
+stories.add(
+  'Nested FormGroups with inner groups error props set',
+  () => (
+    <FormGroup>
+      <Checkbox name="group-0">Outer FormGroup</Checkbox>
+      <FormGroup error>
+        <Checkbox name="group-1">First inner FormGroup</Checkbox>
+      </FormGroup>
+      <FormGroup error>
+        <Checkbox name="group-2">Second inner FormGroup</Checkbox>
+      </FormGroup>
+    </FormGroup>
+  ),
+);
+
+stories.add(
+  'Nested FormGroups with all groups error props set',
+  () => (
+    <FormGroup error>
+      <Checkbox name="group-0">Outer FormGroup</Checkbox>
+      <FormGroup error>
+        <Checkbox name="group-1">First inner FormGroup</Checkbox>
+      </FormGroup>
+      <FormGroup error>
+        <Checkbox name="group-2">Second inner FormGroup</Checkbox>
+      </FormGroup>
+    </FormGroup>
+  ),
+);
