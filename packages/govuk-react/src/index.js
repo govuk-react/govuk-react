@@ -12,6 +12,7 @@ export { default as ErrorSummary } from '@govuk-react/error-summary';
 export { default as ErrorText } from '@govuk-react/error-text';
 export { default as Fieldset } from '@govuk-react/fieldset';
 export { default as FileUpload } from '@govuk-react/file-upload';
+export { default as FormGroup } from '@govuk-react/form-group';
 export { default as GridCol } from '@govuk-react/grid-col';
 export { default as GridRow } from '@govuk-react/grid-row';
 export { default as Header } from '@govuk-react/header';
