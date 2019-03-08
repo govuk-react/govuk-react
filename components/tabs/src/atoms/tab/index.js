@@ -37,13 +37,15 @@ const StyledHyperLink = styled('a')(
     paddingBottom: spacingSimple2,
   },
   ({ selected }) => ({
+    color: selected && BLACK,
+    textDecoration: selected ? 'none' : undefined,
     [MEDIA_QUERIES.TABLET]: {
       marginRight: spacingSimple1,
       float: 'left',
-      // color: BLACK,
       textAlign: 'center',
       textDecoration: 'none',
-      ':link': {
+      color: BLACK,
+      ':link,:visited': {
         color: BLACK,
       },
       marginTop: selected ? -(spacingSimple1) : undefined,
@@ -69,10 +71,7 @@ const Tab = ({
   <StyledListItem>
     <StyledHyperLink
       selected={selected}
-      onClick={(e) => {
-        e.preventDefault();
-        return onClick(e);
-      }}
+      onClick={onClick}
       href={href}
     >
       {children}

@@ -4,10 +4,10 @@ import styled from 'styled-components';
 import { TEXT_COLOUR } from 'govuk-colours';
 import { spacing, typography } from '@govuk-react/lib';
 
+import List from './atoms/list';
+import Panel from './atoms/panel';
 import Tab from './atoms/tab';
-import TabList from './atoms/tab-list';
-import TabPanel from './atoms/tab-panel';
-import TabsTitle from './atoms/tabs-title';
+import Title from './atoms/title';
 
 const Tabs = styled('div')(
   typography.font({ size: 19 }),
@@ -23,7 +23,7 @@ const Tabs = styled('div')(
  *
  * ### Import
  * ```js
- * import Tabs, { Tab, TabList, TabPanel, TabsTitle } from '@govuk-react/tabs';
+ * import Tabs, { Tab, List, Panel, Title } from '@govuk-react/tabs';
  * ```
  *
  * ##### Simple Example
@@ -33,6 +33,7 @@ const Tabs = styled('div')(
  *     super();
  *     this.state = { tabIndex: 0 };
  *     this.setTabIndex = this.setTabIndex.bind(this);
+ *     this.handleClick = this.handleClick.bind(this);
  *   }
  *
  *   setTabIndex(newTabIndex) {
@@ -40,36 +41,38 @@ const Tabs = styled('div')(
  *       tabIndex: newTabIndex,
  *     }));
  *   }
- *   // @babel/plugin-proposal-class-properties
- *   // state = { tabIndex: 0 };
  *
- *   // setTabIndex = newTabIndex => this.setState({
- *   //   tabIndex: newTabIndex,
- *   // });
+ *   handleClick(e, index) {
+ *     const mql = window.matchMedia(`(min-width: ${BREAKPOINTS.TABLET})`);
+ *     if (mql.matches) {
+ *       e.preventDefault();
+ *     }
+ *     return this.setTabIndex(index);
+ *   }
  *
  *   render() {
  *     const { tabIndex } = this.state;
  *     return (
  *       <Tabs>
- *         <TabsTitle>Content</TabsTitle>
- *         <TabList>
+ *         <Title>Content</Title>
+ *         <List>
  *           <Tab
- *             onClick={() => this.setTabIndex(0)}
+ *             onClick={(event) => this.handleClick(event, 0)}
  *             selected={tabIndex === 0}
  *             href="#first-panel"
  *           >
  *             Title 1
  *           </Tab>
  *           <Tab
- *             onClick={() => this.setTabIndex(1)}
+ *             onClick={(event) => this.handleClick(event, 1)}
  *             selected={tabIndex === 1}
  *             href="#second-panel"
  *           >
  *             Title 2
  *           </Tab>
- *         </TabList>
- *         <TabPanel selected={tabIndex === 0} id="first-panel">TabPanel content 1</TabPanel>
- *         <TabPanel selected={tabIndex === 1} id="second-panel" >TabPanel content 2</TabPanel>
+ *         </List>
+ *         <Panel selected={tabIndex === 0} id="first-panel">Panel content 1</Panel>
+ *         <Panel selected={tabIndex === 1} id="second-panel" >Panel content 2</Panel>
  *       </Tabs>
  *     );
  *   }
@@ -83,10 +86,18 @@ const Tabs = styled('div')(
  *
  *  const handleTabChange = newTabIndex => setTabIndex(newTabIndex);
  *
+ *  function handleClick({ event: e, index }) {
+ *    const mql = window.matchMedia(`(min-width: ${BREAKPOINTS.TABLET})`);
+ *    if (mql.matches) {
+ *      e.preventDefault();
+ *    }
+ *    return handleTabChange(index);
+ *  }
+ *
  *  return (
  * <Tabs>
- *   <Tabs.TabsTitle>Content</Tabs.TabsTitle>
- *   <Tabs.TabList>
+ *   <Tabs.Title>Content</Tabs.Title>
+ *   <Tabs.List>
  *     {[
  *       {
  *         content: 'Title 1',
@@ -98,7 +109,7 @@ const Tabs = styled('div')(
  *       },
  *     ].map(({ content, href }, index) => (
  *       <Tabs.Tab
- *           onClick={() => this.setTabIndex(index)}
+ *           onClick={(event) => handleClick({ event, index })}
  *           selected={tabIndex === index}
  *           href={href}
  *         >
@@ -106,23 +117,23 @@ const Tabs = styled('div')(
  *         </Tab>
  *       ))
  *     }
- *   </Tabs.TabList>
+ *   </Tabs.List>
  *     {[
  *       {
- *         content: 'TabPanel content 1',
+ *         content: 'Panel content 1',
  *         id: 'first-panel',
  *       },
  *       {
- *         content: 'TabPanel content 2',
+ *         content: 'Panel content 2',
  *         id: 'second-panel',
  *       },
  *     ].map(({ content, id }, index) => (
- *       <Tabs.TabPanel
+ *       <Tabs.Panel
  *           selected={tabIndex === index}
  *           id={id}
  *         >
  *           {content}
- *         </Tabs.TabPanel>
+ *         </Tabs.Panel>
  *       ))
  *     }
  *    </Tabs>
@@ -144,9 +155,9 @@ Tabs.propTypes = {
 };
 
 Tabs.Tab = Tab;
-Tabs.TabList = TabList;
-Tabs.TabPanel = TabPanel;
-Tabs.TabsTitle = TabsTitle;
+Tabs.List = List;
+Tabs.Panel = Panel;
+Tabs.Title = Title;
 
 export { DocumentedTabs };
 

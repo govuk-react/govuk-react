@@ -2,7 +2,30 @@
 
 exports[`Tabs matches wrapper snapshot 1`] = `
 <DocumentFragment>
-  .c3 {
+  .c2 {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.c6 {
+  display: block;
+}
+
+.c6 marginBottom {
+  mobile-bottom: 30px;
+}
+
+.c7 {
+  display: block;
+}
+
+.c7 marginBottom {
+  mobile-bottom: 30px;
+}
+
+.c3 {
   margin-left: 25px;
 }
 
@@ -25,6 +48,9 @@ exports[`Tabs matches wrapper snapshot 1`] = `
   display: inline-block;
   padding-top: 10px;
   padding-bottom: 10px;
+  color: #0b0c0c;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c4:focus {
@@ -94,28 +120,6 @@ exports[`Tabs matches wrapper snapshot 1`] = `
   color: #0b0c0c;
 }
 
-.c2 {
-  margin: 0 0 [object Object] 0;
-  padding: 0;
-  list-style: none;
-}
-
-.c6 {
-  display: block;
-}
-
-.c6 marginBottom {
-  mobile-bottom: 30px;
-}
-
-.c7 {
-  display: block;
-}
-
-.c7 marginBottom {
-  mobile-bottom: 30px;
-}
-
 .c1 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -145,107 +149,15 @@ exports[`Tabs matches wrapper snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .c3 {
-    margin-left: 0;
-  }
-
-  .c3:before {
-    content: none;
-  }
-}
-
-@media print {
-  .c4 {
-    font-size: 14px;
-    line-height: 1.15;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c4 {
-    font-size: 19px;
-    line-height: 1.3157894736842106;
-  }
-}
-
-@media print {
-  .c4 {
-    font-family: sans-serif;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c4 {
-    margin-right: 5px;
-    float: left;
-    text-align: center;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-    margin-top: -5px;
-    margin-bottom: -1px;
-    padding-top: 14px;
-    padding-right: 19px;
-    padding-bottom: 16px;
-    padding-left: 19px;
-    border: 1px solid #bfc1c3;
-    border-bottom: 0;
-    background-color: #ffffff;
-  }
-
-  .c4:link {
-    color: #0b0c0c;
-  }
-
-  .c4:focus {
-    background-color: transparent;
-  }
-}
-
-@media print {
-  .c5 {
-    font-size: 14px;
-    line-height: 1.15;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c5 {
-    font-size: 19px;
-    line-height: 1.3157894736842106;
-  }
-}
-
-@media print {
-  .c5 {
-    font-family: sans-serif;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c5 {
-    margin-right: 5px;
-    float: left;
-    text-align: center;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-    padding-right: 20px;
-    padding-left: 20px;
-    border-bottom: 1px;
-    background-color: #f8f8f8;
-  }
-
-  .c5:link {
-    color: #0b0c0c;
-  }
-
-  .c5:focus {
-    background-color: #f8f8f8;
+  .c2 {
+    margin-bottom: 30px;
   }
 }
 
 @media only screen and (min-width:641px) {
   .c2 {
     border-bottom: 1px solid #bfc1c3;
+    margin-bottom: 0;
   }
 
   .c2::after {
@@ -302,6 +214,109 @@ exports[`Tabs matches wrapper snapshot 1`] = `
 @media only screen and (min-width:641px) {
   .c7 {
     display: none;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c3 {
+    margin-left: 0;
+  }
+
+  .c3:before {
+    content: none;
+  }
+}
+
+@media print {
+  .c4 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c4 {
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
+@media print {
+  .c4 {
+    font-family: sans-serif;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c4 {
+    margin-right: 5px;
+    float: left;
+    text-align: center;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    color: #0b0c0c;
+    margin-top: -5px;
+    margin-bottom: -1px;
+    padding-top: 14px;
+    padding-right: 19px;
+    padding-bottom: 16px;
+    padding-left: 19px;
+    border: 1px solid #bfc1c3;
+    border-bottom: 0;
+    background-color: #ffffff;
+  }
+
+  .c4:link,
+  .c4:visited {
+    color: #0b0c0c;
+  }
+
+  .c4:focus {
+    background-color: transparent;
+  }
+}
+
+@media print {
+  .c5 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c5 {
+    font-size: 19px;
+    line-height: 1.3157894736842106;
+  }
+}
+
+@media print {
+  .c5 {
+    font-family: sans-serif;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c5 {
+    margin-right: 5px;
+    float: left;
+    text-align: center;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    color: #0b0c0c;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-bottom: 1px;
+    background-color: #f8f8f8;
+  }
+
+  .c5:link,
+  .c5:visited {
+    color: #0b0c0c;
+  }
+
+  .c5:focus {
+    background-color: #f8f8f8;
   }
 }
 
@@ -387,13 +402,13 @@ exports[`Tabs matches wrapper snapshot 1`] = `
       class="c6"
       id="first-panel"
     >
-      TabPanel content 1
+      Panel content 1
     </section>
     <section
       class="c7"
       id="second-panel"
     >
-      TabPanel content 2
+      Panel content 2
     </section>
   </div>
 </DocumentFragment>

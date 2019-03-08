@@ -1,18 +1,23 @@
 import React from 'react';
 import { cleanup, fireEvent, render } from 'react-testing-library';
-import 'jest-dom/extend-expect';
-
 
 import { SimpleTabs } from './fixtures';
 
+beforeAll(() => {
+  Object.defineProperty(window, 'matchMedia', {
+    // jsdom appears not to cope with CSSinJS media queries
+    value: jest.fn(() => ({ matches: false })),
+  });
+});
+
 afterEach(cleanup);
 
-describe.only('Tabs', () => {
+describe('Tabs', () => {
   it('clicking link works without crashing', () => {
     const { container } = render(<SimpleTabs />);
     const firstLink = container.querySelector('a');
     fireEvent.click(firstLink);
-    expect(container).toBeVisible();
+    expect(container).toBeTruthy();
   });
 
   it('matches wrapper snapshot', () => {

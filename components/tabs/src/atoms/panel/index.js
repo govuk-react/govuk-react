@@ -28,7 +28,7 @@ const TabPanel = styled('section')(
   }),
 );
 
-TabPanel.PropTypes = {
+TabPanel.propTypes = {
   /** determine which panel is displayed */
   selected: PropTypes.bool.isRequired,
 };

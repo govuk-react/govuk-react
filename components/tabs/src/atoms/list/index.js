@@ -11,15 +11,20 @@ const clearfix = {
   },
 };
 
-const TabList = styled('ul')({
-  margin: `0 0 ${spacing.responsive({ size: 6, property: 'margin', direction: 'bottom' })} 0`,
-  padding: 0,
-  listStyle: 'none',
-
-  [MEDIA_QUERIES.TABLET]: {
-    borderBottom: `1px solid ${GREY_2}`,
-    ...clearfix,
+const TabList = styled('ul')(
+  {
+    margin: 0,
   },
-});
+  spacing.responsive({ size: 6, property: 'margin', direction: 'bottom' }),
+  {
+    padding: 0,
+    listStyle: 'none',
+    [MEDIA_QUERIES.TABLET]: {
+      borderBottom: `1px solid ${GREY_2}`,
+      marginBottom: 0,
+      ...clearfix,
+    },
+  },
+);
 
 export default TabList;
