@@ -46,6 +46,7 @@
     "@govuk-react/text-area": "^0.6.0",
     "@govuk-react/top-nav": "^0.6.0",
     "@govuk-react/unordered-list": "^0.6.0",
+    "@govuk-react/visually-hidden": "^0.6.0",
     "@govuk-react/warning-text": "^0.6.0",
     "@storybook/addon-actions": "^4.1.13",
     "@storybook/addon-knobs": "^4.1.13",
@@ -64,7 +65,7 @@
   "devDependencies": {
     "babel-loader": "^8.0.4",
     "babel-plugin-styled-components": "^1.10.0",
-    "storybook-chromatic": "^1.2.6"
+    "storybook-chromatic": "^1.3.0"
   },
   "scripts": {
     "start": "start-storybook -p 9009",
