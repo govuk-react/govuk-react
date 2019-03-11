@@ -110,9 +110,9 @@ import { ButtonArrow } from '@govuk-react/icons';
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `buttonColour` |  | ```undefined``` | string | Override for default button colour
- `buttonHoverColour` |  | ```undefined``` | string | Override for default button hover colour,<br/>which defaults to `buttonColour` darkened by 5%
- `buttonShadowColour` |  | ```undefined``` | string | Override for default button shadow colour,<br/>which defaults to `buttonColour` darkened by 15%
- `buttonTextColour` |  | ```undefined``` | string | Override for default button text colour,<br/>which defaults to govuk white
+ `buttonHoverColour` |  | ```undefined``` | string | Override for default button hover colour,<br/>which defaults to `buttonColour` darkened by 5%
+ `buttonShadowColour` |  | ```undefined``` | string | Override for default button shadow colour,<br/>which defaults to `buttonColour` darkened by 15%
+ `buttonTextColour` |  | ```undefined``` | string | Override for default button text colour,<br/>which defaults to govuk white
  `children` | true | `````` | node | Button text
  `disabled` |  | ```false``` | bool | Renders a disabled button and removes pointer events if set to true
  `icon` |  | ```undefined``` | node | Button icon
@@ -151,7 +151,7 @@ import { H1 } from '@govuk-react/heading';
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | string | Text to be rendered as a caption
- `size` |  | ```'XL'``` | enum(...Object.keys(CAPTION_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `XL`, `L`, `M`<br/>   or a numeric size that fits in the GDS font scale list
+ `size` |  | ```'XL'``` | enum(...Object.keys(CAPTION_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `XL`, `L`, `M`<br/>   or a numeric size that fits in the GDS font scale list
 
 
 Checkbox
@@ -253,11 +253,11 @@ With custom input name props
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | node | 
- `defaultValues` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` | custom | 
+ `defaultValues` |  | ```{    day: undefined,    month: undefined,    year: undefined,  }``` | custom | 
  `errorText` |  | ```undefined``` | string | Error text
  `hintText` |  | ```undefined``` | string | Optional hint text
  `input` |  | ```undefined``` | shape[object Object] | Properties that are sent to the input, matching final form and redux form input type
- `inputNames` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` | shape[object Object] | Input name attributes
+ `inputNames` |  | ```{    day: undefined,    month: undefined,    year: undefined,  }``` | shape[object Object] | Input name attributes
 
 
 Details
@@ -588,8 +588,8 @@ Prop | Required | Default | Type | Description
  `columnOneThird` |  | ```false``` | bool | Dimension setting for the column (deprecated)
  `columnThreeQuarters` |  | ```false``` | bool | Dimension setting for the column (deprecated)
  `columnTwoThirds` |  | ```false``` | bool | Dimension setting for the column (deprecated)
- `setDesktopWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set desktop column to width using value or descriptive string<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
- `setWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set column to width using value or descriptive string<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
+ `setDesktopWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set desktop column to width using value or descriptive string<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
+ `setWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set column to width using value or descriptive string<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
 
 
 GridRow
@@ -649,7 +649,7 @@ Please use the `Heading` component instead.
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `level` |  | ```1``` | number | Semantic heading level value between 1 and 6
- `size` |  | ```undefined``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
+ `size` |  | ```undefined``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
 
 
 Heading
@@ -706,7 +706,7 @@ Props pass through
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `level` |  | ```1``` | number | Semantic heading level value between 1 and 6
- `size` |  | ```undefined``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
+ `size` |  | ```undefined``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
 
 
 HintText
@@ -1288,12 +1288,12 @@ Page
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `beforeChildren` |  | ```undefined``` | node | Add content that needs to appear outside `<main>` element.<br/>For example: The back link component, phase banner component
+ `beforeChildren` |  | ```undefined``` | node | Add content that needs to appear outside `<main>` element.<br/>For example: The back link component, phase banner component
  `children` |  | ```undefined``` | node | Add content that needs to appear centered in the `<main>` element
  `container` |  | ```({ children }) => <WidthContainer>{children}</WidthContainer>``` | func | Render props to allow the width container element to be overriden
  `footer` |  | ```undefined``` | node | Override the default footer component.
  `header` |  | ```<TopNav />``` | node | Override the default header (top nav) component.
- `main` |  | ```({ children, beforeChildren }) => (   <React.Fragment>     {beforeChildren}     <Page.Main>       {children}     </Page.Main>   </React.Fragment> )``` | func | Render props for the main section, provides chilren and beforeChildren props
+ `main` |  | ```({ children, beforeChildren }) => (    <React.Fragment>      {beforeChildren}      <Page.Main>        {children}      </Page.Main>    </React.Fragment>  )``` | func | Render props for the main section, provides chilren and beforeChildren props
 
 
 Pagination
@@ -1886,7 +1886,7 @@ Tabs
 
 ### Import
 ```js
-import Tabs, { Tab, TabList, TabPanel } from '@govuk-react/tabs';
+import Tabs, { Tab, List, Panel, Title } from '@govuk-react/tabs';
 ```
 
 ##### Simple Example
@@ -1896,6 +1896,7 @@ class App extends Component {
     super();
     this.state = { tabIndex: 0 };
     this.setTabIndex = this.setTabIndex.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   setTabIndex(newTabIndex) {
@@ -1903,35 +1904,38 @@ class App extends Component {
       tabIndex: newTabIndex,
     }));
   }
-  // @babel/plugin-proposal-class-properties
-  // state = { tabIndex: 0 };
 
-  // setTabIndex = newTabIndex => this.setState({
-  //   tabIndex: newTabIndex,
-  // });
+  handleClick(e, index) {
+    const mql = window.matchMedia(`(min-width: ${BREAKPOINTS.TABLET})`);
+    if (mql.matches) {
+      e.preventDefault();
+    }
+    return this.setTabIndex(index);
+  }
 
   render() {
     const { tabIndex } = this.state;
     return (
       <Tabs>
-        <TabList>
+        <Title>Content</Title>
+        <List>
           <Tab
-            onClick={() => this.setTabIndex(0)}
-            isActive={tabIndex === 0}
+            onClick={(event) => this.handleClick(event, 0)}
+            selected={tabIndex === 0}
             href="#first-panel"
           >
             Title 1
           </Tab>
           <Tab
-            onClick={() => this.setTabIndex(1)}
-            isActive={tabIndex === 1}
+            onClick={(event) => this.handleClick(event, 1)}
+            selected={tabIndex === 1}
             href="#second-panel"
           >
             Title 2
           </Tab>
-        </TabList>
-        <TabPanel isActive={tabIndex === 0} id="first-panel">TabPanel content 1</TabPanel>
-        <TabPanel isActive={tabIndex === 1} id="second-panel" >TabPanel content 2</TabPanel>
+        </List>
+        <Panel selected={tabIndex === 0} id="first-panel">Panel content 1</Panel>
+        <Panel selected={tabIndex === 1} id="second-panel" >Panel content 2</Panel>
       </Tabs>
     );
   }
@@ -1945,9 +1949,18 @@ const App = ({ defaultIndex}) => {
 
  const handleTabChange = newTabIndex => setTabIndex(newTabIndex);
 
+ function handleClick({ event: e, index }) {
+   const mql = window.matchMedia(`(min-width: ${BREAKPOINTS.TABLET})`);
+   if (mql.matches) {
+     e.preventDefault();
+   }
+   return handleTabChange(index);
+ }
+
  return (
 <Tabs>
-  <Tabs.TabList>
+  <Tabs.Title>Content</Tabs.Title>
+  <Tabs.List>
     {[
       {
         content: 'Title 1',
@@ -1959,31 +1972,31 @@ const App = ({ defaultIndex}) => {
       },
     ].map(({ content, href }, index) => (
       <Tabs.Tab
-          onClick={() => this.setTabIndex(index)}
-          isActive={tabIndex === index}
+          onClick={(event) => handleClick({ event, index })}
+          selected={tabIndex === index}
           href={href}
         >
           {content}
         </Tab>
       ))
     }
-  </Tabs.TabList>
+  </Tabs.List>
     {[
       {
-        content: 'TabPanel content 1',
+        content: 'Panel content 1',
         id: 'first-panel',
       },
       {
-        content: 'TabPanel content 2',
+        content: 'Panel content 2',
         id: 'second-panel',
       },
     ].map(({ content, id }, index) => (
-      <Tabs.TabPanel
-          isActive={tabIndex === index}
+      <Tabs.Panel
+          selected={tabIndex === index}
           id={id}
         >
           {content}
-        </Tabs.TabPanel>
+        </Tabs.Panel>
       ))
     }
    </Tabs>
