@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VisuallyHidden focusable version matches snapshot: focusable 1`] = `
+.c0 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  -webkit-clip: rect(0 0 0 0) !important;
+  clip: rect(0 0 0 0) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+.c0:active,
+.c0:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  margin: inherit !important;
+  overflow: visible !important;
+  -webkit-clip: auto !important;
+  clip: auto !important;
+  -webkit-clip-path: none !important;
+  clip-path: none !important;
+  white-space: inherit !important;
+}
+
+<VisuallyHiddenDocumented
+  focusable={true}
+  important={true}
+>
+  <styled.span
+    focusable={true}
+    important={true}
+  >
+    <StyledComponent
+      focusable={true}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [
+            [Function],
+          ],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              [Function],
+            ],
+          },
+          "defaultProps": Object {
+            "focusable": false,
+            "important": true,
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "propTypes": undefined,
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      important={true}
+    >
+      <span
+        className="c0"
+        focusable={true}
+        tabIndex="0"
+      >
+        Example
+      </span>
+    </StyledComponent>
+  </styled.span>
+</VisuallyHiddenDocumented>
+`;
+
+exports[`VisuallyHidden matches snapshot: default render 1`] = `
+.c0 {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  -webkit-clip: rect(0 0 0 0) !important;
+  clip: rect(0 0 0 0) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+  padding: 0 !important;
+}
+
+<VisuallyHiddenDocumented
+  focusable={false}
+  important={true}
+>
+  <styled.span
+    focusable={false}
+    important={true}
+  >
+    <StyledComponent
+      focusable={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [
+            [Function],
+          ],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              [Function],
+            ],
+          },
+          "defaultProps": Object {
+            "focusable": false,
+            "important": true,
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "propTypes": undefined,
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      important={true}
+    >
+      <span
+        className="c0"
+        focusable={false}
+      >
+        Example
+      </span>
+    </StyledComponent>
+  </styled.span>
+</VisuallyHiddenDocumented>
+`;
+
+exports[`VisuallyHidden with important={false} matches snapshot: not important 1`] = `
+.c0 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+  padding: 0;
+}
+
+<VisuallyHiddenDocumented
+  focusable={false}
+  important={false}
+>
+  <styled.span
+    focusable={false}
+    important={false}
+  >
+    <StyledComponent
+      focusable={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [
+            [Function],
+          ],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              [Function],
+            ],
+          },
+          "defaultProps": Object {
+            "focusable": false,
+            "important": true,
+          },
+          "displayName": "styled.span",
+          "foldedComponentIds": Array [],
+          "propTypes": undefined,
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "span",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      important={false}
+    >
+      <span
+        className="c0"
+        focusable={false}
+      >
+        Example
+      </span>
+    </StyledComponent>
+  </styled.span>
+</VisuallyHiddenDocumented>
+`;

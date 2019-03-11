@@ -4,6 +4,7 @@
   "dependencies": {
     "@govuk-react/back-link": "^0.6.0",
     "@govuk-react/breadcrumb": "^0.6.0",
+    "@govuk-react/breadcrumbs": "^0.6.0",
     "@govuk-react/button": "^0.6.0",
     "@govuk-react/caption": "^0.6.0",
     "@govuk-react/checkbox": "^0.6.0",
@@ -13,6 +14,7 @@
     "@govuk-react/document-footer-metadata": "^0.6.0",
     "@govuk-react/error-summary": "^0.6.0",
     "@govuk-react/error-text": "^0.6.0",
+    "@govuk-react/fieldset": "^0.6.0",
     "@govuk-react/file-upload": "^0.6.0",
     "@govuk-react/grid-col": "^0.6.0",
     "@govuk-react/grid-row": "^0.6.0",
@@ -52,6 +54,7 @@
     "@govuk-react/text-area": "^0.6.0",
     "@govuk-react/top-nav": "^0.6.0",
     "@govuk-react/unordered-list": "^0.6.0",
+    "@govuk-react/visually-hidden": "^0.6.0",
     "@govuk-react/warning-text": "^0.6.0",
     "govuk-colours": "^1.0.3"
   },

@@ -45,32 +45,53 @@ Breadcrumb
 
 ### Usage
 
+This component is DEPRECATED.
+
+Please use the `Breadcrumbs` component instead.
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true | `````` | node | Breadcrumb contents
+
+
+Breadcrumbs
+===========
+
+### Import
+```js
+  import Breadcrumbs from '@govuk-react/breadcrumbs';
+```
+<!-- STORY -->
+
+### Usage
+
 Simple
 ```jsx
-<Breadcrumb>
-  <Breadcrumb.Link href="/section">Section</Breadcrumb.Link>
-  <Breadcrumb.Link href="/section/sub-section">Sub-section</Breadcrumb.Link>
+<Breadcrumbs>
+  <Breadcrumbs.Link href="/section">Section</Breadcrumbs.Link>
+  <Breadcrumbs.Link href="/section/sub-section">Sub-section</Breadcrumbs.Link>
   Current page
-</Breadcrumb>
+</Breadcrumbs>
 ```
 
 Providing links with, or without React Router
 ```jsx
 import { Link } from 'react-router-dom';
 
-<Breadcrumb>
-  <Breadcrumb.Link as={Link} to="/section">Section</Breadcrumb.Link>
-  <Breadcrumb.Link href="/section">Sub-section</Breadcrumb.Link>
-</Breadcrumb>
+<Breadcrumbs>
+  <Breadcrumbs.Link as={Link} to="/section">Section</Breadcrumbs.Link>
+  <Breadcrumbs.Link href="/section">Sub-section</Breadcrumbs.Link>
+</Breadcrumbs>
 ```
 
 ### References:
-- https://github.com/alphagov/govuk-frontend/blob/master/src/components/breadcrumb/_breadcrumb.scss
+- https://github.com/alphagov/govuk-frontend/blob/master/src/components/breadcrumbs/_breadcrumbs.scss
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Breadcrumb contents
+ `children` | true | `````` | node | Breadcrumbs contents
 
 
 Button
@@ -110,9 +131,12 @@ import { ButtonArrow } from '@govuk-react/icons';
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `buttonColour` |  | ```undefined``` | string | Override for default button colour
- `buttonHoverColour` |  | ```undefined``` | string | Override for default button hover colour,<br/>which defaults to `buttonColour` darkened by 5%
- `buttonShadowColour` |  | ```undefined``` | string | Override for default button shadow colour,<br/>which defaults to `buttonColour` darkened by 15%
- `buttonTextColour` |  | ```undefined``` | string | Override for default button text colour,<br/>which defaults to govuk white
+ `buttonHoverColour` |  | ```undefined``` | string | Override for default button hover colour,
+<br/>which defaults to `buttonColour` darkened by 5%
+ `buttonShadowColour` |  | ```undefined``` | string | Override for default button shadow colour,
+<br/>which defaults to `buttonColour` darkened by 15%
+ `buttonTextColour` |  | ```undefined``` | string | Override for default button text colour,
+<br/>which defaults to govuk white
  `children` | true | `````` | node | Button text
  `disabled` |  | ```false``` | bool | Renders a disabled button and removes pointer events if set to true
  `icon` |  | ```undefined``` | node | Button icon
@@ -151,7 +175,9 @@ import { H1 } from '@govuk-react/heading';
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | string | Text to be rendered as a caption
- `size` |  | ```'XL'``` | enum(...Object.keys(CAPTION_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `XL`, `L`, `M`<br/>   or a numeric size that fits in the GDS font scale list
+ `size` |  | ```'XL'``` | enum(...Object.keys(CAPTION_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:
+<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `XL`, `L`, `M`
+<br/>   or a numeric size that fits in the GDS font scale list
 
 
 Checkbox
@@ -461,6 +487,49 @@ Prop | Required | Default | Type | Description
  `children` | true | `````` | string | Text to describe the error
 
 
+Fieldset
+========
+
+### Import
+```js
+  import Fieldset from '@govuk-react/fieldset';
+```
+<!-- STORY -->
+
+### Usage
+
+Use the fieldset component when you need to show a relationship between multiple
+form inputs. For example, you may need to group a set of text inputs into a single
+fieldset when asking for an address.
+
+Simple
+```jsx
+<Fieldset>
+  <Fieldset.Legend>Example</Fieldset.Legend>
+</Fieldset>
+```
+
+The `Fieldset.Legend` sub-component supports a `size` prop compatible with Heading
+and a `isPageHeading` prop for use when you wish your legend to be used as a page heading
+
+Custom legend
+```jsx
+<Fieldset>
+  <Fieldset.Legend size="XL" isPageHeading>Legend as page heading</Fieldset.Legend>
+</Fieldset>
+```
+
+### References
+- https://design-system.service.gov.uk/components/fieldset/
+- https://github.com/alphagov/govuk-frontend/tree/master/src/components/fieldset
+- https://design-system.service.gov.uk/get-started/labels-legends-headings/
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true | `````` | node | 
+
+
 FileUpload
 ==========
 
@@ -588,8 +657,10 @@ Prop | Required | Default | Type | Description
  `columnOneThird` |  | ```false``` | bool | Dimension setting for the column (deprecated)
  `columnThreeQuarters` |  | ```false``` | bool | Dimension setting for the column (deprecated)
  `columnTwoThirds` |  | ```false``` | bool | Dimension setting for the column (deprecated)
- `setDesktopWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set desktop column to width using value or descriptive string<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
- `setWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set column to width using value or descriptive string<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
+ `setDesktopWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set desktop column to width using value or descriptive string
+<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
+ `setWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set column to width using value or descriptive string
+<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
 
 
 GridRow
@@ -649,7 +720,9 @@ Please use the `Heading` component instead.
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `level` |  | ```1``` | number | Semantic heading level value between 1 and 6
- `size` |  | ```undefined``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
+ `size` |  | ```undefined``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:
+<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`
+<br/>   or a numeric size that fits in the GDS font scale list
 
 
 Heading
@@ -666,8 +739,11 @@ Heading
 
 Simple
 ```jsx
-<Heading level={1}>Heading text</Heading>
+<Heading>Heading text</Heading>
 ```
+
+To pick different heading levels it is recommended to use the shortcut versions as
+that will pick the appropriate tag as well as set the appropriate corresponding font size.
 
 Using shortcuts
 ```jsx
@@ -683,13 +759,13 @@ import { H1, H2, H3, H4, H5, H6 } from "@govuk-react/heading";
 
 Differing sizes
 ```jsx
-<Heading level={6} size={80}>
-  h6 with font size 80
+<H6 size={80}>
+  H6 with font size 80
+</H6>
+<Heading as="h2" size="SMALL">
+  Heading as h2 with SMALL size
 </Heading>
-<Heading level={2} size="SMALL">
-  h2 with SMALL size
-</Heading>
-<H3 size="LARGE">h3 with LARGE size</H3>
+<H3 size="LARGE">H3 with LARGE size</H3>
 ```
 
 Props pass through
@@ -705,8 +781,9 @@ Props pass through
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `level` |  | ```1``` | number | Semantic heading level value between 1 and 6
- `size` |  | ```undefined``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
+ `as` |  | ```undefined``` | string | Semantic heading tag to use (e.g. 'h3')<br/>By default element used will be an 'h1'
+ `level` |  | ```undefined``` | number | Semantic heading level value between 1 and 6 (deprecated)
+ `size` |  | ```'XLARGE'``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
 
 
 HintText
@@ -1283,17 +1360,33 @@ Page
 ```
 <!-- STORY -->
 
+### Usage
 
+Simple
+```jsx
+import BackLink from '@govuk-react/back-link';
+import { H1 } from '@govuk-react/heading';
+
+<Page beforeChildren={<BackLink href="#" />}>
+  <H1>Page title</H1>
+</Page>
+```
+
+### References
+- https://design-system.service.gov.uk/styles/page-template/
+- https://design-system.service.gov.uk/styles/layout/#page-wrappers
+- https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_main-wrapper.scss
+- https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_width-container.scss
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `beforeChildren` |  | ```undefined``` | node | Add content that needs to appear outside `<main>` element.<br/>For example: The back link component, phase banner component
- `children` |  | ```undefined``` | node | Add content that needs to appear centered in the `<main>` element
- `container` |  | ```({ children }) => <WidthContainer>{children}</WidthContainer>``` | func | Render props to allow the width container element to be overriden
- `footer` |  | ```undefined``` | node | Override the default footer component.
- `header` |  | ```<TopNav />``` | node | Override the default header (top nav) component.
- `main` |  | ```({ children, beforeChildren }) => (    <React.Fragment>      {beforeChildren}      <Page.Main>        {children}      </Page.Main>    </React.Fragment>  )``` | func | Render props for the main section, provides chilren and beforeChildren props
+ `beforeChildren` |  | ```undefined``` | node | Content that needs to appear outside the main page wrapper (see `main`).<br/>For example: A back link component, breadcrumbs, phase banner component
+ `children` |  | ```undefined``` | node | Page contents
+ `container` |  | ```Page.WidthContainer``` | func | Override the default page container component.<br/>`beforeChildren` and `children` (wrapped in `main`) will be placed inside this component.
+ `footer` |  | ```undefined``` | node | Override the default page footer component.
+ `header` |  | ```<TopNav />``` | node | Override the default page header component.
+ `main` |  | ```Page.Main``` | func | Override the default wrapper component for main page content
 
 
 Pagination
@@ -1575,13 +1668,13 @@ RelatedItems
 
 Simple
 ```jsx
-import Heading from '@govuk-react/heading';
+import { H3 } from '@govuk-react/heading';
 import UnorderedList from '@govuk-react/unordered-list';
 import Link from '@govuk-react/link';
 import ListItem from '@govuk-react/list-item';
 
 <RelatedItems>
-  <Heading level={3}>Example heading</Heading>
+  <H3>Example heading</H3>
   <UnorderedList listStyleType="none">
     <ListItem>
       <Link href="https://example.com">Link A</Link>
@@ -2226,6 +2319,37 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | node | One or more ListItem components
  `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend
+
+
+VisuallyHidden
+==============
+
+### Import
+```js
+  import VisuallyHidden from '@govuk-react/visually-hidden';
+```
+<!-- STORY -->
+
+### Usage
+
+This component is primarily intended to be used for material that will be visually hidden
+but visible to screen-reader devices.
+
+Simple
+```jsx
+<VisuallyHidden>Example</VisuallyHidden>
+```
+
+### References
+- https://github.com/alphagov/govuk-frontend/blob/master/src/helpers/_visually-hidden.scss
+- https://github.com/alphagov/govuk-frontend/blob/master/src/utilities/_visually-hidden.scss
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true | `````` | node | Content to be hidden
+ `focusable` |  | ```false``` | bool | Allow component to be focusable, and thus become visible
+ `important` |  | ```true``` | bool | Set styles with `!important`
 
 
 WarningText

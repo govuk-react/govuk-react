@@ -1,6 +1,7 @@
 // Components
 export { default as BackLink } from '@govuk-react/back-link';
 export { default as Breadcrumb } from '@govuk-react/breadcrumb';
+export { default as Breadcrumbs } from '@govuk-react/breadcrumbs';
 export { default as Button } from '@govuk-react/button';
 export { default as Caption } from '@govuk-react/caption';
 export { default as Checkbox } from '@govuk-react/checkbox';
@@ -9,6 +10,7 @@ export { default as Details } from '@govuk-react/details';
 export { default as DocumentFooterMetadata } from '@govuk-react/document-footer-metadata';
 export { default as ErrorSummary } from '@govuk-react/error-summary';
 export { default as ErrorText } from '@govuk-react/error-text';
+export { default as Fieldset } from '@govuk-react/fieldset';
 export { default as FileUpload } from '@govuk-react/file-upload';
 export { default as GridCol } from '@govuk-react/grid-col';
 export { default as GridRow } from '@govuk-react/grid-row';
@@ -46,6 +48,7 @@ export { default as Tag } from '@govuk-react/tag';
 export { default as TextArea } from '@govuk-react/text-area';
 export { default as TopNav } from '@govuk-react/top-nav';
 export { default as UnorderedList } from '@govuk-react/unordered-list';
+export { default as VisuallyHidden } from '@govuk-react/visually-hidden';
 export { default as WarningText } from '@govuk-react/warning-text';
 
 export { H1, H2, H3, H4, H5, H6 } from '@govuk-react/heading';

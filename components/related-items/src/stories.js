@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Heading from '@govuk-react/heading';
+import { H3 } from '@govuk-react/heading';
 import UnorderedList from '@govuk-react/unordered-list';
 import Link from '@govuk-react/link';
 import ListItem from '@govuk-react/list-item';
@@ -15,7 +15,7 @@ stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
   <RelatedItems>
-    <Heading level={3}>Travel abroad</Heading>
+    <H3>Travel abroad</H3>
     <UnorderedList listStyleType="none">
       <ListItem>
         <Link href="https://example.com">Link A</Link>
@@ -27,7 +27,7 @@ stories.add('Component default', () => (
         <Link href="https://example.com"><strong>more</strong></Link>
       </ListItem>
     </UnorderedList>
-    <Heading level={3}>Travel</Heading>
+    <H3>Travel</H3>
     <UnorderedList listStyleType="none">
       <ListItem>
         <Link href="https://example.com">Link A</Link>

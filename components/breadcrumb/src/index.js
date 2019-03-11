@@ -5,6 +5,8 @@ import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
 import { SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 
+import { deprecate } from '@govuk-react/hoc';
+
 import Link from './atoms/link';
 
 // Constants for chevron sourced from govuk-frontend
@@ -66,30 +68,12 @@ const BreadcrumbListItem = styled('li')({
  *
  * ### Usage
  *
- * Simple
- * ```jsx
- * <Breadcrumb>
- *   <Breadcrumb.Link href="/section">Section</Breadcrumb.Link>
- *   <Breadcrumb.Link href="/section/sub-section">Sub-section</Breadcrumb.Link>
- *   Current page
- * </Breadcrumb>
- * ```
+ * This component is DEPRECATED.
  *
- * Providing links with, or without React Router
- * ```jsx
- * import { Link } from 'react-router-dom';
- *
- * <Breadcrumb>
- *   <Breadcrumb.Link as={Link} to="/section">Section</Breadcrumb.Link>
- *   <Breadcrumb.Link href="/section">Sub-section</Breadcrumb.Link>
- * </Breadcrumb>
- * ```
- *
- * ### References:
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/breadcrumb/_breadcrumb.scss
+ * Please use the `Breadcrumbs` component instead.
  *
  */
-const Breadcrumb = ({ children, ...props }) => (
+const BreadcrumbComponent = ({ children, ...props }) => (
   <BreadcrumbContainer {...props}>
     <BreadcrumbList>
       {children.length && children.map ? (
@@ -106,13 +90,17 @@ const Breadcrumb = ({ children, ...props }) => (
   </BreadcrumbContainer>
 );
 
-Breadcrumb.propTypes = {
+BreadcrumbComponent.propTypes = {
   /**
    * Breadcrumb contents
    */
   children: PropTypes.node.isRequired,
 };
 
+const Breadcrumb = deprecate(BreadcrumbComponent, 'please use the Breadcumbs component instead');
+
 Breadcrumb.Link = Link;
+
+export { BreadcrumbComponent };
 
 export default Breadcrumb;

@@ -1,12 +1,9 @@
 {
   "name": "@govuk-react/page",
   "version": "0.6.0",
-  "private": false,
-  "publishConfig": {
-    "access": "public"
-  },
   "dependencies": {
     "@govuk-react/constants": "^0.6.0",
+    "@govuk-react/lib": "^0.6.0",
     "@govuk-react/top-nav": "^0.6.0"
   },
   "peerDependencies": {
@@ -16,8 +13,17 @@
   "scripts": {
     "build": "yarn build:lib && yarn build:es",
     "build:lib": "rimraf lib && babel src -d lib --source-maps --config-file ../../babel.config.js",
-    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps --config-file ../../babel.config.js"
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps --config-file ../../babel.config.js",
+    "docs": "doc-component ./lib/index.js ./README.md"
   },
   "main": "lib/index.js",
-  "module": "es/index.js"
+  "module": "es/index.js",
+  "author": "Alasdair McLeay",
+  "license": "MIT",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/page",
+  "description": "Provides Page wrapper components.",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
 }

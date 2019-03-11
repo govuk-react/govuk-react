@@ -508,58 +508,58 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
             className="c0"
             tabIndex={-1}
           >
-            <Heading
-              level={2}
-            >
-              <Styled(Component)
-                level={2}
+            <H2>
+              <Heading
+                as="h2"
+                size="LARGE"
               >
-                <StyledComponent
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bdVaJa",
-                        "isStatic": false,
-                        "lastClassName": "c1",
-                        "rules": Array [
-                          "color: #0b0c0c; @media print {
+                <styled.h1
+                  as="h2"
+                  size="LARGE"
+                >
+                  <StyledComponent
+                    as="h2"
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-bdVaJa",
+                          "isStatic": false,
+                          "lastClassName": "c1",
+                          "rules": Array [
+                            "color: #0b0c0c; @media print {
   color: #000;
 }",
-                          [Function],
-                          "display: block; margin-top: 0;",
-                          [Function],
-                          [Function],
-                        ],
-                      },
-                      "displayName": "Styled(Component)",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-bdVaJa",
-                      "target": [Function],
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                      Symbol(Symbol.hasInstance): [Function],
+                            [Function],
+                            "display: block; margin-top: 0;",
+                            [Function],
+                            [Function],
+                          ],
+                        },
+                        "displayName": "styled.h1",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-bdVaJa",
+                        "target": "h1",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
                     }
-                  }
-                  forwardedRef={null}
-                  level={2}
-                >
-                  <Component
-                    className="c1"
-                    level={2}
+                    forwardedRef={null}
+                    size="LARGE"
                   >
                     <h2
                       className="c1"
+                      size="LARGE"
                     >
                       Message to alert the user to a problem goes here
                     </h2>
-                  </Component>
-                </StyledComponent>
-              </Styled(Component)>
-            </Heading>
+                  </StyledComponent>
+                </styled.h1>
+              </Heading>
+            </H2>
             <Paragraph
               linkRenderer={[Function]}
               mb={3}

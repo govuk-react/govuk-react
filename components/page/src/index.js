@@ -12,82 +12,78 @@ import TopNav from '@govuk-react/top-nav';
 import Main from './atoms/main';
 import WidthContainer from './atoms/width-container';
 
-// const PageWrapper = styled('div')({});
-
-// TODO: replace with actual footer component once built
-// const Footer = styled('footer')({
-//   width: '100%',
-//   height: '80px',
-//   borderTop: '1px solid #a1acb2',
-//   backgroundColor: '#dee0e2',
-// });
-
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ * ```jsx
+ * import BackLink from '@govuk-react/back-link';
+ * import { H1 } from '@govuk-react/heading';
+ *
+ * <Page beforeChildren={<BackLink href="#" />}>
+ *   <H1>Page title</H1>
+ * </Page>
+ * ```
+ *
+ * ### References
+ * - https://design-system.service.gov.uk/styles/page-template/
+ * - https://design-system.service.gov.uk/styles/layout/#page-wrappers
+ * - https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_main-wrapper.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_width-container.scss
+ */
 const Page = ({
-  header, footer, children, beforeChildren, main, container,
+  header, footer, children, beforeChildren, main: MainComponent, container: Container,
 }) => (
   <React.Fragment>
     {header}
-    {container({
-        children: main({ children, beforeChildren }),
-    })}
+    <Container>
+      {beforeChildren}
+      <MainComponent>{children}</MainComponent>
+    </Container>
     {footer}
   </React.Fragment>
 );
 
-/**
- * Mainly reference:
- * https://design-system.service.gov.uk/styles/page-template/
- * But using 'children' instead of 'content'
- */
 Page.propTypes = {
   /**
-   * Add content that needs to appear centered in the `<main>` element
+   * Page contents
    */
   children: PropTypes.node,
   /**
-   * Override the default header (top nav) component.
+   * Override the default page header component.
    */
   header: PropTypes.node,
   /**
-   * Override the default footer component.
+   * Override the default page footer component.
    */
   footer: PropTypes.node,
   /**
-   * Render props for the main section, provides chilren and beforeChildren props
+   * Override the default wrapper component for main page content
    */
   main: PropTypes.func,
   /**
-   * Add content that needs to appear outside `<main>` element.
-   * For example: The back link component, phase banner component
+   * Content that needs to appear outside the main page wrapper (see `main`).
+   * For example: A back link component, breadcrumbs, phase banner component
    */
   beforeChildren: PropTypes.node,
   /**
-   * Render props to allow the width container element to be overriden
+   * Override the default page container component.
+   * `beforeChildren` and `children` (wrapped in `main`) will be placed inside this component.
    */
   container: PropTypes.func,
 };
+
+Page.Main = Main;
+Page.WidthContainer = WidthContainer;
 
 Page.defaultProps = {
   children: undefined,
   header: <TopNav />,
   footer: undefined, // <Footer />, // TODO: add Footer component once built
-  // TODO: what to do about this linting rule?
-  // eslint-disable-next-line react/prop-types
-  main: ({ children, beforeChildren }) => (
-    <React.Fragment>
-      {beforeChildren}
-      <Page.Main>
-        {children}
-      </Page.Main>
-    </React.Fragment>
-  ),
+  main: Page.Main,
   beforeChildren: undefined,
-  // TODO: what to do about this linting rule?
-  // eslint-disable-next-line react/prop-types
-  container: ({ children }) => <WidthContainer>{children}</WidthContainer>,
+  container: Page.WidthContainer,
 };
-
-Page.Main = Main;
-Page.WidthContainer = WidthContainer;
 
 export default Page;

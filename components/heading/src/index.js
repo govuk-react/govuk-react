@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {
   HEADING_SIZES,
@@ -14,12 +14,9 @@ import { spacing, typography } from '@govuk-react/lib';
 // so if `size` is a string, we find a numeric size based off `HEADING_SIZES`
 // but if `size` is a number we just send through that number
 
-const StyledHeading = styled(({
-  level, children, size, ...props
-}) =>
-  createElement(LEVEL_TAG[level], props, children))(
+const StyledHeading = styled('h1')(
   typography.textColour,
-  ({ level, size = LEVEL_SIZE[level] }) => {
+  ({ size }) => {
     const actualSize = Number.isNaN(Number(size)) ? HEADING_SIZES[size] : size;
 
     if (!actualSize) {
@@ -35,7 +32,7 @@ const StyledHeading = styled(({
     display: 'block',
     marginTop: 0,
   },
-  ({ level, size = LEVEL_SIZE[level] }) => {
+  ({ size }) => {
     const actualSize = Number.isNaN(Number(size)) ? HEADING_SIZES[size] : size;
     const scaleInfo = TYPOGRAPHY_SCALE[actualSize];
 
@@ -59,8 +56,11 @@ const StyledHeading = styled(({
  *
  * Simple
  * ```jsx
- * <Heading level={1}>Heading text</Heading>
+ * <Heading>Heading text</Heading>
  * ```
+ *
+ * To pick different heading levels it is recommended to use the shortcut versions as
+ * that will pick the appropriate tag as well as set the appropriate corresponding font size.
  *
  * Using shortcuts
  * ```jsx
@@ -76,13 +76,13 @@ const StyledHeading = styled(({
  *
  * Differing sizes
  * ```jsx
- * <Heading level={6} size={80}>
- *   h6 with font size 80
+ * <H6 size={80}>
+ *   H6 with font size 80
+ * </H6>
+ * <Heading as="h2" size="SMALL">
+ *   Heading as h2 with SMALL size
  * </Heading>
- * <Heading level={2} size="SMALL">
- *   h2 with SMALL size
- * </Heading>
- * <H3 size="LARGE">h3 with LARGE size</H3>
+ * <H3 size="LARGE">H3 with LARGE size</H3>
  * ```
  *
  * Props pass through
@@ -95,16 +95,34 @@ const StyledHeading = styled(({
  * - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_typography.scss
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/core/_typography.scss
  */
-const Heading = props => <StyledHeading {...props} />;
+const Heading = ({ level, ...props }) => {
+  if (level) {
+    if (process.env.NODE_ENV !== 'production') {
+      // eslint-disable-next-line no-console
+      console.warn(`deprecated prop 'level' used in Heading, please replace with an "H${level}" component`);
+    }
+    if (LEVEL_TAG[level]) {
+      return <StyledHeading size={LEVEL_SIZE[level]} {...props} as={LEVEL_TAG[level]} />;
+    }
+  }
+
+  return <StyledHeading {...props} />;
+};
 
 Heading.defaultProps = {
-  level: 1,
-  size: undefined,
+  as: undefined,
+  level: undefined,
+  size: 'XLARGE',
 };
 
 Heading.propTypes = {
   /**
-   * Semantic heading level value between 1 and 6
+   * Semantic heading tag to use (e.g. 'h3')
+   * By default element used will be an 'h1'
+   */
+  as: PropTypes.string,
+  /**
+   * Semantic heading level value between 1 and 6 (deprecated)
    */
   level: PropTypes.number,
   /**

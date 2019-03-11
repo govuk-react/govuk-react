@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fieldset matches snapshot: Fieldset 1`] = `
+.c0 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.c0:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    padding: 0;
+  }
+}
+
+<FieldsetDocumented>
+  <styled.fieldset>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "Legend": [Function],
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htpNat",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "border: 0; &:after {
+  content: \\"\\"; display: block; clear: both;
+}",
+              [Function],
+            ],
+          },
+          "displayName": "styled.fieldset",
+          "foldedComponentIds": Array [],
+          "propTypes": undefined,
+          "render": [Function],
+          "styledComponentId": "sc-htpNat",
+          "target": "fieldset",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <fieldset
+        className="c0"
+      />
+    </StyledComponent>
+  </styled.fieldset>
+</FieldsetDocumented>
+`;

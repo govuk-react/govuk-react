@@ -3,9 +3,9 @@
   "version": "0.6.0",
   "dependencies": {
     "@govuk-react/constants": "^0.6.0",
+    "@govuk-react/hoc": "^0.6.0",
     "@govuk-react/lib": "^0.6.0",
-    "govuk-colours": "^1.0.3",
-    "polished": "^2.3.3"
+    "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
     "react": ">=16.2.0",
