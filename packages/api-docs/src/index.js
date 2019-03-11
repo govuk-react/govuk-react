@@ -15,7 +15,7 @@ import generateMarkdown from './markdown/generateMarkdown';
 const components = require('govuk-react');
 
 function getComponentFolderName(file) {
-  const dirs = path.dirname(file).split(path.sep);
+  const dirs = path.dirname(file).split('/');
   let dir = dirs[dirs.length - 1];
   if (dir === 'src' || dir === 'lib') {
     dir = dirs[dirs.length - 2];
@@ -73,8 +73,17 @@ async function generateApiForFiles(files) {
   return md;
 }
 
+// unix-like Operating systems requires quotation marks in it's string in the command line
+// whereas windows requires no quotation marks. This approach is to support more kernals
+function dequote(string) {
+  return string.replace(/^'(.*)'$/, '$1');
+}
+
 export default async function (relDir, outputMd) {
-  const files = await glob(path.resolve(process.cwd(), relDir));
+  const relDirNoQuotation = dequote(relDir);
+  const outputMdNoQuotation = dequote(outputMd);
+
+  const files = await glob(path.resolve(process.cwd(), relDirNoQuotation));
   const md = await generateApiForFiles(files);
-  await promisify(fs.writeFile)(outputMd, md);
+  await promisify(fs.writeFile)(outputMdNoQuotation, md);
 }
