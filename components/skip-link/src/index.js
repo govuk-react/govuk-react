@@ -27,7 +27,7 @@ const SkipLink = styled('a')(
  *
  * Simple
  * ```jsx
- * <SkipLink href="#content">Skip to main content</SkipLink>
+ * <SkipLink href="#main-content">Skip to main content</SkipLink>
  * ```
  *
  * ### References
