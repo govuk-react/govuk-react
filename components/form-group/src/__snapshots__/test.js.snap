@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormGroup matches snapshot with error prop set: with error prop 1`] = `
+.c2 .c0:last-of-type {
+  margin-bottom: 0;
+}
+
+.c1 {
+  margin-bottom: 20px;
+  padding-left: 15px;
+  border-left: 5px solid #b10e1e;
+}
+
+.c1 .c0:last-of-type {
+  margin-bottom: 0;
+}
+
+.c1 .c0 {
+  padding: 0;
+  border: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .c1 {
+    margin-bottom: 30px;
+  }
+}
+
+<FormGroupDocumented
+  error={true}
+>
+  <styled.div
+    error={true}
+  >
+    <StyledComponent
+      error={true}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "c0",
+            "isStatic": false,
+            "lastClassName": "c1",
+            "rules": Array [
+              "margin-bottom: 20px; @media only screen and (min-width: 641px) {
+  margin-bottom: 30px;
+}",
+              "& &:last-of-type {
+  margin-bottom: 0;
+}",
+              [Function],
+              [Function],
+            ],
+          },
+          "defaultProps": Object {
+            "error": false,
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "propTypes": undefined,
+          "render": [Function],
+          "styledComponentId": "c0",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <div
+        className="c0 c1"
+      >
+        FormGroup example
+      </div>
+    </StyledComponent>
+  </styled.div>
+</FormGroupDocumented>
+`;
+
+exports[`FormGroup matches snapshot: FormGroup 1`] = `
+.c1 {
+  margin-bottom: 20px;
+}
+
+.c1 .c0:last-of-type {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .c1 {
+    margin-bottom: 30px;
+  }
+}
+
+<FormGroupDocumented
+  error={false}
+>
+  <styled.div
+    error={false}
+  >
+    <StyledComponent
+      error={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "c0",
+            "isStatic": false,
+            "lastClassName": "c1",
+            "rules": Array [
+              "margin-bottom: 20px; @media only screen and (min-width: 641px) {
+  margin-bottom: 30px;
+}",
+              "& &:last-of-type {
+  margin-bottom: 0;
+}",
+              [Function],
+              [Function],
+            ],
+          },
+          "defaultProps": Object {
+            "error": false,
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "propTypes": undefined,
+          "render": [Function],
+          "styledComponentId": "c0",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <div
+        className="c0 c1"
+      >
+        FormGroup example
+      </div>
+    </StyledComponent>
+  </styled.div>
+</FormGroupDocumented>
+`;

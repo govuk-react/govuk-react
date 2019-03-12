@@ -16,6 +16,7 @@
     "@govuk-react/error-text": "^0.6.0",
     "@govuk-react/fieldset": "^0.6.0",
     "@govuk-react/file-upload": "^0.6.0",
+    "@govuk-react/form-group": "^0.6.0",
     "@govuk-react/grid-col": "^0.6.0",
     "@govuk-react/grid-row": "^0.6.0",
     "@govuk-react/header": "^0.6.0",

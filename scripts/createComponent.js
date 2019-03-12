@@ -34,8 +34,7 @@ const packageJson = () => {
   "name": "@govuk-react/${componentFolderName}",
   "version": "${version}",
   "dependencies": {
-    "@govuk-react/lib": "^${version}",
-    "govuk-colours": "^1.0.3"
+    "@govuk-react/lib": "^${version}"
   },
   "peerDependencies": {
     "react": ">=16.2.0",
@@ -68,11 +67,11 @@ const testScript = () => {
   const contents = `import React from 'react';
 import { mount } from 'enzyme';
 
-import Example from './fixtures';
+import { ${componentName}Documented as ${componentName} } from '.';
 
 describe('${componentName}', () => {
   it('matches snapshot', () => {
-    expect(mount(<Example />)).toMatchSnapshot('${componentName}');
+    expect(mount(<${componentName}>${componentName} example</${componentName}>)).toMatchSnapshot('${componentName}');
   });
 });
 `;
@@ -82,28 +81,26 @@ describe('${componentName}', () => {
 // write stories.js file
 const storiesScript = () => {
   const filename = 'stories.js';
-  const contents = `import { storiesOf } from '@storybook/react';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
-
-import ${componentName} from './fixtures';
-
-import ReadMe from '../README.md';
-
-const stories = storiesOf('${componentName}', module);
-stories.addDecorator(WithDocsCustom(ReadMe));
-
-stories.add('Component default', ${componentName});
-`;
-  writeFile(filename, contents);
-};
-
-// write fixtures.js file
-const exampleScript = () => {
-  const filename = 'fixtures.js';
   const contents = `import React from 'react';
+import { storiesOf } from '@storybook/react';
+// TODO: remove comments for documentation once docs have been generated
+// import { WithDocsCustom } from '@govuk-react/storybook-components';
+
 import ${componentName} from '.';
 
-export default () => <${componentName}>${componentName} example</${componentName}>;
+// import ReadMe from '../README.md';
+
+const stories = storiesOf('${componentName}', module);
+
+stories.add(
+  'Component default',
+  // WithDocsCustom(
+  //   ReadMe,
+    () => (
+      <${componentName}>${componentName} example</${componentName}>
+    ),
+  // ),
+);
 `;
   writeFile(filename, contents);
 };
@@ -157,9 +154,10 @@ Please use a different name or delete the existing folder 🆗`);
     packageJson();
     testScript();
     storiesScript();
-    exampleScript();
     indexScript();
     console.log(`✅  The component '${componentName}' was created successfully`);
+    console.log(`⚠️  Please ensure you add it to the package.json file for both packages/govuk-react and packages/storybook
+and ensure that it is exported in packages/govuk-react/src/index.js`);
   });
   return false;
 };
