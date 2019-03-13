@@ -173,6 +173,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                 "link",
                 "inlineCode",
                 "code",
+                "text",
               ]
             }
             escapeHtml={false}
@@ -196,6 +197,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                   "link",
                   "inlineCode",
                   "code",
+                  "text",
                 ]
               }
               escapeHtml={false}
@@ -308,6 +310,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                     "link",
                     "inlineCode",
                     "code",
+                    "text",
                   ]
                 }
                 astPlugins={Array []}
