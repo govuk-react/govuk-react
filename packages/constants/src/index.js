@@ -3,13 +3,12 @@ export * from './spacing';
 export * from './typography';
 
 // Tracks https://github.com/alphagov/govuk-frontend/blob/master/src/settings/_measurements.scss
-export const BORDER_WIDTH_MOBILE = '4px';
-export const BORDER_WIDTH_TABLET = '5px';
-export const BORDER_WIDTH_FORM_ELEMENT = '2px';
-export const BORDER_WIDTH_FORM_ELEMENT_ERROR = '4px';
-export const BORDER_WIDTH_ERROR = '4px';
 export const BORDER_WIDTH = '5px';
 export const BORDER_WIDTH_WIDE = '10px';
+export const BORDER_WIDTH_MOBILE = '4px';
+export const BORDER_WIDTH_FORM_ELEMENT = '2px';
+export const BORDER_WIDTH_FORM_ELEMENT_ERROR = '4px';
+export const BORDER_WIDTH_FORM_GROUP_ERROR = BORDER_WIDTH;
 export const SITE_WIDTH_PX = 960;
 export const SITE_WIDTH = `${SITE_WIDTH_PX}px`;
 

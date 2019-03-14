@@ -17,7 +17,7 @@ const PreviewComponent = ({ children }) => (
   </div>
 );
 
-const withDocsCustom = (readme, ...rest) => withDocs({ PreviewComponent })(navigator.userAgent.match(/Chromatic/) ? '' : readme, ...rest);
+const withDocsCustom = (readme = '', ...rest) => withDocs({ PreviewComponent })(navigator.userAgent.match(/Chromatic/) ? '' : readme, ...rest);
 
 PreviewComponent.propTypes = {
   children: PropTypes.node.isRequired,

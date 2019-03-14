@@ -1,9 +1,10 @@
 {
-  "name": "@govuk-react/grid-row",
+  "name": "@govuk-react/skip-link",
   "version": "0.6.0",
   "dependencies": {
     "@govuk-react/constants": "^0.6.0",
-    "@govuk-react/lib": "^0.6.0"
+    "@govuk-react/lib": "^0.6.0",
+    "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
     "react": ">=16.2.0",
@@ -19,8 +20,8 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/grid-row",
-  "description": "GridRow component for use around GridCol components - includes media query breakpoints.",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/skip-link",
+  "description": "govuk-react SkipLink component.",
   "private": false,
   "publishConfig": {
     "access": "public"

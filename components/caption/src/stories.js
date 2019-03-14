@@ -1,6 +1,7 @@
 import React from 'react';
+import { CAPTION_SIZES, HEADING_SIZES, TYPOGRAPHY_SCALE } from '@govuk-react/constants';
 import { storiesOf } from '@storybook/react';
-import { text, withKnobs } from '@storybook/addon-knobs/react';
+import { select, text, withKnobs } from '@storybook/addon-knobs/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 
 import Heading from '@govuk-react/heading';
@@ -19,17 +20,22 @@ stories.add('Component default', () => (
   <CaptionWithKnobs />
 ));
 
+
+const arrTypography = Object.keys(TYPOGRAPHY_SCALE);
+const captionOptions = [...Object.keys(CAPTION_SIZES), ...arrTypography];
+const headingOptions = [...Object.keys(HEADING_SIZES), ...arrTypography];
+
 examples.add('Placed with a heading component', () => (
   <div>
-    <Caption size={text('size', 'XL')}>{text('children', 'Supporting heading text')}</Caption>
-    <Heading size={text('heading size', 'XL')}>{text('heading', 'Main heading text')}</Heading>
+    <Caption size={select('size', captionOptions, 'XL')}>{text('children', 'Supporting heading text')}</Caption>
+    <Heading size={select('heading size', headingOptions, 'XL')}>{text('heading', 'Main heading text')}</Heading>
   </div>
 ));
 
 examples.add('Placed inside a heading component', () => (
   <div>
-    <Heading size={text('heading size', 'XL')}>
-      <Caption size={text('size', 'XL')}>{text('children', 'Supporting heading text')}</Caption>
+    <Heading size={select('heading size', headingOptions, 'XL')}>
+      <Caption size={select('size', captionOptions, 'XL')}>{text('children', 'Supporting heading text')}</Caption>
       {text('heading', 'Main heading text')}
     </Heading>
   </div>

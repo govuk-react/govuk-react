@@ -26,40 +26,6 @@
     "create-component": "node ./scripts/createComponent.js",
     "chromatic-test": "cd packages/storybook && yarn chromatic-test"
   },
-  "jest": {
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "<rootDir>/{components,packages}/*/src/**.js",
-      "!<rootDir>/{components,packages}/*/src/**/{stories,example,fixtures}.js",
-      "!<rootDir>/packages/storybook/**",
-      "!<rootDir>/packages/api-docs/**",
-      "!<rootDir>/packages/storybook-components/**"
-    ],
-    "setupTestFrameworkScriptFile": "<rootDir>/scripts/setupTests.js",
-    "testMatch": [
-      "<rootDir>/{components,packages}/*/src/**/?(*.)(spec|test).js?(x)"
-    ],
-    "testEnvironment": "node",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx)$": "babel-jest"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-    ],
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
-  },
   "description": "A port of the govuk-frontend components for React using styled-components.",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -89,7 +55,6 @@
     "@storybook/addon-knobs": "^4.1.13",
     "@storybook/addons": "^4.1.13",
     "@storybook/react": "^4.1.13",
-    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-plugin-add-module-exports": "^1.0.0",
@@ -112,14 +77,14 @@
     "eslint-plugin-react": "^7.5.1",
     "final-form": "^4.2.0",
     "flow-bin": "^0.71.0",
-    "jest": "^23.6.0",
+    "jest": "^24.4.0",
     "jest-styled-components": "^6.3.1",
     "lerna": "2.11",
     "mkdirp-promise": "^5.0.1",
     "prop-types": "^15.6.0",
-    "react": "^16.2.0",
+    "react": "^16.8.4",
     "react-docgen": "^3.0.0",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.8.4",
     "react-final-form": "^3.1.0",
     "react-markdown": "^3.3.2",
     "react-router-dom": "^4.2.2",

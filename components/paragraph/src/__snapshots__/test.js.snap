@@ -76,6 +76,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
         "link",
         "inlineCode",
         "code",
+        "text",
       ]
     }
     escapeHtml={false}
@@ -98,6 +99,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
           "link",
           "inlineCode",
           "code",
+          "text",
         ]
       }
       escapeHtml={false}
@@ -186,7 +188,6 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
           "uriTransformer": [Function],
           "warnTooManyClasses": [Function],
           "withComponent": [Function],
-          Symbol(Symbol.hasInstance): [Function],
         }
       }
       forwardedRef={null}
@@ -209,6 +210,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
             "link",
             "inlineCode",
             "code",
+            "text",
           ]
         }
         astPlugins={Array []}

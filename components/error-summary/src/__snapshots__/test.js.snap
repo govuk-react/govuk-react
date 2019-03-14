@@ -574,6 +574,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                     "link",
                     "inlineCode",
                     "code",
+                    "text",
                   ]
                 }
                 escapeHtml={false}
@@ -597,6 +598,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       "link",
                       "inlineCode",
                       "code",
+                      "text",
                     ]
                   }
                   escapeHtml={false}
@@ -685,7 +687,6 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       "uriTransformer": [Function],
                       "warnTooManyClasses": [Function],
                       "withComponent": [Function],
-                      Symbol(Symbol.hasInstance): [Function],
                     }
                   }
                   forwardedRef={null}
@@ -709,6 +710,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                         "link",
                         "inlineCode",
                         "code",
+                        "text",
                       ]
                     }
                     astPlugins={Array []}
