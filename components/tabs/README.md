@@ -9,7 +9,7 @@ Tabs
 
 ### Import
 ```js
-import Tabs, { Tab, List, Panel, Title } from '@govuk-react/tabs';
+import Tabs from '@govuk-react/tabs';
 ```
 
 ##### Simple Example
@@ -40,25 +40,25 @@ class App extends Component {
     const { tabIndex } = this.state;
     return (
       <Tabs>
-        <Title>Content</Title>
-        <List>
-          <Tab
+        <Tabs.Title>Content</Tabs.Title>
+        <Tabs.List>
+          <Tabs.Tab
             onClick={(event) => this.handleClick(event, 0)}
             selected={tabIndex === 0}
             href="#first-panel"
           >
             Title 1
-          </Tab>
-          <Tab
+          </Tabs.Tab>
+          <Tabs.Tab
             onClick={(event) => this.handleClick(event, 1)}
             selected={tabIndex === 1}
             href="#second-panel"
           >
             Title 2
-          </Tab>
-        </List>
-        <Panel selected={tabIndex === 0} id="first-panel">Panel content 1</Panel>
-        <Panel selected={tabIndex === 1} id="second-panel" >Panel content 2</Panel>
+          </Tabs.Tab>
+        </Tabs.List>
+        <Tabs.Panel selected={tabIndex === 0} id="first-panel">Panel content 1</Panel>
+        <Tabs.Panel selected={tabIndex === 1} id="second-panel" >Panel content 2</Panel>
       </Tabs>
     );
   }
@@ -67,63 +67,61 @@ class App extends Component {
 
 ##### Hooks Example
 ```js
-const App = ({ defaultIndex}) => {
- const [tabIndex, setTabIndex] = React.useState(defaultIndex);
+const App = ({ defaultIndex }) => {
+  const [tabIndex, setTabIndex] = React.useState(defaultIndex);
 
- const handleTabChange = newTabIndex => setTabIndex(newTabIndex);
+  const handleTabChange = newTabIndex => setTabIndex(newTabIndex);
 
- function handleClick({ event: e, index }) {
-   const mql = window.matchMedia(`(min-width: ${BREAKPOINTS.TABLET})`);
-   if (mql.matches) {
-     e.preventDefault();
-   }
-   return handleTabChange(index);
- }
-
- return (
-<Tabs>
-  <Tabs.Title>Content</Tabs.Title>
-  <Tabs.List>
-    {[
-      {
-        content: 'Title 1',
-        href: '#first-panel',
-      },
-      {
-        content: 'Title 2',
-        href: '#second-panel',
-      },
-    ].map(({ content, href }, index) => (
-      <Tabs.Tab
-          onClick={(event) => handleClick({ event, index })}
-          selected={tabIndex === index}
-          href={href}
-        >
-          {content}
-        </Tab>
-      ))
+  function handleClick({ event: e, index }) {
+    const mql = window.matchMedia(`(min-width: ${BREAKPOINTS.TABLET})`);
+    if (mql.matches) {
+      e.preventDefault();
     }
-  </Tabs.List>
-    {[
-      {
-        content: 'Panel content 1',
-        id: 'first-panel',
-      },
-      {
-        content: 'Panel content 2',
-        id: 'second-panel',
-      },
-    ].map(({ content, id }, index) => (
-      <Tabs.Panel
+    return handleTabChange(index);
+  }
+
+  return (
+    <Tabs>
+      <Tabs.Title>Content</Tabs.Title>
+      <Tabs.List>
+       {[
+          {
+            content: 'Title 1',
+            href: '#first-panel',
+          },
+          {
+            content: 'Title 2',
+            href: '#second-panel',
+          },
+        ].map(({ content, href }, index) => (
+          <Tabs.Tab
+            onClick={(event) => handleClick({ event, index })}
+            selected={tabIndex === index}
+            href={href}
+          >
+           {content}
+          </Tabs.Tab>
+        ))}
+      </Tabs.List>
+      {[
+        {
+          content: 'Panel content 1',
+          id: 'first-panel',
+        },
+        {
+          content: 'Panel content 2',
+          id: 'second-panel',
+        },
+      ].map(({ content, id }, index) => (
+        <Tabs.Panel
           selected={tabIndex === index}
           id={id}
         >
-          {content}
+         {content}
         </Tabs.Panel>
-      ))
-    }
-   </Tabs>
- );
+      ))}
+    </Tabs>
+  );
 }
 
 ```
@@ -132,5 +130,10 @@ const App = ({ defaultIndex}) => {
 ### References:
 - https://github.com/alphagov/govuk-frontend/tree/master/src/components/tabs
 - https://design-system.service.gov.uk/components/tabs/
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true | `````` | node | child components that will appear in the Tabs section
 
 

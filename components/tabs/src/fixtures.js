@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { BREAKPOINTS } from '@govuk-react/constants';
 import { H2, H4 } from '@govuk-react/heading';
 import SectionBreak from '@govuk-react/section-break';
@@ -23,6 +24,14 @@ function handleClick({ event: e, index }) {
   }
   return this.setTabIndex(index);
 }
+
+const sharedDefaultProps = {
+  defaultIndex: 0,
+};
+
+const sharedPropTypes = {
+  defaultIndex: PropTypes.number,
+};
 
 const tableHead = (
   <Table.Row>
@@ -56,9 +65,9 @@ const arrTabularTabs = [
 ];
 
 class TableTabs extends Component {
-  constructor() {
-    super();
-    this.state = { tabIndex: 0 };
+  constructor(props) {
+    super(props);
+    this.state = { tabIndex: props.defaultIndex };
     this.setTabIndex = setTabIndex.bind(this);
     this.handleClick = handleClick.bind(this);
   }
@@ -103,11 +112,15 @@ class TableTabs extends Component {
   }
 }
 
+TableTabs.defaultProps = sharedDefaultProps;
+
+TableTabs.propTypes = sharedPropTypes;
+
 /* eslint-disable-next-line react/no-multi-comp */
 class SimpleTabs extends Component {
-  constructor() {
-    super();
-    this.state = { tabIndex: 0 };
+  constructor(props) {
+    super(props);
+    this.state = { tabIndex: props.defaultIndex };
     this.setTabIndex = setTabIndex.bind(this);
     this.handleClick = handleClick.bind(this);
   }
@@ -140,6 +153,10 @@ class SimpleTabs extends Component {
   }
 }
 
+SimpleTabs.defaultProps = sharedDefaultProps;
+
+SimpleTabs.propTypes = sharedPropTypes;
+
 const arrSimpleMapped = [
   {
     contentListItem: 'Title 1',
@@ -155,9 +172,9 @@ const arrSimpleMapped = [
 
 /* eslint-disable-next-line react/no-multi-comp */
 class SimpleMapTabs extends Component {
-  constructor() {
-    super();
-    this.state = { tabIndex: 0 };
+  constructor(props) {
+    super(props);
+    this.state = { tabIndex: props.defaultIndex };
     this.setTabIndex = setTabIndex.bind(this);
     this.handleClick = handleClick.bind(this);
   }
@@ -195,6 +212,10 @@ class SimpleMapTabs extends Component {
   }
 }
 
+SimpleMapTabs.defaultProps = sharedDefaultProps;
+
+SimpleMapTabs.propTypes = sharedPropTypes;
+
 const arrProposedBabel = [
   {
     contentListItem: 'Title 1',
@@ -210,7 +231,11 @@ const arrProposedBabel = [
 
 /* eslint-disable-next-line react/no-multi-comp */
 class ProposedClassPropertiesPlugin extends Component {
-  state = { tabIndex: 0 };
+  static defaultProps = sharedDefaultProps;
+
+  static propTypes = sharedPropTypes;
+
+  state = { tabIndex: this.props.defaultIndex };
 
   setTabIndex = setTabIndex;
 
@@ -251,4 +276,68 @@ class ProposedClassPropertiesPlugin extends Component {
   }
 }
 
-export { ProposedClassPropertiesPlugin, SimpleTabs, SimpleMapTabs, TableTabs };
+const HooksExample = ({ defaultIndex }) => {
+  const [tabIndex, setHooksTabIndex] = React.useState(defaultIndex);
+
+  const handleTabChange = newTabIndex => setHooksTabIndex(newTabIndex);
+
+  function hooksHandleClick({ event: e, index }) {
+    /* eslint-disable-next-line no-undef */
+    const mql = window.matchMedia(`(min-width: ${BREAKPOINTS.TABLET})`);
+    if (mql.matches) {
+      e.preventDefault();
+    }
+    return handleTabChange(index);
+  }
+
+  return (
+    <Tabs>
+      <Tabs.Title>Content</Tabs.Title>
+      <Tabs.List>
+        {[
+         {
+           content: 'Hooks Title 1',
+           href: '#first-panel',
+         },
+         {
+           content: 'Hooks Title 2',
+           href: '#second-panel',
+         },
+       ].map(({ content, href }, index) => (
+         <Tabs.Tab
+           onClick={event => hooksHandleClick({ event, index })}
+           selected={tabIndex === index}
+           href={href}
+         >
+           {content}
+         </Tabs.Tab>
+         ))
+       }
+      </Tabs.List>
+      {[
+         {
+           content: 'Hooks Panel content 1',
+           id: 'first-panel',
+         },
+         {
+           content: 'Hooks Panel content 2',
+           id: 'second-panel',
+         },
+       ].map(({ content, id }, index) => (
+         <Tabs.Panel
+           selected={tabIndex === index}
+           id={id}
+         >
+           {content}
+         </Tabs.Panel>
+         ))
+       }
+    </Tabs>
+  );
+};
+
+HooksExample.defaultProps = sharedDefaultProps;
+
+HooksExample.propTypes = sharedPropTypes;
+
+export { HooksExample, ProposedClassPropertiesPlugin, SimpleTabs, SimpleMapTabs, TableTabs };

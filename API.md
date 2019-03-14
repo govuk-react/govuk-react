@@ -131,12 +131,9 @@ import { ButtonArrow } from '@govuk-react/icons';
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `buttonColour` |  | ```undefined``` | string | Override for default button colour
- `buttonHoverColour` |  | ```undefined``` | string | Override for default button hover colour,
-<br/>which defaults to `buttonColour` darkened by 5%
- `buttonShadowColour` |  | ```undefined``` | string | Override for default button shadow colour,
-<br/>which defaults to `buttonColour` darkened by 15%
- `buttonTextColour` |  | ```undefined``` | string | Override for default button text colour,
-<br/>which defaults to govuk white
+ `buttonHoverColour` |  | ```undefined``` | string | Override for default button hover colour,<br/>which defaults to `buttonColour` darkened by 5%
+ `buttonShadowColour` |  | ```undefined``` | string | Override for default button shadow colour,<br/>which defaults to `buttonColour` darkened by 15%
+ `buttonTextColour` |  | ```undefined``` | string | Override for default button text colour,<br/>which defaults to govuk white
  `children` | true | `````` | node | Button text
  `disabled` |  | ```false``` | bool | Renders a disabled button and removes pointer events if set to true
  `icon` |  | ```undefined``` | node | Button icon
@@ -175,9 +172,7 @@ import { H1 } from '@govuk-react/heading';
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | string | Text to be rendered as a caption
- `size` |  | ```'XL'``` | enum(...Object.keys(CAPTION_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:
-<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `XL`, `L`, `M`
-<br/>   or a numeric size that fits in the GDS font scale list
+ `size` |  | ```'XL'``` | enum(...Object.keys(CAPTION_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `XL`, `L`, `M`<br/>   or a numeric size that fits in the GDS font scale list
 
 
 Checkbox
@@ -687,10 +682,8 @@ Prop | Required | Default | Type | Description
  `columnOneThird` |  | ```false``` | bool | Dimension setting for the column (deprecated)
  `columnThreeQuarters` |  | ```false``` | bool | Dimension setting for the column (deprecated)
  `columnTwoThirds` |  | ```false``` | bool | Dimension setting for the column (deprecated)
- `setDesktopWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set desktop column to width using value or descriptive string
-<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
- `setWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set column to width using value or descriptive string
-<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
+ `setDesktopWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set desktop column to width using value or descriptive string<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
+ `setWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set column to width using value or descriptive string<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
 
 
 GridRow
@@ -750,9 +743,7 @@ Please use the `Heading` component instead.
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `level` |  | ```1``` | number | Semantic heading level value between 1 and 6
- `size` |  | ```undefined``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:
-<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`
-<br/>   or a numeric size that fits in the GDS font scale list
+ `size` |  | ```undefined``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
 
 
 Heading
@@ -811,9 +802,9 @@ Props pass through
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `as` |  | ```undefined``` | string | Semantic heading tag to use (e.g. 'h3')<br/>By default element used will be an 'h1'
+ `as` |  | ```undefined``` | string | Semantic heading tag to use (e.g. 'h3')<br/>By default element used will be an 'h1'
  `level` |  | ```undefined``` | number | Semantic heading level value between 1 and 6 (deprecated)
- `size` |  | ```'XLARGE'``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
+ `size` |  | ```'XLARGE'``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
 
 
 HintText
@@ -1411,9 +1402,9 @@ import { H1 } from '@govuk-react/heading';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `beforeChildren` |  | ```undefined``` | node | Content that needs to appear outside the main page wrapper (see `main`).<br/>For example: A back link component, breadcrumbs, phase banner component
+ `beforeChildren` |  | ```undefined``` | node | Content that needs to appear outside the main page wrapper (see `main`).<br/>For example: A back link component, breadcrumbs, phase banner component
  `children` |  | ```undefined``` | node | Page contents
- `container` |  | ```Page.WidthContainer``` | func | Override the default page container component.<br/>`beforeChildren` and `children` (wrapped in `main`) will be placed inside this component.
+ `container` |  | ```Page.WidthContainer``` | func | Override the default page container component.<br/>`beforeChildren` and `children` (wrapped in `main`) will be placed inside this component.
  `footer` |  | ```undefined``` | node | Override the default page footer component.
  `header` |  | ```<TopNav />``` | node | Override the default page header component.
  `main` |  | ```Page.Main``` | func | Override the default wrapper component for main page content
@@ -2038,7 +2029,7 @@ Tabs
 
 ### Import
 ```js
-import Tabs, { Tab, List, Panel, Title } from '@govuk-react/tabs';
+import Tabs from '@govuk-react/tabs';
 ```
 
 ##### Simple Example
@@ -2069,25 +2060,25 @@ class App extends Component {
     const { tabIndex } = this.state;
     return (
       <Tabs>
-        <Title>Content</Title>
-        <List>
-          <Tab
+        <Tabs.Title>Content</Tabs.Title>
+        <Tabs.List>
+          <Tabs.Tab
             onClick={(event) => this.handleClick(event, 0)}
             selected={tabIndex === 0}
             href="#first-panel"
           >
             Title 1
-          </Tab>
-          <Tab
+          </Tabs.Tab>
+          <Tabs.Tab
             onClick={(event) => this.handleClick(event, 1)}
             selected={tabIndex === 1}
             href="#second-panel"
           >
             Title 2
-          </Tab>
-        </List>
-        <Panel selected={tabIndex === 0} id="first-panel">Panel content 1</Panel>
-        <Panel selected={tabIndex === 1} id="second-panel" >Panel content 2</Panel>
+          </Tabs.Tab>
+        </Tabs.List>
+        <Tabs.Panel selected={tabIndex === 0} id="first-panel">Panel content 1</Panel>
+        <Tabs.Panel selected={tabIndex === 1} id="second-panel" >Panel content 2</Panel>
       </Tabs>
     );
   }
@@ -2096,63 +2087,61 @@ class App extends Component {
 
 ##### Hooks Example
 ```js
-const App = ({ defaultIndex}) => {
- const [tabIndex, setTabIndex] = React.useState(defaultIndex);
+const App = ({ defaultIndex }) => {
+  const [tabIndex, setTabIndex] = React.useState(defaultIndex);
 
- const handleTabChange = newTabIndex => setTabIndex(newTabIndex);
+  const handleTabChange = newTabIndex => setTabIndex(newTabIndex);
 
- function handleClick({ event: e, index }) {
-   const mql = window.matchMedia(`(min-width: ${BREAKPOINTS.TABLET})`);
-   if (mql.matches) {
-     e.preventDefault();
-   }
-   return handleTabChange(index);
- }
-
- return (
-<Tabs>
-  <Tabs.Title>Content</Tabs.Title>
-  <Tabs.List>
-    {[
-      {
-        content: 'Title 1',
-        href: '#first-panel',
-      },
-      {
-        content: 'Title 2',
-        href: '#second-panel',
-      },
-    ].map(({ content, href }, index) => (
-      <Tabs.Tab
-          onClick={(event) => handleClick({ event, index })}
-          selected={tabIndex === index}
-          href={href}
-        >
-          {content}
-        </Tab>
-      ))
+  function handleClick({ event: e, index }) {
+    const mql = window.matchMedia(`(min-width: ${BREAKPOINTS.TABLET})`);
+    if (mql.matches) {
+      e.preventDefault();
     }
-  </Tabs.List>
-    {[
-      {
-        content: 'Panel content 1',
-        id: 'first-panel',
-      },
-      {
-        content: 'Panel content 2',
-        id: 'second-panel',
-      },
-    ].map(({ content, id }, index) => (
-      <Tabs.Panel
+    return handleTabChange(index);
+  }
+
+  return (
+    <Tabs>
+      <Tabs.Title>Content</Tabs.Title>
+      <Tabs.List>
+       {[
+          {
+            content: 'Title 1',
+            href: '#first-panel',
+          },
+          {
+            content: 'Title 2',
+            href: '#second-panel',
+          },
+        ].map(({ content, href }, index) => (
+          <Tabs.Tab
+            onClick={(event) => handleClick({ event, index })}
+            selected={tabIndex === index}
+            href={href}
+          >
+           {content}
+          </Tabs.Tab>
+        ))}
+      </Tabs.List>
+      {[
+        {
+          content: 'Panel content 1',
+          id: 'first-panel',
+        },
+        {
+          content: 'Panel content 2',
+          id: 'second-panel',
+        },
+      ].map(({ content, id }, index) => (
+        <Tabs.Panel
           selected={tabIndex === index}
           id={id}
         >
-          {content}
+         {content}
         </Tabs.Panel>
-      ))
-    }
-   </Tabs>
- );
+      ))}
+    </Tabs>
+  );
 }
 
 ```
@@ -2161,6 +2150,11 @@ const App = ({ defaultIndex}) => {
 ### References:
 - https://github.com/alphagov/govuk-frontend/tree/master/src/components/tabs
 - https://design-system.service.gov.uk/components/tabs/
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` | true | `````` | node | child components that will appear in the Tabs section
 
 
 Tag
