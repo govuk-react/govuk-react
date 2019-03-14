@@ -15,6 +15,7 @@ import generateMarkdown from './markdown/generateMarkdown';
 const components = require('govuk-react');
 
 function getComponentFolderName(file) {
+  // '/' rather than 'path.sep' as, on Windows, the path has already been converted at this point
   const dirs = path.dirname(file).split('/');
   let dir = dirs[dirs.length - 1];
   if (dir === 'src' || dir === 'lib') {
@@ -73,8 +74,10 @@ async function generateApiForFiles(files) {
   return md;
 }
 
-// unix-like Operating systems requires quotation marks in it's string in the command line
-// whereas windows requires no quotation marks. This approach is to support more kernals
+// Unix-like shells require quotation marks around
+// arguments on the command line to prevent path expansion,
+// whereas windows requires no quotation marks.
+// This approach is to support more shells.
 function dequote(string) {
   return string.replace(/^'(.*)'$/, '$1');
 }
