@@ -574,6 +574,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                     "link",
                     "inlineCode",
                     "code",
+                    "text",
                   ]
                 }
                 escapeHtml={false}
@@ -597,6 +598,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       "link",
                       "inlineCode",
                       "code",
+                      "text",
                     ]
                   }
                   escapeHtml={false}
@@ -708,6 +710,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                         "link",
                         "inlineCode",
                         "code",
+                        "text",
                       ]
                     }
                     astPlugins={Array []}
