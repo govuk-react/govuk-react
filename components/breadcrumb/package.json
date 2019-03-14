@@ -1,10 +1,10 @@
 {
   "name": "@govuk-react/breadcrumb",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "dependencies": {
-    "@govuk-react/constants": "^0.6.0",
-    "@govuk-react/hoc": "^0.6.0",
-    "@govuk-react/lib": "^0.6.0",
+    "@govuk-react/constants": "^0.7.0",
+    "@govuk-react/hoc": "^0.7.0",
+    "@govuk-react/lib": "^0.7.0",
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
