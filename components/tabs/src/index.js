@@ -159,4 +159,6 @@ Tabs.List = List;
 Tabs.Panel = Panel;
 Tabs.Title = Title;
 
+export { Tab, List, Panel, Title };
+
 export default Tabs;
