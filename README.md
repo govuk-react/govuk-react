@@ -106,8 +106,11 @@ We use [Chromaticqa](https://www.chromaticqa.com/) for visual regression testing
 ## Contributors
 
 - [Alasdair McLeay](https://github.com/penx)
+- [David Murdoch](https://github.com/dsm23)
 - [Gavin Orland](https://github.com/gavinorland)
 - [Mark Chambers](https://github.com/marksy)
 - [Steve Sims](https://github.com/stevesims)
 - [Taran Chauhan](https://github.com/taranchauhan)
 - [Toby Brancher](https://github.com/Loque-)
+
+Want to contribute? Checkout our [Contributing page](CONTRIBUTING.md).

@@ -7,6 +7,8 @@ The following is a set of resources and recommendations provided by the authors 
 
 We would recommend using server side or universal rendering for a React application due to benefits of performance and robustness.
 
+Our understanding is that if you need to meet the [UK Government Service Standard](https://www.gov.uk/service-manual/service-standard) then you must use server side rendering, as the [progressive enhancement](https://www.gov.uk/service-manual/technology/using-progressive-enhancement) guidance is assessed under [points 12](https://www.gov.uk/service-manual/service-standard/create-a-service-thats-simple) and [13](https://www.gov.uk/service-manual/service-standard/make-the-user-experience-consistent-with-govuk). 
+
 ## Building a service
 
 If you are building a govuk service, you must follow the Digital Service Standard:
@@ -50,6 +52,7 @@ We are waiting GDS to provide more concrete details on what these specific devic
 - https://almerosteyn.com/2017/03/accessible-react-navigation
 - https://simplyaccessible.com/article/react-a11y/
 - https://github.com/ReactTraining/react-router/issues/5210
+- https://github.com/gatsbyjs/gatsby/issues/5581
 
 ## Form submission in universal rendered applications
 
