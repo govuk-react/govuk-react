@@ -29,12 +29,13 @@ exports[`GridRow matches snapshot: enzyme.mount 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "display: flex; flex-direction: column; margin: 0 -15px; @media only screen and (min-width: 641px) {
   flex-direction: row;
 }",
+              [Function],
             ],
           },
           "displayName": "styled.div",
