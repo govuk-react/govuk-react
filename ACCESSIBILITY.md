@@ -5,7 +5,7 @@ The following is a set of resources and recommendations provided by the authors 
 
 ## Server side rendering
 
-We would recommend using server side or universal rendering for a React application due to benefits of performance and robustness.
+We would recommend using server side or universal rendering for a React application due to benefits of performance and robustness. Our understanding is that if you need to meet the UK Government Service Standard then you must use server side rendering. 
 
 ## Building a service
 
@@ -50,6 +50,7 @@ We are waiting GDS to provide more concrete details on what these specific devic
 - https://almerosteyn.com/2017/03/accessible-react-navigation
 - https://simplyaccessible.com/article/react-a11y/
 - https://github.com/ReactTraining/react-router/issues/5210
+- https://github.com/gatsbyjs/gatsby/issues/5581
 
 ## Form submission in universal rendered applications
 
