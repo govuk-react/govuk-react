@@ -45,6 +45,7 @@ export { default as Select } from '@govuk-react/select';
 export { default as SkipLink } from '@govuk-react/skip-link';
 export { default as SupportingHeader } from '@govuk-react/supporting-header';
 export { default as Table } from '@govuk-react/table';
+export { default as Tabs } from '@govuk-react/tabs';
 export { default as Tag } from '@govuk-react/tag';
 export { default as TextArea } from '@govuk-react/text-area';
 export { default as TopNav } from '@govuk-react/top-nav';
