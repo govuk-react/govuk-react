@@ -1001,7 +1001,6 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                                         "toString": [Function],
                                         "warnTooManyClasses": [Function],
                                         "withComponent": [Function],
-                                        Symbol(Symbol.hasInstance): [Function],
                                       }
                                     }
                                     forwardedRef={null}
@@ -2059,7 +2058,6 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                                         "toString": [Function],
                                         "warnTooManyClasses": [Function],
                                         "withComponent": [Function],
-                                        Symbol(Symbol.hasInstance): [Function],
                                       }
                                     }
                                     forwardedRef={null}
@@ -2142,7 +2140,6 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                                         "toString": [Function],
                                         "warnTooManyClasses": [Function],
                                         "withComponent": [Function],
-                                        Symbol(Symbol.hasInstance): [Function],
                                       }
                                     }
                                     forwardedRef={null}

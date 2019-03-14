@@ -438,7 +438,6 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
-                          Symbol(Symbol.hasInstance): [Function],
                         }
                       }
                       forwardedRef={null}
@@ -625,7 +624,6 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
-                          Symbol(Symbol.hasInstance): [Function],
                         }
                       }
                       forwardedRef={null}
@@ -812,7 +810,6 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
-                          Symbol(Symbol.hasInstance): [Function],
                         }
                       }
                       forwardedRef={null}
@@ -1340,7 +1337,6 @@ exports[`DateField should support null value: null value 1`] = `
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
-                          Symbol(Symbol.hasInstance): [Function],
                         }
                       }
                       forwardedRef={null}
@@ -1527,7 +1523,6 @@ exports[`DateField should support null value: null value 1`] = `
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
-                          Symbol(Symbol.hasInstance): [Function],
                         }
                       }
                       forwardedRef={null}
@@ -1714,7 +1709,6 @@ exports[`DateField should support null value: null value 1`] = `
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
-                          Symbol(Symbol.hasInstance): [Function],
                         }
                       }
                       forwardedRef={null}
@@ -2258,7 +2252,6 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
-                          Symbol(Symbol.hasInstance): [Function],
                         }
                       }
                       forwardedRef={null}
@@ -2448,7 +2441,6 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
-                          Symbol(Symbol.hasInstance): [Function],
                         }
                       }
                       forwardedRef={null}
@@ -2638,7 +2630,6 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
-                          Symbol(Symbol.hasInstance): [Function],
                         }
                       }
                       forwardedRef={null}

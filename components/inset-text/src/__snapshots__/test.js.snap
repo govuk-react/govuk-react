@@ -284,7 +284,6 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                   "uriTransformer": [Function],
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
-                  Symbol(Symbol.hasInstance): [Function],
                 }
               }
               forwardedRef={null}
