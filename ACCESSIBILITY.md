@@ -5,7 +5,9 @@ The following is a set of resources and recommendations provided by the authors 
 
 ## Server side rendering
 
-We would recommend using server side or universal rendering for a React application due to benefits of performance and robustness. Our understanding is that if you need to meet the UK Government Service Standard then you must use server side rendering. 
+We would recommend using server side or universal rendering for a React application due to benefits of performance and robustness.
+
+Our understanding is that if you need to meet the [UK Government Service Standard](https://www.gov.uk/service-manual/service-standard) then you must use server side rendering, as the [progressive enhancement](https://www.gov.uk/service-manual/technology/using-progressive-enhancement) guidance is assesed under [points 12](https://www.gov.uk/service-manual/service-standard/create-a-service-thats-simple) and [13](https://www.gov.uk/service-manual/service-standard/make-the-user-experience-consistent-with-govuk). 
 
 ## Building a service
 
