@@ -15,7 +15,7 @@ const spacingSimple5 = spacing.simple(5);
 const StyledListItem = styled('li')({
   marginLeft: spacingSimple5,
   ':before': {
-    content: "'\\2014 '",
+    content: "'\\2014  '",
     marginLeft: -spacingSimple5,
     paddingRight: spacingSimple1,
   },

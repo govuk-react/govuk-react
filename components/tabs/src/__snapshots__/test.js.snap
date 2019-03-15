@@ -24,7 +24,7 @@ exports[`Tabs matches wrapper snapshot 1`] = `
 }
 
 .c3:before {
-  content: '\\2014 ';
+  content: '\\2014  ';
   margin-left: -25px;
   padding-right: 5px;
 }
