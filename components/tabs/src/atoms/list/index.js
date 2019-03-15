@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { GREY_2 } from 'govuk-colours';
+import { BORDER_COLOUR } from 'govuk-colours';
 import { spacing } from '@govuk-react/lib';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
 
@@ -20,7 +20,7 @@ const TabList = styled('ul')(
     padding: 0,
     listStyle: 'none',
     [MEDIA_QUERIES.TABLET]: {
-      borderBottom: `1px solid ${GREY_2}`,
+      borderBottom: `1px solid ${BORDER_COLOUR}`,
       marginBottom: 0,
       ...clearfix,
     },
