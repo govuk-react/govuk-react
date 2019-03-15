@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { TEXT_COLOUR } from 'govuk-colours';
 import { spacing, typography } from '@govuk-react/lib';
 
 import List from './atoms/list';
@@ -11,11 +10,9 @@ import Title from './atoms/title';
 
 const TabsContainer = styled('div')(
   typography.font({ size: 19 }),
-  {
-    color: TEXT_COLOUR,
-    marginTop: spacing.responsive({ size: 1, property: 'margin', direction: 'top' }),
-    marginBottom: spacing.responsive({ size: 6, property: 'margin', direction: 'bottom' }),
-  },
+  typography.textColour,
+  spacing.responsiveMargin({ size: 1, direction: 'top' }),
+  spacing.responsiveMargin({ size: 6, direction: 'bottom' }),
   spacing.withWhiteSpace(),
 );
 
