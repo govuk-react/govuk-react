@@ -65,11 +65,9 @@ const StyledHyperLink = styled('a')(
   })
 );
 
-const Tab = ({ children, href, onClick, selected }) => (
+const Tab = props => (
   <StyledListItem>
-    <StyledHyperLink selected={selected} onClick={onClick} href={href}>
-      {children}
-    </StyledHyperLink>
+    <StyledHyperLink {...props} />
   </StyledListItem>
 );
 
