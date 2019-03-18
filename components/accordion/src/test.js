@@ -5,7 +5,7 @@ import { FOCUS_WIDTH } from '@govuk-react/constants';
 
 import 'jest-dom/extend-expect';
 
-import { ExampleWithoutSummaries } from './fixtures';
+import { ExampleWithSummaries, ExampleWithoutSummaries } from './fixtures';
 
 const focusedStyle = `
   outline: ${FOCUS_WIDTH} solid ${YELLOW};
@@ -49,20 +49,39 @@ describe('Tabs', () => {
   it('clicking button toggles visible children', () => {
     const { container, queryByText } = render(<ExampleWithoutSummaries
       initialState={{
-        accordionOne: false,
+        accordionOne: true,
         accordionTwo: false,
         accordionThree: false,
         accordionFour: false,
       }}
     />);
     const firstButton = container.querySelector('button');
-    fireEvent.click(firstButton);
 
     const children = queryByText('This is the content for writing well for the web.');
 
     expect(children).toBeInTheDocument();
 
     fireEvent.click(firstButton);
+
+    expect(children).not.toBeInTheDocument();
+  });
+
+  it('clicking close all toggles visible children', () => {
+    const { container, queryByText } = render(<ExampleWithoutSummaries
+      initialState={{
+        accordionOne: true,
+        accordionTwo: true,
+        accordionThree: true,
+        accordionFour: true,
+      }}
+    />);
+    const closeAll = container.querySelector('a');
+
+    const children = queryByText('This is the content for How people read.');
+
+    expect(children).toBeInTheDocument();
+
+    fireEvent.click(closeAll);
 
     expect(children).not.toBeInTheDocument();
   });
@@ -79,6 +98,15 @@ describe('Tabs', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  // TODO: test for clicking between tabs above media Queries width.
-  // Not currently possible with jsdom
+  it('covers summary branch5', () => {
+    const { asFragment } = render(<ExampleWithSummaries
+      initialState={{
+        accordionOne: false,
+        accordionTwo: false,
+        accordionThree: false,
+        accordionFour: false,
+      }}
+    />);
+    expect(asFragment()).toMatchSnapshot();
+  });
 });

@@ -4,14 +4,14 @@ import styled from 'styled-components';
 import { BORDER_COLOUR } from 'govuk-colours';
 import { spacing } from '@govuk-react/lib';
 
-import Group from './molecules/Group';
-import Icon from './atoms/Icon';
-import OpenAll from './atoms/OpenAll';
-import SectionButton from './atoms/SectionButton';
-import SectionContent from './atoms/SectionContent';
-import SectionHeader from './atoms/SectionHeader';
-import SectionHeading from './atoms/SectionHeading';
-import SectionSummary from './atoms/SectionSummary';
+import Group from './molecules/group';
+import Icon from './atoms/icon';
+import OpenAll from './atoms/open-all';
+import SectionButton from './atoms/section-button';
+import SectionContent from './atoms/section-content';
+import SectionHeader from './atoms/section-header';
+import SectionHeading from './atoms/section-heading';
+import SectionSummary from './atoms/section-summary';
 
 const AccordionContainer = styled('div')(
   spacing.responsive({ size: 6, property: 'margin', direction: 'bottom' }),

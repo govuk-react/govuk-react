@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Icon from '../atoms/Icon';
-import Section from '../atoms/Section';
-import SectionHeader from '../atoms/SectionHeader';
-import SectionHeading from '../atoms/SectionHeading';
-import SectionButton from '../atoms/SectionButton';
-import SectionContent from '../atoms/SectionContent';
-import SectionSummary from '../atoms/SectionSummary';
+import Icon from '../../atoms/icon';
+import Section from '../../atoms/section';
+import SectionHeader from '../../atoms/section-header';
+import SectionHeading from '../../atoms/section-heading';
+import SectionButton from '../../atoms/section-button';
+import SectionContent from '../../atoms/section-content';
+import SectionSummary from '../../atoms/section-summary';
 
 class Group extends Component {
   state = { isFocused: false };

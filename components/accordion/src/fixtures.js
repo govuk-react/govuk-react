@@ -2,7 +2,6 @@ import React, { useMemo, useReducer } from 'react';
 import PropTypes from 'prop-types';
 import Link from '@govuk-react/link';
 import ListNavigation from '@govuk-react/list-navigation';
-import Main from '@govuk-react/main';
 import Paragraph from '@govuk-react/paragraph';
 
 import Accordion from '.';
@@ -12,8 +11,8 @@ const sharedPropTypes = {
 };
 
 const constructFull = ({ bool, state }) =>
-  Object.entries(state).reduce(
-    (prev, [key]) => ({
+  Object.keys(state).reduce(
+    (prev, key) => ({
       ...prev,
       [key]: bool,
     }),
@@ -61,41 +60,39 @@ const ExampleWithoutSummaries = ({ initialState }) => {
   } = useAccordion(initialState);
 
   return (
-    <Main>
-      <Accordion>
-        <Accordion.OpenAll href="#" onClick={toggleAll}>
-          {`${areAllOpen ? 'Close' : 'Open'} all`}
-        </Accordion.OpenAll>
-        <Accordion.Group
-          heading="Writing well for the web"
-          expanded={state.accordionOne}
-          onClick={individualAccordionSetState('accordionOne')}
-        >
-          <Paragraph mb={0}>This is the content for writing well for the web.</Paragraph>
-        </Accordion.Group>
-        <Accordion.Group
-          heading="Writing well for specialists"
-          expanded={state.accordionTwo}
-          onClick={individualAccordionSetState('accordionTwo')}
-        >
-          <Paragraph mb={0}>This is the content for writing well for the specialists.</Paragraph>
-        </Accordion.Group>
-        <Accordion.Group
-          heading="Know your audience"
-          expanded={state.accordionThree}
-          onClick={individualAccordionSetState('accordionThree')}
-        >
-          <Paragraph mb={0}>This is the content for Know you audience.</Paragraph>
-        </Accordion.Group>
-        <Accordion.Group
-          heading="How people read"
-          expanded={state.accordionFour}
-          onClick={individualAccordionSetState('accordionFour')}
-        >
-          <Paragraph mb={0}>This is the content for How people read.</Paragraph>
-        </Accordion.Group>
-      </Accordion>
-    </Main>
+    <Accordion>
+      <Accordion.OpenAll href="#" onClick={toggleAll}>
+        {`${areAllOpen ? 'Close' : 'Open'} all`}
+      </Accordion.OpenAll>
+      <Accordion.Group
+        heading="Writing well for the web"
+        expanded={state.accordionOne}
+        onClick={individualAccordionSetState('accordionOne')}
+      >
+        <Paragraph mb={0}>This is the content for writing well for the web.</Paragraph>
+      </Accordion.Group>
+      <Accordion.Group
+        heading="Writing well for specialists"
+        expanded={state.accordionTwo}
+        onClick={individualAccordionSetState('accordionTwo')}
+      >
+        <Paragraph mb={0}>This is the content for writing well for the specialists.</Paragraph>
+      </Accordion.Group>
+      <Accordion.Group
+        heading="Know your audience"
+        expanded={state.accordionThree}
+        onClick={individualAccordionSetState('accordionThree')}
+      >
+        <Paragraph mb={0}>This is the content for Know you audience.</Paragraph>
+      </Accordion.Group>
+      <Accordion.Group
+        heading="How people read"
+        expanded={state.accordionFour}
+        onClick={individualAccordionSetState('accordionFour')}
+      >
+        <Paragraph mb={0}>This is the content for How people read.</Paragraph>
+      </Accordion.Group>
+    </Accordion>
   );
 };
 
@@ -108,19 +105,18 @@ const ExampleWithSummaries = ({ initialState }) => {
   } = useAccordion(initialState);
 
   return (
-    <Main>
-      <Accordion>
-        <Accordion.OpenAll href="#" onClick={toggleAll}>
-          {`${areAllOpen ? 'Close' : 'Open'} all`}
-        </Accordion.OpenAll>
-        <Accordion.Group
-          heading="Understanding agile project management"
-          summary="Introductions, methods, core features."
-          expanded={state.accordionOne}
-          onClick={individualAccordionSetState('accordionOne')}
-        >
-          <ListNavigation listStyleType="none">
-            {[
+    <Accordion>
+      <Accordion.OpenAll href="#" onClick={toggleAll}>
+        {`${areAllOpen ? 'Close' : 'Open'} all`}
+      </Accordion.OpenAll>
+      <Accordion.Group
+        heading="Understanding agile project management"
+        summary="Introductions, methods, core features."
+        expanded={state.accordionOne}
+        onClick={individualAccordionSetState('accordionOne')}
+      >
+        <ListNavigation listStyleType="none">
+          {[
               'Agile and government services: an introduction',
               'Agile methods: an introduction',
               'Core principles of agile',
@@ -129,16 +125,16 @@ const ExampleWithSummaries = ({ initialState }) => {
                 {elem}
               </Link>
             ))}
-          </ListNavigation>
-        </Accordion.Group>
-        <Accordion.Group
-          heading="Working with agile methods"
-          summary="Workspaces, tools and techniques, user stories, planning."
-          expanded={state.accordionTwo}
-          onClick={individualAccordionSetState('accordionTwo')}
-        >
-          <ListNavigation listStyleType="none">
-            {[
+        </ListNavigation>
+      </Accordion.Group>
+      <Accordion.Group
+        heading="Working with agile methods"
+        summary="Workspaces, tools and techniques, user stories, planning."
+        expanded={state.accordionTwo}
+        onClick={individualAccordionSetState('accordionTwo')}
+      >
+        <ListNavigation listStyleType="none">
+          {[
               'Creating an agile working environment',
               'Agile tools and techniques',
               'Set up a team wall',
@@ -151,16 +147,16 @@ const ExampleWithSummaries = ({ initialState }) => {
                 {elem}
               </Link>
             ))}
-          </ListNavigation>
-        </Accordion.Group>
-        <Accordion.Group
-          heading="Governing agile services"
-          summary="Principles, measuring progress, spending money."
-          expanded={state.accordionThree}
-          onClick={individualAccordionSetState('accordionThree')}
-        >
-          <ListNavigation listStyleType="none">
-            {[
+        </ListNavigation>
+      </Accordion.Group>
+      <Accordion.Group
+        heading="Governing agile services"
+        summary="Principles, measuring progress, spending money."
+        expanded={state.accordionThree}
+        onClick={individualAccordionSetState('accordionThree')}
+      >
+        <ListNavigation listStyleType="none">
+          {[
               'How the discovery phase works',
               'Measuring and reporting progress',
               'Spend controls: check if you need approval to spend money on a service',
@@ -171,16 +167,16 @@ const ExampleWithSummaries = ({ initialState }) => {
                 {elem}
               </Link>
             ))}
-          </ListNavigation>
-        </Accordion.Group>
-        <Accordion.Group
-          heading="Phases of an agile project"
-          summary="Discovery, alpha, beta, live and retirement."
-          expanded={state.accordionFour}
-          onClick={individualAccordionSetState('accordionFour')}
-        >
-          <ListNavigation listStyleType="none">
-            {[
+        </ListNavigation>
+      </Accordion.Group>
+      <Accordion.Group
+        heading="Phases of an agile project"
+        summary="Discovery, alpha, beta, live and retirement."
+        expanded={state.accordionFour}
+        onClick={individualAccordionSetState('accordionFour')}
+      >
+        <ListNavigation listStyleType="none">
+          {[
               'Governance principles for agile service delivery',
               'How the alpha phase works',
               'How the beta phase works',
@@ -192,10 +188,9 @@ const ExampleWithSummaries = ({ initialState }) => {
                 {elem}
               </Link>
             ))}
-          </ListNavigation>
-        </Accordion.Group>
-      </Accordion>
-    </Main>
+        </ListNavigation>
+      </Accordion.Group>
+    </Accordion>
   );
 };
 
@@ -216,8 +211,8 @@ class AccordionClassComponent extends React.Component {
 
   toggleAll() {
     return this.setState(state =>
-      Object.entries(state).reduce(
-        (prev, [key]) => ({
+      Object.keys(state).reduce(
+        (prev, key) => ({
           ...prev,
           [key]: !this.isAllOpen,
         }),

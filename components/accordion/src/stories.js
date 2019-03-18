@@ -1,6 +1,6 @@
 import React from 'react';
+import Main from '@govuk-react/main';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, number } from '@storybook/addon-knobs';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 
 import { AccordionClassComponent, ExampleWithoutSummaries, ExampleWithSummaries } from './fixtures';
@@ -10,41 +10,51 @@ const stories = storiesOf('Accordion', module);
 const examples = storiesOf('Accordion/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
-stories.addDecorator(withKnobs);
 
 examples.addDecorator(WithDocsCustom());
 
 stories.add('Component default', () => (
-  <ExampleWithSummaries
-    initialState={{
+  <Main>
+    <ExampleWithSummaries
+      initialState={{
       accordionOne: false,
       accordionTwo: false,
       accordionThree: false,
       accordionFour: false,
     }}
-  />
+    />
+  </Main>
 ));
 
 examples.add('without summaries', () => (
-  <ExampleWithoutSummaries
-    initialState={{
+
+  <Main>
+    <ExampleWithoutSummaries
+      initialState={{
       accordionOne: false,
       accordionTwo: false,
       accordionThree: false,
       accordionFour: false,
     }}
-  />
+    />
+  </Main>
 ));
 
 examples.add('with summaries', () => (
-  <ExampleWithSummaries
-    initialState={{
+  <Main>
+    <ExampleWithSummaries
+      initialState={{
       accordionOne: false,
       accordionTwo: false,
       accordionThree: false,
       accordionFour: false,
     }}
-  />
+    />
+  </Main>
 ));
 
-examples.add('as class component', () => <AccordionClassComponent />);
+examples.add('as class component', () => (
+  <Main>
+    <AccordionClassComponent />
+  </Main>
+));
