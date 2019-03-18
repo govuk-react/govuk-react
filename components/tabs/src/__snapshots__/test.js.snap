@@ -10,19 +10,13 @@ exports[`Tabs matches wrapper snapshot 1`] = `
 }
 
 .c6 {
+  margin-bottom: 30px;
   display: block;
-}
-
-.c6 marginBottom {
-  mobile-bottom: 30px;
 }
 
 .c7 {
+  margin-bottom: 30px;
   display: block;
-}
-
-.c7 marginBottom {
-  mobile-bottom: 30px;
 }
 
 .c3 {
@@ -30,7 +24,7 @@ exports[`Tabs matches wrapper snapshot 1`] = `
 }
 
 .c3:before {
-  content: '— ';
+  content: '\\2014  ';
   margin-left: -25px;
   padding-right: 5px;
 }
@@ -138,13 +132,7 @@ exports[`Tabs matches wrapper snapshot 1`] = `
   font-size: 16px;
   line-height: 1.25;
   color: #0b0c0c;
-}
-
-.c0 marginTop {
   margin-top: 5px;
-}
-
-.c0 marginBottom {
   margin-bottom: 20px;
 }
 
@@ -168,8 +156,8 @@ exports[`Tabs matches wrapper snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .c6 marginBottom {
-    mobile-bottom: 50px;
+  .c6 {
+    margin-bottom: 50px;
   }
 }
 
@@ -184,14 +172,14 @@ exports[`Tabs matches wrapper snapshot 1`] = `
     border-top: 0;
   }
 
-  .c6 >:last-child {
+  .c6 > :last-child {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c7 marginBottom {
-    mobile-bottom: 50px;
+  .c7 {
+    margin-bottom: 50px;
   }
 }
 
@@ -206,7 +194,7 @@ exports[`Tabs matches wrapper snapshot 1`] = `
     border-top: 0;
   }
 
-  .c7 >:last-child {
+  .c7 > :last-child {
     margin-bottom: 0;
   }
 }
@@ -354,14 +342,20 @@ exports[`Tabs matches wrapper snapshot 1`] = `
   }
 }
 
+@media print {
+  .c0 {
+    color: #000;
+  }
+}
+
 @media only screen and (min-width:641px) {
-  .c0 marginTop {
+  .c0 {
     margin-top: 5px;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c0 marginBottom {
+  .c0 {
     margin-bottom: 30px;
   }
 }
