@@ -1483,9 +1483,32 @@
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.1.3.tgz#b700d97385fa91affed60c71dfd51c67e9dad762"
 
+"@govuk-react/constants@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@govuk-react/constants/-/constants-0.6.0.tgz#8dd84556d0524019c15e883228abf3a0707f3768"
+  integrity sha512-Gc3qvt2HrFVECe+K9aNtjZGCdV2JIsai0bbRe5iXJGtQFOaI77oV/2f3r3uEA6fBEbC10Wz2xDjtoRSCqQLg/g==
+  dependencies:
+    govuk-colours "^1.0.3"
+
 "@govuk-react/icon-crown@0.0.5":
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/@govuk-react/icon-crown/-/icon-crown-0.0.5.tgz#364dfde56c6a839fe962aeb90bb3bcc2a0b876c2"
+
+"@govuk-react/lib@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@govuk-react/lib/-/lib-0.6.0.tgz#c66d8a085ee9f018d7419e8f4520f30f1633b55f"
+  integrity sha512-LKgroF1B3nWn+WtPp62qb7b5u80qXjQDieTAWmYQmWpOd31EwG+C+I7CVdP/YpJKAm1vdfEAaJYLZI5iAkh5Sw==
+  dependencies:
+    "@govuk-react/constants" "^0.6.0"
+    govuk-colours "^1.0.3"
+
+"@govuk-react/link@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@govuk-react/link/-/link-0.6.0.tgz#ea56d0de3ef13839e4c1663145f68323883450a3"
+  integrity sha512-dhtHFSI0uxq9XWTT9QxYkRfJNlR6+FlsxQP2ARNJNyyNnB35CmTpq2GTaXKP5a48jQ48EHx8IU15UZ+/RWd58Q==
+  dependencies:
+    "@govuk-react/lib" "^0.6.0"
+    govuk-colours "^1.0.3"
 
 "@jest/console@^24.3.0":
   version "24.3.0"

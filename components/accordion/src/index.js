@@ -34,45 +34,36 @@ const AccordionContainer = styled('div')(
  *
  * class AccordionComponent extends React.Component {
  *   constructor() {
+ *     super();
  *     this.state = {
- *       accordions: {
- *         accordionOne: false,
- *         accordionTwo: false,
- *         accordionThree: false,
- *         accordionFour: false,
- *       },
- *       isAllOpen: false,
+ *       accordionOne: false,
+ *       accordionTwo: false,
+ *       accordionThree: false,
+ *       accordionFour: false,
  *     };
  *     this.individualAccordionSetState = this.individualAccordionSetState.bind(this);
  *     this.toggleAll = this.toggleAll.bind(this);
  *   }
  *
- *   componentDidUpdate() {
- *     return this.setState(({ accordions }) => ({
- *       isAllOpen: checkOpen(accordions),
+ *   toggleAll() {
+ *     return this.setState(state =>
+ *       Object.keys(state).reduce(
+ *         (prev, key) => ({
+ *           ...prev,
+ *           [key]: !this.isAllOpen,
+ *         }),
+ *         {},
+ *     ));
+ *   }
+ *
+ *   individualAccordionSetState(property) {
+ *     return () => this.setState(state => ({
+ *       [property]: !state[property],
  *     }));
  *   }
  *
- *   function toggleAll() {
- *     return this.setState(({ accordions, isAllOpen }) =>
- *       Object.entries(accordions).reduce(
- *         (prev, [key]) => ({
- *           ...prev,
- *           [key]: isAllOpen,
- *         }),
- *         {},
- *       );
- *     )
- *   }
- *
- *   function individualAccordionSetState(property) {
- *      return () => this.setState({
- *        [property]: !state[property],
- *      });
- *   }
- *
  *   render() {
- *     const { accordions, isAllOpen } = this.props;
+ *     this.isAllOpen = checkOpen(this.state);
  *     return (
  *       <Accordion>
  *         <Accordion.OpenAll href="#" onClick={this.toggleAll}>
