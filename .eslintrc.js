@@ -3,14 +3,12 @@ const { dependencies: gukd } = require('./packages/govuk-react/package.json');
 
 module.exports = {
   "parser": "babel-eslint",
-  "extends": ["airbnb", "sonar", "plugin:flowtype/recommended"],
-  "plugins": [
-    "flowtype"
-  ],
+  "extends": ["airbnb", "sonar", "prettier", "prettier/react", "react-app", "plugin:prettier/recommended"],
   "env": {
     "es6": true
   },
   "rules": {
+    "prettier/prettier": ["error"],
     "react/jsx-filename-extension": 0,
     "jsx-a11y/label-has-for": 0,
     "filenames/match-exported": 0,
