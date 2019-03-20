@@ -1,13 +1,16 @@
-import styled from 'styled-components';
-import React from 'react';
-import PropTypes from 'prop-types';
-import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
-import { spacing, typography } from '@govuk-react/lib';
+import styled from "styled-components";
+import React from "react";
+import PropTypes from "prop-types";
+import { SECONDARY_TEXT_COLOUR } from "govuk-colours";
+import { spacing, typography } from "@govuk-react/lib";
 import {
-  CAPTION_SIZES, MEDIA_QUERIES, SPACING_POINTS, TYPOGRAPHY_SCALE,
-} from '@govuk-react/constants';
+  CAPTION_SIZES,
+  MEDIA_QUERIES,
+  SPACING_POINTS,
+  TYPOGRAPHY_SCALE
+} from "@govuk-react/constants";
 
-const StyledCaption = styled('span')(
+const StyledCaption = styled("span")(
   ({ size }) => {
     const actualSize = Number.isNaN(Number(size)) ? CAPTION_SIZES[size] : size;
 
@@ -21,20 +24,23 @@ const StyledCaption = styled('span')(
     const actualSize = Number.isNaN(Number(size)) ? CAPTION_SIZES[size] : size;
 
     // bottom margin - hard-coded values because they're a bit odd
-    const marginStyle = actualSize > 19 ? { marginBottom: SPACING_POINTS[1] } : undefined;
-    const marginResponsiveStyle = actualSize === 24
-      ? { [MEDIA_QUERIES.TABLET]: { marginBottom: 0 } } : undefined;
+    const marginStyle =
+      actualSize > 19 ? { marginBottom: SPACING_POINTS[1] } : undefined;
+    const marginResponsiveStyle =
+      actualSize === 24
+        ? { [MEDIA_QUERIES.TABLET]: { marginBottom: 0 } }
+        : undefined;
 
     return {
       ...marginStyle,
-      ...marginResponsiveStyle,
+      ...marginResponsiveStyle
     };
   },
   {
-    display: 'block',
-    color: SECONDARY_TEXT_COLOUR,
+    display: "block",
+    color: SECONDARY_TEXT_COLOUR
   },
-  spacing.withWhiteSpace(),
+  spacing.withWhiteSpace()
 );
 
 /**
@@ -68,11 +74,14 @@ Caption.propTypes = {
    *    `XLARGE`, `LARGE`, `MEDIUM`, `XL`, `L`, `M`
    *    or a numeric size that fits in the GDS font scale list
    */
-  size: PropTypes.oneOf([...Object.keys(CAPTION_SIZES), ...Object.keys(TYPOGRAPHY_SCALE)]),
+  size: PropTypes.oneOf([
+    ...Object.keys(CAPTION_SIZES),
+    ...Object.keys(TYPOGRAPHY_SCALE)
+  ])
 };
 
 Caption.defaultProps = {
-  size: 'XL',
+  size: "XL"
 };
 
 export default Caption;

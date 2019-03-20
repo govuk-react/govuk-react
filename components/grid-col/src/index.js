@@ -1,42 +1,41 @@
-import React from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import { GUTTER_HALF, MEDIA_QUERIES, WIDTHS } from '@govuk-react/constants';
-import { spacing } from '@govuk-react/lib';
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
+import { GUTTER_HALF, MEDIA_QUERIES, WIDTHS } from "@govuk-react/constants";
+import { spacing } from "@govuk-react/lib";
 
 const colValues = {
-  columnOneQuarter: '25%',
-  columnOneThird: '33.3333%',
-  columnOneHalf: '50%',
-  columnTwoThirds: '66.6667%',
-  columnThreeQuarters: '75%',
-  columnFull: '100%',
+  columnOneQuarter: "25%",
+  columnOneThird: "33.3333%",
+  columnOneHalf: "50%",
+  columnTwoThirds: "66.6667%",
+  columnThreeQuarters: "75%",
+  columnFull: "100%"
 };
 
 const widthFromProps = spacing.withWidth({ noDefault: true });
-const desktopWidthFromProps = spacing.withWidth({ mediaQuery: MEDIA_QUERIES.DESKTOP, noDefault: true });
+const desktopWidthFromProps = spacing.withWidth({
+  mediaQuery: MEDIA_QUERIES.DESKTOP,
+  noDefault: true
+});
 
 function setGrowShrink(style) {
-  const hasAutoWidth = [undefined, 'auto'].includes(style.width);
+  const hasAutoWidth = [undefined, "auto"].includes(style.width);
 
   // No explicit width means auto, so grow/shrink should be set
-  return Object.assign(
-    {},
-    style,
-    {
-      flexGrow: hasAutoWidth ? 1 : 0,
-      flexShrink: hasAutoWidth ? 1 : 0,
-    },
-  );
+  return Object.assign({}, style, {
+    flexGrow: hasAutoWidth ? 1 : 0,
+    flexShrink: hasAutoWidth ? 1 : 0
+  });
 }
 
-const StyledColumn = styled('div')(
+const StyledColumn = styled("div")(
   {
-    boxSizing: 'border-box',
+    boxSizing: "border-box",
     paddingRight: GUTTER_HALF,
-    paddingLeft: GUTTER_HALF,
+    paddingLeft: GUTTER_HALF
   },
-  (props) => {
+  props => {
     // if setWidth is set, then columnOneQuarter etc props will be ignored
     let widthStyle = widthFromProps(props);
 
@@ -45,34 +44,41 @@ const StyledColumn = styled('div')(
 
       Object.entries(props).forEach(([key, value]) => {
         if (colValues[key] && value === true) {
-          if (process.env.NODE_ENV !== 'production') {
-            const newKey = key.replace('column', '').replace(/^([A-Z][a-z]+)([A-Z])/, '$1-$2').toLocaleLowerCase();
+          if (process.env.NODE_ENV !== "production") {
+            const newKey = key
+              .replace("column", "")
+              .replace(/^([A-Z][a-z]+)([A-Z])/, "$1-$2")
+              .toLocaleLowerCase();
             // eslint-disable-next-line no-console
-            console.warn(`deprecated prop ${key} used in GridCol, please replace with setWidth="${newKey}"`);
+            console.warn(
+              `deprecated prop ${key} used in GridCol, please replace with setWidth="${newKey}"`
+            );
           }
           widthValue = colValues[key];
         }
       });
       widthStyle = {
         [MEDIA_QUERIES.TABLET]: {
-          width: widthValue,
-        },
+          width: widthValue
+        }
       };
     }
-    widthStyle[MEDIA_QUERIES.TABLET] = setGrowShrink(widthStyle[MEDIA_QUERIES.TABLET]);
+    widthStyle[MEDIA_QUERIES.TABLET] = setGrowShrink(
+      widthStyle[MEDIA_QUERIES.TABLET]
+    );
 
-    const desktopWidthStyle = desktopWidthFromProps({ setWidth: props.setDesktopWidth });
+    const desktopWidthStyle = desktopWidthFromProps({
+      setWidth: props.setDesktopWidth
+    });
 
     if (desktopWidthStyle) {
-      desktopWidthStyle[MEDIA_QUERIES.DESKTOP] = setGrowShrink(desktopWidthStyle[MEDIA_QUERIES.DESKTOP]);
+      desktopWidthStyle[MEDIA_QUERIES.DESKTOP] = setGrowShrink(
+        desktopWidthStyle[MEDIA_QUERIES.DESKTOP]
+      );
     }
 
-    return Object.assign(
-      {},
-      widthStyle,
-      desktopWidthStyle,
-    );
-  },
+    return Object.assign({}, widthStyle, desktopWidthStyle);
+  }
 );
 
 /**
@@ -154,7 +160,7 @@ GridCol.propTypes = {
   setWidth: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
-    PropTypes.oneOf(Object.keys(WIDTHS)),
+    PropTypes.oneOf(Object.keys(WIDTHS))
   ]),
   /**
    * Explicitly set desktop column to width using value or descriptive string
@@ -163,8 +169,8 @@ GridCol.propTypes = {
   setDesktopWidth: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
-    PropTypes.oneOf([...Object.keys(WIDTHS)]),
-  ]),
+    PropTypes.oneOf([...Object.keys(WIDTHS)])
+  ])
 };
 
 GridCol.defaultProps = {
@@ -176,7 +182,7 @@ GridCol.defaultProps = {
   columnThreeQuarters: false,
   columnFull: false,
   setWidth: undefined,
-  setDesktopWidth: undefined,
+  setDesktopWidth: undefined
 };
 
 export default GridCol;

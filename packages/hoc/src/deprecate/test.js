@@ -1,9 +1,9 @@
-import React from 'react';
-import { mount } from 'enzyme';
+import React from "react";
+import { mount } from "enzyme";
 
-import deprecate from '.';
+import deprecate from ".";
 
-describe('deprecate HOC', () => {
+describe("deprecate HOC", () => {
   const OLD_ENV = process.env;
   // eslint-disable-next-line no-console
   const nativeWarn = console.warn;
@@ -15,7 +15,9 @@ describe('deprecate HOC', () => {
     jest.resetModules();
     process.env = { ...OLD_ENV };
     // eslint-disable-next-line no-console
-    console.warn = () => { warnCallCount += 1; };
+    console.warn = () => {
+      warnCallCount += 1;
+    };
     warnCallCount = 0;
   });
 
@@ -25,8 +27,8 @@ describe('deprecate HOC', () => {
     process.env = OLD_ENV;
   });
 
-  it('should warn when using a deprecated component when not in production', () => {
-    process.env.NODE_ENV = 'development';
+  it("should warn when using a deprecated component when not in production", () => {
+    process.env.NODE_ENV = "development";
     const Comp = deprecate(() => <div>Test</div>);
 
     mount(<Comp />);
@@ -34,8 +36,8 @@ describe('deprecate HOC', () => {
     expect(warnCallCount).toEqual(1);
   });
 
-  it('should not warn when using a deprecated component when in production', () => {
-    process.env.NODE_ENV = 'production';
+  it("should not warn when using a deprecated component when in production", () => {
+    process.env.NODE_ENV = "production";
     const Comp = deprecate(() => <div>Test</div>);
 
     mount(<Comp />);

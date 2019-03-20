@@ -1,28 +1,29 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { ERROR_COLOUR } from 'govuk-colours';
-import { SPACING } from '@govuk-react/constants';
-import LabelText from '@govuk-react/label-text';
-import ErrorText from '@govuk-react/error-text';
-import HintText from '@govuk-react/hint-text';
-import { spacing } from '@govuk-react/lib';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { ERROR_COLOUR } from "govuk-colours";
+import { SPACING } from "@govuk-react/constants";
+import LabelText from "@govuk-react/label-text";
+import ErrorText from "@govuk-react/error-text";
+import HintText from "@govuk-react/hint-text";
+import { spacing } from "@govuk-react/lib";
 
-import Input from './input';
+import Input from "./input";
 
-const StyledContainer = styled('div')(
+const StyledContainer = styled("div")(
   {
-    display: 'flex',
-    flexDirection: 'column',
+    display: "flex",
+    flexDirection: "column"
   },
-  ({ errorText }) => (
-    errorText ? {
-      borderLeft: `4px solid ${ERROR_COLOUR}`,
-      marginRight: SPACING.SCALE_3,
-      paddingLeft: SPACING.SCALE_2,
-    } : undefined
-  ),
-  spacing.withWhiteSpace({ marginBottom: 6 }),
+  ({ errorText }) =>
+    errorText
+      ? {
+          borderLeft: `4px solid ${ERROR_COLOUR}`,
+          marginRight: SPACING.SCALE_3,
+          paddingLeft: SPACING.SCALE_2
+        }
+      : undefined,
+  spacing.withWhiteSpace({ marginBottom: 6 })
 );
 
 /**
@@ -89,7 +90,6 @@ const DateField = ({
       error={!!errorText}
       {...input}
     />
-
   </StyledContainer>
 );
 
@@ -99,14 +99,14 @@ DateField.defaultProps = {
   inputNames: {
     day: undefined,
     month: undefined,
-    year: undefined,
+    year: undefined
   },
   defaultValues: {
     day: undefined,
     month: undefined,
-    year: undefined,
+    year: undefined
   },
-  input: undefined,
+  input: undefined
 };
 
 DateField.propTypes = {
@@ -125,12 +125,12 @@ DateField.propTypes = {
   inputNames: PropTypes.shape({
     day: PropTypes.string,
     month: PropTypes.string,
-    year: PropTypes.string,
+    year: PropTypes.string
   }),
   defaultValues: {
     day: PropTypes.any,
     month: PropTypes.any,
-    year: PropTypes.any,
+    year: PropTypes.any
   },
   /**
    * Properties that are sent to the input, matching final form and redux form input type
@@ -156,9 +156,9 @@ DateField.propTypes = {
     value: PropTypes.shape({
       day: PropTypes.string,
       month: PropTypes.string,
-      year: PropTypes.string,
-    }),
-  }),
+      year: PropTypes.string
+    })
+  })
 };
 
 export default DateField;

@@ -1,23 +1,24 @@
-import React, { Fragment } from 'react';
-import styled from 'styled-components';
-import { storiesOf } from '@storybook/react';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
-import GridCol from '@govuk-react/grid-col';
+import React, { Fragment } from "react";
+import styled from "styled-components";
+import { storiesOf } from "@storybook/react";
+import { WithDocsCustom } from "@govuk-react/storybook-components";
+import GridCol from "@govuk-react/grid-col";
 
-import GridRow from '.';
-import ReadMe from '../README.md';
+import GridRow from ".";
+import ReadMe from "../README.md";
 
-const stories = storiesOf('Layout/GridRow', module);
+const stories = storiesOf("Layout/GridRow", module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-const Content = styled('div')({
-  textIndent: '-999em',
-  backgroundColor: '#7DADD3',
-  backgroundImage: 'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)',
+const Content = styled("div")({
+  textIndent: "-999em",
+  backgroundColor: "#7DADD3",
+  backgroundImage:
+    "repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)"
 });
 
-stories.add('Component default', () => (
+stories.add("Component default", () => (
   <Fragment>
     <GridRow>
       <GridCol>

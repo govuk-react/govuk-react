@@ -1,29 +1,33 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { ERROR_COLOUR } from 'govuk-colours';
-import { spacing } from '@govuk-react/lib';
-import { BORDER_WIDTH_FORM_GROUP_ERROR, SPACING_POINTS } from '@govuk-react/constants';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { ERROR_COLOUR } from "govuk-colours";
+import { spacing } from "@govuk-react/lib";
+import {
+  BORDER_WIDTH_FORM_GROUP_ERROR,
+  SPACING_POINTS
+} from "@govuk-react/constants";
 
-const FormGroup = styled('div')(
-  spacing.responsiveMargin({ size: 6, direction: 'bottom' }),
+const FormGroup = styled("div")(
+  spacing.responsiveMargin({ size: 6, direction: "bottom" }),
   {
-    '& &:last-of-type': {
-      marginBottom: 0,
-    },
+    "& &:last-of-type": {
+      marginBottom: 0
+    }
   },
-  ({ error }) => (
-    error ? ({
-      paddingLeft: SPACING_POINTS[3],
-      borderLeft: `${BORDER_WIDTH_FORM_GROUP_ERROR} solid ${ERROR_COLOUR}`,
+  ({ error }) =>
+    error
+      ? {
+          paddingLeft: SPACING_POINTS[3],
+          borderLeft: `${BORDER_WIDTH_FORM_GROUP_ERROR} solid ${ERROR_COLOUR}`,
 
-      '& &': {
-        padding: 0,
-        border: 0,
-      },
-    }) : undefined
-  ),
-  spacing.withWhiteSpace(),
+          "& &": {
+            padding: 0,
+            border: 0
+          }
+        }
+      : undefined,
+  spacing.withWhiteSpace()
 );
 
 /**
@@ -46,11 +50,11 @@ const FormGroupDocumented = props => <FormGroup {...props} />;
 
 FormGroupDocumented.propTypes = {
   children: PropTypes.node.isRequired,
-  error: PropTypes.bool,
+  error: PropTypes.bool
 };
 
 FormGroupDocumented.defaultProps = {
-  error: false,
+  error: false
 };
 
 FormGroup.propTypes = FormGroupDocumented.propTypes;

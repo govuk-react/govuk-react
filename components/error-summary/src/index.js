@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
-import { TEXT_COLOUR, ERROR_COLOUR, FOCUS_COLOUR } from 'govuk-colours';
+import { TEXT_COLOUR, ERROR_COLOUR, FOCUS_COLOUR } from "govuk-colours";
 
-import { H2 } from '@govuk-react/heading';
-import Paragraph from '@govuk-react/paragraph';
-import UnorderedList from '@govuk-react/unordered-list';
-import Link from '@govuk-react/link';
-import ListItem from '@govuk-react/list-item';
+import { H2 } from "@govuk-react/heading";
+import Paragraph from "@govuk-react/paragraph";
+import UnorderedList from "@govuk-react/unordered-list";
+import Link from "@govuk-react/link";
+import ListItem from "@govuk-react/list-item";
 
 import {
   NTA_LIGHT,
@@ -19,52 +19,51 @@ import {
   LINE_HEIGHT,
   SPACING,
   MEDIA_QUERIES,
-  RESPONSIVE_4,
-} from '@govuk-react/constants';
+  RESPONSIVE_4
+} from "@govuk-react/constants";
 
-import { spacing } from '@govuk-react/lib';
+import { spacing } from "@govuk-react/lib";
 
 const StyledErrorText = styled(Link)({
   fontFamily: NTA_LIGHT,
-  WebkitFontSmoothing: 'antialiased',
-  MozOsxFontSmoothing: 'grayscale',
+  WebkitFontSmoothing: "antialiased",
+  MozOsxFontSmoothing: "grayscale",
   fontWeight: 700,
   marginBottom: SPACING.SCALE_1,
-  textDecoration: 'underline',
-  textDecorationSkipInk: 'none',
-  textTransform: 'none',
-  cursor: 'pointer',
+  textDecoration: "underline",
+  textDecorationSkipInk: "none",
+  textTransform: "none",
+  cursor: "pointer",
   fontSize: FONT_SIZE.SIZE_16,
   lineHeight: LINE_HEIGHT.SIZE_16,
-  ':visited': {
-    color: `${ERROR_COLOUR}`,
+  ":visited": {
+    color: `${ERROR_COLOUR}`
   },
   [MEDIA_QUERIES.LARGESCREEN]: {
     fontSize: FONT_SIZE.SIZE_19,
-    lineHeight: LINE_HEIGHT.SIZE_19,
+    lineHeight: LINE_HEIGHT.SIZE_19
   },
   color: `${ERROR_COLOUR}`,
-  paddingTop: '4px',
-  paddingBottom: '2px',
+  paddingTop: "4px",
+  paddingBottom: "2px"
 });
 
-const StyledErrorSummary = styled('div')(
+const StyledErrorSummary = styled("div")(
   {
     color: TEXT_COLOUR,
     padding: RESPONSIVE_4.mobile,
     border: `${BORDER_WIDTH_MOBILE} solid ${ERROR_COLOUR}`,
-    '&:focus': {
+    "&:focus": {
       outline: `${FOCUS_WIDTH} solid ${FOCUS_COLOUR}`,
-      outlineOffset: '0',
+      outlineOffset: "0"
     },
     [MEDIA_QUERIES.LARGESCREEN]: {
       padding: RESPONSIVE_4.tablet,
-      border: `${BORDER_WIDTH} solid ${ERROR_COLOUR}`,
-    },
+      border: `${BORDER_WIDTH} solid ${ERROR_COLOUR}`
+    }
   },
-  spacing.withWhiteSpace({ marginBottom: 6 }),
+  spacing.withWhiteSpace({ marginBottom: 6 })
 );
-
 
 /**
  *
@@ -115,15 +114,18 @@ const StyledErrorSummary = styled('div')(
  * - Swap out browser dependancy for context API to help with React Native support
  */
 const ErrorSummary = ({
-  onHandleErrorClick, heading, description, errors, ...props
+  onHandleErrorClick,
+  heading,
+  description,
+  errors,
+  ...props
 }) => (
   <StyledErrorSummary tabIndex={-1} {...props}>
-    <H2>{ heading }</H2>
-    { description && <Paragraph mb={3}>{ description }</Paragraph> }
-    { errors.length > 0
-      && (
+    <H2>{heading}</H2>
+    {description && <Paragraph mb={3}>{description}</Paragraph>}
+    {errors.length > 0 && (
       <UnorderedList mb={0} listStyleType="none">
-        { errors.map((error, index) => (
+        {errors.map((error, index) => (
           <ListItem key={error.targetName}>
             <StyledErrorText
               tabIndex={index + 1}
@@ -132,18 +134,16 @@ const ErrorSummary = ({
               {error.text}
             </StyledErrorText>
           </ListItem>
-        ))
-        }
+        ))}
       </UnorderedList>
-      )
-    }
+    )}
   </StyledErrorSummary>
 );
 
 ErrorSummary.defaultProps = {
   onHandleErrorClick: () => {},
   description: undefined,
-  errors: [],
+  errors: []
 };
 
 ErrorSummary.propTypes = {
@@ -154,10 +154,12 @@ ErrorSummary.propTypes = {
   /** Optional description of the errors */
   description: PropTypes.string,
   /** Array of errors with text and target element name to scroll into view when clicked */
-  errors: PropTypes.arrayOf(PropTypes.shape({
-    targetName: PropTypes.string,
-    text: PropTypes.string,
-  })),
+  errors: PropTypes.arrayOf(
+    PropTypes.shape({
+      targetName: PropTypes.string,
+      text: PropTypes.string
+    })
+  )
 };
 
 export default ErrorSummary;

@@ -1,37 +1,37 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { BORDER_COLOUR } from 'govuk-colours';
-import { SPACING_POINTS } from '@govuk-react/constants';
-import { spacing, typography } from '@govuk-react/lib';
-import Tag from '@govuk-react/tag';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { BORDER_COLOUR } from "govuk-colours";
+import { SPACING_POINTS } from "@govuk-react/constants";
+import { spacing, typography } from "@govuk-react/lib";
+import Tag from "@govuk-react/tag";
 
-const StyledBanner = styled('div')(
+const StyledBanner = styled("div")(
   {
     paddingTop: SPACING_POINTS[2],
     paddingBottom: SPACING_POINTS[2],
 
-    borderBottom: `1px solid ${BORDER_COLOUR}`,
+    borderBottom: `1px solid ${BORDER_COLOUR}`
   },
-  spacing.withWhiteSpace(),
+  spacing.withWhiteSpace()
 );
 
-const BannerContent = styled('p')(
+const BannerContent = styled("p")(
   typography.font({ size: 16 }),
   typography.textColour,
   {
-    display: 'table',
+    display: "table",
     margin: 0,
 
     [Tag]: {
-      marginRight: SPACING_POINTS[2],
-    },
-  },
+      marginRight: SPACING_POINTS[2]
+    }
+  }
 );
 
-const BannerText = styled('span')({
-  display: 'table-cell',
-  verticalAlign: 'baseline',
+const BannerText = styled("span")({
+  display: "table-cell",
+  verticalAlign: "baseline"
 });
 
 /**
@@ -72,7 +72,7 @@ PhaseBanner.propTypes = {
   /** Children text and links */
   children: PropTypes.node.isRequired,
   /** Alpha or beta banner */
-  level: PropTypes.string.isRequired,
+  level: PropTypes.string.isRequired
 };
 
 export default PhaseBanner;

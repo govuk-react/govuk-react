@@ -1,36 +1,36 @@
-import React from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import { BLUE } from 'govuk-colours';
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
+import { BLUE } from "govuk-colours";
 
 import {
   FONT_SIZE,
   LINE_HEIGHT,
   MEDIA_QUERIES,
-  SPACING,
-} from '@govuk-react/constants';
-import { spacing } from '@govuk-react/lib';
+  SPACING
+} from "@govuk-react/constants";
+import { spacing } from "@govuk-react/lib";
 
-const StyledRelatedItems = styled('div')(
+const StyledRelatedItems = styled("div")(
   {
     borderTop: `10px solid ${BLUE}`,
     paddingTop: SPACING.SCALE_1,
-    width: '100%',
+    width: "100%",
     [MEDIA_QUERIES.LARGESCREEN]: {
       fontSize: FONT_SIZE.SIZE_16,
-      lineHeight: LINE_HEIGHT.SIZE_16,
+      lineHeight: LINE_HEIGHT.SIZE_16
     },
-    '> h3': {
-      marginBottom: SPACING.SCALE_2,
+    "> h3": {
+      marginBottom: SPACING.SCALE_2
     },
-    '> ul': {
+    "> ul": {
       marginBottom: SPACING.SCALE_4,
-      '> li': {
-        marginBottom: `calc(${SPACING.SCALE_2} + 2px)`,
-      },
-    },
+      "> li": {
+        marginBottom: `calc(${SPACING.SCALE_2} + 2px)`
+      }
+    }
   },
-  spacing.withWhiteSpace({ marginBottom: 0 }),
+  spacing.withWhiteSpace({ marginBottom: 0 })
 );
 
 /**
@@ -65,7 +65,7 @@ const RelatedItems = props => <StyledRelatedItems {...props} />;
 
 RelatedItems.propTypes = {
   /** Related items content */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default RelatedItems;

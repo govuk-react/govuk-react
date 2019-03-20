@@ -1,10 +1,12 @@
-import React from 'react';
-import { text } from '@storybook/addon-knobs/react';
+import React from "react";
+import { text } from "@storybook/addon-knobs/react";
 
-import Caption from '.';
+import Caption from ".";
 
 const CaptionWithKnobs = () => (
-  <Caption size={text('size', 'XL')}>{text('children', 'Heading text')}</Caption>
+  <Caption size={text("size", "XL")}>
+    {text("children", "Heading text")}
+  </Caption>
 );
 
 export default Caption;

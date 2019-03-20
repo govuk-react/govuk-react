@@ -10,41 +10,38 @@
 // Only one is valid, but at least one must be selected.
 // Therefore validation around the set of radios is required.
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { ERROR_COLOUR } from 'govuk-colours';
-import LabelText from '@govuk-react/label-text';
-import ErrorText from '@govuk-react/error-text';
-import HintText from '@govuk-react/hint-text';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { ERROR_COLOUR } from "govuk-colours";
+import LabelText from "@govuk-react/label-text";
+import ErrorText from "@govuk-react/error-text";
+import HintText from "@govuk-react/hint-text";
 
-import {
-  BORDER_WIDTH_MOBILE,
-  SPACING,
-} from '@govuk-react/constants';
-import { spacing } from '@govuk-react/lib';
+import { BORDER_WIDTH_MOBILE, SPACING } from "@govuk-react/constants";
+import { spacing } from "@govuk-react/lib";
 
-const StyledFieldset = styled('div')(
+const StyledFieldset = styled("div")(
   {
     padding: 0,
     margin: 0,
     border: 0,
-    boxSizing: 'border-box',
-    width: '100%',
-    ':after': {
+    boxSizing: "border-box",
+    width: "100%",
+    ":after": {
       content: "''",
-      display: 'table',
-      clear: 'both',
-    },
+      display: "table",
+      clear: "both"
+    }
   },
   ({ error }) => ({
     borderLeft: error
       ? `${BORDER_WIDTH_MOBILE} solid ${ERROR_COLOUR}`
       : undefined,
     marginRight: error ? SPACING.SCALE_3 : undefined,
-    paddingLeft: error ? SPACING.SCALE_2 : undefined,
+    paddingLeft: error ? SPACING.SCALE_2 : undefined
   }),
-  spacing.withWhiteSpace({ marginBottom: 0 }),
+  spacing.withWhiteSpace({ marginBottom: 0 })
 );
 
 /**
@@ -70,9 +67,7 @@ const StyledFieldset = styled('div')(
  * - https://govuk-elements.herokuapp.com/errors/example-form-validation-single-question-radio
  *
  */
-const MultiChoice = ({
-  meta, label, children, hint, ...props
-}) => (
+const MultiChoice = ({ meta, label, children, hint, ...props }) => (
   <StyledFieldset error={meta.touched && meta.error} {...props}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
@@ -83,7 +78,7 @@ const MultiChoice = ({
 
 MultiChoice.defaultProps = {
   hint: undefined,
-  meta: {},
+  meta: {}
 };
 
 MultiChoice.propTypes = {
@@ -100,11 +95,11 @@ MultiChoice.propTypes = {
     submitSucceeded: PropTypes.bool,
     touched: PropTypes.bool,
     valid: PropTypes.bool,
-    visited: PropTypes.bool,
+    visited: PropTypes.bool
   }),
   label: PropTypes.node.isRequired,
   children: PropTypes.node.isRequired,
-  hint: PropTypes.string,
+  hint: PropTypes.string
 };
 
 export default MultiChoice;

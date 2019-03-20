@@ -1,15 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { shallow, mount } from 'enzyme';
+import React from "react";
+import ReactDOM from "react-dom";
+import { shallow, mount } from "enzyme";
 
-import Checkbox from '.';
+import Checkbox from ".";
 
-describe('Checkbox', () => {
-  const example = 'example';
+describe("Checkbox", () => {
+  const example = "example";
   const wrapper = <Checkbox>{example}</Checkbox>;
 
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
+  it("renders without crashing", () => {
+    const div = document.createElement("div");
     ReactDOM.render(wrapper, div);
   });
 
@@ -18,18 +18,22 @@ describe('Checkbox', () => {
     expect(output.find('input[type="checkbox"]')).toBeTruthy();
   });
 
-  it('should render a label', () => {
+  it("should render a label", () => {
     const output = shallow(wrapper);
-    expect(output.find('label')).toBeTruthy();
+    expect(output.find("label")).toBeTruthy();
   });
 
-  it('matches wrapper snapshot', () => {
-    expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
+  it("matches wrapper snapshot", () => {
+    expect(mount(wrapper)).toMatchSnapshot("wrapper mount");
   });
-  it('renders disabled checkbox', () => {
-    expect(mount(<Checkbox disabled>Example</Checkbox>)).toMatchSnapshot('disabled');
+  it("renders disabled checkbox", () => {
+    expect(mount(<Checkbox disabled>Example</Checkbox>)).toMatchSnapshot(
+      "disabled"
+    );
   });
-  it('can render with hint text', () => {
-    expect(mount(<Checkbox hint="Hint text">Example with hint text</Checkbox>)).toMatchSnapshot('hint text');
+  it("can render with hint text", () => {
+    expect(
+      mount(<Checkbox hint="Hint text">Example with hint text</Checkbox>)
+    ).toMatchSnapshot("hint text");
   });
 });

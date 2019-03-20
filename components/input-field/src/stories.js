@@ -1,44 +1,44 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import { WithDocsCustom } from "@govuk-react/storybook-components";
 
-import InputField from '.';
-import ReadMe from '../README.md';
+import InputField from ".";
+import ReadMe from "../README.md";
 
 const meta = {
   touched: true,
-  error: 'Example',
+  error: "Example"
 };
 
-const stories = storiesOf('Form/InputField', module);
-const examples = storiesOf('Form/InputField/Examples', module);
+const stories = storiesOf("Form/InputField", module);
+const examples = storiesOf("Form/InputField/Examples", module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Component default', () => (
+stories.add("Component default", () => (
   <InputField name="group0">National Insurance number</InputField>
 ));
 
-examples.add('Input with HintText', () => (
+examples.add("Input with HintText", () => (
   <InputField
     name="group1"
     hint={[
-      'It’s on your National Insurance card, benefit letter, payslip or P60.',
+      "It’s on your National Insurance card, benefit letter, payslip or P60.",
       <br />,
-      'For example, ‘QQ 12 34 56 C’.',
+      "For example, ‘QQ 12 34 56 C’."
     ]}
   >
     National Insurance number
   </InputField>
 ));
 
-examples.add('Input with HintText & error', () => (
+examples.add("Input with HintText & error", () => (
   <InputField
     name="group1"
     hint={[
-      'It’s on your National Insurance card, benefit letter, payslip or P60.',
+      "It’s on your National Insurance card, benefit letter, payslip or P60.",
       <br />,
-      'For example, ‘QQ 12 34 56 C’.',
+      "For example, ‘QQ 12 34 56 C’."
     ]}
     meta={meta}
   >

@@ -1,45 +1,45 @@
 // https://github.com/alphagov/govuk-frontend/tree/master/src/components/textarea
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { BLACK, YELLOW, ERROR_COLOUR } from 'govuk-colours';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { BLACK, YELLOW, ERROR_COLOUR } from "govuk-colours";
 import {
   FONT_SIZE,
   LINE_HEIGHT,
   MEDIA_QUERIES,
-  NTA_LIGHT,
-} from '@govuk-react/constants';
+  NTA_LIGHT
+} from "@govuk-react/constants";
 
-import Label from '@govuk-react/label';
-import LabelText from '@govuk-react/label-text';
-import ErrorText from '@govuk-react/error-text';
-import HintText from '@govuk-react/hint-text';
+import Label from "@govuk-react/label";
+import LabelText from "@govuk-react/label-text";
+import ErrorText from "@govuk-react/error-text";
+import HintText from "@govuk-react/hint-text";
 
-const TextAreaField = styled('textarea')(
+const TextAreaField = styled("textarea")(
   {
-    boxSizing: 'border-box',
+    boxSizing: "border-box",
     fontFamily: NTA_LIGHT,
     fontWeight: 400,
-    textTransform: 'none',
+    textTransform: "none",
     fontSize: FONT_SIZE.SIZE_16,
     lineHeight: LINE_HEIGHT.SIZE_16,
     [MEDIA_QUERIES.LARGESCREEN]: {
       fontSize: FONT_SIZE.SIZE_19,
       lineHeight: LINE_HEIGHT.SIZE_19,
-      width: '75%',
+      width: "75%"
     },
-    width: '100%',
-    padding: '5px 4px 4px',
+    width: "100%",
+    padding: "5px 4px 4px",
     border: `2px solid ${BLACK}`,
-    ':focus': {
+    ":focus": {
       outline: `3px solid ${YELLOW}`,
-      outlineOffset: 0,
-    },
+      outlineOffset: 0
+    }
   },
   ({ error }) => ({
-    border: error ? `4px solid ${ERROR_COLOUR}` : undefined,
-  }),
+    border: error ? `4px solid ${ERROR_COLOUR}` : undefined
+  })
 );
 
 /**
@@ -78,21 +78,24 @@ const TextAreaField = styled('textarea')(
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/textarea
  *
  */
-const TextArea = ({
-  children, hint, meta, input, ...props
-}) => (
+const TextArea = ({ children, hint, meta, input, ...props }) => (
   <Label error={meta.touched && meta.error} {...props}>
     <LabelText>{children}</LabelText>
-    { hint && <HintText>{hint}</HintText> }
-    { meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText> }
-    <TextAreaField type="text" rows="5" error={meta.touched && meta.error} {...input} />
+    {hint && <HintText>{hint}</HintText>}
+    {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
+    <TextAreaField
+      type="text"
+      rows="5"
+      error={meta.touched && meta.error}
+      {...input}
+    />
   </Label>
 );
 
 TextArea.defaultProps = {
   hint: undefined,
   input: {},
-  meta: {},
+  meta: {}
 };
 
 TextArea.propTypes = {
@@ -102,7 +105,7 @@ TextArea.propTypes = {
     onBlur: PropTypes.func,
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
-    value: PropTypes.any,
+    value: PropTypes.any
   }),
   meta: PropTypes.shape({
     active: PropTypes.bool,
@@ -117,9 +120,9 @@ TextArea.propTypes = {
     submitSucceeded: PropTypes.bool,
     touched: PropTypes.bool,
     valid: PropTypes.bool,
-    visited: PropTypes.bool,
+    visited: PropTypes.bool
   }),
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 /** Component is not exported withWhitespace because Label

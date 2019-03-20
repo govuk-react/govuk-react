@@ -1,122 +1,119 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { CSSTransition } from 'react-transition-group';
-import hexRgb from 'hex-rgb';
-import { Spinner } from '@govuk-react/icons';
-import { BLACK, WHITE } from 'govuk-colours';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { CSSTransition } from "react-transition-group";
+import hexRgb from "hex-rgb";
+import { Spinner } from "@govuk-react/icons";
+import { BLACK, WHITE } from "govuk-colours";
 
-const spinnerClassName = 'icon-loading';
+const spinnerClassName = "icon-loading";
 
-const StyledContainer = styled('div')({
-  position: 'relative',
-  paddingBottom: '2px',
-  minHeight: '10px',
+const StyledContainer = styled("div")({
+  position: "relative",
+  paddingBottom: "2px",
+  minHeight: "10px"
 });
 
-const Innerwrap = styled('div')(({
-  timeIn,
-  timeOut,
-  backgroundColor,
-  backgroundColorOpacity,
-}) => ({
-  position: 'absolute',
-  height: '100%',
-  top: 0,
-  right: 0,
-  left: 0,
-  bottom: 0,
-  display: 'flex',
-  justifyContent: 'center',
-  [`& .${spinnerClassName}`]: {
-    position: 'absolute',
-    zIndex: 101,
-    opacity: 1,
-    display: 'block',
-    height: '100%',
-    maxHeight: 'calc(50vh + 100px)',
-    transition: `opacity ${timeIn}ms ease-in-out`,
-    willChange: 'opacity',
-  },
-  '& .overlay': {
-    zIndex: 100,
-    transition: `background-color ${timeIn}ms ease-in-out`,
-    willChange: 'background-color',
-    backgroundColor: `rgba(
+const Innerwrap = styled("div")(
+  ({ timeIn, timeOut, backgroundColor, backgroundColorOpacity }) => ({
+    position: "absolute",
+    height: "100%",
+    top: 0,
+    right: 0,
+    left: 0,
+    bottom: 0,
+    display: "flex",
+    justifyContent: "center",
+    [`& .${spinnerClassName}`]: {
+      position: "absolute",
+      zIndex: 101,
+      opacity: 1,
+      display: "block",
+      height: "100%",
+      maxHeight: "calc(50vh + 100px)",
+      transition: `opacity ${timeIn}ms ease-in-out`,
+      willChange: "opacity"
+    },
+    "& .overlay": {
+      zIndex: 100,
+      transition: `background-color ${timeIn}ms ease-in-out`,
+      willChange: "background-color",
+      backgroundColor: `rgba(
       ${hexRgb(backgroundColor)[0]},
       ${hexRgb(backgroundColor)[1]},
       ${hexRgb(backgroundColor)[2]},
-      ${backgroundColorOpacity})`,
-  },
-  '.fade-enter': {
-    '& .overlay': {
-      backgroundColor: `rgba(
+      ${backgroundColorOpacity})`
+    },
+    ".fade-enter": {
+      "& .overlay": {
+        backgroundColor: `rgba(
         ${hexRgb(backgroundColor)[0]},
         ${hexRgb(backgroundColor)[1]},
         ${hexRgb(backgroundColor)[2]},
         0)`,
-      transitionDuration: `${timeIn}ms`,
+        transitionDuration: `${timeIn}ms`
+      },
+      [`& .${spinnerClassName}`]: {
+        opacity: 0,
+        transitionDuration: `${timeIn}ms`,
+        transitionDelay: `${timeIn / 2}ms`
+      }
     },
-    [`& .${spinnerClassName}`]: {
-      opacity: 0,
-      transitionDuration: `${timeIn}ms`,
-      transitionDelay: `${timeIn / 2}ms`,
-    },
-  },
-  '.fade-enter-active': {
-    '& .overlay': {
-      backgroundColor: `rgba(
+    ".fade-enter-active": {
+      "& .overlay": {
+        backgroundColor: `rgba(
         ${hexRgb(backgroundColor)[0]},
         ${hexRgb(backgroundColor)[1]},
         ${hexRgb(backgroundColor)[2]},
         ${backgroundColorOpacity})`,
-      transitionDuration: `${timeIn}ms`,
+        transitionDuration: `${timeIn}ms`
+      },
+      [`& .${spinnerClassName}`]: {
+        opacity: 1,
+        transitionDuration: `${timeIn}ms`,
+        transitionDelay: `${timeIn / 2}ms`
+      }
     },
-    [`& .${spinnerClassName}`]: {
-      opacity: 1,
-      transitionDuration: `${timeIn}ms`,
-      transitionDelay: `${timeIn / 2}ms`,
-    },
-  },
-  '.fade-exit': {
-    '& .overlay': {
-      backgroundColor: `rgba(
+    ".fade-exit": {
+      "& .overlay": {
+        backgroundColor: `rgba(
         ${hexRgb(backgroundColor)[0]},
         ${hexRgb(backgroundColor)[1]},
         ${hexRgb(backgroundColor)[2]},
         ${backgroundColorOpacity})`,
-      transitionDuration: `${timeOut}ms`,
+        transitionDuration: `${timeOut}ms`
+      },
+      [`& .${spinnerClassName}`]: {
+        opacity: 1,
+        transitionDuration: `${timeOut}ms`
+      }
     },
-    [`& .${spinnerClassName}`]: {
-      opacity: 1,
-      transitionDuration: `${timeOut}ms`,
-    },
-  },
-  '.fade-exit-active': {
-    '& .overlay': {
-      backgroundColor: `rgba(
+    ".fade-exit-active": {
+      "& .overlay": {
+        backgroundColor: `rgba(
         ${hexRgb(backgroundColor)[0]},
         ${hexRgb(backgroundColor)[1]},
         ${hexRgb(backgroundColor)[2]},
         0)`,
-      transitionDuration: `${timeOut}ms`,
-    },
-    [`& .${spinnerClassName}`]: {
-      opacity: 0,
-      transitionDuration: `${timeOut}ms`,
-    },
-  },
-}));
+        transitionDuration: `${timeOut}ms`
+      },
+      [`& .${spinnerClassName}`]: {
+        opacity: 0,
+        transitionDuration: `${timeOut}ms`
+      }
+    }
+  })
+);
 
-const Overlay = styled('div')({
-  position: 'absolute',
+const Overlay = styled("div")({
+  position: "absolute",
   top: 0,
   right: 0,
   bottom: 0,
   left: 0,
-  overflow: 'hidden',
-  height: '100%',
-  width: '100%',
+  overflow: "hidden",
+  height: "100%",
+  width: "100%"
 });
 
 /**
@@ -160,7 +157,12 @@ const LoadingBox = ({
   ...props
 }) => (
   <StyledContainer {...props}>
-    <CSSTransition timeout={timeOut} classNames="fade" in={loading} unmountOnExit>
+    <CSSTransition
+      timeout={timeOut}
+      classNames="fade"
+      in={loading}
+      unmountOnExit
+    >
       <Innerwrap
         backgroundColor={backgroundColor}
         backgroundColorOpacity={backgroundColorOpacity}
@@ -168,7 +170,13 @@ const LoadingBox = ({
         timeIn={timeIn}
         timeOut={timeOut}
       >
-        <Spinner title={title} className={spinnerClassName} fill={spinnerColor} width="50px" height="50px" />
+        <Spinner
+          title={title}
+          className={spinnerClassName}
+          fill={spinnerColor}
+          width="50px"
+          height="50px"
+        />
         <Overlay className="overlay" />
       </Innerwrap>
     </CSSTransition>
@@ -183,42 +191,42 @@ LoadingBox.defaultProps = {
   title: undefined,
   loading: false,
   timeIn: 800,
-  timeOut: 200,
+  timeOut: 200
 };
 
 LoadingBox.propTypes = {
   /**
    * One or more children nodes that loading box will overlay
-  */
+   */
   children: PropTypes.node.isRequired,
   /**
    * Color (3 or 6 Hex char) of loading spinner
-  */
+   */
   spinnerColor: PropTypes.string,
   /**
    * Background color (3 or 6 Hex char) of loading spinner overlay when loading is true.
-  */
+   */
   backgroundColor: PropTypes.string,
   /**
    * Opacity of loading spinner backgroud colour when loading is true
-  */
+   */
   backgroundColorOpacity: PropTypes.number,
   /**
    * Loading spinner title text
-  */
+   */
   title: PropTypes.string,
   /**
    * Whether loading is currently set to true or false
-  */
+   */
   loading: PropTypes.bool,
   /**
    * Length of fade-in animation in milliseconds
-  */
+   */
   timeIn: PropTypes.number,
   /**
    * Length of fade-out animation in milliseconds
-  */
-  timeOut: PropTypes.number,
+   */
+  timeOut: PropTypes.number
 };
 
 export default LoadingBox;

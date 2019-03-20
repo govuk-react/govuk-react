@@ -1,10 +1,10 @@
 // every export from constants should be a truthy (string, number, bool or plain non empty object)
 // no functions, no undefined
-import * as exports from '.';
+import * as exports from ".";
 
-const okTypes = ['number', 'string', 'boolean', 'object'];
+const okTypes = ["number", "string", "boolean", "object"];
 
-describe('Constants', () => {
+describe("Constants", () => {
   for (let n = 0; n < Object.keys(exports).length; n += 1) {
     const key = Object.keys(exports)[n];
 

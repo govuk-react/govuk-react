@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import OrderedList from '@govuk-react/ordered-list';
+import React from "react";
+import PropTypes from "prop-types";
+import OrderedList from "@govuk-react/ordered-list";
 
 /**
  *
@@ -38,14 +38,14 @@ import OrderedList from '@govuk-react/ordered-list';
 const UnorderedList = props => <OrderedList as="ul" {...props} />;
 
 UnorderedList.defaultProps = {
-  listStyleType: undefined,
+  listStyleType: undefined
 };
 
 UnorderedList.propTypes = {
   /** One or more ListItem components */
   children: PropTypes.node.isRequired,
   /** CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend */
-  listStyleType: PropTypes.string,
+  listStyleType: PropTypes.string
 };
 
 export default UnorderedList;

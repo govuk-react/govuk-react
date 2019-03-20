@@ -1,19 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { GUTTER_HALF, MEDIA_QUERIES } from '@govuk-react/constants';
-import { spacing } from '@govuk-react/lib';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { GUTTER_HALF, MEDIA_QUERIES } from "@govuk-react/constants";
+import { spacing } from "@govuk-react/lib";
 
-const StyledRow = styled('div')(
+const StyledRow = styled("div")(
   {
-    display: 'flex',
-    flexDirection: 'column',
+    display: "flex",
+    flexDirection: "column",
     margin: `0 -${GUTTER_HALF}`,
     [MEDIA_QUERIES.LARGESCREEN]: {
-      flexDirection: 'row',
-    },
+      flexDirection: "row"
+    }
   },
-  spacing.withWhiteSpace(),
+  spacing.withWhiteSpace()
 );
 
 /**
@@ -48,7 +48,7 @@ GridRow.propTypes = {
   /**
    * One or more GridCol nodes
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default GridRow;

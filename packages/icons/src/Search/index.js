@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import SVG from '../SVGBase/index';
+import SVG from "../SVGBase/index";
 
 const Search = ({ fill, title, ...rest }) => (
   <SVG viewBox="0 0 57 57" title={title} fill={fill} {...rest}>
@@ -11,12 +11,12 @@ const Search = ({ fill, title, ...rest }) => (
 
 Search.propTypes = {
   title: PropTypes.string,
-  fill: PropTypes.string,
+  fill: PropTypes.string
 };
 
 Search.defaultProps = {
-  title: 'Search',
-  fill: 'currentColor',
+  title: "Search",
+  fill: "currentColor"
 };
 
 export default Search;

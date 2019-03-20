@@ -1,14 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { mount } from 'enzyme';
+import React from "react";
+import ReactDOM from "react-dom";
+import { mount } from "enzyme";
 
-import FileUpload from '.';
+import FileUpload from ".";
 
-describe('FileUpload', () => {
-  const example = 'example';
+describe("FileUpload", () => {
+  const example = "example";
   const meta = {
     touched: true,
-    error: example,
+    error: example
   };
   const wrapper = <FileUpload>{example}</FileUpload>;
   const wrapperError = (
@@ -16,13 +16,13 @@ describe('FileUpload', () => {
       {example}
     </FileUpload>
   );
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
+  it("renders without crashing", () => {
+    const div = document.createElement("div");
     ReactDOM.render(wrapper, div);
     ReactDOM.render(wrapperError, div);
   });
 
-  it('matches snapshot', () => {
-    expect(mount(wrapper)).toMatchSnapshot('enzyme.mount');
+  it("matches snapshot", () => {
+    expect(mount(wrapper)).toMatchSnapshot("enzyme.mount");
   });
 });

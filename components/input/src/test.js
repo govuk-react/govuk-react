@@ -1,23 +1,27 @@
-import React from 'react';
-import { mount } from 'enzyme';
-import { ORANGE } from 'govuk-colours';
+import React from "react";
+import { mount } from "enzyme";
+import { ORANGE } from "govuk-colours";
 
-import Input from '.';
+import Input from ".";
 
-describe('Input', () => {
+describe("Input", () => {
   const wrapper = <Input type="text" />;
   const withError = <Input type="text" error="example" />;
-  const withColouredError = <Input type="text" errorColor={ORANGE} error="example" />;
+  const withColouredError = (
+    <Input type="text" errorColor={ORANGE} error="example" />
+  );
 
-  it('matches wrapper snapshot', () => {
-    expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
+  it("matches wrapper snapshot", () => {
+    expect(mount(wrapper)).toMatchSnapshot("wrapper mount");
   });
 
-  it('matches withError snapshot', () => {
-    expect(mount(withError)).toMatchSnapshot('with error mount');
+  it("matches withError snapshot", () => {
+    expect(mount(withError)).toMatchSnapshot("with error mount");
   });
 
-  it('matches withColouredError snapshot', () => {
-    expect(mount(withColouredError)).toMatchSnapshot('with coloured error mount');
+  it("matches withColouredError snapshot", () => {
+    expect(mount(withColouredError)).toMatchSnapshot(
+      "with coloured error mount"
+    );
   });
 });

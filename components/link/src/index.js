@@ -1,15 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { link } from '@govuk-react/lib';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { link } from "@govuk-react/lib";
 
-const Link = styled('a')(
+const Link = styled("a")(
   link.common(),
   link.styleDefault,
   link.printFriendly,
   ({ muted }) => (muted ? link.styleMuted : undefined),
   ({ textColour }) => (textColour ? link.styleText : undefined),
-  ({ noVisitedState }) => (noVisitedState ? link.styleNoVisitedState : undefined),
+  ({ noVisitedState }) =>
+    noVisitedState ? link.styleNoVisitedState : undefined
 );
 
 /**
@@ -45,12 +46,12 @@ LinkDocumented.propTypes = {
   /** ensure link is shown in plain text colour */
   textColour: PropTypes.bool,
   /** ensure there is no "visited" style */
-  noVisitedState: PropTypes.bool,
+  noVisitedState: PropTypes.bool
 };
 LinkDocumented.defaultProps = {
   muted: false,
   textColour: false,
-  noVisitedState: false,
+  noVisitedState: false
 };
 
 Link.propTypes = LinkDocumented.propTypes;

@@ -4,13 +4,13 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_main-wrapper.scss
 // https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_width-container.scss
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import TopNav from '@govuk-react/top-nav';
+import React from "react";
+import PropTypes from "prop-types";
+import TopNav from "@govuk-react/top-nav";
 // import Footer from '@govuk-react/footer';
 
-import Main from './atoms/main';
-import WidthContainer from './atoms/width-container';
+import Main from "./atoms/main";
+import WidthContainer from "./atoms/width-container";
 
 /**
  *
@@ -33,7 +33,12 @@ import WidthContainer from './atoms/width-container';
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_width-container.scss
  */
 const Page = ({
-  header, footer, children, beforeChildren, main: MainComponent, container: Container,
+  header,
+  footer,
+  children,
+  beforeChildren,
+  main: MainComponent,
+  container: Container
 }) => (
   <React.Fragment>
     {header}
@@ -71,7 +76,7 @@ Page.propTypes = {
    * Override the default page container component.
    * `beforeChildren` and `children` (wrapped in `main`) will be placed inside this component.
    */
-  container: PropTypes.func,
+  container: PropTypes.func
 };
 
 Page.Main = Main;
@@ -83,7 +88,7 @@ Page.defaultProps = {
   footer: undefined, // <Footer />, // TODO: add Footer component once built
   main: Page.Main,
   beforeChildren: undefined,
-  container: Page.WidthContainer,
+  container: Page.WidthContainer
 };
 
 export default Page;

@@ -1,24 +1,24 @@
-import React from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import { MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
-import { spacing, typography } from '@govuk-react/lib';
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
+import { MEDIA_QUERIES, SPACING_POINTS } from "@govuk-react/constants";
+import { spacing, typography } from "@govuk-react/lib";
 
-const StyledList = styled('ul')(
+const StyledList = styled("ul")(
   typography.font({ size: 19 }),
   {
-    boxSizing: 'border-box',
-    display: 'flex',
-    flexDirection: 'column',
+    boxSizing: "border-box",
+    display: "flex",
+    flexDirection: "column",
     marginTop: SPACING_POINTS[5],
     padding: SPACING_POINTS[2],
-    justifyContent: 'space-between',
-    width: '100%',
+    justifyContent: "space-between",
+    width: "100%",
     [MEDIA_QUERIES.LARGESCREEN]: {
-      flexDirection: 'row',
-    },
+      flexDirection: "row"
+    }
   },
-  spacing.withWhiteSpace({ marginBottom: 6 }),
+  spacing.withWhiteSpace({ marginBottom: 6 })
 );
 
 /**
@@ -49,7 +49,7 @@ const Pagination = props => <StyledList {...props} />;
 
 Pagination.propTypes = {
   /** `asPaginationItem` nodes */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default Pagination;

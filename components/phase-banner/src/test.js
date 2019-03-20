@@ -1,10 +1,12 @@
-import React from 'react';
-import { mount } from 'enzyme';
+import React from "react";
+import { mount } from "enzyme";
 
-import PhaseBanner from '.';
+import PhaseBanner from ".";
 
-describe('PhaseBanner', () => {
-  it('matches wrapper snapshot', () => {
-    expect(mount(<PhaseBanner level="beta">example</PhaseBanner>)).toMatchSnapshot('wrapper mount');
+describe("PhaseBanner", () => {
+  it("matches wrapper snapshot", () => {
+    expect(
+      mount(<PhaseBanner level="beta">example</PhaseBanner>)
+    ).toMatchSnapshot("wrapper mount");
   });
 });

@@ -1,13 +1,15 @@
 // every export from @govuk-react/icons should be a React component that renders an SVG
 // icons should be stateless therefore should be a function
-import { mount } from 'enzyme';
-import React from 'react';
+import { mount } from "enzyme";
+import React from "react";
 
-import * as exports from '.';
+import * as exports from ".";
 
-describe('@govuk-react/icons', () => {
+describe("@govuk-react/icons", () => {
   // filter out private exports e.g. __esModule
-  const componentNames = Object.keys(exports).filter(componentName => !componentName.startsWith('_'));
+  const componentNames = Object.keys(exports).filter(
+    componentName => !componentName.startsWith("_")
+  );
   for (let n = 0; n < componentNames.length; n += 1) {
     const key = componentNames[n];
     it(`exports ${key} as a React component that renders an SVG`, () => {
@@ -17,8 +19,8 @@ describe('@govuk-react/icons', () => {
       // as it's possible we'd never need a false constant export
       expect(Component).toBeTruthy();
       // icons should be stateless so we expect a function
-      expect(typeof Component).toBe('function');
-      expect(mount(<Component />).find('svg')).toHaveLength(1);
+      expect(typeof Component).toBe("function");
+      expect(mount(<Component />).find("svg")).toHaveLength(1);
     });
   }
 });

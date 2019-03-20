@@ -1,23 +1,23 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import { WithDocsCustom } from "@govuk-react/storybook-components";
 
-import LabelText from '@govuk-react/label-text';
-import Select, { SelectInput } from '.';
-import ReadMe from '../README.md';
+import LabelText from "@govuk-react/label-text";
+import Select, { SelectInput } from ".";
+import ReadMe from "../README.md";
 
 const meta = {
   touched: true,
-  error: 'Example',
+  error: "Example"
 };
 
-const stories = storiesOf('Form/Select', module);
-const examples = storiesOf('Form/Select/Examples', module);
+const stories = storiesOf("Form/Select", module);
+const examples = storiesOf("Form/Select/Examples", module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
 // TODO: add a synthetic onChange event
-stories.add('Component default', () => (
+stories.add("Component default", () => (
   <Select name="group1" label="This is a label">
     <option value="0">GOV.UK elements option 1</option>
     <option value="1">GOV.UK elements option 2</option>
@@ -25,12 +25,12 @@ stories.add('Component default', () => (
   </Select>
 ));
 
-examples.add('Select with hintText', () => (
+examples.add("Select with hintText", () => (
   <Select
     name="group1"
     label="This is a label"
     hint={[
-      'This is and example of hintText/description of what we need from you.',
+      "This is and example of hintText/description of what we need from you."
     ]}
   >
     <option value="0">GOV.UK elements option 1</option>
@@ -39,12 +39,12 @@ examples.add('Select with hintText', () => (
   </Select>
 ));
 
-examples.add('Select with hintText & error', () => (
+examples.add("Select with hintText & error", () => (
   <Select
     name="group1"
     label="This is a label"
     hint={[
-      'This is and example of hintText/description of what we need from you.',
+      "This is and example of hintText/description of what we need from you."
     ]}
     meta={meta}
   >
@@ -54,10 +54,10 @@ examples.add('Select with hintText & error', () => (
   </Select>
 ));
 
-examples.add('Standalone input with inline label', () => (
+examples.add("Standalone input with inline label", () => (
   <label>
     <LabelText>
-Sort by:&nbsp;
+      Sort by:&nbsp;
       <SelectInput>
         <option value="0">People</option>
         <option value="1">Animals</option>

@@ -1,9 +1,10 @@
-import React from 'react';
-import { text, boolean } from '@storybook/addon-knobs/react';
+import React from "react";
+import { text, boolean } from "@storybook/addon-knobs/react";
 
-import Paragraph from '.';
+import Paragraph from ".";
 
-const exampleParagraph = 'Paragraph fields support markdown and allow for **bold** text and *italics*, as well as [links](https://en.wikipedia.org/wiki/Markdown). `Inline` code snippets are also supported, as well as code blocks PROVIDED they start on their own line';
+const exampleParagraph =
+  "Paragraph fields support markdown and allow for **bold** text and *italics*, as well as [links](https://en.wikipedia.org/wiki/Markdown). `Inline` code snippets are also supported, as well as code blocks PROVIDED they start on their own line";
 
 const exampleCodeBlock = `\`\`\`
   const CustomStyledButton = styled(Button)({
@@ -20,17 +21,17 @@ const exampleCodeBlock = `\`\`\`
   \`\`\``;
 
 const ParagraphWithKnobs = () => (
-  <Paragraph supportingText={boolean('supportingText', false)}>
-    {text('children', exampleParagraph)}
+  <Paragraph supportingText={boolean("supportingText", false)}>
+    {text("children", exampleParagraph)}
   </Paragraph>
 );
 
 const SupportingParagraph = () => (
-  <Paragraph supportingText>{text('children', exampleParagraph)}</Paragraph>
+  <Paragraph supportingText>{text("children", exampleParagraph)}</Paragraph>
 );
 
 const ParagraphWithCodeBlock = () => (
-  <Paragraph supportingText>{text('children', exampleCodeBlock)}</Paragraph>
+  <Paragraph supportingText>{text("children", exampleCodeBlock)}</Paragraph>
 );
 
 export default Paragraph;
@@ -40,5 +41,5 @@ export {
   SupportingParagraph,
   ParagraphWithCodeBlock,
   exampleParagraph,
-  exampleCodeBlock,
+  exampleCodeBlock
 };

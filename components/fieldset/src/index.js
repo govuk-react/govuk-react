@@ -1,20 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { spacing } from '@govuk-react/lib';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { spacing } from "@govuk-react/lib";
 
-import Legend from './atoms/legend';
+import Legend from "./atoms/legend";
 
-const Fieldset = styled('fieldset')(
+const Fieldset = styled("fieldset")(
   {
     border: 0,
-    '&:after': {
+    "&:after": {
       content: '""',
-      display: 'block',
-      clear: 'both',
-    },
+      display: "block",
+      clear: "both"
+    }
   },
-  spacing.withWhiteSpace({ margin: 0, padding: 0 }),
+  spacing.withWhiteSpace({ margin: 0, padding: 0 })
 );
 
 /**
@@ -50,7 +50,7 @@ const Fieldset = styled('fieldset')(
 const FieldsetDocumented = props => <Fieldset {...props} />;
 
 FieldsetDocumented.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 Fieldset.propTypes = FieldsetDocumented.propTypes;

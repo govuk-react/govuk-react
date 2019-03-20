@@ -1,13 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { mount } from 'enzyme';
+import React from "react";
+import ReactDOM from "react-dom";
+import { mount } from "enzyme";
 
-import Heading from '.';
-import {
-  H1, H2, H3, H4, H5, H6,
-} from './presets';
+import Heading from ".";
+import { H1, H2, H3, H4, H5, H6 } from "./presets";
 
-describe('Heading', () => {
+describe("Heading", () => {
   const OLD_ENV = process.env;
   // eslint-disable-next-line no-console
   const nativeWarn = console.warn;
@@ -19,7 +17,9 @@ describe('Heading', () => {
     jest.resetModules();
     process.env = { ...OLD_ENV };
     // eslint-disable-next-line no-console
-    console.warn = () => { warnCallCount += 1; };
+    console.warn = () => {
+      warnCallCount += 1;
+    };
     warnCallCount = 0;
   });
 
@@ -29,10 +29,10 @@ describe('Heading', () => {
     process.env = OLD_ENV;
   });
 
-  it('renders a Heading and all the H-level tags without crashing or producing a warning', () => {
-    const example = 'example';
+  it("renders a Heading and all the H-level tags without crashing or producing a warning", () => {
+    const example = "example";
     const wrapper = <Heading>{example}</Heading>;
-    const div = document.createElement('div');
+    const div = document.createElement("div");
 
     ReactDOM.render(wrapper, div);
     ReactDOM.render(<H1>{example}</H1>, div);
@@ -45,26 +45,40 @@ describe('Heading', () => {
     expect(warnCallCount).toEqual(0);
   });
 
-  it('allows custom string-based font size without crashing', () => {
-    ReactDOM.render(<Heading size="SMALL">Test</Heading>, document.createElement('div'));
+  it("allows custom string-based font size without crashing", () => {
+    ReactDOM.render(
+      <Heading size="SMALL">Test</Heading>,
+      document.createElement("div")
+    );
   });
 
-  it('allows custom numeric GDS font size without crashing', () => {
-    ReactDOM.render(<Heading size={16}>Test</Heading>, document.createElement('div'));
+  it("allows custom numeric GDS font size without crashing", () => {
+    ReactDOM.render(
+      <Heading size={16}>Test</Heading>,
+      document.createElement("div")
+    );
   });
 
-  it('throws an error if an unsupported size is used', () => {
-    const example = 'example';
-    const div = document.createElement('div');
+  it("throws an error if an unsupported size is used", () => {
+    const example = "example";
+    const div = document.createElement("div");
 
-    expect(() => { ReactDOM.render(<Heading size={0}>{example}</Heading>, div); }).toThrow();
-    expect(() => { ReactDOM.render(<Heading size={1}>{example}</Heading>, div); }).toThrow();
-    expect(() => { ReactDOM.render(<Heading size={99999}>{example}</Heading>, div); }).toThrow();
-    expect(() => { ReactDOM.render(<Heading size="test">{example}</Heading>, div); }).toThrow();
+    expect(() => {
+      ReactDOM.render(<Heading size={0}>{example}</Heading>, div);
+    }).toThrow();
+    expect(() => {
+      ReactDOM.render(<Heading size={1}>{example}</Heading>, div);
+    }).toThrow();
+    expect(() => {
+      ReactDOM.render(<Heading size={99999}>{example}</Heading>, div);
+    }).toThrow();
+    expect(() => {
+      ReactDOM.render(<Heading size="test">{example}</Heading>, div);
+    }).toThrow();
   });
 
-  it('produces deprecation warnings if level prop is used when not in production', () => {
-    process.env.NODE_ENV = 'development';
+  it("produces deprecation warnings if level prop is used when not in production", () => {
+    process.env.NODE_ENV = "development";
 
     mount(<Heading level="1">example</Heading>);
     mount(<Heading level="3">example</Heading>);
@@ -75,8 +89,8 @@ describe('Heading', () => {
     expect(warnCallCount).not.toEqual(0);
   });
 
-  it('does not produces deprecation warnings if level prop is used when in production', () => {
-    process.env.NODE_ENV = 'production';
+  it("does not produces deprecation warnings if level prop is used when in production", () => {
+    process.env.NODE_ENV = "production";
 
     mount(<Heading level="1">example</Heading>);
     mount(<Heading level="3">example</Heading>);
@@ -85,11 +99,10 @@ describe('Heading', () => {
     expect(warnCallCount).toEqual(0);
   });
 
-
-  it('matches wrapper snapshot', () => {
-    const example = 'example';
+  it("matches wrapper snapshot", () => {
+    const example = "example";
     const wrapper = <Heading>{example}</Heading>;
 
-    expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
+    expect(mount(wrapper)).toMatchSnapshot("wrapper mount");
   });
 });

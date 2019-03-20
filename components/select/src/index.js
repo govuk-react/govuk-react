@@ -1,37 +1,37 @@
 // https://github.com/alphagov/govuk-frontend/tree/master/src/components/select
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { BLACK, ERROR_COLOUR, YELLOW } from 'govuk-colours';
-import { MEDIA_QUERIES } from '@govuk-react/constants';
-import { typography } from '@govuk-react/lib';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { BLACK, ERROR_COLOUR, YELLOW } from "govuk-colours";
+import { MEDIA_QUERIES } from "@govuk-react/constants";
+import { typography } from "@govuk-react/lib";
 
-import Label from '@govuk-react/label';
-import LabelText from '@govuk-react/label-text';
-import ErrorText from '@govuk-react/error-text';
-import HintText from '@govuk-react/hint-text';
+import Label from "@govuk-react/label";
+import LabelText from "@govuk-react/label-text";
+import ErrorText from "@govuk-react/error-text";
+import HintText from "@govuk-react/hint-text";
 
-const StyledSelect = styled('select')(
+const StyledSelect = styled("select")(
   typography.font({ size: 19 }),
   {
-    boxSizing: 'border-box',
-    width: '100%',
-    height: '33px',
-    padding: '5px 4px 4px',
+    boxSizing: "border-box",
+    width: "100%",
+    height: "33px",
+    padding: "5px 4px 4px",
     border: `2px solid ${BLACK}`,
     [MEDIA_QUERIES.LARGESCREEN]: {
-      width: '50%',
-      height: '38px',
+      width: "50%",
+      height: "38px"
     },
-    ':focus': {
+    ":focus": {
       outline: `3px solid ${YELLOW}`,
-      outlineOffset: 0,
-    },
+      outlineOffset: 0
+    }
   },
   ({ error }) => ({
-    border: error ? `4px solid ${ERROR_COLOUR}` : undefined,
-  }),
+    border: error ? `4px solid ${ERROR_COLOUR}` : undefined
+  })
 );
 
 /**
@@ -103,9 +103,7 @@ const StyledSelect = styled('select')(
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/select
  *
  */
-const Select = ({
-  children, hint, label, meta, input, ...props
-}) => (
+const Select = ({ children, hint, label, meta, input, ...props }) => (
   <Label {...props} error={meta.touched && meta.error}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
@@ -120,7 +118,7 @@ Select.defaultProps = {
   hint: undefined,
   errorText: undefined,
   input: {},
-  meta: {},
+  meta: {}
 };
 
 Select.propTypes = {
@@ -130,7 +128,7 @@ Select.propTypes = {
     onBlur: PropTypes.func,
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
-    value: PropTypes.any,
+    value: PropTypes.any
   }),
   meta: PropTypes.shape({
     active: PropTypes.bool,
@@ -145,11 +143,11 @@ Select.propTypes = {
     submitSucceeded: PropTypes.bool,
     touched: PropTypes.bool,
     valid: PropTypes.bool,
-    visited: PropTypes.bool,
+    visited: PropTypes.bool
   }),
   children: PropTypes.node.isRequired,
   label: PropTypes.string.isRequired,
-  errorText: PropTypes.string,
+  errorText: PropTypes.string
 };
 
 export default Select;
