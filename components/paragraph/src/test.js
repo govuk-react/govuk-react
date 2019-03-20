@@ -3,7 +3,7 @@ import { MemoryRouter, Link } from 'react-router-dom';
 import { mount } from 'enzyme';
 import PropTypes from 'prop-types';
 
-import Paragraph, { exampleText, exampleCodeBlock } from './fixtures';
+import Paragraph, { exampleCodeBlock } from './fixtures';
 
 const ReactRouterLinkRenderer = ({ href, children }) => (
   href.match(/^\//)
@@ -69,11 +69,11 @@ describe('Paragraph', () => {
   });
 
   it('renders full example text from fixtures', () => {
-    wrapper = mount(<Paragraph>{exampleText}</Paragraph>);
+    wrapper = mount(<Paragraph>{examplePlain}</Paragraph>);
   });
 
   it('renders as supporting text', () => {
-    wrapper = mount(<Paragraph supportingText>{exampleText}</Paragraph>);
+    wrapper = mount(<Paragraph supportingText>{examplePlain}</Paragraph>);
     expect(wrapper.prop('supportingText')).toBe(true);
   });
 
