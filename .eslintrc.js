@@ -12,6 +12,8 @@ module.exports = {
   },
   "rules": {
     "react/jsx-filename-extension": 0,
+    "react/destructuring-assignment": 0,// disabled to enable upgrade to eslint-config-airbnb@17
+    "max-len": 0,// disabled to enable upgrade to eslint-config-airbnb@17
     "jsx-a11y/label-has-for": 0,
     "filenames/match-exported": 0,
     "jsx-a11y/anchor-is-valid": [ "error", {
