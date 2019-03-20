@@ -14,7 +14,7 @@ export const TYPOGRAPHY_SCALE = {
     },
     tablet: {
       fontSize: 80,
-      lineHeight: 80 / 80,
+      lineHeight: 1, // 80 / 80
       spacing: RESPONSIVE_8.tablet,
     },
     print: {
