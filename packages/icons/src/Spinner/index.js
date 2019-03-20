@@ -26,7 +26,6 @@ const Spinner = ({ className, fill, title, ...rest }) => (
     fill={fill}
     {...rest}
   >
-    {/* eslint-disable-next-line react/no-array-index-key */}
     {Array(12)
       .fill(1)
       .map((el, i) => (
@@ -39,6 +38,7 @@ const Spinner = ({ className, fill, title, ...rest }) => (
           style={{ animationDelay: `${i * 83}ms` }}
           transform={`rotate(${i * 30}, 0, 2) translate(10 0)`}
           opacity="0"
+          /* eslint-disable-next-line react/no-array-index-key */
           key={i}
         />
       ))}
