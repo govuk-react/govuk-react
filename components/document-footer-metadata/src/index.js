@@ -89,7 +89,8 @@ const DocumentFooterMetadata = ({
 }) => {
   const fromData = (
     <StyledContainer>
-      {from &&
+      {from
+        && (
         <div>
           <p style={{ marginBottom: 0 }}>From:</p>
           <UnorderedList listStyleType="none">
@@ -97,40 +98,45 @@ const DocumentFooterMetadata = ({
               /* eslint-disable react/no-array-index-key */
               <StyledDefinition key={i}>{child}</StyledDefinition>
               /* eslint-enable react/no-array-index-key */
-              ))}
+            ))}
           </UnorderedList>
-        </div>}
+        </div>
+        )}
     </StyledContainer>
   );
 
   const partOfData = (
     <StyledContainer>
-      {partOf &&
+      {partOf
+        && (
         <div>
           <p style={{ marginBottom: 0 }}>Part of:</p>
           <UnorderedList listStyleType="none">
             {partOf && partOf.map((child, i) => (
               <StyledDefinition key={child.key || i}>{child}</StyledDefinition>
-              ))
+            ))
             }
           </UnorderedList>
-        </div>}
+        </div>
+        )}
     </StyledContainer>
   );
 
   const otherData = (
     <StyledContainer>
-      {other && other.map(item =>
-        (
-          <div key={item.id}>
-            <p style={{ marginBottom: 0 }}>{item.title}:</p>
-            <UnorderedList listStyleType="none">
-              <StyledDefinition>
-                {item.content}
-              </StyledDefinition>
-            </UnorderedList>
-          </div>
-          ))}
+      {other && other.map(item => (
+        <div key={item.id}>
+          <p style={{ marginBottom: 0 }}>
+            {item.title}
+:
+          </p>
+          <UnorderedList listStyleType="none">
+            <StyledDefinition>
+              {item.content}
+            </StyledDefinition>
+          </UnorderedList>
+        </div>
+      ))}
     </StyledContainer>
   );
 

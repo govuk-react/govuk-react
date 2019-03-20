@@ -4,7 +4,9 @@ import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-import Heading, { H1, H2, H3, H4, H5, H6 } from '.';
+import Heading, {
+  H1, H2, H3, H4, H5, H6,
+} from '.';
 import ReadMe from '../README.md';
 
 const stories = storiesOf('Typography/Heading', module);

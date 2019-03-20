@@ -33,8 +33,7 @@ describe('visuallyHidden lib', () => {
       expect(style).toBeTruthy();
       expect(style).toBeInstanceOf(Object);
 
-      const hasStyles = Object.keys(style).some(key =>
-        [':focus', ':active'].some(checkKey => key.includes(checkKey)));
+      const hasStyles = Object.keys(style).some(key => [':focus', ':active'].some(checkKey => key.includes(checkKey)));
 
       expect(hasStyles).toBe(true);
     });

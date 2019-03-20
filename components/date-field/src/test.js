@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 
-import DateField from './';
+import DateField from '.';
 
 // TODO: all snapshot tests in this file should be moved to fixtures and included in stories
 
@@ -98,10 +98,10 @@ describe('DateField', () => {
     const spy = jest.fn();
 
     const inst = mount(<DateField input={{
-        onFocus: (...rest) => {
-          spy(...rest);
-        },
-      }}
+      onFocus: (...rest) => {
+        spy(...rest);
+      },
+    }}
     />);
     const input1 = inst.find('input').first();
     const input2 = inst.find('input').at(1);

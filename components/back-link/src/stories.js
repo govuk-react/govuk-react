@@ -20,4 +20,3 @@ stories.add('Component default', () => (
 examples.add('With href', () => (
   <BackLink href="#">Back</BackLink>
 ));
-

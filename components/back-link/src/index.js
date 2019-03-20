@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { BLACK } from 'govuk-colours';
 import { SPACING_POINTS } from '@govuk-react/constants';
-import { link, shape, spacing, typography } from '@govuk-react/lib';
+import {
+  link, shape, spacing, typography,
+} from '@govuk-react/lib';
 
 const Anchor = styled('a')(
   typography.font({ size: 16 }),

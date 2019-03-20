@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
-import Label from './';
+import Label from '.';
 
 describe('Label', () => {
   const example = 'example';

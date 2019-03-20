@@ -53,7 +53,9 @@ export { default as UnorderedList } from '@govuk-react/unordered-list';
 export { default as VisuallyHidden } from '@govuk-react/visually-hidden';
 export { default as WarningText } from '@govuk-react/warning-text';
 
-export { H1, H2, H3, H4, H5, H6 } from '@govuk-react/heading';
+export {
+  H1, H2, H3, H4, H5, H6,
+} from '@govuk-react/heading';
 
 // Higher Order Components
 export { asAnchor } from '@govuk-react/hoc';

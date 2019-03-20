@@ -93,12 +93,11 @@ const Breadcrumbs = ({ children, ...props }) => (
   <BreadcrumbsContainer {...props}>
     <BreadcrumbsList>
       {children.length && children.map ? (
-        children.map((child, i) =>
-          (child && (child.length || child.props) ? (
-            <BreadcrumbsListItem key={child.key || i}>
-              {child}
-            </BreadcrumbsListItem>
-          ) : null))
+        children.map((child, i) => (child && (child.length || child.props) ? (
+          <BreadcrumbsListItem key={child.key || i}>
+            {child}
+          </BreadcrumbsListItem>
+        ) : null))
       ) : (
         <BreadcrumbsListItem>{children}</BreadcrumbsListItem>
       )}

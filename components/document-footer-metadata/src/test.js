@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
-import DocumentFooterMetadata from './';
+import DocumentFooterMetadata from '.';
 
 const example = ['example'];
 const multiExample = ['example', 'exampleexample'];

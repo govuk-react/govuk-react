@@ -33,8 +33,8 @@ const StyledButton = styled('button')(
   ({
     buttonColour = BUTTON_COLOUR,
     buttonHoverColour = darken(0.05, buttonColour),
-    buttonShadowColour = (buttonColour === BUTTON_COLOUR) ?
-      BUTTON_COLOUR_DARKEN_15 : darken(0.15, buttonColour),
+    buttonShadowColour = (buttonColour === BUTTON_COLOUR)
+      ? BUTTON_COLOUR_DARKEN_15 : darken(0.15, buttonColour),
     buttonTextColour = WHITE,
     isStart,
   }) => ({
@@ -43,8 +43,8 @@ const StyledButton = styled('button')(
     position: 'relative',
     width: '100%',
     marginTop: 0,
-    padding: isStart ? // differs from govuk-frontend owing to how icons displayed
-      `${BASE_PAD}px ${SPACING_POINTS[3]}px`
+    padding: isStart // differs from govuk-frontend owing to how icons displayed
+      ? `${BASE_PAD}px ${SPACING_POINTS[3]}px`
       : `${BASE_PAD - HALF_SHADOW}px ${SPACING_POINTS[2]}px`,
     border: `${BORDER_WIDTH_FORM_ELEMENT} solid transparent`,
     borderRadius: 0,

@@ -58,10 +58,11 @@ stories.add('Component default', () => (
 ));
 
 examples.add('custom logo', () => (
-  <TopNav company={
+  <TopNav company={(
     <NavAnchor href={link} target="new">
       <TopNav.IconTitle icon={<SearchIcon width="32px" />}>Custom Title</TopNav.IconTitle>
-    </NavAnchor>}
+    </NavAnchor>
+)}
   />
 ));
 
