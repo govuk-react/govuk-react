@@ -136,9 +136,9 @@ class TopNav extends Component {
   }
 
   toggleNavigationOpen = () => {
-    this.setState({
-      navigationOpen: !this.state.navigationOpen,
-    });
+    this.setState(prevState => ({
+      navigationOpen: !prevState.navigationOpen,
+    }));
   };
 
   render() {
