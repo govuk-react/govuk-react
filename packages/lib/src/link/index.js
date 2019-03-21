@@ -1,9 +1,6 @@
 // Tracking:
 // https://github.com/alphagov/govuk-frontend/blob/master/src/helpers/_links.scss
-import {
-  FOCUSABLE_FILL,
-  MEDIA_QUERIES,
-} from '@govuk-react/constants';
+import { FOCUSABLE_FILL, MEDIA_QUERIES } from '@govuk-react/constants';
 import {
   BLACK, // in lieu of a FOCUS_TEXT_COLOUR...
   LINK_COLOUR,

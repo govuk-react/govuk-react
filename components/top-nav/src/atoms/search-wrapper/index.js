@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-import {
-  MEDIA_QUERIES,
-  SPACING,
-} from '@govuk-react/constants';
+import { MEDIA_QUERIES, SPACING } from '@govuk-react/constants';
 
 const SearchWrapper = styled('div')({
   marginTop: SPACING.SCALE_1,

@@ -21,7 +21,7 @@ const BreadcrumbsContainer = styled('div')(
     marginTop: SPACING_POINTS[3],
     marginBottom: SPACING_POINTS[2],
   },
-  spacing.withWhiteSpace(),
+  spacing.withWhiteSpace()
 );
 
 const BreadcrumbsList = styled('ol')({
@@ -43,7 +43,7 @@ const BreadcrumbsListItem = styled('li')({
     position: 'absolute',
     top: '-1px',
     bottom: '1px',
-    left: ((CHEVRON_ALTITUDE_CALCULATED * -2) + CHEVRON_SIZE + CHEVRON_BORDER_WIDTH),
+    left: CHEVRON_ALTITUDE_CALCULATED * -2 + CHEVRON_SIZE + CHEVRON_BORDER_WIDTH,
     width: CHEVRON_SIZE,
     height: CHEVRON_SIZE,
     margin: 'auto 0',
@@ -93,11 +93,11 @@ const Breadcrumbs = ({ children, ...props }) => (
   <BreadcrumbsContainer {...props}>
     <BreadcrumbsList>
       {children.length && children.map ? (
-        children.map((child, i) => (child && (child.length || child.props) ? (
-          <BreadcrumbsListItem key={child.key || i}>
-            {child}
-          </BreadcrumbsListItem>
-        ) : null))
+        children.map((child, i) =>
+          child && (child.length || child.props) ? (
+            <BreadcrumbsListItem key={child.key || i}>{child}</BreadcrumbsListItem>
+          ) : null
+        )
       ) : (
         <BreadcrumbsListItem>{children}</BreadcrumbsListItem>
       )}

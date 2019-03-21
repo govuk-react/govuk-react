@@ -26,7 +26,10 @@ function getComponentFolderName(file) {
 
 function getComponentNameFromFile(file) {
   const folderName = getComponentFolderName(file);
-  return _.chain(folderName).camelCase().upperFirst().value();
+  return _.chain(folderName)
+    .camelCase()
+    .upperFirst()
+    .value();
 }
 
 function getMarkdownForComponent(file) {
@@ -82,7 +85,7 @@ function dequote(string) {
   return string.replace(/^'(.*)'$/, '$1');
 }
 
-export default async function (relDir, outputMd) {
+export default async function(relDir, outputMd) {
   const relDirNoQuotation = dequote(relDir);
   const outputMdNoQuotation = dequote(outputMd);
 

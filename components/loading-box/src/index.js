@@ -14,12 +14,7 @@ const StyledContainer = styled('div')({
   minHeight: '10px',
 });
 
-const Innerwrap = styled('div')(({
-  timeIn,
-  timeOut,
-  backgroundColor,
-  backgroundColorOpacity,
-}) => ({
+const Innerwrap = styled('div')(({ timeIn, timeOut, backgroundColor, backgroundColorOpacity }) => ({
   position: 'absolute',
   height: '100%',
   top: 0,
@@ -189,35 +184,35 @@ LoadingBox.defaultProps = {
 LoadingBox.propTypes = {
   /**
    * One or more children nodes that loading box will overlay
-  */
+   */
   children: PropTypes.node.isRequired,
   /**
    * Color (3 or 6 Hex char) of loading spinner
-  */
+   */
   spinnerColor: PropTypes.string,
   /**
    * Background color (3 or 6 Hex char) of loading spinner overlay when loading is true.
-  */
+   */
   backgroundColor: PropTypes.string,
   /**
    * Opacity of loading spinner backgroud colour when loading is true
-  */
+   */
   backgroundColorOpacity: PropTypes.number,
   /**
    * Loading spinner title text
-  */
+   */
   title: PropTypes.string,
   /**
    * Whether loading is currently set to true or false
-  */
+   */
   loading: PropTypes.bool,
   /**
    * Length of fade-in animation in milliseconds
-  */
+   */
   timeIn: PropTypes.number,
   /**
    * Length of fade-out animation in milliseconds
-  */
+   */
   timeOut: PropTypes.number,
 };
 

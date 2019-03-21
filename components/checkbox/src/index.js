@@ -3,12 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import HintText from '@govuk-react/hint-text';
 import { FOCUS_COLOUR } from 'govuk-colours';
-import {
-  BORDER_WIDTH,
-  BORDER_WIDTH_FORM_ELEMENT,
-  FOCUS_WIDTH,
-  SPACING_POINTS,
-} from '@govuk-react/constants';
+import { BORDER_WIDTH, BORDER_WIDTH_FORM_ELEMENT, FOCUS_WIDTH, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 
 const checkboxSize = SPACING_POINTS[7];
@@ -23,7 +18,7 @@ const StyledCheckbox = styled('label')(
     padding: `0 0 0 ${checkboxSize}px`,
     clear: 'left',
   },
-  spacing.withWhiteSpace({ marginBottom: 2 }),
+  spacing.withWhiteSpace({ marginBottom: 2 })
 );
 
 const StyledInput = styled('input')(
@@ -50,7 +45,7 @@ const StyledInput = styled('input')(
       opacity: disabled ? '.5' : '1',
       pointerEvents: disabled ? 'none' : 'auto',
     },
-  }),
+  })
 );
 
 const StyledLabel = styled('span')({
@@ -124,9 +119,7 @@ const StyledCheckboxHint = styled(HintText)({
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/checkboxes/_checkboxes.scss
  *
  */
-const Checkbox = ({
-  children, className, hint, ...props
-}) => (
+const Checkbox = ({ children, className, hint, ...props }) => (
   <StyledCheckbox className={className}>
     <StyledInput type="checkbox" {...props} />
     <StyledLabel>{children}</StyledLabel>

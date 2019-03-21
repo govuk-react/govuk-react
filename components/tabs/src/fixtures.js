@@ -91,18 +91,14 @@ class TableTabs extends Component {
         {arrTabularTabs.map(({ arr, id, title }, index) => (
           <Tabs.Panel selected={tabIndex === index} key={`${title}-tabPanel`} id={id}>
             <H2>{title}</H2>
-            <Table
-              head={tableHead}
-            >
-              {[['David Francis', 'Paul Farmer', 'Rita Patel'], ...arr]
-                .reduce(flip2dArray, [])
-                .map(innerArr => (
-                  <Table.Row key={`${innerArr.join()}-col`}>
-                    {innerArr.map(elem => (
-                      <Table.Cell key={`${elem}-row`}>{elem}</Table.Cell>
-                    ))}
-                  </Table.Row>
-                ))}
+            <Table head={tableHead}>
+              {[['David Francis', 'Paul Farmer', 'Rita Patel'], ...arr].reduce(flip2dArray, []).map(innerArr => (
+                <Table.Row key={`${innerArr.join()}-col`}>
+                  {innerArr.map(elem => (
+                    <Table.Cell key={`${elem}-row`}>{elem}</Table.Cell>
+                  ))}
+                </Table.Row>
+              ))}
             </Table>
           </Tabs.Panel>
         ))}
@@ -145,8 +141,12 @@ class SimpleTabs extends Component {
             Title 2
           </Tabs.Tab>
         </Tabs.List>
-        <Tabs.Panel selected={tabIndex === 0} id="first-panel">Panel content 1</Tabs.Panel>
-        <Tabs.Panel selected={tabIndex === 1} id="second-panel">Panel content 2</Tabs.Panel>
+        <Tabs.Panel selected={tabIndex === 0} id="first-panel">
+          Panel content 1
+        </Tabs.Panel>
+        <Tabs.Panel selected={tabIndex === 1} id="second-panel">
+          Panel content 2
+        </Tabs.Panel>
       </Tabs>
     );
   }
@@ -193,19 +193,13 @@ class SimpleMapTabs extends Component {
             >
               {contentListItem}
             </Tabs.Tab>
-          ))
-          }
+          ))}
         </Tabs.List>
         {arrSimpleMapped.map(({ contentPanel, id }, index) => (
-          <Tabs.Panel
-            key={`${contentPanel}-simpleMappedPanel`}
-            selected={tabIndex === index}
-            id={id}
-          >
+          <Tabs.Panel key={`${contentPanel}-simpleMappedPanel`} selected={tabIndex === index} id={id}>
             <H4>{contentPanel}</H4>
           </Tabs.Panel>
-        ))
-          }
+        ))}
       </Tabs>
     );
   }
@@ -255,21 +249,15 @@ class ProposedClassPropertiesPlugin extends Component {
             >
               {contentListItem}
             </Tabs.Tab>
-          ))
-          }
+          ))}
         </Tabs.List>
         {arrProposedBabel.map(({ contentPanel, id }, index) => (
-          <Tabs.Panel
-            key={`${contentPanel}-babelPanel`}
-            selected={tabIndex === index}
-            id={id}
-          >
+          <Tabs.Panel key={`${contentPanel}-babelPanel`} selected={tabIndex === index} id={id}>
             <H2>with Babel Plugin</H2>
             <SectionBreak level="L" visible />
             {contentPanel}
           </Tabs.Panel>
-        ))
-          }
+        ))}
       </Tabs>
     );
   }
@@ -303,15 +291,10 @@ const HooksExample = ({ defaultIndex }) => {
             href: '#second-panel',
           },
         ].map(({ content, href }, index) => (
-          <Tabs.Tab
-            onClick={event => hooksHandleClick({ event, index })}
-            selected={tabIndex === index}
-            href={href}
-          >
+          <Tabs.Tab onClick={event => hooksHandleClick({ event, index })} selected={tabIndex === index} href={href}>
             {content}
           </Tabs.Tab>
-        ))
-       }
+        ))}
       </Tabs.List>
       {[
         {
@@ -323,14 +306,10 @@ const HooksExample = ({ defaultIndex }) => {
           id: 'second-panel',
         },
       ].map(({ content, id }, index) => (
-        <Tabs.Panel
-          selected={tabIndex === index}
-          id={id}
-        >
+        <Tabs.Panel selected={tabIndex === index} id={id}>
           {content}
         </Tabs.Panel>
-      ))
-       }
+      ))}
     </Tabs>
   );
 };
@@ -339,6 +318,4 @@ HooksExample.defaultProps = sharedDefaultProps;
 
 HooksExample.propTypes = sharedPropTypes;
 
-export {
-  HooksExample, ProposedClassPropertiesPlugin, SimpleTabs, SimpleMapTabs, TableTabs,
-};
+export { HooksExample, ProposedClassPropertiesPlugin, SimpleTabs, SimpleMapTabs, TableTabs };

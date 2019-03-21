@@ -10,7 +10,11 @@ const nullNode = null;
 const Anchor = asTopNavAnchor('a');
 const NavLinkAnchor = asNavLinkAnchor('a');
 
-const wrapper = <TopNav company="example" search="example" serviceTitle="example">example</TopNav>;
+const wrapper = (
+  <TopNav company="example" search="example" serviceTitle="example">
+    example
+  </TopNav>
+);
 const wrapperMultipleTopNavAnchor = (
   <TopNav active={1}>
     <Anchor href="/section">Section 1</Anchor>
@@ -51,7 +55,7 @@ describe('TopNav', () => {
   });
 
   it('matches the props passed to the list of Anchor tags', () => {
-    WrapperMultipleTopNavAnchor.find(Anchor).forEach((anchor) => {
+    WrapperMultipleTopNavAnchor.find(Anchor).forEach(anchor => {
       expect(anchor.props().href).toEqual('/section');
       expect(anchor.props().children).toEqual('Section 1');
     });
@@ -67,13 +71,10 @@ describe('TopNav', () => {
   });
 
   it('with icon title', () => {
-    expect(mount(<TopNav company={(
-      <TopNav.IconTitle
-        icon={<CrownIcon width="36" height="32" />}
-      >
-        GOV.UK
-      </TopNav.IconTitle>
-)}
-    />)).toMatchSnapshot('icon title');
+    expect(
+      mount(
+        <TopNav company={<TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</TopNav.IconTitle>} />
+      )
+    ).toMatchSnapshot('icon title');
   });
 });

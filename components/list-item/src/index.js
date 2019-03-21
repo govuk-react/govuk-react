@@ -9,7 +9,7 @@ const ListItem = styled('li')(
   // govuk-frontend doesn't bother to do that
   typography.font({ size: 19 }),
   { marginBottom: SPACING_POINTS[1] },
-  spacing.withWhiteSpace(),
+  spacing.withWhiteSpace()
 );
 
 /**

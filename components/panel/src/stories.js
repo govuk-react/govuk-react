@@ -10,9 +10,7 @@ const examples = storiesOf('Misc/Panel/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Component default', () => (
-  <Panel title="Application complete" />
-));
+stories.add('Component default', () => <Panel title="Application complete" />);
 
 examples.add('Panel with header and HTML body', () => (
   <Panel title="Application complete">

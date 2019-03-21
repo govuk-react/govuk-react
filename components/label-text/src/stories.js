@@ -9,6 +9,4 @@ const stories = storiesOf('Form/LabelText', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Component default', () => (
-  <LabelText>Example</LabelText>
-));
+stories.add('Component default', () => <LabelText>Example</LabelText>);

@@ -1,12 +1,7 @@
 import styled from 'styled-components';
-import {
-  MEDIA_QUERIES,
-  SPACING,
-} from '@govuk-react/constants';
+import { MEDIA_QUERIES, SPACING } from '@govuk-react/constants';
 
-const Ul = styled('ul')(({
-  serviceTitle, open,
-}) => ({
+const Ul = styled('ul')(({ serviceTitle, open }) => ({
   display: open ? 'flex' : 'none',
   flexWrap: 'wrap',
   margin: 0,

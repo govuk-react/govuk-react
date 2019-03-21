@@ -18,7 +18,7 @@ describe('InputField', () => {
       <InputField hint={example} meta={meta}>
         {example}
       </InputField>,
-      div,
+      div
     );
   });
 

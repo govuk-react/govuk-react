@@ -1,12 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import Table, {
-  TableSimple,
-  TableWithCaption,
-  TableWithHeadAndNumerics,
-  TableWithCustomWidths,
-} from './fixtures';
+import Table, { TableSimple, TableWithCaption, TableWithHeadAndNumerics, TableWithCustomWidths } from './fixtures';
 
 describe('Table', () => {
   it('renders without crashing', () => {

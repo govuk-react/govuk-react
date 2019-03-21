@@ -25,28 +25,32 @@ const OrderedList = styled('ol')(
 
     return [
       { listStyleType: type },
-      type === 'none' ? {
-        paddingLeft: 0,
-      } : {
-        paddingLeft: SPACING_POINTS[4],
-      },
+      type === 'none'
+        ? {
+            paddingLeft: 0,
+          }
+        : {
+            paddingLeft: SPACING_POINTS[4],
+          },
       // TODO consider whether these spacing adjusts should be for all non-`none` styles
       // NB the inclusion of these ensures that withWhiteSpace's mb prop doesn't work on ListItem
-      ['disc', 'decimal'].includes(type) ? {
-        [`> ${ListItem}`]: {
-          marginBottom: 0,
-          [MEDIA_QUERIES.TABLET]: {
-            marginBottom: SPACING_POINTS[1],
+      ['disc', 'decimal'].includes(type)
+        ? {
+            [`> ${ListItem}`]: {
+              marginBottom: 0,
+              [MEDIA_QUERIES.TABLET]: {
+                marginBottom: SPACING_POINTS[1],
+              },
+            },
+          }
+        : {
+            // Style when not disc/decimal
+            [`> ${ListItem}`]: {
+              marginBottom: SPACING_POINTS[1],
+            },
           },
-        },
-      } : {
-        // Style when not disc/decimal
-        [`> ${ListItem}`]: {
-          marginBottom: SPACING_POINTS[1],
-        },
-      },
     ];
-  },
+  }
 );
 
 /**

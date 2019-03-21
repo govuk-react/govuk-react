@@ -9,6 +9,4 @@ const stories = storiesOf('Form/Input', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Component default', () => (
-  <Input type="text" />
-));
+stories.add('Component default', () => <Input type="text" />);

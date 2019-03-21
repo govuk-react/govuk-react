@@ -13,17 +13,17 @@ const StyledHeader = styled('span')(
     color: SECONDARY_TEXT_COLOUR,
     marginBottom: SPACING_POINTS[1],
   },
-  spacing.withWhiteSpace(),
+  spacing.withWhiteSpace()
 );
 
 /**
  *
  * ### Usage
-  *
+ *
  * This component is DEPRECATED.
  *
  * Please use the `Caption` component instead.
-*/
+ */
 const SupportingHeader = props => <StyledHeader {...props} />;
 
 SupportingHeader.propTypes = {

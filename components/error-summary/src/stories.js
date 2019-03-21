@@ -11,4 +11,4 @@ const stories = storiesOf('Form/ErrorSummary', module);
 stories.addDecorator(withKnobs);
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Component default', () => (<ErrorSummary />));
+stories.add('Component default', () => <ErrorSummary />);

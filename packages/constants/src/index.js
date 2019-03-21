@@ -36,7 +36,7 @@ export const SPACING = {
   SCALE_6: '60px',
 };
 
-export const SITE_WIDTH_PLUS_GUTTERS = `${SITE_WIDTH_PX + (2 * GUTTER_PX)}px`;
+export const SITE_WIDTH_PLUS_GUTTERS = `${SITE_WIDTH_PX + 2 * GUTTER_PX}px`;
 
 export const MEDIA_QUERIES = {
   LARGESCREEN: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`,

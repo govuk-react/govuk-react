@@ -3,9 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import {
-  LIGHT_BLUE, GREY_2, WHITE, YELLOW,
-} from 'govuk-colours';
+import { LIGHT_BLUE, GREY_2, WHITE, YELLOW } from 'govuk-colours';
 import { NTA_LIGHT } from '@govuk-react/constants';
 
 import { Search } from '@govuk-react/icons';
@@ -18,7 +16,7 @@ const SearchBoxWrapper = styled('div')(
     width: '100%',
     background: WHITE,
   },
-  spacing.withWhiteSpace({ marginBottom: 0 }),
+  spacing.withWhiteSpace({ marginBottom: 0 })
 );
 
 // css normalize is hiding the input:search clear SearchButton

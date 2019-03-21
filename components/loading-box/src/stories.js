@@ -1,8 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import {
-  withKnobs, text, number, boolean,
-} from '@storybook/addon-knobs/react';
+import { withKnobs, text, number, boolean } from '@storybook/addon-knobs/react';
 import { H1, H2 } from '@govuk-react/heading';
 import InputField from '@govuk-react/input-field';
 import Button from '@govuk-react/button';
@@ -35,15 +33,11 @@ stories.add('Component default', () => (
   >
     <div style={{ padding: '0 12px' }}>
       <PhaseBanner level="alpha">
-      This part of GOV.UK is being rebuilt &#8211;
-        {' '}
-        <Link href="https://example.com">find out what that means</Link>
+        This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {spacer}
       <H2>Toggle loading settings under `knobs`</H2>
-      <InputField>
-      Email address
-      </InputField>
+      <InputField>Email address</InputField>
       {spacer}
       <Button start>Continue</Button>
     </div>
@@ -61,15 +55,11 @@ examples.add('preset to loading', () => (
   >
     <div style={{ padding: '0 12px' }}>
       <PhaseBanner level="alpha">
-      This part of GOV.UK is being rebuilt &#8211;
-        {' '}
-        <Link href="https://example.com">find out what that means</Link>
+        This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {spacer}
       <H2>Toggle loading settings under `knobs`</H2>
-      <InputField>
-      Email address
-      </InputField>
+      <InputField>Email address</InputField>
       {spacer}
       <Button start>Continue</Button>
     </div>
@@ -87,23 +77,15 @@ examples.add('LoadingBox (long)', () => (
   >
     <div style={{ padding: '0 12px' }}>
       <PhaseBanner level="alpha">
-      This part of GOV.UK is being rebuilt &#8211;
-        {' '}
-        <Link href="https://example.com">find out what that means</Link>
+        This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {spacer}
       <H2>Toggle loading settings under `knobs`</H2>
-      <InputField>
-        First name
-      </InputField>
+      <InputField>First name</InputField>
       {spacer}
-      <InputField>
-        Last name
-      </InputField>
+      <InputField>Last name</InputField>
       {spacer}
-      <InputField>
-        Email address
-      </InputField>
+      <InputField>Email address</InputField>
       {spacer}
       <div style={{ overflow: 'hidden' }}>
         <LabelText>Do you want us to contact you?</LabelText>
@@ -115,11 +97,7 @@ examples.add('LoadingBox (long)', () => (
         </Radio>
       </div>
       {spacer}
-      <InputField
-        hint="It’s on your National Insurance card"
-      >
-      National Insurance number
-      </InputField>
+      <InputField hint="It’s on your National Insurance card">National Insurance number</InputField>
       {spacer}
       <Button start>Continue</Button>
     </div>
@@ -127,9 +105,7 @@ examples.add('LoadingBox (long)', () => (
 ));
 
 examples.add('with children that have short height (minHeight 10px)', () => (
-  <LoadingBox loading>
-    Lorem ipsum dolor sit amet
-  </LoadingBox>
+  <LoadingBox loading>Lorem ipsum dolor sit amet</LoadingBox>
 ));
 
 examples.add('with bolded texts', () => (

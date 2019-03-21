@@ -9,6 +9,4 @@ const stories = storiesOf('Typography/LeadParagraph', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Component default', () => (
-  <LeadParagraph>LeadParagraph example</LeadParagraph>
-));
+stories.add('Component default', () => <LeadParagraph>LeadParagraph example</LeadParagraph>);

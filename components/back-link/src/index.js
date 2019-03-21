@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { BLACK } from 'govuk-colours';
 import { SPACING_POINTS } from '@govuk-react/constants';
-import {
-  link, shape, spacing, typography,
-} from '@govuk-react/lib';
+import { link, shape, spacing, typography } from '@govuk-react/lib';
 
 const Anchor = styled('a')(
   typography.font({ size: 16 }),
@@ -31,7 +29,7 @@ const Anchor = styled('a')(
       margin: 'auto',
     },
   },
-  spacing.withWhiteSpace(),
+  spacing.withWhiteSpace()
 );
 
 /**
@@ -57,9 +55,7 @@ const Anchor = styled('a')(
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/back-link
  *
  */
-const BackLink = props => (
-  <Anchor {...props} />
-);
+const BackLink = props => <Anchor {...props} />;
 
 BackLink.propTypes = {
   /** Text that will appear in the back link */

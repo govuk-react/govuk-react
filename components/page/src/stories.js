@@ -17,9 +17,7 @@ stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
   <div>
-    <Page
-      beforeChildren={<BackLink href="#" />}
-    >
+    <Page beforeChildren={<BackLink href="#" />}>
       <H1>Page Title</H1>
     </Page>
   </div>

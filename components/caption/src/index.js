@@ -3,9 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
 import { spacing, typography } from '@govuk-react/lib';
-import {
-  CAPTION_SIZES, MEDIA_QUERIES, SPACING_POINTS, TYPOGRAPHY_SCALE,
-} from '@govuk-react/constants';
+import { CAPTION_SIZES, MEDIA_QUERIES, SPACING_POINTS, TYPOGRAPHY_SCALE } from '@govuk-react/constants';
 
 const StyledCaption = styled('span')(
   ({ size }) => {
@@ -22,8 +20,7 @@ const StyledCaption = styled('span')(
 
     // bottom margin - hard-coded values because they're a bit odd
     const marginStyle = actualSize > 19 ? { marginBottom: SPACING_POINTS[1] } : undefined;
-    const marginResponsiveStyle = actualSize === 24
-      ? { [MEDIA_QUERIES.TABLET]: { marginBottom: 0 } } : undefined;
+    const marginResponsiveStyle = actualSize === 24 ? { [MEDIA_QUERIES.TABLET]: { marginBottom: 0 } } : undefined;
 
     return {
       ...marginStyle,
@@ -34,7 +31,7 @@ const StyledCaption = styled('span')(
     display: 'block',
     color: SECONDARY_TEXT_COLOUR,
   },
-  spacing.withWhiteSpace(),
+  spacing.withWhiteSpace()
 );
 
 /**

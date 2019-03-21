@@ -13,7 +13,7 @@ const TabsContainer = styled('div')(
   typography.textColour,
   spacing.responsiveMargin({ size: 1, direction: 'top' }),
   spacing.responsiveMargin({ size: 6, direction: 'bottom' }),
-  spacing.withWhiteSpace(),
+  spacing.withWhiteSpace()
 );
 
 /**
@@ -156,8 +156,6 @@ Tabs.List = List;
 Tabs.Panel = Panel;
 Tabs.Title = Title;
 
-export {
-  Tab, List, Panel, Title,
-};
+export { Tab, List, Panel, Title };
 
 export default Tabs;

@@ -40,12 +40,7 @@ function makeShape(direction, base, height) {
 }
 
 // eslint-disable-next-line import/prefer-default-export
-export function arrow({
-  direction,
-  base = 0,
-  height = equilateralHeight(base),
-  display = 'block',
-}) {
+export function arrow({ direction, base = 0, height = equilateralHeight(base), display = 'block' }) {
   return {
     display,
     width: 0,

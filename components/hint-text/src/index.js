@@ -15,7 +15,7 @@ const StyledHint = styled('span')(
     marginBottom: SPACING_POINTS[3],
     color: `${SECONDARY_TEXT_COLOUR}`,
   },
-  spacing.withWhiteSpace(),
+  spacing.withWhiteSpace()
 );
 
 // NB govuk-frontend has styling adjustments for when hint-text is placed next to some other

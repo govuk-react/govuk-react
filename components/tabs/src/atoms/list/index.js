@@ -24,7 +24,7 @@ const TabList = styled('ul')(
       marginBottom: 0,
       ...clearfix,
     },
-  },
+  }
 );
 
 export default TabList;

@@ -15,9 +15,7 @@ const examples = storiesOf('Form/InputField/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Component default', () => (
-  <InputField name="group0">National Insurance number</InputField>
-));
+stories.add('Component default', () => <InputField name="group0">National Insurance number</InputField>);
 
 examples.add('Input with HintText', () => (
   <InputField

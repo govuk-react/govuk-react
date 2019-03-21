@@ -29,9 +29,7 @@ examples.add('Select with hintText', () => (
   <Select
     name="group1"
     label="This is a label"
-    hint={[
-      'This is and example of hintText/description of what we need from you.',
-    ]}
+    hint={['This is and example of hintText/description of what we need from you.']}
   >
     <option value="0">GOV.UK elements option 1</option>
     <option value="1">GOV.UK elements option 2</option>
@@ -43,9 +41,7 @@ examples.add('Select with hintText & error', () => (
   <Select
     name="group1"
     label="This is a label"
-    hint={[
-      'This is and example of hintText/description of what we need from you.',
-    ]}
+    hint={['This is and example of hintText/description of what we need from you.']}
     meta={meta}
   >
     <option value="0">GOV.UK elements option 1</option>
@@ -57,7 +53,7 @@ examples.add('Select with hintText & error', () => (
 examples.add('Standalone input with inline label', () => (
   <label>
     <LabelText>
-Sort by:&nbsp;
+      Sort by:&nbsp;
       <SelectInput>
         <option value="0">People</option>
         <option value="1">Animals</option>

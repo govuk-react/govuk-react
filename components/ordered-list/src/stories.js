@@ -49,13 +49,10 @@ examples.add('OrderedList with bullet with nested number list', () => (
   </OrderedList>
 ));
 
-examples.add(
-  'OrderedList with no decoration',
-  () => (
-    <OrderedList listStyleType="none">
-      <ListItem>Lorem ipsum dolor sit.</ListItem>
-      <ListItem>Consectetur adipiscing elit.</ListItem>
-      <ListItem>Curabitur et libero nec.</ListItem>
-    </OrderedList>
-  ),
-);
+examples.add('OrderedList with no decoration', () => (
+  <OrderedList listStyleType="none">
+    <ListItem>Lorem ipsum dolor sit.</ListItem>
+    <ListItem>Consectetur adipiscing elit.</ListItem>
+    <ListItem>Curabitur et libero nec.</ListItem>
+  </OrderedList>
+));

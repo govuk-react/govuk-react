@@ -15,14 +15,15 @@ const StyledContainer = styled('div')(
     display: 'flex',
     flexDirection: 'column',
   },
-  ({ errorText }) => (
-    errorText ? {
-      borderLeft: `4px solid ${ERROR_COLOUR}`,
-      marginRight: SPACING.SCALE_3,
-      paddingLeft: SPACING.SCALE_2,
-    } : undefined
-  ),
-  spacing.withWhiteSpace({ marginBottom: 6 }),
+  ({ errorText }) =>
+    errorText
+      ? {
+          borderLeft: `4px solid ${ERROR_COLOUR}`,
+          marginRight: SPACING.SCALE_3,
+          paddingLeft: SPACING.SCALE_2,
+        }
+      : undefined,
+  spacing.withWhiteSpace({ marginBottom: 6 })
 );
 
 /**
@@ -68,15 +69,7 @@ const StyledContainer = styled('div')(
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/date-field
  *
  */
-const DateField = ({
-  children,
-  errorText,
-  hintText,
-  inputNames,
-  defaultValues,
-  input,
-  ...props
-}) => (
+const DateField = ({ children, errorText, hintText, inputNames, defaultValues, input, ...props }) => (
   <StyledContainer {...props} errorText={errorText}>
     <LabelText errorText={errorText}>{children}</LabelText>
     {hintText && <HintText>{hintText}</HintText>}
@@ -89,7 +82,6 @@ const DateField = ({
       error={!!errorText}
       {...input}
     />
-
   </StyledContainer>
 );
 

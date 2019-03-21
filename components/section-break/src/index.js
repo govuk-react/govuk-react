@@ -22,14 +22,19 @@ const SectionBreak = styled('hr')(
     const size = breakSizes[level];
 
     if (size) {
-      return spacing.withWhiteSpace({ margin: { size, direction: ['top', 'bottom'] } });
+      return spacing.withWhiteSpace({
+        margin: { size, direction: ['top', 'bottom'] },
+      });
     }
 
     return spacing.withWhiteSpace();
   },
-  ({ visible }) => (visible ? ({
-    borderBottom: `1px solid ${BORDER_COLOUR}`,
-  }) : undefined),
+  ({ visible }) =>
+    visible
+      ? {
+          borderBottom: `1px solid ${BORDER_COLOUR}`,
+        }
+      : undefined
 );
 
 /**

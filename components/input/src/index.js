@@ -39,7 +39,7 @@ export const StyledInput = styled('input')(
   ({ error, errorColor }) => ({
     border: error ? `${BORDER_WIDTH_FORM_ELEMENT_ERROR} solid ${errorColor || ERROR_COLOUR}` : undefined,
   }),
-  spacing.withWhiteSpace({ marginBottom: 0 }),
+  spacing.withWhiteSpace({ marginBottom: 0 })
 );
 
 /**

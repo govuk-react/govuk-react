@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 import { PROPOSITION_BORDER } from 'govuk-colours';
-import {
-  MEDIA_QUERIES,
-  SPACING,
-} from '@govuk-react/constants';
+import { MEDIA_QUERIES, SPACING } from '@govuk-react/constants';
 
 const Li = styled('li')({
   flex: '1 0 50%',

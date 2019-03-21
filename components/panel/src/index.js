@@ -3,11 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { TURQUOISE, WHITE } from 'govuk-colours';
 import { spacing, typography } from '@govuk-react/lib';
-import {
-  BORDER_WIDTH,
-  MEDIA_QUERIES,
-  SPACING_POINTS,
-} from '@govuk-react/constants';
+import { BORDER_WIDTH, MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
 import { stripUnit } from 'polished';
 
 const RAW_BORDER_WIDTH = stripUnit(BORDER_WIDTH);
@@ -33,7 +29,7 @@ const StyledPanel = styled('div')(
     color: WHITE,
     background: TURQUOISE,
   },
-  spacing.withWhiteSpace(),
+  spacing.withWhiteSpace()
 );
 
 // NB govuk-frontend allows for the headingLevel to change, but defaults to h1
@@ -47,7 +43,7 @@ const StyledTitle = styled('h1')(
       marginBottom: 0,
     },
   },
-  typography.font({ size: 48, weight: 'bold' }),
+  typography.font({ size: 48, weight: 'bold' })
 );
 
 const StyledBody = styled('div')(typography.font({ size: 36 }));
@@ -77,7 +73,7 @@ const StyledBody = styled('div')(typography.font({ size: 36 }));
 const Panel = ({ title, children, ...props }) => (
   <StyledPanel {...props}>
     <StyledTitle>{title}</StyledTitle>
-    { children && <StyledBody>{children}</StyledBody> }
+    {children && <StyledBody>{children}</StyledBody>}
   </StyledPanel>
 );
 Panel.defaultProps = {

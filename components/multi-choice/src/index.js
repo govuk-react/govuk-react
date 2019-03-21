@@ -18,10 +18,7 @@ import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 
-import {
-  BORDER_WIDTH_MOBILE,
-  SPACING,
-} from '@govuk-react/constants';
+import { BORDER_WIDTH_MOBILE, SPACING } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
 
 const StyledFieldset = styled('div')(
@@ -38,13 +35,11 @@ const StyledFieldset = styled('div')(
     },
   },
   ({ error }) => ({
-    borderLeft: error
-      ? `${BORDER_WIDTH_MOBILE} solid ${ERROR_COLOUR}`
-      : undefined,
+    borderLeft: error ? `${BORDER_WIDTH_MOBILE} solid ${ERROR_COLOUR}` : undefined,
     marginRight: error ? SPACING.SCALE_3 : undefined,
     paddingLeft: error ? SPACING.SCALE_2 : undefined,
   }),
-  spacing.withWhiteSpace({ marginBottom: 0 }),
+  spacing.withWhiteSpace({ marginBottom: 0 })
 );
 
 /**
@@ -70,9 +65,7 @@ const StyledFieldset = styled('div')(
  * - https://govuk-elements.herokuapp.com/errors/example-form-validation-single-question-radio
  *
  */
-const MultiChoice = ({
-  meta, label, children, hint, ...props
-}) => (
+const MultiChoice = ({ meta, label, children, hint, ...props }) => (
   <StyledFieldset error={meta.touched && meta.error} {...props}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}

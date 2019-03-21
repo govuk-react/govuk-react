@@ -15,7 +15,15 @@ describe('LoadingBox', () => {
   });
 
   it('should render a SVG title when passed the value', () => {
-    expect(mount(<LoadingBox loading title="cat">example</LoadingBox>).find('title').text()).toBe('cat');
+    expect(
+      mount(
+        <LoadingBox loading title="cat">
+          example
+        </LoadingBox>
+      )
+        .find('title')
+        .text()
+    ).toBe('cat');
   });
 
   it('shouldnt render a SVG when not loading', () => {

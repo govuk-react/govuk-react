@@ -20,9 +20,12 @@ const Tag = styled('strong')(
     textDecoration: 'none',
     textTransform: 'uppercase',
   },
-  ({ inactive }) => (inactive ? {
-    backgroundColor: GREY_1,
-  } : undefined),
+  ({ inactive }) =>
+    inactive
+      ? {
+          backgroundColor: GREY_1,
+        }
+      : undefined
 );
 
 /**

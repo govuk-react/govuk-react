@@ -5,9 +5,7 @@ import styled from 'styled-components';
 import { shape, spacing, typography } from '@govuk-react/lib';
 import { stripUnit } from 'polished';
 
-import {
-  BLACK, FOCUS_COLOUR, LINK_COLOUR, LINK_HOVER_COLOUR, BORDER_COLOUR,
-} from 'govuk-colours';
+import { BLACK, FOCUS_COLOUR, LINK_COLOUR, LINK_HOVER_COLOUR, BORDER_COLOUR } from 'govuk-colours';
 import { BORDER_WIDTH, FOCUS_WIDTH, SPACING_POINTS } from '@govuk-react/constants';
 
 const CUSTOM_FOCUS_WIDTH = `${stripUnit(FOCUS_WIDTH) + 1}px`;
@@ -18,7 +16,7 @@ const StyledDetails = styled('details')(
   spacing.withWhiteSpace({ marginBottom: 6 }),
   {
     display: 'block',
-  },
+  }
 );
 
 const StyledSummary = styled('summary')({
@@ -95,8 +93,10 @@ const DetailsText = styled('div')({
  */
 const Details = ({ summary, children, ...props }) => (
   <StyledDetails {...props}>
-    <StyledSummary><SummaryText>{summary}</SummaryText></StyledSummary>
-    <DetailsText>{ children }</DetailsText>
+    <StyledSummary>
+      <SummaryText>{summary}</SummaryText>
+    </StyledSummary>
+    <DetailsText>{children}</DetailsText>
   </StyledDetails>
 );
 

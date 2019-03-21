@@ -14,7 +14,7 @@ const StyledError = styled('span')(
     clear: 'both',
     color: ERROR_COLOUR,
   },
-  spacing.withWhiteSpace(),
+  spacing.withWhiteSpace()
 );
 
 /**

@@ -17,13 +17,13 @@ class ManagedDateField extends React.Component {
       month: 1,
       year: 2,
     },
-  }
+  };
 
   render() {
     const input = {
-      ...(this.props.input),
+      ...this.props.input,
       value: this.state.value,
-      onChange: (value) => {
+      onChange: value => {
         this.setState({
           value,
         });
@@ -41,7 +41,6 @@ ManagedDateField.propTypes = {
   input: PropTypes.shape({}),
 };
 
-
 stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
@@ -50,7 +49,6 @@ stories.add('Component default', () => (
       onFocus: action('date-focus'),
       onBlur: action('date-blur'),
       onChange: action('date-change'),
-
     }}
     inputNames={{ day: 'dayInputName' }}
   >
@@ -59,22 +57,15 @@ stories.add('Component default', () => (
 ));
 
 examples.add('Date with hint text', () => (
-  <DateField hintText="For example, 31 03 1980">
-    What is your date of birth?
-  </DateField>
+  <DateField hintText="For example, 31 03 1980">What is your date of birth?</DateField>
 ));
 
 examples.add('Date with default values', () => (
-  <DateField defaultValues={{ day: '01', month: '02', year: '2018' }}>
-    What is your date of birth ?
-  </DateField>
+  <DateField defaultValues={{ day: '01', month: '02', year: '2018' }}>What is your date of birth ?</DateField>
 ));
 
 examples.add('Date with hint text & error', () => (
-  <DateField
-    hintText="For example, 31 03 1980"
-    errorText="Error message goes here"
-  >
+  <DateField hintText="For example, 31 03 1980" errorText="Error message goes here">
     What is your date of birth?
   </DateField>
 ));

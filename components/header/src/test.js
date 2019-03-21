@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
 import Header from '.';
-import {
-  H1, H2, H3, H4, H5, H6,
-} from './presets';
+import { H1, H2, H3, H4, H5, H6 } from './presets';
 
 describe('Header', () => {
   it('renders a Header and all the H-level tags without crashing', () => {
@@ -34,10 +32,18 @@ describe('Header', () => {
     const example = 'example';
     const div = document.createElement('div');
 
-    expect(() => { ReactDOM.render(<Header size={0}>{example}</Header>, div); }).toThrow();
-    expect(() => { ReactDOM.render(<Header size={1}>{example}</Header>, div); }).toThrow();
-    expect(() => { ReactDOM.render(<Header size={99999}>{example}</Header>, div); }).toThrow();
-    expect(() => { ReactDOM.render(<Header size="test">{example}</Header>, div); }).toThrow();
+    expect(() => {
+      ReactDOM.render(<Header size={0}>{example}</Header>, div);
+    }).toThrow();
+    expect(() => {
+      ReactDOM.render(<Header size={1}>{example}</Header>, div);
+    }).toThrow();
+    expect(() => {
+      ReactDOM.render(<Header size={99999}>{example}</Header>, div);
+    }).toThrow();
+    expect(() => {
+      ReactDOM.render(<Header size="test">{example}</Header>, div);
+    }).toThrow();
   });
 
   it('matches wrapper snapshot', () => {

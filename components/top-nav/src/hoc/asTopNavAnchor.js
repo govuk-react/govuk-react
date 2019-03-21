@@ -3,10 +3,8 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { WHITE, YELLOW } from 'govuk-colours';
 
-const asTopNavAnchor = (AnchorType) => {
-  const Anchor = props => (
-    <AnchorType {...props}>{props.children}</AnchorType>
-  );
+const asTopNavAnchor = AnchorType => {
+  const Anchor = props => <AnchorType {...props}>{props.children}</AnchorType>;
 
   const StyledHoc = styled(Anchor)({
     color: WHITE, // TODO: active state, LIGHT_BLUE
@@ -24,8 +22,7 @@ const asTopNavAnchor = (AnchorType) => {
   });
 
   Anchor.propTypes = {
-    children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
-      .isRequired,
+    children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   };
 
   return StyledHoc;

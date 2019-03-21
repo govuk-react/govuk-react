@@ -18,7 +18,7 @@ const StyledList = styled('ul')(
       flexDirection: 'row',
     },
   },
-  spacing.withWhiteSpace({ marginBottom: 6 }),
+  spacing.withWhiteSpace({ marginBottom: 6 })
 );
 
 /**

@@ -6,7 +6,7 @@ import Caption from './fixtures';
 describe('Caption', () => {
   it('allows custom string-based font size without crashing', () => {
     const sizes = ['XL', 'XLARGE', 'L', 'LARGE', 'M', 'MEDIUM'];
-    sizes.forEach((size) => {
+    sizes.forEach(size => {
       expect(mount(<Caption size={size}>Tests</Caption>).exists()).toBeTruthy();
     });
   });
@@ -16,10 +16,18 @@ describe('Caption', () => {
   });
 
   it('throws an error if an unsupported size is used', () => {
-    expect(() => { mount(<Caption size={0}>example</Caption>); }).toThrow();
-    expect(() => { mount(<Caption size={1}>example</Caption>); }).toThrow();
-    expect(() => { mount(<Caption size={99999}>example</Caption>); }).toThrow();
-    expect(() => { mount(<Caption size="test">example</Caption>); }).toThrow();
+    expect(() => {
+      mount(<Caption size={0}>example</Caption>);
+    }).toThrow();
+    expect(() => {
+      mount(<Caption size={1}>example</Caption>);
+    }).toThrow();
+    expect(() => {
+      mount(<Caption size={99999}>example</Caption>);
+    }).toThrow();
+    expect(() => {
+      mount(<Caption size="test">example</Caption>);
+    }).toThrow();
   });
 
   it('matches wrapper snapshot', () => {

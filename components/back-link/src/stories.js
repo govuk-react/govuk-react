@@ -13,10 +13,6 @@ const examples = storiesOf('Navigation/BackLink/Examples', module);
 stories.addDecorator(WithDocsCustom(ReadMe));
 stories.addDecorator(withKnobs);
 
-stories.add('Component default', () => (
-  <BackLink goBack={action('go-back')}>{text('Children', 'Back')}</BackLink>
-));
+stories.add('Component default', () => <BackLink goBack={action('go-back')}>{text('Children', 'Back')}</BackLink>);
 
-examples.add('With href', () => (
-  <BackLink href="#">Back</BackLink>
-));
+examples.add('With href', () => <BackLink href="#">Back</BackLink>);

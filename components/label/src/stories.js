@@ -8,6 +8,4 @@ import ReadMe from '../README.md';
 const stories = storiesOf('Form/Label', module);
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Component default', () => (
-  <Label>Example</Label>
-));
+stories.add('Component default', () => <Label>Example</Label>);

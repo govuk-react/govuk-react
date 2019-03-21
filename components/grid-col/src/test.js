@@ -15,7 +15,9 @@ describe('GridCol', () => {
     jest.resetModules();
     process.env = { ...OLD_ENV };
     // eslint-disable-next-line no-console
-    console.warn = () => { warnCallCount += 1; };
+    console.warn = () => {
+      warnCallCount += 1;
+    };
     warnCallCount = 0;
   });
 
@@ -63,7 +65,9 @@ describe('GridCol', () => {
         <GridCol setWidth="one-quarter">example</GridCol>
         <GridCol setWidth="three-quarters">example</GridCol>
         <GridCol setWidth="90%">example</GridCol>
-        <GridCol setWidth="one-third" setDesktopWidth="one-quarter">example</GridCol>
+        <GridCol setWidth="one-third" setDesktopWidth="one-quarter">
+          example
+        </GridCol>
         <GridCol setDesktopWidth="one-third">example</GridCol>
       </Fragment>
     );

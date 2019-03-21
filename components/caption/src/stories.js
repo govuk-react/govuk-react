@@ -16,10 +16,7 @@ stories.addDecorator(withKnobs);
 stories.addDecorator(WithDocsCustom(ReadMe));
 examples.addDecorator(withKnobs);
 
-stories.add('Component default', () => (
-  <CaptionWithKnobs />
-));
-
+stories.add('Component default', () => <CaptionWithKnobs />);
 
 const arrTypography = Object.keys(TYPOGRAPHY_SCALE);
 const captionOptions = [...Object.keys(CAPTION_SIZES), ...arrTypography];

@@ -20,7 +20,7 @@ export const errors = [
   },
 ];
 
-const onHandleErrorClick = (targetName) => {
+const onHandleErrorClick = targetName => {
   document.getElementsByName(targetName)[0].scrollIntoView();
 };
 

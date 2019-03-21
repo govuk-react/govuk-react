@@ -6,7 +6,7 @@ import Legend from '.';
 describe('Fieldset.Legend', () => {
   it('allows custom string-based font size without crashing', () => {
     const sizes = ['XL', 'XLARGE', 'L', 'LARGE', 'M', 'MEDIUM', 'S', 'SMALL'];
-    sizes.forEach((size) => {
+    sizes.forEach(size => {
       expect(mount(<Legend size={size}>Tests</Legend>).exists()).toBeTruthy();
     });
   });
@@ -16,10 +16,18 @@ describe('Fieldset.Legend', () => {
   });
 
   it('throws an error if an unsupported size is used', () => {
-    expect(() => { mount(<Legend size={0}>example</Legend>); }).toThrow();
-    expect(() => { mount(<Legend size={1}>example</Legend>); }).toThrow();
-    expect(() => { mount(<Legend size={99999}>example</Legend>); }).toThrow();
-    expect(() => { mount(<Legend size="test">example</Legend>); }).toThrow();
+    expect(() => {
+      mount(<Legend size={0}>example</Legend>);
+    }).toThrow();
+    expect(() => {
+      mount(<Legend size={1}>example</Legend>);
+    }).toThrow();
+    expect(() => {
+      mount(<Legend size={99999}>example</Legend>);
+    }).toThrow();
+    expect(() => {
+      mount(<Legend size="test">example</Legend>);
+    }).toThrow();
   });
 
   it('will insert a (styled) h1 tag if isPageHeading is set', () => {

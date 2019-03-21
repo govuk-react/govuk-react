@@ -5,12 +5,7 @@ import Label from '@govuk-react/label';
 import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
-import {
-  FONT_SIZE,
-  LINE_HEIGHT,
-  NTA_LIGHT,
-  MEDIA_QUERIES,
-} from '@govuk-react/constants';
+import { FONT_SIZE, LINE_HEIGHT, NTA_LIGHT, MEDIA_QUERIES } from '@govuk-react/constants';
 
 const StyledInput = styled('input')({
   boxSizing: 'border-box',
@@ -71,9 +66,7 @@ const StyledInput = styled('input')({
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/file-upload
  *
  */
-const FileUpload = ({
-  meta, children, hint, acceptedFormats, ...props
-}) => (
+const FileUpload = ({ meta, children, hint, acceptedFormats, ...props }) => (
   <Label {...props} error={meta.touched && meta.error}>
     <LabelText error={meta.error}>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}

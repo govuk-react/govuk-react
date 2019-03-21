@@ -19,7 +19,9 @@ const wrapper = (
         <Link href="https://example.com">Link B</Link>
       </ListItem>
       <ListItem>
-        <Link href="https://example.com"><strong>more</strong></Link>
+        <Link href="https://example.com">
+          <strong>more</strong>
+        </Link>
       </ListItem>
     </UnorderedList>
   </RelatedItems>

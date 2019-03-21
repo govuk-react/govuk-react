@@ -13,16 +13,12 @@ stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
   <PhaseBanner level="alpha">
-    This part of GOV.UK is being rebuilt &#8211;
-    {' '}
-    <Link href="https://example.com">find out what that means</Link>
+    This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
   </PhaseBanner>
 ));
 
 examples.add('Beta phase tag', () => (
   <PhaseBanner level="beta">
-    This part of GOV.UK is being rebuilt &#8211;
-    {' '}
-    <Link href="https://example.com">find out what that means</Link>
+    This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
   </PhaseBanner>
 ));

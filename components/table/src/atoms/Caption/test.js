@@ -5,6 +5,10 @@ import Caption from '.';
 
 describe('Caption', () => {
   it('renders without crashing', () => {
-    mount(<table><Caption>Example</Caption></table>);
+    mount(
+      <table>
+        <Caption>Example</Caption>
+      </table>
+    );
   });
 });

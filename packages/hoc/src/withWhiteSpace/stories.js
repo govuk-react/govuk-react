@@ -1,9 +1,7 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
-import {
-  withKnobs, number, object, text,
-} from '@storybook/addon-knobs/react';
+import { withKnobs, number, object, text } from '@storybook/addon-knobs/react';
 
 import BackLink from '@govuk-react/back-link';
 import Breadcrumb from '@govuk-react/breadcrumb';
@@ -38,9 +36,11 @@ import withWhiteSpace from '.';
 const stories = storiesOf('Utilities/withWhiteSpace', module);
 stories.addDecorator(withKnobs);
 
-const DemoComponent = withWhiteSpace()(styled('div')({
-  border: '2px solid red',
-}));
+const DemoComponent = withWhiteSpace()(
+  styled('div')({
+    border: '2px solid red',
+  })
+);
 
 stories.add('demo component, simple single margins and padding', () => (
   <Fragment>
@@ -100,20 +100,29 @@ stories.add('demo component, multiple margins and padding (complex)', () => (
   </Fragment>
 ));
 
-
 stories.add('existing InputField with spacing size 1', () => (
   <Fragment>
-    <InputField mb={number('marginBottom', 1)} name="group1" hint="Change whitespace value with knobs">Example 1</InputField>
+    <InputField mb={number('marginBottom', 1)} name="group1" hint="Change whitespace value with knobs">
+      Example 1
+    </InputField>
     <Button>Finish</Button>
   </Fragment>
 ));
 
 stories.add('existing InputField with various spacing sizes', () => (
   <Fragment>
-    <InputField mb={number('marginBottom1', 1)} name="group1" hint="hi">Example 1</InputField>
-    <InputField mb={number('marginBottom2', 4)} name="group1" hint="hi">Example 2</InputField>
-    <InputField mb={number('marginBottom3', 7)} name="group1" hint="hi">Example 3</InputField>
-    <InputField mb={number('marginBottom4', 9)} name="group1" hint="okay">Example 4</InputField>
+    <InputField mb={number('marginBottom1', 1)} name="group1" hint="hi">
+      Example 1
+    </InputField>
+    <InputField mb={number('marginBottom2', 4)} name="group1" hint="hi">
+      Example 2
+    </InputField>
+    <InputField mb={number('marginBottom3', 7)} name="group1" hint="hi">
+      Example 3
+    </InputField>
+    <InputField mb={number('marginBottom4', 9)} name="group1" hint="okay">
+      Example 4
+    </InputField>
     <Button>Finish</Button>
   </Fragment>
 ));
@@ -135,15 +144,23 @@ stories.add('multiple existing components', () => (
     <LabelText mb={number('LabelText marginBottom', 9)}>LabelText Example</LabelText>
     <ListItem mb={number('ListItem marginBottom', 9)}>ListItem Example</ListItem>
     <ListNavigation mb={number('ListNavigation marginBottom', 9)}>ListNavigation Example</ListNavigation>
-    <MultiChoice label="example" mb={number('MultiChoice marginBottom', 9)}>MultiChoice Example</MultiChoice>
+    <MultiChoice label="example" mb={number('MultiChoice marginBottom', 9)}>
+      MultiChoice Example
+    </MultiChoice>
     <OrderedList mb={number('OrderedList marginBottom', 9)}>OrderedList Example</OrderedList>
     <Pagination mb={number('Pagination marginBottom', 9)}>Pagination Example</Pagination>
-    <Panel panelTitle="Example" mb={number('Panel marginBottom', 9)}>Panel Example</Panel>
-    <PhaseBanner level="EXAMPLE" mb={number('PhaseBanner marginBottom', 9)}>PhaseBanner Example</PhaseBanner>
+    <Panel panelTitle="Example" mb={number('Panel marginBottom', 9)}>
+      Panel Example
+    </Panel>
+    <PhaseBanner level="EXAMPLE" mb={number('PhaseBanner marginBottom', 9)}>
+      PhaseBanner Example
+    </PhaseBanner>
     <Radio mb={number('Radio marginBottom', 9)}>Radio Example</Radio>
     <RelatedItems mb={number('RelatedItems marginBottom', 9)}>RelatedItems Example</RelatedItems>
     <SearchBox mb={number('SearchBox marginBottom', 9)}>SearchBox Example</SearchBox>
-    <Select label="example" mb={number('Select marginBottom', 9)}>Select Example</Select>
+    <Select label="example" mb={number('Select marginBottom', 9)}>
+      Select Example
+    </Select>
     <Tag mb={number('Tag marginBottom', 9)}>Tag</Tag>
     <TextArea mb={number('TextArea marginBottom', 9)}>TextArea Example</TextArea>
     <UnorderedList mb={number('UnorderedList marginBottom', 9)}>UnorderedList Example</UnorderedList>

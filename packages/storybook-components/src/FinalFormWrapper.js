@@ -8,9 +8,7 @@ import Button from '@govuk-react/button';
 const FinalFormWrapper = ({ children }) => (
   <Form
     onSubmit={action('submit')}
-    render={({
-      handleSubmit, reset, submitting, pristine, values,
-    }) => (
+    render={({ handleSubmit, reset, submitting, pristine, values }) => (
       <form onSubmit={handleSubmit}>
         <div>{children}</div>
         <div>

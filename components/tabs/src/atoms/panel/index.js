@@ -25,7 +25,7 @@ const TabPanel = styled('section')(
     [MEDIA_QUERIES.TABLET]: {
       display: !selected && 'none',
     },
-  }),
+  })
 );
 
 TabPanel.propTypes = {

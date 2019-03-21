@@ -6,11 +6,13 @@ import DocumentFooterMetadata from '.';
 
 const example = ['example'];
 const multiExample = ['example', 'exampleexample'];
-const otherExample = [{
-  id: 0,
-  title: 'example',
-  content: ['example'],
-}];
+const otherExample = [
+  {
+    id: 0,
+    title: 'example',
+    content: ['example'],
+  },
+];
 const wrapper = <DocumentFooterMetadata from={example} />;
 const wrapperMultiple = <DocumentFooterMetadata partOf={multiExample} />;
 const wrapperOther = <DocumentFooterMetadata other={otherExample} />;
