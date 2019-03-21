@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import asAnchor from './';
+import asAnchor from '.';
 
 const AnchorTag = asAnchor('a');
 

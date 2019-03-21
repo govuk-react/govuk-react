@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { YELLOW, BLACK } from 'govuk-colours';
-import { asTopNavAnchor } from '../';
+import { asTopNavAnchor } from '..';
 
 const asNavLinkAnchor = (AnchorType) => {
   const Anchor = asTopNavAnchor(AnchorType);

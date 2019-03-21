@@ -3,8 +3,7 @@ import { text, boolean } from '@storybook/addon-knobs/react';
 
 import Paragraph from '.';
 
-const exampleParagraph =
-  'Paragraph fields support markdown and allow for **bold** text and *italics*, as well as [links](https://en.wikipedia.org/wiki/Markdown). `Inline` code snippets are also supported, as well as code blocks PROVIDED they start on their own line';
+const exampleParagraph = 'Paragraph fields support markdown and allow for **bold** text and *italics*, as well as [links](https://en.wikipedia.org/wiki/Markdown). `Inline` code snippets are also supported, as well as code blocks PROVIDED they start on their own line';
 
 const exampleCodeBlock = `\`\`\`
   const CustomStyledButton = styled(Button)({

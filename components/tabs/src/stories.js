@@ -3,7 +3,9 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, number } from '@storybook/addon-knobs';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-import { HooksExample, ProposedClassPropertiesPlugin, SimpleTabs, SimpleMapTabs, TableTabs } from './fixtures';
+import {
+  HooksExample, ProposedClassPropertiesPlugin, SimpleTabs, SimpleMapTabs, TableTabs,
+} from './fixtures';
 import ReadMe from '../README.md';
 
 const stories = storiesOf('Tabs', module);

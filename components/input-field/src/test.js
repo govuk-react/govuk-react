@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 
-import InputField from './';
+import InputField from '.';
 
 describe('InputField', () => {
   const example = 'example';

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
-import LoadingBox from './';
+import LoadingBox from '.';
 
 describe('LoadingBox', () => {
   it('renders without crashing', () => {

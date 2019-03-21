@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
-import Radio from './';
+import Radio from '.';
 
 describe('Radio', () => {
   let props;

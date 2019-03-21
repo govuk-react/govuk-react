@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 
-import Checkbox from './';
+import Checkbox from '.';
 
 describe('Checkbox', () => {
   const example = 'example';

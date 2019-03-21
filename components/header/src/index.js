@@ -17,8 +17,7 @@ import { deprecate } from '@govuk-react/hoc';
 
 const StyledHeader = styled(({
   level, children, size, ...props
-}) =>
-  createElement(LEVEL_TAG[level], props, children))(
+}) => createElement(LEVEL_TAG[level], props, children))(
   typography.textColour,
   ({ level, size = LEVEL_SIZE[level] }) => {
     const actualSize = Number.isNaN(Number(size)) ? HEADING_SIZES[size] : size;
@@ -85,4 +84,6 @@ Header.propTypes = {
 export default deprecate(Header, 'please use the Heading component instead');
 
 export { Header as DocumentedHeader };
-export { H1, H2, H3, H4, H5, H6 } from './presets';
+export {
+  H1, H2, H3, H4, H5, H6,
+} from './presets';

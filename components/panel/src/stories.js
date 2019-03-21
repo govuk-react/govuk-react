@@ -16,7 +16,8 @@ stories.add('Component default', () => (
 
 examples.add('Panel with header and HTML body', () => (
   <Panel title="Application complete">
-    Your reference number<br />
+    Your reference number
+    <br />
     <strong>HDJ2123F</strong>
   </Panel>
 ));

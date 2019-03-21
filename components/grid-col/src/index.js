@@ -14,8 +14,7 @@ const colValues = {
 };
 
 const widthFromProps = spacing.withWidth({ noDefault: true });
-const desktopWidthFromProps =
-  spacing.withWidth({ mediaQuery: MEDIA_QUERIES.DESKTOP, noDefault: true });
+const desktopWidthFromProps = spacing.withWidth({ mediaQuery: MEDIA_QUERIES.DESKTOP, noDefault: true });
 
 function setGrowShrink(style) {
   const hasAutoWidth = [undefined, 'auto'].includes(style.width);
@@ -65,8 +64,7 @@ const StyledColumn = styled('div')(
     const desktopWidthStyle = desktopWidthFromProps({ setWidth: props.setDesktopWidth });
 
     if (desktopWidthStyle) {
-      desktopWidthStyle[MEDIA_QUERIES.DESKTOP] =
-        setGrowShrink(desktopWidthStyle[MEDIA_QUERIES.DESKTOP]);
+      desktopWidthStyle[MEDIA_QUERIES.DESKTOP] = setGrowShrink(desktopWidthStyle[MEDIA_QUERIES.DESKTOP]);
     }
 
     return Object.assign(

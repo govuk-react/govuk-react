@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
-import GridRow from './';
+import GridRow from '.';
 
 describe('GridRow', () => {
   const wrapper = <GridRow>Example</GridRow>;

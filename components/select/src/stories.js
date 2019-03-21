@@ -56,7 +56,8 @@ examples.add('Select with hintText & error', () => (
 
 examples.add('Standalone input with inline label', () => (
   <label>
-    <LabelText>Sort by:&nbsp;
+    <LabelText>
+Sort by:&nbsp;
       <SelectInput>
         <option value="0">People</option>
         <option value="1">Animals</option>

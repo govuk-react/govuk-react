@@ -4,17 +4,19 @@ import { withDocs } from 'storybook-readme';
 
 // Example taken from https://github.com/tuchk4/storybook-readme/blob/master/packages/example-react/stories/index.js
 const PreviewComponent = ({ children }) => (
-  navigator.userAgent.match(/Chromatic/) ? children :
-  <div
-    style={{
-      textAlign: 'left',
-      padding: '25px',
-      margin: '25px 0',
-      boxShadow: '0 0 40px rgba(0, 0, 0, 0.1)',
-    }}
-  >
-    {children}
-  </div>
+  navigator.userAgent.match(/Chromatic/) ? children
+    : (
+      <div
+        style={{
+          textAlign: 'left',
+          padding: '25px',
+          margin: '25px 0',
+          boxShadow: '0 0 40px rgba(0, 0, 0, 0.1)',
+        }}
+      >
+        {children}
+      </div>
+    )
 );
 
 const withDocsCustom = (readme = '', ...rest) => withDocs({ PreviewComponent })(navigator.userAgent.match(/Chromatic/) ? '' : readme, ...rest);

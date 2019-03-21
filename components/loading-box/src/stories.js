@@ -1,6 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, number, boolean } from '@storybook/addon-knobs/react';
+import {
+  withKnobs, text, number, boolean,
+} from '@storybook/addon-knobs/react';
 import { H1, H2 } from '@govuk-react/heading';
 import InputField from '@govuk-react/input-field';
 import Button from '@govuk-react/button';
@@ -33,7 +35,8 @@ stories.add('Component default', () => (
   >
     <div style={{ padding: '0 12px' }}>
       <PhaseBanner level="alpha">
-      This part of GOV.UK is being rebuilt &#8211;{' '}
+      This part of GOV.UK is being rebuilt &#8211;
+        {' '}
         <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {spacer}
@@ -58,7 +61,8 @@ examples.add('preset to loading', () => (
   >
     <div style={{ padding: '0 12px' }}>
       <PhaseBanner level="alpha">
-      This part of GOV.UK is being rebuilt &#8211;{' '}
+      This part of GOV.UK is being rebuilt &#8211;
+        {' '}
         <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {spacer}
@@ -83,7 +87,8 @@ examples.add('LoadingBox (long)', () => (
   >
     <div style={{ padding: '0 12px' }}>
       <PhaseBanner level="alpha">
-      This part of GOV.UK is being rebuilt &#8211;{' '}
+      This part of GOV.UK is being rebuilt &#8211;
+        {' '}
         <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {spacer}

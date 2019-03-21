@@ -26,7 +26,7 @@ const TableSimple = () => (
 const TableWithCaption = () => (
   <Table
     caption="Dates and amounts"
-    body={
+    body={(
       <React.Fragment>
         <Table.Row>
           <Table.CellHeader>First 6 weeks</Table.CellHeader>
@@ -41,7 +41,7 @@ const TableWithCaption = () => (
           <Table.Cell>£4,282.20</Table.Cell>
         </Table.Row>
       </React.Fragment>
-    }
+)}
   />
 );
 
@@ -84,12 +84,12 @@ const TableWithHeadAndNumerics = () => (
 const TableThreeQuartersOneQuarter = () => (
   <Table
     caption="Three quarters, one quarter"
-    head={
+    head={(
       <Table.Row>
         <Table.CellHeader setWidth="three-quarters">three-quarters</Table.CellHeader>
         <Table.CellHeader setWidth="one-quarter">one-quarter</Table.CellHeader>
       </Table.Row>
-    }
+)}
   >
     <Table.Row>
       <Table.Cell>Column uses setWidth=&quot;three-quarters&quot; in header</Table.Cell>
@@ -101,13 +101,13 @@ const TableThreeQuartersOneQuarter = () => (
 const TableWithCustomWidths = () => (
   <Table
     caption="Custom widths"
-    head={
+    head={(
       <Table.Row>
         <Table.CellHeader setWidth="one-half">one-half</Table.CellHeader>
         <Table.CellHeader setWidth="22%">22%</Table.CellHeader>
         <Table.CellHeader>Normal</Table.CellHeader>
       </Table.Row>
-    }
+)}
   >
     <Table.Row>
       <Table.Cell>Column uses setWidth=&quot;one-half&quot; in header</Table.Cell>

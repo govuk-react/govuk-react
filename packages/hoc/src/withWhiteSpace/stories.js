@@ -1,7 +1,9 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, number, object, text } from '@storybook/addon-knobs/react';
+import {
+  withKnobs, number, object, text,
+} from '@storybook/addon-knobs/react';
 
 import BackLink from '@govuk-react/back-link';
 import Breadcrumb from '@govuk-react/breadcrumb';

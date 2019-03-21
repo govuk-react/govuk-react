@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import ButtonArrow from './';
+import ButtonArrow from '.';
 
 const wrapper = <ButtonArrow>Example</ButtonArrow>;
 

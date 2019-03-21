@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import ArrowRight from './';
+import ArrowRight from '.';
 
 const wrapper = <ArrowRight>Example</ArrowRight>;
 

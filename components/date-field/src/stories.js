@@ -18,6 +18,7 @@ class ManagedDateField extends React.Component {
       year: 2,
     },
   }
+
   render() {
     const input = {
       ...(this.props.input),

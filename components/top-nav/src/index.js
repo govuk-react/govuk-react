@@ -16,7 +16,7 @@ import RightHandSide from './atoms/right-hand-side';
 import SearchWrapper from './atoms/search-wrapper';
 import UnorderedList from './atoms/unordered-list';
 import ListItem from './atoms/list-item';
-import MenuButton from './atoms/menu-button/';
+import MenuButton from './atoms/menu-button';
 
 import IconTitle from './atoms/icon-title';
 
@@ -136,9 +136,9 @@ class TopNav extends Component {
   }
 
   toggleNavigationOpen = () => {
-    this.setState({
-      navigationOpen: !this.state.navigationOpen,
-    });
+    this.setState(prevState => ({
+      navigationOpen: !prevState.navigationOpen,
+    }));
   };
 
   render() {
@@ -160,17 +160,20 @@ class TopNav extends Component {
               <Company>
                 {company}
               </Company>
-              {search &&
+              {search
+                && (
                 <SearchWrapper>
                   {search}
                 </SearchWrapper>
+                )
               }
             </LogoSearchWrapper>
             <RightHandSide>
               <ServiceTitleWrapper>
                 {serviceTitle}
               </ServiceTitleWrapper>
-              {children &&
+              {children
+              && (
               <React.Fragment>
                 <MenuButtonWrapper>
                   <MenuButton
@@ -193,6 +196,7 @@ class TopNav extends Component {
                   )}
                 </UnorderedList>
               </React.Fragment>
+              )
               }
             </RightHandSide>
           </TopNavInner>

@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
 import Header from '.';
-import { H1, H2, H3, H4, H5, H6 } from './presets';
+import {
+  H1, H2, H3, H4, H5, H6,
+} from './presets';
 
 describe('Header', () => {
   it('renders a Header and all the H-level tags without crashing', () => {

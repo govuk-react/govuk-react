@@ -120,7 +120,8 @@ const ErrorSummary = ({
   <StyledErrorSummary tabIndex={-1} {...props}>
     <H2>{ heading }</H2>
     { description && <Paragraph mb={3}>{ description }</Paragraph> }
-    { errors.length > 0 &&
+    { errors.length > 0
+      && (
       <UnorderedList mb={0} listStyleType="none">
         { errors.map((error, index) => (
           <ListItem key={error.targetName}>
@@ -131,9 +132,10 @@ const ErrorSummary = ({
               {error.text}
             </StyledErrorText>
           </ListItem>
-          ))
+        ))
         }
       </UnorderedList>
+      )
     }
   </StyledErrorSummary>
 );
