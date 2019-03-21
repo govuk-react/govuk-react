@@ -15,11 +15,11 @@ const PreviewComponent = ({ children }) =>
     </div>
   );
 
-const ReadMeHidePreview = (readme, ...rest) =>
-  withDocs({ PreviewComponent })(navigator.userAgent.match(/Chromatic/) ? '' : readme, ...rest);
+const readMeHidePreview = (readme = '') =>
+  navigator.userAgent.match(/Chromatic/) ? storyFn => storyFn() : withDocs({ PreviewComponent })(readme);
 
 PreviewComponent.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default ReadMeHidePreview;
+export default readMeHidePreview;
