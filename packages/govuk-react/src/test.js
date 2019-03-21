@@ -24,7 +24,9 @@ describe("Components", () => {
 
   // TODO: this fails if a component is deleted/renamed and es/lib/node_modules are left behind.
   // We either need a clean command that can be run before tests or check the existence of package.json in each component folder.
-  components.map(component => it(`@govuk-react/${component} is in dependencies`, () => {
-    expect(!!pkg.dependencies[`@govuk-react/${component}`]).toBe(true);
-  }));
+  components.map(component =>
+    it(`@govuk-react/${component} is in dependencies`, () => {
+      expect(!!pkg.dependencies[`@govuk-react/${component}`]).toBe(true);
+    })
+  );
 });
