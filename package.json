@@ -20,8 +20,8 @@
     "flow": "flow",
     "bundlesize": "bundlesize",
     "test": "cross-env CI=true yarn test:unit && yarn eslint && yarn flow",
-    "test:unit": "jest --env=jsdom",
-    "test:debug": "node --inspect-brk ./node_modules/.bin/jest --env=jsdom --runInBand",
+    "test:unit": "jest",
+    "test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand",
     "test:snapshot": "yarn test:unit -- -u",
     "create-component": "node ./scripts/createComponent.js",
     "chromatic-test": "cd packages/storybook && yarn chromatic-test"
