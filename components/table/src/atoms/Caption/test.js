@@ -1,10 +1,14 @@
-import React from 'react';
-import { mount } from 'enzyme';
+import React from "react";
+import { mount } from "enzyme";
 
-import Caption from '.';
+import Caption from ".";
 
-describe('Caption', () => {
-  it('renders without crashing', () => {
-    mount(<table><Caption>Example</Caption></table>);
+describe("Caption", () => {
+  it("renders without crashing", () => {
+    mount(
+      <table>
+        <Caption>Example</Caption>
+      </table>
+    );
   });
 });

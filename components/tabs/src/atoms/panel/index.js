@@ -1,11 +1,11 @@
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import { BORDER_COLOUR } from 'govuk-colours';
-import { spacing } from '@govuk-react/lib';
-import { MEDIA_QUERIES } from '@govuk-react/constants';
+import styled from "styled-components";
+import PropTypes from "prop-types";
+import { BORDER_COLOUR } from "govuk-colours";
+import { spacing } from "@govuk-react/lib";
+import { MEDIA_QUERIES } from "@govuk-react/constants";
 
-const TabPanel = styled('section')(
-  spacing.responsiveMargin({ size: 8, direction: 'bottom' }),
+const TabPanel = styled("section")(
+  spacing.responsiveMargin({ size: 8, direction: "bottom" }),
   {
     [MEDIA_QUERIES.TABLET]: {
       marginBottom: spacing.simple(0),
@@ -15,22 +15,22 @@ const TabPanel = styled('section')(
       paddingLeft: spacing.simple(4),
       border: `1px solid ${BORDER_COLOUR}`,
       borderTop: 0,
-      '& > :last-child': {
-        marginBottom: 0,
-      },
-    },
+      "& > :last-child": {
+        marginBottom: 0
+      }
+    }
   },
   ({ selected }) => ({
-    display: 'block',
+    display: "block",
     [MEDIA_QUERIES.TABLET]: {
-      display: !selected && 'none',
-    },
-  }),
+      display: !selected && "none"
+    }
+  })
 );
 
 TabPanel.propTypes = {
   /** determine which panel is displayed */
-  selected: PropTypes.bool.isRequired,
+  selected: PropTypes.bool.isRequired
 };
 
 export default TabPanel;

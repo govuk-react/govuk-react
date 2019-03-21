@@ -1,12 +1,20 @@
-import React from 'react';
-import { mount } from 'enzyme';
+import React from "react";
+import { mount } from "enzyme";
 
-import TableHeader from '.';
+import TableHeader from ".";
 
-const example = <table><TableHeader><tr><th>hi</th></tr></TableHeader></table>;
+const example = (
+  <table>
+    <TableHeader>
+      <tr>
+        <th>hi</th>
+      </tr>
+    </TableHeader>
+  </table>
+);
 
-describe('TableHeader', () => {
-  it('renders without crashing', () => {
+describe("TableHeader", () => {
+  it("renders without crashing", () => {
     mount(example);
   });
 });

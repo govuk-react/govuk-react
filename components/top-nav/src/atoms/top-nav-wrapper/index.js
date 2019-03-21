@@ -1,17 +1,14 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import {
   FONT_SIZE,
   LINE_HEIGHT,
   MEDIA_QUERIES,
-  NTA_LIGHT,
-} from '@govuk-react/constants';
+  NTA_LIGHT
+} from "@govuk-react/constants";
 
-const TopNavWrapper = styled('div')(({
-  bgColor,
-  color,
-}) => ({
-  display: 'flex',
-  justifyContent: 'center',
+const TopNavWrapper = styled("div")(({ bgColor, color }) => ({
+  display: "flex",
+  justifyContent: "center",
   backgroundColor: bgColor,
   color,
   fontFamily: NTA_LIGHT,
@@ -20,8 +17,8 @@ const TopNavWrapper = styled('div')(({
   lineHeight: LINE_HEIGHT.SIZE_14,
   [MEDIA_QUERIES.LARGESCREEN]: {
     fontSize: FONT_SIZE.SIZE_16,
-    lineHeight: LINE_HEIGHT.SIZE_16,
-  },
+    lineHeight: LINE_HEIGHT.SIZE_16
+  }
 }));
 
 export default TopNavWrapper;

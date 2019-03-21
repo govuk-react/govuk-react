@@ -1,9 +1,17 @@
-import React from 'react';
-import { mount } from 'enzyme';
+import React from "react";
+import { mount } from "enzyme";
 
-import CellHeader from '.';
+import CellHeader from ".";
 
-const example = <table><tbody><tr><CellHeader>example</CellHeader></tr></tbody></table>;
+const example = (
+  <table>
+    <tbody>
+      <tr>
+        <CellHeader>example</CellHeader>
+      </tr>
+    </tbody>
+  </table>
+);
 const exampleAlignRight = (
   <table>
     <tbody>
@@ -23,8 +31,8 @@ const exampleBold = (
   </table>
 );
 
-describe('CellHeader', () => {
-  it('renders without crashing', () => {
+describe("CellHeader", () => {
+  it("renders without crashing", () => {
     mount(example);
     mount(exampleAlignRight);
     mount(exampleBold);
