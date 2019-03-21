@@ -11,9 +11,8 @@ import ReadMe from '../README.md';
 const stories = storiesOf('Form/FormGroup', module);
 stories.addDecorator(withKnobs);
 
-stories.add(
-  'Component default',
-  WithDocsCustom(ReadMe, () => (
+stories.add('Component default', () =>
+  WithDocsCustom(ReadMe)(() => (
     <FormGroup error={boolean('error', false)}>
       <Checkbox name="group-1">Example</Checkbox>
     </FormGroup>
