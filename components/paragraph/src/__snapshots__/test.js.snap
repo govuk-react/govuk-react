@@ -87,7 +87,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
       }
     }
     skipHtml={true}
-    source=""
+    source="Some basic text"
     supportingText={true}
   >
     <StyledComponent
@@ -198,7 +198,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
         }
       }
       skipHtml={true}
-      source=""
+      source="Some basic text"
       supportingText={true}
     >
       <ReactMarkdown
@@ -225,7 +225,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
           }
         }
         skipHtml={true}
-        source=""
+        source="Some basic text"
         sourcePos={false}
         supportingText={true}
         transformLinkUri={[Function]}
@@ -233,7 +233,13 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
         <div
           className="c0"
           key="root-1-1"
-        />
+        >
+          <p
+            key="paragraph-1-1"
+          >
+            Some basic text
+          </p>
+        </div>
       </ReactMarkdown>
     </StyledComponent>
   </Styled(ReactMarkdown)>
