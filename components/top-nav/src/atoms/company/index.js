@@ -5,7 +5,7 @@ const Company = styled('div')({
   fontWeight: 800,
   alignItems: 'center',
   justifyContent: 'flex-start',
-  fontSize: '30px'
+  fontSize: '30px',
 });
 
 export default Company;

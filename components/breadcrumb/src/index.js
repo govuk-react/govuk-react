@@ -21,7 +21,7 @@ const BreadcrumbContainer = styled('div')(
   {
     // margins here are not responsive, hence why they're not specified using withWhiteSpace
     marginTop: SPACING_POINTS[3],
-    marginBottom: SPACING_POINTS[2]
+    marginBottom: SPACING_POINTS[2],
   },
   spacing.withWhiteSpace()
 );
@@ -30,7 +30,7 @@ const BreadcrumbList = styled('ol')({
   margin: 0,
   padding: 0,
   listStyleType: 'none',
-  display: 'block'
+  display: 'block',
 });
 
 const BreadcrumbListItem = styled('li')({
@@ -53,16 +53,16 @@ const BreadcrumbListItem = styled('li')({
     transform: 'rotate(45deg)',
     border: 'solid',
     borderWidth: `${CHEVRON_BORDER_WIDTH}px ${CHEVRON_BORDER_WIDTH}px 0 0`,
-    borderColor: CHEVRON_BORDER_COLOUR
+    borderColor: CHEVRON_BORDER_COLOUR,
   },
   ':first-child': {
     marginLeft: 0,
     paddingLeft: 0,
     '::before': {
       content: 'none',
-      display: 'none'
-    }
-  }
+      display: 'none',
+    },
+  },
 });
 
 /**
@@ -96,7 +96,7 @@ BreadcrumbComponent.propTypes = {
   /**
    * Breadcrumb contents
    */
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 const Breadcrumb = deprecate(

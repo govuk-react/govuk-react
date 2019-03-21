@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 import MultiChoice from '.';
 import MultiChoiceWithKnobs, {
   MultiChoiceWithKnobsHint,
-  MultiChoiceWithKnobsError
+  MultiChoiceWithKnobsError,
 } from './fixtures';
 
 describe('MultiChoice', () => {

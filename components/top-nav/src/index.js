@@ -24,8 +24,8 @@ import IconTitle from './atoms/icon-title';
 const ServiceTitleWrapper = styled('div')(typography.font({ size: 24 }), {
   width: '50%',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    width: 'auto'
-  }
+    width: 'auto',
+  },
 });
 
 // Layout/position of MenuButtonWrapper
@@ -35,8 +35,8 @@ const MenuButtonWrapper = styled('div')({
   alignItems: 'flex-end',
   width: '50%',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    width: 'auto'
-  }
+    width: 'auto',
+  },
 });
 
 // Provides a fallback for the mobile menu toggle
@@ -45,11 +45,11 @@ const Input = styled('input')({
   position: 'absolute',
   top: '-999em',
   ':checked + ul': {
-    display: 'flex'
+    display: 'flex',
   },
   [MEDIA_QUERIES.LARGESCREEN]: {
-    display: 'none'
-  }
+    display: 'none',
+  },
 });
 
 /**
@@ -129,12 +129,12 @@ const Input = styled('input')({
  */
 class TopNav extends Component {
   state = {
-    navigationOpen: this.props.defaultOpen
+    navigationOpen: this.props.defaultOpen,
   };
 
   toggleNavigationOpen = () => {
     this.setState(prevState => ({
-      navigationOpen: !prevState.navigationOpen
+      navigationOpen: !prevState.navigationOpen,
     }));
   };
 
@@ -209,7 +209,7 @@ TopNav.defaultProps = {
   serviceTitle: undefined,
   search: false,
   children: undefined,
-  defaultOpen: false
+  defaultOpen: false,
 };
 
 // TODO: prop names should mirror nunjucks macro options at https://design-system.service.gov.uk/components/header/
@@ -227,7 +227,7 @@ TopNav.propTypes = {
   /** Search component */
   search: PropTypes.node,
   /** List Navigation items with anchor tags e.g. NavAnchor components */
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 TopNav.IconTitle = IconTitle;

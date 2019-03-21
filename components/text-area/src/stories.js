@@ -7,7 +7,7 @@ import ReadMe from '../README.md';
 
 const meta = {
   touched: true,
-  error: 'Example'
+  error: 'Example',
 };
 
 const stories = storiesOf('Form/Textarea', module);

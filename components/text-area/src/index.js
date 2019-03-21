@@ -8,7 +8,7 @@ import {
   FONT_SIZE,
   LINE_HEIGHT,
   MEDIA_QUERIES,
-  NTA_LIGHT
+  NTA_LIGHT,
 } from '@govuk-react/constants';
 
 import Label from '@govuk-react/label';
@@ -27,18 +27,18 @@ const TextAreaField = styled('textarea')(
     [MEDIA_QUERIES.LARGESCREEN]: {
       fontSize: FONT_SIZE.SIZE_19,
       lineHeight: LINE_HEIGHT.SIZE_19,
-      width: '75%'
+      width: '75%',
     },
     width: '100%',
     padding: '5px 4px 4px',
     border: `2px solid ${BLACK}`,
     ':focus': {
       outline: `3px solid ${YELLOW}`,
-      outlineOffset: 0
-    }
+      outlineOffset: 0,
+    },
   },
   ({ error }) => ({
-    border: error ? `4px solid ${ERROR_COLOUR}` : undefined
+    border: error ? `4px solid ${ERROR_COLOUR}` : undefined,
   })
 );
 
@@ -95,7 +95,7 @@ const TextArea = ({ children, hint, meta, input, ...props }) => (
 TextArea.defaultProps = {
   hint: undefined,
   input: {},
-  meta: {}
+  meta: {},
 };
 
 TextArea.propTypes = {
@@ -105,7 +105,7 @@ TextArea.propTypes = {
     onBlur: PropTypes.func,
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
-    value: PropTypes.any
+    value: PropTypes.any,
   }),
   meta: PropTypes.shape({
     active: PropTypes.bool,
@@ -120,9 +120,9 @@ TextArea.propTypes = {
     submitSucceeded: PropTypes.bool,
     touched: PropTypes.bool,
     valid: PropTypes.bool,
-    visited: PropTypes.bool
+    visited: PropTypes.bool,
   }),
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 /** Component is not exported withWhitespace because Label

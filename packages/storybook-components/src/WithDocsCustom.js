@@ -12,7 +12,7 @@ const PreviewComponent = ({ children }) =>
         textAlign: 'left',
         padding: '25px',
         margin: '25px 0',
-        boxShadow: '0 0 40px rgba(0, 0, 0, 0.1)'
+        boxShadow: '0 0 40px rgba(0, 0, 0, 0.1)',
       }}
     >
       {children}
@@ -26,7 +26,7 @@ const withDocsCustom = (readme = '', ...rest) =>
   );
 
 PreviewComponent.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default withDocsCustom;

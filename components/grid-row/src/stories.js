@@ -15,7 +15,7 @@ const Content = styled('div')({
   textIndent: '-999em',
   backgroundColor: '#7DADD3',
   backgroundImage:
-    'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)'
+    'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)',
 });
 
 stories.add('Component default', () => (

@@ -14,12 +14,12 @@ const ButtonArrow = ({ fill, title, ...rest }) => (
 
 ButtonArrow.propTypes = {
   title: PropTypes.string,
-  fill: PropTypes.string
+  fill: PropTypes.string,
 };
 
 ButtonArrow.defaultProps = {
   title: 'ButtonArrow',
-  fill: 'currentColor'
+  fill: 'currentColor',
 };
 
 export default ButtonArrow;

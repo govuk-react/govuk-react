@@ -20,7 +20,7 @@ export const BREAKPOINTS = {
   LARGESCREEN: '641px', // @deprecated
   MOBILE: '320px',
   TABLET: '641px',
-  DESKTOP: '769px'
+  DESKTOP: '769px',
 };
 
 export const GUTTER_PX = 30;
@@ -33,7 +33,7 @@ export const SPACING = {
   SCALE_3: '15px',
   SCALE_4: '20px',
   SCALE_5: '30px',
-  SCALE_6: '60px'
+  SCALE_6: '60px',
 };
 
 export const SITE_WIDTH_PLUS_GUTTERS = `${SITE_WIDTH_PX + 2 * GUTTER_PX}px`;
@@ -43,7 +43,7 @@ export const MEDIA_QUERIES = {
   MAX: `@media only screen and (min-width: ${SITE_WIDTH_PLUS_GUTTERS})`,
   PRINT: '@media print',
   TABLET: `@media only screen and (min-width: ${BREAKPOINTS.TABLET})`,
-  DESKTOP: `@media only screen and (min-width: ${BREAKPOINTS.DESKTOP})`
+  DESKTOP: `@media only screen and (min-width: ${BREAKPOINTS.DESKTOP})`,
 };
 
 // TODO: figure out how to optionally include locally installed font, e.g. "GDS Transport Website"
@@ -61,7 +61,7 @@ export const FONT_SIZE = {
   SIZE_19: '19px',
   SIZE_20: '20px', // Not used in govuk-frontend
   SIZE_24: '24px',
-  SIZE_27: '27px'
+  SIZE_27: '27px',
 };
 
 export const LINE_HEIGHT = {
@@ -71,5 +71,5 @@ export const LINE_HEIGHT = {
   SIZE_19: '1.3', // ditto
   // SIZE_24 differs here from 24 def in typography scale, which is 1.25
   // however that appears to be a mistake
-  SIZE_24: '1.35'
+  SIZE_24: '1.35',
 };

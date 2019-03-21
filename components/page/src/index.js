@@ -38,7 +38,7 @@ const Page = ({
   children,
   beforeChildren,
   main: MainComponent,
-  container: Container
+  container: Container,
 }) => (
   <React.Fragment>
     {header}
@@ -76,7 +76,7 @@ Page.propTypes = {
    * Override the default page container component.
    * `beforeChildren` and `children` (wrapped in `main`) will be placed inside this component.
    */
-  container: PropTypes.func
+  container: PropTypes.func,
 };
 
 Page.Main = Main;
@@ -88,7 +88,7 @@ Page.defaultProps = {
   footer: undefined, // <Footer />, // TODO: add Footer component once built
   main: Page.Main,
   beforeChildren: undefined,
-  container: Page.WidthContainer
+  container: Page.WidthContainer,
 };
 
 export default Page;

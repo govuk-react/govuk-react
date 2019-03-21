@@ -67,7 +67,7 @@ const InputField = ({ meta, children, hint, input, ...props }) => (
 InputField.defaultProps = {
   hint: undefined,
   input: {},
-  meta: {}
+  meta: {},
 };
 
 InputField.propTypes = {
@@ -77,7 +77,7 @@ InputField.propTypes = {
     onBlur: PropTypes.func,
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
-    value: PropTypes.any
+    value: PropTypes.any,
   }),
   meta: PropTypes.shape({
     active: PropTypes.bool,
@@ -92,9 +92,9 @@ InputField.propTypes = {
     submitSucceeded: PropTypes.bool,
     touched: PropTypes.bool,
     valid: PropTypes.bool,
-    visited: PropTypes.bool
+    visited: PropTypes.bool,
   }),
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 /** Component is not exported withWhitespace because Label

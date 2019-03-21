@@ -11,7 +11,7 @@ const headingRanges = {
   range: true,
   min: 1,
   max: 6,
-  step: 1
+  step: 1,
 };
 
 stories.addDecorator(withKnobs);

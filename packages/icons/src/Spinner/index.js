@@ -48,13 +48,13 @@ const Spinner = ({ className, fill, title, ...rest }) => (
 Spinner.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
-  fill: PropTypes.string
+  fill: PropTypes.string,
 };
 
 Spinner.defaultProps = {
   className: 'icon-spinner',
   title: 'Loading',
-  fill: 'currentColor'
+  fill: 'currentColor',
 };
 
 export default Spinner;

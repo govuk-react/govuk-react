@@ -5,7 +5,7 @@ import { MEDIA_QUERIES, SPACING, SITE_WIDTH } from '@govuk-react/constants';
 
 const OuterContainer = styled('div')({
   paddingTop: SPACING.SCALE_5,
-  textAlign: 'center'
+  textAlign: 'center',
 });
 
 // This is currently 'width-container' and not 'main' from govuk-frontend
@@ -17,12 +17,12 @@ const InnerContainer = styled('div')({
   textAlign: 'left',
   [MEDIA_QUERIES.LARGESCREEN]: {
     marginLeft: SPACING.SCALE_5,
-    marginRight: SPACING.SCALE_5
+    marginRight: SPACING.SCALE_5,
   },
   // no 1020px breakpoint in constants yet, not sure why
   '@media only screen and (min-width:1020px)': {
-    margin: '0 auto'
-  }
+    margin: '0 auto',
+  },
 });
 
 /**
@@ -64,11 +64,11 @@ Main.propTypes = {
   /**
    * Child nodes for the page being built
    */
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 Main.defaultProps = {
-  children: undefined
+  children: undefined,
 };
 
 export default Main;

@@ -9,14 +9,14 @@ export const FOCUS_WIDTH_RAW = 3;
 export const FOCUSABLE = {
   '&:focus': {
     outline: `${FOCUS_WIDTH} solid ${FOCUS_COLOUR}`,
-    outlineOffset: 0
-  }
+    outlineOffset: 0,
+  },
 };
 
 export const FOCUSABLE_FILL = {
   '&:focus': {
     outline: `${FOCUS_WIDTH} solid ${FOCUS_COLOUR}`,
     outlineOffset: 0,
-    backgroundColor: FOCUS_COLOUR
-  }
+    backgroundColor: FOCUS_COLOUR,
+  },
 };

@@ -7,7 +7,7 @@ import {
   BORDER_WIDTH_FORM_ELEMENT,
   BORDER_WIDTH_FORM_ELEMENT_ERROR,
   FOCUSABLE,
-  SPACING_POINTS
+  SPACING_POINTS,
 } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 
@@ -29,17 +29,17 @@ export const StyledInput = styled('input')(
 
     '&::-webkit-outer-spin-button, &::-webkit-inner-spin-button': {
       margin: 0,
-      WebkitAppearance: 'none'
+      WebkitAppearance: 'none',
     },
 
     '&[type="number"]': {
-      MozAppearance: 'textfield'
-    }
+      MozAppearance: 'textfield',
+    },
   },
   ({ error, errorColor }) => ({
     border: error
       ? `${BORDER_WIDTH_FORM_ELEMENT_ERROR} solid ${errorColor || ERROR_COLOUR}`
-      : undefined
+      : undefined,
   }),
   spacing.withWhiteSpace({ marginBottom: 0 })
 );
@@ -62,14 +62,14 @@ export const StyledInput = styled('input')(
 const Input = ({ type, ...props }) => <StyledInput type={type} {...props} />;
 
 Input.defaultProps = {
-  type: 'text'
+  type: 'text',
 };
 
 Input.propTypes = {
   /**
    * HTML `<Input />` type
    */
-  type: PropTypes.string
+  type: PropTypes.string,
 };
 
 export default Input;

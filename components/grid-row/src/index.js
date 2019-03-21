@@ -10,8 +10,8 @@ const StyledRow = styled('div')(
     flexDirection: 'column',
     margin: `0 -${GUTTER_HALF}`,
     [MEDIA_QUERIES.LARGESCREEN]: {
-      flexDirection: 'row'
-    }
+      flexDirection: 'row',
+    },
   },
   spacing.withWhiteSpace()
 );
@@ -48,7 +48,7 @@ GridRow.propTypes = {
   /**
    * One or more GridCol nodes
    */
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default GridRow;

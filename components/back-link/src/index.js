@@ -26,8 +26,8 @@ const Anchor = styled('a')(
       top: '-1px',
       bottom: '1px',
       left: 0,
-      margin: 'auto'
-    }
+      margin: 'auto',
+    },
   },
   spacing.withWhiteSpace()
 );
@@ -63,12 +63,12 @@ BackLink.propTypes = {
   /**
    * Custom function to run when the `onClick` event is fired
    */
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 
 BackLink.defaultProps = {
   children: 'Back',
-  onClick: undefined
+  onClick: undefined,
 };
 
 export default BackLink;

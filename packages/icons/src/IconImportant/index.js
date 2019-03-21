@@ -24,12 +24,12 @@ const IconImportant = ({ fill, title, ...rest }) => (
 
 IconImportant.propTypes = {
   title: PropTypes.string,
-  fill: PropTypes.string
+  fill: PropTypes.string,
 };
 
 IconImportant.defaultProps = {
   title: 'icon important',
-  fill: 'currentColor'
+  fill: 'currentColor',
 };
 
 export default IconImportant;

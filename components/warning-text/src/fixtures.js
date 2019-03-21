@@ -9,7 +9,7 @@ const WarningTextWithKnobs = ({ children = 'Example text' }) => (
 );
 
 WarningTextWithKnobs.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default WarningTextWithKnobs;

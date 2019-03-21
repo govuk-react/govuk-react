@@ -19,7 +19,7 @@ import {
   LINE_HEIGHT,
   SPACING,
   MEDIA_QUERIES,
-  RESPONSIVE_4
+  RESPONSIVE_4,
 } from '@govuk-react/constants';
 
 import { spacing } from '@govuk-react/lib';
@@ -37,15 +37,15 @@ const StyledErrorText = styled(Link)({
   fontSize: FONT_SIZE.SIZE_16,
   lineHeight: LINE_HEIGHT.SIZE_16,
   ':visited': {
-    color: `${ERROR_COLOUR}`
+    color: `${ERROR_COLOUR}`,
   },
   [MEDIA_QUERIES.LARGESCREEN]: {
     fontSize: FONT_SIZE.SIZE_19,
-    lineHeight: LINE_HEIGHT.SIZE_19
+    lineHeight: LINE_HEIGHT.SIZE_19,
   },
   color: `${ERROR_COLOUR}`,
   paddingTop: '4px',
-  paddingBottom: '2px'
+  paddingBottom: '2px',
 });
 
 const StyledErrorSummary = styled('div')(
@@ -55,12 +55,12 @@ const StyledErrorSummary = styled('div')(
     border: `${BORDER_WIDTH_MOBILE} solid ${ERROR_COLOUR}`,
     '&:focus': {
       outline: `${FOCUS_WIDTH} solid ${FOCUS_COLOUR}`,
-      outlineOffset: '0'
+      outlineOffset: '0',
     },
     [MEDIA_QUERIES.LARGESCREEN]: {
       padding: RESPONSIVE_4.tablet,
-      border: `${BORDER_WIDTH} solid ${ERROR_COLOUR}`
-    }
+      border: `${BORDER_WIDTH} solid ${ERROR_COLOUR}`,
+    },
   },
   spacing.withWhiteSpace({ marginBottom: 6 })
 );
@@ -143,7 +143,7 @@ const ErrorSummary = ({
 ErrorSummary.defaultProps = {
   onHandleErrorClick: () => {},
   description: undefined,
-  errors: []
+  errors: [],
 };
 
 ErrorSummary.propTypes = {
@@ -157,9 +157,9 @@ ErrorSummary.propTypes = {
   errors: PropTypes.arrayOf(
     PropTypes.shape({
       targetName: PropTypes.string,
-      text: PropTypes.string
+      text: PropTypes.string,
     })
-  )
+  ),
 };
 
 export default ErrorSummary;

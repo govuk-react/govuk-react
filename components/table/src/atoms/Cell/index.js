@@ -15,8 +15,8 @@ const Cell = styled('td')(
     textAlign: alignRight ? 'right' : 'left',
     fontWeight: bold ? FONT_WEIGHTS.bold : undefined,
     ':last-child': {
-      paddingRight: 0
-    }
+      paddingRight: 0,
+    },
   }),
   ({ numeric, isHeader }) =>
     numeric && !isHeader ? typography.font({ tabular: true }) : undefined,
@@ -27,7 +27,7 @@ Cell.propTypes = {
   alignRight: PropTypes.bool,
   children: PropTypes.node.isRequired,
   isHeader: PropTypes.bool,
-  numeric: PropTypes.bool
+  numeric: PropTypes.bool,
 };
 
 export default Cell;

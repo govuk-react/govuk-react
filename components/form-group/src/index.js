@@ -5,15 +5,15 @@ import { ERROR_COLOUR } from 'govuk-colours';
 import { spacing } from '@govuk-react/lib';
 import {
   BORDER_WIDTH_FORM_GROUP_ERROR,
-  SPACING_POINTS
+  SPACING_POINTS,
 } from '@govuk-react/constants';
 
 const FormGroup = styled('div')(
   spacing.responsiveMargin({ size: 6, direction: 'bottom' }),
   {
     '& &:last-of-type': {
-      marginBottom: 0
-    }
+      marginBottom: 0,
+    },
   },
   ({ error }) =>
     error
@@ -23,8 +23,8 @@ const FormGroup = styled('div')(
 
           '& &': {
             padding: 0,
-            border: 0
-          }
+            border: 0,
+          },
         }
       : undefined,
   spacing.withWhiteSpace()
@@ -50,11 +50,11 @@ const FormGroupDocumented = props => <FormGroup {...props} />;
 
 FormGroupDocumented.propTypes = {
   children: PropTypes.node.isRequired,
-  error: PropTypes.bool
+  error: PropTypes.bool,
 };
 
 FormGroupDocumented.defaultProps = {
-  error: false
+  error: false,
 };
 
 FormGroup.propTypes = FormGroupDocumented.propTypes;

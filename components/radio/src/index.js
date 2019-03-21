@@ -9,7 +9,7 @@ import {
   FOCUS_WIDTH,
   FOCUS_WIDTH_RAW,
   MEDIA_QUERIES,
-  SPACING_POINTS
+  SPACING_POINTS,
 } from '@govuk-react/constants';
 
 const radioSize = SPACING_POINTS[7];
@@ -25,15 +25,15 @@ const Label = styled('label')(
     position: 'relative',
     minHeight: radioSize,
     padding: `0 0 0 ${radioSize}px`,
-    clear: 'left'
+    clear: 'left',
   },
   ({ inline }) =>
     inline && {
       [MEDIA_QUERIES.LARGESCREEN]: {
         float: 'left',
         clear: 'none',
-        marginRight: SPACING_POINTS[4]
-      }
+        marginRight: SPACING_POINTS[4],
+      },
     },
   spacing.withWhiteSpace({ marginBottom: 2 })
 );
@@ -49,20 +49,20 @@ const Input = styled('input')(
     cursor: 'pointer',
     opacity: 0,
     ':checked + span::after': {
-      opacity: 1
+      opacity: 1,
     },
     ':focus + span::before': {
       outline: `${FOCUS_WIDTH} solid transparent`,
       outlineOffset: FOCUS_WIDTH,
-      boxShadow: `0 0 0 ${RADIOS_FOCUS_WIDTH} ${FOCUS_COLOUR}`
-    }
+      boxShadow: `0 0 0 ${RADIOS_FOCUS_WIDTH} ${FOCUS_COLOUR}`,
+    },
   },
   ({ disabled }) => ({
     cursor: disabled ? 'auto' : 'pointer',
     ' + span': {
       opacity: disabled ? '.5' : '1',
-      pointerEvents: disabled ? 'none' : 'auto'
-    }
+      pointerEvents: disabled ? 'none' : 'auto',
+    },
   })
 );
 
@@ -83,7 +83,7 @@ const LabelText = styled('span')({
     height: radioSize,
     border: `${BORDER_WIDTH_FORM_ELEMENT} solid black`,
     borderRadius: '50%',
-    background: 'transparent'
+    background: 'transparent',
   },
   ':after': {
     content: "''",
@@ -94,14 +94,14 @@ const LabelText = styled('span')({
     height: 0,
     border: `${SPACING_POINTS[2]}px solid`,
     borderRadius: '50%',
-    opacity: 0
-  }
+    opacity: 0,
+  },
 });
 
 const StyledRadioHint = styled(HintText)({
   display: 'block',
   paddingLeft: labelPaddingLeftRight,
-  paddingRight: labelPaddingLeftRight
+  paddingRight: labelPaddingLeftRight,
 });
 
 /**
@@ -187,14 +187,14 @@ const Radio = ({ inline, children, className, hint, ...input }) => (
 Radio.defaultProps = {
   hint: undefined,
   inline: false,
-  className: undefined
+  className: undefined,
 };
 
 Radio.propTypes = {
   hint: PropTypes.node,
   inline: PropTypes.bool,
   className: PropTypes.string,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Radio;

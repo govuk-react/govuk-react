@@ -15,7 +15,7 @@ const withWhiteSpace = config => Component => {
   )(spacing.withWhiteSpace(config));
 
   StyledHoc.propTypes = {
-    ...spacing.withWhiteSpace.propTypes
+    ...spacing.withWhiteSpace.propTypes,
   };
 
   return StyledHoc;

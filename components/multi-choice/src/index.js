@@ -31,15 +31,15 @@ const StyledFieldset = styled('div')(
     ':after': {
       content: "''",
       display: 'table',
-      clear: 'both'
-    }
+      clear: 'both',
+    },
   },
   ({ error }) => ({
     borderLeft: error
       ? `${BORDER_WIDTH_MOBILE} solid ${ERROR_COLOUR}`
       : undefined,
     marginRight: error ? SPACING.SCALE_3 : undefined,
-    paddingLeft: error ? SPACING.SCALE_2 : undefined
+    paddingLeft: error ? SPACING.SCALE_2 : undefined,
   }),
   spacing.withWhiteSpace({ marginBottom: 0 })
 );
@@ -78,7 +78,7 @@ const MultiChoice = ({ meta, label, children, hint, ...props }) => (
 
 MultiChoice.defaultProps = {
   hint: undefined,
-  meta: {}
+  meta: {},
 };
 
 MultiChoice.propTypes = {
@@ -95,11 +95,11 @@ MultiChoice.propTypes = {
     submitSucceeded: PropTypes.bool,
     touched: PropTypes.bool,
     valid: PropTypes.bool,
-    visited: PropTypes.bool
+    visited: PropTypes.bool,
   }),
   label: PropTypes.node.isRequired,
   children: PropTypes.node.isRequired,
-  hint: PropTypes.string
+  hint: PropTypes.string,
 };
 
 export default MultiChoice;

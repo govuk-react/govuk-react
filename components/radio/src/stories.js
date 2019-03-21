@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import {
   FinalFormWrapper,
-  WithDocsCustom
+  WithDocsCustom,
 } from '@govuk-react/storybook-components';
 
 import MultiChoice from '@govuk-react/multi-choice';
@@ -38,7 +38,7 @@ RadioGroup.defaultProps = {
   meta: {},
   hint: undefined,
   inline: false,
-  options: []
+  options: [],
 };
 
 RadioGroup.propTypes = {
@@ -50,9 +50,9 @@ RadioGroup.propTypes = {
   options: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
-      value: PropTypes.string
+      value: PropTypes.string,
     })
-  )
+  ),
 };
 
 const stories = storiesOf('Form/Radio', module);

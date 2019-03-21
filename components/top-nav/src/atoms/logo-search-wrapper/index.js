@@ -7,8 +7,8 @@ const LogoSearchWrapper = styled('div')({
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'block',
     paddingRight: SPACING.SCALE_3,
-    width: '33.33%'
-  }
+    width: '33.33%',
+  },
 });
 
 export default LogoSearchWrapper;

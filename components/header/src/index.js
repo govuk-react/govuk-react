@@ -6,7 +6,7 @@ import {
   LEVEL_SIZE,
   LEVEL_TAG,
   MEDIA_QUERIES,
-  TYPOGRAPHY_SCALE
+  TYPOGRAPHY_SCALE,
 } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 import { deprecate } from '@govuk-react/hoc';
@@ -33,7 +33,7 @@ const StyledHeader = styled(({ level, children, size, ...props }) =>
   },
   {
     display: 'block',
-    marginTop: 0
+    marginTop: 0,
   },
   ({ level, size = LEVEL_SIZE[level] }) => {
     const actualSize = Number.isNaN(Number(size)) ? HEADING_SIZES[size] : size;
@@ -44,8 +44,8 @@ const StyledHeader = styled(({ level, children, size, ...props }) =>
       {
         marginBottom: scaleInfo.mobile.spacing,
         [MEDIA_QUERIES.TABLET]: {
-          marginBottom: scaleInfo.tablet.spacing
-        }
+          marginBottom: scaleInfo.tablet.spacing,
+        },
       }
     );
   },
@@ -65,7 +65,7 @@ const Header = props => <StyledHeader {...props} />;
 
 Header.defaultProps = {
   level: 1,
-  size: undefined
+  size: undefined,
 };
 
 Header.propTypes = {
@@ -80,8 +80,8 @@ Header.propTypes = {
    */
   size: PropTypes.oneOf([
     ...Object.keys(HEADING_SIZES),
-    ...Object.keys(TYPOGRAPHY_SCALE)
-  ])
+    ...Object.keys(TYPOGRAPHY_SCALE),
+  ]),
 };
 
 export default deprecate(Header, 'please use the Heading component instead');

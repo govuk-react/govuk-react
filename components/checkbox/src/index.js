@@ -7,7 +7,7 @@ import {
   BORDER_WIDTH,
   BORDER_WIDTH_FORM_ELEMENT,
   FOCUS_WIDTH,
-  SPACING_POINTS
+  SPACING_POINTS,
 } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 
@@ -21,7 +21,7 @@ const StyledCheckbox = styled('label')(
     position: 'relative',
     minHeight: checkboxSize,
     padding: `0 0 0 ${checkboxSize}px`,
-    clear: 'left'
+    clear: 'left',
   },
   spacing.withWhiteSpace({ marginBottom: 2 })
 );
@@ -36,20 +36,20 @@ const StyledInput = styled('input')(
     height: checkboxSize,
     opacity: 0,
     ':checked + span:after': {
-      opacity: 1
+      opacity: 1,
     },
     ':focus + span:before': {
       outline: `${FOCUS_WIDTH} solid transparent`,
       outlineOffset: FOCUS_WIDTH,
-      boxShadow: `0 0 0 ${FOCUS_WIDTH} ${FOCUS_COLOUR}`
-    }
+      boxShadow: `0 0 0 ${FOCUS_WIDTH} ${FOCUS_COLOUR}`,
+    },
   },
   ({ disabled }) => ({
     cursor: disabled ? 'default' : 'pointer',
     ' + span': {
       opacity: disabled ? '.5' : '1',
-      pointerEvents: disabled ? 'none' : 'auto'
-    }
+      pointerEvents: disabled ? 'none' : 'auto',
+    },
   })
 );
 
@@ -68,7 +68,7 @@ const StyledLabel = styled('span')({
     width: checkboxSize,
     height: checkboxSize,
     border: `${BORDER_WIDTH_FORM_ELEMENT} solid black`,
-    background: 'transparent'
+    background: 'transparent',
   },
   '::after': {
     content: "''",
@@ -82,14 +82,14 @@ const StyledLabel = styled('span')({
     borderWidth: `0 0 ${BORDER_WIDTH} ${BORDER_WIDTH}`,
     borderTopColor: 'transparent',
     background: 'transparent',
-    opacity: 0
-  }
+    opacity: 0,
+  },
 });
 
 const StyledCheckboxHint = styled(HintText)({
   display: 'block',
   paddingLeft: labelPaddingLeftRight,
-  paddingRight: labelPaddingLeftRight
+  paddingRight: labelPaddingLeftRight,
 });
 
 /**
@@ -134,7 +134,7 @@ const Checkbox = ({ children, className, hint, ...props }) => (
 
 Checkbox.defaultProps = {
   hint: undefined,
-  className: undefined
+  className: undefined,
 };
 
 Checkbox.propTypes = {
@@ -146,7 +146,7 @@ Checkbox.propTypes = {
   /**
    * CSS Classname for outermost container
    */
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default Checkbox;

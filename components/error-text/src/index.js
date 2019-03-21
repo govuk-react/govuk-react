@@ -12,7 +12,7 @@ const StyledError = styled('span')(
     // NB non-responsive spacing
     marginBottom: SPACING_POINTS[3],
     clear: 'both',
-    color: ERROR_COLOUR
+    color: ERROR_COLOUR,
   },
   spacing.withWhiteSpace()
 );
@@ -34,7 +34,7 @@ const ErrorText = props => <StyledError {...props} />;
 
 ErrorText.propTypes = {
   /** Text to describe the error */
-  children: PropTypes.string.isRequired
+  children: PropTypes.string.isRequired,
 };
 
 export default ErrorText;

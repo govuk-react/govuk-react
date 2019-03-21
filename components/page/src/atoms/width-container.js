@@ -6,7 +6,7 @@ import {
   GUTTER,
   GUTTER_HALF,
   MEDIA_QUERIES,
-  SITE_WIDTH
+  SITE_WIDTH,
 } from '@govuk-react/constants';
 
 const WidthContainer = styled('div')(
@@ -14,11 +14,11 @@ const WidthContainer = styled('div')(
     maxWidth: SITE_WIDTH,
     margin: `0 ${GUTTER_HALF}`,
     [MEDIA_QUERIES.TABLET]: {
-      margin: `0 ${GUTTER}`
+      margin: `0 ${GUTTER}`,
     },
     [MEDIA_QUERIES.MAX]: {
-      margin: '0 auto'
-    }
+      margin: '0 auto',
+    },
   },
   spacing.withWhiteSpace()
 );

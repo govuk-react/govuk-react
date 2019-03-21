@@ -13,10 +13,10 @@ const StyledLabelText = styled('span')(
   {
     display: 'block',
     clear: 'none',
-    paddingBottom: '2px'
+    paddingBottom: '2px',
   },
   ({ error }) => ({
-    fontWeight: error ? 700 : undefined
+    fontWeight: error ? 700 : undefined,
   }),
   spacing.withWhiteSpace({ marginBottom: 0 })
 );
@@ -38,7 +38,7 @@ const LabelText = props => <StyledLabelText {...props} />;
 
 LabelText.propTypes = {
   /** Text for the label */
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default LabelText;

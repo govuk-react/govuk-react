@@ -48,7 +48,7 @@ const ListNavigation = ({ children, listStyleType, ...props }) => (
 );
 
 ListNavigation.defaultProps = {
-  listStyleType: undefined
+  listStyleType: undefined,
 };
 
 ListNavigation.propTypes = {
@@ -59,7 +59,7 @@ ListNavigation.propTypes = {
   /**
    * CSS value for `list-style-type`
    */
-  listStyleType: PropTypes.string
+  listStyleType: PropTypes.string,
 };
 
 export default ListNavigation;

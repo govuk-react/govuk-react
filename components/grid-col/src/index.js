@@ -10,13 +10,13 @@ const colValues = {
   columnOneHalf: '50%',
   columnTwoThirds: '66.6667%',
   columnThreeQuarters: '75%',
-  columnFull: '100%'
+  columnFull: '100%',
 };
 
 const widthFromProps = spacing.withWidth({ noDefault: true });
 const desktopWidthFromProps = spacing.withWidth({
   mediaQuery: MEDIA_QUERIES.DESKTOP,
-  noDefault: true
+  noDefault: true,
 });
 
 function setGrowShrink(style) {
@@ -25,7 +25,7 @@ function setGrowShrink(style) {
   // No explicit width means auto, so grow/shrink should be set
   return Object.assign({}, style, {
     flexGrow: hasAutoWidth ? 1 : 0,
-    flexShrink: hasAutoWidth ? 1 : 0
+    flexShrink: hasAutoWidth ? 1 : 0,
   });
 }
 
@@ -33,7 +33,7 @@ const StyledColumn = styled('div')(
   {
     boxSizing: 'border-box',
     paddingRight: GUTTER_HALF,
-    paddingLeft: GUTTER_HALF
+    paddingLeft: GUTTER_HALF,
   },
   props => {
     // if setWidth is set, then columnOneQuarter etc props will be ignored
@@ -59,8 +59,8 @@ const StyledColumn = styled('div')(
       });
       widthStyle = {
         [MEDIA_QUERIES.TABLET]: {
-          width: widthValue
-        }
+          width: widthValue,
+        },
       };
     }
     widthStyle[MEDIA_QUERIES.TABLET] = setGrowShrink(
@@ -68,7 +68,7 @@ const StyledColumn = styled('div')(
     );
 
     const desktopWidthStyle = desktopWidthFromProps({
-      setWidth: props.setDesktopWidth
+      setWidth: props.setDesktopWidth,
     });
 
     if (desktopWidthStyle) {
@@ -160,7 +160,7 @@ GridCol.propTypes = {
   setWidth: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
-    PropTypes.oneOf(Object.keys(WIDTHS))
+    PropTypes.oneOf(Object.keys(WIDTHS)),
   ]),
   /**
    * Explicitly set desktop column to width using value or descriptive string
@@ -169,8 +169,8 @@ GridCol.propTypes = {
   setDesktopWidth: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
-    PropTypes.oneOf([...Object.keys(WIDTHS)])
-  ])
+    PropTypes.oneOf([...Object.keys(WIDTHS)]),
+  ]),
 };
 
 GridCol.defaultProps = {
@@ -182,7 +182,7 @@ GridCol.defaultProps = {
   columnThreeQuarters: false,
   columnFull: false,
   setWidth: undefined,
-  setDesktopWidth: undefined
+  setDesktopWidth: undefined,
 };
 
 export default GridCol;

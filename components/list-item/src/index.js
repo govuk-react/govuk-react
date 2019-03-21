@@ -40,7 +40,7 @@ const DocumentedComponent = props => <ListItem {...props} />;
 
 DocumentedComponent.propTypes = {
   /** List item content */
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 ListItem.propTypes = DocumentedComponent.propTypes;

@@ -19,7 +19,7 @@ describe('Radio', () => {
   beforeEach(() => {
     props = {
       name: example,
-      children: example
+      children: example,
     };
   });
 

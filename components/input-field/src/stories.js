@@ -7,7 +7,7 @@ import ReadMe from '../README.md';
 
 const meta = {
   touched: true,
-  error: 'Example'
+  error: 'Example',
 };
 
 const stories = storiesOf('Form/InputField', module);
@@ -25,7 +25,7 @@ examples.add('Input with HintText', () => (
     hint={[
       'It’s on your National Insurance card, benefit letter, payslip or P60.',
       <br />,
-      'For example, ‘QQ 12 34 56 C’.'
+      'For example, ‘QQ 12 34 56 C’.',
     ]}
   >
     National Insurance number
@@ -38,7 +38,7 @@ examples.add('Input with HintText & error', () => (
     hint={[
       'It’s on your National Insurance card, benefit letter, payslip or P60.',
       <br />,
-      'For example, ‘QQ 12 34 56 C’.'
+      'For example, ‘QQ 12 34 56 C’.',
     ]}
     meta={meta}
   >

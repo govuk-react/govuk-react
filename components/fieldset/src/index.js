@@ -11,8 +11,8 @@ const Fieldset = styled('fieldset')(
     '&:after': {
       content: '""',
       display: 'block',
-      clear: 'both'
-    }
+      clear: 'both',
+    },
   },
   spacing.withWhiteSpace({ margin: 0, padding: 0 })
 );
@@ -50,7 +50,7 @@ const Fieldset = styled('fieldset')(
 const FieldsetDocumented = props => <Fieldset {...props} />;
 
 FieldsetDocumented.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 Fieldset.propTypes = FieldsetDocumented.propTypes;

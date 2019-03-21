@@ -5,7 +5,7 @@ import {
   BORDER_WIDTH_FORM_ELEMENT,
   FOCUSABLE,
   MEDIA_QUERIES,
-  SPACING_POINTS
+  SPACING_POINTS,
 } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 import { BUTTON_COLOUR, BUTTON_COLOUR_DARKEN_15, WHITE } from 'govuk-colours';
@@ -23,7 +23,7 @@ const StyledButton = styled('button')(
     typography.font({
       size: isStart ? 24 : 19,
       lineHeight: isStart ? '1' : '19px',
-      weight: isStart ? 'bold' : undefined
+      weight: isStart ? 'bold' : undefined,
     }),
   FOCUSABLE,
 
@@ -34,7 +34,7 @@ const StyledButton = styled('button')(
       ? BUTTON_COLOUR_DARKEN_15
       : darken(0.15, buttonColour),
     buttonTextColour = WHITE,
-    isStart
+    isStart,
   }) => ({
     boxSizing: 'border-box',
     display: 'inline-block',
@@ -55,26 +55,26 @@ const StyledButton = styled('button')(
     WebkitAppearance: 'none',
 
     [MEDIA_QUERIES.TABLET]: {
-      width: 'auto'
+      width: 'auto',
     },
 
     '&:link, &:visited, &:active, &:hover': {
       color: buttonTextColour,
-      textDecoration: 'none'
+      textDecoration: 'none',
     },
 
     '&::-moz-focus-inner': {
       padding: 0,
-      border: 0
+      border: 0,
     },
 
     '&:hover, &:focus': {
-      backgroundColor: buttonHoverColour
+      backgroundColor: buttonHoverColour,
     },
 
     ':active': {
       top: BUTTON_SHADOW_SIZE,
-      boxShadow: 'none'
+      boxShadow: 'none',
     },
 
     // NB this is from govuk-frontend
@@ -88,11 +88,11 @@ const StyledButton = styled('button')(
       right: `-${BORDER_WIDTH_FORM_ELEMENT}`,
       bottom: `-${RAW_BORDER_WIDTH + RAW_SHADOW}px`,
       left: `-${BORDER_WIDTH_FORM_ELEMENT}`,
-      background: 'transparent'
+      background: 'transparent',
     },
 
     '&:active::before': {
-      top: `-${RAW_BORDER_WIDTH + RAW_SHADOW}px`
+      top: `-${RAW_BORDER_WIDTH + RAW_SHADOW}px`,
     },
 
     ':disabled': {
@@ -100,23 +100,23 @@ const StyledButton = styled('button')(
       background: buttonColour,
       ':hover': {
         backgroundColor: buttonColour,
-        cursor: 'default'
+        cursor: 'default',
       },
       ':focus': {
-        outline: 'none'
+        outline: 'none',
       },
       ':active': {
         top: 0,
-        boxShadow: `0 ${BUTTON_SHADOW_SIZE} 0 ${buttonShadowColour}`
-      }
+        boxShadow: `0 ${BUTTON_SHADOW_SIZE} 0 ${buttonShadowColour}`,
+      },
     },
 
     ' svg': {
       maxWidth: '15px',
       [MEDIA_QUERIES.TABLET]: {
-        marginLeft: SPACING_POINTS[2]
-      }
-    }
+        marginLeft: SPACING_POINTS[2],
+      },
+    },
   }),
 
   // NB we drift from govuk-frontend here in how we display icons
@@ -125,7 +125,7 @@ const StyledButton = styled('button')(
       return {
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
       };
     }
 
@@ -133,12 +133,12 @@ const StyledButton = styled('button')(
   },
 
   spacing.withWhiteSpace({
-    margin: { direction: 'bottom', size: 6, adjustment: RAW_SHADOW }
+    margin: { direction: 'bottom', size: 6, adjustment: RAW_SHADOW },
   })
 );
 
 const ButtonContents = styled('span')({
-  flexGrow: 1
+  flexGrow: 1,
 });
 
 /**
@@ -209,7 +209,7 @@ Button.propTypes = {
    * Override for default button text colour,
    * which defaults to govuk white
    */
-  buttonTextColour: PropTypes.string
+  buttonTextColour: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -219,7 +219,7 @@ Button.defaultProps = {
   buttonColour: undefined,
   buttonHoverColour: undefined,
   buttonShadowColour: undefined,
-  buttonTextColour: undefined
+  buttonTextColour: undefined,
 };
 
 export default Button;

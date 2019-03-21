@@ -13,8 +13,8 @@ const RightHandSide = styled('div')({
     justifyContent: 'flex-start',
     width: '66.66%',
     paddingLeft: SPACING.SCALE_3,
-    marginTop: 0
-  }
+    marginTop: 0,
+  },
 });
 
 export default RightHandSide;

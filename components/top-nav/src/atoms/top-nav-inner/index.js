@@ -11,8 +11,8 @@ const TopNavInner = styled('div')({
   [MEDIA_QUERIES.LARGESCREEN]: {
     padding: `calc(${SPACING.SCALE_2} * 0.8) 0`,
     flexDirection: 'row',
-    width: `calc(100% - ${SPACING.SCALE_6})`
-  }
+    width: `calc(100% - ${SPACING.SCALE_6})`,
+  },
 });
 
 export default TopNavInner;

@@ -3,7 +3,7 @@ import {
   SPACING_MAP,
   SPACING_MAP_INDEX,
   SPACING_POINTS,
-  WIDTHS
+  WIDTHS,
 } from '@govuk-react/constants';
 
 import * as spacing from '.';
@@ -65,19 +65,19 @@ describe('spacing lib', () => {
       const style = spacing.responsive({
         size: 0,
         property: 'test',
-        direction: ['east', 'west']
+        direction: ['east', 'west'],
       });
 
       expect(style).toEqual(
         expect.objectContaining({
           'test-east': SPACING_MAP[0].mobile,
-          'test-west': SPACING_MAP[0].mobile
+          'test-west': SPACING_MAP[0].mobile,
         })
       );
       expect(style[MEDIA_QUERIES.TABLET]).toEqual(
         expect.objectContaining({
           'test-east': SPACING_MAP[0].tablet,
-          'test-west': SPACING_MAP[0].tablet
+          'test-west': SPACING_MAP[0].tablet,
         })
       );
     });
@@ -92,19 +92,19 @@ describe('spacing lib', () => {
       const style = spacing.responsive({
         size: 0,
         property: 'test',
-        direction: ['all', 'west']
+        direction: ['all', 'west'],
       });
 
       expect(style).toEqual(
         expect.objectContaining({
           test: SPACING_MAP[0].mobile,
-          'test-west': SPACING_MAP[0].mobile
+          'test-west': SPACING_MAP[0].mobile,
         })
       );
       expect(style[MEDIA_QUERIES.TABLET]).toEqual(
         expect.objectContaining({
           test: SPACING_MAP[0].tablet,
-          'test-west': SPACING_MAP[0].tablet
+          'test-west': SPACING_MAP[0].tablet,
         })
       );
     });
@@ -165,7 +165,7 @@ describe('spacing lib', () => {
 
         expect(whiteSpaceFunc()).toEqual(
           expect.arrayContaining([
-            expect.objectContaining({ 'margin-bottom': SPACING_MAP[2].mobile })
+            expect.objectContaining({ 'margin-bottom': SPACING_MAP[2].mobile }),
           ])
         );
       });
@@ -175,7 +175,7 @@ describe('spacing lib', () => {
 
         expect(whiteSpaceFunc({ mb: 4 })).toEqual(
           expect.arrayContaining([
-            expect.objectContaining({ 'margin-bottom': SPACING_MAP[4].mobile })
+            expect.objectContaining({ 'margin-bottom': SPACING_MAP[4].mobile }),
           ])
         );
       });
@@ -185,7 +185,7 @@ describe('spacing lib', () => {
 
         expect(whiteSpaceFunc({ mb: 4 })).toEqual(
           expect.arrayContaining([
-            expect.objectContaining({ 'margin-bottom': SPACING_MAP[4].mobile })
+            expect.objectContaining({ 'margin-bottom': SPACING_MAP[4].mobile }),
           ])
         );
       });
@@ -197,7 +197,7 @@ describe('spacing lib', () => {
 
         expect(whiteSpaceFunc()).toEqual(
           expect.arrayContaining([
-            expect.objectContaining({ margin: SPACING_MAP[4].mobile })
+            expect.objectContaining({ margin: SPACING_MAP[4].mobile }),
           ])
         );
       });
@@ -207,14 +207,14 @@ describe('spacing lib', () => {
 
         expect(whiteSpaceFunc({ margin: 4 })).toEqual(
           expect.arrayContaining([
-            expect.objectContaining({ margin: SPACING_MAP[4].mobile })
+            expect.objectContaining({ margin: SPACING_MAP[4].mobile }),
           ])
         );
       });
 
       it('accepts an array of margins', () => {
         const whiteSpaceFunc = spacing.withWhiteSpace({
-          margin: [1, { direction: 'top', size: 3 }]
+          margin: [1, { direction: 'top', size: 3 }],
         });
 
         // styles need to be flattened for checking
@@ -222,13 +222,13 @@ describe('spacing lib', () => {
 
         expect(result).toEqual(
           expect.arrayContaining([
-            expect.objectContaining({ margin: SPACING_MAP[1].mobile })
+            expect.objectContaining({ margin: SPACING_MAP[1].mobile }),
           ])
         );
 
         expect(result).toEqual(
           expect.arrayContaining([
-            expect.objectContaining({ 'margin-top': SPACING_MAP[3].mobile })
+            expect.objectContaining({ 'margin-top': SPACING_MAP[3].mobile }),
           ])
         );
       });
@@ -240,7 +240,7 @@ describe('spacing lib', () => {
 
         expect(whiteSpaceFunc()).toEqual(
           expect.arrayContaining([
-            expect.objectContaining({ padding: SPACING_MAP[4].mobile })
+            expect.objectContaining({ padding: SPACING_MAP[4].mobile }),
           ])
         );
       });
@@ -250,14 +250,14 @@ describe('spacing lib', () => {
 
         expect(whiteSpaceFunc({ padding: 4 })).toEqual(
           expect.arrayContaining([
-            expect.objectContaining({ padding: SPACING_MAP[4].mobile })
+            expect.objectContaining({ padding: SPACING_MAP[4].mobile }),
           ])
         );
       });
 
       it('accepts an array of paddings', () => {
         const whiteSpaceFunc = spacing.withWhiteSpace({
-          padding: [1, { direction: 'top', size: 3 }]
+          padding: [1, { direction: 'top', size: 3 }],
         });
 
         // styles need to be flattened for checking
@@ -265,13 +265,13 @@ describe('spacing lib', () => {
 
         expect(result).toEqual(
           expect.arrayContaining([
-            expect.objectContaining({ padding: SPACING_MAP[1].mobile })
+            expect.objectContaining({ padding: SPACING_MAP[1].mobile }),
           ])
         );
 
         expect(result).toEqual(
           expect.arrayContaining([
-            expect.objectContaining({ 'padding-top': SPACING_MAP[3].mobile })
+            expect.objectContaining({ 'padding-top': SPACING_MAP[3].mobile }),
           ])
         );
       });
@@ -299,7 +299,7 @@ describe('spacing lib', () => {
         expect(widthStyle).toEqual(
           expect.objectContaining({
             width: '100%',
-            [MEDIA_QUERIES.TABLET]: { width: value }
+            [MEDIA_QUERIES.TABLET]: { width: value },
           })
         );
       });
@@ -314,7 +314,7 @@ describe('spacing lib', () => {
         expect(widthStyle).toEqual(
           expect.objectContaining({
             width: '100%',
-            [MEDIA_QUERIES.TABLET]: { width: setWidth }
+            [MEDIA_QUERIES.TABLET]: { width: setWidth },
           })
         );
       });
@@ -325,7 +325,7 @@ describe('spacing lib', () => {
         expect(widthStyle).toEqual(
           expect.objectContaining({
             width: '100%',
-            [MEDIA_QUERIES.TABLET]: { width: value }
+            [MEDIA_QUERIES.TABLET]: { width: value },
           })
         );
       });
@@ -337,7 +337,7 @@ describe('spacing lib', () => {
       expect(widthFunc()).toEqual(
         expect.objectContaining({
           width: '100%',
-          [MEDIA_QUERIES.TABLET]: { width: Object.values(WIDTHS)[0] }
+          [MEDIA_QUERIES.TABLET]: { width: Object.values(WIDTHS)[0] },
         })
       );
 
@@ -347,7 +347,7 @@ describe('spacing lib', () => {
         expect(widthStyle).toEqual(
           expect.objectContaining({
             width: '100%',
-            [MEDIA_QUERIES.TABLET]: { width: setWidth }
+            [MEDIA_QUERIES.TABLET]: { width: setWidth },
           })
         );
       });
@@ -358,7 +358,7 @@ describe('spacing lib', () => {
         expect(widthStyle).toEqual(
           expect.objectContaining({
             width: '100%',
-            [MEDIA_QUERIES.TABLET]: { width: value }
+            [MEDIA_QUERIES.TABLET]: { width: value },
           })
         );
       });
@@ -372,7 +372,7 @@ describe('spacing lib', () => {
 
         expect(widthStyle).not.toEqual(
           expect.objectContaining({
-            width: '100%'
+            width: '100%',
           })
         );
       });
@@ -382,7 +382,7 @@ describe('spacing lib', () => {
 
         expect(widthStyle).not.toEqual(
           expect.objectContaining({
-            width: '100%'
+            width: '100%',
           })
         );
       });

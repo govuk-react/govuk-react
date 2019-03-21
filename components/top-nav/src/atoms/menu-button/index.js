@@ -10,15 +10,15 @@ const Button = styled('label')({
   display: 'flex',
   alignItems: 'center',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    display: 'none'
-  }
+    display: 'none',
+  },
 });
 
 const ButtonText = styled('div')({
   cursor: 'default',
   ':hover': {
-    textDecoration: 'underline'
-  }
+    textDecoration: 'underline',
+  },
 });
 
 const ButtonIcon = styled('div')(({ open }) => ({
@@ -34,7 +34,7 @@ const ButtonIcon = styled('div')(({ open }) => ({
   borderWidth: open ? '0 5px 8.66px 5px' : '8.66px 5px 0 5px',
   marginLeft: '5px',
   borderTopColor: 'inherit',
-  borderBottomColor: 'inherit'
+  borderBottomColor: 'inherit',
 }));
 
 const MenuButton = ({ title, open, onClick }) => (
@@ -47,12 +47,12 @@ const MenuButton = ({ title, open, onClick }) => (
 MenuButton.propTypes = {
   title: PropTypes.string,
   open: PropTypes.bool,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 MenuButton.defaultProps = {
   title: 'Menu',
   open: false,
-  onClick: () => {}
+  onClick: () => {},
 };
 
 export default MenuButton;

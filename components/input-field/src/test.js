@@ -9,7 +9,7 @@ describe('InputField', () => {
   const wrapper = <InputField>{example}</InputField>;
   const meta = {
     touched: true,
-    error: example
+    error: example,
   };
 
   it('renders without crashing', () => {

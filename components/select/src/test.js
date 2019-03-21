@@ -8,7 +8,7 @@ describe('Select', () => {
   const example = 'example';
   const meta = {
     touched: true,
-    error: example
+    error: example,
   };
   const wrapper = <Select label={example}>{example}</Select>;
 

@@ -19,13 +19,13 @@ const StyledLabel = styled('label')(
     ':after': {
       content: "''",
       display: 'table',
-      clear: 'both'
-    }
+      clear: 'both',
+    },
   },
   ({ error }) => ({
     borderLeft: error ? `4px solid ${ERROR_COLOUR}` : undefined,
     marginRight: error ? SPACING.SCALE_3 : undefined,
-    paddingLeft: error ? SPACING.SCALE_2 : undefined
+    paddingLeft: error ? SPACING.SCALE_2 : undefined,
   }),
   spacing.withWhiteSpace({ marginBottom: 0 })
 );
@@ -53,11 +53,11 @@ Label.propTypes = {
    */
   error: PropTypes.bool,
   // NB these propTypes don't get documented :(
-  ...spacing.withWhiteSpace.propTypes
+  ...spacing.withWhiteSpace.propTypes,
 };
 
 Label.defaultProps = {
-  error: false
+  error: false,
 };
 
 export default Label;

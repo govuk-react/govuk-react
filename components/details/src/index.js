@@ -10,12 +10,12 @@ import {
   FOCUS_COLOUR,
   LINK_COLOUR,
   LINK_HOVER_COLOUR,
-  BORDER_COLOUR
+  BORDER_COLOUR,
 } from 'govuk-colours';
 import {
   BORDER_WIDTH,
   FOCUS_WIDTH,
-  SPACING_POINTS
+  SPACING_POINTS,
 } from '@govuk-react/constants';
 
 const CUSTOM_FOCUS_WIDTH = `${stripUnit(FOCUS_WIDTH) + 1}px`;
@@ -25,7 +25,7 @@ const StyledDetails = styled('details')(
   typography.textColour,
   spacing.withWhiteSpace({ marginBottom: 6 }),
   {
-    display: 'block'
+    display: 'block',
   }
 );
 
@@ -38,18 +38,18 @@ const StyledSummary = styled('summary')({
   cursor: 'pointer',
 
   ':hover': {
-    color: LINK_HOVER_COLOUR
+    color: LINK_HOVER_COLOUR,
   },
 
   ':focus': {
     outline: `${CUSTOM_FOCUS_WIDTH} solid ${FOCUS_COLOUR}`,
     outlineOffset: -1,
     color: BLACK,
-    background: FOCUS_COLOUR
+    background: FOCUS_COLOUR,
   },
 
   '::-webkit-details-marker': {
-    display: 'none'
+    display: 'none',
   },
 
   ':before': {
@@ -62,12 +62,12 @@ const StyledSummary = styled('summary')({
 
     ...shape.arrow({ direction: 'right', base: 14 }),
 
-    '[open] > &': shape.arrow({ direction: 'down', base: 14 })
-  }
+    '[open] > &': shape.arrow({ direction: 'down', base: 14 }),
+  },
 });
 
 const SummaryText = styled('span')({
-  textDecoration: 'underline'
+  textDecoration: 'underline',
 });
 
 const DetailsText = styled('div')({
@@ -77,12 +77,12 @@ const DetailsText = styled('div')({
 
   p: {
     marginTop: 0,
-    marginBottom: SPACING_POINTS[4]
+    marginBottom: SPACING_POINTS[4],
   },
 
   '> :last-child, p:last-child': {
-    marginBottom: 0
-  }
+    marginBottom: 0,
+  },
 });
 
 /**
@@ -112,7 +112,7 @@ const Details = ({ summary, children, ...props }) => (
 
 Details.defaultProps = {
   children: undefined,
-  open: false
+  open: false,
 };
 
 Details.propTypes = {
@@ -121,7 +121,7 @@ Details.propTypes = {
   /** Flag to indicate whether to show component open by default */
   open: PropTypes.bool,
   /** Text for the details summary link e.g. Help with nationality */
-  summary: PropTypes.node.isRequired
+  summary: PropTypes.node.isRequired,
 };
 
 export default Details;

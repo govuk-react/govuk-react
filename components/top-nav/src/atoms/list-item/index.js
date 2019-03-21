@@ -13,8 +13,8 @@ const Li = styled('li')({
     borderBottom: 0,
     flex: 'none',
     width: 'auto',
-    paddingRight: SPACING.SCALE_3
-  }
+    paddingRight: SPACING.SCALE_3,
+  },
 });
 
 export default Li;

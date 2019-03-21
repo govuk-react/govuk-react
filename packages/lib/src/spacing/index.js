@@ -11,7 +11,7 @@ import {
   SPACING_MAP,
   SPACING_MAP_INDEX,
   SPACING_POINTS,
-  WIDTHS
+  WIDTHS,
 } from '@govuk-react/constants';
 
 export function simple(size) {
@@ -31,7 +31,7 @@ function styleForDirection(size, property, direction) {
   return {
     [direction && direction !== 'all'
       ? `${property}-${direction}`
-      : property]: size
+      : property]: size,
   };
 }
 
@@ -63,7 +63,7 @@ export function responsive({ size, property, direction, adjustment = 0 } = {}) {
           ...direction.map(dir =>
             styleForDirection(scale.tablet + adjustment, property, dir)
           )
-        )
+        ),
       }
     );
   }
@@ -76,7 +76,7 @@ export function responsive({ size, property, direction, adjustment = 0 } = {}) {
         scale.tablet + adjustment,
         property,
         direction
-      )
+      ),
     }
   );
 }
@@ -92,7 +92,7 @@ export function responsiveMargin(value) {
     size,
     property: 'margin',
     direction,
-    adjustment
+    adjustment,
   });
 }
 
@@ -107,7 +107,7 @@ export function responsivePadding(value) {
     size,
     property: 'padding',
     direction,
-    adjustment
+    adjustment,
   });
 }
 
@@ -127,7 +127,7 @@ export function withWhiteSpace(config = {}) {
   return ({
     margin = config.margin,
     padding = config.padding,
-    mb: marginBottom = config.marginBottom
+    mb: marginBottom = config.marginBottom,
   } = {}) => {
     const styles = [];
 
@@ -162,7 +162,7 @@ const Directions = PropTypes.oneOf(['all', 'top', 'right', 'bottom', 'left']);
 const SpacingShape = PropTypes.shape({
   size: PropTypes.number.isRequired,
   direction: PropTypes.oneOfType([Directions, PropTypes.arrayOf(Directions)]),
-  adjustment: PropTypes.number
+  adjustment: PropTypes.number,
 });
 
 // `mb` (Margin Bottom) prop name comes from the naming convention used by https://github.com/jxnblk/grid-styled
@@ -171,13 +171,13 @@ withWhiteSpace.propTypes = {
   margin: PropTypes.oneOfType([
     PropTypes.number,
     SpacingShape,
-    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, SpacingShape]))
+    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, SpacingShape])),
   ]),
   padding: PropTypes.oneOfType([
     PropTypes.number,
     SpacingShape,
-    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, SpacingShape]))
-  ])
+    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, SpacingShape])),
+  ]),
 };
 
 export function withWidth(config = {}) {
@@ -189,8 +189,8 @@ export function withWidth(config = {}) {
       return {
         width: noDefault ? undefined : '100%',
         [mediaQuery]: {
-          width
-        }
+          width,
+        },
       };
     }
 

@@ -16,8 +16,8 @@ const OrderedList = styled('ol')(
     marginTop: 0,
 
     '& &': {
-      marginTop: SPACING_POINTS[2]
-    }
+      marginTop: SPACING_POINTS[2],
+    },
   },
   spacing.withWhiteSpace({ margin: { size: 4, direction: 'bottom' } }),
   ({ listStyleType }) => {
@@ -27,10 +27,10 @@ const OrderedList = styled('ol')(
       { listStyleType: type },
       type === 'none'
         ? {
-            paddingLeft: 0
+            paddingLeft: 0,
           }
         : {
-            paddingLeft: SPACING_POINTS[4]
+            paddingLeft: SPACING_POINTS[4],
           },
       // TODO consider whether these spacing adjusts should be for all non-`none` styles
       // NB the inclusion of these ensures that withWhiteSpace's mb prop doesn't work on ListItem
@@ -39,16 +39,16 @@ const OrderedList = styled('ol')(
             [`> ${ListItem}`]: {
               marginBottom: 0,
               [MEDIA_QUERIES.TABLET]: {
-                marginBottom: SPACING_POINTS[1]
-              }
-            }
+                marginBottom: SPACING_POINTS[1],
+              },
+            },
           }
         : {
             // Style when not disc/decimal
             [`> ${ListItem}`]: {
-              marginBottom: SPACING_POINTS[1]
-            }
-          }
+              marginBottom: SPACING_POINTS[1],
+            },
+          },
     ];
   }
 );
@@ -92,14 +92,14 @@ const OrderedList = styled('ol')(
 const DocumentedComponent = props => <OrderedList {...props} />;
 
 DocumentedComponent.defaultProps = {
-  listStyleType: undefined
+  listStyleType: undefined,
 };
 
 DocumentedComponent.propTypes = {
   /** One or more ListItem components */
   children: PropTypes.node.isRequired,
   /** CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend */
-  listStyleType: PropTypes.string
+  listStyleType: PropTypes.string,
 };
 
 OrderedList.defaultProps = DocumentedComponent.defaultProps;

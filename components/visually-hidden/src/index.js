@@ -38,12 +38,12 @@ VisuallyHiddenDocumented.propTypes = {
   /**
    * Set styles with `!important`
    */
-  important: PropTypes.bool
+  important: PropTypes.bool,
 };
 
 VisuallyHiddenDocumented.defaultProps = {
   focusable: false,
-  important: true
+  important: true,
 };
 
 VisuallyHidden.propTypes = VisuallyHiddenDocumented.propTypes;

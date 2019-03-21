@@ -16,21 +16,21 @@ const TabPanel = styled('section')(
       border: `1px solid ${BORDER_COLOUR}`,
       borderTop: 0,
       '& > :last-child': {
-        marginBottom: 0
-      }
-    }
+        marginBottom: 0,
+      },
+    },
   },
   ({ selected }) => ({
     display: 'block',
     [MEDIA_QUERIES.TABLET]: {
-      display: !selected && 'none'
-    }
+      display: !selected && 'none',
+    },
   })
 );
 
 TabPanel.propTypes = {
   /** determine which panel is displayed */
-  selected: PropTypes.bool.isRequired
+  selected: PropTypes.bool.isRequired,
 };
 
 export default TabPanel;

@@ -7,7 +7,7 @@ import {
   CAPTION_SIZES,
   MEDIA_QUERIES,
   SPACING_POINTS,
-  TYPOGRAPHY_SCALE
+  TYPOGRAPHY_SCALE,
 } from '@govuk-react/constants';
 
 const StyledCaption = styled('span')(
@@ -33,12 +33,12 @@ const StyledCaption = styled('span')(
 
     return {
       ...marginStyle,
-      ...marginResponsiveStyle
+      ...marginResponsiveStyle,
     };
   },
   {
     display: 'block',
-    color: SECONDARY_TEXT_COLOUR
+    color: SECONDARY_TEXT_COLOUR,
   },
   spacing.withWhiteSpace()
 );
@@ -76,12 +76,12 @@ Caption.propTypes = {
    */
   size: PropTypes.oneOf([
     ...Object.keys(CAPTION_SIZES),
-    ...Object.keys(TYPOGRAPHY_SCALE)
-  ])
+    ...Object.keys(TYPOGRAPHY_SCALE),
+  ]),
 };
 
 Caption.defaultProps = {
-  size: 'XL'
+  size: 'XL',
 };
 
 export default Caption;

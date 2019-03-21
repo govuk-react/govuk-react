@@ -11,12 +11,12 @@ const ArrowRight = ({ fill, title, ...rest }) => (
 
 ArrowRight.propTypes = {
   title: PropTypes.string,
-  fill: PropTypes.string
+  fill: PropTypes.string,
 };
 
 ArrowRight.defaultProps = {
   title: 'arrow right',
-  fill: 'currentColor'
+  fill: 'currentColor',
 };
 
 export default ArrowRight;

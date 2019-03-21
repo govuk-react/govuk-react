@@ -22,15 +22,15 @@ const StyledSelect = styled('select')(
     border: `2px solid ${BLACK}`,
     [MEDIA_QUERIES.LARGESCREEN]: {
       width: '50%',
-      height: '38px'
+      height: '38px',
     },
     ':focus': {
       outline: `3px solid ${YELLOW}`,
-      outlineOffset: 0
-    }
+      outlineOffset: 0,
+    },
   },
   ({ error }) => ({
-    border: error ? `4px solid ${ERROR_COLOUR}` : undefined
+    border: error ? `4px solid ${ERROR_COLOUR}` : undefined,
   })
 );
 
@@ -118,7 +118,7 @@ Select.defaultProps = {
   hint: undefined,
   errorText: undefined,
   input: {},
-  meta: {}
+  meta: {},
 };
 
 Select.propTypes = {
@@ -128,7 +128,7 @@ Select.propTypes = {
     onBlur: PropTypes.func,
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
-    value: PropTypes.any
+    value: PropTypes.any,
   }),
   meta: PropTypes.shape({
     active: PropTypes.bool,
@@ -143,11 +143,11 @@ Select.propTypes = {
     submitSucceeded: PropTypes.bool,
     touched: PropTypes.bool,
     valid: PropTypes.bool,
-    visited: PropTypes.bool
+    visited: PropTypes.bool,
   }),
   children: PropTypes.node.isRequired,
   label: PropTypes.string.isRequired,
-  errorText: PropTypes.string
+  errorText: PropTypes.string,
 };
 
 export default Select;

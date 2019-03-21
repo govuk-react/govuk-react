@@ -15,8 +15,8 @@ const StyledDefinition = styled('li')({
   fontWeight: 700,
   lineHeight: 1.25,
   '> a': {
-    textDecoration: 'none'
-  }
+    textDecoration: 'none',
+  },
 });
 
 /**
@@ -147,7 +147,7 @@ const DocumentFooterMetadata = ({ from, partOf, other, ...props }) => {
 DocumentFooterMetadata.defaultProps = {
   from: undefined,
   partOf: undefined,
-  other: undefined
+  other: undefined,
 };
 
 DocumentFooterMetadata.propTypes = {
@@ -168,9 +168,9 @@ DocumentFooterMetadata.propTypes = {
     PropTypes.shape({
       id: PropTypes.number,
       title: PropTypes.string,
-      content: PropTypes.node
+      content: PropTypes.node,
     })
-  )
+  ),
 };
 
 export default DocumentFooterMetadata;

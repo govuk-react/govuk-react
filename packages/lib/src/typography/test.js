@@ -4,7 +4,7 @@ import {
   FONT_STACK_TABULAR,
   FONT_WEIGHTS,
   MEDIA_QUERIES,
-  TYPOGRAPHY_SCALE
+  TYPOGRAPHY_SCALE,
 } from '@govuk-react/constants';
 import * as typography from '.';
 
@@ -88,7 +88,7 @@ describe('typography lib', () => {
 
       expect(style).toEqual(
         Object.assign({}, typography.common(), {
-          fontWeight: FONT_WEIGHTS.regular
+          fontWeight: FONT_WEIGHTS.regular,
         })
       );
     });

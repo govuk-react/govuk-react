@@ -7,7 +7,7 @@ import {
   LINK_ACTIVE_COLOUR,
   LINK_HOVER_COLOUR,
   LINK_VISITED_COLOUR,
-  SECONDARY_TEXT_COLOUR
+  SECONDARY_TEXT_COLOUR,
 } from 'govuk-colours';
 
 import { common as commonType, textColour } from '../typography';
@@ -20,51 +20,51 @@ export function common(fontFamily) {
 
 export const styleDefault = {
   ':link': {
-    color: LINK_COLOUR
+    color: LINK_COLOUR,
   },
   ':visited': {
-    color: LINK_VISITED_COLOUR
+    color: LINK_VISITED_COLOUR,
   },
   ':hover': {
-    color: LINK_HOVER_COLOUR
+    color: LINK_HOVER_COLOUR,
   },
   ':active': {
-    color: LINK_ACTIVE_COLOUR
+    color: LINK_ACTIVE_COLOUR,
   },
   ':focus': {
-    color: FOCUS_TEXT_COLOUR
-  }
+    color: FOCUS_TEXT_COLOUR,
+  },
 };
 
 export const styleMuted = {
   '&:link, &:visited, &:hover, &:active': {
-    color: SECONDARY_TEXT_COLOUR
+    color: SECONDARY_TEXT_COLOUR,
   },
   '&:focus': {
-    color: FOCUS_TEXT_COLOUR
-  }
+    color: FOCUS_TEXT_COLOUR,
+  },
 };
 
 export const styleText = {
-  '&:link, &:visited, &:hover, &:active, &:focus': textColour
+  '&:link, &:visited, &:hover, &:active, &:focus': textColour,
 };
 
 export const styleNoVisitedState = {
   ':link': {
-    color: LINK_COLOUR
+    color: LINK_COLOUR,
   },
   ':visited': {
-    color: LINK_COLOUR
+    color: LINK_COLOUR,
   },
   ':hover': {
-    color: LINK_HOVER_COLOUR
+    color: LINK_HOVER_COLOUR,
   },
   ':active': {
-    color: LINK_ACTIVE_COLOUR
+    color: LINK_ACTIVE_COLOUR,
   },
   ':focus': {
-    color: FOCUS_TEXT_COLOUR
-  }
+    color: FOCUS_TEXT_COLOUR,
+  },
 };
 
 export const printFriendly = {
@@ -73,8 +73,8 @@ export const printFriendly = {
       '&::after': {
         content: '" (" attr(href) ")"',
         fontSize: '90%',
-        wordWrap: 'break-word'
-      }
-    }
-  }
+        wordWrap: 'break-word',
+      },
+    },
+  },
 };

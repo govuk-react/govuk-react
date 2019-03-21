@@ -13,12 +13,12 @@ export const description =
 export const errors = [
   {
     targetName: 'national-insurance-number',
-    text: 'National Insurance number error'
+    text: 'National Insurance number error',
   },
   {
     targetName: 'description',
-    text: 'Description of what you saw error'
-  }
+    text: 'Description of what you saw error',
+  },
 ];
 
 const onHandleErrorClick = targetName => {

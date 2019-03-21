@@ -6,7 +6,7 @@ import { spacing, typography } from '@govuk-react/lib';
 import {
   BORDER_WIDTH,
   MEDIA_QUERIES,
-  SPACING_POINTS
+  SPACING_POINTS,
 } from '@govuk-react/constants';
 import { stripUnit } from 'polished';
 
@@ -27,11 +27,11 @@ const StyledPanel = styled('div')(
 
     // NB govuk-frontend has this media query as an `until tablet` (thus for mobile)
     [MEDIA_QUERIES.TABLET]: {
-      padding: SPACING_POINTS[7] - RAW_BORDER_WIDTH
+      padding: SPACING_POINTS[7] - RAW_BORDER_WIDTH,
     },
 
     color: WHITE,
-    background: TURQUOISE
+    background: TURQUOISE,
   },
   spacing.withWhiteSpace()
 );
@@ -44,8 +44,8 @@ const StyledTitle = styled('h1')(
     marginBottom: SPACING_POINTS[6],
 
     ':last-child': {
-      marginBottom: 0
-    }
+      marginBottom: 0,
+    },
   },
   typography.font({ size: 48, weight: 'bold' })
 );
@@ -81,14 +81,14 @@ const Panel = ({ title, children, ...props }) => (
   </StyledPanel>
 );
 Panel.defaultProps = {
-  children: undefined
+  children: undefined,
 };
 
 Panel.propTypes = {
   /** Panel title text */
   title: PropTypes.string.isRequired,
   /** Panel body text */
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export default Panel;

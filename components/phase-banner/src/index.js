@@ -11,7 +11,7 @@ const StyledBanner = styled('div')(
     paddingTop: SPACING_POINTS[2],
     paddingBottom: SPACING_POINTS[2],
 
-    borderBottom: `1px solid ${BORDER_COLOUR}`
+    borderBottom: `1px solid ${BORDER_COLOUR}`,
   },
   spacing.withWhiteSpace()
 );
@@ -24,14 +24,14 @@ const BannerContent = styled('p')(
     margin: 0,
 
     [Tag]: {
-      marginRight: SPACING_POINTS[2]
-    }
+      marginRight: SPACING_POINTS[2],
+    },
   }
 );
 
 const BannerText = styled('span')({
   display: 'table-cell',
-  verticalAlign: 'baseline'
+  verticalAlign: 'baseline',
 });
 
 /**
@@ -72,7 +72,7 @@ PhaseBanner.propTypes = {
   /** Children text and links */
   children: PropTypes.node.isRequired,
   /** Alpha or beta banner */
-  level: PropTypes.string.isRequired
+  level: PropTypes.string.isRequired,
 };
 
 export default PhaseBanner;

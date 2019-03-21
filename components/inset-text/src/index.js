@@ -10,7 +10,7 @@ const InsetText = styled('div')(
   typography.font({ size: 19 }),
   typography.textColour,
   {
-    padding: SPACING_POINTS[3]
+    padding: SPACING_POINTS[3],
   },
   spacing.withWhiteSpace({ margin: { size: 6, direction: ['top', 'bottom'] } }),
   {
@@ -18,12 +18,12 @@ const InsetText = styled('div')(
     borderLeft: `${BORDER_WIDTH_WIDE} solid ${BORDER_COLOUR}`,
 
     ':first-child': {
-      marginTop: 0
+      marginTop: 0,
     },
 
     ':only-child,:last-child': {
-      marginBottom: 0
-    }
+      marginBottom: 0,
+    },
   }
 );
 
@@ -44,7 +44,7 @@ const InsetText = styled('div')(
 const DocumentedInsetText = props => <InsetText {...props} />;
 
 DocumentedInsetText.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 InsetText.propTypes = DocumentedInsetText.propTypes;

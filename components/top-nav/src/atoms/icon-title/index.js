@@ -3,16 +3,16 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const Container = styled('div')({
-  verticalAlign: 'baseline'
+  verticalAlign: 'baseline',
 });
 const IconContainer = styled('span')({
   width: '36px',
   maxHeight: '27px',
   display: 'inline-block',
-  marginRight: '7px'
+  marginRight: '7px',
 });
 const TitleContainer = styled('span')({
-  display: 'inline-block'
+  display: 'inline-block',
 });
 
 const IconTitle = ({ icon, children }) => (
@@ -24,11 +24,11 @@ const IconTitle = ({ icon, children }) => (
 
 IconTitle.propTypes = {
   icon: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 IconTitle.defaultProps = {
   icon: undefined,
-  children: undefined
+  children: undefined,
 };
 
 export default IconTitle;

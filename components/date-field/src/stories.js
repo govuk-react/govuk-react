@@ -15,8 +15,8 @@ class ManagedDateField extends React.Component {
     value: {
       day: 0,
       month: 1,
-      year: 2
-    }
+      year: 2,
+    },
   };
 
   render() {
@@ -25,20 +25,20 @@ class ManagedDateField extends React.Component {
       value: this.state.value,
       onChange: value => {
         this.setState({
-          value
+          value,
         });
-      }
+      },
     };
     return <DateField {...this.props} input={input} />;
   }
 }
 
 ManagedDateField.defaultProps = {
-  input: {}
+  input: {},
 };
 
 ManagedDateField.propTypes = {
-  input: PropTypes.shape({})
+  input: PropTypes.shape({}),
 };
 
 stories.addDecorator(WithDocsCustom(ReadMe));
@@ -48,7 +48,7 @@ stories.add('Component default', () => (
     input={{
       onFocus: action('date-focus'),
       onBlur: action('date-blur'),
-      onChange: action('date-change')
+      onChange: action('date-change'),
     }}
     inputNames={{ day: 'dayInputName' }}
   >

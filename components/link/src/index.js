@@ -46,12 +46,12 @@ LinkDocumented.propTypes = {
   /** ensure link is shown in plain text colour */
   textColour: PropTypes.bool,
   /** ensure there is no "visited" style */
-  noVisitedState: PropTypes.bool
+  noVisitedState: PropTypes.bool,
 };
 LinkDocumented.defaultProps = {
   muted: false,
   textColour: false,
-  noVisitedState: false
+  noVisitedState: false,
 };
 
 Link.propTypes = LinkDocumented.propTypes;

@@ -12,7 +12,7 @@ const StyledWarningText = styled('div')(
     alignItems: 'center',
     boxSizing: 'border-box',
     display: 'flex',
-    width: '100%'
+    width: '100%',
   },
   spacing.withWhiteSpace({ marginBottom: 0 })
 );
@@ -21,7 +21,7 @@ const IconImportantWrapper = styled('div')({
   flex: 'none',
   height: 35,
   marginRight: SPACING_POINTS[3],
-  width: 35
+  width: 35,
 });
 
 const WarningTextWrapper = styled('strong')(
@@ -55,7 +55,7 @@ WarningText.propTypes = {
   /**
    * Warning text to be displayed
    */
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default WarningText;

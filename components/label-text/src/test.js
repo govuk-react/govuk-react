@@ -12,7 +12,7 @@ describe('LabelText', () => {
 
   beforeEach(() => {
     props = {
-      children: example
+      children: example,
     };
   });
 

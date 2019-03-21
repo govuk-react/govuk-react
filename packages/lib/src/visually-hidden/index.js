@@ -4,7 +4,7 @@
 
 function visuallyHidden({
   important: isImportant = true,
-  focusable: isFocusable = false
+  focusable: isFocusable = false,
 } = {}) {
   const important = isImportant ? ' !important' : '';
   return Object.assign(
@@ -22,7 +22,7 @@ function visuallyHidden({
 
       border: `0${important}`,
 
-      whiteSpace: `nowrap${important}`
+      whiteSpace: `nowrap${important}`,
     },
     isFocusable
       ? {
@@ -37,11 +37,11 @@ function visuallyHidden({
             clip: `auto${important}`,
             clipPath: `none${important}`,
 
-            whiteSpace: `inherit${important}`
-          }
+            whiteSpace: `inherit${important}`,
+          },
         }
       : {
-          padding: `0${important}`
+          padding: `0${important}`,
         }
   );
 }

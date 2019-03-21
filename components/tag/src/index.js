@@ -18,12 +18,12 @@ const Tag = styled('strong')(
     letterSpacing: 1,
 
     textDecoration: 'none',
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
   },
   ({ inactive }) =>
     inactive
       ? {
-          backgroundColor: GREY_1
+          backgroundColor: GREY_1,
         }
       : undefined
 );
@@ -45,10 +45,10 @@ const Tag = styled('strong')(
 const DocumentedTag = props => <Tag {...props} />;
 
 DocumentedTag.propTypes = {
-  inactive: PropTypes.bool
+  inactive: PropTypes.bool,
 };
 DocumentedTag.defaultProps = {
-  inactive: false
+  inactive: false,
 };
 
 Tag.propTypes = DocumentedTag.propTypes;

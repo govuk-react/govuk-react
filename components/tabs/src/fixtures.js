@@ -12,7 +12,7 @@ const flip2dArray = (prev, next) =>
 
 function setTabIndex(tabIndex) {
   return this.setState({
-    tabIndex
+    tabIndex,
   });
 }
 
@@ -26,11 +26,11 @@ function handleClick({ event: e, index }) {
 }
 
 const sharedDefaultProps = {
-  defaultIndex: 0
+  defaultIndex: 0,
 };
 
 const sharedPropTypes = {
-  defaultIndex: PropTypes.number
+  defaultIndex: PropTypes.number,
 };
 
 const tableHead = (
@@ -45,23 +45,23 @@ const arrTabularTabs = [
   {
     title: 'Past day',
     arr: [[3, 1, 2], [0, 0, 0]],
-    id: 'past-day'
+    id: 'past-day',
   },
   {
     title: 'Past week',
     arr: [[24, 16, 24], [18, 20, 27]],
-    id: 'past-week'
+    id: 'past-week',
   },
   {
     title: 'Past month',
     arr: [[98, 122, 126], [95, 131, 142]],
-    id: 'past-month'
+    id: 'past-month',
   },
   {
     title: 'Past year',
     arr: [[1380, 1129, 1539], [1472, 1083, 1265]],
-    id: 'past-year'
-  }
+    id: 'past-year',
+  },
 ];
 
 class TableTabs extends Component {
@@ -167,13 +167,13 @@ const arrSimpleMapped = [
   {
     contentListItem: 'Title 1',
     contentPanel: 'Mapped Panel content 1',
-    id: 'first-panel'
+    id: 'first-panel',
   },
   {
     contentListItem: 'Title 2',
     contentPanel: 'Mapped Panel content 2',
-    id: 'second-panel'
-  }
+    id: 'second-panel',
+  },
 ];
 
 /* eslint-disable-next-line react/no-multi-comp */
@@ -224,13 +224,13 @@ const arrProposedBabel = [
   {
     contentListItem: 'Title 1',
     contentPanel: 'Panel content 1',
-    id: 'first-panel'
+    id: 'first-panel',
   },
   {
     contentListItem: 'Title 2',
     contentPanel: 'Panel content 2',
-    id: 'second-panel'
-  }
+    id: 'second-panel',
+  },
 ];
 
 /* eslint-disable-next-line react/no-multi-comp */
@@ -299,12 +299,12 @@ const HooksExample = ({ defaultIndex }) => {
         {[
           {
             content: 'Hooks Title 1',
-            href: '#first-panel'
+            href: '#first-panel',
           },
           {
             content: 'Hooks Title 2',
-            href: '#second-panel'
-          }
+            href: '#second-panel',
+          },
         ].map(({ content, href }, index) => (
           <Tabs.Tab
             onClick={event => hooksHandleClick({ event, index })}
@@ -318,12 +318,12 @@ const HooksExample = ({ defaultIndex }) => {
       {[
         {
           content: 'Hooks Panel content 1',
-          id: 'first-panel'
+          id: 'first-panel',
         },
         {
           content: 'Hooks Panel content 2',
-          id: 'second-panel'
-        }
+          id: 'second-panel',
+        },
       ].map(({ content, id }, index) => (
         <Tabs.Panel selected={tabIndex === index} id={id}>
           {content}
@@ -342,5 +342,5 @@ export {
   ProposedClassPropertiesPlugin,
   SimpleTabs,
   SimpleMapTabs,
-  TableTabs
+  TableTabs,
 };

@@ -15,8 +15,8 @@ const StyledList = styled('ul')(
     justifyContent: 'space-between',
     width: '100%',
     [MEDIA_QUERIES.LARGESCREEN]: {
-      flexDirection: 'row'
-    }
+      flexDirection: 'row',
+    },
   },
   spacing.withWhiteSpace({ marginBottom: 6 })
 );
@@ -49,7 +49,7 @@ const Pagination = props => <StyledList {...props} />;
 
 Pagination.propTypes = {
   /** `asPaginationItem` nodes */
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Pagination;

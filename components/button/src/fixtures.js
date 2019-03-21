@@ -72,5 +72,5 @@ export {
   ButtonDisabledStartIcon,
   ButtonBlue,
   ButtonWacky,
-  ButtonAsLink
+  ButtonAsLink,
 };

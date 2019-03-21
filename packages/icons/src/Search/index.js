@@ -11,12 +11,12 @@ const Search = ({ fill, title, ...rest }) => (
 
 Search.propTypes = {
   title: PropTypes.string,
-  fill: PropTypes.string
+  fill: PropTypes.string,
 };
 
 Search.defaultProps = {
   title: 'Search',
-  fill: 'currentColor'
+  fill: 'currentColor',
 };
 
 export default Search;

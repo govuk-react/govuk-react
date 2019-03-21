@@ -4,7 +4,7 @@ import { WithDocsCustom } from '@govuk-react/storybook-components';
 
 import MultiChoiceWithKnobs, {
   MultiChoiceWithKnobsHint,
-  MultiChoiceWithKnobsError
+  MultiChoiceWithKnobsError,
 } from './fixtures';
 
 import ReadMe from '../README.md';

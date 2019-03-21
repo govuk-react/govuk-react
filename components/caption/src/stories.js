@@ -2,7 +2,7 @@ import React from 'react';
 import {
   CAPTION_SIZES,
   HEADING_SIZES,
-  TYPOGRAPHY_SCALE
+  TYPOGRAPHY_SCALE,
 } from '@govuk-react/constants';
 import { storiesOf } from '@storybook/react';
 import { select, text, withKnobs } from '@storybook/addon-knobs/react';

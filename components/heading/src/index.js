@@ -6,7 +6,7 @@ import {
   LEVEL_SIZE,
   LEVEL_TAG,
   MEDIA_QUERIES,
-  TYPOGRAPHY_SCALE
+  TYPOGRAPHY_SCALE,
 } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 
@@ -30,7 +30,7 @@ const StyledHeading = styled('h1')(
   },
   {
     display: 'block',
-    marginTop: 0
+    marginTop: 0,
   },
   ({ size }) => {
     const actualSize = Number.isNaN(Number(size)) ? HEADING_SIZES[size] : size;
@@ -41,8 +41,8 @@ const StyledHeading = styled('h1')(
       {
         marginBottom: scaleInfo.mobile.spacing,
         [MEDIA_QUERIES.TABLET]: {
-          marginBottom: scaleInfo.tablet.spacing
-        }
+          marginBottom: scaleInfo.tablet.spacing,
+        },
       }
     );
   },
@@ -120,7 +120,7 @@ const Heading = ({ level, ...props }) => {
 Heading.defaultProps = {
   as: undefined,
   level: undefined,
-  size: 'XLARGE'
+  size: 'XLARGE',
 };
 
 Heading.propTypes = {
@@ -140,8 +140,8 @@ Heading.propTypes = {
    */
   size: PropTypes.oneOf([
     ...Object.keys(HEADING_SIZES),
-    ...Object.keys(TYPOGRAPHY_SCALE)
-  ])
+    ...Object.keys(TYPOGRAPHY_SCALE),
+  ]),
 };
 
 export default Heading;

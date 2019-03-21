@@ -18,13 +18,13 @@ const SVG = ({ children, fill, title, ...rest }) => (
 SVG.propTypes = {
   children: PropTypes.node,
   title: PropTypes.string,
-  fill: PropTypes.string
+  fill: PropTypes.string,
 };
 
 SVG.defaultProps = {
   children: undefined,
   title: undefined,
-  fill: 'currentColor'
+  fill: 'currentColor',
 };
 
 export default SVG;

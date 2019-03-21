@@ -11,7 +11,7 @@ const StyledHeader = styled('span')(
   typography.font({ size: 27 }),
   {
     color: SECONDARY_TEXT_COLOUR,
-    marginBottom: SPACING_POINTS[1]
+    marginBottom: SPACING_POINTS[1],
   },
   spacing.withWhiteSpace()
 );
@@ -28,7 +28,7 @@ const SupportingHeader = props => <StyledHeader {...props} />;
 
 SupportingHeader.propTypes = {
   /** Text to be rendered as a supporting header */
-  children: PropTypes.string.isRequired
+  children: PropTypes.string.isRequired,
 };
 
 export { SupportingHeader as DocumentedSupportingHeader };

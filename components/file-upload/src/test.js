@@ -8,7 +8,7 @@ describe('FileUpload', () => {
   const example = 'example';
   const meta = {
     touched: true,
-    error: example
+    error: example,
   };
   const wrapper = <FileUpload>{example}</FileUpload>;
   const wrapperError = (

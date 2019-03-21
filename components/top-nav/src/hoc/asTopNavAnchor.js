@@ -14,16 +14,16 @@ const asTopNavAnchor = AnchorType => {
     fontWeight: 700,
     lineHeight: 1,
     ':hover': {
-      borderBottomColor: WHITE // TODO: active state, LIGHT_BLUE
+      borderBottomColor: WHITE, // TODO: active state, LIGHT_BLUE
     },
     ':focus': {
-      outline: `3px solid ${YELLOW}`
-    }
+      outline: `3px solid ${YELLOW}`,
+    },
   });
 
   Anchor.propTypes = {
     children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
-      .isRequired
+      .isRequired,
   };
 
   return StyledHoc;

@@ -11,7 +11,7 @@ describe('Layout', () => {
 
   beforeEach(() => {
     props = {
-      children: example
+      children: example,
     };
   });
 

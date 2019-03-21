@@ -7,12 +7,12 @@ import {
   LINE_HEIGHT,
   SPACING,
   MEDIA_QUERIES,
-  NTA_LIGHT
+  NTA_LIGHT,
 } from '@govuk-react/constants';
 
 import {
   ArrowRight as NextPageIcon,
-  ArrowLeft as PrevPageIcon
+  ArrowLeft as PrevPageIcon,
 } from '@govuk-react/icons';
 
 const PaginationWrapper = styled('li')(
@@ -29,7 +29,7 @@ const PaginationWrapper = styled('li')(
     width: '100%',
     [MEDIA_QUERIES.LARGESCREEN]: {
       fontSize: FONT_SIZE.SIZE_27,
-      lineHeight: LINE_HEIGHT.SIZE_16
+      lineHeight: LINE_HEIGHT.SIZE_16,
     },
     '> a': {
       boxSizing: 'border-box',
@@ -44,49 +44,49 @@ const PaginationWrapper = styled('li')(
       alignItems: 'center',
       width: '100%',
       ':hover': {
-        backgroundColor: GREY_4
+        backgroundColor: GREY_4,
       },
       ':focus': {
-        outline: `3px solid ${YELLOW}`
+        outline: `3px solid ${YELLOW}`,
       },
       ':visited': {
-        color: PURPLE
-      }
-    }
+        color: PURPLE,
+      },
+    },
   },
   ({ previousPage }) => ({
     marginRight: previousPage ? '3px' : undefined,
     ' > a': {
-      alignItems: previousPage ? 'flex-start' : undefined
+      alignItems: previousPage ? 'flex-start' : undefined,
     },
     ' > a div': {
       justifyContent: previousPage ? 'flex-start' : undefined,
       ' > svg': {
         height: previousPage ? '13px' : undefined,
         width: previousPage ? '17px' : undefined,
-        marginRight: previousPage ? '10px' : undefined
-      }
-    }
+        marginRight: previousPage ? '10px' : undefined,
+      },
+    },
   }),
   ({ nextPage }) => ({
     ' > a': {
-      alignItems: nextPage ? 'flex-end' : undefined
+      alignItems: nextPage ? 'flex-end' : undefined,
     },
     ' > a div': {
       justifyContent: nextPage ? 'flex-end' : undefined,
       ' > svg': {
         height: nextPage ? '13px' : undefined,
         width: nextPage ? '17px' : undefined,
-        marginLeft: nextPage ? '10px' : undefined
-      }
-    }
+        marginLeft: nextPage ? '10px' : undefined,
+      },
+    },
   })
 );
 
 const InnerWrap = styled('div')({
   display: 'flex',
   alignItems: 'center',
-  width: '100%'
+  width: '100%',
 });
 
 const PageTitle = styled('span')({
@@ -95,8 +95,8 @@ const PageTitle = styled('span')({
   textDecoration: 'underline',
   [MEDIA_QUERIES.LARGESCREEN]: {
     fontSize: FONT_SIZE.SIZE_16,
-    lineHeight: LINE_HEIGHT.SIZE_16
-  }
+    lineHeight: LINE_HEIGHT.SIZE_16,
+  },
 });
 
 const asPaginationItem = AnchorType => {
@@ -124,7 +124,7 @@ const asPaginationItem = AnchorType => {
     pageTitle: PropTypes.string,
     to: PropTypes.string,
     target: PropTypes.string,
-    href: PropTypes.string
+    href: PropTypes.string,
   };
 
   PaginationItem.defaultProps = {
@@ -133,7 +133,7 @@ const asPaginationItem = AnchorType => {
     pageTitle: undefined,
     to: undefined,
     target: undefined,
-    href: undefined
+    href: undefined,
   };
 
   return PaginationItem;

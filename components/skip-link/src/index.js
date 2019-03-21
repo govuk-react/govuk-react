@@ -18,8 +18,8 @@ const SkipLink = styled('a')(
       }px + env(safe-area-inset-right)))`,
       paddingLeft: `max(${SPACING_POINTS[3]}px, calc(${
         SPACING_POINTS[3]
-      }px + env(safe-area-inset-left)))`
-    }
+      }px + env(safe-area-inset-left)))`,
+    },
   }
 );
 
@@ -42,11 +42,11 @@ const SkipLinkDocumented = props => <SkipLink {...props} />;
 
 SkipLinkDocumented.propTypes = {
   children: PropTypes.node.isRequired,
-  href: PropTypes.string
+  href: PropTypes.string,
 };
 
 SkipLinkDocumented.defaultProps = {
-  href: '#content'
+  href: '#content',
 };
 
 SkipLink.propTypes = SkipLinkDocumented.propTypes;

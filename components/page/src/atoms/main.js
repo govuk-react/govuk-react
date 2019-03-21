@@ -9,8 +9,8 @@ const Main = styled('main')(
   spacing.withWhiteSpace({
     padding: {
       size: 6,
-      direction: ['top', 'bottom']
-    }
+      direction: ['top', 'bottom'],
+    },
   }),
   { display: 'block' }
 );

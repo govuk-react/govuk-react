@@ -31,7 +31,7 @@ const FinalFormWrapper = ({ children }) => (
 );
 
 FinalFormWrapper.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default FinalFormWrapper;

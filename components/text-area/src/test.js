@@ -9,7 +9,7 @@ describe('Textarea', () => {
   const example = 'example';
   const meta = {
     touched: true,
-    error: example
+    error: example,
   };
   const wrapper = <Textarea>{example}</Textarea>;
   const wrapperErrorText = (
@@ -21,7 +21,7 @@ describe('Textarea', () => {
 
   beforeEach(() => {
     props = {
-      children: example
+      children: example,
     };
   });
 

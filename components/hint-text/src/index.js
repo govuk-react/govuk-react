@@ -13,7 +13,7 @@ const StyledHint = styled('span')(
     display: 'block',
     // NB non-responsive marginBottom here
     marginBottom: SPACING_POINTS[3],
-    color: `${SECONDARY_TEXT_COLOUR}`
+    color: `${SECONDARY_TEXT_COLOUR}`,
   },
   spacing.withWhiteSpace()
 );
@@ -38,7 +38,7 @@ const HintText = props => <StyledHint {...props} />;
 
 HintText.propTypes = {
   /** Text for the hint */
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default HintText;

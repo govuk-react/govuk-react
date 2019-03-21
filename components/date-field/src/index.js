@@ -13,14 +13,14 @@ import Input from './input';
 const StyledContainer = styled('div')(
   {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   ({ errorText }) =>
     errorText
       ? {
           borderLeft: `4px solid ${ERROR_COLOUR}`,
           marginRight: SPACING.SCALE_3,
-          paddingLeft: SPACING.SCALE_2
+          paddingLeft: SPACING.SCALE_2,
         }
       : undefined,
   spacing.withWhiteSpace({ marginBottom: 6 })
@@ -99,14 +99,14 @@ DateField.defaultProps = {
   inputNames: {
     day: undefined,
     month: undefined,
-    year: undefined
+    year: undefined,
   },
   defaultValues: {
     day: undefined,
     month: undefined,
-    year: undefined
+    year: undefined,
   },
-  input: undefined
+  input: undefined,
 };
 
 DateField.propTypes = {
@@ -125,12 +125,12 @@ DateField.propTypes = {
   inputNames: PropTypes.shape({
     day: PropTypes.string,
     month: PropTypes.string,
-    year: PropTypes.string
+    year: PropTypes.string,
   }),
   defaultValues: {
     day: PropTypes.any,
     month: PropTypes.any,
-    year: PropTypes.any
+    year: PropTypes.any,
   },
   /**
    * Properties that are sent to the input, matching final form and redux form input type
@@ -156,9 +156,9 @@ DateField.propTypes = {
     value: PropTypes.shape({
       day: PropTypes.string,
       month: PropTypes.string,
-      year: PropTypes.string
-    })
-  })
+      year: PropTypes.string,
+    }),
+  }),
 };
 
 export default DateField;

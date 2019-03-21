@@ -9,35 +9,35 @@ import ReadMe from '../README.md';
 const fromData = [
   <Link href="/government/organisations/ministry-of-defence">
     Ministry of Defence
-  </Link>
+  </Link>,
 ];
 
 const partOfData = [
   <Link href="/government/topics/energy">Energy</Link>,
-  <Link href="/government/topics/environment">Environment</Link>
+  <Link href="/government/topics/environment">Environment</Link>,
 ];
 
 const otherData = [
   {
     id: 0,
     title: 'Consultation type',
-    content: <Link href="/government/publications">Open</Link>
+    content: <Link href="/government/publications">Open</Link>,
   },
   {
     id: 1,
     title: 'Published',
-    content: '20 January 2012'
+    content: '20 January 2012',
   },
   {
     id: 2,
     title: 'Date opened',
-    content: '1 February 2012'
+    content: '1 February 2012',
   },
   {
     id: 3,
     title: 'Date closed',
-    content: '1 March 2013'
-  }
+    content: '1 March 2013',
+  },
 ];
 
 const stories = storiesOf('Typography/Document Footer Metadata', module);

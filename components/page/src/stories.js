@@ -26,8 +26,8 @@ stories.add('Component default', () => (
 const WideContainer = styled(Page.WidthContainer)({
   maxWidth: 'inherit',
   [MEDIA_QUERIES.MAX]: {
-    margin: `0 ${GUTTER}`
-  }
+    margin: `0 ${GUTTER}`,
+  },
 });
 
 examples.add('Custom width container (no width limit)', () => (
@@ -39,7 +39,7 @@ examples.add('Custom width container (no width limit)', () => (
 ));
 
 const MainContainer = styled(Page.Main)({
-  backgroundColor: '#ddd'
+  backgroundColor: '#ddd',
 });
 
 examples.add('Custom main container (background colour)', () => (

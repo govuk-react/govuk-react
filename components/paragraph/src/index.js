@@ -9,14 +9,14 @@ const StyledParagraph = styled(ReactMarkdown)(
   {
     margin: 0,
     '> p': {
-      margin: 0
+      margin: 0,
     },
     '> p > code': {
       padding: '0.2em 0.4em',
       margin: '0',
       fontSize: '85%',
       backgroundColor: 'rgba(27,31,35,0.05)',
-      borderRadius: '3px'
+      borderRadius: '3px',
     },
     '> pre': {
       padding: '16px',
@@ -24,7 +24,7 @@ const StyledParagraph = styled(ReactMarkdown)(
       fontSize: '85%',
       lineHeight: '1.45',
       backgroundColor: '#f6f8fa',
-      borderRadius: '3px'
+      borderRadius: '3px',
     },
     '> pre > code': {
       display: 'inline',
@@ -33,8 +33,8 @@ const StyledParagraph = styled(ReactMarkdown)(
       border: '0',
       overflow: 'visible',
       lineHeight: 'inherit',
-      wordWrap: 'normal'
-    }
+      wordWrap: 'normal',
+    },
   },
   ({ supportingText }) => typography.font({ size: supportingText ? 16 : 19 }),
   spacing.withWhiteSpace({ marginBottom: 4 })
@@ -107,7 +107,7 @@ const Paragraph = ({ children, ...props }) => (
       'link',
       'inlineCode',
       'code',
-      'text'
+      'text',
     ]}
     renderers={{ link: props.linkRenderer }}
     {...props}
@@ -123,13 +123,13 @@ Paragraph.propTypes = {
    * Is this paragraph supporting text for another element?
    */
   supportingText: PropTypes.bool,
-  linkRenderer: PropTypes.func
+  linkRenderer: PropTypes.func,
 };
 
 Paragraph.defaultProps = {
   children: '',
   supportingText: false,
-  linkRenderer: props => <Link {...props} />
+  linkRenderer: props => <Link {...props} />,
 };
 
 export default Paragraph;

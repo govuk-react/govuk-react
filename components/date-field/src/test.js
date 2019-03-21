@@ -13,7 +13,7 @@ describe('DateField', () => {
 
   beforeEach(() => {
     props = {
-      children: example
+      children: example,
     };
   });
 
@@ -123,7 +123,7 @@ describe('DateField', () => {
         input={{
           onFocus: (...rest) => {
             spy(...rest);
-          }
+          },
         }}
       />
     );
@@ -134,11 +134,11 @@ describe('DateField', () => {
     input1.simulate('focus', {});
     // Then simulate tab to second input, first by blurring first input
     input1.simulate('blur', {
-      relatedTarget: input2.instance() // relatedTarget for blur is what will next receive focus
+      relatedTarget: input2.instance(), // relatedTarget for blur is what will next receive focus
     });
     // Then focus the new input
     input2.simulate('focus', {
-      relatedTarget: input1.instance() // relatedTarget for focus is what has lost focus
+      relatedTarget: input1.instance(), // relatedTarget for focus is what has lost focus
     });
     expect(spy).toHaveBeenCalledTimes(1);
   });

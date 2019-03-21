@@ -11,7 +11,7 @@ const spinnerClassName = 'icon-loading';
 const StyledContainer = styled('div')({
   position: 'relative',
   paddingBottom: '2px',
-  minHeight: '10px'
+  minHeight: '10px',
 });
 
 const Innerwrap = styled('div')(
@@ -32,7 +32,7 @@ const Innerwrap = styled('div')(
       height: '100%',
       maxHeight: 'calc(50vh + 100px)',
       transition: `opacity ${timeIn}ms ease-in-out`,
-      willChange: 'opacity'
+      willChange: 'opacity',
     },
     '& .overlay': {
       zIndex: 100,
@@ -42,7 +42,7 @@ const Innerwrap = styled('div')(
       ${hexRgb(backgroundColor)[0]},
       ${hexRgb(backgroundColor)[1]},
       ${hexRgb(backgroundColor)[2]},
-      ${backgroundColorOpacity})`
+      ${backgroundColorOpacity})`,
     },
     '.fade-enter': {
       '& .overlay': {
@@ -51,13 +51,13 @@ const Innerwrap = styled('div')(
         ${hexRgb(backgroundColor)[1]},
         ${hexRgb(backgroundColor)[2]},
         0)`,
-        transitionDuration: `${timeIn}ms`
+        transitionDuration: `${timeIn}ms`,
       },
       [`& .${spinnerClassName}`]: {
         opacity: 0,
         transitionDuration: `${timeIn}ms`,
-        transitionDelay: `${timeIn / 2}ms`
-      }
+        transitionDelay: `${timeIn / 2}ms`,
+      },
     },
     '.fade-enter-active': {
       '& .overlay': {
@@ -66,13 +66,13 @@ const Innerwrap = styled('div')(
         ${hexRgb(backgroundColor)[1]},
         ${hexRgb(backgroundColor)[2]},
         ${backgroundColorOpacity})`,
-        transitionDuration: `${timeIn}ms`
+        transitionDuration: `${timeIn}ms`,
       },
       [`& .${spinnerClassName}`]: {
         opacity: 1,
         transitionDuration: `${timeIn}ms`,
-        transitionDelay: `${timeIn / 2}ms`
-      }
+        transitionDelay: `${timeIn / 2}ms`,
+      },
     },
     '.fade-exit': {
       '& .overlay': {
@@ -81,12 +81,12 @@ const Innerwrap = styled('div')(
         ${hexRgb(backgroundColor)[1]},
         ${hexRgb(backgroundColor)[2]},
         ${backgroundColorOpacity})`,
-        transitionDuration: `${timeOut}ms`
+        transitionDuration: `${timeOut}ms`,
       },
       [`& .${spinnerClassName}`]: {
         opacity: 1,
-        transitionDuration: `${timeOut}ms`
-      }
+        transitionDuration: `${timeOut}ms`,
+      },
     },
     '.fade-exit-active': {
       '& .overlay': {
@@ -95,13 +95,13 @@ const Innerwrap = styled('div')(
         ${hexRgb(backgroundColor)[1]},
         ${hexRgb(backgroundColor)[2]},
         0)`,
-        transitionDuration: `${timeOut}ms`
+        transitionDuration: `${timeOut}ms`,
       },
       [`& .${spinnerClassName}`]: {
         opacity: 0,
-        transitionDuration: `${timeOut}ms`
-      }
-    }
+        transitionDuration: `${timeOut}ms`,
+      },
+    },
   })
 );
 
@@ -113,7 +113,7 @@ const Overlay = styled('div')({
   left: 0,
   overflow: 'hidden',
   height: '100%',
-  width: '100%'
+  width: '100%',
 });
 
 /**
@@ -191,7 +191,7 @@ LoadingBox.defaultProps = {
   title: undefined,
   loading: false,
   timeIn: 800,
-  timeOut: 200
+  timeOut: 200,
 };
 
 LoadingBox.propTypes = {
@@ -226,7 +226,7 @@ LoadingBox.propTypes = {
   /**
    * Length of fade-out animation in milliseconds
    */
-  timeOut: PropTypes.number
+  timeOut: PropTypes.number,
 };
 
 export default LoadingBox;

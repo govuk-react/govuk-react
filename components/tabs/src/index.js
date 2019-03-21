@@ -148,7 +148,7 @@ const Tabs = props => <TabsContainer {...props} />;
 
 Tabs.propTypes = {
   /** child components that will appear in the Tabs section */
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 Tabs.Tab = Tab;

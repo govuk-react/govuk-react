@@ -10,20 +10,20 @@ const breakSizes = {
   L: 6,
   LARGE: 6,
   M: 4,
-  MEDIUM: 4
+  MEDIUM: 4,
 };
 
 const SectionBreak = styled('hr')(
   {
     margin: 0,
-    border: 0
+    border: 0,
   },
   ({ level }) => {
     const size = breakSizes[level];
 
     if (size) {
       return spacing.withWhiteSpace({
-        margin: { size, direction: ['top', 'bottom'] }
+        margin: { size, direction: ['top', 'bottom'] },
       });
     }
 
@@ -32,7 +32,7 @@ const SectionBreak = styled('hr')(
   ({ visible }) =>
     visible
       ? {
-          borderBottom: `1px solid ${BORDER_COLOUR}`
+          borderBottom: `1px solid ${BORDER_COLOUR}`,
         }
       : undefined
 );
@@ -54,10 +54,10 @@ const SectionBreakDocumented = props => <SectionBreak {...props} />;
 
 SectionBreakDocumented.propTypes = {
   level: PropTypes.oneOf(['XL', 'XLARGE', 'L', 'LARGE', 'M', 'MEDIUM']),
-  visible: PropTypes.bool
+  visible: PropTypes.bool,
 };
 SectionBreakDocumented.defaultProps = {
-  visible: undefined
+  visible: undefined,
 };
 
 SectionBreak.propTypes = SectionBreakDocumented.propTypes;

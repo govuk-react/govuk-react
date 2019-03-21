@@ -8,7 +8,7 @@ const PreviewComponent = ({ children }) =>
   ) : (
     <div
       style={{
-        display: 'none'
+        display: 'none',
       }}
     >
       {children}
@@ -22,7 +22,7 @@ const ReadMeHidePreview = (readme, ...rest) =>
   );
 
 PreviewComponent.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default ReadMeHidePreview;

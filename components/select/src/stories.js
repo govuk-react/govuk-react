@@ -8,7 +8,7 @@ import ReadMe from '../README.md';
 
 const meta = {
   touched: true,
-  error: 'Example'
+  error: 'Example',
 };
 
 const stories = storiesOf('Form/Select', module);
@@ -30,7 +30,7 @@ examples.add('Select with hintText', () => (
     name="group1"
     label="This is a label"
     hint={[
-      'This is and example of hintText/description of what we need from you.'
+      'This is and example of hintText/description of what we need from you.',
     ]}
   >
     <option value="0">GOV.UK elements option 1</option>
@@ -44,7 +44,7 @@ examples.add('Select with hintText & error', () => (
     name="group1"
     label="This is a label"
     hint={[
-      'This is and example of hintText/description of what we need from you.'
+      'This is and example of hintText/description of what we need from you.',
     ]}
     meta={meta}
   >

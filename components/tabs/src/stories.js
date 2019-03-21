@@ -8,7 +8,7 @@ import {
   ProposedClassPropertiesPlugin,
   SimpleTabs,
   SimpleMapTabs,
-  TableTabs
+  TableTabs,
 } from './fixtures';
 import ReadMe from '../README.md';
 

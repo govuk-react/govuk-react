@@ -11,15 +11,15 @@ import multiInputInput from 'multi-input-input';
 const StyledLabel = styled(Label)(
   {
     marginRight: '20px',
-    marginBottom: 0
+    marginBottom: 0,
   },
   ({ year }) => ({
-    width: year ? '70px' : '50px'
+    width: year ? '70px' : '50px',
   })
 );
 
 const StyledList = styled('div')({
-  display: 'flex'
+  display: 'flex',
 });
 
 class Input extends React.Component {
@@ -82,22 +82,22 @@ Input.propTypes = {
   names: PropTypes.shape({
     day: PropTypes.string,
     month: PropTypes.string,
-    year: PropTypes.string
+    year: PropTypes.string,
   }),
   defaultValues: PropTypes.shape({
     day: PropTypes.string,
     month: PropTypes.string,
-    year: PropTypes.string
+    year: PropTypes.string,
   }),
   value: PropTypes.shape({
     day: PropTypes.number,
     month: PropTypes.number,
-    year: PropTypes.number
+    year: PropTypes.number,
   }),
   labels: PropTypes.shape({
     day: PropTypes.string,
     month: PropTypes.string,
-    year: PropTypes.string
+    year: PropTypes.string,
   }),
   /**
    * This comes from the multiInputInput HOC and is needed to track all 3 inputs
@@ -106,7 +106,7 @@ Input.propTypes = {
   onChange: PropTypes.func.isRequired,
   onBlur: PropTypes.func.isRequired,
   onFocus: PropTypes.func.isRequired,
-  error: PropTypes.bool
+  error: PropTypes.bool,
 };
 
 Input.defaultProps = {
@@ -114,19 +114,19 @@ Input.defaultProps = {
   names: {
     day: 'DateFieldDay',
     month: 'DateFieldMonth',
-    year: 'DateFieldYear'
+    year: 'DateFieldYear',
   },
   defaultValues: {
     day: '',
     month: '',
-    year: ''
+    year: '',
   },
   labels: {
     day: 'Day',
     month: 'Month',
-    year: 'Year'
+    year: 'Year',
   },
-  error: false
+  error: false,
 };
 
 // This component is dependent on multiInputInput HOC so we always export with HOC

@@ -6,7 +6,7 @@ import { FONT_WEIGHTS } from '@govuk-react/constants';
 const Caption = styled('caption')({
   fontWeight: FONT_WEIGHTS.bold,
   display: 'table-caption',
-  textAlign: 'left'
+  textAlign: 'left',
 });
 
 export default Caption;

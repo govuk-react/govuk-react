@@ -11,8 +11,8 @@ const Ul = styled('ul')(({ serviceTitle, open }) => ({
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'flex',
     paddingTop: serviceTitle ? 0 : SPACING.SCALE_5,
-    width: 'auto'
-  }
+    width: 'auto',
+  },
 }));
 
 export default Ul;

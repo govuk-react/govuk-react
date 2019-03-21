@@ -6,7 +6,7 @@ import { spacing, typography } from '@govuk-react/lib';
 import {
   HEADING_SIZES,
   SPACING_POINTS,
-  TYPOGRAPHY_SCALE
+  TYPOGRAPHY_SCALE,
 } from '@govuk-react/constants';
 
 const StyledLegend = styled('legend')(
@@ -21,7 +21,7 @@ const StyledLegend = styled('legend')(
     padding: 0,
     // Disabling this as per https://github.com/alphagov/govuk-frontend/issues/1239
     // overflow: 'hidden',
-    whiteSpace: 'normal'
+    whiteSpace: 'normal',
   },
   ({ size }) => {
     const actualSize = Number.isNaN(Number(size)) ? HEADING_SIZES[size] : size;
@@ -45,7 +45,7 @@ const StyledLegend = styled('legend')(
 const StyledHeading = styled('h1')({
   margin: 0,
   fontSize: 'inherit',
-  fontWeight: 'inherit'
+  fontWeight: 'inherit',
 });
 
 // // When the legend contains an H1, we want the H1 to inherit all styles from
@@ -68,13 +68,13 @@ Legend.propTypes = {
   isPageHeading: PropTypes.bool,
   size: PropTypes.oneOf([
     ...Object.keys(HEADING_SIZES),
-    ...Object.keys(TYPOGRAPHY_SCALE)
-  ])
+    ...Object.keys(TYPOGRAPHY_SCALE),
+  ]),
 };
 
 Legend.defaultProps = {
   isPageHeading: false,
-  size: undefined
+  size: undefined,
 };
 
 export default Legend;

@@ -6,7 +6,7 @@ import { SimpleTabs } from './fixtures';
 beforeAll(() => {
   Object.defineProperty(window, 'matchMedia', {
     // jsdom appears not to cope with CSSinJS media queries
-    value: jest.fn(() => ({ matches: false }))
+    value: jest.fn(() => ({ matches: false })),
   });
 });
 

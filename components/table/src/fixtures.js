@@ -125,7 +125,7 @@ export {
   TableWithCaption,
   TableWithHeadAndNumerics,
   TableWithCustomWidths,
-  TableThreeQuartersOneQuarter
+  TableThreeQuartersOneQuarter,
 };
 
 export default Table;

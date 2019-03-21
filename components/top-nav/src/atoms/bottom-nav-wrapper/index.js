@@ -8,8 +8,8 @@ const BottomNavWrapper = styled('div')({
   margin: '0 auto',
   width: `calc(100% - ${SPACING.SCALE_5})`,
   [MEDIA_QUERIES.LARGESCREEN]: {
-    width: `calc(100% - ${SPACING.SCALE_6})`
-  }
+    width: `calc(100% - ${SPACING.SCALE_6})`,
+  },
 });
 
 export default BottomNavWrapper;

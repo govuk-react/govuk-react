@@ -5,7 +5,7 @@ import Table, {
   TableSimple,
   TableWithCaption,
   TableWithHeadAndNumerics,
-  TableWithCustomWidths
+  TableWithCustomWidths,
 } from './fixtures';
 
 describe('Table', () => {

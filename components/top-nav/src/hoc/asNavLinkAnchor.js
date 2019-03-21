@@ -12,9 +12,9 @@ const asNavLinkAnchor = AnchorType => {
       backgroundColor: YELLOW,
       outline: `3px solid ${YELLOW}`,
       ':hover': {
-        borderBottomColor: BLACK
-      }
-    }
+        borderBottomColor: BLACK,
+      },
+    },
   });
   return StyledNavLinkAnchor;
 };

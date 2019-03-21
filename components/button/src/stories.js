@@ -10,7 +10,7 @@ import {
   ButtonDisabledStartIcon,
   ButtonBlue,
   ButtonWacky,
-  ButtonAsLink
+  ButtonAsLink,
 } from './fixtures';
 import ReadMe from '../README.md';
 

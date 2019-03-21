@@ -8,15 +8,15 @@ import {
   FONT_STACK_TABULAR,
   FONT_WEIGHTS,
   MEDIA_QUERIES,
-  TYPOGRAPHY_SCALE
+  TYPOGRAPHY_SCALE,
 } from '@govuk-react/constants';
 import { BLACK } from 'govuk-colours';
 
 export const textColour = {
   color: BLACK,
   [MEDIA_QUERIES.PRINT]: {
-    color: '#000'
-  }
+    color: '#000',
+  },
 };
 
 export const textColor = textColour;
@@ -27,15 +27,15 @@ export function common(fontFamily = FONT_STACK) {
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
     [MEDIA_QUERIES.PRINT]: {
-      fontFamily: FONT_STACK_PRINT
-    }
+      fontFamily: FONT_STACK_PRINT,
+    },
   };
 }
 
 function getSizeStyle(scale, lineHeight = scale.lineHeight) {
   return {
     fontSize: `${scale.fontSize}px`,
-    lineHeight
+    lineHeight,
   };
 }
 
@@ -50,7 +50,7 @@ export function responsive(size, overrideLineHeight) {
 
   return Object.assign({}, getSizeStyle(scale.mobile, overrideLineHeight), {
     [MEDIA_QUERIES.TABLET]: getSizeStyle(scale.tablet, overrideLineHeight),
-    [MEDIA_QUERIES.PRINT]: getSizeStyle(scale.print, overrideLineHeight)
+    [MEDIA_QUERIES.PRINT]: getSizeStyle(scale.print, overrideLineHeight),
   });
 }
 
@@ -58,7 +58,7 @@ export function font({
   size,
   weight = 'regular',
   tabular = false,
-  lineHeight
+  lineHeight,
 } = {}) {
   return Object.assign(
     {},

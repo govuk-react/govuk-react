@@ -5,7 +5,7 @@ import { SPACING } from '@govuk-react/constants';
 
 const StyledLayout = styled('div')({
   padding: SPACING.SCALE_2,
-  boxSizing: 'border-box'
+  boxSizing: 'border-box',
 });
 
 /**
@@ -49,7 +49,7 @@ const Layout = props => <StyledLayout {...props} />;
 
 Layout.propTypes = {
   /** GridRow and GridCol children nodes */
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

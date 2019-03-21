@@ -17,14 +17,14 @@ const StyledListItem = styled('li')({
   ':before': {
     content: "'\\2014  '",
     marginLeft: -spacingSimple5,
-    paddingRight: spacingSimple1
+    paddingRight: spacingSimple1,
   },
   [MEDIA_QUERIES.TABLET]: {
     marginLeft: 0,
     ':before': {
-      content: 'none'
-    }
-  }
+      content: 'none',
+    },
+  },
 });
 
 const StyledHyperLink = styled('a')(
@@ -34,7 +34,7 @@ const StyledHyperLink = styled('a')(
   {
     display: 'inline-block',
     paddingTop: spacingSimple2,
-    paddingBottom: spacingSimple2
+    paddingBottom: spacingSimple2,
   },
   ({ selected }) => ({
     color: selected && BLACK,
@@ -46,7 +46,7 @@ const StyledHyperLink = styled('a')(
       textDecoration: 'none',
       color: BLACK,
       ':link,:visited': {
-        color: BLACK
+        color: BLACK,
       },
       marginTop: selected ? -spacingSimple1 : undefined,
       marginBottom: selected ? -1 : undefined,
@@ -59,9 +59,9 @@ const StyledHyperLink = styled('a')(
       borderBottom: selected ? 0 : 1,
       backgroundColor: selected ? WHITE : GREY_4,
       ':focus': {
-        backgroundColor: selected ? 'transparent' : GREY_4
-      }
-    }
+        backgroundColor: selected ? 'transparent' : GREY_4,
+      },
+    },
   })
 );
 
@@ -74,7 +74,7 @@ const Tab = ({ children, href, onClick, selected }) => (
 );
 
 Tab.defaultProps = {
-  selected: false
+  selected: false,
 };
 
 Tab.propTypes = {
@@ -85,7 +85,7 @@ Tab.propTypes = {
   /** The content to display within the Tab Header */
   children: PropTypes.node.isRequired,
   /** The function to passed to prevent default href behaviour */
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Tab;

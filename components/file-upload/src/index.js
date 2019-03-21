@@ -9,7 +9,7 @@ import {
   FONT_SIZE,
   LINE_HEIGHT,
   NTA_LIGHT,
-  MEDIA_QUERIES
+  MEDIA_QUERIES,
 } from '@govuk-react/constants';
 
 const StyledInput = styled('input')({
@@ -24,10 +24,10 @@ const StyledInput = styled('input')({
   [MEDIA_QUERIES.LARGESCREEN]: {
     fontSize: FONT_SIZE.SIZE_16,
     lineHeight: LINE_HEIGHT.SIZE_16,
-    width: '50%'
+    width: '50%',
   },
   width: '100%',
-  padding: '5px 4px 4px'
+  padding: '5px 4px 4px',
 });
 
 /**
@@ -83,7 +83,7 @@ const FileUpload = ({ meta, children, hint, acceptedFormats, ...props }) => (
 FileUpload.defaultProps = {
   hint: undefined,
   meta: {},
-  acceptedFormats: undefined
+  acceptedFormats: undefined,
 };
 
 FileUpload.propTypes = {
@@ -107,10 +107,10 @@ FileUpload.propTypes = {
     submitSucceeded: PropTypes.bool,
     touched: PropTypes.bool,
     valid: PropTypes.bool,
-    visited: PropTypes.bool
+    visited: PropTypes.bool,
   }),
   children: PropTypes.node.isRequired,
-  acceptedFormats: PropTypes.string
+  acceptedFormats: PropTypes.string,
 };
 
 export default FileUpload;

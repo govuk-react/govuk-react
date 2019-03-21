@@ -6,7 +6,7 @@ import Button, {
   ButtonStartIcon,
   ButtonDisabled,
   ButtonBlue,
-  ButtonWacky
+  ButtonWacky,
 } from './fixtures';
 
 describe('button', () => {

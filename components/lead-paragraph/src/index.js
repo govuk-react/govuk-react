@@ -27,7 +27,7 @@ const LeadParagraph = props => <StyledParagraph {...props} />;
 
 LeadParagraph.propTypes = {
   /** Text in the Lead paragraph */
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default LeadParagraph;

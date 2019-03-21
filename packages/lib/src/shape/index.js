@@ -14,25 +14,25 @@ function makeShape(direction, base, height) {
       return {
         clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
         borderWidth: `0 ${perpendicular}px ${height}px ${perpendicular}px`,
-        borderBottomColor: 'inherit'
+        borderBottomColor: 'inherit',
       };
     case 'right':
       return {
         clipPath: 'polygon(0% 0%, 100% 50%, 0% 100%)',
         borderWidth: `${perpendicular}px 0 ${perpendicular}px ${height}px`,
-        borderLeftColor: 'inherit'
+        borderLeftColor: 'inherit',
       };
     case 'down':
       return {
         clipPath: 'polygon(0% 0%, 50% 100%, 100% 0%)',
         borderWidth: `${height}px ${perpendicular}px 0 ${perpendicular}px`,
-        borderTopColor: 'inherit'
+        borderTopColor: 'inherit',
       };
     case 'left':
       return {
         clipPath: 'polygon(0% 50%, 100% 100%, 100% 0%)',
         borderWidth: `${perpendicular}px ${height}px ${perpendicular}px 0`,
-        borderRightColor: 'inherit'
+        borderRightColor: 'inherit',
       };
     default:
       throw Error(
@@ -46,7 +46,7 @@ export function arrow({
   direction,
   base = 0,
   height = equilateralHeight(base),
-  display = 'block'
+  display = 'block',
 }) {
   return {
     display,
@@ -56,6 +56,6 @@ export function arrow({
     borderStyle: 'solid',
     borderColor: 'transparent',
 
-    ...makeShape(direction, base, height)
+    ...makeShape(direction, base, height),
   };
 }

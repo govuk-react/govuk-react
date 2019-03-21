@@ -14,7 +14,7 @@ const SearchBoxWrapper = styled('div')(
     boxSizing: 'border-box',
     display: 'flex',
     width: '100%',
-    background: WHITE
+    background: WHITE,
   },
   spacing.withWhiteSpace({ marginBottom: 0 })
 );
@@ -41,9 +41,9 @@ const InputSearchBox = styled('input')({
     outline: `3px solid ${YELLOW}`,
     outlineOffset: 0,
     ' ~ button': {
-      width: '46px'
-    }
-  }
+      width: '46px',
+    },
+  },
 });
 
 const SearchButton = styled('button')({
@@ -61,8 +61,8 @@ const SearchButton = styled('button')({
   overflow: 'hidden',
   ':focus': {
     outline: `3px solid ${YELLOW}`,
-    outlineOffset: 0
-  }
+    outlineOffset: 0,
+  },
 });
 
 /**
@@ -98,11 +98,11 @@ const SearchBox = ({ placeholder, ...props }) => (
 );
 
 SearchBox.defaultProps = {
-  placeholder: undefined
+  placeholder: undefined,
 };
 
 SearchBox.propTypes = {
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
 };
 
 export default SearchBox;

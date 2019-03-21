@@ -19,7 +19,7 @@ const StyledTable = styled('table')(
   {
     width: '100%',
     borderSpacing: 0,
-    borderCollapse: 'collapse'
+    borderCollapse: 'collapse',
   },
   spacing.withWhiteSpace({ marginBottom: 6 })
 );
@@ -125,7 +125,7 @@ Table.defaultProps = {
   body: undefined,
   caption: undefined,
   children: undefined,
-  head: undefined
+  head: undefined,
 };
 
 Table.propTypes = {
@@ -136,7 +136,7 @@ Table.propTypes = {
   /** Table header rows and cells */
   head: PropTypes.node,
   /** Table caption title */
-  caption: PropTypes.string
+  caption: PropTypes.string,
 };
 
 Table.CellHeader = CellHeader;

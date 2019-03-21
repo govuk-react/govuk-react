@@ -41,5 +41,5 @@ export {
   SupportingParagraph,
   ParagraphWithCodeBlock,
   exampleParagraph,
-  exampleCodeBlock
+  exampleCodeBlock,
 };

@@ -7,7 +7,7 @@ import {
   TableWithCaption,
   TableWithHeadAndNumerics,
   TableWithCustomWidths,
-  TableThreeQuartersOneQuarter
+  TableThreeQuartersOneQuarter,
 } from './fixtures';
 import ReadMe from '../README.md';
 

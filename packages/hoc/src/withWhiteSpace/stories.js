@@ -38,7 +38,7 @@ stories.addDecorator(withKnobs);
 
 const DemoComponent = withWhiteSpace()(
   styled('div')({
-    border: '2px solid red'
+    border: '2px solid red',
   })
 );
 
@@ -60,12 +60,12 @@ stories.add('demo component, single margins and padding (complex)', () => (
       margin={{
         size: number('margin.size', 2, { range: true, min: 0, max: 9 }),
         direction: text('margin.direction', 'all'),
-        adjustment: number('margin.adjustment', undefined)
+        adjustment: number('margin.adjustment', undefined),
       }}
       padding={{
         size: number('padding.size', 2, { range: true, min: 0, max: 9 }),
         direction: text('padding.direction', 'all'),
-        adjustment: number('padding.adjustment', undefined)
+        adjustment: number('padding.adjustment', undefined),
       }}
     >
       Component with styles - use knobs to adjust
@@ -82,16 +82,16 @@ stories.add('demo component, multiple margins and padding (complex)', () => (
         object('margin (first object)', {
           size: 2,
           direction: 'bottom',
-          adjustment: -5
-        })
+          adjustment: -5,
+        }),
       ]}
       padding={[
         number('padding (all)', 2, { range: true, min: 0, max: 9 }),
         object('padding (first object)', {
           size: 4,
           direction: ['top', 'bottom'],
-          adjustment: 11
-        })
+          adjustment: 11,
+        }),
       ]}
     >
       Component with styles - use knobs to adjust
