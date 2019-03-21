@@ -1,39 +1,39 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import ReactMarkdown from "react-markdown";
-import { spacing, typography } from "@govuk-react/lib";
-import Link from "@govuk-react/link";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import ReactMarkdown from 'react-markdown';
+import { spacing, typography } from '@govuk-react/lib';
+import Link from '@govuk-react/link';
 
 const StyledParagraph = styled(ReactMarkdown)(
   {
     margin: 0,
-    "> p": {
+    '> p': {
       margin: 0
     },
-    "> p > code": {
-      padding: "0.2em 0.4em",
-      margin: "0",
-      fontSize: "85%",
-      backgroundColor: "rgba(27,31,35,0.05)",
-      borderRadius: "3px"
+    '> p > code': {
+      padding: '0.2em 0.4em',
+      margin: '0',
+      fontSize: '85%',
+      backgroundColor: 'rgba(27,31,35,0.05)',
+      borderRadius: '3px'
     },
-    "> pre": {
-      padding: "16px",
-      overflow: "auto",
-      fontSize: "85%",
-      lineHeight: "1.45",
-      backgroundColor: "#f6f8fa",
-      borderRadius: "3px"
+    '> pre': {
+      padding: '16px',
+      overflow: 'auto',
+      fontSize: '85%',
+      lineHeight: '1.45',
+      backgroundColor: '#f6f8fa',
+      borderRadius: '3px'
     },
-    "> pre > code": {
-      display: "inline",
-      padding: "0",
-      margin: "0",
-      border: "0",
-      overflow: "visible",
-      lineHeight: "inherit",
-      wordWrap: "normal"
+    '> pre > code': {
+      display: 'inline',
+      padding: '0',
+      margin: '0',
+      border: '0',
+      overflow: 'visible',
+      lineHeight: 'inherit',
+      wordWrap: 'normal'
     }
   },
   ({ supportingText }) => typography.font({ size: supportingText ? 16 : 19 }),
@@ -101,13 +101,13 @@ const Paragraph = ({ children, ...props }) => (
     escapeHtml={false}
     skipHtml
     allowedTypes={[
-      "paragraph",
-      "emphasis",
-      "strong",
-      "link",
-      "inlineCode",
-      "code",
-      "text"
+      'paragraph',
+      'emphasis',
+      'strong',
+      'link',
+      'inlineCode',
+      'code',
+      'text'
     ]}
     renderers={{ link: props.linkRenderer }}
     {...props}
@@ -127,7 +127,7 @@ Paragraph.propTypes = {
 };
 
 Paragraph.defaultProps = {
-  children: "",
+  children: '',
   supportingText: false,
   linkRenderer: props => <Link {...props} />
 };

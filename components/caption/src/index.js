@@ -1,16 +1,16 @@
-import styled from "styled-components";
-import React from "react";
-import PropTypes from "prop-types";
-import { SECONDARY_TEXT_COLOUR } from "govuk-colours";
-import { spacing, typography } from "@govuk-react/lib";
+import styled from 'styled-components';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
+import { spacing, typography } from '@govuk-react/lib';
 import {
   CAPTION_SIZES,
   MEDIA_QUERIES,
   SPACING_POINTS,
   TYPOGRAPHY_SCALE
-} from "@govuk-react/constants";
+} from '@govuk-react/constants';
 
-const StyledCaption = styled("span")(
+const StyledCaption = styled('span')(
   ({ size }) => {
     const actualSize = Number.isNaN(Number(size)) ? CAPTION_SIZES[size] : size;
 
@@ -37,7 +37,7 @@ const StyledCaption = styled("span")(
     };
   },
   {
-    display: "block",
+    display: 'block',
     color: SECONDARY_TEXT_COLOUR
   },
   spacing.withWhiteSpace()
@@ -81,7 +81,7 @@ Caption.propTypes = {
 };
 
 Caption.defaultProps = {
-  size: "XL"
+  size: 'XL'
 };
 
 export default Caption;

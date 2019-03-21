@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const SVG = ({ children, fill, title, ...rest }) => (
   <svg
@@ -7,7 +7,7 @@ const SVG = ({ children, fill, title, ...rest }) => (
     fill={fill}
     width="100%"
     height="100%"
-    style={{ display: "block" }}
+    style={{ display: 'block' }}
     {...rest}
   >
     <title>{title}</title>
@@ -24,7 +24,7 @@ SVG.propTypes = {
 SVG.defaultProps = {
   children: undefined,
   title: undefined,
-  fill: "currentColor"
+  fill: 'currentColor'
 };
 
 export default SVG;

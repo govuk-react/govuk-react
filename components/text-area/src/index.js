@@ -1,38 +1,38 @@
 // https://github.com/alphagov/govuk-frontend/tree/master/src/components/textarea
 
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { BLACK, YELLOW, ERROR_COLOUR } from "govuk-colours";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { BLACK, YELLOW, ERROR_COLOUR } from 'govuk-colours';
 import {
   FONT_SIZE,
   LINE_HEIGHT,
   MEDIA_QUERIES,
   NTA_LIGHT
-} from "@govuk-react/constants";
+} from '@govuk-react/constants';
 
-import Label from "@govuk-react/label";
-import LabelText from "@govuk-react/label-text";
-import ErrorText from "@govuk-react/error-text";
-import HintText from "@govuk-react/hint-text";
+import Label from '@govuk-react/label';
+import LabelText from '@govuk-react/label-text';
+import ErrorText from '@govuk-react/error-text';
+import HintText from '@govuk-react/hint-text';
 
-const TextAreaField = styled("textarea")(
+const TextAreaField = styled('textarea')(
   {
-    boxSizing: "border-box",
+    boxSizing: 'border-box',
     fontFamily: NTA_LIGHT,
     fontWeight: 400,
-    textTransform: "none",
+    textTransform: 'none',
     fontSize: FONT_SIZE.SIZE_16,
     lineHeight: LINE_HEIGHT.SIZE_16,
     [MEDIA_QUERIES.LARGESCREEN]: {
       fontSize: FONT_SIZE.SIZE_19,
       lineHeight: LINE_HEIGHT.SIZE_19,
-      width: "75%"
+      width: '75%'
     },
-    width: "100%",
-    padding: "5px 4px 4px",
+    width: '100%',
+    padding: '5px 4px 4px',
     border: `2px solid ${BLACK}`,
-    ":focus": {
+    ':focus': {
       outline: `3px solid ${YELLOW}`,
       outlineOffset: 0
     }

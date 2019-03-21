@@ -1,32 +1,32 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { BLACK } from "govuk-colours";
-import { SPACING_POINTS } from "@govuk-react/constants";
-import { link, shape, spacing, typography } from "@govuk-react/lib";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { BLACK } from 'govuk-colours';
+import { SPACING_POINTS } from '@govuk-react/constants';
+import { link, shape, spacing, typography } from '@govuk-react/lib';
 
-const Anchor = styled("a")(
+const Anchor = styled('a')(
   typography.font({ size: 16 }),
   link.common(),
   link.styleText,
   {
-    display: "inline-block",
-    position: "relative",
+    display: 'inline-block',
+    position: 'relative',
     // margins here are not responsive, hence why they're not specified using withWhiteSpace
     marginTop: SPACING_POINTS[3],
     marginBottom: SPACING_POINTS[3],
-    paddingLeft: "14px",
+    paddingLeft: '14px',
     borderBottom: `1px solid ${BLACK}`,
-    textDecoration: "none",
-    "::before": {
-      ...shape.arrow({ direction: "left", base: 10, height: 6 }),
+    textDecoration: 'none',
+    '::before': {
+      ...shape.arrow({ direction: 'left', base: 10, height: 6 }),
 
       content: "''",
-      position: "absolute",
-      top: "-1px",
-      bottom: "1px",
+      position: 'absolute',
+      top: '-1px',
+      bottom: '1px',
       left: 0,
-      margin: "auto"
+      margin: 'auto'
     }
   },
   spacing.withWhiteSpace()
@@ -67,7 +67,7 @@ BackLink.propTypes = {
 };
 
 BackLink.defaultProps = {
-  children: "Back",
+  children: 'Back',
   onClick: undefined
 };
 

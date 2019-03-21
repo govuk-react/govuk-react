@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import SVG from "../SVGBase/index";
+import SVG from '../SVGBase/index';
 
 const IconImportant = ({ fill, title, ...rest }) => (
   <SVG
@@ -28,8 +28,8 @@ IconImportant.propTypes = {
 };
 
 IconImportant.defaultProps = {
-  title: "icon important",
-  fill: "currentColor"
+  title: 'icon important',
+  fill: 'currentColor'
 };
 
 export default IconImportant;

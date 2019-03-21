@@ -1,9 +1,9 @@
-import React from "react";
-import { MemoryRouter, Link } from "react-router-dom";
-import { mount } from "enzyme";
-import PropTypes from "prop-types";
+import React from 'react';
+import { MemoryRouter, Link } from 'react-router-dom';
+import { mount } from 'enzyme';
+import PropTypes from 'prop-types';
 
-import Paragraph, { exampleCodeBlock } from "./fixtures";
+import Paragraph, { exampleCodeBlock } from './fixtures';
 
 const ReactRouterLinkRenderer = ({ href, children }) =>
   href.match(/^\//) ? (
@@ -17,41 +17,41 @@ ReactRouterLinkRenderer.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-describe("Paragraph", () => {
-  const examplePlain = "Some basic text";
-  const exampleInlineCode = "`Some inline code example`";
-  const exampleEmphasis = "*Some emphasis example*";
-  const exampleStrong = "**Some strong/bold example**";
-  const exampleInternalLink = "[link text](/some_link)";
-  const exampleExternalLink = "[link text](http://google.com)";
+describe('Paragraph', () => {
+  const examplePlain = 'Some basic text';
+  const exampleInlineCode = '`Some inline code example`';
+  const exampleEmphasis = '*Some emphasis example*';
+  const exampleStrong = '**Some strong/bold example**';
+  const exampleInternalLink = '[link text](/some_link)';
+  const exampleExternalLink = '[link text](http://google.com)';
   let wrapper;
 
-  it("renders a paragraph element", () => {
+  it('renders a paragraph element', () => {
     wrapper = mount(<Paragraph>{examplePlain}</Paragraph>);
-    expect(wrapper.find("p")).toHaveLength(1);
+    expect(wrapper.find('p')).toHaveLength(1);
   });
 
-  it("renders a inline code block", () => {
+  it('renders a inline code block', () => {
     wrapper = mount(<Paragraph>{exampleInlineCode}</Paragraph>);
-    expect(wrapper.find("code")).toHaveLength(1);
+    expect(wrapper.find('code')).toHaveLength(1);
   });
 
-  it("renders a code block", () => {
+  it('renders a code block', () => {
     wrapper = mount(<Paragraph>{exampleCodeBlock}</Paragraph>);
-    expect(wrapper.find("pre")).toHaveLength(1);
+    expect(wrapper.find('pre')).toHaveLength(1);
   });
 
-  it("renders emphasis text", () => {
+  it('renders emphasis text', () => {
     wrapper = mount(<Paragraph>{exampleEmphasis}</Paragraph>);
-    expect(wrapper.find("em")).toHaveLength(1);
+    expect(wrapper.find('em')).toHaveLength(1);
   });
 
-  it("renders strong text", () => {
+  it('renders strong text', () => {
     wrapper = mount(<Paragraph>{exampleStrong}</Paragraph>);
-    expect(wrapper.find("strong")).toHaveLength(1);
+    expect(wrapper.find('strong')).toHaveLength(1);
   });
 
-  it("renders react router links with custom renderer", () => {
+  it('renders react router links with custom renderer', () => {
     wrapper = mount(
       <MemoryRouter>
         <Paragraph linkRenderer={ReactRouterLinkRenderer}>
@@ -59,33 +59,33 @@ describe("Paragraph", () => {
         </Paragraph>
       </MemoryRouter>
     );
-    expect(wrapper.find("a")).toHaveLength(1);
+    expect(wrapper.find('a')).toHaveLength(1);
   });
 
-  it("renders internal links as anchors", () => {
+  it('renders internal links as anchors', () => {
     wrapper = mount(
       <MemoryRouter>
         <Paragraph>{exampleInternalLink}</Paragraph>
       </MemoryRouter>
     );
-    expect(wrapper.find("a")).toHaveLength(1);
+    expect(wrapper.find('a')).toHaveLength(1);
   });
 
-  it("renders external links as anchors", () => {
+  it('renders external links as anchors', () => {
     wrapper = mount(<Paragraph>{exampleExternalLink}</Paragraph>);
-    expect(wrapper.find("a")).toHaveLength(1);
+    expect(wrapper.find('a')).toHaveLength(1);
   });
 
-  it("renders full example text from fixtures", () => {
+  it('renders full example text from fixtures', () => {
     wrapper = mount(<Paragraph>{examplePlain}</Paragraph>);
   });
 
-  it("renders as supporting text", () => {
+  it('renders as supporting text', () => {
     wrapper = mount(<Paragraph supportingText>{examplePlain}</Paragraph>);
-    expect(wrapper.prop("supportingText")).toBe(true);
+    expect(wrapper.prop('supportingText')).toBe(true);
   });
 
-  it("matches wrapper snapshot", () => {
+  it('matches wrapper snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });

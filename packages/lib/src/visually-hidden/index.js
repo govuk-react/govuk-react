@@ -6,7 +6,7 @@ function visuallyHidden({
   important: isImportant = true,
   focusable: isFocusable = false
 } = {}) {
-  const important = isImportant ? " !important" : "";
+  const important = isImportant ? ' !important' : '';
   return Object.assign(
     {},
     {
@@ -26,7 +26,7 @@ function visuallyHidden({
     },
     isFocusable
       ? {
-          "&:active,&:focus": {
+          '&:active,&:focus': {
             position: `static${important}`,
 
             width: `auto${important}`,

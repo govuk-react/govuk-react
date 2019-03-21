@@ -1,23 +1,23 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import { BLACK, ERROR_COLOUR } from "govuk-colours";
+import { BLACK, ERROR_COLOUR } from 'govuk-colours';
 import {
   BORDER_WIDTH_FORM_ELEMENT,
   BORDER_WIDTH_FORM_ELEMENT_ERROR,
   FOCUSABLE,
   SPACING_POINTS
-} from "@govuk-react/constants";
-import { spacing, typography } from "@govuk-react/lib";
+} from '@govuk-react/constants';
+import { spacing, typography } from '@govuk-react/lib';
 
-export const StyledInput = styled("input")(
+export const StyledInput = styled('input')(
   typography.font({ size: 19 }),
   FOCUSABLE,
   {
-    boxSizing: "border-box",
-    width: "100%",
-    height: "40px",
+    boxSizing: 'border-box',
+    width: '100%',
+    height: '40px',
     marginTop: 0,
 
     padding: SPACING_POINTS[1],
@@ -25,15 +25,15 @@ export const StyledInput = styled("input")(
     border: `${BORDER_WIDTH_FORM_ELEMENT} solid ${BLACK}`,
     borderRadius: 0,
 
-    appearance: "none",
+    appearance: 'none',
 
-    "&::-webkit-outer-spin-button, &::-webkit-inner-spin-button": {
+    '&::-webkit-outer-spin-button, &::-webkit-inner-spin-button': {
       margin: 0,
-      WebkitAppearance: "none"
+      WebkitAppearance: 'none'
     },
 
     '&[type="number"]': {
-      MozAppearance: "textfield"
+      MozAppearance: 'textfield'
     }
   },
   ({ error, errorColor }) => ({
@@ -62,7 +62,7 @@ export const StyledInput = styled("input")(
 const Input = ({ type, ...props }) => <StyledInput type={type} {...props} />;
 
 Input.defaultProps = {
-  type: "text"
+  type: 'text'
 };
 
 Input.propTypes = {

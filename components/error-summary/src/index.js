@@ -1,14 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import { TEXT_COLOUR, ERROR_COLOUR, FOCUS_COLOUR } from "govuk-colours";
+import { TEXT_COLOUR, ERROR_COLOUR, FOCUS_COLOUR } from 'govuk-colours';
 
-import { H2 } from "@govuk-react/heading";
-import Paragraph from "@govuk-react/paragraph";
-import UnorderedList from "@govuk-react/unordered-list";
-import Link from "@govuk-react/link";
-import ListItem from "@govuk-react/list-item";
+import { H2 } from '@govuk-react/heading';
+import Paragraph from '@govuk-react/paragraph';
+import UnorderedList from '@govuk-react/unordered-list';
+import Link from '@govuk-react/link';
+import ListItem from '@govuk-react/list-item';
 
 import {
   NTA_LIGHT,
@@ -20,23 +20,23 @@ import {
   SPACING,
   MEDIA_QUERIES,
   RESPONSIVE_4
-} from "@govuk-react/constants";
+} from '@govuk-react/constants';
 
-import { spacing } from "@govuk-react/lib";
+import { spacing } from '@govuk-react/lib';
 
 const StyledErrorText = styled(Link)({
   fontFamily: NTA_LIGHT,
-  WebkitFontSmoothing: "antialiased",
-  MozOsxFontSmoothing: "grayscale",
+  WebkitFontSmoothing: 'antialiased',
+  MozOsxFontSmoothing: 'grayscale',
   fontWeight: 700,
   marginBottom: SPACING.SCALE_1,
-  textDecoration: "underline",
-  textDecorationSkipInk: "none",
-  textTransform: "none",
-  cursor: "pointer",
+  textDecoration: 'underline',
+  textDecorationSkipInk: 'none',
+  textTransform: 'none',
+  cursor: 'pointer',
   fontSize: FONT_SIZE.SIZE_16,
   lineHeight: LINE_HEIGHT.SIZE_16,
-  ":visited": {
+  ':visited': {
     color: `${ERROR_COLOUR}`
   },
   [MEDIA_QUERIES.LARGESCREEN]: {
@@ -44,18 +44,18 @@ const StyledErrorText = styled(Link)({
     lineHeight: LINE_HEIGHT.SIZE_19
   },
   color: `${ERROR_COLOUR}`,
-  paddingTop: "4px",
-  paddingBottom: "2px"
+  paddingTop: '4px',
+  paddingBottom: '2px'
 });
 
-const StyledErrorSummary = styled("div")(
+const StyledErrorSummary = styled('div')(
   {
     color: TEXT_COLOUR,
     padding: RESPONSIVE_4.mobile,
     border: `${BORDER_WIDTH_MOBILE} solid ${ERROR_COLOUR}`,
-    "&:focus": {
+    '&:focus': {
       outline: `${FOCUS_WIDTH} solid ${FOCUS_COLOUR}`,
-      outlineOffset: "0"
+      outlineOffset: '0'
     },
     [MEDIA_QUERIES.LARGESCREEN]: {
       padding: RESPONSIVE_4.tablet,

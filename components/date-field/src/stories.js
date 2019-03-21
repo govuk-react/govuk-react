@@ -1,14 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { storiesOf } from "@storybook/react";
-import { WithDocsCustom } from "@govuk-react/storybook-components";
-import { action } from "@storybook/addon-actions";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { storiesOf } from '@storybook/react';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { action } from '@storybook/addon-actions';
 
-import DateField from ".";
-import ReadMe from "../README.md";
+import DateField from '.';
+import ReadMe from '../README.md';
 
-const stories = storiesOf("Form/Date field", module);
-const examples = storiesOf("Form/Date field/Examples", module);
+const stories = storiesOf('Form/Date field', module);
+const examples = storiesOf('Form/Date field/Examples', module);
 
 class ManagedDateField extends React.Component {
   state = {
@@ -43,32 +43,32 @@ ManagedDateField.propTypes = {
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add("Component default", () => (
+stories.add('Component default', () => (
   <ManagedDateField
     input={{
-      onFocus: action("date-focus"),
-      onBlur: action("date-blur"),
-      onChange: action("date-change")
+      onFocus: action('date-focus'),
+      onBlur: action('date-blur'),
+      onChange: action('date-change')
     }}
-    inputNames={{ day: "dayInputName" }}
+    inputNames={{ day: 'dayInputName' }}
   >
     What is your date of birth?
   </ManagedDateField>
 ));
 
-examples.add("Date with hint text", () => (
+examples.add('Date with hint text', () => (
   <DateField hintText="For example, 31 03 1980">
     What is your date of birth?
   </DateField>
 ));
 
-examples.add("Date with default values", () => (
-  <DateField defaultValues={{ day: "01", month: "02", year: "2018" }}>
+examples.add('Date with default values', () => (
+  <DateField defaultValues={{ day: '01', month: '02', year: '2018' }}>
     What is your date of birth ?
   </DateField>
 ));
 
-examples.add("Date with hint text & error", () => (
+examples.add('Date with hint text & error', () => (
   <DateField
     hintText="For example, 31 03 1980"
     errorText="Error message goes here"

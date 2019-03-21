@@ -1,10 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { mount } from "enzyme";
-import Link from "@govuk-react/link";
-import ListItem from "@govuk-react/list-item";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
+import Link from '@govuk-react/link';
+import ListItem from '@govuk-react/list-item';
 
-import { DocumentedComponent as OrderedList } from ".";
+import { DocumentedComponent as OrderedList } from '.';
 
 const wrapper = (
   <OrderedList>
@@ -20,9 +20,9 @@ const wrapper = (
   </OrderedList>
 );
 
-describe("OrderedList", () => {
-  it("renders without crashing", () => {
-    const div = document.createElement("div");
+describe('OrderedList', () => {
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
     ReactDOM.render(<OrderedList>Example</OrderedList>, div);
     ReactDOM.render(
       <OrderedList listStyleType="number">Example</OrderedList>,
@@ -34,7 +34,7 @@ describe("OrderedList", () => {
     );
   });
 
-  it("matches wrapper snapshot", () => {
-    expect(mount(wrapper)).toMatchSnapshot("wrapper mount");
+  it('matches wrapper snapshot', () => {
+    expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
   });
 });

@@ -10,28 +10,28 @@
 // Only one is valid, but at least one must be selected.
 // Therefore validation around the set of radios is required.
 
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { ERROR_COLOUR } from "govuk-colours";
-import LabelText from "@govuk-react/label-text";
-import ErrorText from "@govuk-react/error-text";
-import HintText from "@govuk-react/hint-text";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { ERROR_COLOUR } from 'govuk-colours';
+import LabelText from '@govuk-react/label-text';
+import ErrorText from '@govuk-react/error-text';
+import HintText from '@govuk-react/hint-text';
 
-import { BORDER_WIDTH_MOBILE, SPACING } from "@govuk-react/constants";
-import { spacing } from "@govuk-react/lib";
+import { BORDER_WIDTH_MOBILE, SPACING } from '@govuk-react/constants';
+import { spacing } from '@govuk-react/lib';
 
-const StyledFieldset = styled("div")(
+const StyledFieldset = styled('div')(
   {
     padding: 0,
     margin: 0,
     border: 0,
-    boxSizing: "border-box",
-    width: "100%",
-    ":after": {
+    boxSizing: 'border-box',
+    width: '100%',
+    ':after': {
       content: "''",
-      display: "table",
-      clear: "both"
+      display: 'table',
+      clear: 'both'
     }
   },
   ({ error }) => ({

@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { BREAKPOINTS } from "@govuk-react/constants";
-import { H2, H4 } from "@govuk-react/heading";
-import SectionBreak from "@govuk-react/section-break";
-import Table from "@govuk-react/table";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { BREAKPOINTS } from '@govuk-react/constants';
+import { H2, H4 } from '@govuk-react/heading';
+import SectionBreak from '@govuk-react/section-break';
+import Table from '@govuk-react/table';
 
-import Tabs from ".";
+import Tabs from '.';
 
 const flip2dArray = (prev, next) =>
   next.map((item, index) => [...(prev[index] || []), next[index]]);
@@ -43,24 +43,24 @@ const tableHead = (
 
 const arrTabularTabs = [
   {
-    title: "Past day",
+    title: 'Past day',
     arr: [[3, 1, 2], [0, 0, 0]],
-    id: "past-day"
+    id: 'past-day'
   },
   {
-    title: "Past week",
+    title: 'Past week',
     arr: [[24, 16, 24], [18, 20, 27]],
-    id: "past-week"
+    id: 'past-week'
   },
   {
-    title: "Past month",
+    title: 'Past month',
     arr: [[98, 122, 126], [95, 131, 142]],
-    id: "past-month"
+    id: 'past-month'
   },
   {
-    title: "Past year",
+    title: 'Past year',
     arr: [[1380, 1129, 1539], [1472, 1083, 1265]],
-    id: "past-year"
+    id: 'past-year'
   }
 ];
 
@@ -97,7 +97,7 @@ class TableTabs extends Component {
           >
             <H2>{title}</H2>
             <Table head={tableHead}>
-              {[["David Francis", "Paul Farmer", "Rita Patel"], ...arr]
+              {[['David Francis', 'Paul Farmer', 'Rita Patel'], ...arr]
                 .reduce(flip2dArray, [])
                 .map(innerArr => (
                   <Table.Row key={`${innerArr.join()}-col`}>
@@ -165,14 +165,14 @@ SimpleTabs.propTypes = sharedPropTypes;
 
 const arrSimpleMapped = [
   {
-    contentListItem: "Title 1",
-    contentPanel: "Mapped Panel content 1",
-    id: "first-panel"
+    contentListItem: 'Title 1',
+    contentPanel: 'Mapped Panel content 1',
+    id: 'first-panel'
   },
   {
-    contentListItem: "Title 2",
-    contentPanel: "Mapped Panel content 2",
-    id: "second-panel"
+    contentListItem: 'Title 2',
+    contentPanel: 'Mapped Panel content 2',
+    id: 'second-panel'
   }
 ];
 
@@ -222,14 +222,14 @@ SimpleMapTabs.propTypes = sharedPropTypes;
 
 const arrProposedBabel = [
   {
-    contentListItem: "Title 1",
-    contentPanel: "Panel content 1",
-    id: "first-panel"
+    contentListItem: 'Title 1',
+    contentPanel: 'Panel content 1',
+    id: 'first-panel'
   },
   {
-    contentListItem: "Title 2",
-    contentPanel: "Panel content 2",
-    id: "second-panel"
+    contentListItem: 'Title 2',
+    contentPanel: 'Panel content 2',
+    id: 'second-panel'
   }
 ];
 
@@ -298,12 +298,12 @@ const HooksExample = ({ defaultIndex }) => {
       <Tabs.List>
         {[
           {
-            content: "Hooks Title 1",
-            href: "#first-panel"
+            content: 'Hooks Title 1',
+            href: '#first-panel'
           },
           {
-            content: "Hooks Title 2",
-            href: "#second-panel"
+            content: 'Hooks Title 2',
+            href: '#second-panel'
           }
         ].map(({ content, href }, index) => (
           <Tabs.Tab
@@ -317,12 +317,12 @@ const HooksExample = ({ defaultIndex }) => {
       </Tabs.List>
       {[
         {
-          content: "Hooks Panel content 1",
-          id: "first-panel"
+          content: 'Hooks Panel content 1',
+          id: 'first-panel'
         },
         {
-          content: "Hooks Panel content 2",
-          id: "second-panel"
+          content: 'Hooks Panel content 2',
+          id: 'second-panel'
         }
       ].map(({ content, id }, index) => (
         <Tabs.Panel selected={tabIndex === index} id={id}>

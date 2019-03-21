@@ -1,54 +1,54 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { BLACK, WHITE } from "govuk-colours";
-import { MEDIA_QUERIES } from "@govuk-react/constants";
-import { typography } from "@govuk-react/lib";
-import CrownIcon from "@govuk-react/icon-crown";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { BLACK, WHITE } from 'govuk-colours';
+import { MEDIA_QUERIES } from '@govuk-react/constants';
+import { typography } from '@govuk-react/lib';
+import CrownIcon from '@govuk-react/icon-crown';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import TopNavWrapper from "./atoms/top-nav-wrapper";
-import TopNavInner from "./atoms/top-nav-inner";
-import BottomNavWrapper from "./atoms/bottom-nav-wrapper";
-import Company from "./atoms/company";
-import LogoSearchWrapper from "./atoms/logo-search-wrapper";
-import RightHandSide from "./atoms/right-hand-side";
-import SearchWrapper from "./atoms/search-wrapper";
-import UnorderedList from "./atoms/unordered-list";
-import ListItem from "./atoms/list-item";
-import MenuButton from "./atoms/menu-button";
+import TopNavWrapper from './atoms/top-nav-wrapper';
+import TopNavInner from './atoms/top-nav-inner';
+import BottomNavWrapper from './atoms/bottom-nav-wrapper';
+import Company from './atoms/company';
+import LogoSearchWrapper from './atoms/logo-search-wrapper';
+import RightHandSide from './atoms/right-hand-side';
+import SearchWrapper from './atoms/search-wrapper';
+import UnorderedList from './atoms/unordered-list';
+import ListItem from './atoms/list-item';
+import MenuButton from './atoms/menu-button';
 
-import IconTitle from "./atoms/icon-title";
+import IconTitle from './atoms/icon-title';
 
 // Layout/position of ServiceTitle
-const ServiceTitleWrapper = styled("div")(typography.font({ size: 24 }), {
-  width: "50%",
+const ServiceTitleWrapper = styled('div')(typography.font({ size: 24 }), {
+  width: '50%',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    width: "auto"
+    width: 'auto'
   }
 });
 
 // Layout/position of MenuButtonWrapper
-const MenuButtonWrapper = styled("div")({
-  display: "flex",
-  justifyContent: "flex-end",
-  alignItems: "flex-end",
-  width: "50%",
+const MenuButtonWrapper = styled('div')({
+  display: 'flex',
+  justifyContent: 'flex-end',
+  alignItems: 'flex-end',
+  width: '50%',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    width: "auto"
+    width: 'auto'
   }
 });
 
 // Provides a fallback for the mobile menu toggle
 // functionality when javascrcipt is unavailable
-const Input = styled("input")({
-  position: "absolute",
-  top: "-999em",
-  ":checked + ul": {
-    display: "flex"
+const Input = styled('input')({
+  position: 'absolute',
+  top: '-999em',
+  ':checked + ul': {
+    display: 'flex'
   },
   [MEDIA_QUERIES.LARGESCREEN]: {
-    display: "none"
+    display: 'none'
   }
 });
 
@@ -234,5 +234,5 @@ TopNav.IconTitle = IconTitle;
 
 export default TopNav;
 
-export asTopNavAnchor from "./hoc/asTopNavAnchor";
-export asNavLinkAnchor from "./hoc/asNavLinkAnchor";
+export asTopNavAnchor from './hoc/asTopNavAnchor';
+export asNavLinkAnchor from './hoc/asNavLinkAnchor';

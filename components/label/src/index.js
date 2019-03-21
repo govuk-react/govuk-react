@@ -1,25 +1,25 @@
 // https://github.com/alphagov/govuk-frontend/tree/master/src/components/
 
-import styled from "styled-components";
-import React from "react";
-import PropTypes from "prop-types";
-import { ERROR_COLOUR } from "govuk-colours";
-import { SPACING } from "@govuk-react/constants";
-import { spacing } from "@govuk-react/lib";
+import styled from 'styled-components';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { ERROR_COLOUR } from 'govuk-colours';
+import { SPACING } from '@govuk-react/constants';
+import { spacing } from '@govuk-react/lib';
 
 // TODO consider removing this, as it's not as per govuk-frontend
 // NB our approach to labels/fields differs at present, which is why we have this
 // we have no `form-group` - this, to an extent, replaces it...
 
-const StyledLabel = styled("label")(
+const StyledLabel = styled('label')(
   {
-    display: "flex",
-    flexDirection: "column",
-    boxSizing: "border-box",
-    ":after": {
+    display: 'flex',
+    flexDirection: 'column',
+    boxSizing: 'border-box',
+    ':after': {
       content: "''",
-      display: "table",
-      clear: "both"
+      display: 'table',
+      clear: 'both'
     }
   },
   ({ error }) => ({

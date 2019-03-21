@@ -1,18 +1,18 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { spacing, typography } from "@govuk-react/lib";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { spacing, typography } from '@govuk-react/lib';
 
-import List from "./atoms/list";
-import Panel from "./atoms/panel";
-import Tab from "./atoms/tab";
-import Title from "./atoms/title";
+import List from './atoms/list';
+import Panel from './atoms/panel';
+import Tab from './atoms/tab';
+import Title from './atoms/title';
 
-const TabsContainer = styled("div")(
+const TabsContainer = styled('div')(
   typography.font({ size: 19 }),
   typography.textColour,
-  spacing.responsiveMargin({ size: 1, direction: "top" }),
-  spacing.responsiveMargin({ size: 6, direction: "bottom" }),
+  spacing.responsiveMargin({ size: 1, direction: 'top' }),
+  spacing.responsiveMargin({ size: 6, direction: 'bottom' }),
   spacing.withWhiteSpace()
 );
 

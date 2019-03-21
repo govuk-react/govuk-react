@@ -1,12 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { mount } from "enzyme";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
 
-import Radio from ".";
+import Radio from '.';
 
-describe("Radio", () => {
+describe('Radio', () => {
   let props;
-  const example = "example";
+  const example = 'example';
 
   const wrapper = <Radio name={example}>{example}</Radio>;
 
@@ -23,31 +23,31 @@ describe("Radio", () => {
     };
   });
 
-  it("renders without crashing", () => {
-    const div = document.createElement("div");
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
     ReactDOM.render(wrapper, div);
   });
 
-  it("passes `props.children` to the rendered `wrapper` as `children`", () => {
+  it('passes `props.children` to the rendered `wrapper` as `children`', () => {
     expect(wrapper.props.name).toBe(props.name);
     expect(wrapper.props.children).toBe(props.children);
   });
 
-  it("matches snapshot", () => {
-    expect(mount(wrapper)).toMatchSnapshot("standard mount");
+  it('matches snapshot', () => {
+    expect(mount(wrapper)).toMatchSnapshot('standard mount');
   });
 
-  it("disabled", () => {
-    expect(mount(<Radio disabled>Example</Radio>)).toMatchSnapshot("disabled");
+  it('disabled', () => {
+    expect(mount(<Radio disabled>Example</Radio>)).toMatchSnapshot('disabled');
   });
 
-  it("matches snapshot for inline", () => {
-    expect(mount(wrapperInline)).toMatchSnapshot("inline mount");
+  it('matches snapshot for inline', () => {
+    expect(mount(wrapperInline)).toMatchSnapshot('inline mount');
   });
 
-  it("can render with hint text", () => {
+  it('can render with hint text', () => {
     expect(
       mount(<Radio hint="Hint text">Example with hint text</Radio>)
-    ).toMatchSnapshot("hint text");
+    ).toMatchSnapshot('hint text');
   });
 });

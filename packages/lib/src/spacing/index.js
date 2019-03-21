@@ -5,14 +5,14 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/overrides/_spacing.scss
 // https://github.com/alphagov/govuk-frontend/blob/master/src/settings/_spacing.scss
 
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import {
   MEDIA_QUERIES,
   SPACING_MAP,
   SPACING_MAP_INDEX,
   SPACING_POINTS,
   WIDTHS
-} from "@govuk-react/constants";
+} from '@govuk-react/constants';
 
 export function simple(size) {
   const scale = SPACING_POINTS[size];
@@ -29,7 +29,7 @@ export function simple(size) {
 function styleForDirection(size, property, direction) {
   // NB styled-components automatically sets style to include `px` if needed
   return {
-    [direction && direction !== "all"
+    [direction && direction !== 'all'
       ? `${property}-${direction}`
       : property]: size
   };
@@ -45,7 +45,7 @@ export function responsive({ size, property, direction, adjustment = 0 } = {}) {
   }
 
   if (!property) {
-    throw Error("No property passed to responsiveSpacing");
+    throw Error('No property passed to responsiveSpacing');
   }
 
   // TODO consider checking adjustment is a number
@@ -83,14 +83,14 @@ export function responsive({ size, property, direction, adjustment = 0 } = {}) {
 
 export function responsiveMargin(value) {
   if (Number.isInteger(value)) {
-    return responsive({ size: value, property: "margin" });
+    return responsive({ size: value, property: 'margin' });
   }
 
   const { size, direction, adjustment } = value;
 
   return responsive({
     size,
-    property: "margin",
+    property: 'margin',
     direction,
     adjustment
   });
@@ -98,14 +98,14 @@ export function responsiveMargin(value) {
 
 export function responsivePadding(value) {
   if (Number.isInteger(value)) {
-    return responsive({ size: value, property: "padding" });
+    return responsive({ size: value, property: 'padding' });
   }
 
   const { size, direction, adjustment } = value;
 
   return responsive({
     size,
-    property: "padding",
+    property: 'padding',
     direction,
     adjustment
   });
@@ -149,7 +149,7 @@ export function withWhiteSpace(config = {}) {
 
     if (marginBottom !== undefined) {
       styles.push(
-        responsiveMargin({ size: marginBottom, direction: "bottom" })
+        responsiveMargin({ size: marginBottom, direction: 'bottom' })
       );
     }
 
@@ -157,7 +157,7 @@ export function withWhiteSpace(config = {}) {
   };
 }
 
-const Directions = PropTypes.oneOf(["all", "top", "right", "bottom", "left"]);
+const Directions = PropTypes.oneOf(['all', 'top', 'right', 'bottom', 'left']);
 
 const SpacingShape = PropTypes.shape({
   size: PropTypes.number.isRequired,
@@ -187,7 +187,7 @@ export function withWidth(config = {}) {
       const { mediaQuery = MEDIA_QUERIES.TABLET, noDefault } = config;
 
       return {
-        width: noDefault ? undefined : "100%",
+        width: noDefault ? undefined : '100%',
         [mediaQuery]: {
           width
         }

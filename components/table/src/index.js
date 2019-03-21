@@ -1,25 +1,25 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/components/table/_table.scss
 
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { spacing, typography } from "@govuk-react/lib";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { spacing, typography } from '@govuk-react/lib';
 
-import TableHeader from "./atoms/TableHeader";
-import TableBody from "./atoms/TableBody";
-import Caption from "./atoms/Caption";
+import TableHeader from './atoms/TableHeader';
+import TableBody from './atoms/TableBody';
+import Caption from './atoms/Caption';
 
-import CellHeader from "./atoms/CellHeader";
-import Cell from "./atoms/Cell";
-import Row from "./atoms/Row";
+import CellHeader from './atoms/CellHeader';
+import Cell from './atoms/Cell';
+import Row from './atoms/Row';
 
-const StyledTable = styled("table")(
+const StyledTable = styled('table')(
   typography.font({ size: 19 }),
   typography.textColour,
   {
-    width: "100%",
+    width: '100%',
     borderSpacing: 0,
-    borderCollapse: "collapse"
+    borderCollapse: 'collapse'
   },
   spacing.withWhiteSpace({ marginBottom: 6 })
 );

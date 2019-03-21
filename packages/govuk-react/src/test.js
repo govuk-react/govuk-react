@@ -1,10 +1,10 @@
-import fs from "fs";
-import path from "path";
+import fs from 'fs';
+import path from 'path';
 
-import * as packageExports from "./index";
-import pkg from "../package.json";
+import * as packageExports from './index';
+import pkg from '../package.json';
 
-describe("Exports", () => {
+describe('Exports', () => {
   // all exports are truthy
   Object.keys(packageExports).map(exportName =>
     it(`${exportName} is truthy`, () => {
@@ -17,10 +17,10 @@ describe("Exports", () => {
 const dirs = p =>
   fs.readdirSync(p).filter(f => fs.statSync(path.join(p, f)).isDirectory());
 
-describe("Components", () => {
+describe('Components', () => {
   // all componenents are dependencies of govuk-react
   // if needed in future, can add an exclusion list/array to this test
-  const components = dirs(path.join(__dirname, "../../../components"));
+  const components = dirs(path.join(__dirname, '../../../components'));
 
   // TODO: this fails if a component is deleted/renamed and es/lib/node_modules are left behind.
   // We either need a clean command that can be run before tests or check the existence of package.json in each component folder.

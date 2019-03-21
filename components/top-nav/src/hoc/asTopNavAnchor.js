@@ -1,22 +1,22 @@
-import React from "react";
-import styled from "styled-components";
-import PropTypes from "prop-types";
-import { WHITE, YELLOW } from "govuk-colours";
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { WHITE, YELLOW } from 'govuk-colours';
 
 const asTopNavAnchor = AnchorType => {
   const Anchor = props => <AnchorType {...props}>{props.children}</AnchorType>;
 
   const StyledHoc = styled(Anchor)({
     color: WHITE, // TODO: active state, LIGHT_BLUE
-    textDecoration: "none",
-    textDecorationSkipInk: "none",
-    borderBottom: "1px solid transparent",
+    textDecoration: 'none',
+    textDecorationSkipInk: 'none',
+    borderBottom: '1px solid transparent',
     fontWeight: 700,
     lineHeight: 1,
-    ":hover": {
+    ':hover': {
       borderBottomColor: WHITE // TODO: active state, LIGHT_BLUE
     },
-    ":focus": {
+    ':focus': {
       outline: `3px solid ${YELLOW}`
     }
   });

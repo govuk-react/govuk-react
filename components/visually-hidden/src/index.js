@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { visuallyHidden } from "@govuk-react/lib";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { visuallyHidden } from '@govuk-react/lib';
 
-const VisuallyHidden = styled("span").attrs(({ focusable, tabIndex }) =>
+const VisuallyHidden = styled('span').attrs(({ focusable, tabIndex }) =>
   // if we're focusable but don't have a `tabIndex` set, add one
-  focusable && tabIndex === undefined ? { tabIndex: "0" } : undefined
+  focusable && tabIndex === undefined ? { tabIndex: '0' } : undefined
 )(({ focusable, important }) => visuallyHidden({ focusable, important }));
 
 /**

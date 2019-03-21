@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import PropTypes from "prop-types";
-import { SPACING } from "@govuk-react/constants";
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { SPACING } from '@govuk-react/constants';
 
-const StyledLayout = styled("div")({
+const StyledLayout = styled('div')({
   padding: SPACING.SCALE_2,
-  boxSizing: "border-box"
+  boxSizing: 'border-box'
 });
 
 /**

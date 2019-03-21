@@ -1,10 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { mount } from "enzyme";
-import Link from "@govuk-react/link";
-import ListItem from "@govuk-react/list-item";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
+import Link from '@govuk-react/link';
+import ListItem from '@govuk-react/list-item';
 
-import UnorderedList from ".";
+import UnorderedList from '.';
 
 const wrapper = (
   <UnorderedList>
@@ -20,9 +20,9 @@ const wrapper = (
   </UnorderedList>
 );
 
-describe("UnorderedList", () => {
-  it("renders with and without props, without crashing", () => {
-    const div = document.createElement("div");
+describe('UnorderedList', () => {
+  it('renders with and without props, without crashing', () => {
+    const div = document.createElement('div');
     ReactDOM.render(<UnorderedList>Example</UnorderedList>, div);
     ReactDOM.render(
       <UnorderedList listStyleType="number">Example</UnorderedList>,
@@ -30,7 +30,7 @@ describe("UnorderedList", () => {
     );
   });
 
-  it("matches wrapper snapshot", () => {
-    expect(mount(wrapper)).toMatchSnapshot("wrapper mount");
+  it('matches wrapper snapshot', () => {
+    expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
   });
 });

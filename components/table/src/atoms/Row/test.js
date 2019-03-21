@@ -1,10 +1,10 @@
-import React from "react";
-import { mount } from "enzyme";
+import React from 'react';
+import { mount } from 'enzyme';
 
-import Row from ".";
+import Row from '.';
 
-describe("Row", () => {
-  it("renders without crashing", () => {
+describe('Row', () => {
+  it('renders without crashing', () => {
     mount(
       <table>
         <tbody>

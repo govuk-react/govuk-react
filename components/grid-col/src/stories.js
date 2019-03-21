@@ -1,32 +1,32 @@
-import React from "react";
-import styled from "styled-components";
-import { storiesOf } from "@storybook/react";
-import { WithDocsCustom } from "@govuk-react/storybook-components";
+import React from 'react';
+import styled from 'styled-components';
+import { storiesOf } from '@storybook/react';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-import GridRow from "@govuk-react/grid-row";
-import { H2 } from "@govuk-react/heading";
-import Paragraph from "@govuk-react/paragraph";
+import GridRow from '@govuk-react/grid-row';
+import { H2 } from '@govuk-react/heading';
+import Paragraph from '@govuk-react/paragraph';
 
-import GridCol from ".";
-import ReadMe from "../README.md";
+import GridCol from '.';
+import ReadMe from '../README.md';
 
-const Content = styled("div")({
-  textIndent: "-999em",
-  backgroundColor: "#7DADD3",
+const Content = styled('div')({
+  textIndent: '-999em',
+  backgroundColor: '#7DADD3',
   backgroundImage:
-    "repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)"
+    'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)'
 });
 
-const stories = storiesOf("Layout/GridCol", module).addParameters({
+const stories = storiesOf('Layout/GridCol', module).addParameters({
   chromatic: { viewports: [320, 720, 1200] }
 });
-const examples = storiesOf("Layout/GridCol/Examples", module).addParameters({
+const examples = storiesOf('Layout/GridCol/Examples', module).addParameters({
   chromatic: { viewports: [320, 720, 1200] }
 });
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add("Component default", () => (
+stories.add('Component default', () => (
   <GridRow>
     <GridCol setWidth="one-half">
       <H2>Half column</H2>
@@ -47,7 +47,7 @@ stories.add("Component default", () => (
   </GridRow>
 ));
 
-examples.add("Column Halves", () => (
+examples.add('Column Halves', () => (
   <GridRow>
     <GridCol setWidth="one-half">
       <Content>content</Content>
@@ -58,7 +58,7 @@ examples.add("Column Halves", () => (
   </GridRow>
 ));
 
-examples.add("Column Thirds", () => (
+examples.add('Column Thirds', () => (
   <GridRow>
     <GridCol setWidth="one-third">
       <Content>content</Content>
@@ -72,7 +72,7 @@ examples.add("Column Thirds", () => (
   </GridRow>
 ));
 
-examples.add("Column Two Thirds / One Third", () => (
+examples.add('Column Two Thirds / One Third', () => (
   <GridRow>
     <GridCol setWidth="two-thirds">
       <Content>content</Content>
@@ -83,7 +83,7 @@ examples.add("Column Two Thirds / One Third", () => (
   </GridRow>
 ));
 
-examples.add("Column One Third / Two Thirds", () => (
+examples.add('Column One Third / Two Thirds', () => (
   <GridRow>
     <GridCol setWidth="one-third">
       <Content>content</Content>
@@ -94,7 +94,7 @@ examples.add("Column One Third / Two Thirds", () => (
   </GridRow>
 ));
 
-examples.add("Column Four Quarters", () => (
+examples.add('Column Four Quarters', () => (
   <GridRow>
     <GridCol setWidth="one-quarter">
       <Content>content</Content>
@@ -111,7 +111,7 @@ examples.add("Column Four Quarters", () => (
   </GridRow>
 ));
 
-examples.add("Column One Quarter and auto-fill", () => (
+examples.add('Column One Quarter and auto-fill', () => (
   <GridRow>
     <GridCol setWidth="one-quarter">
       <Content>content</Content>
@@ -122,7 +122,7 @@ examples.add("Column One Quarter and auto-fill", () => (
   </GridRow>
 ));
 
-examples.add("Column widths differing between tablet and desktop", () => (
+examples.add('Column widths differing between tablet and desktop', () => (
   <GridRow>
     <GridCol setWidth="one-quarter" setDesktopWidth="one-third">
       <Content>content</Content>
@@ -133,7 +133,7 @@ examples.add("Column widths differing between tablet and desktop", () => (
   </GridRow>
 ));
 
-examples.add("Custom widths, differing between tablet and desktop", () => (
+examples.add('Custom widths, differing between tablet and desktop', () => (
   <GridRow>
     <GridCol setWidth="60%" setDesktopWidth="auto">
       <Content>content</Content>

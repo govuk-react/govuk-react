@@ -1,9 +1,9 @@
-import React, { Fragment } from "react";
-import { mount } from "enzyme";
+import React, { Fragment } from 'react';
+import { mount } from 'enzyme';
 
-import GridCol from ".";
+import GridCol from '.';
 
-describe("GridCol", () => {
+describe('GridCol', () => {
   const OLD_ENV = process.env;
   // eslint-disable-next-line no-console
   const nativeWarn = console.warn;
@@ -27,12 +27,12 @@ describe("GridCol", () => {
     process.env = OLD_ENV;
   });
 
-  it("renders without crashing", () => {
+  it('renders without crashing', () => {
     mount(<GridCol>example</GridCol>);
   });
 
-  it("produces deprecation warnings for old-style props when not in production", () => {
-    process.env.NODE_ENV = "development";
+  it('produces deprecation warnings for old-style props when not in production', () => {
+    process.env.NODE_ENV = 'development';
 
     mount(<GridCol columnOneThird>example</GridCol>);
     mount(<GridCol columnTwoThirds>example</GridCol>);
@@ -43,8 +43,8 @@ describe("GridCol", () => {
     expect(warnCallCount).not.toEqual(0);
   });
 
-  it("does not produces deprecation warnings for old-style props when in production", () => {
-    process.env.NODE_ENV = "production";
+  it('does not produces deprecation warnings for old-style props when in production', () => {
+    process.env.NODE_ENV = 'production';
 
     mount(<GridCol columnOneThird>example</GridCol>);
     mount(<GridCol columnTwoThirds>example</GridCol>);
@@ -53,13 +53,13 @@ describe("GridCol", () => {
     expect(warnCallCount).toEqual(0);
   });
 
-  it("simple render matches snapshot", () => {
+  it('simple render matches snapshot', () => {
     const wrapper = mount(<GridCol>example</GridCol>);
 
-    expect(wrapper).toMatchSnapshot("GridCol simple example");
+    expect(wrapper).toMatchSnapshot('GridCol simple example');
   });
 
-  it("renders custom widths matching snapshot", () => {
+  it('renders custom widths matching snapshot', () => {
     const example = (
       <Fragment>
         <GridCol setWidth="one-quarter">example</GridCol>
@@ -73,6 +73,6 @@ describe("GridCol", () => {
     );
     const wrapper = mount(example);
 
-    expect(wrapper).toMatchSnapshot("GridCol custom widths example");
+    expect(wrapper).toMatchSnapshot('GridCol custom widths example');
   });
 });

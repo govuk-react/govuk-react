@@ -4,13 +4,13 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_main-wrapper.scss
 // https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_width-container.scss
 
-import React from "react";
-import PropTypes from "prop-types";
-import TopNav from "@govuk-react/top-nav";
+import React from 'react';
+import PropTypes from 'prop-types';
+import TopNav from '@govuk-react/top-nav';
 // import Footer from '@govuk-react/footer';
 
-import Main from "./atoms/main";
-import WidthContainer from "./atoms/width-container";
+import Main from './atoms/main';
+import WidthContainer from './atoms/width-container';
 
 /**
  *

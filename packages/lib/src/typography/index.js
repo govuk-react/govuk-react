@@ -9,13 +9,13 @@ import {
   FONT_WEIGHTS,
   MEDIA_QUERIES,
   TYPOGRAPHY_SCALE
-} from "@govuk-react/constants";
-import { BLACK } from "govuk-colours";
+} from '@govuk-react/constants';
+import { BLACK } from 'govuk-colours';
 
 export const textColour = {
   color: BLACK,
   [MEDIA_QUERIES.PRINT]: {
-    color: "#000"
+    color: '#000'
   }
 };
 
@@ -24,8 +24,8 @@ export const textColor = textColour;
 export function common(fontFamily = FONT_STACK) {
   return {
     fontFamily,
-    WebkitFontSmoothing: "antialiased",
-    MozOsxFontSmoothing: "grayscale",
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale',
     [MEDIA_QUERIES.PRINT]: {
       fontFamily: FONT_STACK_PRINT
     }
@@ -56,7 +56,7 @@ export function responsive(size, overrideLineHeight) {
 
 export function font({
   size,
-  weight = "regular",
+  weight = 'regular',
   tabular = false,
   lineHeight
 } = {}) {

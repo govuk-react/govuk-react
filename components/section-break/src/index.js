@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { spacing } from "@govuk-react/lib";
-import { BORDER_COLOUR } from "govuk-colours";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { spacing } from '@govuk-react/lib';
+import { BORDER_COLOUR } from 'govuk-colours';
 
 const breakSizes = {
   XL: 8,
@@ -13,7 +13,7 @@ const breakSizes = {
   MEDIUM: 4
 };
 
-const SectionBreak = styled("hr")(
+const SectionBreak = styled('hr')(
   {
     margin: 0,
     border: 0
@@ -23,7 +23,7 @@ const SectionBreak = styled("hr")(
 
     if (size) {
       return spacing.withWhiteSpace({
-        margin: { size, direction: ["top", "bottom"] }
+        margin: { size, direction: ['top', 'bottom'] }
       });
     }
 
@@ -53,7 +53,7 @@ const SectionBreak = styled("hr")(
 const SectionBreakDocumented = props => <SectionBreak {...props} />;
 
 SectionBreakDocumented.propTypes = {
-  level: PropTypes.oneOf(["XL", "XLARGE", "L", "LARGE", "M", "MEDIUM"]),
+  level: PropTypes.oneOf(['XL', 'XLARGE', 'L', 'LARGE', 'M', 'MEDIUM']),
   visible: PropTypes.bool
 };
 SectionBreakDocumented.defaultProps = {

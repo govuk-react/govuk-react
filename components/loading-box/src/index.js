@@ -1,51 +1,51 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { CSSTransition } from "react-transition-group";
-import hexRgb from "hex-rgb";
-import { Spinner } from "@govuk-react/icons";
-import { BLACK, WHITE } from "govuk-colours";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { CSSTransition } from 'react-transition-group';
+import hexRgb from 'hex-rgb';
+import { Spinner } from '@govuk-react/icons';
+import { BLACK, WHITE } from 'govuk-colours';
 
-const spinnerClassName = "icon-loading";
+const spinnerClassName = 'icon-loading';
 
-const StyledContainer = styled("div")({
-  position: "relative",
-  paddingBottom: "2px",
-  minHeight: "10px"
+const StyledContainer = styled('div')({
+  position: 'relative',
+  paddingBottom: '2px',
+  minHeight: '10px'
 });
 
-const Innerwrap = styled("div")(
+const Innerwrap = styled('div')(
   ({ timeIn, timeOut, backgroundColor, backgroundColorOpacity }) => ({
-    position: "absolute",
-    height: "100%",
+    position: 'absolute',
+    height: '100%',
     top: 0,
     right: 0,
     left: 0,
     bottom: 0,
-    display: "flex",
-    justifyContent: "center",
+    display: 'flex',
+    justifyContent: 'center',
     [`& .${spinnerClassName}`]: {
-      position: "absolute",
+      position: 'absolute',
       zIndex: 101,
       opacity: 1,
-      display: "block",
-      height: "100%",
-      maxHeight: "calc(50vh + 100px)",
+      display: 'block',
+      height: '100%',
+      maxHeight: 'calc(50vh + 100px)',
       transition: `opacity ${timeIn}ms ease-in-out`,
-      willChange: "opacity"
+      willChange: 'opacity'
     },
-    "& .overlay": {
+    '& .overlay': {
       zIndex: 100,
       transition: `background-color ${timeIn}ms ease-in-out`,
-      willChange: "background-color",
+      willChange: 'background-color',
       backgroundColor: `rgba(
       ${hexRgb(backgroundColor)[0]},
       ${hexRgb(backgroundColor)[1]},
       ${hexRgb(backgroundColor)[2]},
       ${backgroundColorOpacity})`
     },
-    ".fade-enter": {
-      "& .overlay": {
+    '.fade-enter': {
+      '& .overlay': {
         backgroundColor: `rgba(
         ${hexRgb(backgroundColor)[0]},
         ${hexRgb(backgroundColor)[1]},
@@ -59,8 +59,8 @@ const Innerwrap = styled("div")(
         transitionDelay: `${timeIn / 2}ms`
       }
     },
-    ".fade-enter-active": {
-      "& .overlay": {
+    '.fade-enter-active': {
+      '& .overlay': {
         backgroundColor: `rgba(
         ${hexRgb(backgroundColor)[0]},
         ${hexRgb(backgroundColor)[1]},
@@ -74,8 +74,8 @@ const Innerwrap = styled("div")(
         transitionDelay: `${timeIn / 2}ms`
       }
     },
-    ".fade-exit": {
-      "& .overlay": {
+    '.fade-exit': {
+      '& .overlay': {
         backgroundColor: `rgba(
         ${hexRgb(backgroundColor)[0]},
         ${hexRgb(backgroundColor)[1]},
@@ -88,8 +88,8 @@ const Innerwrap = styled("div")(
         transitionDuration: `${timeOut}ms`
       }
     },
-    ".fade-exit-active": {
-      "& .overlay": {
+    '.fade-exit-active': {
+      '& .overlay': {
         backgroundColor: `rgba(
         ${hexRgb(backgroundColor)[0]},
         ${hexRgb(backgroundColor)[1]},
@@ -105,15 +105,15 @@ const Innerwrap = styled("div")(
   })
 );
 
-const Overlay = styled("div")({
-  position: "absolute",
+const Overlay = styled('div')({
+  position: 'absolute',
   top: 0,
   right: 0,
   bottom: 0,
   left: 0,
-  overflow: "hidden",
-  height: "100%",
-  width: "100%"
+  overflow: 'hidden',
+  height: '100%',
+  width: '100%'
 });
 
 /**

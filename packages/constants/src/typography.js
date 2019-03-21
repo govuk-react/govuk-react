@@ -3,7 +3,7 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/settings/_typography-font.scss
 // https://github.com/alphagov/govuk-frontend/blob/master/src/core/_typography.scss
 
-import { RESPONSIVE_8, RESPONSIVE_6, RESPONSIVE_4 } from "./spacing";
+import { RESPONSIVE_8, RESPONSIVE_6, RESPONSIVE_4 } from './spacing';
 
 export const TYPOGRAPHY_SCALE = {
   80: {
@@ -184,25 +184,25 @@ export const BODY_SIZES = {
 
 // Lookup between numerical header level and associated html element
 export const LEVEL_TAG = {
-  1: "h1",
-  2: "h2",
-  3: "h3",
-  4: "h4",
-  5: "h5",
-  6: "h6"
+  1: 'h1',
+  2: 'h2',
+  3: 'h3',
+  4: 'h4',
+  5: 'h5',
+  6: 'h6'
 };
 
 // Lookup between a header level (1-6) and the associated default font size
 export const LEVEL_SIZE = {
-  1: "XLARGE",
-  2: "LARGE",
-  3: "MEDIUM",
-  4: "SMALL",
-  5: "SMALL",
-  6: "SMALL"
+  1: 'XLARGE',
+  2: 'LARGE',
+  3: 'MEDIUM',
+  4: 'SMALL',
+  5: 'SMALL',
+  6: 'SMALL'
 };
 
 export const FONT_WEIGHTS = {
-  bold: "700",
-  regular: "400"
+  bold: '700',
+  regular: '400'
 };

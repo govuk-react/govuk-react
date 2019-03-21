@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import PropTypes from "prop-types";
-import { spacing, typography } from "@govuk-react/lib";
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { spacing, typography } from '@govuk-react/lib';
 
-const StyledParagraph = styled("p")(
+const StyledParagraph = styled('p')(
   typography.textColour,
   typography.font({ size: 24 }),
   { marginTop: 0 },

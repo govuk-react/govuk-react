@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import SVG from "../SVGBase/index";
+import SVG from '../SVGBase/index';
 
 const ArrowLeft = ({ fill, title, ...rest }) => (
   <SVG viewBox="-0.2 0 17 14" title={title} fill={fill} {...rest}>
@@ -15,8 +15,8 @@ ArrowLeft.propTypes = {
 };
 
 ArrowLeft.defaultProps = {
-  title: "arrow left",
-  fill: "currentColor"
+  title: 'arrow left',
+  fill: 'currentColor'
 };
 
 export default ArrowLeft;

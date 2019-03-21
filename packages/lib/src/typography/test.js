@@ -5,42 +5,42 @@ import {
   FONT_WEIGHTS,
   MEDIA_QUERIES,
   TYPOGRAPHY_SCALE
-} from "@govuk-react/constants";
-import * as typography from ".";
+} from '@govuk-react/constants';
+import * as typography from '.';
 
-describe("typography lib", () => {
-  it("includes textColour", () => {
+describe('typography lib', () => {
+  it('includes textColour', () => {
     expect(typography.textColour).toBeTruthy();
   });
 
-  it("includes textColor alias for textColour", () => {
+  it('includes textColor alias for textColour', () => {
     expect(typography.textColor).toEqual(typography.textColour);
   });
 
-  describe("common", () => {
-    it("sets default font", () => {
+  describe('common', () => {
+    it('sets default font', () => {
       const result = typography.common();
 
       expect(result.fontFamily).toEqual(FONT_STACK);
       expect(result[MEDIA_QUERIES.PRINT].fontFamily).toEqual(FONT_STACK_PRINT);
     });
 
-    it("allows an override fontFamily value", () => {
-      const result = typography.common("test");
+    it('allows an override fontFamily value', () => {
+      const result = typography.common('test');
 
-      expect(result.fontFamily).toEqual("test");
+      expect(result.fontFamily).toEqual('test');
       expect(result[MEDIA_QUERIES.PRINT].fontFamily).toEqual(FONT_STACK_PRINT);
     });
   });
 
-  describe("responsive", () => {
-    it("allows any font size defined in the typography scale", () => {
+  describe('responsive', () => {
+    it('allows any font size defined in the typography scale', () => {
       Object.keys(TYPOGRAPHY_SCALE).forEach(size => {
         expect(() => typography.responsive(size)).not.toThrow();
       });
     });
 
-    it("produces mobile-first sizes with definitions for tablet and print", () => {
+    it('produces mobile-first sizes with definitions for tablet and print', () => {
       Object.entries(TYPOGRAPHY_SCALE).forEach(([size, scale]) => {
         const style = typography.responsive(size);
 
@@ -62,7 +62,7 @@ describe("typography lib", () => {
       });
     });
 
-    it("can override lineHeight", () => {
+    it('can override lineHeight', () => {
       Object.keys(TYPOGRAPHY_SCALE).forEach(size => {
         const style = typography.responsive(size, 999);
 
@@ -72,18 +72,18 @@ describe("typography lib", () => {
       });
     });
 
-    it("throws when not given a size", () => {
+    it('throws when not given a size', () => {
       expect(() => typography.responsive()).toThrow();
     });
 
-    it("throws when given a size not in the typography scale", () => {
-      expect(() => typography.responsive("test")).toThrow();
+    it('throws when given a size not in the typography scale', () => {
+      expect(() => typography.responsive('test')).toThrow();
       expect(() => typography.responsive(99999)).toThrow();
     });
   });
 
-  describe("font", () => {
-    it("defaults to standard font, regular weight", () => {
+  describe('font', () => {
+    it('defaults to standard font, regular weight', () => {
       const style = typography.font();
 
       expect(style).toEqual(
@@ -93,23 +93,23 @@ describe("typography lib", () => {
       );
     });
 
-    it("can accept tabular flag to pick tabular font", () => {
+    it('can accept tabular flag to pick tabular font', () => {
       const style = typography.font({ tabular: true });
 
       expect(style.fontFamily).toEqual(FONT_STACK_TABULAR);
     });
 
-    it("accepts weight values from FONT_WEIGHTS list", () => {
+    it('accepts weight values from FONT_WEIGHTS list', () => {
       Object.entries(FONT_WEIGHTS).forEach(([weight, value]) => {
         expect(typography.font({ weight }).fontWeight).toEqual(value);
       });
     });
 
-    it("ignores weight values we do not support", () => {
-      expect(typography.font({ weight: "fooBar" }).fontWeight).toBeUndefined();
+    it('ignores weight values we do not support', () => {
+      expect(typography.font({ weight: 'fooBar' }).fontWeight).toBeUndefined();
     });
 
-    it("allows size and custom lineHeight to be set", () => {
+    it('allows size and custom lineHeight to be set', () => {
       Object.keys(TYPOGRAPHY_SCALE).forEach(size => {
         const style = typography.font({ size, lineHeight: 999 });
 

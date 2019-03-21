@@ -1,21 +1,21 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import UnorderedList from "@govuk-react/unordered-list";
-import { NTA_LIGHT } from "@govuk-react/constants";
-import { spacing } from "@govuk-react/lib";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import UnorderedList from '@govuk-react/unordered-list';
+import { NTA_LIGHT } from '@govuk-react/constants';
+import { spacing } from '@govuk-react/lib';
 
-const StyledContainer = styled("div")(
+const StyledContainer = styled('div')(
   { fontFamily: NTA_LIGHT },
   spacing.withWhiteSpace()
 );
 
-const StyledDefinition = styled("li")({
-  fontSize: "24px",
+const StyledDefinition = styled('li')({
+  fontSize: '24px',
   fontWeight: 700,
   lineHeight: 1.25,
-  "> a": {
-    textDecoration: "none"
+  '> a': {
+    textDecoration: 'none'
   }
 });
 

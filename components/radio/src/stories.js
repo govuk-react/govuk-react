@@ -1,18 +1,18 @@
-import React from "react";
-import { Field } from "react-final-form";
-import { storiesOf } from "@storybook/react";
-import PropTypes from "prop-types";
-import { withKnobs } from "@storybook/addon-knobs/react";
+import React from 'react';
+import { Field } from 'react-final-form';
+import { storiesOf } from '@storybook/react';
+import PropTypes from 'prop-types';
+import { withKnobs } from '@storybook/addon-knobs/react';
 import {
   FinalFormWrapper,
   WithDocsCustom
-} from "@govuk-react/storybook-components";
+} from '@govuk-react/storybook-components';
 
-import MultiChoice from "@govuk-react/multi-choice";
-import Radio from ".";
-import ReadMe from "../README.md";
+import MultiChoice from '@govuk-react/multi-choice';
+import Radio from '.';
+import ReadMe from '../README.md';
 
-const required = value => (value ? undefined : "Required");
+const required = value => (value ? undefined : 'Required');
 
 const RadioGroup = ({ label, hint, options, inline, input, meta }) => (
   <div>
@@ -55,17 +55,17 @@ RadioGroup.propTypes = {
   )
 };
 
-const stories = storiesOf("Form/Radio", module);
-const examples = storiesOf("Form/Radio/Examples", module);
+const stories = storiesOf('Form/Radio', module);
+const examples = storiesOf('Form/Radio/Examples', module);
 
 stories.addDecorator(withKnobs);
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add("Component default", () => (
+stories.add('Component default', () => (
   <Radio name="group1">Radio button text example</Radio>
 ));
 
-examples.add("Radio stacked", () => (
+examples.add('Radio stacked', () => (
   <div>
     <Radio name="group1">Waste from animal carcasses</Radio>
     <Radio name="group1">Waste from mines or quarries</Radio>
@@ -73,7 +73,7 @@ examples.add("Radio stacked", () => (
   </div>
 ));
 
-examples.add("Radio inline", () => (
+examples.add('Radio inline', () => (
   <div>
     <Radio name="group1" inline>
       Yes
@@ -84,7 +84,7 @@ examples.add("Radio inline", () => (
   </div>
 ));
 
-examples.add("Radio disabled", () => (
+examples.add('Radio disabled', () => (
   <div>
     <Radio name="group1" disabled="disabled">
       Disabled checkbox option
@@ -92,7 +92,7 @@ examples.add("Radio disabled", () => (
   </div>
 ));
 
-examples.add("Radio preselected", () => (
+examples.add('Radio preselected', () => (
   <div>
     <Radio name="group1" checked>
       Farm or agricultural waste
@@ -100,7 +100,7 @@ examples.add("Radio preselected", () => (
   </div>
 ));
 
-examples.add("Radio preselected & disabled", () => (
+examples.add('Radio preselected & disabled', () => (
   <div>
     <Radio name="group1" disabled="disabled" checked>
       Farm or agricultural waste
@@ -108,7 +108,7 @@ examples.add("Radio preselected & disabled", () => (
   </div>
 ));
 
-examples.add("Radio with hint text", () => (
+examples.add('Radio with hint text', () => (
   <div>
     <Radio
       name="group1"
@@ -125,14 +125,14 @@ examples.add("Radio with hint text", () => (
   </div>
 ));
 
-examples.add("Usage with Final/Redux Form - multi checkbox validation", () => (
+examples.add('Usage with Final/Redux Form - multi checkbox validation', () => (
   <FinalFormWrapper>
     <Field
       name="likesAnimals"
       label="Do you like animals?"
       hint="You must tell us"
       component={RadioGroup}
-      options={[{ title: "Yep", value: "yes" }, { title: "Nope", value: "no" }]}
+      options={[{ title: 'Yep', value: 'yes' }, { title: 'Nope', value: 'no' }]}
       validate={required}
       inline
     />

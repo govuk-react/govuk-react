@@ -1,10 +1,10 @@
 // https://govuk-loader-prototype.herokuapp.com/components/loader
 
-import React from "react";
-import PropTypes from "prop-types";
-import styled, { keyframes } from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled, { keyframes } from 'styled-components';
 
-import SVG from "../SVGBase/index";
+import SVG from '../SVGBase/index';
 
 const fadeInOut = keyframes`
   0% { opacity: 0.250075; }
@@ -52,9 +52,9 @@ Spinner.propTypes = {
 };
 
 Spinner.defaultProps = {
-  className: "icon-spinner",
-  title: "Loading",
-  fill: "currentColor"
+  className: 'icon-spinner',
+  title: 'Loading',
+  fill: 'currentColor'
 };
 
 export default Spinner;

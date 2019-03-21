@@ -1,19 +1,19 @@
-import styled from "styled-components";
-import React from "react";
-import PropTypes from "prop-types";
-import { spacing, typography } from "@govuk-react/lib";
+import styled from 'styled-components';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { spacing, typography } from '@govuk-react/lib';
 
 // TODO should `LabelText` and `Label` be consolidated?
 // TODO add support for differing font sizes, as per govuk-frontend - see:
 // https://github.com/alphagov/govuk-frontend/blob/master/src/components/label/_label.scss
 
-const StyledLabelText = styled("span")(
+const StyledLabelText = styled('span')(
   typography.font({ size: 19 }),
   typography.textColour,
   {
-    display: "block",
-    clear: "none",
-    paddingBottom: "2px"
+    display: 'block',
+    clear: 'none',
+    paddingBottom: '2px'
   },
   ({ error }) => ({
     fontWeight: error ? 700 : undefined

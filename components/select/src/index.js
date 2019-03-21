@@ -1,30 +1,30 @@
 // https://github.com/alphagov/govuk-frontend/tree/master/src/components/select
 
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { BLACK, ERROR_COLOUR, YELLOW } from "govuk-colours";
-import { MEDIA_QUERIES } from "@govuk-react/constants";
-import { typography } from "@govuk-react/lib";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { BLACK, ERROR_COLOUR, YELLOW } from 'govuk-colours';
+import { MEDIA_QUERIES } from '@govuk-react/constants';
+import { typography } from '@govuk-react/lib';
 
-import Label from "@govuk-react/label";
-import LabelText from "@govuk-react/label-text";
-import ErrorText from "@govuk-react/error-text";
-import HintText from "@govuk-react/hint-text";
+import Label from '@govuk-react/label';
+import LabelText from '@govuk-react/label-text';
+import ErrorText from '@govuk-react/error-text';
+import HintText from '@govuk-react/hint-text';
 
-const StyledSelect = styled("select")(
+const StyledSelect = styled('select')(
   typography.font({ size: 19 }),
   {
-    boxSizing: "border-box",
-    width: "100%",
-    height: "33px",
-    padding: "5px 4px 4px",
+    boxSizing: 'border-box',
+    width: '100%',
+    height: '33px',
+    padding: '5px 4px 4px',
     border: `2px solid ${BLACK}`,
     [MEDIA_QUERIES.LARGESCREEN]: {
-      width: "50%",
-      height: "38px"
+      width: '50%',
+      height: '38px'
     },
-    ":focus": {
+    ':focus': {
       outline: `3px solid ${YELLOW}`,
       outlineOffset: 0
     }

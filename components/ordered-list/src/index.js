@@ -1,31 +1,31 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { MEDIA_QUERIES, SPACING_POINTS } from "@govuk-react/constants";
-import { spacing, typography } from "@govuk-react/lib";
-import ListItem from "@govuk-react/list-item";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
+import { spacing, typography } from '@govuk-react/lib';
+import ListItem from '@govuk-react/list-item';
 
 function translateType(type) {
-  return { bullet: "disc", number: "decimal" }[type] || type;
+  return { bullet: 'disc', number: 'decimal' }[type] || type;
 }
 
-const OrderedList = styled("ol")(
+const OrderedList = styled('ol')(
   typography.font({ size: 19 }),
   typography.textColour,
   {
     marginTop: 0,
 
-    "& &": {
+    '& &': {
       marginTop: SPACING_POINTS[2]
     }
   },
-  spacing.withWhiteSpace({ margin: { size: 4, direction: "bottom" } }),
+  spacing.withWhiteSpace({ margin: { size: 4, direction: 'bottom' } }),
   ({ listStyleType }) => {
     const type = translateType(listStyleType);
 
     return [
       { listStyleType: type },
-      type === "none"
+      type === 'none'
         ? {
             paddingLeft: 0
           }
@@ -34,7 +34,7 @@ const OrderedList = styled("ol")(
           },
       // TODO consider whether these spacing adjusts should be for all non-`none` styles
       // NB the inclusion of these ensures that withWhiteSpace's mb prop doesn't work on ListItem
-      ["disc", "decimal"].includes(type)
+      ['disc', 'decimal'].includes(type)
         ? {
             [`> ${ListItem}`]: {
               marginBottom: 0,

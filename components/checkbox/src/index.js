@@ -1,93 +1,93 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import HintText from "@govuk-react/hint-text";
-import { FOCUS_COLOUR } from "govuk-colours";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import HintText from '@govuk-react/hint-text';
+import { FOCUS_COLOUR } from 'govuk-colours';
 import {
   BORDER_WIDTH,
   BORDER_WIDTH_FORM_ELEMENT,
   FOCUS_WIDTH,
   SPACING_POINTS
-} from "@govuk-react/constants";
-import { spacing, typography } from "@govuk-react/lib";
+} from '@govuk-react/constants';
+import { spacing, typography } from '@govuk-react/lib';
 
 const checkboxSize = SPACING_POINTS[7];
 const labelPaddingLeftRight = SPACING_POINTS[3];
 
-const StyledCheckbox = styled("label")(
+const StyledCheckbox = styled('label')(
   typography.font({ size: 19 }),
   {
-    display: "block",
-    position: "relative",
+    display: 'block',
+    position: 'relative',
     minHeight: checkboxSize,
     padding: `0 0 0 ${checkboxSize}px`,
-    clear: "left"
+    clear: 'left'
   },
   spacing.withWhiteSpace({ marginBottom: 2 })
 );
 
-const StyledInput = styled("input")(
+const StyledInput = styled('input')(
   {
-    position: "absolute",
+    position: 'absolute',
     zIndex: 1,
     top: 0,
     left: 0,
     width: checkboxSize,
     height: checkboxSize,
     opacity: 0,
-    ":checked + span:after": {
+    ':checked + span:after': {
       opacity: 1
     },
-    ":focus + span:before": {
+    ':focus + span:before': {
       outline: `${FOCUS_WIDTH} solid transparent`,
       outlineOffset: FOCUS_WIDTH,
       boxShadow: `0 0 0 ${FOCUS_WIDTH} ${FOCUS_COLOUR}`
     }
   },
   ({ disabled }) => ({
-    cursor: disabled ? "default" : "pointer",
-    " + span": {
-      opacity: disabled ? ".5" : "1",
-      pointerEvents: disabled ? "none" : "auto"
+    cursor: disabled ? 'default' : 'pointer',
+    ' + span': {
+      opacity: disabled ? '.5' : '1',
+      pointerEvents: disabled ? 'none' : 'auto'
     }
   })
 );
 
-const StyledLabel = styled("span")({
-  display: "inline-block",
-  cursor: "pointer",
+const StyledLabel = styled('span')({
+  display: 'inline-block',
+  cursor: 'pointer',
   padding: `8px ${labelPaddingLeftRight}px ${SPACING_POINTS[1]}px`,
-  MsTouchAction: "manipulation",
-  touchAction: "manipulation",
-  "::before": {
+  MsTouchAction: 'manipulation',
+  touchAction: 'manipulation',
+  '::before': {
     content: "''",
-    boxSizing: "border-box",
-    position: "absolute",
+    boxSizing: 'border-box',
+    position: 'absolute',
     top: 0,
     left: 0,
     width: checkboxSize,
     height: checkboxSize,
     border: `${BORDER_WIDTH_FORM_ELEMENT} solid black`,
-    background: "transparent"
+    background: 'transparent'
   },
-  "::after": {
+  '::after': {
     content: "''",
-    position: "absolute",
-    top: "11px",
-    left: "9px",
-    width: "18px",
-    height: "7px",
-    transform: "rotate(-45deg)",
-    border: "solid",
+    position: 'absolute',
+    top: '11px',
+    left: '9px',
+    width: '18px',
+    height: '7px',
+    transform: 'rotate(-45deg)',
+    border: 'solid',
     borderWidth: `0 0 ${BORDER_WIDTH} ${BORDER_WIDTH}`,
-    borderTopColor: "transparent",
-    background: "transparent",
+    borderTopColor: 'transparent',
+    background: 'transparent',
     opacity: 0
   }
 });
 
 const StyledCheckboxHint = styled(HintText)({
-  display: "block",
+  display: 'block',
   paddingLeft: labelPaddingLeftRight,
   paddingRight: labelPaddingLeftRight
 });

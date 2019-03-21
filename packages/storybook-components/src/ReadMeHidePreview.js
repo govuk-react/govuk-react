@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withDocs } from "storybook-readme";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withDocs } from 'storybook-readme';
 
 const PreviewComponent = ({ children }) =>
   navigator.userAgent.match(/Chromatic/) ? (
@@ -8,7 +8,7 @@ const PreviewComponent = ({ children }) =>
   ) : (
     <div
       style={{
-        display: "none"
+        display: 'none'
       }}
     >
       {children}
@@ -17,7 +17,7 @@ const PreviewComponent = ({ children }) =>
 
 const ReadMeHidePreview = (readme, ...rest) =>
   withDocs({ PreviewComponent })(
-    navigator.userAgent.match(/Chromatic/) ? "" : readme,
+    navigator.userAgent.match(/Chromatic/) ? '' : readme,
     ...rest
   );
 

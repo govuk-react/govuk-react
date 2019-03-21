@@ -1,6 +1,6 @@
-import * as packageExports from ".";
+import * as packageExports from '.';
 
-describe("Exports", () => {
+describe('Exports', () => {
   // all exports are truthy
   Object.keys(packageExports).map(exportName =>
     it(`${exportName} is truthy`, () => {

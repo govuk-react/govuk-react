@@ -1,7 +1,7 @@
-import React from "react";
-import { mount } from "enzyme";
+import React from 'react';
+import { mount } from 'enzyme';
 
-import TableHeader from ".";
+import TableHeader from '.';
 
 const example = (
   <table>
@@ -13,8 +13,8 @@ const example = (
   </table>
 );
 
-describe("TableHeader", () => {
-  it("renders without crashing", () => {
+describe('TableHeader', () => {
+  it('renders without crashing', () => {
     mount(example);
   });
 });

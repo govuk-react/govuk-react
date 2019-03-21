@@ -1,7 +1,7 @@
-import generateTitle from "./generateTitle";
-import generateImportText from "./generateImportText";
-import generateDescription from "./generateDescription";
-import generateProps from "./generateProps";
+import generateTitle from './generateTitle';
+import generateImportText from './generateImportText';
+import generateDescription from './generateDescription';
+import generateProps from './generateProps';
 
 export default function generateMarkdown(name, folderName, reactAPI) {
   const markdownString = `${generateTitle(name)}

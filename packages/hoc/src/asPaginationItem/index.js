@@ -1,98 +1,98 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { BLUE, GREY_4, PURPLE, YELLOW, WHITE } from "govuk-colours";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { BLUE, GREY_4, PURPLE, YELLOW, WHITE } from 'govuk-colours';
 import {
   FONT_SIZE,
   LINE_HEIGHT,
   SPACING,
   MEDIA_QUERIES,
   NTA_LIGHT
-} from "@govuk-react/constants";
+} from '@govuk-react/constants';
 
 import {
   ArrowRight as NextPageIcon,
   ArrowLeft as PrevPageIcon
-} from "@govuk-react/icons";
+} from '@govuk-react/icons';
 
-const PaginationWrapper = styled("li")(
+const PaginationWrapper = styled('li')(
   {
-    boxSizing: "border-box",
+    boxSizing: 'border-box',
     margin: 0,
     padding: 0,
-    listStyleType: "none",
+    listStyleType: 'none',
     fontFamily: NTA_LIGHT,
     fontWeight: 400,
-    textTransform: "none",
+    textTransform: 'none',
     fontSize: FONT_SIZE.SIZE_20,
     lineHeight: LINE_HEIGHT.SIZE_16,
-    width: "100%",
+    width: '100%',
     [MEDIA_QUERIES.LARGESCREEN]: {
       fontSize: FONT_SIZE.SIZE_27,
       lineHeight: LINE_HEIGHT.SIZE_16
     },
-    "> a": {
-      boxSizing: "border-box",
+    '> a': {
+      boxSizing: 'border-box',
       color: BLUE,
-      fill: "currentColor",
+      fill: 'currentColor',
       padding: SPACING.SCALE_3,
       backgroundColor: WHITE,
-      textDecoration: "none",
-      outlineColor: "transparent",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      width: "100%",
-      ":hover": {
+      textDecoration: 'none',
+      outlineColor: 'transparent',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      width: '100%',
+      ':hover': {
         backgroundColor: GREY_4
       },
-      ":focus": {
+      ':focus': {
         outline: `3px solid ${YELLOW}`
       },
-      ":visited": {
+      ':visited': {
         color: PURPLE
       }
     }
   },
   ({ previousPage }) => ({
-    marginRight: previousPage ? "3px" : undefined,
-    " > a": {
-      alignItems: previousPage ? "flex-start" : undefined
+    marginRight: previousPage ? '3px' : undefined,
+    ' > a': {
+      alignItems: previousPage ? 'flex-start' : undefined
     },
-    " > a div": {
-      justifyContent: previousPage ? "flex-start" : undefined,
-      " > svg": {
-        height: previousPage ? "13px" : undefined,
-        width: previousPage ? "17px" : undefined,
-        marginRight: previousPage ? "10px" : undefined
+    ' > a div': {
+      justifyContent: previousPage ? 'flex-start' : undefined,
+      ' > svg': {
+        height: previousPage ? '13px' : undefined,
+        width: previousPage ? '17px' : undefined,
+        marginRight: previousPage ? '10px' : undefined
       }
     }
   }),
   ({ nextPage }) => ({
-    " > a": {
-      alignItems: nextPage ? "flex-end" : undefined
+    ' > a': {
+      alignItems: nextPage ? 'flex-end' : undefined
     },
-    " > a div": {
-      justifyContent: nextPage ? "flex-end" : undefined,
-      " > svg": {
-        height: nextPage ? "13px" : undefined,
-        width: nextPage ? "17px" : undefined,
-        marginLeft: nextPage ? "10px" : undefined
+    ' > a div': {
+      justifyContent: nextPage ? 'flex-end' : undefined,
+      ' > svg': {
+        height: nextPage ? '13px' : undefined,
+        width: nextPage ? '17px' : undefined,
+        marginLeft: nextPage ? '10px' : undefined
       }
     }
   })
 );
 
-const InnerWrap = styled("div")({
-  display: "flex",
-  alignItems: "center",
-  width: "100%"
+const InnerWrap = styled('div')({
+  display: 'flex',
+  alignItems: 'center',
+  width: '100%'
 });
 
-const PageTitle = styled("span")({
+const PageTitle = styled('span')({
   fontSize: FONT_SIZE.SIZE_14,
   lineHeight: LINE_HEIGHT.SIZE_14,
-  textDecoration: "underline",
+  textDecoration: 'underline',
   [MEDIA_QUERIES.LARGESCREEN]: {
     fontSize: FONT_SIZE.SIZE_16,
     lineHeight: LINE_HEIGHT.SIZE_16

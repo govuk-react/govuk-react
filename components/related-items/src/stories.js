@@ -1,19 +1,19 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { H3 } from "@govuk-react/heading";
-import UnorderedList from "@govuk-react/unordered-list";
-import Link from "@govuk-react/link";
-import ListItem from "@govuk-react/list-item";
-import { WithDocsCustom } from "@govuk-react/storybook-components";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { H3 } from '@govuk-react/heading';
+import UnorderedList from '@govuk-react/unordered-list';
+import Link from '@govuk-react/link';
+import ListItem from '@govuk-react/list-item';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-import RelatedItems from ".";
-import ReadMe from "../README.md";
+import RelatedItems from '.';
+import ReadMe from '../README.md';
 
-const stories = storiesOf("Navigation/RelatedItems", module);
+const stories = storiesOf('Navigation/RelatedItems', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add("Component default", () => (
+stories.add('Component default', () => (
   <RelatedItems>
     <H3>Travel abroad</H3>
     <UnorderedList listStyleType="none">

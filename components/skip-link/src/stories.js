@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import { storiesOf } from "@storybook/react";
-import { WithDocsCustom } from "@govuk-react/storybook-components";
-import Paragraph from "@govuk-react/paragraph";
+import React, { Component } from 'react';
+import { storiesOf } from '@storybook/react';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
+import Paragraph from '@govuk-react/paragraph';
 
-import SkipLink from ".";
+import SkipLink from '.';
 
-import ReadMe from "../README.md";
+import ReadMe from '../README.md';
 
-const stories = storiesOf("Navigation/SkipLink", module);
+const stories = storiesOf('Navigation/SkipLink', module);
 stories.addDecorator(WithDocsCustom(ReadMe));
 
 class AutoFocussed extends Component {
@@ -27,7 +27,7 @@ class AutoFocussed extends Component {
 }
 
 stories.add(
-  "Component default",
+  'Component default',
   () => (
     <div>
       <Paragraph>

@@ -1,21 +1,21 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
-import { asPaginationItem } from "@govuk-react/hoc";
-import { WithDocsCustom } from "@govuk-react/storybook-components";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { asPaginationItem } from '@govuk-react/hoc';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-import Pagination from ".";
-import ReadMe from "../README.md";
+import Pagination from '.';
+import ReadMe from '../README.md';
 
-const PaginationTag = asPaginationItem("a");
+const PaginationTag = asPaginationItem('a');
 const PaginationLink = asPaginationItem(Link);
 
-const stories = storiesOf("Navigation/Pagination", module);
-const examples = storiesOf("Navigation/Pagination/Examples", module);
+const stories = storiesOf('Navigation/Pagination', module);
+const examples = storiesOf('Navigation/Pagination/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add("Component default", () => (
+stories.add('Component default', () => (
   <Pagination>
     <PaginationTag href="#prev" previousPage>
       Previous page
@@ -26,7 +26,7 @@ stories.add("Component default", () => (
   </Pagination>
 ));
 
-examples.add("Pagination default (React Router Link)", () => (
+examples.add('Pagination default (React Router Link)', () => (
   <Pagination>
     <Router>
       <PaginationLink to="/prev" previousPage>
@@ -41,7 +41,7 @@ examples.add("Pagination default (React Router Link)", () => (
   </Pagination>
 ));
 
-examples.add("Pagination with numbers (anchor tag)", () => (
+examples.add('Pagination with numbers (anchor tag)', () => (
   <Pagination>
     <PaginationTag href="#prev" previousPage pageTitle="1 of 3">
       Previous page
@@ -52,7 +52,7 @@ examples.add("Pagination with numbers (anchor tag)", () => (
   </Pagination>
 ));
 
-examples.add("Pagination with numbers (React Router Link)", () => (
+examples.add('Pagination with numbers (React Router Link)', () => (
   <Pagination>
     <Router>
       <PaginationLink to="#prev" previousPage pageTitle="1 of 3">
@@ -67,7 +67,7 @@ examples.add("Pagination with numbers (React Router Link)", () => (
   </Pagination>
 ));
 
-examples.add("Pagination with titles (anchor tag)", () => (
+examples.add('Pagination with titles (anchor tag)', () => (
   <Pagination>
     <PaginationTag
       href="#prev"
@@ -86,7 +86,7 @@ examples.add("Pagination with titles (anchor tag)", () => (
   </Pagination>
 ));
 
-examples.add("Pagination with titles (React Router Link)", () => (
+examples.add('Pagination with titles (React Router Link)', () => (
   <Pagination>
     <Router>
       <PaginationLink
@@ -109,7 +109,7 @@ examples.add("Pagination with titles (React Router Link)", () => (
   </Pagination>
 ));
 
-examples.add("Pagination with numbers just with next page (anchor tag)", () => (
+examples.add('Pagination with numbers just with next page (anchor tag)', () => (
   <Pagination>
     <PaginationTag href="#next" nextPage pageTitle="2 of 12">
       Next page
@@ -118,7 +118,7 @@ examples.add("Pagination with numbers just with next page (anchor tag)", () => (
 ));
 
 examples.add(
-  "Pagination with numbers just with next page (React Router Link)",
+  'Pagination with numbers just with next page (React Router Link)',
   () => (
     <Pagination>
       <Router>
@@ -131,7 +131,7 @@ examples.add(
 );
 
 examples.add(
-  "Pagination with numbers just with previous page (anchor tag)",
+  'Pagination with numbers just with previous page (anchor tag)',
   () => (
     <Pagination>
       <PaginationTag href="#prev" previousPage pageTitle="11 of 12">
@@ -142,7 +142,7 @@ examples.add(
 );
 
 examples.add(
-  "Pagination with numbers just with previous page (React Router Link)",
+  'Pagination with numbers just with previous page (React Router Link)',
   () => (
     <Pagination>
       <Router>

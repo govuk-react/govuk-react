@@ -1,21 +1,21 @@
-import React from "react";
-import styled from "styled-components";
-import { storiesOf } from "@storybook/react";
-import { WithDocsCustom } from "@govuk-react/storybook-components";
-import BackLink from "@govuk-react/back-link";
-import { H1, H3 } from "@govuk-react/heading";
-import { MEDIA_QUERIES, GUTTER } from "@govuk-react/constants";
+import React from 'react';
+import styled from 'styled-components';
+import { storiesOf } from '@storybook/react';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
+import BackLink from '@govuk-react/back-link';
+import { H1, H3 } from '@govuk-react/heading';
+import { MEDIA_QUERIES, GUTTER } from '@govuk-react/constants';
 
-import ReadMe from "../README.md";
+import ReadMe from '../README.md';
 
-import Page from ".";
+import Page from '.';
 
-const stories = storiesOf("Layout/Page", module);
-const examples = storiesOf("Layout/Page/Examples", module);
+const stories = storiesOf('Layout/Page', module);
+const examples = storiesOf('Layout/Page/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add("Component default", () => (
+stories.add('Component default', () => (
   <div>
     <Page beforeChildren={<BackLink href="#" />}>
       <H1>Page Title</H1>
@@ -24,13 +24,13 @@ stories.add("Component default", () => (
 ));
 
 const WideContainer = styled(Page.WidthContainer)({
-  maxWidth: "inherit",
+  maxWidth: 'inherit',
   [MEDIA_QUERIES.MAX]: {
     margin: `0 ${GUTTER}`
   }
 });
 
-examples.add("Custom width container (no width limit)", () => (
+examples.add('Custom width container (no width limit)', () => (
   <div>
     <Page container={WideContainer}>
       <H3>Page container has no maxWidth</H3>
@@ -39,10 +39,10 @@ examples.add("Custom width container (no width limit)", () => (
 ));
 
 const MainContainer = styled(Page.Main)({
-  backgroundColor: "#ddd"
+  backgroundColor: '#ddd'
 });
 
-examples.add("Custom main container (background colour)", () => (
+examples.add('Custom main container (background colour)', () => (
   <div>
     <Page main={MainContainer}>
       <H3>Main container with custom background colour</H3>
@@ -50,7 +50,7 @@ examples.add("Custom main container (background colour)", () => (
   </div>
 ));
 
-examples.add("Custom main container (adjusted padding)", () => (
+examples.add('Custom main container (adjusted padding)', () => (
   <div>
     <Page main={props => <Page.Main padding={{ size: 1 }} {...props} />}>
       <H3>

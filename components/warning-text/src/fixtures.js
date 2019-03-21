@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { text } from "@storybook/addon-knobs/react";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { text } from '@storybook/addon-knobs/react';
 
-import WarningText from ".";
+import WarningText from '.';
 
-const WarningTextWithKnobs = ({ children = "Example text" }) => (
-  <WarningText>{text("Children", `${children}`)}</WarningText>
+const WarningTextWithKnobs = ({ children = 'Example text' }) => (
+  <WarningText>{text('Children', `${children}`)}</WarningText>
 );
 
 WarningTextWithKnobs.propTypes = {

@@ -1,15 +1,15 @@
-import styled from "styled-components";
-import PropTypes from "prop-types";
-import React from "react";
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {
   BORDER_WIDTH_FORM_ELEMENT,
   FOCUSABLE,
   MEDIA_QUERIES,
   SPACING_POINTS
-} from "@govuk-react/constants";
-import { spacing, typography } from "@govuk-react/lib";
-import { BUTTON_COLOUR, BUTTON_COLOUR_DARKEN_15, WHITE } from "govuk-colours";
-import { darken, stripUnit } from "polished";
+} from '@govuk-react/constants';
+import { spacing, typography } from '@govuk-react/lib';
+import { BUTTON_COLOUR, BUTTON_COLOUR_DARKEN_15, WHITE } from 'govuk-colours';
+import { darken, stripUnit } from 'polished';
 
 const BUTTON_SHADOW_SIZE = BORDER_WIDTH_FORM_ELEMENT;
 const RAW_SPACING_2 = SPACING_POINTS[2];
@@ -18,12 +18,12 @@ const RAW_SHADOW = stripUnit(BUTTON_SHADOW_SIZE);
 const HALF_SHADOW = RAW_SHADOW / 2;
 const BASE_PAD = RAW_SPACING_2 - RAW_BORDER_WIDTH;
 
-const StyledButton = styled("button")(
+const StyledButton = styled('button')(
   ({ isStart }) =>
     typography.font({
       size: isStart ? 24 : 19,
-      lineHeight: isStart ? "1" : "19px",
-      weight: isStart ? "bold" : undefined
+      lineHeight: isStart ? '1' : '19px',
+      weight: isStart ? 'bold' : undefined
     }),
   FOCUSABLE,
 
@@ -36,10 +36,10 @@ const StyledButton = styled("button")(
     buttonTextColour = WHITE,
     isStart
   }) => ({
-    boxSizing: "border-box",
-    display: "inline-block",
-    position: "relative",
-    width: "100%",
+    boxSizing: 'border-box',
+    display: 'inline-block',
+    position: 'relative',
+    width: '100%',
     marginTop: 0,
     padding: isStart // differs from govuk-frontend owing to how icons displayed
       ? `${BASE_PAD}px ${SPACING_POINTS[3]}px`
@@ -49,70 +49,70 @@ const StyledButton = styled("button")(
     color: buttonTextColour,
     backgroundColor: buttonColour,
     boxShadow: `0 ${BUTTON_SHADOW_SIZE} 0 ${buttonShadowColour}`,
-    textAlign: "center",
-    verticalAlign: "top",
-    cursor: "pointer",
-    WebkitAppearance: "none",
+    textAlign: 'center',
+    verticalAlign: 'top',
+    cursor: 'pointer',
+    WebkitAppearance: 'none',
 
     [MEDIA_QUERIES.TABLET]: {
-      width: "auto"
+      width: 'auto'
     },
 
-    "&:link, &:visited, &:active, &:hover": {
+    '&:link, &:visited, &:active, &:hover': {
       color: buttonTextColour,
-      textDecoration: "none"
+      textDecoration: 'none'
     },
 
-    "&::-moz-focus-inner": {
+    '&::-moz-focus-inner': {
       padding: 0,
       border: 0
     },
 
-    "&:hover, &:focus": {
+    '&:hover, &:focus': {
       backgroundColor: buttonHoverColour
     },
 
-    ":active": {
+    ':active': {
       top: BUTTON_SHADOW_SIZE,
-      boxShadow: "none"
+      boxShadow: 'none'
     },
 
     // NB this is from govuk-frontend
     // Use a pseudo element to expand the click target area to include the
     // button's shadow as well, in case users try to click it.
-    "::before": {
+    '::before': {
       content: '""',
-      display: "block",
-      position: "absolute",
+      display: 'block',
+      position: 'absolute',
       top: `-${BORDER_WIDTH_FORM_ELEMENT}`,
       right: `-${BORDER_WIDTH_FORM_ELEMENT}`,
       bottom: `-${RAW_BORDER_WIDTH + RAW_SHADOW}px`,
       left: `-${BORDER_WIDTH_FORM_ELEMENT}`,
-      background: "transparent"
+      background: 'transparent'
     },
 
-    "&:active::before": {
+    '&:active::before': {
       top: `-${RAW_BORDER_WIDTH + RAW_SHADOW}px`
     },
 
-    ":disabled": {
+    ':disabled': {
       opacity: 0.5,
       background: buttonColour,
-      ":hover": {
+      ':hover': {
         backgroundColor: buttonColour,
-        cursor: "default"
+        cursor: 'default'
       },
-      ":focus": {
-        outline: "none"
+      ':focus': {
+        outline: 'none'
       },
-      ":active": {
+      ':active': {
         top: 0,
         boxShadow: `0 ${BUTTON_SHADOW_SIZE} 0 ${buttonShadowColour}`
       }
     },
 
-    " svg": {
-      maxWidth: "15px",
+    ' svg': {
+      maxWidth: '15px',
       [MEDIA_QUERIES.TABLET]: {
         marginLeft: SPACING_POINTS[2]
       }
@@ -123,9 +123,9 @@ const StyledButton = styled("button")(
   ({ icon }) => {
     if (icon) {
       return {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between"
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between'
       };
     }
 
@@ -133,11 +133,11 @@ const StyledButton = styled("button")(
   },
 
   spacing.withWhiteSpace({
-    margin: { direction: "bottom", size: 6, adjustment: RAW_SHADOW }
+    margin: { direction: 'bottom', size: 6, adjustment: RAW_SHADOW }
   })
 );
 
-const ButtonContents = styled("span")({
+const ButtonContents = styled('span')({
   flexGrow: 1
 });
 

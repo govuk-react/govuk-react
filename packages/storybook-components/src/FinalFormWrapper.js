@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Form } from "react-final-form";
-import { action } from "@storybook/addon-actions";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Form } from 'react-final-form';
+import { action } from '@storybook/addon-actions';
 
-import Button from "@govuk-react/button";
+import Button from '@govuk-react/button';
 
 const FinalFormWrapper = ({ children }) => (
   <Form
-    onSubmit={action("submit")}
+    onSubmit={action('submit')}
     render={({ handleSubmit, reset, submitting, pristine, values }) => (
       <form onSubmit={handleSubmit}>
         <div>{children}</div>

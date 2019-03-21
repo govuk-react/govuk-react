@@ -1,12 +1,12 @@
-import React from "react";
-import { mount } from "enzyme";
+import React from 'react';
+import { mount } from 'enzyme';
 
-import { DocumentedComponent as ListItem } from ".";
+import { DocumentedComponent as ListItem } from '.';
 
-describe("ListItem", () => {
-  it("matches wrapper snapshot", () => {
+describe('ListItem', () => {
+  it('matches wrapper snapshot', () => {
     expect(mount(<ListItem>example</ListItem>)).toMatchSnapshot(
-      "list item mount"
+      'list item mount'
     );
   });
 });

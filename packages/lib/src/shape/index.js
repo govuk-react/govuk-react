@@ -10,29 +10,29 @@ function makeShape(direction, base, height) {
   const perpendicular = base / 2;
 
   switch (direction) {
-    case "up":
+    case 'up':
       return {
-        clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)",
+        clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
         borderWidth: `0 ${perpendicular}px ${height}px ${perpendicular}px`,
-        borderBottomColor: "inherit"
+        borderBottomColor: 'inherit'
       };
-    case "right":
+    case 'right':
       return {
-        clipPath: "polygon(0% 0%, 100% 50%, 0% 100%)",
+        clipPath: 'polygon(0% 0%, 100% 50%, 0% 100%)',
         borderWidth: `${perpendicular}px 0 ${perpendicular}px ${height}px`,
-        borderLeftColor: "inherit"
+        borderLeftColor: 'inherit'
       };
-    case "down":
+    case 'down':
       return {
-        clipPath: "polygon(0% 0%, 50% 100%, 100% 0%)",
+        clipPath: 'polygon(0% 0%, 50% 100%, 100% 0%)',
         borderWidth: `${height}px ${perpendicular}px 0 ${perpendicular}px`,
-        borderTopColor: "inherit"
+        borderTopColor: 'inherit'
       };
-    case "left":
+    case 'left':
       return {
-        clipPath: "polygon(0% 50%, 100% 100%, 100% 0%)",
+        clipPath: 'polygon(0% 50%, 100% 100%, 100% 0%)',
         borderWidth: `${perpendicular}px ${height}px ${perpendicular}px 0`,
-        borderRightColor: "inherit"
+        borderRightColor: 'inherit'
       };
     default:
       throw Error(
@@ -46,15 +46,15 @@ export function arrow({
   direction,
   base = 0,
   height = equilateralHeight(base),
-  display = "block"
+  display = 'block'
 }) {
   return {
     display,
     width: 0,
     height: 0,
 
-    borderStyle: "solid",
-    borderColor: "transparent",
+    borderStyle: 'solid',
+    borderColor: 'transparent',
 
     ...makeShape(direction, base, height)
   };

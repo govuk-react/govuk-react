@@ -1,10 +1,10 @@
-import React from "react";
-import { cleanup, fireEvent, render } from "react-testing-library";
+import React from 'react';
+import { cleanup, fireEvent, render } from 'react-testing-library';
 
-import { SimpleTabs } from "./fixtures";
+import { SimpleTabs } from './fixtures';
 
 beforeAll(() => {
-  Object.defineProperty(window, "matchMedia", {
+  Object.defineProperty(window, 'matchMedia', {
     // jsdom appears not to cope with CSSinJS media queries
     value: jest.fn(() => ({ matches: false }))
   });
@@ -12,15 +12,15 @@ beforeAll(() => {
 
 afterEach(cleanup);
 
-describe("Tabs", () => {
-  it("clicking link works without crashing", () => {
+describe('Tabs', () => {
+  it('clicking link works without crashing', () => {
     const { container } = render(<SimpleTabs />);
-    const firstLink = container.querySelector("a");
+    const firstLink = container.querySelector('a');
     fireEvent.click(firstLink);
     expect(container).toBeTruthy();
   });
 
-  it("matches wrapper snapshot", () => {
+  it('matches wrapper snapshot', () => {
     const { asFragment } = render(<SimpleTabs />);
     expect(asFragment()).toMatchSnapshot();
   });

@@ -1,16 +1,16 @@
-import React from "react";
-import { mount } from "enzyme";
+import React from 'react';
+import { mount } from 'enzyme';
 
-import SupportingHeader from ".";
+import SupportingHeader from '.';
 
-describe("SupportingHeader", () => {
+describe('SupportingHeader', () => {
   let wrapper;
 
-  it("renders without crashing", () => {
+  it('renders without crashing', () => {
     wrapper = mount(<SupportingHeader>Heading text</SupportingHeader>);
   });
 
-  it("matches wrapper snapshot", () => {
+  it('matches wrapper snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });

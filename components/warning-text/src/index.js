@@ -1,31 +1,31 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import { IconImportant } from "@govuk-react/icons";
-import { spacing, typography } from "@govuk-react/lib";
+import { IconImportant } from '@govuk-react/icons';
+import { spacing, typography } from '@govuk-react/lib';
 
-import { SPACING_POINTS } from "@govuk-react/constants";
+import { SPACING_POINTS } from '@govuk-react/constants';
 
-const StyledWarningText = styled("div")(
+const StyledWarningText = styled('div')(
   {
-    alignItems: "center",
-    boxSizing: "border-box",
-    display: "flex",
-    width: "100%"
+    alignItems: 'center',
+    boxSizing: 'border-box',
+    display: 'flex',
+    width: '100%'
   },
   spacing.withWhiteSpace({ marginBottom: 0 })
 );
 
-const IconImportantWrapper = styled("div")({
-  flex: "none",
+const IconImportantWrapper = styled('div')({
+  flex: 'none',
   height: 35,
   marginRight: SPACING_POINTS[3],
   width: 35
 });
 
-const WarningTextWrapper = styled("strong")(
-  typography.font({ size: 19, weight: "bold" })
+const WarningTextWrapper = styled('strong')(
+  typography.font({ size: 19, weight: 'bold' })
 );
 
 /**

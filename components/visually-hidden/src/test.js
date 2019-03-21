@@ -1,24 +1,24 @@
-import React from "react";
-import { mount } from "enzyme";
+import React from 'react';
+import { mount } from 'enzyme';
 
-import { VisuallyHiddenDocumented as VisuallyHidden } from ".";
+import { VisuallyHiddenDocumented as VisuallyHidden } from '.';
 
-describe("VisuallyHidden", () => {
-  it("matches snapshot", () => {
+describe('VisuallyHidden', () => {
+  it('matches snapshot', () => {
     expect(mount(<VisuallyHidden>Example</VisuallyHidden>)).toMatchSnapshot(
-      "default render"
+      'default render'
     );
   });
 
-  it("focusable version matches snapshot", () => {
+  it('focusable version matches snapshot', () => {
     expect(
       mount(<VisuallyHidden focusable>Example</VisuallyHidden>)
-    ).toMatchSnapshot("focusable");
+    ).toMatchSnapshot('focusable');
   });
 
-  it("with important={false} matches snapshot", () => {
+  it('with important={false} matches snapshot', () => {
     expect(
       mount(<VisuallyHidden important={false}>Example</VisuallyHidden>)
-    ).toMatchSnapshot("not important");
+    ).toMatchSnapshot('not important');
   });
 });

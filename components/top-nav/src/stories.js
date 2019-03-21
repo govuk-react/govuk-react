@@ -1,22 +1,22 @@
-import React from "react";
-import { BrowserRouter, Link } from "react-router-dom";
-import { storiesOf } from "@storybook/react";
-import CrownIcon from "@govuk-react/icon-crown";
-import { Search as SearchIcon } from "@govuk-react/icons";
-import SearchBox from "@govuk-react/search-box";
-import { WithDocsCustom } from "@govuk-react/storybook-components";
+import React from 'react';
+import { BrowserRouter, Link } from 'react-router-dom';
+import { storiesOf } from '@storybook/react';
+import CrownIcon from '@govuk-react/icon-crown';
+import { Search as SearchIcon } from '@govuk-react/icons';
+import SearchBox from '@govuk-react/search-box';
+import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-import TopNav, { asNavLinkAnchor, asTopNavAnchor } from ".";
-import ReadMe from "../README.md";
+import TopNav, { asNavLinkAnchor, asTopNavAnchor } from '.';
+import ReadMe from '../README.md';
 
-const LogoAnchor = asTopNavAnchor("a");
-const NavAnchor = asNavLinkAnchor("a");
+const LogoAnchor = asTopNavAnchor('a');
+const NavAnchor = asNavLinkAnchor('a');
 
 const LogoLink = asTopNavAnchor(Link);
 const NavLink = asNavLinkAnchor(Link);
 
-const reactRouterLink = "/section";
-const link = "https://example.com?=1";
+const reactRouterLink = '/section';
+const link = 'https://example.com?=1';
 // TODO: vertical alignment here needs some work, perhaps should be its own component,
 // TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
 
@@ -46,14 +46,14 @@ const CompanyLink = (
 
 const ServiceTitleLink = <NavLink to={reactRouterLink}>Service Title</NavLink>;
 
-const stories = storiesOf("Page/TopNav", module);
-const examples = storiesOf("Page/TopNav/Examples", module);
+const stories = storiesOf('Page/TopNav', module);
+const examples = storiesOf('Page/TopNav/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add("Component default", () => <TopNav company={Company} />);
+stories.add('Component default', () => <TopNav company={Company} />);
 
-examples.add("custom logo", () => (
+examples.add('custom logo', () => (
   <TopNav
     company={
       <NavAnchor href={link} target="new">
@@ -65,21 +65,21 @@ examples.add("custom logo", () => (
   />
 ));
 
-examples.add("service title", () => (
+examples.add('service title', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} />
 ));
 
-examples.add("logo and service title with React router <Link>", () => (
+examples.add('logo and service title with React router <Link>', () => (
   <BrowserRouter>
     <TopNav company={CompanyLink} serviceTitle={ServiceTitleLink} />
   </BrowserRouter>
 ));
 
-examples.add("search", () => (
+examples.add('search', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} />
 ));
 
-examples.add("children", () => (
+examples.add('children', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} active={0}>
     <NavAnchor href="https://example.com?q=catdog">
       Navigation item #1
@@ -90,7 +90,7 @@ examples.add("children", () => (
   </TopNav>
 ));
 
-examples.add("everything but serviceTitle", () => (
+examples.add('everything but serviceTitle', () => (
   <TopNav company={Company} search={Search} active={0}>
     <NavAnchor href="https://example.com?q=catdog">
       Navigation item #1
@@ -101,7 +101,7 @@ examples.add("everything but serviceTitle", () => (
   </TopNav>
 ));
 
-examples.add("everything", () => (
+examples.add('everything', () => (
   <TopNav
     company={Company}
     serviceTitle={ServiceTitle}
@@ -129,7 +129,7 @@ examples.add("everything", () => (
   </TopNav>
 ));
 
-examples.add("everything with 9 nav items", () => (
+examples.add('everything with 9 nav items', () => (
   <TopNav
     company={Company}
     serviceTitle={ServiceTitle}

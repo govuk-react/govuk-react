@@ -1,10 +1,10 @@
-import React from "react";
-import { mount } from "enzyme";
+import React from 'react';
+import { mount } from 'enzyme';
 
-import Cell from ".";
+import Cell from '.';
 
-describe("Cell", () => {
-  it("renders without crashing", () => {
+describe('Cell', () => {
+  it('renders without crashing', () => {
     mount(
       <table>
         <tbody>

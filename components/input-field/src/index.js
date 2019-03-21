@@ -1,13 +1,13 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/components/input/_input.scss
 // https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
 
-import React from "react";
-import PropTypes from "prop-types";
-import Label from "@govuk-react/label";
-import LabelText from "@govuk-react/label-text";
-import ErrorText from "@govuk-react/error-text";
-import HintText from "@govuk-react/hint-text";
-import Input from "@govuk-react/input";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Label from '@govuk-react/label';
+import LabelText from '@govuk-react/label-text';
+import ErrorText from '@govuk-react/error-text';
+import HintText from '@govuk-react/hint-text';
+import Input from '@govuk-react/input';
 
 /**
  *

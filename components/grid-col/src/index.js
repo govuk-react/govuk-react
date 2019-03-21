@@ -1,16 +1,16 @@
-import React from "react";
-import styled from "styled-components";
-import PropTypes from "prop-types";
-import { GUTTER_HALF, MEDIA_QUERIES, WIDTHS } from "@govuk-react/constants";
-import { spacing } from "@govuk-react/lib";
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { GUTTER_HALF, MEDIA_QUERIES, WIDTHS } from '@govuk-react/constants';
+import { spacing } from '@govuk-react/lib';
 
 const colValues = {
-  columnOneQuarter: "25%",
-  columnOneThird: "33.3333%",
-  columnOneHalf: "50%",
-  columnTwoThirds: "66.6667%",
-  columnThreeQuarters: "75%",
-  columnFull: "100%"
+  columnOneQuarter: '25%',
+  columnOneThird: '33.3333%',
+  columnOneHalf: '50%',
+  columnTwoThirds: '66.6667%',
+  columnThreeQuarters: '75%',
+  columnFull: '100%'
 };
 
 const widthFromProps = spacing.withWidth({ noDefault: true });
@@ -20,7 +20,7 @@ const desktopWidthFromProps = spacing.withWidth({
 });
 
 function setGrowShrink(style) {
-  const hasAutoWidth = [undefined, "auto"].includes(style.width);
+  const hasAutoWidth = [undefined, 'auto'].includes(style.width);
 
   // No explicit width means auto, so grow/shrink should be set
   return Object.assign({}, style, {
@@ -29,9 +29,9 @@ function setGrowShrink(style) {
   });
 }
 
-const StyledColumn = styled("div")(
+const StyledColumn = styled('div')(
   {
-    boxSizing: "border-box",
+    boxSizing: 'border-box',
     paddingRight: GUTTER_HALF,
     paddingLeft: GUTTER_HALF
   },
@@ -44,10 +44,10 @@ const StyledColumn = styled("div")(
 
       Object.entries(props).forEach(([key, value]) => {
         if (colValues[key] && value === true) {
-          if (process.env.NODE_ENV !== "production") {
+          if (process.env.NODE_ENV !== 'production') {
             const newKey = key
-              .replace("column", "")
-              .replace(/^([A-Z][a-z]+)([A-Z])/, "$1-$2")
+              .replace('column', '')
+              .replace(/^([A-Z][a-z]+)([A-Z])/, '$1-$2')
               .toLocaleLowerCase();
             // eslint-disable-next-line no-console
             console.warn(

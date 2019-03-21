@@ -1,33 +1,33 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import Label from "@govuk-react/label";
-import LabelText from "@govuk-react/label-text";
-import ErrorText from "@govuk-react/error-text";
-import HintText from "@govuk-react/hint-text";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import Label from '@govuk-react/label';
+import LabelText from '@govuk-react/label-text';
+import ErrorText from '@govuk-react/error-text';
+import HintText from '@govuk-react/hint-text';
 import {
   FONT_SIZE,
   LINE_HEIGHT,
   NTA_LIGHT,
   MEDIA_QUERIES
-} from "@govuk-react/constants";
+} from '@govuk-react/constants';
 
-const StyledInput = styled("input")({
-  boxSizing: "border-box",
+const StyledInput = styled('input')({
+  boxSizing: 'border-box',
   fontFamily: NTA_LIGHT,
-  WebkitFontSmoothing: "antialiased",
-  MozOsxFontSmoothing: "grayscale",
+  WebkitFontSmoothing: 'antialiased',
+  MozOsxFontSmoothing: 'grayscale',
   fontWeight: 400,
-  textTransform: "none",
+  textTransform: 'none',
   fontSize: FONT_SIZE.SIZE_14,
   lineHeight: LINE_HEIGHT.SIZE_14,
   [MEDIA_QUERIES.LARGESCREEN]: {
     fontSize: FONT_SIZE.SIZE_16,
     lineHeight: LINE_HEIGHT.SIZE_16,
-    width: "50%"
+    width: '50%'
   },
-  width: "100%",
-  padding: "5px 4px 4px"
+  width: '100%',
+  padding: '5px 4px 4px'
 });
 
 /**

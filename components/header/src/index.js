@@ -1,15 +1,15 @@
-import styled from "styled-components";
-import React, { createElement } from "react";
-import PropTypes from "prop-types";
+import styled from 'styled-components';
+import React, { createElement } from 'react';
+import PropTypes from 'prop-types';
 import {
   HEADING_SIZES,
   LEVEL_SIZE,
   LEVEL_TAG,
   MEDIA_QUERIES,
   TYPOGRAPHY_SCALE
-} from "@govuk-react/constants";
-import { spacing, typography } from "@govuk-react/lib";
-import { deprecate } from "@govuk-react/hoc";
+} from '@govuk-react/constants';
+import { spacing, typography } from '@govuk-react/lib';
+import { deprecate } from '@govuk-react/hoc';
 
 // use `size` only with string for XLARGE, SMALL etc and number for px size
 // so if `size` is a string, we find a numeric size based off `HEADING_SIZES`
@@ -28,11 +28,11 @@ const StyledHeader = styled(({ level, children, size, ...props }) =>
 
     return Object.assign(
       {},
-      typography.font({ size: actualSize, weight: "bold" })
+      typography.font({ size: actualSize, weight: 'bold' })
     );
   },
   {
-    display: "block",
+    display: 'block',
     marginTop: 0
   },
   ({ level, size = LEVEL_SIZE[level] }) => {
@@ -84,7 +84,7 @@ Header.propTypes = {
   ])
 };
 
-export default deprecate(Header, "please use the Heading component instead");
+export default deprecate(Header, 'please use the Heading component instead');
 
 export { Header as DocumentedHeader };
-export { H1, H2, H3, H4, H5, H6 } from "./presets";
+export { H1, H2, H3, H4, H5, H6 } from './presets';

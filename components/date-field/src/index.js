@@ -1,19 +1,19 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { ERROR_COLOUR } from "govuk-colours";
-import { SPACING } from "@govuk-react/constants";
-import LabelText from "@govuk-react/label-text";
-import ErrorText from "@govuk-react/error-text";
-import HintText from "@govuk-react/hint-text";
-import { spacing } from "@govuk-react/lib";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { ERROR_COLOUR } from 'govuk-colours';
+import { SPACING } from '@govuk-react/constants';
+import LabelText from '@govuk-react/label-text';
+import ErrorText from '@govuk-react/error-text';
+import HintText from '@govuk-react/hint-text';
+import { spacing } from '@govuk-react/lib';
 
-import Input from "./input";
+import Input from './input';
 
-const StyledContainer = styled("div")(
+const StyledContainer = styled('div')(
   {
-    display: "flex",
-    flexDirection: "column"
+    display: 'flex',
+    flexDirection: 'column'
   },
   ({ errorText }) =>
     errorText

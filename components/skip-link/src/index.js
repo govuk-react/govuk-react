@@ -1,18 +1,18 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { SPACING_POINTS } from "@govuk-react/constants";
-import { link, typography, visuallyHidden } from "@govuk-react/lib";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { SPACING_POINTS } from '@govuk-react/constants';
+import { link, typography, visuallyHidden } from '@govuk-react/lib';
 
-const SkipLink = styled("a")(
+const SkipLink = styled('a')(
   visuallyHidden.focusable(),
   link.common(),
   link.styleText,
   typography.responsive(16),
   {
-    display: "block",
+    display: 'block',
     padding: `${SPACING_POINTS[2]}px ${SPACING_POINTS[3]}px`,
-    "@supports (padding:max(calc(0px)))": {
+    '@supports (padding:max(calc(0px)))': {
       paddingRight: `max(${SPACING_POINTS[3]}px, calc(${
         SPACING_POINTS[3]
       }px + env(safe-area-inset-right)))`,
@@ -46,7 +46,7 @@ SkipLinkDocumented.propTypes = {
 };
 
 SkipLinkDocumented.defaultProps = {
-  href: "#content"
+  href: '#content'
 };
 
 SkipLink.propTypes = SkipLinkDocumented.propTypes;
