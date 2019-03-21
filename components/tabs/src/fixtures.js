@@ -7,8 +7,7 @@ import Table from '@govuk-react/table';
 
 import Tabs from '.';
 
-const flip2dArray = (prev, next) =>
-  next.map((item, index) => [...(prev[index] || []), next[index]]);
+const flip2dArray = (prev, next) => next.map((item, index) => [...(prev[index] || []), next[index]]);
 
 function setTabIndex(tabIndex) {
   return this.setState({
@@ -90,22 +89,16 @@ class TableTabs extends Component {
           ))}
         </Tabs.List>
         {arrTabularTabs.map(({ arr, id, title }, index) => (
-          <Tabs.Panel
-            selected={tabIndex === index}
-            key={`${title}-tabPanel`}
-            id={id}
-          >
+          <Tabs.Panel selected={tabIndex === index} key={`${title}-tabPanel`} id={id}>
             <H2>{title}</H2>
             <Table head={tableHead}>
-              {[['David Francis', 'Paul Farmer', 'Rita Patel'], ...arr]
-                .reduce(flip2dArray, [])
-                .map(innerArr => (
-                  <Table.Row key={`${innerArr.join()}-col`}>
-                    {innerArr.map(elem => (
-                      <Table.Cell key={`${elem}-row`}>{elem}</Table.Cell>
-                    ))}
-                  </Table.Row>
-                ))}
+              {[['David Francis', 'Paul Farmer', 'Rita Patel'], ...arr].reduce(flip2dArray, []).map(innerArr => (
+                <Table.Row key={`${innerArr.join()}-col`}>
+                  {innerArr.map(elem => (
+                    <Table.Cell key={`${elem}-row`}>{elem}</Table.Cell>
+                  ))}
+                </Table.Row>
+              ))}
             </Table>
           </Tabs.Panel>
         ))}
@@ -203,11 +196,7 @@ class SimpleMapTabs extends Component {
           ))}
         </Tabs.List>
         {arrSimpleMapped.map(({ contentPanel, id }, index) => (
-          <Tabs.Panel
-            key={`${contentPanel}-simpleMappedPanel`}
-            selected={tabIndex === index}
-            id={id}
-          >
+          <Tabs.Panel key={`${contentPanel}-simpleMappedPanel`} selected={tabIndex === index} id={id}>
             <H4>{contentPanel}</H4>
           </Tabs.Panel>
         ))}
@@ -263,11 +252,7 @@ class ProposedClassPropertiesPlugin extends Component {
           ))}
         </Tabs.List>
         {arrProposedBabel.map(({ contentPanel, id }, index) => (
-          <Tabs.Panel
-            key={`${contentPanel}-babelPanel`}
-            selected={tabIndex === index}
-            id={id}
-          >
+          <Tabs.Panel key={`${contentPanel}-babelPanel`} selected={tabIndex === index} id={id}>
             <H2>with Babel Plugin</H2>
             <SectionBreak level="L" visible />
             {contentPanel}
@@ -306,11 +291,7 @@ const HooksExample = ({ defaultIndex }) => {
             href: '#second-panel',
           },
         ].map(({ content, href }, index) => (
-          <Tabs.Tab
-            onClick={event => hooksHandleClick({ event, index })}
-            selected={tabIndex === index}
-            href={href}
-          >
+          <Tabs.Tab onClick={event => hooksHandleClick({ event, index })} selected={tabIndex === index} href={href}>
             {content}
           </Tabs.Tab>
         ))}
@@ -337,10 +318,4 @@ HooksExample.defaultProps = sharedDefaultProps;
 
 HooksExample.propTypes = sharedPropTypes;
 
-export {
-  HooksExample,
-  ProposedClassPropertiesPlugin,
-  SimpleTabs,
-  SimpleMapTabs,
-  TableTabs,
-};
+export { HooksExample, ProposedClassPropertiesPlugin, SimpleTabs, SimpleMapTabs, TableTabs };

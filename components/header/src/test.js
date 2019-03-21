@@ -21,17 +21,11 @@ describe('Header', () => {
   });
 
   it('allows custom string-based font size without crashing', () => {
-    ReactDOM.render(
-      <Header size="SMALL">Test</Header>,
-      document.createElement('div')
-    );
+    ReactDOM.render(<Header size="SMALL">Test</Header>, document.createElement('div'));
   });
 
   it('allows custom numeric GDS font size without crashing', () => {
-    ReactDOM.render(
-      <Header size={16}>Test</Header>,
-      document.createElement('div')
-    );
+    ReactDOM.render(<Header size={16}>Test</Header>, document.createElement('div'));
   });
 
   it('throws an error if an unsupported size is used', () => {

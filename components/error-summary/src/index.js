@@ -113,13 +113,7 @@ const StyledErrorSummary = styled('div')(
  * ### TODO:
  * - Swap out browser dependancy for context API to help with React Native support
  */
-const ErrorSummary = ({
-  onHandleErrorClick,
-  heading,
-  description,
-  errors,
-  ...props
-}) => (
+const ErrorSummary = ({ onHandleErrorClick, heading, description, errors, ...props }) => (
   <StyledErrorSummary tabIndex={-1} {...props}>
     <H2>{heading}</H2>
     {description && <Paragraph mb={3}>{description}</Paragraph>}
@@ -127,10 +121,7 @@ const ErrorSummary = ({
       <UnorderedList mb={0} listStyleType="none">
         {errors.map((error, index) => (
           <ListItem key={error.targetName}>
-            <StyledErrorText
-              tabIndex={index + 1}
-              onClick={() => onHandleErrorClick(error.targetName)}
-            >
+            <StyledErrorText tabIndex={index + 1} onClick={() => onHandleErrorClick(error.targetName)}>
               {error.text}
             </StyledErrorText>
           </ListItem>

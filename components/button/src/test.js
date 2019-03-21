@@ -1,13 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import Button, {
-  ButtonStart,
-  ButtonStartIcon,
-  ButtonDisabled,
-  ButtonBlue,
-  ButtonWacky,
-} from './fixtures';
+import Button, { ButtonStart, ButtonStartIcon, ButtonDisabled, ButtonBlue, ButtonWacky } from './fixtures';
 
 describe('button', () => {
   describe('basics', () => {

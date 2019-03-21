@@ -52,27 +52,9 @@ class Input extends React.Component {
     return (
       <StyledList>
         {/* TODO: text should be configurable  */}
-        {this.renderInput(
-          labels.day,
-          names.day,
-          'day',
-          defaultValues.day,
-          error
-        )}
-        {this.renderInput(
-          labels.month,
-          names.month,
-          'month',
-          defaultValues.month,
-          error
-        )}
-        {this.renderInput(
-          labels.year,
-          names.year,
-          'year',
-          defaultValues.year,
-          error
-        )}
+        {this.renderInput(labels.day, names.day, 'day', defaultValues.day, error)}
+        {this.renderInput(labels.month, names.month, 'month', defaultValues.month, error)}
+        {this.renderInput(labels.year, names.year, 'year', defaultValues.year, error)}
       </StyledList>
     );
   }

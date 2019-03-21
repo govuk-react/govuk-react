@@ -46,17 +46,11 @@ describe('Heading', () => {
   });
 
   it('allows custom string-based font size without crashing', () => {
-    ReactDOM.render(
-      <Heading size="SMALL">Test</Heading>,
-      document.createElement('div')
-    );
+    ReactDOM.render(<Heading size="SMALL">Test</Heading>, document.createElement('div'));
   });
 
   it('allows custom numeric GDS font size without crashing', () => {
-    ReactDOM.render(
-      <Heading size={16}>Test</Heading>,
-      document.createElement('div')
-    );
+    ReactDOM.render(<Heading size={16}>Test</Heading>, document.createElement('div'));
   });
 
   it('throws an error if an unsupported size is used', () => {

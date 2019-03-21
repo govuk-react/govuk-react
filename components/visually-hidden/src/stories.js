@@ -18,12 +18,9 @@ stories.addDecorator(WithDocsCustom(ReadMe));
 stories.add('Component default', () => (
   <div>
     <Paragraph>
-      Following this paragraph is some hidden content. If `focusable` is enabled
-      then you should be able to tab to it.
+      Following this paragraph is some hidden content. If `focusable` is enabled then you should be able to tab to it.
     </Paragraph>
-    <VisuallyHidden focusable={boolean('focusable', true)}>
-      Some hidden content
-    </VisuallyHidden>
+    <VisuallyHidden focusable={boolean('focusable', true)}>Some hidden content</VisuallyHidden>
   </div>
 ));
 
@@ -42,13 +39,9 @@ class Focusable extends Component {
     return <VisuallyHidden ref={this.focusableRef} focusable {...this.props} />;
   }
 }
-examples.add(
-  'Focussed focusable',
-  () => <Focusable>Focussed focusable VisuallyHidden element</Focusable>,
-  {
-    chromatic: { delay: 300 },
-  }
-);
+examples.add('Focussed focusable', () => <Focusable>Focussed focusable VisuallyHidden element</Focusable>, {
+  chromatic: { delay: 300 },
+});
 
 examples.add(
   'Focussed focusable as a button',

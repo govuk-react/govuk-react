@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  HEADING_SIZES,
-  LEVEL_SIZE,
-  LEVEL_TAG,
-  MEDIA_QUERIES,
-  TYPOGRAPHY_SCALE,
-} from '@govuk-react/constants';
+import { HEADING_SIZES, LEVEL_SIZE, LEVEL_TAG, MEDIA_QUERIES, TYPOGRAPHY_SCALE } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 
 // use `size` only with string for XLARGE, SMALL etc and number for px size
@@ -23,10 +17,7 @@ const StyledHeading = styled('h1')(
       throw Error(`Unknown size ${size} used for heading.`);
     }
 
-    return Object.assign(
-      {},
-      typography.font({ size: actualSize, weight: 'bold' })
-    );
+    return Object.assign({}, typography.font({ size: actualSize, weight: 'bold' }));
   },
   {
     display: 'block',
@@ -99,18 +90,10 @@ const Heading = ({ level, ...props }) => {
   if (level) {
     if (process.env.NODE_ENV !== 'production') {
       // eslint-disable-next-line no-console
-      console.warn(
-        `deprecated prop 'level' used in Heading, please replace with an "H${level}" component`
-      );
+      console.warn(`deprecated prop 'level' used in Heading, please replace with an "H${level}" component`);
     }
     if (LEVEL_TAG[level]) {
-      return (
-        <StyledHeading
-          size={LEVEL_SIZE[level]}
-          {...props}
-          as={LEVEL_TAG[level]}
-        />
-      );
+      return <StyledHeading size={LEVEL_SIZE[level]} {...props} as={LEVEL_TAG[level]} />;
     }
   }
 
@@ -138,10 +121,7 @@ Heading.propTypes = {
    *    `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`
    *    or a numeric size that fits in the GDS font scale list
    */
-  size: PropTypes.oneOf([
-    ...Object.keys(HEADING_SIZES),
-    ...Object.keys(TYPOGRAPHY_SCALE),
-  ]),
+  size: PropTypes.oneOf([...Object.keys(HEADING_SIZES), ...Object.keys(TYPOGRAPHY_SCALE)]),
 };
 
 export default Heading;

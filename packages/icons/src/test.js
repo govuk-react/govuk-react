@@ -7,9 +7,7 @@ import * as exports from '.';
 
 describe('@govuk-react/icons', () => {
   // filter out private exports e.g. __esModule
-  const componentNames = Object.keys(exports).filter(
-    componentName => !componentName.startsWith('_')
-  );
+  const componentNames = Object.keys(exports).filter(componentName => !componentName.startsWith('_'));
   for (let n = 0; n < componentNames.length; n += 1) {
     const key = componentNames[n];
     it(`exports ${key} as a React component that renders an SVG`, () => {

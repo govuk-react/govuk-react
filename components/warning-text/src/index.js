@@ -24,9 +24,7 @@ const IconImportantWrapper = styled('div')({
   width: 35,
 });
 
-const WarningTextWrapper = styled('strong')(
-  typography.font({ size: 19, weight: 'bold' })
-);
+const WarningTextWrapper = styled('strong')(typography.font({ size: 19, weight: 'bold' }));
 
 /**
  *

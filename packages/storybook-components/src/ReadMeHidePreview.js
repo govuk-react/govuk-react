@@ -16,10 +16,7 @@ const PreviewComponent = ({ children }) =>
   );
 
 const ReadMeHidePreview = (readme, ...rest) =>
-  withDocs({ PreviewComponent })(
-    navigator.userAgent.match(/Chromatic/) ? '' : readme,
-    ...rest
-  );
+  withDocs({ PreviewComponent })(navigator.userAgent.match(/Chromatic/) ? '' : readme, ...rest);
 
 PreviewComponent.propTypes = {
   children: PropTypes.node.isRequired,

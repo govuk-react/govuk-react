@@ -4,13 +4,7 @@ import PropTypes from 'prop-types';
 import SVG from '../SVGBase/index';
 
 const IconImportant = ({ fill, title, ...rest }) => (
-  <SVG
-    viewBox="0 0 35.000000 35.000000"
-    preserveAspectRatio="xMidYMid meet"
-    title={title}
-    fill={fill}
-    {...rest}
-  >
+  <SVG viewBox="0 0 35.000000 35.000000" preserveAspectRatio="xMidYMid meet" title={title} fill={fill} {...rest}>
     <g transform="translate(0.000000,35.000000) scale(0.100000,-0.100000)">
       <path
         d="M100 332 c-87 -48 -125 -155 -82 -232 48 -87 155 -125 232 -82 87 48

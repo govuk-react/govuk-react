@@ -4,12 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { BLACK, YELLOW, ERROR_COLOUR } from 'govuk-colours';
-import {
-  FONT_SIZE,
-  LINE_HEIGHT,
-  MEDIA_QUERIES,
-  NTA_LIGHT,
-} from '@govuk-react/constants';
+import { FONT_SIZE, LINE_HEIGHT, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants';
 
 import Label from '@govuk-react/label';
 import LabelText from '@govuk-react/label-text';
@@ -83,12 +78,7 @@ const TextArea = ({ children, hint, meta, input, ...props }) => (
     <LabelText>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
-    <TextAreaField
-      type="text"
-      rows="5"
-      error={meta.touched && meta.error}
-      {...input}
-    />
+    <TextAreaField type="text" rows="5" error={meta.touched && meta.error} {...input} />
   </Label>
 );
 

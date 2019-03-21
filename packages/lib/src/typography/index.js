@@ -43,9 +43,7 @@ export function responsive(size, overrideLineHeight) {
   const scale = TYPOGRAPHY_SCALE[size];
 
   if (!scale) {
-    throw Error(
-      `Unknown font size ${size} - expected a point from the typography scale.`
-    );
+    throw Error(`Unknown font size ${size} - expected a point from the typography scale.`);
   }
 
   return Object.assign({}, getSizeStyle(scale.mobile, overrideLineHeight), {
@@ -54,12 +52,7 @@ export function responsive(size, overrideLineHeight) {
   });
 }
 
-export function font({
-  size,
-  weight = 'regular',
-  tabular = false,
-  lineHeight,
-} = {}) {
+export function font({ size, weight = 'regular', tabular = false, lineHeight } = {}) {
   return Object.assign(
     {},
     common(tabular ? FONT_STACK_TABULAR : undefined),

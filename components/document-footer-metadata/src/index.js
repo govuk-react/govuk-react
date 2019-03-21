@@ -5,10 +5,7 @@ import UnorderedList from '@govuk-react/unordered-list';
 import { NTA_LIGHT } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
 
-const StyledContainer = styled('div')(
-  { fontFamily: NTA_LIGHT },
-  spacing.withWhiteSpace()
-);
+const StyledContainer = styled('div')({ fontFamily: NTA_LIGHT }, spacing.withWhiteSpace());
 
 const StyledDefinition = styled('li')({
   fontSize: '24px',
@@ -109,12 +106,7 @@ const DocumentFooterMetadata = ({ from, partOf, other, ...props }) => {
         <div>
           <p style={{ marginBottom: 0 }}>Part of:</p>
           <UnorderedList listStyleType="none">
-            {partOf &&
-              partOf.map((child, i) => (
-                <StyledDefinition key={child.key || i}>
-                  {child}
-                </StyledDefinition>
-              ))}
+            {partOf && partOf.map((child, i) => <StyledDefinition key={child.key || i}>{child}</StyledDefinition>)}
           </UnorderedList>
         </div>
       )}

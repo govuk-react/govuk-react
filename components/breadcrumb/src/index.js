@@ -45,8 +45,7 @@ const BreadcrumbListItem = styled('li')({
     position: 'absolute',
     top: '-1px',
     bottom: '1px',
-    left:
-      CHEVRON_ALTITUDE_CALCULATED * -2 + CHEVRON_SIZE + CHEVRON_BORDER_WIDTH,
+    left: CHEVRON_ALTITUDE_CALCULATED * -2 + CHEVRON_SIZE + CHEVRON_BORDER_WIDTH,
     width: CHEVRON_SIZE,
     height: CHEVRON_SIZE,
     margin: 'auto 0',
@@ -80,9 +79,7 @@ const BreadcrumbComponent = ({ children, ...props }) => (
       {children.length && children.map ? (
         children.map((child, i) =>
           child && (child.length || child.props) ? (
-            <BreadcrumbListItem key={child.key || i}>
-              {child}
-            </BreadcrumbListItem>
+            <BreadcrumbListItem key={child.key || i}>{child}</BreadcrumbListItem>
           ) : null
         )
       ) : (
@@ -99,10 +96,7 @@ BreadcrumbComponent.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-const Breadcrumb = deprecate(
-  BreadcrumbComponent,
-  'please use the Breadcumbs component instead'
-);
+const Breadcrumb = deprecate(BreadcrumbComponent, 'please use the Breadcumbs component instead');
 
 Breadcrumb.Link = Link;
 

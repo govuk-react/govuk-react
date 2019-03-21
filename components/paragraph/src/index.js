@@ -100,15 +100,7 @@ const Paragraph = ({ children, ...props }) => (
     source={children}
     escapeHtml={false}
     skipHtml
-    allowedTypes={[
-      'paragraph',
-      'emphasis',
-      'strong',
-      'link',
-      'inlineCode',
-      'code',
-      'text',
-    ]}
+    allowedTypes={['paragraph', 'emphasis', 'strong', 'link', 'inlineCode', 'code', 'text']}
     renderers={{ link: props.linkRenderer }}
     {...props}
   />

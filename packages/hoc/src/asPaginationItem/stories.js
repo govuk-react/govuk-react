@@ -10,9 +10,7 @@ const PaginationLink = asPaginationItem(Link);
 const stories = storiesOf('Utilities/asPaginationItem', module);
 
 stories.add('asPaginationItem passing in anchor', () => (
-  <PaginationTag href="https://cats.org">
-    asPaginationItem anchor example
-  </PaginationTag>
+  <PaginationTag href="https://cats.org">asPaginationItem anchor example</PaginationTag>
 ));
 
 stories.add('asPaginationItem passing in anchor target=blank', () => (
@@ -23,8 +21,6 @@ stories.add('asPaginationItem passing in anchor target=blank', () => (
 
 stories.add('asPaginationItem passing in React Router Link', () => (
   <BrowserRouter>
-    <PaginationLink to="https://cats.com">
-      asPaginationItem Link example
-    </PaginationLink>
+    <PaginationLink to="https://cats.com">asPaginationItem Link example</PaginationLink>
   </BrowserRouter>
 ));

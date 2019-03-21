@@ -20,10 +20,7 @@ const wrapperOther = <DocumentFooterMetadata other={otherExample} />;
 describe('DocumentFooterMetadata', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(
-      <DocumentFooterMetadata>Example</DocumentFooterMetadata>,
-      div
-    );
+    ReactDOM.render(<DocumentFooterMetadata>Example</DocumentFooterMetadata>, div);
   });
 
   it('should render a from item', () => {

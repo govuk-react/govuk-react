@@ -33,36 +33,28 @@ examples.add('UnorderedList with bullet with nested lists', () => (
   <UnorderedList listStyleType="bullet">
     <ListItem>Bullet list</ListItem>
     <ListItem>In nisi lectus, mollis sed neque.</ListItem>
-    <ListItem>
-      Pellentesque habitant morbi tristique senectus et netus et malesuada.
-    </ListItem>
+    <ListItem>Pellentesque habitant morbi tristique senectus et netus et malesuada.</ListItem>
     <UnorderedList listStyleType="bullet">
       <ListItem>Bullet list</ListItem>
       <ListItem margin={4}>Vestibulum ante ipsum.</ListItem>
       <ListItem>Maecenas cursus rutrum nunc.</ListItem>
     </UnorderedList>
     <ListItem>In nisi lectus, mollis sed neque.</ListItem>
-    <ListItem>
-      Pellentesque habitant morbi tristique senectus et netus et malesuada.
-    </ListItem>
+    <ListItem>Pellentesque habitant morbi tristique senectus et netus et malesuada.</ListItem>
     <UnorderedList listStyleType="none">
       <ListItem>No type set list</ListItem>
       <ListItem>Vestibulum ante ipsum.</ListItem>
       <ListItem>Maecenas cursus rutrum nunc.</ListItem>
     </UnorderedList>
     <ListItem>In nisi lectus, mollis sed neque.</ListItem>
-    <ListItem>
-      Pellentesque habitant morbi tristique senectus et netus et malesuada.
-    </ListItem>
+    <ListItem>Pellentesque habitant morbi tristique senectus et netus et malesuada.</ListItem>
     <UnorderedList listStyleType="square">
       <ListItem>Square list</ListItem>
       <ListItem>Vestibulum ante ipsum.</ListItem>
       <ListItem>Maecenas cursus rutrum nunc.</ListItem>
     </UnorderedList>
     <ListItem>In nisi lectus, mollis sed neque.</ListItem>
-    <ListItem>
-      Pellentesque habitant morbi tristique senectus et netus et malesuada.
-    </ListItem>
+    <ListItem>Pellentesque habitant morbi tristique senectus et netus et malesuada.</ListItem>
     <OrderedList listStyleType="square">
       <ListItem>Square ordered list</ListItem>
       <ListItem>Vestibulum ante ipsum.</ListItem>
@@ -74,9 +66,7 @@ examples.add('UnorderedList with bullet with nested lists', () => (
 examples.add('UnorderedList with no decoration', () => (
   <UnorderedList listStyleType="none">
     <ListItem>In nisi lectus, mollis sed neque.</ListItem>
-    <ListItem>
-      Pellentesque habitant morbi tristique senectus et netus et malesuada.
-    </ListItem>
+    <ListItem>Pellentesque habitant morbi tristique senectus et netus et malesuada.</ListItem>
     <ListItem>Vestibulum ante ipsum.</ListItem>
     <ListItem>Maecenas cursus rutrum nunc.</ListItem>
     <ListItem>Nullam laoreet turpis eu odio gravida.</ListItem>

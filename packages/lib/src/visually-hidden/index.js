@@ -2,10 +2,7 @@
 // Tracking:
 // https://github.com/alphagov/govuk-frontend/blob/master/src/helpers/_visually-hidden.scss
 
-function visuallyHidden({
-  important: isImportant = true,
-  focusable: isFocusable = false,
-} = {}) {
+function visuallyHidden({ important: isImportant = true, focusable: isFocusable = false } = {}) {
   const important = isImportant ? ' !important' : '';
   return Object.assign(
     {},

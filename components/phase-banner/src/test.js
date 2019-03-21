@@ -5,8 +5,6 @@ import PhaseBanner from '.';
 
 describe('PhaseBanner', () => {
   it('matches wrapper snapshot', () => {
-    expect(
-      mount(<PhaseBanner level="beta">example</PhaseBanner>)
-    ).toMatchSnapshot('wrapper mount');
+    expect(mount(<PhaseBanner level="beta">example</PhaseBanner>)).toMatchSnapshot('wrapper mount');
   });
 });

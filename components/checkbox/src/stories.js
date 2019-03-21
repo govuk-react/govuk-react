@@ -40,9 +40,7 @@ examples.add('Checkbox preselected & disabled', () => (
 
 examples.add('Checkbox with hint text', () => (
   <div>
-    <Checkbox hint="including English, Scottish, Welsh and Northern Irish">
-      British
-    </Checkbox>
+    <Checkbox hint="including English, Scottish, Welsh and Northern Irish">British</Checkbox>
     <Checkbox>Irish</Checkbox>
     <Checkbox>Citizen of another country</Checkbox>
   </div>

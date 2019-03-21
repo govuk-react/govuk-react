@@ -83,17 +83,13 @@ const TableThreeQuartersOneQuarter = () => (
     caption="Three quarters, one quarter"
     head={
       <Table.Row>
-        <Table.CellHeader setWidth="three-quarters">
-          three-quarters
-        </Table.CellHeader>
+        <Table.CellHeader setWidth="three-quarters">three-quarters</Table.CellHeader>
         <Table.CellHeader setWidth="one-quarter">one-quarter</Table.CellHeader>
       </Table.Row>
     }
   >
     <Table.Row>
-      <Table.Cell>
-        Column uses setWidth=&quot;three-quarters&quot; in header
-      </Table.Cell>
+      <Table.Cell>Column uses setWidth=&quot;three-quarters&quot; in header</Table.Cell>
       <Table.Cell>setWidth=&quot;one-quarter&quot;</Table.Cell>
     </Table.Row>
   </Table>
@@ -111,21 +107,13 @@ const TableWithCustomWidths = () => (
     }
   >
     <Table.Row>
-      <Table.Cell>
-        Column uses setWidth=&quot;one-half&quot; in header
-      </Table.Cell>
+      <Table.Cell>Column uses setWidth=&quot;one-half&quot; in header</Table.Cell>
       <Table.Cell>setWidth=&quot;22%&quot;</Table.Cell>
       <Table.Cell>Not specified</Table.Cell>
     </Table.Row>
   </Table>
 );
 
-export {
-  TableSimple,
-  TableWithCaption,
-  TableWithHeadAndNumerics,
-  TableWithCustomWidths,
-  TableThreeQuartersOneQuarter,
-};
+export { TableSimple, TableWithCaption, TableWithHeadAndNumerics, TableWithCustomWidths, TableThreeQuartersOneQuarter };
 
 export default Table;

@@ -9,6 +9,4 @@ const stories = storiesOf('Typography/Error text', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Component default', () => (
-  <ErrorText errorText="example">Example</ErrorText>
-));
+stories.add('Component default', () => <ErrorText errorText="example">Example</ErrorText>);

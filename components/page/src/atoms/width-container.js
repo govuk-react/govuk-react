@@ -2,12 +2,7 @@
 import styled from 'styled-components';
 import { spacing } from '@govuk-react/lib';
 
-import {
-  GUTTER,
-  GUTTER_HALF,
-  MEDIA_QUERIES,
-  SITE_WIDTH,
-} from '@govuk-react/constants';
+import { GUTTER, GUTTER_HALF, MEDIA_QUERIES, SITE_WIDTH } from '@govuk-react/constants';
 
 const WidthContainer = styled('div')(
   {

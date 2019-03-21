@@ -7,9 +7,7 @@ export { default as Caption } from '@govuk-react/caption';
 export { default as Checkbox } from '@govuk-react/checkbox';
 export { default as DateField } from '@govuk-react/date-field';
 export { default as Details } from '@govuk-react/details';
-export {
-  default as DocumentFooterMetadata,
-} from '@govuk-react/document-footer-metadata';
+export { default as DocumentFooterMetadata } from '@govuk-react/document-footer-metadata';
 export { default as ErrorSummary } from '@govuk-react/error-summary';
 export { default as ErrorText } from '@govuk-react/error-text';
 export { default as Fieldset } from '@govuk-react/fieldset';

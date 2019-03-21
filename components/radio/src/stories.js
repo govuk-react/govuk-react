@@ -3,10 +3,7 @@ import { Field } from 'react-final-form';
 import { storiesOf } from '@storybook/react';
 import PropTypes from 'prop-types';
 import { withKnobs } from '@storybook/addon-knobs/react';
-import {
-  FinalFormWrapper,
-  WithDocsCustom,
-} from '@govuk-react/storybook-components';
+import { FinalFormWrapper, WithDocsCustom } from '@govuk-react/storybook-components';
 
 import MultiChoice from '@govuk-react/multi-choice';
 import Radio from '.';
@@ -19,12 +16,7 @@ const RadioGroup = ({ label, hint, options, inline, input, meta }) => (
     <MultiChoice label={label} hint={hint} meta={meta}>
       {options.map(o => (
         <div key={o.value}>
-          <Radio
-            {...input}
-            value={o.value}
-            inline={inline}
-            checked={o.value === input.value}
-          >
+          <Radio {...input} value={o.value} inline={inline} checked={o.value === input.value}>
             {o.title}
           </Radio>
         </div>
@@ -61,9 +53,7 @@ const examples = storiesOf('Form/Radio/Examples', module);
 stories.addDecorator(withKnobs);
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Component default', () => (
-  <Radio name="group1">Radio button text example</Radio>
-));
+stories.add('Component default', () => <Radio name="group1">Radio button text example</Radio>);
 
 examples.add('Radio stacked', () => (
   <div>

@@ -22,8 +22,7 @@ const asTopNavAnchor = AnchorType => {
   });
 
   Anchor.propTypes = {
-    children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
-      .isRequired,
+    children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   };
 
   return StyledHoc;

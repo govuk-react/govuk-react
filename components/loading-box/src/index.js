@@ -14,96 +14,94 @@ const StyledContainer = styled('div')({
   minHeight: '10px',
 });
 
-const Innerwrap = styled('div')(
-  ({ timeIn, timeOut, backgroundColor, backgroundColorOpacity }) => ({
+const Innerwrap = styled('div')(({ timeIn, timeOut, backgroundColor, backgroundColorOpacity }) => ({
+  position: 'absolute',
+  height: '100%',
+  top: 0,
+  right: 0,
+  left: 0,
+  bottom: 0,
+  display: 'flex',
+  justifyContent: 'center',
+  [`& .${spinnerClassName}`]: {
     position: 'absolute',
+    zIndex: 101,
+    opacity: 1,
+    display: 'block',
     height: '100%',
-    top: 0,
-    right: 0,
-    left: 0,
-    bottom: 0,
-    display: 'flex',
-    justifyContent: 'center',
-    [`& .${spinnerClassName}`]: {
-      position: 'absolute',
-      zIndex: 101,
-      opacity: 1,
-      display: 'block',
-      height: '100%',
-      maxHeight: 'calc(50vh + 100px)',
-      transition: `opacity ${timeIn}ms ease-in-out`,
-      willChange: 'opacity',
-    },
-    '& .overlay': {
-      zIndex: 100,
-      transition: `background-color ${timeIn}ms ease-in-out`,
-      willChange: 'background-color',
-      backgroundColor: `rgba(
+    maxHeight: 'calc(50vh + 100px)',
+    transition: `opacity ${timeIn}ms ease-in-out`,
+    willChange: 'opacity',
+  },
+  '& .overlay': {
+    zIndex: 100,
+    transition: `background-color ${timeIn}ms ease-in-out`,
+    willChange: 'background-color',
+    backgroundColor: `rgba(
       ${hexRgb(backgroundColor)[0]},
       ${hexRgb(backgroundColor)[1]},
       ${hexRgb(backgroundColor)[2]},
       ${backgroundColorOpacity})`,
-    },
-    '.fade-enter': {
-      '& .overlay': {
-        backgroundColor: `rgba(
+  },
+  '.fade-enter': {
+    '& .overlay': {
+      backgroundColor: `rgba(
         ${hexRgb(backgroundColor)[0]},
         ${hexRgb(backgroundColor)[1]},
         ${hexRgb(backgroundColor)[2]},
         0)`,
-        transitionDuration: `${timeIn}ms`,
-      },
-      [`& .${spinnerClassName}`]: {
-        opacity: 0,
-        transitionDuration: `${timeIn}ms`,
-        transitionDelay: `${timeIn / 2}ms`,
-      },
+      transitionDuration: `${timeIn}ms`,
     },
-    '.fade-enter-active': {
-      '& .overlay': {
-        backgroundColor: `rgba(
+    [`& .${spinnerClassName}`]: {
+      opacity: 0,
+      transitionDuration: `${timeIn}ms`,
+      transitionDelay: `${timeIn / 2}ms`,
+    },
+  },
+  '.fade-enter-active': {
+    '& .overlay': {
+      backgroundColor: `rgba(
         ${hexRgb(backgroundColor)[0]},
         ${hexRgb(backgroundColor)[1]},
         ${hexRgb(backgroundColor)[2]},
         ${backgroundColorOpacity})`,
-        transitionDuration: `${timeIn}ms`,
-      },
-      [`& .${spinnerClassName}`]: {
-        opacity: 1,
-        transitionDuration: `${timeIn}ms`,
-        transitionDelay: `${timeIn / 2}ms`,
-      },
+      transitionDuration: `${timeIn}ms`,
     },
-    '.fade-exit': {
-      '& .overlay': {
-        backgroundColor: `rgba(
+    [`& .${spinnerClassName}`]: {
+      opacity: 1,
+      transitionDuration: `${timeIn}ms`,
+      transitionDelay: `${timeIn / 2}ms`,
+    },
+  },
+  '.fade-exit': {
+    '& .overlay': {
+      backgroundColor: `rgba(
         ${hexRgb(backgroundColor)[0]},
         ${hexRgb(backgroundColor)[1]},
         ${hexRgb(backgroundColor)[2]},
         ${backgroundColorOpacity})`,
-        transitionDuration: `${timeOut}ms`,
-      },
-      [`& .${spinnerClassName}`]: {
-        opacity: 1,
-        transitionDuration: `${timeOut}ms`,
-      },
+      transitionDuration: `${timeOut}ms`,
     },
-    '.fade-exit-active': {
-      '& .overlay': {
-        backgroundColor: `rgba(
+    [`& .${spinnerClassName}`]: {
+      opacity: 1,
+      transitionDuration: `${timeOut}ms`,
+    },
+  },
+  '.fade-exit-active': {
+    '& .overlay': {
+      backgroundColor: `rgba(
         ${hexRgb(backgroundColor)[0]},
         ${hexRgb(backgroundColor)[1]},
         ${hexRgb(backgroundColor)[2]},
         0)`,
-        transitionDuration: `${timeOut}ms`,
-      },
-      [`& .${spinnerClassName}`]: {
-        opacity: 0,
-        transitionDuration: `${timeOut}ms`,
-      },
+      transitionDuration: `${timeOut}ms`,
     },
-  })
-);
+    [`& .${spinnerClassName}`]: {
+      opacity: 0,
+      transitionDuration: `${timeOut}ms`,
+    },
+  },
+}));
 
 const Overlay = styled('div')({
   position: 'absolute',
@@ -157,12 +155,7 @@ const LoadingBox = ({
   ...props
 }) => (
   <StyledContainer {...props}>
-    <CSSTransition
-      timeout={timeOut}
-      classNames="fade"
-      in={loading}
-      unmountOnExit
-    >
+    <CSSTransition timeout={timeOut} classNames="fade" in={loading} unmountOnExit>
       <Innerwrap
         backgroundColor={backgroundColor}
         backgroundColorOpacity={backgroundColorOpacity}
@@ -170,13 +163,7 @@ const LoadingBox = ({
         timeIn={timeIn}
         timeOut={timeOut}
       >
-        <Spinner
-          title={title}
-          className={spinnerClassName}
-          fill={spinnerColor}
-          width="50px"
-          height="50px"
-        />
+        <Spinner title={title} className={spinnerClassName} fill={spinnerColor} width="50px" height="50px" />
         <Overlay className="overlay" />
       </Innerwrap>
     </CSSTransition>

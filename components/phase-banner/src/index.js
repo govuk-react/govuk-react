@@ -16,18 +16,14 @@ const StyledBanner = styled('div')(
   spacing.withWhiteSpace()
 );
 
-const BannerContent = styled('p')(
-  typography.font({ size: 16 }),
-  typography.textColour,
-  {
-    display: 'table',
-    margin: 0,
+const BannerContent = styled('p')(typography.font({ size: 16 }), typography.textColour, {
+  display: 'table',
+  margin: 0,
 
-    [Tag]: {
-      marginRight: SPACING_POINTS[2],
-    },
-  }
-);
+  [Tag]: {
+    marginRight: SPACING_POINTS[2],
+  },
+});
 
 const BannerText = styled('span')({
   display: 'table-cell',

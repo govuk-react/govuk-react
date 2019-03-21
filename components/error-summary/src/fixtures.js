@@ -8,8 +8,7 @@ import TextArea from '@govuk-react/text-area';
 import ErrorSummary from '.';
 
 export const heading = 'Message to alert the user to a problem goes here';
-export const description =
-  'Optional description of the errors and how to correct them';
+export const description = 'Optional description of the errors and how to correct them';
 export const errors = [
   {
     targetName: 'national-insurance-number',

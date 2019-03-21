@@ -38,9 +38,7 @@ import ListItem from '@govuk-react/list-item';
 const ListNavigation = ({ children, listStyleType, ...props }) => (
   <UnorderedList listStyleType={listStyleType} {...props}>
     {children.length && children.map ? (
-      children.map((child, i) => (
-        <ListItem key={child.key || i}>{child}</ListItem>
-      ))
+      children.map((child, i) => <ListItem key={child.key || i}>{child}</ListItem>)
     ) : (
       <ListItem>{children}</ListItem>
     )}

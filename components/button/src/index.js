@@ -1,12 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {
-  BORDER_WIDTH_FORM_ELEMENT,
-  FOCUSABLE,
-  MEDIA_QUERIES,
-  SPACING_POINTS,
-} from '@govuk-react/constants';
+import { BORDER_WIDTH_FORM_ELEMENT, FOCUSABLE, MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 import { BUTTON_COLOUR, BUTTON_COLOUR_DARKEN_15, WHITE } from 'govuk-colours';
 import { darken, stripUnit } from 'polished';
@@ -30,9 +25,7 @@ const StyledButton = styled('button')(
   ({
     buttonColour = BUTTON_COLOUR,
     buttonHoverColour = darken(0.05, buttonColour),
-    buttonShadowColour = buttonColour === BUTTON_COLOUR
-      ? BUTTON_COLOUR_DARKEN_15
-      : darken(0.15, buttonColour),
+    buttonShadowColour = buttonColour === BUTTON_COLOUR ? BUTTON_COLOUR_DARKEN_15 : darken(0.15, buttonColour),
     buttonTextColour = WHITE,
     isStart,
   }) => ({

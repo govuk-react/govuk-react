@@ -13,14 +13,10 @@ const examples = storiesOf('Typography/ListItem/Examples', module);
 stories.addDecorator(WithDocsCustom(ReadMe));
 stories.addDecorator(withKnobs);
 
-stories.add('Component default', () => (
-  <ListItem>{text('Children', 'List item example')}</ListItem>
-));
+stories.add('Component default', () => <ListItem>{text('Children', 'List item example')}</ListItem>);
 
 examples.add('With anchor', () => (
   <ListItem>
-    <Link href="https://www.google.com/">
-      {text('Children', 'List item example')}
-    </Link>
+    <Link href="https://www.google.com/">{text('Children', 'List item example')}</Link>
   </ListItem>
 ));

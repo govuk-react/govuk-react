@@ -15,8 +15,6 @@ describe('inset text', () => {
   });
 
   it('can render with a paragraph', () => {
-    expect(mount(<InsetTextWithParagraph />)).toMatchSnapshot(
-      'inset text with paragraph'
-    );
+    expect(mount(<InsetTextWithParagraph />)).toMatchSnapshot('inset text with paragraph');
   });
 });

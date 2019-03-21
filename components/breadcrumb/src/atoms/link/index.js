@@ -6,7 +6,4 @@ const Link = styled('a')(link.common(), link.styleText);
 
 Link.name = 'Breadcrumb.Link';
 
-export default deprecate(
-  Link,
-  'please use the Breadcrumbs.Link component instead'
-);
+export default deprecate(Link, 'please use the Breadcrumbs.Link component instead');

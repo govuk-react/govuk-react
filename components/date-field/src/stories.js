@@ -57,22 +57,15 @@ stories.add('Component default', () => (
 ));
 
 examples.add('Date with hint text', () => (
-  <DateField hintText="For example, 31 03 1980">
-    What is your date of birth?
-  </DateField>
+  <DateField hintText="For example, 31 03 1980">What is your date of birth?</DateField>
 ));
 
 examples.add('Date with default values', () => (
-  <DateField defaultValues={{ day: '01', month: '02', year: '2018' }}>
-    What is your date of birth ?
-  </DateField>
+  <DateField defaultValues={{ day: '01', month: '02', year: '2018' }}>What is your date of birth ?</DateField>
 ));
 
 examples.add('Date with hint text & error', () => (
-  <DateField
-    hintText="For example, 31 03 1980"
-    errorText="Error message goes here"
-  >
+  <DateField hintText="For example, 31 03 1980" errorText="Error message goes here">
     What is your date of birth?
   </DateField>
 ));

@@ -2,10 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import MultiChoice from '.';
-import MultiChoiceWithKnobs, {
-  MultiChoiceWithKnobsHint,
-  MultiChoiceWithKnobsError,
-} from './fixtures';
+import MultiChoiceWithKnobs, { MultiChoiceWithKnobsHint, MultiChoiceWithKnobsError } from './fixtures';
 
 describe('MultiChoice', () => {
   it('renders with a label', () => {
@@ -25,9 +22,7 @@ describe('MultiChoice', () => {
 
   it('matches snapshot', () => {
     const metaData = { touched: true, error: 'Example error' };
-    const wrapper = mount(
-      <MultiChoice label="Example label" hint="Example hint" meta={metaData} />
-    );
+    const wrapper = mount(<MultiChoice label="Example label" hint="Example hint" meta={metaData} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

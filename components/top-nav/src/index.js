@@ -139,15 +139,7 @@ class TopNav extends Component {
   };
 
   render() {
-    const {
-      bgColor,
-      color,
-      company,
-      serviceTitle,
-      search,
-      children,
-      ...props
-    } = this.props;
+    const { bgColor, color, company, serviceTitle, search, children, ...props } = this.props;
 
     return (
       <React.Fragment>
@@ -162,22 +154,11 @@ class TopNav extends Component {
               {children && (
                 <React.Fragment>
                   <MenuButtonWrapper>
-                    <MenuButton
-                      open={this.state.navigationOpen}
-                      onClick={this.toggleNavigationOpen}
-                    />
+                    <MenuButton open={this.state.navigationOpen} onClick={this.toggleNavigationOpen} />
                   </MenuButtonWrapper>
                   {/* Referenced in MenuButton */}
-                  <Input
-                    id="govuk-react-menu-button"
-                    type="checkbox"
-                    checked={this.state.navigationOpen}
-                  />
-                  <UnorderedList
-                    id="govuk-react-menu"
-                    serviceTitle={serviceTitle}
-                    open={this.state.navigationOpen}
-                  >
+                  <Input id="govuk-react-menu-button" type="checkbox" checked={this.state.navigationOpen} />
+                  <UnorderedList id="govuk-react-menu" serviceTitle={serviceTitle} open={this.state.navigationOpen}>
                     {/* TODO: #205 use context api and/or render props here for `active` */}
                     {children.length && children.map ? (
                       children.map((child, i) =>
@@ -203,9 +184,7 @@ class TopNav extends Component {
 TopNav.defaultProps = {
   bgColor: BLACK,
   color: WHITE,
-  company: (
-    <IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</IconTitle>
-  ),
+  company: <IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</IconTitle>,
   serviceTitle: undefined,
   search: false,
   children: undefined,

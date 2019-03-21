@@ -14,10 +14,7 @@ stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
   <Fieldset>
-    <Fieldset.Legend
-      size={text('legend size', 'LARGE')}
-      isPageHeading={boolean('legend isPageHeading', false)}
-    >
+    <Fieldset.Legend size={text('legend size', 'LARGE')} isPageHeading={boolean('legend isPageHeading', false)}>
       {text('legend contents', 'Example legend')}
     </Fieldset.Legend>
   </Fieldset>

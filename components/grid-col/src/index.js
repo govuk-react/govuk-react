@@ -50,9 +50,7 @@ const StyledColumn = styled('div')(
               .replace(/^([A-Z][a-z]+)([A-Z])/, '$1-$2')
               .toLocaleLowerCase();
             // eslint-disable-next-line no-console
-            console.warn(
-              `deprecated prop ${key} used in GridCol, please replace with setWidth="${newKey}"`
-            );
+            console.warn(`deprecated prop ${key} used in GridCol, please replace with setWidth="${newKey}"`);
           }
           widthValue = colValues[key];
         }
@@ -63,18 +61,14 @@ const StyledColumn = styled('div')(
         },
       };
     }
-    widthStyle[MEDIA_QUERIES.TABLET] = setGrowShrink(
-      widthStyle[MEDIA_QUERIES.TABLET]
-    );
+    widthStyle[MEDIA_QUERIES.TABLET] = setGrowShrink(widthStyle[MEDIA_QUERIES.TABLET]);
 
     const desktopWidthStyle = desktopWidthFromProps({
       setWidth: props.setDesktopWidth,
     });
 
     if (desktopWidthStyle) {
-      desktopWidthStyle[MEDIA_QUERIES.DESKTOP] = setGrowShrink(
-        desktopWidthStyle[MEDIA_QUERIES.DESKTOP]
-      );
+      desktopWidthStyle[MEDIA_QUERIES.DESKTOP] = setGrowShrink(desktopWidthStyle[MEDIA_QUERIES.DESKTOP]);
     }
 
     return Object.assign({}, widthStyle, desktopWidthStyle);
@@ -157,20 +151,12 @@ GridCol.propTypes = {
    * Explicitly set column to width using value or descriptive string
    * (`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
    */
-  setWidth: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.oneOf(Object.keys(WIDTHS)),
-  ]),
+  setWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.oneOf(Object.keys(WIDTHS))]),
   /**
    * Explicitly set desktop column to width using value or descriptive string
    * (`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
    */
-  setDesktopWidth: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.oneOf([...Object.keys(WIDTHS)]),
-  ]),
+  setDesktopWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.oneOf([...Object.keys(WIDTHS)])]),
 };
 
 GridCol.defaultProps = {

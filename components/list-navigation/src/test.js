@@ -26,8 +26,6 @@ describe('ListNavigation', () => {
   });
 
   it('matches wrapper snapshot', () => {
-    expect(
-      mount(<ListNavigation listStyleType="square">Example</ListNavigation>)
-    ).toMatchSnapshot('wrapper mount');
+    expect(mount(<ListNavigation listStyleType="square">Example</ListNavigation>)).toMatchSnapshot('wrapper mount');
   });
 });

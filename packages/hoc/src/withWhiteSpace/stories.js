@@ -102,11 +102,7 @@ stories.add('demo component, multiple margins and padding (complex)', () => (
 
 stories.add('existing InputField with spacing size 1', () => (
   <Fragment>
-    <InputField
-      mb={number('marginBottom', 1)}
-      name="group1"
-      hint="Change whitespace value with knobs"
-    >
+    <InputField mb={number('marginBottom', 1)} name="group1" hint="Change whitespace value with knobs">
       Example 1
     </InputField>
     <Button>Finish</Button>
@@ -145,24 +141,14 @@ stories.add('multiple existing components', () => (
     <Input mb={number('Input marginBottom', 9)} />
     <InputField mb={number('Input-text marginBottom', 9)}>Example</InputField>
     <Label mb={number('Label marginBottom', 9)}>Label Example</Label>
-    <LabelText mb={number('LabelText marginBottom', 9)}>
-      LabelText Example
-    </LabelText>
-    <ListItem mb={number('ListItem marginBottom', 9)}>
-      ListItem Example
-    </ListItem>
-    <ListNavigation mb={number('ListNavigation marginBottom', 9)}>
-      ListNavigation Example
-    </ListNavigation>
+    <LabelText mb={number('LabelText marginBottom', 9)}>LabelText Example</LabelText>
+    <ListItem mb={number('ListItem marginBottom', 9)}>ListItem Example</ListItem>
+    <ListNavigation mb={number('ListNavigation marginBottom', 9)}>ListNavigation Example</ListNavigation>
     <MultiChoice label="example" mb={number('MultiChoice marginBottom', 9)}>
       MultiChoice Example
     </MultiChoice>
-    <OrderedList mb={number('OrderedList marginBottom', 9)}>
-      OrderedList Example
-    </OrderedList>
-    <Pagination mb={number('Pagination marginBottom', 9)}>
-      Pagination Example
-    </Pagination>
+    <OrderedList mb={number('OrderedList marginBottom', 9)}>OrderedList Example</OrderedList>
+    <Pagination mb={number('Pagination marginBottom', 9)}>Pagination Example</Pagination>
     <Panel panelTitle="Example" mb={number('Panel marginBottom', 9)}>
       Panel Example
     </Panel>
@@ -170,21 +156,13 @@ stories.add('multiple existing components', () => (
       PhaseBanner Example
     </PhaseBanner>
     <Radio mb={number('Radio marginBottom', 9)}>Radio Example</Radio>
-    <RelatedItems mb={number('RelatedItems marginBottom', 9)}>
-      RelatedItems Example
-    </RelatedItems>
-    <SearchBox mb={number('SearchBox marginBottom', 9)}>
-      SearchBox Example
-    </SearchBox>
+    <RelatedItems mb={number('RelatedItems marginBottom', 9)}>RelatedItems Example</RelatedItems>
+    <SearchBox mb={number('SearchBox marginBottom', 9)}>SearchBox Example</SearchBox>
     <Select label="example" mb={number('Select marginBottom', 9)}>
       Select Example
     </Select>
     <Tag mb={number('Tag marginBottom', 9)}>Tag</Tag>
-    <TextArea mb={number('TextArea marginBottom', 9)}>
-      TextArea Example
-    </TextArea>
-    <UnorderedList mb={number('UnorderedList marginBottom', 9)}>
-      UnorderedList Example
-    </UnorderedList>
+    <TextArea mb={number('TextArea marginBottom', 9)}>TextArea Example</TextArea>
+    <UnorderedList mb={number('UnorderedList marginBottom', 9)}>UnorderedList Example</UnorderedList>
   </Fragment>
 ));

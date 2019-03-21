@@ -69,15 +69,7 @@ const StyledContainer = styled('div')(
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/date-field
  *
  */
-const DateField = ({
-  children,
-  errorText,
-  hintText,
-  inputNames,
-  defaultValues,
-  input,
-  ...props
-}) => (
+const DateField = ({ children, errorText, hintText, inputNames, defaultValues, input, ...props }) => (
   <StyledContainer {...props} errorText={errorText}>
     <LabelText errorText={errorText}>{children}</LabelText>
     {hintText && <HintText>{hintText}</HintText>}

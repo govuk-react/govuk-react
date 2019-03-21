@@ -28,9 +28,7 @@ const ButtonIcon = styled('div')(({ open }) => ({
   height: '0',
   borderStyle: 'solid',
   borderColor: 'transparent',
-  clipPath: open
-    ? 'polygon(50% 0%, 0% 100%, 100% 100%)'
-    : 'polygon(0% 0%, 50% 100%, 100% 0%)',
+  clipPath: open ? 'polygon(50% 0%, 0% 100%, 100% 100%)' : 'polygon(0% 0%, 50% 100%, 100% 0%)',
   borderWidth: open ? '0 5px 8.66px 5px' : '8.66px 5px 0 5px',
   marginLeft: '5px',
   borderTopColor: 'inherit',

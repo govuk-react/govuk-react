@@ -33,8 +33,7 @@ stories.add('Component default', () => (
   >
     <div style={{ padding: '0 12px' }}>
       <PhaseBanner level="alpha">
-        This part of GOV.UK is being rebuilt &#8211;{' '}
-        <Link href="https://example.com">find out what that means</Link>
+        This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {spacer}
       <H2>Toggle loading settings under `knobs`</H2>
@@ -56,8 +55,7 @@ examples.add('preset to loading', () => (
   >
     <div style={{ padding: '0 12px' }}>
       <PhaseBanner level="alpha">
-        This part of GOV.UK is being rebuilt &#8211;{' '}
-        <Link href="https://example.com">find out what that means</Link>
+        This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {spacer}
       <H2>Toggle loading settings under `knobs`</H2>
@@ -79,8 +77,7 @@ examples.add('LoadingBox (long)', () => (
   >
     <div style={{ padding: '0 12px' }}>
       <PhaseBanner level="alpha">
-        This part of GOV.UK is being rebuilt &#8211;{' '}
-        <Link href="https://example.com">find out what that means</Link>
+        This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {spacer}
       <H2>Toggle loading settings under `knobs`</H2>
@@ -100,9 +97,7 @@ examples.add('LoadingBox (long)', () => (
         </Radio>
       </div>
       {spacer}
-      <InputField hint="It’s on your National Insurance card">
-        National Insurance number
-      </InputField>
+      <InputField hint="It’s on your National Insurance card">National Insurance number</InputField>
       {spacer}
       <Button start>Continue</Button>
     </div>
@@ -116,9 +111,6 @@ examples.add('with children that have short height (minHeight 10px)', () => (
 examples.add('with bolded texts', () => (
   <LoadingBox loading>
     <H1>Lorem ipsum dolor sit amet</H1>
-    <H2>
-      Consectetur adipisicing elit. Quia incidunt, earum molestiae omnis labore
-      adipisci.
-    </H2>
+    <H2>Consectetur adipisicing elit. Quia incidunt, earum molestiae omnis labore adipisci.</H2>
   </LoadingBox>
 ));

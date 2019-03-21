@@ -35,9 +35,7 @@ const StyledFieldset = styled('div')(
     },
   },
   ({ error }) => ({
-    borderLeft: error
-      ? `${BORDER_WIDTH_MOBILE} solid ${ERROR_COLOUR}`
-      : undefined,
+    borderLeft: error ? `${BORDER_WIDTH_MOBILE} solid ${ERROR_COLOUR}` : undefined,
     marginRight: error ? SPACING.SCALE_3 : undefined,
     paddingLeft: error ? SPACING.SCALE_2 : undefined,
   }),

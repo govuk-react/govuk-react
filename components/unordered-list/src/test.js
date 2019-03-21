@@ -24,10 +24,7 @@ describe('UnorderedList', () => {
   it('renders with and without props, without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<UnorderedList>Example</UnorderedList>, div);
-    ReactDOM.render(
-      <UnorderedList listStyleType="number">Example</UnorderedList>,
-      div
-    );
+    ReactDOM.render(<UnorderedList listStyleType="number">Example</UnorderedList>, div);
   });
 
   it('matches wrapper snapshot', () => {

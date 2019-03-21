@@ -43,8 +43,7 @@ const BreadcrumbsListItem = styled('li')({
     position: 'absolute',
     top: '-1px',
     bottom: '1px',
-    left:
-      CHEVRON_ALTITUDE_CALCULATED * -2 + CHEVRON_SIZE + CHEVRON_BORDER_WIDTH,
+    left: CHEVRON_ALTITUDE_CALCULATED * -2 + CHEVRON_SIZE + CHEVRON_BORDER_WIDTH,
     width: CHEVRON_SIZE,
     height: CHEVRON_SIZE,
     margin: 'auto 0',
@@ -96,9 +95,7 @@ const Breadcrumbs = ({ children, ...props }) => (
       {children.length && children.map ? (
         children.map((child, i) =>
           child && (child.length || child.props) ? (
-            <BreadcrumbsListItem key={child.key || i}>
-              {child}
-            </BreadcrumbsListItem>
+            <BreadcrumbsListItem key={child.key || i}>{child}</BreadcrumbsListItem>
           ) : null
         )
       ) : (

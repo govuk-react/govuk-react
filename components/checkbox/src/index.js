@@ -3,12 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import HintText from '@govuk-react/hint-text';
 import { FOCUS_COLOUR } from 'govuk-colours';
-import {
-  BORDER_WIDTH,
-  BORDER_WIDTH_FORM_ELEMENT,
-  FOCUS_WIDTH,
-  SPACING_POINTS,
-} from '@govuk-react/constants';
+import { BORDER_WIDTH, BORDER_WIDTH_FORM_ELEMENT, FOCUS_WIDTH, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 
 const checkboxSize = SPACING_POINTS[7];

@@ -45,20 +45,12 @@ describe('typography lib', () => {
         const style = typography.responsive(size);
 
         expect(style.fontSize).toEqual(`${scale.mobile.fontSize}px`);
-        expect(style[MEDIA_QUERIES.PRINT].fontSize).toEqual(
-          `${scale.print.fontSize}px`
-        );
-        expect(style[MEDIA_QUERIES.TABLET].fontSize).toEqual(
-          `${scale.tablet.fontSize}px`
-        );
+        expect(style[MEDIA_QUERIES.PRINT].fontSize).toEqual(`${scale.print.fontSize}px`);
+        expect(style[MEDIA_QUERIES.TABLET].fontSize).toEqual(`${scale.tablet.fontSize}px`);
 
         expect(style.lineHeight).toEqual(scale.mobile.lineHeight);
-        expect(style[MEDIA_QUERIES.PRINT].lineHeight).toEqual(
-          scale.print.lineHeight
-        );
-        expect(style[MEDIA_QUERIES.TABLET].lineHeight).toEqual(
-          scale.tablet.lineHeight
-        );
+        expect(style[MEDIA_QUERIES.PRINT].lineHeight).toEqual(scale.print.lineHeight);
+        expect(style[MEDIA_QUERIES.TABLET].lineHeight).toEqual(scale.tablet.lineHeight);
       });
     });
 
@@ -113,9 +105,7 @@ describe('typography lib', () => {
       Object.keys(TYPOGRAPHY_SCALE).forEach(size => {
         const style = typography.font({ size, lineHeight: 999 });
 
-        expect(style).toEqual(
-          expect.objectContaining(typography.responsive(size, 999))
-        );
+        expect(style).toEqual(expect.objectContaining(typography.responsive(size, 999)));
       });
     });
   });

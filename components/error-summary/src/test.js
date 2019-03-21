@@ -22,9 +22,7 @@ describe('error summary', () => {
     expect(wrapperErrorSummary.find('Paragraph').exists()).toBe(true);
     // NB This fails with latest UnorderedList, and is testing implement
     expect(wrapperErrorSummary.find('UnorderedList').exists()).toBe(true);
-    expect(
-      wrapperErrorSummary.find('UnorderedList').find('ListItem').length
-    ).toEqual(errors.length);
+    expect(wrapperErrorSummary.find('UnorderedList').find('ListItem').length).toEqual(errors.length);
   });
 
   it('should render the heading', () => {
@@ -66,9 +64,7 @@ describe('error summary', () => {
       .forEach(listItem => {
         listItem.find('Anchor').simulate('click');
         timesClicked += 1;
-        expect(mockOnHandleErrorClickCallback.mock.calls.length).toBe(
-          timesClicked
-        );
+        expect(mockOnHandleErrorClickCallback.mock.calls.length).toBe(timesClicked);
       });
   });
 

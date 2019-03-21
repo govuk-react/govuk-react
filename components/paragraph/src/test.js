@@ -6,11 +6,7 @@ import PropTypes from 'prop-types';
 import Paragraph, { exampleCodeBlock } from './fixtures';
 
 const ReactRouterLinkRenderer = ({ href, children }) =>
-  href.match(/^\//) ? (
-    <Link to={href}>{children}</Link>
-  ) : (
-    <a href={href}>{children}</a>
-  );
+  href.match(/^\//) ? <Link to={href}>{children}</Link> : <a href={href}>{children}</a>;
 
 ReactRouterLinkRenderer.propTypes = {
   href: PropTypes.string.isRequired,
@@ -54,9 +50,7 @@ describe('Paragraph', () => {
   it('renders react router links with custom renderer', () => {
     wrapper = mount(
       <MemoryRouter>
-        <Paragraph linkRenderer={ReactRouterLinkRenderer}>
-          {exampleInternalLink}
-        </Paragraph>
+        <Paragraph linkRenderer={ReactRouterLinkRenderer}>{exampleInternalLink}</Paragraph>
       </MemoryRouter>
     );
     expect(wrapper.find('a')).toHaveLength(1);

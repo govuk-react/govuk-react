@@ -33,7 +33,4 @@ SupportingHeader.propTypes = {
 
 export { SupportingHeader as DocumentedSupportingHeader };
 
-export default deprecate(
-  SupportingHeader,
-  'please use the Caption component instead'
-);
+export default deprecate(SupportingHeader, 'please use the Caption component instead');

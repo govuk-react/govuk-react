@@ -9,8 +9,6 @@ describe('Link', () => {
   });
 
   it('all options view matches snapshot', () => {
-    expect(mount(<LinkWithAllOptionsOn />)).toMatchSnapshot(
-      'link with all options'
-    );
+    expect(mount(<LinkWithAllOptionsOn />)).toMatchSnapshot('link with all options');
   });
 });

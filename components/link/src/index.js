@@ -9,8 +9,7 @@ const Link = styled('a')(
   link.printFriendly,
   ({ muted }) => (muted ? link.styleMuted : undefined),
   ({ textColour }) => (textColour ? link.styleText : undefined),
-  ({ noVisitedState }) =>
-    noVisitedState ? link.styleNoVisitedState : undefined
+  ({ noVisitedState }) => (noVisitedState ? link.styleNoVisitedState : undefined)
 );
 
 /**

@@ -66,24 +66,14 @@ describe('TopNav', () => {
   });
 
   it('matches the props passed to NavLinkAnchor', () => {
-    expect(WrapperNavLinkAnchor.find(NavLinkAnchor).props().href).toEqual(
-      '/nav-link'
-    );
-    expect(WrapperNavLinkAnchor.find(NavLinkAnchor).props().children).toEqual(
-      'Nav link'
-    );
+    expect(WrapperNavLinkAnchor.find(NavLinkAnchor).props().href).toEqual('/nav-link');
+    expect(WrapperNavLinkAnchor.find(NavLinkAnchor).props().children).toEqual('Nav link');
   });
 
   it('with icon title', () => {
     expect(
       mount(
-        <TopNav
-          company={
-            <TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>
-              GOV.UK
-            </TopNav.IconTitle>
-          }
-        />
+        <TopNav company={<TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</TopNav.IconTitle>} />
       )
     ).toMatchSnapshot('icon title');
   });

@@ -11,12 +11,5 @@ stories.add('IconImportant', () => {
   const fillColour = color('fill', 'black');
   const width = text('width', '100%');
   const height = text('height', '100%');
-  return (
-    <IconImportant
-      width={width}
-      height={height}
-      fill={fillColour}
-      title="Example IconImportant implementation"
-    />
-  );
+  return <IconImportant width={width} height={height} fill={fillColour} title="Example IconImportant implementation" />;
 });

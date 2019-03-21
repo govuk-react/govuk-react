@@ -20,12 +20,8 @@ stories.add('Component default', () => <TableSimple />);
 
 examples.add('With a caption', () => <TableWithCaption />);
 
-examples.add('With a head row and numeric tabular data', () => (
-  <TableWithHeadAndNumerics />
-));
+examples.add('With a head row and numeric tabular data', () => <TableWithHeadAndNumerics />);
 
-examples.add('With a three quarter-width column and one quarter', () => (
-  <TableThreeQuartersOneQuarter />
-));
+examples.add('With a three quarter-width column and one quarter', () => <TableThreeQuartersOneQuarter />);
 
 examples.add('With custom column widths', () => <TableWithCustomWidths />);

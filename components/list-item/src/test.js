@@ -5,8 +5,6 @@ import { DocumentedComponent as ListItem } from '.';
 
 describe('ListItem', () => {
   it('matches wrapper snapshot', () => {
-    expect(mount(<ListItem>example</ListItem>)).toMatchSnapshot(
-      'list item mount'
-    );
+    expect(mount(<ListItem>example</ListItem>)).toMatchSnapshot('list item mount');
   });
 });

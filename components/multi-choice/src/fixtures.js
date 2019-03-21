@@ -16,24 +16,16 @@ const children = (
   </Fragment>
 );
 
-const MultiChoiceWithKnobs = () => (
-  <MultiChoice label={text('Label', 'Example label')}>{children}</MultiChoice>
-);
+const MultiChoiceWithKnobs = () => <MultiChoice label={text('Label', 'Example label')}>{children}</MultiChoice>;
 
 export const MultiChoiceWithKnobsHint = () => (
-  <MultiChoice
-    label={text('Label', 'Example label')}
-    hint={text('Example hint', 'Example hint')}
-  >
+  <MultiChoice label={text('Label', 'Example label')} hint={text('Example hint', 'Example hint')}>
     {children}
   </MultiChoice>
 );
 
 export const MultiChoiceWithKnobsError = () => (
-  <MultiChoice
-    label={text('Label', 'Example label')}
-    meta={object('Meta', metaData)}
-  >
+  <MultiChoice label={text('Label', 'Example label')} meta={object('Meta', metaData)}>
     {children}
   </MultiChoice>
 );

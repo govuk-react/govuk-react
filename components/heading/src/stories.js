@@ -14,9 +14,7 @@ stories.addDecorator(withKnobs);
 stories.addDecorator(WithDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
-  <Heading size={text('size', 'LARGE')}>
-    {text('Children', 'Heading text')}
-  </Heading>
+  <Heading size={text('size', 'LARGE')}>{text('Children', 'Heading text')}</Heading>
 ));
 
 examples.add('Shortcuts H1-H6', () => (

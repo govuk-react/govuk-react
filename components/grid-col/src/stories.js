@@ -13,8 +13,7 @@ import ReadMe from '../README.md';
 const Content = styled('div')({
   textIndent: '-999em',
   backgroundColor: '#7DADD3',
-  backgroundImage:
-    'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)',
+  backgroundImage: 'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)',
 });
 
 const stories = storiesOf('Layout/GridCol', module).addParameters({
@@ -31,17 +30,15 @@ stories.add('Component default', () => (
     <GridCol setWidth="one-half">
       <H2>Half column</H2>
       <Paragraph>
-        This guide shows how to make your service look consistent with the rest
-        of GOV.UK. It includes example code and guidance for layout, typography,
-        colour, images, icons, forms, buttons and data.
+        This guide shows how to make your service look consistent with the rest of GOV.UK. It includes example code and
+        guidance for layout, typography, colour, images, icons, forms, buttons and data.
       </Paragraph>
     </GridCol>
     <GridCol setWidth="one-half">
       <H2>Half column</H2>
       <Paragraph>
-        This guide shows how to make your service look consistent with the rest
-        of GOV.UK. It includes example code and guidance for layout, typography,
-        colour, images, icons, forms, buttons and data.
+        This guide shows how to make your service look consistent with the rest of GOV.UK. It includes example code and
+        guidance for layout, typography, colour, images, icons, forms, buttons and data.
       </Paragraph>
     </GridCol>
   </GridRow>

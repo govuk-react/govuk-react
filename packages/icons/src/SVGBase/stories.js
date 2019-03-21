@@ -12,12 +12,7 @@ stories.add('SVGBase', () => {
   const stroke = color('stroke', 'orange');
   const viewBox = text('viewBox', '0 0 500 500');
   return (
-    <SVGBase
-      viewBox={viewBox}
-      title="Example of SVGBase"
-      fill={fill}
-      stroke={stroke}
-    >
+    <SVGBase viewBox={viewBox} title="Example of SVGBase" fill={fill} stroke={stroke}>
       <polygon points="250,60 100,400 400,400" />
     </SVGBase>
   );

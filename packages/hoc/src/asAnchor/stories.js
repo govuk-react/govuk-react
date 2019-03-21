@@ -9,9 +9,7 @@ const AnchorLink = asAnchor(Link);
 
 const stories = storiesOf('Utilities/asAnchor', module);
 
-stories.add('asAnchor passing in anchor', () => (
-  <AnchorTag href="https://cats.org">AsAnchor anchor example</AnchorTag>
-));
+stories.add('asAnchor passing in anchor', () => <AnchorTag href="https://cats.org">AsAnchor anchor example</AnchorTag>);
 
 stories.add('asAnchor passing in anchor target=blank', () => (
   <AnchorTag href="https://cats.org" target="_blank">

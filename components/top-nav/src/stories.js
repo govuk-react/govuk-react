@@ -22,9 +22,7 @@ const link = 'https://example.com?=1';
 
 const Company = (
   <LogoAnchor href={link} target="new">
-    <TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>
-      GOV.UK
-    </TopNav.IconTitle>
+    <TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</TopNav.IconTitle>
   </LogoAnchor>
 );
 
@@ -38,9 +36,7 @@ const Search = <SearchBox placeholder="Search">hi</SearchBox>;
 
 const CompanyLink = (
   <LogoLink to={reactRouterLink}>
-    <TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>
-      GOV.UK
-    </TopNav.IconTitle>
+    <TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</TopNav.IconTitle>
   </LogoLink>
 );
 
@@ -57,17 +53,13 @@ examples.add('custom logo', () => (
   <TopNav
     company={
       <NavAnchor href={link} target="new">
-        <TopNav.IconTitle icon={<SearchIcon width="32px" />}>
-          Custom Title
-        </TopNav.IconTitle>
+        <TopNav.IconTitle icon={<SearchIcon width="32px" />}>Custom Title</TopNav.IconTitle>
       </NavAnchor>
     }
   />
 ));
 
-examples.add('service title', () => (
-  <TopNav company={Company} serviceTitle={ServiceTitle} />
-));
+examples.add('service title', () => <TopNav company={Company} serviceTitle={ServiceTitle} />);
 
 examples.add('logo and service title with React router <Link>', () => (
   <BrowserRouter>
@@ -75,39 +67,24 @@ examples.add('logo and service title with React router <Link>', () => (
   </BrowserRouter>
 ));
 
-examples.add('search', () => (
-  <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} />
-));
+examples.add('search', () => <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} />);
 
 examples.add('children', () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} active={0}>
-    <NavAnchor href="https://example.com?q=catdog">
-      Navigation item #1
-    </NavAnchor>
-    <NavAnchor href="https://example.com?q=dogcat">
-      Navigation item #2
-    </NavAnchor>
+    <NavAnchor href="https://example.com?q=catdog">Navigation item #1</NavAnchor>
+    <NavAnchor href="https://example.com?q=dogcat">Navigation item #2</NavAnchor>
   </TopNav>
 ));
 
 examples.add('everything but serviceTitle', () => (
   <TopNav company={Company} search={Search} active={0}>
-    <NavAnchor href="https://example.com?q=catdog">
-      Navigation item #1
-    </NavAnchor>
-    <NavAnchor href="https://example.com?q=dogcat">
-      Navigation item #2
-    </NavAnchor>
+    <NavAnchor href="https://example.com?q=catdog">Navigation item #1</NavAnchor>
+    <NavAnchor href="https://example.com?q=dogcat">Navigation item #2</NavAnchor>
   </TopNav>
 ));
 
 examples.add('everything', () => (
-  <TopNav
-    company={Company}
-    serviceTitle={ServiceTitle}
-    search={Search}
-    active={0}
-  >
+  <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
     <NavAnchor href="https://example.com?q=catdog" target="new">
       Navigation item
     </NavAnchor>
@@ -130,12 +107,7 @@ examples.add('everything', () => (
 ));
 
 examples.add('everything with 9 nav items', () => (
-  <TopNav
-    company={Company}
-    serviceTitle={ServiceTitle}
-    search={Search}
-    active={0}
-  >
+  <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
     <NavAnchor href="https://example.com?q=catdog" target="new">
       Navigation item
     </NavAnchor>

@@ -69,18 +69,10 @@ examples.add('Pagination with numbers (React Router Link)', () => (
 
 examples.add('Pagination with titles (anchor tag)', () => (
   <Pagination>
-    <PaginationTag
-      href="#prev"
-      previousPage
-      pageTitle="Applying for a provisional lorry or bus licence"
-    >
+    <PaginationTag href="#prev" previousPage pageTitle="Applying for a provisional lorry or bus licence">
       Previous
     </PaginationTag>
-    <PaginationTag
-      href="#next"
-      nextPage
-      pageTitle="Driver CPC part 1 test: theory"
-    >
+    <PaginationTag href="#next" nextPage pageTitle="Driver CPC part 1 test: theory">
       Next
     </PaginationTag>
   </Pagination>
@@ -89,20 +81,12 @@ examples.add('Pagination with titles (anchor tag)', () => (
 examples.add('Pagination with titles (React Router Link)', () => (
   <Pagination>
     <Router>
-      <PaginationLink
-        to="#prev"
-        previousPage
-        pageTitle="Applying for a provisional lorry or bus licence"
-      >
+      <PaginationLink to="#prev" previousPage pageTitle="Applying for a provisional lorry or bus licence">
         Previous
       </PaginationLink>
     </Router>
     <Router>
-      <PaginationLink
-        to="#next"
-        nextPage
-        pageTitle="Driver CPC part 1 test: theory"
-      >
+      <PaginationLink to="#next" nextPage pageTitle="Driver CPC part 1 test: theory">
         Next
       </PaginationLink>
     </Router>
@@ -117,39 +101,30 @@ examples.add('Pagination with numbers just with next page (anchor tag)', () => (
   </Pagination>
 ));
 
-examples.add(
-  'Pagination with numbers just with next page (React Router Link)',
-  () => (
-    <Pagination>
-      <Router>
-        <PaginationLink to="#next" nextPage pageTitle="2 of 12">
-          Next page
-        </PaginationLink>
-      </Router>
-    </Pagination>
-  )
-);
+examples.add('Pagination with numbers just with next page (React Router Link)', () => (
+  <Pagination>
+    <Router>
+      <PaginationLink to="#next" nextPage pageTitle="2 of 12">
+        Next page
+      </PaginationLink>
+    </Router>
+  </Pagination>
+));
 
-examples.add(
-  'Pagination with numbers just with previous page (anchor tag)',
-  () => (
-    <Pagination>
-      <PaginationTag href="#prev" previousPage pageTitle="11 of 12">
+examples.add('Pagination with numbers just with previous page (anchor tag)', () => (
+  <Pagination>
+    <PaginationTag href="#prev" previousPage pageTitle="11 of 12">
+      Previous page
+    </PaginationTag>
+  </Pagination>
+));
+
+examples.add('Pagination with numbers just with previous page (React Router Link)', () => (
+  <Pagination>
+    <Router>
+      <PaginationLink to="#prev" previousPage pageTitle="11 of 12">
         Previous page
-      </PaginationTag>
-    </Pagination>
-  )
-);
-
-examples.add(
-  'Pagination with numbers just with previous page (React Router Link)',
-  () => (
-    <Pagination>
-      <Router>
-        <PaginationLink to="#prev" previousPage pageTitle="11 of 12">
-          Previous page
-        </PaginationLink>
-      </Router>
-    </Pagination>
-  )
-);
+      </PaginationLink>
+    </Router>
+  </Pagination>
+));

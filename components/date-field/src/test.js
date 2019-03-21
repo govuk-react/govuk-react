@@ -65,9 +65,7 @@ describe('DateField', () => {
   });
 
   it('should support setting value', () => {
-    const output = mount(
-      <DateField input={{ value: { day: '1', month: '2', year: '3' } }} />
-    );
+    const output = mount(<DateField input={{ value: { day: '1', month: '2', year: '3' } }} />);
     expect(output).toMatchSnapshot('value 1 2 3');
     expect(
       output
@@ -83,12 +81,8 @@ describe('DateField', () => {
   });
 
   it('passes `props` to the rendered label', () => {
-    expect(
-      mount(<DateField errorText={example}>{example}</DateField>).find('input')
-    ).toHaveLength(3);
-    expect(
-      mount(<DateField hintText={example}>{example}</DateField>).find('div')
-    ).toHaveLength(2);
+    expect(mount(<DateField errorText={example}>{example}</DateField>).find('input')).toHaveLength(3);
+    expect(mount(<DateField hintText={example}>{example}</DateField>).find('div')).toHaveLength(2);
   });
 
   it('passes `props.children` to the rendered `wrapper` as `children`', () => {

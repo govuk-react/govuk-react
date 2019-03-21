@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { ERROR_COLOUR } from 'govuk-colours';
 import { spacing } from '@govuk-react/lib';
-import {
-  BORDER_WIDTH_FORM_GROUP_ERROR,
-  SPACING_POINTS,
-} from '@govuk-react/constants';
+import { BORDER_WIDTH_FORM_GROUP_ERROR, SPACING_POINTS } from '@govuk-react/constants';
 
 const FormGroup = styled('div')(
   spacing.responsiveMargin({ size: 6, direction: 'bottom' }),

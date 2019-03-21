@@ -3,11 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { spacing, typography } from '@govuk-react/lib';
-import {
-  HEADING_SIZES,
-  SPACING_POINTS,
-  TYPOGRAPHY_SCALE,
-} from '@govuk-react/constants';
+import { HEADING_SIZES, SPACING_POINTS, TYPOGRAPHY_SCALE } from '@govuk-react/constants';
 
 const StyledLegend = styled('legend')(
   spacing.withWhiteSpace(),
@@ -58,18 +54,13 @@ const StyledHeading = styled('h1')({
 // }
 
 const Legend = ({ children, isPageHeading, ...props }) => (
-  <StyledLegend {...props}>
-    {isPageHeading ? <StyledHeading>{children}</StyledHeading> : children}
-  </StyledLegend>
+  <StyledLegend {...props}>{isPageHeading ? <StyledHeading>{children}</StyledHeading> : children}</StyledLegend>
 );
 
 Legend.propTypes = {
   children: PropTypes.node.isRequired,
   isPageHeading: PropTypes.bool,
-  size: PropTypes.oneOf([
-    ...Object.keys(HEADING_SIZES),
-    ...Object.keys(TYPOGRAPHY_SCALE),
-  ]),
+  size: PropTypes.oneOf([...Object.keys(HEADING_SIZES), ...Object.keys(TYPOGRAPHY_SCALE)]),
 };
 
 Legend.defaultProps = {

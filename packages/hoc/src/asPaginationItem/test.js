@@ -5,9 +5,7 @@ import asPaginationItem from '.';
 
 const PaginationTag = asPaginationItem('a');
 
-const wrapper = (
-  <PaginationTag href="https://example.com">Example</PaginationTag>
-);
+const wrapper = <PaginationTag href="https://example.com">Example</PaginationTag>;
 
 describe('asPaginationItem', () => {
   it('renders without crashing', () => {
@@ -25,10 +23,7 @@ describe('asPaginationItem', () => {
         <PaginationTag href="https://example.com" previousPage>
           Example
         </PaginationTag>
-        <PaginationTag
-          href="https://example.com"
-          pageTitle="This is an example"
-        >
+        <PaginationTag href="https://example.com" pageTitle="This is an example">
           Example
         </PaginationTag>
       </div>,

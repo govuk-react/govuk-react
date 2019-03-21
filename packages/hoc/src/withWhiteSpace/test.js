@@ -22,21 +22,13 @@ describe('withWhiteSpace', () => {
   it('renders with a margin prop without crashing', () => {
     mount(<WithConfig margin={{ size: 5 }}>Example</WithConfig>);
     mount(<WithConfig margin={5}>Example</WithConfig>);
-    mount(
-      <WithConfig margin={[5, { size: 2, direction: 'top' }]}>
-        Example
-      </WithConfig>
-    );
+    mount(<WithConfig margin={[5, { size: 2, direction: 'top' }]}>Example</WithConfig>);
   });
 
   it('renders with a padding prop without crashing', () => {
     mount(<WithConfig padding={{ size: 5 }}>Example</WithConfig>);
     mount(<WithConfig padding={5}>Example</WithConfig>);
-    mount(
-      <WithConfig padding={[5, { size: 2, direction: 'top' }]}>
-        Example
-      </WithConfig>
-    );
+    mount(<WithConfig padding={[5, { size: 2, direction: 'top' }]}>Example</WithConfig>);
   });
 
   it('matches wrapper snapshot', () => {

@@ -11,12 +11,5 @@ stories.add('ArrowRight', () => {
   const fillColour = color('fill', 'black');
   const width = text('width', '100%');
   const height = text('height', '100%');
-  return (
-    <ArrowRight
-      width={width}
-      height={height}
-      fill={fillColour}
-      title="Example ArrowRight implementation"
-    />
-  );
+  return <ArrowRight width={width} height={height} fill={fillColour} title="Example ArrowRight implementation" />;
 });

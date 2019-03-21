@@ -46,8 +46,6 @@ describe('Radio', () => {
   });
 
   it('can render with hint text', () => {
-    expect(
-      mount(<Radio hint="Hint text">Example with hint text</Radio>)
-    ).toMatchSnapshot('hint text');
+    expect(mount(<Radio hint="Hint text">Example with hint text</Radio>)).toMatchSnapshot('hint text');
   });
 });
