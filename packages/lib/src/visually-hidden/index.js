@@ -47,7 +47,7 @@ function visuallyHidden({
 function focusable({ important = true } = {}) {
   return visuallyHidden({ important, focusable: true });
 }
-// TODO: @Steve, do we need to append this to the function?
+
 visuallyHidden.focusable = focusable;
 
 export default visuallyHidden;
