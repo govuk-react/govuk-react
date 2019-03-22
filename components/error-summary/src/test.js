@@ -78,4 +78,9 @@ describe('error summary', () => {
   it('matches the ErrorSummary snapshot', () => {
     expect(wrapperErrorSummary).toMatchSnapshot('error summary');
   });
+
+  it('defaults the heading to "There is a problem" if not set', () => {
+    const wrapper = mount(<ErrorSummary errors={errors} />);
+    expect(wrapper.find('Heading').text()).toEqual('There is a problem');
+  });
 });

@@ -141,7 +141,7 @@ ErrorSummary.propTypes = {
   /** onClick function to scroll the target element into view */
   onHandleErrorClick: PropTypes.func,
   /** Heading text */
-  heading: PropTypes.string.isRequired,
+  heading: PropTypes.string,
   /** Optional description of the errors */
   description: PropTypes.string,
   /** Array of errors with text and target element name to scroll into view when clicked */
@@ -151,6 +151,10 @@ ErrorSummary.propTypes = {
       text: PropTypes.string,
     })
   ),
+};
+
+ErrorSummary.defaultProps = {
+  heading: 'There is a problem',
 };
 
 export default ErrorSummary;
