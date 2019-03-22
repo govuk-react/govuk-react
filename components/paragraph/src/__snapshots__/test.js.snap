@@ -145,13 +145,15 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
             "list": [Function],
             "listItem": [Function],
             "paragraph": "p",
-            "root": "div",
+            "parsedHtml": [Function],
+            "root": [Function],
             "strong": "strong",
             "table": [Function],
             "tableBody": [Function],
             "tableCell": [Function],
             "tableHead": [Function],
             "tableRow": [Function],
+            "text": [Function],
             "thematicBreak": "hr",
             "virtualHtml": [Function],
           },
@@ -159,7 +161,6 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
           "target": [Function],
           "toString": [Function],
           "types": Array [
-            "root",
             "break",
             "paragraph",
             "emphasis",
@@ -176,6 +177,8 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
             "tableBody",
             "tableRow",
             "tableCell",
+            "root",
+            "text",
             "list",
             "listItem",
             "definition",
@@ -184,6 +187,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
             "code",
             "html",
             "virtualHtml",
+            "parsedHtml",
           ],
           "uriTransformer": [Function],
           "warnTooManyClasses": [Function],
@@ -230,16 +234,26 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
         supportingText={true}
         transformLinkUri={[Function]}
       >
-        <div
+        <Root
           className="c0"
           key="root-1-1"
         >
-          <p
-            key="paragraph-1-1"
+          <div
+            className="c0"
           >
-            Some basic text
-          </p>
-        </div>
+            <p
+              key="paragraph-1-1"
+            >
+              <TextRenderer
+                key="text-1-1"
+                nodeKey="text-1-1"
+                value="Some basic text"
+              >
+                Some basic text
+              </TextRenderer>
+            </p>
+          </div>
+        </Root>
       </ReactMarkdown>
     </StyledComponent>
   </Styled(ReactMarkdown)>
