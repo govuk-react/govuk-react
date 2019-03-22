@@ -2,3 +2,4 @@
 export { default as FinalFormWrapper } from './FinalFormWrapper';
 export { default as WithDocsCustom } from './WithDocsCustom';
 export { default as ReadMeHidePreview } from './ReadMeHidePreview';
+export { default as StoryPreview } from './story-preview';
