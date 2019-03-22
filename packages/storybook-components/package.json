@@ -6,7 +6,7 @@
     "@storybook/addon-actions": "^5.0.3",
     "@storybook/addons": "^5.0.3",
     "@storybook/react": "^5.0.3",
-    "react-final-form": "^3.1.0",
+    "react-final-form": "^4.1.0",
     "storybook-readme": "^5.0.1"
   },
   "peerDependencies": {

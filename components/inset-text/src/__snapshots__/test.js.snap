@@ -243,13 +243,15 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                     "list": [Function],
                     "listItem": [Function],
                     "paragraph": "p",
-                    "root": "div",
+                    "parsedHtml": [Function],
+                    "root": [Function],
                     "strong": "strong",
                     "table": [Function],
                     "tableBody": [Function],
                     "tableCell": [Function],
                     "tableHead": [Function],
                     "tableRow": [Function],
+                    "text": [Function],
                     "thematicBreak": "hr",
                     "virtualHtml": [Function],
                   },
@@ -257,7 +259,6 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                   "target": [Function],
                   "toString": [Function],
                   "types": Array [
-                    "root",
                     "break",
                     "paragraph",
                     "emphasis",
@@ -274,6 +275,8 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                     "tableBody",
                     "tableRow",
                     "tableCell",
+                    "root",
+                    "text",
                     "list",
                     "listItem",
                     "definition",
@@ -282,6 +285,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                     "code",
                     "html",
                     "virtualHtml",
+                    "parsedHtml",
                   ],
                   "uriTransformer": [Function],
                   "warnTooManyClasses": [Function],
@@ -330,16 +334,26 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                 supportingText={false}
                 transformLinkUri={[Function]}
               >
-                <div
+                <Root
                   className="c1"
                   key="root-1-1"
                 >
-                  <p
-                    key="paragraph-1-1"
+                  <div
+                    className="c1"
                   >
-                    It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
-                  </p>
-                </div>
+                    <p
+                      key="paragraph-1-1"
+                    >
+                      <TextRenderer
+                        key="text-1-1"
+                        nodeKey="text-1-1"
+                        value="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
+                      >
+                        It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+                      </TextRenderer>
+                    </p>
+                  </div>
+                </Root>
               </ReactMarkdown>
             </StyledComponent>
           </Styled(ReactMarkdown)>
