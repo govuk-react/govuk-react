@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, number, object, text } from '@storybook/addon-knobs/react';
 
 import BackLink from '@govuk-react/back-link';
-import Breadcrumb from '@govuk-react/breadcrumb';
+import Breadcrumbs from '@govuk-react/breadcrumb';
 import Button from '@govuk-react/button';
 import Checkbox from '@govuk-react/checkbox';
 import DateField from '@govuk-react/date-field';
@@ -131,7 +131,7 @@ stories.add('existing InputField with various spacing sizes', () => (
 stories.add('multiple existing components', () => (
   <div>
     <BackLink mb={number('BackLink marginBottom', 9)}>Example</BackLink>
-    <Breadcrumb mb={number('Breadcrumb marginBottom', 9)}>Example</Breadcrumb>
+    <Breadcrumbs mb={number('Breadcrumbs marginBottom', 9)}>Example</Breadcrumbs>
     <Button mb={number('Button marginBottom', 9)}>Example</Button>
     <Checkbox mb={number('Checkbox marginBottom', 9)}>Example</Checkbox>
     <DateField mb={number('DateField marginBottom', 9)}>Example</DateField>
