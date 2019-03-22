@@ -11,7 +11,7 @@
     "build:sync": "lerna run build",
     "build:lib": "lerna run build:lib --parallel",
     "build:es": "lerna run build:es --parallel",
-    "build:dist": "yarn build:es && rimraf dist && webpack -p packages/govuk-react/es/index.js --output-filename dist/index.js",
+    "build:dist": "yarn build:es && rimraf dist && webpack -p packages/govuk-react/es/index.js --output-filename index.js",
     "pack": "lerna exec --parallel -- npm pack",
     "watch": "yarn watch:lib",
     "watch:es": "cross-env BABEL_ENV=es lerna exec --ignore @govuk-react/images --parallel -- babel src -d es -w --source-maps",
