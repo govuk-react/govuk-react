@@ -6,7 +6,7 @@ const aliasToSrc = require('./aliasToSrc');
 // https://stackoverflow.com/questions/18112204/get-all-directories-within-directory-nodejs?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
 const dirs = p => fs.readdirSync(p).filter(f => fs.statSync(path.join(p, f)).isDirectory()).map(f => path.join(p, f));
 
-module.exports = (baseConfig, env, defaultConfig) => {
+module.exports = ({ config: defaultConfig }) => {
 
   // Include PNGs imported from node_modules
   defaultConfig.module.rules.push({
