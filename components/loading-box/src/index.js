@@ -38,17 +38,17 @@ const Innerwrap = styled('div')(({ timeIn, timeOut, backgroundColor, backgroundC
     transition: `background-color ${timeIn}ms ease-in-out`,
     willChange: 'background-color',
     backgroundColor: `rgba(
-      ${hexRgb(backgroundColor)[0]},
-      ${hexRgb(backgroundColor)[1]},
-      ${hexRgb(backgroundColor)[2]},
+      ${hexRgb(backgroundColor).red},
+      ${hexRgb(backgroundColor).blue},
+      ${hexRgb(backgroundColor).green},
       ${backgroundColorOpacity})`,
   },
   '.fade-enter': {
     '& .overlay': {
       backgroundColor: `rgba(
-        ${hexRgb(backgroundColor)[0]},
-        ${hexRgb(backgroundColor)[1]},
-        ${hexRgb(backgroundColor)[2]},
+        ${hexRgb(backgroundColor).red},
+        ${hexRgb(backgroundColor).blue},
+        ${hexRgb(backgroundColor).green},
         0)`,
       transitionDuration: `${timeIn}ms`,
     },
@@ -61,9 +61,9 @@ const Innerwrap = styled('div')(({ timeIn, timeOut, backgroundColor, backgroundC
   '.fade-enter-active': {
     '& .overlay': {
       backgroundColor: `rgba(
-        ${hexRgb(backgroundColor)[0]},
-        ${hexRgb(backgroundColor)[1]},
-        ${hexRgb(backgroundColor)[2]},
+        ${hexRgb(backgroundColor).red},
+        ${hexRgb(backgroundColor).blue},
+        ${hexRgb(backgroundColor).green},
         ${backgroundColorOpacity})`,
       transitionDuration: `${timeIn}ms`,
     },
@@ -76,9 +76,9 @@ const Innerwrap = styled('div')(({ timeIn, timeOut, backgroundColor, backgroundC
   '.fade-exit': {
     '& .overlay': {
       backgroundColor: `rgba(
-        ${hexRgb(backgroundColor)[0]},
-        ${hexRgb(backgroundColor)[1]},
-        ${hexRgb(backgroundColor)[2]},
+        ${hexRgb(backgroundColor).red},
+        ${hexRgb(backgroundColor).blue},
+        ${hexRgb(backgroundColor).green},
         ${backgroundColorOpacity})`,
       transitionDuration: `${timeOut}ms`,
     },
@@ -90,9 +90,9 @@ const Innerwrap = styled('div')(({ timeIn, timeOut, backgroundColor, backgroundC
   '.fade-exit-active': {
     '& .overlay': {
       backgroundColor: `rgba(
-        ${hexRgb(backgroundColor)[0]},
-        ${hexRgb(backgroundColor)[1]},
-        ${hexRgb(backgroundColor)[2]},
+        ${hexRgb(backgroundColor).red},
+        ${hexRgb(backgroundColor).blue},
+        ${hexRgb(backgroundColor).green},
         0)`,
       transitionDuration: `${timeOut}ms`,
     },
