@@ -21,9 +21,7 @@ const ButtonText = styled('div')({
   },
 });
 
-const ButtonIcon = styled('div')(({
-  open,
-}) => ({
+const ButtonIcon = styled('div')(({ open }) => ({
   content: '""',
   display: 'inline-block',
   width: '0',
@@ -39,9 +37,7 @@ const ButtonIcon = styled('div')(({
 
 const MenuButton = ({ title, open, onClick }) => (
   <Button onClick={onClick} htmlFor="govuk-react-menu-button">
-    <ButtonText>
-      {title}
-    </ButtonText>
+    <ButtonText>{title}</ButtonText>
     <ButtonIcon open={open} />
   </Button>
 );

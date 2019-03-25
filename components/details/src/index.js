@@ -16,7 +16,7 @@ const StyledDetails = styled('details')(
   spacing.withWhiteSpace({ marginBottom: 6 }),
   {
     display: 'block',
-  },
+  }
 );
 
 const StyledSummary = styled('summary')({
@@ -93,8 +93,10 @@ const DetailsText = styled('div')({
  */
 const Details = ({ summary, children, ...props }) => (
   <StyledDetails {...props}>
-    <StyledSummary><SummaryText>{summary}</SummaryText></StyledSummary>
-    <DetailsText>{ children }</DetailsText>
+    <StyledSummary>
+      <SummaryText>{summary}</SummaryText>
+    </StyledSummary>
+    <DetailsText>{children}</DetailsText>
   </StyledDetails>
 );
 

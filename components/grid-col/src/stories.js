@@ -30,17 +30,15 @@ stories.add('Component default', () => (
     <GridCol setWidth="one-half">
       <H2>Half column</H2>
       <Paragraph>
-        This guide shows how to make your service look consistent with the rest of
-        GOV.UK. It includes example code and guidance for layout, typography,
-        colour, images, icons, forms, buttons and data.
+        This guide shows how to make your service look consistent with the rest of GOV.UK. It includes example code and
+        guidance for layout, typography, colour, images, icons, forms, buttons and data.
       </Paragraph>
     </GridCol>
     <GridCol setWidth="one-half">
       <H2>Half column</H2>
       <Paragraph>
-        This guide shows how to make your service look consistent with the rest of
-        GOV.UK. It includes example code and guidance for layout, typography,
-        colour, images, icons, forms, buttons and data.
+        This guide shows how to make your service look consistent with the rest of GOV.UK. It includes example code and
+        guidance for layout, typography, colour, images, icons, forms, buttons and data.
       </Paragraph>
     </GridCol>
   </GridRow>

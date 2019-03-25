@@ -15,27 +15,16 @@ const examples = storiesOf('Form/FileUpload/Examples', module);
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Component default', () => (
-  <FileUpload name="group0">Upload a document</FileUpload>
-));
+stories.add('Component default', () => <FileUpload name="group0">Upload a document</FileUpload>);
 
 examples.add('Input with HintText', () => (
-  <FileUpload
-    name="group1"
-    acceptedFormats=".jpg, .png"
-    hint={['This can be in either JPG or PNG format']}
-  >
+  <FileUpload name="group1" acceptedFormats=".jpg, .png" hint={['This can be in either JPG or PNG format']}>
     Upload a photo
   </FileUpload>
 ));
 
 examples.add('Input with HintText & error', () => (
-  <FileUpload
-    name="group1"
-    acceptedFormats=".jpg, .png"
-    hint={['This can be in either JPG or PNG format']}
-    meta={meta}
-  >
+  <FileUpload name="group1" acceptedFormats=".jpg, .png" hint={['This can be in either JPG or PNG format']} meta={meta}>
     Upload a photo
   </FileUpload>
 ));

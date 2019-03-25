@@ -7,11 +7,11 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 1.0416666666666667;
+  font-size: 18px;
+  line-height: 1.1111111111111112;
   display: block;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .c2 {
@@ -257,21 +257,21 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 
 @media print {
   .c1 {
+    font-size: 18px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c1 {
     font-size: 24px;
-    line-height: 1.05;
+    line-height: 1.25;
   }
 }
 
 @media only screen and (min-width:641px) {
   .c1 {
-    font-size: 36px;
-    line-height: 1.1111111111111112;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c1 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -508,14 +508,16 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
             className="c0"
             tabIndex={-1}
           >
-            <H2>
+            <H2
+              size="MEDIUM"
+            >
               <Heading
                 as="h2"
-                size="LARGE"
+                size="MEDIUM"
               >
                 <styled.h1
                   as="h2"
-                  size="LARGE"
+                  size="MEDIUM"
                 >
                   <StyledComponent
                     as="h2"
@@ -548,11 +550,11 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       }
                     }
                     forwardedRef={null}
-                    size="LARGE"
+                    size="MEDIUM"
                   >
                     <h2
                       className="c1"
-                      size="LARGE"
+                      size="MEDIUM"
                     >
                       Message to alert the user to a problem goes here
                     </h2>
@@ -644,13 +646,15 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                         "list": [Function],
                         "listItem": [Function],
                         "paragraph": "p",
-                        "root": "div",
+                        "parsedHtml": [Function],
+                        "root": [Function],
                         "strong": "strong",
                         "table": [Function],
                         "tableBody": [Function],
                         "tableCell": [Function],
                         "tableHead": [Function],
                         "tableRow": [Function],
+                        "text": [Function],
                         "thematicBreak": "hr",
                         "virtualHtml": [Function],
                       },
@@ -658,7 +662,6 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       "target": [Function],
                       "toString": [Function],
                       "types": Array [
-                        "root",
                         "break",
                         "paragraph",
                         "emphasis",
@@ -675,6 +678,8 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                         "tableBody",
                         "tableRow",
                         "tableCell",
+                        "root",
+                        "text",
                         "list",
                         "listItem",
                         "definition",
@@ -683,6 +688,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                         "code",
                         "html",
                         "virtualHtml",
+                        "parsedHtml",
                       ],
                       "uriTransformer": [Function],
                       "warnTooManyClasses": [Function],
@@ -731,16 +737,26 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                     supportingText={false}
                     transformLinkUri={[Function]}
                   >
-                    <div
+                    <Root
                       className="c2"
                       key="root-1-1"
                     >
-                      <p
-                        key="paragraph-1-1"
+                      <div
+                        className="c2"
                       >
-                        Optional description of the errors and how to correct them
-                      </p>
-                    </div>
+                        <p
+                          key="paragraph-1-1"
+                        >
+                          <TextRenderer
+                            key="text-1-1"
+                            nodeKey="text-1-1"
+                            value="Optional description of the errors and how to correct them"
+                          >
+                            Optional description of the errors and how to correct them
+                          </TextRenderer>
+                        </p>
+                      </div>
+                    </Root>
                   </ReactMarkdown>
                 </StyledComponent>
               </Styled(ReactMarkdown)>

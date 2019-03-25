@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 
-import DateField from './';
+import DateField from '.';
 
 // TODO: all snapshot tests in this file should be moved to fixtures and included in stories
 
@@ -23,7 +23,7 @@ describe('DateField', () => {
       <DateField errorText={example} hintText={example}>
         {example}
       </DateField>,
-      div,
+      div
     );
   });
 
@@ -33,7 +33,11 @@ describe('DateField', () => {
   });
 
   it('should render one input with name attributes if only a day input name is passed', () => {
-    const output = mount(<DateField inputNames={{ day: 'dayInputName' }} errorText={example}>{example}</DateField>);
+    const output = mount(
+      <DateField inputNames={{ day: 'dayInputName' }} errorText={example}>
+        {example}
+      </DateField>
+    );
     expect(output.find('input[name]')).toHaveLength(1);
   });
 
@@ -43,7 +47,11 @@ describe('DateField', () => {
   });
 
   it('should render two defaultValue attributes if two defaultValues are passed', () => {
-    const output = mount(<DateField defaultValues={{ day: '1', month: '2' }} errorText={example}>{example}</DateField>);
+    const output = mount(
+      <DateField defaultValues={{ day: '1', month: '2' }} errorText={example}>
+        {example}
+      </DateField>
+    );
     expect(output.find('input[defaultValue]')).toHaveLength(2);
   });
 
@@ -59,7 +67,12 @@ describe('DateField', () => {
   it('should support setting value', () => {
     const output = mount(<DateField input={{ value: { day: '1', month: '2', year: '3' } }} />);
     expect(output).toMatchSnapshot('value 1 2 3');
-    expect(output.find('input').first().props().value).toBe('1');
+    expect(
+      output
+        .find('input')
+        .first()
+        .props().value
+    ).toBe('1');
   });
 
   it('should support null value', () => {
@@ -80,7 +93,8 @@ describe('DateField', () => {
     const spy = jest.fn();
 
     mount(<DateField onBlur={spy} />)
-      .find('input').first()
+      .find('input')
+      .first()
       .simulate('blur');
     expect(spy).toHaveBeenCalledTimes(1);
   });
@@ -89,7 +103,8 @@ describe('DateField', () => {
     const spy = jest.fn();
 
     mount(<DateField onFocus={spy} />)
-      .find('input').first()
+      .find('input')
+      .first()
       .simulate('focus');
     expect(spy).toHaveBeenCalledTimes(1);
   });
@@ -97,29 +112,28 @@ describe('DateField', () => {
   it('does not call onFocus when moving between fields ', () => {
     const spy = jest.fn();
 
-    const inst = mount(<DateField input={{
-        onFocus: (...rest) => {
-          spy(...rest);
-        },
-      }}
-    />);
+    const inst = mount(
+      <DateField
+        input={{
+          onFocus: (...rest) => {
+            spy(...rest);
+          },
+        }}
+      />
+    );
     const input1 = inst.find('input').first();
     const input2 = inst.find('input').at(1);
 
     // Focus first input
-    input1
-      .simulate('focus', {
-      });
+    input1.simulate('focus', {});
     // Then simulate tab to second input, first by blurring first input
-    input1
-      .simulate('blur', {
-        relatedTarget: input2.instance(), // relatedTarget for blur is what will next receive focus
-      });
+    input1.simulate('blur', {
+      relatedTarget: input2.instance(), // relatedTarget for blur is what will next receive focus
+    });
     // Then focus the new input
-    input2
-      .simulate('focus', {
-        relatedTarget: input1.instance(), // relatedTarget for focus is what has lost focus
-      });
+    input2.simulate('focus', {
+      relatedTarget: input1.instance(), // relatedTarget for focus is what has lost focus
+    });
     expect(spy).toHaveBeenCalledTimes(1);
   });
 
@@ -127,7 +141,8 @@ describe('DateField', () => {
     const spy = jest.fn();
 
     mount(<DateField onChange={spy} />)
-      .find('input').first()
+      .find('input')
+      .first()
       .simulate('change');
     expect(spy).toHaveBeenCalledTimes(1);
   });

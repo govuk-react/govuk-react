@@ -29,7 +29,7 @@ const Anchor = styled('a')(
       margin: 'auto',
     },
   },
-  spacing.withWhiteSpace(),
+  spacing.withWhiteSpace()
 );
 
 /**
@@ -55,9 +55,7 @@ const Anchor = styled('a')(
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/back-link
  *
  */
-const BackLink = props => (
-  <Anchor {...props} />
-);
+const BackLink = props => <Anchor {...props} />;
 
 BackLink.propTypes = {
   /** Text that will appear in the back link */

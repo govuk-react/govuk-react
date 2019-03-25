@@ -3,7 +3,15 @@ import { mount } from 'enzyme';
 
 import CellHeader from '.';
 
-const example = <table><tbody><tr><CellHeader>example</CellHeader></tr></tbody></table>;
+const example = (
+  <table>
+    <tbody>
+      <tr>
+        <CellHeader>example</CellHeader>
+      </tr>
+    </tbody>
+  </table>
+);
 const exampleAlignRight = (
   <table>
     <tbody>

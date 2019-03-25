@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
-import {
-  HEADING_SIZES,
-  LEVEL_SIZE,
-  LEVEL_TAG,
-  MEDIA_QUERIES,
-  TYPOGRAPHY_SCALE,
-} from '@govuk-react/constants';
+import { HEADING_SIZES, LEVEL_SIZE, LEVEL_TAG, MEDIA_QUERIES, TYPOGRAPHY_SCALE } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 import { deprecate } from '@govuk-react/hoc';
 
@@ -15,10 +9,7 @@ import { deprecate } from '@govuk-react/hoc';
 // so if `size` is a string, we find a numeric size based off `HEADING_SIZES`
 // but if `size` is a number we just send through that number
 
-const StyledHeader = styled(({
-  level, children, size, ...props
-}) =>
-  createElement(LEVEL_TAG[level], props, children))(
+const StyledHeader = styled(({ level, children, size, ...props }) => createElement(LEVEL_TAG[level], props, children))(
   typography.textColour,
   ({ level, size = LEVEL_SIZE[level] }) => {
     const actualSize = Number.isNaN(Number(size)) ? HEADING_SIZES[size] : size;
@@ -27,10 +18,7 @@ const StyledHeader = styled(({
       throw Error(`Unknown size ${size} used for header.`);
     }
 
-    return Object.assign(
-      {},
-      typography.font({ size: actualSize, weight: 'bold' }),
-    );
+    return Object.assign({}, typography.font({ size: actualSize, weight: 'bold' }));
   },
   {
     display: 'block',
@@ -47,10 +35,10 @@ const StyledHeader = styled(({
         [MEDIA_QUERIES.TABLET]: {
           marginBottom: scaleInfo.tablet.spacing,
         },
-      },
+      }
     );
   },
-  spacing.withWhiteSpace(),
+  spacing.withWhiteSpace()
 );
 
 /**

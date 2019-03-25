@@ -13,7 +13,7 @@ const StyledRow = styled('div')(
       flexDirection: 'row',
     },
   },
-  spacing.withWhiteSpace(),
+  spacing.withWhiteSpace()
 );
 
 /**

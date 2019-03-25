@@ -48,13 +48,13 @@ const StyledHyperLink = styled('a')(
       ':link,:visited': {
         color: BLACK,
       },
-      marginTop: selected ? -(spacingSimple1) : undefined,
+      marginTop: selected ? -spacingSimple1 : undefined,
       marginBottom: selected ? -1 : undefined,
 
-      paddingTop: selected ? (spacingSimple3 - 1) : undefined,
-      paddingRight: selected ? (spacingSimple4 - 1) : spacingSimple4,
-      paddingBottom: selected ? (spacingSimple3 + 1) : undefined,
-      paddingLeft: selected ? (spacingSimple4 - 1) : spacingSimple4,
+      paddingTop: selected ? spacingSimple3 - 1 : undefined,
+      paddingRight: selected ? spacingSimple4 - 1 : spacingSimple4,
+      paddingBottom: selected ? spacingSimple3 + 1 : undefined,
+      paddingLeft: selected ? spacingSimple4 - 1 : spacingSimple4,
       border: selected && `1px solid ${BORDER_COLOUR}`,
       borderBottom: selected ? 0 : 1,
       backgroundColor: selected ? WHITE : GREY_4,
@@ -62,18 +62,12 @@ const StyledHyperLink = styled('a')(
         backgroundColor: selected ? 'transparent' : GREY_4,
       },
     },
-  }),
+  })
 );
 
-const Tab = ({
-  children, href, onClick, selected,
-}) => (
+const Tab = ({ children, href, onClick, selected }) => (
   <StyledListItem>
-    <StyledHyperLink
-      selected={selected}
-      onClick={onClick}
-      href={href}
-    >
+    <StyledHyperLink selected={selected} onClick={onClick} href={href}>
       {children}
     </StyledHyperLink>
   </StyledListItem>

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import sinon from 'sinon';
 
-import BackLink from './';
+import BackLink from '.';
 
 describe('Back Link', () => {
   const onButtonClick = sinon.spy();

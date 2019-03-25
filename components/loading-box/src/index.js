@@ -14,12 +14,7 @@ const StyledContainer = styled('div')({
   minHeight: '10px',
 });
 
-const Innerwrap = styled('div')(({
-  timeIn,
-  timeOut,
-  backgroundColor,
-  backgroundColorOpacity,
-}) => ({
+const Innerwrap = styled('div')(({ timeIn, timeOut, backgroundColor, backgroundColorOpacity }) => ({
   position: 'absolute',
   height: '100%',
   top: 0,
@@ -43,17 +38,17 @@ const Innerwrap = styled('div')(({
     transition: `background-color ${timeIn}ms ease-in-out`,
     willChange: 'background-color',
     backgroundColor: `rgba(
-      ${hexRgb(backgroundColor)[0]},
-      ${hexRgb(backgroundColor)[1]},
-      ${hexRgb(backgroundColor)[2]},
+      ${hexRgb(backgroundColor).red},
+      ${hexRgb(backgroundColor).blue},
+      ${hexRgb(backgroundColor).green},
       ${backgroundColorOpacity})`,
   },
   '.fade-enter': {
     '& .overlay': {
       backgroundColor: `rgba(
-        ${hexRgb(backgroundColor)[0]},
-        ${hexRgb(backgroundColor)[1]},
-        ${hexRgb(backgroundColor)[2]},
+        ${hexRgb(backgroundColor).red},
+        ${hexRgb(backgroundColor).blue},
+        ${hexRgb(backgroundColor).green},
         0)`,
       transitionDuration: `${timeIn}ms`,
     },
@@ -66,9 +61,9 @@ const Innerwrap = styled('div')(({
   '.fade-enter-active': {
     '& .overlay': {
       backgroundColor: `rgba(
-        ${hexRgb(backgroundColor)[0]},
-        ${hexRgb(backgroundColor)[1]},
-        ${hexRgb(backgroundColor)[2]},
+        ${hexRgb(backgroundColor).red},
+        ${hexRgb(backgroundColor).blue},
+        ${hexRgb(backgroundColor).green},
         ${backgroundColorOpacity})`,
       transitionDuration: `${timeIn}ms`,
     },
@@ -81,9 +76,9 @@ const Innerwrap = styled('div')(({
   '.fade-exit': {
     '& .overlay': {
       backgroundColor: `rgba(
-        ${hexRgb(backgroundColor)[0]},
-        ${hexRgb(backgroundColor)[1]},
-        ${hexRgb(backgroundColor)[2]},
+        ${hexRgb(backgroundColor).red},
+        ${hexRgb(backgroundColor).blue},
+        ${hexRgb(backgroundColor).green},
         ${backgroundColorOpacity})`,
       transitionDuration: `${timeOut}ms`,
     },
@@ -95,9 +90,9 @@ const Innerwrap = styled('div')(({
   '.fade-exit-active': {
     '& .overlay': {
       backgroundColor: `rgba(
-        ${hexRgb(backgroundColor)[0]},
-        ${hexRgb(backgroundColor)[1]},
-        ${hexRgb(backgroundColor)[2]},
+        ${hexRgb(backgroundColor).red},
+        ${hexRgb(backgroundColor).blue},
+        ${hexRgb(backgroundColor).green},
         0)`,
       transitionDuration: `${timeOut}ms`,
     },
@@ -189,35 +184,35 @@ LoadingBox.defaultProps = {
 LoadingBox.propTypes = {
   /**
    * One or more children nodes that loading box will overlay
-  */
+   */
   children: PropTypes.node.isRequired,
   /**
    * Color (3 or 6 Hex char) of loading spinner
-  */
+   */
   spinnerColor: PropTypes.string,
   /**
    * Background color (3 or 6 Hex char) of loading spinner overlay when loading is true.
-  */
+   */
   backgroundColor: PropTypes.string,
   /**
    * Opacity of loading spinner backgroud colour when loading is true
-  */
+   */
   backgroundColorOpacity: PropTypes.number,
   /**
    * Loading spinner title text
-  */
+   */
   title: PropTypes.string,
   /**
    * Whether loading is currently set to true or false
-  */
+   */
   loading: PropTypes.bool,
   /**
    * Length of fade-in animation in milliseconds
-  */
+   */
   timeIn: PropTypes.number,
   /**
    * Length of fade-out animation in milliseconds
-  */
+   */
   timeOut: PropTypes.number,
 };
 

@@ -1,5 +1,8 @@
+// For a detailed explanation regarding each configuration property, visit:
+// https://jestjs.io/docs/en/configuration.html
+
 module.exports = {
-  coverageDirectory: './coverage/',
+  clearMocks: true,
   collectCoverage: true,
   collectCoverageFrom: [
     '<rootDir>/{components,packages}/*/src/**.[jt]s?(x)',
@@ -9,6 +12,7 @@ module.exports = {
     '!<rootDir>/packages/api-docs/**',
     '!<rootDir>/packages/storybook-components/**',
   ],
+  coverageDirectory: './coverage/',
   coverageThreshold: {
     global: {
       branches: 95,
@@ -17,18 +21,6 @@ module.exports = {
       statements: 95,
     },
   },
-  setupFilesAfterEnv: ['<rootDir>/scripts/setupTests.js'],
-  testMatch: [
-    '**/{components,packages}/*/src/**/?(*.)(spec|test).js?(x)',
-  ],
-  testEnvironment: 'node',
-  testURL: 'http://localhost',
-  transform: {
-    '^.+\\.(js|jsx)$': 'babel-jest',
-  },
-  transformIgnorePatterns: [
-    '[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$',
-  ],
   moduleFileExtensions: [
     'web.js',
     'js',
@@ -37,7 +29,18 @@ module.exports = {
     'jsx',
     'node',
   ],
+  setupFilesAfterEnv: ['<rootDir>/scripts/setupTests.js'],
   snapshotSerializers: [
     'enzyme-to-json/serializer',
+  ],
+  testEnvironment: 'jsdom',
+  testMatch: [
+    '**/{components,packages}/*/src/**/?(*.)(spec|test).js?(x)',
+  ],
+  transform: {
+    '^.+\\.(js|jsx)$': 'babel-jest',
+  },
+  transformIgnorePatterns: [
+    '[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$',
   ],
 };

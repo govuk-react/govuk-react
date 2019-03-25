@@ -2,10 +2,7 @@
 // Tracking:
 // https://github.com/alphagov/govuk-frontend/blob/master/src/helpers/_visually-hidden.scss
 
-function visuallyHidden({
-  important: isImportant = true,
-  focusable: isFocusable = false,
-} = {}) {
+function visuallyHidden({ important: isImportant = true, focusable: isFocusable = false } = {}) {
   const important = isImportant ? ' !important' : '';
   return Object.assign(
     {},
@@ -24,28 +21,33 @@ function visuallyHidden({
 
       whiteSpace: `nowrap${important}`,
     },
-    isFocusable ? {
-      '&:active,&:focus': {
-        position: `static${important}`,
+    isFocusable
+      ? {
+          '&:active,&:focus': {
+            position: `static${important}`,
 
-        width: `auto${important}`,
-        height: `auto${important}`,
-        margin: `inherit${important}`,
+            width: `auto${important}`,
+            height: `auto${important}`,
+            margin: `inherit${important}`,
 
-        overflow: `visible${important}`,
-        clip: `auto${important}`,
-        clipPath: `none${important}`,
+            overflow: `visible${important}`,
+            clip: `auto${important}`,
+            clipPath: `none${important}`,
 
-        whiteSpace: `inherit${important}`,
-      },
-    } : {
-      padding: `0${important}`,
-    },
+            whiteSpace: `inherit${important}`,
+          },
+        }
+      : {
+          padding: `0${important}`,
+        }
   );
 }
 
-visuallyHidden.focusable = function focusable({ important = true } = {}) {
+function focusable({ important = true } = {}) {
   return visuallyHidden({ important, focusable: true });
-};
+}
+
+visuallyHidden.focusable = focusable;
 
 export default visuallyHidden;
+export { focusable };

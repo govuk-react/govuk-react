@@ -3,11 +3,11 @@
   "version": "0.7.0",
   "dependencies": {
     "@govuk-react/button": "^0.7.0",
-    "@storybook/addon-actions": "^4.1.13",
-    "@storybook/addons": "^4.1.13",
-    "@storybook/react": "^4.1.13",
-    "react-final-form": "^3.1.0",
-    "storybook-readme": "^4.0.2"
+    "@storybook/addon-actions": "^5.0.3",
+    "@storybook/addons": "^5.0.3",
+    "@storybook/react": "^5.0.3",
+    "react-final-form": "^4.1.0",
+    "storybook-readme": "^5.0.1"
   },
   "peerDependencies": {
     "react": ">=16.2.0"

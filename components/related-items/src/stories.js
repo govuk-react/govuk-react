@@ -24,7 +24,9 @@ stories.add('Component default', () => (
         <Link href="https://example.com">Link B</Link>
       </ListItem>
       <ListItem>
-        <Link href="https://example.com"><strong>more</strong></Link>
+        <Link href="https://example.com">
+          <strong>more</strong>
+        </Link>
       </ListItem>
     </UnorderedList>
     <H3>Travel</H3>

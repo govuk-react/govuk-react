@@ -3,13 +3,10 @@ import { MemoryRouter, Link } from 'react-router-dom';
 import { mount } from 'enzyme';
 import PropTypes from 'prop-types';
 
-import Paragraph, { exampleText, exampleCodeBlock } from './fixtures';
+import Paragraph, { exampleCodeBlock } from './fixtures';
 
-const ReactRouterLinkRenderer = ({ href, children }) => (
-  href.match(/^\//)
-    ? <Link to={href}>{children}</Link>
-    : <a href={href}>{children}</a>
-);
+const ReactRouterLinkRenderer = ({ href, children }) =>
+  href.match(/^\//) ? <Link to={href}>{children}</Link> : <a href={href}>{children}</a>;
 
 ReactRouterLinkRenderer.propTypes = {
   href: PropTypes.string.isRequired,
@@ -51,15 +48,20 @@ describe('Paragraph', () => {
   });
 
   it('renders react router links with custom renderer', () => {
-    wrapper = mount((
+    wrapper = mount(
       <MemoryRouter>
         <Paragraph linkRenderer={ReactRouterLinkRenderer}>{exampleInternalLink}</Paragraph>
-      </MemoryRouter>));
+      </MemoryRouter>
+    );
     expect(wrapper.find('a')).toHaveLength(1);
   });
 
   it('renders internal links as anchors', () => {
-    wrapper = mount(<MemoryRouter><Paragraph>{exampleInternalLink}</Paragraph></MemoryRouter>);
+    wrapper = mount(
+      <MemoryRouter>
+        <Paragraph>{exampleInternalLink}</Paragraph>
+      </MemoryRouter>
+    );
     expect(wrapper.find('a')).toHaveLength(1);
   });
 
@@ -69,11 +71,11 @@ describe('Paragraph', () => {
   });
 
   it('renders full example text from fixtures', () => {
-    wrapper = mount(<Paragraph>{exampleText}</Paragraph>);
+    wrapper = mount(<Paragraph>{examplePlain}</Paragraph>);
   });
 
   it('renders as supporting text', () => {
-    wrapper = mount(<Paragraph supportingText>{exampleText}</Paragraph>);
+    wrapper = mount(<Paragraph supportingText>{examplePlain}</Paragraph>);
     expect(wrapper.prop('supportingText')).toBe(true);
   });
 

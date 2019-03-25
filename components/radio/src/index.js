@@ -27,14 +27,15 @@ const Label = styled('label')(
     padding: `0 0 0 ${radioSize}px`,
     clear: 'left',
   },
-  ({ inline }) => (inline && {
-    [MEDIA_QUERIES.LARGESCREEN]: {
-      float: 'left',
-      clear: 'none',
-      marginRight: SPACING_POINTS[4],
+  ({ inline }) =>
+    inline && {
+      [MEDIA_QUERIES.LARGESCREEN]: {
+        float: 'left',
+        clear: 'none',
+        marginRight: SPACING_POINTS[4],
+      },
     },
-  }),
-  spacing.withWhiteSpace({ marginBottom: 2 }),
+  spacing.withWhiteSpace({ marginBottom: 2 })
 );
 
 const Input = styled('input')(
@@ -62,7 +63,7 @@ const Input = styled('input')(
       opacity: disabled ? '.5' : '1',
       pointerEvents: disabled ? 'none' : 'auto',
     },
-  }),
+  })
 );
 
 const LabelText = styled('span')({
@@ -175,9 +176,7 @@ const StyledRadioHint = styled(HintText)({
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/radios/_radios.scss
  * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
  */
-const Radio = ({
-  inline, children, className, hint, ...input
-}) => (
+const Radio = ({ inline, children, className, hint, ...input }) => (
   <Label inline={inline} className={className}>
     <Input type="radio" {...input} />
     <LabelText>{children}</LabelText>

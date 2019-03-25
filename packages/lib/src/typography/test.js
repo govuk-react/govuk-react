@@ -35,7 +35,7 @@ describe('typography lib', () => {
 
   describe('responsive', () => {
     it('allows any font size defined in the typography scale', () => {
-      Object.keys(TYPOGRAPHY_SCALE).forEach((size) => {
+      Object.keys(TYPOGRAPHY_SCALE).forEach(size => {
         expect(() => typography.responsive(size)).not.toThrow();
       });
     });
@@ -55,7 +55,7 @@ describe('typography lib', () => {
     });
 
     it('can override lineHeight', () => {
-      Object.keys(TYPOGRAPHY_SCALE).forEach((size) => {
+      Object.keys(TYPOGRAPHY_SCALE).forEach(size => {
         const style = typography.responsive(size, 999);
 
         expect(style.lineHeight).toEqual(999);
@@ -78,8 +78,11 @@ describe('typography lib', () => {
     it('defaults to standard font, regular weight', () => {
       const style = typography.font();
 
-      expect(style)
-        .toEqual(Object.assign({}, typography.common(), { fontWeight: FONT_WEIGHTS.regular }));
+      expect(style).toEqual(
+        Object.assign({}, typography.common(), {
+          fontWeight: FONT_WEIGHTS.regular,
+        })
+      );
     });
 
     it('can accept tabular flag to pick tabular font', () => {
@@ -99,7 +102,7 @@ describe('typography lib', () => {
     });
 
     it('allows size and custom lineHeight to be set', () => {
-      Object.keys(TYPOGRAPHY_SCALE).forEach((size) => {
+      Object.keys(TYPOGRAPHY_SCALE).forEach(size => {
         const style = typography.font({ size, lineHeight: 999 });
 
         expect(style).toEqual(expect.objectContaining(typography.responsive(size, 999)));

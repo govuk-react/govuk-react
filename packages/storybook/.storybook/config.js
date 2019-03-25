@@ -1,18 +1,18 @@
-import { addDecorator, addParameters, configure } from '@storybook/react';
-import { withOptions } from '@storybook/addon-options';
+import { addParameters, configure } from '@storybook/react';
+import { configureReadme } from 'storybook-readme';
+import { StoryPreview } from '@govuk-react/storybook-components';
 import 'storybook-chromatic';
-
-addDecorator(
-  withOptions({
-    name: 'govuk-react',
-    sortStoriesByKind: true,
-    url: 'https://github.com/govuk-react/govuk-react'
-  })
-);
 
 addParameters({
   chromatic: { viewports: [320, 1200] },
+  options: {
+    brandTitle: 'govuk-react',
+    sortStoriesByKind: true,
+    brandUrl: 'https://github.com/govuk-react/govuk-react'
+  }
 });
+
+configureReadme({ StoryPreview });
 
 function loadStories() {
   require('../src/stories');

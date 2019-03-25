@@ -1,9 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import MultiChoice from './';
-import MultiChoiceWithKnobs,
-{ MultiChoiceWithKnobsHint, MultiChoiceWithKnobsError } from './fixtures';
+import MultiChoice from '.';
+import MultiChoiceWithKnobs, { MultiChoiceWithKnobsHint, MultiChoiceWithKnobsError } from './fixtures';
 
 describe('MultiChoice', () => {
   it('renders with a label', () => {

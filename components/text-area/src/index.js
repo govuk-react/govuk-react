@@ -4,12 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { BLACK, YELLOW, ERROR_COLOUR } from 'govuk-colours';
-import {
-  FONT_SIZE,
-  LINE_HEIGHT,
-  MEDIA_QUERIES,
-  NTA_LIGHT,
-} from '@govuk-react/constants';
+import { FONT_SIZE, LINE_HEIGHT, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants';
 
 import Label from '@govuk-react/label';
 import LabelText from '@govuk-react/label-text';
@@ -39,7 +34,7 @@ const TextAreaField = styled('textarea')(
   },
   ({ error }) => ({
     border: error ? `4px solid ${ERROR_COLOUR}` : undefined,
-  }),
+  })
 );
 
 /**
@@ -78,13 +73,11 @@ const TextAreaField = styled('textarea')(
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/textarea
  *
  */
-const TextArea = ({
-  children, hint, meta, input, ...props
-}) => (
+const TextArea = ({ children, hint, meta, input, ...props }) => (
   <Label error={meta.touched && meta.error} {...props}>
     <LabelText>{children}</LabelText>
-    { hint && <HintText>{hint}</HintText> }
-    { meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText> }
+    {hint && <HintText>{hint}</HintText>}
+    {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
     <TextAreaField type="text" rows="5" error={meta.touched && meta.error} {...input} />
   </Label>
 );

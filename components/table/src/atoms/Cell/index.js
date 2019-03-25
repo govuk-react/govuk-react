@@ -7,11 +7,7 @@ import { FONT_WEIGHTS, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 
 const Cell = styled('td')(
-  ({
-    numeric,
-    alignRight = numeric,
-    bold,
-  }) => ({
+  ({ numeric, alignRight = numeric, bold }) => ({
     padding: `${SPACING_POINTS[2]}px ${SPACING_POINTS[4]}px ${SPACING_POINTS[2]}px 0`,
     borderBottom: `1px solid ${BORDER_COLOUR}`,
     textAlign: alignRight ? 'right' : 'left',
@@ -20,10 +16,8 @@ const Cell = styled('td')(
       paddingRight: 0,
     },
   }),
-  ({ numeric, isHeader }) => (
-    (numeric && !isHeader) ? typography.font({ tabular: true }) : undefined
-  ),
-  spacing.withWidth(),
+  ({ numeric, isHeader }) => (numeric && !isHeader ? typography.font({ tabular: true }) : undefined),
+  spacing.withWidth()
 );
 
 Cell.propTypes = {

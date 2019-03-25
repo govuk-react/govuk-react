@@ -62,9 +62,8 @@ const StyledErrorSummary = styled('div')(
       border: `${BORDER_WIDTH} solid ${ERROR_COLOUR}`,
     },
   },
-  spacing.withWhiteSpace({ marginBottom: 6 }),
+  spacing.withWhiteSpace({ marginBottom: 6 })
 );
-
 
 /**
  *
@@ -114,27 +113,21 @@ const StyledErrorSummary = styled('div')(
  * ### TODO:
  * - Swap out browser dependancy for context API to help with React Native support
  */
-const ErrorSummary = ({
-  onHandleErrorClick, heading, description, errors, ...props
-}) => (
+const ErrorSummary = ({ onHandleErrorClick, heading, description, errors, ...props }) => (
   <StyledErrorSummary tabIndex={-1} {...props}>
-    <H2>{ heading }</H2>
-    { description && <Paragraph mb={3}>{ description }</Paragraph> }
-    { errors.length > 0 &&
+    <H2 size="MEDIUM">{heading}</H2>
+    {description && <Paragraph mb={3}>{description}</Paragraph>}
+    {errors.length > 0 && (
       <UnorderedList mb={0} listStyleType="none">
-        { errors.map((error, index) => (
+        {errors.map((error, index) => (
           <ListItem key={error.targetName}>
-            <StyledErrorText
-              tabIndex={index + 1}
-              onClick={() => onHandleErrorClick(error.targetName)}
-            >
+            <StyledErrorText tabIndex={index + 1} onClick={() => onHandleErrorClick(error.targetName)}>
               {error.text}
             </StyledErrorText>
           </ListItem>
-          ))
-        }
+        ))}
       </UnorderedList>
-    }
+    )}
   </StyledErrorSummary>
 );
 
@@ -148,14 +141,20 @@ ErrorSummary.propTypes = {
   /** onClick function to scroll the target element into view */
   onHandleErrorClick: PropTypes.func,
   /** Heading text */
-  heading: PropTypes.string.isRequired,
+  heading: PropTypes.string,
   /** Optional description of the errors */
   description: PropTypes.string,
   /** Array of errors with text and target element name to scroll into view when clicked */
-  errors: PropTypes.arrayOf(PropTypes.shape({
-    targetName: PropTypes.string,
-    text: PropTypes.string,
-  })),
+  errors: PropTypes.arrayOf(
+    PropTypes.shape({
+      targetName: PropTypes.string,
+      text: PropTypes.string,
+    })
+  ),
+};
+
+ErrorSummary.defaultProps = {
+  heading: 'There is a problem',
 };
 
 export default ErrorSummary;

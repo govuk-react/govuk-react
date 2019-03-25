@@ -1,13 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import Button, {
-  ButtonStart,
-  ButtonStartIcon,
-  ButtonDisabled,
-  ButtonBlue,
-  ButtonWacky,
-} from './fixtures';
+import Button, { ButtonStart, ButtonStartIcon, ButtonDisabled, ButtonBlue, ButtonWacky } from './fixtures';
 
 describe('button', () => {
   describe('basics', () => {
@@ -42,7 +36,12 @@ describe('button', () => {
     it('should render a button with the isStart prop', () => {
       const wrapper = mount(<ButtonStart />);
 
-      expect(wrapper.find('button').parent().prop('isStart')).toBeTruthy();
+      expect(
+        wrapper
+          .find('button')
+          .parent()
+          .prop('isStart')
+      ).toBeTruthy();
     });
 
     it('matches snapshot', () => {

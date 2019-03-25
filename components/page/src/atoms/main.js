@@ -12,7 +12,7 @@ const Main = styled('main')(
       direction: ['top', 'bottom'],
     },
   }),
-  { display: 'block' },
+  { display: 'block' }
 );
 
 export default Main;

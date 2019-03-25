@@ -16,20 +16,17 @@ import RightHandSide from './atoms/right-hand-side';
 import SearchWrapper from './atoms/search-wrapper';
 import UnorderedList from './atoms/unordered-list';
 import ListItem from './atoms/list-item';
-import MenuButton from './atoms/menu-button/';
+import MenuButton from './atoms/menu-button';
 
 import IconTitle from './atoms/icon-title';
 
 // Layout/position of ServiceTitle
-const ServiceTitleWrapper = styled('div')(
-  typography.font({ size: 24 }),
-  {
-    width: '50%',
-    [MEDIA_QUERIES.LARGESCREEN]: {
-      width: 'auto',
-    },
+const ServiceTitleWrapper = styled('div')(typography.font({ size: 24 }), {
+  width: '50%',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    width: 'auto',
   },
-);
+});
 
 // Layout/position of MenuButtonWrapper
 const MenuButtonWrapper = styled('div')({
@@ -133,67 +130,48 @@ const Input = styled('input')({
 class TopNav extends Component {
   state = {
     navigationOpen: this.props.defaultOpen,
-  }
+  };
 
   toggleNavigationOpen = () => {
-    this.setState({
-      navigationOpen: !this.state.navigationOpen,
-    });
+    this.setState(prevState => ({
+      navigationOpen: !prevState.navigationOpen,
+    }));
   };
 
   render() {
-    const {
-      bgColor,
-      color,
-      company,
-      serviceTitle,
-      search,
-      children,
-      ...props
-    } = this.props;
+    const { bgColor, color, company, serviceTitle, search, children, ...props } = this.props;
 
     return (
       <React.Fragment>
         <TopNavWrapper bgColor={bgColor} color={color} {...props}>
           <TopNavInner>
             <LogoSearchWrapper>
-              <Company>
-                {company}
-              </Company>
-              {search &&
-                <SearchWrapper>
-                  {search}
-                </SearchWrapper>
-              }
+              <Company>{company}</Company>
+              {search && <SearchWrapper>{search}</SearchWrapper>}
             </LogoSearchWrapper>
             <RightHandSide>
-              <ServiceTitleWrapper>
-                {serviceTitle}
-              </ServiceTitleWrapper>
-              {children &&
-              <React.Fragment>
-                <MenuButtonWrapper>
-                  <MenuButton
-                    open={this.state.navigationOpen}
-                    onClick={this.toggleNavigationOpen}
-                  />
-                </MenuButtonWrapper>
-                {/* Referenced in MenuButton */}
-                <Input id="govuk-react-menu-button" type="checkbox" checked={this.state.navigationOpen} />
-                <UnorderedList id="govuk-react-menu" serviceTitle={serviceTitle} open={this.state.navigationOpen}>
-                  {/* TODO: #205 use context api and/or render props here for `active` */}
-                  {children.length && children.map ? (
-                    children.map((child, i) => (
-                      child && (child.length || child.props)
-                        ? <ListItem key={child.key || i}>{child}</ListItem>
-                        : null
-                    ))
-                  ) : (
-                    <ListItem>{children}</ListItem>
-                  )}
-                </UnorderedList>
-              </React.Fragment>
-              }
+              <ServiceTitleWrapper>{serviceTitle}</ServiceTitleWrapper>
+              {children && (
+                <React.Fragment>
+                  <MenuButtonWrapper>
+                    <MenuButton open={this.state.navigationOpen} onClick={this.toggleNavigationOpen} />
+                  </MenuButtonWrapper>
+                  {/* Referenced in MenuButton */}
+                  <Input id="govuk-react-menu-button" type="checkbox" checked={this.state.navigationOpen} />
+                  <UnorderedList id="govuk-react-menu" serviceTitle={serviceTitle} open={this.state.navigationOpen}>
+                    {/* TODO: #205 use context api and/or render props here for `active` */}
+                    {children.length && children.map ? (
+                      children.map((child, i) =>
+                        child && (child.length || child.props) ? (
+                          <ListItem key={child.key || i}>{child}</ListItem>
+                        ) : null
+                      )
+                    ) : (
+                      <ListItem>{children}</ListItem>
+                    )}
+                  </UnorderedList>
+                </React.Fragment>
+              )}
             </RightHandSide>
           </TopNavInner>
         </TopNavWrapper>

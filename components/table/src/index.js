@@ -21,7 +21,7 @@ const StyledTable = styled('table')(
     borderSpacing: 0,
     borderCollapse: 'collapse',
   },
-  spacing.withWhiteSpace({ marginBottom: 6 }),
+  spacing.withWhiteSpace({ marginBottom: 6 })
 );
 
 /**
@@ -113,13 +113,7 @@ const StyledTable = styled('table')(
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/table/_table.scss
  *
  */
-const Table = ({
-  caption,
-  children,
-  body = children,
-  head,
-  ...props
-}) => (
+const Table = ({ caption, children, body = children, head, ...props }) => (
   <StyledTable {...props}>
     {caption && <Caption>{caption}</Caption>}
     {head && <TableHeader>{head}</TableHeader>}

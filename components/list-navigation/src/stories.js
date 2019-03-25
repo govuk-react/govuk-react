@@ -13,9 +13,7 @@ stories.addDecorator(WithDocsCustom(ReadMe));
 stories.add('Component default', () => (
   <ListNavigation listStyleType="square">
     <Link href="https://example.com/?=1">lorem dolor set cetra</Link>
-    <Link href="https://example.com/?=2">
-      Meta logi arche decip con
-    </Link>
+    <Link href="https://example.com/?=2">Meta logi arche decip con</Link>
     <Link href="https://example.com/?=2">Ignis prevo don coldo</Link>
   </ListNavigation>
 ));

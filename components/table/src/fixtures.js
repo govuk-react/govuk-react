@@ -54,10 +54,7 @@ const exampleHead = (
 );
 
 const TableWithHeadAndNumerics = () => (
-  <Table
-    caption="Attention, I am the caption of this ship!"
-    head={exampleHead}
-  >
+  <Table caption="Attention, I am the caption of this ship!" head={exampleHead}>
     <Table.Row>
       <Table.CellHeader>January</Table.CellHeader>
       <Table.Cell numeric>£165.00</Table.Cell>
@@ -117,12 +114,6 @@ const TableWithCustomWidths = () => (
   </Table>
 );
 
-export {
-  TableSimple,
-  TableWithCaption,
-  TableWithHeadAndNumerics,
-  TableWithCustomWidths,
-  TableThreeQuartersOneQuarter,
-};
+export { TableSimple, TableWithCaption, TableWithHeadAndNumerics, TableWithCustomWidths, TableThreeQuartersOneQuarter };
 
 export default Table;

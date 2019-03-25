@@ -13,7 +13,7 @@ const TabsContainer = styled('div')(
   typography.textColour,
   spacing.responsiveMargin({ size: 1, direction: 'top' }),
   spacing.responsiveMargin({ size: 6, direction: 'bottom' }),
-  spacing.withWhiteSpace(),
+  spacing.withWhiteSpace()
 );
 
 /**

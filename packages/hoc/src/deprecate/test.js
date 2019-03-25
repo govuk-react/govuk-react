@@ -15,7 +15,9 @@ describe('deprecate HOC', () => {
     jest.resetModules();
     process.env = { ...OLD_ENV };
     // eslint-disable-next-line no-console
-    console.warn = () => { warnCallCount += 1; };
+    console.warn = () => {
+      warnCallCount += 1;
+    };
     warnCallCount = 0;
   });
 

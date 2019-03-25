@@ -7,7 +7,7 @@ const StyledParagraph = styled('p')(
   typography.textColour,
   typography.font({ size: 24 }),
   { marginTop: 0 },
-  spacing.withWhiteSpace({ marginBottom: 6 }),
+  spacing.withWhiteSpace({ marginBottom: 6 })
 );
 
 /**

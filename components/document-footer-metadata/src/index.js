@@ -5,10 +5,7 @@ import UnorderedList from '@govuk-react/unordered-list';
 import { NTA_LIGHT } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
 
-const StyledContainer = styled('div')(
-  { fontFamily: NTA_LIGHT },
-  spacing.withWhiteSpace(),
-);
+const StyledContainer = styled('div')({ fontFamily: NTA_LIGHT }, spacing.withWhiteSpace());
 
 const StyledDefinition = styled('li')({
   fontSize: '24px',
@@ -84,53 +81,49 @@ const StyledDefinition = styled('li')({
  * ### References:
  * - https://govuk-static.herokuapp.com/component-guide/document_footer
  */
-const DocumentFooterMetadata = ({
-  from, partOf, other, ...props
-}) => {
+const DocumentFooterMetadata = ({ from, partOf, other, ...props }) => {
   const fromData = (
     <StyledContainer>
-      {from &&
+      {from && (
         <div>
           <p style={{ marginBottom: 0 }}>From:</p>
           <UnorderedList listStyleType="none">
-            {from && from.map((child, i) => (
-              /* eslint-disable react/no-array-index-key */
-              <StyledDefinition key={i}>{child}</StyledDefinition>
-              /* eslint-enable react/no-array-index-key */
+            {from &&
+              from.map((child, i) => (
+                /* eslint-disable react/no-array-index-key */
+                <StyledDefinition key={i}>{child}</StyledDefinition>
+                /* eslint-enable react/no-array-index-key */
               ))}
           </UnorderedList>
-        </div>}
+        </div>
+      )}
     </StyledContainer>
   );
 
   const partOfData = (
     <StyledContainer>
-      {partOf &&
+      {partOf && (
         <div>
           <p style={{ marginBottom: 0 }}>Part of:</p>
           <UnorderedList listStyleType="none">
-            {partOf && partOf.map((child, i) => (
-              <StyledDefinition key={child.key || i}>{child}</StyledDefinition>
-              ))
-            }
+            {partOf && partOf.map((child, i) => <StyledDefinition key={child.key || i}>{child}</StyledDefinition>)}
           </UnorderedList>
-        </div>}
+        </div>
+      )}
     </StyledContainer>
   );
 
   const otherData = (
     <StyledContainer>
-      {other && other.map(item =>
-        (
+      {other &&
+        other.map(item => (
           <div key={item.id}>
             <p style={{ marginBottom: 0 }}>{item.title}:</p>
             <UnorderedList listStyleType="none">
-              <StyledDefinition>
-                {item.content}
-              </StyledDefinition>
+              <StyledDefinition>{item.content}</StyledDefinition>
             </UnorderedList>
           </div>
-          ))}
+        ))}
     </StyledContainer>
   );
 
@@ -163,11 +156,13 @@ DocumentFooterMetadata.propTypes = {
    * Array of Objects for any additional items, each object should contain an `id`, `title` and `content` property
    */
   /* eslint-enable max-len */
-  other: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number,
-    title: PropTypes.string,
-    content: PropTypes.node,
-  })),
+  other: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      title: PropTypes.string,
+      content: PropTypes.node,
+    })
+  ),
 };
 
 export default DocumentFooterMetadata;

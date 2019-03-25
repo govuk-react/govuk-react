@@ -8,19 +8,22 @@ import Label from '@govuk-react/label';
 
 import multiInputInput from 'multi-input-input';
 
-const StyledLabel = styled(Label)({
-  marginRight: '20px',
-  marginBottom: 0,
-}, ({ year }) => ({
-  width: year ? '70px' : '50px',
-}));
+const StyledLabel = styled(Label)(
+  {
+    marginRight: '20px',
+    marginBottom: 0,
+  },
+  ({ year }) => ({
+    width: year ? '70px' : '50px',
+  })
+);
 
 const StyledList = styled('div')({
   display: 'flex',
 });
 
 class Input extends React.Component {
-  inputs = {}
+  inputs = {};
 
   renderInput(label, name, key, defaultValue, error) {
     return (
@@ -31,19 +34,21 @@ class Input extends React.Component {
           error={error}
           type="number"
           defaultValue={defaultValue}
-          value={(this.props.value ? this.props.value[key] : undefined)}
+          value={this.props.value ? this.props.value[key] : undefined}
           onChange={e => this.props.onChange(e, key)}
           onBlur={e => this.props.onBlur(e, key)}
           onFocus={e => this.props.onFocus(e, key)}
-          ref={(input) => { this.inputs[key] = input; this.props.refs(this.inputs); }}
+          ref={input => {
+            this.inputs[key] = input;
+            this.props.refs(this.inputs);
+          }}
         />
-      </StyledLabel>);
+      </StyledLabel>
+    );
   }
 
   render() {
-    const {
-      labels, names, defaultValues, error,
-    } = this.props;
+    const { labels, names, defaultValues, error } = this.props;
     return (
       <StyledList>
         {/* TODO: text should be configurable  */}

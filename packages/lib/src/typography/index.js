@@ -46,23 +46,17 @@ export function responsive(size, overrideLineHeight) {
     throw Error(`Unknown font size ${size} - expected a point from the typography scale.`);
   }
 
-  return Object.assign(
-    {},
-    getSizeStyle(scale.mobile, overrideLineHeight),
-    {
-      [MEDIA_QUERIES.TABLET]: getSizeStyle(scale.tablet, overrideLineHeight),
-      [MEDIA_QUERIES.PRINT]: getSizeStyle(scale.print, overrideLineHeight),
-    },
-  );
+  return Object.assign({}, getSizeStyle(scale.mobile, overrideLineHeight), {
+    [MEDIA_QUERIES.TABLET]: getSizeStyle(scale.tablet, overrideLineHeight),
+    [MEDIA_QUERIES.PRINT]: getSizeStyle(scale.print, overrideLineHeight),
+  });
 }
 
-export function font({
-  size, weight = 'regular', tabular = false, lineHeight,
-} = {}) {
+export function font({ size, weight = 'regular', tabular = false, lineHeight } = {}) {
   return Object.assign(
     {},
     common(tabular ? FONT_STACK_TABULAR : undefined),
     FONT_WEIGHTS[weight] ? { fontWeight: FONT_WEIGHTS[weight] } : undefined,
-    size ? responsive(size, lineHeight) : undefined,
+    size ? responsive(size, lineHeight) : undefined
   );
 }

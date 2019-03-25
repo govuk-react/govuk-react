@@ -8,6 +8,4 @@ import ReadMe from '../README.md';
 const stories = storiesOf('Typography/HintText', module);
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Component default', () => (
-  <HintText>Example</HintText>
-));
+stories.add('Component default', () => <HintText>Example</HintText>);

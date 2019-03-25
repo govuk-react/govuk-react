@@ -24,7 +24,7 @@ const InsetText = styled('div')(
     ':only-child,:last-child': {
       marginBottom: 0,
     },
-  },
+  }
 );
 
 /**

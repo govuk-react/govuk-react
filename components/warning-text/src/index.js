@@ -14,7 +14,7 @@ const StyledWarningText = styled('div')(
     display: 'flex',
     width: '100%',
   },
-  spacing.withWhiteSpace({ marginBottom: 0 }),
+  spacing.withWhiteSpace({ marginBottom: 0 })
 );
 
 const IconImportantWrapper = styled('div')({

@@ -21,25 +21,13 @@ const exampleCodeBlock = `\`\`\`
   \`\`\``;
 
 const ParagraphWithKnobs = () => (
-  <Paragraph supportingText={boolean('supportingText', false)}>
-    {text('children', exampleParagraph)}
-  </Paragraph>
+  <Paragraph supportingText={boolean('supportingText', false)}>{text('children', exampleParagraph)}</Paragraph>
 );
 
-const SupportingParagraph = () => (
-  <Paragraph supportingText>{text('children', exampleParagraph)}</Paragraph>
-);
+const SupportingParagraph = () => <Paragraph supportingText>{text('children', exampleParagraph)}</Paragraph>;
 
-const ParagraphWithCodeBlock = () => (
-  <Paragraph supportingText>{text('children', exampleCodeBlock)}</Paragraph>
-);
+const ParagraphWithCodeBlock = () => <Paragraph supportingText>{text('children', exampleCodeBlock)}</Paragraph>;
 
 export default Paragraph;
 
-export {
-  ParagraphWithKnobs,
-  SupportingParagraph,
-  ParagraphWithCodeBlock,
-  exampleParagraph,
-  exampleCodeBlock,
-};
+export { ParagraphWithKnobs, SupportingParagraph, ParagraphWithCodeBlock, exampleParagraph, exampleCodeBlock };

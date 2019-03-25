@@ -11,19 +11,12 @@ import ReadMe from '../README.md';
 
 const required = value => (value ? undefined : 'Required');
 
-const RadioGroup = ({
-  label, hint, options, inline, input, meta,
-}) => (
+const RadioGroup = ({ label, hint, options, inline, input, meta }) => (
   <div>
     <MultiChoice label={label} hint={hint} meta={meta}>
       {options.map(o => (
         <div key={o.value}>
-          <Radio
-            {...input}
-            value={o.value}
-            inline={inline}
-            checked={o.value === input.value}
-          >
+          <Radio {...input} value={o.value} inline={inline} checked={o.value === input.value}>
             {o.title}
           </Radio>
         </div>
@@ -46,10 +39,12 @@ RadioGroup.propTypes = {
   label: PropTypes.string.isRequired,
   hint: PropTypes.string,
   inline: PropTypes.bool,
-  options: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string,
-    value: PropTypes.string,
-  })),
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      value: PropTypes.string,
+    })
+  ),
 };
 
 const stories = storiesOf('Form/Radio', module);
@@ -58,9 +53,7 @@ const examples = storiesOf('Form/Radio/Examples', module);
 stories.addDecorator(withKnobs);
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Component default', () => (
-  <Radio name="group1">Radio button text example</Radio>
-));
+stories.add('Component default', () => <Radio name="group1">Radio button text example</Radio>);
 
 examples.add('Radio stacked', () => (
   <div>
@@ -122,22 +115,16 @@ examples.add('Radio with hint text', () => (
   </div>
 ));
 
-examples.add(
-  'Usage with Final/Redux Form - multi checkbox validation',
-  () => (
-    <FinalFormWrapper>
-      <Field
-        name="likesAnimals"
-        label="Do you like animals?"
-        hint="You must tell us"
-        component={RadioGroup}
-        options={[
-          { title: 'Yep', value: 'yes' },
-          { title: 'Nope', value: 'no' },
-        ]}
-        validate={required}
-        inline
-      />
-    </FinalFormWrapper>
-  ),
-);
+examples.add('Usage with Final/Redux Form - multi checkbox validation', () => (
+  <FinalFormWrapper>
+    <Field
+      name="likesAnimals"
+      label="Do you like animals?"
+      hint="You must tell us"
+      component={RadioGroup}
+      options={[{ title: 'Yep', value: 'yes' }, { title: 'Nope', value: 'no' }]}
+      validate={required}
+      inline
+    />
+  </FinalFormWrapper>
+));

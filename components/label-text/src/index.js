@@ -18,7 +18,7 @@ const StyledLabelText = styled('span')(
   ({ error }) => ({
     fontWeight: error ? 700 : undefined,
   }),
-  spacing.withWhiteSpace({ marginBottom: 0 }),
+  spacing.withWhiteSpace({ marginBottom: 0 })
 );
 
 /**

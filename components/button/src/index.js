@@ -1,18 +1,9 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {
-  BORDER_WIDTH_FORM_ELEMENT,
-  FOCUSABLE,
-  MEDIA_QUERIES,
-  SPACING_POINTS,
-} from '@govuk-react/constants';
+import { BORDER_WIDTH_FORM_ELEMENT, FOCUSABLE, MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
-import {
-  BUTTON_COLOUR,
-  BUTTON_COLOUR_DARKEN_15,
-  WHITE,
-} from 'govuk-colours';
+import { BUTTON_COLOUR, BUTTON_COLOUR_DARKEN_15, WHITE } from 'govuk-colours';
 import { darken, stripUnit } from 'polished';
 
 const BUTTON_SHADOW_SIZE = BORDER_WIDTH_FORM_ELEMENT;
@@ -23,18 +14,18 @@ const HALF_SHADOW = RAW_SHADOW / 2;
 const BASE_PAD = RAW_SPACING_2 - RAW_BORDER_WIDTH;
 
 const StyledButton = styled('button')(
-  ({ isStart }) => typography.font({
-    size: isStart ? 24 : 19,
-    lineHeight: isStart ? '1' : '19px',
-    weight: isStart ? 'bold' : undefined,
-  }),
+  ({ isStart }) =>
+    typography.font({
+      size: isStart ? 24 : 19,
+      lineHeight: isStart ? '1' : '19px',
+      weight: isStart ? 'bold' : undefined,
+    }),
   FOCUSABLE,
 
   ({
     buttonColour = BUTTON_COLOUR,
     buttonHoverColour = darken(0.05, buttonColour),
-    buttonShadowColour = (buttonColour === BUTTON_COLOUR) ?
-      BUTTON_COLOUR_DARKEN_15 : darken(0.15, buttonColour),
+    buttonShadowColour = buttonColour === BUTTON_COLOUR ? BUTTON_COLOUR_DARKEN_15 : darken(0.15, buttonColour),
     buttonTextColour = WHITE,
     isStart,
   }) => ({
@@ -43,8 +34,8 @@ const StyledButton = styled('button')(
     position: 'relative',
     width: '100%',
     marginTop: 0,
-    padding: isStart ? // differs from govuk-frontend owing to how icons displayed
-      `${BASE_PAD}px ${SPACING_POINTS[3]}px`
+    padding: isStart // differs from govuk-frontend owing to how icons displayed
+      ? `${BASE_PAD}px ${SPACING_POINTS[3]}px`
       : `${BASE_PAD - HALF_SHADOW}px ${SPACING_POINTS[2]}px`,
     border: `${BORDER_WIDTH_FORM_ELEMENT} solid transparent`,
     borderRadius: 0,
@@ -134,7 +125,9 @@ const StyledButton = styled('button')(
     return undefined;
   },
 
-  spacing.withWhiteSpace({ margin: { direction: 'bottom', size: 6, adjustment: RAW_SHADOW } }),
+  spacing.withWhiteSpace({
+    margin: { direction: 'bottom', size: 6, adjustment: RAW_SHADOW },
+  })
 );
 
 const ButtonContents = styled('span')({
@@ -167,12 +160,7 @@ const ButtonContents = styled('span')({
  *   - see https://www.w3.org/TR/WCAG20-TECHS/G18.html
  *   - can use Polished's `readableColor` call, but translate their black to govuk's black
  */
-const Button = React.forwardRef(({
-  start,
-  children,
-  icon,
-  ...props
-}, ref) => (
+const Button = React.forwardRef(({ start, children, icon, ...props }, ref) => (
   <StyledButton ref={ref} isStart={start} icon={icon} {...props}>
     {icon ? <ButtonContents>{children}</ButtonContents> : children}
     {icon}

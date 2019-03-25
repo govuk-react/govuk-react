@@ -32,9 +32,7 @@ import WidthContainer from './atoms/width-container';
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_main-wrapper.scss
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_width-container.scss
  */
-const Page = ({
-  header, footer, children, beforeChildren, main: MainComponent, container: Container,
-}) => (
+const Page = ({ header, footer, children, beforeChildren, main: MainComponent, container: Container }) => (
   <React.Fragment>
     {header}
     <Container>

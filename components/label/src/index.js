@@ -27,7 +27,7 @@ const StyledLabel = styled('label')(
     marginRight: error ? SPACING.SCALE_3 : undefined,
     paddingLeft: error ? SPACING.SCALE_2 : undefined,
   }),
-  spacing.withWhiteSpace({ marginBottom: 0 }),
+  spacing.withWhiteSpace({ marginBottom: 0 })
 );
 
 /**

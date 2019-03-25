@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-import {
-  MEDIA_QUERIES,
-  SPACING,
-} from '@govuk-react/constants';
+import { MEDIA_QUERIES, SPACING } from '@govuk-react/constants';
 
 const TopNavInner = styled('div')({
   display: 'flex',

@@ -31,7 +31,7 @@ const StyledSelect = styled('select')(
   },
   ({ error }) => ({
     border: error ? `4px solid ${ERROR_COLOUR}` : undefined,
-  }),
+  })
 );
 
 /**
@@ -103,9 +103,7 @@ const StyledSelect = styled('select')(
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/select
  *
  */
-const Select = ({
-  children, hint, label, meta, input, ...props
-}) => (
+const Select = ({ children, hint, label, meta, input, ...props }) => (
   <Label {...props} error={meta.touched && meta.error}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}

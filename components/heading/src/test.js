@@ -17,7 +17,9 @@ describe('Heading', () => {
     jest.resetModules();
     process.env = { ...OLD_ENV };
     // eslint-disable-next-line no-console
-    console.warn = () => { warnCallCount += 1; };
+    console.warn = () => {
+      warnCallCount += 1;
+    };
     warnCallCount = 0;
   });
 
@@ -55,10 +57,18 @@ describe('Heading', () => {
     const example = 'example';
     const div = document.createElement('div');
 
-    expect(() => { ReactDOM.render(<Heading size={0}>{example}</Heading>, div); }).toThrow();
-    expect(() => { ReactDOM.render(<Heading size={1}>{example}</Heading>, div); }).toThrow();
-    expect(() => { ReactDOM.render(<Heading size={99999}>{example}</Heading>, div); }).toThrow();
-    expect(() => { ReactDOM.render(<Heading size="test">{example}</Heading>, div); }).toThrow();
+    expect(() => {
+      ReactDOM.render(<Heading size={0}>{example}</Heading>, div);
+    }).toThrow();
+    expect(() => {
+      ReactDOM.render(<Heading size={1}>{example}</Heading>, div);
+    }).toThrow();
+    expect(() => {
+      ReactDOM.render(<Heading size={99999}>{example}</Heading>, div);
+    }).toThrow();
+    expect(() => {
+      ReactDOM.render(<Heading size="test">{example}</Heading>, div);
+    }).toThrow();
   });
 
   it('produces deprecation warnings if level prop is used when not in production', () => {
@@ -82,7 +92,6 @@ describe('Heading', () => {
 
     expect(warnCallCount).toEqual(0);
   });
-
 
   it('matches wrapper snapshot', () => {
     const example = 'example';

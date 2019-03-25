@@ -13,7 +13,9 @@ const examples = storiesOf('Typography/Heading/Examples', module);
 stories.addDecorator(withKnobs);
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Component default', () => (<Heading size={text('size', 'LARGE')}>{text('Children', 'Heading text')}</Heading>));
+stories.add('Component default', () => (
+  <Heading size={text('size', 'LARGE')}>{text('Children', 'Heading text')}</Heading>
+));
 
 examples.add('Shortcuts H1-H6', () => (
   <div>
@@ -27,9 +29,7 @@ examples.add('Shortcuts H1-H6', () => (
 ));
 examples.add('Differing sizes', () => (
   <div>
-    <H6 size={80}>
-      h6 with XXLARGE style
-    </H6>
+    <H6 size={80}>h6 with XXLARGE style</H6>
     <Heading as="h2" size={16}>
       h2 with XSMALL style
     </Heading>

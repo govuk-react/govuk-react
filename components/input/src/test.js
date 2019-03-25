@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { ORANGE } from 'govuk-colours';
 
-import Input from './';
+import Input from '.';
 
 describe('Input', () => {
   const wrapper = <Input type="text" />;

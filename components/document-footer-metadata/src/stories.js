@@ -6,9 +6,7 @@ import { WithDocsCustom } from '@govuk-react/storybook-components';
 import DocumentFooterMetadata from '.';
 import ReadMe from '../README.md';
 
-const fromData = [
-  <Link href="/government/organisations/ministry-of-defence">Ministry of Defence</Link>,
-];
+const fromData = [<Link href="/government/organisations/ministry-of-defence">Ministry of Defence</Link>];
 
 const partOfData = [
   <Link href="/government/topics/energy">Energy</Link>,
@@ -43,22 +41,8 @@ const examples = storiesOf('Typography/Document Footer Metadata/Examples', modul
 
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Component default', () => (
-  <DocumentFooterMetadata
-    from={fromData}
-  />
-));
+stories.add('Component default', () => <DocumentFooterMetadata from={fromData} />);
 
-examples.add('DFM From & part of example', () => (
-  <DocumentFooterMetadata
-    from={fromData}
-    partOf={partOfData}
-  />
-));
+examples.add('DFM From & part of example', () => <DocumentFooterMetadata from={fromData} partOf={partOfData} />);
 
-examples.add('DFM From & other data example', () => (
-  <DocumentFooterMetadata
-    from={fromData}
-    other={otherData}
-  />
-));
+examples.add('DFM From & other data example', () => <DocumentFooterMetadata from={fromData} other={otherData} />);

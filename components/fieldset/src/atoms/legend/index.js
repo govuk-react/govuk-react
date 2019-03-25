@@ -22,7 +22,7 @@ const StyledLegend = styled('legend')(
   ({ size }) => {
     const actualSize = Number.isNaN(Number(size)) ? HEADING_SIZES[size] : size;
 
-    if ((size !== undefined) && !actualSize) {
+    if (size !== undefined && !actualSize) {
       throw Error(`Unknown size ${size} used for legend.`);
     }
 
@@ -33,9 +33,9 @@ const StyledLegend = styled('legend')(
     return Object.assign(
       {},
       typography.font({ size: actualSize, weight: 'bold' }),
-      actualSize > 19 ? { marginBottom: SPACING_POINTS[3] } : undefined,
+      actualSize > 19 ? { marginBottom: SPACING_POINTS[3] } : undefined
     );
-  },
+  }
 );
 
 const StyledHeading = styled('h1')({
@@ -54,9 +54,7 @@ const StyledHeading = styled('h1')({
 // }
 
 const Legend = ({ children, isPageHeading, ...props }) => (
-  <StyledLegend {...props}>
-    {isPageHeading ? <StyledHeading>{children}</StyledHeading> : children}
-  </StyledLegend>
+  <StyledLegend {...props}>{isPageHeading ? <StyledHeading>{children}</StyledHeading> : children}</StyledLegend>
 );
 
 Legend.propTypes = {

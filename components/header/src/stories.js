@@ -17,4 +17,6 @@ const headingRanges = {
 stories.addDecorator(withKnobs);
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Component default', () => (<Header level={number('level', 2, headingRanges)}>{text('Children', 'Heading text')}</Header>));
+stories.add('Component default', () => (
+  <Header level={number('level', 2, headingRanges)}>{text('Children', 'Heading text')}</Header>
+));

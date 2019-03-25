@@ -6,13 +6,7 @@
 // https://github.com/alphagov/govuk-frontend/blob/master/src/settings/_spacing.scss
 
 import PropTypes from 'prop-types';
-import {
-  MEDIA_QUERIES,
-  SPACING_MAP,
-  SPACING_MAP_INDEX,
-  SPACING_POINTS,
-  WIDTHS,
-} from '@govuk-react/constants';
+import { MEDIA_QUERIES, SPACING_MAP, SPACING_MAP_INDEX, SPACING_POINTS, WIDTHS } from '@govuk-react/constants';
 
 export function simple(size) {
   const scale = SPACING_POINTS[size];
@@ -27,18 +21,15 @@ export function simple(size) {
 function styleForDirection(size, property, direction) {
   // NB styled-components automatically sets style to include `px` if needed
   return {
-    [(direction && direction !== 'all') ? `${property}-${direction}` : property]: size,
+    [direction && direction !== 'all' ? `${property}-${direction}` : property]: size,
   };
 }
 
-export function responsive({
-  size, property, direction, adjustment = 0,
-} = {}) {
+export function responsive({ size, property, direction, adjustment = 0 } = {}) {
   const scale = SPACING_MAP[size];
 
   if (scale === undefined) {
-    throw Error(`Unknown responsive spacing size ${
-      size} - expected a point from the responsive spacing scale.`);
+    throw Error(`Unknown responsive spacing size ${size} - expected a point from the responsive spacing scale.`);
   }
 
   if (!property) {
@@ -49,25 +40,17 @@ export function responsive({
   // TODO consider supporting non-number (string) adjustments, such as px or rem values
 
   if (Array.isArray(direction)) {
-    return Object.assign(
-      {},
-      ...direction.map(dir => styleForDirection(scale.mobile + adjustment, property, dir)),
-      {
-        [MEDIA_QUERIES.TABLET]: Object.assign(
-          {},
-          ...direction.map(dir => styleForDirection(scale.tablet + adjustment, property, dir)),
-        ),
-      },
-    );
+    return Object.assign({}, ...direction.map(dir => styleForDirection(scale.mobile + adjustment, property, dir)), {
+      [MEDIA_QUERIES.TABLET]: Object.assign(
+        {},
+        ...direction.map(dir => styleForDirection(scale.tablet + adjustment, property, dir))
+      ),
+    });
   }
 
-  return Object.assign(
-    {},
-    styleForDirection(scale.mobile + adjustment, property, direction),
-    {
-      [MEDIA_QUERIES.TABLET]: styleForDirection(scale.tablet + adjustment, property, direction),
-    },
-  );
+  return Object.assign({}, styleForDirection(scale.mobile + adjustment, property, direction), {
+    [MEDIA_QUERIES.TABLET]: styleForDirection(scale.tablet + adjustment, property, direction),
+  });
 }
 
 export function responsiveMargin(value) {
@@ -78,7 +61,10 @@ export function responsiveMargin(value) {
   const { size, direction, adjustment } = value;
 
   return responsive({
-    size, property: 'margin', direction, adjustment,
+    size,
+    property: 'margin',
+    direction,
+    adjustment,
   });
 }
 
@@ -90,7 +76,10 @@ export function responsivePadding(value) {
   const { size, direction, adjustment } = value;
 
   return responsive({
-    size, property: 'padding', direction, adjustment,
+    size,
+    property: 'padding',
+    direction,
+    adjustment,
   });
 }
 
@@ -107,11 +96,7 @@ export function responsivePadding(value) {
 // can be an array of numbers/objects
 
 export function withWhiteSpace(config = {}) {
-  return ({
-    margin = config.margin,
-    padding = config.padding,
-    mb: marginBottom = config.marginBottom,
-  } = {}) => {
+  return ({ margin = config.margin, padding = config.padding, mb: marginBottom = config.marginBottom } = {}) => {
     const styles = [];
 
     if (margin !== undefined) {
@@ -162,9 +147,7 @@ withWhiteSpace.propTypes = {
 };
 
 export function withWidth(config = {}) {
-  return ({
-    setWidth = config.width,
-  } = {}) => {
+  return ({ setWidth = config.width } = {}) => {
     if (setWidth) {
       const width = WIDTHS[setWidth] || setWidth;
       const { mediaQuery = MEDIA_QUERIES.TABLET, noDefault } = config;

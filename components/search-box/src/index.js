@@ -16,7 +16,7 @@ const SearchBoxWrapper = styled('div')(
     width: '100%',
     background: WHITE,
   },
-  spacing.withWhiteSpace({ marginBottom: 0 }),
+  spacing.withWhiteSpace({ marginBottom: 0 })
 );
 
 // css normalize is hiding the input:search clear SearchButton

@@ -12,18 +12,19 @@ const FormGroup = styled('div')(
       marginBottom: 0,
     },
   },
-  ({ error }) => (
-    error ? ({
-      paddingLeft: SPACING_POINTS[3],
-      borderLeft: `${BORDER_WIDTH_FORM_GROUP_ERROR} solid ${ERROR_COLOUR}`,
+  ({ error }) =>
+    error
+      ? {
+          paddingLeft: SPACING_POINTS[3],
+          borderLeft: `${BORDER_WIDTH_FORM_GROUP_ERROR} solid ${ERROR_COLOUR}`,
 
-      '& &': {
-        padding: 0,
-        border: 0,
-      },
-    }) : undefined
-  ),
-  spacing.withWhiteSpace(),
+          '& &': {
+            padding: 0,
+            border: 0,
+          },
+        }
+      : undefined,
+  spacing.withWhiteSpace()
 );
 
 /**

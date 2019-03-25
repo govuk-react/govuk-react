@@ -36,8 +36,8 @@ const StyledParagraph = styled(ReactMarkdown)(
       wordWrap: 'normal',
     },
   },
-  ({ supportingText }) => (typography.font({ size: supportingText ? 16 : 19 })),
-  spacing.withWhiteSpace({ marginBottom: 4 }),
+  ({ supportingText }) => typography.font({ size: supportingText ? 16 : 19 }),
+  spacing.withWhiteSpace({ marginBottom: 4 })
 );
 
 /**

@@ -27,8 +27,14 @@ export const LinkWithAllOptionsOn = () => (
 export const LinkWithRouter = () => (
   <BrowserRouter>
     <div>
-      <Link as={RLink} to="/first">First link</Link><br />
-      <Link as={RLink} to="/second">Second link</Link><br />
+      <Link as={RLink} to="/first">
+        First link
+      </Link>
+      <br />
+      <Link as={RLink} to="/second">
+        Second link
+      </Link>
+      <br />
       <div>
         <Route path="/first" render={() => 'First route'} />
         <Route path="/second" render={() => 'Second route'} />

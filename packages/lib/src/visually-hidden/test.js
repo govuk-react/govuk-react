@@ -12,7 +12,7 @@ describe('visuallyHidden lib', () => {
     it('produces styles which, by default, are marked as important', () => {
       const style = visuallyHidden();
 
-      Object.values(style).forEach((value) => {
+      Object.values(style).forEach(value => {
         expect(value).toContain(' !important');
       });
     });
@@ -20,7 +20,7 @@ describe('visuallyHidden lib', () => {
     it('can produce styles that do not contain important', () => {
       const style = visuallyHidden({ important: false });
 
-      Object.values(style).forEach((value) => {
+      Object.values(style).forEach(value => {
         expect(value).not.toContain('!important');
       });
     });
@@ -33,8 +33,7 @@ describe('visuallyHidden lib', () => {
       expect(style).toBeTruthy();
       expect(style).toBeInstanceOf(Object);
 
-      const hasStyles = Object.keys(style).some(key =>
-        [':focus', ':active'].some(checkKey => key.includes(checkKey)));
+      const hasStyles = Object.keys(style).some(key => [':focus', ':active'].some(checkKey => key.includes(checkKey)));
 
       expect(hasStyles).toBe(true);
     });
@@ -44,7 +43,7 @@ describe('visuallyHidden lib', () => {
 
       Object.entries(style).forEach(([key, value]) => {
         if ([':focus', ':active'].some(checkKey => key.includes(checkKey))) {
-          Object.values(value).forEach((activeValue) => {
+          Object.values(value).forEach(activeValue => {
             expect(activeValue).toContain(' !important');
           });
         } else {
@@ -58,7 +57,7 @@ describe('visuallyHidden lib', () => {
 
       Object.entries(style).forEach(([key, value]) => {
         if ([':focus', ':active'].some(checkKey => key.includes(checkKey))) {
-          Object.values(value).forEach((activeValue) => {
+          Object.values(value).forEach(activeValue => {
             expect(activeValue).not.toContain(' !important');
           });
         } else {

@@ -2,10 +2,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import { WithDocsCustom } from '@govuk-react/storybook-components';
 
-import {
-  TagWithKnobs,
-  TagInactive,
-} from './fixtures';
+import { TagWithKnobs, TagInactive } from './fixtures';
 import ReadMe from '../README.md';
 
 const stories = storiesOf('Misc/Tag', module);

@@ -14,7 +14,7 @@ const Fieldset = styled('fieldset')(
       clear: 'both',
     },
   },
-  spacing.withWhiteSpace({ margin: 0, padding: 0 }),
+  spacing.withWhiteSpace({ margin: 0, padding: 0 })
 );
 
 /**

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import IconImportant from './';
+import IconImportant from '.';
 
 const wrapper = <IconImportant>Example</IconImportant>;
 

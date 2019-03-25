@@ -32,10 +32,18 @@ describe('Header', () => {
     const example = 'example';
     const div = document.createElement('div');
 
-    expect(() => { ReactDOM.render(<Header size={0}>{example}</Header>, div); }).toThrow();
-    expect(() => { ReactDOM.render(<Header size={1}>{example}</Header>, div); }).toThrow();
-    expect(() => { ReactDOM.render(<Header size={99999}>{example}</Header>, div); }).toThrow();
-    expect(() => { ReactDOM.render(<Header size="test">{example}</Header>, div); }).toThrow();
+    expect(() => {
+      ReactDOM.render(<Header size={0}>{example}</Header>, div);
+    }).toThrow();
+    expect(() => {
+      ReactDOM.render(<Header size={1}>{example}</Header>, div);
+    }).toThrow();
+    expect(() => {
+      ReactDOM.render(<Header size={99999}>{example}</Header>, div);
+    }).toThrow();
+    expect(() => {
+      ReactDOM.render(<Header size="test">{example}</Header>, div);
+    }).toThrow();
   });
 
   it('matches wrapper snapshot', () => {

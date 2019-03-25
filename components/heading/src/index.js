@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  HEADING_SIZES,
-  LEVEL_SIZE,
-  LEVEL_TAG,
-  MEDIA_QUERIES,
-  TYPOGRAPHY_SCALE,
-} from '@govuk-react/constants';
+import { HEADING_SIZES, LEVEL_SIZE, LEVEL_TAG, MEDIA_QUERIES, TYPOGRAPHY_SCALE } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 
 // use `size` only with string for XLARGE, SMALL etc and number for px size
@@ -23,10 +17,7 @@ const StyledHeading = styled('h1')(
       throw Error(`Unknown size ${size} used for heading.`);
     }
 
-    return Object.assign(
-      {},
-      typography.font({ size: actualSize, weight: 'bold' }),
-    );
+    return Object.assign({}, typography.font({ size: actualSize, weight: 'bold' }));
   },
   {
     display: 'block',
@@ -43,10 +34,10 @@ const StyledHeading = styled('h1')(
         [MEDIA_QUERIES.TABLET]: {
           marginBottom: scaleInfo.tablet.spacing,
         },
-      },
+      }
     );
   },
-  spacing.withWhiteSpace(),
+  spacing.withWhiteSpace()
 );
 
 /**

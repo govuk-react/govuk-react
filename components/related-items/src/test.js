@@ -6,7 +6,7 @@ import UnorderedList from '@govuk-react/unordered-list';
 import Link from '@govuk-react/link';
 import ListItem from '@govuk-react/list-item';
 
-import RelatedItems from './';
+import RelatedItems from '.';
 
 const wrapper = (
   <RelatedItems>
@@ -19,7 +19,9 @@ const wrapper = (
         <Link href="https://example.com">Link B</Link>
       </ListItem>
       <ListItem>
-        <Link href="https://example.com"><strong>more</strong></Link>
+        <Link href="https://example.com">
+          <strong>more</strong>
+        </Link>
       </ListItem>
     </UnorderedList>
   </RelatedItems>

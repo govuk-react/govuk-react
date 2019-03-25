@@ -2,13 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { BLUE, GREY_4, PURPLE, YELLOW, WHITE } from 'govuk-colours';
-import {
-  FONT_SIZE,
-  LINE_HEIGHT,
-  SPACING,
-  MEDIA_QUERIES,
-  NTA_LIGHT,
-} from '@govuk-react/constants';
+import { FONT_SIZE, LINE_HEIGHT, SPACING, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants';
 
 import { ArrowRight as NextPageIcon, ArrowLeft as PrevPageIcon } from '@govuk-react/icons';
 
@@ -77,7 +71,7 @@ const PaginationWrapper = styled('li')(
         marginLeft: nextPage ? '10px' : undefined,
       },
     },
-  }),
+  })
 );
 
 const InnerWrap = styled('div')({
@@ -96,12 +90,9 @@ const PageTitle = styled('span')({
   },
 });
 
-const asPaginationItem = (AnchorType) => {
+const asPaginationItem = AnchorType => {
   const PaginationItem = props => (
-    <PaginationWrapper
-      previousPage={props.previousPage}
-      nextPage={props.nextPage}
-    >
+    <PaginationWrapper previousPage={props.previousPage} nextPage={props.nextPage}>
       <AnchorType to={props.to} href={props.href} target={props.target}>
         <InnerWrap>
           {props.previousPage && <PrevPageIcon />}
@@ -114,8 +105,7 @@ const asPaginationItem = (AnchorType) => {
   );
 
   PaginationItem.propTypes = {
-    children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
-      .isRequired,
+    children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
     previousPage: PropTypes.bool,
     nextPage: PropTypes.bool,
     pageTitle: PropTypes.string,

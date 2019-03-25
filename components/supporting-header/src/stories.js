@@ -11,6 +11,4 @@ const stories = storiesOf('Typography/SupportingHeader', module);
 stories.addDecorator(withKnobs);
 stories.addDecorator(WithDocsCustom(ReadMe));
 
-stories.add('Component default', () => (
-  <SupportingHeader>{text('children', 'Heading text')}</SupportingHeader>
-));
+stories.add('Component default', () => <SupportingHeader>{text('children', 'Heading text')}</SupportingHeader>);

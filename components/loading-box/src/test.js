@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
-import LoadingBox from './';
+import LoadingBox from '.';
 
 describe('LoadingBox', () => {
   it('renders without crashing', () => {
@@ -15,7 +15,15 @@ describe('LoadingBox', () => {
   });
 
   it('should render a SVG title when passed the value', () => {
-    expect(mount(<LoadingBox loading title="cat">example</LoadingBox>).find('title').text()).toBe('cat');
+    expect(
+      mount(
+        <LoadingBox loading title="cat">
+          example
+        </LoadingBox>
+      )
+        .find('title')
+        .text()
+    ).toBe('cat');
   });
 
   it('shouldnt render a SVG when not loading', () => {

@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import Spinner from './';
+import Spinner from '.';
 
-const wrapper = <Spinner width="100px" height="100px" fill="red">Example</Spinner>;
+const wrapper = (
+  <Spinner width="100px" height="100px" fill="red">
+    Example
+  </Spinner>
+);
 
 describe('Spinner', () => {
   it('renders without crashing', () => {
