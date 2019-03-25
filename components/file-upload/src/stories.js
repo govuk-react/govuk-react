@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import FileUpload from '.';
 import ReadMe from '../README.md';
@@ -13,7 +13,7 @@ const meta = {
 const stories = storiesOf('Form/FileUpload', module);
 const examples = storiesOf('Form/FileUpload/Examples', module);
 
-stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withDocsCustom(ReadMe));
 
 stories.add('Component default', () => <FileUpload name="group0">Upload a document</FileUpload>);
 

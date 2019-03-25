@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { asPaginationItem } from '@govuk-react/hoc';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import Pagination from '.';
 import ReadMe from '../README.md';
@@ -13,7 +13,7 @@ const PaginationLink = asPaginationItem(Link);
 const stories = storiesOf('Navigation/Pagination', module);
 const examples = storiesOf('Navigation/Pagination/Examples', module);
 
-stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
   <Pagination>

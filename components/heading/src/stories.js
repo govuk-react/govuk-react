@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs/react';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import Heading, { H1, H2, H3, H4, H5, H6 } from '.';
 import ReadMe from '../README.md';
@@ -11,7 +11,7 @@ const stories = storiesOf('Typography/Heading', module);
 const examples = storiesOf('Typography/Heading/Examples', module);
 
 stories.addDecorator(withKnobs);
-stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
   <Heading size={text('size', 'LARGE')}>{text('Children', 'Heading text')}</Heading>

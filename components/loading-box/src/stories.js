@@ -8,7 +8,7 @@ import LabelText from '@govuk-react/label-text';
 import Link from '@govuk-react/link';
 import Radio from '@govuk-react/radio';
 import PhaseBanner from '@govuk-react/phase-banner';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import LoadingBox from '.';
 import ReadMe from '../README.md';
@@ -16,7 +16,7 @@ import ReadMe from '../README.md';
 const stories = storiesOf('Misc/LoadingBox', module);
 const examples = storiesOf('Misc/LoadingBox/Examples', module);
 
-stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withDocsCustom(ReadMe));
 
 const spacer = <p style={{ marginTop: 0 }}>&nbsp;</p>;
 stories.addDecorator(withKnobs);

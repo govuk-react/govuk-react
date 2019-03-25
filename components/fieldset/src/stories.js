@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs/react';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import Fieldset from '.';
 
@@ -10,7 +10,7 @@ import ReadMe from '../README.md';
 const stories = storiesOf('Form/Fieldset', module);
 const examples = storiesOf('Form/Fieldset/Examples', module);
 stories.addDecorator(withKnobs);
-stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
   <Fieldset>
