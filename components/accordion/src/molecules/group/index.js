@@ -15,12 +15,11 @@ class Group extends Component {
   setFocus = bool => this.setState({ isFocused: bool });
 
   handleFocus = () => this.setFocus(true);
+
   handleBlur = () => this.setFocus(false);
 
   render() {
-    const {
-      children, heading, expanded, summary, onClick,
-    } = this.props;
+    const { children, heading, expanded, summary, onClick } = this.props;
     return (
       <Section>
         <SectionHeader focused={this.state.isFocused}>

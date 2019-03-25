@@ -16,7 +16,7 @@ const SectionSummary = styled('div')(
     // section summary
     marginTop: SPACING.SCALE_2,
     marginBottom: 0,
-  },
+  }
 );
 
 export default SectionSummary;

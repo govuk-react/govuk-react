@@ -36,7 +36,7 @@ const Icon = styled('div')(
       content: '" "',
       display: 'none',
     },
-  }),
+  })
 );
 
 Icon.defaultProps = {

@@ -7,12 +7,12 @@ const StyledHeader = styled('div')(
   // Setting focus styles on header
   // so that summary that is not part of the button is included in focus
   ({ focused }) =>
-    (focused
+    focused
       ? {
-        outline: `${FOCUS_WIDTH} solid ${YELLOW}`,
-        outlineOffset: 0,
-      }
-      : undefined),
+          outline: `${FOCUS_WIDTH} solid ${YELLOW}`,
+          outlineOffset: 0,
+        }
+      : undefined,
   {
     position: 'relative',
     // Safe area on the right to avoid clashing with icon
@@ -28,7 +28,7 @@ const StyledHeader = styled('div')(
         backgroundColor: 'initial',
       },
     },
-  },
+  }
 );
 
 const SectionHeader = ({ children, focused, ...props }) => (

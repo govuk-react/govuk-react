@@ -8,7 +8,7 @@ const SectionContent = styled('div')(
     ':last-child': {
       marginBottom: 0,
     },
-  },
+  }
 );
 
 export default SectionContent;

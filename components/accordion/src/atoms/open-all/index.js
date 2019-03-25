@@ -16,9 +16,7 @@ const StyledLink = styled(Link)(typography.font({ size: 16 }), {
   },
 });
 
-const OpenAllButton = ({
-  children, href, onClick, ...props
-}) => (
+const OpenAllButton = ({ children, href, onClick, ...props }) => (
   <div style={{ textAlign: 'right' }}>
     <StyledLink href={href} onClick={onClick} {...props}>
       {children}

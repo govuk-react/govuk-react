@@ -16,14 +16,16 @@ afterEach(cleanup);
 
 describe('Tabs', () => {
   it('clicking button changes focus on header', async () => {
-    const { container } = render(<ExampleWithoutSummaries
-      initialState={{
-        accordionOne: false,
-        accordionTwo: false,
-        accordionThree: false,
-        accordionFour: false,
-      }}
-    />);
+    const { container } = render(
+      <ExampleWithoutSummaries
+        initialState={{
+          accordionOne: false,
+          accordionTwo: false,
+          accordionThree: false,
+          accordionFour: false,
+        }}
+      />
+    );
     const firstButton = container.querySelector('button');
     const secondButton = container.querySelectorAll('button')[1];
 
@@ -47,14 +49,16 @@ describe('Tabs', () => {
   });
 
   it('clicking button toggles visible children', () => {
-    const { container, queryByText } = render(<ExampleWithoutSummaries
-      initialState={{
-        accordionOne: true,
-        accordionTwo: false,
-        accordionThree: false,
-        accordionFour: false,
-      }}
-    />);
+    const { container, queryByText } = render(
+      <ExampleWithoutSummaries
+        initialState={{
+          accordionOne: true,
+          accordionTwo: false,
+          accordionThree: false,
+          accordionFour: false,
+        }}
+      />
+    );
     const firstButton = container.querySelector('button');
 
     const children = queryByText('This is the content for writing well for the web.');
@@ -67,14 +71,16 @@ describe('Tabs', () => {
   });
 
   it('clicking close all toggles visible children', () => {
-    const { container, queryByText } = render(<ExampleWithoutSummaries
-      initialState={{
-        accordionOne: true,
-        accordionTwo: true,
-        accordionThree: true,
-        accordionFour: true,
-      }}
-    />);
+    const { container, queryByText } = render(
+      <ExampleWithoutSummaries
+        initialState={{
+          accordionOne: true,
+          accordionTwo: true,
+          accordionThree: true,
+          accordionFour: true,
+        }}
+      />
+    );
     const closeAll = container.querySelector('a');
 
     const children = queryByText('This is the content for How people read.');
@@ -87,26 +93,30 @@ describe('Tabs', () => {
   });
 
   it('matches wrapper snapshot', () => {
-    const { asFragment } = render(<ExampleWithoutSummaries
-      initialState={{
-        accordionOne: false,
-        accordionTwo: false,
-        accordionThree: false,
-        accordionFour: false,
-      }}
-    />);
+    const { asFragment } = render(
+      <ExampleWithoutSummaries
+        initialState={{
+          accordionOne: false,
+          accordionTwo: false,
+          accordionThree: false,
+          accordionFour: false,
+        }}
+      />
+    );
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('covers summary branch5', () => {
-    const { asFragment } = render(<ExampleWithSummaries
-      initialState={{
-        accordionOne: false,
-        accordionTwo: false,
-        accordionThree: false,
-        accordionFour: false,
-      }}
-    />);
+    const { asFragment } = render(
+      <ExampleWithSummaries
+        initialState={{
+          accordionOne: false,
+          accordionTwo: false,
+          accordionThree: false,
+          accordionFour: false,
+        }}
+      />
+    );
     expect(asFragment()).toMatchSnapshot();
   });
 });

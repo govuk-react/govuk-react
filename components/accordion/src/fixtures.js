@@ -16,7 +16,7 @@ const constructFull = ({ bool, state }) =>
       ...prev,
       [key]: bool,
     }),
-    {},
+    {}
   );
 
 const reducer = (state, newState) => ({ ...state, ...newState });
@@ -25,21 +25,15 @@ const useLegacyState = state => useReducer(reducer, state);
 
 const checkOpen = state => Object.values(state).every(Boolean);
 
-const useAccordion = (initialState) => {
+const useAccordion = initialState => {
   const [state, setState] = useLegacyState(initialState);
 
-  const objOpen = useMemo(() => constructFull({ bool: true, state }), [
-    initialState,
-    state.length,
-  ]);
-  const objClose = useMemo(() => constructFull({ bool: false, state }), [
-    initialState,
-    state.length,
-  ]);
+  const objOpen = useMemo(() => constructFull({ bool: true, state }), [initialState, state.length]);
+  const objClose = useMemo(() => constructFull({ bool: false, state }), [initialState, state.length]);
 
   const areAllOpen = useMemo(() => checkOpen(state), [state]);
 
-  const toggleAll = (e) => {
+  const toggleAll = e => {
     e.preventDefault();
     return setState(!areAllOpen ? objOpen : objClose);
   };
@@ -50,14 +44,15 @@ const useAccordion = (initialState) => {
     });
 
   return {
-    areAllOpen, individualAccordionSetState, toggleAll, state,
+    areAllOpen,
+    individualAccordionSetState,
+    toggleAll,
+    state,
   };
 };
 
 const ExampleWithoutSummaries = ({ initialState }) => {
-  const {
-    areAllOpen, individualAccordionSetState, toggleAll, state,
-  } = useAccordion(initialState);
+  const { areAllOpen, individualAccordionSetState, toggleAll, state } = useAccordion(initialState);
 
   return (
     <Accordion>
@@ -98,11 +93,8 @@ const ExampleWithoutSummaries = ({ initialState }) => {
 
 ExampleWithoutSummaries.propTypes = sharedPropTypes;
 
-
 const ExampleWithSummaries = ({ initialState }) => {
-  const {
-    areAllOpen, individualAccordionSetState, toggleAll, state,
-  } = useAccordion(initialState);
+  const { areAllOpen, individualAccordionSetState, toggleAll, state } = useAccordion(initialState);
 
   return (
     <Accordion>
@@ -117,14 +109,14 @@ const ExampleWithSummaries = ({ initialState }) => {
       >
         <ListNavigation listStyleType="none">
           {[
-              'Agile and government services: an introduction',
-              'Agile methods: an introduction',
-              'Core principles of agile',
-            ].map(elem => (
-              <Link key={elem} href={`#myprefix-${elem}`}>
-                {elem}
-              </Link>
-            ))}
+            'Agile and government services: an introduction',
+            'Agile methods: an introduction',
+            'Core principles of agile',
+          ].map(elem => (
+            <Link key={elem} href={`#myprefix-${elem}`}>
+              {elem}
+            </Link>
+          ))}
         </ListNavigation>
       </Accordion.Group>
       <Accordion.Group
@@ -135,18 +127,18 @@ const ExampleWithSummaries = ({ initialState }) => {
       >
         <ListNavigation listStyleType="none">
           {[
-              'Creating an agile working environment',
-              'Agile tools and techniques',
-              'Set up a team wall',
-              'Writing user stories',
-              'Planning in agile',
-              'Deciding on priorities',
-              'Developing a roadmap',
-            ].map(elem => (
-              <Link key={elem} href={`#myprefix-${elem}`}>
-                {elem}
-              </Link>
-            ))}
+            'Creating an agile working environment',
+            'Agile tools and techniques',
+            'Set up a team wall',
+            'Writing user stories',
+            'Planning in agile',
+            'Deciding on priorities',
+            'Developing a roadmap',
+          ].map(elem => (
+            <Link key={elem} href={`#myprefix-${elem}`}>
+              {elem}
+            </Link>
+          ))}
         </ListNavigation>
       </Accordion.Group>
       <Accordion.Group
@@ -157,16 +149,16 @@ const ExampleWithSummaries = ({ initialState }) => {
       >
         <ListNavigation listStyleType="none">
           {[
-              'How the discovery phase works',
-              'Measuring and reporting progress',
-              'Spend controls: check if you need approval to spend money on a service',
-              'Spend controls: apply for approval to spend money on a service',
-              'Working across organisational boundaries',
-            ].map(elem => (
-              <Link key={elem} href={`#myprefix-${elem}`}>
-                {elem}
-              </Link>
-            ))}
+            'How the discovery phase works',
+            'Measuring and reporting progress',
+            'Spend controls: check if you need approval to spend money on a service',
+            'Spend controls: apply for approval to spend money on a service',
+            'Working across organisational boundaries',
+          ].map(elem => (
+            <Link key={elem} href={`#myprefix-${elem}`}>
+              {elem}
+            </Link>
+          ))}
         </ListNavigation>
       </Accordion.Group>
       <Accordion.Group
@@ -177,17 +169,17 @@ const ExampleWithSummaries = ({ initialState }) => {
       >
         <ListNavigation listStyleType="none">
           {[
-              'Governance principles for agile service delivery',
-              'How the alpha phase works',
-              'How the beta phase works',
-              'How the live phase works',
-              'Retiring your service',
-            ].map(elem => (
-              /* eslint-disable-next-line jsx-a11y/anchor-is-valid */
-              <Link key={elem} href={`#myprefix-${elem}`}>
-                {elem}
-              </Link>
-            ))}
+            'Governance principles for agile service delivery',
+            'How the alpha phase works',
+            'How the beta phase works',
+            'How the live phase works',
+            'Retiring your service',
+          ].map(elem => (
+            /* eslint-disable-next-line jsx-a11y/anchor-is-valid */
+            <Link key={elem} href={`#myprefix-${elem}`}>
+              {elem}
+            </Link>
+          ))}
         </ListNavigation>
       </Accordion.Group>
     </Accordion>
@@ -216,14 +208,16 @@ class AccordionClassComponent extends React.Component {
           ...prev,
           [key]: !this.isAllOpen,
         }),
-        {},
-      ));
+        {}
+      )
+    );
   }
 
   individualAccordionSetState(property) {
-    return () => this.setState(state => ({
-      [property]: !state[property],
-    }));
+    return () =>
+      this.setState(state => ({
+        [property]: !state[property],
+      }));
   }
 
   render() {

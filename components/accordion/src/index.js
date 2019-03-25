@@ -18,7 +18,7 @@ const AccordionContainer = styled('div')(
   {
     borderBottom: `1px solid ${BORDER_COLOUR}`,
   },
-  spacing.withWhiteSpace(),
+  spacing.withWhiteSpace()
 );
 
 /**
