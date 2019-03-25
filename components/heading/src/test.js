@@ -7,12 +7,12 @@ import { H1, H2, H3, H4, H5, H6 } from './presets';
 
 describe('Heading', () => {
   const OLD_ENV = process.env;
+  // Capture console warnings and errors as we're expecting to produce both
   // eslint-disable-next-line no-console
   const nativeWarn = console.warn;
+  // eslint-disable-next-line no-console
+  const nativeError = console.error;
   let warnCallCount;
-  /**
-   * Make sure the setup is the same for every test
-   */
   beforeEach(() => {
     jest.resetModules();
     process.env = { ...OLD_ENV };
@@ -21,11 +21,15 @@ describe('Heading', () => {
       warnCallCount += 1;
     };
     warnCallCount = 0;
+    // eslint-disable-next-line no-console
+    console.error = () => {};
   });
 
   afterEach(() => {
     // eslint-disable-next-line no-console
     console.warn = nativeWarn;
+    // eslint-disable-next-line no-console
+    console.error = nativeError;
     process.env = OLD_ENV;
   });
 

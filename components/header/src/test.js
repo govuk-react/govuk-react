@@ -1,55 +1,65 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
 import Header from '.';
 import { H1, H2, H3, H4, H5, H6 } from './presets';
 
 describe('Header', () => {
-  it('renders a Header and all the H-level tags without crashing', () => {
-    const example = 'example';
-    const wrapper = <Header>{example}</Header>;
-    const div = document.createElement('div');
-
-    ReactDOM.render(wrapper, div);
-    ReactDOM.render(<H1>{example}</H1>, div);
-    ReactDOM.render(<H2>{example}</H2>, div);
-    ReactDOM.render(<H3>{example}</H3>, div);
-    ReactDOM.render(<H4>{example}</H4>, div);
-    ReactDOM.render(<H5>{example}</H5>, div);
-    ReactDOM.render(<H6>{example}</H6>, div);
+  // Capture console.warn and console.error, as this is deprecated and produces errors
+  const OLD_ENV = process.env;
+  // eslint-disable-next-line no-console
+  const nativeWarn = console.warn;
+  // eslint-disable-next-line no-console
+  const nativeError = console.error;
+  let warnCallCount;
+  beforeEach(() => {
+    jest.resetModules();
+    process.env = { ...OLD_ENV };
+    // eslint-disable-next-line no-console
+    console.warn = () => {
+      warnCallCount += 1;
+    };
+    // eslint-disable-next-line no-console
+    console.error = () => {};
+    warnCallCount = 0;
   });
 
-  it('allows custom string-based font size without crashing', () => {
-    ReactDOM.render(<Header size="SMALL">Test</Header>, document.createElement('div'));
+  afterEach(() => {
+    // eslint-disable-next-line no-console
+    console.warn = nativeWarn;
+    // eslint-disable-next-line no-console
+    console.error = nativeError;
+    process.env = OLD_ENV;
   });
 
-  it('allows custom numeric GDS font size without crashing', () => {
-    ReactDOM.render(<Header size={16}>Test</Header>, document.createElement('div'));
+  it('produces deprecation warning', () => {
+    process.env.NODE_ENV = 'development';
+
+    mount(<Header>example</Header>);
+    mount(<Header size="SMALL">Test</Header>);
+    mount(<Header size={16}>Test</Header>);
+    mount(<H1>example</H1>);
+    mount(<H2>example</H2>);
+    mount(<H3>example</H3>);
+    mount(<H4>example</H4>);
+    mount(<H5>example</H5>);
+    mount(<H6>example</H6>);
+
+    expect(warnCallCount).not.toEqual(0);
   });
 
   it('throws an error if an unsupported size is used', () => {
-    const example = 'example';
-    const div = document.createElement('div');
-
     expect(() => {
-      ReactDOM.render(<Header size={0}>{example}</Header>, div);
+      mount(<Header size={0}>example</Header>);
     }).toThrow();
     expect(() => {
-      ReactDOM.render(<Header size={1}>{example}</Header>, div);
+      mount(<Header size={1}>example</Header>);
     }).toThrow();
     expect(() => {
-      ReactDOM.render(<Header size={99999}>{example}</Header>, div);
+      mount(<Header size={99999}>example</Header>);
     }).toThrow();
     expect(() => {
-      ReactDOM.render(<Header size="test">{example}</Header>, div);
+      mount(<Header size="test">example</Header>);
     }).toThrow();
-  });
-
-  it('matches wrapper snapshot', () => {
-    const example = 'example';
-    const wrapper = <Header>{example}</Header>;
-
-    expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
   });
 });

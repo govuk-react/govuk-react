@@ -855,12 +855,12 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                       </StyledComponent>
                     </styled.div>
                     <styled.input
-                      checked={false}
+                      defaultChecked={false}
                       id="govuk-react-menu-button"
                       type="checkbox"
                     >
                       <StyledComponent
-                        checked={false}
+                        defaultChecked={false}
                         forwardedComponent={
                           Object {
                             "$$typeof": Symbol(react.forward_ref),
@@ -892,8 +892,8 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                         type="checkbox"
                       >
                         <input
-                          checked={false}
                           className="c13"
+                          defaultChecked={false}
                           id="govuk-react-menu-button"
                           type="checkbox"
                         />
@@ -1917,12 +1917,12 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                       </StyledComponent>
                     </styled.div>
                     <styled.input
-                      checked={false}
+                      defaultChecked={false}
                       id="govuk-react-menu-button"
                       type="checkbox"
                     >
                       <StyledComponent
-                        checked={false}
+                        defaultChecked={false}
                         forwardedComponent={
                           Object {
                             "$$typeof": Symbol(react.forward_ref),
@@ -1954,8 +1954,8 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                         type="checkbox"
                       >
                         <input
-                          checked={false}
                           className="c13"
+                          defaultChecked={false}
                           id="govuk-react-menu-button"
                           type="checkbox"
                         />
