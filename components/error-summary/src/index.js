@@ -115,7 +115,7 @@ const StyledErrorSummary = styled('div')(
  */
 const ErrorSummary = ({ onHandleErrorClick, heading, description, errors, ...props }) => (
   <StyledErrorSummary tabIndex={-1} {...props}>
-    <H2>{heading}</H2>
+    <H2 size="MEDIUM">{heading}</H2>
     {description && <Paragraph mb={3}>{description}</Paragraph>}
     {errors.length > 0 && (
       <UnorderedList mb={0} listStyleType="none">

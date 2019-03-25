@@ -7,11 +7,11 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 1.0416666666666667;
+  font-size: 18px;
+  line-height: 1.1111111111111112;
   display: block;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .c2 {
@@ -257,21 +257,21 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 
 @media print {
   .c1 {
+    font-size: 18px;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c1 {
     font-size: 24px;
-    line-height: 1.05;
+    line-height: 1.25;
   }
 }
 
 @media only screen and (min-width:641px) {
   .c1 {
-    font-size: 36px;
-    line-height: 1.1111111111111112;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c1 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -508,14 +508,16 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
             className="c0"
             tabIndex={-1}
           >
-            <H2>
+            <H2
+              size="MEDIUM"
+            >
               <Heading
                 as="h2"
-                size="LARGE"
+                size="MEDIUM"
               >
                 <styled.h1
                   as="h2"
-                  size="LARGE"
+                  size="MEDIUM"
                 >
                   <StyledComponent
                     as="h2"
@@ -548,11 +550,11 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       }
                     }
                     forwardedRef={null}
-                    size="LARGE"
+                    size="MEDIUM"
                   >
                     <h2
                       className="c1"
-                      size="LARGE"
+                      size="MEDIUM"
                     >
                       Message to alert the user to a problem goes here
                     </h2>
