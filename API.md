@@ -450,10 +450,10 @@ const onHandleErrorClick = (targetName) => {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `description` |  | ```undefined``` | string | Optional description of the errors
- `errors` |  | ```[]``` | arrayOf[object Object] | Array of errors with text and target element name to scroll into view when clicked
- `heading` | true | `````` | string | Heading text
- `onHandleErrorClick` |  | ```() => {}``` | func | onClick function to scroll the target element into view
+ `description` |  | `````` | string | Optional description of the errors
+ `errors` |  | `````` | arrayOf[object Object] | Array of errors with text and target element name to scroll into view when clicked
+ `heading` |  | ```'There is a problem'``` | string | Heading text
+ `onHandleErrorClick` |  | `````` | func | onClick function to scroll the target element into view
 
 
 ErrorText
@@ -1407,6 +1407,7 @@ Prop | Required | Default | Type | Description
  `container` |  | ```Page.WidthContainer``` | func | Override the default page container component.<br/>`beforeChildren` and `children` (wrapped in `main`) will be placed inside this component.
  `footer` |  | ```undefined``` | node | Override the default page footer component.
  `header` |  | ```<TopNav />``` | node | Override the default page header component.
+ `id` |  | ```'content'``` | string | ID for page content
  `main` |  | ```Page.Main``` | func | Override the default wrapper component for main page content
 
 
@@ -1889,7 +1890,7 @@ Simple
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
+ `children` |  | ```'Skip to main content'``` | node | 
  `href` |  | ```'#content'``` | string | 
 
 

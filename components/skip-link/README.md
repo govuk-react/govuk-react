@@ -23,7 +23,7 @@ Simple
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
+ `children` |  | ```'Skip to main content'``` | node | 
  `href` |  | ```'#content'``` | string | 
 
 
