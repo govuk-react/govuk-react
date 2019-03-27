@@ -6,6 +6,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import SkipLink from '@govuk-react/skip-link';
 import TopNav from '@govuk-react/top-nav';
 // import Footer from '@govuk-react/footer';
 
@@ -32,12 +33,13 @@ import WidthContainer from './atoms/width-container';
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_main-wrapper.scss
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_width-container.scss
  */
-const Page = ({ header, footer, children, beforeChildren, main: MainComponent, container: Container }) => (
+const Page = ({ header, footer, children, id, beforeChildren, main: MainComponent, container: Container }) => (
   <React.Fragment>
+    <SkipLink href={`#${id}`} />
     {header}
     <Container>
       {beforeChildren}
-      <MainComponent>{children}</MainComponent>
+      <MainComponent id={id}>{children}</MainComponent>
     </Container>
     {footer}
   </React.Fragment>
@@ -48,6 +50,10 @@ Page.propTypes = {
    * Page contents
    */
   children: PropTypes.node,
+  /**
+   * ID for page content
+   */
+  id: PropTypes.string,
   /**
    * Override the default page header component.
    */
@@ -77,6 +83,7 @@ Page.WidthContainer = WidthContainer;
 
 Page.defaultProps = {
   children: undefined,
+  id: 'content',
   header: <TopNav />,
   footer: undefined, // <Footer />, // TODO: add Footer component once built
   main: Page.Main,

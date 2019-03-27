@@ -56,9 +56,9 @@ const onHandleErrorClick = (targetName) => {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `description` |  | ```undefined``` | string | Optional description of the errors
- `errors` |  | ```[]``` | arrayOf[object Object] | Array of errors with text and target element name to scroll into view when clicked
- `heading` | true | `````` | string | Heading text
- `onHandleErrorClick` |  | ```() => {}``` | func | onClick function to scroll the target element into view
+ `description` |  | `````` | string | Optional description of the errors
+ `errors` |  | `````` | arrayOf[object Object] | Array of errors with text and target element name to scroll into view when clicked
+ `heading` |  | ```'There is a problem'``` | string | Heading text
+ `onHandleErrorClick` |  | `````` | func | onClick function to scroll the target element into view
 
 
