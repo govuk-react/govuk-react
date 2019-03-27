@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import LabelText from '@govuk-react/label-text';
 import Select, { SelectInput } from '.';
@@ -14,7 +14,7 @@ const meta = {
 const stories = storiesOf('Form/Select', module);
 const examples = storiesOf('Form/Select/Examples', module);
 
-stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withDocsCustom(ReadMe));
 
 // TODO: add a synthetic onChange event
 stories.add('Component default', () => (

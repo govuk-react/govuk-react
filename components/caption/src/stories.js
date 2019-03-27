@@ -2,7 +2,7 @@ import React from 'react';
 import { CAPTION_SIZES, HEADING_SIZES, TYPOGRAPHY_SCALE } from '@govuk-react/constants';
 import { storiesOf } from '@storybook/react';
 import { select, text, withKnobs } from '@storybook/addon-knobs/react';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import Heading from '@govuk-react/heading';
 
@@ -13,7 +13,7 @@ const stories = storiesOf('Typography/Caption', module);
 const examples = storiesOf('Typography/Caption/Examples', module);
 
 stories.addDecorator(withKnobs);
-stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withDocsCustom(ReadMe));
 examples.addDecorator(withKnobs);
 
 stories.add('Component default', () => <CaptionWithKnobs />);

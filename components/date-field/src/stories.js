@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 import { action } from '@storybook/addon-actions';
 
 import DateField from '.';
@@ -41,7 +41,7 @@ ManagedDateField.propTypes = {
   input: PropTypes.shape({}),
 };
 
-stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
   <ManagedDateField

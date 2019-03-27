@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 import Link from '@govuk-react/link';
 
 import PhaseBanner from '.';
@@ -9,7 +9,7 @@ import ReadMe from '../README.md';
 const stories = storiesOf('Misc/PhaseBanner', module);
 const examples = storiesOf('Misc/PhaseBanner/Examples', module);
 
-stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
   <PhaseBanner level="alpha">

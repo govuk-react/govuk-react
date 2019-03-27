@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import CrownIcon from '@govuk-react/icon-crown';
 import { Search as SearchIcon } from '@govuk-react/icons';
 import SearchBox from '@govuk-react/search-box';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import TopNav, { asNavLinkAnchor, asTopNavAnchor } from '.';
 import ReadMe from '../README.md';
@@ -45,7 +45,7 @@ const ServiceTitleLink = <NavLink to={reactRouterLink}>Service Title</NavLink>;
 const stories = storiesOf('Page/TopNav', module);
 const examples = storiesOf('Page/TopNav/Examples', module);
 
-stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withDocsCustom(ReadMe));
 
 stories.add('Component default', () => <TopNav company={Company} />);
 

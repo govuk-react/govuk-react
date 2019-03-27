@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Link from '@govuk-react/link';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import DocumentFooterMetadata from '.';
 import ReadMe from '../README.md';
@@ -39,7 +39,7 @@ const otherData = [
 const stories = storiesOf('Typography/Document Footer Metadata', module);
 const examples = storiesOf('Typography/Document Footer Metadata/Examples', module);
 
-stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withDocsCustom(ReadMe));
 
 stories.add('Component default', () => <DocumentFooterMetadata from={fromData} />);
 

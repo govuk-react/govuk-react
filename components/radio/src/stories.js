@@ -3,7 +3,7 @@ import { Field } from 'react-final-form';
 import { storiesOf } from '@storybook/react';
 import PropTypes from 'prop-types';
 import { withKnobs } from '@storybook/addon-knobs/react';
-import { FinalFormWrapper, WithDocsCustom } from '@govuk-react/storybook-components';
+import { FinalFormWrapper, withDocsCustom } from '@govuk-react/storybook-components';
 
 import MultiChoice from '@govuk-react/multi-choice';
 import Radio from '.';
@@ -51,7 +51,7 @@ const stories = storiesOf('Form/Radio', module);
 const examples = storiesOf('Form/Radio/Examples', module);
 
 stories.addDecorator(withKnobs);
-stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withDocsCustom(ReadMe));
 
 stories.add('Component default', () => <Radio name="group1">Radio button text example</Radio>);
 

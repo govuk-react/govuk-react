@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, number } from '@storybook/addon-knobs';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import { HooksExample, ProposedClassPropertiesPlugin, SimpleTabs, SimpleMapTabs, TableTabs } from './fixtures';
 import ReadMe from '../README.md';
@@ -9,10 +9,10 @@ import ReadMe from '../README.md';
 const stories = storiesOf('Tabs', module);
 const examples = storiesOf('Tabs/Examples', module);
 
-stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withDocsCustom(ReadMe));
 stories.addDecorator(withKnobs);
 
-examples.addDecorator(WithDocsCustom());
+examples.addDecorator(withDocsCustom());
 
 stories.add('Component default', () => <TableTabs />);
 

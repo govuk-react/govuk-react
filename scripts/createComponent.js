@@ -84,7 +84,7 @@ const storiesScript = () => {
   const contents = `import React from 'react';
 import { storiesOf } from '@storybook/react';
 // TODO: remove comments for documentation once docs have been generated
-// import { WithDocsCustom } from '@govuk-react/storybook-components';
+// import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import ${componentName} from '.';
 
@@ -94,7 +94,7 @@ const stories = storiesOf('${componentName}', module);
 
 stories.add(
   'Component default',
-  // WithDocsCustom(
+  // withDocsCustom(
   //   ReadMe,
     () => (
       <${componentName}>${componentName} example</${componentName}>
