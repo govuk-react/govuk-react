@@ -4229,18 +4229,18 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   color: #171819;
 }
 
-.c9 {
+.c10 {
   margin: 0;
   border: 0;
   border-bottom: 1px solid #bfc1c3;
   margin-bottom: 30px;
 }
 
-.c16 {
+.c17 {
   margin-bottom: 20px;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4263,7 +4263,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   -moz-osx-font-smoothing: grayscale;
 }
 
-.c11 {
+.c12 {
   margin-right: 15px;
   margin-bottom: 25px;
   margin-left: 15px;
@@ -4275,24 +4275,24 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   flex-basis: 320px;
 }
 
-.c19 {
+.c20 {
   margin-right: 15px;
   margin-bottom: 25px;
   margin-left: 15px;
 }
 
-.c17 {
+.c18 {
   display: inline-block;
   margin-right: 10px;
   margin-bottom: 15px;
   vertical-align: top;
 }
 
-.c18 {
+.c19 {
   display: inline-block;
 }
 
-.c20 {
+.c21 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -4309,42 +4309,42 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   white-space: nowrap;
 }
 
-.c20:link {
+.c21:link {
   color: #005ea5;
 }
 
-.c20:visited {
+.c21:visited {
   color: #4c2c92;
 }
 
-.c20:hover {
+.c21:hover {
   color: #2b8cc4;
 }
 
-.c20:active {
+.c21:active {
   color: #2b8cc4;
 }
 
-.c20:focus {
+.c21:focus {
   color: #0b0c0c;
 }
 
-.c20:focus {
+.c21:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
   background-color: #ffbf47;
 }
 
-.c20:link,
-.c20:visited {
+.c21:link,
+.c21:visited {
   color: #454a4c;
 }
 
-.c20:hover {
+.c21:hover {
   color: #171819;
 }
 
-.c13 {
+.c14 {
   color: #0b0c0c;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -4370,7 +4370,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   margin-bottom: 15px;
 }
 
-.c12 {
+.c13 {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
@@ -4385,10 +4385,18 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   padding: 0 !important;
 }
 
-.c14 {
+.c15 {
   margin-top: 0;
   margin-bottom: 15px;
   padding: 0;
+}
+
+.c9 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-column-gap: 30px;
+  column-gap: 30px;
 }
 
 .c6 {
@@ -4399,13 +4407,13 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   column-gap: 30px;
 }
 
-.c15 {
+.c16 {
   display: inline-block;
   margin-right: 15px;
   margin-bottom: 5px;
 }
 
-.c15:last-child {
+.c16:last-child {
   margin-bottom: 0;
 }
 
@@ -4485,19 +4493,19 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
 }
 
 @media only screen and (min-width:641px) {
-  .c9 {
+  .c10 {
     margin-bottom: 50px;
   }
 }
 
 @media print {
-  .c10 {
+  .c11 {
     font-family: sans-serif;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c11 {
+  .c12 {
     -webkit-flex-basis: auto;
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
@@ -4505,21 +4513,21 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
 }
 
 @media only screen and (min-width:769px) {
-  .c17 {
+  .c18 {
     margin-bottom: 0;
   }
 }
 
 @media print {
-  .c20 {
+  .c21 {
     font-family: sans-serif;
   }
 }
 
 @media print {
-  .c20[href^="/"]::after,
-  .c20[href^="http://"]::after,
-  .c20[href^="https://"]::after {
+  .c21[href^="/"]::after,
+  .c21[href^="http://"]::after,
+  .c21[href^="https://"]::after {
     content: " (" attr(href) ")";
     font-size: 90%;
     word-wrap: break-word;
@@ -4527,33 +4535,33 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio:2),not all,not all,only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx) {
-  .c20 {
+  .c21 {
     background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest-2x.png');
   }
 }
 
 @media print {
-  .c13 {
+  .c14 {
     color: #000;
   }
 }
 
 @media print {
-  .c13 {
+  .c14 {
     font-size: 24px;
     line-height: 1.05;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c13 {
+  .c14 {
     font-size: 36px;
     line-height: 1.1111111111111112;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c13 {
+  .c14 {
     margin-bottom: 30px;
   }
 }
@@ -4897,7 +4905,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-gZMcBi",
                                                   "isStatic": false,
-                                                  "lastClassName": "c13",
+                                                  "lastClassName": "c14",
                                                   "rules": Array [
                                                     "color: #0b0c0c; @media print {
   color: #000;
@@ -4945,7 +4953,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-VigVT",
                                             "isStatic": false,
-                                            "lastClassName": "c14",
+                                            "lastClassName": "c15",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -4987,7 +4995,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-jTzLTM",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c16",
                                                   "rules": Array [
                                                     [Function],
                                                     "&:last-child {
@@ -5119,7 +5127,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-jTzLTM",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c16",
                                                   "rules": Array [
                                                     [Function],
                                                     "&:last-child {
@@ -5265,7 +5273,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-jTzLTM",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c16",
                                                   "rules": Array [
                                                     [Function],
                                                     "&:last-child {
@@ -5397,7 +5405,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-jTzLTM",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c16",
                                                   "rules": Array [
                                                     [Function],
                                                     "&:last-child {
@@ -5529,7 +5537,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-jTzLTM",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c16",
                                                   "rules": Array [
                                                     [Function],
                                                     "&:last-child {
@@ -5661,7 +5669,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-jTzLTM",
                                                   "isStatic": false,
-                                                  "lastClassName": "c15",
+                                                  "lastClassName": "c16",
                                                   "rules": Array [
                                                     [Function],
                                                     "&:last-child {
@@ -5788,6 +5796,573 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                               </StyledComponent>
                             </styled.div>
                           </NavigationLinks>
+                          <NavigationLinks
+                            heading="Single column list"
+                            listColumns={0}
+                          >
+                            <styled.div>
+                              <StyledComponent
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-fjdhpX",
+                                      "isStatic": true,
+                                      "lastClassName": "c3",
+                                      "rules": Array [
+                                        "display: inline-block; margin-right: 15px; margin-bottom: 30px; margin-left: 15px; vertical-align: top; flex-grow: 1; flex-shrink: 1; flex-basis: 200px; @media only screen and (min-width: 769px) {
+  flex-basis: auto; &:first-of-type {
+  flex-grow: 2;
+}
+}",
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-fjdhpX",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                              >
+                                <div
+                                  className="c3"
+                                >
+                                  <Styled(Heading)
+                                    size="MEDIUM"
+                                  >
+                                    <StyledComponent
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "sc-jzJRlG",
+                                            "isStatic": false,
+                                            "lastClassName": "c4",
+                                            "rules": Array [
+                                              "border-bottom: 1px solid #bfc1c3; padding-bottom: 10px; margin-top: 0; @media only screen and (min-width: 769px) {
+  padding-bottom: 20px;
+}",
+                                              [Function],
+                                            ],
+                                          },
+                                          "displayName": "Styled(Heading)",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "sc-jzJRlG",
+                                          "target": [Function],
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
+                                      size="MEDIUM"
+                                    >
+                                      <Heading
+                                        className="c4"
+                                        size="MEDIUM"
+                                      >
+                                        <styled.h1
+                                          className="c4"
+                                          size="MEDIUM"
+                                        >
+                                          <StyledComponent
+                                            className="c4"
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-gZMcBi",
+                                                  "isStatic": false,
+                                                  "lastClassName": "c14",
+                                                  "rules": Array [
+                                                    "color: #0b0c0c; @media print {
+  color: #000;
+}",
+                                                    [Function],
+                                                    "display: block; margin-top: 0;",
+                                                    [Function],
+                                                    [Function],
+                                                  ],
+                                                },
+                                                "displayName": "styled.h1",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "sc-gZMcBi",
+                                                "target": "h1",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            size="MEDIUM"
+                                          >
+                                            <h1
+                                              className="c4 c5"
+                                              size="MEDIUM"
+                                            >
+                                              Single column list
+                                            </h1>
+                                          </StyledComponent>
+                                        </styled.h1>
+                                      </Heading>
+                                    </StyledComponent>
+                                  </Styled(Heading)>
+                                  <styled.ul
+                                    columns={0}
+                                    inline={false}
+                                  >
+                                    <StyledComponent
+                                      columns={0}
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "sc-VigVT",
+                                            "isStatic": false,
+                                            "lastClassName": "c15",
+                                            "rules": Array [
+                                              [Function],
+                                              [Function],
+                                            ],
+                                          },
+                                          "defaultProps": Object {
+                                            "columns": undefined,
+                                            "inline": false,
+                                          },
+                                          "displayName": "styled.ul",
+                                          "foldedComponentIds": Array [],
+                                          "propTypes": Object {
+                                            "columns": [Function],
+                                            "inline": [Function],
+                                          },
+                                          "render": [Function],
+                                          "styledComponentId": "sc-VigVT",
+                                          "target": "ul",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
+                                      inline={false}
+                                    >
+                                      <ul
+                                        className="c9"
+                                      >
+                                        <styled.li
+                                          inline={false}
+                                          key="0"
+                                        >
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-jTzLTM",
+                                                  "isStatic": false,
+                                                  "lastClassName": "c16",
+                                                  "rules": Array [
+                                                    [Function],
+                                                    "&:last-child {
+  margin-bottom: 0;
+}",
+                                                  ],
+                                                },
+                                                "defaultProps": Object {
+                                                  "inline": false,
+                                                },
+                                                "displayName": "styled.li",
+                                                "foldedComponentIds": Array [],
+                                                "propTypes": Object {
+                                                  "inline": [Function],
+                                                },
+                                                "render": [Function],
+                                                "styledComponentId": "sc-jTzLTM",
+                                                "target": "li",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            inline={false}
+                                          >
+                                            <li
+                                              className="c7"
+                                            >
+                                              <FooterLink
+                                                href="/"
+                                              >
+                                                <Styled(styled.a)
+                                                  href="/"
+                                                  muted={false}
+                                                  noVisitedState={false}
+                                                  textColour={false}
+                                                >
+                                                  <StyledComponent
+                                                    forwardedComponent={
+                                                      Object {
+                                                        "$$typeof": Symbol(react.forward_ref),
+                                                        "attrs": Array [],
+                                                        "componentStyle": ComponentStyle {
+                                                          "componentId": "sc-bxivhb",
+                                                          "isStatic": false,
+                                                          "lastClassName": "c8",
+                                                          "rules": Array [
+                                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                                                            ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                                                            "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                                                            "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                                                            [Function],
+                                                            [Function],
+                                                            [Function],
+                                                            ":link, :visited {
+  color: #454a4c;
+} :hover {
+  color: #171819;
+}",
+                                                          ],
+                                                        },
+                                                        "defaultProps": Object {
+                                                          "muted": false,
+                                                          "noVisitedState": false,
+                                                          "textColour": false,
+                                                        },
+                                                        "displayName": "Styled(styled.a)",
+                                                        "foldedComponentIds": Array [
+                                                          "sc-htpNat",
+                                                        ],
+                                                        "propTypes": undefined,
+                                                        "render": [Function],
+                                                        "styledComponentId": "sc-bxivhb",
+                                                        "target": "a",
+                                                        "toString": [Function],
+                                                        "warnTooManyClasses": [Function],
+                                                        "withComponent": [Function],
+                                                      }
+                                                    }
+                                                    forwardedRef={null}
+                                                    href="/"
+                                                    muted={false}
+                                                    noVisitedState={false}
+                                                    textColour={false}
+                                                  >
+                                                    <a
+                                                      className="c8"
+                                                      href="/"
+                                                      muted={false}
+                                                    >
+                                                      Navigation item 1
+                                                    </a>
+                                                  </StyledComponent>
+                                                </Styled(styled.a)>
+                                              </FooterLink>
+                                            </li>
+                                          </StyledComponent>
+                                        </styled.li>
+                                        <styled.li
+                                          inline={false}
+                                          key="1"
+                                        >
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-jTzLTM",
+                                                  "isStatic": false,
+                                                  "lastClassName": "c16",
+                                                  "rules": Array [
+                                                    [Function],
+                                                    "&:last-child {
+  margin-bottom: 0;
+}",
+                                                  ],
+                                                },
+                                                "defaultProps": Object {
+                                                  "inline": false,
+                                                },
+                                                "displayName": "styled.li",
+                                                "foldedComponentIds": Array [],
+                                                "propTypes": Object {
+                                                  "inline": [Function],
+                                                },
+                                                "render": [Function],
+                                                "styledComponentId": "sc-jTzLTM",
+                                                "target": "li",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            inline={false}
+                                          >
+                                            <li
+                                              className="c7"
+                                            >
+                                              <FooterLink
+                                                href="/"
+                                              >
+                                                <Styled(styled.a)
+                                                  href="/"
+                                                  muted={false}
+                                                  noVisitedState={false}
+                                                  textColour={false}
+                                                >
+                                                  <StyledComponent
+                                                    forwardedComponent={
+                                                      Object {
+                                                        "$$typeof": Symbol(react.forward_ref),
+                                                        "attrs": Array [],
+                                                        "componentStyle": ComponentStyle {
+                                                          "componentId": "sc-bxivhb",
+                                                          "isStatic": false,
+                                                          "lastClassName": "c8",
+                                                          "rules": Array [
+                                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                                                            ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                                                            "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                                                            "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                                                            [Function],
+                                                            [Function],
+                                                            [Function],
+                                                            ":link, :visited {
+  color: #454a4c;
+} :hover {
+  color: #171819;
+}",
+                                                          ],
+                                                        },
+                                                        "defaultProps": Object {
+                                                          "muted": false,
+                                                          "noVisitedState": false,
+                                                          "textColour": false,
+                                                        },
+                                                        "displayName": "Styled(styled.a)",
+                                                        "foldedComponentIds": Array [
+                                                          "sc-htpNat",
+                                                        ],
+                                                        "propTypes": undefined,
+                                                        "render": [Function],
+                                                        "styledComponentId": "sc-bxivhb",
+                                                        "target": "a",
+                                                        "toString": [Function],
+                                                        "warnTooManyClasses": [Function],
+                                                        "withComponent": [Function],
+                                                      }
+                                                    }
+                                                    forwardedRef={null}
+                                                    href="/"
+                                                    muted={false}
+                                                    noVisitedState={false}
+                                                    textColour={false}
+                                                  >
+                                                    <a
+                                                      className="c8"
+                                                      href="/"
+                                                      muted={false}
+                                                    >
+                                                      Navigation item 2
+                                                    </a>
+                                                  </StyledComponent>
+                                                </Styled(styled.a)>
+                                              </FooterLink>
+                                            </li>
+                                          </StyledComponent>
+                                        </styled.li>
+                                        <styled.li
+                                          inline={false}
+                                          key="2"
+                                        >
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-jTzLTM",
+                                                  "isStatic": false,
+                                                  "lastClassName": "c16",
+                                                  "rules": Array [
+                                                    [Function],
+                                                    "&:last-child {
+  margin-bottom: 0;
+}",
+                                                  ],
+                                                },
+                                                "defaultProps": Object {
+                                                  "inline": false,
+                                                },
+                                                "displayName": "styled.li",
+                                                "foldedComponentIds": Array [],
+                                                "propTypes": Object {
+                                                  "inline": [Function],
+                                                },
+                                                "render": [Function],
+                                                "styledComponentId": "sc-jTzLTM",
+                                                "target": "li",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            inline={false}
+                                          >
+                                            <li
+                                              className="c7"
+                                            >
+                                              <FooterLink
+                                                href="/"
+                                              >
+                                                <Styled(styled.a)
+                                                  href="/"
+                                                  muted={false}
+                                                  noVisitedState={false}
+                                                  textColour={false}
+                                                >
+                                                  <StyledComponent
+                                                    forwardedComponent={
+                                                      Object {
+                                                        "$$typeof": Symbol(react.forward_ref),
+                                                        "attrs": Array [],
+                                                        "componentStyle": ComponentStyle {
+                                                          "componentId": "sc-bxivhb",
+                                                          "isStatic": false,
+                                                          "lastClassName": "c8",
+                                                          "rules": Array [
+                                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                                                            ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                                                            "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                                                            "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                                                            [Function],
+                                                            [Function],
+                                                            [Function],
+                                                            ":link, :visited {
+  color: #454a4c;
+} :hover {
+  color: #171819;
+}",
+                                                          ],
+                                                        },
+                                                        "defaultProps": Object {
+                                                          "muted": false,
+                                                          "noVisitedState": false,
+                                                          "textColour": false,
+                                                        },
+                                                        "displayName": "Styled(styled.a)",
+                                                        "foldedComponentIds": Array [
+                                                          "sc-htpNat",
+                                                        ],
+                                                        "propTypes": undefined,
+                                                        "render": [Function],
+                                                        "styledComponentId": "sc-bxivhb",
+                                                        "target": "a",
+                                                        "toString": [Function],
+                                                        "warnTooManyClasses": [Function],
+                                                        "withComponent": [Function],
+                                                      }
+                                                    }
+                                                    forwardedRef={null}
+                                                    href="/"
+                                                    muted={false}
+                                                    noVisitedState={false}
+                                                    textColour={false}
+                                                  >
+                                                    <a
+                                                      className="c8"
+                                                      href="/"
+                                                      muted={false}
+                                                    >
+                                                      Navigation item 3
+                                                    </a>
+                                                  </StyledComponent>
+                                                </Styled(styled.a)>
+                                              </FooterLink>
+                                            </li>
+                                          </StyledComponent>
+                                        </styled.li>
+                                      </ul>
+                                    </StyledComponent>
+                                  </styled.ul>
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                          </NavigationLinks>
                         </div>
                       </StyledComponent>
                     </styled.div>
@@ -5800,7 +6375,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                             "componentStyle": ComponentStyle {
                               "componentId": "sc-ifAKCX",
                               "isStatic": false,
-                              "lastClassName": "c9",
+                              "lastClassName": "c10",
                               "rules": Array [
                                 "margin: 0; border: 0; border-bottom: 1px solid #bfc1c3;",
                                 [Function],
@@ -5819,7 +6394,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                         forwardedRef={null}
                       >
                         <hr
-                          className="c9"
+                          className="c10"
                         />
                       </StyledComponent>
                     </styled.hr>
@@ -5833,7 +6408,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-bZQynM",
                                 "isStatic": true,
-                                "lastClassName": "c10",
+                                "lastClassName": "c11",
                                 "rules": Array [
                                   "display: flex; margin-right: -15px; margin-left: -15px; flex-wrap: wrap; align-items: flex-end; justify-content: center;",
                                   "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
@@ -5854,7 +6429,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                           forwardedRef={null}
                         >
                           <div
-                            className="c10"
+                            className="c11"
                           >
                             <styled.div
                               grow={true}
@@ -5867,7 +6442,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-gzVnrw",
                                       "isStatic": false,
-                                      "lastClassName": "c19",
+                                      "lastClassName": "c20",
                                       "rules": Array [
                                         "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
                                         [Function],
@@ -5893,7 +6468,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 grow={true}
                               >
                                 <div
-                                  className="c11"
+                                  className="c12"
                                 >
                                   <MetaLinks
                                     heading="Support links"
@@ -5913,7 +6488,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-gqjmRU",
                                               "isStatic": false,
-                                              "lastClassName": "c12",
+                                              "lastClassName": "c13",
                                               "rules": Array [
                                                 [Function],
                                               ],
@@ -5937,7 +6512,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                         important={true}
                                       >
                                         <span
-                                          className="c12"
+                                          className="c13"
                                           focusable={false}
                                         >
                                           <H2>
@@ -5958,7 +6533,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-gZMcBi",
                                                         "isStatic": false,
-                                                        "lastClassName": "c13",
+                                                        "lastClassName": "c14",
                                                         "rules": Array [
                                                           "color: #0b0c0c; @media print {
   color: #000;
@@ -5983,7 +6558,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                   size="LARGE"
                                                 >
                                                   <h2
-                                                    className="c13"
+                                                    className="c14"
                                                     size="LARGE"
                                                   >
                                                     Support links
@@ -6006,7 +6581,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-VigVT",
                                               "isStatic": false,
-                                              "lastClassName": "c14",
+                                              "lastClassName": "c15",
                                               "rules": Array [
                                                 [Function],
                                                 [Function],
@@ -6034,7 +6609,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                         inline={true}
                                       >
                                         <ul
-                                          className="c14"
+                                          className="c15"
                                         >
                                           <styled.li
                                             inline={true}
@@ -6048,7 +6623,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "sc-jTzLTM",
                                                     "isStatic": false,
-                                                    "lastClassName": "c15",
+                                                    "lastClassName": "c16",
                                                     "rules": Array [
                                                       [Function],
                                                       "&:last-child {
@@ -6076,7 +6651,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                               inline={true}
                                             >
                                               <li
-                                                className="c15"
+                                                className="c16"
                                               >
                                                 <FooterLink
                                                   href="/"
@@ -6180,7 +6755,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "sc-jTzLTM",
                                                     "isStatic": false,
-                                                    "lastClassName": "c15",
+                                                    "lastClassName": "c16",
                                                     "rules": Array [
                                                       [Function],
                                                       "&:last-child {
@@ -6208,7 +6783,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                               inline={true}
                                             >
                                               <li
-                                                className="c15"
+                                                className="c16"
                                               >
                                                 <FooterLink
                                                   as={[Function]}
@@ -6326,7 +6901,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "sc-jTzLTM",
                                                     "isStatic": false,
-                                                    "lastClassName": "c15",
+                                                    "lastClassName": "c16",
                                                     "rules": Array [
                                                       [Function],
                                                       "&:last-child {
@@ -6354,7 +6929,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                               inline={true}
                                             >
                                               <li
-                                                className="c15"
+                                                className="c16"
                                               >
                                                 <FooterLink
                                                   href="/"
@@ -6459,7 +7034,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-EHOje",
                                             "isStatic": true,
-                                            "lastClassName": "c16",
+                                            "lastClassName": "c17",
                                             "rules": Array [
                                               "margin-bottom: 20px;",
                                             ],
@@ -6477,7 +7052,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                       forwardedRef={null}
                                     >
                                       <div
-                                        className="c16"
+                                        className="c17"
                                       >
                                         Built by the 
                                         <FooterLink
@@ -6589,7 +7164,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-htoDjs",
                                                 "isStatic": true,
-                                                "lastClassName": "c17",
+                                                "lastClassName": "c18",
                                                 "rules": Array [
                                                   "display: inline-block; margin-right: 10px; margin-bottom: 15px; vertical-align: top; @media only screen and (min-width: 769px) {
   margin-bottom: 0;
@@ -6614,7 +7189,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           xmlns="http://www.w3.org/2000/svg"
                                         >
                                           <svg
-                                            className="c17"
+                                            className="c18"
                                             focusable="false"
                                             height="17"
                                             role="presentation"
@@ -6638,7 +7213,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-dnqmqq",
                                                 "isStatic": true,
-                                                "lastClassName": "c18",
+                                                "lastClassName": "c19",
                                                 "rules": Array [
                                                   "display: inline-block;",
                                                 ],
@@ -6656,7 +7231,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           forwardedRef={null}
                                         >
                                           <span
-                                            className="c18"
+                                            className="c19"
                                           >
                                             All content is available under the Open Government Licence v3.0, except where otherwise stated
                                           </span>
@@ -6678,7 +7253,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-gzVnrw",
                                       "isStatic": false,
-                                      "lastClassName": "c19",
+                                      "lastClassName": "c20",
                                       "rules": Array [
                                         "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
                                         [Function],
@@ -6704,7 +7279,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 grow={false}
                               >
                                 <div
-                                  className="c19"
+                                  className="c20"
                                 >
                                   <Copyright>
                                     <Styled(styled.a)
@@ -6721,7 +7296,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-iwsKbI",
                                               "isStatic": false,
-                                              "lastClassName": "c20",
+                                              "lastClassName": "c21",
                                               "rules": Array [
                                                 "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-family: sans-serif;
@@ -6784,7 +7359,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                         textColour={false}
                                       >
                                         <a
-                                          className="c20"
+                                          className="c21"
                                           href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
                                           muted={false}
                                         >
@@ -6879,14 +7454,14 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   color: #171819;
 }
 
-.c9 {
+.c10 {
   margin: 0;
   border: 0;
   border-bottom: 1px solid #bfc1c3;
   margin-bottom: 30px;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6909,7 +7484,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   -moz-osx-font-smoothing: grayscale;
 }
 
-.c11 {
+.c12 {
   margin-right: 15px;
   margin-bottom: 25px;
   margin-left: 15px;
@@ -6921,24 +7496,24 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   flex-basis: 320px;
 }
 
-.c14 {
+.c15 {
   margin-right: 15px;
   margin-bottom: 25px;
   margin-left: 15px;
 }
 
-.c12 {
+.c13 {
   display: inline-block;
   margin-right: 10px;
   margin-bottom: 15px;
   vertical-align: top;
 }
 
-.c13 {
+.c14 {
   display: inline-block;
 }
 
-.c15 {
+.c16 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -6955,38 +7530,38 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   white-space: nowrap;
 }
 
-.c15:link {
+.c16:link {
   color: #005ea5;
 }
 
-.c15:visited {
+.c16:visited {
   color: #4c2c92;
 }
 
-.c15:hover {
+.c16:hover {
   color: #2b8cc4;
 }
 
-.c15:active {
+.c16:active {
   color: #2b8cc4;
 }
 
-.c15:focus {
+.c16:focus {
   color: #0b0c0c;
 }
 
-.c15:focus {
+.c16:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
   background-color: #ffbf47;
 }
 
-.c15:link,
-.c15:visited {
+.c16:link,
+.c16:visited {
   color: #454a4c;
 }
 
-.c15:hover {
+.c16:hover {
   color: #171819;
 }
 
@@ -7001,6 +7576,14 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   display: block;
   margin-top: 0;
   margin-bottom: 15px;
+}
+
+.c9 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-column-gap: 30px;
+  column-gap: 30px;
 }
 
 .c6 {
@@ -7087,19 +7670,19 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .c9 {
+  .c10 {
     margin-bottom: 50px;
   }
 }
 
 @media print {
-  .c10 {
+  .c11 {
     font-family: sans-serif;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c11 {
+  .c12 {
     -webkit-flex-basis: auto;
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
@@ -7107,21 +7690,21 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
 }
 
 @media only screen and (min-width:769px) {
-  .c12 {
+  .c13 {
     margin-bottom: 0;
   }
 }
 
 @media print {
-  .c15 {
+  .c16 {
     font-family: sans-serif;
   }
 }
 
 @media print {
-  .c15[href^="/"]::after,
-  .c15[href^="http://"]::after,
-  .c15[href^="https://"]::after {
+  .c16[href^="/"]::after,
+  .c16[href^="http://"]::after,
+  .c16[href^="https://"]::after {
     content: " (" attr(href) ")";
     font-size: 90%;
     word-wrap: break-word;
@@ -7129,7 +7712,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio:2),not all,not all,only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx) {
-  .c15 {
+  .c16 {
     background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest-2x.png');
   }
 }
@@ -7488,7 +8071,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-VigVT",
                                             "isStatic": false,
-                                            "lastClassName": "c6",
+                                            "lastClassName": "c9",
                                             "rules": Array [
                                               [Function],
                                               [Function],
@@ -8331,6 +8914,573 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                               </StyledComponent>
                             </styled.div>
                           </NavigationLinks>
+                          <NavigationLinks
+                            heading="Single column list"
+                            listColumns={0}
+                          >
+                            <styled.div>
+                              <StyledComponent
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-fjdhpX",
+                                      "isStatic": true,
+                                      "lastClassName": "c3",
+                                      "rules": Array [
+                                        "display: inline-block; margin-right: 15px; margin-bottom: 30px; margin-left: 15px; vertical-align: top; flex-grow: 1; flex-shrink: 1; flex-basis: 200px; @media only screen and (min-width: 769px) {
+  flex-basis: auto; &:first-of-type {
+  flex-grow: 2;
+}
+}",
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-fjdhpX",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                              >
+                                <div
+                                  className="c3"
+                                >
+                                  <Styled(Heading)
+                                    size="MEDIUM"
+                                  >
+                                    <StyledComponent
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "sc-jzJRlG",
+                                            "isStatic": false,
+                                            "lastClassName": "c4",
+                                            "rules": Array [
+                                              "border-bottom: 1px solid #bfc1c3; padding-bottom: 10px; margin-top: 0; @media only screen and (min-width: 769px) {
+  padding-bottom: 20px;
+}",
+                                              [Function],
+                                            ],
+                                          },
+                                          "displayName": "Styled(Heading)",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "sc-jzJRlG",
+                                          "target": [Function],
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
+                                      size="MEDIUM"
+                                    >
+                                      <Heading
+                                        className="c4"
+                                        size="MEDIUM"
+                                      >
+                                        <styled.h1
+                                          className="c4"
+                                          size="MEDIUM"
+                                        >
+                                          <StyledComponent
+                                            className="c4"
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-gZMcBi",
+                                                  "isStatic": false,
+                                                  "lastClassName": "c5",
+                                                  "rules": Array [
+                                                    "color: #0b0c0c; @media print {
+  color: #000;
+}",
+                                                    [Function],
+                                                    "display: block; margin-top: 0;",
+                                                    [Function],
+                                                    [Function],
+                                                  ],
+                                                },
+                                                "displayName": "styled.h1",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "sc-gZMcBi",
+                                                "target": "h1",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            size="MEDIUM"
+                                          >
+                                            <h1
+                                              className="c4 c5"
+                                              size="MEDIUM"
+                                            >
+                                              Single column list
+                                            </h1>
+                                          </StyledComponent>
+                                        </styled.h1>
+                                      </Heading>
+                                    </StyledComponent>
+                                  </Styled(Heading)>
+                                  <styled.ul
+                                    columns={0}
+                                    inline={false}
+                                  >
+                                    <StyledComponent
+                                      columns={0}
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "sc-VigVT",
+                                            "isStatic": false,
+                                            "lastClassName": "c9",
+                                            "rules": Array [
+                                              [Function],
+                                              [Function],
+                                            ],
+                                          },
+                                          "defaultProps": Object {
+                                            "columns": undefined,
+                                            "inline": false,
+                                          },
+                                          "displayName": "styled.ul",
+                                          "foldedComponentIds": Array [],
+                                          "propTypes": Object {
+                                            "columns": [Function],
+                                            "inline": [Function],
+                                          },
+                                          "render": [Function],
+                                          "styledComponentId": "sc-VigVT",
+                                          "target": "ul",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
+                                      inline={false}
+                                    >
+                                      <ul
+                                        className="c9"
+                                      >
+                                        <styled.li
+                                          inline={false}
+                                          key="0"
+                                        >
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-jTzLTM",
+                                                  "isStatic": false,
+                                                  "lastClassName": "c7",
+                                                  "rules": Array [
+                                                    [Function],
+                                                    "&:last-child {
+  margin-bottom: 0;
+}",
+                                                  ],
+                                                },
+                                                "defaultProps": Object {
+                                                  "inline": false,
+                                                },
+                                                "displayName": "styled.li",
+                                                "foldedComponentIds": Array [],
+                                                "propTypes": Object {
+                                                  "inline": [Function],
+                                                },
+                                                "render": [Function],
+                                                "styledComponentId": "sc-jTzLTM",
+                                                "target": "li",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            inline={false}
+                                          >
+                                            <li
+                                              className="c7"
+                                            >
+                                              <FooterLink
+                                                href="/"
+                                              >
+                                                <Styled(styled.a)
+                                                  href="/"
+                                                  muted={false}
+                                                  noVisitedState={false}
+                                                  textColour={false}
+                                                >
+                                                  <StyledComponent
+                                                    forwardedComponent={
+                                                      Object {
+                                                        "$$typeof": Symbol(react.forward_ref),
+                                                        "attrs": Array [],
+                                                        "componentStyle": ComponentStyle {
+                                                          "componentId": "sc-bxivhb",
+                                                          "isStatic": false,
+                                                          "lastClassName": "c8",
+                                                          "rules": Array [
+                                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                                                            ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                                                            "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                                                            "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                                                            [Function],
+                                                            [Function],
+                                                            [Function],
+                                                            ":link, :visited {
+  color: #454a4c;
+} :hover {
+  color: #171819;
+}",
+                                                          ],
+                                                        },
+                                                        "defaultProps": Object {
+                                                          "muted": false,
+                                                          "noVisitedState": false,
+                                                          "textColour": false,
+                                                        },
+                                                        "displayName": "Styled(styled.a)",
+                                                        "foldedComponentIds": Array [
+                                                          "sc-htpNat",
+                                                        ],
+                                                        "propTypes": undefined,
+                                                        "render": [Function],
+                                                        "styledComponentId": "sc-bxivhb",
+                                                        "target": "a",
+                                                        "toString": [Function],
+                                                        "warnTooManyClasses": [Function],
+                                                        "withComponent": [Function],
+                                                      }
+                                                    }
+                                                    forwardedRef={null}
+                                                    href="/"
+                                                    muted={false}
+                                                    noVisitedState={false}
+                                                    textColour={false}
+                                                  >
+                                                    <a
+                                                      className="c8"
+                                                      href="/"
+                                                      muted={false}
+                                                    >
+                                                      Navigation item 1
+                                                    </a>
+                                                  </StyledComponent>
+                                                </Styled(styled.a)>
+                                              </FooterLink>
+                                            </li>
+                                          </StyledComponent>
+                                        </styled.li>
+                                        <styled.li
+                                          inline={false}
+                                          key="1"
+                                        >
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-jTzLTM",
+                                                  "isStatic": false,
+                                                  "lastClassName": "c7",
+                                                  "rules": Array [
+                                                    [Function],
+                                                    "&:last-child {
+  margin-bottom: 0;
+}",
+                                                  ],
+                                                },
+                                                "defaultProps": Object {
+                                                  "inline": false,
+                                                },
+                                                "displayName": "styled.li",
+                                                "foldedComponentIds": Array [],
+                                                "propTypes": Object {
+                                                  "inline": [Function],
+                                                },
+                                                "render": [Function],
+                                                "styledComponentId": "sc-jTzLTM",
+                                                "target": "li",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            inline={false}
+                                          >
+                                            <li
+                                              className="c7"
+                                            >
+                                              <FooterLink
+                                                href="/"
+                                              >
+                                                <Styled(styled.a)
+                                                  href="/"
+                                                  muted={false}
+                                                  noVisitedState={false}
+                                                  textColour={false}
+                                                >
+                                                  <StyledComponent
+                                                    forwardedComponent={
+                                                      Object {
+                                                        "$$typeof": Symbol(react.forward_ref),
+                                                        "attrs": Array [],
+                                                        "componentStyle": ComponentStyle {
+                                                          "componentId": "sc-bxivhb",
+                                                          "isStatic": false,
+                                                          "lastClassName": "c8",
+                                                          "rules": Array [
+                                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                                                            ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                                                            "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                                                            "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                                                            [Function],
+                                                            [Function],
+                                                            [Function],
+                                                            ":link, :visited {
+  color: #454a4c;
+} :hover {
+  color: #171819;
+}",
+                                                          ],
+                                                        },
+                                                        "defaultProps": Object {
+                                                          "muted": false,
+                                                          "noVisitedState": false,
+                                                          "textColour": false,
+                                                        },
+                                                        "displayName": "Styled(styled.a)",
+                                                        "foldedComponentIds": Array [
+                                                          "sc-htpNat",
+                                                        ],
+                                                        "propTypes": undefined,
+                                                        "render": [Function],
+                                                        "styledComponentId": "sc-bxivhb",
+                                                        "target": "a",
+                                                        "toString": [Function],
+                                                        "warnTooManyClasses": [Function],
+                                                        "withComponent": [Function],
+                                                      }
+                                                    }
+                                                    forwardedRef={null}
+                                                    href="/"
+                                                    muted={false}
+                                                    noVisitedState={false}
+                                                    textColour={false}
+                                                  >
+                                                    <a
+                                                      className="c8"
+                                                      href="/"
+                                                      muted={false}
+                                                    >
+                                                      Navigation item 2
+                                                    </a>
+                                                  </StyledComponent>
+                                                </Styled(styled.a)>
+                                              </FooterLink>
+                                            </li>
+                                          </StyledComponent>
+                                        </styled.li>
+                                        <styled.li
+                                          inline={false}
+                                          key="2"
+                                        >
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-jTzLTM",
+                                                  "isStatic": false,
+                                                  "lastClassName": "c7",
+                                                  "rules": Array [
+                                                    [Function],
+                                                    "&:last-child {
+  margin-bottom: 0;
+}",
+                                                  ],
+                                                },
+                                                "defaultProps": Object {
+                                                  "inline": false,
+                                                },
+                                                "displayName": "styled.li",
+                                                "foldedComponentIds": Array [],
+                                                "propTypes": Object {
+                                                  "inline": [Function],
+                                                },
+                                                "render": [Function],
+                                                "styledComponentId": "sc-jTzLTM",
+                                                "target": "li",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            inline={false}
+                                          >
+                                            <li
+                                              className="c7"
+                                            >
+                                              <FooterLink
+                                                href="/"
+                                              >
+                                                <Styled(styled.a)
+                                                  href="/"
+                                                  muted={false}
+                                                  noVisitedState={false}
+                                                  textColour={false}
+                                                >
+                                                  <StyledComponent
+                                                    forwardedComponent={
+                                                      Object {
+                                                        "$$typeof": Symbol(react.forward_ref),
+                                                        "attrs": Array [],
+                                                        "componentStyle": ComponentStyle {
+                                                          "componentId": "sc-bxivhb",
+                                                          "isStatic": false,
+                                                          "lastClassName": "c8",
+                                                          "rules": Array [
+                                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                                                            ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                                                            "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                                                            "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                                                            [Function],
+                                                            [Function],
+                                                            [Function],
+                                                            ":link, :visited {
+  color: #454a4c;
+} :hover {
+  color: #171819;
+}",
+                                                          ],
+                                                        },
+                                                        "defaultProps": Object {
+                                                          "muted": false,
+                                                          "noVisitedState": false,
+                                                          "textColour": false,
+                                                        },
+                                                        "displayName": "Styled(styled.a)",
+                                                        "foldedComponentIds": Array [
+                                                          "sc-htpNat",
+                                                        ],
+                                                        "propTypes": undefined,
+                                                        "render": [Function],
+                                                        "styledComponentId": "sc-bxivhb",
+                                                        "target": "a",
+                                                        "toString": [Function],
+                                                        "warnTooManyClasses": [Function],
+                                                        "withComponent": [Function],
+                                                      }
+                                                    }
+                                                    forwardedRef={null}
+                                                    href="/"
+                                                    muted={false}
+                                                    noVisitedState={false}
+                                                    textColour={false}
+                                                  >
+                                                    <a
+                                                      className="c8"
+                                                      href="/"
+                                                      muted={false}
+                                                    >
+                                                      Navigation item 3
+                                                    </a>
+                                                  </StyledComponent>
+                                                </Styled(styled.a)>
+                                              </FooterLink>
+                                            </li>
+                                          </StyledComponent>
+                                        </styled.li>
+                                      </ul>
+                                    </StyledComponent>
+                                  </styled.ul>
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                          </NavigationLinks>
                         </div>
                       </StyledComponent>
                     </styled.div>
@@ -8343,7 +9493,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                             "componentStyle": ComponentStyle {
                               "componentId": "sc-ifAKCX",
                               "isStatic": false,
-                              "lastClassName": "c9",
+                              "lastClassName": "c10",
                               "rules": Array [
                                 "margin: 0; border: 0; border-bottom: 1px solid #bfc1c3;",
                                 [Function],
@@ -8362,7 +9512,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                         forwardedRef={null}
                       >
                         <hr
-                          className="c9"
+                          className="c10"
                         />
                       </StyledComponent>
                     </styled.hr>
@@ -8376,7 +9526,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-bZQynM",
                                 "isStatic": true,
-                                "lastClassName": "c10",
+                                "lastClassName": "c11",
                                 "rules": Array [
                                   "display: flex; margin-right: -15px; margin-left: -15px; flex-wrap: wrap; align-items: flex-end; justify-content: center;",
                                   "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
@@ -8397,7 +9547,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                           forwardedRef={null}
                         >
                           <div
-                            className="c10"
+                            className="c11"
                           >
                             <styled.div
                               grow={true}
@@ -8410,7 +9560,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-gzVnrw",
                                       "isStatic": false,
-                                      "lastClassName": "c14",
+                                      "lastClassName": "c15",
                                       "rules": Array [
                                         "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
                                         [Function],
@@ -8436,7 +9586,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                 grow={true}
                               >
                                 <div
-                                  className="c11"
+                                  className="c12"
                                 >
                                   <Licence>
                                     <div>
@@ -8457,7 +9607,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-htoDjs",
                                                 "isStatic": true,
-                                                "lastClassName": "c12",
+                                                "lastClassName": "c13",
                                                 "rules": Array [
                                                   "display: inline-block; margin-right: 10px; margin-bottom: 15px; vertical-align: top; @media only screen and (min-width: 769px) {
   margin-bottom: 0;
@@ -8482,7 +9632,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                           xmlns="http://www.w3.org/2000/svg"
                                         >
                                           <svg
-                                            className="c12"
+                                            className="c13"
                                             focusable="false"
                                             height="17"
                                             role="presentation"
@@ -8506,7 +9656,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-dnqmqq",
                                                 "isStatic": true,
-                                                "lastClassName": "c13",
+                                                "lastClassName": "c14",
                                                 "rules": Array [
                                                   "display: inline-block;",
                                                 ],
@@ -8524,7 +9674,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                           forwardedRef={null}
                                         >
                                           <span
-                                            className="c13"
+                                            className="c14"
                                           >
                                             All content is available under the Open Government Licence v3.0, except where otherwise stated
                                           </span>
@@ -8546,7 +9696,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-gzVnrw",
                                       "isStatic": false,
-                                      "lastClassName": "c14",
+                                      "lastClassName": "c15",
                                       "rules": Array [
                                         "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
                                         [Function],
@@ -8572,7 +9722,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                 grow={false}
                               >
                                 <div
-                                  className="c14"
+                                  className="c15"
                                 >
                                   <Copyright>
                                     <Styled(styled.a)
@@ -8589,7 +9739,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-iwsKbI",
                                               "isStatic": false,
-                                              "lastClassName": "c15",
+                                              "lastClassName": "c16",
                                               "rules": Array [
                                                 "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-family: sans-serif;
@@ -8652,7 +9802,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                         textColour={false}
                                       >
                                         <a
-                                          className="c15"
+                                          className="c16"
                                           href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
                                           muted={false}
                                         >

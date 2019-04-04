@@ -23,7 +23,7 @@ const MetaContainer = ({ children }) => {
 MetaContainer.propTypes = {
   /**
    * Meta content
-   * Usually <Footer.MetaLinks /> and or <Footer.MetaCustom />
+   * Usually <Footer.MetaLinks /> and/or <Footer.MetaCustom />
    */
   children: PropTypes.node,
 };
