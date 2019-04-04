@@ -1,6 +1,4 @@
 import React from 'react';
-import { boolean, text } from '@storybook/addon-knobs/react';
-
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 
 import Footer from '.';
@@ -60,9 +58,30 @@ const navigation = (
 
 export const FooterWithMetaLinks = () => withRoutes(<Footer meta={metaLinks} />);
 
+export const FooterWithSingleMetaLink = () =>
+  withRoutes(
+    <Footer
+      meta={
+        <Footer.MetaLinks heading="Support links">
+          <Footer.Link href="/">Item 1</Footer.Link>
+        </Footer.MetaLinks>
+      }
+    />
+  );
+
 export const FooterWithMetaCustom = () => <Footer meta={metaCustom} />;
 
 export const FooterWithMetaLinksAndCustom = () => withRoutes(<Footer meta={metaLinksAndCustom} />);
+
+export const FooterWithSingleNavigationLink = () => (
+  <Footer>
+    <Footer.Navigation>
+      <Footer.NavigationLinks heading="Single column list">
+        <Footer.Link href="/">Navigation item 1</Footer.Link>
+      </Footer.NavigationLinks>
+    </Footer.Navigation>
+  </Footer>
+);
 
 export const FooterWithNavigation = () => withRoutes(<Footer>{navigation}</Footer>);
 

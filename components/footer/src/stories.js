@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import Footer, {
   FooterWithMetaLinks,
@@ -14,7 +14,7 @@ import ReadMe from '../README.md';
 const stories = storiesOf('Page/Footer', module);
 const examples = storiesOf('Page/Footer/Examples', module);
 
-stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withDocsCustom(ReadMe));
 
 stories.add('Component default', () => <Footer />);
 
