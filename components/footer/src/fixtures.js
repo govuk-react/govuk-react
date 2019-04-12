@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
+import crest from './govuk-crest.png';
 
 import Footer from '.';
 
@@ -12,6 +13,17 @@ const withRoutes = component => (
 );
 
 export default () => <Footer />;
+
+const copyright = {
+  text: 'Crown copyright',
+  link:
+    'https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/',
+  image: {
+    source: crest,
+    height: 102,
+    width: 125,
+  },
+};
 
 const metaLinks = (
   <Footer.MetaLinks heading="Support links">
@@ -55,6 +67,8 @@ const navigation = (
     </Footer.NavigationLinks>
   </Footer.Navigation>
 );
+
+export const FooterWithCopyright = () => <Footer copyright={copyright} />;
 
 export const FooterWithMetaLinks = () => withRoutes(<Footer meta={metaLinks} />);
 

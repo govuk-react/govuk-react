@@ -21,26 +21,14 @@ module.exports = {
       statements: 95,
     },
   },
-  moduleFileExtensions: [
-    'web.js',
-    'js',
-    'json',
-    'web.jsx',
-    'jsx',
-    'node',
-  ],
+  moduleFileExtensions: ['web.js', 'js', 'json', 'web.jsx', 'jsx', 'node'],
   setupFilesAfterEnv: ['<rootDir>/scripts/setupTests.js'],
-  snapshotSerializers: [
-    'enzyme-to-json/serializer',
-  ],
+  snapshotSerializers: ['enzyme-to-json/serializer'],
   testEnvironment: 'jsdom',
-  testMatch: [
-    '**/{components,packages}/*/src/**/?(*.)(spec|test).js?(x)',
-  ],
+  testMatch: ['**/{components,packages}/*/src/**/?(*.)(spec|test).js?(x)'],
   transform: {
     '^.+\\.(js|jsx)$': 'babel-jest',
+    '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
   },
-  transformIgnorePatterns: [
-    '[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$',
-  ],
+  transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
 };

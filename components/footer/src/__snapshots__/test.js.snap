@@ -41,12 +41,6 @@ exports[`Footer matches default snapshot: Footer 1`] = `
   flex-basis: 320px;
 }
 
-.c6 {
-  margin-right: 15px;
-  margin-bottom: 25px;
-  margin-left: 15px;
-}
-
 .c4 {
   display: inline-block;
   margin-right: 10px;
@@ -56,58 +50,6 @@ exports[`Footer matches default snapshot: Footer 1`] = `
 
 .c5 {
   display: inline-block;
-}
-
-.c7 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: inline-block;
-  min-width: 125px;
-  padding-top: 112px;
-  background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest.png');
-  background-repeat: no-repeat;
-  background-position: 50% 0%;
-  background-size: 125px 102px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.c7:link {
-  color: #005ea5;
-}
-
-.c7:visited {
-  color: #4c2c92;
-}
-
-.c7:hover {
-  color: #2b8cc4;
-}
-
-.c7:active {
-  color: #2b8cc4;
-}
-
-.c7:focus {
-  color: #0b0c0c;
-}
-
-.c7:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-  background-color: #ffbf47;
-}
-
-.c7:link,
-.c7:visited {
-  color: #454a4c;
-}
-
-.c7:hover {
-  color: #171819;
 }
 
 .c0 {
@@ -153,28 +95,6 @@ exports[`Footer matches default snapshot: Footer 1`] = `
 @media only screen and (min-width:769px) {
   .c4 {
     margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c7 {
-    font-family: sans-serif;
-  }
-}
-
-@media print {
-  .c7[href^="/"]::after,
-  .c7[href^="http://"]::after,
-  .c7[href^="https://"]::after {
-    content: " (" attr(href) ")";
-    font-size: 90%;
-    word-wrap: break-word;
-  }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio:2),not all,not all,only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx) {
-  .c7 {
-    background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest-2x.png');
   }
 }
 
@@ -281,6 +201,487 @@ exports[`Footer matches default snapshot: Footer 1`] = `
                 className="c1"
               >
                 <MetaContainer>
+                  <styled.div>
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bZQynM",
+                            "isStatic": true,
+                            "lastClassName": "c2",
+                            "rules": Array [
+                              "display: flex; margin-right: -15px; margin-left: -15px; flex-wrap: wrap; align-items: flex-end; justify-content: center;",
+                              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bZQynM",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                    >
+                      <div
+                        className="c2"
+                      >
+                        <styled.div
+                          grow={true}
+                        >
+                          <StyledComponent
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-gzVnrw",
+                                  "isStatic": false,
+                                  "lastClassName": "c3",
+                                  "rules": Array [
+                                    "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
+                                    [Function],
+                                  ],
+                                },
+                                "defaultProps": Object {
+                                  "grow": false,
+                                },
+                                "displayName": "styled.div",
+                                "foldedComponentIds": Array [],
+                                "propTypes": Object {
+                                  "grow": [Function],
+                                },
+                                "render": [Function],
+                                "styledComponentId": "sc-gzVnrw",
+                                "target": "div",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            grow={true}
+                          >
+                            <div
+                              className="c3"
+                            >
+                              <Licence>
+                                <div>
+                                  <styled.svg
+                                    focusable="false"
+                                    height="17"
+                                    role="presentation"
+                                    viewBox="0 0 483.2 195.7"
+                                    width="41"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <StyledComponent
+                                      focusable="false"
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "sc-htoDjs",
+                                            "isStatic": true,
+                                            "lastClassName": "c4",
+                                            "rules": Array [
+                                              "display: inline-block; margin-right: 10px; margin-bottom: 15px; vertical-align: top; @media only screen and (min-width: 769px) {
+  margin-bottom: 0;
+}",
+                                            ],
+                                          },
+                                          "displayName": "styled.svg",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "sc-htoDjs",
+                                          "target": "svg",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
+                                      height="17"
+                                      role="presentation"
+                                      viewBox="0 0 483.2 195.7"
+                                      width="41"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <svg
+                                        className="c4"
+                                        focusable="false"
+                                        height="17"
+                                        role="presentation"
+                                        viewBox="0 0 483.2 195.7"
+                                        width="41"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+                                          fill="currentColor"
+                                        />
+                                      </svg>
+                                    </StyledComponent>
+                                  </styled.svg>
+                                  <styled.span>
+                                    <StyledComponent
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "sc-dnqmqq",
+                                            "isStatic": true,
+                                            "lastClassName": "c5",
+                                            "rules": Array [
+                                              "display: inline-block;",
+                                            ],
+                                          },
+                                          "displayName": "styled.span",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "sc-dnqmqq",
+                                          "target": "span",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
+                                    >
+                                      <span
+                                        className="c5"
+                                      >
+                                        All content is available under the Open Government Licence v3.0, except where otherwise stated
+                                      </span>
+                                    </StyledComponent>
+                                  </styled.span>
+                                </div>
+                              </Licence>
+                            </div>
+                          </StyledComponent>
+                        </styled.div>
+                      </div>
+                    </StyledComponent>
+                  </styled.div>
+                </MetaContainer>
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </footer>
+      </StyledComponent>
+    </styled.footer>
+  </Footer>
+</_default>
+`;
+
+exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
+.c1 {
+  max-width: 960px;
+  margin: 0 15px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c3 {
+  margin-right: 15px;
+  margin-bottom: 25px;
+  margin-left: 15px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-basis: 320px;
+  -ms-flex-preferred-size: 320px;
+  flex-basis: 320px;
+}
+
+.c6 {
+  margin-right: 15px;
+  margin-bottom: 25px;
+  margin-left: 15px;
+}
+
+.c4 {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  vertical-align: top;
+}
+
+.c5 {
+  display: inline-block;
+}
+
+.c7 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  min-width: 125px;
+  padding-top: 112px;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-size: 125px 102px;
+}
+
+.c7:link {
+  color: #005ea5;
+}
+
+.c7:visited {
+  color: #4c2c92;
+}
+
+.c7:hover {
+  color: #2b8cc4;
+}
+
+.c7:active {
+  color: #2b8cc4;
+}
+
+.c7:focus {
+  color: #0b0c0c;
+}
+
+.c7:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+  background-color: #ffbf47;
+}
+
+.c7:link,
+.c7:visited {
+  color: #454a4c;
+}
+
+.c7:hover {
+  color: #171819;
+}
+
+.c0 {
+  border-top: 1px solid #a1acb2;
+  background: #dee0e2;
+  color: #454a4c;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1428571428571428;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .c1 {
+    margin: 0 30px;
+  }
+}
+
+@media only screen and (min-width:1020px) {
+  .c1 {
+    margin: 0 auto;
+  }
+}
+
+@media print {
+  .c2 {
+    font-family: sans-serif;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c3 {
+    -webkit-flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+}
+
+@media only screen and (min-width:769px) {
+  .c4 {
+    margin-bottom: 0;
+  }
+}
+
+@media print {
+  .c7 {
+    font-family: sans-serif;
+  }
+}
+
+@media print {
+  .c7[href^="/"]::after,
+  .c7[href^="http://"]::after,
+  .c7[href^="https://"]::after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    word-wrap: break-word;
+  }
+}
+
+@media print {
+  .c0 {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    padding-top: 40px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    padding-bottom: 25px;
+  }
+}
+
+<FooterWithCopyright>
+  <Footer
+    copyright={
+      Object {
+        "image": Object {
+          "height": 102,
+          "source": "",
+          "width": 125,
+        },
+        "link": "https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/",
+        "text": "Crown copyright",
+      }
+    }
+  >
+    <styled.footer
+      role="contentinfo"
+    >
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-cSHVUG",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "border-top: 1px solid #a1acb2; background: #dee0e2; color: #454a4c;",
+                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.2;
+} font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
+  font-size: 16px; line-height: 1.25;
+}",
+                [Function],
+                [Function],
+              ],
+            },
+            "displayName": "styled.footer",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-cSHVUG",
+            "target": "footer",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        role="contentinfo"
+      >
+        <footer
+          className="c0"
+          role="contentinfo"
+        >
+          <styled.div>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bdVaJa",
+                    "isStatic": false,
+                    "lastClassName": "c1",
+                    "rules": Array [
+                      "max-width: 960px; margin: 0 15px; @media only screen and (min-width: 641px) {
+  margin: 0 30px;
+} @media only screen and (min-width: 1020px) {
+  margin: 0 auto;
+}",
+                      [Function],
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bdVaJa",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <div
+                className="c1"
+              >
+                <MetaContainer
+                  copyright={
+                    Object {
+                      "image": Object {
+                        "height": 102,
+                        "source": "",
+                        "width": 125,
+                      },
+                      "link": "https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/",
+                      "text": "Crown copyright",
+                    }
+                  }
+                >
                   <styled.div>
                     <StyledComponent
                       forwardedComponent={
@@ -488,9 +889,26 @@ exports[`Footer matches default snapshot: Footer 1`] = `
                             <div
                               className="c6"
                             >
-                              <Copyright>
+                              <Copyright
+                                image={
+                                  Object {
+                                    "height": 102,
+                                    "source": "",
+                                    "width": 125,
+                                  }
+                                }
+                                link="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+                                text="Crown copyright"
+                              >
                                 <Styled(styled.a)
                                   href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+                                  image={
+                                    Object {
+                                      "height": 102,
+                                      "source": "",
+                                      "width": 125,
+                                    }
+                                  }
                                   muted={false}
                                   noVisitedState={false}
                                   textColour={false}
@@ -532,13 +950,12 @@ exports[`Footer matches default snapshot: Footer 1`] = `
                                             [Function],
                                             [Function],
                                             [Function],
-                                            "display: inline-block; min-width: 125px; padding-top: 112px; background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest.png'); @media only screen and (-webkit-min-device-pixel-ratio: 2), not all, not all, only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest-2x.png');
-} background-repeat: no-repeat; background-position: 50% 0%; background-size: 125px 102px; text-align: center; text-decoration: none; white-space: nowrap; :link, :visited {
+                                            "display: inline-block; text-align: center; text-decoration: none; white-space: nowrap; :link, :visited {
   color: #454a4c;
 } :hover {
   color: #171819;
 }",
+                                            [Function],
                                           ],
                                         },
                                         "defaultProps": Object {
@@ -561,6 +978,13 @@ exports[`Footer matches default snapshot: Footer 1`] = `
                                     }
                                     forwardedRef={null}
                                     href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+                                    image={
+                                      Object {
+                                        "height": 102,
+                                        "source": "",
+                                        "width": 125,
+                                      }
+                                    }
                                     muted={false}
                                     noVisitedState={false}
                                     textColour={false}
@@ -570,7 +994,8 @@ exports[`Footer matches default snapshot: Footer 1`] = `
                                       href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
                                       muted={false}
                                     >
-                                      © Crown copyright
+                                      © 
+                                      Crown copyright
                                     </a>
                                   </StyledComponent>
                                 </Styled(styled.a)>
@@ -589,7 +1014,7 @@ exports[`Footer matches default snapshot: Footer 1`] = `
       </StyledComponent>
     </styled.footer>
   </Footer>
-</_default>
+</FooterWithCopyright>
 `;
 
 exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
@@ -678,12 +1103,6 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
   flex-basis: 320px;
 }
 
-.c8 {
-  margin-right: 15px;
-  margin-bottom: 25px;
-  margin-left: 15px;
-}
-
 .c6 {
   display: inline-block;
   margin-right: 10px;
@@ -693,58 +1112,6 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
 
 .c7 {
   display: inline-block;
-}
-
-.c9 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: inline-block;
-  min-width: 125px;
-  padding-top: 112px;
-  background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest.png');
-  background-repeat: no-repeat;
-  background-position: 50% 0%;
-  background-size: 125px 102px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.c9:link {
-  color: #005ea5;
-}
-
-.c9:visited {
-  color: #4c2c92;
-}
-
-.c9:hover {
-  color: #2b8cc4;
-}
-
-.c9:active {
-  color: #2b8cc4;
-}
-
-.c9:focus {
-  color: #0b0c0c;
-}
-
-.c9:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-  background-color: #ffbf47;
-}
-
-.c9:link,
-.c9:visited {
-  color: #454a4c;
-}
-
-.c9:hover {
-  color: #171819;
 }
 
 .c0 {
@@ -806,28 +1173,6 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
 @media only screen and (min-width:769px) {
   .c6 {
     margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c9 {
-    font-family: sans-serif;
-  }
-}
-
-@media print {
-  .c9[href^="/"]::after,
-  .c9[href^="http://"]::after,
-  .c9[href^="https://"]::after {
-    content: " (" attr(href) ")";
-    font-size: 90%;
-    word-wrap: break-word;
-  }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio:2),not all,not all,only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx) {
-  .c9 {
-    background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest-2x.png');
   }
 }
 
@@ -988,7 +1333,7 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-gzVnrw",
                                   "isStatic": false,
-                                  "lastClassName": "c8",
+                                  "lastClassName": "c3",
                                   "rules": Array [
                                     "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
                                     [Function],
@@ -1233,135 +1578,6 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
                             </div>
                           </StyledComponent>
                         </styled.div>
-                        <styled.div
-                          grow={false}
-                        >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-gzVnrw",
-                                  "isStatic": false,
-                                  "lastClassName": "c8",
-                                  "rules": Array [
-                                    "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
-                                    [Function],
-                                  ],
-                                },
-                                "defaultProps": Object {
-                                  "grow": false,
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "propTypes": Object {
-                                  "grow": [Function],
-                                },
-                                "render": [Function],
-                                "styledComponentId": "sc-gzVnrw",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            grow={false}
-                          >
-                            <div
-                              className="c8"
-                            >
-                              <Copyright>
-                                <Styled(styled.a)
-                                  href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                  muted={false}
-                                  noVisitedState={false}
-                                  textColour={false}
-                                >
-                                  <StyledComponent
-                                    forwardedComponent={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "attrs": Array [],
-                                        "componentStyle": ComponentStyle {
-                                          "componentId": "sc-iwsKbI",
-                                          "isStatic": false,
-                                          "lastClassName": "c9",
-                                          "rules": Array [
-                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-                                            ":link {
-  color: #005ea5;
-} :visited {
-  color: #4c2c92;
-} :hover {
-  color: #2b8cc4;
-} :active {
-  color: #2b8cc4;
-} :focus {
-  color: #0b0c0c;
-}",
-                                            "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
-}",
-                                            "@media print {
-  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
-  &::after {
-  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
-}
-}
-}",
-                                            [Function],
-                                            [Function],
-                                            [Function],
-                                            "display: inline-block; min-width: 125px; padding-top: 112px; background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest.png'); @media only screen and (-webkit-min-device-pixel-ratio: 2), not all, not all, only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest-2x.png');
-} background-repeat: no-repeat; background-position: 50% 0%; background-size: 125px 102px; text-align: center; text-decoration: none; white-space: nowrap; :link, :visited {
-  color: #454a4c;
-} :hover {
-  color: #171819;
-}",
-                                          ],
-                                        },
-                                        "defaultProps": Object {
-                                          "muted": false,
-                                          "noVisitedState": false,
-                                          "textColour": false,
-                                        },
-                                        "displayName": "Styled(styled.a)",
-                                        "foldedComponentIds": Array [
-                                          "sc-htpNat",
-                                        ],
-                                        "propTypes": undefined,
-                                        "render": [Function],
-                                        "styledComponentId": "sc-iwsKbI",
-                                        "target": "a",
-                                        "toString": [Function],
-                                        "warnTooManyClasses": [Function],
-                                        "withComponent": [Function],
-                                      }
-                                    }
-                                    forwardedRef={null}
-                                    href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                    muted={false}
-                                    noVisitedState={false}
-                                    textColour={false}
-                                  >
-                                    <a
-                                      className="c9"
-                                      href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                      muted={false}
-                                    >
-                                      © Crown copyright
-                                    </a>
-                                  </StyledComponent>
-                                </Styled(styled.a)>
-                              </Copyright>
-                            </div>
-                          </StyledComponent>
-                        </styled.div>
                       </div>
                     </StyledComponent>
                   </styled.div>
@@ -1462,12 +1678,6 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
   flex-basis: 320px;
 }
 
-.c12 {
-  margin-right: 15px;
-  margin-bottom: 25px;
-  margin-left: 15px;
-}
-
 .c10 {
   display: inline-block;
   margin-right: 10px;
@@ -1477,58 +1687,6 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
 
 .c11 {
   display: inline-block;
-}
-
-.c13 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: inline-block;
-  min-width: 125px;
-  padding-top: 112px;
-  background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest.png');
-  background-repeat: no-repeat;
-  background-position: 50% 0%;
-  background-size: 125px 102px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.c13:link {
-  color: #005ea5;
-}
-
-.c13:visited {
-  color: #4c2c92;
-}
-
-.c13:hover {
-  color: #2b8cc4;
-}
-
-.c13:active {
-  color: #2b8cc4;
-}
-
-.c13:focus {
-  color: #0b0c0c;
-}
-
-.c13:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-  background-color: #ffbf47;
-}
-
-.c13:link,
-.c13:visited {
-  color: #454a4c;
-}
-
-.c13:hover {
-  color: #171819;
 }
 
 .c5 {
@@ -1634,28 +1792,6 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
 @media only screen and (min-width:769px) {
   .c10 {
     margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c13 {
-    font-family: sans-serif;
-  }
-}
-
-@media print {
-  .c13[href^="/"]::after,
-  .c13[href^="http://"]::after,
-  .c13[href^="https://"]::after {
-    content: " (" attr(href) ")";
-    font-size: 90%;
-    word-wrap: break-word;
-  }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio:2),not all,not all,only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx) {
-  .c13 {
-    background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest-2x.png');
   }
 }
 
@@ -1887,7 +2023,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-gzVnrw",
                                       "isStatic": false,
-                                      "lastClassName": "c12",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
                                         [Function],
@@ -2687,135 +2823,6 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                 </div>
                               </StyledComponent>
                             </styled.div>
-                            <styled.div
-                              grow={false}
-                            >
-                              <StyledComponent
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-gzVnrw",
-                                      "isStatic": false,
-                                      "lastClassName": "c12",
-                                      "rules": Array [
-                                        "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
-                                        [Function],
-                                      ],
-                                    },
-                                    "defaultProps": Object {
-                                      "grow": false,
-                                    },
-                                    "displayName": "styled.div",
-                                    "foldedComponentIds": Array [],
-                                    "propTypes": Object {
-                                      "grow": [Function],
-                                    },
-                                    "render": [Function],
-                                    "styledComponentId": "sc-gzVnrw",
-                                    "target": "div",
-                                    "toString": [Function],
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
-                                  }
-                                }
-                                forwardedRef={null}
-                                grow={false}
-                              >
-                                <div
-                                  className="c12"
-                                >
-                                  <Copyright>
-                                    <Styled(styled.a)
-                                      href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                      muted={false}
-                                      noVisitedState={false}
-                                      textColour={false}
-                                    >
-                                      <StyledComponent
-                                        forwardedComponent={
-                                          Object {
-                                            "$$typeof": Symbol(react.forward_ref),
-                                            "attrs": Array [],
-                                            "componentStyle": ComponentStyle {
-                                              "componentId": "sc-iwsKbI",
-                                              "isStatic": false,
-                                              "lastClassName": "c13",
-                                              "rules": Array [
-                                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-                                                ":link {
-  color: #005ea5;
-} :visited {
-  color: #4c2c92;
-} :hover {
-  color: #2b8cc4;
-} :active {
-  color: #2b8cc4;
-} :focus {
-  color: #0b0c0c;
-}",
-                                                "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
-}",
-                                                "@media print {
-  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
-  &::after {
-  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
-}
-}
-}",
-                                                [Function],
-                                                [Function],
-                                                [Function],
-                                                "display: inline-block; min-width: 125px; padding-top: 112px; background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest.png'); @media only screen and (-webkit-min-device-pixel-ratio: 2), not all, not all, only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest-2x.png');
-} background-repeat: no-repeat; background-position: 50% 0%; background-size: 125px 102px; text-align: center; text-decoration: none; white-space: nowrap; :link, :visited {
-  color: #454a4c;
-} :hover {
-  color: #171819;
-}",
-                                              ],
-                                            },
-                                            "defaultProps": Object {
-                                              "muted": false,
-                                              "noVisitedState": false,
-                                              "textColour": false,
-                                            },
-                                            "displayName": "Styled(styled.a)",
-                                            "foldedComponentIds": Array [
-                                              "sc-htpNat",
-                                            ],
-                                            "propTypes": undefined,
-                                            "render": [Function],
-                                            "styledComponentId": "sc-iwsKbI",
-                                            "target": "a",
-                                            "toString": [Function],
-                                            "warnTooManyClasses": [Function],
-                                            "withComponent": [Function],
-                                          }
-                                        }
-                                        forwardedRef={null}
-                                        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <a
-                                          className="c13"
-                                          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                          muted={false}
-                                        >
-                                          © Crown copyright
-                                        </a>
-                                      </StyledComponent>
-                                    </Styled(styled.a)>
-                                  </Copyright>
-                                </div>
-                              </StyledComponent>
-                            </styled.div>
                           </div>
                         </StyledComponent>
                       </styled.div>
@@ -2922,12 +2929,6 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
   flex-basis: 320px;
 }
 
-.c11 {
-  margin-right: 15px;
-  margin-bottom: 25px;
-  margin-left: 15px;
-}
-
 .c9 {
   display: inline-block;
   margin-right: 10px;
@@ -2937,58 +2938,6 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
 
 .c10 {
   display: inline-block;
-}
-
-.c12 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: inline-block;
-  min-width: 125px;
-  padding-top: 112px;
-  background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest.png');
-  background-repeat: no-repeat;
-  background-position: 50% 0%;
-  background-size: 125px 102px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.c12:link {
-  color: #005ea5;
-}
-
-.c12:visited {
-  color: #4c2c92;
-}
-
-.c12:hover {
-  color: #2b8cc4;
-}
-
-.c12:active {
-  color: #2b8cc4;
-}
-
-.c12:focus {
-  color: #0b0c0c;
-}
-
-.c12:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-  background-color: #ffbf47;
-}
-
-.c12:link,
-.c12:visited {
-  color: #454a4c;
-}
-
-.c12:hover {
-  color: #171819;
 }
 
 .c5 {
@@ -3094,28 +3043,6 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
 @media only screen and (min-width:769px) {
   .c9 {
     margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c12 {
-    font-family: sans-serif;
-  }
-}
-
-@media print {
-  .c12[href^="/"]::after,
-  .c12[href^="http://"]::after,
-  .c12[href^="https://"]::after {
-    content: " (" attr(href) ")";
-    font-size: 90%;
-    word-wrap: break-word;
-  }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio:2),not all,not all,only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx) {
-  .c12 {
-    background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest-2x.png');
   }
 }
 
@@ -3337,7 +3264,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-gzVnrw",
                                       "isStatic": false,
-                                      "lastClassName": "c11",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
                                         [Function],
@@ -4017,135 +3944,6 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                 </div>
                               </StyledComponent>
                             </styled.div>
-                            <styled.div
-                              grow={false}
-                            >
-                              <StyledComponent
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-gzVnrw",
-                                      "isStatic": false,
-                                      "lastClassName": "c11",
-                                      "rules": Array [
-                                        "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
-                                        [Function],
-                                      ],
-                                    },
-                                    "defaultProps": Object {
-                                      "grow": false,
-                                    },
-                                    "displayName": "styled.div",
-                                    "foldedComponentIds": Array [],
-                                    "propTypes": Object {
-                                      "grow": [Function],
-                                    },
-                                    "render": [Function],
-                                    "styledComponentId": "sc-gzVnrw",
-                                    "target": "div",
-                                    "toString": [Function],
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
-                                  }
-                                }
-                                forwardedRef={null}
-                                grow={false}
-                              >
-                                <div
-                                  className="c11"
-                                >
-                                  <Copyright>
-                                    <Styled(styled.a)
-                                      href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                      muted={false}
-                                      noVisitedState={false}
-                                      textColour={false}
-                                    >
-                                      <StyledComponent
-                                        forwardedComponent={
-                                          Object {
-                                            "$$typeof": Symbol(react.forward_ref),
-                                            "attrs": Array [],
-                                            "componentStyle": ComponentStyle {
-                                              "componentId": "sc-iwsKbI",
-                                              "isStatic": false,
-                                              "lastClassName": "c12",
-                                              "rules": Array [
-                                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-                                                ":link {
-  color: #005ea5;
-} :visited {
-  color: #4c2c92;
-} :hover {
-  color: #2b8cc4;
-} :active {
-  color: #2b8cc4;
-} :focus {
-  color: #0b0c0c;
-}",
-                                                "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
-}",
-                                                "@media print {
-  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
-  &::after {
-  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
-}
-}
-}",
-                                                [Function],
-                                                [Function],
-                                                [Function],
-                                                "display: inline-block; min-width: 125px; padding-top: 112px; background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest.png'); @media only screen and (-webkit-min-device-pixel-ratio: 2), not all, not all, only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest-2x.png');
-} background-repeat: no-repeat; background-position: 50% 0%; background-size: 125px 102px; text-align: center; text-decoration: none; white-space: nowrap; :link, :visited {
-  color: #454a4c;
-} :hover {
-  color: #171819;
-}",
-                                              ],
-                                            },
-                                            "defaultProps": Object {
-                                              "muted": false,
-                                              "noVisitedState": false,
-                                              "textColour": false,
-                                            },
-                                            "displayName": "Styled(styled.a)",
-                                            "foldedComponentIds": Array [
-                                              "sc-htpNat",
-                                            ],
-                                            "propTypes": undefined,
-                                            "render": [Function],
-                                            "styledComponentId": "sc-iwsKbI",
-                                            "target": "a",
-                                            "toString": [Function],
-                                            "warnTooManyClasses": [Function],
-                                            "withComponent": [Function],
-                                          }
-                                        }
-                                        forwardedRef={null}
-                                        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <a
-                                          className="c12"
-                                          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                          muted={false}
-                                        >
-                                          © Crown copyright
-                                        </a>
-                                      </StyledComponent>
-                                    </Styled(styled.a)>
-                                  </Copyright>
-                                </div>
-                              </StyledComponent>
-                            </styled.div>
                           </div>
                         </StyledComponent>
                       </styled.div>
@@ -4275,12 +4073,6 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   flex-basis: 320px;
 }
 
-.c20 {
-  margin-right: 15px;
-  margin-bottom: 25px;
-  margin-left: 15px;
-}
-
 .c18 {
   display: inline-block;
   margin-right: 10px;
@@ -4290,58 +4082,6 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
 
 .c19 {
   display: inline-block;
-}
-
-.c21 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: inline-block;
-  min-width: 125px;
-  padding-top: 112px;
-  background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest.png');
-  background-repeat: no-repeat;
-  background-position: 50% 0%;
-  background-size: 125px 102px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.c21:link {
-  color: #005ea5;
-}
-
-.c21:visited {
-  color: #4c2c92;
-}
-
-.c21:hover {
-  color: #2b8cc4;
-}
-
-.c21:active {
-  color: #2b8cc4;
-}
-
-.c21:focus {
-  color: #0b0c0c;
-}
-
-.c21:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-  background-color: #ffbf47;
-}
-
-.c21:link,
-.c21:visited {
-  color: #454a4c;
-}
-
-.c21:hover {
-  color: #171819;
 }
 
 .c14 {
@@ -4515,28 +4255,6 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
 @media only screen and (min-width:769px) {
   .c18 {
     margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c21 {
-    font-family: sans-serif;
-  }
-}
-
-@media print {
-  .c21[href^="/"]::after,
-  .c21[href^="http://"]::after,
-  .c21[href^="https://"]::after {
-    content: " (" attr(href) ")";
-    font-size: 90%;
-    word-wrap: break-word;
-  }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio:2),not all,not all,only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx) {
-  .c21 {
-    background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest-2x.png');
   }
 }
 
@@ -6442,7 +6160,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-gzVnrw",
                                       "isStatic": false,
-                                      "lastClassName": "c20",
+                                      "lastClassName": "c12",
                                       "rules": Array [
                                         "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
                                         [Function],
@@ -7242,135 +6960,6 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 </div>
                               </StyledComponent>
                             </styled.div>
-                            <styled.div
-                              grow={false}
-                            >
-                              <StyledComponent
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-gzVnrw",
-                                      "isStatic": false,
-                                      "lastClassName": "c20",
-                                      "rules": Array [
-                                        "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
-                                        [Function],
-                                      ],
-                                    },
-                                    "defaultProps": Object {
-                                      "grow": false,
-                                    },
-                                    "displayName": "styled.div",
-                                    "foldedComponentIds": Array [],
-                                    "propTypes": Object {
-                                      "grow": [Function],
-                                    },
-                                    "render": [Function],
-                                    "styledComponentId": "sc-gzVnrw",
-                                    "target": "div",
-                                    "toString": [Function],
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
-                                  }
-                                }
-                                forwardedRef={null}
-                                grow={false}
-                              >
-                                <div
-                                  className="c20"
-                                >
-                                  <Copyright>
-                                    <Styled(styled.a)
-                                      href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                      muted={false}
-                                      noVisitedState={false}
-                                      textColour={false}
-                                    >
-                                      <StyledComponent
-                                        forwardedComponent={
-                                          Object {
-                                            "$$typeof": Symbol(react.forward_ref),
-                                            "attrs": Array [],
-                                            "componentStyle": ComponentStyle {
-                                              "componentId": "sc-iwsKbI",
-                                              "isStatic": false,
-                                              "lastClassName": "c21",
-                                              "rules": Array [
-                                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-                                                ":link {
-  color: #005ea5;
-} :visited {
-  color: #4c2c92;
-} :hover {
-  color: #2b8cc4;
-} :active {
-  color: #2b8cc4;
-} :focus {
-  color: #0b0c0c;
-}",
-                                                "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
-}",
-                                                "@media print {
-  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
-  &::after {
-  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
-}
-}
-}",
-                                                [Function],
-                                                [Function],
-                                                [Function],
-                                                "display: inline-block; min-width: 125px; padding-top: 112px; background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest.png'); @media only screen and (-webkit-min-device-pixel-ratio: 2), not all, not all, only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest-2x.png');
-} background-repeat: no-repeat; background-position: 50% 0%; background-size: 125px 102px; text-align: center; text-decoration: none; white-space: nowrap; :link, :visited {
-  color: #454a4c;
-} :hover {
-  color: #171819;
-}",
-                                              ],
-                                            },
-                                            "defaultProps": Object {
-                                              "muted": false,
-                                              "noVisitedState": false,
-                                              "textColour": false,
-                                            },
-                                            "displayName": "Styled(styled.a)",
-                                            "foldedComponentIds": Array [
-                                              "sc-htpNat",
-                                            ],
-                                            "propTypes": undefined,
-                                            "render": [Function],
-                                            "styledComponentId": "sc-iwsKbI",
-                                            "target": "a",
-                                            "toString": [Function],
-                                            "warnTooManyClasses": [Function],
-                                            "withComponent": [Function],
-                                          }
-                                        }
-                                        forwardedRef={null}
-                                        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <a
-                                          className="c21"
-                                          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                          muted={false}
-                                        >
-                                          © Crown copyright
-                                        </a>
-                                      </StyledComponent>
-                                    </Styled(styled.a)>
-                                  </Copyright>
-                                </div>
-                              </StyledComponent>
-                            </styled.div>
                           </div>
                         </StyledComponent>
                       </styled.div>
@@ -7496,12 +7085,6 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   flex-basis: 320px;
 }
 
-.c15 {
-  margin-right: 15px;
-  margin-bottom: 25px;
-  margin-left: 15px;
-}
-
 .c13 {
   display: inline-block;
   margin-right: 10px;
@@ -7511,58 +7094,6 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
 
 .c14 {
   display: inline-block;
-}
-
-.c16 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: inline-block;
-  min-width: 125px;
-  padding-top: 112px;
-  background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest.png');
-  background-repeat: no-repeat;
-  background-position: 50% 0%;
-  background-size: 125px 102px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.c16:link {
-  color: #005ea5;
-}
-
-.c16:visited {
-  color: #4c2c92;
-}
-
-.c16:hover {
-  color: #2b8cc4;
-}
-
-.c16:active {
-  color: #2b8cc4;
-}
-
-.c16:focus {
-  color: #0b0c0c;
-}
-
-.c16:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-  background-color: #ffbf47;
-}
-
-.c16:link,
-.c16:visited {
-  color: #454a4c;
-}
-
-.c16:hover {
-  color: #171819;
 }
 
 .c5 {
@@ -7692,28 +7223,6 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
 @media only screen and (min-width:769px) {
   .c13 {
     margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c16 {
-    font-family: sans-serif;
-  }
-}
-
-@media print {
-  .c16[href^="/"]::after,
-  .c16[href^="http://"]::after,
-  .c16[href^="https://"]::after {
-    content: " (" attr(href) ")";
-    font-size: 90%;
-    word-wrap: break-word;
-  }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio:2),not all,not all,only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx) {
-  .c16 {
-    background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest-2x.png');
   }
 }
 
@@ -9560,7 +9069,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-gzVnrw",
                                       "isStatic": false,
-                                      "lastClassName": "c15",
+                                      "lastClassName": "c12",
                                       "rules": Array [
                                         "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
                                         [Function],
@@ -9685,135 +9194,6 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                 </div>
                               </StyledComponent>
                             </styled.div>
-                            <styled.div
-                              grow={false}
-                            >
-                              <StyledComponent
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-gzVnrw",
-                                      "isStatic": false,
-                                      "lastClassName": "c15",
-                                      "rules": Array [
-                                        "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
-                                        [Function],
-                                      ],
-                                    },
-                                    "defaultProps": Object {
-                                      "grow": false,
-                                    },
-                                    "displayName": "styled.div",
-                                    "foldedComponentIds": Array [],
-                                    "propTypes": Object {
-                                      "grow": [Function],
-                                    },
-                                    "render": [Function],
-                                    "styledComponentId": "sc-gzVnrw",
-                                    "target": "div",
-                                    "toString": [Function],
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
-                                  }
-                                }
-                                forwardedRef={null}
-                                grow={false}
-                              >
-                                <div
-                                  className="c15"
-                                >
-                                  <Copyright>
-                                    <Styled(styled.a)
-                                      href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                      muted={false}
-                                      noVisitedState={false}
-                                      textColour={false}
-                                    >
-                                      <StyledComponent
-                                        forwardedComponent={
-                                          Object {
-                                            "$$typeof": Symbol(react.forward_ref),
-                                            "attrs": Array [],
-                                            "componentStyle": ComponentStyle {
-                                              "componentId": "sc-iwsKbI",
-                                              "isStatic": false,
-                                              "lastClassName": "c16",
-                                              "rules": Array [
-                                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-                                                ":link {
-  color: #005ea5;
-} :visited {
-  color: #4c2c92;
-} :hover {
-  color: #2b8cc4;
-} :active {
-  color: #2b8cc4;
-} :focus {
-  color: #0b0c0c;
-}",
-                                                "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
-}",
-                                                "@media print {
-  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
-  &::after {
-  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
-}
-}
-}",
-                                                [Function],
-                                                [Function],
-                                                [Function],
-                                                "display: inline-block; min-width: 125px; padding-top: 112px; background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest.png'); @media only screen and (-webkit-min-device-pixel-ratio: 2), not all, not all, only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest-2x.png');
-} background-repeat: no-repeat; background-position: 50% 0%; background-size: 125px 102px; text-align: center; text-decoration: none; white-space: nowrap; :link, :visited {
-  color: #454a4c;
-} :hover {
-  color: #171819;
-}",
-                                              ],
-                                            },
-                                            "defaultProps": Object {
-                                              "muted": false,
-                                              "noVisitedState": false,
-                                              "textColour": false,
-                                            },
-                                            "displayName": "Styled(styled.a)",
-                                            "foldedComponentIds": Array [
-                                              "sc-htpNat",
-                                            ],
-                                            "propTypes": undefined,
-                                            "render": [Function],
-                                            "styledComponentId": "sc-iwsKbI",
-                                            "target": "a",
-                                            "toString": [Function],
-                                            "warnTooManyClasses": [Function],
-                                            "withComponent": [Function],
-                                          }
-                                        }
-                                        forwardedRef={null}
-                                        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <a
-                                          className="c16"
-                                          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                          muted={false}
-                                        >
-                                          © Crown copyright
-                                        </a>
-                                      </StyledComponent>
-                                    </Styled(styled.a)>
-                                  </Copyright>
-                                </div>
-                              </StyledComponent>
-                            </styled.div>
                           </div>
                         </StyledComponent>
                       </styled.div>
@@ -9920,12 +9300,6 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
   flex-basis: 320px;
 }
 
-.c11 {
-  margin-right: 15px;
-  margin-bottom: 25px;
-  margin-left: 15px;
-}
-
 .c9 {
   display: inline-block;
   margin-right: 10px;
@@ -9935,58 +9309,6 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
 
 .c10 {
   display: inline-block;
-}
-
-.c12 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: inline-block;
-  min-width: 125px;
-  padding-top: 112px;
-  background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest.png');
-  background-repeat: no-repeat;
-  background-position: 50% 0%;
-  background-size: 125px 102px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.c12:link {
-  color: #005ea5;
-}
-
-.c12:visited {
-  color: #4c2c92;
-}
-
-.c12:hover {
-  color: #2b8cc4;
-}
-
-.c12:active {
-  color: #2b8cc4;
-}
-
-.c12:focus {
-  color: #0b0c0c;
-}
-
-.c12:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-  background-color: #ffbf47;
-}
-
-.c12:link,
-.c12:visited {
-  color: #454a4c;
-}
-
-.c12:hover {
-  color: #171819;
 }
 
 .c5 {
@@ -10092,28 +9414,6 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
 @media only screen and (min-width:769px) {
   .c9 {
     margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c12 {
-    font-family: sans-serif;
-  }
-}
-
-@media print {
-  .c12[href^="/"]::after,
-  .c12[href^="http://"]::after,
-  .c12[href^="https://"]::after {
-    content: " (" attr(href) ")";
-    font-size: 90%;
-    word-wrap: break-word;
-  }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio:2),not all,not all,only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx) {
-  .c12 {
-    background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest-2x.png');
   }
 }
 
@@ -10324,7 +9624,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-gzVnrw",
                                       "isStatic": false,
-                                      "lastClassName": "c11",
+                                      "lastClassName": "c3",
                                       "rules": Array [
                                         "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
                                         [Function],
@@ -10725,135 +10025,6 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                 </div>
                               </StyledComponent>
                             </styled.div>
-                            <styled.div
-                              grow={false}
-                            >
-                              <StyledComponent
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-gzVnrw",
-                                      "isStatic": false,
-                                      "lastClassName": "c11",
-                                      "rules": Array [
-                                        "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
-                                        [Function],
-                                      ],
-                                    },
-                                    "defaultProps": Object {
-                                      "grow": false,
-                                    },
-                                    "displayName": "styled.div",
-                                    "foldedComponentIds": Array [],
-                                    "propTypes": Object {
-                                      "grow": [Function],
-                                    },
-                                    "render": [Function],
-                                    "styledComponentId": "sc-gzVnrw",
-                                    "target": "div",
-                                    "toString": [Function],
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
-                                  }
-                                }
-                                forwardedRef={null}
-                                grow={false}
-                              >
-                                <div
-                                  className="c11"
-                                >
-                                  <Copyright>
-                                    <Styled(styled.a)
-                                      href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                      muted={false}
-                                      noVisitedState={false}
-                                      textColour={false}
-                                    >
-                                      <StyledComponent
-                                        forwardedComponent={
-                                          Object {
-                                            "$$typeof": Symbol(react.forward_ref),
-                                            "attrs": Array [],
-                                            "componentStyle": ComponentStyle {
-                                              "componentId": "sc-iwsKbI",
-                                              "isStatic": false,
-                                              "lastClassName": "c12",
-                                              "rules": Array [
-                                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-                                                ":link {
-  color: #005ea5;
-} :visited {
-  color: #4c2c92;
-} :hover {
-  color: #2b8cc4;
-} :active {
-  color: #2b8cc4;
-} :focus {
-  color: #0b0c0c;
-}",
-                                                "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
-}",
-                                                "@media print {
-  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
-  &::after {
-  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
-}
-}
-}",
-                                                [Function],
-                                                [Function],
-                                                [Function],
-                                                "display: inline-block; min-width: 125px; padding-top: 112px; background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest.png'); @media only screen and (-webkit-min-device-pixel-ratio: 2), not all, not all, only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest-2x.png');
-} background-repeat: no-repeat; background-position: 50% 0%; background-size: 125px 102px; text-align: center; text-decoration: none; white-space: nowrap; :link, :visited {
-  color: #454a4c;
-} :hover {
-  color: #171819;
-}",
-                                              ],
-                                            },
-                                            "defaultProps": Object {
-                                              "muted": false,
-                                              "noVisitedState": false,
-                                              "textColour": false,
-                                            },
-                                            "displayName": "Styled(styled.a)",
-                                            "foldedComponentIds": Array [
-                                              "sc-htpNat",
-                                            ],
-                                            "propTypes": undefined,
-                                            "render": [Function],
-                                            "styledComponentId": "sc-iwsKbI",
-                                            "target": "a",
-                                            "toString": [Function],
-                                            "warnTooManyClasses": [Function],
-                                            "withComponent": [Function],
-                                          }
-                                        }
-                                        forwardedRef={null}
-                                        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <a
-                                          className="c12"
-                                          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                          muted={false}
-                                        >
-                                          © Crown copyright
-                                        </a>
-                                      </StyledComponent>
-                                    </Styled(styled.a)>
-                                  </Copyright>
-                                </div>
-                              </StyledComponent>
-                            </styled.div>
                           </div>
                         </StyledComponent>
                       </styled.div>
@@ -10979,12 +10150,6 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
   flex-basis: 320px;
 }
 
-.c14 {
-  margin-right: 15px;
-  margin-bottom: 25px;
-  margin-left: 15px;
-}
-
 .c12 {
   display: inline-block;
   margin-right: 10px;
@@ -10994,58 +10159,6 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
 
 .c13 {
   display: inline-block;
-}
-
-.c15 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: inline-block;
-  min-width: 125px;
-  padding-top: 112px;
-  background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest.png');
-  background-repeat: no-repeat;
-  background-position: 50% 0%;
-  background-size: 125px 102px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.c15:link {
-  color: #005ea5;
-}
-
-.c15:visited {
-  color: #4c2c92;
-}
-
-.c15:hover {
-  color: #2b8cc4;
-}
-
-.c15:active {
-  color: #2b8cc4;
-}
-
-.c15:focus {
-  color: #0b0c0c;
-}
-
-.c15:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
-  background-color: #ffbf47;
-}
-
-.c15:link,
-.c15:visited {
-  color: #454a4c;
-}
-
-.c15:hover {
-  color: #171819;
 }
 
 .c5 {
@@ -11167,28 +10280,6 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
 @media only screen and (min-width:769px) {
   .c12 {
     margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c15 {
-    font-family: sans-serif;
-  }
-}
-
-@media print {
-  .c15[href^="/"]::after,
-  .c15[href^="http://"]::after,
-  .c15[href^="https://"]::after {
-    content: " (" attr(href) ")";
-    font-size: 90%;
-    word-wrap: break-word;
-  }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio:2),not all,not all,only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx) {
-  .c15 {
-    background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest-2x.png');
   }
 }
 
@@ -11763,7 +10854,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-gzVnrw",
                                   "isStatic": false,
-                                  "lastClassName": "c14",
+                                  "lastClassName": "c11",
                                   "rules": Array [
                                     "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
                                     [Function],
@@ -11885,135 +10976,6 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                   </styled.span>
                                 </div>
                               </Licence>
-                            </div>
-                          </StyledComponent>
-                        </styled.div>
-                        <styled.div
-                          grow={false}
-                        >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-gzVnrw",
-                                  "isStatic": false,
-                                  "lastClassName": "c14",
-                                  "rules": Array [
-                                    "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
-                                    [Function],
-                                  ],
-                                },
-                                "defaultProps": Object {
-                                  "grow": false,
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "propTypes": Object {
-                                  "grow": [Function],
-                                },
-                                "render": [Function],
-                                "styledComponentId": "sc-gzVnrw",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            grow={false}
-                          >
-                            <div
-                              className="c14"
-                            >
-                              <Copyright>
-                                <Styled(styled.a)
-                                  href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                  muted={false}
-                                  noVisitedState={false}
-                                  textColour={false}
-                                >
-                                  <StyledComponent
-                                    forwardedComponent={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "attrs": Array [],
-                                        "componentStyle": ComponentStyle {
-                                          "componentId": "sc-iwsKbI",
-                                          "isStatic": false,
-                                          "lastClassName": "c15",
-                                          "rules": Array [
-                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-                                            ":link {
-  color: #005ea5;
-} :visited {
-  color: #4c2c92;
-} :hover {
-  color: #2b8cc4;
-} :active {
-  color: #2b8cc4;
-} :focus {
-  color: #0b0c0c;
-}",
-                                            "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
-}",
-                                            "@media print {
-  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
-  &::after {
-  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
-}
-}
-}",
-                                            [Function],
-                                            [Function],
-                                            [Function],
-                                            "display: inline-block; min-width: 125px; padding-top: 112px; background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest.png'); @media only screen and (-webkit-min-device-pixel-ratio: 2), not all, not all, only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  background-image: url('https://design-system.service.gov.uk/assets/images/govuk-crest-2x.png');
-} background-repeat: no-repeat; background-position: 50% 0%; background-size: 125px 102px; text-align: center; text-decoration: none; white-space: nowrap; :link, :visited {
-  color: #454a4c;
-} :hover {
-  color: #171819;
-}",
-                                          ],
-                                        },
-                                        "defaultProps": Object {
-                                          "muted": false,
-                                          "noVisitedState": false,
-                                          "textColour": false,
-                                        },
-                                        "displayName": "Styled(styled.a)",
-                                        "foldedComponentIds": Array [
-                                          "sc-htpNat",
-                                        ],
-                                        "propTypes": undefined,
-                                        "render": [Function],
-                                        "styledComponentId": "sc-iwsKbI",
-                                        "target": "a",
-                                        "toString": [Function],
-                                        "warnTooManyClasses": [Function],
-                                        "withComponent": [Function],
-                                      }
-                                    }
-                                    forwardedRef={null}
-                                    href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                    muted={false}
-                                    noVisitedState={false}
-                                    textColour={false}
-                                  >
-                                    <a
-                                      className="c15"
-                                      href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                                      muted={false}
-                                    >
-                                      © Crown copyright
-                                    </a>
-                                  </StyledComponent>
-                                </Styled(styled.a)>
-                              </Copyright>
                             </div>
                           </StyledComponent>
                         </styled.div>

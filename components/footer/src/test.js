@@ -2,6 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import Footer, {
+  FooterWithCopyright,
   FooterWithSingleMetaLink,
   FooterWithMetaLinks,
   FooterWithMetaCustom,
@@ -14,6 +15,10 @@ import Footer, {
 describe('Footer', () => {
   it('matches default snapshot', () => {
     expect(mount(<Footer />)).toMatchSnapshot('Footer');
+  });
+
+  it('matches with copyright snapshot', () => {
+    expect(mount(<FooterWithCopyright />)).toMatchSnapshot('FooterWithCopyright');
   });
 
   it('matches with single meta link snapshot', () => {

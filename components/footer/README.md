@@ -1,5 +1,5 @@
 Footer
-===========
+======
 
 ### Import
 ```js
@@ -12,6 +12,25 @@ Footer
 Simple
 ```jsx
 <Footer />
+```
+
+Footer with Copyright information
+```jsx
+// Import self hosted copyright image
+import crest from './govuk-crest.png';
+
+<Footer
+  copyright={{
+    text: 'Crown copyright',
+    link:
+      'https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/',
+    image: {
+      source: crest,
+      height: 102,
+      width: 125,
+    },
+  }}
+/>;
 ```
 
 Footer with navigation.  There is also the option to provide footer links with, or without React/Reach Router.
@@ -69,7 +88,8 @@ NB <Footer.Link /> is styled extention of @govuk-react/link
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | false | `undefined` | node | Footer navigation links
- `meta` | false | `undefined` | node | Meta text and links
+ `children` |  | ```undefined``` | node | Footer navigation links
+ `copyright` |  | ```undefined``` | shape[object Object] | Footer copyright
+ `meta` |  | ```undefined``` | node | Meta text and links
 
 

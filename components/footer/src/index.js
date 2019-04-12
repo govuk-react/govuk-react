@@ -34,6 +34,25 @@ const FooterContainer = styled('footer')(
  * <Footer />
  * ```
  *
+ * Footer with Copyright information
+ * ```jsx
+ * // Import self hosted copyright image
+ * import crest from './govuk-crest.png';
+ *
+ * <Footer
+ *   copyright={{
+ *     text: 'Crown copyright',
+ *     link:
+ *       'https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/',
+ *     image: {
+ *       source: crest,
+ *       height: 102,
+ *       width: 125,
+ *     },
+ *   }}
+ * />;
+ * ```
+ *
  * Footer with navigation.  There is also the option to provide footer links with, or without React/Reach Router.
  * ```jsx
  * import { Link } from 'react-router-dom';
@@ -87,7 +106,7 @@ const FooterContainer = styled('footer')(
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/footer/_footer.scss
  *
  */
-const Footer = ({ children, meta }) => (
+const Footer = ({ children, copyright, meta }) => (
   <FooterContainer role="contentinfo">
     <WidthContainer>
       {children && (
@@ -96,7 +115,7 @@ const Footer = ({ children, meta }) => (
           <SectionBreak />
         </React.Fragment>
       )}
-      <MetaContainer>{meta}</MetaContainer>
+      <MetaContainer copyright={copyright}>{meta}</MetaContainer>
     </WidthContainer>
   </FooterContainer>
 );
@@ -107,6 +126,18 @@ Footer.propTypes = {
    */
   children: PropTypes.node,
   /**
+   * Footer copyright
+   */
+  copyright: PropTypes.shape({
+    text: PropTypes.string,
+    image: PropTypes.shape({
+      src: PropTypes.string.isRequired,
+      width: PropTypes.number.isRequired,
+      height: PropTypes.number.isRequired,
+    }),
+    link: PropTypes.string,
+  }),
+  /**
    * Meta text and links
    */
   meta: PropTypes.node,
@@ -114,6 +145,7 @@ Footer.propTypes = {
 
 Footer.defaultProps = {
   children: undefined,
+  copyright: undefined,
   meta: undefined,
 };
 
