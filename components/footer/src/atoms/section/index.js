@@ -4,7 +4,7 @@ import { GUTTER, GUTTER_HALF, MEDIA_QUERIES } from '@govuk-react/constants';
 const Section = styled('div')({
   display: 'inline-block',
   marginRight: GUTTER_HALF,
-  marginBottom: `${GUTTER}`,
+  marginBottom: GUTTER,
   marginLeft: GUTTER_HALF,
   verticalAlign: 'top',
 

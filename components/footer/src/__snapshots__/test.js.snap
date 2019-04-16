@@ -125,7 +125,35 @@ exports[`Footer matches default snapshot: Footer 1`] = `
 }
 
 <_default>
-  <Footer>
+  <Footer
+    container={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bdVaJa",
+          "isStatic": false,
+          "lastClassName": "c1",
+          "rules": Array [
+            "max-width: 960px; margin: 0 15px; @media only screen and (min-width: 641px) {
+  margin: 0 30px;
+} @media only screen and (min-width: 1020px) {
+  margin: 0 auto;
+}",
+            [Function],
+          ],
+        },
+        "displayName": "styled.div",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "sc-bdVaJa",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+  >
     <styled.footer
       role="contentinfo"
     >
@@ -145,7 +173,6 @@ exports[`Footer matches default snapshot: Footer 1`] = `
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
   font-size: 16px; line-height: 1.25;
 }",
-                [Function],
                 [Function],
               ],
             },
@@ -583,6 +610,33 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
 
 <FooterWithCopyright>
   <Footer
+    container={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bdVaJa",
+          "isStatic": false,
+          "lastClassName": "c1",
+          "rules": Array [
+            "max-width: 960px; margin: 0 15px; @media only screen and (min-width: 641px) {
+  margin: 0 30px;
+} @media only screen and (min-width: 1020px) {
+  margin: 0 auto;
+}",
+            [Function],
+          ],
+        },
+        "displayName": "styled.div",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "sc-bdVaJa",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
     copyright={
       Object {
         "image": Object {
@@ -614,7 +668,6 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
   font-size: 16px; line-height: 1.25;
 }",
-                [Function],
                 [Function],
               ],
             },
@@ -1017,6 +1070,433 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
 </FooterWithCopyright>
 `;
 
+exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = `
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c3 {
+  margin-right: 15px;
+  margin-bottom: 25px;
+  margin-left: 15px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-basis: 320px;
+  -ms-flex-preferred-size: 320px;
+  flex-basis: 320px;
+}
+
+.c4 {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  vertical-align: top;
+}
+
+.c5 {
+  display: inline-block;
+}
+
+.c0 {
+  border-top: 1px solid #a1acb2;
+  background: #dee0e2;
+  color: #454a4c;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1428571428571428;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+
+.c1 {
+  max-width: 960px;
+  margin: 0 15px;
+  max-width: inherit;
+}
+
+@media print {
+  .c2 {
+    font-family: sans-serif;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c3 {
+    -webkit-flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+}
+
+@media only screen and (min-width:769px) {
+  .c4 {
+    margin-bottom: 0;
+  }
+}
+
+@media print {
+  .c0 {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    padding-top: 40px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c0 {
+    padding-bottom: 25px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .c1 {
+    margin: 0 30px;
+  }
+}
+
+@media only screen and (min-width:1020px) {
+  .c1 {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width:1020px) {
+  .c1 {
+    margin: 0 30px;
+  }
+}
+
+<FooterWithCustomWidth>
+  <Footer
+    container={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-kAzzGY",
+          "isStatic": false,
+          "lastClassName": "c1",
+          "rules": Array [
+            "max-width: 960px; margin: 0 15px; @media only screen and (min-width: 641px) {
+  margin: 0 30px;
+} @media only screen and (min-width: 1020px) {
+  margin: 0 auto;
+}",
+            [Function],
+            "max-width: inherit; @media only screen and (min-width: 1020px) {
+  margin: 0 30px;
+}",
+          ],
+        },
+        "displayName": "Styled(styled.div)",
+        "foldedComponentIds": Array [
+          "sc-bdVaJa",
+        ],
+        "render": [Function],
+        "styledComponentId": "sc-kAzzGY",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+  >
+    <styled.footer
+      role="contentinfo"
+    >
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-cSHVUG",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "border-top: 1px solid #a1acb2; background: #dee0e2; color: #454a4c;",
+                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-size: 14px; line-height: 1.2;
+} font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
+  font-size: 16px; line-height: 1.25;
+}",
+                [Function],
+              ],
+            },
+            "displayName": "styled.footer",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-cSHVUG",
+            "target": "footer",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        role="contentinfo"
+      >
+        <footer
+          className="c0"
+          role="contentinfo"
+        >
+          <Styled(styled.div)>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-kAzzGY",
+                    "isStatic": false,
+                    "lastClassName": "c1",
+                    "rules": Array [
+                      "max-width: 960px; margin: 0 15px; @media only screen and (min-width: 641px) {
+  margin: 0 30px;
+} @media only screen and (min-width: 1020px) {
+  margin: 0 auto;
+}",
+                      [Function],
+                      "max-width: inherit; @media only screen and (min-width: 1020px) {
+  margin: 0 30px;
+}",
+                    ],
+                  },
+                  "displayName": "Styled(styled.div)",
+                  "foldedComponentIds": Array [
+                    "sc-bdVaJa",
+                  ],
+                  "render": [Function],
+                  "styledComponentId": "sc-kAzzGY",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <div
+                className="c1"
+              >
+                <MetaContainer>
+                  <styled.div>
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bZQynM",
+                            "isStatic": true,
+                            "lastClassName": "c2",
+                            "rules": Array [
+                              "display: flex; margin-right: -15px; margin-left: -15px; flex-wrap: wrap; align-items: flex-end; justify-content: center;",
+                              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bZQynM",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                    >
+                      <div
+                        className="c2"
+                      >
+                        <styled.div
+                          grow={true}
+                        >
+                          <StyledComponent
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-gzVnrw",
+                                  "isStatic": false,
+                                  "lastClassName": "c3",
+                                  "rules": Array [
+                                    "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
+                                    [Function],
+                                  ],
+                                },
+                                "defaultProps": Object {
+                                  "grow": false,
+                                },
+                                "displayName": "styled.div",
+                                "foldedComponentIds": Array [],
+                                "propTypes": Object {
+                                  "grow": [Function],
+                                },
+                                "render": [Function],
+                                "styledComponentId": "sc-gzVnrw",
+                                "target": "div",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            grow={true}
+                          >
+                            <div
+                              className="c3"
+                            >
+                              <Licence>
+                                <div>
+                                  <styled.svg
+                                    focusable="false"
+                                    height="17"
+                                    role="presentation"
+                                    viewBox="0 0 483.2 195.7"
+                                    width="41"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <StyledComponent
+                                      focusable="false"
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "sc-htoDjs",
+                                            "isStatic": true,
+                                            "lastClassName": "c4",
+                                            "rules": Array [
+                                              "display: inline-block; margin-right: 10px; margin-bottom: 15px; vertical-align: top; @media only screen and (min-width: 769px) {
+  margin-bottom: 0;
+}",
+                                            ],
+                                          },
+                                          "displayName": "styled.svg",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "sc-htoDjs",
+                                          "target": "svg",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
+                                      height="17"
+                                      role="presentation"
+                                      viewBox="0 0 483.2 195.7"
+                                      width="41"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <svg
+                                        className="c4"
+                                        focusable="false"
+                                        height="17"
+                                        role="presentation"
+                                        viewBox="0 0 483.2 195.7"
+                                        width="41"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+                                          fill="currentColor"
+                                        />
+                                      </svg>
+                                    </StyledComponent>
+                                  </styled.svg>
+                                  <styled.span>
+                                    <StyledComponent
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "sc-dnqmqq",
+                                            "isStatic": true,
+                                            "lastClassName": "c5",
+                                            "rules": Array [
+                                              "display: inline-block;",
+                                            ],
+                                          },
+                                          "displayName": "styled.span",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "sc-dnqmqq",
+                                          "target": "span",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
+                                    >
+                                      <span
+                                        className="c5"
+                                      >
+                                        All content is available under the Open Government Licence v3.0, except where otherwise stated
+                                      </span>
+                                    </StyledComponent>
+                                  </styled.span>
+                                </div>
+                              </Licence>
+                            </div>
+                          </StyledComponent>
+                        </styled.div>
+                      </div>
+                    </StyledComponent>
+                  </styled.div>
+                </MetaContainer>
+              </div>
+            </StyledComponent>
+          </Styled(styled.div)>
+        </footer>
+      </StyledComponent>
+    </styled.footer>
+  </Footer>
+</FooterWithCustomWidth>
+`;
+
 exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
 .c1 {
   max-width: 960px;
@@ -1204,6 +1684,33 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
 
 <FooterWithMetaCustom>
   <Footer
+    container={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bdVaJa",
+          "isStatic": false,
+          "lastClassName": "c1",
+          "rules": Array [
+            "max-width: 960px; margin: 0 15px; @media only screen and (min-width: 641px) {
+  margin: 0 30px;
+} @media only screen and (min-width: 1020px) {
+  margin: 0 auto;
+}",
+            [Function],
+          ],
+        },
+        "displayName": "styled.div",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "sc-bdVaJa",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
     meta={
       <ForwardRef>
         Built by the 
@@ -1234,7 +1741,6 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
   font-size: 16px; line-height: 1.25;
 }",
-                [Function],
                 [Function],
               ],
             },
@@ -1872,6 +2378,33 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
       }
     >
       <Footer
+        container={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c1",
+              "rules": Array [
+                "max-width: 960px; margin: 0 15px; @media only screen and (min-width: 641px) {
+  margin: 0 30px;
+} @media only screen and (min-width: 1020px) {
+  margin: 0 auto;
+}",
+                [Function],
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
         meta={
           <React.Fragment>
             <MetaLinks
@@ -1924,7 +2457,6 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
   font-size: 16px; line-height: 1.25;
 }",
-                    [Function],
                     [Function],
                   ],
                 },
@@ -3123,6 +3655,33 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
       }
     >
       <Footer
+        container={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c1",
+              "rules": Array [
+                "max-width: 960px; margin: 0 15px; @media only screen and (min-width: 641px) {
+  margin: 0 30px;
+} @media only screen and (min-width: 1020px) {
+  margin: 0 auto;
+}",
+                [Function],
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
         meta={
           <MetaLinks
             heading="Support links"
@@ -3165,7 +3724,6 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
   font-size: 16px; line-height: 1.25;
 }",
-                    [Function],
                     [Function],
                   ],
                 },
@@ -4401,6 +4959,33 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
       }
     >
       <Footer
+        container={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c1",
+              "rules": Array [
+                "max-width: 960px; margin: 0 15px; @media only screen and (min-width: 641px) {
+  margin: 0 30px;
+} @media only screen and (min-width: 1020px) {
+  margin: 0 auto;
+}",
+                [Function],
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
         meta={
           <React.Fragment>
             <MetaLinks
@@ -4453,7 +5038,6 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
   font-size: 16px; line-height: 1.25;
 }",
-                    [Function],
                     [Function],
                   ],
                 },
@@ -7342,7 +7926,35 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
         }
       }
     >
-      <Footer>
+      <Footer
+        container={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c1",
+              "rules": Array [
+                "max-width: 960px; margin: 0 15px; @media only screen and (min-width: 641px) {
+  margin: 0 30px;
+} @media only screen and (min-width: 1020px) {
+  margin: 0 auto;
+}",
+                [Function],
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+      >
         <styled.footer
           role="contentinfo"
         >
@@ -7362,7 +7974,6 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
   font-size: 16px; line-height: 1.25;
 }",
-                    [Function],
                     [Function],
                   ],
                 },
@@ -9494,6 +10105,33 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
       }
     >
       <Footer
+        container={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c1",
+              "rules": Array [
+                "max-width: 960px; margin: 0 15px; @media only screen and (min-width: 641px) {
+  margin: 0 30px;
+} @media only screen and (min-width: 1020px) {
+  margin: 0 auto;
+}",
+                [Function],
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
         meta={
           <MetaLinks
             heading="Support links"
@@ -9525,7 +10163,6 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
   font-size: 16px; line-height: 1.25;
 }",
-                    [Function],
                     [Function],
                   ],
                 },
@@ -10369,7 +11006,35 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
 }
 
 <FooterWithSingleNavigationLink>
-  <Footer>
+  <Footer
+    container={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bdVaJa",
+          "isStatic": false,
+          "lastClassName": "c1",
+          "rules": Array [
+            "max-width: 960px; margin: 0 15px; @media only screen and (min-width: 641px) {
+  margin: 0 30px;
+} @media only screen and (min-width: 1020px) {
+  margin: 0 auto;
+}",
+            [Function],
+          ],
+        },
+        "displayName": "styled.div",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "sc-bdVaJa",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+  >
     <styled.footer
       role="contentinfo"
     >
@@ -10389,7 +11054,6 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
   font-size: 16px; line-height: 1.25;
 }",
-                [Function],
                 [Function],
               ],
             },

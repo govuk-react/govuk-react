@@ -1,8 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
-import crest from './govuk-crest.png';
+import styled from 'styled-components';
+import { MEDIA_QUERIES, GUTTER } from '@govuk-react/constants';
 
 import Footer from '.';
+import crest from './govuk-crest.png';
 
 const withRoutes = component => (
   <BrowserRouter>
@@ -67,6 +69,15 @@ const navigation = (
     </Footer.NavigationLinks>
   </Footer.Navigation>
 );
+
+const WideContainer = styled(Footer.WidthContainer)({
+  maxWidth: 'inherit',
+  [MEDIA_QUERIES.MAX]: {
+    margin: `0 ${GUTTER}`,
+  },
+});
+
+export const FooterWithCustomWidth = () => <Footer container={WideContainer} />;
 
 export const FooterWithCopyright = () => <Footer copyright={copyright} />;
 

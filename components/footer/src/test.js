@@ -2,6 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import Footer, {
+  FooterWithCustomWidth,
   FooterWithCopyright,
   FooterWithSingleMetaLink,
   FooterWithMetaLinks,
@@ -15,6 +16,10 @@ import Footer, {
 describe('Footer', () => {
   it('matches default snapshot', () => {
     expect(mount(<Footer />)).toMatchSnapshot('Footer');
+  });
+
+  it('matches with custom width snapshot', () => {
+    expect(mount(<FooterWithCustomWidth />)).toMatchSnapshot('FooterWithCustomWidth');
   });
 
   it('matches with copyright snapshot', () => {

@@ -21,8 +21,7 @@ const FooterContainer = styled('footer')(
     color: `${FOOTER_TEXT}`,
   },
   typography.font({ size: 16 }),
-  spacing.withWhiteSpace({ padding: { size: 7, direction: 'top' } }),
-  spacing.withWhiteSpace({ padding: { size: 5, direction: 'bottom' } })
+  spacing.withWhiteSpace({ padding: [{ size: 7, direction: 'top' }, { size: 5, direction: 'bottom' }] })
 );
 
 /**
@@ -106,9 +105,9 @@ const FooterContainer = styled('footer')(
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/footer/_footer.scss
  *
  */
-const Footer = ({ children, copyright, meta }) => (
-  <FooterContainer role="contentinfo">
-    <WidthContainer>
+const Footer = ({ children, container: Container, copyright, meta, ...props }) => (
+  <FooterContainer role="contentinfo" {...props}>
+    <Container>
       {children && (
         <React.Fragment>
           {children}
@@ -116,7 +115,7 @@ const Footer = ({ children, copyright, meta }) => (
         </React.Fragment>
       )}
       <MetaContainer copyright={copyright}>{meta}</MetaContainer>
-    </WidthContainer>
+    </Container>
   </FooterContainer>
 );
 
@@ -126,7 +125,12 @@ Footer.propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Footer copyright
+   * Override the default footer container component.
+   * `children`, `copyright` and `meta` will be placed inside this component.
+   */
+  container: PropTypes.func,
+  /**
+   * Copyright information
    */
   copyright: PropTypes.shape({
     text: PropTypes.string,
@@ -143,16 +147,18 @@ Footer.propTypes = {
   meta: PropTypes.node,
 };
 
+Footer.Link = Link;
+Footer.Navigation = Navigation;
+Footer.MetaCustom = MetaCustom;
+Footer.MetaLinks = MetaLinks;
+Footer.NavigationLinks = NavigationLinks;
+Footer.WidthContainer = WidthContainer;
+
 Footer.defaultProps = {
   children: undefined,
+  container: Footer.WidthContainer,
   copyright: undefined,
   meta: undefined,
 };
-
-Footer.Link = Link;
-Footer.Navigation = Navigation;
-Footer.NavigationLinks = NavigationLinks;
-Footer.MetaLinks = MetaLinks;
-Footer.MetaCustom = MetaCustom;
 
 export default Footer;

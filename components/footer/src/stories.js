@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import Footer, {
+  FooterWithCustomWidth,
   FooterWithCopyright,
   FooterWithMetaLinks,
   FooterWithMetaCustom,
@@ -18,6 +19,8 @@ const examples = storiesOf('Page/Footer/Examples', module);
 stories.addDecorator(withDocsCustom(ReadMe));
 
 stories.add('Component default', () => <Footer />);
+
+examples.add('With Custom width container (no width limit) ', () => <FooterWithCustomWidth />);
 
 examples.add('With Copyright', () => <FooterWithCopyright />);
 
