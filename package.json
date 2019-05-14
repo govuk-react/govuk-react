@@ -82,7 +82,7 @@
     "flow-bin": "^0.96.0",
     "jest": "^24.4.0",
     "jest-styled-components": "^6.3.1",
-    "lerna": "~3.13.1",
+    "lerna": "~3.14.0",
     "mkdirp-promise": "^5.0.1",
     "prettier": "^1.16.4",
     "prop-types": "^15.6.0",
