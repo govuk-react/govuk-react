@@ -79,7 +79,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.5.1",
     "final-form": "^4.12.0",
-    "flow-bin": "^0.96.0",
+    "flow-bin": "^0.97.0",
     "jest": "^24.4.0",
     "jest-styled-components": "^6.3.1",
     "jest-transform-stub": "^2.0.0",
