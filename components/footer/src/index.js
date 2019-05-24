@@ -58,7 +58,11 @@ const FooterContainer = styled('footer')(
  *
  * <Footer>
  *   <Footer.Navigation>
+<<<<<<< HEAD
  *     <Footer.NavigationLinks heading="Two column list" listColumns={2}>
+=======
+ *     <Footer.NavigationLinks heading="Two column list" listColumns="2">
+>>>>>>> Footer component (#651)
  *       <Footer.Link href="/">Navigation item 1</Footer.Link>
  *       <Footer.Link to="/footer-nav-item-2" as={Link}>Navigation item 2 (Router Link)</Footer.Link>
  *       <Footer.Link href="/">Navigation item 3</Footer.Link>

@@ -1,5 +1,6 @@
 {
   "name": "@govuk-react/footer",
+<<<<<<< HEAD
   "version": "0.7.2",
   "dependencies": {
     "@govuk-react/constants": "^0.7.1",
@@ -8,6 +9,16 @@
     "@govuk-react/lib": "^0.7.1",
     "@govuk-react/link": "^0.7.1",
     "@govuk-react/visually-hidden": "^0.7.1",
+=======
+  "version": "0.7.0",
+  "dependencies": {
+    "@govuk-react/constants": "^0.7.0",
+    "@govuk-react/heading": "^0.7.0",
+    "@govuk-react/icons": "^0.7.0",
+    "@govuk-react/lib": "^0.7.0",
+    "@govuk-react/link": "^0.7.0",
+    "@govuk-react/visually-hidden": "^0.7.0",
+>>>>>>> Footer component (#651)
     "govuk-colours": "^1.0.3"
   },
   "peerDependencies": {
