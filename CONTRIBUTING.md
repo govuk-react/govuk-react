@@ -49,7 +49,7 @@ yarn test:unit
 
 In order to prepare a release:
 
-- ensure you have lerna installed _globally_ (`npm i -g lerna`)
+- ensure you have lerna 2 installed _globally_ (`npm i -g lerna@2`)
 - ensure you have [hub](https://hub.github.com) installed (e.g. `brew install hub`)
 - run `./scripts/release.sh`, you will be asked to choose a semver increment and, if this is the first time running hub, you will be asked for your GitHub credentials
 - you will also be asked for a title and description for the draft release, though this can be left blank and filled in on GitHub later
