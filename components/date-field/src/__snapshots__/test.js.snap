@@ -382,6 +382,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
             onChange={[Function]}
             onFocus={[Function]}
             refs={[Function]}
+            type="number"
             value={Object {}}
           >
             <styled.div>
@@ -1281,6 +1282,7 @@ exports[`DateField should support null value: null value 1`] = `
             onChange={[Function]}
             onFocus={[Function]}
             refs={[Function]}
+            type="number"
             value={null}
           >
             <styled.div>
@@ -2190,6 +2192,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
             onChange={[Function]}
             onFocus={[Function]}
             refs={[Function]}
+            type="number"
             value={
               Object {
                 "day": "1",

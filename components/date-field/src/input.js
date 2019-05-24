@@ -89,6 +89,7 @@ Input.propTypes = {
   onBlur: PropTypes.func.isRequired,
   onFocus: PropTypes.func.isRequired,
   error: PropTypes.bool,
+  type: PropTypes.string,
 };
 
 Input.defaultProps = {
@@ -109,6 +110,7 @@ Input.defaultProps = {
     year: 'Year',
   },
   error: false,
+  type: 'number',
 };
 
 // This component is dependent on multiInputInput HOC so we always export with HOC
