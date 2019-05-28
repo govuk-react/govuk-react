@@ -85,6 +85,15 @@ describe('DateField', () => {
     expect(mount(<DateField hintText={example}>{example}</DateField>).find('div')).toHaveLength(2);
   });
 
+  it('has default input type `number`', () => {
+    const component = shallow(<DateField />)
+    expect(component).toMatchSnapshot()
+  });
+  it('can set input type to `text`', () => {
+    const component = shallow(<DateField input={{type:'text'}} />)
+    expect(component).toMatchSnapshot()
+  });
+
   it('passes `props.children` to the rendered `wrapper` as `children`', () => {
     expect(wrapper.props.children).toBe(props.children);
   });

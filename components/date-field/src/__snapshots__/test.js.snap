@@ -1,5 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`DateField can set input type to \`text\` 1`] = `
+<styled.div>
+  <LabelText />
+  <MultiInputInput
+    defaultValues={
+      Object {
+        "day": undefined,
+        "month": undefined,
+        "year": undefined,
+      }
+    }
+    error={false}
+    names={
+      Object {
+        "day": undefined,
+        "month": undefined,
+        "year": undefined,
+      }
+    }
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value={Object {}}
+  />
+</styled.div>
+`;
+
+exports[`DateField has default input type \`number\` 1`] = `
+<styled.div>
+  <LabelText />
+  <MultiInputInput
+    defaultValues={
+      Object {
+        "day": undefined,
+        "month": undefined,
+        "year": undefined,
+      }
+    }
+    error={false}
+    names={
+      Object {
+        "day": undefined,
+        "month": undefined,
+        "year": undefined,
+      }
+    }
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    value={Object {}}
+  />
+</styled.div>
+`;
+
 exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
 .c1 {
   font-family: "nta",Arial,sans-serif;
