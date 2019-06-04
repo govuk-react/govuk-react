@@ -5292,7 +5292,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 <div
                                   className="c3"
                                 >
-                                  <Styled(Heading)
+                                  <Styled(H2)
                                     size="MEDIUM"
                                   >
                                     <StyledComponent
@@ -5311,7 +5311,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                               [Function],
                                             ],
                                           },
-                                          "displayName": "Styled(Heading)",
+                                          "displayName": "Styled(H2)",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
                                           "styledComponentId": "sc-jzJRlG",
@@ -5324,58 +5324,66 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                       forwardedRef={null}
                                       size="MEDIUM"
                                     >
-                                      <Heading
+                                      <H2
                                         className="c4"
                                         size="MEDIUM"
                                       >
-                                        <styled.h1
+                                        <Heading
+                                          as="h2"
                                           className="c4"
                                           size="MEDIUM"
                                         >
-                                          <StyledComponent
+                                          <styled.h1
+                                            as="h2"
                                             className="c4"
-                                            forwardedComponent={
-                                              Object {
-                                                "$$typeof": Symbol(react.forward_ref),
-                                                "attrs": Array [],
-                                                "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-gZMcBi",
-                                                  "isStatic": false,
-                                                  "lastClassName": "c15",
-                                                  "rules": Array [
-                                                    "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                                                    [Function],
-                                                    "display: block; margin-top: 0;",
-                                                    [Function],
-                                                    [Function],
-                                                  ],
-                                                },
-                                                "displayName": "styled.h1",
-                                                "foldedComponentIds": Array [],
-                                                "render": [Function],
-                                                "styledComponentId": "sc-gZMcBi",
-                                                "target": "h1",
-                                                "toString": [Function],
-                                                "warnTooManyClasses": [Function],
-                                                "withComponent": [Function],
-                                              }
-                                            }
-                                            forwardedRef={null}
                                             size="MEDIUM"
                                           >
-                                            <h1
-                                              className="c4 c5"
+                                            <StyledComponent
+                                              as="h2"
+                                              className="c4"
+                                              forwardedComponent={
+                                                Object {
+                                                  "$$typeof": Symbol(react.forward_ref),
+                                                  "attrs": Array [],
+                                                  "componentStyle": ComponentStyle {
+                                                    "componentId": "sc-gZMcBi",
+                                                    "isStatic": false,
+                                                    "lastClassName": "c15",
+                                                    "rules": Array [
+                                                      "color: #0b0c0c; @media print {
+  color: #000;
+}",
+                                                      [Function],
+                                                      "display: block; margin-top: 0;",
+                                                      [Function],
+                                                      [Function],
+                                                    ],
+                                                  },
+                                                  "displayName": "styled.h1",
+                                                  "foldedComponentIds": Array [],
+                                                  "render": [Function],
+                                                  "styledComponentId": "sc-gZMcBi",
+                                                  "target": "h1",
+                                                  "toString": [Function],
+                                                  "warnTooManyClasses": [Function],
+                                                  "withComponent": [Function],
+                                                }
+                                              }
+                                              forwardedRef={null}
                                               size="MEDIUM"
                                             >
-                                              Two column list
-                                            </h1>
-                                          </StyledComponent>
-                                        </styled.h1>
-                                      </Heading>
+                                              <h2
+                                                className="c4 c5"
+                                                size="MEDIUM"
+                                              >
+                                                Two column list
+                                              </h2>
+                                            </StyledComponent>
+                                          </styled.h1>
+                                        </Heading>
+                                      </H2>
                                     </StyledComponent>
-                                  </Styled(Heading)>
+                                  </Styled(H2)>
                                   <styled.ul
                                     columns={2}
                                     inline={false}
@@ -6412,7 +6420,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 <div
                                   className="c3"
                                 >
-                                  <Styled(Heading)
+                                  <Styled(H2)
                                     size="MEDIUM"
                                   >
                                     <StyledComponent
@@ -6431,7 +6439,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                               [Function],
                                             ],
                                           },
-                                          "displayName": "Styled(Heading)",
+                                          "displayName": "Styled(H2)",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
                                           "styledComponentId": "sc-jzJRlG",
@@ -6444,58 +6452,66 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                       forwardedRef={null}
                                       size="MEDIUM"
                                     >
-                                      <Heading
+                                      <H2
                                         className="c4"
                                         size="MEDIUM"
                                       >
-                                        <styled.h1
+                                        <Heading
+                                          as="h2"
                                           className="c4"
                                           size="MEDIUM"
                                         >
-                                          <StyledComponent
+                                          <styled.h1
+                                            as="h2"
                                             className="c4"
-                                            forwardedComponent={
-                                              Object {
-                                                "$$typeof": Symbol(react.forward_ref),
-                                                "attrs": Array [],
-                                                "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-gZMcBi",
-                                                  "isStatic": false,
-                                                  "lastClassName": "c15",
-                                                  "rules": Array [
-                                                    "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                                                    [Function],
-                                                    "display: block; margin-top: 0;",
-                                                    [Function],
-                                                    [Function],
-                                                  ],
-                                                },
-                                                "displayName": "styled.h1",
-                                                "foldedComponentIds": Array [],
-                                                "render": [Function],
-                                                "styledComponentId": "sc-gZMcBi",
-                                                "target": "h1",
-                                                "toString": [Function],
-                                                "warnTooManyClasses": [Function],
-                                                "withComponent": [Function],
-                                              }
-                                            }
-                                            forwardedRef={null}
                                             size="MEDIUM"
                                           >
-                                            <h1
-                                              className="c4 c5"
+                                            <StyledComponent
+                                              as="h2"
+                                              className="c4"
+                                              forwardedComponent={
+                                                Object {
+                                                  "$$typeof": Symbol(react.forward_ref),
+                                                  "attrs": Array [],
+                                                  "componentStyle": ComponentStyle {
+                                                    "componentId": "sc-gZMcBi",
+                                                    "isStatic": false,
+                                                    "lastClassName": "c15",
+                                                    "rules": Array [
+                                                      "color: #0b0c0c; @media print {
+  color: #000;
+}",
+                                                      [Function],
+                                                      "display: block; margin-top: 0;",
+                                                      [Function],
+                                                      [Function],
+                                                    ],
+                                                  },
+                                                  "displayName": "styled.h1",
+                                                  "foldedComponentIds": Array [],
+                                                  "render": [Function],
+                                                  "styledComponentId": "sc-gZMcBi",
+                                                  "target": "h1",
+                                                  "toString": [Function],
+                                                  "warnTooManyClasses": [Function],
+                                                  "withComponent": [Function],
+                                                }
+                                              }
+                                              forwardedRef={null}
                                               size="MEDIUM"
                                             >
-                                              Single column list
-                                            </h1>
-                                          </StyledComponent>
-                                        </styled.h1>
-                                      </Heading>
+                                              <h2
+                                                className="c4 c5"
+                                                size="MEDIUM"
+                                              >
+                                                Single column list
+                                              </h2>
+                                            </StyledComponent>
+                                          </styled.h1>
+                                        </Heading>
+                                      </H2>
                                     </StyledComponent>
-                                  </Styled(Heading)>
+                                  </Styled(H2)>
                                   <styled.ul
                                     columns={0}
                                     inline={false}
@@ -8552,7 +8568,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                 <div
                                   className="c3"
                                 >
-                                  <Styled(Heading)
+                                  <Styled(H2)
                                     size="MEDIUM"
                                   >
                                     <StyledComponent
@@ -8571,7 +8587,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                               [Function],
                                             ],
                                           },
-                                          "displayName": "Styled(Heading)",
+                                          "displayName": "Styled(H2)",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
                                           "styledComponentId": "sc-jzJRlG",
@@ -8584,58 +8600,66 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                       forwardedRef={null}
                                       size="MEDIUM"
                                     >
-                                      <Heading
+                                      <H2
                                         className="c4"
                                         size="MEDIUM"
                                       >
-                                        <styled.h1
+                                        <Heading
+                                          as="h2"
                                           className="c4"
                                           size="MEDIUM"
                                         >
-                                          <StyledComponent
+                                          <styled.h1
+                                            as="h2"
                                             className="c4"
-                                            forwardedComponent={
-                                              Object {
-                                                "$$typeof": Symbol(react.forward_ref),
-                                                "attrs": Array [],
-                                                "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-gZMcBi",
-                                                  "isStatic": false,
-                                                  "lastClassName": "c5",
-                                                  "rules": Array [
-                                                    "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                                                    [Function],
-                                                    "display: block; margin-top: 0;",
-                                                    [Function],
-                                                    [Function],
-                                                  ],
-                                                },
-                                                "displayName": "styled.h1",
-                                                "foldedComponentIds": Array [],
-                                                "render": [Function],
-                                                "styledComponentId": "sc-gZMcBi",
-                                                "target": "h1",
-                                                "toString": [Function],
-                                                "warnTooManyClasses": [Function],
-                                                "withComponent": [Function],
-                                              }
-                                            }
-                                            forwardedRef={null}
                                             size="MEDIUM"
                                           >
-                                            <h1
-                                              className="c4 c5"
+                                            <StyledComponent
+                                              as="h2"
+                                              className="c4"
+                                              forwardedComponent={
+                                                Object {
+                                                  "$$typeof": Symbol(react.forward_ref),
+                                                  "attrs": Array [],
+                                                  "componentStyle": ComponentStyle {
+                                                    "componentId": "sc-gZMcBi",
+                                                    "isStatic": false,
+                                                    "lastClassName": "c5",
+                                                    "rules": Array [
+                                                      "color: #0b0c0c; @media print {
+  color: #000;
+}",
+                                                      [Function],
+                                                      "display: block; margin-top: 0;",
+                                                      [Function],
+                                                      [Function],
+                                                    ],
+                                                  },
+                                                  "displayName": "styled.h1",
+                                                  "foldedComponentIds": Array [],
+                                                  "render": [Function],
+                                                  "styledComponentId": "sc-gZMcBi",
+                                                  "target": "h1",
+                                                  "toString": [Function],
+                                                  "warnTooManyClasses": [Function],
+                                                  "withComponent": [Function],
+                                                }
+                                              }
+                                              forwardedRef={null}
                                               size="MEDIUM"
                                             >
-                                              Two column list
-                                            </h1>
-                                          </StyledComponent>
-                                        </styled.h1>
-                                      </Heading>
+                                              <h2
+                                                className="c4 c5"
+                                                size="MEDIUM"
+                                              >
+                                                Two column list
+                                              </h2>
+                                            </StyledComponent>
+                                          </styled.h1>
+                                        </Heading>
+                                      </H2>
                                     </StyledComponent>
-                                  </Styled(Heading)>
+                                  </Styled(H2)>
                                   <styled.ul
                                     columns={2}
                                     inline={false}
@@ -9672,7 +9696,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                 <div
                                   className="c3"
                                 >
-                                  <Styled(Heading)
+                                  <Styled(H2)
                                     size="MEDIUM"
                                   >
                                     <StyledComponent
@@ -9691,7 +9715,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                               [Function],
                                             ],
                                           },
-                                          "displayName": "Styled(Heading)",
+                                          "displayName": "Styled(H2)",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
                                           "styledComponentId": "sc-jzJRlG",
@@ -9704,58 +9728,66 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                       forwardedRef={null}
                                       size="MEDIUM"
                                     >
-                                      <Heading
+                                      <H2
                                         className="c4"
                                         size="MEDIUM"
                                       >
-                                        <styled.h1
+                                        <Heading
+                                          as="h2"
                                           className="c4"
                                           size="MEDIUM"
                                         >
-                                          <StyledComponent
+                                          <styled.h1
+                                            as="h2"
                                             className="c4"
-                                            forwardedComponent={
-                                              Object {
-                                                "$$typeof": Symbol(react.forward_ref),
-                                                "attrs": Array [],
-                                                "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-gZMcBi",
-                                                  "isStatic": false,
-                                                  "lastClassName": "c5",
-                                                  "rules": Array [
-                                                    "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                                                    [Function],
-                                                    "display: block; margin-top: 0;",
-                                                    [Function],
-                                                    [Function],
-                                                  ],
-                                                },
-                                                "displayName": "styled.h1",
-                                                "foldedComponentIds": Array [],
-                                                "render": [Function],
-                                                "styledComponentId": "sc-gZMcBi",
-                                                "target": "h1",
-                                                "toString": [Function],
-                                                "warnTooManyClasses": [Function],
-                                                "withComponent": [Function],
-                                              }
-                                            }
-                                            forwardedRef={null}
                                             size="MEDIUM"
                                           >
-                                            <h1
-                                              className="c4 c5"
+                                            <StyledComponent
+                                              as="h2"
+                                              className="c4"
+                                              forwardedComponent={
+                                                Object {
+                                                  "$$typeof": Symbol(react.forward_ref),
+                                                  "attrs": Array [],
+                                                  "componentStyle": ComponentStyle {
+                                                    "componentId": "sc-gZMcBi",
+                                                    "isStatic": false,
+                                                    "lastClassName": "c5",
+                                                    "rules": Array [
+                                                      "color: #0b0c0c; @media print {
+  color: #000;
+}",
+                                                      [Function],
+                                                      "display: block; margin-top: 0;",
+                                                      [Function],
+                                                      [Function],
+                                                    ],
+                                                  },
+                                                  "displayName": "styled.h1",
+                                                  "foldedComponentIds": Array [],
+                                                  "render": [Function],
+                                                  "styledComponentId": "sc-gZMcBi",
+                                                  "target": "h1",
+                                                  "toString": [Function],
+                                                  "warnTooManyClasses": [Function],
+                                                  "withComponent": [Function],
+                                                }
+                                              }
+                                              forwardedRef={null}
                                               size="MEDIUM"
                                             >
-                                              Single column list
-                                            </h1>
-                                          </StyledComponent>
-                                        </styled.h1>
-                                      </Heading>
+                                              <h2
+                                                className="c4 c5"
+                                                size="MEDIUM"
+                                              >
+                                                Single column list
+                                              </h2>
+                                            </StyledComponent>
+                                          </styled.h1>
+                                        </Heading>
+                                      </H2>
                                     </StyledComponent>
-                                  </Styled(Heading)>
+                                  </Styled(H2)>
                                   <styled.ul
                                     columns={0}
                                     inline={false}
@@ -11927,7 +11959,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                             <div
                               className="c3"
                             >
-                              <Styled(Heading)
+                              <Styled(H2)
                                 size="MEDIUM"
                               >
                                 <StyledComponent
@@ -11946,7 +11978,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                           [Function],
                                         ],
                                       },
-                                      "displayName": "Styled(Heading)",
+                                      "displayName": "Styled(H2)",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
                                       "styledComponentId": "sc-jzJRlG",
@@ -11959,58 +11991,66 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                   forwardedRef={null}
                                   size="MEDIUM"
                                 >
-                                  <Heading
+                                  <H2
                                     className="c4"
                                     size="MEDIUM"
                                   >
-                                    <styled.h1
+                                    <Heading
+                                      as="h2"
                                       className="c4"
                                       size="MEDIUM"
                                     >
-                                      <StyledComponent
+                                      <styled.h1
+                                        as="h2"
                                         className="c4"
-                                        forwardedComponent={
-                                          Object {
-                                            "$$typeof": Symbol(react.forward_ref),
-                                            "attrs": Array [],
-                                            "componentStyle": ComponentStyle {
-                                              "componentId": "sc-gZMcBi",
-                                              "isStatic": false,
-                                              "lastClassName": "c5",
-                                              "rules": Array [
-                                                "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                                                [Function],
-                                                "display: block; margin-top: 0;",
-                                                [Function],
-                                                [Function],
-                                              ],
-                                            },
-                                            "displayName": "styled.h1",
-                                            "foldedComponentIds": Array [],
-                                            "render": [Function],
-                                            "styledComponentId": "sc-gZMcBi",
-                                            "target": "h1",
-                                            "toString": [Function],
-                                            "warnTooManyClasses": [Function],
-                                            "withComponent": [Function],
-                                          }
-                                        }
-                                        forwardedRef={null}
                                         size="MEDIUM"
                                       >
-                                        <h1
-                                          className="c4 c5"
+                                        <StyledComponent
+                                          as="h2"
+                                          className="c4"
+                                          forwardedComponent={
+                                            Object {
+                                              "$$typeof": Symbol(react.forward_ref),
+                                              "attrs": Array [],
+                                              "componentStyle": ComponentStyle {
+                                                "componentId": "sc-gZMcBi",
+                                                "isStatic": false,
+                                                "lastClassName": "c5",
+                                                "rules": Array [
+                                                  "color: #0b0c0c; @media print {
+  color: #000;
+}",
+                                                  [Function],
+                                                  "display: block; margin-top: 0;",
+                                                  [Function],
+                                                  [Function],
+                                                ],
+                                              },
+                                              "displayName": "styled.h1",
+                                              "foldedComponentIds": Array [],
+                                              "render": [Function],
+                                              "styledComponentId": "sc-gZMcBi",
+                                              "target": "h1",
+                                              "toString": [Function],
+                                              "warnTooManyClasses": [Function],
+                                              "withComponent": [Function],
+                                            }
+                                          }
+                                          forwardedRef={null}
                                           size="MEDIUM"
                                         >
-                                          Single column list
-                                        </h1>
-                                      </StyledComponent>
-                                    </styled.h1>
-                                  </Heading>
+                                          <h2
+                                            className="c4 c5"
+                                            size="MEDIUM"
+                                          >
+                                            Single column list
+                                          </h2>
+                                        </StyledComponent>
+                                      </styled.h1>
+                                    </Heading>
+                                  </H2>
                                 </StyledComponent>
-                              </Styled(Heading)>
+                              </Styled(H2)>
                               <styled.ul
                                 columns={0}
                                 inline={false}
