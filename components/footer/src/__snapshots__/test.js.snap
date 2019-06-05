@@ -6,6 +6,47 @@ exports[`Footer matches default snapshot: Footer 1`] = `
   margin: 0 15px;
 }
 
+.c7 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c7:link {
+  color: #005ea5;
+}
+
+.c7:visited {
+  color: #4c2c92;
+}
+
+.c7:hover {
+  color: #2b8cc4;
+}
+
+.c7:active {
+  color: #2b8cc4;
+}
+
+.c7:focus {
+  color: #0b0c0c;
+}
+
+.c7:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+  background-color: #ffbf47;
+}
+
+.c6:link,
+.c6:visited {
+  color: #454a4c;
+}
+
+.c6:hover {
+  color: #171819;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -75,6 +116,22 @@ exports[`Footer matches default snapshot: Footer 1`] = `
 @media only screen and (min-width:1020px) {
   .c1 {
     margin: 0 auto;
+  }
+}
+
+@media print {
+  .c7 {
+    font-family: sans-serif;
+  }
+}
+
+@media print {
+  .c7[href^="/"]::after,
+  .c7[href^="http://"]::after,
+  .c7[href^="https://"]::after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    word-wrap: break-word;
   }
 }
 
@@ -387,7 +444,141 @@ exports[`Footer matches default snapshot: Footer 1`] = `
                                       <span
                                         className="c5"
                                       >
-                                        All content is available under the Open Government Licence v3.0, except where otherwise stated
+                                        All content is available under the
+                                         
+                                        <FooterLink
+                                          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                          rel="license"
+                                        >
+                                          <Styled(LinkDocumented)
+                                            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                            rel="license"
+                                          >
+                                            <StyledComponent
+                                              forwardedComponent={
+                                                Object {
+                                                  "$$typeof": Symbol(react.forward_ref),
+                                                  "attrs": Array [],
+                                                  "componentStyle": ComponentStyle {
+                                                    "componentId": "sc-bxivhb",
+                                                    "isStatic": true,
+                                                    "lastClassName": "c6",
+                                                    "rules": Array [
+                                                      ":link, :visited {
+  color: #454a4c;
+} :hover {
+  color: #171819;
+}",
+                                                    ],
+                                                  },
+                                                  "displayName": "Styled(LinkDocumented)",
+                                                  "foldedComponentIds": Array [],
+                                                  "render": [Function],
+                                                  "styledComponentId": "sc-bxivhb",
+                                                  "target": [Function],
+                                                  "toString": [Function],
+                                                  "warnTooManyClasses": [Function],
+                                                  "withComponent": [Function],
+                                                }
+                                              }
+                                              forwardedRef={null}
+                                              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                              rel="license"
+                                            >
+                                              <LinkDocumented
+                                                className="c6"
+                                                href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                muted={false}
+                                                noVisitedState={false}
+                                                rel="license"
+                                                textColour={false}
+                                              >
+                                                <styled.a
+                                                  className="c6"
+                                                  href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                  muted={false}
+                                                  noVisitedState={false}
+                                                  rel="license"
+                                                  textColour={false}
+                                                >
+                                                  <StyledComponent
+                                                    className="c6"
+                                                    forwardedComponent={
+                                                      Object {
+                                                        "$$typeof": Symbol(react.forward_ref),
+                                                        "attrs": Array [],
+                                                        "componentStyle": ComponentStyle {
+                                                          "componentId": "sc-htpNat",
+                                                          "isStatic": false,
+                                                          "lastClassName": "c7",
+                                                          "rules": Array [
+                                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                                                            ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                                                            "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                                                            "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                                                            [Function],
+                                                            [Function],
+                                                            [Function],
+                                                          ],
+                                                        },
+                                                        "defaultProps": Object {
+                                                          "muted": false,
+                                                          "noVisitedState": false,
+                                                          "textColour": false,
+                                                        },
+                                                        "displayName": "styled.a",
+                                                        "foldedComponentIds": Array [],
+                                                        "propTypes": undefined,
+                                                        "render": [Function],
+                                                        "styledComponentId": "sc-htpNat",
+                                                        "target": "a",
+                                                        "toString": [Function],
+                                                        "warnTooManyClasses": [Function],
+                                                        "withComponent": [Function],
+                                                      }
+                                                    }
+                                                    forwardedRef={null}
+                                                    href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                    muted={false}
+                                                    noVisitedState={false}
+                                                    rel="license"
+                                                    textColour={false}
+                                                  >
+                                                    <a
+                                                      className="c6 c7"
+                                                      href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                      muted={false}
+                                                      rel="license"
+                                                    >
+                                                      Open Government Licence v3.0
+                                                    </a>
+                                                  </StyledComponent>
+                                                </styled.a>
+                                              </LinkDocumented>
+                                            </StyledComponent>
+                                          </Styled(LinkDocumented)>
+                                        </FooterLink>
+                                        , except where otherwise stated
                                       </span>
                                     </StyledComponent>
                                   </styled.span>
@@ -414,6 +605,47 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
 .c1 {
   max-width: 960px;
   margin: 0 15px;
+}
+
+.c7 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c7:link {
+  color: #005ea5;
+}
+
+.c7:visited {
+  color: #4c2c92;
+}
+
+.c7:hover {
+  color: #2b8cc4;
+}
+
+.c7:active {
+  color: #2b8cc4;
+}
+
+.c7:focus {
+  color: #0b0c0c;
+}
+
+.c7:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+  background-color: #ffbf47;
+}
+
+.c6:link,
+.c6:visited {
+  color: #454a4c;
+}
+
+.c6:hover {
+  color: #171819;
 }
 
 .c2 {
@@ -451,7 +683,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
   flex-basis: 320px;
 }
 
-.c6 {
+.c8 {
   margin-right: 15px;
   margin-bottom: 25px;
   margin-left: 15px;
@@ -468,7 +700,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
   display: inline-block;
 }
 
-.c7 {
+.c9 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -485,38 +717,38 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
   background-size: 125px 102px;
 }
 
-.c7:link {
+.c9:link {
   color: #005ea5;
 }
 
-.c7:visited {
+.c9:visited {
   color: #4c2c92;
 }
 
-.c7:hover {
+.c9:hover {
   color: #2b8cc4;
 }
 
-.c7:active {
+.c9:active {
   color: #2b8cc4;
 }
 
-.c7:focus {
+.c9:focus {
   color: #0b0c0c;
 }
 
-.c7:focus {
+.c9:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
   background-color: #ffbf47;
 }
 
-.c7:link,
-.c7:visited {
+.c9:link,
+.c9:visited {
   color: #454a4c;
 }
 
-.c7:hover {
+.c9:hover {
   color: #171819;
 }
 
@@ -547,6 +779,22 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
 }
 
 @media print {
+  .c7 {
+    font-family: sans-serif;
+  }
+}
+
+@media print {
+  .c7[href^="/"]::after,
+  .c7[href^="http://"]::after,
+  .c7[href^="https://"]::after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    word-wrap: break-word;
+  }
+}
+
+@media print {
   .c2 {
     font-family: sans-serif;
   }
@@ -567,15 +815,15 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
 }
 
 @media print {
-  .c7 {
+  .c9 {
     font-family: sans-serif;
   }
 }
 
 @media print {
-  .c7[href^="/"]::after,
-  .c7[href^="http://"]::after,
-  .c7[href^="https://"]::after {
+  .c9[href^="/"]::after,
+  .c9[href^="http://"]::after,
+  .c9[href^="https://"]::after {
     content: " (" attr(href) ")";
     font-size: 90%;
     word-wrap: break-word;
@@ -778,7 +1026,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-gzVnrw",
                                   "isStatic": false,
-                                  "lastClassName": "c6",
+                                  "lastClassName": "c8",
                                   "rules": Array [
                                     "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
                                     [Function],
@@ -894,7 +1142,141 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                                       <span
                                         className="c5"
                                       >
-                                        All content is available under the Open Government Licence v3.0, except where otherwise stated
+                                        All content is available under the
+                                         
+                                        <FooterLink
+                                          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                          rel="license"
+                                        >
+                                          <Styled(LinkDocumented)
+                                            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                            rel="license"
+                                          >
+                                            <StyledComponent
+                                              forwardedComponent={
+                                                Object {
+                                                  "$$typeof": Symbol(react.forward_ref),
+                                                  "attrs": Array [],
+                                                  "componentStyle": ComponentStyle {
+                                                    "componentId": "sc-bxivhb",
+                                                    "isStatic": true,
+                                                    "lastClassName": "c6",
+                                                    "rules": Array [
+                                                      ":link, :visited {
+  color: #454a4c;
+} :hover {
+  color: #171819;
+}",
+                                                    ],
+                                                  },
+                                                  "displayName": "Styled(LinkDocumented)",
+                                                  "foldedComponentIds": Array [],
+                                                  "render": [Function],
+                                                  "styledComponentId": "sc-bxivhb",
+                                                  "target": [Function],
+                                                  "toString": [Function],
+                                                  "warnTooManyClasses": [Function],
+                                                  "withComponent": [Function],
+                                                }
+                                              }
+                                              forwardedRef={null}
+                                              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                              rel="license"
+                                            >
+                                              <LinkDocumented
+                                                className="c6"
+                                                href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                muted={false}
+                                                noVisitedState={false}
+                                                rel="license"
+                                                textColour={false}
+                                              >
+                                                <styled.a
+                                                  className="c6"
+                                                  href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                  muted={false}
+                                                  noVisitedState={false}
+                                                  rel="license"
+                                                  textColour={false}
+                                                >
+                                                  <StyledComponent
+                                                    className="c6"
+                                                    forwardedComponent={
+                                                      Object {
+                                                        "$$typeof": Symbol(react.forward_ref),
+                                                        "attrs": Array [],
+                                                        "componentStyle": ComponentStyle {
+                                                          "componentId": "sc-htpNat",
+                                                          "isStatic": false,
+                                                          "lastClassName": "c7",
+                                                          "rules": Array [
+                                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                                                            ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                                                            "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                                                            "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                                                            [Function],
+                                                            [Function],
+                                                            [Function],
+                                                          ],
+                                                        },
+                                                        "defaultProps": Object {
+                                                          "muted": false,
+                                                          "noVisitedState": false,
+                                                          "textColour": false,
+                                                        },
+                                                        "displayName": "styled.a",
+                                                        "foldedComponentIds": Array [],
+                                                        "propTypes": undefined,
+                                                        "render": [Function],
+                                                        "styledComponentId": "sc-htpNat",
+                                                        "target": "a",
+                                                        "toString": [Function],
+                                                        "warnTooManyClasses": [Function],
+                                                        "withComponent": [Function],
+                                                      }
+                                                    }
+                                                    forwardedRef={null}
+                                                    href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                    muted={false}
+                                                    noVisitedState={false}
+                                                    rel="license"
+                                                    textColour={false}
+                                                  >
+                                                    <a
+                                                      className="c6 c7"
+                                                      href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                      muted={false}
+                                                      rel="license"
+                                                    >
+                                                      Open Government Licence v3.0
+                                                    </a>
+                                                  </StyledComponent>
+                                                </styled.a>
+                                              </LinkDocumented>
+                                            </StyledComponent>
+                                          </Styled(LinkDocumented)>
+                                        </FooterLink>
+                                        , except where otherwise stated
                                       </span>
                                     </StyledComponent>
                                   </styled.span>
@@ -914,7 +1296,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-gzVnrw",
                                   "isStatic": false,
-                                  "lastClassName": "c6",
+                                  "lastClassName": "c8",
                                   "rules": Array [
                                     "margin-right: 15px; margin-bottom: 25px; margin-left: 15px;",
                                     [Function],
@@ -940,7 +1322,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                             grow={false}
                           >
                             <div
-                              className="c6"
+                              className="c8"
                             >
                               <Copyright
                                 image={
@@ -974,7 +1356,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                                         "componentStyle": ComponentStyle {
                                           "componentId": "sc-iwsKbI",
                                           "isStatic": false,
-                                          "lastClassName": "c7",
+                                          "lastClassName": "c9",
                                           "rules": Array [
                                             "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-family: sans-serif;
@@ -1043,7 +1425,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                                     textColour={false}
                                   >
                                     <a
-                                      className="c7"
+                                      className="c9"
                                       href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
                                       muted={false}
                                     >
@@ -1071,6 +1453,47 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
 `;
 
 exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = `
+.c7 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c7:link {
+  color: #005ea5;
+}
+
+.c7:visited {
+  color: #4c2c92;
+}
+
+.c7:hover {
+  color: #2b8cc4;
+}
+
+.c7:active {
+  color: #2b8cc4;
+}
+
+.c7:focus {
+  color: #0b0c0c;
+}
+
+.c7:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+  background-color: #ffbf47;
+}
+
+.c6:link,
+.c6:visited {
+  color: #454a4c;
+}
+
+.c6:hover {
+  color: #171819;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1135,6 +1558,22 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
   max-width: 960px;
   margin: 0 15px;
   max-width: inherit;
+}
+
+@media print {
+  .c7 {
+    font-family: sans-serif;
+  }
+}
+
+@media print {
+  .c7[href^="/"]::after,
+  .c7[href^="http://"]::after,
+  .c7[href^="https://"]::after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    word-wrap: break-word;
+  }
 }
 
 @media print {
@@ -1474,7 +1913,141 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
                                       <span
                                         className="c5"
                                       >
-                                        All content is available under the Open Government Licence v3.0, except where otherwise stated
+                                        All content is available under the
+                                         
+                                        <FooterLink
+                                          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                          rel="license"
+                                        >
+                                          <Styled(LinkDocumented)
+                                            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                            rel="license"
+                                          >
+                                            <StyledComponent
+                                              forwardedComponent={
+                                                Object {
+                                                  "$$typeof": Symbol(react.forward_ref),
+                                                  "attrs": Array [],
+                                                  "componentStyle": ComponentStyle {
+                                                    "componentId": "sc-bxivhb",
+                                                    "isStatic": true,
+                                                    "lastClassName": "c6",
+                                                    "rules": Array [
+                                                      ":link, :visited {
+  color: #454a4c;
+} :hover {
+  color: #171819;
+}",
+                                                    ],
+                                                  },
+                                                  "displayName": "Styled(LinkDocumented)",
+                                                  "foldedComponentIds": Array [],
+                                                  "render": [Function],
+                                                  "styledComponentId": "sc-bxivhb",
+                                                  "target": [Function],
+                                                  "toString": [Function],
+                                                  "warnTooManyClasses": [Function],
+                                                  "withComponent": [Function],
+                                                }
+                                              }
+                                              forwardedRef={null}
+                                              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                              rel="license"
+                                            >
+                                              <LinkDocumented
+                                                className="c6"
+                                                href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                muted={false}
+                                                noVisitedState={false}
+                                                rel="license"
+                                                textColour={false}
+                                              >
+                                                <styled.a
+                                                  className="c6"
+                                                  href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                  muted={false}
+                                                  noVisitedState={false}
+                                                  rel="license"
+                                                  textColour={false}
+                                                >
+                                                  <StyledComponent
+                                                    className="c6"
+                                                    forwardedComponent={
+                                                      Object {
+                                                        "$$typeof": Symbol(react.forward_ref),
+                                                        "attrs": Array [],
+                                                        "componentStyle": ComponentStyle {
+                                                          "componentId": "sc-htpNat",
+                                                          "isStatic": false,
+                                                          "lastClassName": "c7",
+                                                          "rules": Array [
+                                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                                                            ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                                                            "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                                                            "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                                                            [Function],
+                                                            [Function],
+                                                            [Function],
+                                                          ],
+                                                        },
+                                                        "defaultProps": Object {
+                                                          "muted": false,
+                                                          "noVisitedState": false,
+                                                          "textColour": false,
+                                                        },
+                                                        "displayName": "styled.a",
+                                                        "foldedComponentIds": Array [],
+                                                        "propTypes": undefined,
+                                                        "render": [Function],
+                                                        "styledComponentId": "sc-htpNat",
+                                                        "target": "a",
+                                                        "toString": [Function],
+                                                        "warnTooManyClasses": [Function],
+                                                        "withComponent": [Function],
+                                                      }
+                                                    }
+                                                    forwardedRef={null}
+                                                    href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                    muted={false}
+                                                    noVisitedState={false}
+                                                    rel="license"
+                                                    textColour={false}
+                                                  >
+                                                    <a
+                                                      className="c6 c7"
+                                                      href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                      muted={false}
+                                                      rel="license"
+                                                    >
+                                                      Open Government Licence v3.0
+                                                    </a>
+                                                  </StyledComponent>
+                                                </styled.a>
+                                              </LinkDocumented>
+                                            </StyledComponent>
+                                          </Styled(LinkDocumented)>
+                                        </FooterLink>
+                                        , except where otherwise stated
                                       </span>
                                     </StyledComponent>
                                   </styled.span>
@@ -2113,7 +2686,141 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
                                       <span
                                         className="c8"
                                       >
-                                        All content is available under the Open Government Licence v3.0, except where otherwise stated
+                                        All content is available under the
+                                         
+                                        <FooterLink
+                                          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                          rel="license"
+                                        >
+                                          <Styled(LinkDocumented)
+                                            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                            rel="license"
+                                          >
+                                            <StyledComponent
+                                              forwardedComponent={
+                                                Object {
+                                                  "$$typeof": Symbol(react.forward_ref),
+                                                  "attrs": Array [],
+                                                  "componentStyle": ComponentStyle {
+                                                    "componentId": "sc-bxivhb",
+                                                    "isStatic": true,
+                                                    "lastClassName": "c5",
+                                                    "rules": Array [
+                                                      ":link, :visited {
+  color: #454a4c;
+} :hover {
+  color: #171819;
+}",
+                                                    ],
+                                                  },
+                                                  "displayName": "Styled(LinkDocumented)",
+                                                  "foldedComponentIds": Array [],
+                                                  "render": [Function],
+                                                  "styledComponentId": "sc-bxivhb",
+                                                  "target": [Function],
+                                                  "toString": [Function],
+                                                  "warnTooManyClasses": [Function],
+                                                  "withComponent": [Function],
+                                                }
+                                              }
+                                              forwardedRef={null}
+                                              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                              rel="license"
+                                            >
+                                              <LinkDocumented
+                                                className="c5"
+                                                href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                muted={false}
+                                                noVisitedState={false}
+                                                rel="license"
+                                                textColour={false}
+                                              >
+                                                <styled.a
+                                                  className="c5"
+                                                  href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                  muted={false}
+                                                  noVisitedState={false}
+                                                  rel="license"
+                                                  textColour={false}
+                                                >
+                                                  <StyledComponent
+                                                    className="c5"
+                                                    forwardedComponent={
+                                                      Object {
+                                                        "$$typeof": Symbol(react.forward_ref),
+                                                        "attrs": Array [],
+                                                        "componentStyle": ComponentStyle {
+                                                          "componentId": "sc-htpNat",
+                                                          "isStatic": false,
+                                                          "lastClassName": "c6",
+                                                          "rules": Array [
+                                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                                                            ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                                                            "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                                                            "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                                                            [Function],
+                                                            [Function],
+                                                            [Function],
+                                                          ],
+                                                        },
+                                                        "defaultProps": Object {
+                                                          "muted": false,
+                                                          "noVisitedState": false,
+                                                          "textColour": false,
+                                                        },
+                                                        "displayName": "styled.a",
+                                                        "foldedComponentIds": Array [],
+                                                        "propTypes": undefined,
+                                                        "render": [Function],
+                                                        "styledComponentId": "sc-htpNat",
+                                                        "target": "a",
+                                                        "toString": [Function],
+                                                        "warnTooManyClasses": [Function],
+                                                        "withComponent": [Function],
+                                                      }
+                                                    }
+                                                    forwardedRef={null}
+                                                    href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                    muted={false}
+                                                    noVisitedState={false}
+                                                    rel="license"
+                                                    textColour={false}
+                                                  >
+                                                    <a
+                                                      className="c5 c6"
+                                                      href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                      muted={false}
+                                                      rel="license"
+                                                    >
+                                                      Open Government Licence v3.0
+                                                    </a>
+                                                  </StyledComponent>
+                                                </styled.a>
+                                              </LinkDocumented>
+                                            </StyledComponent>
+                                          </Styled(LinkDocumented)>
+                                        </FooterLink>
+                                        , except where otherwise stated
                                       </span>
                                     </StyledComponent>
                                   </styled.span>
@@ -3451,7 +4158,141 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                           <span
                                             className="c12"
                                           >
-                                            All content is available under the Open Government Licence v3.0, except where otherwise stated
+                                            All content is available under the
+                                             
+                                            <FooterLink
+                                              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                              rel="license"
+                                            >
+                                              <Styled(LinkDocumented)
+                                                href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                rel="license"
+                                              >
+                                                <StyledComponent
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "sc-bxivhb",
+                                                        "isStatic": true,
+                                                        "lastClassName": "c8",
+                                                        "rules": Array [
+                                                          ":link, :visited {
+  color: #454a4c;
+} :hover {
+  color: #171819;
+}",
+                                                        ],
+                                                      },
+                                                      "displayName": "Styled(LinkDocumented)",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "sc-bxivhb",
+                                                      "target": [Function],
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={null}
+                                                  href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                  rel="license"
+                                                >
+                                                  <LinkDocumented
+                                                    className="c8"
+                                                    href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                    muted={false}
+                                                    noVisitedState={false}
+                                                    rel="license"
+                                                    textColour={false}
+                                                  >
+                                                    <styled.a
+                                                      className="c8"
+                                                      href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                      muted={false}
+                                                      noVisitedState={false}
+                                                      rel="license"
+                                                      textColour={false}
+                                                    >
+                                                      <StyledComponent
+                                                        className="c8"
+                                                        forwardedComponent={
+                                                          Object {
+                                                            "$$typeof": Symbol(react.forward_ref),
+                                                            "attrs": Array [],
+                                                            "componentStyle": ComponentStyle {
+                                                              "componentId": "sc-htpNat",
+                                                              "isStatic": false,
+                                                              "lastClassName": "c9",
+                                                              "rules": Array [
+                                                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                                                                ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                                                                "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                                                                "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                                                                [Function],
+                                                                [Function],
+                                                                [Function],
+                                                              ],
+                                                            },
+                                                            "defaultProps": Object {
+                                                              "muted": false,
+                                                              "noVisitedState": false,
+                                                              "textColour": false,
+                                                            },
+                                                            "displayName": "styled.a",
+                                                            "foldedComponentIds": Array [],
+                                                            "propTypes": undefined,
+                                                            "render": [Function],
+                                                            "styledComponentId": "sc-htpNat",
+                                                            "target": "a",
+                                                            "toString": [Function],
+                                                            "warnTooManyClasses": [Function],
+                                                            "withComponent": [Function],
+                                                          }
+                                                        }
+                                                        forwardedRef={null}
+                                                        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                        muted={false}
+                                                        noVisitedState={false}
+                                                        rel="license"
+                                                        textColour={false}
+                                                      >
+                                                        <a
+                                                          className="c8 c9"
+                                                          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                          muted={false}
+                                                          rel="license"
+                                                        >
+                                                          Open Government Licence v3.0
+                                                        </a>
+                                                      </StyledComponent>
+                                                    </styled.a>
+                                                  </LinkDocumented>
+                                                </StyledComponent>
+                                              </Styled(LinkDocumented)>
+                                            </FooterLink>
+                                            , except where otherwise stated
                                           </span>
                                         </StyledComponent>
                                       </styled.span>
@@ -4627,7 +5468,141 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                           <span
                                             className="c11"
                                           >
-                                            All content is available under the Open Government Licence v3.0, except where otherwise stated
+                                            All content is available under the
+                                             
+                                            <FooterLink
+                                              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                              rel="license"
+                                            >
+                                              <Styled(LinkDocumented)
+                                                href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                rel="license"
+                                              >
+                                                <StyledComponent
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "sc-bxivhb",
+                                                        "isStatic": true,
+                                                        "lastClassName": "c8",
+                                                        "rules": Array [
+                                                          ":link, :visited {
+  color: #454a4c;
+} :hover {
+  color: #171819;
+}",
+                                                        ],
+                                                      },
+                                                      "displayName": "Styled(LinkDocumented)",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "sc-bxivhb",
+                                                      "target": [Function],
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={null}
+                                                  href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                  rel="license"
+                                                >
+                                                  <LinkDocumented
+                                                    className="c8"
+                                                    href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                    muted={false}
+                                                    noVisitedState={false}
+                                                    rel="license"
+                                                    textColour={false}
+                                                  >
+                                                    <styled.a
+                                                      className="c8"
+                                                      href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                      muted={false}
+                                                      noVisitedState={false}
+                                                      rel="license"
+                                                      textColour={false}
+                                                    >
+                                                      <StyledComponent
+                                                        className="c8"
+                                                        forwardedComponent={
+                                                          Object {
+                                                            "$$typeof": Symbol(react.forward_ref),
+                                                            "attrs": Array [],
+                                                            "componentStyle": ComponentStyle {
+                                                              "componentId": "sc-htpNat",
+                                                              "isStatic": false,
+                                                              "lastClassName": "c9",
+                                                              "rules": Array [
+                                                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                                                                ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                                                                "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                                                                "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                                                                [Function],
+                                                                [Function],
+                                                                [Function],
+                                                              ],
+                                                            },
+                                                            "defaultProps": Object {
+                                                              "muted": false,
+                                                              "noVisitedState": false,
+                                                              "textColour": false,
+                                                            },
+                                                            "displayName": "styled.a",
+                                                            "foldedComponentIds": Array [],
+                                                            "propTypes": undefined,
+                                                            "render": [Function],
+                                                            "styledComponentId": "sc-htpNat",
+                                                            "target": "a",
+                                                            "toString": [Function],
+                                                            "warnTooManyClasses": [Function],
+                                                            "withComponent": [Function],
+                                                          }
+                                                        }
+                                                        forwardedRef={null}
+                                                        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                        muted={false}
+                                                        noVisitedState={false}
+                                                        rel="license"
+                                                        textColour={false}
+                                                      >
+                                                        <a
+                                                          className="c8 c9"
+                                                          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                          muted={false}
+                                                          rel="license"
+                                                        >
+                                                          Open Government Licence v3.0
+                                                        </a>
+                                                      </StyledComponent>
+                                                    </styled.a>
+                                                  </LinkDocumented>
+                                                </StyledComponent>
+                                              </Styled(LinkDocumented)>
+                                            </FooterLink>
+                                            , except where otherwise stated
                                           </span>
                                         </StyledComponent>
                                       </styled.span>
@@ -8009,7 +8984,141 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           <span
                                             className="c20"
                                           >
-                                            All content is available under the Open Government Licence v3.0, except where otherwise stated
+                                            All content is available under the
+                                             
+                                            <FooterLink
+                                              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                              rel="license"
+                                            >
+                                              <Styled(LinkDocumented)
+                                                href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                rel="license"
+                                              >
+                                                <StyledComponent
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "sc-bxivhb",
+                                                        "isStatic": true,
+                                                        "lastClassName": "c8",
+                                                        "rules": Array [
+                                                          ":link, :visited {
+  color: #454a4c;
+} :hover {
+  color: #171819;
+}",
+                                                        ],
+                                                      },
+                                                      "displayName": "Styled(LinkDocumented)",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "sc-bxivhb",
+                                                      "target": [Function],
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={null}
+                                                  href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                  rel="license"
+                                                >
+                                                  <LinkDocumented
+                                                    className="c8"
+                                                    href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                    muted={false}
+                                                    noVisitedState={false}
+                                                    rel="license"
+                                                    textColour={false}
+                                                  >
+                                                    <styled.a
+                                                      className="c8"
+                                                      href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                      muted={false}
+                                                      noVisitedState={false}
+                                                      rel="license"
+                                                      textColour={false}
+                                                    >
+                                                      <StyledComponent
+                                                        className="c8"
+                                                        forwardedComponent={
+                                                          Object {
+                                                            "$$typeof": Symbol(react.forward_ref),
+                                                            "attrs": Array [],
+                                                            "componentStyle": ComponentStyle {
+                                                              "componentId": "sc-htpNat",
+                                                              "isStatic": false,
+                                                              "lastClassName": "c9",
+                                                              "rules": Array [
+                                                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                                                                ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                                                                "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                                                                "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                                                                [Function],
+                                                                [Function],
+                                                                [Function],
+                                                              ],
+                                                            },
+                                                            "defaultProps": Object {
+                                                              "muted": false,
+                                                              "noVisitedState": false,
+                                                              "textColour": false,
+                                                            },
+                                                            "displayName": "styled.a",
+                                                            "foldedComponentIds": Array [],
+                                                            "propTypes": undefined,
+                                                            "render": [Function],
+                                                            "styledComponentId": "sc-htpNat",
+                                                            "target": "a",
+                                                            "toString": [Function],
+                                                            "warnTooManyClasses": [Function],
+                                                            "withComponent": [Function],
+                                                          }
+                                                        }
+                                                        forwardedRef={null}
+                                                        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                        muted={false}
+                                                        noVisitedState={false}
+                                                        rel="license"
+                                                        textColour={false}
+                                                      >
+                                                        <a
+                                                          className="c8 c9"
+                                                          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                          muted={false}
+                                                          rel="license"
+                                                        >
+                                                          Open Government Licence v3.0
+                                                        </a>
+                                                      </StyledComponent>
+                                                    </styled.a>
+                                                  </LinkDocumented>
+                                                </StyledComponent>
+                                              </Styled(LinkDocumented)>
+                                            </FooterLink>
+                                            , except where otherwise stated
                                           </span>
                                         </StyledComponent>
                                       </styled.span>
@@ -10543,7 +11652,141 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                           <span
                                             className="c15"
                                           >
-                                            All content is available under the Open Government Licence v3.0, except where otherwise stated
+                                            All content is available under the
+                                             
+                                            <FooterLink
+                                              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                              rel="license"
+                                            >
+                                              <Styled(LinkDocumented)
+                                                href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                rel="license"
+                                              >
+                                                <StyledComponent
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "sc-bxivhb",
+                                                        "isStatic": true,
+                                                        "lastClassName": "c8",
+                                                        "rules": Array [
+                                                          ":link, :visited {
+  color: #454a4c;
+} :hover {
+  color: #171819;
+}",
+                                                        ],
+                                                      },
+                                                      "displayName": "Styled(LinkDocumented)",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "sc-bxivhb",
+                                                      "target": [Function],
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={null}
+                                                  href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                  rel="license"
+                                                >
+                                                  <LinkDocumented
+                                                    className="c8"
+                                                    href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                    muted={false}
+                                                    noVisitedState={false}
+                                                    rel="license"
+                                                    textColour={false}
+                                                  >
+                                                    <styled.a
+                                                      className="c8"
+                                                      href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                      muted={false}
+                                                      noVisitedState={false}
+                                                      rel="license"
+                                                      textColour={false}
+                                                    >
+                                                      <StyledComponent
+                                                        className="c8"
+                                                        forwardedComponent={
+                                                          Object {
+                                                            "$$typeof": Symbol(react.forward_ref),
+                                                            "attrs": Array [],
+                                                            "componentStyle": ComponentStyle {
+                                                              "componentId": "sc-htpNat",
+                                                              "isStatic": false,
+                                                              "lastClassName": "c9",
+                                                              "rules": Array [
+                                                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                                                                ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                                                                "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                                                                "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                                                                [Function],
+                                                                [Function],
+                                                                [Function],
+                                                              ],
+                                                            },
+                                                            "defaultProps": Object {
+                                                              "muted": false,
+                                                              "noVisitedState": false,
+                                                              "textColour": false,
+                                                            },
+                                                            "displayName": "styled.a",
+                                                            "foldedComponentIds": Array [],
+                                                            "propTypes": undefined,
+                                                            "render": [Function],
+                                                            "styledComponentId": "sc-htpNat",
+                                                            "target": "a",
+                                                            "toString": [Function],
+                                                            "warnTooManyClasses": [Function],
+                                                            "withComponent": [Function],
+                                                          }
+                                                        }
+                                                        forwardedRef={null}
+                                                        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                        muted={false}
+                                                        noVisitedState={false}
+                                                        rel="license"
+                                                        textColour={false}
+                                                      >
+                                                        <a
+                                                          className="c8 c9"
+                                                          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                          muted={false}
+                                                          rel="license"
+                                                        >
+                                                          Open Government Licence v3.0
+                                                        </a>
+                                                      </StyledComponent>
+                                                    </styled.a>
+                                                  </LinkDocumented>
+                                                </StyledComponent>
+                                              </Styled(LinkDocumented)>
+                                            </FooterLink>
+                                            , except where otherwise stated
                                           </span>
                                         </StyledComponent>
                                       </styled.span>
@@ -11438,7 +12681,141 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                           <span
                                             className="c11"
                                           >
-                                            All content is available under the Open Government Licence v3.0, except where otherwise stated
+                                            All content is available under the
+                                             
+                                            <FooterLink
+                                              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                              rel="license"
+                                            >
+                                              <Styled(LinkDocumented)
+                                                href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                rel="license"
+                                              >
+                                                <StyledComponent
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "sc-bxivhb",
+                                                        "isStatic": true,
+                                                        "lastClassName": "c8",
+                                                        "rules": Array [
+                                                          ":link, :visited {
+  color: #454a4c;
+} :hover {
+  color: #171819;
+}",
+                                                        ],
+                                                      },
+                                                      "displayName": "Styled(LinkDocumented)",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "sc-bxivhb",
+                                                      "target": [Function],
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={null}
+                                                  href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                  rel="license"
+                                                >
+                                                  <LinkDocumented
+                                                    className="c8"
+                                                    href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                    muted={false}
+                                                    noVisitedState={false}
+                                                    rel="license"
+                                                    textColour={false}
+                                                  >
+                                                    <styled.a
+                                                      className="c8"
+                                                      href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                      muted={false}
+                                                      noVisitedState={false}
+                                                      rel="license"
+                                                      textColour={false}
+                                                    >
+                                                      <StyledComponent
+                                                        className="c8"
+                                                        forwardedComponent={
+                                                          Object {
+                                                            "$$typeof": Symbol(react.forward_ref),
+                                                            "attrs": Array [],
+                                                            "componentStyle": ComponentStyle {
+                                                              "componentId": "sc-htpNat",
+                                                              "isStatic": false,
+                                                              "lastClassName": "c9",
+                                                              "rules": Array [
+                                                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                                                                ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                                                                "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                                                                "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                                                                [Function],
+                                                                [Function],
+                                                                [Function],
+                                                              ],
+                                                            },
+                                                            "defaultProps": Object {
+                                                              "muted": false,
+                                                              "noVisitedState": false,
+                                                              "textColour": false,
+                                                            },
+                                                            "displayName": "styled.a",
+                                                            "foldedComponentIds": Array [],
+                                                            "propTypes": undefined,
+                                                            "render": [Function],
+                                                            "styledComponentId": "sc-htpNat",
+                                                            "target": "a",
+                                                            "toString": [Function],
+                                                            "warnTooManyClasses": [Function],
+                                                            "withComponent": [Function],
+                                                          }
+                                                        }
+                                                        forwardedRef={null}
+                                                        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                        muted={false}
+                                                        noVisitedState={false}
+                                                        rel="license"
+                                                        textColour={false}
+                                                      >
+                                                        <a
+                                                          className="c8 c9"
+                                                          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                          muted={false}
+                                                          rel="license"
+                                                        >
+                                                          Open Government Licence v3.0
+                                                        </a>
+                                                      </StyledComponent>
+                                                    </styled.a>
+                                                  </LinkDocumented>
+                                                </StyledComponent>
+                                              </Styled(LinkDocumented)>
+                                            </FooterLink>
+                                            , except where otherwise stated
                                           </span>
                                         </StyledComponent>
                                       </styled.span>
@@ -12465,7 +13842,141 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                       <span
                                         className="c14"
                                       >
-                                        All content is available under the Open Government Licence v3.0, except where otherwise stated
+                                        All content is available under the
+                                         
+                                        <FooterLink
+                                          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                          rel="license"
+                                        >
+                                          <Styled(LinkDocumented)
+                                            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                            rel="license"
+                                          >
+                                            <StyledComponent
+                                              forwardedComponent={
+                                                Object {
+                                                  "$$typeof": Symbol(react.forward_ref),
+                                                  "attrs": Array [],
+                                                  "componentStyle": ComponentStyle {
+                                                    "componentId": "sc-bxivhb",
+                                                    "isStatic": true,
+                                                    "lastClassName": "c8",
+                                                    "rules": Array [
+                                                      ":link, :visited {
+  color: #454a4c;
+} :hover {
+  color: #171819;
+}",
+                                                    ],
+                                                  },
+                                                  "displayName": "Styled(LinkDocumented)",
+                                                  "foldedComponentIds": Array [],
+                                                  "render": [Function],
+                                                  "styledComponentId": "sc-bxivhb",
+                                                  "target": [Function],
+                                                  "toString": [Function],
+                                                  "warnTooManyClasses": [Function],
+                                                  "withComponent": [Function],
+                                                }
+                                              }
+                                              forwardedRef={null}
+                                              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                              rel="license"
+                                            >
+                                              <LinkDocumented
+                                                className="c8"
+                                                href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                muted={false}
+                                                noVisitedState={false}
+                                                rel="license"
+                                                textColour={false}
+                                              >
+                                                <styled.a
+                                                  className="c8"
+                                                  href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                  muted={false}
+                                                  noVisitedState={false}
+                                                  rel="license"
+                                                  textColour={false}
+                                                >
+                                                  <StyledComponent
+                                                    className="c8"
+                                                    forwardedComponent={
+                                                      Object {
+                                                        "$$typeof": Symbol(react.forward_ref),
+                                                        "attrs": Array [],
+                                                        "componentStyle": ComponentStyle {
+                                                          "componentId": "sc-htpNat",
+                                                          "isStatic": false,
+                                                          "lastClassName": "c9",
+                                                          "rules": Array [
+                                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
+  font-family: sans-serif;
+}",
+                                                            ":link {
+  color: #005ea5;
+} :visited {
+  color: #4c2c92;
+} :hover {
+  color: #2b8cc4;
+} :active {
+  color: #2b8cc4;
+} :focus {
+  color: #0b0c0c;
+}",
+                                                            "&:focus {
+  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+}",
+                                                            "@media print {
+  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
+  &::after {
+  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
+}
+}
+}",
+                                                            [Function],
+                                                            [Function],
+                                                            [Function],
+                                                          ],
+                                                        },
+                                                        "defaultProps": Object {
+                                                          "muted": false,
+                                                          "noVisitedState": false,
+                                                          "textColour": false,
+                                                        },
+                                                        "displayName": "styled.a",
+                                                        "foldedComponentIds": Array [],
+                                                        "propTypes": undefined,
+                                                        "render": [Function],
+                                                        "styledComponentId": "sc-htpNat",
+                                                        "target": "a",
+                                                        "toString": [Function],
+                                                        "warnTooManyClasses": [Function],
+                                                        "withComponent": [Function],
+                                                      }
+                                                    }
+                                                    forwardedRef={null}
+                                                    href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                    muted={false}
+                                                    noVisitedState={false}
+                                                    rel="license"
+                                                    textColour={false}
+                                                  >
+                                                    <a
+                                                      className="c8 c9"
+                                                      href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                                      muted={false}
+                                                      rel="license"
+                                                    >
+                                                      Open Government Licence v3.0
+                                                    </a>
+                                                  </StyledComponent>
+                                                </styled.a>
+                                              </LinkDocumented>
+                                            </StyledComponent>
+                                          </Styled(LinkDocumented)>
+                                        </FooterLink>
+                                        , except where otherwise stated
                                       </span>
                                     </StyledComponent>
                                   </styled.span>
