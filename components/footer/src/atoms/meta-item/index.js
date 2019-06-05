@@ -13,8 +13,8 @@ const MetaItem = styled('div')(
     grow && {
       flex: 1,
       flexBasis: '320px',
-      [MEDIA_QUERIES.TABLET]: {
-        flexBasis: 'auto',
+      [MEDIA_QUERIES.DESKTOP]: {
+        flexBasis: 0,
       },
     }
 );

@@ -141,11 +141,11 @@ exports[`Footer matches default snapshot: Footer 1`] = `
   }
 }
 
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:769px) {
   .c3 {
-    -webkit-flex-basis: auto;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
   }
 }
 
@@ -800,11 +800,11 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
   }
 }
 
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:769px) {
   .c3 {
-    -webkit-flex-basis: auto;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
   }
 }
 
@@ -1582,11 +1582,11 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
   }
 }
 
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:769px) {
   .c3 {
-    -webkit-flex-basis: auto;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
   }
 }
 
@@ -2215,11 +2215,11 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
   }
 }
 
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:769px) {
   .c3 {
-    -webkit-flex-basis: auto;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
   }
 }
 
@@ -3032,11 +3032,11 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
   }
 }
 
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:769px) {
   .c3 {
-    -webkit-flex-basis: auto;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
   }
 }
 
@@ -4510,11 +4510,11 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
   }
 }
 
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:769px) {
   .c3 {
-    -webkit-flex-basis: auto;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
   }
 }
 
@@ -5911,11 +5911,11 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   }
 }
 
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:769px) {
   .c13 {
-    -webkit-flex-basis: auto;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
   }
 }
 
@@ -9379,11 +9379,11 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   }
 }
 
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:769px) {
   .c13 {
-    -webkit-flex-basis: auto;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
   }
 }
 
@@ -12004,11 +12004,11 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
   }
 }
 
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:769px) {
   .c3 {
-    -webkit-flex-basis: auto;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
   }
 }
 
@@ -13068,11 +13068,11 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
   }
 }
 
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:769px) {
   .c12 {
-    -webkit-flex-basis: auto;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
   }
 }
 
