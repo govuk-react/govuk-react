@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
 
+import Link from '../link';
+
 const LicenceLogo = styled('svg')({
   display: 'inline-block',
   marginRight: spacing.simple(2),
@@ -33,7 +35,11 @@ const Licence = () => (
       />
     </LicenceLogo>
     <LicenceDescription>
-      All content is available under the Open Government Licence v3.0, except where otherwise stated
+      All content is available under the{' '}
+      <Link href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">
+        Open Government Licence v3.0
+      </Link>
+      , except where otherwise stated
     </LicenceDescription>
   </div>
 );

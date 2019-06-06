@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
-import Heading from '@govuk-react/heading';
+import { H2 } from '@govuk-react/heading';
 import { spacing } from '@govuk-react/lib';
 import { BORDER_COLOUR } from 'govuk-colours';
 
-const SectionHeading = styled(Heading)(
+const SectionHeading = styled(H2)(
   {
     borderBottom: `1px solid ${BORDER_COLOUR}`,
     paddingBottom: spacing.simple(2),
