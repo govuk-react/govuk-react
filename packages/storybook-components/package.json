@@ -7,7 +7,8 @@
     "@storybook/addons": "^5.0.3",
     "@storybook/react": "^5.0.3",
     "react-final-form": "^4.1.0",
-    "storybook-readme": "^5.0.1"
+    "storybook-readme": "^5.0.1",
+    "snyk": "^1.189.0"
   },
   "peerDependencies": {
     "react": ">=16.2.0"
@@ -15,7 +16,9 @@
   "scripts": {
     "build": "yarn build:lib && yarn build:es",
     "build:lib": "rimraf lib && babel src -d lib --config-file ../../babel.config.js",
-    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --config-file ../../babel.config.js"
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --config-file ../../babel.config.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -26,5 +29,6 @@
   "private": false,
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "snyk": true
 }
