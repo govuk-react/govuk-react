@@ -32,7 +32,7 @@ class Input extends React.Component {
         <StyledInput
           name={name}
           error={error}
-          type={this.props.type ? this.props.type : 'number'}
+          type={this.props.type}
           defaultValue={defaultValue}
           value={this.props.value ? this.props.value[key] : undefined}
           onChange={e => this.props.onChange(e, key)}
