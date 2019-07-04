@@ -1,6 +1,6 @@
 {
   "name": "@govuk-react/loading-box",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "dependencies": {
     "@govuk-react/constants": "^0.7.1",
     "@govuk-react/icons": "^0.7.1",

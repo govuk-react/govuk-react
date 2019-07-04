@@ -1,6 +1,6 @@
 {
   "name": "govuk-react",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "dependencies": {
     "@govuk-react/back-link": "^0.7.1",
     "@govuk-react/breadcrumb": "^0.7.1",
@@ -16,7 +16,7 @@
     "@govuk-react/error-text": "^0.7.1",
     "@govuk-react/fieldset": "^0.7.1",
     "@govuk-react/file-upload": "^0.7.1",
-    "@govuk-react/footer": "^0.7.1",
+    "@govuk-react/footer": "^0.7.2",
     "@govuk-react/form-group": "^0.7.1",
     "@govuk-react/grid-col": "^0.7.1",
     "@govuk-react/grid-row": "^0.7.1",
@@ -35,7 +35,7 @@
     "@govuk-react/link": "^0.7.1",
     "@govuk-react/list-item": "^0.7.1",
     "@govuk-react/list-navigation": "^0.7.1",
-    "@govuk-react/loading-box": "^0.7.1",
+    "@govuk-react/loading-box": "^0.7.2",
     "@govuk-react/main": "^0.7.1",
     "@govuk-react/multi-choice": "^0.7.1",
     "@govuk-react/ordered-list": "^0.7.1",
