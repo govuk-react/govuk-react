@@ -83,11 +83,7 @@
     "jest": "^24.4.0",
     "jest-styled-components": "^6.3.1",
     "jest-transform-stub": "^2.0.0",
-<<<<<<< HEAD
     "lerna": "2.11",
-=======
-    "lerna": "~3.13.1",
->>>>>>> Footer component (#651)
     "mkdirp-promise": "^5.0.1",
     "prettier": "^1.16.4",
     "prop-types": "^15.6.0",

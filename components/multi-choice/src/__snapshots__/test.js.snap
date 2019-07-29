@@ -128,7 +128,7 @@ exports[`MultiChoice matches snapshot 1`] = `
     }
   }
 >
-  <styled.div
+  <src__StyledFieldset
     error="Example error"
   >
     <StyledComponent
@@ -138,21 +138,28 @@ exports[`MultiChoice matches snapshot 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bxivhb",
+            "componentId": "src__StyledFieldset-dd88ty-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "padding: 0; margin: 0; border: 0; box-sizing: border-box; width: 100%; :after {
-  content: ''; display: table; clear: both;
-}",
+              "padding: 0;",
+              "margin: 0;",
+              "border: 0;",
+              "box-sizing: border-box;",
+              "width: 100%;",
+              ":after {",
+              "content: '';",
+              "display: table;",
+              "clear: both;",
+              "}",
               [Function],
               [Function],
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "src__StyledFieldset",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bxivhb",
+          "styledComponentId": "src__StyledFieldset-dd88ty-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -165,34 +172,46 @@ exports[`MultiChoice matches snapshot 1`] = `
         className="c0"
       >
         <LabelText>
-          <styled.span>
+          <src__StyledLabelText>
             <StyledComponent
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-bdVaJa",
+                    "componentId": "src__StyledLabelText-sc-12l0n4z-0",
                     "isStatic": false,
                     "lastClassName": "c1",
                     "rules": Array [
-                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                      "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                      "display: block; clear: none; padding-bottom: 2px;",
+                      "font-family: \\"nta\\", Arial, sans-serif;",
+                      "-webkit-font-smoothing: antialiased;",
+                      "-moz-osx-font-smoothing: grayscale;",
+                      "@media print {",
+                      "font-size: 14px;",
+                      "line-height: 1.15;",
+                      "}",
+                      "font-weight: 400;",
+                      "font-size: 16px;",
+                      "line-height: 1.25;",
+                      "@media only screen and (min-width: 641px) {",
+                      "font-size: 19px;",
+                      "line-height: 1.3157894736842106;",
+                      "}",
+                      "color: #0b0c0c;",
+                      "@media print {",
+                      "color: #000;",
+                      "}",
+                      "display: block;",
+                      "clear: none;",
+                      "padding-bottom: 2px;",
                       [Function],
                       [Function],
                     ],
                   },
-                  "displayName": "styled.span",
+                  "displayName": "src__StyledLabelText",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-bdVaJa",
+                  "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
                   "target": "span",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -207,33 +226,44 @@ exports[`MultiChoice matches snapshot 1`] = `
                 Example label
               </span>
             </StyledComponent>
-          </styled.span>
+          </src__StyledLabelText>
         </LabelText>
         <HintText>
-          <styled.span>
+          <src__StyledHint>
             <StyledComponent
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-htpNat",
+                    "componentId": "src__StyledHint-sc-1qn4br2-0",
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
-                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                      "display: block; margin-bottom: 15px; color: #6f777b;",
+                      "font-family: \\"nta\\", Arial, sans-serif;",
+                      "-webkit-font-smoothing: antialiased;",
+                      "-moz-osx-font-smoothing: grayscale;",
+                      "@media print {",
+                      "font-size: 14px;",
+                      "line-height: 1.15;",
+                      "}",
+                      "font-weight: 400;",
+                      "font-size: 16px;",
+                      "line-height: 1.25;",
+                      "@media only screen and (min-width: 641px) {",
+                      "font-size: 19px;",
+                      "line-height: 1.3157894736842106;",
+                      "}",
+                      "display: block;",
+                      "margin-bottom: 15px;",
+                      "color: #6f777b;",
                       [Function],
                     ],
                   },
-                  "displayName": "styled.span",
+                  "displayName": "src__StyledHint",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-htpNat",
+                  "styledComponentId": "src__StyledHint-sc-1qn4br2-0",
                   "target": "span",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -248,33 +278,45 @@ exports[`MultiChoice matches snapshot 1`] = `
                 Example hint
               </span>
             </StyledComponent>
-          </styled.span>
+          </src__StyledHint>
         </HintText>
         <ErrorText>
-          <styled.span>
+          <src__StyledError>
             <StyledComponent
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-bwzfXH",
+                    "componentId": "src__StyledError-q8g4f0-0",
                     "isStatic": false,
                     "lastClassName": "c3",
                     "rules": Array [
-                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 700; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                      "display: block; margin-bottom: 15px; clear: both; color: #b10e1e;",
+                      "font-family: \\"nta\\", Arial, sans-serif;",
+                      "-webkit-font-smoothing: antialiased;",
+                      "-moz-osx-font-smoothing: grayscale;",
+                      "@media print {",
+                      "font-size: 14px;",
+                      "line-height: 1.15;",
+                      "}",
+                      "font-weight: 700;",
+                      "font-size: 16px;",
+                      "line-height: 1.25;",
+                      "@media only screen and (min-width: 641px) {",
+                      "font-size: 19px;",
+                      "line-height: 1.3157894736842106;",
+                      "}",
+                      "display: block;",
+                      "margin-bottom: 15px;",
+                      "clear: both;",
+                      "color: #b10e1e;",
                       [Function],
                     ],
                   },
-                  "displayName": "styled.span",
+                  "displayName": "src__StyledError",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-bwzfXH",
+                  "styledComponentId": "src__StyledError-q8g4f0-0",
                   "target": "span",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -289,10 +331,10 @@ exports[`MultiChoice matches snapshot 1`] = `
                 Example error
               </span>
             </StyledComponent>
-          </styled.span>
+          </src__StyledError>
         </ErrorText>
       </div>
     </StyledComponent>
-  </styled.div>
+  </src__StyledFieldset>
 </MultiChoice>
 `;

@@ -40,33 +40,43 @@ exports[`LeadParagraph matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <LeadParagraph>
-  <styled.p>
+  <src__StyledParagraph>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__StyledParagraph-eb5e6-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "color: #0b0c0c; @media print {
-  color: #000;
-}",
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 18px; line-height: 1.15;
-} font-weight: 400; font-size: 18px; line-height: 1.1111111111111112; @media only screen and (min-width: 641px) {
-  font-size: 24px; line-height: 1.25;
-}",
+              "color: #0b0c0c;",
+              "@media print {",
+              "color: #000;",
+              "}",
+              "font-family: \\"nta\\", Arial, sans-serif;",
+              "-webkit-font-smoothing: antialiased;",
+              "-moz-osx-font-smoothing: grayscale;",
+              "@media print {",
+              "font-size: 18px;",
+              "line-height: 1.15;",
+              "}",
+              "font-weight: 400;",
+              "font-size: 18px;",
+              "line-height: 1.1111111111111112;",
+              "@media only screen and (min-width: 641px) {",
+              "font-size: 24px;",
+              "line-height: 1.25;",
+              "}",
               "margin-top: 0;",
               [Function],
             ],
           },
-          "displayName": "styled.p",
+          "displayName": "src__StyledParagraph",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__StyledParagraph-eb5e6-0",
           "target": "p",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -81,6 +91,6 @@ exports[`LeadParagraph matches wrapper snapshot: wrapper mount 1`] = `
         example
       </p>
     </StyledComponent>
-  </styled.p>
+  </src__StyledParagraph>
 </LeadParagraph>
 `;

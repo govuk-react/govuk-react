@@ -127,7 +127,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   <Label
     error={false}
   >
-    <styled.label
+    <src__StyledLabel
       error={false}
     >
       <StyledComponent
@@ -137,21 +137,26 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "src__StyledLabel-sc-14n2scx-0",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
-                "display: flex; flex-direction: column; box-sizing: border-box; :after {
-  content: ''; display: table; clear: both;
-}",
+                "display: flex;",
+                "flex-direction: column;",
+                "box-sizing: border-box;",
+                ":after {",
+                "content: '';",
+                "display: table;",
+                "clear: both;",
+                "}",
                 [Function],
                 [Function],
               ],
             },
-            "displayName": "styled.label",
+            "displayName": "src__StyledLabel",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
             "target": "label",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -164,34 +169,46 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
           className="c0"
         >
           <LabelText>
-            <styled.span>
+            <src__StyledLabelText>
               <StyledComponent
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bwzfXH",
+                      "componentId": "src__StyledLabelText-sc-12l0n4z-0",
                       "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
-                        "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                        "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                        "display: block; clear: none; padding-bottom: 2px;",
+                        "font-family: \\"nta\\", Arial, sans-serif;",
+                        "-webkit-font-smoothing: antialiased;",
+                        "-moz-osx-font-smoothing: grayscale;",
+                        "@media print {",
+                        "font-size: 14px;",
+                        "line-height: 1.15;",
+                        "}",
+                        "font-weight: 400;",
+                        "font-size: 16px;",
+                        "line-height: 1.25;",
+                        "@media only screen and (min-width: 641px) {",
+                        "font-size: 19px;",
+                        "line-height: 1.3157894736842106;",
+                        "}",
+                        "color: #0b0c0c;",
+                        "@media print {",
+                        "color: #000;",
+                        "}",
+                        "display: block;",
+                        "clear: none;",
+                        "padding-bottom: 2px;",
                         [Function],
                         [Function],
                       ],
                     },
-                    "displayName": "styled.span",
+                    "displayName": "src__StyledLabelText",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bwzfXH",
+                    "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -206,12 +223,12 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                   example
                 </span>
               </StyledComponent>
-            </styled.span>
+            </src__StyledLabelText>
           </LabelText>
           <Input
             type="text"
           >
-            <styled.input
+            <src__StyledInput
               type="text"
             >
               <StyledComponent
@@ -220,31 +237,51 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-ifAKCX",
+                      "componentId": "src__StyledInput-u8exb4-0",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
-                        "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                        "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
-}",
-                        "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-  margin: 0; -webkit-appearance: none;
-} &[type=\\"number\\"] {
-  -moz-appearance: textfield;
-}",
+                        "font-family: \\"nta\\", Arial, sans-serif;",
+                        "-webkit-font-smoothing: antialiased;",
+                        "-moz-osx-font-smoothing: grayscale;",
+                        "@media print {",
+                        "font-size: 14px;",
+                        "line-height: 1.15;",
+                        "}",
+                        "font-weight: 400;",
+                        "font-size: 16px;",
+                        "line-height: 1.25;",
+                        "@media only screen and (min-width: 641px) {",
+                        "font-size: 19px;",
+                        "line-height: 1.3157894736842106;",
+                        "}",
+                        "&:focus {",
+                        "outline: 3px solid #ffbf47;",
+                        "outline-offset: 0;",
+                        "}",
+                        "box-sizing: border-box;",
+                        "width: 100%;",
+                        "height: 40px;",
+                        "margin-top: 0;",
+                        "padding: 5px;",
+                        "border: 2px solid #0b0c0c;",
+                        "border-radius: 0;",
+                        "appearance: none;",
+                        "&::-webkit-outer-spin-button, &::-webkit-inner-spin-button {",
+                        "margin: 0;",
+                        "-webkit-appearance: none;",
+                        "}",
+                        "&[type=\\"number\\"] {",
+                        "-moz-appearance: textfield;",
+                        "}",
                         [Function],
                         [Function],
                       ],
                     },
-                    "displayName": "styled.input",
+                    "displayName": "src__StyledInput",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-ifAKCX",
+                    "styledComponentId": "src__StyledInput-u8exb4-0",
                     "target": "input",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -259,11 +296,11 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                   type="text"
                 />
               </StyledComponent>
-            </styled.input>
+            </src__StyledInput>
           </Input>
         </label>
       </StyledComponent>
-    </styled.label>
+    </src__StyledLabel>
   </Label>
 </InputField>
 `;

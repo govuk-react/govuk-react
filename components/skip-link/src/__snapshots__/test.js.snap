@@ -90,52 +90,82 @@ exports[`SkipLink matches snapshot: SkipLink 1`] = `
 <SkipLinkDocumented
   href="#content"
 >
-  <styled.a
+  <src__SkipLink
     href="#content"
   >
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": true,
-            "lastClassName": "c0",
-            "rules": Array [
-              "position: absolute !important; width: 1px !important; height: 1px !important; margin: 0 !important; overflow: hidden !important; clip: rect(0 0 0 0) !important; clip-path: inset(50%) !important; border: 0 !important; white-space: nowrap !important; &:active,&:focus {
-  position: static !important; width: auto !important; height: auto !important; margin: inherit !important; overflow: visible !important; clip: auto !important; clip-path: none !important; white-space: inherit !important;
-}",
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-              "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
-}",
-              "&:link, &:visited, &:hover, &:active, &:focus {
-  color: #0b0c0c; @media print {
-  color: #000;
-}
-}",
-              "font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
-  font-size: 16px; line-height: 1.25;
-} @media print {
-  font-size: 14px; line-height: 1.2;
-}",
-              "display: block; padding: 10px 15px; @supports (padding:max(calc(0px))) {
-  padding-right: max(15px, calc(15px + env(safe-area-inset-right))); padding-left: max(15px, calc(15px + env(safe-area-inset-left)));
-}",
-            ],
-          },
-          "defaultProps": Object {
+          "_foldedDefaultProps": Object {
             "children": "Skip to main content",
             "href": "#content",
           },
-          "displayName": "styled.a",
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "src__SkipLink-jgz3jb-0",
+            "isStatic": true,
+            "lastClassName": "c0",
+            "rules": Array [
+              "position: absolute !important;",
+              "width: 1px !important;",
+              "height: 1px !important;",
+              "margin: 0 !important;",
+              "overflow: hidden !important;",
+              "clip: rect(0 0 0 0) !important;",
+              "clip-path: inset(50%) !important;",
+              "border: 0 !important;",
+              "white-space: nowrap !important;",
+              "&:active,&:focus {",
+              "position: static !important;",
+              "width: auto !important;",
+              "height: auto !important;",
+              "margin: inherit !important;",
+              "overflow: visible !important;",
+              "clip: auto !important;",
+              "clip-path: none !important;",
+              "white-space: inherit !important;",
+              "}",
+              "font-family: \\"nta\\", Arial, sans-serif;",
+              "-webkit-font-smoothing: antialiased;",
+              "-moz-osx-font-smoothing: grayscale;",
+              "@media print {",
+              "font-family: sans-serif;",
+              "}",
+              "&:focus {",
+              "outline: 3px solid #ffbf47;",
+              "outline-offset: 0;",
+              "background-color: #ffbf47;",
+              "}",
+              "&:link, &:visited, &:hover, &:active, &:focus {",
+              "color: #0b0c0c;",
+              "@media print {",
+              "color: #000;",
+              "}",
+              "}",
+              "font-size: 14px;",
+              "line-height: 1.1428571428571428;",
+              "@media only screen and (min-width: 641px) {",
+              "font-size: 16px;",
+              "line-height: 1.25;",
+              "}",
+              "@media print {",
+              "font-size: 14px;",
+              "line-height: 1.2;",
+              "}",
+              "display: block;",
+              "padding: 10px 15px;",
+              "@supports (padding:max(calc(0px))) {",
+              "padding-right: max(15px, calc(15px + env(safe-area-inset-right)));",
+              "padding-left: max(15px, calc(15px + env(safe-area-inset-left)));",
+              "}",
+            ],
+          },
+          "displayName": "src__SkipLink",
           "foldedComponentIds": Array [],
           "propTypes": undefined,
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__SkipLink-jgz3jb-0",
           "target": "a",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -152,6 +182,6 @@ exports[`SkipLink matches snapshot: SkipLink 1`] = `
         Example
       </a>
     </StyledComponent>
-  </styled.a>
+  </src__SkipLink>
 </SkipLinkDocumented>
 `;

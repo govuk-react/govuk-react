@@ -21,27 +21,30 @@ exports[`GridRow matches snapshot: enzyme.mount 1`] = `
 }
 
 <GridRow>
-  <styled.div>
+  <src__StyledRow>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__StyledRow-sc-117e6fv-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "display: flex; flex-direction: column; margin: 0 -15px; @media only screen and (min-width: 641px) {
-  flex-direction: row;
-}",
+              "display: flex;",
+              "flex-direction: column;",
+              "margin: 0 -15px;",
+              "@media only screen and (min-width: 641px) {",
+              "flex-direction: row;",
+              "}",
               [Function],
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "src__StyledRow",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__StyledRow-sc-117e6fv-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -56,6 +59,6 @@ exports[`GridRow matches snapshot: enzyme.mount 1`] = `
         Example
       </div>
     </StyledComponent>
-  </styled.div>
+  </src__StyledRow>
 </GridRow>
 `;

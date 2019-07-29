@@ -28,30 +28,41 @@ exports[`HintText matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <HintText>
-  <styled.span>
+  <src__StyledHint>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__StyledHint-sc-1qn4br2-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-              "display: block; margin-bottom: 15px; color: #6f777b;",
+              "font-family: \\"nta\\", Arial, sans-serif;",
+              "-webkit-font-smoothing: antialiased;",
+              "-moz-osx-font-smoothing: grayscale;",
+              "@media print {",
+              "font-size: 14px;",
+              "line-height: 1.15;",
+              "}",
+              "font-weight: 400;",
+              "font-size: 16px;",
+              "line-height: 1.25;",
+              "@media only screen and (min-width: 641px) {",
+              "font-size: 19px;",
+              "line-height: 1.3157894736842106;",
+              "}",
+              "display: block;",
+              "margin-bottom: 15px;",
+              "color: #6f777b;",
               [Function],
             ],
           },
-          "displayName": "styled.span",
+          "displayName": "src__StyledHint",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__StyledHint-sc-1qn4br2-0",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -66,6 +77,6 @@ exports[`HintText matches wrapper snapshot: wrapper mount 1`] = `
         example
       </span>
     </StyledComponent>
-  </styled.span>
+  </src__StyledHint>
 </HintText>
 `;

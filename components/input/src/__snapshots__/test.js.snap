@@ -62,7 +62,7 @@ exports[`Input matches withColouredError snapshot: with coloured error mount 1`]
   errorColor="#f47738"
   type="text"
 >
-  <styled.input
+  <src__StyledInput
     error="example"
     errorColor="#f47738"
     type="text"
@@ -75,31 +75,51 @@ exports[`Input matches withColouredError snapshot: with coloured error mount 1`]
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__StyledInput-u8exb4-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-              "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
-}",
-              "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-  margin: 0; -webkit-appearance: none;
-} &[type=\\"number\\"] {
-  -moz-appearance: textfield;
-}",
+              "font-family: \\"nta\\", Arial, sans-serif;",
+              "-webkit-font-smoothing: antialiased;",
+              "-moz-osx-font-smoothing: grayscale;",
+              "@media print {",
+              "font-size: 14px;",
+              "line-height: 1.15;",
+              "}",
+              "font-weight: 400;",
+              "font-size: 16px;",
+              "line-height: 1.25;",
+              "@media only screen and (min-width: 641px) {",
+              "font-size: 19px;",
+              "line-height: 1.3157894736842106;",
+              "}",
+              "&:focus {",
+              "outline: 3px solid #ffbf47;",
+              "outline-offset: 0;",
+              "}",
+              "box-sizing: border-box;",
+              "width: 100%;",
+              "height: 40px;",
+              "margin-top: 0;",
+              "padding: 5px;",
+              "border: 2px solid #0b0c0c;",
+              "border-radius: 0;",
+              "appearance: none;",
+              "&::-webkit-outer-spin-button, &::-webkit-inner-spin-button {",
+              "margin: 0;",
+              "-webkit-appearance: none;",
+              "}",
+              "&[type=\\"number\\"] {",
+              "-moz-appearance: textfield;",
+              "}",
               [Function],
               [Function],
             ],
           },
-          "displayName": "styled.input",
+          "displayName": "src__StyledInput",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__StyledInput-u8exb4-0",
           "target": "input",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -114,7 +134,7 @@ exports[`Input matches withColouredError snapshot: with coloured error mount 1`]
         type="text"
       />
     </StyledComponent>
-  </styled.input>
+  </src__StyledInput>
 </Input>
 `;
 
@@ -179,7 +199,7 @@ exports[`Input matches withError snapshot: with error mount 1`] = `
   error="example"
   type="text"
 >
-  <styled.input
+  <src__StyledInput
     error="example"
     type="text"
   >
@@ -190,31 +210,51 @@ exports[`Input matches withError snapshot: with error mount 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__StyledInput-u8exb4-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-              "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
-}",
-              "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-  margin: 0; -webkit-appearance: none;
-} &[type=\\"number\\"] {
-  -moz-appearance: textfield;
-}",
+              "font-family: \\"nta\\", Arial, sans-serif;",
+              "-webkit-font-smoothing: antialiased;",
+              "-moz-osx-font-smoothing: grayscale;",
+              "@media print {",
+              "font-size: 14px;",
+              "line-height: 1.15;",
+              "}",
+              "font-weight: 400;",
+              "font-size: 16px;",
+              "line-height: 1.25;",
+              "@media only screen and (min-width: 641px) {",
+              "font-size: 19px;",
+              "line-height: 1.3157894736842106;",
+              "}",
+              "&:focus {",
+              "outline: 3px solid #ffbf47;",
+              "outline-offset: 0;",
+              "}",
+              "box-sizing: border-box;",
+              "width: 100%;",
+              "height: 40px;",
+              "margin-top: 0;",
+              "padding: 5px;",
+              "border: 2px solid #0b0c0c;",
+              "border-radius: 0;",
+              "appearance: none;",
+              "&::-webkit-outer-spin-button, &::-webkit-inner-spin-button {",
+              "margin: 0;",
+              "-webkit-appearance: none;",
+              "}",
+              "&[type=\\"number\\"] {",
+              "-moz-appearance: textfield;",
+              "}",
               [Function],
               [Function],
             ],
           },
-          "displayName": "styled.input",
+          "displayName": "src__StyledInput",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__StyledInput-u8exb4-0",
           "target": "input",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -229,7 +269,7 @@ exports[`Input matches withError snapshot: with error mount 1`] = `
         type="text"
       />
     </StyledComponent>
-  </styled.input>
+  </src__StyledInput>
 </Input>
 `;
 
@@ -292,7 +332,7 @@ exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
 <Input
   type="text"
 >
-  <styled.input
+  <src__StyledInput
     type="text"
   >
     <StyledComponent
@@ -301,31 +341,51 @@ exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__StyledInput-u8exb4-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-              "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
-}",
-              "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-  margin: 0; -webkit-appearance: none;
-} &[type=\\"number\\"] {
-  -moz-appearance: textfield;
-}",
+              "font-family: \\"nta\\", Arial, sans-serif;",
+              "-webkit-font-smoothing: antialiased;",
+              "-moz-osx-font-smoothing: grayscale;",
+              "@media print {",
+              "font-size: 14px;",
+              "line-height: 1.15;",
+              "}",
+              "font-weight: 400;",
+              "font-size: 16px;",
+              "line-height: 1.25;",
+              "@media only screen and (min-width: 641px) {",
+              "font-size: 19px;",
+              "line-height: 1.3157894736842106;",
+              "}",
+              "&:focus {",
+              "outline: 3px solid #ffbf47;",
+              "outline-offset: 0;",
+              "}",
+              "box-sizing: border-box;",
+              "width: 100%;",
+              "height: 40px;",
+              "margin-top: 0;",
+              "padding: 5px;",
+              "border: 2px solid #0b0c0c;",
+              "border-radius: 0;",
+              "appearance: none;",
+              "&::-webkit-outer-spin-button, &::-webkit-inner-spin-button {",
+              "margin: 0;",
+              "-webkit-appearance: none;",
+              "}",
+              "&[type=\\"number\\"] {",
+              "-moz-appearance: textfield;",
+              "}",
               [Function],
               [Function],
             ],
           },
-          "displayName": "styled.input",
+          "displayName": "src__StyledInput",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__StyledInput-u8exb4-0",
           "target": "input",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -340,6 +400,6 @@ exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
         type="text"
       />
     </StyledComponent>
-  </styled.input>
+  </src__StyledInput>
 </Input>
 `;

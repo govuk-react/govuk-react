@@ -27,24 +27,25 @@ exports[`Main matches wrapper snapshot 1`] = `
 }
 
 <Main>
-  <styled.div>
+  <src__OuterContainer>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__OuterContainer-sc-1ppxqxg-0",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
-              "padding-top: 30px; text-align: center;",
+              "padding-top: 30px;",
+              "text-align: center;",
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "src__OuterContainer",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__OuterContainer-sc-1ppxqxg-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -56,28 +57,34 @@ exports[`Main matches wrapper snapshot 1`] = `
       <div
         className="c0"
       >
-        <styled.div>
+        <src__InnerContainer>
           <StyledComponent
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bwzfXH",
+                  "componentId": "src__InnerContainer-sc-1ppxqxg-1",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
-                    "max-width: 960px; margin-left: 15px; margin-right: 15px; text-align: left; @media only screen and (min-width: 641px) {
-  margin-left: 30px; margin-right: 30px;
-} @media only screen and (min-width:1020px) {
-  margin: 0 auto;
-}",
+                    "max-width: 960px;",
+                    "margin-left: 15px;",
+                    "margin-right: 15px;",
+                    "text-align: left;",
+                    "@media only screen and (min-width: 641px) {",
+                    "margin-left: 30px;",
+                    "margin-right: 30px;",
+                    "}",
+                    "@media only screen and (min-width:1020px) {",
+                    "margin: 0 auto;",
+                    "}",
                   ],
                 },
-                "displayName": "styled.div",
+                "displayName": "src__InnerContainer",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bwzfXH",
+                "styledComponentId": "src__InnerContainer-sc-1ppxqxg-1",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -94,9 +101,9 @@ exports[`Main matches wrapper snapshot 1`] = `
               </span>
             </div>
           </StyledComponent>
-        </styled.div>
+        </src__InnerContainer>
       </div>
     </StyledComponent>
-  </styled.div>
+  </src__OuterContainer>
 </Main>
 `;

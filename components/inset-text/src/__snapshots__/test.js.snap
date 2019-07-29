@@ -115,39 +115,52 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
 }
 
 <InsetTextWithParagraph>
-  <styled.div>
+  <src__InsetText>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-htpNat",
+            "componentId": "src__InsetText-surbaa-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-              "color: #0b0c0c; @media print {
-  color: #000;
-}",
+              "font-family: \\"nta\\", Arial, sans-serif;",
+              "-webkit-font-smoothing: antialiased;",
+              "-moz-osx-font-smoothing: grayscale;",
+              "@media print {",
+              "font-size: 14px;",
+              "line-height: 1.15;",
+              "}",
+              "font-weight: 400;",
+              "font-size: 16px;",
+              "line-height: 1.25;",
+              "@media only screen and (min-width: 641px) {",
+              "font-size: 19px;",
+              "line-height: 1.3157894736842106;",
+              "}",
+              "color: #0b0c0c;",
+              "@media print {",
+              "color: #000;",
+              "}",
               "padding: 15px;",
               [Function],
-              "clear: both; border-left: 10px solid #bfc1c3; :first-child {
-  margin-top: 0;
-} :only-child,:last-child {
-  margin-bottom: 0;
-}",
+              "clear: both;",
+              "border-left: 10px solid #bfc1c3;",
+              ":first-child {",
+              "margin-top: 0;",
+              "}",
+              ":only-child,:last-child {",
+              "margin-bottom: 0;",
+              "}",
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "src__InsetText",
           "foldedComponentIds": Array [],
           "propTypes": undefined,
           "render": [Function],
-          "styledComponentId": "sc-htpNat",
+          "styledComponentId": "src__InsetText-surbaa-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -164,7 +177,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
           mb={0}
           supportingText={false}
         >
-          <Styled(ReactMarkdown)
+          <src__StyledParagraph
             allowedTypes={
               Array [
                 "paragraph",
@@ -206,24 +219,43 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-bwzfXH",
+                    "componentId": "src__StyledParagraph-dkdnni-0",
                     "isStatic": false,
                     "lastClassName": "c1",
                     "rules": Array [
-                      "margin: 0; > p {
-  margin: 0;
-} > p > code {
-  padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: rgba(27,31,35,0.05); border-radius: 3px;
-} > pre {
-  padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #f6f8fa; border-radius: 3px;
-} > pre > code {
-  display: inline; padding: 0; margin: 0; border: 0; overflow: visible; line-height: inherit; word-wrap: normal;
-}",
+                      "margin: 0;",
+                      "> p {",
+                      "margin: 0;",
+                      "}",
+                      "> p > code {",
+                      "padding: 0.2em 0.4em;",
+                      "margin: 0;",
+                      "font-size: 85%;",
+                      "background-color: rgba(27,31,35,0.05);",
+                      "border-radius: 3px;",
+                      "}",
+                      "> pre {",
+                      "padding: 16px;",
+                      "overflow: auto;",
+                      "font-size: 85%;",
+                      "line-height: 1.45;",
+                      "background-color: #f6f8fa;",
+                      "border-radius: 3px;",
+                      "}",
+                      "> pre > code {",
+                      "display: inline;",
+                      "padding: 0;",
+                      "margin: 0;",
+                      "border: 0;",
+                      "overflow: visible;",
+                      "line-height: inherit;",
+                      "word-wrap: normal;",
+                      "}",
                       [Function],
                       [Function],
                     ],
                   },
-                  "displayName": "Styled(ReactMarkdown)",
+                  "displayName": "src__StyledParagraph",
                   "foldedComponentIds": Array [],
                   "render": [Function],
                   "renderers": Object {
@@ -255,7 +287,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                     "thematicBreak": "hr",
                     "virtualHtml": [Function],
                   },
-                  "styledComponentId": "sc-bwzfXH",
+                  "styledComponentId": "src__StyledParagraph-dkdnni-0",
                   "target": [Function],
                   "toString": [Function],
                   "types": Array [
@@ -321,6 +353,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                 escapeHtml={false}
                 linkRenderer={[Function]}
                 mb={0}
+                parserOptions={Object {}}
                 plugins={Array []}
                 rawSourcePos={false}
                 renderers={
@@ -356,11 +389,11 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                 </Root>
               </ReactMarkdown>
             </StyledComponent>
-          </Styled(ReactMarkdown)>
+          </src__StyledParagraph>
         </Paragraph>
       </div>
     </StyledComponent>
-  </styled.div>
+  </src__InsetText>
 </InsetTextWithParagraph>
 `;
 
@@ -418,39 +451,52 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
 
 <_default>
   <DocumentedInsetText>
-    <styled.div>
+    <src__InsetText>
       <StyledComponent
         forwardedComponent={
           Object {
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-htpNat",
+              "componentId": "src__InsetText-surbaa-0",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
-                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                "color: #0b0c0c; @media print {
-  color: #000;
-}",
+                "font-family: \\"nta\\", Arial, sans-serif;",
+                "-webkit-font-smoothing: antialiased;",
+                "-moz-osx-font-smoothing: grayscale;",
+                "@media print {",
+                "font-size: 14px;",
+                "line-height: 1.15;",
+                "}",
+                "font-weight: 400;",
+                "font-size: 16px;",
+                "line-height: 1.25;",
+                "@media only screen and (min-width: 641px) {",
+                "font-size: 19px;",
+                "line-height: 1.3157894736842106;",
+                "}",
+                "color: #0b0c0c;",
+                "@media print {",
+                "color: #000;",
+                "}",
                 "padding: 15px;",
                 [Function],
-                "clear: both; border-left: 10px solid #bfc1c3; :first-child {
-  margin-top: 0;
-} :only-child,:last-child {
-  margin-bottom: 0;
-}",
+                "clear: both;",
+                "border-left: 10px solid #bfc1c3;",
+                ":first-child {",
+                "margin-top: 0;",
+                "}",
+                ":only-child,:last-child {",
+                "margin-bottom: 0;",
+                "}",
               ],
             },
-            "displayName": "styled.div",
+            "displayName": "src__InsetText",
             "foldedComponentIds": Array [],
             "propTypes": undefined,
             "render": [Function],
-            "styledComponentId": "sc-htpNat",
+            "styledComponentId": "src__InsetText-surbaa-0",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -465,7 +511,7 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
           It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
         </div>
       </StyledComponent>
-    </styled.div>
+    </src__InsetText>
   </DocumentedInsetText>
 </_default>
 `;

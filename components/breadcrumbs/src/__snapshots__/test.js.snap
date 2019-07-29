@@ -113,33 +113,44 @@ exports[`breadcrumbs matches snapshot: breadcrumbs 1`] = `
 }
 
 <Breadcrumbs>
-  <styled.div>
+  <src__BreadcrumbsContainer>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
+            "componentId": "src__BreadcrumbsContainer-r0q7fk-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.2;
-} font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
-  font-size: 16px; line-height: 1.25;
-}",
-              "color: #0b0c0c; @media print {
-  color: #000;
-}",
-              "margin-top: 15px; margin-bottom: 10px;",
+              "font-family: \\"nta\\", Arial, sans-serif;",
+              "-webkit-font-smoothing: antialiased;",
+              "-moz-osx-font-smoothing: grayscale;",
+              "@media print {",
+              "font-size: 14px;",
+              "line-height: 1.2;",
+              "}",
+              "font-weight: 400;",
+              "font-size: 14px;",
+              "line-height: 1.1428571428571428;",
+              "@media only screen and (min-width: 641px) {",
+              "font-size: 16px;",
+              "line-height: 1.25;",
+              "}",
+              "color: #0b0c0c;",
+              "@media print {",
+              "color: #000;",
+              "}",
+              "margin-top: 15px;",
+              "margin-bottom: 10px;",
               [Function],
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "src__BreadcrumbsContainer",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
+          "styledComponentId": "src__BreadcrumbsContainer-r0q7fk-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -151,24 +162,27 @@ exports[`breadcrumbs matches snapshot: breadcrumbs 1`] = `
       <div
         className="c0"
       >
-        <styled.ol>
+        <src__BreadcrumbsList>
           <StyledComponent
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-htpNat",
+                  "componentId": "src__BreadcrumbsList-r0q7fk-1",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
-                    "margin: 0; padding: 0; list-style-type: none; display: block;",
+                    "margin: 0;",
+                    "padding: 0;",
+                    "list-style-type: none;",
+                    "display: block;",
                   ],
                 },
-                "displayName": "styled.ol",
+                "displayName": "src__BreadcrumbsList",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-htpNat",
+                "styledComponentId": "src__BreadcrumbsList-r0q7fk-1",
                 "target": "ol",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -180,7 +194,7 @@ exports[`breadcrumbs matches snapshot: breadcrumbs 1`] = `
             <ol
               className="c1"
             >
-              <styled.li
+              <src__BreadcrumbsListItem
                 key="0"
               >
                 <StyledComponent
@@ -189,23 +203,44 @@ exports[`breadcrumbs matches snapshot: breadcrumbs 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-bxivhb",
+                        "componentId": "src__BreadcrumbsListItem-r0q7fk-2",
                         "isStatic": true,
                         "lastClassName": "c2",
                         "rules": Array [
-                          "display: inline-block; position: relative; margin-bottom: 5px; margin-left: 10px; padding-left: 15.655000000000001px; ::before {
-  content: ''; display: block; position: absolute; top: -1px; bottom: 1px; left: -3.3100000000000005px; width: 7px; height: 7px; margin: auto 0; transform: rotate(45deg); border: solid; border-width: 1px 1px 0 0; border-color: #6f777b;
-} :first-child {
-  margin-left: 0; padding-left: 0; ::before {
-  content: none; display: none;
-}
-}",
+                          "display: inline-block;",
+                          "position: relative;",
+                          "margin-bottom: 5px;",
+                          "margin-left: 10px;",
+                          "padding-left: 15.655000000000001px;",
+                          "::before {",
+                          "content: '';",
+                          "display: block;",
+                          "position: absolute;",
+                          "top: -1px;",
+                          "bottom: 1px;",
+                          "left: -3.3100000000000005px;",
+                          "width: 7px;",
+                          "height: 7px;",
+                          "margin: auto 0;",
+                          "transform: rotate(45deg);",
+                          "border: solid;",
+                          "border-width: 1px 1px 0 0;",
+                          "border-color: #6f777b;",
+                          "}",
+                          ":first-child {",
+                          "margin-left: 0;",
+                          "padding-left: 0;",
+                          "::before {",
+                          "content: none;",
+                          "display: none;",
+                          "}",
+                          "}",
                         ],
                       },
-                      "displayName": "styled.li",
+                      "displayName": "src__BreadcrumbsListItem",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-bxivhb",
+                      "styledComponentId": "src__BreadcrumbsListItem-r0q7fk-2",
                       "target": "li",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -217,7 +252,7 @@ exports[`breadcrumbs matches snapshot: breadcrumbs 1`] = `
                   <li
                     className="c2"
                   >
-                    <styled.a
+                    <link__Link
                       href="/section"
                     >
                       <StyledComponent
@@ -226,27 +261,33 @@ exports[`breadcrumbs matches snapshot: breadcrumbs 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-bdVaJa",
+                              "componentId": "link__Link-sc-12riix3-0",
                               "isStatic": true,
                               "lastClassName": "c3",
                               "rules": Array [
-                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-                                "&:link, &:visited, &:hover, &:active, &:focus {
-  color: #0b0c0c; @media print {
-  color: #000;
-}
-}",
-                                "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
-}",
+                                "font-family: \\"nta\\", Arial, sans-serif;",
+                                "-webkit-font-smoothing: antialiased;",
+                                "-moz-osx-font-smoothing: grayscale;",
+                                "@media print {",
+                                "font-family: sans-serif;",
+                                "}",
+                                "&:link, &:visited, &:hover, &:active, &:focus {",
+                                "color: #0b0c0c;",
+                                "@media print {",
+                                "color: #000;",
+                                "}",
+                                "}",
+                                "&:focus {",
+                                "outline: 3px solid #ffbf47;",
+                                "outline-offset: 0;",
+                                "background-color: #ffbf47;",
+                                "}",
                               ],
                             },
-                            "displayName": "styled.a",
+                            "displayName": "link__Link",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-bdVaJa",
+                            "styledComponentId": "link__Link-sc-12riix3-0",
                             "target": "a",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -263,11 +304,11 @@ exports[`breadcrumbs matches snapshot: breadcrumbs 1`] = `
                           Section 1
                         </a>
                       </StyledComponent>
-                    </styled.a>
+                    </link__Link>
                   </li>
                 </StyledComponent>
-              </styled.li>
-              <styled.li
+              </src__BreadcrumbsListItem>
+              <src__BreadcrumbsListItem
                 key="1"
               >
                 <StyledComponent
@@ -276,23 +317,44 @@ exports[`breadcrumbs matches snapshot: breadcrumbs 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-bxivhb",
+                        "componentId": "src__BreadcrumbsListItem-r0q7fk-2",
                         "isStatic": true,
                         "lastClassName": "c2",
                         "rules": Array [
-                          "display: inline-block; position: relative; margin-bottom: 5px; margin-left: 10px; padding-left: 15.655000000000001px; ::before {
-  content: ''; display: block; position: absolute; top: -1px; bottom: 1px; left: -3.3100000000000005px; width: 7px; height: 7px; margin: auto 0; transform: rotate(45deg); border: solid; border-width: 1px 1px 0 0; border-color: #6f777b;
-} :first-child {
-  margin-left: 0; padding-left: 0; ::before {
-  content: none; display: none;
-}
-}",
+                          "display: inline-block;",
+                          "position: relative;",
+                          "margin-bottom: 5px;",
+                          "margin-left: 10px;",
+                          "padding-left: 15.655000000000001px;",
+                          "::before {",
+                          "content: '';",
+                          "display: block;",
+                          "position: absolute;",
+                          "top: -1px;",
+                          "bottom: 1px;",
+                          "left: -3.3100000000000005px;",
+                          "width: 7px;",
+                          "height: 7px;",
+                          "margin: auto 0;",
+                          "transform: rotate(45deg);",
+                          "border: solid;",
+                          "border-width: 1px 1px 0 0;",
+                          "border-color: #6f777b;",
+                          "}",
+                          ":first-child {",
+                          "margin-left: 0;",
+                          "padding-left: 0;",
+                          "::before {",
+                          "content: none;",
+                          "display: none;",
+                          "}",
+                          "}",
                         ],
                       },
-                      "displayName": "styled.li",
+                      "displayName": "src__BreadcrumbsListItem",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-bxivhb",
+                      "styledComponentId": "src__BreadcrumbsListItem-r0q7fk-2",
                       "target": "li",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -304,7 +366,7 @@ exports[`breadcrumbs matches snapshot: breadcrumbs 1`] = `
                   <li
                     className="c2"
                   >
-                    <styled.a
+                    <link__Link
                       href="/section2"
                     >
                       <StyledComponent
@@ -313,27 +375,33 @@ exports[`breadcrumbs matches snapshot: breadcrumbs 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-bdVaJa",
+                              "componentId": "link__Link-sc-12riix3-0",
                               "isStatic": true,
                               "lastClassName": "c3",
                               "rules": Array [
-                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-                                "&:link, &:visited, &:hover, &:active, &:focus {
-  color: #0b0c0c; @media print {
-  color: #000;
-}
-}",
-                                "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
-}",
+                                "font-family: \\"nta\\", Arial, sans-serif;",
+                                "-webkit-font-smoothing: antialiased;",
+                                "-moz-osx-font-smoothing: grayscale;",
+                                "@media print {",
+                                "font-family: sans-serif;",
+                                "}",
+                                "&:link, &:visited, &:hover, &:active, &:focus {",
+                                "color: #0b0c0c;",
+                                "@media print {",
+                                "color: #000;",
+                                "}",
+                                "}",
+                                "&:focus {",
+                                "outline: 3px solid #ffbf47;",
+                                "outline-offset: 0;",
+                                "background-color: #ffbf47;",
+                                "}",
                               ],
                             },
-                            "displayName": "styled.a",
+                            "displayName": "link__Link",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-bdVaJa",
+                            "styledComponentId": "link__Link-sc-12riix3-0",
                             "target": "a",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -350,15 +418,15 @@ exports[`breadcrumbs matches snapshot: breadcrumbs 1`] = `
                           Section 2
                         </a>
                       </StyledComponent>
-                    </styled.a>
+                    </link__Link>
                   </li>
                 </StyledComponent>
-              </styled.li>
+              </src__BreadcrumbsListItem>
             </ol>
           </StyledComponent>
-        </styled.ol>
+        </src__BreadcrumbsList>
       </div>
     </StyledComponent>
-  </styled.div>
+  </src__BreadcrumbsContainer>
 </Breadcrumbs>
 `;

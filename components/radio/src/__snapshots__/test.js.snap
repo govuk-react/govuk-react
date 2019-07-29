@@ -133,7 +133,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
   hint="Hint text"
   inline={false}
 >
-  <styled.label
+  <src__Label
     inline={false}
   >
     <StyledComponent
@@ -142,24 +142,37 @@ exports[`Radio can render with hint text: hint text 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
+            "componentId": "src__Label-sc-7h7h1q-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-              "display: block; position: relative; min-height: 40px; padding: 0 0 0 40px; clear: left;",
+              "font-family: \\"nta\\", Arial, sans-serif;",
+              "-webkit-font-smoothing: antialiased;",
+              "-moz-osx-font-smoothing: grayscale;",
+              "@media print {",
+              "font-size: 14px;",
+              "line-height: 1.15;",
+              "}",
+              "font-weight: 400;",
+              "font-size: 16px;",
+              "line-height: 1.25;",
+              "@media only screen and (min-width: 641px) {",
+              "font-size: 19px;",
+              "line-height: 1.3157894736842106;",
+              "}",
+              "display: block;",
+              "position: relative;",
+              "min-height: 40px;",
+              "padding: 0 0 0 40px;",
+              "clear: left;",
               [Function],
               [Function],
             ],
           },
-          "displayName": "styled.label",
+          "displayName": "src__Label",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
+          "styledComponentId": "src__Label-sc-7h7h1q-0",
           "target": "label",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -172,7 +185,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
       <label
         className="c0"
       >
-        <styled.input
+        <src__Input
           type="radio"
         >
           <StyledComponent
@@ -181,22 +194,33 @@ exports[`Radio can render with hint text: hint text 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-htpNat",
+                  "componentId": "src__Input-sc-7h7h1q-1",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
-                    "position: absolute; z-index: 1; top: 0; left: 0; width: 40px; height: 40px; cursor: pointer; opacity: 0; :checked + span::after {
-  opacity: 1;
-} :focus + span::before {
-  outline: 3px solid transparent; outline-offset: 3px; box-shadow: 0 0 0 4px #ffbf47;
-}",
+                    "position: absolute;",
+                    "z-index: 1;",
+                    "top: 0;",
+                    "left: 0;",
+                    "width: 40px;",
+                    "height: 40px;",
+                    "cursor: pointer;",
+                    "opacity: 0;",
+                    ":checked + span::after {",
+                    "opacity: 1;",
+                    "}",
+                    ":focus + span::before {",
+                    "outline: 3px solid transparent;",
+                    "outline-offset: 3px;",
+                    "box-shadow: 0 0 0 4px #ffbf47;",
+                    "}",
                     [Function],
                   ],
                 },
-                "displayName": "styled.input",
+                "displayName": "src__Input",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-htpNat",
+                "styledComponentId": "src__Input-sc-7h7h1q-1",
                 "target": "input",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -211,29 +235,53 @@ exports[`Radio can render with hint text: hint text 1`] = `
               type="radio"
             />
           </StyledComponent>
-        </styled.input>
-        <styled.span>
+        </src__Input>
+        <src__LabelText>
           <StyledComponent
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bxivhb",
+                  "componentId": "src__LabelText-sc-7h7h1q-2",
                   "isStatic": true,
                   "lastClassName": "c2",
                   "rules": Array [
-                    "display: inline-block; margin-bottom: 0; padding: 8px 15px 5px; cursor: pointer; -ms-touch-action: manipulation; touch-action: manipulation; :before {
-  content: ''; box-sizing: border-box; position: absolute; top: 0; left: 0; width: 40px; height: 40px; border: 2px solid black; border-radius: 50%; background: transparent;
-} :after {
-  content: ''; position: absolute; top: 10px; left: 10px; width: 0; height: 0; border: 10px solid; border-radius: 50%; opacity: 0;
-}",
+                    "display: inline-block;",
+                    "margin-bottom: 0;",
+                    "padding: 8px 15px 5px;",
+                    "cursor: pointer;",
+                    "-ms-touch-action: manipulation;",
+                    "touch-action: manipulation;",
+                    ":before {",
+                    "content: '';",
+                    "box-sizing: border-box;",
+                    "position: absolute;",
+                    "top: 0;",
+                    "left: 0;",
+                    "width: 40px;",
+                    "height: 40px;",
+                    "border: 2px solid black;",
+                    "border-radius: 50%;",
+                    "background: transparent;",
+                    "}",
+                    ":after {",
+                    "content: '';",
+                    "position: absolute;",
+                    "top: 10px;",
+                    "left: 10px;",
+                    "width: 0;",
+                    "height: 0;",
+                    "border: 10px solid;",
+                    "border-radius: 50%;",
+                    "opacity: 0;",
+                    "}",
                   ],
                 },
-                "displayName": "styled.span",
+                "displayName": "src__LabelText",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bxivhb",
+                "styledComponentId": "src__LabelText-sc-7h7h1q-2",
                 "target": "span",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -248,25 +296,27 @@ exports[`Radio can render with hint text: hint text 1`] = `
               Example with hint text
             </span>
           </StyledComponent>
-        </styled.span>
-        <Styled(HintText)>
+        </src__LabelText>
+        <src__StyledRadioHint>
           <StyledComponent
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-ifAKCX",
+                  "componentId": "src__StyledRadioHint-sc-7h7h1q-3",
                   "isStatic": true,
                   "lastClassName": "c3",
                   "rules": Array [
-                    "display: block; padding-left: 15px; padding-right: 15px;",
+                    "display: block;",
+                    "padding-left: 15px;",
+                    "padding-right: 15px;",
                   ],
                 },
-                "displayName": "Styled(HintText)",
+                "displayName": "src__StyledRadioHint",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-ifAKCX",
+                "styledComponentId": "src__StyledRadioHint-sc-7h7h1q-3",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -278,7 +328,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
             <HintText
               className="c3"
             >
-              <styled.span
+              <src__StyledHint
                 className="c3"
               >
                 <StyledComponent
@@ -288,23 +338,34 @@ exports[`Radio can render with hint text: hint text 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-bdVaJa",
+                        "componentId": "src__StyledHint-sc-1qn4br2-0",
                         "isStatic": false,
                         "lastClassName": "c4",
                         "rules": Array [
-                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                          "display: block; margin-bottom: 15px; color: #6f777b;",
+                          "font-family: \\"nta\\", Arial, sans-serif;",
+                          "-webkit-font-smoothing: antialiased;",
+                          "-moz-osx-font-smoothing: grayscale;",
+                          "@media print {",
+                          "font-size: 14px;",
+                          "line-height: 1.15;",
+                          "}",
+                          "font-weight: 400;",
+                          "font-size: 16px;",
+                          "line-height: 1.25;",
+                          "@media only screen and (min-width: 641px) {",
+                          "font-size: 19px;",
+                          "line-height: 1.3157894736842106;",
+                          "}",
+                          "display: block;",
+                          "margin-bottom: 15px;",
+                          "color: #6f777b;",
                           [Function],
                         ],
                       },
-                      "displayName": "styled.span",
+                      "displayName": "src__StyledHint",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-bdVaJa",
+                      "styledComponentId": "src__StyledHint-sc-1qn4br2-0",
                       "target": "span",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -319,13 +380,13 @@ exports[`Radio can render with hint text: hint text 1`] = `
                     Hint text
                   </span>
                 </StyledComponent>
-              </styled.span>
+              </src__StyledHint>
             </HintText>
           </StyledComponent>
-        </Styled(HintText)>
+        </src__StyledRadioHint>
       </label>
     </StyledComponent>
-  </styled.label>
+  </src__Label>
 </Radio>
 `;
 
@@ -430,7 +491,7 @@ exports[`Radio disabled: disabled 1`] = `
   disabled={true}
   inline={false}
 >
-  <styled.label
+  <src__Label
     inline={false}
   >
     <StyledComponent
@@ -439,24 +500,37 @@ exports[`Radio disabled: disabled 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
+            "componentId": "src__Label-sc-7h7h1q-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-              "display: block; position: relative; min-height: 40px; padding: 0 0 0 40px; clear: left;",
+              "font-family: \\"nta\\", Arial, sans-serif;",
+              "-webkit-font-smoothing: antialiased;",
+              "-moz-osx-font-smoothing: grayscale;",
+              "@media print {",
+              "font-size: 14px;",
+              "line-height: 1.15;",
+              "}",
+              "font-weight: 400;",
+              "font-size: 16px;",
+              "line-height: 1.25;",
+              "@media only screen and (min-width: 641px) {",
+              "font-size: 19px;",
+              "line-height: 1.3157894736842106;",
+              "}",
+              "display: block;",
+              "position: relative;",
+              "min-height: 40px;",
+              "padding: 0 0 0 40px;",
+              "clear: left;",
               [Function],
               [Function],
             ],
           },
-          "displayName": "styled.label",
+          "displayName": "src__Label",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
+          "styledComponentId": "src__Label-sc-7h7h1q-0",
           "target": "label",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -469,7 +543,7 @@ exports[`Radio disabled: disabled 1`] = `
       <label
         className="c0"
       >
-        <styled.input
+        <src__Input
           disabled={true}
           type="radio"
         >
@@ -480,22 +554,33 @@ exports[`Radio disabled: disabled 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-htpNat",
+                  "componentId": "src__Input-sc-7h7h1q-1",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
-                    "position: absolute; z-index: 1; top: 0; left: 0; width: 40px; height: 40px; cursor: pointer; opacity: 0; :checked + span::after {
-  opacity: 1;
-} :focus + span::before {
-  outline: 3px solid transparent; outline-offset: 3px; box-shadow: 0 0 0 4px #ffbf47;
-}",
+                    "position: absolute;",
+                    "z-index: 1;",
+                    "top: 0;",
+                    "left: 0;",
+                    "width: 40px;",
+                    "height: 40px;",
+                    "cursor: pointer;",
+                    "opacity: 0;",
+                    ":checked + span::after {",
+                    "opacity: 1;",
+                    "}",
+                    ":focus + span::before {",
+                    "outline: 3px solid transparent;",
+                    "outline-offset: 3px;",
+                    "box-shadow: 0 0 0 4px #ffbf47;",
+                    "}",
                     [Function],
                   ],
                 },
-                "displayName": "styled.input",
+                "displayName": "src__Input",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-htpNat",
+                "styledComponentId": "src__Input-sc-7h7h1q-1",
                 "target": "input",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -511,29 +596,53 @@ exports[`Radio disabled: disabled 1`] = `
               type="radio"
             />
           </StyledComponent>
-        </styled.input>
-        <styled.span>
+        </src__Input>
+        <src__LabelText>
           <StyledComponent
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bxivhb",
+                  "componentId": "src__LabelText-sc-7h7h1q-2",
                   "isStatic": true,
                   "lastClassName": "c2",
                   "rules": Array [
-                    "display: inline-block; margin-bottom: 0; padding: 8px 15px 5px; cursor: pointer; -ms-touch-action: manipulation; touch-action: manipulation; :before {
-  content: ''; box-sizing: border-box; position: absolute; top: 0; left: 0; width: 40px; height: 40px; border: 2px solid black; border-radius: 50%; background: transparent;
-} :after {
-  content: ''; position: absolute; top: 10px; left: 10px; width: 0; height: 0; border: 10px solid; border-radius: 50%; opacity: 0;
-}",
+                    "display: inline-block;",
+                    "margin-bottom: 0;",
+                    "padding: 8px 15px 5px;",
+                    "cursor: pointer;",
+                    "-ms-touch-action: manipulation;",
+                    "touch-action: manipulation;",
+                    ":before {",
+                    "content: '';",
+                    "box-sizing: border-box;",
+                    "position: absolute;",
+                    "top: 0;",
+                    "left: 0;",
+                    "width: 40px;",
+                    "height: 40px;",
+                    "border: 2px solid black;",
+                    "border-radius: 50%;",
+                    "background: transparent;",
+                    "}",
+                    ":after {",
+                    "content: '';",
+                    "position: absolute;",
+                    "top: 10px;",
+                    "left: 10px;",
+                    "width: 0;",
+                    "height: 0;",
+                    "border: 10px solid;",
+                    "border-radius: 50%;",
+                    "opacity: 0;",
+                    "}",
                   ],
                 },
-                "displayName": "styled.span",
+                "displayName": "src__LabelText",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bxivhb",
+                "styledComponentId": "src__LabelText-sc-7h7h1q-2",
                 "target": "span",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -548,10 +657,10 @@ exports[`Radio disabled: disabled 1`] = `
               Example
             </span>
           </StyledComponent>
-        </styled.span>
+        </src__LabelText>
       </label>
     </StyledComponent>
-  </styled.label>
+  </src__Label>
 </Radio>
 `;
 
@@ -664,7 +773,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   inline={true}
   name="example"
 >
-  <styled.label
+  <src__Label
     inline={true}
   >
     <StyledComponent
@@ -673,24 +782,37 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
+            "componentId": "src__Label-sc-7h7h1q-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-              "display: block; position: relative; min-height: 40px; padding: 0 0 0 40px; clear: left;",
+              "font-family: \\"nta\\", Arial, sans-serif;",
+              "-webkit-font-smoothing: antialiased;",
+              "-moz-osx-font-smoothing: grayscale;",
+              "@media print {",
+              "font-size: 14px;",
+              "line-height: 1.15;",
+              "}",
+              "font-weight: 400;",
+              "font-size: 16px;",
+              "line-height: 1.25;",
+              "@media only screen and (min-width: 641px) {",
+              "font-size: 19px;",
+              "line-height: 1.3157894736842106;",
+              "}",
+              "display: block;",
+              "position: relative;",
+              "min-height: 40px;",
+              "padding: 0 0 0 40px;",
+              "clear: left;",
               [Function],
               [Function],
             ],
           },
-          "displayName": "styled.label",
+          "displayName": "src__Label",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
+          "styledComponentId": "src__Label-sc-7h7h1q-0",
           "target": "label",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -703,7 +825,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
       <label
         className="c0"
       >
-        <styled.input
+        <src__Input
           name="example"
           type="radio"
         >
@@ -713,22 +835,33 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-htpNat",
+                  "componentId": "src__Input-sc-7h7h1q-1",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
-                    "position: absolute; z-index: 1; top: 0; left: 0; width: 40px; height: 40px; cursor: pointer; opacity: 0; :checked + span::after {
-  opacity: 1;
-} :focus + span::before {
-  outline: 3px solid transparent; outline-offset: 3px; box-shadow: 0 0 0 4px #ffbf47;
-}",
+                    "position: absolute;",
+                    "z-index: 1;",
+                    "top: 0;",
+                    "left: 0;",
+                    "width: 40px;",
+                    "height: 40px;",
+                    "cursor: pointer;",
+                    "opacity: 0;",
+                    ":checked + span::after {",
+                    "opacity: 1;",
+                    "}",
+                    ":focus + span::before {",
+                    "outline: 3px solid transparent;",
+                    "outline-offset: 3px;",
+                    "box-shadow: 0 0 0 4px #ffbf47;",
+                    "}",
                     [Function],
                   ],
                 },
-                "displayName": "styled.input",
+                "displayName": "src__Input",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-htpNat",
+                "styledComponentId": "src__Input-sc-7h7h1q-1",
                 "target": "input",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -745,29 +878,53 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
               type="radio"
             />
           </StyledComponent>
-        </styled.input>
-        <styled.span>
+        </src__Input>
+        <src__LabelText>
           <StyledComponent
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bxivhb",
+                  "componentId": "src__LabelText-sc-7h7h1q-2",
                   "isStatic": true,
                   "lastClassName": "c2",
                   "rules": Array [
-                    "display: inline-block; margin-bottom: 0; padding: 8px 15px 5px; cursor: pointer; -ms-touch-action: manipulation; touch-action: manipulation; :before {
-  content: ''; box-sizing: border-box; position: absolute; top: 0; left: 0; width: 40px; height: 40px; border: 2px solid black; border-radius: 50%; background: transparent;
-} :after {
-  content: ''; position: absolute; top: 10px; left: 10px; width: 0; height: 0; border: 10px solid; border-radius: 50%; opacity: 0;
-}",
+                    "display: inline-block;",
+                    "margin-bottom: 0;",
+                    "padding: 8px 15px 5px;",
+                    "cursor: pointer;",
+                    "-ms-touch-action: manipulation;",
+                    "touch-action: manipulation;",
+                    ":before {",
+                    "content: '';",
+                    "box-sizing: border-box;",
+                    "position: absolute;",
+                    "top: 0;",
+                    "left: 0;",
+                    "width: 40px;",
+                    "height: 40px;",
+                    "border: 2px solid black;",
+                    "border-radius: 50%;",
+                    "background: transparent;",
+                    "}",
+                    ":after {",
+                    "content: '';",
+                    "position: absolute;",
+                    "top: 10px;",
+                    "left: 10px;",
+                    "width: 0;",
+                    "height: 0;",
+                    "border: 10px solid;",
+                    "border-radius: 50%;",
+                    "opacity: 0;",
+                    "}",
                   ],
                 },
-                "displayName": "styled.span",
+                "displayName": "src__LabelText",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bxivhb",
+                "styledComponentId": "src__LabelText-sc-7h7h1q-2",
                 "target": "span",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -782,10 +939,10 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
               example
             </span>
           </StyledComponent>
-        </styled.span>
+        </src__LabelText>
       </label>
     </StyledComponent>
-  </styled.label>
+  </src__Label>
 </Radio>
 `;
 
@@ -890,7 +1047,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   inline={false}
   name="example"
 >
-  <styled.label
+  <src__Label
     inline={false}
   >
     <StyledComponent
@@ -899,24 +1056,37 @@ exports[`Radio matches snapshot: standard mount 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
+            "componentId": "src__Label-sc-7h7h1q-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-              "display: block; position: relative; min-height: 40px; padding: 0 0 0 40px; clear: left;",
+              "font-family: \\"nta\\", Arial, sans-serif;",
+              "-webkit-font-smoothing: antialiased;",
+              "-moz-osx-font-smoothing: grayscale;",
+              "@media print {",
+              "font-size: 14px;",
+              "line-height: 1.15;",
+              "}",
+              "font-weight: 400;",
+              "font-size: 16px;",
+              "line-height: 1.25;",
+              "@media only screen and (min-width: 641px) {",
+              "font-size: 19px;",
+              "line-height: 1.3157894736842106;",
+              "}",
+              "display: block;",
+              "position: relative;",
+              "min-height: 40px;",
+              "padding: 0 0 0 40px;",
+              "clear: left;",
               [Function],
               [Function],
             ],
           },
-          "displayName": "styled.label",
+          "displayName": "src__Label",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
+          "styledComponentId": "src__Label-sc-7h7h1q-0",
           "target": "label",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -929,7 +1099,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
       <label
         className="c0"
       >
-        <styled.input
+        <src__Input
           name="example"
           type="radio"
         >
@@ -939,22 +1109,33 @@ exports[`Radio matches snapshot: standard mount 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-htpNat",
+                  "componentId": "src__Input-sc-7h7h1q-1",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
-                    "position: absolute; z-index: 1; top: 0; left: 0; width: 40px; height: 40px; cursor: pointer; opacity: 0; :checked + span::after {
-  opacity: 1;
-} :focus + span::before {
-  outline: 3px solid transparent; outline-offset: 3px; box-shadow: 0 0 0 4px #ffbf47;
-}",
+                    "position: absolute;",
+                    "z-index: 1;",
+                    "top: 0;",
+                    "left: 0;",
+                    "width: 40px;",
+                    "height: 40px;",
+                    "cursor: pointer;",
+                    "opacity: 0;",
+                    ":checked + span::after {",
+                    "opacity: 1;",
+                    "}",
+                    ":focus + span::before {",
+                    "outline: 3px solid transparent;",
+                    "outline-offset: 3px;",
+                    "box-shadow: 0 0 0 4px #ffbf47;",
+                    "}",
                     [Function],
                   ],
                 },
-                "displayName": "styled.input",
+                "displayName": "src__Input",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-htpNat",
+                "styledComponentId": "src__Input-sc-7h7h1q-1",
                 "target": "input",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -971,29 +1152,53 @@ exports[`Radio matches snapshot: standard mount 1`] = `
               type="radio"
             />
           </StyledComponent>
-        </styled.input>
-        <styled.span>
+        </src__Input>
+        <src__LabelText>
           <StyledComponent
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bxivhb",
+                  "componentId": "src__LabelText-sc-7h7h1q-2",
                   "isStatic": true,
                   "lastClassName": "c2",
                   "rules": Array [
-                    "display: inline-block; margin-bottom: 0; padding: 8px 15px 5px; cursor: pointer; -ms-touch-action: manipulation; touch-action: manipulation; :before {
-  content: ''; box-sizing: border-box; position: absolute; top: 0; left: 0; width: 40px; height: 40px; border: 2px solid black; border-radius: 50%; background: transparent;
-} :after {
-  content: ''; position: absolute; top: 10px; left: 10px; width: 0; height: 0; border: 10px solid; border-radius: 50%; opacity: 0;
-}",
+                    "display: inline-block;",
+                    "margin-bottom: 0;",
+                    "padding: 8px 15px 5px;",
+                    "cursor: pointer;",
+                    "-ms-touch-action: manipulation;",
+                    "touch-action: manipulation;",
+                    ":before {",
+                    "content: '';",
+                    "box-sizing: border-box;",
+                    "position: absolute;",
+                    "top: 0;",
+                    "left: 0;",
+                    "width: 40px;",
+                    "height: 40px;",
+                    "border: 2px solid black;",
+                    "border-radius: 50%;",
+                    "background: transparent;",
+                    "}",
+                    ":after {",
+                    "content: '';",
+                    "position: absolute;",
+                    "top: 10px;",
+                    "left: 10px;",
+                    "width: 0;",
+                    "height: 0;",
+                    "border: 10px solid;",
+                    "border-radius: 50%;",
+                    "opacity: 0;",
+                    "}",
                   ],
                 },
-                "displayName": "styled.span",
+                "displayName": "src__LabelText",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bxivhb",
+                "styledComponentId": "src__LabelText-sc-7h7h1q-2",
                 "target": "span",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -1008,9 +1213,9 @@ exports[`Radio matches snapshot: standard mount 1`] = `
               example
             </span>
           </StyledComponent>
-        </styled.span>
+        </src__LabelText>
       </label>
     </StyledComponent>
-  </styled.label>
+  </src__Label>
 </Radio>
 `;

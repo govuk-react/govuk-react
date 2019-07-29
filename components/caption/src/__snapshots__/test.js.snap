@@ -30,7 +30,7 @@ exports[`Caption matches wrapper snapshot 1`] = `
 <Caption
   size="XL"
 >
-  <styled.span
+  <src__StyledCaption
     size="XL"
   >
     <StyledComponent
@@ -39,20 +39,21 @@ exports[`Caption matches wrapper snapshot 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__StyledCaption-sc-1uq9o1t-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               [Function],
               [Function],
-              "display: block; color: #6f777b;",
+              "display: block;",
+              "color: #6f777b;",
               [Function],
             ],
           },
-          "displayName": "styled.span",
+          "displayName": "src__StyledCaption",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__StyledCaption-sc-1uq9o1t-0",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -69,6 +70,6 @@ exports[`Caption matches wrapper snapshot 1`] = `
         Heading text
       </span>
     </StyledComponent>
-  </styled.span>
+  </src__StyledCaption>
 </Caption>
 `;

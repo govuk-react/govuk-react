@@ -135,7 +135,7 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
     error="example"
     errorText="example"
   >
-    <styled.label
+    <src__StyledLabel
       error="example"
       errorText="example"
     >
@@ -147,21 +147,26 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "src__StyledLabel-sc-14n2scx-0",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
-                "display: flex; flex-direction: column; box-sizing: border-box; :after {
-  content: ''; display: table; clear: both;
-}",
+                "display: flex;",
+                "flex-direction: column;",
+                "box-sizing: border-box;",
+                ":after {",
+                "content: '';",
+                "display: table;",
+                "clear: both;",
+                "}",
                 [Function],
                 [Function],
               ],
             },
-            "displayName": "styled.label",
+            "displayName": "src__StyledLabel",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
             "target": "label",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -174,34 +179,46 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
           className="c0"
         >
           <LabelText>
-            <styled.span>
+            <src__StyledLabelText>
               <StyledComponent
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bwzfXH",
+                      "componentId": "src__StyledLabelText-sc-12l0n4z-0",
                       "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
-                        "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                        "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                        "display: block; clear: none; padding-bottom: 2px;",
+                        "font-family: \\"nta\\", Arial, sans-serif;",
+                        "-webkit-font-smoothing: antialiased;",
+                        "-moz-osx-font-smoothing: grayscale;",
+                        "@media print {",
+                        "font-size: 14px;",
+                        "line-height: 1.15;",
+                        "}",
+                        "font-weight: 400;",
+                        "font-size: 16px;",
+                        "line-height: 1.25;",
+                        "@media only screen and (min-width: 641px) {",
+                        "font-size: 19px;",
+                        "line-height: 1.3157894736842106;",
+                        "}",
+                        "color: #0b0c0c;",
+                        "@media print {",
+                        "color: #000;",
+                        "}",
+                        "display: block;",
+                        "clear: none;",
+                        "padding-bottom: 2px;",
                         [Function],
                         [Function],
                       ],
                     },
-                    "displayName": "styled.span",
+                    "displayName": "src__StyledLabelText",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bwzfXH",
+                    "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -216,33 +233,45 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
                   example
                 </span>
               </StyledComponent>
-            </styled.span>
+            </src__StyledLabelText>
           </LabelText>
           <ErrorText>
-            <styled.span>
+            <src__StyledError>
               <StyledComponent
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "src__StyledError-q8g4f0-0",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
-                        "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 700; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                        "display: block; margin-bottom: 15px; clear: both; color: #b10e1e;",
+                        "font-family: \\"nta\\", Arial, sans-serif;",
+                        "-webkit-font-smoothing: antialiased;",
+                        "-moz-osx-font-smoothing: grayscale;",
+                        "@media print {",
+                        "font-size: 14px;",
+                        "line-height: 1.15;",
+                        "}",
+                        "font-weight: 700;",
+                        "font-size: 16px;",
+                        "line-height: 1.25;",
+                        "@media only screen and (min-width: 641px) {",
+                        "font-size: 19px;",
+                        "line-height: 1.3157894736842106;",
+                        "}",
+                        "display: block;",
+                        "margin-bottom: 15px;",
+                        "clear: both;",
+                        "color: #b10e1e;",
                         [Function],
                       ],
                     },
-                    "displayName": "styled.span",
+                    "displayName": "src__StyledError",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "src__StyledError-q8g4f0-0",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -257,9 +286,9 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
                   example
                 </span>
               </StyledComponent>
-            </styled.span>
+            </src__StyledError>
           </ErrorText>
-          <styled.textarea
+          <src__TextAreaField
             error="example"
             rows="5"
             type="text"
@@ -271,22 +300,35 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-ifAKCX",
+                    "componentId": "src__TextAreaField-sc-83xe87-0",
                     "isStatic": false,
                     "lastClassName": "c3",
                     "rules": Array [
-                      "box-sizing: border-box; font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3; width: 75%;
-} width: 100%; padding: 5px 4px 4px; border: 2px solid #0b0c0c; :focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
-}",
+                      "box-sizing: border-box;",
+                      "font-family: \\"nta\\", Arial, sans-serif;",
+                      "font-weight: 400;",
+                      "text-transform: none;",
+                      "font-size: 16px;",
+                      "line-height: 1.25;",
+                      "@media only screen and (min-width: 641px) {",
+                      "font-size: 19px;",
+                      "line-height: 1.3;",
+                      "width: 75%;",
+                      "}",
+                      "width: 100%;",
+                      "padding: 5px 4px 4px;",
+                      "border: 2px solid #0b0c0c;",
+                      ":focus {",
+                      "outline: 3px solid #ffbf47;",
+                      "outline-offset: 0;",
+                      "}",
                       [Function],
                     ],
                   },
-                  "displayName": "styled.textarea",
+                  "displayName": "src__TextAreaField",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-ifAKCX",
+                  "styledComponentId": "src__TextAreaField-sc-83xe87-0",
                   "target": "textarea",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -303,10 +345,10 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
                 type="text"
               />
             </StyledComponent>
-          </styled.textarea>
+          </src__TextAreaField>
         </label>
       </StyledComponent>
-    </styled.label>
+    </src__StyledLabel>
   </Label>
 </TextArea>
 `;
@@ -435,7 +477,7 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   <Label
     error={false}
   >
-    <styled.label
+    <src__StyledLabel
       error={false}
     >
       <StyledComponent
@@ -445,21 +487,26 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "src__StyledLabel-sc-14n2scx-0",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
-                "display: flex; flex-direction: column; box-sizing: border-box; :after {
-  content: ''; display: table; clear: both;
-}",
+                "display: flex;",
+                "flex-direction: column;",
+                "box-sizing: border-box;",
+                ":after {",
+                "content: '';",
+                "display: table;",
+                "clear: both;",
+                "}",
                 [Function],
                 [Function],
               ],
             },
-            "displayName": "styled.label",
+            "displayName": "src__StyledLabel",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
             "target": "label",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -472,34 +519,46 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
           className="c0"
         >
           <LabelText>
-            <styled.span>
+            <src__StyledLabelText>
               <StyledComponent
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bwzfXH",
+                      "componentId": "src__StyledLabelText-sc-12l0n4z-0",
                       "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
-                        "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                        "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                        "display: block; clear: none; padding-bottom: 2px;",
+                        "font-family: \\"nta\\", Arial, sans-serif;",
+                        "-webkit-font-smoothing: antialiased;",
+                        "-moz-osx-font-smoothing: grayscale;",
+                        "@media print {",
+                        "font-size: 14px;",
+                        "line-height: 1.15;",
+                        "}",
+                        "font-weight: 400;",
+                        "font-size: 16px;",
+                        "line-height: 1.25;",
+                        "@media only screen and (min-width: 641px) {",
+                        "font-size: 19px;",
+                        "line-height: 1.3157894736842106;",
+                        "}",
+                        "color: #0b0c0c;",
+                        "@media print {",
+                        "color: #000;",
+                        "}",
+                        "display: block;",
+                        "clear: none;",
+                        "padding-bottom: 2px;",
                         [Function],
                         [Function],
                       ],
                     },
-                    "displayName": "styled.span",
+                    "displayName": "src__StyledLabelText",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bwzfXH",
+                    "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -514,33 +573,44 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
                   example
                 </span>
               </StyledComponent>
-            </styled.span>
+            </src__StyledLabelText>
           </LabelText>
           <HintText>
-            <styled.span>
+            <src__StyledHint>
               <StyledComponent
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bxivhb",
+                      "componentId": "src__StyledHint-sc-1qn4br2-0",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
-                        "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                        "display: block; margin-bottom: 15px; color: #6f777b;",
+                        "font-family: \\"nta\\", Arial, sans-serif;",
+                        "-webkit-font-smoothing: antialiased;",
+                        "-moz-osx-font-smoothing: grayscale;",
+                        "@media print {",
+                        "font-size: 14px;",
+                        "line-height: 1.15;",
+                        "}",
+                        "font-weight: 400;",
+                        "font-size: 16px;",
+                        "line-height: 1.25;",
+                        "@media only screen and (min-width: 641px) {",
+                        "font-size: 19px;",
+                        "line-height: 1.3157894736842106;",
+                        "}",
+                        "display: block;",
+                        "margin-bottom: 15px;",
+                        "color: #6f777b;",
                         [Function],
                       ],
                     },
-                    "displayName": "styled.span",
+                    "displayName": "src__StyledHint",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bxivhb",
+                    "styledComponentId": "src__StyledHint-sc-1qn4br2-0",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -555,9 +625,9 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
                   example
                 </span>
               </StyledComponent>
-            </styled.span>
+            </src__StyledHint>
           </HintText>
-          <styled.textarea
+          <src__TextAreaField
             rows="5"
             type="text"
           >
@@ -567,22 +637,35 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-ifAKCX",
+                    "componentId": "src__TextAreaField-sc-83xe87-0",
                     "isStatic": false,
                     "lastClassName": "c3",
                     "rules": Array [
-                      "box-sizing: border-box; font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3; width: 75%;
-} width: 100%; padding: 5px 4px 4px; border: 2px solid #0b0c0c; :focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
-}",
+                      "box-sizing: border-box;",
+                      "font-family: \\"nta\\", Arial, sans-serif;",
+                      "font-weight: 400;",
+                      "text-transform: none;",
+                      "font-size: 16px;",
+                      "line-height: 1.25;",
+                      "@media only screen and (min-width: 641px) {",
+                      "font-size: 19px;",
+                      "line-height: 1.3;",
+                      "width: 75%;",
+                      "}",
+                      "width: 100%;",
+                      "padding: 5px 4px 4px;",
+                      "border: 2px solid #0b0c0c;",
+                      ":focus {",
+                      "outline: 3px solid #ffbf47;",
+                      "outline-offset: 0;",
+                      "}",
                       [Function],
                     ],
                   },
-                  "displayName": "styled.textarea",
+                  "displayName": "src__TextAreaField",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-ifAKCX",
+                  "styledComponentId": "src__TextAreaField-sc-83xe87-0",
                   "target": "textarea",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -599,10 +682,10 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
                 type="text"
               />
             </StyledComponent>
-          </styled.textarea>
+          </src__TextAreaField>
         </label>
       </StyledComponent>
-    </styled.label>
+    </src__StyledLabel>
   </Label>
 </TextArea>
 `;
@@ -704,7 +787,7 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   <Label
     error={false}
   >
-    <styled.label
+    <src__StyledLabel
       error={false}
     >
       <StyledComponent
@@ -714,21 +797,26 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "src__StyledLabel-sc-14n2scx-0",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
-                "display: flex; flex-direction: column; box-sizing: border-box; :after {
-  content: ''; display: table; clear: both;
-}",
+                "display: flex;",
+                "flex-direction: column;",
+                "box-sizing: border-box;",
+                ":after {",
+                "content: '';",
+                "display: table;",
+                "clear: both;",
+                "}",
                 [Function],
                 [Function],
               ],
             },
-            "displayName": "styled.label",
+            "displayName": "src__StyledLabel",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
             "target": "label",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -741,34 +829,46 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
           className="c0"
         >
           <LabelText>
-            <styled.span>
+            <src__StyledLabelText>
               <StyledComponent
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bwzfXH",
+                      "componentId": "src__StyledLabelText-sc-12l0n4z-0",
                       "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
-                        "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                        "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                        "display: block; clear: none; padding-bottom: 2px;",
+                        "font-family: \\"nta\\", Arial, sans-serif;",
+                        "-webkit-font-smoothing: antialiased;",
+                        "-moz-osx-font-smoothing: grayscale;",
+                        "@media print {",
+                        "font-size: 14px;",
+                        "line-height: 1.15;",
+                        "}",
+                        "font-weight: 400;",
+                        "font-size: 16px;",
+                        "line-height: 1.25;",
+                        "@media only screen and (min-width: 641px) {",
+                        "font-size: 19px;",
+                        "line-height: 1.3157894736842106;",
+                        "}",
+                        "color: #0b0c0c;",
+                        "@media print {",
+                        "color: #000;",
+                        "}",
+                        "display: block;",
+                        "clear: none;",
+                        "padding-bottom: 2px;",
                         [Function],
                         [Function],
                       ],
                     },
-                    "displayName": "styled.span",
+                    "displayName": "src__StyledLabelText",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bwzfXH",
+                    "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -783,9 +883,9 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
                   example
                 </span>
               </StyledComponent>
-            </styled.span>
+            </src__StyledLabelText>
           </LabelText>
-          <styled.textarea
+          <src__TextAreaField
             rows="5"
             type="text"
           >
@@ -795,22 +895,35 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-ifAKCX",
+                    "componentId": "src__TextAreaField-sc-83xe87-0",
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
-                      "box-sizing: border-box; font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3; width: 75%;
-} width: 100%; padding: 5px 4px 4px; border: 2px solid #0b0c0c; :focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
-}",
+                      "box-sizing: border-box;",
+                      "font-family: \\"nta\\", Arial, sans-serif;",
+                      "font-weight: 400;",
+                      "text-transform: none;",
+                      "font-size: 16px;",
+                      "line-height: 1.25;",
+                      "@media only screen and (min-width: 641px) {",
+                      "font-size: 19px;",
+                      "line-height: 1.3;",
+                      "width: 75%;",
+                      "}",
+                      "width: 100%;",
+                      "padding: 5px 4px 4px;",
+                      "border: 2px solid #0b0c0c;",
+                      ":focus {",
+                      "outline: 3px solid #ffbf47;",
+                      "outline-offset: 0;",
+                      "}",
                       [Function],
                     ],
                   },
-                  "displayName": "styled.textarea",
+                  "displayName": "src__TextAreaField",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-ifAKCX",
+                  "styledComponentId": "src__TextAreaField-sc-83xe87-0",
                   "target": "textarea",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -827,10 +940,10 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
                 type="text"
               />
             </StyledComponent>
-          </styled.textarea>
+          </src__TextAreaField>
         </label>
       </StyledComponent>
-    </styled.label>
+    </src__StyledLabel>
   </Label>
 </TextArea>
 `;

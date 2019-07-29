@@ -134,30 +134,43 @@ exports[`Checkbox can render with hint text: hint text 1`] = `
 <Checkbox
   hint="Hint text"
 >
-  <styled.label>
+  <src__StyledCheckbox>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
+            "componentId": "src__StyledCheckbox-sc-1nb1mi4-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-              "display: block; position: relative; min-height: 40px; padding: 0 0 0 40px; clear: left;",
+              "font-family: \\"nta\\", Arial, sans-serif;",
+              "-webkit-font-smoothing: antialiased;",
+              "-moz-osx-font-smoothing: grayscale;",
+              "@media print {",
+              "font-size: 14px;",
+              "line-height: 1.15;",
+              "}",
+              "font-weight: 400;",
+              "font-size: 16px;",
+              "line-height: 1.25;",
+              "@media only screen and (min-width: 641px) {",
+              "font-size: 19px;",
+              "line-height: 1.3157894736842106;",
+              "}",
+              "display: block;",
+              "position: relative;",
+              "min-height: 40px;",
+              "padding: 0 0 0 40px;",
+              "clear: left;",
               [Function],
             ],
           },
-          "displayName": "styled.label",
+          "displayName": "src__StyledCheckbox",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
+          "styledComponentId": "src__StyledCheckbox-sc-1nb1mi4-0",
           "target": "label",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -169,7 +182,7 @@ exports[`Checkbox can render with hint text: hint text 1`] = `
       <label
         className="c0"
       >
-        <styled.input
+        <src__StyledInput
           type="checkbox"
         >
           <StyledComponent
@@ -178,22 +191,32 @@ exports[`Checkbox can render with hint text: hint text 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-htpNat",
+                  "componentId": "src__StyledInput-sc-1nb1mi4-1",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
-                    "position: absolute; z-index: 1; top: 0; left: 0; width: 40px; height: 40px; opacity: 0; :checked + span:after {
-  opacity: 1;
-} :focus + span:before {
-  outline: 3px solid transparent; outline-offset: 3px; box-shadow: 0 0 0 3px #ffbf47;
-}",
+                    "position: absolute;",
+                    "z-index: 1;",
+                    "top: 0;",
+                    "left: 0;",
+                    "width: 40px;",
+                    "height: 40px;",
+                    "opacity: 0;",
+                    ":checked + span:after {",
+                    "opacity: 1;",
+                    "}",
+                    ":focus + span:before {",
+                    "outline: 3px solid transparent;",
+                    "outline-offset: 3px;",
+                    "box-shadow: 0 0 0 3px #ffbf47;",
+                    "}",
                     [Function],
                   ],
                 },
-                "displayName": "styled.input",
+                "displayName": "src__StyledInput",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-htpNat",
+                "styledComponentId": "src__StyledInput-sc-1nb1mi4-1",
                 "target": "input",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -208,29 +231,54 @@ exports[`Checkbox can render with hint text: hint text 1`] = `
               type="checkbox"
             />
           </StyledComponent>
-        </styled.input>
-        <styled.span>
+        </src__StyledInput>
+        <src__StyledLabel>
           <StyledComponent
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bxivhb",
+                  "componentId": "src__StyledLabel-sc-1nb1mi4-2",
                   "isStatic": true,
                   "lastClassName": "c2",
                   "rules": Array [
-                    "display: inline-block; cursor: pointer; padding: 8px 15px 5px; -ms-touch-action: manipulation; touch-action: manipulation; ::before {
-  content: ''; box-sizing: border-box; position: absolute; top: 0; left: 0; width: 40px; height: 40px; border: 2px solid black; background: transparent;
-} ::after {
-  content: ''; position: absolute; top: 11px; left: 9px; width: 18px; height: 7px; transform: rotate(-45deg); border: solid; border-width: 0 0 5px 5px; border-top-color: transparent; background: transparent; opacity: 0;
-}",
+                    "display: inline-block;",
+                    "cursor: pointer;",
+                    "padding: 8px 15px 5px;",
+                    "-ms-touch-action: manipulation;",
+                    "touch-action: manipulation;",
+                    "::before {",
+                    "content: '';",
+                    "box-sizing: border-box;",
+                    "position: absolute;",
+                    "top: 0;",
+                    "left: 0;",
+                    "width: 40px;",
+                    "height: 40px;",
+                    "border: 2px solid black;",
+                    "background: transparent;",
+                    "}",
+                    "::after {",
+                    "content: '';",
+                    "position: absolute;",
+                    "top: 11px;",
+                    "left: 9px;",
+                    "width: 18px;",
+                    "height: 7px;",
+                    "transform: rotate(-45deg);",
+                    "border: solid;",
+                    "border-width: 0 0 5px 5px;",
+                    "border-top-color: transparent;",
+                    "background: transparent;",
+                    "opacity: 0;",
+                    "}",
                   ],
                 },
-                "displayName": "styled.span",
+                "displayName": "src__StyledLabel",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bxivhb",
+                "styledComponentId": "src__StyledLabel-sc-1nb1mi4-2",
                 "target": "span",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -245,25 +293,27 @@ exports[`Checkbox can render with hint text: hint text 1`] = `
               Example with hint text
             </span>
           </StyledComponent>
-        </styled.span>
-        <Styled(HintText)>
+        </src__StyledLabel>
+        <src__StyledCheckboxHint>
           <StyledComponent
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-ifAKCX",
+                  "componentId": "src__StyledCheckboxHint-sc-1nb1mi4-3",
                   "isStatic": true,
                   "lastClassName": "c3",
                   "rules": Array [
-                    "display: block; padding-left: 15px; padding-right: 15px;",
+                    "display: block;",
+                    "padding-left: 15px;",
+                    "padding-right: 15px;",
                   ],
                 },
-                "displayName": "Styled(HintText)",
+                "displayName": "src__StyledCheckboxHint",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-ifAKCX",
+                "styledComponentId": "src__StyledCheckboxHint-sc-1nb1mi4-3",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -275,7 +325,7 @@ exports[`Checkbox can render with hint text: hint text 1`] = `
             <HintText
               className="c3"
             >
-              <styled.span
+              <src__StyledHint
                 className="c3"
               >
                 <StyledComponent
@@ -285,23 +335,34 @@ exports[`Checkbox can render with hint text: hint text 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-bdVaJa",
+                        "componentId": "src__StyledHint-sc-1qn4br2-0",
                         "isStatic": false,
                         "lastClassName": "c4",
                         "rules": Array [
-                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                          "display: block; margin-bottom: 15px; color: #6f777b;",
+                          "font-family: \\"nta\\", Arial, sans-serif;",
+                          "-webkit-font-smoothing: antialiased;",
+                          "-moz-osx-font-smoothing: grayscale;",
+                          "@media print {",
+                          "font-size: 14px;",
+                          "line-height: 1.15;",
+                          "}",
+                          "font-weight: 400;",
+                          "font-size: 16px;",
+                          "line-height: 1.25;",
+                          "@media only screen and (min-width: 641px) {",
+                          "font-size: 19px;",
+                          "line-height: 1.3157894736842106;",
+                          "}",
+                          "display: block;",
+                          "margin-bottom: 15px;",
+                          "color: #6f777b;",
                           [Function],
                         ],
                       },
-                      "displayName": "styled.span",
+                      "displayName": "src__StyledHint",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-bdVaJa",
+                      "styledComponentId": "src__StyledHint-sc-1qn4br2-0",
                       "target": "span",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -316,13 +377,13 @@ exports[`Checkbox can render with hint text: hint text 1`] = `
                     Hint text
                   </span>
                 </StyledComponent>
-              </styled.span>
+              </src__StyledHint>
             </HintText>
           </StyledComponent>
-        </Styled(HintText)>
+        </src__StyledCheckboxHint>
       </label>
     </StyledComponent>
-  </styled.label>
+  </src__StyledCheckbox>
 </Checkbox>
 `;
 
@@ -426,30 +487,43 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <Checkbox>
-  <styled.label>
+  <src__StyledCheckbox>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
+            "componentId": "src__StyledCheckbox-sc-1nb1mi4-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-              "display: block; position: relative; min-height: 40px; padding: 0 0 0 40px; clear: left;",
+              "font-family: \\"nta\\", Arial, sans-serif;",
+              "-webkit-font-smoothing: antialiased;",
+              "-moz-osx-font-smoothing: grayscale;",
+              "@media print {",
+              "font-size: 14px;",
+              "line-height: 1.15;",
+              "}",
+              "font-weight: 400;",
+              "font-size: 16px;",
+              "line-height: 1.25;",
+              "@media only screen and (min-width: 641px) {",
+              "font-size: 19px;",
+              "line-height: 1.3157894736842106;",
+              "}",
+              "display: block;",
+              "position: relative;",
+              "min-height: 40px;",
+              "padding: 0 0 0 40px;",
+              "clear: left;",
               [Function],
             ],
           },
-          "displayName": "styled.label",
+          "displayName": "src__StyledCheckbox",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
+          "styledComponentId": "src__StyledCheckbox-sc-1nb1mi4-0",
           "target": "label",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -461,7 +535,7 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
       <label
         className="c0"
       >
-        <styled.input
+        <src__StyledInput
           type="checkbox"
         >
           <StyledComponent
@@ -470,22 +544,32 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-htpNat",
+                  "componentId": "src__StyledInput-sc-1nb1mi4-1",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
-                    "position: absolute; z-index: 1; top: 0; left: 0; width: 40px; height: 40px; opacity: 0; :checked + span:after {
-  opacity: 1;
-} :focus + span:before {
-  outline: 3px solid transparent; outline-offset: 3px; box-shadow: 0 0 0 3px #ffbf47;
-}",
+                    "position: absolute;",
+                    "z-index: 1;",
+                    "top: 0;",
+                    "left: 0;",
+                    "width: 40px;",
+                    "height: 40px;",
+                    "opacity: 0;",
+                    ":checked + span:after {",
+                    "opacity: 1;",
+                    "}",
+                    ":focus + span:before {",
+                    "outline: 3px solid transparent;",
+                    "outline-offset: 3px;",
+                    "box-shadow: 0 0 0 3px #ffbf47;",
+                    "}",
                     [Function],
                   ],
                 },
-                "displayName": "styled.input",
+                "displayName": "src__StyledInput",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-htpNat",
+                "styledComponentId": "src__StyledInput-sc-1nb1mi4-1",
                 "target": "input",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -500,29 +584,54 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
               type="checkbox"
             />
           </StyledComponent>
-        </styled.input>
-        <styled.span>
+        </src__StyledInput>
+        <src__StyledLabel>
           <StyledComponent
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bxivhb",
+                  "componentId": "src__StyledLabel-sc-1nb1mi4-2",
                   "isStatic": true,
                   "lastClassName": "c2",
                   "rules": Array [
-                    "display: inline-block; cursor: pointer; padding: 8px 15px 5px; -ms-touch-action: manipulation; touch-action: manipulation; ::before {
-  content: ''; box-sizing: border-box; position: absolute; top: 0; left: 0; width: 40px; height: 40px; border: 2px solid black; background: transparent;
-} ::after {
-  content: ''; position: absolute; top: 11px; left: 9px; width: 18px; height: 7px; transform: rotate(-45deg); border: solid; border-width: 0 0 5px 5px; border-top-color: transparent; background: transparent; opacity: 0;
-}",
+                    "display: inline-block;",
+                    "cursor: pointer;",
+                    "padding: 8px 15px 5px;",
+                    "-ms-touch-action: manipulation;",
+                    "touch-action: manipulation;",
+                    "::before {",
+                    "content: '';",
+                    "box-sizing: border-box;",
+                    "position: absolute;",
+                    "top: 0;",
+                    "left: 0;",
+                    "width: 40px;",
+                    "height: 40px;",
+                    "border: 2px solid black;",
+                    "background: transparent;",
+                    "}",
+                    "::after {",
+                    "content: '';",
+                    "position: absolute;",
+                    "top: 11px;",
+                    "left: 9px;",
+                    "width: 18px;",
+                    "height: 7px;",
+                    "transform: rotate(-45deg);",
+                    "border: solid;",
+                    "border-width: 0 0 5px 5px;",
+                    "border-top-color: transparent;",
+                    "background: transparent;",
+                    "opacity: 0;",
+                    "}",
                   ],
                 },
-                "displayName": "styled.span",
+                "displayName": "src__StyledLabel",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bxivhb",
+                "styledComponentId": "src__StyledLabel-sc-1nb1mi4-2",
                 "target": "span",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -537,10 +646,10 @@ exports[`Checkbox matches wrapper snapshot: wrapper mount 1`] = `
               example
             </span>
           </StyledComponent>
-        </styled.span>
+        </src__StyledLabel>
       </label>
     </StyledComponent>
-  </styled.label>
+  </src__StyledCheckbox>
 </Checkbox>
 `;
 
@@ -646,30 +755,43 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
 <Checkbox
   disabled={true}
 >
-  <styled.label>
+  <src__StyledCheckbox>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
+            "componentId": "src__StyledCheckbox-sc-1nb1mi4-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-              "display: block; position: relative; min-height: 40px; padding: 0 0 0 40px; clear: left;",
+              "font-family: \\"nta\\", Arial, sans-serif;",
+              "-webkit-font-smoothing: antialiased;",
+              "-moz-osx-font-smoothing: grayscale;",
+              "@media print {",
+              "font-size: 14px;",
+              "line-height: 1.15;",
+              "}",
+              "font-weight: 400;",
+              "font-size: 16px;",
+              "line-height: 1.25;",
+              "@media only screen and (min-width: 641px) {",
+              "font-size: 19px;",
+              "line-height: 1.3157894736842106;",
+              "}",
+              "display: block;",
+              "position: relative;",
+              "min-height: 40px;",
+              "padding: 0 0 0 40px;",
+              "clear: left;",
               [Function],
             ],
           },
-          "displayName": "styled.label",
+          "displayName": "src__StyledCheckbox",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
+          "styledComponentId": "src__StyledCheckbox-sc-1nb1mi4-0",
           "target": "label",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -681,7 +803,7 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
       <label
         className="c0"
       >
-        <styled.input
+        <src__StyledInput
           disabled={true}
           type="checkbox"
         >
@@ -692,22 +814,32 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-htpNat",
+                  "componentId": "src__StyledInput-sc-1nb1mi4-1",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
-                    "position: absolute; z-index: 1; top: 0; left: 0; width: 40px; height: 40px; opacity: 0; :checked + span:after {
-  opacity: 1;
-} :focus + span:before {
-  outline: 3px solid transparent; outline-offset: 3px; box-shadow: 0 0 0 3px #ffbf47;
-}",
+                    "position: absolute;",
+                    "z-index: 1;",
+                    "top: 0;",
+                    "left: 0;",
+                    "width: 40px;",
+                    "height: 40px;",
+                    "opacity: 0;",
+                    ":checked + span:after {",
+                    "opacity: 1;",
+                    "}",
+                    ":focus + span:before {",
+                    "outline: 3px solid transparent;",
+                    "outline-offset: 3px;",
+                    "box-shadow: 0 0 0 3px #ffbf47;",
+                    "}",
                     [Function],
                   ],
                 },
-                "displayName": "styled.input",
+                "displayName": "src__StyledInput",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-htpNat",
+                "styledComponentId": "src__StyledInput-sc-1nb1mi4-1",
                 "target": "input",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -723,29 +855,54 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
               type="checkbox"
             />
           </StyledComponent>
-        </styled.input>
-        <styled.span>
+        </src__StyledInput>
+        <src__StyledLabel>
           <StyledComponent
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bxivhb",
+                  "componentId": "src__StyledLabel-sc-1nb1mi4-2",
                   "isStatic": true,
                   "lastClassName": "c2",
                   "rules": Array [
-                    "display: inline-block; cursor: pointer; padding: 8px 15px 5px; -ms-touch-action: manipulation; touch-action: manipulation; ::before {
-  content: ''; box-sizing: border-box; position: absolute; top: 0; left: 0; width: 40px; height: 40px; border: 2px solid black; background: transparent;
-} ::after {
-  content: ''; position: absolute; top: 11px; left: 9px; width: 18px; height: 7px; transform: rotate(-45deg); border: solid; border-width: 0 0 5px 5px; border-top-color: transparent; background: transparent; opacity: 0;
-}",
+                    "display: inline-block;",
+                    "cursor: pointer;",
+                    "padding: 8px 15px 5px;",
+                    "-ms-touch-action: manipulation;",
+                    "touch-action: manipulation;",
+                    "::before {",
+                    "content: '';",
+                    "box-sizing: border-box;",
+                    "position: absolute;",
+                    "top: 0;",
+                    "left: 0;",
+                    "width: 40px;",
+                    "height: 40px;",
+                    "border: 2px solid black;",
+                    "background: transparent;",
+                    "}",
+                    "::after {",
+                    "content: '';",
+                    "position: absolute;",
+                    "top: 11px;",
+                    "left: 9px;",
+                    "width: 18px;",
+                    "height: 7px;",
+                    "transform: rotate(-45deg);",
+                    "border: solid;",
+                    "border-width: 0 0 5px 5px;",
+                    "border-top-color: transparent;",
+                    "background: transparent;",
+                    "opacity: 0;",
+                    "}",
                   ],
                 },
-                "displayName": "styled.span",
+                "displayName": "src__StyledLabel",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bxivhb",
+                "styledComponentId": "src__StyledLabel-sc-1nb1mi4-2",
                 "target": "span",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -760,9 +917,9 @@ exports[`Checkbox renders disabled checkbox: disabled 1`] = `
               Example
             </span>
           </StyledComponent>
-        </styled.span>
+        </src__StyledLabel>
       </label>
     </StyledComponent>
-  </styled.label>
+  </src__StyledCheckbox>
 </Checkbox>
 `;
