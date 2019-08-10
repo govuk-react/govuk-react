@@ -69,7 +69,7 @@
     "enzyme-adapter-react-16": "^1.7.0",
     "enzyme-to-json": "^3.3.4",
     "eslint": "^5.15.3",
-    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb": "^18.0.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-config-react-app": "^3.0.8",
     "eslint-config-sonar": "0.0.7",
