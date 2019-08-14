@@ -19,7 +19,7 @@
     "@babel/cli": "7.2.3",
     "@babel/core": "7.4.0",
     "cross-env": "^5.1.4",
-    "rimraf": "^2.6.2"
+    "rimraf": "^3.0.0"
   },
   "bin": {
     "doc-component": "bin/doc-component.js"
