@@ -10,7 +10,7 @@ exports[`Label matches withError snapshot: with error mount 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   box-sizing: border-box;
-  border-left: 4px solid #b10e1e;
+  border-left: 4px solid #d4351c;
   margin-right: 15px;
   padding-left: 10px;
   margin-bottom: 0;

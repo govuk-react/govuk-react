@@ -33,7 +33,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }
 
 .c17 {
-  border-bottom: 10px solid #005ea5;
+  border-bottom: 10px solid #1d70b8;
   max-width: 960px;
   margin: 0 auto;
   width: calc(100% - 30px);
@@ -212,13 +212,13 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }
 
 .c16:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
 }
 
 .c16:focus {
   color: #0b0c0c;
-  background-color: #ffbf47;
-  outline: 3px solid #ffbf47;
+  background-color: #ffdd00;
+  outline: 3px solid #ffdd00;
 }
 
 .c16:focus:hover {
@@ -982,10 +982,10 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                                             "color: #ffffff; text-decoration: none; text-decoration-skip-ink: none; border-bottom: 1px solid transparent; font-weight: 700; line-height: 1; :hover {
   border-bottom-color: #ffffff;
 } :focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
 }",
                                             "display: inline-block; :focus {
-  color: #0b0c0c; background-color: #ffbf47; outline: 3px solid #ffbf47; :hover {
+  color: #0b0c0c; background-color: #ffdd00; outline: 3px solid #ffdd00; :hover {
   border-bottom-color: #0b0c0c;
 }
 }",
@@ -1045,7 +1045,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
             "isStatic": true,
             "lastClassName": "c17",
             "rules": Array [
-              "border-bottom: 10px solid #005ea5; max-width: 960px; margin: 0 auto; width: calc(100% - 30px); @media only screen and (min-width: 641px) {
+              "border-bottom: 10px solid #1d70b8; max-width: 960px; margin: 0 auto; width: calc(100% - 30px); @media only screen and (min-width: 641px) {
   width: calc(100% - 60px);
 }",
             ],
@@ -1103,7 +1103,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }
 
 .c17 {
-  border-bottom: 10px solid #005ea5;
+  border-bottom: 10px solid #1d70b8;
   max-width: 960px;
   margin: 0 auto;
   width: calc(100% - 30px);
@@ -1281,7 +1281,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }
 
 .c16:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
 }
 
 @media only screen and (min-width:641px) {
@@ -2046,7 +2046,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                                             "color: #ffffff; text-decoration: none; text-decoration-skip-ink: none; border-bottom: 1px solid transparent; font-weight: 700; line-height: 1; :hover {
   border-bottom-color: #ffffff;
 } :focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
 }",
                                           ],
                                         },
@@ -2128,7 +2128,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                                             "color: #ffffff; text-decoration: none; text-decoration-skip-ink: none; border-bottom: 1px solid transparent; font-weight: 700; line-height: 1; :hover {
   border-bottom-color: #ffffff;
 } :focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
 }",
                                           ],
                                         },
@@ -2184,7 +2184,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
             "isStatic": true,
             "lastClassName": "c17",
             "rules": Array [
-              "border-bottom: 10px solid #005ea5; max-width: 960px; margin: 0 auto; width: calc(100% - 30px); @media only screen and (min-width: 641px) {
+              "border-bottom: 10px solid #1d70b8; max-width: 960px; margin: 0 auto; width: calc(100% - 30px); @media only screen and (min-width: 641px) {
   width: calc(100% - 60px);
 }",
             ],
@@ -2242,7 +2242,7 @@ exports[`TopNav with icon title: icon title 1`] = `
 }
 
 .c9 {
-  border-bottom: 10px solid #005ea5;
+  border-bottom: 10px solid #1d70b8;
   max-width: 960px;
   margin: 0 auto;
   width: calc(100% - 30px);
@@ -2777,7 +2777,7 @@ exports[`TopNav with icon title: icon title 1`] = `
             "isStatic": true,
             "lastClassName": "c9",
             "rules": Array [
-              "border-bottom: 10px solid #005ea5; max-width: 960px; margin: 0 auto; width: calc(100% - 30px); @media only screen and (min-width: 641px) {
+              "border-bottom: 10px solid #1d70b8; max-width: 960px; margin: 0 auto; width: calc(100% - 30px); @media only screen and (min-width: 641px) {
   width: calc(100% - 60px);
 }",
             ],

@@ -8,7 +8,7 @@ exports[`FormGroup matches snapshot with error prop set: with error prop 1`] = `
 .c1 {
   margin-bottom: 20px;
   padding-left: 15px;
-  border-left: 5px solid #b10e1e;
+  border-left: 5px solid #d4351c;
 }
 
 .c1 .c0:last-of-type {

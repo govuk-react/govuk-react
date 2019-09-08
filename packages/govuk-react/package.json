@@ -59,7 +59,7 @@
     "@govuk-react/unordered-list": "^0.7.1",
     "@govuk-react/visually-hidden": "^0.7.1",
     "@govuk-react/warning-text": "^0.7.1",
-    "govuk-colours": "^1.0.3"
+   "govuk-colours": "^1.1.0"
   },
   "peerDependencies": {
     "react": ">=16.2.0",

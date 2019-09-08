@@ -48,13 +48,13 @@ exports[`Tabs matches wrapper snapshot 1`] = `
 }
 
 .c4:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c4:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c4:visited {
@@ -89,13 +89,13 @@ exports[`Tabs matches wrapper snapshot 1`] = `
 }
 
 .c5:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c5:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c5:visited {

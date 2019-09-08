@@ -2,7 +2,7 @@
   "name": "@govuk-react/constants",
   "version": "0.7.1",
   "dependencies": {
-    "govuk-colours": "^1.0.3"
+   "govuk-colours": "^1.1.0"
   },
   "peerDependencies": {
     "react": ">=16.2.0"

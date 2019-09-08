@@ -18,7 +18,7 @@ exports[`details matches the Details snapshot: details 1`] = `
   position: relative;
   margin-bottom: 5px;
   padding-left: 25px;
-  color: #005ea5;
+  color: #1d70b8;
   cursor: pointer;
 }
 
@@ -27,10 +27,10 @@ exports[`details matches the Details snapshot: details 1`] = `
 }
 
 .c1:focus {
-  outline: 4px solid #ffbf47;
+  outline: 4px solid #ffdd00;
   outline-offset: -1px;
   color: #0b0c0c;
-  background: #ffbf47;
+  background: #ffdd00;
 }
 
 .c1::-webkit-details-marker {
@@ -172,10 +172,10 @@ exports[`details matches the Details snapshot: details 1`] = `
                     "isStatic": true,
                     "lastClassName": "c1",
                     "rules": Array [
-                      "display: inline-block; position: relative; margin-bottom: 5px; padding-left: 25px; color: #005ea5; cursor: pointer; :hover {
+                      "display: inline-block; position: relative; margin-bottom: 5px; padding-left: 25px; color: #1d70b8; cursor: pointer; :hover {
   color: #2b8cc4;
 } :focus {
-  outline: 4px solid #ffbf47; outline-offset: -1px; color: #0b0c0c; background: #ffbf47;
+  outline: 4px solid #ffdd00; outline-offset: -1px; color: #0b0c0c; background: #ffdd00;
 } ::-webkit-details-marker {
   display: none;
 } :before {

@@ -8,7 +8,7 @@ exports[`OrderedList matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 .c4:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c4:visited {
@@ -28,9 +28,9 @@ exports[`OrderedList matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 .c4:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c3 {
@@ -244,7 +244,7 @@ exports[`OrderedList matches wrapper snapshot: wrapper mount 1`] = `
   font-family: sans-serif;
 }",
                           ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -255,7 +255,7 @@ exports[`OrderedList matches wrapper snapshot: wrapper mount 1`] = `
   color: #0b0c0c;
 }",
                           "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                           "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -359,7 +359,7 @@ exports[`OrderedList matches wrapper snapshot: wrapper mount 1`] = `
   font-family: sans-serif;
 }",
                           ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -370,7 +370,7 @@ exports[`OrderedList matches wrapper snapshot: wrapper mount 1`] = `
   color: #0b0c0c;
 }",
                           "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                           "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -474,7 +474,7 @@ exports[`OrderedList matches wrapper snapshot: wrapper mount 1`] = `
   font-family: sans-serif;
 }",
                           ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -485,7 +485,7 @@ exports[`OrderedList matches wrapper snapshot: wrapper mount 1`] = `
   color: #0b0c0c;
 }",
                           "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                           "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
