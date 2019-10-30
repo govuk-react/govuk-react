@@ -122,5 +122,6 @@
     "components/*",
     "packages/*"
   ],
+  "os" : [ "win32", "!darwin", "linux" ],
   "private": true
 }
