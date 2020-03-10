@@ -1,7 +1,10 @@
-# govuk-react
+# DEPRECATED
+
+This is no longer supported, and does not meet current gov.uk standards.  Please use alternates.
 
 An implementation of the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital) in [React](https://reactjs.org) using [CSSinJS](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660) using Object notation (with [styled-components](https://www.styled-components.com/docs/advanced#style-objects)).
 
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 [![Build Status](https://travis-ci.org/govuk-react/govuk-react.svg?branch=master)](https://travis-ci.org/govuk-react/govuk-react)
 [![codecov](https://codecov.io/gh/govuk-react/govuk-react/branch/master/graph/badge.svg)](https://codecov.io/gh/govuk-react/govuk-react)
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/govuk-react) [![Greenkeeper badge](https://badges.greenkeeper.io/govuk-react/govuk-react.svg)](https://greenkeeper.io/)
