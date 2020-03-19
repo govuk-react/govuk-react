@@ -9,7 +9,7 @@
     "glob": "^7.1.2",
     "glob-promise": "^3.3.0",
     "govuk-react": "^0.7.2",
-    "jimp": "^0.6.0",
+    "jimp": "^0.9.0",
     "lodash": "^4.17.5",
     "react": "^16.2.0",
     "react-docgen": "^4.1.0",
