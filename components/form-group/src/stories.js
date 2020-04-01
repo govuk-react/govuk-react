@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, withKnobs } from '@storybook/addon-knobs/react';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 import Checkbox from '@govuk-react/checkbox';
 
 import FormGroup from '.';
@@ -12,7 +12,7 @@ const stories = storiesOf('Form/FormGroup', module);
 stories.addDecorator(withKnobs);
 
 stories.add('Component default', () =>
-  WithDocsCustom(ReadMe)(() => (
+  withDocsCustom(ReadMe)(() => (
     <FormGroup error={boolean('error', false)}>
       <Checkbox name="group-1">Example</Checkbox>
     </FormGroup>

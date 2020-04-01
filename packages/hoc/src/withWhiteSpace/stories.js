@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, number, object, text } from '@storybook/addon-knobs/react';
 
 import BackLink from '@govuk-react/back-link';
-import Breadcrumb from '@govuk-react/breadcrumb';
+import Breadcrumbs from '@govuk-react/breadcrumb';
 import Button from '@govuk-react/button';
 import Checkbox from '@govuk-react/checkbox';
 import DateField from '@govuk-react/date-field';
@@ -43,22 +43,25 @@ const DemoComponent = withWhiteSpace()(
 );
 
 stories.add('demo component, simple single margins and padding', () => (
-  <Fragment>
+  <div>
     <DemoComponent
-      margin={number('margin', 2, { range: true, min: 0, max: 9 })}
+      margin={number('margin', 2, { range: true, min: -9, max: 9 })}
       padding={number('padding', 2, { range: true, min: 0, max: 9 })}
     >
       Component with styles - use knobs to adjust
     </DemoComponent>
     <DemoComponent>Component without styles</DemoComponent>
-  </Fragment>
+  </div>
 ));
 
 stories.add('demo component, single margins and padding (complex)', () => (
-  <Fragment>
+  <div>
     <DemoComponent
+      // Use knobs for children content to kick knobs to life - storybook bug work-around
+      // eslint-disable-next-line react/no-children-prop
+      children={text('content', 'Component with styles - use knobs to adjust')}
       margin={{
-        size: number('margin.size', 2, { range: true, min: 0, max: 9 }),
+        size: number('margin.size', 2, { range: true, min: -9, max: 9 }),
         direction: text('margin.direction', 'all'),
         adjustment: number('margin.adjustment', undefined),
       }}
@@ -67,18 +70,16 @@ stories.add('demo component, single margins and padding (complex)', () => (
         direction: text('padding.direction', 'all'),
         adjustment: number('padding.adjustment', undefined),
       }}
-    >
-      Component with styles - use knobs to adjust
-    </DemoComponent>
+    />
     <DemoComponent>Component without styles</DemoComponent>
-  </Fragment>
+  </div>
 ));
 
 stories.add('demo component, multiple margins and padding (complex)', () => (
-  <Fragment>
+  <div>
     <DemoComponent
       margin={[
-        number('margin (all)', 2, { range: true, min: 0, max: 9 }),
+        number('margin (all)', 2, { range: true, min: -9, max: 9 }),
         object('margin (first object)', {
           size: 2,
           direction: 'bottom',
@@ -97,20 +98,20 @@ stories.add('demo component, multiple margins and padding (complex)', () => (
       Component with styles - use knobs to adjust
     </DemoComponent>
     <DemoComponent>Component without styles</DemoComponent>
-  </Fragment>
+  </div>
 ));
 
 stories.add('existing InputField with spacing size 1', () => (
-  <Fragment>
+  <div>
     <InputField mb={number('marginBottom', 1)} name="group1" hint="Change whitespace value with knobs">
       Example 1
     </InputField>
     <Button>Finish</Button>
-  </Fragment>
+  </div>
 ));
 
 stories.add('existing InputField with various spacing sizes', () => (
-  <Fragment>
+  <div>
     <InputField mb={number('marginBottom1', 1)} name="group1" hint="hi">
       Example 1
     </InputField>
@@ -124,13 +125,13 @@ stories.add('existing InputField with various spacing sizes', () => (
       Example 4
     </InputField>
     <Button>Finish</Button>
-  </Fragment>
+  </div>
 ));
 
 stories.add('multiple existing components', () => (
-  <Fragment>
+  <div>
     <BackLink mb={number('BackLink marginBottom', 9)}>Example</BackLink>
-    <Breadcrumb mb={number('Breadcrumb marginBottom', 9)}>Example</Breadcrumb>
+    <Breadcrumbs mb={number('Breadcrumbs marginBottom', 9)}>Example</Breadcrumbs>
     <Button mb={number('Button marginBottom', 9)}>Example</Button>
     <Checkbox mb={number('Checkbox marginBottom', 9)}>Example</Checkbox>
     <DateField mb={number('DateField marginBottom', 9)}>Example</DateField>
@@ -164,5 +165,5 @@ stories.add('multiple existing components', () => (
     <Tag mb={number('Tag marginBottom', 9)}>Tag</Tag>
     <TextArea mb={number('TextArea marginBottom', 9)}>TextArea Example</TextArea>
     <UnorderedList mb={number('UnorderedList marginBottom', 9)}>UnorderedList Example</UnorderedList>
-  </Fragment>
+  </div>
 ));

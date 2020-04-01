@@ -36,6 +36,7 @@ SkipLinkDocumented.propTypes = {
 };
 
 SkipLinkDocumented.defaultProps = {
+  children: 'Skip to main content',
   href: '#content',
 };
 

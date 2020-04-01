@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import GridRow from '@govuk-react/grid-row';
 import { H2 } from '@govuk-react/heading';
@@ -23,7 +23,7 @@ const examples = storiesOf('Layout/GridCol/Examples', module).addParameters({
   chromatic: { viewports: [320, 720, 1200] },
 });
 
-stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
   <GridRow>

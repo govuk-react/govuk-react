@@ -10,6 +10,15 @@ describe('spacing lib', () => {
       });
     });
 
+    it('returns negative spacing values from the spacing scale', () => {
+      Object.keys(SPACING_POINTS).forEach(key => {
+        // skip zero, as -0 !== 0 in JS
+        if (`${key}` !== '0') {
+          expect(spacing.simple(-key)).toEqual(-SPACING_POINTS[key]);
+        }
+      });
+    });
+
     it('throws when not given a size', () => {
       expect(() => spacing.simple()).toThrow();
     });
@@ -27,6 +36,18 @@ describe('spacing lib', () => {
 
         expect(style).toEqual(expect.objectContaining({ test: SPACING_MAP[size].mobile }));
         expect(style[MEDIA_QUERIES.TABLET]).toEqual(expect.objectContaining({ test: SPACING_MAP[size].tablet }));
+      });
+    });
+
+    it('returns negative spacing styles for given sizes on the spacing scale', () => {
+      SPACING_MAP_INDEX.forEach(size => {
+        // skip zero, as -0 !== 0 in JS
+        if (size !== 0) {
+          const style = spacing.responsive({ size: -size, property: 'test' });
+
+          expect(style).toEqual(expect.objectContaining({ test: -SPACING_MAP[size].mobile }));
+          expect(style[MEDIA_QUERIES.TABLET]).toEqual(expect.objectContaining({ test: -SPACING_MAP[size].tablet }));
+        }
       });
     });
 

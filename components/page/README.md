@@ -33,6 +33,7 @@ Prop | Required | Default | Type | Description
  `container` |  | ```Page.WidthContainer``` | func | Override the default page container component.<br/>`beforeChildren` and `children` (wrapped in `main`) will be placed inside this component.
  `footer` |  | ```undefined``` | node | Override the default page footer component.
  `header` |  | ```<TopNav />``` | node | Override the default page header component.
+ `id` |  | ```'content'``` | string | ID for page content
  `main` |  | ```Page.Main``` | func | Override the default wrapper component for main page content
 
 

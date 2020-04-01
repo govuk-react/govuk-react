@@ -588,10 +588,10 @@ const onHandleErrorClick = (targetName) => {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `description` |  | ```undefined``` | string | Optional description of the errors
- `errors` |  | ```[]``` | arrayOf[object Object] | Array of errors with text and target element name to scroll into view when clicked
- `heading` | true | `````` | string | Heading text
- `onHandleErrorClick` |  | ```() => {}``` | func | onClick function to scroll the target element into view
+ `description` |  | `````` | string | Optional description of the errors
+ `errors` |  | `````` | arrayOf[object Object] | Array of errors with text and target element name to scroll into view when clicked
+ `heading` |  | ```'There is a problem'``` | string | Heading text
+ `onHandleErrorClick` |  | `````` | func | onClick function to scroll the target element into view
 
 
 ErrorText
@@ -717,6 +717,102 @@ Prop | Required | Default | Type | Description
  `children` | true | `````` | node | 
  `hint` |  | ```undefined``` | string | Optional hint text
  `meta` |  | ```{}``` | shape[object Object] | Final form meta object, pending adjustment/removal
+
+
+Footer
+======
+
+### Import
+```js
+  import Footer from '@govuk-react/footer';
+```
+<!-- STORY -->
+
+### Usage
+
+Simple
+```jsx
+<Footer />
+```
+
+Footer with Copyright information
+```jsx
+// Import self hosted copyright image
+import crest from './govuk-crest.png';
+
+<Footer
+  copyright={{
+    text: 'Crown copyright',
+    link:
+      'https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/',
+    image: {
+      source: crest,
+      height: 102,
+      width: 125,
+    },
+  }}
+/>;
+```
+
+Footer with navigation.  There is also the option to provide footer links with, or without React/Reach Router.
+```jsx
+import { Link } from 'react-router-dom';
+
+<Footer>
+  <Footer.Navigation>
+    <Footer.NavigationLinks heading="Two column list" listColumns={2}>
+      <Footer.Link href="/">Navigation item 1</Footer.Link>
+      <Footer.Link to="/footer-nav-item-2" as={Link}>Navigation item 2 (Router Link)</Footer.Link>
+      <Footer.Link href="/">Navigation item 3</Footer.Link>
+      <Footer.Link href="/">Navigation item 4</Footer.Link>
+      <Footer.Link href="/">Navigation item 5</Footer.Link>
+      <Footer.Link href="/">Navigation item 6</Footer.Link>
+    </Footer.NavigationLinks>
+    <Footer.NavigationLinks heading="Single column list">
+      <Footer.Link href="/">Navigation item 1</Footer.Link>
+      <Footer.Link href="/">Navigation item 2</Footer.Link>
+      <Footer.Link href="/">Navigation item 3</Footer.Link>
+    </Footer.NavigationLinks>
+  </Footer.Navigation>
+</Footer>
+```
+
+Footer with links in meta area
+```jsx
+<Footer meta={
+    <Footer.MetaLinks heading="Support links">
+      <Footer.Link href="/">Item 1</Footer.Link>
+      <Footer.Link to="/footer-meta-item-2" as={Link}>Item 2 (Router Link)</Footer.Link>
+      <Footer.Link href="/">Item 3</Footer.Link>
+    </Footer.MetaLinks>
+  }
+/>
+```
+
+Footer with custom content in meta area
+```jsx
+<Footer meta={
+    <Footer.MetaCustom>
+      Built by the <Footer.Link href="/">Government Digital Service</Footer.Link>
+    </Footer.MetaCustom>
+  }
+/>
+```
+
+NB <Footer.Link /> is styled extention of @govuk-react/link
+
+### References:
+- https://design-system.service.gov.uk/components/footer/
+- https://github.com/alphagov/govuk-frontend/blob/master/src/components/footer/template.njk
+- https://github.com/alphagov/govuk-frontend/blob/master/src/components/footer/_footer.scss
+
+### Properties
+Prop | Required | Default | Type | Description
+:--- | :------- | :------ | :--- | :----------
+ `children` |  | ```undefined``` | node | Footer navigation links
+ `container` |  | ```Footer.WidthContainer``` | func | Override the default footer container component.<br/>`children`, `copyright` and `meta` will be placed inside this component.
+ `copyright` |  | ```undefined``` | shape[object Object] | Copyright information
+ `meta` |  | ```undefined``` | node | Meta text and links
 
 
 FormGroup
@@ -1545,6 +1641,7 @@ Prop | Required | Default | Type | Description
  `container` |  | ```Page.WidthContainer``` | func | Override the default page container component.<br/>`beforeChildren` and `children` (wrapped in `main`) will be placed inside this component.
  `footer` |  | ```undefined``` | node | Override the default page footer component.
  `header` |  | ```<TopNav />``` | node | Override the default page header component.
+ `id` |  | ```'content'``` | string | ID for page content
  `main` |  | ```Page.Main``` | func | Override the default wrapper component for main page content
 
 
@@ -2027,7 +2124,7 @@ Simple
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
+ `children` |  | ```'Skip to main content'``` | node | 
  `href` |  | ```'#content'``` | string | 
 
 

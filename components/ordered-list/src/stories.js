@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 import ListItem from '@govuk-react/list-item';
 
 import OrderedList from '.';
@@ -9,7 +9,7 @@ import ReadMe from '../README.md';
 const stories = storiesOf('Typography/OrderedList', module);
 const examples = storiesOf('Typography/OrderedList/Examples', module);
 
-stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
   <OrderedList>

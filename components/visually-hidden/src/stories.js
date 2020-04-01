@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, withKnobs } from '@storybook/addon-knobs/react';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 import Paragraph from '@govuk-react/paragraph';
 import Button from '@govuk-react/button';
 
@@ -13,7 +13,7 @@ const stories = storiesOf('Misc/VisuallyHidden', module);
 const examples = storiesOf('Misc/VisuallyHidden/Examples', module);
 
 stories.addDecorator(withKnobs);
-stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
   <div>

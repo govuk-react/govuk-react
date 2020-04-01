@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import FinalFormWrapper from './FinalFormWrapper';
+import FinalFormWrapper from './final-form-wrapper';
 
 describe('FinalFormWrapper', () => {
   const example = 'example';

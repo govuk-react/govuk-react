@@ -9,13 +9,14 @@ import PropTypes from 'prop-types';
 import { MEDIA_QUERIES, SPACING_MAP, SPACING_MAP_INDEX, SPACING_POINTS, WIDTHS } from '@govuk-react/constants';
 
 export function simple(size) {
-  const scale = SPACING_POINTS[size];
+  const scale = SPACING_POINTS[Math.abs(size)];
+  const polarity = size < 0 ? -1 : 1;
 
   if (scale === undefined) {
     throw Error(`Unknown spacing size ${size} - expected a point from the spacing scale.`);
   }
 
-  return scale;
+  return scale * polarity;
 }
 
 function styleForDirection(size, property, direction) {
@@ -26,7 +27,8 @@ function styleForDirection(size, property, direction) {
 }
 
 export function responsive({ size, property, direction, adjustment = 0 } = {}) {
-  const scale = SPACING_MAP[size];
+  const scale = SPACING_MAP[Math.abs(size)];
+  const polarity = size < 0 ? -1 : 1;
 
   if (scale === undefined) {
     throw Error(`Unknown responsive spacing size ${size} - expected a point from the responsive spacing scale.`);
@@ -40,16 +42,20 @@ export function responsive({ size, property, direction, adjustment = 0 } = {}) {
   // TODO consider supporting non-number (string) adjustments, such as px or rem values
 
   if (Array.isArray(direction)) {
-    return Object.assign({}, ...direction.map(dir => styleForDirection(scale.mobile + adjustment, property, dir)), {
-      [MEDIA_QUERIES.TABLET]: Object.assign(
-        {},
-        ...direction.map(dir => styleForDirection(scale.tablet + adjustment, property, dir))
-      ),
-    });
+    return Object.assign(
+      {},
+      ...direction.map(dir => styleForDirection(scale.mobile * polarity + adjustment, property, dir)),
+      {
+        [MEDIA_QUERIES.TABLET]: Object.assign(
+          {},
+          ...direction.map(dir => styleForDirection(scale.tablet * polarity + adjustment, property, dir))
+        ),
+      }
+    );
   }
 
-  return Object.assign({}, styleForDirection(scale.mobile + adjustment, property, direction), {
-    [MEDIA_QUERIES.TABLET]: styleForDirection(scale.tablet + adjustment, property, direction),
+  return Object.assign({}, styleForDirection(scale.mobile * polarity + adjustment, property, direction), {
+    [MEDIA_QUERIES.TABLET]: styleForDirection(scale.tablet * polarity + adjustment, property, direction),
   });
 }
 

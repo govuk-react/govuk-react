@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 import BackLink from '@govuk-react/back-link';
 import { H1, H3 } from '@govuk-react/heading';
 import { MEDIA_QUERIES, GUTTER } from '@govuk-react/constants';
@@ -13,7 +13,7 @@ import Page from '.';
 const stories = storiesOf('Layout/Page', module);
 const examples = storiesOf('Layout/Page/Examples', module);
 
-stories.addDecorator(WithDocsCustom(ReadMe));
+stories.addDecorator(withDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
   <div>
