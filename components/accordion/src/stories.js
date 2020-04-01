@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from '@govuk-react/main';
 import { storiesOf } from '@storybook/react';
-import { WithDocsCustom } from '@govuk-react/storybook-components';
+import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import { AccordionClassComponent, ExampleWithoutSummaries, ExampleWithSummaries } from './fixtures';
 import ReadMe from '../README.md';
@@ -9,9 +9,7 @@ import ReadMe from '../README.md';
 const stories = storiesOf('Accordion', module);
 const examples = storiesOf('Accordion/Examples', module);
 
-stories.addDecorator(WithDocsCustom(ReadMe));
-
-examples.addDecorator(WithDocsCustom());
+stories.addDecorator(withDocsCustom(ReadMe));
 
 stories.add('Component default', () => (
   <Main>

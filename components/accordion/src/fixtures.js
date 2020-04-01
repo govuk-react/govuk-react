@@ -1,4 +1,4 @@
-import React, { useMemo, useReducer } from 'react';
+import React, { useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import Link from '@govuk-react/link';
 import ListNavigation from '@govuk-react/list-navigation';
@@ -19,17 +19,14 @@ const constructFull = ({ bool, state }) =>
     {}
   );
 
-const reducer = (state, newState) => ({ ...state, ...newState });
-
-const useLegacyState = state => useReducer(reducer, state);
-
 const checkOpen = state => Object.values(state).every(Boolean);
 
+// currently this hook cannot be exported as part of this library since we do not compile with a v16.8+ version of React
 const useAccordion = initialState => {
-  const [state, setState] = useLegacyState(initialState);
+  const [state, setState] = useState(initialState);
 
-  const objOpen = useMemo(() => constructFull({ bool: true, state }), [initialState, state.length]);
-  const objClose = useMemo(() => constructFull({ bool: false, state }), [initialState, state.length]);
+  const objOpen = constructFull({ bool: true, state });
+  const objClose = constructFull({ bool: false, state });
 
   const areAllOpen = useMemo(() => checkOpen(state), [state]);
 
@@ -38,21 +35,22 @@ const useAccordion = initialState => {
     return setState(!areAllOpen ? objOpen : objClose);
   };
 
-  const individualAccordionSetState = property => () =>
-    setState({
+  const individualAccordionToggle = property => () =>
+    setState(prevState => ({
+      ...prevState,
       [property]: !state[property],
-    });
+    }));
 
   return {
     areAllOpen,
-    individualAccordionSetState,
+    individualAccordionToggle,
     toggleAll,
     state,
   };
 };
 
 const ExampleWithoutSummaries = ({ initialState }) => {
-  const { areAllOpen, individualAccordionSetState, toggleAll, state } = useAccordion(initialState);
+  const { areAllOpen, individualAccordionToggle, toggleAll, state } = useAccordion(initialState);
 
   return (
     <Accordion>
@@ -62,28 +60,28 @@ const ExampleWithoutSummaries = ({ initialState }) => {
       <Accordion.Group
         heading="Writing well for the web"
         expanded={state.accordionOne}
-        onClick={individualAccordionSetState('accordionOne')}
+        onClick={individualAccordionToggle('accordionOne')}
       >
         <Paragraph mb={0}>This is the content for writing well for the web.</Paragraph>
       </Accordion.Group>
       <Accordion.Group
         heading="Writing well for specialists"
         expanded={state.accordionTwo}
-        onClick={individualAccordionSetState('accordionTwo')}
+        onClick={individualAccordionToggle('accordionTwo')}
       >
         <Paragraph mb={0}>This is the content for writing well for the specialists.</Paragraph>
       </Accordion.Group>
       <Accordion.Group
         heading="Know your audience"
         expanded={state.accordionThree}
-        onClick={individualAccordionSetState('accordionThree')}
+        onClick={individualAccordionToggle('accordionThree')}
       >
         <Paragraph mb={0}>This is the content for Know you audience.</Paragraph>
       </Accordion.Group>
       <Accordion.Group
         heading="How people read"
         expanded={state.accordionFour}
-        onClick={individualAccordionSetState('accordionFour')}
+        onClick={individualAccordionToggle('accordionFour')}
       >
         <Paragraph mb={0}>This is the content for How people read.</Paragraph>
       </Accordion.Group>
@@ -94,7 +92,7 @@ const ExampleWithoutSummaries = ({ initialState }) => {
 ExampleWithoutSummaries.propTypes = sharedPropTypes;
 
 const ExampleWithSummaries = ({ initialState }) => {
-  const { areAllOpen, individualAccordionSetState, toggleAll, state } = useAccordion(initialState);
+  const { areAllOpen, individualAccordionToggle, toggleAll, state } = useAccordion(initialState);
 
   return (
     <Accordion>
@@ -105,7 +103,7 @@ const ExampleWithSummaries = ({ initialState }) => {
         heading="Understanding agile project management"
         summary="Introductions, methods, core features."
         expanded={state.accordionOne}
-        onClick={individualAccordionSetState('accordionOne')}
+        onClick={individualAccordionToggle('accordionOne')}
       >
         <ListNavigation listStyleType="none">
           {[
@@ -123,7 +121,7 @@ const ExampleWithSummaries = ({ initialState }) => {
         heading="Working with agile methods"
         summary="Workspaces, tools and techniques, user stories, planning."
         expanded={state.accordionTwo}
-        onClick={individualAccordionSetState('accordionTwo')}
+        onClick={individualAccordionToggle('accordionTwo')}
       >
         <ListNavigation listStyleType="none">
           {[
@@ -145,7 +143,7 @@ const ExampleWithSummaries = ({ initialState }) => {
         heading="Governing agile services"
         summary="Principles, measuring progress, spending money."
         expanded={state.accordionThree}
-        onClick={individualAccordionSetState('accordionThree')}
+        onClick={individualAccordionToggle('accordionThree')}
       >
         <ListNavigation listStyleType="none">
           {[
@@ -165,7 +163,7 @@ const ExampleWithSummaries = ({ initialState }) => {
         heading="Phases of an agile project"
         summary="Discovery, alpha, beta, live and retirement."
         expanded={state.accordionFour}
-        onClick={individualAccordionSetState('accordionFour')}
+        onClick={individualAccordionToggle('accordionFour')}
       >
         <ListNavigation listStyleType="none">
           {[
@@ -197,7 +195,7 @@ class AccordionClassComponent extends React.Component {
       accordionThree: false,
       accordionFour: false,
     };
-    this.individualAccordionSetState = this.individualAccordionSetState.bind(this);
+    this.individualAccordionToggle = this.individualAccordionToggle.bind(this);
     this.toggleAll = this.toggleAll.bind(this);
   }
 
@@ -213,7 +211,7 @@ class AccordionClassComponent extends React.Component {
     );
   }
 
-  individualAccordionSetState(property) {
+  individualAccordionToggle(property) {
     return () =>
       this.setState(state => ({
         [property]: !state[property],
@@ -230,28 +228,28 @@ class AccordionClassComponent extends React.Component {
         <Accordion.Group
           heading="Writing well for the web"
           expanded={this.state.accordionOne}
-          onClick={this.individualAccordionSetState('accordionOne')}
+          onClick={this.individualAccordionToggle('accordionOne')}
         >
           <Paragraph mb={0}>This is the content for writing well for the web.</Paragraph>
         </Accordion.Group>
         <Accordion.Group
           heading="Writing well for specialists"
           expanded={this.state.accordionTwo}
-          onClick={this.individualAccordionSetState('accordionTwo')}
+          onClick={this.individualAccordionToggle('accordionTwo')}
         >
           <Paragraph mb={0}>This is the content for writing well for the specialists.</Paragraph>
         </Accordion.Group>
         <Accordion.Group
           heading="Know your audience"
           expanded={this.state.accordionThree}
-          onClick={this.individualAccordionSetState('accordionThree')}
+          onClick={this.individualAccordionToggle('accordionThree')}
         >
           <Paragraph mb={0}>This is the content for Know you audience.</Paragraph>
         </Accordion.Group>
         <Accordion.Group
           heading="How people read"
           expanded={this.state.accordionFour}
-          onClick={this.individualAccordionSetState('accordionFour')}
+          onClick={this.individualAccordionToggle('accordionFour')}
         >
           <Paragraph mb={0}>This is the content for How people read.</Paragraph>
         </Accordion.Group>

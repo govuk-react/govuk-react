@@ -94,6 +94,6 @@ class AccordionComponent extends React.Component {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
+ `children` | true | `````` | node | Other Accordion related components as laid out in the stories
 
 

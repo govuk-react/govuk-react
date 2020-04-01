@@ -13,7 +13,7 @@ import SectionHeader from './atoms/section-header';
 import SectionHeading from './atoms/section-heading';
 import SectionSummary from './atoms/section-summary';
 
-const AccordionContainer = styled('div')(
+const AccordionContainer = styled.div(
   spacing.responsive({ size: 6, property: 'margin', direction: 'bottom' }),
   {
     borderBottom: `1px solid ${BORDER_COLOUR}`,
@@ -110,6 +110,7 @@ const AccordionContainer = styled('div')(
 const Accordion = props => <AccordionContainer {...props} />;
 
 Accordion.propTypes = {
+  /** Other Accordion related components as laid out in the stories */
   children: PropTypes.node.isRequired,
 };
 
