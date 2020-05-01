@@ -13,7 +13,8 @@
     "lodash": "^4.17.5",
     "react": "^16.2.0",
     "react-docgen": "^4.1.0",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/cli": "7.2.3",
@@ -28,7 +29,9 @@
     "start": "babel-node src",
     "build": "yarn build:lib && yarn build:es",
     "build:lib": "rimraf lib && babel src -d lib --source-maps --config-file ../../babel.config.js",
-    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps --config-file ../../babel.config.js"
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps --config-file ../../babel.config.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -39,5 +42,6 @@
   "private": false,
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "snyk": true
 }
