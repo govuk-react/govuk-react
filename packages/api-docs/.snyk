@@ -1,0 +1,28 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - lodash:
+        patched: '2020-05-01T07:41:15.657Z'
+    - '@babel/node > lodash':
+        patched: '2020-05-01T07:41:15.657Z'
+    - '@babel/node > @babel/register > lodash':
+        patched: '2020-05-01T07:41:15.657Z'
+    - react-docgen > @babel/core > lodash:
+        patched: '2020-05-01T07:41:15.657Z'
+    - react-docgen > async > lodash:
+        patched: '2020-05-01T07:41:15.657Z'
+    - react-docgen > @babel/core > @babel/helper-module-transforms > lodash:
+        patched: '2020-05-01T07:41:15.657Z'
+    - react-docgen > @babel/core > @babel/helpers > @babel/traverse > lodash:
+        patched: '2020-05-01T07:41:15.657Z'
+    - react-docgen > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash:
+        patched: '2020-05-01T07:41:15.657Z'
+    - react-docgen > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-05-01T07:41:15.657Z'
+    - react-docgen > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-05-01T07:41:15.657Z'
+    - react-docgen > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2020-05-01T07:41:15.657Z'
