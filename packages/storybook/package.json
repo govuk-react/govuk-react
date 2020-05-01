@@ -62,7 +62,8 @@
     "govuk-colours": "^1.0.3",
     "normalize.css": "^8.0.0",
     "react-final-form": "^4.1.0",
-    "storybook-readme": "^5.0.1"
+    "storybook-readme": "^5.0.1",
+    "snyk": "^1.316.1"
   },
   "peerDependencies": {
     "react": ">=16.2.0"
@@ -77,7 +78,9 @@
     "storybook": "start-storybook -p 9009",
     "build": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "chromatic-test": "chromatic test --storybook-addon --exit-zero-on-changes"
+    "chromatic-test": "chromatic test --storybook-addon --exit-zero-on-changes",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -88,5 +91,6 @@
   "private": false,
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "snyk": true
 }
