@@ -31,7 +31,7 @@
   "module": "es/index.js",
   "dependencies": {
     "govuk-colours": "^1.0.3",
-    "react-markdown": "^4.0.6"
+    "react-markdown": "^5.0.0"
   },
   "peerDependencies": {
     "react": ">=16.2.0"
@@ -91,7 +91,7 @@
     "react-docgen": "^4.1.0",
     "react-dom": "^16.8.4",
     "react-final-form": "^4.1.0",
-    "react-markdown": "^4.0.6",
+    "react-markdown": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "react-test-renderer": "^16.2.0",
     "react-testing-library": "^7.0.0",
