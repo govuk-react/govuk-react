@@ -1,10 +1,19 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { BORDER_WIDTH_FORM_ELEMENT, FOCUSABLE, MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
+import { BORDER_WIDTH_FORM_ELEMENT, MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 import { BUTTON_COLOUR, BUTTON_COLOUR_DARKEN_15, WHITE } from 'govuk-colours';
 import { darken, stripUnit } from 'polished';
+
+var FOCUS_WIDTH = '3px';
+
+var FOCUSABLE = {
+  '&:focus': {
+    outline: FOCUS_WIDTH + " solid " + "#A89200",
+    outlineOffset: 0
+  }
+};
 
 const BUTTON_SHADOW_SIZE = BORDER_WIDTH_FORM_ELEMENT;
 const RAW_SPACING_2 = SPACING_POINTS[2];
