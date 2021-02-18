@@ -27,7 +27,7 @@ exports[`button basics matches snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #A89200;
   outline-offset: 0;
 }
 
@@ -146,7 +146,7 @@ exports[`button basics matches snapshot 1`] = `
             "rules": Array [
               [Function],
               "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
+  outline: 3px solid #A89200; outline-offset: 0;
 }",
               [Function],
               [Function],
@@ -204,7 +204,7 @@ exports[`button blue button, with automatic colours matches snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #A89200;
   outline-offset: 0;
 }
 
@@ -327,7 +327,7 @@ exports[`button blue button, with automatic colours matches snapshot 1`] = `
               "rules": Array [
                 [Function],
                 "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
+  outline: 3px solid #A89200; outline-offset: 0;
 }",
                 [Function],
                 [Function],
@@ -398,7 +398,7 @@ exports[`button button with icon matches snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #A89200;
   outline-offset: 0;
 }
 
@@ -537,7 +537,7 @@ exports[`button button with icon matches snapshot 1`] = `
               "rules": Array [
                 [Function],
                 "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
+  outline: 3px solid #A89200; outline-offset: 0;
 }",
                 [Function],
                 [Function],
@@ -670,7 +670,7 @@ exports[`button custom colours matches snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #A89200;
   outline-offset: 0;
 }
 
@@ -802,7 +802,7 @@ exports[`button custom colours matches snapshot 1`] = `
               "rules": Array [
                 [Function],
                 "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
+  outline: 3px solid #A89200; outline-offset: 0;
 }",
                 [Function],
                 [Function],
@@ -861,7 +861,7 @@ exports[`button disabled matches snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #A89200;
   outline-offset: 0;
 }
 
@@ -981,7 +981,7 @@ exports[`button disabled matches snapshot 1`] = `
               "rules": Array [
                 [Function],
                 "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
+  outline: 3px solid #A89200; outline-offset: 0;
 }",
                 [Function],
                 [Function],
@@ -1040,7 +1040,7 @@ exports[`button start button matches snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #A89200;
   outline-offset: 0;
 }
 
@@ -1160,7 +1160,7 @@ exports[`button start button matches snapshot 1`] = `
               "rules": Array [
                 [Function],
                 "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
+  outline: 3px solid #A89200; outline-offset: 0;
 }",
                 [Function],
                 [Function],

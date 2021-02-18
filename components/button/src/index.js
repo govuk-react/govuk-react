@@ -6,13 +6,13 @@ import { spacing, typography } from '@govuk-react/lib';
 import { BUTTON_COLOUR, BUTTON_COLOUR_DARKEN_15, WHITE } from 'govuk-colours';
 import { darken, stripUnit } from 'polished';
 
-var FOCUS_WIDTH = '3px';
+const FOCUS_WIDTH = '3px';
 
-var FOCUSABLE = {
+const FOCUSABLE = {
   '&:focus': {
-    outline: FOCUS_WIDTH + " solid " + "#A89200",
-    outlineOffset: 0
-  }
+    outline: `${FOCUS_WIDTH} solid #A89200`,
+    outlineOffset: 0,
+  },
 };
 
 const BUTTON_SHADOW_SIZE = BORDER_WIDTH_FORM_ELEMENT;
