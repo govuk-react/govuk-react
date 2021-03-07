@@ -5,7 +5,7 @@
     "@govuk-react/button": "^0.7.1",
     "@storybook/addon-actions": "^5.0.3",
     "@storybook/addons": "^5.0.3",
-    "@storybook/react": "^5.0.3",
+    "@storybook/react": "^6.1.20",
     "react-final-form": "^4.1.0",
     "storybook-readme": "^5.0.1"
   },
