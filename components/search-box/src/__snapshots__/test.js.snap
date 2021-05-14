@@ -32,7 +32,7 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
 
 .c1:focus {
   margin-right: 3px;
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
 }
 
@@ -56,7 +56,7 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 .c2:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
 }
 
@@ -114,7 +114,7 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
                   "lastClassName": "c1",
                   "rules": Array [
                     "width: 100%; height: 40px; padding: 6px; margin: 0; border: solid 1px #bfc1c3; border-right: 0; box-sizing: border-box; font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 16px; line-height: 1.75; background: #ffffff; border-radius: 0; -webkit-appearance: none; :focus {
-  margin-right: 3px; outline: 3px solid #ffbf47; outline-offset: 0;  ~ button {
+  margin-right: 3px; outline: 3px solid #ffdd00; outline-offset: 0;  ~ button {
   width: 46px;
 }
 }",
@@ -155,7 +155,7 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
                   "lastClassName": "c2",
                   "rules": Array [
                     "background-color: #2b8cc4; border: 0; display: block; color: #ffffff; position: relative; padding: 10px; width: 45px; height: 40px; background-repeat: no-repeat; background-position: 2px 50%; text-indent: -999em; overflow: hidden; :focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
+  outline: 3px solid #ffdd00; outline-offset: 0;
 }",
                   ],
                 },

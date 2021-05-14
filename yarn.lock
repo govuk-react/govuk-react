@@ -6420,9 +6420,10 @@ got@^8.3.2:
     url-parse-lax "^3.0.0"
     url-to-options "^1.0.1"
 
-govuk-colours@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/govuk-colours/-/govuk-colours-1.0.3.tgz#41d983693626dbaadb05594c5931a51696f79488"
+govuk-colours@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/govuk-colours/-/govuk-colours-1.1.0.tgz#71afae4ed7e9d61c5e230cb61f0f00fa410a76a7"
+  integrity sha512-EcwnP9PsWubmTcsJtLF8w0D5b69j43LwYtSqGyPtO3903J0bbwB2t5ujWZ9UhsbLamuUmigBkNpLItU3/KuFqw==
 
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.15"

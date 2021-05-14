@@ -106,13 +106,13 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   cursor: pointer;
   font-size: 16px;
   line-height: 1.25;
-  color: #b10e1e;
+  color: #d4351c;
   padding-top: 4px;
   padding-bottom: 2px;
 }
 
 .c7:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c7:visited {
@@ -132,24 +132,24 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 }
 
 .c7:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c7:visited {
-  color: #b10e1e;
+  color: #d4351c;
 }
 
 .c0 {
   color: #0b0c0c;
   padding: 15px;
-  border: 4px solid #b10e1e;
+  border: 4px solid #d4351c;
   margin-bottom: 20px;
 }
 
 .c0:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
 }
 
@@ -218,7 +218,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 }
 
 .c11:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
 }
 
@@ -245,7 +245,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 }
 
 .c12:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
 }
 
@@ -367,7 +367,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
 @media only screen and (min-width:641px) {
   .c0 {
     padding: 20px;
-    border: 5px solid #b10e1e;
+    border: 5px solid #d4351c;
   }
 }
 
@@ -483,10 +483,10 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                 "isStatic": false,
                 "lastClassName": "c0",
                 "rules": Array [
-                  "color: #0b0c0c; padding: 15px; border: 4px solid #b10e1e; &:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
+                  "color: #0b0c0c; padding: 15px; border: 4px solid #d4351c; &:focus {
+  outline: 3px solid #ffdd00; outline-offset: 0;
 } @media only screen and (min-width: 641px) {
-  padding: 20px; border: 5px solid #b10e1e;
+  padding: 20px; border: 5px solid #d4351c;
 }",
                   [Function],
                 ],
@@ -876,7 +876,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   font-family: sans-serif;
 }",
                                       ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -887,7 +887,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   color: #0b0c0c;
 }",
                                       "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                       "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -900,10 +900,10 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                                       [Function],
                                       [Function],
                                       "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-weight: 700; margin-bottom: 5px; text-decoration: underline; text-decoration-skip-ink: none; text-transform: none; cursor: pointer; font-size: 16px; line-height: 1.25; :visited {
-  color: #b10e1e;
+  color: #d4351c;
 } @media only screen and (min-width: 641px) {
   font-size: 19px; line-height: 1.3;
-} color: #b10e1e; padding-top: 4px; padding-bottom: 2px;",
+} color: #d4351c; padding-top: 4px; padding-bottom: 2px;",
                                     ],
                                   },
                                   "defaultProps": Object {
@@ -1003,7 +1003,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   font-family: sans-serif;
 }",
                                       ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -1014,7 +1014,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   color: #0b0c0c;
 }",
                                       "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                       "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -1027,10 +1027,10 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                                       [Function],
                                       [Function],
                                       "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-weight: 700; margin-bottom: 5px; text-decoration: underline; text-decoration-skip-ink: none; text-transform: none; cursor: pointer; font-size: 16px; line-height: 1.25; :visited {
-  color: #b10e1e;
+  color: #d4351c;
 } @media only screen and (min-width: 641px) {
   font-size: 19px; line-height: 1.3;
-} color: #b10e1e; padding-top: 4px; padding-bottom: 2px;",
+} color: #d4351c; padding-top: 4px; padding-bottom: 2px;",
                                     ],
                                   },
                                   "defaultProps": Object {
@@ -1236,7 +1236,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
   font-size: 19px; line-height: 1.3157894736842106;
 }",
                             "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
+  outline: 3px solid #ffdd00; outline-offset: 0;
 }",
                             "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
   margin: 0; -webkit-appearance: none;
@@ -1383,7 +1383,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                           "box-sizing: border-box; font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
   font-size: 19px; line-height: 1.3; width: 75%;
 } width: 100%; padding: 5px 4px 4px; border: 2px solid #0b0c0c; :focus {
-  outline: 3px solid #ffbf47; outline-offset: 0;
+  outline: 3px solid #ffdd00; outline-offset: 0;
 }",
                           [Function],
                         ],

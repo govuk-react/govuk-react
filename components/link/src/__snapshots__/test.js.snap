@@ -8,7 +8,7 @@ exports[`Link all options view matches snapshot: link with all options 1`] = `
 }
 
 .c0:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c0:visited {
@@ -28,9 +28,9 @@ exports[`Link all options view matches snapshot: link with all options 1`] = `
 }
 
 .c0:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c0:link,
@@ -53,11 +53,11 @@ exports[`Link all options view matches snapshot: link with all options 1`] = `
 }
 
 .c0:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c0:visited {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c0:hover {
@@ -125,7 +125,7 @@ exports[`Link all options view matches snapshot: link with all options 1`] = `
   font-family: sans-serif;
 }",
                 ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -136,7 +136,7 @@ exports[`Link all options view matches snapshot: link with all options 1`] = `
   color: #0b0c0c;
 }",
                 "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                 "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -193,7 +193,7 @@ exports[`Link basic view matches snapshot: plain link 1`] = `
 }
 
 .c0:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c0:visited {
@@ -213,9 +213,9 @@ exports[`Link basic view matches snapshot: plain link 1`] = `
 }
 
 .c0:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 @media print {
@@ -261,7 +261,7 @@ exports[`Link basic view matches snapshot: plain link 1`] = `
   font-family: sans-serif;
 }",
                 ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -272,7 +272,7 @@ exports[`Link basic view matches snapshot: plain link 1`] = `
   color: #0b0c0c;
 }",
                 "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                 "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {

@@ -53,7 +53,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 .c6:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c6:visited {
@@ -73,13 +73,13 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 .c6:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c0 {
-  border-top: 10px solid #005ea5;
+  border-top: 10px solid #1d70b8;
   padding-top: 5px;
   width: 100%;
   margin-bottom: 0;
@@ -204,7 +204,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
-              "border-top: 10px solid #005ea5; padding-top: 5px; width: 100%; @media only screen and (min-width: 641px) {
+              "border-top: 10px solid #1d70b8; padding-top: 5px; width: 100%; @media only screen and (min-width: 641px) {
   font-size: 16px; line-height: 1.25;
 } > h3 {
   margin-bottom: 10px;
@@ -392,7 +392,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
   font-family: sans-serif;
 }",
                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -403,7 +403,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
   color: #0b0c0c;
 }",
                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -507,7 +507,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
   font-family: sans-serif;
 }",
                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -518,7 +518,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
   color: #0b0c0c;
 }",
                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -622,7 +622,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
   font-family: sans-serif;
 }",
                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -633,7 +633,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
   color: #0b0c0c;
 }",
                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {

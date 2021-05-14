@@ -22,9 +22,9 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 .c0:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c0:link,
@@ -108,7 +108,7 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
   font-family: sans-serif;
 }",
               "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
               "&:link, &:visited, &:hover, &:active, &:focus {
   color: #0b0c0c; @media print {
