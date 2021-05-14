@@ -24,7 +24,7 @@
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand",
     "test:snapshot": "yarn test:unit -- -u",
     "create-component": "node ./scripts/createComponent.js",
-    "chromatic-test": "cd packages/storybook && yarn chromatic-test"
+    "build:storybook": "cd packages/storybook && yarn build"
   },
   "description": "A port of the govuk-frontend components for React using styled-components.",
   "main": "lib/index.js",
