@@ -16,9 +16,9 @@ exports[`breadcrumbs matches snapshot: breadcrumbs 1`] = `
 }
 
 .c3:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c0 {
@@ -239,7 +239,7 @@ exports[`breadcrumbs matches snapshot: breadcrumbs 1`] = `
 }
 }",
                                 "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                               ],
                             },
@@ -326,7 +326,7 @@ exports[`breadcrumbs matches snapshot: breadcrumbs 1`] = `
 }
 }",
                                 "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                               ],
                             },

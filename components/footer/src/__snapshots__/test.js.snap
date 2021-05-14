@@ -13,7 +13,7 @@ exports[`Footer matches default snapshot: Footer 1`] = `
 }
 
 .c7:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c7:visited {
@@ -33,9 +33,9 @@ exports[`Footer matches default snapshot: Footer 1`] = `
 }
 
 .c7:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c6:link,
@@ -95,7 +95,7 @@ exports[`Footer matches default snapshot: Footer 1`] = `
 
 .c0 {
   border-top: 1px solid #a1acb2;
-  background: #dee0e2;
+  background: #f3f2f1;
   color: #454a4c;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -224,7 +224,7 @@ exports[`Footer matches default snapshot: Footer 1`] = `
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
-                "border-top: 1px solid #a1acb2; background: #dee0e2; color: #454a4c;",
+                "border-top: 1px solid #a1acb2; background: #f3f2f1; color: #454a4c;",
                 "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-size: 14px; line-height: 1.2;
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
@@ -516,7 +516,7 @@ exports[`Footer matches default snapshot: Footer 1`] = `
   font-family: sans-serif;
 }",
                                                             ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -527,7 +527,7 @@ exports[`Footer matches default snapshot: Footer 1`] = `
   color: #0b0c0c;
 }",
                                                             "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                             "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -614,7 +614,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
 }
 
 .c7:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c7:visited {
@@ -634,9 +634,9 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
 }
 
 .c7:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c6:link,
@@ -718,7 +718,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
 }
 
 .c9:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c9:visited {
@@ -738,9 +738,9 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
 }
 
 .c9:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c9:link,
@@ -754,7 +754,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
 
 .c0 {
   border-top: 1px solid #a1acb2;
-  background: #dee0e2;
+  background: #f3f2f1;
   color: #454a4c;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -910,7 +910,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
-                "border-top: 1px solid #a1acb2; background: #dee0e2; color: #454a4c;",
+                "border-top: 1px solid #a1acb2; background: #f3f2f1; color: #454a4c;",
                 "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-size: 14px; line-height: 1.2;
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
@@ -1214,7 +1214,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
   font-family: sans-serif;
 }",
                                                             ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -1225,7 +1225,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
   color: #0b0c0c;
 }",
                                                             "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                             "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -1362,7 +1362,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
   font-family: sans-serif;
 }",
                                             ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -1373,7 +1373,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
   color: #0b0c0c;
 }",
                                             "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                             "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -1460,7 +1460,7 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
 }
 
 .c7:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c7:visited {
@@ -1480,9 +1480,9 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
 }
 
 .c7:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c6:link,
@@ -1542,7 +1542,7 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
 
 .c0 {
   border-top: 1px solid #a1acb2;
-  background: #dee0e2;
+  background: #f3f2f1;
   color: #454a4c;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -1688,7 +1688,7 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
-                "border-top: 1px solid #a1acb2; background: #dee0e2; color: #454a4c;",
+                "border-top: 1px solid #a1acb2; background: #f3f2f1; color: #454a4c;",
                 "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-size: 14px; line-height: 1.2;
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
@@ -1985,7 +1985,7 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
   font-family: sans-serif;
 }",
                                                             ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -1996,7 +1996,7 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
   color: #0b0c0c;
 }",
                                                             "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                             "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -2083,7 +2083,7 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
 }
 
 .c6:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c6:visited {
@@ -2103,9 +2103,9 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
 }
 
 .c6:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c5:link,
@@ -2169,7 +2169,7 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
 
 .c0 {
   border-top: 1px solid #a1acb2;
-  background: #dee0e2;
+  background: #f3f2f1;
   color: #454a4c;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -2308,7 +2308,7 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
-                "border-top: 1px solid #a1acb2; background: #dee0e2; color: #454a4c;",
+                "border-top: 1px solid #a1acb2; background: #f3f2f1; color: #454a4c;",
                 "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-size: 14px; line-height: 1.2;
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
@@ -2535,7 +2535,7 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
   font-family: sans-serif;
 }",
                                                         ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -2546,7 +2546,7 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
   color: #0b0c0c;
 }",
                                                         "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                         "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -2758,7 +2758,7 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
   font-family: sans-serif;
 }",
                                                             ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -2769,7 +2769,7 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
   color: #0b0c0c;
 }",
                                                             "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                             "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -2856,7 +2856,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
 }
 
 .c9:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c9:visited {
@@ -2876,9 +2876,9 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
 }
 
 .c9:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c8:link,
@@ -2986,7 +2986,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
 
 .c0 {
   border-top: 1px solid #a1acb2;
-  background: #dee0e2;
+  background: #f3f2f1;
   color: #454a4c;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -3196,7 +3196,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
-                    "border-top: 1px solid #a1acb2; background: #dee0e2; color: #454a4c;",
+                    "border-top: 1px solid #a1acb2; background: #f3f2f1; color: #454a4c;",
                     "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-size: 14px; line-height: 1.2;
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
@@ -3576,7 +3576,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
   font-family: sans-serif;
 }",
                                                                     ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -3587,7 +3587,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
   color: #0b0c0c;
 }",
                                                                     "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                     "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -3845,7 +3845,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
   font-family: sans-serif;
 }",
                                                                     ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -3856,7 +3856,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
   color: #0b0c0c;
 }",
                                                                     "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                     "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -4007,7 +4007,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
   font-family: sans-serif;
 }",
                                                             ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -4018,7 +4018,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
   color: #0b0c0c;
 }",
                                                             "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                             "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -4230,7 +4230,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
   font-family: sans-serif;
 }",
                                                                 ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -4241,7 +4241,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
   color: #0b0c0c;
 }",
                                                                 "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                 "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -4338,7 +4338,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
 }
 
 .c9:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c9:visited {
@@ -4358,9 +4358,9 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
 }
 
 .c9:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c8:link,
@@ -4464,7 +4464,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
 
 .c0 {
   border-top: 1px solid #a1acb2;
-  background: #dee0e2;
+  background: #f3f2f1;
   color: #454a4c;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -4664,7 +4664,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
-                    "border-top: 1px solid #a1acb2; background: #dee0e2; color: #454a4c;",
+                    "border-top: 1px solid #a1acb2; background: #f3f2f1; color: #454a4c;",
                     "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-size: 14px; line-height: 1.2;
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
@@ -5044,7 +5044,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
   font-family: sans-serif;
 }",
                                                                     ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -5055,7 +5055,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
   color: #0b0c0c;
 }",
                                                                     "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                     "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -5313,7 +5313,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
   font-family: sans-serif;
 }",
                                                                     ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -5324,7 +5324,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
   color: #0b0c0c;
 }",
                                                                     "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                     "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -5540,7 +5540,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
   font-family: sans-serif;
 }",
                                                                 ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -5551,7 +5551,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
   color: #0b0c0c;
 }",
                                                                 "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                 "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -5660,7 +5660,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
 }
 
 .c9:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c9:visited {
@@ -5680,9 +5680,9 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
 }
 
 .c9:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c8:link,
@@ -5859,7 +5859,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
 
 .c0 {
   border-top: 1px solid #a1acb2;
-  background: #dee0e2;
+  background: #f3f2f1;
   color: #454a4c;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -6141,7 +6141,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
-                    "border-top: 1px solid #a1acb2; background: #dee0e2; color: #454a4c;",
+                    "border-top: 1px solid #a1acb2; background: #f3f2f1; color: #454a4c;",
                     "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-size: 14px; line-height: 1.2;
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
@@ -6509,7 +6509,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   font-family: sans-serif;
 }",
                                                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -6520,7 +6520,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   color: #0b0c0c;
 }",
                                                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -6778,7 +6778,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   font-family: sans-serif;
 }",
                                                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -6789,7 +6789,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   color: #0b0c0c;
 }",
                                                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -6948,7 +6948,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   font-family: sans-serif;
 }",
                                                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -6959,7 +6959,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   color: #0b0c0c;
 }",
                                                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -7118,7 +7118,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   font-family: sans-serif;
 }",
                                                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -7129,7 +7129,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   color: #0b0c0c;
 }",
                                                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -7288,7 +7288,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   font-family: sans-serif;
 }",
                                                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -7299,7 +7299,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   color: #0b0c0c;
 }",
                                                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -7637,7 +7637,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   font-family: sans-serif;
 }",
                                                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -7648,7 +7648,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   color: #0b0c0c;
 }",
                                                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -7807,7 +7807,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   font-family: sans-serif;
 }",
                                                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -7818,7 +7818,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   color: #0b0c0c;
 }",
                                                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -7977,7 +7977,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   font-family: sans-serif;
 }",
                                                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -7988,7 +7988,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   color: #0b0c0c;
 }",
                                                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -8402,7 +8402,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   font-family: sans-serif;
 }",
                                                                     ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -8413,7 +8413,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   color: #0b0c0c;
 }",
                                                                     "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                     "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -8671,7 +8671,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   font-family: sans-serif;
 }",
                                                                     ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -8682,7 +8682,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   color: #0b0c0c;
 }",
                                                                     "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                     "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -8833,7 +8833,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   font-family: sans-serif;
 }",
                                                             ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -8844,7 +8844,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   color: #0b0c0c;
 }",
                                                             "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                             "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -9056,7 +9056,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   font-family: sans-serif;
 }",
                                                                 ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -9067,7 +9067,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   color: #0b0c0c;
 }",
                                                                 "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                 "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -9176,7 +9176,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
 }
 
 .c9:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c9:visited {
@@ -9196,9 +9196,9 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
 }
 
 .c9:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c8:link,
@@ -9327,7 +9327,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
 
 .c0 {
   border-top: 1px solid #a1acb2;
-  background: #dee0e2;
+  background: #f3f2f1;
   color: #454a4c;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -9551,7 +9551,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
-                    "border-top: 1px solid #a1acb2; background: #dee0e2; color: #454a4c;",
+                    "border-top: 1px solid #a1acb2; background: #f3f2f1; color: #454a4c;",
                     "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-size: 14px; line-height: 1.2;
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
@@ -9919,7 +9919,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   font-family: sans-serif;
 }",
                                                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -9930,7 +9930,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   color: #0b0c0c;
 }",
                                                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -10188,7 +10188,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   font-family: sans-serif;
 }",
                                                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -10199,7 +10199,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   color: #0b0c0c;
 }",
                                                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -10358,7 +10358,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   font-family: sans-serif;
 }",
                                                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -10369,7 +10369,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   color: #0b0c0c;
 }",
                                                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -10528,7 +10528,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   font-family: sans-serif;
 }",
                                                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -10539,7 +10539,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   color: #0b0c0c;
 }",
                                                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -10698,7 +10698,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   font-family: sans-serif;
 }",
                                                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -10709,7 +10709,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   color: #0b0c0c;
 }",
                                                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -11047,7 +11047,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   font-family: sans-serif;
 }",
                                                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -11058,7 +11058,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   color: #0b0c0c;
 }",
                                                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -11217,7 +11217,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   font-family: sans-serif;
 }",
                                                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -11228,7 +11228,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   color: #0b0c0c;
 }",
                                                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -11387,7 +11387,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   font-family: sans-serif;
 }",
                                                                   ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -11398,7 +11398,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   color: #0b0c0c;
 }",
                                                                   "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                   "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -11724,7 +11724,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   font-family: sans-serif;
 }",
                                                                 ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -11735,7 +11735,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   color: #0b0c0c;
 }",
                                                                 "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                 "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -11832,7 +11832,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
 }
 
 .c9:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c9:visited {
@@ -11852,9 +11852,9 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
 }
 
 .c9:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c8:link,
@@ -11958,7 +11958,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
 
 .c0 {
   border-top: 1px solid #a1acb2;
-  background: #dee0e2;
+  background: #f3f2f1;
   color: #454a4c;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -12147,7 +12147,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
-                    "border-top: 1px solid #a1acb2; background: #dee0e2; color: #454a4c;",
+                    "border-top: 1px solid #a1acb2; background: #f3f2f1; color: #454a4c;",
                     "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-size: 14px; line-height: 1.2;
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
@@ -12526,7 +12526,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
   font-family: sans-serif;
 }",
                                                                     ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -12537,7 +12537,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
   color: #0b0c0c;
 }",
                                                                     "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                     "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -12753,7 +12753,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
   font-family: sans-serif;
 }",
                                                                 ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -12764,7 +12764,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
   color: #0b0c0c;
 }",
                                                                 "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                                 "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -12873,7 +12873,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
 }
 
 .c9:link {
-  color: #005ea5;
+  color: #1d70b8;
 }
 
 .c9:visited {
@@ -12893,9 +12893,9 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
 }
 
 .c9:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdd00;
   outline-offset: 0;
-  background-color: #ffbf47;
+  background-color: #ffdd00;
 }
 
 .c8:link,
@@ -13016,7 +13016,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
 
 .c0 {
   border-top: 1px solid #a1acb2;
-  background: #dee0e2;
+  background: #f3f2f1;
   color: #454a4c;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -13210,7 +13210,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
-                "border-top: 1px solid #a1acb2; background: #dee0e2; color: #454a4c;",
+                "border-top: 1px solid #a1acb2; background: #f3f2f1; color: #454a4c;",
                 "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
   font-size: 14px; line-height: 1.2;
 } font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
@@ -13577,7 +13577,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
   font-family: sans-serif;
 }",
                                                               ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -13588,7 +13588,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
   color: #0b0c0c;
 }",
                                                               "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                               "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
@@ -13914,7 +13914,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
   font-family: sans-serif;
 }",
                                                             ":link {
-  color: #005ea5;
+  color: #1d70b8;
 } :visited {
   color: #4c2c92;
 } :hover {
@@ -13925,7 +13925,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
   color: #0b0c0c;
 }",
                                                             "&:focus {
-  outline: 3px solid #ffbf47; outline-offset: 0; background-color: #ffbf47;
+  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
 }",
                                                             "@media print {
   &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
