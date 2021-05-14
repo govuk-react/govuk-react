@@ -76,8 +76,7 @@
     "start": "start-storybook -p 9009",
     "storybook": "start-storybook -p 9009",
     "build": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages",
-    "chromatic-test": "chromatic test --storybook-addon --exit-zero-on-changes"
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "main": "lib/index.js",
   "module": "es/index.js",

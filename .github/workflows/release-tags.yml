@@ -1,0 +1,32 @@
+name: Publish Release
+on:
+  push:
+    tags:
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+
+    - run: yarn
+    - run: yarn build:sync
+    
+    - run: yarn run pack && mkdir releases && mv {components,packages}/*/govuk-react-*.tgz ./releases
+    - run: LERNA_VERSION=$(node -e 'console.log(require("./lerna.json").version)')
+    
+    - name: GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: "releases/govuk-react-*-${LERNA_VERSION}.tgz"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+
+    - run: lerna exec --no-private --bail=false -- "$GITHUB_WORKSPACE/scripts/npmPublish.sh"
