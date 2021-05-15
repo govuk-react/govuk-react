@@ -293,7 +293,12 @@ const HooksExample = ({ defaultIndex }) => {
             href: '#second-panel',
           },
         ].map(({ content, href }, index) => (
-          <Tabs.Tab onClick={event => hooksHandleClick({ event, index })} selected={tabIndex === index} href={href}>
+          <Tabs.Tab
+            key={href}
+            onClick={event => hooksHandleClick({ event, index })}
+            selected={tabIndex === index}
+            href={href}
+          >
             {content}
           </Tabs.Tab>
         ))}
@@ -308,7 +313,7 @@ const HooksExample = ({ defaultIndex }) => {
           id: 'second-panel',
         },
       ].map(({ content, id }, index) => (
-        <Tabs.Panel selected={tabIndex === index} id={id}>
+        <Tabs.Panel key={id} selected={tabIndex === index} id={id}>
           {content}
         </Tabs.Panel>
       ))}

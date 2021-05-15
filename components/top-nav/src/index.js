@@ -157,10 +157,15 @@ class TopNav extends Component {
               {children && (
                 <React.Fragment>
                   <MenuButtonWrapper>
-                    <MenuButton open={this.state.navigationOpen} onClick={this.toggleNavigationOpen} />
+                    <MenuButton open={this.state.navigationOpen} />
                   </MenuButtonWrapper>
                   {/* Referenced in MenuButton */}
-                  <Input id="govuk-react-menu-button" type="checkbox" checked={this.state.navigationOpen} />
+                  <Input
+                    id="govuk-react-menu-button"
+                    type="checkbox"
+                    checked={this.state.navigationOpen}
+                    onChange={this.toggleNavigationOpen}
+                  />
                   <UnorderedList id="govuk-react-menu" serviceTitle={serviceTitle} open={this.state.navigationOpen}>
                     {/* TODO: #205 use context api and/or render props here for `active` */}
                     {children.length && children.map ? (
