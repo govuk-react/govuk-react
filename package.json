@@ -22,7 +22,7 @@
     "test": "cross-env CI=true yarn test:unit && yarn eslint && yarn flow",
     "test:unit": "jest",
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand",
-    "test:snapshot": "yarn test:unit -- -u",
+    "test:snapshot": "yarn build && yarn test:unit -u",
     "create-component": "node ./scripts/createComponent.js",
     "build:storybook": "cd packages/storybook && yarn build"
   },

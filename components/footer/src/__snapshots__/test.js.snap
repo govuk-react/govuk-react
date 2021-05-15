@@ -493,7 +493,7 @@ exports[`Footer matches default snapshot: Footer 1`] = `
                                                 rel="license"
                                                 textColour={false}
                                               >
-                                                <styled.a
+                                                <src__Link
                                                   className="c6"
                                                   href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                                   muted={false}
@@ -508,7 +508,7 @@ exports[`Footer matches default snapshot: Footer 1`] = `
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-bdVaJa",
+                                                          "componentId": "src__Link-sc-1oemcts-0",
                                                           "isStatic": false,
                                                           "lastClassName": "c7",
                                                           "rules": Array [
@@ -546,11 +546,11 @@ exports[`Footer matches default snapshot: Footer 1`] = `
                                                           "noVisitedState": false,
                                                           "textColour": false,
                                                         },
-                                                        "displayName": "styled.a",
+                                                        "displayName": "src__Link",
                                                         "foldedComponentIds": Array [],
                                                         "propTypes": undefined,
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-bdVaJa",
+                                                        "styledComponentId": "src__Link-sc-1oemcts-0",
                                                         "target": "a",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -573,7 +573,7 @@ exports[`Footer matches default snapshot: Footer 1`] = `
                                                       Open Government Licence v3.0
                                                     </a>
                                                   </StyledComponent>
-                                                </styled.a>
+                                                </src__Link>
                                               </LinkDocumented>
                                             </StyledComponent>
                                           </link__StyledFooterLink>
@@ -1191,7 +1191,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                                                 rel="license"
                                                 textColour={false}
                                               >
-                                                <styled.a
+                                                <src__Link
                                                   className="c6"
                                                   href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                                   muted={false}
@@ -1206,7 +1206,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-bdVaJa",
+                                                          "componentId": "src__Link-sc-1oemcts-0",
                                                           "isStatic": false,
                                                           "lastClassName": "c7",
                                                           "rules": Array [
@@ -1244,11 +1244,11 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                                                           "noVisitedState": false,
                                                           "textColour": false,
                                                         },
-                                                        "displayName": "styled.a",
+                                                        "displayName": "src__Link",
                                                         "foldedComponentIds": Array [],
                                                         "propTypes": undefined,
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-bdVaJa",
+                                                        "styledComponentId": "src__Link-sc-1oemcts-0",
                                                         "target": "a",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -1271,7 +1271,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                                                       Open Government Licence v3.0
                                                     </a>
                                                   </StyledComponent>
-                                                </styled.a>
+                                                </src__Link>
                                               </LinkDocumented>
                                             </StyledComponent>
                                           </link__StyledFooterLink>
@@ -1400,7 +1400,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                                         },
                                         "displayName": "copyright__StyledCopyright",
                                         "foldedComponentIds": Array [
-                                          "sc-bdVaJa",
+                                          "src__Link-sc-1oemcts-0",
                                         ],
                                         "propTypes": undefined,
                                         "render": [Function],
@@ -1962,7 +1962,7 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
                                                 rel="license"
                                                 textColour={false}
                                               >
-                                                <styled.a
+                                                <src__Link
                                                   className="c6"
                                                   href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                                   muted={false}
@@ -1977,7 +1977,7 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-bdVaJa",
+                                                          "componentId": "src__Link-sc-1oemcts-0",
                                                           "isStatic": false,
                                                           "lastClassName": "c7",
                                                           "rules": Array [
@@ -2015,11 +2015,11 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
                                                           "noVisitedState": false,
                                                           "textColour": false,
                                                         },
-                                                        "displayName": "styled.a",
+                                                        "displayName": "src__Link",
                                                         "foldedComponentIds": Array [],
                                                         "propTypes": undefined,
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-bdVaJa",
+                                                        "styledComponentId": "src__Link-sc-1oemcts-0",
                                                         "target": "a",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -2042,7 +2042,7 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
                                                       Open Government Licence v3.0
                                                     </a>
                                                   </StyledComponent>
-                                                </styled.a>
+                                                </src__Link>
                                               </LinkDocumented>
                                             </StyledComponent>
                                           </link__StyledFooterLink>
@@ -2513,7 +2513,7 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
                                             noVisitedState={false}
                                             textColour={false}
                                           >
-                                            <styled.a
+                                            <src__Link
                                               className="c5"
                                               href="/"
                                               muted={false}
@@ -2527,7 +2527,7 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
                                                     "$$typeof": Symbol(react.forward_ref),
                                                     "attrs": Array [],
                                                     "componentStyle": ComponentStyle {
-                                                      "componentId": "sc-bdVaJa",
+                                                      "componentId": "src__Link-sc-1oemcts-0",
                                                       "isStatic": false,
                                                       "lastClassName": "c6",
                                                       "rules": Array [
@@ -2565,11 +2565,11 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
                                                       "noVisitedState": false,
                                                       "textColour": false,
                                                     },
-                                                    "displayName": "styled.a",
+                                                    "displayName": "src__Link",
                                                     "foldedComponentIds": Array [],
                                                     "propTypes": undefined,
                                                     "render": [Function],
-                                                    "styledComponentId": "sc-bdVaJa",
+                                                    "styledComponentId": "src__Link-sc-1oemcts-0",
                                                     "target": "a",
                                                     "toString": [Function],
                                                     "warnTooManyClasses": [Function],
@@ -2590,7 +2590,7 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
                                                   Government Digital Service
                                                 </a>
                                               </StyledComponent>
-                                            </styled.a>
+                                            </src__Link>
                                           </LinkDocumented>
                                         </StyledComponent>
                                       </link__StyledFooterLink>
@@ -2735,7 +2735,7 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
                                                 rel="license"
                                                 textColour={false}
                                               >
-                                                <styled.a
+                                                <src__Link
                                                   className="c5"
                                                   href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                                   muted={false}
@@ -2750,7 +2750,7 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-bdVaJa",
+                                                          "componentId": "src__Link-sc-1oemcts-0",
                                                           "isStatic": false,
                                                           "lastClassName": "c6",
                                                           "rules": Array [
@@ -2788,11 +2788,11 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
                                                           "noVisitedState": false,
                                                           "textColour": false,
                                                         },
-                                                        "displayName": "styled.a",
+                                                        "displayName": "src__Link",
                                                         "foldedComponentIds": Array [],
                                                         "propTypes": undefined,
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-bdVaJa",
+                                                        "styledComponentId": "src__Link-sc-1oemcts-0",
                                                         "target": "a",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -2815,7 +2815,7 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
                                                       Open Government Licence v3.0
                                                     </a>
                                                   </StyledComponent>
-                                                </styled.a>
+                                                </src__Link>
                                               </LinkDocumented>
                                             </StyledComponent>
                                           </link__StyledFooterLink>
@@ -3331,7 +3331,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                   <MetaLinks
                                     heading="Support links"
                                   >
-                                    <styled.span
+                                    <src__VisuallyHidden
                                       focusable={false}
                                       important={true}
                                     >
@@ -3344,7 +3344,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                               [Function],
                                             ],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-htpNat",
+                                              "componentId": "src__VisuallyHidden-sc-1d47voq-0",
                                               "isStatic": false,
                                               "lastClassName": "c4",
                                               "rules": Array [
@@ -3355,11 +3355,11 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                               "focusable": false,
                                               "important": true,
                                             },
-                                            "displayName": "styled.span",
+                                            "displayName": "src__VisuallyHidden",
                                             "foldedComponentIds": Array [],
                                             "propTypes": undefined,
                                             "render": [Function],
-                                            "styledComponentId": "sc-htpNat",
+                                            "styledComponentId": "src__VisuallyHidden-sc-1d47voq-0",
                                             "target": "span",
                                             "toString": [Function],
                                             "warnTooManyClasses": [Function],
@@ -3378,7 +3378,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                               as="h2"
                                               size="LARGE"
                                             >
-                                              <styled.h1
+                                              <src__StyledHeading
                                                 as="h2"
                                                 size="LARGE"
                                               >
@@ -3389,7 +3389,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-bwzfXH",
+                                                        "componentId": "src__StyledHeading-sc-1dueefc-0",
                                                         "isStatic": false,
                                                         "lastClassName": "c5",
                                                         "rules": Array [
@@ -3402,10 +3402,10 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                           [Function],
                                                         ],
                                                       },
-                                                      "displayName": "styled.h1",
+                                                      "displayName": "src__StyledHeading",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-bwzfXH",
+                                                      "styledComponentId": "src__StyledHeading-sc-1dueefc-0",
                                                       "target": "h1",
                                                       "toString": [Function],
                                                       "warnTooManyClasses": [Function],
@@ -3422,12 +3422,12 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                     Support links
                                                   </h2>
                                                 </StyledComponent>
-                                              </styled.h1>
+                                              </src__StyledHeading>
                                             </Heading>
                                           </H2>
                                         </span>
                                       </StyledComponent>
-                                    </styled.span>
+                                    </src__VisuallyHidden>
                                     <unordered-list__UnorderedList
                                       inline={true}
                                     >
@@ -3554,7 +3554,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                         noVisitedState={false}
                                                         textColour={false}
                                                       >
-                                                        <styled.a
+                                                        <src__Link
                                                           className="c8"
                                                           href="/"
                                                           muted={false}
@@ -3568,7 +3568,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                                 "$$typeof": Symbol(react.forward_ref),
                                                                 "attrs": Array [],
                                                                 "componentStyle": ComponentStyle {
-                                                                  "componentId": "sc-bdVaJa",
+                                                                  "componentId": "src__Link-sc-1oemcts-0",
                                                                   "isStatic": false,
                                                                   "lastClassName": "c9",
                                                                   "rules": Array [
@@ -3606,11 +3606,11 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                                   "noVisitedState": false,
                                                                   "textColour": false,
                                                                 },
-                                                                "displayName": "styled.a",
+                                                                "displayName": "src__Link",
                                                                 "foldedComponentIds": Array [],
                                                                 "propTypes": undefined,
                                                                 "render": [Function],
-                                                                "styledComponentId": "sc-bdVaJa",
+                                                                "styledComponentId": "src__Link-sc-1oemcts-0",
                                                                 "target": "a",
                                                                 "toString": [Function],
                                                                 "warnTooManyClasses": [Function],
@@ -3631,7 +3631,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                               Item 1
                                                             </a>
                                                           </StyledComponent>
-                                                        </styled.a>
+                                                        </src__Link>
                                                       </LinkDocumented>
                                                     </StyledComponent>
                                                   </link__StyledFooterLink>
@@ -3823,7 +3823,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                         noVisitedState={false}
                                                         textColour={false}
                                                       >
-                                                        <styled.a
+                                                        <src__Link
                                                           className="c8"
                                                           href="/"
                                                           muted={false}
@@ -3837,7 +3837,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                                 "$$typeof": Symbol(react.forward_ref),
                                                                 "attrs": Array [],
                                                                 "componentStyle": ComponentStyle {
-                                                                  "componentId": "sc-bdVaJa",
+                                                                  "componentId": "src__Link-sc-1oemcts-0",
                                                                   "isStatic": false,
                                                                   "lastClassName": "c9",
                                                                   "rules": Array [
@@ -3875,11 +3875,11 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                                   "noVisitedState": false,
                                                                   "textColour": false,
                                                                 },
-                                                                "displayName": "styled.a",
+                                                                "displayName": "src__Link",
                                                                 "foldedComponentIds": Array [],
                                                                 "propTypes": undefined,
                                                                 "render": [Function],
-                                                                "styledComponentId": "sc-bdVaJa",
+                                                                "styledComponentId": "src__Link-sc-1oemcts-0",
                                                                 "target": "a",
                                                                 "toString": [Function],
                                                                 "warnTooManyClasses": [Function],
@@ -3900,7 +3900,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                               Item 3
                                                             </a>
                                                           </StyledComponent>
-                                                        </styled.a>
+                                                        </src__Link>
                                                       </LinkDocumented>
                                                     </StyledComponent>
                                                   </link__StyledFooterLink>
@@ -3985,7 +3985,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                 noVisitedState={false}
                                                 textColour={false}
                                               >
-                                                <styled.a
+                                                <src__Link
                                                   className="c8"
                                                   href="/"
                                                   muted={false}
@@ -3999,7 +3999,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-bdVaJa",
+                                                          "componentId": "src__Link-sc-1oemcts-0",
                                                           "isStatic": false,
                                                           "lastClassName": "c9",
                                                           "rules": Array [
@@ -4037,11 +4037,11 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                           "noVisitedState": false,
                                                           "textColour": false,
                                                         },
-                                                        "displayName": "styled.a",
+                                                        "displayName": "src__Link",
                                                         "foldedComponentIds": Array [],
                                                         "propTypes": undefined,
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-bdVaJa",
+                                                        "styledComponentId": "src__Link-sc-1oemcts-0",
                                                         "target": "a",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -4062,7 +4062,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                       Government Digital Service
                                                     </a>
                                                   </StyledComponent>
-                                                </styled.a>
+                                                </src__Link>
                                               </LinkDocumented>
                                             </StyledComponent>
                                           </link__StyledFooterLink>
@@ -4207,7 +4207,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                     rel="license"
                                                     textColour={false}
                                                   >
-                                                    <styled.a
+                                                    <src__Link
                                                       className="c8"
                                                       href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                                       muted={false}
@@ -4222,7 +4222,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                             "$$typeof": Symbol(react.forward_ref),
                                                             "attrs": Array [],
                                                             "componentStyle": ComponentStyle {
-                                                              "componentId": "sc-bdVaJa",
+                                                              "componentId": "src__Link-sc-1oemcts-0",
                                                               "isStatic": false,
                                                               "lastClassName": "c9",
                                                               "rules": Array [
@@ -4260,11 +4260,11 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                               "noVisitedState": false,
                                                               "textColour": false,
                                                             },
-                                                            "displayName": "styled.a",
+                                                            "displayName": "src__Link",
                                                             "foldedComponentIds": Array [],
                                                             "propTypes": undefined,
                                                             "render": [Function],
-                                                            "styledComponentId": "sc-bdVaJa",
+                                                            "styledComponentId": "src__Link-sc-1oemcts-0",
                                                             "target": "a",
                                                             "toString": [Function],
                                                             "warnTooManyClasses": [Function],
@@ -4287,7 +4287,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                                           Open Government Licence v3.0
                                                         </a>
                                                       </StyledComponent>
-                                                    </styled.a>
+                                                    </src__Link>
                                                   </LinkDocumented>
                                                 </StyledComponent>
                                               </link__StyledFooterLink>
@@ -4799,7 +4799,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                   <MetaLinks
                                     heading="Support links"
                                   >
-                                    <styled.span
+                                    <src__VisuallyHidden
                                       focusable={false}
                                       important={true}
                                     >
@@ -4812,7 +4812,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                               [Function],
                                             ],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-htpNat",
+                                              "componentId": "src__VisuallyHidden-sc-1d47voq-0",
                                               "isStatic": false,
                                               "lastClassName": "c4",
                                               "rules": Array [
@@ -4823,11 +4823,11 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                               "focusable": false,
                                               "important": true,
                                             },
-                                            "displayName": "styled.span",
+                                            "displayName": "src__VisuallyHidden",
                                             "foldedComponentIds": Array [],
                                             "propTypes": undefined,
                                             "render": [Function],
-                                            "styledComponentId": "sc-htpNat",
+                                            "styledComponentId": "src__VisuallyHidden-sc-1d47voq-0",
                                             "target": "span",
                                             "toString": [Function],
                                             "warnTooManyClasses": [Function],
@@ -4846,7 +4846,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                               as="h2"
                                               size="LARGE"
                                             >
-                                              <styled.h1
+                                              <src__StyledHeading
                                                 as="h2"
                                                 size="LARGE"
                                               >
@@ -4857,7 +4857,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-bwzfXH",
+                                                        "componentId": "src__StyledHeading-sc-1dueefc-0",
                                                         "isStatic": false,
                                                         "lastClassName": "c5",
                                                         "rules": Array [
@@ -4870,10 +4870,10 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                                           [Function],
                                                         ],
                                                       },
-                                                      "displayName": "styled.h1",
+                                                      "displayName": "src__StyledHeading",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-bwzfXH",
+                                                      "styledComponentId": "src__StyledHeading-sc-1dueefc-0",
                                                       "target": "h1",
                                                       "toString": [Function],
                                                       "warnTooManyClasses": [Function],
@@ -4890,12 +4890,12 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                                     Support links
                                                   </h2>
                                                 </StyledComponent>
-                                              </styled.h1>
+                                              </src__StyledHeading>
                                             </Heading>
                                           </H2>
                                         </span>
                                       </StyledComponent>
-                                    </styled.span>
+                                    </src__VisuallyHidden>
                                     <unordered-list__UnorderedList
                                       inline={true}
                                     >
@@ -5022,7 +5022,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                                         noVisitedState={false}
                                                         textColour={false}
                                                       >
-                                                        <styled.a
+                                                        <src__Link
                                                           className="c8"
                                                           href="/"
                                                           muted={false}
@@ -5036,7 +5036,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                                                 "$$typeof": Symbol(react.forward_ref),
                                                                 "attrs": Array [],
                                                                 "componentStyle": ComponentStyle {
-                                                                  "componentId": "sc-bdVaJa",
+                                                                  "componentId": "src__Link-sc-1oemcts-0",
                                                                   "isStatic": false,
                                                                   "lastClassName": "c9",
                                                                   "rules": Array [
@@ -5074,11 +5074,11 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                                                   "noVisitedState": false,
                                                                   "textColour": false,
                                                                 },
-                                                                "displayName": "styled.a",
+                                                                "displayName": "src__Link",
                                                                 "foldedComponentIds": Array [],
                                                                 "propTypes": undefined,
                                                                 "render": [Function],
-                                                                "styledComponentId": "sc-bdVaJa",
+                                                                "styledComponentId": "src__Link-sc-1oemcts-0",
                                                                 "target": "a",
                                                                 "toString": [Function],
                                                                 "warnTooManyClasses": [Function],
@@ -5099,7 +5099,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                                               Item 1
                                                             </a>
                                                           </StyledComponent>
-                                                        </styled.a>
+                                                        </src__Link>
                                                       </LinkDocumented>
                                                     </StyledComponent>
                                                   </link__StyledFooterLink>
@@ -5291,7 +5291,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                                         noVisitedState={false}
                                                         textColour={false}
                                                       >
-                                                        <styled.a
+                                                        <src__Link
                                                           className="c8"
                                                           href="/"
                                                           muted={false}
@@ -5305,7 +5305,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                                                 "$$typeof": Symbol(react.forward_ref),
                                                                 "attrs": Array [],
                                                                 "componentStyle": ComponentStyle {
-                                                                  "componentId": "sc-bdVaJa",
+                                                                  "componentId": "src__Link-sc-1oemcts-0",
                                                                   "isStatic": false,
                                                                   "lastClassName": "c9",
                                                                   "rules": Array [
@@ -5343,11 +5343,11 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                                                   "noVisitedState": false,
                                                                   "textColour": false,
                                                                 },
-                                                                "displayName": "styled.a",
+                                                                "displayName": "src__Link",
                                                                 "foldedComponentIds": Array [],
                                                                 "propTypes": undefined,
                                                                 "render": [Function],
-                                                                "styledComponentId": "sc-bdVaJa",
+                                                                "styledComponentId": "src__Link-sc-1oemcts-0",
                                                                 "target": "a",
                                                                 "toString": [Function],
                                                                 "warnTooManyClasses": [Function],
@@ -5368,7 +5368,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                                               Item 3
                                                             </a>
                                                           </StyledComponent>
-                                                        </styled.a>
+                                                        </src__Link>
                                                       </LinkDocumented>
                                                     </StyledComponent>
                                                   </link__StyledFooterLink>
@@ -5517,7 +5517,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                                     rel="license"
                                                     textColour={false}
                                                   >
-                                                    <styled.a
+                                                    <src__Link
                                                       className="c8"
                                                       href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                                       muted={false}
@@ -5532,7 +5532,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                                             "$$typeof": Symbol(react.forward_ref),
                                                             "attrs": Array [],
                                                             "componentStyle": ComponentStyle {
-                                                              "componentId": "sc-bdVaJa",
+                                                              "componentId": "src__Link-sc-1oemcts-0",
                                                               "isStatic": false,
                                                               "lastClassName": "c9",
                                                               "rules": Array [
@@ -5570,11 +5570,11 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                                               "noVisitedState": false,
                                                               "textColour": false,
                                                             },
-                                                            "displayName": "styled.a",
+                                                            "displayName": "src__Link",
                                                             "foldedComponentIds": Array [],
                                                             "propTypes": undefined,
                                                             "render": [Function],
-                                                            "styledComponentId": "sc-bdVaJa",
+                                                            "styledComponentId": "src__Link-sc-1oemcts-0",
                                                             "target": "a",
                                                             "toString": [Function],
                                                             "warnTooManyClasses": [Function],
@@ -5597,7 +5597,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                                           Open Government Licence v3.0
                                                         </a>
                                                       </StyledComponent>
-                                                    </styled.a>
+                                                    </src__Link>
                                                   </LinkDocumented>
                                                 </StyledComponent>
                                               </link__StyledFooterLink>
@@ -6308,7 +6308,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           className="c4"
                                           size="MEDIUM"
                                         >
-                                          <styled.h1
+                                          <src__StyledHeading
                                             as="h2"
                                             className="c4"
                                             size="MEDIUM"
@@ -6321,7 +6321,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                   "$$typeof": Symbol(react.forward_ref),
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-bwzfXH",
+                                                    "componentId": "src__StyledHeading-sc-1dueefc-0",
                                                     "isStatic": false,
                                                     "lastClassName": "c15",
                                                     "rules": Array [
@@ -6334,10 +6334,10 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                       [Function],
                                                     ],
                                                   },
-                                                  "displayName": "styled.h1",
+                                                  "displayName": "src__StyledHeading",
                                                   "foldedComponentIds": Array [],
                                                   "render": [Function],
-                                                  "styledComponentId": "sc-bwzfXH",
+                                                  "styledComponentId": "src__StyledHeading-sc-1dueefc-0",
                                                   "target": "h1",
                                                   "toString": [Function],
                                                   "warnTooManyClasses": [Function],
@@ -6354,7 +6354,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                 Two column list
                                               </h2>
                                             </StyledComponent>
-                                          </styled.h1>
+                                          </src__StyledHeading>
                                         </Heading>
                                       </H2>
                                     </StyledComponent>
@@ -6487,7 +6487,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                       noVisitedState={false}
                                                       textColour={false}
                                                     >
-                                                      <styled.a
+                                                      <src__Link
                                                         className="c8"
                                                         href="/"
                                                         muted={false}
@@ -6501,7 +6501,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-bdVaJa",
+                                                                "componentId": "src__Link-sc-1oemcts-0",
                                                                 "isStatic": false,
                                                                 "lastClassName": "c9",
                                                                 "rules": Array [
@@ -6539,11 +6539,11 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                                 "noVisitedState": false,
                                                                 "textColour": false,
                                                               },
-                                                              "displayName": "styled.a",
+                                                              "displayName": "src__Link",
                                                               "foldedComponentIds": Array [],
                                                               "propTypes": undefined,
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-bdVaJa",
+                                                              "styledComponentId": "src__Link-sc-1oemcts-0",
                                                               "target": "a",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -6564,7 +6564,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                             Navigation item 1
                                                           </a>
                                                         </StyledComponent>
-                                                      </styled.a>
+                                                      </src__Link>
                                                     </LinkDocumented>
                                                   </StyledComponent>
                                                 </link__StyledFooterLink>
@@ -6756,7 +6756,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                       noVisitedState={false}
                                                       textColour={false}
                                                     >
-                                                      <styled.a
+                                                      <src__Link
                                                         className="c8"
                                                         href="/"
                                                         muted={false}
@@ -6770,7 +6770,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-bdVaJa",
+                                                                "componentId": "src__Link-sc-1oemcts-0",
                                                                 "isStatic": false,
                                                                 "lastClassName": "c9",
                                                                 "rules": Array [
@@ -6808,11 +6808,11 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                                 "noVisitedState": false,
                                                                 "textColour": false,
                                                               },
-                                                              "displayName": "styled.a",
+                                                              "displayName": "src__Link",
                                                               "foldedComponentIds": Array [],
                                                               "propTypes": undefined,
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-bdVaJa",
+                                                              "styledComponentId": "src__Link-sc-1oemcts-0",
                                                               "target": "a",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -6833,7 +6833,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                             Navigation item 3
                                                           </a>
                                                         </StyledComponent>
-                                                      </styled.a>
+                                                      </src__Link>
                                                     </LinkDocumented>
                                                   </StyledComponent>
                                                 </link__StyledFooterLink>
@@ -6926,7 +6926,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                       noVisitedState={false}
                                                       textColour={false}
                                                     >
-                                                      <styled.a
+                                                      <src__Link
                                                         className="c8"
                                                         href="/"
                                                         muted={false}
@@ -6940,7 +6940,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-bdVaJa",
+                                                                "componentId": "src__Link-sc-1oemcts-0",
                                                                 "isStatic": false,
                                                                 "lastClassName": "c9",
                                                                 "rules": Array [
@@ -6978,11 +6978,11 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                                 "noVisitedState": false,
                                                                 "textColour": false,
                                                               },
-                                                              "displayName": "styled.a",
+                                                              "displayName": "src__Link",
                                                               "foldedComponentIds": Array [],
                                                               "propTypes": undefined,
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-bdVaJa",
+                                                              "styledComponentId": "src__Link-sc-1oemcts-0",
                                                               "target": "a",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -7003,7 +7003,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                             Navigation item 4
                                                           </a>
                                                         </StyledComponent>
-                                                      </styled.a>
+                                                      </src__Link>
                                                     </LinkDocumented>
                                                   </StyledComponent>
                                                 </link__StyledFooterLink>
@@ -7096,7 +7096,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                       noVisitedState={false}
                                                       textColour={false}
                                                     >
-                                                      <styled.a
+                                                      <src__Link
                                                         className="c8"
                                                         href="/"
                                                         muted={false}
@@ -7110,7 +7110,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-bdVaJa",
+                                                                "componentId": "src__Link-sc-1oemcts-0",
                                                                 "isStatic": false,
                                                                 "lastClassName": "c9",
                                                                 "rules": Array [
@@ -7148,11 +7148,11 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                                 "noVisitedState": false,
                                                                 "textColour": false,
                                                               },
-                                                              "displayName": "styled.a",
+                                                              "displayName": "src__Link",
                                                               "foldedComponentIds": Array [],
                                                               "propTypes": undefined,
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-bdVaJa",
+                                                              "styledComponentId": "src__Link-sc-1oemcts-0",
                                                               "target": "a",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -7173,7 +7173,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                             Navigation item 5
                                                           </a>
                                                         </StyledComponent>
-                                                      </styled.a>
+                                                      </src__Link>
                                                     </LinkDocumented>
                                                   </StyledComponent>
                                                 </link__StyledFooterLink>
@@ -7266,7 +7266,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                       noVisitedState={false}
                                                       textColour={false}
                                                     >
-                                                      <styled.a
+                                                      <src__Link
                                                         className="c8"
                                                         href="/"
                                                         muted={false}
@@ -7280,7 +7280,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-bdVaJa",
+                                                                "componentId": "src__Link-sc-1oemcts-0",
                                                                 "isStatic": false,
                                                                 "lastClassName": "c9",
                                                                 "rules": Array [
@@ -7318,11 +7318,11 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                                 "noVisitedState": false,
                                                                 "textColour": false,
                                                               },
-                                                              "displayName": "styled.a",
+                                                              "displayName": "src__Link",
                                                               "foldedComponentIds": Array [],
                                                               "propTypes": undefined,
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-bdVaJa",
+                                                              "styledComponentId": "src__Link-sc-1oemcts-0",
                                                               "target": "a",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -7343,7 +7343,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                             Navigation item 6
                                                           </a>
                                                         </StyledComponent>
-                                                      </styled.a>
+                                                      </src__Link>
                                                     </LinkDocumented>
                                                   </StyledComponent>
                                                 </link__StyledFooterLink>
@@ -7436,7 +7436,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           className="c4"
                                           size="MEDIUM"
                                         >
-                                          <styled.h1
+                                          <src__StyledHeading
                                             as="h2"
                                             className="c4"
                                             size="MEDIUM"
@@ -7449,7 +7449,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                   "$$typeof": Symbol(react.forward_ref),
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-bwzfXH",
+                                                    "componentId": "src__StyledHeading-sc-1dueefc-0",
                                                     "isStatic": false,
                                                     "lastClassName": "c15",
                                                     "rules": Array [
@@ -7462,10 +7462,10 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                       [Function],
                                                     ],
                                                   },
-                                                  "displayName": "styled.h1",
+                                                  "displayName": "src__StyledHeading",
                                                   "foldedComponentIds": Array [],
                                                   "render": [Function],
-                                                  "styledComponentId": "sc-bwzfXH",
+                                                  "styledComponentId": "src__StyledHeading-sc-1dueefc-0",
                                                   "target": "h1",
                                                   "toString": [Function],
                                                   "warnTooManyClasses": [Function],
@@ -7482,7 +7482,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                 Single column list
                                               </h2>
                                             </StyledComponent>
-                                          </styled.h1>
+                                          </src__StyledHeading>
                                         </Heading>
                                       </H2>
                                     </StyledComponent>
@@ -7615,7 +7615,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                       noVisitedState={false}
                                                       textColour={false}
                                                     >
-                                                      <styled.a
+                                                      <src__Link
                                                         className="c8"
                                                         href="/"
                                                         muted={false}
@@ -7629,7 +7629,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-bdVaJa",
+                                                                "componentId": "src__Link-sc-1oemcts-0",
                                                                 "isStatic": false,
                                                                 "lastClassName": "c9",
                                                                 "rules": Array [
@@ -7667,11 +7667,11 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                                 "noVisitedState": false,
                                                                 "textColour": false,
                                                               },
-                                                              "displayName": "styled.a",
+                                                              "displayName": "src__Link",
                                                               "foldedComponentIds": Array [],
                                                               "propTypes": undefined,
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-bdVaJa",
+                                                              "styledComponentId": "src__Link-sc-1oemcts-0",
                                                               "target": "a",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -7692,7 +7692,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                             Navigation item 1
                                                           </a>
                                                         </StyledComponent>
-                                                      </styled.a>
+                                                      </src__Link>
                                                     </LinkDocumented>
                                                   </StyledComponent>
                                                 </link__StyledFooterLink>
@@ -7785,7 +7785,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                       noVisitedState={false}
                                                       textColour={false}
                                                     >
-                                                      <styled.a
+                                                      <src__Link
                                                         className="c8"
                                                         href="/"
                                                         muted={false}
@@ -7799,7 +7799,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-bdVaJa",
+                                                                "componentId": "src__Link-sc-1oemcts-0",
                                                                 "isStatic": false,
                                                                 "lastClassName": "c9",
                                                                 "rules": Array [
@@ -7837,11 +7837,11 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                                 "noVisitedState": false,
                                                                 "textColour": false,
                                                               },
-                                                              "displayName": "styled.a",
+                                                              "displayName": "src__Link",
                                                               "foldedComponentIds": Array [],
                                                               "propTypes": undefined,
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-bdVaJa",
+                                                              "styledComponentId": "src__Link-sc-1oemcts-0",
                                                               "target": "a",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -7862,7 +7862,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                             Navigation item 2
                                                           </a>
                                                         </StyledComponent>
-                                                      </styled.a>
+                                                      </src__Link>
                                                     </LinkDocumented>
                                                   </StyledComponent>
                                                 </link__StyledFooterLink>
@@ -7955,7 +7955,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                       noVisitedState={false}
                                                       textColour={false}
                                                     >
-                                                      <styled.a
+                                                      <src__Link
                                                         className="c8"
                                                         href="/"
                                                         muted={false}
@@ -7969,7 +7969,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-bdVaJa",
+                                                                "componentId": "src__Link-sc-1oemcts-0",
                                                                 "isStatic": false,
                                                                 "lastClassName": "c9",
                                                                 "rules": Array [
@@ -8007,11 +8007,11 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                                 "noVisitedState": false,
                                                                 "textColour": false,
                                                               },
-                                                              "displayName": "styled.a",
+                                                              "displayName": "src__Link",
                                                               "foldedComponentIds": Array [],
                                                               "propTypes": undefined,
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-bdVaJa",
+                                                              "styledComponentId": "src__Link-sc-1oemcts-0",
                                                               "target": "a",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -8032,7 +8032,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                             Navigation item 3
                                                           </a>
                                                         </StyledComponent>
-                                                      </styled.a>
+                                                      </src__Link>
                                                     </LinkDocumented>
                                                   </StyledComponent>
                                                 </link__StyledFooterLink>
@@ -8157,7 +8157,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                   <MetaLinks
                                     heading="Support links"
                                   >
-                                    <styled.span
+                                    <src__VisuallyHidden
                                       focusable={false}
                                       important={true}
                                     >
@@ -8170,7 +8170,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                               [Function],
                                             ],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-htpNat",
+                                              "componentId": "src__VisuallyHidden-sc-1d47voq-0",
                                               "isStatic": false,
                                               "lastClassName": "c14",
                                               "rules": Array [
@@ -8181,11 +8181,11 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                               "focusable": false,
                                               "important": true,
                                             },
-                                            "displayName": "styled.span",
+                                            "displayName": "src__VisuallyHidden",
                                             "foldedComponentIds": Array [],
                                             "propTypes": undefined,
                                             "render": [Function],
-                                            "styledComponentId": "sc-htpNat",
+                                            "styledComponentId": "src__VisuallyHidden-sc-1d47voq-0",
                                             "target": "span",
                                             "toString": [Function],
                                             "warnTooManyClasses": [Function],
@@ -8204,7 +8204,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                               as="h2"
                                               size="LARGE"
                                             >
-                                              <styled.h1
+                                              <src__StyledHeading
                                                 as="h2"
                                                 size="LARGE"
                                               >
@@ -8215,7 +8215,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-bwzfXH",
+                                                        "componentId": "src__StyledHeading-sc-1dueefc-0",
                                                         "isStatic": false,
                                                         "lastClassName": "c15",
                                                         "rules": Array [
@@ -8228,10 +8228,10 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                           [Function],
                                                         ],
                                                       },
-                                                      "displayName": "styled.h1",
+                                                      "displayName": "src__StyledHeading",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-bwzfXH",
+                                                      "styledComponentId": "src__StyledHeading-sc-1dueefc-0",
                                                       "target": "h1",
                                                       "toString": [Function],
                                                       "warnTooManyClasses": [Function],
@@ -8248,12 +8248,12 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                     Support links
                                                   </h2>
                                                 </StyledComponent>
-                                              </styled.h1>
+                                              </src__StyledHeading>
                                             </Heading>
                                           </H2>
                                         </span>
                                       </StyledComponent>
-                                    </styled.span>
+                                    </src__VisuallyHidden>
                                     <unordered-list__UnorderedList
                                       inline={true}
                                     >
@@ -8380,7 +8380,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                         noVisitedState={false}
                                                         textColour={false}
                                                       >
-                                                        <styled.a
+                                                        <src__Link
                                                           className="c8"
                                                           href="/"
                                                           muted={false}
@@ -8394,7 +8394,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                                 "$$typeof": Symbol(react.forward_ref),
                                                                 "attrs": Array [],
                                                                 "componentStyle": ComponentStyle {
-                                                                  "componentId": "sc-bdVaJa",
+                                                                  "componentId": "src__Link-sc-1oemcts-0",
                                                                   "isStatic": false,
                                                                   "lastClassName": "c9",
                                                                   "rules": Array [
@@ -8432,11 +8432,11 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                                   "noVisitedState": false,
                                                                   "textColour": false,
                                                                 },
-                                                                "displayName": "styled.a",
+                                                                "displayName": "src__Link",
                                                                 "foldedComponentIds": Array [],
                                                                 "propTypes": undefined,
                                                                 "render": [Function],
-                                                                "styledComponentId": "sc-bdVaJa",
+                                                                "styledComponentId": "src__Link-sc-1oemcts-0",
                                                                 "target": "a",
                                                                 "toString": [Function],
                                                                 "warnTooManyClasses": [Function],
@@ -8457,7 +8457,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                               Item 1
                                                             </a>
                                                           </StyledComponent>
-                                                        </styled.a>
+                                                        </src__Link>
                                                       </LinkDocumented>
                                                     </StyledComponent>
                                                   </link__StyledFooterLink>
@@ -8649,7 +8649,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                         noVisitedState={false}
                                                         textColour={false}
                                                       >
-                                                        <styled.a
+                                                        <src__Link
                                                           className="c8"
                                                           href="/"
                                                           muted={false}
@@ -8663,7 +8663,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                                 "$$typeof": Symbol(react.forward_ref),
                                                                 "attrs": Array [],
                                                                 "componentStyle": ComponentStyle {
-                                                                  "componentId": "sc-bdVaJa",
+                                                                  "componentId": "src__Link-sc-1oemcts-0",
                                                                   "isStatic": false,
                                                                   "lastClassName": "c9",
                                                                   "rules": Array [
@@ -8701,11 +8701,11 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                                   "noVisitedState": false,
                                                                   "textColour": false,
                                                                 },
-                                                                "displayName": "styled.a",
+                                                                "displayName": "src__Link",
                                                                 "foldedComponentIds": Array [],
                                                                 "propTypes": undefined,
                                                                 "render": [Function],
-                                                                "styledComponentId": "sc-bdVaJa",
+                                                                "styledComponentId": "src__Link-sc-1oemcts-0",
                                                                 "target": "a",
                                                                 "toString": [Function],
                                                                 "warnTooManyClasses": [Function],
@@ -8726,7 +8726,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                               Item 3
                                                             </a>
                                                           </StyledComponent>
-                                                        </styled.a>
+                                                        </src__Link>
                                                       </LinkDocumented>
                                                     </StyledComponent>
                                                   </link__StyledFooterLink>
@@ -8811,7 +8811,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                 noVisitedState={false}
                                                 textColour={false}
                                               >
-                                                <styled.a
+                                                <src__Link
                                                   className="c8"
                                                   href="/"
                                                   muted={false}
@@ -8825,7 +8825,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-bdVaJa",
+                                                          "componentId": "src__Link-sc-1oemcts-0",
                                                           "isStatic": false,
                                                           "lastClassName": "c9",
                                                           "rules": Array [
@@ -8863,11 +8863,11 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                           "noVisitedState": false,
                                                           "textColour": false,
                                                         },
-                                                        "displayName": "styled.a",
+                                                        "displayName": "src__Link",
                                                         "foldedComponentIds": Array [],
                                                         "propTypes": undefined,
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-bdVaJa",
+                                                        "styledComponentId": "src__Link-sc-1oemcts-0",
                                                         "target": "a",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -8888,7 +8888,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                       Government Digital Service
                                                     </a>
                                                   </StyledComponent>
-                                                </styled.a>
+                                                </src__Link>
                                               </LinkDocumented>
                                             </StyledComponent>
                                           </link__StyledFooterLink>
@@ -9033,7 +9033,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                     rel="license"
                                                     textColour={false}
                                                   >
-                                                    <styled.a
+                                                    <src__Link
                                                       className="c8"
                                                       href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                                       muted={false}
@@ -9048,7 +9048,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                             "$$typeof": Symbol(react.forward_ref),
                                                             "attrs": Array [],
                                                             "componentStyle": ComponentStyle {
-                                                              "componentId": "sc-bdVaJa",
+                                                              "componentId": "src__Link-sc-1oemcts-0",
                                                               "isStatic": false,
                                                               "lastClassName": "c9",
                                                               "rules": Array [
@@ -9086,11 +9086,11 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                               "noVisitedState": false,
                                                               "textColour": false,
                                                             },
-                                                            "displayName": "styled.a",
+                                                            "displayName": "src__Link",
                                                             "foldedComponentIds": Array [],
                                                             "propTypes": undefined,
                                                             "render": [Function],
-                                                            "styledComponentId": "sc-bdVaJa",
+                                                            "styledComponentId": "src__Link-sc-1oemcts-0",
                                                             "target": "a",
                                                             "toString": [Function],
                                                             "warnTooManyClasses": [Function],
@@ -9113,7 +9113,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                                           Open Government Licence v3.0
                                                         </a>
                                                       </StyledComponent>
-                                                    </styled.a>
+                                                    </src__Link>
                                                   </LinkDocumented>
                                                 </StyledComponent>
                                               </link__StyledFooterLink>
@@ -9718,7 +9718,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                           className="c4"
                                           size="MEDIUM"
                                         >
-                                          <styled.h1
+                                          <src__StyledHeading
                                             as="h2"
                                             className="c4"
                                             size="MEDIUM"
@@ -9731,7 +9731,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                   "$$typeof": Symbol(react.forward_ref),
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-bwzfXH",
+                                                    "componentId": "src__StyledHeading-sc-1dueefc-0",
                                                     "isStatic": false,
                                                     "lastClassName": "c5",
                                                     "rules": Array [
@@ -9744,10 +9744,10 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                       [Function],
                                                     ],
                                                   },
-                                                  "displayName": "styled.h1",
+                                                  "displayName": "src__StyledHeading",
                                                   "foldedComponentIds": Array [],
                                                   "render": [Function],
-                                                  "styledComponentId": "sc-bwzfXH",
+                                                  "styledComponentId": "src__StyledHeading-sc-1dueefc-0",
                                                   "target": "h1",
                                                   "toString": [Function],
                                                   "warnTooManyClasses": [Function],
@@ -9764,7 +9764,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                 Two column list
                                               </h2>
                                             </StyledComponent>
-                                          </styled.h1>
+                                          </src__StyledHeading>
                                         </Heading>
                                       </H2>
                                     </StyledComponent>
@@ -9897,7 +9897,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                       noVisitedState={false}
                                                       textColour={false}
                                                     >
-                                                      <styled.a
+                                                      <src__Link
                                                         className="c8"
                                                         href="/"
                                                         muted={false}
@@ -9911,7 +9911,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-bdVaJa",
+                                                                "componentId": "src__Link-sc-1oemcts-0",
                                                                 "isStatic": false,
                                                                 "lastClassName": "c9",
                                                                 "rules": Array [
@@ -9949,11 +9949,11 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                                 "noVisitedState": false,
                                                                 "textColour": false,
                                                               },
-                                                              "displayName": "styled.a",
+                                                              "displayName": "src__Link",
                                                               "foldedComponentIds": Array [],
                                                               "propTypes": undefined,
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-bdVaJa",
+                                                              "styledComponentId": "src__Link-sc-1oemcts-0",
                                                               "target": "a",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -9974,7 +9974,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                             Navigation item 1
                                                           </a>
                                                         </StyledComponent>
-                                                      </styled.a>
+                                                      </src__Link>
                                                     </LinkDocumented>
                                                   </StyledComponent>
                                                 </link__StyledFooterLink>
@@ -10166,7 +10166,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                       noVisitedState={false}
                                                       textColour={false}
                                                     >
-                                                      <styled.a
+                                                      <src__Link
                                                         className="c8"
                                                         href="/"
                                                         muted={false}
@@ -10180,7 +10180,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-bdVaJa",
+                                                                "componentId": "src__Link-sc-1oemcts-0",
                                                                 "isStatic": false,
                                                                 "lastClassName": "c9",
                                                                 "rules": Array [
@@ -10218,11 +10218,11 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                                 "noVisitedState": false,
                                                                 "textColour": false,
                                                               },
-                                                              "displayName": "styled.a",
+                                                              "displayName": "src__Link",
                                                               "foldedComponentIds": Array [],
                                                               "propTypes": undefined,
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-bdVaJa",
+                                                              "styledComponentId": "src__Link-sc-1oemcts-0",
                                                               "target": "a",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -10243,7 +10243,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                             Navigation item 3
                                                           </a>
                                                         </StyledComponent>
-                                                      </styled.a>
+                                                      </src__Link>
                                                     </LinkDocumented>
                                                   </StyledComponent>
                                                 </link__StyledFooterLink>
@@ -10336,7 +10336,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                       noVisitedState={false}
                                                       textColour={false}
                                                     >
-                                                      <styled.a
+                                                      <src__Link
                                                         className="c8"
                                                         href="/"
                                                         muted={false}
@@ -10350,7 +10350,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-bdVaJa",
+                                                                "componentId": "src__Link-sc-1oemcts-0",
                                                                 "isStatic": false,
                                                                 "lastClassName": "c9",
                                                                 "rules": Array [
@@ -10388,11 +10388,11 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                                 "noVisitedState": false,
                                                                 "textColour": false,
                                                               },
-                                                              "displayName": "styled.a",
+                                                              "displayName": "src__Link",
                                                               "foldedComponentIds": Array [],
                                                               "propTypes": undefined,
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-bdVaJa",
+                                                              "styledComponentId": "src__Link-sc-1oemcts-0",
                                                               "target": "a",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -10413,7 +10413,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                             Navigation item 4
                                                           </a>
                                                         </StyledComponent>
-                                                      </styled.a>
+                                                      </src__Link>
                                                     </LinkDocumented>
                                                   </StyledComponent>
                                                 </link__StyledFooterLink>
@@ -10506,7 +10506,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                       noVisitedState={false}
                                                       textColour={false}
                                                     >
-                                                      <styled.a
+                                                      <src__Link
                                                         className="c8"
                                                         href="/"
                                                         muted={false}
@@ -10520,7 +10520,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-bdVaJa",
+                                                                "componentId": "src__Link-sc-1oemcts-0",
                                                                 "isStatic": false,
                                                                 "lastClassName": "c9",
                                                                 "rules": Array [
@@ -10558,11 +10558,11 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                                 "noVisitedState": false,
                                                                 "textColour": false,
                                                               },
-                                                              "displayName": "styled.a",
+                                                              "displayName": "src__Link",
                                                               "foldedComponentIds": Array [],
                                                               "propTypes": undefined,
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-bdVaJa",
+                                                              "styledComponentId": "src__Link-sc-1oemcts-0",
                                                               "target": "a",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -10583,7 +10583,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                             Navigation item 5
                                                           </a>
                                                         </StyledComponent>
-                                                      </styled.a>
+                                                      </src__Link>
                                                     </LinkDocumented>
                                                   </StyledComponent>
                                                 </link__StyledFooterLink>
@@ -10676,7 +10676,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                       noVisitedState={false}
                                                       textColour={false}
                                                     >
-                                                      <styled.a
+                                                      <src__Link
                                                         className="c8"
                                                         href="/"
                                                         muted={false}
@@ -10690,7 +10690,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-bdVaJa",
+                                                                "componentId": "src__Link-sc-1oemcts-0",
                                                                 "isStatic": false,
                                                                 "lastClassName": "c9",
                                                                 "rules": Array [
@@ -10728,11 +10728,11 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                                 "noVisitedState": false,
                                                                 "textColour": false,
                                                               },
-                                                              "displayName": "styled.a",
+                                                              "displayName": "src__Link",
                                                               "foldedComponentIds": Array [],
                                                               "propTypes": undefined,
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-bdVaJa",
+                                                              "styledComponentId": "src__Link-sc-1oemcts-0",
                                                               "target": "a",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -10753,7 +10753,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                             Navigation item 6
                                                           </a>
                                                         </StyledComponent>
-                                                      </styled.a>
+                                                      </src__Link>
                                                     </LinkDocumented>
                                                   </StyledComponent>
                                                 </link__StyledFooterLink>
@@ -10846,7 +10846,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                           className="c4"
                                           size="MEDIUM"
                                         >
-                                          <styled.h1
+                                          <src__StyledHeading
                                             as="h2"
                                             className="c4"
                                             size="MEDIUM"
@@ -10859,7 +10859,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                   "$$typeof": Symbol(react.forward_ref),
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-bwzfXH",
+                                                    "componentId": "src__StyledHeading-sc-1dueefc-0",
                                                     "isStatic": false,
                                                     "lastClassName": "c5",
                                                     "rules": Array [
@@ -10872,10 +10872,10 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                       [Function],
                                                     ],
                                                   },
-                                                  "displayName": "styled.h1",
+                                                  "displayName": "src__StyledHeading",
                                                   "foldedComponentIds": Array [],
                                                   "render": [Function],
-                                                  "styledComponentId": "sc-bwzfXH",
+                                                  "styledComponentId": "src__StyledHeading-sc-1dueefc-0",
                                                   "target": "h1",
                                                   "toString": [Function],
                                                   "warnTooManyClasses": [Function],
@@ -10892,7 +10892,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                 Single column list
                                               </h2>
                                             </StyledComponent>
-                                          </styled.h1>
+                                          </src__StyledHeading>
                                         </Heading>
                                       </H2>
                                     </StyledComponent>
@@ -11025,7 +11025,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                       noVisitedState={false}
                                                       textColour={false}
                                                     >
-                                                      <styled.a
+                                                      <src__Link
                                                         className="c8"
                                                         href="/"
                                                         muted={false}
@@ -11039,7 +11039,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-bdVaJa",
+                                                                "componentId": "src__Link-sc-1oemcts-0",
                                                                 "isStatic": false,
                                                                 "lastClassName": "c9",
                                                                 "rules": Array [
@@ -11077,11 +11077,11 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                                 "noVisitedState": false,
                                                                 "textColour": false,
                                                               },
-                                                              "displayName": "styled.a",
+                                                              "displayName": "src__Link",
                                                               "foldedComponentIds": Array [],
                                                               "propTypes": undefined,
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-bdVaJa",
+                                                              "styledComponentId": "src__Link-sc-1oemcts-0",
                                                               "target": "a",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -11102,7 +11102,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                             Navigation item 1
                                                           </a>
                                                         </StyledComponent>
-                                                      </styled.a>
+                                                      </src__Link>
                                                     </LinkDocumented>
                                                   </StyledComponent>
                                                 </link__StyledFooterLink>
@@ -11195,7 +11195,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                       noVisitedState={false}
                                                       textColour={false}
                                                     >
-                                                      <styled.a
+                                                      <src__Link
                                                         className="c8"
                                                         href="/"
                                                         muted={false}
@@ -11209,7 +11209,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-bdVaJa",
+                                                                "componentId": "src__Link-sc-1oemcts-0",
                                                                 "isStatic": false,
                                                                 "lastClassName": "c9",
                                                                 "rules": Array [
@@ -11247,11 +11247,11 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                                 "noVisitedState": false,
                                                                 "textColour": false,
                                                               },
-                                                              "displayName": "styled.a",
+                                                              "displayName": "src__Link",
                                                               "foldedComponentIds": Array [],
                                                               "propTypes": undefined,
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-bdVaJa",
+                                                              "styledComponentId": "src__Link-sc-1oemcts-0",
                                                               "target": "a",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -11272,7 +11272,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                             Navigation item 2
                                                           </a>
                                                         </StyledComponent>
-                                                      </styled.a>
+                                                      </src__Link>
                                                     </LinkDocumented>
                                                   </StyledComponent>
                                                 </link__StyledFooterLink>
@@ -11365,7 +11365,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                       noVisitedState={false}
                                                       textColour={false}
                                                     >
-                                                      <styled.a
+                                                      <src__Link
                                                         className="c8"
                                                         href="/"
                                                         muted={false}
@@ -11379,7 +11379,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-bdVaJa",
+                                                                "componentId": "src__Link-sc-1oemcts-0",
                                                                 "isStatic": false,
                                                                 "lastClassName": "c9",
                                                                 "rules": Array [
@@ -11417,11 +11417,11 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                                 "noVisitedState": false,
                                                                 "textColour": false,
                                                               },
-                                                              "displayName": "styled.a",
+                                                              "displayName": "src__Link",
                                                               "foldedComponentIds": Array [],
                                                               "propTypes": undefined,
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-bdVaJa",
+                                                              "styledComponentId": "src__Link-sc-1oemcts-0",
                                                               "target": "a",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -11442,7 +11442,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                             Navigation item 3
                                                           </a>
                                                         </StyledComponent>
-                                                      </styled.a>
+                                                      </src__Link>
                                                     </LinkDocumented>
                                                   </StyledComponent>
                                                 </link__StyledFooterLink>
@@ -11701,7 +11701,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                     rel="license"
                                                     textColour={false}
                                                   >
-                                                    <styled.a
+                                                    <src__Link
                                                       className="c8"
                                                       href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                                       muted={false}
@@ -11716,7 +11716,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                             "$$typeof": Symbol(react.forward_ref),
                                                             "attrs": Array [],
                                                             "componentStyle": ComponentStyle {
-                                                              "componentId": "sc-bdVaJa",
+                                                              "componentId": "src__Link-sc-1oemcts-0",
                                                               "isStatic": false,
                                                               "lastClassName": "c9",
                                                               "rules": Array [
@@ -11754,11 +11754,11 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                               "noVisitedState": false,
                                                               "textColour": false,
                                                             },
-                                                            "displayName": "styled.a",
+                                                            "displayName": "src__Link",
                                                             "foldedComponentIds": Array [],
                                                             "propTypes": undefined,
                                                             "render": [Function],
-                                                            "styledComponentId": "sc-bdVaJa",
+                                                            "styledComponentId": "src__Link-sc-1oemcts-0",
                                                             "target": "a",
                                                             "toString": [Function],
                                                             "warnTooManyClasses": [Function],
@@ -11781,7 +11781,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                                           Open Government Licence v3.0
                                                         </a>
                                                       </StyledComponent>
-                                                    </styled.a>
+                                                    </src__Link>
                                                   </LinkDocumented>
                                                 </StyledComponent>
                                               </link__StyledFooterLink>
@@ -12282,7 +12282,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                   <MetaLinks
                                     heading="Support links"
                                   >
-                                    <styled.span
+                                    <src__VisuallyHidden
                                       focusable={false}
                                       important={true}
                                     >
@@ -12295,7 +12295,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                               [Function],
                                             ],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-htpNat",
+                                              "componentId": "src__VisuallyHidden-sc-1d47voq-0",
                                               "isStatic": false,
                                               "lastClassName": "c4",
                                               "rules": Array [
@@ -12306,11 +12306,11 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                               "focusable": false,
                                               "important": true,
                                             },
-                                            "displayName": "styled.span",
+                                            "displayName": "src__VisuallyHidden",
                                             "foldedComponentIds": Array [],
                                             "propTypes": undefined,
                                             "render": [Function],
-                                            "styledComponentId": "sc-htpNat",
+                                            "styledComponentId": "src__VisuallyHidden-sc-1d47voq-0",
                                             "target": "span",
                                             "toString": [Function],
                                             "warnTooManyClasses": [Function],
@@ -12329,7 +12329,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                               as="h2"
                                               size="LARGE"
                                             >
-                                              <styled.h1
+                                              <src__StyledHeading
                                                 as="h2"
                                                 size="LARGE"
                                               >
@@ -12340,7 +12340,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-bwzfXH",
+                                                        "componentId": "src__StyledHeading-sc-1dueefc-0",
                                                         "isStatic": false,
                                                         "lastClassName": "c5",
                                                         "rules": Array [
@@ -12353,10 +12353,10 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                                           [Function],
                                                         ],
                                                       },
-                                                      "displayName": "styled.h1",
+                                                      "displayName": "src__StyledHeading",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-bwzfXH",
+                                                      "styledComponentId": "src__StyledHeading-sc-1dueefc-0",
                                                       "target": "h1",
                                                       "toString": [Function],
                                                       "warnTooManyClasses": [Function],
@@ -12373,12 +12373,12 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                                     Support links
                                                   </h2>
                                                 </StyledComponent>
-                                              </styled.h1>
+                                              </src__StyledHeading>
                                             </Heading>
                                           </H2>
                                         </span>
                                       </StyledComponent>
-                                    </styled.span>
+                                    </src__VisuallyHidden>
                                     <unordered-list__UnorderedList
                                       inline={true}
                                     >
@@ -12504,7 +12504,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                                         noVisitedState={false}
                                                         textColour={false}
                                                       >
-                                                        <styled.a
+                                                        <src__Link
                                                           className="c8"
                                                           href="/"
                                                           muted={false}
@@ -12518,7 +12518,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                                                 "$$typeof": Symbol(react.forward_ref),
                                                                 "attrs": Array [],
                                                                 "componentStyle": ComponentStyle {
-                                                                  "componentId": "sc-bdVaJa",
+                                                                  "componentId": "src__Link-sc-1oemcts-0",
                                                                   "isStatic": false,
                                                                   "lastClassName": "c9",
                                                                   "rules": Array [
@@ -12556,11 +12556,11 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                                                   "noVisitedState": false,
                                                                   "textColour": false,
                                                                 },
-                                                                "displayName": "styled.a",
+                                                                "displayName": "src__Link",
                                                                 "foldedComponentIds": Array [],
                                                                 "propTypes": undefined,
                                                                 "render": [Function],
-                                                                "styledComponentId": "sc-bdVaJa",
+                                                                "styledComponentId": "src__Link-sc-1oemcts-0",
                                                                 "target": "a",
                                                                 "toString": [Function],
                                                                 "warnTooManyClasses": [Function],
@@ -12581,7 +12581,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                                               Item 1
                                                             </a>
                                                           </StyledComponent>
-                                                        </styled.a>
+                                                        </src__Link>
                                                       </LinkDocumented>
                                                     </StyledComponent>
                                                   </link__StyledFooterLink>
@@ -12730,7 +12730,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                                     rel="license"
                                                     textColour={false}
                                                   >
-                                                    <styled.a
+                                                    <src__Link
                                                       className="c8"
                                                       href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                                       muted={false}
@@ -12745,7 +12745,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                                             "$$typeof": Symbol(react.forward_ref),
                                                             "attrs": Array [],
                                                             "componentStyle": ComponentStyle {
-                                                              "componentId": "sc-bdVaJa",
+                                                              "componentId": "src__Link-sc-1oemcts-0",
                                                               "isStatic": false,
                                                               "lastClassName": "c9",
                                                               "rules": Array [
@@ -12783,11 +12783,11 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                                               "noVisitedState": false,
                                                               "textColour": false,
                                                             },
-                                                            "displayName": "styled.a",
+                                                            "displayName": "src__Link",
                                                             "foldedComponentIds": Array [],
                                                             "propTypes": undefined,
                                                             "render": [Function],
-                                                            "styledComponentId": "sc-bdVaJa",
+                                                            "styledComponentId": "src__Link-sc-1oemcts-0",
                                                             "target": "a",
                                                             "toString": [Function],
                                                             "warnTooManyClasses": [Function],
@@ -12810,7 +12810,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                                           Open Government Licence v3.0
                                                         </a>
                                                       </StyledComponent>
-                                                    </styled.a>
+                                                    </src__Link>
                                                   </LinkDocumented>
                                                 </StyledComponent>
                                               </link__StyledFooterLink>
@@ -13377,7 +13377,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                       className="c4"
                                       size="MEDIUM"
                                     >
-                                      <styled.h1
+                                      <src__StyledHeading
                                         as="h2"
                                         className="c4"
                                         size="MEDIUM"
@@ -13390,7 +13390,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-bwzfXH",
+                                                "componentId": "src__StyledHeading-sc-1dueefc-0",
                                                 "isStatic": false,
                                                 "lastClassName": "c5",
                                                 "rules": Array [
@@ -13403,10 +13403,10 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                                   [Function],
                                                 ],
                                               },
-                                              "displayName": "styled.h1",
+                                              "displayName": "src__StyledHeading",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-bwzfXH",
+                                              "styledComponentId": "src__StyledHeading-sc-1dueefc-0",
                                               "target": "h1",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -13423,7 +13423,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                             Single column list
                                           </h2>
                                         </StyledComponent>
-                                      </styled.h1>
+                                      </src__StyledHeading>
                                     </Heading>
                                   </H2>
                                 </StyledComponent>
@@ -13555,7 +13555,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                                   noVisitedState={false}
                                                   textColour={false}
                                                 >
-                                                  <styled.a
+                                                  <src__Link
                                                     className="c8"
                                                     href="/"
                                                     muted={false}
@@ -13569,7 +13569,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                                           "$$typeof": Symbol(react.forward_ref),
                                                           "attrs": Array [],
                                                           "componentStyle": ComponentStyle {
-                                                            "componentId": "sc-bdVaJa",
+                                                            "componentId": "src__Link-sc-1oemcts-0",
                                                             "isStatic": false,
                                                             "lastClassName": "c9",
                                                             "rules": Array [
@@ -13607,11 +13607,11 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                                             "noVisitedState": false,
                                                             "textColour": false,
                                                           },
-                                                          "displayName": "styled.a",
+                                                          "displayName": "src__Link",
                                                           "foldedComponentIds": Array [],
                                                           "propTypes": undefined,
                                                           "render": [Function],
-                                                          "styledComponentId": "sc-bdVaJa",
+                                                          "styledComponentId": "src__Link-sc-1oemcts-0",
                                                           "target": "a",
                                                           "toString": [Function],
                                                           "warnTooManyClasses": [Function],
@@ -13632,7 +13632,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                                         Navigation item 1
                                                       </a>
                                                     </StyledComponent>
-                                                  </styled.a>
+                                                  </src__Link>
                                                 </LinkDocumented>
                                               </StyledComponent>
                                             </link__StyledFooterLink>
@@ -13891,7 +13891,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                                 rel="license"
                                                 textColour={false}
                                               >
-                                                <styled.a
+                                                <src__Link
                                                   className="c8"
                                                   href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                                   muted={false}
@@ -13906,7 +13906,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-bdVaJa",
+                                                          "componentId": "src__Link-sc-1oemcts-0",
                                                           "isStatic": false,
                                                           "lastClassName": "c9",
                                                           "rules": Array [
@@ -13944,11 +13944,11 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                                           "noVisitedState": false,
                                                           "textColour": false,
                                                         },
-                                                        "displayName": "styled.a",
+                                                        "displayName": "src__Link",
                                                         "foldedComponentIds": Array [],
                                                         "propTypes": undefined,
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-bdVaJa",
+                                                        "styledComponentId": "src__Link-sc-1oemcts-0",
                                                         "target": "a",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -13971,7 +13971,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                                       Open Government Licence v3.0
                                                     </a>
                                                   </StyledComponent>
-                                                </styled.a>
+                                                </src__Link>
                                               </LinkDocumented>
                                             </StyledComponent>
                                           </link__StyledFooterLink>

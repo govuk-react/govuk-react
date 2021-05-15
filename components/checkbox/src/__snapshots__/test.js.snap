@@ -275,7 +275,7 @@ exports[`Checkbox can render with hint text: hint text 1`] = `
             <HintText
               className="c3"
             >
-              <styled.span
+              <src__StyledHint
                 className="c3"
               >
                 <StyledComponent
@@ -285,7 +285,7 @@ exports[`Checkbox can render with hint text: hint text 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-bdVaJa",
+                        "componentId": "src__StyledHint-sc-1qn4br2-0",
                         "isStatic": false,
                         "lastClassName": "c4",
                         "rules": Array [
@@ -298,10 +298,10 @@ exports[`Checkbox can render with hint text: hint text 1`] = `
                           [Function],
                         ],
                       },
-                      "displayName": "styled.span",
+                      "displayName": "src__StyledHint",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-bdVaJa",
+                      "styledComponentId": "src__StyledHint-sc-1qn4br2-0",
                       "target": "span",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -316,7 +316,7 @@ exports[`Checkbox can render with hint text: hint text 1`] = `
                     Hint text
                   </span>
                 </StyledComponent>
-              </styled.span>
+              </src__StyledHint>
             </HintText>
           </StyledComponent>
         </src__StyledCheckboxHint>

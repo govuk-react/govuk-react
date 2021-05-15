@@ -236,7 +236,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
             as="h3"
             size="MEDIUM"
           >
-            <styled.h1
+            <src__StyledHeading
               as="h3"
               size="MEDIUM"
             >
@@ -247,7 +247,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bdVaJa",
+                      "componentId": "src__StyledHeading-sc-1dueefc-0",
                       "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
@@ -260,10 +260,10 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                         [Function],
                       ],
                     },
-                    "displayName": "styled.h1",
+                    "displayName": "src__StyledHeading",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bdVaJa",
+                    "styledComponentId": "src__StyledHeading-sc-1dueefc-0",
                     "target": "h1",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -280,13 +280,13 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                   Travel abroad
                 </h3>
               </StyledComponent>
-            </styled.h1>
+            </src__StyledHeading>
           </Heading>
         </H3>
         <UnorderedList
           listStyleType="none"
         >
-          <styled.ol
+          <src__OrderedList
             as="ul"
             listStyleType="none"
           >
@@ -319,7 +319,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                   "defaultProps": Object {
                     "listStyleType": undefined,
                   },
-                  "displayName": "styled.ol",
+                  "displayName": "src__OrderedList",
                   "foldedComponentIds": Array [],
                   "propTypes": undefined,
                   "render": [Function],
@@ -336,7 +336,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
               <ul
                 className="c2 c3"
               >
-                <styled.li>
+                <src__ListItem>
                   <StyledComponent
                     forwardedComponent={
                       Object {
@@ -356,7 +356,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                             [Function],
                           ],
                         },
-                        "displayName": "styled.li",
+                        "displayName": "src__ListItem",
                         "foldedComponentIds": Array [],
                         "propTypes": undefined,
                         "render": [Function],
@@ -372,7 +372,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                     <li
                       className="c4 c5"
                     >
-                      <styled.a
+                      <src__Link
                         href="https://example.com"
                         muted={false}
                         noVisitedState={false}
@@ -384,7 +384,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-bxivhb",
+                                "componentId": "src__Link-sc-1oemcts-0",
                                 "isStatic": false,
                                 "lastClassName": "c6",
                                 "rules": Array [
@@ -422,11 +422,11 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                                 "noVisitedState": false,
                                 "textColour": false,
                               },
-                              "displayName": "styled.a",
+                              "displayName": "src__Link",
                               "foldedComponentIds": Array [],
                               "propTypes": undefined,
                               "render": [Function],
-                              "styledComponentId": "sc-bxivhb",
+                              "styledComponentId": "src__Link-sc-1oemcts-0",
                               "target": "a",
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -447,11 +447,11 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                             Link A
                           </a>
                         </StyledComponent>
-                      </styled.a>
+                      </src__Link>
                     </li>
                   </StyledComponent>
-                </styled.li>
-                <styled.li>
+                </src__ListItem>
+                <src__ListItem>
                   <StyledComponent
                     forwardedComponent={
                       Object {
@@ -471,7 +471,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                             [Function],
                           ],
                         },
-                        "displayName": "styled.li",
+                        "displayName": "src__ListItem",
                         "foldedComponentIds": Array [],
                         "propTypes": undefined,
                         "render": [Function],
@@ -487,7 +487,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                     <li
                       className="c4 c5"
                     >
-                      <styled.a
+                      <src__Link
                         href="https://example.com"
                         muted={false}
                         noVisitedState={false}
@@ -499,7 +499,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-bxivhb",
+                                "componentId": "src__Link-sc-1oemcts-0",
                                 "isStatic": false,
                                 "lastClassName": "c6",
                                 "rules": Array [
@@ -537,11 +537,11 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                                 "noVisitedState": false,
                                 "textColour": false,
                               },
-                              "displayName": "styled.a",
+                              "displayName": "src__Link",
                               "foldedComponentIds": Array [],
                               "propTypes": undefined,
                               "render": [Function],
-                              "styledComponentId": "sc-bxivhb",
+                              "styledComponentId": "src__Link-sc-1oemcts-0",
                               "target": "a",
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -562,11 +562,11 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                             Link B
                           </a>
                         </StyledComponent>
-                      </styled.a>
+                      </src__Link>
                     </li>
                   </StyledComponent>
-                </styled.li>
-                <styled.li>
+                </src__ListItem>
+                <src__ListItem>
                   <StyledComponent
                     forwardedComponent={
                       Object {
@@ -586,7 +586,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                             [Function],
                           ],
                         },
-                        "displayName": "styled.li",
+                        "displayName": "src__ListItem",
                         "foldedComponentIds": Array [],
                         "propTypes": undefined,
                         "render": [Function],
@@ -602,7 +602,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                     <li
                       className="c4 c5"
                     >
-                      <styled.a
+                      <src__Link
                         href="https://example.com"
                         muted={false}
                         noVisitedState={false}
@@ -614,7 +614,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-bxivhb",
+                                "componentId": "src__Link-sc-1oemcts-0",
                                 "isStatic": false,
                                 "lastClassName": "c6",
                                 "rules": Array [
@@ -652,11 +652,11 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                                 "noVisitedState": false,
                                 "textColour": false,
                               },
-                              "displayName": "styled.a",
+                              "displayName": "src__Link",
                               "foldedComponentIds": Array [],
                               "propTypes": undefined,
                               "render": [Function],
-                              "styledComponentId": "sc-bxivhb",
+                              "styledComponentId": "src__Link-sc-1oemcts-0",
                               "target": "a",
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -679,13 +679,13 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                             </strong>
                           </a>
                         </StyledComponent>
-                      </styled.a>
+                      </src__Link>
                     </li>
                   </StyledComponent>
-                </styled.li>
+                </src__ListItem>
               </ul>
             </StyledComponent>
-          </styled.ol>
+          </src__OrderedList>
         </UnorderedList>
       </div>
     </StyledComponent>

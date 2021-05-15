@@ -164,7 +164,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
           mb={0}
           supportingText={false}
         >
-          <Styled(ReactMarkdown)
+          <src__StyledParagraph
             allowedTypes={
               Array [
                 "paragraph",
@@ -206,7 +206,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-bwzfXH",
+                    "componentId": "src__StyledParagraph-dkdnni-0",
                     "isStatic": false,
                     "lastClassName": "c1",
                     "rules": Array [
@@ -223,7 +223,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                       [Function],
                     ],
                   },
-                  "displayName": "Styled(ReactMarkdown)",
+                  "displayName": "src__StyledParagraph",
                   "foldedComponentIds": Array [],
                   "render": [Function],
                   "renderers": Object {
@@ -255,7 +255,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                     "thematicBreak": "hr",
                     "virtualHtml": [Function],
                   },
-                  "styledComponentId": "sc-bwzfXH",
+                  "styledComponentId": "src__StyledParagraph-dkdnni-0",
                   "target": [Function],
                   "toString": [Function],
                   "types": Array [
@@ -356,7 +356,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                 </Root>
               </ReactMarkdown>
             </StyledComponent>
-          </Styled(ReactMarkdown)>
+          </src__StyledParagraph>
         </Paragraph>
       </div>
     </StyledComponent>

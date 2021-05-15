@@ -177,7 +177,7 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
                 <UnorderedList
                   listStyleType="none"
                 >
-                  <styled.ol
+                  <src__OrderedList
                     as="ul"
                     listStyleType="none"
                   >
@@ -210,7 +210,7 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
                           "defaultProps": Object {
                             "listStyleType": undefined,
                           },
-                          "displayName": "styled.ol",
+                          "displayName": "src__OrderedList",
                           "foldedComponentIds": Array [],
                           "propTypes": undefined,
                           "render": [Function],
@@ -303,7 +303,7 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
                         </src__StyledDefinition>
                       </ul>
                     </StyledComponent>
-                  </styled.ol>
+                  </src__OrderedList>
                 </UnorderedList>
               </div>
             </div>

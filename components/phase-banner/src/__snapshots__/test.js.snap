@@ -157,7 +157,7 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
             <p
               className="c1"
             >
-              <styled.strong
+              <src__Tag
                 inactive={false}
               >
                 <StyledComponent
@@ -182,7 +182,7 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
                       "defaultProps": Object {
                         "inactive": false,
                       },
-                      "displayName": "styled.strong",
+                      "displayName": "src__Tag",
                       "foldedComponentIds": Array [],
                       "propTypes": undefined,
                       "render": [Function],
@@ -202,7 +202,7 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
                     beta
                   </strong>
                 </StyledComponent>
-              </styled.strong>
+              </src__Tag>
               <src__BannerText>
                 <StyledComponent
                   forwardedComponent={

@@ -135,7 +135,7 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <UnorderedList>
-  <styled.ol
+  <src__OrderedList
     as="ul"
   >
     <StyledComponent
@@ -167,7 +167,7 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
           "defaultProps": Object {
             "listStyleType": undefined,
           },
-          "displayName": "styled.ol",
+          "displayName": "src__OrderedList",
           "foldedComponentIds": Array [],
           "propTypes": undefined,
           "render": [Function],
@@ -183,7 +183,7 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
       <ul
         className="c0 c1"
       >
-        <styled.li>
+        <src__ListItem>
           <StyledComponent
             forwardedComponent={
               Object {
@@ -203,7 +203,7 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
                     [Function],
                   ],
                 },
-                "displayName": "styled.li",
+                "displayName": "src__ListItem",
                 "foldedComponentIds": Array [],
                 "propTypes": undefined,
                 "render": [Function],
@@ -219,7 +219,7 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
             <li
               className="c2 c3"
             >
-              <styled.a
+              <src__Link
                 href="http://example.com"
                 muted={false}
                 noVisitedState={false}
@@ -231,7 +231,7 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-bdVaJa",
+                        "componentId": "src__Link-sc-1oemcts-0",
                         "isStatic": false,
                         "lastClassName": "c4",
                         "rules": Array [
@@ -269,11 +269,11 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
                         "noVisitedState": false,
                         "textColour": false,
                       },
-                      "displayName": "styled.a",
+                      "displayName": "src__Link",
                       "foldedComponentIds": Array [],
                       "propTypes": undefined,
                       "render": [Function],
-                      "styledComponentId": "sc-bdVaJa",
+                      "styledComponentId": "src__Link-sc-1oemcts-0",
                       "target": "a",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -294,11 +294,11 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
                     Example 1
                   </a>
                 </StyledComponent>
-              </styled.a>
+              </src__Link>
             </li>
           </StyledComponent>
-        </styled.li>
-        <styled.li>
+        </src__ListItem>
+        <src__ListItem>
           <StyledComponent
             forwardedComponent={
               Object {
@@ -318,7 +318,7 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
                     [Function],
                   ],
                 },
-                "displayName": "styled.li",
+                "displayName": "src__ListItem",
                 "foldedComponentIds": Array [],
                 "propTypes": undefined,
                 "render": [Function],
@@ -334,7 +334,7 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
             <li
               className="c2 c3"
             >
-              <styled.a
+              <src__Link
                 href="http://example.com"
                 muted={false}
                 noVisitedState={false}
@@ -346,7 +346,7 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-bdVaJa",
+                        "componentId": "src__Link-sc-1oemcts-0",
                         "isStatic": false,
                         "lastClassName": "c4",
                         "rules": Array [
@@ -384,11 +384,11 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
                         "noVisitedState": false,
                         "textColour": false,
                       },
-                      "displayName": "styled.a",
+                      "displayName": "src__Link",
                       "foldedComponentIds": Array [],
                       "propTypes": undefined,
                       "render": [Function],
-                      "styledComponentId": "sc-bdVaJa",
+                      "styledComponentId": "src__Link-sc-1oemcts-0",
                       "target": "a",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -409,11 +409,11 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
                     Example 2
                   </a>
                 </StyledComponent>
-              </styled.a>
+              </src__Link>
             </li>
           </StyledComponent>
-        </styled.li>
-        <styled.li>
+        </src__ListItem>
+        <src__ListItem>
           <StyledComponent
             forwardedComponent={
               Object {
@@ -433,7 +433,7 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
                     [Function],
                   ],
                 },
-                "displayName": "styled.li",
+                "displayName": "src__ListItem",
                 "foldedComponentIds": Array [],
                 "propTypes": undefined,
                 "render": [Function],
@@ -449,7 +449,7 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
             <li
               className="c2 c3"
             >
-              <styled.a
+              <src__Link
                 href="http://example.com"
                 muted={false}
                 noVisitedState={false}
@@ -461,7 +461,7 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-bdVaJa",
+                        "componentId": "src__Link-sc-1oemcts-0",
                         "isStatic": false,
                         "lastClassName": "c4",
                         "rules": Array [
@@ -499,11 +499,11 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
                         "noVisitedState": false,
                         "textColour": false,
                       },
-                      "displayName": "styled.a",
+                      "displayName": "src__Link",
                       "foldedComponentIds": Array [],
                       "propTypes": undefined,
                       "render": [Function],
-                      "styledComponentId": "sc-bdVaJa",
+                      "styledComponentId": "src__Link-sc-1oemcts-0",
                       "target": "a",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -524,12 +524,12 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
                     Example 3
                   </a>
                 </StyledComponent>
-              </styled.a>
+              </src__Link>
             </li>
           </StyledComponent>
-        </styled.li>
+        </src__ListItem>
       </ul>
     </StyledComponent>
-  </styled.ol>
+  </src__OrderedList>
 </UnorderedList>
 `;
