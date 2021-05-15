@@ -5,7 +5,12 @@ import { mount } from 'enzyme';
 import SearchBox from '.';
 
 const example = 'example';
-const wrapper = <SearchBox placeholder={example}>{example}</SearchBox>;
+const wrapper = (
+  <SearchBox>
+    <SearchBox.Input placeholder={example} />
+    <SearchBox.Button />
+  </SearchBox>
+);
 
 describe('SearchBox', () => {
   it('renders without crashing', () => {
