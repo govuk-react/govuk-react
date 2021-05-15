@@ -9,7 +9,7 @@ jobs:
           fetch-depth: 0 # Required by Chromatic
 
       - name: Use Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2.1.5
         with:
           node-version: '10.x'
 
