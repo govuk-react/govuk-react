@@ -33,42 +33,12 @@ exports[`Caption matches wrapper snapshot 1`] = `
   <src__StyledCaption
     size="XL"
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__StyledCaption-sc-1uq9o1t-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              [Function],
-              [Function],
-              "display: block; color: #6f777b;",
-              [Function],
-            ],
-          },
-          "displayName": "src__StyledCaption",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__StyledCaption-sc-1uq9o1t-0",
-          "target": "span",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <span
+      className="c0"
       size="XL"
     >
-      <span
-        className="c0"
-        size="XL"
-      >
-        Heading text
-      </span>
-    </StyledComponent>
+      Heading text
+    </span>
   </src__StyledCaption>
 </Caption>
 `;

@@ -111,75 +111,13 @@ exports[`Link all options view matches snapshot: link with all options 1`] = `
       noVisitedState={true}
       textColour={true}
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "src__Link-sc-1oemcts-0",
-              "isStatic": false,
-              "lastClassName": "c0",
-              "rules": Array [
-                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-                ":link {
-  color: #1d70b8;
-} :visited {
-  color: #4c2c92;
-} :hover {
-  color: #2b8cc4;
-} :active {
-  color: #2b8cc4;
-} :focus {
-  color: #0b0c0c;
-}",
-                "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
-}",
-                "@media print {
-  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
-  &::after {
-  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
-}
-}
-}",
-                [Function],
-                [Function],
-                [Function],
-              ],
-            },
-            "defaultProps": Object {
-              "muted": false,
-              "noVisitedState": false,
-              "textColour": false,
-            },
-            "displayName": "src__Link",
-            "foldedComponentIds": Array [],
-            "propTypes": undefined,
-            "render": [Function],
-            "styledComponentId": "src__Link-sc-1oemcts-0",
-            "target": "a",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
+      <a
+        className="c0"
         href="#"
         muted={true}
-        noVisitedState={true}
-        textColour={true}
       >
-        <a
-          className="c0"
-          href="#"
-          muted={true}
-        >
-          Link example
-        </a>
-      </StyledComponent>
+        Link example
+      </a>
     </src__Link>
   </LinkDocumented>
 </LinkWithAllOptionsOn>
@@ -247,75 +185,13 @@ exports[`Link basic view matches snapshot: plain link 1`] = `
       noVisitedState={false}
       textColour={false}
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "src__Link-sc-1oemcts-0",
-              "isStatic": false,
-              "lastClassName": "c0",
-              "rules": Array [
-                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-                ":link {
-  color: #1d70b8;
-} :visited {
-  color: #4c2c92;
-} :hover {
-  color: #2b8cc4;
-} :active {
-  color: #2b8cc4;
-} :focus {
-  color: #0b0c0c;
-}",
-                "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
-}",
-                "@media print {
-  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
-  &::after {
-  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
-}
-}
-}",
-                [Function],
-                [Function],
-                [Function],
-              ],
-            },
-            "defaultProps": Object {
-              "muted": false,
-              "noVisitedState": false,
-              "textColour": false,
-            },
-            "displayName": "src__Link",
-            "foldedComponentIds": Array [],
-            "propTypes": undefined,
-            "render": [Function],
-            "styledComponentId": "src__Link-sc-1oemcts-0",
-            "target": "a",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
+      <a
+        className="c0"
         href="#"
         muted={false}
-        noVisitedState={false}
-        textColour={false}
       >
-        <a
-          className="c0"
-          href="#"
-          muted={false}
-        >
-          Link example
-        </a>
-      </StyledComponent>
+        Link example
+      </a>
     </src__Link>
   </LinkDocumented>
 </_default>

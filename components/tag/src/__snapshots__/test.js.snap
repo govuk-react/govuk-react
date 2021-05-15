@@ -44,48 +44,11 @@ exports[`Tag matches wrapper snapshot: wrapper mount 1`] = `
   <src__Tag
     inactive={false}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__Tag-sc-1ussdgm-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.25;
-} font-weight: 700; font-size: 14px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 16px; line-height: 1.25;
-}",
-              "display: inline-block; padding: 4px 8px; padding-bottom: 1px; outline: 2px solid transparent; outline-offset: -2px; color: #ffffff; background-color: #1d70b8; letter-spacing: 1px; text-decoration: none; text-transform: uppercase;",
-              [Function],
-            ],
-          },
-          "defaultProps": Object {
-            "inactive": false,
-          },
-          "displayName": "src__Tag",
-          "foldedComponentIds": Array [],
-          "propTypes": undefined,
-          "render": [Function],
-          "styledComponentId": "src__Tag-sc-1ussdgm-0",
-          "target": "strong",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      inactive={false}
+    <strong
+      className="c0"
     >
-      <strong
-        className="c0"
-      >
-        beta
-      </strong>
-    </StyledComponent>
+      beta
+    </strong>
   </src__Tag>
 </DocumentedTag>
 `;

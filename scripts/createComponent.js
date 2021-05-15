@@ -38,7 +38,7 @@ const packageJson = () => {
   },
   "peerDependencies": {
     "react": ">=16.2.0",
-    "styled-components": ">=4"
+    "styled-components": ">=5.1"
   },
   "scripts": {
     "build": "yarn build:lib && yarn build:es",

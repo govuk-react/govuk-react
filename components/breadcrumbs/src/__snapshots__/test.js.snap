@@ -114,251 +114,52 @@ exports[`breadcrumbs matches snapshot: breadcrumbs 1`] = `
 
 <Breadcrumbs>
   <src__BreadcrumbsContainer>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__BreadcrumbsContainer-r0q7fk-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.2;
-} font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
-  font-size: 16px; line-height: 1.25;
-}",
-              "color: #0b0c0c; @media print {
-  color: #000;
-}",
-              "margin-top: 15px; margin-bottom: 10px;",
-              [Function],
-            ],
-          },
-          "displayName": "src__BreadcrumbsContainer",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__BreadcrumbsContainer-r0q7fk-0",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
     >
-      <div
-        className="c0"
-      >
-        <src__BreadcrumbsList>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__BreadcrumbsList-r0q7fk-1",
-                  "isStatic": true,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "margin: 0; padding: 0; list-style-type: none; display: block;",
-                  ],
-                },
-                "displayName": "src__BreadcrumbsList",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__BreadcrumbsList-r0q7fk-1",
-                "target": "ol",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
+      <src__BreadcrumbsList>
+        <ol
+          className="c1"
+        >
+          <src__BreadcrumbsListItem
+            key="0"
           >
-            <ol
-              className="c1"
+            <li
+              className="c2"
             >
-              <src__BreadcrumbsListItem
-                key="0"
+              <link__Link
+                href="/section"
               >
-                <StyledComponent
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "src__BreadcrumbsListItem-r0q7fk-2",
-                        "isStatic": true,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "display: inline-block; position: relative; margin-bottom: 5px; margin-left: 10px; padding-left: 15.655000000000001px; ::before {
-  content: ''; display: block; position: absolute; top: -1px; bottom: 1px; left: -3.3100000000000005px; width: 7px; height: 7px; margin: auto 0; transform: rotate(45deg); border: solid; border-width: 1px 1px 0 0; border-color: #6f777b;
-} :first-child {
-  margin-left: 0; padding-left: 0; ::before {
-  content: none; display: none;
-}
-}",
-                        ],
-                      },
-                      "displayName": "src__BreadcrumbsListItem",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "src__BreadcrumbsListItem-r0q7fk-2",
-                      "target": "li",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
+                <a
+                  className="c3"
+                  href="/section"
                 >
-                  <li
-                    className="c2"
-                  >
-                    <link__Link
-                      href="/section"
-                    >
-                      <StyledComponent
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "link__Link-sc-12riix3-0",
-                              "isStatic": true,
-                              "lastClassName": "c3",
-                              "rules": Array [
-                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-                                "&:link, &:visited, &:hover, &:active, &:focus {
-  color: #0b0c0c; @media print {
-  color: #000;
-}
-}",
-                                "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
-}",
-                              ],
-                            },
-                            "displayName": "link__Link",
-                            "foldedComponentIds": Array [],
-                            "render": [Function],
-                            "styledComponentId": "link__Link-sc-12riix3-0",
-                            "target": "a",
-                            "toString": [Function],
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
-                        href="/section"
-                      >
-                        <a
-                          className="c3"
-                          href="/section"
-                        >
-                          Section 1
-                        </a>
-                      </StyledComponent>
-                    </link__Link>
-                  </li>
-                </StyledComponent>
-              </src__BreadcrumbsListItem>
-              <src__BreadcrumbsListItem
-                key="1"
+                  Section 1
+                </a>
+              </link__Link>
+            </li>
+          </src__BreadcrumbsListItem>
+          <src__BreadcrumbsListItem
+            key="1"
+          >
+            <li
+              className="c2"
+            >
+              <link__Link
+                href="/section2"
               >
-                <StyledComponent
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "src__BreadcrumbsListItem-r0q7fk-2",
-                        "isStatic": true,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "display: inline-block; position: relative; margin-bottom: 5px; margin-left: 10px; padding-left: 15.655000000000001px; ::before {
-  content: ''; display: block; position: absolute; top: -1px; bottom: 1px; left: -3.3100000000000005px; width: 7px; height: 7px; margin: auto 0; transform: rotate(45deg); border: solid; border-width: 1px 1px 0 0; border-color: #6f777b;
-} :first-child {
-  margin-left: 0; padding-left: 0; ::before {
-  content: none; display: none;
-}
-}",
-                        ],
-                      },
-                      "displayName": "src__BreadcrumbsListItem",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "src__BreadcrumbsListItem-r0q7fk-2",
-                      "target": "li",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
+                <a
+                  className="c3"
+                  href="/section2"
                 >
-                  <li
-                    className="c2"
-                  >
-                    <link__Link
-                      href="/section2"
-                    >
-                      <StyledComponent
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "link__Link-sc-12riix3-0",
-                              "isStatic": true,
-                              "lastClassName": "c3",
-                              "rules": Array [
-                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-                                "&:link, &:visited, &:hover, &:active, &:focus {
-  color: #0b0c0c; @media print {
-  color: #000;
-}
-}",
-                                "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
-}",
-                              ],
-                            },
-                            "displayName": "link__Link",
-                            "foldedComponentIds": Array [],
-                            "render": [Function],
-                            "styledComponentId": "link__Link-sc-12riix3-0",
-                            "target": "a",
-                            "toString": [Function],
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
-                        href="/section2"
-                      >
-                        <a
-                          className="c3"
-                          href="/section2"
-                        >
-                          Section 2
-                        </a>
-                      </StyledComponent>
-                    </link__Link>
-                  </li>
-                </StyledComponent>
-              </src__BreadcrumbsListItem>
-            </ol>
-          </StyledComponent>
-        </src__BreadcrumbsList>
-      </div>
-    </StyledComponent>
+                  Section 2
+                </a>
+              </link__Link>
+            </li>
+          </src__BreadcrumbsListItem>
+        </ol>
+      </src__BreadcrumbsList>
+    </div>
   </src__BreadcrumbsContainer>
 </Breadcrumbs>
 `;

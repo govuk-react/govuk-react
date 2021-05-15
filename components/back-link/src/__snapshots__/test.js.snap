@@ -89,58 +89,12 @@ exports[`Back Link matches wrapper snapshot: wrapper mount 1`] = `
   <src__Anchor
     onClick={[Function]}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__Anchor-sc-11edswm-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.2;
-} font-weight: 400; font-size: 14px; line-height: 1.1428571428571428; @media only screen and (min-width: 641px) {
-  font-size: 16px; line-height: 1.25;
-}",
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-              "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
-}",
-              "&:link, &:visited, &:hover, &:active, &:focus {
-  color: #0b0c0c; @media print {
-  color: #000;
-}
-}",
-              "display: inline-block; position: relative; margin-top: 15px; margin-bottom: 15px; padding-left: 14px; border-bottom: 1px solid #0b0c0c; text-decoration: none; ::before {
-  display: block; width: 0; height: 0; border-style: solid; border-color: transparent; clip-path: polygon(0% 50%, 100% 100%, 100% 0%); border-width: 5px 6px 5px 0; border-right-color: inherit; content: ''; position: absolute; top: -1px; bottom: 1px; left: 0; margin: auto;
-}",
-              [Function],
-            ],
-          },
-          "displayName": "src__Anchor",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__Anchor-sc-11edswm-0",
-          "target": "a",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <a
+      className="c0"
       onClick={[Function]}
     >
-      <a
-        className="c0"
-        onClick={[Function]}
-      >
-        example
-      </a>
-    </StyledComponent>
+      example
+    </a>
   </src__Anchor>
 </BackLink>
 `;

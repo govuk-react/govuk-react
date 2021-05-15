@@ -2,8 +2,8 @@
 
 exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
 .c0 {
-  -webkit-animation: caisTa 1s infinite linear;
-  animation: caisTa 1s infinite linear;
+  -webkit-animation: hhGhiE 1s infinite linear;
+  animation: hhGhiE 1s infinite linear;
 }
 
 <Spinner
@@ -54,42 +54,9 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
         transform="rotate(0, 0, 2) translate(10 0)"
         width="12"
       >
-        <StyledComponent
+        <rect
+          className="c0"
           fill="red"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "Spinner__Rect-sc-1pm4zwa-0",
-                "isStatic": true,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "animation:",
-                  Keyframes {
-                    "id": "sc-keyframes-caisTa",
-                    "inject": [Function],
-                    "name": "caisTa",
-                    "rules": Array [
-                      "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                      "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                    ],
-                    "toString": [Function],
-                  },
-                  " 1s infinite linear;",
-                ],
-              },
-              "displayName": "Spinner__Rect",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
-              "target": "rect",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
           height="5"
           opacity="0"
           rx="2.5"
@@ -101,23 +68,7 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
           }
           transform="rotate(0, 0, 2) translate(10 0)"
           width="12"
-        >
-          <rect
-            className="c0"
-            fill="red"
-            height="5"
-            opacity="0"
-            rx="2.5"
-            ry="2.5"
-            style={
-              Object {
-                "animationDelay": "0ms",
-              }
-            }
-            transform="rotate(0, 0, 2) translate(10 0)"
-            width="12"
-          />
-        </StyledComponent>
+        />
       </Spinner__Rect>
       <Spinner__Rect
         fill="red"
@@ -134,42 +85,9 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
         transform="rotate(30, 0, 2) translate(10 0)"
         width="12"
       >
-        <StyledComponent
+        <rect
+          className="c0"
           fill="red"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "Spinner__Rect-sc-1pm4zwa-0",
-                "isStatic": true,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "animation:",
-                  Keyframes {
-                    "id": "sc-keyframes-caisTa",
-                    "inject": [Function],
-                    "name": "caisTa",
-                    "rules": Array [
-                      "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                      "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                    ],
-                    "toString": [Function],
-                  },
-                  " 1s infinite linear;",
-                ],
-              },
-              "displayName": "Spinner__Rect",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
-              "target": "rect",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
           height="5"
           opacity="0"
           rx="2.5"
@@ -181,23 +99,7 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
           }
           transform="rotate(30, 0, 2) translate(10 0)"
           width="12"
-        >
-          <rect
-            className="c0"
-            fill="red"
-            height="5"
-            opacity="0"
-            rx="2.5"
-            ry="2.5"
-            style={
-              Object {
-                "animationDelay": "83ms",
-              }
-            }
-            transform="rotate(30, 0, 2) translate(10 0)"
-            width="12"
-          />
-        </StyledComponent>
+        />
       </Spinner__Rect>
       <Spinner__Rect
         fill="red"
@@ -214,42 +116,9 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
         transform="rotate(60, 0, 2) translate(10 0)"
         width="12"
       >
-        <StyledComponent
+        <rect
+          className="c0"
           fill="red"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "Spinner__Rect-sc-1pm4zwa-0",
-                "isStatic": true,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "animation:",
-                  Keyframes {
-                    "id": "sc-keyframes-caisTa",
-                    "inject": [Function],
-                    "name": "caisTa",
-                    "rules": Array [
-                      "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                      "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                    ],
-                    "toString": [Function],
-                  },
-                  " 1s infinite linear;",
-                ],
-              },
-              "displayName": "Spinner__Rect",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
-              "target": "rect",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
           height="5"
           opacity="0"
           rx="2.5"
@@ -261,23 +130,7 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
           }
           transform="rotate(60, 0, 2) translate(10 0)"
           width="12"
-        >
-          <rect
-            className="c0"
-            fill="red"
-            height="5"
-            opacity="0"
-            rx="2.5"
-            ry="2.5"
-            style={
-              Object {
-                "animationDelay": "166ms",
-              }
-            }
-            transform="rotate(60, 0, 2) translate(10 0)"
-            width="12"
-          />
-        </StyledComponent>
+        />
       </Spinner__Rect>
       <Spinner__Rect
         fill="red"
@@ -294,42 +147,9 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
         transform="rotate(90, 0, 2) translate(10 0)"
         width="12"
       >
-        <StyledComponent
+        <rect
+          className="c0"
           fill="red"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "Spinner__Rect-sc-1pm4zwa-0",
-                "isStatic": true,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "animation:",
-                  Keyframes {
-                    "id": "sc-keyframes-caisTa",
-                    "inject": [Function],
-                    "name": "caisTa",
-                    "rules": Array [
-                      "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                      "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                    ],
-                    "toString": [Function],
-                  },
-                  " 1s infinite linear;",
-                ],
-              },
-              "displayName": "Spinner__Rect",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
-              "target": "rect",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
           height="5"
           opacity="0"
           rx="2.5"
@@ -341,23 +161,7 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
           }
           transform="rotate(90, 0, 2) translate(10 0)"
           width="12"
-        >
-          <rect
-            className="c0"
-            fill="red"
-            height="5"
-            opacity="0"
-            rx="2.5"
-            ry="2.5"
-            style={
-              Object {
-                "animationDelay": "249ms",
-              }
-            }
-            transform="rotate(90, 0, 2) translate(10 0)"
-            width="12"
-          />
-        </StyledComponent>
+        />
       </Spinner__Rect>
       <Spinner__Rect
         fill="red"
@@ -374,42 +178,9 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
         transform="rotate(120, 0, 2) translate(10 0)"
         width="12"
       >
-        <StyledComponent
+        <rect
+          className="c0"
           fill="red"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "Spinner__Rect-sc-1pm4zwa-0",
-                "isStatic": true,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "animation:",
-                  Keyframes {
-                    "id": "sc-keyframes-caisTa",
-                    "inject": [Function],
-                    "name": "caisTa",
-                    "rules": Array [
-                      "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                      "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                    ],
-                    "toString": [Function],
-                  },
-                  " 1s infinite linear;",
-                ],
-              },
-              "displayName": "Spinner__Rect",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
-              "target": "rect",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
           height="5"
           opacity="0"
           rx="2.5"
@@ -421,23 +192,7 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
           }
           transform="rotate(120, 0, 2) translate(10 0)"
           width="12"
-        >
-          <rect
-            className="c0"
-            fill="red"
-            height="5"
-            opacity="0"
-            rx="2.5"
-            ry="2.5"
-            style={
-              Object {
-                "animationDelay": "332ms",
-              }
-            }
-            transform="rotate(120, 0, 2) translate(10 0)"
-            width="12"
-          />
-        </StyledComponent>
+        />
       </Spinner__Rect>
       <Spinner__Rect
         fill="red"
@@ -454,42 +209,9 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
         transform="rotate(150, 0, 2) translate(10 0)"
         width="12"
       >
-        <StyledComponent
+        <rect
+          className="c0"
           fill="red"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "Spinner__Rect-sc-1pm4zwa-0",
-                "isStatic": true,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "animation:",
-                  Keyframes {
-                    "id": "sc-keyframes-caisTa",
-                    "inject": [Function],
-                    "name": "caisTa",
-                    "rules": Array [
-                      "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                      "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                    ],
-                    "toString": [Function],
-                  },
-                  " 1s infinite linear;",
-                ],
-              },
-              "displayName": "Spinner__Rect",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
-              "target": "rect",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
           height="5"
           opacity="0"
           rx="2.5"
@@ -501,23 +223,7 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
           }
           transform="rotate(150, 0, 2) translate(10 0)"
           width="12"
-        >
-          <rect
-            className="c0"
-            fill="red"
-            height="5"
-            opacity="0"
-            rx="2.5"
-            ry="2.5"
-            style={
-              Object {
-                "animationDelay": "415ms",
-              }
-            }
-            transform="rotate(150, 0, 2) translate(10 0)"
-            width="12"
-          />
-        </StyledComponent>
+        />
       </Spinner__Rect>
       <Spinner__Rect
         fill="red"
@@ -534,42 +240,9 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
         transform="rotate(180, 0, 2) translate(10 0)"
         width="12"
       >
-        <StyledComponent
+        <rect
+          className="c0"
           fill="red"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "Spinner__Rect-sc-1pm4zwa-0",
-                "isStatic": true,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "animation:",
-                  Keyframes {
-                    "id": "sc-keyframes-caisTa",
-                    "inject": [Function],
-                    "name": "caisTa",
-                    "rules": Array [
-                      "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                      "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                    ],
-                    "toString": [Function],
-                  },
-                  " 1s infinite linear;",
-                ],
-              },
-              "displayName": "Spinner__Rect",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
-              "target": "rect",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
           height="5"
           opacity="0"
           rx="2.5"
@@ -581,23 +254,7 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
           }
           transform="rotate(180, 0, 2) translate(10 0)"
           width="12"
-        >
-          <rect
-            className="c0"
-            fill="red"
-            height="5"
-            opacity="0"
-            rx="2.5"
-            ry="2.5"
-            style={
-              Object {
-                "animationDelay": "498ms",
-              }
-            }
-            transform="rotate(180, 0, 2) translate(10 0)"
-            width="12"
-          />
-        </StyledComponent>
+        />
       </Spinner__Rect>
       <Spinner__Rect
         fill="red"
@@ -614,42 +271,9 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
         transform="rotate(210, 0, 2) translate(10 0)"
         width="12"
       >
-        <StyledComponent
+        <rect
+          className="c0"
           fill="red"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "Spinner__Rect-sc-1pm4zwa-0",
-                "isStatic": true,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "animation:",
-                  Keyframes {
-                    "id": "sc-keyframes-caisTa",
-                    "inject": [Function],
-                    "name": "caisTa",
-                    "rules": Array [
-                      "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                      "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                    ],
-                    "toString": [Function],
-                  },
-                  " 1s infinite linear;",
-                ],
-              },
-              "displayName": "Spinner__Rect",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
-              "target": "rect",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
           height="5"
           opacity="0"
           rx="2.5"
@@ -661,23 +285,7 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
           }
           transform="rotate(210, 0, 2) translate(10 0)"
           width="12"
-        >
-          <rect
-            className="c0"
-            fill="red"
-            height="5"
-            opacity="0"
-            rx="2.5"
-            ry="2.5"
-            style={
-              Object {
-                "animationDelay": "581ms",
-              }
-            }
-            transform="rotate(210, 0, 2) translate(10 0)"
-            width="12"
-          />
-        </StyledComponent>
+        />
       </Spinner__Rect>
       <Spinner__Rect
         fill="red"
@@ -694,42 +302,9 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
         transform="rotate(240, 0, 2) translate(10 0)"
         width="12"
       >
-        <StyledComponent
+        <rect
+          className="c0"
           fill="red"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "Spinner__Rect-sc-1pm4zwa-0",
-                "isStatic": true,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "animation:",
-                  Keyframes {
-                    "id": "sc-keyframes-caisTa",
-                    "inject": [Function],
-                    "name": "caisTa",
-                    "rules": Array [
-                      "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                      "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                    ],
-                    "toString": [Function],
-                  },
-                  " 1s infinite linear;",
-                ],
-              },
-              "displayName": "Spinner__Rect",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
-              "target": "rect",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
           height="5"
           opacity="0"
           rx="2.5"
@@ -741,23 +316,7 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
           }
           transform="rotate(240, 0, 2) translate(10 0)"
           width="12"
-        >
-          <rect
-            className="c0"
-            fill="red"
-            height="5"
-            opacity="0"
-            rx="2.5"
-            ry="2.5"
-            style={
-              Object {
-                "animationDelay": "664ms",
-              }
-            }
-            transform="rotate(240, 0, 2) translate(10 0)"
-            width="12"
-          />
-        </StyledComponent>
+        />
       </Spinner__Rect>
       <Spinner__Rect
         fill="red"
@@ -774,42 +333,9 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
         transform="rotate(270, 0, 2) translate(10 0)"
         width="12"
       >
-        <StyledComponent
+        <rect
+          className="c0"
           fill="red"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "Spinner__Rect-sc-1pm4zwa-0",
-                "isStatic": true,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "animation:",
-                  Keyframes {
-                    "id": "sc-keyframes-caisTa",
-                    "inject": [Function],
-                    "name": "caisTa",
-                    "rules": Array [
-                      "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                      "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                    ],
-                    "toString": [Function],
-                  },
-                  " 1s infinite linear;",
-                ],
-              },
-              "displayName": "Spinner__Rect",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
-              "target": "rect",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
           height="5"
           opacity="0"
           rx="2.5"
@@ -821,23 +347,7 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
           }
           transform="rotate(270, 0, 2) translate(10 0)"
           width="12"
-        >
-          <rect
-            className="c0"
-            fill="red"
-            height="5"
-            opacity="0"
-            rx="2.5"
-            ry="2.5"
-            style={
-              Object {
-                "animationDelay": "747ms",
-              }
-            }
-            transform="rotate(270, 0, 2) translate(10 0)"
-            width="12"
-          />
-        </StyledComponent>
+        />
       </Spinner__Rect>
       <Spinner__Rect
         fill="red"
@@ -854,42 +364,9 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
         transform="rotate(300, 0, 2) translate(10 0)"
         width="12"
       >
-        <StyledComponent
+        <rect
+          className="c0"
           fill="red"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "Spinner__Rect-sc-1pm4zwa-0",
-                "isStatic": true,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "animation:",
-                  Keyframes {
-                    "id": "sc-keyframes-caisTa",
-                    "inject": [Function],
-                    "name": "caisTa",
-                    "rules": Array [
-                      "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                      "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                    ],
-                    "toString": [Function],
-                  },
-                  " 1s infinite linear;",
-                ],
-              },
-              "displayName": "Spinner__Rect",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
-              "target": "rect",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
           height="5"
           opacity="0"
           rx="2.5"
@@ -901,23 +378,7 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
           }
           transform="rotate(300, 0, 2) translate(10 0)"
           width="12"
-        >
-          <rect
-            className="c0"
-            fill="red"
-            height="5"
-            opacity="0"
-            rx="2.5"
-            ry="2.5"
-            style={
-              Object {
-                "animationDelay": "830ms",
-              }
-            }
-            transform="rotate(300, 0, 2) translate(10 0)"
-            width="12"
-          />
-        </StyledComponent>
+        />
       </Spinner__Rect>
       <Spinner__Rect
         fill="red"
@@ -934,42 +395,9 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
         transform="rotate(330, 0, 2) translate(10 0)"
         width="12"
       >
-        <StyledComponent
+        <rect
+          className="c0"
           fill="red"
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "Spinner__Rect-sc-1pm4zwa-0",
-                "isStatic": true,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "animation:",
-                  Keyframes {
-                    "id": "sc-keyframes-caisTa",
-                    "inject": [Function],
-                    "name": "caisTa",
-                    "rules": Array [
-                      "@-webkit-keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                      "@keyframes caisTa{0%{opacity:0.250075;}0.01%{opacity:0.25;}0.03%{opacity:1;}100%{opacity:0.250075;}}",
-                    ],
-                    "toString": [Function],
-                  },
-                  " 1s infinite linear;",
-                ],
-              },
-              "displayName": "Spinner__Rect",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "Spinner__Rect-sc-1pm4zwa-0",
-              "target": "rect",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
           height="5"
           opacity="0"
           rx="2.5"
@@ -981,23 +409,7 @@ exports[`Spinner matches wrapper snapshot: wrapper mount 1`] = `
           }
           transform="rotate(330, 0, 2) translate(10 0)"
           width="12"
-        >
-          <rect
-            className="c0"
-            fill="red"
-            height="5"
-            opacity="0"
-            rx="2.5"
-            ry="2.5"
-            style={
-              Object {
-                "animationDelay": "913ms",
-              }
-            }
-            transform="rotate(330, 0, 2) translate(10 0)"
-            width="12"
-          />
-        </StyledComponent>
+        />
       </Spinner__Rect>
     </svg>
   </SVG>

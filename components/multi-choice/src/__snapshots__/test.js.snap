@@ -131,168 +131,37 @@ exports[`MultiChoice matches snapshot 1`] = `
   <src__StyledFieldset
     error="Example error"
   >
-    <StyledComponent
-      error="Example error"
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__StyledFieldset-dd88ty-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "padding: 0; margin: 0; border: 0; box-sizing: border-box; width: 100%; :after {
-  content: ''; display: table; clear: both;
-}",
-              [Function],
-              [Function],
-            ],
-          },
-          "displayName": "src__StyledFieldset",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__StyledFieldset-dd88ty-0",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
     >
-      <div
-        className="c0"
-      >
-        <LabelText>
-          <src__StyledLabelText>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "src__StyledLabelText-sc-12l0n4z-0",
-                    "isStatic": false,
-                    "lastClassName": "c1",
-                    "rules": Array [
-                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                      "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                      "display: block; clear: none; padding-bottom: 2px;",
-                      [Function],
-                      [Function],
-                    ],
-                  },
-                  "displayName": "src__StyledLabelText",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-            >
-              <span
-                className="c1"
-              >
-                Example label
-              </span>
-            </StyledComponent>
-          </src__StyledLabelText>
-        </LabelText>
-        <HintText>
-          <src__StyledHint>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "src__StyledHint-sc-1qn4br2-0",
-                    "isStatic": false,
-                    "lastClassName": "c2",
-                    "rules": Array [
-                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                      "display: block; margin-bottom: 15px; color: #6f777b;",
-                      [Function],
-                    ],
-                  },
-                  "displayName": "src__StyledHint",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "src__StyledHint-sc-1qn4br2-0",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-            >
-              <span
-                className="c2"
-              >
-                Example hint
-              </span>
-            </StyledComponent>
-          </src__StyledHint>
-        </HintText>
-        <ErrorText>
-          <src__StyledError>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "src__StyledError-q8g4f0-0",
-                    "isStatic": false,
-                    "lastClassName": "c3",
-                    "rules": Array [
-                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 700; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                      "display: block; margin-bottom: 15px; clear: both; color: #d4351c;",
-                      [Function],
-                    ],
-                  },
-                  "displayName": "src__StyledError",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "src__StyledError-q8g4f0-0",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-            >
-              <span
-                className="c3"
-              >
-                Example error
-              </span>
-            </StyledComponent>
-          </src__StyledError>
-        </ErrorText>
-      </div>
-    </StyledComponent>
+      <LabelText>
+        <src__StyledLabelText>
+          <span
+            className="c1"
+          >
+            Example label
+          </span>
+        </src__StyledLabelText>
+      </LabelText>
+      <HintText>
+        <src__StyledHint>
+          <span
+            className="c2"
+          >
+            Example hint
+          </span>
+        </src__StyledHint>
+      </HintText>
+      <ErrorText>
+        <src__StyledError>
+          <span
+            className="c3"
+          >
+            Example error
+          </span>
+        </src__StyledError>
+      </ErrorText>
+    </div>
   </src__StyledFieldset>
 </MultiChoice>
 `;

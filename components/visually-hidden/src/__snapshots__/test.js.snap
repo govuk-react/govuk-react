@@ -37,48 +37,13 @@ exports[`VisuallyHidden focusable version matches snapshot: focusable 1`] = `
     focusable={true}
     important={true}
   >
-    <StyledComponent
+    <span
+      className="c0"
       focusable={true}
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [
-            [Function],
-          ],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__VisuallyHidden-sc-1d47voq-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              [Function],
-            ],
-          },
-          "defaultProps": Object {
-            "focusable": false,
-            "important": true,
-          },
-          "displayName": "src__VisuallyHidden",
-          "foldedComponentIds": Array [],
-          "propTypes": undefined,
-          "render": [Function],
-          "styledComponentId": "src__VisuallyHidden-sc-1d47voq-0",
-          "target": "span",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      important={true}
+      tabIndex="0"
     >
-      <span
-        className="c0"
-        focusable={true}
-        tabIndex="0"
-      >
-        Example
-      </span>
-    </StyledComponent>
+      Example
+    </span>
   </src__VisuallyHidden>
 </VisuallyHiddenDocumented>
 `;
@@ -107,47 +72,12 @@ exports[`VisuallyHidden matches snapshot: default render 1`] = `
     focusable={false}
     important={true}
   >
-    <StyledComponent
+    <span
+      className="c0"
       focusable={false}
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [
-            [Function],
-          ],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__VisuallyHidden-sc-1d47voq-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              [Function],
-            ],
-          },
-          "defaultProps": Object {
-            "focusable": false,
-            "important": true,
-          },
-          "displayName": "src__VisuallyHidden",
-          "foldedComponentIds": Array [],
-          "propTypes": undefined,
-          "render": [Function],
-          "styledComponentId": "src__VisuallyHidden-sc-1d47voq-0",
-          "target": "span",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      important={true}
     >
-      <span
-        className="c0"
-        focusable={false}
-      >
-        Example
-      </span>
-    </StyledComponent>
+      Example
+    </span>
   </src__VisuallyHidden>
 </VisuallyHiddenDocumented>
 `;
@@ -176,47 +106,12 @@ exports[`VisuallyHidden with important={false} matches snapshot: not important 1
     focusable={false}
     important={false}
   >
-    <StyledComponent
+    <span
+      className="c0"
       focusable={false}
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [
-            [Function],
-          ],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__VisuallyHidden-sc-1d47voq-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              [Function],
-            ],
-          },
-          "defaultProps": Object {
-            "focusable": false,
-            "important": true,
-          },
-          "displayName": "src__VisuallyHidden",
-          "foldedComponentIds": Array [],
-          "propTypes": undefined,
-          "render": [Function],
-          "styledComponentId": "src__VisuallyHidden-sc-1d47voq-0",
-          "target": "span",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      important={false}
     >
-      <span
-        className="c0"
-        focusable={false}
-      >
-        Example
-      </span>
-    </StyledComponent>
+      Example
+    </span>
   </src__VisuallyHidden>
 </VisuallyHiddenDocumented>
 `;

@@ -133,46 +133,12 @@ exports[`button basics matches snapshot 1`] = `
     disabled={false}
     isStart={false}
   >
-    <StyledComponent
+    <button
+      className="c0"
       disabled={false}
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__StyledButton-xtct7-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              [Function],
-              "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-}",
-              [Function],
-              [Function],
-              [Function],
-            ],
-          },
-          "displayName": "src__StyledButton",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__StyledButton-xtct7-0",
-          "target": "button",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      isStart={false}
     >
-      <button
-        className="c0"
-        disabled={false}
-      >
-        Example
-      </button>
-    </StyledComponent>
+      Example
+    </button>
   </src__StyledButton>
 </ForwardRef>
 `;
@@ -313,47 +279,12 @@ exports[`button blue button, with automatic colours matches snapshot 1`] = `
       disabled={false}
       isStart={false}
     >
-      <StyledComponent
-        buttonColour="#1d70b8"
+      <button
+        className="c0"
         disabled={false}
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "src__StyledButton-xtct7-0",
-              "isStatic": false,
-              "lastClassName": "c0",
-              "rules": Array [
-                [Function],
-                "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-}",
-                [Function],
-                [Function],
-                [Function],
-              ],
-            },
-            "displayName": "src__StyledButton",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "src__StyledButton-xtct7-0",
-            "target": "button",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        isStart={false}
       >
-        <button
-          className="c0"
-          disabled={false}
-        >
-          Blue button
-        </button>
-      </StyledComponent>
+        Blue button
+      </button>
     </src__StyledButton>
   </ForwardRef>
 </ButtonBlue>
@@ -524,120 +455,54 @@ exports[`button button with icon matches snapshot 1`] = `
       }
       isStart={true}
     >
-      <StyledComponent
+      <button
+        className="c0"
         disabled={false}
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "src__StyledButton-xtct7-0",
-              "isStatic": false,
-              "lastClassName": "c0",
-              "rules": Array [
-                [Function],
-                "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-}",
-                [Function],
-                [Function],
-                [Function],
-              ],
-            },
-            "displayName": "src__StyledButton",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "src__StyledButton-xtct7-0",
-            "target": "button",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        icon={
-          <ButtonArrow
+      >
+        <src__ButtonContents>
+          <span
+            className="c1"
+          >
+            Start now
+          </span>
+        </src__ButtonContents>
+        <ButtonArrow
+          fill="currentColor"
+          title="ButtonArrow"
+        >
+          <SVG
             fill="currentColor"
             title="ButtonArrow"
-          />
-        }
-        isStart={true}
-      >
-        <button
-          className="c0"
-          disabled={false}
-        >
-          <src__ButtonContents>
-            <StyledComponent
-              forwardedComponent={
+            viewBox="0 0 706 860"
+          >
+            <svg
+              fill="currentColor"
+              height="100%"
+              style={
                 Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "src__ButtonContents-xtct7-1",
-                    "isStatic": true,
-                    "lastClassName": "c1",
-                    "rules": Array [
-                      "flex-grow: 1;",
-                    ],
-                  },
-                  "displayName": "src__ButtonContents",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "src__ButtonContents-xtct7-1",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
+                  "display": "block",
                 }
               }
-              forwardedRef={null}
-            >
-              <span
-                className="c1"
-              >
-                Start now
-              </span>
-            </StyledComponent>
-          </src__ButtonContents>
-          <ButtonArrow
-            fill="currentColor"
-            title="ButtonArrow"
-          >
-            <SVG
-              fill="currentColor"
-              title="ButtonArrow"
+              version="1.1"
               viewBox="0 0 706 860"
+              width="100%"
             >
-              <svg
-                fill="currentColor"
-                height="100%"
-                style={
-                  Object {
-                    "display": "block",
-                  }
-                }
-                version="1.1"
-                viewBox="0 0 706 860"
-                width="100%"
-              >
-                <title>
-                  ButtonArrow
-                </title>
-                <g>
-                  <path
-                    d="M.152 0h252.993l452.108 430H452.261z"
-                  />
-                  <path
-                    d="M0 860h252.993L705.1 430H452.108z"
-                    fillOpacity="0.5"
-                  />
-                </g>
-              </svg>
-            </SVG>
-          </ButtonArrow>
-        </button>
-      </StyledComponent>
+              <title>
+                ButtonArrow
+              </title>
+              <g>
+                <path
+                  d="M.152 0h252.993l452.108 430H452.261z"
+                />
+                <path
+                  d="M0 860h252.993L705.1 430H452.108z"
+                  fillOpacity="0.5"
+                />
+              </g>
+            </svg>
+          </SVG>
+        </ButtonArrow>
+      </button>
     </src__StyledButton>
   </ForwardRef>
 </ButtonStartIcon>
@@ -785,50 +650,12 @@ exports[`button custom colours matches snapshot 1`] = `
       disabled={false}
       isStart={false}
     >
-      <StyledComponent
-        buttonColour="#f3f2f1"
-        buttonHoverColour="#ffdd00"
-        buttonShadowColour="#f47738"
-        buttonTextColour="#0b0c0c"
+      <button
+        className="c0"
         disabled={false}
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "src__StyledButton-xtct7-0",
-              "isStatic": false,
-              "lastClassName": "c0",
-              "rules": Array [
-                [Function],
-                "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-}",
-                [Function],
-                [Function],
-                [Function],
-              ],
-            },
-            "displayName": "src__StyledButton",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "src__StyledButton-xtct7-0",
-            "target": "button",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        isStart={false}
       >
-        <button
-          className="c0"
-          disabled={false}
-        >
-          Wacky colours
-        </button>
-      </StyledComponent>
+        Wacky colours
+      </button>
     </src__StyledButton>
   </ForwardRef>
 </ButtonWacky>
@@ -968,46 +795,12 @@ exports[`button disabled matches snapshot 1`] = `
       disabled={true}
       isStart={false}
     >
-      <StyledComponent
+      <button
+        className="c0"
         disabled={true}
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "src__StyledButton-xtct7-0",
-              "isStatic": false,
-              "lastClassName": "c0",
-              "rules": Array [
-                [Function],
-                "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-}",
-                [Function],
-                [Function],
-                [Function],
-              ],
-            },
-            "displayName": "src__StyledButton",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "src__StyledButton-xtct7-0",
-            "target": "button",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        isStart={false}
       >
-        <button
-          className="c0"
-          disabled={true}
-        >
-          Disabled primary button
-        </button>
-      </StyledComponent>
+        Disabled primary button
+      </button>
     </src__StyledButton>
   </ForwardRef>
 </ButtonDisabled>
@@ -1147,46 +940,12 @@ exports[`button start button matches snapshot 1`] = `
       disabled={false}
       isStart={true}
     >
-      <StyledComponent
+      <button
+        className="c0"
         disabled={false}
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "src__StyledButton-xtct7-0",
-              "isStatic": false,
-              "lastClassName": "c0",
-              "rules": Array [
-                [Function],
-                "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-}",
-                [Function],
-                [Function],
-                [Function],
-              ],
-            },
-            "displayName": "src__StyledButton",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "src__StyledButton-xtct7-0",
-            "target": "button",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        isStart={true}
       >
-        <button
-          className="c0"
-          disabled={false}
-        >
-          Save and continue
-        </button>
-      </StyledComponent>
+        Save and continue
+      </button>
     </src__StyledButton>
   </ForwardRef>
 </ButtonStart>

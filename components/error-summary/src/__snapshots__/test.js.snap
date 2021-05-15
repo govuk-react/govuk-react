@@ -1,456 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
-.c1 {
-  color: #0b0c0c;
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.1111111111111112;
-  display: block;
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
-.c2 {
-  margin: 0;
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  margin-bottom: 15px;
-}
-
-.c2 > p {
-  margin: 0;
-}
-
-.c2 > p > code {
-  padding: 0.2em 0.4em;
-  margin: 0;
-  font-size: 85%;
-  background-color: rgba(27,31,35,0.05);
-  border-radius: 3px;
-}
-
-.c2 > pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  background-color: #f6f8fa;
-  border-radius: 3px;
-}
-
-.c2 > pre > code {
-  display: inline;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  overflow: visible;
-  line-height: inherit;
-  word-wrap: normal;
-}
-
-.c6 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  margin-bottom: 5px;
-}
-
-.c4 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #0b0c0c;
-  margin-top: 0;
-  margin-bottom: 15px;
-  margin-bottom: 0;
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.c4 .c3 {
-  margin-top: 10px;
-}
-
-.c4 > .c5 {
-  margin-bottom: 5px;
-}
-
-.c7 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 700;
-  margin-bottom: 5px;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  -webkit-text-decoration-skip-ink: none;
-  text-decoration-skip-ink: none;
-  text-transform: none;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #d4351c;
-  padding-top: 4px;
-  padding-bottom: 2px;
-}
-
-.c7:link {
-  color: #1d70b8;
-}
-
-.c7:visited {
-  color: #4c2c92;
-}
-
-.c7:hover {
-  color: #2b8cc4;
-}
-
-.c7:active {
-  color: #2b8cc4;
-}
-
-.c7:focus {
-  color: #0b0c0c;
-}
-
-.c7:focus {
-  outline: 3px solid #ffdd00;
-  outline-offset: 0;
-  background-color: #ffdd00;
-}
-
-.c7:visited {
-  color: #d4351c;
-}
-
-.c0 {
-  color: #0b0c0c;
-  padding: 15px;
-  border: 4px solid #d4351c;
-  margin-bottom: 20px;
-}
-
-.c0:focus {
-  outline: 3px solid #ffdd00;
-  outline-offset: 0;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  box-sizing: border-box;
-  margin-bottom: 0;
-}
-
-.c8:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.c9 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #0b0c0c;
-  display: block;
-  clear: none;
-  padding-bottom: 2px;
-  margin-bottom: 0;
-}
-
-.c10 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  display: block;
-  margin-bottom: 15px;
-  color: #6f777b;
-}
-
-.c11 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  box-sizing: border-box;
-  width: 100%;
-  height: 40px;
-  margin-top: 0;
-  padding: 5px;
-  border: 2px solid #0b0c0c;
-  border-radius: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  margin-bottom: 0;
-}
-
-.c11:focus {
-  outline: 3px solid #ffdd00;
-  outline-offset: 0;
-}
-
-.c11::-webkit-outer-spin-button,
-.c11::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-}
-
-.c11[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.c12 {
-  box-sizing: border-box;
-  font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
-  width: 100%;
-  padding: 5px 4px 4px;
-  border: 2px solid #0b0c0c;
-}
-
-.c12:focus {
-  outline: 3px solid #ffdd00;
-  outline-offset: 0;
-}
-
-@media print {
-  .c1 {
-    color: #000;
-  }
-}
-
-@media print {
-  .c1 {
-    font-size: 18px;
-    line-height: 1.15;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c1 {
-    font-size: 24px;
-    line-height: 1.25;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c1 {
-    margin-bottom: 20px;
-  }
-}
-
-@media print {
-  .c2 {
-    font-size: 14px;
-    line-height: 1.15;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c2 {
-    font-size: 19px;
-    line-height: 1.3157894736842106;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c2 {
-    margin-bottom: 15px;
-  }
-}
-
-@media print {
-  .c6 {
-    font-size: 14px;
-    line-height: 1.15;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c6 {
-    font-size: 19px;
-    line-height: 1.3157894736842106;
-  }
-}
-
-@media print {
-  .c4 {
-    font-size: 14px;
-    line-height: 1.15;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c4 {
-    font-size: 19px;
-    line-height: 1.3157894736842106;
-  }
-}
-
-@media print {
-  .c4 {
-    color: #000;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c4 {
-    margin-bottom: 20px;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c4 {
-    margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c7 {
-    font-family: sans-serif;
-  }
-}
-
-@media print {
-  .c7[href^="/"]::after,
-  .c7[href^="http://"]::after,
-  .c7[href^="https://"]::after {
-    content: " (" attr(href) ")";
-    font-size: 90%;
-    word-wrap: break-word;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c7 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c0 {
-    padding: 20px;
-    border: 5px solid #d4351c;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c0 {
-    margin-bottom: 30px;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c8 {
-    margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c9 {
-    font-size: 14px;
-    line-height: 1.15;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c9 {
-    font-size: 19px;
-    line-height: 1.3157894736842106;
-  }
-}
-
-@media print {
-  .c9 {
-    color: #000;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c9 {
-    margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c10 {
-    font-size: 14px;
-    line-height: 1.15;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c10 {
-    font-size: 19px;
-    line-height: 1.3157894736842106;
-  }
-}
-
-@media print {
-  .c11 {
-    font-size: 14px;
-    line-height: 1.15;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c11 {
-    font-size: 19px;
-    line-height: 1.3157894736842106;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c11 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c12 {
-    font-size: 19px;
-    line-height: 1.3;
-    width: 75%;
-  }
-}
-
 <_default>
   <div>
     <ErrorSummary
@@ -473,101 +23,60 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
       <src__StyledErrorSummary
         tabIndex={-1}
       >
-        <StyledComponent
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "src__StyledErrorSummary-sc-1b7q1ts-1",
-                "isStatic": false,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "color: #0b0c0c; padding: 15px; border: 4px solid #d4351c; &:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-} @media only screen and (min-width: 641px) {
-  padding: 20px; border: 5px solid #d4351c;
-}",
-                  [Function],
-                ],
-              },
-              "displayName": "src__StyledErrorSummary",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "src__StyledErrorSummary-sc-1b7q1ts-1",
-              "target": "div",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
+        <div
+          className="src__StyledErrorSummary-sc-1b7q1ts-1 hxOzJL"
           tabIndex={-1}
         >
-          <div
-            className="c0"
-            tabIndex={-1}
+          <H2
+            size="MEDIUM"
           >
-            <H2
+            <Heading
+              as="h2"
               size="MEDIUM"
             >
-              <Heading
+              <src__StyledHeading
                 as="h2"
                 size="MEDIUM"
               >
-                <src__StyledHeading
-                  as="h2"
+                <h2
+                  className="src__StyledHeading-sc-1dueefc-0 jRssAO"
                   size="MEDIUM"
                 >
-                  <StyledComponent
-                    as="h2"
-                    forwardedComponent={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "attrs": Array [],
-                        "componentStyle": ComponentStyle {
-                          "componentId": "src__StyledHeading-sc-1dueefc-0",
-                          "isStatic": false,
-                          "lastClassName": "c1",
-                          "rules": Array [
-                            "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                            [Function],
-                            "display: block; margin-top: 0;",
-                            [Function],
-                            [Function],
-                          ],
-                        },
-                        "displayName": "src__StyledHeading",
-                        "foldedComponentIds": Array [],
-                        "render": [Function],
-                        "styledComponentId": "src__StyledHeading-sc-1dueefc-0",
-                        "target": "h1",
-                        "toString": [Function],
-                        "warnTooManyClasses": [Function],
-                        "withComponent": [Function],
-                      }
-                    }
-                    forwardedRef={null}
-                    size="MEDIUM"
-                  >
-                    <h2
-                      className="c1"
-                      size="MEDIUM"
-                    >
-                      Message to alert the user to a problem goes here
-                    </h2>
-                  </StyledComponent>
-                </src__StyledHeading>
-              </Heading>
-            </H2>
-            <Paragraph
+                  Message to alert the user to a problem goes here
+                </h2>
+              </src__StyledHeading>
+            </Heading>
+          </H2>
+          <Paragraph
+            linkRenderer={[Function]}
+            mb={3}
+            supportingText={false}
+          >
+            <src__StyledParagraph
+              allowedTypes={
+                Array [
+                  "paragraph",
+                  "emphasis",
+                  "strong",
+                  "link",
+                  "inlineCode",
+                  "code",
+                  "text",
+                ]
+              }
+              escapeHtml={false}
               linkRenderer={[Function]}
               mb={3}
+              renderers={
+                Object {
+                  "link": [Function],
+                }
+              }
+              skipHtml={true}
+              source="Optional description of the errors and how to correct them"
               supportingText={false}
             >
-              <src__StyledParagraph
+              <ReactMarkdown
                 allowedTypes={
                   Array [
                     "paragraph",
@@ -579,9 +88,13 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                     "text",
                   ]
                 }
+                astPlugins={Array []}
+                className="src__StyledParagraph-dkdnni-0 dbOgTf"
                 escapeHtml={false}
                 linkRenderer={[Function]}
                 mb={3}
+                plugins={Array []}
+                rawSourcePos={false}
                 renderers={
                   Object {
                     "link": [Function],
@@ -589,494 +102,97 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                 }
                 skipHtml={true}
                 source="Optional description of the errors and how to correct them"
+                sourcePos={false}
                 supportingText={false}
+                transformLinkUri={[Function]}
               >
-                <StyledComponent
-                  allowedTypes={
-                    Array [
-                      "paragraph",
-                      "emphasis",
-                      "strong",
-                      "link",
-                      "inlineCode",
-                      "code",
-                      "text",
-                    ]
-                  }
-                  escapeHtml={false}
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "src__StyledParagraph-dkdnni-0",
-                        "isStatic": false,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "margin: 0; > p {
-  margin: 0;
-} > p > code {
-  padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: rgba(27,31,35,0.05); border-radius: 3px;
-} > pre {
-  padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #f6f8fa; border-radius: 3px;
-} > pre > code {
-  display: inline; padding: 0; margin: 0; border: 0; overflow: visible; line-height: inherit; word-wrap: normal;
-}",
-                          [Function],
-                          [Function],
-                        ],
-                      },
-                      "displayName": "src__StyledParagraph",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "renderers": Object {
-                        "blockquote": "blockquote",
-                        "break": "br",
-                        "code": [Function],
-                        "definition": [Function],
-                        "delete": "del",
-                        "emphasis": "em",
-                        "heading": [Function],
-                        "html": [Function],
-                        "image": "img",
-                        "imageReference": "img",
-                        "inlineCode": [Function],
-                        "link": "a",
-                        "linkReference": "a",
-                        "list": [Function],
-                        "listItem": [Function],
-                        "paragraph": "p",
-                        "parsedHtml": [Function],
-                        "root": [Function],
-                        "strong": "strong",
-                        "table": [Function],
-                        "tableBody": [Function],
-                        "tableCell": [Function],
-                        "tableHead": [Function],
-                        "tableRow": [Function],
-                        "text": [Function],
-                        "thematicBreak": "hr",
-                        "virtualHtml": [Function],
-                      },
-                      "styledComponentId": "src__StyledParagraph-dkdnni-0",
-                      "target": [Function],
-                      "toString": [Function],
-                      "types": Array [
-                        "break",
-                        "paragraph",
-                        "emphasis",
-                        "strong",
-                        "thematicBreak",
-                        "blockquote",
-                        "delete",
-                        "link",
-                        "image",
-                        "linkReference",
-                        "imageReference",
-                        "table",
-                        "tableHead",
-                        "tableBody",
-                        "tableRow",
-                        "tableCell",
-                        "root",
-                        "text",
-                        "list",
-                        "listItem",
-                        "definition",
-                        "heading",
-                        "inlineCode",
-                        "code",
-                        "html",
-                        "virtualHtml",
-                        "parsedHtml",
-                      ],
-                      "uriTransformer": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  linkRenderer={[Function]}
-                  mb={3}
-                  renderers={
-                    Object {
-                      "link": [Function],
-                    }
-                  }
-                  skipHtml={true}
-                  source="Optional description of the errors and how to correct them"
-                  supportingText={false}
+                <Root
+                  className="src__StyledParagraph-dkdnni-0 dbOgTf"
+                  key="root-1-1"
                 >
-                  <ReactMarkdown
-                    allowedTypes={
-                      Array [
-                        "paragraph",
-                        "emphasis",
-                        "strong",
-                        "link",
-                        "inlineCode",
-                        "code",
-                        "text",
-                      ]
-                    }
-                    astPlugins={Array []}
-                    className="c2"
-                    escapeHtml={false}
-                    linkRenderer={[Function]}
-                    mb={3}
-                    plugins={Array []}
-                    rawSourcePos={false}
-                    renderers={
-                      Object {
-                        "link": [Function],
-                      }
-                    }
-                    skipHtml={true}
-                    source="Optional description of the errors and how to correct them"
-                    sourcePos={false}
-                    supportingText={false}
-                    transformLinkUri={[Function]}
+                  <div
+                    className="src__StyledParagraph-dkdnni-0 dbOgTf"
                   >
-                    <Root
-                      className="c2"
-                      key="root-1-1"
+                    <p
+                      key="paragraph-1-1"
                     >
-                      <div
-                        className="c2"
+                      <TextRenderer
+                        key="text-1-1"
+                        nodeKey="text-1-1"
+                        value="Optional description of the errors and how to correct them"
                       >
-                        <p
-                          key="paragraph-1-1"
-                        >
-                          <TextRenderer
-                            key="text-1-1"
-                            nodeKey="text-1-1"
-                            value="Optional description of the errors and how to correct them"
-                          >
-                            Optional description of the errors and how to correct them
-                          </TextRenderer>
-                        </p>
-                      </div>
-                    </Root>
-                  </ReactMarkdown>
-                </StyledComponent>
-              </src__StyledParagraph>
-            </Paragraph>
-            <UnorderedList
+                        Optional description of the errors and how to correct them
+                      </TextRenderer>
+                    </p>
+                  </div>
+                </Root>
+              </ReactMarkdown>
+            </src__StyledParagraph>
+          </Paragraph>
+          <UnorderedList
+            listStyleType="none"
+            mb={0}
+          >
+            <src__OrderedList
+              as="ul"
               listStyleType="none"
               mb={0}
             >
-              <src__OrderedList
-                as="ul"
-                listStyleType="none"
-                mb={0}
+              <ul
+                className="src__OrderedList-sc-1j0kw9l-0 bdyAxg"
               >
-                <StyledComponent
-                  as="ul"
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "c3",
-                        "isStatic": false,
-                        "lastClassName": "c4",
-                        "rules": Array [
-                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                          "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                          "margin-top: 0; & & {
-  margin-top: 10px;
-}",
-                          [Function],
-                          [Function],
-                        ],
-                      },
-                      "defaultProps": Object {
-                        "listStyleType": undefined,
-                      },
-                      "displayName": "src__OrderedList",
-                      "foldedComponentIds": Array [],
-                      "propTypes": undefined,
-                      "render": [Function],
-                      "styledComponentId": "c3",
-                      "target": "ol",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  listStyleType="none"
-                  mb={0}
+                <src__ListItem
+                  key="national-insurance-number"
                 >
-                  <ul
-                    className="c3 c4"
+                  <li
+                    className="src__ListItem-sc-14amfma-0 RIegK"
                   >
-                    <src__ListItem
-                      key="national-insurance-number"
+                    <src__StyledErrorText
+                      muted={false}
+                      noVisitedState={false}
+                      onClick={[Function]}
+                      tabIndex={1}
+                      textColour={false}
                     >
-                      <StyledComponent
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "c5",
-                              "isStatic": false,
-                              "lastClassName": "c6",
-                              "rules": Array [
-                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                "margin-bottom: 5px;",
-                                [Function],
-                              ],
-                            },
-                            "displayName": "src__ListItem",
-                            "foldedComponentIds": Array [],
-                            "propTypes": undefined,
-                            "render": [Function],
-                            "styledComponentId": "c5",
-                            "target": "li",
-                            "toString": [Function],
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
+                      <a
+                        className="src__Link-sc-1oemcts-0 src__StyledErrorText-sc-1b7q1ts-0 gwpXTV hJMzxV"
+                        muted={false}
+                        onClick={[Function]}
+                        tabIndex={1}
                       >
-                        <li
-                          className="c5 c6"
-                        >
-                          <src__StyledErrorText
-                            muted={false}
-                            noVisitedState={false}
-                            onClick={[Function]}
-                            tabIndex={1}
-                            textColour={false}
-                          >
-                            <StyledComponent
-                              forwardedComponent={
-                                Object {
-                                  "$$typeof": Symbol(react.forward_ref),
-                                  "attrs": Array [],
-                                  "componentStyle": ComponentStyle {
-                                    "componentId": "src__StyledErrorText-sc-1b7q1ts-0",
-                                    "isStatic": false,
-                                    "lastClassName": "c7",
-                                    "rules": Array [
-                                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-                                      ":link {
-  color: #1d70b8;
-} :visited {
-  color: #4c2c92;
-} :hover {
-  color: #2b8cc4;
-} :active {
-  color: #2b8cc4;
-} :focus {
-  color: #0b0c0c;
-}",
-                                      "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
-}",
-                                      "@media print {
-  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
-  &::after {
-  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
-}
-}
-}",
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-weight: 700; margin-bottom: 5px; text-decoration: underline; text-decoration-skip-ink: none; text-transform: none; cursor: pointer; font-size: 16px; line-height: 1.25; :visited {
-  color: #d4351c;
-} @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3;
-} color: #d4351c; padding-top: 4px; padding-bottom: 2px;",
-                                    ],
-                                  },
-                                  "defaultProps": Object {
-                                    "muted": false,
-                                    "noVisitedState": false,
-                                    "textColour": false,
-                                  },
-                                  "displayName": "src__StyledErrorText",
-                                  "foldedComponentIds": Array [
-                                    "src__Link-sc-1oemcts-0",
-                                  ],
-                                  "propTypes": undefined,
-                                  "render": [Function],
-                                  "styledComponentId": "src__StyledErrorText-sc-1b7q1ts-0",
-                                  "target": "a",
-                                  "toString": [Function],
-                                  "warnTooManyClasses": [Function],
-                                  "withComponent": [Function],
-                                }
-                              }
-                              forwardedRef={null}
-                              muted={false}
-                              noVisitedState={false}
-                              onClick={[Function]}
-                              tabIndex={1}
-                              textColour={false}
-                            >
-                              <a
-                                className="c7"
-                                muted={false}
-                                onClick={[Function]}
-                                tabIndex={1}
-                              >
-                                National Insurance number error
-                              </a>
-                            </StyledComponent>
-                          </src__StyledErrorText>
-                        </li>
-                      </StyledComponent>
-                    </src__ListItem>
-                    <src__ListItem
-                      key="description"
+                        National Insurance number error
+                      </a>
+                    </src__StyledErrorText>
+                  </li>
+                </src__ListItem>
+                <src__ListItem
+                  key="description"
+                >
+                  <li
+                    className="src__ListItem-sc-14amfma-0 RIegK"
+                  >
+                    <src__StyledErrorText
+                      muted={false}
+                      noVisitedState={false}
+                      onClick={[Function]}
+                      tabIndex={2}
+                      textColour={false}
                     >
-                      <StyledComponent
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "c5",
-                              "isStatic": false,
-                              "lastClassName": "c6",
-                              "rules": Array [
-                                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                "margin-bottom: 5px;",
-                                [Function],
-                              ],
-                            },
-                            "displayName": "src__ListItem",
-                            "foldedComponentIds": Array [],
-                            "propTypes": undefined,
-                            "render": [Function],
-                            "styledComponentId": "c5",
-                            "target": "li",
-                            "toString": [Function],
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
+                      <a
+                        className="src__Link-sc-1oemcts-0 src__StyledErrorText-sc-1b7q1ts-0 gwpXTV hJMzxV"
+                        muted={false}
+                        onClick={[Function]}
+                        tabIndex={2}
                       >
-                        <li
-                          className="c5 c6"
-                        >
-                          <src__StyledErrorText
-                            muted={false}
-                            noVisitedState={false}
-                            onClick={[Function]}
-                            tabIndex={2}
-                            textColour={false}
-                          >
-                            <StyledComponent
-                              forwardedComponent={
-                                Object {
-                                  "$$typeof": Symbol(react.forward_ref),
-                                  "attrs": Array [],
-                                  "componentStyle": ComponentStyle {
-                                    "componentId": "src__StyledErrorText-sc-1b7q1ts-0",
-                                    "isStatic": false,
-                                    "lastClassName": "c7",
-                                    "rules": Array [
-                                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-                                      ":link {
-  color: #1d70b8;
-} :visited {
-  color: #4c2c92;
-} :hover {
-  color: #2b8cc4;
-} :active {
-  color: #2b8cc4;
-} :focus {
-  color: #0b0c0c;
-}",
-                                      "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
-}",
-                                      "@media print {
-  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
-  &::after {
-  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
-}
-}
-}",
-                                      [Function],
-                                      [Function],
-                                      [Function],
-                                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-weight: 700; margin-bottom: 5px; text-decoration: underline; text-decoration-skip-ink: none; text-transform: none; cursor: pointer; font-size: 16px; line-height: 1.25; :visited {
-  color: #d4351c;
-} @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3;
-} color: #d4351c; padding-top: 4px; padding-bottom: 2px;",
-                                    ],
-                                  },
-                                  "defaultProps": Object {
-                                    "muted": false,
-                                    "noVisitedState": false,
-                                    "textColour": false,
-                                  },
-                                  "displayName": "src__StyledErrorText",
-                                  "foldedComponentIds": Array [
-                                    "src__Link-sc-1oemcts-0",
-                                  ],
-                                  "propTypes": undefined,
-                                  "render": [Function],
-                                  "styledComponentId": "src__StyledErrorText-sc-1b7q1ts-0",
-                                  "target": "a",
-                                  "toString": [Function],
-                                  "warnTooManyClasses": [Function],
-                                  "withComponent": [Function],
-                                }
-                              }
-                              forwardedRef={null}
-                              muted={false}
-                              noVisitedState={false}
-                              onClick={[Function]}
-                              tabIndex={2}
-                              textColour={false}
-                            >
-                              <a
-                                className="c7"
-                                muted={false}
-                                onClick={[Function]}
-                                tabIndex={2}
-                              >
-                                Description of what you saw error
-                              </a>
-                            </StyledComponent>
-                          </src__StyledErrorText>
-                        </li>
-                      </StyledComponent>
-                    </src__ListItem>
-                  </ul>
-                </StyledComponent>
-              </src__OrderedList>
-            </UnorderedList>
-          </div>
-        </StyledComponent>
+                        Description of what you saw error
+                      </a>
+                    </src__StyledErrorText>
+                  </li>
+                </src__ListItem>
+              </ul>
+            </src__OrderedList>
+          </UnorderedList>
+        </div>
       </src__StyledErrorSummary>
     </ErrorSummary>
     <InputField
@@ -1093,182 +209,41 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
           error={false}
           name="national-insurance-number"
         >
-          <StyledComponent
-            error={false}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__StyledLabel-sc-14n2scx-0",
-                  "isStatic": false,
-                  "lastClassName": "c8",
-                  "rules": Array [
-                    "display: flex; flex-direction: column; box-sizing: border-box; :after {
-  content: ''; display: table; clear: both;
-}",
-                    [Function],
-                    [Function],
-                  ],
-                },
-                "displayName": "src__StyledLabel",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
-                "target": "label",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
+          <label
+            className="src__StyledLabel-sc-14n2scx-0 kHdLXy"
             name="national-insurance-number"
           >
-            <label
-              className="c8"
-              name="national-insurance-number"
+            <LabelText>
+              <src__StyledLabelText>
+                <span
+                  className="src__StyledLabelText-sc-12l0n4z-0 HDdRl"
+                >
+                  National Insurance number
+                </span>
+              </src__StyledLabelText>
+            </LabelText>
+            <HintText>
+              <src__StyledHint>
+                <span
+                  className="src__StyledHint-sc-1qn4br2-0 kngyqG"
+                >
+                  It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
+                </span>
+              </src__StyledHint>
+            </HintText>
+            <Input
+              type="text"
             >
-              <LabelText>
-                <src__StyledLabelText>
-                  <StyledComponent
-                    forwardedComponent={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "attrs": Array [],
-                        "componentStyle": ComponentStyle {
-                          "componentId": "src__StyledLabelText-sc-12l0n4z-0",
-                          "isStatic": false,
-                          "lastClassName": "c9",
-                          "rules": Array [
-                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                            "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                            "display: block; clear: none; padding-bottom: 2px;",
-                            [Function],
-                            [Function],
-                          ],
-                        },
-                        "displayName": "src__StyledLabelText",
-                        "foldedComponentIds": Array [],
-                        "render": [Function],
-                        "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
-                        "target": "span",
-                        "toString": [Function],
-                        "warnTooManyClasses": [Function],
-                        "withComponent": [Function],
-                      }
-                    }
-                    forwardedRef={null}
-                  >
-                    <span
-                      className="c9"
-                    >
-                      National Insurance number
-                    </span>
-                  </StyledComponent>
-                </src__StyledLabelText>
-              </LabelText>
-              <HintText>
-                <src__StyledHint>
-                  <StyledComponent
-                    forwardedComponent={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "attrs": Array [],
-                        "componentStyle": ComponentStyle {
-                          "componentId": "src__StyledHint-sc-1qn4br2-0",
-                          "isStatic": false,
-                          "lastClassName": "c10",
-                          "rules": Array [
-                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                            "display: block; margin-bottom: 15px; color: #6f777b;",
-                            [Function],
-                          ],
-                        },
-                        "displayName": "src__StyledHint",
-                        "foldedComponentIds": Array [],
-                        "render": [Function],
-                        "styledComponentId": "src__StyledHint-sc-1qn4br2-0",
-                        "target": "span",
-                        "toString": [Function],
-                        "warnTooManyClasses": [Function],
-                        "withComponent": [Function],
-                      }
-                    }
-                    forwardedRef={null}
-                  >
-                    <span
-                      className="c10"
-                    >
-                      It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
-                    </span>
-                  </StyledComponent>
-                </src__StyledHint>
-              </HintText>
-              <Input
+              <src__StyledInput
                 type="text"
               >
-                <src__StyledInput
+                <input
+                  className="src__StyledInput-u8exb4-0 iqwpbG"
                   type="text"
-                >
-                  <StyledComponent
-                    forwardedComponent={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "attrs": Array [],
-                        "componentStyle": ComponentStyle {
-                          "componentId": "src__StyledInput-u8exb4-0",
-                          "isStatic": false,
-                          "lastClassName": "c11",
-                          "rules": Array [
-                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                            "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-}",
-                            "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-  margin: 0; -webkit-appearance: none;
-} &[type=\\"number\\"] {
-  -moz-appearance: textfield;
-}",
-                            [Function],
-                            [Function],
-                          ],
-                        },
-                        "displayName": "src__StyledInput",
-                        "foldedComponentIds": Array [],
-                        "render": [Function],
-                        "styledComponentId": "src__StyledInput-u8exb4-0",
-                        "target": "input",
-                        "toString": [Function],
-                        "warnTooManyClasses": [Function],
-                        "withComponent": [Function],
-                      }
-                    }
-                    forwardedRef={null}
-                    type="text"
-                  >
-                    <input
-                      className="c11"
-                      type="text"
-                    />
-                  </StyledComponent>
-                </src__StyledInput>
-              </Input>
-            </label>
-          </StyledComponent>
+                />
+              </src__StyledInput>
+            </Input>
+          </label>
         </src__StyledLabel>
       </Label>
     </InputField>
@@ -1286,131 +261,30 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
           error={false}
           name="description"
         >
-          <StyledComponent
-            error={false}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__StyledLabel-sc-14n2scx-0",
-                  "isStatic": false,
-                  "lastClassName": "c8",
-                  "rules": Array [
-                    "display: flex; flex-direction: column; box-sizing: border-box; :after {
-  content: ''; display: table; clear: both;
-}",
-                    [Function],
-                    [Function],
-                  ],
-                },
-                "displayName": "src__StyledLabel",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
-                "target": "label",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
+          <label
+            className="src__StyledLabel-sc-14n2scx-0 kHdLXy"
             name="description"
           >
-            <label
-              className="c8"
-              name="description"
+            <LabelText>
+              <src__StyledLabelText>
+                <span
+                  className="src__StyledLabelText-sc-12l0n4z-0 HDdRl"
+                >
+                  Description of what you saw
+                </span>
+              </src__StyledLabelText>
+            </LabelText>
+            <src__TextAreaField
+              rows="5"
+              type="text"
             >
-              <LabelText>
-                <src__StyledLabelText>
-                  <StyledComponent
-                    forwardedComponent={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "attrs": Array [],
-                        "componentStyle": ComponentStyle {
-                          "componentId": "src__StyledLabelText-sc-12l0n4z-0",
-                          "isStatic": false,
-                          "lastClassName": "c9",
-                          "rules": Array [
-                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                            "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                            "display: block; clear: none; padding-bottom: 2px;",
-                            [Function],
-                            [Function],
-                          ],
-                        },
-                        "displayName": "src__StyledLabelText",
-                        "foldedComponentIds": Array [],
-                        "render": [Function],
-                        "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
-                        "target": "span",
-                        "toString": [Function],
-                        "warnTooManyClasses": [Function],
-                        "withComponent": [Function],
-                      }
-                    }
-                    forwardedRef={null}
-                  >
-                    <span
-                      className="c9"
-                    >
-                      Description of what you saw
-                    </span>
-                  </StyledComponent>
-                </src__StyledLabelText>
-              </LabelText>
-              <src__TextAreaField
+              <textarea
+                className="src__TextAreaField-sc-83xe87-0 kiatxx"
                 rows="5"
                 type="text"
-              >
-                <StyledComponent
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "src__TextAreaField-sc-83xe87-0",
-                        "isStatic": false,
-                        "lastClassName": "c12",
-                        "rules": Array [
-                          "box-sizing: border-box; font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3; width: 75%;
-} width: 100%; padding: 5px 4px 4px; border: 2px solid #0b0c0c; :focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-}",
-                          [Function],
-                        ],
-                      },
-                      "displayName": "src__TextAreaField",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "src__TextAreaField-sc-83xe87-0",
-                      "target": "textarea",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  rows="5"
-                  type="text"
-                >
-                  <textarea
-                    className="c12"
-                    rows="5"
-                    type="text"
-                  />
-                </StyledComponent>
-              </src__TextAreaField>
-            </label>
-          </StyledComponent>
+              />
+            </src__TextAreaField>
+          </label>
         </src__StyledLabel>
       </Label>
     </TextArea>

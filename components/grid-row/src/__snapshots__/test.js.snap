@@ -22,40 +22,11 @@ exports[`GridRow matches snapshot: enzyme.mount 1`] = `
 
 <GridRow>
   <src__StyledRow>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__StyledRow-sc-117e6fv-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "display: flex; flex-direction: column; margin: 0 -15px; @media only screen and (min-width: 641px) {
-  flex-direction: row;
-}",
-              [Function],
-            ],
-          },
-          "displayName": "src__StyledRow",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__StyledRow-sc-117e6fv-0",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
     >
-      <div
-        className="c0"
-      >
-        Example
-      </div>
-    </StyledComponent>
+      Example
+    </div>
   </src__StyledRow>
 </GridRow>
 `;

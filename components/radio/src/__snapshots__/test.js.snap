@@ -136,195 +136,40 @@ exports[`Radio can render with hint text: hint text 1`] = `
   <src__Label
     inline={false}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__Label-sc-7h7h1q-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-              "display: block; position: relative; min-height: 40px; padding: 0 0 0 40px; clear: left;",
-              [Function],
-              [Function],
-            ],
-          },
-          "displayName": "src__Label",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__Label-sc-7h7h1q-0",
-          "target": "label",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      inline={false}
+    <label
+      className="c0"
     >
-      <label
-        className="c0"
+      <src__Input
+        type="radio"
       >
-        <src__Input
+        <input
+          className="c1"
           type="radio"
+        />
+      </src__Input>
+      <src__LabelText>
+        <span
+          className="c2"
         >
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__Input-sc-7h7h1q-1",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "position: absolute; z-index: 1; top: 0; left: 0; width: 40px; height: 40px; cursor: pointer; opacity: 0; :checked + span::after {
-  opacity: 1;
-} :focus + span::before {
-  outline: 3px solid transparent; outline-offset: 3px; box-shadow: 0 0 0 4px #ffdd00;
-}",
-                    [Function],
-                  ],
-                },
-                "displayName": "src__Input",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__Input-sc-7h7h1q-1",
-                "target": "input",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            type="radio"
-          >
-            <input
-              className="c1"
-              type="radio"
-            />
-          </StyledComponent>
-        </src__Input>
-        <src__LabelText>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__LabelText-sc-7h7h1q-2",
-                  "isStatic": true,
-                  "lastClassName": "c2",
-                  "rules": Array [
-                    "display: inline-block; margin-bottom: 0; padding: 8px 15px 5px; cursor: pointer; -ms-touch-action: manipulation; touch-action: manipulation; :before {
-  content: ''; box-sizing: border-box; position: absolute; top: 0; left: 0; width: 40px; height: 40px; border: 2px solid black; border-radius: 50%; background: transparent;
-} :after {
-  content: ''; position: absolute; top: 10px; left: 10px; width: 0; height: 0; border: 10px solid; border-radius: 50%; opacity: 0;
-}",
-                  ],
-                },
-                "displayName": "src__LabelText",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__LabelText-sc-7h7h1q-2",
-                "target": "span",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
+          Example with hint text
+        </span>
+      </src__LabelText>
+      <src__StyledRadioHint>
+        <HintText
+          className="c3"
+        >
+          <src__StyledHint
+            className="c3"
           >
             <span
-              className="c2"
+              className="c4 c3"
             >
-              Example with hint text
+              Hint text
             </span>
-          </StyledComponent>
-        </src__LabelText>
-        <src__StyledRadioHint>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__StyledRadioHint-sc-7h7h1q-3",
-                  "isStatic": true,
-                  "lastClassName": "c3",
-                  "rules": Array [
-                    "display: block; padding-left: 15px; padding-right: 15px;",
-                  ],
-                },
-                "displayName": "src__StyledRadioHint",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__StyledRadioHint-sc-7h7h1q-3",
-                "target": [Function],
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-          >
-            <HintText
-              className="c3"
-            >
-              <src__StyledHint
-                className="c3"
-              >
-                <StyledComponent
-                  className="c3"
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "src__StyledHint-sc-1qn4br2-0",
-                        "isStatic": false,
-                        "lastClassName": "c4",
-                        "rules": Array [
-                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                          "display: block; margin-bottom: 15px; color: #6f777b;",
-                          [Function],
-                        ],
-                      },
-                      "displayName": "src__StyledHint",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "src__StyledHint-sc-1qn4br2-0",
-                      "target": "span",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                >
-                  <span
-                    className="c3 c4"
-                  >
-                    Hint text
-                  </span>
-                </StyledComponent>
-              </src__StyledHint>
-            </HintText>
-          </StyledComponent>
-        </src__StyledRadioHint>
-      </label>
-    </StyledComponent>
+          </src__StyledHint>
+        </HintText>
+      </src__StyledRadioHint>
+    </label>
   </src__Label>
 </Radio>
 `;
@@ -433,124 +278,27 @@ exports[`Radio disabled: disabled 1`] = `
   <src__Label
     inline={false}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__Label-sc-7h7h1q-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-              "display: block; position: relative; min-height: 40px; padding: 0 0 0 40px; clear: left;",
-              [Function],
-              [Function],
-            ],
-          },
-          "displayName": "src__Label",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__Label-sc-7h7h1q-0",
-          "target": "label",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      inline={false}
+    <label
+      className="c0"
     >
-      <label
-        className="c0"
+      <src__Input
+        disabled={true}
+        type="radio"
       >
-        <src__Input
+        <input
+          className="c1"
           disabled={true}
           type="radio"
+        />
+      </src__Input>
+      <src__LabelText>
+        <span
+          className="c2"
         >
-          <StyledComponent
-            disabled={true}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__Input-sc-7h7h1q-1",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "position: absolute; z-index: 1; top: 0; left: 0; width: 40px; height: 40px; cursor: pointer; opacity: 0; :checked + span::after {
-  opacity: 1;
-} :focus + span::before {
-  outline: 3px solid transparent; outline-offset: 3px; box-shadow: 0 0 0 4px #ffdd00;
-}",
-                    [Function],
-                  ],
-                },
-                "displayName": "src__Input",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__Input-sc-7h7h1q-1",
-                "target": "input",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            type="radio"
-          >
-            <input
-              className="c1"
-              disabled={true}
-              type="radio"
-            />
-          </StyledComponent>
-        </src__Input>
-        <src__LabelText>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__LabelText-sc-7h7h1q-2",
-                  "isStatic": true,
-                  "lastClassName": "c2",
-                  "rules": Array [
-                    "display: inline-block; margin-bottom: 0; padding: 8px 15px 5px; cursor: pointer; -ms-touch-action: manipulation; touch-action: manipulation; :before {
-  content: ''; box-sizing: border-box; position: absolute; top: 0; left: 0; width: 40px; height: 40px; border: 2px solid black; border-radius: 50%; background: transparent;
-} :after {
-  content: ''; position: absolute; top: 10px; left: 10px; width: 0; height: 0; border: 10px solid; border-radius: 50%; opacity: 0;
-}",
-                  ],
-                },
-                "displayName": "src__LabelText",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__LabelText-sc-7h7h1q-2",
-                "target": "span",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-          >
-            <span
-              className="c2"
-            >
-              Example
-            </span>
-          </StyledComponent>
-        </src__LabelText>
-      </label>
-    </StyledComponent>
+          Example
+        </span>
+      </src__LabelText>
+    </label>
   </src__Label>
 </Radio>
 `;
@@ -667,124 +415,27 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   <src__Label
     inline={true}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__Label-sc-7h7h1q-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-              "display: block; position: relative; min-height: 40px; padding: 0 0 0 40px; clear: left;",
-              [Function],
-              [Function],
-            ],
-          },
-          "displayName": "src__Label",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__Label-sc-7h7h1q-0",
-          "target": "label",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      inline={true}
+    <label
+      className="c0"
     >
-      <label
-        className="c0"
+      <src__Input
+        name="example"
+        type="radio"
       >
-        <src__Input
+        <input
+          className="c1"
           name="example"
           type="radio"
+        />
+      </src__Input>
+      <src__LabelText>
+        <span
+          className="c2"
         >
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__Input-sc-7h7h1q-1",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "position: absolute; z-index: 1; top: 0; left: 0; width: 40px; height: 40px; cursor: pointer; opacity: 0; :checked + span::after {
-  opacity: 1;
-} :focus + span::before {
-  outline: 3px solid transparent; outline-offset: 3px; box-shadow: 0 0 0 4px #ffdd00;
-}",
-                    [Function],
-                  ],
-                },
-                "displayName": "src__Input",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__Input-sc-7h7h1q-1",
-                "target": "input",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            name="example"
-            type="radio"
-          >
-            <input
-              className="c1"
-              name="example"
-              type="radio"
-            />
-          </StyledComponent>
-        </src__Input>
-        <src__LabelText>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__LabelText-sc-7h7h1q-2",
-                  "isStatic": true,
-                  "lastClassName": "c2",
-                  "rules": Array [
-                    "display: inline-block; margin-bottom: 0; padding: 8px 15px 5px; cursor: pointer; -ms-touch-action: manipulation; touch-action: manipulation; :before {
-  content: ''; box-sizing: border-box; position: absolute; top: 0; left: 0; width: 40px; height: 40px; border: 2px solid black; border-radius: 50%; background: transparent;
-} :after {
-  content: ''; position: absolute; top: 10px; left: 10px; width: 0; height: 0; border: 10px solid; border-radius: 50%; opacity: 0;
-}",
-                  ],
-                },
-                "displayName": "src__LabelText",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__LabelText-sc-7h7h1q-2",
-                "target": "span",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-          >
-            <span
-              className="c2"
-            >
-              example
-            </span>
-          </StyledComponent>
-        </src__LabelText>
-      </label>
-    </StyledComponent>
+          example
+        </span>
+      </src__LabelText>
+    </label>
   </src__Label>
 </Radio>
 `;
@@ -893,124 +544,27 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   <src__Label
     inline={false}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__Label-sc-7h7h1q-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-              "display: block; position: relative; min-height: 40px; padding: 0 0 0 40px; clear: left;",
-              [Function],
-              [Function],
-            ],
-          },
-          "displayName": "src__Label",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__Label-sc-7h7h1q-0",
-          "target": "label",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      inline={false}
+    <label
+      className="c0"
     >
-      <label
-        className="c0"
+      <src__Input
+        name="example"
+        type="radio"
       >
-        <src__Input
+        <input
+          className="c1"
           name="example"
           type="radio"
+        />
+      </src__Input>
+      <src__LabelText>
+        <span
+          className="c2"
         >
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__Input-sc-7h7h1q-1",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "position: absolute; z-index: 1; top: 0; left: 0; width: 40px; height: 40px; cursor: pointer; opacity: 0; :checked + span::after {
-  opacity: 1;
-} :focus + span::before {
-  outline: 3px solid transparent; outline-offset: 3px; box-shadow: 0 0 0 4px #ffdd00;
-}",
-                    [Function],
-                  ],
-                },
-                "displayName": "src__Input",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__Input-sc-7h7h1q-1",
-                "target": "input",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            name="example"
-            type="radio"
-          >
-            <input
-              className="c1"
-              name="example"
-              type="radio"
-            />
-          </StyledComponent>
-        </src__Input>
-        <src__LabelText>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__LabelText-sc-7h7h1q-2",
-                  "isStatic": true,
-                  "lastClassName": "c2",
-                  "rules": Array [
-                    "display: inline-block; margin-bottom: 0; padding: 8px 15px 5px; cursor: pointer; -ms-touch-action: manipulation; touch-action: manipulation; :before {
-  content: ''; box-sizing: border-box; position: absolute; top: 0; left: 0; width: 40px; height: 40px; border: 2px solid black; border-radius: 50%; background: transparent;
-} :after {
-  content: ''; position: absolute; top: 10px; left: 10px; width: 0; height: 0; border: 10px solid; border-radius: 50%; opacity: 0;
-}",
-                  ],
-                },
-                "displayName": "src__LabelText",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__LabelText-sc-7h7h1q-2",
-                "target": "span",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-          >
-            <span
-              className="c2"
-            >
-              example
-            </span>
-          </StyledComponent>
-        </src__LabelText>
-      </label>
-    </StyledComponent>
+          example
+        </span>
+      </src__LabelText>
+    </label>
   </src__Label>
 </Radio>
 `;
