@@ -538,7 +538,6 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onFocus={[Function]}
-                                type="number"
                               >
                                 <StyledComponent
                                   error={true}
@@ -582,14 +581,12 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
-                                  type="number"
                                 >
                                   <input
                                     className="c6"
                                     onBlur={[Function]}
                                     onChange={[Function]}
                                     onFocus={[Function]}
-                                    type="number"
                                   />
                                 </StyledComponent>
                               </src__StyledInput>
@@ -724,7 +721,6 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onFocus={[Function]}
-                                type="number"
                               >
                                 <StyledComponent
                                   error={true}
@@ -768,14 +764,12 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
-                                  type="number"
                                 >
                                   <input
                                     className="c6"
                                     onBlur={[Function]}
                                     onChange={[Function]}
                                     onFocus={[Function]}
-                                    type="number"
                                   />
                                 </StyledComponent>
                               </src__StyledInput>
@@ -910,7 +904,6 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onFocus={[Function]}
-                                type="number"
                               >
                                 <StyledComponent
                                   error={true}
@@ -954,14 +947,12 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
-                                  type="number"
                                 >
                                   <input
                                     className="c6"
                                     onBlur={[Function]}
                                     onChange={[Function]}
                                     onFocus={[Function]}
-                                    type="number"
                                   />
                                 </StyledComponent>
                               </src__StyledInput>
@@ -1437,7 +1428,6 @@ exports[`DateField should support null value: null value 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onFocus={[Function]}
-                                type="number"
                               >
                                 <StyledComponent
                                   error={false}
@@ -1481,14 +1471,12 @@ exports[`DateField should support null value: null value 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
-                                  type="number"
                                 >
                                   <input
                                     className="c5"
                                     onBlur={[Function]}
                                     onChange={[Function]}
                                     onFocus={[Function]}
-                                    type="number"
                                   />
                                 </StyledComponent>
                               </src__StyledInput>
@@ -1623,7 +1611,6 @@ exports[`DateField should support null value: null value 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onFocus={[Function]}
-                                type="number"
                               >
                                 <StyledComponent
                                   error={false}
@@ -1667,14 +1654,12 @@ exports[`DateField should support null value: null value 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
-                                  type="number"
                                 >
                                   <input
                                     className="c5"
                                     onBlur={[Function]}
                                     onChange={[Function]}
                                     onFocus={[Function]}
-                                    type="number"
                                   />
                                 </StyledComponent>
                               </src__StyledInput>
@@ -1809,7 +1794,6 @@ exports[`DateField should support null value: null value 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onFocus={[Function]}
-                                type="number"
                               >
                                 <StyledComponent
                                   error={false}
@@ -1853,14 +1837,12 @@ exports[`DateField should support null value: null value 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
-                                  type="number"
                                 >
                                   <input
                                     className="c5"
                                     onBlur={[Function]}
                                     onChange={[Function]}
                                     onFocus={[Function]}
-                                    type="number"
                                   />
                                 </StyledComponent>
                               </src__StyledInput>
@@ -2352,7 +2334,6 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onFocus={[Function]}
-                                type="number"
                                 value="1"
                               >
                                 <StyledComponent
@@ -2397,7 +2378,6 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
-                                  type="number"
                                   value="1"
                                 >
                                   <input
@@ -2405,7 +2385,6 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                     onBlur={[Function]}
                                     onChange={[Function]}
                                     onFocus={[Function]}
-                                    type="number"
                                     value="1"
                                   />
                                 </StyledComponent>
@@ -2541,7 +2520,6 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onFocus={[Function]}
-                                type="number"
                                 value="2"
                               >
                                 <StyledComponent
@@ -2586,7 +2564,6 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
-                                  type="number"
                                   value="2"
                                 >
                                   <input
@@ -2594,7 +2571,6 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                     onBlur={[Function]}
                                     onChange={[Function]}
                                     onFocus={[Function]}
-                                    type="number"
                                     value="2"
                                   />
                                 </StyledComponent>
@@ -2730,7 +2706,6 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 onFocus={[Function]}
-                                type="number"
                                 value="3"
                               >
                                 <StyledComponent
@@ -2775,7 +2750,6 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                   onBlur={[Function]}
                                   onChange={[Function]}
                                   onFocus={[Function]}
-                                  type="number"
                                   value="3"
                                 >
                                   <input
@@ -2783,7 +2757,6 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                                     onBlur={[Function]}
                                     onChange={[Function]}
                                     onFocus={[Function]}
-                                    type="number"
                                     value="3"
                                   />
                                 </StyledComponent>
