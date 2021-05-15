@@ -99,7 +99,7 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
       >
         <src__Input
           placeholder="example"
-          type="Search"
+          type="search"
         >
           <StyledComponent
             forwardedComponent={
@@ -119,7 +119,7 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
                   ],
                 },
                 "defaultProps": Object {
-                  "type": "Search",
+                  "type": "search",
                 },
                 "displayName": "src__Input",
                 "foldedComponentIds": Array [],
@@ -133,12 +133,12 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
             }
             forwardedRef={null}
             placeholder="example"
-            type="Search"
+            type="search"
           >
             <input
               className="c1"
               placeholder="example"
-              type="Search"
+              type="search"
             />
           </StyledComponent>
         </src__Input>

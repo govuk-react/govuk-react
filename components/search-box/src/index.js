@@ -1,7 +1,6 @@
 // https://govuk-static.herokuapp.com/component-guide/search
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { LIGHT_BLUE, GREY_2, WHITE, YELLOW } from 'govuk-colours';
 import { NTA_LIGHT } from '@govuk-react/constants';
@@ -37,7 +36,7 @@ const Input = styled('input')({
 });
 
 Input.defaultProps = {
-  type: 'Search',
+  type: 'search',
 };
 
 const SearchButton = styled('button')({

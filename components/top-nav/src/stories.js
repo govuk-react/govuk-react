@@ -34,7 +34,7 @@ const ServiceTitle = (
 
 const Search = (
   <SearchBox>
-    <SearchBox.Input />
+    <SearchBox.Input placeholder="Search" />
     <SearchBox.Button />
   </SearchBox>
 );
