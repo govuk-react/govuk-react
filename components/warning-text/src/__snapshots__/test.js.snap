@@ -1,200 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`WarningText to match snapshot 1`] = `
-.c0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  margin-bottom: 0;
-}
-
-.c1 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  height: 35px;
-  margin-right: 15px;
-  width: 35px;
-}
-
-.c2 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.25;
-}
-
-@media only screen and (min-width:641px) {
-  .c0 {
-    margin-bottom: 0;
-  }
-}
-
-@media print {
-  .c2 {
-    font-size: 14px;
-    line-height: 1.15;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c2 {
-    font-size: 19px;
-    line-height: 1.3157894736842106;
-  }
-}
-
 <WarningTextWithKnobs>
   <WarningText>
     <src__StyledWarningText>
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "src__StyledWarningText-sc-1sdopa3-0",
-              "isStatic": false,
-              "lastClassName": "c0",
-              "rules": Array [
-                "align-items: center; box-sizing: border-box; display: flex; width: 100%;",
-                [Function],
-              ],
-            },
-            "displayName": "src__StyledWarningText",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "src__StyledWarningText-sc-1sdopa3-0",
-            "target": "div",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
+      <div
+        className="src__StyledWarningText-sc-1sdopa3-0 gbVkPv"
       >
-        <div
-          className="c0"
-        >
-          <src__IconImportantWrapper>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "src__IconImportantWrapper-sc-1sdopa3-1",
-                    "isStatic": true,
-                    "lastClassName": "c1",
-                    "rules": Array [
-                      "flex: none; height: 35px; margin-right: 15px; width: 35px;",
-                    ],
-                  },
-                  "displayName": "src__IconImportantWrapper",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "src__IconImportantWrapper-sc-1sdopa3-1",
-                  "target": "div",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
+        <src__IconImportantWrapper>
+          <div
+            className="src__IconImportantWrapper-sc-1sdopa3-1 jzDQIR"
+          >
+            <IconImportant
+              fill="currentColor"
+              title="icon important"
             >
-              <div
-                className="c1"
+              <SVG
+                fill="currentColor"
+                preserveAspectRatio="xMidYMid meet"
+                title="icon important"
+                viewBox="0 0 35.000000 35.000000"
               >
-                <IconImportant
+                <svg
                   fill="currentColor"
-                  title="icon important"
+                  height="100%"
+                  preserveAspectRatio="xMidYMid meet"
+                  style={
+                    Object {
+                      "display": "block",
+                    }
+                  }
+                  version="1.1"
+                  viewBox="0 0 35.000000 35.000000"
+                  width="100%"
                 >
-                  <SVG
-                    fill="currentColor"
-                    preserveAspectRatio="xMidYMid meet"
-                    title="icon important"
-                    viewBox="0 0 35.000000 35.000000"
+                  <title>
+                    icon important
+                  </title>
+                  <g
+                    transform="translate(0.000000,35.000000) scale(0.100000,-0.100000)"
                   >
-                    <svg
-                      fill="currentColor"
-                      height="100%"
-                      preserveAspectRatio="xMidYMid meet"
-                      style={
-                        Object {
-                          "display": "block",
-                        }
-                      }
-                      version="1.1"
-                      viewBox="0 0 35.000000 35.000000"
-                      width="100%"
-                    >
-                      <title>
-                        icon important
-                      </title>
-                      <g
-                        transform="translate(0.000000,35.000000) scale(0.100000,-0.100000)"
-                      >
-                        <path
-                          d="M100 332 c-87 -48 -125 -155 -82 -232 48 -87 155 -125 232 -82 87 48
+                    <path
+                      d="M100 332 c-87 -48 -125 -155 -82 -232 48 -87 155 -125 232 -82 87 48
 125 155 82 232 -48 87 -155 125 -232 82z m100 -122 c0 -53 -2 -60 -20 -60 -18
 0 -20 7 -20 60 0 53 2 60 20 60 18 0 20 -7 20 -60z m0 -111 c0 -12 -7 -19 -20
 -19 -19 0 -28 28 -14 43 11 11 34 -5 34 -24z"
-                        />
-                      </g>
-                    </svg>
-                  </SVG>
-                </IconImportant>
-              </div>
-            </StyledComponent>
-          </src__IconImportantWrapper>
-          <src__WarningTextWrapper>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "src__WarningTextWrapper-sc-1sdopa3-2",
-                    "isStatic": true,
-                    "lastClassName": "c2",
-                    "rules": Array [
-                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 700; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                    ],
-                  },
-                  "displayName": "src__WarningTextWrapper",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "src__WarningTextWrapper-sc-1sdopa3-2",
-                  "target": "strong",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-            >
-              <strong
-                className="c2"
-              >
-                A very long warning message. This includes a lot of text to give a good representation of a more average length warning. That way you can see more than one line wrapping.
-              </strong>
-            </StyledComponent>
-          </src__WarningTextWrapper>
-        </div>
-      </StyledComponent>
+                    />
+                  </g>
+                </svg>
+              </SVG>
+            </IconImportant>
+          </div>
+        </src__IconImportantWrapper>
+        <src__WarningTextWrapper>
+          <strong
+            className="src__WarningTextWrapper-sc-1sdopa3-2 eruNFl"
+          >
+            A very long warning message. This includes a lot of text to give a good representation of a more average length warning. That way you can see more than one line wrapping.
+          </strong>
+        </src__WarningTextWrapper>
+      </div>
     </src__StyledWarningText>
   </WarningText>
 </WarningTextWithKnobs>

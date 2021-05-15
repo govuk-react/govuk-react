@@ -1,21 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormGroup matches snapshot with error prop set: with error prop 1`] = `
-.c2 .c0:last-of-type {
-  margin-bottom: 0;
-}
-
 .c1 {
   margin-bottom: 20px;
   padding-left: 15px;
   border-left: 5px solid #d4351c;
 }
 
-.c1 .c0:last-of-type {
+.c0 .c0:last-of-type {
   margin-bottom: 0;
 }
 
-.c1 .c0 {
+.c1.c1 .c1 {
   padding: 0;
   border: 0;
 }
@@ -32,49 +28,11 @@ exports[`FormGroup matches snapshot with error prop set: with error prop 1`] = `
   <src__FormGroup
     error={true}
   >
-    <StyledComponent
-      error={true}
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "c0",
-            "isStatic": false,
-            "lastClassName": "c1",
-            "rules": Array [
-              "margin-bottom: 20px; @media only screen and (min-width: 641px) {
-  margin-bottom: 30px;
-}",
-              "& &:last-of-type {
-  margin-bottom: 0;
-}",
-              [Function],
-              [Function],
-            ],
-          },
-          "defaultProps": Object {
-            "error": false,
-          },
-          "displayName": "src__FormGroup",
-          "foldedComponentIds": Array [],
-          "propTypes": undefined,
-          "render": [Function],
-          "styledComponentId": "c0",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0 c1"
     >
-      <div
-        className="c0 c1"
-      >
-        FormGroup example
-      </div>
-    </StyledComponent>
+      FormGroup example
+    </div>
   </src__FormGroup>
 </FormGroupDocumented>
 `;
@@ -84,7 +42,7 @@ exports[`FormGroup matches snapshot: FormGroup 1`] = `
   margin-bottom: 20px;
 }
 
-.c1 .c0:last-of-type {
+.c0 .c0:last-of-type {
   margin-bottom: 0;
 }
 
@@ -100,49 +58,11 @@ exports[`FormGroup matches snapshot: FormGroup 1`] = `
   <src__FormGroup
     error={false}
   >
-    <StyledComponent
-      error={false}
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "c0",
-            "isStatic": false,
-            "lastClassName": "c1",
-            "rules": Array [
-              "margin-bottom: 20px; @media only screen and (min-width: 641px) {
-  margin-bottom: 30px;
-}",
-              "& &:last-of-type {
-  margin-bottom: 0;
-}",
-              [Function],
-              [Function],
-            ],
-          },
-          "defaultProps": Object {
-            "error": false,
-          },
-          "displayName": "src__FormGroup",
-          "foldedComponentIds": Array [],
-          "propTypes": undefined,
-          "render": [Function],
-          "styledComponentId": "c0",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0 c1"
     >
-      <div
-        className="c0 c1"
-      >
-        FormGroup example
-      </div>
-    </StyledComponent>
+      FormGroup example
+    </div>
   </src__FormGroup>
 </FormGroupDocumented>
 `;

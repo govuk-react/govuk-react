@@ -207,134 +207,57 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
   <src__StyledContainer
     errorText="example"
   >
-    <StyledComponent
-      errorText="example"
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__StyledContainer-sc-7o2d9e-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "display: flex; flex-direction: column;",
-              [Function],
-              [Function],
-            ],
-          },
-          "displayName": "src__StyledContainer",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__StyledContainer-sc-7o2d9e-0",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
     >
-      <div
-        className="c0"
+      <LabelText
+        errorText="example"
       >
-        <LabelText
+        <src__StyledLabelText
           errorText="example"
         >
-          <src__StyledLabelText
-            errorText="example"
+          <span
+            className="c1"
           >
-            <StyledComponent
-              errorText="example"
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "src__StyledLabelText-sc-12l0n4z-0",
-                    "isStatic": false,
-                    "lastClassName": "c1",
-                    "rules": Array [
-                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                      "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                      "display: block; clear: none; padding-bottom: 2px;",
-                      [Function],
-                      [Function],
-                    ],
-                  },
-                  "displayName": "src__StyledLabelText",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-            >
-              <span
-                className="c1"
-              >
-                example
-              </span>
-            </StyledComponent>
-          </src__StyledLabelText>
-        </LabelText>
-        <ErrorText
+            example
+          </span>
+        </src__StyledLabelText>
+      </LabelText>
+      <ErrorText
+        errorText="example"
+      >
+        <src__StyledError
           errorText="example"
         >
-          <src__StyledError
-            errorText="example"
+          <span
+            className="c2"
           >
-            <StyledComponent
-              errorText="example"
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "src__StyledError-q8g4f0-0",
-                    "isStatic": false,
-                    "lastClassName": "c2",
-                    "rules": Array [
-                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 700; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                      "display: block; margin-bottom: 15px; clear: both; color: #d4351c;",
-                      [Function],
-                    ],
-                  },
-                  "displayName": "src__StyledError",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "src__StyledError-q8g4f0-0",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-            >
-              <span
-                className="c2"
-              >
-                example
-              </span>
-            </StyledComponent>
-          </src__StyledError>
-        </ErrorText>
-        <MultiInputInput
+            example
+          </span>
+        </src__StyledError>
+      </ErrorText>
+      <MultiInputInput
+        defaultValues={
+          Object {
+            "day": undefined,
+            "month": undefined,
+            "year": undefined,
+          }
+        }
+        error={true}
+        names={
+          Object {
+            "day": undefined,
+            "month": undefined,
+            "year": undefined,
+          }
+        }
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value={Object {}}
+      >
+        <Input
           defaultValues={
             Object {
               "day": undefined,
@@ -343,6 +266,13 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
             }
           }
           error={true}
+          labels={
+            Object {
+              "day": "Day",
+              "month": "Month",
+              "year": "Year",
+            }
+          }
           names={
             Object {
               "day": undefined,
@@ -353,622 +283,144 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
+          refs={[Function]}
           value={Object {}}
         >
-          <Input
-            defaultValues={
-              Object {
-                "day": undefined,
-                "month": undefined,
-                "year": undefined,
-              }
-            }
-            error={true}
-            labels={
-              Object {
-                "day": "Day",
-                "month": "Month",
-                "year": "Year",
-              }
-            }
-            names={
-              Object {
-                "day": undefined,
-                "month": undefined,
-                "year": undefined,
-              }
-            }
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            refs={[Function]}
-            value={Object {}}
-          >
-            <input__StyledList>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "input__StyledList-sc-1yy0xju-1",
-                      "isStatic": true,
-                      "lastClassName": "c3",
-                      "rules": Array [
-                        "display: flex;",
-                      ],
-                    },
-                    "displayName": "input__StyledList",
-                    "foldedComponentIds": Array [],
-                    "render": [Function],
-                    "styledComponentId": "input__StyledList-sc-1yy0xju-1",
-                    "target": "div",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
+          <input__StyledList>
+            <div
+              className="c3"
+            >
+              <input__StyledLabel
+                year={false}
               >
-                <div
-                  className="c3"
+                <Label
+                  className="c4"
+                  error={false}
+                  year={false}
                 >
-                  <input__StyledLabel
+                  <src__StyledLabel
+                    className="c4"
+                    error={false}
                     year={false}
                   >
-                    <StyledComponent
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "input__StyledLabel-sc-1yy0xju-0",
-                            "isStatic": false,
-                            "lastClassName": "c7",
-                            "rules": Array [
-                              "margin-right: 20px; margin-bottom: 0;",
-                              [Function],
-                            ],
-                          },
-                          "displayName": "input__StyledLabel",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "input__StyledLabel-sc-1yy0xju-0",
-                          "target": [Function],
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      year={false}
+                    <label
+                      className="c5 c4"
                     >
-                      <Label
-                        className="c4"
-                        error={false}
-                        year={false}
-                      >
-                        <src__StyledLabel
-                          className="c4"
-                          error={false}
-                          year={false}
-                        >
-                          <StyledComponent
-                            className="c4"
-                            error={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "src__StyledLabel-sc-14n2scx-0",
-                                  "isStatic": false,
-                                  "lastClassName": "c5",
-                                  "rules": Array [
-                                    "display: flex; flex-direction: column; box-sizing: border-box; :after {
-  content: ''; display: table; clear: both;
-}",
-                                    [Function],
-                                    [Function],
-                                  ],
-                                },
-                                "displayName": "src__StyledLabel",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
-                                "target": "label",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            year={false}
+                      <LabelText>
+                        <src__StyledLabelText>
+                          <span
+                            className="c1"
                           >
-                            <label
-                              className="c4 c5"
-                            >
-                              <LabelText>
-                                <src__StyledLabelText>
-                                  <StyledComponent
-                                    forwardedComponent={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "attrs": Array [],
-                                        "componentStyle": ComponentStyle {
-                                          "componentId": "src__StyledLabelText-sc-12l0n4z-0",
-                                          "isStatic": false,
-                                          "lastClassName": "c1",
-                                          "rules": Array [
-                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                            "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                                            "display: block; clear: none; padding-bottom: 2px;",
-                                            [Function],
-                                            [Function],
-                                          ],
-                                        },
-                                        "displayName": "src__StyledLabelText",
-                                        "foldedComponentIds": Array [],
-                                        "render": [Function],
-                                        "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
-                                        "target": "span",
-                                        "toString": [Function],
-                                        "warnTooManyClasses": [Function],
-                                        "withComponent": [Function],
-                                      }
-                                    }
-                                    forwardedRef={null}
-                                  >
-                                    <span
-                                      className="c1"
-                                    >
-                                      Day
-                                    </span>
-                                  </StyledComponent>
-                                </src__StyledLabelText>
-                              </LabelText>
-                              <src__StyledInput
-                                error={true}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                              >
-                                <StyledComponent
-                                  error={true}
-                                  forwardedComponent={
-                                    Object {
-                                      "$$typeof": Symbol(react.forward_ref),
-                                      "attrs": Array [],
-                                      "componentStyle": ComponentStyle {
-                                        "componentId": "src__StyledInput-u8exb4-0",
-                                        "isStatic": false,
-                                        "lastClassName": "c6",
-                                        "rules": Array [
-                                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                          "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-}",
-                                          "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-  margin: 0; -webkit-appearance: none;
-} &[type=\\"number\\"] {
-  -moz-appearance: textfield;
-}",
-                                          [Function],
-                                          [Function],
-                                        ],
-                                      },
-                                      "displayName": "src__StyledInput",
-                                      "foldedComponentIds": Array [],
-                                      "render": [Function],
-                                      "styledComponentId": "src__StyledInput-u8exb4-0",
-                                      "target": "input",
-                                      "toString": [Function],
-                                      "warnTooManyClasses": [Function],
-                                      "withComponent": [Function],
-                                    }
-                                  }
-                                  forwardedRef={[Function]}
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                >
-                                  <input
-                                    className="c6"
-                                    onBlur={[Function]}
-                                    onChange={[Function]}
-                                    onFocus={[Function]}
-                                  />
-                                </StyledComponent>
-                              </src__StyledInput>
-                            </label>
-                          </StyledComponent>
-                        </src__StyledLabel>
-                      </Label>
-                    </StyledComponent>
-                  </input__StyledLabel>
-                  <input__StyledLabel
+                            Day
+                          </span>
+                        </src__StyledLabelText>
+                      </LabelText>
+                      <src__StyledInput
+                        error={true}
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                      >
+                        <input
+                          className="c6"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                        />
+                      </src__StyledInput>
+                    </label>
+                  </src__StyledLabel>
+                </Label>
+              </input__StyledLabel>
+              <input__StyledLabel
+                year={false}
+              >
+                <Label
+                  className="c4"
+                  error={false}
+                  year={false}
+                >
+                  <src__StyledLabel
+                    className="c4"
+                    error={false}
                     year={false}
                   >
-                    <StyledComponent
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "input__StyledLabel-sc-1yy0xju-0",
-                            "isStatic": false,
-                            "lastClassName": "c7",
-                            "rules": Array [
-                              "margin-right: 20px; margin-bottom: 0;",
-                              [Function],
-                            ],
-                          },
-                          "displayName": "input__StyledLabel",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "input__StyledLabel-sc-1yy0xju-0",
-                          "target": [Function],
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      year={false}
+                    <label
+                      className="c5 c4"
                     >
-                      <Label
-                        className="c4"
-                        error={false}
-                        year={false}
-                      >
-                        <src__StyledLabel
-                          className="c4"
-                          error={false}
-                          year={false}
-                        >
-                          <StyledComponent
-                            className="c4"
-                            error={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "src__StyledLabel-sc-14n2scx-0",
-                                  "isStatic": false,
-                                  "lastClassName": "c5",
-                                  "rules": Array [
-                                    "display: flex; flex-direction: column; box-sizing: border-box; :after {
-  content: ''; display: table; clear: both;
-}",
-                                    [Function],
-                                    [Function],
-                                  ],
-                                },
-                                "displayName": "src__StyledLabel",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
-                                "target": "label",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            year={false}
+                      <LabelText>
+                        <src__StyledLabelText>
+                          <span
+                            className="c1"
                           >
-                            <label
-                              className="c4 c5"
-                            >
-                              <LabelText>
-                                <src__StyledLabelText>
-                                  <StyledComponent
-                                    forwardedComponent={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "attrs": Array [],
-                                        "componentStyle": ComponentStyle {
-                                          "componentId": "src__StyledLabelText-sc-12l0n4z-0",
-                                          "isStatic": false,
-                                          "lastClassName": "c1",
-                                          "rules": Array [
-                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                            "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                                            "display: block; clear: none; padding-bottom: 2px;",
-                                            [Function],
-                                            [Function],
-                                          ],
-                                        },
-                                        "displayName": "src__StyledLabelText",
-                                        "foldedComponentIds": Array [],
-                                        "render": [Function],
-                                        "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
-                                        "target": "span",
-                                        "toString": [Function],
-                                        "warnTooManyClasses": [Function],
-                                        "withComponent": [Function],
-                                      }
-                                    }
-                                    forwardedRef={null}
-                                  >
-                                    <span
-                                      className="c1"
-                                    >
-                                      Month
-                                    </span>
-                                  </StyledComponent>
-                                </src__StyledLabelText>
-                              </LabelText>
-                              <src__StyledInput
-                                error={true}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                              >
-                                <StyledComponent
-                                  error={true}
-                                  forwardedComponent={
-                                    Object {
-                                      "$$typeof": Symbol(react.forward_ref),
-                                      "attrs": Array [],
-                                      "componentStyle": ComponentStyle {
-                                        "componentId": "src__StyledInput-u8exb4-0",
-                                        "isStatic": false,
-                                        "lastClassName": "c6",
-                                        "rules": Array [
-                                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                          "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-}",
-                                          "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-  margin: 0; -webkit-appearance: none;
-} &[type=\\"number\\"] {
-  -moz-appearance: textfield;
-}",
-                                          [Function],
-                                          [Function],
-                                        ],
-                                      },
-                                      "displayName": "src__StyledInput",
-                                      "foldedComponentIds": Array [],
-                                      "render": [Function],
-                                      "styledComponentId": "src__StyledInput-u8exb4-0",
-                                      "target": "input",
-                                      "toString": [Function],
-                                      "warnTooManyClasses": [Function],
-                                      "withComponent": [Function],
-                                    }
-                                  }
-                                  forwardedRef={[Function]}
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                >
-                                  <input
-                                    className="c6"
-                                    onBlur={[Function]}
-                                    onChange={[Function]}
-                                    onFocus={[Function]}
-                                  />
-                                </StyledComponent>
-                              </src__StyledInput>
-                            </label>
-                          </StyledComponent>
-                        </src__StyledLabel>
-                      </Label>
-                    </StyledComponent>
-                  </input__StyledLabel>
-                  <input__StyledLabel
+                            Month
+                          </span>
+                        </src__StyledLabelText>
+                      </LabelText>
+                      <src__StyledInput
+                        error={true}
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                      >
+                        <input
+                          className="c6"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                        />
+                      </src__StyledInput>
+                    </label>
+                  </src__StyledLabel>
+                </Label>
+              </input__StyledLabel>
+              <input__StyledLabel
+                year={true}
+              >
+                <Label
+                  className="c7"
+                  error={false}
+                  year={true}
+                >
+                  <src__StyledLabel
+                    className="c7"
+                    error={false}
                     year={true}
                   >
-                    <StyledComponent
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "input__StyledLabel-sc-1yy0xju-0",
-                            "isStatic": false,
-                            "lastClassName": "c7",
-                            "rules": Array [
-                              "margin-right: 20px; margin-bottom: 0;",
-                              [Function],
-                            ],
-                          },
-                          "displayName": "input__StyledLabel",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "input__StyledLabel-sc-1yy0xju-0",
-                          "target": [Function],
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      year={true}
+                    <label
+                      className="c5 c7"
                     >
-                      <Label
-                        className="c7"
-                        error={false}
-                        year={true}
-                      >
-                        <src__StyledLabel
-                          className="c7"
-                          error={false}
-                          year={true}
-                        >
-                          <StyledComponent
-                            className="c7"
-                            error={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "src__StyledLabel-sc-14n2scx-0",
-                                  "isStatic": false,
-                                  "lastClassName": "c5",
-                                  "rules": Array [
-                                    "display: flex; flex-direction: column; box-sizing: border-box; :after {
-  content: ''; display: table; clear: both;
-}",
-                                    [Function],
-                                    [Function],
-                                  ],
-                                },
-                                "displayName": "src__StyledLabel",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
-                                "target": "label",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            year={true}
+                      <LabelText>
+                        <src__StyledLabelText>
+                          <span
+                            className="c1"
                           >
-                            <label
-                              className="c7 c5"
-                            >
-                              <LabelText>
-                                <src__StyledLabelText>
-                                  <StyledComponent
-                                    forwardedComponent={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "attrs": Array [],
-                                        "componentStyle": ComponentStyle {
-                                          "componentId": "src__StyledLabelText-sc-12l0n4z-0",
-                                          "isStatic": false,
-                                          "lastClassName": "c1",
-                                          "rules": Array [
-                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                            "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                                            "display: block; clear: none; padding-bottom: 2px;",
-                                            [Function],
-                                            [Function],
-                                          ],
-                                        },
-                                        "displayName": "src__StyledLabelText",
-                                        "foldedComponentIds": Array [],
-                                        "render": [Function],
-                                        "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
-                                        "target": "span",
-                                        "toString": [Function],
-                                        "warnTooManyClasses": [Function],
-                                        "withComponent": [Function],
-                                      }
-                                    }
-                                    forwardedRef={null}
-                                  >
-                                    <span
-                                      className="c1"
-                                    >
-                                      Year
-                                    </span>
-                                  </StyledComponent>
-                                </src__StyledLabelText>
-                              </LabelText>
-                              <src__StyledInput
-                                error={true}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                              >
-                                <StyledComponent
-                                  error={true}
-                                  forwardedComponent={
-                                    Object {
-                                      "$$typeof": Symbol(react.forward_ref),
-                                      "attrs": Array [],
-                                      "componentStyle": ComponentStyle {
-                                        "componentId": "src__StyledInput-u8exb4-0",
-                                        "isStatic": false,
-                                        "lastClassName": "c6",
-                                        "rules": Array [
-                                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                          "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-}",
-                                          "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-  margin: 0; -webkit-appearance: none;
-} &[type=\\"number\\"] {
-  -moz-appearance: textfield;
-}",
-                                          [Function],
-                                          [Function],
-                                        ],
-                                      },
-                                      "displayName": "src__StyledInput",
-                                      "foldedComponentIds": Array [],
-                                      "render": [Function],
-                                      "styledComponentId": "src__StyledInput-u8exb4-0",
-                                      "target": "input",
-                                      "toString": [Function],
-                                      "warnTooManyClasses": [Function],
-                                      "withComponent": [Function],
-                                    }
-                                  }
-                                  forwardedRef={[Function]}
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                >
-                                  <input
-                                    className="c6"
-                                    onBlur={[Function]}
-                                    onChange={[Function]}
-                                    onFocus={[Function]}
-                                  />
-                                </StyledComponent>
-                              </src__StyledInput>
-                            </label>
-                          </StyledComponent>
-                        </src__StyledLabel>
-                      </Label>
-                    </StyledComponent>
-                  </input__StyledLabel>
-                </div>
-              </StyledComponent>
-            </input__StyledList>
-          </Input>
-        </MultiInputInput>
-      </div>
-    </StyledComponent>
+                            Year
+                          </span>
+                        </src__StyledLabelText>
+                      </LabelText>
+                      <src__StyledInput
+                        error={true}
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                      >
+                        <input
+                          className="c6"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                        />
+                      </src__StyledInput>
+                    </label>
+                  </src__StyledLabel>
+                </Label>
+              </input__StyledLabel>
+            </div>
+          </input__StyledList>
+        </Input>
+      </MultiInputInput>
+    </div>
   </src__StyledContainer>
 </DateField>
 `;
@@ -1151,80 +603,38 @@ exports[`DateField should support null value: null value 1`] = `
   }
 >
   <src__StyledContainer>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__StyledContainer-sc-7o2d9e-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "display: flex; flex-direction: column;",
-              [Function],
-              [Function],
-            ],
-          },
-          "displayName": "src__StyledContainer",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__StyledContainer-sc-7o2d9e-0",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
     >
-      <div
-        className="c0"
+      <LabelText>
+        <src__StyledLabelText>
+          <span
+            className="c1"
+          />
+        </src__StyledLabelText>
+      </LabelText>
+      <MultiInputInput
+        defaultValues={
+          Object {
+            "day": undefined,
+            "month": undefined,
+            "year": undefined,
+          }
+        }
+        error={false}
+        names={
+          Object {
+            "day": undefined,
+            "month": undefined,
+            "year": undefined,
+          }
+        }
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value={null}
       >
-        <LabelText>
-          <src__StyledLabelText>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "src__StyledLabelText-sc-12l0n4z-0",
-                    "isStatic": false,
-                    "lastClassName": "c1",
-                    "rules": Array [
-                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                      "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                      "display: block; clear: none; padding-bottom: 2px;",
-                      [Function],
-                      [Function],
-                    ],
-                  },
-                  "displayName": "src__StyledLabelText",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-            >
-              <span
-                className="c1"
-              />
-            </StyledComponent>
-          </src__StyledLabelText>
-        </LabelText>
-        <MultiInputInput
+        <Input
           defaultValues={
             Object {
               "day": undefined,
@@ -1233,6 +643,13 @@ exports[`DateField should support null value: null value 1`] = `
             }
           }
           error={false}
+          labels={
+            Object {
+              "day": "Day",
+              "month": "Month",
+              "year": "Year",
+            }
+          }
           names={
             Object {
               "day": undefined,
@@ -1243,622 +660,144 @@ exports[`DateField should support null value: null value 1`] = `
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
+          refs={[Function]}
           value={null}
         >
-          <Input
-            defaultValues={
-              Object {
-                "day": undefined,
-                "month": undefined,
-                "year": undefined,
-              }
-            }
-            error={false}
-            labels={
-              Object {
-                "day": "Day",
-                "month": "Month",
-                "year": "Year",
-              }
-            }
-            names={
-              Object {
-                "day": undefined,
-                "month": undefined,
-                "year": undefined,
-              }
-            }
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            refs={[Function]}
-            value={null}
-          >
-            <input__StyledList>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "input__StyledList-sc-1yy0xju-1",
-                      "isStatic": true,
-                      "lastClassName": "c2",
-                      "rules": Array [
-                        "display: flex;",
-                      ],
-                    },
-                    "displayName": "input__StyledList",
-                    "foldedComponentIds": Array [],
-                    "render": [Function],
-                    "styledComponentId": "input__StyledList-sc-1yy0xju-1",
-                    "target": "div",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
+          <input__StyledList>
+            <div
+              className="c2"
+            >
+              <input__StyledLabel
+                year={false}
               >
-                <div
-                  className="c2"
+                <Label
+                  className="c3"
+                  error={false}
+                  year={false}
                 >
-                  <input__StyledLabel
+                  <src__StyledLabel
+                    className="c3"
+                    error={false}
                     year={false}
                   >
-                    <StyledComponent
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "input__StyledLabel-sc-1yy0xju-0",
-                            "isStatic": false,
-                            "lastClassName": "c6",
-                            "rules": Array [
-                              "margin-right: 20px; margin-bottom: 0;",
-                              [Function],
-                            ],
-                          },
-                          "displayName": "input__StyledLabel",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "input__StyledLabel-sc-1yy0xju-0",
-                          "target": [Function],
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      year={false}
+                    <label
+                      className="c4 c3"
                     >
-                      <Label
-                        className="c3"
-                        error={false}
-                        year={false}
-                      >
-                        <src__StyledLabel
-                          className="c3"
-                          error={false}
-                          year={false}
-                        >
-                          <StyledComponent
-                            className="c3"
-                            error={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "src__StyledLabel-sc-14n2scx-0",
-                                  "isStatic": false,
-                                  "lastClassName": "c4",
-                                  "rules": Array [
-                                    "display: flex; flex-direction: column; box-sizing: border-box; :after {
-  content: ''; display: table; clear: both;
-}",
-                                    [Function],
-                                    [Function],
-                                  ],
-                                },
-                                "displayName": "src__StyledLabel",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
-                                "target": "label",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            year={false}
+                      <LabelText>
+                        <src__StyledLabelText>
+                          <span
+                            className="c1"
                           >
-                            <label
-                              className="c3 c4"
-                            >
-                              <LabelText>
-                                <src__StyledLabelText>
-                                  <StyledComponent
-                                    forwardedComponent={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "attrs": Array [],
-                                        "componentStyle": ComponentStyle {
-                                          "componentId": "src__StyledLabelText-sc-12l0n4z-0",
-                                          "isStatic": false,
-                                          "lastClassName": "c1",
-                                          "rules": Array [
-                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                            "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                                            "display: block; clear: none; padding-bottom: 2px;",
-                                            [Function],
-                                            [Function],
-                                          ],
-                                        },
-                                        "displayName": "src__StyledLabelText",
-                                        "foldedComponentIds": Array [],
-                                        "render": [Function],
-                                        "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
-                                        "target": "span",
-                                        "toString": [Function],
-                                        "warnTooManyClasses": [Function],
-                                        "withComponent": [Function],
-                                      }
-                                    }
-                                    forwardedRef={null}
-                                  >
-                                    <span
-                                      className="c1"
-                                    >
-                                      Day
-                                    </span>
-                                  </StyledComponent>
-                                </src__StyledLabelText>
-                              </LabelText>
-                              <src__StyledInput
-                                error={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                              >
-                                <StyledComponent
-                                  error={false}
-                                  forwardedComponent={
-                                    Object {
-                                      "$$typeof": Symbol(react.forward_ref),
-                                      "attrs": Array [],
-                                      "componentStyle": ComponentStyle {
-                                        "componentId": "src__StyledInput-u8exb4-0",
-                                        "isStatic": false,
-                                        "lastClassName": "c5",
-                                        "rules": Array [
-                                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                          "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-}",
-                                          "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-  margin: 0; -webkit-appearance: none;
-} &[type=\\"number\\"] {
-  -moz-appearance: textfield;
-}",
-                                          [Function],
-                                          [Function],
-                                        ],
-                                      },
-                                      "displayName": "src__StyledInput",
-                                      "foldedComponentIds": Array [],
-                                      "render": [Function],
-                                      "styledComponentId": "src__StyledInput-u8exb4-0",
-                                      "target": "input",
-                                      "toString": [Function],
-                                      "warnTooManyClasses": [Function],
-                                      "withComponent": [Function],
-                                    }
-                                  }
-                                  forwardedRef={[Function]}
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                >
-                                  <input
-                                    className="c5"
-                                    onBlur={[Function]}
-                                    onChange={[Function]}
-                                    onFocus={[Function]}
-                                  />
-                                </StyledComponent>
-                              </src__StyledInput>
-                            </label>
-                          </StyledComponent>
-                        </src__StyledLabel>
-                      </Label>
-                    </StyledComponent>
-                  </input__StyledLabel>
-                  <input__StyledLabel
+                            Day
+                          </span>
+                        </src__StyledLabelText>
+                      </LabelText>
+                      <src__StyledInput
+                        error={false}
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                      >
+                        <input
+                          className="c5"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                        />
+                      </src__StyledInput>
+                    </label>
+                  </src__StyledLabel>
+                </Label>
+              </input__StyledLabel>
+              <input__StyledLabel
+                year={false}
+              >
+                <Label
+                  className="c3"
+                  error={false}
+                  year={false}
+                >
+                  <src__StyledLabel
+                    className="c3"
+                    error={false}
                     year={false}
                   >
-                    <StyledComponent
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "input__StyledLabel-sc-1yy0xju-0",
-                            "isStatic": false,
-                            "lastClassName": "c6",
-                            "rules": Array [
-                              "margin-right: 20px; margin-bottom: 0;",
-                              [Function],
-                            ],
-                          },
-                          "displayName": "input__StyledLabel",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "input__StyledLabel-sc-1yy0xju-0",
-                          "target": [Function],
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      year={false}
+                    <label
+                      className="c4 c3"
                     >
-                      <Label
-                        className="c3"
-                        error={false}
-                        year={false}
-                      >
-                        <src__StyledLabel
-                          className="c3"
-                          error={false}
-                          year={false}
-                        >
-                          <StyledComponent
-                            className="c3"
-                            error={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "src__StyledLabel-sc-14n2scx-0",
-                                  "isStatic": false,
-                                  "lastClassName": "c4",
-                                  "rules": Array [
-                                    "display: flex; flex-direction: column; box-sizing: border-box; :after {
-  content: ''; display: table; clear: both;
-}",
-                                    [Function],
-                                    [Function],
-                                  ],
-                                },
-                                "displayName": "src__StyledLabel",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
-                                "target": "label",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            year={false}
+                      <LabelText>
+                        <src__StyledLabelText>
+                          <span
+                            className="c1"
                           >
-                            <label
-                              className="c3 c4"
-                            >
-                              <LabelText>
-                                <src__StyledLabelText>
-                                  <StyledComponent
-                                    forwardedComponent={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "attrs": Array [],
-                                        "componentStyle": ComponentStyle {
-                                          "componentId": "src__StyledLabelText-sc-12l0n4z-0",
-                                          "isStatic": false,
-                                          "lastClassName": "c1",
-                                          "rules": Array [
-                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                            "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                                            "display: block; clear: none; padding-bottom: 2px;",
-                                            [Function],
-                                            [Function],
-                                          ],
-                                        },
-                                        "displayName": "src__StyledLabelText",
-                                        "foldedComponentIds": Array [],
-                                        "render": [Function],
-                                        "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
-                                        "target": "span",
-                                        "toString": [Function],
-                                        "warnTooManyClasses": [Function],
-                                        "withComponent": [Function],
-                                      }
-                                    }
-                                    forwardedRef={null}
-                                  >
-                                    <span
-                                      className="c1"
-                                    >
-                                      Month
-                                    </span>
-                                  </StyledComponent>
-                                </src__StyledLabelText>
-                              </LabelText>
-                              <src__StyledInput
-                                error={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                              >
-                                <StyledComponent
-                                  error={false}
-                                  forwardedComponent={
-                                    Object {
-                                      "$$typeof": Symbol(react.forward_ref),
-                                      "attrs": Array [],
-                                      "componentStyle": ComponentStyle {
-                                        "componentId": "src__StyledInput-u8exb4-0",
-                                        "isStatic": false,
-                                        "lastClassName": "c5",
-                                        "rules": Array [
-                                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                          "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-}",
-                                          "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-  margin: 0; -webkit-appearance: none;
-} &[type=\\"number\\"] {
-  -moz-appearance: textfield;
-}",
-                                          [Function],
-                                          [Function],
-                                        ],
-                                      },
-                                      "displayName": "src__StyledInput",
-                                      "foldedComponentIds": Array [],
-                                      "render": [Function],
-                                      "styledComponentId": "src__StyledInput-u8exb4-0",
-                                      "target": "input",
-                                      "toString": [Function],
-                                      "warnTooManyClasses": [Function],
-                                      "withComponent": [Function],
-                                    }
-                                  }
-                                  forwardedRef={[Function]}
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                >
-                                  <input
-                                    className="c5"
-                                    onBlur={[Function]}
-                                    onChange={[Function]}
-                                    onFocus={[Function]}
-                                  />
-                                </StyledComponent>
-                              </src__StyledInput>
-                            </label>
-                          </StyledComponent>
-                        </src__StyledLabel>
-                      </Label>
-                    </StyledComponent>
-                  </input__StyledLabel>
-                  <input__StyledLabel
+                            Month
+                          </span>
+                        </src__StyledLabelText>
+                      </LabelText>
+                      <src__StyledInput
+                        error={false}
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                      >
+                        <input
+                          className="c5"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                        />
+                      </src__StyledInput>
+                    </label>
+                  </src__StyledLabel>
+                </Label>
+              </input__StyledLabel>
+              <input__StyledLabel
+                year={true}
+              >
+                <Label
+                  className="c6"
+                  error={false}
+                  year={true}
+                >
+                  <src__StyledLabel
+                    className="c6"
+                    error={false}
                     year={true}
                   >
-                    <StyledComponent
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "input__StyledLabel-sc-1yy0xju-0",
-                            "isStatic": false,
-                            "lastClassName": "c6",
-                            "rules": Array [
-                              "margin-right: 20px; margin-bottom: 0;",
-                              [Function],
-                            ],
-                          },
-                          "displayName": "input__StyledLabel",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "input__StyledLabel-sc-1yy0xju-0",
-                          "target": [Function],
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      year={true}
+                    <label
+                      className="c4 c6"
                     >
-                      <Label
-                        className="c6"
-                        error={false}
-                        year={true}
-                      >
-                        <src__StyledLabel
-                          className="c6"
-                          error={false}
-                          year={true}
-                        >
-                          <StyledComponent
-                            className="c6"
-                            error={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "src__StyledLabel-sc-14n2scx-0",
-                                  "isStatic": false,
-                                  "lastClassName": "c4",
-                                  "rules": Array [
-                                    "display: flex; flex-direction: column; box-sizing: border-box; :after {
-  content: ''; display: table; clear: both;
-}",
-                                    [Function],
-                                    [Function],
-                                  ],
-                                },
-                                "displayName": "src__StyledLabel",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
-                                "target": "label",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            year={true}
+                      <LabelText>
+                        <src__StyledLabelText>
+                          <span
+                            className="c1"
                           >
-                            <label
-                              className="c6 c4"
-                            >
-                              <LabelText>
-                                <src__StyledLabelText>
-                                  <StyledComponent
-                                    forwardedComponent={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "attrs": Array [],
-                                        "componentStyle": ComponentStyle {
-                                          "componentId": "src__StyledLabelText-sc-12l0n4z-0",
-                                          "isStatic": false,
-                                          "lastClassName": "c1",
-                                          "rules": Array [
-                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                            "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                                            "display: block; clear: none; padding-bottom: 2px;",
-                                            [Function],
-                                            [Function],
-                                          ],
-                                        },
-                                        "displayName": "src__StyledLabelText",
-                                        "foldedComponentIds": Array [],
-                                        "render": [Function],
-                                        "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
-                                        "target": "span",
-                                        "toString": [Function],
-                                        "warnTooManyClasses": [Function],
-                                        "withComponent": [Function],
-                                      }
-                                    }
-                                    forwardedRef={null}
-                                  >
-                                    <span
-                                      className="c1"
-                                    >
-                                      Year
-                                    </span>
-                                  </StyledComponent>
-                                </src__StyledLabelText>
-                              </LabelText>
-                              <src__StyledInput
-                                error={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                              >
-                                <StyledComponent
-                                  error={false}
-                                  forwardedComponent={
-                                    Object {
-                                      "$$typeof": Symbol(react.forward_ref),
-                                      "attrs": Array [],
-                                      "componentStyle": ComponentStyle {
-                                        "componentId": "src__StyledInput-u8exb4-0",
-                                        "isStatic": false,
-                                        "lastClassName": "c5",
-                                        "rules": Array [
-                                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                          "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-}",
-                                          "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-  margin: 0; -webkit-appearance: none;
-} &[type=\\"number\\"] {
-  -moz-appearance: textfield;
-}",
-                                          [Function],
-                                          [Function],
-                                        ],
-                                      },
-                                      "displayName": "src__StyledInput",
-                                      "foldedComponentIds": Array [],
-                                      "render": [Function],
-                                      "styledComponentId": "src__StyledInput-u8exb4-0",
-                                      "target": "input",
-                                      "toString": [Function],
-                                      "warnTooManyClasses": [Function],
-                                      "withComponent": [Function],
-                                    }
-                                  }
-                                  forwardedRef={[Function]}
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                >
-                                  <input
-                                    className="c5"
-                                    onBlur={[Function]}
-                                    onChange={[Function]}
-                                    onFocus={[Function]}
-                                  />
-                                </StyledComponent>
-                              </src__StyledInput>
-                            </label>
-                          </StyledComponent>
-                        </src__StyledLabel>
-                      </Label>
-                    </StyledComponent>
-                  </input__StyledLabel>
-                </div>
-              </StyledComponent>
-            </input__StyledList>
-          </Input>
-        </MultiInputInput>
-      </div>
-    </StyledComponent>
+                            Year
+                          </span>
+                        </src__StyledLabelText>
+                      </LabelText>
+                      <src__StyledInput
+                        error={false}
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                      >
+                        <input
+                          className="c5"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                        />
+                      </src__StyledInput>
+                    </label>
+                  </src__StyledLabel>
+                </Label>
+              </input__StyledLabel>
+            </div>
+          </input__StyledList>
+        </Input>
+      </MultiInputInput>
+    </div>
   </src__StyledContainer>
 </DateField>
 `;
@@ -2045,80 +984,44 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
   }
 >
   <src__StyledContainer>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__StyledContainer-sc-7o2d9e-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "display: flex; flex-direction: column;",
-              [Function],
-              [Function],
-            ],
-          },
-          "displayName": "src__StyledContainer",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__StyledContainer-sc-7o2d9e-0",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
     >
-      <div
-        className="c0"
+      <LabelText>
+        <src__StyledLabelText>
+          <span
+            className="c1"
+          />
+        </src__StyledLabelText>
+      </LabelText>
+      <MultiInputInput
+        defaultValues={
+          Object {
+            "day": undefined,
+            "month": undefined,
+            "year": undefined,
+          }
+        }
+        error={false}
+        names={
+          Object {
+            "day": undefined,
+            "month": undefined,
+            "year": undefined,
+          }
+        }
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value={
+          Object {
+            "day": "1",
+            "month": "2",
+            "year": "3",
+          }
+        }
       >
-        <LabelText>
-          <src__StyledLabelText>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "src__StyledLabelText-sc-12l0n4z-0",
-                    "isStatic": false,
-                    "lastClassName": "c1",
-                    "rules": Array [
-                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                      "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                      "display: block; clear: none; padding-bottom: 2px;",
-                      [Function],
-                      [Function],
-                    ],
-                  },
-                  "displayName": "src__StyledLabelText",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-            >
-              <span
-                className="c1"
-              />
-            </StyledComponent>
-          </src__StyledLabelText>
-        </LabelText>
-        <MultiInputInput
+        <Input
           defaultValues={
             Object {
               "day": undefined,
@@ -2127,6 +1030,13 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
             }
           }
           error={false}
+          labels={
+            Object {
+              "day": "Day",
+              "month": "Month",
+              "year": "Year",
+            }
+          }
           names={
             Object {
               "day": undefined,
@@ -2137,6 +1047,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
+          refs={[Function]}
           value={
             Object {
               "day": "1",
@@ -2145,635 +1056,147 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
             }
           }
         >
-          <Input
-            defaultValues={
-              Object {
-                "day": undefined,
-                "month": undefined,
-                "year": undefined,
-              }
-            }
-            error={false}
-            labels={
-              Object {
-                "day": "Day",
-                "month": "Month",
-                "year": "Year",
-              }
-            }
-            names={
-              Object {
-                "day": undefined,
-                "month": undefined,
-                "year": undefined,
-              }
-            }
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            refs={[Function]}
-            value={
-              Object {
-                "day": "1",
-                "month": "2",
-                "year": "3",
-              }
-            }
-          >
-            <input__StyledList>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "input__StyledList-sc-1yy0xju-1",
-                      "isStatic": true,
-                      "lastClassName": "c2",
-                      "rules": Array [
-                        "display: flex;",
-                      ],
-                    },
-                    "displayName": "input__StyledList",
-                    "foldedComponentIds": Array [],
-                    "render": [Function],
-                    "styledComponentId": "input__StyledList-sc-1yy0xju-1",
-                    "target": "div",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
+          <input__StyledList>
+            <div
+              className="c2"
+            >
+              <input__StyledLabel
+                year={false}
               >
-                <div
-                  className="c2"
+                <Label
+                  className="c3"
+                  error={false}
+                  year={false}
                 >
-                  <input__StyledLabel
+                  <src__StyledLabel
+                    className="c3"
+                    error={false}
                     year={false}
                   >
-                    <StyledComponent
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "input__StyledLabel-sc-1yy0xju-0",
-                            "isStatic": false,
-                            "lastClassName": "c6",
-                            "rules": Array [
-                              "margin-right: 20px; margin-bottom: 0;",
-                              [Function],
-                            ],
-                          },
-                          "displayName": "input__StyledLabel",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "input__StyledLabel-sc-1yy0xju-0",
-                          "target": [Function],
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      year={false}
+                    <label
+                      className="c4 c3"
                     >
-                      <Label
-                        className="c3"
-                        error={false}
-                        year={false}
-                      >
-                        <src__StyledLabel
-                          className="c3"
-                          error={false}
-                          year={false}
-                        >
-                          <StyledComponent
-                            className="c3"
-                            error={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "src__StyledLabel-sc-14n2scx-0",
-                                  "isStatic": false,
-                                  "lastClassName": "c4",
-                                  "rules": Array [
-                                    "display: flex; flex-direction: column; box-sizing: border-box; :after {
-  content: ''; display: table; clear: both;
-}",
-                                    [Function],
-                                    [Function],
-                                  ],
-                                },
-                                "displayName": "src__StyledLabel",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
-                                "target": "label",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            year={false}
+                      <LabelText>
+                        <src__StyledLabelText>
+                          <span
+                            className="c1"
                           >
-                            <label
-                              className="c3 c4"
-                            >
-                              <LabelText>
-                                <src__StyledLabelText>
-                                  <StyledComponent
-                                    forwardedComponent={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "attrs": Array [],
-                                        "componentStyle": ComponentStyle {
-                                          "componentId": "src__StyledLabelText-sc-12l0n4z-0",
-                                          "isStatic": false,
-                                          "lastClassName": "c1",
-                                          "rules": Array [
-                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                            "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                                            "display: block; clear: none; padding-bottom: 2px;",
-                                            [Function],
-                                            [Function],
-                                          ],
-                                        },
-                                        "displayName": "src__StyledLabelText",
-                                        "foldedComponentIds": Array [],
-                                        "render": [Function],
-                                        "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
-                                        "target": "span",
-                                        "toString": [Function],
-                                        "warnTooManyClasses": [Function],
-                                        "withComponent": [Function],
-                                      }
-                                    }
-                                    forwardedRef={null}
-                                  >
-                                    <span
-                                      className="c1"
-                                    >
-                                      Day
-                                    </span>
-                                  </StyledComponent>
-                                </src__StyledLabelText>
-                              </LabelText>
-                              <src__StyledInput
-                                error={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                value="1"
-                              >
-                                <StyledComponent
-                                  error={false}
-                                  forwardedComponent={
-                                    Object {
-                                      "$$typeof": Symbol(react.forward_ref),
-                                      "attrs": Array [],
-                                      "componentStyle": ComponentStyle {
-                                        "componentId": "src__StyledInput-u8exb4-0",
-                                        "isStatic": false,
-                                        "lastClassName": "c5",
-                                        "rules": Array [
-                                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                          "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-}",
-                                          "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-  margin: 0; -webkit-appearance: none;
-} &[type=\\"number\\"] {
-  -moz-appearance: textfield;
-}",
-                                          [Function],
-                                          [Function],
-                                        ],
-                                      },
-                                      "displayName": "src__StyledInput",
-                                      "foldedComponentIds": Array [],
-                                      "render": [Function],
-                                      "styledComponentId": "src__StyledInput-u8exb4-0",
-                                      "target": "input",
-                                      "toString": [Function],
-                                      "warnTooManyClasses": [Function],
-                                      "withComponent": [Function],
-                                    }
-                                  }
-                                  forwardedRef={[Function]}
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                  value="1"
-                                >
-                                  <input
-                                    className="c5"
-                                    onBlur={[Function]}
-                                    onChange={[Function]}
-                                    onFocus={[Function]}
-                                    value="1"
-                                  />
-                                </StyledComponent>
-                              </src__StyledInput>
-                            </label>
-                          </StyledComponent>
-                        </src__StyledLabel>
-                      </Label>
-                    </StyledComponent>
-                  </input__StyledLabel>
-                  <input__StyledLabel
+                            Day
+                          </span>
+                        </src__StyledLabelText>
+                      </LabelText>
+                      <src__StyledInput
+                        error={false}
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        value="1"
+                      >
+                        <input
+                          className="c5"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          value="1"
+                        />
+                      </src__StyledInput>
+                    </label>
+                  </src__StyledLabel>
+                </Label>
+              </input__StyledLabel>
+              <input__StyledLabel
+                year={false}
+              >
+                <Label
+                  className="c3"
+                  error={false}
+                  year={false}
+                >
+                  <src__StyledLabel
+                    className="c3"
+                    error={false}
                     year={false}
                   >
-                    <StyledComponent
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "input__StyledLabel-sc-1yy0xju-0",
-                            "isStatic": false,
-                            "lastClassName": "c6",
-                            "rules": Array [
-                              "margin-right: 20px; margin-bottom: 0;",
-                              [Function],
-                            ],
-                          },
-                          "displayName": "input__StyledLabel",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "input__StyledLabel-sc-1yy0xju-0",
-                          "target": [Function],
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      year={false}
+                    <label
+                      className="c4 c3"
                     >
-                      <Label
-                        className="c3"
-                        error={false}
-                        year={false}
-                      >
-                        <src__StyledLabel
-                          className="c3"
-                          error={false}
-                          year={false}
-                        >
-                          <StyledComponent
-                            className="c3"
-                            error={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "src__StyledLabel-sc-14n2scx-0",
-                                  "isStatic": false,
-                                  "lastClassName": "c4",
-                                  "rules": Array [
-                                    "display: flex; flex-direction: column; box-sizing: border-box; :after {
-  content: ''; display: table; clear: both;
-}",
-                                    [Function],
-                                    [Function],
-                                  ],
-                                },
-                                "displayName": "src__StyledLabel",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
-                                "target": "label",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            year={false}
+                      <LabelText>
+                        <src__StyledLabelText>
+                          <span
+                            className="c1"
                           >
-                            <label
-                              className="c3 c4"
-                            >
-                              <LabelText>
-                                <src__StyledLabelText>
-                                  <StyledComponent
-                                    forwardedComponent={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "attrs": Array [],
-                                        "componentStyle": ComponentStyle {
-                                          "componentId": "src__StyledLabelText-sc-12l0n4z-0",
-                                          "isStatic": false,
-                                          "lastClassName": "c1",
-                                          "rules": Array [
-                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                            "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                                            "display: block; clear: none; padding-bottom: 2px;",
-                                            [Function],
-                                            [Function],
-                                          ],
-                                        },
-                                        "displayName": "src__StyledLabelText",
-                                        "foldedComponentIds": Array [],
-                                        "render": [Function],
-                                        "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
-                                        "target": "span",
-                                        "toString": [Function],
-                                        "warnTooManyClasses": [Function],
-                                        "withComponent": [Function],
-                                      }
-                                    }
-                                    forwardedRef={null}
-                                  >
-                                    <span
-                                      className="c1"
-                                    >
-                                      Month
-                                    </span>
-                                  </StyledComponent>
-                                </src__StyledLabelText>
-                              </LabelText>
-                              <src__StyledInput
-                                error={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                value="2"
-                              >
-                                <StyledComponent
-                                  error={false}
-                                  forwardedComponent={
-                                    Object {
-                                      "$$typeof": Symbol(react.forward_ref),
-                                      "attrs": Array [],
-                                      "componentStyle": ComponentStyle {
-                                        "componentId": "src__StyledInput-u8exb4-0",
-                                        "isStatic": false,
-                                        "lastClassName": "c5",
-                                        "rules": Array [
-                                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                          "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-}",
-                                          "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-  margin: 0; -webkit-appearance: none;
-} &[type=\\"number\\"] {
-  -moz-appearance: textfield;
-}",
-                                          [Function],
-                                          [Function],
-                                        ],
-                                      },
-                                      "displayName": "src__StyledInput",
-                                      "foldedComponentIds": Array [],
-                                      "render": [Function],
-                                      "styledComponentId": "src__StyledInput-u8exb4-0",
-                                      "target": "input",
-                                      "toString": [Function],
-                                      "warnTooManyClasses": [Function],
-                                      "withComponent": [Function],
-                                    }
-                                  }
-                                  forwardedRef={[Function]}
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                  value="2"
-                                >
-                                  <input
-                                    className="c5"
-                                    onBlur={[Function]}
-                                    onChange={[Function]}
-                                    onFocus={[Function]}
-                                    value="2"
-                                  />
-                                </StyledComponent>
-                              </src__StyledInput>
-                            </label>
-                          </StyledComponent>
-                        </src__StyledLabel>
-                      </Label>
-                    </StyledComponent>
-                  </input__StyledLabel>
-                  <input__StyledLabel
+                            Month
+                          </span>
+                        </src__StyledLabelText>
+                      </LabelText>
+                      <src__StyledInput
+                        error={false}
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        value="2"
+                      >
+                        <input
+                          className="c5"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          value="2"
+                        />
+                      </src__StyledInput>
+                    </label>
+                  </src__StyledLabel>
+                </Label>
+              </input__StyledLabel>
+              <input__StyledLabel
+                year={true}
+              >
+                <Label
+                  className="c6"
+                  error={false}
+                  year={true}
+                >
+                  <src__StyledLabel
+                    className="c6"
+                    error={false}
                     year={true}
                   >
-                    <StyledComponent
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "input__StyledLabel-sc-1yy0xju-0",
-                            "isStatic": false,
-                            "lastClassName": "c6",
-                            "rules": Array [
-                              "margin-right: 20px; margin-bottom: 0;",
-                              [Function],
-                            ],
-                          },
-                          "displayName": "input__StyledLabel",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "input__StyledLabel-sc-1yy0xju-0",
-                          "target": [Function],
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      year={true}
+                    <label
+                      className="c4 c6"
                     >
-                      <Label
-                        className="c6"
-                        error={false}
-                        year={true}
-                      >
-                        <src__StyledLabel
-                          className="c6"
-                          error={false}
-                          year={true}
-                        >
-                          <StyledComponent
-                            className="c6"
-                            error={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "src__StyledLabel-sc-14n2scx-0",
-                                  "isStatic": false,
-                                  "lastClassName": "c4",
-                                  "rules": Array [
-                                    "display: flex; flex-direction: column; box-sizing: border-box; :after {
-  content: ''; display: table; clear: both;
-}",
-                                    [Function],
-                                    [Function],
-                                  ],
-                                },
-                                "displayName": "src__StyledLabel",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
-                                "target": "label",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            year={true}
+                      <LabelText>
+                        <src__StyledLabelText>
+                          <span
+                            className="c1"
                           >
-                            <label
-                              className="c6 c4"
-                            >
-                              <LabelText>
-                                <src__StyledLabelText>
-                                  <StyledComponent
-                                    forwardedComponent={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "attrs": Array [],
-                                        "componentStyle": ComponentStyle {
-                                          "componentId": "src__StyledLabelText-sc-12l0n4z-0",
-                                          "isStatic": false,
-                                          "lastClassName": "c1",
-                                          "rules": Array [
-                                            "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                            "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                                            "display: block; clear: none; padding-bottom: 2px;",
-                                            [Function],
-                                            [Function],
-                                          ],
-                                        },
-                                        "displayName": "src__StyledLabelText",
-                                        "foldedComponentIds": Array [],
-                                        "render": [Function],
-                                        "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
-                                        "target": "span",
-                                        "toString": [Function],
-                                        "warnTooManyClasses": [Function],
-                                        "withComponent": [Function],
-                                      }
-                                    }
-                                    forwardedRef={null}
-                                  >
-                                    <span
-                                      className="c1"
-                                    >
-                                      Year
-                                    </span>
-                                  </StyledComponent>
-                                </src__StyledLabelText>
-                              </LabelText>
-                              <src__StyledInput
-                                error={false}
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                value="3"
-                              >
-                                <StyledComponent
-                                  error={false}
-                                  forwardedComponent={
-                                    Object {
-                                      "$$typeof": Symbol(react.forward_ref),
-                                      "attrs": Array [],
-                                      "componentStyle": ComponentStyle {
-                                        "componentId": "src__StyledInput-u8exb4-0",
-                                        "isStatic": false,
-                                        "lastClassName": "c5",
-                                        "rules": Array [
-                                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                                          "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-}",
-                                          "box-sizing: border-box; width: 100%; height: 40px; margin-top: 0; padding: 5px; border: 2px solid #0b0c0c; border-radius: 0; appearance: none; &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-  margin: 0; -webkit-appearance: none;
-} &[type=\\"number\\"] {
-  -moz-appearance: textfield;
-}",
-                                          [Function],
-                                          [Function],
-                                        ],
-                                      },
-                                      "displayName": "src__StyledInput",
-                                      "foldedComponentIds": Array [],
-                                      "render": [Function],
-                                      "styledComponentId": "src__StyledInput-u8exb4-0",
-                                      "target": "input",
-                                      "toString": [Function],
-                                      "warnTooManyClasses": [Function],
-                                      "withComponent": [Function],
-                                    }
-                                  }
-                                  forwardedRef={[Function]}
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                  value="3"
-                                >
-                                  <input
-                                    className="c5"
-                                    onBlur={[Function]}
-                                    onChange={[Function]}
-                                    onFocus={[Function]}
-                                    value="3"
-                                  />
-                                </StyledComponent>
-                              </src__StyledInput>
-                            </label>
-                          </StyledComponent>
-                        </src__StyledLabel>
-                      </Label>
-                    </StyledComponent>
-                  </input__StyledLabel>
-                </div>
-              </StyledComponent>
-            </input__StyledList>
-          </Input>
-        </MultiInputInput>
-      </div>
-    </StyledComponent>
+                            Year
+                          </span>
+                        </src__StyledLabelText>
+                      </LabelText>
+                      <src__StyledInput
+                        error={false}
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        value="3"
+                      >
+                        <input
+                          className="c5"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          value="3"
+                        />
+                      </src__StyledInput>
+                    </label>
+                  </src__StyledLabel>
+                </Label>
+              </input__StyledLabel>
+            </div>
+          </input__StyledList>
+        </Input>
+      </MultiInputInput>
+    </div>
   </src__StyledContainer>
 </DateField>
 `;

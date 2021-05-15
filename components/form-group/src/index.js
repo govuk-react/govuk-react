@@ -17,8 +17,7 @@ const FormGroup = styled('div')(
       ? {
           paddingLeft: SPACING_POINTS[3],
           borderLeft: `${BORDER_WIDTH_FORM_GROUP_ERROR} solid ${ERROR_COLOUR}`,
-
-          '& &': {
+          '&& &': {
             padding: 0,
             border: 0,
           },

@@ -93,121 +93,24 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
   title="Example"
 >
   <src__StyledPanel>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__StyledPanel-sc-1u3l1af-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-              "box-sizing: border-box; margin-bottom: 15px; padding: 25px; border: 5px solid transparent; text-align: center; @media only screen and (min-width: 641px) {
-  padding: 35px;
-} color: #ffffff; background: #28a197;",
-              [Function],
-            ],
-          },
-          "displayName": "src__StyledPanel",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__StyledPanel-sc-1u3l1af-0",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
     >
-      <div
-        className="c0"
-      >
-        <src__StyledTitle>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__StyledTitle-sc-1u3l1af-1",
-                  "isStatic": true,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "margin-top: 0; margin-bottom: 30px; :last-child {
-  margin-bottom: 0;
-}",
-                    "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 32px; line-height: 1.15;
-} font-weight: 700; font-size: 32px; line-height: 1.09375; @media only screen and (min-width: 641px) {
-  font-size: 48px; line-height: 1.0416666666666667;
-}",
-                  ],
-                },
-                "displayName": "src__StyledTitle",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__StyledTitle-sc-1u3l1af-1",
-                "target": "h1",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-          >
-            <h1
-              className="c1"
-            >
-              Example
-            </h1>
-          </StyledComponent>
-        </src__StyledTitle>
-        <src__StyledBody>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__StyledBody-sc-1u3l1af-2",
-                  "isStatic": true,
-                  "lastClassName": "c2",
-                  "rules": Array [
-                    "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 24px; line-height: 1.05;
-} font-weight: 400; font-size: 24px; line-height: 1.0416666666666667; @media only screen and (min-width: 641px) {
-  font-size: 36px; line-height: 1.1111111111111112;
-}",
-                  ],
-                },
-                "displayName": "src__StyledBody",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__StyledBody-sc-1u3l1af-2",
-                "target": "div",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-          >
-            <div
-              className="c2"
-            >
-              body
-            </div>
-          </StyledComponent>
-        </src__StyledBody>
-      </div>
-    </StyledComponent>
+      <src__StyledTitle>
+        <h1
+          className="c1"
+        >
+          Example
+        </h1>
+      </src__StyledTitle>
+      <src__StyledBody>
+        <div
+          className="c2"
+        >
+          body
+        </div>
+      </src__StyledBody>
+    </div>
   </src__StyledPanel>
 </Panel>
 `;

@@ -25,43 +25,9 @@ exports[`SectionBreak matches snapshot: section break 1`] = `
       level="LARGE"
       visible={true}
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "src__SectionBreak-sc-1cm70tt-0",
-              "isStatic": false,
-              "lastClassName": "c0",
-              "rules": Array [
-                "margin: 0; border: 0;",
-                [Function],
-                [Function],
-              ],
-            },
-            "defaultProps": Object {
-              "visible": undefined,
-            },
-            "displayName": "src__SectionBreak",
-            "foldedComponentIds": Array [],
-            "propTypes": undefined,
-            "render": [Function],
-            "styledComponentId": "src__SectionBreak-sc-1cm70tt-0",
-            "target": "hr",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        level="LARGE"
-        visible={true}
-      >
-        <hr
-          className="c0"
-        />
-      </StyledComponent>
+      <hr
+        className="c0"
+      />
     </src__SectionBreak>
   </SectionBreakDocumented>
 </_default>

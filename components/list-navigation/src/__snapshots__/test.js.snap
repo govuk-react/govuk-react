@@ -11,14 +11,6 @@ exports[`ListNavigation matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 5px;
 }
 
-.c4 .c0 {
-  margin-top: 10px;
-}
-
-.c4 > .c2 {
-  margin-bottom: 5px;
-}
-
 .c1 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -33,7 +25,7 @@ exports[`ListNavigation matches wrapper snapshot: wrapper mount 1`] = `
   padding-left: 20px;
 }
 
-.c1 .c0 {
+.c0 .c0 {
   margin-top: 10px;
 }
 
@@ -91,94 +83,17 @@ exports[`ListNavigation matches wrapper snapshot: wrapper mount 1`] = `
       as="ul"
       listStyleType="square"
     >
-      <StyledComponent
-        as="ul"
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "c0",
-              "isStatic": false,
-              "lastClassName": "c1",
-              "rules": Array [
-                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                "margin-top: 0; & & {
-  margin-top: 10px;
-}",
-                [Function],
-                [Function],
-              ],
-            },
-            "defaultProps": Object {
-              "listStyleType": undefined,
-            },
-            "displayName": "src__OrderedList",
-            "foldedComponentIds": Array [],
-            "propTypes": undefined,
-            "render": [Function],
-            "styledComponentId": "c0",
-            "target": "ol",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        listStyleType="square"
+      <ul
+        className="c0 c1"
       >
-        <ul
-          className="c0 c1"
-        >
-          <src__ListItem>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "c2",
-                    "isStatic": false,
-                    "lastClassName": "c3",
-                    "rules": Array [
-                      "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                      "margin-bottom: 5px;",
-                      [Function],
-                    ],
-                  },
-                  "displayName": "src__ListItem",
-                  "foldedComponentIds": Array [],
-                  "propTypes": undefined,
-                  "render": [Function],
-                  "styledComponentId": "c2",
-                  "target": "li",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-            >
-              <li
-                className="c2 c3"
-              >
-                Example
-              </li>
-            </StyledComponent>
-          </src__ListItem>
-        </ul>
-      </StyledComponent>
+        <src__ListItem>
+          <li
+            className="c2 c3"
+          >
+            Example
+          </li>
+        </src__ListItem>
+      </ul>
     </src__OrderedList>
   </UnorderedList>
 </ListNavigation>

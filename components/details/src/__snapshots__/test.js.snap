@@ -13,7 +13,7 @@ exports[`details matches the Details snapshot: details 1`] = `
   display: block;
 }
 
-.c1 {
+.c2 {
   display: inline-block;
   position: relative;
   margin-bottom: 5px;
@@ -22,22 +22,22 @@ exports[`details matches the Details snapshot: details 1`] = `
   cursor: pointer;
 }
 
-.c1:hover {
+.c2:hover {
   color: #2b8cc4;
 }
 
-.c1:focus {
+.c2:focus {
   outline: 4px solid #ffdd00;
   outline-offset: -1px;
   color: #0b0c0c;
   background: #ffdd00;
 }
 
-.c1::-webkit-details-marker {
+.c2::-webkit-details-marker {
   display: none;
 }
 
-.c1:before {
+.c2:before {
   content: "";
   position: absolute;
   top: 0;
@@ -67,24 +67,24 @@ exports[`details matches the Details snapshot: details 1`] = `
   border-top-color: inherit;
 }
 
-.c2 {
+.c3 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c3 {
+.c4 {
   padding: 15px;
   padding-left: 20px;
   border-left: 5px solid #bfc1c3;
 }
 
-.c3 p {
+.c4 p {
   margin-top: 0;
   margin-bottom: 20px;
 }
 
-.c3 > :last-child,
-.c3 p:last-child {
+.c4 > :last-child,
+.c4 p:last-child {
   margin-bottom: 0;
 }
 
@@ -122,159 +122,31 @@ exports[`details matches the Details snapshot: details 1`] = `
     <src__StyledDetails
       open={false}
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "src__StyledDetails-sc-1omhdg3-0",
-              "isStatic": false,
-              "lastClassName": "c0",
-              "rules": Array [
-                "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                [Function],
-                "display: block;",
-              ],
-            },
-            "displayName": "src__StyledDetails",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "src__StyledDetails-sc-1omhdg3-0",
-            "target": "details",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
+      <details
+        className="c0"
         open={false}
       >
-        <details
-          className="c0"
-          open={false}
-        >
-          <src__StyledSummary>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "src__StyledSummary-sc-1omhdg3-1",
-                    "isStatic": true,
-                    "lastClassName": "c1",
-                    "rules": Array [
-                      "display: inline-block; position: relative; margin-bottom: 5px; padding-left: 25px; color: #1d70b8; cursor: pointer; :hover {
-  color: #2b8cc4;
-} :focus {
-  outline: 4px solid #ffdd00; outline-offset: -1px; color: #0b0c0c; background: #ffdd00;
-} ::-webkit-details-marker {
-  display: none;
-} :before {
-  content: \\"\\"; position: absolute; top: 0; bottom: 0; left: 0; margin: auto; display: block; width: 0; height: 0; border-style: solid; border-color: transparent; clip-path: polygon(0% 0%, 100% 50%, 0% 100%); border-width: 7px 0 7px 12.124px; border-left-color: inherit; [open] > & {
-  display: block; width: 0; height: 0; border-style: solid; border-color: transparent; clip-path: polygon(0% 0%, 50% 100%, 100% 0%); border-width: 12.124px 7px 0 7px; border-top-color: inherit;
-}
-}",
-                    ],
-                  },
-                  "displayName": "src__StyledSummary",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "src__StyledSummary-sc-1omhdg3-1",
-                  "target": "summary",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-            >
-              <summary
-                className="c1"
-              >
-                <src__SummaryText>
-                  <StyledComponent
-                    forwardedComponent={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "attrs": Array [],
-                        "componentStyle": ComponentStyle {
-                          "componentId": "src__SummaryText-sc-1omhdg3-2",
-                          "isStatic": true,
-                          "lastClassName": "c2",
-                          "rules": Array [
-                            "text-decoration: underline;",
-                          ],
-                        },
-                        "displayName": "src__SummaryText",
-                        "foldedComponentIds": Array [],
-                        "render": [Function],
-                        "styledComponentId": "src__SummaryText-sc-1omhdg3-2",
-                        "target": "span",
-                        "toString": [Function],
-                        "warnTooManyClasses": [Function],
-                        "withComponent": [Function],
-                      }
-                    }
-                    forwardedRef={null}
-                  >
-                    <span
-                      className="c2"
-                    >
-                      Help with nationality
-                    </span>
-                  </StyledComponent>
-                </src__SummaryText>
-              </summary>
-            </StyledComponent>
-          </src__StyledSummary>
-          <src__DetailsText>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "src__DetailsText-sc-1omhdg3-3",
-                    "isStatic": true,
-                    "lastClassName": "c3",
-                    "rules": Array [
-                      "padding: 15px; padding-left: 20px; border-left: 5px solid #bfc1c3; p {
-  margin-top: 0; margin-bottom: 20px;
-} > :last-child, p:last-child {
-  margin-bottom: 0;
-}",
-                    ],
-                  },
-                  "displayName": "src__DetailsText",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "src__DetailsText-sc-1omhdg3-3",
-                  "target": "div",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-            >
-              <div
+        <src__StyledSummary>
+          <summary
+            className="c1 c2"
+          >
+            <src__SummaryText>
+              <span
                 className="c3"
               >
-                If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
-              </div>
-            </StyledComponent>
-          </src__DetailsText>
-        </details>
-      </StyledComponent>
+                Help with nationality
+              </span>
+            </src__SummaryText>
+          </summary>
+        </src__StyledSummary>
+        <src__DetailsText>
+          <div
+            className="c4"
+          >
+            If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+          </div>
+        </src__DetailsText>
+      </details>
     </src__StyledDetails>
   </Details>
 </DetailsSimple>

@@ -27,40 +27,9 @@ exports[`Fieldset matches snapshot: Fieldset 1`] = `
 
 <FieldsetDocumented>
   <src__Fieldset>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "Legend": [Function],
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__Fieldset-lbun2a-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "border: 0; &:after {
-  content: \\"\\"; display: block; clear: both;
-}",
-              [Function],
-            ],
-          },
-          "displayName": "src__Fieldset",
-          "foldedComponentIds": Array [],
-          "propTypes": undefined,
-          "render": [Function],
-          "styledComponentId": "src__Fieldset-lbun2a-0",
-          "target": "fieldset",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-    >
-      <fieldset
-        className="c0"
-      />
-    </StyledComponent>
+    <fieldset
+      className="c0"
+    />
   </src__Fieldset>
 </FieldsetDocumented>
 `;

@@ -15,11 +15,11 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
   padding-left: 0;
 }
 
-.c2 .c1 {
+.c1 .c1 {
   margin-top: 10px;
 }
 
-.c2 > .c4 {
+.c2 > .src__ListItem-sc-14amfma-0 {
   margin-bottom: 5px;
 }
 
@@ -73,276 +73,68 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
   }
 >
   <src__StyledContainer>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__StyledContainer-sc-7giwxu-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif;",
-              [Function],
-            ],
-          },
-          "displayName": "src__StyledContainer",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__StyledContainer-sc-7giwxu-0",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
     >
-      <div
-        className="c0"
-      >
-        <src__StyledContainer>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__StyledContainer-sc-7giwxu-0",
-                  "isStatic": false,
-                  "lastClassName": "c0",
-                  "rules": Array [
-                    "font-family: \\"nta\\", Arial, sans-serif;",
-                    [Function],
-                  ],
-                },
-                "displayName": "src__StyledContainer",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__StyledContainer-sc-7giwxu-0",
-                "target": "div",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
+      <src__StyledContainer>
+        <div
+          className="c0"
+        />
+      </src__StyledContainer>
+      <src__StyledContainer>
+        <div
+          className="c0"
+        >
+          <div>
+            <p
+              style={
+                Object {
+                  "marginBottom": 0,
+                }
               }
-            }
-            forwardedRef={null}
-          >
-            <div
-              className="c0"
-            />
-          </StyledComponent>
-        </src__StyledContainer>
-        <src__StyledContainer>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__StyledContainer-sc-7giwxu-0",
-                  "isStatic": false,
-                  "lastClassName": "c0",
-                  "rules": Array [
-                    "font-family: \\"nta\\", Arial, sans-serif;",
-                    [Function],
-                  ],
-                },
-                "displayName": "src__StyledContainer",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__StyledContainer-sc-7giwxu-0",
-                "target": "div",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-          >
-            <div
-              className="c0"
             >
-              <div>
-                <p
-                  style={
-                    Object {
-                      "marginBottom": 0,
-                    }
-                  }
+              Part of:
+            </p>
+            <UnorderedList
+              listStyleType="none"
+            >
+              <src__OrderedList
+                as="ul"
+                listStyleType="none"
+              >
+                <ul
+                  className="c1 c2"
                 >
-                  Part of:
-                </p>
-                <UnorderedList
-                  listStyleType="none"
-                >
-                  <src__OrderedList
-                    as="ul"
-                    listStyleType="none"
+                  <src__StyledDefinition
+                    key="0"
                   >
-                    <StyledComponent
-                      as="ul"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "c1",
-                            "isStatic": false,
-                            "lastClassName": "c2",
-                            "rules": Array [
-                              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                              "color: #0b0c0c; @media print {
-  color: #000;
-}",
-                              "margin-top: 0; & & {
-  margin-top: 10px;
-}",
-                              [Function],
-                              [Function],
-                            ],
-                          },
-                          "defaultProps": Object {
-                            "listStyleType": undefined,
-                          },
-                          "displayName": "src__OrderedList",
-                          "foldedComponentIds": Array [],
-                          "propTypes": undefined,
-                          "render": [Function],
-                          "styledComponentId": "c1",
-                          "target": "ol",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      listStyleType="none"
+                    <li
+                      className="c3"
                     >
-                      <ul
-                        className="c1 c2"
-                      >
-                        <src__StyledDefinition
-                          key="0"
-                        >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "src__StyledDefinition-sc-7giwxu-1",
-                                  "isStatic": true,
-                                  "lastClassName": "c3",
-                                  "rules": Array [
-                                    "font-size: 24px; font-weight: 700; line-height: 1.25; > a {
-  text-decoration: none;
-}",
-                                  ],
-                                },
-                                "displayName": "src__StyledDefinition",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "src__StyledDefinition-sc-7giwxu-1",
-                                "target": "li",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                          >
-                            <li
-                              className="c3"
-                            >
-                              example
-                            </li>
-                          </StyledComponent>
-                        </src__StyledDefinition>
-                        <src__StyledDefinition
-                          key="1"
-                        >
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "src__StyledDefinition-sc-7giwxu-1",
-                                  "isStatic": true,
-                                  "lastClassName": "c3",
-                                  "rules": Array [
-                                    "font-size: 24px; font-weight: 700; line-height: 1.25; > a {
-  text-decoration: none;
-}",
-                                  ],
-                                },
-                                "displayName": "src__StyledDefinition",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "src__StyledDefinition-sc-7giwxu-1",
-                                "target": "li",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                          >
-                            <li
-                              className="c3"
-                            >
-                              exampleexample
-                            </li>
-                          </StyledComponent>
-                        </src__StyledDefinition>
-                      </ul>
-                    </StyledComponent>
-                  </src__OrderedList>
-                </UnorderedList>
-              </div>
-            </div>
-          </StyledComponent>
-        </src__StyledContainer>
-        <src__StyledContainer>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__StyledContainer-sc-7giwxu-0",
-                  "isStatic": false,
-                  "lastClassName": "c0",
-                  "rules": Array [
-                    "font-family: \\"nta\\", Arial, sans-serif;",
-                    [Function],
-                  ],
-                },
-                "displayName": "src__StyledContainer",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__StyledContainer-sc-7giwxu-0",
-                "target": "div",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-          >
-            <div
-              className="c0"
-            />
-          </StyledComponent>
-        </src__StyledContainer>
-      </div>
-    </StyledComponent>
+                      example
+                    </li>
+                  </src__StyledDefinition>
+                  <src__StyledDefinition
+                    key="1"
+                  >
+                    <li
+                      className="c3"
+                    >
+                      exampleexample
+                    </li>
+                  </src__StyledDefinition>
+                </ul>
+              </src__OrderedList>
+            </UnorderedList>
+          </div>
+        </div>
+      </src__StyledContainer>
+      <src__StyledContainer>
+        <div
+          className="c0"
+        />
+      </src__StyledContainer>
+    </div>
   </src__StyledContainer>
 </DocumentFooterMetadata>
 `;

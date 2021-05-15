@@ -21,6 +21,30 @@ Array [
   }
 }
 
+@media only screen and (min-width:641px) {
+
+}
+
+@media only screen and (min-width:641px) {
+
+}
+
+@media only screen and (min-width:641px) {
+
+}
+
+@media only screen and (min-width:769px) {
+
+}
+
+@media only screen and (min-width:641px) {
+
+}
+
+@media only screen and (min-width:769px) {
+
+}
+
 <GridCol
     columnFull={false}
     columnOneHalf={false}
@@ -39,51 +63,21 @@ Array [
       columnTwoThirds={false}
       setWidth="one-quarter"
     >
-      <StyledComponent
-        columnFull={false}
-        columnOneHalf={false}
-        columnOneQuarter={false}
-        columnOneThird={false}
-        columnThreeQuarters={false}
-        columnTwoThirds={false}
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "src__StyledColumn-sc-1d2lq4e-0",
-              "isStatic": false,
-              "lastClassName": "iQyYKZ",
-              "rules": Array [
-                "box-sizing: border-box; padding-right: 15px; padding-left: 15px;",
-                [Function],
-              ],
-            },
-            "displayName": "src__StyledColumn",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "src__StyledColumn-sc-1d2lq4e-0",
-            "target": "div",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        setWidth="one-quarter"
+      <div
+        className="c0"
       >
-        <div
-          className="c0"
-        >
-          example
-        </div>
-      </StyledComponent>
+        example
+      </div>
     </src__StyledColumn>
   </GridCol>,
   .c0 {
   box-sizing: border-box;
   padding-right: 15px;
   padding-left: 15px;
+}
+
+@media only screen and (min-width:641px) {
+
 }
 
 @media only screen and (min-width:641px) {
@@ -97,6 +91,26 @@ Array [
     -ms-flex-negative: 0;
     flex-shrink: 0;
   }
+}
+
+@media only screen and (min-width:641px) {
+
+}
+
+@media only screen and (min-width:641px) {
+
+}
+
+@media only screen and (min-width:769px) {
+
+}
+
+@media only screen and (min-width:641px) {
+
+}
+
+@media only screen and (min-width:769px) {
+
 }
 
 <GridCol
@@ -117,51 +131,25 @@ Array [
       columnTwoThirds={false}
       setWidth="three-quarters"
     >
-      <StyledComponent
-        columnFull={false}
-        columnOneHalf={false}
-        columnOneQuarter={false}
-        columnOneThird={false}
-        columnThreeQuarters={false}
-        columnTwoThirds={false}
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "src__StyledColumn-sc-1d2lq4e-0",
-              "isStatic": false,
-              "lastClassName": "iQyYKZ",
-              "rules": Array [
-                "box-sizing: border-box; padding-right: 15px; padding-left: 15px;",
-                [Function],
-              ],
-            },
-            "displayName": "src__StyledColumn",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "src__StyledColumn-sc-1d2lq4e-0",
-            "target": "div",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        setWidth="three-quarters"
+      <div
+        className="c0"
       >
-        <div
-          className="c0"
-        >
-          example
-        </div>
-      </StyledComponent>
+        example
+      </div>
     </src__StyledColumn>
   </GridCol>,
   .c0 {
   box-sizing: border-box;
   padding-right: 15px;
   padding-left: 15px;
+}
+
+@media only screen and (min-width:641px) {
+
+}
+
+@media only screen and (min-width:641px) {
+
 }
 
 @media only screen and (min-width:641px) {
@@ -175,6 +163,22 @@ Array [
     -ms-flex-negative: 0;
     flex-shrink: 0;
   }
+}
+
+@media only screen and (min-width:641px) {
+
+}
+
+@media only screen and (min-width:769px) {
+
+}
+
+@media only screen and (min-width:641px) {
+
+}
+
+@media only screen and (min-width:769px) {
+
 }
 
 <GridCol
@@ -195,51 +199,29 @@ Array [
       columnTwoThirds={false}
       setWidth="90%"
     >
-      <StyledComponent
-        columnFull={false}
-        columnOneHalf={false}
-        columnOneQuarter={false}
-        columnOneThird={false}
-        columnThreeQuarters={false}
-        columnTwoThirds={false}
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "src__StyledColumn-sc-1d2lq4e-0",
-              "isStatic": false,
-              "lastClassName": "iQyYKZ",
-              "rules": Array [
-                "box-sizing: border-box; padding-right: 15px; padding-left: 15px;",
-                [Function],
-              ],
-            },
-            "displayName": "src__StyledColumn",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "src__StyledColumn-sc-1d2lq4e-0",
-            "target": "div",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        setWidth="90%"
+      <div
+        className="c0"
       >
-        <div
-          className="c0"
-        >
-          example
-        </div>
-      </StyledComponent>
+        example
+      </div>
     </src__StyledColumn>
   </GridCol>,
   .c0 {
   box-sizing: border-box;
   padding-right: 15px;
   padding-left: 15px;
+}
+
+@media only screen and (min-width:641px) {
+
+}
+
+@media only screen and (min-width:641px) {
+
+}
+
+@media only screen and (min-width:641px) {
+
 }
 
 @media only screen and (min-width:641px) {
@@ -268,6 +250,14 @@ Array [
   }
 }
 
+@media only screen and (min-width:641px) {
+
+}
+
+@media only screen and (min-width:769px) {
+
+}
+
 <GridCol
     columnFull={false}
     columnOneHalf={false}
@@ -288,52 +278,37 @@ Array [
       setDesktopWidth="one-quarter"
       setWidth="one-third"
     >
-      <StyledComponent
-        columnFull={false}
-        columnOneHalf={false}
-        columnOneQuarter={false}
-        columnOneThird={false}
-        columnThreeQuarters={false}
-        columnTwoThirds={false}
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "src__StyledColumn-sc-1d2lq4e-0",
-              "isStatic": false,
-              "lastClassName": "iQyYKZ",
-              "rules": Array [
-                "box-sizing: border-box; padding-right: 15px; padding-left: 15px;",
-                [Function],
-              ],
-            },
-            "displayName": "src__StyledColumn",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "src__StyledColumn-sc-1d2lq4e-0",
-            "target": "div",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        setDesktopWidth="one-quarter"
-        setWidth="one-third"
+      <div
+        className="c0"
       >
-        <div
-          className="c0"
-        >
-          example
-        </div>
-      </StyledComponent>
+        example
+      </div>
     </src__StyledColumn>
   </GridCol>,
   .c0 {
   box-sizing: border-box;
   padding-right: 15px;
   padding-left: 15px;
+}
+
+@media only screen and (min-width:641px) {
+
+}
+
+@media only screen and (min-width:641px) {
+
+}
+
+@media only screen and (min-width:641px) {
+
+}
+
+@media only screen and (min-width:641px) {
+
+}
+
+@media only screen and (min-width:769px) {
+
 }
 
 @media only screen and (min-width:641px) {
@@ -379,45 +354,11 @@ Array [
       columnTwoThirds={false}
       setDesktopWidth="one-third"
     >
-      <StyledComponent
-        columnFull={false}
-        columnOneHalf={false}
-        columnOneQuarter={false}
-        columnOneThird={false}
-        columnThreeQuarters={false}
-        columnTwoThirds={false}
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "src__StyledColumn-sc-1d2lq4e-0",
-              "isStatic": false,
-              "lastClassName": "c0",
-              "rules": Array [
-                "box-sizing: border-box; padding-right: 15px; padding-left: 15px;",
-                [Function],
-              ],
-            },
-            "displayName": "src__StyledColumn",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "src__StyledColumn-sc-1d2lq4e-0",
-            "target": "div",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        setDesktopWidth="one-third"
+      <div
+        className="c0"
       >
-        <div
-          className="c0"
-        >
-          example
-        </div>
-      </StyledComponent>
+        example
+      </div>
     </src__StyledColumn>
   </GridCol>,
 ]
@@ -458,44 +399,11 @@ exports[`GridCol simple render matches snapshot: GridCol simple example 1`] = `
     columnThreeQuarters={false}
     columnTwoThirds={false}
   >
-    <StyledComponent
-      columnFull={false}
-      columnOneHalf={false}
-      columnOneQuarter={false}
-      columnOneThird={false}
-      columnThreeQuarters={false}
-      columnTwoThirds={false}
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__StyledColumn-sc-1d2lq4e-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "box-sizing: border-box; padding-right: 15px; padding-left: 15px;",
-              [Function],
-            ],
-          },
-          "displayName": "src__StyledColumn",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__StyledColumn-sc-1d2lq4e-0",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
     >
-      <div
-        className="c0"
-      >
-        example
-      </div>
-    </StyledComponent>
+      example
+    </div>
   </src__StyledColumn>
 </GridCol>
 `;

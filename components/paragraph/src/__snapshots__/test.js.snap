@@ -1,68 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Paragraph matches wrapper snapshot 1`] = `
-.c0 {
-  margin: 0;
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.1428571428571428;
-  margin-bottom: 15px;
-}
-
-.c0 > p {
-  margin: 0;
-}
-
-.c0 > p > code {
-  padding: 0.2em 0.4em;
-  margin: 0;
-  font-size: 85%;
-  background-color: rgba(27,31,35,0.05);
-  border-radius: 3px;
-}
-
-.c0 > pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  background-color: #f6f8fa;
-  border-radius: 3px;
-}
-
-.c0 > pre > code {
-  display: inline;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  overflow: visible;
-  line-height: inherit;
-  word-wrap: normal;
-}
-
-@media print {
-  .c0 {
-    font-size: 14px;
-    line-height: 1.2;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c0 {
-    font-size: 16px;
-    line-height: 1.25;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c0 {
-    margin-bottom: 20px;
-  }
-}
-
 <Paragraph
   linkRenderer={[Function]}
   supportingText={true}
@@ -90,7 +28,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
     source="Some basic text"
     supportingText={true}
   >
-    <StyledComponent
+    <ReactMarkdown
       allowedTypes={
         Array [
           "paragraph",
@@ -102,100 +40,12 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
           "text",
         ]
       }
+      astPlugins={Array []}
+      className="src__StyledParagraph-dkdnni-0 iCtqav"
       escapeHtml={false}
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__StyledParagraph-dkdnni-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "margin: 0; > p {
-  margin: 0;
-} > p > code {
-  padding: 0.2em 0.4em; margin: 0; font-size: 85%; background-color: rgba(27,31,35,0.05); border-radius: 3px;
-} > pre {
-  padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #f6f8fa; border-radius: 3px;
-} > pre > code {
-  display: inline; padding: 0; margin: 0; border: 0; overflow: visible; line-height: inherit; word-wrap: normal;
-}",
-              [Function],
-              [Function],
-            ],
-          },
-          "displayName": "src__StyledParagraph",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "renderers": Object {
-            "blockquote": "blockquote",
-            "break": "br",
-            "code": [Function],
-            "definition": [Function],
-            "delete": "del",
-            "emphasis": "em",
-            "heading": [Function],
-            "html": [Function],
-            "image": "img",
-            "imageReference": "img",
-            "inlineCode": [Function],
-            "link": "a",
-            "linkReference": "a",
-            "list": [Function],
-            "listItem": [Function],
-            "paragraph": "p",
-            "parsedHtml": [Function],
-            "root": [Function],
-            "strong": "strong",
-            "table": [Function],
-            "tableBody": [Function],
-            "tableCell": [Function],
-            "tableHead": [Function],
-            "tableRow": [Function],
-            "text": [Function],
-            "thematicBreak": "hr",
-            "virtualHtml": [Function],
-          },
-          "styledComponentId": "src__StyledParagraph-dkdnni-0",
-          "target": [Function],
-          "toString": [Function],
-          "types": Array [
-            "break",
-            "paragraph",
-            "emphasis",
-            "strong",
-            "thematicBreak",
-            "blockquote",
-            "delete",
-            "link",
-            "image",
-            "linkReference",
-            "imageReference",
-            "table",
-            "tableHead",
-            "tableBody",
-            "tableRow",
-            "tableCell",
-            "root",
-            "text",
-            "list",
-            "listItem",
-            "definition",
-            "heading",
-            "inlineCode",
-            "code",
-            "html",
-            "virtualHtml",
-            "parsedHtml",
-          ],
-          "uriTransformer": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
       linkRenderer={[Function]}
+      plugins={Array []}
+      rawSourcePos={false}
       renderers={
         Object {
           "link": [Function],
@@ -203,59 +53,31 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
       }
       skipHtml={true}
       source="Some basic text"
+      sourcePos={false}
       supportingText={true}
+      transformLinkUri={[Function]}
     >
-      <ReactMarkdown
-        allowedTypes={
-          Array [
-            "paragraph",
-            "emphasis",
-            "strong",
-            "link",
-            "inlineCode",
-            "code",
-            "text",
-          ]
-        }
-        astPlugins={Array []}
-        className="c0"
-        escapeHtml={false}
-        linkRenderer={[Function]}
-        plugins={Array []}
-        rawSourcePos={false}
-        renderers={
-          Object {
-            "link": [Function],
-          }
-        }
-        skipHtml={true}
-        source="Some basic text"
-        sourcePos={false}
-        supportingText={true}
-        transformLinkUri={[Function]}
+      <Root
+        className="src__StyledParagraph-dkdnni-0 iCtqav"
+        key="root-1-1"
       >
-        <Root
-          className="c0"
-          key="root-1-1"
+        <div
+          className="src__StyledParagraph-dkdnni-0 iCtqav"
         >
-          <div
-            className="c0"
+          <p
+            key="paragraph-1-1"
           >
-            <p
-              key="paragraph-1-1"
+            <TextRenderer
+              key="text-1-1"
+              nodeKey="text-1-1"
+              value="Some basic text"
             >
-              <TextRenderer
-                key="text-1-1"
-                nodeKey="text-1-1"
-                value="Some basic text"
-              >
-                Some basic text
-              </TextRenderer>
-            </p>
-          </div>
-        </Root>
-      </ReactMarkdown>
-    </StyledComponent>
+              Some basic text
+            </TextRenderer>
+          </p>
+        </div>
+      </Root>
+    </ReactMarkdown>
   </src__StyledParagraph>
 </Paragraph>
 `;

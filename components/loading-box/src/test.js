@@ -29,8 +29,4 @@ describe('LoadingBox', () => {
   it('shouldnt render a SVG when not loading', () => {
     expect(mount(<LoadingBox loading={false}>example</LoadingBox>).find('svg')).toHaveLength(0);
   });
-
-  it('matches wrapper loading', () => {
-    expect(mount(<LoadingBox loading>example</LoadingBox>)).toMatchSnapshot('wrapper loading');
-  });
 });

@@ -46,45 +46,12 @@ exports[`Heading matches wrapper snapshot: wrapper mount 1`] = `
   <src__StyledHeading
     size="XLARGE"
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__StyledHeading-sc-1dueefc-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "color: #0b0c0c; @media print {
-  color: #000;
-}",
-              [Function],
-              "display: block; margin-top: 0;",
-              [Function],
-              [Function],
-            ],
-          },
-          "displayName": "src__StyledHeading",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__StyledHeading-sc-1dueefc-0",
-          "target": "h1",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <h1
+      className="c0"
       size="XLARGE"
     >
-      <h1
-        className="c0"
-        size="XLARGE"
-      >
-        example
-      </h1>
-    </StyledComponent>
+      example
+    </h1>
   </src__StyledHeading>
 </Heading>
 `;

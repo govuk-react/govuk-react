@@ -56,20 +56,12 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
   padding-left: 20px;
 }
 
-.c1 .c0 {
+.c0 .c0 {
   margin-top: 10px;
 }
 
 .c1 > .c2 {
   margin-bottom: 5px;
-}
-
-.c5 .c0 {
-  margin-top: 10px;
-}
-
-.c5 > .c2 {
-  margin-bottom: 0;
 }
 
 @media print {
@@ -128,408 +120,74 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-@media only screen and (min-width:641px) {
-  .c5 > .c2 {
-    margin-bottom: 5px;
-  }
-}
-
 <UnorderedList>
   <src__OrderedList
     as="ul"
   >
-    <StyledComponent
-      as="ul"
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "c0",
-            "isStatic": false,
-            "lastClassName": "c1",
-            "rules": Array [
-              "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-              "color: #0b0c0c; @media print {
-  color: #000;
-}",
-              "margin-top: 0; & & {
-  margin-top: 10px;
-}",
-              [Function],
-              [Function],
-            ],
-          },
-          "defaultProps": Object {
-            "listStyleType": undefined,
-          },
-          "displayName": "src__OrderedList",
-          "foldedComponentIds": Array [],
-          "propTypes": undefined,
-          "render": [Function],
-          "styledComponentId": "c0",
-          "target": "ol",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <ul
+      className="c0 c1"
     >
-      <ul
-        className="c0 c1"
-      >
-        <src__ListItem>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "c2",
-                  "isStatic": false,
-                  "lastClassName": "c3",
-                  "rules": Array [
-                    "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                    "margin-bottom: 5px;",
-                    [Function],
-                  ],
-                },
-                "displayName": "src__ListItem",
-                "foldedComponentIds": Array [],
-                "propTypes": undefined,
-                "render": [Function],
-                "styledComponentId": "c2",
-                "target": "li",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
+      <src__ListItem>
+        <li
+          className="c2 c3"
+        >
+          <src__Link
+            href="http://example.com"
+            muted={false}
+            noVisitedState={false}
+            textColour={false}
           >
-            <li
-              className="c2 c3"
+            <a
+              className="c4"
+              href="http://example.com"
+              muted={false}
             >
-              <src__Link
-                href="http://example.com"
-                muted={false}
-                noVisitedState={false}
-                textColour={false}
-              >
-                <StyledComponent
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "src__Link-sc-1oemcts-0",
-                        "isStatic": false,
-                        "lastClassName": "c4",
-                        "rules": Array [
-                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-                          ":link {
-  color: #1d70b8;
-} :visited {
-  color: #4c2c92;
-} :hover {
-  color: #2b8cc4;
-} :active {
-  color: #2b8cc4;
-} :focus {
-  color: #0b0c0c;
-}",
-                          "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
-}",
-                          "@media print {
-  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
-  &::after {
-  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
-}
-}
-}",
-                          [Function],
-                          [Function],
-                          [Function],
-                        ],
-                      },
-                      "defaultProps": Object {
-                        "muted": false,
-                        "noVisitedState": false,
-                        "textColour": false,
-                      },
-                      "displayName": "src__Link",
-                      "foldedComponentIds": Array [],
-                      "propTypes": undefined,
-                      "render": [Function],
-                      "styledComponentId": "src__Link-sc-1oemcts-0",
-                      "target": "a",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  href="http://example.com"
-                  muted={false}
-                  noVisitedState={false}
-                  textColour={false}
-                >
-                  <a
-                    className="c4"
-                    href="http://example.com"
-                    muted={false}
-                  >
-                    Example 1
-                  </a>
-                </StyledComponent>
-              </src__Link>
-            </li>
-          </StyledComponent>
-        </src__ListItem>
-        <src__ListItem>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "c2",
-                  "isStatic": false,
-                  "lastClassName": "c3",
-                  "rules": Array [
-                    "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                    "margin-bottom: 5px;",
-                    [Function],
-                  ],
-                },
-                "displayName": "src__ListItem",
-                "foldedComponentIds": Array [],
-                "propTypes": undefined,
-                "render": [Function],
-                "styledComponentId": "c2",
-                "target": "li",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
+              Example 1
+            </a>
+          </src__Link>
+        </li>
+      </src__ListItem>
+      <src__ListItem>
+        <li
+          className="c2 c3"
+        >
+          <src__Link
+            href="http://example.com"
+            muted={false}
+            noVisitedState={false}
+            textColour={false}
           >
-            <li
-              className="c2 c3"
+            <a
+              className="c4"
+              href="http://example.com"
+              muted={false}
             >
-              <src__Link
-                href="http://example.com"
-                muted={false}
-                noVisitedState={false}
-                textColour={false}
-              >
-                <StyledComponent
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "src__Link-sc-1oemcts-0",
-                        "isStatic": false,
-                        "lastClassName": "c4",
-                        "rules": Array [
-                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-                          ":link {
-  color: #1d70b8;
-} :visited {
-  color: #4c2c92;
-} :hover {
-  color: #2b8cc4;
-} :active {
-  color: #2b8cc4;
-} :focus {
-  color: #0b0c0c;
-}",
-                          "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
-}",
-                          "@media print {
-  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
-  &::after {
-  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
-}
-}
-}",
-                          [Function],
-                          [Function],
-                          [Function],
-                        ],
-                      },
-                      "defaultProps": Object {
-                        "muted": false,
-                        "noVisitedState": false,
-                        "textColour": false,
-                      },
-                      "displayName": "src__Link",
-                      "foldedComponentIds": Array [],
-                      "propTypes": undefined,
-                      "render": [Function],
-                      "styledComponentId": "src__Link-sc-1oemcts-0",
-                      "target": "a",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  href="http://example.com"
-                  muted={false}
-                  noVisitedState={false}
-                  textColour={false}
-                >
-                  <a
-                    className="c4"
-                    href="http://example.com"
-                    muted={false}
-                  >
-                    Example 2
-                  </a>
-                </StyledComponent>
-              </src__Link>
-            </li>
-          </StyledComponent>
-        </src__ListItem>
-        <src__ListItem>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "c2",
-                  "isStatic": false,
-                  "lastClassName": "c3",
-                  "rules": Array [
-                    "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-size: 14px; line-height: 1.15;
-} font-weight: 400; font-size: 16px; line-height: 1.25; @media only screen and (min-width: 641px) {
-  font-size: 19px; line-height: 1.3157894736842106;
-}",
-                    "margin-bottom: 5px;",
-                    [Function],
-                  ],
-                },
-                "displayName": "src__ListItem",
-                "foldedComponentIds": Array [],
-                "propTypes": undefined,
-                "render": [Function],
-                "styledComponentId": "c2",
-                "target": "li",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
+              Example 2
+            </a>
+          </src__Link>
+        </li>
+      </src__ListItem>
+      <src__ListItem>
+        <li
+          className="c2 c3"
+        >
+          <src__Link
+            href="http://example.com"
+            muted={false}
+            noVisitedState={false}
+            textColour={false}
           >
-            <li
-              className="c2 c3"
+            <a
+              className="c4"
+              href="http://example.com"
+              muted={false}
             >
-              <src__Link
-                href="http://example.com"
-                muted={false}
-                noVisitedState={false}
-                textColour={false}
-              >
-                <StyledComponent
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "src__Link-sc-1oemcts-0",
-                        "isStatic": false,
-                        "lastClassName": "c4",
-                        "rules": Array [
-                          "font-family: \\"nta\\", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; @media print {
-  font-family: sans-serif;
-}",
-                          ":link {
-  color: #1d70b8;
-} :visited {
-  color: #4c2c92;
-} :hover {
-  color: #2b8cc4;
-} :active {
-  color: #2b8cc4;
-} :focus {
-  color: #0b0c0c;
-}",
-                          "&:focus {
-  outline: 3px solid #ffdd00; outline-offset: 0; background-color: #ffdd00;
-}",
-                          "@media print {
-  &[href^=\\"/\\"], &[href^=\\"http://\\"], &[href^=\\"https://\\"] {
-  &::after {
-  content: \\" (\\" attr(href) \\")\\"; font-size: 90%; word-wrap: break-word;
-}
-}
-}",
-                          [Function],
-                          [Function],
-                          [Function],
-                        ],
-                      },
-                      "defaultProps": Object {
-                        "muted": false,
-                        "noVisitedState": false,
-                        "textColour": false,
-                      },
-                      "displayName": "src__Link",
-                      "foldedComponentIds": Array [],
-                      "propTypes": undefined,
-                      "render": [Function],
-                      "styledComponentId": "src__Link-sc-1oemcts-0",
-                      "target": "a",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  href="http://example.com"
-                  muted={false}
-                  noVisitedState={false}
-                  textColour={false}
-                >
-                  <a
-                    className="c4"
-                    href="http://example.com"
-                    muted={false}
-                  >
-                    Example 3
-                  </a>
-                </StyledComponent>
-              </src__Link>
-            </li>
-          </StyledComponent>
-        </src__ListItem>
-      </ul>
-    </StyledComponent>
+              Example 3
+            </a>
+          </src__Link>
+        </li>
+      </src__ListItem>
+    </ul>
   </src__OrderedList>
 </UnorderedList>
 `;

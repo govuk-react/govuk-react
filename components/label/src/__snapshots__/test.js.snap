@@ -34,42 +34,11 @@ exports[`Label matches withError snapshot: with error mount 1`] = `
   <src__StyledLabel
     error="example"
   >
-    <StyledComponent
-      error="example"
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__StyledLabel-sc-14n2scx-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "display: flex; flex-direction: column; box-sizing: border-box; :after {
-  content: ''; display: table; clear: both;
-}",
-              [Function],
-              [Function],
-            ],
-          },
-          "displayName": "src__StyledLabel",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
-          "target": "label",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <label
+      className="c0"
     >
-      <label
-        className="c0"
-      >
-        example
-      </label>
-    </StyledComponent>
+      example
+    </label>
   </src__StyledLabel>
 </Label>
 `;
@@ -105,42 +74,11 @@ exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
   <src__StyledLabel
     error={false}
   >
-    <StyledComponent
-      error={false}
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "src__StyledLabel-sc-14n2scx-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "display: flex; flex-direction: column; box-sizing: border-box; :after {
-  content: ''; display: table; clear: both;
-}",
-              [Function],
-              [Function],
-            ],
-          },
-          "displayName": "src__StyledLabel",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
-          "target": "label",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <label
+      className="c0"
     >
-      <label
-        className="c0"
-      >
-        example
-      </label>
-    </StyledComponent>
+      example
+    </label>
   </src__StyledLabel>
 </Label>
 `;
