@@ -115,14 +115,14 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
 }
 
 <InsetTextWithParagraph>
-  <styled.div>
+  <src__InsetText>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-htpNat",
+            "componentId": "src__InsetText-surbaa-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -143,11 +143,11 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
 }",
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "src__InsetText",
           "foldedComponentIds": Array [],
           "propTypes": undefined,
           "render": [Function],
-          "styledComponentId": "sc-htpNat",
+          "styledComponentId": "src__InsetText-surbaa-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -164,7 +164,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
           mb={0}
           supportingText={false}
         >
-          <Styled(ReactMarkdown)
+          <src__StyledParagraph
             allowedTypes={
               Array [
                 "paragraph",
@@ -206,7 +206,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-bwzfXH",
+                    "componentId": "src__StyledParagraph-dkdnni-0",
                     "isStatic": false,
                     "lastClassName": "c1",
                     "rules": Array [
@@ -223,7 +223,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                       [Function],
                     ],
                   },
-                  "displayName": "Styled(ReactMarkdown)",
+                  "displayName": "src__StyledParagraph",
                   "foldedComponentIds": Array [],
                   "render": [Function],
                   "renderers": Object {
@@ -255,7 +255,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                     "thematicBreak": "hr",
                     "virtualHtml": [Function],
                   },
-                  "styledComponentId": "sc-bwzfXH",
+                  "styledComponentId": "src__StyledParagraph-dkdnni-0",
                   "target": [Function],
                   "toString": [Function],
                   "types": Array [
@@ -356,11 +356,11 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                 </Root>
               </ReactMarkdown>
             </StyledComponent>
-          </Styled(ReactMarkdown)>
+          </src__StyledParagraph>
         </Paragraph>
       </div>
     </StyledComponent>
-  </styled.div>
+  </src__InsetText>
 </InsetTextWithParagraph>
 `;
 
@@ -418,14 +418,14 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
 
 <_default>
   <DocumentedInsetText>
-    <styled.div>
+    <src__InsetText>
       <StyledComponent
         forwardedComponent={
           Object {
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-htpNat",
+              "componentId": "src__InsetText-surbaa-0",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
@@ -446,11 +446,11 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
 }",
               ],
             },
-            "displayName": "styled.div",
+            "displayName": "src__InsetText",
             "foldedComponentIds": Array [],
             "propTypes": undefined,
             "render": [Function],
-            "styledComponentId": "sc-htpNat",
+            "styledComponentId": "src__InsetText-surbaa-0",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -465,7 +465,7 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
           It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
         </div>
       </StyledComponent>
-    </styled.div>
+    </src__InsetText>
   </DocumentedInsetText>
 </_default>
 `;

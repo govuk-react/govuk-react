@@ -69,14 +69,14 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
 <SearchBox
   placeholder="example"
 >
-  <styled.div>
+  <src__SearchBoxWrapper>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__SearchBoxWrapper-ln53op-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -84,10 +84,10 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
               [Function],
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "src__SearchBoxWrapper",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__SearchBoxWrapper-ln53op-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -99,7 +99,7 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
       <div
         className="c0"
       >
-        <styled.input
+        <src__InputSearchBox
           placeholder="example"
           type="search"
         >
@@ -109,7 +109,7 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bwzfXH",
+                  "componentId": "src__InputSearchBox-ln53op-1",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -120,10 +120,10 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
 }",
                   ],
                 },
-                "displayName": "styled.input",
+                "displayName": "src__InputSearchBox",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bwzfXH",
+                "styledComponentId": "src__InputSearchBox-ln53op-1",
                 "target": "input",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -140,8 +140,8 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
               type="search"
             />
           </StyledComponent>
-        </styled.input>
-        <styled.button
+        </src__InputSearchBox>
+        <src__SearchButton
           title="Search"
         >
           <StyledComponent
@@ -150,7 +150,7 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-htpNat",
+                  "componentId": "src__SearchButton-ln53op-2",
                   "isStatic": true,
                   "lastClassName": "c2",
                   "rules": Array [
@@ -159,10 +159,10 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
 }",
                   ],
                 },
-                "displayName": "styled.button",
+                "displayName": "src__SearchButton",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-htpNat",
+                "styledComponentId": "src__SearchButton-ln53op-2",
                 "target": "button",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -208,9 +208,9 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
               </Search>
             </button>
           </StyledComponent>
-        </styled.button>
+        </src__SearchButton>
       </div>
     </StyledComponent>
-  </styled.div>
+  </src__SearchBoxWrapper>
 </SearchBox>
 `;

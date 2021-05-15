@@ -67,7 +67,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
   linkRenderer={[Function]}
   supportingText={true}
 >
-  <Styled(ReactMarkdown)
+  <src__StyledParagraph
     allowedTypes={
       Array [
         "paragraph",
@@ -108,7 +108,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
+            "componentId": "src__StyledParagraph-dkdnni-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -125,7 +125,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
               [Function],
             ],
           },
-          "displayName": "Styled(ReactMarkdown)",
+          "displayName": "src__StyledParagraph",
           "foldedComponentIds": Array [],
           "render": [Function],
           "renderers": Object {
@@ -157,7 +157,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
             "thematicBreak": "hr",
             "virtualHtml": [Function],
           },
-          "styledComponentId": "sc-bwzfXH",
+          "styledComponentId": "src__StyledParagraph-dkdnni-0",
           "target": [Function],
           "toString": [Function],
           "types": Array [
@@ -256,6 +256,6 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
         </Root>
       </ReactMarkdown>
     </StyledComponent>
-  </Styled(ReactMarkdown)>
+  </src__StyledParagraph>
 </Paragraph>
 `;

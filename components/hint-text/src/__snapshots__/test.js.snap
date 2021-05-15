@@ -28,14 +28,14 @@ exports[`HintText matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <HintText>
-  <styled.span>
+  <src__StyledHint>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__StyledHint-sc-1qn4br2-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -48,10 +48,10 @@ exports[`HintText matches wrapper snapshot: wrapper mount 1`] = `
               [Function],
             ],
           },
-          "displayName": "styled.span",
+          "displayName": "src__StyledHint",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__StyledHint-sc-1qn4br2-0",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -66,6 +66,6 @@ exports[`HintText matches wrapper snapshot: wrapper mount 1`] = `
         example
       </span>
     </StyledComponent>
-  </styled.span>
+  </src__StyledHint>
 </HintText>
 `;

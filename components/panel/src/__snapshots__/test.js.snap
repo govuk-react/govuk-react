@@ -92,14 +92,14 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
 <Panel
   title="Example"
 >
-  <styled.div>
+  <src__StyledPanel>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__StyledPanel-sc-1u3l1af-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -114,10 +114,10 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
               [Function],
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "src__StyledPanel",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__StyledPanel-sc-1u3l1af-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -129,14 +129,14 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
       <div
         className="c0"
       >
-        <styled.h1>
+        <src__StyledTitle>
           <StyledComponent
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bwzfXH",
+                  "componentId": "src__StyledTitle-sc-1u3l1af-1",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -150,10 +150,10 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
 }",
                   ],
                 },
-                "displayName": "styled.h1",
+                "displayName": "src__StyledTitle",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bwzfXH",
+                "styledComponentId": "src__StyledTitle-sc-1u3l1af-1",
                 "target": "h1",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -168,15 +168,15 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
               Example
             </h1>
           </StyledComponent>
-        </styled.h1>
-        <styled.div>
+        </src__StyledTitle>
+        <src__StyledBody>
           <StyledComponent
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-htpNat",
+                  "componentId": "src__StyledBody-sc-1u3l1af-2",
                   "isStatic": true,
                   "lastClassName": "c2",
                   "rules": Array [
@@ -187,10 +187,10 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
 }",
                   ],
                 },
-                "displayName": "styled.div",
+                "displayName": "src__StyledBody",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-htpNat",
+                "styledComponentId": "src__StyledBody-sc-1u3l1af-2",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -205,9 +205,9 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
               body
             </div>
           </StyledComponent>
-        </styled.div>
+        </src__StyledBody>
       </div>
     </StyledComponent>
-  </styled.div>
+  </src__StyledPanel>
 </Panel>
 `;

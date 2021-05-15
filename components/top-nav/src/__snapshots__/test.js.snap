@@ -355,7 +355,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
   defaultOpen={false}
   search={false}
 >
-  <styled.div
+  <top-nav-wrapper__TopNavWrapper
     bgColor="#0b0c0c"
     color="#ffffff"
     defaultOpen={false}
@@ -369,17 +369,17 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "top-nav-wrapper__TopNavWrapper-vl2d6r-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               [Function],
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "top-nav-wrapper__TopNavWrapper",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "top-nav-wrapper__TopNavWrapper-vl2d6r-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -392,14 +392,14 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
         className="c0"
         color="#ffffff"
       >
-        <styled.div>
+        <top-nav-inner__TopNavInner>
           <StyledComponent
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bwzfXH",
+                  "componentId": "top-nav-inner__TopNavInner-sc-1vcy147-0",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -408,10 +408,10 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }",
                   ],
                 },
-                "displayName": "styled.div",
+                "displayName": "top-nav-inner__TopNavInner",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bwzfXH",
+                "styledComponentId": "top-nav-inner__TopNavInner-sc-1vcy147-0",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -423,14 +423,14 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
             <div
               className="c1"
             >
-              <styled.div>
+              <logo-search-wrapper__LogoSearchWrapper>
                 <StyledComponent
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-ifAKCX",
+                        "componentId": "logo-search-wrapper__LogoSearchWrapper-sc-1xz0dmv-0",
                         "isStatic": true,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -439,10 +439,10 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }",
                         ],
                       },
-                      "displayName": "styled.div",
+                      "displayName": "logo-search-wrapper__LogoSearchWrapper",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-ifAKCX",
+                      "styledComponentId": "logo-search-wrapper__LogoSearchWrapper-sc-1xz0dmv-0",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -454,24 +454,24 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                   <div
                     className="c2"
                   >
-                    <styled.div>
+                    <company__Company>
                       <StyledComponent
                         forwardedComponent={
                           Object {
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-bxivhb",
+                              "componentId": "company__Company-sc-1bg0t8w-0",
                               "isStatic": true,
                               "lastClassName": "c3",
                               "rules": Array [
                                 "display: flex; font-weight: 800; align-items: center; justify-content: flex-start; font-size: 30px;",
                               ],
                             },
-                            "displayName": "styled.div",
+                            "displayName": "company__Company",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-bxivhb",
+                            "styledComponentId": "company__Company-sc-1bg0t8w-0",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -493,24 +493,24 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                               />
                             }
                           >
-                            <styled.div>
+                            <icon-title__Container>
                               <StyledComponent
                                 forwardedComponent={
                                   Object {
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-gqjmRU",
+                                      "componentId": "icon-title__Container-hhkgyi-0",
                                       "isStatic": true,
                                       "lastClassName": "c4",
                                       "rules": Array [
                                         "vertical-align: baseline;",
                                       ],
                                     },
-                                    "displayName": "styled.div",
+                                    "displayName": "icon-title__Container",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-gqjmRU",
+                                    "styledComponentId": "icon-title__Container-hhkgyi-0",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -522,24 +522,24 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                                 <div
                                   className="c4"
                                 >
-                                  <styled.span>
+                                  <icon-title__IconContainer>
                                     <StyledComponent
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-VigVT",
+                                            "componentId": "icon-title__IconContainer-hhkgyi-1",
                                             "isStatic": true,
                                             "lastClassName": "c5",
                                             "rules": Array [
                                               "width: 36px; max-height: 27px; display: inline-block; margin-right: 7px;",
                                             ],
                                           },
-                                          "displayName": "styled.span",
+                                          "displayName": "icon-title__IconContainer",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-VigVT",
+                                          "styledComponentId": "icon-title__IconContainer-hhkgyi-1",
                                           "target": "span",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -590,25 +590,25 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                                         </Crown>
                                       </span>
                                     </StyledComponent>
-                                  </styled.span>
-                                  <styled.span>
+                                  </icon-title__IconContainer>
+                                  <icon-title__TitleContainer>
                                     <StyledComponent
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-jTzLTM",
+                                            "componentId": "icon-title__TitleContainer-hhkgyi-2",
                                             "isStatic": true,
                                             "lastClassName": "c6",
                                             "rules": Array [
                                               "display: inline-block;",
                                             ],
                                           },
-                                          "displayName": "styled.span",
+                                          "displayName": "icon-title__TitleContainer",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-jTzLTM",
+                                          "styledComponentId": "icon-title__TitleContainer-hhkgyi-2",
                                           "target": "span",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -623,25 +623,25 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                                         GOV.UK
                                       </span>
                                     </StyledComponent>
-                                  </styled.span>
+                                  </icon-title__TitleContainer>
                                 </div>
                               </StyledComponent>
-                            </styled.div>
+                            </icon-title__Container>
                           </IconTitle>
                         </div>
                       </StyledComponent>
-                    </styled.div>
+                    </company__Company>
                   </div>
                 </StyledComponent>
-              </styled.div>
-              <styled.div>
+              </logo-search-wrapper__LogoSearchWrapper>
+              <right-hand-side__RightHandSide>
                 <StyledComponent
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-EHOje",
+                        "componentId": "right-hand-side__RightHandSide-sc-32nkfb-0",
                         "isStatic": true,
                         "lastClassName": "c7",
                         "rules": Array [
@@ -650,10 +650,10 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }",
                         ],
                       },
-                      "displayName": "styled.div",
+                      "displayName": "right-hand-side__RightHandSide",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-EHOje",
+                      "styledComponentId": "right-hand-side__RightHandSide-sc-32nkfb-0",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -665,14 +665,14 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                   <div
                     className="c7"
                   >
-                    <styled.div>
+                    <src__ServiceTitleWrapper>
                       <StyledComponent
                         forwardedComponent={
                           Object {
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-fjdhpX",
+                              "componentId": "src__ServiceTitleWrapper-ywaf10-0",
                               "isStatic": true,
                               "lastClassName": "c8",
                               "rules": Array [
@@ -686,10 +686,10 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }",
                               ],
                             },
-                            "displayName": "styled.div",
+                            "displayName": "src__ServiceTitleWrapper",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-fjdhpX",
+                            "styledComponentId": "src__ServiceTitleWrapper-ywaf10-0",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -702,15 +702,15 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                           className="c8"
                         />
                       </StyledComponent>
-                    </styled.div>
-                    <styled.div>
+                    </src__ServiceTitleWrapper>
+                    <src__MenuButtonWrapper>
                       <StyledComponent
                         forwardedComponent={
                           Object {
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-jzJRlG",
+                              "componentId": "src__MenuButtonWrapper-ywaf10-1",
                               "isStatic": true,
                               "lastClassName": "c9",
                               "rules": Array [
@@ -719,10 +719,10 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }",
                               ],
                             },
-                            "displayName": "styled.div",
+                            "displayName": "src__MenuButtonWrapper",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-jzJRlG",
+                            "styledComponentId": "src__MenuButtonWrapper-ywaf10-1",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -739,7 +739,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                             open={false}
                             title="Menu"
                           >
-                            <styled.label
+                            <menu-button__Button
                               htmlFor="govuk-react-menu-button"
                               onClick={[Function]}
                             >
@@ -749,7 +749,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-dnqmqq",
+                                      "componentId": "menu-button__Button-xj2q71-0",
                                       "isStatic": true,
                                       "lastClassName": "c10",
                                       "rules": Array [
@@ -758,10 +758,10 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }",
                                       ],
                                     },
-                                    "displayName": "styled.label",
+                                    "displayName": "menu-button__Button",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-dnqmqq",
+                                    "styledComponentId": "menu-button__Button-xj2q71-0",
                                     "target": "label",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -777,14 +777,14 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                                   htmlFor="govuk-react-menu-button"
                                   onClick={[Function]}
                                 >
-                                  <styled.div>
+                                  <menu-button__ButtonText>
                                     <StyledComponent
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-iwsKbI",
+                                            "componentId": "menu-button__ButtonText-xj2q71-1",
                                             "isStatic": true,
                                             "lastClassName": "c11",
                                             "rules": Array [
@@ -793,10 +793,10 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }",
                                             ],
                                           },
-                                          "displayName": "styled.div",
+                                          "displayName": "menu-button__ButtonText",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-iwsKbI",
+                                          "styledComponentId": "menu-button__ButtonText-xj2q71-1",
                                           "target": "div",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -811,8 +811,8 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                                         Menu
                                       </div>
                                     </StyledComponent>
-                                  </styled.div>
-                                  <styled.div
+                                  </menu-button__ButtonText>
+                                  <menu-button__ButtonIcon
                                     open={false}
                                   >
                                     <StyledComponent
@@ -821,17 +821,17 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-gZMcBi",
+                                            "componentId": "menu-button__ButtonIcon-xj2q71-2",
                                             "isStatic": false,
                                             "lastClassName": "c12",
                                             "rules": Array [
                                               [Function],
                                             ],
                                           },
-                                          "displayName": "styled.div",
+                                          "displayName": "menu-button__ButtonIcon",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-gZMcBi",
+                                          "styledComponentId": "menu-button__ButtonIcon-xj2q71-2",
                                           "target": "div",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -846,15 +846,15 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                                         open={false}
                                       />
                                     </StyledComponent>
-                                  </styled.div>
+                                  </menu-button__ButtonIcon>
                                 </label>
                               </StyledComponent>
-                            </styled.label>
+                            </menu-button__Button>
                           </MenuButton>
                         </div>
                       </StyledComponent>
-                    </styled.div>
-                    <styled.input
+                    </src__MenuButtonWrapper>
+                    <src__Input
                       checked={false}
                       id="govuk-react-menu-button"
                       type="checkbox"
@@ -866,7 +866,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-cSHVUG",
+                              "componentId": "src__Input-ywaf10-2",
                               "isStatic": true,
                               "lastClassName": "c13",
                               "rules": Array [
@@ -877,10 +877,10 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }",
                               ],
                             },
-                            "displayName": "styled.input",
+                            "displayName": "src__Input",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-cSHVUG",
+                            "styledComponentId": "src__Input-ywaf10-2",
                             "target": "input",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -898,8 +898,8 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                           type="checkbox"
                         />
                       </StyledComponent>
-                    </styled.input>
-                    <styled.ul
+                    </src__Input>
+                    <unordered-list__Ul
                       id="govuk-react-menu"
                       open={false}
                     >
@@ -909,17 +909,17 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gzVnrw",
+                              "componentId": "unordered-list__Ul-sc-1x31rva-0",
                               "isStatic": false,
                               "lastClassName": "c14",
                               "rules": Array [
                                 [Function],
                               ],
                             },
-                            "displayName": "styled.ul",
+                            "displayName": "unordered-list__Ul",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gzVnrw",
+                            "styledComponentId": "unordered-list__Ul-sc-1x31rva-0",
                             "target": "ul",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -935,14 +935,14 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                           id="govuk-react-menu"
                           open={false}
                         >
-                          <styled.li>
+                          <list-item__Li>
                             <StyledComponent
                               forwardedComponent={
                                 Object {
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-htoDjs",
+                                    "componentId": "list-item__Li-t3un2w-0",
                                     "isStatic": true,
                                     "lastClassName": "c15",
                                     "rules": Array [
@@ -951,10 +951,10 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }",
                                     ],
                                   },
-                                  "displayName": "styled.li",
+                                  "displayName": "list-item__Li",
                                   "foldedComponentIds": Array [],
                                   "render": [Function],
-                                  "styledComponentId": "sc-htoDjs",
+                                  "styledComponentId": "list-item__Li-t3un2w-0",
                                   "target": "li",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -966,7 +966,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                               <li
                                 className="c15"
                               >
-                                <Styled(Styled(Anchor))
+                                <asNavLinkAnchor__StyledNavLinkAnchor
                                   href="/nav-link"
                                 >
                                   <StyledComponent
@@ -975,7 +975,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                                         "$$typeof": Symbol(react.forward_ref),
                                         "attrs": Array [],
                                         "componentStyle": ComponentStyle {
-                                          "componentId": "sc-kgoBCf",
+                                          "componentId": "asNavLinkAnchor__StyledNavLinkAnchor-arj2tg-0",
                                           "isStatic": true,
                                           "lastClassName": "c16",
                                           "rules": Array [
@@ -991,12 +991,12 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }",
                                           ],
                                         },
-                                        "displayName": "Styled(Styled(Anchor))",
+                                        "displayName": "asNavLinkAnchor__StyledNavLinkAnchor",
                                         "foldedComponentIds": Array [
-                                          "sc-chPdSV",
+                                          "asTopNavAnchor__StyledHoc-sc-1pv1bh1-0",
                                         ],
                                         "render": [Function],
-                                        "styledComponentId": "sc-kgoBCf",
+                                        "styledComponentId": "asNavLinkAnchor__StyledNavLinkAnchor-arj2tg-0",
                                         "target": [Function],
                                         "toString": [Function],
                                         "warnTooManyClasses": [Function],
@@ -1018,30 +1018,30 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                                       </a>
                                     </Anchor>
                                   </StyledComponent>
-                                </Styled(Styled(Anchor))>
+                                </asNavLinkAnchor__StyledNavLinkAnchor>
                               </li>
                             </StyledComponent>
-                          </styled.li>
+                          </list-item__Li>
                         </ul>
                       </StyledComponent>
-                    </styled.ul>
+                    </unordered-list__Ul>
                   </div>
                 </StyledComponent>
-              </styled.div>
+              </right-hand-side__RightHandSide>
             </div>
           </StyledComponent>
-        </styled.div>
+        </top-nav-inner__TopNavInner>
       </div>
     </StyledComponent>
-  </styled.div>
-  <styled.div>
+  </top-nav-wrapper__TopNavWrapper>
+  <bottom-nav-wrapper__BottomNavWrapper>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-htpNat",
+            "componentId": "bottom-nav-wrapper__BottomNavWrapper-wioq5s-0",
             "isStatic": true,
             "lastClassName": "c17",
             "rules": Array [
@@ -1050,10 +1050,10 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 }",
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "bottom-nav-wrapper__BottomNavWrapper",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-htpNat",
+          "styledComponentId": "bottom-nav-wrapper__BottomNavWrapper-wioq5s-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -1066,7 +1066,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
         className="c17"
       />
     </StyledComponent>
-  </styled.div>
+  </bottom-nav-wrapper__BottomNavWrapper>
 </TopNav>
 `;
 
@@ -1415,7 +1415,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
   defaultOpen={false}
   search={false}
 >
-  <styled.div
+  <top-nav-wrapper__TopNavWrapper
     active={1}
     bgColor="#0b0c0c"
     color="#ffffff"
@@ -1431,17 +1431,17 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "top-nav-wrapper__TopNavWrapper-vl2d6r-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               [Function],
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "top-nav-wrapper__TopNavWrapper",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "top-nav-wrapper__TopNavWrapper-vl2d6r-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -1454,14 +1454,14 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
         className="c0"
         color="#ffffff"
       >
-        <styled.div>
+        <top-nav-inner__TopNavInner>
           <StyledComponent
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bwzfXH",
+                  "componentId": "top-nav-inner__TopNavInner-sc-1vcy147-0",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -1470,10 +1470,10 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }",
                   ],
                 },
-                "displayName": "styled.div",
+                "displayName": "top-nav-inner__TopNavInner",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bwzfXH",
+                "styledComponentId": "top-nav-inner__TopNavInner-sc-1vcy147-0",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -1485,14 +1485,14 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
             <div
               className="c1"
             >
-              <styled.div>
+              <logo-search-wrapper__LogoSearchWrapper>
                 <StyledComponent
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-ifAKCX",
+                        "componentId": "logo-search-wrapper__LogoSearchWrapper-sc-1xz0dmv-0",
                         "isStatic": true,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -1501,10 +1501,10 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }",
                         ],
                       },
-                      "displayName": "styled.div",
+                      "displayName": "logo-search-wrapper__LogoSearchWrapper",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-ifAKCX",
+                      "styledComponentId": "logo-search-wrapper__LogoSearchWrapper-sc-1xz0dmv-0",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -1516,24 +1516,24 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                   <div
                     className="c2"
                   >
-                    <styled.div>
+                    <company__Company>
                       <StyledComponent
                         forwardedComponent={
                           Object {
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-bxivhb",
+                              "componentId": "company__Company-sc-1bg0t8w-0",
                               "isStatic": true,
                               "lastClassName": "c3",
                               "rules": Array [
                                 "display: flex; font-weight: 800; align-items: center; justify-content: flex-start; font-size: 30px;",
                               ],
                             },
-                            "displayName": "styled.div",
+                            "displayName": "company__Company",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-bxivhb",
+                            "styledComponentId": "company__Company-sc-1bg0t8w-0",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -1555,24 +1555,24 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                               />
                             }
                           >
-                            <styled.div>
+                            <icon-title__Container>
                               <StyledComponent
                                 forwardedComponent={
                                   Object {
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-gqjmRU",
+                                      "componentId": "icon-title__Container-hhkgyi-0",
                                       "isStatic": true,
                                       "lastClassName": "c4",
                                       "rules": Array [
                                         "vertical-align: baseline;",
                                       ],
                                     },
-                                    "displayName": "styled.div",
+                                    "displayName": "icon-title__Container",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-gqjmRU",
+                                    "styledComponentId": "icon-title__Container-hhkgyi-0",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -1584,24 +1584,24 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                                 <div
                                   className="c4"
                                 >
-                                  <styled.span>
+                                  <icon-title__IconContainer>
                                     <StyledComponent
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-VigVT",
+                                            "componentId": "icon-title__IconContainer-hhkgyi-1",
                                             "isStatic": true,
                                             "lastClassName": "c5",
                                             "rules": Array [
                                               "width: 36px; max-height: 27px; display: inline-block; margin-right: 7px;",
                                             ],
                                           },
-                                          "displayName": "styled.span",
+                                          "displayName": "icon-title__IconContainer",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-VigVT",
+                                          "styledComponentId": "icon-title__IconContainer-hhkgyi-1",
                                           "target": "span",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -1652,25 +1652,25 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                                         </Crown>
                                       </span>
                                     </StyledComponent>
-                                  </styled.span>
-                                  <styled.span>
+                                  </icon-title__IconContainer>
+                                  <icon-title__TitleContainer>
                                     <StyledComponent
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-jTzLTM",
+                                            "componentId": "icon-title__TitleContainer-hhkgyi-2",
                                             "isStatic": true,
                                             "lastClassName": "c6",
                                             "rules": Array [
                                               "display: inline-block;",
                                             ],
                                           },
-                                          "displayName": "styled.span",
+                                          "displayName": "icon-title__TitleContainer",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-jTzLTM",
+                                          "styledComponentId": "icon-title__TitleContainer-hhkgyi-2",
                                           "target": "span",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -1685,25 +1685,25 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                                         GOV.UK
                                       </span>
                                     </StyledComponent>
-                                  </styled.span>
+                                  </icon-title__TitleContainer>
                                 </div>
                               </StyledComponent>
-                            </styled.div>
+                            </icon-title__Container>
                           </IconTitle>
                         </div>
                       </StyledComponent>
-                    </styled.div>
+                    </company__Company>
                   </div>
                 </StyledComponent>
-              </styled.div>
-              <styled.div>
+              </logo-search-wrapper__LogoSearchWrapper>
+              <right-hand-side__RightHandSide>
                 <StyledComponent
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-EHOje",
+                        "componentId": "right-hand-side__RightHandSide-sc-32nkfb-0",
                         "isStatic": true,
                         "lastClassName": "c7",
                         "rules": Array [
@@ -1712,10 +1712,10 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }",
                         ],
                       },
-                      "displayName": "styled.div",
+                      "displayName": "right-hand-side__RightHandSide",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-EHOje",
+                      "styledComponentId": "right-hand-side__RightHandSide-sc-32nkfb-0",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -1727,14 +1727,14 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                   <div
                     className="c7"
                   >
-                    <styled.div>
+                    <src__ServiceTitleWrapper>
                       <StyledComponent
                         forwardedComponent={
                           Object {
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-fjdhpX",
+                              "componentId": "src__ServiceTitleWrapper-ywaf10-0",
                               "isStatic": true,
                               "lastClassName": "c8",
                               "rules": Array [
@@ -1748,10 +1748,10 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }",
                               ],
                             },
-                            "displayName": "styled.div",
+                            "displayName": "src__ServiceTitleWrapper",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-fjdhpX",
+                            "styledComponentId": "src__ServiceTitleWrapper-ywaf10-0",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -1764,15 +1764,15 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                           className="c8"
                         />
                       </StyledComponent>
-                    </styled.div>
-                    <styled.div>
+                    </src__ServiceTitleWrapper>
+                    <src__MenuButtonWrapper>
                       <StyledComponent
                         forwardedComponent={
                           Object {
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-jzJRlG",
+                              "componentId": "src__MenuButtonWrapper-ywaf10-1",
                               "isStatic": true,
                               "lastClassName": "c9",
                               "rules": Array [
@@ -1781,10 +1781,10 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }",
                               ],
                             },
-                            "displayName": "styled.div",
+                            "displayName": "src__MenuButtonWrapper",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-jzJRlG",
+                            "styledComponentId": "src__MenuButtonWrapper-ywaf10-1",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -1801,7 +1801,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                             open={false}
                             title="Menu"
                           >
-                            <styled.label
+                            <menu-button__Button
                               htmlFor="govuk-react-menu-button"
                               onClick={[Function]}
                             >
@@ -1811,7 +1811,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-dnqmqq",
+                                      "componentId": "menu-button__Button-xj2q71-0",
                                       "isStatic": true,
                                       "lastClassName": "c10",
                                       "rules": Array [
@@ -1820,10 +1820,10 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }",
                                       ],
                                     },
-                                    "displayName": "styled.label",
+                                    "displayName": "menu-button__Button",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-dnqmqq",
+                                    "styledComponentId": "menu-button__Button-xj2q71-0",
                                     "target": "label",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -1839,14 +1839,14 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                                   htmlFor="govuk-react-menu-button"
                                   onClick={[Function]}
                                 >
-                                  <styled.div>
+                                  <menu-button__ButtonText>
                                     <StyledComponent
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-iwsKbI",
+                                            "componentId": "menu-button__ButtonText-xj2q71-1",
                                             "isStatic": true,
                                             "lastClassName": "c11",
                                             "rules": Array [
@@ -1855,10 +1855,10 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }",
                                             ],
                                           },
-                                          "displayName": "styled.div",
+                                          "displayName": "menu-button__ButtonText",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-iwsKbI",
+                                          "styledComponentId": "menu-button__ButtonText-xj2q71-1",
                                           "target": "div",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -1873,8 +1873,8 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                                         Menu
                                       </div>
                                     </StyledComponent>
-                                  </styled.div>
-                                  <styled.div
+                                  </menu-button__ButtonText>
+                                  <menu-button__ButtonIcon
                                     open={false}
                                   >
                                     <StyledComponent
@@ -1883,17 +1883,17 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-gZMcBi",
+                                            "componentId": "menu-button__ButtonIcon-xj2q71-2",
                                             "isStatic": false,
                                             "lastClassName": "c12",
                                             "rules": Array [
                                               [Function],
                                             ],
                                           },
-                                          "displayName": "styled.div",
+                                          "displayName": "menu-button__ButtonIcon",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-gZMcBi",
+                                          "styledComponentId": "menu-button__ButtonIcon-xj2q71-2",
                                           "target": "div",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -1908,15 +1908,15 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                                         open={false}
                                       />
                                     </StyledComponent>
-                                  </styled.div>
+                                  </menu-button__ButtonIcon>
                                 </label>
                               </StyledComponent>
-                            </styled.label>
+                            </menu-button__Button>
                           </MenuButton>
                         </div>
                       </StyledComponent>
-                    </styled.div>
-                    <styled.input
+                    </src__MenuButtonWrapper>
+                    <src__Input
                       checked={false}
                       id="govuk-react-menu-button"
                       type="checkbox"
@@ -1928,7 +1928,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-cSHVUG",
+                              "componentId": "src__Input-ywaf10-2",
                               "isStatic": true,
                               "lastClassName": "c13",
                               "rules": Array [
@@ -1939,10 +1939,10 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }",
                               ],
                             },
-                            "displayName": "styled.input",
+                            "displayName": "src__Input",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-cSHVUG",
+                            "styledComponentId": "src__Input-ywaf10-2",
                             "target": "input",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -1960,8 +1960,8 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                           type="checkbox"
                         />
                       </StyledComponent>
-                    </styled.input>
-                    <styled.ul
+                    </src__Input>
+                    <unordered-list__Ul
                       id="govuk-react-menu"
                       open={false}
                     >
@@ -1971,17 +1971,17 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gzVnrw",
+                              "componentId": "unordered-list__Ul-sc-1x31rva-0",
                               "isStatic": false,
                               "lastClassName": "c14",
                               "rules": Array [
                                 [Function],
                               ],
                             },
-                            "displayName": "styled.ul",
+                            "displayName": "unordered-list__Ul",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gzVnrw",
+                            "styledComponentId": "unordered-list__Ul-sc-1x31rva-0",
                             "target": "ul",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -1997,7 +1997,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                           id="govuk-react-menu"
                           open={false}
                         >
-                          <styled.li
+                          <list-item__Li
                             key="0"
                           >
                             <StyledComponent
@@ -2006,7 +2006,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-htoDjs",
+                                    "componentId": "list-item__Li-t3un2w-0",
                                     "isStatic": true,
                                     "lastClassName": "c15",
                                     "rules": Array [
@@ -2015,10 +2015,10 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }",
                                     ],
                                   },
-                                  "displayName": "styled.li",
+                                  "displayName": "list-item__Li",
                                   "foldedComponentIds": Array [],
                                   "render": [Function],
-                                  "styledComponentId": "sc-htoDjs",
+                                  "styledComponentId": "list-item__Li-t3un2w-0",
                                   "target": "li",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -2030,7 +2030,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                               <li
                                 className="c15"
                               >
-                                <Styled(Anchor)
+                                <asTopNavAnchor__StyledHoc
                                   href="/section"
                                 >
                                   <StyledComponent
@@ -2039,7 +2039,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                                         "$$typeof": Symbol(react.forward_ref),
                                         "attrs": Array [],
                                         "componentStyle": ComponentStyle {
-                                          "componentId": "sc-kAzzGY",
+                                          "componentId": "asTopNavAnchor__StyledHoc-sc-1pv1bh1-0",
                                           "isStatic": true,
                                           "lastClassName": "c16",
                                           "rules": Array [
@@ -2050,10 +2050,10 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }",
                                           ],
                                         },
-                                        "displayName": "Styled(Anchor)",
+                                        "displayName": "asTopNavAnchor__StyledHoc",
                                         "foldedComponentIds": Array [],
                                         "render": [Function],
-                                        "styledComponentId": "sc-kAzzGY",
+                                        "styledComponentId": "asTopNavAnchor__StyledHoc-sc-1pv1bh1-0",
                                         "target": [Function],
                                         "toString": [Function],
                                         "warnTooManyClasses": [Function],
@@ -2075,11 +2075,11 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                                       </a>
                                     </Anchor>
                                   </StyledComponent>
-                                </Styled(Anchor)>
+                                </asTopNavAnchor__StyledHoc>
                               </li>
                             </StyledComponent>
-                          </styled.li>
-                          <styled.li
+                          </list-item__Li>
+                          <list-item__Li
                             key="1"
                           >
                             <StyledComponent
@@ -2088,7 +2088,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-htoDjs",
+                                    "componentId": "list-item__Li-t3un2w-0",
                                     "isStatic": true,
                                     "lastClassName": "c15",
                                     "rules": Array [
@@ -2097,10 +2097,10 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }",
                                     ],
                                   },
-                                  "displayName": "styled.li",
+                                  "displayName": "list-item__Li",
                                   "foldedComponentIds": Array [],
                                   "render": [Function],
-                                  "styledComponentId": "sc-htoDjs",
+                                  "styledComponentId": "list-item__Li-t3un2w-0",
                                   "target": "li",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -2112,7 +2112,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                               <li
                                 className="c15"
                               >
-                                <Styled(Anchor)
+                                <asTopNavAnchor__StyledHoc
                                   href="/section"
                                 >
                                   <StyledComponent
@@ -2121,7 +2121,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                                         "$$typeof": Symbol(react.forward_ref),
                                         "attrs": Array [],
                                         "componentStyle": ComponentStyle {
-                                          "componentId": "sc-kAzzGY",
+                                          "componentId": "asTopNavAnchor__StyledHoc-sc-1pv1bh1-0",
                                           "isStatic": true,
                                           "lastClassName": "c16",
                                           "rules": Array [
@@ -2132,10 +2132,10 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }",
                                           ],
                                         },
-                                        "displayName": "Styled(Anchor)",
+                                        "displayName": "asTopNavAnchor__StyledHoc",
                                         "foldedComponentIds": Array [],
                                         "render": [Function],
-                                        "styledComponentId": "sc-kAzzGY",
+                                        "styledComponentId": "asTopNavAnchor__StyledHoc-sc-1pv1bh1-0",
                                         "target": [Function],
                                         "toString": [Function],
                                         "warnTooManyClasses": [Function],
@@ -2157,30 +2157,30 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                                       </a>
                                     </Anchor>
                                   </StyledComponent>
-                                </Styled(Anchor)>
+                                </asTopNavAnchor__StyledHoc>
                               </li>
                             </StyledComponent>
-                          </styled.li>
+                          </list-item__Li>
                         </ul>
                       </StyledComponent>
-                    </styled.ul>
+                    </unordered-list__Ul>
                   </div>
                 </StyledComponent>
-              </styled.div>
+              </right-hand-side__RightHandSide>
             </div>
           </StyledComponent>
-        </styled.div>
+        </top-nav-inner__TopNavInner>
       </div>
     </StyledComponent>
-  </styled.div>
-  <styled.div>
+  </top-nav-wrapper__TopNavWrapper>
+  <bottom-nav-wrapper__BottomNavWrapper>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-htpNat",
+            "componentId": "bottom-nav-wrapper__BottomNavWrapper-wioq5s-0",
             "isStatic": true,
             "lastClassName": "c17",
             "rules": Array [
@@ -2189,10 +2189,10 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
 }",
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "bottom-nav-wrapper__BottomNavWrapper",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-htpNat",
+          "styledComponentId": "bottom-nav-wrapper__BottomNavWrapper-wioq5s-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -2205,7 +2205,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
         className="c17"
       />
     </StyledComponent>
-  </styled.div>
+  </bottom-nav-wrapper__BottomNavWrapper>
 </TopNav>
 `;
 
@@ -2409,7 +2409,7 @@ exports[`TopNav with icon title: icon title 1`] = `
   defaultOpen={false}
   search={false}
 >
-  <styled.div
+  <top-nav-wrapper__TopNavWrapper
     bgColor="#0b0c0c"
     color="#ffffff"
     defaultOpen={false}
@@ -2423,17 +2423,17 @@ exports[`TopNav with icon title: icon title 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "top-nav-wrapper__TopNavWrapper-vl2d6r-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               [Function],
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "top-nav-wrapper__TopNavWrapper",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "top-nav-wrapper__TopNavWrapper-vl2d6r-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -2446,14 +2446,14 @@ exports[`TopNav with icon title: icon title 1`] = `
         className="c0"
         color="#ffffff"
       >
-        <styled.div>
+        <top-nav-inner__TopNavInner>
           <StyledComponent
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bwzfXH",
+                  "componentId": "top-nav-inner__TopNavInner-sc-1vcy147-0",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -2462,10 +2462,10 @@ exports[`TopNav with icon title: icon title 1`] = `
 }",
                   ],
                 },
-                "displayName": "styled.div",
+                "displayName": "top-nav-inner__TopNavInner",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bwzfXH",
+                "styledComponentId": "top-nav-inner__TopNavInner-sc-1vcy147-0",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -2477,14 +2477,14 @@ exports[`TopNav with icon title: icon title 1`] = `
             <div
               className="c1"
             >
-              <styled.div>
+              <logo-search-wrapper__LogoSearchWrapper>
                 <StyledComponent
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-ifAKCX",
+                        "componentId": "logo-search-wrapper__LogoSearchWrapper-sc-1xz0dmv-0",
                         "isStatic": true,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -2493,10 +2493,10 @@ exports[`TopNav with icon title: icon title 1`] = `
 }",
                         ],
                       },
-                      "displayName": "styled.div",
+                      "displayName": "logo-search-wrapper__LogoSearchWrapper",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-ifAKCX",
+                      "styledComponentId": "logo-search-wrapper__LogoSearchWrapper-sc-1xz0dmv-0",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -2508,24 +2508,24 @@ exports[`TopNav with icon title: icon title 1`] = `
                   <div
                     className="c2"
                   >
-                    <styled.div>
+                    <company__Company>
                       <StyledComponent
                         forwardedComponent={
                           Object {
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-bxivhb",
+                              "componentId": "company__Company-sc-1bg0t8w-0",
                               "isStatic": true,
                               "lastClassName": "c3",
                               "rules": Array [
                                 "display: flex; font-weight: 800; align-items: center; justify-content: flex-start; font-size: 30px;",
                               ],
                             },
-                            "displayName": "styled.div",
+                            "displayName": "company__Company",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-bxivhb",
+                            "styledComponentId": "company__Company-sc-1bg0t8w-0",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -2547,24 +2547,24 @@ exports[`TopNav with icon title: icon title 1`] = `
                               />
                             }
                           >
-                            <styled.div>
+                            <icon-title__Container>
                               <StyledComponent
                                 forwardedComponent={
                                   Object {
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-gqjmRU",
+                                      "componentId": "icon-title__Container-hhkgyi-0",
                                       "isStatic": true,
                                       "lastClassName": "c4",
                                       "rules": Array [
                                         "vertical-align: baseline;",
                                       ],
                                     },
-                                    "displayName": "styled.div",
+                                    "displayName": "icon-title__Container",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-gqjmRU",
+                                    "styledComponentId": "icon-title__Container-hhkgyi-0",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -2576,24 +2576,24 @@ exports[`TopNav with icon title: icon title 1`] = `
                                 <div
                                   className="c4"
                                 >
-                                  <styled.span>
+                                  <icon-title__IconContainer>
                                     <StyledComponent
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-VigVT",
+                                            "componentId": "icon-title__IconContainer-hhkgyi-1",
                                             "isStatic": true,
                                             "lastClassName": "c5",
                                             "rules": Array [
                                               "width: 36px; max-height: 27px; display: inline-block; margin-right: 7px;",
                                             ],
                                           },
-                                          "displayName": "styled.span",
+                                          "displayName": "icon-title__IconContainer",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-VigVT",
+                                          "styledComponentId": "icon-title__IconContainer-hhkgyi-1",
                                           "target": "span",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -2644,25 +2644,25 @@ exports[`TopNav with icon title: icon title 1`] = `
                                         </Crown>
                                       </span>
                                     </StyledComponent>
-                                  </styled.span>
-                                  <styled.span>
+                                  </icon-title__IconContainer>
+                                  <icon-title__TitleContainer>
                                     <StyledComponent
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-jTzLTM",
+                                            "componentId": "icon-title__TitleContainer-hhkgyi-2",
                                             "isStatic": true,
                                             "lastClassName": "c6",
                                             "rules": Array [
                                               "display: inline-block;",
                                             ],
                                           },
-                                          "displayName": "styled.span",
+                                          "displayName": "icon-title__TitleContainer",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-jTzLTM",
+                                          "styledComponentId": "icon-title__TitleContainer-hhkgyi-2",
                                           "target": "span",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -2677,25 +2677,25 @@ exports[`TopNav with icon title: icon title 1`] = `
                                         GOV.UK
                                       </span>
                                     </StyledComponent>
-                                  </styled.span>
+                                  </icon-title__TitleContainer>
                                 </div>
                               </StyledComponent>
-                            </styled.div>
+                            </icon-title__Container>
                           </IconTitle>
                         </div>
                       </StyledComponent>
-                    </styled.div>
+                    </company__Company>
                   </div>
                 </StyledComponent>
-              </styled.div>
-              <styled.div>
+              </logo-search-wrapper__LogoSearchWrapper>
+              <right-hand-side__RightHandSide>
                 <StyledComponent
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-EHOje",
+                        "componentId": "right-hand-side__RightHandSide-sc-32nkfb-0",
                         "isStatic": true,
                         "lastClassName": "c7",
                         "rules": Array [
@@ -2704,10 +2704,10 @@ exports[`TopNav with icon title: icon title 1`] = `
 }",
                         ],
                       },
-                      "displayName": "styled.div",
+                      "displayName": "right-hand-side__RightHandSide",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-EHOje",
+                      "styledComponentId": "right-hand-side__RightHandSide-sc-32nkfb-0",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -2719,14 +2719,14 @@ exports[`TopNav with icon title: icon title 1`] = `
                   <div
                     className="c7"
                   >
-                    <styled.div>
+                    <src__ServiceTitleWrapper>
                       <StyledComponent
                         forwardedComponent={
                           Object {
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-fjdhpX",
+                              "componentId": "src__ServiceTitleWrapper-ywaf10-0",
                               "isStatic": true,
                               "lastClassName": "c8",
                               "rules": Array [
@@ -2740,10 +2740,10 @@ exports[`TopNav with icon title: icon title 1`] = `
 }",
                               ],
                             },
-                            "displayName": "styled.div",
+                            "displayName": "src__ServiceTitleWrapper",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-fjdhpX",
+                            "styledComponentId": "src__ServiceTitleWrapper-ywaf10-0",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -2756,24 +2756,24 @@ exports[`TopNav with icon title: icon title 1`] = `
                           className="c8"
                         />
                       </StyledComponent>
-                    </styled.div>
+                    </src__ServiceTitleWrapper>
                   </div>
                 </StyledComponent>
-              </styled.div>
+              </right-hand-side__RightHandSide>
             </div>
           </StyledComponent>
-        </styled.div>
+        </top-nav-inner__TopNavInner>
       </div>
     </StyledComponent>
-  </styled.div>
-  <styled.div>
+  </top-nav-wrapper__TopNavWrapper>
+  <bottom-nav-wrapper__BottomNavWrapper>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-htpNat",
+            "componentId": "bottom-nav-wrapper__BottomNavWrapper-wioq5s-0",
             "isStatic": true,
             "lastClassName": "c9",
             "rules": Array [
@@ -2782,10 +2782,10 @@ exports[`TopNav with icon title: icon title 1`] = `
 }",
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "bottom-nav-wrapper__BottomNavWrapper",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-htpNat",
+          "styledComponentId": "bottom-nav-wrapper__BottomNavWrapper-wioq5s-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -2798,6 +2798,6 @@ exports[`TopNav with icon title: icon title 1`] = `
         className="c9"
       />
     </StyledComponent>
-  </styled.div>
+  </bottom-nav-wrapper__BottomNavWrapper>
 </TopNav>
 `;

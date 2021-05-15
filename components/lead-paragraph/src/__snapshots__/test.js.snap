@@ -40,14 +40,14 @@ exports[`LeadParagraph matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <LeadParagraph>
-  <styled.p>
+  <src__StyledParagraph>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__StyledParagraph-eb5e6-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -63,10 +63,10 @@ exports[`LeadParagraph matches wrapper snapshot: wrapper mount 1`] = `
               [Function],
             ],
           },
-          "displayName": "styled.p",
+          "displayName": "src__StyledParagraph",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__StyledParagraph-eb5e6-0",
           "target": "p",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -81,6 +81,6 @@ exports[`LeadParagraph matches wrapper snapshot: wrapper mount 1`] = `
         example
       </p>
     </StyledComponent>
-  </styled.p>
+  </src__StyledParagraph>
 </LeadParagraph>
 `;

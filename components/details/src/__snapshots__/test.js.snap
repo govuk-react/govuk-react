@@ -119,7 +119,7 @@ exports[`details matches the Details snapshot: details 1`] = `
     open={false}
     summary="Help with nationality"
   >
-    <styled.details
+    <src__StyledDetails
       open={false}
     >
       <StyledComponent
@@ -128,7 +128,7 @@ exports[`details matches the Details snapshot: details 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-htpNat",
+              "componentId": "src__StyledDetails-sc-1omhdg3-0",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
@@ -144,10 +144,10 @@ exports[`details matches the Details snapshot: details 1`] = `
                 "display: block;",
               ],
             },
-            "displayName": "styled.details",
+            "displayName": "src__StyledDetails",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-htpNat",
+            "styledComponentId": "src__StyledDetails-sc-1omhdg3-0",
             "target": "details",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -161,14 +161,14 @@ exports[`details matches the Details snapshot: details 1`] = `
           className="c0"
           open={false}
         >
-          <styled.summary>
+          <src__StyledSummary>
             <StyledComponent
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-bxivhb",
+                    "componentId": "src__StyledSummary-sc-1omhdg3-1",
                     "isStatic": true,
                     "lastClassName": "c1",
                     "rules": Array [
@@ -185,10 +185,10 @@ exports[`details matches the Details snapshot: details 1`] = `
 }",
                     ],
                   },
-                  "displayName": "styled.summary",
+                  "displayName": "src__StyledSummary",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-bxivhb",
+                  "styledComponentId": "src__StyledSummary-sc-1omhdg3-1",
                   "target": "summary",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -200,24 +200,24 @@ exports[`details matches the Details snapshot: details 1`] = `
               <summary
                 className="c1"
               >
-                <styled.span>
+                <src__SummaryText>
                   <StyledComponent
                     forwardedComponent={
                       Object {
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-ifAKCX",
+                          "componentId": "src__SummaryText-sc-1omhdg3-2",
                           "isStatic": true,
                           "lastClassName": "c2",
                           "rules": Array [
                             "text-decoration: underline;",
                           ],
                         },
-                        "displayName": "styled.span",
+                        "displayName": "src__SummaryText",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-ifAKCX",
+                        "styledComponentId": "src__SummaryText-sc-1omhdg3-2",
                         "target": "span",
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -232,18 +232,18 @@ exports[`details matches the Details snapshot: details 1`] = `
                       Help with nationality
                     </span>
                   </StyledComponent>
-                </styled.span>
+                </src__SummaryText>
               </summary>
             </StyledComponent>
-          </styled.summary>
-          <styled.div>
+          </src__StyledSummary>
+          <src__DetailsText>
             <StyledComponent
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-EHOje",
+                    "componentId": "src__DetailsText-sc-1omhdg3-3",
                     "isStatic": true,
                     "lastClassName": "c3",
                     "rules": Array [
@@ -254,10 +254,10 @@ exports[`details matches the Details snapshot: details 1`] = `
 }",
                     ],
                   },
-                  "displayName": "styled.div",
+                  "displayName": "src__DetailsText",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-EHOje",
+                  "styledComponentId": "src__DetailsText-sc-1omhdg3-3",
                   "target": "div",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -272,10 +272,10 @@ exports[`details matches the Details snapshot: details 1`] = `
                 If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
               </div>
             </StyledComponent>
-          </styled.div>
+          </src__DetailsText>
         </details>
       </StyledComponent>
-    </styled.details>
+    </src__StyledDetails>
   </Details>
 </DetailsSimple>
 `;

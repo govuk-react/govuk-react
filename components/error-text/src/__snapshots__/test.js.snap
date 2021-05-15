@@ -29,14 +29,14 @@ exports[`ErrorText matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <ErrorText>
-  <styled.span>
+  <src__StyledError>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__StyledError-q8g4f0-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -49,10 +49,10 @@ exports[`ErrorText matches wrapper snapshot: wrapper mount 1`] = `
               [Function],
             ],
           },
-          "displayName": "styled.span",
+          "displayName": "src__StyledError",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__StyledError-q8g4f0-0",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -67,6 +67,6 @@ exports[`ErrorText matches wrapper snapshot: wrapper mount 1`] = `
         example
       </span>
     </StyledComponent>
-  </styled.span>
+  </src__StyledError>
 </ErrorText>
 `;

@@ -26,14 +26,14 @@ exports[`ListItem matches wrapper snapshot: list item mount 1`] = `
 }
 
 <DocumentedComponent>
-  <styled.li>
+  <src__ListItem>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__ListItem-sc-14amfma-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -46,11 +46,11 @@ exports[`ListItem matches wrapper snapshot: list item mount 1`] = `
               [Function],
             ],
           },
-          "displayName": "styled.li",
+          "displayName": "src__ListItem",
           "foldedComponentIds": Array [],
           "propTypes": undefined,
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__ListItem-sc-14amfma-0",
           "target": "li",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -65,6 +65,6 @@ exports[`ListItem matches wrapper snapshot: list item mount 1`] = `
         example
       </li>
     </StyledComponent>
-  </styled.li>
+  </src__ListItem>
 </DocumentedComponent>
 `;

@@ -87,7 +87,7 @@ exports[`ListNavigation matches wrapper snapshot: wrapper mount 1`] = `
   <UnorderedList
     listStyleType="square"
   >
-    <styled.ol
+    <src__OrderedList
       as="ul"
       listStyleType="square"
     >
@@ -120,7 +120,7 @@ exports[`ListNavigation matches wrapper snapshot: wrapper mount 1`] = `
             "defaultProps": Object {
               "listStyleType": undefined,
             },
-            "displayName": "styled.ol",
+            "displayName": "src__OrderedList",
             "foldedComponentIds": Array [],
             "propTypes": undefined,
             "render": [Function],
@@ -137,7 +137,7 @@ exports[`ListNavigation matches wrapper snapshot: wrapper mount 1`] = `
         <ul
           className="c0 c1"
         >
-          <styled.li>
+          <src__ListItem>
             <StyledComponent
               forwardedComponent={
                 Object {
@@ -157,7 +157,7 @@ exports[`ListNavigation matches wrapper snapshot: wrapper mount 1`] = `
                       [Function],
                     ],
                   },
-                  "displayName": "styled.li",
+                  "displayName": "src__ListItem",
                   "foldedComponentIds": Array [],
                   "propTypes": undefined,
                   "render": [Function],
@@ -176,10 +176,10 @@ exports[`ListNavigation matches wrapper snapshot: wrapper mount 1`] = `
                 Example
               </li>
             </StyledComponent>
-          </styled.li>
+          </src__ListItem>
         </ul>
       </StyledComponent>
-    </styled.ol>
+    </src__OrderedList>
   </UnorderedList>
 </ListNavigation>
 `;

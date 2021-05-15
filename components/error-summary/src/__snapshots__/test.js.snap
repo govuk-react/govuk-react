@@ -470,7 +470,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
       heading="Message to alert the user to a problem goes here"
       onHandleErrorClick={[Function]}
     >
-      <styled.div
+      <src__StyledErrorSummary
         tabIndex={-1}
       >
         <StyledComponent
@@ -479,7 +479,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bZQynM",
+                "componentId": "src__StyledErrorSummary-sc-1b7q1ts-1",
                 "isStatic": false,
                 "lastClassName": "c0",
                 "rules": Array [
@@ -491,10 +491,10 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                   [Function],
                 ],
               },
-              "displayName": "styled.div",
+              "displayName": "src__StyledErrorSummary",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-bZQynM",
+              "styledComponentId": "src__StyledErrorSummary-sc-1b7q1ts-1",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -515,7 +515,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                 as="h2"
                 size="MEDIUM"
               >
-                <styled.h1
+                <src__StyledHeading
                   as="h2"
                   size="MEDIUM"
                 >
@@ -526,7 +526,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-bdVaJa",
+                          "componentId": "src__StyledHeading-sc-1dueefc-0",
                           "isStatic": false,
                           "lastClassName": "c1",
                           "rules": Array [
@@ -539,10 +539,10 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                             [Function],
                           ],
                         },
-                        "displayName": "styled.h1",
+                        "displayName": "src__StyledHeading",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-bdVaJa",
+                        "styledComponentId": "src__StyledHeading-sc-1dueefc-0",
                         "target": "h1",
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -559,7 +559,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       Message to alert the user to a problem goes here
                     </h2>
                   </StyledComponent>
-                </styled.h1>
+                </src__StyledHeading>
               </Heading>
             </H2>
             <Paragraph
@@ -567,7 +567,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
               mb={3}
               supportingText={false}
             >
-              <Styled(ReactMarkdown)
+              <src__StyledParagraph
                 allowedTypes={
                   Array [
                     "paragraph",
@@ -609,7 +609,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-htpNat",
+                        "componentId": "src__StyledParagraph-dkdnni-0",
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -626,7 +626,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                           [Function],
                         ],
                       },
-                      "displayName": "Styled(ReactMarkdown)",
+                      "displayName": "src__StyledParagraph",
                       "foldedComponentIds": Array [],
                       "render": [Function],
                       "renderers": Object {
@@ -658,7 +658,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                         "thematicBreak": "hr",
                         "virtualHtml": [Function],
                       },
-                      "styledComponentId": "sc-htpNat",
+                      "styledComponentId": "src__StyledParagraph-dkdnni-0",
                       "target": [Function],
                       "toString": [Function],
                       "types": Array [
@@ -759,13 +759,13 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                     </Root>
                   </ReactMarkdown>
                 </StyledComponent>
-              </Styled(ReactMarkdown)>
+              </src__StyledParagraph>
             </Paragraph>
             <UnorderedList
               listStyleType="none"
               mb={0}
             >
-              <styled.ol
+              <src__OrderedList
                 as="ul"
                 listStyleType="none"
                 mb={0}
@@ -799,7 +799,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       "defaultProps": Object {
                         "listStyleType": undefined,
                       },
-                      "displayName": "styled.ol",
+                      "displayName": "src__OrderedList",
                       "foldedComponentIds": Array [],
                       "propTypes": undefined,
                       "render": [Function],
@@ -817,7 +817,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                   <ul
                     className="c3 c4"
                   >
-                    <styled.li
+                    <src__ListItem
                       key="national-insurance-number"
                     >
                       <StyledComponent
@@ -839,7 +839,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                                 [Function],
                               ],
                             },
-                            "displayName": "styled.li",
+                            "displayName": "src__ListItem",
                             "foldedComponentIds": Array [],
                             "propTypes": undefined,
                             "render": [Function],
@@ -855,7 +855,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                         <li
                           className="c5 c6"
                         >
-                          <Styled(styled.a)
+                          <src__StyledErrorText
                             muted={false}
                             noVisitedState={false}
                             onClick={[Function]}
@@ -868,7 +868,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-EHOje",
+                                    "componentId": "src__StyledErrorText-sc-1b7q1ts-0",
                                     "isStatic": false,
                                     "lastClassName": "c7",
                                     "rules": Array [
@@ -911,13 +911,13 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                                     "noVisitedState": false,
                                     "textColour": false,
                                   },
-                                  "displayName": "Styled(styled.a)",
+                                  "displayName": "src__StyledErrorText",
                                   "foldedComponentIds": Array [
-                                    "sc-bwzfXH",
+                                    "src__Link-sc-1oemcts-0",
                                   ],
                                   "propTypes": undefined,
                                   "render": [Function],
-                                  "styledComponentId": "sc-EHOje",
+                                  "styledComponentId": "src__StyledErrorText-sc-1b7q1ts-0",
                                   "target": "a",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -940,11 +940,11 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                                 National Insurance number error
                               </a>
                             </StyledComponent>
-                          </Styled(styled.a)>
+                          </src__StyledErrorText>
                         </li>
                       </StyledComponent>
-                    </styled.li>
-                    <styled.li
+                    </src__ListItem>
+                    <src__ListItem
                       key="description"
                     >
                       <StyledComponent
@@ -966,7 +966,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                                 [Function],
                               ],
                             },
-                            "displayName": "styled.li",
+                            "displayName": "src__ListItem",
                             "foldedComponentIds": Array [],
                             "propTypes": undefined,
                             "render": [Function],
@@ -982,7 +982,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                         <li
                           className="c5 c6"
                         >
-                          <Styled(styled.a)
+                          <src__StyledErrorText
                             muted={false}
                             noVisitedState={false}
                             onClick={[Function]}
@@ -995,7 +995,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-EHOje",
+                                    "componentId": "src__StyledErrorText-sc-1b7q1ts-0",
                                     "isStatic": false,
                                     "lastClassName": "c7",
                                     "rules": Array [
@@ -1038,13 +1038,13 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                                     "noVisitedState": false,
                                     "textColour": false,
                                   },
-                                  "displayName": "Styled(styled.a)",
+                                  "displayName": "src__StyledErrorText",
                                   "foldedComponentIds": Array [
-                                    "sc-bwzfXH",
+                                    "src__Link-sc-1oemcts-0",
                                   ],
                                   "propTypes": undefined,
                                   "render": [Function],
-                                  "styledComponentId": "sc-EHOje",
+                                  "styledComponentId": "src__StyledErrorText-sc-1b7q1ts-0",
                                   "target": "a",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -1067,17 +1067,17 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                                 Description of what you saw error
                               </a>
                             </StyledComponent>
-                          </Styled(styled.a)>
+                          </src__StyledErrorText>
                         </li>
                       </StyledComponent>
-                    </styled.li>
+                    </src__ListItem>
                   </ul>
                 </StyledComponent>
-              </styled.ol>
+              </src__OrderedList>
             </UnorderedList>
           </div>
         </StyledComponent>
-      </styled.div>
+      </src__StyledErrorSummary>
     </ErrorSummary>
     <InputField
       hint="It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
@@ -1089,7 +1089,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
         error={false}
         name="national-insurance-number"
       >
-        <styled.label
+        <src__StyledLabel
           error={false}
           name="national-insurance-number"
         >
@@ -1100,7 +1100,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-gzVnrw",
+                  "componentId": "src__StyledLabel-sc-14n2scx-0",
                   "isStatic": false,
                   "lastClassName": "c8",
                   "rules": Array [
@@ -1111,10 +1111,10 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                     [Function],
                   ],
                 },
-                "displayName": "styled.label",
+                "displayName": "src__StyledLabel",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-gzVnrw",
+                "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
                 "target": "label",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -1129,14 +1129,14 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
               name="national-insurance-number"
             >
               <LabelText>
-                <styled.span>
+                <src__StyledLabelText>
                   <StyledComponent
                     forwardedComponent={
                       Object {
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-htoDjs",
+                          "componentId": "src__StyledLabelText-sc-12l0n4z-0",
                           "isStatic": false,
                           "lastClassName": "c9",
                           "rules": Array [
@@ -1153,10 +1153,10 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                             [Function],
                           ],
                         },
-                        "displayName": "styled.span",
+                        "displayName": "src__StyledLabelText",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-htoDjs",
+                        "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
                         "target": "span",
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -1171,17 +1171,17 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       National Insurance number
                     </span>
                   </StyledComponent>
-                </styled.span>
+                </src__StyledLabelText>
               </LabelText>
               <HintText>
-                <styled.span>
+                <src__StyledHint>
                   <StyledComponent
                     forwardedComponent={
                       Object {
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-iwsKbI",
+                          "componentId": "src__StyledHint-sc-1qn4br2-0",
                           "isStatic": false,
                           "lastClassName": "c10",
                           "rules": Array [
@@ -1194,10 +1194,10 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                             [Function],
                           ],
                         },
-                        "displayName": "styled.span",
+                        "displayName": "src__StyledHint",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-iwsKbI",
+                        "styledComponentId": "src__StyledHint-sc-1qn4br2-0",
                         "target": "span",
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -1212,12 +1212,12 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
                     </span>
                   </StyledComponent>
-                </styled.span>
+                </src__StyledHint>
               </HintText>
               <Input
                 type="text"
               >
-                <styled.input
+                <src__StyledInput
                   type="text"
                 >
                   <StyledComponent
@@ -1226,7 +1226,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-gZMcBi",
+                          "componentId": "src__StyledInput-u8exb4-0",
                           "isStatic": false,
                           "lastClassName": "c11",
                           "rules": Array [
@@ -1247,10 +1247,10 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                             [Function],
                           ],
                         },
-                        "displayName": "styled.input",
+                        "displayName": "src__StyledInput",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-gZMcBi",
+                        "styledComponentId": "src__StyledInput-u8exb4-0",
                         "target": "input",
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -1265,11 +1265,11 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       type="text"
                     />
                   </StyledComponent>
-                </styled.input>
+                </src__StyledInput>
               </Input>
             </label>
           </StyledComponent>
-        </styled.label>
+        </src__StyledLabel>
       </Label>
     </InputField>
     <br />
@@ -1282,7 +1282,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
         error={false}
         name="description"
       >
-        <styled.label
+        <src__StyledLabel
           error={false}
           name="description"
         >
@@ -1293,7 +1293,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-gzVnrw",
+                  "componentId": "src__StyledLabel-sc-14n2scx-0",
                   "isStatic": false,
                   "lastClassName": "c8",
                   "rules": Array [
@@ -1304,10 +1304,10 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                     [Function],
                   ],
                 },
-                "displayName": "styled.label",
+                "displayName": "src__StyledLabel",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-gzVnrw",
+                "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
                 "target": "label",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -1322,14 +1322,14 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
               name="description"
             >
               <LabelText>
-                <styled.span>
+                <src__StyledLabelText>
                   <StyledComponent
                     forwardedComponent={
                       Object {
                         "$$typeof": Symbol(react.forward_ref),
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
-                          "componentId": "sc-htoDjs",
+                          "componentId": "src__StyledLabelText-sc-12l0n4z-0",
                           "isStatic": false,
                           "lastClassName": "c9",
                           "rules": Array [
@@ -1346,10 +1346,10 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                             [Function],
                           ],
                         },
-                        "displayName": "styled.span",
+                        "displayName": "src__StyledLabelText",
                         "foldedComponentIds": Array [],
                         "render": [Function],
-                        "styledComponentId": "sc-htoDjs",
+                        "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
                         "target": "span",
                         "toString": [Function],
                         "warnTooManyClasses": [Function],
@@ -1364,9 +1364,9 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       Description of what you saw
                     </span>
                   </StyledComponent>
-                </styled.span>
+                </src__StyledLabelText>
               </LabelText>
-              <styled.textarea
+              <src__TextAreaField
                 rows="5"
                 type="text"
               >
@@ -1376,7 +1376,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-gqjmRU",
+                        "componentId": "src__TextAreaField-sc-83xe87-0",
                         "isStatic": false,
                         "lastClassName": "c12",
                         "rules": Array [
@@ -1388,10 +1388,10 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                           [Function],
                         ],
                       },
-                      "displayName": "styled.textarea",
+                      "displayName": "src__TextAreaField",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-gqjmRU",
+                      "styledComponentId": "src__TextAreaField-sc-83xe87-0",
                       "target": "textarea",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -1408,10 +1408,10 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                     type="text"
                   />
                 </StyledComponent>
-              </styled.textarea>
+              </src__TextAreaField>
             </label>
           </StyledComponent>
-        </styled.label>
+        </src__StyledLabel>
       </Label>
     </TextArea>
   </div>

@@ -40,14 +40,14 @@ exports[`Fieldset.Legend matches wrapper snapshot 1`] = `
 <Legend
   isPageHeading={false}
 >
-  <styled.legend>
+  <legend__StyledLegend>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "legend__StyledLegend-sc-1lnibj7-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -64,10 +64,10 @@ exports[`Fieldset.Legend matches wrapper snapshot 1`] = `
               [Function],
             ],
           },
-          "displayName": "styled.legend",
+          "displayName": "legend__StyledLegend",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "legend__StyledLegend-sc-1lnibj7-0",
           "target": "legend",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -82,6 +82,6 @@ exports[`Fieldset.Legend matches wrapper snapshot 1`] = `
         Legend text
       </legend>
     </StyledComponent>
-  </styled.legend>
+  </legend__StyledLegend>
 </Legend>
 `;

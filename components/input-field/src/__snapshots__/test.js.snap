@@ -127,7 +127,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   <Label
     error={false}
   >
-    <styled.label
+    <src__StyledLabel
       error={false}
     >
       <StyledComponent
@@ -137,7 +137,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "src__StyledLabel-sc-14n2scx-0",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
@@ -148,10 +148,10 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                 [Function],
               ],
             },
-            "displayName": "styled.label",
+            "displayName": "src__StyledLabel",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "src__StyledLabel-sc-14n2scx-0",
             "target": "label",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -164,14 +164,14 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
           className="c0"
         >
           <LabelText>
-            <styled.span>
+            <src__StyledLabelText>
               <StyledComponent
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bwzfXH",
+                      "componentId": "src__StyledLabelText-sc-12l0n4z-0",
                       "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
@@ -188,10 +188,10 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                         [Function],
                       ],
                     },
-                    "displayName": "styled.span",
+                    "displayName": "src__StyledLabelText",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bwzfXH",
+                    "styledComponentId": "src__StyledLabelText-sc-12l0n4z-0",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -206,12 +206,12 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                   example
                 </span>
               </StyledComponent>
-            </styled.span>
+            </src__StyledLabelText>
           </LabelText>
           <Input
             type="text"
           >
-            <styled.input
+            <src__StyledInput
               type="text"
             >
               <StyledComponent
@@ -220,7 +220,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-ifAKCX",
+                      "componentId": "src__StyledInput-u8exb4-0",
                       "isStatic": false,
                       "lastClassName": "c2",
                       "rules": Array [
@@ -241,10 +241,10 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                         [Function],
                       ],
                     },
-                    "displayName": "styled.input",
+                    "displayName": "src__StyledInput",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-ifAKCX",
+                    "styledComponentId": "src__StyledInput-u8exb4-0",
                     "target": "input",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -259,11 +259,11 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
                   type="text"
                 />
               </StyledComponent>
-            </styled.input>
+            </src__StyledInput>
           </Input>
         </label>
       </StyledComponent>
-    </styled.label>
+    </src__StyledLabel>
   </Label>
 </InputField>
 `;

@@ -55,14 +55,14 @@ exports[`Pagination matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <Pagination>
-  <styled.ul>
+  <src__StyledList>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__StyledList-zm8i2n-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -77,10 +77,10 @@ exports[`Pagination matches wrapper snapshot: wrapper mount 1`] = `
               [Function],
             ],
           },
-          "displayName": "styled.ul",
+          "displayName": "src__StyledList",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__StyledList-zm8i2n-0",
           "target": "ul",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -95,6 +95,6 @@ exports[`Pagination matches wrapper snapshot: wrapper mount 1`] = `
         Example
       </ul>
     </StyledComponent>
-  </styled.ul>
+  </src__StyledList>
 </Pagination>
 `;

@@ -33,7 +33,7 @@ exports[`VisuallyHidden focusable version matches snapshot: focusable 1`] = `
   focusable={true}
   important={true}
 >
-  <styled.span
+  <src__VisuallyHidden
     focusable={true}
     important={true}
   >
@@ -46,7 +46,7 @@ exports[`VisuallyHidden focusable version matches snapshot: focusable 1`] = `
             [Function],
           ],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__VisuallyHidden-sc-1d47voq-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -57,11 +57,11 @@ exports[`VisuallyHidden focusable version matches snapshot: focusable 1`] = `
             "focusable": false,
             "important": true,
           },
-          "displayName": "styled.span",
+          "displayName": "src__VisuallyHidden",
           "foldedComponentIds": Array [],
           "propTypes": undefined,
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__VisuallyHidden-sc-1d47voq-0",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -79,7 +79,7 @@ exports[`VisuallyHidden focusable version matches snapshot: focusable 1`] = `
         Example
       </span>
     </StyledComponent>
-  </styled.span>
+  </src__VisuallyHidden>
 </VisuallyHiddenDocumented>
 `;
 
@@ -103,7 +103,7 @@ exports[`VisuallyHidden matches snapshot: default render 1`] = `
   focusable={false}
   important={true}
 >
-  <styled.span
+  <src__VisuallyHidden
     focusable={false}
     important={true}
   >
@@ -116,7 +116,7 @@ exports[`VisuallyHidden matches snapshot: default render 1`] = `
             [Function],
           ],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__VisuallyHidden-sc-1d47voq-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -127,11 +127,11 @@ exports[`VisuallyHidden matches snapshot: default render 1`] = `
             "focusable": false,
             "important": true,
           },
-          "displayName": "styled.span",
+          "displayName": "src__VisuallyHidden",
           "foldedComponentIds": Array [],
           "propTypes": undefined,
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__VisuallyHidden-sc-1d47voq-0",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -148,7 +148,7 @@ exports[`VisuallyHidden matches snapshot: default render 1`] = `
         Example
       </span>
     </StyledComponent>
-  </styled.span>
+  </src__VisuallyHidden>
 </VisuallyHiddenDocumented>
 `;
 
@@ -172,7 +172,7 @@ exports[`VisuallyHidden with important={false} matches snapshot: not important 1
   focusable={false}
   important={false}
 >
-  <styled.span
+  <src__VisuallyHidden
     focusable={false}
     important={false}
   >
@@ -185,7 +185,7 @@ exports[`VisuallyHidden with important={false} matches snapshot: not important 1
             [Function],
           ],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__VisuallyHidden-sc-1d47voq-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -196,11 +196,11 @@ exports[`VisuallyHidden with important={false} matches snapshot: not important 1
             "focusable": false,
             "important": true,
           },
-          "displayName": "styled.span",
+          "displayName": "src__VisuallyHidden",
           "foldedComponentIds": Array [],
           "propTypes": undefined,
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__VisuallyHidden-sc-1d47voq-0",
           "target": "span",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -217,6 +217,6 @@ exports[`VisuallyHidden with important={false} matches snapshot: not important 1
         Example
       </span>
     </StyledComponent>
-  </styled.span>
+  </src__VisuallyHidden>
 </VisuallyHiddenDocumented>
 `;
