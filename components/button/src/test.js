@@ -1,83 +1,39 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 
-import Button, { ButtonStart, ButtonStartIcon, ButtonDisabled, ButtonBlue, ButtonWacky } from './fixtures';
+import Button, { ButtonStart, ButtonStartIcon, ButtonDisabled } from './fixtures';
 
 describe('button', () => {
   describe('basics', () => {
     it('should render a button', () => {
-      const wrapper = mount(<Button>Example</Button>);
+      const { getByRole, getByText } = render(<Button>Example</Button>);
 
-      expect(wrapper.find('button')).toBeTruthy();
-    });
-
-    it('matches snapshot', () => {
-      const wrapper = mount(<Button>Example</Button>);
-
-      expect(wrapper).toMatchSnapshot();
+      expect(getByRole('button')).toBeInTheDocument();
+      expect(getByRole('button')).toEqual(getByText('Example'));
     });
   });
 
   describe('disabled', () => {
     it('should render a button with the disabled attribute', () => {
-      const wrapper = mount(<ButtonDisabled />);
+      const { getByRole } = render(<ButtonDisabled />);
 
-      expect(wrapper.find('button').prop('disabled')).toBeTruthy();
-    });
-
-    it('matches snapshot', () => {
-      const wrapper = mount(<ButtonDisabled />);
-
-      expect(wrapper).toMatchSnapshot();
+      expect(getByRole('button')).toBeDisabled();
     });
   });
 
   describe('start button', () => {
     it('should render a button with the isStart prop', () => {
-      const wrapper = mount(<ButtonStart />);
+      const { getByRole } = render(<ButtonStart />);
 
-      expect(
-        wrapper
-          .find('button')
-          .parent()
-          .prop('isStart')
-      ).toBeTruthy();
-    });
-
-    it('matches snapshot', () => {
-      const wrapper = mount(<ButtonStart />);
-
-      expect(wrapper).toMatchSnapshot();
+      expect(getByRole('button')).toBeInTheDocument();
     });
   });
 
   describe('button with icon', () => {
     it('should render an SVG icon within the button', () => {
-      const wrapper = mount(<ButtonStartIcon />);
+      const { container } = render(<ButtonStartIcon />);
 
-      expect(wrapper.find('SVG')).toHaveLength(1);
-    });
-
-    it('matches snapshot', () => {
-      const wrapper = mount(<ButtonStartIcon />);
-
-      expect(wrapper).toMatchSnapshot();
-    });
-  });
-
-  describe('blue button, with automatic colours', () => {
-    it('matches snapshot', () => {
-      const wrapper = mount(<ButtonBlue />);
-
-      expect(wrapper).toMatchSnapshot();
-    });
-  });
-
-  describe('custom colours', () => {
-    it('matches snapshot', () => {
-      const wrapper = mount(<ButtonWacky />);
-
-      expect(wrapper).toMatchSnapshot();
+      expect(container.querySelectorAll('svg').length).toEqual(1);
     });
   });
 });
