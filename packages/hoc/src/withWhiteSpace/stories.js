@@ -158,7 +158,10 @@ stories.add('multiple existing components', () => (
     </PhaseBanner>
     <Radio mb={number('Radio marginBottom', 9)}>Radio Example</Radio>
     <RelatedItems mb={number('RelatedItems marginBottom', 9)}>RelatedItems Example</RelatedItems>
-    <SearchBox mb={number('SearchBox marginBottom', 9)}>SearchBox Example</SearchBox>
+    <SearchBox mb={number('SearchBox marginBottom', 9)}>
+      <SearchBox.Input />
+      <SearchBox.Button />
+    </SearchBox>
     <Select label="example" mb={number('Select marginBottom', 9)}>
       Select Example
     </Select>

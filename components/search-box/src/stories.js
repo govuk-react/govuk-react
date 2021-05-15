@@ -17,7 +17,10 @@ stories.add('Component default', () => (
   <Layout>
     <GridRow>
       <GridCol>
-        <SearchBox placeholder="Search GOV.UK">SearchBox example</SearchBox>
+        <SearchBox>
+          <SearchBox.Input placeholder="Search GOV.UK" />
+          <SearchBox.Button />
+        </SearchBox>
       </GridCol>
     </GridRow>
   </Layout>

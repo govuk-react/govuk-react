@@ -1837,7 +1837,10 @@ import GridCol from '@govuk-react/grid-col';
 <Layout>
    <GridRow>
      <GridCol>
-       <SearchBox placeholder="Search GOV.UK">SearchBox example</SearchBox>
+       <SearchBox>
+         <SearchBox.Input placeholder="Search GOV.UK" />
+         <SearchBox.Button />
+       </SearchBox>
      </GridCol>
    </GridRow>
  </Layout>
@@ -1845,11 +1848,6 @@ import GridCol from '@govuk-react/grid-col';
 
 ### References:
 - https://govuk-static.herokuapp.com/component-guide/search
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `placeholder` |  | ```undefined``` | string | 
 
 
 SectionBreak
@@ -2370,7 +2368,10 @@ const ServiceTitle = (
 );
 
 const Search = (
-  <SearchBox placeholder="Search">hi</SearchBox>
+  <SearchBox>
+    <SearchBox.Input placeholder="Search GOV.UK" />
+    <SearchBox.Button />
+  </SearchBox>
 );
 
 <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>

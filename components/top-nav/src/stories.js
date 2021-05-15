@@ -32,7 +32,12 @@ const ServiceTitle = (
   </NavAnchor>
 );
 
-const Search = <SearchBox placeholder="Search">hi</SearchBox>;
+const Search = (
+  <SearchBox>
+    <SearchBox.Input placeholder="Search" />
+    <SearchBox.Button />
+  </SearchBox>
+);
 
 const CompanyLink = (
   <LogoLink to={reactRouterLink}>
