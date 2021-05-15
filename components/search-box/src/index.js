@@ -9,18 +9,8 @@ import { NTA_LIGHT } from '@govuk-react/constants';
 import { Search } from '@govuk-react/icons';
 import { spacing } from '@govuk-react/lib';
 
-const SearchBoxWrapper = styled('div')(
-  {
-    boxSizing: 'border-box',
-    display: 'flex',
-    width: '100%',
-    background: WHITE,
-  },
-  spacing.withWhiteSpace({ marginBottom: 0 })
-);
-
 // css normalize is hiding the input:search clear SearchButton
-const InputSearchBox = styled('input')({
+const Input = styled('input')({
   width: '100%',
   height: '40px',
   padding: '6px',
@@ -46,6 +36,10 @@ const InputSearchBox = styled('input')({
   },
 });
 
+Input.defaultProps = {
+  type: 'Search',
+};
+
 const SearchButton = styled('button')({
   backgroundColor: LIGHT_BLUE,
   border: 0,
@@ -65,6 +59,22 @@ const SearchButton = styled('button')({
   },
 });
 
+const Button = props => (
+  <SearchButton title="Search" {...props}>
+    <Search fill={WHITE} />
+  </SearchButton>
+);
+
+const StyledSearchBox = styled('div')(
+  {
+    boxSizing: 'border-box',
+    display: 'flex',
+    width: '100%',
+    background: WHITE,
+  },
+  spacing.withWhiteSpace({ marginBottom: 0 })
+);
+
 /**
  *
  * ### Usage
@@ -78,7 +88,10 @@ const SearchButton = styled('button')({
  * <Layout>
  *    <GridRow>
  *      <GridCol>
- *        <SearchBox placeholder="Search GOV.UK">SearchBox example</SearchBox>
+ *        <SearchBox>
+ *          <SearchBox.Input placeholder="Search GOV.UK" />
+ *          <SearchBox.Button />
+ *        </SearchBox>
  *      </GridCol>
  *    </GridRow>
  *  </Layout>
@@ -88,21 +101,9 @@ const SearchButton = styled('button')({
  * - https://govuk-static.herokuapp.com/component-guide/search
  *
  */
-const SearchBox = ({ placeholder, ...props }) => (
-  <SearchBoxWrapper {...props}>
-    <InputSearchBox type="search" placeholder={placeholder} />
-    <SearchButton title="Search">
-      <Search fill={WHITE} />
-    </SearchButton>
-  </SearchBoxWrapper>
-);
+const SearchBox = props => <StyledSearchBox {...props} />;
 
-SearchBox.defaultProps = {
-  placeholder: undefined,
-};
-
-SearchBox.propTypes = {
-  placeholder: PropTypes.string,
-};
+SearchBox.Input = Input;
+SearchBox.Button = Button;
 
 export default SearchBox;
