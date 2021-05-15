@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import Link from '.';
 
@@ -19,6 +19,6 @@ describe('Breadcrumb Link', () => {
   });
 
   it('renders without crashing', () => {
-    mount(<Link href="#id">Example</Link>);
+    render(<Link href="#id">Example</Link>);
   });
 });

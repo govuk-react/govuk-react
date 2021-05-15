@@ -1,27 +1,24 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { mount } from 'enzyme';
-import sinon from 'sinon';
+import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import BackLink from '.';
 
 describe('Back Link', () => {
-  const onButtonClick = sinon.spy();
-  const wrapper = <BackLink onClick={onButtonClick}>example</BackLink>;
-
   it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(wrapper, div);
+    const { getByText } = render(<BackLink>example</BackLink>);
+
+    expect(getByText('example')).toBeInTheDocument();
   });
 
-  it('simulates click events', () => {
-    mount(wrapper)
-      .find('a')
-      .simulate('click');
-    expect(onButtonClick).toHaveProperty('callCount', 1);
-  });
+  it('calls onClick handler when clicked', () => {
+    const clickHandler = jest.fn();
+    const { getByText } = render(<BackLink onClick={clickHandler}>example</BackLink>);
 
-  it('matches wrapper snapshot', () => {
-    expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
+    expect(clickHandler).not.toHaveBeenCalled();
+
+    userEvent.click(getByText('example'));
+
+    expect(clickHandler).toHaveBeenCalled();
   });
 });

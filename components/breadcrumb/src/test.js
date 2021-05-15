@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import Breadcrumb from '.';
 
@@ -28,8 +28,8 @@ describe('breadcrumb', () => {
   it('produces a deprecation warning', () => {
     process.env.NODE_ENV = 'development';
 
-    mount(<Breadcrumb>Test</Breadcrumb>);
-    mount(
+    render(<Breadcrumb>Test</Breadcrumb>);
+    render(
       <Breadcrumb id="test" className="test">
         <Breadcrumb.Link href="/section">Section 1</Breadcrumb.Link>
         {[] /* empty node */}
