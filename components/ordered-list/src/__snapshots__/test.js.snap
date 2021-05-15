@@ -129,7 +129,7 @@ exports[`OrderedList matches wrapper snapshot: wrapper mount 1`] = `
         <li
           className="c2 c3"
         >
-          <src__Link
+          <styled.a
             href="http://example.com"
             muted={false}
             noVisitedState={false}
@@ -138,18 +138,17 @@ exports[`OrderedList matches wrapper snapshot: wrapper mount 1`] = `
             <a
               className="c4"
               href="http://example.com"
-              muted={false}
             >
               Example 1
             </a>
-          </src__Link>
+          </styled.a>
         </li>
       </src__ListItem>
       <src__ListItem>
         <li
           className="c2 c3"
         >
-          <src__Link
+          <styled.a
             href="http://example.com"
             muted={false}
             noVisitedState={false}
@@ -158,18 +157,17 @@ exports[`OrderedList matches wrapper snapshot: wrapper mount 1`] = `
             <a
               className="c4"
               href="http://example.com"
-              muted={false}
             >
               Example 2
             </a>
-          </src__Link>
+          </styled.a>
         </li>
       </src__ListItem>
       <src__ListItem>
         <li
           className="c2 c3"
         >
-          <src__Link
+          <styled.a
             href="http://example.com"
             muted={false}
             noVisitedState={false}
@@ -178,11 +176,10 @@ exports[`OrderedList matches wrapper snapshot: wrapper mount 1`] = `
             <a
               className="c4"
               href="http://example.com"
-              muted={false}
             >
               Example 3
             </a>
-          </src__Link>
+          </styled.a>
         </li>
       </src__ListItem>
     </ol>

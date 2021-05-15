@@ -286,7 +286,7 @@ exports[`Footer matches default snapshot: Footer 1`] = `
                                     rel="license"
                                     textColour={false}
                                   >
-                                    <src__Link
+                                    <styled.a
                                       className="c6"
                                       href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                       muted={false}
@@ -297,12 +297,11 @@ exports[`Footer matches default snapshot: Footer 1`] = `
                                       <a
                                         className="c7 c6"
                                         href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                        muted={false}
                                         rel="license"
                                       >
                                         Open Government Licence v3.0
                                       </a>
-                                    </src__Link>
+                                    </styled.a>
                                   </LinkDocumented>
                                 </link__StyledFooterLink>
                               </FooterLink>
@@ -662,7 +661,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                                     rel="license"
                                     textColour={false}
                                   >
-                                    <src__Link
+                                    <styled.a
                                       className="c6"
                                       href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                       muted={false}
@@ -673,12 +672,11 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                                       <a
                                         className="c7 c6"
                                         href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                        muted={false}
                                         rel="license"
                                       >
                                         Open Government Licence v3.0
                                       </a>
-                                    </src__Link>
+                                    </styled.a>
                                   </LinkDocumented>
                                 </link__StyledFooterLink>
                               </FooterLink>
@@ -722,7 +720,13 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                           <a
                             className="c7 c9"
                             href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-                            muted={false}
+                            image={
+                              Object {
+                                "height": 102,
+                                "source": "",
+                                "width": 125,
+                              }
+                            }
                           >
                             © 
                             Crown copyright
@@ -1052,7 +1056,7 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
                                     rel="license"
                                     textColour={false}
                                   >
-                                    <src__Link
+                                    <styled.a
                                       className="c7"
                                       href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                       muted={false}
@@ -1063,12 +1067,11 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
                                       <a
                                         className="c8 c7"
                                         href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                        muted={false}
                                         rel="license"
                                       >
                                         Open Government Licence v3.0
                                       </a>
-                                    </src__Link>
+                                    </styled.a>
                                   </LinkDocumented>
                                 </link__StyledFooterLink>
                               </FooterLink>
@@ -1361,7 +1364,7 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
                                 noVisitedState={false}
                                 textColour={false}
                               >
-                                <src__Link
+                                <styled.a
                                   className="c5"
                                   href="/"
                                   muted={false}
@@ -1371,11 +1374,10 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
                                   <a
                                     className="c6 c5"
                                     href="/"
-                                    muted={false}
                                   >
                                     Government Digital Service
                                   </a>
-                                </src__Link>
+                                </styled.a>
                               </LinkDocumented>
                             </link__StyledFooterLink>
                           </FooterLink>
@@ -1428,7 +1430,7 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
                                     rel="license"
                                     textColour={false}
                                   >
-                                    <src__Link
+                                    <styled.a
                                       className="c5"
                                       href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                       muted={false}
@@ -1439,12 +1441,11 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
                                       <a
                                         className="c6 c5"
                                         href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                        muted={false}
                                         rel="license"
                                       >
                                         Open Government Licence v3.0
                                       </a>
-                                    </src__Link>
+                                    </styled.a>
                                   </LinkDocumented>
                                 </link__StyledFooterLink>
                               </FooterLink>
@@ -1843,7 +1844,6 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                             >
                               <span
                                 className="c4"
-                                focusable={false}
                               >
                                 <H2>
                                   <Heading
@@ -1891,7 +1891,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                           noVisitedState={false}
                                           textColour={false}
                                         >
-                                          <src__Link
+                                          <styled.a
                                             className="c8"
                                             href="/"
                                             muted={false}
@@ -1901,11 +1901,10 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                             <a
                                               className="c9 c8"
                                               href="/"
-                                              muted={false}
                                             >
                                               Item 1
                                             </a>
-                                          </src__Link>
+                                          </styled.a>
                                         </LinkDocumented>
                                       </link__StyledFooterLink>
                                     </FooterLink>
@@ -1962,7 +1961,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                           noVisitedState={false}
                                           textColour={false}
                                         >
-                                          <src__Link
+                                          <styled.a
                                             className="c8"
                                             href="/"
                                             muted={false}
@@ -1972,11 +1971,10 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                             <a
                                               className="c9 c8"
                                               href="/"
-                                              muted={false}
                                             >
                                               Item 3
                                             </a>
-                                          </src__Link>
+                                          </styled.a>
                                         </LinkDocumented>
                                       </link__StyledFooterLink>
                                     </FooterLink>
@@ -2003,7 +2001,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                     noVisitedState={false}
                                     textColour={false}
                                   >
-                                    <src__Link
+                                    <styled.a
                                       className="c8"
                                       href="/"
                                       muted={false}
@@ -2013,11 +2011,10 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                       <a
                                         className="c9 c8"
                                         href="/"
-                                        muted={false}
                                       >
                                         Government Digital Service
                                       </a>
-                                    </src__Link>
+                                    </styled.a>
                                   </LinkDocumented>
                                 </link__StyledFooterLink>
                               </FooterLink>
@@ -2070,7 +2067,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                         rel="license"
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                           muted={false}
@@ -2081,12 +2078,11 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                           <a
                                             className="c9 c8"
                                             href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                            muted={false}
                                             rel="license"
                                           >
                                             Open Government Licence v3.0
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -2481,7 +2477,6 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                             >
                               <span
                                 className="c4"
-                                focusable={false}
                               >
                                 <H2>
                                   <Heading
@@ -2529,7 +2524,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                           noVisitedState={false}
                                           textColour={false}
                                         >
-                                          <src__Link
+                                          <styled.a
                                             className="c8"
                                             href="/"
                                             muted={false}
@@ -2539,11 +2534,10 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                             <a
                                               className="c9 c8"
                                               href="/"
-                                              muted={false}
                                             >
                                               Item 1
                                             </a>
-                                          </src__Link>
+                                          </styled.a>
                                         </LinkDocumented>
                                       </link__StyledFooterLink>
                                     </FooterLink>
@@ -2600,7 +2594,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                           noVisitedState={false}
                                           textColour={false}
                                         >
-                                          <src__Link
+                                          <styled.a
                                             className="c8"
                                             href="/"
                                             muted={false}
@@ -2610,11 +2604,10 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                             <a
                                               className="c9 c8"
                                               href="/"
-                                              muted={false}
                                             >
                                               Item 3
                                             </a>
-                                          </src__Link>
+                                          </styled.a>
                                         </LinkDocumented>
                                       </link__StyledFooterLink>
                                     </FooterLink>
@@ -2670,7 +2663,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                         rel="license"
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                           muted={false}
@@ -2681,12 +2674,11 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                           <a
                                             className="c9 c8"
                                             href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                            muted={false}
                                             rel="license"
                                           >
                                             Open Government Licence v3.0
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -3294,7 +3286,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                         noVisitedState={false}
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="/"
                                           muted={false}
@@ -3304,11 +3296,10 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           <a
                                             className="c9 c8"
                                             href="/"
-                                            muted={false}
                                           >
                                             Navigation item 1
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -3365,7 +3356,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                         noVisitedState={false}
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="/"
                                           muted={false}
@@ -3375,11 +3366,10 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           <a
                                             className="c9 c8"
                                             href="/"
-                                            muted={false}
                                           >
                                             Navigation item 3
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -3405,7 +3395,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                         noVisitedState={false}
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="/"
                                           muted={false}
@@ -3415,11 +3405,10 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           <a
                                             className="c9 c8"
                                             href="/"
-                                            muted={false}
                                           >
                                             Navigation item 4
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -3445,7 +3434,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                         noVisitedState={false}
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="/"
                                           muted={false}
@@ -3455,11 +3444,10 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           <a
                                             className="c9 c8"
                                             href="/"
-                                            muted={false}
                                           >
                                             Navigation item 5
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -3485,7 +3473,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                         noVisitedState={false}
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="/"
                                           muted={false}
@@ -3495,11 +3483,10 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           <a
                                             className="c9 c8"
                                             href="/"
-                                            muted={false}
                                           >
                                             Navigation item 6
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -3572,7 +3559,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                         noVisitedState={false}
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="/"
                                           muted={false}
@@ -3582,11 +3569,10 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           <a
                                             className="c9 c8"
                                             href="/"
-                                            muted={false}
                                           >
                                             Navigation item 1
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -3612,7 +3598,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                         noVisitedState={false}
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="/"
                                           muted={false}
@@ -3622,11 +3608,10 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           <a
                                             className="c9 c8"
                                             href="/"
-                                            muted={false}
                                           >
                                             Navigation item 2
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -3652,7 +3637,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                         noVisitedState={false}
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="/"
                                           muted={false}
@@ -3662,11 +3647,10 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           <a
                                             className="c9 c8"
                                             href="/"
-                                            muted={false}
                                           >
                                             Navigation item 3
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -3704,7 +3688,6 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                             >
                               <span
                                 className="c14"
-                                focusable={false}
                               >
                                 <H2>
                                   <Heading
@@ -3752,7 +3735,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           noVisitedState={false}
                                           textColour={false}
                                         >
-                                          <src__Link
+                                          <styled.a
                                             className="c8"
                                             href="/"
                                             muted={false}
@@ -3762,11 +3745,10 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                             <a
                                               className="c9 c8"
                                               href="/"
-                                              muted={false}
                                             >
                                               Item 1
                                             </a>
-                                          </src__Link>
+                                          </styled.a>
                                         </LinkDocumented>
                                       </link__StyledFooterLink>
                                     </FooterLink>
@@ -3823,7 +3805,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           noVisitedState={false}
                                           textColour={false}
                                         >
-                                          <src__Link
+                                          <styled.a
                                             className="c8"
                                             href="/"
                                             muted={false}
@@ -3833,11 +3815,10 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                             <a
                                               className="c9 c8"
                                               href="/"
-                                              muted={false}
                                             >
                                               Item 3
                                             </a>
-                                          </src__Link>
+                                          </styled.a>
                                         </LinkDocumented>
                                       </link__StyledFooterLink>
                                     </FooterLink>
@@ -3864,7 +3845,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                     noVisitedState={false}
                                     textColour={false}
                                   >
-                                    <src__Link
+                                    <styled.a
                                       className="c8"
                                       href="/"
                                       muted={false}
@@ -3874,11 +3855,10 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                       <a
                                         className="c9 c8"
                                         href="/"
-                                        muted={false}
                                       >
                                         Government Digital Service
                                       </a>
-                                    </src__Link>
+                                    </styled.a>
                                   </LinkDocumented>
                                 </link__StyledFooterLink>
                               </FooterLink>
@@ -3931,7 +3911,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                         rel="license"
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                           muted={false}
@@ -3942,12 +3922,11 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           <a
                                             className="c9 c8"
                                             href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                            muted={false}
                                             rel="license"
                                           >
                                             Open Government Licence v3.0
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -4449,7 +4428,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                         noVisitedState={false}
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="/"
                                           muted={false}
@@ -4459,11 +4438,10 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                           <a
                                             className="c9 c8"
                                             href="/"
-                                            muted={false}
                                           >
                                             Navigation item 1
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -4520,7 +4498,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                         noVisitedState={false}
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="/"
                                           muted={false}
@@ -4530,11 +4508,10 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                           <a
                                             className="c9 c8"
                                             href="/"
-                                            muted={false}
                                           >
                                             Navigation item 3
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -4560,7 +4537,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                         noVisitedState={false}
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="/"
                                           muted={false}
@@ -4570,11 +4547,10 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                           <a
                                             className="c9 c8"
                                             href="/"
-                                            muted={false}
                                           >
                                             Navigation item 4
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -4600,7 +4576,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                         noVisitedState={false}
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="/"
                                           muted={false}
@@ -4610,11 +4586,10 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                           <a
                                             className="c9 c8"
                                             href="/"
-                                            muted={false}
                                           >
                                             Navigation item 5
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -4640,7 +4615,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                         noVisitedState={false}
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="/"
                                           muted={false}
@@ -4650,11 +4625,10 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                           <a
                                             className="c9 c8"
                                             href="/"
-                                            muted={false}
                                           >
                                             Navigation item 6
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -4727,7 +4701,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                         noVisitedState={false}
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="/"
                                           muted={false}
@@ -4737,11 +4711,10 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                           <a
                                             className="c9 c8"
                                             href="/"
-                                            muted={false}
                                           >
                                             Navigation item 1
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -4767,7 +4740,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                         noVisitedState={false}
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="/"
                                           muted={false}
@@ -4777,11 +4750,10 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                           <a
                                             className="c9 c8"
                                             href="/"
-                                            muted={false}
                                           >
                                             Navigation item 2
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -4807,7 +4779,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                         noVisitedState={false}
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="/"
                                           muted={false}
@@ -4817,11 +4789,10 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                           <a
                                             className="c9 c8"
                                             href="/"
-                                            muted={false}
                                           >
                                             Navigation item 3
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -4897,7 +4868,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                         rel="license"
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                           muted={false}
@@ -4908,12 +4879,11 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                           <a
                                             className="c9 c8"
                                             href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                            muted={false}
                                             rel="license"
                                           >
                                             Open Government Licence v3.0
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -5297,7 +5267,6 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                             >
                               <span
                                 className="c4"
-                                focusable={false}
                               >
                                 <H2>
                                   <Heading
@@ -5344,7 +5313,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                           noVisitedState={false}
                                           textColour={false}
                                         >
-                                          <src__Link
+                                          <styled.a
                                             className="c8"
                                             href="/"
                                             muted={false}
@@ -5354,11 +5323,10 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                             <a
                                               className="c9 c8"
                                               href="/"
-                                              muted={false}
                                             >
                                               Item 1
                                             </a>
-                                          </src__Link>
+                                          </styled.a>
                                         </LinkDocumented>
                                       </link__StyledFooterLink>
                                     </FooterLink>
@@ -5414,7 +5382,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                         rel="license"
                                         textColour={false}
                                       >
-                                        <src__Link
+                                        <styled.a
                                           className="c8"
                                           href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                           muted={false}
@@ -5425,12 +5393,11 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                           <a
                                             className="c9 c8"
                                             href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                            muted={false}
                                             rel="license"
                                           >
                                             Open Government Licence v3.0
                                           </a>
-                                        </src__Link>
+                                        </styled.a>
                                       </LinkDocumented>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -5893,7 +5860,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                     noVisitedState={false}
                                     textColour={false}
                                   >
-                                    <src__Link
+                                    <styled.a
                                       className="c8"
                                       href="/"
                                       muted={false}
@@ -5903,11 +5870,10 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                       <a
                                         className="c9 c8"
                                         href="/"
-                                        muted={false}
                                       >
                                         Navigation item 1
                                       </a>
-                                    </src__Link>
+                                    </styled.a>
                                   </LinkDocumented>
                                 </link__StyledFooterLink>
                               </FooterLink>
@@ -5983,7 +5949,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                     rel="license"
                                     textColour={false}
                                   >
-                                    <src__Link
+                                    <styled.a
                                       className="c8"
                                       href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                       muted={false}
@@ -5994,12 +5960,11 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                                       <a
                                         className="c9 c8"
                                         href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                        muted={false}
                                         rel="license"
                                       >
                                         Open Government Licence v3.0
                                       </a>
-                                    </src__Link>
+                                    </styled.a>
                                   </LinkDocumented>
                                 </link__StyledFooterLink>
                               </FooterLink>

@@ -155,8 +155,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       textColour={false}
                     >
                       <a
-                        className="src__Link-sc-1oemcts-0 src__StyledErrorText-sc-1b7q1ts-0 gwpXTV hJMzxV"
-                        muted={false}
+                        className="src__StyledErrorText-sc-1b7q1ts-0 hKXFDy hJMzxV"
                         onClick={[Function]}
                         tabIndex={1}
                       >
@@ -179,8 +178,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       textColour={false}
                     >
                       <a
-                        className="src__Link-sc-1oemcts-0 src__StyledErrorText-sc-1b7q1ts-0 gwpXTV hJMzxV"
-                        muted={false}
+                        className="src__StyledErrorText-sc-1b7q1ts-0 hKXFDy hJMzxV"
                         onClick={[Function]}
                         tabIndex={2}
                       >
