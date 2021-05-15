@@ -20,6 +20,7 @@ jobs:
       - run: yarn
       - run: npm install -g codecov
       - run: yarn build:sync
+      - run: yarn docs
       - run: yarn test
       - run: codecov
       - run: yarn build:dist # the dist build is only used to track bundle size delta
