@@ -105,7 +105,7 @@ exports[`Link all options view matches snapshot: link with all options 1`] = `
     noVisitedState={true}
     textColour={true}
   >
-    <src__Link
+    <styled.a
       href="#"
       muted={true}
       noVisitedState={true}
@@ -114,11 +114,10 @@ exports[`Link all options view matches snapshot: link with all options 1`] = `
       <a
         className="c0"
         href="#"
-        muted={true}
       >
         Link example
       </a>
-    </src__Link>
+    </styled.a>
   </LinkDocumented>
 </LinkWithAllOptionsOn>
 `;
@@ -179,7 +178,7 @@ exports[`Link basic view matches snapshot: plain link 1`] = `
     noVisitedState={false}
     textColour={false}
   >
-    <src__Link
+    <styled.a
       href="#"
       muted={false}
       noVisitedState={false}
@@ -188,11 +187,10 @@ exports[`Link basic view matches snapshot: plain link 1`] = `
       <a
         className="c0"
         href="#"
-        muted={false}
       >
         Link example
       </a>
-    </src__Link>
+    </styled.a>
   </LinkDocumented>
 </_default>
 `;

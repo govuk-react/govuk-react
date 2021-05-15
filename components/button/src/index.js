@@ -13,7 +13,10 @@ const RAW_SHADOW = stripUnit(BUTTON_SHADOW_SIZE);
 const HALF_SHADOW = RAW_SHADOW / 2;
 const BASE_PAD = RAW_SPACING_2 - RAW_BORDER_WIDTH;
 
-const StyledButton = styled('button')(
+const StyledButton = styled('button').withConfig({
+  shouldForwardProp: prop =>
+    !['isStart', 'buttonColour', 'buttonHoverColour', 'buttonShadowColour', 'buttonTextColour', 'icon'].includes(prop),
+})(
   ({ isStart }) =>
     typography.font({
       size: isStart ? 24 : 19,

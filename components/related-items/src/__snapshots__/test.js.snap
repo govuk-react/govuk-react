@@ -229,7 +229,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
               <li
                 className="c4 c5"
               >
-                <src__Link
+                <styled.a
                   href="https://example.com"
                   muted={false}
                   noVisitedState={false}
@@ -238,18 +238,17 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                   <a
                     className="c6"
                     href="https://example.com"
-                    muted={false}
                   >
                     Link A
                   </a>
-                </src__Link>
+                </styled.a>
               </li>
             </src__ListItem>
             <src__ListItem>
               <li
                 className="c4 c5"
               >
-                <src__Link
+                <styled.a
                   href="https://example.com"
                   muted={false}
                   noVisitedState={false}
@@ -258,18 +257,17 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                   <a
                     className="c6"
                     href="https://example.com"
-                    muted={false}
                   >
                     Link B
                   </a>
-                </src__Link>
+                </styled.a>
               </li>
             </src__ListItem>
             <src__ListItem>
               <li
                 className="c4 c5"
               >
-                <src__Link
+                <styled.a
                   href="https://example.com"
                   muted={false}
                   noVisitedState={false}
@@ -278,13 +276,12 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                   <a
                     className="c6"
                     href="https://example.com"
-                    muted={false}
                   >
                     <strong>
                       more
                     </strong>
                   </a>
-                </src__Link>
+                </styled.a>
               </li>
             </src__ListItem>
           </ul>

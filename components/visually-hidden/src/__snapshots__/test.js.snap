@@ -39,7 +39,6 @@ exports[`VisuallyHidden focusable version matches snapshot: focusable 1`] = `
   >
     <span
       className="c0"
-      focusable={true}
       tabIndex="0"
     >
       Example
@@ -74,7 +73,6 @@ exports[`VisuallyHidden matches snapshot: default render 1`] = `
   >
     <span
       className="c0"
-      focusable={false}
     >
       Example
     </span>
@@ -108,7 +106,6 @@ exports[`VisuallyHidden with important={false} matches snapshot: not important 1
   >
     <span
       className="c0"
-      focusable={false}
     >
       Example
     </span>

@@ -84,7 +84,7 @@ examples.add('Radio disabled', () => (
 
 examples.add('Radio preselected', () => (
   <div>
-    <Radio name="group1" checked>
+    <Radio name="group1" defaultChecked>
       Farm or agricultural waste
     </Radio>
   </div>
@@ -92,7 +92,7 @@ examples.add('Radio preselected', () => (
 
 examples.add('Radio preselected & disabled', () => (
   <div>
-    <Radio name="group1" disabled="disabled" checked>
+    <Radio name="group1" disabled="disabled" defaultChecked>
       Farm or agricultural waste
     </Radio>
   </div>

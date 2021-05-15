@@ -163,12 +163,14 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
               <src__Input
                 checked={false}
                 id="govuk-react-menu-button"
+                onChange={[Function]}
                 type="checkbox"
               >
                 <input
                   checked={false}
                   className="src__Input-ywaf10-2 haArpK"
                   id="govuk-react-menu-button"
+                  onChange={[Function]}
                   type="checkbox"
                 />
               </src__Input>
@@ -383,12 +385,14 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
               <src__Input
                 checked={false}
                 id="govuk-react-menu-button"
+                onChange={[Function]}
                 type="checkbox"
               >
                 <input
                   checked={false}
                   className="src__Input-ywaf10-2 haArpK"
                   id="govuk-react-menu-button"
+                  onChange={[Function]}
                   type="checkbox"
                 />
               </src__Input>
