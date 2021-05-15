@@ -343,7 +343,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
               </StyledComponent>
             </styled.span>
           </ErrorText>
-          <styled.select
+          <src__StyledSelect
             error="example"
           >
             <StyledComponent
@@ -353,7 +353,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-ifAKCX",
+                    "componentId": "src__StyledSelect-vnwid3-0",
                     "isStatic": false,
                     "lastClassName": "c4",
                     "rules": Array [
@@ -370,10 +370,10 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                       [Function],
                     ],
                   },
-                  "displayName": "styled.select",
+                  "displayName": "src__StyledSelect",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-ifAKCX",
+                  "styledComponentId": "src__StyledSelect-vnwid3-0",
                   "target": "select",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -388,7 +388,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
                 example
               </select>
             </StyledComponent>
-          </styled.select>
+          </src__StyledSelect>
         </label>
       </StyledComponent>
     </styled.label>
@@ -590,14 +590,14 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
               </StyledComponent>
             </styled.span>
           </LabelText>
-          <styled.select>
+          <src__StyledSelect>
             <StyledComponent
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-ifAKCX",
+                    "componentId": "src__StyledSelect-vnwid3-0",
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
@@ -614,10 +614,10 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
                       [Function],
                     ],
                   },
-                  "displayName": "styled.select",
+                  "displayName": "src__StyledSelect",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-ifAKCX",
+                  "styledComponentId": "src__StyledSelect-vnwid3-0",
                   "target": "select",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -632,7 +632,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
                 example
               </select>
             </StyledComponent>
-          </styled.select>
+          </src__StyledSelect>
         </label>
       </StyledComponent>
     </styled.label>

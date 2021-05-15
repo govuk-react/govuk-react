@@ -129,7 +129,7 @@ exports[`button basics matches snapshot 1`] = `
   disabled={false}
   start={false}
 >
-  <styled.button
+  <src__StyledButton
     disabled={false}
     isStart={false}
   >
@@ -140,7 +140,7 @@ exports[`button basics matches snapshot 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__StyledButton-xtct7-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -153,10 +153,10 @@ exports[`button basics matches snapshot 1`] = `
               [Function],
             ],
           },
-          "displayName": "styled.button",
+          "displayName": "src__StyledButton",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__StyledButton-xtct7-0",
           "target": "button",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -173,7 +173,7 @@ exports[`button basics matches snapshot 1`] = `
         Example
       </button>
     </StyledComponent>
-  </styled.button>
+  </src__StyledButton>
 </ForwardRef>
 `;
 
@@ -308,7 +308,7 @@ exports[`button blue button, with automatic colours matches snapshot 1`] = `
     disabled={false}
     start={false}
   >
-    <styled.button
+    <src__StyledButton
       buttonColour="#1d70b8"
       disabled={false}
       isStart={false}
@@ -321,7 +321,7 @@ exports[`button blue button, with automatic colours matches snapshot 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "src__StyledButton-xtct7-0",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
@@ -334,10 +334,10 @@ exports[`button blue button, with automatic colours matches snapshot 1`] = `
                 [Function],
               ],
             },
-            "displayName": "styled.button",
+            "displayName": "src__StyledButton",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "src__StyledButton-xtct7-0",
             "target": "button",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -354,7 +354,7 @@ exports[`button blue button, with automatic colours matches snapshot 1`] = `
           Blue button
         </button>
       </StyledComponent>
-    </styled.button>
+    </src__StyledButton>
   </ForwardRef>
 </ButtonBlue>
 `;
@@ -514,7 +514,7 @@ exports[`button button with icon matches snapshot 1`] = `
     }
     start={true}
   >
-    <styled.button
+    <src__StyledButton
       disabled={false}
       icon={
         <ButtonArrow
@@ -531,7 +531,7 @@ exports[`button button with icon matches snapshot 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "src__StyledButton-xtct7-0",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
@@ -544,10 +544,10 @@ exports[`button button with icon matches snapshot 1`] = `
                 [Function],
               ],
             },
-            "displayName": "styled.button",
+            "displayName": "src__StyledButton",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "src__StyledButton-xtct7-0",
             "target": "button",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -567,24 +567,24 @@ exports[`button button with icon matches snapshot 1`] = `
           className="c0"
           disabled={false}
         >
-          <styled.span>
+          <src__ButtonContents>
             <StyledComponent
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-bwzfXH",
+                    "componentId": "src__ButtonContents-xtct7-1",
                     "isStatic": true,
                     "lastClassName": "c1",
                     "rules": Array [
                       "flex-grow: 1;",
                     ],
                   },
-                  "displayName": "styled.span",
+                  "displayName": "src__ButtonContents",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-bwzfXH",
+                  "styledComponentId": "src__ButtonContents-xtct7-1",
                   "target": "span",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -599,7 +599,7 @@ exports[`button button with icon matches snapshot 1`] = `
                 Start now
               </span>
             </StyledComponent>
-          </styled.span>
+          </src__ButtonContents>
           <ButtonArrow
             fill="currentColor"
             title="ButtonArrow"
@@ -638,7 +638,7 @@ exports[`button button with icon matches snapshot 1`] = `
           </ButtonArrow>
         </button>
       </StyledComponent>
-    </styled.button>
+    </src__StyledButton>
   </ForwardRef>
 </ButtonStartIcon>
 `;
@@ -777,7 +777,7 @@ exports[`button custom colours matches snapshot 1`] = `
     disabled={false}
     start={false}
   >
-    <styled.button
+    <src__StyledButton
       buttonColour="#f3f2f1"
       buttonHoverColour="#ffdd00"
       buttonShadowColour="#f47738"
@@ -796,7 +796,7 @@ exports[`button custom colours matches snapshot 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "src__StyledButton-xtct7-0",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
@@ -809,10 +809,10 @@ exports[`button custom colours matches snapshot 1`] = `
                 [Function],
               ],
             },
-            "displayName": "styled.button",
+            "displayName": "src__StyledButton",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "src__StyledButton-xtct7-0",
             "target": "button",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -829,7 +829,7 @@ exports[`button custom colours matches snapshot 1`] = `
           Wacky colours
         </button>
       </StyledComponent>
-    </styled.button>
+    </src__StyledButton>
   </ForwardRef>
 </ButtonWacky>
 `;
@@ -964,7 +964,7 @@ exports[`button disabled matches snapshot 1`] = `
     disabled={true}
     start={false}
   >
-    <styled.button
+    <src__StyledButton
       disabled={true}
       isStart={false}
     >
@@ -975,7 +975,7 @@ exports[`button disabled matches snapshot 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "src__StyledButton-xtct7-0",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
@@ -988,10 +988,10 @@ exports[`button disabled matches snapshot 1`] = `
                 [Function],
               ],
             },
-            "displayName": "styled.button",
+            "displayName": "src__StyledButton",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "src__StyledButton-xtct7-0",
             "target": "button",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -1008,7 +1008,7 @@ exports[`button disabled matches snapshot 1`] = `
           Disabled primary button
         </button>
       </StyledComponent>
-    </styled.button>
+    </src__StyledButton>
   </ForwardRef>
 </ButtonDisabled>
 `;
@@ -1143,7 +1143,7 @@ exports[`button start button matches snapshot 1`] = `
     disabled={false}
     start={true}
   >
-    <styled.button
+    <src__StyledButton
       disabled={false}
       isStart={true}
     >
@@ -1154,7 +1154,7 @@ exports[`button start button matches snapshot 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "src__StyledButton-xtct7-0",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
@@ -1167,10 +1167,10 @@ exports[`button start button matches snapshot 1`] = `
                 [Function],
               ],
             },
-            "displayName": "styled.button",
+            "displayName": "src__StyledButton",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "src__StyledButton-xtct7-0",
             "target": "button",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -1187,7 +1187,7 @@ exports[`button start button matches snapshot 1`] = `
           Save and continue
         </button>
       </StyledComponent>
-    </styled.button>
+    </src__StyledButton>
   </ForwardRef>
 </ButtonStart>
 `;

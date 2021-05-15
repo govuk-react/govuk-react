@@ -88,14 +88,14 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
 <PhaseBanner
   level="beta"
 >
-  <styled.div>
+  <src__StyledBanner>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
+            "componentId": "src__StyledBanner-sc-1odloq4-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -103,10 +103,10 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
               [Function],
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "src__StyledBanner",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
+          "styledComponentId": "src__StyledBanner-sc-1odloq4-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -118,14 +118,14 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
       <div
         className="c0"
       >
-        <styled.p>
+        <src__BannerContent>
           <StyledComponent
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-htpNat",
+                  "componentId": "src__BannerContent-sc-1odloq4-1",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -142,10 +142,10 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
 }",
                   ],
                 },
-                "displayName": "styled.p",
+                "displayName": "src__BannerContent",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-htpNat",
+                "styledComponentId": "src__BannerContent-sc-1odloq4-1",
                 "target": "p",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -203,24 +203,24 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
                   </strong>
                 </StyledComponent>
               </styled.strong>
-              <styled.span>
+              <src__BannerText>
                 <StyledComponent
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-bxivhb",
+                        "componentId": "src__BannerText-sc-1odloq4-2",
                         "isStatic": true,
                         "lastClassName": "c4",
                         "rules": Array [
                           "display: table-cell; vertical-align: baseline;",
                         ],
                       },
-                      "displayName": "styled.span",
+                      "displayName": "src__BannerText",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-bxivhb",
+                      "styledComponentId": "src__BannerText-sc-1odloq4-2",
                       "target": "span",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -235,12 +235,12 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
                     example
                   </span>
                 </StyledComponent>
-              </styled.span>
+              </src__BannerText>
             </p>
           </StyledComponent>
-        </styled.p>
+        </src__BannerContent>
       </div>
     </StyledComponent>
-  </styled.div>
+  </src__StyledBanner>
 </PhaseBanner>
 `;

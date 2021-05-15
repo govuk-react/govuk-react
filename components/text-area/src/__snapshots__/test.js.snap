@@ -259,7 +259,7 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
               </StyledComponent>
             </styled.span>
           </ErrorText>
-          <styled.textarea
+          <src__TextAreaField
             error="example"
             rows="5"
             type="text"
@@ -271,7 +271,7 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-ifAKCX",
+                    "componentId": "src__TextAreaField-sc-83xe87-0",
                     "isStatic": false,
                     "lastClassName": "c3",
                     "rules": Array [
@@ -283,10 +283,10 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
                       [Function],
                     ],
                   },
-                  "displayName": "styled.textarea",
+                  "displayName": "src__TextAreaField",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-ifAKCX",
+                  "styledComponentId": "src__TextAreaField-sc-83xe87-0",
                   "target": "textarea",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -303,7 +303,7 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
                 type="text"
               />
             </StyledComponent>
-          </styled.textarea>
+          </src__TextAreaField>
         </label>
       </StyledComponent>
     </styled.label>
@@ -557,7 +557,7 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
               </StyledComponent>
             </styled.span>
           </HintText>
-          <styled.textarea
+          <src__TextAreaField
             rows="5"
             type="text"
           >
@@ -567,7 +567,7 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-ifAKCX",
+                    "componentId": "src__TextAreaField-sc-83xe87-0",
                     "isStatic": false,
                     "lastClassName": "c3",
                     "rules": Array [
@@ -579,10 +579,10 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
                       [Function],
                     ],
                   },
-                  "displayName": "styled.textarea",
+                  "displayName": "src__TextAreaField",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-ifAKCX",
+                  "styledComponentId": "src__TextAreaField-sc-83xe87-0",
                   "target": "textarea",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -599,7 +599,7 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
                 type="text"
               />
             </StyledComponent>
-          </styled.textarea>
+          </src__TextAreaField>
         </label>
       </StyledComponent>
     </styled.label>
@@ -785,7 +785,7 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
               </StyledComponent>
             </styled.span>
           </LabelText>
-          <styled.textarea
+          <src__TextAreaField
             rows="5"
             type="text"
           >
@@ -795,7 +795,7 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-ifAKCX",
+                    "componentId": "src__TextAreaField-sc-83xe87-0",
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
@@ -807,10 +807,10 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
                       [Function],
                     ],
                   },
-                  "displayName": "styled.textarea",
+                  "displayName": "src__TextAreaField",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-ifAKCX",
+                  "styledComponentId": "src__TextAreaField-sc-83xe87-0",
                   "target": "textarea",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -827,7 +827,7 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
                 type="text"
               />
             </StyledComponent>
-          </styled.textarea>
+          </src__TextAreaField>
         </label>
       </StyledComponent>
     </styled.label>

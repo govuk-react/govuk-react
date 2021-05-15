@@ -90,7 +90,7 @@ exports[`SkipLink matches snapshot: SkipLink 1`] = `
 <SkipLinkDocumented
   href="#content"
 >
-  <styled.a
+  <src__SkipLink
     href="#content"
   >
     <StyledComponent
@@ -99,7 +99,7 @@ exports[`SkipLink matches snapshot: SkipLink 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__SkipLink-jgz3jb-0",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -131,11 +131,11 @@ exports[`SkipLink matches snapshot: SkipLink 1`] = `
             "children": "Skip to main content",
             "href": "#content",
           },
-          "displayName": "styled.a",
+          "displayName": "src__SkipLink",
           "foldedComponentIds": Array [],
           "propTypes": undefined,
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__SkipLink-jgz3jb-0",
           "target": "a",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -152,6 +152,6 @@ exports[`SkipLink matches snapshot: SkipLink 1`] = `
         Example
       </a>
     </StyledComponent>
-  </styled.a>
+  </src__SkipLink>
 </SkipLinkDocumented>
 `;

@@ -30,7 +30,7 @@ Array [
     columnTwoThirds={false}
     setWidth="one-quarter"
   >
-    <styled.div
+    <src__StyledColumn
       columnFull={false}
       columnOneHalf={false}
       columnOneQuarter={false}
@@ -51,18 +51,18 @@ Array [
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "src__StyledColumn-sc-1d2lq4e-0",
               "isStatic": false,
-              "lastClassName": "hfwjaA",
+              "lastClassName": "iQyYKZ",
               "rules": Array [
                 "box-sizing: border-box; padding-right: 15px; padding-left: 15px;",
                 [Function],
               ],
             },
-            "displayName": "styled.div",
+            "displayName": "src__StyledColumn",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "src__StyledColumn-sc-1d2lq4e-0",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -78,7 +78,7 @@ Array [
           example
         </div>
       </StyledComponent>
-    </styled.div>
+    </src__StyledColumn>
   </GridCol>,
   .c0 {
   box-sizing: border-box;
@@ -108,7 +108,7 @@ Array [
     columnTwoThirds={false}
     setWidth="three-quarters"
   >
-    <styled.div
+    <src__StyledColumn
       columnFull={false}
       columnOneHalf={false}
       columnOneQuarter={false}
@@ -129,18 +129,18 @@ Array [
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "src__StyledColumn-sc-1d2lq4e-0",
               "isStatic": false,
-              "lastClassName": "hfwjaA",
+              "lastClassName": "iQyYKZ",
               "rules": Array [
                 "box-sizing: border-box; padding-right: 15px; padding-left: 15px;",
                 [Function],
               ],
             },
-            "displayName": "styled.div",
+            "displayName": "src__StyledColumn",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "src__StyledColumn-sc-1d2lq4e-0",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -156,7 +156,7 @@ Array [
           example
         </div>
       </StyledComponent>
-    </styled.div>
+    </src__StyledColumn>
   </GridCol>,
   .c0 {
   box-sizing: border-box;
@@ -186,7 +186,7 @@ Array [
     columnTwoThirds={false}
     setWidth="90%"
   >
-    <styled.div
+    <src__StyledColumn
       columnFull={false}
       columnOneHalf={false}
       columnOneQuarter={false}
@@ -207,18 +207,18 @@ Array [
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "src__StyledColumn-sc-1d2lq4e-0",
               "isStatic": false,
-              "lastClassName": "hfwjaA",
+              "lastClassName": "iQyYKZ",
               "rules": Array [
                 "box-sizing: border-box; padding-right: 15px; padding-left: 15px;",
                 [Function],
               ],
             },
-            "displayName": "styled.div",
+            "displayName": "src__StyledColumn",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "src__StyledColumn-sc-1d2lq4e-0",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -234,7 +234,7 @@ Array [
           example
         </div>
       </StyledComponent>
-    </styled.div>
+    </src__StyledColumn>
   </GridCol>,
   .c0 {
   box-sizing: border-box;
@@ -278,7 +278,7 @@ Array [
     setDesktopWidth="one-quarter"
     setWidth="one-third"
   >
-    <styled.div
+    <src__StyledColumn
       columnFull={false}
       columnOneHalf={false}
       columnOneQuarter={false}
@@ -300,18 +300,18 @@ Array [
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "src__StyledColumn-sc-1d2lq4e-0",
               "isStatic": false,
-              "lastClassName": "hfwjaA",
+              "lastClassName": "iQyYKZ",
               "rules": Array [
                 "box-sizing: border-box; padding-right: 15px; padding-left: 15px;",
                 [Function],
               ],
             },
-            "displayName": "styled.div",
+            "displayName": "src__StyledColumn",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "src__StyledColumn-sc-1d2lq4e-0",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -328,7 +328,7 @@ Array [
           example
         </div>
       </StyledComponent>
-    </styled.div>
+    </src__StyledColumn>
   </GridCol>,
   .c0 {
   box-sizing: border-box;
@@ -370,7 +370,7 @@ Array [
     columnTwoThirds={false}
     setDesktopWidth="one-third"
   >
-    <styled.div
+    <src__StyledColumn
       columnFull={false}
       columnOneHalf={false}
       columnOneQuarter={false}
@@ -391,7 +391,7 @@ Array [
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "src__StyledColumn-sc-1d2lq4e-0",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
@@ -399,10 +399,10 @@ Array [
                 [Function],
               ],
             },
-            "displayName": "styled.div",
+            "displayName": "src__StyledColumn",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "src__StyledColumn-sc-1d2lq4e-0",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -418,7 +418,7 @@ Array [
           example
         </div>
       </StyledComponent>
-    </styled.div>
+    </src__StyledColumn>
   </GridCol>,
 ]
 `;
@@ -450,7 +450,7 @@ exports[`GridCol simple render matches snapshot: GridCol simple example 1`] = `
   columnThreeQuarters={false}
   columnTwoThirds={false}
 >
-  <styled.div
+  <src__StyledColumn
     columnFull={false}
     columnOneHalf={false}
     columnOneQuarter={false}
@@ -470,7 +470,7 @@ exports[`GridCol simple render matches snapshot: GridCol simple example 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__StyledColumn-sc-1d2lq4e-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -478,10 +478,10 @@ exports[`GridCol simple render matches snapshot: GridCol simple example 1`] = `
               [Function],
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "src__StyledColumn",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__StyledColumn-sc-1d2lq4e-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -496,6 +496,6 @@ exports[`GridCol simple render matches snapshot: GridCol simple example 1`] = `
         example
       </div>
     </StyledComponent>
-  </styled.div>
+  </src__StyledColumn>
 </GridCol>
 `;

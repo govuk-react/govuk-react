@@ -204,7 +204,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
     }
   }
 >
-  <styled.div
+  <src__StyledContainer
     errorText="example"
   >
     <StyledComponent
@@ -214,7 +214,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gzVnrw",
+            "componentId": "src__StyledContainer-sc-7o2d9e-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -223,10 +223,10 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
               [Function],
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "src__StyledContainer",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gzVnrw",
+          "styledComponentId": "src__StyledContainer-sc-7o2d9e-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -384,24 +384,24 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
             refs={[Function]}
             value={Object {}}
           >
-            <styled.div>
+            <input__StyledList>
               <StyledComponent
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bZQynM",
+                      "componentId": "input__StyledList-sc-1yy0xju-1",
                       "isStatic": true,
                       "lastClassName": "c3",
                       "rules": Array [
                         "display: flex;",
                       ],
                     },
-                    "displayName": "styled.div",
+                    "displayName": "input__StyledList",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bZQynM",
+                    "styledComponentId": "input__StyledList-sc-1yy0xju-1",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -413,7 +413,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                 <div
                   className="c3"
                 >
-                  <Styled(Label)
+                  <input__StyledLabel
                     year={false}
                   >
                     <StyledComponent
@@ -422,7 +422,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-EHOje",
+                            "componentId": "input__StyledLabel-sc-1yy0xju-0",
                             "isStatic": false,
                             "lastClassName": "c7",
                             "rules": Array [
@@ -430,10 +430,10 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                               [Function],
                             ],
                           },
-                          "displayName": "Styled(Label)",
+                          "displayName": "input__StyledLabel",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-EHOje",
+                          "styledComponentId": "input__StyledLabel-sc-1yy0xju-0",
                           "target": [Function],
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -598,8 +598,8 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                         </styled.label>
                       </Label>
                     </StyledComponent>
-                  </Styled(Label)>
-                  <Styled(Label)
+                  </input__StyledLabel>
+                  <input__StyledLabel
                     year={false}
                   >
                     <StyledComponent
@@ -608,7 +608,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-EHOje",
+                            "componentId": "input__StyledLabel-sc-1yy0xju-0",
                             "isStatic": false,
                             "lastClassName": "c7",
                             "rules": Array [
@@ -616,10 +616,10 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                               [Function],
                             ],
                           },
-                          "displayName": "Styled(Label)",
+                          "displayName": "input__StyledLabel",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-EHOje",
+                          "styledComponentId": "input__StyledLabel-sc-1yy0xju-0",
                           "target": [Function],
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -784,8 +784,8 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                         </styled.label>
                       </Label>
                     </StyledComponent>
-                  </Styled(Label)>
-                  <Styled(Label)
+                  </input__StyledLabel>
+                  <input__StyledLabel
                     year={true}
                   >
                     <StyledComponent
@@ -794,7 +794,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-EHOje",
+                            "componentId": "input__StyledLabel-sc-1yy0xju-0",
                             "isStatic": false,
                             "lastClassName": "c7",
                             "rules": Array [
@@ -802,10 +802,10 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                               [Function],
                             ],
                           },
-                          "displayName": "Styled(Label)",
+                          "displayName": "input__StyledLabel",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-EHOje",
+                          "styledComponentId": "input__StyledLabel-sc-1yy0xju-0",
                           "target": [Function],
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -970,15 +970,15 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                         </styled.label>
                       </Label>
                     </StyledComponent>
-                  </Styled(Label)>
+                  </input__StyledLabel>
                 </div>
               </StyledComponent>
-            </styled.div>
+            </input__StyledList>
           </Input>
         </MultiInputInput>
       </div>
     </StyledComponent>
-  </styled.div>
+  </src__StyledContainer>
 </DateField>
 `;
 
@@ -1159,14 +1159,14 @@ exports[`DateField should support null value: null value 1`] = `
     }
   }
 >
-  <styled.div>
+  <src__StyledContainer>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gzVnrw",
+            "componentId": "src__StyledContainer-sc-7o2d9e-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -1175,10 +1175,10 @@ exports[`DateField should support null value: null value 1`] = `
               [Function],
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "src__StyledContainer",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gzVnrw",
+          "styledComponentId": "src__StyledContainer-sc-7o2d9e-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -1283,24 +1283,24 @@ exports[`DateField should support null value: null value 1`] = `
             refs={[Function]}
             value={null}
           >
-            <styled.div>
+            <input__StyledList>
               <StyledComponent
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bZQynM",
+                      "componentId": "input__StyledList-sc-1yy0xju-1",
                       "isStatic": true,
                       "lastClassName": "c2",
                       "rules": Array [
                         "display: flex;",
                       ],
                     },
-                    "displayName": "styled.div",
+                    "displayName": "input__StyledList",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bZQynM",
+                    "styledComponentId": "input__StyledList-sc-1yy0xju-1",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -1312,7 +1312,7 @@ exports[`DateField should support null value: null value 1`] = `
                 <div
                   className="c2"
                 >
-                  <Styled(Label)
+                  <input__StyledLabel
                     year={false}
                   >
                     <StyledComponent
@@ -1321,7 +1321,7 @@ exports[`DateField should support null value: null value 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-EHOje",
+                            "componentId": "input__StyledLabel-sc-1yy0xju-0",
                             "isStatic": false,
                             "lastClassName": "c6",
                             "rules": Array [
@@ -1329,10 +1329,10 @@ exports[`DateField should support null value: null value 1`] = `
                               [Function],
                             ],
                           },
-                          "displayName": "Styled(Label)",
+                          "displayName": "input__StyledLabel",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-EHOje",
+                          "styledComponentId": "input__StyledLabel-sc-1yy0xju-0",
                           "target": [Function],
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -1497,8 +1497,8 @@ exports[`DateField should support null value: null value 1`] = `
                         </styled.label>
                       </Label>
                     </StyledComponent>
-                  </Styled(Label)>
-                  <Styled(Label)
+                  </input__StyledLabel>
+                  <input__StyledLabel
                     year={false}
                   >
                     <StyledComponent
@@ -1507,7 +1507,7 @@ exports[`DateField should support null value: null value 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-EHOje",
+                            "componentId": "input__StyledLabel-sc-1yy0xju-0",
                             "isStatic": false,
                             "lastClassName": "c6",
                             "rules": Array [
@@ -1515,10 +1515,10 @@ exports[`DateField should support null value: null value 1`] = `
                               [Function],
                             ],
                           },
-                          "displayName": "Styled(Label)",
+                          "displayName": "input__StyledLabel",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-EHOje",
+                          "styledComponentId": "input__StyledLabel-sc-1yy0xju-0",
                           "target": [Function],
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -1683,8 +1683,8 @@ exports[`DateField should support null value: null value 1`] = `
                         </styled.label>
                       </Label>
                     </StyledComponent>
-                  </Styled(Label)>
-                  <Styled(Label)
+                  </input__StyledLabel>
+                  <input__StyledLabel
                     year={true}
                   >
                     <StyledComponent
@@ -1693,7 +1693,7 @@ exports[`DateField should support null value: null value 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-EHOje",
+                            "componentId": "input__StyledLabel-sc-1yy0xju-0",
                             "isStatic": false,
                             "lastClassName": "c6",
                             "rules": Array [
@@ -1701,10 +1701,10 @@ exports[`DateField should support null value: null value 1`] = `
                               [Function],
                             ],
                           },
-                          "displayName": "Styled(Label)",
+                          "displayName": "input__StyledLabel",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-EHOje",
+                          "styledComponentId": "input__StyledLabel-sc-1yy0xju-0",
                           "target": [Function],
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -1869,15 +1869,15 @@ exports[`DateField should support null value: null value 1`] = `
                         </styled.label>
                       </Label>
                     </StyledComponent>
-                  </Styled(Label)>
+                  </input__StyledLabel>
                 </div>
               </StyledComponent>
-            </styled.div>
+            </input__StyledList>
           </Input>
         </MultiInputInput>
       </div>
     </StyledComponent>
-  </styled.div>
+  </src__StyledContainer>
 </DateField>
 `;
 
@@ -2062,14 +2062,14 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
     }
   }
 >
-  <styled.div>
+  <src__StyledContainer>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-gzVnrw",
+            "componentId": "src__StyledContainer-sc-7o2d9e-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -2078,10 +2078,10 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
               [Function],
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "src__StyledContainer",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-gzVnrw",
+          "styledComponentId": "src__StyledContainer-sc-7o2d9e-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -2198,24 +2198,24 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
               }
             }
           >
-            <styled.div>
+            <input__StyledList>
               <StyledComponent
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bZQynM",
+                      "componentId": "input__StyledList-sc-1yy0xju-1",
                       "isStatic": true,
                       "lastClassName": "c2",
                       "rules": Array [
                         "display: flex;",
                       ],
                     },
-                    "displayName": "styled.div",
+                    "displayName": "input__StyledList",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-bZQynM",
+                    "styledComponentId": "input__StyledList-sc-1yy0xju-1",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -2227,7 +2227,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                 <div
                   className="c2"
                 >
-                  <Styled(Label)
+                  <input__StyledLabel
                     year={false}
                   >
                     <StyledComponent
@@ -2236,7 +2236,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-EHOje",
+                            "componentId": "input__StyledLabel-sc-1yy0xju-0",
                             "isStatic": false,
                             "lastClassName": "c6",
                             "rules": Array [
@@ -2244,10 +2244,10 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                               [Function],
                             ],
                           },
-                          "displayName": "Styled(Label)",
+                          "displayName": "input__StyledLabel",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-EHOje",
+                          "styledComponentId": "input__StyledLabel-sc-1yy0xju-0",
                           "target": [Function],
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -2415,8 +2415,8 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                         </styled.label>
                       </Label>
                     </StyledComponent>
-                  </Styled(Label)>
-                  <Styled(Label)
+                  </input__StyledLabel>
+                  <input__StyledLabel
                     year={false}
                   >
                     <StyledComponent
@@ -2425,7 +2425,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-EHOje",
+                            "componentId": "input__StyledLabel-sc-1yy0xju-0",
                             "isStatic": false,
                             "lastClassName": "c6",
                             "rules": Array [
@@ -2433,10 +2433,10 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                               [Function],
                             ],
                           },
-                          "displayName": "Styled(Label)",
+                          "displayName": "input__StyledLabel",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-EHOje",
+                          "styledComponentId": "input__StyledLabel-sc-1yy0xju-0",
                           "target": [Function],
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -2604,8 +2604,8 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                         </styled.label>
                       </Label>
                     </StyledComponent>
-                  </Styled(Label)>
-                  <Styled(Label)
+                  </input__StyledLabel>
+                  <input__StyledLabel
                     year={true}
                   >
                     <StyledComponent
@@ -2614,7 +2614,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-EHOje",
+                            "componentId": "input__StyledLabel-sc-1yy0xju-0",
                             "isStatic": false,
                             "lastClassName": "c6",
                             "rules": Array [
@@ -2622,10 +2622,10 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                               [Function],
                             ],
                           },
-                          "displayName": "Styled(Label)",
+                          "displayName": "input__StyledLabel",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-EHOje",
+                          "styledComponentId": "input__StyledLabel-sc-1yy0xju-0",
                           "target": [Function],
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -2793,14 +2793,14 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                         </styled.label>
                       </Label>
                     </StyledComponent>
-                  </Styled(Label)>
+                  </input__StyledLabel>
                 </div>
               </StyledComponent>
-            </styled.div>
+            </input__StyledList>
           </Input>
         </MultiInputInput>
       </div>
     </StyledComponent>
-  </styled.div>
+  </src__StyledContainer>
 </DateField>
 `;

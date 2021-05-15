@@ -62,7 +62,7 @@ exports[`Input matches withColouredError snapshot: with coloured error mount 1`]
   errorColor="#f47738"
   type="text"
 >
-  <styled.input
+  <src__StyledInput
     error="example"
     errorColor="#f47738"
     type="text"
@@ -75,7 +75,7 @@ exports[`Input matches withColouredError snapshot: with coloured error mount 1`]
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__StyledInput-u8exb4-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -96,10 +96,10 @@ exports[`Input matches withColouredError snapshot: with coloured error mount 1`]
               [Function],
             ],
           },
-          "displayName": "styled.input",
+          "displayName": "src__StyledInput",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__StyledInput-u8exb4-0",
           "target": "input",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -114,7 +114,7 @@ exports[`Input matches withColouredError snapshot: with coloured error mount 1`]
         type="text"
       />
     </StyledComponent>
-  </styled.input>
+  </src__StyledInput>
 </Input>
 `;
 
@@ -179,7 +179,7 @@ exports[`Input matches withError snapshot: with error mount 1`] = `
   error="example"
   type="text"
 >
-  <styled.input
+  <src__StyledInput
     error="example"
     type="text"
   >
@@ -190,7 +190,7 @@ exports[`Input matches withError snapshot: with error mount 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__StyledInput-u8exb4-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -211,10 +211,10 @@ exports[`Input matches withError snapshot: with error mount 1`] = `
               [Function],
             ],
           },
-          "displayName": "styled.input",
+          "displayName": "src__StyledInput",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__StyledInput-u8exb4-0",
           "target": "input",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -229,7 +229,7 @@ exports[`Input matches withError snapshot: with error mount 1`] = `
         type="text"
       />
     </StyledComponent>
-  </styled.input>
+  </src__StyledInput>
 </Input>
 `;
 
@@ -292,7 +292,7 @@ exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
 <Input
   type="text"
 >
-  <styled.input
+  <src__StyledInput
     type="text"
   >
     <StyledComponent
@@ -301,7 +301,7 @@ exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__StyledInput-u8exb4-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -322,10 +322,10 @@ exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
               [Function],
             ],
           },
-          "displayName": "styled.input",
+          "displayName": "src__StyledInput",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__StyledInput-u8exb4-0",
           "target": "input",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -340,6 +340,6 @@ exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
         type="text"
       />
     </StyledComponent>
-  </styled.input>
+  </src__StyledInput>
 </Input>
 `;

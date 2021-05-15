@@ -193,14 +193,14 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <RelatedItems>
-  <styled.div>
+  <src__StyledRelatedItems>
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-ifAKCX",
+            "componentId": "src__StyledRelatedItems-de6ke9-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -216,10 +216,10 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
               [Function],
             ],
           },
-          "displayName": "styled.div",
+          "displayName": "src__StyledRelatedItems",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-ifAKCX",
+          "styledComponentId": "src__StyledRelatedItems-de6ke9-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -689,6 +689,6 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
         </UnorderedList>
       </div>
     </StyledComponent>
-  </styled.div>
+  </src__StyledRelatedItems>
 </RelatedItems>
 `;

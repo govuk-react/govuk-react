@@ -21,7 +21,7 @@ exports[`SectionBreak matches snapshot: section break 1`] = `
     level="LARGE"
     visible={true}
   >
-    <styled.hr
+    <src__SectionBreak
       level="LARGE"
       visible={true}
     >
@@ -31,7 +31,7 @@ exports[`SectionBreak matches snapshot: section break 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "src__SectionBreak-sc-1cm70tt-0",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
@@ -43,11 +43,11 @@ exports[`SectionBreak matches snapshot: section break 1`] = `
             "defaultProps": Object {
               "visible": undefined,
             },
-            "displayName": "styled.hr",
+            "displayName": "src__SectionBreak",
             "foldedComponentIds": Array [],
             "propTypes": undefined,
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "src__SectionBreak-sc-1cm70tt-0",
             "target": "hr",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -62,7 +62,7 @@ exports[`SectionBreak matches snapshot: section break 1`] = `
           className="c0"
         />
       </StyledComponent>
-    </styled.hr>
+    </src__SectionBreak>
   </SectionBreakDocumented>
 </_default>
 `;

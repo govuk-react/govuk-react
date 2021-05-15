@@ -41,7 +41,7 @@ exports[`Tag matches wrapper snapshot: wrapper mount 1`] = `
 <DocumentedTag
   inactive={false}
 >
-  <styled.strong
+  <src__Tag
     inactive={false}
   >
     <StyledComponent
@@ -50,7 +50,7 @@ exports[`Tag matches wrapper snapshot: wrapper mount 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "src__Tag-sc-1ussdgm-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -66,11 +66,11 @@ exports[`Tag matches wrapper snapshot: wrapper mount 1`] = `
           "defaultProps": Object {
             "inactive": false,
           },
-          "displayName": "styled.strong",
+          "displayName": "src__Tag",
           "foldedComponentIds": Array [],
           "propTypes": undefined,
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "src__Tag-sc-1ussdgm-0",
           "target": "strong",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -86,6 +86,6 @@ exports[`Tag matches wrapper snapshot: wrapper mount 1`] = `
         beta
       </strong>
     </StyledComponent>
-  </styled.strong>
+  </src__Tag>
 </DocumentedTag>
 `;

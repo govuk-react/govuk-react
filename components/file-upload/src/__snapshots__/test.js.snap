@@ -173,7 +173,7 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
               </StyledComponent>
             </styled.span>
           </LabelText>
-          <styled.input
+          <src__StyledInput
             type="file"
           >
             <StyledComponent
@@ -182,7 +182,7 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-ifAKCX",
+                    "componentId": "src__StyledInput-ek7uqv-0",
                     "isStatic": true,
                     "lastClassName": "c2",
                     "rules": Array [
@@ -191,10 +191,10 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
 } width: 100%; padding: 5px 4px 4px;",
                     ],
                   },
-                  "displayName": "styled.input",
+                  "displayName": "src__StyledInput",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-ifAKCX",
+                  "styledComponentId": "src__StyledInput-ek7uqv-0",
                   "target": "input",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -209,7 +209,7 @@ exports[`FileUpload matches snapshot: enzyme.mount 1`] = `
                 type="file"
               />
             </StyledComponent>
-          </styled.input>
+          </src__StyledInput>
         </label>
       </StyledComponent>
     </styled.label>
