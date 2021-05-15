@@ -12,54 +12,6 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-.c1 {
-  width: 100%;
-  height: 40px;
-  padding: 6px;
-  margin: 0;
-  border: solid 1px #bfc1c3;
-  border-right: 0;
-  box-sizing: border-box;
-  font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.75;
-  background: #ffffff;
-  border-radius: 0;
-  -webkit-appearance: none;
-}
-
-.c1:focus {
-  margin-right: 3px;
-  outline: 3px solid #ffdd00;
-  outline-offset: 0;
-}
-
-.c1:focus ~ button {
-  width: 46px;
-}
-
-.c2 {
-  background-color: #2b8cc4;
-  border: 0;
-  display: block;
-  color: #ffffff;
-  position: relative;
-  padding: 10px;
-  width: 45px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-position: 2px 50%;
-  text-indent: -999em;
-  overflow: hidden;
-}
-
-.c2:focus {
-  outline: 3px solid #ffdd00;
-  outline-offset: 0;
-}
-
 @media only screen and (min-width:641px) {
   .c0 {
     margin-bottom: 0;
@@ -69,14 +21,16 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
 <SearchBox
   placeholder="example"
 >
-  <src__SearchBoxWrapper>
+  <src__StyledSearchBox
+    placeholder="example"
+  >
     <StyledComponent
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "src__SearchBoxWrapper-ln53op-0",
+            "componentId": "src__StyledSearchBox-ln53op-2",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -84,10 +38,10 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
               [Function],
             ],
           },
-          "displayName": "src__SearchBoxWrapper",
+          "displayName": "src__StyledSearchBox",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "src__SearchBoxWrapper-ln53op-0",
+          "styledComponentId": "src__StyledSearchBox-ln53op-2",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -95,122 +49,15 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
         }
       }
       forwardedRef={null}
+      placeholder="example"
     >
       <div
         className="c0"
+        placeholder="example"
       >
-        <src__InputSearchBox
-          placeholder="example"
-          type="search"
-        >
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__InputSearchBox-ln53op-1",
-                  "isStatic": true,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "width: 100%; height: 40px; padding: 6px; margin: 0; border: solid 1px #bfc1c3; border-right: 0; box-sizing: border-box; font-family: \\"nta\\", Arial, sans-serif; font-weight: 400; text-transform: none; font-size: 16px; line-height: 1.75; background: #ffffff; border-radius: 0; -webkit-appearance: none; :focus {
-  margin-right: 3px; outline: 3px solid #ffdd00; outline-offset: 0;  ~ button {
-  width: 46px;
-}
-}",
-                  ],
-                },
-                "displayName": "src__InputSearchBox",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__InputSearchBox-ln53op-1",
-                "target": "input",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            placeholder="example"
-            type="search"
-          >
-            <input
-              className="c1"
-              placeholder="example"
-              type="search"
-            />
-          </StyledComponent>
-        </src__InputSearchBox>
-        <src__SearchButton
-          title="Search"
-        >
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "src__SearchButton-ln53op-2",
-                  "isStatic": true,
-                  "lastClassName": "c2",
-                  "rules": Array [
-                    "background-color: #2b8cc4; border: 0; display: block; color: #ffffff; position: relative; padding: 10px; width: 45px; height: 40px; background-repeat: no-repeat; background-position: 2px 50%; text-indent: -999em; overflow: hidden; :focus {
-  outline: 3px solid #ffdd00; outline-offset: 0;
-}",
-                  ],
-                },
-                "displayName": "src__SearchButton",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "src__SearchButton-ln53op-2",
-                "target": "button",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            title="Search"
-          >
-            <button
-              className="c2"
-              title="Search"
-            >
-              <Search
-                fill="#ffffff"
-                title="Search"
-              >
-                <SVG
-                  fill="#ffffff"
-                  title="Search"
-                  viewBox="0 0 57 57"
-                >
-                  <svg
-                    fill="#ffffff"
-                    height="100%"
-                    style={
-                      Object {
-                        "display": "block",
-                      }
-                    }
-                    version="1.1"
-                    viewBox="0 0 57 57"
-                    width="100%"
-                  >
-                    <title>
-                      Search
-                    </title>
-                    <path
-                      d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23 s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92 c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17 s-17-7.626-17-17S14.61,6,23.984,6z"
-                    />
-                  </svg>
-                </SVG>
-              </Search>
-            </button>
-          </StyledComponent>
-        </src__SearchButton>
+        example
       </div>
     </StyledComponent>
-  </src__SearchBoxWrapper>
+  </src__StyledSearchBox>
 </SearchBox>
 `;
