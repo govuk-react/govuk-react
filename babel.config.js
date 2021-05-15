@@ -1,6 +1,6 @@
 const esModules = process.env.BABEL_ENV === 'es';
 
-const presets = ['@babel/preset-env', '@babel/preset-react', '@babel/preset-flow'];
+const presets = ['@babel/preset-env', '@babel/preset-react'];
 
 const plugins = [
   'babel-plugin-styled-components',
