@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { link } from '@govuk-react/lib';
 
 const Link = styled('a').withConfig({
-  shouldForwardProp: prop => !['noVisitedState', 'textColour', 'muted'].includes(prop)
+  shouldForwardProp: prop => !['noVisitedState', 'textColour', 'muted'].includes(prop),
 })(
   link.common(),
   link.styleDefault,
