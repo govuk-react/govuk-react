@@ -5,9 +5,9 @@ const presets = ['@babel/preset-env', '@babel/preset-react'];
 const plugins = [
   'babel-plugin-styled-components',
   '@babel/plugin-proposal-export-default-from',
-  ['@babel/plugin-proposal-private-methods', { loose: false }],
-  ['@babel/plugin-proposal-class-properties', { loose: false }],
-  ['@babel/plugin-proposal-private-property-in-object', { loose: false }],
+  ['@babel/plugin-proposal-private-methods', { loose: true }],
+  ['@babel/plugin-proposal-class-properties', { loose: true }],
+  ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
   'transform-react-remove-prop-types',
   ['@babel/plugin-transform-runtime', { helpers: false, regenerator: true }],
 ];
