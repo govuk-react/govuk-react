@@ -21,7 +21,7 @@
     "test": "cross-env CI=true yarn test:unit && yarn eslint",
     "test:unit": "jest",
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand",
-    "test:snapshot": "yarn build && yarn test:unit -u",
+    "test:snapshot": "yarn test:unit -u",
     "create-component": "node ./scripts/createComponent.js",
     "build:storybook": "cd packages/storybook && yarn build"
   },
@@ -80,6 +80,7 @@
     "jest-styled-components": "^7.0.4",
     "jest-transform-stub": "^2.0.0",
     "lerna": "2.11",
+    "lerna-alias": "^3.0.2",
     "mkdirp-promise": "^5.0.1",
     "prettier": "^1.16.4",
     "prop-types": "^15.6.0",
