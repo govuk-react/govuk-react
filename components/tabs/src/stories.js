@@ -21,8 +21,6 @@ const examples = storiesOf('Tabs/Examples', module);
 stories.addDecorator(withDocsCustom(ReadMe));
 stories.addDecorator(withKnobs);
 
-examples.addDecorator(withDocsCustom());
-
 stories.add('Component default', () => <TableTabs />);
 
 examples.add('simple', () => <SimpleTabs />);
