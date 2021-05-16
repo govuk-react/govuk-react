@@ -1,5 +1,5 @@
 import React from 'react';
-import { boolean, text } from '@storybook/addon-knobs/react';
+import { boolean, text } from '@storybook/addon-knobs';
 
 import { BrowserRouter, Link as RLink, Route } from 'react-router-dom';
 

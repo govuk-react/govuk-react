@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, number, object, text } from '@storybook/addon-knobs/react';
+import { withKnobs, number, object, text } from '@storybook/addon-knobs';
 
 import BackLink from '@govuk-react/back-link';
 import Breadcrumbs from '@govuk-react/breadcrumb';

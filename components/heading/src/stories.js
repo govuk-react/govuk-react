@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text } from '@storybook/addon-knobs/react';
+import { withKnobs, text } from '@storybook/addon-knobs';
 import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import Heading, { H1, H2, H3, H4, H5, H6 } from '.';
