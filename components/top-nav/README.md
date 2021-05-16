@@ -33,7 +33,10 @@ const ServiceTitle = (
 );
 
 const Search = (
-  <SearchBox placeholder="Search">hi</SearchBox>
+  <SearchBox>
+    <SearchBox.Input placeholder="Search GOV.UK" />
+    <SearchBox.Button />
+  </SearchBox>
 );
 
 <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>

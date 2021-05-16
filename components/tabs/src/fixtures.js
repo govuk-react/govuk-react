@@ -45,22 +45,34 @@ const tableHead = (
 const arrTabularTabs = [
   {
     title: 'Past day',
-    arr: [[3, 1, 2], [0, 0, 0]],
+    arr: [
+      [3, 1, 2],
+      [0, 0, 0],
+    ],
     id: 'past-day',
   },
   {
     title: 'Past week',
-    arr: [[24, 16, 24], [18, 20, 27]],
+    arr: [
+      [24, 16, 24],
+      [18, 20, 27],
+    ],
     id: 'past-week',
   },
   {
     title: 'Past month',
-    arr: [[98, 122, 126], [95, 131, 142]],
+    arr: [
+      [98, 122, 126],
+      [95, 131, 142],
+    ],
     id: 'past-month',
   },
   {
     title: 'Past year',
-    arr: [[1380, 1129, 1539], [1472, 1083, 1265]],
+    arr: [
+      [1380, 1129, 1539],
+      [1472, 1083, 1265],
+    ],
     id: 'past-year',
   },
 ];
@@ -226,15 +238,15 @@ const arrProposedBabel = [
 
 /* eslint-disable-next-line react/no-multi-comp */
 class ProposedClassPropertiesPlugin extends Component {
-  static defaultProps = sharedDefaultProps;
-
-  static propTypes = sharedPropTypes;
-
   state = { tabIndex: this.props.defaultIndex };
 
   setTabIndex = setTabIndex;
 
   handleClick = handleClick;
+
+  static propTypes = sharedPropTypes;
+
+  static defaultProps = sharedDefaultProps;
 
   render() {
     const { tabIndex } = this.state;
@@ -333,6 +345,7 @@ HooksExample.propTypes = sharedPropTypes;
 const RouterTabs = ({
   // eslint-disable-next-line react/prop-types
   match: {
+    // eslint-disable-next-line react/prop-types
     params: { section },
   },
 }) => {
@@ -395,6 +408,7 @@ const ReactRouterExample = () => (
 const RouterTabsSSR = ({
   // eslint-disable-next-line react/prop-types
   match: {
+    // eslint-disable-next-line react/prop-types
     params: { section },
   },
 }) => (
@@ -428,6 +442,7 @@ const ReactRouterSSRExample = () => (
 const RouterTabsSSRSinglePanel = ({
   // eslint-disable-next-line react/prop-types
   match: {
+    // eslint-disable-next-line react/prop-types
     params: { section },
   },
 }) => (

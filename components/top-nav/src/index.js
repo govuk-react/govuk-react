@@ -222,4 +222,5 @@ TopNav.IconTitle = IconTitle;
 export default TopNav;
 
 export asTopNavAnchor from './hoc/asTopNavAnchor';
+// eslint-disable-next-line import/no-cycle
 export asNavLinkAnchor from './hoc/asNavLinkAnchor';

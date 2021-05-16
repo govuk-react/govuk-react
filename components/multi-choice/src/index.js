@@ -84,10 +84,13 @@ MultiChoice.propTypes = {
     active: PropTypes.bool,
     dirty: PropTypes.bool,
     dirtySinceLastSubmit: PropTypes.bool,
+    // eslint-disable-next-line react/forbid-prop-types
     error: PropTypes.any,
+    // eslint-disable-next-line react/forbid-prop-types
     initial: PropTypes.any,
     invalid: PropTypes.bool,
     pristine: PropTypes.bool,
+    // eslint-disable-next-line react/forbid-prop-types
     submitError: PropTypes.any,
     submitFailed: PropTypes.bool,
     submitSucceeded: PropTypes.bool,

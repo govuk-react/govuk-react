@@ -21,7 +21,12 @@ const FooterContainer = styled('footer')(
     color: `${FOOTER_TEXT}`,
   },
   typography.font({ size: 16 }),
-  spacing.withWhiteSpace({ padding: [{ size: 7, direction: 'top' }, { size: 5, direction: 'bottom' }] })
+  spacing.withWhiteSpace({
+    padding: [
+      { size: 7, direction: 'top' },
+      { size: 5, direction: 'bottom' },
+    ],
+  })
 );
 
 /**

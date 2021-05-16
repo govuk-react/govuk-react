@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
-import Heading from '.';
-import { H1, H2, H3, H4, H5, H6 } from './presets';
+import Heading, { H1, H2, H3, H4, H5, H6 } from '.';
 
 describe('Heading', () => {
   const OLD_ENV = process.env;

@@ -128,16 +128,20 @@ Select.propTypes = {
     onBlur: PropTypes.func,
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
+    // eslint-disable-next-line react/forbid-prop-types
     value: PropTypes.any,
   }),
   meta: PropTypes.shape({
     active: PropTypes.bool,
     dirty: PropTypes.bool,
     dirtySinceLastSubmit: PropTypes.bool,
+    // eslint-disable-next-line react/forbid-prop-types
     error: PropTypes.any,
+    // eslint-disable-next-line react/forbid-prop-types
     initial: PropTypes.any,
     invalid: PropTypes.bool,
     pristine: PropTypes.bool,
+    // eslint-disable-next-line react/forbid-prop-types
     submitError: PropTypes.any,
     submitFailed: PropTypes.bool,
     submitSucceeded: PropTypes.bool,

@@ -40,6 +40,12 @@ module.exports = {
       }
     },
     {
+      "files": [ "fixtures.js", "stories.js", "src/stories/**" ],
+      "rules": {
+        "import/no-extraneous-dependencies": 0
+      },
+    },
+    {
       "files": [ "test.js", "**.test.js" ],
       "env": {
         "jest": true,
