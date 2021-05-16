@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@govuk-react/*": [ "./components/*/src/index.js", "./packages/*/src/index.js" ],
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
