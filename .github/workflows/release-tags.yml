@@ -24,7 +24,7 @@ jobs:
     - name: GitHub Release
       uses: softprops/action-gh-release@v1
       with:
-        files: "releases/govuk-react-*-${LERNA_VERSION}.tgz"
+        files: "releases/govuk-react-*-${{ env.LERNA_VERSION }}.tgz"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
