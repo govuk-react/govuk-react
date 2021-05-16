@@ -9,4 +9,4 @@ git tag -d v$VERSION # delete local tag
 git branch -m release/v$VERSION # rename branch
 git push -u origin release/v$VERSION # publish new branch
 hub pull-request -m v$VERSION # open a pull request
-hub release create -d v$VERSION # create a draft release
+hub release create -d v$VERSION -m v$VERSION # create a draft release
