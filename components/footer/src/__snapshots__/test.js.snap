@@ -1791,7 +1791,20 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                 Item 1
               </FooterLink>
               <FooterLink
-                as={[Function]}
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Link",
+                    "propTypes": Object {
+                      "innerRef": [Function],
+                      "onClick": [Function],
+                      "replace": [Function],
+                      "target": [Function],
+                      "to": [Function],
+                    },
+                    "render": [Function],
+                  }
+                }
                 to="/footer-meta-item-2"
               >
                 Item 2 (Router Link)
@@ -1918,24 +1931,56 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                     className="c7"
                                   >
                                     <FooterLink
-                                      as={[Function]}
+                                      as={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "displayName": "Link",
+                                          "propTypes": Object {
+                                            "innerRef": [Function],
+                                            "onClick": [Function],
+                                            "replace": [Function],
+                                            "target": [Function],
+                                            "to": [Function],
+                                          },
+                                          "render": [Function],
+                                        }
+                                      }
                                       to="/footer-meta-item-2"
                                     >
                                       <link__StyledFooterLink
-                                        as={[Function]}
+                                        as={
+                                          Object {
+                                            "$$typeof": Symbol(react.forward_ref),
+                                            "displayName": "Link",
+                                            "propTypes": Object {
+                                              "innerRef": [Function],
+                                              "onClick": [Function],
+                                              "replace": [Function],
+                                              "target": [Function],
+                                              "to": [Function],
+                                            },
+                                            "render": [Function],
+                                          }
+                                        }
                                         to="/footer-meta-item-2"
                                       >
                                         <Link
                                           className="c8"
                                           to="/footer-meta-item-2"
                                         >
-                                          <a
+                                          <LinkAnchor
                                             className="c8"
                                             href="/footer-meta-item-2"
-                                            onClick={[Function]}
+                                            navigate={[Function]}
                                           >
-                                            Item 2 (Router Link)
-                                          </a>
+                                            <a
+                                              className="c8"
+                                              href="/footer-meta-item-2"
+                                              onClick={[Function]}
+                                            >
+                                              Item 2 (Router Link)
+                                            </a>
+                                          </LinkAnchor>
                                         </Link>
                                       </link__StyledFooterLink>
                                     </FooterLink>
@@ -2433,7 +2478,20 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
               Item 1
             </FooterLink>
             <FooterLink
-              as={[Function]}
+              as={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "displayName": "Link",
+                  "propTypes": Object {
+                    "innerRef": [Function],
+                    "onClick": [Function],
+                    "replace": [Function],
+                    "target": [Function],
+                    "to": [Function],
+                  },
+                  "render": [Function],
+                }
+              }
               to="/footer-meta-item-2"
             >
               Item 2 (Router Link)
@@ -2551,24 +2609,56 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                     className="c7"
                                   >
                                     <FooterLink
-                                      as={[Function]}
+                                      as={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "displayName": "Link",
+                                          "propTypes": Object {
+                                            "innerRef": [Function],
+                                            "onClick": [Function],
+                                            "replace": [Function],
+                                            "target": [Function],
+                                            "to": [Function],
+                                          },
+                                          "render": [Function],
+                                        }
+                                      }
                                       to="/footer-meta-item-2"
                                     >
                                       <link__StyledFooterLink
-                                        as={[Function]}
+                                        as={
+                                          Object {
+                                            "$$typeof": Symbol(react.forward_ref),
+                                            "displayName": "Link",
+                                            "propTypes": Object {
+                                              "innerRef": [Function],
+                                              "onClick": [Function],
+                                              "replace": [Function],
+                                              "target": [Function],
+                                              "to": [Function],
+                                            },
+                                            "render": [Function],
+                                          }
+                                        }
                                         to="/footer-meta-item-2"
                                       >
                                         <Link
                                           className="c8"
                                           to="/footer-meta-item-2"
                                         >
-                                          <a
+                                          <LinkAnchor
                                             className="c8"
                                             href="/footer-meta-item-2"
-                                            onClick={[Function]}
+                                            navigate={[Function]}
                                           >
-                                            Item 2 (Router Link)
-                                          </a>
+                                            <a
+                                              className="c8"
+                                              href="/footer-meta-item-2"
+                                              onClick={[Function]}
+                                            >
+                                              Item 2 (Router Link)
+                                            </a>
+                                          </LinkAnchor>
                                         </Link>
                                       </link__StyledFooterLink>
                                     </FooterLink>
@@ -3187,7 +3277,20 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                 Item 1
               </FooterLink>
               <FooterLink
-                as={[Function]}
+                as={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "Link",
+                    "propTypes": Object {
+                      "innerRef": [Function],
+                      "onClick": [Function],
+                      "replace": [Function],
+                      "target": [Function],
+                      "to": [Function],
+                    },
+                    "render": [Function],
+                  }
+                }
                 to="/footer-meta-item-2"
               >
                 Item 2 (Router Link)
@@ -3313,24 +3416,56 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                   className="c7"
                                 >
                                   <FooterLink
-                                    as={[Function]}
+                                    as={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "displayName": "Link",
+                                        "propTypes": Object {
+                                          "innerRef": [Function],
+                                          "onClick": [Function],
+                                          "replace": [Function],
+                                          "target": [Function],
+                                          "to": [Function],
+                                        },
+                                        "render": [Function],
+                                      }
+                                    }
                                     to="/footer-nav-item-2"
                                   >
                                     <link__StyledFooterLink
-                                      as={[Function]}
+                                      as={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "displayName": "Link",
+                                          "propTypes": Object {
+                                            "innerRef": [Function],
+                                            "onClick": [Function],
+                                            "replace": [Function],
+                                            "target": [Function],
+                                            "to": [Function],
+                                          },
+                                          "render": [Function],
+                                        }
+                                      }
                                       to="/footer-nav-item-2"
                                     >
                                       <Link
                                         className="c8"
                                         to="/footer-nav-item-2"
                                       >
-                                        <a
+                                        <LinkAnchor
                                           className="c8"
                                           href="/footer-nav-item-2"
-                                          onClick={[Function]}
+                                          navigate={[Function]}
                                         >
-                                          Navigation item 2 (Router Link)
-                                        </a>
+                                          <a
+                                            className="c8"
+                                            href="/footer-nav-item-2"
+                                            onClick={[Function]}
+                                          >
+                                            Navigation item 2 (Router Link)
+                                          </a>
+                                        </LinkAnchor>
                                       </Link>
                                     </link__StyledFooterLink>
                                   </FooterLink>
@@ -3762,24 +3897,56 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                     className="c17"
                                   >
                                     <FooterLink
-                                      as={[Function]}
+                                      as={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "displayName": "Link",
+                                          "propTypes": Object {
+                                            "innerRef": [Function],
+                                            "onClick": [Function],
+                                            "replace": [Function],
+                                            "target": [Function],
+                                            "to": [Function],
+                                          },
+                                          "render": [Function],
+                                        }
+                                      }
                                       to="/footer-meta-item-2"
                                     >
                                       <link__StyledFooterLink
-                                        as={[Function]}
+                                        as={
+                                          Object {
+                                            "$$typeof": Symbol(react.forward_ref),
+                                            "displayName": "Link",
+                                            "propTypes": Object {
+                                              "innerRef": [Function],
+                                              "onClick": [Function],
+                                              "replace": [Function],
+                                              "target": [Function],
+                                              "to": [Function],
+                                            },
+                                            "render": [Function],
+                                          }
+                                        }
                                         to="/footer-meta-item-2"
                                       >
                                         <Link
                                           className="c8"
                                           to="/footer-meta-item-2"
                                         >
-                                          <a
+                                          <LinkAnchor
                                             className="c8"
                                             href="/footer-meta-item-2"
-                                            onClick={[Function]}
+                                            navigate={[Function]}
                                           >
-                                            Item 2 (Router Link)
-                                          </a>
+                                            <a
+                                              className="c8"
+                                              href="/footer-meta-item-2"
+                                              onClick={[Function]}
+                                            >
+                                              Item 2 (Router Link)
+                                            </a>
+                                          </LinkAnchor>
                                         </Link>
                                       </link__StyledFooterLink>
                                     </FooterLink>
@@ -4455,24 +4622,56 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                   className="c7"
                                 >
                                   <FooterLink
-                                    as={[Function]}
+                                    as={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "displayName": "Link",
+                                        "propTypes": Object {
+                                          "innerRef": [Function],
+                                          "onClick": [Function],
+                                          "replace": [Function],
+                                          "target": [Function],
+                                          "to": [Function],
+                                        },
+                                        "render": [Function],
+                                      }
+                                    }
                                     to="/footer-nav-item-2"
                                   >
                                     <link__StyledFooterLink
-                                      as={[Function]}
+                                      as={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "displayName": "Link",
+                                          "propTypes": Object {
+                                            "innerRef": [Function],
+                                            "onClick": [Function],
+                                            "replace": [Function],
+                                            "target": [Function],
+                                            "to": [Function],
+                                          },
+                                          "render": [Function],
+                                        }
+                                      }
                                       to="/footer-nav-item-2"
                                     >
                                       <Link
                                         className="c8"
                                         to="/footer-nav-item-2"
                                       >
-                                        <a
+                                        <LinkAnchor
                                           className="c8"
                                           href="/footer-nav-item-2"
-                                          onClick={[Function]}
+                                          navigate={[Function]}
                                         >
-                                          Navigation item 2 (Router Link)
-                                        </a>
+                                          <a
+                                            className="c8"
+                                            href="/footer-nav-item-2"
+                                            onClick={[Function]}
+                                          >
+                                            Navigation item 2 (Router Link)
+                                          </a>
+                                        </LinkAnchor>
                                       </Link>
                                     </link__StyledFooterLink>
                                   </FooterLink>

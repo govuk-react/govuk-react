@@ -165,6 +165,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
             escapeHtml={false}
             linkRenderer={[Function]}
             mb={0}
+            parserOptions={Object {}}
             plugins={Array []}
             rawSourcePos={false}
             renderers={
@@ -180,17 +181,17 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
           >
             <Root
               className="c1"
-              key="root-1-1"
+              key="root-1-1-0"
             >
               <div
                 className="c1"
               >
                 <p
-                  key="paragraph-1-1"
+                  key="paragraph-1-1-0"
                 >
                   <TextRenderer
-                    key="text-1-1"
-                    nodeKey="text-1-1"
+                    key="text-1-1-0"
+                    nodeKey="text-1-1-0"
                     value="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
                   >
                     It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
