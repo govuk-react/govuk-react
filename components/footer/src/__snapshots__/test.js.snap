@@ -1314,14 +1314,14 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
       }
     }
     meta={
-      <ForwardRef(meta-custom__MetaCustom)>
+      <meta-custom__MetaCustom>
         Built by the 
         <FooterLink
           href="/"
         >
           Government Digital Service
         </FooterLink>
-      </ForwardRef(meta-custom__MetaCustom)>
+      </meta-custom__MetaCustom>
     }
   >
     <src__FooterContainer
@@ -1802,14 +1802,14 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                 Item 3
               </FooterLink>
             </MetaLinks>
-            <ForwardRef(meta-custom__MetaCustom)>
+            <meta-custom__MetaCustom>
               Built by the 
               <FooterLink
                 href="/"
               >
                 Government Digital Service
               </FooterLink>
-            </ForwardRef(meta-custom__MetaCustom)>
+            </meta-custom__MetaCustom>
           </React.Fragment>
         }
       >
@@ -3198,14 +3198,14 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                 Item 3
               </FooterLink>
             </MetaLinks>
-            <ForwardRef(meta-custom__MetaCustom)>
+            <meta-custom__MetaCustom>
               Built by the 
               <FooterLink
                 href="/"
               >
                 Government Digital Service
               </FooterLink>
-            </ForwardRef(meta-custom__MetaCustom)>
+            </meta-custom__MetaCustom>
           </React.Fragment>
         }
       >
