@@ -73,4 +73,5 @@ Header.propTypes = {
 export default deprecate(Header, 'please use the Heading component instead');
 
 export { Header as DocumentedHeader };
+// eslint-disable-next-line import/no-cycle
 export { H1, H2, H3, H4, H5, H6 } from './presets';

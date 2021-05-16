@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs/react';
+import { withKnobs } from '@storybook/addon-knobs';
 import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import {

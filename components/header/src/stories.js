@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, number } from '@storybook/addon-knobs/react';
+import { withKnobs, text, number } from '@storybook/addon-knobs';
 import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import Header from '.';

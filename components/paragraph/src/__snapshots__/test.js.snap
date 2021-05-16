@@ -44,6 +44,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
       className="src__StyledParagraph-dkdnni-0 iCtqav"
       escapeHtml={false}
       linkRenderer={[Function]}
+      parserOptions={Object {}}
       plugins={Array []}
       rawSourcePos={false}
       renderers={
@@ -59,17 +60,17 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
     >
       <Root
         className="src__StyledParagraph-dkdnni-0 iCtqav"
-        key="root-1-1"
+        key="root-1-1-0"
       >
         <div
           className="src__StyledParagraph-dkdnni-0 iCtqav"
         >
           <p
-            key="paragraph-1-1"
+            key="paragraph-1-1-0"
           >
             <TextRenderer
-              key="text-1-1"
-              nodeKey="text-1-1"
+              key="text-1-1-0"
+              nodeKey="text-1-1-0"
               value="Some basic text"
             >
               Some basic text

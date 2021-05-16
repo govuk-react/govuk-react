@@ -2,7 +2,7 @@ import React from 'react';
 import { Field } from 'react-final-form';
 import { storiesOf } from '@storybook/react';
 import PropTypes from 'prop-types';
-import { withKnobs } from '@storybook/addon-knobs/react';
+import { withKnobs } from '@storybook/addon-knobs';
 import { FinalFormWrapper, withDocsCustom } from '@govuk-react/storybook-components';
 
 import MultiChoice from '@govuk-react/multi-choice';
@@ -34,7 +34,10 @@ RadioGroup.defaultProps = {
 };
 
 RadioGroup.propTypes = {
-  input: PropTypes.shape({}),
+  input: PropTypes.shape({
+    // eslint-disable-next-line react/forbid-prop-types
+    value: PropTypes.any,
+  }),
   meta: PropTypes.shape({}),
   label: PropTypes.string.isRequired,
   hint: PropTypes.string,
@@ -122,7 +125,10 @@ examples.add('Usage with Final/Redux Form - multi checkbox validation', () => (
       label="Do you like animals?"
       hint="You must tell us"
       component={RadioGroup}
-      options={[{ title: 'Yep', value: 'yes' }, { title: 'Nope', value: 'no' }]}
+      options={[
+        { title: 'Yep', value: 'yes' },
+        { title: 'Nope', value: 'no' },
+      ]}
       validate={required}
       inline
     />

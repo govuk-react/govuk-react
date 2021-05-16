@@ -1,5 +1,5 @@
 import React from 'react';
-import { text, boolean } from '@storybook/addon-knobs/react';
+import { text, boolean } from '@storybook/addon-knobs';
 
 import Paragraph from '.';
 

@@ -1,7 +1,7 @@
 /* eslint-env browser */
 
 import React from 'react';
-import { text } from '@storybook/addon-knobs/react';
+import { text } from '@storybook/addon-knobs';
 import InputField from '@govuk-react/input-field';
 import TextArea from '@govuk-react/text-area';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import deprecate from '.';
 
@@ -31,7 +31,7 @@ describe('deprecate HOC', () => {
     process.env.NODE_ENV = 'development';
     const Comp = deprecate(() => <div>Test</div>);
 
-    mount(<Comp />);
+    render(<Comp />);
 
     expect(warnCallCount).toEqual(1);
   });
@@ -40,7 +40,7 @@ describe('deprecate HOC', () => {
     process.env.NODE_ENV = 'production';
     const Comp = deprecate(() => <div>Test</div>);
 
-    mount(<Comp />);
+    render(<Comp />);
 
     expect(warnCallCount).toEqual(0);
   });

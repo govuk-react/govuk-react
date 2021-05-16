@@ -7,6 +7,10 @@ Details
 ```
 <!-- STORY -->
 
+### IE Compatibility
+
+Please note that this component uses a <details> component, which requires a polyfill to work correctly on Internet Explorer.
+
 ### Usage
 
 
