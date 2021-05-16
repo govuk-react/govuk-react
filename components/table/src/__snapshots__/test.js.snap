@@ -256,30 +256,30 @@ exports[`Table renders a table with a caption matching snapshot: table with capt
   <Table
     body={
       <React.Fragment>
-        <ForwardRef(Row)>
+        <Row>
           <CellHeader>
             First 6 weeks
           </CellHeader>
-          <ForwardRef(Cell)>
+          <Cell>
             £109.80 per week
-          </ForwardRef(Cell)>
-        </ForwardRef(Row)>
-        <ForwardRef(Row)>
+          </Cell>
+        </Row>
+        <Row>
           <CellHeader>
             Next 33 weeks
           </CellHeader>
-          <ForwardRef(Cell)>
+          <Cell>
             £109.80 per week
-          </ForwardRef(Cell)>
-        </ForwardRef(Row)>
-        <ForwardRef(Row)>
+          </Cell>
+        </Row>
+        <Row>
           <CellHeader>
             Total estimated pay
           </CellHeader>
-          <ForwardRef(Cell)>
+          <Cell>
             £4,282.20
-          </ForwardRef(Cell)>
-        </ForwardRef(Row)>
+          </Cell>
+        </Row>
       </React.Fragment>
     }
     caption="Dates and amounts"
@@ -493,7 +493,7 @@ exports[`Table renders a table with custom widths matching snapshot: table with 
   <Table
     caption="Custom widths"
     head={
-      <ForwardRef(Row)>
+      <Row>
         <CellHeader
           setWidth="one-half"
         >
@@ -507,7 +507,7 @@ exports[`Table renders a table with custom widths matching snapshot: table with 
         <CellHeader>
           Normal
         </CellHeader>
-      </ForwardRef(Row)>
+      </Row>
     }
   >
     <src__StyledTable>
@@ -710,7 +710,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
   <Table
     caption="Attention, I am the caption of this ship!"
     head={
-      <ForwardRef(Row)>
+      <Row>
         <CellHeader>
           Month you apply
         </CellHeader>
@@ -724,7 +724,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
         >
           Rate for bicycles
         </CellHeader>
-      </ForwardRef(Row)>
+      </Row>
     }
   >
     <src__StyledTable>
