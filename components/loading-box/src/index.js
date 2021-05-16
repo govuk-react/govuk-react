@@ -43,7 +43,7 @@ const Innerwrap = styled('div')(({ timeIn, timeOut, backgroundColor, backgroundC
       ${hexRgb(backgroundColor).green},
       ${backgroundColorOpacity})`,
   },
-  '.fade-enter': {
+  '&.fade-enter': {
     '& .overlay': {
       backgroundColor: `rgba(
         ${hexRgb(backgroundColor).red},
@@ -58,7 +58,7 @@ const Innerwrap = styled('div')(({ timeIn, timeOut, backgroundColor, backgroundC
       transitionDelay: `${timeIn / 2}ms`,
     },
   },
-  '.fade-enter-active': {
+  '&.fade-enter-active': {
     '& .overlay': {
       backgroundColor: `rgba(
         ${hexRgb(backgroundColor).red},
@@ -73,7 +73,7 @@ const Innerwrap = styled('div')(({ timeIn, timeOut, backgroundColor, backgroundC
       transitionDelay: `${timeIn / 2}ms`,
     },
   },
-  '.fade-exit': {
+  '&.fade-exit': {
     '& .overlay': {
       backgroundColor: `rgba(
         ${hexRgb(backgroundColor).red},
@@ -87,7 +87,7 @@ const Innerwrap = styled('div')(({ timeIn, timeOut, backgroundColor, backgroundC
       transitionDuration: `${timeOut}ms`,
     },
   },
-  '.fade-exit-active': {
+  '&.fade-exit-active': {
     '& .overlay': {
       backgroundColor: `rgba(
         ${hexRgb(backgroundColor).red},
