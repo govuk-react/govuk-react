@@ -7,6 +7,7 @@ const plugins = [
   '@babel/plugin-proposal-export-default-from',
   ['@babel/plugin-proposal-private-methods', { loose: false }],
   ['@babel/plugin-proposal-class-properties', { loose: false }],
+  ['@babel/plugin-proposal-private-property-in-object', { loose: false }],
   'transform-react-remove-prop-types',
   ['@babel/plugin-transform-runtime', { helpers: false, regenerator: true }],
 ];
