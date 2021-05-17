@@ -1,6 +1,5 @@
 // Components
 export { default as BackLink } from '@govuk-react/back-link';
-export { default as Breadcrumb } from '@govuk-react/breadcrumb';
 export { default as Breadcrumbs } from '@govuk-react/breadcrumbs';
 export { default as Button } from '@govuk-react/button';
 export { default as Caption } from '@govuk-react/caption';
@@ -16,7 +15,6 @@ export { default as Footer } from '@govuk-react/footer';
 export { default as FormGroup } from '@govuk-react/form-group';
 export { default as GridCol } from '@govuk-react/grid-col';
 export { default as GridRow } from '@govuk-react/grid-row';
-export { default as Header } from '@govuk-react/header';
 export { default as Heading } from '@govuk-react/heading';
 export { default as HintText } from '@govuk-react/hint-text';
 export { default as Input } from '@govuk-react/input';
@@ -44,7 +42,6 @@ export { default as SearchBox } from '@govuk-react/search-box';
 export { default as SectionBreak } from '@govuk-react/section-break';
 export { default as Select } from '@govuk-react/select';
 export { default as SkipLink } from '@govuk-react/skip-link';
-export { default as SupportingHeader } from '@govuk-react/supporting-header';
 export { default as Table } from '@govuk-react/table';
 export { default as Tabs } from '@govuk-react/tabs';
 export { default as Tag } from '@govuk-react/tag';
@@ -57,9 +54,7 @@ export { default as WarningText } from '@govuk-react/warning-text';
 export { H1, H2, H3, H4, H5, H6 } from '@govuk-react/heading';
 
 // Higher Order Components
-export { asAnchor } from '@govuk-react/hoc';
 export { asPaginationItem } from '@govuk-react/hoc';
-export { withWhiteSpace } from '@govuk-react/hoc';
 
 // Icons
 export { Search as SearchIcon, ArrowLeft, Spinner } from '@govuk-react/icons';
