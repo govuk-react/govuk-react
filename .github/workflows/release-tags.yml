@@ -19,7 +19,7 @@ jobs:
     - run: yarn build:sync
     
     - run: yarn run pack && mkdir releases && mv {components,packages}/*/govuk-react-*.tgz ./releases
-    - run: LERNA_VERSION=$(node -e 'console.log(require("./lerna.json").version)')
+    - run: echo LERNA_VERSION=$(node -e 'console.log(require("./lerna.json").version)') >> $GITHUB_ENV
     
     - name: GitHub Release
       uses: softprops/action-gh-release@v1
