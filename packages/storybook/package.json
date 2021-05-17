@@ -50,6 +50,7 @@
     "@govuk-react/visually-hidden": "^0.8.0",
     "@govuk-react/warning-text": "^0.8.0",
     "@storybook/addon-actions": "6.2.9",
+    "@storybook/addon-docs": "6.2.9",
     "@storybook/addon-knobs": "6.2.9",
     "@storybook/addon-links": "6.0.28",
     "@storybook/addons": "6.0.28",
