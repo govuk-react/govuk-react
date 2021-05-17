@@ -1,5 +1,3 @@
-import { configureReadme } from 'storybook-readme';
-import { StoryPreview } from '@govuk-react/storybook-components';
 
 import { addons } from '@storybook/addons';
 import { create } from '@storybook/theming';
@@ -14,4 +12,3 @@ addons.setConfig({
   theme,
 });
 
-configureReadme({ StoryPreview });
