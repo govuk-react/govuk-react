@@ -19,4 +19,4 @@ if (!navigator.userAgent.match(/Chromatic/)) {
   stories.add('to govuk-react', () => <div />);
 }
 
-configureReadme({ StoryPreview })
+configureReadme({ StoryPreview });
