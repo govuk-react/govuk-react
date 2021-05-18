@@ -34,7 +34,7 @@ const StyledLabelText = styled('span')(
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/
  *
  */
-const LabelText = props => <StyledLabelText {...props} />;
+const LabelText = (props) => <StyledLabelText {...props} />;
 
 LabelText.propTypes = {
   /** Text for the label */

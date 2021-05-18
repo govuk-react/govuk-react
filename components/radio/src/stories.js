@@ -9,12 +9,12 @@ import MultiChoice from '@govuk-react/multi-choice';
 import Radio from '.';
 import ReadMe from '../README.md';
 
-const required = value => (value ? undefined : 'Required');
+const required = (value) => (value ? undefined : 'Required');
 
 const RadioGroup = ({ label, hint, options, inline, input, meta }) => (
   <div>
     <MultiChoice label={label} hint={hint} meta={meta}>
-      {options.map(o => (
+      {options.map((o) => (
         <div key={o.value}>
           <Radio {...input} value={o.value} inline={inline} checked={o.value === input.value}>
             {o.title}

@@ -45,7 +45,7 @@ const StyledList = styled('ul')(
  * - https://govuk-static.herokuapp.com/component-guide/previous_and_next_navigation
  *
  */
-const Pagination = props => <StyledList {...props} />;
+const Pagination = (props) => <StyledList {...props} />;
 
 Pagination.propTypes = {
   /** `asPaginationItem` nodes */

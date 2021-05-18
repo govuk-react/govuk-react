@@ -90,8 +90,8 @@ const PageTitle = styled('span')({
   },
 });
 
-const asPaginationItem = AnchorType => {
-  const PaginationItem = props => (
+const asPaginationItem = (AnchorType) => {
+  const PaginationItem = (props) => (
     <PaginationWrapper previousPage={props.previousPage} nextPage={props.nextPage}>
       <AnchorType to={props.to} href={props.href} target={props.target}>
         <InnerWrap>

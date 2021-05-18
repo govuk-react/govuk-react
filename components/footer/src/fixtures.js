@@ -6,7 +6,7 @@ import { MEDIA_QUERIES, GUTTER } from '@govuk-react/constants';
 import Footer from '.';
 import crest from './govuk-crest.png';
 
-const withRoutes = component => (
+const withRoutes = (component) => (
   <BrowserRouter>
     {component}
     <Route path="/footer-nav-item-2" render={() => 'Footer Navigation item 2'} />
@@ -18,8 +18,7 @@ export default () => <Footer />;
 
 const copyright = {
   text: 'Crown copyright',
-  link:
-    'https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/',
+  link: 'https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/',
   image: {
     source: crest,
     height: 102,

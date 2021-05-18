@@ -67,12 +67,7 @@ describe('DateField', () => {
   it('should support setting value', () => {
     const output = mount(<DateField input={{ value: { day: '1', month: '2', year: '3' } }} />);
     expect(output).toMatchSnapshot('value 1 2 3');
-    expect(
-      output
-        .find('input')
-        .first()
-        .props().value
-    ).toBe('1');
+    expect(output.find('input').first().props().value).toBe('1');
   });
 
   it('should support null value', () => {

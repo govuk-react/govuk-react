@@ -28,7 +28,7 @@ const SkipLink = styled('a')(visuallyHidden.focusable(), link.common(), link.sty
  * - https://design-system.service.gov.uk/components/skip-link/
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/skip-link
  */
-const SkipLinkDocumented = props => <SkipLink {...props} />;
+const SkipLinkDocumented = (props) => <SkipLink {...props} />;
 
 SkipLinkDocumented.propTypes = {
   children: PropTypes.node.isRequired,

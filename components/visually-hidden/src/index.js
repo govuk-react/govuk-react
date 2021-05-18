@@ -5,7 +5,7 @@ import { visuallyHidden } from '@govuk-react/lib';
 
 const VisuallyHidden = styled('span')
   .withConfig({
-    shouldForwardProp: prop => !['important', 'focusable'].includes(prop),
+    shouldForwardProp: (prop) => !['important', 'focusable'].includes(prop),
   })
   .attrs(({ focusable, tabIndex }) =>
     // if we're focusable but don't have a `tabIndex` set, add one
@@ -28,7 +28,7 @@ const VisuallyHidden = styled('span')
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/helpers/_visually-hidden.scss
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/utilities/_visually-hidden.scss
  */
-const VisuallyHiddenDocumented = props => <VisuallyHidden {...props} />;
+const VisuallyHiddenDocumented = (props) => <VisuallyHidden {...props} />;
 
 VisuallyHiddenDocumented.propTypes = {
   /**

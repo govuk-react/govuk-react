@@ -47,7 +47,7 @@ const Fieldset = styled('fieldset')(
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/fieldset
  * - https://design-system.service.gov.uk/get-started/labels-legends-headings/
  */
-const FieldsetDocumented = props => <Fieldset {...props} />;
+const FieldsetDocumented = (props) => <Fieldset {...props} />;
 
 FieldsetDocumented.propTypes = {
   children: PropTypes.node.isRequired,

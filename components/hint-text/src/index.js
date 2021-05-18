@@ -34,7 +34,7 @@ const StyledHint = styled('span')(
  * ### References
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/hint/_hint.scss
  */
-const HintText = props => <StyledHint {...props} />;
+const HintText = (props) => <StyledHint {...props} />;
 
 HintText.propTypes = {
   /** Text for the hint */

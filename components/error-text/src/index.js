@@ -30,7 +30,7 @@ const StyledError = styled('span')(
  * ### References
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/error-message/_error-message.scss
  */
-const ErrorText = props => <StyledError {...props} />;
+const ErrorText = (props) => <StyledError {...props} />;
 
 ErrorText.propTypes = {
   /** Text to describe the error */

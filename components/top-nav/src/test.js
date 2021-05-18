@@ -55,7 +55,7 @@ describe('TopNav', () => {
   });
 
   it('matches the props passed to the list of Anchor tags', () => {
-    WrapperMultipleTopNavAnchor.find(Anchor).forEach(anchor => {
+    WrapperMultipleTopNavAnchor.find(Anchor).forEach((anchor) => {
       expect(anchor.props().href).toEqual('/section');
       expect(anchor.props().children).toEqual('Section 1');
     });

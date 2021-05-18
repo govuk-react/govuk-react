@@ -58,7 +58,7 @@ const SearchButton = styled('button')({
   },
 });
 
-const Button = props => (
+const Button = (props) => (
   <SearchButton title="Search" {...props}>
     <Search fill={WHITE} />
   </SearchButton>
@@ -100,7 +100,7 @@ const StyledSearchBox = styled('div')(
  * - https://govuk-static.herokuapp.com/component-guide/search
  *
  */
-const SearchBox = props => <StyledSearchBox {...props} />;
+const SearchBox = (props) => <StyledSearchBox {...props} />;
 
 SearchBox.Input = Input;
 SearchBox.Button = Button;

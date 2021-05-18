@@ -116,7 +116,7 @@ const DocumentFooterMetadata = ({ from, partOf, other, ...props }) => {
   const otherData = (
     <StyledContainer>
       {other &&
-        other.map(item => (
+        other.map((item) => (
           <div key={item.id}>
             <p style={{ marginBottom: 0 }}>{item.title}:</p>
             <UnorderedList listStyleType="none">

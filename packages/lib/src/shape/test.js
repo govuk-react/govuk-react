@@ -9,7 +9,7 @@ describe('shape lib', () => {
     });
 
     it('returns styles for an arrow for up/down/left/right directions', () => {
-      directions.forEach(direction => {
+      directions.forEach((direction) => {
         expect(shape.arrow({ direction })).toBeTruthy();
       });
     });

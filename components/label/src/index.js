@@ -43,7 +43,7 @@ const StyledLabel = styled('label')(
  * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/
  *
  */
-const Label = props => <StyledLabel {...props} />;
+const Label = (props) => <StyledLabel {...props} />;
 
 Label.propTypes = {
   /** Text for the label */

@@ -52,7 +52,7 @@ examples.add('Custom main container (background colour)', () => (
 
 examples.add('Custom main container (adjusted padding)', () => (
   <div>
-    <Page main={props => <Page.Main padding={{ size: 1 }} {...props} />}>
+    <Page main={(props) => <Page.Main padding={{ size: 1 }} {...props} />}>
       <H3>Main container with adjusted padding using withWhiteSpace padding prop</H3>
     </Page>
   </div>

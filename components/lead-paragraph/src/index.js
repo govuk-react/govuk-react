@@ -23,7 +23,7 @@ const StyledParagraph = styled('p')(
  * ### References
  * - https://design-system.service.gov.uk/styles/typography/#paragraphs
  */
-const LeadParagraph = props => <StyledParagraph {...props} />;
+const LeadParagraph = (props) => <StyledParagraph {...props} />;
 
 LeadParagraph.propTypes = {
   /** Text in the Lead paragraph */

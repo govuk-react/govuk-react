@@ -89,7 +89,7 @@ const OrderedList = styled('ol')(
  * - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
  */
 // Create a component wrapper for react-docgen only
-const DocumentedComponent = props => <OrderedList {...props} />;
+const DocumentedComponent = (props) => <OrderedList {...props} />;
 
 DocumentedComponent.defaultProps = {
   listStyleType: undefined,

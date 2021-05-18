@@ -50,7 +50,7 @@ const SectionBreak = styled('hr')(
  * - https://design-system.service.gov.uk/styles/typography/#section-break
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/core/_section-break.scss
  */
-const SectionBreakDocumented = props => <SectionBreak {...props} />;
+const SectionBreakDocumented = (props) => <SectionBreak {...props} />;
 
 SectionBreakDocumented.propTypes = {
   level: PropTypes.oneOf(['XL', 'XLARGE', 'L', 'LARGE', 'M', 'MEDIUM']),

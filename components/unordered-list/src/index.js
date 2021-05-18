@@ -35,7 +35,7 @@ import OrderedList from '@govuk-react/ordered-list';
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/core/_lists.scss
  */
 
-const UnorderedList = props => <OrderedList as="ul" {...props} />;
+const UnorderedList = (props) => <OrderedList as="ul" {...props} />;
 
 UnorderedList.defaultProps = {
   listStyleType: undefined,

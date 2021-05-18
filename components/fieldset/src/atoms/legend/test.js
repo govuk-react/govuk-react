@@ -20,7 +20,7 @@ describe('Fieldset.Legend', () => {
 
   it('allows custom string-based font size without crashing', () => {
     const sizes = ['XL', 'XLARGE', 'L', 'LARGE', 'M', 'MEDIUM', 'S', 'SMALL'];
-    sizes.forEach(size => {
+    sizes.forEach((size) => {
       expect(mount(<Legend size={size}>Tests</Legend>).exists()).toBeTruthy();
     });
   });
