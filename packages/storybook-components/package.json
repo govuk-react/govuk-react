@@ -6,7 +6,7 @@
     "@storybook/addon-actions": "6.2.9",
     "@storybook/addon-docs": "6.2.9",
     "@storybook/addons": "6.2.9",
-    "@storybook/react": "6.0.28",
+    "@storybook/react": "6.2.9",
     "react-final-form": "^4.1.0",
     "storybook-readme": "^5.0.9"
   },
