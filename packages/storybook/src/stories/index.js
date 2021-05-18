@@ -1,6 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { addReadme } from 'storybook-readme';
+import { addReadme, configureReadme } from 'storybook-readme';
+import StoryPreview from './story-preview';
+
 import 'normalize.css';
 import './styles.css';
 import ReadMe from '../../../../README.md';
@@ -17,5 +19,4 @@ if (!navigator.userAgent.match(/Chromatic/)) {
   stories.add('to govuk-react', () => <div />);
 }
 
-const req = require.context('../../../../', true, /(packages|components)\/[^/]+\/src\/([^/]+\/)*stories.js$/);
-req.keys().forEach(req);
+configureReadme({ StoryPreview });
