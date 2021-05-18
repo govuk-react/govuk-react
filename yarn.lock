@@ -12219,14 +12219,14 @@ pnp-webpack-plugin@1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
-polished@^3.0.3, polished@^3.3.1, polished@^3.4.4:
+polished@^3.3.1, polished@^3.4.4:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/polished/-/polished-3.7.1.tgz#d1addc87ee16eb5b413c6165eda37600cccb9c11"
   integrity sha512-/QgHrNGYwIA4mwxJ/7FSvalUJsm7KNfnXiScVSEG2Xa5qxDeBn4nmdjN2pW00mkM2Tts64ktc47U8F7Ed1BRAA==
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-polished@^4.0.5:
+polished@^4.0.5, polished@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/polished/-/polished-4.1.2.tgz#c04fcc203e287e2d866e9cfcaf102dae1c01a816"
   integrity sha512-jq4t3PJUpVRcveC53nnbEX35VyQI05x3tniwp26WFdm1dwaNUBHAi5awa/roBlwQxx1uRhwNSYeAi/aMbfiJCQ==
