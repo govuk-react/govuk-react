@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@babel/cli": "7.14.3",
-    "@babel/core": "7.14.2",
+    "@babel/core": "7.14.3",
     "cross-env": "^5.1.4",
     "rimraf": "^2.6.2"
   },
