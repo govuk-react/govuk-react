@@ -17,10 +17,34 @@
   } catch (e) {
     // eslint-disable-next-line no-console
     console.warn('unable to connect to top frame for connecting dev tools');
-  }</script><style>#root[hidden],
+  }
+
+  window.onerror = function onerror(message, source, line, column, err) {
+    if (window.CONFIG_TYPE !== 'DEVELOPMENT') return;
+    // eslint-disable-next-line no-var, vars-on-top
+    var xhr = new window.XMLHttpRequest();
+    xhr.open('POST', '/runtime-error');
+    xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+    xhr.send(
+      JSON.stringify({
+        /* eslint-disable object-shorthand */
+        message: message,
+        source: source,
+        line: line,
+        column: column,
+        error: err && { message: err.message, name: err.name, stack: err.stack },
+        origin: 'manager',
+        /* eslint-enable object-shorthand */
+      })
+    );
+  };</script><style>#root[hidden],
       #docs-root[hidden] {
         display: none !important;
-      }</style></head><body><div id="root"></div><div id="docs-root"></div><script>window['LOGLEVEL'] = "info";
+      }</style></head><body><div id="root"></div><div id="docs-root"></div><script>window['CONFIG_TYPE'] = "PRODUCTION";
+            
+        
+            
+              window['LOGLEVEL'] = "info";
             
         
             
@@ -28,4 +52,4 @@
             
         
             
-              window['DOCS_MODE'] = false;</script><script src="./sb_dll/storybook_ui_dll.js"></script><script src="runtime~main.8c865dc4eac08c1cd5f2.bundle.js"></script><script src="vendors~main.5277ca400d9b0a5b7c60.bundle.js"></script><script src="main.8832a73b7072592d1f9e.bundle.js"></script></body></html>
+              window['DOCS_MODE'] = false;</script><script src="runtime~main.e6bf1caf44f2c297ced5.manager.bundle.js"></script><script src="vendors~main.0377a4212c540c8c541c.manager.bundle.js"></script><script src="main.055ea5ab2d4b894f9a6d.manager.bundle.js"></script></body></html>
