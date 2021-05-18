@@ -34,10 +34,10 @@ class Input extends React.Component {
           error={error}
           defaultValue={defaultValue}
           value={this.props.value ? this.props.value[key] : undefined}
-          onChange={e => this.props.onChange(e, key)}
-          onBlur={e => this.props.onBlur(e, key)}
-          onFocus={e => this.props.onFocus(e, key)}
-          ref={input => {
+          onChange={(e) => this.props.onChange(e, key)}
+          onBlur={(e) => this.props.onBlur(e, key)}
+          onFocus={(e) => this.props.onFocus(e, key)}
+          ref={(input) => {
             this.inputs[key] = input;
             this.props.refs(this.inputs);
           }}

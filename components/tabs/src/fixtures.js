@@ -94,7 +94,7 @@ class TableTabs extends Component {
           {arrTabularTabs.map(({ id, title }, index) => (
             <Tabs.Tab
               key={`${title}-tabHeader`}
-              onClick={event => this.handleClick({ event, index })}
+              onClick={(event) => this.handleClick({ event, index })}
               href={`#${id}`}
               selected={tabIndex === index}
             >
@@ -106,9 +106,9 @@ class TableTabs extends Component {
           <Tabs.Panel selected={tabIndex === index} key={`${title}-tabPanel`} id={id}>
             <H2>{title}</H2>
             <Table head={tableHead}>
-              {[['David Francis', 'Paul Farmer', 'Rita Patel'], ...arr].reduce(flip2dArray, []).map(innerArr => (
+              {[['David Francis', 'Paul Farmer', 'Rita Patel'], ...arr].reduce(flip2dArray, []).map((innerArr) => (
                 <Table.Row key={`${innerArr.join()}-col`}>
-                  {innerArr.map(elem => (
+                  {innerArr.map((elem) => (
                     <Table.Cell key={`${elem}-row`}>{elem}</Table.Cell>
                   ))}
                 </Table.Row>
@@ -141,14 +141,14 @@ class SimpleTabs extends Component {
         <Tabs.Title>Contents</Tabs.Title>
         <Tabs.List>
           <Tabs.Tab
-            onClick={event => this.handleClick({ event, index: 0 })}
+            onClick={(event) => this.handleClick({ event, index: 0 })}
             selected={tabIndex === 0}
             href="#first-panel"
           >
             Title 1
           </Tabs.Tab>
           <Tabs.Tab
-            onClick={event => this.handleClick({ event, index: 1 })}
+            onClick={(event) => this.handleClick({ event, index: 1 })}
             selected={tabIndex === 1}
             href="#second-panel"
           >
@@ -201,7 +201,7 @@ class SimpleMapTabs extends Component {
           {arrSimpleMapped.map(({ contentListItem, id }, index) => (
             <Tabs.Tab
               key={`${contentListItem}-simpleMappedListItem`}
-              onClick={event => this.handleClick({ event, index })}
+              onClick={(event) => this.handleClick({ event, index })}
               selected={tabIndex === index}
               href={`#${id}`}
             >
@@ -257,7 +257,7 @@ class ProposedClassPropertiesPlugin extends Component {
           {arrProposedBabel.map(({ contentListItem, id }, index) => (
             <Tabs.Tab
               key={`${contentListItem}-babelListItem`}
-              onClick={event => this.handleClick({ event, index })}
+              onClick={(event) => this.handleClick({ event, index })}
               selected={tabIndex === index}
               href={`#${id}`}
             >
@@ -280,7 +280,7 @@ class ProposedClassPropertiesPlugin extends Component {
 const HooksExample = ({ defaultIndex }) => {
   const [tabIndex, setHooksTabIndex] = React.useState(defaultIndex);
 
-  const handleTabChange = newTabIndex => setHooksTabIndex(newTabIndex);
+  const handleTabChange = (newTabIndex) => setHooksTabIndex(newTabIndex);
 
   function hooksHandleClick({ event: e, index }) {
     /* eslint-disable-next-line no-undef */
@@ -307,7 +307,7 @@ const HooksExample = ({ defaultIndex }) => {
         ].map(({ content, href }, index) => (
           <Tabs.Tab
             key={href}
-            onClick={event => hooksHandleClick({ event, index })}
+            onClick={(event) => hooksHandleClick({ event, index })}
             selected={tabIndex === index}
             href={href}
           >

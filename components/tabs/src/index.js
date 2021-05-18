@@ -144,7 +144,7 @@ const TabsContainer = styled('div')(
  *
  */
 
-const Tabs = props => <TabsContainer {...props} />;
+const Tabs = (props) => <TabsContainer {...props} />;
 
 Tabs.propTypes = {
   /** child components that will appear in the Tabs section */

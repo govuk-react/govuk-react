@@ -41,7 +41,7 @@ const InsetText = styled('div')(
  * - https://design-system.service.gov.uk/components/inset-text/
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/inset-text/_inset-text.scss
  */
-const DocumentedInsetText = props => <InsetText {...props} />;
+const DocumentedInsetText = (props) => <InsetText {...props} />;
 
 DocumentedInsetText.propTypes = {
   children: PropTypes.node.isRequired,

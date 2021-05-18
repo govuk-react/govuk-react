@@ -42,7 +42,7 @@ const Tag = styled('strong')(
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/tag/_tag.scss
  *
  */
-const DocumentedTag = props => <Tag {...props} />;
+const DocumentedTag = (props) => <Tag {...props} />;
 
 DocumentedTag.propTypes = {
   inactive: PropTypes.bool,

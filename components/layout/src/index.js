@@ -45,7 +45,7 @@ const StyledLayout = styled('div')({
  * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
  *
  */
-const Layout = props => <StyledLayout {...props} />;
+const Layout = (props) => <StyledLayout {...props} />;
 
 Layout.propTypes = {
   /** GridRow and GridCol children nodes */

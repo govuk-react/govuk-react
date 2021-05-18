@@ -36,7 +36,7 @@ const ListItem = styled('li')(
  */
 
 // Do the react-docgen dance
-const DocumentedComponent = props => <ListItem {...props} />;
+const DocumentedComponent = (props) => <ListItem {...props} />;
 
 DocumentedComponent.propTypes = {
   /** List item content */

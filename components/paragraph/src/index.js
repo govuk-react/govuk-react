@@ -121,7 +121,7 @@ Paragraph.propTypes = {
 Paragraph.defaultProps = {
   children: '',
   supportingText: false,
-  linkRenderer: props => <Link {...props} />,
+  linkRenderer: (props) => <Link {...props} />,
 };
 
 export default Paragraph;

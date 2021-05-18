@@ -35,7 +35,7 @@ const StyledColumn = styled('div')(
     paddingRight: GUTTER_HALF,
     paddingLeft: GUTTER_HALF,
   },
-  props => {
+  (props) => {
     // if setWidth is set, then columnOneQuarter etc props will be ignored
     let widthStyle = widthFromProps(props);
 
@@ -130,7 +130,7 @@ const StyledColumn = styled('div')(
  * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
  *
  */
-const GridCol = props => <StyledColumn {...props} />;
+const GridCol = (props) => <StyledColumn {...props} />;
 
 GridCol.propTypes = {
   /** GridCol content */

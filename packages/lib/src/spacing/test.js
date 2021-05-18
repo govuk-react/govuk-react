@@ -5,13 +5,13 @@ import * as spacing from '.';
 describe('spacing lib', () => {
   describe('simple', () => {
     it('returns spacing values from the spacing scale', () => {
-      Object.keys(SPACING_POINTS).forEach(key => {
+      Object.keys(SPACING_POINTS).forEach((key) => {
         expect(spacing.simple(key)).toEqual(SPACING_POINTS[key]);
       });
     });
 
     it('returns negative spacing values from the spacing scale', () => {
-      Object.keys(SPACING_POINTS).forEach(key => {
+      Object.keys(SPACING_POINTS).forEach((key) => {
         // skip zero, as -0 !== 0 in JS
         if (`${key}` !== '0') {
           expect(spacing.simple(-key)).toEqual(-SPACING_POINTS[key]);
@@ -31,7 +31,7 @@ describe('spacing lib', () => {
 
   describe('responsive', () => {
     it('returns spacing styles for given sizes on the spacing scale', () => {
-      SPACING_MAP_INDEX.forEach(size => {
+      SPACING_MAP_INDEX.forEach((size) => {
         const style = spacing.responsive({ size, property: 'test' });
 
         expect(style).toEqual(expect.objectContaining({ test: SPACING_MAP[size].mobile }));
@@ -40,7 +40,7 @@ describe('spacing lib', () => {
     });
 
     it('returns negative spacing styles for given sizes on the spacing scale', () => {
-      SPACING_MAP_INDEX.forEach(size => {
+      SPACING_MAP_INDEX.forEach((size) => {
         // skip zero, as -0 !== 0 in JS
         if (size !== 0) {
           const style = spacing.responsive({ size: -size, property: 'test' });
@@ -127,13 +127,13 @@ describe('spacing lib', () => {
 
   describe('responsiveMargin', () => {
     it('returns margin styles for given sizes on the spacing scale', () => {
-      SPACING_MAP_INDEX.forEach(size => {
+      SPACING_MAP_INDEX.forEach((size) => {
         expect(spacing.responsiveMargin({ size })).toEqual(spacing.responsive({ size, property: 'margin' }));
       });
     });
 
     it('returns margin styles for given sizes on the spacing scale using simple numeric value', () => {
-      SPACING_MAP_INDEX.forEach(size => {
+      SPACING_MAP_INDEX.forEach((size) => {
         expect(spacing.responsiveMargin(size)).toEqual(spacing.responsive({ size, property: 'margin' }));
       });
     });
@@ -141,13 +141,13 @@ describe('spacing lib', () => {
 
   describe('responsivePadding', () => {
     it('returns padding styles for given sizes on the spacing scale', () => {
-      SPACING_MAP_INDEX.forEach(size => {
+      SPACING_MAP_INDEX.forEach((size) => {
         expect(spacing.responsivePadding({ size })).toEqual(spacing.responsive({ size, property: 'padding' }));
       });
     });
 
     it('returns padding styles for given sizes on the spacing scale using simple numeric value', () => {
-      SPACING_MAP_INDEX.forEach(size => {
+      SPACING_MAP_INDEX.forEach((size) => {
         expect(spacing.responsivePadding(size)).toEqual(spacing.responsive({ size, property: 'padding' }));
       });
     });
@@ -283,7 +283,7 @@ describe('spacing lib', () => {
     it('accepts a setWidth prop', () => {
       const widthFunc = spacing.withWidth();
 
-      ['95%', '200px'].forEach(setWidth => {
+      ['95%', '200px'].forEach((setWidth) => {
         const widthStyle = widthFunc({ setWidth });
 
         expect(widthStyle).toEqual(
@@ -316,7 +316,7 @@ describe('spacing lib', () => {
         })
       );
 
-      ['95%', '200px'].forEach(setWidth => {
+      ['95%', '200px'].forEach((setWidth) => {
         const widthStyle = widthFunc({ setWidth });
 
         expect(widthStyle).toEqual(
@@ -342,7 +342,7 @@ describe('spacing lib', () => {
     it('accepts a noDefault config which removes default 100% width', () => {
       const widthFunc = spacing.withWidth({ noDefault: true });
 
-      ['95%', '200px'].forEach(setWidth => {
+      ['95%', '200px'].forEach((setWidth) => {
         const widthStyle = widthFunc({ setWidth });
 
         expect(widthStyle).not.toEqual(
@@ -352,7 +352,7 @@ describe('spacing lib', () => {
         );
       });
 
-      Object.values(WIDTHS).forEach(setWidth => {
+      Object.values(WIDTHS).forEach((setWidth) => {
         const widthStyle = widthFunc({ setWidth });
 
         expect(widthStyle).not.toEqual(

@@ -12,7 +12,7 @@ const StyledFooterLink = styled(LinkDocumented)({
   },
 });
 
-const FooterLink = props => {
+const FooterLink = (props) => {
   return <StyledFooterLink {...props} />;
 };
 

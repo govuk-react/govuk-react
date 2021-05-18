@@ -44,11 +44,11 @@ export function responsive({ size, property, direction, adjustment = 0 } = {}) {
   if (Array.isArray(direction)) {
     return Object.assign(
       {},
-      ...direction.map(dir => styleForDirection(scale.mobile * polarity + adjustment, property, dir)),
+      ...direction.map((dir) => styleForDirection(scale.mobile * polarity + adjustment, property, dir)),
       {
         [MEDIA_QUERIES.TABLET]: Object.assign(
           {},
-          ...direction.map(dir => styleForDirection(scale.tablet * polarity + adjustment, property, dir))
+          ...direction.map((dir) => styleForDirection(scale.tablet * polarity + adjustment, property, dir))
         ),
       }
     );
@@ -107,7 +107,7 @@ export function withWhiteSpace(config = {}) {
 
     if (margin !== undefined) {
       if (Array.isArray(margin)) {
-        styles.push(margin.map(val => responsiveMargin(val)));
+        styles.push(margin.map((val) => responsiveMargin(val)));
       } else {
         styles.push(responsiveMargin(margin));
       }
@@ -115,7 +115,7 @@ export function withWhiteSpace(config = {}) {
 
     if (padding !== undefined) {
       if (Array.isArray(padding)) {
-        styles.push(padding.map(val => responsivePadding(val)));
+        styles.push(padding.map((val) => responsivePadding(val)));
       } else {
         styles.push(responsivePadding(padding));
       }

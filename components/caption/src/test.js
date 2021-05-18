@@ -20,7 +20,7 @@ describe('Caption', () => {
 
   it('allows custom string-based font size without crashing', () => {
     const sizes = ['XL', 'XLARGE', 'L', 'LARGE', 'M', 'MEDIUM'];
-    sizes.forEach(size => {
+    sizes.forEach((size) => {
       expect(mount(<Caption size={size}>Tests</Caption>).exists()).toBeTruthy();
     });
   });

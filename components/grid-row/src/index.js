@@ -42,7 +42,7 @@ const StyledRow = styled('div')(
  * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
  *
  */
-const GridRow = props => <StyledRow {...props} />;
+const GridRow = (props) => <StyledRow {...props} />;
 
 GridRow.propTypes = {
   /**

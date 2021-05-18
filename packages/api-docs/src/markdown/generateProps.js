@@ -9,10 +9,12 @@ export default function generateProps(props) {
     '### Properties\n' +
     'Prop | Required | Default | Type | Description\n' +
     ':--- | :------- | :------ | :--- | :----------\n' +
-    `${props &&
+    `${
+      props &&
       Object.keys(props)
         .sort()
-        .map(propName => generateProp(propName, props[propName]))
-        .join('\n')}\n\n`
+        .map((propName) => generateProp(propName, props[propName]))
+        .join('\n')
+    }\n\n`
   );
 }

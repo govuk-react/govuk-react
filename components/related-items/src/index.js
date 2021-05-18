@@ -56,7 +56,7 @@ const StyledRelatedItems = styled('div')(
  * - Replace CSS selectors with imported components
  *
  */
-const RelatedItems = props => <StyledRelatedItems {...props} />;
+const RelatedItems = (props) => <StyledRelatedItems {...props} />;
 
 RelatedItems.propTypes = {
   /** Related items content */

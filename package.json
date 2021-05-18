@@ -85,7 +85,7 @@
     "lerna": "2.11",
     "lerna-alias": "^3.0.2",
     "mkdirp-promise": "^5.0.1",
-    "prettier": "^1.16.4",
+    "prettier": "^2.3.0",
     "prop-types": "^15.6.0",
     "react": "^16.8.4",
     "react-docgen": "^3.0.0",

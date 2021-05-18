@@ -42,7 +42,7 @@ const FormGroup = styled('div')(
  * ### References
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_form-group.scss
  */
-const FormGroupDocumented = props => <FormGroup {...props} />;
+const FormGroupDocumented = (props) => <FormGroup {...props} />;
 
 FormGroupDocumented.propTypes = {
   children: PropTypes.node.isRequired,

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { link } from '@govuk-react/lib';
 
 const Link = styled('a').withConfig({
-  shouldForwardProp: prop => !['noVisitedState', 'textColour', 'muted'].includes(prop),
+  shouldForwardProp: (prop) => !['noVisitedState', 'textColour', 'muted'].includes(prop),
 })(
   link.common(),
   link.styleDefault,
@@ -37,7 +37,7 @@ const Link = styled('a').withConfig({
  * - https://design-system.service.gov.uk/styles/typography/#links
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/core/_links.scss
  */
-const LinkDocumented = props => <Link {...props} />;
+const LinkDocumented = (props) => <Link {...props} />;
 
 LinkDocumented.propTypes = {
   /** link contents */

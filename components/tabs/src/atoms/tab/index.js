@@ -65,7 +65,7 @@ const StyledHyperLink = styled('a')(
   })
 );
 
-const Tab = props => (
+const Tab = (props) => (
   <StyledListItem>
     <StyledHyperLink {...props} />
   </StyledListItem>
