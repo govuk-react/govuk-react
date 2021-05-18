@@ -92,7 +92,7 @@
     "react-dom": "^16.8.4",
     "react-final-form": "^4.1.0",
     "react-markdown": "^4.0.6",
-    "react-router-dom": "^5.0.0",
+    "react-router-dom": "^5.2.0",
     "react-use-media": "^0.3.0",
     "rimraf": "^2.6.2",
     "sinon": "^10.0.0",

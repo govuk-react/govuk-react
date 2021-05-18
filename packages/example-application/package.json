@@ -1,0 +1,27 @@
+{
+  "name": "@govuk-react/example-application",
+  "version": "0.8.0",
+  "dependencies": {
+    "govuk-react": "0.8.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.2.0"
+  },
+  "scripts": {
+    "build": "yarn build:lib && yarn build:es",
+    "build:lib": "rimraf lib && babel src -d lib --source-maps --config-file ../../babel.config.js",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps --config-file ../../babel.config.js"
+  },
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "author": "Alasdair McLeay",
+  "license": "MIT",
+  "homepage": "https://github.com/govuk-react/govuk-react#readme",
+  "description": "An example application using govuk-react",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}
