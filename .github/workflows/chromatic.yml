@@ -1,5 +1,13 @@
 name: Chromatic
-on: push
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
 jobs:
   chromatic-deployment:
     runs-on: ubuntu-latest
@@ -24,6 +32,6 @@ jobs:
         uses: chromaui/action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          projectToken: 06clhw0peccl
+          projectToken: disabled
           storybookBuildDir: packages/storybook/storybook-static
   
