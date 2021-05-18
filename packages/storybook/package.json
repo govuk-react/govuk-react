@@ -67,7 +67,7 @@
   "devDependencies": {
     "babel-loader": "^8.0.4",
     "babel-plugin-styled-components": "^1.12.0",
-    "storybook-chromatic": "^1.3.0"
+    "storybook-chromatic": "^4.0.2"
   },
   "scripts": {
     "start": "start-storybook -p 9009",
