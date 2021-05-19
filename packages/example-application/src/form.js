@@ -39,10 +39,16 @@ export default () => {
       )}
       {isSubmitted && (
         <>
-          <GovUK.BackLink onClick={() => setIsSubmitted(false)}>Back</GovUK.BackLink>
+          <GovUK.BackLink as={Link} to="/form" onClick={() => setIsSubmitted(false)}>Back</GovUK.BackLink>
           <GovUK.Panel title="Application complete">
             Your name is <strong>{firstName}</strong>
           </GovUK.Panel>
+          <GovUK.LeadParagraph>
+            Enim pariatur pariatur commodo incididunt ad nulla ex eu sunt ut ex id veniam veniam.
+          </GovUK.LeadParagraph>
+          <GovUK.Paragraph>
+            Consequat adipisicing aliquip eiusmod nostrud et proident non id consequat aliquip eiusmod aliquip.
+          </GovUK.Paragraph>
         </>
       )}
     </>

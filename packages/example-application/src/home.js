@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 export default () => (
   <>
-    <GovUK.LeadParagraph>Welcome to the govuk-react example application.</GovUK.LeadParagraph>
+    <GovUK.H2>Welcome to the govuk-react example application.</GovUK.H2>
     <GovUK.Paragraph>Click Start to continue.</GovUK.Paragraph>
-    <GovUK.Button as={Link} to="form">
-      Start
+    <GovUK.Button start as={Link} to="form">
+      Start now
     </GovUK.Button>
   </>
 );

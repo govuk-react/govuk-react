@@ -2,10 +2,9 @@ import React from 'react';
 import * as GovUK from 'govuk-react';
 import { MemoryRouter as Router, Switch, Route } from 'react-router';
 
+import { createGlobalStyle } from 'styled-components';
 import Home from './home';
 import Form from './form';
-
-import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -18,21 +17,27 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const ExampleApplication = () => (
-  <GovUK.Page main={(props) => <GovUK.Page.Main padding={{ size: 1 }} {...props} />}>
+  <>
     <GlobalStyle />
-
-    <GovUK.PhaseBanner level="alpha">This part of GOV.UK is being rebuilt</GovUK.PhaseBanner>
-    <Router>
-      <Switch>
-        <Route path="/form">
-          <Form />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
-  </GovUK.Page>
+    <GovUK.TopNav />
+    <GovUK.Page.WidthContainer
+      beforeChildren={<GovUK.PhaseBanner level="alpha">This part of GOV.UK is being rebuilt</GovUK.PhaseBanner>}
+    >
+      <GovUK.Page.Main>
+        <Router>
+          <Switch>
+            <Route path="/form">
+              <Form />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </Router>
+      </GovUK.Page.Main>
+    </GovUK.Page.WidthContainer>
+    <GovUK.Footer />
+  </>
 );
 
 export default ExampleApplication;
