@@ -18,7 +18,7 @@ export default () => {
         setIsSubmitting(false);
       }, 1000);
     }
-  });
+  }, [isSubmitting, firstName]);
   return (
     <>
       {!isSubmitted && (
@@ -39,7 +39,9 @@ export default () => {
       )}
       {isSubmitted && (
         <>
-          <GovUK.BackLink as={Link} to="/form" onClick={() => setIsSubmitted(false)}>Back</GovUK.BackLink>
+          <GovUK.BackLink as={Link} to="/form" onClick={() => setIsSubmitted(false)}>
+            Back
+          </GovUK.BackLink>
           <GovUK.Panel title="Application complete">
             Your name is <strong>{firstName}</strong>
           </GovUK.Panel>
