@@ -19,6 +19,7 @@ export default () => {
       }, 1000);
     }
   }, [isSubmitting, firstName]);
+
   return (
     <>
       {!isSubmitted && (
