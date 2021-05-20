@@ -11,14 +11,18 @@
 
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
-const injectDevServer = require("@cypress/react/plugins/react-scripts")
 
 /**
  * @type {Cypress.PluginConfig}
  */
 module.exports = (on, config) => {
   if (config.testingType === 'component') {
-    require('@cypress/react/plugins/babel')(on, config)
+    require('@cypress/react/plugins/babel')(on, {
+      ...config,
+      babelLoaderOptions: {
+        rootMode: 'upward',
+      },
+    });
   }
-  return config
-}
+  return config;
+};
