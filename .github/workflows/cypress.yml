@@ -1,0 +1,12 @@
+name: Cypress
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: yarn
+      - uses: cypress-io/github-action@v2
+        with:
+          project: ./packages/example-application
+          command: yarn cypress run-ct
