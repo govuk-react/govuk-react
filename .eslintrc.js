@@ -3,7 +3,7 @@ const { dependencies: gukd } = require('./packages/govuk-react/package.json');
 
 module.exports = {
   "parser": "babel-eslint",
-  "extends": ["airbnb", "sonar", "prettier", "prettier/react", "react-app", "plugin:prettier/recommended", "plugin:cypress/recommended"
+  "extends": ["airbnb", "sonar", "prettier", "react-app", "plugin:prettier/recommended", "plugin:cypress/recommended"
 ],
   "env": {
     "es6": true
