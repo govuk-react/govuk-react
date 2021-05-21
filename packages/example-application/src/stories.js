@@ -5,4 +5,5 @@ const stories = storiesOf('Example Application', module);
 
 stories.add('Example Application', ExampleApplication, {
   layout: 'fullscreen',
+  chromatic: { disableSnapshot: false },
 });
