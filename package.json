@@ -73,6 +73,7 @@
     "eslint-config-prettier": "^6.15.0",
     "eslint-config-react-app": "^3.0.8",
     "eslint-config-sonar": "0.0.7",
+    "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-flowtype": "^3.4.2",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
