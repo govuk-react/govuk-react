@@ -11,13 +11,16 @@ const stories = storiesOf('Form/Date field', module);
 const examples = storiesOf('Form/Date field/Examples', module);
 
 class ManagedDateField extends React.Component {
-  state = {
-    value: {
-      day: 0,
-      month: 1,
-      year: 2,
-    },
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: {
+        day: 0,
+        month: 1,
+        year: 2,
+      },
+    };
+  }
 
   render() {
     const input = {

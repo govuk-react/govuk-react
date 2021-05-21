@@ -54,9 +54,10 @@ export function responsive({ size, property, direction, adjustment = 0 } = {}) {
     );
   }
 
-  return Object.assign({}, styleForDirection(scale.mobile * polarity + adjustment, property, direction), {
+  return {
+    ...styleForDirection(scale.mobile * polarity + adjustment, property, direction),
     [MEDIA_QUERIES.TABLET]: styleForDirection(scale.tablet * polarity + adjustment, property, direction),
-  });
+  };
 }
 
 export function responsiveMargin(value) {

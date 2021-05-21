@@ -114,10 +114,10 @@ const Footer = ({ children, container: Container, copyright, meta, ...props }) =
   <FooterContainer role="contentinfo" {...props}>
     <Container>
       {children && (
-        <React.Fragment>
+        <>
           {children}
           <SectionBreak />
-        </React.Fragment>
+        </>
       )}
       <MetaContainer copyright={copyright}>{meta}</MetaContainer>
     </Container>

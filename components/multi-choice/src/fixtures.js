@@ -6,14 +6,14 @@ import MultiChoice from '.';
 
 const metaData = { touched: true, error: 'Example error' };
 const children = (
-  <Fragment>
+  <>
     <Radio name="group1" inline>
       Yes
     </Radio>
     <Radio name="group1" inline>
       No
     </Radio>
-  </Fragment>
+  </>
 );
 
 const MultiChoiceWithKnobs = () => <MultiChoice label={text('Label', 'Example label')}>{children}</MultiChoice>;

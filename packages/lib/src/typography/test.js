@@ -78,11 +78,7 @@ describe('typography lib', () => {
     it('defaults to standard font, regular weight', () => {
       const style = typography.font();
 
-      expect(style).toEqual(
-        Object.assign({}, typography.common(), {
-          fontWeight: FONT_WEIGHTS.regular,
-        })
-      );
+      expect(style).toEqual({ ...typography.common(), fontWeight: FONT_WEIGHTS.regular });
     });
 
     it('can accept tabular flag to pick tabular font', () => {

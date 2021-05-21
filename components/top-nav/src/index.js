@@ -131,9 +131,12 @@ const Input = styled('input')({
  * - TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
  */
 class TopNav extends Component {
-  state = {
-    navigationOpen: this.props.defaultOpen,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      navigationOpen: this.props.defaultOpen,
+    };
+  }
 
   toggleNavigationOpen = () => {
     this.setState((prevState) => ({
@@ -145,7 +148,7 @@ class TopNav extends Component {
     const { bgColor, color, company, serviceTitle, search, children, ...props } = this.props;
 
     return (
-      <React.Fragment>
+      <>
         <TopNavWrapper bgColor={bgColor} color={color} {...props}>
           <TopNavInner>
             <LogoSearchWrapper>
@@ -155,7 +158,7 @@ class TopNav extends Component {
             <RightHandSide>
               <ServiceTitleWrapper>{serviceTitle}</ServiceTitleWrapper>
               {children && (
-                <React.Fragment>
+                <>
                   <MenuButtonWrapper>
                     <MenuButton open={this.state.navigationOpen} />
                   </MenuButtonWrapper>
@@ -178,13 +181,13 @@ class TopNav extends Component {
                       <ListItem>{children}</ListItem>
                     )}
                   </UnorderedList>
-                </React.Fragment>
+                </>
               )}
             </RightHandSide>
           </TopNavInner>
         </TopNavWrapper>
         <BottomNavWrapper />
-      </React.Fragment>
+      </>
     );
   }
 }

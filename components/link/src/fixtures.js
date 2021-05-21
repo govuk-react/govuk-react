@@ -5,7 +5,7 @@ import { BrowserRouter, Link as RLink, Route } from 'react-router-dom';
 
 import Link, { LinkDocumented } from '.';
 
-export default () => (
+const LinkExample = () => (
   // eslint-disable-next-line jsx-a11y/anchor-is-valid
   <LinkDocumented
     muted={boolean('muted', false)}
@@ -16,6 +16,7 @@ export default () => (
     {text('Link content', 'Link example')}
   </LinkDocumented>
 );
+export default LinkExample;
 
 export const LinkWithAllOptionsOn = () => (
   // eslint-disable-next-line jsx-a11y/anchor-is-valid

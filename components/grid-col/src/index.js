@@ -23,10 +23,7 @@ function setGrowShrink(style) {
   const hasAutoWidth = [undefined, 'auto'].includes(style.width);
 
   // No explicit width means auto, so grow/shrink should be set
-  return Object.assign({}, style, {
-    flexGrow: hasAutoWidth ? 1 : 0,
-    flexShrink: hasAutoWidth ? 1 : 0,
-  });
+  return { ...style, flexGrow: hasAutoWidth ? 1 : 0, flexShrink: hasAutoWidth ? 1 : 0 };
 }
 
 const StyledColumn = styled('div')(
@@ -71,7 +68,7 @@ const StyledColumn = styled('div')(
       desktopWidthStyle[MEDIA_QUERIES.DESKTOP] = setGrowShrink(desktopWidthStyle[MEDIA_QUERIES.DESKTOP]);
     }
 
-    return Object.assign({}, widthStyle, desktopWidthStyle);
+    return { ...widthStyle, ...desktopWidthStyle };
   }
 );
 

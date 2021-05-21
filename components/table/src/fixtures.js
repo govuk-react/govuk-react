@@ -27,7 +27,7 @@ const TableWithCaption = () => (
   <Table
     caption="Dates and amounts"
     body={
-      <React.Fragment>
+      <>
         <Table.Row>
           <Table.CellHeader>First 6 weeks</Table.CellHeader>
           <Table.Cell>£109.80 per week</Table.Cell>
@@ -40,7 +40,7 @@ const TableWithCaption = () => (
           <Table.CellHeader>Total estimated pay</Table.CellHeader>
           <Table.Cell>£4,282.20</Table.Cell>
         </Table.Row>
-      </React.Fragment>
+      </>
     }
   />
 );

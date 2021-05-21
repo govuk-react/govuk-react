@@ -61,7 +61,7 @@ describe('GridCol', () => {
 
   it('renders custom widths matching snapshot', () => {
     const example = (
-      <Fragment>
+      <>
         <GridCol setWidth="one-quarter">example</GridCol>
         <GridCol setWidth="three-quarters">example</GridCol>
         <GridCol setWidth="90%">example</GridCol>
@@ -69,7 +69,7 @@ describe('GridCol', () => {
           example
         </GridCol>
         <GridCol setDesktopWidth="one-third">example</GridCol>
-      </Fragment>
+      </>
     );
     const wrapper = mount(example);
 

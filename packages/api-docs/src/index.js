@@ -82,7 +82,7 @@ function dequote(string) {
   return string.replace(/^'(.*)'$/, '$1');
 }
 
-export default async function (relDir, outputMd) {
+async function apiDocs(relDir, outputMd) {
   const relDirNoQuotation = dequote(relDir);
   const outputMdNoQuotation = dequote(outputMd);
 
@@ -90,3 +90,4 @@ export default async function (relDir, outputMd) {
   const md = await generateApiForFiles(files);
   await promisify(fs.writeFile)(outputMdNoQuotation, md);
 }
+export default apiDocs;

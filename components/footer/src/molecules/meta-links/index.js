@@ -8,7 +8,7 @@ import ListItem from '../../atoms/list-item';
 
 const MetaLinks = ({ children, heading }) => {
   return (
-    <React.Fragment>
+    <>
       <VisuallyHidden>
         <H2>{heading}</H2>
       </VisuallyHidden>
@@ -27,7 +27,7 @@ const MetaLinks = ({ children, heading }) => {
           )}
         </UnorderedList>
       )}
-    </React.Fragment>
+    </>
   );
 };
 
