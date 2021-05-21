@@ -8,4 +8,5 @@ jobs:
       - run: yarn
       - uses: cypress-io/github-action@v2
         with:
-          command: cd packages/example-application && yarn cypress run-ct
+          working-directory: packages/example-application
+          command: cypress run-ct
