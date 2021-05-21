@@ -23,9 +23,12 @@ class ManagedDateField extends React.Component {
   }
 
   render() {
+    const { input: inputProp } = this.props;
+    const { value: valueState } = this.state;
+
     const input = {
-      ...this.props.input,
-      value: this.state.value,
+      ...inputProp,
+      value: valueState,
       onChange: (value) => {
         this.setState({
           value,

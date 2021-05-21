@@ -245,7 +245,8 @@ class ProposedClassPropertiesPlugin extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { tabIndex: this.props.defaultIndex };
+    const { defaultIndex } = this.props;
+    this.state = { tabIndex: defaultIndex };
   }
 
   render() {

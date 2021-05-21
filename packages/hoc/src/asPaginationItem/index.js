@@ -91,15 +91,15 @@ const PageTitle = styled('span')({
 });
 
 const asPaginationItem = (AnchorType) => {
-  const PaginationItem = (props) => (
-    <PaginationWrapper previousPage={props.previousPage} nextPage={props.nextPage}>
-      <AnchorType to={props.to} href={props.href} target={props.target}>
+  const PaginationItem = ({ previousPage, nextPage, to, href, target, children, pageTitle }) => (
+    <PaginationWrapper previousPage={previousPage} nextPage={nextPage}>
+      <AnchorType to={to} href={href} target={target}>
         <InnerWrap>
-          {props.previousPage && <PrevPageIcon />}
-          {props.children}
-          {props.nextPage && <NextPageIcon />}
+          {previousPage && <PrevPageIcon />}
+          {children}
+          {nextPage && <NextPageIcon />}
         </InnerWrap>
-        {props.pageTitle && <PageTitle>{props.pageTitle}</PageTitle>}
+        {pageTitle && <PageTitle>{pageTitle}</PageTitle>}
       </AnchorType>
     </PaginationWrapper>
   );

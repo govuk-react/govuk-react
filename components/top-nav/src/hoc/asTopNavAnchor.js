@@ -1,12 +1,8 @@
-import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import { WHITE, YELLOW } from 'govuk-colours';
 
 const asTopNavAnchor = (AnchorType) => {
-  const Anchor = (props) => <AnchorType {...props}>{props.children}</AnchorType>;
-
-  const StyledHoc = styled(Anchor)({
+  const StyledHoc = styled(AnchorType)({
     color: WHITE, // TODO: active state, LIGHT_BLUE
     textDecoration: 'none',
     textDecorationSkipInk: 'none',
@@ -20,10 +16,6 @@ const asTopNavAnchor = (AnchorType) => {
       outline: `3px solid ${YELLOW}`,
     },
   });
-
-  Anchor.propTypes = {
-    children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-  };
 
   return StyledHoc;
 };

@@ -11,9 +11,7 @@ module.exports = {
   "rules": {
     "prettier/prettier": ["error"],
     "react/jsx-filename-extension": 0,
-    "react/destructuring-assignment": 0,// disabled to enable upgrade to eslint-config-airbnb@17
     "react/jsx-props-no-spreading": 0,// disabled to enable upgrade to eslint-config-airbnb@18
-    "max-len": 0,// disabled to enable upgrade to eslint-config-airbnb@17
     "jsx-a11y/label-has-associated-control": 0,// disabled to enable upgrade to eslint-config-airbnb@17
     "jsx-a11y/label-has-for": 0,
     "filenames/match-exported": 0,

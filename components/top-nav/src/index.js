@@ -133,8 +133,9 @@ const Input = styled('input')({
 class TopNav extends Component {
   constructor(props) {
     super(props);
+    const { defaultOpen } = this.props;
     this.state = {
-      navigationOpen: this.props.defaultOpen,
+      navigationOpen: defaultOpen,
     };
   }
 
@@ -146,7 +147,7 @@ class TopNav extends Component {
 
   render() {
     const { bgColor, color, company, serviceTitle, search, children, ...props } = this.props;
-
+    const { navigationOpen } = this.state;
     return (
       <>
         <TopNavWrapper bgColor={bgColor} color={color} {...props}>
@@ -160,16 +161,16 @@ class TopNav extends Component {
               {children && (
                 <>
                   <MenuButtonWrapper>
-                    <MenuButton open={this.state.navigationOpen} />
+                    <MenuButton open={navigationOpen} />
                   </MenuButtonWrapper>
                   {/* Referenced in MenuButton */}
                   <Input
                     id="govuk-react-menu-button"
                     type="checkbox"
-                    checked={this.state.navigationOpen}
+                    checked={navigationOpen}
                     onChange={this.toggleNavigationOpen}
                   />
-                  <UnorderedList id="govuk-react-menu" serviceTitle={serviceTitle} open={this.state.navigationOpen}>
+                  <UnorderedList id="govuk-react-menu" serviceTitle={serviceTitle} open={navigationOpen}>
                     {/* TODO: #205 use context api and/or render props here for `active` */}
                     {children.length && children.map ? (
                       children.map((child, i) =>
