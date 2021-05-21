@@ -9,4 +9,4 @@ jobs:
       - uses: cypress-io/github-action@v2
         with:
           working-directory: packages/example-application
-          command: cypress run-ct
+          command: yarn cypress run-ct
