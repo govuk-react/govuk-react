@@ -26,6 +26,7 @@ class Input extends React.Component {
   inputs = {};
 
   renderInput(label, name, key, defaultValue, error) {
+    const { value, onChange, onBlur, onFocus, refs } = this.props;
     return (
       <StyledLabel year={key === 'year'}>
         <LabelText>{label}</LabelText>
@@ -33,13 +34,13 @@ class Input extends React.Component {
           name={name}
           error={error}
           defaultValue={defaultValue}
-          value={this.props.value ? this.props.value[key] : undefined}
-          onChange={(e) => this.props.onChange(e, key)}
-          onBlur={(e) => this.props.onBlur(e, key)}
-          onFocus={(e) => this.props.onFocus(e, key)}
+          value={value ? value[key] : undefined}
+          onChange={(e) => onChange(e, key)}
+          onBlur={(e) => onBlur(e, key)}
+          onFocus={(e) => onFocus(e, key)}
           ref={(input) => {
             this.inputs[key] = input;
-            this.props.refs(this.inputs);
+            refs(this.inputs);
           }}
         />
       </StyledLabel>

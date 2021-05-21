@@ -24,7 +24,7 @@ const onHandleErrorClick = (targetName) => {
   document.getElementsByName(targetName)[0].scrollIntoView();
 };
 
-export default () => (
+const ErrorSummaryExample = () => (
   <div>
     <ErrorSummary
       heading={text('heading', heading)}
@@ -42,3 +42,5 @@ export default () => (
     <TextArea name="description">Description of what you saw</TextArea>
   </div>
 );
+
+export default ErrorSummaryExample;

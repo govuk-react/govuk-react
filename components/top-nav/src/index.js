@@ -131,9 +131,13 @@ const Input = styled('input')({
  * - TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
  */
 class TopNav extends Component {
-  state = {
-    navigationOpen: this.props.defaultOpen,
-  };
+  constructor(props) {
+    super(props);
+    const { defaultOpen } = this.props;
+    this.state = {
+      navigationOpen: defaultOpen,
+    };
+  }
 
   toggleNavigationOpen = () => {
     this.setState((prevState) => ({
@@ -143,9 +147,9 @@ class TopNav extends Component {
 
   render() {
     const { bgColor, color, company, serviceTitle, search, children, ...props } = this.props;
-
+    const { navigationOpen } = this.state;
     return (
-      <React.Fragment>
+      <>
         <TopNavWrapper bgColor={bgColor} color={color} {...props}>
           <TopNavInner>
             <LogoSearchWrapper>
@@ -155,18 +159,18 @@ class TopNav extends Component {
             <RightHandSide>
               <ServiceTitleWrapper>{serviceTitle}</ServiceTitleWrapper>
               {children && (
-                <React.Fragment>
+                <>
                   <MenuButtonWrapper>
-                    <MenuButton open={this.state.navigationOpen} />
+                    <MenuButton open={navigationOpen} />
                   </MenuButtonWrapper>
                   {/* Referenced in MenuButton */}
                   <Input
                     id="govuk-react-menu-button"
                     type="checkbox"
-                    checked={this.state.navigationOpen}
+                    checked={navigationOpen}
                     onChange={this.toggleNavigationOpen}
                   />
-                  <UnorderedList id="govuk-react-menu" serviceTitle={serviceTitle} open={this.state.navigationOpen}>
+                  <UnorderedList id="govuk-react-menu" serviceTitle={serviceTitle} open={navigationOpen}>
                     {/* TODO: #205 use context api and/or render props here for `active` */}
                     {children.length && children.map ? (
                       children.map((child, i) =>
@@ -178,13 +182,13 @@ class TopNav extends Component {
                       <ListItem>{children}</ListItem>
                     )}
                   </UnorderedList>
-                </React.Fragment>
+                </>
               )}
             </RightHandSide>
           </TopNavInner>
         </TopNavWrapper>
         <BottomNavWrapper />
-      </React.Fragment>
+      </>
     );
   }
 }

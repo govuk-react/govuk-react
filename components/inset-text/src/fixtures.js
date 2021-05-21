@@ -7,7 +7,8 @@ import InsetText, { DocumentedInsetText } from '.';
 export const testText =
   'It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.';
 
-export default () => <DocumentedInsetText>{text('children', testText)}</DocumentedInsetText>;
+const InsetTextExample = () => <DocumentedInsetText>{text('children', testText)}</DocumentedInsetText>;
+export default InsetTextExample;
 
 export const InsetTextWithParagraph = () => (
   <InsetText>

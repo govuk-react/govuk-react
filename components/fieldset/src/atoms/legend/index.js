@@ -30,11 +30,10 @@ const StyledLegend = styled('legend')(
       return undefined;
     }
 
-    return Object.assign(
-      {},
-      typography.font({ size: actualSize, weight: 'bold' }),
-      actualSize > 19 ? { marginBottom: SPACING_POINTS[3] } : undefined
-    );
+    return {
+      ...typography.font({ size: actualSize, weight: 'bold' }),
+      ...(actualSize > 19 ? { marginBottom: SPACING_POINTS[3] } : undefined),
+    };
   }
 );
 

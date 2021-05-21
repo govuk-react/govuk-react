@@ -190,17 +190,12 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                       <asNavLinkAnchor__StyledNavLinkAnchor
                         href="/nav-link"
                       >
-                        <Anchor
+                        <a
                           className="asTopNavAnchor__StyledHoc-sc-1pv1bh1-0 asNavLinkAnchor__StyledNavLinkAnchor-arj2tg-0 cTCrfq gUpMJj"
                           href="/nav-link"
                         >
-                          <a
-                            className="asTopNavAnchor__StyledHoc-sc-1pv1bh1-0 asNavLinkAnchor__StyledNavLinkAnchor-arj2tg-0 cTCrfq gUpMJj"
-                            href="/nav-link"
-                          >
-                            Nav link
-                          </a>
-                        </Anchor>
+                          Nav link
+                        </a>
                       </asNavLinkAnchor__StyledNavLinkAnchor>
                     </li>
                   </list-item__Li>
@@ -414,17 +409,12 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                       <asTopNavAnchor__StyledHoc
                         href="/section"
                       >
-                        <Anchor
+                        <a
                           className="asTopNavAnchor__StyledHoc-sc-1pv1bh1-0 cTCrfq"
                           href="/section"
                         >
-                          <a
-                            className="asTopNavAnchor__StyledHoc-sc-1pv1bh1-0 cTCrfq"
-                            href="/section"
-                          >
-                            Section 1
-                          </a>
-                        </Anchor>
+                          Section 1
+                        </a>
                       </asTopNavAnchor__StyledHoc>
                     </li>
                   </list-item__Li>
@@ -437,17 +427,12 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                       <asTopNavAnchor__StyledHoc
                         href="/section"
                       >
-                        <Anchor
+                        <a
                           className="asTopNavAnchor__StyledHoc-sc-1pv1bh1-0 cTCrfq"
                           href="/section"
                         >
-                          <a
-                            className="asTopNavAnchor__StyledHoc-sc-1pv1bh1-0 cTCrfq"
-                            href="/section"
-                          >
-                            Section 1
-                          </a>
-                        </Anchor>
+                          Section 1
+                        </a>
                       </asTopNavAnchor__StyledHoc>
                     </li>
                   </list-item__Li>

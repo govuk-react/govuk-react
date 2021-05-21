@@ -171,7 +171,7 @@ exports[`Link basic view matches snapshot: plain link 1`] = `
   }
 }
 
-<_default>
+<LinkExample>
   <LinkDocumented
     href="#"
     muted={false}
@@ -192,5 +192,5 @@ exports[`Link basic view matches snapshot: plain link 1`] = `
       </a>
     </styled.a>
   </LinkDocumented>
-</_default>
+</LinkExample>
 `;

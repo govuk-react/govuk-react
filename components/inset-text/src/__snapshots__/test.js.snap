@@ -259,7 +259,7 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
   }
 }
 
-<_default>
+<InsetTextExample>
   <DocumentedInsetText>
     <src__InsetText>
       <div
@@ -269,5 +269,5 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
       </div>
     </src__InsetText>
   </DocumentedInsetText>
-</_default>
+</InsetTextExample>
 `;

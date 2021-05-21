@@ -2,7 +2,7 @@ import React from 'react';
 import * as GovUK from 'govuk-react';
 import { Link } from 'react-router-dom';
 
-export default () => (
+const Home = () => (
   <>
     <GovUK.H2>Welcome to the govuk-react example application.</GovUK.H2>
     <GovUK.Paragraph>Click Start to continue.</GovUK.Paragraph>
@@ -11,3 +11,5 @@ export default () => (
     </GovUK.Button>
   </>
 );
+
+export default Home;

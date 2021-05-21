@@ -4,24 +4,21 @@
 
 function visuallyHidden({ important: isImportant = true, focusable: isFocusable = false } = {}) {
   const important = isImportant ? ' !important' : '';
-  return Object.assign(
-    {},
-    {
-      position: `absolute${important}`,
+  return {
+    position: `absolute${important}`,
 
-      width: `1px${important}`,
-      height: `1px${important}`,
-      margin: `0${important}`,
+    width: `1px${important}`,
+    height: `1px${important}`,
+    margin: `0${important}`,
 
-      overflow: `hidden${important}`,
-      clip: `rect(0 0 0 0)${important}`,
-      clipPath: `inset(50%)${important}`,
+    overflow: `hidden${important}`,
+    clip: `rect(0 0 0 0)${important}`,
+    clipPath: `inset(50%)${important}`,
 
-      border: `0${important}`,
+    border: `0${important}`,
 
-      whiteSpace: `nowrap${important}`,
-    },
-    isFocusable
+    whiteSpace: `nowrap${important}`,
+    ...(isFocusable
       ? {
           '&:active,&:focus': {
             position: `static${important}`,
@@ -39,8 +36,8 @@ function visuallyHidden({ important: isImportant = true, focusable: isFocusable 
         }
       : {
           padding: `0${important}`,
-        }
-  );
+        }),
+  };
 }
 
 function focusable({ important = true } = {}) {

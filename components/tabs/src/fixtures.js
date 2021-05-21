@@ -1,3 +1,4 @@
+/* eslint-disable max-classes-per-file */
 import React, { Component, useLayoutEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { BREAKPOINTS } from '@govuk-react/constants';
@@ -238,15 +239,15 @@ const arrProposedBabel = [
 
 /* eslint-disable-next-line react/no-multi-comp */
 class ProposedClassPropertiesPlugin extends Component {
-  state = { tabIndex: this.props.defaultIndex };
-
   setTabIndex = setTabIndex;
 
   handleClick = handleClick;
 
-  static propTypes = sharedPropTypes;
-
-  static defaultProps = sharedDefaultProps;
+  constructor(props) {
+    super(props);
+    const { defaultIndex } = this.props;
+    this.state = { tabIndex: defaultIndex };
+  }
 
   render() {
     const { tabIndex } = this.state;
@@ -276,6 +277,9 @@ class ProposedClassPropertiesPlugin extends Component {
     );
   }
 }
+
+ProposedClassPropertiesPlugin.propTypes = sharedPropTypes;
+ProposedClassPropertiesPlugin.defaultProps = sharedDefaultProps;
 
 const HooksExample = ({ defaultIndex }) => {
   const [tabIndex, setHooksTabIndex] = React.useState(defaultIndex);
@@ -359,7 +363,7 @@ const RouterTabs = ({
       document.querySelector(`#${section || 'first'}`).scrollIntoView();
     }
     setPrevSection(section);
-  }, [section, isTablet]);
+  }, [section, isTablet, prevSection]);
 
   return (
     <Tabs>

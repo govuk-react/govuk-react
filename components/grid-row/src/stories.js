@@ -18,11 +18,11 @@ const Content = styled('div')({
 });
 
 stories.add('Component default', () => (
-  <Fragment>
+  <>
     <GridRow>
       <GridCol>
         <Content>Example</Content>
       </GridCol>
     </GridRow>
-  </Fragment>
+  </>
 ));

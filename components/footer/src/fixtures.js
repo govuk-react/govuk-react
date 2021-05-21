@@ -14,7 +14,8 @@ const withRoutes = (component) => (
   </BrowserRouter>
 );
 
-export default () => <Footer />;
+const FooterExample = () => <Footer />;
+export default FooterExample;
 
 const copyright = {
   text: 'Crown copyright',
@@ -43,10 +44,10 @@ const metaCustom = (
 );
 
 const metaLinksAndCustom = (
-  <React.Fragment>
+  <>
     {metaLinks}
     {metaCustom}
-  </React.Fragment>
+  </>
 );
 
 const navigation = (

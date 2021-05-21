@@ -3,19 +3,17 @@ const { dependencies: gukd } = require('./packages/govuk-react/package.json');
 
 module.exports = {
   "parser": "babel-eslint",
-  "extends": ["airbnb", "sonar", "prettier", "prettier/react", "react-app", "plugin:prettier/recommended", "plugin:cypress/recommended"
-],
+  "extends": ["airbnb", "sonar", "prettier", "react-app", "plugin:prettier/recommended", "plugin:cypress/recommended"],
   "env": {
     "es6": true
   },
   "rules": {
     "prettier/prettier": ["error"],
     "react/jsx-filename-extension": 0,
-    "react/destructuring-assignment": 0,// disabled to enable upgrade to eslint-config-airbnb@17
-    "max-len": 0,// disabled to enable upgrade to eslint-config-airbnb@17
-    "jsx-a11y/label-has-associated-control": 0,// disabled to enable upgrade to eslint-config-airbnb@17
-    "jsx-a11y/label-has-for": 0,
+    "react/jsx-props-no-spreading": 0,
     "filenames/match-exported": 0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "jsx-a11y/label-has-for": 0,
     "jsx-a11y/anchor-is-valid": [ "error", {
       "components": [ "Link" ],
       "specialLink": [ "to", "hrefLeft", "hrefRight" ],

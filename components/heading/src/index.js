@@ -17,7 +17,7 @@ const StyledHeading = styled('h1')(
       throw Error(`Unknown size ${size} used for heading.`);
     }
 
-    return Object.assign({}, typography.font({ size: actualSize, weight: 'bold' }));
+    return { ...typography.font({ size: actualSize, weight: 'bold' }) };
   },
   {
     display: 'block',
@@ -27,15 +27,12 @@ const StyledHeading = styled('h1')(
     const actualSize = Number.isNaN(Number(size)) ? HEADING_SIZES[size] : size;
     const scaleInfo = TYPOGRAPHY_SCALE[actualSize];
 
-    return Object.assign(
-      {},
-      {
-        marginBottom: scaleInfo.mobile.spacing,
-        [MEDIA_QUERIES.TABLET]: {
-          marginBottom: scaleInfo.tablet.spacing,
-        },
-      }
-    );
+    return {
+      marginBottom: scaleInfo.mobile.spacing,
+      [MEDIA_QUERIES.TABLET]: {
+        marginBottom: scaleInfo.tablet.spacing,
+      },
+    };
   },
   spacing.withWhiteSpace()
 );

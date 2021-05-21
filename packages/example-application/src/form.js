@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 import * as GovUK from 'govuk-react';
 import { Link } from 'react-router-dom';
 
-export default () => {
+const Form = () => {
   const [firstName, setFirstName] = useState();
   const [errors, setErrors] = useState();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -57,3 +57,5 @@ export default () => {
     </>
   );
 };
+
+export default Form;

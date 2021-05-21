@@ -34,7 +34,7 @@ import WidthContainer from './atoms/width-container';
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_width-container.scss
  */
 const Page = ({ header, footer, children, id, beforeChildren, main: MainComponent, container: Container }) => (
-  <React.Fragment>
+  <>
     <SkipLink href={`#${id}`} />
     {header}
     <Container>
@@ -42,7 +42,7 @@ const Page = ({ header, footer, children, id, beforeChildren, main: MainComponen
       <MainComponent id={id}>{children}</MainComponent>
     </Container>
     {footer}
-  </React.Fragment>
+  </>
 );
 
 Page.propTypes = {
