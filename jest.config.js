@@ -26,7 +26,7 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/scripts/setupTests.js'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   testEnvironment: 'jsdom',
-  testMatch: ['**/{components,packages}/*/src/**/?(*.)(spec|test).js?(x)'],
+  testMatch: ['**/{components,packages}/*/src/**/?(*.)test.js?(x)'],
   transform: {
     '^.+\\.(js|jsx)$': 'babel-jest',
     '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
