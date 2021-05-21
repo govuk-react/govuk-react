@@ -1,4 +1,4 @@
-/// <reference types="cypress" />
+// / <reference types="cypress" />
 // ***********************************************************
 // This example plugins/index.js can be used to load plugins
 //
@@ -11,16 +11,20 @@
 
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
+const { webpack: lernaAliases } = require('lerna-alias')
 
 /**
  * @type {Cypress.PluginConfig}
  */
 module.exports = (on, config) => {
   if (config.testingType === 'component') {
-    require('@cypress/react/plugins/babel')(on, {
-      ...config,
-      babelLoaderOptions: {
-        rootMode: 'upward',
+    require('@cypress/react/plugins/babel')(on, config, {
+      setWebpackConfig: (webpackConfig) => {
+        webpackConfig.resolve.alias = lernaAliases();
+        webpackConfig.module.rules.find(({ loader }) => loader === 'babel-loader').options = {
+          rootMode: 'upward',
+        };
+        return webpackConfig;
       },
     });
   }
