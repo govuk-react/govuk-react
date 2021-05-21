@@ -181,7 +181,7 @@ exports[`Footer matches default snapshot: Footer 1`] = `
   }
 }
 
-<_default>
+<FooterExample>
   <Footer
     container={
       Object {
@@ -320,7 +320,7 @@ exports[`Footer matches default snapshot: Footer 1`] = `
       </footer>
     </src__FooterContainer>
   </Footer>
-</_default>
+</FooterExample>
 `;
 
 exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `

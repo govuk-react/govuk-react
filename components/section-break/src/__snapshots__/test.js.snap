@@ -16,7 +16,7 @@ exports[`SectionBreak matches snapshot: section break 1`] = `
   }
 }
 
-<_default>
+<SectionBreakExample>
   <SectionBreakDocumented
     level="LARGE"
     visible={true}
@@ -30,5 +30,5 @@ exports[`SectionBreak matches snapshot: section break 1`] = `
       />
     </src__SectionBreak>
   </SectionBreakDocumented>
-</_default>
+</SectionBreakExample>
 `;

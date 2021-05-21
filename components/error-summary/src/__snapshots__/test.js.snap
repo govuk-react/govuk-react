@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
-<_default>
+<ErrorSummaryExample>
   <div>
     <ErrorSummary
       description="Optional description of the errors and how to correct them"
@@ -288,5 +288,5 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
       </Label>
     </TextArea>
   </div>
-</_default>
+</ErrorSummaryExample>
 `;
