@@ -13,6 +13,7 @@ export { default as Fieldset } from '@govuk-react/fieldset';
 export { default as FileUpload } from '@govuk-react/file-upload';
 export { default as Footer } from '@govuk-react/footer';
 export { default as FormGroup } from '@govuk-react/form-group';
+export { default as GlobalStyle } from '@govuk-react/global-style';
 export { default as GridCol } from '@govuk-react/grid-col';
 export { default as GridRow } from '@govuk-react/grid-row';
 export { default as Heading } from '@govuk-react/heading';
