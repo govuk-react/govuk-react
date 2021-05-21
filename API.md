@@ -34,27 +34,6 @@ Prop | Required | Default | Type | Description
  `onClick` |  | ```undefined``` | func | Custom function to run when the `onClick` event is fired
 
 
-Breadcrumb
-==========
-
-### Import
-```js
-  import Breadcrumb from '@govuk-react/breadcrumb';
-```
-<!-- STORY -->
-
-### Usage
-
-This component is DEPRECATED.
-
-Please use the `Breadcrumbs` component instead.
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Breadcrumb contents
-
-
 Breadcrumbs
 ===========
 
@@ -822,28 +801,6 @@ import GridCol from '@govuk-react/grid-col';
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | node | One or more GridCol nodes
-
-
-Header
-======
-
-### Import
-```js
-  import Header from '@govuk-react/header';
-```
-<!-- STORY -->
-
-### Usage
-
-This component is DEPRECATED.
-
-Please use the `Heading` component instead.
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `level` |  | ```1``` | number | Semantic heading level value between 1 and 6
- `size` |  | ```undefined``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
 
 
 Heading
@@ -1647,7 +1604,7 @@ const ReactRouterLinkRenderer = ({ href, children }) => (
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` |  | ```''``` | node | Text content supporting markdown
- `linkRenderer` |  | ```props => <Link {...props} />``` | func | 
+ `linkRenderer` |  | ```(props) => <Link {...props} />``` | func | 
  `supportingText` |  | ```false``` | bool | Is this paragraph supporting text for another element?
 
 
@@ -1990,27 +1947,6 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` |  | ```'Skip to main content'``` | node | 
  `href` |  | ```'#content'``` | string | 
-
-
-SupportingHeader
-================
-
-### Import
-```js
-  import SupportingHeader from '@govuk-react/supporting-header';
-```
-<!-- STORY -->
-
-### Usage
-
-This component is DEPRECATED.
-
-Please use the `Caption` component instead.
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | string | Text to be rendered as a supporting header
 
 
 Table
