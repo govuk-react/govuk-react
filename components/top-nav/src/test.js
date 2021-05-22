@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import CrownIcon from '@govuk-react/icon-crown';
 
-import TopNav, { asTopNavAnchor, asNavLinkAnchor } from '.';
+import TopNav from '.';
 
 const emptyNode = [];
 const nullNode = null;
-const Anchor = asTopNavAnchor('a');
-const NavLinkAnchor = asNavLinkAnchor('a');
 
 const wrapper = (
   <TopNav company="example" search="example" serviceTitle="example">
@@ -17,20 +15,20 @@ const wrapper = (
 );
 const wrapperMultipleTopNavAnchor = (
   <TopNav active={1}>
-    <Anchor href="/section">Section 1</Anchor>
-    <Anchor href="/section">Section 1</Anchor>
+    <TopNav.Anchor href="/section">Section 1</TopNav.Anchor>
+    <TopNav.Anchor href="/section">Section 1</TopNav.Anchor>
   </TopNav>
 );
 
 const wrapperNavLinkAnchor = (
   <TopNav>
-    <NavLinkAnchor href="/nav-link">Nav link</NavLinkAnchor>
+    <TopNav.NavLink href="/nav-link">Nav link</TopNav.NavLink>
   </TopNav>
 );
 
 const wrapperEmptyNode = (
   <TopNav>
-    <Anchor href="/section">Section 1</Anchor>
+    <TopNav.Anchor href="/section">Section 1</TopNav.Anchor>
     {emptyNode}
     {nullNode}
     example
@@ -55,7 +53,7 @@ describe('TopNav', () => {
   });
 
   it('matches the props passed to the list of Anchor tags', () => {
-    WrapperMultipleTopNavAnchor.find(Anchor).forEach((anchor) => {
+    WrapperMultipleTopNavAnchor.find(TopNav.Anchor).forEach((anchor) => {
       expect(anchor.props().href).toEqual('/section');
       expect(anchor.props().children).toEqual('Section 1');
     });
@@ -66,8 +64,8 @@ describe('TopNav', () => {
   });
 
   it('matches the props passed to NavLinkAnchor', () => {
-    expect(WrapperNavLinkAnchor.find(NavLinkAnchor).props().href).toEqual('/nav-link');
-    expect(WrapperNavLinkAnchor.find(NavLinkAnchor).props().children).toEqual('Nav link');
+    expect(WrapperNavLinkAnchor.find(TopNav.NavLink).props().href).toEqual('/nav-link');
+    expect(WrapperNavLinkAnchor.find(TopNav.NavLink).props().children).toEqual('Nav link');
   });
 
   it('with icon title', () => {
