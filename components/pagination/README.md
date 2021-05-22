@@ -9,19 +9,16 @@ Pagination
 
 ### Usage
 
-Simple usage with `asPaginationItem` HOC
 ```jsx
-import { asPaginationItem } from '@govuk-react/hoc';
-
-const PaginationAnchor = asPaginationItem('a');
+import Pagination from '@govuk-react/pagination';
 
 <Pagination>
-  <PaginationAnchor href="#prev" previousPage>
+  <Pagination.Anchor href="#prev" previousPage>
     Previous page
-  </PaginationAnchor>
-  <PaginationAnchor href="#next" nextPage>
+  </Pagination.Anchor>
+  <Pagination.Anchor href="#next" nextPage>
     Next page
-  </PaginationAnchor>
+  </Pagination.Anchor>
 </Pagination>
 ```
 
@@ -31,6 +28,6 @@ const PaginationAnchor = asPaginationItem('a');
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | `asPaginationItem` nodes
+ `children` | true | `````` | node | 
 
 
