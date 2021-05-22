@@ -1,3 +1,4 @@
+import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
@@ -30,6 +31,6 @@ const GlobalStyle = createGlobalStyle`
  * - https://styled-components.com/docs/api#createglobalstyle
  *
  */
-const DocumentedGlobalStyle = props => <DocumentedGlobalStyle {...props} />
+const DocumentedGlobalStyle = (props) => <DocumentedGlobalStyle {...props} />;
 
 export default GlobalStyle;
