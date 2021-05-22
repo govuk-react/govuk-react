@@ -143,9 +143,11 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
           </src__StyledLabelText>
         </LabelText>
         <Input
+          error={false}
           type="text"
         >
           <src__StyledInput
+            error={false}
             type="text"
           >
             <input
