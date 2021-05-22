@@ -74,7 +74,7 @@
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-react-app": "^6.0.0",
-    "eslint-config-sonar": "0.0.7",
+    "eslint-config-sonar": "0.0.8",
     "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-flowtype": "^5.7.2",
     "eslint-plugin-import": "^2.23.2",
