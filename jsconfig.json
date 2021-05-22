@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "@govuk-react/*": [ "./components/*/src/index.js", "./packages/*/src/index.js" ],
+      "govuk-react": ["./packages/govuk-react/src/index.js"]
     }
   },
   "exclude": [

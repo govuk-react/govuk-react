@@ -1,7 +1,9 @@
-export ArrowLeft from './ArrowLeft';
-export ArrowRight from './ArrowRight';
-export IconImportant from './IconImportant';
-export Search from './Search';
-export Spinner from './Spinner';
-export ButtonArrow from './ButtonArrow';
-export SVGBase from './SVGBase';
+import ArrowLeft from './ArrowLeft';
+import ArrowRight from './ArrowRight';
+import IconImportant from './IconImportant';
+import Search from './Search';
+import Spinner from './Spinner';
+import ButtonArrow from './ButtonArrow';
+import SVGBase from './SVGBase';
+
+export { ArrowLeft, ArrowRight, IconImportant, Search, Spinner, ButtonArrow, SVGBase };
