@@ -8079,7 +8079,7 @@ get-intrinsic@^1.0.2, get-intrinsic@^1.1.0, get-intrinsic@^1.1.1:
     has "^1.0.3"
     has-symbols "^1.0.1"
 
-get-lerna-packages@^0.1.0:
+get-lerna-packages@^0.1.0, get-lerna-packages@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/get-lerna-packages/-/get-lerna-packages-0.1.1.tgz#37aaaac36fd14f00082f17b1096dd6c69290cef9"
   integrity sha512-venxkvga57gOUZoTmXZlJ0zHc8cmvsx7Y0GTMcoEK/7OCEK3PLpG5gVTbUUMJaLxbzK13AWQdKPf1LSkuEfWqA==
@@ -10575,6 +10575,13 @@ lerna-alias@^3.0.2:
   integrity sha512-3Ly21S1gn+j+yt2zMN0mB5ull1U46HYHb1ksjCznuuac/YWI4gf3EYNwxHNz7W4MdezTF4SClHRbJsmfu/8wyQ==
   dependencies:
     get-lerna-packages "^0.1.0"
+
+lerna-alias@^3.0.3-x:
+  version "3.0.3-0"
+  resolved "https://registry.yarnpkg.com/lerna-alias/-/lerna-alias-3.0.3-0.tgz#d681842deed66644ab9f38a7b365658cfe52dd43"
+  integrity sha512-IX0c2QH3v4rkgE+iG7Ro0FSEWKqqrMhvbGbB1txrnaJ8YbcrNbJ0IPpcJi+uiiPLV3olNX74EO08x9hGZ+J5ig==
+  dependencies:
+    get-lerna-packages "^0.1.1"
 
 lerna@2.11:
   version "2.11.0"
