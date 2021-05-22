@@ -28,7 +28,7 @@ module.exports = {
   testEnvironment: 'jsdom',
   testMatch: ['**/{components,packages}/*/src/**/?(*.)test.js?(x)'],
   transform: {
-    '^.+\\.(js|jsx)$': 'babel-jest',
+    '^.+\\.[jt]sx?$': 'babel-jest',
     '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
   },
   transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
