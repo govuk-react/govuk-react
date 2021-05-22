@@ -85,6 +85,9 @@ const DateField = ({ children, errorText, hintText, inputNames, defaultValues, i
   </StyledContainer>
 );
 
+DateField.Container = StyledContainer;
+DateField.Input = Input;
+
 DateField.defaultProps = {
   hintText: undefined,
   errorText: undefined,
