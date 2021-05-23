@@ -88,14 +88,10 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                     "text",
                   ]
                 }
-                astPlugins={Array []}
                 className="src__StyledParagraph-dkdnni-0 dbOgTf"
                 escapeHtml={false}
                 linkRenderer={[Function]}
                 mb={3}
-                parserOptions={Object {}}
-                plugins={Array []}
-                rawSourcePos={false}
                 renderers={
                   Object {
                     "link": [Function],
@@ -103,13 +99,64 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                 }
                 skipHtml={true}
                 source="Optional description of the errors and how to correct them"
-                sourcePos={false}
                 supportingText={false}
                 transformLinkUri={[Function]}
               >
                 <Root
                   className="src__StyledParagraph-dkdnni-0 dbOgTf"
                   key="root-1-1-0"
+                  node={
+                    Object {
+                      "children": Array [
+                        Object {
+                          "children": Array [
+                            Object {
+                              "position": Object {
+                                "end": Object {
+                                  "column": 59,
+                                  "line": 1,
+                                  "offset": 58,
+                                },
+                                "start": Object {
+                                  "column": 1,
+                                  "line": 1,
+                                  "offset": 0,
+                                },
+                              },
+                              "type": "text",
+                              "value": "Optional description of the errors and how to correct them",
+                            },
+                          ],
+                          "position": Object {
+                            "end": Object {
+                              "column": 59,
+                              "line": 1,
+                              "offset": 58,
+                            },
+                            "start": Object {
+                              "column": 1,
+                              "line": 1,
+                              "offset": 0,
+                            },
+                          },
+                          "type": "paragraph",
+                        },
+                      ],
+                      "position": Object {
+                        "end": Object {
+                          "column": 59,
+                          "line": 1,
+                          "offset": 58,
+                        },
+                        "start": Object {
+                          "column": 1,
+                          "line": 1,
+                          "offset": 0,
+                        },
+                      },
+                      "type": "root",
+                    }
+                  }
                 >
                   <div
                     className="src__StyledParagraph-dkdnni-0 dbOgTf"
@@ -119,6 +166,24 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                     >
                       <TextRenderer
                         key="text-1-1-0"
+                        node={
+                          Object {
+                            "position": Object {
+                              "end": Object {
+                                "column": 59,
+                                "line": 1,
+                                "offset": 58,
+                              },
+                              "start": Object {
+                                "column": 1,
+                                "line": 1,
+                                "offset": 0,
+                              },
+                            },
+                            "type": "text",
+                            "value": "Optional description of the errors and how to correct them",
+                          }
+                        }
                         nodeKey="text-1-1-0"
                         value="Optional description of the errors and how to correct them"
                       >
