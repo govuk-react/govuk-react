@@ -33,4 +33,4 @@ const GlobalStyle = createGlobalStyle`
  */
 const DocumentedGlobalStyle = (props) => <DocumentedGlobalStyle {...props} />;
 
-export default GlobalStyle;
+export default DocumentedGlobalStyle;
