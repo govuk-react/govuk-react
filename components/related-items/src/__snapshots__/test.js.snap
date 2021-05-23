@@ -202,7 +202,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
           as="h3"
           size="MEDIUM"
         >
-          <src__StyledHeading
+          <heading__StyledHeading
             as="h3"
             size="MEDIUM"
           >
@@ -212,7 +212,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
             >
               Travel abroad
             </h3>
-          </src__StyledHeading>
+          </heading__StyledHeading>
         </Heading>
       </H3>
       <UnorderedList
