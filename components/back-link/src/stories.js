@@ -9,7 +9,7 @@ export const Default = () => <BackLink onClick={action('go-back')}>{text('Childr
 export const WithHref = () => <BackLink href="#">Back</BackLink>;
 
 export default {
-  title: 'Navigation/BackLink',
+  title: 'Core/Back link',
   component: BackLink,
   decorators: [withKnobs],
 };
