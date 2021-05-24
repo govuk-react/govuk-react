@@ -70,6 +70,7 @@ const StyledErrorSummary = styled('div')(
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
  * const heading = 'Message to alert the user to a problem goes here';
  * const description = 'Optional description of the errors and how to correct them';
