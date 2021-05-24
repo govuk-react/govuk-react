@@ -61,6 +61,8 @@ const Input = ({ type, ...props }) => <StyledInput type={type} {...props} />;
 
 Input.defaultProps = {
   type: 'text',
+  error: false,
+  errorColor: undefined,
 };
 
 Input.propTypes = {
@@ -68,6 +70,8 @@ Input.propTypes = {
    * HTML `<Input />` type
    */
   type: PropTypes.string,
+  error: PropTypes.bool,
+  errorColor: PropTypes.string,
 };
 
 export default Input;

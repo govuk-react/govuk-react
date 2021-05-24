@@ -231,9 +231,11 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
               </src__StyledHint>
             </HintText>
             <Input
+              error={false}
               type="text"
             >
               <src__StyledInput
+                error={false}
                 type="text"
               >
                 <input
