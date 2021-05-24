@@ -84,6 +84,7 @@ const DetailsText = styled('div')({
  *
  *
  * Simple
+ *
  * ```jsx
  * <Details summary="Help with nationality">
  *   I am a paragraph of hidden details, to be revealed when summary is clicked
