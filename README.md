@@ -32,7 +32,7 @@ const MyComponent = ({title}) => (<div>
 
 See the [Storybook](https://govuk-react.github.io/govuk-react) for examples of all available components.
 
-Also see the [example project](https://github.com/penx/govuk-react-example) for basic usage.
+Also see the [Example Application](packages/example-application/src) for basic usage.
 
 ## Using Link with a Router Link
 
