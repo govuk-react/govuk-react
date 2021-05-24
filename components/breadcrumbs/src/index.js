@@ -67,6 +67,7 @@ const BreadcrumbsListItem = styled('li')({
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
  * <Breadcrumbs>
  *   <Breadcrumbs.Link href="/section">Section</Breadcrumbs.Link>
@@ -76,6 +77,7 @@ const BreadcrumbsListItem = styled('li')({
  * ```
  *
  * Providing links with, or without React Router
+ *
  * ```jsx
  * import { Link } from 'react-router-dom';
  *
