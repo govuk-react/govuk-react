@@ -34,17 +34,17 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
               as="h2"
               size="MEDIUM"
             >
-              <src__StyledHeading
+              <heading__StyledHeading
                 as="h2"
                 size="MEDIUM"
               >
                 <h2
-                  className="src__StyledHeading-sc-1dueefc-0 jRssAO"
+                  className="heading__StyledHeading-sc-1sovo83-0 fFuVVK"
                   size="MEDIUM"
                 >
                   Message to alert the user to a problem goes here
                 </h2>
-              </src__StyledHeading>
+              </heading__StyledHeading>
             </Heading>
           </H2>
           <Paragraph

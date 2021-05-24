@@ -43,7 +43,7 @@ exports[`Heading matches wrapper snapshot: wrapper mount 1`] = `
 <Heading
   size="XLARGE"
 >
-  <src__StyledHeading
+  <heading__StyledHeading
     size="XLARGE"
   >
     <h1
@@ -52,6 +52,6 @@ exports[`Heading matches wrapper snapshot: wrapper mount 1`] = `
     >
       example
     </h1>
-  </src__StyledHeading>
+  </heading__StyledHeading>
 </Heading>
 `;

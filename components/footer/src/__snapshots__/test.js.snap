@@ -1863,7 +1863,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                     as="h2"
                                     size="LARGE"
                                   >
-                                    <src__StyledHeading
+                                    <heading__StyledHeading
                                       as="h2"
                                       size="LARGE"
                                     >
@@ -1873,7 +1873,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                       >
                                         Support links
                                       </h2>
-                                    </src__StyledHeading>
+                                    </heading__StyledHeading>
                                   </Heading>
                                 </H2>
                               </span>
@@ -2541,7 +2541,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                     as="h2"
                                     size="LARGE"
                                   >
-                                    <src__StyledHeading
+                                    <heading__StyledHeading
                                       as="h2"
                                       size="LARGE"
                                     >
@@ -2551,7 +2551,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                       >
                                         Support links
                                       </h2>
-                                    </src__StyledHeading>
+                                    </heading__StyledHeading>
                                   </Heading>
                                 </H2>
                               </span>
@@ -3347,7 +3347,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 className="c4"
                                 size="MEDIUM"
                               >
-                                <src__StyledHeading
+                                <heading__StyledHeading
                                   as="h2"
                                   className="c4"
                                   size="MEDIUM"
@@ -3358,7 +3358,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                   >
                                     Two column list
                                   </h2>
-                                </src__StyledHeading>
+                                </heading__StyledHeading>
                               </Heading>
                             </H2>
                           </section-heading__SectionHeading>
@@ -3652,7 +3652,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 className="c4"
                                 size="MEDIUM"
                               >
-                                <src__StyledHeading
+                                <heading__StyledHeading
                                   as="h2"
                                   className="c4"
                                   size="MEDIUM"
@@ -3663,7 +3663,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                   >
                                     Single column list
                                   </h2>
-                                </src__StyledHeading>
+                                </heading__StyledHeading>
                               </Heading>
                             </H2>
                           </section-heading__SectionHeading>
@@ -3829,7 +3829,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                     as="h2"
                                     size="LARGE"
                                   >
-                                    <src__StyledHeading
+                                    <heading__StyledHeading
                                       as="h2"
                                       size="LARGE"
                                     >
@@ -3839,7 +3839,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                       >
                                         Support links
                                       </h2>
-                                    </src__StyledHeading>
+                                    </heading__StyledHeading>
                                   </Heading>
                                 </H2>
                               </span>
@@ -4553,7 +4553,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                 className="c4"
                                 size="MEDIUM"
                               >
-                                <src__StyledHeading
+                                <heading__StyledHeading
                                   as="h2"
                                   className="c4"
                                   size="MEDIUM"
@@ -4564,7 +4564,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                   >
                                     Two column list
                                   </h2>
-                                </src__StyledHeading>
+                                </heading__StyledHeading>
                               </Heading>
                             </H2>
                           </section-heading__SectionHeading>
@@ -4858,7 +4858,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                 className="c4"
                                 size="MEDIUM"
                               >
-                                <src__StyledHeading
+                                <heading__StyledHeading
                                   as="h2"
                                   className="c4"
                                   size="MEDIUM"
@@ -4869,7 +4869,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                   >
                                     Single column list
                                   </h2>
-                                </src__StyledHeading>
+                                </heading__StyledHeading>
                               </Heading>
                             </H2>
                           </section-heading__SectionHeading>
@@ -5472,7 +5472,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                     as="h2"
                                     size="LARGE"
                                   >
-                                    <src__StyledHeading
+                                    <heading__StyledHeading
                                       as="h2"
                                       size="LARGE"
                                     >
@@ -5482,7 +5482,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                       >
                                         Support links
                                       </h2>
-                                    </src__StyledHeading>
+                                    </heading__StyledHeading>
                                   </Heading>
                                 </H2>
                               </span>
@@ -6018,7 +6018,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                             className="c4"
                             size="MEDIUM"
                           >
-                            <src__StyledHeading
+                            <heading__StyledHeading
                               as="h2"
                               className="c4"
                               size="MEDIUM"
@@ -6029,7 +6029,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                               >
                                 Single column list
                               </h2>
-                            </src__StyledHeading>
+                            </heading__StyledHeading>
                           </Heading>
                         </H2>
                       </section-heading__SectionHeading>
