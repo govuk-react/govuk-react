@@ -44,6 +44,12 @@ module.exports = {
         "jest": true,
         "browser": true
       }
+    },
+    {
+      "files": [ "stories.js", "src/stories/**" ],
+      "rules": {
+        "import/no-anonymous-default-export": [2, {"allowObject": true}]
+      }
     }
   ]
 }

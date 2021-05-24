@@ -1,18 +1,15 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import BackLink from '.';
-import ReadMe from '../README.md';
 
-const stories = storiesOf('Navigation/BackLink', module);
-const examples = storiesOf('Navigation/BackLink/Examples', module);
+export const Default = () => <BackLink onClick={action('go-back')}>{text('Children', 'Back')}</BackLink>;
 
-stories.addDecorator(withDocsCustom(ReadMe));
-stories.addDecorator(withKnobs);
+export const WithHref = () => <BackLink href="#">Back</BackLink>;
 
-stories.add('Component default', () => <BackLink onClick={action('go-back')}>{text('Children', 'Back')}</BackLink>);
-
-examples.add('With href', () => <BackLink href="#">Back</BackLink>);
+export default {
+  title: 'Navigation/BackLink',
+  component: BackLink,
+  decorators: [withKnobs],
+};
