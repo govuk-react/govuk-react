@@ -1,6 +1,5 @@
-import { withDocs } from 'storybook-readme';
+// TODO: remove all uses
 
-const withDocsCustom = (readme = '') =>
-  navigator.userAgent.match(/Chromatic/) ? (storyFn) => storyFn() : withDocs(readme);
+const withDocsCustom = () => (storyFn) => storyFn();
 
 export default withDocsCustom;
