@@ -39,13 +39,15 @@ const StyledCaption = styled('span')(
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
  * <Caption>Caption heading text</Caption>
  * ```
  *
  * With another header
+ *
  * ```jsx
- * import { H1 } from '@govuk-react/heading';
+ * import { H1 } from 'govuk-react';
  *
  * <Caption size="XL">Supporting header text</Caption>
  * <H1>Main header text</H1>
