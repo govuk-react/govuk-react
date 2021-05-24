@@ -16,8 +16,10 @@ const Anchor = styled('a')(
     marginTop: SPACING_POINTS[3],
     marginBottom: SPACING_POINTS[3],
     paddingLeft: '14px',
-    borderBottom: `1px solid ${BLACK}`,
     textDecoration: 'none',
+    '&[href]': {
+      borderBottom: `1px solid ${BLACK}`,
+    },
     '::before': {
       ...shape.arrow({ direction: 'left', base: 10, height: 6 }),
 
