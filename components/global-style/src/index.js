@@ -31,6 +31,6 @@ const GlobalStyle = createGlobalStyle`
  * - https://styled-components.com/docs/api#createglobalstyle
  *
  */
-const DocumentedGlobalStyle = (props) => <DocumentedGlobalStyle {...props} />;
+const DocumentedGlobalStyle = (props) => <GlobalStyle {...props} />;
 
-export default GlobalStyle;
+export default DocumentedGlobalStyle;
