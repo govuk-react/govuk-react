@@ -39,16 +39,19 @@ const Anchor = styled('a')(
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
  * <BackLink>Back</BackLink>
  * ```
  *
  * With custom click handler
+ *
  * ```jsx
  * <BackLink onClick={this.myCustomFunction}>Back</BackLink>
  * ```
  *
  * With `href` attribute
+ *
  * ```jsx
  * <BackLink href='#'>Back</BackLink>
  * ```
