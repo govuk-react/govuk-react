@@ -1,2 +1,2 @@
-export { default as asPaginationItem } from './asPaginationItem';
+// eslint-disable-next-line import/prefer-default-export
 export { default as deprecate } from './deprecate';

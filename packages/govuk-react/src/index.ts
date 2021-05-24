@@ -54,8 +54,5 @@ export { default as WarningText } from '@govuk-react/warning-text';
 
 export { H1, H2, H3, H4, H5, H6 } from '@govuk-react/heading';
 
-// Higher Order Components
-export { asPaginationItem } from '@govuk-react/hoc';
-
 // Icons
 export { Search as SearchIcon, ArrowLeft, Spinner, ButtonArrow } from '@govuk-react/icons';

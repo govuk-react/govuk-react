@@ -90,40 +90,38 @@ const PageTitle = styled('span')({
   },
 });
 
-const asPaginationItem = (AnchorType) => {
-  const PaginationItem = ({ previousPage, nextPage, to, href, target, children, pageTitle }) => (
-    <PaginationWrapper previousPage={previousPage} nextPage={nextPage}>
-      <AnchorType to={to} href={href} target={target}>
-        <InnerWrap>
-          {previousPage && <PrevPageIcon />}
-          {children}
-          {nextPage && <NextPageIcon />}
-        </InnerWrap>
-        {pageTitle && <PageTitle>{pageTitle}</PageTitle>}
-      </AnchorType>
-    </PaginationWrapper>
-  );
+const PaginationAnchor = ({ previousPage, nextPage, to, href, target, children, pageTitle, as: As }) => (
+  <PaginationWrapper previousPage={previousPage} nextPage={nextPage}>
+    <As to={to} href={href} target={target}>
+      <InnerWrap>
+        {previousPage && <PrevPageIcon />}
+        {children}
+        {nextPage && <NextPageIcon />}
+      </InnerWrap>
+      {pageTitle && <PageTitle>{pageTitle}</PageTitle>}
+    </As>
+  </PaginationWrapper>
+);
 
-  PaginationItem.propTypes = {
-    children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-    previousPage: PropTypes.bool,
-    nextPage: PropTypes.bool,
-    pageTitle: PropTypes.string,
-    to: PropTypes.string,
-    target: PropTypes.string,
-    href: PropTypes.string,
-  };
-
-  PaginationItem.defaultProps = {
-    previousPage: undefined,
-    nextPage: undefined,
-    pageTitle: undefined,
-    to: undefined,
-    target: undefined,
-    href: undefined,
-  };
-
-  return PaginationItem;
+PaginationAnchor.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+  previousPage: PropTypes.bool,
+  nextPage: PropTypes.bool,
+  pageTitle: PropTypes.string,
+  to: PropTypes.string,
+  target: PropTypes.string,
+  href: PropTypes.string,
+  as: PropTypes.elementType,
 };
 
-export default asPaginationItem;
+PaginationAnchor.defaultProps = {
+  previousPage: undefined,
+  nextPage: undefined,
+  pageTitle: undefined,
+  to: undefined,
+  target: undefined,
+  href: undefined,
+  as: 'a',
+};
+
+export default PaginationAnchor;

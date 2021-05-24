@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
+import Anchor from './anchor';
 
 const StyledList = styled('ul')(
   typography.font({ size: 19 }),
@@ -25,19 +26,16 @@ const StyledList = styled('ul')(
  *
  * ### Usage
  *
- * Simple usage with `asPaginationItem` HOC
  * ```jsx
- * import { asPaginationItem } from '@govuk-react/hoc';
- *
- * const PaginationAnchor = asPaginationItem('a');
+ * import Pagination from '@govuk-react/pagination';
  *
  * <Pagination>
- *   <PaginationAnchor href="#prev" previousPage>
+ *   <Pagination.Anchor href="#prev" previousPage>
  *     Previous page
- *   </PaginationAnchor>
- *   <PaginationAnchor href="#next" nextPage>
+ *   </Pagination.Anchor>
+ *   <Pagination.Anchor href="#next" nextPage>
  *     Next page
- *   </PaginationAnchor>
+ *   </Pagination.Anchor>
  * </Pagination>
  * ```
  *
@@ -48,8 +46,9 @@ const StyledList = styled('ul')(
 const Pagination = (props) => <StyledList {...props} />;
 
 Pagination.propTypes = {
-  /** `asPaginationItem` nodes */
   children: PropTypes.node.isRequired,
 };
+
+Pagination.Anchor = Anchor;
 
 export default Pagination;
