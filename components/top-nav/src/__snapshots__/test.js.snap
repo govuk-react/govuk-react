@@ -187,16 +187,16 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                     <li
                       className="list-item__Li-t3un2w-0 bfSnFO"
                     >
-                      <asNavLinkAnchor__StyledNavLinkAnchor
+                      <nav-link-anchor__NavLinkAnchor
                         href="/nav-link"
                       >
                         <a
-                          className="asTopNavAnchor__StyledHoc-sc-1pv1bh1-0 asNavLinkAnchor__StyledNavLinkAnchor-arj2tg-0 cTCrfq gUpMJj"
+                          className="top-nav-anchor__TopNavAnchor-sc-1t10han-0 nav-link-anchor__NavLinkAnchor-z9clwl-0 hSYBtO gJEvml"
                           href="/nav-link"
                         >
                           Nav link
                         </a>
-                      </asNavLinkAnchor__StyledNavLinkAnchor>
+                      </nav-link-anchor__NavLinkAnchor>
                     </li>
                   </list-item__Li>
                 </ul>
@@ -406,16 +406,16 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                     <li
                       className="list-item__Li-t3un2w-0 bfSnFO"
                     >
-                      <asTopNavAnchor__StyledHoc
+                      <top-nav-anchor__TopNavAnchor
                         href="/section"
                       >
                         <a
-                          className="asTopNavAnchor__StyledHoc-sc-1pv1bh1-0 cTCrfq"
+                          className="top-nav-anchor__TopNavAnchor-sc-1t10han-0 hSYBtO"
                           href="/section"
                         >
                           Section 1
                         </a>
-                      </asTopNavAnchor__StyledHoc>
+                      </top-nav-anchor__TopNavAnchor>
                     </li>
                   </list-item__Li>
                   <list-item__Li
@@ -424,16 +424,16 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                     <li
                       className="list-item__Li-t3un2w-0 bfSnFO"
                     >
-                      <asTopNavAnchor__StyledHoc
+                      <top-nav-anchor__TopNavAnchor
                         href="/section"
                       >
                         <a
-                          className="asTopNavAnchor__StyledHoc-sc-1pv1bh1-0 cTCrfq"
+                          className="top-nav-anchor__TopNavAnchor-sc-1t10han-0 hSYBtO"
                           href="/section"
                         >
                           Section 1
                         </a>
-                      </asTopNavAnchor__StyledHoc>
+                      </top-nav-anchor__TopNavAnchor>
                     </li>
                   </list-item__Li>
                 </ul>

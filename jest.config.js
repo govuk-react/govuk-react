@@ -12,6 +12,7 @@ module.exports = {
     '!<rootDir>/packages/storybook/**',
     '!<rootDir>/packages/api-docs/**',
     '!<rootDir>/packages/storybook-components/**',
+    '!<rootDir>/packages/example-application/**',
   ],
   coverageDirectory: './coverage/',
   coverageThreshold: {

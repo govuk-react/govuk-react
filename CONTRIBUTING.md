@@ -76,8 +76,7 @@ More details in https://github.com/govuk-react/govuk-react/issues/164.
 
 ### Anchors
 
-We want to be router agnostic. We want to support parent projects using React Router or Reach Router, without introducing either as a dependency of this project. As such we provide an `as` prop on components that we expect can be used as React Router Links or NavLinks. We recommend using the [`asNavLink` HOC](https://www.npmjs.com/package/as-nav-link). More details in https://github.com/govuk-react/govuk-react/issues/423.
-
+We want to be router agnostic. We want to support parent projects using React Router or Reach Router, without introducing either as a dependency of this project. As such we provide an `as` prop on components that we expect can be used as React Router Links or NavLinks.
 
 ### White Space
 

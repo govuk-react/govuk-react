@@ -17,8 +17,9 @@ import SearchWrapper from './atoms/search-wrapper';
 import UnorderedList from './atoms/unordered-list';
 import ListItem from './atoms/list-item';
 import MenuButton from './atoms/menu-button';
-
 import IconTitle from './atoms/icon-title';
+import TopNavAnchor from './atoms/top-nav-anchor';
+import NavLinkAnchor from './atoms/nav-link-anchor';
 
 // Layout/position of ServiceTitle
 const ServiceTitleWrapper = styled('div')(typography.font({ size: 24 }), {
@@ -60,23 +61,20 @@ const Input = styled('input')({
  * ```jsx
  * import CrownIcon from '@govuk-react/icon-crown';
  * import SearchBox from '@govuk-react/search-box';
- * import TopNav, { asNavLinkAnchor, asTopNavAnchor } from '@govuk-react/top-nav';
- *
- * const LogoAnchor = asTopNavAnchor('a');
- * const NavAnchor = asNavLinkAnchor('a');
+ * import TopNav from '@govuk-react/top-nav';
  *
  * const link = 'https://example.com?=1';
  *
  * const Company = (
- *   <LogoAnchor href={link} target="new">
+ *   <TopNav.Anchor href={link} target="new">
  *     <TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</TopNav.IconTitle>
- *   </LogoAnchor>
+ *   </TopNav.Anchor>
  * );
  *
  * const ServiceTitle = (
- *   <NavAnchor href={link} target="new">
+ *   <TopNav.NavLink href={link} target="new">
  *     Service Title
- *   </NavAnchor>
+ *   </TopNav.NavLink>
  * );
  *
  * const Search = (
@@ -87,30 +85,27 @@ const Input = styled('input')({
  * );
  *
  * <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
- *   <NavAnchor href="https://example.com?q=catdog" target="new">Navigation item #1</NavAnchor>
- *   <NavAnchor href="https://example.com?q=dogcat" target="new">Navigation item #2</NavAnchor>
+ *   <TopNav.NavLink href="https://example.com?q=catdog" target="new">Navigation item #1</TopNav.NavLink>
+ *   <TopNav.NavLink href="https://example.com?q=dogcat" target="new">Navigation item #2</TopNav.NavLink>
  * </TopNav>
  * ```
  *
  * ```jsx
  * import { BrowserRouter, Link } from 'react-router-dom';
  * import CrownIcon from '@govuk-react/icon-crown';
- * import TopNav, { asLogoAnchor, asNavLinkAnchor } from '@govuk-react/top-nav';
- *
- * const LogoLink = asTopNavAnchor(Link);
- * const NavLink= asNavLinkAnchor(Link);
+ * import TopNav from '@govuk-react/top-nav';
  *
  * const reactRouterLink = '/section';
  * const CompanyLink = (
- *   <LogoLink to={reactRouterLink}>
+ *   <TopNav.Anchor as={Link} to={reactRouterLink}>
  *     <TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</TopNav.IconTitle>
- *   </LogoLink>
+ *   </TopNav.Anchor>
  * );
  *
  * const ServiceTitleLink = (
- *   <NavLink to={reactRouterLink}>
+ *   <TopNav.NavLink as={Link} to={reactRouterLink}>
  *     Service Title
- *   </NavLink>
+ *   </TopNav.NavLink>
  * );
  *
  * <BrowserRouter>
@@ -222,9 +217,7 @@ TopNav.propTypes = {
 };
 
 TopNav.IconTitle = IconTitle;
+TopNav.Anchor = TopNavAnchor;
+TopNav.NavLink = NavLinkAnchor;
 
 export default TopNav;
-
-export asTopNavAnchor from './hoc/asTopNavAnchor';
-// eslint-disable-next-line import/no-cycle
-export asNavLinkAnchor from './hoc/asNavLinkAnchor';
