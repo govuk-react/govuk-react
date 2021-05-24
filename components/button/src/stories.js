@@ -1,6 +1,6 @@
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withDocsCustom } from '@govuk-react/storybook-components';
+
+import Button from '.';
 
 import {
   ButtonWithKnobs,
@@ -12,26 +12,19 @@ import {
   ButtonWacky,
   ButtonAsLink,
 } from './fixtures';
-import ReadMe from '../README.md';
 
-const stories = storiesOf('Form/Buttons', module);
-const examples = storiesOf('Form/Buttons/Examples', module);
+export default {
+  title: 'Core/Button',
+  component: Button,
+  decorators: [withKnobs],
+};
 
-stories.addDecorator(withKnobs);
-stories.addDecorator(withDocsCustom(ReadMe));
+export const Default = ButtonWithKnobs;
 
-stories.add('Component Default', ButtonWithKnobs);
-
-examples.add('Start', ButtonStart);
-
-examples.add('Start with icon', ButtonStartIcon);
-
-examples.add('Disabled', ButtonDisabled);
-
-examples.add('Disabled start with icon', ButtonDisabledStartIcon);
-
-examples.add('Custom colour', ButtonBlue);
-
-examples.add('Custom colours (all options)', ButtonWacky);
-
-examples.add('Router link button', ButtonAsLink);
+export const Start = ButtonStart;
+export const StartWithIcon = ButtonStartIcon;
+export const Disabled = ButtonDisabled;
+export const DisabledStartWithIcon = ButtonDisabledStartIcon;
+export const CustomColour = ButtonBlue;
+export const CustomColoursAllOptions = ButtonWacky;
+export const RouterLinkButton = ButtonAsLink;
