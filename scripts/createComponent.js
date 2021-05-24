@@ -157,7 +157,7 @@ Please use a different name or delete the existing folder 🆗`);
     indexScript();
     console.log(`✅  The component '${componentName}' was created successfully`);
     console.log(`⚠️  Please ensure you add it to the package.json file for both packages/govuk-react and packages/storybook
-and ensure that it is exported in packages/govuk-react/src/index.js`);
+and ensure that it is exported in packages/govuk-react/src/index.ts`);
   });
   return false;
 };
