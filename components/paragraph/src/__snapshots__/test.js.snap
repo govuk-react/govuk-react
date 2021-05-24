@@ -40,13 +40,9 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
           "text",
         ]
       }
-      astPlugins={Array []}
       className="src__StyledParagraph-dkdnni-0 iCtqav"
       escapeHtml={false}
       linkRenderer={[Function]}
-      parserOptions={Object {}}
-      plugins={Array []}
-      rawSourcePos={false}
       renderers={
         Object {
           "link": [Function],
@@ -54,13 +50,64 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
       }
       skipHtml={true}
       source="Some basic text"
-      sourcePos={false}
       supportingText={true}
       transformLinkUri={[Function]}
     >
       <Root
         className="src__StyledParagraph-dkdnni-0 iCtqav"
         key="root-1-1-0"
+        node={
+          Object {
+            "children": Array [
+              Object {
+                "children": Array [
+                  Object {
+                    "position": Object {
+                      "end": Object {
+                        "column": 16,
+                        "line": 1,
+                        "offset": 15,
+                      },
+                      "start": Object {
+                        "column": 1,
+                        "line": 1,
+                        "offset": 0,
+                      },
+                    },
+                    "type": "text",
+                    "value": "Some basic text",
+                  },
+                ],
+                "position": Object {
+                  "end": Object {
+                    "column": 16,
+                    "line": 1,
+                    "offset": 15,
+                  },
+                  "start": Object {
+                    "column": 1,
+                    "line": 1,
+                    "offset": 0,
+                  },
+                },
+                "type": "paragraph",
+              },
+            ],
+            "position": Object {
+              "end": Object {
+                "column": 16,
+                "line": 1,
+                "offset": 15,
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+                "offset": 0,
+              },
+            },
+            "type": "root",
+          }
+        }
       >
         <div
           className="src__StyledParagraph-dkdnni-0 iCtqav"
@@ -70,6 +117,24 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
           >
             <TextRenderer
               key="text-1-1-0"
+              node={
+                Object {
+                  "position": Object {
+                    "end": Object {
+                      "column": 16,
+                      "line": 1,
+                      "offset": 15,
+                    },
+                    "start": Object {
+                      "column": 1,
+                      "line": 1,
+                      "offset": 0,
+                    },
+                  },
+                  "type": "text",
+                  "value": "Some basic text",
+                }
+              }
               nodeKey="text-1-1-0"
               value="Some basic text"
             >
