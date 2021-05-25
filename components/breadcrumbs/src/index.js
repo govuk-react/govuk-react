@@ -69,7 +69,7 @@ const BreadcrumbsListItem = styled('li')({
  * Simple
  *
  * ```jsx
- * import { Breadcrumbs } from 'govuk-react';
+ * import { Breadcrumbs } from 'govuk-react'
  *
  * <Breadcrumbs>
  *   <Breadcrumbs.Link href="/section">Section</Breadcrumbs.Link>

@@ -144,7 +144,7 @@ const ButtonContents = styled('span')({
  * Simple
  *
  * ```jsx
- * import { Button } from 'govuk-react';
+ * import { Button } from 'govuk-react'
  *
  * <Button>My button text</Button>
  * ```
@@ -152,7 +152,7 @@ const ButtonContents = styled('span')({
  * With Icon
  *
  * ```jsx
- * import { ButtonArrow } from 'govuk-react';
+ * import { ButtonArrow } from 'govuk-react'
  *
  * <Button icon={<ButtonArrow />}>My button text</Button>
  * ```

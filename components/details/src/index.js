@@ -86,7 +86,7 @@ const DetailsText = styled('div')({
  * Simple
  *
  * ```jsx
- * import { Details } from 'govuk-react';
+ * import { Details } from 'govuk-react'
  *
  * <Details summary="Help with nationality">
  *   I am a paragraph of hidden details, to be revealed when summary is clicked

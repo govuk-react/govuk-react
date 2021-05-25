@@ -28,7 +28,7 @@ const Fieldset = styled('fieldset')(
  * Simple
  *
  * ```jsx
- * import { Fieldset } from 'govuk-react';
+ * import { Fieldset } from 'govuk-react'
  *
  * <Fieldset>
  *   <Fieldset.Legend>Example</Fieldset.Legend>

@@ -33,7 +33,7 @@ const StyledContainer = styled('div')(
  * Simple
  *
  * ```jsx
- * import { DateField } from 'govuk-react';
+ * import { DateField } from 'govuk-react'
  *
  * <DateField>What is your date of birth?</DateField>
  * ```

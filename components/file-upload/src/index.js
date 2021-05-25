@@ -32,7 +32,7 @@ const StyledInput = styled('input')({
  * Simple
  *
  * ```jsx
- * import { FileUpload } from 'govuk-react';
+ * import { FileUpload } from 'govuk-react'
  *
  * <FileUpload name="group0">Upload a document</FileUpload>
  * ```

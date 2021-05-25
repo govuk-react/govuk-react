@@ -25,7 +25,7 @@ const StyledError = styled('span')(
  * Simple
  *
  * ```jsx
- * import { ErrorText } from 'govuk-react';
+ * import { ErrorText } from 'govuk-react'
  *
  * <ErrorText>Example</ErrorText>
  * ```

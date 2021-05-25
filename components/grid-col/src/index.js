@@ -85,7 +85,7 @@ const StyledColumn = styled('div')(
  * Simple
  *
  * ```jsx
- * import { GridRow , GridCol } from 'govuk-react';
+ * import { GridRow , GridCol } from 'govuk-react'
  *
  * <Fragment>
  *   <GridRow>

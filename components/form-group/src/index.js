@@ -33,7 +33,7 @@ const FormGroup = styled('div')(
  * Simple
  *
  * ```jsx
- * import { FormGroup, Checkbox } from 'govuk-react';
+ * import { FormGroup, Checkbox } from 'govuk-react'
  *
  * <FormGroup>
  *   <Checkbox name="group-1">Example</Checkbox>

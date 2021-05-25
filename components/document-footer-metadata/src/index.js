@@ -24,7 +24,7 @@ const StyledDefinition = styled('li')({
  * Simple
  *
  * ```jsx
- * import { DocumentFooterMetadata, Link } from 'govuk-react';
+ * import { DocumentFooterMetadata, Link } from 'govuk-react'
  *
  * const fromData = [
  *   <Link href="/government/organisations/ministry-of-defence">
@@ -39,7 +39,7 @@ const StyledDefinition = styled('li')({
  * DFM From & part of example
  *
  * ```jsx
- * import { DocumentFooterMetadata, Link } from 'govuk-react';
+ * import { DocumentFooterMetadata, Link } from 'govuk-react'
  *
  * const fromData = [
  *   <Link href="/government/organisations/ministry-of-defence">
@@ -58,7 +58,7 @@ const StyledDefinition = styled('li')({
  * DFM From & other data example
  *
  * ```jsx
- * import { DocumentFooterMetadata, Link } from 'govuk-react';
+ * import { DocumentFooterMetadata, Link } from 'govuk-react'
  *
  * const fromData = [
  *   <Link href="/government/organisations/ministry-of-defence">
