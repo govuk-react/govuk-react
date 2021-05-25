@@ -6,7 +6,7 @@ import Checkbox from '@govuk-react/checkbox';
 import { FormGroupDocumented as FormGroup } from '.';
 
 export default {
-  title: 'Core/Form group',
+  title: 'Form/Form group',
   component: FormGroup,
   decorators: [withKnobs],
 };
