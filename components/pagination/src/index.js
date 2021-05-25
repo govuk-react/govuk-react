@@ -27,7 +27,7 @@ const StyledList = styled('ul')(
  * ### Usage
  *
  * ```jsx
- * import Pagination from '@govuk-react/pagination';
+ * import { Pagination } from 'govuk-react';
  *
  * <Pagination>
  *   <Pagination.Anchor href="#prev" previousPage>
@@ -40,6 +40,7 @@ const StyledList = styled('ul')(
  * ```
  *
  * ### References:
+ *
  * - https://govuk-static.herokuapp.com/component-guide/previous_and_next_navigation
  *
  */
