@@ -9,6 +9,6 @@ export default {
   decorators: [withKnobs],
 };
 
-export const Default = () => DetailsSimple;
+export const Default = DetailsSimple;
 export const SetAsOpen = DetailsOpen;
 export const WithParagraphContents = DetailsParagraph;
