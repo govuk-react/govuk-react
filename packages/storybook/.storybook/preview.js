@@ -1,5 +1,3 @@
-import '../src/stories'
-
 export const parameters = {
   chromatic: {
     viewports: [320, 1200],
@@ -7,7 +5,7 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Core'],
+      order: ['Core', 'Typography', 'Form', 'Navigation', 'Docs'],
     },
   },
 };
