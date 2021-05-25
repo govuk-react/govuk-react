@@ -2,7 +2,7 @@ export * from './focus';
 export * from './spacing';
 export * from './typography';
 
-// Tracks https://github.com/alphagov/govuk-frontend/blob/master/src/settings/_measurements.scss
+// Tracks https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/settings/_measurements.scss
 export const BORDER_WIDTH = '5px';
 export const BORDER_WIDTH_WIDE = '10px';
 export const BORDER_WIDTH_MOBILE = '4px';
@@ -14,7 +14,7 @@ export const SITE_WIDTH = `${SITE_WIDTH_PX}px`;
 
 export const FULL_WIDTH = '100%';
 
-// tracks $govuk-breakpoints at https://github.com/alphagov/govuk-frontend/blob/master/src/settings/_media-queries.scss
+// tracks $govuk-breakpoints at https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/settings/_media-queries.scss
 export const BREAKPOINTS = {
   SMALLSCREEN: '320px', // @deprecated
   LARGESCREEN: '641px', // @deprecated

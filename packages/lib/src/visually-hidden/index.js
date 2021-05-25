@@ -1,6 +1,6 @@
 // This lib is effectively a port of govuk-frontend's visually-hidden sass helpers
 // Tracking:
-// https://github.com/alphagov/govuk-frontend/blob/master/src/helpers/_visually-hidden.scss
+// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/helpers/_visually-hidden.scss
 
 function visuallyHidden({ important: isImportant = true, focusable: isFocusable = false } = {}) {
   const important = isImportant ? ' !important' : '';

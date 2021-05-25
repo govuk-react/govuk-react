@@ -1,5 +1,5 @@
 // Tracking:
-// https://github.com/alphagov/govuk-frontend/blob/master/src/helpers/_shape-arrow.scss
+// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/helpers/_shape-arrow.scss
 const root3 = 1.732; // Math.sqrt(3);
 
 function equilateralHeight(base) {

@@ -1,6 +1,6 @@
 // Tracking:
-// https://github.com/alphagov/govuk-frontend/blob/master/src/helpers/_focusable.scss
-// https://github.com/alphagov/govuk-frontend/blob/master/src/settings/_measurements.scss
+// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/helpers/_focusable.scss
+// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/settings/_measurements.scss
 import { FOCUS_COLOUR } from 'govuk-colours';
 
 export const FOCUS_WIDTH = '3px';
