@@ -23,6 +23,7 @@ const StyledError = styled('span')(
  *
  *
  * Simple
+ *
  * ```jsx
  * <ErrorText>Example</ErrorText>
  * ```
