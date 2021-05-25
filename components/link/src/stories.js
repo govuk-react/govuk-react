@@ -1,15 +1,13 @@
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 
-import Link, { LinkWithRouter } from './fixtures';
+import { LinkDocumented as Link } from '.';
+import LinkFixture, { LinkWithRouter } from './fixtures';
 
-import ReadMe from '../README.md';
+export default {
+  title: 'Typography/Link',
+  component: Link,
+  decorators: [withKnobs],
+};
 
-const stories = storiesOf('Typography/Link', module);
-const examples = storiesOf('Typography/Link/Examples', module);
-stories.addDecorator(withDocsCustom(ReadMe));
-stories.addDecorator(withKnobs);
-
-stories.add('Component default', Link);
-examples.add('With react-router', LinkWithRouter);
+export const Default = LinkFixture;
+export const WithReactRouter = LinkWithRouter;
