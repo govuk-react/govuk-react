@@ -27,8 +27,7 @@ const StyledRow = styled('div')(
  * Simple
  *
  * ```jsx
- * import GridRow from '@govuk-react/grid-row';
- * import GridCol from '@govuk-react/grid-col';
+ * import { GridRow, GridCol } from 'govuk-react';
  *
  * <Fragment>
  *   <GridRow>
@@ -38,6 +37,8 @@ const StyledRow = styled('div')(
  *   </GridRow>
  * </Fragment>
  * ```
+ *
+ * See GridCol for extended usage.
  *
  * ### References:
  *
