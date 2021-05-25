@@ -124,7 +124,7 @@ const StyledCheckboxHint = styled(HintText)({
  * ```
  *
  * ### References:
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/checkboxes/_checkboxes.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/checkboxes/_checkboxes.scss
  *
  */
 const Checkbox = ({ children, className, hint, ...props }) => (

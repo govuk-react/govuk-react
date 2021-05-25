@@ -113,8 +113,8 @@ const FooterContainer = styled('footer')(
  *
  * ### References:
  * - https://design-system.service.gov.uk/components/footer/
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/footer/template.njk
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/footer/_footer.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/footer/template.njk
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/footer/_footer.scss
  *
  */
 const Footer = ({ children, container: Container, copyright, meta, ...props }) => (

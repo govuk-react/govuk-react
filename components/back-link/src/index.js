@@ -59,7 +59,7 @@ const Anchor = styled('a')(
  * ```
  *
  * ### References:
- * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/back-link
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/back-link
  *
  */
 const BackLink = (props) => <Anchor {...props} />;

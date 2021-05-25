@@ -90,7 +90,7 @@ const BreadcrumbsListItem = styled('li')({
  * ```
  *
  * ### References:
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/breadcrumbs/_breadcrumbs.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/breadcrumbs/_breadcrumbs.scss
  *
  */
 const Breadcrumbs = ({ children, ...props }) => (

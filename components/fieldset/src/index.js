@@ -48,7 +48,7 @@ const Fieldset = styled('fieldset')(
  *
  * ### References
  * - https://design-system.service.gov.uk/components/fieldset/
- * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/fieldset
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/fieldset
  * - https://design-system.service.gov.uk/get-started/labels-legends-headings/
  */
 const FieldsetDocumented = (props) => <Fieldset {...props} />;

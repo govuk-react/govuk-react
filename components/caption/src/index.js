@@ -56,7 +56,7 @@ const StyledCaption = styled('span')(
  * ```
  *
  * ### References
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/core/_typography.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_typography.scss
  * - https://design-system.service.gov.uk/styles/typography/#headings
  */
 const Caption = (props) => <StyledCaption {...props} />;
