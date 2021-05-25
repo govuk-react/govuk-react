@@ -43,7 +43,10 @@ const StyledHeading = styled('h1')(
  *
  *
  * Simple
+ *
  * ```jsx
+ * import { Heading } from 'govuk-react'
+ *
  * <Heading>Heading text</Heading>
  * ```
  *
@@ -51,8 +54,9 @@ const StyledHeading = styled('h1')(
  * that will pick the appropriate tag as well as set the appropriate corresponding font size.
  *
  * Using shortcuts
+ *
  * ```jsx
- * import { H1, H2, H3, H4, H5, H6 } from "@govuk-react/heading";
+ * import { H1, H2, H3, H4, H5, H6 } from 'govuk-react'
  *
  * <H1>h1</H1>
  * <H2>h2</H2>
@@ -63,6 +67,7 @@ const StyledHeading = styled('h1')(
  * ```
  *
  * Differing sizes
+ *
  * ```jsx
  * <H6 size={80}>
  *   H6 with font size 80
@@ -74,14 +79,16 @@ const StyledHeading = styled('h1')(
  * ```
  *
  * Props pass through
+ *
  * ```jsx
  * <Heading onClick={() => { console.log('clicked'); }}>Click me</Heading>
  * ```
  *
  * ### References:
+ *
  * - https://design-system.service.gov.uk/styles/typography/#headings
  * - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_typography.scss
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/core/_typography.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_typography.scss
  */
 const Heading = ({ level, ...props }) => {
   if (level) {
