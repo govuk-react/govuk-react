@@ -1,4 +1,4 @@
-// https://github.com/alphagov/govuk-frontend/tree/master/src/components/
+// https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
 
 import styled from 'styled-components';
 import React from 'react';
@@ -35,12 +35,16 @@ const StyledLabel = styled('label')(
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
+ * import { Label } from 'govuk-react'
+ *
  * <Label>Example</Label>
  * ```
  *
  * ### References:
- * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/
+ *
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
  *
  */
 const Label = (props) => <StyledLabel {...props} />;
