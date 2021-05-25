@@ -1,29 +1,26 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 
-import Fieldset from '.';
+import { FieldsetDocumented as Fieldset } from '.';
 
-import ReadMe from '../README.md';
+export default {
+  title: 'Core/Fieldset',
+  component: Fieldset,
+  decorators: [withKnobs],
+};
 
-const stories = storiesOf('Form/Fieldset', module);
-const examples = storiesOf('Form/Fieldset/Examples', module);
-stories.addDecorator(withKnobs);
-stories.addDecorator(withDocsCustom(ReadMe));
-
-stories.add('Component default', () => (
+export const Default = () => (
   <Fieldset>
     <Fieldset.Legend size={text('legend size', 'LARGE')} isPageHeading={boolean('legend isPageHeading', false)}>
       {text('legend contents', 'Example legend')}
     </Fieldset.Legend>
   </Fieldset>
-));
+);
 
-examples.add('Legend as page heading', () => (
+export const LegendAsPageHeading = () => (
   <Fieldset>
     <Fieldset.Legend size="XLARGE" isPageHeading>
       Legend as page heading
     </Fieldset.Legend>
   </Fieldset>
-));
+);

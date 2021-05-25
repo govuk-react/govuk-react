@@ -26,6 +26,7 @@ const Fieldset = styled('fieldset')(
  * fieldset when asking for an address.
  *
  * Simple
+ *
  * ```jsx
  * <Fieldset>
  *   <Fieldset.Legend>Example</Fieldset.Legend>
@@ -36,6 +37,7 @@ const Fieldset = styled('fieldset')(
  * and a `isPageHeading` prop for use when you wish your legend to be used as a page heading
  *
  * Custom legend
+ *
  * ```jsx
  * <Fieldset>
  *   <Fieldset.Legend size="XL" isPageHeading>Legend as page heading</Fieldset.Legend>
@@ -56,6 +58,7 @@ FieldsetDocumented.propTypes = {
 Fieldset.propTypes = FieldsetDocumented.propTypes;
 
 Fieldset.Legend = Legend;
+FieldsetDocumented.Legend = Legend;
 
 export { FieldsetDocumented };
 export default Fieldset;
