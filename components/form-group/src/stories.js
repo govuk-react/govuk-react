@@ -1,25 +1,23 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+
 import { boolean, withKnobs } from '@storybook/addon-knobs';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 import Checkbox from '@govuk-react/checkbox';
 
-import FormGroup from '.';
+import { FormGroupDocumented as FormGroup } from '.';
 
-import ReadMe from '../README.md';
+export default {
+  title: 'Core/Form group',
+  component: FormGroup,
+  decorators: [withKnobs],
+};
 
-const stories = storiesOf('Form/FormGroup', module);
-stories.addDecorator(withKnobs);
-
-stories.add('Component default', () =>
-  withDocsCustom(ReadMe)(() => (
-    <FormGroup error={boolean('error', false)}>
-      <Checkbox name="group-1">Example</Checkbox>
-    </FormGroup>
-  ))
+export const Default = () => (
+  <FormGroup error={boolean('error', false)}>
+    <Checkbox name="group-1">Example</Checkbox>
+  </FormGroup>
 );
 
-stories.add('Nested FormGroups', () => (
+export const NestedFormGroups = () => (
   <FormGroup error={boolean('outer error', false)}>
     <Checkbox name="group-0">Outer FormGroup</Checkbox>
     <FormGroup error={boolean('inner error 1', false)}>
@@ -29,15 +27,15 @@ stories.add('Nested FormGroups', () => (
       <Checkbox name="group-2">Second inner FormGroup</Checkbox>
     </FormGroup>
   </FormGroup>
-));
+);
 
-stories.add('Error prop set', () => (
+export const ErrorPropSet = () => (
   <FormGroup error>
     <Checkbox name="group-1">Example</Checkbox>
   </FormGroup>
-));
+);
 
-stories.add('Nested FormGroups with inner groups error props set', () => (
+export const NestedFormGroupsWithInnerGroupsErrorPropsSet = () => (
   <FormGroup>
     <Checkbox name="group-0">Outer FormGroup</Checkbox>
     <FormGroup error>
@@ -47,9 +45,9 @@ stories.add('Nested FormGroups with inner groups error props set', () => (
       <Checkbox name="group-2">Second inner FormGroup</Checkbox>
     </FormGroup>
   </FormGroup>
-));
+);
 
-stories.add('Nested FormGroups with all groups error props set', () => (
+export const NestedFormGroupsWithAllGroupsErrorPropsSet = () => (
   <FormGroup error>
     <Checkbox name="group-0">Outer FormGroup</Checkbox>
     <FormGroup error>
@@ -59,4 +57,4 @@ stories.add('Nested FormGroups with all groups error props set', () => (
       <Checkbox name="group-2">Second inner FormGroup</Checkbox>
     </FormGroup>
   </FormGroup>
-));
+);
