@@ -1,11 +1,26 @@
-import { storiesOf } from '@storybook/react';
-import { withDocsCustom } from '@govuk-react/storybook-components';
+import React from 'react';
+import GridRow from '@govuk-react/grid-row';
+import GridCol from '@govuk-react/grid-col';
 
 import Main from '.';
-import ReadMe from '../README.md';
 
-const stories = storiesOf('Layout/Main', module);
+export default {
+  title: 'Layout/Main',
+  component: Main,
+};
 
-stories.addDecorator(withDocsCustom(ReadMe));
-
-stories.add('Component default', Main);
+export const Default = () => (
+  <Main>
+    <GridRow>
+      <GridCol setWidth="one-half">
+        Aliquip et Lorem aliquip voluptate. In laborum dolor fugiat mollit exercitation occaecat deserunt sunt quis.
+        Duis eu veniam id minim culpa velit ullamco eiusmod cillum in aute voluptate consequat. Officia tempor qui Lorem
+        labore qui Lorem.
+      </GridCol>
+      <GridCol setWidth="one-half">
+        Duis magna consectetur pariatur ea consequat ipsum nisi sint commodo. Quis ut ipsum aliqua ea laboris amet ea
+        aliqua eu dolor cupidatat aute officia. Esse ad ea eu mollit reprehenderit est aliquip.
+      </GridCol>
+    </GridRow>
+  </Main>
+);
