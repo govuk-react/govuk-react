@@ -34,11 +34,13 @@ const FooterContainer = styled('footer')(
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
  * <Footer />
  * ```
  *
  * Footer with Copyright information
+ *
  * ```jsx
  * // Import self hosted copyright image
  * import crest from './govuk-crest.png';
@@ -58,6 +60,7 @@ const FooterContainer = styled('footer')(
  * ```
  *
  * Footer with navigation.  There is also the option to provide footer links with, or without React/Reach Router.
+ *
  * ```jsx
  * import { Link } from 'react-router-dom';
  *
@@ -81,6 +84,7 @@ const FooterContainer = styled('footer')(
  * ```
  *
  * Footer with links in meta area
+ *
  * ```jsx
  * <Footer meta={
  *     <Footer.MetaLinks heading="Support links">
@@ -93,6 +97,7 @@ const FooterContainer = styled('footer')(
  * ```
  *
  * Footer with custom content in meta area
+ *
  * ```jsx
  * <Footer meta={
  *     <Footer.MetaCustom>
