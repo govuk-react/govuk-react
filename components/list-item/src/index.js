@@ -18,13 +18,17 @@ const ListItem = styled('li')(
  *
  *
  * Simple
+ *
  * ```jsx
+ * import { ListItem } from 'govuk-react'
+ *
  * <ListItem>List item example</ListItem>
  * ```
  *
  * With a link
+ *
  * ```jsx
- * import { Link } from '@govuk-react/link';
+ * import { ListItem, Link } from 'govuk-react';
  *
  * <ListItem>
  *   <Link href="https://www.google.com/">List item example</Link>
@@ -32,7 +36,7 @@ const ListItem = styled('li')(
  * ```
  *
  * ### References
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/core/_lists.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_lists.scss
  */
 
 // Do the react-docgen dance
