@@ -1,16 +1,15 @@
-import { storiesOf } from '@storybook/react';
+
 import { withKnobs } from '@storybook/addon-knobs';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 
+import Paragraph from '.';
 import { SupportingParagraph, ParagraphWithKnobs } from './fixtures';
-import ReadMe from '../README.md';
 
-const stories = storiesOf('Typography/Paragraph', module);
-const examples = storiesOf('Typography/Paragraph/Examples', module);
+export default {
+  title: 'Typography/Paragraph',
+  decorators: [withKnobs],
+  component: Paragraph,
+};
 
-stories.addDecorator(withKnobs);
-stories.addDecorator(withDocsCustom(ReadMe));
+export const Default = ParagraphWithKnobs;
 
-stories.add('Component default', ParagraphWithKnobs);
-
-examples.add('Supporting paragaph', SupportingParagraph);
+export const SupportingParagaph = SupportingParagraph;
