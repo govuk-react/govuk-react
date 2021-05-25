@@ -36,6 +36,8 @@ const FooterContainer = styled('footer')(
  * Simple
  *
  * ```jsx
+ * import { Footer } from 'govuk-react';
+ *
  * <Footer />
  * ```
  *

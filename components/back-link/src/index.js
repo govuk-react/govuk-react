@@ -41,6 +41,8 @@ const Anchor = styled('a')(
  * Simple
  *
  * ```jsx
+ * import { BackLink } from 'govuk-react';
+ *
  * <BackLink>Back</BackLink>
  * ```
  *

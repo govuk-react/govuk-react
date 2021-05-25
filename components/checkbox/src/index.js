@@ -94,6 +94,8 @@ const StyledCheckboxHint = styled(HintText)({
  * Simple
  *
  * ```jsx
+ * import { Checkbox } from 'govuk-react';
+ *
  * <Checkbox>Text displayed next to checkbox</Checkbox>
  * ```
  *

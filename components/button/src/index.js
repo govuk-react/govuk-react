@@ -144,6 +144,8 @@ const ButtonContents = styled('span')({
  * Simple
  *
  * ```jsx
+ * import { Button } from 'govuk-react';
+ *
  * <Button>My button text</Button>
  * ```
  *

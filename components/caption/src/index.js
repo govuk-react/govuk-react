@@ -41,6 +41,8 @@ const StyledCaption = styled('span')(
  * Simple
  *
  * ```jsx
+ * import { Caption } from 'govuk-react';
+ *
  * <Caption>Caption heading text</Caption>
  * ```
  *
