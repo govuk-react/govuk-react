@@ -158,6 +158,7 @@ const ButtonContents = styled('span')({
  * ```
  *
  * ### References:
+ *
  * - https://design-system.service.gov.uk/components/button/
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/button/_button.scss
  *

@@ -68,6 +68,7 @@ const StyledInput = styled('input')({
  * ```
  *
  * ### References:
+ *
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/file-upload
  *
  */

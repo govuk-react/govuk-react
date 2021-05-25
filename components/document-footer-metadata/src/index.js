@@ -82,6 +82,7 @@ const StyledDefinition = styled('li')({
  * ```
  *
  * ### References:
+ *
  * - https://govuk-static.herokuapp.com/component-guide/document_footer
  */
 const DocumentFooterMetadata = ({ from, partOf, other, ...props }) => {

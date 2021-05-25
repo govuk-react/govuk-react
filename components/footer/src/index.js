@@ -112,6 +112,7 @@ const FooterContainer = styled('footer')(
  * NB <Footer.Link /> is styled extention of @govuk-react/link
  *
  * ### References:
+ *
  * - https://design-system.service.gov.uk/components/footer/
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/footer/template.njk
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/footer/_footer.scss

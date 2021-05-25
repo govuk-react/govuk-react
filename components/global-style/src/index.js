@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
  * import GlobalStyle from '@govuk-react/global-style';
  *
@@ -28,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
  * ```
  *
  * ### References:
+ *
  * - https://styled-components.com/docs/api#createglobalstyle
  *
  */
