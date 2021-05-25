@@ -30,11 +30,13 @@ const StyledInput = styled('input')({
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
  * <FileUpload name="group0">Upload a document</FileUpload>
  * ```
  *
  * Input with hint text
+ *
  * ```jsx
  * <FileUpload
  *   name="group1"
@@ -46,6 +48,7 @@ const StyledInput = styled('input')({
  * ```
  *
  * Input with hint text & error
+ *
  * ```jsx
  * const meta = {
  *   touched: true,
