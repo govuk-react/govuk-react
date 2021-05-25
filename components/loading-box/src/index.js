@@ -119,7 +119,10 @@ const Overlay = styled('div')({
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
+ * import { LoadingBox } from 'govuk-react'
+ *
  * <LoadingBox loading>
  *   Lorem ipsum dolor sit amet
  * </LoadingBox>
@@ -140,6 +143,7 @@ const Overlay = styled('div')({
  * ```
  *
  * ### References:
+ *
  * - https://govuk-loader-prototype.herokuapp.com/components/loader
  *
  */
