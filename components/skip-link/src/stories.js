@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import { storiesOf } from '@storybook/react';
-import { withDocsCustom } from '@govuk-react/storybook-components';
+
 import Paragraph from '@govuk-react/paragraph';
 
-import SkipLink from '.';
+import SkipLink, { SkipLinkDocumented } from '.';
 
-import ReadMe from '../README.md';
-
-const stories = storiesOf('Navigation/SkipLink', module);
-stories.addDecorator(withDocsCustom(ReadMe));
-
+export default {
+  title: 'Core/Skip link',
+  component: SkipLinkDocumented,
+};
 class AutoFocussed extends Component {
   constructor(props) {
     super(props);
@@ -26,27 +24,23 @@ class AutoFocussed extends Component {
   }
 }
 
-stories.add(
-  'Component default',
-  () => (
-    <div>
-      <Paragraph>
-        The skip link component in this example should automatically focus. If it loses focus, tab to this example to
-        see it.
+export const Default = () => (
+  <div>
+    <Paragraph>
+      The skip link component in this example should automatically focus. If it loses focus, tab to this example to see
+      it.
+    </Paragraph>
+    <AutoFocussed href="#main-content">Skip to main content</AutoFocussed>
+    <br />
+    <br />
+    <div id="main-content">
+      <Paragraph id="main-content">
+        This paragraph is within a div with an id of `main-content` to match the `href=&quot;#main-content&quot;` prop
+        set on the SkipLink component in this example.
       </Paragraph>
-      <AutoFocussed href="#main-content">Skip to main content</AutoFocussed>
-      <br />
-      <br />
-      <div id="main-content">
-        <Paragraph id="main-content">
-          This paragraph is within a div with an id of `main-content` to match the `href=&quot;#main-content&quot;` prop
-          set on the SkipLink component in this example.
-        </Paragraph>
-        <Paragraph>
-          NB if you are using Safari you may need to go to Preferences &gt; Advanced to enable keyboard focussing.
-        </Paragraph>
-      </div>
+      <Paragraph>
+        NB if you are using Safari you may need to go to Preferences &gt; Advanced to enable keyboard focussing.
+      </Paragraph>
     </div>
-  ),
-  { chromatic: { delay: 300 } }
+  </div>
 );
