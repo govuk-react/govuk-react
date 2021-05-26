@@ -1,4 +1,3 @@
-
 import { withKnobs } from '@storybook/addon-knobs';
 
 import Paragraph from '.';
