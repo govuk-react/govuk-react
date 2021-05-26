@@ -1,17 +1,14 @@
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 
+import { DocumentedTag } from '.';
 import { TagWithKnobs, TagInactive } from './fixtures';
-import ReadMe from '../README.md';
 
-const stories = storiesOf('Misc/Tag', module);
-const examples = storiesOf('Misc/Tag/Examples', module);
+export default {
+  title: 'Core/Tag',
+  component: DocumentedTag,
+  decorators: [withKnobs],
+};
 
-stories.addDecorator(withDocsCustom(ReadMe));
-stories.addDecorator(withKnobs);
-examples.addDecorator(withKnobs);
+export const Default = TagWithKnobs;
 
-stories.add('Component default', TagWithKnobs);
-
-examples.add('Inactive', TagInactive);
+export const Inactive = TagInactive;
