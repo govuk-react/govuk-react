@@ -5,7 +5,7 @@ import { withKnobs, color, text } from '@storybook/addon-knobs';
 import ButtonArrowComponent from '.';
 
 export default {
-  title: 'Icons',
+  title: 'Utility/Icons',
   decorators: [withKnobs],
 };
 
