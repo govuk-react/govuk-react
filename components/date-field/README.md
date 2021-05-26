@@ -10,11 +10,15 @@ DateField
 ### Usage
 
 Simple
+
 ```jsx
+import { DateField } from 'govuk-react'
+
 <DateField>What is your date of birth?</DateField>
 ```
 
 Date with hint text
+
 ```jsx
 <DateField hintText="For example, 31 03 1980">
   What is your date of birth?
@@ -22,6 +26,7 @@ Date with hint text
 ```
 
 Date with hint text & error
+
 ```jsx
 <DateField
   hintText="For example, 31 03 1980"
@@ -32,6 +37,7 @@ Date with hint text & error
 ```
 
 With custom input name props
+
 ```jsx
 <DateField hintText="For example, 31 03 1980"
   inputNames={{
@@ -45,7 +51,8 @@ With custom input name props
 ```
 
 ### References:
-- https://github.com/alphagov/govuk-frontend/tree/master/src/components/date-field
+
+- https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/date-field
 
 ### Properties
 Prop | Required | Default | Type | Description

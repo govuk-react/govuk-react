@@ -10,11 +10,15 @@ Footer
 ### Usage
 
 Simple
+
 ```jsx
+import { Footer } from 'govuk-react'
+
 <Footer />
 ```
 
 Footer with Copyright information
+
 ```jsx
 // Import self hosted copyright image
 import crest from './govuk-crest.png';
@@ -34,6 +38,7 @@ import crest from './govuk-crest.png';
 ```
 
 Footer with navigation.  There is also the option to provide footer links with, or without React/Reach Router.
+
 ```jsx
 import { Link } from 'react-router-dom';
 
@@ -57,6 +62,7 @@ import { Link } from 'react-router-dom';
 ```
 
 Footer with links in meta area
+
 ```jsx
 <Footer meta={
     <Footer.MetaLinks heading="Support links">
@@ -69,6 +75,7 @@ Footer with links in meta area
 ```
 
 Footer with custom content in meta area
+
 ```jsx
 <Footer meta={
     <Footer.MetaCustom>
@@ -81,9 +88,10 @@ Footer with custom content in meta area
 NB <Footer.Link /> is styled extention of @govuk-react/link
 
 ### References:
+
 - https://design-system.service.gov.uk/components/footer/
-- https://github.com/alphagov/govuk-frontend/blob/master/src/components/footer/template.njk
-- https://github.com/alphagov/govuk-frontend/blob/master/src/components/footer/_footer.scss
+- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/footer/template.njk
+- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/footer/_footer.scss
 
 ### Properties
 Prop | Required | Default | Type | Description

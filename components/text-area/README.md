@@ -10,11 +10,15 @@ TextArea
 ### Usage
 
 Simple
+
 ```jsx
+import { TextArea } from 'govuk-react'
+
 <TextArea name="group1">Description of what you saw</TextArea>
 ```
 
 TextArea with hint text
+
 ```jsx
 <TextArea name="group1" hint={['Enter as many words as you like']}>
   Description of what you saw
@@ -22,6 +26,7 @@ TextArea with hint text
 ```
 
 TextArea with hint text & error
+
 ```jsx
 const meta = {
   touched: true,
@@ -38,7 +43,8 @@ const meta = {
 ```
 
 ### References:
-- https://github.com/alphagov/govuk-frontend/tree/master/src/components/textarea
+
+- https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/textarea
 
 ### Properties
 Prop | Required | Default | Type | Description

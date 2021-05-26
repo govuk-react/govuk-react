@@ -10,20 +10,24 @@ Caption
 ### Usage
 
 Simple
+
 ```jsx
+import { Caption } from 'govuk-react'
+
 <Caption>Caption heading text</Caption>
 ```
 
 With another header
+
 ```jsx
-import { H1 } from '@govuk-react/heading';
+import { H1 } from 'govuk-react'
 
 <Caption size="XL">Supporting header text</Caption>
 <H1>Main header text</H1>
 ```
 
 ### References
-- https://github.com/alphagov/govuk-frontend/blob/master/src/core/_typography.scss
+- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_typography.scss
 - https://design-system.service.gov.uk/styles/typography/#headings
 
 ### Properties

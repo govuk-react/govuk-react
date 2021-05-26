@@ -11,13 +11,17 @@ ListItem
 
 
 Simple
+
 ```jsx
+import { ListItem } from 'govuk-react'
+
 <ListItem>List item example</ListItem>
 ```
 
 With a link
+
 ```jsx
-import { Link } from '@govuk-react/link';
+import { ListItem, Link } from 'govuk-react';
 
 <ListItem>
   <Link href="https://www.google.com/">List item example</Link>
@@ -25,7 +29,7 @@ import { Link } from '@govuk-react/link';
 ```
 
 ### References
-- https://github.com/alphagov/govuk-frontend/blob/master/src/core/_lists.scss
+- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_lists.scss
 
 ### Properties
 Prop | Required | Default | Type | Description

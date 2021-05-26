@@ -11,12 +11,15 @@ HintText
 
 
 Simple
+
 ```jsx
+import { HintText } from 'govuk-react'
+
 <HintText>Example</HintText>
 ```
 
 ### References
-- https://github.com/alphagov/govuk-frontend/blob/master/src/components/hint/_hint.scss
+- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/hint/_hint.scss
 
 ### Properties
 Prop | Required | Default | Type | Description

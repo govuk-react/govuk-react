@@ -12,6 +12,7 @@ A Styled Component to apply global style for use with govuk-react.
 ### Usage
 
 Simple
+
 ```jsx
 import GlobalStyle from '@govuk-react/global-style';
 
@@ -22,6 +23,7 @@ const MyApp = () => <>
 ```
 
 ### References:
+
 - https://styled-components.com/docs/api#createglobalstyle
 
 

@@ -15,7 +15,10 @@ Please note that this component uses a <details> component, which requires a pol
 
 
 Simple
+
 ```jsx
+import { Details } from 'govuk-react'
+
 <Details summary="Help with nationality">
   I am a paragraph of hidden details, to be revealed when summary is clicked
 </Details>
@@ -23,7 +26,7 @@ Simple
 
 ### References
 - https://design-system.service.gov.uk/components/details/
-- https://github.com/alphagov/govuk-frontend/blob/master/src/components/details/_details.scss
+- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/details/_details.scss
 
 ### Properties
 Prop | Required | Default | Type | Description

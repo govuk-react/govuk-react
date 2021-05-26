@@ -10,9 +10,9 @@ OrderedList
 ### Usage
 
 Simple
+
 ```jsx
-import OrderedList from '@govuk-react/ordered-list';
-import ListItem from '@govuk-react/list-item';
+import { OrderedList, ListItem } from 'govuk-react'
 
 <OrderedList>
   <ListItem>Lorem ipsum dolor sit.</ListItem>
@@ -21,10 +21,10 @@ import ListItem from '@govuk-react/list-item';
 </OrderedList>
 ```
 
-with Roman
+With Roman
+
 ```jsx
-import OrderedList from '@govuk-react/ordered-list';
-import ListItem from '@govuk-react/list-item';
+import { OrderedList, ListItem } from 'govuk-react'
 
 <OrderedList listStyleType="lower-roman">
   <ListItem>Lorem ipsum dolor sit.</ListItem>
@@ -35,7 +35,7 @@ import ListItem from '@govuk-react/list-item';
 
 ### References
 - https://design-system.service.gov.uk/styles/typography/#lists
-- https://github.com/alphagov/govuk-frontend/blob/master/src/core/_lists.scss
+- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_lists.scss
 
 ### TODO
 - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md

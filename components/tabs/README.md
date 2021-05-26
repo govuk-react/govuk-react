@@ -7,13 +7,10 @@ Tabs
 ```
 <!-- STORY -->
 
-### Import
+### Simple Example
 ```js
-import Tabs from '@govuk-react/tabs';
-```
+import { Tabs } from 'govuk-react';
 
-##### Simple Example
-```js
 class App extends Component {
   constructor() {
     super();
@@ -66,7 +63,8 @@ class App extends Component {
 ```
 
 ##### Hooks Example
-```js
+
+```jsx
 const App = ({ defaultIndex }) => {
   const [tabIndex, setTabIndex] = React.useState(defaultIndex);
 
@@ -128,7 +126,8 @@ const App = ({ defaultIndex }) => {
 
 
 ### References:
-- https://github.com/alphagov/govuk-frontend/tree/master/src/components/tabs
+
+- https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/tabs
 - https://design-system.service.gov.uk/components/tabs/
 
 ### Properties

@@ -18,16 +18,21 @@ font-weight.
 ### Usage
 
 Simple
+
 ```jsx
+import { Paragraph } from 'govuk-react'
+
 <Paragraph>Lorem `ipsum` **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
 ```
 
 As supporting text
+
 ```jsx
 <Paragraph supportingText>Lorem `ipsum` **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
 ```
 
 With a block of code
+
 ````jsx
 <Paragraph>
   Some other text...

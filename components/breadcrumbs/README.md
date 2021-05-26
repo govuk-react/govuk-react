@@ -10,7 +10,10 @@ Breadcrumbs
 ### Usage
 
 Simple
+
 ```jsx
+import { Breadcrumbs } from 'govuk-react'
+
 <Breadcrumbs>
   <Breadcrumbs.Link href="/section">Section</Breadcrumbs.Link>
   <Breadcrumbs.Link href="/section/sub-section">Sub-section</Breadcrumbs.Link>
@@ -19,6 +22,7 @@ Simple
 ```
 
 Providing links with, or without React Router
+
 ```jsx
 import { Link } from 'react-router-dom';
 
@@ -29,7 +33,8 @@ import { Link } from 'react-router-dom';
 ```
 
 ### References:
-- https://github.com/alphagov/govuk-frontend/blob/master/src/components/breadcrumbs/_breadcrumbs.scss
+
+- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/breadcrumbs/_breadcrumbs.scss
 
 ### Properties
 Prop | Required | Default | Type | Description

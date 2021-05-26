@@ -10,11 +10,15 @@ FileUpload
 ### Usage
 
 Simple
+
 ```jsx
+import { FileUpload } from 'govuk-react'
+
 <FileUpload name="group0">Upload a document</FileUpload>
 ```
 
 Input with hint text
+
 ```jsx
 <FileUpload
   name="group1"
@@ -26,6 +30,7 @@ Input with hint text
 ```
 
 Input with hint text & error
+
 ```jsx
 const meta = {
   touched: true,
@@ -43,7 +48,8 @@ const meta = {
 ```
 
 ### References:
-- https://github.com/alphagov/govuk-frontend/tree/master/src/components/file-upload
+
+- https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/file-upload
 
 ### Properties
 Prop | Required | Default | Type | Description

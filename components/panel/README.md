@@ -10,11 +10,15 @@ Panel
 ### Usage
 
 Simple
+
 ```jsx
+import { Panel } from 'govuk-react'
+
 <Panel title="Application complete" />
 ```
 
 Panel with header and HTML body
+
 ```jsx
 <Panel title="Application complete">
   Your reference number<br />
@@ -23,7 +27,8 @@ Panel with header and HTML body
 ```
 
 ### References:
-- https://github.com/alphagov/govuk-frontend/tree/master/src/components/panel
+
+- https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/panel
 
 ### Properties
 Prop | Required | Default | Type | Description
