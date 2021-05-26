@@ -1,31 +1,28 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import LabelText from '@govuk-react/label-text';
 import Select, { SelectInput } from '.';
-import ReadMe from '../README.md';
 
 const meta = {
   touched: true,
   error: 'Example',
 };
 
-const stories = storiesOf('Form/Select', module);
-const examples = storiesOf('Form/Select/Examples', module);
-
-stories.addDecorator(withDocsCustom(ReadMe));
+export default {
+  title: 'Form/Select',
+  component: Select,
+};
 
 // TODO: add a synthetic onChange event
-stories.add('Component default', () => (
+export const Default = () => (
   <Select name="group1" label="This is a label">
     <option value="0">GOV.UK elements option 1</option>
     <option value="1">GOV.UK elements option 2</option>
     <option value="2">GOV.UK elements option 3</option>
   </Select>
-));
+);
 
-examples.add('Select with hintText', () => (
+export const SelectWithHintText = () => (
   <Select
     name="group1"
     label="This is a label"
@@ -35,9 +32,9 @@ examples.add('Select with hintText', () => (
     <option value="1">GOV.UK elements option 2</option>
     <option value="2">GOV.UK elements option 3</option>
   </Select>
-));
+);
 
-examples.add('Select with hintText & error', () => (
+export const SelectWithHintTextError = () => (
   <Select
     name="group1"
     label="This is a label"
@@ -48,9 +45,9 @@ examples.add('Select with hintText & error', () => (
     <option value="1">GOV.UK elements option 2</option>
     <option value="2">GOV.UK elements option 3</option>
   </Select>
-));
+);
 
-examples.add('Standalone input with inline label', () => (
+export const StandaloneInputWithInlineLabel = () => (
   <label>
     <LabelText>
       Sort by:&nbsp;
@@ -61,4 +58,4 @@ examples.add('Standalone input with inline label', () => (
       </SelectInput>
     </LabelText>
   </label>
-));
+);
