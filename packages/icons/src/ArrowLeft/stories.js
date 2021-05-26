@@ -1,15 +1,19 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+
 import { withKnobs, color, text } from '@storybook/addon-knobs';
 
-import ArrowLeft from '.';
+import ArrowLeftComponent from '.';
 
-const stories = storiesOf('Icons', module);
-stories.addDecorator(withKnobs);
+export default {
+  title: 'Icons',
+  decorators: [withKnobs],
+};
 
-stories.add('ArrowLeft', () => {
+export const ArrowLeft = () => {
   const fillColour = color('fill', 'black');
-  const width = text('width', '100%');
-  const height = text('height', '100%');
-  return <ArrowLeft width={width} height={height} fill={fillColour} title="Example ArrowLeft implementation" />;
-});
+  const width = text('width', '256px');
+  const height = text('height', '256px');
+  return (
+    <ArrowLeftComponent width={width} height={height} fill={fillColour} title="Example ArrowLeft implementation" />
+  );
+};
