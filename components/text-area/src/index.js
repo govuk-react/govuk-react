@@ -1,4 +1,4 @@
-// https://github.com/alphagov/govuk-frontend/tree/master/src/components/textarea
+// https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/textarea
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -42,11 +42,15 @@ const TextAreaField = styled('textarea')(
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
+ * import { TextArea } from 'govuk-react'
+ *
  * <TextArea name="group1">Description of what you saw</TextArea>
  * ```
  *
  * TextArea with hint text
+ *
  * ```jsx
  * <TextArea name="group1" hint={['Enter as many words as you like']}>
  *   Description of what you saw
@@ -54,6 +58,7 @@ const TextAreaField = styled('textarea')(
  * ```
  *
  * TextArea with hint text & error
+ *
  * ```jsx
  * const meta = {
  *   touched: true,
@@ -70,7 +75,8 @@ const TextAreaField = styled('textarea')(
  * ```
  *
  * ### References:
- * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/textarea
+ *
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/textarea
  *
  */
 const TextArea = ({ children, hint, meta, input, ...props }) => (
