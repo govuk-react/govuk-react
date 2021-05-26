@@ -13,4 +13,5 @@ ExampleApplication.parameters = {
     docs: { hidden: true },
     'storybook/docs/panel': { hidden: true },
   },
+  viewMode: 'canvas',
 };
