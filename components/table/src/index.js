@@ -1,4 +1,4 @@
-// https://github.com/alphagov/govuk-frontend/blob/master/src/components/table/_table.scss
+// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/table/_table.scss
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -31,7 +31,10 @@ const StyledTable = styled('table')(
  * The Table component provides a construction kit of elements to create a table
  *
  * Component default
+ *
  * ```jsx
+ * import { Table } from 'govuk-react'
+ *
  * <Table caption="Dates and amounts">
  *  <Table.Row>
  *    <Table.CellHeader>First 6 weeks</Table.CellHeader>
@@ -53,6 +56,7 @@ const StyledTable = styled('table')(
  * ```
  *
  * Numeric tabular data
+ *
  * ```jsx
  * const example2Head = (
  *   <Table.Row>
@@ -90,6 +94,7 @@ const StyledTable = styled('table')(
  * ```
  *
  * Setting custom column widths
+ *
  * ```jsx
  * <Table
  *   caption="Custom header"
@@ -110,7 +115,8 @@ const StyledTable = styled('table')(
  * ```
  *
  * ### References:
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/table/_table.scss
+ *
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/table/_table.scss
  *
  */
 const Table = ({ caption, children, body = children, head, ...props }) => (

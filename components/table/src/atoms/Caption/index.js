@@ -1,4 +1,4 @@
-// https://github.com/alphagov/govuk-frontend/blob/master/src/components/table/_table.scss
+// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/table/_table.scss
 
 import styled from 'styled-components';
 import { FONT_WEIGHTS } from '@govuk-react/constants';
