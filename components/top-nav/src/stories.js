@@ -1,13 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Link } from 'react-router-dom';
-import { storiesOf } from '@storybook/react';
+
 import CrownIcon from '@govuk-react/icon-crown';
 import { Search as SearchIcon } from '@govuk-react/icons';
 import SearchBox from '@govuk-react/search-box';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import TopNav from '.';
-import ReadMe from '../README.md';
 
 const reactRouterLink = '/section';
 const link = 'https://example.com?=1';
@@ -45,14 +43,14 @@ const ServiceTitleLink = (
   </TopNav.NavLink>
 );
 
-const stories = storiesOf('Page/TopNav', module);
-const examples = storiesOf('Page/TopNav/Examples', module);
+export default {
+  title: 'Core/Header (TopNav)',
+  component: TopNav,
+};
 
-stories.addDecorator(withDocsCustom(ReadMe));
+export const Default = () => <TopNav company={Company} />;
 
-stories.add('Component default', () => <TopNav company={Company} />);
-
-examples.add('custom logo', () => (
+export const CustomLogo = () => (
   <TopNav
     company={
       <TopNav.NavLink href={link} target="new">
@@ -60,33 +58,33 @@ examples.add('custom logo', () => (
       </TopNav.NavLink>
     }
   />
-));
+);
 
-examples.add('service title', () => <TopNav company={Company} serviceTitle={ServiceTitle} />);
+export const WithServiceTitle = () => <TopNav company={Company} serviceTitle={ServiceTitle} />;
 
-examples.add('logo and service title with React router <Link>', () => (
+export const LogoAndServiceTitleWithReactRouterLink = () => (
   <BrowserRouter>
     <TopNav company={CompanyLink} serviceTitle={ServiceTitleLink} />
   </BrowserRouter>
-));
+);
 
-examples.add('search', () => <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} />);
+export const WithSearch = () => <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} />;
 
-examples.add('children', () => (
+export const Children = () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} active={0}>
     <TopNav.NavLink href="https://example.com?q=catdog">Navigation item #1</TopNav.NavLink>
     <TopNav.NavLink href="https://example.com?q=dogcat">Navigation item #2</TopNav.NavLink>
   </TopNav>
-));
+);
 
-examples.add('everything but serviceTitle', () => (
+export const EverythingButServiceTitle = () => (
   <TopNav company={Company} search={Search} active={0}>
     <TopNav.NavLink href="https://example.com?q=catdog">Navigation item #1</TopNav.NavLink>
     <TopNav.NavLink href="https://example.com?q=dogcat">Navigation item #2</TopNav.NavLink>
   </TopNav>
-));
+);
 
-examples.add('everything', () => (
+export const Everything = () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
     <TopNav.NavLink href="https://example.com?q=catdog" target="new">
       Navigation item
@@ -107,9 +105,9 @@ examples.add('everything', () => (
       Navigation item
     </TopNav.NavLink>
   </TopNav>
-));
+);
 
-examples.add('everything with 9 nav items', () => (
+export const EverythingWith9NavItems = () => (
   <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
     <TopNav.NavLink href="https://example.com?q=catdog" target="new">
       Navigation item
@@ -139,4 +137,4 @@ examples.add('everything with 9 nav items', () => (
       Navigation item
     </TopNav.NavLink>
   </TopNav>
-));
+);
