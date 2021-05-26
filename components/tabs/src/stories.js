@@ -1,8 +1,8 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, number } from '@storybook/addon-knobs';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 
+import { withKnobs, number } from '@storybook/addon-knobs';
+
+import Tabs from '.';
 import {
   HooksExample,
   ProposedClassPropertiesPlugin,
@@ -13,29 +13,20 @@ import {
   ReactRouterSSRExample,
   ReactRouterSSRSinglePanelExample,
 } from './fixtures';
-import ReadMe from '../README.md';
 
-const stories = storiesOf('Tabs', module);
-const examples = storiesOf('Tabs/Examples', module);
+export default {
+  title: 'Core/Tabs',
+  component: Tabs,
+  decorators: [withKnobs],
+};
 
-stories.addDecorator(withDocsCustom(ReadMe));
-stories.addDecorator(withKnobs);
+export const Default = () => <TableTabs />;
 
-stories.add('Component default', () => <TableTabs />);
-
-examples.add('simple', () => <SimpleTabs />);
-examples.add('simple with map function', () => <SimpleMapTabs />);
-
-examples.add("simple with map and babel's proposed class properties plugin", () => <ProposedClassPropertiesPlugin />);
-
-examples.add('complex mapped table', () => <TableTabs />);
-
-examples.add('hooks example', () => <HooksExample defaultIndex={number('defaultIndex', 1)} />);
-
-examples.add('using react-router (client-side)', () => <ReactRouterExample />);
-
-examples.add('using react-router (server-side rendering compatible)', () => <ReactRouterSSRExample />);
-
-examples.add('using react-router (server-side rendering compatible, single panel only)', () => (
-  <ReactRouterSSRSinglePanelExample />
-));
+export const Simple = () => <SimpleTabs />;
+export const SimpleWithMapFunction = () => <SimpleMapTabs />;
+export const SimpleWithMapAndBabelSProposedClassPropertiesPlugin = () => <ProposedClassPropertiesPlugin />;
+export const ComplexMappedTable = () => <TableTabs />;
+export const Hooks = () => <HooksExample defaultIndex={number('defaultIndex', 1)} />;
+export const UsingReactRouterClientSide = () => <ReactRouterExample />;
+export const UsingReactRouterServerSideRenderingCompatible = () => <ReactRouterSSRExample />;
+export const UsingReactRouterServerSideRenderingCompatibleSinglePanelOnly = () => <ReactRouterSSRSinglePanelExample />;
