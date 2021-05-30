@@ -4,7 +4,7 @@ import { DocumentedTag } from '.';
 import { TagWithKnobs, TagInactive } from './fixtures';
 
 export default {
-  title: 'Core/Tag',
+  title: 'Typography/Tag',
   component: DocumentedTag,
   decorators: [withKnobs],
 };

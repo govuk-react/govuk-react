@@ -14,7 +14,7 @@ const Content = styled('div')({
 });
 
 export default {
-  title: 'Layout/GridCol',
+  title: 'Page & Layout/Grid col',
   component: GridCol,
 };
 

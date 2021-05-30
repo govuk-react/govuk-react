@@ -3,7 +3,7 @@ import React from 'react';
 import SearchBox from '.';
 
 export default {
-  title: 'Form/SearchBox',
+  title: 'Form/Search box',
   component: SearchBox,
 };
 

@@ -11,7 +11,7 @@ import {
 } from './fixtures';
 
 export default {
-  title: 'Core/Table',
+  title: 'Typography/Table',
   component: Table,
 };
 

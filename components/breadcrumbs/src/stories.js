@@ -3,7 +3,7 @@ import React from 'react';
 import Breadcrumbs from '.';
 
 export default {
-  title: 'Core/Breadcrumbs',
+  title: 'Navigation/Breadcrumbs',
   component: Breadcrumbs,
 };
 

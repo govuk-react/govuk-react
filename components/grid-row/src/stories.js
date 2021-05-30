@@ -5,7 +5,7 @@ import GridCol from '@govuk-react/grid-col';
 import GridRow from '.';
 
 export default {
-  title: 'Layout/GridRow',
+  title: 'Page & Layout/Grid row',
   component: GridRow,
 };
 

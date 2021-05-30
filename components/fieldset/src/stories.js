@@ -4,7 +4,7 @@ import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 import { FieldsetDocumented as Fieldset } from '.';
 
 export default {
-  title: 'Core/Fieldset',
+  title: 'Form/Fieldset',
   component: Fieldset,
   decorators: [withKnobs],
 };

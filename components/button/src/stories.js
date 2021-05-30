@@ -14,7 +14,7 @@ import {
 } from './fixtures';
 
 export default {
-  title: 'Core/Button',
+  title: 'Form/Button',
   component: Button,
   decorators: [withKnobs],
 };

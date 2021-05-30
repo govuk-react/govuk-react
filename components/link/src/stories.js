@@ -4,7 +4,7 @@ import { LinkDocumented as Link } from '.';
 import LinkFixture, { LinkWithRouter } from './fixtures';
 
 export default {
-  title: 'Typography/Link',
+  title: 'Navigation/Link',
   component: Link,
   decorators: [withKnobs],
 };

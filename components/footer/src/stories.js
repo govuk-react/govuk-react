@@ -10,7 +10,7 @@ import {
 } from './fixtures';
 
 export default {
-  title: 'Core/Footer',
+  title: 'Page & Layout/Footer',
   component: Footer,
 };
 

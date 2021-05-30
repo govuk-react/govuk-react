@@ -44,7 +44,7 @@ const ServiceTitleLink = (
 );
 
 export default {
-  title: 'Core/Header (TopNav)',
+  title: 'Page & Layout/Top nav',
   component: TopNav,
 };
 

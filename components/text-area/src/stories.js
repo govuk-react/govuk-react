@@ -8,7 +8,7 @@ const meta = {
 };
 
 export default {
-  title: 'Core/Textarea',
+  title: 'Form/Textarea',
   component: TextArea,
 };
 

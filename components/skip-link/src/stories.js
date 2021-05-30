@@ -5,7 +5,7 @@ import Paragraph from '@govuk-react/paragraph';
 import SkipLink, { SkipLinkDocumented } from '.';
 
 export default {
-  title: 'Core/Skip link',
+  title: 'Navigation/Skip link',
   component: SkipLinkDocumented,
 };
 class AutoFocussed extends Component {

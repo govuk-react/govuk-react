@@ -5,7 +5,7 @@ import GridCol from '@govuk-react/grid-col';
 import Main from '.';
 
 export default {
-  title: 'Layout/Main',
+  title: 'Page & Layout/Main',
   component: Main,
 };
 

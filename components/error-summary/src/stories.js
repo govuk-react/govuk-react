@@ -6,7 +6,7 @@ import ErrorSummary from './fixtures';
 import ErrorSummaryComponent from '.';
 
 export default {
-  title: 'Core/Error summary',
+  title: 'Form/Error summary',
   decorators: [withKnobs],
   component: ErrorSummaryComponent,
 };

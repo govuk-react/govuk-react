@@ -6,7 +6,7 @@ import { action } from '@storybook/addon-actions';
 import DateField from '.';
 
 export default {
-  title: 'Core/Date field',
+  title: 'Form/Date field',
   component: DateField,
 };
 class ManagedDateField extends React.Component {

@@ -3,7 +3,7 @@ import React from 'react';
 import FileUpload from '.';
 
 export default {
-  title: 'Core/File upload',
+  title: 'Form/File upload',
   component: FileUpload,
 };
 

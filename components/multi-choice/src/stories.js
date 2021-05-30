@@ -3,7 +3,7 @@ import MultiChoice from '.';
 import MultiChoiceWithKnobs, { MultiChoiceWithKnobsHint, MultiChoiceWithKnobsError } from './fixtures';
 
 export default {
-  title: 'Form/MultiChoice',
+  title: 'Form/Multi choice',
   component: MultiChoice,
   decorators: [withKnobs],
 };

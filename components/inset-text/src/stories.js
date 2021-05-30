@@ -4,7 +4,7 @@ import { DocumentedInsetText as InsetText } from '.';
 import InsetTextExample, { InsetTextWithParagraph } from './fixtures';
 
 export default {
-  title: 'Core/InsetText',
+  title: 'Typography/Inset text',
   component: InsetText,
   decorators: [withKnobs],
 };

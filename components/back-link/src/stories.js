@@ -5,7 +5,7 @@ import { withKnobs, text } from '@storybook/addon-knobs';
 import BackLink from '.';
 
 export default {
-  title: 'Core/Back link',
+  title: 'Navigation/Back link',
   component: BackLink,
   decorators: [withKnobs],
 };

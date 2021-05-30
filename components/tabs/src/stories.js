@@ -15,7 +15,7 @@ import {
 } from './fixtures';
 
 export default {
-  title: 'Core/Tabs',
+  title: 'Navigation/Tabs',
   component: Tabs,
   decorators: [withKnobs],
 };

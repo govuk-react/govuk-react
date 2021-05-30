@@ -4,7 +4,7 @@ import { DetailsSimple, DetailsOpen, DetailsParagraph } from './fixtures';
 import Details from '.';
 
 export default {
-  title: 'Core/Details',
+  title: 'Typography/Details',
   component: Details,
   decorators: [withKnobs],
 };

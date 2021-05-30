@@ -6,7 +6,7 @@ import WarningText from '.';
 import WarningTextWithKnobs, { WarningWithLongText } from './fixtures';
 
 export default {
-  title: 'Core/Warning text',
+  title: 'Typography/Warning text',
   component: WarningText,
   decorators: [withKnobs],
 };

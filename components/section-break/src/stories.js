@@ -4,7 +4,7 @@ import { SectionBreakDocumented as SectionBreak } from '.';
 import SectionBreakExample from './fixtures';
 
 export default {
-  title: 'Typography/Section break',
+  title: 'Page & Layout/Section break',
   component: SectionBreak,
   decorators: [withKnobs],
 };

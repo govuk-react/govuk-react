@@ -3,7 +3,7 @@ import React from 'react';
 import Panel from '.';
 
 export default {
-  title: 'Core/Panel',
+  title: 'Page & Layout/Panel',
   component: Panel,
 };
 

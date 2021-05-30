@@ -3,7 +3,7 @@ import React from 'react';
 import HintText from '.';
 
 export default {
-  title: 'Typography/Hint text',
+  title: 'Form/Hint text',
   component: HintText,
 };
 

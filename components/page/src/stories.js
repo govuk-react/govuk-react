@@ -8,7 +8,7 @@ import { MEDIA_QUERIES, GUTTER } from '@govuk-react/constants';
 import Page from '.';
 
 export default {
-  title: 'Layout/Page',
+  title: 'Page & Layout/Page',
   component: Page,
 };
 
