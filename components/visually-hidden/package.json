@@ -1,8 +1,8 @@
 {
   "name": "@govuk-react/visually-hidden",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "dependencies": {
-    "@govuk-react/lib": "^0.8.0",
+    "@govuk-react/lib": "^0.9.0",
     "govuk-colours": "^1.1.0"
   },
   "peerDependencies": {
