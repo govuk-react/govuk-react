@@ -23,7 +23,6 @@ export { default as InputField } from '@govuk-react/input-field';
 export { default as InsetText } from '@govuk-react/inset-text';
 export { default as Label } from '@govuk-react/label';
 export { default as LabelText } from '@govuk-react/label-text';
-export { default as Layout } from '@govuk-react/layout';
 export { default as LeadParagraph } from '@govuk-react/lead-paragraph';
 export { default as Link } from '@govuk-react/link';
 export { default as ListItem } from '@govuk-react/list-item';
