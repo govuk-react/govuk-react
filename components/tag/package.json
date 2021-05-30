@@ -19,7 +19,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/tag",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/tag",
   "description": "Badge with solid background and bold text, rendered from children.",
   "private": false,
   "publishConfig": {

@@ -20,7 +20,7 @@
   "module": "es/index.js",
   "author": "Steve Sims",
   "license": "MIT",
-  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/fieldset",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/fieldset",
   "description": "govuk-react Fieldset component.",
   "private": false,
   "publishConfig": {
