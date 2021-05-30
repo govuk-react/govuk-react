@@ -4618,10 +4618,10 @@ camelize@^1.0.0:
   resolved "https://registry.yarnpkg.com/camelize/-/camelize-1.0.0.tgz#164a5483e630fa4321e5af07020e531831b2609b"
   integrity sha1-FkpUg+Yw+kMh5a8HAg5TGDGyYJs=
 
-can-npm-publish@1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/can-npm-publish/-/can-npm-publish-1.3.1.tgz#4593ccff23bf5d2af655b8da75be156f04bf9f83"
-  integrity sha512-cPXcpe0iL5YEchy2clhSdkygH/pbVf0NHRcsY39PNw8cXNS0AhwI6n+NGnnhm7fOEb27gLI+l08PR1TqTV7bNA==
+can-npm-publish@1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/can-npm-publish/-/can-npm-publish-1.3.3.tgz#6442235f361b490dacc020325e0d5d4257506f99"
+  integrity sha512-x5yy9wvZzvGPPT7z8V+zGpxiXcQMCONkn2soTczQ24EVnQdiqkGugL/oK95geLJQXe+O591Ypj1VE/o9ql8+/Q==
   dependencies:
     cross-spawn "^6.0.5"
     meow "^4.0.0"
