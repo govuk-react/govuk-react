@@ -56,15 +56,6 @@ object-assign
  * Released under the MIT License.
  */
 
-/**
- * Prism: Lightweight, robust, elegant syntax highlighting
- *
- * @license MIT <https://opensource.org/licenses/MIT>
- * @author Lea Verou <https://lea.verou.me>
- * @namespace
- * @public
- */
-
 /** @license React v0.19.1
  * scheduler.production.min.js
  *
