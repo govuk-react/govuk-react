@@ -10,7 +10,7 @@ import multiInputInput from 'multi-input-input';
 
 const StyledLabel = styled(Label)(
   {
-    marginRight: '20px',
+    marginRight: '30px',
     marginBottom: 0,
   },
   ({ year }) => ({
