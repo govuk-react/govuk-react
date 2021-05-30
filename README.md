@@ -5,7 +5,6 @@ An implementation of the [GOV.UK Design System](https://govuk-design-system-prod
 [![codecov](https://codecov.io/gh/govuk-react/govuk-react/branch/master/graph/badge.svg)](https://codecov.io/gh/govuk-react/govuk-react)
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/govuk-react)
 
-
 We aim to track the following projects (in priority order) as to which components to implement and how they should look/behave. Where possible we are using the existing CSS as a guide. When we need to modify to suit custom markup, we aim to provide a comment in our code as to why this was done.
 
 - [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend)
@@ -14,6 +13,22 @@ We aim to track the following projects (in priority order) as to which component
 - [GOV.UK/elements](https://github.com/alphagov/govuk_elements)
 - [GOV.UK Publishing Components](https://govuk-publishing-components.herokuapp.com/component-guide)
 - Any other established govuk pattern
+
+This project is being or has been used by:
+
+- [Department for Education](https://github.com/DFE-Digital/meeting-timer)
+- [Department for International Trade](https://github.com/uktrade/data-science-frontend) [2](https://github.com/uktrade/data-hub-frontend) [3](https://github.com/uktrade/statement-of-works) [4](https://github.com/uktrade/data-hub-components)
+- [Department of Business, Energy and Industrial Strategy](https://github.com/UKGovernmentBEIS/beis-cosmetics-spa)
+- [Department of Health](https://github.com/DepartmentOfHealth-htbhf/htbhf-management-web-ui-spike)
+- [Food Standards Agency](https://github.com/FoodStandardsAgency/register-a-food-business-healthcheck-dashboard) [2](https://github.com/FSA-Civica/govuk-react/tree/slice-and-dice-packages/base)
+- [HM Land Registry](https://github.com/LandRegistry/title-token)
+- [HM Passport Office](https://github.com/UKHomeOffice/lev-react-components)
+- [HM Prison and Probation Services](https://github.com/ministryofjustice/prisonstaffhub) [2](https://github.com/ministryofjustice/prison-services-feedback-and-support)
+- [Home Office](https://github.com/UKHomeOffice/system-register) [2]
+- [Ministry of Justice](https://github.com/ministryofjustice/manage-key-workers)
+- [Skills Funding Agency](https://github.com/SkillsFundingAgency/CFS-Frontend) [2](https://github.com/SkillsFundingAgency/das-qna-config)
+
+The project is currently maintained for free by a small number of volunteers. If you would like to contribute, help maintain or sponsor this project, please get in touch via [Discussions](https://github.com/govuk-react/govuk-react/discussions) or [Twitter](https://twitter.com/penx).
 
 ## Usage
 
@@ -83,11 +98,11 @@ Unfortuantely the GDS transport font has a relatively restrictive license [descr
 
 ### GOV.UK
 
- - [govuk-elements](https://govuk-elements.herokuapp.com/) ([source](https://github.com/alphagov/govuk_elements/))
- - [govuk_frontend_toolkit](https://github.com/alphagov/govuk_frontend_toolkit/)
- - [govuk-frontend](https://github.com/alphagov/govuk-frontend/)
- - [govuk_template](http://alphagov.github.io/govuk_template/) ([source](https://github.com/alphagov/govuk_template))
- - [GOV.UK Design Patterns](https://www.gov.uk/service-manual/design#find-patterns)
+- [govuk-elements](https://govuk-elements.herokuapp.com/) ([source](https://github.com/alphagov/govuk_elements/))
+- [govuk_frontend_toolkit](https://github.com/alphagov/govuk_frontend_toolkit/)
+- [govuk-frontend](https://github.com/alphagov/govuk-frontend/)
+- [govuk_template](http://alphagov.github.io/govuk_template/) ([source](https://github.com/alphagov/govuk_template))
+- [GOV.UK Design Patterns](https://www.gov.uk/service-manual/design#find-patterns)
 
 ### Other React component libraries
 
