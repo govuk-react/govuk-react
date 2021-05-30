@@ -13,9 +13,14 @@ ErrorText
 Simple
 
 ```jsx
-import { ErrorText } from 'govuk-react'
+import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
 
-<ErrorText>Example</ErrorText>
+<Label>
+  <LabelText>Example label</LabelText>
+  <HintText>Example hint</HintText>
+  <ErrorText>Example error</ErrorText>
+  <Input value={value} onClick={onClick} />
+</Label>
 ```
 
 ### References
