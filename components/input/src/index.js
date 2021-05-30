@@ -47,12 +47,21 @@ export const StyledInput = styled('input')(
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
- * <Input />
+ * import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
+ *
+ * <Label>
+ *   <LabelText>Example label</LabelText>
+ *   <HintText>Example hint</HintText>
+ *   <ErrorText>Example error</ErrorText>
+ *   <Input value={value} onClick={onClick} />
+ * </Label>
  * ```
  *
  * ### References:
- * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/
+ *
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
  *
  * ### TODO:
  * - Remove `errorColor` and provide examples on how to extend the component

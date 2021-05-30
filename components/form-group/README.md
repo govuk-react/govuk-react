@@ -10,8 +10,9 @@ FormGroup
 ### Usage
 
 Simple
+
 ```jsx
-import Checkbox from '@govuk-react/checkbox';
+import { FormGroup, Checkbox } from 'govuk-react'
 
 <FormGroup>
   <Checkbox name="group-1">Example</Checkbox>
@@ -19,7 +20,8 @@ import Checkbox from '@govuk-react/checkbox';
 ```
 
 ### References
-- https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_form-group.scss
+
+- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_form-group.scss
 
 ### Properties
 Prop | Required | Default | Type | Description

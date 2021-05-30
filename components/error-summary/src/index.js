@@ -70,6 +70,7 @@ const StyledErrorSummary = styled('div')(
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
  * const heading = 'Message to alert the user to a problem goes here';
  * const description = 'Optional description of the errors and how to correct them';
@@ -107,8 +108,9 @@ const StyledErrorSummary = styled('div')(
  * ```
  *
  * ### References:
+ *
  * - https://govuk-elements.herokuapp.com/errors/#summarise-errors
- * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/error-summary
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/error-summary
  *
  * ### TODO:
  * - Swap out browser dependancy for context API to help with React Native support

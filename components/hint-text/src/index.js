@@ -1,4 +1,4 @@
-// https://github.com/alphagov/govuk-frontend/tree/master/src/components/
+// https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
 
 import styled from 'styled-components';
 import React from 'react';
@@ -27,12 +27,20 @@ const StyledHint = styled('span')(
  *
  *
  * Simple
+ *
  * ```jsx
- * <HintText>Example</HintText>
+ * import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
+ *
+ * <Label>
+ *   <LabelText>Example label</LabelText>
+ *   <HintText>Example hint</HintText>
+ *   <ErrorText>Example error</ErrorText>
+ *   <Input value={value} onClick={onClick} />
+ * </Label>
  * ```
  *
  * ### References
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/hint/_hint.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/hint/_hint.scss
  */
 const HintText = (props) => <StyledHint {...props} />;
 

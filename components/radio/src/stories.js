@@ -1,13 +1,12 @@
 import React from 'react';
 import { Field } from 'react-final-form';
-import { storiesOf } from '@storybook/react';
+
 import PropTypes from 'prop-types';
 import { withKnobs } from '@storybook/addon-knobs';
-import { FinalFormWrapper, withDocsCustom } from '@govuk-react/storybook-components';
+import { FinalFormWrapper } from '@govuk-react/storybook-components';
 
 import MultiChoice from '@govuk-react/multi-choice';
 import Radio from '.';
-import ReadMe from '../README.md';
 
 const required = (value) => (value ? undefined : 'Required');
 
@@ -50,23 +49,23 @@ RadioGroup.propTypes = {
   ),
 };
 
-const stories = storiesOf('Form/Radio', module);
-const examples = storiesOf('Form/Radio/Examples', module);
+export default {
+  title: 'Form/Radio',
+  component: Radio,
+  decorators: [withKnobs],
+};
 
-stories.addDecorator(withKnobs);
-stories.addDecorator(withDocsCustom(ReadMe));
+export const Default = () => <Radio name="group1">Radio button text example</Radio>;
 
-stories.add('Component default', () => <Radio name="group1">Radio button text example</Radio>);
-
-examples.add('Radio stacked', () => (
+export const RadioStacked = () => (
   <div>
     <Radio name="group1">Waste from animal carcasses</Radio>
     <Radio name="group1">Waste from mines or quarries</Radio>
     <Radio name="group1">Farm or agricultural waste</Radio>
   </div>
-));
+);
 
-examples.add('Radio inline', () => (
+export const RadioInline = () => (
   <div>
     <Radio name="group1" inline>
       Yes
@@ -75,33 +74,33 @@ examples.add('Radio inline', () => (
       No
     </Radio>
   </div>
-));
+);
 
-examples.add('Radio disabled', () => (
+export const RadioDisabled = () => (
   <div>
     <Radio name="group1" disabled="disabled">
       Disabled checkbox option
     </Radio>
   </div>
-));
+);
 
-examples.add('Radio preselected', () => (
+export const RadioPreselected = () => (
   <div>
     <Radio name="group1" defaultChecked>
       Farm or agricultural waste
     </Radio>
   </div>
-));
+);
 
-examples.add('Radio preselected & disabled', () => (
+export const RadioPreselectedDisabled = () => (
   <div>
     <Radio name="group1" disabled="disabled" defaultChecked>
       Farm or agricultural waste
     </Radio>
   </div>
-));
+);
 
-examples.add('Radio with hint text', () => (
+export const RadioWithHintText = () => (
   <div>
     <Radio
       name="group1"
@@ -116,9 +115,9 @@ examples.add('Radio with hint text', () => (
       Sign in with GOV.UK Verify
     </Radio>
   </div>
-));
+);
 
-examples.add('Usage with Final/Redux Form - multi checkbox validation', () => (
+export const UsageWithFinalReduxFormMultiCheckboxValidation = () => (
   <FinalFormWrapper>
     <Field
       name="likesAnimals"
@@ -133,4 +132,4 @@ examples.add('Usage with Final/Redux Form - multi checkbox validation', () => (
       inline
     />
   </FinalFormWrapper>
-));
+);

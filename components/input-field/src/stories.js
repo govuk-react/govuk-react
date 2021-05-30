@@ -1,23 +1,19 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import InputField from '.';
-import ReadMe from '../README.md';
 
 const meta = {
   touched: true,
   error: 'Example',
 };
 
-const stories = storiesOf('Form/InputField', module);
-const examples = storiesOf('Form/InputField/Examples', module);
+export default {
+  title: 'Form/Input field',
+  component: InputField,
+};
 
-stories.addDecorator(withDocsCustom(ReadMe));
-
-stories.add('Component default', () => <InputField name="group0">National Insurance number</InputField>);
-
-examples.add('Input with HintText', () => (
+export const Default = () => <InputField name="group0">National Insurance number</InputField>;
+export const InputWithHintText = () => (
   <InputField
     name="group1"
     hint={
@@ -30,9 +26,8 @@ examples.add('Input with HintText', () => (
   >
     National Insurance number
   </InputField>
-));
-
-examples.add('Input with HintText & error', () => (
+);
+export const InputWithHintTextError = () => (
   <InputField
     name="group1"
     hint={
@@ -46,4 +41,4 @@ examples.add('Input with HintText & error', () => (
   >
     National Insurance number
   </InputField>
-));
+);

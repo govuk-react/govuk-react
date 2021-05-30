@@ -10,7 +10,7 @@ Pagination
 ### Usage
 
 ```jsx
-import Pagination from '@govuk-react/pagination';
+import { Pagination } from 'govuk-react';
 
 <Pagination>
   <Pagination.Anchor href="#prev" previousPage>
@@ -23,6 +23,7 @@ import Pagination from '@govuk-react/pagination';
 ```
 
 ### References:
+
 - https://govuk-static.herokuapp.com/component-guide/previous_and_next_navigation
 
 ### Properties

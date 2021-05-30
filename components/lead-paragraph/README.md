@@ -11,7 +11,10 @@ LeadParagraph
 
 
 Simple
+
 ```jsx
+import { LeadParagraph } from 'govuk-react'
+
 <LeadParagraph>LeadParagraph example</LeadParagraph>
 ```
 

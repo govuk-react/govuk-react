@@ -34,11 +34,15 @@ const FooterContainer = styled('footer')(
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
+ * import { Footer } from 'govuk-react'
+ *
  * <Footer />
  * ```
  *
  * Footer with Copyright information
+ *
  * ```jsx
  * // Import self hosted copyright image
  * import crest from './govuk-crest.png';
@@ -58,6 +62,7 @@ const FooterContainer = styled('footer')(
  * ```
  *
  * Footer with navigation.  There is also the option to provide footer links with, or without React/Reach Router.
+ *
  * ```jsx
  * import { Link } from 'react-router-dom';
  *
@@ -81,6 +86,7 @@ const FooterContainer = styled('footer')(
  * ```
  *
  * Footer with links in meta area
+ *
  * ```jsx
  * <Footer meta={
  *     <Footer.MetaLinks heading="Support links">
@@ -93,6 +99,7 @@ const FooterContainer = styled('footer')(
  * ```
  *
  * Footer with custom content in meta area
+ *
  * ```jsx
  * <Footer meta={
  *     <Footer.MetaCustom>
@@ -105,9 +112,10 @@ const FooterContainer = styled('footer')(
  * NB <Footer.Link /> is styled extention of @govuk-react/link
  *
  * ### References:
+ *
  * - https://design-system.service.gov.uk/components/footer/
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/footer/template.njk
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/footer/_footer.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/footer/template.njk
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/footer/_footer.scss
  *
  */
 const Footer = ({ children, container: Container, copyright, meta, ...props }) => (

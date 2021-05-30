@@ -53,11 +53,15 @@ const StyledBody = styled('div')(typography.font({ size: 36 }));
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
+ * import { Panel } from 'govuk-react'
+ *
  * <Panel title="Application complete" />
  * ```
  *
  * Panel with header and HTML body
+ *
  * ```jsx
  * <Panel title="Application complete">
  *   Your reference number<br />
@@ -66,7 +70,8 @@ const StyledBody = styled('div')(typography.font({ size: 36 }));
  * ```
  *
  * ### References:
- * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/panel
+ *
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/panel
  *
  */
 

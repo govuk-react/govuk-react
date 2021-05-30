@@ -1,8 +1,8 @@
 // Tracking:
 // https://design-system.service.gov.uk/styles/page-template/
 // https://design-system.service.gov.uk/styles/layout/#page-wrappers
-// https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_main-wrapper.scss
-// https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_width-container.scss
+// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_main-wrapper.scss
+// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_width-container.scss
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -18,9 +18,9 @@ import WidthContainer from './atoms/width-container';
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
- * import BackLink from '@govuk-react/back-link';
- * import { H1 } from '@govuk-react/heading';
+ * import { Page, BackLink, H1 } from 'govuk-react';
  *
  * <Page beforeChildren={<BackLink href="#" />}>
  *   <H1>Page title</H1>
@@ -30,8 +30,8 @@ import WidthContainer from './atoms/width-container';
  * ### References
  * - https://design-system.service.gov.uk/styles/page-template/
  * - https://design-system.service.gov.uk/styles/layout/#page-wrappers
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_main-wrapper.scss
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/objects/_width-container.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_main-wrapper.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_width-container.scss
  */
 const Page = ({ header, footer, children, id, beforeChildren, main: MainComponent, container: Container }) => (
   <>

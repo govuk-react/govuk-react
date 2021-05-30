@@ -10,8 +10,9 @@ ListNavigation
 ### Usage
 
 Simple
+
 ```jsx
-import Link from '@govuk-react/link';
+import { ListNavigation, Link } from 'govuk-react';
 
 <ListNavigation>
   <Link href="/section-a">Section A</Link>
@@ -20,9 +21,10 @@ import Link from '@govuk-react/link';
 ```
 
 Using React Router with `Link` component for GDS styled links
+
 ```jsx
 import { Link as RouterLink } from 'react-router-dom';
-import { Link } from '@govuk-react/link';
+import { ListNavigation, Link } from 'govuk-react';
 
 <ListNavigation listStyleType="circle">
   <Link as={RouterLink} to="/link-a">Link A</Link>
@@ -31,6 +33,7 @@ import { Link } from '@govuk-react/link';
 ```
 
 ### References:
+
 - https://govuk-static.herokuapp.com/component-guide/government_navigation
 
 ### TODO:

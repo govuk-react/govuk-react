@@ -20,13 +20,16 @@ const VisuallyHidden = styled('span')
  * but visible to screen-reader devices.
  *
  * Simple
+ *
  * ```jsx
+ * import { VisuallyHidden } from 'govuk-react'
+ *
  * <VisuallyHidden>Example</VisuallyHidden>
  * ```
  *
  * ### References
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/helpers/_visually-hidden.scss
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/utilities/_visually-hidden.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/helpers/_visually-hidden.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/utilities/_visually-hidden.scss
  */
 const VisuallyHiddenDocumented = (props) => <VisuallyHidden {...props} />;
 

@@ -1,17 +1,15 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import Pagination from '.';
-import ReadMe from '../README.md';
 
-const stories = storiesOf('Navigation/Pagination', module);
-const examples = storiesOf('Navigation/Pagination/Examples', module);
+export default {
+  title: 'Navigation/Pagination',
+  component: Pagination,
+};
 
-stories.addDecorator(withDocsCustom(ReadMe));
-
-stories.add('Component default', () => (
+export const Default = () => (
   <Pagination>
     <Pagination.Anchor href="#prev" previousPage>
       Previous page
@@ -20,9 +18,9 @@ stories.add('Component default', () => (
       Next page
     </Pagination.Anchor>
   </Pagination>
-));
+);
 
-examples.add('Pagination default (React Router Link)', () => (
+export const PaginationDefaultReactRouterLink = () => (
   <Pagination>
     <Router>
       <Pagination.Anchor as={Link} to="/prev" previousPage>
@@ -35,9 +33,9 @@ examples.add('Pagination default (React Router Link)', () => (
       </Pagination.Anchor>
     </Router>
   </Pagination>
-));
+);
 
-examples.add('Pagination with numbers (anchor tag)', () => (
+export const PaginationWithNumbersAnchorTag = () => (
   <Pagination>
     <Pagination.Anchor href="#prev" previousPage pageTitle="1 of 3">
       Previous page
@@ -46,9 +44,9 @@ examples.add('Pagination with numbers (anchor tag)', () => (
       Next page
     </Pagination.Anchor>
   </Pagination>
-));
+);
 
-examples.add('Pagination with numbers (React Router Link)', () => (
+export const PaginationWithNumbersReactRouterLink = () => (
   <Pagination>
     <Router>
       <Pagination.Anchor as={Link} to="#prev" previousPage pageTitle="1 of 3">
@@ -61,9 +59,9 @@ examples.add('Pagination with numbers (React Router Link)', () => (
       </Pagination.Anchor>
     </Router>
   </Pagination>
-));
+);
 
-examples.add('Pagination with titles (anchor tag)', () => (
+export const PaginationWithTitlesAnchorTag = () => (
   <Pagination>
     <Pagination.Anchor href="#prev" previousPage pageTitle="Applying for a provisional lorry or bus licence">
       Previous
@@ -72,9 +70,9 @@ examples.add('Pagination with titles (anchor tag)', () => (
       Next
     </Pagination.Anchor>
   </Pagination>
-));
+);
 
-examples.add('Pagination with titles (React Router Link)', () => (
+export const PaginationWithTitlesReactRouterLink = () => (
   <Pagination>
     <Router>
       <Pagination.Anchor as={Link} to="#prev" previousPage pageTitle="Applying for a provisional lorry or bus licence">
@@ -87,17 +85,17 @@ examples.add('Pagination with titles (React Router Link)', () => (
       </Pagination.Anchor>
     </Router>
   </Pagination>
-));
+);
 
-examples.add('Pagination with numbers just with next page (anchor tag)', () => (
+export const PaginationWithNumbersJustWithNextPageAnchorTag = () => (
   <Pagination>
     <Pagination.Anchor href="#next" nextPage pageTitle="2 of 12">
       Next page
     </Pagination.Anchor>
   </Pagination>
-));
+);
 
-examples.add('Pagination with numbers just with next page (React Router Link)', () => (
+export const PaginationWithNumbersJustWithNextPageReactRouterLink = () => (
   <Pagination>
     <Router>
       <Pagination.Anchor as={Link} to="#next" nextPage pageTitle="2 of 12">
@@ -105,17 +103,17 @@ examples.add('Pagination with numbers just with next page (React Router Link)', 
       </Pagination.Anchor>
     </Router>
   </Pagination>
-));
+);
 
-examples.add('Pagination with numbers just with previous page (anchor tag)', () => (
+export const PaginationWithNumbersJustWithPreviousPageAnchorTag = () => (
   <Pagination>
     <Pagination.Anchor href="#prev" previousPage pageTitle="11 of 12">
       Previous page
     </Pagination.Anchor>
   </Pagination>
-));
+);
 
-examples.add('Pagination with numbers just with previous page (React Router Link)', () => (
+export const PaginationWithNumbersJustWithPreviousPageReactRouterLink = () => (
   <Pagination>
     <Router>
       <Pagination.Anchor as={Link} to="#prev" previousPage pageTitle="11 of 12">
@@ -123,4 +121,4 @@ examples.add('Pagination with numbers just with previous page (React Router Link
       </Pagination.Anchor>
     </Router>
   </Pagination>
-));
+);

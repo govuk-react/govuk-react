@@ -1,6 +1,6 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withDocsCustom } from '@govuk-react/storybook-components';
+
+import Table from '.';
 
 import {
   TableSimple,
@@ -9,19 +9,14 @@ import {
   TableWithCustomWidths,
   TableThreeQuartersOneQuarter,
 } from './fixtures';
-import ReadMe from '../README.md';
 
-const stories = storiesOf('Data/Table', module);
-const examples = storiesOf('Data/Table/Examples', module);
+export default {
+  title: 'Typography/Table',
+  component: Table,
+};
 
-stories.addDecorator(withDocsCustom(ReadMe));
-
-stories.add('Component default', () => <TableSimple />);
-
-examples.add('With a caption', () => <TableWithCaption />);
-
-examples.add('With a head row and numeric tabular data', () => <TableWithHeadAndNumerics />);
-
-examples.add('With a three quarter-width column and one quarter', () => <TableThreeQuartersOneQuarter />);
-
-examples.add('With custom column widths', () => <TableWithCustomWidths />);
+export const Default = () => <TableSimple />;
+export const WithACaption = () => <TableWithCaption />;
+export const WithAHeadRowAndNumericTabularData = () => <TableWithHeadAndNumerics />;
+export const WithAThreeQuarterWidthColumnAndOneQuarter = () => <TableThreeQuartersOneQuarter />;
+export const WithCustomColumnWidths = () => <TableWithCustomWidths />;

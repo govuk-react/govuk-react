@@ -24,6 +24,7 @@ This component provides default padding.
 You can use this component to wrap Grid components however it is not required.
 
 Simple usage
+
 ```jsx
 import GridRow from '@govuk-react/grid-row';
 import GridCol from '@govuk-react/grid-col';

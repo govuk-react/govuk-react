@@ -10,7 +10,10 @@ LoadingBox
 ### Usage
 
 Simple
+
 ```jsx
+import { LoadingBox } from 'govuk-react'
+
 <LoadingBox loading>
   Lorem ipsum dolor sit amet
 </LoadingBox>
@@ -31,6 +34,7 @@ Loading box complex
 ```
 
 ### References:
+
 - https://govuk-loader-prototype.herokuapp.com/components/loader
 
 ### Properties

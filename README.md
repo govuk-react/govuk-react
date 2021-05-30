@@ -21,7 +21,7 @@ We aim to track the following projects (in priority order) as to which component
 npm install govuk-react styled-components --save
 ```
 
-```js
+```jsx
 import { Button } from 'govuk-react'
 
 const MyComponent = ({title}) => (<div>
@@ -39,7 +39,8 @@ Also see the [Example Application](packages/example-application/src) for basic u
 We provide a Link component which creates an element styled as a GDS link. As we are using styled-components it is possible to apply that style to an existing component using the `as` prop. Other props will be passed through.
 
 For example;
-```js
+
+```jsx
 import { BrowserRouter, Link as RouterLink } from 'react-router';
 import { Link } from '@govuk-react/link';
 

@@ -84,7 +84,10 @@ const DetailsText = styled('div')({
  *
  *
  * Simple
+ *
  * ```jsx
+ * import { Details } from 'govuk-react'
+ *
  * <Details summary="Help with nationality">
  *   I am a paragraph of hidden details, to be revealed when summary is clicked
  * </Details>
@@ -92,7 +95,7 @@ const DetailsText = styled('div')({
  *
  * ### References
  * - https://design-system.service.gov.uk/components/details/
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/details/_details.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/details/_details.scss
  */
 const Details = ({ summary, children, ...props }) => (
   <StyledDetails {...props}>

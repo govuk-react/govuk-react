@@ -14,7 +14,10 @@ form inputs. For example, you may need to group a set of text inputs into a sing
 fieldset when asking for an address.
 
 Simple
+
 ```jsx
+import { Fieldset } from 'govuk-react'
+
 <Fieldset>
   <Fieldset.Legend>Example</Fieldset.Legend>
 </Fieldset>
@@ -24,6 +27,7 @@ The `Fieldset.Legend` sub-component supports a `size` prop compatible with Headi
 and a `isPageHeading` prop for use when you wish your legend to be used as a page heading
 
 Custom legend
+
 ```jsx
 <Fieldset>
   <Fieldset.Legend size="XL" isPageHeading>Legend as page heading</Fieldset.Legend>
@@ -32,7 +36,7 @@ Custom legend
 
 ### References
 - https://design-system.service.gov.uk/components/fieldset/
-- https://github.com/alphagov/govuk-frontend/tree/master/src/components/fieldset
+- https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/fieldset
 - https://design-system.service.gov.uk/get-started/labels-legends-headings/
 
 ### Properties

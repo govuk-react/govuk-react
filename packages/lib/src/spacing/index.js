@@ -1,9 +1,9 @@
 // This lib is effectively a port of govuk-frontend's spacing sass helpers
 // Tracking:
-// https://github.com/alphagov/govuk-frontend/blob/master/src/helpers/_spacing.scss
+// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/helpers/_spacing.scss
 // Further references:
-// https://github.com/alphagov/govuk-frontend/blob/master/src/overrides/_spacing.scss
-// https://github.com/alphagov/govuk-frontend/blob/master/src/settings/_spacing.scss
+// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/overrides/_spacing.scss
+// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/settings/_spacing.scss
 
 import PropTypes from 'prop-types';
 import { MEDIA_QUERIES, SPACING_MAP, SPACING_MAP_INDEX, SPACING_POINTS, WIDTHS } from '@govuk-react/constants';

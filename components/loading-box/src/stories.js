@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+
 import { withKnobs, text, number, boolean } from '@storybook/addon-knobs';
 import { H1, H2 } from '@govuk-react/heading';
 import InputField from '@govuk-react/input-field';
@@ -8,20 +8,17 @@ import LabelText from '@govuk-react/label-text';
 import Link from '@govuk-react/link';
 import Radio from '@govuk-react/radio';
 import PhaseBanner from '@govuk-react/phase-banner';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import LoadingBox from '.';
-import ReadMe from '../README.md';
 
-const stories = storiesOf('Misc/LoadingBox', module);
-const examples = storiesOf('Misc/LoadingBox/Examples', module);
-
-stories.addDecorator(withDocsCustom(ReadMe));
+export default {
+  title: 'Utility/Loading box',
+  decorators: [withKnobs],
+};
 
 const spacer = <p style={{ marginTop: 0 }}>&nbsp;</p>;
-stories.addDecorator(withKnobs);
 
-stories.add('Component default', () => (
+export const Default = () => (
   <LoadingBox
     loading={boolean('loading', false)}
     backgroundColor={text('backgroundColor', '#fff')}
@@ -42,9 +39,9 @@ stories.add('Component default', () => (
       <Button start>Continue</Button>
     </div>
   </LoadingBox>
-));
+);
 
-examples.add('preset to loading', () => (
+export const PresetToLoading = () => (
   <LoadingBox
     loading={boolean('loading', true)}
     backgroundColor={text('backgroundColor', '#fff')}
@@ -64,9 +61,9 @@ examples.add('preset to loading', () => (
       <Button start>Continue</Button>
     </div>
   </LoadingBox>
-));
+);
 
-examples.add('LoadingBox (long)', () => (
+export const LoadingBoxLong = () => (
   <LoadingBox
     loading={boolean('loading', false)}
     backgroundColor={text('backgroundColor', '#fff')}
@@ -102,15 +99,13 @@ examples.add('LoadingBox (long)', () => (
       <Button start>Continue</Button>
     </div>
   </LoadingBox>
-));
+);
 
-examples.add('with children that have short height (minHeight 10px)', () => (
-  <LoadingBox loading>Lorem ipsum dolor sit amet</LoadingBox>
-));
+export const ShortHeight = () => <LoadingBox loading>Lorem ipsum dolor sit amet</LoadingBox>;
 
-examples.add('with bolded texts', () => (
+export const WithBoldedTexts = () => (
   <LoadingBox loading>
     <H1>Lorem ipsum dolor sit amet</H1>
     <H2>Consectetur adipisicing elit. Quia incidunt, earum molestiae omnis labore adipisci.</H2>
   </LoadingBox>
-));
+);

@@ -31,11 +31,15 @@ const StyledContainer = styled('div')(
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
+ * import { DateField } from 'govuk-react'
+ *
  * <DateField>What is your date of birth?</DateField>
  * ```
  *
  * Date with hint text
+ *
  * ```jsx
  * <DateField hintText="For example, 31 03 1980">
  *   What is your date of birth?
@@ -43,6 +47,7 @@ const StyledContainer = styled('div')(
  * ```
  *
  * Date with hint text & error
+ *
  * ```jsx
  * <DateField
  *   hintText="For example, 31 03 1980"
@@ -53,6 +58,7 @@ const StyledContainer = styled('div')(
  * ```
  *
  * With custom input name props
+ *
  * ```jsx
  * <DateField hintText="For example, 31 03 1980"
  *   inputNames={{
@@ -66,7 +72,8 @@ const StyledContainer = styled('div')(
  * ```
  *
  * ### References:
- * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/date-field
+ *
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/date-field
  *
  */
 const DateField = ({ children, errorText, hintText, inputNames, defaultValues, input, ...props }) => (

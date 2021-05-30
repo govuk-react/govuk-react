@@ -1,14 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { storiesOf } from '@storybook/react';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import GridRow from '@govuk-react/grid-row';
 import { H2 } from '@govuk-react/heading';
 import Paragraph from '@govuk-react/paragraph';
 
 import GridCol from '.';
-import ReadMe from '../README.md';
 
 const Content = styled('div')({
   textIndent: '-999em',
@@ -16,16 +13,12 @@ const Content = styled('div')({
   backgroundImage: 'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)',
 });
 
-const stories = storiesOf('Layout/GridCol', module).addParameters({
-  chromatic: { viewports: [320, 720, 1200] },
-});
-const examples = storiesOf('Layout/GridCol/Examples', module).addParameters({
-  chromatic: { viewports: [320, 720, 1200] },
-});
+export default {
+  title: 'Page & Layout/Grid col',
+  component: GridCol,
+};
 
-stories.addDecorator(withDocsCustom(ReadMe));
-
-stories.add('Component default', () => (
+export const Default = () => (
   <GridRow>
     <GridCol setWidth="one-half">
       <H2>Half column</H2>
@@ -42,9 +35,9 @@ stories.add('Component default', () => (
       </Paragraph>
     </GridCol>
   </GridRow>
-));
+);
 
-examples.add('Column Halves', () => (
+export const ColumnHalves = () => (
   <GridRow>
     <GridCol setWidth="one-half">
       <Content>content</Content>
@@ -53,9 +46,9 @@ examples.add('Column Halves', () => (
       <Content>content</Content>
     </GridCol>
   </GridRow>
-));
+);
 
-examples.add('Column Thirds', () => (
+export const ColumnThirds = () => (
   <GridRow>
     <GridCol setWidth="one-third">
       <Content>content</Content>
@@ -67,9 +60,9 @@ examples.add('Column Thirds', () => (
       <Content>content</Content>
     </GridCol>
   </GridRow>
-));
+);
 
-examples.add('Column Two Thirds / One Third', () => (
+export const ColumnTwoThirdsOneThird = () => (
   <GridRow>
     <GridCol setWidth="two-thirds">
       <Content>content</Content>
@@ -78,9 +71,9 @@ examples.add('Column Two Thirds / One Third', () => (
       <Content>content</Content>
     </GridCol>
   </GridRow>
-));
+);
 
-examples.add('Column One Third / Two Thirds', () => (
+export const ColumnOneThirdTwoThirds = () => (
   <GridRow>
     <GridCol setWidth="one-third">
       <Content>content</Content>
@@ -89,9 +82,9 @@ examples.add('Column One Third / Two Thirds', () => (
       <Content>content</Content>
     </GridCol>
   </GridRow>
-));
+);
 
-examples.add('Column Four Quarters', () => (
+export const ColumnFourQuarters = () => (
   <GridRow>
     <GridCol setWidth="one-quarter">
       <Content>content</Content>
@@ -106,9 +99,9 @@ examples.add('Column Four Quarters', () => (
       <Content>content</Content>
     </GridCol>
   </GridRow>
-));
+);
 
-examples.add('Column One Quarter and auto-fill', () => (
+export const ColumnOneQuarterAndAutoFill = () => (
   <GridRow>
     <GridCol setWidth="one-quarter">
       <Content>content</Content>
@@ -117,9 +110,9 @@ examples.add('Column One Quarter and auto-fill', () => (
       <Content>content</Content>
     </GridCol>
   </GridRow>
-));
+);
 
-examples.add('Column widths differing between tablet and desktop', () => (
+export const ColumnWidthsDifferingBetweenTabletAndDesktop = () => (
   <GridRow>
     <GridCol setWidth="one-quarter" setDesktopWidth="one-third">
       <Content>content</Content>
@@ -128,9 +121,9 @@ examples.add('Column widths differing between tablet and desktop', () => (
       <Content>content</Content>
     </GridCol>
   </GridRow>
-));
+);
 
-examples.add('Custom widths, differing between tablet and desktop', () => (
+export const CustomWidthsDifferingBetweenTabletAndDesktop = () => (
   <GridRow>
     <GridCol setWidth="60%" setDesktopWidth="auto">
       <Content>content</Content>
@@ -142,4 +135,4 @@ examples.add('Custom widths, differing between tablet and desktop', () => (
       <Content>content</Content>
     </GridCol>
   </GridRow>
-));
+);

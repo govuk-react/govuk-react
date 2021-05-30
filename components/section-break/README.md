@@ -10,13 +10,16 @@ SectionBreak
 ### Usage
 
 Simple
+
 ```jsx
+import { SectionBreak } from 'govuk-react'
+
 <SectionBreak>Example</SectionBreak>
 ```
 
 ### References
 - https://design-system.service.gov.uk/styles/typography/#section-break
-- https://github.com/alphagov/govuk-frontend/blob/master/src/core/_section-break.scss
+- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_section-break.scss
 
 ### Properties
 Prop | Required | Default | Type | Description

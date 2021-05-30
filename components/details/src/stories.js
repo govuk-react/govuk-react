@@ -1,17 +1,14 @@
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import { DetailsSimple, DetailsOpen, DetailsParagraph } from './fixtures';
-import ReadMe from '../README.md';
+import Details from '.';
 
-const stories = storiesOf('Typography/Details', module);
-const examples = storiesOf('Typography/Details/Examples', module);
+export default {
+  title: 'Typography/Details',
+  component: Details,
+  decorators: [withKnobs],
+};
 
-stories.addDecorator(withDocsCustom(ReadMe));
-stories.addDecorator(withKnobs);
-examples.addDecorator(withKnobs);
-
-stories.add('Component default', DetailsSimple);
-examples.add('Set as open', DetailsOpen);
-examples.add('With Paragraph contents', DetailsParagraph);
+export const Default = DetailsSimple;
+export const SetAsOpen = DetailsOpen;
+export const WithParagraphContents = DetailsParagraph;

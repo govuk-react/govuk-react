@@ -1,30 +1,27 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import TextArea from '.';
-import ReadMe from '../README.md';
 
 const meta = {
   touched: true,
   error: 'Example',
 };
 
-const stories = storiesOf('Form/Textarea', module);
-const examples = storiesOf('Form/Textarea/Examples', module);
+export default {
+  title: 'Form/Textarea',
+  component: TextArea,
+};
 
-stories.addDecorator(withDocsCustom(ReadMe));
+export const Default = () => <TextArea name="group1">Description of what you saw</TextArea>;
 
-stories.add('Component default', () => <TextArea name="group1">Description of what you saw</TextArea>);
-
-examples.add('Textarea with HintText', () => (
+export const TextareaWithHintText = () => (
   <TextArea name="group1" hint={['Enter as many words as you like']}>
     Description of what you saw
   </TextArea>
-));
+);
 
-examples.add('Textarea with HintText & error', () => (
+export const TextareaWithHintTextError = () => (
   <TextArea name="group1" hint={['Enter as many words as you like']} meta={meta}>
     Description of what you saw
   </TextArea>
-));
+);

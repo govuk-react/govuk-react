@@ -26,7 +26,10 @@ const Fieldset = styled('fieldset')(
  * fieldset when asking for an address.
  *
  * Simple
+ *
  * ```jsx
+ * import { Fieldset } from 'govuk-react'
+ *
  * <Fieldset>
  *   <Fieldset.Legend>Example</Fieldset.Legend>
  * </Fieldset>
@@ -36,6 +39,7 @@ const Fieldset = styled('fieldset')(
  * and a `isPageHeading` prop for use when you wish your legend to be used as a page heading
  *
  * Custom legend
+ *
  * ```jsx
  * <Fieldset>
  *   <Fieldset.Legend size="XL" isPageHeading>Legend as page heading</Fieldset.Legend>
@@ -44,7 +48,7 @@ const Fieldset = styled('fieldset')(
  *
  * ### References
  * - https://design-system.service.gov.uk/components/fieldset/
- * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/fieldset
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/fieldset
  * - https://design-system.service.gov.uk/get-started/labels-legends-headings/
  */
 const FieldsetDocumented = (props) => <Fieldset {...props} />;
@@ -56,6 +60,7 @@ FieldsetDocumented.propTypes = {
 Fieldset.propTypes = FieldsetDocumented.propTypes;
 
 Fieldset.Legend = Legend;
+FieldsetDocumented.Legend = Legend;
 
 export { FieldsetDocumented };
 export default Fieldset;

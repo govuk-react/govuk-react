@@ -33,11 +33,9 @@ const StyledRelatedItems = styled('div')(
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
- * import { H3 } from '@govuk-react/heading';
- * import UnorderedList from '@govuk-react/unordered-list';
- * import Link from '@govuk-react/link';
- * import ListItem from '@govuk-react/list-item';
+ * import { H3, UnorderedList, ListItem, Link } from 'govuk-react';
  *
  * <RelatedItems>
  *   <H3>Example heading</H3>
@@ -50,6 +48,7 @@ const StyledRelatedItems = styled('div')(
  * ```
  *
  * ### References:
+ *
  * - https://govuk-static.herokuapp.com/component-guide/related_items
  *
  * ### TODO:

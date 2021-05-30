@@ -10,12 +10,16 @@ LabelText
 ### Usage
 
 Simple
+
 ```jsx
+import { LabelText } from 'govuk-react'
+
 <LabelText>Example</LabelText>
 ```
 
 ### References:
-- https://github.com/alphagov/govuk-frontend/tree/master/src/components/
+
+- https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
 
 ### Properties
 Prop | Required | Default | Type | Description

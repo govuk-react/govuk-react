@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { storiesOf } from '@storybook/react';
-import { withDocsCustom } from '@govuk-react/storybook-components';
+
 import { action } from '@storybook/addon-actions';
 
 import DateField from '.';
-import ReadMe from '../README.md';
 
-const stories = storiesOf('Form/Date field', module);
-const examples = storiesOf('Form/Date field/Examples', module);
-
+export default {
+  title: 'Form/Date field',
+  component: DateField,
+};
 class ManagedDateField extends React.Component {
   constructor(props) {
     super(props);
@@ -47,9 +46,7 @@ ManagedDateField.propTypes = {
   input: PropTypes.shape({}),
 };
 
-stories.addDecorator(withDocsCustom(ReadMe));
-
-stories.add('Component default', () => (
+export const Default = () => (
   <ManagedDateField
     input={{
       onFocus: action('date-focus'),
@@ -60,18 +57,18 @@ stories.add('Component default', () => (
   >
     What is your date of birth?
   </ManagedDateField>
-));
+);
 
-examples.add('Date with hint text', () => (
+export const DateWithHintText = () => (
   <DateField hintText="For example, 31 03 1980">What is your date of birth?</DateField>
-));
+);
 
-examples.add('Date with default values', () => (
+export const DateWithDefaultValues = () => (
   <DateField defaultValues={{ day: '01', month: '02', year: '2018' }}>What is your date of birth ?</DateField>
-));
+);
 
-examples.add('Date with hint text & error', () => (
+export const DateWithHintTextError = () => (
   <DateField hintText="For example, 31 03 1980" errorText="Error message goes here">
     What is your date of birth?
   </DateField>
-));
+);

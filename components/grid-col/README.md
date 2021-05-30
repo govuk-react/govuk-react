@@ -16,9 +16,9 @@ floats, however it is otherwise similar to use.
 ### Usage
 
 Simple
+
 ```jsx
-import GridRow from '@govuk-react/grid-row';
-import GridCol from '@govuk-react/grid-col';
+import { GridRow , GridCol } from 'govuk-react'
 
 <Fragment>
   <GridRow>
@@ -56,6 +56,7 @@ import GridCol from '@govuk-react/grid-col';
 ```
 
 ### References:
+
 - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_grid_layout.scss
 - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
 

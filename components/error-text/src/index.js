@@ -23,12 +23,20 @@ const StyledError = styled('span')(
  *
  *
  * Simple
+ *
  * ```jsx
- * <ErrorText>Example</ErrorText>
+ * import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
+ *
+ * <Label>
+ *   <LabelText>Example label</LabelText>
+ *   <HintText>Example hint</HintText>
+ *   <ErrorText>Example error</ErrorText>
+ *   <Input value={value} onClick={onClick} />
+ * </Label>
  * ```
  *
  * ### References
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/error-message/_error-message.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/error-message/_error-message.scss
  */
 const ErrorText = (props) => <StyledError {...props} />;
 

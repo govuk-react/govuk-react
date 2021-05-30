@@ -1,15 +1,19 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+
 import { withKnobs, color, text } from '@storybook/addon-knobs';
 
-import ButtonArrow from '.';
+import ButtonArrowComponent from '.';
 
-const stories = storiesOf('Icons', module);
-stories.addDecorator(withKnobs);
+export default {
+  title: 'Utility/Icons',
+  decorators: [withKnobs],
+};
 
-stories.add('ButtonArrow', () => {
+export const ButtonArrow = () => {
   const fillColour = color('fill', 'black');
-  const width = text('width', '100%');
-  const height = text('height', '100%');
-  return <ButtonArrow width={width} height={height} fill={fillColour} title="Example ButtonArrow implementation" />;
-});
+  const width = text('width', '256px');
+  const height = text('height', '256px');
+  return (
+    <ButtonArrowComponent width={width} height={height} fill={fillColour} title="Example ButtonArrow implementation" />
+  );
+};

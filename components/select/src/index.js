@@ -1,4 +1,4 @@
-// https://github.com/alphagov/govuk-frontend/tree/master/src/components/select
+// https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/select
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -39,15 +39,17 @@ const StyledSelect = styled('select')(
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
- <Select name="group1" label="This is a label">
-    <option value="0">GOV.UK elements option 1</option>
-    <option value="1">GOV.UK elements option 2</option>
-    <option value="2">GOV.UK elements option 3</option>
-  </Select>
+ * <Select name="group1" label="This is a label">
+ *   <option value="0">GOV.UK elements option 1</option>
+ *   <option value="1">GOV.UK elements option 2</option>
+ *   <option value="2">GOV.UK elements option 3</option>
+ * </Select>
  * ```
  *
  * Select with hint text
+ *
  * ```jsx
  * <Select
  *    name="group1"
@@ -59,10 +61,11 @@ const StyledSelect = styled('select')(
  *    <option value="0">GOV.UK elements option 1</option>
  *    <option value="1">GOV.UK elements option 2</option>
  *    <option value="2">GOV.UK elements option 3</option>
- *  </Select>
+ * </Select>
  * ```
  *
  * Select with hint text & error
+ *
  * ```jsx
  * const meta = {
  *   touched: true,
@@ -80,10 +83,11 @@ const StyledSelect = styled('select')(
  *    <option value="0">GOV.UK elements option 1</option>
  *    <option value="1">GOV.UK elements option 2</option>
  *    <option value="2">GOV.UK elements option 3</option>
- *  </Select>
+ * </Select>
  * ```
  *
  * Standalone input with inline label
+ *
  * ```jsx
  * import LabelText from '@govuk-react/label-text';
  * import { SelectInput } '@govuk-react/select';
@@ -100,7 +104,8 @@ const StyledSelect = styled('select')(
  * ```
  *
  * ### References:
- * - https://github.com/alphagov/govuk-frontend/tree/master/src/components/select
+ *
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/select
  *
  */
 const Select = ({ children, hint, label, meta, input, ...props }) => (

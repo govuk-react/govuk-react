@@ -1,6 +1,6 @@
 // This lib is effectively a port of govuk-frontend's typography sass helpers
 // Tracking:
-// https://github.com/alphagov/govuk-frontend/blob/master/src/helpers/_typography.scss
+// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/helpers/_typography.scss
 
 import {
   FONT_STACK,

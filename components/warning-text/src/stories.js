@@ -1,17 +1,15 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+
 import { withKnobs } from '@storybook/addon-knobs';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 
-import WarningText, { WarningWithLongText } from './fixtures';
-import ReadMe from '../README.md';
+import WarningText from '.';
+import WarningTextWithKnobs, { WarningWithLongText } from './fixtures';
 
-const stories = storiesOf('Typography/WarningText', module);
-const examples = storiesOf('Typography/WarningText/Examples', module);
+export default {
+  title: 'Typography/Warning text',
+  component: WarningText,
+  decorators: [withKnobs],
+};
 
-stories.addDecorator(withKnobs);
-stories.addDecorator(withDocsCustom(ReadMe));
-
-stories.add('Component default', () => <WarningText />);
-
-examples.add('With a very long warning', () => <WarningWithLongText />);
+export const Default = () => <WarningTextWithKnobs />;
+export const LongWarning = () => <WarningWithLongText />;

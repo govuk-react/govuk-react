@@ -58,10 +58,10 @@ const Input = styled('input')({
  * ### Usage
  *
  * TopNav with logo, service title and navigation items
+ *
  * ```jsx
+ * import { SearchBox, TopNav } from 'govuk-react';
  * import CrownIcon from '@govuk-react/icon-crown';
- * import SearchBox from '@govuk-react/search-box';
- * import TopNav from '@govuk-react/top-nav';
  *
  * const link = 'https://example.com?=1';
  *
@@ -90,10 +90,12 @@ const Input = styled('input')({
  * </TopNav>
  * ```
  *
+ * With React Router
+ *
  * ```jsx
  * import { BrowserRouter, Link } from 'react-router-dom';
+ * import { TopNav } from 'govuk-react';
  * import CrownIcon from '@govuk-react/icon-crown';
- * import TopNav from '@govuk-react/top-nav';
  *
  * const reactRouterLink = '/section';
  * const CompanyLink = (
@@ -114,6 +116,7 @@ const Input = styled('input')({
  * ```
  *
  * ### References:
+ *
  * - http://alphagov.github.io/govuk_template/example-proposition-menu.html
  * - https://design-system.service.gov.uk/components/header/
  *

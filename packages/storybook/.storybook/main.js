@@ -2,6 +2,8 @@ const { webpack: workspaceAliases } = require('workspace-alias');
 
 module.exports = {
   stories: [
+    '../src/stories.mdx',
+    '../src/*.stories.mdx',
     '../../../packages/example-application/src/**/stories.js',
     '../../../components/*/src/**/stories.js',
     '../../../packages/hoc/src/**/stories.js',

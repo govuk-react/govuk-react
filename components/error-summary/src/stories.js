@@ -1,14 +1,14 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+
 import { withKnobs } from '@storybook/addon-knobs';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 
 import ErrorSummary from './fixtures';
-import ReadMe from '../README.md';
+import ErrorSummaryComponent from '.';
 
-const stories = storiesOf('Form/ErrorSummary', module);
+export default {
+  title: 'Form/Error summary',
+  decorators: [withKnobs],
+  component: ErrorSummaryComponent,
+};
 
-stories.addDecorator(withKnobs);
-stories.addDecorator(withDocsCustom(ReadMe));
-
-stories.add('Component default', () => <ErrorSummary />);
+export const Default = () => <ErrorSummary />;

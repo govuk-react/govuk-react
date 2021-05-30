@@ -1,7 +1,7 @@
 // https://design-system.service.gov.uk/styles/typography/
-// https://github.com/alphagov/govuk-frontend/blob/master/src/settings/_typography-responsive.scss
-// https://github.com/alphagov/govuk-frontend/blob/master/src/settings/_typography-font.scss
-// https://github.com/alphagov/govuk-frontend/blob/master/src/core/_typography.scss
+// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/settings/_typography-responsive.scss
+// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/settings/_typography-font.scss
+// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_typography.scss
 
 import { RESPONSIVE_8, RESPONSIVE_6, RESPONSIVE_4 } from './spacing';
 

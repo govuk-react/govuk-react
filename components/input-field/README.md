@@ -10,11 +10,15 @@ InputField
 ### Usage
 
 Simple
+
 ```jsx
+import { InputField } from 'govuk-react'
+
 <InputField name="group0">National Insurance number</InputField>
 ```
 
 Input with hint text
+
 ```jsx
 <InputField
    name="group1"
@@ -29,6 +33,7 @@ Input with hint text
 ```
 
 Input with hint text & error
+
 ```jsx
  const meta = {
    touched: true,
@@ -47,8 +52,10 @@ Input with hint text & error
    National Insurance number
  </InputField>
 ```
+
 ### References:
-- https://github.com/alphagov/govuk-frontend/blob/master/src/components/input/_input.scss
+
+- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/input/_input.scss
 - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
 
 ### Properties

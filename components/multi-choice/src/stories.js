@@ -1,17 +1,14 @@
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withDocsCustom } from '@govuk-react/storybook-components';
-
+import MultiChoice from '.';
 import MultiChoiceWithKnobs, { MultiChoiceWithKnobsHint, MultiChoiceWithKnobsError } from './fixtures';
 
-import ReadMe from '../README.md';
+export default {
+  title: 'Form/Multi choice',
+  component: MultiChoice,
+  decorators: [withKnobs],
+};
 
-const stories = storiesOf('Form/MultiChoice', module);
-stories.addDecorator(withKnobs);
-stories.addDecorator(withDocsCustom(ReadMe));
-stories.add('Component default', MultiChoiceWithKnobs);
+export const Default = MultiChoiceWithKnobs;
 
-const examples = storiesOf('Form/MultiChoice/Examples', module);
-examples.addDecorator(withKnobs);
-examples.add('With a hint', MultiChoiceWithKnobsHint);
-examples.add('With an error', MultiChoiceWithKnobsError);
+export const WithAHint = MultiChoiceWithKnobsHint;
+export const WithAnError = MultiChoiceWithKnobsError;

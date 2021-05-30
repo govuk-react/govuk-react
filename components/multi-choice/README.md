@@ -10,8 +10,9 @@ MultiChoice
 ### Usage
 
 Simple
+
 ```jsx
-import Radio from '@govuk-react/radio';
+import { MultiChoice, Radio } from 'govuk-react';
 
 <MultiChoice label="example">
    <Radio name="group1" inline>
@@ -24,6 +25,7 @@ import Radio from '@govuk-react/radio';
 ```
 
 ### References:
+
 - https://govuk-elements.herokuapp.com/errors/
 - https://govuk-elements.herokuapp.com/errors/example-form-validation-single-question-radio
 

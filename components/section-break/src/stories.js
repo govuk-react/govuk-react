@@ -1,12 +1,12 @@
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 
-import SectionBreak from './fixtures';
-import ReadMe from '../README.md';
+import { SectionBreakDocumented as SectionBreak } from '.';
+import SectionBreakExample from './fixtures';
 
-const stories = storiesOf('Typography/SectionBreak', module);
-stories.addDecorator(withDocsCustom(ReadMe));
-stories.addDecorator(withKnobs);
+export default {
+  title: 'Page & Layout/Section break',
+  component: SectionBreak,
+  decorators: [withKnobs],
+};
 
-stories.add('Component default', SectionBreak);
+export const Default = SectionBreakExample;

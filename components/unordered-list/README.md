@@ -10,9 +10,9 @@ UnorderedList
 ### Usage
 
 Simple
+
 ```jsx
-import UnorderedList from '@govuk-react/unordered-list';
-import ListItem from '@govuk-react/list-item';
+import { UnorderedList, ListItem} from 'govuk-react';
 
 <UnorderedList>
   <ListItem>Lorem ipsum dolor sit.</ListItem>
@@ -21,10 +21,10 @@ import ListItem from '@govuk-react/list-item';
 </UnorderedList>
 ```
 
-with Roman
+With Roman
+
 ```jsx
-import UnorderedList from '@govuk-react/unordered-list';
-import ListItem from '@govuk-react/list-item';
+import { UnorderedList, ListItem} from 'govuk-react';
 
 <UnorderedList listStyleType="lower-roman">
   <ListItem>Lorem ipsum dolor sit.</ListItem>
@@ -35,7 +35,7 @@ import ListItem from '@govuk-react/list-item';
 
 ### References
 - https://design-system.service.gov.uk/styles/typography/#lists
-- https://github.com/alphagov/govuk-frontend/blob/master/src/core/_lists.scss
+- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_lists.scss
 
 ### Properties
 Prop | Required | Default | Type | Description

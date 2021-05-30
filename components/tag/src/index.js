@@ -33,13 +33,17 @@ const Tag = styled('strong')(
  * ### Usage
  *
  * Simple
+ *
  * ```jsx
+ * import { Tag } from 'govuk-react'
+ *
  * <Tag>beta</Tag>
  * ```
  *
  * ### References:
+ *
  * - https://design-system.service.gov.uk/components/tag/
- * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/tag/_tag.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/tag/_tag.scss
  *
  */
 const DocumentedTag = (props) => <Tag {...props} />;

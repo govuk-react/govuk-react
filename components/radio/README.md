@@ -10,11 +10,15 @@ Radio
 ### Usage
 
 Simple
+
 ```jsx
+import { Radio } from 'govuk-react'
+
 <Radio name="group1">Radio button text example</Radio>
 ```
 
 Radio stacked
+
 ```jsx
  <div>
    <Radio name="group1">Waste from animal carcasses</Radio>
@@ -24,6 +28,7 @@ Radio stacked
 ```
 
 Radio inline
+
 ```jsx
  <div>
    <Radio name="group1" inline>
@@ -36,6 +41,7 @@ Radio inline
 ```
 
 Radio disabled
+
 ```jsx
  <div>
    <Radio name="group1" disabled="disabled">
@@ -45,6 +51,7 @@ Radio disabled
  ```
 
 Radio preselected
+
 ```jsx
  <div>
    <Radio name="group1" checked>
@@ -54,6 +61,7 @@ Radio preselected
 ```
 
 Radio preselected & disabled
+
 ```jsx
  <div>
    <Radio name="group1" disabled="disabled" checked>
@@ -62,6 +70,7 @@ Radio preselected & disabled
  </div>
 ```
 Radio with hint text
+
 ```jsx
 <div>
   <Radio
@@ -73,8 +82,10 @@ Radio with hint text
   </Radio>
 </div>
 ```
+
 ### References:
-- https://github.com/alphagov/govuk-frontend/blob/master/src/components/radios/_radios.scss
+
+- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/radios/_radios.scss
 - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
 
 ### Properties

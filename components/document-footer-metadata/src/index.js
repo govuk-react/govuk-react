@@ -22,8 +22,9 @@ const StyledDefinition = styled('li')({
  *
  *
  * Simple
+ *
  * ```jsx
- * import { Link } from '@govuk-react/link';
+ * import { DocumentFooterMetadata, Link } from 'govuk-react'
  *
  * const fromData = [
  *   <Link href="/government/organisations/ministry-of-defence">
@@ -36,8 +37,9 @@ const StyledDefinition = styled('li')({
  *
  *
  * DFM From & part of example
+ *
  * ```jsx
- * import { Link } from '@govuk-react/link';
+ * import { DocumentFooterMetadata, Link } from 'govuk-react'
  *
  * const fromData = [
  *   <Link href="/government/organisations/ministry-of-defence">
@@ -54,8 +56,9 @@ const StyledDefinition = styled('li')({
  *
  *
  * DFM From & other data example
+ *
  * ```jsx
- * import { Link } from '@govuk-react/link';
+ * import { DocumentFooterMetadata, Link } from 'govuk-react'
  *
  * const fromData = [
  *   <Link href="/government/organisations/ministry-of-defence">
@@ -79,6 +82,7 @@ const StyledDefinition = styled('li')({
  * ```
  *
  * ### References:
+ *
  * - https://govuk-static.herokuapp.com/component-guide/document_footer
  */
 const DocumentFooterMetadata = ({ from, partOf, other, ...props }) => {

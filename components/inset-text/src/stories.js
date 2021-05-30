@@ -1,17 +1,14 @@
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withDocsCustom } from '@govuk-react/storybook-components';
 
-import InsetText, { InsetTextWithParagraph } from './fixtures';
-import ReadMe from '../README.md';
+import { DocumentedInsetText as InsetText } from '.';
+import InsetTextExample, { InsetTextWithParagraph } from './fixtures';
 
-const stories = storiesOf('Typography/InsetText', module);
-const examples = storiesOf('Typography/InsetText/Examples', module);
+export default {
+  title: 'Typography/Inset text',
+  component: InsetText,
+  decorators: [withKnobs],
+};
 
-stories.addDecorator(withDocsCustom(ReadMe));
-stories.addDecorator(withKnobs);
-examples.addDecorator(withKnobs);
+export const Default = InsetTextExample;
 
-stories.add('Component default', InsetText);
-
-examples.add('Using a Paragraph for contents', InsetTextWithParagraph);
+export const UsingAParagraphForContents = InsetTextWithParagraph;
