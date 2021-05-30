@@ -15,7 +15,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/global-style",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/global-style",
   "description": "A Styled Component to apply global style for use with govuk-react.",
   "private": false,
   "publishConfig": {

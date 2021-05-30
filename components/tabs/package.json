@@ -20,7 +20,7 @@
   "module": "es/index.js",
   "author": "David Murdoch",
   "license": "MIT",
-  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/tabs",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/tabs",
   "description": "govuk-react Tabs component.",
   "private": false,
   "publishConfig": {

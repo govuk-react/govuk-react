@@ -26,7 +26,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/date-field",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/date-field",
   "description": "Date field component displaying day, month and year and featuring several configurable options.",
   "private": false,
   "publishConfig": {

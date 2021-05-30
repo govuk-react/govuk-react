@@ -23,7 +23,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/multi-choice",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/multi-choice",
   "description": "Styled container for a group of radio buttons (the children), also accepting label, meta and hint props.",
   "private": false,
   "publishConfig": {

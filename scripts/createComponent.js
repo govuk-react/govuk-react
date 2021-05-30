@@ -50,7 +50,7 @@ const packageJson = () => {
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/${componentFolderName}",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/${componentFolderName}",
   "description": "govuk-react ${componentName} component.",
   "private": false,
   "publishConfig": {

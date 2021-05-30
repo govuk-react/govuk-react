@@ -19,7 +19,7 @@
   "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
-  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/list-item",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/list-item",
   "description": "Renders a styled list item containing children passed.",
   "private": false,
   "publishConfig": {

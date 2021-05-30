@@ -24,7 +24,7 @@
   "module": "es/index.js",
   "author": "John Robertson",
   "license": "MIT",
-  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/footer",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/footer",
   "description": "govuk-react Footer component.",
   "private": false,
   "publishConfig": {

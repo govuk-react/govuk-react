@@ -21,7 +21,7 @@
   "module": "es/index.js",
   "author": "Gavin Orland",
   "license": "MIT",
-  "homepage": "https://github.com/govuk-react/govuk-react/tree/master/components/warning-text",
+  "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/warning-text",
   "description": "Styles children passed within a div and strong element, also positioning an 'Important' icon to the left.",
   "private": false,
   "publishConfig": {

@@ -1,7 +1,7 @@
 #!/bin/bash
 # requires https://hub.github.com
 git remote get-url origin | grep -q 'govuk-react/govuk-react' || exit 1 # ensure origin doesn't point to a fork
-git checkout -b release/next origin/master # make a new branch for next version from master
+git checkout -b release/next origin/main # make a new branch for next version from main
 git fetch --tags # lerna uses tags to determine what has changed, we need to make sure we have all tags locally
 yarn lerna publish --skip-npm # update version numbers
 VERSION=$(node -e 'console.log(require("./lerna.json").version)') # get new version number
