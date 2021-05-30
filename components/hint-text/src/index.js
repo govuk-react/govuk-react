@@ -29,9 +29,14 @@ const StyledHint = styled('span')(
  * Simple
  *
  * ```jsx
- * import { HintText } from 'govuk-react'
+ * import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
  *
- * <HintText>Example</HintText>
+ * <Label>
+ *   <LabelText>Example label</LabelText>
+ *   <HintText>Example hint</HintText>
+ *   <ErrorText>Example error</ErrorText>
+ *   <Input value={value} onClick={onClick} />
+ * </Label>
  * ```
  *
  * ### References
