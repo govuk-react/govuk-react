@@ -14,4 +14,7 @@ module.exports = {
     config.resolve.alias = workspaceAliases();
     return config;
   },
+  typescript: {
+    reactDocgen: 'react-docgen',
+  }
 };
