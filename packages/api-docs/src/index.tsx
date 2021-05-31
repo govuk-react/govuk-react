@@ -51,8 +51,8 @@ async function generateApiForFile(file) {
     console.log(chalk.green('API Documented:'), componentName);
     return md;
   } catch (e) {
-    console.log(chalk.red('Skipping component:'), file, e.message);
-    return '';
+    console.error(chalk.red('Error documenting component:'), file, e.message);
+    throw e;
   }
 }
 
