@@ -37,6 +37,7 @@ With `href` attribute
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` |  | ```'Back'``` | string | Text that will appear in the back link
+ `href` |  | ```undefined``` | string | 
  `onClick` |  | ```undefined``` | func | Custom function to run when the `onClick` event is fired
 
 
