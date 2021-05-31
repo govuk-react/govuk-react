@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 import Home from './home';
 import Form from './form';
 
-const ExampleApplication = () => (
-  <Router>
+const ExampleApplication = ({ routerEntries }) => (
+  <Router initialEntries={routerEntries}>
     <GovUK.GlobalStyle />
     <GovUK.TopNav
       serviceTitle={
@@ -15,11 +15,17 @@ const ExampleApplication = () => (
           React
         </GovUK.TopNav.Anchor>
       }
+      search={
+        <GovUK.SearchBox>
+          <GovUK.SearchBox.Input placeholder="Search GOV.UK" />
+          <GovUK.SearchBox.Button />
+        </GovUK.SearchBox>
+      }
     >
       <GovUK.TopNav.NavLink as={Link} to="/">
         Home
       </GovUK.TopNav.NavLink>
-      <GovUK.TopNav.NavLink as={Link} to="Form">
+      <GovUK.TopNav.NavLink as={Link} to="/form">
         Form
       </GovUK.TopNav.NavLink>
     </GovUK.TopNav>

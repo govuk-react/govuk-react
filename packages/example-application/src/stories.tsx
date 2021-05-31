@@ -1,12 +1,14 @@
-import ExampleApplicationComponent from '.';
+import React from 'react'
+
+import Component from '.';
 
 export default {
   title: 'Example Application',
-  component: ExampleApplicationComponent,
+  component: Component,
 };
-
-export const ExampleApplication = ExampleApplicationComponent;
-ExampleApplication.parameters = {
+// bind
+const Template = (args) => <Component {...args} />;
+Template.parameters = {
   layout: 'fullscreen',
   chromatic: { disableSnapshot: false },
   previewTabs: {
@@ -15,3 +17,12 @@ ExampleApplication.parameters = {
   },
   viewMode: 'canvas',
 };
+
+export const ExampleApplication = Template.bind({});
+ExampleApplication.parameters = Template.parameters;
+
+export const Form = Template.bind({});
+Form.args = {
+  routerEntries: ['/form'],
+};
+Form.parameters = Template.parameters;
