@@ -19,7 +19,7 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
   margin-top: 10px;
 }
 
-.c2 > .src__ListItem-sc-14amfma-0 {
+.c2 > .src__ListItem-u4zf5o-0 {
   margin-bottom: 5px;
 }
 

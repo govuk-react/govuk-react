@@ -70,11 +70,11 @@ exports[`Table renders a simple example matching snapshot: simple table 1`] = `
       >
         <TableBody>
           <tbody
-            className="TableBody-sc-1gk0z9f-0"
+            className="TableBody-sc-1qqarm8-0"
           >
             <Row>
               <tr
-                className="Row-sc-17ofjw0-0"
+                className="Row-sc-1y8eqfp-0"
               >
                 <CellHeader>
                   <Cell
@@ -100,7 +100,7 @@ exports[`Table renders a simple example matching snapshot: simple table 1`] = `
             </Row>
             <Row>
               <tr
-                className="Row-sc-17ofjw0-0"
+                className="Row-sc-1y8eqfp-0"
               >
                 <CellHeader>
                   <Cell
@@ -126,7 +126,7 @@ exports[`Table renders a simple example matching snapshot: simple table 1`] = `
             </Row>
             <Row>
               <tr
-                className="Row-sc-17ofjw0-0"
+                className="Row-sc-1y8eqfp-0"
               >
                 <CellHeader>
                   <Cell
@@ -152,7 +152,7 @@ exports[`Table renders a simple example matching snapshot: simple table 1`] = `
             </Row>
             <Row>
               <tr
-                className="Row-sc-17ofjw0-0"
+                className="Row-sc-1y8eqfp-0"
               >
                 <CellHeader>
                   <Cell
@@ -297,11 +297,11 @@ exports[`Table renders a table with a caption matching snapshot: table with capt
         </Caption>
         <TableBody>
           <tbody
-            className="TableBody-sc-1gk0z9f-0"
+            className="TableBody-sc-1qqarm8-0"
           >
             <Row>
               <tr
-                className="Row-sc-17ofjw0-0"
+                className="Row-sc-1y8eqfp-0"
               >
                 <CellHeader>
                   <Cell
@@ -327,7 +327,7 @@ exports[`Table renders a table with a caption matching snapshot: table with capt
             </Row>
             <Row>
               <tr
-                className="Row-sc-17ofjw0-0"
+                className="Row-sc-1y8eqfp-0"
               >
                 <CellHeader>
                   <Cell
@@ -353,7 +353,7 @@ exports[`Table renders a table with a caption matching snapshot: table with capt
             </Row>
             <Row>
               <tr
-                className="Row-sc-17ofjw0-0"
+                className="Row-sc-1y8eqfp-0"
               >
                 <CellHeader>
                   <Cell
@@ -523,11 +523,11 @@ exports[`Table renders a table with custom widths matching snapshot: table with 
         </Caption>
         <TableHeader>
           <thead
-            className="TableHeader-sc-1fvcebn-0"
+            className="TableHeader-sc-1n1nw4b-0"
           >
             <Row>
               <tr
-                className="Row-sc-17ofjw0-0"
+                className="Row-sc-1y8eqfp-0"
               >
                 <CellHeader
                   setWidth="one-half"
@@ -580,11 +580,11 @@ exports[`Table renders a table with custom widths matching snapshot: table with 
         </TableHeader>
         <TableBody>
           <tbody
-            className="TableBody-sc-1gk0z9f-0"
+            className="TableBody-sc-1qqarm8-0"
           >
             <Row>
               <tr
-                className="Row-sc-17ofjw0-0"
+                className="Row-sc-1y8eqfp-0"
               >
                 <Cell>
                   <td
@@ -740,11 +740,11 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
         </Caption>
         <TableHeader>
           <thead
-            className="TableHeader-sc-1fvcebn-0"
+            className="TableHeader-sc-1n1nw4b-0"
           >
             <Row>
               <tr
-                className="Row-sc-17ofjw0-0"
+                className="Row-sc-1y8eqfp-0"
               >
                 <CellHeader>
                   <Cell
@@ -797,11 +797,11 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
         </TableHeader>
         <TableBody>
           <tbody
-            className="TableBody-sc-1gk0z9f-0"
+            className="TableBody-sc-1qqarm8-0"
           >
             <Row>
               <tr
-                className="Row-sc-17ofjw0-0"
+                className="Row-sc-1y8eqfp-0"
               >
                 <CellHeader>
                   <Cell
@@ -838,7 +838,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
             </Row>
             <Row>
               <tr
-                className="Row-sc-17ofjw0-0"
+                className="Row-sc-1y8eqfp-0"
               >
                 <CellHeader>
                   <Cell
@@ -875,7 +875,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
             </Row>
             <Row>
               <tr
-                className="Row-sc-17ofjw0-0"
+                className="Row-sc-1y8eqfp-0"
               >
                 <CellHeader>
                   <Cell
@@ -912,7 +912,7 @@ exports[`Table renders a table with head and numerics matching snapshot: table w
             </Row>
             <Row>
               <tr
-                className="Row-sc-17ofjw0-0"
+                className="Row-sc-1y8eqfp-0"
               >
                 <CellHeader>
                   <Cell

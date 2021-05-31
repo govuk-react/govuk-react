@@ -27,20 +27,20 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
     defaultOpen={false}
   >
     <div
-      className="top-nav-wrapper__TopNavWrapper-vl2d6r-0 jkJxJR"
+      className="top-nav-wrapper__TopNavWrapper-sc-1wnrl5k-0 dofsDg"
       color="#ffffff"
     >
       <top-nav-inner__TopNavInner>
         <div
-          className="top-nav-inner__TopNavInner-sc-1vcy147-0 kkDxiC"
+          className="top-nav-inner__TopNavInner-sc-15yph1v-0 fixVHD"
         >
           <logo-search-wrapper__LogoSearchWrapper>
             <div
-              className="logo-search-wrapper__LogoSearchWrapper-sc-1xz0dmv-0 eXUHVY"
+              className="logo-search-wrapper__LogoSearchWrapper-sc-1iq7ssu-0 kpCpGj"
             >
               <company__Company>
                 <div
-                  className="company__Company-sc-1bg0t8w-0 jNUNWI"
+                  className="company__Company-fxukuq-0 cIlwcm"
                 >
                   <IconTitle
                     icon={
@@ -54,11 +54,11 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                   >
                     <icon-title__Container>
                       <div
-                        className="icon-title__Container-hhkgyi-0 cjQBRA"
+                        className="icon-title__Container-onvli0-0 gwtBuy"
                       >
                         <icon-title__IconContainer>
                           <span
-                            className="icon-title__IconContainer-hhkgyi-1 iisYwx"
+                            className="icon-title__IconContainer-onvli0-1 eivVMj"
                           >
                             <Crown
                               fill="currentColor"
@@ -101,7 +101,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                         </icon-title__IconContainer>
                         <icon-title__TitleContainer>
                           <span
-                            className="icon-title__TitleContainer-hhkgyi-2 gprTiQ"
+                            className="icon-title__TitleContainer-onvli0-2 eugDAS"
                           >
                             GOV.UK
                           </span>
@@ -115,16 +115,16 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
           </logo-search-wrapper__LogoSearchWrapper>
           <right-hand-side__RightHandSide>
             <div
-              className="right-hand-side__RightHandSide-sc-32nkfb-0 eJPcxX"
+              className="right-hand-side__RightHandSide-sc-1c11aed-0 TcZLB"
             >
               <src__ServiceTitleWrapper>
                 <div
-                  className="src__ServiceTitleWrapper-ywaf10-0 kGXjda"
+                  className="src__ServiceTitleWrapper-sc-140rlix-0 iEDCvF"
                 />
               </src__ServiceTitleWrapper>
               <src__MenuButtonWrapper>
                 <div
-                  className="src__MenuButtonWrapper-ywaf10-1 gBzBnI"
+                  className="src__MenuButtonWrapper-sc-140rlix-1 iTofAH"
                 >
                   <MenuButton
                     onClick={[Function]}
@@ -136,13 +136,13 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                       onClick={[Function]}
                     >
                       <label
-                        className="menu-button__Button-xj2q71-0 kATlRZ"
+                        className="menu-button__Button-sc-1yd67mz-0 eELJd"
                         htmlFor="govuk-react-menu-button"
                         onClick={[Function]}
                       >
                         <menu-button__ButtonText>
                           <div
-                            className="menu-button__ButtonText-xj2q71-1 teFcb"
+                            className="menu-button__ButtonText-sc-1yd67mz-1 kMKHvv"
                           >
                             Menu
                           </div>
@@ -151,7 +151,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                           open={false}
                         >
                           <div
-                            className="menu-button__ButtonIcon-xj2q71-2 dXUCzE"
+                            className="menu-button__ButtonIcon-sc-1yd67mz-2 bGQneI"
                             open={false}
                           />
                         </menu-button__ButtonIcon>
@@ -168,7 +168,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
               >
                 <input
                   checked={false}
-                  className="src__Input-ywaf10-2 haArpK"
+                  className="src__Input-sc-140rlix-2 lgzkRt"
                   id="govuk-react-menu-button"
                   onChange={[Function]}
                   type="checkbox"
@@ -179,19 +179,19 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                 open={false}
               >
                 <ul
-                  className="unordered-list__Ul-sc-1x31rva-0 gXTeeP"
+                  className="unordered-list__Ul-otbf2p-0 eyIJON"
                   id="govuk-react-menu"
                   open={false}
                 >
                   <list-item__Li>
                     <li
-                      className="list-item__Li-t3un2w-0 bfSnFO"
+                      className="list-item__Li-sc-1kicpn1-0 MsHbB"
                     >
                       <nav-link-anchor__NavLinkAnchor
                         href="/nav-link"
                       >
                         <a
-                          className="top-nav-anchor__TopNavAnchor-sc-1t10han-0 nav-link-anchor__NavLinkAnchor-z9clwl-0 hSYBtO gJEvml"
+                          className="top-nav-anchor__TopNavAnchor-lt39h5-0 nav-link-anchor__NavLinkAnchor-sc-1pr115z-0 NGKoT bNyBzz"
                           href="/nav-link"
                         >
                           Nav link
@@ -209,7 +209,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
   </top-nav-wrapper__TopNavWrapper>
   <bottom-nav-wrapper__BottomNavWrapper>
     <div
-      className="bottom-nav-wrapper__BottomNavWrapper-wioq5s-0 dJNNJs"
+      className="bottom-nav-wrapper__BottomNavWrapper-sc-1334g24-0 kAhGur"
     />
   </bottom-nav-wrapper__BottomNavWrapper>
 </TopNav>
@@ -244,20 +244,20 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
     defaultOpen={false}
   >
     <div
-      className="top-nav-wrapper__TopNavWrapper-vl2d6r-0 jkJxJR"
+      className="top-nav-wrapper__TopNavWrapper-sc-1wnrl5k-0 dofsDg"
       color="#ffffff"
     >
       <top-nav-inner__TopNavInner>
         <div
-          className="top-nav-inner__TopNavInner-sc-1vcy147-0 kkDxiC"
+          className="top-nav-inner__TopNavInner-sc-15yph1v-0 fixVHD"
         >
           <logo-search-wrapper__LogoSearchWrapper>
             <div
-              className="logo-search-wrapper__LogoSearchWrapper-sc-1xz0dmv-0 eXUHVY"
+              className="logo-search-wrapper__LogoSearchWrapper-sc-1iq7ssu-0 kpCpGj"
             >
               <company__Company>
                 <div
-                  className="company__Company-sc-1bg0t8w-0 jNUNWI"
+                  className="company__Company-fxukuq-0 cIlwcm"
                 >
                   <IconTitle
                     icon={
@@ -271,11 +271,11 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                   >
                     <icon-title__Container>
                       <div
-                        className="icon-title__Container-hhkgyi-0 cjQBRA"
+                        className="icon-title__Container-onvli0-0 gwtBuy"
                       >
                         <icon-title__IconContainer>
                           <span
-                            className="icon-title__IconContainer-hhkgyi-1 iisYwx"
+                            className="icon-title__IconContainer-onvli0-1 eivVMj"
                           >
                             <Crown
                               fill="currentColor"
@@ -318,7 +318,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                         </icon-title__IconContainer>
                         <icon-title__TitleContainer>
                           <span
-                            className="icon-title__TitleContainer-hhkgyi-2 gprTiQ"
+                            className="icon-title__TitleContainer-onvli0-2 eugDAS"
                           >
                             GOV.UK
                           </span>
@@ -332,16 +332,16 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
           </logo-search-wrapper__LogoSearchWrapper>
           <right-hand-side__RightHandSide>
             <div
-              className="right-hand-side__RightHandSide-sc-32nkfb-0 eJPcxX"
+              className="right-hand-side__RightHandSide-sc-1c11aed-0 TcZLB"
             >
               <src__ServiceTitleWrapper>
                 <div
-                  className="src__ServiceTitleWrapper-ywaf10-0 kGXjda"
+                  className="src__ServiceTitleWrapper-sc-140rlix-0 iEDCvF"
                 />
               </src__ServiceTitleWrapper>
               <src__MenuButtonWrapper>
                 <div
-                  className="src__MenuButtonWrapper-ywaf10-1 gBzBnI"
+                  className="src__MenuButtonWrapper-sc-140rlix-1 iTofAH"
                 >
                   <MenuButton
                     onClick={[Function]}
@@ -353,13 +353,13 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                       onClick={[Function]}
                     >
                       <label
-                        className="menu-button__Button-xj2q71-0 kATlRZ"
+                        className="menu-button__Button-sc-1yd67mz-0 eELJd"
                         htmlFor="govuk-react-menu-button"
                         onClick={[Function]}
                       >
                         <menu-button__ButtonText>
                           <div
-                            className="menu-button__ButtonText-xj2q71-1 teFcb"
+                            className="menu-button__ButtonText-sc-1yd67mz-1 kMKHvv"
                           >
                             Menu
                           </div>
@@ -368,7 +368,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                           open={false}
                         >
                           <div
-                            className="menu-button__ButtonIcon-xj2q71-2 dXUCzE"
+                            className="menu-button__ButtonIcon-sc-1yd67mz-2 bGQneI"
                             open={false}
                           />
                         </menu-button__ButtonIcon>
@@ -385,7 +385,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
               >
                 <input
                   checked={false}
-                  className="src__Input-ywaf10-2 haArpK"
+                  className="src__Input-sc-140rlix-2 lgzkRt"
                   id="govuk-react-menu-button"
                   onChange={[Function]}
                   type="checkbox"
@@ -396,7 +396,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                 open={false}
               >
                 <ul
-                  className="unordered-list__Ul-sc-1x31rva-0 gXTeeP"
+                  className="unordered-list__Ul-otbf2p-0 eyIJON"
                   id="govuk-react-menu"
                   open={false}
                 >
@@ -404,13 +404,13 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                     key="0"
                   >
                     <li
-                      className="list-item__Li-t3un2w-0 bfSnFO"
+                      className="list-item__Li-sc-1kicpn1-0 MsHbB"
                     >
                       <top-nav-anchor__TopNavAnchor
                         href="/section"
                       >
                         <a
-                          className="top-nav-anchor__TopNavAnchor-sc-1t10han-0 hSYBtO"
+                          className="top-nav-anchor__TopNavAnchor-lt39h5-0 NGKoT"
                           href="/section"
                         >
                           Section 1
@@ -422,13 +422,13 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                     key="1"
                   >
                     <li
-                      className="list-item__Li-t3un2w-0 bfSnFO"
+                      className="list-item__Li-sc-1kicpn1-0 MsHbB"
                     >
                       <top-nav-anchor__TopNavAnchor
                         href="/section"
                       >
                         <a
-                          className="top-nav-anchor__TopNavAnchor-sc-1t10han-0 hSYBtO"
+                          className="top-nav-anchor__TopNavAnchor-lt39h5-0 NGKoT"
                           href="/section"
                         >
                           Section 1
@@ -446,7 +446,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
   </top-nav-wrapper__TopNavWrapper>
   <bottom-nav-wrapper__BottomNavWrapper>
     <div
-      className="bottom-nav-wrapper__BottomNavWrapper-wioq5s-0 dJNNJs"
+      className="bottom-nav-wrapper__BottomNavWrapper-sc-1334g24-0 kAhGur"
     />
   </bottom-nav-wrapper__BottomNavWrapper>
 </TopNav>

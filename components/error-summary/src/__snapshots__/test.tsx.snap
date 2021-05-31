@@ -24,7 +24,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
         tabIndex={-1}
       >
         <div
-          className="src__StyledErrorSummary-sc-1b7q1ts-1 hxOzJL"
+          className="src__StyledErrorSummary-sc-6d0w2-1 hFfdPr"
           tabIndex={-1}
         >
           <H2
@@ -39,7 +39,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                 size="MEDIUM"
               >
                 <h2
-                  className="heading__StyledHeading-sc-1sovo83-0 fFuVVK"
+                  className="heading__StyledHeading-sc-1dsobun-0 cSTIAh"
                   size="MEDIUM"
                 >
                   Message to alert the user to a problem goes here
@@ -88,7 +88,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                     "text",
                   ]
                 }
-                className="src__StyledParagraph-dkdnni-0 dbOgTf"
+                className="src__StyledParagraph-sgc9po-0 ilsyuQ"
                 escapeHtml={false}
                 linkRenderer={[Function]}
                 mb={3}
@@ -103,7 +103,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                 transformLinkUri={[Function]}
               >
                 <Root
-                  className="src__StyledParagraph-dkdnni-0 dbOgTf"
+                  className="src__StyledParagraph-sgc9po-0 ilsyuQ"
                   key="root-1-1-0"
                   node={
                     Object {
@@ -159,7 +159,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                   }
                 >
                   <div
-                    className="src__StyledParagraph-dkdnni-0 dbOgTf"
+                    className="src__StyledParagraph-sgc9po-0 ilsyuQ"
                   >
                     <p
                       key="paragraph-1-1-0"
@@ -205,13 +205,13 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
               mb={0}
             >
               <ul
-                className="src__OrderedList-sc-1j0kw9l-0 bdyAxg"
+                className="src__OrderedList-sc-1392v8j-0 kvLUna"
               >
                 <src__ListItem
                   key="national-insurance-number"
                 >
                   <li
-                    className="src__ListItem-sc-14amfma-0 RIegK"
+                    className="src__ListItem-u4zf5o-0 caTzFj"
                   >
                     <src__StyledErrorText
                       muted={false}
@@ -221,7 +221,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       textColour={false}
                     >
                       <a
-                        className="src__StyledErrorText-sc-1b7q1ts-0 hKXFDy hJMzxV"
+                        className="src__StyledErrorText-sc-6d0w2-0 hKXFDy hgczep"
                         onClick={[Function]}
                         tabIndex={1}
                       >
@@ -234,7 +234,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                   key="description"
                 >
                   <li
-                    className="src__ListItem-sc-14amfma-0 RIegK"
+                    className="src__ListItem-u4zf5o-0 caTzFj"
                   >
                     <src__StyledErrorText
                       muted={false}
@@ -244,7 +244,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                       textColour={false}
                     >
                       <a
-                        className="src__StyledErrorText-sc-1b7q1ts-0 hKXFDy hJMzxV"
+                        className="src__StyledErrorText-sc-6d0w2-0 hKXFDy hgczep"
                         onClick={[Function]}
                         tabIndex={2}
                       >
@@ -274,13 +274,13 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
           name="national-insurance-number"
         >
           <label
-            className="src__StyledLabel-sc-14n2scx-0 kHdLXy"
+            className="src__StyledLabel-iqzvxn-0 jquVEk"
             name="national-insurance-number"
           >
             <LabelText>
               <src__StyledLabelText>
                 <span
-                  className="src__StyledLabelText-sc-12l0n4z-0 HDdRl"
+                  className="src__StyledLabelText-sc-1lbxenh-0 hiKxXi"
                 >
                   National Insurance number
                 </span>
@@ -289,7 +289,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
             <HintText>
               <src__StyledHint>
                 <span
-                  className="src__StyledHint-sc-1qn4br2-0 kngyqG"
+                  className="src__StyledHint-tq1z5r-0 bBwCby"
                 >
                   It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
                 </span>
@@ -304,7 +304,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
                 type="text"
               >
                 <input
-                  className="src__StyledInput-u8exb4-0 iqwpbG"
+                  className="src__StyledInput-sc-1ch9crp-0 hCAyZH"
                   type="text"
                 />
               </src__StyledInput>
@@ -328,13 +328,13 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
           name="description"
         >
           <label
-            className="src__StyledLabel-sc-14n2scx-0 kHdLXy"
+            className="src__StyledLabel-iqzvxn-0 jquVEk"
             name="description"
           >
             <LabelText>
               <src__StyledLabelText>
                 <span
-                  className="src__StyledLabelText-sc-12l0n4z-0 HDdRl"
+                  className="src__StyledLabelText-sc-1lbxenh-0 hiKxXi"
                 >
                   Description of what you saw
                 </span>
@@ -345,7 +345,7 @@ exports[`error summary matches the ErrorSummary snapshot: error summary 1`] = `
               type="text"
             >
               <textarea
-                className="src__TextAreaField-sc-83xe87-0 kiatxx"
+                className="src__TextAreaField-z0ua7p-0 dRWihc"
                 rows="5"
                 type="text"
               />

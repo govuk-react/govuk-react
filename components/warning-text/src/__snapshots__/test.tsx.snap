@@ -5,11 +5,11 @@ exports[`WarningText to match snapshot 1`] = `
   <WarningText>
     <src__StyledWarningText>
       <div
-        className="src__StyledWarningText-sc-1sdopa3-0 gbVkPv"
+        className="src__StyledWarningText-sc-14ghfbq-0 igQrNb"
       >
         <src__IconImportantWrapper>
           <div
-            className="src__IconImportantWrapper-sc-1sdopa3-1 jzDQIR"
+            className="src__IconImportantWrapper-sc-14ghfbq-1 kMdMZl"
           >
             <IconImportant
               fill="currentColor"
@@ -54,7 +54,7 @@ exports[`WarningText to match snapshot 1`] = `
         </src__IconImportantWrapper>
         <src__WarningTextWrapper>
           <strong
-            className="src__WarningTextWrapper-sc-1sdopa3-2 eruNFl"
+            className="src__WarningTextWrapper-sc-14ghfbq-2 bLQRYB"
           >
             A very long warning message. This includes a lot of text to give a good representation of a more average length warning. That way you can see more than one line wrapping.
           </strong>
