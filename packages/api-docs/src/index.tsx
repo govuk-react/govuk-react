@@ -12,8 +12,6 @@ import _ from 'lodash';
 
 import generateMarkdown from './markdown/generateMarkdown';
 
-const components = require('govuk-react');
-
 function getComponentFolderName(file) {
   // '/' rather than 'path.sep' as, on Windows, the path has already been converted at this point
   const dirs = path.dirname(file).split('/');
@@ -56,19 +54,11 @@ async function generateApiForFile(file) {
   }
 }
 
-function shouldDocumentComponent(file) {
-  // only document components that are exported from packages/govuk-react/src/index.ts
-  const name = getComponentNameFromFile(file);
-  return Object.prototype.hasOwnProperty.call(components, name);
-}
-
 async function generateApiForFiles(files) {
   let md = '';
   for (let i = 0; i < files.length; i += 1) {
     const file = files[i];
-    if (shouldDocumentComponent(file)) {
-      md += await generateApiForFile(file);
-    }
+    md += await generateApiForFile(file);
   }
   return md;
 }
