@@ -72,11 +72,13 @@ BackLink.propTypes = {
    * Custom function to run when the `onClick` event is fired
    */
   onClick: PropTypes.func,
+  href: PropTypes.string,
 };
 
 BackLink.defaultProps = {
   children: 'Back',
   onClick: undefined,
+  href: undefined,
 };
 
 export default BackLink;

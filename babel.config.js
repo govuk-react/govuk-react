@@ -12,7 +12,7 @@ const plugins = [
   ['@babel/plugin-transform-runtime', { helpers: false, regenerator: true }],
 ];
 
-const ignore = ['.spec.js', '.test.js', '-test.js', '/__tests__/'];
+const ignore = ['.spec.[jt]s?(x)', '.test.[jt]s?(x)', '-test.[jt]s?(x)', '/__tests__/'];
 
 if (!esModules) {
   presets[0] = [
