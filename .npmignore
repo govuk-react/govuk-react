@@ -15,4 +15,9 @@ govuk-react-*.tgz
 **/stories.js
 **/example.js
 **/test.js
+**/spec.js
+**/stories.js.map
+**/example.js.map
+**/test.js.map
+**/spec.js.map
 **/__snapshots__

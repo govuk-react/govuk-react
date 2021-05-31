@@ -23,15 +23,15 @@ module.exports = {
       statements: 95,
     },
   },
-  moduleFileExtensions: ['web.js', 'js', 'json', 'web.jsx', 'jsx', 'node'],
+  moduleFileExtensions: ['web.js', 'js', 'json', 'web.jsx', 'jsx', 'node', 'ts', 'tsx'],
   setupFilesAfterEnv: ['<rootDir>/scripts/setupTests.js'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   testEnvironment: 'jsdom',
-  testMatch: ['**/{components,packages}/*/src/**/?(*.)test.js?(x)'],
+  testMatch: ['**/{components,packages}/*/src/**/?(*.)test.[jt]s?(x)'],
   transform: {
     '^.+\\.[jt]sx?$': 'babel-jest',
     '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
   },
-  transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
+  transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$'],
   moduleNameMapper: workspaceAliases(),
 };

@@ -4,7 +4,9 @@
     "paths": {
       "@govuk-react/*": [ "./components/*/src/index.js", "./packages/*/src/index.js" ],
       "govuk-react": ["./packages/govuk-react/src/index.ts"]
-    }
+    },
+    "jsx": "react",
+    "esModuleInterop": true
   },
   "exclude": [
     "node_modules"

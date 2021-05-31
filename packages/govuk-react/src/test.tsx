@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-import * as packageExports from './index.ts';
+import * as packageExports from '.';
 import pkg from '../package.json';
 
 describe('Exports', () => {
