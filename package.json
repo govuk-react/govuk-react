@@ -17,6 +17,7 @@
     "watch:es": "cross-env BABEL_ENV=es lerna exec --ignore @govuk-react/images --parallel -- babel src -x .js,jsx,.ts,.tsx -d es -w --source-maps",
     "watch:lib": "lerna exec --ignore @govuk-react/images --parallel -- babel src -x .js,jsx,.ts,.tsx -d lib -w --source-maps",
     "clean": "rimraf lib && rimraf es",
+    "clean:workspace": "rimraf packages/*/lib && rimraf packages/*/es && rimraf components/*/lib && rimraf components/*/es",
     "bundlesize": "bundlesize",
     "test": "cross-env CI=true yarn test:unit && yarn eslint",
     "test:unit": "jest",
