@@ -15,21 +15,21 @@
     "build:lib": "rimraf lib && babel src -x .js,jsx,.ts,.tsx -d lib --source-maps --config-file ../../babel.config.js",
     "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -x .js,jsx,.ts,.tsx -d es --source-maps --config-file ../../babel.config.js"
   },
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "main": "src/index.tsx",
+  "publishConfig": {
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "access": "public"
+  },
   "author": "Alasdair McLeay",
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react#readme",
   "description": "An example application using govuk-react",
   "private": false,
-  "publishConfig": {
-    "access": "public"
-  },
   "devDependencies": {
     "@cypress/react": "^5.8.0",
     "@cypress/webpack-dev-server": "^1.3.0",
     "cypress": "^7.3.0",
-    "webpack-dev-server": "^3.11.2",
-    "workspace-alias": "^0.1.0"
+    "webpack-dev-server": "^3.11.2"
   }
 }

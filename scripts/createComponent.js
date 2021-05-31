@@ -46,16 +46,18 @@ const packageJson = () => {
     "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -x .js,jsx,.ts,.tsx -d es --source-maps --config-file ../../babel.config.js",
     "docs": "doc-component ./lib/index.js ./README.md"
   },
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "main": "src/index.tsx",
+  "publishConfig": {
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "access": "public"
+  },
+
   "author": "Alasdair McLeay",
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/${componentFolderName}",
   "description": "govuk-react ${componentName} component.",
-  "private": false,
-  "publishConfig": {
-    "access": "public"
-  }
+  "private": false
 }
 `;
   writeFile(filename, contents);
