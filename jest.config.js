@@ -23,7 +23,7 @@ module.exports = {
       statements: 95,
     },
   },
-  moduleFileExtensions: ['web.js', 'js', 'json', 'web.jsx', 'jsx', 'node'],
+  moduleFileExtensions: ['web.js', 'js', 'json', 'web.jsx', 'jsx', 'node', 'ts', 'tsx'],
   setupFilesAfterEnv: ['<rootDir>/scripts/setupTests.js'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   testEnvironment: 'jsdom',
