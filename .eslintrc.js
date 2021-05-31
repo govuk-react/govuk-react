@@ -41,7 +41,7 @@ module.exports = {
   },
   "overrides": [
     {
-      "files": [ "stories.[jt]s?(x)", "test.[jt]s?(x)", "fixtures.[jt]s?(x)", "**.test.[jt]s?(x)", "example.[jt]s?(x)", "scripts/**", "src/stories/**" ],
+      "files": [ "stories.[jt]s?(x)", "test.[jt]s?(x)", "fixtures.[jt]s?(x)", "**.test.[jt]s?(x)", "**.spec.[jt]s?(x)", "example.[jt]s?(x)", "scripts/**", "src/stories/**" ],
       "rules": {
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
       },
