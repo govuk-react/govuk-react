@@ -58,7 +58,7 @@
     "@storybook/storybook-deployer": "^2.8.1",
     "govuk-colours": "^1.1.0",
     "normalize.css": "^8.0.0",
-    "react-final-form": "^4.1.0"
+    "react-final-form": "^6.5.3"
   },
   "peerDependencies": {
     "react": ">=16.2.0"
