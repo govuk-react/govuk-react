@@ -52,4 +52,8 @@ ExampleApplication.propTypes = {
   routerEntries: PropTypes.arrayOf(PropTypes.string),
 };
 
+ExampleApplication.defaultProps = {
+  routerEntries: undefined,
+}
+
 export default ExampleApplication;
