@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 import Home from './home';
 import Form from './form';
+import FinalForm from './final-form';
 
 const ExampleApplication = ({ routerEntries }) => (
   <Router initialEntries={routerEntries}>
@@ -29,6 +30,9 @@ const ExampleApplication = ({ routerEntries }) => (
       <GovUK.TopNav.NavLink as={Link} to="/form">
         Form
       </GovUK.TopNav.NavLink>
+      <GovUK.TopNav.NavLink as={Link} to="/final-form">
+        Final Form
+      </GovUK.TopNav.NavLink>
     </GovUK.TopNav>
     <GovUK.Page.WidthContainer
       beforeChildren={<GovUK.PhaseBanner level="alpha">This part of GOV.UK is being rebuilt</GovUK.PhaseBanner>}
@@ -37,6 +41,9 @@ const ExampleApplication = ({ routerEntries }) => (
         <Switch>
           <Route path="/form">
             <Form />
+          </Route>
+          <Route path="/final-form">
+            <FinalForm />
           </Route>
           <Route path="/">
             <Home />
