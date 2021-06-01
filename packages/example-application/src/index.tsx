@@ -54,6 +54,6 @@ ExampleApplication.propTypes = {
 
 ExampleApplication.defaultProps = {
   routerEntries: undefined,
-}
+};
 
 export default ExampleApplication;
