@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as GovUK from 'govuk-react';
 import { MemoryRouter as Router, Switch, Route } from 'react-router';
 import { Link } from 'react-router-dom';
@@ -46,5 +47,9 @@ const ExampleApplication = ({ routerEntries }) => (
     <GovUK.Footer />
   </Router>
 );
+
+ExampleApplication.propTypes = {
+  routerEntries: PropTypes.arrayOf(PropTypes.string),
+};
 
 export default ExampleApplication;
