@@ -141,7 +141,7 @@ Footer.propTypes = {
    * Override the default footer container component.
    * `children`, `copyright` and `meta` will be placed inside this component.
    */
-  container: PropTypes.func,
+  container: PropTypes.elementType,
   /**
    * Copyright information
    */
