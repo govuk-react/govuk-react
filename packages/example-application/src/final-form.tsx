@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 
 import { Form, Field } from 'react-final-form';
 
-const Checkbox = ({ input, ...props }) => <GovUK.Checkbox {...input} {...props} />;
-const DateField = ({ meta, ...props }) => <GovUK.DateField errorText={meta.touched && meta.error} {...props} />;
-const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />;
+const Checkbox = ({ input, ...props }) => <GovUK.Checkbox {...input} {...props} />; //eslint-disable-line
+const DateField = ({ meta, ...props }) => <GovUK.DateField errorText={meta.touched && meta.error} {...props} />; //eslint-disable-line
+const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />; //eslint-disable-line
+// eslint-disable-next-line
 const FileUpload = ({ input: { value, onChange, ...input }, ...props }) => (
   <GovUK.FileUpload {...input} {...props} onChange={({ target }) => onChange(target.files)} />
 );
@@ -15,7 +16,7 @@ const FinalForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [data, setData] = useState(false);
-  const handleSubmit = useCallback(
+  const handleFormSubmit = useCallback(
     (values) => {
       if (isSubmitting) return;
       setIsSubmitting(true);
@@ -32,7 +33,7 @@ const FinalForm = () => {
     <>
       {!isSubmitted && (
         <Form
-          onSubmit={handleSubmit}
+          onSubmit={handleFormSubmit}
           render={({ handleSubmit, errors, touched }) => {
             const errorsToShow = Object.keys(errors).filter((key) => touched[key]);
             return (
