@@ -26,3 +26,9 @@ Form.args = {
   routerEntries: ['/form'],
 };
 Form.parameters = Template.parameters;
+
+export const FinalForm = Template.bind({});
+FinalForm.args = {
+  routerEntries: ['/final-form'],
+};
+FinalForm.parameters = Template.parameters;

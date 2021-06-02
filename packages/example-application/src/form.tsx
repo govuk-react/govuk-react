@@ -59,7 +59,7 @@ const Form = () => {
           {errors && !!Object.keys(errors).length && (
             <GovUK.ErrorSummary
               heading="Error summary"
-              description="Description"
+              description="Please address the following issues"
               errors={Object.keys(errors).map((key) => ({
                 targetName: key,
                 text: errors[key],
@@ -80,7 +80,7 @@ const Form = () => {
             </GovUK.Label>
             <GovUK.TextArea
               mb={8}
-              name="group1"
+              name="description"
               hint="Enter as many words as you like"
               meta={{ error: errors?.description, touched: !!errors?.description }}
               input={{
@@ -121,9 +121,7 @@ const Form = () => {
             <GovUK.DateField.Container errorText={errors?.dob}>
               <GovUK.LabelText>Date of birth</GovUK.LabelText>
               {errors?.dob && <GovUK.ErrorText>{errors?.dob}</GovUK.ErrorText>}
-              <GovUK.DateField.Input value={dob} onChange={setDob}>
-                Input
-              </GovUK.DateField.Input>
+              <GovUK.DateField.Input value={dob} onChange={setDob} />
             </GovUK.DateField.Container>
           </GovUK.Fieldset>
           <GovUK.Fieldset>
@@ -144,7 +142,7 @@ const Form = () => {
               mb={8}
               acceptedFormats=".jpg, .png"
               hint="This can be in either JPG or PNG format"
-              name="group0"
+              name="petPhoto"
             >
               Please upload a recent photograph
             </GovUK.FileUpload>
@@ -154,7 +152,7 @@ const Form = () => {
               meta={{ error: errors?.hasMultiplePets, touched: !!errors?.hasMultiplePets }}
             >
               <GovUK.Radio
-                name="group1"
+                name="hasMultiplePets"
                 inline
                 checked={hasMultiplePets === true}
                 onChange={() => setHasMultiplePets(true)}
@@ -162,7 +160,7 @@ const Form = () => {
                 Yes
               </GovUK.Radio>
               <GovUK.Radio
-                name="group1"
+                name="hasMultiplePets"
                 inline
                 checked={hasMultiplePets === false}
                 onChange={() => setHasMultiplePets(false)}
