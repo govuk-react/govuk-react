@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import React, { useState, useCallback } from 'react';
 import * as GovUK from 'govuk-react';
 import { Link } from 'react-router-dom';
@@ -8,15 +10,19 @@ const Field = ({ component: Component, ...props }) => (
   <FormikField {...props}>{({ field, meta }) => <Component {...props} input={field} meta={meta} />}</FormikField>
 );
 
-const Checkbox = ({ input, ...props }) => <GovUK.Checkbox {...input} {...props} />; //eslint-disable-line
+const Checkbox = ({ input, ...props }) => <GovUK.Checkbox {...input} {...props} />;
 const DateField = ({ meta, input: { onChange, onBlur, ...input }, ...props }) => (
   <GovUK.DateField
     errorText={meta?.touched && meta?.error}
     {...props}
-    input={{ onChange: (value) => onChange({ target: { value, name: props.name } }), onBlur: (value) => onBlur({ target: { value, name: props.name } }), ...input }}
+    input={{
+      onChange: (value) => onChange({ target: { value, name: props.name } }),
+      onBlur: (value) => onBlur({ target: { value, name: props.name } }),
+      ...input,
+    }}
   />
-); //eslint-disable-line
-const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />; //eslint-disable-line
+);
+const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />;
 // eslint-disable-next-line
 const FileUpload = ({ input: { value, onChange, ...input } = {}, ...props }) => (
   <GovUK.FileUpload {...input} {...props} onChange={({ target }) => onChange(target.files)} />
