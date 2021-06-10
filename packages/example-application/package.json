@@ -2,6 +2,7 @@
   "name": "@govuk-react/example-application",
   "version": "0.9.0",
   "dependencies": {
+    "formik": "^2.2.9",
     "govuk-react": "^0.9.0",
     "react-final-form": "^6.5.3",
     "react-router": "^5.2.0",
