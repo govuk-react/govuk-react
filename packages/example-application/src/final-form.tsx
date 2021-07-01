@@ -76,7 +76,9 @@ const FinalForm = () => {
                     <GovUK.FormGroup error={touched?.nationality && errors?.nationality}>
                       <GovUK.Label mb={4}>
                         <GovUK.LabelText>Nationality</GovUK.LabelText>
-                        {touched?.nationality && errors?.nationality && <GovUK.ErrorText>{errors?.nationality}</GovUK.ErrorText>}
+                        {touched?.nationality && errors?.nationality && (
+                          <GovUK.ErrorText>{errors?.nationality}</GovUK.ErrorText>
+                        )}
                         <Field
                           type="checkbox"
                           name="nationality"
