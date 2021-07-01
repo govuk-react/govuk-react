@@ -73,6 +73,7 @@ const Form = () => {
               <GovUK.HintText>You can find this on your passport</GovUK.HintText>
               {errors?.firstName && <GovUK.ErrorText>{errors.firstName}</GovUK.ErrorText>}
               <GovUK.Input
+                name="firstName"
                 onChange={(e) => setFirstName(e.target.value)}
                 value={firstName}
                 error={!!errors?.firstName}
@@ -96,7 +97,9 @@ const Form = () => {
             <GovUK.FormGroup error={errors?.nationality}>
               <GovUK.Label mb={4}>
                 <GovUK.LabelText>Nationality</GovUK.LabelText>
+                {errors?.nationality && <GovUK.ErrorText>{errors?.nationality}</GovUK.ErrorText>}
                 <GovUK.Checkbox
+                  name="nationality"
                   hint="including English, Scottish, Welsh and Northern Irish"
                   checked={nationality.includes('british')}
                   onChange={() => setNationality((prev) => toggle(prev, 'british'))}
@@ -104,12 +107,14 @@ const Form = () => {
                   British
                 </GovUK.Checkbox>
                 <GovUK.Checkbox
+                  name="nationality"
                   checked={nationality.includes('irish')}
                   onChange={() => setNationality((prev) => toggle(prev, 'irish'))}
                 >
                   Irish
                 </GovUK.Checkbox>
                 <GovUK.Checkbox
+                  name="nationality"
                   checked={nationality.includes('other')}
                   onChange={() => setNationality((prev) => toggle(prev, 'other'))}
                 >
@@ -121,7 +126,7 @@ const Form = () => {
             <GovUK.DateField.Container errorText={errors?.dob}>
               <GovUK.LabelText>Date of birth</GovUK.LabelText>
               {errors?.dob && <GovUK.ErrorText>{errors?.dob}</GovUK.ErrorText>}
-              <GovUK.DateField.Input value={dob} onChange={setDob} />
+              <GovUK.DateField.Input name="dob" value={dob} onChange={setDob} />
             </GovUK.DateField.Container>
           </GovUK.Fieldset>
           <GovUK.Fieldset>
