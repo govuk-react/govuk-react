@@ -28,6 +28,10 @@ const FileUpload = ({ input: { value, onChange, ...input } = {}, ...props }) => 
   <GovUK.FileUpload {...input} {...props} onChange={({ target }) => onChange(target.files)} />
 );
 
+const validateNationality = (value) => (value?.length ? undefined : 'Please select at least one nationality');
+
+const validateMultiplePets = (value) => (value ? undefined : 'Please answer the question');
+
 const FinalForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -49,10 +53,18 @@ const FinalForm = () => {
     <>
       {!isSubmitted && (
         <Formik
-          initialValues={{}}
+          initialValues={{
+            firstName: '',
+            description: '',
+            nationality: [],
+            dob: null,
+            animal: null,
+            petPhoto: null,
+            hasMultiplePets: null,
+          }}
           onSubmit={handleFormSubmit}
-          render={({ errors, touched }) => {
-            const errorsToShow = Object.keys(errors).filter((key) => touched[key]);
+          render={({ errors, touched, ...rest }) => {
+            const errorsToShow = Object.keys(errors); // .filter((key) => touched[key]);
             return (
               <Form>
                 <GovUK.LoadingBox loading={isSubmitting}>
@@ -93,20 +105,33 @@ const FinalForm = () => {
                     <GovUK.FormGroup error={touched?.nationality && errors?.nationality}>
                       <GovUK.Label mb={4}>
                         <GovUK.LabelText>Nationality</GovUK.LabelText>
+                        {errors?.nationality && <GovUK.ErrorText>{errors?.nationality}</GovUK.ErrorText>}
                         <Field
                           type="checkbox"
                           name="nationality"
                           value="british"
-                          validate={(value) => (value?.length ? undefined : 'Please select at least one nationality')}
+                          validate={validateNationality}
                           component={Checkbox}
                           hint="including English, Scottish, Welsh and Northern Irish"
                         >
                           British
                         </Field>
-                        <Field type="checkbox" name="nationality" value="irish" component={Checkbox}>
+                        <Field
+                          type="checkbox"
+                          name="nationality"
+                          value="irish"
+                          validate={validateNationality}
+                          component={Checkbox}
+                        >
                           Irish
                         </Field>
-                        <Field type="checkbox" name="nationality" value="other" component={Checkbox}>
+                        <Field
+                          type="checkbox"
+                          name="nationality"
+                          value="other"
+                          validate={validateNationality}
+                          component={Checkbox}
+                        >
                           Citizen of another country
                         </Field>
                       </GovUK.Label>
@@ -158,11 +183,18 @@ const FinalForm = () => {
                         name="hasMultiplePets"
                         inline
                         value="yes"
-                        validate={(value) => (value ? undefined : 'Please answer the question')}
+                        validate={validateMultiplePets}
                       >
                         Yes
                       </Field>
-                      <Field component={Radio} type="radio" name="hasMultiplePets" inline value="no">
+                      <Field
+                        component={Radio}
+                        type="radio"
+                        name="hasMultiplePets"
+                        inline
+                        value="no"
+                        validate={validateMultiplePets}
+                      >
                         No
                       </Field>
                     </GovUK.MultiChoice>
