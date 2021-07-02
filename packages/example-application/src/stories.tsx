@@ -32,3 +32,9 @@ FinalForm.args = {
   routerEntries: ['/final-form'],
 };
 FinalForm.parameters = Template.parameters;
+
+export const Formik = Template.bind({});
+Formik.args = {
+  routerEntries: ['/formik'],
+};
+Formik.parameters = Template.parameters;

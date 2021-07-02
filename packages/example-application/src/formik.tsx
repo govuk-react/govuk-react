@@ -1,16 +1,36 @@
+/* eslint-disable react/prop-types */
+
 import React, { useState, useCallback } from 'react';
 import * as GovUK from 'govuk-react';
 import { Link } from 'react-router-dom';
 
-import { Form, Field } from 'react-final-form';
+import { Formik, Form, Field as FormikField } from 'formik';
 
-const Checkbox = ({ input, ...props }) => <GovUK.Checkbox {...input} {...props} />; //eslint-disable-line
-const DateField = ({ meta, ...props }) => <GovUK.DateField errorText={meta.touched && meta.error} {...props} />; //eslint-disable-line
-const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />; //eslint-disable-line
+const Field = ({ component: Component, ...props }) => (
+  <FormikField {...props}>{({ field, meta }) => <Component {...props} input={field} meta={meta} />}</FormikField>
+);
+
+const Checkbox = ({ input, ...props }) => <GovUK.Checkbox {...input} {...props} />;
+const DateField = ({ meta, input: { onChange, onBlur, ...input }, ...props }) => (
+  <GovUK.DateField
+    errorText={meta?.touched && meta?.error}
+    {...props}
+    input={{
+      onChange: (value) => onChange({ target: { value, name: props.name } }),
+      onBlur: (value) => onBlur({ target: { value, name: props.name } }),
+      ...input,
+    }}
+  />
+);
+const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />;
 // eslint-disable-next-line
-const FileUpload = ({ input: { value, onChange, ...input }, ...props }) => (
+const FileUpload = ({ input: { value, onChange, ...input } = {}, ...props }) => (
   <GovUK.FileUpload {...input} {...props} onChange={({ target }) => onChange(target.files)} />
 );
+
+const validateNationality = (value) => (value?.length ? undefined : 'Please select at least one nationality');
+
+const validateMultiplePets = (value) => (value ? undefined : 'Please answer the question');
 
 const FinalForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -32,12 +52,21 @@ const FinalForm = () => {
   return (
     <>
       {!isSubmitted && (
-        <Form
+        <Formik
+          initialValues={{
+            firstName: '',
+            description: '',
+            nationality: [],
+            dob: null,
+            animal: null,
+            petPhoto: null,
+            hasMultiplePets: null,
+          }}
           onSubmit={handleFormSubmit}
-          render={({ handleSubmit, errors, touched }) => {
-            const errorsToShow = Object.keys(errors).filter((key) => touched[key]);
+          render={({ errors, touched, ...rest }) => {
+            const errorsToShow = Object.keys(errors); // .filter((key) => touched[key]);
             return (
-              <form onSubmit={handleSubmit}>
+              <Form>
                 <GovUK.LoadingBox loading={isSubmitting}>
                   <GovUK.BackLink as={Link} to="/">
                     Home
@@ -83,16 +112,28 @@ const FinalForm = () => {
                           type="checkbox"
                           name="nationality"
                           value="british"
-                          validate={(value) => (value?.length ? undefined : 'Please select at least one nationality')}
+                          validate={validateNationality}
                           component={Checkbox}
                           hint="including English, Scottish, Welsh and Northern Irish"
                         >
                           British
                         </Field>
-                        <Field type="checkbox" name="nationality" value="irish" component={Checkbox}>
+                        <Field
+                          type="checkbox"
+                          name="nationality"
+                          value="irish"
+                          validate={validateNationality}
+                          component={Checkbox}
+                        >
                           Irish
                         </Field>
-                        <Field type="checkbox" name="nationality" value="other" component={Checkbox}>
+                        <Field
+                          type="checkbox"
+                          name="nationality"
+                          value="other"
+                          validate={validateNationality}
+                          component={Checkbox}
+                        >
                           Citizen of another country
                         </Field>
                       </GovUK.Label>
@@ -144,20 +185,27 @@ const FinalForm = () => {
                         name="hasMultiplePets"
                         inline
                         value="yes"
-                        validate={(value) => (value ? undefined : 'Please answer the question')}
+                        validate={validateMultiplePets}
                       >
                         Yes
                       </Field>
-                      <Field component={Radio} type="radio" name="hasMultiplePets" inline value="no">
+                      <Field
+                        component={Radio}
+                        type="radio"
+                        name="hasMultiplePets"
+                        inline
+                        value="no"
+                        validate={validateMultiplePets}
+                      >
                         No
                       </Field>
                     </GovUK.MultiChoice>
                   </GovUK.Fieldset>
-                  <GovUK.Button onClick={handleSubmit} disabled={isSubmitting}>
+                  <GovUK.Button type="submit" disabled={isSubmitting}>
                     Submit
                   </GovUK.Button>
                 </GovUK.LoadingBox>
-              </form>
+              </Form>
             );
           }}
         />
