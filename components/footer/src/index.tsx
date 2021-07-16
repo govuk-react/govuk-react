@@ -167,11 +167,4 @@ Footer.MetaLinks = MetaLinks;
 Footer.NavigationLinks = NavigationLinks;
 Footer.WidthContainer = WidthContainer;
 
-Footer.defaultProps = {
-  children: undefined,
-  container: Footer.WidthContainer,
-  copyright: undefined,
-  meta: undefined,
-};
-
 export default Footer;
