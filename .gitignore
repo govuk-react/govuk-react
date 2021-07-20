@@ -39,3 +39,7 @@ govuk-react-*.tgz
 /docs/Layout.png
 /packages/storybook/.cache
 /packages/govuk-react/README.md
+
+# IDE configs
+.idea/
+
