@@ -4,7 +4,7 @@ import React from 'react';
 import { BORDER_WIDTH_FORM_ELEMENT, FOCUSABLE, MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 import { BUTTON_COLOUR, BUTTON_COLOUR_DARKEN_15, WHITE } from 'govuk-colours';
-import { darken, stripUnit } from 'polished';
+import { darken, linearGradient, stripUnit } from "polished";
 
 const BUTTON_SHADOW_SIZE = BORDER_WIDTH_FORM_ELEMENT;
 const RAW_SPACING_2 = SPACING_POINTS[2];
@@ -41,10 +41,11 @@ const StyledButton = styled('button').withConfig({
       ? `${BASE_PAD}px ${SPACING_POINTS[3]}px`
       : `${BASE_PAD - HALF_SHADOW}px ${SPACING_POINTS[2]}px`,
     border: `${BORDER_WIDTH_FORM_ELEMENT} solid transparent`,
-    borderRadius: 0,
+    borderRadius: '28px',
     color: buttonTextColour,
-    backgroundColor: buttonColour,
+    background: `linear-gradient(${buttonHoverColour}, ${buttonColour})`,
     boxShadow: `0 ${BUTTON_SHADOW_SIZE} 0 ${buttonShadowColour}`,
+    textShadow: `1px 2px 2px rgba(0,0,0,0.3)`,
     textAlign: 'center',
     verticalAlign: 'top',
     cursor: 'pointer',
@@ -85,6 +86,20 @@ const StyledButton = styled('button').withConfig({
       bottom: `-${RAW_BORDER_WIDTH + RAW_SHADOW}px`,
       left: `-${BORDER_WIDTH_FORM_ELEMENT}`,
       background: 'transparent',
+    },
+
+    '&::after': {
+      content: '""',
+      display: 'block',
+      position: 'absolute',
+      top: -2,
+      bottom: 0,
+      left: 0,
+      right: 0,
+      borderRadius: '28px',
+      height: '65%',
+      background: `linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.45))`,
+      zIndex: 100,
     },
 
     '&:active::before': {
