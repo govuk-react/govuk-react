@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Footer from '.';
 import {
   FooterWithCustomWidth,
@@ -14,7 +16,7 @@ export default {
   component: Footer,
 };
 
-export const Default = Footer;
+export const Default = (args) => <Footer {...args} />;
 
 export const WithCustomWidthContainerNoWidthLimit = FooterWithCustomWidth;
 export const WithCopyright = FooterWithCopyright;

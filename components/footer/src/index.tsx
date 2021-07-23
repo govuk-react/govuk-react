@@ -169,7 +169,7 @@ Footer.WidthContainer = WidthContainer;
 
 Footer.defaultProps = {
   children: undefined,
-  container: Footer.WidthContainer,
+  container: WidthContainer,
   copyright: undefined,
   meta: undefined,
 };
