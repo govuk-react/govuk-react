@@ -54,7 +54,7 @@
     "@storybook/addon-knobs": "6.2.9",
     "@storybook/addon-links": "6.3.2",
     "@storybook/addons": "6.2.9",
-    "@storybook/react": "6.2.9",
+    "@storybook/react": "6.3.5",
     "@storybook/storybook-deployer": "^2.8.1",
     "govuk-colours": "^1.1.0",
     "normalize.css": "^8.0.0",
