@@ -11,6 +11,11 @@
     "bundlesize": "bundlesize",
     "clean:workspace": "rimraf packages/*/lib && rimraf packages/*/es && rimraf components/*/lib && rimraf components/*/es",
     "clean": "rimraf lib && rimraf es",
+    "coverage": "yarn coverage:clean && yarn coverage:unit && yarn coverage:visual-regression && yarn coverage:merge && yarn coverage:merge-report",
+    "coverage:clean": "rimraf coverage",
+    "coverage:merge": "istanbul-merge --out coverage/merged/coverage-final.json ./coverage/unit/coverage-final.json  ./coverage/visual-regression/coverage-final.json",
+    "coverage:merge-report": "nyc report --reporter=lcov --reporter=text --temp-dir=./coverage/merged --report-dir=./coverage/merged",
+    "coverage:unit": "jest --watchAll=false --coverage --coverageDirectory=coverage/unit",
     "coverage:visual-regression": "jest --watchAll=false --coverage --coverageDirectory=coverage/visual-regression --roots=\"<rootDir>\" --testMatch=\"<rootDir>/storyshots/index.js\" --config=\"./jest.storyshots.config.js\"",
     "create-component": "node ./scripts/createComponent.js",
     "docs:components": "lerna run docs --parallel",
@@ -123,6 +128,21 @@
       "maxSize": "120 kB"
     }
   ],
+  "nyc": {
+    "report-dir": "coverage/unit",
+    "reporter": ["text", "json", "lcov"],
+    "all": true,
+    "branches": 95,
+    "functions": 90,
+    "lines": 95,
+    "statements": 95,
+    "watermarks": {
+      "branches": [90, 95],
+      "functions": [90, 90],
+      "lines": [90, 95],
+      "statements": [85, 95]
+    }
+  },
   "workspaces": [
     "components/*",
     "packages/*"
