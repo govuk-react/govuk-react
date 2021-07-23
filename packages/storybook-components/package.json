@@ -3,9 +3,9 @@
   "version": "0.9.0",
   "dependencies": {
     "@govuk-react/button": "^0.9.0",
-    "@storybook/addon-actions": "6.2.9",
-    "@storybook/addon-docs": "6.2.9",
-    "@storybook/addons": "6.2.9",
+    "@storybook/addon-actions": "6.3.5",
+    "@storybook/addon-docs": "6.3.5",
+    "@storybook/addons": "6.3.5",
     "@storybook/react": "6.3.5",
     "react-final-form": "^6.5.3"
   },
