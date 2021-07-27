@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import Caption from './fixtures';
 
@@ -18,33 +18,30 @@ describe('Caption', () => {
     console.error = nativeError;
   });
 
-  it('allows custom string-based font size without crashing', () => {
-    const sizes = ['XL', 'XLARGE', 'L', 'LARGE', 'M', 'MEDIUM'];
-    sizes.forEach((size) => {
-      expect(mount(<Caption size={size}>Tests</Caption>).exists()).toBeTruthy();
+  describe('renders custom string-based font sizes', () => {
+    ['XL', 'XLARGE', 'L', 'LARGE', 'M', 'MEDIUM'].forEach((size) => {
+      it(`shows a '${size}' item`, () => {
+        expect(render(<Caption size={size}>Tests</Caption>).getByText('Tests')).toBeInTheDocument();
+      });
     });
   });
 
   it('allows custom numeric GDS font size without crashing', () => {
-    mount(<Caption size={16}>Test</Caption>);
+    render(<Caption size={16}>Test</Caption>);
   });
 
   it('throws an error if an unsupported size is used', () => {
     expect(() => {
-      mount(<Caption size={0}>example</Caption>);
+      render(<Caption size={0}>example</Caption>);
     }).toThrow();
     expect(() => {
-      mount(<Caption size={1}>example</Caption>);
+      render(<Caption size={1}>example</Caption>);
     }).toThrow();
     expect(() => {
-      mount(<Caption size={99999}>example</Caption>);
+      render(<Caption size={99999}>example</Caption>);
     }).toThrow();
     expect(() => {
-      mount(<Caption size="test">example</Caption>);
+      render(<Caption size="test">example</Caption>);
     }).toThrow();
-  });
-
-  it('matches wrapper snapshot', () => {
-    expect(mount(<Caption>Heading text</Caption>)).toMatchSnapshot();
   });
 });

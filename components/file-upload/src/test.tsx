@@ -1,28 +1,50 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import FileUpload from '.';
 
 describe('FileUpload', () => {
-  const example = 'example';
-  const meta = {
-    touched: true,
-    error: example,
-  };
-  const wrapper = <FileUpload>{example}</FileUpload>;
-  const wrapperError = (
-    <FileUpload hint={example} meta={meta}>
-      {example}
-    </FileUpload>
-  );
   it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(wrapper, div);
-    ReactDOM.render(wrapperError, div);
+    render(
+      <FileUpload hint="hint" meta={{ touched: true, error: 'error' }}>
+        Example
+      </FileUpload>
+    );
   });
 
-  it('matches snapshot', () => {
-    expect(mount(wrapper)).toMatchSnapshot('enzyme.mount');
+  it('renders label from children', () => {
+    const label = 'Label';
+    const { getByText } = render(<FileUpload>{label}</FileUpload>);
+
+    expect(getByText(label)).toBeInTheDocument();
+  });
+
+  it('shows a hint when one is provided', () => {
+    const hint = 'hint';
+    const { getByText } = render(<FileUpload hint={hint}>Label</FileUpload>);
+
+    expect(getByText(hint)).toBeInTheDocument();
+  });
+
+  it('does NOT show error when meta.touched is not true', () => {
+    const error = 'error';
+    const { getByText } = render(
+      <FileUpload hint="hint" meta={{ touched: false, error }}>
+        Example
+      </FileUpload>
+    );
+
+    expect(() => getByText(error)).toThrow();
+  });
+
+  it('shows error when meta.touched is true', () => {
+    const error = 'error';
+    const { getByText } = render(
+      <FileUpload hint="hint" meta={{ touched: true, error }}>
+        Example
+      </FileUpload>
+    );
+
+    expect(getByText(error)).toBeInTheDocument();
   });
 });

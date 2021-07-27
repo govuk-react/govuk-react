@@ -1,10 +1,10 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { FieldsetDocumented as Fieldset } from '.';
 
 describe('Fieldset', () => {
-  it('matches snapshot', () => {
-    expect(mount(<Fieldset />)).toMatchSnapshot('Fieldset');
+  it('renders without crashing', () => {
+    render(<Fieldset />);
   });
 });

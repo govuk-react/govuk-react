@@ -1,14 +1,20 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import { FormGroupDocumented as FormGroup } from '.';
 
 describe('FormGroup', () => {
-  it('matches snapshot', () => {
-    expect(mount(<FormGroup>FormGroup example</FormGroup>)).toMatchSnapshot('FormGroup');
+  it('renders contents without crashing', () => {
+    const contents = 'example';
+    const { getByText } = render(<FormGroup>{contents}</FormGroup>);
+
+    expect(getByText(contents)).toBeInTheDocument();
   });
 
-  it('matches snapshot with error prop set', () => {
-    expect(mount(<FormGroup error>FormGroup example</FormGroup>)).toMatchSnapshot('with error prop');
+  it('renders contents with error flag set without crashing', () => {
+    const contents = 'example';
+    const { getByText } = render(<FormGroup error>{contents}</FormGroup>);
+
+    expect(getByText(contents)).toBeInTheDocument();
   });
 });
