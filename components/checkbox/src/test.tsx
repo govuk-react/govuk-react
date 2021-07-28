@@ -4,15 +4,11 @@ import { render } from '@testing-library/react';
 import Checkbox from '.';
 
 describe('Checkbox', () => {
-  it('renders without crashing', () => {
-    render(<Checkbox>Example</Checkbox>);
-  });
-
-  it('should render an input type="checkbox"', () => {
-    const { getByRole, getByText } = render(<Checkbox>Example</Checkbox>);
+  it('should render an input type="checkbox" with an appropriate label', () => {
+    const { getByLabelText, getByRole } = render(<Checkbox>Example</Checkbox>);
 
     expect(getByRole('checkbox')).toBeInTheDocument();
-    expect(getByText('Example')).toBeInTheDocument();
+    expect(getByLabelText('Example')).toBeInTheDocument();
   });
 
   it('renders disabled checkbox', () => {

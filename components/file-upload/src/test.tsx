@@ -4,19 +4,11 @@ import { render } from '@testing-library/react';
 import FileUpload from '.';
 
 describe('FileUpload', () => {
-  it('renders without crashing', () => {
-    render(
-      <FileUpload hint="hint" meta={{ touched: true, error: 'error' }}>
-        Example
-      </FileUpload>
-    );
-  });
-
   it('renders label from children', () => {
     const label = 'Label';
-    const { getByText } = render(<FileUpload>{label}</FileUpload>);
+    const { getByLabelText } = render(<FileUpload>{label}</FileUpload>);
 
-    expect(getByText(label)).toBeInTheDocument();
+    expect(getByLabelText(label)).toBeInTheDocument();
   });
 
   it('shows a hint when one is provided', () => {

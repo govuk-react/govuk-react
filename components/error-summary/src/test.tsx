@@ -4,10 +4,6 @@ import { fireEvent, render } from '@testing-library/react';
 import ErrorSummary from '.';
 
 describe('error summary', () => {
-  it('should render without crashing', () => {
-    render(<ErrorSummary />);
-  });
-
   it('renders a given heading', () => {
     const heading = 'heading';
     const { getByText } = render(<ErrorSummary heading={heading} />);

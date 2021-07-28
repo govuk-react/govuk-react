@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event';
 import BackLink from '.';
 
 describe('Back Link', () => {
-  it('renders without crashing', () => {
+  it('renders contents without crashing', () => {
     const { getByText } = render(<BackLink>example</BackLink>);
 
     expect(getByText('example')).toBeInTheDocument();
