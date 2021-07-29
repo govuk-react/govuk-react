@@ -11,6 +11,14 @@ describe('Back Link', () => {
     expect(getByText('example')).toBeInTheDocument();
   });
 
+  it('renders with default content', () => {
+    const { children } = BackLink.defaultProps;
+    const { getByText } = render(<BackLink />);
+
+    expect(children).toBeDefined();
+    expect(getByText(children)).toBeInTheDocument();
+  });
+
   it('calls onClick handler when clicked', () => {
     const clickHandler = jest.fn();
     const { getByText } = render(<BackLink onClick={clickHandler}>example</BackLink>);
