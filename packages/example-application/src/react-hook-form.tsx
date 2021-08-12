@@ -10,7 +10,7 @@ const ReactHookForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, submitCount },
   } = useForm();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -30,7 +30,8 @@ const ReactHookForm = () => {
   );
 
   const errorsToShow = Object.keys(errors);
-
+  const validateNationality = (value) => (value?.length ? undefined : 'Please select at least one nationality');
+  const validateMultiplePets = (value) => (value ? undefined : 'Please answer the question');
   return (
     <>
       {!isSubmitted && (
@@ -54,6 +55,7 @@ const ReactHookForm = () => {
               <GovUK.InputField
                 mb={4}
                 hint="You can find this on your passport"
+                meta={{ touched: submitCount > 0, error: errors?.firstName?.message }}
                 input={register('firstName', {
                   validate: (value) => (value ? undefined : 'Please enter a first name'),
                 })}
@@ -63,12 +65,55 @@ const ReactHookForm = () => {
               <GovUK.TextArea
                 mb={8}
                 hint="Enter as many words as you like"
+                meta={{ touched: submitCount > 0, error: errors?.description?.message }}
                 input={register('description', {
                   validate: (value) => (value ? undefined : 'Please enter a description'),
                 })}
               >
                 Description of what you saw
               </GovUK.TextArea>
+              <GovUK.FormGroup error={submitCount > 0 && errors?.nationality?.message}>
+                <GovUK.Label mb={4}>
+                  <GovUK.LabelText>Nationality</GovUK.LabelText>
+                  {submitCount > 0 && errors?.nationality?.message && <GovUK.ErrorText>{errors?.nationality.message}</GovUK.ErrorText>}
+                  <GovUK.Checkbox
+                    type="checkbox"
+                    value="british"
+                    hint="including English, Scottish, Welsh and Northern Irish"
+                    input={register('nationality', {
+                      validate: validateNationality,
+                    })}
+                  >
+                    British
+                  </GovUK.Checkbox>
+                  <GovUK.Checkbox
+                    type="checkbox"
+                    value="irish"
+                    input={register('nationality', {
+                      validate: validateNationality,
+                    })}
+                  >
+                    Irish
+                  </GovUK.Checkbox>
+                  <GovUK.Checkbox
+                    type="checkbox"
+                    value="other"
+                    input={register('nationality', {
+                      validate: validateNationality,
+                    })}
+                  >
+                    Citizen of another country
+                  </GovUK.Checkbox>
+                </GovUK.Label>
+              </GovUK.FormGroup>
+              <GovUK.DateField
+                errorText={submitCount > 0 && errors?.dob?.message}
+                input={register('dob', {
+                  validate: (value) => (value ? undefined : 'Please enter a date of birth'),
+                })}
+              >
+                Date of birth
+              </GovUK.DateField>
             </GovUK.Fieldset>
             <GovUK.Fieldset>
               <GovUK.Fieldset.Legend size="M">About your pet</GovUK.Fieldset.Legend>
@@ -84,6 +129,36 @@ const ReactHookForm = () => {
                 <option value="other-feline">Other feline</option>
                 <option value="other-non-feline">Other non feline</option>
               </GovUK.Select>
+              <GovUK.FileUpload
+                mb={8}
+                acceptedFormats=".jpg, .png"
+                hint="This can be in either JPG or PNG format"
+                {...register('petPhoto', { validate: (value) => (value ? undefined : 'Please select a photo') })}
+              >
+                Please upload a recent photograph
+              </GovUK.FileUpload>
+              <GovUK.MultiChoice
+                mb={8}
+                label="Do you have more than one pet?"
+                meta={{ error: errors?.hasMultiplePets?.message, touched: submitCount > 0 }}
+              >
+                <GovUK.Radio
+                  type="radio"
+                  inline
+                  value="yes"
+                  {...register('hasMultiplePets', { validate: validateMultiplePets })}
+                >
+                  Yes
+                </GovUK.Radio>
+                <GovUK.Radio
+                  type="radio"
+                  inline
+                  value="no"
+                  {...register('hasMultiplePets', { validate: validateMultiplePets })}
+                >
+                  No
+                </GovUK.Radio>
+              </GovUK.MultiChoice>
             </GovUK.Fieldset>
             <GovUK.Button type="submit" disabled={isSubmitting}>
               Submit
