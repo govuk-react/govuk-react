@@ -54,7 +54,7 @@ const ReactHookForm = () => {
               <GovUK.InputField
                 mb={4}
                 hint="You can find this on your passport"
-                {...register('firstName', {
+                input={register('firstName', {
                   validate: (value) => (value ? undefined : 'Please enter a first name'),
                 })}
               >
@@ -63,7 +63,7 @@ const ReactHookForm = () => {
               <GovUK.TextArea
                 mb={8}
                 hint="Enter as many words as you like"
-                {...register('description', {
+                input={register('description', {
                   validate: (value) => (value ? undefined : 'Please enter a description'),
                 })}
               >
@@ -76,7 +76,7 @@ const ReactHookForm = () => {
                 mb={8}
                 label="What animal is your pet"
                 hint="A cat for example"
-                {...register('animal', {
+                input={register('animal', {
                   validate: (value) => (value ? undefined : 'Please select an animal'),
                 })}
               >
