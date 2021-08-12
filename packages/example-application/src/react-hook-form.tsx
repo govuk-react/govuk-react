@@ -6,6 +6,23 @@ import { Link } from 'react-router-dom';
 
 import { useForm } from 'react-hook-form';
 
+const DateField = ({ input: { onChange, onBlur, ...input }, ...props }) => {
+  const [value, setValue] = useState(input.value);
+  return (
+    <GovUK.DateField
+      {...props}
+      input={{
+        onChange: (newValue) => {
+          setValue({ ...value, ...newValue });
+          onChange({ target: { value: { ...value, ...newValue }, name: input.name } });
+        },
+        onBlur: (newValue) => onBlur({ target: { value, name: input.name } }),
+        ...input,
+      }}
+    />
+  );
+};
+
 const ReactHookForm = () => {
   const {
     register,
@@ -30,8 +47,10 @@ const ReactHookForm = () => {
   );
 
   const errorsToShow = Object.keys(errors);
+  // TODO: extract shared validation code
   const validateNationality = (value) => (value?.length ? undefined : 'Please select at least one nationality');
   const validateMultiplePets = (value) => (value ? undefined : 'Please answer the question');
+
   return (
     <>
       {!isSubmitted && (
@@ -75,12 +94,14 @@ const ReactHookForm = () => {
               <GovUK.FormGroup error={submitCount > 0 && errors?.nationality?.message}>
                 <GovUK.Label mb={4}>
                   <GovUK.LabelText>Nationality</GovUK.LabelText>
-                  {submitCount > 0 && errors?.nationality?.message && <GovUK.ErrorText>{errors?.nationality.message}</GovUK.ErrorText>}
+                  {submitCount > 0 && errors?.nationality?.message && (
+                    <GovUK.ErrorText>{errors?.nationality.message}</GovUK.ErrorText>
+                  )}
                   <GovUK.Checkbox
                     type="checkbox"
                     value="british"
                     hint="including English, Scottish, Welsh and Northern Irish"
-                    input={register('nationality', {
+                    {...register('nationality', {
                       validate: validateNationality,
                     })}
                   >
@@ -89,7 +110,7 @@ const ReactHookForm = () => {
                   <GovUK.Checkbox
                     type="checkbox"
                     value="irish"
-                    input={register('nationality', {
+                    {...register('nationality', {
                       validate: validateNationality,
                     })}
                   >
@@ -98,7 +119,7 @@ const ReactHookForm = () => {
                   <GovUK.Checkbox
                     type="checkbox"
                     value="other"
-                    input={register('nationality', {
+                    {...register('nationality', {
                       validate: validateNationality,
                     })}
                   >
@@ -106,14 +127,15 @@ const ReactHookForm = () => {
                   </GovUK.Checkbox>
                 </GovUK.Label>
               </GovUK.FormGroup>
-              <GovUK.DateField
+              <DateField
                 errorText={submitCount > 0 && errors?.dob?.message}
                 input={register('dob', {
+                  // TODO: should check for valid date via extracted and shared function
                   validate: (value) => (value ? undefined : 'Please enter a date of birth'),
                 })}
               >
                 Date of birth
-              </GovUK.DateField>
+              </DateField>
             </GovUK.Fieldset>
             <GovUK.Fieldset>
               <GovUK.Fieldset.Legend size="M">About your pet</GovUK.Fieldset.Legend>
@@ -133,7 +155,7 @@ const ReactHookForm = () => {
                 mb={8}
                 acceptedFormats=".jpg, .png"
                 hint="This can be in either JPG or PNG format"
-                {...register('petPhoto', { validate: (value) => (value ? undefined : 'Please select a photo') })}
+                // {...register('petPhoto', { validate: (value) => (value ? undefined : 'Please select a photo') })}
               >
                 Please upload a recent photograph
               </GovUK.FileUpload>
