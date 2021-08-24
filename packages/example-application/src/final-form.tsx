@@ -15,13 +15,13 @@ const FileUpload = ({ input: { value, onChange, ...input }, ...props }) => (
 const FinalForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [data, setData] = useState(false);
+  const [submittedData, setSubmittedData] = useState();
   const handleFormSubmit = useCallback(
     (values) => {
       if (isSubmitting) return;
       setIsSubmitting(true);
       setTimeout(() => {
-        setData(values);
+        setSubmittedData(values);
         setIsSubmitted(true);
         setIsSubmitting(false);
       }, 1000);
@@ -175,12 +175,12 @@ const FinalForm = () => {
             Consequat adipisicing aliquip eiusmod nostrud et proident non id consequat aliquip eiusmod aliquip.
           </GovUK.Paragraph>
           <GovUK.UnorderedList>
-            <GovUK.ListItem>Name: {data.firstName}</GovUK.ListItem>
-            <GovUK.ListItem>Description: {data.description}</GovUK.ListItem>
-            <GovUK.ListItem>Nationality: {JSON.stringify(data.nationality)}</GovUK.ListItem>
-            <GovUK.ListItem>Date of birth: {JSON.stringify(data.dob)}</GovUK.ListItem>
-            <GovUK.ListItem>Animal: {data.animal}</GovUK.ListItem>
-            <GovUK.ListItem>Multiple pets: {data.hasMultiplePets}</GovUK.ListItem>
+            <GovUK.ListItem>Name: {submittedData.firstName}</GovUK.ListItem>
+            <GovUK.ListItem>Description: {submittedData.description}</GovUK.ListItem>
+            <GovUK.ListItem>Nationality: {JSON.stringify(submittedData.nationality)}</GovUK.ListItem>
+            <GovUK.ListItem>Date of birth: {JSON.stringify(submittedData.dob)}</GovUK.ListItem>
+            <GovUK.ListItem>Animal: {submittedData.animal}</GovUK.ListItem>
+            <GovUK.ListItem>Multiple pets: {submittedData.hasMultiplePets}</GovUK.ListItem>
           </GovUK.UnorderedList>
         </>
       )}
