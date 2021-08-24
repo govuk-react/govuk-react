@@ -195,7 +195,7 @@ describe('When a user loads the application,', () => {
     });
   });
   // TODO: seperate specs
-  describe.only('browses to react hook form,', () => {
+  describe('browses to react hook form,', () => {
     beforeEach(() => {
       cy.contains('Menu').click();
       cy.contains('React Hook Form').click();
