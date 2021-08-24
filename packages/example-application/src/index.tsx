@@ -5,10 +5,7 @@ import { MemoryRouter as Router, Switch, Route } from 'react-router';
 import { Link } from 'react-router-dom';
 
 import Home from './home';
-import Form from './form';
-import FinalForm from './final-form';
-import Formik from './formik';
-import ReactHookForm from './react-hook-form';
+import Forms from './forms/forms';
 
 const ExampleApplication = ({ routerEntries }) => (
   <Router initialEntries={routerEntries}>
@@ -29,18 +26,8 @@ const ExampleApplication = ({ routerEntries }) => (
       <GovUK.TopNav.NavLink as={Link} to="/">
         Home
       </GovUK.TopNav.NavLink>
-      <GovUK.TopNav.NavLink as={Link} to="/form">
-        Form
-      </GovUK.TopNav.NavLink>
-      <GovUK.TopNav.NavLink as={Link} to="/final-form">
-        Final Form
-      </GovUK.TopNav.NavLink>
-      <GovUK.TopNav.NavLink as={Link} to="/formik">
-        Formik
-      </GovUK.TopNav.NavLink>
-      {/* TODO: a single 'Forms' nav option */}
-      <GovUK.TopNav.NavLink as={Link} to="/react-hook-form">
-        React Hook Form
+      <GovUK.TopNav.NavLink as={Link} to="/forms">
+        Forms
       </GovUK.TopNav.NavLink>
     </GovUK.TopNav>
     <GovUK.Page.WidthContainer
@@ -48,17 +35,8 @@ const ExampleApplication = ({ routerEntries }) => (
     >
       <GovUK.Page.Main>
         <Switch>
-          <Route path="/form">
-            <Form />
-          </Route>
-          <Route path="/final-form">
-            <FinalForm />
-          </Route>
-          <Route path="/formik">
-            <Formik />
-          </Route>
-          <Route path="/react-hook-form">
-            <ReactHookForm />
+          <Route path="/forms">
+            <Forms />
           </Route>
           <Route path="/">
             <Home />

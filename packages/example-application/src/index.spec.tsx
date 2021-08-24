@@ -9,6 +9,7 @@ describe('When a user loads the application,', () => {
   describe('browses to the form,', () => {
     beforeEach(() => {
       cy.get('a').contains('Start now').click();
+      cy.get('a').contains('Basic').click();
     });
     describe('clicks submit,', () => {
       beforeEach(() => {
@@ -70,8 +71,8 @@ describe('When a user loads the application,', () => {
   });
   describe('browses to final form,', () => {
     beforeEach(() => {
-      cy.contains('Menu').click();
-      cy.contains('Final Form').click();
+      cy.get('a').contains('Start now').click();
+      cy.get('a').contains('Final Form').click();
     });
     describe('clicks submit,', () => {
       beforeEach(() => {
@@ -133,8 +134,8 @@ describe('When a user loads the application,', () => {
   });
   describe('browses to formik,', () => {
     beforeEach(() => {
-      cy.contains('Menu').click();
-      cy.contains('Formik').click();
+      cy.get('a').contains('Start now').click();
+      cy.get('a').contains('Formik').click();
     });
     describe('clicks submit,', () => {
       beforeEach(() => {
@@ -197,8 +198,8 @@ describe('When a user loads the application,', () => {
   // TODO: seperate specs
   describe('browses to react hook form,', () => {
     beforeEach(() => {
-      cy.contains('Menu').click();
-      cy.contains('React Hook Form').click();
+      cy.get('a').contains('Start now').click();
+      cy.get('a').contains('React Hook Form').click();
     });
     describe('clicks submit,', () => {
       beforeEach(() => {
