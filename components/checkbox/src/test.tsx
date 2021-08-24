@@ -1,35 +1,25 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { shallow, mount } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import Checkbox from '.';
 
 describe('Checkbox', () => {
-  const example = 'example';
-  const wrapper = <Checkbox>{example}</Checkbox>;
+  it('should render an input type="checkbox" with an appropriate label', () => {
+    const { getByLabelText, getByRole } = render(<Checkbox>Example</Checkbox>);
 
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(wrapper, div);
+    expect(getByRole('checkbox')).toBeInTheDocument();
+    expect(getByLabelText('Example')).toBeInTheDocument();
   });
 
-  it('should render an input type="checkbox"', () => {
-    const output = shallow(wrapper);
-    expect(output.find('input[type="checkbox"]')).toBeTruthy();
-  });
-
-  it('should render a label', () => {
-    const output = shallow(wrapper);
-    expect(output.find('label')).toBeTruthy();
-  });
-
-  it('matches wrapper snapshot', () => {
-    expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
-  });
   it('renders disabled checkbox', () => {
-    expect(mount(<Checkbox disabled>Example</Checkbox>)).toMatchSnapshot('disabled');
+    const { getByRole } = render(<Checkbox disabled>Example</Checkbox>);
+
+    expect(getByRole('checkbox')).toBeDisabled();
   });
+
   it('can render with hint text', () => {
-    expect(mount(<Checkbox hint="Hint text">Example with hint text</Checkbox>)).toMatchSnapshot('hint text');
+    const { getByText } = render(<Checkbox hint="Hint text">Example</Checkbox>);
+
+    expect(getByText('Hint text')).toBeInTheDocument();
   });
 });

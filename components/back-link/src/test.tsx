@@ -5,10 +5,18 @@ import userEvent from '@testing-library/user-event';
 import BackLink from '.';
 
 describe('Back Link', () => {
-  it('renders without crashing', () => {
+  it('renders contents without crashing', () => {
     const { getByText } = render(<BackLink>example</BackLink>);
 
     expect(getByText('example')).toBeInTheDocument();
+  });
+
+  it('renders with default content', () => {
+    const { children } = BackLink.defaultProps;
+    const { getByText } = render(<BackLink />);
+
+    expect(children).toBeDefined();
+    expect(getByText(children)).toBeInTheDocument();
   });
 
   it('calls onClick handler when clicked', () => {

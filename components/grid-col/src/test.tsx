@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import GridCol from '.';
 
@@ -27,16 +27,19 @@ describe('GridCol', () => {
     process.env = OLD_ENV;
   });
 
-  it('renders without crashing', () => {
-    mount(<GridCol>example</GridCol>);
+  it('renders contents without crashing', () => {
+    const contents = 'Example';
+    const { getByText } = render(<GridCol>{contents}</GridCol>);
+
+    expect(getByText(contents)).toBeInTheDocument();
   });
 
   it('produces deprecation warnings for old-style props when not in production', () => {
     process.env.NODE_ENV = 'development';
 
-    mount(<GridCol columnOneThird>example</GridCol>);
-    mount(<GridCol columnTwoThirds>example</GridCol>);
-    mount(<GridCol columnOneQuarter>example</GridCol>);
+    render(<GridCol columnOneThird>example</GridCol>);
+    render(<GridCol columnTwoThirds>example</GridCol>);
+    render(<GridCol columnOneQuarter>example</GridCol>);
 
     // For reasons unknown, styled-components is (currently) calling styling functions twice
     // so rather than checking for 3 warnings here we're just checking it's not zero
@@ -46,21 +49,15 @@ describe('GridCol', () => {
   it('does not produces deprecation warnings for old-style props when in production', () => {
     process.env.NODE_ENV = 'production';
 
-    mount(<GridCol columnOneThird>example</GridCol>);
-    mount(<GridCol columnTwoThirds>example</GridCol>);
-    mount(<GridCol columnOneQuarter>example</GridCol>);
+    render(<GridCol columnOneThird>example</GridCol>);
+    render(<GridCol columnTwoThirds>example</GridCol>);
+    render(<GridCol columnOneQuarter>example</GridCol>);
 
     expect(warnCallCount).toEqual(0);
   });
 
-  it('simple render matches snapshot', () => {
-    const wrapper = mount(<GridCol>example</GridCol>);
-
-    expect(wrapper).toMatchSnapshot('GridCol simple example');
-  });
-
-  it('renders custom widths matching snapshot', () => {
-    const example = (
+  it('renders custom widths without crashing', () => {
+    render(
       <>
         <GridCol setWidth="one-quarter">example</GridCol>
         <GridCol setWidth="three-quarters">example</GridCol>
@@ -71,8 +68,5 @@ describe('GridCol', () => {
         <GridCol setDesktopWidth="one-third">example</GridCol>
       </>
     );
-    const wrapper = mount(example);
-
-    expect(wrapper).toMatchSnapshot('GridCol custom widths example');
   });
 });

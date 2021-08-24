@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import Legend from '.';
 
@@ -18,39 +18,36 @@ describe('Fieldset.Legend', () => {
     console.error = nativeError;
   });
 
-  it('allows custom string-based font size without crashing', () => {
-    const sizes = ['XL', 'XLARGE', 'L', 'LARGE', 'M', 'MEDIUM', 'S', 'SMALL'];
-    sizes.forEach((size) => {
-      expect(mount(<Legend size={size}>Tests</Legend>).exists()).toBeTruthy();
+  describe('renders custom string-based font sizes', () => {
+    ['XL', 'XLARGE', 'L', 'LARGE', 'M', 'MEDIUM', 'S', 'SMALL'].forEach((size) => {
+      it(`shows a '${size}' item`, () => {
+        expect(render(<Legend size={size}>Tests</Legend>).getByText('Tests')).toBeInTheDocument();
+      });
     });
   });
 
   it('allows custom numeric GDS font size without crashing', () => {
-    mount(<Legend size={16}>Test</Legend>);
+    render(<Legend size={16}>Test</Legend>);
   });
 
   it('throws an error if an unsupported size is used', () => {
     expect(() => {
-      mount(<Legend size={0}>example</Legend>);
+      render(<Legend size={0}>example</Legend>);
     }).toThrow();
     expect(() => {
-      mount(<Legend size={1}>example</Legend>);
+      render(<Legend size={1}>example</Legend>);
     }).toThrow();
     expect(() => {
-      mount(<Legend size={99999}>example</Legend>);
+      render(<Legend size={99999}>example</Legend>);
     }).toThrow();
     expect(() => {
-      mount(<Legend size="test">example</Legend>);
+      render(<Legend size="test">example</Legend>);
     }).toThrow();
   });
 
   it('will insert a (styled) h1 tag if isPageHeading is set', () => {
-    const wrapper = mount(<Legend isPageHeading>Test</Legend>);
+    const { getByRole } = render(<Legend isPageHeading>Test</Legend>);
 
-    expect(wrapper.find('h1').exists()).toBe(true);
-  });
-
-  it('matches wrapper snapshot', () => {
-    expect(mount(<Legend>Legend text</Legend>)).toMatchSnapshot();
+    expect(getByRole('heading', { level: 1 })).toBeInTheDocument();
   });
 });

@@ -123,7 +123,7 @@ const ErrorSummary = ({ onHandleErrorClick, heading, description, errors, ...pro
       <UnorderedList mb={0} listStyleType="none">
         {errors.map((error, index) => (
           <ListItem key={error.targetName}>
-            <StyledErrorText tabIndex={index + 1} onClick={() => onHandleErrorClick(error.targetName)}>
+            <StyledErrorText tabIndex={index + 1} onClick={() => onHandleErrorClick?.(error.targetName)}>
               {error.text}
             </StyledErrorText>
           </ListItem>
@@ -134,9 +134,10 @@ const ErrorSummary = ({ onHandleErrorClick, heading, description, errors, ...pro
 );
 
 ErrorSummary.defaultProps = {
-  onHandleErrorClick: () => {},
   description: undefined,
   errors: [],
+  heading: 'There is a problem',
+  onHandleErrorClick: undefined,
 };
 
 ErrorSummary.propTypes = {
@@ -153,10 +154,6 @@ ErrorSummary.propTypes = {
       text: PropTypes.string,
     })
   ),
-};
-
-ErrorSummary.defaultProps = {
-  heading: 'There is a problem',
 };
 
 export default ErrorSummary;

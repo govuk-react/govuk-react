@@ -1,18 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import GridRow from '.';
 
 describe('GridRow', () => {
-  const wrapper = <GridRow>Example</GridRow>;
+  it('renders contents without crashing', () => {
+    const contents = 'Example';
+    const { getByText } = render(<GridRow>{contents}</GridRow>);
 
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(wrapper, div);
-  });
-
-  it('matches snapshot', () => {
-    expect(mount(wrapper)).toMatchSnapshot('enzyme.mount');
+    expect(getByText(contents)).toBeInTheDocument();
   });
 });

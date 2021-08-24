@@ -1,86 +1,48 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { mount } from 'enzyme';
+import { fireEvent, render } from '@testing-library/react';
 
 import ErrorSummary from '.';
-import ErrorSummaryExample, { heading, description, errors } from './fixtures';
 
 describe('error summary', () => {
-  const wrapperErrorSummary = mount(<ErrorSummaryExample />);
+  it('renders a given heading', () => {
+    const heading = 'heading';
+    const { getByText } = render(<ErrorSummary heading={heading} />);
 
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<ErrorSummaryExample />, div);
+    expect(getByText(heading)).toBeInTheDocument();
   });
 
-  // TODO These tests are fragile, test implementation details, and each test should render...
-  // They should be replaced with a different approach, probably using react-testing-library
-  // Some tests have been disabled
+  it('renders a default heading if one is not given', () => {
+    const { heading } = ErrorSummary.defaultProps;
+    const { getByText } = render(<ErrorSummary />);
 
-  it.skip('should render the ErrorSummary component', () => {
-    expect(wrapperErrorSummary.find('Heading').exists()).toBe(true);
-    expect(wrapperErrorSummary.find('Paragraph').exists()).toBe(true);
-    // NB This fails with latest UnorderedList, and is testing implement
-    expect(wrapperErrorSummary.find('UnorderedList').exists()).toBe(true);
-    expect(wrapperErrorSummary.find('UnorderedList').find('ListItem').length).toEqual(errors.length);
+    expect(heading).toBeDefined();
+    expect(getByText(heading)).toBeInTheDocument();
   });
 
-  it('should render the heading', () => {
-    expect(wrapperErrorSummary.find('Heading').text()).toEqual(heading);
+  it('renders a given description', () => {
+    const description = 'description';
+    const { getByText } = render(<ErrorSummary description={description} />);
+
+    expect(getByText(description)).toBeInTheDocument();
   });
 
-  it('should render the optional description', () => {
-    expect(wrapperErrorSummary.find('Paragraph').text()).toEqual(description);
-  });
+  it('renders clickable list of errors', () => {
+    const errors = [
+      { text: 'first error', targetName: 'first' },
+      { text: 'second error', targetName: 'second' },
+    ];
+    const onHandleErrorClick = jest.fn();
+    const { getByText } = render(<ErrorSummary errors={errors} onHandleErrorClick={onHandleErrorClick} />);
 
-  it.skip('should render the list of errors', () => {
-    wrapperErrorSummary
-      .find('UnorderedList')
-      .find('ListItem')
-      .forEach((listItem, index) => {
-        expect(listItem.text()).toEqual(errors[index].text);
-      });
-  });
+    errors.forEach(({ text, targetName }) => {
+      const item = getByText(text);
 
-  it.skip('should click on the error', () => {
-    const mockOnHandleErrorClickCallback = jest.fn();
+      expect(item).toBeInTheDocument();
+      expect(onHandleErrorClick).not.toHaveBeenCalledWith(targetName);
 
-    const ErrorSummaryClick = () => (
-      <ErrorSummary
-        heading={heading}
-        description={description}
-        onHandleErrorClick={mockOnHandleErrorClickCallback}
-        errors={errors}
-      />
-    );
+      fireEvent.click(item);
 
-    const wrapperErrorSummaryClickMock = mount(<ErrorSummaryClick />);
-
-    let timesClicked = 0;
-
-    wrapperErrorSummaryClickMock
-      .find('UnorderedList')
-      .find('ListItem')
-      .forEach((listItem) => {
-        listItem.find('Anchor').simulate('click');
-        timesClicked += 1;
-        expect(mockOnHandleErrorClickCallback.mock.calls.length).toBe(timesClicked);
-      });
-  });
-
-  it.skip('renders with defaultProps', () => {
-    const wrapper = mount(<ErrorSummary heading={heading} errors={errors} />);
-    const anchor = wrapper.find('Anchor').first();
-    expect(anchor.props().onClick).toBeInstanceOf(Function);
-    anchor.simulate('click');
-  });
-
-  it('matches the ErrorSummary snapshot', () => {
-    expect(wrapperErrorSummary).toMatchSnapshot('error summary');
-  });
-
-  it('defaults the heading to "There is a problem" if not set', () => {
-    const wrapper = mount(<ErrorSummary errors={errors} />);
-    expect(wrapper.find('Heading').text()).toEqual('There is a problem');
+      expect(onHandleErrorClick).toHaveBeenCalledWith(targetName);
+    });
   });
 });
