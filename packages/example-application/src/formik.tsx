@@ -34,7 +34,7 @@ const validateMultiplePets = (value) => (value ? undefined : 'Please answer the 
 
 const FinalForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
   const [submittedData, setSubmittedData] = useState();
   const handleFormSubmit = useCallback(
     (values) => {
@@ -42,7 +42,7 @@ const FinalForm = () => {
       setIsSubmitting(true);
       setTimeout(() => {
         setSubmittedData(values);
-        setIsSubmitted(true);
+        setHasSubmitted(true);
         setIsSubmitting(false);
       }, 1000);
     },
@@ -51,7 +51,7 @@ const FinalForm = () => {
 
   return (
     <>
-      {!isSubmitted && (
+      {!hasSubmitted && (
         <Formik
           initialValues={{
             firstName: '',
@@ -210,9 +210,9 @@ const FinalForm = () => {
           }}
         />
       )}
-      {isSubmitted && (
+      {hasSubmitted && (
         <>
-          <GovUK.BackLink as={Link} to="/final-form" onClick={() => setIsSubmitted(false)}>
+          <GovUK.BackLink as={Link} to="/final-form" onClick={() => setHasSubmitted(false)}>
             Back
           </GovUK.BackLink>
           <GovUK.Panel title="Application complete">Reference: XBR1N21R3</GovUK.Panel>

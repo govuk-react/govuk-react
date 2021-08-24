@@ -14,7 +14,7 @@ const Form = () => {
   const [hasMultiplePets, setHasMultiplePets] = useState();
   const [errors, setErrors] = useState();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
   const handleSubmit = useCallback(() => {
     if (isSubmitting) return;
     const newErrors = {};
@@ -43,7 +43,7 @@ const Form = () => {
       setIsSubmitting(true);
       setTimeout(() => {
         setErrors(null);
-        setIsSubmitted(true);
+        setHasSubmitted(true);
         setIsSubmitting(false);
       }, 1000);
     }
@@ -51,7 +51,7 @@ const Form = () => {
 
   return (
     <>
-      {!isSubmitted && (
+      {!hasSubmitted && (
         <GovUK.LoadingBox loading={isSubmitting}>
           <GovUK.BackLink as={Link} to="/">
             Home
@@ -179,9 +179,9 @@ const Form = () => {
           </GovUK.Button>
         </GovUK.LoadingBox>
       )}
-      {isSubmitted && (
+      {hasSubmitted && (
         <>
-          <GovUK.BackLink as={Link} to="/form" onClick={() => setIsSubmitted(false)}>
+          <GovUK.BackLink as={Link} to="/form" onClick={() => setHasSubmitted(false)}>
             Back
           </GovUK.BackLink>
           <GovUK.Panel title="Application complete">Reference: XBR1N21R3</GovUK.Panel>

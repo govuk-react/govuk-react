@@ -31,7 +31,7 @@ const ReactHookForm = () => {
   } = useForm();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
   const [submittedData, setSubmittedData] = useState();
   const handleFormSubmit = useCallback(
     (values) => {
@@ -39,7 +39,7 @@ const ReactHookForm = () => {
       setIsSubmitting(true);
       setTimeout(() => {
         setSubmittedData(values);
-        setIsSubmitted(true);
+        setHasSubmitted(true);
         setIsSubmitting(false);
       }, 1000);
     },
@@ -53,7 +53,7 @@ const ReactHookForm = () => {
 
   return (
     <>
-      {!isSubmitted && (
+      {!hasSubmitted && (
         <form onSubmit={handleSubmit(handleFormSubmit)}>
           <GovUK.LoadingBox loading={isSubmitting}>
             <GovUK.BackLink as={Link} to="/">
@@ -188,9 +188,9 @@ const ReactHookForm = () => {
           </GovUK.LoadingBox>
         </form>
       )}
-      {isSubmitted && (
+      {hasSubmitted && (
         <>
-          <GovUK.BackLink as={Link} to="/final-form" onClick={() => setIsSubmitted(false)}>
+          <GovUK.BackLink as={Link} to="/final-form" onClick={() => setHasSubmitted(false)}>
             Back
           </GovUK.BackLink>
           <GovUK.Panel title="Application complete">Reference: XBR1N21R3</GovUK.Panel>
