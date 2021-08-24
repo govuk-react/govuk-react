@@ -21,6 +21,7 @@ const FinalForm = () => {
       if (isSubmitting) return;
       setIsSubmitting(true);
       setTimeout(() => {
+        // simulate async submission
         setSubmittedData(values);
         setHasSubmitted(true);
         setIsSubmitting(false);

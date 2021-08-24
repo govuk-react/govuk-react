@@ -42,6 +42,7 @@ const Form = () => {
     } else {
       setIsSubmitting(true);
       setTimeout(() => {
+        // simulate async submission
         setErrors(null);
         setHasSubmitted(true);
         setIsSubmitting(false);
