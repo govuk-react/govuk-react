@@ -4,6 +4,15 @@ import { Link } from 'react-router-dom';
 
 import { Form, Field } from 'react-final-form';
 
+import {
+  validateNationality,
+  validateMultiplePets,
+  validateFirstName,
+  validateDescription,
+  validateDateOfBirth,
+  validateAnimal,
+} from './validators/validators';
+
 const Checkbox = ({ input, ...props }) => <GovUK.Checkbox {...input} {...props} />; //eslint-disable-line
 const DateField = ({ meta, ...props }) => <GovUK.DateField errorText={meta.touched && meta.error} {...props} />; //eslint-disable-line
 const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />; //eslint-disable-line
@@ -59,7 +68,7 @@ const FinalForm = () => {
                       name="firstName"
                       mb={4}
                       hint="You can find this on your passport"
-                      validate={(value) => (value ? undefined : 'Please enter a first name')}
+                      validate={validateFirstName}
                       component={GovUK.InputField}
                     >
                       First name
@@ -68,7 +77,7 @@ const FinalForm = () => {
                       mb={8}
                       name="description"
                       hint="Enter as many words as you like"
-                      validate={(value) => (value ? undefined : 'Please enter a description')}
+                      validate={validateDescription}
                       component={GovUK.TextArea}
                     >
                       Description of what you saw
@@ -84,7 +93,7 @@ const FinalForm = () => {
                           type="checkbox"
                           name="nationality"
                           value="british"
-                          validate={(value) => (value?.length ? undefined : 'Please select at least one nationality')}
+                          validate={validateNationality}
                           component={Checkbox}
                           hint="including English, Scottish, Welsh and Northern Irish"
                         >
@@ -98,11 +107,7 @@ const FinalForm = () => {
                         </Field>
                       </GovUK.Label>
                     </GovUK.FormGroup>
-                    <Field
-                      name="dob"
-                      component={DateField}
-                      validate={(value) => (value ? undefined : 'Please enter a date of birth')}
-                    >
+                    <Field name="dob" component={DateField} validate={validateDateOfBirth}>
                       Date of birth
                     </Field>
                   </GovUK.Fieldset>
@@ -114,7 +119,7 @@ const FinalForm = () => {
                       name="animal"
                       label="What animal is your pet"
                       hint="A cat for example"
-                      validate={(value) => (value ? undefined : 'Please select an animal')}
+                      validate={validateAnimal}
                     >
                       <option value="cat">Cat</option>
                       <option value="other-feline">Other feline</option>
@@ -145,7 +150,7 @@ const FinalForm = () => {
                         name="hasMultiplePets"
                         inline
                         value="yes"
-                        validate={(value) => (value ? undefined : 'Please answer the question')}
+                        validate={validateMultiplePets}
                       >
                         Yes
                       </Field>

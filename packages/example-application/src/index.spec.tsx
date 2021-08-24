@@ -64,7 +64,7 @@ describe('When a user loads the application,', () => {
           cy.contains('Nationality: ["british"]').should('be.visible');
           cy.contains('Date of birth: {"day":"19","month":"9","year":"1999"}').should('be.visible');
           cy.contains('Animal: other-feline').should('be.visible');
-          cy.contains('Multiple pets: No').should('be.visible');
+          cy.contains('Multiple pets: no').should('be.visible');
         });
       });
     });

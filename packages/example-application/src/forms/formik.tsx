@@ -6,6 +6,15 @@ import { Link } from 'react-router-dom';
 
 import { Formik, Form, Field as FormikField } from 'formik';
 
+import {
+  validateNationality,
+  validateMultiplePets,
+  validateFirstName,
+  validateDescription,
+  validateDateOfBirth,
+  validateAnimal,
+} from './validators/validators';
+
 const Field = ({ component: Component, ...props }) => (
   <FormikField {...props}>{({ field, meta }) => <Component {...props} input={field} meta={meta} />}</FormikField>
 );
@@ -27,10 +36,6 @@ const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />;
 const FileUpload = ({ input: { value, onChange, ...input } = {}, ...props }) => (
   <GovUK.FileUpload {...input} {...props} onChange={({ target }) => onChange(target.files)} />
 );
-
-const validateNationality = (value) => (value?.length ? undefined : 'Please select at least one nationality');
-
-const validateMultiplePets = (value) => (value ? undefined : 'Please answer the question');
 
 const FinalForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -88,7 +93,7 @@ const FinalForm = () => {
                       name="firstName"
                       mb={4}
                       hint="You can find this on your passport"
-                      validate={(value) => (value ? undefined : 'Please enter a first name')}
+                      validate={validateFirstName}
                       component={GovUK.InputField}
                     >
                       First name
@@ -97,7 +102,7 @@ const FinalForm = () => {
                       mb={8}
                       name="description"
                       hint="Enter as many words as you like"
-                      validate={(value) => (value ? undefined : 'Please enter a description')}
+                      validate={validateDescription}
                       component={GovUK.TextArea}
                     >
                       Description of what you saw
@@ -139,11 +144,7 @@ const FinalForm = () => {
                         </Field>
                       </GovUK.Label>
                     </GovUK.FormGroup>
-                    <Field
-                      name="dob"
-                      component={DateField}
-                      validate={(value) => (value ? undefined : 'Please enter a date of birth')}
-                    >
+                    <Field name="dob" component={DateField} validate={validateDateOfBirth}>
                       Date of birth
                     </Field>
                   </GovUK.Fieldset>
@@ -155,7 +156,7 @@ const FinalForm = () => {
                       name="animal"
                       label="What animal is your pet"
                       hint="A cat for example"
-                      validate={(value) => (value ? undefined : 'Please select an animal')}
+                      validate={validateAnimal}
                     >
                       <option value="cat">Cat</option>
                       <option value="other-feline">Other feline</option>
@@ -171,7 +172,7 @@ const FinalForm = () => {
                       acceptedFormats=".jpg, .png"
                       hint="This can be in either JPG or PNG format"
                       name="petPhoto"
-                      // validate={(value) => (value ? undefined : 'Please select a photo')}
+                      // validate={validatePhoto}
                     >
                       Please upload a recent photograph
                     </Field>

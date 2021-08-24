@@ -6,6 +6,15 @@ import { Link } from 'react-router-dom';
 
 import { useForm } from 'react-hook-form';
 
+import {
+  validateNationality,
+  validateMultiplePets,
+  validateFirstName,
+  validateDescription,
+  validateDateOfBirth,
+  validateAnimal,
+} from './validators/validators';
+
 const DateField = ({ input: { onChange, onBlur, ...input }, ...props }) => {
   const [value, setValue] = useState(input.value);
   return (
@@ -48,9 +57,6 @@ const ReactHookForm = () => {
   );
 
   const errorsToShow = Object.keys(errors);
-  // TODO: extract shared validation code
-  const validateNationality = (value) => (value?.length ? undefined : 'Please select at least one nationality');
-  const validateMultiplePets = (value) => (value ? undefined : 'Please answer the question');
 
   return (
     <>
@@ -77,7 +83,7 @@ const ReactHookForm = () => {
                 hint="You can find this on your passport"
                 meta={{ touched: submitCount > 0, error: errors?.firstName?.message }}
                 input={register('firstName', {
-                  validate: (value) => (value ? undefined : 'Please enter a first name'),
+                  validate: validateFirstName,
                 })}
               >
                 First name
@@ -87,7 +93,7 @@ const ReactHookForm = () => {
                 hint="Enter as many words as you like"
                 meta={{ touched: submitCount > 0, error: errors?.description?.message }}
                 input={register('description', {
-                  validate: (value) => (value ? undefined : 'Please enter a description'),
+                  validate: validateDescription,
                 })}
               >
                 Description of what you saw
@@ -132,7 +138,7 @@ const ReactHookForm = () => {
                 errorText={submitCount > 0 && errors?.dob?.message}
                 input={register('dob', {
                   // TODO: should check for valid date via extracted and shared function
-                  validate: (value) => (value ? undefined : 'Please enter a date of birth'),
+                  validate: validateDateOfBirth,
                 })}
               >
                 Date of birth
@@ -145,7 +151,7 @@ const ReactHookForm = () => {
                 label="What animal is your pet"
                 hint="A cat for example"
                 input={register('animal', {
-                  validate: (value) => (value ? undefined : 'Please select an animal'),
+                  validate: validateAnimal,
                 })}
               >
                 <option value="cat">Cat</option>
@@ -156,7 +162,7 @@ const ReactHookForm = () => {
                 mb={8}
                 acceptedFormats=".jpg, .png"
                 hint="This can be in either JPG or PNG format"
-                // {...register('petPhoto', { validate: (value) => (value ? undefined : 'Please select a photo') })}
+                // {...register('petPhoto', { validate: validatePhoto })}
               >
                 Please upload a recent photograph
               </GovUK.FileUpload>

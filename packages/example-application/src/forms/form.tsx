@@ -2,6 +2,19 @@ import React, { useState, useCallback } from 'react';
 import * as GovUK from 'govuk-react';
 import { Link } from 'react-router-dom';
 
+import {
+  validateNationality,
+  validateMultiplePets,
+  validateFirstName,
+  validateDescription,
+  validateDateOfBirth,
+  validateAnimal,
+} from './validators/validators';
+
+function isNotEmpty(obj) {
+  return Object.keys(obj).some(key => obj[key]?.length > 0);
+}
+
 const toggle = (array, newItem) =>
   array.includes(newItem) ? array.filter((existingItem) => existingItem !== newItem) : [...array, newItem];
 
@@ -17,27 +30,16 @@ const Form = () => {
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const handleSubmit = useCallback(() => {
     if (isSubmitting) return;
-    const newErrors = {};
-    if (!firstName?.length) {
-      newErrors.firstName = 'Please enter a first name';
-    }
-    if (!description || !description.length) {
-      newErrors.description = 'Please enter a description';
-    }
-    if (!nationality?.length) {
-      newErrors.nationality = 'Please select at least one nationality';
-    }
-    if (!dob) {
-      newErrors.dob = 'Please enter a date of birth';
-    }
-    if (!animal?.length) {
-      newErrors.animal = 'Please select an animal';
-    }
-    if (hasMultiplePets !== true && hasMultiplePets !== false) {
-      newErrors.hasMultiplePets = 'Please answer the question';
-    }
+    const newErrors = {
+      firstName: validateFirstName(firstName),
+      description: validateDescription(description),
+      nationality: validateNationality(nationality),
+      dob: validateDateOfBirth(dob),
+      animal: validateAnimal(animal),
+      hasMultiplePets: validateMultiplePets(hasMultiplePets),
+    };
 
-    if (Object.keys(newErrors).length) {
+    if (isNotEmpty(newErrors)) {
       setErrors(newErrors);
     } else {
       setIsSubmitting(true);
@@ -161,7 +163,7 @@ const Form = () => {
                 name="hasMultiplePets"
                 inline
                 checked={hasMultiplePets === true}
-                onChange={() => setHasMultiplePets(true)}
+                onChange={() => setHasMultiplePets('yes')}
               >
                 Yes
               </GovUK.Radio>
@@ -169,7 +171,7 @@ const Form = () => {
                 name="hasMultiplePets"
                 inline
                 checked={hasMultiplePets === false}
-                onChange={() => setHasMultiplePets(false)}
+                onChange={() => setHasMultiplePets('no')}
               >
                 No
               </GovUK.Radio>
@@ -198,7 +200,7 @@ const Form = () => {
             <GovUK.ListItem>Nationality: {JSON.stringify(nationality)}</GovUK.ListItem>
             <GovUK.ListItem>Date of birth: {JSON.stringify(dob)}</GovUK.ListItem>
             <GovUK.ListItem>Animal: {animal}</GovUK.ListItem>
-            <GovUK.ListItem>Multiple pets: {hasMultiplePets ? 'Yes' : 'No'}</GovUK.ListItem>
+            <GovUK.ListItem>Multiple pets: {hasMultiplePets}</GovUK.ListItem>
           </GovUK.UnorderedList>
         </>
       )}
