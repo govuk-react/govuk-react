@@ -8,6 +8,7 @@ import Home from './home';
 import Form from './form';
 import FinalForm from './final-form';
 import Formik from './formik';
+import ReactHookForm from './react-hook-form';
 
 const ExampleApplication = ({ routerEntries }) => (
   <Router initialEntries={routerEntries}>
@@ -37,6 +38,10 @@ const ExampleApplication = ({ routerEntries }) => (
       <GovUK.TopNav.NavLink as={Link} to="/formik">
         Formik
       </GovUK.TopNav.NavLink>
+      {/* TODO: a single 'Forms' nav option */}
+      <GovUK.TopNav.NavLink as={Link} to="/react-hook-form">
+        React Hook Form
+      </GovUK.TopNav.NavLink>
     </GovUK.TopNav>
     <GovUK.Page.WidthContainer
       beforeChildren={<GovUK.PhaseBanner level="alpha">This part of GOV.UK is being rebuilt</GovUK.PhaseBanner>}
@@ -51,6 +56,9 @@ const ExampleApplication = ({ routerEntries }) => (
           </Route>
           <Route path="/formik">
             <Formik />
+          </Route>
+          <Route path="/react-hook-form">
+            <ReactHookForm />
           </Route>
           <Route path="/">
             <Home />

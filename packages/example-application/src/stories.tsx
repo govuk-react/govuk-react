@@ -37,3 +37,9 @@ Formik.args = {
   routerEntries: ['/formik'],
 };
 Formik.parameters = Template.parameters;
+
+export const ReactHookForm = Template.bind({});
+ReactHookForm.args = {
+  routerEntries: ['/react-hook-form'],
+};
+ReactHookForm.parameters = Template.parameters;
