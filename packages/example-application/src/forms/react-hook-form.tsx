@@ -153,6 +153,7 @@ const ReactHookForm = () => {
                 input={register('animal', {
                   validate: validateAnimal,
                 })}
+                meta={{ error: errors?.animal?.message, touched: submitCount > 0 }}
               >
                 <option value="">Please select...</option>
                 <option value="cat">Cat</option>
