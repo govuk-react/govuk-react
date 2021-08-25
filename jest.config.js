@@ -24,7 +24,7 @@ module.exports = {
     },
   },
   moduleFileExtensions: ['web.js', 'js', 'json', 'web.jsx', 'jsx', 'node', 'ts', 'tsx'],
-  setupFilesAfterEnv: ['<rootDir>/scripts/setupTests.js'],
+  setupFilesAfterEnv: ['<rootDir>/scripts/setupTests.ts'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   testEnvironment: 'jsdom',
   testMatch: ['**/{components,packages}/*/src/**/?(*.)test.[jt]s?(x)'],

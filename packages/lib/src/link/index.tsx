@@ -14,7 +14,7 @@ import { common as commonType, textColour } from '../typography';
 
 const FOCUS_TEXT_COLOUR = BLACK;
 
-export function common(fontFamily) {
+export function common(fontFamily?) {
   return [commonType(fontFamily), FOCUSABLE_FILL];
 }
 

@@ -53,7 +53,14 @@ export function responsive(size, overrideLineHeight) {
   };
 }
 
-export function font({ size, weight = 'regular', tabular = false, lineHeight } = {}) {
+interface FontOptions {
+  size?: 80 | 48 | 36 | 27 | 24 | 19 | 16 | 14;
+  weight?: 'regular' | 'bold';
+  tabular?: boolean;
+  lineHeight?: boolean;
+}
+
+export function font({ size, weight = 'regular', tabular = false, lineHeight }: FontOptions = {}) {
   return {
     ...common(tabular ? FONT_STACK_TABULAR : undefined),
     ...(FONT_WEIGHTS[weight] ? { fontWeight: FONT_WEIGHTS[weight] } : undefined),
