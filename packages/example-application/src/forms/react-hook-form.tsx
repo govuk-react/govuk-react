@@ -154,6 +154,7 @@ const ReactHookForm = () => {
                   validate: validateAnimal,
                 })}
               >
+                <option value="">Please select...</option>
                 <option value="cat">Cat</option>
                 <option value="other-feline">Other feline</option>
                 <option value="other-non-feline">Other non feline</option>

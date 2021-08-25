@@ -142,6 +142,7 @@ const Form = () => {
               input={{ onChange: (e) => setAnimal(e.target.value), value: animal }}
               meta={{ error: errors?.animal, touched: errors?.animal }}
             >
+              <option value="">Please select...</option>
               <option value="cat">Cat</option>
               <option value="other-feline">Other feline</option>
               <option value="other-non-feline">Other non feline</option>
