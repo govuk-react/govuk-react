@@ -33,3 +33,12 @@ export const allErrorMessagesShouldBeVisible = () => {
   cy.get('[name="animal"]').parent().contains('Please select an animal').should('be.visible');
   cy.get('[name="hasMultiplePets"]').parent().parent().contains('Please answer the question').should('be.visible');
 };
+export const shouldShowConfirmation = () => {
+  cy.contains('Application complete').should('be.visible');
+  cy.contains('Name: Mark').should('be.visible');
+  cy.contains('Description: Mark').should('be.visible');
+  cy.contains('Nationality: ["british"]').should('be.visible');
+  cy.contains('Date of birth: {"day":"19","month":"9","year":"1999"}').should('be.visible');
+  cy.contains('Animal: other-feline').should('be.visible');
+  cy.contains('Multiple pets: no').should('be.visible');
+};
