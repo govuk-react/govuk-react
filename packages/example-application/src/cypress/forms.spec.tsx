@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from '@cypress/react';
-import App from './index';
+import App from '../index';
 
 describe('When a user loads the application,', () => {
   beforeEach(() => {
