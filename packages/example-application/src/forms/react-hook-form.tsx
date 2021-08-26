@@ -14,6 +14,7 @@ import {
   validateDateOfBirth,
   validateAnimal,
 } from './validators/validators';
+import Results from './components/results';
 
 const DateField = ({ input: { onChange, onBlur, ...input }, ...props }) => {
   const [value, setValue] = useState(input.value);
@@ -198,26 +199,7 @@ const ReactHookForm = () => {
         </form>
       )}
       {hasSubmitted && (
-        <>
-          <GovUK.BackLink as={Link} to="/final-form" onClick={() => setHasSubmitted(false)}>
-            Back
-          </GovUK.BackLink>
-          <GovUK.Panel title="Application complete">Reference: XBR1N21R3</GovUK.Panel>
-          <GovUK.LeadParagraph>
-            Enim pariatur pariatur commodo incididunt ad nulla ex eu sunt ut ex id veniam veniam.
-          </GovUK.LeadParagraph>
-          <GovUK.Paragraph>
-            Consequat adipisicing aliquip eiusmod nostrud et proident non id consequat aliquip eiusmod aliquip.
-          </GovUK.Paragraph>
-          <GovUK.UnorderedList>
-            <GovUK.ListItem>Name: {submittedData.firstName}</GovUK.ListItem>
-            <GovUK.ListItem>Description: {submittedData.description}</GovUK.ListItem>
-            <GovUK.ListItem>Nationality: {JSON.stringify(submittedData.nationality)}</GovUK.ListItem>
-            <GovUK.ListItem>Date of birth: {JSON.stringify(submittedData.dob)}</GovUK.ListItem>
-            <GovUK.ListItem>Animal: {submittedData.animal}</GovUK.ListItem>
-            <GovUK.ListItem>Multiple pets: {submittedData.hasMultiplePets}</GovUK.ListItem>
-          </GovUK.UnorderedList>
-        </>
+        <Results backLink="/forms/react-hook-form" onBackClick={() => setHasSubmitted(false)} {...submittedData} />
       )}
     </>
   );
