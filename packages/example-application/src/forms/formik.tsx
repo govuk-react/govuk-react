@@ -23,7 +23,7 @@ const Field = ({ component: Component, ...props }) => (
 const Checkbox = ({ input, ...props }) => <GovUK.Checkbox {...input} {...props} />;
 const DateField = ({ meta, input: { onChange, onBlur, ...input }, ...props }) => (
   <GovUK.DateField
-    errorText={meta?.touched && meta?.error}
+    errorText={meta.touched && meta.error ? meta.error : undefined}
     {...props}
     input={{
       onChange: (value) => onChange({ target: { value, name: props.name } }),
@@ -64,14 +64,14 @@ const FinalForm = () => {
             firstName: '',
             description: '',
             nationality: [],
-            dob: null,
-            animal: null,
+            dob: { day: '', month: '', year: '' },
+            animal: '',
             petPhoto: null,
             hasMultiplePets: null,
           }}
           onSubmit={handleFormSubmit}
           render={({ errors, touched, ...rest }) => {
-            const errorsToShow = Object.keys(errors); // .filter((key) => touched[key]);
+            const errorsToShow = Object.keys(errors).filter((key) => touched[key]);
             return (
               <Form>
                 <GovUK.LoadingBox loading={isSubmitting}>
@@ -109,7 +109,7 @@ const FinalForm = () => {
                       Description of what you saw
                     </Field>
 
-                    <GovUK.FormGroup error={touched?.nationality && errors?.nationality}>
+                    <GovUK.FormGroup error={touched?.nationality && !!errors?.nationality}>
                       <GovUK.Label mb={4}>
                         <GovUK.LabelText>Nationality</GovUK.LabelText>
                         {touched?.nationality && errors?.nationality && (
