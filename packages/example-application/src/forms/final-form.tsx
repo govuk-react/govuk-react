@@ -16,7 +16,7 @@ import {
 import Results from './components/results';
 
 const Checkbox = ({ input, ...props }) => <GovUK.Checkbox {...input} {...props} />; //eslint-disable-line
-const DateField = ({ meta, ...props }) => <GovUK.DateField errorText={meta.touched && meta.error} {...props} />; //eslint-disable-line
+const DateField = ({ meta, ...props }) => <GovUK.DateField errorText={meta.touched && meta.error ? meta.error : undefined} {...props} />; //eslint-disable-line
 const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />; //eslint-disable-line
 // eslint-disable-next-line
 const FileUpload = ({ input: { value, onChange, ...input }, ...props }) => (
@@ -46,6 +46,7 @@ const FinalForm = () => {
       {!hasSubmitted && (
         <Form
           onSubmit={handleFormSubmit}
+          initialValues={{ dob: { day: '', month: '', year: '' } }}
           render={({ handleSubmit, errors, touched }) => {
             const errorsToShow = Object.keys(errors).filter((key) => touched[key]);
             return (
@@ -85,7 +86,7 @@ const FinalForm = () => {
                       Description of what you saw
                     </Field>
 
-                    <GovUK.FormGroup error={touched?.nationality && errors?.nationality}>
+                    <GovUK.FormGroup error={touched?.nationality && !!errors?.nationality}>
                       <GovUK.Label mb={4}>
                         <GovUK.LabelText>Nationality</GovUK.LabelText>
                         {touched?.nationality && errors?.nationality && (
@@ -145,7 +146,7 @@ const FinalForm = () => {
                     <GovUK.MultiChoice
                       mb={8}
                       label="Do you have more than one pet?"
-                      meta={{ error: errors?.hasMultiplePets, touched: touched?.hasMultiplePets }}
+                      meta={{ error: errors?.hasMultiplePets, touched: !!touched?.hasMultiplePets }}
                     >
                       <Field
                         component={Radio}
