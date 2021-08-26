@@ -26,7 +26,10 @@ describe('When a user loads the application, clicks Start now,', () => {
           cy.contains('Error summary').parent().contains('Please select at least one nationality').should('be.visible');
           cy.contains('Error summary').parent().contains('Please enter a date of birth').should('be.visible');
           cy.contains('Error summary').parent().contains('Please select an animal').should('be.visible');
-          cy.contains('Error summary').parent().contains('Please let us know if you have multiple pets').should('be.visible');
+          cy.contains('Error summary')
+            .parent()
+            .contains('Please let us know if you have multiple pets')
+            .should('be.visible');
 
           cy.get('[name="firstName"]').parent().contains('Please enter a first name').should('be.visible');
           cy.get('[name="description"]').parent().contains('Please enter a description').should('be.visible');
