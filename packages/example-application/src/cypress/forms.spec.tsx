@@ -6,6 +6,7 @@ const formModes = ['Basic', 'Final Form', 'Formik', 'React Hook Form'];
 
 describe('When a user loads the application, clicks Start now,', () => {
   beforeEach(() => {
+    cy.stub(console, 'error').as('consoleError');
     mount(<App />);
     cy.get('a').contains('Start now').click();
   });
@@ -45,6 +46,7 @@ describe('When a user loads the application, clicks Start now,', () => {
             .parent()
             .contains('Please let us know if you have multiple pets')
             .should('be.visible');
+          cy.get('@consoleError').should('not.be.called');
         });
       });
       describe('fills in all form fields,', () => {
@@ -70,9 +72,11 @@ describe('When a user loads the application, clicks Start now,', () => {
             cy.contains('Date of birth: {"day":"19","month":"9","year":"1999"}').should('be.visible');
             cy.contains('Animal: other-feline').should('be.visible');
             cy.contains('Multiple pets: no').should('be.visible');
+            cy.get('@consoleError').should('not.be.called');
           });
         });
       });
+      // TODO: when touching all fields and filling in some invalid, no errors are visible until submission
     });
   });
 });
