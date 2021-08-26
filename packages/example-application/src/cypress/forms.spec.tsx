@@ -35,7 +35,6 @@ describe('When a user loads the application, clicks Start now,', () => {
             .parent()
             .contains('Please select at least one nationality')
             .should('be.visible');
-          // TODO: better selector for date of birth
           cy.contains('Date of birth').parent().contains('Please enter a date of birth').should('be.visible');
           cy.get('[name="animal"]').parent().contains('Please select an animal').should('be.visible');
           cy.get('[name="hasMultiplePets"]')
