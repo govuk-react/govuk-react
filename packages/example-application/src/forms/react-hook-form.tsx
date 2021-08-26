@@ -99,7 +99,7 @@ const ReactHookForm = () => {
               >
                 Description of what you saw
               </GovUK.TextArea>
-              <GovUK.FormGroup error={submitCount > 0 && errors?.nationality?.message}>
+              <GovUK.FormGroup error={submitCount > 0 && !!errors?.nationality?.message}>
                 <GovUK.Label mb={4}>
                   <GovUK.LabelText>Nationality</GovUK.LabelText>
                   {submitCount > 0 && errors?.nationality?.message && (
@@ -136,7 +136,7 @@ const ReactHookForm = () => {
                 </GovUK.Label>
               </GovUK.FormGroup>
               <DateField
-                errorText={submitCount > 0 && errors?.dob?.message}
+                errorText={submitCount > 0 ? errors?.dob?.message : undefined}
                 input={register('dob', {
                   // TODO: should check for valid date via extracted and shared function
                   validate: validateDateOfBirth,
