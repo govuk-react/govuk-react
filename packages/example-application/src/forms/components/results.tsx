@@ -1,6 +1,7 @@
 import React from 'react';
 import * as GovUK from 'govuk-react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Results = ({ backLink, onBackClick, firstName, description, nationality, dob, animal, hasMultiplePets }) => (
   <>
@@ -17,12 +18,29 @@ const Results = ({ backLink, onBackClick, firstName, description, nationality, d
     <GovUK.UnorderedList>
       <GovUK.ListItem>Name: {firstName}</GovUK.ListItem>
       <GovUK.ListItem>Description: {description}</GovUK.ListItem>
-      <GovUK.ListItem>Nationality: {JSON.stringify(nationality)}</GovUK.ListItem>
-      <GovUK.ListItem>Date of birth: {JSON.stringify(dob)}</GovUK.ListItem>
+      <GovUK.ListItem>Nationality: {nationality.join(', ')}</GovUK.ListItem>
+      <GovUK.ListItem>
+        Date of birth: {dob.day}/{dob.month}/{dob.year}
+      </GovUK.ListItem>
       <GovUK.ListItem>Animal: {animal}</GovUK.ListItem>
       <GovUK.ListItem>Multiple pets: {hasMultiplePets}</GovUK.ListItem>
     </GovUK.UnorderedList>
   </>
 );
+
+Results.propTypes = {
+  backLink: PropTypes.string.isRequired,
+  onBackClick: PropTypes.func.isRequired,
+  firstName: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  nationality: PropTypes.arrayOf(PropTypes.string).isRequired,
+  dob: PropTypes.shape({
+    year: PropTypes.string,
+    month: PropTypes.string,
+    day: PropTypes.string,
+  }).isRequired,
+  animal: PropTypes.string.isRequired,
+  hasMultiplePets: PropTypes.string.isRequired,
+};
 
 export default Results;
