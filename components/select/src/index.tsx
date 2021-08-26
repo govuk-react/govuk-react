@@ -109,7 +109,7 @@ const StyledSelect = styled('select')(
  *
  */
 const Select = ({ children, hint, label, meta, input, ...props }) => (
-  <Label {...props} error={meta.touched && meta.error}>
+  <Label {...props} error={meta.touched && !!meta.error}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}

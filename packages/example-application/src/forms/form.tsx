@@ -13,7 +13,7 @@ import {
 import Results from './components/results';
 
 function isNotEmpty(obj) {
-  return Object.keys(obj).some(key => obj[key]?.length > 0);
+  return Object.keys(obj).some((key) => obj[key]?.length > 0);
 }
 
 const toggle = (array, newItem) =>
@@ -23,7 +23,7 @@ const Form = () => {
   const [firstName, setFirstName] = useState('');
   const [description, setDescription] = useState('');
   const [nationality, setNationality] = useState([]);
-  const [dob, setDob] = useState();
+  const [dob, setDob] = useState({ day: '', month: '', year: '' });
   const [animal, setAnimal] = useState();
   const [hasMultiplePets, setHasMultiplePets] = useState();
   const [errors, setErrors] = useState();
@@ -72,7 +72,7 @@ const Form = () => {
           )}
           <GovUK.Fieldset>
             <GovUK.Fieldset.Legend size="M">About you</GovUK.Fieldset.Legend>
-            <GovUK.Label mb={4} error={errors?.firstName}>
+            <GovUK.Label mb={4} error={!!errors?.firstName}>
               <GovUK.LabelText>First name</GovUK.LabelText>
               <GovUK.HintText>You can find this on your passport</GovUK.HintText>
               {errors?.firstName && <GovUK.ErrorText>{errors.firstName}</GovUK.ErrorText>}
@@ -98,7 +98,7 @@ const Form = () => {
               Description of what you saw
             </GovUK.TextArea>
 
-            <GovUK.FormGroup error={errors?.nationality}>
+            <GovUK.FormGroup error={!!errors?.nationality}>
               <GovUK.Label mb={4}>
                 <GovUK.LabelText>Nationality</GovUK.LabelText>
                 {errors?.nationality && <GovUK.ErrorText>{errors?.nationality}</GovUK.ErrorText>}
@@ -141,7 +141,7 @@ const Form = () => {
               label="What animal is your pet"
               hint="A cat for example"
               input={{ onChange: (e) => setAnimal(e.target.value), value: animal }}
-              meta={{ error: errors?.animal, touched: errors?.animal }}
+              meta={{ error: errors?.animal, touched: !!errors?.animal }}
             >
               <option value="">Please select...</option>
               <option value="cat">Cat</option>
@@ -164,7 +164,7 @@ const Form = () => {
               <GovUK.Radio
                 name="hasMultiplePets"
                 inline
-                checked={hasMultiplePets === true}
+                checked={hasMultiplePets === 'yes'}
                 onChange={() => setHasMultiplePets('yes')}
               >
                 Yes
@@ -172,7 +172,7 @@ const Form = () => {
               <GovUK.Radio
                 name="hasMultiplePets"
                 inline
-                checked={hasMultiplePets === false}
+                checked={hasMultiplePets === 'no'}
                 onChange={() => setHasMultiplePets('no')}
               >
                 No

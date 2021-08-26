@@ -72,9 +72,9 @@ Input.propTypes = {
     year: PropTypes.string,
   }),
   value: PropTypes.shape({
-    day: PropTypes.number,
-    month: PropTypes.number,
-    year: PropTypes.number,
+    day: PropTypes.string,
+    month: PropTypes.string,
+    year: PropTypes.string,
   }),
   labels: PropTypes.shape({
     day: PropTypes.string,
@@ -99,9 +99,9 @@ Input.defaultProps = {
     year: 'DateFieldYear',
   },
   defaultValues: {
-    day: '',
-    month: '',
-    year: '',
+    day: undefined,
+    month: undefined,
+    year: undefined,
   },
   labels: {
     day: 'Day',
