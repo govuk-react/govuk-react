@@ -66,7 +66,7 @@ export const StyledInput = styled('input')(
  * ### TODO:
  * - Remove `errorColor` and provide examples on how to extend the component
  */
-const Input = ({ type, ...props }) => <StyledInput type={type} {...props} />;
+const Input = React.forwardRef(({ type, ...props }, ref) => <StyledInput type={type} ref={ref} {...props} />);
 
 Input.defaultProps = {
   type: 'text',

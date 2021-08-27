@@ -175,11 +175,11 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
   }
 >
   <Label
-    error="example"
+    error={true}
     errorText="example"
   >
     <src__StyledLabel
-      error="example"
+      error={true}
       errorText="example"
     >
       <label

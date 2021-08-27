@@ -132,11 +132,11 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   }
 >
   <Label
-    error="example"
+    error={true}
     errorText="example"
   >
     <src__StyledLabel
-      error="example"
+      error={true}
       errorText="example"
     >
       <label
@@ -161,7 +161,7 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
           </src__StyledError>
         </ErrorText>
         <src__TextAreaField
-          error="example"
+          error={true}
           rows="5"
           type="text"
         >

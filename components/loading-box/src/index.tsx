@@ -163,7 +163,6 @@ const LoadingBox = ({
       <Innerwrap
         backgroundColor={backgroundColor}
         backgroundColorOpacity={backgroundColorOpacity}
-        loading={loading}
         timeIn={timeIn}
         timeOut={timeOut}
       >

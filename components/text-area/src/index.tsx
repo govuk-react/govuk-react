@@ -80,11 +80,11 @@ const TextAreaField = styled('textarea')(
  *
  */
 const TextArea = ({ children, hint, meta, input, ...props }) => (
-  <Label error={meta.touched && meta.error} {...props}>
+  <Label error={meta.touched && !!meta.error} {...props}>
     <LabelText>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
-    <TextAreaField type="text" rows="5" error={meta.touched && meta.error} {...input} />
+    <TextAreaField type="text" rows="5" error={meta.touched && !!meta.error} {...input} />
   </Label>
 );
 

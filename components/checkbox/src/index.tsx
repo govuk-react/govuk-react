@@ -128,13 +128,13 @@ const StyledCheckboxHint = styled(HintText)({
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/checkboxes/_checkboxes.scss
  *
  */
-const Checkbox = ({ children, className, hint, ...props }) => (
+const Checkbox = React.forwardRef(({ children, className, hint, ...props }, ref) => (
   <StyledCheckbox className={className}>
-    <StyledInput type="checkbox" {...props} />
+    <StyledInput type="checkbox" {...props} ref={ref} />
     <StyledLabel>{children}</StyledLabel>
     {hint && <StyledCheckboxHint>{hint}</StyledCheckboxHint>}
   </StyledCheckbox>
-);
+));
 
 Checkbox.defaultProps = {
   hint: undefined,

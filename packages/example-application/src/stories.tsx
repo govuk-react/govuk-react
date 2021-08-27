@@ -22,24 +22,24 @@ ExampleApplication.parameters = Template.parameters;
 
 export const Form = Template.bind({});
 Form.args = {
-  routerEntries: ['/form'],
+  routerEntries: ['/forms/form'],
 };
 Form.parameters = Template.parameters;
 
 export const FinalForm = Template.bind({});
 FinalForm.args = {
-  routerEntries: ['/final-form'],
+  routerEntries: ['/forms/final-form'],
 };
 FinalForm.parameters = Template.parameters;
 
 export const Formik = Template.bind({});
 Formik.args = {
-  routerEntries: ['/formik'],
+  routerEntries: ['/forms/formik'],
 };
 Formik.parameters = Template.parameters;
 
 export const ReactHookForm = Template.bind({});
 ReactHookForm.args = {
-  routerEntries: ['/react-hook-form'],
+  routerEntries: ['/forms/react-hook-form'],
 };
 ReactHookForm.parameters = Template.parameters;

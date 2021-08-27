@@ -129,7 +129,7 @@ exports[`MultiChoice matches snapshot 1`] = `
   }
 >
   <src__StyledFieldset
-    error="Example error"
+    error={true}
   >
     <div
       className="c0"

@@ -6,8 +6,8 @@ import Input from '.';
 
 describe('Input', () => {
   const wrapper = <Input type="text" />;
-  const withError = <Input type="text" error="example" />;
-  const withColouredError = <Input type="text" errorColor={ORANGE} error="example" />;
+  const withError = <Input type="text" error />;
+  const withColouredError = <Input type="text" errorColor={ORANGE} error />;
 
   it('matches wrapper snapshot', () => {
     expect(mount(wrapper)).toMatchSnapshot('wrapper mount');

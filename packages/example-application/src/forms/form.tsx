@@ -2,6 +2,20 @@ import React, { useState, useCallback } from 'react';
 import * as GovUK from 'govuk-react';
 import { Link } from 'react-router-dom';
 
+import {
+  validateNationality,
+  validateMultiplePets,
+  validateFirstName,
+  validateDescription,
+  validateDateOfBirth,
+  validateAnimal,
+} from './validators/validators';
+import Results from './components/results';
+
+function isNotEmpty(obj) {
+  return Object.keys(obj).some((key) => obj[key]?.length > 0);
+}
+
 const toggle = (array, newItem) =>
   array.includes(newItem) ? array.filter((existingItem) => existingItem !== newItem) : [...array, newItem];
 
@@ -9,7 +23,7 @@ const Form = () => {
   const [firstName, setFirstName] = useState('');
   const [description, setDescription] = useState('');
   const [nationality, setNationality] = useState([]);
-  const [dob, setDob] = useState();
+  const [dob, setDob] = useState({ day: '', month: '', year: '' });
   const [animal, setAnimal] = useState();
   const [hasMultiplePets, setHasMultiplePets] = useState();
   const [errors, setErrors] = useState();
@@ -17,27 +31,16 @@ const Form = () => {
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const handleSubmit = useCallback(() => {
     if (isSubmitting) return;
-    const newErrors = {};
-    if (!firstName?.length) {
-      newErrors.firstName = 'Please enter a first name';
-    }
-    if (!description || !description.length) {
-      newErrors.description = 'Please enter a description';
-    }
-    if (!nationality?.length) {
-      newErrors.nationality = 'Please select at least one nationality';
-    }
-    if (!dob) {
-      newErrors.dob = 'Please enter a date of birth';
-    }
-    if (!animal?.length) {
-      newErrors.animal = 'Please select an animal';
-    }
-    if (hasMultiplePets !== true && hasMultiplePets !== false) {
-      newErrors.hasMultiplePets = 'Please answer the question';
-    }
+    const newErrors = {
+      firstName: validateFirstName(firstName),
+      description: validateDescription(description),
+      nationality: validateNationality(nationality),
+      dob: validateDateOfBirth(dob),
+      animal: validateAnimal(animal),
+      hasMultiplePets: validateMultiplePets(hasMultiplePets),
+    };
 
-    if (Object.keys(newErrors).length) {
+    if (isNotEmpty(newErrors)) {
       setErrors(newErrors);
     } else {
       setIsSubmitting(true);
@@ -69,7 +72,7 @@ const Form = () => {
           )}
           <GovUK.Fieldset>
             <GovUK.Fieldset.Legend size="M">About you</GovUK.Fieldset.Legend>
-            <GovUK.Label mb={4} error={errors?.firstName}>
+            <GovUK.Label mb={4} error={!!errors?.firstName}>
               <GovUK.LabelText>First name</GovUK.LabelText>
               <GovUK.HintText>You can find this on your passport</GovUK.HintText>
               {errors?.firstName && <GovUK.ErrorText>{errors.firstName}</GovUK.ErrorText>}
@@ -95,7 +98,7 @@ const Form = () => {
               Description of what you saw
             </GovUK.TextArea>
 
-            <GovUK.FormGroup error={errors?.nationality}>
+            <GovUK.FormGroup error={!!errors?.nationality}>
               <GovUK.Label mb={4}>
                 <GovUK.LabelText>Nationality</GovUK.LabelText>
                 {errors?.nationality && <GovUK.ErrorText>{errors?.nationality}</GovUK.ErrorText>}
@@ -138,8 +141,9 @@ const Form = () => {
               label="What animal is your pet"
               hint="A cat for example"
               input={{ onChange: (e) => setAnimal(e.target.value), value: animal }}
-              meta={{ error: errors?.animal, touched: errors?.animal }}
+              meta={{ error: errors?.animal, touched: !!errors?.animal }}
             >
+              <option value="">Please select...</option>
               <option value="cat">Cat</option>
               <option value="other-feline">Other feline</option>
               <option value="other-non-feline">Other non feline</option>
@@ -160,16 +164,16 @@ const Form = () => {
               <GovUK.Radio
                 name="hasMultiplePets"
                 inline
-                checked={hasMultiplePets === true}
-                onChange={() => setHasMultiplePets(true)}
+                checked={hasMultiplePets === 'yes'}
+                onChange={() => setHasMultiplePets('yes')}
               >
                 Yes
               </GovUK.Radio>
               <GovUK.Radio
                 name="hasMultiplePets"
                 inline
-                checked={hasMultiplePets === false}
-                onChange={() => setHasMultiplePets(false)}
+                checked={hasMultiplePets === 'no'}
+                onChange={() => setHasMultiplePets('no')}
               >
                 No
               </GovUK.Radio>
@@ -181,26 +185,16 @@ const Form = () => {
         </GovUK.LoadingBox>
       )}
       {hasSubmitted && (
-        <>
-          <GovUK.BackLink as={Link} to="/form" onClick={() => setHasSubmitted(false)}>
-            Back
-          </GovUK.BackLink>
-          <GovUK.Panel title="Application complete">Reference: XBR1N21R3</GovUK.Panel>
-          <GovUK.LeadParagraph>
-            Enim pariatur pariatur commodo incididunt ad nulla ex eu sunt ut ex id veniam veniam.
-          </GovUK.LeadParagraph>
-          <GovUK.Paragraph>
-            Consequat adipisicing aliquip eiusmod nostrud et proident non id consequat aliquip eiusmod aliquip.
-          </GovUK.Paragraph>
-          <GovUK.UnorderedList>
-            <GovUK.ListItem>Name: {firstName}</GovUK.ListItem>
-            <GovUK.ListItem>Description: {description}</GovUK.ListItem>
-            <GovUK.ListItem>Nationality: {JSON.stringify(nationality)}</GovUK.ListItem>
-            <GovUK.ListItem>Date of birth: {JSON.stringify(dob)}</GovUK.ListItem>
-            <GovUK.ListItem>Animal: {animal}</GovUK.ListItem>
-            <GovUK.ListItem>Multiple pets: {hasMultiplePets ? 'Yes' : 'No'}</GovUK.ListItem>
-          </GovUK.UnorderedList>
-        </>
+        <Results
+          backLink="/forms/form"
+          onBackClick={() => setHasSubmitted(false)}
+          firstName={firstName}
+          description={description}
+          nationality={nationality}
+          dob={dob}
+          animal={animal}
+          hasMultiplePets={hasMultiplePets}
+        />
       )}
     </>
   );

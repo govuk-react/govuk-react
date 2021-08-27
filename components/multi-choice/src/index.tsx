@@ -68,7 +68,7 @@ const StyledFieldset = styled('div')(
  *
  */
 const MultiChoice = ({ meta, label, children, hint, ...props }) => (
-  <StyledFieldset error={meta.touched && meta.error} {...props}>
+  <StyledFieldset error={meta.touched && !!meta.error} {...props}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
