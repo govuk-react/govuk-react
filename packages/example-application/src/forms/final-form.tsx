@@ -11,6 +11,7 @@ import {
   validateDescription,
   validateDateOfBirth,
   validateAnimal,
+  validatePetPhoto,
 } from './validators/validators';
 
 import Results from './components/results';
@@ -20,7 +21,7 @@ const DateField = ({ meta, ...props }) => <GovUK.DateField errorText={meta.touch
 const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />; //eslint-disable-line
 // eslint-disable-next-line
 const FileUpload = ({ input: { value, onChange, ...input }, ...props }) => (
-  <GovUK.FileUpload {...input} {...props} onChange={({ target }) => onChange(target.files[0])} />
+  <GovUK.FileUpload {...input} {...props} onChange={({ target }) => onChange(target.files)} />
 );
 
 const FinalForm = () => {
@@ -139,7 +140,7 @@ const FinalForm = () => {
                       acceptedFormats=".jpg, .png"
                       hint="This can be in either JPG or PNG format"
                       name="petPhoto"
-                      // validate={(value) => (value ? undefined : 'Please select a photo')}
+                      validate={validatePetPhoto}
                     >
                       Please upload a recent photograph
                     </Field>

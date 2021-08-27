@@ -20,7 +20,7 @@ const Results = ({
     reader.addEventListener('load', () => {
       setPhotoString(reader.result);
     });
-    reader.readAsDataURL(petPhoto);
+    reader.readAsDataURL(petPhoto[0]);
   }, [petPhoto]);
 
   return (

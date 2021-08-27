@@ -27,6 +27,7 @@ describe('When a user loads the application, clicks Start now,', () => {
           cy.contains('Error summary').parent().contains('Please select at least one nationality').should('be.visible');
           cy.contains('Error summary').parent().contains('Please enter a date of birth').should('be.visible');
           cy.contains('Error summary').parent().contains('Please select an animal').should('be.visible');
+          cy.contains('Error summary').parent().contains('Please select a valid photo').should('be.visible');
           cy.contains('Error summary')
             .parent()
             .contains('Please let us know if you have multiple pets')
@@ -46,6 +47,7 @@ describe('When a user loads the application, clicks Start now,', () => {
             .parent()
             .contains('Please let us know if you have multiple pets')
             .should('be.visible');
+          cy.get('[name="petPhoto"]').parent().contains('Please select a valid photo').should('be.visible');
           cy.get('@consoleError').should('not.be.called');
         });
       });

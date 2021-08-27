@@ -9,6 +9,7 @@ import {
   validateDescription,
   validateDateOfBirth,
   validateAnimal,
+  validatePetPhoto,
 } from './validators/validators';
 import Results from './components/results';
 
@@ -38,6 +39,7 @@ const Form = () => {
       nationality: validateNationality(nationality),
       dob: validateDateOfBirth(dob),
       animal: validateAnimal(animal),
+      petPhoto: validatePetPhoto(petPhoto),
       hasMultiplePets: validateMultiplePets(hasMultiplePets),
     };
 
@@ -52,7 +54,7 @@ const Form = () => {
         setIsSubmitting(false);
       }, 1000);
     }
-  }, [isSubmitting, firstName, animal, description, nationality, dob, hasMultiplePets]);
+  }, [isSubmitting, firstName, animal, description, nationality, dob, hasMultiplePets, petPhoto]);
 
   return (
     <>
@@ -154,8 +156,9 @@ const Form = () => {
               acceptedFormats=".jpg, .png"
               hint="This can be in either JPG or PNG format"
               name="petPhoto"
+              meta={{ error: errors?.petPhoto, touched: !!errors?.petPhoto }}
               onChange={(event) => {
-                setPetPhoto(event.target.files[0]);
+                setPetPhoto(event.target.files);
               }}
             >
               Please upload a recent photograph

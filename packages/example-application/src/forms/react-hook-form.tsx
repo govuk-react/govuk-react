@@ -13,6 +13,7 @@ import {
   validateDescription,
   validateDateOfBirth,
   validateAnimal,
+  validatePetPhoto,
 } from './validators/validators';
 import Results from './components/results';
 
@@ -165,7 +166,8 @@ const ReactHookForm = () => {
                 mb={8}
                 acceptedFormats=".jpg, .png"
                 hint="This can be in either JPG or PNG format"
-                {...register('petPhoto')}
+                meta={{ error: errors?.petPhoto?.message, touched: submitCount > 0 }}
+                {...register('petPhoto', { validate: validatePetPhoto })}
               >
                 Please upload a recent photograph
               </GovUK.FileUpload>
@@ -199,12 +201,7 @@ const ReactHookForm = () => {
         </form>
       )}
       {hasSubmitted && (
-        <Results
-          backLink="/forms/react-hook-form"
-          onBackClick={() => setHasSubmitted(false)}
-          {...submittedData}
-          petPhoto={submittedData.petPhoto[0]}
-        />
+        <Results backLink="/forms/react-hook-form" onBackClick={() => setHasSubmitted(false)} {...submittedData} />
       )}
     </>
   );

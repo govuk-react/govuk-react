@@ -13,11 +13,24 @@ import {
   validateDescription,
   validateDateOfBirth,
   validateAnimal,
+  validatePetPhoto,
 } from './validators/validators';
 import Results from './components/results';
 
 const Field = ({ component: Component, ...props }) => (
   <FormikField {...props}>{({ field, meta }) => <Component {...props} input={field} meta={meta} />}</FormikField>
+);
+
+const FileField = ({ name, validate, ...props }) => (
+  <FormikField name={name} validate={validate}>
+    {({ field: { value, onChange, ...input } }) => (
+      <GovUK.FileUpload
+        {...input}
+        onChange={({ target }) => onChange(target.files)} // instead of the default target.value
+        {...props}
+      />
+    )}
+  </FormikField>
 );
 
 const Checkbox = ({ input, ...props }) => <GovUK.Checkbox {...input} {...props} />;
@@ -33,10 +46,6 @@ const DateField = ({ meta, input: { onChange, onBlur, ...input }, ...props }) =>
   />
 );
 const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />;
-// eslint-disable-next-line
-const FileUpload = ({ input: { value, ...input } = {}, onChange, ...props }) => (
-  <GovUK.FileUpload {...input} {...props} onChange={onChange} />
-);
 
 const FinalForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -168,18 +177,19 @@ const FinalForm = () => {
                     TODO: need to be able to pass props to file input
                     https://github.com/final-form/react-final-form/issues/663
                     */}
-                    <FileUpload
+                    <FileField
                       mb={8}
                       acceptedFormats=".jpg, .png"
                       hint="This can be in either JPG or PNG format"
                       name="petPhoto"
-                      // validate={validatePhoto}
+                      validate={validatePetPhoto}
                       onChange={(event) => {
-                        setFieldValue('petPhoto', event.target.files[0]);
+                        setFieldValue('petPhoto', event.target.files);
                       }}
+                      meta={{ error: errors?.petPhoto, touched: !!touched?.petPhoto }}
                     >
                       Please upload a recent photograph
-                    </FileUpload>
+                    </FileField>
                     <GovUK.MultiChoice
                       mb={8}
                       label="Do you have more than one pet?"
