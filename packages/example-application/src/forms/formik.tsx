@@ -34,8 +34,8 @@ const DateField = ({ meta, input: { onChange, onBlur, ...input }, ...props }) =>
 );
 const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />;
 // eslint-disable-next-line
-const FileUpload = ({ input: { value, onChange, ...input } = {}, ...props }) => (
-  <GovUK.FileUpload {...input} {...props} onChange={({ target }) => onChange(target.files)} />
+const FileUpload = ({ input: { value, ...input } = {}, onChange, ...props }) => (
+  <GovUK.FileUpload {...input} {...props} onChange={onChange} />
 );
 
 const FinalForm = () => {
@@ -70,7 +70,7 @@ const FinalForm = () => {
             hasMultiplePets: null,
           }}
           onSubmit={handleFormSubmit}
-          render={({ errors, touched, ...rest }) => {
+          render={({ errors, touched, setFieldValue }) => {
             const errorsToShow = Object.keys(errors).filter((key) => touched[key]);
             return (
               <Form>
@@ -168,16 +168,18 @@ const FinalForm = () => {
                     TODO: need to be able to pass props to file input
                     https://github.com/final-form/react-final-form/issues/663
                     */}
-                    <Field
-                      component={FileUpload}
+                    <FileUpload
                       mb={8}
                       acceptedFormats=".jpg, .png"
                       hint="This can be in either JPG or PNG format"
                       name="petPhoto"
                       // validate={validatePhoto}
+                      onChange={(event) => {
+                        setFieldValue('petPhoto', event.target.files[0]);
+                      }}
                     >
                       Please upload a recent photograph
-                    </Field>
+                    </FileUpload>
                     <GovUK.MultiChoice
                       mb={8}
                       label="Do you have more than one pet?"
@@ -215,7 +217,10 @@ const FinalForm = () => {
         />
       )}
       {hasSubmitted && (
-        <Results backLink="/forms/formik" onBackClick={() => setHasSubmitted(false)} {...submittedData} />
+        <>
+          <pre>{JSON.stringify(submittedData)}</pre>
+          <Results backLink="/forms/formik" onBackClick={() => setHasSubmitted(false)} {...submittedData} />
+        </>
       )}
     </>
   );

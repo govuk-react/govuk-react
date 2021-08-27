@@ -26,6 +26,7 @@ const Form = () => {
   const [dob, setDob] = useState({ day: '', month: '', year: '' });
   const [animal, setAnimal] = useState();
   const [hasMultiplePets, setHasMultiplePets] = useState();
+  const [petPhoto, setPetPhoto] = useState();
   const [errors, setErrors] = useState();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
@@ -153,6 +154,9 @@ const Form = () => {
               acceptedFormats=".jpg, .png"
               hint="This can be in either JPG or PNG format"
               name="petPhoto"
+              onChange={(event) => {
+                setPetPhoto(event.target.files[0]);
+              }}
             >
               Please upload a recent photograph
             </GovUK.FileUpload>
@@ -194,6 +198,7 @@ const Form = () => {
           dob={dob}
           animal={animal}
           hasMultiplePets={hasMultiplePets}
+          petPhoto={petPhoto}
         />
       )}
     </>

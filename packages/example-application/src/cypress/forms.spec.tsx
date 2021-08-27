@@ -59,6 +59,7 @@ describe('When a user loads the application, clicks Start now,', () => {
           cy.contains('Year').click().type('1999');
           cy.contains('What animal is your pet').parent().find('select').select('Other feline');
           cy.contains('Do you have more than one pet?').parent().contains('No').click();
+          cy.get('input[type="file"]').attachFile('logo.png');
         });
         describe('clicks submit,', () => {
           beforeEach(() => {
@@ -72,6 +73,11 @@ describe('When a user loads the application, clicks Start now,', () => {
             cy.contains('Date of birth: 19/9/1999').should('be.visible');
             cy.contains('Animal: other-feline').should('be.visible');
             cy.contains('Multiple pets: no').should('be.visible');
+            cy.get('[alt="Pet Photo"]')
+              .should('be.visible')
+              .and(($img) => {
+                expect($img[0].naturalWidth).to.equal(276);
+              });
             cy.get('@consoleError').should('not.be.called');
           });
         });

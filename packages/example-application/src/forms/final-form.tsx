@@ -20,7 +20,7 @@ const DateField = ({ meta, ...props }) => <GovUK.DateField errorText={meta.touch
 const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />; //eslint-disable-line
 // eslint-disable-next-line
 const FileUpload = ({ input: { value, onChange, ...input }, ...props }) => (
-  <GovUK.FileUpload {...input} {...props} onChange={({ target }) => onChange(target.files)} />
+  <GovUK.FileUpload {...input} {...props} onChange={({ target }) => onChange(target.files[0])} />
 );
 
 const FinalForm = () => {

@@ -165,7 +165,7 @@ const ReactHookForm = () => {
                 mb={8}
                 acceptedFormats=".jpg, .png"
                 hint="This can be in either JPG or PNG format"
-                // {...register('petPhoto', { validate: validatePhoto })}
+                {...register('petPhoto')}
               >
                 Please upload a recent photograph
               </GovUK.FileUpload>
@@ -199,7 +199,12 @@ const ReactHookForm = () => {
         </form>
       )}
       {hasSubmitted && (
-        <Results backLink="/forms/react-hook-form" onBackClick={() => setHasSubmitted(false)} {...submittedData} />
+        <Results
+          backLink="/forms/react-hook-form"
+          onBackClick={() => setHasSubmitted(false)}
+          {...submittedData}
+          petPhoto={submittedData.petPhoto[0]}
+        />
       )}
     </>
   );
