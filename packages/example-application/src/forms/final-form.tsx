@@ -11,6 +11,7 @@ import {
   validateDescription,
   validateDateOfBirth,
   validateAnimal,
+  validatePetPhoto,
 } from './validators/validators';
 
 import Results from './components/results';
@@ -139,7 +140,7 @@ const FinalForm = () => {
                       acceptedFormats=".jpg, .png"
                       hint="This can be in either JPG or PNG format"
                       name="petPhoto"
-                      // validate={(value) => (value ? undefined : 'Please select a photo')}
+                      validate={validatePetPhoto}
                     >
                       Please upload a recent photograph
                     </Field>

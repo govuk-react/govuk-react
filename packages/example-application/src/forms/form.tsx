@@ -9,6 +9,7 @@ import {
   validateDescription,
   validateDateOfBirth,
   validateAnimal,
+  validatePetPhoto,
 } from './validators/validators';
 import Results from './components/results';
 
@@ -26,6 +27,7 @@ const Form = () => {
   const [dob, setDob] = useState({ day: '', month: '', year: '' });
   const [animal, setAnimal] = useState();
   const [hasMultiplePets, setHasMultiplePets] = useState();
+  const [petPhoto, setPetPhoto] = useState();
   const [errors, setErrors] = useState();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
@@ -37,6 +39,7 @@ const Form = () => {
       nationality: validateNationality(nationality),
       dob: validateDateOfBirth(dob),
       animal: validateAnimal(animal),
+      petPhoto: validatePetPhoto(petPhoto),
       hasMultiplePets: validateMultiplePets(hasMultiplePets),
     };
 
@@ -51,7 +54,7 @@ const Form = () => {
         setIsSubmitting(false);
       }, 1000);
     }
-  }, [isSubmitting, firstName, animal, description, nationality, dob, hasMultiplePets]);
+  }, [isSubmitting, firstName, animal, description, nationality, dob, hasMultiplePets, petPhoto]);
 
   return (
     <>
@@ -153,6 +156,10 @@ const Form = () => {
               acceptedFormats=".jpg, .png"
               hint="This can be in either JPG or PNG format"
               name="petPhoto"
+              meta={{ error: errors?.petPhoto, touched: !!errors?.petPhoto }}
+              onChange={(event) => {
+                setPetPhoto(event.target.files);
+              }}
             >
               Please upload a recent photograph
             </GovUK.FileUpload>
@@ -194,6 +201,7 @@ const Form = () => {
           dob={dob}
           animal={animal}
           hasMultiplePets={hasMultiplePets}
+          petPhoto={petPhoto}
         />
       )}
     </>

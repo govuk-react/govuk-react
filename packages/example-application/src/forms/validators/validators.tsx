@@ -24,4 +24,7 @@ export const validateDateOfBirth = (value) => {
   return 'Please enter a date of birth';
 };
 export const validateAnimal = (value) => (value ? undefined : 'Please select an animal');
-export const validatePhoto = (value) => (value ? undefined : 'Please select a photo');
+export const validatePetPhoto = (file) =>
+  file && file.length === 1 && ['image/jpeg', 'image/png'].includes(file[0].type)
+    ? undefined
+    : 'Please select a valid photo';
