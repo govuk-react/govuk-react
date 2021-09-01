@@ -40,7 +40,7 @@ const ReactHookForm = () => {
     handleSubmit,
     formState: { errors, submitCount },
   } = useForm({
-    reValidateMode: 'onSubmit'
+    reValidateMode: 'onSubmit',
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);

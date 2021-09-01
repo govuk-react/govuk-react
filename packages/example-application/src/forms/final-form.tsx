@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback } from 'react';
 import * as GovUK from 'govuk-react';
 import { Link } from 'react-router-dom';
 import { Form, Field as FFField } from 'react-final-form';
@@ -15,7 +15,7 @@ import {
 
 import Results from './components/results';
 
-const Field = ({ component: Component, ...props }) => (
+const Field = ({ component: Component, ...props }) => (// eslint-disable-next-line
   <FFField {...props}>
     {({ input, meta }) => (
       <Component {...props} input={input} meta={{ ...meta, touched: meta.touched && meta.submitFailed }} />
