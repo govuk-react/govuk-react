@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useCallback } from 'react';
 import * as GovUK from 'govuk-react';
 import { Link } from 'react-router-dom';
@@ -15,7 +16,7 @@ import {
 
 import Results from './components/results';
 
-const Field = ({ component: Component, ...props }) => (// eslint-disable-next-line
+const Field = ({ component: Component, ...props }) => (
   <FFField {...props}>
     {({ input, meta }) => (
       <Component {...props} input={input} meta={{ ...meta, touched: meta.touched && meta.submitFailed }} />
@@ -23,12 +24,11 @@ const Field = ({ component: Component, ...props }) => (// eslint-disable-next-li
   </FFField>
 );
 
-const Checkbox = ({ input, ...props }) => <GovUK.Checkbox {...input} {...props} />; //eslint-disable-line
+const Checkbox = ({ input, ...props }) => <GovUK.Checkbox {...input} {...props} />;
 const DateField = ({ meta, ...props }) => (
   <GovUK.DateField errorText={meta.touched && meta.error ? meta.error : undefined} {...props} />
-); //eslint-disable-line
-const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />; //eslint-disable-line
-// eslint-disable-next-line
+);
+const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />;
 const FileUpload = ({ input: { value, onChange, ...input }, ...props }) => (
   <GovUK.FileUpload {...input} {...props} onChange={({ target }) => onChange(target.files)} />
 );
