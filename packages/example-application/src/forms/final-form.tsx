@@ -1,8 +1,7 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import * as GovUK from 'govuk-react';
 import { Link } from 'react-router-dom';
-
-import { Form, Field } from 'react-final-form';
+import { Form, Field as FFField } from 'react-final-form';
 
 import {
   validateNationality,
@@ -16,8 +15,18 @@ import {
 
 import Results from './components/results';
 
+const Field = ({ component: Component, ...props }) => (
+  <FFField {...props}>
+    {({ input, meta }) => (
+      <Component {...props} input={input} meta={{ ...meta, touched: meta.touched && meta.submitFailed }} />
+    )}
+  </FFField>
+);
+
 const Checkbox = ({ input, ...props }) => <GovUK.Checkbox {...input} {...props} />; //eslint-disable-line
-const DateField = ({ meta, ...props }) => <GovUK.DateField errorText={meta.touched && meta.error ? meta.error : undefined} {...props} />; //eslint-disable-line
+const DateField = ({ meta, ...props }) => (
+  <GovUK.DateField errorText={meta.touched && meta.error ? meta.error : undefined} {...props} />
+); //eslint-disable-line
 const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />; //eslint-disable-line
 // eslint-disable-next-line
 const FileUpload = ({ input: { value, onChange, ...input }, ...props }) => (
@@ -48,8 +57,15 @@ const FinalForm = () => {
         <Form
           onSubmit={handleFormSubmit}
           initialValues={{ dob: { day: '', month: '', year: '' } }}
-          render={({ handleSubmit, errors, touched }) => {
+          render={({ handleSubmit: handleSubmitInner, errors, touched, form }) => {
             const errorsToShow = Object.keys(errors).filter((key) => touched[key]);
+            form.pauseValidation();
+            const handleSubmit = (e) => {
+              form.resumeValidation();
+              const res = handleSubmitInner(e);
+              form.pauseValidation();
+              return res;
+            };
             return (
               <form onSubmit={handleSubmit}>
                 <GovUK.LoadingBox loading={isSubmitting}>
