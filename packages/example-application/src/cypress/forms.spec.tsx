@@ -75,7 +75,7 @@ describe('When a user loads the application, clicks Start now,', () => {
             cy.contains('Date of birth: 19/9/1999').should('be.visible');
             cy.contains('Animal: other-feline').should('be.visible');
             cy.contains('Multiple pets: no').should('be.visible');
-            cy.get('[alt="Pet Photo"]')
+            cy.get('[alt="Your pet"]')
               .should('be.visible')
               .and(($img) => {
                 expect($img[0].naturalWidth).to.equal(276);
