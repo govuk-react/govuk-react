@@ -77,7 +77,14 @@ const FileUpload = React.forwardRef(({ meta, children, hint, acceptedFormats, on
     <LabelText error={meta.touched && !!meta.error}>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
-    <StyledInput type="file" accept={acceptedFormats} error={meta.touched && !!meta.error} onChange={onChange} name={name} ref={ref} />
+    <StyledInput
+      type="file"
+      accept={acceptedFormats}
+      error={meta.touched && !!meta.error}
+      onChange={onChange}
+      name={name}
+      ref={ref}
+    />
   </Label>
 ));
 
