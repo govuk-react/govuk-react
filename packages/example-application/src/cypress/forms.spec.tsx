@@ -25,8 +25,8 @@ describe('When a user loads the application, clicks Start now,', () => {
           cy.contains('Please select an animal').should('not.exist');
           cy.contains('Please select a valid photo').should('not.exist');
           cy.contains('Please let us know if you have multiple pets').should('not.exist');
-        })
-      })
+        });
+      });
       describe('clicks submit,', () => {
         beforeEach(() => {
           cy.get('button').contains('Submit').click();
@@ -62,7 +62,7 @@ describe('When a user loads the application, clicks Start now,', () => {
           cy.get('[name="petPhoto"]').parent().contains('Please select a valid photo').should('be.visible');
           cy.get('@consoleError').should('not.be.called');
         });
-        describe('fills in all form fields correctly but doesn\'t submit,', () => {
+        describe("fills in all form fields correctly but doesn't submit,", () => {
           beforeEach(() => {
             cy.contains('First name').click().type('Mark');
             cy.contains('Description of what you saw').click().type('Mark');
@@ -78,7 +78,10 @@ describe('When a user loads the application, clicks Start now,', () => {
             cy.contains('Error summary').should('be.visible');
             cy.contains('Error summary').parent().contains('Please enter a first name').should('be.visible');
             cy.contains('Error summary').parent().contains('Please enter a description').should('be.visible');
-            cy.contains('Error summary').parent().contains('Please select at least one nationality').should('be.visible');
+            cy.contains('Error summary')
+              .parent()
+              .contains('Please select at least one nationality')
+              .should('be.visible');
             cy.contains('Error summary').parent().contains('Please enter a date of birth').should('be.visible');
             cy.contains('Error summary').parent().contains('Please select an animal').should('be.visible');
             cy.contains('Error summary').parent().contains('Please select a valid photo').should('be.visible');
