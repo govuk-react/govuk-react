@@ -69,6 +69,7 @@ const Form = () => {
               description="Please address the following issues"
               errors={Object.keys(errors).map((key) => ({
                 targetName: key,
+                href: `#${key}`,
                 text: errors[key],
               }))}
             />
@@ -80,6 +81,7 @@ const Form = () => {
               <GovUK.HintText>You can find this on your passport</GovUK.HintText>
               {errors?.firstName && <GovUK.ErrorText>{errors.firstName}</GovUK.ErrorText>}
               <GovUK.Input
+                id="firstName"
                 name="firstName"
                 onChange={(e) => setFirstName(e.target.value)}
                 value={firstName}
@@ -92,6 +94,7 @@ const Form = () => {
               hint="Enter as many words as you like"
               meta={{ error: errors?.description, touched: !!errors?.description }}
               input={{
+                id: 'description',
                 value: description,
                 onChange: (e) => {
                   setDescription(e.target.value);
@@ -106,6 +109,7 @@ const Form = () => {
                 <GovUK.LabelText>Nationality</GovUK.LabelText>
                 {errors?.nationality && <GovUK.ErrorText>{errors?.nationality}</GovUK.ErrorText>}
                 <GovUK.Checkbox
+                  id="nationality"
                   name="nationality"
                   hint="including English, Scottish, Welsh and Northern Irish"
                   checked={nationality.includes('british')}
@@ -130,7 +134,7 @@ const Form = () => {
               </GovUK.Label>
             </GovUK.FormGroup>
 
-            <GovUK.DateField.Container errorText={errors?.dob}>
+            <GovUK.DateField.Container errorText={errors?.dob} id="dob">
               <GovUK.LabelText>Date of birth</GovUK.LabelText>
               {errors?.dob && <GovUK.ErrorText>{errors?.dob}</GovUK.ErrorText>}
               <GovUK.DateField.Input name="dob" value={dob} onChange={setDob} />
@@ -140,6 +144,7 @@ const Form = () => {
             <GovUK.Fieldset.Legend size="M">About your pet</GovUK.Fieldset.Legend>
             <GovUK.Select
               mb={8}
+              id="animal"
               name="animal"
               label="What animal is your pet"
               hint="A cat for example"
@@ -155,6 +160,7 @@ const Form = () => {
               mb={8}
               acceptedFormats=".jpg, .png"
               hint="This can be in either JPG or PNG format"
+              id="petPhoto"
               name="petPhoto"
               meta={{ error: errors?.petPhoto, touched: !!errors?.petPhoto }}
               onChange={(event) => {
@@ -165,6 +171,7 @@ const Form = () => {
             </GovUK.FileUpload>
             <GovUK.MultiChoice
               mb={8}
+              id="hasMultiplePets"
               label="Do you have more than one pet?"
               meta={{ error: errors?.hasMultiplePets, touched: !!errors?.hasMultiplePets }}
             >

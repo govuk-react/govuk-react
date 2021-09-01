@@ -43,9 +43,11 @@ const StyledErrorText = styled(Link)({
     fontSize: FONT_SIZE.SIZE_19,
     lineHeight: LINE_HEIGHT.SIZE_19,
   },
-  color: `${ERROR_COLOUR}`,
   paddingTop: '4px',
   paddingBottom: '2px',
+  '&&&': {
+    color: `${ERROR_COLOUR}`,
+  }
 });
 
 const StyledErrorSummary = styled('div')(
@@ -112,8 +114,6 @@ const StyledErrorSummary = styled('div')(
  * - https://govuk-elements.herokuapp.com/errors/#summarise-errors
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/error-summary
  *
- * ### TODO:
- * - Swap out browser dependancy for context API to help with React Native support
  */
 const ErrorSummary = ({ onHandleErrorClick, heading, description, errors, ...props }) => (
   <StyledErrorSummary tabIndex={-1} {...props}>
@@ -123,7 +123,7 @@ const ErrorSummary = ({ onHandleErrorClick, heading, description, errors, ...pro
       <UnorderedList mb={0} listStyleType="none">
         {errors.map((error, index) => (
           <ListItem key={error.targetName}>
-            <StyledErrorText tabIndex={index + 1} onClick={() => onHandleErrorClick?.(error.targetName)}>
+            <StyledErrorText href={error.href} onClick={onHandleErrorClick && (() => onHandleErrorClick(error.targetName))}>
               {error.text}
             </StyledErrorText>
           </ListItem>
@@ -150,8 +150,9 @@ ErrorSummary.propTypes = {
   /** Array of errors with text and target element name to scroll into view when clicked */
   errors: PropTypes.arrayOf(
     PropTypes.shape({
-      targetName: PropTypes.string,
-      text: PropTypes.string,
+      targetName: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+      href: PropTypes.string,
     })
   ),
 };
