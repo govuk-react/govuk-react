@@ -15,6 +15,18 @@ describe('When a user loads the application, clicks Start now,', () => {
       beforeEach(() => {
         cy.get('a').contains(formMode).click();
       });
+      describe('touches all form fields,', () => {
+        it('should not show any error messages', () => {
+          cy.contains('Error summary').should('not.exist');
+          cy.contains('Please enter a first name').should('not.exist');
+          cy.contains('Please enter a description').should('not.exist');
+          cy.contains('Please select at least one nationality').should('not.exist');
+          cy.contains('Please enter a date of birth').should('not.exist');
+          cy.contains('Please select an animal').should('not.exist');
+          cy.contains('Please select a valid photo').should('not.exist');
+          cy.contains('Please let us know if you have multiple pets').should('not.exist');
+        });
+      });
       describe('clicks submit,', () => {
         beforeEach(() => {
           cy.get('button').contains('Submit').click();
@@ -50,6 +62,60 @@ describe('When a user loads the application, clicks Start now,', () => {
           cy.get('[name="petPhoto"]').parent().contains('Please select a valid photo').should('be.visible');
           cy.get('@consoleError').should('not.be.called');
         });
+        describe("fills in all form fields correctly but doesn't submit,", () => {
+          beforeEach(() => {
+            cy.contains('First name').click().type('Mark');
+            cy.contains('Description of what you saw').click().type('Mark');
+            cy.contains('British').click();
+            cy.contains('Day').click().type('19');
+            cy.contains('Month').click().type('9');
+            cy.contains('Year').click().type('1999');
+            cy.contains('What animal is your pet').parent().find('select').select('Other feline');
+            cy.contains('Do you have more than one pet?').parent().contains('No').click();
+            cy.get('input[type="file"]').attachFile('logo.png');
+          });
+          it('should still show error messages', () => {
+            cy.contains('Error summary').should('be.visible');
+            cy.contains('Error summary').parent().contains('Please enter a first name').should('be.visible');
+            cy.contains('Error summary').parent().contains('Please enter a description').should('be.visible');
+            cy.contains('Error summary')
+              .parent()
+              .contains('Please select at least one nationality')
+              .should('be.visible');
+            cy.contains('Error summary').parent().contains('Please enter a date of birth').should('be.visible');
+            cy.contains('Error summary').parent().contains('Please select an animal').should('be.visible');
+            cy.contains('Error summary').parent().contains('Please select a valid photo').should('be.visible');
+            cy.contains('Error summary')
+              .parent()
+              .contains('Please let us know if you have multiple pets')
+              .should('be.visible');
+
+            cy.get('[name="firstName"]').parent().contains('Please enter a first name').should('be.visible');
+            cy.get('[name="description"]').parent().contains('Please enter a description').should('be.visible');
+            cy.get('[name="nationality"]')
+              .parent()
+              .parent()
+              .contains('Please select at least one nationality')
+              .should('be.visible');
+            cy.contains('Date of birth').parent().contains('Please enter a date of birth').should('be.visible');
+            cy.get('[name="animal"]').parent().contains('Please select an animal').should('be.visible');
+            cy.get('[name="hasMultiplePets"]')
+              .parent()
+              .parent()
+              .contains('Please let us know if you have multiple pets')
+              .should('be.visible');
+            cy.get('[name="petPhoto"]').parent().contains('Please select a valid photo').should('be.visible');
+            cy.get('@consoleError').should('not.be.called');
+          });
+          describe('clicks submit,', () => {
+            beforeEach(() => {
+              cy.get('button').contains('Submit').click();
+            });
+            it('should show the confirmation screen', () => {
+              cy.contains('Application complete').should('be.visible');
+            });
+          });
+        });
       });
       describe('fills in all form fields,', () => {
         beforeEach(() => {
@@ -84,7 +150,6 @@ describe('When a user loads the application, clicks Start now,', () => {
           });
         });
       });
-      // TODO: when touching all fields and filling in some invalid, no errors are visible until submission
     });
   });
 });

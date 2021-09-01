@@ -78,6 +78,8 @@ const FinalForm = () => {
             petPhoto: null,
             hasMultiplePets: null,
           }}
+          validateOnChange={false}
+          validateOnBlur={false}
           onSubmit={handleFormSubmit}
           render={({ errors, touched, setFieldValue }) => {
             const errorsToShow = Object.keys(errors).filter((key) => touched[key]);

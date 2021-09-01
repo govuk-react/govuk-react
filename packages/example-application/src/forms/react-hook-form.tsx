@@ -39,7 +39,9 @@ const ReactHookForm = () => {
     register,
     handleSubmit,
     formState: { errors, submitCount },
-  } = useForm();
+  } = useForm({
+    reValidateMode: 'onSubmit',
+  });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
