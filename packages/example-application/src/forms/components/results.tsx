@@ -44,7 +44,7 @@ const Results = ({
         </GovUK.ListItem>
         <GovUK.ListItem>Animal: {animal}</GovUK.ListItem>
         <GovUK.ListItem>Multiple pets: {hasMultiplePets}</GovUK.ListItem>
-        <GovUK.ListItem>Pet photo: {photoString && <img alt="Pet Photo" src={photoString} />}</GovUK.ListItem>
+        <GovUK.ListItem>Pet photo: {photoString && <img alt="Your pet" src={photoString} />}</GovUK.ListItem>
       </GovUK.UnorderedList>
     </>
   );

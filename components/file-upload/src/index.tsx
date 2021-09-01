@@ -85,6 +85,8 @@ FileUpload.defaultProps = {
   hint: undefined,
   meta: {},
   acceptedFormats: undefined,
+  onChange: undefined,
+  name: undefined,
 };
 
 FileUpload.propTypes = {
@@ -115,6 +117,8 @@ FileUpload.propTypes = {
   }),
   children: PropTypes.node.isRequired,
   acceptedFormats: PropTypes.string,
+  onChange: PropTypes.func,
+  name: PropTypes.string,
 };
 
 export default FileUpload;
