@@ -73,7 +73,7 @@ const schema = {
   },
 };
 
-const AnyOf = ({name, schema, formData = [], onChange, ...props}) => (
+const AnyOf = ({ name, schema, formData = [], onChange, ...props }) => (
   <GovUK.FormGroup>
     <GovUK.Label mb={4}>
       <GovUK.LabelText>{schema.title}</GovUK.LabelText>
@@ -82,7 +82,9 @@ const AnyOf = ({name, schema, formData = [], onChange, ...props}) => (
           name={name}
           value={item.const}
           hint={item.description}
-          onChange={(e) => onChange(e.target.checked ? formData.concat(item.const) : formData.filter((i) => i !== item.const)) }
+          onChange={(e) =>
+            onChange(e.target.checked ? formData.concat(item.const) : formData.filter((i) => i !== item.const))
+          }
         >
           {item.title}
         </GovUK.Checkbox>
@@ -113,6 +115,69 @@ const OneOf = (props) => {
   );
 };
 
+const dobObjToString = ({year,month,day}) => `${year ? year : ''}-${month ? month.padStart(2, '0') : ''}-${day ? day.padStart(2, '0') : ''}`
+const dobStringToObj = (dob) => {
+  const [year, month, day] = dob.split('-').map((s) => s.trim())
+  return {year, month, day}
+}
+
+const DateField = (props) => {
+  const [value, setValue] = useState({});
+  return (
+      <GovUK.DateField
+        {...props}
+        input={{
+          value,
+          onChange: ({ year, month, day }) => {
+            setValue({ year, month, day });
+            return props.input.onChange({
+              target: {
+                value: dobObjToString({year,month,day}),
+              },
+            });
+          },
+        }}
+      />
+  );
+};
+
+// function addNameToDataURL(dataURL, name) {
+//   return dataURL.replace(";base64", `;name=${encodeURIComponent(name)};base64`);
+// }
+
+// function processFile(file) {
+//   const { name, size, type } = file;
+//   return new Promise((resolve, reject) => {
+//     const reader = new window.FileReader();
+//     reader.onerror = reject;
+//     reader.onload = event => {
+//       resolve({
+//         dataURL: addNameToDataURL(event.target.result, name),
+//         name,
+//         size,
+//         type,
+//       });
+//     };
+//     reader.readAsDataURL(file);
+//   });
+// }
+
+// function processFiles(files) {
+//   return Promise.all([].map.call(files, processFile));
+// }
+
+const handleFilesChanged = (onChange) => (e) => {
+  onChange();
+  const files = e.target.files;
+  if (files.length > 0) {
+    const reader = new FileReader();
+    reader.onload = e => onChange(e.target.result);
+    reader.readAsDataURL(files[0]);
+  }
+};
+
+const FileUpload = props => <GovUK.FileUpload {...props} onChange={handleFilesChanged(props.onChange)} />;
+
 const customFields = {
   ArrayField: AnyOf,
   StringField: (props) => {
@@ -120,9 +185,9 @@ const customFields = {
       props?.uiSchema?.['ui:widget'] === 'textarea'
         ? GovUK.TextArea
         : props?.schema?.format === 'data-url'
-        ? GovUK.FileUpload
+        ? FileUpload
         : props?.schema?.format === 'date'
-        ? GovUK.DateField
+        ? DateField
         : props?.schema?.oneOf
         ? OneOf
         : GovUK.InputField;
@@ -167,6 +232,7 @@ const uiSchema = [
 function ObjectFieldTemplate(props) {
   return (
     <GovUK.Fieldset>
+      <pre>{JSON.stringify(props.formData)}</pre>
       <GovUK.Fieldset.Legend size="M">{props.title}</GovUK.Fieldset.Legend>
       {props.properties.map((element) => (
         <div className="property-wrapper">{element.content}</div>
@@ -225,17 +291,18 @@ const ReactJSONSchemaForm = () => {
         </>
       )}
       {hasSubmitted && (
+        <><pre>{JSON.stringify(submittedData)}</pre>
         <Results
           backLink="/forms/react-jsonschema-form"
           onBackClick={() => setHasSubmitted(false)}
           firstName={submittedData[0].firstName}
           description={submittedData[0].description}
           nationality={submittedData[0].nationality}
-          dob={submittedData[0].dob}
+          dob={dobStringToObj(submittedData[0].dob)}
           animal={submittedData[1].animal}
           hasMultiplePets={submittedData[1].hasMultiplePets}
-          petPhoto={submittedData[1].petPhoto}
-        />
+          petPhotoString={submittedData[1].petPhoto}
+        /></>
       )}
     </>
   );

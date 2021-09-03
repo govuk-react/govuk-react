@@ -13,8 +13,9 @@ const Results = ({
   animal,
   hasMultiplePets,
   petPhoto,
+  petPhotoString,
 }) => {
-  const [photoString, setPhotoString] = useState();
+  const [photoString, setPhotoString] = useState(petPhotoString);
   useEffect(() => {
     if (petPhoto && petPhoto[0]) {
       const reader = new FileReader();
@@ -65,7 +66,8 @@ Results.propTypes = {
   }).isRequired,
   animal: PropTypes.string.isRequired,
   hasMultiplePets: PropTypes.string.isRequired,
-  petPhoto: PropTypes.string.isRequired,
+  petPhoto: PropTypes.string,
+  petPhotoString: PropTypes.string,
 };
 
 export default Results;
