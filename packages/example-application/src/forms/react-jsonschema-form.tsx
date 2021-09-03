@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 
 import Results from './components/results';
 
+// TODO: extract reusable parts of this file in to a published module e.g. @govuk-react/json-schema-form
+
 const schema = {
   properties: {
     0: {
@@ -70,12 +72,18 @@ const schema = {
     },
   },
 };
-const AnyOf = (props) => (
+
+const AnyOf = ({name, schema, formData = [], onChange, ...props}) => (
   <GovUK.FormGroup>
     <GovUK.Label mb={4}>
-      <GovUK.LabelText>{props.schema.title}</GovUK.LabelText>
-      {props?.schema?.items?.anyOf?.map((item) => (
-        <GovUK.Checkbox name={props.name} value={item.const} hint={item.description}>
+      <GovUK.LabelText>{schema.title}</GovUK.LabelText>
+      {schema?.items?.anyOf?.map((item) => (
+        <GovUK.Checkbox
+          name={name}
+          value={item.const}
+          hint={item.description}
+          onChange={(e) => onChange(e.target.checked ? formData.concat(item.const) : formData.filter((i) => i !== item.const)) }
+        >
           {item.title}
         </GovUK.Checkbox>
       ))}
@@ -88,13 +96,15 @@ const OneOf = (props) => {
     return (
       <GovUK.MultiChoice mb={4} label={props.schema.title}>
         {props?.schema?.oneOf?.map((item) => (
-          <GovUK.Radio name={item.const}>{item.title}</GovUK.Radio>
+          <GovUK.Radio value={item.const} name={props.name} onChange={(e) => props.onChange(e.target.value)}>
+            {item.title}
+          </GovUK.Radio>
         ))}
       </GovUK.MultiChoice>
     );
   }
   return (
-    <GovUK.Select label={props.schema.title} mb={4}>
+    <GovUK.Select label={props.schema.title} mb={4} input={{ onChange: (e) => props.onChange(e.target.value) }}>
       <option />
       {props?.schema?.oneOf?.map((item) => (
         <option value={item.const}>{item.title}</option>
@@ -116,8 +126,17 @@ const customFields = {
         : props?.schema?.oneOf
         ? OneOf
         : GovUK.InputField;
+
     return (
-      <Component {...props} mb={4} hint={props.schema.description}>
+      <Component
+        {...props}
+        input={{
+          onChange: (e) => props.onChange(e.target.value),
+        }}
+        mb={4}
+        hint={props.schema.description}
+        meta={{ error: props.rawErrors?.[0], touched: !!props.rawErrors?.[0] }}
+      >
         {props.schema.title}
       </Component>
     );
@@ -163,7 +182,7 @@ function CustomFieldTemplate(props) {
       {/* <label htmlFor={id}>{label}{required ? "*" : null}</label> */}
       {/* {description} */}
       {children}
-      {errors}
+      {/* {errors} */}
       {help}
     </div>
   );
@@ -201,6 +220,7 @@ const ReactJSONSchemaForm = () => {
             fields={customFields}
             FieldTemplate={CustomFieldTemplate}
             ObjectFieldTemplate={ObjectFieldTemplate}
+            onSubmit={handleFormSubmit}
           />
         </>
       )}
