@@ -58,7 +58,7 @@ With custom input name props
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | node | 
- `defaultValues` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` | custom | 
+ `defaultValues` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` | shape[object Object] | 
  `errorText` |  | ```undefined``` | string | Error text
  `hintText` |  | ```undefined``` | string | Optional hint text
  `input` |  | ```undefined``` | shape[object Object] | Properties that are sent to the input, matching final form and redux form input type

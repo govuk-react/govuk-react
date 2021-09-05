@@ -58,5 +58,7 @@ Prop | Required | Default | Type | Description
  `children` | true | `````` | node | 
  `hint` |  | ```undefined``` | string | Optional hint text
  `meta` |  | ```{}``` | shape[object Object] | Final form meta object, pending adjustment/removal
+ `name` |  | ```undefined``` | string | 
+ `onChange` |  | ```undefined``` | func | 
 
 
