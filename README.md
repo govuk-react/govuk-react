@@ -90,6 +90,25 @@ We are expecting to use [Interoperable Style Transfer Format (ISTF)](https://git
 2. We want a parent project to not have to worry about a specific build system (e.g. for handling `import styles.css`, particularly if you want universal support) or including certain CSS files. We want a simple `npm install govuk-react` to be enough to get govuk styled components on to your page, irrespective of your build system.
 3. We want to distribute React applications as modules that have self contained styles. CSS in JS allows all styles to be contained in distributable JS modules that can be ported across projects.
 
+## Why is this a monorepo?
+
+Components are published to npm independently. This means users have the ability to upgrade govuk-react and still use older components.
+
+This is particularly relevant in a large application where:
+
+- some code is reliant on a component that has either been deprecated or had breaking changes 
+- you aren't able to refactor the existing code, e.g. it is a large job or managed by another team
+- you don't want to hold back from upgrading to the newest version of govuk-react
+
+e.g. for DateField, you import it separately as follows:
+
+```js
+import { H1, Paragraph } from 'govuk-react';
+import DateField from '@govuk-react/date-field';
+```
+
+Then in your package.json, you can update govuk-react, but specify the older version of '@govuk-react/date-field'.
+
 ## About the GDS font
 
 Unfortuantely the GDS transport font has a relatively restrictive license [described on the gov.uk blog](https://designnotes.blog.gov.uk/2015/03/11/can-i-use-the-gov-uk-fonts/). We are investigating rendering an elegant alternative before falling back to Arial on [issue 272](https://github.com/govuk-react/govuk-react/issues/272).
