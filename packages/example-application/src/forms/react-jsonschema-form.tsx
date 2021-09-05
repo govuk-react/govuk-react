@@ -17,7 +17,7 @@ import {
 } from './validators/validators';
 // TODO: extract reusable parts of this file in to a published module e.g. @govuk-react/json-schema-form
 
-const schema = {
+const formSchema = {
   properties: {
     0: {
       title: 'About you',
@@ -122,7 +122,7 @@ const OneOf = ({ schema, uiSchema, name, onChange, rawErrors }) => {
       input={{ name, onChange: (e) => onChange(e.target.value) }}
       meta={{ error: rawErrors?.[0], touched: !!rawErrors?.length }}
     >
-      <option />
+      <option>Please select...</option>
       {schema?.oneOf?.map((item) => (
         <option key={item.const} value={item.const}>
           {item.title}
@@ -133,109 +133,107 @@ const OneOf = ({ schema, uiSchema, name, onChange, rawErrors }) => {
 };
 
 const dobObjToString = ({ year, month, day }) =>
-  `${year ? year : ''}-${month ? month.padStart(2, '0') : ''}-${day ? day.padStart(2, '0') : ''}`;
+  `${year || ''}-${month ? month.padStart(2, '0') : ''}-${day ? day.padStart(2, '0') : ''}`;
+
 const dobStringToObj = (dob) => {
-  if (!dob) return;
+  if (!dob) return {};
   const [year, month, day] = dob.split('-').map((s) => s.trim());
-  return { year: parseInt(year), month: parseInt(month), day: parseInt(day) };
+  return { year: parseInt(year, 10), month: parseInt(month, 10), day: parseInt(day, 10) };
 };
 
-const DateField = (props) => {
+const DateField = ({ schema, onChange, children, rawErrors }) => {
   const [value, setValue] = useState({ day: '', month: '', year: '' });
-  const handleChange = useCallback(({ year, month, day }) => {
-    setValue({ year, month, day });
-    return props.onChange(dobObjToString({ year, month, day }));
-  }, []);
+  const handleChange = useCallback(
+    ({ year, month, day }) => {
+      setValue({ year, month, day });
+      return onChange(dobObjToString({ year, month, day }));
+    },
+    [onChange]
+  );
 
   return (
     <GovUK.DateField
-      children={props.children}
-      errorText={props.rawErrors?.[0]}
+      errorText={rawErrors?.[0]}
       input={{
         value,
         onChange: handleChange,
       }}
-    />
+    >
+      {schema.title}
+    </GovUK.DateField>
   );
 };
 
-const handleFilesChanged = (onChange) => (e) => {
-  onChange();
-  const files = e.target.files;
-  if (files.length > 0) {
-    const reader = new FileReader();
-    reader.onload = (e) => onChange(e.target.result);
-    reader.readAsDataURL(files[0]);
-  }
-};
+const handleFilesChanged =
+  (onChange) =>
+  ({ target }) => {
+    onChange();
+    const { files } = target;
+    if (files.length > 0) {
+      const reader = new FileReader();
+      reader.onload = ({ target: innerTarget }) => onChange(innerTarget.result);
+      reader.readAsDataURL(files[0]);
+    }
+  };
 
-const FileUpload = (props) => (
+const FileUpload = ({ rawErrors, schema, onChange, name }) => (
   <GovUK.FileUpload
-    meta={{ error: props.rawErrors?.[0], touched: !!props.rawErrors?.[0] }}
-    children={props.children}
-    onChange={handleFilesChanged(props.onChange)}
-    name={props.name}
-  />
+    meta={{ error: rawErrors?.[0], touched: !!rawErrors?.[0] }}
+    onChange={handleFilesChanged(onChange)}
+    name={name}
+  >
+    {schema.title}
+  </GovUK.FileUpload>
 );
 
-const TextArea = (props) => (
+const TextArea = ({ schema, rawErrors, onChange, name }) => (
   <GovUK.TextArea
     input={{
-      onChange: (e) => props.onChange(e.target.value),
-      name: props.name,
+      onChange: (e) => onChange(e.target.value),
+      name,
     }}
     mb={4}
-    hint={props.schema.description}
-    meta={{ error: props.rawErrors?.[0], touched: !!props.rawErrors?.[0] }}
+    hint={schema.description}
+    meta={{ error: rawErrors?.[0], touched: !!rawErrors?.[0] }}
   >
-    {props.schema.title}
+    {schema.title}
   </GovUK.TextArea>
 );
 
-const InputField = (props) => (
+const InputField = ({ schema, rawErrors, onChange, name }) => (
   <GovUK.InputField
     input={{
-      onChange: (e) => props.onChange(e.target.value),
-      name: props.name,
+      onChange: (e) => onChange(e.target.value),
+      name,
     }}
     mb={4}
-    hint={props.schema.description}
-    meta={{ error: props.rawErrors?.[0], touched: !!props.rawErrors?.[0] }}
+    hint={schema.description}
+    meta={{ error: rawErrors?.[0], touched: !!rawErrors?.[0] }}
   >
-    {props.schema.title}
+    {schema.title}
   </GovUK.InputField>
 );
 
-const StringField = (props) => {
-  const Component =
-    props?.uiSchema?.['ui:widget'] === 'textarea'
-      ? TextArea
-      : props?.schema?.format === 'data-url'
-      ? FileUpload
-      : props?.schema?.format === 'date'
-      ? DateField
-      : props?.schema?.oneOf
-      ? OneOf
-      : InputField;
+const StringField = ({ uiSchema, schema, onChange, rawErrors, name }) => {
+  let Component;
+  if (uiSchema?.['ui:widget'] === 'textarea') {
+    Component = TextArea;
+  } else if (schema?.format === 'data-url') {
+    Component = FileUpload;
+  } else if (schema?.format === 'date') {
+    Component = DateField;
+  } else if (schema?.oneOf) {
+    Component = OneOf;
+  } else {
+    Component = InputField;
+  }
 
-  return (
-    <Component
-      {...props}
-      // input={{
-      //   onChange: (e) => props.onChange(e.target.value),
-      // }}
-      // mb={4}
-      // hint={props.schema.description}
-      // meta={{ error: props.rawErrors?.[0], touched: !!props.rawErrors?.[0] }}
-    >
-      {props.schema.title}
-    </Component>
-  );
+  return <Component uiSchema={uiSchema} schema={schema} onChange={onChange} rawErrors={rawErrors} name={name} />;
 };
 
-const BooleanField = (props) => (
-  <GovUK.Checkbox {...props} hint={props.schema.description}>
-    {props.schema.title}
+const BooleanField = ({ schema, onChange }) => (
+  <GovUK.Checkbox onChange={onChange} hint={schema.description}>
+    {schema.title}
   </GovUK.Checkbox>
 );
 
@@ -272,11 +270,11 @@ const ErrorListTemplate = ({ errors, ...rest }) => (
   />
 );
 
-function ObjectFieldTemplate(props) {
+function ObjectFieldTemplate({ title, properties }) {
   return (
     <GovUK.Fieldset>
-      {props.title && <GovUK.Fieldset.Legend size="M">{props.title}</GovUK.Fieldset.Legend>}
-      {props.properties.map((element) => element.content)}
+      {title && <GovUK.Fieldset.Legend size="M">{title}</GovUK.Fieldset.Legend>}
+      {properties.map((element) => element.content)}
     </GovUK.Fieldset>
   );
 }
@@ -328,7 +326,7 @@ const ReactJSONSchemaForm = () => {
           </GovUK.BackLink>
           {/* <Form schema={schema} uiSchema={uiSchema} onSubmit={handleFormSubmit} validate={validate} /> */}
           <Form
-            schema={schema}
+            schema={formSchema}
             uiSchema={uiSchema}
             fields={customFields}
             FieldTemplate={CustomFieldTemplate}
