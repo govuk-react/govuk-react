@@ -79,10 +79,11 @@ const schema = {
   },
 };
 
-const AnyOf = ({ name, schema, formData = [], onChange, ...props }) => (
-  <GovUK.FormGroup>
+const AnyOf = ({ name, schema, formData = [], onChange, rawErrors }) => (
+  <GovUK.FormGroup error={!!rawErrors?.length}>
     <GovUK.Label mb={4}>
       <GovUK.LabelText>{schema.title}</GovUK.LabelText>
+      {rawErrors?.length && <GovUK.ErrorText>{rawErrors[0]}</GovUK.ErrorText>}
       {schema?.items?.anyOf?.map((item) => (
         <GovUK.Checkbox
           name={name}
@@ -99,12 +100,12 @@ const AnyOf = ({ name, schema, formData = [], onChange, ...props }) => (
   </GovUK.FormGroup>
 );
 
-const OneOf = (props) => {
-  if (props?.uiSchema?.['ui:widget'] === 'radio') {
+const OneOf = ({ schema, uiSchema, name, onChange, rawErrors }) => {
+  if (uiSchema?.['ui:widget'] === 'radio') {
     return (
-      <GovUK.MultiChoice mb={4} label={props.schema.title}>
-        {props?.schema?.oneOf?.map((item) => (
-          <GovUK.Radio value={item.const} name={props.name} onChange={(e) => props.onChange(e.target.value)}>
+      <GovUK.MultiChoice mb={4} label={schema.title} meta={{ error: rawErrors?.[0], touched: !!rawErrors?.length }}>
+        {schema?.oneOf?.map((item) => (
+          <GovUK.Radio value={item.const} name={name} onChange={(e) => onChange(e.target.value)}>
             {item.title}
           </GovUK.Radio>
         ))}
@@ -112,9 +113,14 @@ const OneOf = (props) => {
     );
   }
   return (
-    <GovUK.Select label={props.schema.title} mb={4} input={{ onChange: (e) => props.onChange(e.target.value) }}>
+    <GovUK.Select
+      label={schema.title}
+      mb={4}
+      input={{ onChange: (e) => onChange(e.target.value) }}
+      meta={{ error: rawErrors?.[0], touched: !!rawErrors?.length }}
+    >
       <option />
-      {props?.schema?.oneOf?.map((item) => (
+      {schema?.oneOf?.map((item) => (
         <option value={item.const}>{item.title}</option>
       ))}
     </GovUK.Select>
@@ -133,6 +139,7 @@ const DateField = (props) => {
   return (
     <GovUK.DateField
       {...props}
+      errorText={props.rawErrors?.[0]}
       input={{
         value,
         onChange: ({ year, month, day }) => {
@@ -147,31 +154,6 @@ const DateField = (props) => {
     />
   );
 };
-
-// function addNameToDataURL(dataURL, name) {
-//   return dataURL.replace(";base64", `;name=${encodeURIComponent(name)};base64`);
-// }
-
-// function processFile(file) {
-//   const { name, size, type } = file;
-//   return new Promise((resolve, reject) => {
-//     const reader = new window.FileReader();
-//     reader.onerror = reject;
-//     reader.onload = event => {
-//       resolve({
-//         dataURL: addNameToDataURL(event.target.result, name),
-//         name,
-//         size,
-//         type,
-//       });
-//     };
-//     reader.readAsDataURL(file);
-//   });
-// }
-
-// function processFiles(files) {
-//   return Promise.all([].map.call(files, processFile));
-// }
 
 const handleFilesChanged = (onChange) => (e) => {
   onChange();
@@ -237,14 +219,14 @@ const uiSchema = [
 ];
 
 const ErrorListTemplate = ({ errors, ...rest }) => (
-    <GovUK.ErrorSummary
-      heading="Error summary"
-      description="Please address the following issues"
-      errors={errors.map((error) => ({
-        targetName: error.name,
-        text: error.stack.substring(error.stack.indexOf(' ')+1) ,
-      }))}
-    />
+  <GovUK.ErrorSummary
+    heading="Error summary"
+    description="Please address the following issues"
+    errors={errors.map((error) => ({
+      targetName: error.name,
+      text: error.stack.substring(error.stack.indexOf(' ') + 1),
+    }))}
+  />
 );
 
 function ObjectFieldTemplate(props) {
@@ -258,18 +240,7 @@ function ObjectFieldTemplate(props) {
   );
 }
 
-function CustomFieldTemplate(props) {
-  const { id, classNames, label, help, required, description, errors, children } = props;
-  return (
-    <div className={classNames}>
-      {/* <label htmlFor={id}>{label}{required ? "*" : null}</label> */}
-      {/* {description} */}
-      {children}
-      {/* {errors} */}
-      {help}
-    </div>
-  );
-}
+const CustomFieldTemplate = ({children}) => children
 
 const conditionalAddError = (value, validator, errors) => {
   const error = validator(value);
@@ -314,7 +285,7 @@ const ReactJSONSchemaForm = () => {
           <GovUK.BackLink as={Link} to="/forms">
             Home
           </GovUK.BackLink>
-          <Form schema={schema} uiSchema={uiSchema} onSubmit={handleFormSubmit} validate={validate} />
+          {/* <Form schema={schema} uiSchema={uiSchema} onSubmit={handleFormSubmit} validate={validate} /> */}
           <Form
             schema={schema}
             uiSchema={uiSchema}
