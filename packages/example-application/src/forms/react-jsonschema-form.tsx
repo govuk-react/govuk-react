@@ -4,7 +4,15 @@ import * as GovUK from 'govuk-react';
 import { Link } from 'react-router-dom';
 
 import Results from './components/results';
-
+import {
+  validateNationality,
+  validateMultiplePets,
+  validateFirstName,
+  validateDescription,
+  validateDateOfBirth,
+  validateAnimal,
+  validatePetPhoto,
+} from './validators/validators';
 // TODO: extract reusable parts of this file in to a published module e.g. @govuk-react/json-schema-form
 
 const schema = {
@@ -12,7 +20,6 @@ const schema = {
     0: {
       title: 'About you',
       type: 'object',
-      required: ['firstName'],
       properties: {
         firstName: { type: 'string', title: 'First name', description: 'You can find this on your passport' },
         description: {
@@ -42,7 +49,6 @@ const schema = {
     1: {
       title: 'About your pet',
       type: 'object',
-      required: ['animal'],
       properties: {
         animal: {
           type: 'string',
@@ -115,29 +121,30 @@ const OneOf = (props) => {
   );
 };
 
-const dobObjToString = ({year,month,day}) => `${year ? year : ''}-${month ? month.padStart(2, '0') : ''}-${day ? day.padStart(2, '0') : ''}`
+const dobObjToString = ({ year, month, day }) =>
+  `${year ? year : ''}-${month ? month.padStart(2, '0') : ''}-${day ? day.padStart(2, '0') : ''}`;
 const dobStringToObj = (dob) => {
-  const [year, month, day] = dob.split('-').map((s) => s.trim())
-  return {year, month, day}
-}
+  const [year, month, day] = dob.split('-').map((s) => s.trim());
+  return { year, month, day };
+};
 
 const DateField = (props) => {
   const [value, setValue] = useState({});
   return (
-      <GovUK.DateField
-        {...props}
-        input={{
-          value,
-          onChange: ({ year, month, day }) => {
-            setValue({ year, month, day });
-            return props.input.onChange({
-              target: {
-                value: dobObjToString({year,month,day}),
-              },
-            });
-          },
-        }}
-      />
+    <GovUK.DateField
+      {...props}
+      input={{
+        value,
+        onChange: ({ year, month, day }) => {
+          setValue({ year, month, day });
+          return props.input.onChange({
+            target: {
+              value: dobObjToString({ year, month, day }),
+            },
+          });
+        },
+      }}
+    />
   );
 };
 
@@ -171,12 +178,12 @@ const handleFilesChanged = (onChange) => (e) => {
   const files = e.target.files;
   if (files.length > 0) {
     const reader = new FileReader();
-    reader.onload = e => onChange(e.target.result);
+    reader.onload = (e) => onChange(e.target.result);
     reader.readAsDataURL(files[0]);
   }
 };
 
-const FileUpload = props => <GovUK.FileUpload {...props} onChange={handleFilesChanged(props.onChange)} />;
+const FileUpload = (props) => <GovUK.FileUpload {...props} onChange={handleFilesChanged(props.onChange)} />;
 
 const customFields = {
   ArrayField: AnyOf,
@@ -229,16 +236,16 @@ const uiSchema = [
   },
 ];
 
-const ErrorListTemplate = ({errors}) => <>
-  <GovUK.ErrorSummary
-    heading="Error summary"
-    description="Please address the following issues"
-    errors={errors.map((error) => ({
-      targetName: error.name,
-      text: error.stack,
-    }))}
-  />
-</>
+const ErrorListTemplate = ({ errors, ...rest }) => (
+    <GovUK.ErrorSummary
+      heading="Error summary"
+      description="Please address the following issues"
+      errors={errors.map((error) => ({
+        targetName: error.name,
+        text: error.stack.substring(error.stack.indexOf(' ')+1) ,
+      }))}
+    />
+);
 
 function ObjectFieldTemplate(props) {
   return (
@@ -263,6 +270,24 @@ function CustomFieldTemplate(props) {
     </div>
   );
 }
+
+const conditionalAddError = (value, validator, errors) => {
+  const error = validator(value);
+  if (error) {
+    errors.addError(error);
+  }
+};
+
+const validate = (formData, errors) => {
+  conditionalAddError(formData[0].nationality, validateNationality, errors[0].nationality);
+  conditionalAddError(formData[0].firstName, validateFirstName, errors[0].firstName);
+  conditionalAddError(formData[0].description, validateDescription, errors[0].description);
+  conditionalAddError(formData[0].dob, validateDateOfBirth, errors[0].dob);
+  conditionalAddError(formData[1].hasMultiplePets, validateMultiplePets, errors[1].hasMultiplePets);
+  conditionalAddError(formData[1].animal, validateAnimal, errors[1].animal);
+  conditionalAddError(formData[1].petPhoto, validatePetPhoto, errors[1].petPhoto);
+  return errors;
+};
 
 const ReactJSONSchemaForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -289,7 +314,7 @@ const ReactJSONSchemaForm = () => {
           <GovUK.BackLink as={Link} to="/forms">
             Home
           </GovUK.BackLink>
-          <Form schema={schema} uiSchema={uiSchema} onSubmit={handleFormSubmit} />
+          <Form schema={schema} uiSchema={uiSchema} onSubmit={handleFormSubmit} validate={validate} />
           <Form
             schema={schema}
             uiSchema={uiSchema}
@@ -298,6 +323,7 @@ const ReactJSONSchemaForm = () => {
             ObjectFieldTemplate={ObjectFieldTemplate}
             ErrorList={ErrorListTemplate}
             onSubmit={handleFormSubmit}
+            validate={validate}
           />
         </>
       )}
