@@ -69,5 +69,9 @@ Results.propTypes = {
   petPhoto: PropTypes.string,
   petPhotoString: PropTypes.string,
 };
+Results.defaultProps = {
+  petPhoto: undefined,
+  petPhotoString: undefined,
+}
 
 export default Results;

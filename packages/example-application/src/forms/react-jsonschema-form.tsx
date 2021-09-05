@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import React, { useCallback, useState } from 'react';
 import Form from '@rjsf/core';
 import * as GovUK from 'govuk-react';
