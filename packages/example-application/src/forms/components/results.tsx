@@ -60,9 +60,9 @@ Results.propTypes = {
   description: PropTypes.string.isRequired,
   nationality: PropTypes.arrayOf(PropTypes.string).isRequired,
   dob: PropTypes.shape({
-    year: PropTypes.string,
-    month: PropTypes.string,
-    day: PropTypes.string,
+    year: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    month: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    day: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   }).isRequired,
   animal: PropTypes.string.isRequired,
   hasMultiplePets: PropTypes.string.isRequired,
