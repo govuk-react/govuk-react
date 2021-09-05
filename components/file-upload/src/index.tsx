@@ -74,7 +74,7 @@ const StyledInput = styled('input')({
  */
 const FileUpload = React.forwardRef(({ meta, children, hint, acceptedFormats, onChange, name, ...props }, ref) => (
   <Label {...props} error={meta.touched && !!meta.error}>
-    <LabelText error={meta.touched && !!meta.error}>{children}</LabelText>
+    <LabelText>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
     <StyledInput
