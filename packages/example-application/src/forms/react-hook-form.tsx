@@ -141,7 +141,6 @@ const ReactHookForm = () => {
               <DateField
                 errorText={submitCount > 0 ? errors?.dob?.message : undefined}
                 input={register('dob', {
-                  // TODO: should check for valid date via extracted and shared function
                   validate: validateDateOfBirth,
                 })}
               >
