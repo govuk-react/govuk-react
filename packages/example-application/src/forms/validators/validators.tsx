@@ -28,3 +28,4 @@ export const validatePetPhoto = (file) =>
   file && file.length === 1 && ['image/jpeg', 'image/png'].includes(file[0].type)
     ? undefined
     : 'Please select a valid photo';
+export const validatePetPhotoString = (fileString) => (fileString?.length ? undefined : 'Please select a valid photo');

@@ -11,7 +11,7 @@ import {
   validateDescription,
   validateDateOfBirth,
   validateAnimal,
-  validatePetPhoto,
+  validatePetPhotoString,
 } from './validators/validators';
 // TODO: extract reusable parts of this file in to a published module e.g. @govuk-react/json-schema-form
 
@@ -86,6 +86,7 @@ const AnyOf = ({ name, schema, formData = [], onChange, rawErrors }) => (
       {rawErrors?.length && <GovUK.ErrorText>{rawErrors[0]}</GovUK.ErrorText>}
       {schema?.items?.anyOf?.map((item) => (
         <GovUK.Checkbox
+          key={item.const}
           name={name}
           value={item.const}
           hint={item.description}
@@ -105,7 +106,7 @@ const OneOf = ({ schema, uiSchema, name, onChange, rawErrors }) => {
     return (
       <GovUK.MultiChoice mb={4} label={schema.title} meta={{ error: rawErrors?.[0], touched: !!rawErrors?.length }}>
         {schema?.oneOf?.map((item) => (
-          <GovUK.Radio value={item.const} name={name} onChange={(e) => onChange(e.target.value)}>
+          <GovUK.Radio key={item.const} value={item.const} name={name} onChange={(e) => onChange(e.target.value)}>
             {item.title}
           </GovUK.Radio>
         ))}
@@ -116,12 +117,14 @@ const OneOf = ({ schema, uiSchema, name, onChange, rawErrors }) => {
     <GovUK.Select
       label={schema.title}
       mb={4}
-      input={{ onChange: (e) => onChange(e.target.value) }}
+      input={{ name, onChange: (e) => onChange(e.target.value) }}
       meta={{ error: rawErrors?.[0], touched: !!rawErrors?.length }}
     >
       <option />
       {schema?.oneOf?.map((item) => (
-        <option value={item.const}>{item.title}</option>
+        <option key={item.const} value={item.const}>
+          {item.title}
+        </option>
       ))}
     </GovUK.Select>
   );
@@ -130,26 +133,25 @@ const OneOf = ({ schema, uiSchema, name, onChange, rawErrors }) => {
 const dobObjToString = ({ year, month, day }) =>
   `${year ? year : ''}-${month ? month.padStart(2, '0') : ''}-${day ? day.padStart(2, '0') : ''}`;
 const dobStringToObj = (dob) => {
+  if (!dob) return;
   const [year, month, day] = dob.split('-').map((s) => s.trim());
-  return { year, month, day };
+  return { year: parseInt(year), month: parseInt(month), day: parseInt(day) };
 };
 
 const DateField = (props) => {
-  const [value, setValue] = useState({});
+  const [value, setValue] = useState({ day: '', month: '', year: '' });
+  const handleChange = useCallback(({ year, month, day }) => {
+    setValue({ year, month, day });
+    return props.onChange(dobObjToString({ year, month, day }));
+  }, []);
+
   return (
     <GovUK.DateField
-      {...props}
+      children={props.children}
       errorText={props.rawErrors?.[0]}
       input={{
         value,
-        onChange: ({ year, month, day }) => {
-          setValue({ year, month, day });
-          return props.input.onChange({
-            target: {
-              value: dobObjToString({ year, month, day }),
-            },
-          });
-        },
+        onChange: handleChange,
       }}
     />
   );
@@ -165,45 +167,84 @@ const handleFilesChanged = (onChange) => (e) => {
   }
 };
 
-const FileUpload = (props) => <GovUK.FileUpload {...props} onChange={handleFilesChanged(props.onChange)} />;
+const FileUpload = (props) => (
+  <GovUK.FileUpload
+    meta={{ error: props.rawErrors?.[0], touched: !!props.rawErrors?.[0] }}
+    children={props.children}
+    onChange={handleFilesChanged(props.onChange)}
+    name={props.name}
+  />
+);
+
+const TextArea = (props) => (
+  <GovUK.TextArea
+    input={{
+      onChange: (e) => props.onChange(e.target.value),
+      name: props.name,
+    }}
+    mb={4}
+    hint={props.schema.description}
+    meta={{ error: props.rawErrors?.[0], touched: !!props.rawErrors?.[0] }}
+  >
+    {props.schema.title}
+  </GovUK.TextArea>
+);
+
+const InputField = (props) => (
+  <GovUK.InputField
+    input={{
+      onChange: (e) => props.onChange(e.target.value),
+      name: props.name,
+    }}
+    mb={4}
+    hint={props.schema.description}
+    meta={{ error: props.rawErrors?.[0], touched: !!props.rawErrors?.[0] }}
+  >
+    {props.schema.title}
+  </GovUK.InputField>
+);
+
+const StringField = (props) => {
+  const Component =
+    props?.uiSchema?.['ui:widget'] === 'textarea'
+      ? TextArea
+      : props?.schema?.format === 'data-url'
+      ? FileUpload
+      : props?.schema?.format === 'date'
+      ? DateField
+      : props?.schema?.oneOf
+      ? OneOf
+      : InputField;
+
+  return (
+    <Component
+      {...props}
+      // input={{
+      //   onChange: (e) => props.onChange(e.target.value),
+      // }}
+      // mb={4}
+      // hint={props.schema.description}
+      // meta={{ error: props.rawErrors?.[0], touched: !!props.rawErrors?.[0] }}
+    >
+      {props.schema.title}
+    </Component>
+  );
+};
+
+const BooleanField = (props) => (
+  <GovUK.Checkbox {...props} hint={props.schema.description}>
+    {props.schema.title}
+  </GovUK.Checkbox>
+);
 
 const customFields = {
   ArrayField: AnyOf,
-  StringField: (props) => {
-    const Component =
-      props?.uiSchema?.['ui:widget'] === 'textarea'
-        ? GovUK.TextArea
-        : props?.schema?.format === 'data-url'
-        ? FileUpload
-        : props?.schema?.format === 'date'
-        ? DateField
-        : props?.schema?.oneOf
-        ? OneOf
-        : GovUK.InputField;
-
-    return (
-      <Component
-        {...props}
-        input={{
-          onChange: (e) => props.onChange(e.target.value),
-        }}
-        mb={4}
-        hint={props.schema.description}
-        meta={{ error: props.rawErrors?.[0], touched: !!props.rawErrors?.[0] }}
-      >
-        {props.schema.title}
-      </Component>
-    );
-  },
-  BooleanField: (props) => (
-    <GovUK.Checkbox {...props} hint={props.schema.description}>
-      {props.schema.title}
-    </GovUK.Checkbox>
-  ),
+  StringField,
+  BooleanField,
 };
 
-const uiSchema = [
-  {
+const uiSchema = {
+  0: {
     description: {
       'ui:widget': 'textarea',
     },
@@ -211,19 +252,19 @@ const uiSchema = [
       'ui:widget': 'checkboxes',
     },
   },
-  {
+  1: {
     hasMultiplePets: {
       'ui:widget': 'radio',
     },
   },
-];
+};
 
 const ErrorListTemplate = ({ errors, ...rest }) => (
   <GovUK.ErrorSummary
     heading="Error summary"
     description="Please address the following issues"
-    errors={errors.map((error) => ({
-      targetName: error.name,
+    errors={errors.map((error, n) => ({
+      targetName: error.name || String(n),
       text: error.stack.substring(error.stack.indexOf(' ') + 1),
     }))}
   />
@@ -232,15 +273,13 @@ const ErrorListTemplate = ({ errors, ...rest }) => (
 function ObjectFieldTemplate(props) {
   return (
     <GovUK.Fieldset>
-      <GovUK.Fieldset.Legend size="M">{props.title}</GovUK.Fieldset.Legend>
-      {props.properties.map((element) => (
-        <div className="property-wrapper">{element.content}</div>
-      ))}
+      {props.title && <GovUK.Fieldset.Legend size="M">{props.title}</GovUK.Fieldset.Legend>}
+      {props.properties.map((element) => element.content)}
     </GovUK.Fieldset>
   );
 }
 
-const CustomFieldTemplate = ({children}) => children
+const CustomFieldTemplate = ({ children }) => children;
 
 const conditionalAddError = (value, validator, errors) => {
   const error = validator(value);
@@ -253,10 +292,10 @@ const validate = (formData, errors) => {
   conditionalAddError(formData[0].nationality, validateNationality, errors[0].nationality);
   conditionalAddError(formData[0].firstName, validateFirstName, errors[0].firstName);
   conditionalAddError(formData[0].description, validateDescription, errors[0].description);
-  conditionalAddError(formData[0].dob, validateDateOfBirth, errors[0].dob);
+  conditionalAddError(dobStringToObj(formData[0].dob), validateDateOfBirth, errors[0].dob);
   conditionalAddError(formData[1].hasMultiplePets, validateMultiplePets, errors[1].hasMultiplePets);
   conditionalAddError(formData[1].animal, validateAnimal, errors[1].animal);
-  conditionalAddError(formData[1].petPhoto, validatePetPhoto, errors[1].petPhoto);
+  conditionalAddError(formData[1].petPhoto, validatePetPhotoString, errors[1].petPhoto);
   return errors;
 };
 
@@ -295,6 +334,7 @@ const ReactJSONSchemaForm = () => {
             ErrorList={ErrorListTemplate}
             onSubmit={handleFormSubmit}
             validate={validate}
+            onError={() => null}
           />
         </>
       )}
