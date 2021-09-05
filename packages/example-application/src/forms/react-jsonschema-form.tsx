@@ -229,10 +229,20 @@ const uiSchema = [
   },
 ];
 
+const ErrorListTemplate = ({errors}) => <>
+  <GovUK.ErrorSummary
+    heading="Error summary"
+    description="Please address the following issues"
+    errors={errors.map((error) => ({
+      targetName: error.name,
+      text: error.stack,
+    }))}
+  />
+</>
+
 function ObjectFieldTemplate(props) {
   return (
     <GovUK.Fieldset>
-      <pre>{JSON.stringify(props.formData)}</pre>
       <GovUK.Fieldset.Legend size="M">{props.title}</GovUK.Fieldset.Legend>
       {props.properties.map((element) => (
         <div className="property-wrapper">{element.content}</div>
@@ -286,12 +296,12 @@ const ReactJSONSchemaForm = () => {
             fields={customFields}
             FieldTemplate={CustomFieldTemplate}
             ObjectFieldTemplate={ObjectFieldTemplate}
+            ErrorList={ErrorListTemplate}
             onSubmit={handleFormSubmit}
           />
         </>
       )}
       {hasSubmitted && (
-        <><pre>{JSON.stringify(submittedData)}</pre>
         <Results
           backLink="/forms/react-jsonschema-form"
           onBackClick={() => setHasSubmitted(false)}
@@ -302,7 +312,7 @@ const ReactJSONSchemaForm = () => {
           animal={submittedData[1].animal}
           hasMultiplePets={submittedData[1].hasMultiplePets}
           petPhotoString={submittedData[1].petPhoto}
-        /></>
+        />
       )}
     </>
   );
