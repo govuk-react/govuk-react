@@ -335,7 +335,9 @@ const ReactJSONSchemaForm = () => {
             onSubmit={handleFormSubmit}
             validate={validate}
             onError={() => null}
-          />
+          >
+            <GovUK.Button type="submit">Submit</GovUK.Button>
+          </Form>
         </>
       )}
       {hasSubmitted && (
