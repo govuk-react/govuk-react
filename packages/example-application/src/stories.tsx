@@ -43,3 +43,9 @@ ReactHookForm.args = {
   routerEntries: ['/forms/react-hook-form'],
 };
 ReactHookForm.parameters = Template.parameters;
+
+export const ReactJSONSchemaForm = Template.bind({});
+ReactJSONSchemaForm.args = {
+  routerEntries: ['/forms/react-jsonschema-form'],
+};
+ReactJSONSchemaForm.parameters = Template.parameters;

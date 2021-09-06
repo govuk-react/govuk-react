@@ -69,7 +69,7 @@ const FinalForm = () => {
             return (
               <form onSubmit={handleSubmit}>
                 <GovUK.LoadingBox loading={isSubmitting}>
-                  <GovUK.BackLink as={Link} to="/">
+                  <GovUK.BackLink as={Link} to="/forms">
                     Home
                   </GovUK.BackLink>
                   {!!errorsToShow?.length && (

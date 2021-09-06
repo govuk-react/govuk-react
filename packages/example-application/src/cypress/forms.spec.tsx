@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from '@cypress/react';
 import App from '../index';
 
-const formModes = ['Basic', 'Final Form', 'Formik', 'React Hook Form'];
+const formModes = ['Basic', 'Final Form', 'Formik', 'React Hook Form', 'React JSON Schema Form'];
 
 describe('When a user loads the application, clicks Start now,', () => {
   beforeEach(() => {

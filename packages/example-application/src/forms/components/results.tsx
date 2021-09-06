@@ -13,14 +13,17 @@ const Results = ({
   animal,
   hasMultiplePets,
   petPhoto,
+  petPhotoString,
 }) => {
-  const [photoString, setPhotoString] = useState();
+  const [photoString, setPhotoString] = useState(petPhotoString);
   useEffect(() => {
-    const reader = new FileReader();
-    reader.addEventListener('load', () => {
-      setPhotoString(reader.result);
-    });
-    reader.readAsDataURL(petPhoto[0]);
+    if (petPhoto && petPhoto[0]) {
+      const reader = new FileReader();
+      reader.addEventListener('load', () => {
+        setPhotoString(reader.result);
+      });
+      reader.readAsDataURL(petPhoto[0]);
+    }
   }, [petPhoto]);
 
   return (
@@ -38,9 +41,9 @@ const Results = ({
       <GovUK.UnorderedList>
         <GovUK.ListItem>Name: {firstName}</GovUK.ListItem>
         <GovUK.ListItem>Description: {description}</GovUK.ListItem>
-        <GovUK.ListItem>Nationality: {nationality.join(', ')}</GovUK.ListItem>
+        <GovUK.ListItem>Nationality: {nationality?.join(', ')}</GovUK.ListItem>
         <GovUK.ListItem>
-          Date of birth: {dob.day}/{dob.month}/{dob.year}
+          Date of birth: {dob?.day}/{dob?.month}/{dob?.year}
         </GovUK.ListItem>
         <GovUK.ListItem>Animal: {animal}</GovUK.ListItem>
         <GovUK.ListItem>Multiple pets: {hasMultiplePets}</GovUK.ListItem>
@@ -57,13 +60,18 @@ Results.propTypes = {
   description: PropTypes.string.isRequired,
   nationality: PropTypes.arrayOf(PropTypes.string).isRequired,
   dob: PropTypes.shape({
-    year: PropTypes.string,
-    month: PropTypes.string,
-    day: PropTypes.string,
+    year: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    month: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    day: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   }).isRequired,
   animal: PropTypes.string.isRequired,
   hasMultiplePets: PropTypes.string.isRequired,
-  petPhoto: PropTypes.string.isRequired,
+  petPhoto: PropTypes.string,
+  petPhotoString: PropTypes.string,
+};
+Results.defaultProps = {
+  petPhoto: undefined,
+  petPhotoString: undefined,
 };
 
 export default Results;

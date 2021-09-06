@@ -7,6 +7,7 @@ import Form from './form';
 import FinalForm from './final-form';
 import Formik from './formik';
 import ReactHookForm from './react-hook-form';
+import ReactJSONSchemaForm from './react-jsonschema-form';
 
 const Forms = () => (
   <Switch>
@@ -21,6 +22,9 @@ const Forms = () => (
     </Route>
     <Route path="/forms/react-hook-form">
       <ReactHookForm />
+    </Route>
+    <Route path="/forms/react-jsonschema-form">
+      <ReactJSONSchemaForm />
     </Route>
     <Route path="/">
       <GovUK.H2>Forms</GovUK.H2>
@@ -37,6 +41,9 @@ const Forms = () => (
         </GovUK.Link>
         <GovUK.Link as={Link} to="/forms/react-hook-form">
           React Hook Form
+        </GovUK.Link>
+        <GovUK.Link as={Link} to="/forms/react-jsonschema-form">
+          React JSON Schema Form
         </GovUK.Link>
       </GovUK.ListNavigation>
     </Route>
