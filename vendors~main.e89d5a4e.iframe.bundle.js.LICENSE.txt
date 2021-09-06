@@ -101,6 +101,8 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  */
 
+/** @license URI.js v4.4.1 (c) 2011 Gary Court. License: http://github.com/garycourt/uri-js */
+
 //! stable.js 0.1.8, https://github.com/Two-Screen/stable
 
 //! © 2018 Angry Bytes and contributors. MIT licensed.
