@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LabelText matches noError snapshot: no error mount 1`] = `
+exports[`LabelText matches wrapper snapshot: wrapper mount 1`] = `
 .c0 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -43,63 +43,6 @@ exports[`LabelText matches noError snapshot: no error mount 1`] = `
 
 <LabelText>
   <src__StyledLabelText>
-    <span
-      className="c0"
-    >
-      example
-    </span>
-  </src__StyledLabelText>
-</LabelText>
-`;
-
-exports[`LabelText matches wrapper snapshot: wrapper mount 1`] = `
-.c0 {
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #0b0c0c;
-  display: block;
-  clear: none;
-  padding-bottom: 2px;
-  font-weight: 700;
-  margin-bottom: 0;
-}
-
-@media print {
-  .c0 {
-    font-size: 14px;
-    line-height: 1.15;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c0 {
-    font-size: 19px;
-    line-height: 1.3157894736842106;
-  }
-}
-
-@media print {
-  .c0 {
-    color: #000;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .c0 {
-    margin-bottom: 0;
-  }
-}
-
-<LabelText
-  error="example"
->
-  <src__StyledLabelText
-    error="example"
-  >
     <span
       className="c0"
     >

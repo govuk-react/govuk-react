@@ -7,8 +7,7 @@ import LabelText from '.';
 describe('LabelText', () => {
   let props;
   const example = 'example';
-  const wrapper = <LabelText error={example}>{example}</LabelText>;
-  const noError = <LabelText>{example}</LabelText>;
+  const wrapper = <LabelText>{example}</LabelText>;
 
   beforeEach(() => {
     props = {
@@ -27,9 +26,5 @@ describe('LabelText', () => {
 
   it('matches wrapper snapshot', () => {
     expect(mount(wrapper)).toMatchSnapshot('wrapper mount');
-  });
-
-  it('matches noError snapshot', () => {
-    expect(mount(noError)).toMatchSnapshot('no error mount');
   });
 });
