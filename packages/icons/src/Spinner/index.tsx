@@ -1,10 +1,9 @@
 // https://govuk-loader-prototype.herokuapp.com/components/loader
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 
-import SVG from '../SVGBase/index';
+import SVG, { SVGProps } from '../SVGBase/index';
 
 const fadeInOut = keyframes`
   0% { opacity: 0.250075; }
@@ -17,7 +16,13 @@ const Rect = styled.rect`
   animation: ${fadeInOut} 1s infinite linear;
 `;
 
-const Spinner = ({ className, fill, title, ...rest }) => (
+interface SpinnerProps extends SVGProps {
+  className?: string;
+  title?: string;
+  fill?: string;
+}
+
+const Spinner = ({ className, fill, title, ...rest }: SpinnerProps) => (
   <SVG
     className={className}
     viewBox="-25 -25 50 50"
@@ -44,12 +49,6 @@ const Spinner = ({ className, fill, title, ...rest }) => (
       ))}
   </SVG>
 );
-
-Spinner.propTypes = {
-  className: PropTypes.string,
-  title: PropTypes.string,
-  fill: PropTypes.string,
-};
 
 Spinner.defaultProps = {
   className: 'icon-spinner',

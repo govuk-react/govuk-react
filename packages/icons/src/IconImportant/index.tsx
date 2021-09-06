@@ -1,9 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import SVG from '../SVGBase/index';
+import SVG, { SVGProps } from '../SVGBase/index';
 
-const IconImportant = ({ fill, title, ...rest }) => (
+interface IconImportantProps extends SVGProps {
+  title?: string;
+  fill?: string;
+}
+
+const IconImportant = ({ fill, title, ...rest }: IconImportantProps) => (
   <SVG viewBox="0 0 35.000000 35.000000" preserveAspectRatio="xMidYMid meet" title={title} fill={fill} {...rest}>
     <g transform="translate(0.000000,35.000000) scale(0.100000,-0.100000)">
       <path
@@ -15,11 +19,6 @@ const IconImportant = ({ fill, title, ...rest }) => (
     </g>
   </SVG>
 );
-
-IconImportant.propTypes = {
-  title: PropTypes.string,
-  fill: PropTypes.string,
-};
 
 IconImportant.defaultProps = {
   title: 'icon important',

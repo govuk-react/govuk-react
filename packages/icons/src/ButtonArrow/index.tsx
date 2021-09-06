@@ -1,9 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import SVG from '../SVGBase/index';
+import SVG, { SVGProps } from '../SVGBase/index';
 
-const ButtonArrow = ({ fill, title, ...rest }) => (
+interface ButtonArrowProps extends SVGProps {
+  title?: string;
+  fill?: string;
+}
+
+const ButtonArrow = ({ fill, title, ...rest }: ButtonArrowProps) => (
   <SVG viewBox="0 0 706 860" title={title} fill={fill} {...rest}>
     <g>
       <path d="M.152 0h252.993l452.108 430H452.261z" />
@@ -11,11 +15,6 @@ const ButtonArrow = ({ fill, title, ...rest }) => (
     </g>
   </SVG>
 );
-
-ButtonArrow.propTypes = {
-  title: PropTypes.string,
-  fill: PropTypes.string,
-};
 
 ButtonArrow.defaultProps = {
   title: 'ButtonArrow',

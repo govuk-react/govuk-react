@@ -3,15 +3,15 @@
 import { mount } from 'enzyme';
 import React from 'react';
 
-import * as exports from '.';
+import * as icons from '.';
 
 describe('@govuk-react/icons', () => {
   // filter out private exports e.g. __esModule
-  const componentNames = Object.keys(exports).filter((componentName) => !componentName.startsWith('_'));
+  const componentNames = Object.keys(icons).filter((componentName) => !componentName.startsWith('_'));
   for (let n = 0; n < componentNames.length; n += 1) {
     const key = componentNames[n];
     it(`exports ${key} as a React component that renders an SVG`, () => {
-      const Component = exports[key];
+      const Component = icons[key];
       // TODO: this would fail if we wanted to export a constant that was `false`
       // not sure how to do "expect one of" in Jest so leaving for now
       // as it's possible we'd never need a false constant export
