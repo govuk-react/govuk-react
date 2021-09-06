@@ -8,9 +8,6 @@
     "jsx": "react",
     "esModuleInterop": true
   },
-  "include": [
-    "./scripts/setupTests.ts"
-  ],
   "exclude": [
     "node_modules"
   ]

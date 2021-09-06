@@ -20,7 +20,7 @@ describe('spacing lib', () => {
     });
 
     it('throws when not given a size', () => {
-      expect(() => spacing.simple()).toThrow();
+      expect(() => spacing.simple(undefined)).toThrow();
     });
 
     it('throws when given a size not in the spacing scale', () => {
@@ -52,16 +52,16 @@ describe('spacing lib', () => {
     });
 
     it('throws when not given a size', () => {
-      expect(() => spacing.responsive()).toThrow();
+      expect(() => spacing.responsive(undefined)).toThrow();
     });
 
     it('throws when not given a property', () => {
-      expect(() => spacing.responsive({ size: 0 })).toThrow();
+      expect(() => spacing.responsive({ size: 0, property: undefined })).toThrow();
     });
 
     it('throws when given a size not in the spacing scale', () => {
-      expect(() => spacing.responsive({ size: 'test' })).toThrow();
-      expect(() => spacing.responsive({ size: 99999 })).toThrow();
+      expect(() => spacing.responsive({ size: 'test', property: undefined })).toThrow();
+      expect(() => spacing.responsive({ size: 99999, property: undefined })).toThrow();
     });
 
     it('returns spacing style for a given direction', () => {

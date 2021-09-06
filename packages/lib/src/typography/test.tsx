@@ -22,14 +22,14 @@ describe('typography lib', () => {
       const result = typography.common();
 
       expect(result.fontFamily).toEqual(FONT_STACK);
-      expect(result[MEDIA_QUERIES.PRINT].fontFamily).toEqual(FONT_STACK_PRINT);
+      expect(result[MEDIA_QUERIES.PRINT]).toEqual({ fontFamily: FONT_STACK_PRINT });
     });
 
     it('allows an override fontFamily value', () => {
       const result = typography.common('test');
 
       expect(result.fontFamily).toEqual('test');
-      expect(result[MEDIA_QUERIES.PRINT].fontFamily).toEqual(FONT_STACK_PRINT);
+      expect(result[MEDIA_QUERIES.PRINT]).toEqual({ fontFamily: FONT_STACK_PRINT });
     });
   });
 
@@ -65,7 +65,7 @@ describe('typography lib', () => {
     });
 
     it('throws when not given a size', () => {
-      expect(() => typography.responsive()).toThrow();
+      expect(() => typography.responsive(undefined)).toThrow();
     });
 
     it('throws when given a size not in the typography scale', () => {
