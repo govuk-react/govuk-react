@@ -1,8 +1,8 @@
 {
   "name": "@govuk-react/storybook-components",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "dependencies": {
-    "@govuk-react/button": "^0.9.0",
+    "@govuk-react/button": "^0.9.1",
     "@storybook/addon-actions": "6.3.5",
     "@storybook/addon-docs": "6.3.5",
     "@storybook/addons": "6.3.7",

@@ -1,9 +1,9 @@
 {
   "name": "@govuk-react/error-text",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "dependencies": {
-    "@govuk-react/constants": "^0.9.0",
-    "@govuk-react/lib": "^0.9.0",
+    "@govuk-react/constants": "^0.9.1",
+    "@govuk-react/lib": "^0.9.1",
     "govuk-colours": "^1.1.0"
   },
   "peerDependencies": {
