@@ -19,14 +19,14 @@ export function simple(size) {
   return scale * polarity;
 }
 
-function styleForDirection(size, property, direction = null) {
+function styleForDirection(size, property, direction) {
   // NB styled-components automatically sets style to include `px` if needed
   return {
     [direction && direction !== 'all' ? `${property}-${direction}` : property]: size,
   };
 }
 
-export function responsive({ size, property, direction = null, adjustment = 0 }) {
+export function responsive({ size, property, direction, adjustment = 0 } = {}) {
   const scale = SPACING_MAP[Math.abs(size)];
   const polarity = size < 0 ? -1 : 1;
 
@@ -102,7 +102,7 @@ export function responsivePadding(value) {
 // - see `responsivePadding` and `responsiveMargin` calls
 // can be an array of numbers/objects
 
-export function withWhiteSpace(config: { margin?: any; padding?: any; marginBottom?: any } = {}) {
+export function withWhiteSpace(config = {}) {
   return ({ margin = config.margin, padding = config.padding, mb: marginBottom = config.marginBottom } = {}) => {
     const styles = [];
 
@@ -153,7 +153,7 @@ withWhiteSpace.propTypes = {
   ]),
 };
 
-export function withWidth(config: { width?: any; mediaQuery?: string; noDefault?: boolean } = {}) {
+export function withWidth(config = {}) {
   return ({ setWidth = config.width } = {}) => {
     if (setWidth) {
       const width = WIDTHS[setWidth] || setWidth;

@@ -39,7 +39,7 @@ function getSizeStyle(scale, lineHeight = scale.lineHeight) {
   };
 }
 
-export function responsive(size, overrideLineHeight = undefined) {
+export function responsive(size, overrideLineHeight) {
   const scale = TYPOGRAPHY_SCALE[size];
 
   if (!scale) {
@@ -54,10 +54,10 @@ export function responsive(size, overrideLineHeight = undefined) {
 }
 
 interface FontOptions {
-  size?: string;
-  weight?: string;
+  size?: 80 | 48 | 36 | 27 | 24 | 19 | 16 | 14;
+  weight?: 'regular' | 'bold';
   tabular?: boolean;
-  lineHeight?: number;
+  lineHeight?: boolean;
 }
 
 export function font({ size, weight = 'regular', tabular = false, lineHeight }: FontOptions = {}) {
