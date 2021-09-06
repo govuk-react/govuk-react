@@ -1,12 +1,12 @@
 {
   "name": "@govuk-react/file-upload",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "dependencies": {
-    "@govuk-react/constants": "^0.9.0",
-    "@govuk-react/error-text": "^0.9.0",
-    "@govuk-react/hint-text": "^0.9.0",
-    "@govuk-react/label": "^0.9.0",
-    "@govuk-react/label-text": "^0.9.0"
+    "@govuk-react/constants": "^0.9.1",
+    "@govuk-react/error-text": "^0.9.1",
+    "@govuk-react/hint-text": "^0.9.1",
+    "@govuk-react/label": "^0.9.1",
+    "@govuk-react/label-text": "^0.9.1"
   },
   "peerDependencies": {
     "react": ">=16.2.0",
