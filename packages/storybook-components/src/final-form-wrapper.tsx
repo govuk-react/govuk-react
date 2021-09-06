@@ -23,7 +23,7 @@ const FinalFormWrapper = ({ children }) => (
         </div>
         <div>
           <hr />
-          <pre>{JSON.stringify(values, 0, 2)}</pre>
+          <pre>{JSON.stringify(values, null, 2)}</pre>
         </div>
       </form>
     )}
