@@ -157,7 +157,18 @@ withWhiteSpace.propTypes = {
   ]),
 };
 
-export function withWidth(config: { width?: any; mediaQuery?: string; noDefault?: boolean } = {}) {
+export function withWidth(config: { width?: any; mediaQuery?: string; noDefault?: boolean } = {}): ({
+  setWidth,
+}?: {
+  setWidth?: any;
+}) => {
+  [x: string]:
+    | string
+    | {
+        width: any;
+      };
+  width?: string;
+} {
   return ({ setWidth = config.width } = {}) => {
     if (setWidth) {
       const width = WIDTHS[setWidth] || setWidth;
