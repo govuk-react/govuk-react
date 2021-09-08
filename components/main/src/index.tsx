@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { MEDIA_QUERIES, SPACING, SITE_WIDTH } from '@govuk-react/constants';
 
@@ -55,18 +54,18 @@ const InnerContainer = styled('div')({
  * - Implement the 1020px min-width MQ to constants
  *
  */
-const Main = ({ children, ...props }) => (
+const Main = ({ children, ...props }: MainProps) => (
   <OuterContainer {...props}>
     <InnerContainer>{children}</InnerContainer>
   </OuterContainer>
 );
 
-Main.propTypes = {
+interface MainProps {
   /**
    * Child nodes for the page being built
    */
-  children: PropTypes.node,
-};
+  children?: React.ReactNode;
+}
 
 Main.defaultProps = {
   children: undefined,
