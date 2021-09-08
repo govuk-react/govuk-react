@@ -1,7 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import UnorderedList from '@govuk-react/unordered-list';
 import ListItem from '@govuk-react/list-item';
+
+interface ListNavigationProps {
+  /**
+   * List navigation content
+   */
+  children: React.ReactNode;
+  /**
+   * CSS value for `list-style-type`
+   */
+  listStyleType?: string;
+}
 
 /**
  *
@@ -38,10 +48,10 @@ import ListItem from '@govuk-react/list-item';
  * - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
  * - Fix active state overlaping siblings
  */
-const ListNavigation = ({ children, listStyleType, ...props }) => (
+const ListNavigation = ({ children, listStyleType, ...props }: ListNavigationProps) => (
   <UnorderedList listStyleType={listStyleType} {...props}>
-    {children.length && children.map ? (
-      children.map((child, i) => <ListItem key={child.key || i}>{child}</ListItem>)
+    {Array.isArray(children) && children.length ? (
+      React.Children.map(children, (child) => <ListItem>{child}</ListItem>)
     ) : (
       <ListItem>{children}</ListItem>
     )}
@@ -50,17 +60,6 @@ const ListNavigation = ({ children, listStyleType, ...props }) => (
 
 ListNavigation.defaultProps = {
   listStyleType: undefined,
-};
-
-ListNavigation.propTypes = {
-  /**
-   * List navigation content
-   */
-  children: PropTypes.node.isRequired,
-  /**
-   * CSS value for `list-style-type`
-   */
-  listStyleType: PropTypes.string,
 };
 
 export default ListNavigation;
