@@ -103,7 +103,11 @@ export function responsivePadding(value) {
 // can be an array of numbers/objects
 
 export function withWhiteSpace(config: { margin?: any; padding?: any; marginBottom?: any } = {}) {
-  return ({ margin = config.margin, padding = config.padding, mb: marginBottom = config.marginBottom } = {}) => {
+  return ({
+    margin = config.margin,
+    padding = config.padding,
+    mb: marginBottom = config.marginBottom,
+  }: WithWhiteSpaceProps = {}) => {
     const styles = [];
 
     if (margin !== undefined) {
@@ -170,3 +174,5 @@ export function withWidth(config: { width?: any; mediaQuery?: string; noDefault?
     return undefined;
   };
 }
+
+export type WithWhiteSpaceProps = { margin?: any; padding?: any; mb?: any };

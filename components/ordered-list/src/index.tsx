@@ -1,5 +1,6 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
@@ -9,7 +10,15 @@ function translateType(type) {
   return { bullet: 'disc', number: 'decimal' }[type] || type;
 }
 
-const OrderedList = styled('ol')(
+interface OrderedListProps extends WithWhiteSpaceProps {
+  /** One or more ListItem components */
+  children: React.ReactNode;
+  /** CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend */
+  listStyleType?: string;
+  as?: React.ElementType;
+}
+
+const OrderedList: React.FC<OrderedListProps> = styled('ol')(
   typography.font({ size: 19 }),
   typography.textColour,
   {
@@ -89,21 +98,13 @@ const OrderedList = styled('ol')(
  * - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
  */
 // Create a component wrapper for react-docgen only
-const DocumentedComponent = (props) => <OrderedList {...props} />;
-
+const DocumentedComponent = ({ listStyleType = undefined, ...props }: OrderedListProps) => (
+  <OrderedList listStyleType={listStyleType} {...props} />
+);
 DocumentedComponent.defaultProps = {
   listStyleType: undefined,
+  as: undefined,
 };
-
-DocumentedComponent.propTypes = {
-  /** One or more ListItem components */
-  children: PropTypes.node.isRequired,
-  /** CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend */
-  listStyleType: PropTypes.string,
-};
-
-OrderedList.defaultProps = DocumentedComponent.defaultProps;
-OrderedList.propTypes = DocumentedComponent.propTypes;
 
 // Named export so react-docgen will generate docs
 export { DocumentedComponent };

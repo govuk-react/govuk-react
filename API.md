@@ -175,7 +175,7 @@ import { H1 } from 'govuk-react'
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` | true | `````` | string | Text to be rendered as a caption
- `size` |  | ```'XL'``` | enum(...Object.keys(CAPTION_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `XL`, `L`, `M`<br/>   or a numeric size that fits in the GDS font scale list
+ `size` |  | ```'XL'``` | enum(...Object.keys(CAPTION_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE).map((key) => Number(key))) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `XL`, `L`, `M`<br/>   or a numeric size that fits in the GDS font scale list
 
 
 
@@ -487,10 +487,10 @@ const onHandleErrorClick = (targetName) => {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `description` |  | ```undefined``` | string | Optional description of the errors
- `errors` |  | ```[]``` | arrayOf[object Object] | Array of errors with text and target element name to scroll into view when clicked
- `heading` |  | ```'There is a problem'``` | string | Heading text
- `onHandleErrorClick` |  | ```undefined``` | func | onClick function to scroll the target element into view
+ `description` |  | ```undefined``` |  | Optional description of the errors
+ `errors` |  | ```[]``` |  | Array of errors with text and target element name to scroll into view when clicked
+ `heading` |  | ```'There is a problem'``` |  | Heading text
+ `onHandleErrorClick` |  | ```undefined``` |  | onClick function to scroll the target element into view
 
 
 
@@ -1598,8 +1598,9 @@ import { OrderedList, ListItem } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | One or more ListItem components
- `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend
+ `as` |  | ```undefined``` |  | 
+ `children` | true | `````` |  | One or more ListItem components
+ `listStyleType` |  | ```undefined``` |  | CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend
 
 
 
@@ -2638,8 +2639,8 @@ import { UnorderedList, ListItem} from 'govuk-react';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | One or more ListItem components
- `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend
+ `children` | true | `````` |  | One or more ListItem components
+ `listStyleType` |  | ```undefined``` |  | CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend
 
 
 

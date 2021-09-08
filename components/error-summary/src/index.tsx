@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { TEXT_COLOUR, ERROR_COLOUR, FOCUS_COLOUR } from 'govuk-colours';
@@ -65,6 +64,20 @@ const StyledErrorSummary = styled('div')(
   spacing.withWhiteSpace({ marginBottom: 6 })
 );
 
+interface ErrorSummaryProps {
+  /** onClick function to scroll the target element into view */
+  onHandleErrorClick?: (...args: unknown[]) => void;
+  /** Heading text */
+  heading?: string;
+  /** Optional description of the errors */
+  description?: string;
+  /** Array of errors with text and target element name to scroll into view when clicked */
+  errors?: {
+    targetName?: string;
+    text?: string;
+  }[];
+}
+
 /**
  *
  * ### Usage
@@ -115,7 +128,13 @@ const StyledErrorSummary = styled('div')(
  * ### TODO:
  * - Swap out browser dependancy for context API to help with React Native support
  */
-const ErrorSummary = ({ onHandleErrorClick, heading, description, errors, ...props }) => (
+const ErrorSummary = ({
+  onHandleErrorClick = undefined,
+  heading = 'There is a problem',
+  description = undefined,
+  errors = [],
+  ...props
+}: ErrorSummaryProps) => (
   <StyledErrorSummary tabIndex={-1} {...props}>
     <H2 size="MEDIUM">{heading}</H2>
     {description && <Paragraph mb={3}>{description}</Paragraph>}
@@ -138,22 +157,6 @@ ErrorSummary.defaultProps = {
   errors: [],
   heading: 'There is a problem',
   onHandleErrorClick: undefined,
-};
-
-ErrorSummary.propTypes = {
-  /** onClick function to scroll the target element into view */
-  onHandleErrorClick: PropTypes.func,
-  /** Heading text */
-  heading: PropTypes.string,
-  /** Optional description of the errors */
-  description: PropTypes.string,
-  /** Array of errors with text and target element name to scroll into view when clicked */
-  errors: PropTypes.arrayOf(
-    PropTypes.shape({
-      targetName: PropTypes.string,
-      text: PropTypes.string,
-    })
-  ),
 };
 
 export default ErrorSummary;

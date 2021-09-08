@@ -43,7 +43,8 @@ import { OrderedList, ListItem } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | One or more ListItem components
- `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend
+ `as` |  | ```undefined``` |  | 
+ `children` | true | `````` |  | One or more ListItem components
+ `listStyleType` |  | ```undefined``` |  | CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend
 
 

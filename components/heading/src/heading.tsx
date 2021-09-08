@@ -90,7 +90,7 @@ const StyledHeading = styled('h1')(
  * - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_typography.scss
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_typography.scss
  */
-const Heading = ({ level, ...props }) => {
+const Heading = ({ level = undefined, ...props }) => {
   if (level) {
     if (process.env.NODE_ENV !== 'production') {
       // eslint-disable-next-line no-console

@@ -85,7 +85,7 @@ const StyledDefinition = styled('li')({
  *
  * - https://govuk-static.herokuapp.com/component-guide/document_footer
  */
-const DocumentFooterMetadata = ({ from, partOf, other, ...props }) => {
+const DocumentFooterMetadata = ({ from = undefined, partOf = undefined, other = undefined, ...props }) => {
   const fromData = (
     <StyledContainer>
       {from && (
