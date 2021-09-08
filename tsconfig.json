@@ -2,13 +2,19 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@govuk-react/*": [ "./components/*/src/index.js", "./packages/*/src/index.js" ],
+      "@govuk-react/*": [ "./components/*/src/index.tsx", "./packages/*/src/index.tsx" ],
       "govuk-react": ["./packages/govuk-react/src/index.ts"]
     },
     "jsx": "react",
     "esModuleInterop": true
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/node_modules/*"
+  ],
+  "include": [
+    "./components/*/src/**/*",
+    "./packages/*/src/**/*",
+    "./scripts/setupTests.ts"
   ]
 }

@@ -54,10 +54,10 @@ export function responsive(size, overrideLineHeight = undefined) {
 }
 
 interface FontOptions {
-  size?: string;
+  size?: number | string;
   weight?: string;
   tabular?: boolean;
-  lineHeight?: number;
+  lineHeight?: number | string;
 }
 
 export function font({ size, weight = 'regular', tabular = false, lineHeight }: FontOptions = {}) {
