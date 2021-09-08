@@ -1,9 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { link } from '@govuk-react/lib';
 
-const Link = styled('a').withConfig({
+interface LinkProps extends React.HTMLProps<HTMLAnchorElement> {
+  /** link contents */
+  children: React.ReactNode;
+  /** show link in a "muted" (grey) style */
+  muted?: boolean;
+  /** ensure link is shown in plain text colour */
+  textColour?: boolean;
+  /** ensure there is no "visited" style */
+  noVisitedState?: boolean;
+  /** if useing as={Link} */
+  to?: string;
+}
+
+const Link: React.FC<LinkProps> = styled('a').withConfig({
   shouldForwardProp: (prop) => !['noVisitedState', 'textColour', 'muted'].includes(prop),
 })(
   link.common(),
@@ -42,25 +54,14 @@ const Link = styled('a').withConfig({
  * - https://design-system.service.gov.uk/styles/typography/#links
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_links.scss
  */
-const LinkDocumented = (props) => <Link {...props} />;
+const LinkDocumented = (props: LinkProps) => <Link {...props} />;
 
-LinkDocumented.propTypes = {
-  /** link contents */
-  children: PropTypes.node.isRequired,
-  /** show link in a "muted" (grey) style */
-  muted: PropTypes.bool,
-  /** ensure link is shown in plain text colour */
-  textColour: PropTypes.bool,
-  /** ensure there is no "visited" style */
-  noVisitedState: PropTypes.bool,
-};
 LinkDocumented.defaultProps = {
   muted: false,
   textColour: false,
   noVisitedState: false,
 };
 
-Link.propTypes = LinkDocumented.propTypes;
 Link.defaultProps = LinkDocumented.defaultProps;
 
 export { LinkDocumented };
