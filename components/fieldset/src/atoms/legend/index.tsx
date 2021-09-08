@@ -52,7 +52,7 @@ const StyledHeading = styled('h1')({
 //   font-weight: inherit;
 // }
 
-const Legend = ({ children, isPageHeading, ...props }) => (
+const Legend = ({ children, isPageHeading = undefined, ...props }) => (
   <StyledLegend {...props}>{isPageHeading ? <StyledHeading>{children}</StyledHeading> : children}</StyledLegend>
 );
 
