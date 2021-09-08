@@ -66,7 +66,7 @@ const StyledErrorSummary = styled('div')(
 
 interface ErrorSummaryProps {
   /** onClick function to scroll the target element into view */
-  onHandleErrorClick?(...args: unknown[]): unknown;
+  onHandleErrorClick?: (...args: unknown[]) => void;
   /** Heading text */
   heading?: string;
   /** Optional description of the errors */
