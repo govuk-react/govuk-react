@@ -7,4 +7,4 @@ export default {
   component: ErrorText,
 };
 
-export const Default = () => <ErrorText errorText="example">Example</ErrorText>;
+export const Default = () => <ErrorText>Example</ErrorText>;
