@@ -14,8 +14,8 @@
     "**/node_modules/*"
   ],
   "include": [
+    "./scripts/setupTests.ts",
     "./components/*/src/**/*",
-    "./packages/*/src/**/*",
-    "./scripts/setupTests.ts"
+    "./packages/*/src/**/*"
   ]
 }
