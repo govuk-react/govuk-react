@@ -5,7 +5,7 @@ import Tag, { TagInactive } from './fixtures';
 
 describe('Tag', () => {
   it('can render an inactive tag', () => {
-    mount(<TagInactive>alpha</TagInactive>);
+    mount(<TagInactive />);
   });
 
   it('matches wrapper snapshot', () => {
