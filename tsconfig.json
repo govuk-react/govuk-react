@@ -6,7 +6,8 @@
       "govuk-react": ["./packages/govuk-react/src/index.ts"]
     },
     "jsx": "react",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
   },
   "exclude": [
     "node_modules",

@@ -69,7 +69,7 @@ Caption.propTypes = {
    *    `XLARGE`, `LARGE`, `MEDIUM`, `XL`, `L`, `M`
    *    or a numeric size that fits in the GDS font scale list
    */
-  size: PropTypes.oneOf([...Object.keys(CAPTION_SIZES), ...Object.keys(TYPOGRAPHY_SCALE)]),
+  size: PropTypes.oneOf([...Object.keys(CAPTION_SIZES), ...Object.keys(TYPOGRAPHY_SCALE).map((key) => Number(key))]),
 };
 
 Caption.defaultProps = {
