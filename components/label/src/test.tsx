@@ -7,7 +7,7 @@ import Label from '.';
 describe('Label', () => {
   const example = 'example';
   const wrapper = <Label>{example}</Label>;
-  const withError = <Label error={example}>{example}</Label>;
+  const withError = <Label error={!!example}>{example}</Label>;
 
   it('renders without crashing', () => {
     const div = document.createElement('div');

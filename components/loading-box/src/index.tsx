@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { CSSTransition } from 'react-transition-group';
 import hexRgb from 'hex-rgb';
@@ -157,7 +156,7 @@ const LoadingBox = ({
   timeIn,
   timeOut,
   ...props
-}) => (
+}: LoadingBoxProps) => (
   <StyledContainer {...props}>
     <CSSTransition timeout={timeOut} classNames="fade" in={loading} unmountOnExit>
       <Innerwrap
@@ -184,39 +183,38 @@ LoadingBox.defaultProps = {
   timeOut: 200,
 };
 
-LoadingBox.propTypes = {
+interface LoadingBoxProps {
   /**
    * One or more children nodes that loading box will overlay
    */
-  children: PropTypes.node.isRequired,
+  children: React.ReactNode;
   /**
    * Color (3 or 6 Hex char) of loading spinner
    */
-  spinnerColor: PropTypes.string,
+  spinnerColor?: string;
   /**
    * Background color (3 or 6 Hex char) of loading spinner overlay when loading is true.
    */
-  backgroundColor: PropTypes.string,
+  backgroundColor?: string;
   /**
    * Opacity of loading spinner backgroud colour when loading is true
    */
-  backgroundColorOpacity: PropTypes.number,
+  backgroundColorOpacity?: number;
   /**
    * Loading spinner title text
    */
-  title: PropTypes.string,
+  title?: string;
   /**
    * Whether loading is currently set to true or false
    */
-  loading: PropTypes.bool,
+  loading?: boolean;
   /**
    * Length of fade-in animation in milliseconds
    */
-  timeIn: PropTypes.number,
+  timeIn?: number;
   /**
    * Length of fade-out animation in milliseconds
    */
-  timeOut: PropTypes.number,
-};
-
+  timeOut?: number;
+}
 export default LoadingBox;

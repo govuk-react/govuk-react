@@ -29,10 +29,10 @@ exports[`Label matches withError snapshot: with error mount 1`] = `
 }
 
 <Label
-  error="example"
+  error={true}
 >
   <src__StyledLabel
-    error="example"
+    error={true}
   >
     <label
       className="c0"
