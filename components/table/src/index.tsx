@@ -1,7 +1,6 @@
 // https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/table/_table.scss
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { spacing, typography } from '@govuk-react/lib';
 
@@ -119,7 +118,7 @@ const StyledTable = styled('table')(
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/table/_table.scss
  *
  */
-const Table = ({ caption, children, body = children, head, ...props }) => (
+const Table = ({ caption, children, body = children, head, ...props }: TableProps) => (
   <StyledTable {...props}>
     {caption && <Caption>{caption}</Caption>}
     {head && <TableHeader>{head}</TableHeader>}
@@ -134,16 +133,16 @@ Table.defaultProps = {
   head: undefined,
 };
 
-Table.propTypes = {
+interface TableProps {
   /** Table body rows and cells (for backward compatibility) */
-  body: PropTypes.node,
+  body?: React.ReactNode;
   /** Table body rows and cells (recommended way) */
-  children: PropTypes.node,
+  children?: React.ReactNode;
   /** Table header rows and cells */
-  head: PropTypes.node,
+  head?: React.ReactNode;
   /** Table caption title */
-  caption: PropTypes.string,
-};
+  caption?: string;
+}
 
 Table.CellHeader = CellHeader;
 Table.Row = Row;
