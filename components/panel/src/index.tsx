@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import { TURQUOISE, WHITE } from 'govuk-colours';
 import { spacing, typography } from '@govuk-react/lib';
 import { BORDER_WIDTH, MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
 import { stripUnit } from 'polished';
 
-const RAW_BORDER_WIDTH = stripUnit(BORDER_WIDTH);
+const RAW_BORDER_WIDTH = Number(stripUnit(BORDER_WIDTH));
 
 const StyledPanel = styled('div')(
   typography.font({ size: 19 }),
@@ -75,7 +74,7 @@ const StyledBody = styled('div')(typography.font({ size: 36 }));
  *
  */
 
-const Panel = ({ title, children, ...props }) => (
+const Panel = ({ title, children, ...props }: PanelProps) => (
   <StyledPanel {...props}>
     <StyledTitle>{title}</StyledTitle>
     {children && <StyledBody>{children}</StyledBody>}
@@ -85,11 +84,11 @@ Panel.defaultProps = {
   children: undefined,
 };
 
-Panel.propTypes = {
+interface PanelProps {
   /** Panel title text */
-  title: PropTypes.string.isRequired,
+  title: string;
   /** Panel body text */
-  children: PropTypes.node,
-};
+  children?: React.ReactNode;
+}
 
 export default Panel;
