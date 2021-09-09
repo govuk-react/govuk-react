@@ -12,10 +12,10 @@ export default {
   component: InputField,
 };
 
-export const Default = () => <InputField name="group0">National Insurance number</InputField>;
+export const Default = () => <InputField input={{ name: 'group0' }}>National Insurance number</InputField>;
 export const InputWithHintText = () => (
   <InputField
-    name="group1"
+    input={{ name: 'group1' }}
     hint={
       <>
         It’s on your National Insurance card, benefit letter, payslip or P60.
@@ -29,7 +29,7 @@ export const InputWithHintText = () => (
 );
 export const InputWithHintTextError = () => (
   <InputField
-    name="group1"
+    input={{ name: 'group1' }}
     hint={
       <>
         It’s on your National Insurance card, benefit letter, payslip or P60.
