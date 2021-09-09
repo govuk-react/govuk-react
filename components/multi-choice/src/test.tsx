@@ -22,7 +22,11 @@ describe('MultiChoice', () => {
 
   it('matches snapshot', () => {
     const metaData = { touched: true, error: 'Example error' };
-    const wrapper = mount(<MultiChoice label="Example label" hint="Example hint" meta={metaData} />);
+    const wrapper = mount(
+      <MultiChoice label="Example label" hint="Example hint" meta={metaData}>
+        Label
+      </MultiChoice>
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -161,6 +161,7 @@ exports[`MultiChoice matches snapshot 1`] = `
           </span>
         </src__StyledError>
       </ErrorText>
+      Label
     </div>
   </src__StyledFieldset>
 </MultiChoice>

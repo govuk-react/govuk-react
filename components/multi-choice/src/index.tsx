@@ -11,7 +11,6 @@
 // Therefore validation around the set of radios is required.
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { ERROR_COLOUR } from 'govuk-colours';
 import LabelText from '@govuk-react/label-text';
@@ -67,7 +66,7 @@ const StyledFieldset = styled('div')(
  * - https://govuk-elements.herokuapp.com/errors/example-form-validation-single-question-radio
  *
  */
-const MultiChoice = ({ meta, label, children, hint, ...props }) => (
+const MultiChoice = ({ meta, label, children, hint, ...props }: MultiChoiceProps) => (
   <StyledFieldset error={meta.touched && !!meta.error} {...props}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
@@ -81,28 +80,28 @@ MultiChoice.defaultProps = {
   meta: {},
 };
 
-MultiChoice.propTypes = {
-  meta: PropTypes.shape({
-    active: PropTypes.bool,
-    dirty: PropTypes.bool,
-    dirtySinceLastSubmit: PropTypes.bool,
+interface MultiChoiceProps {
+  meta?: {
+    active?: boolean;
+    dirty?: boolean;
+    dirtySinceLastSubmit?: boolean;
     // eslint-disable-next-line react/forbid-prop-types
-    error: PropTypes.any,
+    error?: any;
     // eslint-disable-next-line react/forbid-prop-types
-    initial: PropTypes.any,
-    invalid: PropTypes.bool,
-    pristine: PropTypes.bool,
+    initial?: any;
+    invalid?: boolean;
+    pristine?: boolean;
     // eslint-disable-next-line react/forbid-prop-types
-    submitError: PropTypes.any,
-    submitFailed: PropTypes.bool,
-    submitSucceeded: PropTypes.bool,
-    touched: PropTypes.bool,
-    valid: PropTypes.bool,
-    visited: PropTypes.bool,
-  }),
-  label: PropTypes.node.isRequired,
-  children: PropTypes.node.isRequired,
-  hint: PropTypes.string,
-};
+    submitError?: any;
+    submitFailed?: boolean;
+    submitSucceeded?: boolean;
+    touched?: boolean;
+    valid?: boolean;
+    visited?: boolean;
+  };
+  label: React.ReactNode;
+  children: React.ReactNode;
+  hint?: string;
+}
 
 export default MultiChoice;
