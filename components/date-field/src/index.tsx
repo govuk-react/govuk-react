@@ -141,17 +141,17 @@ export interface DateFieldProps extends InputProps {
     /**
      * Called when the day, month or year changes
      */
-    onChange?(...args: unknown[]): unknown;
+    onChange?: (...args: unknown[]) => unknown;
     /**
      * Called when the day, month or year fields are blurred
      * (does not get called when moving between inputs in the same datefield)
      */
-    onBlur?(...args: unknown[]): unknown;
+    onBlur?: (...args: unknown[]) => unknown;
     /**
      * Called when the day, month or year fields are focussed
      * (does not get called when moving between inputs in the same datefield)
      */
-    onFocus?(...args: unknown[]): unknown;
+    onFocus?: (...args: unknown[]) => unknown;
     /**
      * When the form field is controlled, this sets the value of the day, month and year inputs
      */

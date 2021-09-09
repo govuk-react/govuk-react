@@ -32,8 +32,8 @@ import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `error` |  | ```false``` | bool | 
- `errorColor` |  | ```undefined``` | string | 
- `type` |  | ```'text'``` | string | HTML `<Input />` type
+ `error` |  | ```false``` |  | 
+ `errorColor` |  | ```undefined``` |  | 
+ `type` |  | ```'text'``` |  | HTML `<Input />` type
 
 

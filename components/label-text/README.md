@@ -33,6 +33,6 @@ import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Text for the label
+ `children` | true | `````` |  | Text for the label
 
 

@@ -294,12 +294,12 @@ With custom input name props
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
- `defaultValues` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` | shape[object Object] | 
- `errorText` |  | ```undefined``` | string | Error text
- `hintText` |  | ```undefined``` | string | Optional hint text
- `input` |  | ```undefined``` | shape[object Object] | Properties that are sent to the input, matching final form and redux form input type
- `inputNames` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` | shape[object Object] | Input name attributes
+ `children` | true | `````` |  | 
+ `defaultValues` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` |  | 
+ `errorText` |  | ```undefined``` |  | Error text
+ `hintText` |  | ```undefined``` |  | Optional hint text
+ `input` |  | ```undefined``` |  | Properties that are sent to the input, matching final form and redux form input type
+ `inputNames` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` |  | Input name attributes
 
 
 
@@ -1138,9 +1138,9 @@ import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `error` |  | ```false``` | bool | 
- `errorColor` |  | ```undefined``` | string | 
- `type` |  | ```'text'``` | string | HTML `<Input />` type
+ `error` |  | ```false``` |  | 
+ `errorColor` |  | ```undefined``` |  | 
+ `type` |  | ```'text'``` |  | HTML `<Input />` type
 
 
 
@@ -1209,7 +1209,7 @@ import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Text for the label
+ `children` | true | `````` |  | Text for the label
 
 
 
@@ -1319,10 +1319,11 @@ NB if no link destination is set then the link styling will not be applied.
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | link contents
- `muted` |  | ```false``` | bool | show link in a "muted" (grey) style
- `noVisitedState` |  | ```false``` | bool | ensure there is no "visited" style
- `textColour` |  | ```false``` | bool | ensure link is shown in plain text colour
+ `children` | true | `````` |  | link contents
+ `muted` |  | ```false``` |  | show link in a "muted" (grey) style
+ `noVisitedState` |  | ```false``` |  | ensure there is no "visited" style
+ `textColour` |  | ```false``` |  | ensure link is shown in plain text colour
+ `to` |  | `````` |  | if useing as={Link}
 
 
 
@@ -1411,8 +1412,8 @@ import { ListNavigation, Link } from 'govuk-react';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | List navigation content
- `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`
+ `children` | true | `````` |  | List navigation content
+ `listStyleType` |  | ```undefined``` |  | CSS value for `list-style-type`
 
 
 
@@ -1458,14 +1459,14 @@ Loading box complex
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `backgroundColor` |  | ```WHITE``` | string | Background color (3 or 6 Hex char) of loading spinner overlay when loading is true.
- `backgroundColorOpacity` |  | ```0.85``` | number | Opacity of loading spinner backgroud colour when loading is true
- `children` | true | `````` | node | One or more children nodes that loading box will overlay
- `loading` |  | ```false``` | bool | Whether loading is currently set to true or false
- `spinnerColor` |  | ```BLACK``` | string | Color (3 or 6 Hex char) of loading spinner
- `timeIn` |  | ```800``` | number | Length of fade-in animation in milliseconds
- `timeOut` |  | ```200``` | number | Length of fade-out animation in milliseconds
- `title` |  | ```undefined``` | string | Loading spinner title text
+ `backgroundColor` |  | ```WHITE``` |  | Background color (3 or 6 Hex char) of loading spinner overlay when loading is true.
+ `backgroundColorOpacity` |  | ```0.85``` |  | Opacity of loading spinner backgroud colour when loading is true
+ `children` | true | `````` |  | One or more children nodes that loading box will overlay
+ `loading` |  | ```false``` |  | Whether loading is currently set to true or false
+ `spinnerColor` |  | ```BLACK``` |  | Color (3 or 6 Hex char) of loading spinner
+ `timeIn` |  | ```800``` |  | Length of fade-in animation in milliseconds
+ `timeOut` |  | ```200``` |  | Length of fade-out animation in milliseconds
+ `title` |  | ```undefined``` |  | Loading spinner title text
 
 
 
@@ -1508,7 +1509,7 @@ import { Main, GridRow, GridCol } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | ```undefined``` | node | Child nodes for the page being built
+ `children` |  | ```undefined``` |  | Child nodes for the page being built
 
 
 
@@ -1714,8 +1715,8 @@ Panel with header and HTML body
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | ```undefined``` | node | Panel body text
- `title` | true | `````` | string | Panel title text
+ `children` |  | ```undefined``` |  | Panel body text
+ `title` | true | `````` |  | Panel title text
 
 
 
@@ -2267,10 +2268,10 @@ Setting custom column widths
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `body` |  | ```undefined``` | node | Table body rows and cells (for backward compatibility)
- `caption` |  | ```undefined``` | string | Table caption title
- `children` |  | ```undefined``` | node | Table body rows and cells (recommended way)
- `head` |  | ```undefined``` | node | Table header rows and cells
+ `body` |  | ```undefined``` |  | Table body rows and cells (for backward compatibility)
+ `caption` |  | ```undefined``` |  | Table caption title
+ `children` |  | ```undefined``` |  | Table body rows and cells (recommended way)
+ `head` |  | ```undefined``` |  | Table header rows and cells
 
 
 

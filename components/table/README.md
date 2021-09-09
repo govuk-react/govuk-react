@@ -102,9 +102,9 @@ Setting custom column widths
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `body` |  | ```undefined``` | node | Table body rows and cells (for backward compatibility)
- `caption` |  | ```undefined``` | string | Table caption title
- `children` |  | ```undefined``` | node | Table body rows and cells (recommended way)
- `head` |  | ```undefined``` | node | Table header rows and cells
+ `body` |  | ```undefined``` |  | Table body rows and cells (for backward compatibility)
+ `caption` |  | ```undefined``` |  | Table caption title
+ `children` |  | ```undefined``` |  | Table body rows and cells (recommended way)
+ `head` |  | ```undefined``` |  | Table header rows and cells
 
 
