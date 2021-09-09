@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Label from '@govuk-react/label';
 import LabelText from '@govuk-react/label-text';
@@ -72,21 +71,23 @@ const StyledInput = styled('input')({
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/file-upload
  *
  */
-const FileUpload = React.forwardRef(({ meta, children, hint, acceptedFormats, onChange, name, ...props }, ref) => (
-  <Label {...props} error={meta.touched && !!meta.error}>
-    <LabelText>{children}</LabelText>
-    {hint && <HintText>{hint}</HintText>}
-    {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
-    <StyledInput
-      type="file"
-      accept={acceptedFormats}
-      error={meta.touched && !!meta.error}
-      onChange={onChange}
-      name={name}
-      ref={ref}
-    />
-  </Label>
-));
+const FileUpload = React.forwardRef(
+  ({ meta, children, hint, acceptedFormats, onChange, name, ...props }: FileUploadProps, ref) => (
+    <Label {...props} error={meta.touched && !!meta.error}>
+      <LabelText>{children}</LabelText>
+      {hint && <HintText>{hint}</HintText>}
+      {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
+      <StyledInput
+        type="file"
+        accept={acceptedFormats}
+        error={meta.touched && !!meta.error}
+        onChange={onChange}
+        name={name}
+        ref={ref}
+      />
+    </Label>
+  )
+);
 
 FileUpload.defaultProps = {
   hint: undefined,
@@ -96,36 +97,33 @@ FileUpload.defaultProps = {
   name: undefined,
 };
 
-FileUpload.propTypes = {
+interface FileUploadProps {
   /**
    * Optional hint text
    */
-  hint: PropTypes.string,
+  hint?: string;
   /**
    * Final form meta object, pending adjustment/removal
    */
-  meta: PropTypes.shape({
-    active: PropTypes.bool,
-    dirty: PropTypes.bool,
-    dirtySinceLastSubmit: PropTypes.bool,
-    // eslint-disable-next-line react/forbid-prop-types
-    error: PropTypes.any,
-    // eslint-disable-next-line react/forbid-prop-types
-    initial: PropTypes.any,
-    invalid: PropTypes.bool,
-    pristine: PropTypes.bool,
-    // eslint-disable-next-line react/forbid-prop-types
-    submitError: PropTypes.any,
-    submitFailed: PropTypes.bool,
-    submitSucceeded: PropTypes.bool,
-    touched: PropTypes.bool,
-    valid: PropTypes.bool,
-    visited: PropTypes.bool,
-  }),
-  children: PropTypes.node.isRequired,
-  acceptedFormats: PropTypes.string,
-  onChange: PropTypes.func,
-  name: PropTypes.string,
-};
+  meta?: {
+    active?: boolean;
+    dirty?: boolean;
+    dirtySinceLastSubmit?: boolean;
+    error?: any;
+    initial?: any;
+    invalid?: boolean;
+    pristine?: boolean;
+    submitError?: any;
+    submitFailed?: boolean;
+    submitSucceeded?: boolean;
+    touched?: boolean;
+    valid?: boolean;
+    visited?: boolean;
+  };
+  children: React.ReactNode;
+  acceptedFormats?: string;
+  onChange?: (...args: unknown[]) => unknown;
+  name?: string;
+}
 
 export default FileUpload;
