@@ -33,7 +33,7 @@ Panel with header and HTML body
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | ```undefined``` | node | Panel body text
- `title` | true | `````` | string | Panel title text
+ `children` |  | ```undefined``` |  | Panel body text
+ `title` | true | `````` |  | Panel title text
 
 

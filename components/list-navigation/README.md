@@ -43,7 +43,7 @@ import { ListNavigation, Link } from 'govuk-react';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | List navigation content
- `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`
+ `children` | true | `````` |  | List navigation content
+ `listStyleType` |  | ```undefined``` |  | CSS value for `list-style-type`
 
 

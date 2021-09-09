@@ -23,6 +23,7 @@ module.exports = {
     'prettier/prettier': ['error'],
     'react/jsx-filename-extension': 0,
     'react/jsx-props-no-spreading': 0,
+    'react/static-property-placement': ['error', 'static public field'],
     'filenames/match-exported': 0,
     'jsx-a11y/label-has-associated-control': 0,
     'jsx-a11y/label-has-for': 0,

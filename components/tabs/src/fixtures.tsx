@@ -79,6 +79,10 @@ const arrTabularTabs = [
 ];
 
 class TableTabs extends Component {
+  static defaultProps = sharedDefaultProps;
+
+  static propTypes = sharedPropTypes;
+
   constructor(props) {
     super(props);
     this.state = { tabIndex: props.defaultIndex };
@@ -122,12 +126,12 @@ class TableTabs extends Component {
   }
 }
 
-TableTabs.defaultProps = sharedDefaultProps;
-
-TableTabs.propTypes = sharedPropTypes;
-
 /* eslint-disable-next-line react/no-multi-comp */
 class SimpleTabs extends Component {
+  static defaultProps = sharedDefaultProps;
+
+  static propTypes = sharedPropTypes;
+
   constructor(props) {
     super(props);
     this.state = { tabIndex: props.defaultIndex };
@@ -167,10 +171,6 @@ class SimpleTabs extends Component {
   }
 }
 
-SimpleTabs.defaultProps = sharedDefaultProps;
-
-SimpleTabs.propTypes = sharedPropTypes;
-
 const arrSimpleMapped = [
   {
     contentListItem: 'Title 1',
@@ -186,6 +186,10 @@ const arrSimpleMapped = [
 
 /* eslint-disable-next-line react/no-multi-comp */
 class SimpleMapTabs extends Component {
+  static defaultProps = sharedDefaultProps;
+
+  static propTypes = sharedPropTypes;
+
   constructor(props) {
     super(props);
     this.state = { tabIndex: props.defaultIndex };
@@ -220,10 +224,6 @@ class SimpleMapTabs extends Component {
   }
 }
 
-SimpleMapTabs.defaultProps = sharedDefaultProps;
-
-SimpleMapTabs.propTypes = sharedPropTypes;
-
 const arrProposedBabel = [
   {
     contentListItem: 'Title 1',
@@ -239,6 +239,10 @@ const arrProposedBabel = [
 
 /* eslint-disable-next-line react/no-multi-comp */
 class ProposedClassPropertiesPlugin extends Component {
+  static defaultProps = sharedDefaultProps;
+
+  static propTypes = sharedPropTypes;
+
   setTabIndex = setTabIndex;
 
   handleClick = handleClick;
@@ -277,9 +281,6 @@ class ProposedClassPropertiesPlugin extends Component {
     );
   }
 }
-
-ProposedClassPropertiesPlugin.propTypes = sharedPropTypes;
-ProposedClassPropertiesPlugin.defaultProps = sharedDefaultProps;
 
 const HooksExample = ({ defaultIndex }) => {
   const [tabIndex, setHooksTabIndex] = React.useState(defaultIndex);

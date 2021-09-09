@@ -36,9 +36,10 @@ NB if no link destination is set then the link styling will not be applied.
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | link contents
- `muted` |  | ```false``` | bool | show link in a "muted" (grey) style
- `noVisitedState` |  | ```false``` | bool | ensure there is no "visited" style
- `textColour` |  | ```false``` | bool | ensure link is shown in plain text colour
+ `children` | true | `````` |  | link contents
+ `muted` |  | ```false``` |  | show link in a "muted" (grey) style
+ `noVisitedState` |  | ```false``` |  | ensure there is no "visited" style
+ `textColour` |  | ```false``` |  | ensure link is shown in plain text colour
+ `to` |  | `````` |  | if useing as={Link}
 
 

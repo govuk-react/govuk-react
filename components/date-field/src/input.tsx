@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { StyledInput } from '@govuk-react/input';
@@ -22,7 +21,27 @@ const StyledList = styled('div')({
   display: 'flex',
 });
 
-class Input extends React.Component {
+class Input extends React.Component<InputProps> {
+  static defaultProps = {
+    value: undefined,
+    names: {
+      day: 'DateFieldDay',
+      month: 'DateFieldMonth',
+      year: 'DateFieldYear',
+    },
+    defaultValues: {
+      day: undefined,
+      month: undefined,
+      year: undefined,
+    },
+    labels: {
+      day: 'Day',
+      month: 'Month',
+      year: 'Year',
+    },
+    error: false,
+  };
+
   inputs = {};
 
   renderInput(label, name, key, defaultValue, error) {
@@ -60,56 +79,36 @@ class Input extends React.Component {
   }
 }
 
-Input.propTypes = {
-  names: PropTypes.shape({
-    day: PropTypes.string,
-    month: PropTypes.string,
-    year: PropTypes.string,
-  }),
-  defaultValues: PropTypes.shape({
-    day: PropTypes.string,
-    month: PropTypes.string,
-    year: PropTypes.string,
-  }),
-  value: PropTypes.shape({
-    day: PropTypes.string,
-    month: PropTypes.string,
-    year: PropTypes.string,
-  }),
-  labels: PropTypes.shape({
-    day: PropTypes.string,
-    month: PropTypes.string,
-    year: PropTypes.string,
-  }),
+export interface InputProps {
+  names?: {
+    day?: string;
+    month?: string;
+    year?: string;
+  };
+  defaultValues?: {
+    day?: string;
+    month?: string;
+    year?: string;
+  };
+  value?: {
+    day?: string;
+    month?: string;
+    year?: string;
+  };
+  labels?: {
+    day?: string;
+    month?: string;
+    year?: string;
+  };
   /**
    * This comes from the multiInputInput HOC and is needed to track all 3 inputs
    */
-  refs: PropTypes.func.isRequired,
-  onChange: PropTypes.func.isRequired,
-  onBlur: PropTypes.func.isRequired,
-  onFocus: PropTypes.func.isRequired,
-  error: PropTypes.bool,
-};
-
-Input.defaultProps = {
-  value: undefined,
-  names: {
-    day: 'DateFieldDay',
-    month: 'DateFieldMonth',
-    year: 'DateFieldYear',
-  },
-  defaultValues: {
-    day: undefined,
-    month: undefined,
-    year: undefined,
-  },
-  labels: {
-    day: 'Day',
-    month: 'Month',
-    year: 'Year',
-  },
-  error: false,
-};
+  refs?: (...args: unknown[]) => unknown;
+  onChange?: (...args: unknown[]) => unknown;
+  onBlur?: (...args: unknown[]) => unknown;
+  onFocus?: (...args: unknown[]) => unknown;
+  error?: boolean;
+}
 
 // This component is dependent on multiInputInput HOC so we always export with HOC
 export default multiInputInput(Input);

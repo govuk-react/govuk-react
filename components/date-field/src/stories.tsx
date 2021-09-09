@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { action } from '@storybook/addon-actions';
+import type { DateFieldProps } from '.';
 
 import DateField from '.';
 
@@ -9,14 +9,17 @@ export default {
   title: 'Form/Date field',
   component: DateField,
 };
-class ManagedDateField extends React.Component {
+class ManagedDateField extends React.Component<
+  DateFieldProps,
+  { value: { day: string; month: string; year: string } }
+> {
   constructor(props) {
     super(props);
     this.state = {
       value: {
-        day: 0,
-        month: 1,
-        year: 2,
+        day: '0',
+        month: '1',
+        year: '2',
       },
     };
   }
@@ -37,14 +40,6 @@ class ManagedDateField extends React.Component {
     return <DateField {...this.props} input={input} />;
   }
 }
-
-ManagedDateField.defaultProps = {
-  input: {},
-};
-
-ManagedDateField.propTypes = {
-  input: PropTypes.shape({}),
-};
 
 export const Default = () => (
   <ManagedDateField

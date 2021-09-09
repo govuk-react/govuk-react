@@ -129,6 +129,34 @@ const Input = styled('input')({
  * - TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
  */
 class TopNav extends Component {
+  static defaultProps = {
+    bgColor: BLACK,
+    color: WHITE,
+    company: <IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</IconTitle>,
+    serviceTitle: undefined,
+    search: false,
+    children: undefined,
+    defaultOpen: false,
+  };
+
+  static propTypes = {
+    // TODO: prop names should mirror nunjucks macro options at https://design-system.service.gov.uk/components/header/
+    /** Top nav background color */
+    bgColor: PropTypes.string,
+    /** Top nav text color */
+    color: PropTypes.string,
+    /** Is the mobile navigation open by default? */
+    defaultOpen: PropTypes.bool,
+    /** Company component e.g. GOV UK */
+    company: PropTypes.node,
+    /** Service title component e.g. Food Standards Authority */
+    serviceTitle: PropTypes.node,
+    /** Search component */
+    search: PropTypes.node,
+    /** List Navigation items with anchor tags e.g. NavAnchor components */
+    children: PropTypes.node,
+  };
+
   constructor(props) {
     super(props);
     const { defaultOpen } = this.props;
@@ -190,34 +218,6 @@ class TopNav extends Component {
     );
   }
 }
-
-TopNav.defaultProps = {
-  bgColor: BLACK,
-  color: WHITE,
-  company: <IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</IconTitle>,
-  serviceTitle: undefined,
-  search: false,
-  children: undefined,
-  defaultOpen: false,
-};
-
-// TODO: prop names should mirror nunjucks macro options at https://design-system.service.gov.uk/components/header/
-TopNav.propTypes = {
-  /** Top nav background color */
-  bgColor: PropTypes.string,
-  /** Top nav text color */
-  color: PropTypes.string,
-  /** Is the mobile navigation open by default? */
-  defaultOpen: PropTypes.bool,
-  /** Company component e.g. GOV UK */
-  company: PropTypes.node,
-  /** Service title component e.g. Food Standards Authority */
-  serviceTitle: PropTypes.node,
-  /** Search component */
-  search: PropTypes.node,
-  /** List Navigation items with anchor tags e.g. NavAnchor components */
-  children: PropTypes.node,
-};
 
 TopNav.IconTitle = IconTitle;
 TopNav.Anchor = TopNavAnchor;

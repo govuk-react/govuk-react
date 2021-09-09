@@ -65,13 +65,13 @@ describe('DateField', () => {
   });
 
   it('should support setting value', () => {
-    const output = mount(<DateField input={{ value: { day: '1', month: '2', year: '3' } }} />);
+    const output = mount(<DateField input={{ value: { day: '1', month: '2', year: '3' } }}>Date</DateField>);
     expect(output).toMatchSnapshot('value 1 2 3');
     expect(output.find('input').first().props().value).toBe('1');
   });
 
   it('should support null value', () => {
-    const output = mount(<DateField input={{ value: null }} />);
+    const output = mount(<DateField input={{ value: null }}>Date</DateField>);
     expect(output).toMatchSnapshot('null value');
   });
 
@@ -87,7 +87,7 @@ describe('DateField', () => {
   it('calls onBlur', () => {
     const spy = jest.fn();
 
-    mount(<DateField onBlur={spy} />)
+    mount(<DateField onBlur={spy}>Date</DateField>)
       .find('input')
       .first()
       .simulate('blur');
@@ -97,7 +97,7 @@ describe('DateField', () => {
   it('calls onFocus', () => {
     const spy = jest.fn();
 
-    mount(<DateField onFocus={spy} />)
+    mount(<DateField onFocus={spy}>Date</DateField>)
       .find('input')
       .first()
       .simulate('focus');
@@ -114,7 +114,9 @@ describe('DateField', () => {
             spy(...rest);
           },
         }}
-      />
+      >
+        Date
+      </DateField>
     );
     const input1 = inst.find('input').first();
     const input2 = inst.find('input').at(1);
@@ -135,7 +137,7 @@ describe('DateField', () => {
   it('calls onChange', () => {
     const spy = jest.fn();
 
-    mount(<DateField onChange={spy} />)
+    mount(<DateField onChange={spy}>Date</DateField>)
       .find('input')
       .first()
       .simulate('change');
