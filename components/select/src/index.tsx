@@ -1,7 +1,6 @@
 // https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/select
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { BLACK, ERROR_COLOUR, YELLOW } from 'govuk-colours';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
@@ -108,7 +107,7 @@ const StyledSelect = styled('select')(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/select
  *
  */
-const Select = ({ children, hint, label, meta, input, ...props }) => (
+const Select = ({ children, hint, label, meta, input, ...props }: SelectProps) => (
   <Label {...props} error={meta.touched && !!meta.error}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
@@ -126,38 +125,38 @@ Select.defaultProps = {
   meta: {},
 };
 
-Select.propTypes = {
-  hint: PropTypes.string,
-  input: PropTypes.shape({
-    name: PropTypes.string,
-    onBlur: PropTypes.func,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
+interface SelectProps {
+  hint?: React.ReactNode;
+  input?: {
+    name?: string;
+    onBlur?: (...args: unknown[]) => unknown;
+    onChange?: (...args: unknown[]) => unknown;
+    onFocus?: (...args: unknown[]) => unknown;
     // eslint-disable-next-line react/forbid-prop-types
-    value: PropTypes.any,
-  }),
-  meta: PropTypes.shape({
-    active: PropTypes.bool,
-    dirty: PropTypes.bool,
-    dirtySinceLastSubmit: PropTypes.bool,
+    value?: any;
+  };
+  meta?: {
+    active?: boolean;
+    dirty?: boolean;
+    dirtySinceLastSubmit?: boolean;
     // eslint-disable-next-line react/forbid-prop-types
-    error: PropTypes.any,
+    error?: any;
     // eslint-disable-next-line react/forbid-prop-types
-    initial: PropTypes.any,
-    invalid: PropTypes.bool,
-    pristine: PropTypes.bool,
+    initial?: any;
+    invalid?: boolean;
+    pristine?: boolean;
     // eslint-disable-next-line react/forbid-prop-types
-    submitError: PropTypes.any,
-    submitFailed: PropTypes.bool,
-    submitSucceeded: PropTypes.bool,
-    touched: PropTypes.bool,
-    valid: PropTypes.bool,
-    visited: PropTypes.bool,
-  }),
-  children: PropTypes.node.isRequired,
-  label: PropTypes.string.isRequired,
-  errorText: PropTypes.string,
-};
+    submitError?: any;
+    submitFailed?: boolean;
+    submitSucceeded?: boolean;
+    touched?: boolean;
+    valid?: boolean;
+    visited?: boolean;
+  };
+  children: React.ReactNode;
+  label: string;
+  errorText?: string;
+}
 
 export default Select;
 export { StyledSelect as SelectInput };
