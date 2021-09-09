@@ -8,7 +8,9 @@ export default {
   title: 'Navigation/Skip link',
   component: SkipLinkDocumented,
 };
-class AutoFocussed extends Component {
+class AutoFocussed extends Component<{ href: string }> {
+  focusableRef;
+
   constructor(props) {
     super(props);
     // create a ref to store the focusable DOM element
