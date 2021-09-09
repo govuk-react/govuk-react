@@ -80,9 +80,9 @@ interface InputFieldProps {
   hint?: React.ReactNode;
   input?: {
     name?: string;
-    onBlur?(...args: unknown[]): unknown;
-    onChange?(...args: unknown[]): unknown;
-    onFocus?(...args: unknown[]): unknown;
+    onBlur?: (...args: unknown[]) => unknown;
+    onChange?: (...args: unknown[]) => unknown;
+    onFocus?: (...args: unknown[]) => unknown;
     // eslint-disable-next-line react/forbid-prop-types
     value?: any;
   };
