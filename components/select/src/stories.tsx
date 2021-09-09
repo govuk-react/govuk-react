@@ -15,7 +15,7 @@ export default {
 
 // TODO: add a synthetic onChange event
 export const Default = () => (
-  <Select name="group1" label="This is a label">
+  <Select input={{ name: 'group1' }} label="This is a label">
     <option value="0">GOV.UK elements option 1</option>
     <option value="1">GOV.UK elements option 2</option>
     <option value="2">GOV.UK elements option 3</option>
@@ -24,7 +24,7 @@ export const Default = () => (
 
 export const SelectWithHintText = () => (
   <Select
-    name="group1"
+    input={{ name: 'group1' }}
     label="This is a label"
     hint={['This is and example of hintText/description of what we need from you.']}
   >
@@ -36,7 +36,7 @@ export const SelectWithHintText = () => (
 
 export const SelectWithHintTextError = () => (
   <Select
-    name="group1"
+    input={{ name: 'group1' }}
     label="This is a label"
     hint={['This is and example of hintText/description of what we need from you.']}
     meta={meta}
