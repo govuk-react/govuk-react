@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FOCUS_COLOUR } from 'govuk-colours';
 import { spacing, typography } from '@govuk-react/lib';
@@ -187,7 +186,7 @@ const StyledRadioHint = styled(HintText)({
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/radios/_radios.scss
  * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
  */
-const Radio = React.forwardRef(({ inline, children, className, hint, ...input }, ref) => (
+const Radio = React.forwardRef(({ inline, children, className, hint, ...input }: RadioProps, ref) => (
   <Label inline={inline} className={className}>
     <Input type="radio" ref={ref} {...input} />
     <LabelText>{children}</LabelText>
@@ -201,11 +200,11 @@ Radio.defaultProps = {
   className: undefined,
 };
 
-Radio.propTypes = {
-  hint: PropTypes.node,
-  inline: PropTypes.bool,
-  className: PropTypes.string,
-  children: PropTypes.node.isRequired,
-};
+interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  hint?: React.ReactNode;
+  inline?: boolean;
+  className?: string;
+  children: React.ReactNode;
+}
 
 export default Radio;

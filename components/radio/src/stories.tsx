@@ -78,7 +78,7 @@ export const RadioInline = () => (
 
 export const RadioDisabled = () => (
   <div>
-    <Radio name="group1" disabled="disabled">
+    <Radio name="group1" disabled>
       Disabled checkbox option
     </Radio>
   </div>
@@ -94,7 +94,7 @@ export const RadioPreselected = () => (
 
 export const RadioPreselectedDisabled = () => (
   <div>
-    <Radio name="group1" disabled="disabled" defaultChecked>
+    <Radio name="group1" disabled defaultChecked>
       Farm or agricultural waste
     </Radio>
   </div>

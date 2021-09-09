@@ -17,7 +17,7 @@ export const Default = () => (
 
 export const CheckboxDisabled = () => (
   <div>
-    <Checkbox disabled="disabled">Disabled checkbox option</Checkbox>
+    <Checkbox disabled>Disabled checkbox option</Checkbox>
   </div>
 );
 
@@ -29,7 +29,7 @@ export const CheckboxPreselected = () => (
 
 export const CheckboxPreselectedDisabled = () => (
   <div>
-    <Checkbox disabled="disabled" defaultChecked>
+    <Checkbox disabled defaultChecked>
       Farm or agricultural waste
     </Checkbox>
   </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import HintText from '@govuk-react/hint-text';
 import { FOCUS_COLOUR } from 'govuk-colours';
@@ -128,7 +127,7 @@ const StyledCheckboxHint = styled(HintText)({
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/checkboxes/_checkboxes.scss
  *
  */
-const Checkbox = React.forwardRef(({ children, className, hint, ...props }, ref) => (
+const Checkbox = React.forwardRef(({ children, className, hint, ...props }: CheckboxProps, ref) => (
   <StyledCheckbox className={className}>
     <StyledInput type="checkbox" {...props} ref={ref} />
     <StyledLabel>{children}</StyledLabel>
@@ -141,16 +140,16 @@ Checkbox.defaultProps = {
   className: undefined,
 };
 
-Checkbox.propTypes = {
-  hint: PropTypes.node,
+interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  hint?: React.ReactNode;
   /**
    * Text content for checkbox
    */
-  children: PropTypes.node.isRequired,
+  children: React.ReactNode;
   /**
    * CSS Classname for outermost container
    */
-  className: PropTypes.string,
-};
+  className?: string;
+}
 
 export default Checkbox;
