@@ -78,10 +78,14 @@ const arrTabularTabs = [
   },
 ];
 
-class TableTabs extends Component {
+class TableTabs extends Component<{}, { tabIndex: number }> {
   static defaultProps = sharedDefaultProps;
 
   static propTypes = sharedPropTypes;
+
+  setTabIndex;
+
+  handleClick;
 
   constructor(props) {
     super(props);
@@ -127,10 +131,14 @@ class TableTabs extends Component {
 }
 
 /* eslint-disable-next-line react/no-multi-comp */
-class SimpleTabs extends Component {
+class SimpleTabs extends Component<{}, { tabIndex: number }> {
   static defaultProps = sharedDefaultProps;
 
   static propTypes = sharedPropTypes;
+
+  setTabIndex;
+
+  handleClick;
 
   constructor(props) {
     super(props);
@@ -185,10 +193,14 @@ const arrSimpleMapped = [
 ];
 
 /* eslint-disable-next-line react/no-multi-comp */
-class SimpleMapTabs extends Component {
+class SimpleMapTabs extends Component<{}, { tabIndex: number }> {
   static defaultProps = sharedDefaultProps;
 
   static propTypes = sharedPropTypes;
+
+  setTabIndex;
+
+  handleClick;
 
   constructor(props) {
     super(props);
@@ -238,7 +250,7 @@ const arrProposedBabel = [
 ];
 
 /* eslint-disable-next-line react/no-multi-comp */
-class ProposedClassPropertiesPlugin extends Component {
+class ProposedClassPropertiesPlugin extends Component<{ defaultIndex: number }, { tabIndex: number }> {
   static defaultProps = sharedDefaultProps;
 
   static propTypes = sharedPropTypes;

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { link, spacing, typography } from '@govuk-react/lib';
 
@@ -65,7 +64,7 @@ const StyledHyperLink = styled('a')(
   })
 );
 
-const Tab = (props) => (
+const Tab = (props: TabProps) => (
   <StyledListItem>
     <StyledHyperLink {...props} />
   </StyledListItem>
@@ -73,17 +72,24 @@ const Tab = (props) => (
 
 Tab.defaultProps = {
   selected: false,
+  as: undefined,
+  to: undefined,
+  href: undefined,
+  onClick: undefined,
 };
 
-Tab.propTypes = {
+interface TabProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   /** Different stylings for the Tab displaying content */
-  selected: PropTypes.bool,
+  selected?: boolean;
   /** Join the panel and header together with corresponding panel id. Required for mobile use  */
-  href: PropTypes.string.isRequired,
+  href?: string;
   /** The content to display within the Tab Header */
-  children: PropTypes.node.isRequired,
+  children: React.ReactNode;
   /** The function to passed to prevent default href behaviour */
-  onClick: PropTypes.func.isRequired,
-};
+  onClick?: (...args: unknown[]) => unknown;
+
+  as?: React.ElementType;
+  to?: string;
+}
 
 export default Tab;
