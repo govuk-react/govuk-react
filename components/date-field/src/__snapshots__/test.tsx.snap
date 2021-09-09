@@ -210,12 +210,8 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
     <div
       className="c0"
     >
-      <LabelText
-        errorText="example"
-      >
-        <src__StyledLabelText
-          errorText="example"
-        >
+      <LabelText>
+        <src__StyledLabelText>
           <span
             className="c1"
           >
@@ -223,12 +219,8 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
           </span>
         </src__StyledLabelText>
       </LabelText>
-      <ErrorText
-        errorText="example"
-      >
-        <src__StyledError
-          errorText="example"
-        >
+      <ErrorText>
+        <src__StyledError>
           <span
             className="c2"
           >
@@ -610,7 +602,9 @@ exports[`DateField should support null value: null value 1`] = `
         <src__StyledLabelText>
           <span
             className="c1"
-          />
+          >
+            Date
+          </span>
         </src__StyledLabelText>
       </LabelText>
       <MultiInputInput
@@ -991,7 +985,9 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
         <src__StyledLabelText>
           <span
             className="c1"
-          />
+          >
+            Date
+          </span>
         </src__StyledLabelText>
       </LabelText>
       <MultiInputInput

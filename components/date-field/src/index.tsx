@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { ERROR_COLOUR } from 'govuk-colours';
 import { SPACING } from '@govuk-react/constants';
@@ -8,6 +7,7 @@ import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 import { spacing } from '@govuk-react/lib';
 
+import type { InputProps } from './input';
 import Input from './input';
 
 const StyledContainer = styled('div')(
@@ -76,11 +76,11 @@ const StyledContainer = styled('div')(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/date-field
  *
  */
-const DateField = ({ children, errorText, hintText, inputNames, defaultValues, input, ...props }) => (
+const DateField = ({ children, errorText, hintText, inputNames, defaultValues, input, ...props }: DateFieldProps) => (
   <StyledContainer {...props} errorText={errorText}>
-    <LabelText errorText={errorText}>{children}</LabelText>
+    <LabelText>{children}</LabelText>
     {hintText && <HintText>{hintText}</HintText>}
-    {errorText && <ErrorText errorText={errorText}>{errorText}</ErrorText>}
+    {errorText && <ErrorText>{errorText}</ErrorText>}
     <Input
       names={inputNames}
       // TODO: defaultValues should be a prop on input
@@ -111,56 +111,56 @@ DateField.defaultProps = {
   input: undefined,
 };
 
-DateField.propTypes = {
-  children: PropTypes.node.isRequired,
+export interface DateFieldProps extends InputProps {
+  children: React.ReactNode;
   /**
    * Optional hint text
    */
-  hintText: PropTypes.string,
+  hintText?: string;
   /**
    * Error text
    */
-  errorText: PropTypes.string,
+  errorText?: string;
   /**
    * Input name attributes
    */
-  inputNames: PropTypes.shape({
-    day: PropTypes.string,
-    month: PropTypes.string,
-    year: PropTypes.string,
-  }),
-  defaultValues: PropTypes.shape({
-    day: PropTypes.string,
-    month: PropTypes.string,
-    year: PropTypes.string,
-  }),
+  inputNames?: {
+    day?: string;
+    month?: string;
+    year?: string;
+  };
+  defaultValues?: {
+    day?: string;
+    month?: string;
+    year?: string;
+  };
   /**
    * Properties that are sent to the input, matching final form and redux form input type
    */
-  input: PropTypes.shape({
+  input?: {
     /**
      * Called when the day, month or year changes
      */
-    onChange: PropTypes.func,
+    onChange?(...args: unknown[]): unknown;
     /**
      * Called when the day, month or year fields are blurred
      * (does not get called when moving between inputs in the same datefield)
      */
-    onBlur: PropTypes.func,
+    onBlur?(...args: unknown[]): unknown;
     /**
      * Called when the day, month or year fields are focussed
      * (does not get called when moving between inputs in the same datefield)
      */
-    onFocus: PropTypes.func,
+    onFocus?(...args: unknown[]): unknown;
     /**
      * When the form field is controlled, this sets the value of the day, month and year inputs
      */
-    value: PropTypes.shape({
-      day: PropTypes.string,
-      month: PropTypes.string,
-      year: PropTypes.string,
-    }),
-  }),
-};
+    value?: {
+      day?: string;
+      month?: string;
+      year?: string;
+    };
+  };
+}
 
 export default DateField;

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import React from 'react';
-import PropTypes from 'prop-types';
 import { spacing, typography } from '@govuk-react/lib';
 
 // TODO should `LabelText` and `Label` be consolidated?
@@ -44,11 +43,11 @@ const StyledLabelText = styled('span')(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
  *
  */
-const LabelText = (props) => <StyledLabelText {...props} />;
+const LabelText = (props: LabelTextProps) => <StyledLabelText {...props} />;
 
-LabelText.propTypes = {
+interface LabelTextProps {
   /** Text for the label */
-  children: PropTypes.node.isRequired,
-};
+  children: React.ReactNode;
+}
 
 export default LabelText;
