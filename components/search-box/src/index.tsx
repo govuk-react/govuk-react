@@ -94,7 +94,12 @@ const StyledSearchBox = styled('div')(
  * - https://govuk-static.herokuapp.com/component-guide/search
  *
  */
-const SearchBox = React.forwardRef((props, ref) => <StyledSearchBox {...props} ref={ref} />);
+const SearchBox: SearchBoxType = React.forwardRef((props, ref) => <StyledSearchBox {...props} ref={ref} />);
+
+interface SearchBoxType extends React.ForwardRefExoticComponent<React.HTMLProps<HTMLDivElement>> {
+  Input?: React.ElementType;
+  Button?: React.ElementType;
+}
 
 SearchBox.Input = Input;
 SearchBox.Button = Button;
