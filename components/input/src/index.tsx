@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { BLACK, ERROR_COLOUR } from 'govuk-colours';
@@ -66,7 +65,7 @@ export const StyledInput = styled('input')(
  * ### TODO:
  * - Remove `errorColor` and provide examples on how to extend the component
  */
-const Input = React.forwardRef(({ type, ...props }, ref) => <StyledInput type={type} ref={ref} {...props} />);
+const Input = React.forwardRef((props: InputProps, ref) => <StyledInput ref={ref} {...props} />);
 
 Input.defaultProps = {
   type: 'text',
@@ -74,13 +73,13 @@ Input.defaultProps = {
   errorColor: undefined,
 };
 
-Input.propTypes = {
+interface InputProps {
   /**
    * HTML `<Input />` type
    */
-  type: PropTypes.string,
-  error: PropTypes.bool,
-  errorColor: PropTypes.string,
-};
+  type?: string;
+  error?: boolean;
+  errorColor?: string;
+}
 
 export default Input;
