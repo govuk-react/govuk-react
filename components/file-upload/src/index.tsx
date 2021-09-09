@@ -122,7 +122,7 @@ interface FileUploadProps {
   };
   children: React.ReactNode;
   acceptedFormats?: string;
-  onChange?(...args: unknown[]): unknown;
+  onChange?: (...args: unknown[]) => unknown;
   name?: string;
 }
 

@@ -54,11 +54,11 @@ const meta = {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `acceptedFormats` |  | ```undefined``` | string | 
- `children` | true | `````` | node | 
- `hint` |  | ```undefined``` | string | Optional hint text
- `meta` |  | ```{}``` | shape[object Object] | Final form meta object, pending adjustment/removal
- `name` |  | ```undefined``` | string | 
- `onChange` |  | ```undefined``` | func | 
+ `acceptedFormats` |  | ```undefined``` |  | 
+ `children` | true | `````` |  | 
+ `hint` |  | ```undefined``` |  | Optional hint text
+ `meta` |  | ```{}``` |  | Final form meta object, pending adjustment/removal
+ `name` |  | ```undefined``` |  | 
+ `onChange` |  | ```undefined``` |  | 
 
 
