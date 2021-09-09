@@ -12,11 +12,7 @@ describe('Textarea', () => {
     error: example,
   };
   const wrapper = <Textarea>{example}</Textarea>;
-  const wrapperErrorText = (
-    <Textarea errorText={example} meta={meta}>
-      {example}
-    </Textarea>
-  );
+  const wrapperErrorText = <Textarea meta={meta}>{example}</Textarea>;
   const wrapperHint = <Textarea hint={example}>{example}</Textarea>;
 
   beforeEach(() => {
