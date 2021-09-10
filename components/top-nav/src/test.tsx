@@ -14,7 +14,7 @@ const wrapper = (
   </TopNav>
 );
 const wrapperMultipleTopNavAnchor = (
-  <TopNav active={1}>
+  <TopNav>
     <TopNav.Anchor href="/section">Section 1</TopNav.Anchor>
     <TopNav.Anchor href="/section">Section 1</TopNav.Anchor>
   </TopNav>
