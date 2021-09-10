@@ -21,7 +21,9 @@ export const Default = () => (
   </div>
 );
 
-class Focusable extends Component {
+class Focusable extends Component<{ as?: React.ElementType }> {
+  focusableRef;
+
   constructor(props) {
     super(props);
     // create a ref to store the focusable DOM element
