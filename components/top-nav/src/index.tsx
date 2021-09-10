@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { BLACK, WHITE } from 'govuk-colours';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
 import { typography } from '@govuk-react/lib';
@@ -52,6 +51,24 @@ const Input = styled('input')({
     display: 'none',
   },
 });
+
+interface TopNavProps {
+  // TODO: prop names should mirror nunjucks macro options at https://design-system.service.gov.uk/components/header/
+  /** Top nav background color */
+  bgColor?: string;
+  /** Top nav text color */
+  color?: string;
+  /** Is the mobile navigation open by default? */
+  defaultOpen?: boolean;
+  /** Company component e.g. GOV UK */
+  company?: React.ReactNode;
+  /** Service title component e.g. Food Standards Authority */
+  serviceTitle?: React.ReactNode;
+  /** Search component */
+  search?: React.ReactNode;
+  /** List Navigation items with anchor tags e.g. NavAnchor components */
+  children?: React.ReactNode;
+}
 
 /**
  *
@@ -128,7 +145,13 @@ const Input = styled('input')({
  * - TODO: Vertical alignment here needs some work, perhaps should be its own component
  * - TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
  */
-class TopNav extends Component {
+class TopNav extends Component<TopNavProps, { navigationOpen: boolean }> {
+  static IconTitle = IconTitle;
+
+  static Anchor = TopNavAnchor;
+
+  static NavLink = NavLinkAnchor;
+
   static defaultProps = {
     bgColor: BLACK,
     color: WHITE,
@@ -137,24 +160,6 @@ class TopNav extends Component {
     search: false,
     children: undefined,
     defaultOpen: false,
-  };
-
-  static propTypes = {
-    // TODO: prop names should mirror nunjucks macro options at https://design-system.service.gov.uk/components/header/
-    /** Top nav background color */
-    bgColor: PropTypes.string,
-    /** Top nav text color */
-    color: PropTypes.string,
-    /** Is the mobile navigation open by default? */
-    defaultOpen: PropTypes.bool,
-    /** Company component e.g. GOV UK */
-    company: PropTypes.node,
-    /** Service title component e.g. Food Standards Authority */
-    serviceTitle: PropTypes.node,
-    /** Search component */
-    search: PropTypes.node,
-    /** List Navigation items with anchor tags e.g. NavAnchor components */
-    children: PropTypes.node,
   };
 
   constructor(props) {
@@ -198,12 +203,8 @@ class TopNav extends Component {
                   />
                   <UnorderedList id="govuk-react-menu" serviceTitle={serviceTitle} open={navigationOpen}>
                     {/* TODO: #205 use context api and/or render props here for `active` */}
-                    {children.length && children.map ? (
-                      children.map((child, i) =>
-                        child && (child.length || child.props) ? (
-                          <ListItem key={child.key || i}>{child}</ListItem>
-                        ) : null
-                      )
+                    {Array.isArray(children) ? (
+                      React.Children.map(children, (child) => (child ? <ListItem>{child}</ListItem> : null))
                     ) : (
                       <ListItem>{children}</ListItem>
                     )}
@@ -218,9 +219,5 @@ class TopNav extends Component {
     );
   }
 }
-
-TopNav.IconTitle = IconTitle;
-TopNav.Anchor = TopNavAnchor;
-TopNav.NavLink = NavLinkAnchor;
 
 export default TopNav;

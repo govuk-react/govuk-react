@@ -71,21 +71,21 @@ export const LogoAndServiceTitleWithReactRouterLink = () => (
 export const WithSearch = () => <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} />;
 
 export const Children = () => (
-  <TopNav company={Company} serviceTitle={ServiceTitle} active={0}>
+  <TopNav company={Company} serviceTitle={ServiceTitle}>
     <TopNav.NavLink href="https://example.com?q=catdog">Navigation item #1</TopNav.NavLink>
     <TopNav.NavLink href="https://example.com?q=dogcat">Navigation item #2</TopNav.NavLink>
   </TopNav>
 );
 
 export const EverythingButServiceTitle = () => (
-  <TopNav company={Company} search={Search} active={0}>
+  <TopNav company={Company} search={Search}>
     <TopNav.NavLink href="https://example.com?q=catdog">Navigation item #1</TopNav.NavLink>
     <TopNav.NavLink href="https://example.com?q=dogcat">Navigation item #2</TopNav.NavLink>
   </TopNav>
 );
 
 export const Everything = () => (
-  <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
+  <TopNav company={Company} serviceTitle={ServiceTitle} search={Search}>
     <TopNav.NavLink href="https://example.com?q=catdog" target="new">
       Navigation item
     </TopNav.NavLink>
@@ -108,7 +108,7 @@ export const Everything = () => (
 );
 
 export const EverythingWith9NavItems = () => (
-  <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
+  <TopNav company={Company} serviceTitle={ServiceTitle} search={Search}>
     <TopNav.NavLink href="https://example.com?q=catdog" target="new">
       Navigation item
     </TopNav.NavLink>
