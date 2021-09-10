@@ -217,7 +217,6 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
 
 exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzyme.mount 1`] = `
 <TopNav
-  active={1}
   bgColor="#0b0c0c"
   color="#ffffff"
   company={
@@ -238,7 +237,6 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
   search={false}
 >
   <top-nav-wrapper__TopNavWrapper
-    active={1}
     bgColor="#0b0c0c"
     color="#ffffff"
     defaultOpen={false}
@@ -401,7 +399,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                   open={false}
                 >
                   <list-item__Li
-                    key="0"
+                    key=".0"
                   >
                     <li
                       className="list-item__Li-sc-1kicpn1-0 MsHbB"
@@ -419,7 +417,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                     </li>
                   </list-item__Li>
                   <list-item__Li
-                    key="1"
+                    key=".1"
                   >
                     <li
                       className="list-item__Li-sc-1kicpn1-0 MsHbB"
