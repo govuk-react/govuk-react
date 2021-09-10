@@ -122,7 +122,6 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
 }
 
 <TextArea
-  errorText="example"
   input={Object {}}
   meta={
     Object {
@@ -133,11 +132,9 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
 >
   <Label
     error={true}
-    errorText="example"
   >
     <src__StyledLabel
       error={true}
-      errorText="example"
     >
       <label
         className="c0"
