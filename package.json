@@ -21,6 +21,7 @@
     "eslint:fix": "eslint --fix \"./{components,packages}/*/src/**/*.{js,ts,tsx}\"",
     "eslint": "eslint \"./{components,packages}/*/src/**/*.{js,ts,tsx}\"",
     "start": "cd packages/storybook && npm start",
+    "test:cypress": "cd packages/example-application && npm run test:cypress",
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand",
     "test:snapshot": "npm run test:unit -u",
     "test:unit": "jest",
