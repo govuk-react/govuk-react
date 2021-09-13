@@ -14,7 +14,6 @@ module.exports = {
     'plugin:cypress/recommended',
     'plugin:import/typescript',
     'eslint:recommended',
-    // 'plugin:@typescript-eslint/recommended',
   ],
   env: {
     es6: true,
@@ -51,6 +50,14 @@ module.exports = {
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
   },
   overrides: [
+    {
+      files: ['**/*.ts', '**/*.tsx'],
+      extends: ['plugin:@typescript-eslint/recommended'],
+      rules: {
+        '@typescript-eslint/explicit-module-boundary-types': 0,
+        '@typescript-eslint/no-explicit-any': 0,
+      },
+    },
     {
       files: [
         'stories.[jt]s?(x)',

@@ -20,7 +20,7 @@ describe('Heading', () => {
     };
     warnCallCount = 0;
     // eslint-disable-next-line no-console
-    console.error = () => {};
+    console.error = () => null;
   });
 
   afterEach(() => {

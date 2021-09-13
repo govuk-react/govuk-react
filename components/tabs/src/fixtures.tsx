@@ -78,7 +78,7 @@ const arrTabularTabs = [
   },
 ];
 
-class TableTabs extends Component<{}, { tabIndex: number }> {
+class TableTabs extends Component<any, { tabIndex: number }> {
   static defaultProps = sharedDefaultProps;
 
   static propTypes = sharedPropTypes;
@@ -131,7 +131,7 @@ class TableTabs extends Component<{}, { tabIndex: number }> {
 }
 
 /* eslint-disable-next-line react/no-multi-comp */
-class SimpleTabs extends Component<{}, { tabIndex: number }> {
+class SimpleTabs extends Component<any, { tabIndex: number }> {
   static defaultProps = sharedDefaultProps;
 
   static propTypes = sharedPropTypes;
@@ -193,7 +193,7 @@ const arrSimpleMapped = [
 ];
 
 /* eslint-disable-next-line react/no-multi-comp */
-class SimpleMapTabs extends Component<{}, { tabIndex: number }> {
+class SimpleMapTabs extends Component<any, { tabIndex: number }> {
   static defaultProps = sharedDefaultProps;
 
   static propTypes = sharedPropTypes;
