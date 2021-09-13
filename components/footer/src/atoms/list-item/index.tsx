@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import { spacing } from '@govuk-react/lib';
 
-const ListItem = styled('li')(
+const ListItem: React.FC<ListItemProps> = styled('li')(
   ({ inline }) =>
     inline
       ? {
@@ -18,9 +17,9 @@ const ListItem = styled('li')(
   }
 );
 
-ListItem.propTypes = {
-  inline: PropTypes.bool,
-};
+interface ListItemProps {
+  inline?: boolean;
+}
 
 ListItem.defaultProps = {
   inline: false,

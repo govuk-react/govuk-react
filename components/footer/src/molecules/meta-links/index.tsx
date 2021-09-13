@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { H2 } from '@govuk-react/heading';
 import VisuallyHidden from '@govuk-react/visually-hidden';
 
 import UnorderedList from '../../atoms/unordered-list';
 import ListItem from '../../atoms/list-item';
 
-const MetaLinks = ({ children, heading }) => {
+const MetaLinks: React.FC<MetaLinksProps> = ({ children, heading }: MetaLinksProps) => {
   return (
     <>
       <VisuallyHidden>
@@ -14,14 +13,8 @@ const MetaLinks = ({ children, heading }) => {
       </VisuallyHidden>
       {children && (
         <UnorderedList inline>
-          {children.length && children.map ? (
-            children.map((child, i) =>
-              child && (child.length || child.props) ? (
-                <ListItem key={child.key || i} inline>
-                  {child}
-                </ListItem>
-              ) : null
-            )
+          {Array.isArray(children) ? (
+            React.Children.map(children, (child, i) => (child ? <ListItem inline>{child}</ListItem> : null))
           ) : (
             <ListItem inline>{children}</ListItem>
           )}
@@ -31,15 +24,15 @@ const MetaLinks = ({ children, heading }) => {
   );
 };
 
-MetaLinks.propTypes = {
+interface MetaLinksProps {
   /**
    * Meta links
    */
-  children: PropTypes.node.isRequired,
+  children: React.ReactNode;
   /**
    * Meta links heading (will be visually hidden)
    */
-  heading: PropTypes.string.isRequired,
-};
+  heading: string;
+}
 
 export default MetaLinks;

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { spacing, typography } from '@govuk-react/lib';
 import { FOOTER_BACKGROUND, FOOTER_TEXT, FOOTER_BORDER_TOP } from 'govuk-colours';
@@ -118,13 +117,13 @@ const FooterContainer = styled('footer')(
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/footer/_footer.scss
  *
  */
-const Footer = ({
+const Footer: FooterType = ({
   children = undefined,
   container: Container = Footer.WidthContainer,
   copyright = undefined,
   meta = undefined,
   ...props
-}) => (
+}: FooterProps) => (
   <FooterContainer role="contentinfo" {...props}>
     <Container>
       {children && (
@@ -138,34 +137,42 @@ const Footer = ({
   </FooterContainer>
 );
 
-Footer.propTypes = {
+interface FooterType extends React.FC<FooterProps> {
+  Link: typeof Link;
+  Navigation: typeof Navigation;
+  MetaCustom: typeof MetaCustom;
+  MetaLinks: typeof MetaLinks;
+  NavigationLinks: typeof NavigationLinks;
+  WidthContainer: typeof WidthContainer;
+}
+
+interface FooterProps {
   /**
    * Footer navigation links
    */
-  children: PropTypes.node,
+  children?: React.ReactNode;
   /**
    * Override the default footer container component.
    * `children`, `copyright` and `meta` will be placed inside this component.
    */
-  container: PropTypes.elementType,
+  container?: React.ElementType;
   /**
    * Copyright information
    */
-  copyright: PropTypes.shape({
-    text: PropTypes.string,
-    image: PropTypes.shape({
-      src: PropTypes.string.isRequired,
-      width: PropTypes.number.isRequired,
-      height: PropTypes.number.isRequired,
-    }),
-    link: PropTypes.string,
-  }),
+  copyright?: {
+    text?: string;
+    image?: {
+      src: string;
+      width: number;
+      height: number;
+    };
+    link?: string;
+  };
   /**
    * Meta text and links
    */
-  meta: PropTypes.node,
-};
-
+  meta?: React.ReactNode;
+}
 Footer.Link = Link;
 Footer.Navigation = Navigation;
 Footer.MetaCustom = MetaCustom;
