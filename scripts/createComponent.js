@@ -7,7 +7,9 @@ const mkdirp = require('mkdirp-promise');
 const { version } = require('../packages/govuk-react/package.json');
 
 const componentFolderName = process.argv[2];
-const componentName = `${componentFolderName.charAt(0).toUpperCase()}${componentFolderName.slice(1).replace(/-([a-z])/g, g => g[1].toUpperCase())}`;
+const componentName = `${componentFolderName.charAt(0).toUpperCase()}${componentFolderName
+  .slice(1)
+  .replace(/-([a-z])/g, (g) => g[1].toUpperCase())}`;
 
 const folderName = `./components/${componentFolderName}`;
 
