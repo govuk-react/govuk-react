@@ -36,9 +36,11 @@ With `href` attribute
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | ```'Back'``` | string | Text that will appear in the back link
- `href` |  | ```undefined``` | string | 
- `onClick` |  | ```undefined``` | func | Custom function to run when the `onClick` event is fired
+ `as` |  | ```undefined``` |  | 
+ `children` |  | ```'Back'``` |  | 
+ `href` |  | ```undefined``` |  | 
+ `onClick` |  | ```undefined``` |  | 
+ `to` |  | ```undefined``` |  | 
 
 
 
@@ -1248,8 +1250,8 @@ import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Text for the label
- `error` |  | ```false``` | bool | Apply error state styling to the component
+ `children` | true | `````` |  | Text for the label
+ `error` |  | ```false``` |  | Apply error state styling to the component
 
 
 
