@@ -64,7 +64,7 @@ const StyledHyperLink = styled('a')(
   })
 );
 
-const Tab = (props: TabProps) => (
+const Tab: React.FC<TabProps> = (props) => (
   <StyledListItem>
     <StyledHyperLink {...props} />
   </StyledListItem>
@@ -76,18 +76,11 @@ Tab.defaultProps = {
   // TODO: #953
   to: undefined,
   href: undefined,
-  onClick: undefined,
 };
 
 interface TabProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   /** Different stylings for the Tab displaying content */
   selected?: boolean;
-  /** Join the panel and header together with corresponding panel id. Required for mobile use  */
-  href?: string;
-  /** The content to display within the Tab Header */
-  children: React.ReactNode;
-  /** The function to passed to prevent default href behaviour */
-  onClick?: (...args: unknown[]) => unknown;
 
   as?: React.ElementType;
   // TODO: #953
