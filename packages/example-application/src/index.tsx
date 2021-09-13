@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import * as GovUK from 'govuk-react';
 import { MemoryRouter as Router, Switch, Route } from 'react-router';
 import { Link } from 'react-router-dom';
@@ -7,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Home from './home';
 import Forms from './forms/forms';
 
-const ExampleApplication = ({ routerEntries }) => (
+const ExampleApplication: React.FC<ExampleApplicationProps> = ({ routerEntries }: ExampleApplicationProps) => (
   <Router initialEntries={routerEntries}>
     <GovUK.GlobalStyle />
     <GovUK.TopNav
@@ -48,9 +47,9 @@ const ExampleApplication = ({ routerEntries }) => (
   </Router>
 );
 
-ExampleApplication.propTypes = {
-  routerEntries: PropTypes.arrayOf(PropTypes.string),
-};
+interface ExampleApplicationProps {
+  routerEntries?: string[];
+}
 
 ExampleApplication.defaultProps = {
   routerEntries: undefined,
