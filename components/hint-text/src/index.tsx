@@ -2,7 +2,6 @@
 
 import styled from 'styled-components';
 import React from 'react';
-import PropTypes from 'prop-types';
 import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
 import { SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
@@ -42,11 +41,11 @@ const StyledHint = styled('span')(
  * ### References
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/hint/_hint.scss
  */
-const HintText = (props) => <StyledHint {...props} />;
+const HintText: React.FC<HintTextProps> = (props: HintTextProps) => <StyledHint {...props} />;
 
-HintText.propTypes = {
+interface HintTextProps {
   /** Text for the hint */
-  children: PropTypes.node.isRequired,
-};
+  children: React.ReactNode;
+}
 
 export default HintText;
