@@ -27,7 +27,8 @@
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand",
     "test:snapshot": "yarn test:unit -u",
     "test:unit": "jest",
-    "test": "cross-env CI=true yarn test:unit --coverage && yarn eslint",
+    "test:types": "tsc --noEmit -p ./tsconfig.json",
+    "test": "cross-env CI=true yarn test:unit --coverage && yarn eslint && yarn test:types",
     "watch:es": "cross-env BABEL_ENV=es lerna exec --ignore @govuk-react/images --parallel -- babel src -x .js,jsx,.ts,.tsx -d es -w --source-maps",
     "watch:lib": "lerna exec --ignore @govuk-react/images --parallel -- babel src -x .js,jsx,.ts,.tsx -d lib -w --source-maps",
     "watch": "yarn watch:lib"
