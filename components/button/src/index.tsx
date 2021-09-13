@@ -138,7 +138,7 @@ const ButtonContents = styled('span')({
   flexGrow: 1,
 });
 
-interface ButtonOwnProps extends WithWhiteSpaceProps {
+interface ButtonOwnProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, WithWhiteSpaceProps {
   /**
    * Button text
    */
