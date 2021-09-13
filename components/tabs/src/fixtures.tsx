@@ -12,13 +12,13 @@ import Tabs from '.';
 
 const flip2dArray = (prev, next) => next.map((item, index) => [...(prev[index] || []), next[index]]);
 
-function setTabIndex(tabIndex) {
+function setTabIndex(tabIndex: number): void {
   return this.setState({
     tabIndex,
   });
 }
 
-function handleClick({ event: e, index }) {
+function handleClick({ event: e, index }: { event: React.MouseEvent<HTMLAnchorElement>; index: number }): void {
   /* eslint-disable-next-line no-undef */
   const mql = window.matchMedia(`(min-width: ${BREAKPOINTS.TABLET})`);
   if (mql.matches) {
@@ -78,7 +78,7 @@ const arrTabularTabs = [
   },
 ];
 
-class TableTabs extends Component<any, { tabIndex: number }> {
+class TableTabs extends Component<Record<string, never>, { tabIndex: number }> {
   static defaultProps = sharedDefaultProps;
 
   static propTypes = sharedPropTypes;
@@ -87,14 +87,14 @@ class TableTabs extends Component<any, { tabIndex: number }> {
 
   handleClick;
 
-  constructor(props) {
+  constructor(props: Record<string, never>) {
     super(props);
     this.state = { tabIndex: props.defaultIndex };
     this.setTabIndex = setTabIndex.bind(this);
     this.handleClick = handleClick.bind(this);
   }
 
-  render() {
+  render(): JSX.Element {
     const { tabIndex } = this.state;
     return (
       <Tabs>
@@ -131,7 +131,7 @@ class TableTabs extends Component<any, { tabIndex: number }> {
 }
 
 /* eslint-disable-next-line react/no-multi-comp */
-class SimpleTabs extends Component<any, { tabIndex: number }> {
+class SimpleTabs extends Component<Record<string, never>, { tabIndex: number }> {
   static defaultProps = sharedDefaultProps;
 
   static propTypes = sharedPropTypes;
@@ -140,14 +140,14 @@ class SimpleTabs extends Component<any, { tabIndex: number }> {
 
   handleClick;
 
-  constructor(props) {
+  constructor(props: Record<string, never>) {
     super(props);
     this.state = { tabIndex: props.defaultIndex };
     this.setTabIndex = setTabIndex.bind(this);
     this.handleClick = handleClick.bind(this);
   }
 
-  render() {
+  render(): JSX.Element {
     const { tabIndex } = this.state;
     return (
       <Tabs>
@@ -193,7 +193,7 @@ const arrSimpleMapped = [
 ];
 
 /* eslint-disable-next-line react/no-multi-comp */
-class SimpleMapTabs extends Component<any, { tabIndex: number }> {
+class SimpleMapTabs extends Component<Record<string, never>, { tabIndex: number }> {
   static defaultProps = sharedDefaultProps;
 
   static propTypes = sharedPropTypes;
@@ -202,14 +202,14 @@ class SimpleMapTabs extends Component<any, { tabIndex: number }> {
 
   handleClick;
 
-  constructor(props) {
+  constructor(props: Record<string, never>) {
     super(props);
     this.state = { tabIndex: props.defaultIndex };
     this.setTabIndex = setTabIndex.bind(this);
     this.handleClick = handleClick.bind(this);
   }
 
-  render() {
+  render(): JSX.Element {
     const { tabIndex } = this.state;
     return (
       <Tabs>
@@ -259,13 +259,13 @@ class ProposedClassPropertiesPlugin extends Component<{ defaultIndex: number }, 
 
   handleClick = handleClick;
 
-  constructor(props) {
+  constructor(props: { defaultIndex: number }) {
     super(props);
     const { defaultIndex } = this.props;
     this.state = { tabIndex: defaultIndex };
   }
 
-  render() {
+  render(): JSX.Element {
     const { tabIndex } = this.state;
     return (
       <Tabs>
@@ -294,7 +294,7 @@ class ProposedClassPropertiesPlugin extends Component<{ defaultIndex: number }, 
   }
 }
 
-const HooksExample = ({ defaultIndex }) => {
+const HooksExample: React.FC<{ defaultIndex: number }> = ({ defaultIndex }) => {
   const [tabIndex, setHooksTabIndex] = React.useState(defaultIndex);
 
   const handleTabChange = (newTabIndex) => setHooksTabIndex(newTabIndex);
@@ -410,7 +410,7 @@ const RouterTabs = ({
   );
 };
 
-const ReactRouterExample = () => (
+const ReactRouterExample: React.FC = () => (
   <MemoryRouter>
     <div>
       <Route path="/:section?" component={RouterTabs} />
@@ -444,7 +444,7 @@ const RouterTabsSSR = ({
   </Tabs>
 );
 
-const ReactRouterSSRExample = () => (
+const ReactRouterSSRExample: React.FC = () => (
   <MemoryRouter>
     <div>
       <Route path="/:section?" component={RouterTabsSSR} />
@@ -493,7 +493,7 @@ const RouterTabsSSRSinglePanel = ({
   </Tabs>
 );
 
-const ReactRouterSSRSinglePanelExample = () => (
+const ReactRouterSSRSinglePanelExample: React.FC = () => (
   <MemoryRouter>
     <div>
       <Route path="/:section?" component={RouterTabsSSRSinglePanel} />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
@@ -35,7 +35,11 @@ const ButtonIcon = styled('div')(({ open }) => ({
   borderBottomColor: 'inherit',
 }));
 
-const MenuButton = ({ title, open, onClick }) => (
+const MenuButton: React.FC<{ title: string; open: boolean; onClick: MouseEventHandler<HTMLButtonElement> }> = ({
+  title,
+  open,
+  onClick,
+}) => (
   <Button onClick={onClick} htmlFor="govuk-react-menu-button">
     <ButtonText>{title}</ButtonText>
     <ButtonIcon open={open} />

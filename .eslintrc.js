@@ -54,7 +54,6 @@ module.exports = {
       files: ['**/*.ts', '**/*.tsx'],
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
-        '@typescript-eslint/explicit-module-boundary-types': 0,
         '@typescript-eslint/no-explicit-any': 0,
       },
     },

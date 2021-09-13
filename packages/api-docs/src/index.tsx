@@ -83,7 +83,7 @@ function dequote(string) {
   return string.replace(/^'(.*)'$/, '$1');
 }
 
-async function apiDocs(relDir, outputMd) {
+async function apiDocs(relDir: string, outputMd: string): Promise<void> {
   const relDirNoQuotation = dequote(relDir);
   const outputMdNoQuotation = dequote(outputMd);
 
