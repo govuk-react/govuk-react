@@ -128,14 +128,16 @@ import { ButtonArrow } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `buttonColour` |  | ```undefined``` | string | Override for default button colour
- `buttonHoverColour` |  | ```undefined``` | string | Override for default button hover colour,<br/>which defaults to `buttonColour` darkened by 5%
- `buttonShadowColour` |  | ```undefined``` | string | Override for default button shadow colour,<br/>which defaults to `buttonColour` darkened by 15%
- `buttonTextColour` |  | ```undefined``` | string | Override for default button text colour,<br/>which defaults to govuk white
- `children` | true | `````` | node | Button text
- `disabled` |  | ```false``` | bool | Renders a disabled button and removes pointer events if set to true
- `icon` |  | ```undefined``` | node | Button icon
- `start` |  | ```false``` | bool | Renders a large button if set to true
+ `as` |  | ```undefined``` |  | 
+ `buttonColour` |  | ```undefined``` |  | Override for default button colour
+ `buttonHoverColour` |  | ```undefined``` |  | Override for default button hover colour,<br/>which defaults to `buttonColour` darkened by 5%
+ `buttonShadowColour` |  | ```undefined``` |  | Override for default button shadow colour,<br/>which defaults to `buttonColour` darkened by 15%
+ `buttonTextColour` |  | ```undefined``` |  | Override for default button text colour,<br/>which defaults to govuk white
+ `children` | true | `````` |  | Button text
+ `disabled` |  | ```false``` |  | Renders a disabled button and removes pointer events if set to true
+ `icon` |  | ```undefined``` |  | Button icon
+ `start` |  | ```false``` |  | Renders a large button if set to true
+ `to` |  | ```undefined``` |  | 
 
 
 
@@ -229,9 +231,9 @@ Checkbox with hint text
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Text content for checkbox
- `className` |  | ```undefined``` | string | CSS Classname for outermost container
- `hint` |  | ```undefined``` | node | 
+ `children` | true | `````` |  | Text content for checkbox
+ `className` |  | ```undefined``` |  | CSS Classname for outermost container
+ `hint` |  | ```undefined``` |  | 
 
 
 
@@ -466,13 +468,13 @@ const onHandleErrorClick = (targetName) => {
     errors={errors}
   />
   <InputField
-    name="national-insurance-number"
+    input={{ name: 'national-insurance-number' }}
     hint="It’s on your National Insurance card, benefit letter, payslip or P60."
   >
     National Insurance number
   </InputField>
   <br />
-  <TextArea name="description">Description of what you saw</TextArea>
+  <TextArea input={{ name: 'description' }}>Description of what you saw</TextArea>
 </div>
 ```
 
@@ -633,12 +635,12 @@ const meta = {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `acceptedFormats` |  | ```undefined``` | string | 
- `children` | true | `````` | node | 
- `hint` |  | ```undefined``` | string | Optional hint text
- `meta` |  | ```{}``` | shape[object Object] | Final form meta object, pending adjustment/removal
- `name` |  | ```undefined``` | string | 
- `onChange` |  | ```undefined``` | func | 
+ `acceptedFormats` |  | ```undefined``` |  | 
+ `children` | true | `````` |  | 
+ `hint` |  | ```undefined``` |  | Optional hint text
+ `meta` |  | ```{}``` |  | Final form meta object, pending adjustment/removal
+ `name` |  | ```undefined``` |  | 
+ `onChange` |  | ```undefined``` |  | 
 
 
 
@@ -1057,7 +1059,7 @@ Input with hint text
 
 ```jsx
 <InputField
-   name="group1"
+   input={{ name: 'group1' }}
    hint={[
      'It’s on your National Insurance card, benefit letter, payslip or P60.',
      <br />,
@@ -1077,7 +1079,7 @@ Input with hint text & error
  };
 
  <InputField
-   name="group1"
+   input={{ name: 'group1' }}
    hint={[
      'It’s on your National Insurance card, benefit letter, payslip or P60.',
      <br />,
@@ -1097,10 +1099,10 @@ Input with hint text & error
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
- `hint` |  | ```undefined``` | node | 
- `input` |  | ```{}``` | shape[object Object] | 
- `meta` |  | ```{}``` | shape[object Object] | 
+ `children` | true | `````` |  | 
+ `hint` |  | ```undefined``` |  | 
+ `input` |  | ```{}``` |  | 
+ `meta` |  | ```{}``` |  | 
 
 
 
@@ -1547,10 +1549,10 @@ import { MultiChoice, Radio } from 'govuk-react';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
- `hint` |  | ```undefined``` | string | 
- `label` | true | `````` | node | 
- `meta` |  | ```{}``` | shape[object Object] | 
+ `children` | true | `````` |  | 
+ `hint` |  | ```undefined``` |  | 
+ `label` | true | `````` |  | 
+ `meta` |  | ```{}``` |  | 
 
 
 
@@ -1933,10 +1935,10 @@ Radio with hint text
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
- `className` |  | ```undefined``` | string | 
- `hint` |  | ```undefined``` | node | 
- `inline` |  | ```false``` | bool | 
+ `children` | true | `````` |  | 
+ `className` |  | ```undefined``` |  | 
+ `hint` |  | ```undefined``` |  | 
+ `inline` |  | ```false``` |  | 
 
 
 
@@ -2122,12 +2124,12 @@ import { SelectInput } '@govuk-react/select';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
- `errorText` |  | ```undefined``` | string | 
- `hint` |  | ```undefined``` | string | 
- `input` |  | ```{}``` | shape[object Object] | 
- `label` | true | `````` | string | 
- `meta` |  | ```{}``` | shape[object Object] | 
+ `children` | true | `````` |  | 
+ `errorText` |  | ```undefined``` |  | 
+ `hint` |  | ```undefined``` |  | 
+ `input` |  | ```{}``` |  | 
+ `label` | true | `````` |  | 
+ `meta` |  | ```{}``` |  | 
 
 
 
@@ -2461,13 +2463,13 @@ Simple
 ```jsx
 import { TextArea } from 'govuk-react'
 
-<TextArea name="group1">Description of what you saw</TextArea>
+<TextArea input={{ name: 'group1' }}>Description of what you saw</TextArea>
 ```
 
 TextArea with hint text
 
 ```jsx
-<TextArea name="group1" hint={['Enter as many words as you like']}>
+<TextArea input={{ name: 'group1' }} hint={['Enter as many words as you like']}>
   Description of what you saw
 </TextArea>
 ```
@@ -2481,7 +2483,7 @@ const meta = {
 };
 
 <TextArea
-   name="group1"
+   input={{ name: 'group1' }}
    hint={['Enter as many words as you like']}
    meta={meta}
  >
@@ -2496,10 +2498,10 @@ const meta = {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
- `hint` |  | ```undefined``` | string | 
- `input` |  | ```{}``` | shape[object Object] | 
- `meta` |  | ```{}``` | shape[object Object] | 
+ `children` | true | `````` |  | 
+ `hint` |  | ```undefined``` |  | 
+ `input` |  | ```{}``` |  | 
+ `meta` |  | ```{}``` |  | 
 
 
 
@@ -2588,13 +2590,13 @@ const ServiceTitleLink = (
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `bgColor` |  | ```BLACK``` | string | Top nav background color
- `children` |  | ```undefined``` | node | List Navigation items with anchor tags e.g. NavAnchor components
- `color` |  | ```WHITE``` | string | Top nav text color
- `company` |  | ```<IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</IconTitle>``` | node | Company component e.g. GOV UK
- `defaultOpen` |  | ```false``` | bool | Is the mobile navigation open by default?
- `search` |  | ```false``` | node | Search component
- `serviceTitle` |  | ```undefined``` | node | Service title component e.g. Food Standards Authority
+ `bgColor` |  | ```BLACK``` |  | Top nav background color
+ `children` |  | ```undefined``` |  | List Navigation items with anchor tags e.g. NavAnchor components
+ `color` |  | ```WHITE``` |  | Top nav text color
+ `company` |  | ```<IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</IconTitle>``` |  | Company component e.g. GOV UK
+ `defaultOpen` |  | ```false``` |  | Is the mobile navigation open by default?
+ `search` |  | ```false``` |  | Search component
+ `serviceTitle` |  | ```undefined``` |  | Service title component e.g. Food Standards Authority
 
 
 

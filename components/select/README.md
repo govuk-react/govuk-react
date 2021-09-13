@@ -81,11 +81,11 @@ import { SelectInput } '@govuk-react/select';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
- `errorText` |  | ```undefined``` | string | 
- `hint` |  | ```undefined``` | string | 
- `input` |  | ```{}``` | shape[object Object] | 
- `label` | true | `````` | string | 
- `meta` |  | ```{}``` | shape[object Object] | 
+ `children` | true | `````` |  | 
+ `errorText` |  | ```undefined``` |  | 
+ `hint` |  | ```undefined``` |  | 
+ `input` |  | ```{}``` |  | 
+ `label` | true | `````` |  | 
+ `meta` |  | ```{}``` |  | 
 
 

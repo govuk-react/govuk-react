@@ -39,13 +39,15 @@ import { ButtonArrow } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `buttonColour` |  | ```undefined``` | string | Override for default button colour
- `buttonHoverColour` |  | ```undefined``` | string | Override for default button hover colour,<br/>which defaults to `buttonColour` darkened by 5%
- `buttonShadowColour` |  | ```undefined``` | string | Override for default button shadow colour,<br/>which defaults to `buttonColour` darkened by 15%
- `buttonTextColour` |  | ```undefined``` | string | Override for default button text colour,<br/>which defaults to govuk white
- `children` | true | `````` | node | Button text
- `disabled` |  | ```false``` | bool | Renders a disabled button and removes pointer events if set to true
- `icon` |  | ```undefined``` | node | Button icon
- `start` |  | ```false``` | bool | Renders a large button if set to true
+ `as` |  | ```undefined``` |  | 
+ `buttonColour` |  | ```undefined``` |  | Override for default button colour
+ `buttonHoverColour` |  | ```undefined``` |  | Override for default button hover colour,<br/>which defaults to `buttonColour` darkened by 5%
+ `buttonShadowColour` |  | ```undefined``` |  | Override for default button shadow colour,<br/>which defaults to `buttonColour` darkened by 15%
+ `buttonTextColour` |  | ```undefined``` |  | Override for default button text colour,<br/>which defaults to govuk white
+ `children` | true | `````` |  | Button text
+ `disabled` |  | ```false``` |  | Renders a disabled button and removes pointer events if set to true
+ `icon` |  | ```undefined``` |  | Button icon
+ `start` |  | ```false``` |  | Renders a large button if set to true
+ `to` |  | ```undefined``` |  | 
 
 
