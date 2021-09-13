@@ -1,10 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { GUTTER_HALF, MEDIA_QUERIES } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
 
-const StyledRow = styled('div')(
+const StyledRow: React.FC<GridRowProps> = styled('div')(
   {
     display: 'flex',
     flexDirection: 'column',
@@ -46,13 +45,13 @@ const StyledRow = styled('div')(
  * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
  *
  */
-const GridRow = (props) => <StyledRow {...props} />;
+const GridRow: React.FC<GridRowProps> = (props) => <StyledRow {...props} />;
 
-GridRow.propTypes = {
+interface GridRowProps {
   /**
    * One or more GridCol nodes
    */
-  children: PropTypes.node.isRequired,
-};
+  children: React.ReactNode;
+}
 
 export default GridRow;
