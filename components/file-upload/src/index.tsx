@@ -116,9 +116,9 @@ interface FileUploadProps extends LabelProps {
     visited?: boolean;
   };
   children: React.ReactNode;
-  acceptedFormats?: React.InputHTMLAttributes<HTMLInputElement>['accept'];
-  onChange?: React.InputHTMLAttributes<HTMLInputElement>['onChange'];
-  name?: React.InputHTMLAttributes<HTMLInputElement>['name'];
+  acceptedFormats?: string;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  name?: string;
 }
 
 export default FileUpload;
