@@ -9,21 +9,6 @@ const plugins = [
   ['@babel/plugin-transform-runtime', { helpers: false, regenerator: true }],
 ];
 
-const ignore = [
-  '**/stories.tsx',
-  '**/stories.ts',
-  '**/test.tsx',
-  '**/test.ts',
-  '**/stories.tsx',
-  '**/stories.ts',
-  '**/*.spec.tsx',
-  '**/*.spec.ts',
-  '**/*.test.tsx',
-  '**/*.test.ts',
-  '**/*.stories.tsx',
-  '**/*.stories.ts',
-];
-
 if (!esModules) {
   presets[0] = [
     '@babel/preset-env',
@@ -48,6 +33,5 @@ module.exports = (api) => {
   return {
     presets,
     plugins,
-    ignore,
   };
 };
