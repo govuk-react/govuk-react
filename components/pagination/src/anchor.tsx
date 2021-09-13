@@ -108,6 +108,7 @@ PaginationAnchor.propTypes = {
   previousPage: PropTypes.bool,
   nextPage: PropTypes.bool,
   pageTitle: PropTypes.string,
+  // TODO: #953
   to: PropTypes.string,
   target: PropTypes.string,
   href: PropTypes.string,
@@ -118,6 +119,7 @@ PaginationAnchor.defaultProps = {
   previousPage: undefined,
   nextPage: undefined,
   pageTitle: undefined,
+  // TODO: #953
   to: undefined,
   target: undefined,
   href: undefined,

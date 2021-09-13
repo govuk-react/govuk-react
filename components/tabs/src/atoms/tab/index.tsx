@@ -73,6 +73,7 @@ const Tab = (props: TabProps) => (
 Tab.defaultProps = {
   selected: false,
   as: undefined,
+  // TODO: #953
   to: undefined,
   href: undefined,
   onClick: undefined,
@@ -89,6 +90,7 @@ interface TabProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   onClick?: (...args: unknown[]) => unknown;
 
   as?: React.ElementType;
+  // TODO: #953
   to?: string;
 }
 

@@ -1,5 +1,6 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { BORDER_WIDTH_FORM_ELEMENT, FOCUSABLE, MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
@@ -8,8 +9,8 @@ import { darken, stripUnit } from 'polished';
 
 const BUTTON_SHADOW_SIZE = BORDER_WIDTH_FORM_ELEMENT;
 const RAW_SPACING_2 = SPACING_POINTS[2];
-const RAW_BORDER_WIDTH = stripUnit(BORDER_WIDTH_FORM_ELEMENT);
-const RAW_SHADOW = stripUnit(BUTTON_SHADOW_SIZE);
+const RAW_BORDER_WIDTH = Number(stripUnit(BORDER_WIDTH_FORM_ELEMENT));
+const RAW_SHADOW = Number(stripUnit(BUTTON_SHADOW_SIZE));
 const HALF_SHADOW = RAW_SHADOW / 2;
 const BASE_PAD = RAW_SPACING_2 - RAW_BORDER_WIDTH;
 
@@ -19,7 +20,7 @@ const StyledButton = styled('button').withConfig({
 })(
   ({ isStart }) =>
     typography.font({
-      size: isStart ? 24 : 19,
+      size: isStart ? '24' : '19',
       lineHeight: isStart ? '1' : '19px',
       weight: isStart ? 'bold' : undefined,
     }),
@@ -137,6 +138,50 @@ const ButtonContents = styled('span')({
   flexGrow: 1,
 });
 
+interface ButtonOwnProps extends WithWhiteSpaceProps {
+  /**
+   * Button text
+   */
+  children: React.ReactNode;
+  /**
+   * Button icon
+   */
+  icon?: React.ReactNode;
+  /**
+   * Renders a large button if set to true
+   */
+  start?: boolean;
+  /**
+   * Renders a disabled button and removes pointer events if set to true
+   */
+  disabled?: boolean;
+  /**
+   * Override for default button colour
+   */
+  buttonColour?: string;
+  /**
+   * Override for default button hover colour,
+   * which defaults to `buttonColour` darkened by 5%
+   */
+  buttonHoverColour?: string;
+  /**
+   * Override for default button shadow colour,
+   * which defaults to `buttonColour` darkened by 15%
+   */
+  buttonShadowColour?: string;
+  /**
+   * Override for default button text colour,
+   * which defaults to govuk white
+   */
+  buttonTextColour?: string;
+  as?: React.ElementType;
+}
+
+// TODO: #953 These are props that are likely to be passed when using the `as` prop
+interface ButtonProps extends ButtonOwnProps {
+  to?: string;
+}
+
 /**
  *
  * ### Usage
@@ -168,50 +213,14 @@ const ButtonContents = styled('span')({
  *   - see https://www.w3.org/TR/WCAG20-TECHS/G18.html
  *   - can use Polished's `readableColor` call, but translate their black to govuk's black
  */
-const Button = React.forwardRef(({ start, children, icon, ...props }, ref) => (
-  <StyledButton ref={ref} isStart={start} icon={icon} {...props}>
-    {icon ? <ButtonContents>{children}</ButtonContents> : children}
-    {icon}
-  </StyledButton>
-));
-
-Button.propTypes = {
-  /**
-   * Button text
-   */
-  children: PropTypes.node.isRequired,
-  /**
-   * Button icon
-   */
-  icon: PropTypes.node,
-  /**
-   * Renders a large button if set to true
-   */
-  start: PropTypes.bool,
-  /**
-   * Renders a disabled button and removes pointer events if set to true
-   */
-  disabled: PropTypes.bool,
-  /**
-   * Override for default button colour
-   */
-  buttonColour: PropTypes.string,
-  /**
-   * Override for default button hover colour,
-   * which defaults to `buttonColour` darkened by 5%
-   */
-  buttonHoverColour: PropTypes.string,
-  /**
-   * Override for default button shadow colour,
-   * which defaults to `buttonColour` darkened by 15%
-   */
-  buttonShadowColour: PropTypes.string,
-  /**
-   * Override for default button text colour,
-   * which defaults to govuk white
-   */
-  buttonTextColour: PropTypes.string,
-};
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ start, children, icon, ...props }: ButtonProps, ref) => (
+    <StyledButton ref={ref} isStart={start} icon={icon} {...props}>
+      {icon ? <ButtonContents>{children}</ButtonContents> : children}
+      {icon}
+    </StyledButton>
+  )
+);
 
 Button.defaultProps = {
   icon: undefined,
@@ -221,6 +230,9 @@ Button.defaultProps = {
   buttonHoverColour: undefined,
   buttonShadowColour: undefined,
   buttonTextColour: undefined,
+  as: undefined,
+  // TODO: #953
+  to: undefined,
 };
 
 export default Button;

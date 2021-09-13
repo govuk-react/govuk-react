@@ -12,7 +12,7 @@ interface LinkProps extends React.HTMLProps<HTMLAnchorElement> {
   /** ensure there is no "visited" style */
   noVisitedState?: boolean;
   /** if useing as={Link} */
-  to?: string;
+  to?: string; // TODO: #953
 }
 
 const Link: React.FC<LinkProps> = styled('a').withConfig({
