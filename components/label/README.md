@@ -31,7 +31,7 @@ import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Text for the label
- `error` |  | ```false``` | bool | Apply error state styling to the component
+ `children` | true | `````` |  | Text for the label
+ `error` |  | ```false``` |  | Apply error state styling to the component
 
 
