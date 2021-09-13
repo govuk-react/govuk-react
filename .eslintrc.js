@@ -4,7 +4,7 @@ const { dependencies: gukd } = require('./packages/govuk-react/package.json');
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'no-only-tests'],
   extends: [
     'airbnb',
     'sonar',
@@ -78,6 +78,12 @@ module.exports = {
           ...Object.keys(devDependencies),
           ...Object.keys(gukd).filter((dep) => dep.startsWith('@govuk-react/')),
         ],
+      },
+    },
+    {
+      files: ['**.test.[jt]s?(x)', '**.spec.[jt]s?(x)'],
+      rules: {
+        'no-only-tests/no-only-tests': 'error',
       },
     },
     {
