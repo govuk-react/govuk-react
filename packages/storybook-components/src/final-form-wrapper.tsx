@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 
 import Button from '@govuk-react/button';
 
-const FinalFormWrapper: React.FC = ({ children }) => (
+const FinalFormWrapper: React.FC = ({ children }: { children: React.ReactNode }) => (
   <Form
     onSubmit={action('submit')}
     render={({ handleSubmit, form: { reset }, submitting, pristine, values }) => (
@@ -28,9 +28,5 @@ const FinalFormWrapper: React.FC = ({ children }) => (
     )}
   />
 );
-
-FinalFormWrapper.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default FinalFormWrapper;
