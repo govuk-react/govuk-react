@@ -5,10 +5,9 @@
 // https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/overrides/_spacing.scss
 // https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/settings/_spacing.scss
 
-import PropTypes from 'prop-types';
-import { MEDIA_QUERIES, SPACING_MAP, SPACING_MAP_INDEX, SPACING_POINTS, WIDTHS } from '@govuk-react/constants';
+import { MEDIA_QUERIES, SPACING_MAP, SPACING_POINTS, WIDTHS } from '@govuk-react/constants';
 
-export function simple(size) {
+export function simple(size: number): number {
   const scale = SPACING_POINTS[Math.abs(size)];
   const polarity = size < 0 ? -1 : 1;
 
@@ -26,7 +25,17 @@ function styleForDirection(size, property, direction = null) {
   };
 }
 
-export function responsive({ size, property, direction = null, adjustment = 0 }) {
+export function responsive({
+  size,
+  property,
+  direction = null,
+  adjustment = 0,
+}: {
+  size: number;
+  property: string;
+  direction?: string | string[];
+  adjustment?: number;
+}): any {
   const scale = SPACING_MAP[Math.abs(size)];
   const polarity = size < 0 ? -1 : 1;
 
@@ -60,9 +69,12 @@ export function responsive({ size, property, direction = null, adjustment = 0 })
   };
 }
 
-export function responsiveMargin(value) {
+export function responsiveMargin(value: number | { size: any; direction: any; adjustment?: number }): any {
   if (Number.isInteger(value)) {
-    return responsive({ size: value, property: 'margin' });
+    return responsive({ size: Number(value), property: 'margin' });
+  }
+  if (typeof value !== 'object') {
+    throw Error('Expected padding value to be an object or integer');
   }
 
   const { size, direction, adjustment } = value;
@@ -75,9 +87,12 @@ export function responsiveMargin(value) {
   });
 }
 
-export function responsivePadding(value) {
+export function responsivePadding(value: number | { size: any; direction: any; adjustment?: number }): any {
   if (Number.isInteger(value)) {
-    return responsive({ size: value, property: 'padding' });
+    return responsive({ size: Number(value), property: 'padding' });
+  }
+  if (typeof value !== 'object') {
+    throw Error('Expected padding value to be an object or integer');
   }
 
   const { size, direction, adjustment } = value;
@@ -102,7 +117,7 @@ export function responsivePadding(value) {
 // - see `responsivePadding` and `responsiveMargin` calls
 // can be an array of numbers/objects
 
-export function withWhiteSpace(config: { margin?: any; padding?: any; marginBottom?: any } = {}) {
+export function withWhiteSpace(config: { margin?: any; padding?: any; marginBottom?: any } = {}): () => any[] {
   return ({
     margin = config.margin,
     padding = config.padding,
@@ -134,28 +149,30 @@ export function withWhiteSpace(config: { margin?: any; padding?: any; marginBott
   };
 }
 
-const Directions = PropTypes.oneOf(['all', 'top', 'right', 'bottom', 'left']);
+// TODO: this could be typed better, using the old proptypes as a guide:
 
-const SpacingShape = PropTypes.shape({
-  size: PropTypes.number.isRequired,
-  direction: PropTypes.oneOfType([Directions, PropTypes.arrayOf(Directions)]),
-  adjustment: PropTypes.number,
-});
+// const Directions = PropTypes.oneOf(['all', 'top', 'right', 'bottom', 'left']);
+
+// const SpacingShape = PropTypes.shape({
+//   size: PropTypes.number.isRequired,
+//   direction: PropTypes.oneOfType([Directions, PropTypes.arrayOf(Directions)]),
+//   adjustment: PropTypes.number,
+// });
 
 // `mb` (Margin Bottom) prop name comes from the naming convention used by https://github.com/jxnblk/grid-styled
-withWhiteSpace.propTypes = {
-  mb: PropTypes.oneOf(SPACING_MAP_INDEX),
-  margin: PropTypes.oneOfType([
-    PropTypes.number,
-    SpacingShape,
-    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, SpacingShape])),
-  ]),
-  padding: PropTypes.oneOfType([
-    PropTypes.number,
-    SpacingShape,
-    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, SpacingShape])),
-  ]),
-};
+// withWhiteSpace.propTypes = {
+//   mb: PropTypes.oneOf(SPACING_MAP_INDEX),
+//   margin: PropTypes.oneOfType([
+//     PropTypes.number,
+//     SpacingShape,
+//     PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, SpacingShape])),
+//   ]),
+//   padding: PropTypes.oneOfType([
+//     PropTypes.number,
+//     SpacingShape,
+//     PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, SpacingShape])),
+//   ]),
+// };
 
 export function withWidth(config: { width?: any; mediaQuery?: string; noDefault?: boolean } = {}): ({
   setWidth,
