@@ -20,8 +20,8 @@ import Results from './components/results';
 
 const Field: React.FC<FieldProps<any, any>> = ({ component: Component, ...props }) => (
   <FFField {...props}>
-    {({ input, meta, ...innerProps }) => (
-      <Component {...innerProps} input={input} meta={{ ...meta, touched: meta.touched && meta.submitFailed }} />
+    {({ input, meta }) => (
+      <Component {...props} input={input} meta={{ ...meta, touched: meta.touched && meta.submitFailed }} />
     )}
   </FFField>
 );

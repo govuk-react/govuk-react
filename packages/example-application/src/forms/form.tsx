@@ -100,7 +100,7 @@ const Form = () => {
               meta={{ error: errors?.description, touched: !!errors?.description }}
               input={{
                 value: description,
-                name: description,
+                name: 'description',
                 onChange: (e) => {
                   setDescription(e.target.value);
                 },

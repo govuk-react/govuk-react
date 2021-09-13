@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 import React from 'react';
 import { mount } from '@cypress/react';
 import App from '../index';
@@ -145,7 +147,7 @@ describe('When a user loads the application, clicks Start now,', () => {
               .should('be.visible')
               .and(($img) => {
                 const image = $img[0] as HTMLImageElement;
-                expect(image.naturalWidth).toEqual(276);
+                expect(image.naturalWidth).to.equal(276);
               });
             cy.get('@consoleError').should('not.be.called');
           });
