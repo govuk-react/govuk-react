@@ -17,7 +17,7 @@ import {
 } from './validators/validators';
 import Results from './components/results';
 
-const DateField = ({ input: { onChange, onBlur, ...input }, ...props }) => {
+const DateField = ({ input: { onChange, onBlur, ...input }, children, ...props }) => {
   const [value, setValue] = useState(input.value);
   return (
     <GovUK.DateField
@@ -30,7 +30,9 @@ const DateField = ({ input: { onChange, onBlur, ...input }, ...props }) => {
         onBlur: (newValue) => onBlur({ target: { value, name: input.name } }),
         ...input,
       }}
-    />
+    >
+      {children}
+    </GovUK.DateField>
   );
 };
 
