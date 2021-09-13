@@ -10,14 +10,18 @@ const plugins = [
 ];
 
 const ignore = [
-  '**/spec.[jt]s?(x)',
-  '**/test.[jt]s?(x)',
-  '**/stories.[jt]s?(x)',
-  '**/*.spec.[jt]s?(x)',
-  '**/*.test.[jt]s?(x)',
-  '**/*.stories.[jt]s?(x)',
-  '**/*-test.[jt]s?(x)',
-  '**/__tests__/',
+  '**/stories.tsx',
+  '**/stories.ts',
+  '**/test.tsx',
+  '**/test.ts',
+  '**/stories.tsx',
+  '**/stories.ts',
+  '**/*.spec.tsx',
+  '**/*.spec.ts',
+  '**/*.test.tsx',
+  '**/*.test.ts',
+  '**/*.stories.tsx',
+  '**/*.stories.ts',
 ];
 
 if (!esModules) {
