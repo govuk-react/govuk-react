@@ -62,7 +62,7 @@ const Anchor = styled('a')(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/back-link
  *
  */
-const BackLink = (props: BackLinkProps) => <Anchor {...props} />;
+const BackLink: React.FC<BackLinkProps> = (props) => <Anchor {...props} />;
 
 interface BackLinkProps {
   /** Text that will appear in the back link */
