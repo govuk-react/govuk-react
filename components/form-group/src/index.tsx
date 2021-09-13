@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { ERROR_COLOUR } from 'govuk-colours';
 import { spacing } from '@govuk-react/lib';
 import { BORDER_WIDTH_FORM_GROUP_ERROR, SPACING_POINTS } from '@govuk-react/constants';
 
-const FormGroup = styled('div')(
+const FormGroup: React.FC<FormGroupProps> = styled('div')(
   spacing.responsiveMargin({ size: 6, direction: 'bottom' }),
   {
     '& &:last-of-type': {
@@ -44,12 +43,12 @@ const FormGroup = styled('div')(
  *
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_form-group.scss
  */
-const FormGroupDocumented = (props) => <FormGroup {...props} />;
+const FormGroupDocumented: React.FC<FormGroupProps> = (props: FormGroupProps) => <FormGroup {...props} />;
 
-FormGroupDocumented.propTypes = {
-  children: PropTypes.node.isRequired,
-  error: PropTypes.bool,
-};
+interface FormGroupProps {
+  children?: React.ReactNode;
+  error?: boolean;
+}
 
 FormGroupDocumented.defaultProps = {
   error: false,
