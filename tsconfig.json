@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "types": ["cypress", "cypress-file-upload"],
     "paths": {
       "@govuk-react/*": [ "./components/*/src/index.tsx", "./packages/*/src/index.tsx" ],
       "govuk-react": ["./packages/govuk-react/src/index.ts"]

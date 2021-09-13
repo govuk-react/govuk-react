@@ -144,7 +144,8 @@ describe('When a user loads the application, clicks Start now,', () => {
             cy.get('[alt="Your pet"]')
               .should('be.visible')
               .and(($img) => {
-                expect($img[0].naturalWidth).to.equal(276);
+                const image = $img[0] as HTMLImageElement;
+                expect(image.naturalWidth).toEqual(276);
               });
             cy.get('@consoleError').should('not.be.called');
           });
