@@ -111,7 +111,6 @@ stories.add(
 const indexScript = () => {
   const filename = 'index.js';
   const contents = `import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { spacing, typography } from '@govuk-react/lib';
 
@@ -133,12 +132,6 @@ const ${componentName} = styled('div')(
  * - TODO: INSERT A REFERENCE TO EXTERNAL URL IF POSSIBLE
  */
 const ${componentName}Documented = props => <${componentName} {...props} />;
-
-${componentName}Documented.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-${componentName}.propTypes = ${componentName}Documented.propTypes;
 
 export { ${componentName}Documented };
 export default ${componentName};
