@@ -14,13 +14,13 @@ Simple
 ```jsx
 import { TextArea } from 'govuk-react'
 
-<TextArea name="group1">Description of what you saw</TextArea>
+<TextArea input={{ name: 'group1' }}>Description of what you saw</TextArea>
 ```
 
 TextArea with hint text
 
 ```jsx
-<TextArea name="group1" hint={['Enter as many words as you like']}>
+<TextArea input={{ name: 'group1' }} hint={['Enter as many words as you like']}>
   Description of what you saw
 </TextArea>
 ```
@@ -34,7 +34,7 @@ const meta = {
 };
 
 <TextArea
-   name="group1"
+   input={{ name: 'group1' }}
    hint={['Enter as many words as you like']}
    meta={meta}
  >
@@ -49,9 +49,9 @@ const meta = {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
- `hint` |  | ```undefined``` | string | 
- `input` |  | ```{}``` | shape[object Object] | 
- `meta` |  | ```{}``` | shape[object Object] | 
+ `children` | true | `````` |  | 
+ `hint` |  | ```undefined``` |  | 
+ `input` |  | ```{}``` |  | 
+ `meta` |  | ```{}``` |  | 
 
 

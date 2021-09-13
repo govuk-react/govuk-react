@@ -32,9 +32,9 @@ import { MultiChoice, Radio } from 'govuk-react';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
- `hint` |  | ```undefined``` | string | 
- `label` | true | `````` | node | 
- `meta` |  | ```{}``` | shape[object Object] | 
+ `children` | true | `````` |  | 
+ `hint` |  | ```undefined``` |  | 
+ `label` | true | `````` |  | 
+ `meta` |  | ```{}``` |  | 
 
 

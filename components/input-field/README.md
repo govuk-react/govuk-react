@@ -21,7 +21,7 @@ Input with hint text
 
 ```jsx
 <InputField
-   name="group1"
+   input={{ name: 'group1' }}
    hint={[
      'It’s on your National Insurance card, benefit letter, payslip or P60.',
      <br />,
@@ -41,7 +41,7 @@ Input with hint text & error
  };
 
  <InputField
-   name="group1"
+   input={{ name: 'group1' }}
    hint={[
      'It’s on your National Insurance card, benefit letter, payslip or P60.',
      <br />,
@@ -61,9 +61,9 @@ Input with hint text & error
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
- `hint` |  | ```undefined``` | node | 
- `input` |  | ```{}``` | shape[object Object] | 
- `meta` |  | ```{}``` | shape[object Object] | 
+ `children` | true | `````` |  | 
+ `hint` |  | ```undefined``` |  | 
+ `input` |  | ```{}``` |  | 
+ `meta` |  | ```{}``` |  | 
 
 

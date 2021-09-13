@@ -91,9 +91,9 @@ Radio with hint text
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
- `className` |  | ```undefined``` | string | 
- `hint` |  | ```undefined``` | node | 
- `inline` |  | ```false``` | bool | 
+ `children` | true | `````` |  | 
+ `className` |  | ```undefined``` |  | 
+ `hint` |  | ```undefined``` |  | 
+ `inline` |  | ```false``` |  | 
 
 
