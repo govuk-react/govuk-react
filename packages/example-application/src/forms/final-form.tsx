@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import type { FieldProps } from 'react-final-form';
+
 import React, { useState, useCallback } from 'react';
 import * as GovUK from 'govuk-react';
 import { Link } from 'react-router-dom';
@@ -16,20 +18,24 @@ import {
 
 import Results from './components/results';
 
-const Field = ({ component: Component, ...props }) => (
+const Field: React.FC<FieldProps<any, any>> = ({ component: Component, ...props }) => (
   <FFField {...props}>
-    {({ input, meta }) => (
-      <Component {...props} input={input} meta={{ ...meta, touched: meta.touched && meta.submitFailed }} />
+    {({ input, meta, ...innerProps }) => (
+      <Component {...innerProps} input={input} meta={{ ...meta, touched: meta.touched && meta.submitFailed }} />
     )}
   </FFField>
 );
 
 const Checkbox = ({ input, ...props }) => <GovUK.Checkbox {...input} {...props} />;
-const DateField = ({ meta, ...props }) => (
+const DateField: React.FC<
+  React.ComponentProps<typeof GovUK.DateField> & { meta: { touched: boolean; error: string } }
+> = ({ meta, ...props }) => (
   <GovUK.DateField errorText={meta.touched && meta.error ? meta.error : undefined} {...props} />
 );
 const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />;
-const FileUpload = ({ input: { value, onChange, ...input }, ...props }) => (
+const FileUpload: React.FC<
+  React.ComponentProps<typeof GovUK.FileUpload> & { input: { value: string; onChange: (any) => void } }
+> = ({ input: { value, onChange, ...input }, ...props }) => (
   <GovUK.FileUpload {...input} {...props} onChange={({ target }) => onChange(target.files)} />
 );
 
