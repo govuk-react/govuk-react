@@ -73,7 +73,7 @@ Input.defaultProps = {
   errorColor: undefined,
 };
 
-interface InputProps {
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   /**
    * HTML `<Input />` type
    */

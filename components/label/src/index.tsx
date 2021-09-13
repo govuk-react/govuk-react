@@ -1,8 +1,8 @@
 // https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
 import styled from 'styled-components';
 import React from 'react';
-import PropTypes from 'prop-types';
 import { ERROR_COLOUR } from 'govuk-colours';
 import { SPACING } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
@@ -54,18 +54,16 @@ const StyledLabel = styled('label')(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
  *
  */
-const Label = (props) => <StyledLabel {...props} />;
+const Label = (props: LabelProps) => <StyledLabel {...props} />;
 
-Label.propTypes = {
+export interface LabelProps extends WithWhiteSpaceProps {
   /** Text for the label */
-  children: PropTypes.node.isRequired,
+  children: React.ReactNode;
   /**
    * Apply error state styling to the component
    */
-  error: PropTypes.bool,
-  // NB these propTypes don't get documented :(
-  ...spacing.withWhiteSpace.propTypes,
-};
+  error?: boolean;
+}
 
 Label.defaultProps = {
   error: false,

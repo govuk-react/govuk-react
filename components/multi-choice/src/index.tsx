@@ -9,6 +9,7 @@
 
 // Only one is valid, but at least one must be selected.
 // Therefore validation around the set of radios is required.
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
 import React from 'react';
 import styled from 'styled-components';
@@ -80,7 +81,7 @@ MultiChoice.defaultProps = {
   meta: {},
 };
 
-interface MultiChoiceProps {
+interface MultiChoiceProps extends WithWhiteSpaceProps {
   meta?: {
     active?: boolean;
     dirty?: boolean;

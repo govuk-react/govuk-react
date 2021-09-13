@@ -1,4 +1,5 @@
 // https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/select
+import type { LabelProps } from '@govuk-react/label';
 
 import React from 'react';
 import styled from 'styled-components';
@@ -125,16 +126,9 @@ Select.defaultProps = {
   meta: {},
 };
 
-interface SelectProps {
+interface SelectProps extends LabelProps {
   hint?: React.ReactNode;
-  input?: {
-    name?: string;
-    onBlur?: (...args: unknown[]) => unknown;
-    onChange?: (...args: unknown[]) => unknown;
-    onFocus?: (...args: unknown[]) => unknown;
-    // eslint-disable-next-line react/forbid-prop-types
-    value?: any;
-  };
+  input?: React.SelectHTMLAttributes<HTMLSelectElement>;
   meta?: {
     active?: boolean;
     dirty?: boolean;

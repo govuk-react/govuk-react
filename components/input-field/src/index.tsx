@@ -1,5 +1,7 @@
 // https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/input/_input.scss
 // https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
+import type { LabelProps } from '@govuk-react/label';
+import type { InputProps } from '@govuk-react/input';
 
 import React from 'react';
 import Label from '@govuk-react/label';
@@ -76,16 +78,9 @@ InputField.defaultProps = {
   meta: {},
 };
 
-interface InputFieldProps {
+interface InputFieldProps extends LabelProps {
   hint?: React.ReactNode;
-  input?: {
-    name?: string;
-    onBlur?: (...args: unknown[]) => unknown;
-    onChange?: (...args: unknown[]) => unknown;
-    onFocus?: (...args: unknown[]) => unknown;
-    // eslint-disable-next-line react/forbid-prop-types
-    value?: any;
-  };
+  input?: InputProps;
   meta?: {
     active?: boolean;
     dirty?: boolean;
