@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import * as GovUK from 'govuk-react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 const Results = ({
   backLink,
@@ -14,13 +13,13 @@ const Results = ({
   hasMultiplePets,
   petPhoto,
   petPhotoString,
-}) => {
-  const [photoString, setPhotoString] = useState(petPhotoString);
+}: ResultsProps) => {
+  const [photoString, setPhotoString] = useState<string>(petPhotoString);
   useEffect(() => {
     if (petPhoto && petPhoto[0]) {
       const reader = new FileReader();
       reader.addEventListener('load', () => {
-        setPhotoString(reader.result);
+        setPhotoString(reader.result as string);
       });
       reader.readAsDataURL(petPhoto[0]);
     }
@@ -53,22 +52,23 @@ const Results = ({
   );
 };
 
-Results.propTypes = {
-  backLink: PropTypes.string.isRequired,
-  onBackClick: PropTypes.func.isRequired,
-  firstName: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  nationality: PropTypes.arrayOf(PropTypes.string).isRequired,
-  dob: PropTypes.shape({
-    year: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    month: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    day: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  }).isRequired,
-  animal: PropTypes.string.isRequired,
-  hasMultiplePets: PropTypes.string.isRequired,
-  petPhoto: PropTypes.string,
-  petPhotoString: PropTypes.string,
-};
+interface ResultsProps {
+  backLink: string;
+  onBackClick(...args: unknown[]): unknown;
+  firstName: string;
+  description: string;
+  nationality: string[];
+  dob: {
+    year?: string | number;
+    month?: string | number;
+    day?: string | number;
+  };
+  animal: string;
+  hasMultiplePets: string;
+  petPhoto?: FileList;
+  petPhotoString?: string;
+}
+
 Results.defaultProps = {
   petPhoto: undefined,
   petPhotoString: undefined,
