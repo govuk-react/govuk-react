@@ -70,7 +70,7 @@ interface BackLinkProps {
   /**
    * Custom function to run when the `onClick` event is fired
    */
-  onClick?(...args: unknown[]): unknown;
+  onClick?: (...args: unknown[]) => unknown;
   href?: string;
   as?: React.ElementType;
   to?: string;
