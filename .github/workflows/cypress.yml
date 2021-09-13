@@ -18,4 +18,5 @@ jobs:
       - run: npm i
       - uses: cypress-io/github-action@v2
         with:
+          install: false
           command: npm run test:cypress
