@@ -10,6 +10,7 @@ export default {
 const Template = (args) => <Component {...args} />;
 Template.parameters = {
   layout: 'fullscreen',
+  chromatic: { disableSnapshot: false },
   previewTabs: {
     docs: { hidden: true },
     'storybook/docs/panel': { hidden: true },
