@@ -1,3 +1,5 @@
+import type { LabelProps } from '@govuk-react/label';
+
 import React from 'react';
 import styled from 'styled-components';
 import Label from '@govuk-react/label';
@@ -77,14 +79,7 @@ const FileUpload = React.forwardRef(
       <LabelText>{children}</LabelText>
       {hint && <HintText>{hint}</HintText>}
       {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
-      <StyledInput
-        type="file"
-        accept={acceptedFormats}
-        error={meta.touched && !!meta.error}
-        onChange={onChange}
-        name={name}
-        ref={ref}
-      />
+      <StyledInput type="file" accept={acceptedFormats} onChange={onChange} name={name} ref={ref} />
     </Label>
   )
 );
@@ -97,7 +92,7 @@ FileUpload.defaultProps = {
   name: undefined,
 };
 
-interface FileUploadProps {
+interface FileUploadProps extends LabelProps {
   /**
    * Optional hint text
    */
@@ -122,7 +117,7 @@ interface FileUploadProps {
   };
   children: React.ReactNode;
   acceptedFormats?: string;
-  onChange?: (...args: unknown[]) => unknown;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
   name?: string;
 }
 

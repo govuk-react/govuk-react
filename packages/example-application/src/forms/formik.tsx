@@ -21,20 +21,22 @@ const Field = ({ component: Component, ...props }) => (
   <FormikField {...props}>{({ field, meta }) => <Component {...props} input={field} meta={meta} />}</FormikField>
 );
 
-const FileField = ({ name, validate, ...props }) => (
+const FileField = ({ name, validate, children, ...props }) => (
   <FormikField name={name} validate={validate}>
     {({ field: { value, onChange, ...input } }) => (
       <GovUK.FileUpload
         {...input}
         onChange={({ target }) => onChange(target.files)} // instead of the default target.value
         {...props}
-      />
+      >
+        {children}
+      </GovUK.FileUpload>
     )}
   </FormikField>
 );
 
 const Checkbox = ({ input, ...props }) => <GovUK.Checkbox {...input} {...props} />;
-const DateField = ({ meta, input: { onChange, onBlur, ...input }, ...props }) => (
+const DateField = ({ meta, input: { onChange, onBlur, ...input }, children, ...props }) => (
   <GovUK.DateField
     errorText={meta.touched && meta.error ? meta.error : undefined}
     {...props}
@@ -43,7 +45,9 @@ const DateField = ({ meta, input: { onChange, onBlur, ...input }, ...props }) =>
       onBlur: (value) => onBlur({ target: { value, name: props.name } }),
       ...input,
     }}
-  />
+  >
+    {children}
+  </GovUK.DateField>
 );
 const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />;
 
@@ -95,7 +99,7 @@ const FinalForm = () => {
                       description="Please address the following issues"
                       errors={errorsToShow.map((key) => ({
                         targetName: key,
-                        text: errors[key],
+                        text: Array.isArray(errors[key]) ? errors[key][0] : errors[key],
                       }))}
                     />
                   )}
@@ -124,7 +128,11 @@ const FinalForm = () => {
                       <GovUK.Label mb={4}>
                         <GovUK.LabelText>Nationality</GovUK.LabelText>
                         {touched?.nationality && errors?.nationality && (
-                          <GovUK.ErrorText>{errors?.nationality}</GovUK.ErrorText>
+                          <GovUK.ErrorText>
+                            {Array.isArray(errors?.nationality)
+                              ? String(errors?.nationality[0])
+                              : String(errors?.nationality)}
+                          </GovUK.ErrorText>
                         )}
                         <Field
                           type="checkbox"
@@ -195,7 +203,7 @@ const FinalForm = () => {
                     <GovUK.MultiChoice
                       mb={8}
                       label="Do you have more than one pet?"
-                      meta={{ error: errors?.hasMultiplePets, touched: touched?.hasMultiplePets }}
+                      meta={{ error: errors?.hasMultiplePets, touched: !!touched?.hasMultiplePets }}
                     >
                       <Field
                         component={Radio}

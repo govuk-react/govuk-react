@@ -21,14 +21,22 @@ const toggle = (array, newItem) =>
   array.includes(newItem) ? array.filter((existingItem) => existingItem !== newItem) : [...array, newItem];
 
 const Form = () => {
-  const [firstName, setFirstName] = useState('');
-  const [description, setDescription] = useState('');
-  const [nationality, setNationality] = useState([]);
+  const [firstName, setFirstName] = useState<string>('');
+  const [description, setDescription] = useState<string>('');
+  const [nationality, setNationality] = useState<string[]>([]);
   const [dob, setDob] = useState({ day: '', month: '', year: '' });
-  const [animal, setAnimal] = useState();
-  const [hasMultiplePets, setHasMultiplePets] = useState();
-  const [petPhoto, setPetPhoto] = useState();
-  const [errors, setErrors] = useState();
+  const [animal, setAnimal] = useState<string>();
+  const [hasMultiplePets, setHasMultiplePets] = useState<string>();
+  const [petPhoto, setPetPhoto] = useState<FileList>();
+  const [errors, setErrors] = useState<{
+    firstName?: string;
+    description?: string;
+    nationality?: string;
+    dob?: string;
+    animal?: string;
+    petPhoto?: string;
+    hasMultiplePets?: string;
+  }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const handleSubmit = useCallback(() => {
@@ -88,11 +96,11 @@ const Form = () => {
             </GovUK.Label>
             <GovUK.TextArea
               mb={8}
-              name="description"
               hint="Enter as many words as you like"
               meta={{ error: errors?.description, touched: !!errors?.description }}
               input={{
                 value: description,
+                name: 'description',
                 onChange: (e) => {
                   setDescription(e.target.value);
                 },
@@ -140,10 +148,9 @@ const Form = () => {
             <GovUK.Fieldset.Legend size="M">About your pet</GovUK.Fieldset.Legend>
             <GovUK.Select
               mb={8}
-              name="animal"
               label="What animal is your pet"
               hint="A cat for example"
-              input={{ onChange: (e) => setAnimal(e.target.value), value: animal }}
+              input={{ onChange: (e) => setAnimal(e.target.value), value: animal, name: 'animal' }}
               meta={{ error: errors?.animal, touched: !!errors?.animal }}
             >
               <option value="">Please select...</option>

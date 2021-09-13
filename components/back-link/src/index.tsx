@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { BLACK } from 'govuk-colours';
 import { SPACING_POINTS } from '@govuk-react/constants';
@@ -63,22 +62,26 @@ const Anchor = styled('a')(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/back-link
  *
  */
-const BackLink = (props) => <Anchor {...props} />;
+const BackLink = (props: BackLinkProps) => <Anchor {...props} />;
 
-BackLink.propTypes = {
+interface BackLinkProps {
   /** Text that will appear in the back link */
-  children: PropTypes.string,
+  children?: string;
   /**
    * Custom function to run when the `onClick` event is fired
    */
-  onClick: PropTypes.func,
-  href: PropTypes.string,
-};
+  onClick?: (...args: unknown[]) => unknown;
+  href?: string;
+  as?: React.ElementType;
+  to?: string;
+}
 
 BackLink.defaultProps = {
   children: 'Back',
   onClick: undefined,
   href: undefined,
+  as: undefined,
+  to: undefined,
 };
 
 export default BackLink;
