@@ -33,13 +33,13 @@ const ErrorSummaryExample = () => (
       errors={errors}
     />
     <InputField
-      name="national-insurance-number"
+      input={{ name: 'national-insurance-number' }}
       hint="It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
     >
       National Insurance number
     </InputField>
     <br />
-    <TextArea name="description">Description of what you saw</TextArea>
+    <TextArea input={{ name: 'description' }}>Description of what you saw</TextArea>
   </div>
 );
 

@@ -12,16 +12,16 @@ export default {
   component: TextArea,
 };
 
-export const Default = () => <TextArea name="group1">Description of what you saw</TextArea>;
+export const Default = () => <TextArea input={{ name: 'group1' }}>Description of what you saw</TextArea>;
 
 export const TextareaWithHintText = () => (
-  <TextArea name="group1" hint={['Enter as many words as you like']}>
+  <TextArea input={{ name: 'group1' }} hint={['Enter as many words as you like']}>
     Description of what you saw
   </TextArea>
 );
 
 export const TextareaWithHintTextError = () => (
-  <TextArea name="group1" hint={['Enter as many words as you like']} meta={meta}>
+  <TextArea input={{ name: 'group1' }} hint={['Enter as many words as you like']} meta={meta}>
     Description of what you saw
   </TextArea>
 );

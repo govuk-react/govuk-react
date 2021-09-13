@@ -45,13 +45,13 @@ const TextAreaField = styled('textarea')(
  * ```jsx
  * import { TextArea } from 'govuk-react'
  *
- * <TextArea name="group1">Description of what you saw</TextArea>
+ * <TextArea input={{ name: 'group1' }}>Description of what you saw</TextArea>
  * ```
  *
  * TextArea with hint text
  *
  * ```jsx
- * <TextArea name="group1" hint={['Enter as many words as you like']}>
+ * <TextArea input={{ name: 'group1' }} hint={['Enter as many words as you like']}>
  *   Description of what you saw
  * </TextArea>
  * ```
@@ -65,7 +65,7 @@ const TextAreaField = styled('textarea')(
  * };
  *
  * <TextArea
- *    name="group1"
+ *    input={{ name: 'group1' }}
  *    hint={['Enter as many words as you like']}
  *    meta={meta}
  *  >
@@ -93,16 +93,9 @@ TextArea.defaultProps = {
   meta: {},
 };
 
-interface TextAreaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+interface TextAreaProps {
   hint?: React.ReactNode;
-  input?: {
-    name?: string;
-    onBlur?: (...args: unknown[]) => unknown;
-    onChange?: (...args: unknown[]) => unknown;
-    onFocus?: (...args: unknown[]) => unknown;
-    // eslint-disable-next-line react/forbid-prop-types
-    value?: any;
-  };
+  input?: React.TextareaHTMLAttributes<HTMLTextAreaElement>;
   meta?: {
     active?: boolean;
     dirty?: boolean;
