@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { BORDER_WIDTH_WIDE, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 import { BORDER_COLOUR } from 'govuk-colours';
 
-const InsetText = styled('div')(
+const InsetText: React.FC<InsetTextProps> = styled('div')(
   typography.font({ size: 19 }),
   typography.textColour,
   {
@@ -43,13 +42,10 @@ const InsetText = styled('div')(
  * - https://design-system.service.gov.uk/components/inset-text/
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/inset-text/_inset-text.scss
  */
-const DocumentedInsetText = (props) => <InsetText {...props} />;
+const DocumentedInsetText: React.FC<InsetTextProps> = (props: InsetTextProps) => <InsetText {...props} />;
 
-DocumentedInsetText.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-InsetText.propTypes = DocumentedInsetText.propTypes;
-
+interface InsetTextProps {
+  children: React.ReactNode;
+}
 export { DocumentedInsetText };
 export default InsetText;
