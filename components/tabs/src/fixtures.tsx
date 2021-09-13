@@ -1,6 +1,5 @@
 /* eslint-disable max-classes-per-file */
 import React, { Component, useLayoutEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import { BREAKPOINTS } from '@govuk-react/constants';
 import { H2, H4 } from '@govuk-react/heading';
 import SectionBreak from '@govuk-react/section-break';
@@ -31,9 +30,9 @@ const sharedDefaultProps = {
   defaultIndex: 0,
 };
 
-const sharedPropTypes = {
-  defaultIndex: PropTypes.number,
-};
+interface SharedProps {
+  defaultIndex?: number;
+}
 
 const tableHead = (
   <Table.Row>
@@ -78,16 +77,14 @@ const arrTabularTabs = [
   },
 ];
 
-class TableTabs extends Component<Record<string, never>, { tabIndex: number }> {
+class TableTabs extends Component<SharedProps, { tabIndex: number }> {
   static defaultProps = sharedDefaultProps;
-
-  static propTypes = sharedPropTypes;
 
   setTabIndex;
 
   handleClick;
 
-  constructor(props: Record<string, never>) {
+  constructor(props: SharedProps) {
     super(props);
     this.state = { tabIndex: props.defaultIndex };
     this.setTabIndex = setTabIndex.bind(this);
@@ -131,16 +128,14 @@ class TableTabs extends Component<Record<string, never>, { tabIndex: number }> {
 }
 
 /* eslint-disable-next-line react/no-multi-comp */
-class SimpleTabs extends Component<Record<string, never>, { tabIndex: number }> {
+class SimpleTabs extends Component<SharedProps, { tabIndex: number }> {
   static defaultProps = sharedDefaultProps;
-
-  static propTypes = sharedPropTypes;
 
   setTabIndex;
 
   handleClick;
 
-  constructor(props: Record<string, never>) {
+  constructor(props: SharedProps) {
     super(props);
     this.state = { tabIndex: props.defaultIndex };
     this.setTabIndex = setTabIndex.bind(this);
@@ -193,16 +188,14 @@ const arrSimpleMapped = [
 ];
 
 /* eslint-disable-next-line react/no-multi-comp */
-class SimpleMapTabs extends Component<Record<string, never>, { tabIndex: number }> {
+class SimpleMapTabs extends Component<SharedProps, { tabIndex: number }> {
   static defaultProps = sharedDefaultProps;
-
-  static propTypes = sharedPropTypes;
 
   setTabIndex;
 
   handleClick;
 
-  constructor(props: Record<string, never>) {
+  constructor(props: SharedProps) {
     super(props);
     this.state = { tabIndex: props.defaultIndex };
     this.setTabIndex = setTabIndex.bind(this);
@@ -253,8 +246,6 @@ const arrProposedBabel = [
 class ProposedClassPropertiesPlugin extends Component<{ defaultIndex: number }, { tabIndex: number }> {
   static defaultProps = sharedDefaultProps;
 
-  static propTypes = sharedPropTypes;
-
   setTabIndex = setTabIndex;
 
   handleClick = handleClick;
@@ -294,7 +285,7 @@ class ProposedClassPropertiesPlugin extends Component<{ defaultIndex: number }, 
   }
 }
 
-const HooksExample: React.FC<{ defaultIndex: number }> = ({ defaultIndex }) => {
+const HooksExample: React.FC<SharedProps> = ({ defaultIndex }: SharedProps) => {
   const [tabIndex, setHooksTabIndex] = React.useState(defaultIndex);
 
   const handleTabChange = (newTabIndex) => setHooksTabIndex(newTabIndex);
@@ -351,8 +342,6 @@ const HooksExample: React.FC<{ defaultIndex: number }> = ({ defaultIndex }) => {
 };
 
 HooksExample.defaultProps = sharedDefaultProps;
-
-HooksExample.propTypes = sharedPropTypes;
 
 // This example demonstrates one way to use react-router with tabs.
 // The use of useMedia means it is not suitable for server-side rendering.
