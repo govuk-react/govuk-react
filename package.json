@@ -1,7 +1,6 @@
 {
   "name": "@govuk-react/monorepo",
   "scripts": {
-    "bootstrap": "lerna bootstrap",
     "build:dist": "yarn build:es && rimraf dist && webpack -p packages/govuk-react/es/index.js --devtool source-map --output-filename index.js",
     "build:es": "npm run build:es --workspaces",
     "build:lib": "npm run build:lib --workspaces",
