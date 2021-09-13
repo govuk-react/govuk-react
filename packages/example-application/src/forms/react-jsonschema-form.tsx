@@ -115,10 +115,24 @@ const validate = (formData, errors) => {
   return errors;
 };
 
+interface SubmittedData {
+  0: {
+    firstName: string;
+    description: string;
+    nationality: [string];
+    dob: string;
+  };
+  1: {
+    animal: string;
+    hasMultiplePets: string;
+    petPhoto: string;
+  };
+}
+
 const ReactJSONSchemaForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
-  const [submittedData, setSubmittedData] = useState();
+  const [submittedData, setSubmittedData] = useState<SubmittedData>();
   const handleFormSubmit = useCallback(
     ({ formData }, e) => {
       if (isSubmitting) return;
@@ -151,11 +165,11 @@ const ReactJSONSchemaForm = () => {
           </Form>
         </>
       )}
-      {hasSubmitted && (
+      {hasSubmitted && submittedData && (
         <Results
           backLink="/forms/react-jsonschema-form"
           onBackClick={() => setHasSubmitted(false)}
-          firstName={submittedData[0].firstName}
+          firstName={submittedData?.['0'].firstName}
           description={submittedData[0].description}
           nationality={submittedData[0].nationality}
           dob={dobStringToObj(submittedData[0].dob)}
