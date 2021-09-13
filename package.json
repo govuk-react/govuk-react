@@ -22,7 +22,6 @@
     "docs": "yarn docs:components && concat ./components/*/README.md -o './API.md'",
     "eslint:fix": "eslint --fix \"./{components,packages}/*/src/**/*.{js,ts,tsx}\"",
     "eslint": "eslint \"./{components,packages}/*/src/**/*.{js,ts,tsx}\"",
-    "pack": "lerna exec --parallel -- npm pack",
     "start": "cd packages/storybook && npm start",
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand",
     "test:snapshot": "yarn test:unit -u",
