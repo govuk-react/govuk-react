@@ -35,6 +35,9 @@
   "description": "A port of the govuk-frontend components for React using styled-components.",
   "main": "lib/index.js",
   "module": "es/index.js",
+  "resolutions": {
+    "@types/react": "^16.8.4"
+  },
   "dependencies": {
     "govuk-colours": "^1.1.0"
   },

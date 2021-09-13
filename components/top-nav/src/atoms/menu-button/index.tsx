@@ -50,7 +50,7 @@ MenuButton.propTypes = {
 MenuButton.defaultProps = {
   title: 'Menu',
   open: false,
-  onClick: () => {},
+  onClick: () => null,
 };
 
 export default MenuButton;

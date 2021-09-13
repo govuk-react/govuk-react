@@ -10,7 +10,7 @@ describe('Fieldset.Legend', () => {
   beforeEach(() => {
     jest.resetModules();
     // eslint-disable-next-line no-console
-    console.error = () => {};
+    console.error = () => null;
   });
 
   afterEach(() => {

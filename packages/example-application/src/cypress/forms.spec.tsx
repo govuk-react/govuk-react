@@ -1,6 +1,4 @@
-/// <reference types="cypress" />
-
-import React from 'react';
+import * as React from 'react';
 import { mount } from '@cypress/react';
 import App from '../index';
 
