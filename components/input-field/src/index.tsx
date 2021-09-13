@@ -24,7 +24,7 @@ import Input from '@govuk-react/input';
  *
  * ```jsx
  * <InputField
- *    name="group1"
+ *    input={{ name: 'group1' }}
  *    hint={[
  *      'It’s on your National Insurance card, benefit letter, payslip or P60.',
  *      <br />,
@@ -44,7 +44,7 @@ import Input from '@govuk-react/input';
  *  };
  *
  *  <InputField
- *    name="group1"
+ *    input={{ name: 'group1' }}
  *    hint={[
  *      'It’s on your National Insurance card, benefit letter, payslip or P60.',
  *      <br />,
