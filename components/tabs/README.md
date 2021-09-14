@@ -133,6 +133,6 @@ const App = ({ defaultIndex }) => {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | child components that will appear in the Tabs section
+ `children` | true | `````` |  | child components that will appear in the Tabs section
 
 

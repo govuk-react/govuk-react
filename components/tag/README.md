@@ -25,6 +25,6 @@ import { Tag } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `inactive` |  | ```false``` | bool | 
+ `inactive` |  | ```false``` |  | 
 
 

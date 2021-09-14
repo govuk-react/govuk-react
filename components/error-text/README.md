@@ -29,6 +29,6 @@ import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | string | Text to describe the error
+ `children` | true | `````` |  | Text to describe the error
 
 

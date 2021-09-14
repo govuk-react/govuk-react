@@ -26,7 +26,7 @@ import { SkipLink } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | ```'Skip to main content'``` | node | 
- `href` |  | ```'#content'``` | string | 
+ `children` |  | ```'Skip to main content'``` |  | 
+ `href` |  | ```'#content'``` |  | 
 
 

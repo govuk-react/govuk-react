@@ -85,7 +85,7 @@ import { Link } from 'react-router-dom';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Breadcrumbs contents
+ `children` | true | `````` |  | Breadcrumbs contents
 
 
 
@@ -178,8 +178,8 @@ import { H1 } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | string | Text to be rendered as a caption
- `size` |  | ```'XL'``` | enum(...Object.keys(CAPTION_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE).map((key) => Number(key))) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `XL`, `L`, `M`<br/>   or a numeric size that fits in the GDS font scale list
+ `children` | true | `````` |  | Text to be rendered as a caption
+ `size` |  | ```'XL'``` |  | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `XL`, `L`, `M`<br/>   or a numeric size that fits in the GDS font scale list
 
 
 
@@ -340,9 +340,9 @@ import { Details } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | ```undefined``` | node | The content that will be displayed when details are revealed
- `open` |  | ```false``` | bool | Flag to indicate whether to show component open by default
- `summary` | true | `````` | node | Text for the details summary link e.g. Help with nationality
+ `children` |  | ```undefined``` |  | The content that will be displayed when details are revealed
+ `open` |  | ```false``` |  | Flag to indicate whether to show component open by default
+ `summary` | true | `````` |  | Text for the details summary link e.g. Help with nationality
 
 
 
@@ -425,9 +425,9 @@ const otherData = [
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `from` |  | ```undefined``` | arrayOf[object Object] | Array of JSX nodes to render underneath the `from:` title
- `other` |  | ```undefined``` | arrayOf[object Object] | Array of Objects for any additional items, each object should contain an `id`, `title` and `content` property
- `partOf` |  | ```undefined``` | arrayOf[object Object] | Array of JSX nodes to render underneath the `part of:` title
+ `from` |  | ```undefined``` |  | Array of JSX nodes to render underneath the `from:` title
+ `other` |  | ```undefined``` |  | Array of Objects for any additional items, each object should contain an `id`, `title` and `content` property
+ `partOf` |  | ```undefined``` |  | Array of JSX nodes to render underneath the `part of:` title
 
 
 
@@ -529,7 +529,7 @@ import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | string | Text to describe the error
+ `children` | true | `````` |  | Text to describe the error
 
 
 
@@ -577,7 +577,7 @@ Custom legend
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
+ `children` | true | `````` |  | 
 
 
 
@@ -744,10 +744,10 @@ NB <Footer.Link /> is styled extention of @govuk-react/link
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | ```undefined``` | node | Footer navigation links
- `container` |  | ```Footer.WidthContainer``` | elementType | Override the default footer container component.<br/>`children`, `copyright` and `meta` will be placed inside this component.
- `copyright` |  | ```undefined``` | shape[object Object] | Copyright information
- `meta` |  | ```undefined``` | node | Meta text and links
+ `children` |  | ```undefined``` |  | Footer navigation links
+ `container` |  | ```Footer.WidthContainer``` |  | Override the default footer container component.<br/>`children`, `copyright` and `meta` will be placed inside this component.
+ `copyright` |  | ```undefined``` |  | Copyright information
+ `meta` |  | ```undefined``` |  | Meta text and links
 
 
 
@@ -779,8 +779,8 @@ import { FormGroup, Checkbox } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
- `error` |  | ```false``` | bool | 
+ `children` |  | `````` |  | 
+ `error` |  | ```false``` |  | 
 
 
 
@@ -879,15 +879,15 @@ import { GridRow , GridCol } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | ```undefined``` | node | GridCol content
- `columnFull` |  | ```false``` | bool | Dimension setting for the column (deprecated)
- `columnOneHalf` |  | ```false``` | bool | Dimension setting for the column (deprecated)
- `columnOneQuarter` |  | ```false``` | bool | Dimension setting for the column (deprecated)
- `columnOneThird` |  | ```false``` | bool | Dimension setting for the column (deprecated)
- `columnThreeQuarters` |  | ```false``` | bool | Dimension setting for the column (deprecated)
- `columnTwoThirds` |  | ```false``` | bool | Dimension setting for the column (deprecated)
- `setDesktopWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set desktop column to width using value or descriptive string<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
- `setWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set column to width using value or descriptive string<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
+ `children` |  | ```undefined``` |  | 
+ `columnFull` |  | ```false``` |  | 
+ `columnOneHalf` |  | ```false``` |  | 
+ `columnOneQuarter` |  | ```false``` |  | 
+ `columnOneThird` |  | ```false``` |  | 
+ `columnThreeQuarters` |  | ```false``` |  | 
+ `columnTwoThirds` |  | ```false``` |  | 
+ `setDesktopWidth` |  | ```undefined``` |  | 
+ `setWidth` |  | ```undefined``` |  | 
 
 
 
@@ -926,11 +926,6 @@ See GridCol for extended usage.
 
 - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_grid_layout.scss
 - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | One or more GridCol nodes
 
 
 
@@ -997,9 +992,9 @@ Props pass through
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `as` |  | ```undefined``` | string | Semantic heading tag to use (e.g. 'h3')<br/>By default element used will be an 'h1'
- `level` |  | ```undefined``` | number | Semantic heading level value between 1 and 6 (deprecated)
- `size` |  | ```'XLARGE'``` | enum(...Object.keys(HEADING_SIZES) \| ...Object.keys(TYPOGRAPHY_SCALE)) | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
+ `as` |  | ```undefined``` |  | Semantic heading tag to use (e.g. 'h3')<br/>By default element used will be an 'h1'
+ `level` |  | ```undefined``` |  | Semantic heading level value between 1 and 6 (deprecated)
+ `size` |  | ```'XLARGE'``` |  | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
 
 
 
@@ -1034,7 +1029,7 @@ import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Text for the hint
+ `children` | true | `````` |  | Text for the hint
 
 
 
@@ -1174,7 +1169,7 @@ import { InsetText } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
+ `children` | true | `````` |  | 
 
 
 
@@ -1281,7 +1276,7 @@ import { LeadParagraph } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Text in the Lead paragraph
+ `children` | true | `````` |  | Text in the Lead paragraph
 
 
 
@@ -1367,7 +1362,7 @@ import { ListItem, Link } from 'govuk-react';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | List item content
+ `children` | true | `````` |  | List item content
 
 
 
@@ -1639,13 +1634,13 @@ import { Page, BackLink, H1 } from 'govuk-react';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `beforeChildren` |  | ```undefined``` | node | Content that needs to appear outside the main page wrapper (see `main`).<br/>For example: A back link component, breadcrumbs, phase banner component
- `children` |  | ```undefined``` | node | Page contents
- `container` |  | ```Page.WidthContainer``` | func | Override the default page container component.<br/>`beforeChildren` and `children` (wrapped in `main`) will be placed inside this component.
- `footer` |  | ```undefined``` | node | Override the default page footer component.
- `header` |  | ```<TopNav />``` | node | Override the default page header component.
- `id` |  | ```'content'``` | string | ID for page content
- `main` |  | ```Page.Main``` | func | Override the default wrapper component for main page content
+ `beforeChildren` |  | ```undefined``` |  | Content that needs to appear outside the main page wrapper (see `main`).<br/>For example: A back link component, breadcrumbs, phase banner component
+ `children` |  | ```undefined``` |  | Page contents
+ `container` |  | ```Page.WidthContainer``` |  | Override the default page container component.<br/>`beforeChildren` and `children` (wrapped in `main`) will be placed inside this component.
+ `footer` |  | ```undefined``` |  | Override the default page footer component.
+ `header` |  | ```<TopNav />``` |  | Override the default page header component.
+ `id` |  | ```'content'``` |  | ID for page content
+ `main` |  | ```Page.Main``` |  | Override the default wrapper component for main page content
 
 
 
@@ -1680,7 +1675,7 @@ import { Pagination } from 'govuk-react';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
+ `children` | true | `````` |  | 
 
 
 
@@ -1794,9 +1789,9 @@ const ReactRouterLinkRenderer = ({ href, children }) => (
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | ```''``` | node | Text content supporting markdown
- `linkRenderer` |  | ```(props) => <Link {...props} />``` | func | 
- `supportingText` |  | ```false``` | bool | Is this paragraph supporting text for another element?
+ `children` |  | ```''``` |  | Text content supporting markdown
+ `linkRenderer` |  | ```(props) => <Link {...props} />``` |  | 
+ `supportingText` |  | ```false``` |  | Is this paragraph supporting text for another element?
 
 
 
@@ -1839,8 +1834,8 @@ Beta
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Children text and links
- `level` | true | `````` | string | Alpha or beta banner
+ `children` | true | `````` |  | Children text and links
+ `level` | true | `````` |  | Alpha or beta banner
 
 
 
@@ -1980,7 +1975,7 @@ import { H3, UnorderedList, ListItem, Link } from 'govuk-react';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Related items content
+ `children` | true | `````` |  | Related items content
 
 
 
@@ -2038,8 +2033,8 @@ import { SectionBreak } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `level` |  | `````` | enum('XL' \| 'XLARGE' \| 'L' \| 'LARGE' \| 'M' \| 'MEDIUM') | 
- `visible` |  | ```undefined``` | bool | 
+ `level` |  | `````` |  | 
+ `visible` |  | ```undefined``` |  | 
 
 
 
@@ -2163,8 +2158,8 @@ import { SkipLink } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | ```'Skip to main content'``` | node | 
- `href` |  | ```'#content'``` | string | 
+ `children` |  | ```'Skip to main content'``` |  | 
+ `href` |  | ```'#content'``` |  | 
 
 
 
@@ -2414,7 +2409,7 @@ const App = ({ defaultIndex }) => {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | child components that will appear in the Tabs section
+ `children` | true | `````` |  | child components that will appear in the Tabs section
 
 
 
@@ -2445,7 +2440,7 @@ import { Tag } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `inactive` |  | ```false``` | bool | 
+ `inactive` |  | ```false``` |  | 
 
 
 
@@ -2678,9 +2673,9 @@ import { VisuallyHidden } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Content to be hidden
- `focusable` |  | ```false``` | bool | Allow component to be focusable, and thus become visible
- `important` |  | ```true``` | bool | Set styles with `!important`
+ `children` | true | `````` |  | Content to be hidden
+ `focusable` |  | ```false``` |  | Allow component to be focusable, and thus become visible
+ `important` |  | ```true``` |  | Set styles with `!important`
 
 
 
@@ -2711,6 +2706,6 @@ import { WarningText } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Warning text to be displayed
+ `children` | true | `````` |  | Warning text to be displayed
 
 

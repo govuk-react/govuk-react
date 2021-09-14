@@ -24,6 +24,6 @@ import { LeadParagraph } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Text in the Lead paragraph
+ `children` | true | `````` |  | Text in the Lead paragraph
 
 

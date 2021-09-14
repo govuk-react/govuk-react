@@ -34,6 +34,6 @@ import { ListItem, Link } from 'govuk-react';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | List item content
+ `children` | true | `````` |  | List item content
 
 
