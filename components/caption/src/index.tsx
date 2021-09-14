@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
-import PropTypes from 'prop-types';
 import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
 import { spacing, typography } from '@govuk-react/lib';
-import { CAPTION_SIZES, MEDIA_QUERIES, SPACING_POINTS, TYPOGRAPHY_SCALE } from '@govuk-react/constants';
+import { CAPTION_SIZES, MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
 
 const StyledCaption = styled('span')(
   ({ size }) => {
@@ -59,18 +58,18 @@ const StyledCaption = styled('span')(
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_typography.scss
  * - https://design-system.service.gov.uk/styles/typography/#headings
  */
-const Caption = (props) => <StyledCaption {...props} />;
+const Caption: React.FC<CaptionProps> = (props: CaptionProps) => <StyledCaption {...props} />;
 
-Caption.propTypes = {
+interface CaptionProps {
   /** Text to be rendered as a caption */
-  children: PropTypes.string.isRequired,
+  children: string;
   /**
    * Visual size level, accepts:
    *    `XLARGE`, `LARGE`, `MEDIUM`, `XL`, `L`, `M`
    *    or a numeric size that fits in the GDS font scale list
    */
-  size: PropTypes.oneOf([...Object.keys(CAPTION_SIZES), ...Object.keys(TYPOGRAPHY_SCALE).map((key) => Number(key))]),
-};
+  size?: number | string;
+}
 
 Caption.defaultProps = {
   size: 'XL',

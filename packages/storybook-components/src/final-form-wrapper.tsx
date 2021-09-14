@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Form } from 'react-final-form';
 import { action } from '@storybook/addon-actions';
 
 import Button from '@govuk-react/button';
 
-const FinalFormWrapper = ({ children }) => (
+const FinalFormWrapper: React.FC = ({ children }: { children: React.ReactNode }) => (
   <Form
     onSubmit={action('submit')}
     render={({ handleSubmit, form: { reset }, submitting, pristine, values }) => (
@@ -29,9 +28,5 @@ const FinalFormWrapper = ({ children }) => (
     )}
   />
 );
-
-FinalFormWrapper.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default FinalFormWrapper;

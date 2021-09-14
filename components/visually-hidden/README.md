@@ -27,8 +27,8 @@ import { VisuallyHidden } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Content to be hidden
- `focusable` |  | ```false``` | bool | Allow component to be focusable, and thus become visible
- `important` |  | ```true``` | bool | Set styles with `!important`
+ `children` | true | `````` |  | Content to be hidden
+ `focusable` |  | ```false``` |  | Allow component to be focusable, and thus become visible
+ `important` |  | ```true``` |  | Set styles with `!important`
 
 

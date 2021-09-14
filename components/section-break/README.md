@@ -24,7 +24,7 @@ import { SectionBreak } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `level` |  | `````` | enum('XL' \| 'XLARGE' \| 'L' \| 'LARGE' \| 'M' \| 'MEDIUM') | 
- `visible` |  | ```undefined``` | bool | 
+ `level` |  | `````` |  | 
+ `visible` |  | ```undefined``` |  | 
 
 

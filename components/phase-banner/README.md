@@ -37,7 +37,7 @@ Beta
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Children text and links
- `level` | true | `````` | string | Alpha or beta banner
+ `children` | true | `````` |  | Children text and links
+ `level` | true | `````` |  | Alpha or beta banner
 
 

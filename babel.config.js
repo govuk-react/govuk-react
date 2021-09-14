@@ -5,7 +5,6 @@ const presets = ['@babel/preset-env', '@babel/preset-react', '@babel/preset-type
 const plugins = [
   'babel-plugin-styled-components',
   '@babel/plugin-proposal-export-default-from',
-  'transform-react-remove-prop-types',
   ['@babel/plugin-transform-runtime', { helpers: false, regenerator: true }],
 ];
 

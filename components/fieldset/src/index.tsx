@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { spacing } from '@govuk-react/lib';
 
@@ -51,13 +50,15 @@ const Fieldset = styled('fieldset')(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/fieldset
  * - https://design-system.service.gov.uk/get-started/labels-legends-headings/
  */
-const FieldsetDocumented = (props) => <Fieldset {...props} />;
+const FieldsetDocumented: FieldsetType = (props: FieldsetProps) => <Fieldset {...props} />;
 
-FieldsetDocumented.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+interface FieldsetType extends React.FC<FieldsetProps> {
+  Legend: typeof Legend;
+}
 
-Fieldset.propTypes = FieldsetDocumented.propTypes;
+interface FieldsetProps {
+  children: React.ReactNode;
+}
 
 Fieldset.Legend = Legend;
 FieldsetDocumented.Legend = Legend;

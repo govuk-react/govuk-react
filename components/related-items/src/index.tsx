@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import { BLUE } from 'govuk-colours';
 
 import { FONT_SIZE, LINE_HEIGHT, MEDIA_QUERIES, SPACING } from '@govuk-react/constants';
@@ -55,11 +54,11 @@ const StyledRelatedItems = styled('div')(
  * - Replace CSS selectors with imported components
  *
  */
-const RelatedItems = (props) => <StyledRelatedItems {...props} />;
+const RelatedItems: React.FC<RelatedItemsProps> = (props: RelatedItemsProps) => <StyledRelatedItems {...props} />;
 
-RelatedItems.propTypes = {
+interface RelatedItemsProps {
   /** Related items content */
-  children: PropTypes.node.isRequired,
-};
+  children: React.ReactNode;
+}
 
 export default RelatedItems;

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import UnorderedList from '@govuk-react/unordered-list';
 import { NTA_LIGHT } from '@govuk-react/constants';
@@ -85,7 +84,12 @@ const StyledDefinition = styled('li')({
  *
  * - https://govuk-static.herokuapp.com/component-guide/document_footer
  */
-const DocumentFooterMetadata = ({ from = undefined, partOf = undefined, other = undefined, ...props }) => {
+const DocumentFooterMetadata: React.FC<DocumentFooterMetadataProps> = ({
+  from = undefined,
+  partOf = undefined,
+  other = undefined,
+  ...props
+}: DocumentFooterMetadataProps) => {
   const fromData = (
     <StyledContainer>
       {from && (
@@ -110,7 +114,8 @@ const DocumentFooterMetadata = ({ from = undefined, partOf = undefined, other = 
         <div>
           <p style={{ marginBottom: 0 }}>Part of:</p>
           <UnorderedList listStyleType="none">
-            {partOf && partOf.map((child, i) => <StyledDefinition key={child.key || i}>{child}</StyledDefinition>)}
+            {Array.isArray(partOf) &&
+              React.Children.map(partOf, (child, i) => <StyledDefinition>{child}</StyledDefinition>)}
           </UnorderedList>
         </div>
       )}
@@ -146,27 +151,25 @@ DocumentFooterMetadata.defaultProps = {
   other: undefined,
 };
 
-DocumentFooterMetadata.propTypes = {
+interface DocumentFooterMetadataProps {
   /**
    * Array of JSX nodes to render underneath the `from:` title
    */
-  from: PropTypes.arrayOf(PropTypes.node),
+  from?: React.ReactNode[];
   /**
    * Array of JSX nodes to render underneath the `part of:` title
    */
-  partOf: PropTypes.arrayOf(PropTypes.node),
+  partOf?: React.ReactNode[];
   /* eslint-disable max-len */
   /**
    * Array of Objects for any additional items, each object should contain an `id`, `title` and `content` property
    */
   /* eslint-enable max-len */
-  other: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number,
-      title: PropTypes.string,
-      content: PropTypes.node,
-    })
-  ),
-};
+  other?: {
+    id?: number;
+    title?: string;
+    content?: React.ReactNode;
+  }[];
+}
 
 export default DocumentFooterMetadata;

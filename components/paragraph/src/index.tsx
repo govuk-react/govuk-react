@@ -1,6 +1,9 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import type { ReactMarkdownProps } from 'react-markdown';
+
 import ReactMarkdown from 'react-markdown';
 import { spacing, typography } from '@govuk-react/lib';
 import Link from '@govuk-react/link';
@@ -100,7 +103,10 @@ const StyledParagraph = styled(ReactMarkdown)(
  * - Review code snippet styling
  * - Remove magic numbers from inline code styling blocks
  */
-const Paragraph = ({ children, ...props }) => (
+const Paragraph: React.FC<ParagraphProps & ReactMarkdownProps> = ({
+  children,
+  ...props
+}: ParagraphProps & ReactMarkdownProps) => (
   <StyledParagraph
     source={children}
     escapeHtml={false}
@@ -111,17 +117,17 @@ const Paragraph = ({ children, ...props }) => (
   />
 );
 
-Paragraph.propTypes = {
+interface ParagraphProps extends WithWhiteSpaceProps, React.HTMLAttributes<HTMLDivElement> {
   /**
    * Text content supporting markdown
    */
-  children: PropTypes.node,
+  children?: React.ReactNode;
   /**
    * Is this paragraph supporting text for another element?
    */
-  supportingText: PropTypes.bool,
-  linkRenderer: PropTypes.func,
-};
+  supportingText?: boolean;
+  linkRenderer?: React.ElementType;
+}
 
 Paragraph.defaultProps = {
   children: '',

@@ -122,7 +122,7 @@ exports[`breadcrumbs matches snapshot: breadcrumbs 1`] = `
           className="c1"
         >
           <src__BreadcrumbsListItem
-            key="0"
+            key=".0"
           >
             <li
               className="c2"
@@ -140,7 +140,7 @@ exports[`breadcrumbs matches snapshot: breadcrumbs 1`] = `
             </li>
           </src__BreadcrumbsListItem>
           <src__BreadcrumbsListItem
-            key="1"
+            key=".1"
           >
             <li
               className="c2"

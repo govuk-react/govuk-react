@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { spacing } from '@govuk-react/lib';
 import { BORDER_COLOUR } from 'govuk-colours';
@@ -13,7 +12,7 @@ const breakSizes = {
   MEDIUM: 4,
 };
 
-const SectionBreak = styled('hr')(
+const SectionBreak: React.FC<SectionBreakProps> = styled('hr')(
   {
     margin: 0,
     border: 0,
@@ -53,17 +52,17 @@ const SectionBreak = styled('hr')(
  * - https://design-system.service.gov.uk/styles/typography/#section-break
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_section-break.scss
  */
-const SectionBreakDocumented = (props) => <SectionBreak {...props} />;
+const SectionBreakDocumented: React.FC<SectionBreakProps> = (props: SectionBreakProps) => <SectionBreak {...props} />;
 
-SectionBreakDocumented.propTypes = {
-  level: PropTypes.oneOf(['XL', 'XLARGE', 'L', 'LARGE', 'M', 'MEDIUM']),
-  visible: PropTypes.bool,
-};
+interface SectionBreakProps {
+  level?: string;
+  visible?: boolean;
+}
+
 SectionBreakDocumented.defaultProps = {
   visible: undefined,
 };
 
-SectionBreak.propTypes = SectionBreakDocumented.propTypes;
 SectionBreak.defaultProps = SectionBreakDocumented.defaultProps;
 
 export { SectionBreakDocumented };

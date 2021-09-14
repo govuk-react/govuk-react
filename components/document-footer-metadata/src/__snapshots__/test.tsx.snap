@@ -106,7 +106,7 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
                   className="c1 c2"
                 >
                   <src__StyledDefinition
-                    key="0"
+                    key=".0"
                   >
                     <li
                       className="c3"
@@ -115,7 +115,7 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
                     </li>
                   </src__StyledDefinition>
                   <src__StyledDefinition
-                    key="1"
+                    key=".1"
                   >
                     <li
                       className="c3"

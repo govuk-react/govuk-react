@@ -34,6 +34,6 @@ import { H3, UnorderedList, ListItem, Link } from 'govuk-react';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Related items content
+ `children` | true | `````` |  | Related items content
 
 

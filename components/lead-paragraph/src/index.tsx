@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import { spacing, typography } from '@govuk-react/lib';
 
 const StyledParagraph = styled('p')(
@@ -26,11 +25,11 @@ const StyledParagraph = styled('p')(
  * ### References
  * - https://design-system.service.gov.uk/styles/typography/#paragraphs
  */
-const LeadParagraph = (props) => <StyledParagraph {...props} />;
+const LeadParagraph: React.FC<LeadParagraphProps> = (props: LeadParagraphProps) => <StyledParagraph {...props} />;
 
-LeadParagraph.propTypes = {
+interface LeadParagraphProps {
   /** Text in the Lead paragraph */
-  children: PropTypes.node.isRequired,
-};
+  children: React.ReactNode;
+}
 
 export default LeadParagraph;

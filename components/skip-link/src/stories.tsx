@@ -22,7 +22,7 @@ class AutoFocussed extends Component<{ href: string }> {
   }
 
   render() {
-    return <SkipLink ref={this.focusableRef} focusable {...this.props} />;
+    return <SkipLink ref={this.focusableRef} {...this.props} />;
   }
 }
 

@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import React from 'react';
-import PropTypes from 'prop-types';
 import { BLUE, GREY_1, WHITE } from 'govuk-colours';
 import { typography } from '@govuk-react/lib';
 
-const Tag = styled('strong')(
+const Tag: React.FC<TagProps> = styled('strong')(
   typography.font({ size: 16, weight: 'bold', lineHeight: 1.25 }),
   {
     display: 'inline-block',
@@ -46,16 +45,16 @@ const Tag = styled('strong')(
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/tag/_tag.scss
  *
  */
-const DocumentedTag = (props) => <Tag {...props} />;
+const DocumentedTag: React.FC<TagProps> = (props: TagProps) => <Tag {...props} />;
 
-DocumentedTag.propTypes = {
-  inactive: PropTypes.bool,
-};
+interface TagProps {
+  inactive?: boolean;
+}
+
 DocumentedTag.defaultProps = {
   inactive: false,
 };
 
-Tag.propTypes = DocumentedTag.propTypes;
 Tag.defaultProps = DocumentedTag.defaultProps;
 
 export { DocumentedTag };

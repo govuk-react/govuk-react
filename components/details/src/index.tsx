@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { shape, spacing, typography } from '@govuk-react/lib';
@@ -97,7 +96,7 @@ const DetailsText = styled('div')({
  * - https://design-system.service.gov.uk/components/details/
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/details/_details.scss
  */
-const Details = ({ summary, children, ...props }) => (
+const Details: React.FC<DetailsProps> = ({ summary, children, ...props }: DetailsProps) => (
   <StyledDetails {...props}>
     <StyledSummary>
       <SummaryText>{summary}</SummaryText>
@@ -111,13 +110,12 @@ Details.defaultProps = {
   open: false,
 };
 
-Details.propTypes = {
+interface DetailsProps {
   /** The content that will be displayed when details are revealed */
-  children: PropTypes.node,
+  children?: React.ReactNode;
   /** Flag to indicate whether to show component open by default */
-  open: PropTypes.bool,
+  open?: boolean;
   /** Text for the details summary link e.g. Help with nationality */
-  summary: PropTypes.node.isRequired,
-};
-
+  summary: React.ReactNode;
+}
 export default Details;

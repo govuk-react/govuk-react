@@ -1,12 +1,9 @@
-// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/table/_table.scss
-
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { BORDER_COLOUR } from 'govuk-colours';
 import { FONT_WEIGHTS, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 
-const Cell = styled('td')(
+const Cell: React.FC<CellProps> = styled('td')(
   ({ numeric, alignRight = numeric, bold }) => ({
     padding: `${SPACING_POINTS[2]}px ${SPACING_POINTS[4]}px ${SPACING_POINTS[2]}px 0`,
     borderBottom: `1px solid ${BORDER_COLOUR}`,
@@ -19,12 +16,12 @@ const Cell = styled('td')(
   ({ numeric, isHeader }) => (numeric && !isHeader ? typography.font({ tabular: true }) : undefined),
   spacing.withWidth()
 );
-
-Cell.propTypes = {
-  alignRight: PropTypes.bool,
-  children: PropTypes.node.isRequired,
-  isHeader: PropTypes.bool,
-  numeric: PropTypes.bool,
-};
+interface CellProps extends React.HTMLAttributes<HTMLTableCellElement> {
+  alignRight?: boolean;
+  children: React.ReactNode;
+  isHeader?: boolean;
+  numeric?: boolean;
+  bold?: boolean;
+}
 
 export default Cell;

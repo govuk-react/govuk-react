@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { BLUE, GREY_4, PURPLE, YELLOW, WHITE } from 'govuk-colours';
 import { FONT_SIZE, LINE_HEIGHT, SPACING, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants';
@@ -90,7 +89,16 @@ const PageTitle = styled('span')({
   },
 });
 
-const PaginationAnchor = ({ previousPage, nextPage, to, href, target, children, pageTitle, as: As }) => (
+const PaginationAnchor: React.FC<PaginationAnchorProps> = ({
+  previousPage,
+  nextPage,
+  to,
+  href,
+  target,
+  children,
+  pageTitle,
+  as: As,
+}: PaginationAnchorProps) => (
   <PaginationWrapper previousPage={previousPage} nextPage={nextPage}>
     <As to={to} href={href} target={target}>
       <InnerWrap>
@@ -103,17 +111,17 @@ const PaginationAnchor = ({ previousPage, nextPage, to, href, target, children, 
   </PaginationWrapper>
 );
 
-PaginationAnchor.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-  previousPage: PropTypes.bool,
-  nextPage: PropTypes.bool,
-  pageTitle: PropTypes.string,
+interface PaginationAnchorProps {
+  children: string | React.ReactElement;
+  previousPage?: boolean;
+  nextPage?: boolean;
+  pageTitle?: string;
   // TODO: #953
-  to: PropTypes.string,
-  target: PropTypes.string,
-  href: PropTypes.string,
-  as: PropTypes.elementType,
-};
+  to?: string;
+  target?: string;
+  href?: string;
+  as?: React.ElementType;
+}
 
 PaginationAnchor.defaultProps = {
   previousPage: undefined,

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Link from '@govuk-react/link';
 import { FOOTER_LINK, FOOTER_LINK_HOVER } from 'govuk-colours';
@@ -28,7 +27,7 @@ const StyledCopyright = styled(Link)(
     }
 );
 
-const Copyright = ({ text, image, link }) => {
+const Copyright: React.FC<CopyrightProps> = ({ text, image, link }: CopyrightProps) => {
   return (
     <StyledCopyright href={link} image={image}>
       © {text}
@@ -36,16 +35,15 @@ const Copyright = ({ text, image, link }) => {
   );
 };
 
-Copyright.propTypes = {
-  text: PropTypes.string,
-  image: PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired,
-  }),
-  link: PropTypes.string,
-};
-
+export interface CopyrightProps {
+  text?: string;
+  image?: {
+    src: string;
+    width: number;
+    height: number;
+  };
+  link?: string;
+}
 Copyright.defaultProps = {
   text: undefined,
   image: undefined,

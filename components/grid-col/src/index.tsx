@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import { GUTTER_HALF, MEDIA_QUERIES, WIDTHS } from '@govuk-react/constants';
+import { GUTTER_HALF, MEDIA_QUERIES } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
 
 const colValues = {
@@ -26,7 +25,7 @@ function setGrowShrink(style) {
   return { ...style, flexGrow: hasAutoWidth ? 1 : 0, flexShrink: hasAutoWidth ? 1 : 0 };
 }
 
-const StyledColumn = styled('div')(
+const StyledColumn: React.FC<GridColProps> = styled('div')(
   {
     boxSizing: 'border-box',
     paddingRight: GUTTER_HALF,
@@ -128,34 +127,34 @@ const StyledColumn = styled('div')(
  * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
  *
  */
-const GridCol = (props) => <StyledColumn {...props} />;
+const GridCol: React.FC<GridColProps> = (props) => <StyledColumn {...props} />;
 
-GridCol.propTypes = {
+interface GridColProps {
   /** GridCol content */
-  children: PropTypes.node,
+  children?: React.ReactNode;
   /** Dimension setting for the column (deprecated) */
-  columnOneQuarter: PropTypes.bool,
+  columnOneQuarter?: boolean;
   /** Dimension setting for the column (deprecated) */
-  columnOneThird: PropTypes.bool,
+  columnOneThird?: boolean;
   /** Dimension setting for the column (deprecated) */
-  columnOneHalf: PropTypes.bool,
+  columnOneHalf?: boolean;
   /** Dimension setting for the column (deprecated) */
-  columnTwoThirds: PropTypes.bool,
+  columnTwoThirds?: boolean;
   /** Dimension setting for the column (deprecated) */
-  columnThreeQuarters: PropTypes.bool,
+  columnThreeQuarters?: boolean;
   /** Dimension setting for the column (deprecated) */
-  columnFull: PropTypes.bool,
+  columnFull?: boolean;
   /**
    * Explicitly set column to width using value or descriptive string
    * (`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
    */
-  setWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.oneOf(Object.keys(WIDTHS))]),
+  setWidth?: number | string;
   /**
    * Explicitly set desktop column to width using value or descriptive string
    * (`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
    */
-  setDesktopWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.oneOf([...Object.keys(WIDTHS)])]),
-};
+  setDesktopWidth?: number | string;
+}
 
 GridCol.defaultProps = {
   children: undefined,

@@ -1,21 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Section from '../../atoms/section';
 import SectionHeading from '../../atoms/section-heading';
 import UnorderedList from '../../atoms/unordered-list';
 import ListItem from '../../atoms/list-item';
 
-const NavigationLinks = ({ heading, listColumns, children }) => {
+const NavigationLinks: React.FC<NavigationLinksProps> = ({ heading, listColumns, children }: NavigationLinksProps) => {
   return (
     <Section>
       <SectionHeading size="MEDIUM">{heading}</SectionHeading>
       {children && (
         <UnorderedList columns={listColumns}>
-          {children.length && children.map ? (
-            children.map((child, i) =>
-              child && (child.length || child.props) ? <ListItem key={child.key || i}>{child}</ListItem> : null
-            )
+          {Array.isArray(children) ? (
+            React.Children.map(children, (child, i) => (child ? <ListItem>{child}</ListItem> : null))
           ) : (
             <ListItem>{children}</ListItem>
           )}
@@ -25,20 +22,20 @@ const NavigationLinks = ({ heading, listColumns, children }) => {
   );
 };
 
-NavigationLinks.propTypes = {
+interface NavigationLinksProps {
   /**
    * Navigation heading
    */
-  heading: PropTypes.string.isRequired,
+  heading: string;
   /**
    * Number of columns the links will split into
    */
-  listColumns: PropTypes.number,
+  listColumns?: number;
   /**
    * Navigation links
    */
-  children: PropTypes.node.isRequired,
-};
+  children: React.ReactNode;
+}
 
 NavigationLinks.defaultProps = {
   listColumns: 0,

@@ -46,7 +46,6 @@ module.exports = {
     ],
   },
   settings: {
-    'import/core-modules': ['prop-types'],
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
   },
   overrides: [

@@ -39,6 +39,6 @@ import { Link } from 'react-router-dom';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Breadcrumbs contents
+ `children` | true | `````` |  | Breadcrumbs contents
 
 
