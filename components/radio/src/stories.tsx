@@ -12,16 +12,14 @@ import Radio from '.';
 const required = (value) => (value ? undefined : 'Required');
 
 interface RadioGroupProps {
-  input?: FieldInputProps<any, HTMLElement>;
+  input?: FieldInputProps<string, HTMLElement>;
   meta?: {
     active?: boolean;
     dirty?: boolean;
     dirtySinceLastSubmit?: boolean;
-    error?: any;
-    initial?: any;
+    error?: string | string[];
     invalid?: boolean;
     pristine?: boolean;
-    submitError?: any;
     submitFailed?: boolean;
     submitSucceeded?: boolean;
     touched?: boolean;

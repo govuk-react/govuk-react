@@ -98,19 +98,8 @@ interface TextAreaProps extends LabelProps {
   hint?: React.ReactNode;
   input?: React.TextareaHTMLAttributes<HTMLTextAreaElement>;
   meta?: {
-    active?: boolean;
-    dirty?: boolean;
-    dirtySinceLastSubmit?: boolean;
-    error?: any;
-    initial?: any;
-    invalid?: boolean;
-    pristine?: boolean;
-    submitError?: any;
-    submitFailed?: boolean;
-    submitSucceeded?: boolean;
+    error?: string | string[];
     touched?: boolean;
-    valid?: boolean;
-    visited?: boolean;
   };
   children: React.ReactNode;
 }

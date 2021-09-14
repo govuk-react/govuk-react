@@ -130,19 +130,8 @@ interface SelectProps extends LabelProps {
   hint?: React.ReactNode;
   input?: React.SelectHTMLAttributes<HTMLSelectElement>;
   meta?: {
-    active?: boolean;
-    dirty?: boolean;
-    dirtySinceLastSubmit?: boolean;
-    error?: any;
-    initial?: any;
-    invalid?: boolean;
-    pristine?: boolean;
-    submitError?: any;
-    submitFailed?: boolean;
-    submitSucceeded?: boolean;
+    error?: string | string[];
     touched?: boolean;
-    valid?: boolean;
-    visited?: boolean;
   };
   children: React.ReactNode;
   label: string;

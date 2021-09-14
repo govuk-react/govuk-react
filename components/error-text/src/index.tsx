@@ -41,6 +41,6 @@ const ErrorText: React.FC<ErrorTextProps> = (props: ErrorTextProps) => <StyledEr
 
 interface ErrorTextProps {
   /** Text to describe the error */
-  children: string;
+  children: React.ReactNode;
 }
 export default ErrorText;

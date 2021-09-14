@@ -82,19 +82,8 @@ interface InputFieldProps extends LabelProps {
   hint?: React.ReactNode;
   input?: InputProps;
   meta?: {
-    active?: boolean;
-    dirty?: boolean;
-    dirtySinceLastSubmit?: boolean;
-    error?: any;
-    initial?: any;
-    invalid?: boolean;
-    pristine?: boolean;
-    submitError?: any;
-    submitFailed?: boolean;
-    submitSucceeded?: boolean;
+    error?: string | string[];
     touched?: boolean;
-    valid?: boolean;
-    visited?: boolean;
   };
   children: React.ReactNode;
 }
