@@ -31,12 +31,12 @@ export function responsive({
   direction = null,
   adjustment = 0,
 }: {
-  size: number;
+  size: number | string;
   property: string;
   direction?: string | string[];
   adjustment?: number;
-}): any {
-  const scale = SPACING_MAP[Math.abs(size)];
+}): { [key: string]: string } {
+  const scale = SPACING_MAP[Math.abs(Number(size))];
   const polarity = size < 0 ? -1 : 1;
 
   if (scale === undefined) {
@@ -62,16 +62,16 @@ export function responsive({
       }
     );
   }
-
-  return {
+  const f = {
     ...styleForDirection(scale.mobile * polarity + adjustment, property, direction),
     [MEDIA_QUERIES.TABLET]: styleForDirection(scale.tablet * polarity + adjustment, property, direction),
   };
+  return f;
 }
 
 export function responsiveMargin(
-  value: number | { size: number; direction?: string | string[]; adjustment?: number }
-): any {
+  value: number | string | { size: number | string; direction?: string | string[]; adjustment?: number }
+): { [key: string]: number | string } {
   if (Number.isInteger(value)) {
     return responsive({ size: Number(value), property: 'margin' });
   }
@@ -91,7 +91,7 @@ export function responsiveMargin(
 
 export function responsivePadding(
   value: number | { size: number; direction?: string | string[]; adjustment?: number }
-): any {
+): { [key: string]: string } {
   if (Number.isInteger(value)) {
     return responsive({ size: Number(value), property: 'padding' });
   }
@@ -122,8 +122,15 @@ export function responsivePadding(
 // can be an array of numbers/objects
 
 export function withWhiteSpace(
-  config: { margin?: any; padding?: any; marginBottom?: any } = {}
-): (settings?: { mb?: number; margin?: number; padding?: number }) => any[] {
+  config: {
+    margin?: number | { direction?: string | string[]; size: number; adjustment?: number };
+    padding?:
+      | number
+      | { size: number; direction?: string | string[] }
+      | { size: number; direction?: string | string[] }[];
+    marginBottom?: number;
+  } = {}
+): (settings?: WithWhiteSpaceProps) => { [key: string]: string | { [key: string]: string } }[] {
   return ({
     margin = config.margin,
     padding = config.padding,
@@ -180,13 +187,13 @@ export function withWhiteSpace(
 //   ]),
 // };
 
-export function withWidth(config: { width?: any; mediaQuery?: string; noDefault?: boolean } = {}): ({
+export function withWidth(config: { width?: string; mediaQuery?: string; noDefault?: boolean } = {}): ({
   setWidth,
 }?: WithWidthProps) => {
   [x: string]:
     | string
     | {
-        width: any;
+        width: string;
       };
   width?: string;
 } {
@@ -207,6 +214,13 @@ export function withWidth(config: { width?: any; mediaQuery?: string; noDefault?
   };
 }
 
-export type WithWhiteSpaceProps = { margin?: any; padding?: any; mb?: any };
+export type WithWhiteSpaceProps = {
+  margin?: number | { direction?: string | string[]; size: number; adjustment?: number };
+  padding?:
+    | number
+    | { size: number; direction?: string | string[] }
+    | { size: number; direction?: string | string[] }[];
+  mb?: number | string;
+};
 
 export type WithWidthProps = { setWidth?: string };

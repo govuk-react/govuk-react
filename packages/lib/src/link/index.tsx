@@ -1,6 +1,6 @@
 // Tracking:
 // https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/helpers/_links.scss
-import { FOCUSABLE_FILL, MEDIA_QUERIES } from '@govuk-react/constants';
+import { FOCUSABLE_FILL, MEDIA_QUERIES, MEDIA_QUERY_PRINT } from '@govuk-react/constants';
 import {
   BLACK, // in lieu of a FOCUS_TEXT_COLOUR...
   LINK_COLOUR,
@@ -14,7 +14,17 @@ import { common as commonType, textColour } from '../typography';
 
 const FOCUS_TEXT_COLOUR = BLACK;
 
-export function common(fontFamily?: string): [any, typeof FOCUSABLE_FILL] {
+export function common(fontFamily?: string): [
+  {
+    fontFamily: string;
+    WebkitFontSmoothing: string;
+    MozOsxFontSmoothing: string;
+    [MEDIA_QUERY_PRINT]: {
+      fontFamily: string;
+    };
+  },
+  typeof FOCUSABLE_FILL
+] {
   return [commonType(fontFamily), FOCUSABLE_FILL];
 }
 

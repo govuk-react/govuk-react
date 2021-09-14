@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import type { FormProps, FieldTemplateProps, AjvError, ObjectFieldTemplateProps } from '@rjsf/core';
+import type { FormProps, FieldTemplateProps, AjvError, ObjectFieldTemplateProps, FieldProps } from '@rjsf/core';
 
 // TODO: extract these reusable parts in to a published module e.g. @govuk-react/json-schema-form
 
@@ -40,31 +40,38 @@ const DateField = ({ schema, onChange, children, rawErrors }) => {
   );
 };
 
-interface AnyOfProps {
-  name: string;
-  schema: any;
-  formData: any;
-  onChange: (value: any) => void;
-  rawErrors?: string[];
-}
-const AnyOf: React.FC<AnyOfProps> = ({ name, schema, formData = [], onChange, rawErrors }) => (
+// interface AnyOfProps {
+//   name: string;
+//   schema: JSONSchema7;
+//   formData: { const: string }[];
+//   onChange: (value: string) => void;
+//   rawErrors?: string[];
+// }
+const AnyOf: React.FC<FieldProps> = ({ name, schema, formData = [], onChange, rawErrors }) => (
   <GovUK.FormGroup error={!!rawErrors?.length}>
     <GovUK.Label mb={4}>
       <GovUK.LabelText>{schema.title}</GovUK.LabelText>
       {rawErrors?.length && <GovUK.ErrorText>{rawErrors[0]}</GovUK.ErrorText>}
-      {schema?.items?.anyOf?.map((item) => (
-        <GovUK.Checkbox
-          key={item.const}
-          name={name}
-          value={item.const}
-          hint={item.description}
-          onChange={(e) =>
-            onChange(e.target.checked ? formData.concat(item.const) : formData.filter((i) => i !== item.const))
-          }
-        >
-          {item.title}
-        </GovUK.Checkbox>
-      ))}
+      {(Array.isArray(schema?.items) ? schema.items : [schema?.items]).map(
+        (items) =>
+          typeof items !== 'boolean' &&
+          items?.anyOf?.map(
+            (item) =>
+              typeof item !== 'boolean' && (
+                <GovUK.Checkbox
+                  key={String(item.const)}
+                  name={name}
+                  value={String(item.const)}
+                  hint={item.description}
+                  onChange={(e) =>
+                    onChange(e.target.checked ? formData.concat(item.const) : formData.filter((i) => i !== item.const))
+                  }
+                >
+                  {item.title}
+                </GovUK.Checkbox>
+              )
+          )
+      )}
     </GovUK.Label>
   </GovUK.FormGroup>
 );
@@ -148,14 +155,14 @@ const InputField = ({ schema, rawErrors, onChange, name }) => (
   </GovUK.InputField>
 );
 
-interface StringFieldProps {
-  uiSchema: any;
-  schema: any;
-  onChange: (value: any) => void;
-  rawErrors?: string[];
-  name: string;
-}
-const StringField: React.FC<StringFieldProps> = ({ uiSchema, schema, onChange, rawErrors, name }) => {
+// interface StringFieldProps {
+//   uiSchema: any;
+//   schema: any;
+//   onChange: (value: any) => void;
+//   rawErrors?: string[];
+//   name: string;
+// }
+const StringField: React.FC<FieldProps> = ({ uiSchema, schema, onChange, rawErrors, name }) => {
   let Component;
   if (uiSchema?.['ui:widget'] === 'textarea') {
     Component = TextArea;
@@ -172,7 +179,7 @@ const StringField: React.FC<StringFieldProps> = ({ uiSchema, schema, onChange, r
   return <Component uiSchema={uiSchema} schema={schema} onChange={onChange} rawErrors={rawErrors} name={name} />;
 };
 
-const BooleanField: React.FC<{ schema: any; onChange: (value) => void }> = ({ schema, onChange }) => (
+const BooleanField: React.FC<FieldProps> = ({ schema, onChange }) => (
   <GovUK.Checkbox onChange={onChange} hint={schema.description}>
     {schema.title}
   </GovUK.Checkbox>
@@ -206,7 +213,7 @@ export const ObjectFieldTemplate: React.FC<ObjectFieldTemplateProps> = ({ title,
 
 export const CustomFieldTemplate: React.FC<FieldTemplateProps> = ({ children }) => <>{children}</>;
 
-export const Form: React.FC<FormProps<any>> = (props) => (
+export const Form: React.FC<FormProps<void>> = (props) => (
   <BaseForm
     fields={customFields}
     FieldTemplate={CustomFieldTemplate}
