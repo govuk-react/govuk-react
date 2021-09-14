@@ -1886,7 +1886,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                               >
                                 <list-item__ListItem
                                   inline={true}
-                                  key="0"
+                                  key=".0"
                                 >
                                   <li
                                     className="c7"
@@ -1925,7 +1925,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                 </list-item__ListItem>
                                 <list-item__ListItem
                                   inline={true}
-                                  key="1"
+                                  key=".1"
                                 >
                                   <li
                                     className="c7"
@@ -1988,7 +1988,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                 </list-item__ListItem>
                                 <list-item__ListItem
                                   inline={true}
-                                  key="2"
+                                  key=".2"
                                 >
                                   <li
                                     className="c7"
@@ -2564,7 +2564,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                               >
                                 <list-item__ListItem
                                   inline={true}
-                                  key="0"
+                                  key=".0"
                                 >
                                   <li
                                     className="c7"
@@ -2603,7 +2603,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                 </list-item__ListItem>
                                 <list-item__ListItem
                                   inline={true}
-                                  key="1"
+                                  key=".1"
                                 >
                                   <li
                                     className="c7"
@@ -2666,7 +2666,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                 </list-item__ListItem>
                                 <list-item__ListItem
                                   inline={true}
-                                  key="2"
+                                  key=".2"
                                 >
                                   <li
                                     className="c7"
@@ -3371,7 +3371,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                             >
                               <list-item__ListItem
                                 inline={false}
-                                key="0"
+                                key=".0"
                               >
                                 <li
                                   className="c7"
@@ -3410,7 +3410,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                               </list-item__ListItem>
                               <list-item__ListItem
                                 inline={false}
-                                key="1"
+                                key=".1"
                               >
                                 <li
                                   className="c7"
@@ -3473,7 +3473,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                               </list-item__ListItem>
                               <list-item__ListItem
                                 inline={false}
-                                key="2"
+                                key=".2"
                               >
                                 <li
                                   className="c7"
@@ -3512,7 +3512,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                               </list-item__ListItem>
                               <list-item__ListItem
                                 inline={false}
-                                key="3"
+                                key=".3"
                               >
                                 <li
                                   className="c7"
@@ -3551,7 +3551,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                               </list-item__ListItem>
                               <list-item__ListItem
                                 inline={false}
-                                key="4"
+                                key=".4"
                               >
                                 <li
                                   className="c7"
@@ -3590,7 +3590,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                               </list-item__ListItem>
                               <list-item__ListItem
                                 inline={false}
-                                key="5"
+                                key=".5"
                               >
                                 <li
                                   className="c7"
@@ -3676,7 +3676,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                             >
                               <list-item__ListItem
                                 inline={false}
-                                key="0"
+                                key=".0"
                               >
                                 <li
                                   className="c7"
@@ -3715,7 +3715,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                               </list-item__ListItem>
                               <list-item__ListItem
                                 inline={false}
-                                key="1"
+                                key=".1"
                               >
                                 <li
                                   className="c7"
@@ -3754,7 +3754,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                               </list-item__ListItem>
                               <list-item__ListItem
                                 inline={false}
-                                key="2"
+                                key=".2"
                               >
                                 <li
                                   className="c7"
@@ -3852,7 +3852,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                               >
                                 <list-item__ListItem
                                   inline={true}
-                                  key="0"
+                                  key=".0"
                                 >
                                   <li
                                     className="c17"
@@ -3891,7 +3891,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 </list-item__ListItem>
                                 <list-item__ListItem
                                   inline={true}
-                                  key="1"
+                                  key=".1"
                                 >
                                   <li
                                     className="c17"
@@ -3954,7 +3954,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 </list-item__ListItem>
                                 <list-item__ListItem
                                   inline={true}
-                                  key="2"
+                                  key=".2"
                                 >
                                   <li
                                     className="c17"
@@ -4577,7 +4577,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                             >
                               <list-item__ListItem
                                 inline={false}
-                                key="0"
+                                key=".0"
                               >
                                 <li
                                   className="c7"
@@ -4616,7 +4616,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                               </list-item__ListItem>
                               <list-item__ListItem
                                 inline={false}
-                                key="1"
+                                key=".1"
                               >
                                 <li
                                   className="c7"
@@ -4679,7 +4679,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                               </list-item__ListItem>
                               <list-item__ListItem
                                 inline={false}
-                                key="2"
+                                key=".2"
                               >
                                 <li
                                   className="c7"
@@ -4718,7 +4718,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                               </list-item__ListItem>
                               <list-item__ListItem
                                 inline={false}
-                                key="3"
+                                key=".3"
                               >
                                 <li
                                   className="c7"
@@ -4757,7 +4757,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                               </list-item__ListItem>
                               <list-item__ListItem
                                 inline={false}
-                                key="4"
+                                key=".4"
                               >
                                 <li
                                   className="c7"
@@ -4796,7 +4796,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                               </list-item__ListItem>
                               <list-item__ListItem
                                 inline={false}
-                                key="5"
+                                key=".5"
                               >
                                 <li
                                   className="c7"
@@ -4882,7 +4882,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                             >
                               <list-item__ListItem
                                 inline={false}
-                                key="0"
+                                key=".0"
                               >
                                 <li
                                   className="c7"
@@ -4921,7 +4921,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                               </list-item__ListItem>
                               <list-item__ListItem
                                 inline={false}
-                                key="1"
+                                key=".1"
                               >
                                 <li
                                   className="c7"
@@ -4960,7 +4960,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                               </list-item__ListItem>
                               <list-item__ListItem
                                 inline={false}
-                                key="2"
+                                key=".2"
                               >
                                 <li
                                   className="c7"

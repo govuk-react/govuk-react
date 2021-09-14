@@ -23,7 +23,7 @@
     "start": "cd packages/storybook && npm start",
     "test:cypress": "cd packages/example-application && npm run test:cypress",
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand",
-    "test:snapshot": "npm run test:unit -u",
+    "test:snapshot": "npm run test:unit -- -u",
     "test:unit": "jest",
     "test:types": "tsc --noEmit -p ./tsconfig.json",
     "test": "cross-env CI=true npm run test:unit && npm run eslint && npm run test:types"
