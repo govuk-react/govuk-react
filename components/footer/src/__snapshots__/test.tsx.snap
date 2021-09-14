@@ -430,7 +430,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
   white-space: nowrap;
   min-width: 125px;
   padding-top: 112px;
-  background-image: url();
+  background-image: url(undefined);
   background-repeat: no-repeat;
   background-position: 50% 0%;
   background-size: 125px 102px;
@@ -572,7 +572,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
       Object {
         "image": Object {
           "height": 102,
-          "source": "",
+          "src": "",
           "width": 125,
         },
         "link": "https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/",
@@ -596,7 +596,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                 Object {
                   "image": Object {
                     "height": 102,
-                    "source": "",
+                    "src": "",
                     "width": 125,
                   },
                   "link": "https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/",
@@ -697,7 +697,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                         image={
                           Object {
                             "height": 102,
-                            "source": "",
+                            "src": "",
                             "width": 125,
                           }
                         }
@@ -709,7 +709,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                           image={
                             Object {
                               "height": 102,
-                              "source": "",
+                              "src": "",
                               "width": 125,
                             }
                           }
@@ -723,7 +723,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                             image={
                               Object {
                                 "height": 102,
-                                "source": "",
+                                "src": "",
                                 "width": 125,
                               }
                             }
