@@ -11,5 +11,5 @@ export default {
   decorators: [withKnobs],
 };
 
-export const Default = () => <WarningTextWithKnobs />;
-export const LongWarning = () => <WarningWithLongText />;
+export const Default: React.FC = () => <WarningTextWithKnobs />;
+export const LongWarning: React.FC = () => <WarningWithLongText />;

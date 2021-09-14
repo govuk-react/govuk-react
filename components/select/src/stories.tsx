@@ -14,7 +14,7 @@ export default {
 };
 
 // TODO: add a synthetic onChange event
-export const Default = () => (
+export const Default: React.FC = () => (
   <Select input={{ name: 'group1' }} label="This is a label">
     <option value="0">GOV.UK elements option 1</option>
     <option value="1">GOV.UK elements option 2</option>
@@ -22,7 +22,7 @@ export const Default = () => (
   </Select>
 );
 
-export const SelectWithHintText = () => (
+export const SelectWithHintText: React.FC = () => (
   <Select
     input={{ name: 'group1' }}
     label="This is a label"
@@ -34,7 +34,7 @@ export const SelectWithHintText = () => (
   </Select>
 );
 
-export const SelectWithHintTextError = () => (
+export const SelectWithHintTextError: React.FC = () => (
   <Select
     input={{ name: 'group1' }}
     label="This is a label"
@@ -47,7 +47,7 @@ export const SelectWithHintTextError = () => (
   </Select>
 );
 
-export const StandaloneInputWithInlineLabel = () => (
+export const StandaloneInputWithInlineLabel: React.FC = () => (
   <label>
     <LabelText>
       Sort by:&nbsp;

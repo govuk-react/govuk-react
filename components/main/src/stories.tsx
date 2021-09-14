@@ -9,7 +9,7 @@ export default {
   component: Main,
 };
 
-export const Default = () => (
+export const Default: React.FC = () => (
   <Main>
     <GridRow>
       <GridCol setWidth="one-half">

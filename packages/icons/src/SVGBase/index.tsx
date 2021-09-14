@@ -7,7 +7,12 @@ export interface SVGProps extends SVGPropsBase<SVGSVGElement> {
   width?: string;
 }
 
-const SVG = ({ children = undefined, fill = 'currentColor', title = undefined, ...rest }: SVGProps) => (
+const SVG: React.FC<SVGProps> = ({
+  children = undefined,
+  fill = 'currentColor',
+  title = undefined,
+  ...rest
+}: SVGProps) => (
   <svg version="1.1" fill={fill} width="100%" height="100%" style={{ display: 'block' }} {...rest}>
     <title>{title}</title>
     {children}

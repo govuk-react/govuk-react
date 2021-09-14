@@ -76,7 +76,15 @@ const StyledContainer = styled('div')(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/date-field
  *
  */
-const DateField = ({ children, errorText, hintText, inputNames, defaultValues, input, ...props }: DateFieldProps) => (
+const DateField: DateFieldType = ({
+  children,
+  errorText,
+  hintText,
+  inputNames,
+  defaultValues,
+  input,
+  ...props
+}: DateFieldProps) => (
   <StyledContainer {...props} errorText={errorText}>
     <LabelText>{children}</LabelText>
     {hintText && <HintText>{hintText}</HintText>}
@@ -91,6 +99,11 @@ const DateField = ({ children, errorText, hintText, inputNames, defaultValues, i
     />
   </StyledContainer>
 );
+
+interface DateFieldType extends React.FC<DateFieldProps> {
+  Input: typeof Input;
+  Container: typeof StyledContainer;
+}
 
 DateField.Container = StyledContainer;
 DateField.Input = Input;

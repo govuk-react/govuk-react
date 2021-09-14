@@ -33,6 +33,6 @@ const GlobalStyle = createGlobalStyle`
  * - https://styled-components.com/docs/api#createglobalstyle
  *
  */
-const DocumentedGlobalStyle = (props) => <GlobalStyle {...props} />;
+const DocumentedGlobalStyle: React.FC = (props) => <GlobalStyle {...props} />;
 
 export default DocumentedGlobalStyle;

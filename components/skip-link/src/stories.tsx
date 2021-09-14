@@ -26,7 +26,7 @@ class AutoFocussed extends Component<{ href: string }> {
   }
 }
 
-export const Default = () => (
+export const Default: React.FC = () => (
   <div>
     <Paragraph>
       The skip link component in this example should automatically focus. If it loses focus, tab to this example to see

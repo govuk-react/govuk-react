@@ -54,7 +54,7 @@ const Link: React.FC<LinkProps> = styled('a').withConfig({
  * - https://design-system.service.gov.uk/styles/typography/#links
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_links.scss
  */
-const LinkDocumented = (props: LinkProps) => <Link {...props} />;
+const LinkDocumented: React.FC<LinkProps> = (props: LinkProps) => <Link {...props} />;
 
 LinkDocumented.defaultProps = {
   muted: false,

@@ -41,7 +41,7 @@ class ManagedDateField extends React.Component<
   }
 }
 
-export const Default = () => (
+export const Default: React.FC = () => (
   <ManagedDateField
     input={{
       onFocus: action('date-focus'),
@@ -54,15 +54,15 @@ export const Default = () => (
   </ManagedDateField>
 );
 
-export const DateWithHintText = () => (
+export const DateWithHintText: React.FC = () => (
   <DateField hintText="For example, 31 03 1980">What is your date of birth?</DateField>
 );
 
-export const DateWithDefaultValues = () => (
+export const DateWithDefaultValues: React.FC = () => (
   <DateField defaultValues={{ day: '01', month: '02', year: '2018' }}>What is your date of birth ?</DateField>
 );
 
-export const DateWithHintTextError = () => (
+export const DateWithHintTextError: React.FC = () => (
   <DateField hintText="For example, 31 03 1980" errorText="Error message goes here">
     What is your date of birth?
   </DateField>

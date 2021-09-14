@@ -162,7 +162,7 @@ class TopNav extends Component<TopNavProps, { navigationOpen: boolean }> {
     defaultOpen: false,
   };
 
-  constructor(props) {
+  constructor(props: TopNavProps) {
     super(props);
     const { defaultOpen } = this.props;
     this.state = {
@@ -170,13 +170,13 @@ class TopNav extends Component<TopNavProps, { navigationOpen: boolean }> {
     };
   }
 
-  toggleNavigationOpen = () => {
+  toggleNavigationOpen: () => void = () => {
     this.setState((prevState) => ({
       navigationOpen: !prevState.navigationOpen,
     }));
   };
 
-  render() {
+  render(): JSX.Element {
     const { bgColor, color, company, serviceTitle, search, children, ...props } = this.props;
     const { navigationOpen } = this.state;
     return (

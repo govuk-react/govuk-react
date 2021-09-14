@@ -7,7 +7,7 @@ export default {
   component: Breadcrumbs,
 };
 
-export const Default = () => (
+export const Default: React.FC = () => (
   <Breadcrumbs>
     <Breadcrumbs.Link href="/section">Section</Breadcrumbs.Link>
     <Breadcrumbs.Link href="/section/sub-section">Sub-section</Breadcrumbs.Link>

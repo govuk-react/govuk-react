@@ -7,4 +7,4 @@ export default {
   component: LeadParagraph,
 };
 
-export const Default = () => <LeadParagraph>LeadParagraph example</LeadParagraph>;
+export const Default: React.FC = () => <LeadParagraph>LeadParagraph example</LeadParagraph>;

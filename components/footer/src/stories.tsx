@@ -16,7 +16,7 @@ export default {
   component: Footer,
 };
 
-export const Default = (args) => <Footer {...args} />;
+export const Default: React.FC = (args) => <Footer {...args} />;
 
 export const WithCustomWidthContainerNoWidthLimit = FooterWithCustomWidth;
 export const WithCopyright = FooterWithCopyright;

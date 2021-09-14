@@ -43,7 +43,7 @@ interface UnorderedListProps extends WithWhiteSpaceProps {
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_lists.scss
  */
 
-const UnorderedList = (props: UnorderedListProps) => <OrderedList as="ul" {...props} />;
+const UnorderedList: React.FC<UnorderedListProps> = (props: UnorderedListProps) => <OrderedList as="ul" {...props} />;
 
 UnorderedList.defaultProps = {
   listStyleType: undefined,

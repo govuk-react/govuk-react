@@ -9,13 +9,13 @@ export default {
   component: PhaseBanner,
 };
 
-export const Default = () => (
+export const Default: React.FC = () => (
   <PhaseBanner level="alpha">
     This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
   </PhaseBanner>
 );
 
-export const BetaPhaseTag = () => (
+export const BetaPhaseTag: React.FC = () => (
   <PhaseBanner level="beta">
     This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
   </PhaseBanner>

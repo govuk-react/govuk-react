@@ -54,7 +54,7 @@ const InnerContainer = styled('div')({
  * - Implement the 1020px min-width MQ to constants
  *
  */
-const Main = ({ children, ...props }: MainProps) => (
+const Main: React.FC<MainProps> = ({ children, ...props }: MainProps) => (
   <OuterContainer {...props}>
     <InnerContainer>{children}</InnerContainer>
   </OuterContainer>

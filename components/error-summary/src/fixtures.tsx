@@ -24,7 +24,7 @@ const onHandleErrorClick = (targetName) => {
   document.getElementsByName(targetName)[0].scrollIntoView();
 };
 
-const ErrorSummaryExample = () => (
+const ErrorSummaryExample: React.FC = () => (
   <div>
     <ErrorSummary
       heading={text('heading', heading)}

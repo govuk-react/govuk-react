@@ -5,7 +5,6 @@
     "@govuk-react/constants": "^0.9.1",
     "@govuk-react/error-text": "^0.9.1",
     "@govuk-react/hint-text": "^0.9.1",
-    "@govuk-react/hoc": "^0.9.1",
     "@govuk-react/input": "^0.9.1",
     "@govuk-react/label": "^0.9.1",
     "@govuk-react/label-text": "^0.9.1"

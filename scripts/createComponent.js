@@ -17,9 +17,9 @@ const writeFile = (filename, contents) => {
   const pathName = path.join(filename === 'package.json' ? folderName : `${folderName}/src`, filename);
   fs.writeFile(pathName, `${contents}`, (err) => {
     if (err) {
-      return console.log(err);
+      return console.log(err); /* eslint-disable-line no-console */
     }
-    console.log(`Created file: ${pathName}`);
+    console.log(`Created file: ${pathName}`); /* eslint-disable-line no-console */
     return false;
   });
   return false;
@@ -141,7 +141,7 @@ export default ${componentName};
 
 const init = () => {
   if (fs.existsSync(path.join(folderName))) {
-    console.log(`❗️❗️ The component '${componentName}' already exists ❗️❗️
+    /* eslint-disable-line no-console */ console.log(`❗️❗️ The component '${componentName}' already exists ❗️❗️
 Please use a different name or delete the existing folder 🆗`);
     return false;
   }
@@ -150,8 +150,8 @@ Please use a different name or delete the existing folder 🆗`);
     testScript();
     storiesScript();
     indexScript();
-    console.log(`✅  The component '${componentName}' was created successfully`);
-    console.log(`⚠️  Please ensure you add it to the package.json file for both packages/govuk-react and packages/storybook
+    /* eslint-disable-line no-console */ console.log(`✅  The component '${componentName}' was created successfully`);
+    /* eslint-disable-line no-console */ console.log(`⚠️  Please ensure you add it to the package.json file for both packages/govuk-react and packages/storybook
 and ensure that it is exported in packages/govuk-react/src/index.ts`);
   });
   return false;

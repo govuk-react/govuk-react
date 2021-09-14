@@ -54,7 +54,7 @@ const StyledLabel = styled('label')(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
  *
  */
-const Label = (props: LabelProps) => <StyledLabel {...props} />;
+const Label: React.FC<LabelProps> = (props: LabelProps) => <StyledLabel {...props} />;
 
 export interface LabelProps extends WithWhiteSpaceProps {
   /** Text for the label */

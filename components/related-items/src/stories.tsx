@@ -12,7 +12,7 @@ export default {
   component: RelatedItems,
 };
 
-export const Default = () => (
+export const Default: React.FC = () => (
   <RelatedItems>
     <H3>Travel abroad</H3>
     <UnorderedList listStyleType="none">

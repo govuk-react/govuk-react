@@ -22,7 +22,7 @@ interface SpinnerProps extends SVGProps {
   fill?: string;
 }
 
-const Spinner = ({ className, fill, title, ...rest }: SpinnerProps) => (
+const Spinner: React.FC<SpinnerProps> = ({ className, fill, title, ...rest }: SpinnerProps) => (
   <SVG
     className={className}
     viewBox="-25 -25 50 50"

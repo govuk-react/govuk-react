@@ -12,7 +12,7 @@ export default {
   component: Page,
 };
 
-export const Default = () => (
+export const Default: React.FC = () => (
   <div>
     <Page beforeChildren={<BackLink href="#" />}>
       <H1>Page Title</H1>
@@ -27,7 +27,7 @@ const WideContainer = styled(Page.WidthContainer)({
   },
 });
 
-export const CustomWidthContainerNoWidthLimit = () => (
+export const CustomWidthContainerNoWidthLimit: React.FC = () => (
   <div>
     <Page container={WideContainer}>
       <H3>Page container has no maxWidth</H3>
@@ -39,7 +39,7 @@ const MainContainer = styled(Page.Main)({
   backgroundColor: '#ddd',
 });
 
-export const CustomMainContainerBackgroundColour = () => (
+export const CustomMainContainerBackgroundColour: React.FC = () => (
   <div>
     <Page main={MainContainer}>
       <H3>Main container with custom background colour</H3>
@@ -47,7 +47,7 @@ export const CustomMainContainerBackgroundColour = () => (
   </div>
 );
 
-export const CustomMainContainerAdjustedPadding = () => (
+export const CustomMainContainerAdjustedPadding: React.FC = () => (
   <div>
     <Page main={(props) => <Page.Main padding={{ size: 1 }} {...props} />}>
       <H3>Main container with adjusted padding using withWhiteSpace padding prop</H3>
