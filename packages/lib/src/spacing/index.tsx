@@ -121,13 +121,16 @@ export function responsivePadding(
 // - see `responsivePadding` and `responsiveMargin` calls
 // can be an array of numbers/objects
 
+type Margin = number | { direction?: string | string[]; size: number; adjustment?: number };
+type Padding =
+  | number
+  | { size: number; direction?: string | string[] }
+  | { size: number; direction?: string | string[] }[];
+
 export function withWhiteSpace(
   config: {
-    margin?: number | { direction?: string | string[]; size: number; adjustment?: number };
-    padding?:
-      | number
-      | { size: number; direction?: string | string[] }
-      | { size: number; direction?: string | string[] }[];
+    margin?: Margin | Margin[];
+    padding?: Padding | Padding[];
     marginBottom?: number;
   } = {}
 ): (settings?: WithWhiteSpaceProps) => { [key: string]: string | { [key: string]: string } }[] {
@@ -215,11 +218,8 @@ export function withWidth(config: { width?: string; mediaQuery?: string; noDefau
 }
 
 export type WithWhiteSpaceProps = {
-  margin?: number | { direction?: string | string[]; size: number; adjustment?: number };
-  padding?:
-    | number
-    | { size: number; direction?: string | string[] }
-    | { size: number; direction?: string | string[] }[];
+  margin?: Margin | Margin[];
+  padding?: Padding | Padding[];
   mb?: number | string;
 };
 
