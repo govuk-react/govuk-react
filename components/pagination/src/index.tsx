@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import { MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 import Anchor from './anchor';
@@ -44,11 +43,14 @@ const StyledList = styled('ul')(
  * - https://govuk-static.herokuapp.com/component-guide/previous_and_next_navigation
  *
  */
-const Pagination = (props) => <StyledList {...props} />;
+const Pagination: PaginationType = (props: PaginationProps) => <StyledList {...props} />;
 
-Pagination.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+interface PaginationType extends React.FC<PaginationProps> {
+  Anchor: typeof Anchor;
+}
+interface PaginationProps {
+  children: React.ReactNode;
+}
 
 Pagination.Anchor = Anchor;
 

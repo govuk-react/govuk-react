@@ -1,7 +1,8 @@
+import type { FieldInputProps } from 'react-final-form';
+
 import React from 'react';
 import { Field } from 'react-final-form';
 
-import PropTypes from 'prop-types';
 import { withKnobs } from '@storybook/addon-knobs';
 import { FinalFormWrapper } from '@govuk-react/storybook-components';
 
@@ -10,7 +11,33 @@ import Radio from '.';
 
 const required = (value) => (value ? undefined : 'Required');
 
-const RadioGroup = ({ label, hint, options, inline, input, meta }) => (
+interface RadioGroupProps {
+  input?: FieldInputProps<any, HTMLElement>;
+  meta?: {
+    active?: boolean;
+    dirty?: boolean;
+    dirtySinceLastSubmit?: boolean;
+    error?: any;
+    initial?: any;
+    invalid?: boolean;
+    pristine?: boolean;
+    submitError?: any;
+    submitFailed?: boolean;
+    submitSucceeded?: boolean;
+    touched?: boolean;
+    valid?: boolean;
+    visited?: boolean;
+  };
+  label?: string;
+  hint?: string;
+  inline?: boolean;
+  options?: {
+    title?: string;
+    value?: string;
+  }[];
+}
+
+const RadioGroup: React.FC<RadioGroupProps> = ({ label, hint, options, inline, input, meta }: RadioGroupProps) => (
   <div>
     <MultiChoice label={label} hint={hint} meta={meta}>
       {options.map((o) => (
@@ -25,28 +52,12 @@ const RadioGroup = ({ label, hint, options, inline, input, meta }) => (
 );
 
 RadioGroup.defaultProps = {
-  input: {},
+  input: undefined,
   meta: {},
   hint: undefined,
   inline: false,
   options: [],
-};
-
-RadioGroup.propTypes = {
-  input: PropTypes.shape({
-    // eslint-disable-next-line react/forbid-prop-types
-    value: PropTypes.any,
-  }),
-  meta: PropTypes.shape({}),
-  label: PropTypes.string.isRequired,
-  hint: PropTypes.string,
-  inline: PropTypes.bool,
-  options: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string,
-      value: PropTypes.string,
-    })
-  ),
+  label: undefined,
 };
 
 export default {
@@ -55,9 +66,9 @@ export default {
   decorators: [withKnobs],
 };
 
-export const Default = () => <Radio name="group1">Radio button text example</Radio>;
+export const Default: React.FC = () => <Radio name="group1">Radio button text example</Radio>;
 
-export const RadioStacked = () => (
+export const RadioStacked: React.FC = () => (
   <div>
     <Radio name="group1">Waste from animal carcasses</Radio>
     <Radio name="group1">Waste from mines or quarries</Radio>
@@ -65,7 +76,7 @@ export const RadioStacked = () => (
   </div>
 );
 
-export const RadioInline = () => (
+export const RadioInline: React.FC = () => (
   <div>
     <Radio name="group1" inline>
       Yes
@@ -76,7 +87,7 @@ export const RadioInline = () => (
   </div>
 );
 
-export const RadioDisabled = () => (
+export const RadioDisabled: React.FC = () => (
   <div>
     <Radio name="group1" disabled>
       Disabled checkbox option
@@ -84,7 +95,7 @@ export const RadioDisabled = () => (
   </div>
 );
 
-export const RadioPreselected = () => (
+export const RadioPreselected: React.FC = () => (
   <div>
     <Radio name="group1" defaultChecked>
       Farm or agricultural waste
@@ -92,7 +103,7 @@ export const RadioPreselected = () => (
   </div>
 );
 
-export const RadioPreselectedDisabled = () => (
+export const RadioPreselectedDisabled: React.FC = () => (
   <div>
     <Radio name="group1" disabled defaultChecked>
       Farm or agricultural waste
@@ -100,7 +111,7 @@ export const RadioPreselectedDisabled = () => (
   </div>
 );
 
-export const RadioWithHintText = () => (
+export const RadioWithHintText: React.FC = () => (
   <div>
     <Radio
       name="group1"
@@ -117,7 +128,7 @@ export const RadioWithHintText = () => (
   </div>
 );
 
-export const UsageWithFinalReduxFormMultiCheckboxValidation = () => (
+export const UsageWithFinalReduxFormMultiCheckboxValidation: React.FC = () => (
   <FinalFormWrapper>
     <Field
       name="likesAnimals"

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { visuallyHidden } from '@govuk-react/lib';
 
@@ -31,29 +30,29 @@ const VisuallyHidden = styled('span')
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/helpers/_visually-hidden.scss
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/utilities/_visually-hidden.scss
  */
-const VisuallyHiddenDocumented = (props) => <VisuallyHidden {...props} />;
-
-VisuallyHiddenDocumented.propTypes = {
-  /**
-   * Content to be hidden
-   */
-  children: PropTypes.node.isRequired,
-  /**
-   * Allow component to be focusable, and thus become visible
-   */
-  focusable: PropTypes.bool,
-  /**
-   * Set styles with `!important`
-   */
-  important: PropTypes.bool,
-};
+const VisuallyHiddenDocumented: React.FC<VisuallyHiddenProps> = (props: VisuallyHiddenProps) => (
+  <VisuallyHidden {...props} />
+);
 
 VisuallyHiddenDocumented.defaultProps = {
   focusable: false,
   important: true,
 };
 
-VisuallyHidden.propTypes = VisuallyHiddenDocumented.propTypes;
+interface VisuallyHiddenProps {
+  /**
+   * Content to be hidden
+   */
+  children: React.ReactNode;
+  /**
+   * Allow component to be focusable, and thus become visible
+   */
+  focusable?: boolean;
+  /**
+   * Set styles with `!important`
+   */
+  important?: boolean;
+}
 VisuallyHidden.defaultProps = VisuallyHiddenDocumented.defaultProps;
 
 export { VisuallyHiddenDocumented };

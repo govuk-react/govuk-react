@@ -26,7 +26,7 @@ import { FormGroup, Checkbox } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
- `error` |  | ```false``` | bool | 
+ `children` |  | `````` |  | 
+ `error` |  | ```false``` |  | 
 
 

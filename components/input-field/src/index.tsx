@@ -85,13 +85,10 @@ interface InputFieldProps extends LabelProps {
     active?: boolean;
     dirty?: boolean;
     dirtySinceLastSubmit?: boolean;
-    // eslint-disable-next-line react/forbid-prop-types
     error?: any;
-    // eslint-disable-next-line react/forbid-prop-types
     initial?: any;
     invalid?: boolean;
     pristine?: boolean;
-    // eslint-disable-next-line react/forbid-prop-types
     submitError?: any;
     submitFailed?: boolean;
     submitSucceeded?: boolean;

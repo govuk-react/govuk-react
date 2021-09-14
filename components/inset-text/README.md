@@ -24,6 +24,6 @@ import { InsetText } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | 
+ `children` | true | `````` |  | 
 
 

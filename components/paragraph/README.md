@@ -68,8 +68,8 @@ const ReactRouterLinkRenderer = ({ href, children }) => (
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | ```''``` | node | Text content supporting markdown
- `linkRenderer` |  | ```(props) => <Link {...props} />``` | func | 
- `supportingText` |  | ```false``` | bool | Is this paragraph supporting text for another element?
+ `children` |  | ```''``` |  | Text content supporting markdown
+ `linkRenderer` |  | ```(props) => <Link {...props} />``` |  | 
+ `supportingText` |  | ```false``` |  | Is this paragraph supporting text for another element?
 
 

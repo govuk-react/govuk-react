@@ -63,14 +63,14 @@ import { GridRow , GridCol } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | ```undefined``` | node | GridCol content
- `columnFull` |  | ```false``` | bool | Dimension setting for the column (deprecated)
- `columnOneHalf` |  | ```false``` | bool | Dimension setting for the column (deprecated)
- `columnOneQuarter` |  | ```false``` | bool | Dimension setting for the column (deprecated)
- `columnOneThird` |  | ```false``` | bool | Dimension setting for the column (deprecated)
- `columnThreeQuarters` |  | ```false``` | bool | Dimension setting for the column (deprecated)
- `columnTwoThirds` |  | ```false``` | bool | Dimension setting for the column (deprecated)
- `setDesktopWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set desktop column to width using value or descriptive string<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
- `setWidth` |  | ```undefined``` | union(string \| number \| enum) | Explicitly set column to width using value or descriptive string<br/>(`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
+ `children` |  | ```undefined``` |  | 
+ `columnFull` |  | ```false``` |  | 
+ `columnOneHalf` |  | ```false``` |  | 
+ `columnOneQuarter` |  | ```false``` |  | 
+ `columnOneThird` |  | ```false``` |  | 
+ `columnThreeQuarters` |  | ```false``` |  | 
+ `columnTwoThirds` |  | ```false``` |  | 
+ `setDesktopWidth` |  | ```undefined``` |  | 
+ `setWidth` |  | ```undefined``` |  | 
 
 
