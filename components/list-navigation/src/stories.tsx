@@ -9,7 +9,7 @@ export default {
   component: ListNavigation,
 };
 
-export const Default = () => (
+export const Default: React.FC = () => (
   <ListNavigation listStyleType="square">
     <Link href="https://example.com/?=1">lorem dolor set cetra</Link>
     <Link href="https://example.com/?=2">Meta logi arche decip con</Link>

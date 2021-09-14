@@ -12,8 +12,8 @@ export default {
   component: InputField,
 };
 
-export const Default = () => <InputField input={{ name: 'group0' }}>National Insurance number</InputField>;
-export const InputWithHintText = () => (
+export const Default: React.FC = () => <InputField input={{ name: 'group0' }}>National Insurance number</InputField>;
+export const InputWithHintText: React.FC = () => (
   <InputField
     input={{ name: 'group1' }}
     hint={
@@ -27,7 +27,7 @@ export const InputWithHintText = () => (
     National Insurance number
   </InputField>
 );
-export const InputWithHintTextError = () => (
+export const InputWithHintTextError: React.FC = () => (
   <InputField
     input={{ name: 'group1' }}
     hint={

@@ -20,13 +20,15 @@ const exampleCodeBlock = `\`\`\`
   });
   \`\`\``;
 
-const ParagraphWithKnobs = () => (
+const ParagraphWithKnobs: React.FC = () => (
   <Paragraph supportingText={boolean('supportingText', false)}>{text('children', exampleParagraph)}</Paragraph>
 );
 
-const SupportingParagraph = () => <Paragraph supportingText>{text('children', exampleParagraph)}</Paragraph>;
+const SupportingParagraph: React.FC = () => <Paragraph supportingText>{text('children', exampleParagraph)}</Paragraph>;
 
-const ParagraphWithCodeBlock = () => <Paragraph supportingText>{text('children', exampleCodeBlock)}</Paragraph>;
+const ParagraphWithCodeBlock: React.FC = () => (
+  <Paragraph supportingText>{text('children', exampleCodeBlock)}</Paragraph>
+);
 
 export default Paragraph;
 

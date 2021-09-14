@@ -9,21 +9,21 @@ export default {
   component: UnorderedList,
 };
 
-export const Default = () => (
+export const Default: React.FC = () => (
   <UnorderedList>
     <ListItem>Lorem ipsum dolor sit.</ListItem>
     <ListItem>Consectetur adipiscing elit.</ListItem>
     <ListItem>Curabitur et libero nec.</ListItem>
   </UnorderedList>
 );
-export const UnorderedListWithSquare = () => (
+export const UnorderedListWithSquare: React.FC = () => (
   <UnorderedList listStyleType="square">
     <ListItem>Cras nec quam ut lorem.</ListItem>
     <ListItem>Curabitur porta elit ut ante vehicula.</ListItem>
     <ListItem>Proin ac molestie ligula, non blandit libero.</ListItem>
   </UnorderedList>
 );
-export const UnorderedListWithBulletWithNestedLists = () => (
+export const UnorderedListWithBulletWithNestedLists: React.FC = () => (
   <UnorderedList listStyleType="bullet">
     <ListItem>Bullet list</ListItem>
     <ListItem>In nisi lectus, mollis sed neque.</ListItem>
@@ -56,7 +56,7 @@ export const UnorderedListWithBulletWithNestedLists = () => (
     <ListItem>Nullam laoreet turpis eu odio gravida.</ListItem>
   </UnorderedList>
 );
-export const UnorderedListWithNoDecoration = () => (
+export const UnorderedListWithNoDecoration: React.FC = () => (
   <UnorderedList listStyleType="none">
     <ListItem>In nisi lectus, mollis sed neque.</ListItem>
     <ListItem>Pellentesque habitant morbi tristique senectus et netus et malesuada.</ListItem>

@@ -7,7 +7,7 @@ interface ButtonArrowProps extends SVGProps {
   fill?: string;
 }
 
-const ButtonArrow = ({ fill, title, ...rest }: ButtonArrowProps) => (
+const ButtonArrow: React.FC<ButtonArrowProps> = ({ fill, title, ...rest }: ButtonArrowProps) => (
   <SVG viewBox="0 0 706 860" title={title} fill={fill} {...rest}>
     <g>
       <path d="M.152 0h252.993l452.108 430H452.261z" />

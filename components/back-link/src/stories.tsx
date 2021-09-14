@@ -10,5 +10,5 @@ export default {
   decorators: [withKnobs],
 };
 
-export const Default = () => <BackLink onClick={action('go-back')}>{text('Children', 'Back')}</BackLink>;
-export const WithHref = () => <BackLink href="#">Back</BackLink>;
+export const Default: React.FC = () => <BackLink onClick={action('go-back')}>{text('Children', 'Back')}</BackLink>;
+export const WithHref: React.FC = () => <BackLink href="#">Back</BackLink>;

@@ -11,9 +11,9 @@ export default {
   decorators: [withKnobs],
 };
 
-export const Default = () => <ListItem>{text('Children', 'List item example')}</ListItem>;
+export const Default: React.FC = () => <ListItem>{text('Children', 'List item example')}</ListItem>;
 
-export const WithAnchor = () => (
+export const WithAnchor: React.FC = () => (
   <ListItem>
     <Link href="https://www.google.com/">{text('Children', 'List item example')}</Link>
   </ListItem>

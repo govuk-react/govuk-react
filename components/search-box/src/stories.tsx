@@ -7,7 +7,7 @@ export default {
   component: SearchBox,
 };
 
-export const Default = () => (
+export const Default: React.FC = () => (
   <SearchBox>
     <SearchBox.Input placeholder="Search GOV.UK" />
     <SearchBox.Button />

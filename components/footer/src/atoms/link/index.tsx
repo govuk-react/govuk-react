@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FOOTER_LINK, FOOTER_LINK_HOVER } from 'govuk-colours';
+// TODO: Why not Link?
 import { LinkDocumented } from '@govuk-react/link';
 
 const StyledFooterLink = styled(LinkDocumented)({
@@ -12,7 +13,7 @@ const StyledFooterLink = styled(LinkDocumented)({
   },
 });
 
-const FooterLink = (props) => {
+const FooterLink: React.FC<React.ComponentProps<typeof LinkDocumented>> = (props) => {
   return <StyledFooterLink {...props} />;
 };
 

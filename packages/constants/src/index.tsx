@@ -38,10 +38,17 @@ export const SPACING = {
 
 export const SITE_WIDTH_PLUS_GUTTERS = `${SITE_WIDTH_PX + 2 * GUTTER_PX}px`;
 
-export const MEDIA_QUERIES = {
+export const MEDIA_QUERY_PRINT = '@media print';
+export const MEDIA_QUERIES: {
+  LARGESCREEN: string;
+  MAX: string;
+  PRINT: string;
+  TABLET: string;
+  DESKTOP: string;
+} = {
   LARGESCREEN: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`,
   MAX: `@media only screen and (min-width: ${SITE_WIDTH_PLUS_GUTTERS})`,
-  PRINT: '@media print',
+  PRINT: MEDIA_QUERY_PRINT,
   TABLET: `@media only screen and (min-width: ${BREAKPOINTS.TABLET})`,
   DESKTOP: `@media only screen and (min-width: ${BREAKPOINTS.DESKTOP})`,
 };

@@ -5,7 +5,7 @@ import { BrowserRouter, Link as RLink, Route } from 'react-router-dom';
 
 import Link, { LinkDocumented } from '.';
 
-const LinkExample = () => (
+const LinkExample: React.FC = () => (
   // eslint-disable-next-line jsx-a11y/anchor-is-valid
   <LinkDocumented
     muted={boolean('muted', false)}
@@ -18,14 +18,14 @@ const LinkExample = () => (
 );
 export default LinkExample;
 
-export const LinkWithAllOptionsOn = () => (
+export const LinkWithAllOptionsOn: React.FC = () => (
   // eslint-disable-next-line jsx-a11y/anchor-is-valid
   <LinkDocumented muted textColour noVisitedState href="#">
     {text('Link content', 'Link example')}
   </LinkDocumented>
 );
 
-export const LinkWithRouter = () => (
+export const LinkWithRouter: React.FC = () => (
   <BrowserRouter>
     <div>
       <Link as={RLink} to="/first">

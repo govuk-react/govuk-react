@@ -182,9 +182,7 @@ export function withWhiteSpace(
 
 export function withWidth(config: { width?: any; mediaQuery?: string; noDefault?: boolean } = {}): ({
   setWidth,
-}?: {
-  setWidth?: any;
-}) => {
+}?: WithWidthProps) => {
   [x: string]:
     | string
     | {
@@ -210,3 +208,5 @@ export function withWidth(config: { width?: any; mediaQuery?: string; noDefault?
 }
 
 export type WithWhiteSpaceProps = { margin?: any; padding?: any; mb?: any };
+
+export type WithWidthProps = { setWidth?: string };

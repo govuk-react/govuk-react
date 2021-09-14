@@ -51,7 +51,7 @@ const DateField = ({ meta, input: { onChange, onBlur, ...input }, children, ...p
 );
 const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />;
 
-const FinalForm = () => {
+const FinalForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [submittedData, setSubmittedData] = useState();

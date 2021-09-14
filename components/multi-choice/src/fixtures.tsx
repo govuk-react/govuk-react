@@ -16,15 +16,17 @@ const children = (
   </>
 );
 
-const MultiChoiceWithKnobs = () => <MultiChoice label={text('Label', 'Example label')}>{children}</MultiChoice>;
+const MultiChoiceWithKnobs: React.FC = () => (
+  <MultiChoice label={text('Label', 'Example label')}>{children}</MultiChoice>
+);
 
-export const MultiChoiceWithKnobsHint = () => (
+export const MultiChoiceWithKnobsHint: React.FC = () => (
   <MultiChoice label={text('Label', 'Example label')} hint={text('Example hint', 'Example hint')}>
     {children}
   </MultiChoice>
 );
 
-export const MultiChoiceWithKnobsError = () => (
+export const MultiChoiceWithKnobsError: React.FC = () => (
   <MultiChoice label={text('Label', 'Example label')} meta={object('Meta', metaData)}>
     {children}
   </MultiChoice>

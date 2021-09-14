@@ -7,4 +7,4 @@ export default {
   component: Input,
 };
 
-export const Default = () => <Input type="text" />;
+export const Default: React.FC = () => <Input type="text" />;

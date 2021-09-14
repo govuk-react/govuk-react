@@ -1,8 +1,12 @@
-export const validateNationality = (value) => (value?.length ? undefined : 'Please select at least one nationality');
-export const validateMultiplePets = (value) => (value ? undefined : 'Please let us know if you have multiple pets');
-export const validateFirstName = (value) => (value ? undefined : 'Please enter a first name');
-export const validateDescription = (value) => (value ? undefined : 'Please enter a description');
-export const validateDateOfBirth = (value) => {
+export const validateNationality: (value?: string[]) => string | undefined = (value) =>
+  value?.length ? undefined : 'Please select at least one nationality';
+export const validateMultiplePets: (value?: any) => string | undefined = (value) =>
+  value ? undefined : 'Please let us know if you have multiple pets';
+export const validateFirstName: (value?: any) => string | undefined = (value) =>
+  value ? undefined : 'Please enter a first name';
+export const validateDescription: (value?: any) => string | undefined = (value) =>
+  value ? undefined : 'Please enter a description';
+export const validateDateOfBirth: (value?: any) => string | undefined = (value) => {
   if (value && value.year && value.month && value.day) {
     const year = Number(value.year);
     const month = Number(value.month) - 1;
@@ -23,9 +27,11 @@ export const validateDateOfBirth = (value) => {
   }
   return 'Please enter a date of birth';
 };
-export const validateAnimal = (value) => (value ? undefined : 'Please select an animal');
-export const validatePetPhoto = (file) =>
+export const validateAnimal: (value?: any) => string | undefined = (value) =>
+  value ? undefined : 'Please select an animal';
+export const validatePetPhoto: (value?: any) => string | undefined = (file) =>
   file && file.length === 1 && ['image/jpeg', 'image/png'].includes(file[0].type)
     ? undefined
     : 'Please select a valid photo';
-export const validatePetPhotoString = (fileString) => (fileString?.length ? undefined : 'Please select a valid photo');
+export const validatePetPhotoString: (value?: any) => string | undefined = (fileString) =>
+  fileString?.length ? undefined : 'Please select a valid photo';

@@ -118,7 +118,7 @@ const StyledTable = styled('table')(
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/table/_table.scss
  *
  */
-const Table = ({ caption, children, body = children, head, ...props }: TableProps) => (
+const Table: TableType = ({ caption, children, body = children, head, ...props }: TableProps) => (
   <StyledTable {...props}>
     {caption && <Caption>{caption}</Caption>}
     {head && <TableHeader>{head}</TableHeader>}
@@ -133,6 +133,12 @@ Table.defaultProps = {
   head: undefined,
 };
 
+interface TableType extends React.FC<TableProps> {
+  CellHeader: typeof CellHeader;
+  Row: typeof Row;
+  Cell: typeof Cell;
+  Header: typeof TableHeader;
+}
 interface TableProps {
   /** Table body rows and cells (for backward compatibility) */
   body?: React.ReactNode;

@@ -9,7 +9,7 @@ export default {
   decorators: [withKnobs],
 };
 
-export const Default = () => (
+export const Default: React.FC = () => (
   <Fieldset>
     <Fieldset.Legend size={text('legend size', 'LARGE')} isPageHeading={boolean('legend isPageHeading', false)}>
       {text('legend contents', 'Example legend')}
@@ -17,7 +17,7 @@ export const Default = () => (
   </Fieldset>
 );
 
-export const LegendAsPageHeading = () => (
+export const LegendAsPageHeading: React.FC = () => (
   <Fieldset>
     <Fieldset.Legend size="XLARGE" isPageHeading>
       Legend as page heading

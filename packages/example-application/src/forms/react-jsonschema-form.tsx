@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import type { JSONSchema7 } from 'json-schema';
 
 import React, { useCallback, useState } from 'react';
 import * as GovUK from 'govuk-react';
@@ -17,7 +18,7 @@ import {
 
 import { dobStringToObj, Form } from './react-jsonschema-form-helpers';
 
-const formSchema = {
+const formSchema: JSONSchema7 = {
   properties: {
     0: {
       title: 'About you',
@@ -129,7 +130,7 @@ interface SubmittedData {
   };
 }
 
-const ReactJSONSchemaForm = () => {
+const ReactJSONSchemaForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [submittedData, setSubmittedData] = useState<SubmittedData>();

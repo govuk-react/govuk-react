@@ -7,4 +7,4 @@ export default {
   component: HintText,
 };
 
-export const Default = () => <HintText>Example</HintText>;
+export const Default: React.FC = () => <HintText>Example</HintText>;

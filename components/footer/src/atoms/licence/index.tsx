@@ -19,7 +19,7 @@ const LicenceDescription = styled('span')({
   display: 'inline-block',
 });
 
-const Licence = () => (
+const Licence: React.FC = () => (
   <div>
     <LicenceLogo
       role="presentation"

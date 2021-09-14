@@ -1,6 +1,6 @@
 import visuallyHidden from './visually-hidden';
 
-export type { WithWhiteSpaceProps } from './spacing';
+export type { WithWhiteSpaceProps, WithWidthProps } from './spacing';
 
 export * as link from './link';
 export * as shape from './shape';

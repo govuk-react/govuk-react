@@ -7,4 +7,4 @@ export default {
   component: Label,
 };
 
-export const Default = () => <Label>Example</Label>;
+export const Default: React.FC = () => <Label>Example</Label>;
