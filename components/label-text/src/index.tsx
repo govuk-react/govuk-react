@@ -43,7 +43,7 @@ const StyledLabelText = styled('span')(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
  *
  */
-const LabelText = (props: LabelTextProps) => <StyledLabelText {...props} />;
+const LabelText: React.FC<LabelTextProps> = (props: LabelTextProps) => <StyledLabelText {...props} />;
 
 interface LabelTextProps {
   /** Text for the label */

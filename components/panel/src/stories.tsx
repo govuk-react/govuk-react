@@ -7,9 +7,9 @@ export default {
   component: Panel,
 };
 
-export const Default = () => <Panel title="Application complete" />;
+export const Default: React.FC = () => <Panel title="Application complete" />;
 
-export const PanelWithHeaderAndHtmlBody = () => (
+export const PanelWithHeaderAndHtmlBody: React.FC = () => (
   <Panel title="Application complete">
     Your reference number
     <br />

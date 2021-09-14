@@ -11,9 +11,11 @@ export default {
   decorators: [withKnobs],
 };
 
-export const Default = () => <Heading size={text('size', 'LARGE')}>{text('Children', 'Heading text')}</Heading>;
+export const Default: React.FC = () => (
+  <Heading size={text('size', 'LARGE')}>{text('Children', 'Heading text')}</Heading>
+);
 
-export const LevelAliases = () => (
+export const LevelAliases: React.FC = () => (
   <div>
     <H1>H1</H1>
     <H2>H2</H2>
@@ -23,7 +25,7 @@ export const LevelAliases = () => (
     <H6>H6</H6>
   </div>
 );
-export const DifferingSizes = () => (
+export const DifferingSizes: React.FC = () => (
   <div>
     <H6 size={80}>h6 with XXLARGE style</H6>
     <Heading as="h2" size={16}>
@@ -32,7 +34,7 @@ export const DifferingSizes = () => (
     <H3 size="LARGE">H3 with size large</H3>
   </div>
 );
-export const PropsPassThrough = () => (
+export const PropsPassThrough: React.FC = () => (
   <div>
     <Heading onClick={action('heading-click')}>Click me</Heading>
   </div>

@@ -12,7 +12,7 @@ export default {
   component: VisuallyHiddenDocumented,
 };
 
-export const Default = () => (
+export const Default: React.FC = () => (
   <div>
     <Paragraph>
       Following this paragraph is some hidden content. If `focusable` is enabled then you should be able to tab to it.
@@ -38,5 +38,7 @@ class Focusable extends Component<{ as?: React.ElementType }> {
     return <VisuallyHidden ref={this.focusableRef} focusable {...this.props} />;
   }
 }
-export const FocussedFocusable = () => <Focusable>Focussed focusable VisuallyHidden element</Focusable>;
-export const FocussedFocusableAsAButton = () => <Focusable as={Button}>VisuallyHidden as Button (focusable)</Focusable>;
+export const FocussedFocusable: React.FC = () => <Focusable>Focussed focusable VisuallyHidden element</Focusable>;
+export const FocussedFocusableAsAButton: React.FC = () => (
+  <Focusable as={Button}>VisuallyHidden as Button (focusable)</Focusable>
+);

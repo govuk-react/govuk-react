@@ -7,4 +7,4 @@ export default {
   component: ErrorText,
 };
 
-export const Default = () => <ErrorText>Example</ErrorText>;
+export const Default: React.FC = () => <ErrorText>Example</ErrorText>;

@@ -4,7 +4,6 @@
   "dependencies": {
     "@govuk-react/button": "^0.9.1",
     "@govuk-react/constants": "^0.9.1",
-    "@govuk-react/hoc": "^0.9.1",
     "@govuk-react/icon-crown": "0.0.5",
     "@govuk-react/icons": "^0.9.1",
     "@govuk-react/lib": "^0.9.1",

@@ -9,7 +9,7 @@ export default {
   decorators: [withKnobs],
 };
 
-export const IconImportant = () => {
+export const IconImportant: React.FC = () => {
   const fillColour = color('fill', 'black');
   const width = text('width', '256px');
   const height = text('height', '256px');

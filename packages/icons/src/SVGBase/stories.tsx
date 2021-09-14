@@ -9,7 +9,7 @@ export default {
   decorators: [withKnobs],
 };
 
-export const SVGBase = () => {
+export const SVGBase: React.FC = () => {
   const fill = color('fill', 'transparent');
   const stroke = color('stroke', 'orange');
   const viewBox = text('viewBox', '0 0 500 500');

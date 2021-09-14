@@ -79,7 +79,7 @@ const TextAreaField = styled('textarea')(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/textarea
  *
  */
-const TextArea = ({ children, hint, meta, input, ...props }: TextAreaProps) => (
+const TextArea: React.FC<TextAreaProps> = ({ children, hint, meta, input, ...props }: TextAreaProps) => (
   <Label error={meta.touched && !!meta.error} {...props}>
     <LabelText>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Table from '.';
 
-const TableSimple = () => (
+const TableSimple: React.FC = () => (
   <Table>
     <Table.Row>
       <Table.CellHeader>First 6 weeks</Table.CellHeader>
@@ -23,7 +23,7 @@ const TableSimple = () => (
   </Table>
 );
 
-const TableWithCaption = () => (
+const TableWithCaption: React.FC = () => (
   <Table
     caption="Dates and amounts"
     body={
@@ -53,7 +53,7 @@ const exampleHead = (
   </Table.Row>
 );
 
-const TableWithHeadAndNumerics = () => (
+const TableWithHeadAndNumerics: React.FC = () => (
   <Table caption="Attention, I am the caption of this ship!" head={exampleHead}>
     <Table.Row>
       <Table.CellHeader>January</Table.CellHeader>
@@ -78,7 +78,7 @@ const TableWithHeadAndNumerics = () => (
   </Table>
 );
 
-const TableThreeQuartersOneQuarter = () => (
+const TableThreeQuartersOneQuarter: React.FC = () => (
   <Table
     caption="Three quarters, one quarter"
     head={
@@ -95,7 +95,7 @@ const TableThreeQuartersOneQuarter = () => (
   </Table>
 );
 
-const TableWithCustomWidths = () => (
+const TableWithCustomWidths: React.FC = () => (
   <Table
     caption="Custom widths"
     head={

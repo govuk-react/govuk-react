@@ -15,7 +15,7 @@ const Content = styled('div')({
   backgroundImage: 'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)',
 });
 
-export const Default = () => (
+export const Default: React.FC = () => (
   <GridRow>
     <GridCol>
       <Content>Example</Content>

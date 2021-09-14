@@ -20,7 +20,7 @@ function isNotEmpty(obj) {
 const toggle = (array, newItem) =>
   array.includes(newItem) ? array.filter((existingItem) => existingItem !== newItem) : [...array, newItem];
 
-const Form = () => {
+const Form: React.FC = () => {
   const [firstName, setFirstName] = useState<string>('');
   const [description, setDescription] = useState<string>('');
   const [nationality, setNationality] = useState<string[]>([]);

@@ -12,15 +12,15 @@ export default {
   component: TextArea,
 };
 
-export const Default = () => <TextArea input={{ name: 'group1' }}>Description of what you saw</TextArea>;
+export const Default: React.FC = () => <TextArea input={{ name: 'group1' }}>Description of what you saw</TextArea>;
 
-export const TextareaWithHintText = () => (
+export const TextareaWithHintText: React.FC = () => (
   <TextArea input={{ name: 'group1' }} hint={['Enter as many words as you like']}>
     Description of what you saw
   </TextArea>
 );
 
-export const TextareaWithHintTextError = () => (
+export const TextareaWithHintTextError: React.FC = () => (
   <TextArea input={{ name: 'group1' }} hint={['Enter as many words as you like']} meta={meta}>
     Description of what you saw
   </TextArea>

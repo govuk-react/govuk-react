@@ -9,7 +9,7 @@ export default {
   component: OrderedList,
 };
 
-export const Default = () => (
+export const Default: React.FC = () => (
   <OrderedList>
     <ListItem>Lorem ipsum dolor sit.</ListItem>
     <ListItem>Consectetur adipiscing elit.</ListItem>
@@ -17,7 +17,7 @@ export const Default = () => (
   </OrderedList>
 );
 
-export const OrderedListWithAlpha = () => (
+export const OrderedListWithAlpha: React.FC = () => (
   <OrderedList listStyleType="lower-alpha">
     <ListItem>Cras nec quam ut lorem.</ListItem>
     <ListItem>Curabitur porta elit ut ante vehicula.</ListItem>
@@ -25,7 +25,7 @@ export const OrderedListWithAlpha = () => (
   </OrderedList>
 );
 
-export const OrderedListWithRoman = () => (
+export const OrderedListWithRoman: React.FC = () => (
   <OrderedList listStyleType="lower-roman">
     <ListItem>In nisi lectus, mollis sed neque.</ListItem>
     <ListItem>Pellentesque habitant morbi tristique senectus et netus et malesuada.</ListItem>
@@ -35,7 +35,7 @@ export const OrderedListWithRoman = () => (
   </OrderedList>
 );
 
-export const OrderedListWithBulletWithNestedNumberList = () => (
+export const OrderedListWithBulletWithNestedNumberList: React.FC = () => (
   <OrderedList listStyleType="bullet">
     <ListItem>In nisi lectus, mollis sed neque.</ListItem>
     <ListItem>Pellentesque habitant morbi tristique senectus et netus et malesuada.</ListItem>
@@ -47,7 +47,7 @@ export const OrderedListWithBulletWithNestedNumberList = () => (
   </OrderedList>
 );
 
-export const OrderedListWithNoDecoration = () => (
+export const OrderedListWithNoDecoration: React.FC = () => (
   <OrderedList listStyleType="none">
     <ListItem>Lorem ipsum dolor sit.</ListItem>
     <ListItem>Consectetur adipiscing elit.</ListItem>

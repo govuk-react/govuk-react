@@ -54,6 +54,7 @@ module.exports = {
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
         '@typescript-eslint/no-explicit-any': 0,
+        '@typescript-eslint/explicit-module-boundary-types': 'error',
       },
     },
     {

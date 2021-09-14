@@ -48,7 +48,7 @@ interface ListNavigationProps {
  * - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
  * - Fix active state overlaping siblings
  */
-const ListNavigation = ({ children, listStyleType, ...props }: ListNavigationProps) => (
+const ListNavigation: React.FC<ListNavigationProps> = ({ children, listStyleType, ...props }: ListNavigationProps) => (
   <UnorderedList listStyleType={listStyleType} {...props}>
     {Array.isArray(children) && children.length ? (
       React.Children.map(children, (child) => <ListItem>{child}</ListItem>)

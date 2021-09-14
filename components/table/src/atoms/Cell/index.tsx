@@ -1,3 +1,5 @@
+import type { WithWidthProps } from '@govuk-react/lib';
+
 import styled from 'styled-components';
 import { BORDER_COLOUR } from 'govuk-colours';
 import { FONT_WEIGHTS, SPACING_POINTS } from '@govuk-react/constants';
@@ -16,12 +18,13 @@ const Cell: React.FC<CellProps> = styled('td')(
   ({ numeric, isHeader }) => (numeric && !isHeader ? typography.font({ tabular: true }) : undefined),
   spacing.withWidth()
 );
-interface CellProps extends React.HTMLAttributes<HTMLTableCellElement> {
+interface CellProps extends React.HTMLAttributes<HTMLTableCellElement>, WithWidthProps {
   alignRight?: boolean;
   children: React.ReactNode;
   isHeader?: boolean;
   numeric?: boolean;
   bold?: boolean;
+  as?: React.ElementType;
 }
 
 export default Cell;

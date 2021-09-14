@@ -77,13 +77,13 @@ const WideContainer = styled(Footer.WidthContainer)({
   },
 });
 
-export const FooterWithCustomWidth = () => <Footer container={WideContainer} />;
+export const FooterWithCustomWidth: React.FC = () => <Footer container={WideContainer} />;
 
-export const FooterWithCopyright = () => <Footer copyright={copyright} />;
+export const FooterWithCopyright: React.FC = () => <Footer copyright={copyright} />;
 
-export const FooterWithMetaLinks = () => withRoutes(<Footer meta={metaLinks} />);
+export const FooterWithMetaLinks: React.FC = () => withRoutes(<Footer meta={metaLinks} />);
 
-export const FooterWithSingleMetaLink = () =>
+export const FooterWithSingleMetaLink: React.FC = () =>
   withRoutes(
     <Footer
       meta={
@@ -94,11 +94,11 @@ export const FooterWithSingleMetaLink = () =>
     />
   );
 
-export const FooterWithMetaCustom = () => <Footer meta={metaCustom} />;
+export const FooterWithMetaCustom: React.FC = () => <Footer meta={metaCustom} />;
 
-export const FooterWithMetaLinksAndCustom = () => withRoutes(<Footer meta={metaLinksAndCustom} />);
+export const FooterWithMetaLinksAndCustom: React.FC = () => withRoutes(<Footer meta={metaLinksAndCustom} />);
 
-export const FooterWithSingleNavigationLink = () => (
+export const FooterWithSingleNavigationLink: React.FC = () => (
   <Footer>
     <Footer.Navigation>
       <Footer.NavigationLinks heading="Single column list">
@@ -108,6 +108,7 @@ export const FooterWithSingleNavigationLink = () => (
   </Footer>
 );
 
-export const FooterWithNavigation = () => withRoutes(<Footer>{navigation}</Footer>);
+export const FooterWithNavigation: React.FC = () => withRoutes(<Footer>{navigation}</Footer>);
 
-export const FooterWithNavigationAndMeta = () => withRoutes(<Footer meta={metaLinksAndCustom}>{navigation}</Footer>);
+export const FooterWithNavigationAndMeta: React.FC = () =>
+  withRoutes(<Footer meta={metaLinksAndCustom}>{navigation}</Footer>);

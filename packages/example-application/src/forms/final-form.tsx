@@ -39,7 +39,7 @@ const FileUpload: React.FC<
   <GovUK.FileUpload {...input} {...props} onChange={({ target }) => onChange(target.files)} />
 );
 
-const FinalForm = () => {
+const FinalForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [submittedData, setSubmittedData] = useState();

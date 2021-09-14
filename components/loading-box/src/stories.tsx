@@ -18,7 +18,7 @@ export default {
 
 const spacer = <p style={{ marginTop: 0 }}>&nbsp;</p>;
 
-export const Default = () => (
+export const Default: React.FC = () => (
   <LoadingBox
     loading={boolean('loading', false)}
     backgroundColor={text('backgroundColor', '#fff')}
@@ -41,7 +41,7 @@ export const Default = () => (
   </LoadingBox>
 );
 
-export const PresetToLoading = () => (
+export const PresetToLoading: React.FC = () => (
   <LoadingBox
     loading={boolean('loading', true)}
     backgroundColor={text('backgroundColor', '#fff')}
@@ -63,7 +63,7 @@ export const PresetToLoading = () => (
   </LoadingBox>
 );
 
-export const LoadingBoxLong = () => (
+export const LoadingBoxLong: React.FC = () => (
   <LoadingBox
     loading={boolean('loading', false)}
     backgroundColor={text('backgroundColor', '#fff')}
@@ -101,9 +101,9 @@ export const LoadingBoxLong = () => (
   </LoadingBox>
 );
 
-export const ShortHeight = () => <LoadingBox loading>Lorem ipsum dolor sit amet</LoadingBox>;
+export const ShortHeight: React.FC = () => <LoadingBox loading>Lorem ipsum dolor sit amet</LoadingBox>;
 
-export const WithBoldedTexts = () => (
+export const WithBoldedTexts: React.FC = () => (
   <LoadingBox loading>
     <H1>Lorem ipsum dolor sit amet</H1>
     <H2>Consectetur adipisicing elit. Quia incidunt, earum molestiae omnis labore adipisci.</H2>

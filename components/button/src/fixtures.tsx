@@ -6,37 +6,37 @@ import { MemoryRouter, Route, Link } from 'react-router-dom';
 
 import Button from '.';
 
-const ButtonWithKnobs = () => (
+const ButtonWithKnobs: React.FC = () => (
   <Button mb="0" disabled={boolean('Disabled', false)} start={boolean('Start', false)}>
     {text('Children', 'Button')}
   </Button>
 );
 
-const ButtonStart = () => <Button start>Save and continue</Button>;
+const ButtonStart: React.FC = () => <Button start>Save and continue</Button>;
 
-const ButtonStartIcon = () => (
+const ButtonStartIcon: React.FC = () => (
   <Button icon={<ButtonArrow />} start>
     Start now
   </Button>
 );
 
-const ButtonDisabled = () => <Button disabled>Disabled primary button</Button>;
+const ButtonDisabled: React.FC = () => <Button disabled>Disabled primary button</Button>;
 
-const ButtonDisabledStartIcon = () => (
+const ButtonDisabledStartIcon: React.FC = () => (
   <Button disabled start icon={<ButtonArrow />}>
     Start now
   </Button>
 );
 
-const ButtonBlue = () => <Button buttonColour={BLUE}>Blue button</Button>;
+const ButtonBlue: React.FC = () => <Button buttonColour={BLUE}>Blue button</Button>;
 
-const ButtonWacky = () => (
+const ButtonWacky: React.FC = () => (
   <Button buttonColour={GREY_3} buttonHoverColour={YELLOW} buttonShadowColour={ORANGE} buttonTextColour={TEXT_COLOUR}>
     Wacky colours
   </Button>
 );
 
-const ButtonAsLink = () => (
+const ButtonAsLink: React.FC = () => (
   <MemoryRouter>
     <div>
       <Button as={Link} to="/">

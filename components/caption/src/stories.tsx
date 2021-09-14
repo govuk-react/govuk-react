@@ -12,20 +12,20 @@ export default {
   decorators: [withKnobs],
 };
 
-export const Default = () => <CaptionWithKnobs />;
+export const Default: React.FC = () => <CaptionWithKnobs />;
 
 const arrTypography = Object.keys(TYPOGRAPHY_SCALE);
 const captionOptions = [...Object.keys(CAPTION_SIZES), ...arrTypography];
 const headingOptions = [...Object.keys(HEADING_SIZES), ...arrTypography];
 
-export const PlacedWithAHeadingComponent = () => (
+export const PlacedWithAHeadingComponent: React.FC = () => (
   <div>
     <Caption size={select('size', captionOptions, 'XL')}>{text('children', 'Supporting heading text')}</Caption>
     <Heading size={select('heading size', headingOptions, 'XL')}>{text('heading', 'Main heading text')}</Heading>
   </div>
 );
 
-export const PlacedInsideAHeadingComponent = () => (
+export const PlacedInsideAHeadingComponent: React.FC = () => (
   <div>
     <Heading size={select('heading size', headingOptions, 'XL')}>
       <Caption size={select('size', captionOptions, 'XL')}>{text('children', 'Supporting heading text')}</Caption>
@@ -34,7 +34,7 @@ export const PlacedInsideAHeadingComponent = () => (
   </div>
 );
 
-export const ShowingAllStandardCaptionSizesWithHeadings = () => (
+export const ShowingAllStandardCaptionSizesWithHeadings: React.FC = () => (
   <div>
     <Caption size="XL">Supporting heading size XL</Caption>
     <Heading size="XL">Main heading size XL</Heading>
