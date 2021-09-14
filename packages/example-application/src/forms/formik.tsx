@@ -203,7 +203,7 @@ const FinalForm: React.FC = () => {
                     <GovUK.MultiChoice
                       mb={8}
                       label="Do you have more than one pet?"
-                      meta={{ error: errors?.hasMultiplePets, touched: !!touched?.hasMultiplePets }}
+                      meta={{ error: String(errors?.hasMultiplePets), touched: !!touched?.hasMultiplePets }}
                     >
                       <Field
                         component={Radio}
