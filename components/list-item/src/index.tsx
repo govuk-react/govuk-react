@@ -1,3 +1,5 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import React from 'react';
 import styled from 'styled-components';
 import { SPACING_POINTS } from '@govuk-react/constants';
@@ -41,7 +43,7 @@ const ListItem: React.FC<ListItemProps> = styled('li')(
 // Do the react-docgen dance
 const DocumentedComponent: React.FC<ListItemProps> = (props: ListItemProps) => <ListItem {...props} />;
 
-interface ListItemProps {
+interface ListItemProps extends WithWhiteSpaceProps {
   /** List item content */
   children: React.ReactNode;
 }

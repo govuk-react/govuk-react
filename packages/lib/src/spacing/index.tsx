@@ -69,7 +69,9 @@ export function responsive({
   };
 }
 
-export function responsiveMargin(value: number | { size: any; direction: any; adjustment?: number }): any {
+export function responsiveMargin(
+  value: number | { size: number; direction?: string | string[]; adjustment?: number }
+): any {
   if (Number.isInteger(value)) {
     return responsive({ size: Number(value), property: 'margin' });
   }
@@ -87,7 +89,9 @@ export function responsiveMargin(value: number | { size: any; direction: any; ad
   });
 }
 
-export function responsivePadding(value: number | { size: any; direction: any; adjustment?: number }): any {
+export function responsivePadding(
+  value: number | { size: number; direction?: string | string[]; adjustment?: number }
+): any {
   if (Number.isInteger(value)) {
     return responsive({ size: Number(value), property: 'padding' });
   }
@@ -117,7 +121,9 @@ export function responsivePadding(value: number | { size: any; direction: any; a
 // - see `responsivePadding` and `responsiveMargin` calls
 // can be an array of numbers/objects
 
-export function withWhiteSpace(config: { margin?: any; padding?: any; marginBottom?: any } = {}): () => any[] {
+export function withWhiteSpace(
+  config: { margin?: any; padding?: any; marginBottom?: any } = {}
+): (settings?: { mb?: number; margin?: number; padding?: number }) => any[] {
   return ({
     margin = config.margin,
     padding = config.padding,

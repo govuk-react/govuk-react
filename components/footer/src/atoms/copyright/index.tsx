@@ -35,7 +35,7 @@ const Copyright: React.FC<CopyrightProps> = ({ text, image, link }: CopyrightPro
   );
 };
 
-interface CopyrightProps {
+export interface CopyrightProps {
   text?: string;
   image?: {
     src: string;

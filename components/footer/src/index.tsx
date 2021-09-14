@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { spacing, typography } from '@govuk-react/lib';
 import { FOOTER_BACKGROUND, FOOTER_TEXT, FOOTER_BORDER_TOP } from 'govuk-colours';
 
+import type { CopyrightProps } from './atoms/copyright';
+
 import WidthContainer from './atoms/width-container';
 import Navigation from './atoms/navigation';
 import Link from './atoms/link';
@@ -159,15 +161,7 @@ interface FooterProps {
   /**
    * Copyright information
    */
-  copyright?: {
-    text?: string;
-    image?: {
-      src: string;
-      width: number;
-      height: number;
-    };
-    link?: string;
-  };
+  copyright?: CopyrightProps;
   /**
    * Meta text and links
    */

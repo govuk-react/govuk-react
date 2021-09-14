@@ -135,25 +135,25 @@ interface GridColProps {
   /** Dimension setting for the column (deprecated) */
   columnOneQuarter?: boolean;
   /** Dimension setting for the column (deprecated) */
-  columnOneThird: boolean;
+  columnOneThird?: boolean;
   /** Dimension setting for the column (deprecated) */
-  columnOneHalf: boolean;
+  columnOneHalf?: boolean;
   /** Dimension setting for the column (deprecated) */
-  columnTwoThirds: boolean;
+  columnTwoThirds?: boolean;
   /** Dimension setting for the column (deprecated) */
-  columnThreeQuarters: boolean;
+  columnThreeQuarters?: boolean;
   /** Dimension setting for the column (deprecated) */
-  columnFull: boolean;
+  columnFull?: boolean;
   /**
    * Explicitly set column to width using value or descriptive string
    * (`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
    */
-  setWidth: number | string;
+  setWidth?: number | string;
   /**
    * Explicitly set desktop column to width using value or descriptive string
    * (`one-quarter`, `one-third`, `one-half`, `two-thirds`, `three-quarters`, `full`)
    */
-  setDesktopWidth: number | string;
+  setDesktopWidth?: number | string;
 }
 
 GridCol.defaultProps = {

@@ -16,11 +16,12 @@ const Cell: React.FC<CellProps> = styled('td')(
   ({ numeric, isHeader }) => (numeric && !isHeader ? typography.font({ tabular: true }) : undefined),
   spacing.withWidth()
 );
-interface CellProps {
+interface CellProps extends React.HTMLAttributes<HTMLTableCellElement> {
   alignRight?: boolean;
   children: React.ReactNode;
   isHeader?: boolean;
   numeric?: boolean;
+  bold?: boolean;
 }
 
 export default Cell;

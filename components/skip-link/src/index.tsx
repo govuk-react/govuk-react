@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import { SPACING_POINTS } from '@govuk-react/constants';
 import { link, typography, visuallyHidden } from '@govuk-react/lib';
 
-const SkipLink: React.FC<SkipLinkProps> = styled('a')(
+type SkipLinkType = React.ForwardRefExoticComponent<SkipLinkProps & React.RefAttributes<unknown>>;
+
+const SkipLink: SkipLinkType = styled('a')(
   visuallyHidden.focusable(),
   link.common(),
   link.styleText,
@@ -43,8 +45,8 @@ SkipLinkDocumented.defaultProps = {
   href: '#content',
 };
 
-interface SkipLinkProps {
-  children: React.ReactNode;
+interface SkipLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  children?: React.ReactNode;
   href?: string;
 }
 

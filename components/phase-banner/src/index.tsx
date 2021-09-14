@@ -19,7 +19,7 @@ const BannerContent = styled('p')(typography.font({ size: 16 }), typography.text
   display: 'table',
   margin: 0,
 
-  [Tag]: {
+  [String(Tag)]: {
     marginRight: SPACING_POINTS[2],
   },
 });

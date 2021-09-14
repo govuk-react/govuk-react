@@ -108,7 +108,7 @@ const Breadcrumbs: BreadcrumbsType = ({ children, ...props }: BreadcrumbsProps) 
 interface BreadcrumbsType extends React.FC<BreadcrumbsProps> {
   Link?: typeof Link;
 }
-interface BreadcrumbsProps {
+interface BreadcrumbsProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
    * Breadcrumbs contents
    */

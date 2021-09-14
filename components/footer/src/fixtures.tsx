@@ -14,14 +14,14 @@ const withRoutes = (component) => (
   </BrowserRouter>
 );
 
-const FooterExample = () => <Footer />;
+const FooterExample: React.FC = () => <Footer />;
 export default FooterExample;
 
 const copyright = {
   text: 'Crown copyright',
   link: 'https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/',
   image: {
-    source: crest,
+    src: crest,
     height: 102,
     width: 125,
   },

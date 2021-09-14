@@ -109,7 +109,7 @@ Heading.defaultProps = {
   size: 'XLARGE',
 };
 
-interface HeadingProps {
+interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
   /**
    * Semantic heading tag to use (e.g. 'h3')
    * By default element used will be an 'h1'
@@ -118,13 +118,13 @@ interface HeadingProps {
   /**
    * Semantic heading level value between 1 and 6 (deprecated)
    */
-  level?: number;
+  level?: number | string;
   /**
    * Visual size level, accepts:
    *    `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`
    *    or a numeric size that fits in the GDS font scale list
    */
-  size?: string;
+  size?: number | string;
 }
 
 export default Heading;

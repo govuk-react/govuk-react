@@ -58,7 +58,7 @@ const Legend: React.FC<LegendProps> = ({ children, isPageHeading = undefined, ..
 interface LegendProps {
   children: React.ReactNode;
   isPageHeading?: boolean;
-  size?: string;
+  size?: string | number;
 }
 
 Legend.defaultProps = {
