@@ -3,7 +3,7 @@ import { BrowserRouter, Link, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import { MEDIA_QUERIES, GUTTER } from '@govuk-react/constants';
 
-import Footer from '.';
+import { Footer } from '.';
 import crest from './govuk-crest.png';
 
 const withRoutes = (component) => (

@@ -2,7 +2,7 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-import BackLink from '.';
+import { BackLink } from '.';
 
 export default {
   title: 'Navigation/Back link',

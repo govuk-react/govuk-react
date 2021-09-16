@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 
-import DateField from '.';
+import { DateField } from '.';
 
 // TODO: all snapshot tests in this file should be moved to fixtures and included in stories
 

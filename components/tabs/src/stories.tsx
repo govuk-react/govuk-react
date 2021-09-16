@@ -2,7 +2,7 @@ import React from 'react';
 
 import { withKnobs, number } from '@storybook/addon-knobs';
 
-import Tabs from '.';
+import { Tabs } from '.';
 import {
   HooksExample,
   ProposedClassPropertiesPlugin,

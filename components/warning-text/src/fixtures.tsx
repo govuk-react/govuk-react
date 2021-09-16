@@ -1,7 +1,7 @@
 import React from 'react';
 import { text } from '@storybook/addon-knobs';
 
-import WarningText from '.';
+import { WarningText } from '.';
 
 interface Props {
   children?: React.ReactNode;

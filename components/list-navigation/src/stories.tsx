@@ -2,7 +2,7 @@ import React from 'react';
 
 import Link from '@govuk-react/link';
 
-import ListNavigation from '.';
+import { ListNavigation } from '.';
 
 export default {
   title: 'Navigation/List navigation',

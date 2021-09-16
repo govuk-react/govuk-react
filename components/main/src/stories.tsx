@@ -2,7 +2,7 @@ import React from 'react';
 import GridRow from '@govuk-react/grid-row';
 import GridCol from '@govuk-react/grid-col';
 
-import Main from '.';
+import { Main } from '.';
 
 export default {
   title: 'Page & Layout/Main',

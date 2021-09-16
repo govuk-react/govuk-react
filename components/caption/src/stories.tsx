@@ -4,7 +4,7 @@ import { select, text, withKnobs } from '@storybook/addon-knobs';
 import Heading from '@govuk-react/heading';
 
 import { CaptionWithKnobs } from './fixtures';
-import Caption from '.';
+import { Caption } from '.';
 
 export default {
   title: 'Typography/Caption',

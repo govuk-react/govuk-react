@@ -1,7 +1,7 @@
 import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 
-import ErrorSummary from '.';
+import { ErrorSummary } from '.';
 
 describe('error summary', () => {
   it('renders a given heading', () => {

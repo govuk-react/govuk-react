@@ -3,7 +3,7 @@ import React from 'react';
 import Section from '../../atoms/section';
 import SectionHeading from '../../atoms/section-heading';
 import UnorderedList from '../../atoms/unordered-list';
-import ListItem from '../../atoms/list-item';
+import { ListItem } from '../../atoms/list-item';
 
 const NavigationLinks: React.FC<NavigationLinksProps> = ({ heading, listColumns, children }: NavigationLinksProps) => {
   return (

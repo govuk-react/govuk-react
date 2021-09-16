@@ -5,7 +5,7 @@ import BackLink from '@govuk-react/back-link';
 import { H1, H3 } from '@govuk-react/heading';
 import { MEDIA_QUERIES, GUTTER } from '@govuk-react/constants';
 
-import Page from '.';
+import { Page } from '.';
 
 export default {
   title: 'Page & Layout/Page',

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import GridCol from '@govuk-react/grid-col';
 
-import GridRow from '.';
+import { GridRow } from '.';
 
 export default {
   title: 'Page & Layout/Grid row',

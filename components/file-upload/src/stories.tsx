@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FileUpload from '.';
+import { FileUpload } from '.';
 
 export default {
   title: 'Form/File upload',

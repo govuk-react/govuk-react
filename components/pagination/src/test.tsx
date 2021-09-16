@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
-import Pagination from '.';
+import { Pagination } from '.';
 
 describe('Pagination', () => {
   const wrapper = (

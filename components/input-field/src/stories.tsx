@@ -1,6 +1,6 @@
 import React from 'react';
 
-import InputField from '.';
+import { InputField } from '.';
 
 const meta = {
   touched: true,

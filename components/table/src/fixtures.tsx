@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Table from '.';
+import { Table } from '.';
 
 const TableSimple: React.FC = () => (
   <Table>

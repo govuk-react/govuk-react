@@ -1,6 +1,6 @@
 import { withKnobs } from '@storybook/addon-knobs';
 
-import Paragraph from '.';
+import { Paragraph } from '.';
 import { SupportingParagraph, ParagraphWithKnobs } from './fixtures';
 
 export default {

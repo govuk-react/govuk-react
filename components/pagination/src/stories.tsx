@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
-import Pagination from '.';
+import { Pagination } from '.';
 
 export default {
   title: 'Navigation/Pagination',
