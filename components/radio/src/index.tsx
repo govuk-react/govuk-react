@@ -1,3 +1,5 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import React from 'react';
 import styled from 'styled-components';
 import { FOCUS_COLOUR } from 'govuk-colours';
@@ -17,7 +19,7 @@ const labelPaddingLeftRight = SPACING_POINTS[3];
 // So for the circular radios we bump the default to make it look visually consistent.
 const RADIOS_FOCUS_WIDTH = `${FOCUS_WIDTH_RAW + 1}px`;
 
-const Label = styled('label')<{ inline?: boolean }>(
+const Label = styled('label')<{ inline?: boolean } & WithWhiteSpaceProps>(
   typography.font({ size: 19 }),
   {
     display: 'block',

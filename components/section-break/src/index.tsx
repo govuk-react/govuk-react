@@ -1,3 +1,5 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import React from 'react';
 import styled from 'styled-components';
 import { spacing } from '@govuk-react/lib';
@@ -54,7 +56,7 @@ const SectionBreak = styled('hr')<SectionBreakProps>(
  */
 const SectionBreakDocumented: React.FC<SectionBreakProps> = (props: SectionBreakProps) => <SectionBreak {...props} />;
 
-interface SectionBreakProps {
+interface SectionBreakProps extends WithWhiteSpaceProps {
   level?: string;
   visible?: boolean;
 }

@@ -1,3 +1,5 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import styled from 'styled-components';
 import React from 'react';
 import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
@@ -60,7 +62,7 @@ const StyledCaption = styled('span')<CaptionProps>(
  */
 const Caption: React.FC<CaptionProps> = (props: CaptionProps) => <StyledCaption {...props} />;
 
-interface CaptionProps {
+interface CaptionProps extends WithWhiteSpaceProps {
   /** Text to be rendered as a caption */
   children: string;
   /**

@@ -21,7 +21,7 @@ import HintText from '@govuk-react/hint-text';
 import { BORDER_WIDTH_MOBILE, SPACING } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
 
-const StyledFieldset = styled('div')<MultiChoiceProps>(
+const StyledFieldset = styled('div')<{ error: boolean } & WithWhiteSpaceProps>(
   {
     padding: 0,
     margin: 0,

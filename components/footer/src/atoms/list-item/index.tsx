@@ -1,3 +1,5 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import styled from 'styled-components';
 import { spacing } from '@govuk-react/lib';
 
@@ -17,7 +19,7 @@ const ListItem = styled('li')<ListItemProps>(
   }
 );
 
-interface ListItemProps {
+interface ListItemProps extends WithWhiteSpaceProps {
   inline?: boolean;
 }
 

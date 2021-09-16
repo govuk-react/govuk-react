@@ -95,12 +95,14 @@ const StyledSearchBox = styled('div')(
  * - https://govuk-static.herokuapp.com/component-guide/search
  *
  */
-const SearchBox: SearchBoxType = React.forwardRef<HTMLDivElement, WithWhiteSpaceProps>((props, ref) => (
+const SearchBox: SearchBoxType = React.forwardRef<HTMLDivElement, SearchBoxProps>((props, ref) => (
   <StyledSearchBox {...props} ref={ref} />
 ));
 
+interface SearchBoxProps extends React.HTMLAttributes<HTMLDivElement>, WithWhiteSpaceProps {}
+
 interface SearchBoxType<T = HTMLDivElement>
-  extends React.ForwardRefExoticComponent<WithWhiteSpaceProps & React.RefAttributes<T>> {
+  extends React.ForwardRefExoticComponent<SearchBoxProps & React.RefAttributes<T>> {
   Input?: React.ElementType;
   Button?: React.ElementType;
 }

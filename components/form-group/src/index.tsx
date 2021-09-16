@@ -1,3 +1,5 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import React from 'react';
 import styled from 'styled-components';
 import { ERROR_COLOUR } from 'govuk-colours';
@@ -45,7 +47,7 @@ const FormGroup = styled('div')<FormGroupProps>(
  */
 const FormGroupDocumented: React.FC<FormGroupProps> = (props: FormGroupProps) => <FormGroup {...props} />;
 
-interface FormGroupProps {
+interface FormGroupProps extends WithWhiteSpaceProps {
   children?: React.ReactNode;
   error?: boolean;
 }

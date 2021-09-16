@@ -1,3 +1,5 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import React from 'react';
 import styled from 'styled-components';
 import { spacing } from '@govuk-react/lib';
@@ -56,7 +58,7 @@ interface FieldsetType extends React.FC<FieldsetProps> {
   Legend: typeof Legend;
 }
 
-interface FieldsetProps {
+interface FieldsetProps extends WithWhiteSpaceProps {
   children: React.ReactNode;
 }
 

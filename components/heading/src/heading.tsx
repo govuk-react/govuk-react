@@ -1,3 +1,5 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import styled from 'styled-components';
 import React from 'react';
 import { HEADING_SIZES, LEVEL_SIZE, LEVEL_TAG, MEDIA_QUERIES, TYPOGRAPHY_SCALE } from '@govuk-react/constants';
@@ -109,7 +111,7 @@ Heading.defaultProps = {
   size: 'XLARGE',
 };
 
-interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
+interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement>, WithWhiteSpaceProps {
   /**
    * Semantic heading tag to use (e.g. 'h3')
    * By default element used will be an 'h1'

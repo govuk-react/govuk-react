@@ -1,3 +1,5 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import React from 'react';
 import styled from 'styled-components';
 import { GUTTER_HALF, MEDIA_QUERIES } from '@govuk-react/constants';
@@ -47,7 +49,7 @@ const StyledRow = styled('div')<GridRowProps>(
  */
 const GridRow: React.FC<GridRowProps> = (props) => <StyledRow {...props} />;
 
-interface GridRowProps {
+interface GridRowProps extends WithWhiteSpaceProps {
   /**
    * One or more GridCol nodes
    */

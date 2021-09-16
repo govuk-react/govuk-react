@@ -1,3 +1,5 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import React from 'react';
 import styled from 'styled-components';
 
@@ -55,7 +57,7 @@ const Legend: React.FC<LegendProps> = ({ children, isPageHeading = undefined, ..
   <StyledLegend {...props}>{isPageHeading ? <StyledHeading>{children}</StyledHeading> : children}</StyledLegend>
 );
 
-interface LegendProps {
+interface LegendProps extends WithWhiteSpaceProps {
   children: React.ReactNode;
   isPageHeading?: boolean;
   size?: string | number;

@@ -11,7 +11,7 @@ import { spacing } from '@govuk-react/lib';
 // NB our approach to labels/fields differs at present, which is why we have this
 // we have no `form-group` - this, to an extent, replaces it...
 
-const StyledLabel = styled('label')<{ error?: boolean }>(
+const StyledLabel = styled('label')<LabelProps>(
   {
     display: 'flex',
     flexDirection: 'column',

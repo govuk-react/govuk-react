@@ -1,3 +1,5 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import React from 'react';
 import styled from 'styled-components';
 
@@ -44,7 +46,7 @@ const InsetText = styled('div')<InsetTextProps>(
  */
 const DocumentedInsetText: React.FC<InsetTextProps> = (props: InsetTextProps) => <InsetText {...props} />;
 
-interface InsetTextProps {
+interface InsetTextProps extends WithWhiteSpaceProps {
   children: React.ReactNode;
 }
 export { DocumentedInsetText };

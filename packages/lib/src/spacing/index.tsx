@@ -4,6 +4,7 @@
 // Further references:
 // https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/overrides/_spacing.scss
 // https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/settings/_spacing.scss
+import type { CSSObject } from 'styled-components';
 
 import { MEDIA_QUERIES, SPACING_MAP, SPACING_POINTS, WIDTHS } from '@govuk-react/constants';
 
@@ -71,7 +72,7 @@ export function responsive({
 
 export function responsiveMargin(
   value: number | string | { size: number | string; direction?: string | string[]; adjustment?: number }
-): { [key: string]: number | string } {
+): CSSObject {
   if (Number.isInteger(value)) {
     return responsive({ size: Number(value), property: 'margin' });
   }
@@ -91,7 +92,7 @@ export function responsiveMargin(
 
 export function responsivePadding(
   value: number | { size: number; direction?: string | string[]; adjustment?: number }
-): { [key: string]: string } {
+): CSSObject {
   if (Number.isInteger(value)) {
     return responsive({ size: Number(value), property: 'padding' });
   }
@@ -133,17 +134,17 @@ export function withWhiteSpace(
     padding?: Padding | Padding[];
     marginBottom?: number;
   } = {}
-): (settings?: WithWhiteSpaceProps) => { [key: string]: string | { [key: string]: string } }[] {
+): (settings?: WithWhiteSpaceProps) => CSSObject[] {
   return ({
     margin = config.margin,
     padding = config.padding,
     mb: marginBottom = config.marginBottom,
   }: WithWhiteSpaceProps = {}) => {
-    const styles = [];
+    const styles: CSSObject[] = [];
 
     if (margin !== undefined) {
       if (Array.isArray(margin)) {
-        styles.push(margin.map((val) => responsiveMargin(val)));
+        styles.push(...margin.map((val) => responsiveMargin(val)));
       } else {
         styles.push(responsiveMargin(margin));
       }
@@ -151,7 +152,7 @@ export function withWhiteSpace(
 
     if (padding !== undefined) {
       if (Array.isArray(padding)) {
-        styles.push(padding.map((val) => responsivePadding(val)));
+        styles.push(...padding.map((val) => responsivePadding(val)));
       } else {
         styles.push(responsivePadding(padding));
       }
@@ -221,7 +222,6 @@ export type WithWhiteSpaceProps = {
   margin?: Margin | Margin[];
   padding?: Padding | Padding[];
   mb?: number | string;
-  [key: string]: any;
 };
 
 export type WithWidthProps = { setWidth?: string | number; [key: string]: any };

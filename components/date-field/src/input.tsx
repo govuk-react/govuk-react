@@ -7,7 +7,7 @@ import Label from '@govuk-react/label';
 
 import multiInputInput from 'multi-input-input';
 
-const StyledLabel = styled(Label)(
+const StyledLabel = styled(Label)<{ year: boolean }>(
   {
     marginRight: '20px',
     marginBottom: 0,
@@ -51,7 +51,7 @@ class Input extends React.Component<InputProps> {
         <LabelText>{label}</LabelText>
         <StyledInput
           name={name}
-          error={error}
+          error={!!error}
           defaultValue={defaultValue}
           value={value ? value[key] : undefined}
           onChange={(e) => onChange(e, key)}
