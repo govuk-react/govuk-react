@@ -153,6 +153,6 @@ interface TableProps {
 Table.CellHeader = CellHeader;
 Table.Row = Row;
 Table.Cell = Cell;
-Table.Header = CellHeader;
+Table.Header = TableHeader;
 
 export default Table;

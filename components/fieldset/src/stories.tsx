@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 
-import { FieldsetDocumented as Fieldset } from '.';
+import Fieldset from '.';
 
 export default {
   title: 'Form/Fieldset',
