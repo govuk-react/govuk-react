@@ -325,14 +325,12 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
 }
 
 <InsetTextExample>
-  <DocumentedInsetText>
-    <src__InsetText>
-      <div
-        className="c0"
-      >
-        It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
-      </div>
-    </src__InsetText>
-  </DocumentedInsetText>
+  <src__InsetText>
+    <div
+      className="c0"
+    >
+      It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+    </div>
+  </src__InsetText>
 </InsetTextExample>
 `;

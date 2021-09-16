@@ -64,7 +64,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
   -moz-appearance: textfield;
 }
 
-.c5 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -76,13 +76,13 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
   margin-bottom: 0;
 }
 
-.c5:after {
+.c4:after {
   content: '';
   display: table;
   clear: both;
 }
 
-.c4 {
+.c5 {
   margin-right: 20px;
   margin-bottom: 0;
   width: 50px;
@@ -176,7 +176,7 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .c5 {
+  .c4 {
     margin-bottom: 0;
   }
 }
@@ -210,24 +210,20 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
     <div
       className="c0"
     >
-      <LabelText>
-        <src__StyledLabelText>
-          <span
-            className="c1"
-          >
-            example
-          </span>
-        </src__StyledLabelText>
-      </LabelText>
-      <ErrorText>
-        <src__StyledError>
-          <span
-            className="c2"
-          >
-            example
-          </span>
-        </src__StyledError>
-      </ErrorText>
+      <src__LabelText>
+        <span
+          className="c1"
+        >
+          example
+        </span>
+      </src__LabelText>
+      <src__ErrorText>
+        <span
+          className="c2"
+        >
+          example
+        </span>
+      </src__ErrorText>
       <MultiInputInput
         defaultValues={
           Object {
@@ -283,130 +279,91 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
               className="c3"
             >
               <input__StyledLabel
+                error={false}
                 year={false}
               >
-                <Label
-                  className="c4"
-                  error={false}
-                  year={false}
+                <label
+                  className="c4 c5"
                 >
-                  <src__StyledLabel
-                    className="c4"
-                    error={false}
-                    year={false}
-                  >
-                    <label
-                      className="c5 c4"
+                  <src__LabelText>
+                    <span
+                      className="c1"
                     >
-                      <LabelText>
-                        <src__StyledLabelText>
-                          <span
-                            className="c1"
-                          >
-                            Day
-                          </span>
-                        </src__StyledLabelText>
-                      </LabelText>
-                      <src__StyledInput
-                        error={true}
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                      >
-                        <input
-                          className="c6"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                        />
-                      </src__StyledInput>
-                    </label>
-                  </src__StyledLabel>
-                </Label>
+                      Day
+                    </span>
+                  </src__LabelText>
+                  <src__StyledInput
+                    error={true}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                  >
+                    <input
+                      className="c6"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                    />
+                  </src__StyledInput>
+                </label>
               </input__StyledLabel>
               <input__StyledLabel
+                error={false}
                 year={false}
               >
-                <Label
-                  className="c4"
-                  error={false}
-                  year={false}
+                <label
+                  className="c4 c5"
                 >
-                  <src__StyledLabel
-                    className="c4"
-                    error={false}
-                    year={false}
-                  >
-                    <label
-                      className="c5 c4"
+                  <src__LabelText>
+                    <span
+                      className="c1"
                     >
-                      <LabelText>
-                        <src__StyledLabelText>
-                          <span
-                            className="c1"
-                          >
-                            Month
-                          </span>
-                        </src__StyledLabelText>
-                      </LabelText>
-                      <src__StyledInput
-                        error={true}
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                      >
-                        <input
-                          className="c6"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                        />
-                      </src__StyledInput>
-                    </label>
-                  </src__StyledLabel>
-                </Label>
+                      Month
+                    </span>
+                  </src__LabelText>
+                  <src__StyledInput
+                    error={true}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                  >
+                    <input
+                      className="c6"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                    />
+                  </src__StyledInput>
+                </label>
               </input__StyledLabel>
               <input__StyledLabel
+                error={false}
                 year={true}
               >
-                <Label
-                  className="c7"
-                  error={false}
-                  year={true}
+                <label
+                  className="c4 c7"
                 >
-                  <src__StyledLabel
-                    className="c7"
-                    error={false}
-                    year={true}
-                  >
-                    <label
-                      className="c5 c7"
+                  <src__LabelText>
+                    <span
+                      className="c1"
                     >
-                      <LabelText>
-                        <src__StyledLabelText>
-                          <span
-                            className="c1"
-                          >
-                            Year
-                          </span>
-                        </src__StyledLabelText>
-                      </LabelText>
-                      <src__StyledInput
-                        error={true}
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                      >
-                        <input
-                          className="c6"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                        />
-                      </src__StyledInput>
-                    </label>
-                  </src__StyledLabel>
-                </Label>
+                      Year
+                    </span>
+                  </src__LabelText>
+                  <src__StyledInput
+                    error={true}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                  >
+                    <input
+                      className="c6"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                    />
+                  </src__StyledInput>
+                </label>
               </input__StyledLabel>
             </div>
           </input__StyledList>
@@ -467,7 +424,7 @@ exports[`DateField should support null value: null value 1`] = `
   -moz-appearance: textfield;
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -479,13 +436,13 @@ exports[`DateField should support null value: null value 1`] = `
   margin-bottom: 0;
 }
 
-.c4:after {
+.c3:after {
   content: '';
   display: table;
   clear: both;
 }
 
-.c3 {
+.c4 {
   margin-right: 20px;
   margin-bottom: 0;
   width: 50px;
@@ -562,7 +519,7 @@ exports[`DateField should support null value: null value 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .c4 {
+  .c3 {
     margin-bottom: 0;
   }
 }
@@ -598,15 +555,13 @@ exports[`DateField should support null value: null value 1`] = `
     <div
       className="c0"
     >
-      <LabelText>
-        <src__StyledLabelText>
-          <span
-            className="c1"
-          >
-            Date
-          </span>
-        </src__StyledLabelText>
-      </LabelText>
+      <src__LabelText>
+        <span
+          className="c1"
+        >
+          Date
+        </span>
+      </src__LabelText>
       <MultiInputInput
         defaultValues={
           Object {
@@ -662,130 +617,91 @@ exports[`DateField should support null value: null value 1`] = `
               className="c2"
             >
               <input__StyledLabel
+                error={false}
                 year={false}
               >
-                <Label
-                  className="c3"
-                  error={false}
-                  year={false}
+                <label
+                  className="c3 c4"
                 >
-                  <src__StyledLabel
-                    className="c3"
-                    error={false}
-                    year={false}
-                  >
-                    <label
-                      className="c4 c3"
+                  <src__LabelText>
+                    <span
+                      className="c1"
                     >
-                      <LabelText>
-                        <src__StyledLabelText>
-                          <span
-                            className="c1"
-                          >
-                            Day
-                          </span>
-                        </src__StyledLabelText>
-                      </LabelText>
-                      <src__StyledInput
-                        error={false}
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                      >
-                        <input
-                          className="c5"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                        />
-                      </src__StyledInput>
-                    </label>
-                  </src__StyledLabel>
-                </Label>
+                      Day
+                    </span>
+                  </src__LabelText>
+                  <src__StyledInput
+                    error={false}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                  >
+                    <input
+                      className="c5"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                    />
+                  </src__StyledInput>
+                </label>
               </input__StyledLabel>
               <input__StyledLabel
+                error={false}
                 year={false}
               >
-                <Label
-                  className="c3"
-                  error={false}
-                  year={false}
+                <label
+                  className="c3 c4"
                 >
-                  <src__StyledLabel
-                    className="c3"
-                    error={false}
-                    year={false}
-                  >
-                    <label
-                      className="c4 c3"
+                  <src__LabelText>
+                    <span
+                      className="c1"
                     >
-                      <LabelText>
-                        <src__StyledLabelText>
-                          <span
-                            className="c1"
-                          >
-                            Month
-                          </span>
-                        </src__StyledLabelText>
-                      </LabelText>
-                      <src__StyledInput
-                        error={false}
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                      >
-                        <input
-                          className="c5"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                        />
-                      </src__StyledInput>
-                    </label>
-                  </src__StyledLabel>
-                </Label>
+                      Month
+                    </span>
+                  </src__LabelText>
+                  <src__StyledInput
+                    error={false}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                  >
+                    <input
+                      className="c5"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                    />
+                  </src__StyledInput>
+                </label>
               </input__StyledLabel>
               <input__StyledLabel
+                error={false}
                 year={true}
               >
-                <Label
-                  className="c6"
-                  error={false}
-                  year={true}
+                <label
+                  className="c3 c6"
                 >
-                  <src__StyledLabel
-                    className="c6"
-                    error={false}
-                    year={true}
-                  >
-                    <label
-                      className="c4 c6"
+                  <src__LabelText>
+                    <span
+                      className="c1"
                     >
-                      <LabelText>
-                        <src__StyledLabelText>
-                          <span
-                            className="c1"
-                          >
-                            Year
-                          </span>
-                        </src__StyledLabelText>
-                      </LabelText>
-                      <src__StyledInput
-                        error={false}
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                      >
-                        <input
-                          className="c5"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                        />
-                      </src__StyledInput>
-                    </label>
-                  </src__StyledLabel>
-                </Label>
+                      Year
+                    </span>
+                  </src__LabelText>
+                  <src__StyledInput
+                    error={false}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                  >
+                    <input
+                      className="c5"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                    />
+                  </src__StyledInput>
+                </label>
               </input__StyledLabel>
             </div>
           </input__StyledList>
@@ -846,7 +762,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
   -moz-appearance: textfield;
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -858,13 +774,13 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
   margin-bottom: 0;
 }
 
-.c4:after {
+.c3:after {
   content: '';
   display: table;
   clear: both;
 }
 
-.c3 {
+.c4 {
   margin-right: 20px;
   margin-bottom: 0;
   width: 50px;
@@ -941,7 +857,7 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .c4 {
+  .c3 {
     margin-bottom: 0;
   }
 }
@@ -981,15 +897,13 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
     <div
       className="c0"
     >
-      <LabelText>
-        <src__StyledLabelText>
-          <span
-            className="c1"
-          >
-            Date
-          </span>
-        </src__StyledLabelText>
-      </LabelText>
+      <src__LabelText>
+        <span
+          className="c1"
+        >
+          Date
+        </span>
+      </src__LabelText>
       <MultiInputInput
         defaultValues={
           Object {
@@ -1057,136 +971,97 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
               className="c2"
             >
               <input__StyledLabel
+                error={false}
                 year={false}
               >
-                <Label
-                  className="c3"
-                  error={false}
-                  year={false}
+                <label
+                  className="c3 c4"
                 >
-                  <src__StyledLabel
-                    className="c3"
-                    error={false}
-                    year={false}
-                  >
-                    <label
-                      className="c4 c3"
+                  <src__LabelText>
+                    <span
+                      className="c1"
                     >
-                      <LabelText>
-                        <src__StyledLabelText>
-                          <span
-                            className="c1"
-                          >
-                            Day
-                          </span>
-                        </src__StyledLabelText>
-                      </LabelText>
-                      <src__StyledInput
-                        error={false}
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        value="1"
-                      >
-                        <input
-                          className="c5"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          value="1"
-                        />
-                      </src__StyledInput>
-                    </label>
-                  </src__StyledLabel>
-                </Label>
+                      Day
+                    </span>
+                  </src__LabelText>
+                  <src__StyledInput
+                    error={false}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    value="1"
+                  >
+                    <input
+                      className="c5"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      value="1"
+                    />
+                  </src__StyledInput>
+                </label>
               </input__StyledLabel>
               <input__StyledLabel
+                error={false}
                 year={false}
               >
-                <Label
-                  className="c3"
-                  error={false}
-                  year={false}
+                <label
+                  className="c3 c4"
                 >
-                  <src__StyledLabel
-                    className="c3"
-                    error={false}
-                    year={false}
-                  >
-                    <label
-                      className="c4 c3"
+                  <src__LabelText>
+                    <span
+                      className="c1"
                     >
-                      <LabelText>
-                        <src__StyledLabelText>
-                          <span
-                            className="c1"
-                          >
-                            Month
-                          </span>
-                        </src__StyledLabelText>
-                      </LabelText>
-                      <src__StyledInput
-                        error={false}
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        value="2"
-                      >
-                        <input
-                          className="c5"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          value="2"
-                        />
-                      </src__StyledInput>
-                    </label>
-                  </src__StyledLabel>
-                </Label>
+                      Month
+                    </span>
+                  </src__LabelText>
+                  <src__StyledInput
+                    error={false}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    value="2"
+                  >
+                    <input
+                      className="c5"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      value="2"
+                    />
+                  </src__StyledInput>
+                </label>
               </input__StyledLabel>
               <input__StyledLabel
+                error={false}
                 year={true}
               >
-                <Label
-                  className="c6"
-                  error={false}
-                  year={true}
+                <label
+                  className="c3 c6"
                 >
-                  <src__StyledLabel
-                    className="c6"
-                    error={false}
-                    year={true}
-                  >
-                    <label
-                      className="c4 c6"
+                  <src__LabelText>
+                    <span
+                      className="c1"
                     >
-                      <LabelText>
-                        <src__StyledLabelText>
-                          <span
-                            className="c1"
-                          >
-                            Year
-                          </span>
-                        </src__StyledLabelText>
-                      </LabelText>
-                      <src__StyledInput
-                        error={false}
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        value="3"
-                      >
-                        <input
-                          className="c5"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          value="3"
-                        />
-                      </src__StyledInput>
-                    </label>
-                  </src__StyledLabel>
-                </Label>
+                      Year
+                    </span>
+                  </src__LabelText>
+                  <src__StyledInput
+                    error={false}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    value="3"
+                  >
+                    <input
+                      className="c5"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      value="3"
+                    />
+                  </src__StyledInput>
+                </label>
               </input__StyledLabel>
             </div>
           </input__StyledList>

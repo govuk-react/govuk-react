@@ -38,17 +38,13 @@ exports[`Tag matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<DocumentedTag
+<src__Tag
   inactive={false}
 >
-  <src__Tag
-    inactive={false}
+  <strong
+    className="c0"
   >
-    <strong
-      className="c0"
-    >
-      beta
-    </strong>
-  </src__Tag>
-</DocumentedTag>
+    beta
+  </strong>
+</src__Tag>
 `;

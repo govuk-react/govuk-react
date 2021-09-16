@@ -134,33 +134,27 @@ exports[`MultiChoice matches snapshot 1`] = `
     <div
       className="c0"
     >
-      <LabelText>
-        <src__StyledLabelText>
-          <span
-            className="c1"
-          >
-            Example label
-          </span>
-        </src__StyledLabelText>
-      </LabelText>
-      <HintText>
-        <src__StyledHint>
-          <span
-            className="c2"
-          >
-            Example hint
-          </span>
-        </src__StyledHint>
-      </HintText>
-      <ErrorText>
-        <src__StyledError>
-          <span
-            className="c3"
-          >
-            Example error
-          </span>
-        </src__StyledError>
-      </ErrorText>
+      <src__LabelText>
+        <span
+          className="c1"
+        >
+          Example label
+        </span>
+      </src__LabelText>
+      <src__HintText>
+        <span
+          className="c2"
+        >
+          Example hint
+        </span>
+      </src__HintText>
+      <src__ErrorText>
+        <span
+          className="c3"
+        >
+          Example error
+        </span>
+      </src__ErrorText>
       Label
     </div>
   </src__StyledFieldset>

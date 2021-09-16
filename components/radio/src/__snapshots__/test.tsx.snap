@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio can render with hint text: hint text 1`] = `
-.c4 {
+.c3 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -89,21 +89,21 @@ exports[`Radio can render with hint text: hint text 1`] = `
   opacity: 0;
 }
 
-.c3 {
+.c4 {
   display: block;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 @media print {
-  .c4 {
+  .c3 {
     font-size: 14px;
     line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c4 {
+  .c3 {
     font-size: 19px;
     line-height: 1.3157894736842106;
   }
@@ -155,19 +155,11 @@ exports[`Radio can render with hint text: hint text 1`] = `
         </span>
       </src__LabelText>
       <src__StyledRadioHint>
-        <HintText
-          className="c3"
+        <span
+          className="c3 c4"
         >
-          <src__StyledHint
-            className="c3"
-          >
-            <span
-              className="c4 c3"
-            >
-              Hint text
-            </span>
-          </src__StyledHint>
-        </HintText>
+          Hint text
+        </span>
       </src__StyledRadioHint>
     </label>
   </src__Label>
