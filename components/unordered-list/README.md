@@ -7,6 +7,7 @@ UnorderedList
 ```
 <!-- STORY -->
 
+
 ### Usage
 
 Simple
@@ -40,7 +41,6 @@ import { UnorderedList, ListItem} from 'govuk-react';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` |  | One or more ListItem components
- `listStyleType` |  | ```undefined``` |  | CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend
+
 
 

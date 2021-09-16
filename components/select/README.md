@@ -7,6 +7,7 @@ Select
 ```
 <!-- STORY -->
 
+
 ### Usage
 
 Simple
@@ -81,11 +82,6 @@ import { SelectInput } '@govuk-react/select';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` |  | 
- `errorText` |  | ```undefined``` |  | 
- `hint` |  | ```undefined``` |  | 
- `input` |  | ```{}``` |  | 
- `label` | true | `````` |  | 
- `meta` |  | ```{}``` |  | 
+
 
 

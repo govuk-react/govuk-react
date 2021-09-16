@@ -7,6 +7,7 @@ DateField
 ```
 <!-- STORY -->
 
+
 ### Usage
 
 Simple
@@ -57,11 +58,6 @@ With custom input name props
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` |  | 
- `defaultValues` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` |  | 
- `errorText` |  | ```undefined``` |  | Error text
- `hintText` |  | ```undefined``` |  | Optional hint text
- `input` |  | ```undefined``` |  | Properties that are sent to the input, matching final form and redux form input type
- `inputNames` |  | ```{   day: undefined,   month: undefined,   year: undefined, }``` |  | Input name attributes
+
 
 

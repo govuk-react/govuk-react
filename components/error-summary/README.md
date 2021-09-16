@@ -7,6 +7,7 @@ ErrorSummary
 ```
 <!-- STORY -->
 
+
 ### Usage
 
 Simple
@@ -58,9 +59,6 @@ const onHandleErrorClick = (targetName) => {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `description` |  | ```undefined``` |  | Optional description of the errors
- `errors` |  | ```[]``` |  | Array of errors with text and target element name to scroll into view when clicked
- `heading` |  | ```'There is a problem'``` |  | Heading text
- `onHandleErrorClick` |  | ```undefined``` |  | onClick function to scroll the target element into view
+
 
 

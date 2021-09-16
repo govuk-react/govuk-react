@@ -7,6 +7,7 @@ Heading
 ```
 <!-- STORY -->
 
+
 ### Usage
 
 
@@ -61,8 +62,6 @@ Props pass through
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `as` |  | ```undefined``` |  | Semantic heading tag to use (e.g. 'h3')<br/>By default element used will be an 'h1'
- `level` |  | ```undefined``` |  | Semantic heading level value between 1 and 6 (deprecated)
- `size` |  | ```'XLARGE'``` |  | Visual size level, accepts:<br/>   `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`<br/>   or a numeric size that fits in the GDS font scale list
+
 
 
