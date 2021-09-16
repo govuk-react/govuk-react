@@ -7,6 +7,12 @@ exports[`Link all options view matches snapshot: link with all options 1`] = `
   -moz-osx-font-smoothing: grayscale;
 }
 
+.c0:focus {
+  outline: 3px solid #ffdd00;
+  outline-offset: 0;
+  background-color: #ffdd00;
+}
+
 .c0:link {
   color: #1d70b8;
 }
@@ -25,12 +31,6 @@ exports[`Link all options view matches snapshot: link with all options 1`] = `
 
 .c0:focus {
   color: #0b0c0c;
-}
-
-.c0:focus {
-  outline: 3px solid #ffdd00;
-  outline-offset: 0;
-  background-color: #ffdd00;
 }
 
 .c0:link,
@@ -129,6 +129,12 @@ exports[`Link basic view matches snapshot: plain link 1`] = `
   -moz-osx-font-smoothing: grayscale;
 }
 
+.c0:focus {
+  outline: 3px solid #ffdd00;
+  outline-offset: 0;
+  background-color: #ffdd00;
+}
+
 .c0:link {
   color: #1d70b8;
 }
@@ -147,12 +153,6 @@ exports[`Link basic view matches snapshot: plain link 1`] = `
 
 .c0:focus {
   color: #0b0c0c;
-}
-
-.c0:focus {
-  outline: 3px solid #ffdd00;
-  outline-offset: 0;
-  background-color: #ffdd00;
 }
 
 @media print {

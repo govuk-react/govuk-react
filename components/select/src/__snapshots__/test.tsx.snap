@@ -213,7 +213,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
           </src__StyledError>
         </ErrorText>
         <src__StyledSelect
-          error="example"
+          error={true}
         >
           <select
             className="c4"

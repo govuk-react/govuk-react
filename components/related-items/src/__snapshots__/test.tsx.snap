@@ -52,6 +52,12 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
   -moz-osx-font-smoothing: grayscale;
 }
 
+.c6:focus {
+  outline: 3px solid #ffdd00;
+  outline-offset: 0;
+  background-color: #ffdd00;
+}
+
 .c6:link {
   color: #1d70b8;
 }
@@ -70,12 +76,6 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
 
 .c6:focus {
   color: #0b0c0c;
-}
-
-.c6:focus {
-  outline: 3px solid #ffdd00;
-  outline-offset: 0;
-  background-color: #ffdd00;
 }
 
 .c0 {

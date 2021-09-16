@@ -159,13 +159,11 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
         </ErrorText>
         <src__TextAreaField
           error={true}
-          rows="5"
-          type="text"
+          rows={5}
         >
           <textarea
             className="c3"
-            rows="5"
-            type="text"
+            rows={5}
           />
         </src__TextAreaField>
       </label>
@@ -323,13 +321,11 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
           </src__StyledHint>
         </HintText>
         <src__TextAreaField
-          rows="5"
-          type="text"
+          rows={5}
         >
           <textarea
             className="c3"
-            rows="5"
-            type="text"
+            rows={5}
           />
         </src__TextAreaField>
       </label>
@@ -451,13 +447,11 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
           </src__StyledLabelText>
         </LabelText>
         <src__TextAreaField
-          rows="5"
-          type="text"
+          rows={5}
         >
           <textarea
             className="c2"
-            rows="5"
-            type="text"
+            rows={5}
           />
         </src__TextAreaField>
       </label>
