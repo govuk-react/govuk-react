@@ -16,6 +16,7 @@
   ],
   "include": [
     "./components/*/src/**/*",
-    "./packages/*/src/**/*"
+    "./packages/*/src/**/*",
+    "./scripts/**/*"
   ]
 }
