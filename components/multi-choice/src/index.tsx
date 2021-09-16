@@ -67,7 +67,13 @@ const StyledFieldset = styled('div')<{ error: boolean } & WithWhiteSpaceProps>(
  * - https://govuk-elements.herokuapp.com/errors/example-form-validation-single-question-radio
  *
  */
-const MultiChoice: React.FC<MultiChoiceProps> = ({ meta, label, children, hint, ...props }: MultiChoiceProps) => (
+export const MultiChoice: React.FC<MultiChoiceProps> = ({
+  meta,
+  label,
+  children,
+  hint,
+  ...props
+}: MultiChoiceProps) => (
   <StyledFieldset error={meta.touched && !!meta.error} {...props}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}

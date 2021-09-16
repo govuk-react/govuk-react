@@ -96,7 +96,7 @@ const DetailsText = styled('div')({
  * - https://design-system.service.gov.uk/components/details/
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/details/_details.scss
  */
-const Details: React.FC<DetailsProps> = ({ summary, children, ...props }: DetailsProps) => (
+export const Details: React.FC<DetailsProps> = ({ summary, children, ...props }: DetailsProps) => (
   <StyledDetails {...props}>
     <StyledSummary>
       <SummaryText>{summary}</SummaryText>

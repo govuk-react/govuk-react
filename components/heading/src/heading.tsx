@@ -91,7 +91,7 @@ const StyledHeading = styled('h1')<Omit<HeadingProps, 'level'>>(
  * - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_typography.scss
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_typography.scss
  */
-const Heading: React.FC<HeadingProps> = ({ level = undefined, ...props }: HeadingProps) => {
+export const Heading: React.FC<HeadingProps> = ({ level = undefined, ...props }: HeadingProps) => {
   if (level) {
     if (process.env.NODE_ENV !== 'production') {
       // eslint-disable-next-line no-console

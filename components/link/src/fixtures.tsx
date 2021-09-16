@@ -3,26 +3,26 @@ import { boolean, text } from '@storybook/addon-knobs';
 
 import { BrowserRouter, Link as RLink, Route } from 'react-router-dom';
 
-import Link, { LinkDocumented } from '.';
+import { Link } from '.';
 
 const LinkExample: React.FC = () => (
   // eslint-disable-next-line jsx-a11y/anchor-is-valid
-  <LinkDocumented
+  <Link
     muted={boolean('muted', false)}
     textColour={boolean('textColour', false)}
     noVisitedState={boolean('noVisitedState', false)}
     href="#"
   >
     {text('Link content', 'Link example')}
-  </LinkDocumented>
+  </Link>
 );
 export default LinkExample;
 
 export const LinkWithAllOptionsOn: React.FC = () => (
   // eslint-disable-next-line jsx-a11y/anchor-is-valid
-  <LinkDocumented muted textColour noVisitedState href="#">
+  <Link muted textColour noVisitedState href="#">
     {text('Link content', 'Link example')}
-  </LinkDocumented>
+  </Link>
 );
 
 export const LinkWithRouter: React.FC = () => (

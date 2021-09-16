@@ -103,7 +103,7 @@ const StyledParagraph = styled(ReactMarkdown)<ParagraphProps>(
  * - Review code snippet styling
  * - Remove magic numbers from inline code styling blocks
  */
-const Paragraph: React.FC<ParagraphProps & ReactMarkdownProps> = ({
+export const Paragraph: React.FC<ParagraphProps & ReactMarkdownProps> = ({
   children,
   ...props
 }: ParagraphProps & ReactMarkdownProps) => (

@@ -151,7 +151,7 @@ const Overlay = styled('div')({
  * - https://govuk-loader-prototype.herokuapp.com/components/loader
  *
  */
-const LoadingBox: React.FC<LoadingBoxProps> = ({
+export const LoadingBox: React.FC<LoadingBoxProps> = ({
   children,
   backgroundColor,
   backgroundColorOpacity,

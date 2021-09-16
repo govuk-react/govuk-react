@@ -2,7 +2,6 @@
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
 import styled from 'styled-components';
-import React from 'react';
 import { ERROR_COLOUR } from 'govuk-colours';
 import { SPACING } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
@@ -10,25 +9,6 @@ import { spacing } from '@govuk-react/lib';
 // TODO consider removing this, as it's not as per govuk-frontend
 // NB our approach to labels/fields differs at present, which is why we have this
 // we have no `form-group` - this, to an extent, replaces it...
-
-const StyledLabel = styled('label')<LabelProps>(
-  {
-    display: 'flex',
-    flexDirection: 'column',
-    boxSizing: 'border-box',
-    ':after': {
-      content: "''",
-      display: 'table',
-      clear: 'both',
-    },
-  },
-  ({ error }) => ({
-    borderLeft: error ? `4px solid ${ERROR_COLOUR}` : undefined,
-    marginRight: error ? SPACING.SCALE_3 : undefined,
-    paddingLeft: error ? SPACING.SCALE_2 : undefined,
-  }),
-  spacing.withWhiteSpace({ marginBottom: 0 })
-);
 
 /**
  *
@@ -54,11 +34,26 @@ const StyledLabel = styled('label')<LabelProps>(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
  *
  */
-const Label: React.FC<LabelProps> = (props: LabelProps) => <StyledLabel {...props} />;
+export const Label = styled('label')<LabelProps>(
+  {
+    display: 'flex',
+    flexDirection: 'column',
+    boxSizing: 'border-box',
+    ':after': {
+      content: "''",
+      display: 'table',
+      clear: 'both',
+    },
+  },
+  ({ error }) => ({
+    borderLeft: error ? `4px solid ${ERROR_COLOUR}` : undefined,
+    marginRight: error ? SPACING.SCALE_3 : undefined,
+    paddingLeft: error ? SPACING.SCALE_2 : undefined,
+  }),
+  spacing.withWhiteSpace({ marginBottom: 0 })
+);
 
 export interface LabelProps extends WithWhiteSpaceProps {
-  /** Text for the label */
-  children: React.ReactNode;
   /**
    * Apply error state styling to the component
    */

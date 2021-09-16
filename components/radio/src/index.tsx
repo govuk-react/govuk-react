@@ -188,7 +188,7 @@ const StyledRadioHint = styled(HintText)({
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/radios/_radios.scss
  * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
  */
-const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
+export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
   ({ inline, children, className, hint, ...input }: RadioProps, ref) => (
     <Label inline={inline} className={className}>
       <Input type="radio" ref={ref} {...input} />

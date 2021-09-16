@@ -18,7 +18,42 @@ interface OrderedListProps extends WithWhiteSpaceProps {
   as?: React.ElementType;
 }
 
-const OrderedList = styled('ol')<OrderedListProps>(
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ *
+ * ```jsx
+ * import { OrderedList, ListItem } from 'govuk-react'
+ *
+ * <OrderedList>
+ *   <ListItem>Lorem ipsum dolor sit.</ListItem>
+ *   <ListItem>Consectetur adipiscing elit.</ListItem>
+ *   <ListItem>Curabitur et libero nec.</ListItem>
+ * </OrderedList>
+ * ```
+ *
+ * With Roman
+ *
+ * ```jsx
+ * import { OrderedList, ListItem } from 'govuk-react'
+ *
+ * <OrderedList listStyleType="lower-roman">
+ *   <ListItem>Lorem ipsum dolor sit.</ListItem>
+ *   <ListItem>Consectetur adipiscing elit.</ListItem>
+ *   <ListItem>Curabitur et libero nec.</ListItem>
+ * </OrderedList>
+ * ```
+ *
+ * ### References
+ * - https://design-system.service.gov.uk/styles/typography/#lists
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_lists.scss
+ *
+ * ### TODO
+ * - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
+ */
+export const OrderedList = styled('ol')<OrderedListProps>(
   typography.font({ size: 19 }),
   typography.textColour,
   {
@@ -62,51 +97,10 @@ const OrderedList = styled('ol')<OrderedListProps>(
   }
 );
 
-/**
- *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { OrderedList, ListItem } from 'govuk-react'
- *
- * <OrderedList>
- *   <ListItem>Lorem ipsum dolor sit.</ListItem>
- *   <ListItem>Consectetur adipiscing elit.</ListItem>
- *   <ListItem>Curabitur et libero nec.</ListItem>
- * </OrderedList>
- * ```
- *
- * With Roman
- *
- * ```jsx
- * import { OrderedList, ListItem } from 'govuk-react'
- *
- * <OrderedList listStyleType="lower-roman">
- *   <ListItem>Lorem ipsum dolor sit.</ListItem>
- *   <ListItem>Consectetur adipiscing elit.</ListItem>
- *   <ListItem>Curabitur et libero nec.</ListItem>
- * </OrderedList>
- * ```
- *
- * ### References
- * - https://design-system.service.gov.uk/styles/typography/#lists
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_lists.scss
- *
- * ### TODO
- * - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
- */
-// Create a component wrapper for react-docgen only
-const DocumentedComponent: React.FC<OrderedListProps> = ({ listStyleType = undefined, ...props }: OrderedListProps) => (
-  <OrderedList listStyleType={listStyleType} {...props} />
-);
-DocumentedComponent.defaultProps = {
+OrderedList.defaultProps = {
   listStyleType: undefined,
   as: undefined,
 };
 
-// Named export so react-docgen will generate docs
-export { DocumentedComponent };
 // Export un-wrapped styled component
 export default OrderedList;

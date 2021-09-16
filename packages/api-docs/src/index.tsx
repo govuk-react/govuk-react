@@ -46,6 +46,9 @@ function getMarkdownForComponent(file) {
     }
   } else {
     [componentInfo] = parsedComponents;
+    if (componentInfo.displayName !== componentName) {
+      console.warn('displayName does not match component name', componentInfo.displayName, componentName);
+    }
   }
   const componentFolderName = getComponentFolderName(file);
   return generateMarkdown(componentName, componentFolderName, componentInfo);

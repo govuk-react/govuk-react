@@ -1,12 +1,36 @@
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
 import styled from 'styled-components';
-import React from 'react';
 import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
 import { spacing, typography } from '@govuk-react/lib';
 import { CAPTION_SIZES, MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
 
-const StyledCaption = styled('span')<CaptionProps>(
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ *
+ * ```jsx
+ * import { Caption } from 'govuk-react'
+ *
+ * <Caption>Caption heading text</Caption>
+ * ```
+ *
+ * With another header
+ *
+ * ```jsx
+ * import { H1 } from 'govuk-react'
+ *
+ * <Caption size="XL">Supporting header text</Caption>
+ * <H1>Main header text</H1>
+ * ```
+ *
+ * ### References
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_typography.scss
+ * - https://design-system.service.gov.uk/styles/typography/#headings
+ */
+export const Caption = styled('span')<CaptionProps>(
   ({ size }) => {
     const actualSize = Number.isNaN(Number(size)) ? CAPTION_SIZES[size] : size;
 
@@ -34,37 +58,7 @@ const StyledCaption = styled('span')<CaptionProps>(
   },
   spacing.withWhiteSpace()
 );
-
-/**
- *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { Caption } from 'govuk-react'
- *
- * <Caption>Caption heading text</Caption>
- * ```
- *
- * With another header
- *
- * ```jsx
- * import { H1 } from 'govuk-react'
- *
- * <Caption size="XL">Supporting header text</Caption>
- * <H1>Main header text</H1>
- * ```
- *
- * ### References
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_typography.scss
- * - https://design-system.service.gov.uk/styles/typography/#headings
- */
-const Caption: React.FC<CaptionProps> = (props: CaptionProps) => <StyledCaption {...props} />;
-
 interface CaptionProps extends WithWhiteSpaceProps {
-  /** Text to be rendered as a caption */
-  children: string;
   /**
    * Visual size level, accepts:
    *    `XLARGE`, `LARGE`, `MEDIUM`, `XL`, `L`, `M`

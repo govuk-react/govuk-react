@@ -4,12 +4,12 @@ import { boolean, withKnobs } from '@storybook/addon-knobs';
 import Paragraph from '@govuk-react/paragraph';
 import Button from '@govuk-react/button';
 
-import VisuallyHidden, { VisuallyHiddenDocumented } from '.';
+import { VisuallyHidden } from '.';
 
 export default {
   title: 'Utility/Visually hidden',
   decorators: [withKnobs],
-  component: VisuallyHiddenDocumented,
+  component: VisuallyHidden,
 };
 
 export const Default: React.FC = () => (

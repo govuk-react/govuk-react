@@ -215,14 +215,13 @@ interface ButtonProps extends ButtonOwnProps {
  *   - see https://www.w3.org/TR/WCAG20-TECHS/G18.html
  *   - can use Polished's `readableColor` call, but translate their black to govuk's black
  */
-const Button: React.ForwardRefExoticComponent<ButtonProps & React.RefAttributes<HTMLButtonElement>> = React.forwardRef(
-  ({ start, children, icon, ...props }: ButtonProps, ref) => (
+export const Button: React.ForwardRefExoticComponent<ButtonProps & React.RefAttributes<HTMLButtonElement>> =
+  React.forwardRef(({ start, children, icon, ...props }: ButtonProps, ref) => (
     <StyledButton ref={ref} isStart={start} icon={icon} {...props}>
       {icon ? <ButtonContents>{children}</ButtonContents> : children}
       {icon}
     </StyledButton>
-  )
-);
+  ));
 
 Button.defaultProps = {
   icon: undefined,

@@ -43,7 +43,7 @@ const WarningTextWrapper = styled('strong')(typography.font({ size: 19, weight: 
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/warning-text
  *
  */
-const WarningText: React.FC<WarningTextProps> = ({ children, ...props }: WarningTextProps) => (
+export const WarningText: React.FC<WarningTextProps> = ({ children, ...props }: WarningTextProps) => (
   <StyledWarningText {...props}>
     <IconImportantWrapper>
       <IconImportant />

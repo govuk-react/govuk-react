@@ -1,6 +1,6 @@
 import { withKnobs } from '@storybook/addon-knobs';
 
-import { DocumentedInsetText as InsetText } from '.';
+import { InsetText } from '.';
 import InsetTextExample, { InsetTextWithParagraph } from './fixtures';
 
 export default {

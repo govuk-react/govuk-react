@@ -2,7 +2,7 @@ import React from 'react';
 
 import ListItem from '@govuk-react/list-item';
 
-import { DocumentedComponent as OrderedList } from '.';
+import { OrderedList } from '.';
 
 export default {
   title: 'Typography/Ordered list',

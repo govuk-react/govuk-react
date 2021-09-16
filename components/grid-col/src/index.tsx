@@ -25,52 +25,6 @@ function setGrowShrink(style) {
   return { ...style, flexGrow: hasAutoWidth ? 1 : 0, flexShrink: hasAutoWidth ? 1 : 0 };
 }
 
-const StyledColumn = styled('div')<GridColProps>(
-  {
-    boxSizing: 'border-box',
-    paddingRight: GUTTER_HALF,
-    paddingLeft: GUTTER_HALF,
-  },
-  (props) => {
-    // if setWidth is set, then columnOneQuarter etc props will be ignored
-    let widthStyle = widthFromProps(props);
-
-    if (!widthStyle) {
-      let widthValue;
-
-      Object.entries(props).forEach(([key, value]) => {
-        if (colValues[key] && value === true) {
-          if (process.env.NODE_ENV !== 'production') {
-            const newKey = key
-              .replace('column', '')
-              .replace(/^([A-Z][a-z]+)([A-Z])/, '$1-$2')
-              .toLocaleLowerCase();
-            // eslint-disable-next-line no-console
-            console.warn(`deprecated prop ${key} used in GridCol, please replace with setWidth="${newKey}"`);
-          }
-          widthValue = colValues[key];
-        }
-      });
-      widthStyle = {
-        [MEDIA_QUERIES.TABLET]: {
-          width: widthValue,
-        },
-      };
-    }
-    widthStyle[MEDIA_QUERIES.TABLET] = setGrowShrink(widthStyle[MEDIA_QUERIES.TABLET]);
-
-    const desktopWidthStyle = desktopWidthFromProps({
-      setWidth: props.setDesktopWidth,
-    });
-
-    if (desktopWidthStyle) {
-      desktopWidthStyle[MEDIA_QUERIES.DESKTOP] = setGrowShrink(desktopWidthStyle[MEDIA_QUERIES.DESKTOP]);
-    }
-
-    return { ...widthStyle, ...desktopWidthStyle };
-  }
-);
-
 /**
  *
  * Should always be wrapped by `GridRow`. Will always render a column at full width if
@@ -127,8 +81,51 @@ const StyledColumn = styled('div')<GridColProps>(
  * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
  *
  */
-const GridCol: React.FC<GridColProps> = (props) => <StyledColumn {...props} />;
+export const GridCol = styled('div')<GridColProps>(
+  {
+    boxSizing: 'border-box',
+    paddingRight: GUTTER_HALF,
+    paddingLeft: GUTTER_HALF,
+  },
+  (props) => {
+    // if setWidth is set, then columnOneQuarter etc props will be ignored
+    let widthStyle = widthFromProps(props);
 
+    if (!widthStyle) {
+      let widthValue;
+
+      Object.entries(props).forEach(([key, value]) => {
+        if (colValues[key] && value === true) {
+          if (process.env.NODE_ENV !== 'production') {
+            const newKey = key
+              .replace('column', '')
+              .replace(/^([A-Z][a-z]+)([A-Z])/, '$1-$2')
+              .toLocaleLowerCase();
+            // eslint-disable-next-line no-console
+            console.warn(`deprecated prop ${key} used in GridCol, please replace with setWidth="${newKey}"`);
+          }
+          widthValue = colValues[key];
+        }
+      });
+      widthStyle = {
+        [MEDIA_QUERIES.TABLET]: {
+          width: widthValue,
+        },
+      };
+    }
+    widthStyle[MEDIA_QUERIES.TABLET] = setGrowShrink(widthStyle[MEDIA_QUERIES.TABLET]);
+
+    const desktopWidthStyle = desktopWidthFromProps({
+      setWidth: props.setDesktopWidth,
+    });
+
+    if (desktopWidthStyle) {
+      desktopWidthStyle[MEDIA_QUERIES.DESKTOP] = setGrowShrink(desktopWidthStyle[MEDIA_QUERIES.DESKTOP]);
+    }
+
+    return { ...widthStyle, ...desktopWidthStyle };
+  }
+);
 interface GridColProps {
   /** GridCol content */
   children?: React.ReactNode;

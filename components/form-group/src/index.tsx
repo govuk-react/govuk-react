@@ -6,6 +6,24 @@ import { ERROR_COLOUR } from 'govuk-colours';
 import { spacing } from '@govuk-react/lib';
 import { BORDER_WIDTH_FORM_GROUP_ERROR, SPACING_POINTS } from '@govuk-react/constants';
 
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ *
+ * ```jsx
+ * import { FormGroup, Checkbox } from 'govuk-react'
+ *
+ * <FormGroup>
+ *   <Checkbox name="group-1">Example</Checkbox>
+ * </FormGroup>
+ * ```
+ *
+ * ### References
+ *
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_form-group.scss
+ */
 export const FormGroup = styled('div')<FormGroupProps>(
   spacing.responsiveMargin({ size: 6, direction: 'bottom' }),
   {
@@ -26,38 +44,13 @@ export const FormGroup = styled('div')<FormGroupProps>(
       : undefined,
   spacing.withWhiteSpace()
 );
-
-/**
- *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { FormGroup, Checkbox } from 'govuk-react'
- *
- * <FormGroup>
- *   <Checkbox name="group-1">Example</Checkbox>
- * </FormGroup>
- * ```
- *
- * ### References
- *
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_form-group.scss
- */
-const FormGroupDocumented: React.FC<FormGroupProps> = (props: FormGroupProps) => <FormGroup {...props} />;
-
 interface FormGroupProps extends WithWhiteSpaceProps {
   children?: React.ReactNode;
   error?: boolean;
 }
 
-FormGroupDocumented.defaultProps = {
+FormGroup.defaultProps = {
   error: false,
 };
 
-FormGroup.propTypes = FormGroupDocumented.propTypes;
-FormGroup.defaultProps = FormGroupDocumented.defaultProps;
-
-export { FormGroupDocumented };
 export default FormGroup;

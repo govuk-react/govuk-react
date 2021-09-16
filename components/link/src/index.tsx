@@ -13,17 +13,6 @@ interface LinkProps {
   noVisitedState?: boolean;
 }
 
-export const Link = styled('a').withConfig<LinkProps>({
-  shouldForwardProp: (prop) => !['noVisitedState', 'textColour', 'muted'].includes(prop),
-})<LinkProps>(
-  ...link.common(),
-  link.styleDefault,
-  link.printFriendly,
-  ({ muted }) => (muted ? link.styleMuted : undefined),
-  ({ textColour }) => (textColour ? link.styleText : undefined),
-  ({ noVisitedState }) => (noVisitedState ? link.styleNoVisitedState : undefined)
-);
-
 /**
  *
  * ### Usage
@@ -52,17 +41,21 @@ export const Link = styled('a').withConfig<LinkProps>({
  * - https://design-system.service.gov.uk/styles/typography/#links
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_links.scss
  */
-const LinkDocumented: React.FC<React.ComponentProps<typeof Link>> = (props) => <Link {...props} />;
+export const Link = styled('a').withConfig<LinkProps>({
+  shouldForwardProp: (prop) => !['noVisitedState', 'textColour', 'muted'].includes(prop),
+})<LinkProps>(
+  ...link.common(),
+  link.styleDefault,
+  link.printFriendly,
+  ({ muted }) => (muted ? link.styleMuted : undefined),
+  ({ textColour }) => (textColour ? link.styleText : undefined),
+  ({ noVisitedState }) => (noVisitedState ? link.styleNoVisitedState : undefined)
+);
 
-const defaultProps = {
+Link.defaultProps = {
   muted: false,
   textColour: false,
   noVisitedState: false,
 };
 
-LinkDocumented.defaultProps = defaultProps;
-
-Link.defaultProps = defaultProps;
-
-export { LinkDocumented };
 export default Link;
