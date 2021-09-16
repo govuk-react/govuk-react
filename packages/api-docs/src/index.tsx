@@ -6,7 +6,6 @@ import fs from 'fs';
 import path from 'path';
 import glob from 'glob-promise';
 import chalk from 'chalk';
-import { parse } from 'react-docgen';
 import { promisify } from 'util';
 import _ from 'lodash';
 
@@ -15,6 +14,8 @@ import generateMarkdown from './markdown/generateMarkdown';
 // components is imported via require so that we can parse the names of exports
 /* eslint-disable-next-line @typescript-eslint/no-var-requires */
 const components = require('govuk-react');
+/* eslint-disable-next-line @typescript-eslint/no-var-requires */
+const docgen = require('react-docgen-typescript');
 
 function getComponentFolderName(file) {
   // '/' rather than 'path.sep' as, on Windows, the path has already been converted at this point
@@ -32,11 +33,12 @@ function getComponentNameFromFile(file) {
 }
 
 function getMarkdownForComponent(file) {
-  const src = fs.readFileSync(path.resolve(__dirname, file));
-  const componentInfo = parse(src);
+  const p = path.resolve(__dirname, file);
+  const componentInfo = docgen.parse(p);
+
   const componentName = getComponentNameFromFile(file);
   const componentFolderName = getComponentFolderName(file);
-  return generateMarkdown(componentName, componentFolderName, componentInfo);
+  return generateMarkdown(componentName, componentFolderName, componentInfo[0]);
 }
 
 function libPathToSrc(libPath, libFolder = '/lib/') {

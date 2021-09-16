@@ -136,6 +136,7 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
     </StyledCheckbox>
   )
 );
+Checkbox.displayName = 'Checkbox';
 
 Checkbox.defaultProps = {
   hint: undefined,
