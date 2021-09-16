@@ -130,13 +130,13 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
     <label
       className="c0"
     >
-      <src__LabelText>
+      <LabelText>
         <span
           className="c1"
         >
           example
         </span>
-      </src__LabelText>
+      </LabelText>
       <ForwardRef
         error={false}
         type="text"

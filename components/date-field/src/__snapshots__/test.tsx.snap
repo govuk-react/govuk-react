@@ -210,20 +210,20 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
     <div
       className="c0"
     >
-      <src__LabelText>
+      <LabelText>
         <span
           className="c1"
         >
           example
         </span>
-      </src__LabelText>
-      <src__ErrorText>
+      </LabelText>
+      <ErrorText>
         <span
           className="c2"
         >
           example
         </span>
-      </src__ErrorText>
+      </ErrorText>
       <MultiInputInput
         defaultValues={
           Object {
@@ -285,13 +285,13 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                 <label
                   className="c4 c5"
                 >
-                  <src__LabelText>
+                  <LabelText>
                     <span
                       className="c1"
                     >
                       Day
                     </span>
-                  </src__LabelText>
+                  </LabelText>
                   <src__StyledInput
                     error={true}
                     onBlur={[Function]}
@@ -314,13 +314,13 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                 <label
                   className="c4 c5"
                 >
-                  <src__LabelText>
+                  <LabelText>
                     <span
                       className="c1"
                     >
                       Month
                     </span>
-                  </src__LabelText>
+                  </LabelText>
                   <src__StyledInput
                     error={true}
                     onBlur={[Function]}
@@ -343,13 +343,13 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                 <label
                   className="c4 c7"
                 >
-                  <src__LabelText>
+                  <LabelText>
                     <span
                       className="c1"
                     >
                       Year
                     </span>
-                  </src__LabelText>
+                  </LabelText>
                   <src__StyledInput
                     error={true}
                     onBlur={[Function]}
@@ -555,13 +555,13 @@ exports[`DateField should support null value: null value 1`] = `
     <div
       className="c0"
     >
-      <src__LabelText>
+      <LabelText>
         <span
           className="c1"
         >
           Date
         </span>
-      </src__LabelText>
+      </LabelText>
       <MultiInputInput
         defaultValues={
           Object {
@@ -623,13 +623,13 @@ exports[`DateField should support null value: null value 1`] = `
                 <label
                   className="c3 c4"
                 >
-                  <src__LabelText>
+                  <LabelText>
                     <span
                       className="c1"
                     >
                       Day
                     </span>
-                  </src__LabelText>
+                  </LabelText>
                   <src__StyledInput
                     error={false}
                     onBlur={[Function]}
@@ -652,13 +652,13 @@ exports[`DateField should support null value: null value 1`] = `
                 <label
                   className="c3 c4"
                 >
-                  <src__LabelText>
+                  <LabelText>
                     <span
                       className="c1"
                     >
                       Month
                     </span>
-                  </src__LabelText>
+                  </LabelText>
                   <src__StyledInput
                     error={false}
                     onBlur={[Function]}
@@ -681,13 +681,13 @@ exports[`DateField should support null value: null value 1`] = `
                 <label
                   className="c3 c6"
                 >
-                  <src__LabelText>
+                  <LabelText>
                     <span
                       className="c1"
                     >
                       Year
                     </span>
-                  </src__LabelText>
+                  </LabelText>
                   <src__StyledInput
                     error={false}
                     onBlur={[Function]}
@@ -897,13 +897,13 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
     <div
       className="c0"
     >
-      <src__LabelText>
+      <LabelText>
         <span
           className="c1"
         >
           Date
         </span>
-      </src__LabelText>
+      </LabelText>
       <MultiInputInput
         defaultValues={
           Object {
@@ -977,13 +977,13 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                 <label
                   className="c3 c4"
                 >
-                  <src__LabelText>
+                  <LabelText>
                     <span
                       className="c1"
                     >
                       Day
                     </span>
-                  </src__LabelText>
+                  </LabelText>
                   <src__StyledInput
                     error={false}
                     onBlur={[Function]}
@@ -1008,13 +1008,13 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                 <label
                   className="c3 c4"
                 >
-                  <src__LabelText>
+                  <LabelText>
                     <span
                       className="c1"
                     >
                       Month
                     </span>
-                  </src__LabelText>
+                  </LabelText>
                   <src__StyledInput
                     error={false}
                     onBlur={[Function]}
@@ -1039,13 +1039,13 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                 <label
                   className="c3 c6"
                 >
-                  <src__LabelText>
+                  <LabelText>
                     <span
                       className="c1"
                     >
                       Year
                     </span>
-                  </src__LabelText>
+                  </LabelText>
                   <src__StyledInput
                     error={false}
                     onBlur={[Function]}

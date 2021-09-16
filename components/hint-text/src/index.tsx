@@ -39,5 +39,6 @@ export const HintText = styled('span')(
   },
   spacing.withWhiteSpace()
 );
+HintText.displayName = 'HintText';
 
 export default HintText;

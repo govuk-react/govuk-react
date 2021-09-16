@@ -41,5 +41,6 @@ export const LabelText = styled('span')(
   },
   spacing.withWhiteSpace({ marginBottom: 0 })
 );
+LabelText.displayName = 'LabelText';
 
 export default LabelText;

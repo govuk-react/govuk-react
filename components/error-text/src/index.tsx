@@ -35,5 +35,6 @@ export const ErrorText = styled('span')(
   },
   spacing.withWhiteSpace()
 );
+ErrorText.displayName = 'ErrorText';
 
 export default ErrorText;

@@ -136,20 +136,20 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
     <label
       className="c0"
     >
-      <src__LabelText>
+      <LabelText>
         <span
           className="c1"
         >
           example
         </span>
-      </src__LabelText>
-      <src__ErrorText>
+      </LabelText>
+      <ErrorText>
         <span
           className="c2"
         >
           example
         </span>
-      </src__ErrorText>
+      </ErrorText>
       <src__TextAreaField
         error={true}
         rows={5}
@@ -291,20 +291,20 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
     <label
       className="c0"
     >
-      <src__LabelText>
+      <LabelText>
         <span
           className="c1"
         >
           example
         </span>
-      </src__LabelText>
-      <src__HintText>
+      </LabelText>
+      <HintText>
         <span
           className="c2"
         >
           example
         </span>
-      </src__HintText>
+      </HintText>
       <src__TextAreaField
         rows={5}
       >
@@ -418,13 +418,13 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
     <label
       className="c0"
     >
-      <src__LabelText>
+      <LabelText>
         <span
           className="c1"
         >
           example
         </span>
-      </src__LabelText>
+      </LabelText>
       <src__TextAreaField
         rows={5}
       >

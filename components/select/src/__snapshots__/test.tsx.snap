@@ -181,27 +181,27 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
     <label
       className="c0"
     >
-      <src__LabelText>
+      <LabelText>
         <span
           className="c1"
         >
           example
         </span>
-      </src__LabelText>
-      <src__HintText>
+      </LabelText>
+      <HintText>
         <span
           className="c2"
         >
           example
         </span>
-      </src__HintText>
-      <src__ErrorText>
+      </HintText>
+      <ErrorText>
         <span
           className="c3"
         >
           example
         </span>
-      </src__ErrorText>
+      </ErrorText>
       <src__StyledSelect
         error={true}
       >
@@ -332,13 +332,13 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
     <label
       className="c0"
     >
-      <src__LabelText>
+      <LabelText>
         <span
           className="c1"
         >
           example
         </span>
-      </src__LabelText>
+      </LabelText>
       <src__StyledSelect>
         <select
           className="c2"

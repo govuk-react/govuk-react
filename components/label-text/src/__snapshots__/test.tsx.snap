@@ -41,11 +41,11 @@ exports[`LabelText matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<src__LabelText>
+<LabelText>
   <span
     className="c0"
   >
     example
   </span>
-</src__LabelText>
+</LabelText>
 `;
