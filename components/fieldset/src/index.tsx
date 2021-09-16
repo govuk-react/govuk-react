@@ -52,7 +52,7 @@ const StyledFieldset = styled('fieldset')<FieldsetProps>(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/fieldset
  * - https://design-system.service.gov.uk/get-started/labels-legends-headings/
  */
-const Fieldset: FieldsetType = (props) => <StyledFieldset {...props} />;
+export const Fieldset: FieldsetType = (props) => <StyledFieldset {...props} />;
 
 interface FieldsetType extends React.FC<FieldsetProps> {
   Legend: typeof Legend;

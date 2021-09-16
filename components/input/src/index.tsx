@@ -67,7 +67,7 @@ export const StyledInput = styled('input')<InputProps>(
  * ### TODO:
  * - Remove `errorColor` and provide examples on how to extend the component
  */
-const Input = React.forwardRef<HTMLInputElement, InputProps>((props: InputProps, ref) => (
+export const Input = React.forwardRef<HTMLInputElement, InputProps>((props: InputProps, ref) => (
   <StyledInput ref={ref} {...props} />
 ));
 

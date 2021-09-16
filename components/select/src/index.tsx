@@ -108,7 +108,7 @@ const StyledSelect = styled('select')<{ error?: boolean }>(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/select
  *
  */
-const Select: React.FC<SelectProps> = ({ children, hint, label, meta, input, ...props }: SelectProps) => (
+export const Select: React.FC<SelectProps> = ({ children, hint, label, meta, input, ...props }: SelectProps) => (
   <Label {...props} error={meta.touched && !!meta.error}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}

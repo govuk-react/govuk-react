@@ -118,7 +118,7 @@ const StyledTable = styled('table')(
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/table/_table.scss
  *
  */
-const Table: TableType = ({ caption, children, body = children, head, ...props }: TableProps) => (
+export const Table: TableType = ({ caption, children, body = children, head, ...props }: TableProps) => (
   <StyledTable {...props}>
     {caption && <Caption>{caption}</Caption>}
     {head && <TableHeader>{head}</TableHeader>}

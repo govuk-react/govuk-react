@@ -32,7 +32,7 @@ import WidthContainer from './atoms/width-container';
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_main-wrapper.scss
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_width-container.scss
  */
-const Page: PageType = ({
+export const Page: PageType = ({
   header,
   footer,
   children,

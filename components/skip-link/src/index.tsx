@@ -3,9 +3,7 @@ import styled from 'styled-components';
 import { SPACING_POINTS } from '@govuk-react/constants';
 import { link, typography, visuallyHidden } from '@govuk-react/lib';
 
-type SkipLinkType = React.ForwardRefExoticComponent<SkipLinkProps & React.RefAttributes<unknown>>;
-
-const SkipLink: SkipLinkType = styled('a')(
+export const SkipLink = styled('a')<SkipLinkProps>(
   visuallyHidden.focusable(),
   link.common(),
   link.styleText,

@@ -33,12 +33,22 @@ function getComponentNameFromFile(file) {
 }
 
 function getMarkdownForComponent(file) {
-  const p = path.resolve(__dirname, file);
-  const componentInfo = docgen.parse(p);
-
   const componentName = getComponentNameFromFile(file);
+  const p = path.resolve(__dirname, file);
+  let componentInfo;
+  const parsedComponents: { displayName: string; filePath: string }[] = docgen.parse(p);
+  if (parsedComponents.length > 1) {
+    componentInfo = parsedComponents.find((parsedComponent) => parsedComponent.displayName === componentName);
+    if (!componentInfo) {
+      console.warn('more than one component found and no matching displayName found');
+      console.warn(parsedComponents.map(({ filePath, displayName }) => ({ filePath, displayName })));
+      [componentInfo] = parsedComponents;
+    }
+  } else {
+    [componentInfo] = parsedComponents;
+  }
   const componentFolderName = getComponentFolderName(file);
-  return generateMarkdown(componentName, componentFolderName, componentInfo[0]);
+  return generateMarkdown(componentName, componentFolderName, componentInfo);
 }
 
 function libPathToSrc(libPath, libFolder = '/lib/') {

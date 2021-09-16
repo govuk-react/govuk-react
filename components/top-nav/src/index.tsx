@@ -145,7 +145,7 @@ interface TopNavProps {
  * - TODO: Vertical alignment here needs some work, perhaps should be its own component
  * - TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
  */
-class TopNav extends Component<TopNavProps, { navigationOpen: boolean }> {
+export class TopNav extends Component<TopNavProps, { navigationOpen: boolean }> {
   static IconTitle = IconTitle;
 
   static Anchor = TopNavAnchor;

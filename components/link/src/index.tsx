@@ -13,7 +13,7 @@ interface LinkProps {
   noVisitedState?: boolean;
 }
 
-const Link = styled('a').withConfig<LinkProps>({
+export const Link = styled('a').withConfig<LinkProps>({
   shouldForwardProp: (prop) => !['noVisitedState', 'textColour', 'muted'].includes(prop),
 })<LinkProps>(
   ...link.common(),

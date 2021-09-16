@@ -78,7 +78,7 @@ const StyledContainer = styled('div')<DateFieldProps>(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/date-field
  *
  */
-const DateField: DateFieldType = ({
+export const DateField: DateFieldType = ({
   children,
   errorText,
   hintText,

@@ -3,7 +3,7 @@ import React from 'react';
 import { BLUE, GREY_1, WHITE } from 'govuk-colours';
 import { typography } from '@govuk-react/lib';
 
-const Tag = styled('strong')<TagProps>(
+export const Tag = styled('strong')<TagProps>(
   typography.font({ size: 16, weight: 'bold', lineHeight: 1.25 }),
   {
     display: 'inline-block',

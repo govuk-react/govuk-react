@@ -119,7 +119,7 @@ const FooterContainer = styled('footer')(
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/footer/_footer.scss
  *
  */
-const Footer: FooterType = ({
+export const Footer: FooterType = ({
   children = undefined,
   container: Container = Footer.WidthContainer,
   copyright = undefined,

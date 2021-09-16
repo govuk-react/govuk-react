@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { visuallyHidden } from '@govuk-react/lib';
 
-const VisuallyHidden = styled('span')
+export const VisuallyHidden = styled('span')
   .withConfig<VisuallyHiddenProps>({
     shouldForwardProp: (prop) => !['important', 'focusable'].includes(prop),
   })
