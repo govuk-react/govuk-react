@@ -72,7 +72,6 @@ interface FontOptions {
   weight?: string;
   tabular?: boolean;
   lineHeight?: number | string;
-  [key: string]: any;
 }
 
 export function font({ size, weight = 'regular', tabular = false, lineHeight }: FontOptions = {}): {

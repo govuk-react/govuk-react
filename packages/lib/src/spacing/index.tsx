@@ -224,4 +224,4 @@ export type WithWhiteSpaceProps = {
   mb?: number | string;
 };
 
-export type WithWidthProps = { setWidth?: string | number; [key: string]: any };
+export type WithWidthProps = { setWidth?: string | number };
