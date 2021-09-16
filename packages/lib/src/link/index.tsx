@@ -22,6 +22,7 @@ export function common(fontFamily?: string): [
     [MEDIA_QUERY_PRINT]: {
       fontFamily: string;
     };
+    [key: string]: any;
   },
   typeof FOCUSABLE_FILL
 ] {

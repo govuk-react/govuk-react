@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { visuallyHidden } from '@govuk-react/lib';
 
 const VisuallyHidden = styled('span')
-  .withConfig({
+  .withConfig<VisuallyHiddenProps>({
     shouldForwardProp: (prop) => !['important', 'focusable'].includes(prop),
   })
-  .attrs(({ focusable, tabIndex }) =>
+  .attrs<VisuallyHiddenProps>(({ focusable, tabIndex }) =>
     // if we're focusable but don't have a `tabIndex` set, add one
     focusable && tabIndex === undefined ? { tabIndex: '0' } : undefined
   )(({ focusable, important }) => visuallyHidden({ focusable, important }));

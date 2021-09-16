@@ -201,7 +201,7 @@ class TopNav extends Component<TopNavProps, { navigationOpen: boolean }> {
                     checked={navigationOpen}
                     onChange={this.toggleNavigationOpen}
                   />
-                  <UnorderedList id="govuk-react-menu" serviceTitle={serviceTitle} open={navigationOpen}>
+                  <UnorderedList id="govuk-react-menu" serviceTitle={!!serviceTitle} open={navigationOpen}>
                     {/* TODO: #205 use context api and/or render props here for `active` */}
                     {Array.isArray(children) ? (
                       React.Children.map(children, (child) => (child ? <ListItem>{child}</ListItem> : null))

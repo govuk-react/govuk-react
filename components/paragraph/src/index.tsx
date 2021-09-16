@@ -8,7 +8,7 @@ import ReactMarkdown from 'react-markdown';
 import { spacing, typography } from '@govuk-react/lib';
 import Link from '@govuk-react/link';
 
-const StyledParagraph = styled(ReactMarkdown)(
+const StyledParagraph = styled(ReactMarkdown)<ParagraphProps>(
   {
     margin: 0,
     '> p': {

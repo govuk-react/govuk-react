@@ -4,7 +4,7 @@ import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
 import { spacing, typography } from '@govuk-react/lib';
 import { CAPTION_SIZES, MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
 
-const StyledCaption = styled('span')(
+const StyledCaption = styled('span')<CaptionProps>(
   ({ size }) => {
     const actualSize = Number.isNaN(Number(size)) ? CAPTION_SIZES[size] : size;
 

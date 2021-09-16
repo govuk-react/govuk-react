@@ -12,7 +12,7 @@ const breakSizes = {
   MEDIUM: 4,
 };
 
-const SectionBreak: React.FC<SectionBreakProps> = styled('hr')(
+const SectionBreak = styled('hr')<SectionBreakProps>(
   {
     margin: 0,
     border: 0,

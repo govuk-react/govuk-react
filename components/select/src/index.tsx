@@ -12,7 +12,7 @@ import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 
-const StyledSelect = styled('select')(
+const StyledSelect = styled('select')<{ error?: boolean }>(
   typography.font({ size: 19 }),
   {
     boxSizing: 'border-box',
@@ -113,7 +113,7 @@ const Select: React.FC<SelectProps> = ({ children, hint, label, meta, input, ...
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
-    <StyledSelect error={meta.touched && meta.error} {...input}>
+    <StyledSelect error={meta.touched && !!meta.error} {...input}>
       {children}
     </StyledSelect>
   </Label>

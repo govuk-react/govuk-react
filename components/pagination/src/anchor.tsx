@@ -5,7 +5,7 @@ import { FONT_SIZE, LINE_HEIGHT, SPACING, MEDIA_QUERIES, NTA_LIGHT } from '@govu
 
 import { ArrowRight as NextPageIcon, ArrowLeft as PrevPageIcon } from '@govuk-react/icons';
 
-const PaginationWrapper = styled('li')(
+const PaginationWrapper = styled('li')<{ previousPage?: boolean; nextPage?: boolean }>(
   {
     boxSizing: 'border-box',
     margin: 0,

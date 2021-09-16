@@ -5,7 +5,7 @@ import { BORDER_WIDTH_WIDE, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 import { BORDER_COLOUR } from 'govuk-colours';
 
-const InsetText: React.FC<InsetTextProps> = styled('div')(
+const InsetText = styled('div')<InsetTextProps>(
   typography.font({ size: 19 }),
   typography.textColour,
   {

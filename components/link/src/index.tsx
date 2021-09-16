@@ -15,7 +15,7 @@ interface LinkProps extends React.HTMLProps<HTMLAnchorElement> {
   to?: string; // TODO: #953
 }
 
-const Link: React.FC<LinkProps> = styled('a').withConfig({
+const Link = styled('a').withConfig<LinkProps>({
   shouldForwardProp: (prop) => !['noVisitedState', 'textColour', 'muted'].includes(prop),
 })(
   link.common(),

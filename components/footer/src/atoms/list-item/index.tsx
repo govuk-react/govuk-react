@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { spacing } from '@govuk-react/lib';
 
-const ListItem: React.FC<ListItemProps> = styled('li')(
+const ListItem = styled('li')<ListItemProps>(
   ({ inline }) =>
     inline
       ? {

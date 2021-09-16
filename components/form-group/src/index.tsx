@@ -4,7 +4,7 @@ import { ERROR_COLOUR } from 'govuk-colours';
 import { spacing } from '@govuk-react/lib';
 import { BORDER_WIDTH_FORM_GROUP_ERROR, SPACING_POINTS } from '@govuk-react/constants';
 
-const FormGroup: React.FC<FormGroupProps> = styled('div')(
+const FormGroup = styled('div')<FormGroupProps>(
   spacing.responsiveMargin({ size: 6, direction: 'bottom' }),
   {
     '& &:last-of-type': {

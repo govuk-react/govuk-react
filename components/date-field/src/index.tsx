@@ -10,7 +10,7 @@ import { spacing } from '@govuk-react/lib';
 import type { InputProps } from './input';
 import Input from './input';
 
-const StyledContainer = styled('div')(
+const StyledContainer = styled('div')<DateFieldProps>(
   {
     display: 'flex',
     flexDirection: 'column',

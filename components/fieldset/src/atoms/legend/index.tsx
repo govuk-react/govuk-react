@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { spacing, typography } from '@govuk-react/lib';
 import { HEADING_SIZES, SPACING_POINTS } from '@govuk-react/constants';
 
-const StyledLegend = styled('legend')(
+const StyledLegend = styled('legend')<LegendProps>(
   spacing.withWhiteSpace(),
   typography.font({ size: 19 }),
   typography.textColour,

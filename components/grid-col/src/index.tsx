@@ -25,7 +25,7 @@ function setGrowShrink(style) {
   return { ...style, flexGrow: hasAutoWidth ? 1 : 0, flexShrink: hasAutoWidth ? 1 : 0 };
 }
 
-const StyledColumn: React.FC<GridColProps> = styled('div')(
+const StyledColumn = styled('div')<GridColProps>(
   {
     boxSizing: 'border-box',
     paddingRight: GUTTER_HALF,

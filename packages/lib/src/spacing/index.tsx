@@ -221,6 +221,7 @@ export type WithWhiteSpaceProps = {
   margin?: Margin | Margin[];
   padding?: Padding | Padding[];
   mb?: number | string;
+  [key: string]: any;
 };
 
-export type WithWidthProps = { setWidth?: string };
+export type WithWidthProps = { setWidth?: string | number; [key: string]: any };

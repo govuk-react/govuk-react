@@ -7,7 +7,7 @@ import { spacing, typography } from '@govuk-react/lib';
 // so if `size` is a string, we find a numeric size based off `HEADING_SIZES`
 // but if `size` is a number we just send through that number
 
-const StyledHeading = styled('h1')(
+const StyledHeading = styled('h1')<Omit<HeadingProps, 'level'>>(
   typography.textColour,
   ({ size }) => {
     const actualSize = Number.isNaN(Number(size)) ? HEADING_SIZES[size] : size;
@@ -114,7 +114,7 @@ interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
    * Semantic heading tag to use (e.g. 'h3')
    * By default element used will be an 'h1'
    */
-  as?: string;
+  as?: React.ElementType;
   /**
    * Semantic heading level value between 1 and 6 (deprecated)
    */

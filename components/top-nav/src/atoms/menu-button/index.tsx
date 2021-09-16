@@ -20,7 +20,7 @@ const ButtonText = styled('div')({
   },
 });
 
-const ButtonIcon = styled('div')(({ open }) => ({
+const ButtonIcon = styled('div')<{ open: boolean }>(({ open }) => ({
   content: '""',
   display: 'inline-block',
   width: '0',
@@ -44,7 +44,7 @@ const MenuButton: React.FC<MenuButtonProps> = ({ title, open, onClick }: MenuBut
 interface MenuButtonProps {
   title?: string;
   open?: boolean;
-  onClick?: MouseEventHandler<HTMLButtonElement>;
+  onClick?: MouseEventHandler<HTMLLabelElement>;
 }
 
 MenuButton.defaultProps = {

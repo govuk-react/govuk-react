@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { GUTTER_HALF, MEDIA_QUERIES } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
 
-const MetaItem: React.FC<MetaItemProps> = styled('div')(
+const MetaItem = styled('div')<MetaItemProps>(
   {
     marginRight: GUTTER_HALF,
     marginBottom: spacing.simple(5),

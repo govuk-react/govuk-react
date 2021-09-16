@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { GUTTER_HALF, MEDIA_QUERIES } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
 
-const StyledRow: React.FC<GridRowProps> = styled('div')(
+const StyledRow = styled('div')<GridRowProps>(
   {
     display: 'flex',
     flexDirection: 'column',

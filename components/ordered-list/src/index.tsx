@@ -18,7 +18,7 @@ interface OrderedListProps extends WithWhiteSpaceProps {
   as?: React.ElementType;
 }
 
-const OrderedList: React.FC<OrderedListProps> = styled('ol')(
+const OrderedList = styled('ol')<OrderedListProps>(
   typography.font({ size: 19 }),
   typography.textColour,
   {

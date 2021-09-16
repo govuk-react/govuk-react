@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 
-const ListItem: React.FC<ListItemProps> = styled('li')(
+const ListItem = styled('li')<ListItemProps>(
   // including font definition here is belt & braces
   // govuk-frontend doesn't bother to do that
   typography.font({ size: 19 }),

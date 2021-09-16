@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Link from '@govuk-react/link';
 import { FOOTER_LINK, FOOTER_LINK_HOVER } from 'govuk-colours';
 
-const StyledCopyright = styled(Link)(
+const StyledCopyright = styled(Link)<CopyrightProps>(
   {
     display: 'inline-block',
     textAlign: 'center',
@@ -20,7 +20,7 @@ const StyledCopyright = styled(Link)(
     image && {
       minWidth: image.width,
       paddingTop: image.height + 10,
-      backgroundImage: `url(${image.source})`,
+      backgroundImage: `url(${image.src})`,
       backgroundRepeat: 'no-repeat',
       backgroundPosition: '50% 0%',
       backgroundSize: `${image.width}px ${image.height}px`,
