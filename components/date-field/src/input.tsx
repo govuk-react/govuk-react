@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { StyledInput } from '@govuk-react/input';
+import BaseInput from '@govuk-react/input';
 import LabelText from '@govuk-react/label-text';
 import Label from '@govuk-react/label';
 
@@ -49,7 +49,7 @@ class Input extends React.Component<InputProps> {
     return (
       <StyledLabel year={key === 'year'}>
         <LabelText>{label}</LabelText>
-        <StyledInput
+        <BaseInput
           name={name}
           error={!!error}
           defaultValue={defaultValue}
