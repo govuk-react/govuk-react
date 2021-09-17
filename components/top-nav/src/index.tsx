@@ -220,4 +220,6 @@ export class TopNav extends Component<TopNavProps, { navigationOpen: boolean }> 
   }
 }
 
+TopNav.displayName = 'TopNav';
+
 export default TopNav;

@@ -24,4 +24,6 @@ export const LeadParagraph = styled('p')(
   spacing.withWhiteSpace({ marginBottom: 6 })
 );
 
+LeadParagraph.displayName = 'LeadParagraph';
+
 export default LeadParagraph;

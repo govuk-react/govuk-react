@@ -117,4 +117,6 @@ interface BreadcrumbsProps extends React.HTMLAttributes<HTMLDivElement> {
 
 Breadcrumbs.Link = Link;
 
+Breadcrumbs.displayName = 'Breadcrumbs';
+
 export default Breadcrumbs;

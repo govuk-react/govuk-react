@@ -135,4 +135,6 @@ Paragraph.defaultProps = {
   linkRenderer: (props) => <Link {...props} />,
 };
 
+Paragraph.displayName = 'Paragraph';
+
 export default Paragraph;

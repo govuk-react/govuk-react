@@ -84,6 +84,8 @@ Panel.defaultProps = {
   children: undefined,
 };
 
+Panel.displayName = 'Panel';
+
 interface PanelProps {
   /** Panel title text */
   title: string;

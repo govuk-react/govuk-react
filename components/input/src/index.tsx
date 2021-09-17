@@ -77,6 +77,8 @@ Input.defaultProps = {
   errorColor: undefined,
 };
 
+Input.displayName = 'Input';
+
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement>, WithWhiteSpaceProps {
   /**
    * HTML `<Input />` type

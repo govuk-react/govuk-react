@@ -51,4 +51,6 @@ Tag.defaultProps = {
   inactive: false,
 };
 
+Tag.displayName = 'Tag';
+
 export default Tag;

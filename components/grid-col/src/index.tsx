@@ -165,4 +165,6 @@ GridCol.defaultProps = {
   setDesktopWidth: undefined,
 };
 
+GridCol.displayName = 'GridCol';
+
 export default GridCol;

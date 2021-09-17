@@ -87,6 +87,8 @@ MultiChoice.defaultProps = {
   meta: {},
 };
 
+MultiChoice.displayName = 'MultiChoice';
+
 interface MultiChoiceProps extends WithWhiteSpaceProps {
   meta?: {
     error?: string | string[];

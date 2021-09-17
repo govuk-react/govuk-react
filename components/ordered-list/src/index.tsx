@@ -102,5 +102,7 @@ OrderedList.defaultProps = {
   as: undefined,
 };
 
+OrderedList.displayName = 'OrderedList';
+
 // Export un-wrapped styled component
 export default OrderedList;

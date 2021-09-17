@@ -75,4 +75,6 @@ interface PhaseBannerProps {
   level: string;
 }
 
+PhaseBanner.displayName = 'PhaseBanner';
+
 export default PhaseBanner;

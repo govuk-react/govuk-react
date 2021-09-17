@@ -204,6 +204,8 @@ Radio.defaultProps = {
   className: undefined,
 };
 
+Radio.displayName = 'Radio';
+
 interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement> {
   hint?: React.ReactNode;
   inline?: boolean;

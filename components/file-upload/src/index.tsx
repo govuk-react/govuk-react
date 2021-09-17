@@ -92,6 +92,8 @@ FileUpload.defaultProps = {
   name: undefined,
 };
 
+FileUpload.displayName = 'FileUpload';
+
 interface FileUploadProps extends LabelProps {
   /**
    * Optional hint text

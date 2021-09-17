@@ -62,4 +62,6 @@ SectionBreak.defaultProps = {
   visible: undefined,
 };
 
+SectionBreak.displayName = 'SectionBreak';
+
 export default SectionBreak;

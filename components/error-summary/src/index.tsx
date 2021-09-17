@@ -159,4 +159,6 @@ ErrorSummary.defaultProps = {
   onHandleErrorClick: undefined,
 };
 
+ErrorSummary.displayName = 'ErrorSummary';
+
 export default ErrorSummary;
