@@ -1,9 +1,26 @@
 import styled from 'styled-components';
-import React from 'react';
 import { BLUE, GREY_1, WHITE } from 'govuk-colours';
 import { typography } from '@govuk-react/lib';
 
-const Tag: React.FC<TagProps> = styled('strong')(
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ *
+ * ```jsx
+ * import { Tag } from 'govuk-react'
+ *
+ * <Tag>beta</Tag>
+ * ```
+ *
+ * ### References:
+ *
+ * - https://design-system.service.gov.uk/components/tag/
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/tag/_tag.scss
+ *
+ */
+export const Tag = styled('strong')<TagProps>(
   typography.font({ size: 16, weight: 'bold', lineHeight: 1.25 }),
   {
     display: 'inline-block',
@@ -26,36 +43,12 @@ const Tag: React.FC<TagProps> = styled('strong')(
         }
       : undefined
 );
-
-/**
- *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { Tag } from 'govuk-react'
- *
- * <Tag>beta</Tag>
- * ```
- *
- * ### References:
- *
- * - https://design-system.service.gov.uk/components/tag/
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/tag/_tag.scss
- *
- */
-const DocumentedTag: React.FC<TagProps> = (props: TagProps) => <Tag {...props} />;
-
 interface TagProps {
   inactive?: boolean;
 }
 
-DocumentedTag.defaultProps = {
+Tag.defaultProps = {
   inactive: false,
 };
 
-Tag.defaultProps = DocumentedTag.defaultProps;
-
-export { DocumentedTag };
 export default Tag;

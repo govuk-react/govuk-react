@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Footer from '.';
+import { Footer } from '.';
 import {
   FooterWithCustomWidth,
   FooterWithCopyright,

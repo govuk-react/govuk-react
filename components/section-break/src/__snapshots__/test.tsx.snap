@@ -17,18 +17,13 @@ exports[`SectionBreak matches snapshot: section break 1`] = `
 }
 
 <SectionBreakExample>
-  <SectionBreakDocumented
+  <src__SectionBreak
     level="LARGE"
     visible={true}
   >
-    <src__SectionBreak
-      level="LARGE"
-      visible={true}
-    >
-      <hr
-        className="c0"
-      />
-    </src__SectionBreak>
-  </SectionBreakDocumented>
+    <hr
+      className="c0"
+    />
+  </src__SectionBreak>
 </SectionBreakExample>
 `;

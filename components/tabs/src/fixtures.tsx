@@ -7,7 +7,7 @@ import Table from '@govuk-react/table';
 import { MemoryRouter, Route, Link } from 'react-router-dom';
 import { useMedia } from 'react-use-media';
 
-import Tabs from '.';
+import { Tabs } from '.';
 
 const flip2dArray = (prev, next) => next.map((item, index) => [...(prev[index] || []), next[index]]);
 

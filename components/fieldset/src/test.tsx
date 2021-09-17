@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { FieldsetDocumented as Fieldset } from '.';
+import { Fieldset } from '.';
 
 describe('Fieldset', () => {
   it('renders contents without crashing', () => {

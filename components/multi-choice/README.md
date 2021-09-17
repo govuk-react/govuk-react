@@ -7,6 +7,7 @@ MultiChoice
 ```
 <!-- STORY -->
 
+
 ### Usage
 
 Simple
@@ -32,9 +33,6 @@ import { MultiChoice, Radio } from 'govuk-react';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` |  | 
- `hint` |  | ```undefined``` |  | 
- `label` | true | `````` |  | 
- `meta` |  | ```{}``` |  | 
+
 
 

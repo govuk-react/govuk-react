@@ -1,7 +1,7 @@
 import { withKnobs } from '@storybook/addon-knobs';
 
 import { DetailsSimple, DetailsOpen, DetailsParagraph } from './fixtures';
-import Details from '.';
+import { Details } from '.';
 
 export default {
   title: 'Typography/Details',

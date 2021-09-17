@@ -14,10 +14,12 @@ const RAW_SHADOW = Number(stripUnit(BUTTON_SHADOW_SIZE));
 const HALF_SHADOW = RAW_SHADOW / 2;
 const BASE_PAD = RAW_SPACING_2 - RAW_BORDER_WIDTH;
 
-const StyledButton = styled('button').withConfig({
+const StyledButton = styled('button').withConfig<ButtonOwnProps & { isStart: boolean }>({
   shouldForwardProp: (prop) =>
-    !['isStart', 'buttonColour', 'buttonHoverColour', 'buttonShadowColour', 'buttonTextColour', 'icon'].includes(prop),
-})(
+    !['isStart', 'buttonColour', 'buttonHoverColour', 'buttonShadowColour', 'buttonTextColour', 'icon'].includes(
+      String(prop)
+    ),
+})<ButtonOwnProps>(
   ({ isStart }) =>
     typography.font({
       size: isStart ? '24' : '19',
@@ -213,14 +215,13 @@ interface ButtonProps extends ButtonOwnProps {
  *   - see https://www.w3.org/TR/WCAG20-TECHS/G18.html
  *   - can use Polished's `readableColor` call, but translate their black to govuk's black
  */
-const Button: React.ForwardRefExoticComponent<ButtonProps & React.RefAttributes<HTMLButtonElement>> = React.forwardRef(
-  ({ start, children, icon, ...props }: ButtonProps, ref) => (
+export const Button: React.ForwardRefExoticComponent<ButtonProps & React.RefAttributes<HTMLButtonElement>> =
+  React.forwardRef(({ start, children, icon, ...props }: ButtonProps, ref) => (
     <StyledButton ref={ref} isStart={start} icon={icon} {...props}>
       {icon ? <ButtonContents>{children}</ButtonContents> : children}
       {icon}
     </StyledButton>
-  )
-);
+  ));
 
 Button.defaultProps = {
   icon: undefined,

@@ -5,7 +5,7 @@ import CrownIcon from '@govuk-react/icon-crown';
 import { Search as SearchIcon } from '@govuk-react/icons';
 import SearchBox from '@govuk-react/search-box';
 
-import TopNav from '.';
+import { TopNav } from '.';
 
 const reactRouterLink = '/section';
 const link = 'https://example.com?=1';

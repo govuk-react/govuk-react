@@ -52,6 +52,12 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
   -moz-osx-font-smoothing: grayscale;
 }
 
+.c6:focus {
+  outline: 3px solid #ffdd00;
+  outline-offset: 0;
+  background-color: #ffdd00;
+}
+
 .c6:link {
   color: #1d70b8;
 }
@@ -70,12 +76,6 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
 
 .c6:focus {
   color: #0b0c0c;
-}
-
-.c6:focus {
-  outline: 3px solid #ffdd00;
-  outline-offset: 0;
-  background-color: #ffdd00;
 }
 
 .c0 {
@@ -192,102 +192,100 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<RelatedItems>
-  <src__StyledRelatedItems>
-    <div
-      className="c0"
-    >
-      <H3>
-        <Heading
+<src__RelatedItems>
+  <div
+    className="c0"
+  >
+    <H3>
+      <Heading
+        as="h3"
+        size="MEDIUM"
+      >
+        <heading__StyledHeading
           as="h3"
           size="MEDIUM"
         >
-          <heading__StyledHeading
-            as="h3"
+          <h3
+            className="c1"
             size="MEDIUM"
           >
-            <h3
-              className="c1"
-              size="MEDIUM"
-            >
-              Travel abroad
-            </h3>
-          </heading__StyledHeading>
-        </Heading>
-      </H3>
-      <UnorderedList
+            Travel abroad
+          </h3>
+        </heading__StyledHeading>
+      </Heading>
+    </H3>
+    <UnorderedList
+      listStyleType="none"
+    >
+      <src__OrderedList
+        as="ul"
         listStyleType="none"
       >
-        <src__OrderedList
-          as="ul"
-          listStyleType="none"
+        <ul
+          className="c2 c3"
         >
-          <ul
-            className="c2 c3"
-          >
-            <src__ListItem>
-              <li
-                className="c4 c5"
+          <src__ListItem>
+            <li
+              className="c4 c5"
+            >
+              <styled.a
+                href="https://example.com"
+                muted={false}
+                noVisitedState={false}
+                textColour={false}
               >
-                <styled.a
+                <a
+                  className="c6"
                   href="https://example.com"
-                  muted={false}
-                  noVisitedState={false}
-                  textColour={false}
                 >
-                  <a
-                    className="c6"
-                    href="https://example.com"
-                  >
-                    Link A
-                  </a>
-                </styled.a>
-              </li>
-            </src__ListItem>
-            <src__ListItem>
-              <li
-                className="c4 c5"
+                  Link A
+                </a>
+              </styled.a>
+            </li>
+          </src__ListItem>
+          <src__ListItem>
+            <li
+              className="c4 c5"
+            >
+              <styled.a
+                href="https://example.com"
+                muted={false}
+                noVisitedState={false}
+                textColour={false}
               >
-                <styled.a
+                <a
+                  className="c6"
                   href="https://example.com"
-                  muted={false}
-                  noVisitedState={false}
-                  textColour={false}
                 >
-                  <a
-                    className="c6"
-                    href="https://example.com"
-                  >
-                    Link B
-                  </a>
-                </styled.a>
-              </li>
-            </src__ListItem>
-            <src__ListItem>
-              <li
-                className="c4 c5"
+                  Link B
+                </a>
+              </styled.a>
+            </li>
+          </src__ListItem>
+          <src__ListItem>
+            <li
+              className="c4 c5"
+            >
+              <styled.a
+                href="https://example.com"
+                muted={false}
+                noVisitedState={false}
+                textColour={false}
               >
-                <styled.a
+                <a
+                  className="c6"
                   href="https://example.com"
-                  muted={false}
-                  noVisitedState={false}
-                  textColour={false}
                 >
-                  <a
-                    className="c6"
-                    href="https://example.com"
-                  >
-                    <strong>
-                      more
-                    </strong>
-                  </a>
-                </styled.a>
-              </li>
-            </src__ListItem>
-          </ul>
-        </src__OrderedList>
-      </UnorderedList>
-    </div>
-  </src__StyledRelatedItems>
-</RelatedItems>
+                  <strong>
+                    more
+                  </strong>
+                </a>
+              </styled.a>
+            </li>
+          </src__ListItem>
+        </ul>
+      </src__OrderedList>
+    </UnorderedList>
+  </div>
+</src__RelatedItems>
 `;

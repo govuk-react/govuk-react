@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import FileUpload from '.';
+import { FileUpload } from '.';
 
 describe('FileUpload', () => {
   it('renders label from children', () => {

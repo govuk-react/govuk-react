@@ -1,17 +1,6 @@
-import type { WithWhiteSpaceProps } from '@govuk-react/lib';
-
-import React from 'react';
 import styled from 'styled-components';
 import { SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
-
-const ListItem: React.FC<ListItemProps> = styled('li')(
-  // including font definition here is belt & braces
-  // govuk-frontend doesn't bother to do that
-  typography.font({ size: 19 }),
-  { marginBottom: SPACING_POINTS[1] },
-  spacing.withWhiteSpace()
-);
 
 /**
  *
@@ -39,14 +28,12 @@ const ListItem: React.FC<ListItemProps> = styled('li')(
  * ### References
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_lists.scss
  */
+export const ListItem = styled('li')(
+  // including font definition here is belt & braces
+  // govuk-frontend doesn't bother to do that
+  typography.font({ size: 19 }),
+  { marginBottom: SPACING_POINTS[1] },
+  spacing.withWhiteSpace()
+);
 
-// Do the react-docgen dance
-const DocumentedComponent: React.FC<ListItemProps> = (props: ListItemProps) => <ListItem {...props} />;
-
-interface ListItemProps extends WithWhiteSpaceProps {
-  /** List item content */
-  children: React.ReactNode;
-}
-
-export { DocumentedComponent };
 export default ListItem;

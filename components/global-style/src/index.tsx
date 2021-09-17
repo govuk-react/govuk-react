@@ -1,15 +1,4 @@
-import React from 'react';
 import { createGlobalStyle } from 'styled-components';
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Inter UI', Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-`;
 
 /**
  *
@@ -33,6 +22,13 @@ const GlobalStyle = createGlobalStyle`
  * - https://styled-components.com/docs/api#createglobalstyle
  *
  */
-const DocumentedGlobalStyle: React.FC = (props) => <GlobalStyle {...props} />;
-
-export default DocumentedGlobalStyle;
+export const GlobalStyle = createGlobalStyle`
+ body {
+   padding: 0;
+   margin: 0;
+   font-family: 'Inter UI', Arial, sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+`;
+export default GlobalStyle;

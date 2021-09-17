@@ -2,7 +2,7 @@ import React from 'react';
 
 import { withKnobs } from '@storybook/addon-knobs';
 
-import WarningText from '.';
+import { WarningText } from '.';
 import WarningTextWithKnobs, { WarningWithLongText } from './fixtures';
 
 export default {

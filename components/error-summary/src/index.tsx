@@ -128,7 +128,7 @@ interface ErrorSummaryProps {
  * ### TODO:
  * - Swap out browser dependancy for context API to help with React Native support
  */
-const ErrorSummary: React.FC<ErrorSummaryProps> = ({
+export const ErrorSummary: React.FC<ErrorSummaryProps> = ({
   onHandleErrorClick = undefined,
   heading = 'There is a problem',
   description = undefined,

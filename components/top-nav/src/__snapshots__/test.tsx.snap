@@ -174,14 +174,14 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                   type="checkbox"
                 />
               </src__Input>
-              <unordered-list__Ul
+              <styled.ul
                 id="govuk-react-menu"
                 open={false}
+                serviceTitle={false}
               >
                 <ul
-                  className="unordered-list__Ul-otbf2p-0 eyIJON"
+                  className="joKoMY"
                   id="govuk-react-menu"
-                  open={false}
                 >
                   <list-item__Li>
                     <li
@@ -200,7 +200,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                     </li>
                   </list-item__Li>
                 </ul>
-              </unordered-list__Ul>
+              </styled.ul>
             </div>
           </right-hand-side__RightHandSide>
         </div>
@@ -389,14 +389,14 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                   type="checkbox"
                 />
               </src__Input>
-              <unordered-list__Ul
+              <styled.ul
                 id="govuk-react-menu"
                 open={false}
+                serviceTitle={false}
               >
                 <ul
-                  className="unordered-list__Ul-otbf2p-0 eyIJON"
+                  className="joKoMY"
                   id="govuk-react-menu"
-                  open={false}
                 >
                   <list-item__Li
                     key=".0"
@@ -435,7 +435,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                     </li>
                   </list-item__Li>
                 </ul>
-              </unordered-list__Ul>
+              </styled.ul>
             </div>
           </right-hand-side__RightHandSide>
         </div>

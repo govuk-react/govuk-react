@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import PhaseBanner from '.';
+import { PhaseBanner } from '.';
 
 describe('PhaseBanner', () => {
   it('matches wrapper snapshot', () => {

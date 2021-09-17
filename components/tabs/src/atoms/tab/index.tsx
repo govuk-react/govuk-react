@@ -26,7 +26,7 @@ const StyledListItem = styled('li')({
   },
 });
 
-const StyledHyperLink = styled('a')(
+const StyledHyperLink = styled('a')<TabProps>(
   typography.font({ size: 19 }),
   link.common(),
   link.styleDefault,

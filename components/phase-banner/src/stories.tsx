@@ -2,7 +2,7 @@ import React from 'react';
 
 import Link from '@govuk-react/link';
 
-import PhaseBanner from '.';
+import { PhaseBanner } from '.';
 
 export default {
   title: 'Typography/Phase banner',

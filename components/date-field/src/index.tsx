@@ -1,3 +1,5 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import React from 'react';
 import styled from 'styled-components';
 import { ERROR_COLOUR } from 'govuk-colours';
@@ -10,7 +12,7 @@ import { spacing } from '@govuk-react/lib';
 import type { InputProps } from './input';
 import Input from './input';
 
-const StyledContainer = styled('div')(
+const StyledContainer = styled('div')<DateFieldProps>(
   {
     display: 'flex',
     flexDirection: 'column',
@@ -76,7 +78,7 @@ const StyledContainer = styled('div')(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/date-field
  *
  */
-const DateField: DateFieldType = ({
+export const DateField: DateFieldType = ({
   children,
   errorText,
   hintText,
@@ -124,7 +126,7 @@ DateField.defaultProps = {
   input: undefined,
 };
 
-export interface DateFieldProps extends InputProps {
+export interface DateFieldProps extends InputProps, WithWhiteSpaceProps {
   children: React.ReactNode;
   /**
    * Optional hint text

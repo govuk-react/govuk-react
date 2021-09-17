@@ -11,7 +11,7 @@ import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 
-const TextAreaField = styled('textarea')(
+const TextAreaField = styled('textarea')<{ error?: boolean }>(
   {
     boxSizing: 'border-box',
     fontFamily: NTA_LIGHT,
@@ -79,12 +79,12 @@ const TextAreaField = styled('textarea')(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/textarea
  *
  */
-const TextArea: React.FC<TextAreaProps> = ({ children, hint, meta, input, ...props }: TextAreaProps) => (
+export const TextArea: React.FC<TextAreaProps> = ({ children, hint, meta, input, ...props }: TextAreaProps) => (
   <Label error={meta.touched && !!meta.error} {...props}>
     <LabelText>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
-    <TextAreaField type="text" rows="5" error={meta.touched && !!meta.error} {...input} />
+    <TextAreaField rows={5} error={meta.touched && !!meta.error} {...input} />
   </Label>
 );
 

@@ -77,7 +77,7 @@ interface FontOptions {
 export function font({ size, weight = 'regular', tabular = false, lineHeight }: FontOptions = {}): {
   fontSize: string;
   lineHeight: string | number;
-  fontWeight: string;
+  fontWeight: number;
   fontFamily: string;
   WebkitFontSmoothing: string;
   MozOsxFontSmoothing: string;

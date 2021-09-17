@@ -3,7 +3,7 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import type { DateFieldProps } from '.';
 
-import DateField from '.';
+import { DateField } from '.';
 
 export default {
   title: 'Form/Date field',

@@ -28,19 +28,15 @@ exports[`Label matches withError snapshot: with error mount 1`] = `
   }
 }
 
-<Label
+<src__Label
   error={true}
 >
-  <src__StyledLabel
-    error={true}
+  <label
+    className="c0"
   >
-    <label
-      className="c0"
-    >
-      example
-    </label>
-  </src__StyledLabel>
-</Label>
+    example
+  </label>
+</src__Label>
 `;
 
 exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
@@ -68,17 +64,13 @@ exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<Label
+<src__Label
   error={false}
 >
-  <src__StyledLabel
-    error={false}
+  <label
+    className="c0"
   >
-    <label
-      className="c0"
-    >
-      example
-    </label>
-  </src__StyledLabel>
-</Label>
+    example
+  </label>
+</src__Label>
 `;

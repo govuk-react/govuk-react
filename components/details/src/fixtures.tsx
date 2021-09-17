@@ -2,7 +2,7 @@ import React from 'react';
 import { boolean, text } from '@storybook/addon-knobs';
 import Paragraph from '@govuk-react/paragraph';
 
-import Details from '.';
+import { Details } from '.';
 
 export const summaryText = 'Help with nationality';
 

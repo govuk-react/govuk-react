@@ -42,12 +42,10 @@ exports[`LabelText matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <LabelText>
-  <src__StyledLabelText>
-    <span
-      className="c0"
-    >
-      example
-    </span>
-  </src__StyledLabelText>
+  <span
+    className="c0"
+  >
+    example
+  </span>
 </LabelText>
 `;

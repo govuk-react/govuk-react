@@ -7,6 +7,7 @@ Fieldset
 ```
 <!-- STORY -->
 
+
 ### Usage
 
 Use the fieldset component when you need to show a relationship between multiple
@@ -42,6 +43,6 @@ Custom legend
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` |  | 
+
 
 

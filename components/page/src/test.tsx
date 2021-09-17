@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Page from '.';
+import { Page } from '.';
 
 describe('Page', () => {
   it('renders without crashing', () => {

@@ -3,7 +3,7 @@ import React from 'react';
 import { boolean, withKnobs } from '@storybook/addon-knobs';
 import Checkbox from '@govuk-react/checkbox';
 
-import { FormGroupDocumented as FormGroup } from '.';
+import { FormGroup } from '.';
 
 export default {
   title: 'Form/Form group',

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { render } from '@testing-library/react';
 
-import GridCol from '.';
+import { GridCol } from '.';
 
 describe('GridCol', () => {
   const OLD_ENV = process.env;

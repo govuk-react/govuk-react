@@ -1,6 +1,6 @@
 import { withKnobs } from '@storybook/addon-knobs';
 
-import Button from '.';
+import { Button } from '.';
 
 import {
   ButtonWithKnobs,

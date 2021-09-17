@@ -7,6 +7,7 @@ Page
 ```
 <!-- STORY -->
 
+
 ### Usage
 
 Simple
@@ -28,12 +29,6 @@ import { Page, BackLink, H1 } from 'govuk-react';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `beforeChildren` |  | ```undefined``` |  | Content that needs to appear outside the main page wrapper (see `main`).<br/>For example: A back link component, breadcrumbs, phase banner component
- `children` |  | ```undefined``` |  | Page contents
- `container` |  | ```Page.WidthContainer``` |  | Override the default page container component.<br/>`beforeChildren` and `children` (wrapped in `main`) will be placed inside this component.
- `footer` |  | ```undefined``` |  | Override the default page footer component.
- `header` |  | ```<TopNav />``` |  | Override the default page header component.
- `id` |  | ```'content'``` |  | ID for page content
- `main` |  | ```Page.Main``` |  | Override the default wrapper component for main page content
+
 
 

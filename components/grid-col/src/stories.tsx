@@ -5,7 +5,7 @@ import GridRow from '@govuk-react/grid-row';
 import { H2 } from '@govuk-react/heading';
 import Paragraph from '@govuk-react/paragraph';
 
-import GridCol from '.';
+import { GridCol } from '.';
 
 const Content = styled('div')({
   textIndent: '-999em',

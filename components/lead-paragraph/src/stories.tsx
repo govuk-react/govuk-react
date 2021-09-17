@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LeadParagraph from '.';
+import { LeadParagraph } from '.';
 
 export default {
   title: 'Typography/Lead paragraph',

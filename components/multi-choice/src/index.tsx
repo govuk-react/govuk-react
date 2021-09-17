@@ -21,7 +21,7 @@ import HintText from '@govuk-react/hint-text';
 import { BORDER_WIDTH_MOBILE, SPACING } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
 
-const StyledFieldset = styled('div')(
+const StyledFieldset = styled('div')<{ error: boolean } & WithWhiteSpaceProps>(
   {
     padding: 0,
     margin: 0,
@@ -67,7 +67,13 @@ const StyledFieldset = styled('div')(
  * - https://govuk-elements.herokuapp.com/errors/example-form-validation-single-question-radio
  *
  */
-const MultiChoice: React.FC<MultiChoiceProps> = ({ meta, label, children, hint, ...props }: MultiChoiceProps) => (
+export const MultiChoice: React.FC<MultiChoiceProps> = ({
+  meta,
+  label,
+  children,
+  hint,
+  ...props
+}: MultiChoiceProps) => (
   <StyledFieldset error={meta.touched && !!meta.error} {...props}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}

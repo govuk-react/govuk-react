@@ -1,3 +1,5 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import React from 'react';
 import styled from 'styled-components';
 
@@ -10,7 +12,7 @@ import {
 } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 
-export const StyledInput = styled('input')(
+export const StyledInput = styled('input')<InputProps>(
   typography.font({ size: 19 }),
   FOCUSABLE,
   {
@@ -65,7 +67,9 @@ export const StyledInput = styled('input')(
  * ### TODO:
  * - Remove `errorColor` and provide examples on how to extend the component
  */
-const Input = React.forwardRef((props: InputProps, ref) => <StyledInput ref={ref} {...props} />);
+export const Input = React.forwardRef<HTMLInputElement, InputProps>((props: InputProps, ref) => (
+  <StyledInput ref={ref} {...props} />
+));
 
 Input.defaultProps = {
   type: 'text',
@@ -73,7 +77,7 @@ Input.defaultProps = {
   errorColor: undefined,
 };
 
-export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement>, WithWhiteSpaceProps {
   /**
    * HTML `<Input />` type
    */

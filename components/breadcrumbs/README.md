@@ -7,6 +7,7 @@ Breadcrumbs
 ```
 <!-- STORY -->
 
+
 ### Usage
 
 Simple
@@ -39,6 +40,6 @@ import { Link } from 'react-router-dom';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` |  | Breadcrumbs contents
+
 
 

@@ -1,3 +1,5 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import styled from 'styled-components';
 import React from 'react';
 import { HEADING_SIZES, LEVEL_SIZE, LEVEL_TAG, MEDIA_QUERIES, TYPOGRAPHY_SCALE } from '@govuk-react/constants';
@@ -7,7 +9,7 @@ import { spacing, typography } from '@govuk-react/lib';
 // so if `size` is a string, we find a numeric size based off `HEADING_SIZES`
 // but if `size` is a number we just send through that number
 
-const StyledHeading = styled('h1')(
+const StyledHeading = styled('h1')<Omit<HeadingProps, 'level'>>(
   typography.textColour,
   ({ size }) => {
     const actualSize = Number.isNaN(Number(size)) ? HEADING_SIZES[size] : size;
@@ -89,7 +91,7 @@ const StyledHeading = styled('h1')(
  * - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_typography.scss
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_typography.scss
  */
-const Heading: React.FC<HeadingProps> = ({ level = undefined, ...props }: HeadingProps) => {
+export const Heading: React.FC<HeadingProps> = ({ level = undefined, ...props }: HeadingProps) => {
   if (level) {
     if (process.env.NODE_ENV !== 'production') {
       // eslint-disable-next-line no-console
@@ -109,12 +111,12 @@ Heading.defaultProps = {
   size: 'XLARGE',
 };
 
-interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
+interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement>, WithWhiteSpaceProps {
   /**
    * Semantic heading tag to use (e.g. 'h3')
    * By default element used will be an 'h1'
    */
-  as?: string;
+  as?: React.ElementType;
   /**
    * Semantic heading level value between 1 and 6 (deprecated)
    */

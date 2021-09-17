@@ -31,8 +31,6 @@ import { Details } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | ```undefined``` |  | The content that will be displayed when details are revealed
- `open` |  | ```false``` |  | Flag to indicate whether to show component open by default
- `summary` | true | `````` |  | Text for the details summary link e.g. Help with nationality
+
 
 

@@ -29,9 +29,7 @@ const ExampleApplication: React.FC<ExampleApplicationProps> = ({ routerEntries }
         Forms
       </GovUK.TopNav.NavLink>
     </GovUK.TopNav>
-    <GovUK.Page.WidthContainer
-      beforeChildren={<GovUK.PhaseBanner level="alpha">This part of GOV.UK is being rebuilt</GovUK.PhaseBanner>}
-    >
+    <GovUK.Page.WidthContainer>
       <GovUK.Page.Main>
         <Switch>
           <Route path="/forms">

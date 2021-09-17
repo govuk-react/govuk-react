@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HintText from '.';
+import { HintText } from '.';
 
 export default {
   title: 'Form/Hint text',

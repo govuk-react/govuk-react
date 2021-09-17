@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import Main from '.';
+import { Main } from '.';
 
 describe('Main', () => {
   let wrapper;

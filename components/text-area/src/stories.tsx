@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TextArea from '.';
+import { TextArea } from '.';
 
 const meta = {
   touched: true,
