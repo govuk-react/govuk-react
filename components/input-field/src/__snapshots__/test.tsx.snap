@@ -141,15 +141,10 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
         error={false}
         type="text"
       >
-        <src__StyledInput
-          error={false}
+        <input
+          className="c2"
           type="text"
-        >
-          <input
-            className="c2"
-            type="text"
-          />
-        </src__StyledInput>
+        />
       </Input>
     </label>
   </Label>
