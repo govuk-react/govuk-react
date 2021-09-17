@@ -2,15 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { visuallyHidden } from '@govuk-react/lib';
 
-const VisuallyHidden = styled('span')
-  .withConfig({
-    shouldForwardProp: (prop) => !['important', 'focusable'].includes(prop),
-  })
-  .attrs(({ focusable, tabIndex }) =>
-    // if we're focusable but don't have a `tabIndex` set, add one
-    focusable && tabIndex === undefined ? { tabIndex: '0' } : undefined
-  )(({ focusable, important }) => visuallyHidden({ focusable, important }));
-
 /**
  *
  * ### Usage
@@ -30,11 +21,16 @@ const VisuallyHidden = styled('span')
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/helpers/_visually-hidden.scss
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/utilities/_visually-hidden.scss
  */
-const VisuallyHiddenDocumented: React.FC<VisuallyHiddenProps> = (props: VisuallyHiddenProps) => (
-  <VisuallyHidden {...props} />
-);
+export const VisuallyHidden = styled('span')
+  .withConfig<VisuallyHiddenProps>({
+    shouldForwardProp: (prop) => !['important', 'focusable'].includes(prop),
+  })
+  .attrs<VisuallyHiddenProps>(({ focusable, tabIndex }) =>
+    // if we're focusable but don't have a `tabIndex` set, add one
+    focusable && tabIndex === undefined ? { tabIndex: '0' } : undefined
+  )(({ focusable, important }) => visuallyHidden({ focusable, important }));
 
-VisuallyHiddenDocumented.defaultProps = {
+VisuallyHidden.defaultProps = {
   focusable: false,
   important: true,
 };
@@ -53,7 +49,5 @@ interface VisuallyHiddenProps {
    */
   important?: boolean;
 }
-VisuallyHidden.defaultProps = VisuallyHiddenDocumented.defaultProps;
 
-export { VisuallyHiddenDocumented };
 export default VisuallyHidden;

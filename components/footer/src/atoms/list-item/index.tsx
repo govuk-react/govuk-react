@@ -1,7 +1,9 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import styled from 'styled-components';
 import { spacing } from '@govuk-react/lib';
 
-const ListItem: React.FC<ListItemProps> = styled('li')(
+export const ListItem = styled('li')<ListItemProps>(
   ({ inline }) =>
     inline
       ? {
@@ -17,7 +19,7 @@ const ListItem: React.FC<ListItemProps> = styled('li')(
   }
 );
 
-interface ListItemProps {
+interface ListItemProps extends WithWhiteSpaceProps {
   inline?: boolean;
 }
 

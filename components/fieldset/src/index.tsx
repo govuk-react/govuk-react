@@ -1,10 +1,12 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import React from 'react';
 import styled from 'styled-components';
 import { spacing } from '@govuk-react/lib';
 
 import Legend from './atoms/legend';
 
-const Fieldset = styled('fieldset')(
+const StyledFieldset = styled('fieldset')<FieldsetProps>(
   {
     border: 0,
     '&:after': {
@@ -50,18 +52,16 @@ const Fieldset = styled('fieldset')(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/fieldset
  * - https://design-system.service.gov.uk/get-started/labels-legends-headings/
  */
-const FieldsetDocumented: FieldsetType = (props: FieldsetProps) => <Fieldset {...props} />;
+export const Fieldset: FieldsetType = (props) => <StyledFieldset {...props} />;
 
 interface FieldsetType extends React.FC<FieldsetProps> {
   Legend: typeof Legend;
 }
 
-interface FieldsetProps {
+interface FieldsetProps extends WithWhiteSpaceProps {
   children: React.ReactNode;
 }
 
 Fieldset.Legend = Legend;
-FieldsetDocumented.Legend = Legend;
 
-export { FieldsetDocumented };
 export default Fieldset;

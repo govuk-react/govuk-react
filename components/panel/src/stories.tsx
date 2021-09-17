@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Panel from '.';
+import { Panel } from '.';
 
 export default {
   title: 'Page & Layout/Panel',

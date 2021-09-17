@@ -5,7 +5,7 @@ import { text } from '@storybook/addon-knobs';
 import InputField from '@govuk-react/input-field';
 import TextArea from '@govuk-react/text-area';
 
-import ErrorSummary from '.';
+import { ErrorSummary } from '.';
 
 export const heading = 'Message to alert the user to a problem goes here';
 export const description = 'Optional description of the errors and how to correct them';

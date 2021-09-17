@@ -8,7 +8,7 @@ import ReactMarkdown from 'react-markdown';
 import { spacing, typography } from '@govuk-react/lib';
 import Link from '@govuk-react/link';
 
-const StyledParagraph = styled(ReactMarkdown)(
+const StyledParagraph = styled(ReactMarkdown)<ParagraphProps>(
   {
     margin: 0,
     '> p': {
@@ -103,7 +103,7 @@ const StyledParagraph = styled(ReactMarkdown)(
  * - Review code snippet styling
  * - Remove magic numbers from inline code styling blocks
  */
-const Paragraph: React.FC<ParagraphProps & ReactMarkdownProps> = ({
+export const Paragraph: React.FC<ParagraphProps & ReactMarkdownProps> = ({
   children,
   ...props
 }: ParagraphProps & ReactMarkdownProps) => (

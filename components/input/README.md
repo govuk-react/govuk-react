@@ -7,6 +7,7 @@ Input
 ```
 <!-- STORY -->
 
+
 ### Usage
 
 Simple
@@ -32,8 +33,6 @@ import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `error` |  | ```false``` |  | 
- `errorColor` |  | ```undefined``` |  | 
- `type` |  | ```'text'``` |  | HTML `<Input />` type
+
 
 

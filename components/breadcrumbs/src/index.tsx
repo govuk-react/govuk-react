@@ -93,7 +93,7 @@ const BreadcrumbsListItem = styled('li')({
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/breadcrumbs/_breadcrumbs.scss
  *
  */
-const Breadcrumbs: BreadcrumbsType = ({ children, ...props }: BreadcrumbsProps) => (
+export const Breadcrumbs: BreadcrumbsType = ({ children, ...props }: BreadcrumbsProps) => (
   <BreadcrumbsContainer {...props}>
     <BreadcrumbsList>
       {Array.isArray(children) ? (

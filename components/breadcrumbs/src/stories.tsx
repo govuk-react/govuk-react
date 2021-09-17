@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Breadcrumbs from '.';
+import { Breadcrumbs } from '.';
 
 export default {
   title: 'Navigation/Breadcrumbs',

@@ -1,7 +1,7 @@
 import React from 'react';
 import { boolean, text } from '@storybook/addon-knobs';
 
-import { SectionBreakDocumented as SectionBreak } from '.';
+import { SectionBreak } from '.';
 
 const SectionBreakExample: React.FC = () => (
   <SectionBreak visible={boolean('visible', true)} level={text('level', 'LARGE')} />

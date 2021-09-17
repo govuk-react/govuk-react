@@ -4,9 +4,7 @@ const program = require('commander');
 const { version } = require('../package.json');
 const doc = require('../lib');
 
-program
-  .version(version)
-  .usage('<glob-to-components> <markdown-file>');
+program.version(version).usage('<glob-to-components> <markdown-file>');
 
 program.parse(process.argv);
 

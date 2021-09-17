@@ -2,7 +2,7 @@ import React from 'react';
 
 import Link from '@govuk-react/link';
 
-import DocumentFooterMetadata from '.';
+import { DocumentFooterMetadata } from '.';
 
 const fromData = [<Link href="/government/organisations/ministry-of-defence">Ministry of Defence</Link>];
 

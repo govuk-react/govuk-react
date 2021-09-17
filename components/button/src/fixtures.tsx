@@ -4,7 +4,7 @@ import { ButtonArrow } from '@govuk-react/icons';
 import { BLUE, TEXT_COLOUR, YELLOW, GREY_3, ORANGE } from 'govuk-colours';
 import { MemoryRouter, Route, Link } from 'react-router-dom';
 
-import Button from '.';
+import { Button } from '.';
 
 const ButtonWithKnobs: React.FC = () => (
   <Button mb="0" disabled={boolean('Disabled', false)} start={boolean('Start', false)}>

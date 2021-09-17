@@ -141,8 +141,7 @@ const TabsContainer = styled('div')(
  * - https://design-system.service.gov.uk/components/tabs/
  *
  */
-
-const Tabs: TabsType = (props: TabsProps) => <TabsContainer {...props} />;
+export const Tabs: TabsType = (props: TabsProps) => <TabsContainer {...props} />;
 
 interface TabsType extends React.FC<TabsProps> {
   Tab: typeof Tab;

@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 import Paragraph from '@govuk-react/paragraph';
 
-import SkipLink, { SkipLinkDocumented } from '.';
+import { SkipLink } from '.';
 
 export default {
   title: 'Navigation/Skip link',
-  component: SkipLinkDocumented,
+  component: SkipLink,
 };
 class AutoFocussed extends Component<{ href: string }> {
   focusableRef;

@@ -6,44 +6,44 @@ exports[`Footer matches default snapshot: Footer 1`] = `
   margin: 0 15px;
 }
 
-.c7 {
+.c6 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.c7:link {
-  color: #1d70b8;
-}
-
-.c7:visited {
-  color: #4c2c92;
-}
-
-.c7:hover {
-  color: #2b8cc4;
-}
-
-.c7:active {
-  color: #2b8cc4;
-}
-
-.c7:focus {
-  color: #0b0c0c;
-}
-
-.c7:focus {
+.c6:focus {
   outline: 3px solid #ffdd00;
   outline-offset: 0;
   background-color: #ffdd00;
 }
 
-.c6:link,
+.c6:link {
+  color: #1d70b8;
+}
+
 .c6:visited {
-  color: #454a4c;
+  color: #4c2c92;
 }
 
 .c6:hover {
+  color: #2b8cc4;
+}
+
+.c6:active {
+  color: #2b8cc4;
+}
+
+.c6:focus {
+  color: #0b0c0c;
+}
+
+.c7:link,
+.c7:visited {
+  color: #454a4c;
+}
+
+.c7:hover {
   color: #171819;
 }
 
@@ -120,15 +120,15 @@ exports[`Footer matches default snapshot: Footer 1`] = `
 }
 
 @media print {
-  .c7 {
+  .c6 {
     font-family: sans-serif;
   }
 }
 
 @media print {
-  .c7[href^="/"]::after,
-  .c7[href^="http://"]::after,
-  .c7[href^="https://"]::after {
+  .c6[href^="/"]::after,
+  .c6[href^="http://"]::after,
+  .c6[href^="https://"]::after {
     content: " (" attr(href) ")";
     font-size: 90%;
     word-wrap: break-word;
@@ -270,41 +270,21 @@ exports[`Footer matches default snapshot: Footer 1`] = `
                             >
                               All content is available under the
                                
-                              <FooterLink
+                              <link__FooterLink
                                 href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                muted={false}
+                                noVisitedState={false}
                                 rel="license"
+                                textColour={false}
                               >
-                                <link__StyledFooterLink
+                                <a
+                                  className="c6 c7"
                                   href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                   rel="license"
                                 >
-                                  <LinkDocumented
-                                    className="c6"
-                                    href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                    muted={false}
-                                    noVisitedState={false}
-                                    rel="license"
-                                    textColour={false}
-                                  >
-                                    <styled.a
-                                      className="c6"
-                                      href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                      muted={false}
-                                      noVisitedState={false}
-                                      rel="license"
-                                      textColour={false}
-                                    >
-                                      <a
-                                        className="c7 c6"
-                                        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                        rel="license"
-                                      >
-                                        Open Government Licence v3.0
-                                      </a>
-                                    </styled.a>
-                                  </LinkDocumented>
-                                </link__StyledFooterLink>
-                              </FooterLink>
+                                  Open Government Licence v3.0
+                                </a>
+                              </link__FooterLink>
                               , except where otherwise stated
                             </span>
                           </licence__LicenceDescription>
@@ -329,44 +309,44 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
   margin: 0 15px;
 }
 
-.c7 {
+.c6 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.c7:link {
-  color: #1d70b8;
-}
-
-.c7:visited {
-  color: #4c2c92;
-}
-
-.c7:hover {
-  color: #2b8cc4;
-}
-
-.c7:active {
-  color: #2b8cc4;
-}
-
-.c7:focus {
-  color: #0b0c0c;
-}
-
-.c7:focus {
+.c6:focus {
   outline: 3px solid #ffdd00;
   outline-offset: 0;
   background-color: #ffdd00;
 }
 
-.c6:link,
+.c6:link {
+  color: #1d70b8;
+}
+
 .c6:visited {
-  color: #454a4c;
+  color: #4c2c92;
 }
 
 .c6:hover {
+  color: #2b8cc4;
+}
+
+.c6:active {
+  color: #2b8cc4;
+}
+
+.c6:focus {
+  color: #0b0c0c;
+}
+
+.c7:link,
+.c7:visited {
+  color: #454a4c;
+}
+
+.c7:hover {
   color: #171819;
 }
 
@@ -430,7 +410,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
   white-space: nowrap;
   min-width: 125px;
   padding-top: 112px;
-  background-image: url(undefined);
+  background-image: url();
   background-repeat: no-repeat;
   background-position: 50% 0%;
   background-size: 125px 102px;
@@ -472,15 +452,15 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
 }
 
 @media print {
-  .c7 {
+  .c6 {
     font-family: sans-serif;
   }
 }
 
 @media print {
-  .c7[href^="/"]::after,
-  .c7[href^="http://"]::after,
-  .c7[href^="https://"]::after {
+  .c6[href^="/"]::after,
+  .c6[href^="http://"]::after,
+  .c6[href^="https://"]::after {
     content: " (" attr(href) ")";
     font-size: 90%;
     word-wrap: break-word;
@@ -645,41 +625,21 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                             >
                               All content is available under the
                                
-                              <FooterLink
+                              <link__FooterLink
                                 href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                muted={false}
+                                noVisitedState={false}
                                 rel="license"
+                                textColour={false}
                               >
-                                <link__StyledFooterLink
+                                <a
+                                  className="c6 c7"
                                   href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                   rel="license"
                                 >
-                                  <LinkDocumented
-                                    className="c6"
-                                    href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                    muted={false}
-                                    noVisitedState={false}
-                                    rel="license"
-                                    textColour={false}
-                                  >
-                                    <styled.a
-                                      className="c6"
-                                      href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                      muted={false}
-                                      noVisitedState={false}
-                                      rel="license"
-                                      textColour={false}
-                                    >
-                                      <a
-                                        className="c7 c6"
-                                        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                        rel="license"
-                                      >
-                                        Open Government Licence v3.0
-                                      </a>
-                                    </styled.a>
-                                  </LinkDocumented>
-                                </link__StyledFooterLink>
-                              </FooterLink>
+                                  Open Government Licence v3.0
+                                </a>
+                              </link__FooterLink>
                               , except where otherwise stated
                             </span>
                           </licence__LicenceDescription>
@@ -718,7 +678,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
                           textColour={false}
                         >
                           <a
-                            className="c7 c9"
+                            className="c6 c9"
                             href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
                             image={
                               Object {
@@ -752,44 +712,44 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
   margin: 0 15px;
 }
 
-.c8 {
+.c7 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.c8:link {
-  color: #1d70b8;
-}
-
-.c8:visited {
-  color: #4c2c92;
-}
-
-.c8:hover {
-  color: #2b8cc4;
-}
-
-.c8:active {
-  color: #2b8cc4;
-}
-
-.c8:focus {
-  color: #0b0c0c;
-}
-
-.c8:focus {
+.c7:focus {
   outline: 3px solid #ffdd00;
   outline-offset: 0;
   background-color: #ffdd00;
 }
 
-.c7:link,
+.c7:link {
+  color: #1d70b8;
+}
+
 .c7:visited {
-  color: #454a4c;
+  color: #4c2c92;
 }
 
 .c7:hover {
+  color: #2b8cc4;
+}
+
+.c7:active {
+  color: #2b8cc4;
+}
+
+.c7:focus {
+  color: #0b0c0c;
+}
+
+.c8:link,
+.c8:visited {
+  color: #454a4c;
+}
+
+.c8:hover {
   color: #171819;
 }
 
@@ -870,15 +830,15 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
 }
 
 @media print {
-  .c8 {
+  .c7 {
     font-family: sans-serif;
   }
 }
 
 @media print {
-  .c8[href^="/"]::after,
-  .c8[href^="http://"]::after,
-  .c8[href^="https://"]::after {
+  .c7[href^="/"]::after,
+  .c7[href^="http://"]::after,
+  .c7[href^="https://"]::after {
     content: " (" attr(href) ")";
     font-size: 90%;
     word-wrap: break-word;
@@ -1040,41 +1000,21 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
                             >
                               All content is available under the
                                
-                              <FooterLink
+                              <link__FooterLink
                                 href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                muted={false}
+                                noVisitedState={false}
                                 rel="license"
+                                textColour={false}
                               >
-                                <link__StyledFooterLink
+                                <a
+                                  className="c7 c8"
                                   href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                   rel="license"
                                 >
-                                  <LinkDocumented
-                                    className="c7"
-                                    href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                    muted={false}
-                                    noVisitedState={false}
-                                    rel="license"
-                                    textColour={false}
-                                  >
-                                    <styled.a
-                                      className="c7"
-                                      href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                      muted={false}
-                                      noVisitedState={false}
-                                      rel="license"
-                                      textColour={false}
-                                    >
-                                      <a
-                                        className="c8 c7"
-                                        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                        rel="license"
-                                      >
-                                        Open Government Licence v3.0
-                                      </a>
-                                    </styled.a>
-                                  </LinkDocumented>
-                                </link__StyledFooterLink>
-                              </FooterLink>
+                                  Open Government Licence v3.0
+                                </a>
+                              </link__FooterLink>
                               , except where otherwise stated
                             </span>
                           </licence__LicenceDescription>
@@ -1099,44 +1039,44 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
   margin: 0 15px;
 }
 
-.c6 {
+.c5 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.c6:link {
-  color: #1d70b8;
-}
-
-.c6:visited {
-  color: #4c2c92;
-}
-
-.c6:hover {
-  color: #2b8cc4;
-}
-
-.c6:active {
-  color: #2b8cc4;
-}
-
-.c6:focus {
-  color: #0b0c0c;
-}
-
-.c6:focus {
+.c5:focus {
   outline: 3px solid #ffdd00;
   outline-offset: 0;
   background-color: #ffdd00;
 }
 
-.c5:link,
+.c5:link {
+  color: #1d70b8;
+}
+
 .c5:visited {
-  color: #454a4c;
+  color: #4c2c92;
 }
 
 .c5:hover {
+  color: #2b8cc4;
+}
+
+.c5:active {
+  color: #2b8cc4;
+}
+
+.c5:focus {
+  color: #0b0c0c;
+}
+
+.c6:link,
+.c6:visited {
+  color: #454a4c;
+}
+
+.c6:hover {
   color: #171819;
 }
 
@@ -1217,15 +1157,15 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
 }
 
 @media print {
-  .c6 {
+  .c5 {
     font-family: sans-serif;
   }
 }
 
 @media print {
-  .c6[href^="/"]::after,
-  .c6[href^="http://"]::after,
-  .c6[href^="https://"]::after {
+  .c5[href^="/"]::after,
+  .c5[href^="http://"]::after,
+  .c5[href^="https://"]::after {
     content: " (" attr(href) ")";
     font-size: 90%;
     word-wrap: break-word;
@@ -1316,11 +1256,14 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
     meta={
       <meta-custom__MetaCustom>
         Built by the 
-        <FooterLink
+        <link__FooterLink
           href="/"
+          muted={false}
+          noVisitedState={false}
+          textColour={false}
         >
           Government Digital Service
-        </FooterLink>
+        </link__FooterLink>
       </meta-custom__MetaCustom>
     }
   >
@@ -1351,36 +1294,19 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
                           className="c4"
                         >
                           Built by the 
-                          <FooterLink
+                          <link__FooterLink
                             href="/"
+                            muted={false}
+                            noVisitedState={false}
+                            textColour={false}
                           >
-                            <link__StyledFooterLink
+                            <a
+                              className="c5 c6"
                               href="/"
                             >
-                              <LinkDocumented
-                                className="c5"
-                                href="/"
-                                muted={false}
-                                noVisitedState={false}
-                                textColour={false}
-                              >
-                                <styled.a
-                                  className="c5"
-                                  href="/"
-                                  muted={false}
-                                  noVisitedState={false}
-                                  textColour={false}
-                                >
-                                  <a
-                                    className="c6 c5"
-                                    href="/"
-                                  >
-                                    Government Digital Service
-                                  </a>
-                                </styled.a>
-                              </LinkDocumented>
-                            </link__StyledFooterLink>
-                          </FooterLink>
+                              Government Digital Service
+                            </a>
+                          </link__FooterLink>
                         </div>
                       </meta-custom__MetaCustom>
                       <Licence>
@@ -1414,41 +1340,21 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
                             >
                               All content is available under the
                                
-                              <FooterLink
+                              <link__FooterLink
                                 href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                muted={false}
+                                noVisitedState={false}
                                 rel="license"
+                                textColour={false}
                               >
-                                <link__StyledFooterLink
+                                <a
+                                  className="c5 c6"
                                   href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                   rel="license"
                                 >
-                                  <LinkDocumented
-                                    className="c5"
-                                    href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                    muted={false}
-                                    noVisitedState={false}
-                                    rel="license"
-                                    textColour={false}
-                                  >
-                                    <styled.a
-                                      className="c5"
-                                      href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                      muted={false}
-                                      noVisitedState={false}
-                                      rel="license"
-                                      textColour={false}
-                                    >
-                                      <a
-                                        className="c6 c5"
-                                        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                        rel="license"
-                                      >
-                                        Open Government Licence v3.0
-                                      </a>
-                                    </styled.a>
-                                  </LinkDocumented>
-                                </link__StyledFooterLink>
-                              </FooterLink>
+                                  Open Government Licence v3.0
+                                </a>
+                              </link__FooterLink>
                               , except where otherwise stated
                             </span>
                           </licence__LicenceDescription>
@@ -1473,44 +1379,44 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
   margin: 0 15px;
 }
 
-.c9 {
+.c8 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.c9:link {
-  color: #1d70b8;
-}
-
-.c9:visited {
-  color: #4c2c92;
-}
-
-.c9:hover {
-  color: #2b8cc4;
-}
-
-.c9:active {
-  color: #2b8cc4;
-}
-
-.c9:focus {
-  color: #0b0c0c;
-}
-
-.c9:focus {
+.c8:focus {
   outline: 3px solid #ffdd00;
   outline-offset: 0;
   background-color: #ffdd00;
 }
 
-.c8:link,
+.c8:link {
+  color: #1d70b8;
+}
+
 .c8:visited {
-  color: #454a4c;
+  color: #4c2c92;
 }
 
 .c8:hover {
+  color: #2b8cc4;
+}
+
+.c8:active {
+  color: #2b8cc4;
+}
+
+.c8:focus {
+  color: #0b0c0c;
+}
+
+.c9:link,
+.c9:visited {
+  color: #454a4c;
+}
+
+.c9:hover {
   color: #171819;
 }
 
@@ -1635,15 +1541,15 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
 }
 
 @media print {
-  .c9 {
+  .c8 {
     font-family: sans-serif;
   }
 }
 
 @media print {
-  .c9[href^="/"]::after,
-  .c9[href^="http://"]::after,
-  .c9[href^="https://"]::after {
+  .c8[href^="/"]::after,
+  .c8[href^="http://"]::after,
+  .c8[href^="https://"]::after {
     content: " (" attr(href) ")";
     font-size: 90%;
     word-wrap: break-word;
@@ -1785,12 +1691,15 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
             <MetaLinks
               heading="Support links"
             >
-              <FooterLink
+              <link__FooterLink
                 href="/"
+                muted={false}
+                noVisitedState={false}
+                textColour={false}
               >
                 Item 1
-              </FooterLink>
-              <FooterLink
+              </link__FooterLink>
+              <link__FooterLink
                 as={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
@@ -1805,23 +1714,32 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                     "render": [Function],
                   }
                 }
+                muted={false}
+                noVisitedState={false}
+                textColour={false}
                 to="/footer-meta-item-2"
               >
                 Item 2 (Router Link)
-              </FooterLink>
-              <FooterLink
+              </link__FooterLink>
+              <link__FooterLink
                 href="/"
+                muted={false}
+                noVisitedState={false}
+                textColour={false}
               >
                 Item 3
-              </FooterLink>
+              </link__FooterLink>
             </MetaLinks>
             <meta-custom__MetaCustom>
               Built by the 
-              <FooterLink
+              <link__FooterLink
                 href="/"
+                muted={false}
+                noVisitedState={false}
+                textColour={false}
               >
                 Government Digital Service
-              </FooterLink>
+              </link__FooterLink>
             </meta-custom__MetaCustom>
           </React.Fragment>
         }
@@ -1891,36 +1809,19 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                   <li
                                     className="c7"
                                   >
-                                    <FooterLink
+                                    <link__FooterLink
                                       href="/"
+                                      muted={false}
+                                      noVisitedState={false}
+                                      textColour={false}
                                     >
-                                      <link__StyledFooterLink
+                                      <a
+                                        className="c8 c9"
                                         href="/"
                                       >
-                                        <LinkDocumented
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <styled.a
-                                            className="c8"
-                                            href="/"
-                                            muted={false}
-                                            noVisitedState={false}
-                                            textColour={false}
-                                          >
-                                            <a
-                                              className="c9 c8"
-                                              href="/"
-                                            >
-                                              Item 1
-                                            </a>
-                                          </styled.a>
-                                        </LinkDocumented>
-                                      </link__StyledFooterLink>
-                                    </FooterLink>
+                                        Item 1
+                                      </a>
+                                    </link__FooterLink>
                                   </li>
                                 </list-item__ListItem>
                                 <list-item__ListItem
@@ -1930,7 +1831,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                   <li
                                     className="c7"
                                   >
-                                    <FooterLink
+                                    <link__FooterLink
                                       as={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -1945,45 +1846,30 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                           "render": [Function],
                                         }
                                       }
+                                      muted={false}
+                                      noVisitedState={false}
+                                      textColour={false}
                                       to="/footer-meta-item-2"
                                     >
-                                      <link__StyledFooterLink
-                                        as={
-                                          Object {
-                                            "$$typeof": Symbol(react.forward_ref),
-                                            "displayName": "Link",
-                                            "propTypes": Object {
-                                              "innerRef": [Function],
-                                              "onClick": [Function],
-                                              "replace": [Function],
-                                              "target": [Function],
-                                              "to": [Function],
-                                            },
-                                            "render": [Function],
-                                          }
-                                        }
+                                      <Link
+                                        className="c8 c9"
                                         to="/footer-meta-item-2"
                                       >
-                                        <Link
-                                          className="c8"
-                                          to="/footer-meta-item-2"
+                                        <LinkAnchor
+                                          className="c8 c9"
+                                          href="/footer-meta-item-2"
+                                          navigate={[Function]}
                                         >
-                                          <LinkAnchor
-                                            className="c8"
+                                          <a
+                                            className="c8 c9"
                                             href="/footer-meta-item-2"
-                                            navigate={[Function]}
+                                            onClick={[Function]}
                                           >
-                                            <a
-                                              className="c8"
-                                              href="/footer-meta-item-2"
-                                              onClick={[Function]}
-                                            >
-                                              Item 2 (Router Link)
-                                            </a>
-                                          </LinkAnchor>
-                                        </Link>
-                                      </link__StyledFooterLink>
-                                    </FooterLink>
+                                            Item 2 (Router Link)
+                                          </a>
+                                        </LinkAnchor>
+                                      </Link>
+                                    </link__FooterLink>
                                   </li>
                                 </list-item__ListItem>
                                 <list-item__ListItem
@@ -1993,36 +1879,19 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                   <li
                                     className="c7"
                                   >
-                                    <FooterLink
+                                    <link__FooterLink
                                       href="/"
+                                      muted={false}
+                                      noVisitedState={false}
+                                      textColour={false}
                                     >
-                                      <link__StyledFooterLink
+                                      <a
+                                        className="c8 c9"
                                         href="/"
                                       >
-                                        <LinkDocumented
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <styled.a
-                                            className="c8"
-                                            href="/"
-                                            muted={false}
-                                            noVisitedState={false}
-                                            textColour={false}
-                                          >
-                                            <a
-                                              className="c9 c8"
-                                              href="/"
-                                            >
-                                              Item 3
-                                            </a>
-                                          </styled.a>
-                                        </LinkDocumented>
-                                      </link__StyledFooterLink>
-                                    </FooterLink>
+                                        Item 3
+                                      </a>
+                                    </link__FooterLink>
                                   </li>
                                 </list-item__ListItem>
                               </ul>
@@ -2033,36 +1902,19 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                               className="c10"
                             >
                               Built by the 
-                              <FooterLink
+                              <link__FooterLink
                                 href="/"
+                                muted={false}
+                                noVisitedState={false}
+                                textColour={false}
                               >
-                                <link__StyledFooterLink
+                                <a
+                                  className="c8 c9"
                                   href="/"
                                 >
-                                  <LinkDocumented
-                                    className="c8"
-                                    href="/"
-                                    muted={false}
-                                    noVisitedState={false}
-                                    textColour={false}
-                                  >
-                                    <styled.a
-                                      className="c8"
-                                      href="/"
-                                      muted={false}
-                                      noVisitedState={false}
-                                      textColour={false}
-                                    >
-                                      <a
-                                        className="c9 c8"
-                                        href="/"
-                                      >
-                                        Government Digital Service
-                                      </a>
-                                    </styled.a>
-                                  </LinkDocumented>
-                                </link__StyledFooterLink>
-                              </FooterLink>
+                                  Government Digital Service
+                                </a>
+                              </link__FooterLink>
                             </div>
                           </meta-custom__MetaCustom>
                           <Licence>
@@ -2096,41 +1948,21 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                 >
                                   All content is available under the
                                    
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                    muted={false}
+                                    noVisitedState={false}
                                     rel="license"
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                       rel="license"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        rel="license"
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          rel="license"
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                            rel="license"
-                                          >
-                                            Open Government Licence v3.0
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Open Government Licence v3.0
+                                    </a>
+                                  </link__FooterLink>
                                   , except where otherwise stated
                                 </span>
                               </licence__LicenceDescription>
@@ -2165,44 +1997,44 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
   margin: 0 15px;
 }
 
-.c9 {
+.c8 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.c9:link {
-  color: #1d70b8;
-}
-
-.c9:visited {
-  color: #4c2c92;
-}
-
-.c9:hover {
-  color: #2b8cc4;
-}
-
-.c9:active {
-  color: #2b8cc4;
-}
-
-.c9:focus {
-  color: #0b0c0c;
-}
-
-.c9:focus {
+.c8:focus {
   outline: 3px solid #ffdd00;
   outline-offset: 0;
   background-color: #ffdd00;
 }
 
-.c8:link,
+.c8:link {
+  color: #1d70b8;
+}
+
 .c8:visited {
-  color: #454a4c;
+  color: #4c2c92;
 }
 
 .c8:hover {
+  color: #2b8cc4;
+}
+
+.c8:active {
+  color: #2b8cc4;
+}
+
+.c8:focus {
+  color: #0b0c0c;
+}
+
+.c9:link,
+.c9:visited {
+  color: #454a4c;
+}
+
+.c9:hover {
   color: #171819;
 }
 
@@ -2323,15 +2155,15 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
 }
 
 @media print {
-  .c9 {
+  .c8 {
     font-family: sans-serif;
   }
 }
 
 @media print {
-  .c9[href^="/"]::after,
-  .c9[href^="http://"]::after,
-  .c9[href^="https://"]::after {
+  .c8[href^="/"]::after,
+  .c8[href^="http://"]::after,
+  .c8[href^="https://"]::after {
     content: " (" attr(href) ")";
     font-size: 90%;
     word-wrap: break-word;
@@ -2472,12 +2304,15 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
           <MetaLinks
             heading="Support links"
           >
-            <FooterLink
+            <link__FooterLink
               href="/"
+              muted={false}
+              noVisitedState={false}
+              textColour={false}
             >
               Item 1
-            </FooterLink>
-            <FooterLink
+            </link__FooterLink>
+            <link__FooterLink
               as={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -2492,15 +2327,21 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                   "render": [Function],
                 }
               }
+              muted={false}
+              noVisitedState={false}
+              textColour={false}
               to="/footer-meta-item-2"
             >
               Item 2 (Router Link)
-            </FooterLink>
-            <FooterLink
+            </link__FooterLink>
+            <link__FooterLink
               href="/"
+              muted={false}
+              noVisitedState={false}
+              textColour={false}
             >
               Item 3
-            </FooterLink>
+            </link__FooterLink>
           </MetaLinks>
         }
       >
@@ -2569,36 +2410,19 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                   <li
                                     className="c7"
                                   >
-                                    <FooterLink
+                                    <link__FooterLink
                                       href="/"
+                                      muted={false}
+                                      noVisitedState={false}
+                                      textColour={false}
                                     >
-                                      <link__StyledFooterLink
+                                      <a
+                                        className="c8 c9"
                                         href="/"
                                       >
-                                        <LinkDocumented
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <styled.a
-                                            className="c8"
-                                            href="/"
-                                            muted={false}
-                                            noVisitedState={false}
-                                            textColour={false}
-                                          >
-                                            <a
-                                              className="c9 c8"
-                                              href="/"
-                                            >
-                                              Item 1
-                                            </a>
-                                          </styled.a>
-                                        </LinkDocumented>
-                                      </link__StyledFooterLink>
-                                    </FooterLink>
+                                        Item 1
+                                      </a>
+                                    </link__FooterLink>
                                   </li>
                                 </list-item__ListItem>
                                 <list-item__ListItem
@@ -2608,7 +2432,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                   <li
                                     className="c7"
                                   >
-                                    <FooterLink
+                                    <link__FooterLink
                                       as={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -2623,45 +2447,30 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                           "render": [Function],
                                         }
                                       }
+                                      muted={false}
+                                      noVisitedState={false}
+                                      textColour={false}
                                       to="/footer-meta-item-2"
                                     >
-                                      <link__StyledFooterLink
-                                        as={
-                                          Object {
-                                            "$$typeof": Symbol(react.forward_ref),
-                                            "displayName": "Link",
-                                            "propTypes": Object {
-                                              "innerRef": [Function],
-                                              "onClick": [Function],
-                                              "replace": [Function],
-                                              "target": [Function],
-                                              "to": [Function],
-                                            },
-                                            "render": [Function],
-                                          }
-                                        }
+                                      <Link
+                                        className="c8 c9"
                                         to="/footer-meta-item-2"
                                       >
-                                        <Link
-                                          className="c8"
-                                          to="/footer-meta-item-2"
+                                        <LinkAnchor
+                                          className="c8 c9"
+                                          href="/footer-meta-item-2"
+                                          navigate={[Function]}
                                         >
-                                          <LinkAnchor
-                                            className="c8"
+                                          <a
+                                            className="c8 c9"
                                             href="/footer-meta-item-2"
-                                            navigate={[Function]}
+                                            onClick={[Function]}
                                           >
-                                            <a
-                                              className="c8"
-                                              href="/footer-meta-item-2"
-                                              onClick={[Function]}
-                                            >
-                                              Item 2 (Router Link)
-                                            </a>
-                                          </LinkAnchor>
-                                        </Link>
-                                      </link__StyledFooterLink>
-                                    </FooterLink>
+                                            Item 2 (Router Link)
+                                          </a>
+                                        </LinkAnchor>
+                                      </Link>
+                                    </link__FooterLink>
                                   </li>
                                 </list-item__ListItem>
                                 <list-item__ListItem
@@ -2671,36 +2480,19 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                   <li
                                     className="c7"
                                   >
-                                    <FooterLink
+                                    <link__FooterLink
                                       href="/"
+                                      muted={false}
+                                      noVisitedState={false}
+                                      textColour={false}
                                     >
-                                      <link__StyledFooterLink
+                                      <a
+                                        className="c8 c9"
                                         href="/"
                                       >
-                                        <LinkDocumented
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <styled.a
-                                            className="c8"
-                                            href="/"
-                                            muted={false}
-                                            noVisitedState={false}
-                                            textColour={false}
-                                          >
-                                            <a
-                                              className="c9 c8"
-                                              href="/"
-                                            >
-                                              Item 3
-                                            </a>
-                                          </styled.a>
-                                        </LinkDocumented>
-                                      </link__StyledFooterLink>
-                                    </FooterLink>
+                                        Item 3
+                                      </a>
+                                    </link__FooterLink>
                                   </li>
                                 </list-item__ListItem>
                               </ul>
@@ -2737,41 +2529,21 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                 >
                                   All content is available under the
                                    
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                    muted={false}
+                                    noVisitedState={false}
                                     rel="license"
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                       rel="license"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        rel="license"
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          rel="license"
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                            rel="license"
-                                          >
-                                            Open Government Licence v3.0
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Open Government Licence v3.0
+                                    </a>
+                                  </link__FooterLink>
                                   , except where otherwise stated
                                 </span>
                               </licence__LicenceDescription>
@@ -2818,44 +2590,44 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
   flex-wrap: wrap;
 }
 
-.c9 {
+.c8 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.c9:link {
-  color: #1d70b8;
-}
-
-.c9:visited {
-  color: #4c2c92;
-}
-
-.c9:hover {
-  color: #2b8cc4;
-}
-
-.c9:active {
-  color: #2b8cc4;
-}
-
-.c9:focus {
-  color: #0b0c0c;
-}
-
-.c9:focus {
+.c8:focus {
   outline: 3px solid #ffdd00;
   outline-offset: 0;
   background-color: #ffdd00;
 }
 
-.c8:link,
+.c8:link {
+  color: #1d70b8;
+}
+
 .c8:visited {
-  color: #454a4c;
+  color: #4c2c92;
 }
 
 .c8:hover {
+  color: #2b8cc4;
+}
+
+.c8:active {
+  color: #2b8cc4;
+}
+
+.c8:focus {
+  color: #0b0c0c;
+}
+
+.c9:link,
+.c9:visited {
+  color: #454a4c;
+}
+
+.c9:hover {
   color: #171819;
 }
 
@@ -3049,15 +2821,15 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
 }
 
 @media print {
-  .c9 {
+  .c8 {
     font-family: sans-serif;
   }
 }
 
 @media print {
-  .c9[href^="/"]::after,
-  .c9[href^="http://"]::after,
-  .c9[href^="https://"]::after {
+  .c8[href^="/"]::after,
+  .c8[href^="http://"]::after,
+  .c8[href^="https://"]::after {
     content: " (" attr(href) ")";
     font-size: 90%;
     word-wrap: break-word;
@@ -3271,12 +3043,15 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
             <MetaLinks
               heading="Support links"
             >
-              <FooterLink
+              <link__FooterLink
                 href="/"
+                muted={false}
+                noVisitedState={false}
+                textColour={false}
               >
                 Item 1
-              </FooterLink>
-              <FooterLink
+              </link__FooterLink>
+              <link__FooterLink
                 as={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
@@ -3291,23 +3066,32 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                     "render": [Function],
                   }
                 }
+                muted={false}
+                noVisitedState={false}
+                textColour={false}
                 to="/footer-meta-item-2"
               >
                 Item 2 (Router Link)
-              </FooterLink>
-              <FooterLink
+              </link__FooterLink>
+              <link__FooterLink
                 href="/"
+                muted={false}
+                noVisitedState={false}
+                textColour={false}
               >
                 Item 3
-              </FooterLink>
+              </link__FooterLink>
             </MetaLinks>
             <meta-custom__MetaCustom>
               Built by the 
-              <FooterLink
+              <link__FooterLink
                 href="/"
+                muted={false}
+                noVisitedState={false}
+                textColour={false}
               >
                 Government Digital Service
-              </FooterLink>
+              </link__FooterLink>
             </meta-custom__MetaCustom>
           </React.Fragment>
         }
@@ -3376,36 +3160,19 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 <li
                                   className="c7"
                                 >
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="/"
+                                    muted={false}
+                                    noVisitedState={false}
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="/"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="/"
-                                          >
-                                            Navigation item 1
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Navigation item 1
+                                    </a>
+                                  </link__FooterLink>
                                 </li>
                               </list-item__ListItem>
                               <list-item__ListItem
@@ -3415,7 +3182,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 <li
                                   className="c7"
                                 >
-                                  <FooterLink
+                                  <link__FooterLink
                                     as={
                                       Object {
                                         "$$typeof": Symbol(react.forward_ref),
@@ -3430,45 +3197,30 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                         "render": [Function],
                                       }
                                     }
+                                    muted={false}
+                                    noVisitedState={false}
+                                    textColour={false}
                                     to="/footer-nav-item-2"
                                   >
-                                    <link__StyledFooterLink
-                                      as={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "displayName": "Link",
-                                          "propTypes": Object {
-                                            "innerRef": [Function],
-                                            "onClick": [Function],
-                                            "replace": [Function],
-                                            "target": [Function],
-                                            "to": [Function],
-                                          },
-                                          "render": [Function],
-                                        }
-                                      }
+                                    <Link
+                                      className="c8 c9"
                                       to="/footer-nav-item-2"
                                     >
-                                      <Link
-                                        className="c8"
-                                        to="/footer-nav-item-2"
+                                      <LinkAnchor
+                                        className="c8 c9"
+                                        href="/footer-nav-item-2"
+                                        navigate={[Function]}
                                       >
-                                        <LinkAnchor
-                                          className="c8"
+                                        <a
+                                          className="c8 c9"
                                           href="/footer-nav-item-2"
-                                          navigate={[Function]}
+                                          onClick={[Function]}
                                         >
-                                          <a
-                                            className="c8"
-                                            href="/footer-nav-item-2"
-                                            onClick={[Function]}
-                                          >
-                                            Navigation item 2 (Router Link)
-                                          </a>
-                                        </LinkAnchor>
-                                      </Link>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                          Navigation item 2 (Router Link)
+                                        </a>
+                                      </LinkAnchor>
+                                    </Link>
+                                  </link__FooterLink>
                                 </li>
                               </list-item__ListItem>
                               <list-item__ListItem
@@ -3478,36 +3230,19 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 <li
                                   className="c7"
                                 >
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="/"
+                                    muted={false}
+                                    noVisitedState={false}
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="/"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="/"
-                                          >
-                                            Navigation item 3
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Navigation item 3
+                                    </a>
+                                  </link__FooterLink>
                                 </li>
                               </list-item__ListItem>
                               <list-item__ListItem
@@ -3517,36 +3252,19 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 <li
                                   className="c7"
                                 >
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="/"
+                                    muted={false}
+                                    noVisitedState={false}
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="/"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="/"
-                                          >
-                                            Navigation item 4
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Navigation item 4
+                                    </a>
+                                  </link__FooterLink>
                                 </li>
                               </list-item__ListItem>
                               <list-item__ListItem
@@ -3556,36 +3274,19 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 <li
                                   className="c7"
                                 >
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="/"
+                                    muted={false}
+                                    noVisitedState={false}
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="/"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="/"
-                                          >
-                                            Navigation item 5
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Navigation item 5
+                                    </a>
+                                  </link__FooterLink>
                                 </li>
                               </list-item__ListItem>
                               <list-item__ListItem
@@ -3595,36 +3296,19 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 <li
                                   className="c7"
                                 >
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="/"
+                                    muted={false}
+                                    noVisitedState={false}
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="/"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="/"
-                                          >
-                                            Navigation item 6
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Navigation item 6
+                                    </a>
+                                  </link__FooterLink>
                                 </li>
                               </list-item__ListItem>
                             </ul>
@@ -3681,36 +3365,19 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 <li
                                   className="c7"
                                 >
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="/"
+                                    muted={false}
+                                    noVisitedState={false}
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="/"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="/"
-                                          >
-                                            Navigation item 1
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Navigation item 1
+                                    </a>
+                                  </link__FooterLink>
                                 </li>
                               </list-item__ListItem>
                               <list-item__ListItem
@@ -3720,36 +3387,19 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 <li
                                   className="c7"
                                 >
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="/"
+                                    muted={false}
+                                    noVisitedState={false}
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="/"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="/"
-                                          >
-                                            Navigation item 2
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Navigation item 2
+                                    </a>
+                                  </link__FooterLink>
                                 </li>
                               </list-item__ListItem>
                               <list-item__ListItem
@@ -3759,36 +3409,19 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 <li
                                   className="c7"
                                 >
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="/"
+                                    muted={false}
+                                    noVisitedState={false}
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="/"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="/"
-                                          >
-                                            Navigation item 3
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Navigation item 3
+                                    </a>
+                                  </link__FooterLink>
                                 </li>
                               </list-item__ListItem>
                             </ul>
@@ -3857,36 +3490,19 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                   <li
                                     className="c17"
                                   >
-                                    <FooterLink
+                                    <link__FooterLink
                                       href="/"
+                                      muted={false}
+                                      noVisitedState={false}
+                                      textColour={false}
                                     >
-                                      <link__StyledFooterLink
+                                      <a
+                                        className="c8 c9"
                                         href="/"
                                       >
-                                        <LinkDocumented
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <styled.a
-                                            className="c8"
-                                            href="/"
-                                            muted={false}
-                                            noVisitedState={false}
-                                            textColour={false}
-                                          >
-                                            <a
-                                              className="c9 c8"
-                                              href="/"
-                                            >
-                                              Item 1
-                                            </a>
-                                          </styled.a>
-                                        </LinkDocumented>
-                                      </link__StyledFooterLink>
-                                    </FooterLink>
+                                        Item 1
+                                      </a>
+                                    </link__FooterLink>
                                   </li>
                                 </list-item__ListItem>
                                 <list-item__ListItem
@@ -3896,7 +3512,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                   <li
                                     className="c17"
                                   >
-                                    <FooterLink
+                                    <link__FooterLink
                                       as={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -3911,45 +3527,30 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                           "render": [Function],
                                         }
                                       }
+                                      muted={false}
+                                      noVisitedState={false}
+                                      textColour={false}
                                       to="/footer-meta-item-2"
                                     >
-                                      <link__StyledFooterLink
-                                        as={
-                                          Object {
-                                            "$$typeof": Symbol(react.forward_ref),
-                                            "displayName": "Link",
-                                            "propTypes": Object {
-                                              "innerRef": [Function],
-                                              "onClick": [Function],
-                                              "replace": [Function],
-                                              "target": [Function],
-                                              "to": [Function],
-                                            },
-                                            "render": [Function],
-                                          }
-                                        }
+                                      <Link
+                                        className="c8 c9"
                                         to="/footer-meta-item-2"
                                       >
-                                        <Link
-                                          className="c8"
-                                          to="/footer-meta-item-2"
+                                        <LinkAnchor
+                                          className="c8 c9"
+                                          href="/footer-meta-item-2"
+                                          navigate={[Function]}
                                         >
-                                          <LinkAnchor
-                                            className="c8"
+                                          <a
+                                            className="c8 c9"
                                             href="/footer-meta-item-2"
-                                            navigate={[Function]}
+                                            onClick={[Function]}
                                           >
-                                            <a
-                                              className="c8"
-                                              href="/footer-meta-item-2"
-                                              onClick={[Function]}
-                                            >
-                                              Item 2 (Router Link)
-                                            </a>
-                                          </LinkAnchor>
-                                        </Link>
-                                      </link__StyledFooterLink>
-                                    </FooterLink>
+                                            Item 2 (Router Link)
+                                          </a>
+                                        </LinkAnchor>
+                                      </Link>
+                                    </link__FooterLink>
                                   </li>
                                 </list-item__ListItem>
                                 <list-item__ListItem
@@ -3959,36 +3560,19 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                   <li
                                     className="c17"
                                   >
-                                    <FooterLink
+                                    <link__FooterLink
                                       href="/"
+                                      muted={false}
+                                      noVisitedState={false}
+                                      textColour={false}
                                     >
-                                      <link__StyledFooterLink
+                                      <a
+                                        className="c8 c9"
                                         href="/"
                                       >
-                                        <LinkDocumented
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <styled.a
-                                            className="c8"
-                                            href="/"
-                                            muted={false}
-                                            noVisitedState={false}
-                                            textColour={false}
-                                          >
-                                            <a
-                                              className="c9 c8"
-                                              href="/"
-                                            >
-                                              Item 3
-                                            </a>
-                                          </styled.a>
-                                        </LinkDocumented>
-                                      </link__StyledFooterLink>
-                                    </FooterLink>
+                                        Item 3
+                                      </a>
+                                    </link__FooterLink>
                                   </li>
                                 </list-item__ListItem>
                               </ul>
@@ -3999,36 +3583,19 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                               className="c18"
                             >
                               Built by the 
-                              <FooterLink
+                              <link__FooterLink
                                 href="/"
+                                muted={false}
+                                noVisitedState={false}
+                                textColour={false}
                               >
-                                <link__StyledFooterLink
+                                <a
+                                  className="c8 c9"
                                   href="/"
                                 >
-                                  <LinkDocumented
-                                    className="c8"
-                                    href="/"
-                                    muted={false}
-                                    noVisitedState={false}
-                                    textColour={false}
-                                  >
-                                    <styled.a
-                                      className="c8"
-                                      href="/"
-                                      muted={false}
-                                      noVisitedState={false}
-                                      textColour={false}
-                                    >
-                                      <a
-                                        className="c9 c8"
-                                        href="/"
-                                      >
-                                        Government Digital Service
-                                      </a>
-                                    </styled.a>
-                                  </LinkDocumented>
-                                </link__StyledFooterLink>
-                              </FooterLink>
+                                  Government Digital Service
+                                </a>
+                              </link__FooterLink>
                             </div>
                           </meta-custom__MetaCustom>
                           <Licence>
@@ -4062,41 +3629,21 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                 >
                                   All content is available under the
                                    
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                    muted={false}
+                                    noVisitedState={false}
                                     rel="license"
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                       rel="license"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        rel="license"
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          rel="license"
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                            rel="license"
-                                          >
-                                            Open Government Licence v3.0
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Open Government Licence v3.0
+                                    </a>
+                                  </link__FooterLink>
                                   , except where otherwise stated
                                 </span>
                               </licence__LicenceDescription>
@@ -4143,44 +3690,44 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
   flex-wrap: wrap;
 }
 
-.c9 {
+.c8 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.c9:link {
-  color: #1d70b8;
-}
-
-.c9:visited {
-  color: #4c2c92;
-}
-
-.c9:hover {
-  color: #2b8cc4;
-}
-
-.c9:active {
-  color: #2b8cc4;
-}
-
-.c9:focus {
-  color: #0b0c0c;
-}
-
-.c9:focus {
+.c8:focus {
   outline: 3px solid #ffdd00;
   outline-offset: 0;
   background-color: #ffdd00;
 }
 
-.c8:link,
+.c8:link {
+  color: #1d70b8;
+}
+
 .c8:visited {
-  color: #454a4c;
+  color: #4c2c92;
 }
 
 .c8:hover {
+  color: #2b8cc4;
+}
+
+.c8:active {
+  color: #2b8cc4;
+}
+
+.c8:focus {
+  color: #0b0c0c;
+}
+
+.c9:link,
+.c9:visited {
+  color: #454a4c;
+}
+
+.c9:hover {
   color: #171819;
 }
 
@@ -4326,15 +3873,15 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
 }
 
 @media print {
-  .c9 {
+  .c8 {
     font-family: sans-serif;
   }
 }
 
 @media print {
-  .c9[href^="/"]::after,
-  .c9[href^="http://"]::after,
-  .c9[href^="https://"]::after {
+  .c8[href^="/"]::after,
+  .c8[href^="http://"]::after,
+  .c8[href^="https://"]::after {
     content: " (" attr(href) ")";
     font-size: 90%;
     word-wrap: break-word;
@@ -4582,36 +4129,19 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                 <li
                                   className="c7"
                                 >
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="/"
+                                    muted={false}
+                                    noVisitedState={false}
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="/"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="/"
-                                          >
-                                            Navigation item 1
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Navigation item 1
+                                    </a>
+                                  </link__FooterLink>
                                 </li>
                               </list-item__ListItem>
                               <list-item__ListItem
@@ -4621,7 +4151,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                 <li
                                   className="c7"
                                 >
-                                  <FooterLink
+                                  <link__FooterLink
                                     as={
                                       Object {
                                         "$$typeof": Symbol(react.forward_ref),
@@ -4636,45 +4166,30 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                         "render": [Function],
                                       }
                                     }
+                                    muted={false}
+                                    noVisitedState={false}
+                                    textColour={false}
                                     to="/footer-nav-item-2"
                                   >
-                                    <link__StyledFooterLink
-                                      as={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "displayName": "Link",
-                                          "propTypes": Object {
-                                            "innerRef": [Function],
-                                            "onClick": [Function],
-                                            "replace": [Function],
-                                            "target": [Function],
-                                            "to": [Function],
-                                          },
-                                          "render": [Function],
-                                        }
-                                      }
+                                    <Link
+                                      className="c8 c9"
                                       to="/footer-nav-item-2"
                                     >
-                                      <Link
-                                        className="c8"
-                                        to="/footer-nav-item-2"
+                                      <LinkAnchor
+                                        className="c8 c9"
+                                        href="/footer-nav-item-2"
+                                        navigate={[Function]}
                                       >
-                                        <LinkAnchor
-                                          className="c8"
+                                        <a
+                                          className="c8 c9"
                                           href="/footer-nav-item-2"
-                                          navigate={[Function]}
+                                          onClick={[Function]}
                                         >
-                                          <a
-                                            className="c8"
-                                            href="/footer-nav-item-2"
-                                            onClick={[Function]}
-                                          >
-                                            Navigation item 2 (Router Link)
-                                          </a>
-                                        </LinkAnchor>
-                                      </Link>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                          Navigation item 2 (Router Link)
+                                        </a>
+                                      </LinkAnchor>
+                                    </Link>
+                                  </link__FooterLink>
                                 </li>
                               </list-item__ListItem>
                               <list-item__ListItem
@@ -4684,36 +4199,19 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                 <li
                                   className="c7"
                                 >
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="/"
+                                    muted={false}
+                                    noVisitedState={false}
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="/"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="/"
-                                          >
-                                            Navigation item 3
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Navigation item 3
+                                    </a>
+                                  </link__FooterLink>
                                 </li>
                               </list-item__ListItem>
                               <list-item__ListItem
@@ -4723,36 +4221,19 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                 <li
                                   className="c7"
                                 >
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="/"
+                                    muted={false}
+                                    noVisitedState={false}
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="/"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="/"
-                                          >
-                                            Navigation item 4
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Navigation item 4
+                                    </a>
+                                  </link__FooterLink>
                                 </li>
                               </list-item__ListItem>
                               <list-item__ListItem
@@ -4762,36 +4243,19 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                 <li
                                   className="c7"
                                 >
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="/"
+                                    muted={false}
+                                    noVisitedState={false}
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="/"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="/"
-                                          >
-                                            Navigation item 5
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Navigation item 5
+                                    </a>
+                                  </link__FooterLink>
                                 </li>
                               </list-item__ListItem>
                               <list-item__ListItem
@@ -4801,36 +4265,19 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                 <li
                                   className="c7"
                                 >
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="/"
+                                    muted={false}
+                                    noVisitedState={false}
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="/"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="/"
-                                          >
-                                            Navigation item 6
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Navigation item 6
+                                    </a>
+                                  </link__FooterLink>
                                 </li>
                               </list-item__ListItem>
                             </ul>
@@ -4887,36 +4334,19 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                 <li
                                   className="c7"
                                 >
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="/"
+                                    muted={false}
+                                    noVisitedState={false}
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="/"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="/"
-                                          >
-                                            Navigation item 1
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Navigation item 1
+                                    </a>
+                                  </link__FooterLink>
                                 </li>
                               </list-item__ListItem>
                               <list-item__ListItem
@@ -4926,36 +4356,19 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                 <li
                                   className="c7"
                                 >
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="/"
+                                    muted={false}
+                                    noVisitedState={false}
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="/"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="/"
-                                          >
-                                            Navigation item 2
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Navigation item 2
+                                    </a>
+                                  </link__FooterLink>
                                 </li>
                               </list-item__ListItem>
                               <list-item__ListItem
@@ -4965,36 +4378,19 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                 <li
                                   className="c7"
                                 >
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="/"
+                                    muted={false}
+                                    noVisitedState={false}
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="/"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="/"
-                                          >
-                                            Navigation item 3
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Navigation item 3
+                                    </a>
+                                  </link__FooterLink>
                                 </li>
                               </list-item__ListItem>
                             </ul>
@@ -5051,41 +4447,21 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                 >
                                   All content is available under the
                                    
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                    muted={false}
+                                    noVisitedState={false}
                                     rel="license"
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                       rel="license"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        rel="license"
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          rel="license"
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                            rel="license"
-                                          >
-                                            Open Government Licence v3.0
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Open Government Licence v3.0
+                                    </a>
+                                  </link__FooterLink>
                                   , except where otherwise stated
                                 </span>
                               </licence__LicenceDescription>
@@ -5120,44 +4496,44 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
   margin: 0 15px;
 }
 
-.c9 {
+.c8 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.c9:link {
-  color: #1d70b8;
-}
-
-.c9:visited {
-  color: #4c2c92;
-}
-
-.c9:hover {
-  color: #2b8cc4;
-}
-
-.c9:active {
-  color: #2b8cc4;
-}
-
-.c9:focus {
-  color: #0b0c0c;
-}
-
-.c9:focus {
+.c8:focus {
   outline: 3px solid #ffdd00;
   outline-offset: 0;
   background-color: #ffdd00;
 }
 
-.c8:link,
+.c8:link {
+  color: #1d70b8;
+}
+
 .c8:visited {
-  color: #454a4c;
+  color: #4c2c92;
 }
 
 .c8:hover {
+  color: #2b8cc4;
+}
+
+.c8:active {
+  color: #2b8cc4;
+}
+
+.c8:focus {
+  color: #0b0c0c;
+}
+
+.c9:link,
+.c9:visited {
+  color: #454a4c;
+}
+
+.c9:hover {
   color: #171819;
 }
 
@@ -5278,15 +4654,15 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
 }
 
 @media print {
-  .c9 {
+  .c8 {
     font-family: sans-serif;
   }
 }
 
 @media print {
-  .c9[href^="/"]::after,
-  .c9[href^="http://"]::after,
-  .c9[href^="https://"]::after {
+  .c8[href^="/"]::after,
+  .c8[href^="http://"]::after,
+  .c8[href^="https://"]::after {
     content: " (" attr(href) ")";
     font-size: 90%;
     word-wrap: break-word;
@@ -5427,11 +4803,14 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
           <MetaLinks
             heading="Support links"
           >
-            <FooterLink
+            <link__FooterLink
               href="/"
+              muted={false}
+              noVisitedState={false}
+              textColour={false}
             >
               Item 1
-            </FooterLink>
+            </link__FooterLink>
           </MetaLinks>
         }
       >
@@ -5499,36 +4878,19 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                   <li
                                     className="c7"
                                   >
-                                    <FooterLink
+                                    <link__FooterLink
                                       href="/"
+                                      muted={false}
+                                      noVisitedState={false}
+                                      textColour={false}
                                     >
-                                      <link__StyledFooterLink
+                                      <a
+                                        className="c8 c9"
                                         href="/"
                                       >
-                                        <LinkDocumented
-                                          className="c8"
-                                          href="/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          textColour={false}
-                                        >
-                                          <styled.a
-                                            className="c8"
-                                            href="/"
-                                            muted={false}
-                                            noVisitedState={false}
-                                            textColour={false}
-                                          >
-                                            <a
-                                              className="c9 c8"
-                                              href="/"
-                                            >
-                                              Item 1
-                                            </a>
-                                          </styled.a>
-                                        </LinkDocumented>
-                                      </link__StyledFooterLink>
-                                    </FooterLink>
+                                        Item 1
+                                      </a>
+                                    </link__FooterLink>
                                   </li>
                                 </list-item__ListItem>
                               </ul>
@@ -5565,41 +4927,21 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                 >
                                   All content is available under the
                                    
-                                  <FooterLink
+                                  <link__FooterLink
                                     href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                    muted={false}
+                                    noVisitedState={false}
                                     rel="license"
+                                    textColour={false}
                                   >
-                                    <link__StyledFooterLink
+                                    <a
+                                      className="c8 c9"
                                       href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                       rel="license"
                                     >
-                                      <LinkDocumented
-                                        className="c8"
-                                        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                        muted={false}
-                                        noVisitedState={false}
-                                        rel="license"
-                                        textColour={false}
-                                      >
-                                        <styled.a
-                                          className="c8"
-                                          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                          muted={false}
-                                          noVisitedState={false}
-                                          rel="license"
-                                          textColour={false}
-                                        >
-                                          <a
-                                            className="c9 c8"
-                                            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                            rel="license"
-                                          >
-                                            Open Government Licence v3.0
-                                          </a>
-                                        </styled.a>
-                                      </LinkDocumented>
-                                    </link__StyledFooterLink>
-                                  </FooterLink>
+                                      Open Government Licence v3.0
+                                    </a>
+                                  </link__FooterLink>
                                   , except where otherwise stated
                                 </span>
                               </licence__LicenceDescription>
@@ -5646,44 +4988,44 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
   flex-wrap: wrap;
 }
 
-.c9 {
+.c8 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.c9:link {
-  color: #1d70b8;
-}
-
-.c9:visited {
-  color: #4c2c92;
-}
-
-.c9:hover {
-  color: #2b8cc4;
-}
-
-.c9:active {
-  color: #2b8cc4;
-}
-
-.c9:focus {
-  color: #0b0c0c;
-}
-
-.c9:focus {
+.c8:focus {
   outline: 3px solid #ffdd00;
   outline-offset: 0;
   background-color: #ffdd00;
 }
 
-.c8:link,
+.c8:link {
+  color: #1d70b8;
+}
+
 .c8:visited {
-  color: #454a4c;
+  color: #4c2c92;
 }
 
 .c8:hover {
+  color: #2b8cc4;
+}
+
+.c8:active {
+  color: #2b8cc4;
+}
+
+.c8:focus {
+  color: #0b0c0c;
+}
+
+.c9:link,
+.c9:visited {
+  color: #454a4c;
+}
+
+.c9:hover {
   color: #171819;
 }
 
@@ -5821,15 +5163,15 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
 }
 
 @media print {
-  .c9 {
+  .c8 {
     font-family: sans-serif;
   }
 }
 
 @media print {
-  .c9[href^="/"]::after,
-  .c9[href^="http://"]::after,
-  .c9[href^="https://"]::after {
+  .c8[href^="/"]::after,
+  .c8[href^="http://"]::after,
+  .c8[href^="https://"]::after {
     content: " (" attr(href) ")";
     font-size: 90%;
     word-wrap: break-word;
@@ -6046,36 +5388,19 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                             <li
                               className="c7"
                             >
-                              <FooterLink
+                              <link__FooterLink
                                 href="/"
+                                muted={false}
+                                noVisitedState={false}
+                                textColour={false}
                               >
-                                <link__StyledFooterLink
+                                <a
+                                  className="c8 c9"
                                   href="/"
                                 >
-                                  <LinkDocumented
-                                    className="c8"
-                                    href="/"
-                                    muted={false}
-                                    noVisitedState={false}
-                                    textColour={false}
-                                  >
-                                    <styled.a
-                                      className="c8"
-                                      href="/"
-                                      muted={false}
-                                      noVisitedState={false}
-                                      textColour={false}
-                                    >
-                                      <a
-                                        className="c9 c8"
-                                        href="/"
-                                      >
-                                        Navigation item 1
-                                      </a>
-                                    </styled.a>
-                                  </LinkDocumented>
-                                </link__StyledFooterLink>
-                              </FooterLink>
+                                  Navigation item 1
+                                </a>
+                              </link__FooterLink>
                             </li>
                           </list-item__ListItem>
                         </ul>
@@ -6132,41 +5457,21 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
                             >
                               All content is available under the
                                
-                              <FooterLink
+                              <link__FooterLink
                                 href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                muted={false}
+                                noVisitedState={false}
                                 rel="license"
+                                textColour={false}
                               >
-                                <link__StyledFooterLink
+                                <a
+                                  className="c8 c9"
                                   href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                                   rel="license"
                                 >
-                                  <LinkDocumented
-                                    className="c8"
-                                    href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                    muted={false}
-                                    noVisitedState={false}
-                                    rel="license"
-                                    textColour={false}
-                                  >
-                                    <styled.a
-                                      className="c8"
-                                      href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                      muted={false}
-                                      noVisitedState={false}
-                                      rel="license"
-                                      textColour={false}
-                                    >
-                                      <a
-                                        className="c9 c8"
-                                        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                        rel="license"
-                                      >
-                                        Open Government Licence v3.0
-                                      </a>
-                                    </styled.a>
-                                  </LinkDocumented>
-                                </link__StyledFooterLink>
-                              </FooterLink>
+                                  Open Government Licence v3.0
+                                </a>
+                              </link__FooterLink>
                               , except where otherwise stated
                             </span>
                           </licence__LicenceDescription>

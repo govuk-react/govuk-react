@@ -3,7 +3,7 @@ import React from 'react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import Link from '@govuk-react/link';
 
-import { DocumentedComponent as ListItem } from '.';
+import { ListItem } from '.';
 
 export default {
   title: 'Typography/List item',

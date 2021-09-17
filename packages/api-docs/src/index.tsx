@@ -6,7 +6,6 @@ import fs from 'fs';
 import path from 'path';
 import glob from 'glob-promise';
 import chalk from 'chalk';
-import { parse } from 'react-docgen';
 import { promisify } from 'util';
 import _ from 'lodash';
 
@@ -15,6 +14,8 @@ import generateMarkdown from './markdown/generateMarkdown';
 // components is imported via require so that we can parse the names of exports
 /* eslint-disable-next-line @typescript-eslint/no-var-requires */
 const components = require('govuk-react');
+/* eslint-disable-next-line @typescript-eslint/no-var-requires */
+const docgen = require('react-docgen-typescript');
 
 function getComponentFolderName(file) {
   // '/' rather than 'path.sep' as, on Windows, the path has already been converted at this point
@@ -32,9 +33,23 @@ function getComponentNameFromFile(file) {
 }
 
 function getMarkdownForComponent(file) {
-  const src = fs.readFileSync(path.resolve(__dirname, file));
-  const componentInfo = parse(src);
   const componentName = getComponentNameFromFile(file);
+  const p = path.resolve(__dirname, file);
+  let componentInfo;
+  const parsedComponents: { displayName: string; filePath: string }[] = docgen.parse(p);
+  if (parsedComponents.length > 1) {
+    componentInfo = parsedComponents.find((parsedComponent) => parsedComponent.displayName === componentName);
+    if (!componentInfo) {
+      console.warn('more than one component found and no matching displayName found');
+      console.warn(parsedComponents.map(({ filePath, displayName }) => ({ filePath, displayName })));
+      [componentInfo] = parsedComponents;
+    }
+  } else {
+    [componentInfo] = parsedComponents;
+    if (componentInfo.displayName !== componentName) {
+      console.warn('displayName does not match component name', componentInfo.displayName, componentName);
+    }
+  }
   const componentFolderName = getComponentFolderName(file);
   return generateMarkdown(componentName, componentFolderName, componentInfo);
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Label from '.';
+import { Label } from '.';
 
 export default {
   title: 'Form/Label',

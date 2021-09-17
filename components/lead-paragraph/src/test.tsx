@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
-import LeadParagraph from '.';
+import { LeadParagraph } from '.';
 
 describe('LeadParagraph', () => {
   const example = 'example';

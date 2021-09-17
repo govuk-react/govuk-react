@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import BackLink from '.';
+import { BackLink } from '.';
 
 describe('Back Link', () => {
   it('renders contents without crashing', () => {
@@ -12,11 +12,9 @@ describe('Back Link', () => {
   });
 
   it('renders with default content', () => {
-    const { children } = BackLink.defaultProps;
     const { getByText } = render(<BackLink />);
 
-    expect(children).toBeDefined();
-    expect(getByText(children)).toBeInTheDocument();
+    expect(getByText('Back')).toBeInTheDocument();
   });
 
   it('calls onClick handler when clicked', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import { VisuallyHiddenDocumented as VisuallyHidden } from '.';
+import { VisuallyHidden } from '.';
 
 describe('VisuallyHidden', () => {
   it('matches snapshot', () => {

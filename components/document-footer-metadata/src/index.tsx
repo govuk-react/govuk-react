@@ -84,7 +84,7 @@ const StyledDefinition = styled('li')({
  *
  * - https://govuk-static.herokuapp.com/component-guide/document_footer
  */
-const DocumentFooterMetadata: React.FC<DocumentFooterMetadataProps> = ({
+export const DocumentFooterMetadata: React.FC<DocumentFooterMetadataProps> = ({
   from = undefined,
   partOf = undefined,
   other = undefined,

@@ -7,7 +7,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { FinalFormWrapper } from '@govuk-react/storybook-components';
 
 import MultiChoice from '@govuk-react/multi-choice';
-import Radio from '.';
+import { Radio } from '.';
 
 const required = (value) => (value ? undefined : 'Required');
 

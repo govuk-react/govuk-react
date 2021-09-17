@@ -7,6 +7,7 @@ Pagination
 ```
 <!-- STORY -->
 
+
 ### Usage
 
 ```jsx
@@ -29,6 +30,6 @@ import { Pagination } from 'govuk-react';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` |  | 
+
 
 

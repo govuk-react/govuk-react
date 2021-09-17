@@ -43,7 +43,7 @@ const StyledList = styled('ul')(
  * - https://govuk-static.herokuapp.com/component-guide/previous_and_next_navigation
  *
  */
-const Pagination: PaginationType = (props: PaginationProps) => <StyledList {...props} />;
+export const Pagination: PaginationType = (props: PaginationProps) => <StyledList {...props} />;
 
 interface PaginationType extends React.FC<PaginationProps> {
   Anchor: typeof Anchor;

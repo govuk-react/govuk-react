@@ -59,7 +59,7 @@ const BannerText = styled('span')({
  * - https://design-system.service.gov.uk/components/phase-banner/
  *
  */
-const PhaseBanner: React.FC<PhaseBannerProps> = ({ level, children, ...props }: PhaseBannerProps) => (
+export const PhaseBanner: React.FC<PhaseBannerProps> = ({ level, children, ...props }: PhaseBannerProps) => (
   <StyledBanner {...props}>
     <BannerContent>
       <Tag>{level}</Tag>

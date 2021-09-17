@@ -31,9 +31,6 @@
   "description": "A port of the govuk-frontend components for React using styled-components.",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "resolutions": {
-    "@types/react": "^16.8.4"
-  },
   "dependencies": {
     "govuk-colours": "^1.1.0"
   },
@@ -58,6 +55,7 @@
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^13.1.9",
+    "@types/styled-components": "^5.1.14",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^4.25.0",
     "babel-eslint": "^10.1.0",
@@ -76,6 +74,7 @@
     "enzyme-to-json": "^3.3.4",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-config-sonar": "0.0.8",
@@ -96,7 +95,7 @@
     "nyc": "^15.1.0",
     "prettier": "^2.3.0",
     "react": "^16.8.4",
-    "react-docgen": "^5.4.0",
+    "react-docgen-typescript": "^2.1.0",
     "react-dom": "^16.8.4",
     "react-final-form": "^6.5.3",
     "react-router-dom": "^5.2.0",

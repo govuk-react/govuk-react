@@ -3,7 +3,7 @@ import { BORDER_COLOUR } from 'govuk-colours';
 import { spacing } from '@govuk-react/lib';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
 
-const TabPanel: React.FC<TabPanelProps> = styled('section')(
+const TabPanel = styled('section')<TabPanelProps>(
   spacing.responsiveMargin({ size: 8, direction: 'bottom' }),
   {
     [MEDIA_QUERIES.TABLET]: {

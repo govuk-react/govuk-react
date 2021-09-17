@@ -1,5 +1,5 @@
 import { withKnobs } from '@storybook/addon-knobs';
-import MultiChoice from '.';
+import { MultiChoice } from '.';
 import MultiChoiceWithKnobs, { MultiChoiceWithKnobsHint, MultiChoiceWithKnobsError } from './fixtures';
 
 export default {

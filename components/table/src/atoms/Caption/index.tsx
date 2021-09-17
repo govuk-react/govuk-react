@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { FONT_WEIGHTS } from '@govuk-react/constants';
 
 const Caption = styled('caption')({
-  fontWeight: FONT_WEIGHTS.bold,
+  fontWeight: Number(FONT_WEIGHTS.bold),
   display: 'table-caption',
   textAlign: 'left',
 });

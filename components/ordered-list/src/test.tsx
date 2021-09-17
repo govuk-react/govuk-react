@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 import Link from '@govuk-react/link';
 import ListItem from '@govuk-react/list-item';
 
-import { DocumentedComponent as OrderedList } from '.';
+import { OrderedList } from '.';
 
 const wrapper = (
   <OrderedList>

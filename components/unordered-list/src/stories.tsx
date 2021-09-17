@@ -2,7 +2,7 @@ import React from 'react';
 
 import ListItem from '@govuk-react/list-item';
 import OrderedList from '@govuk-react/ordered-list';
-import UnorderedList from '.';
+import { UnorderedList } from '.';
 
 export default {
   title: 'Typography/Unordered list',

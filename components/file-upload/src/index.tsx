@@ -73,7 +73,7 @@ const StyledInput = styled('input')({
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/file-upload
  *
  */
-const FileUpload = React.forwardRef(
+export const FileUpload = React.forwardRef<HTMLInputElement, FileUploadProps>(
   ({ meta, children, hint, acceptedFormats, onChange, name, ...props }: FileUploadProps, ref) => (
     <Label {...props} error={meta.touched && !!meta.error}>
       <LabelText>{children}</LabelText>

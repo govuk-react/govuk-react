@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import Panel from '.';
+import { Panel } from '.';
 
 describe('Panel', () => {
   it('should render a panel without a body body', () => {

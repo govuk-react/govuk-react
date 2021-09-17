@@ -7,6 +7,7 @@ DocumentFooterMetadata
 ```
 <!-- STORY -->
 
+
 ### Usage
 
 
@@ -77,8 +78,6 @@ const otherData = [
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `from` |  | ```undefined``` |  | Array of JSX nodes to render underneath the `from:` title
- `other` |  | ```undefined``` |  | Array of Objects for any additional items, each object should contain an `id`, `title` and `content` property
- `partOf` |  | ```undefined``` |  | Array of JSX nodes to render underneath the `part of:` title
+
 
 

@@ -7,6 +7,12 @@ exports[`Link all options view matches snapshot: link with all options 1`] = `
   -moz-osx-font-smoothing: grayscale;
 }
 
+.c0:focus {
+  outline: 3px solid #ffdd00;
+  outline-offset: 0;
+  background-color: #ffdd00;
+}
+
 .c0:link {
   color: #1d70b8;
 }
@@ -25,12 +31,6 @@ exports[`Link all options view matches snapshot: link with all options 1`] = `
 
 .c0:focus {
   color: #0b0c0c;
-}
-
-.c0:focus {
-  outline: 3px solid #ffdd00;
-  outline-offset: 0;
-  background-color: #ffdd00;
 }
 
 .c0:link,
@@ -99,26 +99,19 @@ exports[`Link all options view matches snapshot: link with all options 1`] = `
 }
 
 <LinkWithAllOptionsOn>
-  <LinkDocumented
+  <styled.a
     href="#"
     muted={true}
     noVisitedState={true}
     textColour={true}
   >
-    <styled.a
+    <a
+      className="c0"
       href="#"
-      muted={true}
-      noVisitedState={true}
-      textColour={true}
     >
-      <a
-        className="c0"
-        href="#"
-      >
-        Link example
-      </a>
-    </styled.a>
-  </LinkDocumented>
+      Link example
+    </a>
+  </styled.a>
 </LinkWithAllOptionsOn>
 `;
 
@@ -127,6 +120,12 @@ exports[`Link basic view matches snapshot: plain link 1`] = `
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.c0:focus {
+  outline: 3px solid #ffdd00;
+  outline-offset: 0;
+  background-color: #ffdd00;
 }
 
 .c0:link {
@@ -149,12 +148,6 @@ exports[`Link basic view matches snapshot: plain link 1`] = `
   color: #0b0c0c;
 }
 
-.c0:focus {
-  outline: 3px solid #ffdd00;
-  outline-offset: 0;
-  background-color: #ffdd00;
-}
-
 @media print {
   .c0 {
     font-family: sans-serif;
@@ -172,25 +165,18 @@ exports[`Link basic view matches snapshot: plain link 1`] = `
 }
 
 <LinkExample>
-  <LinkDocumented
+  <styled.a
     href="#"
     muted={false}
     noVisitedState={false}
     textColour={false}
   >
-    <styled.a
+    <a
+      className="c0"
       href="#"
-      muted={false}
-      noVisitedState={false}
-      textColour={false}
     >
-      <a
-        className="c0"
-        href="#"
-      >
-        Link example
-      </a>
-    </styled.a>
-  </LinkDocumented>
+      Link example
+    </a>
+  </styled.a>
 </LinkExample>
 `;

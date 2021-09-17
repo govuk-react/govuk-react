@@ -9,7 +9,7 @@ import Link from '@govuk-react/link';
 import Radio from '@govuk-react/radio';
 import PhaseBanner from '@govuk-react/phase-banner';
 
-import LoadingBox from '.';
+import { LoadingBox } from '.';
 
 export default {
   title: 'Utility/Loading box',

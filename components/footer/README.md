@@ -7,6 +7,7 @@ Footer
 ```
 <!-- STORY -->
 
+
 ### Usage
 
 Simple
@@ -96,9 +97,6 @@ NB <Footer.Link /> is styled extention of @govuk-react/link
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | ```undefined``` |  | Footer navigation links
- `container` |  | ```Footer.WidthContainer``` |  | Override the default footer container component.<br/>`children`, `copyright` and `meta` will be placed inside this component.
- `copyright` |  | ```undefined``` |  | Copyright information
- `meta` |  | ```undefined``` |  | Meta text and links
+
 
 

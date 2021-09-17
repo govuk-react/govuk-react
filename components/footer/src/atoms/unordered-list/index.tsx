@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { GUTTER, MEDIA_QUERIES } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
 
-const UnorderedList: React.FC<UnorderedListProps> = styled('ul')(
+const UnorderedList = styled('ul')<UnorderedListProps>(
   ({ inline }) =>
     inline
       ? {

@@ -1,3 +1,5 @@
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+
 import React from 'react';
 import styled from 'styled-components';
 import { FOCUS_COLOUR } from 'govuk-colours';
@@ -17,7 +19,7 @@ const labelPaddingLeftRight = SPACING_POINTS[3];
 // So for the circular radios we bump the default to make it look visually consistent.
 const RADIOS_FOCUS_WIDTH = `${FOCUS_WIDTH_RAW + 1}px`;
 
-const Label = styled('label')(
+const Label = styled('label')<{ inline?: boolean } & WithWhiteSpaceProps>(
   typography.font({ size: 19 }),
   {
     display: 'block',
@@ -186,13 +188,15 @@ const StyledRadioHint = styled(HintText)({
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/radios/_radios.scss
  * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
  */
-const Radio = React.forwardRef(({ inline, children, className, hint, ...input }: RadioProps, ref) => (
-  <Label inline={inline} className={className}>
-    <Input type="radio" ref={ref} {...input} />
-    <LabelText>{children}</LabelText>
-    {hint && <StyledRadioHint>{hint}</StyledRadioHint>}
-  </Label>
-));
+export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
+  ({ inline, children, className, hint, ...input }: RadioProps, ref) => (
+    <Label inline={inline} className={className}>
+      <Input type="radio" ref={ref} {...input} />
+      <LabelText>{children}</LabelText>
+      {hint && <StyledRadioHint>{hint}</StyledRadioHint>}
+    </Label>
+  )
+);
 
 Radio.defaultProps = {
   hint: undefined,

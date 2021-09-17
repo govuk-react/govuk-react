@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ErrorText from '.';
+import { ErrorText } from '.';
 
 export default {
   title: 'Form/Error message',
