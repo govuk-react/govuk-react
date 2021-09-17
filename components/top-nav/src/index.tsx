@@ -152,6 +152,8 @@ export class TopNav extends Component<TopNavProps, { navigationOpen: boolean }> 
 
   static NavLink = NavLinkAnchor;
 
+  static displayName = 'TopNav';
+
   static defaultProps = {
     bgColor: BLACK,
     color: WHITE,
@@ -219,7 +221,5 @@ export class TopNav extends Component<TopNavProps, { navigationOpen: boolean }> 
     );
   }
 }
-
-TopNav.displayName = 'TopNav';
 
 export default TopNav;
