@@ -26,7 +26,7 @@ const StyledListItem = styled('li')({
   },
 });
 
-const StyledHyperLink = styled('a')<TabProps>(
+const StyledHyperLink = styled('a')<TabOwnProps>(
   typography.font({ size: 19 }),
   link.common(),
   link.styleDefault,
@@ -64,7 +64,7 @@ const StyledHyperLink = styled('a')<TabProps>(
   })
 );
 
-const Tab: React.FC<TabProps> = (props) => (
+const Tab: React.FC<React.ComponentProps<typeof StyledHyperLink> & TabOwnProps> = (props) => (
   <StyledListItem>
     <StyledHyperLink {...props} />
   </StyledListItem>
@@ -78,13 +78,9 @@ Tab.defaultProps = {
   href: undefined,
 };
 
-interface TabProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+interface TabOwnProps {
   /** Different stylings for the Tab displaying content */
   selected?: boolean;
-
-  as?: React.ElementType;
-  // TODO: #953
-  to?: string;
 }
 
 export default Tab;

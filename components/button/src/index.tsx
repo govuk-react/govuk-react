@@ -176,12 +176,6 @@ interface ButtonOwnProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, 
    * which defaults to govuk white
    */
   buttonTextColour?: string;
-  as?: React.ElementType;
-}
-
-// TODO: #953 These are props that are likely to be passed when using the `as` prop
-interface ButtonProps extends ButtonOwnProps {
-  to?: string;
 }
 
 /**
@@ -215,13 +209,14 @@ interface ButtonProps extends ButtonOwnProps {
  *   - see https://www.w3.org/TR/WCAG20-TECHS/G18.html
  *   - can use Polished's `readableColor` call, but translate their black to govuk's black
  */
-export const Button: React.ForwardRefExoticComponent<ButtonProps & React.RefAttributes<HTMLButtonElement>> =
-  React.forwardRef(({ start, children, icon, ...props }: ButtonProps, ref) => (
+export const Button = React.forwardRef<typeof StyledButton, ButtonOwnProps & React.ComponentProps<typeof StyledButton>>(
+  ({ start, children, icon, ...props }: ButtonOwnProps & React.ComponentProps<typeof StyledButton>, ref) => (
     <StyledButton ref={ref} isStart={start} icon={icon} {...props}>
       {icon ? <ButtonContents>{children}</ButtonContents> : children}
       {icon}
     </StyledButton>
-  ));
+  )
+);
 
 Button.defaultProps = {
   icon: undefined,
@@ -231,9 +226,6 @@ Button.defaultProps = {
   buttonHoverColour: undefined,
   buttonShadowColour: undefined,
   buttonTextColour: undefined,
-  as: undefined,
-  // TODO: #953
-  to: undefined,
 };
 
 Button.displayName = 'Button';
