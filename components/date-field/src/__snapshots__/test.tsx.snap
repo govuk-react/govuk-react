@@ -292,19 +292,21 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                       Day
                     </span>
                   </LabelText>
-                  <src__StyledInput
+                  <Input
                     error={true}
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
+                    type="text"
                   >
                     <input
                       className="c6"
                       onBlur={[Function]}
                       onChange={[Function]}
                       onFocus={[Function]}
+                      type="text"
                     />
-                  </src__StyledInput>
+                  </Input>
                 </label>
               </input__StyledLabel>
               <input__StyledLabel
@@ -321,19 +323,21 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                       Month
                     </span>
                   </LabelText>
-                  <src__StyledInput
+                  <Input
                     error={true}
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
+                    type="text"
                   >
                     <input
                       className="c6"
                       onBlur={[Function]}
                       onChange={[Function]}
                       onFocus={[Function]}
+                      type="text"
                     />
-                  </src__StyledInput>
+                  </Input>
                 </label>
               </input__StyledLabel>
               <input__StyledLabel
@@ -350,19 +354,21 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
                       Year
                     </span>
                   </LabelText>
-                  <src__StyledInput
+                  <Input
                     error={true}
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
+                    type="text"
                   >
                     <input
                       className="c6"
                       onBlur={[Function]}
                       onChange={[Function]}
                       onFocus={[Function]}
+                      type="text"
                     />
-                  </src__StyledInput>
+                  </Input>
                 </label>
               </input__StyledLabel>
             </div>
@@ -630,19 +636,21 @@ exports[`DateField should support null value: null value 1`] = `
                       Day
                     </span>
                   </LabelText>
-                  <src__StyledInput
+                  <Input
                     error={false}
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
+                    type="text"
                   >
                     <input
                       className="c5"
                       onBlur={[Function]}
                       onChange={[Function]}
                       onFocus={[Function]}
+                      type="text"
                     />
-                  </src__StyledInput>
+                  </Input>
                 </label>
               </input__StyledLabel>
               <input__StyledLabel
@@ -659,19 +667,21 @@ exports[`DateField should support null value: null value 1`] = `
                       Month
                     </span>
                   </LabelText>
-                  <src__StyledInput
+                  <Input
                     error={false}
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
+                    type="text"
                   >
                     <input
                       className="c5"
                       onBlur={[Function]}
                       onChange={[Function]}
                       onFocus={[Function]}
+                      type="text"
                     />
-                  </src__StyledInput>
+                  </Input>
                 </label>
               </input__StyledLabel>
               <input__StyledLabel
@@ -688,19 +698,21 @@ exports[`DateField should support null value: null value 1`] = `
                       Year
                     </span>
                   </LabelText>
-                  <src__StyledInput
+                  <Input
                     error={false}
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
+                    type="text"
                   >
                     <input
                       className="c5"
                       onBlur={[Function]}
                       onChange={[Function]}
                       onFocus={[Function]}
+                      type="text"
                     />
-                  </src__StyledInput>
+                  </Input>
                 </label>
               </input__StyledLabel>
             </div>
@@ -984,11 +996,12 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                       Day
                     </span>
                   </LabelText>
-                  <src__StyledInput
+                  <Input
                     error={false}
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
+                    type="text"
                     value="1"
                   >
                     <input
@@ -996,9 +1009,10 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                       onBlur={[Function]}
                       onChange={[Function]}
                       onFocus={[Function]}
+                      type="text"
                       value="1"
                     />
-                  </src__StyledInput>
+                  </Input>
                 </label>
               </input__StyledLabel>
               <input__StyledLabel
@@ -1015,11 +1029,12 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                       Month
                     </span>
                   </LabelText>
-                  <src__StyledInput
+                  <Input
                     error={false}
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
+                    type="text"
                     value="2"
                   >
                     <input
@@ -1027,9 +1042,10 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                       onBlur={[Function]}
                       onChange={[Function]}
                       onFocus={[Function]}
+                      type="text"
                       value="2"
                     />
-                  </src__StyledInput>
+                  </Input>
                 </label>
               </input__StyledLabel>
               <input__StyledLabel
@@ -1046,11 +1062,12 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                       Year
                     </span>
                   </LabelText>
-                  <src__StyledInput
+                  <Input
                     error={false}
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
+                    type="text"
                     value="3"
                   >
                     <input
@@ -1058,9 +1075,10 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
                       onBlur={[Function]}
                       onChange={[Function]}
                       onFocus={[Function]}
+                      type="text"
                       value="3"
                     />
-                  </src__StyledInput>
+                  </Input>
                 </label>
               </input__StyledLabel>
             </div>

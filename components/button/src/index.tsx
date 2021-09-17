@@ -236,4 +236,6 @@ Button.defaultProps = {
   to: undefined,
 };
 
+Button.displayName = 'Button';
+
 export default Button;

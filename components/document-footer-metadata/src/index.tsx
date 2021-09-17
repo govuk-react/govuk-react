@@ -151,6 +151,8 @@ DocumentFooterMetadata.defaultProps = {
   other: undefined,
 };
 
+DocumentFooterMetadata.displayName = 'DocumentFooterMetadata';
+
 interface DocumentFooterMetadataProps {
   /**
    * Array of JSX nodes to render underneath the `from:` title

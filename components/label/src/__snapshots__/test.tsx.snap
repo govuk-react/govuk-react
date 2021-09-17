@@ -28,7 +28,7 @@ exports[`Label matches withError snapshot: with error mount 1`] = `
   }
 }
 
-<src__Label
+<Label
   error={true}
 >
   <label
@@ -36,7 +36,7 @@ exports[`Label matches withError snapshot: with error mount 1`] = `
   >
     example
   </label>
-</src__Label>
+</Label>
 `;
 
 exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
@@ -64,7 +64,7 @@ exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<src__Label
+<Label
   error={false}
 >
   <label
@@ -72,5 +72,5 @@ exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
   >
     example
   </label>
-</src__Label>
+</Label>
 `;

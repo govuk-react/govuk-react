@@ -44,4 +44,6 @@ export const GridRow = styled('div')(
   spacing.withWhiteSpace()
 );
 
+GridRow.displayName = 'GridRow';
+
 export default GridRow;

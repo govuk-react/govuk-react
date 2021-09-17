@@ -20,11 +20,9 @@ const Cell = styled('td')<CellProps>(
 );
 interface CellProps extends React.HTMLAttributes<HTMLTableCellElement>, WithWidthProps {
   alignRight?: boolean;
-  children: React.ReactNode;
   isHeader?: boolean;
   numeric?: boolean;
   bold?: boolean;
-  as?: React.ElementType;
 }
 
 export default Cell;

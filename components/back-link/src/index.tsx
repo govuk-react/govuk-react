@@ -65,4 +65,6 @@ BackLink.defaultProps = {
   children: 'Back',
 };
 
+BackLink.displayName = 'BackLink';
+
 export default BackLink;

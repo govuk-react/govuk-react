@@ -143,6 +143,8 @@ const TabsContainer = styled('div')(
  */
 export const Tabs: TabsType = (props: TabsProps) => <TabsContainer {...props} />;
 
+Tabs.displayName = 'Tabs';
+
 interface TabsType extends React.FC<TabsProps> {
   Tab: typeof Tab;
   List: typeof List;

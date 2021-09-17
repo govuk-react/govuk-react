@@ -31,4 +31,7 @@ export const GlobalStyle = createGlobalStyle`
    -moz-osx-font-smoothing: grayscale;
  }
 `;
+
+GlobalStyle.displayName = 'GlobalStyle';
+
 export default GlobalStyle;

@@ -64,4 +64,6 @@ Label.defaultProps = {
   error: false,
 };
 
+Label.displayName = 'Label';
+
 export default Label;

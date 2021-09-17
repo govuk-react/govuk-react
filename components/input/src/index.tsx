@@ -12,7 +12,31 @@ import {
 } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 
-export const StyledInput = styled('input')<InputProps>(
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ *
+ * ```jsx
+ * import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
+ *
+ * <Label>
+ *   <LabelText>Example label</LabelText>
+ *   <HintText>Example hint</HintText>
+ *   <ErrorText>Example error</ErrorText>
+ *   <Input value={value} onClick={onClick} />
+ * </Label>
+ * ```
+ *
+ * ### References:
+ *
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
+ *
+ * ### TODO:
+ * - Remove `errorColor` and provide examples on how to extend the component
+ */
+export const Input = styled('input')<InputProps>(
   typography.font({ size: 19 }),
   FOCUSABLE,
   {
@@ -43,45 +67,15 @@ export const StyledInput = styled('input')<InputProps>(
   spacing.withWhiteSpace({ marginBottom: 0 })
 );
 
-/**
- *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
- *
- * <Label>
- *   <LabelText>Example label</LabelText>
- *   <HintText>Example hint</HintText>
- *   <ErrorText>Example error</ErrorText>
- *   <Input value={value} onClick={onClick} />
- * </Label>
- * ```
- *
- * ### References:
- *
- * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
- *
- * ### TODO:
- * - Remove `errorColor` and provide examples on how to extend the component
- */
-export const Input = React.forwardRef<HTMLInputElement, InputProps>((props: InputProps, ref) => (
-  <StyledInput ref={ref} {...props} />
-));
-
 Input.defaultProps = {
   type: 'text',
   error: false,
   errorColor: undefined,
 };
 
+Input.displayName = 'Input';
+
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement>, WithWhiteSpaceProps {
-  /**
-   * HTML `<Input />` type
-   */
-  type?: string;
   error?: boolean;
   errorColor?: string;
 }

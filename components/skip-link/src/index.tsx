@@ -40,4 +40,6 @@ SkipLink.defaultProps = {
   href: '#content',
 };
 
+SkipLink.displayName = 'SkipLink';
+
 export default SkipLink;

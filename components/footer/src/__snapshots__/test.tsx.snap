@@ -1769,7 +1769,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                           <MetaLinks
                             heading="Support links"
                           >
-                            <src__VisuallyHidden
+                            <VisuallyHidden
                               focusable={false}
                               important={true}
                             >
@@ -1795,7 +1795,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                   </Heading>
                                 </H2>
                               </span>
-                            </src__VisuallyHidden>
+                            </VisuallyHidden>
                             <unordered-list__UnorderedList
                               inline={true}
                             >
@@ -2370,7 +2370,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                           <MetaLinks
                             heading="Support links"
                           >
-                            <src__VisuallyHidden
+                            <VisuallyHidden
                               focusable={false}
                               important={true}
                             >
@@ -2396,7 +2396,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                   </Heading>
                                 </H2>
                               </span>
-                            </src__VisuallyHidden>
+                            </VisuallyHidden>
                             <unordered-list__UnorderedList
                               inline={true}
                             >
@@ -3450,7 +3450,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                           <MetaLinks
                             heading="Support links"
                           >
-                            <src__VisuallyHidden
+                            <VisuallyHidden
                               focusable={false}
                               important={true}
                             >
@@ -3476,7 +3476,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                   </Heading>
                                 </H2>
                               </span>
-                            </src__VisuallyHidden>
+                            </VisuallyHidden>
                             <unordered-list__UnorderedList
                               inline={true}
                             >
@@ -4839,7 +4839,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                           <MetaLinks
                             heading="Support links"
                           >
-                            <src__VisuallyHidden
+                            <VisuallyHidden
                               focusable={false}
                               important={true}
                             >
@@ -4865,7 +4865,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
                                   </Heading>
                                 </H2>
                               </span>
-                            </src__VisuallyHidden>
+                            </VisuallyHidden>
                             <unordered-list__UnorderedList
                               inline={true}
                             >

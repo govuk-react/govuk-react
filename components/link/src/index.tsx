@@ -58,4 +58,6 @@ Link.defaultProps = {
   noVisitedState: false,
 };
 
+Link.displayName = 'Link';
+
 export default Link;

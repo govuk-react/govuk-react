@@ -111,6 +111,8 @@ Heading.defaultProps = {
   size: 'XLARGE',
 };
 
+Heading.displayName = 'Heading';
+
 interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement>, WithWhiteSpaceProps {
   /**
    * Semantic heading tag to use (e.g. 'h3')

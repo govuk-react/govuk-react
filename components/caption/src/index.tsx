@@ -71,4 +71,6 @@ Caption.defaultProps = {
   size: 'XL',
 };
 
+Caption.displayName = 'Caption';
+
 export default Caption;

@@ -188,6 +188,8 @@ LoadingBox.defaultProps = {
   timeOut: 200,
 };
 
+LoadingBox.displayName = 'LoadingBox';
+
 interface LoadingBoxProps {
   /**
    * One or more children nodes that loading box will overlay

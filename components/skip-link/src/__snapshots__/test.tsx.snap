@@ -87,7 +87,7 @@ exports[`SkipLink matches snapshot: SkipLink 1`] = `
   }
 }
 
-<src__SkipLink
+<SkipLink
   href="#content"
 >
   <a
@@ -96,5 +96,5 @@ exports[`SkipLink matches snapshot: SkipLink 1`] = `
   >
     Example
   </a>
-</src__SkipLink>
+</SkipLink>
 `;

@@ -1,6 +1,5 @@
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
-import React from 'react';
 import styled from 'styled-components';
 import { MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
@@ -11,11 +10,7 @@ function translateType(type) {
 }
 
 interface OrderedListProps extends WithWhiteSpaceProps {
-  /** One or more ListItem components */
-  children: React.ReactNode;
-  /** CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend */
   listStyleType?: string;
-  as?: React.ElementType;
 }
 
 /**
@@ -99,8 +94,9 @@ export const OrderedList = styled('ol')<OrderedListProps>(
 
 OrderedList.defaultProps = {
   listStyleType: undefined,
-  as: undefined,
 };
+
+OrderedList.displayName = 'OrderedList';
 
 // Export un-wrapped styled component
 export default OrderedList;

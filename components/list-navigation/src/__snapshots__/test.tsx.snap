@@ -79,22 +79,22 @@ exports[`ListNavigation matches wrapper snapshot: wrapper mount 1`] = `
   <UnorderedList
     listStyleType="square"
   >
-    <src__OrderedList
+    <OrderedList
       as="ul"
       listStyleType="square"
     >
       <ul
         className="c0 c1"
       >
-        <src__ListItem>
+        <ListItem>
           <li
             className="c2 c3"
           >
             Example
           </li>
-        </src__ListItem>
+        </ListItem>
       </ul>
-    </src__OrderedList>
+    </OrderedList>
   </UnorderedList>
 </ListNavigation>
 `;

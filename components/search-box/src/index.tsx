@@ -110,4 +110,6 @@ interface SearchBoxType<T = HTMLDivElement>
 SearchBox.Input = Input;
 SearchBox.Button = Button;
 
+SearchBox.displayName = 'SearchBox';
+
 export default SearchBox;

@@ -64,4 +64,6 @@ interface FieldsetProps extends WithWhiteSpaceProps {
 
 Fieldset.Legend = Legend;
 
+Fieldset.displayName = 'Fieldset';
+
 export default Fieldset;

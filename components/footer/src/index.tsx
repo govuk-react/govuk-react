@@ -139,6 +139,8 @@ export const Footer: FooterType = ({
   </FooterContainer>
 );
 
+Footer.displayName = 'Footer';
+
 interface FooterType extends React.FC<FooterProps> {
   Link: typeof Link;
   Navigation: typeof Navigation;

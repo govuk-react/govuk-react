@@ -110,6 +110,8 @@ Details.defaultProps = {
   open: false,
 };
 
+Details.displayName = 'Details';
+
 interface DetailsProps {
   /** The content that will be displayed when details are revealed */
   children?: React.ReactNode;

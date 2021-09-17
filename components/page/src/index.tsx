@@ -102,4 +102,6 @@ Page.defaultProps = {
   container: Page.WidthContainer,
 };
 
+Page.displayName = 'Page';
+
 export default Page;

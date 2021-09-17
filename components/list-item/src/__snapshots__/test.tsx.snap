@@ -25,11 +25,11 @@ exports[`ListItem matches wrapper snapshot: list item mount 1`] = `
   }
 }
 
-<src__ListItem>
+<ListItem>
   <li
     className="c0"
   >
     example
   </li>
-</src__ListItem>
+</ListItem>
 `;

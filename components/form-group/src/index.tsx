@@ -53,4 +53,6 @@ FormGroup.defaultProps = {
   error: false,
 };
 
+FormGroup.displayName = 'FormGroup';
+
 export default FormGroup;

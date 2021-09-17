@@ -130,7 +130,7 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
     }
   }
 >
-  <src__Label
+  <Label
     error={true}
   >
     <label
@@ -160,7 +160,7 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
         />
       </src__TextAreaField>
     </label>
-  </src__Label>
+  </Label>
 </TextArea>
 `;
 
@@ -285,7 +285,7 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   input={Object {}}
   meta={Object {}}
 >
-  <src__Label
+  <Label
     error={false}
   >
     <label
@@ -314,7 +314,7 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
         />
       </src__TextAreaField>
     </label>
-  </src__Label>
+  </Label>
 </TextArea>
 `;
 
@@ -412,7 +412,7 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   input={Object {}}
   meta={Object {}}
 >
-  <src__Label
+  <Label
     error={false}
   >
     <label
@@ -434,6 +434,6 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
         />
       </src__TextAreaField>
     </label>
-  </src__Label>
+  </Label>
 </TextArea>
 `;
