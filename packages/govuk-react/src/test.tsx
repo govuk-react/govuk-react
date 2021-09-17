@@ -17,15 +17,34 @@ describe('Exports', () => {
 const dirs = (p) => fs.readdirSync(p).filter((f) => fs.statSync(path.join(p, f)).isDirectory());
 
 describe('Components', () => {
-  // all componenents are dependencies of govuk-react
-  // if needed in future, can add an exclusion list/array to this test
   const components = dirs(path.join(__dirname, '../../../components'));
 
-  // TODO: this fails if a component is deleted/renamed and es/lib/node_modules are left behind.
-  // We either need a clean command that can be run before tests or check the existence of package.json in each component folder.
-  components.map((component) =>
-    it(`@govuk-react/${component} is in dependencies`, () => {
-      expect(!!pkg.dependencies[`@govuk-react/${component}`]).toBe(true);
+  // filter out any build artifacts from deleted components that may be in gitignore
+  const componentsWithPackageFile = components.filter((componentName) => {
+    const packageFile = path.join(path.join(__dirname, '../../../components'), componentName, 'package.json');
+    return fs.existsSync(packageFile);
+  });
+
+  componentsWithPackageFile.map((component) =>
+    describe(`@govuk-react/${component}`, () => {
+      const pascal = kebabCaseToPascalCase(component);
+
+      it(`is in dependencies`, () => {
+        expect(!!pkg.dependencies[`@govuk-react/${component}`]).toBe(true);
+      });
+
+      it(`is exported as ${pascal}`, () => {
+        expect(!!packageExports[pascal]).toBe(true);
+      });
+
+      it(`has displayName set to ${pascal}`, () => {
+        expect(packageExports[pascal].displayName).toBe(pascal);
+      });
     })
   );
 });
+
+function kebabCaseToPascalCase(str: string): string {
+  const camel = str.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+  return camel.charAt(0).toUpperCase() + camel.slice(1);
+}
