@@ -52,6 +52,8 @@ interface PaginationProps {
   children: React.ReactNode;
 }
 
+Pagination.displayName = 'Pagination';
+
 Pagination.Anchor = Anchor;
 
 export default Pagination;

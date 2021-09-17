@@ -133,6 +133,8 @@ Table.defaultProps = {
   head: undefined,
 };
 
+Table.displayName = 'Table';
+
 interface TableType extends React.FC<TableProps> {
   CellHeader: typeof CellHeader;
   Row: typeof Row;

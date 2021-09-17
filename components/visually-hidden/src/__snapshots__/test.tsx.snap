@@ -29,7 +29,7 @@ exports[`VisuallyHidden focusable version matches snapshot: focusable 1`] = `
   white-space: inherit !important;
 }
 
-<src__VisuallyHidden
+<VisuallyHidden
   focusable={true}
   important={true}
 >
@@ -39,7 +39,7 @@ exports[`VisuallyHidden focusable version matches snapshot: focusable 1`] = `
   >
     Example
   </span>
-</src__VisuallyHidden>
+</VisuallyHidden>
 `;
 
 exports[`VisuallyHidden matches snapshot: default render 1`] = `
@@ -58,7 +58,7 @@ exports[`VisuallyHidden matches snapshot: default render 1`] = `
   padding: 0 !important;
 }
 
-<src__VisuallyHidden
+<VisuallyHidden
   focusable={false}
   important={true}
 >
@@ -67,7 +67,7 @@ exports[`VisuallyHidden matches snapshot: default render 1`] = `
   >
     Example
   </span>
-</src__VisuallyHidden>
+</VisuallyHidden>
 `;
 
 exports[`VisuallyHidden with important={false} matches snapshot: not important 1`] = `
@@ -86,7 +86,7 @@ exports[`VisuallyHidden with important={false} matches snapshot: not important 1
   padding: 0;
 }
 
-<src__VisuallyHidden
+<VisuallyHidden
   focusable={false}
   important={false}
 >
@@ -95,5 +95,5 @@ exports[`VisuallyHidden with important={false} matches snapshot: not important 1
   >
     Example
   </span>
-</src__VisuallyHidden>
+</VisuallyHidden>
 `;

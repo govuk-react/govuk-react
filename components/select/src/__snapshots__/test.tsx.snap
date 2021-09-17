@@ -174,7 +174,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
     }
   }
 >
-  <src__Label
+  <Label
     error={true}
     errorText="example"
   >
@@ -212,7 +212,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
         </select>
       </src__StyledSelect>
     </label>
-  </src__Label>
+  </Label>
 </Select>
 `;
 
@@ -326,7 +326,7 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   label="example"
   meta={Object {}}
 >
-  <src__Label
+  <Label
     error={false}
   >
     <label
@@ -347,6 +347,6 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
         </select>
       </src__StyledSelect>
     </label>
-  </src__Label>
+  </Label>
 </Select>
 `;

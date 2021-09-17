@@ -66,4 +66,6 @@ ListNavigation.defaultProps = {
   listStyleType: undefined,
 };
 
+ListNavigation.displayName = 'ListNavigation';
+
 export default ListNavigation;

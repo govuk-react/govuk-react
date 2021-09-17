@@ -36,4 +36,6 @@ export const ListItem = styled('li')(
   spacing.withWhiteSpace()
 );
 
+ListItem.displayName = 'ListItem';
+
 export default ListItem;

@@ -53,4 +53,6 @@ export const RelatedItems = styled('div')(
   spacing.withWhiteSpace({ marginBottom: 0 })
 );
 
+RelatedItems.displayName = 'RelatedItems';
+
 export default RelatedItems;

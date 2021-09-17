@@ -39,11 +39,11 @@ exports[`LeadParagraph matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<src__LeadParagraph>
+<LeadParagraph>
   <p
     className="c0"
   >
     example
   </p>
-</src__LeadParagraph>
+</LeadParagraph>
 `;

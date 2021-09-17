@@ -51,4 +51,6 @@ UnorderedList.defaultProps = {
   listStyleType: undefined,
 };
 
+UnorderedList.displayName = 'UnorderedList';
+
 export default UnorderedList;

@@ -101,8 +101,9 @@ export const DateField: DateFieldType = ({
     />
   </StyledContainer>
 );
+DateField.displayName = 'DateField';
 
-interface DateFieldType extends React.FC<DateFieldProps> {
+export interface DateFieldType extends React.FC<DateFieldProps> {
   Input: typeof Input;
   Container: typeof StyledContainer;
 }

@@ -98,7 +98,7 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
             <UnorderedList
               listStyleType="none"
             >
-              <src__OrderedList
+              <OrderedList
                 as="ul"
                 listStyleType="none"
               >
@@ -124,7 +124,7 @@ exports[`DocumentFooterMetadata matches snapshot: enzyme.mount 1`] = `
                     </li>
                   </src__StyledDefinition>
                 </ul>
-              </src__OrderedList>
+              </OrderedList>
             </UnorderedList>
           </div>
         </div>

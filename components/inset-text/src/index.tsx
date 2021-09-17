@@ -41,4 +41,6 @@ export const InsetText = styled('div')(
   }
 );
 
+InsetText.displayName = 'InsetText';
+
 export default InsetText;

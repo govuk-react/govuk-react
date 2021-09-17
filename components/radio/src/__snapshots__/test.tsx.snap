@@ -129,7 +129,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
   }
 }
 
-<ForwardRef
+<Radio
   hint="Hint text"
   inline={false}
 >
@@ -163,7 +163,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
       </src__StyledRadioHint>
     </label>
   </src__Label>
-</ForwardRef>
+</Radio>
 `;
 
 exports[`Radio disabled: disabled 1`] = `
@@ -263,7 +263,7 @@ exports[`Radio disabled: disabled 1`] = `
   }
 }
 
-<ForwardRef
+<Radio
   disabled={true}
   inline={false}
 >
@@ -292,7 +292,7 @@ exports[`Radio disabled: disabled 1`] = `
       </src__LabelText>
     </label>
   </src__Label>
-</ForwardRef>
+</Radio>
 `;
 
 exports[`Radio matches snapshot for inline: inline mount 1`] = `
@@ -400,7 +400,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   }
 }
 
-<ForwardRef
+<Radio
   inline={true}
   name="example"
 >
@@ -429,7 +429,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
       </src__LabelText>
     </label>
   </src__Label>
-</ForwardRef>
+</Radio>
 `;
 
 exports[`Radio matches snapshot: standard mount 1`] = `
@@ -529,7 +529,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   }
 }
 
-<ForwardRef
+<Radio
   inline={false}
   name="example"
 >
@@ -558,5 +558,5 @@ exports[`Radio matches snapshot: standard mount 1`] = `
       </src__LabelText>
     </label>
   </src__Label>
-</ForwardRef>
+</Radio>
 `;
