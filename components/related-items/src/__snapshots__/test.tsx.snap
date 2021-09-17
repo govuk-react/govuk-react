@@ -192,7 +192,7 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<src__RelatedItems>
+<RelatedItems>
   <div
     className="c0"
   >
@@ -217,18 +217,18 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
     <UnorderedList
       listStyleType="none"
     >
-      <src__OrderedList
+      <OrderedList
         as="ul"
         listStyleType="none"
       >
         <ul
           className="c2 c3"
         >
-          <src__ListItem>
+          <ListItem>
             <li
               className="c4 c5"
             >
-              <styled.a
+              <Link
                 href="https://example.com"
                 muted={false}
                 noVisitedState={false}
@@ -240,14 +240,14 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                 >
                   Link A
                 </a>
-              </styled.a>
+              </Link>
             </li>
-          </src__ListItem>
-          <src__ListItem>
+          </ListItem>
+          <ListItem>
             <li
               className="c4 c5"
             >
-              <styled.a
+              <Link
                 href="https://example.com"
                 muted={false}
                 noVisitedState={false}
@@ -259,14 +259,14 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                 >
                   Link B
                 </a>
-              </styled.a>
+              </Link>
             </li>
-          </src__ListItem>
-          <src__ListItem>
+          </ListItem>
+          <ListItem>
             <li
               className="c4 c5"
             >
-              <styled.a
+              <Link
                 href="https://example.com"
                 muted={false}
                 noVisitedState={false}
@@ -280,12 +280,12 @@ exports[`RelatedItems matches wrapper snapshot: wrapper mount 1`] = `
                     more
                   </strong>
                 </a>
-              </styled.a>
+              </Link>
             </li>
-          </src__ListItem>
+          </ListItem>
         </ul>
-      </src__OrderedList>
+      </OrderedList>
     </UnorderedList>
   </div>
-</src__RelatedItems>
+</RelatedItems>
 `;

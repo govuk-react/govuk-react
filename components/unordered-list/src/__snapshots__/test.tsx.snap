@@ -121,17 +121,17 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <UnorderedList>
-  <src__OrderedList
+  <OrderedList
     as="ul"
   >
     <ul
       className="c0 c1"
     >
-      <src__ListItem>
+      <ListItem>
         <li
           className="c2 c3"
         >
-          <styled.a
+          <Link
             href="http://example.com"
             muted={false}
             noVisitedState={false}
@@ -143,14 +143,14 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
             >
               Example 1
             </a>
-          </styled.a>
+          </Link>
         </li>
-      </src__ListItem>
-      <src__ListItem>
+      </ListItem>
+      <ListItem>
         <li
           className="c2 c3"
         >
-          <styled.a
+          <Link
             href="http://example.com"
             muted={false}
             noVisitedState={false}
@@ -162,14 +162,14 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
             >
               Example 2
             </a>
-          </styled.a>
+          </Link>
         </li>
-      </src__ListItem>
-      <src__ListItem>
+      </ListItem>
+      <ListItem>
         <li
           className="c2 c3"
         >
-          <styled.a
+          <Link
             href="http://example.com"
             muted={false}
             noVisitedState={false}
@@ -181,10 +181,10 @@ exports[`UnorderedList matches wrapper snapshot: wrapper mount 1`] = `
             >
               Example 3
             </a>
-          </styled.a>
+          </Link>
         </li>
-      </src__ListItem>
+      </ListItem>
     </ul>
-  </src__OrderedList>
+  </OrderedList>
 </UnorderedList>
 `;

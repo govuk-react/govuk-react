@@ -38,7 +38,7 @@ exports[`Tag matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<src__Tag
+<Tag
   inactive={false}
 >
   <strong
@@ -46,5 +46,5 @@ exports[`Tag matches wrapper snapshot: wrapper mount 1`] = `
   >
     beta
   </strong>
-</src__Tag>
+</Tag>
 `;

@@ -124,7 +124,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   input={Object {}}
   meta={Object {}}
 >
-  <src__Label
+  <Label
     error={false}
   >
     <label
@@ -137,7 +137,7 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
           example
         </span>
       </LabelText>
-      <ForwardRef
+      <Input
         error={false}
         type="text"
       >
@@ -150,8 +150,8 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
             type="text"
           />
         </src__StyledInput>
-      </ForwardRef>
+      </Input>
     </label>
-  </src__Label>
+  </Label>
 </InputField>
 `;

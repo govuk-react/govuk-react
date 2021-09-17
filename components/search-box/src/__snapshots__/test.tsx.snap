@@ -66,7 +66,7 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<ForwardRef>
+<SearchBox>
   <src__StyledSearchBox>
     <div
       className="c0"
@@ -124,5 +124,5 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
       </Button>
     </div>
   </src__StyledSearchBox>
-</ForwardRef>
+</SearchBox>
 `;
