@@ -127,24 +127,28 @@ exports[`Pagination matches wrapper snapshot: wrapper mount 1`] = `
       className="c0"
     >
       <PaginationAnchor
-        as="a"
         href="#"
       >
         <anchor__PaginationWrapper>
           <li
             className="c1"
           >
-            <a
+            <anchor__Anchor
               href="#"
             >
-              <anchor__InnerWrap>
-                <div
-                  className="c2"
-                >
-                  Example
-                </div>
-              </anchor__InnerWrap>
-            </a>
+              <a
+                className="anchor__Anchor-sc-2udijf-3"
+                href="#"
+              >
+                <anchor__InnerWrap>
+                  <div
+                    className="c2"
+                  >
+                    Example
+                  </div>
+                </anchor__InnerWrap>
+              </a>
+            </anchor__Anchor>
           </li>
         </anchor__PaginationWrapper>
       </PaginationAnchor>
