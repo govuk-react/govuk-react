@@ -1,3 +1,5 @@
+import type { StyledComponentProps } from 'styled-components';
+
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
 import styled from 'styled-components';
@@ -9,7 +11,7 @@ import { spacing, typography } from '@govuk-react/lib';
 // so if `size` is a string, we find a numeric size based off `HEADING_SIZES`
 // but if `size` is a number we just send through that number
 
-const StyledHeading = styled('h1')<Omit<HeadingProps, 'level'>>(
+const StyledHeading = styled('h1')<StyledHeadingOwnProps>(
   typography.textColour,
   ({ size }) => {
     const actualSize = Number.isNaN(Number(size)) ? HEADING_SIZES[size] : size;
@@ -91,7 +93,7 @@ const StyledHeading = styled('h1')<Omit<HeadingProps, 'level'>>(
  * - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_typography.scss
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_typography.scss
  */
-export const Heading: React.FC<HeadingProps> = ({ level = undefined, ...props }: HeadingProps) => {
+export const Heading: HeadingType = ({ level = undefined, ...props }: React.ComponentProps<HeadingType>) => {
   if (level) {
     if (process.env.NODE_ENV !== 'production') {
       // eslint-disable-next-line no-console
@@ -106,19 +108,40 @@ export const Heading: React.FC<HeadingProps> = ({ level = undefined, ...props }:
 };
 
 Heading.defaultProps = {
-  as: undefined,
   level: undefined,
   size: 'XLARGE',
 };
 
 Heading.displayName = 'Heading';
 
-interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement>, WithWhiteSpaceProps {
+interface HeadingType extends React.FC<HeadingOwnProps> {
+  (props: HeadingPropsWithoutAs): React.ReactElement<HeadingPropsWithoutAs>;
+  <AsC extends string | React.ComponentType = 'h1', FAsC extends string | React.ComponentType = AsC>(
+    props: HeadingPropsWithAs<AsC, FAsC>
+  ): React.ReactElement<HeadingPropsWithAs<AsC, FAsC>>;
+}
+
+type HeadingPropsWithoutAs = StyledComponentProps<'h1', never, HeadingOwnProps, never> & {
+  as?: never | undefined;
+  forwardedAs?: never | undefined;
+};
+
+type HeadingPropsWithAs<AsC extends string | React.ComponentType, FAsC extends string | React.ComponentType = AsC> =
+  StyledComponentProps<AsC, never, HeadingOwnProps, never, FAsC> & {
+    as?: AsC | undefined;
+    forwardedAs?: FAsC | undefined;
+  };
+
+interface StyledHeadingOwnProps extends WithWhiteSpaceProps {
   /**
-   * Semantic heading tag to use (e.g. 'h3')
-   * By default element used will be an 'h1'
+   * Visual size level, accepts:
+   *    `XLARGE`, `LARGE`, `MEDIUM`, `SMALL`, `XL`, `L`, `M`, `S`
+   *    or a numeric size that fits in the GDS font scale list
    */
-  as?: React.ElementType;
+  size?: number | string;
+}
+
+interface HeadingOwnProps {
   /**
    * Semantic heading level value between 1 and 6 (deprecated)
    */

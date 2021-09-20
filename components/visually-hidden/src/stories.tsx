@@ -21,7 +21,7 @@ export const Default: React.FC = () => (
   </div>
 );
 
-class Focusable extends Component<{ as?: React.ElementType }> {
+class Focusable extends Component<React.ComponentProps<typeof VisuallyHidden>> {
   focusableRef;
 
   constructor(props) {

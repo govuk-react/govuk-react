@@ -1,3 +1,5 @@
+import type { StyledComponentProps } from 'styled-components';
+
 import React from 'react';
 import styled from 'styled-components';
 import { BLUE, GREY_4, PURPLE, YELLOW, WHITE } from 'govuk-colours';
@@ -89,49 +91,58 @@ const PageTitle = styled('span')({
   },
 });
 
-const PaginationAnchor: React.FC<PaginationAnchorProps> = ({
+const Anchor = styled('a')({});
+
+const PaginationAnchor: PaginationAnchorType = ({
   previousPage,
   nextPage,
-  to,
-  href,
-  target,
   children,
   pageTitle,
-  as: As,
+  ...props
 }: PaginationAnchorProps) => (
   <PaginationWrapper previousPage={previousPage} nextPage={nextPage}>
-    <As to={to} href={href} target={target}>
+    <Anchor {...props}>
       <InnerWrap>
         {previousPage && <PrevPageIcon />}
         {children}
         {nextPage && <NextPageIcon />}
       </InnerWrap>
       {pageTitle && <PageTitle>{pageTitle}</PageTitle>}
-    </As>
+    </Anchor>
   </PaginationWrapper>
 );
+
+interface PaginationAnchorType extends React.FC<PaginationAnchorProps> {
+  (props: PaginationAnchorPropsWithoutAs): React.ReactElement<PaginationAnchorPropsWithoutAs>;
+  <AsC extends string | React.ComponentType = 'a', FAsC extends string | React.ComponentType = AsC>(
+    props: PaginationAnchorPropsWithAs<AsC, FAsC>
+  ): React.ReactElement<PaginationAnchorPropsWithAs<AsC, FAsC>>;
+}
+
+type PaginationAnchorPropsWithoutAs = StyledComponentProps<'a', never, PaginationAnchorProps, never> & {
+  as?: never | undefined;
+  forwardedAs?: never | undefined;
+};
+
+type PaginationAnchorPropsWithAs<
+  AsC extends string | React.ComponentType,
+  FAsC extends string | React.ComponentType = AsC
+> = StyledComponentProps<AsC, never, PaginationAnchorProps, never, FAsC> & {
+  as?: AsC | undefined;
+  forwardedAs?: FAsC | undefined;
+};
 
 interface PaginationAnchorProps {
   children: string | React.ReactElement;
   previousPage?: boolean;
   nextPage?: boolean;
   pageTitle?: string;
-  // TODO: #953
-  to?: string;
-  target?: string;
-  href?: string;
-  as?: React.ElementType;
 }
 
 PaginationAnchor.defaultProps = {
   previousPage: undefined,
   nextPage: undefined,
   pageTitle: undefined,
-  // TODO: #953
-  to: undefined,
-  target: undefined,
-  href: undefined,
-  as: 'a',
 };
 
 export default PaginationAnchor;

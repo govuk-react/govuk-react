@@ -1,3 +1,5 @@
+import type { StyledComponentProps } from 'styled-components';
+
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
 import styled from 'styled-components';
@@ -14,12 +16,12 @@ const RAW_SHADOW = Number(stripUnit(BUTTON_SHADOW_SIZE));
 const HALF_SHADOW = RAW_SHADOW / 2;
 const BASE_PAD = RAW_SPACING_2 - RAW_BORDER_WIDTH;
 
-const StyledButton = styled('button').withConfig<ButtonOwnProps & { isStart: boolean }>({
+const StyledButton = styled('button').withConfig<StyledButtonOwnProps>({
   shouldForwardProp: (prop) =>
     !['isStart', 'buttonColour', 'buttonHoverColour', 'buttonShadowColour', 'buttonTextColour', 'icon'].includes(
       String(prop)
     ),
-})<ButtonOwnProps>(
+})<StyledButtonOwnProps>(
   ({ isStart }) =>
     typography.font({
       size: isStart ? '24' : '19',
@@ -140,23 +142,7 @@ const ButtonContents = styled('span')({
   flexGrow: 1,
 });
 
-interface ButtonOwnProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, WithWhiteSpaceProps {
-  /**
-   * Button text
-   */
-  children: React.ReactNode;
-  /**
-   * Button icon
-   */
-  icon?: React.ReactNode;
-  /**
-   * Renders a large button if set to true
-   */
-  start?: boolean;
-  /**
-   * Renders a disabled button and removes pointer events if set to true
-   */
-  disabled?: boolean;
+interface StyledButtonOwnProps extends WithWhiteSpaceProps {
   /**
    * Override for default button colour
    */
@@ -176,12 +162,48 @@ interface ButtonOwnProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, 
    * which defaults to govuk white
    */
   buttonTextColour?: string;
-  as?: React.ElementType;
+  /**
+   * Button icon
+   */
+  icon?: React.ReactNode;
+  /**
+   * Renders a large button if set to true
+   */
+  isStart?: boolean;
 }
 
-// TODO: #953 These are props that are likely to be passed when using the `as` prop
-interface ButtonProps extends ButtonOwnProps {
-  to?: string;
+interface ButtonOwnProps extends WithWhiteSpaceProps {
+  /**
+   * Button text
+   */
+  children: React.ReactNode;
+  /**
+   * Button icon
+   */
+  icon?: React.ReactNode;
+  /**
+   * Renders a large button if set to true
+   */
+  start?: boolean;
+  /**
+   * Override for default button colour
+   */
+  buttonColour?: string;
+  /**
+   * Override for default button hover colour,
+   * which defaults to `buttonColour` darkened by 5%
+   */
+  buttonHoverColour?: string;
+  /**
+   * Override for default button shadow colour,
+   * which defaults to `buttonColour` darkened by 15%
+   */
+  buttonShadowColour?: string;
+  /**
+   * Override for default button text colour,
+   * which defaults to govuk white
+   */
+  buttonTextColour?: string;
 }
 
 /**
@@ -215,25 +237,43 @@ interface ButtonProps extends ButtonOwnProps {
  *   - see https://www.w3.org/TR/WCAG20-TECHS/G18.html
  *   - can use Polished's `readableColor` call, but translate their black to govuk's black
  */
-export const Button: React.ForwardRefExoticComponent<ButtonProps & React.RefAttributes<HTMLButtonElement>> =
-  React.forwardRef(({ start, children, icon, ...props }: ButtonProps, ref) => (
+export const Button: ButtonType = React.forwardRef(
+  ({ start, children, icon, ...props }: ButtonOwnProps, ref: ButtonRefType) => (
     <StyledButton ref={ref} isStart={start} icon={icon} {...props}>
       {icon ? <ButtonContents>{children}</ButtonContents> : children}
       {icon}
     </StyledButton>
-  ));
+  )
+);
+
+type ButtonRefType = React.Ref<HTMLButtonElement>;
+
+interface ButtonType extends React.ForwardRefExoticComponent<ButtonOwnProps> {
+  (props: ButtonPropsWithoutAs, ref?: ButtonRefType): React.ReactElement<ButtonPropsWithoutAs>;
+  <AsC extends string | React.ComponentType = 'button', FAsC extends string | React.ComponentType = AsC>(
+    props: ButtonPropsWithAs<AsC, FAsC>,
+    ref?: React.Ref<AsC>
+  ): React.ReactElement<ButtonPropsWithAs<AsC, FAsC>>;
+}
+
+type ButtonPropsWithoutAs = StyledComponentProps<'button', never, ButtonOwnProps, never> & {
+  as?: never | undefined;
+  forwardedAs?: never | undefined;
+};
+
+type ButtonPropsWithAs<AsC extends string | React.ComponentType, FAsC extends string | React.ComponentType = AsC> =
+  StyledComponentProps<AsC, never, ButtonOwnProps, never, FAsC> & {
+    as?: AsC | undefined;
+    forwardedAs?: FAsC | undefined;
+  };
 
 Button.defaultProps = {
   icon: undefined,
-  disabled: false,
   start: false,
   buttonColour: undefined,
   buttonHoverColour: undefined,
   buttonShadowColour: undefined,
   buttonTextColour: undefined,
-  as: undefined,
-  // TODO: #953
-  to: undefined,
 };
 
 Button.displayName = 'Button';
