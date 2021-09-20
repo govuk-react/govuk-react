@@ -1,3 +1,5 @@
+import type { StyledComponentProps } from 'styled-components';
+
 import React from 'react';
 import styled from 'styled-components';
 import { link, spacing, typography } from '@govuk-react/lib';
@@ -64,7 +66,7 @@ const StyledHyperLink = styled('a')<TabOwnProps>(
   })
 );
 
-const Tab: React.FC<React.ComponentProps<typeof StyledHyperLink> & TabOwnProps> = (props) => (
+const Tab: TabType = (props) => (
   <StyledListItem>
     <StyledHyperLink {...props} />
   </StyledListItem>
@@ -72,11 +74,25 @@ const Tab: React.FC<React.ComponentProps<typeof StyledHyperLink> & TabOwnProps> 
 
 Tab.defaultProps = {
   selected: false,
-  as: undefined,
-  // TODO: #953
-  to: undefined,
-  href: undefined,
 };
+
+interface TabType extends React.FC<TabOwnProps> {
+  (props: TabPropsWithoutAs): React.ReactElement<TabPropsWithoutAs>;
+  <AsC extends string | React.ComponentType = 'a', FAsC extends string | React.ComponentType = AsC>(
+    props: TabPropsWithAs<AsC, FAsC>
+  ): React.ReactElement<TabPropsWithAs<AsC, FAsC>>;
+}
+
+type TabPropsWithoutAs = StyledComponentProps<'a', never, TabOwnProps, never> & {
+  as?: never | undefined;
+  forwardedAs?: never | undefined;
+};
+
+type TabPropsWithAs<AsC extends string | React.ComponentType, FAsC extends string | React.ComponentType = AsC> =
+  StyledComponentProps<AsC, never, TabOwnProps, never, FAsC> & {
+    as?: AsC | undefined;
+    forwardedAs?: FAsC | undefined;
+  };
 
 interface TabOwnProps {
   /** Different stylings for the Tab displaying content */
