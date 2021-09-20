@@ -33,7 +33,7 @@ The project is currently maintained for free by a small number of volunteers. If
 ## Usage
 
 ```sh
-npm install govuk-react styled-components --save
+npm install govuk-react styled-components @types/styled-components --save
 ```
 
 ```jsx
