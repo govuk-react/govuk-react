@@ -9,7 +9,6 @@ import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 import { spacing } from '@govuk-react/lib';
 
-import type { InputProps } from './input';
 import Input from './input';
 
 const StyledContainer = styled('div')<DateFieldProps>(
@@ -127,7 +126,7 @@ DateField.defaultProps = {
   input: undefined,
 };
 
-export interface DateFieldProps extends InputProps, WithWhiteSpaceProps {
+export interface DateFieldProps extends React.HTMLAttributes<HTMLDivElement>, WithWhiteSpaceProps {
   children: React.ReactNode;
   /**
    * Optional hint text
@@ -162,12 +161,12 @@ export interface DateFieldProps extends InputProps, WithWhiteSpaceProps {
      * Called when the day, month or year fields are blurred
      * (does not get called when moving between inputs in the same datefield)
      */
-    onBlur?: (...args: unknown[]) => unknown;
+    onBlur?: (date: { day: string; month: string; year: string }) => void;
     /**
      * Called when the day, month or year fields are focussed
      * (does not get called when moving between inputs in the same datefield)
      */
-    onFocus?: (...args: unknown[]) => unknown;
+    onFocus?: (date: { day: string; month: string; year: string }) => void;
     /**
      * When the form field is controlled, this sets the value of the day, month and year inputs
      */
