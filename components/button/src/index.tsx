@@ -185,6 +185,25 @@ interface ButtonOwnProps extends WithWhiteSpaceProps {
    * Renders a large button if set to true
    */
   start?: boolean;
+  /**
+   * Override for default button colour
+   */
+  buttonColour?: string;
+  /**
+   * Override for default button hover colour,
+   * which defaults to `buttonColour` darkened by 5%
+   */
+  buttonHoverColour?: string;
+  /**
+   * Override for default button shadow colour,
+   * which defaults to `buttonColour` darkened by 15%
+   */
+  buttonShadowColour?: string;
+  /**
+   * Override for default button text colour,
+   * which defaults to govuk white
+   */
+  buttonTextColour?: string;
 }
 
 /**
@@ -252,6 +271,10 @@ type ButtonPropsWithAs<AsC extends string | React.ComponentType, FAsC extends st
 Button.defaultProps = {
   icon: undefined,
   start: false,
+  buttonColour: undefined,
+  buttonHoverColour: undefined,
+  buttonShadowColour: undefined,
+  buttonTextColour: undefined,
 };
 
 Button.displayName = 'Button';
