@@ -54,7 +54,7 @@ const Results: React.FC<ResultsProps> = ({
 
 interface ResultsProps {
   backLink: string;
-  onBackClick(...args: unknown[]): unknown;
+  onBackClick(): void;
   firstName: string;
   description: string;
   nationality: string[];
