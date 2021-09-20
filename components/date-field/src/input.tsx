@@ -103,10 +103,14 @@ export interface InputProps {
   /**
    * This comes from the multiInputInput HOC and is needed to track all 3 inputs
    */
-  refs?: (...args: unknown[]) => unknown;
-  onChange?: (...args: unknown[]) => unknown;
-  onBlur?: (...args: unknown[]) => unknown;
-  onFocus?: (...args: unknown[]) => unknown;
+  refs?: (refs: {
+    day?: React.Ref<typeof BaseInput>;
+    month?: React.Ref<typeof BaseInput>;
+    year?: React.Ref<typeof BaseInput>;
+  }) => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>, key: string) => void;
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>, key: string) => void;
+  onFocus?: (e: React.FocusEvent<HTMLInputElement>, key: string) => void;
   error?: boolean;
 }
 
