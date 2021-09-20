@@ -18,6 +18,7 @@
   },
   "main": "lib/index.js",
   "module": "es/index.js",
+  "source": "src/index.tsx",
   "author": "David Murdoch",
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/tabs",
