@@ -246,7 +246,6 @@ export const Button: ButtonType = React.forwardRef(
   )
 );
 
-// TODO: check if this works alongside the polymorphic as prop, and if we have any other options if not, i.e. <Button as="a" ref={someRef } /> where someRef is React.Ref<HTMLAnchorElement>
 type ButtonRefType = React.Ref<HTMLButtonElement>;
 
 interface ButtonType extends React.ForwardRefExoticComponent<ButtonOwnProps> {
