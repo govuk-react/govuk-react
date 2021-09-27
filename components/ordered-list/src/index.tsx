@@ -9,7 +9,7 @@ function translateType(type) {
   return { bullet: 'disc', number: 'decimal' }[type] || type;
 }
 
-interface OrderedListProps extends WithWhiteSpaceProps {
+export interface OrderedListProps extends WithWhiteSpaceProps {
   listStyleType?: string;
 }
 

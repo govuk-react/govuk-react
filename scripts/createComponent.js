@@ -50,6 +50,7 @@ const packageJson = () => {
   },
   "main": "lib/index.js",
   "module": "es/index.js",
+  "source": "src/index.tsx",
   "author": "Alasdair McLeay",
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/${componentFolderName}",

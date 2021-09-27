@@ -141,7 +141,7 @@ export const Footer: FooterType = ({
 
 Footer.displayName = 'Footer';
 
-interface FooterType extends React.FC<FooterProps> {
+export interface FooterType extends React.FC<FooterProps> {
   Link: typeof Link;
   Navigation: typeof Navigation;
   MetaCustom: typeof MetaCustom;

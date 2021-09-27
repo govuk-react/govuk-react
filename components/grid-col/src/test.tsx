@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { render } from '@testing-library/react';
 
 import { GridCol } from '.';

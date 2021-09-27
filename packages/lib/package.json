@@ -12,6 +12,7 @@
   },
   "main": "lib/index.js",
   "module": "es/index.js",
+  "source": "src/index.tsx",
   "author": "Steve Sims",
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react#readme",

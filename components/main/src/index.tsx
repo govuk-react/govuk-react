@@ -62,7 +62,7 @@ export const Main: React.FC<MainProps> = ({ children, ...props }: MainProps) => 
 
 Main.displayName = 'Main';
 
-interface MainProps {
+export interface MainProps {
   /**
    * Child nodes for the page being built
    */

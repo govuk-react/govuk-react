@@ -96,7 +96,7 @@ TextArea.defaultProps = {
 
 TextArea.displayName = 'TextArea';
 
-interface TextAreaProps extends LabelProps {
+export interface TextAreaProps extends LabelProps {
   hint?: React.ReactNode;
   input?: React.TextareaHTMLAttributes<HTMLTextAreaElement>;
   meta?: {

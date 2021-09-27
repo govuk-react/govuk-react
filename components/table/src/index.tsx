@@ -135,13 +135,13 @@ Table.defaultProps = {
 
 Table.displayName = 'Table';
 
-interface TableType extends React.FC<TableProps> {
+export interface TableType extends React.FC<TableProps> {
   CellHeader: typeof CellHeader;
   Row: typeof Row;
   Cell: typeof Cell;
   Header: typeof TableHeader;
 }
-interface TableProps {
+export interface TableProps {
   /** Table body rows and cells (for backward compatibility) */
   body?: React.ReactNode;
   /** Table body rows and cells (recommended way) */

@@ -45,10 +45,10 @@ const StyledList = styled('ul')(
  */
 export const Pagination: PaginationType = (props: PaginationProps) => <StyledList {...props} />;
 
-interface PaginationType extends React.FC<PaginationProps> {
+export interface PaginationType extends React.FC<PaginationProps> {
   Anchor: typeof Anchor;
 }
-interface PaginationProps {
+export interface PaginationProps {
   children: React.ReactNode;
 }
 

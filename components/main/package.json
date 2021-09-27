@@ -16,6 +16,7 @@
   },
   "main": "lib/index.js",
   "module": "es/index.js",
+  "source": "src/index.tsx",
   "author": "Toby Brancher",
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/main",
