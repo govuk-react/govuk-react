@@ -5,11 +5,6 @@
     "@govuk-react/constants": "^0.9.1",
     "govuk-colours": "^1.1.0"
   },
-  "scripts": {
-    "build": "npm run build:lib && npm run build:es",
-    "build:lib": "rimraf lib && babel src -x .js,jsx,.ts,.tsx -d lib --source-maps --config-file ../../babel.config.js",
-    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -x .js,jsx,.ts,.tsx -d es --source-maps --config-file ../../babel.config.js"
-  },
   "main": "dist/govuk-react-lib.cjs.js",
   "module": "dist/govuk-react-lib.esm.js",
   "source": "src/index.tsx",

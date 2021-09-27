@@ -1,12 +1,10 @@
 {
   "name": "@govuk-react/monorepo",
   "scripts": {
-    "build:dist": "npm run build:es && rimraf dist && webpack -p packages/govuk-react/es/index.js --devtool source-map --output-filename index.js",
-    "build:es": "npm run build:es --workspaces",
-    "build:lib": "npm run build:lib --workspaces",
+    "build:dist": "npm run build && rimraf dist && webpack -p packages/govuk-react/dist/govuk-react.esm.js --devtool source-map --output-filename index.js",
     "build:storybook": "cd packages/storybook && npm run build",
     "build:types": "tsc --emitDeclarationOnly --declaration",
-    "build": "preconstruct build",
+    "build": "preconstruct build && npm run build --workspaces --if-present",
     "bundlesize": "bundlesize",
     "clean:workspace": "rimraf packages/*/lib && rimraf packages/*/es && rimraf components/*/lib && rimraf components/*/es",
     "clean": "rimraf lib && rimraf es",

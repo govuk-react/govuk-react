@@ -25,10 +25,7 @@
     "doc-component": "bin/doc-component.js"
   },
   "scripts": {
-    "start": "babel-node src",
-    "build": "npm run build:lib && npm run build:es",
-    "build:lib": "rimraf lib && babel src -x .js,jsx,.ts,.tsx -d lib --source-maps --config-file ../../babel.config.js",
-    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -x .js,jsx,.ts,.tsx -d es --source-maps --config-file ../../babel.config.js"
+    "start": "babel-node src"
   },
   "main": "dist/govuk-react-api-docs.cjs.js",
   "module": "dist/govuk-react-api-docs.esm.js",
