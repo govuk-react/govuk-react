@@ -128,7 +128,7 @@ Select.defaultProps = {
 
 Select.displayName = 'Select';
 
-interface SelectProps extends LabelProps {
+export interface SelectProps extends LabelProps {
   hint?: React.ReactNode;
   input?: React.SelectHTMLAttributes<HTMLSelectElement>;
   meta?: {

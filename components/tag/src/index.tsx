@@ -43,7 +43,7 @@ export const Tag = styled('strong')<TagProps>(
         }
       : undefined
 );
-interface TagProps {
+export interface TagProps {
   inactive?: boolean;
 }
 

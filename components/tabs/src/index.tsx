@@ -145,13 +145,13 @@ export const Tabs: TabsType = (props: TabsProps) => <TabsContainer {...props} />
 
 Tabs.displayName = 'Tabs';
 
-interface TabsType extends React.FC<TabsProps> {
+export interface TabsType extends React.FC<TabsProps> {
   Tab: typeof Tab;
   List: typeof List;
   Panel: typeof Panel;
   Title: typeof Title;
 }
-interface TabsProps {
+export interface TabsProps {
   /** child components that will appear in the Tabs section */
   children: React.ReactNode;
 }

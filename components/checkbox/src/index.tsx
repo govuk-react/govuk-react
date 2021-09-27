@@ -143,7 +143,7 @@ Checkbox.defaultProps = {
   className: undefined,
 };
 
-interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
   hint?: React.ReactNode;
   /**
    * Text content for checkbox

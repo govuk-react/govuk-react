@@ -45,7 +45,7 @@ const ExampleApplication: React.FC<ExampleApplicationProps> = ({ routerEntries }
   </Router>
 );
 
-interface ExampleApplicationProps {
+export interface ExampleApplicationProps {
   routerEntries?: string[];
 }
 

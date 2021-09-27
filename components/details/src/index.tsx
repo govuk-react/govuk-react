@@ -112,7 +112,7 @@ Details.defaultProps = {
 
 Details.displayName = 'Details';
 
-interface DetailsProps {
+export interface DetailsProps {
   /** The content that will be displayed when details are revealed */
   children?: React.ReactNode;
   /** Flag to indicate whether to show component open by default */

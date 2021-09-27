@@ -126,7 +126,7 @@ export const GridCol = styled('div')<GridColProps>(
     return { ...widthStyle, ...desktopWidthStyle };
   }
 );
-interface GridColProps {
+export interface GridColProps {
   /** GridCol content */
   children?: React.ReactNode;
   /** Dimension setting for the column (deprecated) */

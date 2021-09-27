@@ -21,7 +21,7 @@ const IconTitle: React.FC<IconTitleProps> = ({ icon, children }: IconTitleProps)
   </Container>
 );
 
-interface IconTitleProps {
+export interface IconTitleProps {
   icon?: React.ReactNode;
   children?: React.ReactNode;
 }

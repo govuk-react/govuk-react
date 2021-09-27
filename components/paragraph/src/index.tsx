@@ -117,7 +117,7 @@ export const Paragraph: React.FC<ParagraphProps & ReactMarkdownProps> = ({
   />
 );
 
-interface ParagraphProps extends WithWhiteSpaceProps, React.HTMLAttributes<HTMLDivElement> {
+export interface ParagraphProps extends WithWhiteSpaceProps, React.HTMLAttributes<HTMLDivElement> {
   /**
    * Text content supporting markdown
    */

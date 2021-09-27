@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { link } from '@govuk-react/lib';
 
-interface LinkProps {
+export interface LinkProps {
   /** link contents */
   children: React.ReactNode;
   /** show link in a "muted" (grey) style */

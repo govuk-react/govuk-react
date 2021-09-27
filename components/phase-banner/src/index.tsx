@@ -68,7 +68,7 @@ export const PhaseBanner: React.FC<PhaseBannerProps> = ({ level, children, ...pr
   </StyledBanner>
 );
 
-interface PhaseBannerProps {
+export interface PhaseBannerProps {
   /** Children text and links */
   children: React.ReactNode;
   /** Alpha or beta banner */

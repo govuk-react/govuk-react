@@ -58,7 +58,7 @@ export const Caption = styled('span')<CaptionProps>(
   },
   spacing.withWhiteSpace()
 );
-interface CaptionProps extends WithWhiteSpaceProps {
+export interface CaptionProps extends WithWhiteSpaceProps {
   /**
    * Visual size level, accepts:
    *    `XLARGE`, `LARGE`, `MEDIUM`, `XL`, `L`, `M`

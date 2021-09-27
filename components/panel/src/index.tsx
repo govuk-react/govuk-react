@@ -86,7 +86,7 @@ Panel.defaultProps = {
 
 Panel.displayName = 'Panel';
 
-interface PanelProps {
+export interface PanelProps {
   /** Panel title text */
   title: string;
   /** Panel body text */

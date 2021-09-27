@@ -44,7 +44,7 @@ export const FormGroup = styled('div')<FormGroupProps>(
       : undefined,
   spacing.withWhiteSpace()
 );
-interface FormGroupProps extends WithWhiteSpaceProps {
+export interface FormGroupProps extends WithWhiteSpaceProps {
   children?: React.ReactNode;
   error?: boolean;
 }
