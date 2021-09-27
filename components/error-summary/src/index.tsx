@@ -64,7 +64,7 @@ const StyledErrorSummary = styled('div')(
   spacing.withWhiteSpace({ marginBottom: 6 })
 );
 
-interface ErrorSummaryProps {
+export interface ErrorSummaryProps {
   /** onClick function to scroll the target element into view */
   onHandleErrorClick?: (targetName: string) => void;
   /** Heading text */

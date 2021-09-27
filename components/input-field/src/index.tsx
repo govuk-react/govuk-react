@@ -80,7 +80,7 @@ InputField.defaultProps = {
 
 InputField.displayName = 'InputField';
 
-interface InputFieldProps extends LabelProps {
+export interface InputFieldProps extends LabelProps {
   hint?: React.ReactNode;
   input?: InputProps;
   meta?: {

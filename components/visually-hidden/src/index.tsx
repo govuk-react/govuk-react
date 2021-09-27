@@ -37,7 +37,7 @@ VisuallyHidden.defaultProps = {
 
 VisuallyHidden.displayName = 'VisuallyHidden';
 
-interface VisuallyHiddenProps {
+export interface VisuallyHiddenProps {
   /**
    * Content to be hidden
    */

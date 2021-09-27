@@ -52,11 +52,11 @@ export const Page: PageType = ({
   </>
 );
 
-interface PageType extends React.FC<PageProps> {
+export interface PageType extends React.FC<PageProps> {
   Main: typeof Main;
   WidthContainer: typeof WidthContainer;
 }
-interface PageProps {
+export interface PageProps {
   /**
    * Page contents
    */

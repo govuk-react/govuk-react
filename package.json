@@ -5,6 +5,7 @@
     "build:es": "npm run build:es --workspaces",
     "build:lib": "npm run build:lib --workspaces",
     "build:storybook": "cd packages/storybook && npm run build",
+    "build:types": "tsc --emitDeclarationOnly --declaration",
     "build": "npm run build --workspaces",
     "bundlesize": "bundlesize",
     "clean:workspace": "rimraf packages/*/lib && rimraf packages/*/es && rimraf components/*/lib && rimraf components/*/es",
@@ -25,7 +26,7 @@
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand",
     "test:snapshot": "npm run test:unit -- -u",
     "test:unit": "jest",
-    "test:types": "tsc --noEmit -p ./tsconfig.json",
+    "test:types": "tsc --noEmit --declaration -p ./tsconfig.json",
     "test": "cross-env CI=true npm run test:unit && npm run eslint && npm run test:types"
   },
   "description": "A port of the govuk-frontend components for React using styled-components.",

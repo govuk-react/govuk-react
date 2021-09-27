@@ -53,7 +53,7 @@ export const SectionBreak = styled('hr')<SectionBreakProps>(
         }
       : undefined
 );
-interface SectionBreakProps extends WithWhiteSpaceProps {
+export interface SectionBreakProps extends WithWhiteSpaceProps {
   level?: string;
   visible?: boolean;
 }

@@ -114,7 +114,7 @@ Heading.defaultProps = {
 
 Heading.displayName = 'Heading';
 
-interface HeadingType extends React.FC<HeadingOwnProps> {
+export interface HeadingType extends React.FC<HeadingOwnProps> {
   (props: HeadingPropsWithoutAs): React.ReactElement<HeadingPropsWithoutAs>;
   <AsC extends string | React.ComponentType = 'h1', FAsC extends string | React.ComponentType = AsC>(
     props: HeadingPropsWithAs<AsC, FAsC>
@@ -141,7 +141,7 @@ interface StyledHeadingOwnProps extends WithWhiteSpaceProps {
   size?: number | string;
 }
 
-interface HeadingOwnProps {
+export interface HeadingOwnProps {
   /**
    * Semantic heading level value between 1 and 6 (deprecated)
    */

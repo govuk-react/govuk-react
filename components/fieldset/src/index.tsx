@@ -54,7 +54,7 @@ const StyledFieldset = styled('fieldset')<FieldsetProps>(
  */
 export const Fieldset: FieldsetType = (props) => <StyledFieldset {...props} />;
 
-interface FieldsetType extends React.FC<FieldsetProps> {
+export interface FieldsetType extends React.FC<FieldsetProps> {
   Legend: typeof Legend;
 }
 

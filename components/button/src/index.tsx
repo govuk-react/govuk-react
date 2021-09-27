@@ -248,7 +248,7 @@ export const Button: ButtonType = React.forwardRef(
 
 type ButtonRefType = React.Ref<HTMLButtonElement>;
 
-interface ButtonType extends React.ForwardRefExoticComponent<ButtonOwnProps> {
+export interface ButtonType extends React.ForwardRefExoticComponent<ButtonOwnProps> {
   (props: ButtonPropsWithoutAs, ref?: ButtonRefType): React.ReactElement<ButtonPropsWithoutAs>;
   <AsC extends string | React.ComponentType = 'button', FAsC extends string | React.ComponentType = AsC>(
     props: ButtonPropsWithAs<AsC, FAsC>,
