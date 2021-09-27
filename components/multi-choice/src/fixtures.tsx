@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { text, object } from '@storybook/addon-knobs';
 import Radio from '@govuk-react/radio';
 
