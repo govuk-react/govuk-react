@@ -26,7 +26,7 @@
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand",
     "test:snapshot": "npm run test:unit -- -u",
     "test:unit": "jest",
-    "test:types": "tsc --noEmit -p ./tsconfig.json",
+    "test:types": "tsc --noEmit --declaration -p ./tsconfig.json",
     "test": "cross-env CI=true npm run test:unit && npm run eslint && npm run test:types"
   },
   "description": "A port of the govuk-frontend components for React using styled-components.",
