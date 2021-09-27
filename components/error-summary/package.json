@@ -23,8 +23,8 @@
     "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -x .js,jsx,.ts,.tsx -d es --source-maps --config-file ../../babel.config.js",
     "docs": "doc-component ./lib/index.js ./README.md"
   },
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "main": "dist/govuk-react-error-summary.cjs.js",
+  "module": "dist/govuk-react-error-summary.esm.js",
   "source": "src/index.tsx",
   "author": "Tarandeep Singh Chauhan",
   "license": "MIT",

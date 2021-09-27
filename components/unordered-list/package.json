@@ -14,8 +14,8 @@
     "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -x .js,jsx,.ts,.tsx -d es --source-maps --config-file ../../babel.config.js",
     "docs": "doc-component ./lib/index.js ./README.md"
   },
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "main": "dist/govuk-react-unordered-list.cjs.js",
+  "module": "dist/govuk-react-unordered-list.esm.js",
   "source": "src/index.tsx",
   "author": "Alasdair McLeay",
   "license": "MIT",

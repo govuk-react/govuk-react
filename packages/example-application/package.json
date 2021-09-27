@@ -21,8 +21,8 @@
     "test:cypress": "cypress run-ct",
     "cypress": "cypress open-ct"
   },
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "main": "dist/govuk-react-example-application.cjs.js",
+  "module": "dist/govuk-react-example-application.esm.js",
   "source": "src/index.tsx",
   "author": "Alasdair McLeay",
   "license": "MIT",
