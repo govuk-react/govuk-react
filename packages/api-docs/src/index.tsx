@@ -54,17 +54,10 @@ function getMarkdownForComponent(file) {
   return generateMarkdown(componentName, componentFolderName, componentInfo);
 }
 
-function libPathToSrc(libPath, libFolder = '/lib/') {
-  const pos = libPath.lastIndexOf(libFolder);
-  const len = libFolder.length;
-  return `${libPath.substring(0, pos)}/src/${libPath.substring(pos + len, libPath.length - 3)}.tsx`;
-}
-
 async function generateApiForFile(file) {
   try {
     const componentName = getComponentNameFromFile(file);
-    const src = libPathToSrc(file);
-    const md = getMarkdownForComponent(src);
+    const md = getMarkdownForComponent(file);
     console.log(chalk.green('API Documented:'), componentName);
     return md;
   } catch (e) {
