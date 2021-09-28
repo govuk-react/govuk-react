@@ -9,13 +9,8 @@
     "react": ">=16.2.0",
     "styled-components": ">=5.1"
   },
-  "scripts": {
-    "build": "npm run build:lib && npm run build:es",
-    "build:lib": "rimraf lib && babel src -x .js,jsx,.ts,.tsx -d lib --source-maps --config-file ../../babel.config.js",
-    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -x .js,jsx,.ts,.tsx -d es --source-maps --config-file ../../babel.config.js"
-  },
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "main": "dist/govuk-react-icons.cjs.js",
+  "module": "dist/govuk-react-icons.esm.js",
   "source": "src/index.tsx",
   "author": "Alasdair McLeay",
   "license": "MIT",

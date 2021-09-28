@@ -18,13 +18,10 @@
     "styled-components": ">=5.1"
   },
   "scripts": {
-    "build": "npm run build:lib && npm run build:es",
-    "build:lib": "rimraf lib && babel src -x .js,jsx,.ts,.tsx -d lib --source-maps --config-file ../../babel.config.js",
-    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -x .js,jsx,.ts,.tsx -d es --source-maps --config-file ../../babel.config.js",
-    "docs": "doc-component ./lib/index.js ./README.md"
+    "docs": "doc-component ./src/index.tsx ./README.md"
   },
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "main": "dist/govuk-react-error-summary.cjs.js",
+  "module": "dist/govuk-react-error-summary.esm.js",
   "source": "src/index.tsx",
   "author": "Tarandeep Singh Chauhan",
   "license": "MIT",

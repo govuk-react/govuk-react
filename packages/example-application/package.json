@@ -15,14 +15,11 @@
     "react": ">=16.2.0"
   },
   "scripts": {
-    "build": "npm run build:lib && npm run build:es",
-    "build:lib": "rimraf lib && babel src -x .js,jsx,.ts,.tsx -d lib --source-maps --config-file ../../babel.config.js",
-    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -x .js,jsx,.ts,.tsx -d es --source-maps --config-file ../../babel.config.js",
     "test:cypress": "cypress run-ct",
     "cypress": "cypress open-ct"
   },
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "main": "dist/govuk-react-example-application.cjs.js",
+  "module": "dist/govuk-react-example-application.esm.js",
   "source": "src/index.tsx",
   "author": "Alasdair McLeay",
   "license": "MIT",
