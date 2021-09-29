@@ -27,7 +27,7 @@ const StyledButton = styled('button').withConfig({
   FOCUSABLE,
 
   ({
-    buttonColour = BUTTON_COLOUR,
+    buttonColour = 'red',
     buttonHoverColour = darken(0.05, buttonColour),
     buttonShadowColour = buttonColour === BUTTON_COLOUR ? BUTTON_COLOUR_DARKEN_15 : darken(0.15, buttonColour),
     buttonTextColour = WHITE,
