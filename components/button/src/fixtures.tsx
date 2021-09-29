@@ -1,5 +1,3 @@
-import type { Story } from '@storybook/react';
-
 import React from 'react';
 import { ButtonArrow } from '@govuk-react/icons';
 import { BLUE, TEXT_COLOUR, YELLOW, GREY_3, ORANGE } from 'govuk-colours';
@@ -7,41 +5,31 @@ import { MemoryRouter, Route, Link } from 'react-router-dom';
 
 import { Button } from '.';
 
-const ButtonWithKnobs: Story<{ children: string; disabled: boolean; start: boolean }> = (args) => (
-  <Button mb="0" {...args} />
-);
+const ButtonStart: React.FC = () => <Button start>Save and continue</Button>;
 
-ButtonWithKnobs.args = {
-  disabled: false,
-  start: false,
-  children: 'Button',
-};
-
-const ButtonStart: Story = () => <Button start>Save and continue</Button>;
-
-const ButtonStartIcon: Story = () => (
+const ButtonStartIcon: React.FC = () => (
   <Button icon={<ButtonArrow />} start>
     Start now
   </Button>
 );
 
-const ButtonDisabled: Story = () => <Button disabled>Disabled primary button</Button>;
+const ButtonDisabled: React.FC = () => <Button disabled>Disabled primary button</Button>;
 
-const ButtonDisabledStartIcon: Story = () => (
+const ButtonDisabledStartIcon: React.FC = () => (
   <Button disabled start icon={<ButtonArrow />}>
     Start now
   </Button>
 );
 
-const ButtonBlue: Story = () => <Button buttonColour={BLUE}>Blue button</Button>;
+const ButtonBlue: React.FC = () => <Button buttonColour={BLUE}>Blue button</Button>;
 
-const ButtonWacky: Story = () => (
+const ButtonWacky: React.FC = () => (
   <Button buttonColour={GREY_3} buttonHoverColour={YELLOW} buttonShadowColour={ORANGE} buttonTextColour={TEXT_COLOUR}>
     Wacky colours
   </Button>
 );
 
-const ButtonAsLink: Story = () => (
+const ButtonAsLink: React.FC = () => (
   <MemoryRouter>
     <div>
       <Button as={Link} to="/">
@@ -60,13 +48,4 @@ const ButtonAsLink: Story = () => (
 
 export default Button;
 
-export {
-  ButtonWithKnobs,
-  ButtonStart,
-  ButtonStartIcon,
-  ButtonDisabled,
-  ButtonDisabledStartIcon,
-  ButtonBlue,
-  ButtonWacky,
-  ButtonAsLink,
-};
+export { ButtonStart, ButtonStartIcon, ButtonDisabled, ButtonDisabledStartIcon, ButtonBlue, ButtonWacky, ButtonAsLink };

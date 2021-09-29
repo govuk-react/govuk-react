@@ -1,7 +1,9 @@
+import type { Story } from '@storybook/react';
+
+import React from 'react';
 import { Button } from '.';
 
 import {
-  ButtonWithKnobs,
   ButtonStart,
   ButtonStartIcon,
   ButtonDisabled,
@@ -16,7 +18,14 @@ export default {
   component: Button,
 };
 
-export const Default = ButtonWithKnobs;
+export const Default: Story<{ children: string; disabled: boolean; start: boolean }> = (args) => (
+  <Button mb="0" {...args} />
+);
+Default.args = {
+  disabled: false,
+  start: false,
+  children: 'Button',
+};
 
 export const Start = ButtonStart;
 export const StartWithIcon = ButtonStartIcon;
