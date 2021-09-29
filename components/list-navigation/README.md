@@ -37,10 +37,6 @@ import { ListNavigation, Link } from 'govuk-react';
 
 - https://govuk-static.herokuapp.com/component-guide/government_navigation
 
-### TODO:
-- Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
-- Fix active state overlaping siblings
-
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
