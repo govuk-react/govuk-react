@@ -2,7 +2,7 @@ import React from 'react';
 
 import { withKnobs } from '@storybook/addon-knobs';
 
-import { WarningText } from '.';
+import WarningText from '.';
 import WarningTextWithKnobs, { WarningWithLongText } from './fixtures';
 
 export default {
@@ -11,5 +11,5 @@ export default {
   decorators: [withKnobs],
 };
 
-export const Default: React.FC = () => <WarningTextWithKnobs />;
-export const LongWarning: React.FC = () => <WarningWithLongText />;
+export const Default = () => <WarningTextWithKnobs />;
+export const LongWarning = () => <WarningWithLongText />;

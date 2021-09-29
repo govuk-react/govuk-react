@@ -1,6 +1,6 @@
 import { withKnobs } from '@storybook/addon-knobs';
 
-import { SectionBreak } from '.';
+import { SectionBreakDocumented as SectionBreak } from '.';
 import SectionBreakExample from './fixtures';
 
 export default {

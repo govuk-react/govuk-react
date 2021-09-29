@@ -178,40 +178,51 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
     error={true}
     errorText="example"
   >
-    <label
-      className="c0"
+    <src__StyledLabel
+      error={true}
+      errorText="example"
     >
-      <LabelText>
-        <span
-          className="c1"
-        >
-          example
-        </span>
-      </LabelText>
-      <HintText>
-        <span
-          className="c2"
-        >
-          example
-        </span>
-      </HintText>
-      <ErrorText>
-        <span
-          className="c3"
-        >
-          example
-        </span>
-      </ErrorText>
-      <src__StyledSelect
-        error={true}
+      <label
+        className="c0"
       >
-        <select
-          className="c4"
+        <LabelText>
+          <src__StyledLabelText>
+            <span
+              className="c1"
+            >
+              example
+            </span>
+          </src__StyledLabelText>
+        </LabelText>
+        <HintText>
+          <src__StyledHint>
+            <span
+              className="c2"
+            >
+              example
+            </span>
+          </src__StyledHint>
+        </HintText>
+        <ErrorText>
+          <src__StyledError>
+            <span
+              className="c3"
+            >
+              example
+            </span>
+          </src__StyledError>
+        </ErrorText>
+        <src__StyledSelect
+          error="example"
         >
-          example
-        </select>
-      </src__StyledSelect>
-    </label>
+          <select
+            className="c4"
+          >
+            example
+          </select>
+        </src__StyledSelect>
+      </label>
+    </src__StyledLabel>
   </Label>
 </Select>
 `;
@@ -329,24 +340,30 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
   <Label
     error={false}
   >
-    <label
-      className="c0"
+    <src__StyledLabel
+      error={false}
     >
-      <LabelText>
-        <span
-          className="c1"
-        >
-          example
-        </span>
-      </LabelText>
-      <src__StyledSelect>
-        <select
-          className="c2"
-        >
-          example
-        </select>
-      </src__StyledSelect>
-    </label>
+      <label
+        className="c0"
+      >
+        <LabelText>
+          <src__StyledLabelText>
+            <span
+              className="c1"
+            >
+              example
+            </span>
+          </src__StyledLabelText>
+        </LabelText>
+        <src__StyledSelect>
+          <select
+            className="c2"
+          >
+            example
+          </select>
+        </src__StyledSelect>
+      </label>
+    </src__StyledLabel>
   </Label>
 </Select>
 `;

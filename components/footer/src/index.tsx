@@ -1,9 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { spacing, typography } from '@govuk-react/lib';
 import { FOOTER_BACKGROUND, FOOTER_TEXT, FOOTER_BORDER_TOP } from 'govuk-colours';
-
-import type { CopyrightProps } from './atoms/copyright';
 
 import WidthContainer from './atoms/width-container';
 import Navigation from './atoms/navigation';
@@ -119,13 +118,13 @@ const FooterContainer = styled('footer')(
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/footer/_footer.scss
  *
  */
-export const Footer: FooterType = ({
+const Footer = ({
   children = undefined,
   container: Container = Footer.WidthContainer,
   copyright = undefined,
   meta = undefined,
   ...props
-}: FooterProps) => (
+}) => (
   <FooterContainer role="contentinfo" {...props}>
     <Container>
       {children && (
@@ -139,36 +138,34 @@ export const Footer: FooterType = ({
   </FooterContainer>
 );
 
-Footer.displayName = 'Footer';
-
-export interface FooterType extends React.FC<FooterProps> {
-  Link: typeof Link;
-  Navigation: typeof Navigation;
-  MetaCustom: typeof MetaCustom;
-  MetaLinks: typeof MetaLinks;
-  NavigationLinks: typeof NavigationLinks;
-  WidthContainer: typeof WidthContainer;
-}
-
-interface FooterProps {
+Footer.propTypes = {
   /**
    * Footer navigation links
    */
-  children?: React.ReactNode;
+  children: PropTypes.node,
   /**
    * Override the default footer container component.
    * `children`, `copyright` and `meta` will be placed inside this component.
    */
-  container?: React.ElementType;
+  container: PropTypes.elementType,
   /**
    * Copyright information
    */
-  copyright?: CopyrightProps;
+  copyright: PropTypes.shape({
+    text: PropTypes.string,
+    image: PropTypes.shape({
+      src: PropTypes.string.isRequired,
+      width: PropTypes.number.isRequired,
+      height: PropTypes.number.isRequired,
+    }),
+    link: PropTypes.string,
+  }),
   /**
    * Meta text and links
    */
-  meta?: React.ReactNode;
-}
+  meta: PropTypes.node,
+};
+
 Footer.Link = Link;
 Footer.Navigation = Navigation;
 Footer.MetaCustom = MetaCustom;

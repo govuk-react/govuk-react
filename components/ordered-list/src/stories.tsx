@@ -2,14 +2,14 @@ import React from 'react';
 
 import ListItem from '@govuk-react/list-item';
 
-import { OrderedList } from '.';
+import { DocumentedComponent as OrderedList } from '.';
 
 export default {
   title: 'Typography/Ordered list',
   component: OrderedList,
 };
 
-export const Default: React.FC = () => (
+export const Default = () => (
   <OrderedList>
     <ListItem>Lorem ipsum dolor sit.</ListItem>
     <ListItem>Consectetur adipiscing elit.</ListItem>
@@ -17,7 +17,7 @@ export const Default: React.FC = () => (
   </OrderedList>
 );
 
-export const OrderedListWithAlpha: React.FC = () => (
+export const OrderedListWithAlpha = () => (
   <OrderedList listStyleType="lower-alpha">
     <ListItem>Cras nec quam ut lorem.</ListItem>
     <ListItem>Curabitur porta elit ut ante vehicula.</ListItem>
@@ -25,7 +25,7 @@ export const OrderedListWithAlpha: React.FC = () => (
   </OrderedList>
 );
 
-export const OrderedListWithRoman: React.FC = () => (
+export const OrderedListWithRoman = () => (
   <OrderedList listStyleType="lower-roman">
     <ListItem>In nisi lectus, mollis sed neque.</ListItem>
     <ListItem>Pellentesque habitant morbi tristique senectus et netus et malesuada.</ListItem>
@@ -35,7 +35,7 @@ export const OrderedListWithRoman: React.FC = () => (
   </OrderedList>
 );
 
-export const OrderedListWithBulletWithNestedNumberList: React.FC = () => (
+export const OrderedListWithBulletWithNestedNumberList = () => (
   <OrderedList listStyleType="bullet">
     <ListItem>In nisi lectus, mollis sed neque.</ListItem>
     <ListItem>Pellentesque habitant morbi tristique senectus et netus et malesuada.</ListItem>
@@ -47,7 +47,7 @@ export const OrderedListWithBulletWithNestedNumberList: React.FC = () => (
   </OrderedList>
 );
 
-export const OrderedListWithNoDecoration: React.FC = () => (
+export const OrderedListWithNoDecoration = () => (
   <OrderedList listStyleType="none">
     <ListItem>Lorem ipsum dolor sit.</ListItem>
     <ListItem>Consectetur adipiscing elit.</ListItem>

@@ -3,6 +3,6 @@
 import React from 'react';
 import Cell from '../Cell';
 
-const CellHeader: React.FC<React.ComponentProps<typeof Cell>> = (props) => <Cell as="th" bold isHeader {...props} />;
+const CellHeader = (props) => <Cell as="th" bold isHeader {...props} />;
 
 export default CellHeader;

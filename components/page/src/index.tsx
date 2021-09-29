@@ -5,6 +5,7 @@
 // https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_width-container.scss
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import SkipLink from '@govuk-react/skip-link';
 import TopNav from '@govuk-react/top-nav';
 // import Footer from '@govuk-react/footer';
@@ -32,15 +33,7 @@ import WidthContainer from './atoms/width-container';
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_main-wrapper.scss
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_width-container.scss
  */
-export const Page: PageType = ({
-  header,
-  footer,
-  children,
-  id,
-  beforeChildren,
-  main: MainComponent,
-  container: Container,
-}: PageProps) => (
+const Page = ({ header, footer, children, id, beforeChildren, main: MainComponent, container: Container }) => (
   <>
     <SkipLink href={`#${id}`} />
     {header}
@@ -52,42 +45,38 @@ export const Page: PageType = ({
   </>
 );
 
-export interface PageType extends React.FC<PageProps> {
-  Main: typeof Main;
-  WidthContainer: typeof WidthContainer;
-}
-export interface PageProps {
+Page.propTypes = {
   /**
    * Page contents
    */
-  children?: React.ReactNode;
+  children: PropTypes.node,
   /**
    * ID for page content
    */
-  id?: string;
+  id: PropTypes.string,
   /**
    * Override the default page header component.
    */
-  header?: React.ReactNode;
+  header: PropTypes.node,
   /**
    * Override the default page footer component.
    */
-  footer?: React.ReactNode;
+  footer: PropTypes.node,
   /**
    * Override the default wrapper component for main page content
    */
-  main?: React.ElementType;
+  main: PropTypes.func,
   /**
    * Content that needs to appear outside the main page wrapper (see `main`).
    * For example: A back link component, breadcrumbs, phase banner component
    */
-  beforeChildren?: React.ReactNode;
+  beforeChildren: PropTypes.node,
   /**
    * Override the default page container component.
    * `beforeChildren` and `children` (wrapped in `main`) will be placed inside this component.
    */
-  container?: React.ElementType;
-}
+  container: PropTypes.func,
+};
 
 Page.Main = Main;
 Page.WidthContainer = WidthContainer;
@@ -96,12 +85,10 @@ Page.defaultProps = {
   children: undefined,
   id: 'content',
   header: <TopNav />,
-  footer: undefined,
+  footer: undefined, // <Footer />, // TODO: add Footer component once built
   main: Page.Main,
   beforeChildren: undefined,
   container: Page.WidthContainer,
 };
-
-Page.displayName = 'Page';
 
 export default Page;

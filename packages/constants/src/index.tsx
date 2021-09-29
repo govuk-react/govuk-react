@@ -38,27 +38,22 @@ export const SPACING = {
 
 export const SITE_WIDTH_PLUS_GUTTERS = `${SITE_WIDTH_PX + 2 * GUTTER_PX}px`;
 
-export const MEDIA_QUERY_PRINT = '@media print';
-export const MEDIA_QUERIES: {
-  LARGESCREEN: string;
-  MAX: string;
-  PRINT: string;
-  TABLET: string;
-  DESKTOP: string;
-} = {
+export const MEDIA_QUERIES = {
   LARGESCREEN: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`,
   MAX: `@media only screen and (min-width: ${SITE_WIDTH_PLUS_GUTTERS})`,
-  PRINT: MEDIA_QUERY_PRINT,
+  PRINT: '@media print',
   TABLET: `@media only screen and (min-width: ${BREAKPOINTS.TABLET})`,
   DESKTOP: `@media only screen and (min-width: ${BREAKPOINTS.DESKTOP})`,
 };
 
+// TODO: figure out how to optionally include locally installed font, e.g. "GDS Transport Website"
 export const NTA_LIGHT = '"nta", Arial, sans-serif';
 export const NTA_LIGHT_TABULAR = `"ntatabularnumbers", ${NTA_LIGHT}`;
 export const FONT_STACK = `${NTA_LIGHT}`;
 export const FONT_STACK_TABULAR = `${NTA_LIGHT_TABULAR}`;
 export const FONT_STACK_PRINT = 'sans-serif';
 
+// TODO FONT_SIZE and LINE_HEIGHT can be replaced with `govukFont` lib call
 export const FONT_SIZE = {
   SIZE_14: '14px',
   SIZE_16: '16px',

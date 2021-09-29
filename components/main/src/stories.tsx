@@ -2,14 +2,14 @@ import React from 'react';
 import GridRow from '@govuk-react/grid-row';
 import GridCol from '@govuk-react/grid-col';
 
-import { Main } from '.';
+import Main from '.';
 
 export default {
   title: 'Page & Layout/Main',
   component: Main,
 };
 
-export const Default: React.FC = () => (
+export const Default = () => (
   <Main>
     <GridRow>
       <GridCol setWidth="one-half">

@@ -5,18 +5,8 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      
-      - name: Read .nvmrc
-        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
-        id: nvm
-
-      - name: Use Node.js
-        uses: actions/setup-node@v2.1.5
-        with:
-          node-version: "${{ steps.nvm.outputs.NVMRC }}"
-
-      - run: npm i
+      - run: yarn
       - uses: cypress-io/github-action@v2
         with:
-          install: false
-          command: npm run test:cypress
+          working-directory: packages/example-application
+          command: yarn cypress run-ct

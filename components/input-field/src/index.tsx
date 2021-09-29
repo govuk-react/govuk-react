@@ -63,7 +63,7 @@ import Input from '@govuk-react/input';
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/input/_input.scss
  * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
  */
-export const InputField: React.FC<InputFieldProps> = ({ meta, children, hint, input, ...props }: InputFieldProps) => (
+const InputField = ({ meta, children, hint, input, ...props }: InputFieldProps) => (
   <Label {...props} error={meta.touched && !!meta.error}>
     <LabelText>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
@@ -78,14 +78,26 @@ InputField.defaultProps = {
   meta: {},
 };
 
-InputField.displayName = 'InputField';
-
-export interface InputFieldProps extends LabelProps {
+interface InputFieldProps extends LabelProps {
   hint?: React.ReactNode;
   input?: InputProps;
   meta?: {
-    error?: string | string[];
+    active?: boolean;
+    dirty?: boolean;
+    dirtySinceLastSubmit?: boolean;
+    // eslint-disable-next-line react/forbid-prop-types
+    error?: any;
+    // eslint-disable-next-line react/forbid-prop-types
+    initial?: any;
+    invalid?: boolean;
+    pristine?: boolean;
+    // eslint-disable-next-line react/forbid-prop-types
+    submitError?: any;
+    submitFailed?: boolean;
+    submitSucceeded?: boolean;
     touched?: boolean;
+    valid?: boolean;
+    visited?: boolean;
   };
   children: React.ReactNode;
 }

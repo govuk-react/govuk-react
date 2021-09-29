@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
-import { LabelText } from '.';
+import LabelText from '.';
 
 describe('LabelText', () => {
   let props;

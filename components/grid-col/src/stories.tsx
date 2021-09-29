@@ -5,7 +5,7 @@ import GridRow from '@govuk-react/grid-row';
 import { H2 } from '@govuk-react/heading';
 import Paragraph from '@govuk-react/paragraph';
 
-import { GridCol } from '.';
+import GridCol from '.';
 
 const Content = styled('div')({
   textIndent: '-999em',
@@ -18,7 +18,7 @@ export default {
   component: GridCol,
 };
 
-export const Default: React.FC = () => (
+export const Default = () => (
   <GridRow>
     <GridCol setWidth="one-half">
       <H2>Half column</H2>
@@ -37,7 +37,7 @@ export const Default: React.FC = () => (
   </GridRow>
 );
 
-export const ColumnHalves: React.FC = () => (
+export const ColumnHalves = () => (
   <GridRow>
     <GridCol setWidth="one-half">
       <Content>content</Content>
@@ -48,7 +48,7 @@ export const ColumnHalves: React.FC = () => (
   </GridRow>
 );
 
-export const ColumnThirds: React.FC = () => (
+export const ColumnThirds = () => (
   <GridRow>
     <GridCol setWidth="one-third">
       <Content>content</Content>
@@ -62,7 +62,7 @@ export const ColumnThirds: React.FC = () => (
   </GridRow>
 );
 
-export const ColumnTwoThirdsOneThird: React.FC = () => (
+export const ColumnTwoThirdsOneThird = () => (
   <GridRow>
     <GridCol setWidth="two-thirds">
       <Content>content</Content>
@@ -73,7 +73,7 @@ export const ColumnTwoThirdsOneThird: React.FC = () => (
   </GridRow>
 );
 
-export const ColumnOneThirdTwoThirds: React.FC = () => (
+export const ColumnOneThirdTwoThirds = () => (
   <GridRow>
     <GridCol setWidth="one-third">
       <Content>content</Content>
@@ -84,7 +84,7 @@ export const ColumnOneThirdTwoThirds: React.FC = () => (
   </GridRow>
 );
 
-export const ColumnFourQuarters: React.FC = () => (
+export const ColumnFourQuarters = () => (
   <GridRow>
     <GridCol setWidth="one-quarter">
       <Content>content</Content>
@@ -101,7 +101,7 @@ export const ColumnFourQuarters: React.FC = () => (
   </GridRow>
 );
 
-export const ColumnOneQuarterAndAutoFill: React.FC = () => (
+export const ColumnOneQuarterAndAutoFill = () => (
   <GridRow>
     <GridCol setWidth="one-quarter">
       <Content>content</Content>
@@ -112,7 +112,7 @@ export const ColumnOneQuarterAndAutoFill: React.FC = () => (
   </GridRow>
 );
 
-export const ColumnWidthsDifferingBetweenTabletAndDesktop: React.FC = () => (
+export const ColumnWidthsDifferingBetweenTabletAndDesktop = () => (
   <GridRow>
     <GridCol setWidth="one-quarter" setDesktopWidth="one-third">
       <Content>content</Content>
@@ -123,7 +123,7 @@ export const ColumnWidthsDifferingBetweenTabletAndDesktop: React.FC = () => (
   </GridRow>
 );
 
-export const CustomWidthsDifferingBetweenTabletAndDesktop: React.FC = () => (
+export const CustomWidthsDifferingBetweenTabletAndDesktop = () => (
   <GridRow>
     <GridCol setWidth="60%" setDesktopWidth="auto">
       <Content>content</Content>

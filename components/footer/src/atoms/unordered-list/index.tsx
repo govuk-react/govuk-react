@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { GUTTER, MEDIA_QUERIES } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
 
-const UnorderedList = styled('ul')<UnorderedListProps>(
+const UnorderedList = styled('ul')(
   ({ inline }) =>
     inline
       ? {
@@ -25,10 +26,10 @@ const UnorderedList = styled('ul')<UnorderedListProps>(
     }
 );
 
-interface UnorderedListProps {
-  columns?: number;
-  inline?: boolean;
-}
+UnorderedList.propTypes = {
+  columns: PropTypes.number,
+  inline: PropTypes.bool,
+};
 
 UnorderedList.defaultProps = {
   columns: undefined,

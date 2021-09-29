@@ -3,7 +3,7 @@ import { BrowserRouter, Link, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import { MEDIA_QUERIES, GUTTER } from '@govuk-react/constants';
 
-import { Footer } from '.';
+import Footer from '.';
 import crest from './govuk-crest.png';
 
 const withRoutes = (component) => (
@@ -14,14 +14,14 @@ const withRoutes = (component) => (
   </BrowserRouter>
 );
 
-const FooterExample: React.FC = () => <Footer />;
+const FooterExample = () => <Footer />;
 export default FooterExample;
 
 const copyright = {
   text: 'Crown copyright',
   link: 'https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/',
   image: {
-    src: crest,
+    source: crest,
     height: 102,
     width: 125,
   },
@@ -77,13 +77,13 @@ const WideContainer = styled(Footer.WidthContainer)({
   },
 });
 
-export const FooterWithCustomWidth: React.FC = () => <Footer container={WideContainer} />;
+export const FooterWithCustomWidth = () => <Footer container={WideContainer} />;
 
-export const FooterWithCopyright: React.FC = () => <Footer copyright={copyright} />;
+export const FooterWithCopyright = () => <Footer copyright={copyright} />;
 
-export const FooterWithMetaLinks: React.FC = () => withRoutes(<Footer meta={metaLinks} />);
+export const FooterWithMetaLinks = () => withRoutes(<Footer meta={metaLinks} />);
 
-export const FooterWithSingleMetaLink: React.FC = () =>
+export const FooterWithSingleMetaLink = () =>
   withRoutes(
     <Footer
       meta={
@@ -94,11 +94,11 @@ export const FooterWithSingleMetaLink: React.FC = () =>
     />
   );
 
-export const FooterWithMetaCustom: React.FC = () => <Footer meta={metaCustom} />;
+export const FooterWithMetaCustom = () => <Footer meta={metaCustom} />;
 
-export const FooterWithMetaLinksAndCustom: React.FC = () => withRoutes(<Footer meta={metaLinksAndCustom} />);
+export const FooterWithMetaLinksAndCustom = () => withRoutes(<Footer meta={metaLinksAndCustom} />);
 
-export const FooterWithSingleNavigationLink: React.FC = () => (
+export const FooterWithSingleNavigationLink = () => (
   <Footer>
     <Footer.Navigation>
       <Footer.NavigationLinks heading="Single column list">
@@ -108,7 +108,6 @@ export const FooterWithSingleNavigationLink: React.FC = () => (
   </Footer>
 );
 
-export const FooterWithNavigation: React.FC = () => withRoutes(<Footer>{navigation}</Footer>);
+export const FooterWithNavigation = () => withRoutes(<Footer>{navigation}</Footer>);
 
-export const FooterWithNavigationAndMeta: React.FC = () =>
-  withRoutes(<Footer meta={metaLinksAndCustom}>{navigation}</Footer>);
+export const FooterWithNavigationAndMeta = () => withRoutes(<Footer meta={metaLinksAndCustom}>{navigation}</Footer>);

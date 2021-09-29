@@ -7,7 +7,6 @@ Checkbox
 ```
 <!-- STORY -->
 
-
 ### Usage
 
 Simple
@@ -49,6 +48,8 @@ Checkbox with hint text
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `children` | true | `````` |  | Text content for checkbox
+ `className` |  | ```undefined``` |  | CSS Classname for outermost container
+ `hint` |  | ```undefined``` |  | 
 
 

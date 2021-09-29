@@ -15,17 +15,19 @@
 .env.production.local
 
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 /lib
 /storybook-static
 /es
 govuk-react-*.tgz
 /dist
 /components/*/es
+
 /components/*/lib
-/components/*/dist
+
 /packages/*/es
 /packages/*/lib
-/packages/*/dist
 
 /packages/*/node_modules
 /components/*/node_modules

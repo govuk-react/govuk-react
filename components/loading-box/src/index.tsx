@@ -13,12 +13,7 @@ const StyledContainer = styled('div')({
   minHeight: '10px',
 });
 
-const Innerwrap = styled('div')<{
-  timeIn: number;
-  timeOut: number;
-  backgroundColor: string;
-  backgroundColorOpacity: number;
-}>(({ timeIn, timeOut, backgroundColor, backgroundColorOpacity }) => ({
+const Innerwrap = styled('div')(({ timeIn, timeOut, backgroundColor, backgroundColorOpacity }) => ({
   position: 'absolute',
   height: '100%',
   top: 0,
@@ -151,7 +146,7 @@ const Overlay = styled('div')({
  * - https://govuk-loader-prototype.herokuapp.com/components/loader
  *
  */
-export const LoadingBox: React.FC<LoadingBoxProps> = ({
+const LoadingBox = ({
   children,
   backgroundColor,
   backgroundColorOpacity,
@@ -187,8 +182,6 @@ LoadingBox.defaultProps = {
   timeIn: 800,
   timeOut: 200,
 };
-
-LoadingBox.displayName = 'LoadingBox';
 
 interface LoadingBoxProps {
   /**

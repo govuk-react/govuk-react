@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { spacing, typography } from '@govuk-react/lib';
 
@@ -141,20 +142,13 @@ const TabsContainer = styled('div')(
  * - https://design-system.service.gov.uk/components/tabs/
  *
  */
-export const Tabs: TabsType = (props: TabsProps) => <TabsContainer {...props} />;
 
-Tabs.displayName = 'Tabs';
+const Tabs = (props) => <TabsContainer {...props} />;
 
-export interface TabsType extends React.FC<TabsProps> {
-  Tab: typeof Tab;
-  List: typeof List;
-  Panel: typeof Panel;
-  Title: typeof Title;
-}
-export interface TabsProps {
+Tabs.propTypes = {
   /** child components that will appear in the Tabs section */
-  children: React.ReactNode;
-}
+  children: PropTypes.node.isRequired,
+};
 
 Tabs.Tab = Tab;
 Tabs.List = List;

@@ -1,6 +1,6 @@
 import { withKnobs } from '@storybook/addon-knobs';
 
-import { Link } from '.';
+import { LinkDocumented as Link } from '.';
 import LinkFixture, { LinkWithRouter } from './fixtures';
 
 export default {

@@ -6,7 +6,7 @@ describe('spacing lib', () => {
   describe('simple', () => {
     it('returns spacing values from the spacing scale', () => {
       Object.keys(SPACING_POINTS).forEach((key) => {
-        expect(spacing.simple(Number(key))).toEqual(SPACING_POINTS[key]);
+        expect(spacing.simple(key)).toEqual(SPACING_POINTS[key]);
       });
     });
 
@@ -24,6 +24,7 @@ describe('spacing lib', () => {
     });
 
     it('throws when given a size not in the spacing scale', () => {
+      expect(() => spacing.simple('test')).toThrow();
       expect(() => spacing.simple(99999)).toThrow();
     });
   });
@@ -59,6 +60,7 @@ describe('spacing lib', () => {
     });
 
     it('throws when given a size not in the spacing scale', () => {
+      expect(() => spacing.responsive({ size: 'test', property: undefined })).toThrow();
       expect(() => spacing.responsive({ size: 99999, property: undefined })).toThrow();
     });
 

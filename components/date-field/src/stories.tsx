@@ -3,7 +3,7 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import type { DateFieldProps } from '.';
 
-import { DateField } from '.';
+import DateField from '.';
 
 export default {
   title: 'Form/Date field',
@@ -41,7 +41,7 @@ class ManagedDateField extends React.Component<
   }
 }
 
-export const Default: React.FC = () => (
+export const Default = () => (
   <ManagedDateField
     input={{
       onFocus: action('date-focus'),
@@ -54,15 +54,15 @@ export const Default: React.FC = () => (
   </ManagedDateField>
 );
 
-export const DateWithHintText: React.FC = () => (
+export const DateWithHintText = () => (
   <DateField hintText="For example, 31 03 1980">What is your date of birth?</DateField>
 );
 
-export const DateWithDefaultValues: React.FC = () => (
+export const DateWithDefaultValues = () => (
   <DateField defaultValues={{ day: '01', month: '02', year: '2018' }}>What is your date of birth ?</DateField>
 );
 
-export const DateWithHintTextError: React.FC = () => (
+export const DateWithHintTextError = () => (
   <DateField hintText="For example, 31 03 1980" errorText="Error message goes here">
     What is your date of birth?
   </DateField>

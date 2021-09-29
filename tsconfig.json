@@ -1,35 +1,21 @@
 {
   "compilerOptions": {
-    "allowJs": false,
-    "allowSyntheticDefaultImports": true,
-    "alwaysStrict": true,
     "baseUrl": ".",
-    "declaration": true,
-    "emitDecoratorMetadata": false,
-    "esModuleInterop": true,
-    "experimentalDecorators": false,
-    "isolatedModules": true,
-    "jsx": "react",
-    "lib": ["dom", "esnext"],
-    "moduleResolution": "node",
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "noFallthroughCasesInSwitch": false,
-    "noImplicitReturns": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": false,
     "paths": {
-      "@govuk-react/*": ["./components/*/src/index.tsx", "./packages/*/src/index.tsx"],
+      "@govuk-react/*": [ "./components/*/src/index.tsx", "./packages/*/src/index.tsx" ],
       "govuk-react": ["./packages/govuk-react/src/index.ts"]
     },
-    "pretty": true,
+    "jsx": "react",
+    "esModuleInterop": true,
     "resolveJsonModule": true,
-    "sourceMap": true,
-    "stripInternal": true,
-    "target": "es2018",
-    "types": ["node"]
   },
-  "exclude": ["node_modules", "**/node_modules/*", "**/cypress/*"],
-  "include": ["./components/*/src/**/*", "./packages/*/src/**/*", "./scripts/**/*"]
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*",
+    "**/cypress/*",
+  ],
+  "include": [
+    "./components/*/src/**/*",
+    "./packages/*/src/**/*"
+  ]
 }

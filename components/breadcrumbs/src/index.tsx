@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
 import { SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
@@ -93,11 +94,15 @@ const BreadcrumbsListItem = styled('li')({
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/breadcrumbs/_breadcrumbs.scss
  *
  */
-export const Breadcrumbs: BreadcrumbsType = ({ children, ...props }: BreadcrumbsProps) => (
+const Breadcrumbs = ({ children, ...props }) => (
   <BreadcrumbsContainer {...props}>
     <BreadcrumbsList>
-      {Array.isArray(children) ? (
-        React.Children.map(children, (child, i) => (child ? <BreadcrumbsListItem>{child}</BreadcrumbsListItem> : null))
+      {children.length && children.map ? (
+        children.map((child, i) =>
+          child && (child.length || child.props) ? (
+            <BreadcrumbsListItem key={child.key || i}>{child}</BreadcrumbsListItem>
+          ) : null
+        )
       ) : (
         <BreadcrumbsListItem>{children}</BreadcrumbsListItem>
       )}
@@ -105,18 +110,13 @@ export const Breadcrumbs: BreadcrumbsType = ({ children, ...props }: Breadcrumbs
   </BreadcrumbsContainer>
 );
 
-export interface BreadcrumbsType extends React.FC<BreadcrumbsProps> {
-  Link?: typeof Link;
-}
-interface BreadcrumbsProps extends React.HTMLAttributes<HTMLDivElement> {
+Breadcrumbs.propTypes = {
   /**
    * Breadcrumbs contents
    */
-  children: React.ReactNode;
-}
+  children: PropTypes.node.isRequired,
+};
 
 Breadcrumbs.Link = Link;
-
-Breadcrumbs.displayName = 'Breadcrumbs';
 
 export default Breadcrumbs;

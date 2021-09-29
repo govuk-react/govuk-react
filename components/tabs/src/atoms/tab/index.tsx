@@ -1,5 +1,3 @@
-import type { StyledComponentProps } from 'styled-components';
-
 import React from 'react';
 import styled from 'styled-components';
 import { link, spacing, typography } from '@govuk-react/lib';
@@ -28,7 +26,7 @@ const StyledListItem = styled('li')({
   },
 });
 
-const StyledHyperLink = styled('a')<TabOwnProps>(
+const StyledHyperLink = styled('a')(
   typography.font({ size: 19 }),
   link.common(),
   link.styleDefault,
@@ -66,7 +64,7 @@ const StyledHyperLink = styled('a')<TabOwnProps>(
   })
 );
 
-const Tab: TabType = (props) => (
+const Tab = (props: TabProps) => (
   <StyledListItem>
     <StyledHyperLink {...props} />
   </StyledListItem>
@@ -74,29 +72,26 @@ const Tab: TabType = (props) => (
 
 Tab.defaultProps = {
   selected: false,
+  as: undefined,
+  // TODO: #953
+  to: undefined,
+  href: undefined,
+  onClick: undefined,
 };
 
-interface TabType extends React.FC<TabOwnProps> {
-  (props: TabPropsWithoutAs): React.ReactElement<TabPropsWithoutAs>;
-  <AsC extends string | React.ComponentType = 'a', FAsC extends string | React.ComponentType = AsC>(
-    props: TabPropsWithAs<AsC, FAsC>
-  ): React.ReactElement<TabPropsWithAs<AsC, FAsC>>;
-}
-
-type TabPropsWithoutAs = StyledComponentProps<'a', never, TabOwnProps, never> & {
-  as?: never | undefined;
-  forwardedAs?: never | undefined;
-};
-
-type TabPropsWithAs<AsC extends string | React.ComponentType, FAsC extends string | React.ComponentType = AsC> =
-  StyledComponentProps<AsC, never, TabOwnProps, never, FAsC> & {
-    as?: AsC | undefined;
-    forwardedAs?: FAsC | undefined;
-  };
-
-interface TabOwnProps {
+interface TabProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   /** Different stylings for the Tab displaying content */
   selected?: boolean;
+  /** Join the panel and header together with corresponding panel id. Required for mobile use  */
+  href?: string;
+  /** The content to display within the Tab Header */
+  children: React.ReactNode;
+  /** The function to passed to prevent default href behaviour */
+  onClick?: (...args: unknown[]) => unknown;
+
+  as?: React.ElementType;
+  // TODO: #953
+  to?: string;
 }
 
 export default Tab;

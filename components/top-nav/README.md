@@ -7,7 +7,6 @@ TopNav
 ```
 <!-- STORY -->
 
-
 ### Usage
 
 TopNav with logo, service title and navigation items
@@ -73,15 +72,23 @@ const ServiceTitleLink = (
 - http://alphagov.github.io/govuk_template/example-proposition-menu.html
 - https://design-system.service.gov.uk/components/header/
 
+### TODO:
+- TODO: this component is a work in progress and needs to more closely match existing examples
+- TODO: is TopNav the right name? What's it called in other GDS styles/patterns?
+- TODO: (The name Header is ambiguous)
+- TODO: #205 Use context api and/or render props for `active` navigation items
+- TODO: Vertical alignment here needs some work, perhaps should be its own component
+- TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
+
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `bgColor` |  | ```undefined``` | string | Top nav background color
- `children` |  | ```undefined``` | any | List Navigation items with anchor tags e.g. NavAnchor components
- `color` |  | ```undefined``` | string | Top nav text color
- `company` |  | ```<IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</IconTitle>``` | any | Company component e.g. GOV UK
- `defaultOpen` |  | ```undefined``` | boolean | Is the mobile navigation open by default?
- `search` |  | ```undefined``` | any | Search component
- `serviceTitle` |  | ```undefined``` | any | Service title component e.g. Food Standards Authority
+ `bgColor` |  | ```BLACK``` |  | Top nav background color
+ `children` |  | ```undefined``` |  | List Navigation items with anchor tags e.g. NavAnchor components
+ `color` |  | ```WHITE``` |  | Top nav text color
+ `company` |  | ```<IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</IconTitle>``` |  | Company component e.g. GOV UK
+ `defaultOpen` |  | ```false``` |  | Is the mobile navigation open by default?
+ `search` |  | ```false``` |  | Search component
+ `serviceTitle` |  | ```undefined``` |  | Service title component e.g. Food Standards Authority
 
 

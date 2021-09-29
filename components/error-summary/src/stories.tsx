@@ -11,4 +11,4 @@ export default {
   component: ErrorSummaryComponent,
 };
 
-export const Default: React.FC = () => <ErrorSummary />;
+export const Default = () => <ErrorSummary />;

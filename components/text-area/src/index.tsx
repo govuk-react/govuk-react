@@ -11,7 +11,7 @@ import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 
-const TextAreaField = styled('textarea')<{ error?: boolean }>(
+const TextAreaField = styled('textarea')(
   {
     boxSizing: 'border-box',
     fontFamily: NTA_LIGHT,
@@ -79,12 +79,12 @@ const TextAreaField = styled('textarea')<{ error?: boolean }>(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/textarea
  *
  */
-export const TextArea: React.FC<TextAreaProps> = ({ children, hint, meta, input, ...props }: TextAreaProps) => (
+const TextArea = ({ children, hint, meta, input, ...props }: TextAreaProps) => (
   <Label error={meta.touched && !!meta.error} {...props}>
     <LabelText>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
-    <TextAreaField rows={5} error={meta.touched && !!meta.error} {...input} />
+    <TextAreaField type="text" rows="5" error={meta.touched && !!meta.error} {...input} />
   </Label>
 );
 
@@ -94,14 +94,26 @@ TextArea.defaultProps = {
   meta: {},
 };
 
-TextArea.displayName = 'TextArea';
-
-export interface TextAreaProps extends LabelProps {
+interface TextAreaProps extends LabelProps {
   hint?: React.ReactNode;
   input?: React.TextareaHTMLAttributes<HTMLTextAreaElement>;
   meta?: {
-    error?: string | string[];
+    active?: boolean;
+    dirty?: boolean;
+    dirtySinceLastSubmit?: boolean;
+    // eslint-disable-next-line react/forbid-prop-types
+    error?: any;
+    // eslint-disable-next-line react/forbid-prop-types
+    initial?: any;
+    invalid?: boolean;
+    pristine?: boolean;
+    // eslint-disable-next-line react/forbid-prop-types
+    submitError?: any;
+    submitFailed?: boolean;
+    submitSucceeded?: boolean;
     touched?: boolean;
+    valid?: boolean;
+    visited?: boolean;
   };
   children: React.ReactNode;
 }

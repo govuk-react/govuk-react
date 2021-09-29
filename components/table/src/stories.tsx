@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Table } from '.';
+import Table from '.';
 
 import {
   TableSimple,
@@ -15,8 +15,8 @@ export default {
   component: Table,
 };
 
-export const Default: React.FC = () => <TableSimple />;
-export const WithACaption: React.FC = () => <TableWithCaption />;
-export const WithAHeadRowAndNumericTabularData: React.FC = () => <TableWithHeadAndNumerics />;
-export const WithAThreeQuarterWidthColumnAndOneQuarter: React.FC = () => <TableThreeQuartersOneQuarter />;
-export const WithCustomColumnWidths: React.FC = () => <TableWithCustomWidths />;
+export const Default = () => <TableSimple />;
+export const WithACaption = () => <TableWithCaption />;
+export const WithAHeadRowAndNumericTabularData = () => <TableWithHeadAndNumerics />;
+export const WithAThreeQuarterWidthColumnAndOneQuarter = () => <TableThreeQuartersOneQuarter />;
+export const WithCustomColumnWidths = () => <TableWithCustomWidths />;

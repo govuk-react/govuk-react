@@ -2,13 +2,33 @@
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
 import styled from 'styled-components';
+import React from 'react';
 import { ERROR_COLOUR } from 'govuk-colours';
 import { SPACING } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
 
-// Our approach to labels/fields differs to govuk-frontend.
-// We have no `form-group` - this, to an extent, replaces it.
-// We wrap form inputs with a label to associate them, rather than rely on an ID.
+// TODO consider removing this, as it's not as per govuk-frontend
+// NB our approach to labels/fields differs at present, which is why we have this
+// we have no `form-group` - this, to an extent, replaces it...
+
+const StyledLabel = styled('label')(
+  {
+    display: 'flex',
+    flexDirection: 'column',
+    boxSizing: 'border-box',
+    ':after': {
+      content: "''",
+      display: 'table',
+      clear: 'both',
+    },
+  },
+  ({ error }) => ({
+    borderLeft: error ? `4px solid ${ERROR_COLOUR}` : undefined,
+    marginRight: error ? SPACING.SCALE_3 : undefined,
+    paddingLeft: error ? SPACING.SCALE_2 : undefined,
+  }),
+  spacing.withWhiteSpace({ marginBottom: 0 })
+);
 
 /**
  *
@@ -34,26 +54,11 @@ import { spacing } from '@govuk-react/lib';
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
  *
  */
-export const Label = styled('label')<LabelProps>(
-  {
-    display: 'flex',
-    flexDirection: 'column',
-    boxSizing: 'border-box',
-    ':after': {
-      content: "''",
-      display: 'table',
-      clear: 'both',
-    },
-  },
-  ({ error }) => ({
-    borderLeft: error ? `4px solid ${ERROR_COLOUR}` : undefined,
-    marginRight: error ? SPACING.SCALE_3 : undefined,
-    paddingLeft: error ? SPACING.SCALE_2 : undefined,
-  }),
-  spacing.withWhiteSpace({ marginBottom: 0 })
-);
+const Label = (props: LabelProps) => <StyledLabel {...props} />;
 
 export interface LabelProps extends WithWhiteSpaceProps {
+  /** Text for the label */
+  children: React.ReactNode;
   /**
    * Apply error state styling to the component
    */
@@ -63,7 +68,5 @@ export interface LabelProps extends WithWhiteSpaceProps {
 Label.defaultProps = {
   error: false,
 };
-
-Label.displayName = 'Label';
 
 export default Label;

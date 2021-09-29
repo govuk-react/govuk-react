@@ -127,26 +127,37 @@ exports[`InputField matches wrapper snapshot: wrapper mount 1`] = `
   <Label
     error={false}
   >
-    <label
-      className="c0"
+    <src__StyledLabel
+      error={false}
     >
-      <LabelText>
-        <span
-          className="c1"
-        >
-          example
-        </span>
-      </LabelText>
-      <Input
-        error={false}
-        type="text"
+      <label
+        className="c0"
       >
-        <input
-          className="c2"
+        <LabelText>
+          <src__StyledLabelText>
+            <span
+              className="c1"
+            >
+              example
+            </span>
+          </src__StyledLabelText>
+        </LabelText>
+        <ForwardRef
+          error={false}
           type="text"
-        />
-      </Input>
-    </label>
+        >
+          <src__StyledInput
+            error={false}
+            type="text"
+          >
+            <input
+              className="c2"
+              type="text"
+            />
+          </src__StyledInput>
+        </ForwardRef>
+      </label>
+    </src__StyledLabel>
   </Label>
 </InputField>
 `;

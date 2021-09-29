@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import BaseInput from '@govuk-react/input';
+import { StyledInput } from '@govuk-react/input';
 import LabelText from '@govuk-react/label-text';
 import Label from '@govuk-react/label';
 
 import multiInputInput from 'multi-input-input';
 
-const StyledLabel = styled(Label)<{ year: boolean }>(
+const StyledLabel = styled(Label)(
   {
     marginRight: '20px',
     marginBottom: 0,
@@ -49,9 +49,9 @@ class Input extends React.Component<InputProps> {
     return (
       <StyledLabel year={key === 'year'}>
         <LabelText>{label}</LabelText>
-        <BaseInput
+        <StyledInput
           name={name}
-          error={!!error}
+          error={error}
           defaultValue={defaultValue}
           value={value ? value[key] : undefined}
           onChange={(e) => onChange(e, key)}
@@ -70,6 +70,7 @@ class Input extends React.Component<InputProps> {
     const { labels, names, defaultValues, error } = this.props;
     return (
       <StyledList>
+        {/* TODO: text should be configurable  */}
         {this.renderInput(labels.day, names.day, 'day', defaultValues.day, error)}
         {this.renderInput(labels.month, names.month, 'month', defaultValues.month, error)}
         {this.renderInput(labels.year, names.year, 'year', defaultValues.year, error)}
@@ -102,14 +103,10 @@ export interface InputProps {
   /**
    * This comes from the multiInputInput HOC and is needed to track all 3 inputs
    */
-  refs?: (refs: {
-    day?: React.Ref<typeof BaseInput>;
-    month?: React.Ref<typeof BaseInput>;
-    year?: React.Ref<typeof BaseInput>;
-  }) => void;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>, key: string) => void;
-  onBlur?: (e: React.FocusEvent<HTMLInputElement>, key: string) => void;
-  onFocus?: (e: React.FocusEvent<HTMLInputElement>, key: string) => void;
+  refs?: (...args: unknown[]) => unknown;
+  onChange?: (...args: unknown[]) => unknown;
+  onBlur?: (...args: unknown[]) => unknown;
+  onFocus?: (...args: unknown[]) => unknown;
   error?: boolean;
 }
 

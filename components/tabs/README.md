@@ -7,7 +7,6 @@ Tabs
 ```
 <!-- STORY -->
 
-
 ### Simple Example
 ```js
 import { Tabs } from 'govuk-react';
@@ -134,6 +133,6 @@ const App = ({ defaultIndex }) => {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `children` | true | `````` | node | child components that will appear in the Tabs section
 
 

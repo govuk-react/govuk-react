@@ -1,13 +1,12 @@
-import type { StyledComponentProps } from 'styled-components';
-
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { BLUE, GREY_4, PURPLE, YELLOW, WHITE } from 'govuk-colours';
 import { FONT_SIZE, LINE_HEIGHT, SPACING, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants';
 
 import { ArrowRight as NextPageIcon, ArrowLeft as PrevPageIcon } from '@govuk-react/icons';
 
-const PaginationWrapper = styled('li')<{ previousPage?: boolean; nextPage?: boolean }>(
+const PaginationWrapper = styled('li')(
   {
     boxSizing: 'border-box',
     margin: 0,
@@ -91,58 +90,40 @@ const PageTitle = styled('span')({
   },
 });
 
-const Anchor = styled('a')({});
-
-const PaginationAnchor: PaginationAnchorType = ({
-  previousPage,
-  nextPage,
-  children,
-  pageTitle,
-  ...props
-}: PaginationAnchorProps) => (
+const PaginationAnchor = ({ previousPage, nextPage, to, href, target, children, pageTitle, as: As }) => (
   <PaginationWrapper previousPage={previousPage} nextPage={nextPage}>
-    <Anchor {...props}>
+    <As to={to} href={href} target={target}>
       <InnerWrap>
         {previousPage && <PrevPageIcon />}
         {children}
         {nextPage && <NextPageIcon />}
       </InnerWrap>
       {pageTitle && <PageTitle>{pageTitle}</PageTitle>}
-    </Anchor>
+    </As>
   </PaginationWrapper>
 );
 
-interface PaginationAnchorType extends React.FC<PaginationAnchorProps> {
-  (props: PaginationAnchorPropsWithoutAs): React.ReactElement<PaginationAnchorPropsWithoutAs>;
-  <AsC extends string | React.ComponentType = 'a', FAsC extends string | React.ComponentType = AsC>(
-    props: PaginationAnchorPropsWithAs<AsC, FAsC>
-  ): React.ReactElement<PaginationAnchorPropsWithAs<AsC, FAsC>>;
-}
-
-type PaginationAnchorPropsWithoutAs = StyledComponentProps<'a', never, PaginationAnchorProps, never> & {
-  as?: never | undefined;
-  forwardedAs?: never | undefined;
+PaginationAnchor.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+  previousPage: PropTypes.bool,
+  nextPage: PropTypes.bool,
+  pageTitle: PropTypes.string,
+  // TODO: #953
+  to: PropTypes.string,
+  target: PropTypes.string,
+  href: PropTypes.string,
+  as: PropTypes.elementType,
 };
-
-type PaginationAnchorPropsWithAs<
-  AsC extends string | React.ComponentType,
-  FAsC extends string | React.ComponentType = AsC
-> = StyledComponentProps<AsC, never, PaginationAnchorProps, never, FAsC> & {
-  as?: AsC | undefined;
-  forwardedAs?: FAsC | undefined;
-};
-
-interface PaginationAnchorProps {
-  children: string | React.ReactElement;
-  previousPage?: boolean;
-  nextPage?: boolean;
-  pageTitle?: string;
-}
 
 PaginationAnchor.defaultProps = {
   previousPage: undefined,
   nextPage: undefined,
   pageTitle: undefined,
+  // TODO: #953
+  to: undefined,
+  target: undefined,
+  href: undefined,
+  as: 'a',
 };
 
 export default PaginationAnchor;

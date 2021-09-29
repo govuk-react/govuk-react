@@ -6,18 +6,7 @@ function equilateralHeight(base) {
   return (base / 2) * root3;
 }
 
-function makeShape(
-  direction: string,
-  base: number,
-  height: number
-): {
-  clipPath: string;
-  borderWidth: string;
-  borderBottomColor?: string;
-  borderLeftColor?: string;
-  borderRightColor?: string;
-  borderTopColor?: string;
-} {
+function makeShape(direction, base, height) {
   const perpendicular = base / 2;
 
   switch (direction) {
@@ -51,28 +40,7 @@ function makeShape(
 }
 
 // eslint-disable-next-line import/prefer-default-export
-export function arrow({
-  direction,
-  base = 0,
-  height = equilateralHeight(base),
-  display = 'block',
-}: {
-  direction: string;
-  base?: number;
-  height?: number;
-  display?: string;
-}): {
-  display: string;
-  width: number;
-  height: number;
-  borderStyle: string;
-  borderColor: string;
-  clipPath: string;
-  borderWidth: string;
-  borderBottomColor?: string;
-  borderLeftColor?: string;
-  borderTopColor?: string;
-} {
+export function arrow({ direction, base = 0, height = equilateralHeight(base), display = 'block' }) {
   return {
     display,
     width: 0,

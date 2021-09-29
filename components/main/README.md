@@ -7,7 +7,6 @@ Main
 ```
 <!-- STORY -->
 
-
 Provides a container which aligns to the topNav component,
 is centered, and provides top padding.
 
@@ -32,9 +31,12 @@ import { Main, GridRow, GridCol } from 'govuk-react'
 </Main>
 ```
 
+### TODO
+- Implement the 1020px min-width MQ to constants
+
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `children` |  | ```undefined``` |  | Child nodes for the page being built
 
 

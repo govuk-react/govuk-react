@@ -1,14 +1,11 @@
-import type { WithWhiteSpaceProps } from '@govuk-react/lib';
-
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import type { ReactMarkdownProps } from 'react-markdown';
-
 import ReactMarkdown from 'react-markdown';
 import { spacing, typography } from '@govuk-react/lib';
 import Link from '@govuk-react/link';
 
-const StyledParagraph = styled(ReactMarkdown)<ParagraphProps>(
+const StyledParagraph = styled(ReactMarkdown)(
   {
     margin: 0,
     '> p': {
@@ -98,11 +95,12 @@ const StyledParagraph = styled(ReactMarkdown)<ParagraphProps>(
  * ### References
  * - https://govuk-elements.herokuapp.com/typography/#typography-body-copy
  *
+ * ### TODO
+ * - Add test for supporting text
+ * - Review code snippet styling
+ * - Remove magic numbers from inline code styling blocks
  */
-export const Paragraph: React.FC<ParagraphProps & ReactMarkdownProps> = ({
-  children,
-  ...props
-}: ParagraphProps & ReactMarkdownProps) => (
+const Paragraph = ({ children, ...props }) => (
   <StyledParagraph
     source={children}
     escapeHtml={false}
@@ -113,24 +111,22 @@ export const Paragraph: React.FC<ParagraphProps & ReactMarkdownProps> = ({
   />
 );
 
-export interface ParagraphProps extends WithWhiteSpaceProps, React.HTMLAttributes<HTMLDivElement> {
+Paragraph.propTypes = {
   /**
    * Text content supporting markdown
    */
-  children?: React.ReactNode;
+  children: PropTypes.node,
   /**
    * Is this paragraph supporting text for another element?
    */
-  supportingText?: boolean;
-  linkRenderer?: React.ElementType;
-}
+  supportingText: PropTypes.bool,
+  linkRenderer: PropTypes.func,
+};
 
 Paragraph.defaultProps = {
   children: '',
   supportingText: false,
   linkRenderer: (props) => <Link {...props} />,
 };
-
-Paragraph.displayName = 'Paragraph';
 
 export default Paragraph;

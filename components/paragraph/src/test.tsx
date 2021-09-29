@@ -1,19 +1,17 @@
 import React from 'react';
 import { MemoryRouter, Link } from 'react-router-dom';
 import { mount } from 'enzyme';
+import PropTypes from 'prop-types';
 
 import Paragraph, { exampleCodeBlock } from './fixtures';
 
-const ReactRouterLinkRenderer: React.FC<ReactRouterLinkRendererProps> = ({
-  href,
-  children,
-}: ReactRouterLinkRendererProps) =>
+const ReactRouterLinkRenderer = ({ href, children }) =>
   href.match(/^\//) ? <Link to={href}>{children}</Link> : <a href={href}>{children}</a>;
 
-interface ReactRouterLinkRendererProps {
-  href: string;
-  children: React.ReactNode;
-}
+ReactRouterLinkRenderer.propTypes = {
+  href: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};
 
 describe('Paragraph', () => {
   const examplePlain = 'Some basic text';

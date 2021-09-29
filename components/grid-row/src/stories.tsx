@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import GridCol from '@govuk-react/grid-col';
 
-import { GridRow } from '.';
+import GridRow from '.';
 
 export default {
   title: 'Page & Layout/Grid row',
@@ -15,7 +15,7 @@ const Content = styled('div')({
   backgroundImage: 'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)',
 });
 
-export const Default: React.FC = () => (
+export const Default = () => (
   <GridRow>
     <GridCol>
       <Content>Example</Content>

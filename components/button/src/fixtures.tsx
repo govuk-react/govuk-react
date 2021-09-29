@@ -4,39 +4,39 @@ import { ButtonArrow } from '@govuk-react/icons';
 import { BLUE, TEXT_COLOUR, YELLOW, GREY_3, ORANGE } from 'govuk-colours';
 import { MemoryRouter, Route, Link } from 'react-router-dom';
 
-import { Button } from '.';
+import Button from '.';
 
-const ButtonWithKnobs: React.FC = () => (
+const ButtonWithKnobs = () => (
   <Button mb="0" disabled={boolean('Disabled', false)} start={boolean('Start', false)}>
     {text('Children', 'Button')}
   </Button>
 );
 
-const ButtonStart: React.FC = () => <Button start>Save and continue</Button>;
+const ButtonStart = () => <Button start>Save and continue</Button>;
 
-const ButtonStartIcon: React.FC = () => (
+const ButtonStartIcon = () => (
   <Button icon={<ButtonArrow />} start>
     Start now
   </Button>
 );
 
-const ButtonDisabled: React.FC = () => <Button disabled>Disabled primary button</Button>;
+const ButtonDisabled = () => <Button disabled>Disabled primary button</Button>;
 
-const ButtonDisabledStartIcon: React.FC = () => (
+const ButtonDisabledStartIcon = () => (
   <Button disabled start icon={<ButtonArrow />}>
     Start now
   </Button>
 );
 
-const ButtonBlue: React.FC = () => <Button buttonColour={BLUE}>Blue button</Button>;
+const ButtonBlue = () => <Button buttonColour={BLUE}>Blue button</Button>;
 
-const ButtonWacky: React.FC = () => (
+const ButtonWacky = () => (
   <Button buttonColour={GREY_3} buttonHoverColour={YELLOW} buttonShadowColour={ORANGE} buttonTextColour={TEXT_COLOUR}>
     Wacky colours
   </Button>
 );
 
-const ButtonAsLink: React.FC = () => (
+const ButtonAsLink = () => (
   <MemoryRouter>
     <div>
       <Button as={Link} to="/">

@@ -1,26 +1,12 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { BORDER_WIDTH_WIDE, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 import { BORDER_COLOUR } from 'govuk-colours';
 
-/**
- *
- * ### Usage
- *
- * ```jsx
- * import { InsetText } from 'govuk-react'
- *
- * <InsetText>
- *  Hello
- * </InsetText>
- * ```
- *
- * ### References
- * - https://design-system.service.gov.uk/components/inset-text/
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/inset-text/_inset-text.scss
- */
-export const InsetText = styled('div')(
+const InsetText = styled('div')(
   typography.font({ size: 19 }),
   typography.textColour,
   {
@@ -41,6 +27,29 @@ export const InsetText = styled('div')(
   }
 );
 
-InsetText.displayName = 'InsetText';
+/**
+ *
+ * ### Usage
+ *
+ * ```jsx
+ * import { InsetText } from 'govuk-react'
+ *
+ * <InsetText>
+ *  Hello
+ * </InsetText>
+ * ```
+ *
+ * ### References
+ * - https://design-system.service.gov.uk/components/inset-text/
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/inset-text/_inset-text.scss
+ */
+const DocumentedInsetText = (props) => <InsetText {...props} />;
 
+DocumentedInsetText.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+InsetText.propTypes = DocumentedInsetText.propTypes;
+
+export { DocumentedInsetText };
 export default InsetText;

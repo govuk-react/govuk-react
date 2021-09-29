@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { BORDER_COLOUR } from 'govuk-colours';
 import { spacing } from '@govuk-react/lib';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
 
-const TabPanel = styled('section')<TabPanelProps>(
+const TabPanel = styled('section')(
   spacing.responsiveMargin({ size: 8, direction: 'bottom' }),
   {
     [MEDIA_QUERIES.TABLET]: {
@@ -27,9 +28,9 @@ const TabPanel = styled('section')<TabPanelProps>(
   })
 );
 
-interface TabPanelProps extends React.HTMLAttributes<HTMLDivElement> {
+TabPanel.propTypes = {
   /** determine which panel is displayed */
-  selected: boolean;
-}
+  selected: PropTypes.bool.isRequired,
+};
 
 export default TabPanel;

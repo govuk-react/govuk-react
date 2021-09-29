@@ -7,7 +7,6 @@ Table
 ```
 <!-- STORY -->
 
-
 ### Usage
 
 The Table component provides a construction kit of elements to create a table
@@ -103,6 +102,9 @@ Setting custom column widths
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `body` |  | ```undefined``` |  | Table body rows and cells (for backward compatibility)
+ `caption` |  | ```undefined``` |  | Table caption title
+ `children` |  | ```undefined``` |  | Table body rows and cells (recommended way)
+ `head` |  | ```undefined``` |  | Table header rows and cells
 
 

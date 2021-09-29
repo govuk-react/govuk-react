@@ -1,7 +1,7 @@
 import React from 'react';
 
 import LabelText from '@govuk-react/label-text';
-import { Select, SelectInput } from '.';
+import Select, { SelectInput } from '.';
 
 const meta = {
   touched: true,
@@ -14,7 +14,7 @@ export default {
 };
 
 // TODO: add a synthetic onChange event
-export const Default: React.FC = () => (
+export const Default = () => (
   <Select input={{ name: 'group1' }} label="This is a label">
     <option value="0">GOV.UK elements option 1</option>
     <option value="1">GOV.UK elements option 2</option>
@@ -22,7 +22,7 @@ export const Default: React.FC = () => (
   </Select>
 );
 
-export const SelectWithHintText: React.FC = () => (
+export const SelectWithHintText = () => (
   <Select
     input={{ name: 'group1' }}
     label="This is a label"
@@ -34,7 +34,7 @@ export const SelectWithHintText: React.FC = () => (
   </Select>
 );
 
-export const SelectWithHintTextError: React.FC = () => (
+export const SelectWithHintTextError = () => (
   <Select
     input={{ name: 'group1' }}
     label="This is a label"
@@ -47,7 +47,7 @@ export const SelectWithHintTextError: React.FC = () => (
   </Select>
 );
 
-export const StandaloneInputWithInlineLabel: React.FC = () => (
+export const StandaloneInputWithInlineLabel = () => (
   <label>
     <LabelText>
       Sort by:&nbsp;

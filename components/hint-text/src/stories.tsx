@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { HintText } from '.';
+import HintText from '.';
 
 export default {
   title: 'Form/Hint text',
   component: HintText,
 };
 
-export const Default: React.FC = () => <HintText>Example</HintText>;
+export const Default = () => <HintText>Example</HintText>;

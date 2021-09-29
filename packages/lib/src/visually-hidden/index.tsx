@@ -2,9 +2,7 @@
 // Tracking:
 // https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/helpers/_visually-hidden.scss
 
-function visuallyHidden({ important: isImportant = true, focusable: isFocusable = false } = {}): {
-  [key: string]: string | { [key: string]: string };
-} {
+function visuallyHidden({ important: isImportant = true, focusable: isFocusable = false } = {}) {
   const important = isImportant ? ' !important' : '';
   return {
     position: `absolute${important}`,
@@ -42,13 +40,7 @@ function visuallyHidden({ important: isImportant = true, focusable: isFocusable 
   };
 }
 
-function focusable({ important = true } = {}): {
-  [key: string]:
-    | string
-    | {
-        [key: string]: string;
-      };
-} {
+function focusable({ important = true } = {}) {
   return visuallyHidden({ important, focusable: true });
 }
 

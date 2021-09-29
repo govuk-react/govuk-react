@@ -87,14 +87,18 @@ exports[`SkipLink matches snapshot: SkipLink 1`] = `
   }
 }
 
-<SkipLink
+<SkipLinkDocumented
   href="#content"
 >
-  <a
-    className="c0"
+  <src__SkipLink
     href="#content"
   >
-    Example
-  </a>
-</SkipLink>
+    <a
+      className="c0"
+      href="#content"
+    >
+      Example
+    </a>
+  </src__SkipLink>
+</SkipLinkDocumented>
 `;

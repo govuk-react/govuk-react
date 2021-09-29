@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import { SkipLink } from '.';
+import { SkipLinkDocumented as SkipLink } from '.';
 
 describe('SkipLink', () => {
   it('matches snapshot', () => {

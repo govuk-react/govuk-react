@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Input } from '.';
+import Input from '.';
 
 export default {
   title: 'Form/Input',
   component: Input,
 };
 
-export const Default: React.FC = () => <Input type="text" />;
+export const Default = () => <Input type="text" />;

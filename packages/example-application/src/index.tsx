@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as GovUK from 'govuk-react';
 import { MemoryRouter as Router, Switch, Route } from 'react-router';
 import { Link } from 'react-router-dom';
@@ -6,7 +7,7 @@ import { Link } from 'react-router-dom';
 import Home from './home';
 import Forms from './forms/forms';
 
-const ExampleApplication: React.FC<ExampleApplicationProps> = ({ routerEntries }: ExampleApplicationProps) => (
+const ExampleApplication = ({ routerEntries }) => (
   <Router initialEntries={routerEntries}>
     <GovUK.GlobalStyle />
     <GovUK.TopNav
@@ -29,7 +30,9 @@ const ExampleApplication: React.FC<ExampleApplicationProps> = ({ routerEntries }
         Forms
       </GovUK.TopNav.NavLink>
     </GovUK.TopNav>
-    <GovUK.Page.WidthContainer>
+    <GovUK.Page.WidthContainer
+      beforeChildren={<GovUK.PhaseBanner level="alpha">This part of GOV.UK is being rebuilt</GovUK.PhaseBanner>}
+    >
       <GovUK.Page.Main>
         <Switch>
           <Route path="/forms">
@@ -45,9 +48,9 @@ const ExampleApplication: React.FC<ExampleApplicationProps> = ({ routerEntries }
   </Router>
 );
 
-export interface ExampleApplicationProps {
-  routerEntries?: string[];
-}
+ExampleApplication.propTypes = {
+  routerEntries: PropTypes.arrayOf(PropTypes.string),
+};
 
 ExampleApplication.defaultProps = {
   routerEntries: undefined,

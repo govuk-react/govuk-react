@@ -115,7 +115,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
 }
 
 <InsetTextWithParagraph>
-  <InsetText>
+  <src__InsetText>
     <div
       className="c0"
     >
@@ -268,7 +268,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
         </src__StyledParagraph>
       </Paragraph>
     </div>
-  </InsetText>
+  </src__InsetText>
 </InsetTextWithParagraph>
 `;
 
@@ -325,12 +325,14 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
 }
 
 <InsetTextExample>
-  <InsetText>
-    <div
-      className="c0"
-    >
-      It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
-    </div>
-  </InsetText>
+  <DocumentedInsetText>
+    <src__InsetText>
+      <div
+        className="c0"
+      >
+        It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+      </div>
+    </src__InsetText>
+  </DocumentedInsetText>
 </InsetTextExample>
 `;

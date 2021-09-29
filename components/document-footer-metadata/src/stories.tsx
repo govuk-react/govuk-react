@@ -2,7 +2,7 @@ import React from 'react';
 
 import Link from '@govuk-react/link';
 
-import { DocumentFooterMetadata } from '.';
+import DocumentFooterMetadata from '.';
 
 const fromData = [<Link href="/government/organisations/ministry-of-defence">Ministry of Defence</Link>];
 
@@ -39,6 +39,6 @@ export default {
   component: DocumentFooterMetadata,
 };
 
-export const Default: React.FC = () => <DocumentFooterMetadata from={fromData} />;
-export const DfmFromPartOfExample: React.FC = () => <DocumentFooterMetadata from={fromData} partOf={partOfData} />;
-export const DfmFromOtherDataExample: React.FC = () => <DocumentFooterMetadata from={fromData} other={otherData} />;
+export const Default = () => <DocumentFooterMetadata from={fromData} />;
+export const DfmFromPartOfExample = () => <DocumentFooterMetadata from={fromData} partOf={partOfData} />;
+export const DfmFromOtherDataExample = () => <DocumentFooterMetadata from={fromData} other={otherData} />;

@@ -31,11 +31,15 @@ exports[`Label matches withError snapshot: with error mount 1`] = `
 <Label
   error={true}
 >
-  <label
-    className="c0"
+  <src__StyledLabel
+    error={true}
   >
-    example
-  </label>
+    <label
+      className="c0"
+    >
+      example
+    </label>
+  </src__StyledLabel>
 </Label>
 `;
 
@@ -67,10 +71,14 @@ exports[`Label matches wrapper snapshot: wrapper mount 1`] = `
 <Label
   error={false}
 >
-  <label
-    className="c0"
+  <src__StyledLabel
+    error={false}
   >
-    example
-  </label>
+    <label
+      className="c0"
+    >
+      example
+    </label>
+  </src__StyledLabel>
 </Label>
 `;

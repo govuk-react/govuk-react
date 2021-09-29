@@ -3,7 +3,7 @@ import React from 'react';
 import { boolean, withKnobs } from '@storybook/addon-knobs';
 import Checkbox from '@govuk-react/checkbox';
 
-import { FormGroup } from '.';
+import { FormGroupDocumented as FormGroup } from '.';
 
 export default {
   title: 'Form/Form group',
@@ -11,13 +11,13 @@ export default {
   decorators: [withKnobs],
 };
 
-export const Default: React.FC = () => (
+export const Default = () => (
   <FormGroup error={boolean('error', false)}>
     <Checkbox name="group-1">Example</Checkbox>
   </FormGroup>
 );
 
-export const NestedFormGroups: React.FC = () => (
+export const NestedFormGroups = () => (
   <FormGroup error={boolean('outer error', false)}>
     <Checkbox name="group-0">Outer FormGroup</Checkbox>
     <FormGroup error={boolean('inner error 1', false)}>
@@ -29,13 +29,13 @@ export const NestedFormGroups: React.FC = () => (
   </FormGroup>
 );
 
-export const ErrorPropSet: React.FC = () => (
+export const ErrorPropSet = () => (
   <FormGroup error>
     <Checkbox name="group-1">Example</Checkbox>
   </FormGroup>
 );
 
-export const NestedFormGroupsWithInnerGroupsErrorPropsSet: React.FC = () => (
+export const NestedFormGroupsWithInnerGroupsErrorPropsSet = () => (
   <FormGroup>
     <Checkbox name="group-0">Outer FormGroup</Checkbox>
     <FormGroup error>
@@ -47,7 +47,7 @@ export const NestedFormGroupsWithInnerGroupsErrorPropsSet: React.FC = () => (
   </FormGroup>
 );
 
-export const NestedFormGroupsWithAllGroupsErrorPropsSet: React.FC = () => (
+export const NestedFormGroupsWithAllGroupsErrorPropsSet = () => (
   <FormGroup error>
     <Checkbox name="group-0">Outer FormGroup</Checkbox>
     <FormGroup error>

@@ -7,7 +7,6 @@ SearchBox
 ```
 <!-- STORY -->
 
-
 ### Usage
 
 Simple
@@ -24,10 +23,5 @@ import { SearchBox } from 'govuk-react';
 ### References:
 
 - https://govuk-static.herokuapp.com/component-guide/search
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
-
 
 

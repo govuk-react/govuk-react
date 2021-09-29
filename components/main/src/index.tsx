@@ -50,16 +50,17 @@ const InnerContainer = styled('div')({
  * </Main>
  * ```
  *
+ * ### TODO
+ * - Implement the 1020px min-width MQ to constants
+ *
  */
-export const Main: React.FC<MainProps> = ({ children, ...props }: MainProps) => (
+const Main = ({ children, ...props }: MainProps) => (
   <OuterContainer {...props}>
     <InnerContainer>{children}</InnerContainer>
   </OuterContainer>
 );
 
-Main.displayName = 'Main';
-
-export interface MainProps {
+interface MainProps {
   /**
    * Child nodes for the page being built
    */

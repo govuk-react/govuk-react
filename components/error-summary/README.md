@@ -7,7 +7,6 @@ ErrorSummary
 ```
 <!-- STORY -->
 
-
 ### Usage
 
 Simple
@@ -53,9 +52,15 @@ const onHandleErrorClick = (targetName) => {
 - https://govuk-elements.herokuapp.com/errors/#summarise-errors
 - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/error-summary
 
+### TODO:
+- Swap out browser dependancy for context API to help with React Native support
+
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `description` |  | ```undefined``` |  | Optional description of the errors
+ `errors` |  | ```[]``` |  | Array of errors with text and target element name to scroll into view when clicked
+ `heading` |  | ```'There is a problem'``` |  | Heading text
+ `onHandleErrorClick` |  | ```undefined``` |  | onClick function to scroll the target element into view
 
 

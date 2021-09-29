@@ -4,7 +4,7 @@ import { select, text, withKnobs } from '@storybook/addon-knobs';
 import Heading from '@govuk-react/heading';
 
 import { CaptionWithKnobs } from './fixtures';
-import { Caption } from '.';
+import Caption from '.';
 
 export default {
   title: 'Typography/Caption',
@@ -12,20 +12,20 @@ export default {
   decorators: [withKnobs],
 };
 
-export const Default: React.FC = () => <CaptionWithKnobs />;
+export const Default = () => <CaptionWithKnobs />;
 
 const arrTypography = Object.keys(TYPOGRAPHY_SCALE);
 const captionOptions = [...Object.keys(CAPTION_SIZES), ...arrTypography];
 const headingOptions = [...Object.keys(HEADING_SIZES), ...arrTypography];
 
-export const PlacedWithAHeadingComponent: React.FC = () => (
+export const PlacedWithAHeadingComponent = () => (
   <div>
     <Caption size={select('size', captionOptions, 'XL')}>{text('children', 'Supporting heading text')}</Caption>
     <Heading size={select('heading size', headingOptions, 'XL')}>{text('heading', 'Main heading text')}</Heading>
   </div>
 );
 
-export const PlacedInsideAHeadingComponent: React.FC = () => (
+export const PlacedInsideAHeadingComponent = () => (
   <div>
     <Heading size={select('heading size', headingOptions, 'XL')}>
       <Caption size={select('size', captionOptions, 'XL')}>{text('children', 'Supporting heading text')}</Caption>
@@ -34,7 +34,7 @@ export const PlacedInsideAHeadingComponent: React.FC = () => (
   </div>
 );
 
-export const ShowingAllStandardCaptionSizesWithHeadings: React.FC = () => (
+export const ShowingAllStandardCaptionSizesWithHeadings = () => (
   <div>
     <Caption size="XL">Supporting heading size XL</Caption>
     <Heading size="XL">Main heading size XL</Heading>

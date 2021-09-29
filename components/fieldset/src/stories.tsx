@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 
-import { Fieldset } from '.';
+import { FieldsetDocumented as Fieldset } from '.';
 
 export default {
   title: 'Form/Fieldset',
@@ -9,7 +9,7 @@ export default {
   decorators: [withKnobs],
 };
 
-export const Default: React.FC = () => (
+export const Default = () => (
   <Fieldset>
     <Fieldset.Legend size={text('legend size', 'LARGE')} isPageHeading={boolean('legend isPageHeading', false)}>
       {text('legend contents', 'Example legend')}
@@ -17,7 +17,7 @@ export const Default: React.FC = () => (
   </Fieldset>
 );
 
-export const LegendAsPageHeading: React.FC = () => (
+export const LegendAsPageHeading = () => (
   <Fieldset>
     <Fieldset.Legend size="XLARGE" isPageHeading>
       Legend as page heading

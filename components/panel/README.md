@@ -7,7 +7,6 @@ Panel
 ```
 <!-- STORY -->
 
-
 ### Usage
 
 Simple
@@ -34,6 +33,7 @@ Panel with header and HTML body
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `children` |  | ```undefined``` |  | Panel body text
+ `title` | true | `````` |  | Panel title text
 
 

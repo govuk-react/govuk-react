@@ -4,11 +4,11 @@
 // Further references:
 // https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/overrides/_spacing.scss
 // https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/settings/_spacing.scss
-import type { CSSObject } from 'styled-components';
 
-import { MEDIA_QUERIES, SPACING_MAP, SPACING_POINTS, WIDTHS } from '@govuk-react/constants';
+import PropTypes from 'prop-types';
+import { MEDIA_QUERIES, SPACING_MAP, SPACING_MAP_INDEX, SPACING_POINTS, WIDTHS } from '@govuk-react/constants';
 
-export function simple(size: number): number {
+export function simple(size) {
   const scale = SPACING_POINTS[Math.abs(size)];
   const polarity = size < 0 ? -1 : 1;
 
@@ -26,18 +26,8 @@ function styleForDirection(size, property, direction = null) {
   };
 }
 
-export function responsive({
-  size,
-  property,
-  direction = null,
-  adjustment = 0,
-}: {
-  size: number | string;
-  property: string;
-  direction?: string | string[];
-  adjustment?: number;
-}): { [key: string]: string } {
-  const scale = SPACING_MAP[Math.abs(Number(size))];
+export function responsive({ size, property, direction = null, adjustment = 0 }) {
+  const scale = SPACING_MAP[Math.abs(size)];
   const polarity = size < 0 ? -1 : 1;
 
   if (scale === undefined) {
@@ -47,6 +37,9 @@ export function responsive({
   if (!property) {
     throw Error('No property passed to responsiveSpacing');
   }
+
+  // TODO consider checking adjustment is a number
+  // TODO consider supporting non-number (string) adjustments, such as px or rem values
 
   if (Array.isArray(direction)) {
     return Object.assign(
@@ -60,21 +53,16 @@ export function responsive({
       }
     );
   }
-  const f = {
+
+  return {
     ...styleForDirection(scale.mobile * polarity + adjustment, property, direction),
     [MEDIA_QUERIES.TABLET]: styleForDirection(scale.tablet * polarity + adjustment, property, direction),
   };
-  return f;
 }
 
-export function responsiveMargin(
-  value: number | string | { size: number | string; direction?: string | string[]; adjustment?: number }
-): CSSObject {
+export function responsiveMargin(value) {
   if (Number.isInteger(value)) {
-    return responsive({ size: Number(value), property: 'margin' });
-  }
-  if (typeof value !== 'object') {
-    throw Error('Expected padding value to be an object or integer');
+    return responsive({ size: value, property: 'margin' });
   }
 
   const { size, direction, adjustment } = value;
@@ -87,14 +75,9 @@ export function responsiveMargin(
   });
 }
 
-export function responsivePadding(
-  value: number | { size: number; direction?: string | string[]; adjustment?: number }
-): CSSObject {
+export function responsivePadding(value) {
   if (Number.isInteger(value)) {
-    return responsive({ size: Number(value), property: 'padding' });
-  }
-  if (typeof value !== 'object') {
-    throw Error('Expected padding value to be an object or integer');
+    return responsive({ size: value, property: 'padding' });
   }
 
   const { size, direction, adjustment } = value;
@@ -119,29 +102,17 @@ export function responsivePadding(
 // - see `responsivePadding` and `responsiveMargin` calls
 // can be an array of numbers/objects
 
-type Margin = number | { direction?: string | string[]; size: number; adjustment?: number };
-type Padding =
-  | number
-  | { size: number; direction?: string | string[] }
-  | { size: number; direction?: string | string[] }[];
-
-export function withWhiteSpace(
-  config: {
-    margin?: Margin | Margin[];
-    padding?: Padding | Padding[];
-    marginBottom?: number;
-  } = {}
-): (settings?: WithWhiteSpaceProps) => CSSObject[] {
+export function withWhiteSpace(config: { margin?: any; padding?: any; marginBottom?: any } = {}) {
   return ({
     margin = config.margin,
     padding = config.padding,
     mb: marginBottom = config.marginBottom,
   }: WithWhiteSpaceProps = {}) => {
-    const styles: CSSObject[] = [];
+    const styles = [];
 
     if (margin !== undefined) {
       if (Array.isArray(margin)) {
-        styles.push(...margin.map((val) => responsiveMargin(val)));
+        styles.push(margin.map((val) => responsiveMargin(val)));
       } else {
         styles.push(responsiveMargin(margin));
       }
@@ -149,7 +120,7 @@ export function withWhiteSpace(
 
     if (padding !== undefined) {
       if (Array.isArray(padding)) {
-        styles.push(...padding.map((val) => responsivePadding(val)));
+        styles.push(padding.map((val) => responsivePadding(val)));
       } else {
         styles.push(responsivePadding(padding));
       }
@@ -163,13 +134,38 @@ export function withWhiteSpace(
   };
 }
 
-export function withWidth(config: { width?: string; mediaQuery?: string; noDefault?: boolean } = {}): ({
+const Directions = PropTypes.oneOf(['all', 'top', 'right', 'bottom', 'left']);
+
+const SpacingShape = PropTypes.shape({
+  size: PropTypes.number.isRequired,
+  direction: PropTypes.oneOfType([Directions, PropTypes.arrayOf(Directions)]),
+  adjustment: PropTypes.number,
+});
+
+// `mb` (Margin Bottom) prop name comes from the naming convention used by https://github.com/jxnblk/grid-styled
+withWhiteSpace.propTypes = {
+  mb: PropTypes.oneOf(SPACING_MAP_INDEX),
+  margin: PropTypes.oneOfType([
+    PropTypes.number,
+    SpacingShape,
+    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, SpacingShape])),
+  ]),
+  padding: PropTypes.oneOfType([
+    PropTypes.number,
+    SpacingShape,
+    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, SpacingShape])),
+  ]),
+};
+
+export function withWidth(config: { width?: any; mediaQuery?: string; noDefault?: boolean } = {}): ({
   setWidth,
-}?: WithWidthProps) => {
+}?: {
+  setWidth?: any;
+}) => {
   [x: string]:
     | string
     | {
-        width: string;
+        width: any;
       };
   width?: string;
 } {
@@ -190,10 +186,4 @@ export function withWidth(config: { width?: string; mediaQuery?: string; noDefau
   };
 }
 
-export type WithWhiteSpaceProps = {
-  margin?: Margin | Margin[];
-  padding?: Padding | Padding[];
-  mb?: number | string;
-};
-
-export type WithWidthProps = { setWidth?: string | number };
+export type WithWhiteSpaceProps = { margin?: any; padding?: any; mb?: any };

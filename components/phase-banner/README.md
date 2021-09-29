@@ -7,7 +7,6 @@ PhaseBanner
 ```
 <!-- STORY -->
 
-
 ### Usage
 
 Alpha
@@ -38,6 +37,7 @@ Beta
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `children` | true | `````` | node | Children text and links
+ `level` | true | `````` | string | Alpha or beta banner
 
 

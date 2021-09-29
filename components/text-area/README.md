@@ -7,7 +7,6 @@ TextArea
 ```
 <!-- STORY -->
 
-
 ### Usage
 
 Simple
@@ -50,6 +49,9 @@ const meta = {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `children` | true | `````` |  | 
+ `hint` |  | ```undefined``` |  | 
+ `input` |  | ```{}``` |  | 
+ `meta` |  | ```{}``` |  | 
 
 

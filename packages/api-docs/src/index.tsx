@@ -1,9 +1,12 @@
 /* eslint-disable no-await-in-loop, no-console */
 
+// TODO: this util should probably be its own node module
+
 import fs from 'fs';
 import path from 'path';
 import glob from 'glob-promise';
 import chalk from 'chalk';
+import { parse } from 'react-docgen';
 import { promisify } from 'util';
 import _ from 'lodash';
 
@@ -12,8 +15,6 @@ import generateMarkdown from './markdown/generateMarkdown';
 // components is imported via require so that we can parse the names of exports
 /* eslint-disable-next-line @typescript-eslint/no-var-requires */
 const components = require('govuk-react');
-/* eslint-disable-next-line @typescript-eslint/no-var-requires */
-const docgen = require('react-docgen-typescript');
 
 function getComponentFolderName(file) {
   // '/' rather than 'path.sep' as, on Windows, the path has already been converted at this point
@@ -31,31 +32,24 @@ function getComponentNameFromFile(file) {
 }
 
 function getMarkdownForComponent(file) {
+  const src = fs.readFileSync(path.resolve(__dirname, file));
+  const componentInfo = parse(src);
   const componentName = getComponentNameFromFile(file);
-  const p = path.resolve(__dirname, file);
-  let componentInfo;
-  const parsedComponents: { displayName: string; filePath: string }[] = docgen.parse(p);
-  if (parsedComponents.length > 1) {
-    componentInfo = parsedComponents.find((parsedComponent) => parsedComponent.displayName === componentName);
-    if (!componentInfo) {
-      console.warn('more than one component found and no matching displayName found');
-      console.warn(parsedComponents.map(({ filePath, displayName }) => ({ filePath, displayName })));
-      [componentInfo] = parsedComponents;
-    }
-  } else {
-    [componentInfo] = parsedComponents;
-    if (componentInfo.displayName !== componentName) {
-      console.warn('displayName does not match component name', componentInfo.displayName, componentName);
-    }
-  }
   const componentFolderName = getComponentFolderName(file);
   return generateMarkdown(componentName, componentFolderName, componentInfo);
+}
+
+function libPathToSrc(libPath, libFolder = '/lib/') {
+  const pos = libPath.lastIndexOf(libFolder);
+  const len = libFolder.length;
+  return `${libPath.substring(0, pos)}/src/${libPath.substring(pos + len, libPath.length - 3)}.tsx`;
 }
 
 async function generateApiForFile(file) {
   try {
     const componentName = getComponentNameFromFile(file);
-    const md = getMarkdownForComponent(file);
+    const src = libPathToSrc(file);
+    const md = getMarkdownForComponent(src);
     console.log(chalk.green('API Documented:'), componentName);
     return md;
   } catch (e) {
@@ -89,7 +83,7 @@ function dequote(string) {
   return string.replace(/^'(.*)'$/, '$1');
 }
 
-async function apiDocs(relDir: string, outputMd: string): Promise<void> {
+async function apiDocs(relDir, outputMd) {
   const relDirNoQuotation = dequote(relDir);
   const outputMdNoQuotation = dequote(outputMd);
 

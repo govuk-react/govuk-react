@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TextArea } from '.';
+import TextArea from '.';
 
 const meta = {
   touched: true,
@@ -12,15 +12,15 @@ export default {
   component: TextArea,
 };
 
-export const Default: React.FC = () => <TextArea input={{ name: 'group1' }}>Description of what you saw</TextArea>;
+export const Default = () => <TextArea input={{ name: 'group1' }}>Description of what you saw</TextArea>;
 
-export const TextareaWithHintText: React.FC = () => (
+export const TextareaWithHintText = () => (
   <TextArea input={{ name: 'group1' }} hint={['Enter as many words as you like']}>
     Description of what you saw
   </TextArea>
 );
 
-export const TextareaWithHintTextError: React.FC = () => (
+export const TextareaWithHintTextError = () => (
   <TextArea input={{ name: 'group1' }} hint={['Enter as many words as you like']} meta={meta}>
     Description of what you saw
   </TextArea>

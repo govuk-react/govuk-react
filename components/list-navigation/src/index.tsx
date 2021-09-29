@@ -2,7 +2,7 @@ import React from 'react';
 import UnorderedList from '@govuk-react/unordered-list';
 import ListItem from '@govuk-react/list-item';
 
-export interface ListNavigationProps {
+interface ListNavigationProps {
   /**
    * List navigation content
    */
@@ -43,12 +43,12 @@ export interface ListNavigationProps {
  * ### References:
  *
  * - https://govuk-static.herokuapp.com/component-guide/government_navigation
+ *
+ * ### TODO:
+ * - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
+ * - Fix active state overlaping siblings
  */
-export const ListNavigation: React.FC<ListNavigationProps> = ({
-  children,
-  listStyleType,
-  ...props
-}: ListNavigationProps) => (
+const ListNavigation = ({ children, listStyleType, ...props }: ListNavigationProps) => (
   <UnorderedList listStyleType={listStyleType} {...props}>
     {Array.isArray(children) && children.length ? (
       React.Children.map(children, (child) => <ListItem>{child}</ListItem>)
@@ -61,7 +61,5 @@ export const ListNavigation: React.FC<ListNavigationProps> = ({
 ListNavigation.defaultProps = {
   listStyleType: undefined,
 };
-
-ListNavigation.displayName = 'ListNavigation';
 
 export default ListNavigation;

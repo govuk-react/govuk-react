@@ -9,7 +9,7 @@ export default {
   decorators: [withKnobs],
 };
 
-export const ArrowLeft: React.FC = () => {
+export const ArrowLeft = () => {
   const fillColour = color('fill', 'black');
   const width = text('width', '256px');
   const height = text('height', '256px');

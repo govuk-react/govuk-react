@@ -1,5 +1,5 @@
-import type { WithWhiteSpaceProps } from '@govuk-react/lib';
-
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { spacing } from '@govuk-react/lib';
 import { BORDER_COLOUR } from 'govuk-colours';
@@ -13,24 +13,7 @@ const breakSizes = {
   MEDIUM: 4,
 };
 
-/**
- *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { SectionBreak } from 'govuk-react'
- *
- * <SectionBreak>Example</SectionBreak>
- * ```
- *
- * ### References
- * - https://design-system.service.gov.uk/styles/typography/#section-break
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_section-break.scss
- */
-
-export const SectionBreak = styled('hr')<SectionBreakProps>(
+const SectionBreak = styled('hr')(
   {
     margin: 0,
     border: 0,
@@ -53,15 +36,35 @@ export const SectionBreak = styled('hr')<SectionBreakProps>(
         }
       : undefined
 );
-export interface SectionBreakProps extends WithWhiteSpaceProps {
-  level?: string;
-  visible?: boolean;
-}
 
-SectionBreak.defaultProps = {
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ *
+ * ```jsx
+ * import { SectionBreak } from 'govuk-react'
+ *
+ * <SectionBreak>Example</SectionBreak>
+ * ```
+ *
+ * ### References
+ * - https://design-system.service.gov.uk/styles/typography/#section-break
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_section-break.scss
+ */
+const SectionBreakDocumented = (props) => <SectionBreak {...props} />;
+
+SectionBreakDocumented.propTypes = {
+  level: PropTypes.oneOf(['XL', 'XLARGE', 'L', 'LARGE', 'M', 'MEDIUM']),
+  visible: PropTypes.bool,
+};
+SectionBreakDocumented.defaultProps = {
   visible: undefined,
 };
 
-SectionBreak.displayName = 'SectionBreak';
+SectionBreak.propTypes = SectionBreakDocumented.propTypes;
+SectionBreak.defaultProps = SectionBreakDocumented.defaultProps;
 
+export { SectionBreakDocumented };
 export default SectionBreak;

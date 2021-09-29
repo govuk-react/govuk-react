@@ -1,10 +1,9 @@
 import visuallyHidden from './visually-hidden';
 
-import * as spacing from './spacing';
-import * as link from './link';
-import * as shape from './shape';
-import * as typography from './typography';
+export type { WithWhiteSpaceProps } from './spacing';
 
-export type { WithWhiteSpaceProps, WithWidthProps } from './spacing';
-
-export { visuallyHidden, spacing, link, shape, typography };
+export * as link from './link';
+export * as shape from './shape';
+export * as spacing from './spacing';
+export * as typography from './typography';
+export { visuallyHidden };

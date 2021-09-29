@@ -7,7 +7,6 @@ FileUpload
 ```
 <!-- STORY -->
 
-
 ### Usage
 
 Simple
@@ -55,6 +54,11 @@ const meta = {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `acceptedFormats` |  | ```undefined``` |  | 
+ `children` | true | `````` |  | 
+ `hint` |  | ```undefined``` |  | Optional hint text
+ `meta` |  | ```{}``` |  | Final form meta object, pending adjustment/removal
+ `name` |  | ```undefined``` |  | 
+ `onChange` |  | ```undefined``` |  | 
 
 

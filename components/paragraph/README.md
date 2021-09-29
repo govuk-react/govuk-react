@@ -7,7 +7,6 @@ Paragraph
 ```
 <!-- STORY -->
 
-
 Supports bold, italic, links, inline code and block code in Markdown ONLY.
 This is to ensure we follow GDS as closely as possible.
 It is worth noting that GDS recommends avoiding bold and italics.
@@ -61,9 +60,16 @@ const ReactRouterLinkRenderer = ({ href, children }) => (
 ### References
 - https://govuk-elements.herokuapp.com/typography/#typography-body-copy
 
+### TODO
+- Add test for supporting text
+- Review code snippet styling
+- Remove magic numbers from inline code styling blocks
+
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `children` |  | ```''``` | node | Text content supporting markdown
+ `linkRenderer` |  | ```(props) => <Link {...props} />``` | func | 
+ `supportingText` |  | ```false``` | bool | Is this paragraph supporting text for another element?
 
 

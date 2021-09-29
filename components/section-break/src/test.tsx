@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import { SectionBreak } from '.';
+import SectionBreak from '.';
 import Example from './fixtures';
 
 describe('SectionBreak', () => {

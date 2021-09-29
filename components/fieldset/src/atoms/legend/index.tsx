@@ -1,12 +1,11 @@
-import type { WithWhiteSpaceProps } from '@govuk-react/lib';
-
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { spacing, typography } from '@govuk-react/lib';
-import { HEADING_SIZES, SPACING_POINTS } from '@govuk-react/constants';
+import { HEADING_SIZES, SPACING_POINTS, TYPOGRAPHY_SCALE } from '@govuk-react/constants';
 
-const StyledLegend = styled('legend')<LegendProps>(
+const StyledLegend = styled('legend')(
   spacing.withWhiteSpace(),
   typography.font({ size: 19 }),
   typography.textColour,
@@ -53,15 +52,15 @@ const StyledHeading = styled('h1')({
 //   font-weight: inherit;
 // }
 
-const Legend: React.FC<LegendProps> = ({ children, isPageHeading = undefined, ...props }: LegendProps) => (
+const Legend = ({ children, isPageHeading = undefined, ...props }) => (
   <StyledLegend {...props}>{isPageHeading ? <StyledHeading>{children}</StyledHeading> : children}</StyledLegend>
 );
 
-interface LegendProps extends WithWhiteSpaceProps {
-  children: React.ReactNode;
-  isPageHeading?: boolean;
-  size?: string | number;
-}
+Legend.propTypes = {
+  children: PropTypes.node.isRequired,
+  isPageHeading: PropTypes.bool,
+  size: PropTypes.oneOf([...Object.keys(HEADING_SIZES), ...Object.keys(TYPOGRAPHY_SCALE)]),
+};
 
 Legend.defaultProps = {
   isPageHeading: false,

@@ -1,11 +1,11 @@
 import { withKnobs } from '@storybook/addon-knobs';
 
-import { Tag } from '.';
+import { DocumentedTag } from '.';
 import { TagWithKnobs, TagInactive } from './fixtures';
 
 export default {
   title: 'Typography/Tag',
-  component: Tag,
+  component: DocumentedTag,
   decorators: [withKnobs],
 };
 

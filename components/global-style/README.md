@@ -7,7 +7,6 @@ GlobalStyle
 ```
 <!-- STORY -->
 
-
 A Styled Component to apply global style for use with govuk-react.
 
 ### Usage
@@ -26,11 +25,5 @@ const MyApp = () => <>
 ### References:
 
 - https://styled-components.com/docs/api#createglobalstyle
-
-### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
- `suppressMultiMountWarning` |  | `````` | boolean | 
- `theme` |  | `````` | DefaultTheme | 
 
 

@@ -2,28 +2,28 @@ import React from 'react';
 
 import ListItem from '@govuk-react/list-item';
 import OrderedList from '@govuk-react/ordered-list';
-import { UnorderedList } from '.';
+import UnorderedList from '.';
 
 export default {
   title: 'Typography/Unordered list',
   component: UnorderedList,
 };
 
-export const Default: React.FC = () => (
+export const Default = () => (
   <UnorderedList>
     <ListItem>Lorem ipsum dolor sit.</ListItem>
     <ListItem>Consectetur adipiscing elit.</ListItem>
     <ListItem>Curabitur et libero nec.</ListItem>
   </UnorderedList>
 );
-export const UnorderedListWithSquare: React.FC = () => (
+export const UnorderedListWithSquare = () => (
   <UnorderedList listStyleType="square">
     <ListItem>Cras nec quam ut lorem.</ListItem>
     <ListItem>Curabitur porta elit ut ante vehicula.</ListItem>
     <ListItem>Proin ac molestie ligula, non blandit libero.</ListItem>
   </UnorderedList>
 );
-export const UnorderedListWithBulletWithNestedLists: React.FC = () => (
+export const UnorderedListWithBulletWithNestedLists = () => (
   <UnorderedList listStyleType="bullet">
     <ListItem>Bullet list</ListItem>
     <ListItem>In nisi lectus, mollis sed neque.</ListItem>
@@ -56,7 +56,7 @@ export const UnorderedListWithBulletWithNestedLists: React.FC = () => (
     <ListItem>Nullam laoreet turpis eu odio gravida.</ListItem>
   </UnorderedList>
 );
-export const UnorderedListWithNoDecoration: React.FC = () => (
+export const UnorderedListWithNoDecoration = () => (
   <UnorderedList listStyleType="none">
     <ListItem>In nisi lectus, mollis sed neque.</ListItem>
     <ListItem>Pellentesque habitant morbi tristique senectus et netus et malesuada.</ListItem>

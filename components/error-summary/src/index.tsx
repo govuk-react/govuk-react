@@ -64,9 +64,9 @@ const StyledErrorSummary = styled('div')(
   spacing.withWhiteSpace({ marginBottom: 6 })
 );
 
-export interface ErrorSummaryProps {
+interface ErrorSummaryProps {
   /** onClick function to scroll the target element into view */
-  onHandleErrorClick?: (targetName: string) => void;
+  onHandleErrorClick?: (...args: unknown[]) => void;
   /** Heading text */
   heading?: string;
   /** Optional description of the errors */
@@ -124,8 +124,11 @@ export interface ErrorSummaryProps {
  *
  * - https://govuk-elements.herokuapp.com/errors/#summarise-errors
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/error-summary
+ *
+ * ### TODO:
+ * - Swap out browser dependancy for context API to help with React Native support
  */
-export const ErrorSummary: React.FC<ErrorSummaryProps> = ({
+const ErrorSummary = ({
   onHandleErrorClick = undefined,
   heading = 'There is a problem',
   description = undefined,
@@ -155,7 +158,5 @@ ErrorSummary.defaultProps = {
   heading: 'There is a problem',
   onHandleErrorClick: undefined,
 };
-
-ErrorSummary.displayName = 'ErrorSummary';
 
 export default ErrorSummary;

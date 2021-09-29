@@ -1,17 +1,15 @@
 /* eslint-disable react/prop-types */
 
-import type { FormProps, FieldTemplateProps, AjvError, ObjectFieldTemplateProps, FieldProps } from '@rjsf/core';
-
 // TODO: extract these reusable parts in to a published module e.g. @govuk-react/json-schema-form
 
 import React, { useCallback, useState } from 'react';
 import * as GovUK from 'govuk-react';
 import BaseForm from '@rjsf/core';
 
-const dobObjToString = ({ year, month, day }: { year?: string; month?: string; day?: string }) =>
+const dobObjToString = ({ year, month, day }) =>
   `${year || ''}-${month ? month.padStart(2, '0') : ''}-${day ? day.padStart(2, '0') : ''}`;
 
-export const dobStringToObj: (dob: string) => { year?: number; month?: number; day?: number } = (dob) => {
+export const dobStringToObj = (dob) => {
   if (!dob) return {};
   const [year, month, day] = dob.split('-').map((s) => s.trim());
   return { year: parseInt(year, 10), month: parseInt(month, 10), day: parseInt(day, 10) };
@@ -40,38 +38,24 @@ const DateField = ({ schema, onChange, children, rawErrors }) => {
   );
 };
 
-// interface AnyOfProps {
-//   name: string;
-//   schema: JSONSchema7;
-//   formData: { const: string }[];
-//   onChange: (value: string) => void;
-//   rawErrors?: string[];
-// }
-const AnyOf: React.FC<FieldProps> = ({ name, schema, formData = [], onChange, rawErrors }) => (
+const AnyOf = ({ name, schema, formData = [], onChange, rawErrors }) => (
   <GovUK.FormGroup error={!!rawErrors?.length}>
     <GovUK.Label mb={4}>
       <GovUK.LabelText>{schema.title}</GovUK.LabelText>
       {rawErrors?.length && <GovUK.ErrorText>{rawErrors[0]}</GovUK.ErrorText>}
-      {(Array.isArray(schema?.items) ? schema.items : [schema?.items]).map(
-        (items) =>
-          typeof items !== 'boolean' &&
-          items?.anyOf?.map(
-            (item) =>
-              typeof item !== 'boolean' && (
-                <GovUK.Checkbox
-                  key={String(item.const)}
-                  name={name}
-                  value={String(item.const)}
-                  hint={item.description}
-                  onChange={(e) =>
-                    onChange(e.target.checked ? formData.concat(item.const) : formData.filter((i) => i !== item.const))
-                  }
-                >
-                  {item.title}
-                </GovUK.Checkbox>
-              )
-          )
-      )}
+      {schema?.items?.anyOf?.map((item) => (
+        <GovUK.Checkbox
+          key={item.const}
+          name={name}
+          value={item.const}
+          hint={item.description}
+          onChange={(e) =>
+            onChange(e.target.checked ? formData.concat(item.const) : formData.filter((i) => i !== item.const))
+          }
+        >
+          {item.title}
+        </GovUK.Checkbox>
+      ))}
     </GovUK.Label>
   </GovUK.FormGroup>
 );
@@ -155,14 +139,7 @@ const InputField = ({ schema, rawErrors, onChange, name }) => (
   </GovUK.InputField>
 );
 
-// interface StringFieldProps {
-//   uiSchema: any;
-//   schema: any;
-//   onChange: (value: any) => void;
-//   rawErrors?: string[];
-//   name: string;
-// }
-const StringField: React.FC<FieldProps> = ({ uiSchema, schema, onChange, rawErrors, name }) => {
+const StringField = ({ uiSchema, schema, onChange, rawErrors, name }) => {
   let Component;
   if (uiSchema?.['ui:widget'] === 'textarea') {
     Component = TextArea;
@@ -179,7 +156,7 @@ const StringField: React.FC<FieldProps> = ({ uiSchema, schema, onChange, rawErro
   return <Component uiSchema={uiSchema} schema={schema} onChange={onChange} rawErrors={rawErrors} name={name} />;
 };
 
-const BooleanField: React.FC<FieldProps> = ({ schema, onChange }) => (
+const BooleanField = ({ schema, onChange }) => (
   <GovUK.Checkbox onChange={onChange} hint={schema.description}>
     {schema.title}
   </GovUK.Checkbox>
@@ -191,7 +168,7 @@ export const customFields = {
   BooleanField,
 };
 
-export const ErrorListTemplate: React.FC<{ errors: AjvError[] }> = ({ errors }) => (
+export const ErrorListTemplate = ({ errors, ...rest }) => (
   <GovUK.ErrorSummary
     heading="Error summary"
     description="Please address the following issues"
@@ -202,18 +179,18 @@ export const ErrorListTemplate: React.FC<{ errors: AjvError[] }> = ({ errors }) 
   />
 );
 
-export const ObjectFieldTemplate: React.FC<ObjectFieldTemplateProps> = ({ title, properties }) => {
+export function ObjectFieldTemplate({ title, properties }) {
   return (
     <GovUK.Fieldset>
       {title && <GovUK.Fieldset.Legend size="M">{title}</GovUK.Fieldset.Legend>}
       {properties.map((element) => element.content)}
     </GovUK.Fieldset>
   );
-};
+}
 
-export const CustomFieldTemplate: React.FC<FieldTemplateProps> = ({ children }) => <>{children}</>;
+export const CustomFieldTemplate = ({ children }) => children;
 
-export const Form: React.FC<FormProps<void>> = (props) => (
+export const Form = (props) => (
   <BaseForm
     fields={customFields}
     FieldTemplate={CustomFieldTemplate}

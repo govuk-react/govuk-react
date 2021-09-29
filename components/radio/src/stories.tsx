@@ -1,43 +1,16 @@
-import type { FieldInputProps } from 'react-final-form';
-
 import React from 'react';
-import { Form, Field } from 'react-final-form';
+import { Field } from 'react-final-form';
 
-import { action } from '@storybook/addon-actions';
-
-import Button from '@govuk-react/button';
+import PropTypes from 'prop-types';
 import { withKnobs } from '@storybook/addon-knobs';
+import { FinalFormWrapper } from '@govuk-react/storybook-components';
 
 import MultiChoice from '@govuk-react/multi-choice';
-import { Radio } from '.';
+import Radio from '.';
 
 const required = (value) => (value ? undefined : 'Required');
 
-interface RadioGroupProps {
-  input?: FieldInputProps<string, HTMLElement>;
-  meta?: {
-    active?: boolean;
-    dirty?: boolean;
-    dirtySinceLastSubmit?: boolean;
-    error?: string | string[];
-    invalid?: boolean;
-    pristine?: boolean;
-    submitFailed?: boolean;
-    submitSucceeded?: boolean;
-    touched?: boolean;
-    valid?: boolean;
-    visited?: boolean;
-  };
-  label?: string;
-  hint?: string;
-  inline?: boolean;
-  options?: {
-    title?: string;
-    value?: string;
-  }[];
-}
-
-const RadioGroup: React.FC<RadioGroupProps> = ({ label, hint, options, inline, input, meta }: RadioGroupProps) => (
+const RadioGroup = ({ label, hint, options, inline, input, meta }) => (
   <div>
     <MultiChoice label={label} hint={hint} meta={meta}>
       {options.map((o) => (
@@ -52,12 +25,28 @@ const RadioGroup: React.FC<RadioGroupProps> = ({ label, hint, options, inline, i
 );
 
 RadioGroup.defaultProps = {
-  input: undefined,
+  input: {},
   meta: {},
   hint: undefined,
   inline: false,
   options: [],
-  label: undefined,
+};
+
+RadioGroup.propTypes = {
+  input: PropTypes.shape({
+    // eslint-disable-next-line react/forbid-prop-types
+    value: PropTypes.any,
+  }),
+  meta: PropTypes.shape({}),
+  label: PropTypes.string.isRequired,
+  hint: PropTypes.string,
+  inline: PropTypes.bool,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      value: PropTypes.string,
+    })
+  ),
 };
 
 export default {
@@ -66,9 +55,9 @@ export default {
   decorators: [withKnobs],
 };
 
-export const Default: React.FC = () => <Radio name="group1">Radio button text example</Radio>;
+export const Default = () => <Radio name="group1">Radio button text example</Radio>;
 
-export const RadioStacked: React.FC = () => (
+export const RadioStacked = () => (
   <div>
     <Radio name="group1">Waste from animal carcasses</Radio>
     <Radio name="group1">Waste from mines or quarries</Radio>
@@ -76,7 +65,7 @@ export const RadioStacked: React.FC = () => (
   </div>
 );
 
-export const RadioInline: React.FC = () => (
+export const RadioInline = () => (
   <div>
     <Radio name="group1" inline>
       Yes
@@ -87,7 +76,7 @@ export const RadioInline: React.FC = () => (
   </div>
 );
 
-export const RadioDisabled: React.FC = () => (
+export const RadioDisabled = () => (
   <div>
     <Radio name="group1" disabled>
       Disabled checkbox option
@@ -95,7 +84,7 @@ export const RadioDisabled: React.FC = () => (
   </div>
 );
 
-export const RadioPreselected: React.FC = () => (
+export const RadioPreselected = () => (
   <div>
     <Radio name="group1" defaultChecked>
       Farm or agricultural waste
@@ -103,7 +92,7 @@ export const RadioPreselected: React.FC = () => (
   </div>
 );
 
-export const RadioPreselectedDisabled: React.FC = () => (
+export const RadioPreselectedDisabled = () => (
   <div>
     <Radio name="group1" disabled defaultChecked>
       Farm or agricultural waste
@@ -111,7 +100,7 @@ export const RadioPreselectedDisabled: React.FC = () => (
   </div>
 );
 
-export const RadioWithHintText: React.FC = () => (
+export const RadioWithHintText = () => (
   <div>
     <Radio
       name="group1"
@@ -128,32 +117,7 @@ export const RadioWithHintText: React.FC = () => (
   </div>
 );
 
-const FinalFormWrapper: React.FC = ({ children }: { children: React.ReactNode }) => (
-  <Form
-    onSubmit={action('submit')}
-    render={({ handleSubmit, form: { reset }, submitting, pristine, values }) => (
-      <form onSubmit={handleSubmit}>
-        <div>{children}</div>
-        <div>
-          <Button type="submit" disabled={submitting}>
-            Submit
-          </Button>
-        </div>
-        <div>
-          <Button onClick={reset} disabled={submitting || pristine}>
-            Reset
-          </Button>
-        </div>
-        <div>
-          <hr />
-          <pre>{JSON.stringify(values, null, 2)}</pre>
-        </div>
-      </form>
-    )}
-  />
-);
-
-export const UsageWithFinalReduxFormMultiCheckboxValidation: React.FC = () => (
+export const UsageWithFinalReduxFormMultiCheckboxValidation = () => (
   <FinalFormWrapper>
     <Field
       name="likesAnimals"

@@ -40,10 +40,12 @@ exports[`LeadParagraph matches wrapper snapshot: wrapper mount 1`] = `
 }
 
 <LeadParagraph>
-  <p
-    className="c0"
-  >
-    example
-  </p>
+  <src__StyledParagraph>
+    <p
+      className="c0"
+    >
+      example
+    </p>
+  </src__StyledParagraph>
 </LeadParagraph>
 `;

@@ -12,7 +12,7 @@ import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 
-const StyledSelect = styled('select')<{ error?: boolean }>(
+const StyledSelect = styled('select')(
   typography.font({ size: 19 }),
   {
     boxSizing: 'border-box',
@@ -108,12 +108,12 @@ const StyledSelect = styled('select')<{ error?: boolean }>(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/select
  *
  */
-export const Select: React.FC<SelectProps> = ({ children, hint, label, meta, input, ...props }: SelectProps) => (
+const Select = ({ children, hint, label, meta, input, ...props }: SelectProps) => (
   <Label {...props} error={meta.touched && !!meta.error}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
     {meta.touched && meta.error && <ErrorText>{meta.error}</ErrorText>}
-    <StyledSelect error={meta.touched && !!meta.error} {...input}>
+    <StyledSelect error={meta.touched && meta.error} {...input}>
       {children}
     </StyledSelect>
   </Label>
@@ -126,14 +126,26 @@ Select.defaultProps = {
   meta: {},
 };
 
-Select.displayName = 'Select';
-
-export interface SelectProps extends LabelProps {
+interface SelectProps extends LabelProps {
   hint?: React.ReactNode;
   input?: React.SelectHTMLAttributes<HTMLSelectElement>;
   meta?: {
-    error?: string | string[];
+    active?: boolean;
+    dirty?: boolean;
+    dirtySinceLastSubmit?: boolean;
+    // eslint-disable-next-line react/forbid-prop-types
+    error?: any;
+    // eslint-disable-next-line react/forbid-prop-types
+    initial?: any;
+    invalid?: boolean;
+    pristine?: boolean;
+    // eslint-disable-next-line react/forbid-prop-types
+    submitError?: any;
+    submitFailed?: boolean;
+    submitSucceeded?: boolean;
     touched?: boolean;
+    valid?: boolean;
+    visited?: boolean;
   };
   children: React.ReactNode;
   label: string;

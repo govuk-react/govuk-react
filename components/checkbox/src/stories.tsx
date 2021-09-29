@@ -7,7 +7,7 @@ export default {
   component: Checkbox,
 };
 
-export const Default: React.FC = () => (
+export const Default = () => (
   <div>
     <Checkbox>Waste from animal carcasses</Checkbox>
     <Checkbox>Waste from mines or quarries</Checkbox>
@@ -15,19 +15,19 @@ export const Default: React.FC = () => (
   </div>
 );
 
-export const CheckboxDisabled: React.FC = () => (
+export const CheckboxDisabled = () => (
   <div>
     <Checkbox disabled>Disabled checkbox option</Checkbox>
   </div>
 );
 
-export const CheckboxPreselected: React.FC = () => (
+export const CheckboxPreselected = () => (
   <div>
     <Checkbox defaultChecked>Farm or agricultural waste</Checkbox>
   </div>
 );
 
-export const CheckboxPreselectedDisabled: React.FC = () => (
+export const CheckboxPreselectedDisabled = () => (
   <div>
     <Checkbox disabled defaultChecked>
       Farm or agricultural waste
@@ -35,7 +35,7 @@ export const CheckboxPreselectedDisabled: React.FC = () => (
   </div>
 );
 
-export const CheckboxWithHintText: React.FC = () => (
+export const CheckboxWithHintText = () => (
   <div>
     <Checkbox hint="including English, Scottish, Welsh and Northern Irish">British</Checkbox>
     <Checkbox>Irish</Checkbox>

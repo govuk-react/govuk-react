@@ -5,14 +5,14 @@ import UnorderedList from '@govuk-react/unordered-list';
 import Link from '@govuk-react/link';
 import ListItem from '@govuk-react/list-item';
 
-import { RelatedItems } from '.';
+import RelatedItems from '.';
 
 export default {
   title: 'Navigation/Related items',
   component: RelatedItems,
 };
 
-export const Default: React.FC = () => (
+export const Default = () => (
   <RelatedItems>
     <H3>Travel abroad</H3>
     <UnorderedList listStyleType="none">

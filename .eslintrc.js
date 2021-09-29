@@ -4,7 +4,7 @@ const { dependencies: gukd } = require('./packages/govuk-react/package.json');
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'no-only-tests'],
+  plugins: ['@typescript-eslint'],
   extends: [
     'airbnb',
     'sonar',
@@ -20,8 +20,20 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': ['error'],
+    'react/jsx-filename-extension': 0,
+    'react/jsx-props-no-spreading': 0,
+    'react/static-property-placement': ['error', 'static public field'],
     'filenames/match-exported': 0,
     'jsx-a11y/label-has-associated-control': 0,
+    'jsx-a11y/label-has-for': 0,
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: ['Link'],
+        specialLink: ['to', 'hrefLeft', 'hrefRight'],
+        aspects: ['noHref', 'invalidHref', 'preferButton'],
+      },
+    ],
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -34,34 +46,16 @@ module.exports = {
     ],
   },
   settings: {
+    'import/core-modules': ['prop-types'],
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
   },
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
-      parserOptions: {
-        project: './tsconfig.json',
-      },
-      extends: [
-        'airbnb',
-        'airbnb-typescript',
-        'sonar',
-        'prettier',
-        'react-app',
-        'plugin:prettier/recommended',
-        'plugin:cypress/recommended',
-        'plugin:import/typescript',
-        'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:import/typescript',
-      ],
+      extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
-        'prettier/prettier': ['error'],
-        '@typescript-eslint/explicit-module-boundary-types': 'error',
-        'react/jsx-props-no-spreading': 0,
-        'filenames/match-exported': 0,
-        'react/static-property-placement': ['error', 'static public field'],
-        'jsx-a11y/label-has-associated-control': 0,
+        '@typescript-eslint/explicit-module-boundary-types': 0,
+        '@typescript-eslint/no-explicit-any': 0,
       },
     },
     {
@@ -81,15 +75,10 @@ module.exports = {
       settings: {
         'import/core-modules': [
           'govuk-react',
+          '@govuk-react/storybook-components',
           ...Object.keys(devDependencies),
           ...Object.keys(gukd).filter((dep) => dep.startsWith('@govuk-react/')),
         ],
-      },
-    },
-    {
-      files: ['**.test.[jt]s?(x)', '**.spec.[jt]s?(x)'],
-      rules: {
-        'no-only-tests/no-only-tests': 'error',
       },
     },
     {

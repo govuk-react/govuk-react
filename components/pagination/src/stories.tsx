@@ -2,14 +2,14 @@ import React from 'react';
 
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
-import { Pagination } from '.';
+import Pagination from '.';
 
 export default {
   title: 'Navigation/Pagination',
   component: Pagination,
 };
 
-export const Default: React.FC = () => (
+export const Default = () => (
   <Pagination>
     <Pagination.Anchor href="#prev" previousPage>
       Previous page
@@ -20,7 +20,7 @@ export const Default: React.FC = () => (
   </Pagination>
 );
 
-export const PaginationDefaultReactRouterLink: React.FC = () => (
+export const PaginationDefaultReactRouterLink = () => (
   <Pagination>
     <Router>
       <Pagination.Anchor as={Link} to="/prev" previousPage>
@@ -35,7 +35,7 @@ export const PaginationDefaultReactRouterLink: React.FC = () => (
   </Pagination>
 );
 
-export const PaginationWithNumbersAnchorTag: React.FC = () => (
+export const PaginationWithNumbersAnchorTag = () => (
   <Pagination>
     <Pagination.Anchor href="#prev" previousPage pageTitle="1 of 3">
       Previous page
@@ -46,7 +46,7 @@ export const PaginationWithNumbersAnchorTag: React.FC = () => (
   </Pagination>
 );
 
-export const PaginationWithNumbersReactRouterLink: React.FC = () => (
+export const PaginationWithNumbersReactRouterLink = () => (
   <Pagination>
     <Router>
       <Pagination.Anchor as={Link} to="#prev" previousPage pageTitle="1 of 3">
@@ -61,7 +61,7 @@ export const PaginationWithNumbersReactRouterLink: React.FC = () => (
   </Pagination>
 );
 
-export const PaginationWithTitlesAnchorTag: React.FC = () => (
+export const PaginationWithTitlesAnchorTag = () => (
   <Pagination>
     <Pagination.Anchor href="#prev" previousPage pageTitle="Applying for a provisional lorry or bus licence">
       Previous
@@ -72,7 +72,7 @@ export const PaginationWithTitlesAnchorTag: React.FC = () => (
   </Pagination>
 );
 
-export const PaginationWithTitlesReactRouterLink: React.FC = () => (
+export const PaginationWithTitlesReactRouterLink = () => (
   <Pagination>
     <Router>
       <Pagination.Anchor as={Link} to="#prev" previousPage pageTitle="Applying for a provisional lorry or bus licence">
@@ -87,7 +87,7 @@ export const PaginationWithTitlesReactRouterLink: React.FC = () => (
   </Pagination>
 );
 
-export const PaginationWithNumbersJustWithNextPageAnchorTag: React.FC = () => (
+export const PaginationWithNumbersJustWithNextPageAnchorTag = () => (
   <Pagination>
     <Pagination.Anchor href="#next" nextPage pageTitle="2 of 12">
       Next page
@@ -95,7 +95,7 @@ export const PaginationWithNumbersJustWithNextPageAnchorTag: React.FC = () => (
   </Pagination>
 );
 
-export const PaginationWithNumbersJustWithNextPageReactRouterLink: React.FC = () => (
+export const PaginationWithNumbersJustWithNextPageReactRouterLink = () => (
   <Pagination>
     <Router>
       <Pagination.Anchor as={Link} to="#next" nextPage pageTitle="2 of 12">
@@ -105,7 +105,7 @@ export const PaginationWithNumbersJustWithNextPageReactRouterLink: React.FC = ()
   </Pagination>
 );
 
-export const PaginationWithNumbersJustWithPreviousPageAnchorTag: React.FC = () => (
+export const PaginationWithNumbersJustWithPreviousPageAnchorTag = () => (
   <Pagination>
     <Pagination.Anchor href="#prev" previousPage pageTitle="11 of 12">
       Previous page
@@ -113,7 +113,7 @@ export const PaginationWithNumbersJustWithPreviousPageAnchorTag: React.FC = () =
   </Pagination>
 );
 
-export const PaginationWithNumbersJustWithPreviousPageReactRouterLink: React.FC = () => (
+export const PaginationWithNumbersJustWithPreviousPageReactRouterLink = () => (
   <Pagination>
     <Router>
       <Pagination.Anchor as={Link} to="#prev" previousPage pageTitle="11 of 12">

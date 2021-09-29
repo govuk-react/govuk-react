@@ -11,6 +11,7 @@ module.exports = {
     '!<rootDir>/{components,packages}/*/src/**/{stories,example,fixtures,test}.[jt]s?(x)',
     '!<rootDir>/packages/storybook/**',
     '!<rootDir>/packages/api-docs/**',
+    '!<rootDir>/packages/storybook-components/**',
     '!<rootDir>/packages/example-application/**',
   ],
   coverageDirectory: './coverage/',

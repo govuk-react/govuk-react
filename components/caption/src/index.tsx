@@ -1,36 +1,11 @@
-import type { WithWhiteSpaceProps } from '@govuk-react/lib';
-
 import styled from 'styled-components';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
 import { spacing, typography } from '@govuk-react/lib';
-import { CAPTION_SIZES, MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
+import { CAPTION_SIZES, MEDIA_QUERIES, SPACING_POINTS, TYPOGRAPHY_SCALE } from '@govuk-react/constants';
 
-/**
- *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { Caption } from 'govuk-react'
- *
- * <Caption>Caption heading text</Caption>
- * ```
- *
- * With another header
- *
- * ```jsx
- * import { H1 } from 'govuk-react'
- *
- * <Caption size="XL">Supporting header text</Caption>
- * <H1>Main header text</H1>
- * ```
- *
- * ### References
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_typography.scss
- * - https://design-system.service.gov.uk/styles/typography/#headings
- */
-export const Caption = styled('span')<CaptionProps>(
+const StyledCaption = styled('span')(
   ({ size }) => {
     const actualSize = Number.isNaN(Number(size)) ? CAPTION_SIZES[size] : size;
 
@@ -58,19 +33,47 @@ export const Caption = styled('span')<CaptionProps>(
   },
   spacing.withWhiteSpace()
 );
-export interface CaptionProps extends WithWhiteSpaceProps {
+
+/**
+ *
+ * ### Usage
+ *
+ * Simple
+ *
+ * ```jsx
+ * import { Caption } from 'govuk-react'
+ *
+ * <Caption>Caption heading text</Caption>
+ * ```
+ *
+ * With another header
+ *
+ * ```jsx
+ * import { H1 } from 'govuk-react'
+ *
+ * <Caption size="XL">Supporting header text</Caption>
+ * <H1>Main header text</H1>
+ * ```
+ *
+ * ### References
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_typography.scss
+ * - https://design-system.service.gov.uk/styles/typography/#headings
+ */
+const Caption = (props) => <StyledCaption {...props} />;
+
+Caption.propTypes = {
+  /** Text to be rendered as a caption */
+  children: PropTypes.string.isRequired,
   /**
    * Visual size level, accepts:
    *    `XLARGE`, `LARGE`, `MEDIUM`, `XL`, `L`, `M`
    *    or a numeric size that fits in the GDS font scale list
    */
-  size?: number | string;
-}
+  size: PropTypes.oneOf([...Object.keys(CAPTION_SIZES), ...Object.keys(TYPOGRAPHY_SCALE).map((key) => Number(key))]),
+};
 
 Caption.defaultProps = {
   size: 'XL',
 };
-
-Caption.displayName = 'Caption';
 
 export default Caption;

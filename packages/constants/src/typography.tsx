@@ -146,6 +146,7 @@ export const TYPOGRAPHY_SCALE = {
 // NB Spacing values set above relate to headings
 // body classes use different responsive margins
 // captions use govuk-spacing(1) for xl and l sizes only
+// TODO move spacing info out into separate data
 
 // heading sizes supported in govuk-frontend
 export const HEADING_SIZES = {

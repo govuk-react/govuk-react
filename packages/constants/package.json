@@ -7,9 +7,13 @@
   "peerDependencies": {
     "react": ">=16.2.0"
   },
-  "main": "dist/govuk-react-constants.cjs.js",
-  "module": "dist/govuk-react-constants.esm.js",
-  "source": "src/index.tsx",
+  "scripts": {
+    "build": "yarn build:lib && yarn build:es",
+    "build:lib": "rimraf lib && babel src -x .js,jsx,.ts,.tsx -d lib --source-maps --config-file ../../babel.config.js",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -x .js,jsx,.ts,.tsx -d es --source-maps --config-file ../../babel.config.js"
+  },
+  "main": "lib/index.js",
+  "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react#readme",

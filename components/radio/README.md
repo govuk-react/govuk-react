@@ -7,7 +7,6 @@ Radio
 ```
 <!-- STORY -->
 
-
 ### Usage
 
 Simple
@@ -92,6 +91,9 @@ Radio with hint text
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `children` | true | `````` |  | 
+ `className` |  | ```undefined``` |  | 
+ `hint` |  | ```undefined``` |  | 
+ `inline` |  | ```false``` |  | 
 
 

@@ -1,5 +1,3 @@
-import type { WithWhiteSpaceProps } from '@govuk-react/lib';
-
 import React from 'react';
 import styled from 'styled-components';
 import { ERROR_COLOUR } from 'govuk-colours';
@@ -9,9 +7,10 @@ import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 import { spacing } from '@govuk-react/lib';
 
+import type { InputProps } from './input';
 import Input from './input';
 
-const StyledContainer = styled('div')<DateFieldProps>(
+const StyledContainer = styled('div')(
   {
     display: 'flex',
     flexDirection: 'column',
@@ -77,28 +76,21 @@ const StyledContainer = styled('div')<DateFieldProps>(
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/date-field
  *
  */
-export const DateField: DateFieldType = ({
-  children,
-  errorText,
-  hintText,
-  inputNames,
-  defaultValues,
-  input,
-  ...props
-}: DateFieldProps) => (
+const DateField = ({ children, errorText, hintText, inputNames, defaultValues, input, ...props }: DateFieldProps) => (
   <StyledContainer {...props} errorText={errorText}>
     <LabelText>{children}</LabelText>
     {hintText && <HintText>{hintText}</HintText>}
     {errorText && <ErrorText>{errorText}</ErrorText>}
-    <Input names={inputNames} defaultValues={defaultValues} error={!!errorText} {...input} />
+    <Input
+      names={inputNames}
+      // TODO: defaultValues should be a prop on input
+      defaultValues={defaultValues}
+      // TODO: allow each individual input (day, month, year) to have a separate bool for error
+      error={!!errorText}
+      {...input}
+    />
   </StyledContainer>
 );
-DateField.displayName = 'DateField';
-
-export interface DateFieldType extends React.FC<DateFieldProps> {
-  Input: typeof Input;
-  Container: typeof StyledContainer;
-}
 
 DateField.Container = StyledContainer;
 DateField.Input = Input;
@@ -119,7 +111,7 @@ DateField.defaultProps = {
   input: undefined,
 };
 
-export interface DateFieldProps extends React.HTMLAttributes<HTMLDivElement>, WithWhiteSpaceProps {
+export interface DateFieldProps extends InputProps {
   children: React.ReactNode;
   /**
    * Optional hint text
@@ -154,12 +146,12 @@ export interface DateFieldProps extends React.HTMLAttributes<HTMLDivElement>, Wi
      * Called when the day, month or year fields are blurred
      * (does not get called when moving between inputs in the same datefield)
      */
-    onBlur?: (date: { day: string; month: string; year: string }) => void;
+    onBlur?: (...args: unknown[]) => unknown;
     /**
      * Called when the day, month or year fields are focussed
      * (does not get called when moving between inputs in the same datefield)
      */
-    onFocus?: (date: { day: string; month: string; year: string }) => void;
+    onFocus?: (...args: unknown[]) => unknown;
     /**
      * When the form field is controlled, this sets the value of the day, month and year inputs
      */

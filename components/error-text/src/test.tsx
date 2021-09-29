@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { ErrorText } from '.';
+import ErrorText from '.';
 
 describe('ErrorText', () => {
   it('renders contents without crashing', () => {

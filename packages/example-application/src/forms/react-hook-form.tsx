@@ -36,7 +36,7 @@ const DateField = ({ input: { onChange, onBlur, ...input }, children, ...props }
   );
 };
 
-const ReactHookForm: React.FC = () => {
+const ReactHookForm = () => {
   const {
     register,
     handleSubmit,

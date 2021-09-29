@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Container = styled('div')({
   verticalAlign: 'baseline',
@@ -14,18 +15,17 @@ const TitleContainer = styled('span')({
   display: 'inline-block',
 });
 
-const IconTitle: React.FC<IconTitleProps> = ({ icon, children }: IconTitleProps) => (
+const IconTitle = ({ icon, children }) => (
   <Container>
     <IconContainer>{icon}</IconContainer>
     <TitleContainer>{children}</TitleContainer>
   </Container>
 );
 
-export interface IconTitleProps {
-  icon?: React.ReactNode;
-  children?: React.ReactNode;
-}
-
+IconTitle.propTypes = {
+  icon: PropTypes.node,
+  children: PropTypes.node,
+};
 IconTitle.defaultProps = {
   icon: undefined,
   children: undefined,

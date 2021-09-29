@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { Panel } from '.';
+import Panel from '.';
 
 export default {
   title: 'Page & Layout/Panel',
   component: Panel,
 };
 
-export const Default: React.FC = () => <Panel title="Application complete" />;
+export const Default = () => <Panel title="Application complete" />;
 
-export const PanelWithHeaderAndHtmlBody: React.FC = () => (
+export const PanelWithHeaderAndHtmlBody = () => (
   <Panel title="Application complete">
     Your reference number
     <br />

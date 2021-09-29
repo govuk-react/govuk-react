@@ -7,7 +7,6 @@ InputField
 ```
 <!-- STORY -->
 
-
 ### Usage
 
 Simple
@@ -62,6 +61,9 @@ Input with hint text & error
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `children` | true | `````` |  | 
+ `hint` |  | ```undefined``` |  | 
+ `input` |  | ```{}``` |  | 
+ `meta` |  | ```{}``` |  | 
 
 

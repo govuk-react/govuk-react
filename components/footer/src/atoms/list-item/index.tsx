@@ -1,9 +1,8 @@
-import type { WithWhiteSpaceProps } from '@govuk-react/lib';
-
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { spacing } from '@govuk-react/lib';
 
-export const ListItem = styled('li')<ListItemProps>(
+const ListItem = styled('li')(
   ({ inline }) =>
     inline
       ? {
@@ -19,9 +18,9 @@ export const ListItem = styled('li')<ListItemProps>(
   }
 );
 
-interface ListItemProps extends WithWhiteSpaceProps {
-  inline?: boolean;
-}
+ListItem.propTypes = {
+  inline: PropTypes.bool,
+};
 
 ListItem.defaultProps = {
   inline: false,

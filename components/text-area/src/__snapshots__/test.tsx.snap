@@ -133,33 +133,43 @@ exports[`Textarea matches snapshot for error: wrapperErrorText mount 1`] = `
   <Label
     error={true}
   >
-    <label
-      className="c0"
+    <src__StyledLabel
+      error={true}
     >
-      <LabelText>
-        <span
-          className="c1"
-        >
-          example
-        </span>
-      </LabelText>
-      <ErrorText>
-        <span
-          className="c2"
-        >
-          example
-        </span>
-      </ErrorText>
-      <src__TextAreaField
-        error={true}
-        rows={5}
+      <label
+        className="c0"
       >
-        <textarea
-          className="c3"
-          rows={5}
-        />
-      </src__TextAreaField>
-    </label>
+        <LabelText>
+          <src__StyledLabelText>
+            <span
+              className="c1"
+            >
+              example
+            </span>
+          </src__StyledLabelText>
+        </LabelText>
+        <ErrorText>
+          <src__StyledError>
+            <span
+              className="c2"
+            >
+              example
+            </span>
+          </src__StyledError>
+        </ErrorText>
+        <src__TextAreaField
+          error={true}
+          rows="5"
+          type="text"
+        >
+          <textarea
+            className="c3"
+            rows="5"
+            type="text"
+          />
+        </src__TextAreaField>
+      </label>
+    </src__StyledLabel>
   </Label>
 </TextArea>
 `;
@@ -288,32 +298,42 @@ exports[`Textarea matches snapshot for hint: wrapperHint mount 1`] = `
   <Label
     error={false}
   >
-    <label
-      className="c0"
+    <src__StyledLabel
+      error={false}
     >
-      <LabelText>
-        <span
-          className="c1"
-        >
-          example
-        </span>
-      </LabelText>
-      <HintText>
-        <span
-          className="c2"
-        >
-          example
-        </span>
-      </HintText>
-      <src__TextAreaField
-        rows={5}
+      <label
+        className="c0"
       >
-        <textarea
-          className="c3"
-          rows={5}
-        />
-      </src__TextAreaField>
-    </label>
+        <LabelText>
+          <src__StyledLabelText>
+            <span
+              className="c1"
+            >
+              example
+            </span>
+          </src__StyledLabelText>
+        </LabelText>
+        <HintText>
+          <src__StyledHint>
+            <span
+              className="c2"
+            >
+              example
+            </span>
+          </src__StyledHint>
+        </HintText>
+        <src__TextAreaField
+          rows="5"
+          type="text"
+        >
+          <textarea
+            className="c3"
+            rows="5"
+            type="text"
+          />
+        </src__TextAreaField>
+      </label>
+    </src__StyledLabel>
   </Label>
 </TextArea>
 `;
@@ -415,25 +435,33 @@ exports[`Textarea matches wrapper snapshot: wrapper mount 1`] = `
   <Label
     error={false}
   >
-    <label
-      className="c0"
+    <src__StyledLabel
+      error={false}
     >
-      <LabelText>
-        <span
-          className="c1"
-        >
-          example
-        </span>
-      </LabelText>
-      <src__TextAreaField
-        rows={5}
+      <label
+        className="c0"
       >
-        <textarea
-          className="c2"
-          rows={5}
-        />
-      </src__TextAreaField>
-    </label>
+        <LabelText>
+          <src__StyledLabelText>
+            <span
+              className="c1"
+            >
+              example
+            </span>
+          </src__StyledLabelText>
+        </LabelText>
+        <src__TextAreaField
+          rows="5"
+          type="text"
+        >
+          <textarea
+            className="c2"
+            rows="5"
+            type="text"
+          />
+        </src__TextAreaField>
+      </label>
+    </src__StyledLabel>
   </Label>
 </TextArea>
 `;

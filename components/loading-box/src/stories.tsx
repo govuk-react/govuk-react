@@ -9,7 +9,7 @@ import Link from '@govuk-react/link';
 import Radio from '@govuk-react/radio';
 import PhaseBanner from '@govuk-react/phase-banner';
 
-import { LoadingBox } from '.';
+import LoadingBox from '.';
 
 export default {
   title: 'Utility/Loading box',
@@ -18,7 +18,7 @@ export default {
 
 const spacer = <p style={{ marginTop: 0 }}>&nbsp;</p>;
 
-export const Default: React.FC = () => (
+export const Default = () => (
   <LoadingBox
     loading={boolean('loading', false)}
     backgroundColor={text('backgroundColor', '#fff')}
@@ -41,7 +41,7 @@ export const Default: React.FC = () => (
   </LoadingBox>
 );
 
-export const PresetToLoading: React.FC = () => (
+export const PresetToLoading = () => (
   <LoadingBox
     loading={boolean('loading', true)}
     backgroundColor={text('backgroundColor', '#fff')}
@@ -63,7 +63,7 @@ export const PresetToLoading: React.FC = () => (
   </LoadingBox>
 );
 
-export const LoadingBoxLong: React.FC = () => (
+export const LoadingBoxLong = () => (
   <LoadingBox
     loading={boolean('loading', false)}
     backgroundColor={text('backgroundColor', '#fff')}
@@ -101,9 +101,9 @@ export const LoadingBoxLong: React.FC = () => (
   </LoadingBox>
 );
 
-export const ShortHeight: React.FC = () => <LoadingBox loading>Lorem ipsum dolor sit amet</LoadingBox>;
+export const ShortHeight = () => <LoadingBox loading>Lorem ipsum dolor sit amet</LoadingBox>;
 
-export const WithBoldedTexts: React.FC = () => (
+export const WithBoldedTexts = () => (
   <LoadingBox loading>
     <H1>Lorem ipsum dolor sit amet</H1>
     <H2>Consectetur adipisicing elit. Quia incidunt, earum molestiae omnis labore adipisci.</H2>

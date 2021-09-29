@@ -1,5 +1,4 @@
 // https://govuk-static.herokuapp.com/component-guide/search
-import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
 import React from 'react';
 import styled from 'styled-components';
@@ -95,21 +94,14 @@ const StyledSearchBox = styled('div')(
  * - https://govuk-static.herokuapp.com/component-guide/search
  *
  */
-export const SearchBox: SearchBoxType = React.forwardRef<HTMLDivElement, SearchBoxProps>((props, ref) => (
-  <StyledSearchBox {...props} ref={ref} />
-));
+const SearchBox: SearchBoxType = React.forwardRef((props, ref) => <StyledSearchBox {...props} ref={ref} />);
 
-interface SearchBoxProps extends React.HTMLAttributes<HTMLDivElement>, WithWhiteSpaceProps {}
-
-export interface SearchBoxType<T = HTMLDivElement>
-  extends React.ForwardRefExoticComponent<SearchBoxProps & React.RefAttributes<T>> {
+interface SearchBoxType extends React.ForwardRefExoticComponent<React.HTMLProps<HTMLDivElement>> {
   Input?: React.ElementType;
   Button?: React.ElementType;
 }
 
 SearchBox.Input = Input;
 SearchBox.Button = Button;
-
-SearchBox.displayName = 'SearchBox';
 
 export default SearchBox;

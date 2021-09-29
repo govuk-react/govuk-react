@@ -3,7 +3,7 @@ import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 import React from 'react';
 import OrderedList from '@govuk-react/ordered-list';
 
-export interface UnorderedListProps extends WithWhiteSpaceProps {
+interface UnorderedListProps extends WithWhiteSpaceProps {
   /** One or more ListItem components */
   children: React.ReactNode;
   /** CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend */
@@ -43,14 +43,10 @@ export interface UnorderedListProps extends WithWhiteSpaceProps {
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_lists.scss
  */
 
-export const UnorderedList: React.FC<UnorderedListProps> = (props: UnorderedListProps) => (
-  <OrderedList as="ul" {...props} />
-);
+const UnorderedList = (props: UnorderedListProps) => <OrderedList as="ul" {...props} />;
 
 UnorderedList.defaultProps = {
   listStyleType: undefined,
 };
-
-UnorderedList.displayName = 'UnorderedList';
 
 export default UnorderedList;

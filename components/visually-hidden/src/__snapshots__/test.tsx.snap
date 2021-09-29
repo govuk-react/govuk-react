@@ -29,17 +29,22 @@ exports[`VisuallyHidden focusable version matches snapshot: focusable 1`] = `
   white-space: inherit !important;
 }
 
-<VisuallyHidden
+<VisuallyHiddenDocumented
   focusable={true}
   important={true}
 >
-  <span
-    className="c0"
-    tabIndex="0"
+  <src__VisuallyHidden
+    focusable={true}
+    important={true}
   >
-    Example
-  </span>
-</VisuallyHidden>
+    <span
+      className="c0"
+      tabIndex="0"
+    >
+      Example
+    </span>
+  </src__VisuallyHidden>
+</VisuallyHiddenDocumented>
 `;
 
 exports[`VisuallyHidden matches snapshot: default render 1`] = `
@@ -58,16 +63,21 @@ exports[`VisuallyHidden matches snapshot: default render 1`] = `
   padding: 0 !important;
 }
 
-<VisuallyHidden
+<VisuallyHiddenDocumented
   focusable={false}
   important={true}
 >
-  <span
-    className="c0"
+  <src__VisuallyHidden
+    focusable={false}
+    important={true}
   >
-    Example
-  </span>
-</VisuallyHidden>
+    <span
+      className="c0"
+    >
+      Example
+    </span>
+  </src__VisuallyHidden>
+</VisuallyHiddenDocumented>
 `;
 
 exports[`VisuallyHidden with important={false} matches snapshot: not important 1`] = `
@@ -86,14 +96,19 @@ exports[`VisuallyHidden with important={false} matches snapshot: not important 1
   padding: 0;
 }
 
-<VisuallyHidden
+<VisuallyHiddenDocumented
   focusable={false}
   important={false}
 >
-  <span
-    className="c0"
+  <src__VisuallyHidden
+    focusable={false}
+    important={false}
   >
-    Example
-  </span>
-</VisuallyHidden>
+    <span
+      className="c0"
+    >
+      Example
+    </span>
+  </src__VisuallyHidden>
+</VisuallyHiddenDocumented>
 `;

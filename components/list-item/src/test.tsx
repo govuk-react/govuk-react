@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import { ListItem } from '.';
+import { DocumentedComponent as ListItem } from '.';
 
 describe('ListItem', () => {
   it('matches wrapper snapshot', () => {

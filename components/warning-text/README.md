@@ -7,7 +7,6 @@ WarningText
 ```
 <!-- STORY -->
 
-
 ### Usage
 
 Simple
@@ -26,6 +25,6 @@ import { WarningText } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `children` | true | `````` | node | Warning text to be displayed
 
 

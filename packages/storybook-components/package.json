@@ -1,0 +1,30 @@
+{
+  "name": "@govuk-react/storybook-components",
+  "version": "0.9.1",
+  "dependencies": {
+    "@govuk-react/button": "^0.9.1",
+    "@storybook/addon-actions": "6.3.5",
+    "@storybook/addon-docs": "6.3.5",
+    "@storybook/addons": "6.3.7",
+    "@storybook/react": "6.3.6",
+    "react-final-form": "^6.5.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.2.0"
+  },
+  "scripts": {
+    "build": "yarn build:lib && yarn build:es",
+    "build:lib": "rimraf lib && babel src -x .js,jsx,.ts,.tsx -d lib --config-file ../../babel.config.js",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -x .js,jsx,.ts,.tsx -d es --config-file ../../babel.config.js"
+  },
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "author": "Alasdair McLeay",
+  "license": "MIT",
+  "homepage": "https://github.com/govuk-react/govuk-react#readme",
+  "description": "govuk-react: A port of the govuk-frontend components for React using styled-components.",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { IconImportant } from '@govuk-react/icons';
@@ -43,7 +44,7 @@ const WarningTextWrapper = styled('strong')(typography.font({ size: 19, weight: 
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/warning-text
  *
  */
-export const WarningText: React.FC<WarningTextProps> = ({ children, ...props }: WarningTextProps) => (
+const WarningText = ({ children, ...props }) => (
   <StyledWarningText {...props}>
     <IconImportantWrapper>
       <IconImportant />
@@ -52,13 +53,11 @@ export const WarningText: React.FC<WarningTextProps> = ({ children, ...props }: 
   </StyledWarningText>
 );
 
-WarningText.displayName = 'WarningText';
-
-export interface WarningTextProps {
+WarningText.propTypes = {
   /**
    * Warning text to be displayed
    */
-  children: React.ReactNode;
-}
+  children: PropTypes.node.isRequired,
+};
 
 export default WarningText;

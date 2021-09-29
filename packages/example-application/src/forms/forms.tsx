@@ -9,7 +9,7 @@ import Formik from './formik';
 import ReactHookForm from './react-hook-form';
 import ReactJSONSchemaForm from './react-jsonschema-form';
 
-const Forms: React.FC = () => (
+const Forms = () => (
   <Switch>
     <Route path="/forms/form">
       <Form />

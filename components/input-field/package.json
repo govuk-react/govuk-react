@@ -5,6 +5,7 @@
     "@govuk-react/constants": "^0.9.1",
     "@govuk-react/error-text": "^0.9.1",
     "@govuk-react/hint-text": "^0.9.1",
+    "@govuk-react/hoc": "^0.9.1",
     "@govuk-react/input": "^0.9.1",
     "@govuk-react/label": "^0.9.1",
     "@govuk-react/label-text": "^0.9.1"
@@ -14,11 +15,13 @@
     "styled-components": ">=5.1"
   },
   "scripts": {
-    "docs": "doc-component ./src/index.tsx ./README.md"
+    "build": "yarn build:lib && yarn build:es",
+    "build:lib": "rimraf lib && babel src -x .js,jsx,.ts,.tsx -d lib --source-maps --config-file ../../babel.config.js",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -x .js,jsx,.ts,.tsx -d es --source-maps --config-file ../../babel.config.js",
+    "docs": "doc-component ./lib/index.js ./README.md"
   },
-  "main": "dist/govuk-react-input-field.cjs.js",
-  "module": "dist/govuk-react-input-field.esm.js",
-  "source": "src/index.tsx",
+  "main": "lib/index.js",
+  "module": "es/index.js",
   "author": "Alasdair McLeay",
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/input-field",

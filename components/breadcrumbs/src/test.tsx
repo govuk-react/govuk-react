@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import { Breadcrumbs } from '.';
+import Breadcrumbs from '.';
 
 describe('breadcrumbs', () => {
   it('should render an item in ordered list', () => {

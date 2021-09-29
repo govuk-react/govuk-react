@@ -51,7 +51,7 @@ const DateField = ({ meta, input: { onChange, onBlur, ...input }, children, ...p
 );
 const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />;
 
-const FinalForm: React.FC = () => {
+const FinalForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [submittedData, setSubmittedData] = useState();
@@ -203,14 +203,7 @@ const FinalForm: React.FC = () => {
                     <GovUK.MultiChoice
                       mb={8}
                       label="Do you have more than one pet?"
-                      meta={{
-                        error:
-                          errors?.hasMultiplePets &&
-                          (Array.isArray(errors?.hasMultiplePets)
-                            ? String(errors?.hasMultiplePets[0])
-                            : String(errors?.hasMultiplePets)),
-                        touched: !!touched?.hasMultiplePets,
-                      }}
+                      meta={{ error: errors?.hasMultiplePets, touched: !!touched?.hasMultiplePets }}
                     >
                       <Field
                         component={Radio}

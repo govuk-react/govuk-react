@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import * as GovUK from 'govuk-react';
 import { Link } from 'react-router-dom';
 
-const Results: React.FC<ResultsProps> = ({
+const Results = ({
   backLink,
   onBackClick,
   firstName,
@@ -54,7 +54,7 @@ const Results: React.FC<ResultsProps> = ({
 
 interface ResultsProps {
   backLink: string;
-  onBackClick(): void;
+  onBackClick(...args: unknown[]): unknown;
   firstName: string;
   description: string;
   nationality: string[];

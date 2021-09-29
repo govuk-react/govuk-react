@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 
-import { SearchBox } from '.';
+import SearchBox from '.';
 
 const example = 'example';
 const wrapper = (

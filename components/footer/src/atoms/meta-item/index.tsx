@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { GUTTER_HALF, MEDIA_QUERIES } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
 
-const MetaItem = styled('div')<MetaItemProps>(
+const MetaItem = styled('div')(
   {
     marginRight: GUTTER_HALF,
     marginBottom: spacing.simple(5),
@@ -18,9 +19,9 @@ const MetaItem = styled('div')<MetaItemProps>(
     }
 );
 
-interface MetaItemProps {
-  grow?: boolean;
-}
+MetaItem.propTypes = {
+  grow: PropTypes.bool,
+};
 
 MetaItem.defaultProps = {
   grow: false,

@@ -21,7 +21,7 @@ import HintText from '@govuk-react/hint-text';
 import { BORDER_WIDTH_MOBILE, SPACING } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
 
-const StyledFieldset = styled('div')<{ error: boolean } & WithWhiteSpaceProps>(
+const StyledFieldset = styled('div')(
   {
     padding: 0,
     margin: 0,
@@ -67,13 +67,7 @@ const StyledFieldset = styled('div')<{ error: boolean } & WithWhiteSpaceProps>(
  * - https://govuk-elements.herokuapp.com/errors/example-form-validation-single-question-radio
  *
  */
-export const MultiChoice: React.FC<MultiChoiceProps> = ({
-  meta,
-  label,
-  children,
-  hint,
-  ...props
-}: MultiChoiceProps) => (
+const MultiChoice = ({ meta, label, children, hint, ...props }: MultiChoiceProps) => (
   <StyledFieldset error={meta.touched && !!meta.error} {...props}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
@@ -87,12 +81,24 @@ MultiChoice.defaultProps = {
   meta: {},
 };
 
-MultiChoice.displayName = 'MultiChoice';
-
-export interface MultiChoiceProps extends WithWhiteSpaceProps {
+interface MultiChoiceProps extends WithWhiteSpaceProps {
   meta?: {
-    error?: string | string[];
+    active?: boolean;
+    dirty?: boolean;
+    dirtySinceLastSubmit?: boolean;
+    // eslint-disable-next-line react/forbid-prop-types
+    error?: any;
+    // eslint-disable-next-line react/forbid-prop-types
+    initial?: any;
+    invalid?: boolean;
+    pristine?: boolean;
+    // eslint-disable-next-line react/forbid-prop-types
+    submitError?: any;
+    submitFailed?: boolean;
+    submitSucceeded?: boolean;
     touched?: boolean;
+    valid?: boolean;
+    visited?: boolean;
   };
   label: React.ReactNode;
   children: React.ReactNode;

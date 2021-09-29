@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 import Paragraph from '@govuk-react/paragraph';
 
-import { SkipLink } from '.';
+import SkipLink, { SkipLinkDocumented } from '.';
 
 export default {
   title: 'Navigation/Skip link',
-  component: SkipLink,
+  component: SkipLinkDocumented,
 };
 class AutoFocussed extends Component<{ href: string }> {
   focusableRef;
@@ -22,11 +22,11 @@ class AutoFocussed extends Component<{ href: string }> {
   }
 
   render() {
-    return <SkipLink ref={this.focusableRef} {...this.props} />;
+    return <SkipLink ref={this.focusableRef} focusable {...this.props} />;
   }
 }
 
-export const Default: React.FC = () => (
+export const Default = () => (
   <div>
     <Paragraph>
       The skip link component in this example should automatically focus. If it loses focus, tab to this example to see

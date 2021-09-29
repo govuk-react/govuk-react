@@ -7,12 +7,6 @@ exports[`OrderedList matches wrapper snapshot: wrapper mount 1`] = `
   -moz-osx-font-smoothing: grayscale;
 }
 
-.c4:focus {
-  outline: 3px solid #ffdd00;
-  outline-offset: 0;
-  background-color: #ffdd00;
-}
-
 .c4:link {
   color: #1d70b8;
 }
@@ -31,6 +25,12 @@ exports[`OrderedList matches wrapper snapshot: wrapper mount 1`] = `
 
 .c4:focus {
   color: #0b0c0c;
+}
+
+.c4:focus {
+  outline: 3px solid #ffdd00;
+  outline-offset: 0;
+  background-color: #ffdd00;
 }
 
 .c3 {
@@ -120,67 +120,69 @@ exports[`OrderedList matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<OrderedList>
-  <ol
-    className="c0 c1"
-  >
-    <ListItem>
-      <li
-        className="c2 c3"
-      >
-        <Link
-          href="http://example.com"
-          muted={false}
-          noVisitedState={false}
-          textColour={false}
+<DocumentedComponent>
+  <src__OrderedList>
+    <ol
+      className="c0 c1"
+    >
+      <src__ListItem>
+        <li
+          className="c2 c3"
         >
-          <a
-            className="c4"
+          <styled.a
             href="http://example.com"
+            muted={false}
+            noVisitedState={false}
+            textColour={false}
           >
-            Example 1
-          </a>
-        </Link>
-      </li>
-    </ListItem>
-    <ListItem>
-      <li
-        className="c2 c3"
-      >
-        <Link
-          href="http://example.com"
-          muted={false}
-          noVisitedState={false}
-          textColour={false}
+            <a
+              className="c4"
+              href="http://example.com"
+            >
+              Example 1
+            </a>
+          </styled.a>
+        </li>
+      </src__ListItem>
+      <src__ListItem>
+        <li
+          className="c2 c3"
         >
-          <a
-            className="c4"
+          <styled.a
             href="http://example.com"
+            muted={false}
+            noVisitedState={false}
+            textColour={false}
           >
-            Example 2
-          </a>
-        </Link>
-      </li>
-    </ListItem>
-    <ListItem>
-      <li
-        className="c2 c3"
-      >
-        <Link
-          href="http://example.com"
-          muted={false}
-          noVisitedState={false}
-          textColour={false}
+            <a
+              className="c4"
+              href="http://example.com"
+            >
+              Example 2
+            </a>
+          </styled.a>
+        </li>
+      </src__ListItem>
+      <src__ListItem>
+        <li
+          className="c2 c3"
         >
-          <a
-            className="c4"
+          <styled.a
             href="http://example.com"
+            muted={false}
+            noVisitedState={false}
+            textColour={false}
           >
-            Example 3
-          </a>
-        </Link>
-      </li>
-    </ListItem>
-  </ol>
-</OrderedList>
+            <a
+              className="c4"
+              href="http://example.com"
+            >
+              Example 3
+            </a>
+          </styled.a>
+        </li>
+      </src__ListItem>
+    </ol>
+  </src__OrderedList>
+</DocumentedComponent>
 `;

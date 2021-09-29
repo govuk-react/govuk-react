@@ -74,7 +74,7 @@ const StyledBody = styled('div')(typography.font({ size: 36 }));
  *
  */
 
-export const Panel: React.FC<PanelProps> = ({ title, children, ...props }: PanelProps) => (
+const Panel = ({ title, children, ...props }: PanelProps) => (
   <StyledPanel {...props}>
     <StyledTitle>{title}</StyledTitle>
     {children && <StyledBody>{children}</StyledBody>}
@@ -84,9 +84,7 @@ Panel.defaultProps = {
   children: undefined,
 };
 
-Panel.displayName = 'Panel';
-
-export interface PanelProps {
+interface PanelProps {
   /** Panel title text */
   title: string;
   /** Panel body text */

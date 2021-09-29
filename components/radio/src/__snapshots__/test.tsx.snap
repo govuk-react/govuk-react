@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio can render with hint text: hint text 1`] = `
-.c3 {
+.c4 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -89,21 +89,21 @@ exports[`Radio can render with hint text: hint text 1`] = `
   opacity: 0;
 }
 
-.c4 {
+.c3 {
   display: block;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 @media print {
-  .c3 {
+  .c4 {
     font-size: 14px;
     line-height: 1.15;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .c3 {
+  .c4 {
     font-size: 19px;
     line-height: 1.3157894736842106;
   }
@@ -129,7 +129,7 @@ exports[`Radio can render with hint text: hint text 1`] = `
   }
 }
 
-<Radio
+<ForwardRef
   hint="Hint text"
   inline={false}
 >
@@ -155,15 +155,23 @@ exports[`Radio can render with hint text: hint text 1`] = `
         </span>
       </src__LabelText>
       <src__StyledRadioHint>
-        <span
-          className="c3 c4"
+        <HintText
+          className="c3"
         >
-          Hint text
-        </span>
+          <src__StyledHint
+            className="c3"
+          >
+            <span
+              className="c4 c3"
+            >
+              Hint text
+            </span>
+          </src__StyledHint>
+        </HintText>
       </src__StyledRadioHint>
     </label>
   </src__Label>
-</Radio>
+</ForwardRef>
 `;
 
 exports[`Radio disabled: disabled 1`] = `
@@ -263,7 +271,7 @@ exports[`Radio disabled: disabled 1`] = `
   }
 }
 
-<Radio
+<ForwardRef
   disabled={true}
   inline={false}
 >
@@ -292,7 +300,7 @@ exports[`Radio disabled: disabled 1`] = `
       </src__LabelText>
     </label>
   </src__Label>
-</Radio>
+</ForwardRef>
 `;
 
 exports[`Radio matches snapshot for inline: inline mount 1`] = `
@@ -400,7 +408,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
   }
 }
 
-<Radio
+<ForwardRef
   inline={true}
   name="example"
 >
@@ -429,7 +437,7 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
       </src__LabelText>
     </label>
   </src__Label>
-</Radio>
+</ForwardRef>
 `;
 
 exports[`Radio matches snapshot: standard mount 1`] = `
@@ -529,7 +537,7 @@ exports[`Radio matches snapshot: standard mount 1`] = `
   }
 }
 
-<Radio
+<ForwardRef
   inline={false}
   name="example"
 >
@@ -558,5 +566,5 @@ exports[`Radio matches snapshot: standard mount 1`] = `
       </src__LabelText>
     </label>
   </src__Label>
-</Radio>
+</ForwardRef>
 `;

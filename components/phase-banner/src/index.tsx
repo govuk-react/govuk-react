@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { BORDER_COLOUR } from 'govuk-colours';
 import { SPACING_POINTS } from '@govuk-react/constants';
@@ -19,7 +20,7 @@ const BannerContent = styled('p')(typography.font({ size: 16 }), typography.text
   display: 'table',
   margin: 0,
 
-  [String(Tag)]: {
+  [Tag]: {
     marginRight: SPACING_POINTS[2],
   },
 });
@@ -59,7 +60,7 @@ const BannerText = styled('span')({
  * - https://design-system.service.gov.uk/components/phase-banner/
  *
  */
-export const PhaseBanner: React.FC<PhaseBannerProps> = ({ level, children, ...props }: PhaseBannerProps) => (
+const PhaseBanner = ({ level, children, ...props }) => (
   <StyledBanner {...props}>
     <BannerContent>
       <Tag>{level}</Tag>
@@ -68,13 +69,11 @@ export const PhaseBanner: React.FC<PhaseBannerProps> = ({ level, children, ...pr
   </StyledBanner>
 );
 
-export interface PhaseBannerProps {
+PhaseBanner.propTypes = {
   /** Children text and links */
-  children: React.ReactNode;
+  children: PropTypes.node.isRequired,
   /** Alpha or beta banner */
-  level: string;
-}
-
-PhaseBanner.displayName = 'PhaseBanner';
+  level: PropTypes.string.isRequired,
+};
 
 export default PhaseBanner;

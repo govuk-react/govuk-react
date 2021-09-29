@@ -57,16 +57,22 @@ exports[`Input matches withColouredError snapshot: with coloured error mount 1`]
   }
 }
 
-<Input
+<ForwardRef
   error={true}
   errorColor="#f47738"
   type="text"
 >
-  <input
-    className="c0"
+  <src__StyledInput
+    error={true}
+    errorColor="#f47738"
     type="text"
-  />
-</Input>
+  >
+    <input
+      className="c0"
+      type="text"
+    />
+  </src__StyledInput>
+</ForwardRef>
 `;
 
 exports[`Input matches withError snapshot: with error mount 1`] = `
@@ -126,15 +132,20 @@ exports[`Input matches withError snapshot: with error mount 1`] = `
   }
 }
 
-<Input
+<ForwardRef
   error={true}
   type="text"
 >
-  <input
-    className="c0"
+  <src__StyledInput
+    error={true}
     type="text"
-  />
-</Input>
+  >
+    <input
+      className="c0"
+      type="text"
+    />
+  </src__StyledInput>
+</ForwardRef>
 `;
 
 exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
@@ -193,13 +204,18 @@ exports[`Input matches wrapper snapshot: wrapper mount 1`] = `
   }
 }
 
-<Input
+<ForwardRef
   error={false}
   type="text"
 >
-  <input
-    className="c0"
+  <src__StyledInput
+    error={false}
     type="text"
-  />
-</Input>
+  >
+    <input
+      className="c0"
+      type="text"
+    />
+  </src__StyledInput>
+</ForwardRef>
 `;
