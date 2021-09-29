@@ -50,9 +50,6 @@ const InnerContainer = styled('div')({
  * </Main>
  * ```
  *
- * ### TODO
- * - Implement the 1020px min-width MQ to constants
- *
  */
 export const Main: React.FC<MainProps> = ({ children, ...props }: MainProps) => (
   <OuterContainer {...props}>
