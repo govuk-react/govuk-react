@@ -26,10 +26,6 @@ import { spacing } from '@govuk-react/lib';
  * ### References:
  *
  * - https://govuk-static.herokuapp.com/component-guide/related_items
- *
- * ### TODO:
- * - Replace CSS selectors with imported components
- *
  */
 export const RelatedItems = styled('div')(
   {
