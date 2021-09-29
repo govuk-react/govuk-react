@@ -3,7 +3,7 @@ import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 import React from 'react';
 import styled from 'styled-components';
 
-import { BLACK, ERROR_COLOUR, INPUT_BORDER_COLOUR } from 'govuk-colours';
+import { BLACK, ERROR_COLOUR } from 'govuk-colours';
 import {
   BORDER_WIDTH_FORM_ELEMENT,
   BORDER_WIDTH_FORM_ELEMENT_ERROR,
