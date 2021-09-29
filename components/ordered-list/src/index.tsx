@@ -69,8 +69,7 @@ export const OrderedList = styled('ol')<OrderedListProps>(
         : {
             paddingLeft: SPACING_POINTS[4],
           },
-      // TODO consider whether these spacing adjusts should be for all non-`none` styles
-      // NB the inclusion of these ensures that withWhiteSpace's mb prop doesn't work on ListItem
+      // the inclusion of these means that withWhiteSpace's mb prop doesn't work on ListItem
       ['disc', 'decimal'].includes(type)
         ? {
             [`> ${ListItem}`]: {
