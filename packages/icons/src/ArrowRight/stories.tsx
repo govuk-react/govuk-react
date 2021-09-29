@@ -5,7 +5,7 @@ import { withKnobs, color, text } from '@storybook/addon-knobs';
 import ArrowRightComponent from '.';
 
 export default {
-  title: 'Utility/Icons',
+  title: 'Utility/Icons/ArrowRight',
   decorators: [withKnobs],
 };
 
