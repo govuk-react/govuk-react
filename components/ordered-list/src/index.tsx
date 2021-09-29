@@ -45,8 +45,6 @@ export interface OrderedListProps extends WithWhiteSpaceProps {
  * - https://design-system.service.gov.uk/styles/typography/#lists
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_lists.scss
  *
- * ### TODO
- * - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
  */
 export const OrderedList = styled('ol')<OrderedListProps>(
   typography.font({ size: 19 }),
