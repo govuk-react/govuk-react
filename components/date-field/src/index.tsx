@@ -90,13 +90,7 @@ export const DateField: DateFieldType = ({
     <LabelText>{children}</LabelText>
     {hintText && <HintText>{hintText}</HintText>}
     {errorText && <ErrorText>{errorText}</ErrorText>}
-    <Input
-      names={inputNames}
-      defaultValues={defaultValues}
-      // TODO: allow each individual input (day, month, year) to have a separate bool for error
-      error={!!errorText}
-      {...input}
-    />
+    <Input names={inputNames} defaultValues={defaultValues} error={!!errorText} {...input} />
   </StyledContainer>
 );
 DateField.displayName = 'DateField';
