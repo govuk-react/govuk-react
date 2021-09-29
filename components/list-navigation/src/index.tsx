@@ -43,9 +43,6 @@ export interface ListNavigationProps {
  * ### References:
  *
  * - https://govuk-static.herokuapp.com/component-guide/government_navigation
- *
- * ### TODO:
- * - Fix active state overlaping siblings
  */
 export const ListNavigation: React.FC<ListNavigationProps> = ({
   children,
