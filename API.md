@@ -5376,9 +5376,6 @@ import { Main, GridRow, GridCol } from 'govuk-react'
 </Main>
 ```
 
-### TODO
-- Implement the 1020px min-width MQ to constants
-
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
@@ -5464,9 +5461,6 @@ import { OrderedList, ListItem } from 'govuk-react'
 ### References
 - https://design-system.service.gov.uk/styles/typography/#lists
 - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_lists.scss
-
-### TODO
-- Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
 
 ### Properties
 Prop | Required | Default | Type | Description
@@ -5912,11 +5906,6 @@ const ReactRouterLinkRenderer = ({ href, children }) => (
 
 ### References
 - https://govuk-elements.herokuapp.com/typography/#typography-body-copy
-
-### TODO
-- Add test for supporting text
-- Review code snippet styling
-- Remove magic numbers from inline code styling blocks
 
 ### Properties
 Prop | Required | Default | Type | Description
