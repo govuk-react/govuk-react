@@ -53,7 +53,6 @@ const Input = styled('input')({
 });
 
 interface TopNavProps {
-  // TODO: prop names should mirror nunjucks macro options at https://design-system.service.gov.uk/components/header/
   /** Top nav background color */
   bgColor?: string;
   /** Top nav text color */
