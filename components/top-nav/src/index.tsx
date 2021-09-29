@@ -135,11 +135,6 @@ interface TopNavProps {
  *
  * - http://alphagov.github.io/govuk_template/example-proposition-menu.html
  * - https://design-system.service.gov.uk/components/header/
- *
- * ### TODO:
- * - TODO: this component is a work in progress and needs to more closely match existing examples
- * - TODO: Vertical alignment here needs some work, perhaps should be its own component
- * - TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
  */
 export class TopNav extends Component<TopNavProps, { navigationOpen: boolean }> {
   static IconTitle = IconTitle;
