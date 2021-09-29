@@ -39,7 +39,6 @@
     "@govuk-react/section-break": "^0.9.1",
     "@govuk-react/select": "^0.9.1",
     "@govuk-react/skip-link": "^0.9.1",
-    "@govuk-react/storybook-components": "^0.9.1",
     "@govuk-react/table": "^0.9.1",
     "@govuk-react/tabs": "^0.9.1",
     "@govuk-react/tag": "^0.9.1",

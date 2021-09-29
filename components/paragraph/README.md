@@ -61,11 +61,6 @@ const ReactRouterLinkRenderer = ({ href, children }) => (
 ### References
 - https://govuk-elements.herokuapp.com/typography/#typography-body-copy
 
-### TODO
-- Add test for supporting text
-- Review code snippet styling
-- Remove magic numbers from inline code styling blocks
-
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------

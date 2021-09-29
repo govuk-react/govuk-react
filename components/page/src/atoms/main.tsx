@@ -2,9 +2,6 @@
 import styled from 'styled-components';
 import { spacing } from '@govuk-react/lib';
 
-// TODO: add support for govuk-main-wrapper--l
-// which uses govuk-responsive-padding(8, "top");
-
 const Main = styled('main')(
   spacing.withWhiteSpace({
     padding: {

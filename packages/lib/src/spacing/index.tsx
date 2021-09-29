@@ -48,9 +48,6 @@ export function responsive({
     throw Error('No property passed to responsiveSpacing');
   }
 
-  // TODO consider checking adjustment is a number
-  // TODO consider supporting non-number (string) adjustments, such as px or rem values
-
   if (Array.isArray(direction)) {
     return Object.assign(
       {},
@@ -165,31 +162,6 @@ export function withWhiteSpace(
     return styles;
   };
 }
-
-// TODO: this could be typed better, using the old proptypes as a guide:
-
-// const Directions = PropTypes.oneOf(['all', 'top', 'right', 'bottom', 'left']);
-
-// const SpacingShape = PropTypes.shape({
-//   size: PropTypes.number.isRequired,
-//   direction: PropTypes.oneOfType([Directions, PropTypes.arrayOf(Directions)]),
-//   adjustment: PropTypes.number,
-// });
-
-// `mb` (Margin Bottom) prop name comes from the naming convention used by https://github.com/jxnblk/grid-styled
-// withWhiteSpace.propTypes = {
-//   mb: PropTypes.oneOf(SPACING_MAP_INDEX),
-//   margin: PropTypes.oneOfType([
-//     PropTypes.number,
-//     SpacingShape,
-//     PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, SpacingShape])),
-//   ]),
-//   padding: PropTypes.oneOfType([
-//     PropTypes.number,
-//     SpacingShape,
-//     PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, SpacingShape])),
-//   ]),
-// };
 
 export function withWidth(config: { width?: string; mediaQuery?: string; noDefault?: boolean } = {}): ({
   setWidth,

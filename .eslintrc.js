@@ -81,7 +81,6 @@ module.exports = {
       settings: {
         'import/core-modules': [
           'govuk-react',
-          '@govuk-react/storybook-components',
           ...Object.keys(devDependencies),
           ...Object.keys(gukd).filter((dep) => dep.startsWith('@govuk-react/')),
         ],

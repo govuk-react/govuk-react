@@ -32,9 +32,6 @@ import { spacing, typography } from '@govuk-react/lib';
  * ### References:
  *
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
- *
- * ### TODO:
- * - Remove `errorColor` and provide examples on how to extend the component
  */
 export const Input = styled('input')<InputProps>(
   typography.font({ size: 19 }),
@@ -46,7 +43,6 @@ export const Input = styled('input')<InputProps>(
     marginTop: 0,
 
     padding: SPACING_POINTS[1],
-    // TODO replace BLACK here with INPUT_BORDER_COLOUR when supported in govuk-colours
     border: `${BORDER_WIDTH_FORM_ELEMENT} solid ${BLACK}`,
     borderRadius: 0,
 

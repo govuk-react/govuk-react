@@ -53,7 +53,6 @@ const Input = styled('input')({
 });
 
 interface TopNavProps {
-  // TODO: prop names should mirror nunjucks macro options at https://design-system.service.gov.uk/components/header/
   /** Top nav background color */
   bgColor?: string;
   /** Top nav text color */
@@ -136,14 +135,6 @@ interface TopNavProps {
  *
  * - http://alphagov.github.io/govuk_template/example-proposition-menu.html
  * - https://design-system.service.gov.uk/components/header/
- *
- * ### TODO:
- * - TODO: this component is a work in progress and needs to more closely match existing examples
- * - TODO: is TopNav the right name? What's it called in other GDS styles/patterns?
- * - TODO: (The name Header is ambiguous)
- * - TODO: #205 Use context api and/or render props for `active` navigation items
- * - TODO: Vertical alignment here needs some work, perhaps should be its own component
- * - TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
  */
 export class TopNav extends Component<TopNavProps, { navigationOpen: boolean }> {
   static IconTitle = IconTitle;
@@ -204,7 +195,6 @@ export class TopNav extends Component<TopNavProps, { navigationOpen: boolean }> 
                     onChange={this.toggleNavigationOpen}
                   />
                   <UnorderedList id="govuk-react-menu" serviceTitle={!!serviceTitle} open={navigationOpen}>
-                    {/* TODO: #205 use context api and/or render props here for `active` */}
                     {Array.isArray(children) ? (
                       React.Children.map(children, (child) => (child ? <ListItem>{child}</ListItem> : null))
                     ) : (

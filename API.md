@@ -40,9 +40,9 @@ Prop | Required | Default | Type | Description
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "inline" | "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -51,36 +51,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "execute" | "move" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -389,21 +389,15 @@ import { ButtonArrow } from 'govuk-react'
 - https://design-system.service.gov.uk/components/button/
 - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/button/_button.scss
 
-### TODO:
-- Remove cascade styling for nested elements, specifically `svg`
-- Consider ensuring text colour automatically switches between black/white based on WCAG guidance
-  - see https://www.w3.org/TR/WCAG20-TECHS/G18.html
-  - can use Polished's `readableColor` call, but translate their black to govuk's black
-
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "inline" | "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -412,36 +406,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "execute" | "move" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -719,9 +713,9 @@ Prop | Required | Default | Type | Description
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "inline" | "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -730,36 +724,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "execute" | "move" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -1276,9 +1270,6 @@ const onHandleErrorClick = (targetName) => {
 - https://govuk-elements.herokuapp.com/errors/#summarise-errors
 - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/error-summary
 
-### TODO:
-- Swap out browser dependancy for context API to help with React Native support
-
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
@@ -1321,9 +1312,9 @@ Prop | Required | Default | Type | Description
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "inline" | "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -1332,36 +1323,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "execute" | "move" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -1827,9 +1818,9 @@ Prop | Required | Default | Type | Description
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "inline" | "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -1838,36 +1829,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "execute" | "move" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -2195,9 +2186,9 @@ Prop | Required | Default | Type | Description
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "both" | "inline" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -2206,36 +2197,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "move" | "execute" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "all" | "additions" | "additions removals" | "additions text" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -2505,9 +2496,9 @@ Prop | Required | Default | Type | Description
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "inline" | "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -2516,36 +2507,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "move" | "execute" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "all" | "additions" | "additions removals" | "additions text" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -2802,9 +2793,9 @@ Prop | Required | Default | Type | Description
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "inline" | "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -2813,36 +2804,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "execute" | "move" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -3160,9 +3151,6 @@ import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
 
 - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
 
-### TODO:
-- Remove `errorColor` and provide examples on how to extend the component
-
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
@@ -3171,9 +3159,9 @@ Prop | Required | Default | Type | Description
  `accessKey` |  | `````` | string | 
  `alt` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "inline" | "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -3182,36 +3170,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "step" | "date" | "true" | "false" | "page" | "location" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "execute" | "move" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -3224,7 +3212,7 @@ Prop | Required | Default | Type | Description
  `autoCorrect` |  | `````` | string | 
  `autoFocus` |  | `````` | boolean | 
  `autoSave` |  | `````` | string | 
- `capture` |  | `````` | boolean | "user" | "environment" | 
+ `capture` |  | `````` | string | boolean | 
  `checked` |  | `````` | boolean | 
  `className` |  | `````` | string | 
  `color` |  | `````` | string | 
@@ -3238,7 +3226,6 @@ Prop | Required | Default | Type | Description
  `dir` |  | `````` | string | 
  `disabled` |  | `````` | boolean | 
  `draggable` |  | `````` | Booleanish | 
- `enterKeyHint` |  | `````` | "search" | "enter" | "done" | "go" | "next" | "previous" | "send" | 
  `error` |  | ```undefined``` | boolean | 
  `errorColor` |  | ```undefined``` | string | 
  `form` |  | `````` | string | 
@@ -3494,9 +3481,9 @@ Prop | Required | Default | Type | Description
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "both" | "inline" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -3505,36 +3492,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "execute" | "move" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -3794,9 +3781,9 @@ Prop | Required | Default | Type | Description
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "inline" | "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -3805,36 +3792,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "execute" | "move" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -4092,9 +4079,9 @@ Prop | Required | Default | Type | Description
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "inline" | "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -4103,36 +4090,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "move" | "execute" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "all" | "additions" | "additions removals" | "additions text" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -4386,9 +4373,9 @@ Prop | Required | Default | Type | Description
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "inline" | "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -4397,36 +4384,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "execute" | "move" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -4689,9 +4676,9 @@ Prop | Required | Default | Type | Description
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "inline" | "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -4700,36 +4687,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "execute" | "move" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -5000,9 +4987,9 @@ Prop | Required | Default | Type | Description
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "inline" | "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -5011,36 +4998,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "execute" | "move" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -5301,10 +5288,6 @@ import { ListNavigation, Link } from 'govuk-react';
 
 - https://govuk-static.herokuapp.com/component-guide/government_navigation
 
-### TODO:
-- Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
-- Fix active state overlaping siblings
-
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
@@ -5393,9 +5376,6 @@ import { Main, GridRow, GridCol } from 'govuk-react'
 </Main>
 ```
 
-### TODO
-- Implement the 1020px min-width MQ to constants
-
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
@@ -5482,18 +5462,15 @@ import { OrderedList, ListItem } from 'govuk-react'
 - https://design-system.service.gov.uk/styles/typography/#lists
 - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_lists.scss
 
-### TODO
-- Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
-
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "inline" | "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -5502,36 +5479,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "execute" | "move" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -5930,11 +5907,6 @@ const ReactRouterLinkRenderer = ({ href, children }) => (
 ### References
 - https://govuk-elements.herokuapp.com/typography/#typography-body-copy
 
-### TODO
-- Add test for supporting text
-- Review code snippet styling
-- Remove magic numbers from inline code styling blocks
-
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
@@ -6115,18 +6087,15 @@ import { H3, UnorderedList, ListItem, Link } from 'govuk-react';
 
 - https://govuk-static.herokuapp.com/component-guide/related_items
 
-### TODO:
-- Replace CSS selectors with imported components
-
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "both" | "inline" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -6135,36 +6104,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "move" | "execute" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "all" | "additions" | "additions removals" | "additions text" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -6449,9 +6418,9 @@ Prop | Required | Default | Type | Description
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "both" | "inline" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -6460,36 +6429,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "move" | "execute" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "all" | "additions" | "additions removals" | "additions text" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -6832,9 +6801,9 @@ Prop | Required | Default | Type | Description
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "inline" | "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -6843,36 +6812,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "execute" | "move" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -7379,9 +7348,9 @@ Prop | Required | Default | Type | Description
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "inline" | "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -7390,36 +7359,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "execute" | "move" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.
@@ -7769,14 +7738,6 @@ const ServiceTitleLink = (
 - http://alphagov.github.io/govuk_template/example-proposition-menu.html
 - https://design-system.service.gov.uk/components/header/
 
-### TODO:
-- TODO: this component is a work in progress and needs to more closely match existing examples
-- TODO: is TopNav the right name? What's it called in other GDS styles/patterns?
-- TODO: (The name Header is ambiguous)
-- TODO: #205 Use context api and/or render props for `active` navigation items
-- TODO: Vertical alignment here needs some work, perhaps should be its own component
-- TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
-
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
@@ -7870,9 +7831,9 @@ Prop | Required | Default | Type | Description
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
- `aria-atomic` |  | `````` | Booleanish | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
+ `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "inline" | "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
- `aria-busy` |  | `````` | Booleanish | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+ `aria-busy` |  | `````` | boolean | "true" | "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  | `````` | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
  `aria-colindex` |  | `````` | number | Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.<br/>@see aria-colcount<br/>@see aria-colspan.
@@ -7881,36 +7842,36 @@ Prop | Required | Default | Type | Description
  `aria-current` |  | `````` | boolean | "time" | "true" | "false" | "page" | "step" | "location" | "date" | Indicates the element that represents the current item within a container or set of related elements.
  `aria-describedby` |  | `````` | string | Identifies the element (or elements) that describes the object.<br/>@see aria-labelledby
  `aria-details` |  | `````` | string | Identifies the element that provides a detailed, extended description for the object.<br/>@see aria-describedby.
- `aria-disabled` |  | `````` | Booleanish | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
+ `aria-disabled` |  | `````` | boolean | "true" | "false" | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.<br/>@see aria-hidden<br/>@see aria-readonly.
  `aria-dropeffect` |  | `````` | "link" | "none" | "copy" | "execute" | "move" | "popup" | Indicates what functions can be performed when a dragged object is released on the drop target.<br/>@deprecated in ARIA 1.1
  `aria-errormessage` |  | `````` | string | Identifies the element that provides an error message for the object.<br/>@see aria-invalid<br/>@see aria-describedby.
- `aria-expanded` |  | `````` | Booleanish | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
+ `aria-expanded` |  | `````` | boolean | "true" | "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  | `````` | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
- `aria-grabbed` |  | `````` | Booleanish | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
+ `aria-grabbed` |  | `````` | boolean | "true" | "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
  `aria-haspopup` |  | `````` | boolean | "dialog" | "menu" | "true" | "false" | "grid" | "listbox" | "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
- `aria-hidden` |  | `````` | Booleanish | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
+ `aria-hidden` |  | `````` | boolean | "true" | "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  | `````` | boolean | "true" | "false" | "grammar" | "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  | `````` | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
  `aria-label` |  | `````` | string | Defines a string value that labels the current element.<br/>@see aria-labelledby.
  `aria-labelledby` |  | `````` | string | Identifies the element (or elements) that labels the current element.<br/>@see aria-describedby.
  `aria-level` |  | `````` | number | Defines the hierarchical level of an element within a structure.
  `aria-live` |  | `````` | "off" | "assertive" | "polite" | Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
- `aria-modal` |  | `````` | Booleanish | Indicates whether an element is modal when displayed.
- `aria-multiline` |  | `````` | Booleanish | Indicates whether a text box accepts multiple lines of input or only a single line.
- `aria-multiselectable` |  | `````` | Booleanish | Indicates that the user may select more than one item from the current selectable descendants.
+ `aria-modal` |  | `````` | boolean | "true" | "false" | Indicates whether an element is modal when displayed.
+ `aria-multiline` |  | `````` | boolean | "true" | "false" | Indicates whether a text box accepts multiple lines of input or only a single line.
+ `aria-multiselectable` |  | `````` | boolean | "true" | "false" | Indicates that the user may select more than one item from the current selectable descendants.
  `aria-orientation` |  | `````` | "horizontal" | "vertical" | Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
  `aria-owns` |  | `````` | string | Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship<br/>between DOM elements where the DOM hierarchy cannot be used to represent the relationship.<br/>@see aria-controls.
  `aria-placeholder` |  | `````` | string | Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.<br/>A hint could be a sample value or a brief description of the expected format.
  `aria-posinset` |  | `````` | number | Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-setsize.
  `aria-pressed` |  | `````` | boolean | "true" | "false" | "mixed" | Indicates the current "pressed" state of toggle buttons.<br/>@see aria-checked<br/>@see aria-selected.
- `aria-readonly` |  | `````` | Booleanish | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
+ `aria-readonly` |  | `````` | boolean | "true" | "false" | Indicates that the element is not editable, but is otherwise operable.<br/>@see aria-disabled.
  `aria-relevant` |  | `````` | "text" | "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text additions" | "text removals" | Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.<br/>@see aria-atomic.
- `aria-required` |  | `````` | Booleanish | Indicates that user input is required on the element before a form may be submitted.
+ `aria-required` |  | `````` | boolean | "true" | "false" | Indicates that user input is required on the element before a form may be submitted.
  `aria-roledescription` |  | `````` | string | Defines a human-readable, author-localized description for the role of an element.
  `aria-rowcount` |  | `````` | number | Defines the total number of rows in a table, grid, or treegrid.<br/>@see aria-rowindex.
  `aria-rowindex` |  | `````` | number | Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.<br/>@see aria-rowcount<br/>@see aria-rowspan.
  `aria-rowspan` |  | `````` | number | Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.<br/>@see aria-rowindex<br/>@see aria-colspan.
- `aria-selected` |  | `````` | Booleanish | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
+ `aria-selected` |  | `````` | boolean | "true" | "false" | Indicates the current "selected" state of various widgets.<br/>@see aria-checked<br/>@see aria-pressed.
  `aria-setsize` |  | `````` | number | Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.<br/>@see aria-posinset.
  `aria-sort` |  | `````` | "none" | "ascending" | "descending" | "other" | Indicates if items in a table or grid are sorted in ascending or descending order.
  `aria-valuemax` |  | `````` | number | Defines the maximum allowed value for a range widget.

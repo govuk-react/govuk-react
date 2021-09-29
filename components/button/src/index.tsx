@@ -231,11 +231,6 @@ interface ButtonOwnProps extends WithWhiteSpaceProps {
  * - https://design-system.service.gov.uk/components/button/
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/button/_button.scss
  *
- * ### TODO:
- * - Remove cascade styling for nested elements, specifically `svg`
- * - Consider ensuring text colour automatically switches between black/white based on WCAG guidance
- *   - see https://www.w3.org/TR/WCAG20-TECHS/G18.html
- *   - can use Polished's `readableColor` call, but translate their black to govuk's black
  */
 export const Button: ButtonType = React.forwardRef(
   ({ start, children, icon, ...props }: ButtonOwnProps, ref: ButtonRefType) => (

@@ -70,7 +70,6 @@ class Input extends React.Component<InputProps> {
     const { labels, names, defaultValues, error } = this.props;
     return (
       <StyledList>
-        {/* TODO: text should be configurable  */}
         {this.renderInput(labels.day, names.day, 'day', defaultValues.day, error)}
         {this.renderInput(labels.month, names.month, 'month', defaultValues.month, error)}
         {this.renderInput(labels.year, names.year, 'year', defaultValues.year, error)}

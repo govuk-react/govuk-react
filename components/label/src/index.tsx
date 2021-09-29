@@ -6,9 +6,9 @@ import { ERROR_COLOUR } from 'govuk-colours';
 import { SPACING } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
 
-// TODO consider removing this, as it's not as per govuk-frontend
-// NB our approach to labels/fields differs at present, which is why we have this
-// we have no `form-group` - this, to an extent, replaces it...
+// Our approach to labels/fields differs to govuk-frontend.
+// We have no `form-group` - this, to an extent, replaces it.
+// We wrap form inputs with a label to associate them, rather than rely on an ID.
 
 /**
  *

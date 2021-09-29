@@ -1,7 +1,5 @@
 /* eslint-disable no-await-in-loop, no-console */
 
-// TODO: this util should probably be its own node module
-
 import fs from 'fs';
 import path from 'path';
 import glob from 'glob-promise';
