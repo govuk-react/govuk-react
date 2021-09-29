@@ -124,9 +124,6 @@ export interface ErrorSummaryProps {
  *
  * - https://govuk-elements.herokuapp.com/errors/#summarise-errors
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/error-summary
- *
- * ### TODO:
- * - Swap out browser dependancy for context API to help with React Native support
  */
 export const ErrorSummary: React.FC<ErrorSummaryProps> = ({
   onHandleErrorClick = undefined,
