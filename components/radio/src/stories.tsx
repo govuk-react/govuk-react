@@ -128,7 +128,6 @@ export const RadioWithHintText: React.FC = () => (
   </div>
 );
 
-
 const FinalFormWrapper: React.FC = ({ children }: { children: React.ReactNode }) => (
   <Form
     onSubmit={action('submit')}
@@ -153,8 +152,6 @@ const FinalFormWrapper: React.FC = ({ children }: { children: React.ReactNode })
     )}
   />
 );
-
-
 
 export const UsageWithFinalReduxFormMultiCheckboxValidation: React.FC = () => (
   <FinalFormWrapper>
