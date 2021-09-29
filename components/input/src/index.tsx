@@ -3,7 +3,7 @@ import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 import React from 'react';
 import styled from 'styled-components';
 
-import { BLACK, ERROR_COLOUR } from 'govuk-colours';
+import { BLACK, ERROR_COLOUR, INPUT_BORDER_COLOUR } from 'govuk-colours';
 import {
   BORDER_WIDTH_FORM_ELEMENT,
   BORDER_WIDTH_FORM_ELEMENT_ERROR,
@@ -43,7 +43,6 @@ export const Input = styled('input')<InputProps>(
     marginTop: 0,
 
     padding: SPACING_POINTS[1],
-    // TODO replace BLACK here with INPUT_BORDER_COLOUR when supported in govuk-colours
     border: `${BORDER_WIDTH_FORM_ELEMENT} solid ${BLACK}`,
     borderRadius: 0,
 
