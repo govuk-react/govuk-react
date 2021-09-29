@@ -25,7 +25,7 @@ const writeFile = (filename, contents) => {
 // write packageJson file
 const packageJson = () => {
   const filename = 'package.json';
-  // TODO: this should pull in devDependencies version numbers from package.json
+  // this should pull in devDependencies version numbers from package.json
   // in the root or from another component so it doesn't need to be maintained.
   // also I'm not sure we need the storybook addons for all components,
   // can be added manually per component perhaps.
