@@ -6,7 +6,6 @@ import { Form, Field } from 'react-final-form';
 import { action } from '@storybook/addon-actions';
 
 import Button from '@govuk-react/button';
-import { withKnobs } from '@storybook/addon-knobs';
 
 import MultiChoice from '@govuk-react/multi-choice';
 import { Radio } from '.';
@@ -63,7 +62,6 @@ RadioGroup.defaultProps = {
 export default {
   title: 'Form/Radio',
   component: Radio,
-  decorators: [withKnobs],
 };
 
 export const Default: React.FC = () => <Radio name="group1">Radio button text example</Radio>;
