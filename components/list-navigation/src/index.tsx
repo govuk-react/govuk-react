@@ -45,7 +45,6 @@ export interface ListNavigationProps {
  * - https://govuk-static.herokuapp.com/component-guide/government_navigation
  *
  * ### TODO:
- * - Consider using the context API https://github.com/reactjs/rfcs/blob/master/text/0002-new-version-of-context.md
  * - Fix active state overlaping siblings
  */
 export const ListNavigation: React.FC<ListNavigationProps> = ({
