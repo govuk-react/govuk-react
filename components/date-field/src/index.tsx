@@ -92,7 +92,6 @@ export const DateField: DateFieldType = ({
     {errorText && <ErrorText>{errorText}</ErrorText>}
     <Input
       names={inputNames}
-      // TODO: defaultValues should be a prop on input
       defaultValues={defaultValues}
       // TODO: allow each individual input (day, month, year) to have a separate bool for error
       error={!!errorText}
