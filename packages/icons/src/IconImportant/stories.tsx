@@ -1,12 +1,11 @@
 import React from 'react';
 
-import { withKnobs, color, text } from '@storybook/addon-knobs';
+import { color, text } from '@storybook/addon-knobs';
 
 import IconImportantComponent from '.';
 
 export default {
   title: 'Utility/Icons/IconImportant',
-  decorators: [withKnobs],
 };
 
 export const IconImportant: React.FC = () => {

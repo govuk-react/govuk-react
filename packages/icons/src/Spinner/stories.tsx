@@ -1,12 +1,11 @@
 import React from 'react';
 
-import { withKnobs, color, text } from '@storybook/addon-knobs';
+import { color, text } from '@storybook/addon-knobs';
 
 import SpinnerComponent from '.';
 
 export default {
   title: 'Utility/Icons/Spinner',
-  decorators: [withKnobs],
 };
 
 export const Spinner: React.FC = () => {

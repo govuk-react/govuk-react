@@ -1,12 +1,11 @@
 import React from 'react';
 
-import { withKnobs, color, text } from '@storybook/addon-knobs';
+import { color, text } from '@storybook/addon-knobs';
 
 import ButtonArrowComponent from '.';
 
 export default {
   title: 'Utility/Icons/ButtonArrow',
-  decorators: [withKnobs],
 };
 
 export const ButtonArrow: React.FC = () => {

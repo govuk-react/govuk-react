@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { boolean, withKnobs } from '@storybook/addon-knobs';
+import { boolean } from '@storybook/addon-knobs';
 import Checkbox from '@govuk-react/checkbox';
 
 import { FormGroup } from '.';
@@ -8,7 +8,6 @@ import { FormGroup } from '.';
 export default {
   title: 'Form/Form group',
   component: FormGroup,
-  decorators: [withKnobs],
 };
 
 export const Default: React.FC = () => (

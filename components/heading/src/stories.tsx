@@ -1,14 +1,13 @@
 import React from 'react';
 
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 
 import Heading, { H1, H2, H3, H4, H5, H6 } from '.';
 
 export default {
   title: 'Typography/Heading',
   component: Heading,
-  decorators: [withKnobs],
 };
 
 export const Default: React.FC = () => (

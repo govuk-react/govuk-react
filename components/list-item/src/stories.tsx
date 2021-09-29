@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 import Link from '@govuk-react/link';
 
 import { ListItem } from '.';
@@ -8,7 +8,6 @@ import { ListItem } from '.';
 export default {
   title: 'Typography/List item',
   component: ListItem,
-  decorators: [withKnobs],
 };
 
 export const Default: React.FC = () => <ListItem>{text('Children', 'List item example')}</ListItem>;

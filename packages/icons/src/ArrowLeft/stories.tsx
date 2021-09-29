@@ -1,12 +1,11 @@
 import React from 'react';
 
-import { withKnobs, color, text } from '@storybook/addon-knobs';
+import { color, text } from '@storybook/addon-knobs';
 
 import ArrowLeftComponent from '.';
 
 export default {
   title: 'Utility/Icons/ArrowLeft',
-  decorators: [withKnobs],
 };
 
 export const ArrowLeft: React.FC = () => {

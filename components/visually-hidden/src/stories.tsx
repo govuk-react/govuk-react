@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { boolean, withKnobs } from '@storybook/addon-knobs';
+import { boolean } from '@storybook/addon-knobs';
 import Paragraph from '@govuk-react/paragraph';
 import Button from '@govuk-react/button';
 
@@ -8,7 +8,6 @@ import { VisuallyHidden } from '.';
 
 export default {
   title: 'Utility/Visually hidden',
-  decorators: [withKnobs],
   component: VisuallyHidden,
 };
 

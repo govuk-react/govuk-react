@@ -1,12 +1,11 @@
 import React from 'react';
-import { withKnobs, boolean, text } from '@storybook/addon-knobs';
+import { boolean, text } from '@storybook/addon-knobs';
 
 import { Fieldset } from '.';
 
 export default {
   title: 'Form/Fieldset',
   component: Fieldset,
-  decorators: [withKnobs],
 };
 
 export const Default: React.FC = () => (

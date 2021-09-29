@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { withKnobs, number } from '@storybook/addon-knobs';
+import { number } from '@storybook/addon-knobs';
 
 import { Tabs } from '.';
 import {
@@ -17,7 +17,6 @@ import {
 export default {
   title: 'Navigation/Tabs',
   component: Tabs,
-  decorators: [withKnobs],
 };
 
 export const Default: React.FC = () => <TableTabs />;

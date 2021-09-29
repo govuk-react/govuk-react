@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { withKnobs, text, number, boolean } from '@storybook/addon-knobs';
+import { text, number, boolean } from '@storybook/addon-knobs';
 import { H1, H2 } from '@govuk-react/heading';
 import InputField from '@govuk-react/input-field';
 import Button from '@govuk-react/button';
@@ -13,7 +13,6 @@ import { LoadingBox } from '.';
 
 export default {
   title: 'Utility/Loading box',
-  decorators: [withKnobs],
 };
 
 const spacer = <p style={{ marginTop: 0 }}>&nbsp;</p>;
