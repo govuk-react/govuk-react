@@ -98,10 +98,6 @@ const StyledParagraph = styled(ReactMarkdown)<ParagraphProps>(
  * ### References
  * - https://govuk-elements.herokuapp.com/typography/#typography-body-copy
  *
- * ### TODO
- * - Add test for supporting text
- * - Review code snippet styling
- * - Remove magic numbers from inline code styling blocks
  */
 export const Paragraph: React.FC<ParagraphProps & ReactMarkdownProps> = ({
   children,
