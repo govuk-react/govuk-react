@@ -96,7 +96,7 @@ Page.defaultProps = {
   children: undefined,
   id: 'content',
   header: <TopNav />,
-  footer: undefined, // <Footer />, // TODO: add Footer component once built
+  footer: undefined,
   main: Page.Main,
   beforeChildren: undefined,
   container: Page.WidthContainer,
