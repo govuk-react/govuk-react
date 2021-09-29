@@ -48,9 +48,6 @@ export function responsive({
     throw Error('No property passed to responsiveSpacing');
   }
 
-  // TODO consider checking adjustment is a number
-  // TODO consider supporting non-number (string) adjustments, such as px or rem values
-
   if (Array.isArray(direction)) {
     return Object.assign(
       {},
