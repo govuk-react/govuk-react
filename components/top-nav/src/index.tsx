@@ -138,8 +138,6 @@ interface TopNavProps {
  *
  * ### TODO:
  * - TODO: this component is a work in progress and needs to more closely match existing examples
- * - TODO: is TopNav the right name? What's it called in other GDS styles/patterns?
- * - TODO: (The name Header is ambiguous)
  * - TODO: Vertical alignment here needs some work, perhaps should be its own component
  * - TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
  */
