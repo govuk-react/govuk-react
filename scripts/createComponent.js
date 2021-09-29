@@ -1,6 +1,3 @@
-// TODO: consider replacing this with a generator such as:
-// https://github.com/CVarisco/create-component-app
-
 const fs = require('fs');
 const path = require('path');
 const mkdirp = require('mkdirp-promise');
