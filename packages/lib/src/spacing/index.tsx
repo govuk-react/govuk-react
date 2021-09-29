@@ -166,31 +166,6 @@ export function withWhiteSpace(
   };
 }
 
-// TODO: this could be typed better, using the old proptypes as a guide:
-
-// const Directions = PropTypes.oneOf(['all', 'top', 'right', 'bottom', 'left']);
-
-// const SpacingShape = PropTypes.shape({
-//   size: PropTypes.number.isRequired,
-//   direction: PropTypes.oneOfType([Directions, PropTypes.arrayOf(Directions)]),
-//   adjustment: PropTypes.number,
-// });
-
-// `mb` (Margin Bottom) prop name comes from the naming convention used by https://github.com/jxnblk/grid-styled
-// withWhiteSpace.propTypes = {
-//   mb: PropTypes.oneOf(SPACING_MAP_INDEX),
-//   margin: PropTypes.oneOfType([
-//     PropTypes.number,
-//     SpacingShape,
-//     PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, SpacingShape])),
-//   ]),
-//   padding: PropTypes.oneOfType([
-//     PropTypes.number,
-//     SpacingShape,
-//     PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, SpacingShape])),
-//   ]),
-// };
-
 export function withWidth(config: { width?: string; mediaQuery?: string; noDefault?: boolean } = {}): ({
   setWidth,
 }?: WithWidthProps) => {
