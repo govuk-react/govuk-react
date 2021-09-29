@@ -59,7 +59,6 @@ export const FONT_STACK = `${NTA_LIGHT}`;
 export const FONT_STACK_TABULAR = `${NTA_LIGHT_TABULAR}`;
 export const FONT_STACK_PRINT = 'sans-serif';
 
-// TODO FONT_SIZE and LINE_HEIGHT can be replaced with `govukFont` lib call
 export const FONT_SIZE = {
   SIZE_14: '14px',
   SIZE_16: '16px',
