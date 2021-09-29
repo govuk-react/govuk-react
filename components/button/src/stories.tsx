@@ -1,5 +1,3 @@
-import { withKnobs } from '@storybook/addon-knobs';
-
 import { Button } from '.';
 
 import {
@@ -16,7 +14,6 @@ import {
 export default {
   title: 'Form/Button',
   component: Button,
-  decorators: [withKnobs],
 };
 
 export const Default = ButtonWithKnobs;

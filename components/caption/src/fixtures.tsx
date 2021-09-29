@@ -1,11 +1,15 @@
+import type { Story } from '@storybook/react';
+
 import React from 'react';
-import { text } from '@storybook/addon-knobs';
 
 import { Caption } from '.';
 
-const CaptionWithKnobs: React.FC = () => (
-  <Caption size={text('size', 'XL')}>{text('children', 'Heading text')}</Caption>
-);
+const CaptionWithKnobs: Story = (args) => <Caption {...args} />;
+
+CaptionWithKnobs.args = {
+  size: 'XL',
+  children: 'Heading text',
+};
 
 export default Caption;
 

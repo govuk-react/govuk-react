@@ -1,42 +1,47 @@
+import type { Story } from '@storybook/react';
+
 import React from 'react';
-import { boolean, text } from '@storybook/addon-knobs';
 import { ButtonArrow } from '@govuk-react/icons';
 import { BLUE, TEXT_COLOUR, YELLOW, GREY_3, ORANGE } from 'govuk-colours';
 import { MemoryRouter, Route, Link } from 'react-router-dom';
 
 import { Button } from '.';
 
-const ButtonWithKnobs: React.FC = () => (
-  <Button mb="0" disabled={boolean('Disabled', false)} start={boolean('Start', false)}>
-    {text('Children', 'Button')}
-  </Button>
+const ButtonWithKnobs: Story<{ children: string; disabled: boolean; start: boolean }> = (args) => (
+  <Button mb="0" {...args} />
 );
 
-const ButtonStart: React.FC = () => <Button start>Save and continue</Button>;
+ButtonWithKnobs.args = {
+  disabled: false,
+  start: false,
+  children: 'Button',
+};
 
-const ButtonStartIcon: React.FC = () => (
+const ButtonStart: Story = () => <Button start>Save and continue</Button>;
+
+const ButtonStartIcon: Story = () => (
   <Button icon={<ButtonArrow />} start>
     Start now
   </Button>
 );
 
-const ButtonDisabled: React.FC = () => <Button disabled>Disabled primary button</Button>;
+const ButtonDisabled: Story = () => <Button disabled>Disabled primary button</Button>;
 
-const ButtonDisabledStartIcon: React.FC = () => (
+const ButtonDisabledStartIcon: Story = () => (
   <Button disabled start icon={<ButtonArrow />}>
     Start now
   </Button>
 );
 
-const ButtonBlue: React.FC = () => <Button buttonColour={BLUE}>Blue button</Button>;
+const ButtonBlue: Story = () => <Button buttonColour={BLUE}>Blue button</Button>;
 
-const ButtonWacky: React.FC = () => (
+const ButtonWacky: Story = () => (
   <Button buttonColour={GREY_3} buttonHoverColour={YELLOW} buttonShadowColour={ORANGE} buttonTextColour={TEXT_COLOUR}>
     Wacky colours
   </Button>
 );
 
-const ButtonAsLink: React.FC = () => (
+const ButtonAsLink: Story = () => (
   <MemoryRouter>
     <div>
       <Button as={Link} to="/">
