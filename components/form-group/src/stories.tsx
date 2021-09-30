@@ -1,6 +1,7 @@
+import type { Story } from '@storybook/react';
+
 import React from 'react';
 
-import { boolean } from '@storybook/addon-knobs';
 import Checkbox from '@govuk-react/checkbox';
 
 import { FormGroup } from '.';
@@ -10,31 +11,47 @@ export default {
   component: FormGroup,
 };
 
-export const Default: React.FC = () => (
-  <FormGroup error={boolean('error', false)}>
+export const Default: Story = ({ error }: { error: boolean }) => (
+  <FormGroup error={error}>
     <Checkbox name="group-1">Example</Checkbox>
   </FormGroup>
 );
+Default.args = {
+  error: false,
+};
 
-export const NestedFormGroups: React.FC = () => (
-  <FormGroup error={boolean('outer error', false)}>
+export const NestedFormGroups: Story = ({
+  outerError,
+  innerError1,
+  innerError2,
+}: {
+  outerError: boolean;
+  innerError1: boolean;
+  innerError2: boolean;
+}) => (
+  <FormGroup error={outerError}>
     <Checkbox name="group-0">Outer FormGroup</Checkbox>
-    <FormGroup error={boolean('inner error 1', false)}>
+    <FormGroup error={innerError1}>
       <Checkbox name="group-1">First inner FormGroup</Checkbox>
     </FormGroup>
-    <FormGroup error={boolean('inner error 2', false)}>
+    <FormGroup error={innerError2}>
       <Checkbox name="group-2">Second inner FormGroup</Checkbox>
     </FormGroup>
   </FormGroup>
 );
+Default.args = {
+  outerError: false,
+  innerError1: false,
+  innerError2: false,
+};
 
-export const ErrorPropSet: React.FC = () => (
+export const ErrorPropSet: Story = () => (
   <FormGroup error>
     <Checkbox name="group-1">Example</Checkbox>
   </FormGroup>
 );
 
-export const NestedFormGroupsWithInnerGroupsErrorPropsSet: React.FC = () => (
+export const NestedFormGroupsWithInnerGroupsErrorPropsSet: Story = () => (
   <FormGroup>
     <Checkbox name="group-0">Outer FormGroup</Checkbox>
     <FormGroup error>
@@ -46,7 +63,7 @@ export const NestedFormGroupsWithInnerGroupsErrorPropsSet: React.FC = () => (
   </FormGroup>
 );
 
-export const NestedFormGroupsWithAllGroupsErrorPropsSet: React.FC = () => (
+export const NestedFormGroupsWithAllGroupsErrorPropsSet: Story = () => (
   <FormGroup error>
     <Checkbox name="group-0">Outer FormGroup</Checkbox>
     <FormGroup error>

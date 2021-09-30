@@ -1,6 +1,7 @@
+import type { Story } from '@storybook/react';
+
 import React from 'react';
 
-import { text, number, boolean } from '@storybook/addon-knobs';
 import { H1, H2 } from '@govuk-react/heading';
 import InputField from '@govuk-react/input-field';
 import Button from '@govuk-react/button';
@@ -17,16 +18,8 @@ export default {
 
 const spacer = <p style={{ marginTop: 0 }}>&nbsp;</p>;
 
-export const Default: React.FC = () => (
-  <LoadingBox
-    loading={boolean('loading', false)}
-    backgroundColor={text('backgroundColor', '#fff')}
-    timeIn={number('timeIn', 800)}
-    timeOut={number('timeOut', 200)}
-    backgroundColorOpacity={number('backgroundColorOpacity', 0.85)}
-    spinnerColor={text('spinnerColor', '#000')}
-    title="Hey now!"
-  >
+export const Default: Story = (args) => (
+  <LoadingBox {...args}>
     <div style={{ padding: '0 12px' }}>
       <PhaseBanner level="alpha">
         This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
@@ -39,16 +32,18 @@ export const Default: React.FC = () => (
     </div>
   </LoadingBox>
 );
+Default.args = {
+  loading: false,
+  backgroundColor: '#fff',
+  timeIn: 800,
+  timeOut: 200,
+  backgroundColorOpacity: 0.85,
+  spinnerColor: '#000',
+  title: 'Hey now!',
+};
 
-export const PresetToLoading: React.FC = () => (
-  <LoadingBox
-    loading={boolean('loading', true)}
-    backgroundColor={text('backgroundColor', '#fff')}
-    timeIn={number('timeIn', 800)}
-    timeOut={number('timeOut', 200)}
-    backgroundColorOpacity={number('backgroundColorOpacity', 0.85)}
-    spinnerColor={text('spinnerColor', '#000')}
-  >
+export const PresetToLoading: Story = (args) => (
+  <LoadingBox {...args}>
     <div style={{ padding: '0 12px' }}>
       <PhaseBanner level="alpha">
         This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
@@ -61,16 +56,17 @@ export const PresetToLoading: React.FC = () => (
     </div>
   </LoadingBox>
 );
+PresetToLoading.args = {
+  loading: true,
+  backgroundColor: '#fff',
+  timeIn: 800,
+  timeOut: 200,
+  backgroundColorOpacity: 0.85,
+  spinnerColor: '#000',
+};
 
-export const LoadingBoxLong: React.FC = () => (
-  <LoadingBox
-    loading={boolean('loading', false)}
-    backgroundColor={text('backgroundColor', '#fff')}
-    timeIn={number('timeIn', 800)}
-    timeOut={number('timeOut', 200)}
-    backgroundColorOpacity={number('backgroundColorOpacity', 0.85)}
-    spinnerColor={text('spinnerColor', '#000')}
-  >
+export const LoadingBoxLong: Story = (args) => (
+  <LoadingBox {...args}>
     <div style={{ padding: '0 12px' }}>
       <PhaseBanner level="alpha">
         This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
@@ -99,10 +95,18 @@ export const LoadingBoxLong: React.FC = () => (
     </div>
   </LoadingBox>
 );
+LoadingBoxLong.args = {
+  loading: false,
+  backgroundColor: '#fff',
+  timeIn: 800,
+  timeOut: 200,
+  backgroundColorOpacity: 0.85,
+  spinnerColor: '#000',
+};
 
-export const ShortHeight: React.FC = () => <LoadingBox loading>Lorem ipsum dolor sit amet</LoadingBox>;
+export const ShortHeight: Story = () => <LoadingBox loading>Lorem ipsum dolor sit amet</LoadingBox>;
 
-export const WithBoldedTexts: React.FC = () => (
+export const WithBoldedTexts: Story = () => (
   <LoadingBox loading>
     <H1>Lorem ipsum dolor sit amet</H1>
     <H2>Consectetur adipisicing elit. Quia incidunt, earum molestiae omnis labore adipisci.</H2>
