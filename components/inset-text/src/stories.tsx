@@ -13,20 +13,16 @@ export default {
 const testText =
   'It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.';
 
-const InsetTextExample: Story = (args) => <InsetText {...args} />;
-InsetTextExample.args = {
+export const Default: Story = (args) => <InsetText {...args} />;
+Default.args = {
   children: testText,
 };
 
-export const InsetTextWithParagraph: Story = ({ children }: { children: string }) => (
+export const UsingAParagraphForContents: Story = ({ children }: { children: string }) => (
   <InsetText>
     <Paragraph mb={0}>{children}</Paragraph>
   </InsetText>
 );
-InsetTextWithParagraph.args = {
+UsingAParagraphForContents.args = {
   children: testText,
 };
-
-export const Default = InsetTextExample;
-
-export const UsingAParagraphForContents = InsetTextWithParagraph;
