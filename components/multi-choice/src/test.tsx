@@ -2,21 +2,28 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import { MultiChoice } from '.';
-import MultiChoiceWithKnobs, { MultiChoiceWithKnobsHint, MultiChoiceWithKnobsError } from './fixtures';
 
 describe('MultiChoice', () => {
   it('renders with a label', () => {
-    const wrapper = mount(<MultiChoiceWithKnobs />);
+    const wrapper = mount(<MultiChoice label="Example label">Example</MultiChoice>);
     expect(wrapper.find('LabelText').contains('Example label')).toBe(true);
   });
 
   it('renders with a hint', () => {
-    const wrapper = mount(<MultiChoiceWithKnobsHint />);
+    const wrapper = mount(
+      <MultiChoice label="Example label" hint="Example hint">
+        Example
+      </MultiChoice>
+    );
     expect(wrapper.find('HintText').contains('Example hint')).toBe(true);
   });
 
   it('renders with an error', () => {
-    const wrapper = mount(<MultiChoiceWithKnobsError />);
+    const wrapper = mount(
+      <MultiChoice label="Example label" meta={{ touched: true, error: 'Example error' }}>
+        Example
+      </MultiChoice>
+    );
     expect(wrapper.find('ErrorText').contains('Example error')).toBe(true);
   });
 
