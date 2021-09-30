@@ -98,21 +98,19 @@ exports[`Link all options view matches snapshot: link with all options 1`] = `
   }
 }
 
-<LinkWithAllOptionsOn>
-  <Link
+<Link
+  href="#"
+  muted={true}
+  noVisitedState={true}
+  textColour={true}
+>
+  <a
+    className="c0"
     href="#"
-    muted={true}
-    noVisitedState={true}
-    textColour={true}
   >
-    <a
-      className="c0"
-      href="#"
-    >
-      Link example
-    </a>
-  </Link>
-</LinkWithAllOptionsOn>
+    Link example
+  </a>
+</Link>
 `;
 
 exports[`Link basic view matches snapshot: plain link 1`] = `
@@ -164,19 +162,17 @@ exports[`Link basic view matches snapshot: plain link 1`] = `
   }
 }
 
-<LinkExample>
-  <Link
+<Link
+  href="#"
+  muted={false}
+  noVisitedState={false}
+  textColour={false}
+>
+  <a
+    className="c0"
     href="#"
-    muted={false}
-    noVisitedState={false}
-    textColour={false}
   >
-    <a
-      className="c0"
-      href="#"
-    >
-      Link example
-    </a>
-  </Link>
-</LinkExample>
+    Link example
+  </a>
+</Link>
 `;
