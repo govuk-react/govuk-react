@@ -11,7 +11,7 @@ export default {
   component: ErrorSummary,
 };
 
-export const errors = [
+const errors = [
   {
     targetName: 'national-insurance-number',
     text: 'National Insurance number error',
