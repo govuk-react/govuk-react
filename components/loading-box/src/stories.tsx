@@ -25,7 +25,7 @@ export const Default: Story = (args) => (
         This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {spacer}
-      <H2>Toggle loading settings under `knobs`</H2>
+      <H2>Toggle loading settings under `Controls`</H2>
       <InputField>Email address</InputField>
       {spacer}
       <Button start>Continue</Button>
@@ -49,7 +49,7 @@ export const PresetToLoading: Story = (args) => (
         This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {spacer}
-      <H2>Toggle loading settings under `knobs`</H2>
+      <H2>Toggle loading settings under `Controls`</H2>
       <InputField>Email address</InputField>
       {spacer}
       <Button start>Continue</Button>
@@ -72,7 +72,7 @@ export const LoadingBoxLong: Story = (args) => (
         This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {spacer}
-      <H2>Toggle loading settings under `knobs`</H2>
+      <H2>Toggle loading settings under `Controls`</H2>
       <InputField>First name</InputField>
       {spacer}
       <InputField>Last name</InputField>
