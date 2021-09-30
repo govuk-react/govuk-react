@@ -8,7 +8,7 @@ module.exports = {
     '../../../components/*/src/**/?(*.)stories.[jt]s?(x)',
     '../../../packages/icons/src/**/?(*.)stories.[jt]s?(x)',
   ],
-  addons: ['@storybook/addon-actions', '@storybook/addon-links', '@storybook/addon-docs', '@storybook/addon-controls'],
+  addons: ['@storybook/addon-actions', '@storybook/addon-docs', '@storybook/addon-controls'],
   webpackFinal: async (config) => {
     config.resolve.alias = workspaceAliases();
     return config;
