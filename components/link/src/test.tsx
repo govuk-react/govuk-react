@@ -1,14 +1,26 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import Example, { LinkWithAllOptionsOn } from './fixtures';
+import { Link } from '.';
 
 describe('Link', () => {
   it('basic view matches snapshot', () => {
-    expect(mount(<Example />)).toMatchSnapshot('plain link');
+    expect(
+      mount(
+        <Link muted={false} textColour={false} noVisitedState={false} href="#">
+          Link example
+        </Link>
+      )
+    ).toMatchSnapshot('plain link');
   });
 
   it('all options view matches snapshot', () => {
-    expect(mount(<LinkWithAllOptionsOn />)).toMatchSnapshot('link with all options');
+    expect(
+      mount(
+        <Link muted textColour noVisitedState href="#">
+          Link example
+        </Link>
+      )
+    ).toMatchSnapshot('link with all options');
   });
 });
