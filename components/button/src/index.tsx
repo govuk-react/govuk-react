@@ -1,3 +1,10 @@
+/**
+ * ### References:
+ *
+ * - https://design-system.service.gov.uk/components/button/
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/button/_button.scss
+ */
+
 import type { StyledComponentProps } from 'styled-components';
 
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
@@ -225,11 +232,6 @@ interface ButtonOwnProps extends WithWhiteSpaceProps {
  *
  * <Button icon={<ButtonArrow />}>My button text</Button>
  * ```
- *
- * ### References:
- *
- * - https://design-system.service.gov.uk/components/button/
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/button/_button.scss
  *
  */
 export const Button: ButtonType = React.forwardRef(
