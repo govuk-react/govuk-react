@@ -49,7 +49,7 @@
     "@storybook/addon-controls": "6.3.8",
     "@storybook/addon-docs": "6.3.8",
     "@storybook/addon-storyshots": "6.3.8",
-    "@storybook/addons": "6.3.7",
+    "@storybook/addons": "6.3.8",
     "@storybook/react": "6.3.7",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
