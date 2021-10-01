@@ -1,11 +1,11 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import Tag, { TagInactive } from './fixtures';
+import { Tag } from '.';
 
 describe('Tag', () => {
   it('can render an inactive tag', () => {
-    mount(<TagInactive />);
+    mount(<Tag inactive>beta</Tag>);
   });
 
   it('matches wrapper snapshot', () => {

@@ -1,30 +1,25 @@
-import React from 'react';
+import type { Story } from '@storybook/react';
 
-import { withKnobs, color, text } from '@storybook/addon-knobs';
+import React from 'react';
 
 import SVGBaseComponent from '.';
 
 export default {
-  title: 'Utility/Icons',
-  decorators: [withKnobs],
+  title: 'Utility/Icons/SVGBase',
 };
 
-export const SVGBase: React.FC = () => {
-  const fill = color('fill', 'transparent');
-  const stroke = color('stroke', 'orange');
-  const viewBox = text('viewBox', '0 0 500 500');
-  const width = text('width', '256px');
-  const height = text('height', '256px');
+export const SVGBase: Story = (args) => {
   return (
-    <SVGBaseComponent
-      width={width}
-      height={height}
-      viewBox={viewBox}
-      title="Example of SVGBase"
-      fill={fill}
-      stroke={stroke}
-    >
+    <SVGBaseComponent {...args} title="Example of SVGBase">
       <polygon points="250,60 100,400 400,400" />
     </SVGBaseComponent>
   );
+};
+
+SVGBase.args = {
+  width: '256px',
+  height: '256px',
+  fill: 'transparent',
+  stroke: 'orange',
+  viewBox: '0 0 500 500',
 };

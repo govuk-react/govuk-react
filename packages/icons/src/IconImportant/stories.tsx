@@ -1,24 +1,18 @@
-import React from 'react';
+import type { Story } from '@storybook/react';
 
-import { withKnobs, color, text } from '@storybook/addon-knobs';
+import React from 'react';
 
 import IconImportantComponent from '.';
 
 export default {
-  title: 'Utility/Icons',
-  decorators: [withKnobs],
+  title: 'Utility/Icons/IconImportant',
 };
 
-export const IconImportant: React.FC = () => {
-  const fillColour = color('fill', 'black');
-  const width = text('width', '256px');
-  const height = text('height', '256px');
-  return (
-    <IconImportantComponent
-      width={width}
-      height={height}
-      fill={fillColour}
-      title="Example IconImportant implementation"
-    />
-  );
+export const IconImportant: Story = (args) => {
+  return <IconImportantComponent {...args} title="Example IconImportant implementation" />;
+};
+IconImportant.args = {
+  width: '256px',
+  height: '256px',
+  fill: 'black',
 };

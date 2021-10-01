@@ -2,7 +2,21 @@ import React from 'react';
 import { MemoryRouter, Link } from 'react-router-dom';
 import { mount } from 'enzyme';
 
-import Paragraph, { exampleCodeBlock } from './fixtures';
+import { Paragraph } from '.';
+
+const exampleCodeBlock = `\`\`\`
+  const CustomStyledButton = styled(Button)({
+    backgroundColor: WHITE,
+    borderStyle: 'solid',
+    borderWidth: '2px',
+    borderColor: BLUE,
+    color: BLUE,
+    ':hover': {
+      backgroundColor: BLUE,
+      color: WHITE
+    }
+  });
+  \`\`\``;
 
 const ReactRouterLinkRenderer: React.FC<ReactRouterLinkRendererProps> = ({
   href,

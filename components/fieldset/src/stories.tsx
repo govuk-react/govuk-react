@@ -1,23 +1,26 @@
+import type { Story } from '@storybook/react';
+
 import React from 'react';
-import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 
 import { Fieldset } from '.';
 
 export default {
   title: 'Form/Fieldset',
   component: Fieldset,
-  decorators: [withKnobs],
 };
 
-export const Default: React.FC = () => (
+export const Default: Story = (args: { children: string; size: string; isPageHeading: boolean }) => (
   <Fieldset>
-    <Fieldset.Legend size={text('legend size', 'LARGE')} isPageHeading={boolean('legend isPageHeading', false)}>
-      {text('legend contents', 'Example legend')}
-    </Fieldset.Legend>
+    <Fieldset.Legend {...args} />
   </Fieldset>
 );
+Default.args = {
+  children: 'Example legend',
+  size: 'LARGE',
+  isPageHeading: false,
+};
 
-export const LegendAsPageHeading: React.FC = () => (
+export const LegendAsPageHeading: Story = () => (
   <Fieldset>
     <Fieldset.Legend size="XLARGE" isPageHeading>
       Legend as page heading

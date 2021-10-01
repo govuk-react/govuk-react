@@ -1,40 +1,86 @@
+/* eslint-disable react/prop-types */
+import type { Story } from '@storybook/react';
 import React from 'react';
 import { CAPTION_SIZES, HEADING_SIZES, TYPOGRAPHY_SCALE } from '@govuk-react/constants';
-import { select, text, withKnobs } from '@storybook/addon-knobs';
 import Heading from '@govuk-react/heading';
 
-import { CaptionWithKnobs } from './fixtures';
 import { Caption } from '.';
 
 export default {
   title: 'Typography/Caption',
   component: Caption,
-  decorators: [withKnobs],
 };
 
-export const Default: React.FC = () => <CaptionWithKnobs />;
+export const Default: Story = (args) => <Caption {...args} />;
+Default.args = {
+  size: 'XL',
+  children: 'Heading text',
+};
 
 const arrTypography = Object.keys(TYPOGRAPHY_SCALE);
 const captionOptions = [...Object.keys(CAPTION_SIZES), ...arrTypography];
 const headingOptions = [...Object.keys(HEADING_SIZES), ...arrTypography];
 
-export const PlacedWithAHeadingComponent: React.FC = () => (
+export const PlacedWithAHeadingComponent: Story = ({ size, children, headingSize, heading }) => (
   <div>
-    <Caption size={select('size', captionOptions, 'XL')}>{text('children', 'Supporting heading text')}</Caption>
-    <Heading size={select('heading size', headingOptions, 'XL')}>{text('heading', 'Main heading text')}</Heading>
+    <Caption size={size}>{children}</Caption>
+    <Heading size={headingSize}>{heading}</Heading>
   </div>
 );
 
-export const PlacedInsideAHeadingComponent: React.FC = () => (
+PlacedWithAHeadingComponent.args = {
+  size: 'XL',
+  headingSize: 'XL',
+  children: 'Supporting heading text',
+  heading: 'Main heading text',
+};
+
+PlacedWithAHeadingComponent.argTypes = {
+  size: {
+    control: {
+      type: 'select',
+      options: captionOptions,
+    },
+  },
+  headingSize: {
+    control: {
+      type: 'select',
+      options: headingOptions,
+    },
+  },
+};
+
+export const PlacedInsideAHeadingComponent: Story = ({ size, headingSize, children, heading }) => (
   <div>
-    <Heading size={select('heading size', headingOptions, 'XL')}>
-      <Caption size={select('size', captionOptions, 'XL')}>{text('children', 'Supporting heading text')}</Caption>
-      {text('heading', 'Main heading text')}
+    <Heading size={headingSize}>
+      <Caption size={size}>{children}</Caption>
+      {heading}
     </Heading>
   </div>
 );
+PlacedInsideAHeadingComponent.args = {
+  size: 'XL',
+  headingSize: 'XL',
+  children: 'Supporting heading text',
+  heading: 'Main heading text',
+};
 
-export const ShowingAllStandardCaptionSizesWithHeadings: React.FC = () => (
+PlacedInsideAHeadingComponent.argTypes = {
+  size: {
+    control: {
+      type: 'select',
+      options: captionOptions,
+    },
+  },
+  headingSize: {
+    control: {
+      type: 'select',
+      options: headingOptions,
+    },
+  },
+};
+
+export const ShowingAllStandardCaptionSizesWithHeadings: Story = () => (
   <div>
     <Caption size="XL">Supporting heading size XL</Caption>
     <Heading size="XL">Main heading size XL</Heading>

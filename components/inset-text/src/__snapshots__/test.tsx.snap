@@ -114,17 +114,40 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
   }
 }
 
-<InsetTextWithParagraph>
-  <InsetText>
-    <div
-      className="c0"
+<InsetText>
+  <div
+    className="c0"
+  >
+    <Paragraph
+      linkRenderer={[Function]}
+      mb={0}
+      supportingText={false}
     >
-      <Paragraph
+      <src__StyledParagraph
+        allowedTypes={
+          Array [
+            "paragraph",
+            "emphasis",
+            "strong",
+            "link",
+            "inlineCode",
+            "code",
+            "text",
+          ]
+        }
+        escapeHtml={false}
         linkRenderer={[Function]}
         mb={0}
+        renderers={
+          Object {
+            "link": [Function],
+          }
+        }
+        skipHtml={true}
+        source="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
         supportingText={false}
       >
-        <src__StyledParagraph
+        <ReactMarkdown
           allowedTypes={
             Array [
               "paragraph",
@@ -136,6 +159,7 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
               "text",
             ]
           }
+          className="c1"
           escapeHtml={false}
           linkRenderer={[Function]}
           mb={0}
@@ -147,98 +171,16 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
           skipHtml={true}
           source="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
           supportingText={false}
+          transformLinkUri={[Function]}
         >
-          <ReactMarkdown
-            allowedTypes={
-              Array [
-                "paragraph",
-                "emphasis",
-                "strong",
-                "link",
-                "inlineCode",
-                "code",
-                "text",
-              ]
-            }
+          <Root
             className="c1"
-            escapeHtml={false}
-            linkRenderer={[Function]}
-            mb={0}
-            renderers={
+            key="root-1-1-0"
+            node={
               Object {
-                "link": [Function],
-              }
-            }
-            skipHtml={true}
-            source="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
-            supportingText={false}
-            transformLinkUri={[Function]}
-          >
-            <Root
-              className="c1"
-              key="root-1-1-0"
-              node={
-                Object {
-                  "children": Array [
-                    Object {
-                      "children": Array [
-                        Object {
-                          "position": Object {
-                            "end": Object {
-                              "column": 111,
-                              "line": 1,
-                              "offset": 110,
-                            },
-                            "start": Object {
-                              "column": 1,
-                              "line": 1,
-                              "offset": 0,
-                            },
-                          },
-                          "type": "text",
-                          "value": "It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.",
-                        },
-                      ],
-                      "position": Object {
-                        "end": Object {
-                          "column": 111,
-                          "line": 1,
-                          "offset": 110,
-                        },
-                        "start": Object {
-                          "column": 1,
-                          "line": 1,
-                          "offset": 0,
-                        },
-                      },
-                      "type": "paragraph",
-                    },
-                  ],
-                  "position": Object {
-                    "end": Object {
-                      "column": 111,
-                      "line": 1,
-                      "offset": 110,
-                    },
-                    "start": Object {
-                      "column": 1,
-                      "line": 1,
-                      "offset": 0,
-                    },
-                  },
-                  "type": "root",
-                }
-              }
-            >
-              <div
-                className="c1"
-              >
-                <p
-                  key="paragraph-1-1-0"
-                >
-                  <TextRenderer
-                    key="text-1-1-0"
-                    node={
+                "children": Array [
+                  Object {
+                    "children": Array [
                       Object {
                         "position": Object {
                           "end": Object {
@@ -254,22 +196,78 @@ exports[`inset text can render with a paragraph: inset text with paragraph 1`] =
                         },
                         "type": "text",
                         "value": "It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.",
-                      }
+                      },
+                    ],
+                    "position": Object {
+                      "end": Object {
+                        "column": 111,
+                        "line": 1,
+                        "offset": 110,
+                      },
+                      "start": Object {
+                        "column": 1,
+                        "line": 1,
+                        "offset": 0,
+                      },
+                    },
+                    "type": "paragraph",
+                  },
+                ],
+                "position": Object {
+                  "end": Object {
+                    "column": 111,
+                    "line": 1,
+                    "offset": 110,
+                  },
+                  "start": Object {
+                    "column": 1,
+                    "line": 1,
+                    "offset": 0,
+                  },
+                },
+                "type": "root",
+              }
+            }
+          >
+            <div
+              className="c1"
+            >
+              <p
+                key="paragraph-1-1-0"
+              >
+                <TextRenderer
+                  key="text-1-1-0"
+                  node={
+                    Object {
+                      "position": Object {
+                        "end": Object {
+                          "column": 111,
+                          "line": 1,
+                          "offset": 110,
+                        },
+                        "start": Object {
+                          "column": 1,
+                          "line": 1,
+                          "offset": 0,
+                        },
+                      },
+                      "type": "text",
+                      "value": "It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.",
                     }
-                    nodeKey="text-1-1-0"
-                    value="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
-                  >
-                    It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
-                  </TextRenderer>
-                </p>
-              </div>
-            </Root>
-          </ReactMarkdown>
-        </src__StyledParagraph>
-      </Paragraph>
-    </div>
-  </InsetText>
-</InsetTextWithParagraph>
+                  }
+                  nodeKey="text-1-1-0"
+                  value="It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
+                >
+                  It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+                </TextRenderer>
+              </p>
+            </div>
+          </Root>
+        </ReactMarkdown>
+      </src__StyledParagraph>
+    </Paragraph>
+  </div>
+</InsetText>
 `;
 
 exports[`inset text matches the InsetText snapshot: inset text 1`] = `
@@ -324,13 +322,11 @@ exports[`inset text matches the InsetText snapshot: inset text 1`] = `
   }
 }
 
-<InsetTextExample>
-  <InsetText>
-    <div
-      className="c0"
-    >
-      It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
-    </div>
-  </InsetText>
-</InsetTextExample>
+<InsetText>
+  <div
+    className="c0"
+  >
+    It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+  </div>
+</InsetText>
 `;

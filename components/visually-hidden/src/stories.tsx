@@ -1,6 +1,7 @@
+import type { Story } from '@storybook/react';
+
 import React, { Component } from 'react';
 
-import { boolean, withKnobs } from '@storybook/addon-knobs';
 import Paragraph from '@govuk-react/paragraph';
 import Button from '@govuk-react/button';
 
@@ -8,18 +9,20 @@ import { VisuallyHidden } from '.';
 
 export default {
   title: 'Utility/Visually hidden',
-  decorators: [withKnobs],
   component: VisuallyHidden,
 };
 
-export const Default: React.FC = () => (
+export const Default: Story = (args) => (
   <div>
     <Paragraph>
       Following this paragraph is some hidden content. If `focusable` is enabled then you should be able to tab to it.
     </Paragraph>
-    <VisuallyHidden focusable={boolean('focusable', true)}>Some hidden content</VisuallyHidden>
+    <VisuallyHidden {...args}>Some hidden content</VisuallyHidden>
   </div>
 );
+Default.args = {
+  focusable: true,
+};
 
 class Focusable extends Component<React.ComponentProps<typeof VisuallyHidden>> {
   focusableRef;
@@ -38,7 +41,7 @@ class Focusable extends Component<React.ComponentProps<typeof VisuallyHidden>> {
     return <VisuallyHidden ref={this.focusableRef} focusable {...this.props} />;
   }
 }
-export const FocussedFocusable: React.FC = () => <Focusable>Focussed focusable VisuallyHidden element</Focusable>;
-export const FocussedFocusableAsAButton: React.FC = () => (
+export const FocussedFocusable: Story = () => <Focusable>Focussed focusable VisuallyHidden element</Focusable>;
+export const FocussedFocusableAsAButton: Story = () => (
   <Focusable as={Button}>VisuallyHidden as Button (focusable)</Focusable>
 );

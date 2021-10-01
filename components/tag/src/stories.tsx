@@ -1,14 +1,22 @@
-import { withKnobs } from '@storybook/addon-knobs';
+import type { Story } from '@storybook/react';
+
+import React from 'react';
 
 import { Tag } from '.';
-import { TagWithKnobs, TagInactive } from './fixtures';
 
 export default {
   title: 'Typography/Tag',
   component: Tag,
-  decorators: [withKnobs],
 };
 
-export const Default = TagWithKnobs;
+export const Default: Story = (args) => <Tag {...args} />;
+Default.args = {
+  children: 'beta',
+  inactive: false,
+};
 
-export const Inactive = TagInactive;
+export const Inactive: Story = (args) => <Tag {...args} />;
+Inactive.args = {
+  children: 'beta',
+  inactive: true,
+};

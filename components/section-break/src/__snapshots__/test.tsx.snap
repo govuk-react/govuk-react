@@ -16,14 +16,12 @@ exports[`SectionBreak matches snapshot: section break 1`] = `
   }
 }
 
-<SectionBreakExample>
-  <SectionBreak
-    level="LARGE"
-    visible={true}
-  >
-    <hr
-      className="c0"
-    />
-  </SectionBreak>
-</SectionBreakExample>
+<SectionBreak
+  level="LARGE"
+  visible={true}
+>
+  <hr
+    className="c0"
+  />
+</SectionBreak>
 `;

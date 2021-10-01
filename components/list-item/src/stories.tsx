@@ -1,6 +1,7 @@
+import type { Story } from '@storybook/react';
+
 import React from 'react';
 
-import { withKnobs, text } from '@storybook/addon-knobs';
 import Link from '@govuk-react/link';
 
 import { ListItem } from '.';
@@ -8,13 +9,18 @@ import { ListItem } from '.';
 export default {
   title: 'Typography/List item',
   component: ListItem,
-  decorators: [withKnobs],
 };
 
-export const Default: React.FC = () => <ListItem>{text('Children', 'List item example')}</ListItem>;
+export const Default: Story = (args) => <ListItem {...args} />;
+Default.args = {
+  children: 'List item example',
+};
 
-export const WithAnchor: React.FC = () => (
+export const WithAnchor: Story = (args: { children: string }) => (
   <ListItem>
-    <Link href="https://www.google.com/">{text('Children', 'List item example')}</Link>
+    <Link href="https://www.google.com/" {...args} />
   </ListItem>
 );
+WithAnchor.args = {
+  children: 'List item example',
+};

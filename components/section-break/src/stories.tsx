@@ -1,12 +1,15 @@
-import { withKnobs } from '@storybook/addon-knobs';
+import type { Story } from '@storybook/react';
 
+import React from 'react';
 import { SectionBreak } from '.';
-import SectionBreakExample from './fixtures';
 
 export default {
   title: 'Page & Layout/Section break',
   component: SectionBreak,
-  decorators: [withKnobs],
 };
 
-export const Default = SectionBreakExample;
+export const Default: Story = (args) => <SectionBreak {...args} />;
+Default.args = {
+  visible: true,
+  level: 'LARGE',
+};

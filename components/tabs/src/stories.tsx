@@ -1,6 +1,6 @@
-import React from 'react';
+import type { Story } from '@storybook/react';
 
-import { withKnobs, number } from '@storybook/addon-knobs';
+import React from 'react';
 
 import { Tabs } from '.';
 import {
@@ -17,18 +17,20 @@ import {
 export default {
   title: 'Navigation/Tabs',
   component: Tabs,
-  decorators: [withKnobs],
 };
 
-export const Default: React.FC = () => <TableTabs />;
+export const Default: Story = () => <TableTabs />;
 
-export const Simple: React.FC = () => <SimpleTabs />;
-export const SimpleWithMapFunction: React.FC = () => <SimpleMapTabs />;
-export const SimpleWithMapAndBabelSProposedClassPropertiesPlugin: React.FC = () => <ProposedClassPropertiesPlugin />;
-export const ComplexMappedTable: React.FC = () => <TableTabs />;
-export const Hooks: React.FC = () => <HooksExample defaultIndex={number('defaultIndex', 1)} />;
-export const UsingReactRouterClientSide: React.FC = () => <ReactRouterExample />;
-export const UsingReactRouterServerSideRenderingCompatible: React.FC = () => <ReactRouterSSRExample />;
-export const UsingReactRouterServerSideRenderingCompatibleSinglePanelOnly: React.FC = () => (
+export const Simple: Story = () => <SimpleTabs />;
+export const SimpleWithMapFunction: Story = () => <SimpleMapTabs />;
+export const SimpleWithMapAndBabelSProposedClassPropertiesPlugin: Story = () => <ProposedClassPropertiesPlugin />;
+export const ComplexMappedTable: Story = () => <TableTabs />;
+export const Hooks: Story = (args) => <HooksExample {...args} />;
+Hooks.args = {
+  defaultIndex: 1,
+};
+export const UsingReactRouterClientSide: Story = () => <ReactRouterExample />;
+export const UsingReactRouterServerSideRenderingCompatible: Story = () => <ReactRouterSSRExample />;
+export const UsingReactRouterServerSideRenderingCompatibleSinglePanelOnly: Story = () => (
   <ReactRouterSSRSinglePanelExample />
 );

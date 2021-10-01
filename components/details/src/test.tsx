@@ -1,13 +1,21 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-
-import { DetailsSimple, summaryText, paragraphs } from './fixtures';
+import { Details } from '.';
 
 describe('details', () => {
   it('should render the provided text and content', () => {
-    const { getByText } = render(<DetailsSimple />);
+    const { getByText } = render(
+      <Details summary="Help with nationality">
+        If you’re not sure about your nationality, try to find out from an official document like a passport or national
+        ID card.
+      </Details>
+    );
 
-    expect(getByText(summaryText)).toBeInTheDocument();
-    expect(getByText(paragraphs[0])).toBeInTheDocument();
+    expect(getByText('Help with nationality')).toBeInTheDocument();
+    expect(
+      getByText(
+        'If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.'
+      )
+    ).toBeInTheDocument();
   });
 });

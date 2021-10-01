@@ -1,15 +1,22 @@
+import type { Story } from '@storybook/react';
+
 import React from 'react';
 
-import { withKnobs } from '@storybook/addon-knobs';
-
 import { WarningText } from '.';
-import WarningTextWithKnobs, { WarningWithLongText } from './fixtures';
 
 export default {
   title: 'Typography/Warning text',
   component: WarningText,
-  decorators: [withKnobs],
 };
 
-export const Default: React.FC = () => <WarningTextWithKnobs />;
-export const LongWarning: React.FC = () => <WarningWithLongText />;
+export const Default: Story = (args: { children: string }) => <WarningText {...args} />;
+Default.args = {
+  children: 'Example text',
+};
+
+export const LongWarning: Story = () => (
+  <WarningText>
+    A very long warning message. This includes a lot of text to give a good representation of a more average length
+    warning. That way you can see more than one line wrapping.
+  </WarningText>
+);

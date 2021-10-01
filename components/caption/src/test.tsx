@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import Caption from './fixtures';
+import { Caption } from '.';
 
 describe('Caption', () => {
   // Capture errors as we're expecting to throw some

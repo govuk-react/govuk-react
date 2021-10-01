@@ -1,3 +1,5 @@
+import type { Story } from '@storybook/react';
+
 import React from 'react';
 
 import { Breadcrumbs } from '.';
@@ -7,7 +9,7 @@ export default {
   component: Breadcrumbs,
 };
 
-export const Default: React.FC = () => (
+export const Default: Story = () => (
   <Breadcrumbs>
     <Breadcrumbs.Link href="/section">Section</Breadcrumbs.Link>
     <Breadcrumbs.Link href="/section/sub-section">Sub-section</Breadcrumbs.Link>

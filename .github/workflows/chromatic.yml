@@ -34,5 +34,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           storybookBuildDir: packages/storybook/storybook-static
-          preserveMissing: true
+          # preserveMissing: true # uncomment this line when we are partially disabling tests to save on usage
   

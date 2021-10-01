@@ -1,16 +1,9 @@
 import React from 'react';
-import { boolean, text } from '@storybook/addon-knobs';
 import { ButtonArrow } from '@govuk-react/icons';
 import { BLUE, TEXT_COLOUR, YELLOW, GREY_3, ORANGE } from 'govuk-colours';
 import { MemoryRouter, Route, Link } from 'react-router-dom';
 
 import { Button } from '.';
-
-const ButtonWithKnobs: React.FC = () => (
-  <Button mb="0" disabled={boolean('Disabled', false)} start={boolean('Start', false)}>
-    {text('Children', 'Button')}
-  </Button>
-);
 
 const ButtonStart: React.FC = () => <Button start>Save and continue</Button>;
 
@@ -55,13 +48,4 @@ const ButtonAsLink: React.FC = () => (
 
 export default Button;
 
-export {
-  ButtonWithKnobs,
-  ButtonStart,
-  ButtonStartIcon,
-  ButtonDisabled,
-  ButtonDisabledStartIcon,
-  ButtonBlue,
-  ButtonWacky,
-  ButtonAsLink,
-};
+export { ButtonStart, ButtonStartIcon, ButtonDisabled, ButtonDisabledStartIcon, ButtonBlue, ButtonWacky, ButtonAsLink };

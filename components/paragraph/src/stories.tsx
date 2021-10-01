@@ -1,14 +1,24 @@
-import { withKnobs } from '@storybook/addon-knobs';
+import type { Story } from '@storybook/react';
+
+import React from 'react';
 
 import { Paragraph } from '.';
-import { SupportingParagraph, ParagraphWithKnobs } from './fixtures';
 
 export default {
   title: 'Typography/Paragraph',
-  decorators: [withKnobs],
   component: Paragraph,
 };
 
-export const Default = ParagraphWithKnobs;
+const exampleParagraph =
+  'Paragraph fields support markdown and allow for **bold** text and *italics*, as well as [links](https://en.wikipedia.org/wiki/Markdown). `Inline` code snippets are also supported, as well as code blocks PROVIDED they start on their own line';
 
-export const SupportingParagaph = SupportingParagraph;
+export const Default: Story = (args: { supportingText: boolean; children: string }) => <Paragraph {...args} />;
+Default.args = {
+  supportingText: false,
+  children: exampleParagraph,
+};
+
+export const SupportingParagaph: Story = (args: { children: string }) => <Paragraph supportingText {...args} />;
+SupportingParagaph.args = {
+  children: exampleParagraph,
+};
