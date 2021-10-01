@@ -78,6 +78,8 @@ const otherData = [
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `from` |  | ```undefined``` | ReactNode[] | Array of JSX nodes to render underneath the `from:` title
+ `other` |  | ```undefined``` | { id?: number; title?: string; content?: ReactNode; }[] | Array of Objects for any additional items, each object should contain an `id`, `title` and `content` property
+ `partOf` |  | ```undefined``` | ReactNode[] | Array of JSX nodes to render underneath the `part of:` title
 
 

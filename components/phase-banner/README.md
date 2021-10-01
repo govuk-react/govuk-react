@@ -38,6 +38,7 @@ Beta
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `children` |  | `````` | ReactNode | Children text and links
+ `level` | true | `````` | string | Alpha or beta banner
 
 

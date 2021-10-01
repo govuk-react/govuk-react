@@ -34,6 +34,7 @@ Panel with header and HTML body
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `children` |  | ```undefined``` | ReactNode | Panel body text
+ `title` | true | `````` | string | Panel title text
 
 

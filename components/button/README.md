@@ -93,7 +93,7 @@ Prop | Required | Default | Type | Description
  `buttonHoverColour` |  | ```undefined``` | string | Override for default button hover colour,<br/>which defaults to `buttonColour` darkened by 5%
  `buttonShadowColour` |  | ```undefined``` | string | Override for default button shadow colour,<br/>which defaults to `buttonColour` darkened by 15%
  `buttonTextColour` |  | ```undefined``` | string | Override for default button text colour,<br/>which defaults to govuk white
- `children` |  | `````` | any | Button text
+ `children` |  | `````` | ReactNode | Button text
  `className` |  | `````` | string | 
  `color` |  | `````` | string | 
  `contentEditable` |  | `````` | Booleanish | "inherit" | 
@@ -113,7 +113,7 @@ Prop | Required | Default | Type | Description
  `formTarget` |  | `````` | string | 
  `forwardedAs` |  | `````` | undefined | 
  `hidden` |  | `````` | boolean | 
- `icon` |  | ```undefined``` | any | Button icon
+ `icon` |  | ```undefined``` | ReactNode | Button icon
  `id` |  | `````` | string | 
  `inlist` |  | `````` | any | 
  `inputMode` |  | `````` | "text" | "search" | "none" | "tel" | "url" | "email" | "numeric" | "decimal" | Hints at the type of data that might be entered by the user while editing the element or its contents<br/>@see https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute

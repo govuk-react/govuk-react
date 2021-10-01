@@ -97,6 +97,9 @@ NB <Footer.Link /> is styled extention of @govuk-react/link
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `children` |  | ```undefined``` | ReactNode | Footer navigation links
+ `container` |  | ```Footer.WidthContainer``` | ElementType<any> | Override the default footer container component.<br/>`children`, `copyright` and `meta` will be placed inside this component.
+ `copyright` |  | ```undefined``` | CopyrightProps | Copyright information
+ `meta` |  | ```undefined``` | ReactNode | Meta text and links
 
 

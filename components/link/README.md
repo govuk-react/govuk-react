@@ -91,7 +91,7 @@ Prop | Required | Default | Type | Description
  `autoCapitalize` |  | `````` | string | 
  `autoCorrect` |  | `````` | string | 
  `autoSave` |  | `````` | string | 
- `children` |  | `````` | any | link contents
+ `children` |  | `````` | ReactNode | link contents
  `className` |  | `````` | string | 
  `color` |  | `````` | string | 
  `contentEditable` |  | `````` | Booleanish | "inherit" | 

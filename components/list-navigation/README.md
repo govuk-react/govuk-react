@@ -40,6 +40,7 @@ import { ListNavigation, Link } from 'govuk-react';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `children` |  | `````` | ReactNode | List navigation content
+ `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`
 
 

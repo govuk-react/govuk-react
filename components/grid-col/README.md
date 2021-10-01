@@ -118,7 +118,7 @@ Prop | Required | Default | Type | Description
  `autoCapitalize` |  | `````` | string | 
  `autoCorrect` |  | `````` | string | 
  `autoSave` |  | `````` | string | 
- `children` |  | ```undefined``` | any | GridCol content
+ `children` |  | ```undefined``` | ReactNode | GridCol content
  `className` |  | `````` | string | 
  `color` |  | `````` | string | 
  `columnFull` |  | ```undefined``` | boolean | Dimension setting for the column (deprecated)

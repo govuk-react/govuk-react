@@ -43,6 +43,8 @@ Custom legend
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `margin` |  | `````` | Margin | Margin[] | 
+ `mb` |  | `````` | string | number | 
+ `padding` |  | `````` | Padding | Padding[] | 
 
 

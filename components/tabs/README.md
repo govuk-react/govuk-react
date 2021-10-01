@@ -134,6 +134,6 @@ const App = ({ defaultIndex }) => {
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `children` |  | `````` | ReactNode | child components that will appear in the Tabs section
 
 

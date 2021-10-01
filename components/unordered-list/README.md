@@ -41,6 +41,10 @@ import { UnorderedList, ListItem} from 'govuk-react';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `children` |  | `````` | ReactNode | One or more ListItem components
+ `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend
+ `margin` |  | `````` | Margin | Margin[] | 
+ `mb` |  | `````` | string | number | 
+ `padding` |  | `````` | Padding | Padding[] | 
 
 

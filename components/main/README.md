@@ -35,6 +35,6 @@ import { Main, GridRow, GridCol } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `children` |  | ```undefined``` | ReactNode | Child nodes for the page being built
 
 

@@ -82,7 +82,7 @@ Prop | Required | Default | Type | Description
  `autoCapitalize` |  | `````` | string | 
  `autoCorrect` |  | `````` | string | 
  `autoSave` |  | `````` | string | 
- `children` |  | `````` | any | Content to be hidden
+ `children` |  | `````` | ReactNode | Content to be hidden
  `className` |  | `````` | string | 
  `color` |  | `````` | string | 
  `contentEditable` |  | `````` | Booleanish | "inherit" | 

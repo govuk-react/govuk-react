@@ -26,6 +26,6 @@ import { WarningText } from 'govuk-react'
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `children` |  | `````` | ReactNode | Warning text to be displayed
 
 

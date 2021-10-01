@@ -82,6 +82,14 @@ import { SelectInput } '@govuk-react/select';
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `error` |  | `````` | boolean | Apply error state styling to the component
+ `errorText` |  | ```undefined``` | string | 
+ `hint` |  | ```undefined``` | ReactNode | 
+ `input` |  | ```{}``` | SelectHTMLAttributes<HTMLSelectElement> | 
+ `label` | true | `````` | string | 
+ `margin` |  | `````` | Margin | Margin[] | 
+ `mb` |  | `````` | string | number | 
+ `meta` |  | ```{}``` | { error?: string | string[]; touched?: boolean; } | 
+ `padding` |  | `````` | Padding | Padding[] | 
 
 
