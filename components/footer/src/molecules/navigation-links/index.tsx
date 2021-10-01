@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import Section from '../../atoms/section';
 import SectionHeading from '../../atoms/section-heading';

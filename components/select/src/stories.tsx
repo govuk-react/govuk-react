@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import LabelText from '@govuk-react/label-text';
 import { Select, SelectInput } from '.';

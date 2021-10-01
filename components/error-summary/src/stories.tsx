@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react';
 
-import React from 'react';
+import * as React from 'react';
 import InputField from '@govuk-react/input-field';
 import TextArea from '@govuk-react/text-area';
 

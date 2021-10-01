@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import UnorderedList from '@govuk-react/unordered-list';
 import ListItem from '@govuk-react/list-item';
 

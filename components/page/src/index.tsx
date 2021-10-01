@@ -4,7 +4,7 @@
 // https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_main-wrapper.scss
 // https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_width-container.scss
 
-import React from 'react';
+import * as React from 'react';
 import SkipLink from '@govuk-react/skip-link';
 import TopNav from '@govuk-react/top-nav';
 // import Footer from '@govuk-react/footer';

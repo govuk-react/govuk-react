@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import * as GovUK from 'govuk-react';
 import { MemoryRouter as Router, Switch, Route } from 'react-router';
 import { Link } from 'react-router-dom';

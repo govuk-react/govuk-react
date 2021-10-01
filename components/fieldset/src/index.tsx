@@ -1,6 +1,6 @@
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { spacing } from '@govuk-react/lib';
 

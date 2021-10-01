@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { MEDIA_QUERIES, SPACING, SITE_WIDTH } from '@govuk-react/constants';
 

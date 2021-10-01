@@ -1,6 +1,6 @@
 // https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/table/_table.scss
 
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { spacing, typography } from '@govuk-react/lib';
 

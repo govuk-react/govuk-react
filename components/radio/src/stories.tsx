@@ -1,6 +1,6 @@
 import type { FieldInputProps } from 'react-final-form';
 
-import React from 'react';
+import * as React from 'react';
 import { Form, Field } from 'react-final-form';
 
 import { action } from '@storybook/addon-actions';

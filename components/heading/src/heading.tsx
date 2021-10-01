@@ -3,7 +3,7 @@ import type { StyledComponentProps } from 'styled-components';
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
 import styled from 'styled-components';
-import React from 'react';
+import * as React from 'react';
 import { HEADING_SIZES, LEVEL_SIZE, LEVEL_TAG, MEDIA_QUERIES, TYPOGRAPHY_SCALE } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 

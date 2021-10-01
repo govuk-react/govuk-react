@@ -11,7 +11,7 @@
 // Therefore validation around the set of radios is required.
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { ERROR_COLOUR } from 'govuk-colours';
 import LabelText from '@govuk-react/label-text';

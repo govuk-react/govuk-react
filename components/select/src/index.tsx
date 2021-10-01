@@ -1,7 +1,7 @@
 // https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/select
 import type { LabelProps } from '@govuk-react/label';
 
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { BLACK, ERROR_COLOUR, YELLOW } from 'govuk-colours';
 import { MEDIA_QUERIES } from '@govuk-react/constants';

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import Meta from '../../atoms/meta';
 import MetaItem from '../../atoms/meta-item';

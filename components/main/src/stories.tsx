@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import GridRow from '@govuk-react/grid-row';
 import GridCol from '@govuk-react/grid-col';
 

@@ -1,7 +1,7 @@
 // every export from @govuk-react/icons should be a React component that renders an SVG
 // icons should be stateless therefore should be a function
 import { mount } from 'enzyme';
-import React from 'react';
+import * as React from 'react';
 
 import * as icons from '.';
 

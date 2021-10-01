@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { TURQUOISE, WHITE } from 'govuk-colours';
 import { spacing, typography } from '@govuk-react/lib';

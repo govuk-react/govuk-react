@@ -3,7 +3,7 @@ import type { StyledComponentProps } from 'styled-components';
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
 import styled from 'styled-components';
-import React from 'react';
+import * as React from 'react';
 import { BORDER_WIDTH_FORM_ELEMENT, FOCUSABLE, MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 import { BUTTON_COLOUR, BUTTON_COLOUR_DARKEN_15, WHITE } from 'govuk-colours';

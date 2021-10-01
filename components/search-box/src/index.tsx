@@ -1,7 +1,7 @@
 // https://govuk-static.herokuapp.com/component-guide/search
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { LIGHT_BLUE, GREY_2, WHITE, YELLOW } from 'govuk-colours';
 import { NTA_LIGHT } from '@govuk-react/constants';

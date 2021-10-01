@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import { H3 } from '@govuk-react/heading';
 import UnorderedList from '@govuk-react/unordered-list';

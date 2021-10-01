@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { BrowserRouter, Link } from 'react-router-dom';
 
 import CrownIcon from '@govuk-react/icon-crown';

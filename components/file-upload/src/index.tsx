@@ -1,6 +1,6 @@
 import type { LabelProps } from '@govuk-react/label';
 
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import Label from '@govuk-react/label';
 import LabelText from '@govuk-react/label-text';

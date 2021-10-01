@@ -1,6 +1,6 @@
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
-import React from 'react';
+import * as React from 'react';
 import OrderedList from '@govuk-react/ordered-list';
 
 export interface UnorderedListProps extends WithWhiteSpaceProps {

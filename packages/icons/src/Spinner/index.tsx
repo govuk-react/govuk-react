@@ -1,6 +1,6 @@
 // https://govuk-loader-prototype.herokuapp.com/components/loader
 
-import React from 'react';
+import * as React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 import SVG, { SVGProps } from '../SVGBase/index';

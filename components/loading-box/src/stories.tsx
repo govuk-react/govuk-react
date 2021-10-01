@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react';
 
-import React from 'react';
+import * as React from 'react';
 
 import { H1, H2 } from '@govuk-react/heading';
 import InputField from '@govuk-react/input-field';
