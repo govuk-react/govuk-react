@@ -78,7 +78,7 @@
     "eslint-config-react-app": "^6.0.0",
     "eslint-config-sonar": "0.0.8",
     "eslint-plugin-cypress": "^2.11.3",
-    "eslint-plugin-flowtype": "^5.7.2",
+    "eslint-plugin-flowtype": "^5.10.0",
     "eslint-plugin-import": "^2.23.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-no-only-tests": "^2.6.0",
