@@ -1,3 +1,9 @@
+/**
+ * ### References:
+ *
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/checkboxes/_checkboxes.scss
+ */
+
 import * as React from 'react';
 import styled from 'styled-components';
 import HintText from '@govuk-react/hint-text';
@@ -121,10 +127,6 @@ const StyledCheckboxHint = styled(HintText)({
  * ```jsx
  * <Checkbox hint="including English, Scottish, Welsh and Northern Irish">British</Checkbox>
  * ```
- *
- * ### References:
- *
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/checkboxes/_checkboxes.scss
  *
  */
 const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(

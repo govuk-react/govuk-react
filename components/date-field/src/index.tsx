@@ -1,3 +1,9 @@
+/**
+ * ### References:
+ *
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/date-field
+ */
+
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
 import * as React from 'react';
@@ -71,10 +77,6 @@ const StyledContainer = styled('div')<DateFieldProps>(
  *   What is your date of birth?
  * </DateField>
  * ```
- *
- * ### References:
- *
- * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/date-field
  *
  */
 export const DateField: DateFieldType = ({
