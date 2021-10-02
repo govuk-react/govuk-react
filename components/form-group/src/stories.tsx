@@ -8,6 +8,7 @@ import { FormGroup } from '.';
 
 export default {
   title: 'Form/Form group',
+  id: 'form-group',
   component: FormGroup,
 };
 

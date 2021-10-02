@@ -5,6 +5,7 @@ import { SectionBreak } from '.';
 
 export default {
   title: 'Page & Layout/Section break',
+  id: 'section-break',
   component: SectionBreak,
 };
 

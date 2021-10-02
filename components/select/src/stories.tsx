@@ -10,6 +10,7 @@ const meta = {
 
 export default {
   title: 'Form/Select',
+  id: 'select',
   component: Select,
 };
 

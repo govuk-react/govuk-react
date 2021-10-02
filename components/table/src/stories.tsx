@@ -12,6 +12,7 @@ import {
 
 export default {
   title: 'Typography/Table',
+  id: 'table',
   component: Table,
 };
 

@@ -9,6 +9,7 @@ const meta = {
 
 export default {
   title: 'Form/Textarea',
+  id: 'text-area',
   component: TextArea,
 };
 

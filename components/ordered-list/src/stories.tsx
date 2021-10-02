@@ -6,6 +6,7 @@ import { OrderedList } from '.';
 
 export default {
   title: 'Typography/Ordered list',
+  id: 'ordered-list',
   component: OrderedList,
 };
 

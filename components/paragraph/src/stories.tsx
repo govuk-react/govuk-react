@@ -6,6 +6,7 @@ import { Paragraph } from '.';
 
 export default {
   title: 'Typography/Paragraph',
+  id: 'paragraph',
   component: Paragraph,
 };
 

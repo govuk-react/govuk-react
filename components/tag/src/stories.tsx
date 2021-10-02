@@ -6,6 +6,7 @@ import { Tag } from '.';
 
 export default {
   title: 'Typography/Tag',
+  id: 'tag',
   component: Tag,
 };
 

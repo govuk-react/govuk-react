@@ -6,6 +6,7 @@ import { Main } from '.';
 
 export default {
   title: 'Page & Layout/Main',
+  id: 'main',
   component: Main,
 };
 

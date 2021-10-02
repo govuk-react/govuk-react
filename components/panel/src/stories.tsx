@@ -4,6 +4,7 @@ import { Panel } from '.';
 
 export default {
   title: 'Page & Layout/Panel',
+  id: 'panel',
   component: Panel,
 };
 

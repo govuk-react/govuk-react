@@ -4,6 +4,7 @@ import { Label } from '.';
 
 export default {
   title: 'Form/Label',
+  id: 'label',
   component: Label,
 };
 

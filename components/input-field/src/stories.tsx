@@ -9,6 +9,7 @@ const meta = {
 
 export default {
   title: 'Form/Input field',
+  id: 'input-field',
   component: InputField,
 };
 

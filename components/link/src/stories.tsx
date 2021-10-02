@@ -7,6 +7,7 @@ import { Link } from '.';
 
 export default {
   title: 'Navigation/Link',
+  id: 'link',
   component: Link,
 };
 

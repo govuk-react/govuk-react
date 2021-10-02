@@ -13,6 +13,7 @@ import {
 
 export default {
   title: 'Page & Layout/Footer',
+  id: 'footer',
   component: Footer,
 };
 

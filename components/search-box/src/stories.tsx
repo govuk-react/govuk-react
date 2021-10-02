@@ -4,6 +4,7 @@ import { SearchBox } from '.';
 
 export default {
   title: 'Form/Search box',
+  id: 'search-box',
   component: SearchBox,
 };
 

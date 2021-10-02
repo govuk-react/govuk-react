@@ -16,6 +16,7 @@ import {
 
 export default {
   title: 'Navigation/Tabs',
+  id: 'tabs',
   component: Tabs,
 };
 

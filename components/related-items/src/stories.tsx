@@ -9,6 +9,7 @@ import { RelatedItems } from '.';
 
 export default {
   title: 'Navigation/Related items',
+  id: 'related-items',
   component: RelatedItems,
 };
 

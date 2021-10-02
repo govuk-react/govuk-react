@@ -14,6 +14,7 @@ import { LoadingBox } from '.';
 
 export default {
   title: 'Utility/Loading box',
+  id: 'loading-box',
 };
 
 const spacer = <p style={{ marginTop: 0 }}>&nbsp;</p>;

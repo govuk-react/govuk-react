@@ -6,6 +6,7 @@ import { PhaseBanner } from '.';
 
 export default {
   title: 'Typography/Phase banner',
+  id: 'phase-banner',
   component: PhaseBanner,
 };
 

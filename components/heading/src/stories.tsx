@@ -8,6 +8,7 @@ import Heading, { H1, H2, H3, H4, H5, H6 } from '.';
 
 export default {
   title: 'Typography/Heading',
+  id: 'heading',
   component: Heading,
 };
 

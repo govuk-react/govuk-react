@@ -7,17 +7,17 @@ import Paragraph from '@govuk-react/paragraph';
 
 import { GridCol } from '.';
 
+export default {
+  title: 'Page & Layout/Grid col',
+  id: 'grid-col',
+  component: GridCol,
+};
+
 const Content = styled('div')({
   textIndent: '-999em',
   backgroundColor: '#7DADD3',
   backgroundImage: 'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)',
 });
-
-export default {
-  title: 'Page & Layout/Grid col',
-  component: GridCol,
-};
-
 export const Default: React.FC = () => (
   <GridRow>
     <GridCol setWidth="one-half">

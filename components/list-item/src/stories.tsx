@@ -8,6 +8,7 @@ import { ListItem } from '.';
 
 export default {
   title: 'Typography/List item',
+  id: 'list-item',
   component: ListItem,
 };
 

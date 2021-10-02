@@ -4,6 +4,7 @@ import { HintText } from '.';
 
 export default {
   title: 'Form/Hint text',
+  id: 'hint-text',
   component: HintText,
 };
 

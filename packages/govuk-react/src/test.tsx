@@ -41,10 +41,13 @@ describe('Components', () => {
         expect(packageExports[pascal].displayName).toBe(pascal);
       });
 
-      it(`has a story with an ID of ${component}`, () => {
-        const story = require(path.join(__dirname, `../../../components/${component}/story.tsx`));
-        expect(story.id).toBe(component);
-      });
+      if (component !== 'global-style') {
+        it(`has a stories.tsx file with id set to "${component}""`, () => {
+          // eslint-disable-next-line global-require, import/no-dynamic-require, @typescript-eslint/no-var-requires
+          const story = require(path.join(__dirname, `../../../components/${component}/src/stories.tsx`));
+          expect(story.default.id).toBe(component);
+        });
+      }
     })
   );
 });

@@ -9,6 +9,7 @@ import { Page } from '.';
 
 export default {
   title: 'Page & Layout/Page',
+  id: 'page',
   component: Page,
 };
 

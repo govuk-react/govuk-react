@@ -6,6 +6,7 @@ import { SkipLink } from '.';
 
 export default {
   title: 'Navigation/Skip link',
+  id: 'skip-link',
   component: SkipLink,
 };
 class AutoFocussed extends Component<{ href: string }> {

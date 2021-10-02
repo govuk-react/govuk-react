@@ -6,6 +6,7 @@ import { WarningText } from '.';
 
 export default {
   title: 'Typography/Warning text',
+  id: 'warning-text',
   component: WarningText,
 };
 

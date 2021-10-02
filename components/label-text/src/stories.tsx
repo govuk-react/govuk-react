@@ -4,6 +4,7 @@ import { LabelText } from '.';
 
 export default {
   title: 'Form/Label text',
+  id: 'label-text',
   component: LabelText,
 };
 

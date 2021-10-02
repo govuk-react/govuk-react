@@ -6,6 +6,7 @@ import { GridRow } from '.';
 
 export default {
   title: 'Page & Layout/Grid row',
+  id: 'grid-row',
   component: GridRow,
 };
 

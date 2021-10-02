@@ -10,6 +10,12 @@ import Button from '@govuk-react/button';
 import MultiChoice from '@govuk-react/multi-choice';
 import { Radio } from '.';
 
+export default {
+  title: 'Form/Radio',
+  id: 'radio',
+  component: Radio,
+};
+
 const required = (value) => (value ? undefined : 'Required');
 
 interface RadioGroupProps {
@@ -57,11 +63,6 @@ RadioGroup.defaultProps = {
   inline: false,
   options: [],
   label: undefined,
-};
-
-export default {
-  title: 'Form/Radio',
-  component: Radio,
 };
 
 export const Default: React.FC = () => <Radio name="group1">Radio button text example</Radio>;

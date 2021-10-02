@@ -6,6 +6,7 @@ import { Pagination } from '.';
 
 export default {
   title: 'Navigation/Pagination',
+  id: 'pagination',
   component: Pagination,
 };
 

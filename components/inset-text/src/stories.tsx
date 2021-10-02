@@ -7,6 +7,7 @@ import { InsetText } from '.';
 
 export default {
   title: 'Typography/Inset text',
+  id: 'inset-text',
   component: InsetText,
 };
 

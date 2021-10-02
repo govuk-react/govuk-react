@@ -6,6 +6,7 @@ import { ListNavigation } from '.';
 
 export default {
   title: 'Navigation/List navigation',
+  id: 'list-navigation',
   component: ListNavigation,
 };
 

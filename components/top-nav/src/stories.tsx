@@ -7,6 +7,12 @@ import SearchBox from '@govuk-react/search-box';
 
 import { TopNav } from '.';
 
+export default {
+  title: 'Page & Layout/Top nav',
+  id: 'top-nav',
+  component: TopNav,
+};
+
 const reactRouterLink = '/section';
 const link = 'https://example.com?=1';
 // TODO: vertical alignment here needs some work, perhaps should be its own component,
@@ -42,11 +48,6 @@ const ServiceTitleLink: JSX.Element = (
     Service Title
   </TopNav.NavLink>
 );
-
-export default {
-  title: 'Page & Layout/Top nav',
-  component: TopNav,
-};
 
 export const Default: React.FC = () => <TopNav company={Company} />;
 

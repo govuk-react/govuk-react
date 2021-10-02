@@ -4,6 +4,7 @@ import { LeadParagraph } from '.';
 
 export default {
   title: 'Typography/Lead paragraph',
+  id: 'lead-paragraph',
   component: LeadParagraph,
 };
 

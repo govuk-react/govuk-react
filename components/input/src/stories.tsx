@@ -4,6 +4,7 @@ import { Input } from '.';
 
 export default {
   title: 'Form/Input',
+  id: 'input',
   component: Input,
 };
 

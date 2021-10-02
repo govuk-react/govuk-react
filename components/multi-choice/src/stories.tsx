@@ -7,6 +7,7 @@ import { MultiChoice } from '.';
 
 export default {
   title: 'Form/Multi choice',
+  id: 'multi-choice',
   component: MultiChoice,
 };
 

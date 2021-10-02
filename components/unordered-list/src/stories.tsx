@@ -6,6 +6,7 @@ import { UnorderedList } from '.';
 
 export default {
   title: 'Typography/Unordered list',
+  id: 'unordered-list',
   component: UnorderedList,
 };
 

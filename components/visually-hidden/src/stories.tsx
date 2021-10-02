@@ -9,6 +9,7 @@ import { VisuallyHidden } from '.';
 
 export default {
   title: 'Utility/Visually hidden',
+  id: 'visually-hidden',
   component: VisuallyHidden,
 };
 
