@@ -1,17 +1,118 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
 
-import Footer, {
-  FooterWithCustomWidth,
-  FooterWithCopyright,
-  FooterWithSingleMetaLink,
-  FooterWithMetaLinks,
-  FooterWithMetaCustom,
-  FooterWithMetaLinksAndCustom,
-  FooterWithSingleNavigationLink,
-  FooterWithNavigation,
-  FooterWithNavigationAndMeta,
-} from './fixtures';
+import { BrowserRouter, Link, Route } from 'react-router-dom';
+import styled from 'styled-components';
+import { MEDIA_QUERIES, GUTTER } from '@govuk-react/constants';
+
+import { Footer } from '.';
+import crest from './govuk-crest.png';
+
+const withRoutes = (component) => (
+  <BrowserRouter>
+    {component}
+    <Route path="/footer-nav-item-2" render={() => 'Footer Navigation item 2'} />
+    <Route path="/footer-meta-item-2" render={() => 'Footer Meta item 2'} />
+  </BrowserRouter>
+);
+
+const FooterExample: React.FC = () => <Footer />;
+export default FooterExample;
+
+const copyright = {
+  text: 'Crown copyright',
+  link: 'https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/',
+  image: {
+    src: crest,
+    height: 102,
+    width: 125,
+  },
+};
+
+const metaLinks = (
+  <Footer.MetaLinks heading="Support links">
+    <Footer.Link href="/">Item 1</Footer.Link>
+    <Footer.Link to="/footer-meta-item-2" as={Link}>
+      Item 2 (Router Link)
+    </Footer.Link>
+    <Footer.Link href="/">Item 3</Footer.Link>
+  </Footer.MetaLinks>
+);
+
+const metaCustom = (
+  <Footer.MetaCustom>
+    Built by the <Footer.Link href="/">Government Digital Service</Footer.Link>
+  </Footer.MetaCustom>
+);
+
+const metaLinksAndCustom = (
+  <>
+    {metaLinks}
+    {metaCustom}
+  </>
+);
+
+const navigation = (
+  <Footer.Navigation>
+    <Footer.NavigationLinks heading="Two column list" listColumns={2}>
+      <Footer.Link href="/">Navigation item 1</Footer.Link>
+      <Footer.Link to="/footer-nav-item-2" as={Link}>
+        Navigation item 2 (Router Link)
+      </Footer.Link>
+      <Footer.Link href="/">Navigation item 3</Footer.Link>
+      <Footer.Link href="/">Navigation item 4</Footer.Link>
+      <Footer.Link href="/">Navigation item 5</Footer.Link>
+      <Footer.Link href="/">Navigation item 6</Footer.Link>
+    </Footer.NavigationLinks>
+    <Footer.NavigationLinks heading="Single column list">
+      <Footer.Link href="/">Navigation item 1</Footer.Link>
+      <Footer.Link href="/">Navigation item 2</Footer.Link>
+      <Footer.Link href="/">Navigation item 3</Footer.Link>
+    </Footer.NavigationLinks>
+  </Footer.Navigation>
+);
+
+const WideContainer = styled(Footer.WidthContainer)({
+  maxWidth: 'inherit',
+  [MEDIA_QUERIES.MAX]: {
+    margin: `0 ${GUTTER}`,
+  },
+});
+
+const FooterWithCustomWidth: React.FC = () => <Footer container={WideContainer} />;
+
+const FooterWithCopyright: React.FC = () => <Footer copyright={copyright} />;
+
+const FooterWithMetaLinks: React.FC = () => withRoutes(<Footer meta={metaLinks} />);
+
+const FooterWithSingleMetaLink: React.FC = () =>
+  withRoutes(
+    <Footer
+      meta={
+        <Footer.MetaLinks heading="Support links">
+          <Footer.Link href="/">Item 1</Footer.Link>
+        </Footer.MetaLinks>
+      }
+    />
+  );
+
+const FooterWithMetaCustom: React.FC = () => <Footer meta={metaCustom} />;
+
+const FooterWithMetaLinksAndCustom: React.FC = () => withRoutes(<Footer meta={metaLinksAndCustom} />);
+
+const FooterWithSingleNavigationLink: React.FC = () => (
+  <Footer>
+    <Footer.Navigation>
+      <Footer.NavigationLinks heading="Single column list">
+        <Footer.Link href="/">Navigation item 1</Footer.Link>
+      </Footer.NavigationLinks>
+    </Footer.Navigation>
+  </Footer>
+);
+
+const FooterWithNavigation: React.FC = () => withRoutes(<Footer>{navigation}</Footer>);
+
+const FooterWithNavigationAndMeta: React.FC = () => withRoutes(<Footer meta={metaLinksAndCustom}>{navigation}</Footer>);
 
 describe('Footer', () => {
   it('matches default snapshot', () => {
