@@ -7,6 +7,7 @@ import { BackLink } from '.';
 
 export default {
   title: 'Navigation/Back link',
+  id: 'back-link',
   component: BackLink,
 };
 

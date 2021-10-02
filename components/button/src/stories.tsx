@@ -8,6 +8,7 @@ import { Button } from '.';
 
 export default {
   title: 'Form/Button',
+  id: 'button',
   component: Button,
 };
 const Template: Story<React.ComponentProps<typeof Button>> = (args) => <Button {...args} />;

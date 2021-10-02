@@ -8,6 +8,7 @@ import { Caption } from '.';
 
 export default {
   title: 'Typography/Caption',
+  id: 'caption',
   component: Caption,
 };
 

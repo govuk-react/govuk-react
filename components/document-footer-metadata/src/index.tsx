@@ -1,3 +1,11 @@
+/**
+ * ### References:
+ *
+ * - https://govuk-static.herokuapp.com/component-guide/document_footer
+ * - https://github.com/alphagov/static/blob/077649737c43d3937f745df0b3adade9df3717dc/app/views/govuk_component/docs/metadata.yml
+ * - https://github.com/alphagov/static/blob/077649737c43d3937f745df0b3adade9df3717dc/app/views/govuk_component/metadata.raw.html.erb
+ */
+
 import * as React from 'react';
 import styled from 'styled-components';
 import UnorderedList from '@govuk-react/unordered-list';
@@ -16,73 +24,9 @@ const StyledDefinition = styled('li')({
 });
 
 /**
+ * To display relevant metadata about organisations and tags for a document
  *
- * ### Usage
- *
- *
- * Simple
- *
- * ```jsx
- * import { DocumentFooterMetadata, Link } from 'govuk-react'
- *
- * const fromData = [
- *   <Link href="/government/organisations/ministry-of-defence">
- *     Ministry of Defence
- *   </Link>,
- * ];
- *
- * <DocumentFooterMetadata from={fromData} />
- * ```
- *
- *
- * DFM From & part of example
- *
- * ```jsx
- * import { DocumentFooterMetadata, Link } from 'govuk-react'
- *
- * const fromData = [
- *   <Link href="/government/organisations/ministry-of-defence">
- *     Ministry of Defence
- *   </Link>,
- * ];
- * const partOfData = [
- *   <Link href="/government/topics/energy">Energy</Link>,
- *   <Link href="/government/topics/environment">Environment</Link>,
- * ];
- *
- * <DocumentFooterMetadata from={fromData} partOf={partOfData} />
- * ```
- *
- *
- * DFM From & other data example
- *
- * ```jsx
- * import { DocumentFooterMetadata, Link } from 'govuk-react'
- *
- * const fromData = [
- *   <Link href="/government/organisations/ministry-of-defence">
- *     Ministry of Defence
- *   </Link>,
- * ];
- * const otherData = [
- *   {
- *     id: 0,
- *     title: 'Consultation type',
- *     content: <Link href="/government/publications">Open</Link>,
- *   },
- *   {
- *     id: 1,
- *     title: 'Published',
- *     content: '20 January 2012',
- *   },
- * ];
- *
- * <DocumentFooterMetadata from={fromData} other={otherData} />
- * ```
- *
- * ### References:
- *
- * - https://govuk-static.herokuapp.com/component-guide/document_footer
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/document-footer-metadata
  */
 export const DocumentFooterMetadata: React.FC<DocumentFooterMetadataProps> = ({
   from = undefined,

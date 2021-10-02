@@ -34,50 +34,10 @@ const StyledContainer = styled('div')<DateFieldProps>(
 );
 
 /**
+ * Use the date input component to help users enter a memorable date or one they can easily look up.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { DateField } from 'govuk-react'
- *
- * <DateField>What is your date of birth?</DateField>
- * ```
- *
- * Date with hint text
- *
- * ```jsx
- * <DateField hintText="For example, 31 03 1980">
- *   What is your date of birth?
- * </DateField>
- * ```
- *
- * Date with hint text & error
- *
- * ```jsx
- * <DateField
- *   hintText="For example, 31 03 1980"
- *   errorText="Error message goes here"
- * >
- *   What is your date of birth?
- * </DateField>
- * ```
- *
- * With custom input name props
- *
- * ```jsx
- * <DateField hintText="For example, 31 03 1980"
- *   inputNames={{
- *     day: 'dayInputName',
- *     month: 'monthInputName',
- *     year: 'yearInputName',
- *   }}
- *  >
- *   What is your date of birth?
- * </DateField>
- * ```
- *
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/date-field
+ * - https://design-system.service.gov.uk/components/date-input/
  */
 export const DateField: DateFieldType = ({
   children,

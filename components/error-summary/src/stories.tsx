@@ -8,6 +8,7 @@ import { ErrorSummary } from '.';
 
 export default {
   title: 'Form/Error summary',
+  id: 'error-summary',
   component: ErrorSummary,
 };
 

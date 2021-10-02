@@ -4,6 +4,7 @@ import { FileUpload } from '.';
 
 export default {
   title: 'Form/File upload',
+  id: 'file-upload',
   component: FileUpload,
 };
 

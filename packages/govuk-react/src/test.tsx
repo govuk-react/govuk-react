@@ -40,6 +40,11 @@ describe('Components', () => {
       it(`has displayName set to ${pascal}`, () => {
         expect(packageExports[pascal].displayName).toBe(pascal);
       });
+
+      it(`has a story with an ID of ${component}`, () => {
+        const story = require(path.join(__dirname, `../../../components/${component}/story.tsx`));
+        expect(story.id).toBe(component);
+      });
     })
   );
 });

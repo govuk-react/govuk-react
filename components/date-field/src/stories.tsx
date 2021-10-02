@@ -7,6 +7,7 @@ import { DateField } from '.';
 
 export default {
   title: 'Form/Date field',
+  id: 'date-field',
   component: DateField,
 };
 class ManagedDateField extends React.Component<

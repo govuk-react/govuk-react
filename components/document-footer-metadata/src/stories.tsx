@@ -36,6 +36,7 @@ const otherData = [
 
 export default {
   title: 'Typography/Document Footer Metadata',
+  id: 'document-footer-metadata',
   component: DocumentFooterMetadata,
 };
 

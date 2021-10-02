@@ -6,6 +6,7 @@ import { Breadcrumbs } from '.';
 
 export default {
   title: 'Navigation/Breadcrumbs',
+  id: 'breadcrumbs',
   component: Breadcrumbs,
 };
 

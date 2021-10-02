@@ -6,6 +6,7 @@ import { Details } from '.';
 
 export default {
   title: 'Typography/Details',
+  id: 'details',
   component: Details,
 };
 

@@ -1,3 +1,8 @@
+/**
+ * ### References
+ *
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/details/_details.scss
+ */
 import * as React from 'react';
 import styled from 'styled-components';
 
@@ -75,26 +80,10 @@ const DetailsText = styled('div')({
 });
 
 /**
- * ### IE Compatibility
+ * Make a page easier to scan by letting users reveal more detailed information only if they need it.
  *
- * Please note that this component uses a <details> component, which requires a polyfill to work correctly on Internet Explorer.
- *
- * ### Usage
- *
- *
- * Simple
- *
- * ```jsx
- * import { Details } from 'govuk-react'
- *
- * <Details summary="Help with nationality">
- *   I am a paragraph of hidden details, to be revealed when summary is clicked
- * </Details>
- * ```
- *
- * ### References
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/details
  * - https://design-system.service.gov.uk/components/details/
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/details/_details.scss
  */
 export const Details: React.FC<DetailsProps> = ({ summary, children, ...props }: DetailsProps) => (
   <StyledDetails {...props}>

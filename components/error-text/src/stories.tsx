@@ -6,6 +6,7 @@ import { ErrorText } from '.';
 
 export default {
   title: 'Form/Error text',
+  id: 'error-text',
   component: ErrorText,
 };
 

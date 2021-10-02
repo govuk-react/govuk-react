@@ -6,6 +6,7 @@ import { Fieldset } from '.';
 
 export default {
   title: 'Form/Fieldset',
+  id: 'fieldset',
   component: Fieldset,
 };
 

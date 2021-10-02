@@ -6,6 +6,7 @@ import Checkbox from '.';
 
 export default {
   title: 'Form/Checkbox',
+  id: 'checkbox',
   component: Checkbox,
 };
 
