@@ -1,7 +1,7 @@
 import * as React from 'react';
+import type { Story } from '@storybook/react';
 
 import { action } from '@storybook/addon-actions';
-import type { DateFieldProps } from '.';
 
 import { DateField } from '.';
 
@@ -10,61 +10,34 @@ export default {
   id: 'date-field',
   component: DateField,
 };
-class ManagedDateField extends React.Component<
-  DateFieldProps,
-  { value: { day: string; month: string; year: string } }
-> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: {
-        day: '0',
-        month: '1',
-        year: '2',
-      },
-    };
-  }
 
-  render() {
-    const { input: inputProp } = this.props;
-    const { value: valueState } = this.state;
+const Template: Story<React.ComponentProps<typeof DateField>> = (args) => <DateField {...args} />;
+export const Default = Template.bind({});
+Default.args = {
+  input: {
+    onFocus: action('date-focus'),
+    onBlur: action('date-blur'),
+    onChange: action('date-change'),
+  },
+  inputNames: { day: 'dayInputName' },
+  children: 'What is your date of birth?',
+};
 
-    const input = {
-      ...inputProp,
-      value: valueState,
-      onChange: (value) => {
-        this.setState({
-          value,
-        });
-      },
-    };
-    return <DateField {...this.props} input={input} />;
-  }
-}
+export const DateWithHintText = Template.bind({});
+DateWithHintText.args = {
+  hintText: 'For example, 31 03 1980',
+  children: 'What is your date of birth?',
+};
 
-export const Default: React.FC = () => (
-  <ManagedDateField
-    input={{
-      onFocus: action('date-focus'),
-      onBlur: action('date-blur'),
-      onChange: action('date-change'),
-    }}
-    inputNames={{ day: 'dayInputName' }}
-  >
-    What is your date of birth?
-  </ManagedDateField>
-);
+export const DateWithDefaultValues = Template.bind({});
+DateWithDefaultValues.args = {
+  defaultValues: { day: '01', month: '02', year: '2018' },
+  children: 'What is your date of birth?',
+};
 
-export const DateWithHintText: React.FC = () => (
-  <DateField hintText="For example, 31 03 1980">What is your date of birth?</DateField>
-);
-
-export const DateWithDefaultValues: React.FC = () => (
-  <DateField defaultValues={{ day: '01', month: '02', year: '2018' }}>What is your date of birth ?</DateField>
-);
-
-export const DateWithHintTextError: React.FC = () => (
-  <DateField hintText="For example, 31 03 1980" errorText="Error message goes here">
-    What is your date of birth?
-  </DateField>
-);
+export const DateWithHintTextError = Template.bind({});
+DateWithHintTextError.args = {
+  hintText: 'For example, 31 03 1980',
+  children: 'What is your date of birth?',
+  errorText: 'Error message goes here',
+};

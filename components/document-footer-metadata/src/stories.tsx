@@ -1,3 +1,5 @@
+import type { Story } from '@storybook/react';
+
 import * as React from 'react';
 
 import Link from '@govuk-react/link';
@@ -40,6 +42,23 @@ export default {
   component: DocumentFooterMetadata,
 };
 
-export const Default: React.FC = () => <DocumentFooterMetadata from={fromData} />;
-export const DfmFromPartOfExample: React.FC = () => <DocumentFooterMetadata from={fromData} partOf={partOfData} />;
-export const DfmFromOtherDataExample: React.FC = () => <DocumentFooterMetadata from={fromData} other={otherData} />;
+const Template: Story<React.ComponentProps<typeof DocumentFooterMetadata>> = (args) => (
+  <DocumentFooterMetadata {...args} />
+);
+
+export const Default = Template.bind({});
+Default.args = {
+  from: fromData,
+};
+
+export const DfmFromPartOfExample = Template.bind({});
+DfmFromPartOfExample.args = {
+  from: fromData,
+  partOf: partOfData,
+};
+
+export const DfmFromOtherDataExample = Template.bind({});
+DfmFromOtherDataExample.args = {
+  from: fromData,
+  other: otherData,
+};

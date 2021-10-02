@@ -71,19 +71,6 @@ const BreadcrumbsListItem = styled('li')({
  *
  * - https://govuk-react.github.io/govuk-react/?path=/docs/breadcrumbs
  * - https://design-system.service.gov.uk/components/breadcrumbs/
- *
- * ### Usage
- *
- * ```jsx
- * import { Breadcrumbs } from 'govuk-react'
- *
- * const MyComponent = () => <Breadcrumbs>
- *   <Breadcrumbs.Link href="/section">Section</Breadcrumbs.Link>
- *   <Breadcrumbs.Link href="/section/sub-section">Sub-section</Breadcrumbs.Link>
- *   Current page
- * </Breadcrumbs>
- * ```
- *
  */
 export const Breadcrumbs: BreadcrumbsType = ({ children, ...props }: BreadcrumbsProps) => (
   <BreadcrumbsContainer {...props}>

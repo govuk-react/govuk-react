@@ -10,8 +10,8 @@ export default {
   component: Breadcrumbs,
 };
 
-export const Default: Story = () => (
-  <Breadcrumbs>
+export const Default: Story = (args) => (
+  <Breadcrumbs {...args}>
     <Breadcrumbs.Link href="/section">Section</Breadcrumbs.Link>
     <Breadcrumbs.Link href="/section/sub-section">Sub-section</Breadcrumbs.Link>
     Current page

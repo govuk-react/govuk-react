@@ -11,9 +11,15 @@ export default {
   component: BackLink,
 };
 
-export const Default: Story = (args) => <BackLink onClick={action('go-back')} {...args} />;
+const Template: Story = (args) => <BackLink onClick={action('go-back')} {...args} />;
+
+export const Default = Template.bind({});
 Default.args = {
   children: 'Back',
 };
 
-export const WithHref: Story = () => <BackLink href="#">Back</BackLink>;
+export const WithHref = Template.bind({});
+WithHref.args = {
+  children: 'Back',
+  href: '#',
+};

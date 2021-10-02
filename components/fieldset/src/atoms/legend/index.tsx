@@ -67,5 +67,6 @@ Legend.defaultProps = {
   isPageHeading: false,
   size: undefined,
 };
+Legend.displayName = 'Fieldset.Legend';
 
 export default Legend;

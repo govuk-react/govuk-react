@@ -1,3 +1,5 @@
+import type { Story } from '@storybook/react';
+
 import * as React from 'react';
 
 import { FileUpload } from '.';
@@ -8,18 +10,30 @@ export default {
   component: FileUpload,
 };
 
-export const Default: React.FC = () => <FileUpload name="group0">Upload a document</FileUpload>;
-export const InputWithHintText: React.FC = () => (
-  <FileUpload name="group1" acceptedFormats=".jpg, .png" hint="This can be in either JPG or PNG format">
-    Upload a photo
-  </FileUpload>
-);
-const meta = {
-  touched: true,
-  error: 'Example',
+const Template: Story<React.ComponentProps<typeof FileUpload>> = (args) => <FileUpload {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  name: 'group0',
+  children: 'Upload a document',
 };
-export const InputWithHintTextError: React.FC = () => (
-  <FileUpload name="group1" acceptedFormats=".jpg, .png" hint="This can be in either JPG or PNG format" meta={meta}>
-    Upload a photo
-  </FileUpload>
-);
+
+export const InputWithHintText = Template.bind({});
+InputWithHintText.args = {
+  name: 'group1',
+  children: 'Upload a photo',
+  acceptedFormats: '.jpg, .png',
+  hint: 'This can be in either JPG or PNG format',
+};
+
+export const InputWithHintTextError = Template.bind({});
+InputWithHintTextError.args = {
+  name: 'group1',
+  children: 'Upload a photo',
+  acceptedFormats: '.jpg, .png',
+  hint: 'This can be in either JPG or PNG format',
+  meta: {
+    touched: true,
+    error: 'Example',
+  },
+};

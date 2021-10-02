@@ -10,32 +10,39 @@ export default {
   component: Checkbox,
 };
 
-export const Default: Story = (args: { children: string }) => <Checkbox {...args} />;
+const Template: Story<React.ComponentProps<typeof Checkbox>> = (args) => <Checkbox {...args} />;
+
+export const Default = Template.bind({});
 
 Default.args = {
   children: 'Example',
 };
 
-export const CheckboxDisabled: Story = () => <Checkbox disabled>Disabled checkbox option</Checkbox>;
+export const CheckboxDisabled = Template.bind({});
+CheckboxDisabled.args = {
+  children: 'Disabled checkbox option',
+  disabled: true,
+};
 
-export const CheckboxPreselected: Story = () => (
-  <div>
-    <Checkbox defaultChecked>Farm or agricultural waste</Checkbox>
-  </div>
-);
+export const CheckboxPreselected = Template.bind({});
+CheckboxPreselected.args = {
+  children: 'Farm or agricultural waste',
+  defaultChecked: true,
+};
 
-export const CheckboxPreselectedDisabled: Story = () => (
-  <div>
-    <Checkbox disabled defaultChecked>
-      Farm or agricultural waste
+export const CheckboxPreselectedDisabled = Template.bind({});
+CheckboxPreselectedDisabled.args = {
+  children: 'Farm or agricultural waste',
+  defaultChecked: true,
+  disabled: true,
+};
+
+export const CheckboxWithHintText: Story = (args) => (
+  <>
+    <Checkbox hint="including English, Scottish, Welsh and Northern Irish" {...args}>
+      British
     </Checkbox>
-  </div>
-);
-
-export const CheckboxWithHintText: Story = () => (
-  <div>
-    <Checkbox hint="including English, Scottish, Welsh and Northern Irish">British</Checkbox>
     <Checkbox>Irish</Checkbox>
     <Checkbox>Citizen of another country</Checkbox>
-  </div>
+  </>
 );
