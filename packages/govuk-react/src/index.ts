@@ -26,7 +26,6 @@ export { default as LabelText } from '@govuk-react/label-text';
 export { default as LeadParagraph } from '@govuk-react/lead-paragraph';
 export { default as Link } from '@govuk-react/link';
 export { default as ListItem } from '@govuk-react/list-item';
-export { default as ListNavigation } from '@govuk-react/list-navigation';
 export { default as LoadingBox } from '@govuk-react/loading-box';
 export { default as Main } from '@govuk-react/main';
 export { default as MultiChoice } from '@govuk-react/multi-choice';

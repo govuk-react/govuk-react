@@ -29,23 +29,33 @@ const Forms: React.FC = () => (
     <Route path="/">
       <GovUK.H2>Forms</GovUK.H2>
       <GovUK.Paragraph>Which form example would you like to run?</GovUK.Paragraph>
-      <GovUK.ListNavigation>
-        <GovUK.Link as={Link} to="/forms/form">
-          Basic
-        </GovUK.Link>
-        <GovUK.Link as={Link} to="/forms/final-form">
-          Final Form
-        </GovUK.Link>
-        <GovUK.Link as={Link} to="/forms/formik">
-          Formik
-        </GovUK.Link>
-        <GovUK.Link as={Link} to="/forms/react-hook-form">
-          React Hook Form
-        </GovUK.Link>
-        <GovUK.Link as={Link} to="/forms/react-jsonschema-form">
-          React JSON Schema Form
-        </GovUK.Link>
-      </GovUK.ListNavigation>
+      <GovUK.UnorderedList>
+        <GovUK.ListItem>
+          <GovUK.Link as={Link} to="/forms/form">
+            Basic
+          </GovUK.Link>
+        </GovUK.ListItem>
+        <GovUK.ListItem>
+          <GovUK.Link as={Link} to="/forms/final-form">
+            Final Form
+          </GovUK.Link>
+        </GovUK.ListItem>
+        <GovUK.ListItem>
+          <GovUK.Link as={Link} to="/forms/formik">
+            Formik
+          </GovUK.Link>
+        </GovUK.ListItem>
+        <GovUK.ListItem>
+          <GovUK.Link as={Link} to="/forms/react-hook-form">
+            React Hook Form
+          </GovUK.Link>
+        </GovUK.ListItem>
+        <GovUK.ListItem>
+          <GovUK.Link as={Link} to="/forms/react-jsonschema-form">
+            React JSON Schema Form
+          </GovUK.Link>
+        </GovUK.ListItem>
+      </GovUK.UnorderedList>
     </Route>
   </Switch>
 );
