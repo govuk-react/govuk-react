@@ -1,3 +1,5 @@
+import type { Story } from '@storybook/react';
+
 import * as React from 'react';
 import styled from 'styled-components';
 import GridCol from '@govuk-react/grid-col';
@@ -15,9 +17,13 @@ const Content = styled('div')({
   backgroundColor: '#7DADD3',
   backgroundImage: 'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)',
 });
+Content.displayName = 'div';
 
-export const Default: React.FC = () => (
-  <GridRow>
+export const Default: Story = (args) => (
+  <GridRow {...args}>
+    <GridCol>
+      <Content>Example</Content>
+    </GridCol>
     <GridCol>
       <Content>Example</Content>
     </GridCol>
