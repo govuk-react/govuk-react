@@ -1,3 +1,5 @@
+import type { Story } from '@storybook/react';
+
 import * as React from 'react';
 
 import { HintText } from '.';
@@ -8,4 +10,4 @@ export default {
   component: HintText,
 };
 
-export const Default: React.FC = () => <HintText>Example</HintText>;
+export const Default: Story = (args) => <HintText {...args}>Example</HintText>;
