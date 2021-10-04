@@ -1,5 +1,9 @@
-// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/input/_input.scss
-// https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
+/**
+ * ### References:
+ *
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/input/_input.scss
+ * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
+ */
 import type { LabelProps } from '@govuk-react/label';
 import type { InputProps } from '@govuk-react/input';
 
@@ -11,57 +15,11 @@ import HintText from '@govuk-react/hint-text';
 import Input from '@govuk-react/input';
 
 /**
+ * Use the text input component when you need to let users enter text that’s no longer than a single line, such as their name or phone number.
  *
- * ### Usage
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/input-field
+ * - https://design-system.service.gov.uk/components/text-input/
  *
- * Simple
- *
- * ```jsx
- * import { InputField } from 'govuk-react'
- *
- * <InputField name="group0">National Insurance number</InputField>
- * ```
- *
- * Input with hint text
- *
- * ```jsx
- * <InputField
- *    input={{ name: 'group1' }}
- *    hint={[
- *      'It’s on your National Insurance card, benefit letter, payslip or P60.',
- *      <br />,
- *      'For example, ‘QQ 12 34 56 C’.',
- *    ]}
- *  >
- *    National Insurance number
- *  </InputField>
- * ```
- *
- * Input with hint text & error
- *
- * ```jsx
- *  const meta = {
- *    touched: true,
- *    error: 'Example',
- *  };
- *
- *  <InputField
- *    input={{ name: 'group1' }}
- *    hint={[
- *      'It’s on your National Insurance card, benefit letter, payslip or P60.',
- *      <br />,
- *      'For example, ‘QQ 12 34 56 C’.',
- *    ]}
- *    meta={meta}
- *  >
- *    National Insurance number
- *  </InputField>
- * ```
- *
- * ### References:
- *
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/input/_input.scss
- * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
  */
 export const InputField: React.FC<InputFieldProps> = ({ meta, children, hint, input, ...props }: InputFieldProps) => (
   <Label {...props} error={meta.touched && !!meta.error}>
