@@ -12,33 +12,38 @@ export default {
   component: Heading,
 };
 
-export const Default: Story = (args) => <Heading {...args} />;
+const Template: Story<React.ComponentProps<typeof Heading>> = (args) => <Heading {...args} />;
+
+export const Default: Story = Template.bind({});
 Default.args = {
   size: 'LARGE',
   children: 'Heading text',
 };
 
-export const LevelAliases: Story = () => (
-  <div>
-    <H1>H1</H1>
+export const LevelAliases: Story = (args) => (
+  <>
+    <H1 {...args}>H1</H1>
     <H2>H2</H2>
     <H3>H3</H3>
     <H4>H4</H4>
     <H5>H5</H5>
     <H6>H6</H6>
-  </div>
+  </>
 );
-export const DifferingSizes: Story = () => (
-  <div>
-    <H6 size={80}>h6 with XXLARGE style</H6>
+export const DifferingSizes: Story = (args) => (
+  <>
+    <H6 size={80} {...args}>
+      h6 with XXLARGE style
+    </H6>
     <Heading as="h2" size={16}>
       h2 with XSMALL style
     </Heading>
     <H3 size="LARGE">H3 with size large</H3>
-  </div>
+  </>
 );
-export const PropsPassThrough: Story = () => (
-  <div>
-    <Heading onClick={action('heading-click')}>Click me</Heading>
-  </div>
-);
+
+export const PropsPassThrough: Story = Template.bind({});
+PropsPassThrough.args = {
+  onClick: action('onClick'),
+  children: 'Click me',
+};
