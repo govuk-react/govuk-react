@@ -1,3 +1,7 @@
+/**
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
+ */
+
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
 import * as React from 'react';
@@ -13,25 +17,11 @@ import {
 import { spacing, typography } from '@govuk-react/lib';
 
 /**
+ * Use the text input component when you need to let users enter text that’s no longer than a single line, such as their name or phone number.
  *
- * ### Usage
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/input
+ * - https://design-system.service.gov.uk/components/text-input/
  *
- * Simple
- *
- * ```jsx
- * import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
- *
- * <Label>
- *   <LabelText>Example label</LabelText>
- *   <HintText>Example hint</HintText>
- *   <ErrorText>Example error</ErrorText>
- *   <Input value={value} onClick={onClick} />
- * </Label>
- * ```
- *
- * ### References:
- *
- * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
  */
 export const Input = styled('input')<InputProps>(
   typography.font({ size: 19 }),
