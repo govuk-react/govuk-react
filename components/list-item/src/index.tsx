@@ -1,36 +1,18 @@
+/**
+ * ### References
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_lists.scss
+ */
 import styled from 'styled-components';
 import { SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 
 /**
+ * Use lists to make blocks of text easier to read, and to break information into manageable chunks.
  *
- * ### Usage
- *
- *
- * Simple
- *
- * ```jsx
- * import { ListItem } from 'govuk-react'
- *
- * <ListItem>List item example</ListItem>
- * ```
- *
- * With a link
- *
- * ```jsx
- * import { ListItem, Link } from 'govuk-react';
- *
- * <ListItem>
- *   <Link href="https://www.google.com/">List item example</Link>
- * </ListItem>
- * ```
- *
- * ### References
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_lists.scss
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/list-item
+ * - https://design-system.service.gov.uk/styles/typography/#lists
  */
 export const ListItem = styled('li')(
-  // including font definition here is belt & braces
-  // govuk-frontend doesn't bother to do that
   typography.font({ size: 19 }),
   { marginBottom: SPACING_POINTS[1] },
   spacing.withWhiteSpace()
