@@ -1,3 +1,10 @@
+/**
+ * ### References:
+ *
+ * - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_grid_layout.scss
+ * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
+ */
+
 import * as React from 'react';
 import styled from 'styled-components';
 import { GUTTER_HALF, MEDIA_QUERIES } from '@govuk-react/constants';
@@ -26,6 +33,7 @@ function setGrowShrink(style) {
 }
 
 /**
+ * Grid Column.
  *
  * Should always be wrapped by `GridRow`. Will always render a column at full width if
  * the browser width is below the `TABLET` breakpoint.
@@ -33,52 +41,7 @@ function setGrowShrink(style) {
  * NB our grid is based on flex-box, which differs from govuk-frontend, which instead uses
  * floats, however it is otherwise similar to use.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { GridRow , GridCol } from 'govuk-react'
- *
- * <Fragment>
- *   <GridRow>
- *     <GridCol>
- *       ...
- *     </GridCol>
- *   </GridRow>
- *   <GridRow>
- *     <GridCol setWidth="one-half">
- *       ...
- *     </GridCol>
- *     <GridCol setWidth="one-quarter">
- *       ...
- *     </GridCol>
- *     <GridCol setWidth="one-quarter">
- *       ...
- *     </GridCol>
- *   <GridRow>
- *     <GridCol setWidth="one-third">
- *       ...
- *     </GridCol>
- *     <GridCol setWidth="two-thirds">
- *       ...
- *     </GridCol>
- *   </GridRow>
- *   <GridRow>
- *     <GridCol setWidth="one-third" setDesktopWidth="one-quarter">
- *       ...
- *     </GridCol>
- *     <GridCol setWidth="two-thirds" setDesktopWidth="auto">
- *       ...
- *     </GridCol>
- *   </GridRow>
- * </Fragment>
- * ```
- *
- * ### References:
- *
- * - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_grid_layout.scss
- * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/grid-col
  *
  */
 export const GridCol = styled('div')<GridColProps>(

@@ -1,3 +1,5 @@
+import type { Story } from '@storybook/react';
+
 import * as React from 'react';
 import styled from 'styled-components';
 
@@ -18,9 +20,11 @@ const Content = styled('div')({
   backgroundColor: '#7DADD3',
   backgroundImage: 'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)',
 });
-export const Default: React.FC = () => (
+Content.displayName = 'div';
+
+export const Default: Story = (args) => (
   <GridRow>
-    <GridCol setWidth="one-half">
+    <GridCol setWidth="one-half" {...args}>
       <H2>Half column</H2>
       <Paragraph>
         This guide shows how to make your service look consistent with the rest of GOV.UK. It includes example code and
@@ -37,23 +41,34 @@ export const Default: React.FC = () => (
   </GridRow>
 );
 
-export const ColumnHalves: React.FC = () => (
+export const ColumnHalves: Story = (args) => (
   <GridRow>
+    <GridCol setWidth="one-half" {...args}>
+      <Content>content</Content>
+    </GridCol>
     <GridCol setWidth="one-half">
       <Content>content</Content>
     </GridCol>
-    <GridCol setWidth="one-half">
+  </GridRow>
+);
+
+export const ColumnThirds: Story = (args) => (
+  <GridRow>
+    <GridCol setWidth="one-third" {...args}>
+      <Content>content</Content>
+    </GridCol>
+    <GridCol setWidth="one-third">
+      <Content>content</Content>
+    </GridCol>
+    <GridCol setWidth="one-third">
       <Content>content</Content>
     </GridCol>
   </GridRow>
 );
 
-export const ColumnThirds: React.FC = () => (
+export const ColumnTwoThirdsOneThird: Story = (args) => (
   <GridRow>
-    <GridCol setWidth="one-third">
-      <Content>content</Content>
-    </GridCol>
-    <GridCol setWidth="one-third">
+    <GridCol setWidth="two-thirds" {...args}>
       <Content>content</Content>
     </GridCol>
     <GridCol setWidth="one-third">
@@ -62,31 +77,20 @@ export const ColumnThirds: React.FC = () => (
   </GridRow>
 );
 
-export const ColumnTwoThirdsOneThird: React.FC = () => (
+export const ColumnOneThirdTwoThirds: Story = (args) => (
   <GridRow>
+    <GridCol setWidth="one-third" {...args}>
+      <Content>content</Content>
+    </GridCol>
     <GridCol setWidth="two-thirds">
       <Content>content</Content>
     </GridCol>
-    <GridCol setWidth="one-third">
-      <Content>content</Content>
-    </GridCol>
   </GridRow>
 );
 
-export const ColumnOneThirdTwoThirds: React.FC = () => (
+export const ColumnFourQuarters: Story = (args) => (
   <GridRow>
-    <GridCol setWidth="one-third">
-      <Content>content</Content>
-    </GridCol>
-    <GridCol setWidth="two-thirds">
-      <Content>content</Content>
-    </GridCol>
-  </GridRow>
-);
-
-export const ColumnFourQuarters: React.FC = () => (
-  <GridRow>
-    <GridCol setWidth="one-quarter">
+    <GridCol setWidth="one-quarter" {...args}>
       <Content>content</Content>
     </GridCol>
     <GridCol setWidth="one-quarter">
@@ -101,9 +105,9 @@ export const ColumnFourQuarters: React.FC = () => (
   </GridRow>
 );
 
-export const ColumnOneQuarterAndAutoFill: React.FC = () => (
+export const ColumnOneQuarterAndAutoFill: Story = (args) => (
   <GridRow>
-    <GridCol setWidth="one-quarter">
+    <GridCol setWidth="one-quarter" {...args}>
       <Content>content</Content>
     </GridCol>
     <GridCol>
@@ -112,9 +116,9 @@ export const ColumnOneQuarterAndAutoFill: React.FC = () => (
   </GridRow>
 );
 
-export const ColumnWidthsDifferingBetweenTabletAndDesktop: React.FC = () => (
+export const ColumnWidthsDifferingBetweenTabletAndDesktop: Story = (args) => (
   <GridRow>
-    <GridCol setWidth="one-quarter" setDesktopWidth="one-third">
+    <GridCol setWidth="one-quarter" setDesktopWidth="one-third" {...args}>
       <Content>content</Content>
     </GridCol>
     <GridCol setWidth="three-quarters" setDesktopWidth="auto">
@@ -123,9 +127,9 @@ export const ColumnWidthsDifferingBetweenTabletAndDesktop: React.FC = () => (
   </GridRow>
 );
 
-export const CustomWidthsDifferingBetweenTabletAndDesktop: React.FC = () => (
+export const CustomWidthsDifferingBetweenTabletAndDesktop: Story = (args) => (
   <GridRow>
-    <GridCol setWidth="60%" setDesktopWidth="auto">
+    <GridCol setWidth="60%" setDesktopWidth="auto" {...args}>
       <Content>content</Content>
     </GridCol>
     <GridCol setWidth="30%" setDesktopWidth="18%">
