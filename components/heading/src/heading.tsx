@@ -74,7 +74,7 @@ Heading.defaultProps = {
 
 Heading.displayName = 'Heading';
 
-export interface HeadingType extends React.FC<HeadingOwnProps> {
+export interface HeadingType extends React.FC<HeadingOwnProps & WithWhiteSpaceProps> {
   (props: HeadingPropsWithoutAs): React.ReactElement<HeadingPropsWithoutAs>;
   <AsC extends string | React.ComponentType = 'h1', FAsC extends string | React.ComponentType = AsC>(
     props: HeadingPropsWithAs<AsC, FAsC>
