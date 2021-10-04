@@ -1,3 +1,9 @@
+/**
+ * ### References
+ *
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_links.scss
+ */
+
 import * as React from 'react';
 import styled from 'styled-components';
 import { link } from '@govuk-react/lib';
@@ -14,32 +20,10 @@ export interface LinkProps {
 }
 
 /**
+ * Link/Anchor element.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { Link } from 'govuk-react'
- *
- * <Link href="/some/page">Example</Link>
- * ```
- *
- * It is possible to use this component to style a link from react-router, or reach-router
- * as follows:
- *
- * ```jsx
- * import { Link as RouterLink } from 'react-router-dom';
-
- * <Link as={RouterLink} to="destination">Router example</Link>
- * ```
- *
- * NB if no link destination is set then the link styling will not be applied.
- *
- * ### References
- *
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/link
  * - https://design-system.service.gov.uk/styles/typography/#links
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_links.scss
  */
 export const Link = styled('a').withConfig<LinkProps>({
   shouldForwardProp: (prop) => !['noVisitedState', 'textColour', 'muted'].includes(prop),

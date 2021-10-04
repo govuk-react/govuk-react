@@ -35,10 +35,10 @@ Default.args = {
   children: 'Link example',
 };
 
-export const WithReactRouter: React.FC = () => (
+export const WithReactRouter: Story = (args) => (
   <BrowserRouter>
     <div>
-      <Link as={RLink} to="/first">
+      <Link as={RLink} to="/first" {...args}>
         First link
       </Link>
       <br />
@@ -53,3 +53,8 @@ export const WithReactRouter: React.FC = () => (
     </div>
   </BrowserRouter>
 );
+WithReactRouter.parameters = {
+  docs: {
+    storyDescription: 'Can be used with React Router using `as={Link}`',
+  },
+};
