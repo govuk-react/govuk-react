@@ -12,13 +12,12 @@ export default {
   component: FormGroup,
 };
 
-export const Default: Story = ({ error }: { error: boolean }) => (
-  <FormGroup error={error}>
-    <Checkbox name="group-1">Example</Checkbox>
-  </FormGroup>
-);
+const Template: Story<React.ComponentProps<typeof FormGroup>> = (args) => <FormGroup {...args} />;
+
+export const Default = Template.bind({});
 Default.args = {
   error: false,
+  children: <Checkbox name="group-1">Example</Checkbox>,
 };
 
 export const NestedFormGroups: Story = ({
@@ -46,32 +45,36 @@ Default.args = {
   innerError2: false,
 };
 
-export const ErrorPropSet: Story = () => (
-  <FormGroup error>
-    <Checkbox name="group-1">Example</Checkbox>
-  </FormGroup>
-);
+export const ErrorPropSet = Template.bind({});
+ErrorPropSet.args = {
+  error: true,
+  children: <Checkbox name="group-1">Example</Checkbox>,
+};
 
-export const NestedFormGroupsWithInnerGroupsErrorPropsSet: Story = () => (
-  <FormGroup>
-    <Checkbox name="group-0">Outer FormGroup</Checkbox>
+export const NestedFormGroupsWithInnerGroupsErrorPropsSet = Template.bind({});
+NestedFormGroupsWithInnerGroupsErrorPropsSet.args = {
+  error: false,
+  children: [
+    <Checkbox name="group-0">Outer FormGroup</Checkbox>,
     <FormGroup error>
       <Checkbox name="group-1">First inner FormGroup</Checkbox>
-    </FormGroup>
+    </FormGroup>,
     <FormGroup error>
       <Checkbox name="group-2">Second inner FormGroup</Checkbox>
-    </FormGroup>
-  </FormGroup>
-);
+    </FormGroup>,
+  ],
+};
 
-export const NestedFormGroupsWithAllGroupsErrorPropsSet: Story = () => (
-  <FormGroup error>
-    <Checkbox name="group-0">Outer FormGroup</Checkbox>
+export const NestedFormGroupsWithAllGroupsErrorPropsSet = Template.bind({});
+NestedFormGroupsWithAllGroupsErrorPropsSet.args = {
+  error: true,
+  children: [
+    <Checkbox name="group-0">Outer FormGroup</Checkbox>,
     <FormGroup error>
       <Checkbox name="group-1">First inner FormGroup</Checkbox>
-    </FormGroup>
+    </FormGroup>,
     <FormGroup error>
       <Checkbox name="group-2">Second inner FormGroup</Checkbox>
-    </FormGroup>
-  </FormGroup>
-);
+    </FormGroup>,
+  ],
+};
