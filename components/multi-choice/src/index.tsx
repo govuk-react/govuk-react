@@ -43,29 +43,10 @@ const StyledFieldset = styled('div')<{ error: boolean } & WithWhiteSpaceProps>(
 );
 
 /**
+ * For wrapping a set of radio buttons with a label, optional hint and optional error.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { MultiChoice, Radio } from 'govuk-react';
- *
- * <MultiChoice label="example">
- *    <Radio name="group1" inline>
- *      Yes
- *    </Radio>
- *    <Radio name="group1" inline>
- *      No
- *    </Radio>
- * </MultiChoice>
- * ```
- *
- * ### References:
- *
- * - https://govuk-elements.herokuapp.com/errors/
- * - https://govuk-elements.herokuapp.com/errors/example-form-validation-single-question-radio
- *
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/multi-choice
+ * - https://design-system.service.gov.uk/components/radios/
  */
 export const MultiChoice: React.FC<MultiChoiceProps> = ({
   meta,
