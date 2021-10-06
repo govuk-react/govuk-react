@@ -12,6 +12,11 @@ export default {
 const Template: Story<React.ComponentProps<typeof GlobalStyle>> = (args) => <GlobalStyle {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {
-  children: 'Example of GlobalStyle',
-};
+Default.decorators = [
+  (storyFn) => (
+    <div>
+      {storyFn()}
+      Example of GlobalStyle
+    </div>
+  ),
+];
