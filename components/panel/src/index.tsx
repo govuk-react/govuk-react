@@ -1,3 +1,8 @@
+/**
+ * ### References:
+ *
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/panel
+ */
 import * as React from 'react';
 import styled from 'styled-components';
 import { TURQUOISE, WHITE } from 'govuk-colours';
@@ -48,29 +53,10 @@ const StyledTitle = styled('h1')(
 const StyledBody = styled('div')(typography.font({ size: 36 }));
 
 /**
+ * The panel component is a visible container used on confirmation or results pages to highlight important content.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { Panel } from 'govuk-react'
- *
- * <Panel title="Application complete" />
- * ```
- *
- * Panel with header and HTML body
- *
- * ```jsx
- * <Panel title="Application complete">
- *   Your reference number<br />
- *   <strong>HDJ2123F</strong>
- * </Panel>
- * ```
- *
- * ### References:
- *
- * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/panel
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/panel
+ * - https://design-system.service.gov.uk/components/panel/
  *
  */
 
