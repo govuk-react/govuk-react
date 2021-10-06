@@ -1,44 +1,48 @@
-import React from 'react';
+import type { Story } from '@storybook/react';
+
+import * as React from 'react';
 
 import Checkbox from '.';
 
 export default {
   title: 'Form/Checkbox',
+  id: 'checkbox',
   component: Checkbox,
 };
 
-export const Default: React.FC = () => (
-  <div>
-    <Checkbox>Waste from animal carcasses</Checkbox>
-    <Checkbox>Waste from mines or quarries</Checkbox>
-    <Checkbox>Farm or agricultural waste</Checkbox>
-  </div>
-);
+const Template: Story<React.ComponentProps<typeof Checkbox>> = (args) => <Checkbox {...args} />;
 
-export const CheckboxDisabled: React.FC = () => (
-  <div>
-    <Checkbox disabled>Disabled checkbox option</Checkbox>
-  </div>
-);
+export const Default = Template.bind({});
 
-export const CheckboxPreselected: React.FC = () => (
-  <div>
-    <Checkbox defaultChecked>Farm or agricultural waste</Checkbox>
-  </div>
-);
+Default.args = {
+  children: 'Example',
+};
 
-export const CheckboxPreselectedDisabled: React.FC = () => (
-  <div>
-    <Checkbox disabled defaultChecked>
-      Farm or agricultural waste
+export const CheckboxDisabled = Template.bind({});
+CheckboxDisabled.args = {
+  children: 'Disabled checkbox option',
+  disabled: true,
+};
+
+export const CheckboxPreselected = Template.bind({});
+CheckboxPreselected.args = {
+  children: 'Farm or agricultural waste',
+  defaultChecked: true,
+};
+
+export const CheckboxPreselectedDisabled = Template.bind({});
+CheckboxPreselectedDisabled.args = {
+  children: 'Farm or agricultural waste',
+  defaultChecked: true,
+  disabled: true,
+};
+
+export const CheckboxWithHintText: Story = (args) => (
+  <>
+    <Checkbox hint="including English, Scottish, Welsh and Northern Irish" {...args}>
+      British
     </Checkbox>
-  </div>
-);
-
-export const CheckboxWithHintText: React.FC = () => (
-  <div>
-    <Checkbox hint="including English, Scottish, Welsh and Northern Irish">British</Checkbox>
     <Checkbox>Irish</Checkbox>
     <Checkbox>Citizen of another country</Checkbox>
-  </div>
+  </>
 );

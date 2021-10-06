@@ -1,7 +1,22 @@
-import React from 'react';
+import * as React from 'react';
 import { render } from '@testing-library/react';
+import { ButtonArrow } from '@govuk-react/icons';
 
-import Button, { ButtonStart, ButtonStartIcon, ButtonDisabled } from './fixtures';
+import { Button } from '.';
+
+const ButtonStart: React.FC = (props) => (
+  <Button start {...props}>
+    Save and continue
+  </Button>
+);
+
+const ButtonStartIcon: React.FC = () => (
+  <Button icon={<ButtonArrow />} start>
+    Start now
+  </Button>
+);
+
+const ButtonDisabled: React.FC = () => <Button disabled>Disabled primary button</Button>;
 
 describe('button', () => {
   describe('basics', () => {

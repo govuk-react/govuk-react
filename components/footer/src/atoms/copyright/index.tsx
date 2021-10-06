@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import Link from '@govuk-react/link';
 import { FOOTER_LINK, FOOTER_LINK_HOVER } from 'govuk-colours';

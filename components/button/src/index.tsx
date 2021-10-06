@@ -1,9 +1,15 @@
+/**
+ * ### References:
+ *
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/button/_button.scss
+ */
+
 import type { StyledComponentProps } from 'styled-components';
 
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
 import styled from 'styled-components';
-import React from 'react';
+import * as React from 'react';
 import { BORDER_WIDTH_FORM_ELEMENT, FOCUSABLE, MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 import { BUTTON_COLOUR, BUTTON_COLOUR_DARKEN_15, WHITE } from 'govuk-colours';
@@ -207,30 +213,10 @@ interface ButtonOwnProps extends WithWhiteSpaceProps {
 }
 
 /**
+ * Use the button component to help users carry out an action like starting an application or saving their information.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { Button } from 'govuk-react'
- *
- * <Button>My button text</Button>
- * ```
- *
- * With Icon
- *
- * ```jsx
- * import { ButtonArrow } from 'govuk-react'
- *
- * <Button icon={<ButtonArrow />}>My button text</Button>
- * ```
- *
- * ### References:
- *
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/button
  * - https://design-system.service.gov.uk/components/button/
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/button/_button.scss
- *
  */
 export const Button: ButtonType = React.forwardRef(
   ({ start, children, icon, ...props }: ButtonOwnProps, ref: ButtonRefType) => (

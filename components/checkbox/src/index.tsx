@@ -1,4 +1,10 @@
-import React from 'react';
+/**
+ * ### References:
+ *
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/checkboxes/_checkboxes.scss
+ */
+
+import * as React from 'react';
 import styled from 'styled-components';
 import HintText from '@govuk-react/hint-text';
 import { FOCUS_COLOUR } from 'govuk-colours';
@@ -87,45 +93,10 @@ const StyledCheckboxHint = styled(HintText)({
 });
 
 /**
+ * Let users select one or more options by using the checkboxes component.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { Checkbox } from 'govuk-react'
- *
- * <Checkbox>Text displayed next to checkbox</Checkbox>
- * ```
- *
- * With disabled state
- *
- * ```jsx
- * <Checkbox disabled="disabled">Disabled checkbox option</Checkbox>
- * ```
- *
- * Checkbox preselected
- *
- * ```jsx
- * <Checkbox defaultChecked>Farm or agricultural waste</Checkbox>
- * ```
- *
- * Checkbox preselected & disabled
- *
- * ```jsx
- * <Checkbox disabled="disabled" defaultChecked>Farm or agricultural waste</Checkbox>
- * ```
- *
- * Checkbox with hint text
- *
- * ```jsx
- * <Checkbox hint="including English, Scottish, Welsh and Northern Irish">British</Checkbox>
- * ```
- *
- * ### References:
- *
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/checkboxes/_checkboxes.scss
- *
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/checkbox
+ * - https://design-system.service.gov.uk/components/checkboxes/
  */
 const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   ({ children, className, hint, ...props }: CheckboxProps, ref) => (

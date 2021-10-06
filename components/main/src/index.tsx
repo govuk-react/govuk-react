@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { MEDIA_QUERIES, SPACING, SITE_WIDTH } from '@govuk-react/constants';
 
@@ -25,31 +25,12 @@ const InnerContainer = styled('div')({
 });
 
 /**
+ * Provides a container which aligns to the TopNav component, is centered, and provides top padding.
  *
- * Provides a container which aligns to the topNav component,
- * is centered, and provides top padding.
+ * Note, this equivalent to 'width-container' from govuk-frontend.
  *
- *
- * ### Usage
- *
- * Example
- *
- * * https://codesandbox.io/s/x917knwm4z
- *
- * Simple
- *
- * ```jsx
- * import { Main, GridRow, GridCol } from 'govuk-react'
- *
- * <Main>
- *   <GridRow>
- *     <GridCol>
- *       ...
- *     </GridCol>
- *   </GridRow>
- * </Main>
- * ```
- *
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/main
+ * - https://design-system.service.gov.uk/styles/layout/#page-wrappers
  */
 export const Main: React.FC<MainProps> = ({ children, ...props }: MainProps) => (
   <OuterContainer {...props}>

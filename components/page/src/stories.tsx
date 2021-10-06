@@ -1,4 +1,6 @@
-import React from 'react';
+import type { Story } from '@storybook/react';
+
+import * as React from 'react';
 import styled from 'styled-components';
 
 import BackLink from '@govuk-react/back-link';
@@ -9,48 +11,39 @@ import { Page } from '.';
 
 export default {
   title: 'Page & Layout/Page',
+  id: 'page',
   component: Page,
 };
 
-export const Default: React.FC = () => (
-  <div>
-    <Page beforeChildren={<BackLink href="#" />}>
-      <H1>Page Title</H1>
-    </Page>
-  </div>
-);
+const Template: Story<React.ComponentProps<typeof Page>> = (args) => <Page {...args} />;
 
-const WideContainer = styled(Page.WidthContainer)({
-  maxWidth: 'inherit',
-  [MEDIA_QUERIES.MAX]: {
-    margin: `0 ${GUTTER}`,
-  },
-});
+export const Default = Template.bind({});
+Default.args = {
+  beforeChildren: <BackLink href="#" />,
+  children: <H1>Page Title</H1>,
+};
 
-export const CustomWidthContainerNoWidthLimit: React.FC = () => (
-  <div>
-    <Page container={WideContainer}>
-      <H3>Page container has no maxWidth</H3>
-    </Page>
-  </div>
-);
+export const CustomWidthContainerNoWidthLimit = Template.bind({});
+CustomWidthContainerNoWidthLimit.args = {
+  container: styled(Page.WidthContainer)({
+    maxWidth: 'inherit',
+    [MEDIA_QUERIES.MAX]: {
+      margin: `0 ${GUTTER}`,
+    },
+  }),
+  children: <H3>Page container has no maxWidth</H3>,
+};
 
-const MainContainer = styled(Page.Main)({
-  backgroundColor: '#ddd',
-});
+export const CustomMainContainerBackgroundColour = Template.bind({});
+CustomMainContainerBackgroundColour.args = {
+  main: styled(Page.Main)({
+    backgroundColor: '#ddd',
+  }),
+  children: <H3>Main container with custom background colour</H3>,
+};
 
-export const CustomMainContainerBackgroundColour: React.FC = () => (
-  <div>
-    <Page main={MainContainer}>
-      <H3>Main container with custom background colour</H3>
-    </Page>
-  </div>
-);
-
-export const CustomMainContainerAdjustedPadding: React.FC = () => (
-  <div>
-    <Page main={(props) => <Page.Main padding={{ size: 1 }} {...props} />}>
-      <H3>Main container with adjusted padding using withWhiteSpace padding prop</H3>
-    </Page>
-  </div>
-);
+export const CustomMainContainerAdjustedPadding = Template.bind({});
+CustomMainContainerAdjustedPadding.args = {
+  main: (props) => <Page.Main padding={{ size: 1 }} {...props} />,
+  children: <H3>Main container with adjusted padding using withWhiteSpace padding prop</H3>,
+};

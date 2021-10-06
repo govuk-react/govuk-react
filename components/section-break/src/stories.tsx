@@ -1,10 +1,11 @@
 import type { Story } from '@storybook/react';
 
-import React from 'react';
+import * as React from 'react';
 import { SectionBreak } from '.';
 
 export default {
   title: 'Page & Layout/Section break',
+  id: 'section-break',
   component: SectionBreak,
 };
 

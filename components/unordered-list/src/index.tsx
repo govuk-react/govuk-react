@@ -1,6 +1,11 @@
+/**
+ * ### References
+ *
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_lists.scss
+ */
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
-import React from 'react';
+import * as React from 'react';
 import OrderedList from '@govuk-react/ordered-list';
 
 export interface UnorderedListProps extends WithWhiteSpaceProps {
@@ -11,38 +16,11 @@ export interface UnorderedListProps extends WithWhiteSpaceProps {
 }
 
 /**
+ * Use lists to make blocks of text easier to read, and to break information into manageable chunks.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { UnorderedList, ListItem} from 'govuk-react';
- *
- * <UnorderedList>
- *   <ListItem>Lorem ipsum dolor sit.</ListItem>
- *   <ListItem>Consectetur adipiscing elit.</ListItem>
- *   <ListItem>Curabitur et libero nec.</ListItem>
- * </UnorderedList>
- * ```
- *
- * With Roman
- *
- * ```jsx
- * import { UnorderedList, ListItem} from 'govuk-react';
- *
- * <UnorderedList listStyleType="lower-roman">
- *   <ListItem>Lorem ipsum dolor sit.</ListItem>
- *   <ListItem>Consectetur adipiscing elit.</ListItem>
- *   <ListItem>Curabitur et libero nec.</ListItem>
- * </UnorderedList>
- * ```
- *
- * ### References
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/ordered-list
  * - https://design-system.service.gov.uk/styles/typography/#lists
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_lists.scss
  */
-
 export const UnorderedList: React.FC<UnorderedListProps> = (props: UnorderedListProps) => (
   <OrderedList as="ul" {...props} />
 );

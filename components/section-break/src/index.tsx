@@ -1,3 +1,9 @@
+/**
+ * ### References
+ *
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_section-break.scss
+ */
+
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
 import styled from 'styled-components';
@@ -14,20 +20,10 @@ const breakSizes = {
 };
 
 /**
+ * Create a thematic break between sections of content.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { SectionBreak } from 'govuk-react'
- *
- * <SectionBreak>Example</SectionBreak>
- * ```
- *
- * ### References
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/section-break
  * - https://design-system.service.gov.uk/styles/typography/#section-break
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_section-break.scss
  */
 
 export const SectionBreak = styled('hr')<SectionBreakProps>(

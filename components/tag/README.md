@@ -7,21 +7,10 @@ Tag
 ```
 <!-- STORY -->
 
+Use the tag component to show users the status of something.
 
-### Usage
-
-Simple
-
-```jsx
-import { Tag } from 'govuk-react'
-
-<Tag>beta</Tag>
-```
-
-### References:
-
+- https://govuk-react.github.io/govuk-react/?path=/docs/tag
 - https://design-system.service.gov.uk/components/tag/
-- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/tag/_tag.scss
 
 ### Properties
 Prop | Required | Default | Type | Description

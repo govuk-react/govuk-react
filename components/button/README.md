@@ -7,29 +7,10 @@ Button
 ```
 <!-- STORY -->
 
+Use the button component to help users carry out an action like starting an application or saving their information.
 
-### Usage
-
-Simple
-
-```jsx
-import { Button } from 'govuk-react'
-
-<Button>My button text</Button>
-```
-
-With Icon
-
-```jsx
-import { ButtonArrow } from 'govuk-react'
-
-<Button icon={<ButtonArrow />}>My button text</Button>
-```
-
-### References:
-
+- https://govuk-react.github.io/govuk-react/?path=/docs/button
 - https://design-system.service.gov.uk/components/button/
-- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/button/_button.scss
 
 ### Properties
 Prop | Required | Default | Type | Description
@@ -93,7 +74,7 @@ Prop | Required | Default | Type | Description
  `buttonHoverColour` |  | ```undefined``` | string | Override for default button hover colour,<br/>which defaults to `buttonColour` darkened by 5%
  `buttonShadowColour` |  | ```undefined``` | string | Override for default button shadow colour,<br/>which defaults to `buttonColour` darkened by 15%
  `buttonTextColour` |  | ```undefined``` | string | Override for default button text colour,<br/>which defaults to govuk white
- `children` |  | `````` | any | Button text
+ `children` |  | `````` | ReactNode | Button text
  `className` |  | `````` | string | 
  `color` |  | `````` | string | 
  `contentEditable` |  | `````` | Booleanish | "inherit" | 
@@ -113,7 +94,7 @@ Prop | Required | Default | Type | Description
  `formTarget` |  | `````` | string | 
  `forwardedAs` |  | `````` | undefined | 
  `hidden` |  | `````` | boolean | 
- `icon` |  | ```undefined``` | any | Button icon
+ `icon` |  | ```undefined``` | ReactNode | Button icon
  `id` |  | `````` | string | 
  `inlist` |  | `````` | any | 
  `inputMode` |  | `````` | "text" | "search" | "none" | "tel" | "url" | "email" | "numeric" | "decimal" | Hints at the type of data that might be entered by the user while editing the element or its contents<br/>@see https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute

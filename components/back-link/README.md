@@ -7,32 +7,10 @@ BackLink
 ```
 <!-- STORY -->
 
+Use the back link component to help users go back to the previous page in a multi-page transaction.
 
-### Usage
-
-Simple
-
-```jsx
-import { BackLink } from 'govuk-react'
-
-<BackLink>Back</BackLink>
-```
-
-With custom click handler
-
-```jsx
-<BackLink onClick={this.myCustomFunction}>Back</BackLink>
-```
-
-With `href` attribute
-
-```jsx
-<BackLink href='#'>Back</BackLink>
-```
-
-### References:
-
-- https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/back-link
+- https://govuk-react.github.io/govuk-react/?path=/docs/back-link
+- https://design-system.service.gov.uk/components/back-link/
 
 ### Properties
 Prop | Required | Default | Type | Description

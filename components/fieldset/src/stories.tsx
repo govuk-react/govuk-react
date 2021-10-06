@@ -1,11 +1,12 @@
 import type { Story } from '@storybook/react';
 
-import React from 'react';
+import * as React from 'react';
 
 import { Fieldset } from '.';
 
 export default {
   title: 'Form/Fieldset',
+  id: 'fieldset',
   component: Fieldset,
 };
 
@@ -20,10 +21,14 @@ Default.args = {
   isPageHeading: false,
 };
 
-export const LegendAsPageHeading: Story = () => (
+export const LegendAsPageHeading: Story<React.ComponentProps<typeof Fieldset.Legend>> = (args) => (
   <Fieldset>
-    <Fieldset.Legend size="XLARGE" isPageHeading>
-      Legend as page heading
-    </Fieldset.Legend>
+    <Fieldset.Legend {...args} />
   </Fieldset>
 );
+
+LegendAsPageHeading.args = {
+  size: 'XLARGE',
+  isPageHeading: true,
+  children: 'Legend as page heading',
+};

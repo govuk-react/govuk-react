@@ -1,6 +1,6 @@
 import type { StyledComponentProps } from 'styled-components';
 
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { BLUE, GREY_4, PURPLE, YELLOW, WHITE } from 'govuk-colours';
 import { FONT_SIZE, LINE_HEIGHT, SPACING, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants';

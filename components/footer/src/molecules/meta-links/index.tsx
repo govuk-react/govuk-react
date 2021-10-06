@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { H2 } from '@govuk-react/heading';
 import VisuallyHidden from '@govuk-react/visually-hidden';
 

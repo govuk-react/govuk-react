@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import type { Story } from '@storybook/react';
-import React from 'react';
+import * as React from 'react';
 import { CAPTION_SIZES, HEADING_SIZES, TYPOGRAPHY_SCALE } from '@govuk-react/constants';
 import Heading from '@govuk-react/heading';
 
@@ -8,10 +8,13 @@ import { Caption } from '.';
 
 export default {
   title: 'Typography/Caption',
+  id: 'caption',
   component: Caption,
 };
 
-export const Default: Story = (args) => <Caption {...args} />;
+const Template: Story = (args) => <Caption {...args} />;
+
+export const Default = Template.bind({});
 Default.args = {
   size: 'XL',
   children: 'Heading text',
@@ -80,13 +83,13 @@ PlacedInsideAHeadingComponent.argTypes = {
   },
 };
 
-export const ShowingAllStandardCaptionSizesWithHeadings: Story = () => (
-  <div>
-    <Caption size="XL">Supporting heading size XL</Caption>
+export const ShowingAllStandardCaptionSizesWithHeadings: Story = (args) => (
+  <>
+    <Caption {...args}>Supporting heading size XL (default)</Caption>
     <Heading size="XL">Main heading size XL</Heading>
     <Caption size="L">Supporting heading size L</Caption>
     <Heading size="L">Main heading size L</Heading>
     <Caption size="M">Supporting heading size M</Caption>
     <Heading size="M">Main heading size M</Heading>
-  </div>
+  </>
 );

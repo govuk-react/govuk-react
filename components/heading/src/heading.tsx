@@ -1,9 +1,16 @@
+/**
+ * ### References:
+ *
+ * - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_typography.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_typography.scss
+ */
+
 import type { StyledComponentProps } from 'styled-components';
 
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
 import styled from 'styled-components';
-import React from 'react';
+import * as React from 'react';
 import { HEADING_SIZES, LEVEL_SIZE, LEVEL_TAG, MEDIA_QUERIES, TYPOGRAPHY_SCALE } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 
@@ -41,57 +48,10 @@ const StyledHeading = styled('h1')<StyledHeadingOwnProps>(
 );
 
 /**
+ * Use heading tags, such as `<h1>`, `<h2>` and so on, to tag the headings on a page.
  *
- * ### Usage
- *
- *
- * Simple
- *
- * ```jsx
- * import { Heading } from 'govuk-react'
- *
- * <Heading>Heading text</Heading>
- * ```
- *
- * To pick different heading levels it is recommended to use the shortcut versions as
- * that will pick the appropriate tag as well as set the appropriate corresponding font size.
- *
- * Using shortcuts
- *
- * ```jsx
- * import { H1, H2, H3, H4, H5, H6 } from 'govuk-react'
- *
- * <H1>h1</H1>
- * <H2>h2</H2>
- * <H3>h3</H3>
- * <H4>h4</H4>
- * <H5>h5</H5>
- * <H6>h6</H6>
- * ```
- *
- * Differing sizes
- *
- * ```jsx
- * <H6 size={80}>
- *   H6 with font size 80
- * </H6>
- * <Heading as="h2" size="SMALL">
- *   Heading as h2 with SMALL size
- * </Heading>
- * <H3 size="LARGE">H3 with LARGE size</H3>
- * ```
- *
- * Props pass through
- *
- * ```jsx
- * <Heading onClick={() => { console.log('clicked'); }}>Click me</Heading>
- * ```
- *
- * ### References:
- *
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/heading
  * - https://design-system.service.gov.uk/styles/typography/#headings
- * - https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_typography.scss
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_typography.scss
  */
 export const Heading: HeadingType = ({ level = undefined, ...props }: React.ComponentProps<HeadingType>) => {
   if (level) {
@@ -114,7 +74,7 @@ Heading.defaultProps = {
 
 Heading.displayName = 'Heading';
 
-export interface HeadingType extends React.FC<HeadingOwnProps> {
+export interface HeadingType extends React.FC<HeadingOwnProps & WithWhiteSpaceProps> {
   (props: HeadingPropsWithoutAs): React.ReactElement<HeadingPropsWithoutAs>;
   <AsC extends string | React.ComponentType = 'h1', FAsC extends string | React.ComponentType = AsC>(
     props: HeadingPropsWithAs<AsC, FAsC>

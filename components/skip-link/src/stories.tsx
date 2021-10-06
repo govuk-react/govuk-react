@@ -1,3 +1,5 @@
+import type { Story } from '@storybook/react';
+
 import React, { Component } from 'react';
 
 import Paragraph from '@govuk-react/paragraph';
@@ -6,9 +8,17 @@ import { SkipLink } from '.';
 
 export default {
   title: 'Navigation/Skip link',
+  id: 'skip-link',
   component: SkipLink,
 };
-class AutoFocussed extends Component<{ href: string }> {
+
+export const Default: Story = (args) => <SkipLink {...args} />;
+Default.args = {
+  href: '#main-content',
+  children: 'Skip to main content',
+};
+
+class AutoFocussedSkipLink extends Component<{ href: string }> {
   focusableRef;
 
   constructor(props) {
@@ -25,14 +35,12 @@ class AutoFocussed extends Component<{ href: string }> {
     return <SkipLink ref={this.focusableRef} {...this.props} />;
   }
 }
-
-export const Default: React.FC = () => (
+export const AutoFocussed: React.FC = () => (
   <div>
     <Paragraph>
-      The skip link component in this example should automatically focus. If it loses focus, tab to this example to see
-      it.
+      The skip link component in this example should automatically focus. This is for visual regression testing.
     </Paragraph>
-    <AutoFocussed href="#main-content">Skip to main content</AutoFocussed>
+    <AutoFocussedSkipLink href="#main-content">Skip to main content</AutoFocussedSkipLink>
     <br />
     <br />
     <div id="main-content">

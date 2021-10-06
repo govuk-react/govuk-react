@@ -1,6 +1,11 @@
+/**
+ * ### References:
+ *
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/file-upload
+ */
 import type { LabelProps } from '@govuk-react/label';
 
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import Label from '@govuk-react/label';
 import LabelText from '@govuk-react/label-text';
@@ -27,51 +32,10 @@ const StyledInput = styled('input')({
 });
 
 /**
+ * Help users select and upload a file.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { FileUpload } from 'govuk-react'
- *
- * <FileUpload name="group0">Upload a document</FileUpload>
- * ```
- *
- * Input with hint text
- *
- * ```jsx
- * <FileUpload
- *   name="group1"
- *   acceptedFormats=".jpg, .png"
- *   hint={['This can be in either JPG or PNG format']}
- * >
- *   Upload a photo
- * </FileUpload>
- * ```
- *
- * Input with hint text & error
- *
- * ```jsx
- * const meta = {
- *   touched: true,
- *   error: 'Example',
- * };
- *
- * <FileUpload
- *   name="group1"
- *   acceptedFormats=".jpg, .png"
- *   hint={['This can be in either JPG or PNG format']}
- *   meta={meta}
- * >
- *   Upload a photo
- * </FileUpload>
- * ```
- *
- * ### References:
- *
- * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/file-upload
- *
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/file-upload
+ * - https://design-system.service.gov.uk/components/file-upload/
  */
 export const FileUpload = React.forwardRef<HTMLInputElement, FileUploadProps>(
   ({ meta, children, hint, acceptedFormats, onChange, name, ...props }: FileUploadProps, ref) => (

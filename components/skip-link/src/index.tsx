@@ -1,24 +1,18 @@
+/**
+ * ### References
+ *
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/skip-link
+ */
 import styled from 'styled-components';
 import { SPACING_POINTS } from '@govuk-react/constants';
 import { link, typography, visuallyHidden } from '@govuk-react/lib';
 
 /**
  *
- * ### Usage
- *
  * Use the skip link component to help keyboard-only users skip to the main content on a page.
  *
- * Simple
- *
- * ```jsx
- * import { SkipLink } from 'govuk-react'
- *
- * <SkipLink href="#main-content">Skip to main content</SkipLink>
- * ```
- *
- * ### References
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/skip-link
  * - https://design-system.service.gov.uk/components/skip-link/
- * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/skip-link
  */
 export const SkipLink = styled('a')(
   visuallyHidden.focusable(),

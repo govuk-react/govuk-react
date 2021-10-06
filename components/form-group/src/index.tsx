@@ -1,28 +1,22 @@
+/**
+ * ### References
+ *
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_form-group.scss
+ */
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { ERROR_COLOUR } from 'govuk-colours';
 import { spacing } from '@govuk-react/lib';
 import { BORDER_WIDTH_FORM_GROUP_ERROR, SPACING_POINTS } from '@govuk-react/constants';
 
 /**
+ * For wrapping a set of form fields such as checkboxes.
  *
- * ### Usage
+ * Also see Label and LabelText components.
  *
- * Simple
- *
- * ```jsx
- * import { FormGroup, Checkbox } from 'govuk-react'
- *
- * <FormGroup>
- *   <Checkbox name="group-1">Example</Checkbox>
- * </FormGroup>
- * ```
- *
- * ### References
- *
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_form-group.scss
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/form-group
  */
 export const FormGroup = styled('div')<FormGroupProps>(
   spacing.responsiveMargin({ size: 6, direction: 'bottom' }),

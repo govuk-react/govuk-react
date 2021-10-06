@@ -1,7 +1,11 @@
-// https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/select
+/**
+ * ### References:
+ *
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/select
+ */
 import type { LabelProps } from '@govuk-react/label';
 
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { BLACK, ERROR_COLOUR, YELLOW } from 'govuk-colours';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
@@ -35,78 +39,10 @@ const StyledSelect = styled('select')<{ error?: boolean }>(
 );
 
 /**
+ * The select component should only be used as a last resort in public-facing services because research shows that some users find selects very difficult to use.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * <Select name="group1" label="This is a label">
- *   <option value="0">GOV.UK elements option 1</option>
- *   <option value="1">GOV.UK elements option 2</option>
- *   <option value="2">GOV.UK elements option 3</option>
- * </Select>
- * ```
- *
- * Select with hint text
- *
- * ```jsx
- * <Select
- *    name="group1"
- *    label="This is a label"
- *    hint={[
- *      'This is and example of hintText/description of what we need from you.',
- *    ]}
- *  >
- *    <option value="0">GOV.UK elements option 1</option>
- *    <option value="1">GOV.UK elements option 2</option>
- *    <option value="2">GOV.UK elements option 3</option>
- * </Select>
- * ```
- *
- * Select with hint text & error
- *
- * ```jsx
- * const meta = {
- *   touched: true,
- *   error: 'Example',
- * };
- *
- * <Select
- *    name="group1"
- *    label="This is a label"
- *    hint={[
- *      'This is and example of hintText/description of what we need from you.',
- *    ]}
- *    meta={meta}
- *  >
- *    <option value="0">GOV.UK elements option 1</option>
- *    <option value="1">GOV.UK elements option 2</option>
- *    <option value="2">GOV.UK elements option 3</option>
- * </Select>
- * ```
- *
- * Standalone input with inline label
- *
- * ```jsx
- * import LabelText from '@govuk-react/label-text';
- * import { SelectInput } '@govuk-react/select';
- *
- * <label>
- *    <LabelText>Sort by:&nbsp;
- *      <SelectInput>
- *        <option value="0">People</option>
- *        <option value="1">Animals</option>
- *        <option value="2">Vegetables</option>
- *      </SelectInput>
- *    </LabelText>
- *  </label>
- * ```
- *
- * ### References:
- *
- * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/select
- *
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/select
+ * - https://design-system.service.gov.uk/components/select/
  */
 export const Select: React.FC<SelectProps> = ({ children, hint, label, meta, input, ...props }: SelectProps) => (
   <Label {...props} error={meta.touched && !!meta.error}>
@@ -127,6 +63,7 @@ Select.defaultProps = {
 };
 
 Select.displayName = 'Select';
+StyledSelect.displayName = 'SelectInput';
 
 export interface SelectProps extends LabelProps {
   hint?: React.ReactNode;

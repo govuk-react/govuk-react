@@ -40,6 +40,12 @@ describe('Components', () => {
       it(`has displayName set to ${pascal}`, () => {
         expect(packageExports[pascal].displayName).toBe(pascal);
       });
+
+      it(`has a stories.tsx file with id set to "${component}""`, () => {
+        // eslint-disable-next-line global-require, import/no-dynamic-require, @typescript-eslint/no-var-requires
+        const story = require(path.join(__dirname, `../../../components/${component}/src/stories.tsx`));
+        expect(story.default.id).toBe(component);
+      });
     })
   );
 });

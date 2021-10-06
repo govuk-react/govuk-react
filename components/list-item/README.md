@@ -7,30 +7,10 @@ ListItem
 ```
 <!-- STORY -->
 
+Use lists to make blocks of text easier to read, and to break information into manageable chunks.
 
-### Usage
-
-
-Simple
-
-```jsx
-import { ListItem } from 'govuk-react'
-
-<ListItem>List item example</ListItem>
-```
-
-With a link
-
-```jsx
-import { ListItem, Link } from 'govuk-react';
-
-<ListItem>
-  <Link href="https://www.google.com/">List item example</Link>
-</ListItem>
-```
-
-### References
-- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/core/_lists.scss
+- https://govuk-react.github.io/govuk-react/?path=/docs/list-item
+- https://design-system.service.gov.uk/styles/typography/#lists
 
 ### Properties
 Prop | Required | Default | Type | Description

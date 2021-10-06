@@ -1,28 +1,18 @@
+/**
+ * ### References
+ *
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/error-message/_error-message.scss
+ */
 import styled from 'styled-components';
 import { ERROR_COLOUR } from 'govuk-colours';
 import { SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 
 /**
+ * Follow the [validation pattern](https://design-system.service.gov.uk/patterns/validation/) and show an error message when there is a validation error. In the error message explain what went wrong and how to fix it.
  *
- * ### Usage
- *
- *
- * Simple
- *
- * ```jsx
- * import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
- *
- * <Label>
- *   <LabelText>Example label</LabelText>
- *   <HintText>Example hint</HintText>
- *   <ErrorText>Example error</ErrorText>
- *   <Input value={value} onClick={onClick} />
- * </Label>
- * ```
- *
- * ### References
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/error-message/_error-message.scss
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/error-text
+ * - https://design-system.service.gov.uk/components/error-message/
  */
 export const ErrorText = styled('span')(
   typography.font({ size: 19, weight: 'bold' }),

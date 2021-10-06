@@ -1,33 +1,19 @@
-// https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
+/**
+ * ### References
+ *
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/hint/_hint.scss
+ */
 
 import styled from 'styled-components';
 import { SECONDARY_TEXT_COLOUR } from 'govuk-colours';
 import { SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 
-// NB govuk-frontend has styling adjustments for when hint-text is placed next to some other
-// components - we have not tried to replicate that here
-
 /**
+ * Use hint text alongside a form input for help that’s relevant to the majority of users, like how their information will be used, or where to find it.
  *
- * ### Usage
- *
- *
- * Simple
- *
- * ```jsx
- * import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
- *
- * <Label>
- *   <LabelText>Example label</LabelText>
- *   <HintText>Example hint</HintText>
- *   <ErrorText>Example error</ErrorText>
- *   <Input value={value} onClick={onClick} />
- * </Label>
- * ```
- *
- * ### References
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/hint/_hint.scss
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/hint-text
+ * - https://design-system.service.gov.uk/components/text-input/#hint-text
  */
 export const HintText = styled('span')(
   typography.font({ size: 19 }),

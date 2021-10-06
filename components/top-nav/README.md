@@ -7,70 +7,9 @@ TopNav
 ```
 <!-- STORY -->
 
+The GOV.UK header shows users that they are on GOV.UK and which service they are using.
 
-### Usage
-
-TopNav with logo, service title and navigation items
-
-```jsx
-import { SearchBox, TopNav } from 'govuk-react';
-import CrownIcon from '@govuk-react/icon-crown';
-
-const link = 'https://example.com?=1';
-
-const Company = (
-  <TopNav.Anchor href={link} target="new">
-    <TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</TopNav.IconTitle>
-  </TopNav.Anchor>
-);
-
-const ServiceTitle = (
-  <TopNav.NavLink href={link} target="new">
-    Service Title
-  </TopNav.NavLink>
-);
-
-const Search = (
-  <SearchBox>
-    <SearchBox.Input placeholder="Search GOV.UK" />
-    <SearchBox.Button />
-  </SearchBox>
-);
-
-<TopNav company={Company} serviceTitle={ServiceTitle} search={Search} active={0}>
-  <TopNav.NavLink href="https://example.com?q=catdog" target="new">Navigation item #1</TopNav.NavLink>
-  <TopNav.NavLink href="https://example.com?q=dogcat" target="new">Navigation item #2</TopNav.NavLink>
-</TopNav>
-```
-
-With React Router
-
-```jsx
-import { BrowserRouter, Link } from 'react-router-dom';
-import { TopNav } from 'govuk-react';
-import CrownIcon from '@govuk-react/icon-crown';
-
-const reactRouterLink = '/section';
-const CompanyLink = (
-  <TopNav.Anchor as={Link} to={reactRouterLink}>
-    <TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</TopNav.IconTitle>
-  </TopNav.Anchor>
-);
-
-const ServiceTitleLink = (
-  <TopNav.NavLink as={Link} to={reactRouterLink}>
-    Service Title
-  </TopNav.NavLink>
-);
-
-<BrowserRouter>
-  <TopNav company={CompanyLink} serviceTitle={ServiceTitleLink} />
-</BrowserRouter>
-```
-
-### References:
-
-- http://alphagov.github.io/govuk_template/example-proposition-menu.html
+- https://govuk-react.github.io/govuk-react/?path=/docs/top-nav
 - https://design-system.service.gov.uk/components/header/
 
 ### Properties

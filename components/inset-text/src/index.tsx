@@ -1,3 +1,8 @@
+/**
+ * ### References
+ *
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/inset-text/_inset-text.scss
+ */
 import styled from 'styled-components';
 
 import { BORDER_WIDTH_WIDE, SPACING_POINTS } from '@govuk-react/constants';
@@ -5,20 +10,10 @@ import { spacing, typography } from '@govuk-react/lib';
 import { BORDER_COLOUR } from 'govuk-colours';
 
 /**
+ * Use the inset text component to differentiate a block of text from the content that surrounds it.
  *
- * ### Usage
- *
- * ```jsx
- * import { InsetText } from 'govuk-react'
- *
- * <InsetText>
- *  Hello
- * </InsetText>
- * ```
- *
- * ### References
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/inset-text
  * - https://design-system.service.gov.uk/components/inset-text/
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/inset-text/_inset-text.scss
  */
 export const InsetText = styled('div')(
   typography.font({ size: 19 }),

@@ -1,10 +1,10 @@
-// Tracking:
-// https://design-system.service.gov.uk/styles/page-template/
-// https://design-system.service.gov.uk/styles/layout/#page-wrappers
-// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_main-wrapper.scss
-// https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_width-container.scss
-
-import React from 'react';
+/**
+ * ### References
+ *
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_main-wrapper.scss
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_width-container.scss
+ */
+import * as React from 'react';
 import SkipLink from '@govuk-react/skip-link';
 import TopNav from '@govuk-react/top-nav';
 // import Footer from '@govuk-react/footer';
@@ -13,24 +13,11 @@ import Main from './atoms/main';
 import WidthContainer from './atoms/width-container';
 
 /**
+ * Use this template to keep your pages consistent with the rest of GOV.UK.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { Page, BackLink, H1 } from 'govuk-react';
- *
- * <Page beforeChildren={<BackLink href="#" />}>
- *   <H1>Page title</H1>
- * </Page>
- * ```
- *
- * ### References
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/page
  * - https://design-system.service.gov.uk/styles/page-template/
  * - https://design-system.service.gov.uk/styles/layout/#page-wrappers
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_main-wrapper.scss
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_width-container.scss
  */
 export const Page: PageType = ({
   header,

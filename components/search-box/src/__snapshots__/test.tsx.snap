@@ -71,7 +71,7 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
     <div
       className="c0"
     >
-      <src__Input
+      <SearchBox.Input
         placeholder="example"
         type="search"
       >
@@ -80,8 +80,8 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
           placeholder="example"
           type="search"
         />
-      </src__Input>
-      <Button>
+      </SearchBox.Input>
+      <SearchBox.Button>
         <src__SearchButton
           title="Search"
         >
@@ -121,7 +121,7 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
             </Search>
           </button>
         </src__SearchButton>
-      </Button>
+      </SearchBox.Button>
     </div>
   </src__StyledSearchBox>
 </SearchBox>

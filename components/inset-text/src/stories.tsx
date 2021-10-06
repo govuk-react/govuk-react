@@ -1,12 +1,13 @@
 import type { Story } from '@storybook/react';
 
-import React from 'react';
+import * as React from 'react';
 import Paragraph from '@govuk-react/paragraph';
 
 import { InsetText } from '.';
 
 export default {
   title: 'Typography/Inset text',
+  id: 'inset-text',
   component: InsetText,
 };
 

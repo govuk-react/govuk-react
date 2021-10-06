@@ -1,26 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
 /**
- *
  * A Styled Component to apply global style for use with govuk-react.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import GlobalStyle from '@govuk-react/global-style';
- *
- * const MyApp = () => <>
- *   <GlobalStyle />
- *   <div>Example</div>
- * </>
- * ```
- *
- * ### References:
- *
- * - https://styled-components.com/docs/api#createglobalstyle
- *
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/global-style
  */
 export const GlobalStyle = createGlobalStyle`
  body {

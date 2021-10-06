@@ -1,6 +1,6 @@
 import type { StyledComponentProps } from 'styled-components';
 
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { link, spacing, typography } from '@govuk-react/lib';
 

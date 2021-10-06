@@ -11,28 +11,9 @@ import { spacing } from '@govuk-react/lib';
 // We wrap form inputs with a label to associate them, rather than rely on an ID.
 
 /**
+ * Label element to wrap label-text and a form input.
  *
- * Label element to wraps label-text and a form input
- *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
- *
- * <Label>
- *   <LabelText>Example label</LabelText>
- *   <HintText>Example hint</HintText>
- *   <ErrorText>Example error</ErrorText>
- *   <Input value={value} onClick={onClick} />
- * </Label>
- * ```
- *
- * ### References:
- *
- * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
- *
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/label
  */
 export const Label = styled('label')<LabelProps>(
   {

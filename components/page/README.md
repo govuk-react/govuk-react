@@ -7,28 +7,21 @@ Page
 ```
 <!-- STORY -->
 
+Use this template to keep your pages consistent with the rest of GOV.UK.
 
-### Usage
-
-Simple
-
-```jsx
-import { Page, BackLink, H1 } from 'govuk-react';
-
-<Page beforeChildren={<BackLink href="#" />}>
-  <H1>Page title</H1>
-</Page>
-```
-
-### References
+- https://govuk-react.github.io/govuk-react/?path=/docs/page
 - https://design-system.service.gov.uk/styles/page-template/
 - https://design-system.service.gov.uk/styles/layout/#page-wrappers
-- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_main-wrapper.scss
-- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_width-container.scss
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
-
+ `beforeChildren` |  | ```undefined``` | ReactNode | Content that needs to appear outside the main page wrapper (see `main`).<br/>For example: A back link component, breadcrumbs, phase banner component
+ `children` |  | ```undefined``` | ReactNode | Page contents
+ `container` |  | ```Page.WidthContainer``` | ElementType<any> | Override the default page container component.<br/>`beforeChildren` and `children` (wrapped in `main`) will be placed inside this component.
+ `footer` |  | ```undefined``` | ReactNode | Override the default page footer component.
+ `header` |  | ```<TopNav />``` | ReactNode | Override the default page header component.
+ `id` |  | ```content``` | string | ID for page content
+ `main` |  | ```Page.Main``` | ElementType<any> | Override the default wrapper component for main page content
 
 

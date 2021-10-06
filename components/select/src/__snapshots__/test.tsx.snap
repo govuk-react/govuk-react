@@ -202,7 +202,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
           example
         </span>
       </ErrorText>
-      <src__StyledSelect
+      <SelectInput
         error={true}
       >
         <select
@@ -210,7 +210,7 @@ exports[`Select matches snapshot for errorText: errorText mount 1`] = `
         >
           example
         </select>
-      </src__StyledSelect>
+      </SelectInput>
     </label>
   </Label>
 </Select>
@@ -339,13 +339,13 @@ exports[`Select matches snapshot: enzyme.mount 1`] = `
           example
         </span>
       </LabelText>
-      <src__StyledSelect>
+      <SelectInput>
         <select
           className="c2"
         >
           example
         </select>
-      </src__StyledSelect>
+      </SelectInput>
     </label>
   </Label>
 </Select>

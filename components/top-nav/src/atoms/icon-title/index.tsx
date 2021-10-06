@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 
 const Container = styled('div')({
@@ -30,5 +30,6 @@ IconTitle.defaultProps = {
   icon: undefined,
   children: undefined,
 };
+IconTitle.displayName = 'TopNav.IconTitle';
 
 export default IconTitle;

@@ -1,11 +1,12 @@
 import type { Story } from '@storybook/react';
 
-import React from 'react';
+import * as React from 'react';
 
 import { Tag } from '.';
 
 export default {
   title: 'Typography/Tag',
+  id: 'tag',
   component: Tag,
 };
 
