@@ -1,4 +1,8 @@
-// https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/textarea
+/**
+ * ### References:
+ *
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/textarea
+ */
 import type { LabelProps } from '@govuk-react/label';
 
 import * as React from 'react';
@@ -38,46 +42,10 @@ const TextAreaField = styled('textarea')<{ error?: boolean }>(
 );
 
 /**
+ * Use the textarea component when you need to let users enter an amount of text that’s longer than a single line.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { TextArea } from 'govuk-react'
- *
- * <TextArea input={{ name: 'group1' }}>Description of what you saw</TextArea>
- * ```
- *
- * TextArea with hint text
- *
- * ```jsx
- * <TextArea input={{ name: 'group1' }} hint={['Enter as many words as you like']}>
- *   Description of what you saw
- * </TextArea>
- * ```
- *
- * TextArea with hint text & error
- *
- * ```jsx
- * const meta = {
- *   touched: true,
- *   error: 'Example',
- * };
- *
- * <TextArea
- *    input={{ name: 'group1' }}
- *    hint={['Enter as many words as you like']}
- *    meta={meta}
- *  >
- *    Description of what you saw
- *  </TextArea>
- * ```
- *
- * ### References:
- *
- * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/textarea
- *
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/text-area
+ * - https://design-system.service.gov.uk/components/textarea/
  */
 export const TextArea: React.FC<TextAreaProps> = ({ children, hint, meta, input, ...props }: TextAreaProps) => (
   <Label error={meta.touched && !!meta.error} {...props}>
