@@ -72,8 +72,9 @@ const MyComponent = () => (
 
 Use of these components assumes the following from the peer project:
 
-- Either [normalize.css](https://necolas.github.io/normalize.css/) or [sanitize.css](https://csstools.github.io/sanitize.css/) is used as a CSS reset.
+- The govuk-react `GlobalStyle` component is included on all pages.
 - The GDS Transport font face is included ([for gov.uk domains only](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk))
+- Optionally, either [normalize.css](https://necolas.github.io/normalize.css/) or [sanitize.css](https://csstools.github.io/sanitize.css/) is used as a CSS reset. We don't test for this, so please raise an issue if you find any problems with compatability.
 - Other than the reset, no other styles affecting generic elements (without classes, IDs etc) are present in the CSS.
 
 ## Why CSS-in-JS?
@@ -81,8 +82,6 @@ Use of these components assumes the following from the peer project:
 See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
 
 This project is part of a larger initiative to componetise large scale React applications. Using CSSinJS allows us to include styles inside a module bundle that can be published (using `npm publish`) and consumed by a peer application, without putting dependencies on the peer application to implement a specific CSS build system.
-
-We are expecting to use [Interoperable Style Transfer Format (ISTF)](https://github.com/cssinjs/istf-spec) once it is finalised and compatible with a CSSinJS library, which would allow us to distribute CSSinJS stylesheets without a runtime.
 
 ## Why not use GDS styles/classes directly
 
