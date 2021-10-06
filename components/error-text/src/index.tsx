@@ -13,22 +13,6 @@ import { spacing, typography } from '@govuk-react/lib';
  *
  * - https://govuk-react.github.io/govuk-react/?path=/docs/error-text
  * - https://design-system.service.gov.uk/components/error-message/
- *
- * ### Usage
- *
- * ```jsx
- * import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
- *
- * const MyComponent = () => <Label>
- *   <LabelText>Example label</LabelText>
- *   <HintText>Example hint</HintText>
- *   <ErrorText>Example error</ErrorText>
- *   <Input value={value} onClick={onClick} />
- * </Label>
- * ```
- *
- * ### References
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/error-message/_error-message.scss
  */
 export const ErrorText = styled('span')(
   typography.font({ size: 19, weight: 'bold' }),
