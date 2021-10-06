@@ -13,4 +13,7 @@ const NavLinkAnchor = styled(TopNavAnchor)({
     },
   },
 });
+
+NavLinkAnchor.displayName = 'TopNav.NavLink';
+
 export default NavLinkAnchor;

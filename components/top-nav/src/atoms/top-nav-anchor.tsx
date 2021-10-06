@@ -16,4 +16,5 @@ const TopNavAnchor = styled('a')({
   },
 });
 
+TopNavAnchor.displayName = 'TopNav.Anchor';
 export default TopNavAnchor;

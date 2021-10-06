@@ -30,5 +30,6 @@ IconTitle.defaultProps = {
   icon: undefined,
   children: undefined,
 };
+IconTitle.displayName = 'TopNav.IconTitle';
 
 export default IconTitle;

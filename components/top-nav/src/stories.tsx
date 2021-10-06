@@ -1,3 +1,5 @@
+import type { Story } from '@storybook/react';
+
 import * as React from 'react';
 import { BrowserRouter, Link } from 'react-router-dom';
 
@@ -14,128 +16,140 @@ export default {
 };
 
 const reactRouterLink = '/section';
-const link = 'https://example.com?=1';
 // TODO: vertical alignment here needs some work, perhaps should be its own component,
 // TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
 
-const Company: JSX.Element = (
-  <TopNav.Anchor href={link} target="new">
-    <TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</TopNav.IconTitle>
-  </TopNav.Anchor>
-);
+const Template: Story<React.ComponentProps<typeof TopNav>> = (args) => <TopNav {...args} />;
 
-const ServiceTitle: JSX.Element = (
-  <TopNav.NavLink href={link} target="new">
-    Service Title
-  </TopNav.NavLink>
-);
+export const Default = Template.bind({});
+Default.args = {
+  company: (
+    <TopNav.Anchor href="https://example.com" target="new">
+      <TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</TopNav.IconTitle>
+    </TopNav.Anchor>
+  ),
+};
 
-const Search: JSX.Element = (
-  <SearchBox>
-    <SearchBox.Input placeholder="Search" />
-    <SearchBox.Button />
-  </SearchBox>
-);
+export const CustomLogo = Template.bind({});
+CustomLogo.args = {
+  company: (
+    <TopNav.NavLink href="https://example.com" target="new">
+      <TopNav.IconTitle icon={<SearchIcon width="32px" />}>Custom Title</TopNav.IconTitle>
+    </TopNav.NavLink>
+  ),
+};
 
-const CompanyLink: JSX.Element = (
-  <TopNav.Anchor as={Link} to={reactRouterLink}>
-    <TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</TopNav.IconTitle>
-  </TopNav.Anchor>
-);
+export const WithServiceTitle = Template.bind({});
+WithServiceTitle.args = {
+  ...Default.args,
+  serviceTitle: (
+    <TopNav.NavLink href="https://example.com" target="new">
+      Service Title
+    </TopNav.NavLink>
+  ),
+};
 
-const ServiceTitleLink: JSX.Element = (
-  <TopNav.NavLink as={Link} to={reactRouterLink}>
-    Service Title
-  </TopNav.NavLink>
-);
+export const LogoAndServiceTitleWithReactRouterLink = Template.bind({});
+LogoAndServiceTitleWithReactRouterLink.args = {
+  company: (
+    <TopNav.Anchor as={Link} to={reactRouterLink}>
+      <TopNav.IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</TopNav.IconTitle>
+    </TopNav.Anchor>
+  ),
+  serviceTitle: (
+    <TopNav.NavLink as={Link} to={reactRouterLink}>
+      Service Title
+    </TopNav.NavLink>
+  ),
+};
+LogoAndServiceTitleWithReactRouterLink.decorators = [
+  (storyFn) => {
+    return <BrowserRouter>{storyFn()}</BrowserRouter>;
+  },
+];
 
-export const Default: React.FC = () => <TopNav company={Company} />;
+export const WithSearch = Template.bind({});
+WithSearch.args = {
+  ...WithServiceTitle.args,
+  search: (
+    <SearchBox>
+      <SearchBox.Input placeholder="Search" />
+      <SearchBox.Button />
+    </SearchBox>
+  ),
+};
 
-export const CustomLogo: React.FC = () => (
-  <TopNav
-    company={
-      <TopNav.NavLink href={link} target="new">
-        <TopNav.IconTitle icon={<SearchIcon width="32px" />}>Custom Title</TopNav.IconTitle>
-      </TopNav.NavLink>
-    }
-  />
-);
+export const Children = Template.bind({});
+Children.args = {
+  ...WithServiceTitle.args,
+  children: [
+    <TopNav.NavLink href="https://example.com?q=catdog">Navigation item #1</TopNav.NavLink>,
+    <TopNav.NavLink href="https://example.com?q=dogcat">Navigation item #2</TopNav.NavLink>,
+  ],
+};
 
-export const WithServiceTitle: React.FC = () => <TopNav company={Company} serviceTitle={ServiceTitle} />;
+export const EverythingButServiceTitle = Template.bind({});
+EverythingButServiceTitle.args = {
+  ...WithSearch.args,
+  ...Children.args,
+  serviceTitle: undefined,
+};
 
-export const LogoAndServiceTitleWithReactRouterLink: React.FC = () => (
-  <BrowserRouter>
-    <TopNav company={CompanyLink} serviceTitle={ServiceTitleLink} />
-  </BrowserRouter>
-);
-
-export const WithSearch: React.FC = () => <TopNav company={Company} serviceTitle={ServiceTitle} search={Search} />;
-
-export const Children: React.FC = () => (
-  <TopNav company={Company} serviceTitle={ServiceTitle}>
-    <TopNav.NavLink href="https://example.com?q=catdog">Navigation item #1</TopNav.NavLink>
-    <TopNav.NavLink href="https://example.com?q=dogcat">Navigation item #2</TopNav.NavLink>
-  </TopNav>
-);
-
-export const EverythingButServiceTitle: React.FC = () => (
-  <TopNav company={Company} search={Search}>
-    <TopNav.NavLink href="https://example.com?q=catdog">Navigation item #1</TopNav.NavLink>
-    <TopNav.NavLink href="https://example.com?q=dogcat">Navigation item #2</TopNav.NavLink>
-  </TopNav>
-);
-
-export const Everything: React.FC = () => (
-  <TopNav company={Company} serviceTitle={ServiceTitle} search={Search}>
+export const Everything = Template.bind({});
+Everything.args = {
+  ...WithSearch.args,
+  children: [
     <TopNav.NavLink href="https://example.com?q=catdog" target="new">
       Navigation item
-    </TopNav.NavLink>
+    </TopNav.NavLink>,
     <TopNav.NavLink href="https://example.com?q=dogcat" target="new">
       Navigation item
-    </TopNav.NavLink>
+    </TopNav.NavLink>,
     <TopNav.NavLink href="https://example.com?q=dogcat" target="new">
       Navigation item
-    </TopNav.NavLink>
+    </TopNav.NavLink>,
     <TopNav.NavLink href="https://example.com?q=dogcat" target="new">
       Navigation item
-    </TopNav.NavLink>
+    </TopNav.NavLink>,
     <TopNav.NavLink href="https://example.com?q=dogcat" target="new">
       Navigation item
-    </TopNav.NavLink>
+    </TopNav.NavLink>,
     <TopNav.NavLink href="https://example.com?q=dogcat" target="new">
       Navigation item
-    </TopNav.NavLink>
-  </TopNav>
-);
+    </TopNav.NavLink>,
+  ],
+};
 
-export const EverythingWith9NavItems: React.FC = () => (
-  <TopNav company={Company} serviceTitle={ServiceTitle} search={Search}>
+export const EverythingWith9NavItems = Template.bind({});
+EverythingWith9NavItems.args = {
+  ...Everything.args,
+  children: [
     <TopNav.NavLink href="https://example.com?q=catdog" target="new">
       Navigation item
-    </TopNav.NavLink>
+    </TopNav.NavLink>,
     <TopNav.NavLink href="https://example.com?q=dogcat" target="new">
       Navigation item
-    </TopNav.NavLink>
+    </TopNav.NavLink>,
     <TopNav.NavLink href="https://example.com?q=dogcat" target="new">
       Navigation item
-    </TopNav.NavLink>
+    </TopNav.NavLink>,
     <TopNav.NavLink href="https://example.com?q=dogcat" target="new">
       Navigation item
-    </TopNav.NavLink>
+    </TopNav.NavLink>,
     <TopNav.NavLink href="https://example.com?q=dogcat" target="new">
       Navigation item
-    </TopNav.NavLink>
+    </TopNav.NavLink>,
     <TopNav.NavLink href="https://example.com?q=dogcat" target="new">
       Navigation item
-    </TopNav.NavLink>
+    </TopNav.NavLink>,
     <TopNav.NavLink href="https://example.com?q=dogcat" target="new">
       Navigation item
-    </TopNav.NavLink>
+    </TopNav.NavLink>,
     <TopNav.NavLink href="https://example.com?q=dogcat" target="new">
       Navigation item
-    </TopNav.NavLink>
+    </TopNav.NavLink>,
     <TopNav.NavLink href="https://example.com?q=dogcat" target="new">
       Navigation item
-    </TopNav.NavLink>
-  </TopNav>
-);
+    </TopNav.NavLink>,
+  ],
+};
