@@ -39,7 +39,7 @@ export const NestedFormGroups: Story = ({
     </FormGroup>
   </FormGroup>
 );
-Default.args = {
+NestedFormGroups.args = {
   outerError: false,
   innerError1: false,
   innerError2: false,
