@@ -1,3 +1,9 @@
+/**
+ * ### References:
+ *
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/phase-banner
+ */
+
 import * as React from 'react';
 import styled from 'styled-components';
 import { BORDER_COLOUR } from 'govuk-colours';
@@ -30,34 +36,10 @@ const BannerText = styled('span')({
 });
 
 /**
+ * Use the phase banner component to show users your service is still being worked on.
  *
- * ### Usage
- *
- * Alpha
- *
- * ```jsx
- * import { PhaseBanner } from 'govuk-react'
- *
- * <PhaseBanner level="alpha">
- *    This part of GOV.UK is being rebuilt &#8211;{' '}
- *    <AnchorLink href="https://example.com">find out what that means</AnchorLink>
- * </PhaseBanner>
- * ```
- *
- * Beta
- *
- * ```jsx
- * <PhaseBanner level="beta">
- *    This part of GOV.UK is being rebuilt &#8211;{' '}
- *    <AnchorLink href="https://example.com">find out what that means</AnchorLink>
- * </PhaseBanner>
- * ```
- *
- * ### References:
- *
- * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/phase-banner
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/phase-banner
  * - https://design-system.service.gov.uk/components/phase-banner/
- *
  */
 export const PhaseBanner: React.FC<PhaseBannerProps> = ({ level, children, ...props }: PhaseBannerProps) => (
   <StyledBanner {...props}>
