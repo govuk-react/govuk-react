@@ -9,9 +9,9 @@ We aim to track the following projects (in priority order) as to which component
 
 - [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend)
 - [GOV.UK Design System](https://design-system.service.gov.uk) ([source](https://github.com/alphagov/govuk-design-system))
+- [GOV.UK Publishing Components](https://components.publishing.service.gov.uk/component-guide)
 - [GOV.UK Design System Backlog](https://github.com/alphagov/govuk-design-system-backlog) (where there are open tickets in the backlog that reference patterns/components in existing govuk sites)
 - [GOV.UK/elements](https://github.com/alphagov/govuk_elements)
-- [GOV.UK Publishing Components](https://components.publishing.service.gov.uk/component-guide)
 - Any other established govuk pattern
 
 This project is being or has been used by:
