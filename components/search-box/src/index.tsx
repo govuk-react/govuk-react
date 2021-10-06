@@ -1,4 +1,4 @@
-// https://govuk-static.herokuapp.com/component-guide/search
+// https://components.publishing.service.gov.uk/component-guide/search
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
 import * as React from 'react';
@@ -76,24 +76,10 @@ const StyledSearchBox = styled('div')(
 );
 
 /**
+ * A search box with attached submit button.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { SearchBox } from 'govuk-react';
- *
- * <SearchBox>
- *   <SearchBox.Input placeholder="Search GOV.UK" />
- *   <SearchBox.Button />
- * </SearchBox>
- * ```
- *
- * ### References:
- *
- * - https://govuk-static.herokuapp.com/component-guide/search
- *
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/search-box
+ * - https://components.publishing.service.gov.uk/component-guide/search
  */
 export const SearchBox: SearchBoxType = React.forwardRef<HTMLDivElement, SearchBoxProps>((props, ref) => (
   <StyledSearchBox {...props} ref={ref} />
@@ -111,5 +97,7 @@ SearchBox.Input = Input;
 SearchBox.Button = Button;
 
 SearchBox.displayName = 'SearchBox';
+SearchBox.Input.displayName = 'SearchBox.Input';
+SearchBox.Button.displayName = 'SearchBox.Button';
 
 export default SearchBox;

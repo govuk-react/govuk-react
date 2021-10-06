@@ -1,3 +1,5 @@
+import type { Story } from '@storybook/react';
+
 import * as React from 'react';
 
 import { SearchBox } from '.';
@@ -8,8 +10,8 @@ export default {
   component: SearchBox,
 };
 
-export const Default: React.FC = () => (
-  <SearchBox>
+export const Default: Story = (args) => (
+  <SearchBox {...args}>
     <SearchBox.Input placeholder="Search GOV.UK" />
     <SearchBox.Button />
   </SearchBox>
