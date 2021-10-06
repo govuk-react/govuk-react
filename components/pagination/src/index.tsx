@@ -1,3 +1,9 @@
+/**
+ * ### References:
+ *
+ * https://github.com/alphagov/static/blob/077649737c43d3937f745df0b3adade9df3717dc/app/views/govuk_component/docs/previous_and_next_navigation.yml
+ * https://github.com/alphagov/govuk_publishing_components/blob/master/app/views/govuk_publishing_components/components/docs/previous_and_next_navigation.yml
+ */
 import * as React from 'react';
 import styled from 'styled-components';
 import { MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
@@ -22,25 +28,10 @@ const StyledList = styled('ul')(
 );
 
 /**
+ * Navigational links that allow users to navigate within a series of pages or elements.
  *
- * ### Usage
- *
- * ```jsx
- * import { Pagination } from 'govuk-react';
- *
- * <Pagination>
- *   <Pagination.Anchor href="#prev" previousPage>
- *     Previous page
- *   </Pagination.Anchor>
- *   <Pagination.Anchor href="#next" nextPage>
- *     Next page
- *   </Pagination.Anchor>
- * </Pagination>
- * ```
- *
- * ### References:
- *
- * - https://govuk-static.herokuapp.com/component-guide/previous_and_next_navigation
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/pagination
+ * - https://components.publishing.service.gov.uk/component-guide/previous_and_next_navigation
  *
  */
 export const Pagination: PaginationType = (props: PaginationProps) => <StyledList {...props} />;
