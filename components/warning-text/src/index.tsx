@@ -1,3 +1,10 @@
+/**
+ * ### References:
+ *
+ * - https://govuk-elements.herokuapp.com/typography/#typography-warning-text
+ * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/warning-text
+ */
+
 import * as React from 'react';
 import styled from 'styled-components';
 
@@ -26,22 +33,10 @@ const IconImportantWrapper = styled('div')({
 const WarningTextWrapper = styled('strong')(typography.font({ size: 19, weight: 'bold' }));
 
 /**
+ * Use the warning text component when you need to warn users about something important, such as legal consequences of an action, or lack of action, that they might take.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { WarningText } from 'govuk-react'
- *
- * <WarningText>Example</WarningText>
- * ```
- *
- * ### References:
- *
- * - https://govuk-elements.herokuapp.com/typography/#typography-warning-text
- * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/warning-text
- *
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/warning-text
+ * - https://design-system.service.gov.uk/components/warning-text/
  */
 export const WarningText: React.FC<WarningTextProps> = ({ children, ...props }: WarningTextProps) => (
   <StyledWarningText {...props}>
