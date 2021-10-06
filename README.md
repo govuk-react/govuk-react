@@ -83,8 +83,6 @@ See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-
 
 This project is part of a larger initiative to componetise large scale React applications. Using CSSinJS allows us to include styles inside a module bundle that can be published (using `npm publish`) and consumed by a peer application, without putting dependencies on the peer application to implement a specific CSS build system.
 
-We are expecting to use [Interoperable Style Transfer Format (ISTF)](https://github.com/cssinjs/istf-spec) once it is finalised and compatible with a CSSinJS library, which would allow us to distribute CSSinJS stylesheets without a runtime.
-
 ## Why not use GDS styles/classes directly
 
 1. We want to be free to write different DOM structure and/or CSS that is more in keeping with a React and bem-ish architecture. (e.g. in React you often don't need to specify IDs for field inputs, and can wrap inputs with labels so that they are automatically associated. We want to leave the decision of whether to use input IDs to the parent project. GDS styles don't wrap inputs with labels and require IDs and for attributes).
