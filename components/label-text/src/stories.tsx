@@ -19,11 +19,11 @@ Default.args = {
   children: 'Example',
 };
 
-export const WithWrappingLabel = Template.bind({});
-WithWrappingLabel.decorators = [
-  (StoryFunc) => (
+export const WithLabel = Template.bind({});
+WithLabel.decorators = [
+  (storyFn) => (
     <Label>
-      {StoryFunc()}
+      {storyFn()}
       <HintText>Example hint</HintText>
       <ErrorText>Example error</ErrorText>
       <Input />
@@ -31,6 +31,10 @@ WithWrappingLabel.decorators = [
   ),
 ];
 
-WithWrappingLabel.args = {
+WithLabel.args = {
   children: 'Example',
+};
+
+WithLabel.parameters = {
+  chromatic: { disable: true }, // visual regression for this combination is managed by Label component
 };

@@ -21,3 +21,6 @@ export const WithLabel: Story = (args) => (
     <Input />
   </Label>
 );
+WithLabel.parameters = {
+  chromatic: { disable: true }, // visual regression for this combination is managed by Label component
+};
