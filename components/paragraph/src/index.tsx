@@ -1,3 +1,8 @@
+/**
+ * ### References
+ *
+ * - https://govuk-elements.herokuapp.com/typography/#typography-body-copy
+ */
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
 import * as React from 'react';
@@ -44,6 +49,7 @@ const StyledParagraph = styled(ReactMarkdown)<ParagraphProps>(
 );
 
 /**
+ * Markdown Formatter.
  *
  * Supports bold, italic, links, inline code and block code in Markdown ONLY.
  * This is to ensure we follow GDS as closely as possible.
@@ -53,51 +59,8 @@ const StyledParagraph = styled(ReactMarkdown)<ParagraphProps>(
  * cause Screenreaders to increase the volume of any bold text to reflect the increase in
  * font-weight.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { Paragraph } from 'govuk-react'
- *
- * <Paragraph>Lorem `ipsum` **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
- * ```
- *
- * As supporting text
- *
- * ```jsx
- * <Paragraph supportingText>Lorem `ipsum` **dolor** sit *amet* with [some link](https://google.com)</Paragraph>
- * ```
- *
- * With a block of code
- *
- * ````jsx
- * <Paragraph>
- *   Some other text...
- *   ```
- *   Some Code Block
- *   ```
- *   Some more text.
- * </Paragraph>
- * ````
- *
- * With React router
- *
- * ```jsx
- * const ReactRouterLinkRenderer = ({ href, children }) => (
- *   href.match(/^\//)
- *     ? <Link to={href}>{children}</Link>
- *     : <a href={href}>{children}</a>
- * );
- *
- * <Paragraph linkRenderer={ReactRouterLinkRenderer}>
- *   ...
- * </Paragraph>
- * ```
- *
- * ### References
- * - https://govuk-elements.herokuapp.com/typography/#typography-body-copy
- *
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/paragraph
+ * - https://design-system.service.gov.uk/styles/typography/
  */
 export const Paragraph: React.FC<ParagraphProps & ReactMarkdownProps> = ({
   children,
@@ -117,7 +80,7 @@ export interface ParagraphProps extends WithWhiteSpaceProps, React.HTMLAttribute
   /**
    * Text content supporting markdown
    */
-  children?: React.ReactNode;
+  children?: string;
   /**
    * Is this paragraph supporting text for another element?
    */
