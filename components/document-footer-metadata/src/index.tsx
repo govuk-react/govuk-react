@@ -1,7 +1,7 @@
 /**
  * ### References:
  *
- * - https://govuk-static.herokuapp.com/component-guide/document_footer
+ * - https://components.publishing.service.gov.uk/component-guide/document_list
  * - https://github.com/alphagov/static/blob/077649737c43d3937f745df0b3adade9df3717dc/app/views/govuk_component/docs/metadata.yml
  * - https://github.com/alphagov/static/blob/077649737c43d3937f745df0b3adade9df3717dc/app/views/govuk_component/metadata.raw.html.erb
  */
@@ -24,9 +24,10 @@ const StyledDefinition = styled('li')({
 });
 
 /**
- * To display relevant metadata about organisations and tags for a document
+ * An ordered list of documents including a document type, when updated and a link.
  *
  * - https://govuk-react.github.io/govuk-react/?path=/docs/document-footer-metadata
+ * - https://components.publishing.service.gov.uk/component-guide/document_list
  */
 export const DocumentFooterMetadata: React.FC<DocumentFooterMetadataProps> = ({
   from = undefined,
