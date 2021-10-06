@@ -5,27 +5,10 @@ import { FONT_SIZE, LINE_HEIGHT, MEDIA_QUERIES, SPACING } from '@govuk-react/con
 import { spacing } from '@govuk-react/lib';
 
 /**
+ * Component showing related content, including topics, guidance and collections.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { H3, UnorderedList, ListItem, Link } from 'govuk-react';
- *
- * <RelatedItems>
- *   <H3>Example heading</H3>
- *   <UnorderedList listStyleType="none">
- *     <ListItem>
- *       <Link href="https://example.com">Link A</Link>
- *     </ListItem>
- *   </UnorderedList>
- * </RelatedItems>
- * ```
- *
- * ### References:
- *
- * - https://govuk-static.herokuapp.com/component-guide/related_items
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/related-items
+ * - https://components.publishing.service.gov.uk/component-guide/related_navigation
  */
 export const RelatedItems = styled('div')(
   {

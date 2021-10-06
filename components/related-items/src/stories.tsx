@@ -1,3 +1,5 @@
+import type { Story } from '@storybook/react';
+
 import * as React from 'react';
 
 import { H3 } from '@govuk-react/heading';
@@ -13,8 +15,8 @@ export default {
   component: RelatedItems,
 };
 
-export const Default: React.FC = () => (
-  <RelatedItems>
+export const Default: Story = (args) => (
+  <RelatedItems {...args}>
     <H3>Travel abroad</H3>
     <UnorderedList listStyleType="none">
       <ListItem>
