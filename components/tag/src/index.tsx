@@ -1,23 +1,18 @@
+/**
+ * ### References:
+ *
+ * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/tag/_tag.scss
+ */
+
 import styled from 'styled-components';
 import { BLUE, GREY_1, WHITE } from 'govuk-colours';
 import { typography } from '@govuk-react/lib';
 
 /**
+ * Use the tag component to show users the status of something.
  *
- * ### Usage
- *
- * Simple
- *
- * ```jsx
- * import { Tag } from 'govuk-react'
- *
- * <Tag>beta</Tag>
- * ```
- *
- * ### References:
- *
+ * - https://govuk-react.github.io/govuk-react/?path=/docs/tag
  * - https://design-system.service.gov.uk/components/tag/
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/tag/_tag.scss
  *
  */
 export const Tag = styled('strong')<TagProps>(
