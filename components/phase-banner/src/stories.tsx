@@ -18,7 +18,7 @@ export const Default = Template.bind({});
 Default.args = {
   level: 'alpha',
   children: [
-    'This part of GOV.UK is being rebuilt –',
+    'This part of GOV.UK is being rebuilt – ',
     <Link href="https://example.com">find out what that means</Link>,
   ],
 };
@@ -27,7 +27,7 @@ export const BetaPhaseTag = Template.bind({});
 BetaPhaseTag.args = {
   level: 'beta',
   children: [
-    'This part of GOV.UK is being rebuilt –',
+    'This part of GOV.UK is being rebuilt – ',
     <Link href="https://example.com">find out what that means</Link>,
   ],
 };
