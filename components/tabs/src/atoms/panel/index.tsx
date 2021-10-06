@@ -29,7 +29,7 @@ const TabPanel = styled('section')<TabPanelProps>(
 
 interface TabPanelProps extends React.HTMLAttributes<HTMLDivElement> {
   /** determine which panel is displayed */
-  selected: boolean;
+  selected?: boolean;
 }
 
 export default TabPanel;

@@ -60,6 +60,90 @@ export const Default: Story = (args) => (
         </Table.Row>
       </Table>
     </Tabs.Panel>
+    <Tabs.Panel id="1">
+      <H2>Past week</H2>
+      <Table
+        head={
+          <Table.Row>
+            <Table.CellHeader>Case manager</Table.CellHeader>
+            <Table.CellHeader>Cases opened</Table.CellHeader>
+            <Table.CellHeader>Cases closed</Table.CellHeader>
+          </Table.Row>
+        }
+      >
+        <Table.Row>
+          <Table.Cell>David Francis</Table.Cell>
+          <Table.Cell>24</Table.Cell>
+          <Table.Cell>18</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.Cell>Paul Farmer</Table.Cell>
+          <Table.Cell>16</Table.Cell>
+          <Table.Cell>20</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.Cell>Rita Patel</Table.Cell>
+          <Table.Cell>24</Table.Cell>
+          <Table.Cell>27</Table.Cell>
+        </Table.Row>
+      </Table>
+    </Tabs.Panel>
+    <Tabs.Panel id="1">
+      <H2>Past month</H2>
+      <Table
+        head={
+          <Table.Row>
+            <Table.CellHeader>Case manager</Table.CellHeader>
+            <Table.CellHeader>Cases opened</Table.CellHeader>
+            <Table.CellHeader>Cases closed</Table.CellHeader>
+          </Table.Row>
+        }
+      >
+        <Table.Row>
+          <Table.Cell>David Francis</Table.Cell>
+          <Table.Cell>98</Table.Cell>
+          <Table.Cell>95</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.Cell>Paul Farmer</Table.Cell>
+          <Table.Cell>122</Table.Cell>
+          <Table.Cell>133</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.Cell>Rita Patel</Table.Cell>
+          <Table.Cell>126</Table.Cell>
+          <Table.Cell>142</Table.Cell>
+        </Table.Row>
+      </Table>
+    </Tabs.Panel>
+    <Tabs.Panel id="1">
+      <H2>Past year</H2>
+      <Table
+        head={
+          <Table.Row>
+            <Table.CellHeader>Case manager</Table.CellHeader>
+            <Table.CellHeader>Cases opened</Table.CellHeader>
+            <Table.CellHeader>Cases closed</Table.CellHeader>
+          </Table.Row>
+        }
+      >
+        <Table.Row>
+          <Table.Cell>David Francis</Table.Cell>
+          <Table.Cell>1380</Table.Cell>
+          <Table.Cell>1472</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.Cell>Paul Farmer</Table.Cell>
+          <Table.Cell>1129</Table.Cell>
+          <Table.Cell>1083</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.Cell>Rita Patel</Table.Cell>
+          <Table.Cell>1539</Table.Cell>
+          <Table.Cell>1265</Table.Cell>
+        </Table.Row>
+      </Table>
+    </Tabs.Panel>
   </Tabs>
 );
 
