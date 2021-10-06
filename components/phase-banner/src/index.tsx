@@ -3,6 +3,7 @@
  *
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/phase-banner
  */
+import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
 import * as React from 'react';
 import styled from 'styled-components';
@@ -50,7 +51,7 @@ export const PhaseBanner: React.FC<PhaseBannerProps> = ({ level, children, ...pr
   </StyledBanner>
 );
 
-export interface PhaseBannerProps {
+export interface PhaseBannerProps extends WithWhiteSpaceProps {
   /** Children text and links */
   children: React.ReactNode;
   /** Alpha or beta banner */

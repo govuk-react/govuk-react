@@ -5,10 +5,10 @@ import * as React from 'react';
 import { H1, H2 } from '@govuk-react/heading';
 import InputField from '@govuk-react/input-field';
 import Button from '@govuk-react/button';
-import LabelText from '@govuk-react/label-text';
 import Link from '@govuk-react/link';
 import Radio from '@govuk-react/radio';
 import PhaseBanner from '@govuk-react/phase-banner';
+import MultiChoice from '@govuk-react/multi-choice';
 
 import { LoadingBox } from '.';
 
@@ -24,7 +24,7 @@ export const Default = Template.bind({});
 Default.args = {
   loading: true,
   children: [
-    <PhaseBanner level="alpha">
+    <PhaseBanner level="alpha" mb={6}>
       This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
     </PhaseBanner>,
     <H2 mb={3}>Example</H2>,
@@ -37,7 +37,7 @@ export const PartialCover = Template.bind({});
 PartialCover.decorators = [
   (storyFn) => (
     <>
-      <PhaseBanner level="alpha">
+      <PhaseBanner level="alpha" mb={6}>
         This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
       </PhaseBanner>
       {storyFn()}
@@ -53,23 +53,24 @@ export const LoadingBoxLong = Template.bind({});
 LoadingBoxLong.args = {
   loading: true,
   children: [
-    <PhaseBanner level="alpha">
+    <PhaseBanner level="alpha" mb={6}>
       This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
     </PhaseBanner>,
-    <H2>Toggle loading settings under `Controls`</H2>,
-    <InputField>First name</InputField>,
-    <InputField>Last name</InputField>,
-    <InputField>Email address</InputField>,
-    <div style={{ overflow: 'hidden' }}>
-      <LabelText>Do you want us to contact you?</LabelText>
+    <H2 mb={3}>Example</H2>,
+    <InputField mb={3}>First name</InputField>,
+    <InputField mb={3}>Last name</InputField>,
+    <InputField mb={3}>Email address</InputField>,
+    <MultiChoice label="Do you want us to contact you?" mb={3}>
       <Radio name="group1" inline>
         Yes
       </Radio>
       <Radio name="group1" inline>
         No
       </Radio>
-    </div>,
-    <InputField hint="It’s on your National Insurance card">National Insurance number</InputField>,
+    </MultiChoice>,
+    <InputField hint="It’s on your National Insurance card" mb={3}>
+      National Insurance number
+    </InputField>,
     <Button start>Continue</Button>,
   ],
 };
