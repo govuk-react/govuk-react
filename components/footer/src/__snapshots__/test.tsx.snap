@@ -181,67 +181,75 @@ exports[`Footer matches default snapshot: Footer 1`] = `
   }
 }
 
-<FooterExample>
-  <Footer
-    container={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": e {
-          "baseHash": -2084790490,
-          "baseStyle": undefined,
-          "componentId": "width-container__WidthContainer-sc-213f5v-0",
-          "isStatic": false,
-          "rules": Array [
-            "max-width: 960px;",
-            "margin: 0 15px;",
-            "@media only screen and (min-width: 641px) {",
-            "margin: 0 30px;",
-            "}",
-            "@media only screen and (min-width: 1020px) {",
-            "margin: 0 auto;",
-            "}",
-            [Function],
-          ],
-          "staticRulesId": "",
-        },
-        "displayName": "width-container__WidthContainer",
-        "foldedComponentIds": Array [],
-        "render": [Function],
-        "shouldForwardProp": undefined,
-        "styledComponentId": "width-container__WidthContainer-sc-213f5v-0",
-        "target": "div",
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-      }
+<Footer
+  container={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": e {
+        "baseHash": -2084790490,
+        "baseStyle": undefined,
+        "componentId": "width-container__WidthContainer-sc-213f5v-0",
+        "isStatic": false,
+        "rules": Array [
+          "max-width: 960px;",
+          "margin: 0 15px;",
+          "@media only screen and (min-width: 641px) {",
+          "margin: 0 30px;",
+          "}",
+          "@media only screen and (min-width: 1020px) {",
+          "margin: 0 auto;",
+          "}",
+          [Function],
+        ],
+        "staticRulesId": "",
+      },
+      "displayName": "width-container__WidthContainer",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "shouldForwardProp": undefined,
+      "styledComponentId": "width-container__WidthContainer-sc-213f5v-0",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
     }
+  }
+>
+  <src__FooterContainer
+    role="contentinfo"
   >
-    <src__FooterContainer
+    <footer
+      className="c0"
       role="contentinfo"
     >
-      <footer
-        className="c0"
-        role="contentinfo"
-      >
-        <width-container__WidthContainer>
-          <div
-            className="c1"
-          >
-            <MetaContainer>
-              <meta__Meta>
-                <div
-                  className="c2"
+      <width-container__WidthContainer>
+        <div
+          className="c1"
+        >
+          <MetaContainer>
+            <meta__Meta>
+              <div
+                className="c2"
+              >
+                <meta-item__MetaItem
+                  grow={true}
                 >
-                  <meta-item__MetaItem
-                    grow={true}
+                  <div
+                    className="c3"
                   >
-                    <div
-                      className="c3"
-                    >
-                      <Licence>
-                        <div>
-                          <licence__LicenceLogo
+                    <Licence>
+                      <div>
+                        <licence__LicenceLogo
+                          focusable="false"
+                          height="17"
+                          role="presentation"
+                          viewBox="0 0 483.2 195.7"
+                          width="41"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <svg
+                            className="c4"
                             focusable="false"
                             height="17"
                             role="presentation"
@@ -249,58 +257,48 @@ exports[`Footer matches default snapshot: Footer 1`] = `
                             width="41"
                             xmlns="http://www.w3.org/2000/svg"
                           >
-                            <svg
-                              className="c4"
-                              focusable="false"
-                              height="17"
-                              role="presentation"
-                              viewBox="0 0 483.2 195.7"
-                              width="41"
-                              xmlns="http://www.w3.org/2000/svg"
+                            <path
+                              d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </licence__LicenceLogo>
+                        <licence__LicenceDescription>
+                          <span
+                            className="c5"
+                          >
+                            All content is available under the
+                             
+                            <link__FooterLink
+                              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                              muted={false}
+                              noVisitedState={false}
+                              rel="license"
+                              textColour={false}
                             >
-                              <path
-                                d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </licence__LicenceLogo>
-                          <licence__LicenceDescription>
-                            <span
-                              className="c5"
-                            >
-                              All content is available under the
-                               
-                              <link__FooterLink
+                              <a
+                                className="c6 c7"
                                 href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                muted={false}
-                                noVisitedState={false}
                                 rel="license"
-                                textColour={false}
                               >
-                                <a
-                                  className="c6 c7"
-                                  href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-                                  rel="license"
-                                >
-                                  Open Government Licence v3.0
-                                </a>
-                              </link__FooterLink>
-                              , except where otherwise stated
-                            </span>
-                          </licence__LicenceDescription>
-                        </div>
-                      </Licence>
-                    </div>
-                  </meta-item__MetaItem>
-                </div>
-              </meta__Meta>
-            </MetaContainer>
-          </div>
-        </width-container__WidthContainer>
-      </footer>
-    </src__FooterContainer>
-  </Footer>
-</FooterExample>
+                                Open Government Licence v3.0
+                              </a>
+                            </link__FooterLink>
+                            , except where otherwise stated
+                          </span>
+                        </licence__LicenceDescription>
+                      </div>
+                    </Licence>
+                  </div>
+                </meta-item__MetaItem>
+              </div>
+            </meta__Meta>
+          </MetaContainer>
+        </div>
+      </width-container__WidthContainer>
+    </footer>
+  </src__FooterContainer>
+</Footer>
 `;
 
 exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
@@ -904,7 +902,7 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": e {
-          "baseHash": 1383969226,
+          "baseHash": 1540108953,
           "baseStyle": e {
             "baseHash": -2084790490,
             "baseStyle": undefined,
@@ -923,7 +921,7 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
             ],
             "staticRulesId": "",
           },
-          "componentId": "fixtures__WideContainer-sc-1qr4toc-0",
+          "componentId": "test__WideContainer-sc-1jj4nln-0",
           "isStatic": false,
           "rules": Array [
             "max-width: inherit;",
@@ -933,13 +931,13 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
           ],
           "staticRulesId": "",
         },
-        "displayName": "fixtures__WideContainer",
+        "displayName": "test__WideContainer",
         "foldedComponentIds": Array [
           "width-container__WidthContainer-sc-213f5v-0",
         ],
         "render": [Function],
         "shouldForwardProp": undefined,
-        "styledComponentId": "fixtures__WideContainer-sc-1qr4toc-0",
+        "styledComponentId": "test__WideContainer-sc-1jj4nln-0",
         "target": "div",
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -954,7 +952,7 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
         className="c0"
         role="contentinfo"
       >
-        <fixtures__WideContainer>
+        <test__WideContainer>
           <div
             className="c1 c2"
           >
@@ -1026,7 +1024,7 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
               </meta__Meta>
             </MetaContainer>
           </div>
-        </fixtures__WideContainer>
+        </test__WideContainer>
       </footer>
     </src__FooterContainer>
   </Footer>
