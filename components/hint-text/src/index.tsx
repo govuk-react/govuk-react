@@ -1,5 +1,6 @@
 /**
  * ### References
+ *
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/hint/_hint.scss
  */
 
