@@ -7,73 +7,10 @@ DocumentFooterMetadata
 ```
 <!-- STORY -->
 
+An ordered list of documents including a document type, when updated and a link.
 
-### Usage
-
-
-Simple
-
-```jsx
-import { DocumentFooterMetadata, Link } from 'govuk-react'
-
-const fromData = [
-  <Link href="/government/organisations/ministry-of-defence">
-    Ministry of Defence
-  </Link>,
-];
-
-<DocumentFooterMetadata from={fromData} />
-```
-
-
-DFM From & part of example
-
-```jsx
-import { DocumentFooterMetadata, Link } from 'govuk-react'
-
-const fromData = [
-  <Link href="/government/organisations/ministry-of-defence">
-    Ministry of Defence
-  </Link>,
-];
-const partOfData = [
-  <Link href="/government/topics/energy">Energy</Link>,
-  <Link href="/government/topics/environment">Environment</Link>,
-];
-
-<DocumentFooterMetadata from={fromData} partOf={partOfData} />
-```
-
-
-DFM From & other data example
-
-```jsx
-import { DocumentFooterMetadata, Link } from 'govuk-react'
-
-const fromData = [
-  <Link href="/government/organisations/ministry-of-defence">
-    Ministry of Defence
-  </Link>,
-];
-const otherData = [
-  {
-    id: 0,
-    title: 'Consultation type',
-    content: <Link href="/government/publications">Open</Link>,
-  },
-  {
-    id: 1,
-    title: 'Published',
-    content: '20 January 2012',
-  },
-];
-
-<DocumentFooterMetadata from={fromData} other={otherData} />
-```
-
-### References:
-
-- https://govuk-static.herokuapp.com/component-guide/document_footer
+- https://govuk-react.github.io/govuk-react/?path=/docs/document-footer-metadata
+- https://components.publishing.service.gov.uk/component-guide/document_list
 
 ### Properties
 Prop | Required | Default | Type | Description

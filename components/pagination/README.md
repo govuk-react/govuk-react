@@ -7,25 +7,10 @@ Pagination
 ```
 <!-- STORY -->
 
+Navigational links that allow users to navigate within a series of pages or elements.
 
-### Usage
-
-```jsx
-import { Pagination } from 'govuk-react';
-
-<Pagination>
-  <Pagination.Anchor href="#prev" previousPage>
-    Previous page
-  </Pagination.Anchor>
-  <Pagination.Anchor href="#next" nextPage>
-    Next page
-  </Pagination.Anchor>
-</Pagination>
-```
-
-### References:
-
-- https://govuk-static.herokuapp.com/component-guide/previous_and_next_navigation
+- https://govuk-react.github.io/govuk-react/?path=/docs/pagination
+- https://components.publishing.service.gov.uk/component-guide/previous_and_next_navigation
 
 ### Properties
 Prop | Required | Default | Type | Description

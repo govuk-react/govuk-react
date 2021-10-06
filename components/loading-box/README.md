@@ -7,36 +7,11 @@ LoadingBox
 ```
 <!-- STORY -->
 
+Use a LoadingBox to wrap components that can asyncronously load content.
 
-### Usage
+When `loading` is set to `true`, a spinner will overlay the contents to give visual feedback to the user.
 
-Simple
-
-```jsx
-import { LoadingBox } from 'govuk-react'
-
-<LoadingBox loading>
-  Lorem ipsum dolor sit amet
-</LoadingBox>
-```
-
-Loading box complex
-```jsx
-<LoadingBox
-   loading={false}
-   backgroundColor={'#fff'}
-   timeIn={800}
-   timeOut={200}
-   backgroundColorOpacity={0.85}
-   spinnerColor={'#000'}
->
-  Lorem ipsum dolor sit amet
-</LoadingBox>
-```
-
-### References:
-
-- https://govuk-loader-prototype.herokuapp.com/components/loader
+- https://govuk-react.github.io/govuk-react/?path=/docs/loading-box
 
 ### Properties
 Prop | Required | Default | Type | Description

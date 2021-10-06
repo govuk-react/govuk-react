@@ -7,20 +7,10 @@ InsetText
 ```
 <!-- STORY -->
 
+Use the inset text component to differentiate a block of text from the content that surrounds it.
 
-### Usage
-
-```jsx
-import { InsetText } from 'govuk-react'
-
-<InsetText>
- Hello
-</InsetText>
-```
-
-### References
+- https://govuk-react.github.io/govuk-react/?path=/docs/inset-text
 - https://design-system.service.gov.uk/components/inset-text/
-- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/inset-text/_inset-text.scss
 
 ### Properties
 Prop | Required | Default | Type | Description

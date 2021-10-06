@@ -7,23 +7,9 @@ VisuallyHidden
 ```
 <!-- STORY -->
 
+Hide an element visually, but have it available for screen readers.
 
-### Usage
-
-This component is primarily intended to be used for material that will be visually hidden
-but visible to screen-reader devices.
-
-Simple
-
-```jsx
-import { VisuallyHidden } from 'govuk-react'
-
-<VisuallyHidden>Example</VisuallyHidden>
-```
-
-### References
-- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/helpers/_visually-hidden.scss
-- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/utilities/_visually-hidden.scss
+- https://govuk-react.github.io/govuk-react/?path=/docs/visually-hidden
 
 ### Properties
 Prop | Required | Default | Type | Description

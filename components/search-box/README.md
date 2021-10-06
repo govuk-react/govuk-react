@@ -7,23 +7,10 @@ SearchBox
 ```
 <!-- STORY -->
 
+A search box with attached submit button.
 
-### Usage
-
-Simple
-
-```jsx
-import { SearchBox } from 'govuk-react';
-
-<SearchBox>
-  <SearchBox.Input placeholder="Search GOV.UK" />
-  <SearchBox.Button />
-</SearchBox>
-```
-
-### References:
-
-- https://govuk-static.herokuapp.com/component-guide/search
+- https://govuk-react.github.io/govuk-react/?path=/docs/search-box
+- https://components.publishing.service.gov.uk/component-guide/search
 
 ### Properties
 Prop | Required | Default | Type | Description

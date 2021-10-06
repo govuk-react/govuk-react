@@ -7,25 +7,10 @@ Input
 ```
 <!-- STORY -->
 
+Use the text input component when you need to let users enter text that’s no longer than a single line, such as their name or phone number.
 
-### Usage
-
-Simple
-
-```jsx
-import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
-
-<Label>
-  <LabelText>Example label</LabelText>
-  <HintText>Example hint</HintText>
-  <ErrorText>Example error</ErrorText>
-  <Input value={value} onClick={onClick} />
-</Label>
-```
-
-### References:
-
-- https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/
+- https://govuk-react.github.io/govuk-react/?path=/docs/input
+- https://design-system.service.gov.uk/components/text-input/
 
 ### Properties
 Prop | Required | Default | Type | Description

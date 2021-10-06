@@ -7,29 +7,10 @@ Button
 ```
 <!-- STORY -->
 
+Use the button component to help users carry out an action like starting an application or saving their information.
 
-### Usage
-
-Simple
-
-```jsx
-import { Button } from 'govuk-react'
-
-<Button>My button text</Button>
-```
-
-With Icon
-
-```jsx
-import { ButtonArrow } from 'govuk-react'
-
-<Button icon={<ButtonArrow />}>My button text</Button>
-```
-
-### References:
-
+- https://govuk-react.github.io/govuk-react/?path=/docs/button
 - https://design-system.service.gov.uk/components/button/
-- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/button/_button.scss
 
 ### Properties
 Prop | Required | Default | Type | Description

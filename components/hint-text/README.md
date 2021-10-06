@@ -7,25 +7,10 @@ HintText
 ```
 <!-- STORY -->
 
+Use hint text alongside a form input for help that’s relevant to the majority of users, like how their information will be used, or where to find it.
 
-### Usage
-
-
-Simple
-
-```jsx
-import { Label, LabelText, HintText, ErrorText, Input } from 'govuk-react'
-
-<Label>
-  <LabelText>Example label</LabelText>
-  <HintText>Example hint</HintText>
-  <ErrorText>Example error</ErrorText>
-  <Input value={value} onClick={onClick} />
-</Label>
-```
-
-### References
-- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/hint/_hint.scss
+- https://govuk-react.github.io/govuk-react/?path=/docs/hint-text
+- https://design-system.service.gov.uk/components/text-input/#hint-text
 
 ### Properties
 Prop | Required | Default | Type | Description

@@ -7,35 +7,10 @@ Breadcrumbs
 ```
 <!-- STORY -->
 
+The breadcrumbs component helps users to understand where they are within a website’s structure and move between levels.
 
-### Usage
-
-Simple
-
-```jsx
-import { Breadcrumbs } from 'govuk-react'
-
-<Breadcrumbs>
-  <Breadcrumbs.Link href="/section">Section</Breadcrumbs.Link>
-  <Breadcrumbs.Link href="/section/sub-section">Sub-section</Breadcrumbs.Link>
-  Current page
-</Breadcrumbs>
-```
-
-Providing links with, or without React Router
-
-```jsx
-import { Link } from 'react-router-dom';
-
-<Breadcrumbs>
-  <Breadcrumbs.Link as={Link} to="/section">Section</Breadcrumbs.Link>
-  <Breadcrumbs.Link href="/section">Sub-section</Breadcrumbs.Link>
-</Breadcrumbs>
-```
-
-### References:
-
-- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/breadcrumbs/_breadcrumbs.scss
+- https://govuk-react.github.io/govuk-react/?path=/docs/breadcrumbs
+- https://design-system.service.gov.uk/components/breadcrumbs/
 
 ### Properties
 Prop | Required | Default | Type | Description

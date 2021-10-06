@@ -7,22 +7,11 @@ FormGroup
 ```
 <!-- STORY -->
 
+For wrapping a set of form fields such as checkboxes.
 
-### Usage
+Also see Label and LabelText components.
 
-Simple
-
-```jsx
-import { FormGroup, Checkbox } from 'govuk-react'
-
-<FormGroup>
-  <Checkbox name="group-1">Example</Checkbox>
-</FormGroup>
-```
-
-### References
-
-- https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_form-group.scss
+- https://govuk-react.github.io/govuk-react/?path=/docs/form-group
 
 ### Properties
 Prop | Required | Default | Type | Description
