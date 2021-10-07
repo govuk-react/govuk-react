@@ -20,7 +20,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/input",
   "description": "Styled input component with optional type prop, defaulting to 'text'.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

@@ -20,7 +20,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/paragraph",
   "description": "Renders a styled paragraph around children, also supporting and styling sub-elements from markdown and accepting several optional props.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

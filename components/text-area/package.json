@@ -23,7 +23,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/text-area",
   "description": "Styled textarea supporting additional parameters via props.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

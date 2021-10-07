@@ -18,7 +18,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/lead-paragraph",
   "description": "Renders children passed inside a styled paragraph element.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

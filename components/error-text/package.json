@@ -20,7 +20,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/error-text",
   "description": "Renders a styled span element containing children provided.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

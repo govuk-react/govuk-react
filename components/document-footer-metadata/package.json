@@ -20,7 +20,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/document-footer-metadata",
   "description": "Renders styled document footer metadata from props provided.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

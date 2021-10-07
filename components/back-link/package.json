@@ -20,7 +20,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/back-link",
   "description": "Styled anchor with left-pointing triangle, children rendered as text and optional click handler.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

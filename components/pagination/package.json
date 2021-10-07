@@ -21,7 +21,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/pagination",
   "description": "Renders a styled list using flexbox, along with PaginationAnchor items expected to be provided as children.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

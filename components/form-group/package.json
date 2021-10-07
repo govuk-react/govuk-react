@@ -20,7 +20,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/form-group",
   "description": "govuk-react FormGroup component.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

@@ -20,7 +20,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/tabs",
   "description": "govuk-react Tabs component.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

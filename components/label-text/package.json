@@ -18,7 +18,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/label-text",
   "description": "Styled span element with children displayed as text.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

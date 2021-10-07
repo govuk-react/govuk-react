@@ -20,7 +20,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/caption",
   "description": "Renders children passed inside a styled span element.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

@@ -21,7 +21,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/page",
   "description": "Provides Page wrapper components.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

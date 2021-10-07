@@ -18,7 +18,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/unordered-list",
   "description": "Renders an unordered list containing children passed - also supports listStyleType prop.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

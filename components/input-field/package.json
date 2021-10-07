@@ -23,7 +23,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/input-field",
   "description": "Styled composite component displaying an input with a label and hint text and error text depending on props.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

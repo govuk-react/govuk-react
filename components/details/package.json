@@ -21,7 +21,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/details",
   "description": "Renders a styled details element along with summary from prop and children rendered as contents.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

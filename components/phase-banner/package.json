@@ -21,7 +21,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/phase-banner",
   "description": "Banner with solid background and bold text, rendered from children.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

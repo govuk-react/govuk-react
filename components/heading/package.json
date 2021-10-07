@@ -19,7 +19,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/heading",
   "description": "Outputs a styled heading tag of provided level, rendering children as contents.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

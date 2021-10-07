@@ -19,7 +19,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/list-item",
   "description": "Renders a styled list item containing children passed.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

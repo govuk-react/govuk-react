@@ -25,7 +25,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react#readme",
   "description": "An example application using govuk-react",
-  "private": false,
   "publishConfig": {
     "access": "public"
   },

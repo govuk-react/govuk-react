@@ -20,7 +20,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/ordered-list",
   "description": "Renders an ordered list containing children passed - also supports listStyleType prop.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

@@ -21,7 +21,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/checkbox",
   "description": "Styled checkbox component, also displaying label.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

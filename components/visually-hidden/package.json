@@ -19,7 +19,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/visually-hidden",
   "description": "govuk-react VisuallyHidden component.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

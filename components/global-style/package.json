@@ -15,7 +15,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/global-style",
   "description": "A Styled Component to apply global style for use with govuk-react.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

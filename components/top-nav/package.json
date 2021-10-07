@@ -24,7 +24,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/top-nav",
   "description": "Styled top navigation header with numerous constituent parts input as props.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

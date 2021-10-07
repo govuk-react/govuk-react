@@ -20,7 +20,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/inset-text",
   "description": "Renders a styled div containing children with a left hand border, wide or narrow depending on prop passed.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

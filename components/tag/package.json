@@ -19,7 +19,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/tag",
   "description": "Badge with solid background and bold text, rendered from children.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

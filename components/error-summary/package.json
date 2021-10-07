@@ -27,7 +27,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/error-summary",
   "description": "Notice used to display form errors to user - also includes anchors to jump to relevant form sections.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }
