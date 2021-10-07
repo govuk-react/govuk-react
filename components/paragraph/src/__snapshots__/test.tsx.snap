@@ -40,7 +40,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
           "text",
         ]
       }
-      className="src__StyledParagraph-sgc9po-0 gtDEBQ"
+      className="src__StyledParagraph-sc-sgc9po-0 crTLg"
       escapeHtml={false}
       linkRenderer={[Function]}
       renderers={
@@ -54,7 +54,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
       transformLinkUri={[Function]}
     >
       <Root
-        className="src__StyledParagraph-sgc9po-0 gtDEBQ"
+        className="src__StyledParagraph-sc-sgc9po-0 crTLg"
         key="root-1-1-0"
         node={
           Object {
@@ -110,7 +110,7 @@ exports[`Paragraph matches wrapper snapshot 1`] = `
         }
       >
         <div
-          className="src__StyledParagraph-sgc9po-0 gtDEBQ"
+          className="src__StyledParagraph-sc-sgc9po-0 crTLg"
         >
           <p
             key="paragraph-1-1-0"
