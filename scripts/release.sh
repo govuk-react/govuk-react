@@ -14,16 +14,14 @@ git checkout -b release/next origin/main # make a new branch for next version fr
 git fetch --tags # lerna uses tags to determine what has changed, we need to make sure we have all tags locally
 yarn version --deferred $1
 yarn workspaces foreach run version --deferred $1
-yarn version apply
+yarn version apply --all
 VERSION=$(node -e 'console.log(require("./packages/govuk-react/package.json").version)') # get new version number
 echo "Bumped version to $VERSION"
-git add package.json package-lock.json
+git add package.json components/*/package.json packages/*/package.json yarn.lock
 git commit -m $VERSION
 echo "Bumped version to $VERSION"
 
-# TODO: release process for yarn 2 is a WIP
-
-# git branch -m release/v$VERSION # rename branch
-# git push -u origin release/v$VERSION # publish new branch
-# hub pull-request -m v$VERSION # open a pull request
-# hub release create -d v$VERSION -m v$VERSION # create a draft release
+git branch -m release/v$VERSION # rename branch
+git push -u origin release/v$VERSION # publish new branch
+hub pull-request -m v$VERSION # open a pull request
+hub release create -d v$VERSION -m v$VERSION # create a draft release
