@@ -2,7 +2,7 @@
 
 ## Running the project locally
 
-[govuk-react](https://github.com/govuk-react/govuk-react) is a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md) using [npm workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces/).
+[govuk-react](https://github.com/govuk-react/govuk-react) is a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md) using [yarn workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces/).
 
 This is so that components can be published independently and applications can require different versions of a component if a breaking change is introduced in a version of a specific component. We are loosely following the [structure that Jest uses](https://github.com/facebook/jest).
 
