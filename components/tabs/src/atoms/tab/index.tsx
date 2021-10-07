@@ -88,11 +88,13 @@ type TabPropsWithoutAs = StyledComponentProps<'a', never, TabOwnProps, never> & 
   forwardedAs?: never | undefined;
 };
 
-type TabPropsWithAs<AsC extends string | React.ComponentType, FAsC extends string | React.ComponentType = AsC> =
-  StyledComponentProps<AsC, never, TabOwnProps, never, FAsC> & {
-    as?: AsC | undefined;
-    forwardedAs?: FAsC | undefined;
-  };
+type TabPropsWithAs<
+  AsC extends string | React.ComponentType,
+  FAsC extends string | React.ComponentType = AsC
+> = StyledComponentProps<AsC, never, TabOwnProps, never, FAsC> & {
+  as?: AsC | undefined;
+  forwardedAs?: FAsC | undefined;
+};
 
 interface TabOwnProps {
   /** Different stylings for the Tab displaying content */

@@ -53,7 +53,11 @@ const StyledHeading = styled('h1')<StyledHeadingOwnProps>(
  * - https://govuk-react.github.io/govuk-react/?path=/docs/heading
  * - https://design-system.service.gov.uk/styles/typography/#headings
  */
-export const Heading: HeadingType = ({ level = undefined, ...props }: React.ComponentProps<HeadingType>) => {
+export const Heading: HeadingType = ({
+  level = undefined,
+  size = 'XLARGE',
+  ...props
+}: React.ComponentProps<HeadingType>) => {
   if (level) {
     if (process.env.NODE_ENV !== 'production') {
       // eslint-disable-next-line no-console
@@ -64,12 +68,7 @@ export const Heading: HeadingType = ({ level = undefined, ...props }: React.Comp
     }
   }
 
-  return <StyledHeading {...props} />;
-};
-
-Heading.defaultProps = {
-  level: undefined,
-  size: 'XLARGE',
+  return <StyledHeading size={size} {...props} />;
 };
 
 Heading.displayName = 'Heading';
@@ -86,11 +85,13 @@ type HeadingPropsWithoutAs = StyledComponentProps<'h1', never, HeadingOwnProps, 
   forwardedAs?: never | undefined;
 };
 
-type HeadingPropsWithAs<AsC extends string | React.ComponentType, FAsC extends string | React.ComponentType = AsC> =
-  StyledComponentProps<AsC, never, HeadingOwnProps, never, FAsC> & {
-    as?: AsC | undefined;
-    forwardedAs?: FAsC | undefined;
-  };
+type HeadingPropsWithAs<
+  AsC extends string | React.ComponentType,
+  FAsC extends string | React.ComponentType = AsC
+> = StyledComponentProps<AsC, never, HeadingOwnProps, never, FAsC> & {
+  as?: AsC | undefined;
+  forwardedAs?: FAsC | undefined;
+};
 
 interface StyledHeadingOwnProps extends WithWhiteSpaceProps {
   /**
