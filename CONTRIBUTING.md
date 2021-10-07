@@ -13,15 +13,15 @@ As such, the build process for development is slightly more involved than an `np
 2. Install dependencies, link packages, compile and start storybook:
 
 ```sh
-npm i
-npm run build
-npm start
+yarn
+yarn build
+yarn start
 ```
 
 ## Creating a new component
 
 To create a new component:
-- `npm run create-component -- my-new-component` where _my-new-component_ is the name of your new component.
+- `yarn create-component -- my-new-component` where _my-new-component_ is the name of your new component.
 
 This creates a folder named _my-new-component_ in `src/components` with the component file (index.js), a basic render test (test.js), and a default story (stories.js). You will need to add this to `src/stories/index.js` to view it in storybook.
 
@@ -33,13 +33,13 @@ Unit testing follows similar patterns as [Glamorous with Jest](https://github.co
 To run unit & eslint tests:
 
 ```sh
-npm test
+yarn test
 ```
 
 To run & watch unit tests:
 
 ```sh
-npm run test:unit
+yarn test:unit
 ```
 
 ## Opening a pull request
