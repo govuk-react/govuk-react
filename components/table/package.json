@@ -11,7 +11,8 @@
     "styled-components": ">=5.1"
   },
   "scripts": {
-    "docs": "doc-component ./src/index.tsx ./README.md"
+    "docs": "doc-component ./src/index.tsx ./README.md",
+    "version": "yarn version"
   },
   "main": "dist/govuk-react-table.cjs.js",
   "module": "dist/govuk-react-table.esm.js",
@@ -20,7 +21,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/table",
   "description": "A styled table supporting a 'construction kit' approach and rendering children as constituent parts.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

@@ -40,7 +40,8 @@ const packageJson = () => {
     "styled-components": ">=5.1"
   },
   "scripts": {
-    "docs": "doc-component ./src/index.tsx ./README.md"
+    "docs": "doc-component ./src/index.tsx ./README.md",
+    "version": "yarn version"
   },
   "main": "lib/index.js",
   "module": "es/index.js",

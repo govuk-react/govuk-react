@@ -15,7 +15,8 @@
     "styled-components": ">=5.1"
   },
   "scripts": {
-    "docs": "doc-component ./src/index.tsx ./README.md"
+    "docs": "doc-component ./src/index.tsx ./README.md",
+    "version": "yarn version"
   },
   "main": "dist/govuk-react-footer.cjs.js",
   "module": "dist/govuk-react-footer.esm.js",
@@ -24,7 +25,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/footer",
   "description": "govuk-react Footer component.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

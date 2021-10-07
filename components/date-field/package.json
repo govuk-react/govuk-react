@@ -17,7 +17,8 @@
     "styled-components": ">=5.1"
   },
   "scripts": {
-    "docs": "doc-component ./src/index.tsx ./README.md"
+    "docs": "doc-component ./src/index.tsx ./README.md",
+    "version": "yarn version"
   },
   "main": "dist/govuk-react-date-field.cjs.js",
   "module": "dist/govuk-react-date-field.esm.js",
@@ -26,7 +27,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/date-field",
   "description": "Date field component displaying day, month and year and featuring several configurable options.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

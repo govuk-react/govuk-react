@@ -10,7 +10,8 @@
     "styled-components": ">=5.1"
   },
   "scripts": {
-    "docs": "doc-component ./src/index.tsx ./README.md"
+    "docs": "doc-component ./src/index.tsx ./README.md",
+    "version": "yarn version"
   },
   "main": "dist/govuk-react-grid-col.cjs.js",
   "module": "dist/govuk-react-grid-col.esm.js",
@@ -19,7 +20,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/grid-col",
   "description": "GridCol component for use inside GridRow component - includes media query breakpoints.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

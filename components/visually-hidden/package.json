@@ -10,7 +10,8 @@
     "styled-components": ">=5.1"
   },
   "scripts": {
-    "docs": "doc-component ./src/index.tsx ./README.md"
+    "docs": "doc-component ./src/index.tsx ./README.md",
+    "version": "yarn version"
   },
   "main": "dist/govuk-react-visually-hidden.cjs.js",
   "module": "dist/govuk-react-visually-hidden.esm.js",
@@ -19,7 +20,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/visually-hidden",
   "description": "govuk-react VisuallyHidden component.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

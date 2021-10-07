@@ -9,7 +9,8 @@
     "styled-components": ">=5.1"
   },
   "scripts": {
-    "docs": "doc-component ./src/index.tsx ./README.md"
+    "docs": "doc-component ./src/index.tsx ./README.md",
+    "version": "yarn version"
   },
   "main": "dist/govuk-react-lead-paragraph.cjs.js",
   "module": "dist/govuk-react-lead-paragraph.esm.js",
@@ -18,7 +19,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/lead-paragraph",
   "description": "Renders children passed inside a styled paragraph element.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

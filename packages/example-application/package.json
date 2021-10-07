@@ -16,7 +16,8 @@
   },
   "scripts": {
     "test:cypress": "cypress run-ct",
-    "cypress": "cypress open-ct"
+    "cypress": "cypress open-ct",
+    "version": "yarn version"
   },
   "main": "dist/govuk-react-example-application.cjs.js",
   "module": "dist/govuk-react-example-application.esm.js",
@@ -25,7 +26,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react#readme",
   "description": "An example application using govuk-react",
-  "private": false,
   "publishConfig": {
     "access": "public"
   },

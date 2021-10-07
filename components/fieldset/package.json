@@ -11,7 +11,8 @@
     "styled-components": ">=5.1"
   },
   "scripts": {
-    "docs": "doc-component ./src/index.tsx ./README.md"
+    "docs": "doc-component ./src/index.tsx ./README.md",
+    "version": "yarn version"
   },
   "main": "dist/govuk-react-fieldset.cjs.js",
   "module": "dist/govuk-react-fieldset.esm.js",
@@ -20,7 +21,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/fieldset",
   "description": "govuk-react Fieldset component.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

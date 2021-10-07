@@ -9,7 +9,8 @@
     "styled-components": ">=5.1"
   },
   "scripts": {
-    "docs": "doc-component ./src/index.tsx ./README.md"
+    "docs": "doc-component ./src/index.tsx ./README.md",
+    "version": "yarn version"
   },
   "main": "dist/govuk-react-label-text.cjs.js",
   "module": "dist/govuk-react-label-text.esm.js",
@@ -18,7 +19,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/label-text",
   "description": "Styled span element with children displayed as text.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }

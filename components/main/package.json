@@ -9,7 +9,8 @@
     "styled-components": ">=5.1"
   },
   "scripts": {
-    "docs": "doc-component ./src/index.tsx ./README.md"
+    "docs": "doc-component ./src/index.tsx ./README.md",
+    "version": "yarn version"
   },
   "main": "dist/govuk-react-main.cjs.js",
   "module": "dist/govuk-react-main.esm.js",
@@ -18,7 +19,6 @@
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react/tree/main/components/main",
   "description": "Styled container which aligns to topNav component, is centered, and provides top padding.",
-  "private": false,
   "publishConfig": {
     "access": "public"
   }
