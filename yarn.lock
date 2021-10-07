@@ -2190,7 +2190,7 @@ __metadata:
   resolution: "@govuk-react/error-summary@workspace:components/error-summary"
   dependencies:
     "@govuk-react/constants": ^0.10.0
-    "@govuk-react/heading": ^0.9.1
+    "@govuk-react/heading": ^0.10.0
     "@govuk-react/input-field": ^0.10.0
     "@govuk-react/lib": ^0.10.0
     "@govuk-react/link": ^0.10.0
@@ -2274,7 +2274,7 @@ __metadata:
   resolution: "@govuk-react/footer@workspace:components/footer"
   dependencies:
     "@govuk-react/constants": ^0.10.0
-    "@govuk-react/heading": ^0.9.1
+    "@govuk-react/heading": ^0.10.0
     "@govuk-react/icons": ^0.10.0
     "@govuk-react/lib": ^0.10.0
     "@govuk-react/link": ^0.10.0
@@ -2332,7 +2332,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/heading@^0.9.1, @govuk-react/heading@workspace:components/heading":
+"@govuk-react/heading@^0.10.0, @govuk-react/heading@workspace:components/heading":
   version: 0.0.0-use.local
   resolution: "@govuk-react/heading@workspace:components/heading"
   dependencies:
@@ -12346,7 +12346,7 @@ fsevents@^1.2.7:
     "@govuk-react/global-style": ^0.10.0
     "@govuk-react/grid-col": ^0.10.0
     "@govuk-react/grid-row": ^0.10.0
-    "@govuk-react/heading": ^0.9.1
+    "@govuk-react/heading": ^0.10.0
     "@govuk-react/hint-text": ^0.10.0
     "@govuk-react/icons": ^0.10.0
     "@govuk-react/input": ^0.10.0

@@ -20,7 +20,7 @@
     "@govuk-react/global-style": "^0.10.0",
     "@govuk-react/grid-col": "^0.10.0",
     "@govuk-react/grid-row": "^0.10.0",
-    "@govuk-react/heading": "^0.9.1",
+    "@govuk-react/heading": "^0.10.0",
     "@govuk-react/hint-text": "^0.10.0",
     "@govuk-react/icons": "^0.10.0",
     "@govuk-react/input": "^0.10.0",
