@@ -22,7 +22,7 @@
     "start": "cd packages/storybook && npm start",
     "test:cypress": "cd packages/example-application && yarn test:cypress",
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand",
-    "test:snapshot": "yarn test:unit -- -u",
+    "test:snapshot": "yarn test:unit -u",
     "test:unit": "jest",
     "test:types": "tsc --noEmit --declaration -p ./tsconfig.json",
     "test": "cross-env CI=true yarn test:unit && yarn eslint && yarn test:types"
