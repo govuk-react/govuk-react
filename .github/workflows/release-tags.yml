@@ -22,7 +22,9 @@ jobs:
     - run: yarn
     - run: yarn build
     
-    - run: npm pack --workspaces && mkdir releases && mv {components,packages}/*/govuk-react-*.tgz ./releases
+    - run: yarn workspaces foreach --all --exclude @govuk-react/monorepo pack 
+    - run: mkdir releases
+    - run: mv {components,packages}/*/govuk-react-*.tgz ./releases
     - run: echo PACKAGE_VERSION=$(node -e 'console.log(require("./packages/govuk-react/package.json").version)') >> $GITHUB_ENV
     
     - name: GitHub Release
@@ -32,6 +34,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - run: npm exec --call "$GITHUB_WORKSPACE/scripts/npmPublish.sh"
+    - run: yarn workspaces foreach --all --exclude @govuk-react/monorepo exec "$GITHUB_WORKSPACE/scripts/npmPublish.sh"
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
