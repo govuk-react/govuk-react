@@ -4,11 +4,11 @@ exports[`Main matches wrapper snapshot 1`] = `
 <Main>
   <src__OuterContainer>
     <div
-      className="src__OuterContainer-sc-1lvyroj-0 jxYjHi"
+      className="src__OuterContainer-sc-1lvyroj-0 gCrlSn"
     >
       <src__InnerContainer>
         <div
-          className="src__InnerContainer-sc-1lvyroj-1 jxifmF"
+          className="src__InnerContainer-sc-1lvyroj-1 joqrYg"
         >
           <span>
             Example

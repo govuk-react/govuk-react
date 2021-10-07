@@ -41,3 +41,9 @@ govuk-react-*.tgz
 # IDE configs
 .idea/
 
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions

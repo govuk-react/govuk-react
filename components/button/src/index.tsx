@@ -242,11 +242,13 @@ type ButtonPropsWithoutAs = StyledComponentProps<'button', never, ButtonOwnProps
   forwardedAs?: never | undefined;
 };
 
-type ButtonPropsWithAs<AsC extends string | React.ComponentType, FAsC extends string | React.ComponentType = AsC> =
-  StyledComponentProps<AsC, never, ButtonOwnProps, never, FAsC> & {
-    as?: AsC | undefined;
-    forwardedAs?: FAsC | undefined;
-  };
+type ButtonPropsWithAs<
+  AsC extends string | React.ComponentType,
+  FAsC extends string | React.ComponentType = AsC
+> = StyledComponentProps<AsC, never, ButtonOwnProps, never, FAsC> & {
+  as?: AsC | undefined;
+  forwardedAs?: FAsC | undefined;
+};
 
 Button.defaultProps = {
   icon: undefined,

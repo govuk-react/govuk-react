@@ -187,7 +187,7 @@ exports[`Footer matches default snapshot: Footer 1`] = `
       "$$typeof": Symbol(react.forward_ref),
       "attrs": Array [],
       "componentStyle": e {
-        "baseHash": -2084790490,
+        "baseHash": -2081739897,
         "baseStyle": undefined,
         "componentId": "width-container__WidthContainer-sc-213f5v-0",
         "isStatic": false,
@@ -518,7 +518,7 @@ exports[`Footer matches with copyright snapshot: FooterWithCopyright 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": e {
-          "baseHash": -2084790490,
+          "baseHash": -2081739897,
           "baseStyle": undefined,
           "componentId": "width-container__WidthContainer-sc-213f5v-0",
           "isStatic": false,
@@ -902,9 +902,9 @@ exports[`Footer matches with custom width snapshot: FooterWithCustomWidth 1`] = 
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": e {
-          "baseHash": 1540108953,
+          "baseHash": -1960635304,
           "baseStyle": e {
-            "baseHash": -2084790490,
+            "baseHash": -2081739897,
             "baseStyle": undefined,
             "componentId": "width-container__WidthContainer-sc-213f5v-0",
             "isStatic": false,
@@ -1223,7 +1223,7 @@ exports[`Footer matches with meta custom snapshot: FooterWithMetaCustom 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": e {
-          "baseHash": -2084790490,
+          "baseHash": -2081739897,
           "baseStyle": undefined,
           "componentId": "width-container__WidthContainer-sc-213f5v-0",
           "isStatic": false,
@@ -1656,7 +1656,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": e {
-              "baseHash": -2084790490,
+              "baseHash": -2081739897,
               "baseStyle": undefined,
               "componentId": "width-container__WidthContainer-sc-213f5v-0",
               "isStatic": false,
@@ -2270,7 +2270,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": e {
-              "baseHash": -2084790490,
+              "baseHash": -2081739897,
               "baseStyle": undefined,
               "componentId": "width-container__WidthContainer-sc-213f5v-0",
               "isStatic": false,
@@ -3008,7 +3008,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": e {
-              "baseHash": -2084790490,
+              "baseHash": -2081739897,
               "baseStyle": undefined,
               "componentId": "width-container__WidthContainer-sc-213f5v-0",
               "isStatic": false,
@@ -4034,7 +4034,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": e {
-              "baseHash": -2084790490,
+              "baseHash": -2081739897,
               "baseStyle": undefined,
               "componentId": "width-container__WidthContainer-sc-213f5v-0",
               "isStatic": false,
@@ -4769,7 +4769,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": e {
-              "baseHash": -2084790490,
+              "baseHash": -2081739897,
               "baseStyle": undefined,
               "componentId": "width-container__WidthContainer-sc-213f5v-0",
               "isStatic": false,
@@ -5294,7 +5294,7 @@ exports[`Footer matches with single navigation link snapshot: FooterWithSingleNa
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": e {
-          "baseHash": -2084790490,
+          "baseHash": -2081739897,
           "baseStyle": undefined,
           "componentId": "width-container__WidthContainer-sc-213f5v-0",
           "isStatic": false,

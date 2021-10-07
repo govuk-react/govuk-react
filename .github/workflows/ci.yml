@@ -23,14 +23,14 @@ jobs:
         with:
           node-version: "${{ steps.nvm.outputs.NVMRC }}"
 
-      - run: npm i
+      - run: yarn
       - run: npm install -g codecov
-      - run: npm run build
-      - run: npm run docs
-      - run: npm test
+      - run: yarn build
+      - run: yarn docs
+      - run: yarn test
       - run: codecov
-      - run: npm run build:dist # the dist build is only used to track bundle size delta
-      - run: npm run bundlesize
+      - run: yarn build:dist # the dist build is only used to track bundle size delta
+      - run: yarn bundlesize
   
   automerge:
     needs: build-lint-test
