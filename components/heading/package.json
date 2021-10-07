@@ -1,16 +1,17 @@
 {
   "name": "@govuk-react/heading",
-  "version": "0.9.1",
+  "version": "0.10.0",
   "dependencies": {
-    "@govuk-react/constants": "^0.9.1",
-    "@govuk-react/lib": "^0.9.1"
+    "@govuk-react/constants": "^0.10.0",
+    "@govuk-react/lib": "^0.10.0"
   },
   "peerDependencies": {
     "react": ">=16.2.0",
     "styled-components": ">=5.1"
   },
   "scripts": {
-    "docs": "doc-component ./lib/heading.js ./README.md"
+    "docs": "doc-component ./lib/heading.js ./README.md",
+    "version": "yarn version"
   },
   "main": "dist/govuk-react-heading.cjs.js",
   "module": "dist/govuk-react-heading.esm.js",

@@ -3,11 +3,11 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.9.1",
+  "version": "0.10.0",
   "license": "MIT",
   "dependencies": {
-    "@govuk-react/constants": "^0.9.1",
-    "@govuk-react/lib": "^0.9.1",
+    "@govuk-react/constants": "^0.10.0",
+    "@govuk-react/lib": "^0.10.0",
     "govuk-colours": "^1.1.0"
   },
   "peerDependencies": {
