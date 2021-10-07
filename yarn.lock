@@ -2036,7 +2036,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@govuk-react/api-docs@workspace:packages/api-docs":
+"@govuk-react/api-docs@0.9.1, @govuk-react/api-docs@workspace:packages/api-docs":
   version: 0.0.0-use.local
   resolution: "@govuk-react/api-docs@workspace:packages/api-docs"
   dependencies:
@@ -2532,6 +2532,7 @@ __metadata:
     "@babel/preset-env": 7.14.2
     "@babel/preset-react": 7.13.13
     "@babel/preset-typescript": 7.13.0
+    "@govuk-react/api-docs": 0.9.1
     "@preconstruct/cli": ^2.1.4
     "@storybook/addon-actions": 6.3.8
     "@storybook/addon-controls": 6.3.8
