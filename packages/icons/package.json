@@ -9,6 +9,9 @@
     "react": ">=16.2.0",
     "styled-components": ">=5.1"
   },
+  "scripts": {
+    "version": "yarn version"
+  },
   "main": "dist/govuk-react-icons.cjs.js",
   "module": "dist/govuk-react-icons.esm.js",
   "source": "src/index.tsx",

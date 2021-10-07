@@ -25,7 +25,8 @@
     "doc-component": "bin/doc-component.js"
   },
   "scripts": {
-    "start": "babel-node src"
+    "start": "babel-node src",
+    "version": "yarn version"
   },
   "main": "dist/govuk-react-api-docs.cjs.js",
   "module": "dist/govuk-react-api-docs.esm.js",

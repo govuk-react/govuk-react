@@ -18,7 +18,8 @@
     "styled-components": ">=5.1"
   },
   "scripts": {
-    "docs": "doc-component ./src/index.tsx ./README.md"
+    "docs": "doc-component ./src/index.tsx ./README.md",
+    "version": "yarn version"
   },
   "main": "dist/govuk-react-error-summary.cjs.js",
   "module": "dist/govuk-react-error-summary.esm.js",

@@ -8,5 +8,8 @@
   "publishConfig": {
     "access": "public"
   },
+  "scripts": {
+    "version": "yarn version"
+  },
   "source": "icon-pointer.png"
 }

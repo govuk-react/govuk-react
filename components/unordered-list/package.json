@@ -9,7 +9,8 @@
     "styled-components": ">=5.1"
   },
   "scripts": {
-    "docs": "doc-component ./src/index.tsx ./README.md"
+    "docs": "doc-component ./src/index.tsx ./README.md",
+    "version": "yarn version"
   },
   "main": "dist/govuk-react-unordered-list.cjs.js",
   "module": "dist/govuk-react-unordered-list.esm.js",

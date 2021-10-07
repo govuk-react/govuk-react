@@ -5,6 +5,9 @@
     "@govuk-react/constants": "^0.9.1",
     "govuk-colours": "^1.1.0"
   },
+  "scripts": {
+    "version": "yarn version"
+  },
   "main": "dist/govuk-react-lib.cjs.js",
   "module": "dist/govuk-react-lib.esm.js",
   "source": "src/index.tsx",

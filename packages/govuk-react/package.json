@@ -62,7 +62,8 @@
   },
   "scripts": {
     "build": "yarn copy-readme",
-    "copy-readme": "cp ../../README.md ."
+    "copy-readme": "cp ../../README.md .",
+    "version": "yarn version"
   },
   "main": "dist/govuk-react.cjs.js",
   "module": "dist/govuk-react.esm.js",
