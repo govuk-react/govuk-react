@@ -173,7 +173,7 @@
       "!packages/storybook"
     ]
   },
-  "packageManager": "yarn@3.0.2",
+  "packageManager": "yarn@3.0.1",
   "resolutions": {
     "@types/react": "16.14.16"
   }

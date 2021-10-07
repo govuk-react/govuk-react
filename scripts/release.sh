@@ -12,11 +12,16 @@ fi
 git remote get-url origin | grep -q 'govuk-react/govuk-react' || exit 1 # ensure origin doesn't point to a fork
 git checkout -b release/next origin/main # make a new branch for next version from main
 git fetch --tags # lerna uses tags to determine what has changed, we need to make sure we have all tags locally
-VERSION=$(npm version $1 --workspaces) # update version numbers
+yarn version --deferred $1
+yarn workspaces foreach run version --deferred $1
+yarn version apply
+VERSION=$(node -e 'console.log(require("./packages/govuk-react/package.json").version)') # get new version number
 echo "Bumped version to $VERSION"
 git add package.json package-lock.json
 git commit -m $VERSION
 echo "Bumped version to $VERSION"
+
+# TODO: release process for yarn 2 is a WIP
 
 # git branch -m release/v$VERSION # rename branch
 # git push -u origin release/v$VERSION # publish new branch
