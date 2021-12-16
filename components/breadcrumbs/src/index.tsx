@@ -37,6 +37,7 @@ const BreadcrumbsList = styled('ol')({
 
 const BreadcrumbsListItem = styled('li')({
   display: 'inline-block',
+  backgroundColor: 'red',
   position: 'relative',
   marginBottom: SPACING_POINTS[1],
   marginLeft: SPACING_POINTS[2],
