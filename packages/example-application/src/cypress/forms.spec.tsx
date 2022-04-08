@@ -10,6 +10,9 @@ describe('When a user loads the application, clicks Start now,', () => {
     mount(<App />);
     cy.get('a').contains('Start now').click();
   });
+  afterEach(() => {
+    cy.get('@consoleError').should('not.be.called');
+  });
   formModes.forEach((formMode) => {
     describe(`browses to ${formMode},`, () => {
       beforeEach(() => {
@@ -60,7 +63,6 @@ describe('When a user loads the application, clicks Start now,', () => {
             .contains('Please let us know if you have multiple pets')
             .should('be.visible');
           cy.get('[name="petPhoto"]').parent().contains('Please select a valid photo').should('be.visible');
-          cy.get('@consoleError').should('not.be.called');
         });
         describe("fills in all form fields correctly but doesn't submit,", () => {
           beforeEach(() => {
@@ -105,7 +107,6 @@ describe('When a user loads the application, clicks Start now,', () => {
               .contains('Please let us know if you have multiple pets')
               .should('be.visible');
             cy.get('[name="petPhoto"]').parent().contains('Please select a valid photo').should('be.visible');
-            cy.get('@consoleError').should('not.be.called');
           });
           describe('clicks submit,', () => {
             beforeEach(() => {
@@ -147,7 +148,6 @@ describe('When a user loads the application, clicks Start now,', () => {
                 const image = $img[0] as HTMLImageElement;
                 expect(image.naturalWidth).to.equal(276);
               });
-            cy.get('@consoleError').should('not.be.called');
           });
         });
       });
