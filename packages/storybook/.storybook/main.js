@@ -13,4 +13,8 @@ module.exports = {
     config.resolve.alias = workspaceAliases();
     return config;
   },
+  reactOptions: {
+    fastRefresh: true,
+    strictMode: true,
+  },
 };

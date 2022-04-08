@@ -6,14 +6,11 @@
     "@govuk-react/icons": "^0.10.0",
     "govuk-colours": "^1.1.0",
     "hex-rgb": "^4.0.0",
-    "react-transition-group": "^4.2.1"
+    "react-transition-group": "^4.4.2"
   },
   "peerDependencies": {
-    "react": ">=16.2.0",
+    "react": ">=16.8.0",
     "styled-components": ">=5.1"
-  },
-  "devDependencies": {
-    "react-transition-group": "^4.2.1"
   },
   "scripts": {
     "docs": "doc-component ./src/index.tsx ./README.md",

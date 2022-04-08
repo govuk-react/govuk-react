@@ -2052,9 +2052,9 @@ __metadata:
     govuk-react: ^0.10.0
     jimp: ^0.6.0
     lodash: ^4.17.5
-    react: ^16.2.0
+    react: ^17.0.2
     react-docgen-typescript: ^2.1.0
-    react-dom: ^16.3.2
+    react-dom: ^17.0.2
     rimraf: ^2.6.2
   bin:
     doc-component: bin/doc-component.js
@@ -2069,7 +2069,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2082,7 +2082,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2097,7 +2097,7 @@ __metadata:
     govuk-colours: ^1.1.0
     polished: ^4.1.2
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2110,7 +2110,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2124,7 +2124,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2135,7 +2135,7 @@ __metadata:
   dependencies:
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
   languageName: unknown
   linkType: soft
 
@@ -2153,7 +2153,7 @@ __metadata:
     govuk-colours: ^1.1.0
     multi-input-input: 0.0.3
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2180,7 +2180,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     "@govuk-react/unordered-list": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2200,7 +2200,7 @@ __metadata:
     "@govuk-react/unordered-list": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=15"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2213,7 +2213,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2237,7 +2237,7 @@ __metadata:
     webpack-dev-server: ^3.11.2
     workspace-alias: ^0.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
   languageName: unknown
   linkType: soft
 
@@ -2249,7 +2249,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2264,7 +2264,7 @@ __metadata:
     "@govuk-react/label": ^0.10.0
     "@govuk-react/label-text": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2281,7 +2281,7 @@ __metadata:
     "@govuk-react/visually-hidden": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2294,7 +2294,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2303,7 +2303,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@govuk-react/global-style@workspace:components/global-style"
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2315,7 +2315,7 @@ __metadata:
     "@govuk-react/constants": ^0.10.0
     "@govuk-react/lib": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2327,7 +2327,7 @@ __metadata:
     "@govuk-react/constants": ^0.10.0
     "@govuk-react/lib": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2339,7 +2339,7 @@ __metadata:
     "@govuk-react/constants": ^0.10.0
     "@govuk-react/lib": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2352,7 +2352,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2374,7 +2374,7 @@ __metadata:
     "@govuk-react/constants": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2396,7 +2396,7 @@ __metadata:
     "@govuk-react/label": ^0.10.0
     "@govuk-react/label-text": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2409,7 +2409,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2422,7 +2422,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=15"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2433,7 +2433,7 @@ __metadata:
   dependencies:
     "@govuk-react/lib": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2446,7 +2446,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2457,7 +2457,7 @@ __metadata:
   dependencies:
     "@govuk-react/lib": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2478,7 +2478,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2490,7 +2490,7 @@ __metadata:
     "@govuk-react/constants": ^0.10.0
     "@govuk-react/lib": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2503,9 +2503,9 @@ __metadata:
     "@govuk-react/icons": ^0.10.0
     govuk-colours: ^1.1.0
     hex-rgb: ^4.0.0
-    react-transition-group: ^4.2.1
+    react-transition-group: ^4.4.2
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2516,7 +2516,7 @@ __metadata:
   dependencies:
     "@govuk-react/constants": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2547,6 +2547,7 @@ __metadata:
     "@types/styled-components": ^5.1.14
     "@typescript-eslint/eslint-plugin": ^4.0.0
     "@typescript-eslint/parser": ^4.25.0
+    "@wojtekmaj/enzyme-adapter-react-17": ^0.6.7
     babel-eslint: ^10.1.0
     babel-jest: ^27.0.2
     babel-plugin-add-module-exports: ^1.0.4
@@ -2559,7 +2560,6 @@ __metadata:
     core-js: ^3.0.1
     cross-env: ^7.0.3
     enzyme: ^3.7.0
-    enzyme-adapter-react-16: ^1.7.0
     enzyme-to-json: ^3.3.4
     eslint: ^7.32.0
     eslint-config-airbnb: ^18.2.1
@@ -2584,9 +2584,9 @@ __metadata:
     mkdirp-promise: ^5.0.1
     nyc: ^15.1.0
     prettier: ^2.3.0
-    react: ^16.8.4
+    react: ^17.0.2
     react-docgen-typescript: ^2.1.0
-    react-dom: ^16.8.4
+    react-dom: ^17.0.2
     react-final-form: ^6.5.3
     react-router-dom: ^5.2.0
     react-use-media: ^0.3.0
@@ -2598,7 +2598,7 @@ __metadata:
     webpack-cli: ^3.3.0
     workspace-alias: ^0.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
   languageName: unknown
   linkType: soft
 
@@ -2613,7 +2613,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2626,7 +2626,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     "@govuk-react/list-item": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2640,7 +2640,7 @@ __metadata:
     "@govuk-react/skip-link": ^0.10.0
     "@govuk-react/top-nav": ^0.10.0
   peerDependencies:
-    react: ">=15"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2654,7 +2654,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2668,7 +2668,7 @@ __metadata:
     govuk-colours: ^1.1.0
     polished: ^4.1.2
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2681,7 +2681,7 @@ __metadata:
     "@govuk-react/link": ^0.10.0
     react-markdown: ^5.0.3
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2695,7 +2695,7 @@ __metadata:
     "@govuk-react/tag": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2709,7 +2709,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2722,7 +2722,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2736,7 +2736,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2748,7 +2748,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2765,7 +2765,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2778,7 +2778,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2843,7 +2843,7 @@ __metadata:
     normalize.css: ^8.0.0
     react-final-form: ^6.5.3
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
   languageName: unknown
   linkType: soft
 
@@ -2855,7 +2855,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2868,7 +2868,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2880,7 +2880,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2896,7 +2896,7 @@ __metadata:
     "@govuk-react/label-text": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2913,7 +2913,7 @@ __metadata:
     "@govuk-react/search-box": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2924,7 +2924,7 @@ __metadata:
   dependencies:
     "@govuk-react/ordered-list": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2936,7 +2936,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2950,7 +2950,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=15"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -6376,6 +6376,38 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@wojtekmaj/enzyme-adapter-react-17@npm:^0.6.7":
+  version: 0.6.7
+  resolution: "@wojtekmaj/enzyme-adapter-react-17@npm:0.6.7"
+  dependencies:
+    "@wojtekmaj/enzyme-adapter-utils": ^0.1.4
+    enzyme-shallow-equal: ^1.0.0
+    has: ^1.0.0
+    prop-types: ^15.7.0
+    react-is: ^17.0.0
+    react-test-renderer: ^17.0.0
+  peerDependencies:
+    enzyme: ^3.0.0
+    react: ^17.0.0-0
+    react-dom: ^17.0.0-0
+  checksum: 5cd4c01adf0d778c5ef749964ae971422f0d445be11f9585de6a077edc32ea7ca74f14c240cf5f0848a8147596d84ed133820c91fc98d33f02b9dc6eee3fd158
+  languageName: node
+  linkType: hard
+
+"@wojtekmaj/enzyme-adapter-utils@npm:^0.1.4":
+  version: 0.1.4
+  resolution: "@wojtekmaj/enzyme-adapter-utils@npm:0.1.4"
+  dependencies:
+    function.prototype.name: ^1.1.0
+    has: ^1.0.0
+    object.fromentries: ^2.0.0
+    prop-types: ^15.7.0
+  peerDependencies:
+    react: ^17.0.0-0
+  checksum: af567b15a734ee5eb224e70cb77f42c1761ec0a0997663fdf10209988ea2dc09d5729ddfbeab9980c5e2358809004cd05187031b8c9a6f499aa59a82dea466d8
+  languageName: node
+  linkType: hard
+
 "@xtuc/ieee754@npm:^1.2.0":
   version: 1.2.0
   resolution: "@xtuc/ieee754@npm:1.2.0"
@@ -6526,25 +6558,6 @@ __metadata:
     string.prototype.padstart: ^3.0.0
     symbol.prototype.description: ^1.0.0
   checksum: bdd96e4cac75a8a942fb93cb8b7150573363a9fb40ab8528997bc067f24ae83d3031165635075b1326e463dcf840cc036b2ceb554563e75a38faf0ca288407a3
-  languageName: node
-  linkType: hard
-
-"airbnb-prop-types@npm:^2.16.0":
-  version: 2.16.0
-  resolution: "airbnb-prop-types@npm:2.16.0"
-  dependencies:
-    array.prototype.find: ^2.1.1
-    function.prototype.name: ^1.1.2
-    is-regex: ^1.1.0
-    object-is: ^1.1.2
-    object.assign: ^4.1.0
-    object.entries: ^1.1.2
-    prop-types: ^15.7.2
-    prop-types-exact: ^1.2.0
-    react-is: ^16.13.1
-  peerDependencies:
-    react: ^0.14 || ^15.0.0 || ^16.0.0-alpha
-  checksum: 393a5988b99f122c4b935296a6b8c8cbd10345418d67d547cdbcd71d57636cb9abdf9d6556940f70d0b76c3f83448627376557a75b5faf570fb8d262ed4a472f
   languageName: node
   linkType: hard
 
@@ -6892,17 +6905,6 @@ __metadata:
     es-array-method-boxes-properly: ^1.0.0
     is-string: ^1.0.7
   checksum: 574b52dcebf2def7bedb05449b60e5e3819093fa77f88c3f87a9611361d2745c7aacde01cd3ed7accafd632ee1e0340b655dd26dc7c060429cb4566058e63134
-  languageName: node
-  linkType: hard
-
-"array.prototype.find@npm:^2.1.1":
-  version: 2.1.2
-  resolution: "array.prototype.find@npm:2.1.2"
-  dependencies:
-    call-bind: ^1.0.2
-    define-properties: ^1.1.3
-    es-abstract: ^1.19.0
-  checksum: fd3f56a9e075ede7bd1b4515b92b8a2f11e39dd612caf7ae8d097d21d293a6d680be2d7ac25a0a26f5dd44904ceb591630efde599ff95b76a8e29c4c299ed5a8
   languageName: node
   linkType: hard
 
@@ -10221,45 +10223,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enzyme-adapter-react-16@npm:^1.7.0":
-  version: 1.15.6
-  resolution: "enzyme-adapter-react-16@npm:1.15.6"
-  dependencies:
-    enzyme-adapter-utils: ^1.14.0
-    enzyme-shallow-equal: ^1.0.4
-    has: ^1.0.3
-    object.assign: ^4.1.2
-    object.values: ^1.1.2
-    prop-types: ^15.7.2
-    react-is: ^16.13.1
-    react-test-renderer: ^16.0.0-0
-    semver: ^5.7.0
-  peerDependencies:
-    enzyme: ^3.0.0
-    react: ^16.0.0-0
-    react-dom: ^16.0.0-0
-  checksum: b0f31037c7595558d504c060e19db542723789a41e0598b97345b89855cb03ac86a706440106ef5d4a6c95431e455ea0cad58ca5b287bdb771915b5c6210da84
-  languageName: node
-  linkType: hard
-
-"enzyme-adapter-utils@npm:^1.14.0":
-  version: 1.14.0
-  resolution: "enzyme-adapter-utils@npm:1.14.0"
-  dependencies:
-    airbnb-prop-types: ^2.16.0
-    function.prototype.name: ^1.1.3
-    has: ^1.0.3
-    object.assign: ^4.1.2
-    object.fromentries: ^2.0.3
-    prop-types: ^15.7.2
-    semver: ^5.7.1
-  peerDependencies:
-    react: 0.13.x || 0.14.x || ^15.0.0-0 || ^16.0.0-0
-  checksum: a96a0a1bdf66417ff751e465c33733f58127b043013ec288429bc9113defa4f8ac23d806be4f3cf399cf23401cd3fdd88383ea146bc1d8f1e4258ecf35611c62
-  languageName: node
-  linkType: hard
-
-"enzyme-shallow-equal@npm:^1.0.1, enzyme-shallow-equal@npm:^1.0.4":
+"enzyme-shallow-equal@npm:^1.0.0, enzyme-shallow-equal@npm:^1.0.1":
   version: 1.0.4
   resolution: "enzyme-shallow-equal@npm:1.0.4"
   dependencies:
@@ -11894,7 +11858,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"function.prototype.name@npm:^1.1.0, function.prototype.name@npm:^1.1.2, function.prototype.name@npm:^1.1.3":
+"function.prototype.name@npm:^1.1.0, function.prototype.name@npm:^1.1.2":
   version: 1.1.5
   resolution: "function.prototype.name@npm:1.1.5"
   dependencies:
@@ -12382,7 +12346,7 @@ fsevents@^1.2.7:
     "@govuk-react/warning-text": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -12565,7 +12529,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"has@npm:^1.0.3":
+"has@npm:^1.0.0, has@npm:^1.0.3":
   version: 1.0.3
   resolution: "has@npm:1.0.3"
   dependencies:
@@ -13842,7 +13806,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"is-regex@npm:^1.0.4, is-regex@npm:^1.0.5, is-regex@npm:^1.1.0, is-regex@npm:^1.1.2, is-regex@npm:^1.1.4":
+"is-regex@npm:^1.0.4, is-regex@npm:^1.0.5, is-regex@npm:^1.1.2, is-regex@npm:^1.1.4":
   version: 1.1.4
   resolution: "is-regex@npm:1.1.4"
   dependencies:
@@ -16902,7 +16866,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"object.fromentries@npm:^2.0.0 || ^1.0.0, object.fromentries@npm:^2.0.3, object.fromentries@npm:^2.0.4":
+"object.fromentries@npm:^2.0.0, object.fromentries@npm:^2.0.0 || ^1.0.0, object.fromentries@npm:^2.0.4":
   version: 2.0.5
   resolution: "object.fromentries@npm:2.0.5"
   dependencies:
@@ -16943,7 +16907,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"object.values@npm:^1.1.0, object.values@npm:^1.1.1, object.values@npm:^1.1.2, object.values@npm:^1.1.4":
+"object.values@npm:^1.1.0, object.values@npm:^1.1.1, object.values@npm:^1.1.4":
   version: 1.1.5
   resolution: "object.values@npm:1.1.5"
   dependencies:
@@ -18141,17 +18105,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"prop-types-exact@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "prop-types-exact@npm:1.2.0"
-  dependencies:
-    has: ^1.0.3
-    object.assign: ^4.1.0
-    reflect.ownkeys: ^0.2.0
-  checksum: 21676a16d5b2623c345ca938554faba7bf29c6ad589eac3f490eda2207bcfd8d25cb3dfda5e5f8e6805239aabd2c6943f7bfbe726a1de708bae2b7a01c03eead
-  languageName: node
-  linkType: hard
-
 "prop-types@npm:^15.0.0, prop-types@npm:^15.6.0, prop-types@npm:^15.6.1, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
   version: 15.7.2
   resolution: "prop-types@npm:15.7.2"
@@ -18160,6 +18113,17 @@ fsevents@^1.2.7:
     object-assign: ^4.1.1
     react-is: ^16.8.1
   checksum: 5eef82fdda64252c7e75aa5c8cc28a24bbdece0f540adb60ce67c205cf978a5bd56b83e4f269f91c6e4dcfd80b36f2a2dec24d362e278913db2086ca9c6f9430
+  languageName: node
+  linkType: hard
+
+"prop-types@npm:^15.7.0":
+  version: 15.8.1
+  resolution: "prop-types@npm:15.8.1"
+  dependencies:
+    loose-envify: ^1.4.0
+    object-assign: ^4.1.1
+    react-is: ^16.13.1
+  checksum: c056d3f1c057cb7ff8344c645450e14f088a915d078dcda795041765047fa080d38e5d626560ccaac94a4e16e3aa15f3557c1a9a8d1174530955e992c675e459
   languageName: node
   linkType: hard
 
@@ -18542,17 +18506,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^16.3.2, react-dom@npm:^16.8.4":
-  version: 16.14.0
-  resolution: "react-dom@npm:16.14.0"
+"react-dom@npm:^17.0.2":
+  version: 17.0.2
+  resolution: "react-dom@npm:17.0.2"
   dependencies:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
-    prop-types: ^15.6.2
-    scheduler: ^0.19.1
+    scheduler: ^0.20.2
   peerDependencies:
-    react: ^16.14.0
-  checksum: 5a5c49da0f106b2655a69f96c622c347febcd10532db391c262b26aec225b235357d9da1834103457683482ab1b229af7a50f6927a6b70e53150275e31785544
+    react: 17.0.2
+  checksum: 1c1eaa3bca7c7228d24b70932e3d7c99e70d1d04e13bb0843bbf321582bc25d7961d6b8a6978a58a598af2af496d1cedcfb1bf65f6b0960a0a8161cb8dab743c
   languageName: node
   linkType: hard
 
@@ -18653,7 +18616,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-is@npm:^16.12.0 || ^17.0.0, react-is@npm:^17.0.1, react-is@npm:^17.0.2":
+"react-is@npm:^16.12.0 || ^17.0.0, react-is@npm:^17.0.0, react-is@npm:^17.0.1, react-is@npm:^17.0.2":
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
@@ -18805,21 +18768,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-test-renderer@npm:^16.0.0-0":
-  version: 16.14.0
-  resolution: "react-test-renderer@npm:16.14.0"
-  dependencies:
-    object-assign: ^4.1.1
-    prop-types: ^15.6.2
-    react-is: ^16.8.6
-    scheduler: ^0.19.1
-  peerDependencies:
-    react: ^16.14.0
-  checksum: 96eb8a2566e67ebd246ef6e1b36d8c8498c68ebfdb94ca8399c19b4e3b73368caf0ffbe44767593e3499f2f58b4b5e57ba0565a47628048d2ab01b23a422724e
-  languageName: node
-  linkType: hard
-
-"react-test-renderer@npm:^16.8.0 || ^17.0.0":
+"react-test-renderer@npm:^16.8.0 || ^17.0.0, react-test-renderer@npm:^17.0.0":
   version: 17.0.2
   resolution: "react-test-renderer@npm:17.0.2"
   dependencies:
@@ -18846,7 +18795,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-transition-group@npm:^4.2.1":
+"react-transition-group@npm:^4.4.2":
   version: 4.4.2
   resolution: "react-transition-group@npm:4.4.2"
   dependencies:
@@ -18904,14 +18853,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react@npm:^16.2.0, react@npm:^16.8.4":
-  version: 16.14.0
-  resolution: "react@npm:16.14.0"
+"react@npm:^17.0.2":
+  version: 17.0.2
+  resolution: "react@npm:17.0.2"
   dependencies:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
-    prop-types: ^15.6.2
-  checksum: 8484f3ecb13414526f2a7412190575fc134da785c02695eb92bb6028c930bfe1c238d7be2a125088fec663cc7cda0a3623373c46807cf2c281f49c34b79881ac
+  checksum: b254cc17ce3011788330f7bbf383ab653c6848902d7936a87b09d835d091e3f295f7e9dd1597c6daac5dc80f90e778c8230218ba8ad599f74adcc11e33b9d61b
   languageName: node
   linkType: hard
 
@@ -19068,13 +19016,6 @@ fsevents@^1.2.7:
     indent-string: ^4.0.0
     strip-indent: ^3.0.0
   checksum: fa1ef20404a2d399235e83cc80bd55a956642e37dd197b4b612ba7327bf87fa32745aeb4a1634b2bab25467164ab4ed9c15be2c307923dd08b0fe7c52431ae6b
-  languageName: node
-  linkType: hard
-
-"reflect.ownkeys@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "reflect.ownkeys@npm:0.2.0"
-  checksum: 9530b166569e547c2cf25ade3cdc39c662212feeccf3e0ed46e6d8abf92f5683c82d7857011cee6230bf648eb0b99b6b419a007012b8571dcd4bb4d818d3b88d
   languageName: node
   linkType: hard
 
@@ -19721,16 +19662,6 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"scheduler@npm:^0.19.1":
-  version: 0.19.1
-  resolution: "scheduler@npm:0.19.1"
-  dependencies:
-    loose-envify: ^1.1.0
-    object-assign: ^4.1.1
-  checksum: 73e185a59e2ff5aa3609f5b9cb97ddd376f89e1610579d29939d952411ca6eb7a24907a4ea4556569dacb931467a1a4a56d94fe809ef713aa76748642cd96a6c
-  languageName: node
-  linkType: hard
-
 "scheduler@npm:^0.20.2":
   version: 0.20.2
   resolution: "scheduler@npm:0.20.2"
@@ -19801,7 +19732,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"semver@npm:2 || 3 || 4 || 5, semver@npm:^5.4.1, semver@npm:^5.5.0, semver@npm:^5.6.0, semver@npm:^5.7.0, semver@npm:^5.7.1":
+"semver@npm:2 || 3 || 4 || 5, semver@npm:^5.4.1, semver@npm:^5.5.0, semver@npm:^5.6.0, semver@npm:^5.7.0":
   version: 5.7.1
   resolution: "semver@npm:5.7.1"
   bin:

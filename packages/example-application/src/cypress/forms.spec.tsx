@@ -15,6 +15,13 @@ describe('When a user loads the application, clicks Start now,', () => {
       beforeEach(() => {
         cy.get('a').contains(formMode).click();
       });
+      afterEach(() => {
+        // There is a known issue with rjsf that triggers a warning, so don't check for warnings on these forms.
+        // https://github.com/rjsf-team/react-jsonschema-form/issues/1794
+        if (formMode !== 'React JSON Schema Form') {
+          cy.get('@consoleError').should('not.be.called');
+        }
+      });
       describe('touches all form fields,', () => {
         it('should not show any error messages', () => {
           cy.contains('Error summary').should('not.exist');
@@ -60,7 +67,6 @@ describe('When a user loads the application, clicks Start now,', () => {
             .contains('Please let us know if you have multiple pets')
             .should('be.visible');
           cy.get('[name="petPhoto"]').parent().contains('Please select a valid photo').should('be.visible');
-          cy.get('@consoleError').should('not.be.called');
         });
         describe("fills in all form fields correctly but doesn't submit,", () => {
           beforeEach(() => {
@@ -105,7 +111,6 @@ describe('When a user loads the application, clicks Start now,', () => {
               .contains('Please let us know if you have multiple pets')
               .should('be.visible');
             cy.get('[name="petPhoto"]').parent().contains('Please select a valid photo').should('be.visible');
-            cy.get('@consoleError').should('not.be.called');
           });
           describe('clicks submit,', () => {
             beforeEach(() => {
@@ -147,7 +152,6 @@ describe('When a user loads the application, clicks Start now,', () => {
                 const image = $img[0] as HTMLImageElement;
                 expect(image.naturalWidth).to.equal(276);
               });
-            cy.get('@consoleError').should('not.be.called');
           });
         });
       });

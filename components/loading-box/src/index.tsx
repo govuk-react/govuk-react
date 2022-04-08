@@ -135,22 +135,26 @@ export const LoadingBox: React.FC<LoadingBoxProps> = ({
   timeIn,
   timeOut,
   ...props
-}: LoadingBoxProps) => (
-  <StyledContainer {...props}>
-    <CSSTransition timeout={timeOut} classNames="fade" in={loading} unmountOnExit>
-      <Innerwrap
-        backgroundColor={backgroundColor}
-        backgroundColorOpacity={backgroundColorOpacity}
-        timeIn={timeIn}
-        timeOut={timeOut}
-      >
-        <Spinner title={title} className={spinnerClassName} fill={spinnerColor} width="50px" height="50px" />
-        <Overlay className="overlay" />
-      </Innerwrap>
-    </CSSTransition>
-    {children}
-  </StyledContainer>
-);
+}: LoadingBoxProps) => {
+  const nodeRef = React.useRef(null);
+  return (
+    <StyledContainer {...props}>
+      <CSSTransition nodeRef={nodeRef} timeout={timeOut} classNames="fade" in={loading} unmountOnExit>
+        <Innerwrap
+          ref={nodeRef}
+          backgroundColor={backgroundColor}
+          backgroundColorOpacity={backgroundColorOpacity}
+          timeIn={timeIn}
+          timeOut={timeOut}
+        >
+          <Spinner title={title} className={spinnerClassName} fill={spinnerColor} width="50px" height="50px" />
+          <Overlay className="overlay" />
+        </Innerwrap>
+      </CSSTransition>
+      {children}
+    </StyledContainer>
+  );
+};
 
 LoadingBox.defaultProps = {
   spinnerColor: BLACK,
