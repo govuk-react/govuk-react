@@ -10,13 +10,17 @@ describe('When a user loads the application, clicks Start now,', () => {
     mount(<App />);
     cy.get('a').contains('Start now').click();
   });
-  afterEach(() => {
-    cy.get('@consoleError').should('not.be.called');
-  });
   formModes.forEach((formMode) => {
     describe(`browses to ${formMode},`, () => {
       beforeEach(() => {
         cy.get('a').contains(formMode).click();
+      });
+      afterEach(() => {
+        // There is a known issue with rjsf that triggers a warning, so don't check for warnings on these forms.
+        // https://github.com/rjsf-team/react-jsonschema-form/issues/1794
+        if (formMode !== 'React JSON Schema Form') {
+          cy.get('@consoleError').should('not.be.called');
+        }
       });
       describe('touches all form fields,', () => {
         it('should not show any error messages', () => {
