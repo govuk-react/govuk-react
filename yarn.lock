@@ -2036,7 +2036,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@govuk-react/api-docs@0.10.0, @govuk-react/api-docs@workspace:packages/api-docs":
+"@govuk-react/api-docs@0.10.1, @govuk-react/api-docs@workspace:packages/api-docs":
   version: 0.0.0-use.local
   resolution: "@govuk-react/api-docs@workspace:packages/api-docs"
   dependencies:
@@ -2049,7 +2049,7 @@ __metadata:
     cross-env: ^7.0.3
     glob: ^7.1.2
     glob-promise: ^4.1.0
-    govuk-react: ^0.10.0
+    govuk-react: ^0.10.1
     jimp: ^0.6.0
     lodash: ^4.17.5
     react: ^17.0.2
@@ -2061,12 +2061,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/back-link@^0.10.0, @govuk-react/back-link@workspace:components/back-link":
+"@govuk-react/back-link@^0.10.1, @govuk-react/back-link@workspace:components/back-link":
   version: 0.0.0-use.local
   resolution: "@govuk-react/back-link@workspace:components/back-link"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2074,12 +2074,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/breadcrumbs@^0.10.0, @govuk-react/breadcrumbs@workspace:components/breadcrumbs":
+"@govuk-react/breadcrumbs@^0.10.1, @govuk-react/breadcrumbs@workspace:components/breadcrumbs":
   version: 0.0.0-use.local
   resolution: "@govuk-react/breadcrumbs@workspace:components/breadcrumbs"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2087,13 +2087,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/button@^0.10.0, @govuk-react/button@workspace:components/button":
+"@govuk-react/button@^0.10.1, @govuk-react/button@workspace:components/button":
   version: 0.0.0-use.local
   resolution: "@govuk-react/button@workspace:components/button"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/icons": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/icons": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
     polished: ^4.1.2
   peerDependencies:
@@ -2102,12 +2102,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/caption@^0.10.0, @govuk-react/caption@workspace:components/caption":
+"@govuk-react/caption@^0.10.1, @govuk-react/caption@workspace:components/caption":
   version: 0.0.0-use.local
   resolution: "@govuk-react/caption@workspace:components/caption"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2115,13 +2115,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/checkbox@^0.10.0, @govuk-react/checkbox@workspace:components/checkbox":
+"@govuk-react/checkbox@^0.10.1, @govuk-react/checkbox@workspace:components/checkbox":
   version: 0.0.0-use.local
   resolution: "@govuk-react/checkbox@workspace:components/checkbox"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/hint-text": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/hint-text": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2129,7 +2129,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/constants@^0.10.0, @govuk-react/constants@workspace:packages/constants":
+"@govuk-react/constants@^0.10.1, @govuk-react/constants@workspace:packages/constants":
   version: 0.0.0-use.local
   resolution: "@govuk-react/constants@workspace:packages/constants"
   dependencies:
@@ -2139,17 +2139,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/date-field@^0.10.0, @govuk-react/date-field@workspace:components/date-field":
+"@govuk-react/date-field@^0.10.1, @govuk-react/date-field@workspace:components/date-field":
   version: 0.0.0-use.local
   resolution: "@govuk-react/date-field@workspace:components/date-field"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/error-text": ^0.10.0
-    "@govuk-react/hint-text": ^0.10.0
-    "@govuk-react/input": ^0.10.0
-    "@govuk-react/label": ^0.10.0
-    "@govuk-react/label-text": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/error-text": ^0.10.1
+    "@govuk-react/hint-text": ^0.10.1
+    "@govuk-react/input": ^0.10.1
+    "@govuk-react/label": ^0.10.1
+    "@govuk-react/label-text": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
     multi-input-input: 0.0.3
   peerDependencies:
@@ -2158,12 +2158,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/details@^0.10.0, @govuk-react/details@workspace:components/details":
+"@govuk-react/details@^0.10.1, @govuk-react/details@workspace:components/details":
   version: 0.0.0-use.local
   resolution: "@govuk-react/details@workspace:components/details"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
     polished: ^4.1.2
   peerDependencies:
@@ -2172,32 +2172,32 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/document-footer-metadata@^0.10.0, @govuk-react/document-footer-metadata@workspace:components/document-footer-metadata":
+"@govuk-react/document-footer-metadata@^0.10.1, @govuk-react/document-footer-metadata@workspace:components/document-footer-metadata":
   version: 0.0.0-use.local
   resolution: "@govuk-react/document-footer-metadata@workspace:components/document-footer-metadata"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
-    "@govuk-react/unordered-list": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
+    "@govuk-react/unordered-list": ^0.10.1
   peerDependencies:
     react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
 
-"@govuk-react/error-summary@^0.10.0, @govuk-react/error-summary@workspace:components/error-summary":
+"@govuk-react/error-summary@^0.10.1, @govuk-react/error-summary@workspace:components/error-summary":
   version: 0.0.0-use.local
   resolution: "@govuk-react/error-summary@workspace:components/error-summary"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/heading": ^0.10.0
-    "@govuk-react/input-field": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
-    "@govuk-react/link": ^0.10.0
-    "@govuk-react/list-item": ^0.10.0
-    "@govuk-react/paragraph": ^0.10.0
-    "@govuk-react/text-area": ^0.10.0
-    "@govuk-react/unordered-list": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/heading": ^0.10.1
+    "@govuk-react/input-field": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
+    "@govuk-react/link": ^0.10.1
+    "@govuk-react/list-item": ^0.10.1
+    "@govuk-react/paragraph": ^0.10.1
+    "@govuk-react/text-area": ^0.10.1
+    "@govuk-react/unordered-list": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2205,12 +2205,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/error-text@^0.10.0, @govuk-react/error-text@workspace:components/error-text":
+"@govuk-react/error-text@^0.10.1, @govuk-react/error-text@workspace:components/error-text":
   version: 0.0.0-use.local
   resolution: "@govuk-react/error-text@workspace:components/error-text"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2228,7 +2228,7 @@ __metadata:
     cypress: ^7.3.0
     cypress-file-upload: ^5.0.8
     formik: ^2.2.9
-    govuk-react: ^0.10.0
+    govuk-react: ^0.10.1
     react-final-form: ^6.5.3
     react-hook-form: ^7.16.2
     react-router: ^5.2.0
@@ -2241,12 +2241,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/fieldset@^0.10.0, @govuk-react/fieldset@workspace:components/fieldset":
+"@govuk-react/fieldset@^0.10.1, @govuk-react/fieldset@workspace:components/fieldset":
   version: 0.0.0-use.local
   resolution: "@govuk-react/fieldset@workspace:components/fieldset"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2254,31 +2254,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/file-upload@^0.10.0, @govuk-react/file-upload@workspace:components/file-upload":
+"@govuk-react/file-upload@^0.10.1, @govuk-react/file-upload@workspace:components/file-upload":
   version: 0.0.0-use.local
   resolution: "@govuk-react/file-upload@workspace:components/file-upload"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/error-text": ^0.10.0
-    "@govuk-react/hint-text": ^0.10.0
-    "@govuk-react/label": ^0.10.0
-    "@govuk-react/label-text": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/error-text": ^0.10.1
+    "@govuk-react/hint-text": ^0.10.1
+    "@govuk-react/label": ^0.10.1
+    "@govuk-react/label-text": ^0.10.1
   peerDependencies:
     react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
 
-"@govuk-react/footer@^0.10.0, @govuk-react/footer@workspace:components/footer":
+"@govuk-react/footer@^0.10.1, @govuk-react/footer@workspace:components/footer":
   version: 0.0.0-use.local
   resolution: "@govuk-react/footer@workspace:components/footer"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/heading": ^0.10.0
-    "@govuk-react/icons": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
-    "@govuk-react/link": ^0.10.0
-    "@govuk-react/visually-hidden": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/heading": ^0.10.1
+    "@govuk-react/icons": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
+    "@govuk-react/link": ^0.10.1
+    "@govuk-react/visually-hidden": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2286,12 +2286,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/form-group@^0.10.0, @govuk-react/form-group@workspace:components/form-group":
+"@govuk-react/form-group@^0.10.1, @govuk-react/form-group@workspace:components/form-group":
   version: 0.0.0-use.local
   resolution: "@govuk-react/form-group@workspace:components/form-group"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2299,7 +2299,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/global-style@^0.10.0, @govuk-react/global-style@workspace:components/global-style":
+"@govuk-react/global-style@^0.10.1, @govuk-react/global-style@workspace:components/global-style":
   version: 0.0.0-use.local
   resolution: "@govuk-react/global-style@workspace:components/global-style"
   peerDependencies:
@@ -2308,48 +2308,48 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/grid-col@^0.10.0, @govuk-react/grid-col@workspace:components/grid-col":
+"@govuk-react/grid-col@^0.10.1, @govuk-react/grid-col@workspace:components/grid-col":
   version: 0.0.0-use.local
   resolution: "@govuk-react/grid-col@workspace:components/grid-col"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
   peerDependencies:
     react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
 
-"@govuk-react/grid-row@^0.10.0, @govuk-react/grid-row@workspace:components/grid-row":
+"@govuk-react/grid-row@^0.10.1, @govuk-react/grid-row@workspace:components/grid-row":
   version: 0.0.0-use.local
   resolution: "@govuk-react/grid-row@workspace:components/grid-row"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
   peerDependencies:
     react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
 
-"@govuk-react/heading@^0.10.0, @govuk-react/heading@workspace:components/heading":
+"@govuk-react/heading@^0.10.1, @govuk-react/heading@workspace:components/heading":
   version: 0.0.0-use.local
   resolution: "@govuk-react/heading@workspace:components/heading"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
   peerDependencies:
     react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
 
-"@govuk-react/hint-text@^0.10.0, @govuk-react/hint-text@workspace:components/hint-text":
+"@govuk-react/hint-text@^0.10.1, @govuk-react/hint-text@workspace:components/hint-text":
   version: 0.0.0-use.local
   resolution: "@govuk-react/hint-text@workspace:components/hint-text"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2367,11 +2367,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@govuk-react/icons@^0.10.0, @govuk-react/icons@workspace:packages/icons":
+"@govuk-react/icons@^0.10.1, @govuk-react/icons@workspace:packages/icons":
   version: 0.0.0-use.local
   resolution: "@govuk-react/icons@workspace:packages/icons"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2385,28 +2385,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/input-field@^0.10.0, @govuk-react/input-field@workspace:components/input-field":
+"@govuk-react/input-field@^0.10.1, @govuk-react/input-field@workspace:components/input-field":
   version: 0.0.0-use.local
   resolution: "@govuk-react/input-field@workspace:components/input-field"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/error-text": ^0.10.0
-    "@govuk-react/hint-text": ^0.10.0
-    "@govuk-react/input": ^0.10.0
-    "@govuk-react/label": ^0.10.0
-    "@govuk-react/label-text": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/error-text": ^0.10.1
+    "@govuk-react/hint-text": ^0.10.1
+    "@govuk-react/input": ^0.10.1
+    "@govuk-react/label": ^0.10.1
+    "@govuk-react/label-text": ^0.10.1
   peerDependencies:
     react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
 
-"@govuk-react/input@^0.10.0, @govuk-react/input@workspace:components/input":
+"@govuk-react/input@^0.10.1, @govuk-react/input@workspace:components/input":
   version: 0.0.0-use.local
   resolution: "@govuk-react/input@workspace:components/input"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2414,12 +2414,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/inset-text@^0.10.0, @govuk-react/inset-text@workspace:components/inset-text":
+"@govuk-react/inset-text@^0.10.1, @govuk-react/inset-text@workspace:components/inset-text":
   version: 0.0.0-use.local
   resolution: "@govuk-react/inset-text@workspace:components/inset-text"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2427,23 +2427,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/label-text@^0.10.0, @govuk-react/label-text@workspace:components/label-text":
+"@govuk-react/label-text@^0.10.1, @govuk-react/label-text@workspace:components/label-text":
   version: 0.0.0-use.local
   resolution: "@govuk-react/label-text@workspace:components/label-text"
   dependencies:
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/lib": ^0.10.1
   peerDependencies:
     react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
 
-"@govuk-react/label@^0.10.0, @govuk-react/label@workspace:components/label":
+"@govuk-react/label@^0.10.1, @govuk-react/label@workspace:components/label":
   version: 0.0.0-use.local
   resolution: "@govuk-react/label@workspace:components/label"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2451,31 +2451,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/lead-paragraph@^0.10.0, @govuk-react/lead-paragraph@workspace:components/lead-paragraph":
+"@govuk-react/lead-paragraph@^0.10.1, @govuk-react/lead-paragraph@workspace:components/lead-paragraph":
   version: 0.0.0-use.local
   resolution: "@govuk-react/lead-paragraph@workspace:components/lead-paragraph"
   dependencies:
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/lib": ^0.10.1
   peerDependencies:
     react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
 
-"@govuk-react/lib@^0.10.0, @govuk-react/lib@workspace:packages/lib":
+"@govuk-react/lib@^0.10.1, @govuk-react/lib@workspace:packages/lib":
   version: 0.0.0-use.local
   resolution: "@govuk-react/lib@workspace:packages/lib"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
     govuk-colours: ^1.1.0
   languageName: unknown
   linkType: soft
 
-"@govuk-react/link@^0.10.0, @govuk-react/link@workspace:components/link":
+"@govuk-react/link@^0.10.1, @govuk-react/link@workspace:components/link":
   version: 0.0.0-use.local
   resolution: "@govuk-react/link@workspace:components/link"
   dependencies:
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2483,24 +2483,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/list-item@^0.10.0, @govuk-react/list-item@workspace:components/list-item":
+"@govuk-react/list-item@^0.10.1, @govuk-react/list-item@workspace:components/list-item":
   version: 0.0.0-use.local
   resolution: "@govuk-react/list-item@workspace:components/list-item"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
   peerDependencies:
     react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
 
-"@govuk-react/loading-box@^0.10.0, @govuk-react/loading-box@workspace:components/loading-box":
+"@govuk-react/loading-box@^0.10.1, @govuk-react/loading-box@workspace:components/loading-box":
   version: 0.0.0-use.local
   resolution: "@govuk-react/loading-box@workspace:components/loading-box"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/icons": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/icons": ^0.10.1
     govuk-colours: ^1.1.0
     hex-rgb: ^4.0.0
     react-transition-group: ^4.4.2
@@ -2510,11 +2510,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/main@^0.10.0, @govuk-react/main@workspace:components/main":
+"@govuk-react/main@^0.10.1, @govuk-react/main@workspace:components/main":
   version: 0.0.0-use.local
   resolution: "@govuk-react/main@workspace:components/main"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
   peerDependencies:
     react: ">=16.8.0"
     styled-components: ">=5.1"
@@ -2532,7 +2532,7 @@ __metadata:
     "@babel/preset-env": 7.14.2
     "@babel/preset-react": 7.13.13
     "@babel/preset-typescript": 7.13.0
-    "@govuk-react/api-docs": 0.10.0
+    "@govuk-react/api-docs": 0.10.1
     "@preconstruct/cli": ^2.1.4
     "@storybook/addon-actions": 6.3.8
     "@storybook/addon-controls": 6.3.8
@@ -2602,15 +2602,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/multi-choice@^0.10.0, @govuk-react/multi-choice@workspace:components/multi-choice":
+"@govuk-react/multi-choice@^0.10.1, @govuk-react/multi-choice@workspace:components/multi-choice":
   version: 0.0.0-use.local
   resolution: "@govuk-react/multi-choice@workspace:components/multi-choice"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/error-text": ^0.10.0
-    "@govuk-react/hint-text": ^0.10.0
-    "@govuk-react/label-text": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/error-text": ^0.10.1
+    "@govuk-react/hint-text": ^0.10.1
+    "@govuk-react/label-text": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2618,40 +2618,40 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/ordered-list@^0.10.0, @govuk-react/ordered-list@workspace:components/ordered-list":
+"@govuk-react/ordered-list@^0.10.1, @govuk-react/ordered-list@workspace:components/ordered-list":
   version: 0.0.0-use.local
   resolution: "@govuk-react/ordered-list@workspace:components/ordered-list"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
-    "@govuk-react/list-item": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
+    "@govuk-react/list-item": ^0.10.1
   peerDependencies:
     react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
 
-"@govuk-react/page@^0.10.0, @govuk-react/page@workspace:components/page":
+"@govuk-react/page@^0.10.1, @govuk-react/page@workspace:components/page":
   version: 0.0.0-use.local
   resolution: "@govuk-react/page@workspace:components/page"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
-    "@govuk-react/skip-link": ^0.10.0
-    "@govuk-react/top-nav": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
+    "@govuk-react/skip-link": ^0.10.1
+    "@govuk-react/top-nav": ^0.10.1
   peerDependencies:
     react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
 
-"@govuk-react/pagination@^0.10.0, @govuk-react/pagination@workspace:components/pagination":
+"@govuk-react/pagination@^0.10.1, @govuk-react/pagination@workspace:components/pagination":
   version: 0.0.0-use.local
   resolution: "@govuk-react/pagination@workspace:components/pagination"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/icons": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/icons": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2659,12 +2659,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/panel@^0.10.0, @govuk-react/panel@workspace:components/panel":
+"@govuk-react/panel@^0.10.1, @govuk-react/panel@workspace:components/panel":
   version: 0.0.0-use.local
   resolution: "@govuk-react/panel@workspace:components/panel"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
     polished: ^4.1.2
   peerDependencies:
@@ -2673,12 +2673,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/paragraph@^0.10.0, @govuk-react/paragraph@workspace:components/paragraph":
+"@govuk-react/paragraph@^0.10.1, @govuk-react/paragraph@workspace:components/paragraph":
   version: 0.0.0-use.local
   resolution: "@govuk-react/paragraph@workspace:components/paragraph"
   dependencies:
-    "@govuk-react/lib": ^0.10.0
-    "@govuk-react/link": ^0.10.0
+    "@govuk-react/lib": ^0.10.1
+    "@govuk-react/link": ^0.10.1
     react-markdown: ^5.0.3
   peerDependencies:
     react: ">=16.8.0"
@@ -2686,13 +2686,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/phase-banner@^0.10.0, @govuk-react/phase-banner@workspace:components/phase-banner":
+"@govuk-react/phase-banner@^0.10.1, @govuk-react/phase-banner@workspace:components/phase-banner":
   version: 0.0.0-use.local
   resolution: "@govuk-react/phase-banner@workspace:components/phase-banner"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
-    "@govuk-react/tag": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
+    "@govuk-react/tag": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2700,13 +2700,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/radio@^0.10.0, @govuk-react/radio@workspace:components/radio":
+"@govuk-react/radio@^0.10.1, @govuk-react/radio@workspace:components/radio":
   version: 0.0.0-use.local
   resolution: "@govuk-react/radio@workspace:components/radio"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/hint-text": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/hint-text": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2714,12 +2714,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/related-items@^0.10.0, @govuk-react/related-items@workspace:components/related-items":
+"@govuk-react/related-items@^0.10.1, @govuk-react/related-items@workspace:components/related-items":
   version: 0.0.0-use.local
   resolution: "@govuk-react/related-items@workspace:components/related-items"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2727,13 +2727,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/search-box@^0.10.0, @govuk-react/search-box@workspace:components/search-box":
+"@govuk-react/search-box@^0.10.1, @govuk-react/search-box@workspace:components/search-box":
   version: 0.0.0-use.local
   resolution: "@govuk-react/search-box@workspace:components/search-box"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/icons": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/icons": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2741,11 +2741,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/section-break@^0.10.0, @govuk-react/section-break@workspace:components/section-break":
+"@govuk-react/section-break@^0.10.1, @govuk-react/section-break@workspace:components/section-break":
   version: 0.0.0-use.local
   resolution: "@govuk-react/section-break@workspace:components/section-break"
   dependencies:
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2753,16 +2753,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/select@^0.10.0, @govuk-react/select@workspace:components/select":
+"@govuk-react/select@^0.10.1, @govuk-react/select@workspace:components/select":
   version: 0.0.0-use.local
   resolution: "@govuk-react/select@workspace:components/select"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/error-text": ^0.10.0
-    "@govuk-react/hint-text": ^0.10.0
-    "@govuk-react/label": ^0.10.0
-    "@govuk-react/label-text": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/error-text": ^0.10.1
+    "@govuk-react/hint-text": ^0.10.1
+    "@govuk-react/label": ^0.10.1
+    "@govuk-react/label-text": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2770,12 +2770,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/skip-link@^0.10.0, @govuk-react/skip-link@workspace:components/skip-link":
+"@govuk-react/skip-link@^0.10.1, @govuk-react/skip-link@workspace:components/skip-link":
   version: 0.0.0-use.local
   resolution: "@govuk-react/skip-link@workspace:components/skip-link"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2787,50 +2787,50 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@govuk-react/storybook@workspace:packages/storybook"
   dependencies:
-    "@govuk-react/back-link": ^0.10.0
-    "@govuk-react/breadcrumbs": ^0.10.0
-    "@govuk-react/button": ^0.10.0
-    "@govuk-react/caption": ^0.10.0
-    "@govuk-react/checkbox": ^0.10.0
-    "@govuk-react/date-field": ^0.10.0
-    "@govuk-react/details": ^0.10.0
-    "@govuk-react/document-footer-metadata": ^0.10.0
-    "@govuk-react/error-summary": ^0.10.0
-    "@govuk-react/error-text": ^0.10.0
-    "@govuk-react/fieldset": ^0.10.0
-    "@govuk-react/file-upload": ^0.10.0
-    "@govuk-react/footer": ^0.10.0
-    "@govuk-react/form-group": ^0.10.0
-    "@govuk-react/global-style": ^0.10.0
-    "@govuk-react/grid-col": ^0.10.0
-    "@govuk-react/grid-row": ^0.10.0
-    "@govuk-react/icons": ^0.10.0
-    "@govuk-react/input-field": ^0.10.0
-    "@govuk-react/inset-text": ^0.10.0
-    "@govuk-react/lead-paragraph": ^0.10.0
-    "@govuk-react/link": ^0.10.0
-    "@govuk-react/list-item": ^0.10.0
-    "@govuk-react/loading-box": ^0.10.0
-    "@govuk-react/main": ^0.10.0
-    "@govuk-react/ordered-list": ^0.10.0
-    "@govuk-react/pagination": ^0.10.0
-    "@govuk-react/panel": ^0.10.0
-    "@govuk-react/paragraph": ^0.10.0
-    "@govuk-react/phase-banner": ^0.10.0
-    "@govuk-react/radio": ^0.10.0
-    "@govuk-react/related-items": ^0.10.0
-    "@govuk-react/search-box": ^0.10.0
-    "@govuk-react/section-break": ^0.10.0
-    "@govuk-react/select": ^0.10.0
-    "@govuk-react/skip-link": ^0.10.0
-    "@govuk-react/table": ^0.10.0
-    "@govuk-react/tabs": ^0.10.0
-    "@govuk-react/tag": ^0.10.0
-    "@govuk-react/text-area": ^0.10.0
-    "@govuk-react/top-nav": ^0.10.0
-    "@govuk-react/unordered-list": ^0.10.0
-    "@govuk-react/visually-hidden": ^0.10.0
-    "@govuk-react/warning-text": ^0.10.0
+    "@govuk-react/back-link": ^0.10.1
+    "@govuk-react/breadcrumbs": ^0.10.1
+    "@govuk-react/button": ^0.10.1
+    "@govuk-react/caption": ^0.10.1
+    "@govuk-react/checkbox": ^0.10.1
+    "@govuk-react/date-field": ^0.10.1
+    "@govuk-react/details": ^0.10.1
+    "@govuk-react/document-footer-metadata": ^0.10.1
+    "@govuk-react/error-summary": ^0.10.1
+    "@govuk-react/error-text": ^0.10.1
+    "@govuk-react/fieldset": ^0.10.1
+    "@govuk-react/file-upload": ^0.10.1
+    "@govuk-react/footer": ^0.10.1
+    "@govuk-react/form-group": ^0.10.1
+    "@govuk-react/global-style": ^0.10.1
+    "@govuk-react/grid-col": ^0.10.1
+    "@govuk-react/grid-row": ^0.10.1
+    "@govuk-react/icons": ^0.10.1
+    "@govuk-react/input-field": ^0.10.1
+    "@govuk-react/inset-text": ^0.10.1
+    "@govuk-react/lead-paragraph": ^0.10.1
+    "@govuk-react/link": ^0.10.1
+    "@govuk-react/list-item": ^0.10.1
+    "@govuk-react/loading-box": ^0.10.1
+    "@govuk-react/main": ^0.10.1
+    "@govuk-react/ordered-list": ^0.10.1
+    "@govuk-react/pagination": ^0.10.1
+    "@govuk-react/panel": ^0.10.1
+    "@govuk-react/paragraph": ^0.10.1
+    "@govuk-react/phase-banner": ^0.10.1
+    "@govuk-react/radio": ^0.10.1
+    "@govuk-react/related-items": ^0.10.1
+    "@govuk-react/search-box": ^0.10.1
+    "@govuk-react/section-break": ^0.10.1
+    "@govuk-react/select": ^0.10.1
+    "@govuk-react/skip-link": ^0.10.1
+    "@govuk-react/table": ^0.10.1
+    "@govuk-react/tabs": ^0.10.1
+    "@govuk-react/tag": ^0.10.1
+    "@govuk-react/text-area": ^0.10.1
+    "@govuk-react/top-nav": ^0.10.1
+    "@govuk-react/unordered-list": ^0.10.1
+    "@govuk-react/visually-hidden": ^0.10.1
+    "@govuk-react/warning-text": ^0.10.1
     "@storybook/addon-actions": 6.3.8
     "@storybook/addon-controls": 6.3.8
     "@storybook/addon-docs": 6.3.8
@@ -2847,12 +2847,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/table@^0.10.0, @govuk-react/table@workspace:components/table":
+"@govuk-react/table@^0.10.1, @govuk-react/table@workspace:components/table":
   version: 0.0.0-use.local
   resolution: "@govuk-react/table@workspace:components/table"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2860,12 +2860,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/tabs@^0.10.0, @govuk-react/tabs@workspace:components/tabs":
+"@govuk-react/tabs@^0.10.1, @govuk-react/tabs@workspace:components/tabs":
   version: 0.0.0-use.local
   resolution: "@govuk-react/tabs@workspace:components/tabs"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2873,11 +2873,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/tag@^0.10.0, @govuk-react/tag@workspace:components/tag":
+"@govuk-react/tag@^0.10.1, @govuk-react/tag@workspace:components/tag":
   version: 0.0.0-use.local
   resolution: "@govuk-react/tag@workspace:components/tag"
   dependencies:
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2885,15 +2885,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/text-area@^0.10.0, @govuk-react/text-area@workspace:components/text-area":
+"@govuk-react/text-area@^0.10.1, @govuk-react/text-area@workspace:components/text-area":
   version: 0.0.0-use.local
   resolution: "@govuk-react/text-area@workspace:components/text-area"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/error-text": ^0.10.0
-    "@govuk-react/hint-text": ^0.10.0
-    "@govuk-react/label": ^0.10.0
-    "@govuk-react/label-text": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/error-text": ^0.10.1
+    "@govuk-react/hint-text": ^0.10.1
+    "@govuk-react/label": ^0.10.1
+    "@govuk-react/label-text": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2901,16 +2901,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/top-nav@^0.10.0, @govuk-react/top-nav@workspace:components/top-nav":
+"@govuk-react/top-nav@^0.10.1, @govuk-react/top-nav@workspace:components/top-nav":
   version: 0.0.0-use.local
   resolution: "@govuk-react/top-nav@workspace:components/top-nav"
   dependencies:
-    "@govuk-react/button": ^0.10.0
-    "@govuk-react/constants": ^0.10.0
+    "@govuk-react/button": ^0.10.1
+    "@govuk-react/constants": ^0.10.1
     "@govuk-react/icon-crown": 0.0.5
-    "@govuk-react/icons": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
-    "@govuk-react/search-box": ^0.10.0
+    "@govuk-react/icons": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
+    "@govuk-react/search-box": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2918,22 +2918,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/unordered-list@^0.10.0, @govuk-react/unordered-list@workspace:components/unordered-list":
+"@govuk-react/unordered-list@^0.10.1, @govuk-react/unordered-list@workspace:components/unordered-list":
   version: 0.0.0-use.local
   resolution: "@govuk-react/unordered-list@workspace:components/unordered-list"
   dependencies:
-    "@govuk-react/ordered-list": ^0.10.0
+    "@govuk-react/ordered-list": ^0.10.1
   peerDependencies:
     react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
 
-"@govuk-react/visually-hidden@^0.10.0, @govuk-react/visually-hidden@workspace:components/visually-hidden":
+"@govuk-react/visually-hidden@^0.10.1, @govuk-react/visually-hidden@workspace:components/visually-hidden":
   version: 0.0.0-use.local
   resolution: "@govuk-react/visually-hidden@workspace:components/visually-hidden"
   dependencies:
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -2941,13 +2941,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@govuk-react/warning-text@^0.10.0, @govuk-react/warning-text@workspace:components/warning-text":
+"@govuk-react/warning-text@^0.10.1, @govuk-react/warning-text@workspace:components/warning-text":
   version: 0.0.0-use.local
   resolution: "@govuk-react/warning-text@workspace:components/warning-text"
   dependencies:
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/icons": ^0.10.0
-    "@govuk-react/lib": ^0.10.0
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/icons": ^0.10.1
+    "@govuk-react/lib": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
@@ -12288,62 +12288,62 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"govuk-react@^0.10.0, govuk-react@workspace:packages/govuk-react":
+"govuk-react@^0.10.1, govuk-react@workspace:packages/govuk-react":
   version: 0.0.0-use.local
   resolution: "govuk-react@workspace:packages/govuk-react"
   dependencies:
-    "@govuk-react/back-link": ^0.10.0
-    "@govuk-react/breadcrumbs": ^0.10.0
-    "@govuk-react/button": ^0.10.0
-    "@govuk-react/caption": ^0.10.0
-    "@govuk-react/checkbox": ^0.10.0
-    "@govuk-react/constants": ^0.10.0
-    "@govuk-react/date-field": ^0.10.0
-    "@govuk-react/details": ^0.10.0
-    "@govuk-react/document-footer-metadata": ^0.10.0
-    "@govuk-react/error-summary": ^0.10.0
-    "@govuk-react/error-text": ^0.10.0
-    "@govuk-react/fieldset": ^0.10.0
-    "@govuk-react/file-upload": ^0.10.0
-    "@govuk-react/footer": ^0.10.0
-    "@govuk-react/form-group": ^0.10.0
-    "@govuk-react/global-style": ^0.10.0
-    "@govuk-react/grid-col": ^0.10.0
-    "@govuk-react/grid-row": ^0.10.0
-    "@govuk-react/heading": ^0.10.0
-    "@govuk-react/hint-text": ^0.10.0
-    "@govuk-react/icons": ^0.10.0
-    "@govuk-react/input": ^0.10.0
-    "@govuk-react/input-field": ^0.10.0
-    "@govuk-react/inset-text": ^0.10.0
-    "@govuk-react/label": ^0.10.0
-    "@govuk-react/label-text": ^0.10.0
-    "@govuk-react/lead-paragraph": ^0.10.0
-    "@govuk-react/link": ^0.10.0
-    "@govuk-react/list-item": ^0.10.0
-    "@govuk-react/loading-box": ^0.10.0
-    "@govuk-react/main": ^0.10.0
-    "@govuk-react/multi-choice": ^0.10.0
-    "@govuk-react/ordered-list": ^0.10.0
-    "@govuk-react/page": ^0.10.0
-    "@govuk-react/pagination": ^0.10.0
-    "@govuk-react/panel": ^0.10.0
-    "@govuk-react/paragraph": ^0.10.0
-    "@govuk-react/phase-banner": ^0.10.0
-    "@govuk-react/radio": ^0.10.0
-    "@govuk-react/related-items": ^0.10.0
-    "@govuk-react/search-box": ^0.10.0
-    "@govuk-react/section-break": ^0.10.0
-    "@govuk-react/select": ^0.10.0
-    "@govuk-react/skip-link": ^0.10.0
-    "@govuk-react/table": ^0.10.0
-    "@govuk-react/tabs": ^0.10.0
-    "@govuk-react/tag": ^0.10.0
-    "@govuk-react/text-area": ^0.10.0
-    "@govuk-react/top-nav": ^0.10.0
-    "@govuk-react/unordered-list": ^0.10.0
-    "@govuk-react/visually-hidden": ^0.10.0
-    "@govuk-react/warning-text": ^0.10.0
+    "@govuk-react/back-link": ^0.10.1
+    "@govuk-react/breadcrumbs": ^0.10.1
+    "@govuk-react/button": ^0.10.1
+    "@govuk-react/caption": ^0.10.1
+    "@govuk-react/checkbox": ^0.10.1
+    "@govuk-react/constants": ^0.10.1
+    "@govuk-react/date-field": ^0.10.1
+    "@govuk-react/details": ^0.10.1
+    "@govuk-react/document-footer-metadata": ^0.10.1
+    "@govuk-react/error-summary": ^0.10.1
+    "@govuk-react/error-text": ^0.10.1
+    "@govuk-react/fieldset": ^0.10.1
+    "@govuk-react/file-upload": ^0.10.1
+    "@govuk-react/footer": ^0.10.1
+    "@govuk-react/form-group": ^0.10.1
+    "@govuk-react/global-style": ^0.10.1
+    "@govuk-react/grid-col": ^0.10.1
+    "@govuk-react/grid-row": ^0.10.1
+    "@govuk-react/heading": ^0.10.1
+    "@govuk-react/hint-text": ^0.10.1
+    "@govuk-react/icons": ^0.10.1
+    "@govuk-react/input": ^0.10.1
+    "@govuk-react/input-field": ^0.10.1
+    "@govuk-react/inset-text": ^0.10.1
+    "@govuk-react/label": ^0.10.1
+    "@govuk-react/label-text": ^0.10.1
+    "@govuk-react/lead-paragraph": ^0.10.1
+    "@govuk-react/link": ^0.10.1
+    "@govuk-react/list-item": ^0.10.1
+    "@govuk-react/loading-box": ^0.10.1
+    "@govuk-react/main": ^0.10.1
+    "@govuk-react/multi-choice": ^0.10.1
+    "@govuk-react/ordered-list": ^0.10.1
+    "@govuk-react/page": ^0.10.1
+    "@govuk-react/pagination": ^0.10.1
+    "@govuk-react/panel": ^0.10.1
+    "@govuk-react/paragraph": ^0.10.1
+    "@govuk-react/phase-banner": ^0.10.1
+    "@govuk-react/radio": ^0.10.1
+    "@govuk-react/related-items": ^0.10.1
+    "@govuk-react/search-box": ^0.10.1
+    "@govuk-react/section-break": ^0.10.1
+    "@govuk-react/select": ^0.10.1
+    "@govuk-react/skip-link": ^0.10.1
+    "@govuk-react/table": ^0.10.1
+    "@govuk-react/tabs": ^0.10.1
+    "@govuk-react/tag": ^0.10.1
+    "@govuk-react/text-area": ^0.10.1
+    "@govuk-react/top-nav": ^0.10.1
+    "@govuk-react/unordered-list": ^0.10.1
+    "@govuk-react/visually-hidden": ^0.10.1
+    "@govuk-react/warning-text": ^0.10.1
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"

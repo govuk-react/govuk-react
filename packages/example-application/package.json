@@ -1,10 +1,10 @@
 {
   "name": "@govuk-react/example-application",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "dependencies": {
     "@rjsf/core": "^3.1.0",
     "formik": "^2.2.9",
-    "govuk-react": "^0.10.0",
+    "govuk-react": "^0.10.1",
     "react-final-form": "^6.5.3",
     "react-hook-form": "^7.16.2",
     "react-router": "^5.2.0",
