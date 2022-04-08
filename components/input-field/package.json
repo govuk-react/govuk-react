@@ -10,7 +10,7 @@
     "@govuk-react/label-text": "^0.10.0"
   },
   "peerDependencies": {
-    "react": ">=16.2.0",
+    "react": ">=16.8.0",
     "styled-components": ">=5.1"
   },
   "scripts": {

@@ -2069,7 +2069,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2082,7 +2082,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2097,7 +2097,7 @@ __metadata:
     govuk-colours: ^1.1.0
     polished: ^4.1.2
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2110,7 +2110,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2124,7 +2124,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2135,7 +2135,7 @@ __metadata:
   dependencies:
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
   languageName: unknown
   linkType: soft
 
@@ -2153,7 +2153,7 @@ __metadata:
     govuk-colours: ^1.1.0
     multi-input-input: 0.0.3
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2180,7 +2180,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     "@govuk-react/unordered-list": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2200,7 +2200,7 @@ __metadata:
     "@govuk-react/unordered-list": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=15"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2213,7 +2213,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2237,7 +2237,7 @@ __metadata:
     webpack-dev-server: ^3.11.2
     workspace-alias: ^0.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
   languageName: unknown
   linkType: soft
 
@@ -2249,7 +2249,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2264,7 +2264,7 @@ __metadata:
     "@govuk-react/label": ^0.10.0
     "@govuk-react/label-text": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2281,7 +2281,7 @@ __metadata:
     "@govuk-react/visually-hidden": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2294,7 +2294,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2303,7 +2303,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@govuk-react/global-style@workspace:components/global-style"
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2315,7 +2315,7 @@ __metadata:
     "@govuk-react/constants": ^0.10.0
     "@govuk-react/lib": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2327,7 +2327,7 @@ __metadata:
     "@govuk-react/constants": ^0.10.0
     "@govuk-react/lib": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2339,7 +2339,7 @@ __metadata:
     "@govuk-react/constants": ^0.10.0
     "@govuk-react/lib": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2352,7 +2352,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2374,7 +2374,7 @@ __metadata:
     "@govuk-react/constants": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2396,7 +2396,7 @@ __metadata:
     "@govuk-react/label": ^0.10.0
     "@govuk-react/label-text": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2409,7 +2409,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2422,7 +2422,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=15"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2433,7 +2433,7 @@ __metadata:
   dependencies:
     "@govuk-react/lib": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2446,7 +2446,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2457,7 +2457,7 @@ __metadata:
   dependencies:
     "@govuk-react/lib": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2478,7 +2478,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2490,7 +2490,7 @@ __metadata:
     "@govuk-react/constants": ^0.10.0
     "@govuk-react/lib": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2505,7 +2505,7 @@ __metadata:
     hex-rgb: ^4.0.0
     react-transition-group: ^4.4.2
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2516,7 +2516,7 @@ __metadata:
   dependencies:
     "@govuk-react/constants": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2598,7 +2598,7 @@ __metadata:
     webpack-cli: ^3.3.0
     workspace-alias: ^0.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
   languageName: unknown
   linkType: soft
 
@@ -2613,7 +2613,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2626,7 +2626,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     "@govuk-react/list-item": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2640,7 +2640,7 @@ __metadata:
     "@govuk-react/skip-link": ^0.10.0
     "@govuk-react/top-nav": ^0.10.0
   peerDependencies:
-    react: ">=15"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2654,7 +2654,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2668,7 +2668,7 @@ __metadata:
     govuk-colours: ^1.1.0
     polished: ^4.1.2
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2681,7 +2681,7 @@ __metadata:
     "@govuk-react/link": ^0.10.0
     react-markdown: ^5.0.3
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2695,7 +2695,7 @@ __metadata:
     "@govuk-react/tag": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2709,7 +2709,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2722,7 +2722,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2736,7 +2736,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2748,7 +2748,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2765,7 +2765,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2778,7 +2778,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2843,7 +2843,7 @@ __metadata:
     normalize.css: ^8.0.0
     react-final-form: ^6.5.3
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
   languageName: unknown
   linkType: soft
 
@@ -2855,7 +2855,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2868,7 +2868,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2880,7 +2880,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2896,7 +2896,7 @@ __metadata:
     "@govuk-react/label-text": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2913,7 +2913,7 @@ __metadata:
     "@govuk-react/search-box": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2924,7 +2924,7 @@ __metadata:
   dependencies:
     "@govuk-react/ordered-list": ^0.10.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2936,7 +2936,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2950,7 +2950,7 @@ __metadata:
     "@govuk-react/lib": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=15"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -12346,7 +12346,7 @@ fsevents@^1.2.7:
     "@govuk-react/warning-text": ^0.10.0
     govuk-colours: ^1.1.0
   peerDependencies:
-    react: ">=16.2.0"
+    react: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft

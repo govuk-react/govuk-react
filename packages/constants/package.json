@@ -5,7 +5,7 @@
     "govuk-colours": "^1.1.0"
   },
   "peerDependencies": {
-    "react": ">=16.2.0"
+    "react": ">=16.8.0"
   },
   "scripts": {
     "version": "yarn version"

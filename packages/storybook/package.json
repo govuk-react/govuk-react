@@ -57,7 +57,7 @@
     "react-final-form": "^6.5.3"
   },
   "peerDependencies": {
-    "react": ">=16.2.0"
+    "react": ">=16.8.0"
   },
   "devDependencies": {
     "babel-loader": "^8.0.4",
