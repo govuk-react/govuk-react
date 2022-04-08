@@ -2503,7 +2503,7 @@ __metadata:
     "@govuk-react/icons": ^0.10.0
     govuk-colours: ^1.1.0
     hex-rgb: ^4.0.0
-    react-transition-group: ^4.2.1
+    react-transition-group: ^4.4.2
   peerDependencies:
     react: ">=16.2.0"
     styled-components: ">=5.1"
@@ -18795,7 +18795,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-transition-group@npm:^4.2.1":
+"react-transition-group@npm:^4.4.2":
   version: 4.4.2
   resolution: "react-transition-group@npm:4.4.2"
   dependencies:
