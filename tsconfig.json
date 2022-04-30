@@ -3,6 +3,7 @@
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
+    "strictFunctionTypes": true,
     "baseUrl": ".",
     "declaration": true,
     "emitDecoratorMetadata": false,
