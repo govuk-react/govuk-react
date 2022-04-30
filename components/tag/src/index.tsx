@@ -59,7 +59,9 @@ export const Tag = styled('strong')<TagProps>(
           backgroundColor: TAG_TINTS.GREY.background,
           color: TAG_TINTS.GREY.text,
         }
-      : undefined
+      : undefined,
+  ({ backgroundColor }) => (backgroundColor ? { backgroundColor } : undefined),
+  ({ color }) => (color ? { color } : undefined)
 );
 export interface TagProps {
   /**
@@ -70,6 +72,14 @@ export interface TagProps {
    * Tag tint
    */
   tint?: keyof typeof TAG_TINTS;
+  /**
+   * Custom colour to override the tag background color
+   */
+  backgroundColor?: string;
+  /**
+   * Custom colour to override the tag text color
+   */
+  color?: string;
 }
 
 Tag.defaultProps = {

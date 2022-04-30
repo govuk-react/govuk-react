@@ -16,10 +16,17 @@ Default.args = {
   children: 'beta',
 };
 
-export const Inactive: Story = (args) => <Tag {...args}>inactive</Tag>;
+export const Inactive: Story = (args) => <Tag {...args} />;
 Inactive.args = {
   children: 'inactive',
   tint: 'GREY',
+};
+
+export const Custom: Story = (args) => <Tag {...args} />;
+Custom.args = {
+  children: 'taxi',
+  backgroundColor: '#0b0c0c',
+  color: '#ffdd00',
 };
 
 export const ShowingOneOrTwoStatuses: Story = (args) => (

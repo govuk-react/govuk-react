@@ -7708,8 +7708,9 @@ Prop | Required | Default | Type | Description
  `autoCapitalize` |  | `````` | string | 
  `autoCorrect` |  | `````` | string | 
  `autoSave` |  | `````` | string | 
+ `backgroundColor` |  | `````` | string | Custom colour to override the tag background color
  `className` |  | `````` | string | 
- `color` |  | `````` | string | 
+ `color` |  | `````` | string | Custom colour to override the tag text color
  `contentEditable` |  | `````` | Booleanish | "inherit" | 
  `contextMenu` |  | `````` | string | 
  `dangerouslySetInnerHTML` |  | `````` | { __html: string; } | 
