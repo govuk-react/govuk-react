@@ -26,8 +26,8 @@ Prop | Required | Default | Type | Description
  `about` |  | `````` | string | 
  `accessKey` |  | `````` | string | 
  `allowDangerousHtml` |  | `````` | boolean | 
- `allowNode` |  | `````` | (node: Content, index: number, parent: "definition" | "heading" | "link" | "list" | "table" | "text" | "paragraph" | "thematicBreak" | "blockquote" | "html" | "code" | "yaml" | ... 13 more ... | "linkReference") => boolean | 
- `allowedTypes` |  | `````` | ("definition" | "heading" | "link" | "list" | "table" | "text" | "paragraph" | "thematicBreak" | "blockquote" | "html" | "code" | "yaml" | "footnoteDefinition" | "listItem" | "tableRow" | ... 10 more ... | "linkReference")[] | 
+ `allowNode` |  | `````` | (node: Content, index: number, parent: "definition" | "heading" | "link" | "list" | "table" | "text" | "paragraph" | "blockquote" | "html" | "code" | "yaml" | "footnoteDefinition" | ... 13 more ... | "footnoteReference") => boolean | 
+ `allowedTypes` |  | `````` | ("definition" | "heading" | "link" | "list" | "table" | "text" | "paragraph" | "blockquote" | "html" | "code" | "yaml" | "footnoteDefinition" | "listItem" | "tableRow" | "tableCell" | ... 10 more ... | "footnoteReference")[] | 
  `aria-activedescendant` |  | `````` | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
  `aria-atomic` |  | `````` | boolean | "true" | "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
  `aria-autocomplete` |  | `````` | "list" | "none" | "inline" | "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
@@ -90,7 +90,7 @@ Prop | Required | Default | Type | Description
  `defaultChecked` |  | `````` | boolean | 
  `defaultValue` |  | `````` | string | number | readonly string[] | 
  `dir` |  | `````` | string | 
- `disallowedTypes` |  | `````` | ("definition" | "heading" | "link" | "list" | "table" | "text" | "paragraph" | "thematicBreak" | "blockquote" | "html" | "code" | "yaml" | "footnoteDefinition" | "listItem" | "tableRow" | ... 10 more ... | "linkReference")[] | 
+ `disallowedTypes` |  | `````` | ("definition" | "heading" | "link" | "list" | "table" | "text" | "paragraph" | "blockquote" | "html" | "code" | "yaml" | "footnoteDefinition" | "listItem" | "tableRow" | "tableCell" | ... 10 more ... | "footnoteReference")[] | 
  `draggable` |  | `````` | Booleanish | 
  `escapeHtml` |  | `````` | boolean | @deprecated use allowDangerousHtml
  `hidden` |  | `````` | boolean | 
