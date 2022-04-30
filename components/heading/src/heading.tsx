@@ -75,7 +75,7 @@ Heading.displayName = 'Heading';
 
 export interface HeadingType extends React.FC<HeadingOwnProps & WithWhiteSpaceProps> {
   (props: HeadingPropsWithoutAs): React.ReactElement<HeadingPropsWithoutAs>;
-  <AsC extends string | React.ComponentType = 'h1', FAsC extends string | React.ComponentType = AsC>(
+  <AsC extends string | React.ComponentType<any> = 'h1', FAsC extends string | React.ComponentType<any> = AsC>(
     props: HeadingPropsWithAs<AsC, FAsC>
   ): React.ReactElement<HeadingPropsWithAs<AsC, FAsC>>;
 }
@@ -86,12 +86,12 @@ type HeadingPropsWithoutAs = StyledComponentProps<'h1', never, HeadingOwnProps, 
 };
 
 type HeadingPropsWithAs<
-  AsC extends string | React.ComponentType,
-  FAsC extends string | React.ComponentType = AsC
-> = StyledComponentProps<AsC, never, HeadingOwnProps, never, FAsC> & {
-  as?: AsC | undefined;
-  forwardedAs?: FAsC | undefined;
-};
+  AsC extends string | React.ComponentType<any>,
+  FAsC extends string | React.ComponentType<any> = AsC
+  > = StyledComponentProps<AsC, never, HeadingOwnProps, never, FAsC> & {
+    as?: AsC | undefined;
+    forwardedAs?: FAsC | undefined;
+  };
 
 interface StyledHeadingOwnProps extends WithWhiteSpaceProps {
   /**

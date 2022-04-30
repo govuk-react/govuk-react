@@ -231,7 +231,7 @@ type ButtonRefType = React.Ref<HTMLButtonElement>;
 
 export interface ButtonType extends React.ForwardRefExoticComponent<ButtonOwnProps> {
   (props: ButtonPropsWithoutAs, ref?: ButtonRefType): React.ReactElement<ButtonPropsWithoutAs>;
-  <AsC extends string | React.ComponentType = 'button', FAsC extends string | React.ComponentType = AsC>(
+  <AsC extends string | React.ComponentType<any> = 'button', FAsC extends string | React.ComponentType<any> = AsC>(
     props: ButtonPropsWithAs<AsC, FAsC>,
     ref?: React.Ref<AsC>
   ): React.ReactElement<ButtonPropsWithAs<AsC, FAsC>>;
@@ -243,12 +243,12 @@ type ButtonPropsWithoutAs = StyledComponentProps<'button', never, ButtonOwnProps
 };
 
 type ButtonPropsWithAs<
-  AsC extends string | React.ComponentType,
-  FAsC extends string | React.ComponentType = AsC
-> = StyledComponentProps<AsC, never, ButtonOwnProps, never, FAsC> & {
-  as?: AsC | undefined;
-  forwardedAs?: FAsC | undefined;
-};
+  AsC extends string | React.ComponentType<any>,
+  FAsC extends string | React.ComponentType<any> = AsC
+  > = StyledComponentProps<AsC, never, ButtonOwnProps, never, FAsC> & {
+    as?: AsC | undefined;
+    forwardedAs?: FAsC | undefined;
+  };
 
 Button.defaultProps = {
   icon: undefined,
