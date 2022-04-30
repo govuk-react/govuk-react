@@ -16,6 +16,7 @@ import Navigation from './atoms/navigation';
 import Link from './atoms/link';
 import SectionBreak from './atoms/section-break';
 import MetaCustom from './atoms/meta-custom';
+import Licence from './atoms/licence';
 
 import MetaContainer from './molecules/meta-container';
 import MetaLinks from './molecules/meta-links';
@@ -48,6 +49,7 @@ export const Footer: FooterType = ({
   container: Container = Footer.WidthContainer,
   copyright = undefined,
   meta = undefined,
+  licence = <Licence />,
   ...props
 }: FooterProps) => (
   <FooterContainer role="contentinfo" {...props}>
@@ -58,7 +60,9 @@ export const Footer: FooterType = ({
           <SectionBreak />
         </>
       )}
-      <MetaContainer copyright={copyright}>{meta}</MetaContainer>
+      <MetaContainer copyright={copyright} licence={licence}>
+        {meta}
+      </MetaContainer>
     </Container>
   </FooterContainer>
 );
@@ -72,6 +76,7 @@ export interface FooterType extends React.FC<FooterProps> {
   MetaLinks: typeof MetaLinks;
   NavigationLinks: typeof NavigationLinks;
   WidthContainer: typeof WidthContainer;
+  Licence: typeof Licence;
 }
 
 interface FooterProps {
@@ -92,6 +97,10 @@ interface FooterProps {
    * Meta text and links
    */
   meta?: React.ReactNode;
+  /**
+   * Licence content
+   */
+  licence?: false | string | React.ReactNode;
 }
 Footer.Link = Link;
 Footer.Navigation = Navigation;
@@ -99,12 +108,14 @@ Footer.MetaCustom = MetaCustom;
 Footer.MetaLinks = MetaLinks;
 Footer.NavigationLinks = NavigationLinks;
 Footer.WidthContainer = WidthContainer;
+Footer.Licence = Licence;
 
 Footer.defaultProps = {
   children: undefined,
   container: Footer.WidthContainer,
   copyright: undefined,
   meta: undefined,
+  licence: <Licence />,
 };
 
 export default Footer;

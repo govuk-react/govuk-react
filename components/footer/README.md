@@ -18,6 +18,7 @@ Prop | Required | Default | Type | Description
  `children` |  | ```undefined``` | ReactNode | Footer navigation links
  `container` |  | ```Footer.WidthContainer``` | ElementType<any> | Override the default footer container component.<br/>`children`, `copyright` and `meta` will be placed inside this component.
  `copyright` |  | ```undefined``` | CopyrightProps | Copyright information
+ `licence` |  | ```<Licence />``` | ReactNode | Licence content
  `meta` |  | ```undefined``` | ReactNode | Meta text and links
 
 

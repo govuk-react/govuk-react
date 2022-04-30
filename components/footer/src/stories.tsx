@@ -46,6 +46,32 @@ WithCopyright.args = {
   },
 };
 
+export const WithCustomLicense = Template.bind({});
+
+WithCustomLicense.args = {
+  licence: (
+    <span>
+      All content is available under the{' '}
+      <Footer.Link href="https://creativecommons.org/licenses/by/4.0/" rel="license">
+        Creative Commons Attribution 4.0 International Licence
+      </Footer.Link>
+      , except where otherwise stated
+    </span>
+  ),
+};
+
+export const WithNoLicense = Template.bind({});
+
+WithNoLicense.args = {
+  meta: (
+    <Footer.MetaCustom>
+      Built using <Footer.Link href="https://github.com/govuk-react/govuk-react">govuk-react</Footer.Link> with source
+      code available on <Footer.Link href="/">GitHub</Footer.Link>
+    </Footer.MetaCustom>
+  ),
+  licence: false,
+};
+
 export const WithMetaLinks = Template.bind({});
 WithMetaLinks.args = {
   meta: (
