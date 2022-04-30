@@ -7721,7 +7721,7 @@ Prop | Required | Default | Type | Description
  `forwardedAs` |  | `````` | undefined | 
  `hidden` |  | `````` | boolean | 
  `id` |  | `````` | string | 
- `inactive` |  | ```undefined``` | boolean | 
+ `inactive` |  | ```undefined``` | boolean | Deprecated: use grey tint instead
  `inlist` |  | `````` | any | 
  `inputMode` |  | `````` | "text" | "search" | "none" | "tel" | "url" | "email" | "numeric" | "decimal" | Hints at the type of data that might be entered by the user while editing the element or its contents<br/>@see https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute
  `is` |  | `````` | string | Specify that a standard HTML element should behave like a defined custom built-in element<br/>@see https://html.spec.whatwg.org/multipage/custom-elements.html#attr-is
@@ -7908,6 +7908,7 @@ Prop | Required | Default | Type | Description
  `suppressHydrationWarning` |  | `````` | boolean | 
  `tabIndex` |  | `````` | number | 
  `theme` |  | `````` | any | 
+ `tint` |  | ```SOLID``` | "SOLID" | "GREY" | "GREEN" | "TURQUOISE" | "BLUE" | "PURPLE" | "PINK" | "RED" | "ORANGE" | "YELLOW" | Tag tint
  `title` |  | `````` | string | 
  `translate` |  | `````` | "yes" | "no" | 
  `typeof` |  | `````` | string | 
