@@ -15,6 +15,6 @@ Use the warning text component when you need to warn users about something impor
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | `````` | ReactNode | Warning text to be displayed
+ `children` |  |  | ReactNode | Warning text to be displayed
 
 

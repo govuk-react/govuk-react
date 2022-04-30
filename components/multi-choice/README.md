@@ -16,10 +16,10 @@ For wrapping a set of radio buttons with a label, optional hint and optional err
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `hint` |  | ```undefined``` | string | 
- `label` | true | `````` | ReactNode | 
- `margin` |  | `````` | Margin | Margin[] | 
- `mb` |  | `````` | string | number | 
- `meta` |  | ```{}``` | { error?: string | string[]; touched?: boolean; } | 
- `padding` |  | `````` | Padding | Padding[] | 
+ `label` | true |  | ReactNode | 
+ `margin` |  |  | Margin \| Margin[] | 
+ `mb` |  |  | string \| number | 
+ `meta` |  | ```{}``` | { error?: string \| string[]; touched?: boolean; } | 
+ `padding` |  |  | Padding \| Padding[] | 
 
 

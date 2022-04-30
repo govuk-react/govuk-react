@@ -15,14 +15,14 @@ The select component should only be used as a last resort in public-facing servi
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `error` |  | `````` | boolean | Apply error state styling to the component
+ `error` |  |  | boolean | Apply error state styling to the component
  `errorText` |  | ```undefined``` | string | 
  `hint` |  | ```undefined``` | ReactNode | 
  `input` |  | ```{}``` | SelectHTMLAttributes<HTMLSelectElement> | 
- `label` | true | `````` | string | 
- `margin` |  | `````` | Margin | Margin[] | 
- `mb` |  | `````` | string | number | 
- `meta` |  | ```{}``` | { error?: string | string[]; touched?: boolean; } | 
- `padding` |  | `````` | Padding | Padding[] | 
+ `label` | true |  | string | 
+ `margin` |  |  | Margin \| Margin[] | 
+ `mb` |  |  | string \| number | 
+ `meta` |  | ```{}``` | { error?: string \| string[]; touched?: boolean; } | 
+ `padding` |  |  | Padding \| Padding[] | 
 
 

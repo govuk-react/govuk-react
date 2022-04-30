@@ -17,6 +17,6 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` |  | ```undefined``` | ReactNode | The content that will be displayed when details are revealed
  `open` |  | ```undefined``` | boolean | Flag to indicate whether to show component open by default
- `summary` | true | `````` | ReactNode | Text for the details summary link e.g. Help with nationality
+ `summary` | true |  | ReactNode | Text for the details summary link e.g. Help with nationality
 
 

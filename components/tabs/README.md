@@ -15,6 +15,6 @@ The tabs component lets users navigate between related sections of content, disp
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | `````` | ReactNode | child components that will appear in the Tabs section
+ `children` |  |  | ReactNode | child components that will appear in the Tabs section
 
 

@@ -15,10 +15,10 @@ Use lists to make blocks of text easier to read, and to break information into m
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` |  | `````` | ReactNode | One or more ListItem components
+ `children` |  |  | ReactNode | One or more ListItem components
  `listStyleType` |  | ```undefined``` | string | CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend
- `margin` |  | `````` | Margin | Margin[] | 
- `mb` |  | `````` | string | number | 
- `padding` |  | `````` | Padding | Padding[] | 
+ `margin` |  |  | Margin \| Margin[] | 
+ `mb` |  |  | string \| number | 
+ `padding` |  |  | Padding \| Padding[] | 
 
 
