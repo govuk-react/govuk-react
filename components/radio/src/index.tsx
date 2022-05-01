@@ -101,6 +101,7 @@ const LabelText = styled('span')({
     height: 0,
     border: `${SPACING_POINTS[2]}px solid`,
     borderRadius: '50%',
+    background: 'currentColor',
     opacity: 0,
   },
 });

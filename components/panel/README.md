@@ -16,6 +16,6 @@ The panel component is a visible container used on confirmation or results pages
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `children` |  | ```undefined``` | ReactNode | Panel body text
- `title` | true | `````` | string | Panel title text
+ `title` | true |  | string | Panel title text
 
 

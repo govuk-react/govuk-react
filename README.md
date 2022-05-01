@@ -20,6 +20,7 @@ This project is being or has been used by:
 - [Department for International Trade](https://github.com/uktrade/data-science-frontend) [2](https://github.com/uktrade/data-hub-frontend) [3](https://github.com/uktrade/statement-of-works) [4](https://github.com/uktrade/data-hub-components)
 - [Department of Business, Energy and Industrial Strategy](https://github.com/UKGovernmentBEIS/beis-cosmetics-spa)
 - [Department of Health](https://github.com/DepartmentOfHealth-htbhf/htbhf-management-web-ui-spike)
+- [Department for Environment, Food and Rural Affairs](https://github.com/DEFRA/eutd-mmo-cc-external-frontend)
 - [Food Standards Agency](https://github.com/FoodStandardsAgency/register-a-food-business-healthcheck-dashboard) [2](https://github.com/FSA-Civica/govuk-react/tree/slice-and-dice-packages/base)
 - [HM Land Registry](https://github.com/LandRegistry/title-token)
 - [HM Passport Office](https://github.com/UKHomeOffice/lev-react-components)
