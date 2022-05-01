@@ -21,7 +21,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3.1.1
         with:
-          node-version: "${{ steps.nvm.outputs.NVMRC }}"
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
       - run: yarn
       - run: npm install -g codecov
@@ -31,12 +31,14 @@ jobs:
       - run: codecov
       - run: yarn build:dist # the dist build is only used to track bundle size delta
       - run: yarn bundlesize
-  
+
   automerge:
     needs: build-lint-test
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
     steps:
-      - uses: fastify/github-action-merge-dependabot@v2.7.0
+      - uses: fastify/github-action-merge-dependabot@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-
