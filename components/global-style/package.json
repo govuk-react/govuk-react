@@ -1,8 +1,8 @@
 {
   "name": "@govuk-react/global-style",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "peerDependencies": {
-    "react": ">=16.2.0",
+    "react": ">=16.8.0",
     "styled-components": ">=5.1"
   },
   "scripts": {

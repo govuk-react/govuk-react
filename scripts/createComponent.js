@@ -36,7 +36,7 @@ const packageJson = () => {
     "@govuk-react/lib": "^${version}"
   },
   "peerDependencies": {
-    "react": ">=16.2.0",
+    "react": ">=16.8.0",
     "styled-components": ">=5.1"
   },
   "scripts": {
