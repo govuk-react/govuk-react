@@ -2840,7 +2840,7 @@ __metadata:
     "@storybook/react": 6.3.7
     "@storybook/storybook-deployer": ^2.8.1
     "@types/react-dom": ^17
-    babel-loader: ^8.0.4
+    babel-loader: ^8.2.5
     babel-plugin-styled-components: ^2.0.7
     final-form: ^4.12.0
     formik: ^2.2.9
@@ -6849,18 +6849,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-loader@npm:^8.0.4, babel-loader@npm:^8.2.2":
-  version: 8.2.2
-  resolution: "babel-loader@npm:8.2.2"
+"babel-loader@npm:^8.2.2, babel-loader@npm:^8.2.5":
+  version: 8.2.5
+  resolution: "babel-loader@npm:8.2.5"
   dependencies:
     find-cache-dir: ^3.3.1
-    loader-utils: ^1.4.0
+    loader-utils: ^2.0.0
     make-dir: ^3.1.0
     schema-utils: ^2.6.5
   peerDependencies:
     "@babel/core": ^7.0.0
     webpack: ">=2"
-  checksum: df5092ef9886bb49aacb7c58ac40ed0681ced031c8d91e49d680cedace2aa1703390a31fbe7c0e409f739836e911c5c991119133d90d9289f681c0a8ff2447a1
+  checksum: a6605557885eabbc3250412405f2c63ca87287a95a439c643fdb47d5ea3d5326f72e43ab97be070316998cb685d5dfbc70927ce1abe8be7a6a4f5919287773fb
   languageName: node
   linkType: hard
 
