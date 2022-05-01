@@ -25,13 +25,15 @@ jobs:
         with:
           node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
-      - run: yarn
-      - run: yarn build:storybook
+      - name: Install dependencies
+        run: yarn workspaces focus
+        working-directory: packages/storybook
 
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          storybookBuildDir: packages/storybook/storybook-static
-          # preserveMissing: true # uncomment this line when we are partially disabling tests to save on usage
+          buildScriptName: build
+          workingDir: packages/storybook
+          onlyChanged: true
