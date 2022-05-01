@@ -78,6 +78,7 @@ Tab.defaultProps = {
 
 interface TabType extends React.FC<TabOwnProps> {
   (props: TabPropsWithoutAs): React.ReactElement<TabPropsWithoutAs>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   <AsC extends string | React.ComponentType<any> = 'a', FAsC extends string | React.ComponentType<any> = AsC>(
     props: TabPropsWithAs<AsC, FAsC>
   ): React.ReactElement<TabPropsWithAs<AsC, FAsC>>;
@@ -89,7 +90,9 @@ type TabPropsWithoutAs = StyledComponentProps<'a', never, TabOwnProps, never> & 
 };
 
 type TabPropsWithAs<
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   AsC extends string | React.ComponentType<any>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   FAsC extends string | React.ComponentType<any> = AsC
 > = StyledComponentProps<AsC, never, TabOwnProps, never, FAsC> & {
   as?: AsC | undefined;

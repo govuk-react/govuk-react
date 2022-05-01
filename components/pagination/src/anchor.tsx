@@ -114,6 +114,7 @@ const PaginationAnchor: PaginationAnchorType = ({
 
 interface PaginationAnchorType extends React.FC<PaginationAnchorProps> {
   (props: PaginationAnchorPropsWithoutAs): React.ReactElement<PaginationAnchorPropsWithoutAs>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   <AsC extends string | React.ComponentType<any> = 'a', FAsC extends string | React.ComponentType<any> = AsC>(
     props: PaginationAnchorPropsWithAs<AsC, FAsC>
   ): React.ReactElement<PaginationAnchorPropsWithAs<AsC, FAsC>>;
@@ -125,12 +126,14 @@ type PaginationAnchorPropsWithoutAs = StyledComponentProps<'a', never, Paginatio
 };
 
 type PaginationAnchorPropsWithAs<
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   AsC extends string | React.ComponentType<any>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   FAsC extends string | React.ComponentType<any> = AsC
-  > = StyledComponentProps<AsC, never, PaginationAnchorProps, never, FAsC> & {
-    as?: AsC | undefined;
-    forwardedAs?: FAsC | undefined;
-  };
+> = StyledComponentProps<AsC, never, PaginationAnchorProps, never, FAsC> & {
+  as?: AsC | undefined;
+  forwardedAs?: FAsC | undefined;
+};
 
 interface PaginationAnchorProps {
   children: string | React.ReactElement;

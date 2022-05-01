@@ -75,6 +75,7 @@ Heading.displayName = 'Heading';
 
 export interface HeadingType extends React.FC<HeadingOwnProps & WithWhiteSpaceProps> {
   (props: HeadingPropsWithoutAs): React.ReactElement<HeadingPropsWithoutAs>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   <AsC extends string | React.ComponentType<any> = 'h1', FAsC extends string | React.ComponentType<any> = AsC>(
     props: HeadingPropsWithAs<AsC, FAsC>
   ): React.ReactElement<HeadingPropsWithAs<AsC, FAsC>>;
@@ -86,12 +87,14 @@ type HeadingPropsWithoutAs = StyledComponentProps<'h1', never, HeadingOwnProps, 
 };
 
 type HeadingPropsWithAs<
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   AsC extends string | React.ComponentType<any>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   FAsC extends string | React.ComponentType<any> = AsC
-  > = StyledComponentProps<AsC, never, HeadingOwnProps, never, FAsC> & {
-    as?: AsC | undefined;
-    forwardedAs?: FAsC | undefined;
-  };
+> = StyledComponentProps<AsC, never, HeadingOwnProps, never, FAsC> & {
+  as?: AsC | undefined;
+  forwardedAs?: FAsC | undefined;
+};
 
 interface StyledHeadingOwnProps extends WithWhiteSpaceProps {
   /**
