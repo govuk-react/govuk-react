@@ -18,7 +18,7 @@ Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
  `backgroundColor` |  | ```undefined``` | string | Background color (3 or 6 Hex char) of loading spinner overlay when loading is true.
  `backgroundColorOpacity` |  | ```undefined``` | number | Opacity of loading spinner backgroud colour when loading is true
- `children` |  | `````` | ReactNode | One or more children nodes that loading box will overlay
+ `children` |  |  | ReactNode | One or more children nodes that loading box will overlay
  `loading` |  | ```undefined``` | boolean | Whether loading is currently set to true or false
  `spinnerColor` |  | ```undefined``` | string | Color (3 or 6 Hex char) of loading spinner
  `timeIn` |  | ```undefined``` | number | Length of fade-in animation in milliseconds

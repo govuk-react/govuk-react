@@ -15,12 +15,12 @@ Use the text input component when you need to let users enter text that’s no l
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `error` |  | `````` | boolean | Apply error state styling to the component
+ `error` |  |  | boolean | Apply error state styling to the component
  `hint` |  | ```undefined``` | ReactNode | 
  `input` |  | ```{}``` | InputProps | 
- `margin` |  | `````` | Margin | Margin[] | 
- `mb` |  | `````` | string | number | 
- `meta` |  | ```{}``` | { error?: string | string[]; touched?: boolean; } | 
- `padding` |  | `````` | Padding | Padding[] | 
+ `margin` |  |  | Margin \| Margin[] | 
+ `mb` |  |  | string \| number | 
+ `meta` |  | ```{}``` | { error?: string \| string[]; touched?: boolean; } | 
+ `padding` |  |  | Padding \| Padding[] | 
 
 
