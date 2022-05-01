@@ -114,6 +114,22 @@ const FooterWithNavigation: React.FC = () => withRoutes(<Footer>{navigation}</Fo
 
 const FooterWithNavigationAndMeta: React.FC = () => withRoutes(<Footer meta={metaLinksAndCustom}>{navigation}</Footer>);
 
+const FooterWithCustomLicence: React.FC = () => (
+  <Footer
+    licence={
+      <span>
+        All content is available under the{' '}
+        <Footer.Link href="https://creativecommons.org/licenses/by/4.0/" rel="license">
+          Creative Commons Attribution 4.0 International Licence
+        </Footer.Link>
+        , except where otherwise stated
+      </span>
+    }
+  />
+);
+
+const FooterWithNoLicense: React.FC = () => <Footer licence={false} />;
+
 describe('Footer', () => {
   it('matches default snapshot', () => {
     expect(mount(<Footer />)).toMatchSnapshot('Footer');
@@ -153,5 +169,13 @@ describe('Footer', () => {
 
   it('matches with navigation and meta snapshot', () => {
     expect(mount(<FooterWithNavigationAndMeta />)).toMatchSnapshot('FooterWithNavigationAndMeta');
+  });
+
+  it('matches with custom licence', () => {
+    expect(mount(<FooterWithCustomLicence />)).toMatchSnapshot('FooterWithCustomLicence');
+  });
+
+  it('matches with no licence', () => {
+    expect(mount(<FooterWithNoLicense />)).toMatchSnapshot('FooterWithNoLicense');
   });
 });
