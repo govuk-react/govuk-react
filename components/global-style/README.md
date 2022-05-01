@@ -14,7 +14,7 @@ A Styled Component to apply global style for use with govuk-react.
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `suppressMultiMountWarning` |  | `````` | boolean | 
- `theme` |  | `````` | DefaultTheme | 
+ `suppressMultiMountWarning` |  |  | boolean | 
+ `theme` |  |  | DefaultTheme | 
 
 

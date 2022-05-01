@@ -14,7 +14,7 @@ jobs:
         id: nvm
 
       - name: Use Node.js
-        uses: actions/setup-node@v3.1.0
+        uses: actions/setup-node@v3.1.1
         with:
           node-version: "${{ steps.nvm.outputs.NVMRC }}"
 
@@ -22,7 +22,7 @@ jobs:
       - run: yarn build:storybook
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: packages/storybook/storybook-static # The folder the action should deploy.

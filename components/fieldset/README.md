@@ -17,8 +17,8 @@ fieldset when [asking for an address](https://design-system.service.gov.uk/patte
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `margin` |  | `````` | Margin | Margin[] | 
- `mb` |  | `````` | string | number | 
- `padding` |  | `````` | Padding | Padding[] | 
+ `margin` |  |  | Margin \| Margin[] | 
+ `mb` |  |  | string \| number | 
+ `padding` |  |  | Padding \| Padding[] | 
 
 
