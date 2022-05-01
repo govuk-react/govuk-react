@@ -2543,7 +2543,7 @@ __metadata:
     "@storybook/addon-controls": 6.4.22
     "@storybook/addon-docs": 6.3.8
     "@storybook/addon-storyshots": 6.3.8
-    "@storybook/addons": 6.3.8
+    "@storybook/addons": 6.4.22
     "@storybook/react": 6.3.7
     "@testing-library/jest-dom": ^5.16.4
     "@testing-library/react": ^11.2.7
@@ -2842,7 +2842,7 @@ __metadata:
     "@storybook/addon-actions": 6.3.8
     "@storybook/addon-controls": 6.4.22
     "@storybook/addon-docs": 6.3.8
-    "@storybook/addons": 6.3.8
+    "@storybook/addons": 6.4.22
     "@storybook/react": 6.3.7
     "@storybook/storybook-deployer": ^2.8.1
     "@types/react-dom": ^17
