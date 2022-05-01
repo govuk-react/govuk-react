@@ -63,12 +63,6 @@ WithCustomLicense.args = {
 export const WithNoLicense = Template.bind({});
 
 WithNoLicense.args = {
-  meta: (
-    <Footer.MetaCustom>
-      Built using <Footer.Link href="https://github.com/govuk-react/govuk-react">govuk-react</Footer.Link> with source
-      code available on <Footer.Link href="/">GitHub</Footer.Link>
-    </Footer.MetaCustom>
-  ),
   licence: false,
 };
 
