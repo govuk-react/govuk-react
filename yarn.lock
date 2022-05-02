@@ -2236,7 +2236,7 @@ __metadata:
     formik: ^2.2.9
     govuk-react: ^0.10.1
     react-final-form: ^6.5.3
-    react-hook-form: ^7.16.2
+    react-hook-form: ^7.30.0
     react-router: ^5.2.0
     react-router-dom: ^5.2.0
     styled-components: ^5.3.0
@@ -2856,7 +2856,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     react-final-form: ^6.5.3
-    react-hook-form: ^7.16.2
+    react-hook-form: ^7.30.0
     react-router-dom: ^5.2.0
     react-use-media: ^0.3.0
     styled-components: ^5.3.0
@@ -18354,12 +18354,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-hook-form@npm:^7.16.2":
-  version: 7.17.1
-  resolution: "react-hook-form@npm:7.17.1"
+"react-hook-form@npm:^7.30.0":
+  version: 7.30.0
+  resolution: "react-hook-form@npm:7.30.0"
   peerDependencies:
-    react: ^16.8.0 || ^17
-  checksum: 9ef4a10a39e50c0c737c3531e744791ca1005ce1b225b45c38b2b6191557757de9f646db8675a00d47046790f0a3171aff7c99996e16e1a2f80f9a2c9dc18e4e
+    react: ^16.8.0 || ^17 || ^18
+  checksum: 7af442c80e1d8e04b6345f4f46177974d82488e81cc12b165d6ff1c69ba0f6234bd2ef0f7b51dda34f77b36fe74464815bbb0f4c77dc2cd9793f8e89d528ae25
   languageName: node
   linkType: hard
 
