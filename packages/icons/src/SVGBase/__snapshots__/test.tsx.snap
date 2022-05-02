@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SVG matches wrapper snapshot: wrapper mount 1`] = `
-<SVG>
+<SVG
+  fill="currentColor"
+  width="100%"
+>
   <svg
     fill="currentColor"
     height="100%"

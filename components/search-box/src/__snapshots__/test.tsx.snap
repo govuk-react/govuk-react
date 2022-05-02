@@ -97,6 +97,7 @@ exports[`SearchBox matches wrapper snapshot: wrapper mount 1`] = `
                 fill="#ffffff"
                 title="Search"
                 viewBox="0 0 57 57"
+                width="100%"
               >
                 <svg
                   fill="#ffffff"

@@ -40,6 +40,10 @@ class Input extends React.Component<InputProps> {
       year: 'Year',
     },
     error: false,
+    refs: undefined,
+    onChange: undefined,
+    onBlur: undefined,
+    onFocus: undefined,
   };
 
   inputs = {};

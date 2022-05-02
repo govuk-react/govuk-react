@@ -9,6 +9,7 @@ exports[`Search matches wrapper snapshot: wrapper mount 1`] = `
     fill="currentColor"
     title="Search"
     viewBox="0 0 57 57"
+    width="100%"
   >
     <svg
       fill="currentColor"

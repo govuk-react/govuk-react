@@ -71,6 +71,7 @@ exports[`WarningText to match snapshot 1`] = `
               preserveAspectRatio="xMidYMid meet"
               title="icon important"
               viewBox="0 0 35.000000 35.000000"
+              width="100%"
             >
               <svg
                 fill="currentColor"
