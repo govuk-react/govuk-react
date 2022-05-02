@@ -3,16 +3,19 @@
   "version": "0.10.1",
   "dependencies": {
     "@rjsf/core": "^3.1.0",
+    "final-form": "^4.20.7",
     "formik": "^2.2.9",
     "govuk-react": "^0.10.1",
-    "react-final-form": "^6.5.3",
+    "react-final-form": "^6.5.9",
     "react-hook-form": "^7.30.0",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
     "styled-components": "^5.3.0"
   },
   "peerDependencies": {
-    "react": ">=16.8.0"
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "react-is": ">=16.8.0"
   },
   "scripts": {
     "test:cypress": "cypress run-ct",
@@ -35,6 +38,7 @@
     "cypress": "^9.6.0",
     "cypress-file-upload": "^5.0.8",
     "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.72.0",
     "webpack-dev-server": "^4.8.1",
     "workspace-alias": "^0.1.0"
   }

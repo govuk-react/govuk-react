@@ -7,7 +7,6 @@ module.exports = {
   plugins: ['@typescript-eslint', 'no-only-tests'],
   extends: [
     'airbnb',
-    'sonar',
     'prettier',
     'react-app',
     'plugin:prettier/recommended',
@@ -45,7 +44,6 @@ module.exports = {
       extends: [
         'airbnb',
         'airbnb-typescript',
-        'sonar',
         'prettier',
         'react-app',
         'plugin:prettier/recommended',

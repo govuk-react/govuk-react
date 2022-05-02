@@ -2084,7 +2084,10 @@ __metadata:
     react: ^17.0.2
     react-docgen-typescript: ^2.1.0
     react-dom: ^17.0.2
+    react-is: ^17.0.2
     rimraf: ^3.0.2
+    styled-components: ^5.3.0
+    typescript: ^4.2.4
   bin:
     doc-component: bin/doc-component.js
   languageName: unknown
@@ -2163,8 +2166,6 @@ __metadata:
   resolution: "@govuk-react/constants@workspace:packages/constants"
   dependencies:
     govuk-colours: ^1.1.0
-  peerDependencies:
-    react: ">=16.8.0"
   languageName: unknown
   linkType: soft
 
@@ -2256,18 +2257,22 @@ __metadata:
     "@rjsf/core": ^3.1.0
     cypress: ^9.6.0
     cypress-file-upload: ^5.0.8
+    final-form: ^4.20.7
     formik: ^2.2.9
     govuk-react: ^0.10.1
     html-webpack-plugin: ^5.5.0
-    react-final-form: ^6.5.3
+    react-final-form: ^6.5.9
     react-hook-form: ^7.30.0
     react-router: ^6.3.0
     react-router-dom: ^6.3.0
     styled-components: ^5.3.0
+    webpack: ^5.72.0
     webpack-dev-server: ^4.8.1
     workspace-alias: ^0.1.0
   peerDependencies:
     react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+    react-is: ">=16.8.0"
   languageName: unknown
   linkType: soft
 
@@ -2536,6 +2541,7 @@ __metadata:
     react-transition-group: ^4.4.2
   peerDependencies:
     react: ">=16.8.0"
+    react-dom: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -2570,6 +2576,7 @@ __metadata:
     "@storybook/addon-storyshots": 6.4.22
     "@storybook/addons": 6.4.22
     "@storybook/react": 6.4.22
+    "@testing-library/dom": ^7.28.1
     "@testing-library/jest-dom": ^5.16.4
     "@testing-library/react": ^11.2.7
     "@testing-library/user-event": ^14.1.1
@@ -2597,7 +2604,6 @@ __metadata:
     eslint-config-airbnb-typescript: ^14.0.0
     eslint-config-prettier: ^8.5.0
     eslint-config-react-app: ^6.0.0
-    eslint-config-sonar: 0.0.8
     eslint-plugin-cypress: ^2.11.3
     eslint-plugin-flowtype: ^5.10.0
     eslint-plugin-import: ^2.23.2
@@ -2606,7 +2612,7 @@ __metadata:
     eslint-plugin-prettier: ^3.0.1
     eslint-plugin-react: ^7.29.4
     eslint-plugin-react-hooks: ^4.2.0
-    final-form: ^4.12.0
+    final-form: ^4.20.7
     govuk-colours: ^1.1.0
     istanbul-merge: ^1.1.1
     jest: ^26.6.3
@@ -2618,7 +2624,8 @@ __metadata:
     react: ^17.0.2
     react-docgen-typescript: ^2.1.0
     react-dom: ^17.0.2
-    react-final-form: ^6.5.3
+    react-final-form: ^6.5.9
+    react-is: ^17.0.2
     react-router-dom: ^6.3.0
     rimraf: ^3.0.2
     sinon: ^10.0.0
@@ -2817,6 +2824,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@govuk-react/storybook@workspace:packages/storybook"
   dependencies:
+    "@babel/core": 7.14.3
     "@govuk-react/back-link": ^0.10.1
     "@govuk-react/breadcrumbs": ^0.10.1
     "@govuk-react/button": ^0.10.1
@@ -2878,10 +2886,12 @@ __metadata:
     normalize.css: ^8.0.0
     react: ^17.0.2
     react-dom: ^17.0.2
-    react-final-form: ^6.5.3
+    react-final-form: ^6.5.9
     react-hook-form: ^7.30.0
+    react-is: ^17.0.2
     react-router-dom: ^6.3.0
     styled-components: ^5.3.0
+    webpack: ^5.72.0
     workspace-alias: ^0.1.0
   languageName: unknown
   linkType: soft
@@ -10029,17 +10039,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-sonar@npm:0.0.8":
-  version: 0.0.8
-  resolution: "eslint-config-sonar@npm:0.0.8"
-  dependencies:
-    eslint-plugin-filenames: ^1.3.2
-    eslint-plugin-no-wildcard-postmessage: ^0.2.0
-    eslint-plugin-sonarjs: ^0.7.0
-  checksum: a241614df344a42b5ff32026f9b1fbcf3051d741caadef4c7cdab37fe628eb22f63fd7917d486d98836fb10ba1d46b21a0af7e56cdf4f45e8b7f1649f2a5a5a8
-  languageName: node
-  linkType: hard
-
 "eslint-import-resolver-node@npm:^0.3.6":
   version: 0.3.6
   resolution: "eslint-import-resolver-node@npm:0.3.6"
@@ -10068,20 +10067,6 @@ __metadata:
   peerDependencies:
     eslint: ">= 3.2.1"
   checksum: 1f1c36e149304e9a6f58e2292a761abad58274da33b3a48b24ad55ad20cbce3ac7467321f2b6fcb052f9563c89f67004de4766eba2e2bdbcb010a6a0666989cf
-  languageName: node
-  linkType: hard
-
-"eslint-plugin-filenames@npm:^1.3.2":
-  version: 1.3.2
-  resolution: "eslint-plugin-filenames@npm:1.3.2"
-  dependencies:
-    lodash.camelcase: 4.3.0
-    lodash.kebabcase: 4.1.1
-    lodash.snakecase: 4.1.1
-    lodash.upperfirst: 4.3.1
-  peerDependencies:
-    eslint: "*"
-  checksum: 4048e9dfa9b22cf424edd5928832ce2b4a20dd10825eea7f13747e2cca2ce5fc9084da6a5f236fa17edce253ee36ccfb084cca61403775419dc1524c25b5ce5f
   languageName: node
   linkType: hard
 
@@ -10150,13 +10135,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-no-wildcard-postmessage@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "eslint-plugin-no-wildcard-postmessage@npm:0.2.0"
-  checksum: 3fd93aa8ee4dc7499263154eb14b199b96d26af13c0aabbc2553ae8d8077089eca257fafb6c238032452ddf79c18f3dc7ecb166fa901587e6d28df7fb60c179d
-  languageName: node
-  linkType: hard
-
 "eslint-plugin-prettier@npm:^3.0.1":
   version: 3.4.1
   resolution: "eslint-plugin-prettier@npm:3.4.1"
@@ -10202,15 +10180,6 @@ __metadata:
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
   checksum: bb7d3715ccd7f3e0d7bfaa2125b26d96865695bcfea4a3d510a5763342a74ab5b99a88e13aad9245f9461ad87e4bce69c33fc946888115d576233f9b6e69700d
-  languageName: node
-  linkType: hard
-
-"eslint-plugin-sonarjs@npm:^0.7.0":
-  version: 0.7.0
-  resolution: "eslint-plugin-sonarjs@npm:0.7.0"
-  peerDependencies:
-    eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
-  checksum: 23270281410f49cdd91e9d5fdf179f8a60d376084f13974a467e42c4452971d4b0c3cbb1aef6bd211519a2997e72d0a49acf1af643e0f42db2266c24e036ca0e
   languageName: node
   linkType: hard
 
@@ -10913,6 +10882,15 @@ __metadata:
   dependencies:
     "@babel/runtime": ^7.10.0
   checksum: 1f6d4caaf5d1c4e8f8700eac4ffc169a4986527a9e4c45501c1894159910e7e1245f1cda9a2c4f7a79a13d480315b561d4855b858430945cf5b5f0d627fbb4b2
+  languageName: node
+  linkType: hard
+
+"final-form@npm:^4.20.7":
+  version: 4.20.7
+  resolution: "final-form@npm:4.20.7"
+  dependencies:
+    "@babel/runtime": ^7.10.0
+  checksum: 0e2a9a9cf70814e1099da38e8a79ff6dc2862f07217dae041ba70c5a4bcc8284c74b0500f00b4935331f5fbe7dc119f63ca4776495ecc8c486c939daa23598ec
   languageName: node
   linkType: hard
 
@@ -11809,6 +11787,7 @@ fsevents@^1.2.7:
     govuk-colours: ^1.1.0
   peerDependencies:
     react: ">=16.8.0"
+    react-dom: ">=16.8.0"
     styled-components: ">=5.1"
   languageName: unknown
   linkType: soft
@@ -14747,7 +14726,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lodash.camelcase@npm:4.3.0, lodash.camelcase@npm:^4.3.0":
+"lodash.camelcase@npm:^4.3.0":
   version: 4.3.0
   resolution: "lodash.camelcase@npm:4.3.0"
   checksum: cb9227612f71b83e42de93eccf1232feeb25e705bdb19ba26c04f91e885bfd3dd5c517c4a97137658190581d3493ea3973072ca010aab7e301046d90740393d1
@@ -14796,13 +14775,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lodash.kebabcase@npm:4.1.1":
-  version: 4.1.1
-  resolution: "lodash.kebabcase@npm:4.1.1"
-  checksum: 5a6c59161914e1bae23438a298c7433e83d935e0f59853fa862e691164696bc07f6dfa4c313d499fbf41ba8d53314e9850416502376705a357d24ee6ca33af78
-  languageName: node
-  linkType: hard
-
 "lodash.merge@npm:^4.6.2":
   version: 4.6.2
   resolution: "lodash.merge@npm:4.6.2"
@@ -14814,13 +14786,6 @@ fsevents@^1.2.7:
   version: 4.1.1
   resolution: "lodash.once@npm:4.1.1"
   checksum: d768fa9f9b4e1dc6453be99b753906f58990e0c45e7b2ca5a3b40a33111e5d17f6edf2f768786e2716af90a8e78f8f91431ab8435f761fef00f9b0c256f6d245
-  languageName: node
-  linkType: hard
-
-"lodash.snakecase@npm:4.1.1":
-  version: 4.1.1
-  resolution: "lodash.snakecase@npm:4.1.1"
-  checksum: 1685ed3e83dda6eae5a4dcaee161a51cd210aabb3e1c09c57150e7dd8feda19e4ca0d27d0631eabe8d0f4eaa51e376da64e8c018ae5415417c5890d42feb72a8
   languageName: node
   linkType: hard
 
@@ -14842,13 +14807,6 @@ fsevents@^1.2.7:
   version: 4.5.0
   resolution: "lodash.uniq@npm:4.5.0"
   checksum: a4779b57a8d0f3c441af13d9afe7ecff22dd1b8ce1129849f71d9bbc8e8ee4e46dfb4b7c28f7ad3d67481edd6e51126e4e2a6ee276e25906d10f7140187c392d
-  languageName: node
-  linkType: hard
-
-"lodash.upperfirst@npm:4.3.1":
-  version: 4.3.1
-  resolution: "lodash.upperfirst@npm:4.3.1"
-  checksum: cadec6955900afe1928cc60cdc4923a79c2ef991e42665419cc81630ed9b4f952a1093b222e0141ab31cbc4dba549f97ec28ff67929d71e01861c97188a5fa83
   languageName: node
   linkType: hard
 
@@ -17816,15 +17774,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-final-form@npm:^6.5.3":
-  version: 6.5.7
-  resolution: "react-final-form@npm:6.5.7"
+"react-final-form@npm:^6.5.9":
+  version: 6.5.9
+  resolution: "react-final-form@npm:6.5.9"
   dependencies:
     "@babel/runtime": ^7.15.4
   peerDependencies:
-    final-form: 4.20.4
-    react: ^16.8.0 || ^17.0.0
-  checksum: fd0069a96007618daf0bd2d12f4851f8c3b008d345a83b5817083f52b8025fc7b18602384490066a06545997486150631f72e702da72dcdf58f00af4977c04ec
+    final-form: ^4.20.4
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 2ab79b1b0230545af1b93b324e2ce61992087beda344f762e1c1306867c177ca6258651e992515fa6681a790f94380a388c18e898ffb20468562e62c83c6b289
   languageName: node
   linkType: hard
 
