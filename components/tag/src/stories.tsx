@@ -19,7 +19,11 @@ Default.args = {
 export const Inactive: Story = (args) => <Tag {...args} />;
 Inactive.args = {
   children: 'inactive',
-  tint: 'GREY',
+};
+Inactive.parameters = {
+  docs: {
+    storyDescription: 'deprecated', 
+  },
 };
 
 export const Custom: Story = (args) => <Tag {...args} />;
