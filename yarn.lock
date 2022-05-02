@@ -2581,7 +2581,7 @@ __metadata:
     "@storybook/react": 6.3.7
     "@testing-library/jest-dom": ^5.16.4
     "@testing-library/react": ^11.2.7
-    "@testing-library/user-event": ^13.1.9
+    "@testing-library/user-event": ^14.1.1
     "@types/react": ^16.14.16
     "@types/react-router-dom": 5
     "@types/styled-components": ^5.1.14
@@ -5501,14 +5501,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/user-event@npm:^13.1.9":
-  version: 13.2.1
-  resolution: "@testing-library/user-event@npm:13.2.1"
-  dependencies:
-    "@babel/runtime": ^7.12.5
+"@testing-library/user-event@npm:^14.1.1":
+  version: 14.1.1
+  resolution: "@testing-library/user-event@npm:14.1.1"
   peerDependencies:
     "@testing-library/dom": ">=7.21.4"
-  checksum: 5c5eacb8feb57c8f1e023e3e5da4544ef0f8ce233a481fa1090ca73929a4666544bf576f362248c780a3fe4c1a11669414204603b0602e166810243391da392e
+  checksum: dd02aecbde64002aa3c58392137672156101fc3bb821f43db99e3c652e6a6d34b3eb29b2524eb41ad2a317cfdff6ab2e88d7027605d88dccaacf4f07a08dc7a9
   languageName: node
   linkType: hard
 

@@ -17,13 +17,13 @@ describe('Back Link', () => {
     expect(getByText('Back')).toBeInTheDocument();
   });
 
-  it('calls onClick handler when clicked', () => {
+  it('calls onClick handler when clicked', async () => {
     const clickHandler = jest.fn();
     const { getByText } = render(<BackLink onClick={clickHandler}>example</BackLink>);
 
     expect(clickHandler).not.toHaveBeenCalled();
 
-    userEvent.click(getByText('example'));
+    await userEvent.click(getByText('example'));
 
     expect(clickHandler).toHaveBeenCalled();
   });
