@@ -30,7 +30,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@cypress/react": "^5.8.0",
+    "@cypress/react": "^5.12.4",
     "@cypress/webpack-dev-server": "^1.8.4",
     "cypress": "^9.6.0",
     "cypress-file-upload": "^5.0.8",
