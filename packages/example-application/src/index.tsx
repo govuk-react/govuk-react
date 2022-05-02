@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as GovUK from 'govuk-react';
-import { MemoryRouter as Router, Switch, Route } from 'react-router';
+import { MemoryRouter as Router, Routes, Route } from 'react-router';
 import { Link } from 'react-router-dom';
 
 import Home from './home';
@@ -32,14 +32,10 @@ const ExampleApplication: React.FC<ExampleApplicationProps> = ({ routerEntries }
       </GovUK.TopNav>
       <GovUK.Page.WidthContainer>
         <GovUK.Page.Main>
-          <Switch>
-            <Route path="/forms">
-              <Forms />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/forms/*" element={<Forms />} />
+            <Route path="/" element={<Home />} />
+          </Routes>
         </GovUK.Page.Main>
       </GovUK.Page.WidthContainer>
       <GovUK.Footer />

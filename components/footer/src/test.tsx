@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
 
-import { BrowserRouter, Link, Route } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import { MEDIA_QUERIES, GUTTER } from '@govuk-react/constants';
 
@@ -11,8 +11,10 @@ import crest from './govuk-crest.png';
 const withRoutes = (component) => (
   <BrowserRouter>
     {component}
-    <Route path="/footer-nav-item-2" render={() => 'Footer Navigation item 2'} />
-    <Route path="/footer-meta-item-2" render={() => 'Footer Meta item 2'} />
+    <Routes>
+      <Route path="/footer-nav-item-2" element={<>Footer Navigation item 2</>} />
+      <Route path="/footer-meta-item-2" element={<>Footer Meta item 2</>} />
+    </Routes>
   </BrowserRouter>
 );
 

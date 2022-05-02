@@ -3,7 +3,7 @@ import { ButtonArrow } from '@govuk-react/icons';
 
 import * as React from 'react';
 import { BLUE, TEXT_COLOUR, YELLOW, GREY_3, ORANGE } from 'govuk-colours';
-import { MemoryRouter, Route, Link } from 'react-router-dom';
+import { MemoryRouter, Route, Routes, Link } from 'react-router-dom';
 import { Button } from '.';
 
 export default {
@@ -71,8 +71,10 @@ export const RouterLinkButton: Story = (args) => (
         Test Link button
       </Button>
       <br />
-      <Route path="/" exact render={() => <div>Home path</div>} />
-      <Route path="/test" render={() => <div>Test path</div>} />
+      <Routes>
+        <Route path="/test" element={<div>Test path</div>} />
+        <Route path="/" element={<div>Home path</div>} />
+      </Routes>
     </div>
   </MemoryRouter>
 );

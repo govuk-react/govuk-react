@@ -1923,21 +1923,31 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
 <FooterWithMetaLinksAndCustom>
   <BrowserRouter>
     <Router
-      history={
+      location={
+        Object {
+          "hash": "",
+          "key": "default",
+          "pathname": "/",
+          "search": "",
+          "state": null,
+        }
+      }
+      navigationType="POP"
+      navigator={
         Object {
           "action": "POP",
+          "back": [Function],
           "block": [Function],
           "createHref": [Function],
+          "forward": [Function],
           "go": [Function],
-          "goBack": [Function],
-          "goForward": [Function],
-          "length": 1,
           "listen": [Function],
           "location": Object {
             "hash": "",
+            "key": "default",
             "pathname": "/",
             "search": "",
-            "state": undefined,
+            "state": null,
           },
           "push": [Function],
           "replace": [Function],
@@ -1995,13 +2005,6 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                 as={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
-                    "propTypes": Object {
-                      "innerRef": [Function],
-                      "onClick": [Function],
-                      "replace": [Function],
-                      "target": [Function],
-                      "to": [Function],
-                    },
                     "render": [Function],
                   }
                 }
@@ -2128,13 +2131,6 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                       as={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
-                                          "propTypes": Object {
-                                            "innerRef": [Function],
-                                            "onClick": [Function],
-                                            "replace": [Function],
-                                            "target": [Function],
-                                            "to": [Function],
-                                          },
                                           "render": [Function],
                                         }
                                       }
@@ -2147,19 +2143,13 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
                                         className="c8 c9"
                                         to="/footer-meta-item-2"
                                       >
-                                        <LinkAnchor
+                                        <a
                                           className="c8 c9"
                                           href="/footer-meta-item-2"
-                                          navigate={[Function]}
+                                          onClick={[Function]}
                                         >
-                                          <a
-                                            className="c8 c9"
-                                            href="/footer-meta-item-2"
-                                            onClick={[Function]}
-                                          >
-                                            Item 2 (Router Link)
-                                          </a>
-                                        </LinkAnchor>
+                                          Item 2 (Router Link)
+                                        </a>
                                       </Link>
                                     </link__FooterLink>
                                   </li>
@@ -2270,14 +2260,7 @@ exports[`Footer matches with meta links and custom snapshot: FooterWithMetaLinks
           </footer>
         </src__FooterContainer>
       </Footer>
-      <Route
-        path="/footer-nav-item-2"
-        render={[Function]}
-      />
-      <Route
-        path="/footer-meta-item-2"
-        render={[Function]}
-      />
+      <Routes />
     </Router>
   </BrowserRouter>
 </FooterWithMetaLinksAndCustom>
@@ -2537,21 +2520,31 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
 <FooterWithMetaLinks>
   <BrowserRouter>
     <Router
-      history={
+      location={
+        Object {
+          "hash": "",
+          "key": "default",
+          "pathname": "/",
+          "search": "",
+          "state": null,
+        }
+      }
+      navigationType="POP"
+      navigator={
         Object {
           "action": "POP",
+          "back": [Function],
           "block": [Function],
           "createHref": [Function],
+          "forward": [Function],
           "go": [Function],
-          "goBack": [Function],
-          "goForward": [Function],
-          "length": 1,
           "listen": [Function],
           "location": Object {
             "hash": "",
+            "key": "default",
             "pathname": "/",
             "search": "",
-            "state": undefined,
+            "state": null,
           },
           "push": [Function],
           "replace": [Function],
@@ -2608,13 +2601,6 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
               as={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
-                  "propTypes": Object {
-                    "innerRef": [Function],
-                    "onClick": [Function],
-                    "replace": [Function],
-                    "target": [Function],
-                    "to": [Function],
-                  },
                   "render": [Function],
                 }
               }
@@ -2729,13 +2715,6 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                       as={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
-                                          "propTypes": Object {
-                                            "innerRef": [Function],
-                                            "onClick": [Function],
-                                            "replace": [Function],
-                                            "target": [Function],
-                                            "to": [Function],
-                                          },
                                           "render": [Function],
                                         }
                                       }
@@ -2748,19 +2727,13 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
                                         className="c8 c9"
                                         to="/footer-meta-item-2"
                                       >
-                                        <LinkAnchor
+                                        <a
                                           className="c8 c9"
                                           href="/footer-meta-item-2"
-                                          navigate={[Function]}
+                                          onClick={[Function]}
                                         >
-                                          <a
-                                            className="c8 c9"
-                                            href="/footer-meta-item-2"
-                                            onClick={[Function]}
-                                          >
-                                            Item 2 (Router Link)
-                                          </a>
-                                        </LinkAnchor>
+                                          Item 2 (Router Link)
+                                        </a>
                                       </Link>
                                     </link__FooterLink>
                                   </li>
@@ -2851,14 +2824,7 @@ exports[`Footer matches with meta links snapshot: FooterWithMetaLinks 1`] = `
           </footer>
         </src__FooterContainer>
       </Footer>
-      <Route
-        path="/footer-nav-item-2"
-        render={[Function]}
-      />
-      <Route
-        path="/footer-meta-item-2"
-        render={[Function]}
-      />
+      <Routes />
     </Router>
   </BrowserRouter>
 </FooterWithMetaLinks>
@@ -3275,21 +3241,31 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
 <FooterWithNavigationAndMeta>
   <BrowserRouter>
     <Router
-      history={
+      location={
+        Object {
+          "hash": "",
+          "key": "default",
+          "pathname": "/",
+          "search": "",
+          "state": null,
+        }
+      }
+      navigationType="POP"
+      navigator={
         Object {
           "action": "POP",
+          "back": [Function],
           "block": [Function],
           "createHref": [Function],
+          "forward": [Function],
           "go": [Function],
-          "goBack": [Function],
-          "goForward": [Function],
-          "length": 1,
           "listen": [Function],
           "location": Object {
             "hash": "",
+            "key": "default",
             "pathname": "/",
             "search": "",
-            "state": undefined,
+            "state": null,
           },
           "push": [Function],
           "replace": [Function],
@@ -3347,13 +3323,6 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                 as={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
-                    "propTypes": Object {
-                      "innerRef": [Function],
-                      "onClick": [Function],
-                      "replace": [Function],
-                      "target": [Function],
-                      "to": [Function],
-                    },
                     "render": [Function],
                   }
                 }
@@ -3477,13 +3446,6 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                     as={
                                       Object {
                                         "$$typeof": Symbol(react.forward_ref),
-                                        "propTypes": Object {
-                                          "innerRef": [Function],
-                                          "onClick": [Function],
-                                          "replace": [Function],
-                                          "target": [Function],
-                                          "to": [Function],
-                                        },
                                         "render": [Function],
                                       }
                                     }
@@ -3496,19 +3458,13 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                       className="c8 c9"
                                       to="/footer-nav-item-2"
                                     >
-                                      <LinkAnchor
+                                      <a
                                         className="c8 c9"
                                         href="/footer-nav-item-2"
-                                        navigate={[Function]}
+                                        onClick={[Function]}
                                       >
-                                        <a
-                                          className="c8 c9"
-                                          href="/footer-nav-item-2"
-                                          onClick={[Function]}
-                                        >
-                                          Navigation item 2 (Router Link)
-                                        </a>
-                                      </LinkAnchor>
+                                        Navigation item 2 (Router Link)
+                                      </a>
                                     </Link>
                                   </link__FooterLink>
                                 </li>
@@ -3808,13 +3764,6 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                       as={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
-                                          "propTypes": Object {
-                                            "innerRef": [Function],
-                                            "onClick": [Function],
-                                            "replace": [Function],
-                                            "target": [Function],
-                                            "to": [Function],
-                                          },
                                           "render": [Function],
                                         }
                                       }
@@ -3827,19 +3776,13 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
                                         className="c8 c9"
                                         to="/footer-meta-item-2"
                                       >
-                                        <LinkAnchor
+                                        <a
                                           className="c8 c9"
                                           href="/footer-meta-item-2"
-                                          navigate={[Function]}
+                                          onClick={[Function]}
                                         >
-                                          <a
-                                            className="c8 c9"
-                                            href="/footer-meta-item-2"
-                                            onClick={[Function]}
-                                          >
-                                            Item 2 (Router Link)
-                                          </a>
-                                        </LinkAnchor>
+                                          Item 2 (Router Link)
+                                        </a>
                                       </Link>
                                     </link__FooterLink>
                                   </li>
@@ -3950,14 +3893,7 @@ exports[`Footer matches with navigation and meta snapshot: FooterWithNavigationA
           </footer>
         </src__FooterContainer>
       </Footer>
-      <Route
-        path="/footer-nav-item-2"
-        render={[Function]}
-      />
-      <Route
-        path="/footer-meta-item-2"
-        render={[Function]}
-      />
+      <Routes />
     </Router>
   </BrowserRouter>
 </FooterWithNavigationAndMeta>
@@ -4300,21 +4236,31 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
 <FooterWithNavigation>
   <BrowserRouter>
     <Router
-      history={
+      location={
+        Object {
+          "hash": "",
+          "key": "default",
+          "pathname": "/",
+          "search": "",
+          "state": null,
+        }
+      }
+      navigationType="POP"
+      navigator={
         Object {
           "action": "POP",
+          "back": [Function],
           "block": [Function],
           "createHref": [Function],
+          "forward": [Function],
           "go": [Function],
-          "goBack": [Function],
-          "goForward": [Function],
-          "length": 1,
           "listen": [Function],
           "location": Object {
             "hash": "",
+            "key": "default",
             "pathname": "/",
             "search": "",
-            "state": undefined,
+            "state": null,
           },
           "push": [Function],
           "replace": [Function],
@@ -4446,13 +4392,6 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                     as={
                                       Object {
                                         "$$typeof": Symbol(react.forward_ref),
-                                        "propTypes": Object {
-                                          "innerRef": [Function],
-                                          "onClick": [Function],
-                                          "replace": [Function],
-                                          "target": [Function],
-                                          "to": [Function],
-                                        },
                                         "render": [Function],
                                       }
                                     }
@@ -4465,19 +4404,13 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
                                       className="c8 c9"
                                       to="/footer-nav-item-2"
                                     >
-                                      <LinkAnchor
+                                      <a
                                         className="c8 c9"
                                         href="/footer-nav-item-2"
-                                        navigate={[Function]}
+                                        onClick={[Function]}
                                       >
-                                        <a
-                                          className="c8 c9"
-                                          href="/footer-nav-item-2"
-                                          onClick={[Function]}
-                                        >
-                                          Navigation item 2 (Router Link)
-                                        </a>
-                                      </LinkAnchor>
+                                        Navigation item 2 (Router Link)
+                                      </a>
                                     </Link>
                                   </link__FooterLink>
                                 </li>
@@ -4769,14 +4702,7 @@ exports[`Footer matches with navigation snapshot: FooterWithNavigation 1`] = `
           </footer>
         </src__FooterContainer>
       </Footer>
-      <Route
-        path="/footer-nav-item-2"
-        render={[Function]}
-      />
-      <Route
-        path="/footer-meta-item-2"
-        render={[Function]}
-      />
+      <Routes />
     </Router>
   </BrowserRouter>
 </FooterWithNavigation>
@@ -5215,21 +5141,31 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
 <FooterWithSingleMetaLink>
   <BrowserRouter>
     <Router
-      history={
+      location={
+        Object {
+          "hash": "",
+          "key": "default",
+          "pathname": "/",
+          "search": "",
+          "state": null,
+        }
+      }
+      navigationType="POP"
+      navigator={
         Object {
           "action": "POP",
+          "back": [Function],
           "block": [Function],
           "createHref": [Function],
+          "forward": [Function],
           "go": [Function],
-          "goBack": [Function],
-          "goForward": [Function],
-          "length": 1,
           "listen": [Function],
           "location": Object {
             "hash": "",
+            "key": "default",
             "pathname": "/",
             "search": "",
-            "state": undefined,
+            "state": null,
           },
           "push": [Function],
           "replace": [Function],
@@ -5430,14 +5366,7 @@ exports[`Footer matches with single meta link snapshot: FooterWithSingleMetaLink
           </footer>
         </src__FooterContainer>
       </Footer>
-      <Route
-        path="/footer-nav-item-2"
-        render={[Function]}
-      />
-      <Route
-        path="/footer-meta-item-2"
-        render={[Function]}
-      />
+      <Routes />
     </Router>
   </BrowserRouter>
 </FooterWithSingleMetaLink>
