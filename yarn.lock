@@ -2247,7 +2247,7 @@ __metadata:
     react-final-form: ^6.5.3
     react-hook-form: ^7.30.0
     react-router: ^5.2.0
-    react-router-dom: ^5.2.0
+    react-router-dom: ^6.3.0
     styled-components: ^5.3.0
     webpack-dev-server: ^3.11.2
     workspace-alias: ^0.1.0
@@ -2604,7 +2604,7 @@ __metadata:
     react-docgen-typescript: ^2.1.0
     react-dom: ^17.0.2
     react-final-form: ^6.5.3
-    react-router-dom: ^5.2.0
+    react-router-dom: ^6.3.0
     react-use-media: ^0.3.0
     rimraf: ^3.0.2
     sinon: ^10.0.0
@@ -2866,7 +2866,7 @@ __metadata:
     react-dom: ^17.0.2
     react-final-form: ^6.5.3
     react-hook-form: ^7.30.0
-    react-router-dom: ^5.2.0
+    react-router-dom: ^6.3.0
     react-use-media: ^0.3.0
     styled-components: ^5.3.0
     workspace-alias: ^0.1.0
@@ -18480,24 +18480,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-router-dom@npm:^5.2.0":
-  version: 5.3.0
-  resolution: "react-router-dom@npm:5.3.0"
-  dependencies:
-    "@babel/runtime": ^7.12.13
-    history: ^4.9.0
-    loose-envify: ^1.3.1
-    prop-types: ^15.6.2
-    react-router: 5.2.1
-    tiny-invariant: ^1.0.2
-    tiny-warning: ^1.0.0
-  peerDependencies:
-    react: ">=15"
-  checksum: 47584fd629ecca52398d7888cab193b8a74057cc99a7ef44410c405d4082f618c3c0399db5325bc3524f9c511404086169570013b61a94dfa6acdfdc850d7a1f
-  languageName: node
-  linkType: hard
-
-"react-router-dom@npm:^6.0.0":
+"react-router-dom@npm:^6.0.0, react-router-dom@npm:^6.3.0":
   version: 6.3.0
   resolution: "react-router-dom@npm:6.3.0"
   dependencies:
@@ -18510,7 +18493,18 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-router@npm:5.2.1, react-router@npm:^5.2.0":
+"react-router@npm:6.3.0, react-router@npm:^6.0.0":
+  version: 6.3.0
+  resolution: "react-router@npm:6.3.0"
+  dependencies:
+    history: ^5.2.0
+  peerDependencies:
+    react: ">=16.8"
+  checksum: 7be673f5e72104be01e6ab274516bdb932efd93305243170690f6560e3bd1035dd1df3d3c9ce1e0f452638a2529f43a1e77dcf0934fc8031c4783da657be13ca
+  languageName: node
+  linkType: hard
+
+"react-router@npm:^5.2.0":
   version: 5.2.1
   resolution: "react-router@npm:5.2.1"
   dependencies:
@@ -18527,17 +18521,6 @@ fsevents@^1.2.7:
   peerDependencies:
     react: ">=15"
   checksum: 7daae084bf64531eb619cc5f4cc40ce5ae0a541b64f71d74ec71a38cbf6130ebdbb7cf38f157303fad5846deec259401f96c4d6c7386466dcc989719e01f9aaa
-  languageName: node
-  linkType: hard
-
-"react-router@npm:6.3.0, react-router@npm:^6.0.0":
-  version: 6.3.0
-  resolution: "react-router@npm:6.3.0"
-  dependencies:
-    history: ^5.2.0
-  peerDependencies:
-    react: ">=16.8"
-  checksum: 7be673f5e72104be01e6ab274516bdb932efd93305243170690f6560e3bd1035dd1df3d3c9ce1e0f452638a2529f43a1e77dcf0934fc8031c4783da657be13ca
   languageName: node
   linkType: hard
 
