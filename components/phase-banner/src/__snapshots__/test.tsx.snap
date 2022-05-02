@@ -7,14 +7,14 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.25;
+  line-height: 1;
   display: inline-block;
-  padding: 4px 8px;
-  padding-bottom: 1px;
+  padding-top: 5px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+  padding-left: 8px;
   outline: 2px solid transparent;
   outline-offset: -2px;
-  color: #ffffff;
-  background-color: #1d70b8;
   -webkit-letter-spacing: 1px;
   -moz-letter-spacing: 1px;
   -ms-letter-spacing: 1px;
@@ -22,6 +22,8 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: uppercase;
+  background-color: #1d70b8;
+  color: #ffffff;
 }
 
 .c0 {
@@ -54,14 +56,14 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
 @media print {
   .c3 {
     font-size: 14px;
-    line-height: 1.25;
+    line-height: 1;
   }
 }
 
 @media only screen and (min-width:641px) {
   .c3 {
     font-size: 16px;
-    line-height: 1.25;
+    line-height: 1;
   }
 }
 
@@ -98,6 +100,7 @@ exports[`PhaseBanner matches wrapper snapshot: wrapper mount 1`] = `
         >
           <Tag
             inactive={false}
+            tint="SOLID"
           >
             <strong
               className="c2 c3"
