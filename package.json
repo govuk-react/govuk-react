@@ -1,7 +1,7 @@
 {
   "name": "@govuk-react/monorepo",
   "scripts": {
-    "build:dist": "yarn build && rimraf dist && webpack -p packages/govuk-react/dist/govuk-react.esm.js --devtool source-map --output-filename index.js",
+    "build:dist": "yarn build && rimraf dist && webpack --node-env=production --devtool source-map --entry ./packages/govuk-react/dist/govuk-react.esm.js",
     "build:storybook": "cd packages/storybook && yarn build",
     "build:types": "tsc --emitDeclarationOnly --declaration",
     "build": "preconstruct build && yarn workspaces foreach --exclude @govuk-react/monorepo run build",
@@ -109,7 +109,7 @@
     "sinon": "^10.0.0",
     "styled-components": "^5.3.0",
     "typescript": "^4.2.4",
-    "webpack": "^4.29.6",
+    "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2",
     "workspace-alias": "^0.1.0"
   },
@@ -125,7 +125,7 @@
   "homepage": "https://github.com/govuk-react/govuk-react#readme",
   "bundlesize": [
     {
-      "path": "./dist/index.js",
+      "path": "./dist/main.js",
       "maxSize": "120 kB"
     }
   ],
