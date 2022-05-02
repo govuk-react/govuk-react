@@ -11,4 +11,4 @@ updates:
     rebase-strategy: 'disabled' # while we have chromatic usage issues
     open-pull-requests-limit: 10 # while we have chromatic usage issues
     schedule:
-      interval: weekly # while we have chromatic usage issues
+      interval: daily
