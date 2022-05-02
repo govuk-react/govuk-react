@@ -1,7 +1,7 @@
 import type { Story } from '@storybook/react';
 
 import * as React from 'react';
-import { BrowserRouter, Link as RLink, Route } from 'react-router-dom';
+import { BrowserRouter, Link as RLink, Route, Routes } from 'react-router-dom';
 
 import { Link } from '.';
 
@@ -47,8 +47,10 @@ export const WithReactRouter: Story = (args) => (
       </Link>
       <br />
       <div>
-        <Route path="/first" render={() => 'First route'} />
-        <Route path="/second" render={() => 'Second route'} />
+        <Routes>
+          <Route path="/first" element={<>First route</>} />
+          <Route path="/second" element={<>Second route</>} />
+        </Routes>
       </div>
     </div>
   </BrowserRouter>

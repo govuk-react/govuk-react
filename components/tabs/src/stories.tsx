@@ -11,8 +11,7 @@ import {
   SimpleMapTabs,
   TableTabs,
   ReactRouterExample,
-  ReactRouterSSRExample,
-  ReactRouterSSRSinglePanelExample,
+  ReactRouterSinglePanelExample,
 } from './fixtures';
 
 export default {
@@ -155,8 +154,5 @@ export const Hooks: Story = (args) => <HooksExample {...args} />;
 Hooks.args = {
   defaultIndex: 1,
 };
-export const UsingReactRouterClientSide: Story = () => <ReactRouterExample />;
-export const UsingReactRouterServerSideRenderingCompatible: Story = () => <ReactRouterSSRExample />;
-export const UsingReactRouterServerSideRenderingCompatibleSinglePanelOnly: Story = () => (
-  <ReactRouterSSRSinglePanelExample />
-);
+export const UsingReactRouter: Story = () => <ReactRouterExample />;
+export const UsingReactRouterSinglePanelOnly: Story = () => <ReactRouterSinglePanelExample />;

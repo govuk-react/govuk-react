@@ -1,11 +1,10 @@
 /* eslint-disable max-classes-per-file */
-import React, { Component, useLayoutEffect, useState } from 'react';
+import React, { Component } from 'react';
 import { BREAKPOINTS } from '@govuk-react/constants';
 import { H2, H4 } from '@govuk-react/heading';
 import SectionBreak from '@govuk-react/section-break';
 import Table from '@govuk-react/table';
-import { MemoryRouter, Route, Link } from 'react-router-dom';
-import { useMedia } from 'react-use-media';
+import { MemoryRouter, Route, Link, Routes, useParams, useLocation } from 'react-router-dom';
 
 import { Tabs } from '.';
 
@@ -343,30 +342,12 @@ const HooksExample: React.FC<SharedProps> = ({ defaultIndex }: SharedProps) => {
 
 HooksExample.defaultProps = sharedDefaultProps;
 
-// This example demonstrates one way to use react-router with tabs.
-// The use of useMedia means it is not suitable for server-side rendering.
-// When in mobile mode, all panels will be shown but the route will
-// still be updated to match the last clicked tab title.
-// NB in this example react-router is in control over which panel is rendered
-const RouterTabs = ({
-  // eslint-disable-next-line react/prop-types
-  match: {
-    // eslint-disable-next-line react/prop-types
-    params: { section },
-  },
-}) => {
-  const isTablet = useMedia(`(min-width: ${BREAKPOINTS.TABLET})`);
-  const [prevSection, setPrevSection] = useState(undefined);
-
-  useLayoutEffect(() => {
-    // scroll to the chosen tab if it's changed
-    if (section !== prevSection && !isTablet) {
-      // eslint-disable-next-line no-undef
-      document.querySelector(`#${section || 'first'}`).scrollIntoView();
-    }
-    setPrevSection(section);
-  }, [section, isTablet, prevSection]);
-
+// This example demonstrates one way to use tabs with react-router in a way
+// that is compatible with server-side/universal rendering
+// NB in this example react-router does not directly control what content/panel is rendered
+// and on a mobile view the client will not jump to the content for the clicked title
+const RouterTabs = () => {
+  const { section } = useParams();
   return (
     <Tabs>
       <Tabs.Title />
@@ -378,66 +359,18 @@ const RouterTabs = ({
           Second tab
         </Tabs.Tab>
       </Tabs.List>
-      <Route
-        path={isTablet ? '/' : null}
-        exact={isTablet}
-        render={() => (
-          <Tabs.Panel id="first" selected>
-            First tab contents
-          </Tabs.Panel>
-        )}
-      />
-      <Route
-        path={isTablet ? '/test' : null}
-        render={() => (
-          <Tabs.Panel id="test" selected>
-            Second tab contents
-          </Tabs.Panel>
-        )}
-      />
+      <Tabs.Panel selected={!section}>First tab contents</Tabs.Panel>
+      <Tabs.Panel selected={section === 'test'}>Second tab contents</Tabs.Panel>
     </Tabs>
   );
 };
 
 const ReactRouterExample: React.FC = () => (
   <MemoryRouter>
-    <div>
-      <Route path="/:section?" component={RouterTabs} />
-    </div>
-  </MemoryRouter>
-);
-
-// This example demonstrates one way to use tabs with react-router in a way
-// that is compatible with server-side/universal rendering
-// NB in this example react-router does not directly control what content/panel is rendered
-// and on a mobile view the client will not jump to the content for the clicked title
-const RouterTabsSSR = ({
-  // eslint-disable-next-line react/prop-types
-  match: {
-    // eslint-disable-next-line react/prop-types
-    params: { section },
-  },
-}) => (
-  <Tabs>
-    <Tabs.Title />
-    <Tabs.List>
-      <Tabs.Tab as={Link} selected={!section} to="/">
-        First tab
-      </Tabs.Tab>
-      <Tabs.Tab as={Link} selected={section === 'test'} to="/test">
-        Second tab
-      </Tabs.Tab>
-    </Tabs.List>
-    <Tabs.Panel selected={!section}>First tab contents</Tabs.Panel>
-    <Tabs.Panel selected={section === 'test'}>Second tab contents</Tabs.Panel>
-  </Tabs>
-);
-
-const ReactRouterSSRExample: React.FC = () => (
-  <MemoryRouter>
-    <div>
-      <Route path="/:section?" component={RouterTabsSSR} />
-    </div>
+    <Routes>
+      <Route path="/" element={<RouterTabs />} />
+      <Route path="/:section" element={<RouterTabs />} />
+    </Routes>
   </MemoryRouter>
 );
 
@@ -445,48 +378,44 @@ const ReactRouterSSRExample: React.FC = () => (
 // that is compatible with server-side/universal rendering
 // NB in this example react-router controls what content is rendered, and thus
 // will only show a single panel, even when the screen is at a mobile width
-const RouterTabsSSRSinglePanel = ({
-  // eslint-disable-next-line react/prop-types
-  match: {
-    // eslint-disable-next-line react/prop-types
-    params: { section },
-  },
-}) => (
-  <Tabs>
-    <Tabs.Title />
-    <Tabs.List>
-      <Tabs.Tab as={Link} selected={!section} to="/">
-        First tab
-      </Tabs.Tab>
-      <Tabs.Tab as={Link} selected={section === 'test'} to="/test">
-        Second tab
-      </Tabs.Tab>
-    </Tabs.List>
-    <Route
-      path="/"
-      exact
-      render={() => (
-        <Tabs.Panel id="first" selected>
-          First tab contents
-        </Tabs.Panel>
-      )}
-    />
-    <Route
-      path="/test"
-      render={() => (
-        <Tabs.Panel id="test" selected>
-          Second tab contents
-        </Tabs.Panel>
-      )}
-    />
-  </Tabs>
-);
+const RouterTabsSinglePanel = () => {
+  const { pathname } = useLocation();
+  return (
+    <Tabs>
+      <Tabs.Title />
+      <Tabs.List>
+        <Tabs.Tab as={Link} selected={pathname !== '/test'} to="/">
+          First tab
+        </Tabs.Tab>
+        <Tabs.Tab as={Link} selected={pathname === '/test'} to="/test">
+          Second tab
+        </Tabs.Tab>
+      </Tabs.List>
+      <Routes>
+        <Route
+          path="test"
+          element={
+            <Tabs.Panel id="test" selected>
+              Second tab contents
+            </Tabs.Panel>
+          }
+        />
+        <Route
+          path="/"
+          element={
+            <Tabs.Panel id="first" selected>
+              First tab contents
+            </Tabs.Panel>
+          }
+        />
+      </Routes>
+    </Tabs>
+  );
+};
 
-const ReactRouterSSRSinglePanelExample: React.FC = () => (
+const ReactRouterSinglePanelExample: React.FC = () => (
   <MemoryRouter>
-    <div>
-      <Route path="/:section?" component={RouterTabsSSRSinglePanel} />
-    </div>
+    <RouterTabsSinglePanel />
   </MemoryRouter>
 );
 
@@ -497,6 +426,5 @@ export {
   SimpleMapTabs,
   TableTabs,
   ReactRouterExample,
-  ReactRouterSSRExample,
-  ReactRouterSSRSinglePanelExample,
+  ReactRouterSinglePanelExample,
 };
