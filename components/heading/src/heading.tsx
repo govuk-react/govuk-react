@@ -53,11 +53,7 @@ const StyledHeading = styled('h1')<StyledHeadingOwnProps>(
  * - https://govuk-react.github.io/govuk-react/?path=/docs/heading
  * - https://design-system.service.gov.uk/styles/typography/#headings
  */
-export const Heading: HeadingType = ({
-  level = undefined,
-  size = 'XLARGE',
-  ...props
-}: React.ComponentProps<HeadingType>) => {
+export const Heading: HeadingType = ({ level, size, ...props }: HeadingOwnProps & WithWhiteSpaceProps) => {
   if (level) {
     if (process.env.NODE_ENV !== 'production') {
       // eslint-disable-next-line no-console
@@ -69,6 +65,10 @@ export const Heading: HeadingType = ({
   }
 
   return <StyledHeading size={size} {...props} />;
+};
+Heading.defaultProps = {
+  level: undefined,
+  size: 'XLARGE',
 };
 
 Heading.displayName = 'Heading';

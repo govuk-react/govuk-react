@@ -9,6 +9,7 @@ exports[`ArrowRight matches wrapper snapshot: wrapper mount 1`] = `
     fill="currentColor"
     title="arrow left"
     viewBox="-0.2 0 17 14"
+    width="100%"
   >
     <svg
       fill="currentColor"
