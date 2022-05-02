@@ -23,7 +23,7 @@ Inactive.args = {
 };
 Inactive.parameters = {
   docs: {
-    storyDescription: 'deprecated', 
+    storyDescription: 'deprecated',
   },
 };
 
