@@ -2539,7 +2539,7 @@ __metadata:
     "@babel/preset-react": 7.13.13
     "@babel/preset-typescript": 7.13.0
     "@govuk-react/api-docs": 0.10.1
-    "@preconstruct/cli": ^2.1.4
+    "@preconstruct/cli": ^2.1.5
     "@storybook/addon-actions": 6.3.8
     "@storybook/addon-controls": 6.4.22
     "@storybook/addon-docs": 6.3.8
@@ -3421,9 +3421,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@preconstruct/cli@npm:^2.1.4":
-  version: 2.1.4
-  resolution: "@preconstruct/cli@npm:2.1.4"
+"@preconstruct/cli@npm:^2.1.5":
+  version: 2.1.5
+  resolution: "@preconstruct/cli@npm:2.1.5"
   dependencies:
     "@babel/code-frame": ^7.5.5
     "@babel/core": ^7.7.7
@@ -3464,7 +3464,7 @@ __metadata:
     v8-compile-cache: ^2.1.1
   bin:
     preconstruct: bin.js
-  checksum: 13608aa03e7a0f44262c5de7c85f16d6cf0d4408a06f6679240a5f3a60c4bfec904972cac9943612d1fabfb1dcf72211a9879922007e4316d3763684900632b6
+  checksum: 656024738591a8b6bdcc863e107ecb3b318e78ac5050f7217cefacddab8a98d7c3e112c3f4d4d6d18fbf1f5aa9e9aac5609da2518e8cfa5e8ed0f4c053b214fa
   languageName: node
   linkType: hard
 
