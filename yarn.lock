@@ -1784,12 +1784,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cypress/react@npm:^5.8.0":
-  version: 5.10.1
-  resolution: "@cypress/react@npm:5.10.1"
+"@cypress/react@npm:^5.12.4":
+  version: 5.12.4
+  resolution: "@cypress/react@npm:5.12.4"
   dependencies:
     "@cypress/mount-utils": 1.0.2
-    debug: 4.3.2
+    debug: ^4.3.2
     find-webpack: 2.2.1
     find-yarn-workspace-root: 2.0.0
   peerDependencies:
@@ -1818,7 +1818,7 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: a3b47dae7771b90210a6e966dfd5251c7570d7eaef652e730f840b02d704be00583b93226142c4d69db2944667ecca4fb93d0adea326d4ed08f9bec0f7b64be9
+  checksum: fe62e028d27ec7521db60a3a08e3ace97524c7f629e784c602db3950cc436ccae1f1abcb569e5cf863bac2645d1b4e9848e81a7e641e3779e5c35cfb117239bb
   languageName: node
   linkType: hard
 
@@ -2228,7 +2228,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@govuk-react/example-application@workspace:packages/example-application"
   dependencies:
-    "@cypress/react": ^5.8.0
+    "@cypress/react": ^5.12.4
     "@cypress/webpack-dev-server": ^1.8.4
     "@rjsf/core": ^3.1.0
     cypress: ^9.6.0
@@ -9394,7 +9394,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:4.3.2, debug@npm:^4.0.0, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2":
+"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2":
   version: 4.3.2
   resolution: "debug@npm:4.3.2"
   dependencies:
