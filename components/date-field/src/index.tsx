@@ -14,6 +14,7 @@ import LabelText from '@govuk-react/label-text';
 import ErrorText from '@govuk-react/error-text';
 import HintText from '@govuk-react/hint-text';
 import { spacing } from '@govuk-react/lib';
+import { InputProps as BaseInputProps } from '@govuk-react/input';
 
 import Input from './input';
 
@@ -45,6 +46,7 @@ export const DateField: DateFieldType = ({
   hintText,
   inputNames,
   defaultValues,
+  inputs,
   input,
   ...props
 }: DateFieldProps) => (
@@ -52,7 +54,7 @@ export const DateField: DateFieldType = ({
     <LabelText>{children}</LabelText>
     {hintText && <HintText>{hintText}</HintText>}
     {errorText && <ErrorText>{errorText}</ErrorText>}
-    <Input names={inputNames} defaultValues={defaultValues} error={!!errorText} {...input} />
+    <Input names={inputNames} defaultValues={defaultValues} error={!!errorText} inputs={inputs} {...input} />
   </StyledContainer>
 );
 DateField.displayName = 'DateField';
@@ -74,6 +76,11 @@ DateField.defaultProps = {
     year: undefined,
   },
   defaultValues: {
+    day: undefined,
+    month: undefined,
+    year: undefined,
+  },
+  inputs: {
     day: undefined,
     month: undefined,
     year: undefined,
@@ -103,6 +110,14 @@ export interface DateFieldProps extends React.HTMLAttributes<HTMLDivElement>, Wi
     day?: string;
     month?: string;
     year?: string;
+  };
+  /**
+   * Custom props to pass down to the input fields
+   */
+  inputs?: {
+    day?: BaseInputProps;
+    month?: BaseInputProps;
+    year?: BaseInputProps;
   };
   /**
    * Properties that are sent to the input, matching final form and redux form input type

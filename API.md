@@ -1540,6 +1540,7 @@ Prop | Required | Default | Type | Description
  `input` |  | ```undefined``` | { onChange?: (date: { day: string; month: string; year: string; }) => unknown; onBlur?: (date: { day: string; month: string; year: string; }) => void; onFocus?: (date: { day: string; month: string; year: string; }) => void; value?: { ...; }; } | Properties that are sent to the input, matching final form and redux form input type
  `inputMode` |  |  | "text" \| "search" \| "none" \| "tel" \| "url" \| "email" \| "numeric" \| "decimal" | Hints at the type of data that might be entered by the user while editing the element or its contents<br/>@see https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute
  `inputNames` |  | ```{     day: undefined,     month: undefined,     year: undefined,   }``` | { day?: string; month?: string; year?: string; } | Input name attributes
+ `inputs` |  | ```{     day: undefined,     month: undefined,     year: undefined,   }``` | { day?: InputProps; month?: InputProps; year?: InputProps; } | Custom props to pass down to the input fields
  `is` |  |  | string | Specify that a standard HTML element should behave like a defined custom built-in element<br/>@see https://html.spec.whatwg.org/multipage/custom-elements.html#attr-is
  `itemID` |  |  | string | 
  `itemProp` |  |  | string | 
