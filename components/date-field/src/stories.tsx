@@ -47,8 +47,8 @@ DateWithHintTextError.args = {
   errorText: 'Error message goes here',
 };
 
-export const DateWithAutoComplete = Template.bind({});
-DateWithAutoComplete.parameters = {
+export const DateWithPerFieldProps = Template.bind({});
+DateWithPerFieldProps.parameters = {
   docs: {
     description: {
       story:
@@ -56,11 +56,11 @@ DateWithAutoComplete.parameters = {
     },
   },
 };
-DateWithAutoComplete.args = {
+DateWithPerFieldProps.args = {
   children: 'What is your date of birth?',
   inputs: {
-    day: { autoComplete: 'bday-day' },
-    month: { autoComplete: 'bday-month' },
-    year: { autoComplete: 'bday-year' },
+    day: { autoComplete: 'bday-day', id: 'birthday-day' },
+    month: { autoComplete: 'bday-month', id: 'birthday-month' },
+    year: { autoComplete: 'bday-year', id: 'birthday-year' },
   },
 };
