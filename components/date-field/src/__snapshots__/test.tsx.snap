@@ -203,6 +203,13 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
       "year": undefined,
     }
   }
+  inputs={
+    Object {
+      "day": undefined,
+      "month": undefined,
+      "year": undefined,
+    }
+  }
 >
   <src__StyledContainer
     errorText="example"
@@ -233,6 +240,13 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
           }
         }
         error={true}
+        inputs={
+          Object {
+            "day": undefined,
+            "month": undefined,
+            "year": undefined,
+          }
+        }
         names={
           Object {
             "day": undefined,
@@ -254,6 +268,13 @@ exports[`DateField matches wrappersnapshot: wrapper mount 1`] = `
             }
           }
           error={true}
+          inputs={
+            Object {
+              "day": undefined,
+              "month": undefined,
+              "year": undefined,
+            }
+          }
           labels={
             Object {
               "day": "Day",
@@ -556,6 +577,13 @@ exports[`DateField should support null value: null value 1`] = `
       "year": undefined,
     }
   }
+  inputs={
+    Object {
+      "day": undefined,
+      "month": undefined,
+      "year": undefined,
+    }
+  }
 >
   <src__StyledContainer>
     <div
@@ -577,6 +605,13 @@ exports[`DateField should support null value: null value 1`] = `
           }
         }
         error={false}
+        inputs={
+          Object {
+            "day": undefined,
+            "month": undefined,
+            "year": undefined,
+          }
+        }
         names={
           Object {
             "day": undefined,
@@ -598,6 +633,13 @@ exports[`DateField should support null value: null value 1`] = `
             }
           }
           error={false}
+          inputs={
+            Object {
+              "day": undefined,
+              "month": undefined,
+              "year": undefined,
+            }
+          }
           labels={
             Object {
               "day": "Day",
@@ -904,6 +946,13 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
       "year": undefined,
     }
   }
+  inputs={
+    Object {
+      "day": undefined,
+      "month": undefined,
+      "year": undefined,
+    }
+  }
 >
   <src__StyledContainer>
     <div
@@ -925,6 +974,13 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
           }
         }
         error={false}
+        inputs={
+          Object {
+            "day": undefined,
+            "month": undefined,
+            "year": undefined,
+          }
+        }
         names={
           Object {
             "day": undefined,
@@ -952,6 +1008,13 @@ exports[`DateField should support setting value: value 1 2 3 1`] = `
             }
           }
           error={false}
+          inputs={
+            Object {
+              "day": undefined,
+              "month": undefined,
+              "year": undefined,
+            }
+          }
           labels={
             Object {
               "day": "Day",

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import BaseInput from '@govuk-react/input';
+import BaseInput, { InputProps as BaseInputProps } from '@govuk-react/input';
 import LabelText from '@govuk-react/label-text';
 import Label from '@govuk-react/label';
 
@@ -21,8 +21,8 @@ const StyledList = styled('div')({
   display: 'flex',
 });
 
-class Input extends React.Component<InputProps> {
-  static defaultProps = {
+class Input extends React.Component<DateInputProps> {
+  static defaultProps: Partial<DateInputProps> = {
     value: undefined,
     names: {
       day: 'DateFieldDay',
@@ -30,6 +30,11 @@ class Input extends React.Component<InputProps> {
       year: 'DateFieldYear',
     },
     defaultValues: {
+      day: undefined,
+      month: undefined,
+      year: undefined,
+    },
+    inputs: {
       day: undefined,
       month: undefined,
       year: undefined,
@@ -48,7 +53,7 @@ class Input extends React.Component<InputProps> {
 
   inputs = {};
 
-  renderInput(label, name, key, defaultValue, error) {
+  renderInput(label, name, key, defaultValue, input, error) {
     const { value, onChange, onBlur, onFocus, refs } = this.props;
     return (
       <StyledLabel year={key === 'year'}>
@@ -61,28 +66,29 @@ class Input extends React.Component<InputProps> {
           onChange={(e) => onChange(e, key)}
           onBlur={(e) => onBlur(e, key)}
           onFocus={(e) => onFocus(e, key)}
-          ref={(input) => {
-            this.inputs[key] = input;
+          ref={(inputElement) => {
+            this.inputs[key] = inputElement;
             refs(this.inputs);
           }}
+          {...input}
         />
       </StyledLabel>
     );
   }
 
   render() {
-    const { labels, names, defaultValues, error } = this.props;
+    const { labels, names, defaultValues, inputs, error } = this.props;
     return (
       <StyledList>
-        {this.renderInput(labels.day, names.day, 'day', defaultValues.day, error)}
-        {this.renderInput(labels.month, names.month, 'month', defaultValues.month, error)}
-        {this.renderInput(labels.year, names.year, 'year', defaultValues.year, error)}
+        {this.renderInput(labels.day, names.day, 'day', defaultValues.day, inputs.day, error)}
+        {this.renderInput(labels.month, names.month, 'month', defaultValues.month, inputs.month, error)}
+        {this.renderInput(labels.year, names.year, 'year', defaultValues.year, inputs.year, error)}
       </StyledList>
     );
   }
 }
 
-export interface InputProps {
+export interface DateInputProps {
   names?: {
     day?: string;
     month?: string;
@@ -92,6 +98,14 @@ export interface InputProps {
     day?: string;
     month?: string;
     year?: string;
+  };
+  /**
+   * Custom props to pass down to the input fields
+   */
+  inputs?: {
+    day?: BaseInputProps;
+    month?: BaseInputProps;
+    year?: BaseInputProps;
   };
   value?: {
     day?: string;

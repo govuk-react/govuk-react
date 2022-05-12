@@ -21,6 +21,11 @@ Default.args = {
   },
   inputNames: { day: 'dayInputName' },
   children: 'What is your date of birth?',
+  inputs: {
+    day: { autoComplete: 'bday-day' },
+    month: { autoComplete: 'bday-month' },
+    year: { autoComplete: 'bday-year' },
+  },
 };
 
 export const DateWithHintText = Template.bind({});
@@ -40,4 +45,22 @@ DateWithHintTextError.args = {
   hintText: 'For example, 31 03 1980',
   children: 'What is your date of birth?',
   errorText: 'Error message goes here',
+};
+
+export const DateWithPerFieldProps = Template.bind({});
+DateWithPerFieldProps.parameters = {
+  docs: {
+    description: {
+      story:
+        'Use the relevant autocomplete parameters to ensure your service is compliant with [WCAG 2.1 Level AA success criterion 1.3.5]((https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html).',
+    },
+  },
+};
+DateWithPerFieldProps.args = {
+  children: 'What is your date of birth?',
+  inputs: {
+    day: { autoComplete: 'bday-day', id: 'birthday-day' },
+    month: { autoComplete: 'bday-month', id: 'birthday-month' },
+    year: { autoComplete: 'bday-year', id: 'birthday-year' },
+  },
 };
