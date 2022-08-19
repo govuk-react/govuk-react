@@ -69,6 +69,7 @@ export const Heading: HeadingType = ({ level, size, ...props }: HeadingOwnProps 
 Heading.defaultProps = {
   level: undefined,
   size: 'XLARGE',
+  children: undefined,
 };
 
 Heading.displayName = 'Heading';
@@ -116,6 +117,7 @@ export interface HeadingOwnProps {
    *    or a numeric size that fits in the GDS font scale list
    */
   size?: number | string;
+  children?: React.ReactNode;
 }
 
 export default Heading;
