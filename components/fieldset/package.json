@@ -1,9 +1,9 @@
 {
   "name": "@govuk-react/fieldset",
-  "version": "0.10.2",
+  "version": "0.10.3",
   "dependencies": {
-    "@govuk-react/constants": "^0.10.2",
-    "@govuk-react/lib": "^0.10.2",
+    "@govuk-react/constants": "^0.10.3",
+    "@govuk-react/lib": "^0.10.3",
     "govuk-colours": "^1.1.0"
   },
   "peerDependencies": {
