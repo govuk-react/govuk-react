@@ -49,7 +49,7 @@
     "@govuk-react/warning-text": "^0.10.3",
     "@rjsf/core": "^3.1.0",
     "@storybook/addon-actions": "6.4.22",
-    "@storybook/addon-controls": "6.4.22",
+    "@storybook/addon-controls": "6.5.10",
     "@storybook/addon-docs": "6.4.22",
     "@storybook/addons": "6.4.22",
     "@storybook/react": "6.4.22",
