@@ -12,8 +12,13 @@ const fadeInOut = keyframes`
   100% { opacity: 0.250075; }
 `;
 
-const Rect = styled.rect`
+interface RectProps {
+  animationDelay: number;
+}
+
+const Rect = styled.rect<RectProps>`
   animation: ${fadeInOut} 1s infinite linear;
+  animation-delay: ${(props) => props.animationDelay * 83}ms;
 `;
 
 interface SpinnerProps extends SVGProps {
@@ -40,7 +45,7 @@ const Spinner: React.FC<SpinnerProps> = ({ className, fill, title, ...rest }: Sp
           height="5"
           rx="2.5"
           ry="2.5"
-          style={{ animationDelay: `${i * 83}ms` }}
+          animationDelay={i}
           transform={`rotate(${i * 30}, 0, 2) translate(10 0)`}
           opacity="0"
           /* eslint-disable-next-line react/no-array-index-key */
