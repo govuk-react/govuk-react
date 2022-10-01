@@ -51,7 +51,7 @@
     "@storybook/addon-actions": "6.4.22",
     "@storybook/addon-controls": "6.4.22",
     "@storybook/addon-docs": "6.4.22",
-    "@storybook/addons": "6.4.22",
+    "@storybook/addons": "6.5.12",
     "@storybook/react": "6.4.22",
     "@storybook/storybook-deployer": "^2.8.1",
     "final-form": "^4.12.0",
