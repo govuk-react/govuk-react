@@ -1,8 +1,8 @@
 {
   "name": "@govuk-react/unordered-list",
-  "version": "0.10.3",
+  "version": "0.10.4",
   "dependencies": {
-    "@govuk-react/ordered-list": "^0.10.3"
+    "@govuk-react/ordered-list": "^0.10.4"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
