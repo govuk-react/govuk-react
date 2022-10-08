@@ -1,23 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SVG matches wrapper snapshot: wrapper mount 1`] = `
+.c0 {
+  display: block;
+}
+
 <SVG
   fill="currentColor"
   width="100%"
 >
-  <svg
+  <SVGBase__StyledSvg
     fill="currentColor"
     height="100%"
-    style={
-      Object {
-        "display": "block",
-      }
-    }
     version="1.1"
     width="100%"
   >
-    <title />
-    Example
-  </svg>
+    <svg
+      className="c0"
+      fill="currentColor"
+      height="100%"
+      version="1.1"
+      width="100%"
+    >
+      <title />
+      Example
+    </svg>
+  </SVGBase__StyledSvg>
 </SVG>
 `;

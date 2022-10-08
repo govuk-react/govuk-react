@@ -1,4 +1,5 @@
 import React, { SVGProps as SVGPropsBase } from 'react';
+import styled from 'styled-components';
 
 export interface SVGProps extends SVGPropsBase<SVGSVGElement> {
   children?: React.ReactNode;
@@ -7,11 +8,15 @@ export interface SVGProps extends SVGPropsBase<SVGSVGElement> {
   width?: string;
 }
 
+const StyledSvg = styled('svg')<any>({
+  display: 'block',
+});
+
 const SVG: React.FC<SVGProps> = ({ children, title, ...rest }: SVGProps) => (
-  <svg version="1.1" height="100%" style={{ display: 'block' }} {...rest}>
+  <StyledSvg version="1.1" height="100%" {...rest}>
     <title>{title}</title>
     {children}
-  </svg>
+  </StyledSvg>
 );
 SVG.defaultProps = {
   children: undefined,

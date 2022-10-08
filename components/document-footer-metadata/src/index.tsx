@@ -23,6 +23,10 @@ const StyledDefinition = styled('li')({
   },
 });
 
+const StyledParagraph = styled('p')({
+  marginBottom: 0,
+});
+
 /**
  * An ordered list of documents including a document type, when updated and a link.
  *
@@ -39,7 +43,7 @@ export const DocumentFooterMetadata: React.FC<DocumentFooterMetadataProps> = ({
     <StyledContainer>
       {from && (
         <div>
-          <p style={{ marginBottom: 0 }}>From:</p>
+          <StyledParagraph>From:</StyledParagraph>
           <UnorderedList listStyleType="none">
             {from &&
               from.map((child, i) => (
@@ -57,7 +61,7 @@ export const DocumentFooterMetadata: React.FC<DocumentFooterMetadataProps> = ({
     <StyledContainer>
       {partOf && (
         <div>
-          <p style={{ marginBottom: 0 }}>Part of:</p>
+          <StyledParagraph>Part of:</StyledParagraph>
           <UnorderedList listStyleType="none">
             {Array.isArray(partOf) &&
               React.Children.map(partOf, (child, i) => <StyledDefinition>{child}</StyledDefinition>)}
@@ -72,7 +76,7 @@ export const DocumentFooterMetadata: React.FC<DocumentFooterMetadataProps> = ({
       {other &&
         other.map((item) => (
           <div key={item.id}>
-            <p style={{ marginBottom: 0 }}>{item.title}:</p>
+            <StyledParagraph>{item.title}:</StyledParagraph>
             <UnorderedList listStyleType="none">
               <StyledDefinition>{item.content}</StyledDefinition>
             </UnorderedList>
