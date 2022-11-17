@@ -16,7 +16,7 @@ jobs:
           node-version: "${{ steps.nvm.outputs.NVMRC }}"
 
       - run: yarn
-      - uses: cypress-io/github-action@v2
+      - uses: cypress-io/github-action@v4
         with:
           install: false
           command: yarn test:cypress
