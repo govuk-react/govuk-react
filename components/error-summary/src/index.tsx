@@ -104,7 +104,7 @@ export const ErrorSummary: React.FC<ErrorSummaryProps> = ({
       <UnorderedList mb={0} listStyleType="none">
         {errors.map((error, index) => (
           <ListItem key={error.targetName}>
-            <StyledErrorText tabIndex={index + 1} onClick={() => onHandleErrorClick?.(error.targetName)}>
+            <StyledErrorText tabIndex={0} onClick={() => onHandleErrorClick?.(error.targetName)}>
               {error.text}
             </StyledErrorText>
           </ListItem>
