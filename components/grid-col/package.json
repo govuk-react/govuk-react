@@ -1,9 +1,9 @@
 {
   "name": "@govuk-react/grid-col",
-  "version": "0.10.4",
+  "version": "0.10.5",
   "dependencies": {
-    "@govuk-react/constants": "^0.10.4",
-    "@govuk-react/lib": "^0.10.4"
+    "@govuk-react/constants": "^0.10.5",
+    "@govuk-react/lib": "^0.10.5"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
