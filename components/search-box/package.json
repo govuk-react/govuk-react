@@ -1,10 +1,10 @@
 {
   "name": "@govuk-react/search-box",
-  "version": "0.10.4",
+  "version": "0.10.5",
   "dependencies": {
-    "@govuk-react/constants": "^0.10.4",
-    "@govuk-react/icons": "^0.10.4",
-    "@govuk-react/lib": "^0.10.4",
+    "@govuk-react/constants": "^0.10.5",
+    "@govuk-react/icons": "^0.10.5",
+    "@govuk-react/lib": "^0.10.5",
     "govuk-colours": "^1.1.0"
   },
   "peerDependencies": {
