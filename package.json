@@ -56,7 +56,7 @@
     "@storybook/addon-storyshots": "6.4.22",
     "@storybook/addons": "6.4.22",
     "@storybook/react": "6.4.22",
-    "@testing-library/dom": "^7.28.1",
+    "@testing-library/dom": "^8.19.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^14.1.1",
