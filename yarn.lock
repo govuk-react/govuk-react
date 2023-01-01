@@ -2087,7 +2087,7 @@ __metadata:
     react-is: ^17.0.2
     rimraf: ^3.0.2
     styled-components: ^5.3.0
-    typescript: ^4.2.4
+    typescript: ^4.9.4
   bin:
     doc-component: bin/doc-component.js
   languageName: unknown
@@ -2630,7 +2630,7 @@ __metadata:
     rimraf: ^3.0.2
     sinon: ^10.0.0
     styled-components: ^5.3.0
-    typescript: ^4.2.4
+    typescript: ^4.9.4
     webpack: ^5.72.0
     webpack-cli: ^4.9.2
     workspace-alias: ^0.1.0
@@ -20581,23 +20581,23 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-typescript@^4.2.4:
-  version: 4.4.3
-  resolution: "typescript@npm:4.4.3"
+typescript@^4.9.4:
+  version: 4.9.4
+  resolution: "typescript@npm:4.9.4"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 05823f21796d450531a7e4ab299715d38fd9ded0e4ce7400876053f4b5166ca3dde7a68cecfe72d9086039f03c0b6edba36516fb10ed83c5837d9600532ea4c2
+  checksum: e782fb9e0031cb258a80000f6c13530288c6d63f1177ed43f770533fdc15740d271554cdae86701c1dd2c83b082cea808b07e97fd68b38a172a83dbf9e0d0ef9
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.2.4#~builtin<compat/typescript>":
-  version: 4.4.3
-  resolution: "typescript@patch:typescript@npm%3A4.4.3#~builtin<compat/typescript>::version=4.4.3&hash=d8b4e7"
+"typescript@patch:typescript@^4.9.4#~builtin<compat/typescript>":
+  version: 4.9.4
+  resolution: "typescript@patch:typescript@npm%3A4.9.4#~builtin<compat/typescript>::version=4.9.4&hash=d8b4e7"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 215a59742afb7e0c3668e2c50ca19813deb24b3cc0d16ac3591990e033728050aaa99e159a72b54cb43653f16c778a5cf9dfeed1f51c3b105710ae082c064af7
+  checksum: 8a0218b6fc89f1f3fa1acb20415aab070cd10f060c2bd5fc23295bdfb36f83a5c4eef32eadcc9fd4140c3517501d1cb83aca53d924346c7305d0112731e10e58
   languageName: node
   linkType: hard
 
