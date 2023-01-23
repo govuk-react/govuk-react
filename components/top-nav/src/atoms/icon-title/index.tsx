@@ -12,6 +12,7 @@ const IconContainer = styled('span')({
 });
 const TitleContainer = styled('span')({
   display: 'inline-block',
+  fontWeight: 700,
 });
 
 const IconTitle: React.FC<IconTitleProps> = ({ icon, children }: IconTitleProps) => (
