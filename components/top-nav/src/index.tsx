@@ -84,7 +84,7 @@ export class TopNav extends Component<TopNavProps, { navigationOpen: boolean }> 
 
   static displayName = 'TopNav';
 
-  static defaultProps = {
+  static defaultProps: TopNavProps = {
     bgColor: BLACK,
     color: WHITE,
     company: <IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</IconTitle>,

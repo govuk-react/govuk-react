@@ -101,7 +101,7 @@ exports[`TopNav matches the <TopNav> with a <NavLinkAnchor> tag snapshot: enzyme
                         </icon-title__IconContainer>
                         <icon-title__TitleContainer>
                           <span
-                            className="icon-title__TitleContainer-sc-onvli0-2 cJnBdS"
+                            className="icon-title__TitleContainer-sc-onvli0-2 dfLYVv"
                           >
                             GOV.UK
                           </span>
@@ -316,7 +316,7 @@ exports[`TopNav matches the <TopNav> with multiple <Anchor> tags snapshot: enzym
                         </icon-title__IconContainer>
                         <icon-title__TitleContainer>
                           <span
-                            className="icon-title__TitleContainer-sc-onvli0-2 cJnBdS"
+                            className="icon-title__TitleContainer-sc-onvli0-2 dfLYVv"
                           >
                             GOV.UK
                           </span>
@@ -548,6 +548,7 @@ exports[`TopNav with icon title: icon title 1`] = `
 
 .c6 {
   display: inline-block;
+  font-weight: 700;
 }
 
 .c8 {
