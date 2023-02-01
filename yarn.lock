@@ -2255,7 +2255,7 @@ __metadata:
     "@cypress/react": ^5.12.4
     "@cypress/webpack-dev-server": ^1.8.4
     "@rjsf/core": ^3.1.0
-    cypress: ^9.6.0
+    cypress: ^12.5.0
     cypress-file-upload: ^5.0.8
     final-form: ^4.20.7
     formik: ^2.2.9
@@ -8919,9 +8919,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:^9.6.0":
-  version: 9.6.0
-  resolution: "cypress@npm:9.6.0"
+"cypress@npm:^12.5.0":
+  version: 12.5.0
+  resolution: "cypress@npm:12.5.0"
   dependencies:
     "@cypress/request": ^2.88.10
     "@cypress/xvfb": ^1.2.4
@@ -8942,7 +8942,7 @@ __metadata:
     dayjs: ^1.10.4
     debug: ^4.3.2
     enquirer: ^2.3.6
-    eventemitter2: ^6.4.3
+    eventemitter2: 6.4.7
     execa: 4.1.0
     executable: ^4.1.1
     extract-zip: 2.0.1
@@ -8967,7 +8967,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: 1e5142885a3fb54db6ef7477e3b11b363f1f610ff008982af014e6df3261ac3899f4cad407c598fb690f93029634adb4ad4605929d10776f92175a3eebb471c4
+  checksum: 36d5e21f7ade654be42bdcb5a3808da71bb81e8827826e17a36113fd98d2470f66e5a18efa8a014080c9b4179833ef914f767b881dde64775f5e639fdc1bc732
   languageName: node
   linkType: hard
 
@@ -10379,10 +10379,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eventemitter2@npm:^6.4.3":
-  version: 6.4.5
-  resolution: "eventemitter2@npm:6.4.5"
-  checksum: 84504f9cf0cc30205cdd46783fe9df3733435e5097f13070b678023110b5ef07847651808ae280cd94c42cd5976880211c7a40321a8ff8fa56f7c5f9c5c11960
+"eventemitter2@npm:6.4.7":
+  version: 6.4.7
+  resolution: "eventemitter2@npm:6.4.7"
+  checksum: 1b36a77e139d6965ebf3a36c01fa00c089ae6b80faa1911e52888f40b3a7057b36a2cc45dcd1ad87cda3798fe7b97a0aabcbb8175a8b96092a23bb7d0f039e66
   languageName: node
   linkType: hard
 
