@@ -12,7 +12,9 @@ import { BORDER_WIDTH, BORDER_WIDTH_FORM_ELEMENT, FOCUS_WIDTH, SPACING_POINTS } 
 import { spacing, typography } from '@govuk-react/lib';
 
 const checkboxSize = SPACING_POINTS[7];
+const checkboxSizeSmall = SPACING_POINTS[5];
 const labelPaddingLeftRight = SPACING_POINTS[3];
+const labelPaddingLeftRightSnall = SPACING_POINTS[2];
 
 const StyledCheckbox = styled('label')(
   typography.font({ size: 19 }),
@@ -22,6 +24,20 @@ const StyledCheckbox = styled('label')(
     minHeight: checkboxSize,
     padding: `0 0 0 ${checkboxSize}px`,
     clear: 'left',
+    '&.size-small': {
+      span: {
+        padding: `0 ${labelPaddingLeftRightSnall}px ${SPACING_POINTS[1]}px 0`,
+      },
+      'span::before': {
+        width: checkboxSizeSmall,
+        height: checkboxSizeSmall,
+      },
+      'span::after': {
+        transform: 'scale(0.8) rotate(-45deg)',
+        top: 5,
+        left: 1,
+      },
+    },
   },
   spacing.withWhiteSpace({ marginBottom: 2 })
 );
@@ -99,8 +115,8 @@ const StyledCheckboxHint = styled(HintText)({
  * - https://design-system.service.gov.uk/components/checkboxes/
  */
 const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ children, className, hint, ...props }: CheckboxProps, ref) => (
-    <StyledCheckbox className={className}>
+  ({ children, className, hint, size, ...props }: CheckboxProps, ref) => (
+    <StyledCheckbox className={`${className} size-${size}`}>
       <StyledInput type="checkbox" {...props} ref={ref} />
       <StyledLabel>{children}</StyledLabel>
       {hint && <StyledCheckboxHint>{hint}</StyledCheckboxHint>}
@@ -112,9 +128,10 @@ Checkbox.displayName = 'Checkbox';
 Checkbox.defaultProps = {
   hint: undefined,
   className: undefined,
+  size: 'medium',
 };
 
-export interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface CheckboxProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
   hint?: React.ReactNode;
   /**
    * Text content for checkbox
@@ -124,6 +141,11 @@ export interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElemen
    * CSS Classname for outermost container
    */
   className?: string;
+
+  /**
+   * Size of checkbox
+   */
+  size?: 'medium' | 'small';
 }
 
 export default Checkbox;
