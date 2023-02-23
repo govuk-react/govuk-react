@@ -30,18 +30,18 @@ const StyledCheckbox = styled('label')<Pick<CheckboxProps, 'size'> & WithWhiteSp
       paddingRight: 22,
       span: {
         paddingLeft: 0,
-      },
-      'span::before': {
-        width: checkboxSizeSmall,
-        height: checkboxSizeSmall,
-        top: 8,
-      },
-      'span::after': {
-        top: 15,
-        left: 6,
-        width: 11,
-        height: 4.5,
-        borderWidth: '0 0 3px 3px',
+        ':before': {
+          width: checkboxSizeSmall,
+          height: checkboxSizeSmall,
+          top: 8,
+        },
+        ':after': {
+          top: 15,
+          left: 6,
+          width: 11,
+          height: 4.5,
+          borderWidth: '0 0 3px 3px',
+        },
       },
     },
   spacing.withWhiteSpace({ marginBottom: 2 })
