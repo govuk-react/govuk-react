@@ -14,7 +14,6 @@ import { spacing, typography } from '@govuk-react/lib';
 const checkboxSize = SPACING_POINTS[7];
 const checkboxSizeSmall = SPACING_POINTS[5];
 const labelPaddingLeftRight = SPACING_POINTS[3];
-const labelPaddingLeftRightSnall = SPACING_POINTS[2];
 
 const StyledCheckbox = styled('label')(
   typography.font({ size: 19 }),
@@ -25,17 +24,21 @@ const StyledCheckbox = styled('label')(
     padding: `0 0 0 ${checkboxSize}px`,
     clear: 'left',
     '&.size-small': {
+      paddingRight: 22,
       span: {
-        padding: `0 ${labelPaddingLeftRightSnall}px ${SPACING_POINTS[1]}px 0`,
+        paddingLeft: 0,
       },
       'span::before': {
         width: checkboxSizeSmall,
         height: checkboxSizeSmall,
+        top: 8,
       },
       'span::after': {
-        transform: 'scale(0.8) rotate(-45deg)',
-        top: 5,
-        left: 1,
+        top: 15,
+        left: 6,
+        width: 11,
+        height: 4.5,
+        borderWidth: '0 0 3px 3px',
       },
     },
   },
