@@ -28,7 +28,6 @@ export const CheckboxDisabled = Template.bind({});
 CheckboxDisabled.args = {
   children: 'Disabled checkbox option',
   disabled: true,
-  size: 100,
 };
 
 export const CheckboxPreselected = Template.bind({});
