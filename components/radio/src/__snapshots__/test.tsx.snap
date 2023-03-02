@@ -133,15 +133,14 @@ exports[`Radio can render with hint text: hint text 1`] = `
 <Radio
   hint="Hint text"
   inline={false}
-  size="medium"
+  sizeVariant="MEDIUM"
 >
   <src__Label
     inline={false}
-    size="medium"
+    sizeVariant="MEDIUM"
   >
     <label
       className="c0"
-      size="medium"
     >
       <src__Input
         type="radio"
@@ -271,15 +270,14 @@ exports[`Radio disabled: disabled 1`] = `
 <Radio
   disabled={true}
   inline={false}
-  size="medium"
+  sizeVariant="MEDIUM"
 >
   <src__Label
     inline={false}
-    size="medium"
+    sizeVariant="MEDIUM"
   >
     <label
       className="c0"
-      size="medium"
     >
       <src__Input
         disabled={true}
@@ -412,15 +410,14 @@ exports[`Radio matches snapshot for inline: inline mount 1`] = `
 <Radio
   inline={true}
   name="example"
-  size="medium"
+  sizeVariant="MEDIUM"
 >
   <src__Label
     inline={true}
-    size="medium"
+    sizeVariant="MEDIUM"
   >
     <label
       className="c0"
-      size="medium"
     >
       <src__Input
         name="example"
@@ -545,15 +542,14 @@ exports[`Radio matches snapshot: standard mount 1`] = `
 <Radio
   inline={false}
   name="example"
-  size="medium"
+  sizeVariant="MEDIUM"
 >
   <src__Label
     inline={false}
-    size="medium"
+    sizeVariant="MEDIUM"
   >
     <label
       className="c0"
-      size="medium"
     >
       <src__Input
         name="example"
