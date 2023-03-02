@@ -27,7 +27,7 @@ const labelPaddingLeftRight = SPACING_POINTS[3];
 // So for the circular radios we bump the default to make it look visually consistent.
 const RADIOS_FOCUS_WIDTH = `${FOCUS_WIDTH_RAW + 1}px`;
 
-const Label = styled('label')<{ inline?: boolean } & WithWhiteSpaceProps & Pick<RadioProps, 'size'>>(
+const Label = styled('label')<{ inline?: boolean } & WithWhiteSpaceProps & Pick<RadioProps, 'sizeVariant'>>(
   typography.font({ size: 19 }),
   {
     display: 'block',
@@ -44,8 +44,8 @@ const Label = styled('label')<{ inline?: boolean } & WithWhiteSpaceProps & Pick<
         marginRight: SPACING_POINTS[4],
       },
     },
-  ({ size }) =>
-    size === 'SMALL' && {
+  ({ sizeVariant }) =>
+    sizeVariant === 'SMALL' && {
       span: {
         paddingLeft: 0,
         ':after': {
@@ -137,8 +137,8 @@ const StyledRadioHint = styled(HintText)({
  * - https://design-system.service.gov.uk/components/radios/
  */
 export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
-  ({ inline, children, className, hint, size, ...input }: RadioProps, ref) => (
-    <Label inline={inline} className={className} size={size}>
+  ({ inline, children, className, hint, sizeVariant, ...input }: RadioProps, ref) => (
+    <Label inline={inline} className={className} sizeVariant={sizeVariant}>
       <Input type="radio" ref={ref} {...input} />
       <LabelText>{children}</LabelText>
       {hint && <StyledRadioHint>{hint}</StyledRadioHint>}
@@ -150,17 +150,17 @@ Radio.defaultProps = {
   hint: undefined,
   inline: false,
   className: undefined,
-  size: 'MEDIUM',
+  sizeVariant: 'MEDIUM',
 };
 
 Radio.displayName = 'Radio';
 
-export interface RadioProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
+export interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement> {
   hint?: React.ReactNode;
   inline?: boolean;
   className?: string;
   children: React.ReactNode;
-  size?: `${ComponentSizeVariant.MEDIUM}` | `${ComponentSizeVariant.SMALL}`;
+  sizeVariant?: `${ComponentSizeVariant.MEDIUM}` | `${ComponentSizeVariant.SMALL}`;
 }
 
 export default Radio;

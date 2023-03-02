@@ -16,7 +16,7 @@ const checkboxSize = SPACING_POINTS[7];
 const checkboxSizeSmall = SPACING_POINTS[5];
 const labelPaddingLeftRight = SPACING_POINTS[3];
 
-const StyledCheckbox = styled('label')<Pick<CheckboxProps, 'size'> & WithWhiteSpaceProps>(
+const StyledCheckbox = styled('label')<Pick<CheckboxProps, 'sizeVariant'> & WithWhiteSpaceProps>(
   typography.font({ size: 19 }),
   {
     display: 'block',
@@ -25,8 +25,8 @@ const StyledCheckbox = styled('label')<Pick<CheckboxProps, 'size'> & WithWhiteSp
     padding: `0 0 0 ${checkboxSize}px`,
     clear: 'left',
   },
-  ({ size }) =>
-    size === 'SMALL' && {
+  ({ sizeVariant }) =>
+    sizeVariant === 'SMALL' && {
       paddingRight: 22,
       span: {
         paddingLeft: 0,
@@ -120,8 +120,8 @@ const StyledCheckboxHint = styled(HintText)({
  * - https://design-system.service.gov.uk/components/checkboxes/
  */
 const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ children, className, hint, size, ...props }: CheckboxProps, ref) => (
-    <StyledCheckbox className={className} size={size}>
+  ({ children, className, hint, sizeVariant, ...props }: CheckboxProps, ref) => (
+    <StyledCheckbox className={className} sizeVariant={sizeVariant}>
       <StyledInput type="checkbox" {...props} ref={ref} />
       <StyledLabel>{children}</StyledLabel>
       {hint && <StyledCheckboxHint>{hint}</StyledCheckboxHint>}
@@ -133,10 +133,10 @@ Checkbox.displayName = 'Checkbox';
 Checkbox.defaultProps = {
   hint: undefined,
   className: undefined,
-  size: 'MEDIUM',
+  sizeVariant: 'MEDIUM',
 };
 
-export interface CheckboxProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
+export interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
   hint?: React.ReactNode;
   /**
    * Text content for checkbox
@@ -150,7 +150,7 @@ export interface CheckboxProps extends Omit<React.InputHTMLAttributes<HTMLInputE
   /**
    * Size of checkbox
    */
-  size?: `${ComponentSizeVariant.MEDIUM}` | `${ComponentSizeVariant.SMALL}`;
+  sizeVariant?: `${ComponentSizeVariant.MEDIUM}` | `${ComponentSizeVariant.SMALL}`;
 }
 
 export default Checkbox;
