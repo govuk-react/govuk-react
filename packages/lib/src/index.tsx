@@ -5,6 +5,6 @@ import * as link from './link';
 import * as shape from './shape';
 import * as typography from './typography';
 
-export type { WithWhiteSpaceProps, WithWidthProps, Size } from './spacing';
+export type { WithWhiteSpaceProps, WithWidthProps, ComponentSizeVariant } from './spacing';
 
 export { visuallyHidden, spacing, link, shape, typography };

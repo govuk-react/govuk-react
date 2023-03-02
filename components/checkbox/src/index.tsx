@@ -10,7 +10,7 @@ import HintText from '@govuk-react/hint-text';
 import { FOCUS_COLOUR } from 'govuk-colours';
 import { BORDER_WIDTH, BORDER_WIDTH_FORM_ELEMENT, FOCUS_WIDTH, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography, WithWhiteSpaceProps } from '@govuk-react/lib';
-import type { Size } from '@govuk-react/lib';
+import type { ComponentSizeVariant } from '@govuk-react/lib';
 
 const checkboxSize = SPACING_POINTS[7];
 const checkboxSizeSmall = SPACING_POINTS[5];
@@ -26,7 +26,7 @@ const StyledCheckbox = styled('label')<Pick<CheckboxProps, 'size'> & WithWhiteSp
     clear: 'left',
   },
   ({ size }) =>
-    size === 'small' && {
+    size === 'SMALL' && {
       paddingRight: 22,
       span: {
         paddingLeft: 0,
@@ -133,7 +133,7 @@ Checkbox.displayName = 'Checkbox';
 Checkbox.defaultProps = {
   hint: undefined,
   className: undefined,
-  size: 'medium',
+  size: 'MEDIUM',
 };
 
 export interface CheckboxProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
@@ -150,7 +150,7 @@ export interface CheckboxProps extends Omit<React.InputHTMLAttributes<HTMLInputE
   /**
    * Size of checkbox
    */
-  size?: `${Size.MEDIUM}` | `${Size.SMALL}`;
+  size?: `${ComponentSizeVariant.MEDIUM}` | `${ComponentSizeVariant.SMALL}`;
 }
 
 export default Checkbox;

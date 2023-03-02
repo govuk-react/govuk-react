@@ -198,9 +198,9 @@ export type WithWhiteSpaceProps = {
 
 export type WithWidthProps = { setWidth?: string | number };
 
-export enum Size {
-  XLARGE = 'xlarge',
-  LARGE = 'large',
-  MEDIUM = 'medium',
-  SMALL = 'small',
+export enum ComponentSizeVariant {
+  XLARGE = 'XLARGE',
+  LARGE = 'LARGE',
+  MEDIUM = 'MEDIUM',
+  SMALL = 'SMALL',
 }

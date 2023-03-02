@@ -29,7 +29,7 @@ Default.args = {
 export const RadioSmall = Template.bind({});
 RadioSmall.args = {
   children: 'Small radio',
-  size: 'small',
+  size: 'SMALL',
 };
 
 export const RadioStacked = Template.bind({});

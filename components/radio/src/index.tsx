@@ -4,7 +4,7 @@
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/radios/_radios.scss
  * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
  */
-import type { WithWhiteSpaceProps, Size } from '@govuk-react/lib';
+import type { WithWhiteSpaceProps, ComponentSizeVariant } from '@govuk-react/lib';
 
 import * as React from 'react';
 import styled from 'styled-components';
@@ -45,7 +45,7 @@ const Label = styled('label')<{ inline?: boolean } & WithWhiteSpaceProps & Pick<
       },
     },
   ({ size }) =>
-    size === 'small' && {
+    size === 'SMALL' && {
       span: {
         paddingLeft: 0,
         ':after': {
@@ -150,7 +150,7 @@ Radio.defaultProps = {
   hint: undefined,
   inline: false,
   className: undefined,
-  size: 'medium',
+  size: 'MEDIUM',
 };
 
 Radio.displayName = 'Radio';
@@ -160,7 +160,7 @@ export interface RadioProps extends Omit<React.InputHTMLAttributes<HTMLInputElem
   inline?: boolean;
   className?: string;
   children: React.ReactNode;
-  size?: `${Size.MEDIUM}` | `${Size.SMALL}`;
+  size?: `${ComponentSizeVariant.MEDIUM}` | `${ComponentSizeVariant.SMALL}`;
 }
 
 export default Radio;

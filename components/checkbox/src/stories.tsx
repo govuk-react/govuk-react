@@ -21,7 +21,7 @@ Default.args = {
 export const CheckboxSmall = Template.bind({});
 CheckboxSmall.args = {
   children: 'Small checkbox',
-  size: 'small',
+  size: 'SMALL',
 };
 
 export const CheckboxDisabled = Template.bind({});
