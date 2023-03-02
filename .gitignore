@@ -48,4 +48,3 @@ govuk-react-*.tgz
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-yarn.lock
