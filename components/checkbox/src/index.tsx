@@ -8,7 +8,14 @@ import * as React from 'react';
 import styled from 'styled-components';
 import HintText from '@govuk-react/hint-text';
 import { FOCUS_COLOUR } from 'govuk-colours';
-import { BORDER_WIDTH, BORDER_WIDTH_FORM_ELEMENT, FOCUS_WIDTH, SPACING_POINTS } from '@govuk-react/constants';
+import {
+  BORDER_WIDTH,
+  BORDER_WIDTH_FORM_ELEMENT,
+  FOCUS_WIDTH,
+  SPACING_POINTS,
+  MEDIA_QUERIES,
+  FONT_SIZE,
+} from '@govuk-react/constants';
 import { spacing, typography, WithWhiteSpaceProps } from '@govuk-react/lib';
 import type { ComponentSizeVariant } from '@govuk-react/lib';
 
@@ -29,7 +36,12 @@ const StyledCheckbox = styled('label')<Pick<CheckboxProps, 'sizeVariant'> & With
     sizeVariant === 'SMALL' && {
       paddingRight: 22,
       span: {
-        paddingLeft: 0,
+        padding: '12px 15px 13px 0',
+        fontSize: FONT_SIZE.SIZE_16,
+        [MEDIA_QUERIES.LARGESCREEN]: {
+          fontSize: FONT_SIZE.SIZE_19,
+          padding: `10px 15px 10px 1px`,
+        },
         ':before': {
           width: checkboxSizeSmall,
           height: checkboxSizeSmall,
