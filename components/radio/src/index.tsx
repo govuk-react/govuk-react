@@ -16,6 +16,7 @@ import {
   BORDER_WIDTH_FORM_ELEMENT,
   FOCUS_WIDTH,
   FOCUS_WIDTH_RAW,
+  FONT_SIZE,
   MEDIA_QUERIES,
   SPACING_POINTS,
 } from '@govuk-react/constants';
@@ -47,7 +48,12 @@ const Label = styled('label')<{ inline?: boolean } & WithWhiteSpaceProps & Pick<
   ({ sizeVariant }) =>
     sizeVariant === 'SMALL' && {
       span: {
-        paddingLeft: 0,
+        padding: '12px 15px 13px 0',
+        fontSize: FONT_SIZE.SIZE_16,
+        [MEDIA_QUERIES.LARGESCREEN]: {
+          fontSize: FONT_SIZE.SIZE_19,
+          padding: `10px 15px 10px 1px`,
+        },
         ':after': {
           top: 15,
           left: 7,
