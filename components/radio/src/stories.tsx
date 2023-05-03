@@ -26,6 +26,12 @@ Default.args = {
   children: 'Radio button text example',
 };
 
+export const RadioSmall = Template.bind({});
+RadioSmall.args = {
+  children: 'Small radio',
+  sizeVariant: 'SMALL',
+};
+
 export const RadioStacked = Template.bind({});
 RadioStacked.args = {
   name: 'group1',

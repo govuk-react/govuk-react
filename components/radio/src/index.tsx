@@ -4,28 +4,31 @@
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/components/radios/_radios.scss
  * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_forms.scss
  */
-import type { WithWhiteSpaceProps } from '@govuk-react/lib';
+import type { WithWhiteSpaceProps, ComponentSizeVariant } from '@govuk-react/lib';
 
 import * as React from 'react';
 import styled from 'styled-components';
 import { FOCUS_COLOUR } from 'govuk-colours';
 import { spacing, typography } from '@govuk-react/lib';
 import HintText from '@govuk-react/hint-text';
+
 import {
   BORDER_WIDTH_FORM_ELEMENT,
   FOCUS_WIDTH,
   FOCUS_WIDTH_RAW,
+  FONT_SIZE,
   MEDIA_QUERIES,
   SPACING_POINTS,
 } from '@govuk-react/constants';
 
 const radioSize = SPACING_POINTS[7];
+const radioSizeSmall = 24;
 const labelPaddingLeftRight = SPACING_POINTS[3];
 // When the default focus width is used on a curved edge it looks visually smaller.
 // So for the circular radios we bump the default to make it look visually consistent.
 const RADIOS_FOCUS_WIDTH = `${FOCUS_WIDTH_RAW + 1}px`;
 
-const Label = styled('label')<{ inline?: boolean } & WithWhiteSpaceProps>(
+const Label = styled('label')<{ inline?: boolean } & WithWhiteSpaceProps & Pick<RadioProps, 'sizeVariant'>>(
   typography.font({ size: 19 }),
   {
     display: 'block',
@@ -40,6 +43,27 @@ const Label = styled('label')<{ inline?: boolean } & WithWhiteSpaceProps>(
         float: 'left',
         clear: 'none',
         marginRight: SPACING_POINTS[4],
+      },
+    },
+  ({ sizeVariant }) =>
+    sizeVariant === 'SMALL' && {
+      span: {
+        padding: '12px 15px 13px 0',
+        fontSize: FONT_SIZE.SIZE_16,
+        [MEDIA_QUERIES.LARGESCREEN]: {
+          fontSize: FONT_SIZE.SIZE_19,
+          padding: `10px 15px 10px 1px`,
+        },
+        ':after': {
+          top: 15,
+          left: 7,
+          borderWidth: 5,
+        },
+        ':before': {
+          top: 8,
+          width: radioSizeSmall,
+          height: radioSizeSmall,
+        },
       },
     },
   spacing.withWhiteSpace({ marginBottom: 2 })
@@ -119,8 +143,8 @@ const StyledRadioHint = styled(HintText)({
  * - https://design-system.service.gov.uk/components/radios/
  */
 export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
-  ({ inline, children, className, hint, ...input }: RadioProps, ref) => (
-    <Label inline={inline} className={className}>
+  ({ inline, children, className, hint, sizeVariant, ...input }: RadioProps, ref) => (
+    <Label inline={inline} className={className} sizeVariant={sizeVariant}>
       <Input type="radio" ref={ref} {...input} />
       <LabelText>{children}</LabelText>
       {hint && <StyledRadioHint>{hint}</StyledRadioHint>}
@@ -132,6 +156,7 @@ Radio.defaultProps = {
   hint: undefined,
   inline: false,
   className: undefined,
+  sizeVariant: 'MEDIUM',
 };
 
 Radio.displayName = 'Radio';
@@ -141,6 +166,7 @@ export interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement> 
   inline?: boolean;
   className?: string;
   children: React.ReactNode;
+  sizeVariant?: `${ComponentSizeVariant.MEDIUM}` | `${ComponentSizeVariant.SMALL}`;
 }
 
 export default Radio;

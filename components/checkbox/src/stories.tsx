@@ -18,6 +18,12 @@ Default.args = {
   children: 'Example',
 };
 
+export const CheckboxSmall = Template.bind({});
+CheckboxSmall.args = {
+  children: 'Small checkbox',
+  sizeVariant: 'SMALL',
+};
+
 export const CheckboxDisabled = Template.bind({});
 CheckboxDisabled.args = {
   children: 'Disabled checkbox option',

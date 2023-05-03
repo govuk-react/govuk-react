@@ -8,13 +8,22 @@ import * as React from 'react';
 import styled from 'styled-components';
 import HintText from '@govuk-react/hint-text';
 import { FOCUS_COLOUR } from 'govuk-colours';
-import { BORDER_WIDTH, BORDER_WIDTH_FORM_ELEMENT, FOCUS_WIDTH, SPACING_POINTS } from '@govuk-react/constants';
-import { spacing, typography } from '@govuk-react/lib';
+import {
+  BORDER_WIDTH,
+  BORDER_WIDTH_FORM_ELEMENT,
+  FOCUS_WIDTH,
+  SPACING_POINTS,
+  MEDIA_QUERIES,
+  FONT_SIZE,
+} from '@govuk-react/constants';
+import { spacing, typography, WithWhiteSpaceProps } from '@govuk-react/lib';
+import type { ComponentSizeVariant } from '@govuk-react/lib';
 
 const checkboxSize = SPACING_POINTS[7];
+const checkboxSizeSmall = SPACING_POINTS[5];
 const labelPaddingLeftRight = SPACING_POINTS[3];
 
-const StyledCheckbox = styled('label')(
+const StyledCheckbox = styled('label')<Pick<CheckboxProps, 'sizeVariant'> & WithWhiteSpaceProps>(
   typography.font({ size: 19 }),
   {
     display: 'block',
@@ -23,6 +32,30 @@ const StyledCheckbox = styled('label')(
     padding: `0 0 0 ${checkboxSize}px`,
     clear: 'left',
   },
+  ({ sizeVariant }) =>
+    sizeVariant === 'SMALL' && {
+      paddingRight: 22,
+      span: {
+        padding: '12px 15px 13px 0',
+        fontSize: FONT_SIZE.SIZE_16,
+        [MEDIA_QUERIES.LARGESCREEN]: {
+          fontSize: FONT_SIZE.SIZE_19,
+          padding: `10px 15px 10px 1px`,
+        },
+        ':before': {
+          width: checkboxSizeSmall,
+          height: checkboxSizeSmall,
+          top: 8,
+        },
+        ':after': {
+          top: 15,
+          left: 6,
+          width: 11,
+          height: 4.5,
+          borderWidth: '0 0 3px 3px',
+        },
+      },
+    },
   spacing.withWhiteSpace({ marginBottom: 2 })
 );
 
@@ -99,8 +132,8 @@ const StyledCheckboxHint = styled(HintText)({
  * - https://design-system.service.gov.uk/components/checkboxes/
  */
 const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ children, className, hint, ...props }: CheckboxProps, ref) => (
-    <StyledCheckbox className={className}>
+  ({ children, className, hint, sizeVariant, ...props }: CheckboxProps, ref) => (
+    <StyledCheckbox className={className} sizeVariant={sizeVariant}>
       <StyledInput type="checkbox" {...props} ref={ref} />
       <StyledLabel>{children}</StyledLabel>
       {hint && <StyledCheckboxHint>{hint}</StyledCheckboxHint>}
@@ -112,6 +145,7 @@ Checkbox.displayName = 'Checkbox';
 Checkbox.defaultProps = {
   hint: undefined,
   className: undefined,
+  sizeVariant: 'MEDIUM',
 };
 
 export interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -124,6 +158,11 @@ export interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElemen
    * CSS Classname for outermost container
    */
   className?: string;
+
+  /**
+   * Size of checkbox
+   */
+  sizeVariant?: `${ComponentSizeVariant.MEDIUM}` | `${ComponentSizeVariant.SMALL}`;
 }
 
 export default Checkbox;
