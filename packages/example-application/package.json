@@ -35,11 +35,11 @@
   "devDependencies": {
     "@cypress/react": "^5.12.4",
     "@cypress/webpack-dev-server": "^1.8.4",
-    "cypress": "^9.6.0",
+    "cypress": "^12.9.0",
     "cypress-file-upload": "^5.0.8",
     "html-webpack-plugin": "^5.5.0",
-    "webpack": "^5.72.0",
-    "webpack-dev-server": "^4.8.1",
+    "webpack": "^5.76.0",
+    "webpack-dev-server": "^4.13.3",
     "workspace-alias": "^0.1.0"
   }
 }
