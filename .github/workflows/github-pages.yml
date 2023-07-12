@@ -22,7 +22,7 @@ jobs:
       - run: yarn build:storybook
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.4.2
+        uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: packages/storybook/storybook-static # The folder the action should deploy.
