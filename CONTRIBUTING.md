@@ -21,10 +21,10 @@ yarn start
 ## Creating a new component
 
 To create a new component:
+
 - `yarn create-component -- my-new-component` where _my-new-component_ is the name of your new component.
 
 This creates a folder named _my-new-component_ in `src/components` with the component file (index.js), a basic render test (test.js), and a default story (stories.js). You will need to add this to `src/stories/index.js` to view it in storybook.
-
 
 ## Unit testing
 
@@ -98,7 +98,7 @@ For the purpose of this project:
 - A field is the combination of a label, input(s) and validation/error messages. The Field components used by this project should follow the prop structure of Final Form and Redux Form fields, in that they accept an `input` prop and a `meta` prop.
 - An input is just the form control that the user enters data in to, without a label or error/validation message. Inputs are normally associated with a Field and should be used on their own by importing the Field then using `<FieldName.Input />`. Inputs follow the prop structure of Final Form and Redux Form inputs.
 
-More details in https://github.com/govuk-react/govuk-react/issues/164.
+More details in [issues/164](https://github.com/govuk-react/govuk-react/issues/164.)
 
 ### Anchors
 
@@ -116,5 +116,5 @@ Components are built to have white space around them to match their equivalents 
 
 The `withWhiteSpace` function accepts default values for both `padding` and `margin`, and also provides support for overriding those defaults with equivalently named props. Spacing styles created are responsive and adjust for mobile/tablet sizes. For backward compatibility with the `withWhiteSpace` HOC it also supports a `marginBottom` config and `mb` prop.
 
-More details in https://github.com/govuk-react/govuk-react/issues/173
-and https://github.com/govuk-react/govuk-react/pull/523
+More details in [issues/173](https://github.com/govuk-react/govuk-react/issues/173)
+and [pull/523](https://github.com/govuk-react/govuk-react/pull/523)
