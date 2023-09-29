@@ -5,7 +5,7 @@
  */
 import * as React from 'react';
 import styled from 'styled-components';
-import { TURQUOISE, WHITE } from 'govuk-colours';
+import { WHITE } from 'govuk-colours';
 import { spacing, typography } from '@govuk-react/lib';
 import { BORDER_WIDTH, MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
 import { stripUnit } from 'polished';
@@ -31,7 +31,7 @@ const StyledPanel = styled('div')(
     },
 
     color: WHITE,
-    background: TURQUOISE,
+    background: '#00703c',
   },
   spacing.withWhiteSpace()
 );

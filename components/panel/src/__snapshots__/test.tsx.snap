@@ -14,7 +14,7 @@ exports[`Panel matches wrapper snapshot: wrapper mount 1`] = `
   border: 5px solid transparent;
   text-align: center;
   color: #ffffff;
-  background: #28a197;
+  background: #00703c;
 }
 
 .c1 {
