@@ -1,6 +1,6 @@
 {
   "name": "@govuk-react/api-docs",
-  "version": "0.10.5",
+  "version": "0.10.6",
   "dependencies": {
     "@babel/node": "7.22.19",
     "@babel/runtime": "7.23.1",
@@ -8,7 +8,7 @@
     "commander": "^11.0.0",
     "glob": "^7.1.2",
     "glob-promise": "^6.0.5",
-    "govuk-react": "^0.10.5",
+    "govuk-react": "^0.10.6",
     "lodash": "^4.17.5",
     "react": "^18.2.0",
     "react-docgen-typescript": "^2.1.0",
