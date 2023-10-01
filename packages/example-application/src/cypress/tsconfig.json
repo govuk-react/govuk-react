@@ -1,9 +1,10 @@
 {
-    "compilerOptions": {
-      "target": "es5",
-      "lib": ["es5", "dom"],
-      "types": ["cypress", "cypress-file-upload"],
-      "jsx": "react",
-    },
-    "include": ["*.tsx"],
-  }
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "target": "es5",
+    "lib": ["es2017", "dom"],
+    "types": ["cypress", "cypress-file-upload"],
+    "jsx": "react"
+  },
+  "include": ["*.tsx"]
+}
