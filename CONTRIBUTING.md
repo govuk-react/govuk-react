@@ -63,8 +63,8 @@ yarn docs
 
 In order to prepare a release:
 
-- ensure you have [hub](https://hub.github.com) installed (e.g. `brew install hub`)
-- run `./scripts/release.sh`, followed by a [semver increment](https://github.com/npm/node-semver#functions) e.g. `./scripts/release.sh patch` (if this is the first time running hub, you will be asked for your GitHub credentials).
+- ensure you have [gh cli](https://cli.github.com) installed (e.g. `brew install gh`)
+- run `./scripts/release.sh`, followed by a [semver increment](https://github.com/npm/node-semver#functions) e.g. `./scripts/release.sh patch` (if this is the first time running gh, you will be asked for your GitHub credentials).
 - this will open a PR on GitHub and draft a release
 - Edit the PR and write the release notes in the PR description (see release notes below)
 - get approval for the PR (reviewers should be reviewing the release notes in the PR description) then merge the PR
