@@ -2818,7 +2818,7 @@ __metadata:
     "@storybook/react-webpack5": 7.4.5
     "@storybook/storybook-deployer": ^2.8.16
     "@types/babel__preset-env": ^7
-    "@types/react-dom": ^17
+    "@types/react-dom": ^18
     babel-loader: ^9.1.3
     babel-plugin-styled-components: ^2.0.7
     eslint-plugin-storybook: ^0.6.14
@@ -5934,16 +5934,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^17":
-  version: 17.0.16
-  resolution: "@types/react-dom@npm:17.0.16"
-  dependencies:
-    "@types/react": ^17
-  checksum: 2f41a45ef955c8f68a7bcd22343715f15e1560a5e5ba941568b3c970d9151f78fe0975ecf4df7f691339af546555e0f23fa423a0a5bcd7ea4dd4f9c245509936
-  languageName: node
-  linkType: hard
-
-"@types/react-dom@npm:^18.0.0":
+"@types/react-dom@npm:^18, @types/react-dom@npm:^18.0.0":
   version: 18.2.8
   resolution: "@types/react-dom@npm:18.2.8"
   dependencies:
