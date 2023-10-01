@@ -1,16 +1,16 @@
 {
   "name": "@govuk-react/error-summary",
-  "version": "0.10.5",
+  "version": "0.10.6",
   "dependencies": {
-    "@govuk-react/constants": "^0.10.5",
-    "@govuk-react/heading": "^0.10.5",
-    "@govuk-react/input-field": "^0.10.5",
-    "@govuk-react/lib": "^0.10.5",
-    "@govuk-react/link": "^0.10.5",
-    "@govuk-react/list-item": "^0.10.5",
-    "@govuk-react/paragraph": "^0.10.5",
-    "@govuk-react/text-area": "^0.10.5",
-    "@govuk-react/unordered-list": "^0.10.5",
+    "@govuk-react/constants": "^0.10.6",
+    "@govuk-react/heading": "^0.10.6",
+    "@govuk-react/input-field": "^0.10.6",
+    "@govuk-react/lib": "^0.10.6",
+    "@govuk-react/link": "^0.10.6",
+    "@govuk-react/list-item": "^0.10.6",
+    "@govuk-react/paragraph": "^0.10.6",
+    "@govuk-react/text-area": "^0.10.6",
+    "@govuk-react/unordered-list": "^0.10.6",
     "govuk-colours": "^1.1.0"
   },
   "peerDependencies": {

@@ -1,12 +1,12 @@
 {
   "name": "@govuk-react/text-area",
-  "version": "0.10.5",
+  "version": "0.10.6",
   "dependencies": {
-    "@govuk-react/constants": "^0.10.5",
-    "@govuk-react/error-text": "^0.10.5",
-    "@govuk-react/hint-text": "^0.10.5",
-    "@govuk-react/label": "^0.10.5",
-    "@govuk-react/label-text": "^0.10.5",
+    "@govuk-react/constants": "^0.10.6",
+    "@govuk-react/error-text": "^0.10.6",
+    "@govuk-react/hint-text": "^0.10.6",
+    "@govuk-react/label": "^0.10.6",
+    "@govuk-react/label-text": "^0.10.6",
     "govuk-colours": "^1.1.0"
   },
   "peerDependencies": {

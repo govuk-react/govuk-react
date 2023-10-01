@@ -1,10 +1,10 @@
 {
   "name": "@govuk-react/pagination",
-  "version": "0.10.5",
+  "version": "0.10.6",
   "dependencies": {
-    "@govuk-react/constants": "^0.10.5",
-    "@govuk-react/icons": "^0.10.5",
-    "@govuk-react/lib": "^0.10.5",
+    "@govuk-react/constants": "^0.10.6",
+    "@govuk-react/icons": "^0.10.6",
+    "@govuk-react/lib": "^0.10.6",
     "govuk-colours": "^1.1.0"
   },
   "peerDependencies": {
