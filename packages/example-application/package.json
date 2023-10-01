@@ -33,7 +33,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@cypress/react": "^8.0.0",
+    "@cypress/react18": "^2.0.0",
     "@cypress/webpack-dev-server": "^3.6.1",
     "cypress": "^13.3.0",
     "cypress-file-upload": "^5.0.8",

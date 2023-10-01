@@ -1673,18 +1673,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cypress/react@npm:^8.0.0":
-  version: 8.0.0
-  resolution: "@cypress/react@npm:8.0.0"
+"@cypress/react18@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@cypress/react18@npm:2.0.0"
   peerDependencies:
-    "@types/react": ^16.9.16 || ^17.0.0
+    "@types/react": ^18
+    "@types/react-dom": ^18
     cypress: "*"
-    react: ^=16.x || ^=17.x
-    react-dom: ^=16.x || ^=17.x
+    react: ^18
+    react-dom: ^18
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 276f7ba66682a61d929084f6f328eb2408a3cac5b8c0056f8d5065b552a293ebbed86e3ed1fd4286bca8aa9cf1613cf29c1741810d15f2db5950587bbbefc25a
+  checksum: b5faf1c98633019dd9301315d996d035a915732bb9e27bf1adb4e63e92af8323a0221b76b1d41519bf1ab5d75a063020102579666290bbae436e3047ad975394
   languageName: node
   linkType: hard
 
@@ -2208,7 +2209,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@govuk-react/example-application@workspace:packages/example-application"
   dependencies:
-    "@cypress/react": ^8.0.0
+    "@cypress/react18": ^2.0.0
     "@cypress/webpack-dev-server": ^3.6.1
     "@rjsf/core": ^3.1.0
     cypress: ^13.3.0
