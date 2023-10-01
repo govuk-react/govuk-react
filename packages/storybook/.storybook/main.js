@@ -1,20 +1,31 @@
+import { dirname, join } from 'path';
 const { webpack: workspaceAliases } = require('workspace-alias');
 
 module.exports = {
   stories: [
-    '../src/stories.mdx',
-    '../src/*.stories.mdx',
+    '../src/welcome.mdx',
+    '../src/*.mdx',
     '../../../packages/example-application/src/**/?(*.)stories.[jt]s?(x)',
     '../../../components/*/src/**/?(*.)stories.[jt]s?(x)',
     '../../../packages/icons/src/**/?(*.)stories.[jt]s?(x)',
   ],
-  addons: ['@storybook/addon-actions', '@storybook/addon-docs', '@storybook/addon-controls'],
+
+  addons: ['@storybook/addon-essentials'],
+
   webpackFinal: async (config) => {
     config.resolve.alias = workspaceAliases();
     return config;
   },
-  reactOptions: {
-    fastRefresh: true,
-    strictMode: true,
+
+  framework: {
+    name: '@storybook/react-webpack5',
+
+    options: {
+      fastRefresh: true,
+      strictMode: true,
+    },
+  },
+  docs: {
+    autodocs: true,
   },
 };
