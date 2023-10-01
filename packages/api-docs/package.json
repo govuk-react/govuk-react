@@ -7,7 +7,7 @@
     "chalk": "^4.1.1",
     "commander": "^2.15.0",
     "glob": "^7.1.2",
-    "glob-promise": "^4.1.0",
+    "glob-promise": "^6.0.5",
     "govuk-react": "^0.10.5",
     "lodash": "^4.17.5",
     "react": "^18.2.0",
