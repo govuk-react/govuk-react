@@ -2471,7 +2471,7 @@ __metadata:
     "@govuk-react/constants": ^0.10.6
     "@govuk-react/icons": ^0.10.6
     govuk-colours: ^1.1.0
-    hex-rgb: ^4.0.0
+    hex-rgb: ^5.0.0
     react-transition-group: ^4.4.5
   peerDependencies:
     react: ">=16.8.0"
@@ -12115,10 +12115,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hex-rgb@npm:^4.0.0":
-  version: 4.3.0
-  resolution: "hex-rgb@npm:4.3.0"
-  checksum: e654648db8647446f0111c68690d9b340eb192a93c8b2c6789a2b8deb5c20e757515ae209c5ae67074acfddf8575f9fc645d4ffaa0596d859457b08e180d791d
+"hex-rgb@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "hex-rgb@npm:5.0.0"
+  checksum: a88e3aaae5311f98716fb41a4e5efbc8d823de5c5d40f9ea77d111de96f3fb087d809021f85d40a98048a4827cd30945413bf1a5001ae7c23727ac628d666d26
   languageName: node
   linkType: hard
 
