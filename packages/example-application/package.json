@@ -3,7 +3,7 @@
   "version": "0.10.6",
   "dependencies": {
     "@rjsf/core": "^3.1.0",
-    "final-form": "^4.20.7",
+    "final-form": "^4.20.10",
     "formik": "^2.2.9",
     "govuk-react": "^0.10.6",
     "react-final-form": "^6.5.9",

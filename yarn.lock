@@ -2201,7 +2201,7 @@ __metadata:
     "@rjsf/core": ^3.1.0
     cypress: ^13.3.0
     cypress-file-upload: ^5.0.8
-    final-form: ^4.20.7
+    final-form: ^4.20.10
     formik: ^2.2.9
     govuk-react: ^0.10.6
     html-webpack-plugin: ^5.5.0
@@ -2557,7 +2557,7 @@ __metadata:
     eslint-plugin-prettier: ^4.2.1
     eslint-plugin-react: ^7.29.4
     eslint-plugin-react-hooks: ^4.2.0
-    final-form: ^4.20.7
+    final-form: ^4.20.10
     govuk-colours: ^1.1.0
     istanbul-merge: ^1.1.1
     jest: ^26.6.3
@@ -2832,7 +2832,7 @@ __metadata:
     babel-loader: ^9.1.3
     babel-plugin-styled-components: ^2.0.7
     eslint-plugin-storybook: ^0.6.14
-    final-form: ^4.12.0
+    final-form: ^4.20.10
     formik: ^2.2.9
     govuk-colours: ^1.1.0
     normalize.css: ^8.0.0
@@ -10866,12 +10866,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"final-form@npm:^4.12.0, final-form@npm:^4.20.7":
-  version: 4.20.7
-  resolution: "final-form@npm:4.20.7"
+"final-form@npm:^4.20.10":
+  version: 4.20.10
+  resolution: "final-form@npm:4.20.10"
   dependencies:
     "@babel/runtime": ^7.10.0
-  checksum: 0e2a9a9cf70814e1099da38e8a79ff6dc2862f07217dae041ba70c5a4bcc8284c74b0500f00b4935331f5fbe7dc119f63ca4776495ecc8c486c939daa23598ec
+  checksum: 92491998d7e284ce47453a54ea94e949aa5852d9307fe8875da9107d2eb966542cbca6f73bd306407eddfbd8d5c8d40cbd6d198358439b5cc4b8c8caea6d8e7b
   languageName: node
   linkType: hard
 
