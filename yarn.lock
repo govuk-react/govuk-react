@@ -2543,7 +2543,7 @@ __metadata:
     eslint-plugin-flowtype: ^5.10.0
     eslint-plugin-import: ^2.28.1
     eslint-plugin-jsx-a11y: ^6.7.1
-    eslint-plugin-no-only-tests: ^2.6.0
+    eslint-plugin-no-only-tests: ^3.1.0
     eslint-plugin-prettier: ^4.2.1
     eslint-plugin-react: ^7.29.4
     eslint-plugin-react-hooks: ^4.2.0
@@ -10359,10 +10359,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-no-only-tests@npm:^2.6.0":
-  version: 2.6.0
-  resolution: "eslint-plugin-no-only-tests@npm:2.6.0"
-  checksum: 4e3c9cc7e09c13e855fd7af4a8969128f766dcf32a0680715ebcaa903c7fe44db8e45e994c8b908443a6019cbd9ea1b51f413bf968a0c58214aded930a863df9
+"eslint-plugin-no-only-tests@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "eslint-plugin-no-only-tests@npm:3.1.0"
+  checksum: 2a5de82f3a732dbd46792661dd0f8546cf819f76d8828968166dee35741e8039904ba473dafe1eed585f401a496d260c2c38354bb887c94bd4ced0ddca00fb62
   languageName: node
   linkType: hard
 
