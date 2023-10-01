@@ -38,7 +38,7 @@ export function responsive({
   adjustment?: number;
 }): { [key: string]: string } {
   const scale = SPACING_MAP[Math.abs(Number(size))];
-  const polarity = size < 0 ? -1 : 1;
+  const polarity = Number(size) < 0 ? -1 : 1;
 
   if (scale === undefined) {
     throw Error(`Unknown responsive spacing size ${size} - expected a point from the responsive spacing scale.`);

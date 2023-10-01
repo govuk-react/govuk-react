@@ -18,6 +18,20 @@ import {
 
 import Results from './components/results';
 
+type FormValues = {
+  firstName: string;
+  description: string;
+  nationality: string[];
+  dob: {
+    year?: string | number;
+    month?: string | number;
+    day?: string | number;
+  };
+  animal: string;
+  hasMultiplePets: string;
+  petPhoto?: FileList;
+  petPhotoString?: string;
+};
 interface FieldProps<T, I> extends Omit<FFFieldProps<T, FieldRenderProps<T, HTMLElement>>, 'component'> {
   component: React.ComponentType<{
     name?: string;
@@ -57,9 +71,9 @@ const FileUpload: React.FC<
 const FinalForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
-  const [submittedData, setSubmittedData] = useState();
+  const [submittedData, setSubmittedData] = useState<FormValues | undefined>();
   const handleFormSubmit = useCallback(
-    (values) => {
+    (values: FormValues) => {
       if (isSubmitting) return;
       setIsSubmitting(true);
       setTimeout(() => {
@@ -75,7 +89,7 @@ const FinalForm: React.FC = () => {
   return (
     <>
       {!hasSubmitted && (
-        <Form
+        <Form<FormValues>
           onSubmit={handleFormSubmit}
           initialValues={{ dob: { day: '', month: '', year: '' } }}
           render={({ handleSubmit: handleSubmitInner, errors, touched, form }) => {

@@ -17,6 +17,21 @@ import {
 } from './validators/validators';
 import Results from './components/results';
 
+type FormValues = {
+  firstName: string;
+  description: string;
+  nationality: string[];
+  dob: {
+    year?: string | number;
+    month?: string | number;
+    day?: string | number;
+  };
+  animal: string;
+  hasMultiplePets: string;
+  petPhoto?: FileList;
+  petPhotoString?: string;
+};
+
 const DateField = ({ input: { onChange, onBlur, ...input }, children, ...props }) => {
   const [value, setValue] = useState(input.value);
   return (
@@ -41,15 +56,15 @@ const ReactHookForm: React.FC = () => {
     register,
     handleSubmit,
     formState: { errors, submitCount },
-  } = useForm({
+  } = useForm<FormValues>({
     reValidateMode: 'onSubmit',
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
-  const [submittedData, setSubmittedData] = useState();
+  const [submittedData, setSubmittedData] = useState<FormValues>();
   const handleFormSubmit = useCallback(
-    (values) => {
+    (values: FormValues) => {
       if (isSubmitting) return;
       setIsSubmitting(true);
       setTimeout(() => {

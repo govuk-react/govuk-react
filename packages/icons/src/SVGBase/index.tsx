@@ -8,6 +8,7 @@ export interface SVGProps extends SVGPropsBase<SVGSVGElement> {
   width?: string;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const StyledSvg = styled('svg')<any>({
   display: 'block',
 });
