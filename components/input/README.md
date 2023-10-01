@@ -37,7 +37,7 @@ Prop | Required | Default | Type | Description
  `aria-expanded` |  |  | boolean \| "true" \| "false" | Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.
  `aria-flowto` |  |  | string | Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,<br/>allows assistive technology to override the general default of reading in document source order.
  `aria-grabbed` |  |  | boolean \| "true" \| "false" | Indicates an element's "grabbed" state in a drag-and-drop operation.<br/>@deprecated in ARIA 1.1
- `aria-haspopup` |  |  | boolean \| "dialog" \| "menu" \| "true" \| "false" \| "grid" \| "listbox" \| "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
+ `aria-haspopup` |  |  | boolean \| "dialog" \| "menu" \| "listbox" \| "true" \| "false" \| "grid" \| "tree" | Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
  `aria-hidden` |  |  | boolean \| "true" \| "false" | Indicates whether the element is exposed to an accessibility API.<br/>@see aria-disabled.
  `aria-invalid` |  |  | boolean \| "true" \| "false" \| "grammar" \| "spelling" | Indicates the entered value does not conform to the format expected by the application.<br/>@see aria-errormessage.
  `aria-keyshortcuts` |  |  | string | Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
@@ -77,7 +77,7 @@ Prop | Required | Default | Type | Description
  `checked` |  |  | boolean | 
  `className` |  |  | string | 
  `color` |  |  | string | 
- `contentEditable` |  |  | Booleanish \| "inherit" | 
+ `contentEditable` |  |  | "inherit" \| Booleanish | 
  `contextMenu` |  |  | string | 
  `crossOrigin` |  |  | string | 
  `dangerouslySetInnerHTML` |  |  | { __html: string; } | 
@@ -100,7 +100,7 @@ Prop | Required | Default | Type | Description
  `hidden` |  |  | boolean | 
  `id` |  |  | string | 
  `inlist` |  |  | any | 
- `inputMode` |  |  | "text" \| "search" \| "email" \| "tel" \| "url" \| "none" \| "numeric" \| "decimal" | Hints at the type of data that might be entered by the user while editing the element or its contents<br/>@see https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute
+ `inputMode` |  |  | "text" \| "none" \| "search" \| "email" \| "tel" \| "url" \| "numeric" \| "decimal" | Hints at the type of data that might be entered by the user while editing the element or its contents<br/>@see https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute
  `is` |  |  | string | Specify that a standard HTML element should behave like a defined custom built-in element<br/>@see https://html.spec.whatwg.org/multipage/custom-elements.html#attr-is
  `itemID` |  |  | string | 
  `itemProp` |  |  | string | 
