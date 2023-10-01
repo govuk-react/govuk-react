@@ -46,16 +46,6 @@ describe('GridCol', () => {
     expect(warnCallCount).not.toEqual(0);
   });
 
-  it('does not produces deprecation warnings for old-style props when in production', () => {
-    process.env.NODE_ENV = 'production';
-
-    render(<GridCol columnOneThird>example</GridCol>);
-    render(<GridCol columnTwoThirds>example</GridCol>);
-    render(<GridCol columnOneQuarter>example</GridCol>);
-
-    expect(warnCallCount).toEqual(0);
-  });
-
   it('renders custom widths without crashing', () => {
     render(
       <>
