@@ -2548,7 +2548,7 @@ __metadata:
     "@types/styled-components": ^5.1.14
     "@typescript-eslint/eslint-plugin": ^6.7.3
     "@typescript-eslint/parser": ^6.7.3
-    "@wojtekmaj/enzyme-adapter-react-17": ^0.6.7
+    "@wojtekmaj/enzyme-adapter-react-17": ^0.8.0
     babel-eslint: ^10.1.0
     babel-jest: ^27.0.2
     babel-plugin-add-module-exports: ^1.0.4
@@ -6623,11 +6623,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wojtekmaj/enzyme-adapter-react-17@npm:^0.6.7":
-  version: 0.6.7
-  resolution: "@wojtekmaj/enzyme-adapter-react-17@npm:0.6.7"
+"@wojtekmaj/enzyme-adapter-react-17@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "@wojtekmaj/enzyme-adapter-react-17@npm:0.8.0"
   dependencies:
-    "@wojtekmaj/enzyme-adapter-utils": ^0.1.4
+    "@wojtekmaj/enzyme-adapter-utils": ^0.2.0
     enzyme-shallow-equal: ^1.0.0
     has: ^1.0.0
     prop-types: ^15.7.0
@@ -6637,13 +6637,13 @@ __metadata:
     enzyme: ^3.0.0
     react: ^17.0.0-0
     react-dom: ^17.0.0-0
-  checksum: 5cd4c01adf0d778c5ef749964ae971422f0d445be11f9585de6a077edc32ea7ca74f14c240cf5f0848a8147596d84ed133820c91fc98d33f02b9dc6eee3fd158
+  checksum: aa9674f06f6db269b72168ebf46c4513938993479eb60bac30cb6183b5aca6108ade3d08af4f56c142cb219415480d0c4b454ba9452b85c32f711c806b39cd8c
   languageName: node
   linkType: hard
 
-"@wojtekmaj/enzyme-adapter-utils@npm:^0.1.4":
-  version: 0.1.4
-  resolution: "@wojtekmaj/enzyme-adapter-utils@npm:0.1.4"
+"@wojtekmaj/enzyme-adapter-utils@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@wojtekmaj/enzyme-adapter-utils@npm:0.2.0"
   dependencies:
     function.prototype.name: ^1.1.0
     has: ^1.0.0
@@ -6651,7 +6651,7 @@ __metadata:
     prop-types: ^15.7.0
   peerDependencies:
     react: ^17.0.0-0
-  checksum: af567b15a734ee5eb224e70cb77f42c1761ec0a0997663fdf10209988ea2dc09d5729ddfbeab9980c5e2358809004cd05187031b8c9a6f499aa59a82dea466d8
+  checksum: 837741f1382acdb02ce304745eccfdcff03f1cae2a4fb833056a7a753308cd1182b0b32a10a04be6bfedaaab8f4acd5b458bfe0b9ebaa6119c4aaaba74a14ae4
   languageName: node
   linkType: hard
 
