@@ -287,6 +287,7 @@ Prop | Required | Default | Type | Description
  `role` |  |  | AriaRole | 
  `security` |  |  | string | 
  `size` |  |  | number | 
+ `sizeVariant` |  | ```MEDIUM``` | "MEDIUM" \| "SMALL" | 
  `slot` |  |  | string | 
  `spellCheck` |  |  | Booleanish | 
  `src` |  |  | string | 

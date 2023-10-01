@@ -18,9 +18,9 @@ Prop | Required | Default | Type | Description
  `bgColor` |  | ```undefined``` | string | Top nav background color
  `children` |  | ```undefined``` | any | List Navigation items with anchor tags e.g. NavAnchor components
  `color` |  | ```undefined``` | string | Top nav text color
- `company` |  | ```<IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</IconTitle>``` | any | Company component e.g. GOV UK
+ `company` |  | ```<IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</IconTitle>``` | React.ReactNode | Company component e.g. GOV UK
  `defaultOpen` |  | ```undefined``` | boolean | Is the mobile navigation open by default?
- `search` |  | ```undefined``` | any | Search component
- `serviceTitle` |  | ```undefined``` | any | Service title component e.g. Food Standards Authority
+ `search` |  | ```undefined``` | React.ReactNode | Search component
+ `serviceTitle` |  | ```undefined``` | React.ReactNode | Service title component e.g. Food Standards Authority
 
 

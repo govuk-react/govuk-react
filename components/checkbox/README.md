@@ -287,6 +287,7 @@ Prop | Required | Default | Type | Description
  `role` |  |  | AriaRole | 
  `security` |  |  | string | 
  `size` |  |  | number | 
+ `sizeVariant` |  | ```MEDIUM``` | "MEDIUM" \| "SMALL" | Size of checkbox
  `slot` |  |  | string | 
  `spellCheck` |  |  | Booleanish | 
  `src` |  |  | string | 

@@ -76,7 +76,7 @@ Prop | Required | Default | Type | Description
  `aria-valuemin` |  |  | number | Defines the minimum allowed value for a range widget.
  `aria-valuenow` |  |  | number | Defines the current value for a range widget.<br/>@see aria-valuetext.
  `aria-valuetext` |  |  | string | Defines the human readable text alternative of aria-valuenow for a range widget.
- `astPlugins` |  |  | PluggableList<Settings> | 
+ `astPlugins` |  |  | PluggableList | 
  `autoCapitalize` |  |  | string | 
  `autoCorrect` |  |  | string | 
  `autoSave` |  |  | string | 
@@ -271,12 +271,12 @@ Prop | Required | Default | Type | Description
  `onWheelCapture` |  |  | WheelEventHandler<HTMLDivElement> | 
  `padding` |  |  | Padding \| Padding[] | 
  `placeholder` |  |  | string | 
- `plugins` |  |  | PluggableList<Settings> | 
+ `plugins` |  |  | PluggableList | 
  `prefix` |  |  | string | 
  `property` |  |  | string | 
  `radioGroup` |  |  | string | 
  `rawSourcePos` |  |  | boolean | 
- `renderers` |  |  | { [nodeType: string]: ElementType<any>; } | 
+ `renderers` |  |  | { [nodeType: string]: ElementType; } | 
  `resource` |  |  | string | 
  `results` |  |  | number | 
  `role` |  |  | AriaRole | 

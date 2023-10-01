@@ -19,7 +19,7 @@ Prop | Required | Default | Type | Description
  `accessKey` |  |  | string | 
  `aria-activedescendant` |  |  | string | Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.
  `aria-atomic` |  |  | boolean \| "true" \| "false" | Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.
- `aria-autocomplete` |  |  | "list" \| "none" \| "inline" \| "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
+ `aria-autocomplete` |  |  | "none" \| "list" \| "inline" \| "both" | Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be<br/>presented if they are made.
  `aria-busy` |  |  | boolean \| "true" \| "false" | Indicates an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
  `aria-checked` |  |  | boolean \| "true" \| "false" \| "mixed" | Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.<br/>@see aria-pressed<br/>@see aria-selected.
  `aria-colcount` |  |  | number | Defines the total number of columns in a table, grid, or treegrid.<br/>@see aria-colindex.
@@ -71,7 +71,7 @@ Prop | Required | Default | Type | Description
  `children` |  |  | ReactNode | Breadcrumbs contents
  `className` |  |  | string | 
  `color` |  |  | string | 
- `contentEditable` |  |  | Booleanish \| "inherit" | 
+ `contentEditable` |  |  | "inherit" \| Booleanish | 
  `contextMenu` |  |  | string | 
  `dangerouslySetInnerHTML` |  |  | { __html: string; } | 
  `datatype` |  |  | string | 
@@ -82,7 +82,7 @@ Prop | Required | Default | Type | Description
  `hidden` |  |  | boolean | 
  `id` |  |  | string | 
  `inlist` |  |  | any | 
- `inputMode` |  |  | "text" \| "search" \| "none" \| "tel" \| "url" \| "email" \| "numeric" \| "decimal" | Hints at the type of data that might be entered by the user while editing the element or its contents<br/>@see https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute
+ `inputMode` |  |  | "text" \| "none" \| "search" \| "tel" \| "url" \| "email" \| "numeric" \| "decimal" | Hints at the type of data that might be entered by the user while editing the element or its contents<br/>@see https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute
  `is` |  |  | string | Specify that a standard HTML element should behave like a defined custom built-in element<br/>@see https://html.spec.whatwg.org/multipage/custom-elements.html#attr-is
  `itemID` |  |  | string | 
  `itemProp` |  |  | string | 
