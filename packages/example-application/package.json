@@ -18,8 +18,8 @@
     "react-is": ">=16.8.0"
   },
   "scripts": {
-    "test:cypress": "cypress run-ct",
-    "cypress": "cypress open-ct",
+    "test:cypress": "cypress run --component",
+    "cypress": "cypress open --component",
     "version": "yarn version"
   },
   "main": "dist/govuk-react-example-application.cjs.js",
@@ -33,11 +33,12 @@
     "access": "public"
   },
   "devDependencies": {
-    "@cypress/react": "^5.12.4",
-    "@cypress/webpack-dev-server": "^1.8.4",
-    "cypress": "^12.9.0",
+    "@cypress/react": "^8.0.0",
+    "@cypress/webpack-dev-server": "^3.6.1",
+    "cypress": "^13.3.0",
     "cypress-file-upload": "^5.0.8",
     "html-webpack-plugin": "^5.5.0",
+    "ts-loader": "^9.4.4",
     "webpack": "^5.76.0",
     "webpack-dev-server": "^4.13.3",
     "workspace-alias": "^0.1.0"
