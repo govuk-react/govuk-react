@@ -76,7 +76,7 @@
     "chalk": "^4.1.1",
     "codacy-coverage": "^3.0.0",
     "concat": "^1.0.3",
-    "core-js": "^3.0.1",
+    "core-js": "^3.33.0",
     "cross-env": "^7.0.3",
     "enzyme": "^3.7.0",
     "enzyme-to-json": "^3.3.4",
