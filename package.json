@@ -68,7 +68,7 @@
     "@typescript-eslint/parser": "^6.7.3",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^27.0.2",
+    "babel-jest": "^29.7.0",
     "babel-plugin-add-module-exports": "^1.0.4",
     "babel-plugin-styled-components": "^2.0.7",
     "bundlesize2": "^0.0.31",
