@@ -6,6 +6,19 @@ updates:
     open-pull-requests-limit: 20 # while we have chromatic usage issues
     schedule:
       interval: daily
+    groups:
+      storybook:
+        patterns:
+          - "@storybook/*"
+      babel:
+        patterns:
+          - "@babel/*"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "react-is"
+
   - package-ecosystem: github-actions
     directory: '/'
     rebase-strategy: 'disabled' # while we have chromatic usage issues
