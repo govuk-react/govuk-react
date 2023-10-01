@@ -4,11 +4,7 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
-import { configure } from 'enzyme';
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import 'jest-styled-components';
-
-configure({ adapter: new Adapter() });
 
 if (!window.matchMedia) {
   // jsdom doesn't include support for matchmedia, so we'll add that here
