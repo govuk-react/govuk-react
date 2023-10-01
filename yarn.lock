@@ -2194,7 +2194,7 @@ __metadata:
     final-form: ^4.20.10
     formik: ^2.4.5
     govuk-react: ^0.10.6
-    html-webpack-plugin: ^5.5.0
+    html-webpack-plugin: ^5.5.3
     react-final-form: ^6.5.9
     react-hook-form: ^7.46.2
     react-router: ^6.3.0
@@ -12298,7 +12298,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"html-webpack-plugin-5@npm:html-webpack-plugin@^5":
+"html-webpack-plugin-5@npm:html-webpack-plugin@^5, html-webpack-plugin@npm:^5.5.3":
   version: 5.5.3
   resolution: "html-webpack-plugin@npm:5.5.3"
   dependencies:

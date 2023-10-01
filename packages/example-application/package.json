@@ -37,7 +37,7 @@
     "@cypress/webpack-dev-server": "^3.6.1",
     "cypress": "^13.3.0",
     "cypress-file-upload": "^5.0.8",
-    "html-webpack-plugin": "^5.5.0",
+    "html-webpack-plugin": "^5.5.3",
     "ts-loader": "^9.4.4",
     "webpack": "^5.76.0",
     "webpack-dev-server": "^4.15.1",
