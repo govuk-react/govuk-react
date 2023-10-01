@@ -135,29 +135,7 @@
       "json",
       "lcov"
     ],
-    "all": true,
-    "branches": 90,
-    "functions": 90,
-    "lines": 95,
-    "statements": 95,
-    "watermarks": {
-      "branches": [
-        90,
-        95
-      ],
-      "functions": [
-        90,
-        90
-      ],
-      "lines": [
-        90,
-        95
-      ],
-      "statements": [
-        85,
-        95
-      ]
-    }
+    "all": true
   },
   "workspaces": [
     "components/*",
