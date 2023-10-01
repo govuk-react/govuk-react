@@ -55,10 +55,8 @@ const StyledHeading = styled('h1')<StyledHeadingOwnProps>(
  */
 export const Heading: HeadingType = ({ level, size, ...props }: HeadingOwnProps & WithWhiteSpaceProps) => {
   if (level) {
-    if (process.env.NODE_ENV !== 'production') {
-      // eslint-disable-next-line no-console
-      console.warn(`deprecated prop 'level' used in Heading, please replace with an "H${level}" component`);
-    }
+    // eslint-disable-next-line no-console
+    console.warn(`deprecated prop 'level' used in Heading, please replace with an "H${level}" component`);
     if (LEVEL_TAG[level]) {
       return <StyledHeading size={LEVEL_SIZE[level]} {...props} as={LEVEL_TAG[level]} />;
     }

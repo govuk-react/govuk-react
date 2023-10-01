@@ -59,14 +59,12 @@ export const GridCol = styled('div')<GridColProps>(
 
       Object.entries(props).forEach(([key, value]) => {
         if (colValues[key] && value === true) {
-          if (process.env.NODE_ENV !== 'production') {
-            const newKey = key
-              .replace('column', '')
-              .replace(/^([A-Z][a-z]+)([A-Z])/, '$1-$2')
-              .toLocaleLowerCase();
-            // eslint-disable-next-line no-console
-            console.warn(`deprecated prop ${key} used in GridCol, please replace with setWidth="${newKey}"`);
-          }
+          const newKey = key
+            .replace('column', '')
+            .replace(/^([A-Z][a-z]+)([A-Z])/, '$1-$2')
+            .toLocaleLowerCase();
+          // eslint-disable-next-line no-console
+          console.warn(`deprecated prop ${key} used in GridCol, please replace with setWidth="${newKey}"`);
           widthValue = colValues[key];
         }
       });

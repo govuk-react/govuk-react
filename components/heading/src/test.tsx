@@ -80,14 +80,4 @@ describe('Heading', () => {
     // so rather than checking for 3 warnings here we're just checking it's not zero
     expect(warnCallCount).not.toEqual(0);
   });
-
-  it('does not produces deprecation warnings if level prop is used when in production', () => {
-    process.env.NODE_ENV = 'production';
-
-    render(<Heading level="1">example</Heading>);
-    render(<Heading level="3">example</Heading>);
-    render(<Heading level="7">example</Heading>);
-
-    expect(warnCallCount).toEqual(0);
-  });
 });
