@@ -2,7 +2,7 @@
   "name": "@govuk-react/api-docs",
   "version": "0.10.5",
   "dependencies": {
-    "@babel/node": "7.14.2",
+    "@babel/node": "7.22.19",
     "@babel/runtime": "7.23.1",
     "chalk": "^4.1.1",
     "commander": "^2.15.0",

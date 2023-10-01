@@ -381,24 +381,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/node@npm:7.14.2":
-  version: 7.14.2
-  resolution: "@babel/node@npm:7.14.2"
-  dependencies:
-    "@babel/register": ^7.13.16
-    commander: ^4.0.1
-    core-js: ^3.2.1
-    node-environment-flags: ^1.0.5
-    regenerator-runtime: ^0.13.4
-    v8flags: ^3.1.1
-  peerDependencies:
-    "@babel/core": ^7.0.0-0
-  bin:
-    babel-node: ./bin/babel-node.js
-  checksum: d13dde5f2afbbf7b98d520630cd8e479e53c49ac28c8267632e09e514b73e4bc34620bb20fe28d35d2c495bedd4378da96e9058cf15c44e09436c5772ad42a45
-  languageName: node
-  linkType: hard
-
 "@babel/node@npm:7.22.19":
   version: 7.22.19
   resolution: "@babel/node@npm:7.22.19"
@@ -2034,7 +2016,7 @@ __metadata:
   dependencies:
     "@babel/cli": 7.23.0
     "@babel/core": 7.23.0
-    "@babel/node": 7.14.2
+    "@babel/node": 7.22.19
     "@babel/runtime": 7.23.1
     chalk: ^4.1.1
     commander: ^2.15.0
@@ -8764,7 +8746,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.0.1, core-js@npm:^3.2.1, core-js@npm:^3.30.2":
+"core-js@npm:^3.0.1, core-js@npm:^3.30.2":
   version: 3.32.2
   resolution: "core-js@npm:3.32.2"
   checksum: d6fac7e8eb054eefc211c76cd0a0ff07447a917122757d085f469f046ec888d122409c7db1a9601c3eb5fa767608ed380bcd219eace02bdf973da155680edeec
