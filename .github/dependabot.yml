@@ -3,12 +3,12 @@ updates:
   - package-ecosystem: npm
     directory: '/'
     rebase-strategy: 'disabled' # while we have chromatic usage issues
-    open-pull-requests-limit: 10 # while we have chromatic usage issues
+    open-pull-requests-limit: 20 # while we have chromatic usage issues
     schedule:
-      interval: monthly # while we have chromatic usage issues
+      interval: daily
   - package-ecosystem: github-actions
     directory: '/'
     rebase-strategy: 'disabled' # while we have chromatic usage issues
-    open-pull-requests-limit: 10 # while we have chromatic usage issues
+    open-pull-requests-limit: 20 # while we have chromatic usage issues
     schedule:
       interval: daily
