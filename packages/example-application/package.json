@@ -4,7 +4,7 @@
   "dependencies": {
     "@rjsf/core": "^3.1.0",
     "final-form": "^4.20.10",
-    "formik": "^2.2.9",
+    "formik": "^2.4.5",
     "govuk-react": "^0.10.6",
     "react-final-form": "^6.5.9",
     "react-hook-form": "^7.46.2",
