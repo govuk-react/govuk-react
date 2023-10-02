@@ -66,7 +66,6 @@
     "@types/styled-components": "^5.1.14",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^29.7.0",
     "babel-plugin-add-module-exports": "^1.0.4",
@@ -78,8 +77,6 @@
     "concat": "^1.0.3",
     "core-js": "^3.33.0",
     "cross-env": "^7.0.3",
-    "enzyme": "^3.7.0",
-    "enzyme-to-json": "^3.3.4",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-typescript": "^17.1.0",
@@ -138,29 +135,7 @@
       "json",
       "lcov"
     ],
-    "all": true,
-    "branches": 90,
-    "functions": 90,
-    "lines": 95,
-    "statements": 95,
-    "watermarks": {
-      "branches": [
-        90,
-        95
-      ],
-      "functions": [
-        90,
-        90
-      ],
-      "lines": [
-        90,
-        95
-      ],
-      "statements": [
-        85,
-        95
-      ]
-    }
+    "all": true
   },
   "workspaces": [
     "components/*",

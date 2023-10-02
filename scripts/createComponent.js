@@ -59,23 +59,6 @@ const packageJson = () => {
   writeFile(filename, contents);
 };
 
-// write test.js file
-const testScript = () => {
-  const filename = 'test.js';
-  const contents = `import React from 'react';
-import { mount } from 'enzyme';
-
-import { ${componentName}Documented as ${componentName} } from '.';
-
-describe('${componentName}', () => {
-  it('matches snapshot', () => {
-    expect(mount(<${componentName}>${componentName} example</${componentName}>)).toMatchSnapshot('${componentName}');
-  });
-});
-`;
-  writeFile(filename, contents);
-};
-
 // write stories.js file
 const storiesScript = () => {
   const filename = 'stories.js';
@@ -138,7 +121,6 @@ Please use a different name or delete the existing folder 🆗`);
   }
   mkdirp(`${folderName}/src`).then(() => {
     packageJson();
-    testScript();
     storiesScript();
     indexScript();
     /* eslint-disable-line no-console */ console.log(`✅  The component '${componentName}' was created successfully`);

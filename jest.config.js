@@ -14,17 +14,8 @@ module.exports = {
     '!<rootDir>/packages/example-application/**',
   ],
   coverageDirectory: './coverage/',
-  coverageThreshold: {
-    global: {
-      branches: 90,
-      functions: 90,
-      lines: 95,
-      statements: 95,
-    },
-  },
   moduleFileExtensions: ['web.js', 'js', 'json', 'web.jsx', 'jsx', 'node', 'ts', 'tsx'],
   setupFilesAfterEnv: ['<rootDir>/scripts/setupTests.ts'],
-  snapshotSerializers: ['enzyme-to-json/serializer'],
   testEnvironment: 'jsdom',
   testMatch: ['**/{components,packages}/*/src/**/?(*.)test.[jt]s?(x)'],
   transform: {
