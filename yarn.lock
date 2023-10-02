@@ -5,7 +5,7 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@adobe/css-tools@npm:^4.3.0":
+"@adobe/css-tools@npm:^4.0.1, @adobe/css-tools@npm:^4.3.0":
   version: 4.3.1
   resolution: "@adobe/css-tools@npm:4.3.1"
   checksum: ad43456379ff391132aff687ece190cb23ea69395e23c9b96690eeabe2468da89a4aaf266e4f8b6eaab53db3d1064107ce0f63c3a974e864f4a04affc768da3f
@@ -2548,7 +2548,7 @@ __metadata:
     govuk-colours: ^1.1.0
     istanbul-merge: ^1.1.1
     jest: ^26.6.3
-    jest-styled-components: ^7.0.4
+    jest-styled-components: ^7.1.1
     jest-transform-stub: ^2.0.0
     mkdirp-promise: ^5.0.1
     nyc: ^15.1.0
@@ -8855,17 +8855,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "css@npm:3.0.0"
-  dependencies:
-    inherits: ^2.0.4
-    source-map: ^0.6.1
-    source-map-resolve: ^0.6.0
-  checksum: 4273ac816ddf99b99acb9c1d1a27d86d266a533cc01118369d941d8e8a78277a83cad3315e267a398c509d930fbb86504e193ea1ebc620a4a4212e06fe76e8be
-  languageName: node
-  linkType: hard
-
 "cssesc@npm:^3.0.0":
   version: 3.0.0
   resolution: "cssesc@npm:3.0.0"
@@ -13883,14 +13872,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-styled-components@npm:^7.0.4":
-  version: 7.0.5
-  resolution: "jest-styled-components@npm:7.0.5"
+"jest-styled-components@npm:^7.1.1":
+  version: 7.1.1
+  resolution: "jest-styled-components@npm:7.1.1"
   dependencies:
-    css: ^3.0.0
+    "@adobe/css-tools": ^4.0.1
   peerDependencies:
     styled-components: ">= 5"
-  checksum: fef9f261dd59d6d095c1bc43da5ba5faaf87ca73dff20ff10e38f70201c35c60f6347836581c087bab6a8b26de29adc4cd657fdf2a28cf98609b2452a7368549
+  checksum: 1376d1211855c459e59e6b030af7294519cd2dd78169a2cb0df185ff4390fff417ab51be3dd520f1e975d2f391f50ff266e803c168ff9f03f3ff7ebbb823d2d7
   languageName: node
   linkType: hard
 
@@ -18470,16 +18459,6 @@ resolve@^2.0.0-next.3:
     source-map-url: ^0.4.0
     urix: ^0.1.0
   checksum: c73fa44ac00783f025f6ad9e038ab1a2e007cd6a6b86f47fe717c3d0765b4a08d264f6966f3bd7cd9dbcd69e4832783d5472e43247775b2a550d6f2155d24bae
-  languageName: node
-  linkType: hard
-
-"source-map-resolve@npm:^0.6.0":
-  version: 0.6.0
-  resolution: "source-map-resolve@npm:0.6.0"
-  dependencies:
-    atob: ^2.1.2
-    decode-uri-component: ^0.2.0
-  checksum: fe503b9e5dac1c54be835282fcfec10879434e7b3ee08a9774f230299c724a8d403484d9531276d1670c87390e0e4d1d3f92b14cca6e4a2445ea3016b786ecd4
   languageName: node
   linkType: hard
 
