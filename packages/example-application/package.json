@@ -7,7 +7,7 @@
     "formik": "^2.4.5",
     "govuk-react": "^0.10.6",
     "react-final-form": "^6.5.9",
-    "react-hook-form": "^7.46.2",
+    "react-hook-form": "^7.47.0",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
     "styled-components": "^5.3.0"
