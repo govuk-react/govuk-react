@@ -108,7 +108,7 @@
     "sinon": "^16.1.0",
     "styled-components": "^5.3.0",
     "typescript": "^5.2.2",
-    "webpack": "^5.76.0",
+    "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "workspace-alias": "^0.1.0"
   },

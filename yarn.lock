@@ -2201,7 +2201,7 @@ __metadata:
     react-router-dom: ^6.3.0
     styled-components: ^5.3.0
     ts-loader: ^9.5.0
-    webpack: ^5.76.0
+    webpack: ^5.89.0
     webpack-dev-server: ^4.15.1
     workspace-alias: ^0.1.0
   peerDependencies:
@@ -2563,7 +2563,7 @@ __metadata:
     sinon: ^16.1.0
     styled-components: ^5.3.0
     typescript: ^5.2.2
-    webpack: ^5.76.0
+    webpack: ^5.89.0
     webpack-cli: ^5.1.4
     workspace-alias: ^0.1.0
   peerDependencies:
@@ -2831,7 +2831,7 @@ __metadata:
     react-router-dom: ^6.3.0
     storybook: 7.4.6
     styled-components: ^5.3.0
-    webpack: ^5.76.0
+    webpack: ^5.89.0
     workspace-alias: ^0.1.0
   languageName: unknown
   linkType: soft
@@ -20285,7 +20285,7 @@ typescript@^5.2.2:
   languageName: node
   linkType: hard
 
-"webpack@npm:5, webpack@npm:^5.76.0":
+"webpack@npm:5":
   version: 5.88.2
   resolution: "webpack@npm:5.88.2"
   dependencies:
@@ -20319,6 +20319,43 @@ typescript@^5.2.2:
   bin:
     webpack: bin/webpack.js
   checksum: 79476a782da31a21f6dd38fbbd06b68da93baf6a62f0d08ca99222367f3b8668f5a1f2086b7bb78e23172e31fa6df6fa7ab09b25e827866c4fc4dc2b30443ce2
+  languageName: node
+  linkType: hard
+
+"webpack@npm:^5.89.0":
+  version: 5.89.0
+  resolution: "webpack@npm:5.89.0"
+  dependencies:
+    "@types/eslint-scope": ^3.7.3
+    "@types/estree": ^1.0.0
+    "@webassemblyjs/ast": ^1.11.5
+    "@webassemblyjs/wasm-edit": ^1.11.5
+    "@webassemblyjs/wasm-parser": ^1.11.5
+    acorn: ^8.7.1
+    acorn-import-assertions: ^1.9.0
+    browserslist: ^4.14.5
+    chrome-trace-event: ^1.0.2
+    enhanced-resolve: ^5.15.0
+    es-module-lexer: ^1.2.1
+    eslint-scope: 5.1.1
+    events: ^3.2.0
+    glob-to-regexp: ^0.4.1
+    graceful-fs: ^4.2.9
+    json-parse-even-better-errors: ^2.3.1
+    loader-runner: ^4.2.0
+    mime-types: ^2.1.27
+    neo-async: ^2.6.2
+    schema-utils: ^3.2.0
+    tapable: ^2.1.1
+    terser-webpack-plugin: ^5.3.7
+    watchpack: ^2.4.0
+    webpack-sources: ^3.2.3
+  peerDependenciesMeta:
+    webpack-cli:
+      optional: true
+  bin:
+    webpack: bin/webpack.js
+  checksum: 43fe0dbc30e168a685ef5a86759d5016a705f6563b39a240aa00826a80637d4a3deeb8062e709d6a4b05c63e796278244c84b04174704dc4a37bedb0f565c5ed
   languageName: node
   linkType: hard
 
