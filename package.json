@@ -105,7 +105,7 @@
     "react-is": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "rimraf": "^5.0.5",
-    "sinon": "^16.1.0",
+    "sinon": "^16.1.1",
     "styled-components": "^5.3.0",
     "typescript": "^5.2.2",
     "webpack": "^5.89.0",
