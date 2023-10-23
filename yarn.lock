@@ -2042,7 +2042,7 @@ __metadata:
     "@babel/core": 7.23.0
     "@babel/node": 7.22.19
     "@babel/runtime": 7.23.1
-    chalk: ^4.1.1
+    chalk: ^5.3.0
     commander: ^11.1.0
     cross-env: ^7.0.3
     glob: ^7.1.2
@@ -2560,7 +2560,7 @@ __metadata:
     babel-plugin-styled-components: ^2.1.4
     bundlesize2: ^0.0.31
     can-npm-publish: 1.3.6
-    chalk: ^4.1.1
+    chalk: ^5.3.0
     codacy-coverage: ^3.0.0
     concat: ^1.0.3
     core-js: ^3.33.1
@@ -8132,13 +8132,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0, chalk@npm:^4.0.2, chalk@npm:^4.1.0, chalk@npm:^4.1.1, chalk@npm:^4.1.2":
+"chalk@npm:^4.0.0, chalk@npm:^4.0.2, chalk@npm:^4.1.0, chalk@npm:^4.1.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
     ansi-styles: ^4.1.0
     supports-color: ^7.1.0
   checksum: fe75c9d5c76a7a98d45495b91b2172fa3b7a09e0cc9370e5c8feb1c567b85c4288e2b3fded7cfdd7359ac28d6b3844feb8b82b8686842e93d23c827c417e83fc
+  languageName: node
+  linkType: hard
+
+"chalk@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "chalk@npm:5.3.0"
+  checksum: 623922e077b7d1e9dedaea6f8b9e9352921f8ae3afe739132e0e00c275971bdd331268183b2628cf4ab1727c45ea1f28d7e24ac23ce1db1eb653c414ca8a5a80
   languageName: node
   linkType: hard
 
