@@ -35,7 +35,7 @@
   "devDependencies": {
     "@cypress/react18": "^2.0.0",
     "@cypress/webpack-dev-server": "^3.6.1",
-    "cypress": "^13.3.2",
+    "cypress": "^13.3.3",
     "cypress-file-upload": "^5.0.8",
     "html-webpack-plugin": "^5.5.3",
     "ts-loader": "^9.5.0",
