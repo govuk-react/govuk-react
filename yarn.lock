@@ -2045,7 +2045,7 @@ __metadata:
     chalk: ^4.1.1
     commander: ^11.1.0
     cross-env: ^7.0.3
-    glob: ^7.1.2
+    glob: ^10.3.10
     glob-promise: ^6.0.5
     govuk-react: ^0.10.6
     lodash: ^4.17.5
@@ -11606,7 +11606,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^10.0.0, glob@npm:^10.3.7":
+"glob@npm:^10.0.0, glob@npm:^10.3.10, glob@npm:^10.3.7":
   version: 10.3.10
   resolution: "glob@npm:10.3.10"
   dependencies:
