@@ -106,7 +106,7 @@
     "react-router-dom": "^6.3.0",
     "rimraf": "^5.0.5",
     "sinon": "^17.0.0",
-    "styled-components": "^5.3.0",
+    "styled-components": "^6.1.0",
     "typescript": "^5.2.2",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
