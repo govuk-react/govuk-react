@@ -2230,7 +2230,7 @@ __metadata:
     govuk-react: ^0.10.6
     html-webpack-plugin: ^5.5.3
     react-final-form: ^6.5.9
-    react-hook-form: ^7.47.0
+    react-hook-form: ^7.48.2
     react-router: ^6.3.0
     react-router-dom: ^6.3.0
     styled-components: ^5.3.0
@@ -2860,7 +2860,7 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     react-final-form: ^6.5.9
-    react-hook-form: ^7.47.0
+    react-hook-form: ^7.48.2
     react-is: ^18.2.0
     react-router-dom: ^6.3.0
     storybook: 7.5.3
@@ -17037,12 +17037,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hook-form@npm:^7.47.0":
-  version: 7.47.0
-  resolution: "react-hook-form@npm:7.47.0"
+"react-hook-form@npm:^7.48.2":
+  version: 7.48.2
+  resolution: "react-hook-form@npm:7.48.2"
   peerDependencies:
     react: ^16.8.0 || ^17 || ^18
-  checksum: dec192fec9c54e436f9e47008635dd7849b6b119ed477a9b0cd491367a0b2ced3427cd937febfb245e1cb7578c863917181d903eff4519c2787bf713ec7d3426
+  checksum: 39652d08f78f16e5234049ceeb794d8bcd4d146772aca99c6db8c5aea8926cd4a230d02098886a441074deefbc24ffcb5ed57bc7cb0009d950115f5b3e627f12
   languageName: node
   linkType: hard
 
