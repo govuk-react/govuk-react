@@ -2232,7 +2232,7 @@ __metadata:
     "@cypress/react18": ^2.0.0
     "@cypress/webpack-dev-server": ^3.7.0
     "@rjsf/core": ^3.1.0
-    cypress: ^13.3.2
+    cypress: ^13.5.0
     cypress-file-upload: ^5.0.8
     final-form: ^4.20.10
     formik: ^2.4.5
@@ -8940,9 +8940,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:^13.3.2":
-  version: 13.3.2
-  resolution: "cypress@npm:13.3.2"
+"cypress@npm:^13.5.0":
+  version: 13.5.0
+  resolution: "cypress@npm:13.5.0"
   dependencies:
     "@cypress/request": ^3.0.0
     "@cypress/xvfb": ^1.2.4
@@ -8989,7 +8989,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: eee7c06136dcf23c400e1042380b67a568d403677fccd835fa7f47868c382624aae272e1cb2b161d3216e2c5ab73e740e243d0f2c76721600d0270dbe50d2560
+  checksum: e8692e94a9c43aa954bfdf9b96556edc5aeb20e91a303263488d8f515a1095c9dd4585205e797e081da0e3e61709e28416a9cf7cfe9bdee68eea656823a9d107
   languageName: node
   linkType: hard
 
