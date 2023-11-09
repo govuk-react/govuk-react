@@ -46,7 +46,7 @@
     "@babel/node": "7.22.19",
     "@babel/plugin-transform-runtime": "7.22.15",
     "@babel/preset-env": "7.22.20",
-    "@babel/preset-react": "7.22.15",
+    "@babel/preset-react": "7.23.3",
     "@babel/preset-typescript": "7.23.0",
     "@govuk-react/api-docs": "0.10.6",
     "@preconstruct/cli": "^2.8.1",
