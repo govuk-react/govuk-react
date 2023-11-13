@@ -47,7 +47,7 @@
     "@govuk-react/unordered-list": "^0.10.6",
     "@govuk-react/visually-hidden": "^0.10.6",
     "@govuk-react/warning-text": "^0.10.6",
-    "@rjsf/core": "^3.1.0",
+    "@rjsf/core": "^5.13.6",
     "@storybook/addon-actions": "7.5.3",
     "@storybook/addon-controls": "7.5.3",
     "@storybook/addon-docs": "7.5.3",
