@@ -2279,7 +2279,7 @@ __metadata:
     html-webpack-plugin: ^5.5.3
     react-final-form: ^6.5.9
     react-hook-form: ^7.48.2
-    react-router: ^6.3.0
+    react-router: ^6.18.0
     react-router-dom: ^6.3.0
     styled-components: ^5.3.0
     ts-loader: ^9.5.0
@@ -4142,6 +4142,13 @@ __metadata:
   dependencies:
     "@babel/runtime": ^7.13.10
   checksum: aeec13b234a946052512d05239067d2d63422f9ec70bf2fe7acfd6b9196693fc33fbaf43c2667c167f777d90a095c6604eb487e0bce79e230b6df0f6cacd6a55
+  languageName: node
+  linkType: hard
+
+"@remix-run/router@npm:1.11.0":
+  version: 1.11.0
+  resolution: "@remix-run/router@npm:1.11.0"
+  checksum: 1966436ab3ab982862195e4871790644ce21e01511aa3f4350436296224e4dec2e6ee35f1f4cb83db69f7aa0e8ad4a0a01928b05359ae654edc8e2aa82bf754b
   languageName: node
   linkType: hard
 
@@ -17162,7 +17169,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router@npm:6.3.0, react-router@npm:^6.3.0":
+"react-router@npm:6.3.0":
   version: 6.3.0
   resolution: "react-router@npm:6.3.0"
   dependencies:
@@ -17170,6 +17177,17 @@ __metadata:
   peerDependencies:
     react: ">=16.8"
   checksum: 7be673f5e72104be01e6ab274516bdb932efd93305243170690f6560e3bd1035dd1df3d3c9ce1e0f452638a2529f43a1e77dcf0934fc8031c4783da657be13ca
+  languageName: node
+  linkType: hard
+
+"react-router@npm:^6.18.0":
+  version: 6.18.0
+  resolution: "react-router@npm:6.18.0"
+  dependencies:
+    "@remix-run/router": 1.11.0
+  peerDependencies:
+    react: ">=16.8"
+  checksum: 03e9a23c5b75d8813720745e2952bb9e62ec310d238cde4f19e0ce73582701fa5e04cf609ff9ced978e9e6c531b5e333b9aee35371e6c4743afc2829e32e926a
   languageName: node
   linkType: hard
 
