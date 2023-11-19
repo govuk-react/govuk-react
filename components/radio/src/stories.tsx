@@ -156,7 +156,14 @@ interface RadioGroupProps {
   }[];
 }
 
-const RadioGroup: React.FC<RadioGroupProps> = ({ label, hint, options, inline, input, meta }: RadioGroupProps) => (
+const RadioGroup: React.FC<RadioGroupProps> = ({
+  label,
+  hint,
+  options = [],
+  inline = false,
+  input,
+  meta = {},
+}: RadioGroupProps) => (
   <MultiChoice label={label} hint={hint} meta={meta}>
     {options.map((o) => (
       <div key={o.value}>
@@ -167,15 +174,6 @@ const RadioGroup: React.FC<RadioGroupProps> = ({ label, hint, options, inline, i
     ))}
   </MultiChoice>
 );
-
-RadioGroup.defaultProps = {
-  input: undefined,
-  meta: {},
-  hint: undefined,
-  inline: false,
-  options: [],
-  label: undefined,
-};
 
 export const UsageWithFinalReduxFormMultiCheckboxValidation: Story = (args) => (
   <FinalFormWrapper>

@@ -53,7 +53,7 @@ export const Tag = styled('strong')<TagProps>(
     backgroundColor: TAG_TINTS[tint].background,
     color: TAG_TINTS[tint].text,
   }),
-  ({ inactive }) =>
+  ({ inactive = false }) =>
     inactive
       ? {
           backgroundColor: TAG_TINTS.GREY.background,
@@ -81,11 +81,6 @@ export interface TagProps {
    */
   color?: string;
 }
-
-Tag.defaultProps = {
-  inactive: false,
-  tint: 'SOLID',
-};
 
 Tag.displayName = 'Tag';
 

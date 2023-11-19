@@ -66,15 +66,12 @@ const StyledHyperLink = styled('a')<TabOwnProps>(
   })
 );
 
-const Tab: TabType = (props) => (
+// eslint-disable-next-line react/prop-types
+const Tab: TabType = ({ selected = false, ...props }) => (
   <StyledListItem>
-    <StyledHyperLink {...props} />
+    <StyledHyperLink selected={selected} {...props} />
   </StyledListItem>
 );
-
-Tab.defaultProps = {
-  selected: false,
-};
 
 interface TabType extends React.FC<TabOwnProps> {
   (props: TabPropsWithoutAs): React.ReactElement<TabPropsWithoutAs>;

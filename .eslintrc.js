@@ -60,6 +60,7 @@ module.exports = {
         'filenames/match-exported': 0,
         'react/static-property-placement': ['error', 'static public field'],
         'jsx-a11y/label-has-associated-control': 0,
+        'react/require-default-props': 0,
       },
     },
     {

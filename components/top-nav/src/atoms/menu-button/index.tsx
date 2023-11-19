@@ -34,7 +34,11 @@ const ButtonIcon = styled('div')<{ open: boolean }>(({ open }) => ({
   borderBottomColor: 'inherit',
 }));
 
-const MenuButton: React.FC<MenuButtonProps> = ({ title, open, onClick }: MenuButtonProps) => (
+const MenuButton: React.FC<MenuButtonProps> = ({
+  title = 'Menu',
+  open = false,
+  onClick = () => null,
+}: MenuButtonProps) => (
   <Button onClick={onClick} htmlFor="govuk-react-menu-button">
     <ButtonText>{title}</ButtonText>
     <ButtonIcon open={open} />
@@ -46,11 +50,5 @@ interface MenuButtonProps {
   open?: boolean;
   onClick?: MouseEventHandler<HTMLLabelElement>;
 }
-
-MenuButton.defaultProps = {
-  title: 'Menu',
-  open: false,
-  onClick: () => null,
-};
 
 export default MenuButton;

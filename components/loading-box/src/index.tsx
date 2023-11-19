@@ -127,13 +127,13 @@ const Overlay = styled('div')({
  */
 export const LoadingBox: React.FC<LoadingBoxProps> = ({
   children,
-  backgroundColor,
-  backgroundColorOpacity,
+  backgroundColor = WHITE,
+  backgroundColorOpacity = 0.85,
   title,
-  loading,
-  spinnerColor,
-  timeIn,
-  timeOut,
+  loading = false,
+  spinnerColor = BLACK,
+  timeIn = 800,
+  timeOut = 200,
   ...props
 }: LoadingBoxProps) => {
   const nodeRef = React.useRef(null);
@@ -154,16 +154,6 @@ export const LoadingBox: React.FC<LoadingBoxProps> = ({
       {children}
     </StyledContainer>
   );
-};
-
-LoadingBox.defaultProps = {
-  spinnerColor: BLACK,
-  backgroundColor: WHITE,
-  backgroundColorOpacity: 0.85,
-  title: undefined,
-  loading: false,
-  timeIn: 800,
-  timeOut: 200,
 };
 
 LoadingBox.displayName = 'LoadingBox';

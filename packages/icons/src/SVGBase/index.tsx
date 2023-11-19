@@ -13,17 +13,11 @@ const StyledSvg = styled('svg')<any>({
   display: 'block',
 });
 
-const SVG: React.FC<SVGProps> = ({ children, title, ...rest }: SVGProps) => (
-  <StyledSvg version="1.1" height="100%" {...rest}>
+const SVG: React.FC<SVGProps> = ({ children, title, fill = 'currentColor', width = '100%', ...rest }: SVGProps) => (
+  <StyledSvg version="1.1" height="100%" fill={fill} width={width} {...rest}>
     <title>{title}</title>
     {children}
   </StyledSvg>
 );
-SVG.defaultProps = {
-  children: undefined,
-  title: undefined,
-  fill: 'currentColor',
-  width: '100%',
-};
 
 export default SVG;

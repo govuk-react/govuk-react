@@ -20,13 +20,13 @@ import WidthContainer from './atoms/width-container';
  * - https://design-system.service.gov.uk/styles/layout/#page-wrappers
  */
 export const Page: PageType = ({
-  header,
+  header = <TopNav />,
   footer,
   children,
-  id,
+  id = 'content',
   beforeChildren,
-  main: MainComponent,
-  container: Container,
+  main: MainComponent = Page.Main,
+  container: Container = Page.WidthContainer,
 }: PageProps) => (
   <>
     <SkipLink href={`#${id}`} />
@@ -78,16 +78,6 @@ export interface PageProps {
 
 Page.Main = Main;
 Page.WidthContainer = WidthContainer;
-
-Page.defaultProps = {
-  children: undefined,
-  id: 'content',
-  header: <TopNav />,
-  footer: undefined,
-  main: Page.Main,
-  beforeChildren: undefined,
-  container: Page.WidthContainer,
-};
 
 Page.displayName = 'Page';
 

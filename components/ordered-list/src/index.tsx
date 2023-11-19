@@ -67,10 +67,6 @@ export const OrderedList = styled('ol')<OrderedListProps>(
   }
 );
 
-OrderedList.defaultProps = {
-  listStyleType: undefined,
-};
-
 OrderedList.displayName = 'OrderedList';
 
 // Export un-wrapped styled component

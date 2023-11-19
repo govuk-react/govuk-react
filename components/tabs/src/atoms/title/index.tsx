@@ -9,8 +9,4 @@ const TabsTitle = styled('h2')(typography.font({ size: 19 }), {
   },
 });
 
-TabsTitle.defaultProps = {
-  children: 'Contents',
-};
-
 export default TabsTitle;
