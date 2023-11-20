@@ -33,9 +33,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/cli@npm:7.23.0":
-  version: 7.23.0
-  resolution: "@babel/cli@npm:7.23.0"
+"@babel/cli@npm:7.23.4":
+  version: 7.23.4
+  resolution: "@babel/cli@npm:7.23.4"
   dependencies:
     "@jridgewell/trace-mapping": ^0.3.17
     "@nicolo-ribaudo/chokidar-2": 2.1.8-no-fsevents.3
@@ -56,7 +56,7 @@ __metadata:
   bin:
     babel: ./bin/babel.js
     babel-external-helpers: ./bin/babel-external-helpers.js
-  checksum: beeb189560bf9c4ea951ef637eefa5214654678fb09c4aaa6695921037059c1e1553c610fe95fbd19a9cdfd9f5598a812fc13df40a6b9a9ea899e43fc6c42052
+  checksum: 5a4f296cdf0b15a8578a860ad42675a358d888e11088c91ee5e510b48598d1dd88d83686d6fe6744c0a9cbcddfd34e79bc75ea425ced8ec9a2531e08c2655279
   languageName: node
   linkType: hard
 
@@ -2086,7 +2086,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@govuk-react/api-docs@workspace:packages/api-docs"
   dependencies:
-    "@babel/cli": 7.23.0
+    "@babel/cli": 7.23.4
     "@babel/core": 7.23.0
     "@babel/node": 7.22.19
     "@babel/runtime": 7.23.1
@@ -2577,7 +2577,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@govuk-react/monorepo@workspace:."
   dependencies:
-    "@babel/cli": 7.23.0
+    "@babel/cli": 7.23.4
     "@babel/core": 7.23.0
     "@babel/node": 7.22.19
     "@babel/plugin-transform-runtime": 7.22.15
