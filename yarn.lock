@@ -1767,9 +1767,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cypress/webpack-dev-server@npm:^3.7.0":
-  version: 3.7.0
-  resolution: "@cypress/webpack-dev-server@npm:3.7.0"
+"@cypress/webpack-dev-server@npm:^3.7.1":
+  version: 3.7.1
+  resolution: "@cypress/webpack-dev-server@npm:3.7.1"
   dependencies:
     find-up: 6.3.0
     fs-extra: 9.1.0
@@ -1781,7 +1781,7 @@ __metadata:
     tslib: ^2.3.1
     webpack-dev-server: ^4.7.4
     webpack-merge: ^5.4.0
-  checksum: b9e75932ab898b9333a6744ba1cf60f5cfdfcffd3a1f1e9a5c3e21f095f3957833157cd21fa1c75e7a7bfea2c59c29d1eeb37a430b7fbb2b2fcd0577f74f5a71
+  checksum: 1230a4c573e7c497d13ef8c9b536a5bec950c47c3437651d4477c4de0cf49b06e6c4cbb7b9adde14f10b082456a4e468054ab93d424fbe61af9f6f46a9ec1eb8
   languageName: node
   linkType: hard
 
@@ -2269,7 +2269,7 @@ __metadata:
   resolution: "@govuk-react/example-application@workspace:packages/example-application"
   dependencies:
     "@cypress/react18": ^2.0.0
-    "@cypress/webpack-dev-server": ^3.7.0
+    "@cypress/webpack-dev-server": ^3.7.1
     "@rjsf/core": ^3.1.0
     cypress: ^13.6.0
     cypress-file-upload: ^5.0.8
