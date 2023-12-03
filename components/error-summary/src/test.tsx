@@ -62,7 +62,6 @@ describe('error summary', () => {
     fireEvent.focus(errorLink);
     await user.type(errorLink, '{Enter}');
 
-    expect(onHandleErrorClick).toHaveBeenCalled();
     expect(onHandleErrorClick).toHaveBeenCalledWith(targetName);
   });
 });
