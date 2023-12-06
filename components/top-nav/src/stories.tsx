@@ -30,6 +30,12 @@ Default.args = {
   ),
 };
 
+export const FullWidthBottomNavBar = Template.bind({});
+FullWidthBottomNavBar.args = {
+  ...Default.args,
+  fullWidthBottomBar: true,
+};
+
 export const CustomLogo = Template.bind({});
 CustomLogo.args = {
   company: (
