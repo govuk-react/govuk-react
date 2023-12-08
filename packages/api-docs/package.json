@@ -3,7 +3,7 @@
   "version": "0.10.6",
   "dependencies": {
     "@babel/node": "7.22.19",
-    "@babel/runtime": "7.23.1",
+    "@babel/runtime": "7.23.5",
     "chalk": "^4.1.1",
     "commander": "^11.1.0",
     "glob": "^7.1.2",
@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@babel/cli": "7.23.4",
-    "@babel/core": "7.23.0",
+    "@babel/core": "7.23.5",
     "cross-env": "^7.0.3",
     "rimraf": "^5.0.5"
   },
