@@ -2687,7 +2687,7 @@ __metadata:
     "@testing-library/jest-dom": ^6.1.5
     "@testing-library/react": ^14.1.2
     "@testing-library/user-event": ^14.5.1
-    "@types/react": ^16.14.16
+    "@types/react": ^18.2.43
     "@types/react-router-dom": 5
     "@types/styled-components": ^5.1.14
     "@typescript-eslint/eslint-plugin": ^6.13.2
@@ -6191,14 +6191,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:16.14.16":
-  version: 16.14.16
-  resolution: "@types/react@npm:16.14.16"
+"@types/react@npm:18.2.43":
+  version: 18.2.43
+  resolution: "@types/react@npm:18.2.43"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 877eec91483d00256a0b783e823bc2cf0683ddbbe221d12795528a23267ef0cbabb968e76b74ea6e1d0cc5112263fc166c0ebe508fff43001caaa900f8b4722d
+  checksum: e7e4da18c7b14e4b8b1ea630d1d8224835698f2bb2485766455bfb9dea93b8ee6cc549a9fe1cb10c984e62685db44fcfb61e8fac913b008cd30a92087f25b9df
   languageName: node
   linkType: hard
 
