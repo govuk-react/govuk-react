@@ -2701,7 +2701,7 @@ __metadata:
     chalk: ^4.1.1
     codacy-coverage: ^3.0.0
     concat: ^1.0.3
-    core-js: ^3.34.0
+    core-js: ^3.35.0
     cross-env: ^7.0.3
     eslint: ^7.32.0
     eslint-config-airbnb: ^18.2.1
@@ -8874,10 +8874,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.34.0":
-  version: 3.34.0
-  resolution: "core-js@npm:3.34.0"
-  checksum: 26b0d103716b33fc660ee8737da7bc9475fbc655f93bbf1360ab692966449d18f2fc393805095937283db9f919ca2aa5c88d86d16f2846217983ad7da707e31e
+"core-js@npm:^3.35.0":
+  version: 3.35.0
+  resolution: "core-js@npm:3.35.0"
+  checksum: 25c224aca3df012b98f08f13ccbd8171ef5852acd33fd5e58e106d27f5f0c97de2fdbc520f0b4364d26253caf2deb3e5d265310f57d2a66ae6cc922850e649f0
   languageName: node
   linkType: hard
 
