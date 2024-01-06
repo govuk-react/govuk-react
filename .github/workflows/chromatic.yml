@@ -21,7 +21,7 @@ jobs:
         id: nvm
 
       - name: Use Node.js
-        uses: actions/setup-node@v4.0.0
+        uses: actions/setup-node@v4.0.1
         with:
           node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
@@ -30,7 +30,7 @@ jobs:
         working-directory: packages/storybook
 
       - name: Publish to Chromatic
-        uses: chromaui/action@v1
+        uses: chromaui/action@v10
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: d767f97cc408
