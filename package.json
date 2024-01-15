@@ -49,7 +49,7 @@
     "@babel/preset-react": "7.23.3",
     "@babel/preset-typescript": "7.23.0",
     "@govuk-react/api-docs": "0.10.6",
-    "@preconstruct/cli": "^2.8.2",
+    "@preconstruct/cli": "^2.8.3",
     "@storybook/addon-actions": "7.6.8",
     "@storybook/addon-controls": "7.6.8",
     "@storybook/addon-docs": "7.6.8",
