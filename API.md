@@ -7971,6 +7971,7 @@ Prop | Required | Default | Type | Description
  `color` |  | ```undefined``` | string | Top nav text color
  `company` |  | ```<IconTitle icon={<CrownIcon width="36" height="32" />}>GOV.UK</IconTitle>``` | React.ReactNode | Company component e.g. GOV UK
  `defaultOpen` |  | ```undefined``` | boolean | Is the mobile navigation open by default?
+ `fullWidthBottomBar` |  | ```undefined``` | boolean | Is the bottom nav element full width?
  `search` |  | ```undefined``` | React.ReactNode | Search component
  `serviceTitle` |  | ```undefined``` | React.ReactNode | Service title component e.g. Food Standards Authority
 
