@@ -2684,7 +2684,7 @@ __metadata:
     "@storybook/addons": 7.6.10
     "@storybook/react": 7.6.10
     "@testing-library/dom": ^9.3.4
-    "@testing-library/jest-dom": ^6.3.0
+    "@testing-library/jest-dom": ^6.4.0
     "@testing-library/react": ^14.1.2
     "@testing-library/user-event": ^14.5.2
     "@types/react": ^16.14.16
@@ -5631,9 +5631,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:^6.3.0":
-  version: 6.3.0
-  resolution: "@testing-library/jest-dom@npm:6.3.0"
+"@testing-library/jest-dom@npm:^6.4.0":
+  version: 6.4.0
+  resolution: "@testing-library/jest-dom@npm:6.4.0"
   dependencies:
     "@adobe/css-tools": ^4.3.2
     "@babel/runtime": ^7.9.2
@@ -5660,7 +5660,7 @@ __metadata:
       optional: true
     vitest:
       optional: true
-  checksum: cea8aa17895cf4aff573fedee80e8a592611caf7bc724702fc70b3b7bfee94becd3a10873c818d931424018d6fdeeca9d1a2ea5f53b74092ad5e8e09f03dde90
+  checksum: e1c314cf1c74f26b1dea632fd1e2168afb62ef8b0320e294fa0dbfa58356021dcefe453d6165c102c5105dfca7502b18109cbcb061cbcb91b97826f59a1bbf9d
   languageName: node
   linkType: hard
 
