@@ -2233,7 +2233,7 @@ __metadata:
     "@govuk-react/icons": ^0.10.6
     "@govuk-react/lib": ^0.10.6
     govuk-colours: ^1.1.0
-    polished: ^4.1.2
+    polished: ^4.3.1
   peerDependencies:
     react: ">=16.8.0"
     styled-components: ">=5.1"
@@ -2301,7 +2301,7 @@ __metadata:
     "@govuk-react/constants": ^0.10.6
     "@govuk-react/lib": ^0.10.6
     govuk-colours: ^1.1.0
-    polished: ^4.1.2
+    polished: ^4.3.1
   peerDependencies:
     react: ">=15"
     styled-components: ">=5.1"
@@ -2807,7 +2807,7 @@ __metadata:
     "@govuk-react/constants": ^0.10.6
     "@govuk-react/lib": ^0.10.6
     govuk-colours: ^1.1.0
-    polished: ^4.1.2
+    polished: ^4.3.1
   peerDependencies:
     react: ">=16.8.0"
     styled-components: ">=5.1"
@@ -16654,12 +16654,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"polished@npm:^4.1.2, polished@npm:^4.2.2":
+"polished@npm:^4.2.2":
   version: 4.2.2
   resolution: "polished@npm:4.2.2"
   dependencies:
     "@babel/runtime": ^7.17.8
   checksum: 97fb927dc55cd34aeb11b31ae2a3332463f114351c86e8aa6580d7755864a0120164fdc3770e6160c8b1775052f0eda14db9a6e34402cd4b08ab2d658a593725
+  languageName: node
+  linkType: hard
+
+"polished@npm:^4.3.1":
+  version: 4.3.1
+  resolution: "polished@npm:4.3.1"
+  dependencies:
+    "@babel/runtime": ^7.17.8
+  checksum: a6f863c23f1d2f3f5cda3427b5885c9fb9e83b036d681e24820b143c7df40d2685bebb01c0939767120a28e1183671ae17c93db82ac30b3c20942180bb153bc7
   languageName: node
   linkType: hard
 
