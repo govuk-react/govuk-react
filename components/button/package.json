@@ -6,7 +6,7 @@
     "@govuk-react/icons": "^0.10.6",
     "@govuk-react/lib": "^0.10.6",
     "govuk-colours": "^1.1.0",
-    "polished": "^4.1.2"
+    "polished": "^4.3.1"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
