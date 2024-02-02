@@ -39,7 +39,7 @@
     "cypress-file-upload": "^5.0.8",
     "html-webpack-plugin": "^5.6.0",
     "ts-loader": "^9.5.1",
-    "webpack": "^5.90.0",
+    "webpack": "^5.90.1",
     "webpack-dev-server": "^4.15.1",
     "workspace-alias": "^0.1.0"
   }
