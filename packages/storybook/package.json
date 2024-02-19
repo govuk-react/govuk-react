@@ -79,7 +79,7 @@
     "babel-plugin-styled-components": "^2.1.4",
     "eslint-plugin-storybook": "^0.8.0",
     "storybook": "7.5.3",
-    "webpack": "^5.90.2",
+    "webpack": "^5.90.3",
     "workspace-alias": "^0.1.0"
   },
   "scripts": {
