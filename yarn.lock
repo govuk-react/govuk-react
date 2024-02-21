@@ -2361,7 +2361,7 @@ __metadata:
     "@cypress/react18": ^2.0.0
     "@cypress/webpack-dev-server": ^3.7.4
     "@rjsf/core": ^3.1.0
-    cypress: ^13.6.4
+    cypress: ^13.6.5
     cypress-file-upload: ^5.0.8
     final-form: ^4.20.10
     formik: ^2.4.5
@@ -8090,7 +8090,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"buffer@npm:^5.5.0, buffer@npm:^5.6.0":
+"buffer@npm:^5.5.0, buffer@npm:^5.7.1":
   version: 5.7.1
   resolution: "buffer@npm:5.7.1"
   dependencies:
@@ -8460,7 +8460,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ci-info@npm:^3.1.1, ci-info@npm:^3.2.0":
+"ci-info@npm:^3.2.0":
   version: 3.8.0
   resolution: "ci-info@npm:3.8.0"
   checksum: d0a4d3160497cae54294974a7246202244fff031b0a6ea20dd57b10ec510aa17399c41a1b0982142c105f3255aff2173e5c0dd7302ee1b2f28ba3debda375098
@@ -9163,9 +9163,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:^13.6.4":
-  version: 13.6.4
-  resolution: "cypress@npm:13.6.4"
+"cypress@npm:^13.6.5":
+  version: 13.6.5
+  resolution: "cypress@npm:13.6.5"
   dependencies:
     "@cypress/request": ^3.0.0
     "@cypress/xvfb": ^1.2.4
@@ -9174,7 +9174,7 @@ __metadata:
     arch: ^2.2.0
     blob-util: ^2.0.2
     bluebird: ^3.7.2
-    buffer: ^5.6.0
+    buffer: ^5.7.1
     cachedir: ^2.3.0
     chalk: ^4.1.0
     check-more-types: ^2.24.0
@@ -9192,7 +9192,7 @@ __metadata:
     figures: ^3.2.0
     fs-extra: ^9.1.0
     getos: ^3.2.1
-    is-ci: ^3.0.0
+    is-ci: ^3.0.1
     is-installed-globally: ~0.4.0
     lazy-ass: ^1.6.0
     listr2: ^3.8.3
@@ -9211,7 +9211,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: 39daef291ccd18d7d724d7f8c1f5a2ed2b3d24c5c1eab1e00642c5db232fcc4dbd3fd30db3a2dce4e8b737d510355d135eb43034d800198d2867ecde4cdd696a
+  checksum: b0f106d11ceb54ed7c90abfeb5ecd02b9c0fd2d9e8aa9848e60d0f15248e48339a2e3dcd82d3ebe2d86e9af95f4af2810f48f45d97dd8d87189220ab980d56f0
   languageName: node
   linkType: hard
 
@@ -12940,14 +12940,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-ci@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "is-ci@npm:3.0.0"
+"is-ci@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "is-ci@npm:3.0.1"
   dependencies:
-    ci-info: ^3.1.1
+    ci-info: ^3.2.0
   bin:
     is-ci: bin.js
-  checksum: 4b45aef32dd42dcb1f6fb3cd4b3a7ee7e18ea47516d2129005f46c3f36983506bb471382bac890973cf48a2f60d926a24461674ca2d9dc10744d82d4a876c26b
+  checksum: 192c66dc7826d58f803ecae624860dccf1899fc1f3ac5505284c0a5cf5f889046ffeb958fa651e5725d5705c5bcb14f055b79150ea5fcad7456a9569de60260e
   languageName: node
   linkType: hard
 
