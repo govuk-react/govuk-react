@@ -2705,7 +2705,7 @@ __metadata:
     cross-env: ^7.0.3
     eslint: ^7.32.0
     eslint-config-airbnb: ^18.2.1
-    eslint-config-airbnb-typescript: ^17.1.0
+    eslint-config-airbnb-typescript: ^18.0.0
     eslint-config-prettier: ^9.1.0
     eslint-config-react-app: ^6.0.0
     eslint-plugin-cypress: ^2.11.3
@@ -10313,17 +10313,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-airbnb-typescript@npm:^17.1.0":
-  version: 17.1.0
-  resolution: "eslint-config-airbnb-typescript@npm:17.1.0"
+"eslint-config-airbnb-typescript@npm:^18.0.0":
+  version: 18.0.0
+  resolution: "eslint-config-airbnb-typescript@npm:18.0.0"
   dependencies:
     eslint-config-airbnb-base: ^15.0.0
   peerDependencies:
-    "@typescript-eslint/eslint-plugin": ^5.13.0 || ^6.0.0
-    "@typescript-eslint/parser": ^5.0.0 || ^6.0.0
-    eslint: ^7.32.0 || ^8.2.0
-    eslint-plugin-import: ^2.25.3
-  checksum: cfd26a2782e322ebfdfbf9a64262332c7653f297c4a32d7b951079eb18bb9502a83d67b3f7ef2cc1c5374ae06098eb454ed010784b3416e7274839083022a08c
+    "@typescript-eslint/eslint-plugin": ^7.0.0
+    "@typescript-eslint/parser": ^7.0.0
+    eslint: ^8.56.0
+  checksum: 0fc4a79c67f55792bea2ccc7045977f7fdaeeab206c9477e47d6816948e260f8cb8b3cb6d09b385bdd2ae14cdc3aca82a14199d43a8ed75531914c864edbb709
   languageName: node
   linkType: hard
 
