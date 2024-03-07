@@ -6198,11 +6198,11 @@ __metadata:
   linkType: hard
 
 "@types/react-dom@npm:^18, @types/react-dom@npm:^18.0.0":
-  version: 18.2.20
-  resolution: "@types/react-dom@npm:18.2.20"
+  version: 18.2.21
+  resolution: "@types/react-dom@npm:18.2.21"
   dependencies:
     "@types/react": "*"
-  checksum: b4d39740f2fd52b5476143fa2705f4b39db592f815fec71bf27f2bf129bdff97c614a9786c568afaf7869aa60abd94e455b96d5e4218e8f8d80140619c0d4542
+  checksum: 0ff00aedf5ffad90ed226c0ab0acdca609804c81af5dbde0d13a4ae53dac6bd92f85f1adc032c42966ec2e9417d13d18a41767434afa4d8c1979cad57348191b
   languageName: node
   linkType: hard
 
