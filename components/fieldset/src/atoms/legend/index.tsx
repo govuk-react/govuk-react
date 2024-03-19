@@ -53,7 +53,7 @@ const StyledHeading = styled('h1')({
 //   font-weight: inherit;
 // }
 
-const Legend: React.FC<LegendProps> = ({ children, isPageHeading = undefined, ...props }: LegendProps) => (
+const Legend: React.FC<LegendProps> = ({ children, isPageHeading = false, ...props }: LegendProps) => (
   <StyledLegend {...props}>{isPageHeading ? <StyledHeading>{children}</StyledHeading> : children}</StyledLegend>
 );
 
@@ -63,10 +63,6 @@ interface LegendProps extends WithWhiteSpaceProps {
   size?: string | number;
 }
 
-Legend.defaultProps = {
-  isPageHeading: false,
-  size: undefined,
-};
 Legend.displayName = 'Fieldset.Legend';
 
 export default Legend;

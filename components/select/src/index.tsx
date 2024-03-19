@@ -44,7 +44,14 @@ const StyledSelect = styled('select')<{ error?: boolean }>(
  * - https://govuk-react.github.io/govuk-react/?path=/docs/select
  * - https://design-system.service.gov.uk/components/select/
  */
-export const Select: React.FC<SelectProps> = ({ children, hint, label, meta, input, ...props }: SelectProps) => (
+export const Select: React.FC<SelectProps> = ({
+  children,
+  hint,
+  label,
+  meta = {},
+  input = {},
+  ...props
+}: SelectProps) => (
   <Label {...props} error={meta.touched && !!meta.error}>
     <LabelText>{label}</LabelText>
     {hint && <HintText>{hint}</HintText>}
@@ -54,13 +61,6 @@ export const Select: React.FC<SelectProps> = ({ children, hint, label, meta, inp
     </StyledSelect>
   </Label>
 );
-
-Select.defaultProps = {
-  hint: undefined,
-  errorText: undefined,
-  input: {},
-  meta: {},
-};
 
 Select.displayName = 'Select';
 StyledSelect.displayName = 'SelectInput';

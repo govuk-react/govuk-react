@@ -47,8 +47,4 @@ export interface MainProps {
   children?: React.ReactNode;
 }
 
-Main.defaultProps = {
-  children: undefined,
-};
-
 export default Main;

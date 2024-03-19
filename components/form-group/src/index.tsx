@@ -25,7 +25,7 @@ export const FormGroup = styled('div')<FormGroupProps>(
       marginBottom: 0,
     },
   },
-  ({ error }) =>
+  ({ error = false }) =>
     error
       ? {
           paddingLeft: SPACING_POINTS[3],
@@ -42,10 +42,6 @@ export interface FormGroupProps extends WithWhiteSpaceProps {
   children?: React.ReactNode;
   error?: boolean;
 }
-
-FormGroup.defaultProps = {
-  error: false,
-};
 
 FormGroup.displayName = 'FormGroup';
 

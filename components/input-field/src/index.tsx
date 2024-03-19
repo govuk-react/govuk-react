@@ -21,7 +21,13 @@ import Input from '@govuk-react/input';
  * - https://design-system.service.gov.uk/components/text-input/
  *
  */
-export const InputField: React.FC<InputFieldProps> = ({ meta, children, hint, input, ...props }: InputFieldProps) => (
+export const InputField: React.FC<InputFieldProps> = ({
+  meta = {},
+  children,
+  hint,
+  input = {},
+  ...props
+}: InputFieldProps) => (
   <Label {...props} error={meta.touched && !!meta.error}>
     <LabelText>{children}</LabelText>
     {hint && <HintText>{hint}</HintText>}
@@ -29,12 +35,6 @@ export const InputField: React.FC<InputFieldProps> = ({ meta, children, hint, in
     <Input error={meta.touched && !!meta.error} {...input} />
   </Label>
 );
-
-InputField.defaultProps = {
-  hint: undefined,
-  input: {},
-  meta: {},
-};
 
 InputField.displayName = 'InputField';
 

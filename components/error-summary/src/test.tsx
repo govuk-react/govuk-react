@@ -12,7 +12,7 @@ describe('error summary', () => {
   });
 
   it('renders a default heading if one is not given', () => {
-    const { heading } = ErrorSummary.defaultProps;
+    const heading = 'There is a problem';
     const { getByText } = render(<ErrorSummary />);
 
     expect(heading).toBeDefined();

@@ -114,13 +114,6 @@ export const ErrorSummary: React.FC<ErrorSummaryProps> = ({
   </StyledErrorSummary>
 );
 
-ErrorSummary.defaultProps = {
-  description: undefined,
-  errors: [],
-  heading: 'There is a problem',
-  onHandleErrorClick: undefined,
-};
-
 ErrorSummary.displayName = 'ErrorSummary';
 
 export default ErrorSummary;

@@ -63,7 +63,9 @@ const StyledParagraph = styled(ReactMarkdown)<ParagraphProps>(
  * - https://design-system.service.gov.uk/styles/typography/
  */
 export const Paragraph: React.FC<ParagraphProps & ReactMarkdownProps> = ({
-  children,
+  children = '',
+  supportingText = false,
+  linkRenderer = (props) => <Link {...props} />,
   ...props
 }: ParagraphProps & ReactMarkdownProps) => (
   <StyledParagraph
@@ -71,7 +73,8 @@ export const Paragraph: React.FC<ParagraphProps & ReactMarkdownProps> = ({
     escapeHtml={false}
     skipHtml
     allowedTypes={['paragraph', 'emphasis', 'strong', 'link', 'inlineCode', 'code', 'text']}
-    renderers={{ link: props.linkRenderer }}
+    renderers={{ link: linkRenderer }}
+    supportingText={supportingText}
     {...props}
   />
 );
@@ -87,12 +90,6 @@ export interface ParagraphProps extends WithWhiteSpaceProps, React.HTMLAttribute
   supportingText?: boolean;
   linkRenderer?: React.ElementType;
 }
-
-Paragraph.defaultProps = {
-  children: '',
-  supportingText: false,
-  linkRenderer: (props) => <Link {...props} />,
-};
 
 Paragraph.displayName = 'Paragraph';
 

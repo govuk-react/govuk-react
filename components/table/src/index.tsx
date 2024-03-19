@@ -40,13 +40,6 @@ export const Table: TableType = ({ caption, children, body = children, head, ...
   </StyledTable>
 );
 
-Table.defaultProps = {
-  body: undefined,
-  caption: undefined,
-  children: undefined,
-  head: undefined,
-};
-
 Table.displayName = 'Table';
 
 export interface TableType extends React.FC<TableProps> {

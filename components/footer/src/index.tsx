@@ -110,12 +110,4 @@ Footer.NavigationLinks = NavigationLinks;
 Footer.WidthContainer = WidthContainer;
 Footer.Licence = Licence;
 
-Footer.defaultProps = {
-  children: undefined,
-  container: Footer.WidthContainer,
-  copyright: undefined,
-  meta: undefined,
-  licence: <Licence />,
-};
-
 export default Footer;

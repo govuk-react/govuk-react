@@ -47,17 +47,11 @@ export const Input = styled('input')<InputProps>(
       MozAppearance: 'textfield',
     },
   },
-  ({ error, errorColor }) => ({
+  ({ error = false, errorColor }) => ({
     border: error ? `${BORDER_WIDTH_FORM_ELEMENT_ERROR} solid ${errorColor || ERROR_COLOUR}` : undefined,
   }),
   spacing.withWhiteSpace({ marginBottom: 0 })
 );
-
-Input.defaultProps = {
-  type: 'text',
-  error: false,
-  errorColor: undefined,
-};
 
 Input.displayName = 'Input';
 

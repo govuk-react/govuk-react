@@ -31,16 +31,10 @@ export const Link = styled('a').withConfig<LinkProps>({
   ...link.common(),
   link.styleDefault,
   link.printFriendly,
-  ({ muted }) => (muted ? link.styleMuted : undefined),
-  ({ textColour }) => (textColour ? link.styleText : undefined),
-  ({ noVisitedState }) => (noVisitedState ? link.styleNoVisitedState : undefined)
+  ({ muted = false }) => (muted ? link.styleMuted : undefined),
+  ({ textColour = false }) => (textColour ? link.styleText : undefined),
+  ({ noVisitedState = false }) => (noVisitedState ? link.styleNoVisitedState : undefined)
 );
-
-Link.defaultProps = {
-  muted: false,
-  textColour: false,
-  noVisitedState: false,
-};
 
 Link.displayName = 'Link';
 

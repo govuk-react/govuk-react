@@ -142,10 +142,4 @@ interface PaginationAnchorProps {
   pageTitle?: string;
 }
 
-PaginationAnchor.defaultProps = {
-  previousPage: undefined,
-  nextPage: undefined,
-  pageTitle: undefined,
-};
-
 export default PaginationAnchor;

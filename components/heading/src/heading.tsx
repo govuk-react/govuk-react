@@ -53,7 +53,7 @@ const StyledHeading = styled('h1')<StyledHeadingOwnProps>(
  * - https://govuk-react.github.io/govuk-react/?path=/docs/heading
  * - https://design-system.service.gov.uk/styles/typography/#headings
  */
-export const Heading: HeadingType = ({ level, size, ...props }: HeadingOwnProps & WithWhiteSpaceProps) => {
+export const Heading: HeadingType = ({ level, size = 'XLARGE', ...props }: HeadingOwnProps & WithWhiteSpaceProps) => {
   if (level) {
     // eslint-disable-next-line no-console
     console.warn(`deprecated prop 'level' used in Heading, please replace with an "H${level}" component`);
@@ -63,11 +63,6 @@ export const Heading: HeadingType = ({ level, size, ...props }: HeadingOwnProps 
   }
 
   return <StyledHeading size={size} {...props} />;
-};
-Heading.defaultProps = {
-  level: undefined,
-  size: 'XLARGE',
-  children: undefined,
 };
 
 Heading.displayName = 'Heading';

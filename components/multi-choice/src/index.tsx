@@ -49,7 +49,7 @@ const StyledFieldset = styled('div')<{ error: boolean } & WithWhiteSpaceProps>(
  * - https://design-system.service.gov.uk/components/radios/
  */
 export const MultiChoice: React.FC<MultiChoiceProps> = ({
-  meta,
+  meta = {},
   label,
   children,
   hint,
@@ -62,11 +62,6 @@ export const MultiChoice: React.FC<MultiChoiceProps> = ({
     {children}
   </StyledFieldset>
 );
-
-MultiChoice.defaultProps = {
-  hint: undefined,
-  meta: {},
-};
 
 MultiChoice.displayName = 'MultiChoice';
 

@@ -284,7 +284,7 @@ class ProposedClassPropertiesPlugin extends Component<{ defaultIndex: number }, 
   }
 }
 
-const HooksExample: React.FC<SharedProps> = ({ defaultIndex }: SharedProps) => {
+const HooksExample: React.FC<SharedProps> = ({ defaultIndex = 0 }: SharedProps) => {
   const [tabIndex, setHooksTabIndex] = React.useState(defaultIndex);
 
   const handleTabChange = (newTabIndex) => setHooksTabIndex(newTabIndex);
@@ -339,8 +339,6 @@ const HooksExample: React.FC<SharedProps> = ({ defaultIndex }: SharedProps) => {
     </Tabs>
   );
 };
-
-HooksExample.defaultProps = sharedDefaultProps;
 
 // This example demonstrates one way to use tabs with react-router in a way
 // that is compatible with server-side/universal rendering

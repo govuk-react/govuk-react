@@ -7,7 +7,11 @@ interface IconImportantProps extends SVGProps {
   fill?: string;
 }
 
-const IconImportant: React.FC<IconImportantProps> = ({ fill, title, ...rest }: IconImportantProps) => (
+const IconImportant: React.FC<IconImportantProps> = ({
+  fill = 'currentColor',
+  title = 'icon important',
+  ...rest
+}: IconImportantProps) => (
   <SVG viewBox="0 0 35.000000 35.000000" preserveAspectRatio="xMidYMid meet" title={title} fill={fill} {...rest}>
     <g transform="translate(0.000000,35.000000) scale(0.100000,-0.100000)">
       <path
@@ -19,10 +23,5 @@ const IconImportant: React.FC<IconImportantProps> = ({ fill, title, ...rest }: I
     </g>
   </SVG>
 );
-
-IconImportant.defaultProps = {
-  title: 'icon important',
-  fill: 'currentColor',
-};
 
 export default IconImportant;

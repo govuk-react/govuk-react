@@ -25,10 +25,6 @@ export const UnorderedList: React.FC<UnorderedListProps> = (props: UnorderedList
   <OrderedList as="ul" {...props} />
 );
 
-UnorderedList.defaultProps = {
-  listStyleType: undefined,
-};
-
 UnorderedList.displayName = 'UnorderedList';
 
 export default UnorderedList;

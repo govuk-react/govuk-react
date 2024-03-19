@@ -85,19 +85,14 @@ const DetailsText = styled('div')({
  * - https://govuk-react.github.io/govuk-react/?path=/docs/details
  * - https://design-system.service.gov.uk/components/details/
  */
-export const Details: React.FC<DetailsProps> = ({ summary, children, ...props }: DetailsProps) => (
-  <StyledDetails {...props}>
+export const Details: React.FC<DetailsProps> = ({ summary, children, open = false, ...props }: DetailsProps) => (
+  <StyledDetails open={open} {...props}>
     <StyledSummary>
       <SummaryText>{summary}</SummaryText>
     </StyledSummary>
     <DetailsText>{children}</DetailsText>
   </StyledDetails>
 );
-
-Details.defaultProps = {
-  children: undefined,
-  open: false,
-};
 
 Details.displayName = 'Details';
 

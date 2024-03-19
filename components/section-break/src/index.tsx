@@ -54,10 +54,6 @@ export interface SectionBreakProps extends WithWhiteSpaceProps {
   visible?: boolean;
 }
 
-SectionBreak.defaultProps = {
-  visible: undefined,
-};
-
 SectionBreak.displayName = 'SectionBreak';
 
 export default SectionBreak;

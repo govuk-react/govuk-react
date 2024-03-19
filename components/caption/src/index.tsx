@@ -19,7 +19,7 @@ import { CAPTION_SIZES, MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/const
  * - https://design-system.service.gov.uk/styles/typography/#headings
  */
 export const Caption = styled('span')<CaptionProps>(
-  ({ size }) => {
+  ({ size = 'XL' }) => {
     const actualSize = Number.isNaN(Number(size)) ? CAPTION_SIZES[size] : size;
 
     if (!actualSize) {
@@ -28,7 +28,7 @@ export const Caption = styled('span')<CaptionProps>(
 
     return typography.font({ size: actualSize });
   },
-  ({ size }) => {
+  ({ size = 'XL' }) => {
     const actualSize = Number.isNaN(Number(size)) ? CAPTION_SIZES[size] : size;
 
     // bottom margin - hard-coded values because they're a bit odd
@@ -54,10 +54,6 @@ export interface CaptionProps extends WithWhiteSpaceProps {
    */
   size?: number | string;
 }
-
-Caption.defaultProps = {
-  size: 'XL',
-};
 
 Caption.displayName = 'Caption';
 

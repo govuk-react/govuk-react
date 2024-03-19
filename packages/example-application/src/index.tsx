@@ -47,8 +47,4 @@ export interface ExampleApplicationProps {
   routerEntries?: string[];
 }
 
-ExampleApplication.defaultProps = {
-  routerEntries: undefined,
-};
-
 export default ExampleApplication;
