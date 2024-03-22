@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 
+import userEvent from '@testing-library/user-event';
 import { ErrorSummary } from '.';
 
 describe('error summary', () => {
@@ -44,5 +45,23 @@ describe('error summary', () => {
 
       expect(onHandleErrorClick).toHaveBeenCalledWith(targetName);
     });
+  });
+
+  it('handles onClick of error with Enter', async () => {
+    const text = 'error description';
+    const targetName = 'error target';
+    const onHandleErrorClick = jest.fn();
+    const { getByText } = render(
+      <ErrorSummary errors={[{ text, targetName }]} onHandleErrorClick={onHandleErrorClick} />
+    );
+    const user = userEvent.setup();
+
+    const errorLink = getByText(text);
+    expect(errorLink).toBeInTheDocument();
+    expect(onHandleErrorClick).not.toHaveBeenCalledWith(targetName);
+    fireEvent.focus(errorLink);
+    await user.type(errorLink, '{Enter}');
+
+    expect(onHandleErrorClick).toHaveBeenCalledWith(targetName);
   });
 });
