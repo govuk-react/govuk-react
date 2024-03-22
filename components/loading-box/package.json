@@ -5,7 +5,7 @@
     "@govuk-react/constants": "^0.10.6",
     "@govuk-react/icons": "^0.10.6",
     "govuk-colours": "^1.1.0",
-    "hex-rgb": "^4.0.0",
+    "hex-rgb": "^5.0.0",
     "react-transition-group": "^4.4.5"
   },
   "peerDependencies": {
