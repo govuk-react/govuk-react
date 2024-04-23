@@ -82,7 +82,7 @@
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-react-app": "^6.0.0",
-    "eslint-plugin-cypress": "^2.11.3",
+    "eslint-plugin-cypress": "^3.0.0",
     "eslint-plugin-flowtype": "^5.10.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
