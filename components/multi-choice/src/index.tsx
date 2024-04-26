@@ -70,7 +70,7 @@ MultiChoice.defaultProps = {
 
 MultiChoice.displayName = 'MultiChoice';
 
-export interface MultiChoiceProps extends WithWhiteSpaceProps {
+export interface MultiChoiceProps extends React.HTMLAttributes<HTMLDivElement>, WithWhiteSpaceProps {
   meta?: {
     error?: string | string[];
     touched?: boolean;

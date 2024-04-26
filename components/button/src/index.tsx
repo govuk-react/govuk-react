@@ -178,7 +178,7 @@ interface StyledButtonOwnProps extends WithWhiteSpaceProps {
   isStart?: boolean;
 }
 
-interface ButtonOwnProps extends WithWhiteSpaceProps {
+interface ButtonOwnProps extends React.HTMLAttributes<HTMLButtonElement>, WithWhiteSpaceProps {
   /**
    * Button text
    */

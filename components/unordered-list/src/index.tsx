@@ -8,7 +8,7 @@ import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 import * as React from 'react';
 import OrderedList from '@govuk-react/ordered-list';
 
-export interface UnorderedListProps extends WithWhiteSpaceProps {
+export interface UnorderedListProps extends React.HTMLAttributes<HTMLUListElement>, WithWhiteSpaceProps {
   /** One or more ListItem components */
   children: React.ReactNode;
   /** CSS value for `list-style-type`, or `bullet` or `number` to match govuk-frontend */

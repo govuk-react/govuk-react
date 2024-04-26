@@ -9,6 +9,7 @@ import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 import styled from 'styled-components';
 import { spacing } from '@govuk-react/lib';
 import { BORDER_COLOUR } from 'govuk-colours';
+import * as React from 'react';
 
 const breakSizes = {
   XL: 8,
@@ -49,7 +50,7 @@ export const SectionBreak = styled('hr')<SectionBreakProps>(
         }
       : undefined
 );
-export interface SectionBreakProps extends WithWhiteSpaceProps {
+export interface SectionBreakProps extends React.HTMLAttributes<HTMLHRElement>, WithWhiteSpaceProps {
   level?: string;
   visible?: boolean;
 }

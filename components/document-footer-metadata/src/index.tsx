@@ -102,7 +102,7 @@ DocumentFooterMetadata.defaultProps = {
 
 DocumentFooterMetadata.displayName = 'DocumentFooterMetadata';
 
-export interface DocumentFooterMetadataProps {
+export interface DocumentFooterMetadataProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
    * Array of JSX nodes to render underneath the `from:` title
    */
