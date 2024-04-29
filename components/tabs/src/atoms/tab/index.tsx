@@ -66,8 +66,7 @@ const StyledHyperLink = styled('a')<TabOwnProps>(
   })
 );
 
-// eslint-disable-next-line react/prop-types
-const Tab: TabType = ({ selected = false, ...props }) => (
+const Tab: TabType = ({ selected = false, ...props }: TabOwnProps) => (
   <StyledListItem>
     <StyledHyperLink selected={selected} {...props} />
   </StyledListItem>
