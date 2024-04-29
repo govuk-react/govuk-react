@@ -7,7 +7,7 @@
     "formik": "^2.4.5",
     "govuk-react": "^0.10.6",
     "react-final-form": "^6.5.9",
-    "react-hook-form": "^7.49.2",
+    "react-hook-form": "^7.51.1",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
     "styled-components": "^5.3.0"
@@ -34,12 +34,12 @@
   },
   "devDependencies": {
     "@cypress/react18": "^2.0.0",
-    "@cypress/webpack-dev-server": "^3.7.2",
-    "cypress": "^13.6.2",
+    "@cypress/webpack-dev-server": "^3.7.4",
+    "cypress": "^13.6.6",
     "cypress-file-upload": "^5.0.8",
     "html-webpack-plugin": "^5.6.0",
     "ts-loader": "^9.5.1",
-    "webpack": "^5.89.0",
+    "webpack": "^5.90.3",
     "webpack-dev-server": "^4.15.1",
     "workspace-alias": "^0.1.0"
   }
