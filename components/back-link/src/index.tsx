@@ -3,10 +3,11 @@
  *
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/back-link
  */
-import styled from 'styled-components';
-import { BLACK } from 'govuk-colours';
 import { SPACING_POINTS } from '@govuk-react/constants';
-import { link, shape, spacing, typography } from '@govuk-react/lib';
+import { WithWhiteSpaceProps, link, shape, spacing, typography } from '@govuk-react/lib';
+import { BLACK } from 'govuk-colours';
+import React from 'react';
+import styled, { StyledComponentProps } from 'styled-components';
 
 /**
  * Use the back link component to help users go back to the previous page in a multi-page transaction.
@@ -14,7 +15,7 @@ import { link, shape, spacing, typography } from '@govuk-react/lib';
  * - https://govuk-react.github.io/govuk-react/?path=/docs/back-link
  * - https://design-system.service.gov.uk/components/back-link/
  */
-export const BackLink = styled('a')(
+export const StyledBackLink = styled('a')(
   typography.font({ size: 16 }),
   link.common(),
   link.styleText,
@@ -43,8 +44,42 @@ export const BackLink = styled('a')(
   spacing.withWhiteSpace()
 );
 
-BackLink.defaultProps = {
-  children: 'Back',
+interface BackLinkOwnProps extends WithWhiteSpaceProps, React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  children?: string | React.ReactNode;
+}
+
+type BackLinkRefType = React.Ref<HTMLAnchorElement>;
+
+export const BackLink: BackLinkType = React.forwardRef(
+  ({ children = 'Back', ...props }: BackLinkOwnProps, ref: BackLinkRefType) => (
+    <StyledBackLink ref={ref} href={props?.href || '#'} {...props}>
+      {children}
+    </StyledBackLink>
+  )
+);
+
+export interface BackLinkType extends React.ForwardRefExoticComponent<BackLinkOwnProps> {
+  (props: BackLinkPropsWithoutAs, ref?: BackLinkRefType): React.ReactElement<BackLinkPropsWithoutAs>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  <AsC extends string | React.ComponentType<any> = 'a', FAsC extends string | React.ComponentType<any> = AsC>(
+    props: BackLinkPropsWithAs<AsC, FAsC>,
+    ref?: React.Ref<AsC>
+  ): React.ReactElement<BackLinkPropsWithAs<AsC, FAsC>>;
+}
+
+type BackLinkPropsWithoutAs = StyledComponentProps<'a', never, BackLinkOwnProps, never> & {
+  as?: never | undefined;
+  forwardedAs?: never | undefined;
+};
+
+type BackLinkPropsWithAs<
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  AsC extends string | React.ComponentType<any>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  FAsC extends string | React.ComponentType<any> = AsC
+> = StyledComponentProps<AsC, never, BackLinkOwnProps, never, FAsC> & {
+  as?: AsC | undefined;
+  forwardedAs?: FAsC | undefined;
 };
 
 BackLink.displayName = 'BackLink';

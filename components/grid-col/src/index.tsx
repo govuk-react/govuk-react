@@ -5,10 +5,10 @@
  * - https://github.com/alphagov/govuk_elements/blob/master/assets/sass/elements/_layout.scss
  */
 
-import * as React from 'react';
-import styled from 'styled-components';
 import { GUTTER_HALF, MEDIA_QUERIES } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
+import * as React from 'react';
+import styled, { StyledComponentProps } from 'styled-components';
 
 const colValues = {
   columnOneQuarter: '25%',
@@ -44,7 +44,7 @@ function setGrowShrink(style) {
  * - https://govuk-react.github.io/govuk-react/?path=/docs/grid-col
  *
  */
-export const GridCol = styled('div')<GridColProps>(
+export const StyledGridCol = styled('div')<GridColProps>(
   {
     boxSizing: 'border-box',
     paddingRight: GUTTER_HALF,
@@ -114,16 +114,59 @@ export interface GridColProps {
   setDesktopWidth?: number | string;
 }
 
-GridCol.defaultProps = {
-  children: undefined,
-  columnOneQuarter: false,
-  columnOneThird: false,
-  columnOneHalf: false,
-  columnTwoThirds: false,
-  columnThreeQuarters: false,
-  columnFull: false,
-  setWidth: undefined,
-  setDesktopWidth: undefined,
+interface GridColOwnProps extends GridColProps, React.HTMLAttributes<HTMLDivElement> {}
+
+type GridColRefType = React.Ref<HTMLDivElement>;
+
+export const GridCol: GridColType = React.forwardRef(
+  (
+    {
+      columnOneQuarter = false,
+      columnOneThird = false,
+      columnOneHalf = false,
+      columnTwoThirds = false,
+      columnThreeQuarters = false,
+      columnFull = false,
+      ...props
+    }: GridColOwnProps,
+    ref: GridColRefType
+  ) => (
+    <StyledGridCol
+      columnOneThird={columnOneThird}
+      columnOneHalf={columnOneHalf}
+      columnTwoThirds={columnTwoThirds}
+      columnThreeQuarters={columnThreeQuarters}
+      columnFull={columnFull}
+      columnOneQuarter={columnOneQuarter}
+      {...props}
+    >
+      {props.children}
+    </StyledGridCol>
+  )
+);
+
+export interface GridColType extends React.ForwardRefExoticComponent<GridColOwnProps> {
+  (props: GridColPropsWithoutAs, ref?: GridColRefType): React.ReactElement<GridColPropsWithoutAs>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  <AsC extends string | React.ComponentType<any> = 'div', FAsC extends string | React.ComponentType<any> = AsC>(
+    props: GridColPropsWithAs<AsC, FAsC>,
+    ref?: React.Ref<AsC>
+  ): React.ReactElement<GridColPropsWithAs<AsC, FAsC>>;
+}
+
+type GridColPropsWithoutAs = StyledComponentProps<'div', never, GridColOwnProps, never> & {
+  as?: never | undefined;
+  forwardedAs?: never | undefined;
+};
+
+type GridColPropsWithAs<
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  AsC extends string | React.ComponentType<any>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  FAsC extends string | React.ComponentType<any> = AsC
+> = StyledComponentProps<AsC, never, GridColOwnProps, never, FAsC> & {
+  as?: AsC | undefined;
+  forwardedAs?: FAsC | undefined;
 };
 
 GridCol.displayName = 'GridCol';
