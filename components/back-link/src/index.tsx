@@ -52,7 +52,7 @@ type BackLinkRefType = React.Ref<HTMLAnchorElement>;
 
 export const BackLink: BackLinkType = React.forwardRef(
   ({ children = 'Back', ...props }: BackLinkOwnProps, ref: BackLinkRefType) => (
-    <StyledBackLink ref={ref} href={props?.href || '#'} {...props}>
+    <StyledBackLink ref={ref} href={props?.href} {...props}>
       {children}
     </StyledBackLink>
   )
