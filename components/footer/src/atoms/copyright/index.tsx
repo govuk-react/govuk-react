@@ -44,10 +44,5 @@ export interface CopyrightProps {
   };
   link?: string;
 }
-Copyright.defaultProps = {
-  text: undefined,
-  image: undefined,
-  link: undefined,
-};
 
 export default Copyright;

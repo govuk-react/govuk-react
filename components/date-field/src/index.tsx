@@ -67,27 +67,6 @@ export interface DateFieldType extends React.FC<DateFieldProps> {
 DateField.Container = StyledContainer;
 DateField.Input = Input;
 
-DateField.defaultProps = {
-  hintText: undefined,
-  errorText: undefined,
-  inputNames: {
-    day: undefined,
-    month: undefined,
-    year: undefined,
-  },
-  defaultValues: {
-    day: undefined,
-    month: undefined,
-    year: undefined,
-  },
-  inputs: {
-    day: undefined,
-    month: undefined,
-    year: undefined,
-  },
-  input: undefined,
-};
-
 export interface DateFieldProps extends React.HTMLAttributes<HTMLDivElement>, WithWhiteSpaceProps {
   children: React.ReactNode;
   /**

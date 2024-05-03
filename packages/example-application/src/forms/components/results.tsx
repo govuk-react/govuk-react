@@ -69,9 +69,4 @@ interface ResultsProps {
   petPhotoString?: string;
 }
 
-Results.defaultProps = {
-  petPhoto: undefined,
-  petPhotoString: undefined,
-};
-
 export default Results;

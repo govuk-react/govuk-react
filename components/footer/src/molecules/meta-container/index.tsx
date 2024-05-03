@@ -5,7 +5,11 @@ import MetaItem from '../../atoms/meta-item';
 import Licence from '../../atoms/licence';
 import Copyright from '../../atoms/copyright';
 
-const MetaContainer: React.FC<MetaContainerProps> = ({ children, copyright, licence }: MetaContainerProps) => {
+const MetaContainer: React.FC<MetaContainerProps> = ({
+  children,
+  copyright,
+  licence = <Licence />,
+}: MetaContainerProps) => {
   return (
     <Meta>
       <MetaItem grow>
@@ -44,11 +48,5 @@ interface MetaContainerProps {
    */
   licence?: false | string | React.ReactNode;
 }
-
-MetaContainer.defaultProps = {
-  children: undefined,
-  copyright: undefined,
-  licence: <Licence />,
-};
 
 export default MetaContainer;

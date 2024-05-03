@@ -219,7 +219,7 @@ interface ButtonOwnProps extends React.HTMLAttributes<HTMLButtonElement>, WithWh
  * - https://design-system.service.gov.uk/components/button/
  */
 export const Button: ButtonType = React.forwardRef(
-  ({ start, children, icon, ...props }: ButtonOwnProps, ref: ButtonRefType) => (
+  ({ start = false, children, icon, ...props }: ButtonOwnProps, ref: ButtonRefType) => (
     <StyledButton ref={ref} isStart={start} icon={icon} {...props}>
       {icon ? <ButtonContents>{children}</ButtonContents> : children}
       {icon}
@@ -251,15 +251,6 @@ type ButtonPropsWithAs<
 > = StyledComponentProps<AsC, never, ButtonOwnProps, never, FAsC> & {
   as?: AsC | undefined;
   forwardedAs?: FAsC | undefined;
-};
-
-Button.defaultProps = {
-  icon: undefined,
-  start: false,
-  buttonColour: undefined,
-  buttonHoverColour: undefined,
-  buttonShadowColour: undefined,
-  buttonTextColour: undefined,
 };
 
 Button.displayName = 'Button';

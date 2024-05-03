@@ -3,9 +3,10 @@
  *
  * - https://github.com/alphagov/govuk-frontend/tree/main/src/govuk/components/skip-link
  */
-import styled from 'styled-components';
 import { SPACING_POINTS } from '@govuk-react/constants';
 import { link, typography, visuallyHidden } from '@govuk-react/lib';
+import React from 'react';
+import styled, { StyledComponentProps } from 'styled-components';
 
 /**
  *
@@ -14,7 +15,7 @@ import { link, typography, visuallyHidden } from '@govuk-react/lib';
  * - https://govuk-react.github.io/govuk-react/?path=/docs/skip-link
  * - https://design-system.service.gov.uk/components/skip-link/
  */
-export const SkipLink = styled('a')(
+export const StyledSkipLink = styled('a')(
   visuallyHidden.focusable(),
   link.common(),
   link.styleText,
@@ -29,9 +30,43 @@ export const SkipLink = styled('a')(
   }
 );
 
-SkipLink.defaultProps = {
-  children: 'Skip to main content',
-  href: '#content',
+interface SkipLinkOwnProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  children?: string | React.ReactNode;
+  href?: string;
+}
+
+type SkipLinkRefType = React.Ref<HTMLAnchorElement>;
+
+export const SkipLink: SkipLinkType = React.forwardRef(
+  ({ children = 'Skip to main content', href = '#content', ...props }: SkipLinkOwnProps, ref: SkipLinkRefType) => (
+    <StyledSkipLink ref={ref} href={href} {...props}>
+      {children}
+    </StyledSkipLink>
+  )
+);
+
+export interface SkipLinkType extends React.ForwardRefExoticComponent<SkipLinkOwnProps> {
+  (props: SkipLinkPropsWithoutAs, ref?: SkipLinkRefType): React.ReactElement<SkipLinkPropsWithoutAs>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  <AsC extends string | React.ComponentType<any> = 'a', FAsC extends string | React.ComponentType<any> = AsC>(
+    props: SkipLinkPropsWithAs<AsC, FAsC>,
+    ref?: React.Ref<AsC>
+  ): React.ReactElement<SkipLinkPropsWithAs<AsC, FAsC>>;
+}
+
+type SkipLinkPropsWithoutAs = StyledComponentProps<'a', never, SkipLinkOwnProps, never> & {
+  as?: never | undefined;
+  forwardedAs?: never | undefined;
+};
+
+type SkipLinkPropsWithAs<
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  AsC extends string | React.ComponentType<any>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  FAsC extends string | React.ComponentType<any> = AsC
+> = StyledComponentProps<AsC, never, SkipLinkOwnProps, never, FAsC> & {
+  as?: AsC | undefined;
+  forwardedAs?: FAsC | undefined;
 };
 
 SkipLink.displayName = 'SkipLink';

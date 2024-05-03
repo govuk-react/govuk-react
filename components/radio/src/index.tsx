@@ -143,7 +143,7 @@ const StyledRadioHint = styled(HintText)({
  * - https://design-system.service.gov.uk/components/radios/
  */
 export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
-  ({ inline, children, className, hint, sizeVariant, ...input }: RadioProps, ref) => (
+  ({ inline = false, children, className, hint, sizeVariant = 'MEDIUM', ...input }: RadioProps, ref) => (
     <Label inline={inline} className={className} sizeVariant={sizeVariant}>
       <Input type="radio" ref={ref} {...input} />
       <LabelText>{children}</LabelText>
@@ -151,13 +151,6 @@ export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
     </Label>
   )
 );
-
-Radio.defaultProps = {
-  hint: undefined,
-  inline: false,
-  className: undefined,
-  sizeVariant: 'MEDIUM',
-};
 
 Radio.displayName = 'Radio';
 

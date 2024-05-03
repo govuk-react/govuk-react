@@ -1,11 +1,11 @@
 import type { StyledComponentProps } from 'styled-components';
 
+import { link, spacing, typography } from '@govuk-react/lib';
 import * as React from 'react';
 import styled from 'styled-components';
-import { link, spacing, typography } from '@govuk-react/lib';
 
-import { BLACK, BORDER_COLOUR, GREY_4, WHITE } from 'govuk-colours';
 import { MEDIA_QUERIES } from '@govuk-react/constants';
+import { BLACK, BORDER_COLOUR, GREY_4, WHITE } from 'govuk-colours';
 
 const spacingSimple1 = spacing.simple(1);
 const spacingSimple2 = spacing.simple(2);
@@ -66,15 +66,11 @@ const StyledHyperLink = styled('a')<TabOwnProps>(
   })
 );
 
-const Tab: TabType = (props) => (
+const Tab: TabType = ({ selected = false, ...props }: TabOwnProps) => (
   <StyledListItem>
-    <StyledHyperLink {...props} />
+    <StyledHyperLink selected={selected} {...props} />
   </StyledListItem>
 );
-
-Tab.defaultProps = {
-  selected: false,
-};
 
 interface TabType extends React.FC<TabOwnProps> {
   (props: TabPropsWithoutAs): React.ReactElement<TabPropsWithoutAs>;

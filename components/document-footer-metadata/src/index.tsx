@@ -94,12 +94,6 @@ export const DocumentFooterMetadata: React.FC<DocumentFooterMetadataProps> = ({
   );
 };
 
-DocumentFooterMetadata.defaultProps = {
-  from: undefined,
-  partOf: undefined,
-  other: undefined,
-};
-
 DocumentFooterMetadata.displayName = 'DocumentFooterMetadata';
 
 export interface DocumentFooterMetadataProps extends React.HTMLAttributes<HTMLDivElement> {

@@ -1,16 +1,22 @@
 // https://components.publishing.service.gov.uk/component-guide/search
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
+import { NTA_LIGHT } from '@govuk-react/constants';
+import { GREY_2, LIGHT_BLUE, WHITE, YELLOW } from 'govuk-colours';
 import * as React from 'react';
 import styled from 'styled-components';
-import { LIGHT_BLUE, GREY_2, WHITE, YELLOW } from 'govuk-colours';
-import { NTA_LIGHT } from '@govuk-react/constants';
 
 import { Search } from '@govuk-react/icons';
 import { spacing } from '@govuk-react/lib';
 
+type SearchInput = {
+  type: string;
+};
+
 // css normalize is hiding the input:search clear SearchButton
-const Input = styled('input')({
+const Input = styled.input.attrs<SearchInput>(({ type = 'search' }) => {
+  return { type };
+})({
   width: '100%',
   height: '40px',
   padding: '6px',
@@ -35,10 +41,6 @@ const Input = styled('input')({
     },
   },
 });
-
-Input.defaultProps = {
-  type: 'search',
-};
 
 const SearchButton = styled('button')({
   backgroundColor: LIGHT_BLUE,

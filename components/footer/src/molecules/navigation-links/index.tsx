@@ -5,7 +5,11 @@ import SectionHeading from '../../atoms/section-heading';
 import UnorderedList from '../../atoms/unordered-list';
 import { ListItem } from '../../atoms/list-item';
 
-const NavigationLinks: React.FC<NavigationLinksProps> = ({ heading, listColumns, children }: NavigationLinksProps) => {
+const NavigationLinks: React.FC<NavigationLinksProps> = ({
+  heading,
+  listColumns = 0,
+  children,
+}: NavigationLinksProps) => {
   return (
     <Section>
       <SectionHeading size="MEDIUM">{heading}</SectionHeading>
@@ -36,9 +40,5 @@ interface NavigationLinksProps {
    */
   children: React.ReactNode;
 }
-
-NavigationLinks.defaultProps = {
-  listColumns: 0,
-};
 
 export default NavigationLinks;

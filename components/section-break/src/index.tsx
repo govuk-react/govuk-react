@@ -55,10 +55,6 @@ export interface SectionBreakProps extends React.HTMLAttributes<HTMLHRElement>, 
   visible?: boolean;
 }
 
-SectionBreak.defaultProps = {
-  visible: undefined,
-};
-
 SectionBreak.displayName = 'SectionBreak';
 
 export default SectionBreak;
