@@ -1,11 +1,11 @@
 {
   "name": "@govuk-react/page",
-  "version": "0.10.6",
+  "version": "0.10.7",
   "dependencies": {
-    "@govuk-react/constants": "^0.10.6",
-    "@govuk-react/lib": "^0.10.6",
-    "@govuk-react/skip-link": "^0.10.6",
-    "@govuk-react/top-nav": "^0.10.6"
+    "@govuk-react/constants": "^0.10.7",
+    "@govuk-react/lib": "^0.10.7",
+    "@govuk-react/skip-link": "^0.10.7",
+    "@govuk-react/top-nav": "^0.10.7"
   },
   "peerDependencies": {
     "react": ">=16.8.0",

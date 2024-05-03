@@ -1,6 +1,6 @@
 {
   "name": "@govuk-react/global-style",
-  "version": "0.10.6",
+  "version": "0.10.7",
   "peerDependencies": {
     "react": ">=16.8.0",
     "styled-components": ">=5.1"
