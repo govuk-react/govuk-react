@@ -17,15 +17,10 @@ export const VisuallyHidden = styled('span')
   .withConfig<VisuallyHiddenProps>({
     shouldForwardProp: (prop) => !['important', 'focusable'].includes(prop),
   })
-  .attrs<VisuallyHiddenProps>(({ focusable, tabIndex }) =>
+  .attrs<VisuallyHiddenProps>(({ focusable = false, tabIndex }) =>
     // if we're focusable but don't have a `tabIndex` set, add one
     focusable && tabIndex === undefined ? { tabIndex: '0' } : undefined
-  )(({ focusable, important }) => visuallyHidden({ focusable, important }));
-
-VisuallyHidden.defaultProps = {
-  focusable: false,
-  important: true,
-};
+  )(({ focusable = false, important = true }) => visuallyHidden({ focusable, important }));
 
 VisuallyHidden.displayName = 'VisuallyHidden';
 

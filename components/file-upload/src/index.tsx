@@ -38,7 +38,7 @@ const StyledInput = styled('input')({
  * - https://design-system.service.gov.uk/components/file-upload/
  */
 export const FileUpload = React.forwardRef<HTMLInputElement, FileUploadProps>(
-  ({ meta, children, hint, acceptedFormats, onChange, name, ...props }: FileUploadProps, ref) => (
+  ({ meta = {}, children, hint, acceptedFormats, onChange, name, ...props }: FileUploadProps, ref) => (
     <Label {...props} error={meta.touched && !!meta.error}>
       <LabelText>{children}</LabelText>
       {hint && <HintText>{hint}</HintText>}
@@ -47,14 +47,6 @@ export const FileUpload = React.forwardRef<HTMLInputElement, FileUploadProps>(
     </Label>
   )
 );
-
-FileUpload.defaultProps = {
-  hint: undefined,
-  meta: {},
-  acceptedFormats: undefined,
-  onChange: undefined,
-  name: undefined,
-};
 
 FileUpload.displayName = 'FileUpload';
 

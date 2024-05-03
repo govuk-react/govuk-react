@@ -3,7 +3,7 @@ import { GUTTER, MEDIA_QUERIES } from '@govuk-react/constants';
 import { spacing } from '@govuk-react/lib';
 
 const UnorderedList = styled('ul')<UnorderedListProps>(
-  ({ inline }) =>
+  ({ inline = false }) =>
     inline
       ? {
           marginTop: 0,
@@ -29,10 +29,5 @@ interface UnorderedListProps {
   columns?: number;
   inline?: boolean;
 }
-
-UnorderedList.defaultProps = {
-  columns: undefined,
-  inline: false,
-};
 
 export default UnorderedList;

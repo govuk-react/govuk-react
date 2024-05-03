@@ -8,7 +8,7 @@ const MetaItem = styled('div')<MetaItemProps>(
     marginBottom: spacing.simple(5),
     marginLeft: GUTTER_HALF,
   },
-  ({ grow }) =>
+  ({ grow = false }) =>
     grow && {
       flex: 1,
       flexBasis: '320px',
@@ -21,9 +21,5 @@ const MetaItem = styled('div')<MetaItemProps>(
 interface MetaItemProps {
   grow?: boolean;
 }
-
-MetaItem.defaultProps = {
-  grow: false,
-};
 
 export default MetaItem;

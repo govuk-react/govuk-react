@@ -26,7 +26,7 @@ export const Label = styled('label')<LabelProps>(
       clear: 'both',
     },
   },
-  ({ error }) => ({
+  ({ error = false }) => ({
     borderLeft: error ? `4px solid ${ERROR_COLOUR}` : undefined,
     marginRight: error ? SPACING.SCALE_3 : undefined,
     paddingLeft: error ? SPACING.SCALE_2 : undefined,
@@ -40,10 +40,6 @@ export interface LabelProps extends WithWhiteSpaceProps {
    */
   error?: boolean;
 }
-
-Label.defaultProps = {
-  error: false,
-};
 
 Label.displayName = 'Label';
 

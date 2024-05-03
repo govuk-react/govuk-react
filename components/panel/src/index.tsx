@@ -66,10 +66,6 @@ export const Panel: React.FC<PanelProps> = ({ title, children, ...props }: Panel
     {children && <StyledBody>{children}</StyledBody>}
   </StyledPanel>
 );
-Panel.defaultProps = {
-  children: undefined,
-};
-
 Panel.displayName = 'Panel';
 
 export interface PanelProps {

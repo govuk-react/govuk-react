@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { spacing } from '@govuk-react/lib';
 
 export const ListItem = styled('li')<ListItemProps>(
-  ({ inline }) =>
+  ({ inline = false }) =>
     inline
       ? {
           display: 'inline-block',
@@ -22,9 +22,5 @@ export const ListItem = styled('li')<ListItemProps>(
 interface ListItemProps extends WithWhiteSpaceProps {
   inline?: boolean;
 }
-
-ListItem.defaultProps = {
-  inline: false,
-};
 
 export default ListItem;

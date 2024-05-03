@@ -27,7 +27,12 @@ interface SpinnerProps extends SVGProps {
   fill?: string;
 }
 
-const Spinner: React.FC<SpinnerProps> = ({ className, fill, title, ...rest }: SpinnerProps) => (
+const Spinner: React.FC<SpinnerProps> = ({
+  className = 'icon-spinner',
+  fill = 'currentColor',
+  title = 'Loading',
+  ...rest
+}: SpinnerProps) => (
   <SVG
     className={className}
     viewBox="-25 -25 50 50"
@@ -54,11 +59,5 @@ const Spinner: React.FC<SpinnerProps> = ({ className, fill, title, ...rest }: Sp
       ))}
   </SVG>
 );
-
-Spinner.defaultProps = {
-  className: 'icon-spinner',
-  title: 'Loading',
-  fill: 'currentColor',
-};
 
 export default Spinner;
