@@ -48,7 +48,7 @@ export interface TableType extends React.FC<TableProps> {
   Cell: typeof Cell;
   Header: typeof TableHeader;
 }
-export interface TableProps {
+export interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
   /** Table body rows and cells (for backward compatibility) */
   body?: React.ReactNode;
   /** Table body rows and cells (recommended way) */

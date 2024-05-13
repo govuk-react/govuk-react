@@ -135,7 +135,7 @@ type PaginationAnchorPropsWithAs<
   forwardedAs?: FAsC | undefined;
 };
 
-interface PaginationAnchorProps {
+interface PaginationAnchorProps extends React.HTMLAttributes<HTMLAnchorElement> {
   children: string | React.ReactElement;
   previousPage?: boolean;
   nextPage?: boolean;

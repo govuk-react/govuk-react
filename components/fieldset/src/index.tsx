@@ -39,7 +39,7 @@ export interface FieldsetType extends React.FC<FieldsetProps> {
   Legend: typeof Legend;
 }
 
-interface FieldsetProps extends WithWhiteSpaceProps {
+interface FieldsetProps extends React.HTMLAttributes<HTMLFieldSetElement>, WithWhiteSpaceProps {
   children: React.ReactNode;
 }
 

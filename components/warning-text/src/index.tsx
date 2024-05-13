@@ -49,7 +49,7 @@ export const WarningText: React.FC<WarningTextProps> = ({ children, ...props }: 
 
 WarningText.displayName = 'WarningText';
 
-export interface WarningTextProps {
+export interface WarningTextProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
    * Warning text to be displayed
    */

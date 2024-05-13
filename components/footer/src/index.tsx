@@ -79,7 +79,7 @@ export interface FooterType extends React.FC<FooterProps> {
   Licence: typeof Licence;
 }
 
-interface FooterProps {
+interface FooterProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * Footer navigation links
    */

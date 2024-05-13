@@ -99,7 +99,7 @@ interface StyledHeadingOwnProps extends WithWhiteSpaceProps {
   size?: number | string;
 }
 
-export interface HeadingOwnProps {
+export interface HeadingOwnProps extends React.HTMLAttributes<HTMLHeadingElement> {
   /**
    * Semantic heading level value between 1 and 6 (deprecated)
    */

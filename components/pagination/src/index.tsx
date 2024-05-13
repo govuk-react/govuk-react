@@ -39,7 +39,7 @@ export const Pagination: PaginationType = (props: PaginationProps) => <StyledLis
 export interface PaginationType extends React.FC<PaginationProps> {
   Anchor: typeof Anchor;
 }
-export interface PaginationProps {
+export interface PaginationProps extends React.HTMLAttributes<HTMLUListElement> {
   children: React.ReactNode;
 }
 

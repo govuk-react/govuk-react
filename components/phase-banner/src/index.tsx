@@ -51,7 +51,7 @@ export const PhaseBanner: React.FC<PhaseBannerProps> = ({ level, children, ...pr
   </StyledBanner>
 );
 
-export interface PhaseBannerProps extends WithWhiteSpaceProps {
+export interface PhaseBannerProps extends React.HTMLAttributes<HTMLDivElement>, WithWhiteSpaceProps {
   /** Children text and links */
   children: React.ReactNode;
   /** Alpha or beta banner */

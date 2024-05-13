@@ -158,7 +158,7 @@ export const LoadingBox: React.FC<LoadingBoxProps> = ({
 
 LoadingBox.displayName = 'LoadingBox';
 
-export interface LoadingBoxProps {
+export interface LoadingBoxProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
    * One or more children nodes that loading box will overlay
    */
