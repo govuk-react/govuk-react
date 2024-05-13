@@ -40,7 +40,7 @@ export const Main: React.FC<MainProps> = ({ children, ...props }: MainProps) => 
 
 Main.displayName = 'Main';
 
-export interface MainProps {
+export interface MainProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
    * Child nodes for the page being built
    */

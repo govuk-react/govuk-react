@@ -70,7 +70,7 @@ const StyledErrorSummary = styled('div')(
   spacing.withWhiteSpace({ marginBottom: 6 })
 );
 
-export interface ErrorSummaryProps {
+export interface ErrorSummaryProps extends React.HTMLAttributes<HTMLDivElement> {
   /** onClick function to scroll the target element into view */
   onHandleErrorClick?: (targetName: string) => void;
   /** Heading text */

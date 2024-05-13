@@ -37,7 +37,7 @@ export interface TabsType extends React.FC<TabsProps> {
   Panel: typeof Panel;
   Title: typeof Title;
 }
-export interface TabsProps {
+export interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
   /** child components that will appear in the Tabs section */
   children: React.ReactNode;
 }

@@ -52,7 +52,7 @@ const Input = styled('input')({
   },
 });
 
-interface TopNavProps {
+interface TopNavProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Top nav background color */
   bgColor?: string;
   /** Top nav text color */

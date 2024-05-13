@@ -88,7 +88,7 @@ class Input extends React.Component<DateInputProps> {
   }
 }
 
-export interface DateInputProps {
+export interface DateInputProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onFocus' | 'onBlur' | 'onChange'> {
   names?: {
     day?: string;
     month?: string;

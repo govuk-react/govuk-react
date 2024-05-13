@@ -57,7 +57,7 @@ const Legend: React.FC<LegendProps> = ({ children, isPageHeading = false, ...pro
   <StyledLegend {...props}>{isPageHeading ? <StyledHeading>{children}</StyledHeading> : children}</StyledLegend>
 );
 
-interface LegendProps extends WithWhiteSpaceProps {
+interface LegendProps extends React.HTMLAttributes<HTMLLegendElement>, WithWhiteSpaceProps {
   children: React.ReactNode;
   isPageHeading?: boolean;
   size?: string | number;

@@ -96,7 +96,7 @@ export const Details: React.FC<DetailsProps> = ({ summary, children, open = fals
 
 Details.displayName = 'Details';
 
-export interface DetailsProps {
+export interface DetailsProps extends React.HTMLAttributes<HTMLDetailsElement> {
   /** The content that will be displayed when details are revealed */
   children?: React.ReactNode;
   /** Flag to indicate whether to show component open by default */

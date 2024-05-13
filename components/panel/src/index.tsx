@@ -68,7 +68,7 @@ export const Panel: React.FC<PanelProps> = ({ title, children, ...props }: Panel
 );
 Panel.displayName = 'Panel';
 
-export interface PanelProps {
+export interface PanelProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Panel title text */
   title: string;
   /** Panel body text */
