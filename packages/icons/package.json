@@ -1,8 +1,8 @@
 {
   "name": "@govuk-react/icons",
-  "version": "0.10.6",
+  "version": "0.10.7",
   "dependencies": {
-    "@govuk-react/constants": "^0.10.6",
+    "@govuk-react/constants": "^0.10.7",
     "govuk-colours": "^1.1.0"
   },
   "peerDependencies": {

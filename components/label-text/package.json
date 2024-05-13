@@ -1,8 +1,8 @@
 {
   "name": "@govuk-react/label-text",
-  "version": "0.10.6",
+  "version": "0.10.7",
   "dependencies": {
-    "@govuk-react/lib": "^0.10.6"
+    "@govuk-react/lib": "^0.10.7"
   },
   "peerDependencies": {
     "react": ">=16.8.0",

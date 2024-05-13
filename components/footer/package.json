@@ -1,13 +1,13 @@
 {
   "name": "@govuk-react/footer",
-  "version": "0.10.6",
+  "version": "0.10.7",
   "dependencies": {
-    "@govuk-react/constants": "^0.10.6",
-    "@govuk-react/heading": "^0.10.6",
-    "@govuk-react/icons": "^0.10.6",
-    "@govuk-react/lib": "^0.10.6",
-    "@govuk-react/link": "^0.10.6",
-    "@govuk-react/visually-hidden": "^0.10.6",
+    "@govuk-react/constants": "^0.10.7",
+    "@govuk-react/heading": "^0.10.7",
+    "@govuk-react/icons": "^0.10.7",
+    "@govuk-react/lib": "^0.10.7",
+    "@govuk-react/link": "^0.10.7",
+    "@govuk-react/visually-hidden": "^0.10.7",
     "govuk-colours": "^1.1.0"
   },
   "peerDependencies": {

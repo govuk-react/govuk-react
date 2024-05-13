@@ -1,13 +1,13 @@
 {
   "name": "@govuk-react/top-nav",
-  "version": "0.10.6",
+  "version": "0.10.7",
   "dependencies": {
-    "@govuk-react/button": "^0.10.6",
-    "@govuk-react/constants": "^0.10.6",
+    "@govuk-react/button": "^0.10.7",
+    "@govuk-react/constants": "^0.10.7",
     "@govuk-react/icon-crown": "0.1.0",
-    "@govuk-react/icons": "^0.10.6",
-    "@govuk-react/lib": "^0.10.6",
-    "@govuk-react/search-box": "^0.10.6",
+    "@govuk-react/icons": "^0.10.7",
+    "@govuk-react/lib": "^0.10.7",
+    "@govuk-react/search-box": "^0.10.7",
     "govuk-colours": "^1.1.0"
   },
   "peerDependencies": {
