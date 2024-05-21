@@ -65,6 +65,8 @@ interface TopNavProps extends React.HTMLAttributes<HTMLDivElement> {
   serviceTitle?: React.ReactNode;
   /** Search component */
   search?: React.ReactNode;
+  /** Is the bottom nav element full width? */
+  fullWidthBottomBar?: boolean;
   /** List Navigation items with anchor tags e.g. NavAnchor components */
   children?: React.ReactNode;
 }
@@ -92,6 +94,7 @@ export class TopNav extends Component<TopNavProps, { navigationOpen: boolean }> 
     search: false,
     children: undefined,
     defaultOpen: false,
+    fullWidthBottomBar: false,
   };
 
   constructor(props: TopNavProps) {
@@ -109,7 +112,7 @@ export class TopNav extends Component<TopNavProps, { navigationOpen: boolean }> 
   };
 
   render(): JSX.Element {
-    const { bgColor, color, company, serviceTitle, search, children, ...props } = this.props;
+    const { bgColor, color, company, serviceTitle, search, fullWidthBottomBar, children, ...props } = this.props;
     const { navigationOpen } = this.state;
     return (
       <>
@@ -145,7 +148,7 @@ export class TopNav extends Component<TopNavProps, { navigationOpen: boolean }> 
             </RightHandSide>
           </TopNavInner>
         </TopNavWrapper>
-        <BottomNavWrapper />
+        <BottomNavWrapper fullWidth={fullWidthBottomBar} />
       </>
     );
   }
