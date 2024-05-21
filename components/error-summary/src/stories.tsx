@@ -8,6 +8,9 @@ export default {
   title: 'Form/Error summary',
   id: 'error-summary',
   component: ErrorSummary,
+  argTypes: {
+    onClick: { action: 'Error clicked' },
+  },
 };
 
 const errors = [
@@ -27,4 +30,5 @@ Default.args = {
   heading: 'Message to alert the user to a problem goes here',
   description: 'Optional description of the errors and how to correct them',
   errors,
+  onHandleErrorClick: () => {},
 };
