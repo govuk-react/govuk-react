@@ -147,8 +147,10 @@ export const GridCol: GridColType = React.forwardRef(
 
 export interface GridColType extends React.ForwardRefExoticComponent<GridColOwnProps> {
   (props: GridColPropsWithoutAs, ref?: GridColRefType): React.ReactElement<GridColPropsWithoutAs>;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  <AsC extends string | React.ComponentType<any> = 'div', FAsC extends string | React.ComponentType<any> = AsC>(
+  <
+    AsC extends string | React.ComponentType<GridColOwnProps> = 'div',
+    FAsC extends string | React.ComponentType<GridColOwnProps> = AsC
+  >(
     props: GridColPropsWithAs<AsC, FAsC>,
     ref?: React.Ref<AsC>
   ): React.ReactElement<GridColPropsWithAs<AsC, FAsC>>;
@@ -160,10 +162,8 @@ type GridColPropsWithoutAs = StyledComponentProps<'div', never, GridColOwnProps,
 };
 
 type GridColPropsWithAs<
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  AsC extends string | React.ComponentType<any>,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  FAsC extends string | React.ComponentType<any> = AsC
+  AsC extends string | React.ComponentType<GridColOwnProps>,
+  FAsC extends string | React.ComponentType<GridColOwnProps> = AsC
 > = StyledComponentProps<AsC, never, GridColOwnProps, never, FAsC> & {
   as?: AsC | undefined;
   forwardedAs?: FAsC | undefined;
