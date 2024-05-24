@@ -1,9 +1,9 @@
 import type { StyledComponentProps } from 'styled-components';
 
+import { FONT_SIZE, LINE_HEIGHT, MEDIA_QUERIES, NTA_LIGHT, SPACING } from '@govuk-react/constants';
+import { BLUE, GREY_4, PURPLE, WHITE, YELLOW } from 'govuk-colours';
 import * as React from 'react';
 import styled from 'styled-components';
-import { BLUE, GREY_4, PURPLE, YELLOW, WHITE } from 'govuk-colours';
-import { FONT_SIZE, LINE_HEIGHT, SPACING, MEDIA_QUERIES, NTA_LIGHT } from '@govuk-react/constants';
 
 import { ArrowRight as NextPageIcon, ArrowLeft as PrevPageIcon } from '@govuk-react/icons';
 
@@ -114,8 +114,10 @@ const PaginationAnchor: PaginationAnchorType = ({
 
 interface PaginationAnchorType extends React.FC<PaginationAnchorProps> {
   (props: PaginationAnchorPropsWithoutAs): React.ReactElement<PaginationAnchorPropsWithoutAs>;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  <AsC extends string | React.ComponentType<any> = 'a', FAsC extends string | React.ComponentType<any> = AsC>(
+  <
+    AsC extends string | React.ComponentType<PaginationAnchorProps> = 'a',
+    FAsC extends string | React.ComponentType<PaginationAnchorProps> = AsC
+  >(
     props: PaginationAnchorPropsWithAs<AsC, FAsC>
   ): React.ReactElement<PaginationAnchorPropsWithAs<AsC, FAsC>>;
 }
@@ -126,10 +128,8 @@ type PaginationAnchorPropsWithoutAs = StyledComponentProps<'a', never, Paginatio
 };
 
 type PaginationAnchorPropsWithAs<
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  AsC extends string | React.ComponentType<any>,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  FAsC extends string | React.ComponentType<any> = AsC
+  AsC extends string | React.ComponentType<PaginationAnchorProps>,
+  FAsC extends string | React.ComponentType<PaginationAnchorProps> = AsC
 > = StyledComponentProps<AsC, never, PaginationAnchorProps, never, FAsC> & {
   as?: AsC | undefined;
   forwardedAs?: FAsC | undefined;

@@ -8,12 +8,12 @@ import type { StyledComponentProps } from 'styled-components';
 
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
-import styled from 'styled-components';
-import * as React from 'react';
 import { BORDER_WIDTH_FORM_ELEMENT, FOCUSABLE, MEDIA_QUERIES, SPACING_POINTS } from '@govuk-react/constants';
 import { spacing, typography } from '@govuk-react/lib';
 import { BUTTON_COLOUR, BUTTON_COLOUR_DARKEN_15, WHITE } from 'govuk-colours';
 import { darken, stripUnit } from 'polished';
+import * as React from 'react';
+import styled from 'styled-components';
 
 const BUTTON_SHADOW_SIZE = BORDER_WIDTH_FORM_ELEMENT;
 const RAW_SPACING_2 = SPACING_POINTS[2];
@@ -231,8 +231,10 @@ type ButtonRefType = React.Ref<HTMLButtonElement>;
 
 export interface ButtonType extends React.ForwardRefExoticComponent<ButtonOwnProps> {
   (props: ButtonPropsWithoutAs, ref?: ButtonRefType): React.ReactElement<ButtonPropsWithoutAs>;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  <AsC extends string | React.ComponentType<any> = 'button', FAsC extends string | React.ComponentType<any> = AsC>(
+  <
+    AsC extends string | React.ComponentType<ButtonOwnProps> = 'button',
+    FAsC extends string | React.ComponentType<ButtonOwnProps> = AsC
+  >(
     props: ButtonPropsWithAs<AsC, FAsC>,
     ref?: React.Ref<AsC>
   ): React.ReactElement<ButtonPropsWithAs<AsC, FAsC>>;
@@ -244,10 +246,8 @@ type ButtonPropsWithoutAs = StyledComponentProps<'button', never, ButtonOwnProps
 };
 
 type ButtonPropsWithAs<
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  AsC extends string | React.ComponentType<any>,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  FAsC extends string | React.ComponentType<any> = AsC
+  AsC extends string | React.ComponentType<ButtonOwnProps>,
+  FAsC extends string | React.ComponentType<ButtonOwnProps> = AsC
 > = StyledComponentProps<AsC, never, ButtonOwnProps, never, FAsC> & {
   as?: AsC | undefined;
   forwardedAs?: FAsC | undefined;
