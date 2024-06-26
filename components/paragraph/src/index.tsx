@@ -71,7 +71,7 @@ export const Paragraph: React.FC<ParagraphProps & ReactMarkdownProps> = ({
     skipHtml
     // Use `disallowedElements` instead of using `allowedElements` as code blocks don't work
     disallowedElements={['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'img', 'blockquote', 'li', 'ul', 'ol']}
-    components={{ link: linkRenderer }}
+    components={{ a: linkRenderer }}
     supportingText={supportingText}
     className="paragraph"
     {...props}
