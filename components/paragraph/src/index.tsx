@@ -5,13 +5,12 @@
  */
 import type { WithWhiteSpaceProps } from '@govuk-react/lib';
 
-import * as React from 'react';
-import styled from 'styled-components';
-import type { ReactMarkdownProps } from 'react-markdown';
-
-import ReactMarkdown from 'react-markdown';
 import { spacing, typography } from '@govuk-react/lib';
 import Link from '@govuk-react/link';
+import * as React from 'react';
+import type { Options as ReactMarkdownProps } from 'react-markdown';
+import ReactMarkdown from 'react-markdown';
+import styled from 'styled-components';
 
 const StyledParagraph = styled(ReactMarkdown)<ParagraphProps>(
   {
@@ -69,14 +68,16 @@ export const Paragraph: React.FC<ParagraphProps & ReactMarkdownProps> = ({
   ...props
 }: ParagraphProps & ReactMarkdownProps) => (
   <StyledParagraph
-    source={children}
-    escapeHtml={false}
     skipHtml
-    allowedTypes={['paragraph', 'emphasis', 'strong', 'link', 'inlineCode', 'code', 'text']}
-    renderers={{ link: linkRenderer }}
+    // Use `disallowedElements` instead of using `allowedElements` as code blocks don't work
+    disallowedElements={['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'img', 'blockquote', 'li', 'ul', 'ol']}
+    components={{ link: linkRenderer }}
     supportingText={supportingText}
+    className="paragraph"
     {...props}
-  />
+  >
+    {children}
+  </StyledParagraph>
 );
 
 export interface ParagraphProps extends WithWhiteSpaceProps, React.HTMLAttributes<HTMLDivElement> {
