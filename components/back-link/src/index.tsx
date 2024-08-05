@@ -60,8 +60,10 @@ export const BackLink: BackLinkType = React.forwardRef(
 
 export interface BackLinkType extends React.ForwardRefExoticComponent<BackLinkOwnProps> {
   (props: BackLinkPropsWithoutAs, ref?: BackLinkRefType): React.ReactElement<BackLinkPropsWithoutAs>;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  <AsC extends string | React.ComponentType<any> = 'a', FAsC extends string | React.ComponentType<any> = AsC>(
+  <
+    AsC extends string | React.ComponentType<BackLinkOwnProps> = 'a',
+    FAsC extends string | React.ComponentType<BackLinkOwnProps> = AsC
+  >(
     props: BackLinkPropsWithAs<AsC, FAsC>,
     ref?: React.Ref<AsC>
   ): React.ReactElement<BackLinkPropsWithAs<AsC, FAsC>>;
@@ -73,10 +75,8 @@ type BackLinkPropsWithoutAs = StyledComponentProps<'a', never, BackLinkOwnProps,
 };
 
 type BackLinkPropsWithAs<
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  AsC extends string | React.ComponentType<any>,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  FAsC extends string | React.ComponentType<any> = AsC
+  AsC extends string | React.ComponentType<BackLinkOwnProps>,
+  FAsC extends string | React.ComponentType<BackLinkOwnProps> = AsC
 > = StyledComponentProps<AsC, never, BackLinkOwnProps, never, FAsC> & {
   as?: AsC | undefined;
   forwardedAs?: FAsC | undefined;
