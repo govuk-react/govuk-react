@@ -2,7 +2,7 @@
   "name": "@govuk-react/example-application",
   "version": "0.10.7",
   "dependencies": {
-    "@rjsf/core": "^3.1.0",
+    "@rjsf/core": "^5.20.1",
     "final-form": "^4.20.10",
     "formik": "^2.4.5",
     "govuk-react": "^0.10.7",
