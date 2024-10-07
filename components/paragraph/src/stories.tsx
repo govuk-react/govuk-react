@@ -22,8 +22,8 @@ Default.args = {
   children: exampleParagraph,
 };
 
-export const SupportingParagaph = Template.bind({});
-SupportingParagaph.args = {
+export const SupportingParagraph = Template.bind({});
+SupportingParagraph.args = {
   supportingText: true,
   children: exampleParagraph,
 };
