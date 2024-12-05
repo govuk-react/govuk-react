@@ -2676,8 +2676,8 @@ __metadata:
     "@babel/preset-typescript": 7.23.0
     "@govuk-react/api-docs": 0.10.7
     "@preconstruct/cli": ^2.8.3
-    "@storybook/addon-actions": 7.6.17
-    "@storybook/addon-controls": 7.6.17
+    "@storybook/addon-actions": 8.4.6
+    "@storybook/addon-controls": 8.4.7
     "@storybook/addon-docs": 7.6.17
     "@storybook/addon-essentials": 7.6.17
     "@storybook/addon-storyshots": 7.6.17
@@ -2978,8 +2978,8 @@ __metadata:
     "@govuk-react/visually-hidden": ^0.10.7
     "@govuk-react/warning-text": ^0.10.7
     "@rjsf/core": ^3.1.0
-    "@storybook/addon-actions": 7.6.17
-    "@storybook/addon-controls": 7.6.17
+    "@storybook/addon-actions": 8.4.6
+    "@storybook/addon-controls": 8.4.7
     "@storybook/addon-docs": 7.6.17
     "@storybook/addon-essentials": 7.6.17
     "@storybook/addons": 7.6.17
@@ -4437,6 +4437,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/addon-actions@npm:8.4.6":
+  version: 8.4.6
+  resolution: "@storybook/addon-actions@npm:8.4.6"
+  dependencies:
+    "@storybook/global": ^5.0.0
+    "@types/uuid": ^9.0.1
+    dequal: ^2.0.2
+    polished: ^4.2.2
+    uuid: ^9.0.0
+  peerDependencies:
+    storybook: ^8.4.6
+  checksum: 93a453321f14eddf7f58e4c235e6ebbee5a9b680453834cc5593ff59d7607d9e99c53d5fac9bf59f6072c3a6f64a5f53174078c9e6c9054b125dc4c25be43842
+  languageName: node
+  linkType: hard
+
 "@storybook/addon-backgrounds@npm:7.6.17":
   version: 7.6.17
   resolution: "@storybook/addon-backgrounds@npm:7.6.17"
@@ -4456,6 +4471,19 @@ __metadata:
     lodash: ^4.17.21
     ts-dedent: ^2.0.0
   checksum: a50d281d8c3a39d411b6a997f16cbd001db431f4c5e27bdb0da10fb211c83fb8671d74b851563caa2a13afca7f26f08cba16bc50c53bd629c9883c2214c6aacd
+  languageName: node
+  linkType: hard
+
+"@storybook/addon-controls@npm:8.4.7":
+  version: 8.4.7
+  resolution: "@storybook/addon-controls@npm:8.4.7"
+  dependencies:
+    "@storybook/global": ^5.0.0
+    dequal: ^2.0.2
+    ts-dedent: ^2.0.0
+  peerDependencies:
+    storybook: ^8.4.7
+  checksum: 5d91916bfc767c119b4d938bf8ecaee8a8d661068f11b5f8d73027626340a972eaa503d8ef75c64aa61da4e8b846c3bc3f66529e75f76d830811ce04b17bc367
   languageName: node
   linkType: hard
 
