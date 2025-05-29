@@ -53,7 +53,7 @@ const StyledButton = styled('button').withConfig<StyledButtonOwnProps>({
       : `${BASE_PAD - HALF_SHADOW}px ${SPACING_POINTS[2]}px`,
     border: `${BORDER_WIDTH_FORM_ELEMENT} solid transparent`,
     borderRadius: 0,
-    color: buttonTextColour,
+    color: 'red',
     backgroundColor: buttonColour,
     boxShadow: `0 ${BUTTON_SHADOW_SIZE} 0 ${buttonShadowColour}`,
     textAlign: 'center',
