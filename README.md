@@ -107,7 +107,7 @@ This project is part of a larger initiative to componetise large scale React app
 Import from the package root, or from a component's own subpath:
 
 ```js
-import { Heading, Paragraph } from 'govuk-react';
+import { Body, Heading } from 'govuk-react';
 import DateField from 'govuk-react/date-field';
 ```
 

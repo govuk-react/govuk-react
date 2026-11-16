@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react';
 
 import React, { Component } from 'react';
 
-import Paragraph from '../paragraph';
+import Paragraph from '../../legacy/paragraph';
 
 import { SkipLink } from '.';
 
