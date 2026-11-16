@@ -11,7 +11,9 @@ import generateMarkdown from './markdown/generateMarkdown';
 
 const exportedNames = new Set(
   Array.from(
-    fs.readFileSync(path.resolve(__dirname, '../../govuk-react/src/index.ts'), 'utf8').matchAll(/as (\w+) \}/g),
+    fs
+      .readFileSync(path.resolve(__dirname, '../../govuk-react/src/index.ts'), 'utf8')
+      .matchAll(/export \{ (?:default as )?(\w+) \}/g),
     (match) => match[1]
   )
 );

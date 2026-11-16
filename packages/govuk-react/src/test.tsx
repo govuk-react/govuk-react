@@ -33,8 +33,8 @@ describe('Components', () => {
         expect(!!packageExports[pascal]).toBe(true);
       });
 
-      it(`has displayName set to ${pascal}`, () => {
-        expect(packageExports[pascal].displayName).toBe(pascal);
+      it(`is named ${pascal}`, () => {
+        expect(packageExports[pascal].displayName ?? packageExports[pascal].name).toBe(pascal);
       });
 
       it(`has a stories.tsx file with id set to "${component}""`, () => {

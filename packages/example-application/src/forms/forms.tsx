@@ -20,7 +20,7 @@ const Forms: React.FC = () => (
       path="/"
       element={
         <>
-          <GovUK.H2>Forms</GovUK.H2>
+          <GovUK.Heading size="l">Forms</GovUK.Heading>
           <GovUK.Paragraph>Which form example would you like to run?</GovUK.Paragraph>
           <GovUK.UnorderedList>
             <GovUK.ListItem>

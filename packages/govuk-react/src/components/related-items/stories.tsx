@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
-import { H3 } from '../heading';
+import { H3 } from '../../legacy/heading';
 import UnorderedList from '../unordered-list';
 import Link from '../link';
 import ListItem from '../list-item';

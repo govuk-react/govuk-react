@@ -16,7 +16,7 @@ export { default as FormGroup } from './components/form-group';
 export { default as GlobalStyle } from './components/global-style';
 export { default as GridCol } from './components/grid-col';
 export { default as GridRow } from './components/grid-row';
-export { default as Heading } from './components/heading';
+export { Heading } from './components/heading';
 export { default as HintText } from './components/hint-text';
 export { default as Input } from './components/input';
 export { default as InputField } from './components/input-field';
@@ -49,8 +49,6 @@ export { default as TopNav } from './components/top-nav';
 export { default as UnorderedList } from './components/unordered-list';
 export { default as VisuallyHidden } from './components/visually-hidden';
 export { default as WarningText } from './components/warning-text';
-
-export { H1, H2, H3, H4, H5, H6 } from './components/heading';
 
 // Icons
 export { Search as SearchIcon, ArrowLeft, Spinner, ButtonArrow } from './icons';

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { MEDIA_QUERIES } from '../../../../constants';
-import { H2 } from '../../../heading';
+import { H2 } from '../../../../legacy/heading';
 import { spacing } from '../../../../lib';
 import { BORDER_COLOUR } from 'govuk-colours';
 
