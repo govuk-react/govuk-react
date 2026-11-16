@@ -35,7 +35,7 @@
     "govuk-colours": "^1.1.0"
   },
   "peerDependencies": {
-    "react": ">=16.8.0"
+    "react": ">=19"
   },
   "devDependencies": {
     "@babel/cli": "7.23.4",

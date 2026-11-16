@@ -5,7 +5,7 @@
     "@govuk-react/constants": "^0.10.7"
   },
   "peerDependencies": {
-    "react": ">=16.8.0",
+    "react": ">=19",
     "styled-components": ">=5.1"
   },
   "scripts": {
