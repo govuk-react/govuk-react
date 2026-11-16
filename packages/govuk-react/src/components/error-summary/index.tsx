@@ -11,9 +11,9 @@ import { TEXT_COLOUR, ERROR_COLOUR, FOCUS_COLOUR } from 'govuk-colours';
 
 import { H2 } from '../../legacy/heading';
 import Paragraph from '../../legacy/paragraph';
-import UnorderedList from '../unordered-list';
+import UnorderedList from '../../legacy/unordered-list';
 import Link from '../link';
-import ListItem from '../list-item';
+import ListItem from '../../legacy/list-item';
 
 import {
   NTA_LIGHT,

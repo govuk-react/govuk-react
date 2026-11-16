@@ -8,7 +8,7 @@
 
 import * as React from 'react';
 import styled from 'styled-components';
-import UnorderedList from '../unordered-list';
+import UnorderedList from '../../legacy/unordered-list';
 import { NTA_LIGHT } from '../../constants';
 import { spacing } from '../../lib';
 

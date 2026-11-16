@@ -49,3 +49,18 @@ Markdown parsing is now up to your app. `Paragraph` parsed its children as markd
 - code blocks need their own element outside `Body`, because a `pre` isn't valid inside a `p`
 
 There is no equivalent for the other whitespace props (`margin`, `padding` and so on).
+
+## List (was UnorderedList, OrderedList and ListItem)
+
+`UnorderedList`, `OrderedList` and `ListItem` are replaced by govuk-frontend-react's `List`. Use plain `li` elements for items.
+
+| 0.x                                                      | 1.0                                       |
+| -------------------------------------------------------- | ----------------------------------------- |
+| `import UnorderedList from 'govuk-react/unordered-list'` | `import { List } from 'govuk-react/list'` |
+| `<UnorderedList>`                                        | `<List variant="bullet">`                 |
+| `<OrderedList>`                                          | `<List variant="number">`                 |
+| `listStyleType="none"`                                   | `<List>` (no variant)                     |
+| `<ListItem>`                                             | `<li>`                                    |
+| `mb={n}` on the list                                     | `marginBottom={n}`                        |
+
+`List` renders an `ol` for `variant="number"` and a `ul` otherwise. Other `listStyleType` values and the whitespace props have no equivalent. `spaced` adds govuk-frontend's extra space between items.

@@ -37,17 +37,17 @@ const Results: React.FC<ResultsProps> = ({
       <GovUK.Body>
         Consequat adipisicing aliquip eiusmod nostrud et proident non id consequat aliquip eiusmod aliquip.
       </GovUK.Body>
-      <GovUK.UnorderedList>
-        <GovUK.ListItem>Name: {firstName}</GovUK.ListItem>
-        <GovUK.ListItem>Description: {description}</GovUK.ListItem>
-        <GovUK.ListItem>Nationality: {nationality?.join(', ')}</GovUK.ListItem>
-        <GovUK.ListItem>
+      <GovUK.List variant="bullet">
+        <li>Name: {firstName}</li>
+        <li>Description: {description}</li>
+        <li>Nationality: {nationality?.join(', ')}</li>
+        <li>
           Date of birth: {dob?.day}/{dob?.month}/{dob?.year}
-        </GovUK.ListItem>
-        <GovUK.ListItem>Animal: {animal}</GovUK.ListItem>
-        <GovUK.ListItem>Multiple pets: {hasMultiplePets}</GovUK.ListItem>
-        <GovUK.ListItem>Pet photo: {photoString && <img alt="Your pet" src={photoString} />}</GovUK.ListItem>
-      </GovUK.UnorderedList>
+        </li>
+        <li>Animal: {animal}</li>
+        <li>Multiple pets: {hasMultiplePets}</li>
+        <li>Pet photo: {photoString && <img alt="Your pet" src={photoString} />}</li>
+      </GovUK.List>
     </>
   );
 };
