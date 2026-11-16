@@ -2,7 +2,7 @@
 
 const program = require('commander');
 const { version } = require('../package.json');
-const doc = require('../dist/govuk-react-api-docs.cjs.prod.js');
+const doc = require('../dist/index.js');
 
 program.version(version).usage('<glob-to-components> <markdown-file>');
 

@@ -9,9 +9,12 @@ import _ from 'lodash';
 
 import generateMarkdown from './markdown/generateMarkdown';
 
-// components is imported via require so that we can parse the names of exports
-/* eslint-disable-next-line @typescript-eslint/no-var-requires */
-const components = require('govuk-react');
+const exportedNames = new Set(
+  Array.from(
+    fs.readFileSync(path.resolve(__dirname, '../../govuk-react/src/index.ts'), 'utf8').matchAll(/as (\w+) \}/g),
+    (match) => match[1]
+  )
+);
 /* eslint-disable-next-line @typescript-eslint/no-var-requires */
 const docgen = require('react-docgen-typescript');
 
@@ -67,7 +70,7 @@ async function generateApiForFile(file) {
 function shouldDocumentComponent(file) {
   // only document components that are exported from packages/govuk-react/src/index.ts
   const name = getComponentNameFromFile(file);
-  return Object.prototype.hasOwnProperty.call(components, name);
+  return exportedNames.has(name);
 }
 
 async function generateApiForFiles(files) {

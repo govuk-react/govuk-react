@@ -21,7 +21,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": false,
     "paths": {
-      "@govuk-react/*": ["./components/*/src/index.tsx", "./packages/*/src/index.tsx"],
       "govuk-react": ["./packages/govuk-react/src/index.ts"],
       "@storybook/react": ["./node_modules/@storybook/react/dist/index.d.ts"],
       "storybook/actions": ["./node_modules/storybook/dist/actions/index.d.ts"]
@@ -34,5 +33,5 @@
     "types": ["node", "vite/client", "vitest/globals"]
   },
   "exclude": ["node_modules", "**/node_modules/*"],
-  "include": ["./components/*/src/**/*", "./packages/*/src/**/*", "./scripts/**/*"]
+  "include": ["./packages/*/src/**/*", "./scripts/**/*"]
 }

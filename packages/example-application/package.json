@@ -34,7 +34,6 @@
   "devDependencies": {
     "@playwright/test": "^1.65.1",
     "@types/json-schema": "7.0.13",
-    "http-server": "^14.1.1",
-    "workspace-alias": "^0.1.0"
+    "http-server": "^14.1.1"
   }
 }

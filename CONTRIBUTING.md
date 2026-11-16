@@ -20,11 +20,7 @@ pnpm start
 
 ## Creating a new component
 
-To create a new component:
-
-- `pnpm create-component my-new-component` where _my-new-component_ is the name of your new component.
-
-This creates a folder named _my-new-component_ in `src/components` with the component file (index.js), a basic render test (test.js), and a default story (stories.js). You will need to add this to `src/stories/index.js` to view it in storybook.
+Add a folder in `packages/govuk-react/src/components` with the component (`index.tsx`), a test (`test.tsx`) and stories (`stories.tsx`). Export it from `packages/govuk-react/src/index.ts` and add an entry in `packages/govuk-react/tsup.config.ts`.
 
 ## Unit testing
 
@@ -106,11 +102,11 @@ We want to be router agnostic. We want to support parent projects using React Ro
 
 Historically components were build to have no white space around them. They were then wrapped with the `withWhiteSpace` HOC to set the default spacing below the component and also provide support for an `mb` prop to allow the parent application to override this spacing.
 
-We have found that the use of the `withWhiteSpace` HOC can be problematic when it comes to applying complex styling rules involving descendent selectors, and thus it's use is now deprecated. Instead equivalent and enhanced facilities have been added to the `spacing` library in `@govuk-react/lib`.
+We have found that the use of the `withWhiteSpace` HOC can be problematic when it comes to applying complex styling rules involving descendent selectors, and thus it's use is now deprecated. Instead equivalent and enhanced facilities have been added to the `spacing` library in `govuk-react/lib`.
 
 At the time of writing we are at the beginning of the process of transitioning to this new spacing method.
 
-Components are built to have white space around them to match their equivalents in [govuk-frontend](https://github.com/alphagov/govuk-frontend). To assist with this, styling utility function are provided in the `spacing` library in `@govuk-react/lib`. Typically a component will use the `withWhiteSpace` function within a component to generate a styling function to apply to a styled component.
+Components are built to have white space around them to match their equivalents in [govuk-frontend](https://github.com/alphagov/govuk-frontend). To assist with this, styling utility function are provided in the `spacing` library in `govuk-react/lib`. Typically a component will use the `withWhiteSpace` function within a component to generate a styling function to apply to a styled component.
 
 The `withWhiteSpace` function accepts default values for both `padding` and `margin`, and also provides support for overriding those defaults with equivalently named props. Spacing styles created are responsive and adjust for mobile/tablet sizes. For backward compatibility with the `withWhiteSpace` HOC it also supports a `marginBottom` config and `mb` prop.
 
