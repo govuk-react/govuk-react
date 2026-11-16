@@ -20,8 +20,9 @@
     "test:snapshot": "vitest run -u",
     "test:unit": "vitest run",
     "test:types": "tsc --noEmit --declaration -p ./tsconfig.json",
-    "test": "cross-env CI=true pnpm test:unit && pnpm eslint && pnpm test:types",
-    "format": "prettier --write \"**/*.{js,mjs,cjs,jsx,ts,mts,tsx}\""
+    "test": "cross-env CI=true pnpm test:unit && pnpm eslint && pnpm format:check && pnpm test:types",
+    "format": "prettier --write \"**/*.{js,mjs,cjs,jsx,ts,mts,tsx}\"",
+    "format:check": "prettier --check \"**/*.{js,mjs,cjs,jsx,ts,mts,tsx}\""
   },
   "description": "A port of the govuk-frontend components for React using styled-components.",
   "main": "lib/index.js",
@@ -78,7 +79,7 @@
     "jest-styled-components": "^7.2.0",
     "jsdom": "^31.0.1",
     "mkdirp-promise": "^5.0.1",
-    "prettier": "^2.3.0",
+    "prettier": "^3.10.1",
     "react": "^18.2.0",
     "react-docgen-typescript": "^2.1.0",
     "react-dom": "^18.2.0",

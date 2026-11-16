@@ -89,8 +89,9 @@ export const SearchBox: SearchBoxType = React.forwardRef<HTMLDivElement, SearchB
 
 interface SearchBoxProps extends React.HTMLAttributes<HTMLDivElement>, WithWhiteSpaceProps {}
 
-export interface SearchBoxType<T = HTMLDivElement>
-  extends React.ForwardRefExoticComponent<SearchBoxProps & React.RefAttributes<T>> {
+export interface SearchBoxType<T = HTMLDivElement> extends React.ForwardRefExoticComponent<
+  SearchBoxProps & React.RefAttributes<T>
+> {
   Input?: React.ElementType;
   Button?: React.ElementType;
 }

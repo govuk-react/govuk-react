@@ -8,7 +8,16 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Welcome', 'Example Application', 'Form', 'Typography', 'Page & Layout', 'Navigation', 'Utility', 'Docs'],
+        order: [
+          'Welcome',
+          'Example Application',
+          'Form',
+          'Typography',
+          'Page & Layout',
+          'Navigation',
+          'Utility',
+          'Docs',
+        ],
       },
     },
   },

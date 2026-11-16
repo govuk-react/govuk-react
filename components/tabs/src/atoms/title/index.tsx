@@ -30,7 +30,7 @@ export interface TabsTitleType extends React.ForwardRefExoticComponent<TabsTitle
   (props: TabsTitlePropsWithoutAs, ref?: TabsTitleRefType): React.ReactElement<TabsTitlePropsWithoutAs>;
   <
     AsC extends string | React.ComponentType<TabsTitleOwnProps> = 'h2',
-    FAsC extends string | React.ComponentType<TabsTitleOwnProps> = AsC
+    FAsC extends string | React.ComponentType<TabsTitleOwnProps> = AsC,
   >(
     props: TabsTitlePropsWithAs<AsC, FAsC>,
     ref?: React.Ref<AsC>
@@ -44,7 +44,7 @@ type TabsTitlePropsWithoutAs = StyledComponentProps<'h2', never, TabsTitleOwnPro
 
 type TabsTitlePropsWithAs<
   AsC extends string | React.ComponentType<TabsTitleOwnProps>,
-  FAsC extends string | React.ComponentType<TabsTitleOwnProps> = AsC
+  FAsC extends string | React.ComponentType<TabsTitleOwnProps> = AsC,
 > = StyledComponentProps<AsC, never, TabsTitleOwnProps, never, FAsC> & {
   as?: AsC | undefined;
   forwardedAs?: FAsC | undefined;
