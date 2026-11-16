@@ -7,3 +7,4 @@ import ButtonArrow from './ButtonArrow';
 import SVGBase from './SVGBase';
 
 export { ArrowLeft, ArrowRight, IconImportant, Search, Spinner, ButtonArrow, SVGBase };
+export type { SVGProps } from './SVGBase';
