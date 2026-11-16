@@ -50,20 +50,24 @@ interface BackLinkOwnProps extends WithWhiteSpaceProps, React.AnchorHTMLAttribut
 
 type BackLinkRefType = React.Ref<HTMLAnchorElement>;
 
-export const BackLink = React.forwardRef(({ children = 'Back', ...props }: BackLinkOwnProps, ref: BackLinkRefType) => (
-  <StyledBackLink ref={ref} href={props?.href} {...props}>
-    {children}
-  </StyledBackLink>
-)) as BackLinkType;
-
-export interface BackLinkType extends React.ForwardRefExoticComponent<BackLinkOwnProps> {
-  (props: BackLinkPropsWithoutAs, ref?: BackLinkRefType): React.ReactElement<BackLinkPropsWithoutAs>;
+export function BackLink(
+  props: BackLinkPropsWithoutAs & { ref?: BackLinkRefType }
+): React.ReactElement<BackLinkPropsWithoutAs>;
+export function BackLink<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  <AsC extends string | React.ComponentType<any> = 'a', FAsC extends string | React.ComponentType<any> = AsC>(
-    props: BackLinkPropsWithAs<AsC, FAsC>,
-    ref?: React.Ref<AsC>
-  ): React.ReactElement<BackLinkPropsWithAs<AsC, FAsC>>;
+  AsC extends string | React.ComponentType<any> = 'a',
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  FAsC extends string | React.ComponentType<any> = AsC,
+>(props: BackLinkPropsWithAs<AsC, FAsC> & { ref?: React.Ref<AsC> }): React.ReactElement<BackLinkPropsWithAs<AsC, FAsC>>;
+export function BackLink({ children = 'Back', ...props }: BackLinkOwnProps & { ref?: BackLinkRefType }) {
+  return (
+    <StyledBackLink href={props?.href} {...props}>
+      {children}
+    </StyledBackLink>
+  );
 }
+
+export type BackLinkType = typeof BackLink;
 
 type BackLinkPropsWithoutAs = StyledComponentProps<'a', never, BackLinkOwnProps, never> & {
   as?: never | undefined;

@@ -118,19 +118,25 @@ interface GridColOwnProps extends GridColProps, React.HTMLAttributes<HTMLDivElem
 
 type GridColRefType = React.Ref<HTMLDivElement>;
 
-export const GridCol = React.forwardRef(
-  (
-    {
-      columnOneQuarter = false,
-      columnOneThird = false,
-      columnOneHalf = false,
-      columnTwoThirds = false,
-      columnThreeQuarters = false,
-      columnFull = false,
-      ...props
-    }: GridColOwnProps,
-    ref: GridColRefType
-  ) => (
+export function GridCol(
+  props: GridColPropsWithoutAs & { ref?: GridColRefType }
+): React.ReactElement<GridColPropsWithoutAs>;
+export function GridCol<
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  AsC extends string | React.ComponentType<any> = 'div',
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  FAsC extends string | React.ComponentType<any> = AsC,
+>(props: GridColPropsWithAs<AsC, FAsC> & { ref?: React.Ref<AsC> }): React.ReactElement<GridColPropsWithAs<AsC, FAsC>>;
+export function GridCol({
+  columnOneQuarter = false,
+  columnOneThird = false,
+  columnOneHalf = false,
+  columnTwoThirds = false,
+  columnThreeQuarters = false,
+  columnFull = false,
+  ...props
+}: GridColOwnProps & { ref?: GridColRefType }) {
+  return (
     <StyledGridCol
       columnOneThird={columnOneThird}
       columnOneHalf={columnOneHalf}
@@ -142,17 +148,10 @@ export const GridCol = React.forwardRef(
     >
       {props.children}
     </StyledGridCol>
-  )
-) as GridColType;
-
-export interface GridColType extends React.ForwardRefExoticComponent<GridColOwnProps> {
-  (props: GridColPropsWithoutAs, ref?: GridColRefType): React.ReactElement<GridColPropsWithoutAs>;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  <AsC extends string | React.ComponentType<any> = 'div', FAsC extends string | React.ComponentType<any> = AsC>(
-    props: GridColPropsWithAs<AsC, FAsC>,
-    ref?: React.Ref<AsC>
-  ): React.ReactElement<GridColPropsWithAs<AsC, FAsC>>;
+  );
 }
+
+export type GridColType = typeof GridCol;
 
 type GridColPropsWithoutAs = StyledComponentProps<'div', never, GridColOwnProps, never> & {
   as?: never | undefined;
