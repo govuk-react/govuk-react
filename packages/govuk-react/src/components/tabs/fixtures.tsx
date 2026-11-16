@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { BREAKPOINTS } from '../../constants';
 import { H2, H4 } from '../../legacy/heading';
-import SectionBreak from '../section-break';
+import { SectionBreak } from '../section-break';
 import Table from '../table';
 import { MemoryRouter, Route, Link, Routes, useParams, useLocation } from 'react-router-dom';
 
@@ -275,7 +275,7 @@ class ProposedClassPropertiesPlugin extends Component<{ defaultIndex: number }, 
         {arrProposedBabel.map(({ contentPanel, id }, index) => (
           <Tabs.Panel key={`${contentPanel}-babelPanel`} selected={tabIndex === index} id={id}>
             <H2>with Babel Plugin</H2>
-            <SectionBreak level="L" visible />
+            <SectionBreak size="l" visible />
             {contentPanel}
           </Tabs.Panel>
         ))}
