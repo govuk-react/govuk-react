@@ -18,7 +18,7 @@ describe('Back Link', () => {
   });
 
   it('calls onClick handler when clicked', async () => {
-    const clickHandler = jest.fn();
+    const clickHandler = vi.fn();
     const { getByText } = render(<BackLink onClick={clickHandler}>example</BackLink>);
 
     expect(clickHandler).not.toHaveBeenCalled();

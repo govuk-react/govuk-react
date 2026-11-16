@@ -4,6 +4,8 @@ import path from 'path';
 import * as packageExports from '.';
 import pkg from '../package.json';
 
+const stories = import.meta.glob<{ default: { id: string } }>('../../../components/*/src/stories.tsx', { eager: true });
+
 describe('Exports', () => {
   // all exports are truthy
   Object.keys(packageExports).map((exportName) =>
@@ -42,9 +44,7 @@ describe('Components', () => {
       });
 
       it(`has a stories.tsx file with id set to "${component}""`, () => {
-        // eslint-disable-next-line global-require, import/no-dynamic-require, @typescript-eslint/no-var-requires
-        const story = require(path.join(__dirname, `../../../components/${component}/src/stories.tsx`));
-        expect(story.default.id).toBe(component);
+        expect(stories[`../../../components/${component}/src/stories.tsx`].default.id).toBe(component);
       });
     })
   );

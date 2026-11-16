@@ -12,7 +12,7 @@ describe('GridCol', () => {
    * Make sure the setup is the same for every test
    */
   beforeEach(() => {
-    jest.resetModules();
+    vi.resetModules();
     process.env = { ...OLD_ENV };
     // eslint-disable-next-line no-console
     console.warn = () => {

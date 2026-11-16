@@ -31,7 +31,7 @@ describe('error summary', () => {
       { text: 'first error', targetName: 'first' },
       { text: 'second error', targetName: 'second' },
     ];
-    const onHandleErrorClick = jest.fn();
+    const onHandleErrorClick = vi.fn();
     const { getByText } = render(<ErrorSummary errors={errors} onHandleErrorClick={onHandleErrorClick} />);
 
     errors.forEach(({ text, targetName }) => {
