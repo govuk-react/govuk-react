@@ -8,7 +8,7 @@ describe('Fieldset.Legend', () => {
   // eslint-disable-next-line no-console
   const nativeError = console.error;
   beforeEach(() => {
-    jest.resetModules();
+    vi.resetModules();
     // eslint-disable-next-line no-console
     console.error = () => null;
   });

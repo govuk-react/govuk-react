@@ -97,6 +97,9 @@ module.exports = {
         jest: true,
         browser: true,
       },
+      globals: {
+        vi: 'readonly',
+      },
     },
     {
       files: ['stories.[jt]s?(x)', 'src/stories/**'],

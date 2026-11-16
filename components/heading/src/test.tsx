@@ -12,7 +12,7 @@ describe('Heading', () => {
   const nativeError = console.error;
   let warnCallCount;
   beforeEach(() => {
-    jest.resetModules();
+    vi.resetModules();
     process.env = { ...OLD_ENV };
     // eslint-disable-next-line no-console
     console.warn = () => {
