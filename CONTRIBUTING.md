@@ -55,16 +55,12 @@ pnpm run docs
 
 ## Releasing
 
-In order to prepare a release:
+To release:
 
-- ensure you have [gh cli](https://cli.github.com) installed (e.g. `brew install gh`)
-- run `./scripts/release.sh`, followed by a [semver increment](https://github.com/npm/node-semver#functions) e.g. `./scripts/release.sh patch` (if this is the first time running gh, you will be asked for your GitHub credentials).
-- this will open a PR on GitHub and draft a release
-- Edit the PR and write the release notes in the PR description (see release notes below)
-- get approval for the PR (reviewers should be reviewing the release notes in the PR description) then merge the PR
-- once the PR is merged, open the [draft release corresponding to the new version number on GitHub](https://github.com/govuk-react/govuk-react/releases), change the target branch to master, check the title and description and then click `Publish release`.
-
-When the tag is created, the CI server will automatically release to npm.
+- open a PR that bumps `version` in `packages/govuk-react/package.json` and merge it
+- run the [Publish workflow](https://github.com/govuk-react/govuk-react/actions/workflows/publish.yml) from `main`, choosing the npm dist-tag (`alpha` by default, `latest` for a stable release)
+- the workflow stages the package on npm; a maintainer approves it on npm to publish it
+- draft a GitHub release for the version with release notes (see below)
 
 ### Release notes
 
