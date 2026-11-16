@@ -49,3 +49,17 @@ Markdown parsing is now up to your app. `Paragraph` parsed its children as markd
 - code blocks need their own element outside `Body`, because a `pre` isn't valid inside a `p`
 
 There is no equivalent for the other whitespace props (`margin`, `padding` and so on).
+
+## Caption
+
+`Caption` is now govuk-frontend-react's `Caption`. It's a named export.
+
+| 0.x                                         | 1.0                                             |
+| ------------------------------------------- | ----------------------------------------------- |
+| `import Caption from 'govuk-react/caption'` | `import { Caption } from 'govuk-react/caption'` |
+| `<Caption>` (no size)                       | `<Caption size="xl">`                           |
+| `size="XL"` / `"XLARGE"` / `27`             | `size="xl"`                                     |
+| `size="L"` / `"LARGE"` / `24`               | `size="l"`                                      |
+| `size="M"` / `"MEDIUM"` / `19`              | `size="m"`                                      |
+
+`size` is now required, and numeric sizes are no longer accepted. There is no equivalent for the whitespace props (`mb`, `margin`, `padding` and so on).

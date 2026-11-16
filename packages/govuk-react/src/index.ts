@@ -3,7 +3,7 @@ export { default as BackLink } from './components/back-link';
 export { Body } from './components/body';
 export { default as Breadcrumbs } from './components/breadcrumbs';
 export { default as Button } from './components/button';
-export { default as Caption } from './components/caption';
+export { Caption } from './components/caption';
 export { default as Checkbox } from './components/checkbox';
 export { default as DateField } from './components/date-field';
 export { default as Details } from './components/details';
