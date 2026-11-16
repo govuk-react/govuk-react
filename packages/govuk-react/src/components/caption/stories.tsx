@@ -1,95 +1,59 @@
-/* eslint-disable react/prop-types */
-import type { StoryFn } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
-import { CAPTION_SIZES, HEADING_SIZES, TYPOGRAPHY_SCALE } from '../../constants';
-import Heading from '../../legacy/heading';
 
 import { Caption } from '.';
+import { Heading } from '../heading';
 
-export default {
+const meta = {
   title: 'Typography/Caption',
   id: 'caption',
   component: Caption,
+} satisfies Meta<typeof Caption>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: { size: 'xl', children: 'Heading text' },
 };
 
-const Template: StoryFn = (args) => <Caption {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  size: 'XL',
-  children: 'Heading text',
+export const PlacedWithAHeadingComponent: Story = {
+  args: { size: 'xl', children: 'Supporting heading text' },
+  render: (args) => (
+    <>
+      <Caption {...args} />
+      <Heading size="xl" headingLevel={1}>
+        Main heading text
+      </Heading>
+    </>
+  ),
 };
 
-const arrTypography = Object.keys(TYPOGRAPHY_SCALE);
-const captionOptions = [...Object.keys(CAPTION_SIZES), ...arrTypography];
-const headingOptions = [...Object.keys(HEADING_SIZES), ...arrTypography];
-
-export const PlacedWithAHeadingComponent: StoryFn = ({ size, children, headingSize, heading }) => (
-  <div>
-    <Caption size={size}>{children}</Caption>
-    <Heading size={headingSize}>{heading}</Heading>
-  </div>
-);
-
-PlacedWithAHeadingComponent.args = {
-  size: 'XL',
-  headingSize: 'XL',
-  children: 'Supporting heading text',
-  heading: 'Main heading text',
-};
-
-PlacedWithAHeadingComponent.argTypes = {
-  size: {
-    control: {
-      type: 'select',
-      options: captionOptions,
-    },
-  },
-  headingSize: {
-    control: {
-      type: 'select',
-      options: headingOptions,
-    },
-  },
-};
-
-export const PlacedInsideAHeadingComponent: StoryFn = ({ size, headingSize, children, heading }) => (
-  <div>
-    <Heading size={headingSize}>
-      <Caption size={size}>{children}</Caption>
-      {heading}
+export const PlacedInsideAHeadingComponent: Story = {
+  args: { size: 'xl', children: 'Supporting heading text' },
+  render: (args) => (
+    <Heading size="xl" headingLevel={1}>
+      <Caption {...args} />
+      Main heading text
     </Heading>
-  </div>
-);
-PlacedInsideAHeadingComponent.args = {
-  size: 'XL',
-  headingSize: 'XL',
-  children: 'Supporting heading text',
-  heading: 'Main heading text',
+  ),
 };
 
-PlacedInsideAHeadingComponent.argTypes = {
-  size: {
-    control: {
-      type: 'select',
-      options: captionOptions,
-    },
-  },
-  headingSize: {
-    control: {
-      type: 'select',
-      options: headingOptions,
-    },
-  },
+export const ShowingAllStandardCaptionSizesWithHeadings: Story = {
+  args: { size: 'xl', children: 'Supporting heading size xl' },
+  render: (args) => (
+    <>
+      <Caption {...args} />
+      <Heading size="xl" headingLevel={1}>
+        Main heading size xl
+      </Heading>
+      <Caption size="l">Supporting heading size l</Caption>
+      <Heading size="l">Main heading size l</Heading>
+      <Caption size="m">Supporting heading size m</Caption>
+      <Heading size="m" headingLevel={3}>
+        Main heading size m
+      </Heading>
+    </>
+  ),
 };
-
-export const ShowingAllStandardCaptionSizesWithHeadings: StoryFn = (args) => (
-  <>
-    <Caption {...args}>Supporting heading size XL (default)</Caption>
-    <Heading size="XL">Main heading size XL</Heading>
-    <Caption size="L">Supporting heading size L</Caption>
-    <Heading size="L">Main heading size L</Heading>
-    <Caption size="M">Supporting heading size M</Caption>
-    <Heading size="M">Main heading size M</Heading>
-  </>
-);
