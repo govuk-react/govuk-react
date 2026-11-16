@@ -1,7 +1,8 @@
 import type { Story } from '@storybook/react';
 
 import * as React from 'react';
-import { Table, H2 } from 'govuk-react';
+import Table from '@govuk-react/table';
+import { H2 } from '@govuk-react/heading';
 
 import { Tabs } from '.';
 import {

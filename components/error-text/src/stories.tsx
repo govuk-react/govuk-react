@@ -1,7 +1,10 @@
 import type { Story } from '@storybook/react';
 
 import * as React from 'react';
-import { Label, LabelText, HintText, Input } from 'govuk-react';
+import Label from '@govuk-react/label';
+import LabelText from '@govuk-react/label-text';
+import HintText from '@govuk-react/hint-text';
+import Input from '@govuk-react/input';
 
 import { ErrorText } from '.';
 
