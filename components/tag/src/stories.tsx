@@ -1,5 +1,5 @@
 import type { Story } from '@storybook/react';
-import { Table } from 'govuk-react';
+import Table from '@govuk-react/table';
 
 import * as React from 'react';
 
