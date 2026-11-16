@@ -1,7 +1,7 @@
 import * as React from 'react';
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 
 import { DateField } from '.';
 
@@ -11,7 +11,7 @@ export default {
   component: DateField,
 };
 
-const Template: Story<React.ComponentProps<typeof DateField>> = (args) => <DateField {...args} />;
+const Template: StoryFn<React.ComponentProps<typeof DateField>> = (args) => <DateField {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   input: {

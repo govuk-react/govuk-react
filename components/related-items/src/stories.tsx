@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -15,7 +15,7 @@ export default {
   component: RelatedItems,
 };
 
-export const Default: Story = (args) => (
+export const Default: StoryFn = (args) => (
   <RelatedItems {...args}>
     <H3>Travel abroad</H3>
     <UnorderedList listStyleType="none">

@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 import Paragraph from '@govuk-react/paragraph';
@@ -14,12 +14,12 @@ export default {
 const testText =
   'It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.';
 
-export const Default: Story = (args) => <InsetText {...args} />;
+export const Default: StoryFn = (args) => <InsetText {...args} />;
 Default.args = {
   children: testText,
 };
 
-export const UsingAParagraphForContents: Story = ({ children }: { children: string }) => (
+export const UsingAParagraphForContents: StoryFn = ({ children }: { children: string }) => (
   <InsetText>
     <Paragraph mb={0}>{children}</Paragraph>
   </InsetText>

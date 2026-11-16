@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 import { Link, BrowserRouter } from 'react-router-dom';
@@ -14,7 +14,7 @@ export default {
 const exampleParagraph =
   'Paragraph fields support markdown and allow for **bold** text and *italics*, as well as [links](https://en.wikipedia.org/wiki/Markdown). `Inline` code snippets are also supported, as well as code blocks PROVIDED they start on their own line';
 
-const Template: Story<React.ComponentProps<typeof Paragraph>> = (args) => <Paragraph {...args} />;
+const Template: StoryFn<React.ComponentProps<typeof Paragraph>> = (args) => <Paragraph {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

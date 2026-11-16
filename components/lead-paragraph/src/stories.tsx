@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -10,4 +10,4 @@ export default {
   component: LeadParagraph,
 };
 
-export const Default: Story = (args) => <LeadParagraph {...args}>LeadParagraph example</LeadParagraph>;
+export const Default: StoryFn = (args) => <LeadParagraph {...args}>LeadParagraph example</LeadParagraph>;

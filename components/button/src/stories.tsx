@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 import { ButtonArrow } from '@govuk-react/icons';
 
 import * as React from 'react';
@@ -11,7 +11,7 @@ export default {
   id: 'button',
   component: Button,
 };
-const Template: Story<React.ComponentProps<typeof Button>> = (args) => <Button {...args} />;
+const Template: StoryFn<React.ComponentProps<typeof Button>> = (args) => <Button {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -62,7 +62,7 @@ CustomColoursAllOptions.args = {
   children: 'Wacky colours',
 };
 
-export const RouterLinkButton: Story = (args) => (
+export const RouterLinkButton: StoryFn = (args) => (
   <MemoryRouter>
     <div>
       <Button {...args}>Home Link button</Button>

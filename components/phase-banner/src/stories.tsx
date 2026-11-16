@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -12,7 +12,7 @@ export default {
   component: PhaseBanner,
 };
 
-const Template: Story<React.ComponentProps<typeof PhaseBanner>> = (args) => <PhaseBanner {...args} />;
+const Template: StoryFn<React.ComponentProps<typeof PhaseBanner>> = (args) => <PhaseBanner {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

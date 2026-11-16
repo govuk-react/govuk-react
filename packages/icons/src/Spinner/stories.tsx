@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -8,7 +8,7 @@ export default {
   title: 'Utility/Icons/Spinner',
 };
 
-export const Spinner: Story = (args) => {
+export const Spinner: StoryFn = (args) => {
   return <SpinnerComponent {...args} title="Example Spinner implementation" />;
 };
 Spinner.args = {

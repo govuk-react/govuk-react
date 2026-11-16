@@ -1,7 +1,7 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 
 import { BackLink } from '.';
 
@@ -11,7 +11,7 @@ export default {
   component: BackLink,
 };
 
-const Template: Story = (args) => <BackLink onClick={action('go-back')} {...args} />;
+const Template: StoryFn = (args) => <BackLink onClick={action('go-back')} {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -21,7 +21,7 @@ const errors = [
   },
 ];
 
-export const Default: Story<React.ComponentProps<typeof ErrorSummary>> = (args) => <ErrorSummary {...args} />;
+export const Default: StoryFn<React.ComponentProps<typeof ErrorSummary>> = (args) => <ErrorSummary {...args} />;
 
 Default.args = {
   heading: 'Message to alert the user to a problem goes here',

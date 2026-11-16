@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 import * as React from 'react';
 import { CAPTION_SIZES, HEADING_SIZES, TYPOGRAPHY_SCALE } from '@govuk-react/constants';
 import Heading from '@govuk-react/heading';
@@ -12,7 +12,7 @@ export default {
   component: Caption,
 };
 
-const Template: Story = (args) => <Caption {...args} />;
+const Template: StoryFn = (args) => <Caption {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -24,7 +24,7 @@ const arrTypography = Object.keys(TYPOGRAPHY_SCALE);
 const captionOptions = [...Object.keys(CAPTION_SIZES), ...arrTypography];
 const headingOptions = [...Object.keys(HEADING_SIZES), ...arrTypography];
 
-export const PlacedWithAHeadingComponent: Story = ({ size, children, headingSize, heading }) => (
+export const PlacedWithAHeadingComponent: StoryFn = ({ size, children, headingSize, heading }) => (
   <div>
     <Caption size={size}>{children}</Caption>
     <Heading size={headingSize}>{heading}</Heading>
@@ -53,7 +53,7 @@ PlacedWithAHeadingComponent.argTypes = {
   },
 };
 
-export const PlacedInsideAHeadingComponent: Story = ({ size, headingSize, children, heading }) => (
+export const PlacedInsideAHeadingComponent: StoryFn = ({ size, headingSize, children, heading }) => (
   <div>
     <Heading size={headingSize}>
       <Caption size={size}>{children}</Caption>
@@ -83,7 +83,7 @@ PlacedInsideAHeadingComponent.argTypes = {
   },
 };
 
-export const ShowingAllStandardCaptionSizesWithHeadings: Story = (args) => (
+export const ShowingAllStandardCaptionSizesWithHeadings: StoryFn = (args) => (
   <>
     <Caption {...args}>Supporting heading size XL (default)</Caption>
     <Heading size="XL">Main heading size XL</Heading>

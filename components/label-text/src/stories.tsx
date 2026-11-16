@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 import Label from '@govuk-react/label';
@@ -14,7 +14,7 @@ export default {
   component: LabelText,
 };
 
-const Template: Story<React.ComponentProps<typeof LabelText>> = (args) => <LabelText {...args} />;
+const Template: StoryFn<React.ComponentProps<typeof LabelText>> = (args) => <LabelText {...args} />;
 
 export const Default = Template.bind({});
 

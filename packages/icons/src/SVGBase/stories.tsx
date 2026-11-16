@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -8,7 +8,7 @@ export default {
   title: 'Utility/Icons/SVGBase',
 };
 
-export const SVGBase: Story = (args) => {
+export const SVGBase: StoryFn = (args) => {
   return (
     <SVGBaseComponent {...args} title="Example of SVGBase">
       <polygon points="250,60 100,400 400,400" />

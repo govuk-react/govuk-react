@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 import styled from 'styled-components';
@@ -15,7 +15,7 @@ export default {
   component: Page,
 };
 
-const Template: Story<React.ComponentProps<typeof Page>> = (args) => <Page {...args} />;
+const Template: StoryFn<React.ComponentProps<typeof Page>> = (args) => <Page {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

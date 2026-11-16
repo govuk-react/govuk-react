@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 import Table from '@govuk-react/table';
 
 import * as React from 'react';
@@ -11,12 +11,12 @@ export default {
   component: Tag,
 };
 
-export const Default: Story = (args) => <Tag {...args} />;
+export const Default: StoryFn = (args) => <Tag {...args} />;
 Default.args = {
   children: 'beta',
 };
 
-export const Inactive: Story = (args) => <Tag {...args} />;
+export const Inactive: StoryFn = (args) => <Tag {...args} />;
 Inactive.args = {
   children: 'inactive',
   inactive: true,
@@ -27,14 +27,14 @@ Inactive.parameters = {
   },
 };
 
-export const Custom: Story = (args) => <Tag {...args} />;
+export const Custom: StoryFn = (args) => <Tag {...args} />;
 Custom.args = {
   children: 'taxi',
   backgroundColor: '#0b0c0c',
   color: '#ffdd00',
 };
 
-export const ShowingOneOrTwoStatuses: Story = (args) => (
+export const ShowingOneOrTwoStatuses: StoryFn = (args) => (
   <Table>
     <Table.Row>
       <Table.CellHeader>Name of user</Table.CellHeader>
@@ -56,7 +56,7 @@ export const ShowingOneOrTwoStatuses: Story = (args) => (
 );
 ShowingOneOrTwoStatuses.args = {};
 
-export const AdditionalColours: Story = (args) => (
+export const AdditionalColours: StoryFn = (args) => (
   <Table>
     <Table.Row>
       <Table.CellHeader>Tint</Table.CellHeader>

@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 import Label from '@govuk-react/label';
@@ -14,9 +14,9 @@ export default {
   component: Input,
 };
 
-export const Default: Story = (args) => <Input type="text" {...args} />;
+export const Default: StoryFn = (args) => <Input type="text" {...args} />;
 
-export const WithLabel: Story = (args) => (
+export const WithLabel: StoryFn = (args) => (
   <Label>
     <LabelText>Example label</LabelText>
     <HintText>Example hint</HintText>

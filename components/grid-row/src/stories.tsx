@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 import styled from 'styled-components';
@@ -19,7 +19,7 @@ const Content = styled('div')({
 });
 Content.displayName = 'div';
 
-export const Default: Story = (args) => (
+export const Default: StoryFn = (args) => (
   <GridRow {...args}>
     <GridCol>
       <Content>Example</Content>

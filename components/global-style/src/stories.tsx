@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 import { GlobalStyle } from '.';
@@ -9,7 +9,7 @@ export default {
   component: GlobalStyle,
 };
 
-const Template: Story<React.ComponentProps<typeof GlobalStyle>> = (args) => <GlobalStyle {...args} />;
+const Template: StoryFn<React.ComponentProps<typeof GlobalStyle>> = (args) => <GlobalStyle {...args} />;
 
 export const Default = Template.bind({});
 Default.decorators = [

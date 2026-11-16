@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import React, { Component } from 'react';
 
@@ -12,7 +12,7 @@ export default {
   component: SkipLink,
 };
 
-export const Default: Story = (args) => <SkipLink {...args} />;
+export const Default: StoryFn = (args) => <SkipLink {...args} />;
 Default.args = {
   href: '#main-content',
   children: 'Skip to main content',

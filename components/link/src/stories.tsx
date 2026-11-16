@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 import { BrowserRouter, Link as RLink, Route, Routes } from 'react-router-dom';
@@ -11,7 +11,7 @@ export default {
   component: Link,
 };
 
-export const Default: Story = ({
+export const Default: StoryFn = ({
   muted,
   textColour,
   noVisitedState,
@@ -35,7 +35,7 @@ Default.args = {
   children: 'Link example',
 };
 
-export const WithReactRouter: Story = (args) => (
+export const WithReactRouter: StoryFn = (args) => (
   <BrowserRouter>
     <div>
       <Link as={RLink} to="/first" {...args}>
