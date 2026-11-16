@@ -541,6 +541,9 @@ importers:
       '@types/react-dom':
         specifier: ^19.3.0
         version: 19.3.0(@types/react@19.3.0)
+      govuk-frontend:
+        specifier: 6.6.0
+        version: 6.6.0
       react:
         specifier: ^19.3.1
         version: 19.3.1
@@ -3671,6 +3674,10 @@ packages:
 
   govuk-colours@1.1.0:
     resolution: {integrity: sha512-EcwnP9PsWubmTcsJtLF8w0D5b69j43LwYtSqGyPtO3903J0bbwB2t5ujWZ9UhsbLamuUmigBkNpLItU3/KuFqw==}
+
+  govuk-frontend@6.6.0:
+    resolution: {integrity: sha512-xctkWrQvLnvQt7fyjQ3MGX9S0wz0x0RQuLxCeoXF+s8EjGICG81/DYQGKN5qgO+0KVT12UAaRwUsGY6fulRcRg==}
+    engines: {node: '>= 4.2.0'}
 
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
@@ -9849,6 +9856,8 @@ snapshots:
   gopd@1.2.0: {}
 
   govuk-colours@1.1.0: {}
+
+  govuk-frontend@6.6.0: {}
 
   graceful-fs@4.2.11: {}
 
