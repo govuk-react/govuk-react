@@ -1,4 +1,3 @@
-/* eslint-disable import/no-dynamic-require, global-require, no-console */
 import path from 'path';
 import chalk from 'chalk';
 
