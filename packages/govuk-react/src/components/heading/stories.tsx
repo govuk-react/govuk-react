@@ -1,49 +1,61 @@
-import type { StoryFn } from '@storybook/react';
-
+import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 
-import { action } from 'storybook/actions';
+import { Heading } from '.';
 
-import Heading, { H1, H2, H3, H4, H5, H6 } from '.';
-
-export default {
+const meta = {
   title: 'Typography/Heading',
   id: 'heading',
   component: Heading,
+} satisfies Meta<typeof Heading>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: { size: 'l', children: 'Heading text' },
 };
 
-const Template: StoryFn<React.ComponentProps<typeof Heading>> = (args) => <Heading {...args} />;
-
-export const Default: StoryFn = Template.bind({});
-Default.args = {
-  size: 'LARGE',
-  children: 'Heading text',
+export const LevelAliases: Story = {
+  args: { size: 'xl' },
+  render: () => (
+    <>
+      <Heading size="xl" headingLevel={1}>
+        H1
+      </Heading>
+      <Heading size="l">H2</Heading>
+      <Heading size="m" headingLevel={3}>
+        H3
+      </Heading>
+      <Heading size="s" headingLevel={4}>
+        H4
+      </Heading>
+      <Heading size="s" headingLevel={5}>
+        H5
+      </Heading>
+      <Heading size="s" headingLevel={6}>
+        H6
+      </Heading>
+    </>
+  ),
 };
 
-export const LevelAliases: StoryFn = (args) => (
-  <>
-    <H1 {...args}>H1</H1>
-    <H2>H2</H2>
-    <H3>H3</H3>
-    <H4>H4</H4>
-    <H5>H5</H5>
-    <H6>H6</H6>
-  </>
-);
-export const DifferingSizes: StoryFn = (args) => (
-  <>
-    <H6 size={80} {...args}>
-      h6 with XXLARGE style
-    </H6>
-    <Heading as="h2" size={16}>
-      h2 with XSMALL style
-    </Heading>
-    <H3 size="LARGE">H3 with size large</H3>
-  </>
-);
+export const DifferingSizes: Story = {
+  args: { size: 'xl' },
+  render: () => (
+    <>
+      <Heading size="xl" headingLevel={6}>
+        h6 with xl size
+      </Heading>
+      <Heading size="s">h2 with s size</Heading>
+      <Heading size="l" headingLevel={3}>
+        h3 with l size
+      </Heading>
+    </>
+  ),
+};
 
-export const PropsPassThrough: StoryFn = Template.bind({});
-PropsPassThrough.args = {
-  onClick: action('onClick'),
-  children: 'Click me',
+export const PropsPassThrough: Story = {
+  args: { size: 'xl', id: 'heading-id', children: 'Click me' },
 };

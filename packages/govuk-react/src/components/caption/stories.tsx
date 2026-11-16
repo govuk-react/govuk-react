@@ -2,7 +2,7 @@
 import type { StoryFn } from '@storybook/react';
 import * as React from 'react';
 import { CAPTION_SIZES, HEADING_SIZES, TYPOGRAPHY_SCALE } from '../../constants';
-import Heading from '../heading';
+import Heading from '../../legacy/heading';
 
 import { Caption } from '.';
 

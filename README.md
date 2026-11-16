@@ -45,12 +45,14 @@ npm install govuk-react styled-components @types/styled-components --save
 ```
 
 ```jsx
-import { Button } from 'govuk-react'
+import { Button } from 'govuk-react';
 
-const MyComponent = ({title}) => (<div>
-  <h1>{title}</h1>
-  <Button />
-</div>)
+const MyComponent = ({ title }) => (
+  <div>
+    <h1>{title}</h1>
+    <Button />
+  </div>
+);
 ```
 
 See the [Storybook](https://govuk-react.github.io/govuk-react) for examples of all available components.
@@ -70,7 +72,9 @@ import { Link } from 'govuk-react/link';
 const MyComponent = () => (
   <nav>
     <BrowserRouter>
-      <Link as={RouterLink} to="https://example.com">example</Link>
+      <Link as={RouterLink} to="https://example.com">
+        example
+      </Link>
     </BrowserRouter>
   </nav>
 );
@@ -81,6 +85,7 @@ const MyComponent = () => (
 Use of these components assumes the following from the peer project:
 
 - The govuk-react `GlobalStyle` component is included on all pages.
+- `govuk-frontend` is installed and its CSS (`govuk-frontend/dist/govuk/govuk-frontend.min.css`) is loaded. Components migrated to govuk-frontend-react rely on it; see [MIGRATION.md](MIGRATION.md).
 - The GDS Transport font face is included ([for gov.uk domains only](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk))
 - Optionally, either [normalize.css](https://necolas.github.io/normalize.css/) or [sanitize.css](https://csstools.github.io/sanitize.css/) is used as a CSS reset. We don't test for this, so please raise an issue if you find any problems with compatibility.
 - Other than the reset, no other styles affecting generic elements (without classes, IDs etc) are present in the CSS.
@@ -102,9 +107,13 @@ This project is part of a larger initiative to componetise large scale React app
 Import from the package root, or from a component's own subpath:
 
 ```js
-import { H1, Paragraph } from 'govuk-react';
+import { Heading, Paragraph } from 'govuk-react';
 import DateField from 'govuk-react/date-field';
 ```
+
+## Migrating to 1.0
+
+See [MIGRATION.md](MIGRATION.md).
 
 ## About the GDS font
 

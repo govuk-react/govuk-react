@@ -9,6 +9,8 @@ import _ from 'lodash';
 
 import generateMarkdown from './markdown/generateMarkdown';
 
+// Only components implemented here (default exports). Components re-exported from
+// govuk-frontend-react are documented there.
 const exportedNames = new Set(
   Array.from(
     fs.readFileSync(path.resolve(__dirname, '../../govuk-react/src/index.ts'), 'utf8').matchAll(/as (\w+) \}/g),

@@ -26,6 +26,7 @@
   "dependencies": {
     "@govuk-react/icon-crown": "0.1.0",
     "govuk-colours": "^1.1.0",
+    "govuk-frontend-react": "1.0.0-alpha.0",
     "hex-rgb": "^4.0.0",
     "multi-input-input": "0.0.3",
     "polished": "^4.3.1",
@@ -35,7 +36,8 @@
   "peerDependencies": {
     "react": ">=19",
     "react-dom": ">=19",
-    "styled-components": ">=5.1"
+    "styled-components": ">=5.1",
+    "govuk-frontend": "~6.6.0"
   },
   "author": "Alasdair McLeay",
   "license": "MIT",
@@ -47,5 +49,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "govuk-frontend": "6.6.0"
   }
 }

@@ -469,6 +469,9 @@ importers:
       govuk-colours:
         specifier: ^1.1.0
         version: 1.1.0
+      govuk-frontend-react:
+        specifier: 1.0.0-alpha.0
+        version: 1.0.0-alpha.0(govuk-frontend@6.6.0)(react@19.3.1)
       hex-rgb:
         specifier: ^4.0.0
         version: 4.3.0
@@ -493,6 +496,10 @@ importers:
       styled-components:
         specifier: '>=5.1'
         version: 5.3.1(@babel/core@7.23.0(supports-color@5.4.0))(react-dom@19.3.1(react@19.3.1))(react-is@19.3.1)(react@19.3.1)
+    devDependencies:
+      govuk-frontend:
+        specifier: 6.6.0
+        version: 6.6.0
 
   packages/images: {}
 
@@ -1555,6 +1562,12 @@ packages:
     resolution: {integrity: sha512-+2MNKbUUh+H6N6GPy3E6Oc9mwJ0rH+J08A8StJ7s5xCvBC6fXMzMWiHbjrelzj0MpXM95hv0dfIzH9aKy+jYvA==}
     peerDependencies:
       react: '>=16.2.0'
+
+  '@govuk-react/icon-crown@0.2.0':
+    resolution: {integrity: sha512-LivMb2j92t4GR7v67Zuhpd9kRfx99wO+q9HMefOQkw5RzLkshXMM8ku20yOgUe/GOTDzqSsKAXgH6KkvU3tsAQ==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      react: '>=19'
 
   '@humanfs/core@0.19.2':
     resolution: {integrity: sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA==}
@@ -2850,6 +2863,10 @@ packages:
     resolution: {integrity: sha512-neHB9xuzh/wk0dIHweyAXv2aPGZIVk3pLMe+/RNzINf17fe0OG96QroktYAUm7SM1PBnzTabaLboqqxDyMU+SQ==}
     engines: {node: '>=6'}
 
+  clsx@2.1.1:
+    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
+    engines: {node: '>=6'}
+
   codacy-coverage@3.4.0:
     resolution: {integrity: sha512-A0ats3/gZtOw76muu++HZ6QrInztWjjLefkLJmmBpjPfyn6nNwNLoApmGmj3F3dfgl2+o6u5GwPnUBkKdfKXTQ==}
     engines: {node: '>= 8.12.0'}
@@ -3674,6 +3691,13 @@ packages:
 
   govuk-colours@1.1.0:
     resolution: {integrity: sha512-EcwnP9PsWubmTcsJtLF8w0D5b69j43LwYtSqGyPtO3903J0bbwB2t5ujWZ9UhsbLamuUmigBkNpLItU3/KuFqw==}
+
+  govuk-frontend-react@1.0.0-alpha.0:
+    resolution: {integrity: sha512-Njva5pkr4UQicCB9DoOGDX8rq5Oq5ubHV4VAqB1dsjBpIvUBjp8QuGXX4faRWvo9wxxbVHQIpJ8gyoNBK1kzkQ==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      govuk-frontend: ~6.6.0
+      react: '>=19'
 
   govuk-frontend@6.6.0:
     resolution: {integrity: sha512-xctkWrQvLnvQt7fyjQ3MGX9S0wz0x0RQuLxCeoXF+s8EjGICG81/DYQGKN5qgO+0KVT12UAaRwUsGY6fulRcRg==}
@@ -7378,6 +7402,10 @@ snapshots:
     dependencies:
       react: 19.3.1
 
+  '@govuk-react/icon-crown@0.2.0(react@19.3.1)':
+    dependencies:
+      react: 19.3.1
+
   '@humanfs/core@0.19.2':
     dependencies:
       '@humanfs/types': 0.15.0
@@ -8761,6 +8789,8 @@ snapshots:
       kind-of: 6.0.3
       shallow-clone: 3.0.1
 
+  clsx@2.1.1: {}
+
   codacy-coverage@3.4.0:
     dependencies:
       bluebird: 3.7.2
@@ -9856,6 +9886,13 @@ snapshots:
   gopd@1.2.0: {}
 
   govuk-colours@1.1.0: {}
+
+  govuk-frontend-react@1.0.0-alpha.0(govuk-frontend@6.6.0)(react@19.3.1):
+    dependencies:
+      '@govuk-react/icon-crown': 0.2.0(react@19.3.1)
+      clsx: 2.1.1
+      govuk-frontend: 6.6.0
+      react: 19.3.1
 
   govuk-frontend@6.6.0: {}
 

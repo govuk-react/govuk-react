@@ -1,7 +1,7 @@
 /* eslint-disable max-classes-per-file */
 import React, { Component } from 'react';
 import { BREAKPOINTS } from '../../constants';
-import { H2, H4 } from '../heading';
+import { H2, H4 } from '../../legacy/heading';
 import SectionBreak from '../section-break';
 import Table from '../table';
 import { MemoryRouter, Route, Link, Routes, useParams, useLocation } from 'react-router-dom';

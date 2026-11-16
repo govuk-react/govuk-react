@@ -6,3 +6,5 @@ allowBuilds:
   core-js-pure: false
   esbuild: true
 linkWorkspacePackages: true
+minimumReleaseAgeExclude:
+  - govuk-frontend-react@1.0.0-alpha.0

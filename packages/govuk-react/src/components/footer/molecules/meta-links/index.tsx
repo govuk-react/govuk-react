@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { H2 } from '../../../heading';
+import { H2 } from '../../../../legacy/heading';
 import VisuallyHidden from '../../../visually-hidden';
 
 import UnorderedList from '../../atoms/unordered-list';

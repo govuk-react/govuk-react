@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 import Table from '../table';
-import { H2 } from '../heading';
+import { H2 } from '../../legacy/heading';
 
 import { Tabs } from '.';
 import {

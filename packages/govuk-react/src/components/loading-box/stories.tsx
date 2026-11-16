@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
-import { H1, H2 } from '../heading';
+import { H1, H2 } from '../../legacy/heading';
 import InputField from '../input-field';
 import Button from '../button';
 import Link from '../link';
