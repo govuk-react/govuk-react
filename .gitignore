@@ -42,8 +42,3 @@ govuk-react-*.tgz
 .idea/
 
 .pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions

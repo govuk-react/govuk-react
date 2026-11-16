@@ -62,7 +62,7 @@
     "styled-components": ">=5.1"
   },
   "scripts": {
-    "build": "yarn copy-readme",
+    "build": "pnpm copy-readme",
     "copy-readme": "cp ../../README.md .",
     "version": "yarn version"
   },

@@ -1,0 +1,13 @@
+packages:
+  - components/*
+  - packages/*
+
+allowBuilds:
+  core-js: false
+  core-js-pure: false
+  cypress: true
+  esbuild: true
+linkWorkspacePackages: true
+
+overrides:
+  '@babel/core@7.23.0>@babel/helpers': 7.23.1

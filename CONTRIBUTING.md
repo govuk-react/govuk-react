@@ -2,7 +2,7 @@
 
 ## Running the project locally
 
-[govuk-react](https://github.com/govuk-react/govuk-react) is a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md) using [yarn workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces/).
+[govuk-react](https://github.com/govuk-react/govuk-react) is a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md) using [pnpm workspaces](https://pnpm.io/workspaces).
 
 This is so that components can be published independently and applications can require different versions of a component if a breaking change is introduced in a version of a specific component. We are loosely following the [structure that Jest uses](https://github.com/facebook/jest).
 
@@ -13,16 +13,16 @@ As such, the build process for development is slightly more involved than an `np
 2. Install dependencies, link packages, compile and start storybook:
 
 ```sh
-yarn
-yarn build
-yarn start
+pnpm install
+pnpm build
+pnpm start
 ```
 
 ## Creating a new component
 
 To create a new component:
 
-- `yarn create-component -- my-new-component` where _my-new-component_ is the name of your new component.
+- `pnpm create-component my-new-component` where _my-new-component_ is the name of your new component.
 
 This creates a folder named _my-new-component_ in `src/components` with the component file (index.js), a basic render test (test.js), and a default story (stories.js). You will need to add this to `src/stories/index.js` to view it in storybook.
 
@@ -31,13 +31,13 @@ This creates a folder named _my-new-component_ in `src/components` with the comp
 To run unit & eslint tests:
 
 ```sh
-yarn test
+pnpm test
 ```
 
 To run & watch unit tests:
 
 ```sh
-yarn test:unit
+pnpm test:unit
 ```
 
 ## Generating docs
@@ -47,7 +47,7 @@ Markdown docs, in `README.md` files, are automatically generated based on the Re
 To generate docs:
 
 ```sh
-yarn docs
+pnpm run docs
 ```
 
 ## Opening a pull request
