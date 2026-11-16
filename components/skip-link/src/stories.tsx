@@ -18,7 +18,7 @@ Default.args = {
   children: 'Skip to main content',
 };
 
-class AutoFocussedSkipLink extends Component<{ href: string }> {
+class AutoFocussedSkipLink extends Component<{ href: string; children?: React.ReactNode }> {
   focusableRef;
 
   constructor(props) {

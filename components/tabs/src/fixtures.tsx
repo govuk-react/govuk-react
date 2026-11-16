@@ -90,7 +90,7 @@ class TableTabs extends Component<SharedProps, { tabIndex: number }> {
     this.handleClick = handleClick.bind(this);
   }
 
-  render(): JSX.Element {
+  render(): React.JSX.Element {
     const { tabIndex } = this.state;
     return (
       <Tabs>
@@ -141,7 +141,7 @@ class SimpleTabs extends Component<SharedProps, { tabIndex: number }> {
     this.handleClick = handleClick.bind(this);
   }
 
-  render(): JSX.Element {
+  render(): React.JSX.Element {
     const { tabIndex } = this.state;
     return (
       <Tabs>
@@ -201,7 +201,7 @@ class SimpleMapTabs extends Component<SharedProps, { tabIndex: number }> {
     this.handleClick = handleClick.bind(this);
   }
 
-  render(): JSX.Element {
+  render(): React.JSX.Element {
     const { tabIndex } = this.state;
     return (
       <Tabs>
@@ -255,7 +255,7 @@ class ProposedClassPropertiesPlugin extends Component<{ defaultIndex: number }, 
     this.state = { tabIndex: defaultIndex };
   }
 
-  render(): JSX.Element {
+  render(): React.JSX.Element {
     const { tabIndex } = this.state;
     return (
       <Tabs>

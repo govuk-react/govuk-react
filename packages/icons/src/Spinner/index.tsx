@@ -16,7 +16,7 @@ interface RectProps {
   animationDelay: number;
 }
 
-const Rect = styled.rect<RectProps>`
+const Rect = styled.rect<RectProps & React.SVGProps<SVGRectElement>>`
   animation: ${fadeInOut} 1s infinite linear;
   animation-delay: ${(props) => props.animationDelay * 83}ms;
 `;

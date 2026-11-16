@@ -46,12 +46,12 @@ export const SkipLink: SkipLinkType = React.forwardRef(
 );
 
 export interface SkipLinkType extends React.ForwardRefExoticComponent<SkipLinkOwnProps> {
-  (props: SkipLinkPropsWithoutAs, ref?: SkipLinkRefType): React.ReactElement<SkipLinkPropsWithoutAs>;
+  (props: SkipLinkPropsWithoutAs, ref?: SkipLinkRefType): React.ReactNode;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   <AsC extends string | React.ComponentType<any> = 'a', FAsC extends string | React.ComponentType<any> = AsC>(
     props: SkipLinkPropsWithAs<AsC, FAsC>,
     ref?: React.Ref<AsC>
-  ): React.ReactElement<SkipLinkPropsWithAs<AsC, FAsC>>;
+  ): React.ReactNode;
 }
 
 type SkipLinkPropsWithoutAs = StyledComponentProps<'a', never, SkipLinkOwnProps, never> & {

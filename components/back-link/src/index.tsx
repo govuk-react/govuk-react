@@ -59,12 +59,12 @@ export const BackLink: BackLinkType = React.forwardRef(
 );
 
 export interface BackLinkType extends React.ForwardRefExoticComponent<BackLinkOwnProps> {
-  (props: BackLinkPropsWithoutAs, ref?: BackLinkRefType): React.ReactElement<BackLinkPropsWithoutAs>;
+  (props: BackLinkPropsWithoutAs, ref?: BackLinkRefType): React.ReactNode;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   <AsC extends string | React.ComponentType<any> = 'a', FAsC extends string | React.ComponentType<any> = AsC>(
     props: BackLinkPropsWithAs<AsC, FAsC>,
     ref?: React.Ref<AsC>
-  ): React.ReactElement<BackLinkPropsWithAs<AsC, FAsC>>;
+  ): React.ReactNode;
 }
 
 type BackLinkPropsWithoutAs = StyledComponentProps<'a', never, BackLinkOwnProps, never> & {

@@ -146,12 +146,12 @@ export const GridCol: GridColType = React.forwardRef(
 );
 
 export interface GridColType extends React.ForwardRefExoticComponent<GridColOwnProps> {
-  (props: GridColPropsWithoutAs, ref?: GridColRefType): React.ReactElement<GridColPropsWithoutAs>;
+  (props: GridColPropsWithoutAs, ref?: GridColRefType): React.ReactNode;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   <AsC extends string | React.ComponentType<any> = 'div', FAsC extends string | React.ComponentType<any> = AsC>(
     props: GridColPropsWithAs<AsC, FAsC>,
     ref?: React.Ref<AsC>
-  ): React.ReactElement<GridColPropsWithAs<AsC, FAsC>>;
+  ): React.ReactNode;
 }
 
 type GridColPropsWithoutAs = StyledComponentProps<'div', never, GridColOwnProps, never> & {

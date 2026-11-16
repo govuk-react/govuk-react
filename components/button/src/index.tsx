@@ -230,12 +230,12 @@ export const Button: ButtonType = React.forwardRef(
 type ButtonRefType = React.Ref<HTMLButtonElement>;
 
 export interface ButtonType extends React.ForwardRefExoticComponent<ButtonOwnProps> {
-  (props: ButtonPropsWithoutAs, ref?: ButtonRefType): React.ReactElement<ButtonPropsWithoutAs>;
+  (props: ButtonPropsWithoutAs, ref?: ButtonRefType): React.ReactNode;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   <AsC extends string | React.ComponentType<any> = 'button', FAsC extends string | React.ComponentType<any> = AsC>(
     props: ButtonPropsWithAs<AsC, FAsC>,
     ref?: React.Ref<AsC>
-  ): React.ReactElement<ButtonPropsWithAs<AsC, FAsC>>;
+  ): React.ReactNode;
 }
 
 type ButtonPropsWithoutAs = StyledComponentProps<'button', never, ButtonOwnProps, never> & {
