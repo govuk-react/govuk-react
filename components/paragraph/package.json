@@ -7,7 +7,7 @@
     "react-markdown": "^5.0.3"
   },
   "peerDependencies": {
-    "react": ">=16.8.0",
+    "react": ">=19",
     "styled-components": ">=5.1"
   },
   "scripts": {

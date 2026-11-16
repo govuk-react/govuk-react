@@ -37,22 +37,28 @@ interface SkipLinkOwnProps extends React.AnchorHTMLAttributes<HTMLAnchorElement>
 
 type SkipLinkRefType = React.Ref<HTMLAnchorElement>;
 
-export const SkipLink: SkipLinkType = React.forwardRef(
-  ({ children = 'Skip to main content', href = '#content', ...props }: SkipLinkOwnProps, ref: SkipLinkRefType) => (
-    <StyledSkipLink ref={ref} href={href} {...props}>
+export function SkipLink(
+  props: SkipLinkPropsWithoutAs & { ref?: SkipLinkRefType }
+): React.ReactElement<SkipLinkPropsWithoutAs>;
+export function SkipLink<
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  AsC extends string | React.ComponentType<any> = 'a',
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  FAsC extends string | React.ComponentType<any> = AsC,
+>(props: SkipLinkPropsWithAs<AsC, FAsC> & { ref?: React.Ref<AsC> }): React.ReactElement<SkipLinkPropsWithAs<AsC, FAsC>>;
+export function SkipLink({
+  children = 'Skip to main content',
+  href = '#content',
+  ...props
+}: SkipLinkOwnProps & { ref?: SkipLinkRefType }) {
+  return (
+    <StyledSkipLink href={href} {...props}>
       {children}
     </StyledSkipLink>
-  )
-);
-
-export interface SkipLinkType extends React.ForwardRefExoticComponent<SkipLinkOwnProps> {
-  (props: SkipLinkPropsWithoutAs, ref?: SkipLinkRefType): React.ReactElement<SkipLinkPropsWithoutAs>;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  <AsC extends string | React.ComponentType<any> = 'a', FAsC extends string | React.ComponentType<any> = AsC>(
-    props: SkipLinkPropsWithAs<AsC, FAsC>,
-    ref?: React.Ref<AsC>
-  ): React.ReactElement<SkipLinkPropsWithAs<AsC, FAsC>>;
+  );
 }
+
+export type SkipLinkType = typeof SkipLink;
 
 type SkipLinkPropsWithoutAs = StyledComponentProps<'a', never, SkipLinkOwnProps, never> & {
   as?: never | undefined;

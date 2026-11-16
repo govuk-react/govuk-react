@@ -35,7 +35,7 @@
     "govuk-colours": "^1.1.0"
   },
   "peerDependencies": {
-    "react": ">=16.8.0"
+    "react": ">=19"
   },
   "devDependencies": {
     "@babel/cli": "7.23.4",
@@ -49,12 +49,13 @@
     "@govuk-react/api-docs": "0.10.7",
     "@preconstruct/cli": "^2.8.3",
     "@storybook/react": "10.6.7",
-    "@testing-library/dom": "^9.3.4",
+    "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^6.4.2",
-    "@testing-library/react": "^14.2.1",
+    "@testing-library/react": "^16.3.3",
     "@testing-library/user-event": "^14.5.2",
     "@types/node": "^24.19.2",
-    "@types/react": "^16.14.16",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "@types/react-router-dom": "5",
     "@types/styled-components": "^5.1.14",
     "@vitejs/plugin-react": "^5.2.0",
@@ -80,11 +81,11 @@
     "jsdom": "^31.0.1",
     "mkdirp-promise": "^5.0.1",
     "prettier": "^3.10.1",
-    "react": "^18.2.0",
+    "react": "^19.3.1",
     "react-docgen-typescript": "^2.1.0",
-    "react-dom": "^18.2.0",
+    "react-dom": "^19.3.1",
     "react-final-form": "^6.5.9",
-    "react-is": "^18.2.0",
+    "react-is": "^19.3.1",
     "react-router-dom": "^6.3.0",
     "rimraf": "^5.0.5",
     "storybook": "10.6.7",
@@ -126,8 +127,5 @@
       "!packages/storybook"
     ]
   },
-  "packageManager": "pnpm@12.21.0",
-  "resolutions": {
-    "@types/react": "16.14.16"
-  }
+  "packageManager": "pnpm@12.21.0"
 }

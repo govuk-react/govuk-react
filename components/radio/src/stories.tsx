@@ -106,7 +106,7 @@ RadioWithHintText.decorators = [
   ),
 ];
 
-const FinalFormWrapper: React.FC = ({ children }: { children: React.ReactNode }) => (
+const FinalFormWrapper: React.FC<{ children: React.ReactNode }> = ({ children }: { children: React.ReactNode }) => (
   <Form
     onSubmit={action('submit')}
     render={({ handleSubmit, form: { reset }, submitting, pristine, values }) => (

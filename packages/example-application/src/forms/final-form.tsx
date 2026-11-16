@@ -43,11 +43,11 @@ interface FieldProps<T, I> extends Omit<FFFieldProps<T, FieldRenderProps<T, HTML
 function Field<T, I>({ component: Component, name, ...props }: FieldProps<T, I>) {
   return (
     <FFField name={name} {...props}>
-      {({ input, meta }: { input: I; meta: { touched?: boolean; submitFailed?: boolean } }) => (
+      {({ input, meta }) => (
         <Component
           name={name}
           {...props}
-          input={input}
+          input={input as I}
           meta={{ ...meta, touched: meta.touched && meta.submitFailed }}
         />
       )}

@@ -108,7 +108,7 @@ export class TopNav extends Component<TopNavProps, { navigationOpen: boolean }> 
     }));
   };
 
-  render(): JSX.Element {
+  render(): React.JSX.Element {
     const { bgColor, color, company, serviceTitle, search, children, ...props } = this.props;
     const { navigationOpen } = this.state;
     return (
