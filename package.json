@@ -21,7 +21,9 @@
     "test:types": "tsc --noEmit --declaration -p ./tsconfig.json",
     "test": "cross-env CI=true pnpm test:unit && pnpm eslint && pnpm format:check && pnpm test:types",
     "format": "prettier --write \"**/*.{js,mjs,cjs,jsx,ts,mts,tsx}\"",
-    "format:check": "prettier --check \"**/*.{js,mjs,cjs,jsx,ts,mts,tsx}\""
+    "format:check": "prettier --check \"**/*.{js,mjs,cjs,jsx,ts,mts,tsx}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version && pnpm install --lockfile-only"
   },
   "description": "A port of the govuk-frontend components for React using styled-components.",
   "main": "lib/index.js",
@@ -44,6 +46,7 @@
     "@babel/preset-env": "7.22.20",
     "@babel/preset-react": "7.23.3",
     "@babel/preset-typescript": "7.23.0",
+    "@changesets/cli": "^3.0.3",
     "@eslint/js": "^9.39.5",
     "@govuk-react/api-docs": "0.10.7",
     "@storybook/react": "10.6.7",

@@ -55,27 +55,14 @@ pnpm run docs
 
 ## Releasing
 
-To release:
+Versions and changelogs are managed with [Changesets](https://github.com/changesets/changesets). We are in prerelease mode, so versions are `1.0.0-alpha.x`.
 
-- open a PR that bumps `version` in `packages/govuk-react/package.json` and merge it
-- run the [Publish workflow](https://github.com/govuk-react/govuk-react/actions/workflows/publish.yml) from `main`, choosing the npm dist-tag (`alpha` by default, `latest` for a stable release)
+- in each PR that changes the published package, run `pnpm changeset` and commit the generated file
+- on `main`, the Release workflow keeps a "Version packages" PR open that bumps the version and updates `CHANGELOG.md`
+- merge that PR, then run the [Publish workflow](https://github.com/govuk-react/govuk-react/actions/workflows/publish.yml) from `main` with the `alpha` dist-tag
 - the workflow stages the package on npm; a maintainer approves it on npm to publish it
-- draft a GitHub release for the version with release notes (see below)
 
-### Release notes
-
-Please refer to the commit history in GitHub since the last release. These can be copied directly and then categorised.
-
-Please list in this order, using `##` for headings:
-
-- Breaking changes or anything or similar significance
-- Enhancements
-- Bug fixes
-- Documentation
-
-Changes that have no user facing changes, such as our Github workflows, do not need to be included.
-
-Please look at [previous releases](https://github.com/govuk-react/govuk-react/releases) for examples.
+Write changeset summaries for users of the package. Changes with no user-facing effect, such as workflow changes, don't need a changeset.
 
 ## Conventions
 
