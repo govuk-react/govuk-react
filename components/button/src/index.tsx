@@ -247,7 +247,7 @@ type ButtonPropsWithAs<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   AsC extends string | React.ComponentType<any>,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  FAsC extends string | React.ComponentType<any> = AsC
+  FAsC extends string | React.ComponentType<any> = AsC,
 > = StyledComponentProps<AsC, never, ButtonOwnProps, never, FAsC> & {
   as?: AsC | undefined;
   forwardedAs?: FAsC | undefined;
