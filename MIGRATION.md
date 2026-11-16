@@ -27,3 +27,25 @@ Components move over one at a time. Anything not listed here is unchanged for no
 `size` is now required, and the heading renders an `h2` unless you set `headingLevel`. In 0.x a bare `<Heading>` rendered an extra large `h1`, so check headings without props keep their `h1`.
 
 There is no equivalent for the other whitespace props (`margin`, `padding` and so on), or for `as` with a non-heading element or a component.
+
+## Body (was Paragraph and LeadParagraph)
+
+`Paragraph` and `LeadParagraph` are replaced by govuk-frontend-react's `Body`, which renders a `p` with govuk-frontend's body classes. It's a named export, and the `govuk-react/paragraph` and `govuk-react/lead-paragraph` subpaths are removed.
+
+| 0.x                                             | 1.0                                                                                      |
+| ----------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `import Paragraph from 'govuk-react/paragraph'` | `import { Body } from 'govuk-react/body'`                                                |
+| `<Paragraph>`                                   | `<Body>`                                                                                 |
+| `<Paragraph supportingText>`                    | `<Body size="s" marginBottom={4}>` (`size="s"` alone has a 15px bottom margin, not 20px) |
+| `<LeadParagraph>`                               | `<Body size="l">`                                                                        |
+| `mb={n}`                                        | `marginBottom={n}`                                                                       |
+| markdown in `children`                          | JSX, e.g. `<strong>`, `<Link>` and `<code>`                                              |
+| `linkRenderer`                                  | your own link component in `children`                                                    |
+
+Markdown parsing is now up to your app. `Paragraph` parsed its children as markdown inside a `div`. `Body` renders its children as given inside a single `p`, so:
+
+- a string such as `**bold**` now shows the asterisks
+- text with blank lines between paragraphs becomes one paragraph, so use one `<Body>` per paragraph
+- code blocks need their own element outside `Body`, because a `pre` isn't valid inside a `p`
+
+There is no equivalent for the other whitespace props (`margin`, `padding` and so on).

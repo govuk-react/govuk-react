@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
-import Paragraph from '../paragraph';
+import Paragraph from '../../legacy/paragraph';
 import { Details } from '.';
 
 export default {

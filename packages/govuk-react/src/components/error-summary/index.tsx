@@ -10,7 +10,7 @@ import styled from 'styled-components';
 import { TEXT_COLOUR, ERROR_COLOUR, FOCUS_COLOUR } from 'govuk-colours';
 
 import { H2 } from '../../legacy/heading';
-import Paragraph from '../paragraph';
+import Paragraph from '../../legacy/paragraph';
 import UnorderedList from '../unordered-list';
 import Link from '../link';
 import ListItem from '../list-item';

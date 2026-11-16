@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import GridRow from '../grid-row';
 import { H2 } from '../../legacy/heading';
-import Paragraph from '../paragraph';
+import Paragraph from '../../legacy/paragraph';
 
 import { GridCol } from '.';
 

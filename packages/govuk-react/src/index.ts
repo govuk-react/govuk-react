@@ -1,5 +1,6 @@
 // Components
 export { default as BackLink } from './components/back-link';
+export { Body } from './components/body';
 export { default as Breadcrumbs } from './components/breadcrumbs';
 export { default as Button } from './components/button';
 export { default as Caption } from './components/caption';
@@ -23,7 +24,6 @@ export { default as InputField } from './components/input-field';
 export { default as InsetText } from './components/inset-text';
 export { default as Label } from './components/label';
 export { default as LabelText } from './components/label-text';
-export { default as LeadParagraph } from './components/lead-paragraph';
 export { default as Link } from './components/link';
 export { default as ListItem } from './components/list-item';
 export { default as LoadingBox } from './components/loading-box';
@@ -33,7 +33,6 @@ export { default as OrderedList } from './components/ordered-list';
 export { default as Page } from './components/page';
 export { default as Pagination } from './components/pagination';
 export { default as Panel } from './components/panel';
-export { default as Paragraph } from './components/paragraph';
 export { default as PhaseBanner } from './components/phase-banner';
 export { default as Radio } from './components/radio';
 export { default as RelatedItems } from './components/related-items';

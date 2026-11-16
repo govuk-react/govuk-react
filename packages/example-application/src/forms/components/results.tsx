@@ -31,12 +31,12 @@ const Results: React.FC<ResultsProps> = ({
         Back
       </GovUK.BackLink>
       <GovUK.Panel title="Application complete">Reference: XBR1N21R3</GovUK.Panel>
-      <GovUK.LeadParagraph>
+      <GovUK.Body size="l">
         Enim pariatur pariatur commodo incididunt ad nulla ex eu sunt ut ex id veniam veniam.
-      </GovUK.LeadParagraph>
-      <GovUK.Paragraph>
+      </GovUK.Body>
+      <GovUK.Body>
         Consequat adipisicing aliquip eiusmod nostrud et proident non id consequat aliquip eiusmod aliquip.
-      </GovUK.Paragraph>
+      </GovUK.Body>
       <GovUK.UnorderedList>
         <GovUK.ListItem>Name: {firstName}</GovUK.ListItem>
         <GovUK.ListItem>Description: {description}</GovUK.ListItem>

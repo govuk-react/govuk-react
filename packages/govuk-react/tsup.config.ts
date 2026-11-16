@@ -4,6 +4,7 @@ export default defineConfig({
   entry: {
     index: 'src/index.ts',
     'back-link': 'src/components/back-link/index.tsx',
+    body: 'src/components/body/index.tsx',
     breadcrumbs: 'src/components/breadcrumbs/index.tsx',
     button: 'src/components/button/index.tsx',
     caption: 'src/components/caption/index.tsx',
@@ -27,7 +28,6 @@ export default defineConfig({
     'inset-text': 'src/components/inset-text/index.tsx',
     label: 'src/components/label/index.tsx',
     'label-text': 'src/components/label-text/index.tsx',
-    'lead-paragraph': 'src/components/lead-paragraph/index.tsx',
     link: 'src/components/link/index.tsx',
     'list-item': 'src/components/list-item/index.tsx',
     'loading-box': 'src/components/loading-box/index.tsx',
@@ -37,7 +37,6 @@ export default defineConfig({
     page: 'src/components/page/index.tsx',
     pagination: 'src/components/pagination/index.tsx',
     panel: 'src/components/panel/index.tsx',
-    paragraph: 'src/components/paragraph/index.tsx',
     'phase-banner': 'src/components/phase-banner/index.tsx',
     radio: 'src/components/radio/index.tsx',
     'related-items': 'src/components/related-items/index.tsx',

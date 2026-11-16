@@ -21,7 +21,7 @@ const Forms: React.FC = () => (
       element={
         <>
           <GovUK.Heading size="l">Forms</GovUK.Heading>
-          <GovUK.Paragraph>Which form example would you like to run?</GovUK.Paragraph>
+          <GovUK.Body>Which form example would you like to run?</GovUK.Body>
           <GovUK.UnorderedList>
             <GovUK.ListItem>
               <GovUK.Link as={Link} to="/forms/form">
