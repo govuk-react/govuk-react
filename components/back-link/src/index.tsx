@@ -50,21 +50,19 @@ interface BackLinkOwnProps extends WithWhiteSpaceProps, React.AnchorHTMLAttribut
 
 type BackLinkRefType = React.Ref<HTMLAnchorElement>;
 
-export const BackLink: BackLinkType = React.forwardRef(
-  ({ children = 'Back', ...props }: BackLinkOwnProps, ref: BackLinkRefType) => (
-    <StyledBackLink ref={ref} href={props?.href} {...props}>
-      {children}
-    </StyledBackLink>
-  )
-);
+export const BackLink = React.forwardRef(({ children = 'Back', ...props }: BackLinkOwnProps, ref: BackLinkRefType) => (
+  <StyledBackLink ref={ref} href={props?.href} {...props}>
+    {children}
+  </StyledBackLink>
+)) as BackLinkType;
 
 export interface BackLinkType extends React.ForwardRefExoticComponent<BackLinkOwnProps> {
-  (props: BackLinkPropsWithoutAs, ref?: BackLinkRefType): React.ReactNode;
+  (props: BackLinkPropsWithoutAs, ref?: BackLinkRefType): React.ReactElement<BackLinkPropsWithoutAs>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   <AsC extends string | React.ComponentType<any> = 'a', FAsC extends string | React.ComponentType<any> = AsC>(
     props: BackLinkPropsWithAs<AsC, FAsC>,
     ref?: React.Ref<AsC>
-  ): React.ReactNode;
+  ): React.ReactElement<BackLinkPropsWithAs<AsC, FAsC>>;
 }
 
 type BackLinkPropsWithoutAs = StyledComponentProps<'a', never, BackLinkOwnProps, never> & {

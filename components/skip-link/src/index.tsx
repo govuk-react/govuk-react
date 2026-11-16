@@ -37,21 +37,21 @@ interface SkipLinkOwnProps extends React.AnchorHTMLAttributes<HTMLAnchorElement>
 
 type SkipLinkRefType = React.Ref<HTMLAnchorElement>;
 
-export const SkipLink: SkipLinkType = React.forwardRef(
+export const SkipLink = React.forwardRef(
   ({ children = 'Skip to main content', href = '#content', ...props }: SkipLinkOwnProps, ref: SkipLinkRefType) => (
     <StyledSkipLink ref={ref} href={href} {...props}>
       {children}
     </StyledSkipLink>
   )
-);
+) as SkipLinkType;
 
 export interface SkipLinkType extends React.ForwardRefExoticComponent<SkipLinkOwnProps> {
-  (props: SkipLinkPropsWithoutAs, ref?: SkipLinkRefType): React.ReactNode;
+  (props: SkipLinkPropsWithoutAs, ref?: SkipLinkRefType): React.ReactElement<SkipLinkPropsWithoutAs>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   <AsC extends string | React.ComponentType<any> = 'a', FAsC extends string | React.ComponentType<any> = AsC>(
     props: SkipLinkPropsWithAs<AsC, FAsC>,
     ref?: React.Ref<AsC>
-  ): React.ReactNode;
+  ): React.ReactElement<SkipLinkPropsWithAs<AsC, FAsC>>;
 }
 
 type SkipLinkPropsWithoutAs = StyledComponentProps<'a', never, SkipLinkOwnProps, never> & {

@@ -118,7 +118,7 @@ interface GridColOwnProps extends GridColProps, React.HTMLAttributes<HTMLDivElem
 
 type GridColRefType = React.Ref<HTMLDivElement>;
 
-export const GridCol: GridColType = React.forwardRef(
+export const GridCol = React.forwardRef(
   (
     {
       columnOneQuarter = false,
@@ -143,15 +143,15 @@ export const GridCol: GridColType = React.forwardRef(
       {props.children}
     </StyledGridCol>
   )
-);
+) as GridColType;
 
 export interface GridColType extends React.ForwardRefExoticComponent<GridColOwnProps> {
-  (props: GridColPropsWithoutAs, ref?: GridColRefType): React.ReactNode;
+  (props: GridColPropsWithoutAs, ref?: GridColRefType): React.ReactElement<GridColPropsWithoutAs>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   <AsC extends string | React.ComponentType<any> = 'div', FAsC extends string | React.ComponentType<any> = AsC>(
     props: GridColPropsWithAs<AsC, FAsC>,
     ref?: React.Ref<AsC>
-  ): React.ReactNode;
+  ): React.ReactElement<GridColPropsWithAs<AsC, FAsC>>;
 }
 
 type GridColPropsWithoutAs = StyledComponentProps<'div', never, GridColOwnProps, never> & {

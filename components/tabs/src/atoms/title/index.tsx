@@ -16,7 +16,7 @@ interface TabsTitleOwnProps extends React.HTMLAttributes<HTMLHeadingElement> {
 
 type TabsTitleRefType = React.Ref<HTMLHeadingElement>;
 
-export const TabsTitle: TabsTitleType = React.forwardRef(
+export const TabsTitle = React.forwardRef(
   ({ children = 'Contents', ...props }: TabsTitleOwnProps, ref: TabsTitleRefType): React.JSX.Element => {
     return (
       <StyledTabsTitle ref={ref} {...props}>
@@ -24,17 +24,17 @@ export const TabsTitle: TabsTitleType = React.forwardRef(
       </StyledTabsTitle>
     );
   }
-);
+) as TabsTitleType;
 
 export interface TabsTitleType extends React.ForwardRefExoticComponent<TabsTitleOwnProps> {
-  (props: TabsTitlePropsWithoutAs, ref?: TabsTitleRefType): React.ReactNode;
+  (props: TabsTitlePropsWithoutAs, ref?: TabsTitleRefType): React.ReactElement<TabsTitlePropsWithoutAs>;
   <
     AsC extends string | React.ComponentType<TabsTitleOwnProps> = 'h2',
     FAsC extends string | React.ComponentType<TabsTitleOwnProps> = AsC,
   >(
     props: TabsTitlePropsWithAs<AsC, FAsC>,
     ref?: React.Ref<AsC>
-  ): React.ReactNode;
+  ): React.ReactElement<TabsTitlePropsWithAs<AsC, FAsC>>;
 }
 
 type TabsTitlePropsWithoutAs = StyledComponentProps<'h2', never, TabsTitleOwnProps, never> & {

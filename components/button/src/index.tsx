@@ -218,24 +218,24 @@ interface ButtonOwnProps extends React.HTMLAttributes<HTMLButtonElement>, WithWh
  * - https://govuk-react.github.io/govuk-react/?path=/docs/button
  * - https://design-system.service.gov.uk/components/button/
  */
-export const Button: ButtonType = React.forwardRef(
+export const Button = React.forwardRef(
   ({ start = false, children, icon, ...props }: ButtonOwnProps, ref: ButtonRefType) => (
     <StyledButton ref={ref} isStart={start} icon={icon} {...props}>
       {icon ? <ButtonContents>{children}</ButtonContents> : children}
       {icon}
     </StyledButton>
   )
-);
+) as ButtonType;
 
 type ButtonRefType = React.Ref<HTMLButtonElement>;
 
 export interface ButtonType extends React.ForwardRefExoticComponent<ButtonOwnProps> {
-  (props: ButtonPropsWithoutAs, ref?: ButtonRefType): React.ReactNode;
+  (props: ButtonPropsWithoutAs, ref?: ButtonRefType): React.ReactElement<ButtonPropsWithoutAs>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   <AsC extends string | React.ComponentType<any> = 'button', FAsC extends string | React.ComponentType<any> = AsC>(
     props: ButtonPropsWithAs<AsC, FAsC>,
     ref?: React.Ref<AsC>
-  ): React.ReactNode;
+  ): React.ReactElement<ButtonPropsWithAs<AsC, FAsC>>;
 }
 
 type ButtonPropsWithoutAs = StyledComponentProps<'button', never, ButtonOwnProps, never> & {
