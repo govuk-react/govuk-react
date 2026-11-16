@@ -50,6 +50,34 @@ Markdown parsing is now up to your app. `Paragraph` parsed its children as markd
 
 There is no equivalent for the other whitespace props (`margin`, `padding` and so on).
 
+## Caption
+
+`Caption` is now govuk-frontend-react's `Caption`. It's a named export.
+
+| 0.x                                         | 1.0                                             |
+| ------------------------------------------- | ----------------------------------------------- |
+| `import Caption from 'govuk-react/caption'` | `import { Caption } from 'govuk-react/caption'` |
+| `<Caption>` (no size)                       | `<Caption size="xl">`                           |
+| `size="XL"` / `"XLARGE"` / `27`             | `size="xl"`                                     |
+| `size="L"` / `"LARGE"` / `24`               | `size="l"`                                      |
+| `size="M"` / `"MEDIUM"` / `19`              | `size="m"`                                      |
+
+`size` is now required, and numeric sizes are no longer accepted. There is no equivalent for the whitespace props (`mb`, `margin`, `padding` and so on).
+
+## SectionBreak
+
+`SectionBreak` is now govuk-frontend-react's `SectionBreak`. It's a named export.
+
+| 0.x                                                    | 1.0                                                        |
+| ------------------------------------------------------ | ---------------------------------------------------------- |
+| `import SectionBreak from 'govuk-react/section-break'` | `import { SectionBreak } from 'govuk-react/section-break'` |
+| `level="XL"` / `"XLARGE"`                              | `size="xl"`                                                |
+| `level="L"` / `"LARGE"`                                | `size="l"`                                                 |
+| `level="M"` / `"MEDIUM"`                               | `size="m"`                                                 |
+| `visible`                                              | `visible`                                                  |
+
+There is no equivalent for the whitespace props (`mb`, `margin`, `padding` and so on).
+
 ## List (was UnorderedList, OrderedList and ListItem)
 
 `UnorderedList`, `OrderedList` and `ListItem` are replaced by govuk-frontend-react's `List`. Use plain `li` elements for items.
