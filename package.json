@@ -1,17 +1,16 @@
 {
   "name": "@govuk-react/monorepo",
   "scripts": {
-    "build:dist": "pnpm build && rimraf dist && webpack --node-env=production --devtool source-map --entry ./packages/govuk-react/dist/govuk-react.esm.js",
+    "build:dist": "pnpm build && rimraf dist && webpack --node-env=production --devtool source-map --entry ./packages/govuk-react/dist/index.js --output-library-type commonjs2",
     "build:storybook": "pnpm --filter @govuk-react/storybook build",
     "build:types": "tsc --emitDeclarationOnly --declaration",
-    "build": "preconstruct build && pnpm -r --filter=!@govuk-react/monorepo run build",
+    "build": "pnpm -r run build",
     "bundlesize": "bundlesize",
-    "clean:workspace": "rimraf packages/*/lib && rimraf packages/*/es && rimraf components/*/lib && rimraf components/*/es",
+    "clean:workspace": "rimraf packages/*/dist",
     "clean": "rimraf lib && rimraf es",
     "coverage": "vitest run --coverage",
-    "create-component": "node ./scripts/createComponent.js",
-    "docs:components": "pnpm -r --parallel --filter=!@govuk-react/monorepo run docs",
-    "docs": "pnpm docs:components && concat ./components/*/README.md -o ./API.md",
+    "docs:components": "for d in packages/govuk-react/src/components/*; do doc-component \"$d/index.tsx\" \"$d/README.md\" || exit 1; done",
+    "docs": "pnpm docs:components && concat ./packages/govuk-react/src/components/*/README.md -o ./API.md",
     "eslint:fix": "eslint --fix .",
     "eslint": "eslint .",
     "start": "pnpm --filter @govuk-react/storybook start",
@@ -47,7 +46,6 @@
     "@babel/preset-typescript": "7.23.0",
     "@eslint/js": "^9.39.5",
     "@govuk-react/api-docs": "0.10.7",
-    "@preconstruct/cli": "^2.8.3",
     "@storybook/react": "10.6.7",
     "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^6.4.2",
@@ -90,13 +88,13 @@
     "rimraf": "^5.0.5",
     "storybook": "10.6.7",
     "styled-components": "^5.3.0",
+    "tsup": "^9.0.0",
     "typescript": "^5.4.2",
     "typescript-eslint": "^8.72.2",
     "vite": "^7.3.8",
     "vitest": "5.1.0",
     "webpack": "^5.94.0",
-    "webpack-cli": "^5.1.4",
-    "workspace-alias": "^0.1.0"
+    "webpack-cli": "^5.1.4"
   },
   "repository": {
     "type": "git",
@@ -115,17 +113,5 @@
     }
   ],
   "private": true,
-  "workspaces": [
-    "components/*",
-    "packages/*"
-  ],
-  "preconstruct": {
-    "packages": [
-      "components/*",
-      "packages/*",
-      "!packages/images",
-      "!packages/storybook"
-    ]
-  },
   "packageManager": "pnpm@12.21.0"
 }

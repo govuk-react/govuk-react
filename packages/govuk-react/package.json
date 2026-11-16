@@ -1,78 +1,45 @@
 {
   "name": "govuk-react",
   "version": "0.10.7",
+  "description": "govuk-react: A port of the govuk-frontend components for React using styled-components.",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "default": "./dist/*.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "NODE_OPTIONS=--max-old-space-size=4096 tsup && pnpm copy-readme",
+    "copy-readme": "cp ../../README.md ."
+  },
   "dependencies": {
-    "@govuk-react/back-link": "^0.10.7",
-    "@govuk-react/breadcrumbs": "^0.10.7",
-    "@govuk-react/button": "^0.10.7",
-    "@govuk-react/caption": "^0.10.7",
-    "@govuk-react/checkbox": "^0.10.7",
-    "@govuk-react/constants": "^0.10.7",
-    "@govuk-react/date-field": "^0.10.7",
-    "@govuk-react/details": "^0.10.7",
-    "@govuk-react/document-footer-metadata": "^0.10.7",
-    "@govuk-react/error-summary": "^0.10.7",
-    "@govuk-react/error-text": "^0.10.7",
-    "@govuk-react/fieldset": "^0.10.7",
-    "@govuk-react/file-upload": "^0.10.7",
-    "@govuk-react/footer": "^0.10.7",
-    "@govuk-react/form-group": "^0.10.7",
-    "@govuk-react/global-style": "^0.10.7",
-    "@govuk-react/grid-col": "^0.10.7",
-    "@govuk-react/grid-row": "^0.10.7",
-    "@govuk-react/heading": "^0.10.7",
-    "@govuk-react/hint-text": "^0.10.7",
-    "@govuk-react/icons": "^0.10.7",
-    "@govuk-react/input": "^0.10.7",
-    "@govuk-react/input-field": "^0.10.7",
-    "@govuk-react/inset-text": "^0.10.7",
-    "@govuk-react/label": "^0.10.7",
-    "@govuk-react/label-text": "^0.10.7",
-    "@govuk-react/lead-paragraph": "^0.10.7",
-    "@govuk-react/link": "^0.10.7",
-    "@govuk-react/list-item": "^0.10.7",
-    "@govuk-react/loading-box": "^0.10.7",
-    "@govuk-react/main": "^0.10.7",
-    "@govuk-react/multi-choice": "^0.10.7",
-    "@govuk-react/ordered-list": "^0.10.7",
-    "@govuk-react/page": "^0.10.7",
-    "@govuk-react/pagination": "^0.10.7",
-    "@govuk-react/panel": "^0.10.7",
-    "@govuk-react/paragraph": "^0.10.7",
-    "@govuk-react/phase-banner": "^0.10.7",
-    "@govuk-react/radio": "^0.10.7",
-    "@govuk-react/related-items": "^0.10.7",
-    "@govuk-react/search-box": "^0.10.7",
-    "@govuk-react/section-break": "^0.10.7",
-    "@govuk-react/select": "^0.10.7",
-    "@govuk-react/skip-link": "^0.10.7",
-    "@govuk-react/table": "^0.10.7",
-    "@govuk-react/tabs": "^0.10.7",
-    "@govuk-react/tag": "^0.10.7",
-    "@govuk-react/text-area": "^0.10.7",
-    "@govuk-react/top-nav": "^0.10.7",
-    "@govuk-react/unordered-list": "^0.10.7",
-    "@govuk-react/visually-hidden": "^0.10.7",
-    "@govuk-react/warning-text": "^0.10.7",
-    "govuk-colours": "^1.1.0"
+    "@govuk-react/icon-crown": "0.1.0",
+    "govuk-colours": "^1.1.0",
+    "hex-rgb": "^4.0.0",
+    "multi-input-input": "0.0.3",
+    "polished": "^4.3.1",
+    "react-markdown": "^5.0.3",
+    "react-transition-group": "^4.4.5"
   },
   "peerDependencies": {
     "react": ">=19",
     "react-dom": ">=19",
     "styled-components": ">=5.1"
   },
-  "scripts": {
-    "build": "pnpm copy-readme",
-    "copy-readme": "cp ../../README.md .",
-    "version": "yarn version"
-  },
-  "main": "dist/govuk-react.cjs.js",
-  "module": "dist/govuk-react.esm.js",
-  "source": "src/index.ts",
   "author": "Alasdair McLeay",
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react#readme",
-  "description": "govuk-react: A port of the govuk-frontend components for React using styled-components.",
   "publishConfig": {
     "access": "public"
   }

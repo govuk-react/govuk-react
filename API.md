@@ -3,7 +3,7 @@ BackLink
 
 ### Import
 ```js
-  import BackLink from '@govuk-react/back-link';
+  import BackLink from 'govuk-react/back-link';
 ```
 <!-- STORY -->
 
@@ -293,7 +293,7 @@ Breadcrumbs
 
 ### Import
 ```js
-  import Breadcrumbs from '@govuk-react/breadcrumbs';
+  import Breadcrumbs from 'govuk-react/breadcrumbs';
 ```
 <!-- STORY -->
 
@@ -567,7 +567,7 @@ Button
 
 ### Import
 ```js
-  import Button from '@govuk-react/button';
+  import Button from 'govuk-react/button';
 ```
 <!-- STORY -->
 
@@ -866,7 +866,7 @@ Caption
 
 ### Import
 ```js
-  import Caption from '@govuk-react/caption';
+  import Caption from 'govuk-react/caption';
 ```
 <!-- STORY -->
 
@@ -1148,7 +1148,7 @@ Checkbox
 
 ### Import
 ```js
-  import Checkbox from '@govuk-react/checkbox';
+  import Checkbox from 'govuk-react/checkbox';
 ```
 <!-- STORY -->
 
@@ -1457,7 +1457,7 @@ DateField
 
 ### Import
 ```js
-  import DateField from '@govuk-react/date-field';
+  import DateField from 'govuk-react/date-field';
 ```
 <!-- STORY -->
 
@@ -1739,7 +1739,7 @@ Details
 
 ### Import
 ```js
-  import Details from '@govuk-react/details';
+  import Details from 'govuk-react/details';
 ```
 <!-- STORY -->
 
@@ -1762,7 +1762,7 @@ DocumentFooterMetadata
 
 ### Import
 ```js
-  import DocumentFooterMetadata from '@govuk-react/document-footer-metadata';
+  import DocumentFooterMetadata from 'govuk-react/document-footer-metadata';
 ```
 <!-- STORY -->
 
@@ -1785,7 +1785,7 @@ ErrorSummary
 
 ### Import
 ```js
-  import ErrorSummary from '@govuk-react/error-summary';
+  import ErrorSummary from 'govuk-react/error-summary';
 ```
 <!-- STORY -->
 
@@ -1809,7 +1809,7 @@ ErrorText
 
 ### Import
 ```js
-  import ErrorText from '@govuk-react/error-text';
+  import ErrorText from 'govuk-react/error-text';
 ```
 <!-- STORY -->
 
@@ -2090,7 +2090,7 @@ Fieldset
 
 ### Import
 ```js
-  import Fieldset from '@govuk-react/fieldset';
+  import Fieldset from 'govuk-react/fieldset';
 ```
 <!-- STORY -->
 
@@ -2115,7 +2115,7 @@ FileUpload
 
 ### Import
 ```js
-  import FileUpload from '@govuk-react/file-upload';
+  import FileUpload from 'govuk-react/file-upload';
 ```
 <!-- STORY -->
 
@@ -2146,7 +2146,7 @@ Footer
 
 ### Import
 ```js
-  import Footer from '@govuk-react/footer';
+  import Footer from 'govuk-react/footer';
 ```
 <!-- STORY -->
 
@@ -2171,7 +2171,7 @@ FormGroup
 
 ### Import
 ```js
-  import FormGroup from '@govuk-react/form-group';
+  import FormGroup from 'govuk-react/form-group';
 ```
 <!-- STORY -->
 
@@ -2454,7 +2454,7 @@ GlobalStyle
 
 ### Import
 ```js
-  import GlobalStyle from '@govuk-react/global-style';
+  import GlobalStyle from 'govuk-react/global-style';
 ```
 <!-- STORY -->
 
@@ -2475,7 +2475,7 @@ GridCol
 
 ### Import
 ```js
-  import GridCol from '@govuk-react/grid-col';
+  import GridCol from 'govuk-react/grid-col';
 ```
 <!-- STORY -->
 
@@ -2767,7 +2767,7 @@ GridRow
 
 ### Import
 ```js
-  import GridRow from '@govuk-react/grid-row';
+  import GridRow from 'govuk-react/grid-row';
 ```
 <!-- STORY -->
 
@@ -3048,7 +3048,7 @@ HintText
 
 ### Import
 ```js
-  import HintText from '@govuk-react/hint-text';
+  import HintText from 'govuk-react/hint-text';
 ```
 <!-- STORY -->
 
@@ -3329,7 +3329,7 @@ InputField
 
 ### Import
 ```js
-  import InputField from '@govuk-react/input-field';
+  import InputField from 'govuk-react/input-field';
 ```
 <!-- STORY -->
 
@@ -3356,7 +3356,7 @@ Input
 
 ### Import
 ```js
-  import Input from '@govuk-react/input';
+  import Input from 'govuk-react/input';
 ```
 <!-- STORY -->
 
@@ -3670,7 +3670,7 @@ InsetText
 
 ### Import
 ```js
-  import InsetText from '@govuk-react/inset-text';
+  import InsetText from 'govuk-react/inset-text';
 ```
 <!-- STORY -->
 
@@ -3951,7 +3951,7 @@ LabelText
 
 ### Import
 ```js
-  import LabelText from '@govuk-react/label-text';
+  import LabelText from 'govuk-react/label-text';
 ```
 <!-- STORY -->
 
@@ -4233,7 +4233,7 @@ Label
 
 ### Import
 ```js
-  import Label from '@govuk-react/label';
+  import Label from 'govuk-react/label';
 ```
 <!-- STORY -->
 
@@ -4516,7 +4516,7 @@ LeadParagraph
 
 ### Import
 ```js
-  import LeadParagraph from '@govuk-react/lead-paragraph';
+  import LeadParagraph from 'govuk-react/lead-paragraph';
 ```
 <!-- STORY -->
 
@@ -4797,7 +4797,7 @@ Link
 
 ### Import
 ```js
-  import Link from '@govuk-react/link';
+  import Link from 'govuk-react/link';
 ```
 <!-- STORY -->
 
@@ -5088,7 +5088,7 @@ ListItem
 
 ### Import
 ```js
-  import ListItem from '@govuk-react/list-item';
+  import ListItem from 'govuk-react/list-item';
 ```
 <!-- STORY -->
 
@@ -5370,7 +5370,7 @@ LoadingBox
 
 ### Import
 ```js
-  import LoadingBox from '@govuk-react/loading-box';
+  import LoadingBox from 'govuk-react/loading-box';
 ```
 <!-- STORY -->
 
@@ -5399,7 +5399,7 @@ Main
 
 ### Import
 ```js
-  import Main from '@govuk-react/main';
+  import Main from 'govuk-react/main';
 ```
 <!-- STORY -->
 
@@ -5422,7 +5422,7 @@ MultiChoice
 
 ### Import
 ```js
-  import MultiChoice from '@govuk-react/multi-choice';
+  import MultiChoice from 'govuk-react/multi-choice';
 ```
 <!-- STORY -->
 
@@ -5448,7 +5448,7 @@ OrderedList
 
 ### Import
 ```js
-  import OrderedList from '@govuk-react/ordered-list';
+  import OrderedList from 'govuk-react/ordered-list';
 ```
 <!-- STORY -->
 
@@ -5733,7 +5733,7 @@ Page
 
 ### Import
 ```js
-  import Page from '@govuk-react/page';
+  import Page from 'govuk-react/page';
 ```
 <!-- STORY -->
 
@@ -5761,7 +5761,7 @@ Pagination
 
 ### Import
 ```js
-  import Pagination from '@govuk-react/pagination';
+  import Pagination from 'govuk-react/pagination';
 ```
 <!-- STORY -->
 
@@ -5782,7 +5782,7 @@ Panel
 
 ### Import
 ```js
-  import Panel from '@govuk-react/panel';
+  import Panel from 'govuk-react/panel';
 ```
 <!-- STORY -->
 
@@ -5804,7 +5804,7 @@ Paragraph
 
 ### Import
 ```js
-  import Paragraph from '@govuk-react/paragraph';
+  import Paragraph from 'govuk-react/paragraph';
 ```
 <!-- STORY -->
 
@@ -6108,7 +6108,7 @@ PhaseBanner
 
 ### Import
 ```js
-  import PhaseBanner from '@govuk-react/phase-banner';
+  import PhaseBanner from 'govuk-react/phase-banner';
 ```
 <!-- STORY -->
 
@@ -6133,7 +6133,7 @@ Radio
 
 ### Import
 ```js
-  import Radio from '@govuk-react/radio';
+  import Radio from 'govuk-react/radio';
 ```
 <!-- STORY -->
 
@@ -6442,7 +6442,7 @@ RelatedItems
 
 ### Import
 ```js
-  import RelatedItems from '@govuk-react/related-items';
+  import RelatedItems from 'govuk-react/related-items';
 ```
 <!-- STORY -->
 
@@ -6723,7 +6723,7 @@ SearchBox
 
 ### Import
 ```js
-  import SearchBox from '@govuk-react/search-box';
+  import SearchBox from 'govuk-react/search-box';
 ```
 <!-- STORY -->
 
@@ -7001,7 +7001,7 @@ SectionBreak
 
 ### Import
 ```js
-  import SectionBreak from '@govuk-react/section-break';
+  import SectionBreak from 'govuk-react/section-break';
 ```
 <!-- STORY -->
 
@@ -7284,7 +7284,7 @@ Select
 
 ### Import
 ```js
-  import Select from '@govuk-react/select';
+  import Select from 'govuk-react/select';
 ```
 <!-- STORY -->
 
@@ -7313,7 +7313,7 @@ SkipLink
 
 ### Import
 ```js
-  import SkipLink from '@govuk-react/skip-link';
+  import SkipLink from 'govuk-react/skip-link';
 ```
 <!-- STORY -->
 
@@ -7601,7 +7601,7 @@ Table
 
 ### Import
 ```js
-  import Table from '@govuk-react/table';
+  import Table from 'govuk-react/table';
 ```
 <!-- STORY -->
 
@@ -7625,7 +7625,7 @@ Tabs
 
 ### Import
 ```js
-  import Tabs from '@govuk-react/tabs';
+  import Tabs from 'govuk-react/tabs';
 ```
 <!-- STORY -->
 
@@ -7646,7 +7646,7 @@ Tag
 
 ### Import
 ```js
-  import Tag from '@govuk-react/tag';
+  import Tag from 'govuk-react/tag';
 ```
 <!-- STORY -->
 
@@ -7927,7 +7927,7 @@ TextArea
 
 ### Import
 ```js
-  import TextArea from '@govuk-react/text-area';
+  import TextArea from 'govuk-react/text-area';
 ```
 <!-- STORY -->
 
@@ -7954,7 +7954,7 @@ TopNav
 
 ### Import
 ```js
-  import TopNav from '@govuk-react/top-nav';
+  import TopNav from 'govuk-react/top-nav';
 ```
 <!-- STORY -->
 
@@ -7981,7 +7981,7 @@ UnorderedList
 
 ### Import
 ```js
-  import UnorderedList from '@govuk-react/unordered-list';
+  import UnorderedList from 'govuk-react/unordered-list';
 ```
 <!-- STORY -->
 
@@ -8006,7 +8006,7 @@ VisuallyHidden
 
 ### Import
 ```js
-  import VisuallyHidden from '@govuk-react/visually-hidden';
+  import VisuallyHidden from 'govuk-react/visually-hidden';
 ```
 <!-- STORY -->
 
@@ -8286,7 +8286,7 @@ WarningText
 
 ### Import
 ```js
-  import WarningText from '@govuk-react/warning-text';
+  import WarningText from 'govuk-react/warning-text';
 ```
 <!-- STORY -->
 

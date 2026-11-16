@@ -1,0 +1,26 @@
+import type { WithWhiteSpaceProps } from '../../../../lib';
+
+import styled from 'styled-components';
+import { spacing } from '../../../../lib';
+
+export const ListItem = styled('li')<ListItemProps>(
+  ({ inline = false }) =>
+    inline
+      ? {
+          display: 'inline-block',
+          marginRight: spacing.simple(3),
+          marginBottom: spacing.simple(1),
+        }
+      : spacing.withWhiteSpace({ marginBottom: 4 }),
+  {
+    '&:last-child': {
+      marginBottom: 0,
+    },
+  }
+);
+
+interface ListItemProps extends WithWhiteSpaceProps {
+  inline?: boolean;
+}
+
+export default ListItem;

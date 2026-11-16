@@ -1,5 +1,4 @@
 packages:
-  - components/*
   - packages/*
 
 allowBuilds:
@@ -7,6 +6,3 @@ allowBuilds:
   core-js-pure: false
   esbuild: true
 linkWorkspacePackages: true
-
-overrides:
-  '@babel/core@7.23.0>@babel/helpers': 7.23.1

@@ -65,7 +65,7 @@ For example;
 
 ```jsx
 import { BrowserRouter, Link as RouterLink } from 'react-router';
-import { Link } from '@govuk-react/link';
+import { Link } from 'govuk-react/link';
 
 const MyComponent = () => (
   <nav>
@@ -97,24 +97,14 @@ This project is part of a larger initiative to componetise large scale React app
 2. We want a parent project to not have to worry about a specific build system (e.g. for handling `import styles.css`, particularly if you want universal support) or including certain CSS files. We want a simple `npm install govuk-react` to be enough to get govuk styled components on to your page, irrespective of your build system.
 3. We want to distribute React applications as modules that have self contained styles. CSS in JS allows all styles to be contained in distributable JS modules that can be ported across projects.
 
-## Why is this a monorepo?
+## Imports
 
-Components are published to npm independently. This means users have the ability to upgrade govuk-react and still use older components.
-
-This is particularly relevant in a large application where:
-
-- some code is reliant on a component that has either been deprecated or had breaking changes 
-- you aren't able to refactor the existing code, e.g. it is a large job or managed by another team
-- you don't want to hold back from upgrading to the newest version of govuk-react
-
-e.g. for DateField, you import it separately as follows:
+Import from the package root, or from a component's own subpath:
 
 ```js
 import { H1, Paragraph } from 'govuk-react';
-import DateField from '@govuk-react/date-field';
+import DateField from 'govuk-react/date-field';
 ```
-
-Then in your package.json, you can update govuk-react, but specify the older version of '@govuk-react/date-field'.
 
 ## About the GDS font
 

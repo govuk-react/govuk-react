@@ -2,9 +2,8 @@ import fs from 'fs';
 import path from 'path';
 
 import * as packageExports from '.';
-import pkg from '../package.json';
 
-const stories = import.meta.glob<{ default: { id: string } }>('../../../components/*/src/stories.tsx', { eager: true });
+const stories = import.meta.glob<{ default: { id: string } }>('./components/*/stories.tsx', { eager: true });
 
 describe('Exports', () => {
   // all exports are truthy
@@ -19,20 +18,15 @@ describe('Exports', () => {
 const dirs = (p) => fs.readdirSync(p).filter((f) => fs.statSync(path.join(p, f)).isDirectory());
 
 describe('Components', () => {
-  const components = dirs(path.join(__dirname, '../../../components'));
+  const components = dirs(path.join(__dirname, 'components'));
+  const tsupConfig = fs.readFileSync(path.join(__dirname, '../tsup.config.ts'), 'utf8');
 
-  // filter out any build artifacts from deleted components that may be in gitignore
-  const componentsWithPackageFile = components.filter((componentName) => {
-    const packageFile = path.join(path.join(__dirname, '../../../components'), componentName, 'package.json');
-    return fs.existsSync(packageFile);
-  });
-
-  componentsWithPackageFile.map((component) =>
-    describe(`@govuk-react/${component}`, () => {
+  components.map((component) =>
+    describe(`govuk-react/${component}`, () => {
       const pascal = kebabCaseToPascalCase(component);
 
-      it(`is in dependencies`, () => {
-        expect(!!pkg.dependencies[`@govuk-react/${component}`]).toBe(true);
+      it(`has a build entry`, () => {
+        expect(tsupConfig).toContain(`'src/components/${component}/index.tsx'`);
       });
 
       it(`is exported as ${pascal}`, () => {
@@ -44,7 +38,7 @@ describe('Components', () => {
       });
 
       it(`has a stories.tsx file with id set to "${component}""`, () => {
-        expect(stories[`../../../components/${component}/src/stories.tsx`].default.id).toBe(component);
+        expect(stories[`./components/${component}/stories.tsx`].default.id).toBe(component);
       });
     })
   );
