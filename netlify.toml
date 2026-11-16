@@ -1,0 +1,6 @@
+[build]
+  command = "pnpm build:storybook"
+  publish = "packages/storybook/storybook-static"
+
+[build.environment]
+  CYPRESS_INSTALL_BINARY = "0"
