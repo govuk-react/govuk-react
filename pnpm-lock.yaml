@@ -372,7 +372,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -390,7 +390,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -414,7 +414,7 @@ importers:
         specifier: ^4.3.1
         version: 4.3.1
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -432,7 +432,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -453,7 +453,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -489,7 +489,7 @@ importers:
         specifier: 0.0.3
         version: 0.0.3
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -528,7 +528,7 @@ importers:
         specifier: ^0.10.7
         version: link:../unordered-list
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -567,7 +567,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -585,7 +585,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -603,7 +603,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -627,7 +627,7 @@ importers:
         specifier: ^0.10.7
         version: link:../label-text
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -657,7 +657,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -675,7 +675,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -684,7 +684,7 @@ importers:
   components/global-style:
     dependencies:
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -699,7 +699,7 @@ importers:
         specifier: ^0.10.7
         version: link:../../packages/lib
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -714,7 +714,7 @@ importers:
         specifier: ^0.10.7
         version: link:../../packages/lib
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -729,7 +729,7 @@ importers:
         specifier: ^0.10.7
         version: link:../../packages/lib
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -747,7 +747,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -765,7 +765,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -792,7 +792,7 @@ importers:
         specifier: ^0.10.7
         version: link:../label-text
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -810,7 +810,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -828,7 +828,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -840,7 +840,7 @@ importers:
         specifier: ^0.10.7
         version: link:../../packages/lib
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -852,7 +852,7 @@ importers:
         specifier: ^0.10.7
         version: link:../../packages/lib
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -867,7 +867,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -882,7 +882,7 @@ importers:
         specifier: ^0.10.7
         version: link:../../packages/lib
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -903,10 +903,10 @@ importers:
         specifier: ^4.0.0
         version: 4.3.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       react-dom:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1(react@19.3.1)
       react-transition-group:
         specifier: ^4.4.5
@@ -921,7 +921,7 @@ importers:
         specifier: ^0.10.7
         version: link:../../packages/constants
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -948,7 +948,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -966,7 +966,7 @@ importers:
         specifier: ^0.10.7
         version: link:../list-item
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -987,7 +987,7 @@ importers:
         specifier: ^0.10.7
         version: link:../top-nav
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -1008,7 +1008,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -1029,7 +1029,7 @@ importers:
         specifier: ^4.3.1
         version: 4.3.1
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -1044,7 +1044,7 @@ importers:
         specifier: ^0.10.7
         version: link:../link
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       react-markdown:
         specifier: ^5.0.3
@@ -1068,7 +1068,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -1089,7 +1089,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -1107,7 +1107,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -1128,7 +1128,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -1143,7 +1143,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -1173,7 +1173,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -1191,7 +1191,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -1209,7 +1209,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -1227,7 +1227,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -1242,7 +1242,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -1269,7 +1269,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -1299,7 +1299,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -1311,7 +1311,7 @@ importers:
         specifier: ^0.10.7
         version: link:../ordered-list
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -1326,7 +1326,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -1347,7 +1347,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
@@ -1432,10 +1432,10 @@ importers:
         specifier: ^0.10.7
         version: link:../govuk-react
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       react-dom:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1(react@19.3.1)
       react-final-form:
         specifier: ^6.5.9
@@ -1444,7 +1444,7 @@ importers:
         specifier: ^7.51.1
         version: 7.51.1(react@19.3.1)
       react-is:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       react-router:
         specifier: ^6.3.0
@@ -1631,10 +1631,10 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       react-dom:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1(react@19.3.1)
       styled-components:
         specifier: '>=5.1'
@@ -1649,7 +1649,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       react:
-        specifier: '>=16.8.0'
+        specifier: '>=19'
         version: 19.3.1
       styled-components:
         specifier: '>=5.1'
