@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -8,7 +8,7 @@ export default {
   title: 'Utility/Icons/Search',
 };
 
-export const Search: Story = (args) => {
+export const Search: StoryFn = (args) => {
   return <SearchComponent {...args} title="Example Search implementation" />;
 };
 Search.args = {

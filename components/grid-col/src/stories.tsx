@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 import styled from 'styled-components';
@@ -22,7 +22,7 @@ const Content = styled('div')({
 });
 Content.displayName = 'div';
 
-export const Default: Story = (args) => (
+export const Default: StoryFn = (args) => (
   <GridRow>
     <GridCol setWidth="one-half" {...args}>
       <H2>Half column</H2>
@@ -41,7 +41,7 @@ export const Default: Story = (args) => (
   </GridRow>
 );
 
-export const ColumnHalves: Story = (args) => (
+export const ColumnHalves: StoryFn = (args) => (
   <GridRow>
     <GridCol setWidth="one-half" {...args}>
       <Content>content</Content>
@@ -52,7 +52,7 @@ export const ColumnHalves: Story = (args) => (
   </GridRow>
 );
 
-export const ColumnThirds: Story = (args) => (
+export const ColumnThirds: StoryFn = (args) => (
   <GridRow>
     <GridCol setWidth="one-third" {...args}>
       <Content>content</Content>
@@ -66,7 +66,7 @@ export const ColumnThirds: Story = (args) => (
   </GridRow>
 );
 
-export const ColumnTwoThirdsOneThird: Story = (args) => (
+export const ColumnTwoThirdsOneThird: StoryFn = (args) => (
   <GridRow>
     <GridCol setWidth="two-thirds" {...args}>
       <Content>content</Content>
@@ -77,7 +77,7 @@ export const ColumnTwoThirdsOneThird: Story = (args) => (
   </GridRow>
 );
 
-export const ColumnOneThirdTwoThirds: Story = (args) => (
+export const ColumnOneThirdTwoThirds: StoryFn = (args) => (
   <GridRow>
     <GridCol setWidth="one-third" {...args}>
       <Content>content</Content>
@@ -88,7 +88,7 @@ export const ColumnOneThirdTwoThirds: Story = (args) => (
   </GridRow>
 );
 
-export const ColumnFourQuarters: Story = (args) => (
+export const ColumnFourQuarters: StoryFn = (args) => (
   <GridRow>
     <GridCol setWidth="one-quarter" {...args}>
       <Content>content</Content>
@@ -105,7 +105,7 @@ export const ColumnFourQuarters: Story = (args) => (
   </GridRow>
 );
 
-export const ColumnOneQuarterAndAutoFill: Story = (args) => (
+export const ColumnOneQuarterAndAutoFill: StoryFn = (args) => (
   <GridRow>
     <GridCol setWidth="one-quarter" {...args}>
       <Content>content</Content>
@@ -116,7 +116,7 @@ export const ColumnOneQuarterAndAutoFill: Story = (args) => (
   </GridRow>
 );
 
-export const ColumnWidthsDifferingBetweenTabletAndDesktop: Story = (args) => (
+export const ColumnWidthsDifferingBetweenTabletAndDesktop: StoryFn = (args) => (
   <GridRow>
     <GridCol setWidth="one-quarter" setDesktopWidth="one-third" {...args}>
       <Content>content</Content>
@@ -127,7 +127,7 @@ export const ColumnWidthsDifferingBetweenTabletAndDesktop: Story = (args) => (
   </GridRow>
 );
 
-export const CustomWidthsDifferingBetweenTabletAndDesktop: Story = (args) => (
+export const CustomWidthsDifferingBetweenTabletAndDesktop: StoryFn = (args) => (
   <GridRow>
     <GridCol setWidth="60%" setDesktopWidth="auto" {...args}>
       <Content>content</Content>

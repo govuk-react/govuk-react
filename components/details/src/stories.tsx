@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 import Paragraph from '@govuk-react/paragraph';
@@ -17,7 +17,7 @@ const paragraphs = [
   'We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.',
 ];
 
-const Template: Story<React.ComponentProps<typeof Details>> = (args) => <Details {...args} />;
+const Template: StoryFn<React.ComponentProps<typeof Details>> = (args) => <Details {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

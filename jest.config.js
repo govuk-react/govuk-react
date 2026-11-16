@@ -23,5 +23,8 @@ module.exports = {
     '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2|mdx)$': 'jest-transform-stub',
   },
   transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$'],
-  moduleNameMapper: workspaceAliases(),
+  moduleNameMapper: {
+    ...workspaceAliases(),
+    '^storybook/actions$': '<rootDir>/scripts/storybookActionsMock.js',
+  },
 };

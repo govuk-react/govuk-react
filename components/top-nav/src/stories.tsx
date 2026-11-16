@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 import { BrowserRouter, Link } from 'react-router-dom';
@@ -19,7 +19,7 @@ const reactRouterLink = '/section';
 // TODO: vertical alignment here needs some work, perhaps should be its own component,
 // TODO: Icon should be lined up with font baseline, e.g. vertical-align: baseline
 
-const Template: Story<React.ComponentProps<typeof TopNav>> = (args) => <TopNav {...args} />;
+const Template: StoryFn<React.ComponentProps<typeof TopNav>> = (args) => <TopNav {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

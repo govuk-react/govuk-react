@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -18,7 +18,7 @@ export default {
   component: LoadingBox,
 };
 
-const Template: Story<React.ComponentProps<typeof LoadingBox>> = (args) => <LoadingBox {...args} />;
+const Template: StoryFn<React.ComponentProps<typeof LoadingBox>> = (args) => <LoadingBox {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

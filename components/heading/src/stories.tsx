@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 
 import Heading, { H1, H2, H3, H4, H5, H6 } from '.';
 
@@ -12,15 +12,15 @@ export default {
   component: Heading,
 };
 
-const Template: Story<React.ComponentProps<typeof Heading>> = (args) => <Heading {...args} />;
+const Template: StoryFn<React.ComponentProps<typeof Heading>> = (args) => <Heading {...args} />;
 
-export const Default: Story = Template.bind({});
+export const Default: StoryFn = Template.bind({});
 Default.args = {
   size: 'LARGE',
   children: 'Heading text',
 };
 
-export const LevelAliases: Story = (args) => (
+export const LevelAliases: StoryFn = (args) => (
   <>
     <H1 {...args}>H1</H1>
     <H2>H2</H2>
@@ -30,7 +30,7 @@ export const LevelAliases: Story = (args) => (
     <H6>H6</H6>
   </>
 );
-export const DifferingSizes: Story = (args) => (
+export const DifferingSizes: StoryFn = (args) => (
   <>
     <H6 size={80} {...args}>
       h6 with XXLARGE style
@@ -42,7 +42,7 @@ export const DifferingSizes: Story = (args) => (
   </>
 );
 
-export const PropsPassThrough: Story = Template.bind({});
+export const PropsPassThrough: StoryFn = Template.bind({});
 PropsPassThrough.args = {
   onClick: action('onClick'),
   children: 'Click me',

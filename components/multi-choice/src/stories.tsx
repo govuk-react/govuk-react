@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 import Radio from '@govuk-react/radio';
@@ -11,7 +11,7 @@ export default {
   component: MultiChoice,
 };
 
-export const Default: Story = ({ label }: { label: string }) => (
+export const Default: StoryFn = ({ label }: { label: string }) => (
   <MultiChoice label={label}>
     <Radio name="group1" inline>
       Yes
@@ -25,7 +25,7 @@ Default.args = {
   label: 'Example label',
 };
 
-export const InlineWithAHint: Story = (args: { label: string; hint: string }) => (
+export const InlineWithAHint: StoryFn = (args: { label: string; hint: string }) => (
   <MultiChoice {...args}>
     <Radio name="group1" inline>
       Yes
@@ -40,7 +40,7 @@ InlineWithAHint.args = {
   hint: 'Example hint',
 };
 
-export const InlineWithAnError: Story = (args: { label: string; meta: { touched: boolean; error: string } }) => (
+export const InlineWithAnError: StoryFn = (args: { label: string; meta: { touched: boolean; error: string } }) => (
   <MultiChoice {...args}>
     <Radio name="group1" inline>
       Yes
@@ -55,7 +55,7 @@ InlineWithAnError.args = {
   meta: { touched: true, error: 'Example error' },
 };
 
-export const WithAHintAndError: Story = (args: { label: string; meta: { touched: boolean; error: string } }) => (
+export const WithAHintAndError: StoryFn = (args: { label: string; meta: { touched: boolean; error: string } }) => (
   <MultiChoice {...args}>
     <Radio name="group1">Yes</Radio>
     <Radio name="group1">No</Radio>

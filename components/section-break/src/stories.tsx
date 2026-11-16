@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 import { SectionBreak } from '.';
@@ -9,7 +9,7 @@ export default {
   component: SectionBreak,
 };
 
-export const Default: Story = (args) => <SectionBreak {...args} />;
+export const Default: StoryFn = (args) => <SectionBreak {...args} />;
 Default.args = {
   visible: true,
   level: 'LARGE',

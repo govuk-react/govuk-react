@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -10,7 +10,7 @@ export default {
   component: Fieldset,
 };
 
-export const Default: Story = (args: { children: string; size: string; isPageHeading: boolean }) => (
+export const Default: StoryFn = (args: { children: string; size: string; isPageHeading: boolean }) => (
   <Fieldset>
     <Fieldset.Legend {...args} />
   </Fieldset>
@@ -21,7 +21,7 @@ Default.args = {
   isPageHeading: false,
 };
 
-export const LegendAsPageHeading: Story<React.ComponentProps<typeof Fieldset.Legend>> = (args) => (
+export const LegendAsPageHeading: StoryFn<React.ComponentProps<typeof Fieldset.Legend>> = (args) => (
   <Fieldset>
     <Fieldset.Legend {...args} />
   </Fieldset>

@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -8,7 +8,7 @@ export default {
   title: 'Utility/Icons/IconImportant',
 };
 
-export const IconImportant: Story = (args) => {
+export const IconImportant: StoryFn = (args) => {
   return <IconImportantComponent {...args} title="Example IconImportant implementation" />;
 };
 IconImportant.args = {

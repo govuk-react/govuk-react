@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -10,12 +10,12 @@ export default {
   component: WarningText,
 };
 
-export const Default: Story = (args: { children: string }) => <WarningText {...args} />;
+export const Default: StoryFn = (args: { children: string }) => <WarningText {...args} />;
 Default.args = {
   children: 'Example text',
 };
 
-export const LongWarning: Story = (args) => (
+export const LongWarning: StoryFn = (args) => (
   <WarningText {...args}>
     A very long warning message. This includes a lot of text to give a good representation of a more average length
     warning. That way you can see more than one line wrapping.

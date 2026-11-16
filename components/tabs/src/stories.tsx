@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 import Table from '@govuk-react/table';
@@ -21,7 +21,7 @@ export default {
   component: Tabs,
 };
 
-export const Default: Story = (args) => (
+export const Default: StoryFn = (args) => (
   <Tabs {...args}>
     <Tabs.Title>Contents</Tabs.Title>
     <Tabs.List>
@@ -147,13 +147,13 @@ export const Default: Story = (args) => (
   </Tabs>
 );
 
-export const Simple: Story = () => <SimpleTabs />;
-export const SimpleWithMapFunction: Story = () => <SimpleMapTabs />;
-export const SimpleWithMapAndBabelSProposedClassPropertiesPlugin: Story = () => <ProposedClassPropertiesPlugin />;
-export const ComplexMappedTable: Story = () => <TableTabs />;
-export const Hooks: Story = (args) => <HooksExample {...args} />;
+export const Simple: StoryFn = () => <SimpleTabs />;
+export const SimpleWithMapFunction: StoryFn = () => <SimpleMapTabs />;
+export const SimpleWithMapAndBabelSProposedClassPropertiesPlugin: StoryFn = () => <ProposedClassPropertiesPlugin />;
+export const ComplexMappedTable: StoryFn = () => <TableTabs />;
+export const Hooks: StoryFn = (args) => <HooksExample {...args} />;
 Hooks.args = {
   defaultIndex: 1,
 };
-export const UsingReactRouter: Story = () => <ReactRouterExample />;
-export const UsingReactRouterSinglePanelOnly: Story = () => <ReactRouterSinglePanelExample />;
+export const UsingReactRouter: StoryFn = () => <ReactRouterExample />;
+export const UsingReactRouterSinglePanelOnly: StoryFn = () => <ReactRouterSinglePanelExample />;

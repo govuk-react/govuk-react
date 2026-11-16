@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -12,7 +12,7 @@ export default {
   component: Pagination,
 };
 
-const Template: Story<React.ComponentProps<typeof Pagination>> = (args) => <Pagination {...args} />;
+const Template: StoryFn<React.ComponentProps<typeof Pagination>> = (args) => <Pagination {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -8,7 +8,7 @@ export default {
   title: 'Utility/Icons/ArrowRight',
 };
 
-export const ArrowRight: Story = (args) => {
+export const ArrowRight: StoryFn = (args) => {
   return <ArrowRightComponent {...args} title="Example ArrowRight implementation" />;
 };
 ArrowRight.args = {

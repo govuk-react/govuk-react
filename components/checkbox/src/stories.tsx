@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -10,7 +10,7 @@ export default {
   component: Checkbox,
 };
 
-const Template: Story<React.ComponentProps<typeof Checkbox>> = (args) => <Checkbox {...args} />;
+const Template: StoryFn<React.ComponentProps<typeof Checkbox>> = (args) => <Checkbox {...args} />;
 
 export const Default = Template.bind({});
 
@@ -43,7 +43,7 @@ CheckboxPreselectedDisabled.args = {
   disabled: true,
 };
 
-export const CheckboxWithHintText: Story = (args) => (
+export const CheckboxWithHintText: StoryFn = (args) => (
   <>
     <Checkbox hint="including English, Scottish, Welsh and Northern Irish" {...args}>
       British

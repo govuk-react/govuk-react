@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -10,7 +10,7 @@ export default {
   component: Panel,
 };
 
-const Template: Story<React.ComponentProps<typeof Panel>> = (args) => <Panel {...args} />;
+const Template: StoryFn<React.ComponentProps<typeof Panel>> = (args) => <Panel {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

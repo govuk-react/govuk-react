@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -8,7 +8,7 @@ export default {
   title: 'Utility/Icons/ButtonArrow',
 };
 
-export const ButtonArrow: Story = (args) => {
+export const ButtonArrow: StoryFn = (args) => {
   return <ButtonArrowComponent {...args} title="Example ButtonArrow implementation" />;
 };
 ButtonArrow.args = {

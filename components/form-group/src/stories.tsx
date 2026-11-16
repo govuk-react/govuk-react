@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -12,7 +12,7 @@ export default {
   component: FormGroup,
 };
 
-const Template: Story<React.ComponentProps<typeof FormGroup>> = (args) => <FormGroup {...args} />;
+const Template: StoryFn<React.ComponentProps<typeof FormGroup>> = (args) => <FormGroup {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -20,7 +20,7 @@ Default.args = {
   children: <Checkbox name="group-1">Example</Checkbox>,
 };
 
-export const NestedFormGroups: Story = ({
+export const NestedFormGroups: StoryFn = ({
   outerError,
   innerError1,
   innerError2,

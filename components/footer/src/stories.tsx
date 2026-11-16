@@ -1,4 +1,4 @@
-import type { Meta, Story } from '@storybook/react';
+import type { Meta, StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 import styled from 'styled-components';
@@ -17,7 +17,7 @@ const meta: Meta & { id: string } = {
 
 export default meta;
 
-const Template: Story<React.ComponentProps<typeof Footer>> = (args) => <Footer {...args} />;
+const Template: StoryFn<React.ComponentProps<typeof Footer>> = (args) => <Footer {...args} />;
 
 export const Default = Template.bind({});
 

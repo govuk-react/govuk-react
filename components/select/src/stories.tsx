@@ -1,7 +1,7 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 
 import LabelText from '@govuk-react/label-text';
 
@@ -13,7 +13,7 @@ export default {
   component: Select,
 };
 
-const Template: Story<React.ComponentProps<typeof Select>> = (args) => <Select {...args} />;
+const Template: StoryFn<React.ComponentProps<typeof Select>> = (args) => <Select {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -54,7 +54,7 @@ SelectWithHintTextError.args = {
   ],
 };
 
-export const StandaloneInputWithInlineLabel: Story = (args) => (
+export const StandaloneInputWithInlineLabel: StoryFn = (args) => (
   <label>
     <LabelText>
       Sort by:&nbsp;

@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 import GridRow from '@govuk-react/grid-row';
@@ -12,7 +12,7 @@ export default {
   component: Main,
 };
 
-export const Default: Story = (args) => (
+export const Default: StoryFn = (args) => (
   <Main {...args}>
     <GridRow>
       <GridCol setWidth="one-half">

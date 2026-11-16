@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -10,7 +10,7 @@ export default {
   component: SearchBox,
 };
 
-export const Default: Story = (args) => (
+export const Default: StoryFn = (args) => (
   <SearchBox {...args}>
     <SearchBox.Input placeholder="Search GOV.UK" />
     <SearchBox.Button />

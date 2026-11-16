@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
@@ -12,7 +12,7 @@ export default {
   id: 'list-item',
   component: ListItem,
 };
-const Template: Story = (args) => <ListItem {...args} />;
+const Template: StoryFn = (args) => <ListItem {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,11 +1,11 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import type { FieldInputProps } from 'react-final-form';
 
 import * as React from 'react';
 import { Form, Field } from 'react-final-form';
 
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 
 import Button from '@govuk-react/button';
 
@@ -18,7 +18,7 @@ export default {
   component: Radio,
 };
 
-const Template: Story<React.ComponentProps<typeof Radio>> = (args) => <Radio {...args} />;
+const Template: StoryFn<React.ComponentProps<typeof Radio>> = (args) => <Radio {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -175,7 +175,7 @@ const RadioGroup: React.FC<RadioGroupProps> = ({
   </MultiChoice>
 );
 
-export const UsageWithFinalReduxFormMultiCheckboxValidation: Story = (args) => (
+export const UsageWithFinalReduxFormMultiCheckboxValidation: StoryFn = (args) => (
   <FinalFormWrapper>
     <Field
       name="likesAnimals"

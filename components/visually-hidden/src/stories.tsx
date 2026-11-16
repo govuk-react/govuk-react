@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react';
+import type { StoryFn } from '@storybook/react';
 
 import React, { Component } from 'react';
 
@@ -13,7 +13,7 @@ export default {
   component: VisuallyHidden,
 };
 
-export const Default: Story = (args) => (
+export const Default: StoryFn = (args) => (
   <>
     <Paragraph>
       Following this paragraph is some hidden content. If `focusable` is enabled then you should be able to tab to it.
@@ -43,7 +43,7 @@ class Focusable extends Component<React.ComponentProps<typeof VisuallyHidden>> {
   }
 }
 
-export const FocussedFocusable: Story = () => <Focusable>Focussed focusable VisuallyHidden element</Focusable>;
+export const FocussedFocusable: StoryFn = () => <Focusable>Focussed focusable VisuallyHidden element</Focusable>;
 FocussedFocusable.parameters = {
   docs: {
     storyDescription:
@@ -51,7 +51,7 @@ FocussedFocusable.parameters = {
   },
 };
 
-export const FocussedFocusableAsAButton: Story = () => (
+export const FocussedFocusableAsAButton: StoryFn = () => (
   <Focusable as={Button}>VisuallyHidden as Button (focusable)</Focusable>
 );
 FocussedFocusableAsAButton.parameters = {
