@@ -8,7 +8,7 @@
     "commander": "^11.1.0",
     "glob": "^7.1.2",
     "glob-promise": "^6.0.5",
-    "govuk-react": "^0.10.7",
+    "govuk-react": "workspace:*",
     "lodash": "^4.17.5",
     "react": "^19.3.1",
     "react-docgen-typescript": "^2.1.0",

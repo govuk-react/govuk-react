@@ -21,7 +21,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "NODE_OPTIONS=--max-old-space-size=4096 tsup && pnpm copy-readme",
-    "copy-readme": "cp ../../README.md ."
+    "copy-readme": "cp ../../README.md ../../LICENSE ."
   },
   "dependencies": {
     "@govuk-react/icon-crown": "0.1.0",
@@ -40,6 +40,11 @@
   "author": "Alasdair McLeay",
   "license": "MIT",
   "homepage": "https://github.com/govuk-react/govuk-react#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/govuk-react/govuk-react.git",
+    "directory": "packages/govuk-react"
+  },
   "publishConfig": {
     "access": "public"
   }

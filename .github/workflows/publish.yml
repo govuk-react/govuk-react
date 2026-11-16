@@ -1,0 +1,36 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: npm dist-tag, such as alpha for a prerelease
+        required: true
+        default: alpha
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          registry-url: https://registry.npmjs.org
+          cache: pnpm
+
+      - run: npm install -g npm@^11.15.0
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: pnpm --filter govuk-react build
+      - run: npm stage publish --access public --tag "$TAG"
+        working-directory: packages/govuk-react
+        env:
+          TAG: ${{ inputs.tag }}

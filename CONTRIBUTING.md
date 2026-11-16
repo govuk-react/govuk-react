@@ -55,31 +55,14 @@ pnpm run docs
 
 ## Releasing
 
-In order to prepare a release:
+Versions and changelogs are managed with [Changesets](https://github.com/changesets/changesets). We are in prerelease mode, so versions are `1.0.0-alpha.x`.
 
-- ensure you have [gh cli](https://cli.github.com) installed (e.g. `brew install gh`)
-- run `./scripts/release.sh`, followed by a [semver increment](https://github.com/npm/node-semver#functions) e.g. `./scripts/release.sh patch` (if this is the first time running gh, you will be asked for your GitHub credentials).
-- this will open a PR on GitHub and draft a release
-- Edit the PR and write the release notes in the PR description (see release notes below)
-- get approval for the PR (reviewers should be reviewing the release notes in the PR description) then merge the PR
-- once the PR is merged, open the [draft release corresponding to the new version number on GitHub](https://github.com/govuk-react/govuk-react/releases), change the target branch to master, check the title and description and then click `Publish release`.
+- in each PR that changes the published package, run `pnpm changeset` and commit the generated file
+- on `main`, the Release workflow keeps a "Version packages" PR open that bumps the version and updates `CHANGELOG.md`
+- merge that PR, then run the [Publish workflow](https://github.com/govuk-react/govuk-react/actions/workflows/publish.yml) from `main` with the `alpha` dist-tag
+- the workflow stages the package on npm; a maintainer approves it on npm to publish it
 
-When the tag is created, the CI server will automatically release to npm.
-
-### Release notes
-
-Please refer to the commit history in GitHub since the last release. These can be copied directly and then categorised.
-
-Please list in this order, using `##` for headings:
-
-- Breaking changes or anything or similar significance
-- Enhancements
-- Bug fixes
-- Documentation
-
-Changes that have no user facing changes, such as our Github workflows, do not need to be included.
-
-Please look at [previous releases](https://github.com/govuk-react/govuk-react/releases) for examples.
+Write changeset summaries for users of the package. Changes with no user-facing effect, such as workflow changes, don't need a changeset.
 
 ## Conventions
 
