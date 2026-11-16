@@ -37,7 +37,7 @@ export { default as PhaseBanner } from './components/phase-banner';
 export { default as Radio } from './components/radio';
 export { default as RelatedItems } from './components/related-items';
 export { default as SearchBox } from './components/search-box';
-export { default as SectionBreak } from './components/section-break';
+export { SectionBreak } from './components/section-break';
 export { default as Select } from './components/select';
 export { default as SkipLink } from './components/skip-link';
 export { default as Table } from './components/table';

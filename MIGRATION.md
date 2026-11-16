@@ -63,3 +63,17 @@ There is no equivalent for the other whitespace props (`margin`, `padding` and s
 | `size="M"` / `"MEDIUM"` / `19`              | `size="m"`                                      |
 
 `size` is now required, and numeric sizes are no longer accepted. There is no equivalent for the whitespace props (`mb`, `margin`, `padding` and so on).
+
+## SectionBreak
+
+`SectionBreak` is now govuk-frontend-react's `SectionBreak`. It's a named export.
+
+| 0.x                                                    | 1.0                                                        |
+| ------------------------------------------------------ | ---------------------------------------------------------- |
+| `import SectionBreak from 'govuk-react/section-break'` | `import { SectionBreak } from 'govuk-react/section-break'` |
+| `level="XL"` / `"XLARGE"`                              | `size="xl"`                                                |
+| `level="L"` / `"LARGE"`                                | `size="l"`                                                 |
+| `level="M"` / `"MEDIUM"`                               | `size="m"`                                                 |
+| `visible`                                              | `visible`                                                  |
+
+There is no equivalent for the whitespace props (`mb`, `margin`, `padding` and so on).
