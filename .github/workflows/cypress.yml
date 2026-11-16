@@ -2,11 +2,9 @@ name: Cypress
 on:
   push:
     branches:
-      - master
       - main
   pull_request:
     branches:
-      - master
       - main
 jobs:
   cypress-run:
@@ -14,17 +12,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Read .nvmrc
-        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
-        id: nvm
+      - uses: pnpm/action-setup@v6
 
-      - name: Use Node.js
-        uses: actions/setup-node@v4.0.4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '${{ steps.nvm.outputs.NVMRC }}'
+          node-version-file: .nvmrc
+          cache: pnpm
 
-      - run: yarn
+      - run: pnpm install --frozen-lockfile
       - uses: cypress-io/github-action@v6
         with:
           install: false
-          command: yarn test:cypress
+          command: pnpm test:cypress

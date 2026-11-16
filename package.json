@@ -1,35 +1,35 @@
 {
   "name": "@govuk-react/monorepo",
   "scripts": {
-    "build:dist": "yarn build && rimraf dist && webpack --node-env=production --devtool source-map --entry ./packages/govuk-react/dist/govuk-react.esm.js",
-    "build:storybook": "cd packages/storybook && yarn build",
+    "build:dist": "pnpm build && rimraf dist && webpack --node-env=production --devtool source-map --entry ./packages/govuk-react/dist/govuk-react.esm.js",
+    "build:storybook": "pnpm --filter @govuk-react/storybook build",
     "build:types": "tsc --emitDeclarationOnly --declaration",
-    "build": "preconstruct build && yarn workspaces foreach --exclude @govuk-react/monorepo run build",
+    "build": "preconstruct build && pnpm -r --filter=!@govuk-react/monorepo run build",
     "bundlesize": "bundlesize",
     "clean:workspace": "rimraf packages/*/lib && rimraf packages/*/es && rimraf components/*/lib && rimraf components/*/es",
     "clean": "rimraf lib && rimraf es",
-    "coverage": "yarn coverage:clean && yarn coverage:unit",
+    "coverage": "pnpm coverage:clean && pnpm coverage:unit",
     "coverage:clean": "rimraf coverage",
     "coverage:unit": "jest --watchAll=false --coverage --coverageDirectory=coverage/unit",
     "create-component": "node ./scripts/createComponent.js",
-    "docs:components": "yarn workspaces foreach --parallel --exclude @govuk-react/monorepo run docs",
-    "docs": "yarn docs:components && concat ./components/*/README.md -o './API.md'",
+    "docs:components": "pnpm -r --parallel --filter=!@govuk-react/monorepo run docs",
+    "docs": "pnpm docs:components && concat ./components/*/README.md -o ./API.md",
     "eslint:fix": "eslint --fix \"./{components,packages}/*/src/**/*.{js,ts,tsx}\" \"./*.{js,ts,tsx}\" \"./scripts/*.{js,ts,tsx}\"",
     "eslint": "eslint \"./{components,packages}/*/src/**/*.{js,ts,tsx}\" \"./*.{js,ts,tsx}\" \"./scripts/*.{js,ts,tsx}\"",
-    "start": "cd packages/storybook && yarn start",
-    "test:cypress": "cd packages/example-application && yarn test:cypress",
+    "start": "pnpm --filter @govuk-react/storybook start",
+    "test:cypress": "pnpm --filter @govuk-react/example-application test:cypress",
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand",
-    "test:snapshot": "yarn test:unit -u",
+    "test:snapshot": "pnpm test:unit -u",
     "test:unit": "jest",
     "test:types": "tsc --noEmit --declaration -p ./tsconfig.json",
-    "test": "cross-env CI=true yarn test:unit && yarn eslint && yarn test:types"
+    "test": "cross-env CI=true pnpm test:unit && pnpm eslint && pnpm test:types"
   },
   "description": "A port of the govuk-frontend components for React using styled-components.",
   "main": "lib/index.js",
   "module": "es/index.js",
   "engines": {
     "node": ">=20.19",
-    "yarn": ">=2"
+    "pnpm": ">=12"
   },
   "dependencies": {
     "govuk-colours": "^1.1.0"
@@ -53,6 +53,7 @@
     "@testing-library/react": "^14.2.1",
     "@testing-library/user-event": "^14.5.2",
     "@types/jest": "27.0.2",
+    "@types/node": "^24.19.2",
     "@types/react": "^16.14.16",
     "@types/react-router-dom": "5",
     "@types/styled-components": "^5.1.14",
@@ -130,11 +131,11 @@
     ],
     "all": true
   },
+  "private": true,
   "workspaces": [
     "components/*",
     "packages/*"
   ],
-  "private": true,
   "preconstruct": {
     "packages": [
       "components/*",
@@ -143,7 +144,7 @@
       "!packages/storybook"
     ]
   },
-  "packageManager": "yarn@3.6.3",
+  "packageManager": "pnpm@12.21.0",
   "resolutions": {
     "@types/react": "16.14.16"
   }

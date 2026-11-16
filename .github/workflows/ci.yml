@@ -2,33 +2,31 @@ name: CI
 on:
   push:
     branches:
-      - master
       - main
   pull_request:
     branches:
-      - master
       - main
 jobs:
   build-lint-test:
     runs-on: ubuntu-latest
+    env:
+      CYPRESS_INSTALL_BINARY: 0
     steps:
       - uses: actions/checkout@v4
 
-      - name: Read .nvmrc
-        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
-        id: nvm
+      - uses: pnpm/action-setup@v6
 
-      - name: Use Node.js
-        uses: actions/setup-node@v4.0.4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '${{ steps.nvm.outputs.NVMRC }}'
+          node-version-file: .nvmrc
+          cache: pnpm
 
-      - run: yarn
-      - run: yarn build
-      - run: yarn docs
-      - run: yarn test
-      - run: yarn build:dist # the dist build is only used to track bundle size delta
-      - run: yarn bundlesize
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: pnpm run docs
+      - run: pnpm test
+      - run: pnpm build:dist # the dist build is only used to track bundle size delta
+      - run: pnpm bundlesize
 
   automerge:
     needs: build-lint-test

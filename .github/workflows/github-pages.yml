@@ -9,17 +9,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Read .nvmrc
-        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
-        id: nvm
+      - uses: pnpm/action-setup@v6
 
-      - name: Use Node.js
-        uses: actions/setup-node@v4.0.4
+      - uses: actions/setup-node@v4
         with:
-          node-version: "${{ steps.nvm.outputs.NVMRC }}"
+          node-version-file: .nvmrc
+          cache: pnpm
 
-      - run: yarn
-      - run: yarn build:storybook
+      - run: pnpm install --frozen-lockfile
+        env:
+          CYPRESS_INSTALL_BINARY: 0
+      - run: pnpm build:storybook
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.6.4
