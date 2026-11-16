@@ -33,6 +33,6 @@
     "target": "es2018",
     "types": ["node", "vite/client", "vitest/globals"]
   },
-  "exclude": ["node_modules", "**/node_modules/*", "**/cypress/*"],
+  "exclude": ["node_modules", "**/node_modules/*"],
   "include": ["./components/*/src/**/*", "./packages/*/src/**/*", "./scripts/**/*"]
 }

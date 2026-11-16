@@ -1,4 +1,4 @@
-name: Cypress
+name: Playwright
 on:
   push:
     branches:
@@ -7,7 +7,7 @@ on:
     branches:
       - main
 jobs:
-  cypress-run:
+  e2e:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,7 +20,6 @@ jobs:
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
-      - uses: cypress-io/github-action@v6
-        with:
-          install: false
-          command: pnpm test:cypress
+      - run: pnpm build:storybook
+      - run: pnpm --filter @govuk-react/example-application exec playwright install --with-deps chromium
+      - run: pnpm test:e2e

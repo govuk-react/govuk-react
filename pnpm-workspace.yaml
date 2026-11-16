@@ -5,7 +5,6 @@ packages:
 allowBuilds:
   core-js: false
   core-js-pure: false
-  cypress: true
   esbuild: true
 linkWorkspacePackages: true
 
