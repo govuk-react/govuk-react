@@ -9,8 +9,6 @@ on:
 jobs:
   build-lint-test:
     runs-on: ubuntu-latest
-    env:
-      CYPRESS_INSTALL_BINARY: 0
     steps:
       - uses: actions/checkout@v4
 
