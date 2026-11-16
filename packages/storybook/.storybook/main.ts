@@ -8,6 +8,7 @@ const config: StorybookConfig = {
     '../../../packages/example-application/src/**/?(*.)stories.[jt]s?(x)',
     '../../govuk-react/src/**/?(*.)stories.[jt]s?(x)',
   ],
+  staticDirs: [{ from: '../node_modules/govuk-frontend/dist/govuk/assets/images', to: '/assets/images' }],
   addons: ['@storybook/addon-docs'],
   framework: {
     name: '@storybook/react-vite',
