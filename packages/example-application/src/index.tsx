@@ -11,26 +11,34 @@ const ExampleApplication: React.FC<ExampleApplicationProps> = ({ routerEntries }
     <Router initialEntries={routerEntries}>
       <GovUK.Page
         header={
-          <GovUK.TopNav
-            serviceTitle={
-              <GovUK.TopNav.Anchor as={Link} to="/">
-                React
-              </GovUK.TopNav.Anchor>
-            }
-            search={
-              <GovUK.SearchBox>
-                <GovUK.SearchBox.Input placeholder="Search GOV.UK" />
-                <GovUK.SearchBox.Button />
-              </GovUK.SearchBox>
-            }
-          >
-            <GovUK.TopNav.NavLink as={Link} to="/">
-              Home
-            </GovUK.TopNav.NavLink>
-            <GovUK.TopNav.NavLink as={Link} to="/forms">
-              Forms
-            </GovUK.TopNav.NavLink>
-          </GovUK.TopNav>
+          <>
+            <GovUK.Header.Composite />
+            <GovUK.ServiceNavigation.Root as="section">
+              <GovUK.ServiceNavigation.WidthContainer>
+                <GovUK.ServiceNavigation.Container>
+                  <GovUK.ServiceNavigation.ServiceName>
+                    <GovUK.ServiceNavigation.Link asChild>
+                      <Link to="/">React</Link>
+                    </GovUK.ServiceNavigation.Link>
+                  </GovUK.ServiceNavigation.ServiceName>
+                  <GovUK.ServiceNavigation.Wrapper>
+                    <GovUK.ServiceNavigation.List>
+                      <GovUK.ServiceNavigation.Item>
+                        <GovUK.ServiceNavigation.Link asChild>
+                          <Link to="/">Home</Link>
+                        </GovUK.ServiceNavigation.Link>
+                      </GovUK.ServiceNavigation.Item>
+                      <GovUK.ServiceNavigation.Item>
+                        <GovUK.ServiceNavigation.Link asChild>
+                          <Link to="/forms">Forms</Link>
+                        </GovUK.ServiceNavigation.Link>
+                      </GovUK.ServiceNavigation.Item>
+                    </GovUK.ServiceNavigation.List>
+                  </GovUK.ServiceNavigation.Wrapper>
+                </GovUK.ServiceNavigation.Container>
+              </GovUK.ServiceNavigation.WidthContainer>
+            </GovUK.ServiceNavigation.Root>
+          </>
         }
         footer={<GovUK.Footer.Composite />}
       >
