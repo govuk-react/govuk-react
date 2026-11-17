@@ -1,85 +1,48 @@
-import type { StoryFn } from '@storybook/react';
-import { ButtonArrow } from '../../icons';
-
+import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
-import { BLUE, TEXT_COLOUR, YELLOW, GREY_3, ORANGE } from 'govuk-colours';
-import { MemoryRouter, Route, Routes, Link } from 'react-router-dom';
-import { Button } from '.';
+import { BrowserRouter, Link as RouterLink } from 'react-router-dom';
 
-export default {
+import * as Button from '.';
+
+const meta = {
   title: 'Form/Button',
   id: 'button',
-  component: Button,
-};
-const Template: StoryFn<React.ComponentProps<typeof Button>> = (args) => <Button {...args} />;
+  component: Button.Composite,
+  args: { children: 'Save and continue' },
+} satisfies Meta<typeof Button.Composite>;
 
-export const Default = Template.bind({});
-Default.args = {
-  disabled: false,
-  start: false,
-  children: 'Button',
-};
+export default meta;
 
-export const Start = Template.bind({});
-Start.args = {
-  start: true,
-  children: 'Save and continue',
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};
+
+export const Start: Story = {
+  args: { start: true, children: 'Start now' },
 };
 
-export const StartWithIcon = Template.bind({});
-StartWithIcon.args = {
-  start: true,
-  children: 'Start now',
-  icon: <ButtonArrow />,
+export const Secondary: Story = {
+  args: { variant: 'secondary', children: 'Find address' },
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-  children: 'Disabled primary button',
-  disabled: true,
+export const Warning: Story = {
+  args: { variant: 'warning', children: 'Delete account' },
 };
 
-export const DisabledStartWithIcon = Template.bind({});
-DisabledStartWithIcon.args = {
-  children: 'Start now',
-  disabled: true,
-  start: true,
-  icon: <ButtonArrow />,
+export const Disabled: Story = {
+  args: { disabled: true, children: 'Disabled button' },
 };
 
-export const CustomColour = Template.bind({});
-CustomColour.args = {
-  buttonColour: BLUE,
-  children: 'Blue button',
+export const LinkButton: Story = {
+  args: { href: '#', children: 'Link button' },
 };
 
-export const CustomColoursAllOptions = Template.bind({});
-CustomColoursAllOptions.args = {
-  buttonColour: GREY_3,
-  buttonHoverColour: YELLOW,
-  buttonShadowColour: ORANGE,
-  buttonTextColour: TEXT_COLOUR,
-  children: 'Wacky colours',
-};
-
-export const RouterLinkButton: StoryFn = (args) => (
-  <MemoryRouter>
-    <div>
-      <Button {...args}>Home Link button</Button>
-      <br />
-      <Button as={Link} to="/test">
-        Test Link button
-      </Button>
-      <br />
-      <Routes>
-        <Route path="/test" element={<div>Test path</div>} />
-        <Route path="/" element={<div>Home path</div>} />
-      </Routes>
-    </div>
-  </MemoryRouter>
-);
-RouterLinkButton.args = {
-  children: 'Home Link button',
-  as: Link,
-  to: '/',
+export const RouterLinkButton: Story = {
+  render: () => (
+    <BrowserRouter>
+      <Button.Root as={RouterLink} to="/">
+        Router link button
+      </Button.Root>
+    </BrowserRouter>
+  ),
 };

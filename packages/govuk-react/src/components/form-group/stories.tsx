@@ -1,80 +1,29 @@
-import type { StoryFn } from '@storybook/react';
-
+import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 
-import Checkbox from '../checkbox';
-
+import * as Input from '../input';
 import { FormGroup } from '.';
 
-export default {
+const meta = {
   title: 'Form/Form group',
   id: 'form-group',
   component: FormGroup,
-};
+  args: {
+    children: (
+      <>
+        <Input.Field id="first-name" name="first-name" label="First name" />
+        <Input.Field id="last-name" name="last-name" label="Last name" />
+      </>
+    ),
+  },
+} satisfies Meta<typeof FormGroup>;
 
-const Template: StoryFn<React.ComponentProps<typeof FormGroup>> = (args) => <FormGroup {...args} />;
+export default meta;
 
-export const Default = Template.bind({});
-Default.args = {
-  error: false,
-  children: <Checkbox name="group-1">Example</Checkbox>,
-};
+type Story = StoryObj<typeof meta>;
 
-export const NestedFormGroups: StoryFn = ({
-  outerError,
-  innerError1,
-  innerError2,
-}: {
-  outerError: boolean;
-  innerError1: boolean;
-  innerError2: boolean;
-}) => (
-  <FormGroup error={outerError}>
-    <Checkbox name="group-0">Outer FormGroup</Checkbox>
-    <FormGroup error={innerError1}>
-      <Checkbox name="group-1">First inner FormGroup</Checkbox>
-    </FormGroup>
-    <FormGroup error={innerError2}>
-      <Checkbox name="group-2">Second inner FormGroup</Checkbox>
-    </FormGroup>
-  </FormGroup>
-);
-NestedFormGroups.args = {
-  outerError: false,
-  innerError1: false,
-  innerError2: false,
-};
+export const Default: Story = {};
 
-export const ErrorPropSet = Template.bind({});
-ErrorPropSet.args = {
-  error: true,
-  children: <Checkbox name="group-1">Example</Checkbox>,
-};
-
-export const NestedFormGroupsWithInnerGroupsErrorPropsSet = Template.bind({});
-NestedFormGroupsWithInnerGroupsErrorPropsSet.args = {
-  error: false,
-  children: [
-    <Checkbox name="group-0">Outer FormGroup</Checkbox>,
-    <FormGroup error>
-      <Checkbox name="group-1">First inner FormGroup</Checkbox>
-    </FormGroup>,
-    <FormGroup error>
-      <Checkbox name="group-2">Second inner FormGroup</Checkbox>
-    </FormGroup>,
-  ],
-};
-
-export const NestedFormGroupsWithAllGroupsErrorPropsSet = Template.bind({});
-NestedFormGroupsWithAllGroupsErrorPropsSet.args = {
-  error: true,
-  children: [
-    <Checkbox name="group-0">Outer FormGroup</Checkbox>,
-    <FormGroup error>
-      <Checkbox name="group-1">First inner FormGroup</Checkbox>
-    </FormGroup>,
-    <FormGroup error>
-      <Checkbox name="group-2">Second inner FormGroup</Checkbox>
-    </FormGroup>,
-  ],
+export const ErrorPropSet: Story = {
+  args: { error: true },
 };

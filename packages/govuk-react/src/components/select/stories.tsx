@@ -1,68 +1,34 @@
-import type { StoryFn } from '@storybook/react';
-
+import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
-import { action } from 'storybook/actions';
 
-import LabelText from '../label-text';
+import * as Select from '.';
 
-import { Select, SelectInput } from '.';
+const options = (
+  <>
+    <option value="published">Recently published</option>
+    <option value="updated">Recently updated</option>
+    <option value="views">Most views</option>
+    <option value="comments">Most comments</option>
+  </>
+);
 
-export default {
+const meta = {
   title: 'Form/Select',
   id: 'select',
-  component: Select,
+  component: Select.Field,
+  args: { id: 'sort', name: 'sort', label: 'Sort by', children: options },
+} satisfies Meta<typeof Select.Field>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};
+
+export const SelectWithHintText: Story = {
+  args: { hint: 'Choose how to order the results' },
 };
 
-const Template: StoryFn<React.ComponentProps<typeof Select>> = (args) => <Select {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  input: { name: 'group1', onChange: action('onChange') },
-  label: 'This is a label',
-  children: [
-    <option value="0">GOV.UK elements option 1</option>,
-    <option value="1">GOV.UK elements option 2</option>,
-    <option value="2">GOV.UK elements option 3</option>,
-  ],
+export const SelectWithHintTextError: Story = {
+  args: { hint: 'Choose how to order the results', errorMessage: 'Select how to sort the results' },
 };
-
-export const SelectWithHintText = Template.bind({});
-SelectWithHintText.args = {
-  input: { name: 'group1', onChange: action('onChange') },
-  label: 'This is a label',
-  hint: 'This is and example of hintText/description of what we need from you.',
-  children: [
-    <option value="0">GOV.UK elements option 1</option>,
-    <option value="1">GOV.UK elements option 2</option>,
-    <option value="2">GOV.UK elements option 3</option>,
-  ],
-};
-
-export const SelectWithHintTextError = Template.bind({});
-SelectWithHintTextError.args = {
-  input: { name: 'group1', onChange: action('onChange') },
-  label: 'This is a label',
-  hint: 'This is and example of hintText/description of what we need from you.',
-  meta: {
-    touched: true,
-    error: 'Example',
-  },
-  children: [
-    <option value="0">GOV.UK elements option 1</option>,
-    <option value="1">GOV.UK elements option 2</option>,
-    <option value="2">GOV.UK elements option 3</option>,
-  ],
-};
-
-export const StandaloneInputWithInlineLabel: StoryFn = (args) => (
-  <label>
-    <LabelText>
-      Sort by:&nbsp;
-      <SelectInput {...args}>
-        <option value="0">People</option>
-        <option value="1">Animals</option>
-        <option value="2">Vegetables</option>
-      </SelectInput>
-    </LabelText>
-  </label>
-);

@@ -12,6 +12,8 @@ import {
   validatePetPhoto,
 } from './validators/validators';
 import Results from './components/results';
+import DateOfBirth, { type DateValue } from './components/date-of-birth';
+import { animalOptions, nationalities } from './components/options';
 
 function isNotEmpty(obj) {
   return Object.keys(obj).some((key) => obj[key]?.length > 0);
@@ -24,7 +26,7 @@ const Form: React.FC = () => {
   const [firstName, setFirstName] = useState<string>('');
   const [description, setDescription] = useState<string>('');
   const [nationality, setNationality] = useState<string[]>([]);
-  const [dob, setDob] = useState({ day: '', month: '', year: '' });
+  const [dob, setDob] = useState<DateValue>({ day: '', month: '', year: '' });
   const [animal, setAnimal] = useState<string>();
   const [hasMultiplePets, setHasMultiplePets] = useState<string>();
   const [petPhoto, setPetPhoto] = useState<FileList>();
@@ -81,121 +83,89 @@ const Form: React.FC = () => {
               }))}
             />
           )}
-          <GovUK.Fieldset>
-            <GovUK.Fieldset.Legend size="M">About you</GovUK.Fieldset.Legend>
-            <GovUK.Label mb={4} error={!!errors?.firstName}>
-              <GovUK.LabelText>First name</GovUK.LabelText>
-              <GovUK.HintText>You can find this on your passport</GovUK.HintText>
-              {errors?.firstName && <GovUK.ErrorText>{errors.firstName}</GovUK.ErrorText>}
-              <GovUK.Input
-                name="firstName"
-                onChange={(e) => setFirstName(e.target.value)}
-                value={firstName}
-                error={!!errors?.firstName}
-              />
-            </GovUK.Label>
-            <GovUK.TextArea
-              mb={8}
+          <GovUK.Fieldset.Composite legend="About you" legendSize="m">
+            <GovUK.Input.Field
+              id="firstName"
+              name="firstName"
+              label="First name"
+              hint="You can find this on your passport"
+              errorMessage={errors?.firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              value={firstName}
+            />
+            <GovUK.Textarea.Field
+              id="description"
+              name="description"
+              label="Description of what you saw"
               hint="Enter as many words as you like"
-              meta={{ error: errors?.description, touched: !!errors?.description }}
-              input={{
-                value: description,
-                name: 'description',
-                onChange: (e) => {
-                  setDescription(e.target.value);
-                },
-              }}
-            >
-              Description of what you saw
-            </GovUK.TextArea>
-
-            <GovUK.FormGroup error={!!errors?.nationality}>
-              <GovUK.Label mb={4}>
-                <GovUK.LabelText>Nationality</GovUK.LabelText>
-                {errors?.nationality && <GovUK.ErrorText>{errors?.nationality}</GovUK.ErrorText>}
-                <GovUK.Checkbox
+              errorMessage={errors?.description}
+              onChange={(e) => setDescription(e.target.value)}
+              value={description}
+            />
+            <GovUK.Checkboxes.Field idPrefix="nationality" legend="Nationality" errorMessage={errors?.nationality}>
+              {nationalities.map(({ value, label, hint }, index) => (
+                <GovUK.Checkboxes.ItemComposite
+                  key={value}
+                  id={index ? `nationality-${index + 1}` : 'nationality'}
                   name="nationality"
-                  hint="including English, Scottish, Welsh and Northern Irish"
-                  checked={nationality.includes('british')}
-                  onChange={() => setNationality((prev) => toggle(prev, 'british'))}
-                >
-                  British
-                </GovUK.Checkbox>
-                <GovUK.Checkbox
-                  name="nationality"
-                  checked={nationality.includes('irish')}
-                  onChange={() => setNationality((prev) => toggle(prev, 'irish'))}
-                >
-                  Irish
-                </GovUK.Checkbox>
-                <GovUK.Checkbox
-                  name="nationality"
-                  checked={nationality.includes('other')}
-                  onChange={() => setNationality((prev) => toggle(prev, 'other'))}
-                >
-                  Citizen of another country
-                </GovUK.Checkbox>
-              </GovUK.Label>
-            </GovUK.FormGroup>
-
-            <GovUK.DateField.Container errorText={errors?.dob}>
-              <GovUK.LabelText>Date of birth</GovUK.LabelText>
-              {errors?.dob && <GovUK.ErrorText>{errors?.dob}</GovUK.ErrorText>}
-              <GovUK.DateField.Input name="dob" value={dob} onChange={setDob} />
-            </GovUK.DateField.Container>
-          </GovUK.Fieldset>
-          <GovUK.Fieldset>
-            <GovUK.Fieldset.Legend size="M">About your pet</GovUK.Fieldset.Legend>
-            <GovUK.Select
-              mb={8}
+                  value={value}
+                  label={label}
+                  hint={hint}
+                  checked={nationality.includes(value)}
+                  onChange={() => setNationality((prev) => toggle(prev, value))}
+                />
+              ))}
+            </GovUK.Checkboxes.Field>
+            <DateOfBirth name="dob" value={dob} onChange={setDob} errorMessage={errors?.dob} />
+          </GovUK.Fieldset.Composite>
+          <GovUK.Fieldset.Composite legend="About your pet" legendSize="m">
+            <GovUK.Select.Field
+              id="animal"
+              name="animal"
               label="What animal is your pet"
               hint="A cat for example"
-              input={{ onChange: (e) => setAnimal(e.target.value), value: animal, name: 'animal' }}
-              meta={{ error: errors?.animal, touched: !!errors?.animal }}
+              errorMessage={errors?.animal}
+              onChange={(e) => setAnimal(e.target.value)}
+              value={animal ?? ''}
             >
-              <option value="">Please select...</option>
-              <option value="cat">Cat</option>
-              <option value="other-feline">Other feline</option>
-              <option value="other-non-feline">Other non feline</option>
-            </GovUK.Select>
-            <GovUK.FileUpload
-              mb={8}
-              acceptedFormats=".jpg, .png"
-              hint="This can be in either JPG or PNG format"
+              {animalOptions}
+            </GovUK.Select.Field>
+            <GovUK.FileUpload.Field
+              id="petPhoto"
               name="petPhoto"
-              meta={{ error: errors?.petPhoto, touched: !!errors?.petPhoto }}
-              onChange={(event) => {
-                setPetPhoto(event.target.files);
-              }}
+              label="Please upload a recent photograph"
+              hint="This can be in either JPG or PNG format"
+              accept=".jpg, .png"
+              errorMessage={errors?.petPhoto}
+              onChange={(event) => setPetPhoto(event.target.files)}
+            />
+            <GovUK.Radios.Field
+              idPrefix="hasMultiplePets"
+              legend="Do you have more than one pet?"
+              errorMessage={errors?.hasMultiplePets}
+              inline
             >
-              Please upload a recent photograph
-            </GovUK.FileUpload>
-            <GovUK.MultiChoice
-              mb={8}
-              label="Do you have more than one pet?"
-              meta={{ error: errors?.hasMultiplePets, touched: !!errors?.hasMultiplePets }}
-            >
-              <GovUK.Radio
+              <GovUK.Radios.ItemComposite
+                id="hasMultiplePets"
                 name="hasMultiplePets"
-                inline
+                value="yes"
+                label="Yes"
                 checked={hasMultiplePets === 'yes'}
                 onChange={() => setHasMultiplePets('yes')}
-              >
-                Yes
-              </GovUK.Radio>
-              <GovUK.Radio
+              />
+              <GovUK.Radios.ItemComposite
+                id="hasMultiplePets-2"
                 name="hasMultiplePets"
-                inline
+                value="no"
+                label="No"
                 checked={hasMultiplePets === 'no'}
                 onChange={() => setHasMultiplePets('no')}
-              >
-                No
-              </GovUK.Radio>
-            </GovUK.MultiChoice>
-          </GovUK.Fieldset>
-          <GovUK.Button onClick={handleSubmit} disabled={isSubmitting}>
+              />
+            </GovUK.Radios.Field>
+          </GovUK.Fieldset.Composite>
+          <GovUK.Button.Composite onClick={handleSubmit} disabled={isSubmitting}>
             Submit
-          </GovUK.Button>
+          </GovUK.Button.Composite>
         </GovUK.LoadingBox>
       )}
       {hasSubmitted && (

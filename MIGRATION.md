@@ -196,3 +196,31 @@ The `focusable` prop is removed, as govuk-frontend 6 no longer has a focusable v
 | `<BackLink as={RouterLink} to="/">Back</BackLink>` | `<BackLink asChild><RouterLink to="/">Back</RouterLink></BackLink>` |
 
 The whitespace props (`mb` and so on) are removed. `BackLink` gains an `inverse` prop.
+
+## Form controls
+
+The form components are now govuk-frontend-react's. Each control is a module of parts with a `Field` composite that renders the label or legend, hint and error message for you. The `input`/`meta` props (the old Redux Form and Final Form shape) are gone: pass `value`, `onChange`, `ref` and other DOM props directly, and pass the error text as `errorMessage`. The whitespace props (`mb` and so on) are removed.
+
+| 0.x                                                          | 1.0                                                                                                                                 |
+| ------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `<Button>`                                                   | `<Button.Composite>` (`Button.Root` for custom markup)                                                                              |
+| `<Button start>`                                             | `<Button.Composite start>`                                                                                                          |
+| `<Button buttonColour="…">`                                  | `<Button.Composite variant="secondary">` (`secondary`, `warning` or `inverse`)                                                      |
+| `<Button as={RouterLink} to="/">`                            | `<Button.Composite as={RouterLink} to="/">`                                                                                         |
+| `<InputField hint="…" input={…} meta={…}>Label</InputField>` | `<Input.Field id="…" name="…" label="Label" hint="…" errorMessage={error} />`                                                       |
+| `<Input>`                                                    | `<Input.Control>`                                                                                                                   |
+| `<TextArea>`                                                 | `<Textarea.Field>` (`Textarea.Control` for the bare control)                                                                        |
+| `<Select label="…">`                                         | `<Select.Field label="…">` (`Select.Control` for the bare control)                                                                  |
+| `<FileUpload acceptedFormats="…">Label</FileUpload>`         | `<FileUpload.Field id="…" name="…" label="Label" accept="…" />`                                                                     |
+| `<Checkbox hint="…">Label</Checkbox>`                        | `<Checkboxes.ItemComposite id="…" name="…" value="…" label="Label" hint="…" />` inside `<Checkboxes.Field idPrefix="…" legend="…">` |
+| `<MultiChoice label="…">` with `<Radio inline>`              | `<Radios.Field idPrefix="…" legend="…" inline>` with `<Radios.ItemComposite id="…" label="…" />`                                    |
+| `<DateField>`                                                | `<DateInput.Field id="…" legend="…">`; for controlled inputs, pass `DateInput.Item`s as children                                    |
+| `<Fieldset>` with `<Fieldset.Legend size="M">`               | `<Fieldset.Composite legend="…" legendSize="m">`                                                                                    |
+| `<Label>` wrapping `<LabelText>`                             | `<Label htmlFor="…">` or `<LabelComposite isPageHeading>`                                                                           |
+| `<HintText>`                                                 | `<Hint>`                                                                                                                            |
+| `<ErrorText>`                                                | `<ErrorMessageComposite>` (adds the visually hidden "Error:" prefix) or `<ErrorMessage>`                                            |
+| `<FormGroup error>`                                          | `<FormGroup error>` (named import)                                                                                                  |
+
+Subpath imports follow the new names: `govuk-react/checkboxes`, `govuk-react/radios`, `govuk-react/date-input`, `govuk-react/textarea`, `govuk-react/hint` and `govuk-react/error-message`. `govuk-react/checkbox`, `radio`, `multi-choice`, `date-field`, `input-field`, `text-area`, `label-text`, `hint-text` and `error-text` are removed.
+
+`Checkboxes.Field`, `Radios.Field` and `DateInput.Field` need an id prefix or id, because govuk-frontend uses it to link hints and errors with `aria-describedby`. `DateInput.Field` no longer manages the day, month and year state; see the example application's `DateOfBirth` for a controlled version.
