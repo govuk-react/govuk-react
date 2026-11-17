@@ -3,6 +3,7 @@ import { defineConfig } from 'tsup';
 export default defineConfig({
   entry: {
     index: 'src/index.ts',
+    accordion: 'src/components/accordion/index.tsx',
     'back-link': 'src/components/back-link/index.tsx',
     body: 'src/components/body/index.tsx',
     breadcrumbs: 'src/components/breadcrumbs/index.tsx',

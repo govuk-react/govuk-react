@@ -9,6 +9,33 @@ Each primitive:
 - adds React state (`value`, `defaultValue`, `onValueChange`) once hydrated
 - takes `asChild` on every part, so you render your own elements
 
+## Accordion
+
+```tsx
+import * as Accordion from '@govuk-react/primitives/accordion';
+
+<Accordion.Root defaultValue={['web']}>
+  <Accordion.Controls>
+    <Accordion.ShowAll>
+      <Accordion.ShowAllText />
+    </Accordion.ShowAll>
+  </Accordion.Controls>
+  <Accordion.Section value="web">
+    <h2>
+      <Accordion.Fallback>Writing well for the web</Accordion.Fallback>
+      <Accordion.Trigger>
+        <Accordion.Label>Writing well for the web</Accordion.Label> <Accordion.ToggleText />
+      </Accordion.Trigger>
+    </h2>
+    <Accordion.Content id="web-content">…</Accordion.Content>
+  </Accordion.Section>
+</Accordion.Root>;
+```
+
+Without JavaScript every section is shown under its `Fallback` heading. Each section also renders a hidden `Trigger` with the same heading, which the element shows on upgrade while hiding the fallback. Nothing is moved, so React can keep rendering the markup. Closed content gets `hidden="until-found"`, so find in page opens it. `Label`s name the trigger, followed by "Show this section" or "Hide this section".
+
+`ShowAll` opens every section, or closes them all when every one is open. `value` and `onValueChange` control the open sections once hydrated, and a section opened before hydration is reported rather than undone. As in govuk-frontend, open sections are remembered for the session by content id, unless `rememberExpanded` is `false`. In an island without a `Root`, pass `defaultExpanded` to `Section`.
+
 ## Tabs
 
 ```tsx
