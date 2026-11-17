@@ -21,7 +21,7 @@ export { Heading } from './components/heading';
 export { default as HintText } from './components/hint-text';
 export { default as Input } from './components/input';
 export { default as InputField } from './components/input-field';
-export { default as InsetText } from './components/inset-text';
+export { InsetText } from './components/inset-text';
 export { default as Label } from './components/label';
 export { default as LabelText } from './components/label-text';
 export { default as Link } from './components/link';

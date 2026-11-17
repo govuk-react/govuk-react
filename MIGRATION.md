@@ -92,3 +92,11 @@ There is no equivalent for the whitespace props (`mb`, `margin`, `padding` and s
 | `mb={n}` on the list                                     | `marginBottom={n}`                        |
 
 `List` renders an `ol` for `variant="number"` and a `ul` otherwise. Other `listStyleType` values and the whitespace props have no equivalent. `spaced` adds govuk-frontend's extra space between items.
+
+## InsetText
+
+`InsetText` is now govuk-frontend-react's `InsetText`. It's a named export, and the whitespace props (`mb`, `margin`, `padding` and so on) are removed.
+
+| 0.x                                              | 1.0                                                  |
+| ------------------------------------------------ | ---------------------------------------------------- |
+| `import InsetText from 'govuk-react/inset-text'` | `import { InsetText } from 'govuk-react/inset-text'` |

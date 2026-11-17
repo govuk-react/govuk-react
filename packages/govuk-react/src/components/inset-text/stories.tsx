@@ -1,29 +1,26 @@
-import type { StoryFn } from '@storybook/react';
-
+import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
-import Paragraph from '../../legacy/paragraph';
 
 import { InsetText } from '.';
+import { Body } from '../body';
 
-export default {
+const meta = {
   title: 'Typography/Inset text',
   id: 'inset-text',
   component: InsetText,
-};
+} satisfies Meta<typeof InsetText>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 const testText =
   'It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.';
 
-export const Default: StoryFn = (args) => <InsetText {...args} />;
-Default.args = {
-  children: testText,
+export const Default: Story = {
+  args: { children: testText },
 };
 
-export const UsingAParagraphForContents: StoryFn = ({ children }: { children: string }) => (
-  <InsetText>
-    <Paragraph mb={0}>{children}</Paragraph>
-  </InsetText>
-);
-UsingAParagraphForContents.args = {
-  children: testText,
+export const UsingAParagraphForContents: Story = {
+  args: { children: <Body marginBottom={0}>{testText}</Body> },
 };
