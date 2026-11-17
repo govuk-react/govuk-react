@@ -1,0 +1,17 @@
+---
+import ModalDemo from '../../components/ModalDemo.tsx';
+import ControlledModal from '../../components/ControlledModal.tsx';
+---
+
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Modal</title><link rel="icon" href="data:," /></head>
+  <body>
+    <ModalDemo client:load id="hydrated" />
+    <!-- No client directive: native invoker commands only, plus the element. -->
+    <ModalDemo id="upgraded" />
+    <ControlledModal client:load />
+    <script>
+      import "@govuk-react/primitives/modal-element";
+    </script>
+  </body>
+</html>

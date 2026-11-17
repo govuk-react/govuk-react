@@ -8,6 +8,7 @@ const pages = [
   { path: '/test/composition', role: 'tab', name: 'Settings' },
   { path: '/test/nested', role: 'tab', name: 'Settings' },
   { path: '/test/islands', role: 'tab', name: 'Account' },
+  { path: '/test/modal', role: 'button', name: 'Open from outside' },
   { path: '/test/password', role: 'button', name: 'Show password' },
 ] as const;
 

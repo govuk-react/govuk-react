@@ -42,3 +42,23 @@ In an island without a `Root`, pass `fallback`, `name` and `defaultSelected` to 
 Without React, use the `<govuk-react-tabs>` element from `@govuk-react/primitives/tabs-element` with the same markup, including a hidden radio as the first child of each panel. Listen for its `govuk-react-tabs:change` event. See [the element's source](src/tabs/element.ts) for its attributes.
 
 It follows the Tabs reference in [react-design-system-apis](https://github.com/penx/react-design-system-apis). Browser tests in `packages/primitives-e2e` cover it without JavaScript, upgraded without React, hydrated, before hydration, controlled, nested, in islands and rendered only on the client.
+
+## Modal
+
+```tsx
+import * as Modal from '@govuk-react/primitives/modal';
+
+<Modal.Root>
+  <Modal.Trigger>Delete account</Modal.Trigger>
+  <Modal.Content>
+    <Modal.Title>Are you sure?</Modal.Title>
+    <Modal.Close>Cancel</Modal.Close>
+  </Modal.Content>
+</Modal.Root>;
+```
+
+`Content` is a native `dialog`, and `Trigger` and `Close` are buttons with invoker commands (`command="show-modal"` and `command="close"`, with `commandfor` naming the dialog). Where the browser supports them (Chrome and Edge 135, Firefox 144, Safari 26.2), the dialog opens as a true modal without JavaScript: the page behind is inert, focus moves into the dialog and Escape closes it. In older browsers, the `<govuk-react-modal>` element runs the commands once its script loads.
+
+`Title` names the dialog, so always include one, or pass `aria-label` to `Content`. Pass `closedby="any"` to `Content` to also close it when the user clicks outside it.
+
+`open` and `onOpenChange` control the dialog once hydrated. In an island without a `Root`, pass `dialogId` to `Trigger` and `Close`, and `id` and `aria-labelledby` to `Content`.
