@@ -1,24 +1,31 @@
-import type { StoryFn } from '@storybook/react';
-
+import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 
-import { Panel } from '.';
+import * as Panel from '.';
 
-export default {
+const meta = {
   title: 'Page & Layout/Panel',
   id: 'panel',
-  component: Panel,
+  component: Panel.Composite,
+} satisfies Meta<typeof Panel.Composite>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: { title: 'Application complete' },
 };
 
-const Template: StoryFn<React.ComponentProps<typeof Panel>> = (args) => <Panel {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  title: 'Application complete',
-};
-
-export const PanelWithHeaderAndHtmlBody = Template.bind({});
-PanelWithHeaderAndHtmlBody.args = {
-  title: 'Application complete',
-  children: ['Your reference number', <br />, <strong>HDJ2123F</strong>],
+export const PanelWithHeaderAndHtmlBody: Story = {
+  args: {
+    title: 'Application complete',
+    children: (
+      <>
+        Your reference number
+        <br />
+        <strong>HDJ2123F</strong>
+      </>
+    ),
+  },
 };

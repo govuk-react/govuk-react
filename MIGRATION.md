@@ -153,3 +153,12 @@ The whitespace props (`mb` and so on) are removed.
 | `<Details summary="Help">`                  | `<Details.Composite summary="Help">`             |
 
 The whitespace props (`mb` and so on) are removed.
+
+## Panel
+
+`Panel` is now govuk-frontend-react's `Panel`, a module of parts. `Panel.Composite` renders the whole panel, and `Root`, `Title`, `Body` and `Actions` are available for custom markup. The composite also takes `headingLevel`, `variant` and `actions`.
+
+| 0.x                                     | 1.0                                              |
+| --------------------------------------- | ------------------------------------------------ |
+| `import Panel from 'govuk-react/panel'` | `import * as Panel from 'govuk-react/panel'`     |
+| `<Panel title="Application complete">`  | `<Panel.Composite title="Application complete">` |
