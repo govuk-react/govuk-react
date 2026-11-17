@@ -108,3 +108,45 @@ export const Toggle: StoryFn<React.ComponentProps<typeof LoadingBox>> = (args) =
     </>
   );
 };
+
+export const SubmittingAForm: StoryFn<React.ComponentProps<typeof LoadingBox>> = () => {
+  const [state, setState] = React.useState<'editing' | 'sending' | 'sent'>('editing');
+  const sending = React.useRef(false);
+  const confirmation = React.useRef<HTMLHeadingElement>(null);
+  React.useEffect(() => {
+    if (state === 'sent') confirmation.current?.focus();
+  }, [state]);
+  if (state === 'sent') {
+    return (
+      <Heading size="l" ref={confirmation} tabIndex={-1}>
+        Details sent
+      </Heading>
+    );
+  }
+  return (
+    <LoadingBox loading={state === 'sending'} statusText="Sending your details" inertWhileLoading>
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          // Ignore repeat submissions rather than disabling the button.
+          if (sending.current) return;
+          sending.current = true;
+          setState('sending');
+          // Keep the loading state for at least a couple of seconds.
+          setTimeout(() => setState('sent'), 2000);
+        }}
+      >
+        <Input.Field id="form-email-address" name="email-address" label="Email address" />
+        <Button.Root type="submit">Continue</Button.Root>
+      </form>
+    </LoadingBox>
+  );
+};
+SubmittingAForm.parameters = {
+  docs: {
+    description: {
+      story:
+        'Announces what’s happening, shows for at least 2 seconds, blocks interaction without disabling the button, ignores repeat submissions and moves focus to the result.',
+    },
+  },
+};

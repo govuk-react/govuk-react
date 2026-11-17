@@ -344,11 +344,13 @@ govuk-react now exports `overrideClasses`, which returns govuk-frontend's overri
 
 `LoadingBox` no longer uses styled-components or react-transition-group. Its styles are a small stylesheet that React hoists into the head, with your props passed in as CSS custom properties, so it works with server rendering and without a CSS-in-JS runtime.
 
-| 0.x                                                | 1.0                                                                                              |
-| -------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| `import LoadingBox from 'govuk-react/loading-box'` | `import { LoadingBox } from 'govuk-react/loading-box'`                                           |
-| `spinnerColor`, `backgroundColor` took hex colours | Any CSS colour. They default to govuk-frontend's text and page background colours                |
-| The overlay unmounted when `loading` was `false`   | The overlay stays in the DOM, hidden, so it can fade out. The box sets `aria-busy` while loading |
+| 0.x                                                | 1.0                                                                                                                |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `import LoadingBox from 'govuk-react/loading-box'` | `import { LoadingBox } from 'govuk-react/loading-box'`                                                             |
+| `spinnerColor`, `backgroundColor` took hex colours | Any CSS colour. They default to govuk-frontend's text and page background colours                                  |
+| The overlay unmounted when `loading` was `false`   | The overlay stays in the DOM, hidden, so it can fade out. The box sets `aria-busy` while loading                   |
+| `title` (the spinner's text alternative)           | `statusText`, announced in a `role="status"` region while loading. Say what's happening                            |
+| The whole box had `aria-busy`                      | Only the content has `aria-busy`, so the status is still announced. `inertWhileLoading` blocks interaction with it |
 
 ## RelatedItems
 
