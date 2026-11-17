@@ -131,3 +131,14 @@ The composite adds govuk-frontend's visually hidden "Warning" text before the me
 | `tint="YELLOW"`                     | `colour="yellow"`                               |
 
 govuk-frontend's tags are no longer uppercase, and the default is a light blue tag rather than solid blue. `light-blue` is a new colour. Custom `backgroundColor` and `color` props are removed.
+
+## PhaseBanner
+
+`PhaseBanner` is now govuk-frontend-react's `PhaseBanner`, a module of parts. `PhaseBanner.Composite` renders the whole banner, and `Root`, `Content`, `Tag` and `Text` are available for custom markup.
+
+| 0.x                                                  | 1.0                                                       |
+| ---------------------------------------------------- | --------------------------------------------------------- |
+| `import PhaseBanner from 'govuk-react/phase-banner'` | `import * as PhaseBanner from 'govuk-react/phase-banner'` |
+| `<PhaseBanner level="alpha">`                        | `<PhaseBanner.Composite tag="Alpha">`                     |
+
+The whitespace props (`mb` and so on) are removed.

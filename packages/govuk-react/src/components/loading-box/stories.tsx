@@ -7,7 +7,7 @@ import InputField from '../input-field';
 import Button from '../button';
 import Link from '../link';
 import Radio from '../radio';
-import PhaseBanner from '../phase-banner';
+import * as PhaseBanner from '../phase-banner';
 import MultiChoice from '../multi-choice';
 
 import { LoadingBox } from '.';
@@ -24,9 +24,9 @@ export const Default = Template.bind({});
 Default.args = {
   loading: true,
   children: [
-    <PhaseBanner level="alpha" mb={6}>
+    <PhaseBanner.Composite tag="Alpha">
       This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
-    </PhaseBanner>,
+    </PhaseBanner.Composite>,
     <H2 mb={3}>Example</H2>,
     <InputField mb={6}>Email address</InputField>,
     <Button start>Continue</Button>,
@@ -37,9 +37,9 @@ export const PartialCover = Template.bind({});
 PartialCover.decorators = [
   (storyFn) => (
     <>
-      <PhaseBanner level="alpha" mb={6}>
+      <PhaseBanner.Composite tag="Alpha">
         This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
-      </PhaseBanner>
+      </PhaseBanner.Composite>
       {storyFn()}
     </>
   ),
@@ -53,9 +53,9 @@ export const LoadingBoxLong = Template.bind({});
 LoadingBoxLong.args = {
   loading: true,
   children: [
-    <PhaseBanner level="alpha" mb={6}>
+    <PhaseBanner.Composite tag="Alpha">
       This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
-    </PhaseBanner>,
+    </PhaseBanner.Composite>,
     <H2 mb={3}>Example</H2>,
     <InputField mb={3}>First name</InputField>,
     <InputField mb={3}>Last name</InputField>,
