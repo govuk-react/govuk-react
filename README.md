@@ -84,7 +84,6 @@ const MyComponent = () => (
 
 Use of these components assumes the following from the peer project:
 
-- The govuk-react `GlobalStyle` component is included on all pages.
 - `govuk-frontend` is installed and its CSS (`govuk-frontend/dist/govuk/govuk-frontend.min.css`) is loaded. Components migrated to govuk-frontend-react rely on it; see [MIGRATION.md](MIGRATION.md).
 - The GDS Transport font face is included ([for gov.uk domains only](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk))
 - Optionally, either [normalize.css](https://necolas.github.io/normalize.css/) or [sanitize.css](https://csstools.github.io/sanitize.css/) is used as a CSS reset. We don't test for this, so please raise an issue if you find any problems with compatibility.

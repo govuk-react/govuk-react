@@ -3,6 +3,7 @@ import * as React from 'react';
 import { SkipLink } from '../skip-link';
 import { WidthContainer } from '../width-container';
 import { MainWrapper } from '../main-wrapper';
+import { Header as TemplateHeader, Footer as TemplateFooter } from 'govuk-frontend-react/template';
 
 export type PageProps = {
   /** Page contents, rendered inside the main wrapper. */
@@ -20,7 +21,7 @@ export type PageProps = {
 };
 
 /**
- * Lays out the body of a GOV.UK page: skip link, header, width container, main wrapper and footer.
+ * Lays out the body of a GOV.UK page: skip link, header and footer landmarks, width container and main wrapper.
  * For custom layouts, compose `SkipLink`, `WidthContainer` and `MainWrapper` directly.
  *
  * - https://design-system.service.gov.uk/styles/page-template/
@@ -37,12 +38,12 @@ export function Page({
   return (
     <>
       <SkipLink href={`#${id}`}>{skipLinkText}</SkipLink>
-      {header}
+      {header && <TemplateHeader>{header}</TemplateHeader>}
       <WidthContainer>
         {beforeChildren}
         <MainWrapper id={id}>{children}</MainWrapper>
       </WidthContainer>
-      {footer}
+      {footer && <TemplateFooter>{footer}</TemplateFooter>}
     </>
   );
 }

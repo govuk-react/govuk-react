@@ -48,7 +48,7 @@ export const ColumnFourQuarters: Story = {
   ),
 };
 
-export const ColumnWidthsDifferingBetweenTabletAndDesktop: Story = {
+export const ColumnWidthsFromDesktop: Story = {
   render: () => (
     <>
       <GridColumn width="one-quarter-from-desktop">One quarter from desktop</GridColumn>
