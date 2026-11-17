@@ -1,56 +1,38 @@
-import type { StoryFn } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
+import * as React from 'react';
 
-import React, { Component } from 'react';
-
-import Paragraph from '../../legacy/paragraph';
-
+import { Body } from '../body';
 import { SkipLink } from '.';
 
-export default {
+const meta = {
   title: 'Navigation/Skip link',
   id: 'skip-link',
   component: SkipLink,
-};
+  args: { href: '#main-content', children: 'Skip to main content' },
+} satisfies Meta<typeof SkipLink>;
 
-export const Default: StoryFn = (args) => <SkipLink {...args} />;
-Default.args = {
-  href: '#main-content',
-  children: 'Skip to main content',
-};
+export default meta;
 
-class AutoFocussedSkipLink extends Component<{ href: string; children?: React.ReactNode }> {
-  focusableRef;
+type Story = StoryObj<typeof meta>;
 
-  constructor(props) {
-    super(props);
-    // create a ref to store the focusable DOM element
-    this.focusableRef = React.createRef();
-  }
+export const Default: Story = {};
 
-  componentDidMount() {
-    this.focusableRef.current?.focus();
-  }
-
-  render() {
-    return <SkipLink ref={this.focusableRef} {...this.props} />;
-  }
+function AutoFocussedSkipLink(props: React.ComponentProps<typeof SkipLink>) {
+  const ref = React.useRef<HTMLAnchorElement>(null);
+  React.useEffect(() => {
+    ref.current?.focus();
+  }, []);
+  return <SkipLink ref={ref} {...props} />;
 }
-export const AutoFocussed: React.FC = () => (
-  <div>
-    <Paragraph>
-      The skip link component in this example should automatically focus. This is for visual regression testing.
-    </Paragraph>
-    <AutoFocussedSkipLink href="#main-content">Skip to main content</AutoFocussedSkipLink>
-    <br />
-    <br />
-    <div id="main-content">
-      <Paragraph id="main-content">
-        This paragraph is within a div with an id of `main-content` to match the `href=&quot;#main-content&quot;` prop
-        set on the SkipLink component in this example.
-      </Paragraph>
-      <Paragraph>
-        NB if you are using Safari you may need to go to Preferences &gt; Advanced to enable keyboard focussing.
-      </Paragraph>
-    </div>
-  </div>
-);
+
+export const AutoFocussed: Story = {
+  render: (args) => (
+    <>
+      <Body>The skip link in this example focuses automatically. This is for visual regression testing.</Body>
+      <AutoFocussedSkipLink {...args} />
+      <div id="main-content">
+        <Body>This content has an id of `main-content` to match the skip link&apos;s `href`.</Body>
+      </div>
+    </>
+  ),
+};

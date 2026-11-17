@@ -196,3 +196,14 @@ The `focusable` prop is removed, as govuk-frontend 6 no longer has a focusable v
 | `<BackLink as={RouterLink} to="/">Back</BackLink>` | `<BackLink asChild><RouterLink to="/">Back</RouterLink></BackLink>` |
 
 The whitespace props (`mb` and so on) are removed. `BackLink` gains an `inverse` prop.
+
+## SkipLink
+
+`SkipLink` is now govuk-frontend-react's `SkipLink`. It still defaults to `href="#content"`, but no longer has default text, so pass the text as `children`. `Page` passes "Skip to main content".
+
+| 0.x                                            | 1.0                                                |
+| ---------------------------------------------- | -------------------------------------------------- |
+| `import SkipLink from 'govuk-react/skip-link'` | `import { SkipLink } from 'govuk-react/skip-link'` |
+| `<SkipLink />`                                 | `<SkipLink>Skip to main content</SkipLink>`        |
+
+The `as` prop is removed.
