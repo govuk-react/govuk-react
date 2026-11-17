@@ -2,11 +2,6 @@ name: Publish
 
 on:
   workflow_dispatch:
-    inputs:
-      tag:
-        description: npm dist-tag, such as alpha for a prerelease
-        required: true
-        default: alpha
 
 permissions:
   contents: read
@@ -30,7 +25,5 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm test
       - run: pnpm --filter govuk-react build
-      - run: npm stage publish --access public --tag "$TAG"
+      - run: npm stage publish --access public --tag "$(node -p "require('./package.json').version.split('-')[1]?.split('.')[0] ?? 'latest'")"
         working-directory: packages/govuk-react
-        env:
-          TAG: ${{ inputs.tag }}
