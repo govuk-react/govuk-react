@@ -74,14 +74,13 @@ const Form: React.FC = () => {
             <Link to="/forms">Home</Link>
           </GovUK.BackLink>
           {errors && !!Object.keys(errors).length && (
-            <GovUK.ErrorSummary
-              heading="Error summary"
-              description="Please address the following issues"
-              errors={Object.keys(errors).map((key) => ({
-                targetName: key,
-                text: errors[key],
-              }))}
-            />
+            <GovUK.ErrorSummary.Composite title="Error summary" description="Please address the following issues">
+              {Object.keys(errors).map((key) => (
+                <GovUK.ErrorSummary.ListItemComposite key={key} href={`#${key}`}>
+                  {errors[key]}
+                </GovUK.ErrorSummary.ListItemComposite>
+              ))}
+            </GovUK.ErrorSummary.Composite>
           )}
           <GovUK.Fieldset.Composite legend="About you" legendSize="m">
             <GovUK.Input.Field

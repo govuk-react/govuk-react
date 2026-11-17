@@ -1,30 +1,31 @@
-import type { StoryFn } from '@storybook/react';
-
+import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 
-import { ErrorSummary } from '.';
+import * as ErrorSummary from '.';
 
-export default {
+const meta = {
   title: 'Form/Error summary',
   id: 'error-summary',
-  component: ErrorSummary,
-};
+  component: ErrorSummary.Composite,
+} satisfies Meta<typeof ErrorSummary.Composite>;
 
-const errors = [
-  {
-    targetName: 'national-insurance-number',
-    text: 'National Insurance number error',
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    title: 'There is a problem',
+    description: 'Optional description of the errors and how to correct them',
+    children: (
+      <>
+        <ErrorSummary.ListItemComposite href="#national-insurance-number">
+          Enter a National Insurance number
+        </ErrorSummary.ListItemComposite>
+        <ErrorSummary.ListItemComposite href="#description">
+          Enter a description of what you saw
+        </ErrorSummary.ListItemComposite>
+      </>
+    ),
   },
-  {
-    targetName: 'description',
-    text: 'Description of what you saw error',
-  },
-];
-
-export const Default: StoryFn<React.ComponentProps<typeof ErrorSummary>> = (args) => <ErrorSummary {...args} />;
-
-Default.args = {
-  heading: 'Message to alert the user to a problem goes here',
-  description: 'Optional description of the errors and how to correct them',
-  errors,
 };

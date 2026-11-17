@@ -271,3 +271,18 @@ The layout components are now govuk-frontend-react's. The whitespace props (`mb`
 | `<Breadcrumbs.Link href="/section">`                | `<Breadcrumbs.ItemComposite href="/section">`                         |
 | Plain text child for the current page               | `<Breadcrumbs.ItemComposite>Current page</Breadcrumbs.ItemComposite>` |
 | `mb` and other whitespace props                     | `className`                                                           |
+
+## ErrorSummary
+
+`ErrorSummary` is now govuk-frontend-react's `ErrorSummary`, a module of parts. `ErrorSummary.Composite` renders the whole summary, and each `ErrorSummary.ListItemComposite` links to a field by its id. `Root`, `Alert`, `Title`, `Body`, `Description`, `List`, `ListItem` and `ListItemLink` are available for custom markup.
+
+Error links are now plain fragment links (`href="#field-id"`), so they work without JavaScript. govuk-react no longer handles clicks on them. The summary now has `role="alert"`, so screen readers announce it when it appears.
+
+| 0.x                                                       | 1.0                                                                                                                                                                |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `import ErrorSummary from 'govuk-react/error-summary'`    | `import * as ErrorSummary from 'govuk-react/error-summary'`                                                                                                        |
+| `<ErrorSummary heading="There is a problem">`             | `<ErrorSummary.Composite title="There is a problem">`                                                                                                              |
+| `errors={[{ targetName: 'name', text: 'Enter a name' }]}` | `<ErrorSummary.ListItemComposite href="#name">Enter a name</ErrorSummary.ListItemComposite>` children, or `errors={[{ href: '#name', children: 'Enter a name' }]}` |
+| `onHandleErrorClick`                                      | Removed. For custom handling, use `ListItem` and `ListItemLink` parts with your own `onClick`                                                                      |
+| `heading` defaulted to "There is a problem"               | `title` is required                                                                                                                                                |
+| `mb` and other whitespace props                           | `className`                                                                                                                                                        |
