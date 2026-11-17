@@ -180,15 +180,24 @@ export const customFields = {
   BooleanField,
 };
 
+// Schema errors have a property such as ".firstName". Custom validation errors only have a stack, "firstName: message".
+const errorFieldAndMessage = ({ property, message, stack }: AjvError) => {
+  if (property) return { field: property.replace(/^\./, ''), message };
+  const separator = stack.indexOf(': ');
+  return { field: stack.slice(0, separator), message: stack.slice(separator + 2) };
+};
+
 export const ErrorListTemplate: React.FC<{ errors: AjvError[] }> = ({ errors }) => (
-  <GovUK.ErrorSummary
-    heading="Error summary"
-    description="Please address the following issues"
-    errors={errors.map((error, n) => ({
-      targetName: error.name || String(n),
-      text: error.stack.substring(error.stack.indexOf(' ') + 1),
-    }))}
-  />
+  <GovUK.ErrorSummary.Composite title="Error summary" description="Please address the following issues">
+    {errors.map((error) => {
+      const { field, message } = errorFieldAndMessage(error);
+      return (
+        <GovUK.ErrorSummary.ListItemComposite key={error.stack} href={`#${field}`}>
+          {message}
+        </GovUK.ErrorSummary.ListItemComposite>
+      );
+    })}
+  </GovUK.ErrorSummary.Composite>
 );
 
 export const ObjectFieldTemplate: React.FC<ObjectFieldTemplateProps> = ({ title, properties }) => {

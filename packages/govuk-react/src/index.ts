@@ -9,7 +9,7 @@ export * as DateInput from './components/date-input';
 export * as Details from './components/details';
 export { default as DocumentFooterMetadata } from './components/document-footer-metadata';
 export { ErrorMessage, ErrorMessageComposite } from './components/error-message';
-export { default as ErrorSummary } from './components/error-summary';
+export * as ErrorSummary from './components/error-summary';
 export * as Fieldset from './components/fieldset';
 export * as FileUpload from './components/file-upload';
 export * as Footer from './components/footer';
