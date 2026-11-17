@@ -17,8 +17,8 @@ type Story = StoryObj<typeof meta>;
 const summary = 'Help with nationality';
 
 const paragraphs = [
-  'If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.',
-  'We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.',
+  'We need to know your nationality so we can work out which elections you’re entitled to vote in.',
+  'If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.',
 ];
 
 export const Default: Story = {

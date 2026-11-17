@@ -10,7 +10,7 @@ const meta = {
   args: {
     idPrefix: 'nationality',
     legend: 'What is your nationality?',
-    hint: 'Select all that apply.',
+    hint: 'Select all that apply',
   },
 } satisfies Meta<typeof Checkboxes.Field>;
 
@@ -65,10 +65,16 @@ export const WithError: Story = {
 export const WithItemsArray: Story = {
   args: {
     items: [
-      { id: 'contact', name: 'contact', value: 'email', label: 'Email' },
-      { id: 'contact-2', name: 'contact', value: 'phone', label: 'Phone' },
+      { id: 'countries', name: 'countries', value: 'france', label: 'France' },
+      { id: 'countries-2', name: 'countries', value: 'portugal', label: 'Portugal' },
+      { id: 'countries-3', name: 'countries', value: 'spain', label: 'Spain' },
       { divider: 'or' },
-      { id: 'contact-3', name: 'contact', value: 'none', label: 'Do not contact me' },
+      {
+        id: 'countries-4',
+        name: 'countries',
+        value: 'none',
+        label: 'No, I will not be travelling to any of these countries',
+      },
     ],
   },
 };
