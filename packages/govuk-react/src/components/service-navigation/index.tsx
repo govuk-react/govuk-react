@@ -85,6 +85,13 @@ export type DetailsMenuProps = Omit<ComponentProps<'details'>, 'open'> & MenuSta
  * and `List`. Below tablet width the summary shows and hides the list. From tablet width the list
  * shows where the browser supports `::details-content` (Chrome and Edge 131, Safari 18.4,
  * Firefox 143), and stays behind the menu where it doesn't.
+ *
+ * Check it with your users' assistive technology before choosing it over `Menu`. GOV.UK's audits
+ * of the Details component found VoiceOver doesn't convey a `summary`'s state on iOS before 17,
+ * and Dragon voice control can have trouble opening one.
+ *
+ * @see https://github.com/alphagov/govuk-design-system/issues/4030
+ * @see https://github.com/alphagov/govuk-frontend/issues/5310
  */
 export function DetailsMenu({ open, onOpenChange, onToggle, className, children, ...props }: DetailsMenuProps) {
   const details = useRef<HTMLDetailsElement>(null);
@@ -216,7 +223,8 @@ export function Composite(props: CompositeProps) {
 /**
  * Service navigation helps users understand that they’re using your service and lets them navigate around your service.
  *
- * Children are `ItemComposite`s. The menu is a `DetailsMenu`, which works without JavaScript.
+ * Children are `ItemComposite`s. The menu is a `DetailsMenu`, which works without JavaScript but
+ * has screen reader and voice control caveats: see `DetailsMenu`.
  *
  * @see https://design-system.service.gov.uk/components/service-navigation/
  */
