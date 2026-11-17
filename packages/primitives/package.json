@@ -1,0 +1,42 @@
+{
+  "name": "@govuk-react/primitives",
+  "version": "0.0.0",
+  "description": "Behaviour for govuk-frontend-react markup: custom elements with React parts over them.",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "default": "./dist/*.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1"
+  },
+  "peerDependencies": {
+    "react": ">=19",
+    "react-dom": ">=19"
+  },
+  "author": "Alasdair McLeay",
+  "license": "MIT",
+  "homepage": "https://github.com/govuk-react/govuk-react#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/govuk-react/govuk-react.git",
+    "directory": "packages/primitives"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
