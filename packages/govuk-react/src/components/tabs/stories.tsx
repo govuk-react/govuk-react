@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
-import Table from '../table';
+import * as Table from '../table';
 import { H2 } from '../../legacy/heading';
 
 import { Tabs } from '.';
@@ -34,13 +34,13 @@ export const Default: StoryFn = (args) => (
     </Tabs.List>
     <Tabs.Panel selected id="0">
       <H2>Past day</H2>
-      <Table
+      <Table.Composite
         head={
-          <Table.Row>
-            <Table.CellHeader>Case manager</Table.CellHeader>
-            <Table.CellHeader>Cases opened</Table.CellHeader>
-            <Table.CellHeader>Cases closed</Table.CellHeader>
-          </Table.Row>
+          <>
+            <Table.ColumnHeader>Case manager</Table.ColumnHeader>
+            <Table.ColumnHeader>Cases opened</Table.ColumnHeader>
+            <Table.ColumnHeader>Cases closed</Table.ColumnHeader>
+          </>
         }
       >
         <Table.Row>
@@ -58,17 +58,17 @@ export const Default: StoryFn = (args) => (
           <Table.Cell>2</Table.Cell>
           <Table.Cell>0</Table.Cell>
         </Table.Row>
-      </Table>
+      </Table.Composite>
     </Tabs.Panel>
     <Tabs.Panel id="1">
       <H2>Past week</H2>
-      <Table
+      <Table.Composite
         head={
-          <Table.Row>
-            <Table.CellHeader>Case manager</Table.CellHeader>
-            <Table.CellHeader>Cases opened</Table.CellHeader>
-            <Table.CellHeader>Cases closed</Table.CellHeader>
-          </Table.Row>
+          <>
+            <Table.ColumnHeader>Case manager</Table.ColumnHeader>
+            <Table.ColumnHeader>Cases opened</Table.ColumnHeader>
+            <Table.ColumnHeader>Cases closed</Table.ColumnHeader>
+          </>
         }
       >
         <Table.Row>
@@ -86,17 +86,17 @@ export const Default: StoryFn = (args) => (
           <Table.Cell>24</Table.Cell>
           <Table.Cell>27</Table.Cell>
         </Table.Row>
-      </Table>
+      </Table.Composite>
     </Tabs.Panel>
     <Tabs.Panel id="1">
       <H2>Past month</H2>
-      <Table
+      <Table.Composite
         head={
-          <Table.Row>
-            <Table.CellHeader>Case manager</Table.CellHeader>
-            <Table.CellHeader>Cases opened</Table.CellHeader>
-            <Table.CellHeader>Cases closed</Table.CellHeader>
-          </Table.Row>
+          <>
+            <Table.ColumnHeader>Case manager</Table.ColumnHeader>
+            <Table.ColumnHeader>Cases opened</Table.ColumnHeader>
+            <Table.ColumnHeader>Cases closed</Table.ColumnHeader>
+          </>
         }
       >
         <Table.Row>
@@ -114,17 +114,17 @@ export const Default: StoryFn = (args) => (
           <Table.Cell>126</Table.Cell>
           <Table.Cell>142</Table.Cell>
         </Table.Row>
-      </Table>
+      </Table.Composite>
     </Tabs.Panel>
     <Tabs.Panel id="1">
       <H2>Past year</H2>
-      <Table
+      <Table.Composite
         head={
-          <Table.Row>
-            <Table.CellHeader>Case manager</Table.CellHeader>
-            <Table.CellHeader>Cases opened</Table.CellHeader>
-            <Table.CellHeader>Cases closed</Table.CellHeader>
-          </Table.Row>
+          <>
+            <Table.ColumnHeader>Case manager</Table.ColumnHeader>
+            <Table.ColumnHeader>Cases opened</Table.ColumnHeader>
+            <Table.ColumnHeader>Cases closed</Table.ColumnHeader>
+          </>
         }
       >
         <Table.Row>
@@ -142,7 +142,7 @@ export const Default: StoryFn = (args) => (
           <Table.Cell>1539</Table.Cell>
           <Table.Cell>1265</Table.Cell>
         </Table.Row>
-      </Table>
+      </Table.Composite>
     </Tabs.Panel>
   </Tabs>
 );
