@@ -100,3 +100,14 @@ There is no equivalent for the whitespace props (`mb`, `margin`, `padding` and s
 | 0.x                                              | 1.0                                                  |
 | ------------------------------------------------ | ---------------------------------------------------- |
 | `import InsetText from 'govuk-react/inset-text'` | `import { InsetText } from 'govuk-react/inset-text'` |
+
+## WarningText
+
+`WarningText` is now govuk-frontend-react's `WarningText`, a module of parts. `WarningText.Composite` renders the whole component, and `Root`, `Icon`, `Text` and `TextComposite` are available for custom markup.
+
+| 0.x                                                  | 1.0                                                       |
+| ---------------------------------------------------- | --------------------------------------------------------- |
+| `import WarningText from 'govuk-react/warning-text'` | `import * as WarningText from 'govuk-react/warning-text'` |
+| `<WarningText>`                                      | `<WarningText.Composite>`                                 |
+
+The composite adds govuk-frontend's visually hidden "Warning" text before the message. Change it with `iconFallbackText`. The whitespace props (`mb` and so on) are removed.
