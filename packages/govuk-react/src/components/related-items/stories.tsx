@@ -1,44 +1,42 @@
-import type { StoryFn } from '@storybook/react';
-
+import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 
-import { H3 } from '../../legacy/heading';
-import UnorderedList from '../../legacy/unordered-list';
 import { Link } from '../link';
-import ListItem from '../../legacy/list-item';
+import * as RelatedItems from '.';
 
-import { RelatedItems } from '.';
-
-export default {
+const meta = {
   title: 'Navigation/Related items',
   id: 'related-items',
-  component: RelatedItems,
-};
+  component: RelatedItems.Composite,
+} satisfies Meta<typeof RelatedItems.Composite>;
 
-export const Default: StoryFn = (args) => (
-  <RelatedItems {...args}>
-    <H3>Travel abroad</H3>
-    <UnorderedList listStyleType="none">
-      <ListItem>
-        <Link href="https://example.com">Link A</Link>
-      </ListItem>
-      <ListItem>
-        <Link href="https://example.com">Link B</Link>
-      </ListItem>
-      <ListItem>
-        <Link href="https://example.com">
-          <strong>more</strong>
-        </Link>
-      </ListItem>
-    </UnorderedList>
-    <H3>Travel</H3>
-    <UnorderedList listStyleType="none">
-      <ListItem>
-        <Link href="https://example.com">Link A</Link>
-      </ListItem>
-      <ListItem>
-        <Link href="https://example.com">Link B</Link>
-      </ListItem>
-    </UnorderedList>
-  </RelatedItems>
-);
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    children: (
+      <>
+        <RelatedItems.SectionComposite title="Travel abroad">
+          <RelatedItems.Item>
+            <Link href="#">Foreign travel advice</Link>
+          </RelatedItems.Item>
+          <RelatedItems.Item>
+            <Link href="#">Travel insurance</Link>
+          </RelatedItems.Item>
+          <RelatedItems.Item>
+            <Link href="#">
+              <strong>More</strong>
+            </Link>
+          </RelatedItems.Item>
+        </RelatedItems.SectionComposite>
+        <RelatedItems.SectionComposite title="Travel">
+          <RelatedItems.Item>
+            <Link href="#">Passports, travel and living abroad</Link>
+          </RelatedItems.Item>
+        </RelatedItems.SectionComposite>
+      </>
+    ),
+  },
+};

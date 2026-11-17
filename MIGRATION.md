@@ -340,6 +340,38 @@ govuk-react now exports `overrideClasses`, which returns govuk-frontend's overri
 | `search`                                               | Removed: place a search form in your page                                                                              |
 | `bgColor`, `color`                                     | Removed: the header uses govuk-frontend's styles                                                                       |
 
+## LoadingBox
+
+`LoadingBox` no longer uses styled-components or react-transition-group. Its styles are a small stylesheet that React hoists into the head, with your props passed in as CSS custom properties, so it works with server rendering and without a CSS-in-JS runtime.
+
+| 0.x                                                | 1.0                                                                                              |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `import LoadingBox from 'govuk-react/loading-box'` | `import { LoadingBox } from 'govuk-react/loading-box'`                                           |
+| `spinnerColor`, `backgroundColor` took hex colours | Any CSS colour. They default to govuk-frontend's text and page background colours                |
+| The overlay unmounted when `loading` was `false`   | The overlay stays in the DOM, hidden, so it can fade out. The box sets `aria-busy` while loading |
+
+## RelatedItems
+
+`RelatedItems` is now a module of parts with no CSS-in-JS. `RelatedItems.Composite` renders the main heading (“Related content” by default), and each `RelatedItems.SectionComposite` renders a labelled navigation section with a heading and a list of `RelatedItems.Item`s. `Root`, `Heading`, `Section`, `SectionHeading` and `List` are available for custom markup. The blue top border comes from a small stylesheet that React hoists into the head.
+
+| 0.x                                                    | 1.0                                                                      |
+| ------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `import RelatedItems from 'govuk-react/related-items'` | `import * as RelatedItems from 'govuk-react/related-items'`              |
+| `<RelatedItems>` with your own headings and lists      | `<RelatedItems.Composite>`, or `<RelatedItems.Root>` for your own markup |
+| `<H3>Travel</H3><UnorderedList listStyleType="none">…` | `<RelatedItems.SectionComposite title="Travel"><RelatedItems.Item>…`     |
+| `mb` and other whitespace props                        | `className`                                                              |
+
+## DocumentFooterMetadata
+
+`DocumentFooterMetadata` is now a module of parts with no CSS-in-JS. It renders a description list (`dl`) with govuk-frontend classes. `DocumentFooterMetadata.Composite` keeps the `from`, `partOf` and `other` props, and also takes `ItemComposite` children. `Root`, `Term` and `Definition` are available for custom markup.
+
+| 0.x                                                                         | 1.0                                                                                                        |
+| --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `import DocumentFooterMetadata from 'govuk-react/document-footer-metadata'` | `import * as DocumentFooterMetadata from 'govuk-react/document-footer-metadata'`                           |
+| `<DocumentFooterMetadata from={…} partOf={…} other={…}>`                    | `<DocumentFooterMetadata.Composite from={…} partOf={…} other={…}>`                                         |
+| `other={[{ id, title: 'Published', content: '20 January 2012' }]}`          | The same, or `<DocumentFooterMetadata.ItemComposite term="Published" definitions={['20 January 2012']} />` |
+| `mb` and other whitespace props                                             | `className`                                                                                                |
+
 ## SearchBox
 
 `SearchBox` is now a module of parts with no CSS-in-JS. `SearchBox.Composite` renders a visually hidden label, a `govuk-input` search input and a submit button with a search icon. Put it inside your own `form`. `Root`, `Label`, `Input` and `Button` are available for custom markup. The layout and button styles come from a small stylesheet that React hoists into the head, using govuk-frontend's colour custom properties.

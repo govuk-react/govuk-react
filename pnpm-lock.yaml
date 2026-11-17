@@ -466,15 +466,15 @@ importers:
       '@govuk-react/icon-crown':
         specifier: 0.1.0
         version: 0.1.0(react@19.3.1)
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       govuk-colours:
         specifier: ^1.1.0
         version: 1.1.0
       govuk-frontend-react:
         specifier: 1.0.0-alpha.4
         version: 1.0.0-alpha.4(govuk-frontend@6.6.0)(react@19.3.1)
-      hex-rgb:
-        specifier: ^4.0.0
-        version: 4.3.0
       multi-input-input:
         specifier: 0.0.3
         version: 0.0.3
@@ -490,9 +490,6 @@ importers:
       react-markdown:
         specifier: ^5.0.3
         version: 5.0.3(@types/react@19.3.0)(react@19.3.1)(supports-color@5.4.0)
-      react-transition-group:
-        specifier: ^4.4.5
-        version: 4.4.5(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       styled-components:
         specifier: '>=5.1'
         version: 5.3.1(@babel/core@7.23.0(supports-color@5.4.0))(react-dom@19.3.1(react@19.3.1))(react-is@19.3.1)(react@19.3.1)
@@ -3165,9 +3162,6 @@ packages:
   dom-accessibility-api@0.6.3:
     resolution: {integrity: sha512-7ZgogeTnjuHbo+ct10G9Ffp0mif17idi0IyWNVA/wcwcm7NPOD/WEHVP3n7n3MhXqxoIYm8d6MuZohYWIZ4T3w==}
 
-  dom-helpers@5.2.1:
-    resolution: {integrity: sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==}
-
   dom-serializer@1.3.2:
     resolution: {integrity: sha512-5c54Bk5Dw4qAxNOI1pFEizPSjVsx5+bpJKmL2kPn8JhBUq2q09tTCa3mjijun2NfK78NMouDYNMBkOrPZiS+ig==}
 
@@ -3777,10 +3771,6 @@ packages:
 
   hermes-parser@0.25.1:
     resolution: {integrity: sha512-6pEjquH3rqaI6cYAXYPcz9MS4rY6R4ngRgrgfDshRptUZIc3lw0MCIJIGDj9++mfySOuPTHB4nrSW99BCvOPIA==}
-
-  hex-rgb@4.3.0:
-    resolution: {integrity: sha512-Ox1pJVrDCyGHMG9CFg1tmrRUMRPRsAWYc/PinY0XzJU4K7y7vjNoLKIQ7BR5UJMCxNN8EM1MNDmHWA/B3aZUuw==}
-    engines: {node: '>=6'}
 
   history@5.3.0:
     resolution: {integrity: sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==}
@@ -4983,12 +4973,6 @@ packages:
     resolution: {integrity: sha512-7Wh1DzVQ+tlFjkeo+ujvjSqSJmkt1+8JO+T5xklPlgrh70y7ogx75ODRW0ThWhY7S+6yEDks8TYrtQe/aoboBQ==}
     peerDependencies:
       react: '>=16.8'
-
-  react-transition-group@4.4.5:
-    resolution: {integrity: sha512-pZcd1MCJoiKiBR2NRxeCRg13uCXbydPnmB4EOeRrY7480qNWO8IIgQG6zlDkm6uRMsURXPuKq0GWtiM59a5Q6g==}
-    peerDependencies:
-      react: '>=16.6.0'
-      react-dom: '>=16.6.0'
 
   react@19.3.1:
     resolution: {integrity: sha512-QNhWdt7nrgVWWQG58QuGsAR3jv3Hbe4mb4vz7w2csnHavciZJgda1CPNaldF6eVxv90ud3jUXpKlHL69gO38yw==}
@@ -9096,11 +9080,6 @@ snapshots:
 
   dom-accessibility-api@0.6.3: {}
 
-  dom-helpers@5.2.1:
-    dependencies:
-      '@babel/runtime': 7.23.2
-      csstype: 3.2.3
-
   dom-serializer@1.3.2:
     dependencies:
       domelementtype: 2.2.0
@@ -9952,8 +9931,6 @@ snapshots:
   hermes-parser@0.25.1:
     dependencies:
       hermes-estree: 0.25.1
-
-  hex-rgb@4.3.0: {}
 
   history@5.3.0:
     dependencies:
@@ -11244,15 +11221,6 @@ snapshots:
     dependencies:
       history: 5.3.0
       react: 19.3.1
-
-  react-transition-group@4.4.5(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
-    dependencies:
-      '@babel/runtime': 7.23.2
-      dom-helpers: 5.2.1
-      loose-envify: 1.4.0
-      prop-types: 15.8.1
-      react: 19.3.1
-      react-dom: 19.3.1(react@19.3.1)
 
   react@19.3.1: {}
 

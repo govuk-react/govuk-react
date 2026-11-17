@@ -1,9 +1,8 @@
 import * as React from 'react';
 import type { ComponentProps, ReactNode } from 'react';
+import { clsx } from 'clsx';
 
 const name = 'govuk-react-search-box';
-
-const cx = (...classes: (string | false | undefined)[]) => classes.filter(Boolean).join(' ');
 
 /** Styles govuk-frontend has no class for, hoisted and deduplicated by React. */
 export const searchBoxCss = `
@@ -21,7 +20,7 @@ export type RootProps = ComponentProps<'div'>;
 /** Lays out a search input and its submit button side by side. */
 export function Root({ className, children, ...props }: RootProps) {
   return (
-    <div className={cx(name, className)} {...props}>
+    <div className={clsx(name, className)} {...props}>
       <style href={name} precedence="default">
         {searchBoxCss}
       </style>
@@ -35,7 +34,7 @@ export type LabelProps = ComponentProps<'label'>;
 /** The label for the search input. Visually hidden. */
 export function Label({ className, children, ...props }: LabelProps) {
   return (
-    <label className={cx('govuk-visually-hidden', className)} {...props}>
+    <label className={clsx('govuk-visually-hidden', className)} {...props}>
       {children}
     </label>
   );
@@ -44,7 +43,7 @@ export function Label({ className, children, ...props }: LabelProps) {
 export type InputProps = ComponentProps<'input'>;
 
 export function Input({ className, type = 'search', ...props }: InputProps) {
-  return <input type={type} className={cx('govuk-input', `${name}__input`, className)} {...props} />;
+  return <input type={type} className={clsx('govuk-input', `${name}__input`, className)} {...props} />;
 }
 
 export type ButtonProps = ComponentProps<'button'>;
@@ -52,7 +51,7 @@ export type ButtonProps = ComponentProps<'button'>;
 /** The submit button, with a search icon. Children are its accessible name, “Search” by default. */
 export function Button({ className, children = 'Search', ...props }: ButtonProps) {
   return (
-    <button type="submit" className={cx(`${name}__button`, className)} {...props}>
+    <button type="submit" className={clsx(`${name}__button`, className)} {...props}>
       <svg className={`${name}__icon`} viewBox="0 0 57 57" aria-hidden="true" focusable="false">
         <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23 s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92 c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17 s-17-7.626-17-17S14.61,6,23.984,6z" />
       </svg>
