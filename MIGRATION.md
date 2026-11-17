@@ -185,3 +185,14 @@ The `focusable` prop is removed, as govuk-frontend 6 no longer has a focusable v
 | `<Link as={RouterLink} to="/page">Page</Link>` | `<Link asChild><RouterLink to="/page">Page</RouterLink></Link>` |
 
 `noVisitedState` is unchanged. `Link` also gains `variant="inverse"` and `noUnderline`.
+
+## BackLink
+
+`BackLink` is now govuk-frontend-react's `BackLink`. It still defaults to the text "Back" and `href="#"`.
+
+| 0.x                                                | 1.0                                                                 |
+| -------------------------------------------------- | ------------------------------------------------------------------- |
+| `import BackLink from 'govuk-react/back-link'`     | `import { BackLink } from 'govuk-react/back-link'`                  |
+| `<BackLink as={RouterLink} to="/">Back</BackLink>` | `<BackLink asChild><RouterLink to="/">Back</RouterLink></BackLink>` |
+
+The whitespace props (`mb` and so on) are removed. `BackLink` gains an `inverse` prop.

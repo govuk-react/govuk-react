@@ -1,5 +1,5 @@
 // Components
-export { default as BackLink } from './components/back-link';
+export { BackLink } from './components/back-link';
 export { Body } from './components/body';
 export { default as Breadcrumbs } from './components/breadcrumbs';
 export { default as Button } from './components/button';
