@@ -18,6 +18,21 @@ function Example(props: Tabs.RootProps) {
   );
 }
 
+function RadiosExample(props: Tabs.RadiosRootProps) {
+  return (
+    <Tabs.RadiosRoot {...props}>
+      <Tabs.List>
+        <Tabs.RadioTrigger value="day">Past day</Tabs.RadioTrigger>
+        <Tabs.RadioTrigger value="week">Past week</Tabs.RadioTrigger>
+        <Tabs.RadioTrigger value="month">Past month</Tabs.RadioTrigger>
+      </Tabs.List>
+      <Tabs.RadioContent value="day">Day content</Tabs.RadioContent>
+      <Tabs.RadioContent value="week">Week content</Tabs.RadioContent>
+      <Tabs.RadioContent value="month">Month content</Tabs.RadioContent>
+    </Tabs.RadiosRoot>
+  );
+}
+
 // The element upgrades in connectedCallback, after React commits.
 const upgraded = () => act(() => Promise.resolve());
 
@@ -85,7 +100,7 @@ describe('Tabs', () => {
   });
 
   test('the radios fallback labels a hidden radio in each panel', async () => {
-    render(<Example fallback="radios" defaultValue="week" />);
+    render(<RadiosExample defaultValue="week" />);
     const label = screen.getByText('Past week').closest('label');
     const radio = document.getElementById(label?.htmlFor ?? '');
     expect(radio).toBeInstanceOf(HTMLInputElement);
@@ -284,7 +299,7 @@ describe('Tabs', () => {
     };
     const matchMedia = vi.fn(() => query);
     vi.stubGlobal('matchMedia', matchMedia);
-    const { container } = render(<Example fallback="radios" defaultValue="day" media="(min-width: 40rem)" />);
+    const { container } = render(<RadiosExample defaultValue="day" media="(min-width: 40rem)" />);
     await upgraded();
     fireEvent.click(screen.getByRole('tab', { name: 'Past month' }));
     query.matches = false;
@@ -302,12 +317,12 @@ describe('Tabs', () => {
   test('parts work without a Root, as in an island', () => {
     render(
       <>
-        <Tabs.Trigger value="day" fallback="radios" name="island">
+        <Tabs.RadioTrigger value="day" name="island">
           Past day
-        </Tabs.Trigger>
-        <Tabs.Content value="day" fallback="radios" name="island" defaultSelected>
+        </Tabs.RadioTrigger>
+        <Tabs.RadioContent value="day" name="island" defaultSelected>
           Day content
-        </Tabs.Content>
+        </Tabs.RadioContent>
       </>
     );
     expect(screen.getByText('Past day').closest('label')).toHaveAttribute('for', 'island-day');

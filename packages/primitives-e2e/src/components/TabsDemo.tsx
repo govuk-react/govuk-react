@@ -31,30 +31,40 @@ export default function TabsDemo({
   useEffect(() => {
     hydrated.current?.setAttribute('data-hydrated', 'true');
   }, []);
+  const root = { name, defaultValue: `${id}-account`, orientation, media, onValueChange: setLast };
   return (
     <div data-testid={`demo-${id}`} ref={hydrated} data-hydrated="false" suppressHydrationWarning>
-      <Tabs.Root
-        name={name}
-        {...(fallback === 'radios'
-          ? { fallback: 'radios', defaultValue: `${id}-account` }
-          : { fallback: 'links', defaultValue: `${id}-account` })}
-        orientation={orientation}
-        media={media}
-        onValueChange={setLast}
-      >
-        <Tabs.List>
+      {fallback === 'radios' ? (
+        <Tabs.RadiosRoot {...root}>
+          <Tabs.List>
+            {items.map((item) => (
+              <Tabs.RadioTrigger key={item.value} value={`${id}-${item.value}`}>
+                {item.label}
+              </Tabs.RadioTrigger>
+            ))}
+          </Tabs.List>
           {items.map((item) => (
-            <Tabs.Trigger key={item.value} value={`${id}-${item.value}`}>
-              {item.label}
-            </Tabs.Trigger>
+            <Tabs.RadioContent key={item.value} value={`${id}-${item.value}`}>
+              {item.body}
+            </Tabs.RadioContent>
           ))}
-        </Tabs.List>
-        {items.map((item) => (
-          <Tabs.Content key={item.value} value={`${id}-${item.value}`}>
-            {item.body}
-          </Tabs.Content>
-        ))}
-      </Tabs.Root>
+        </Tabs.RadiosRoot>
+      ) : (
+        <Tabs.Root {...root}>
+          <Tabs.List>
+            {items.map((item) => (
+              <Tabs.Trigger key={item.value} value={`${id}-${item.value}`}>
+                {item.label}
+              </Tabs.Trigger>
+            ))}
+          </Tabs.List>
+          {items.map((item) => (
+            <Tabs.Content key={item.value} value={`${id}-${item.value}`}>
+              {item.body}
+            </Tabs.Content>
+          ))}
+        </Tabs.Root>
+      )}
       <p data-testid={`last-${id}`}>{last}</p>
     </div>
   );

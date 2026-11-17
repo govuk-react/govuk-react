@@ -389,7 +389,7 @@ govuk-react now exports `overrideClasses`, which returns govuk-frontend's overri
 
 `Tabs` is now a module of parts: govuk-frontend-react's Tabs markup, with tab behaviour from the new `@govuk-react/primitives` package. As in govuk-frontend, they are tabs from tablet width up, and a list of links to every panel below it or without JavaScript. `Tabs.Composite` renders the tabs from `items`. `Root`, `Title`, `List`, `ListItem`, `Tab` and `Panel` are available for custom markup.
 
-Each tab now has a `value`, which is its panel's id. The tabs keep track of the selected tab: use `defaultValue`, or `value` with `onValueChange` to control them. `fallback="radios"` makes the tabs switch without JavaScript too.
+Each tab now has a `value`, which is its panel's id. The tabs keep track of the selected tab: use `defaultValue`, or `value` with `onValueChange` to control them. `Tabs.RadiosComposite`, or `Tabs.RadiosRoot` with `Tabs.RadioTab` and `Tabs.RadioPanel`, make the tabs switch without JavaScript too.
 
 | 0.x                                                | 1.0                                                                |
 | -------------------------------------------------- | ------------------------------------------------------------------ |

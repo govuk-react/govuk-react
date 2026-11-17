@@ -1,6 +1,6 @@
 {
   "name": "@govuk-react/primitives",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Headless, progressively enhanced behaviour for design system components: custom elements with React parts over them.",
   "type": "module",
   "types": "./dist/index.d.ts",
