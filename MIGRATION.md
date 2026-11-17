@@ -264,13 +264,14 @@ The layout components are now govuk-frontend-react's. The whitespace props (`mb`
 
 `Breadcrumbs` is now govuk-frontend-react's `Breadcrumbs`, a module of parts. `Breadcrumbs.Composite` renders the nav and list, and each `Breadcrumbs.ItemComposite` renders a link, or the current page when it has no `href`. `Root`, `List`, `Item` and `Link` are available for custom markup. The composite also takes `collapseOnMobile` and `inverse`.
 
-| 0.x                                                 | 1.0                                                                   |
-| --------------------------------------------------- | --------------------------------------------------------------------- |
-| `import Breadcrumbs from 'govuk-react/breadcrumbs'` | `import * as Breadcrumbs from 'govuk-react/breadcrumbs'`              |
-| `<Breadcrumbs>`                                     | `<Breadcrumbs.Composite>`                                             |
-| `<Breadcrumbs.Link href="/section">`                | `<Breadcrumbs.ItemComposite href="/section">`                         |
-| Plain text child for the current page               | `<Breadcrumbs.ItemComposite>Current page</Breadcrumbs.ItemComposite>` |
-| `mb` and other whitespace props                     | `className`                                                           |
+| 0.x                                                 | 1.0                                                                                                                       |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `import Breadcrumbs from 'govuk-react/breadcrumbs'` | `import * as Breadcrumbs from 'govuk-react/breadcrumbs'`                                                                  |
+| `<Breadcrumbs>`                                     | `<Breadcrumbs.Composite>`                                                                                                 |
+| `<Breadcrumbs.Link href="/section">`                | `<Breadcrumbs.ItemComposite href="/section">`                                                                             |
+| Plain text child for the current page               | `<Breadcrumbs.ItemComposite>Current page</Breadcrumbs.ItemComposite>`                                                     |
+| `<Breadcrumbs.Link as={RouterLink} to="/section">`  | `<Breadcrumbs.Link asChild><RouterLink to="/section">Section</RouterLink></Breadcrumbs.Link>` inside a `Breadcrumbs.Item` |
+| `mb` and other whitespace props                     | `className`                                                                                                               |
 
 ## ErrorSummary
 
