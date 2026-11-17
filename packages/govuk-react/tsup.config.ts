@@ -36,6 +36,7 @@ export default defineConfig({
     'main-wrapper': 'src/components/main-wrapper/index.tsx',
     'notification-banner': 'src/components/notification-banner/index.tsx',
     page: 'src/components/page/index.tsx',
+    modal: 'src/components/modal/index.tsx',
     pagination: 'src/components/pagination/index.tsx',
     panel: 'src/components/panel/index.tsx',
     'phase-banner': 'src/components/phase-banner/index.tsx',
