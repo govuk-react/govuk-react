@@ -3,7 +3,7 @@ import type { StoryFn } from '@storybook/react';
 import * as React from 'react';
 import styled from 'styled-components';
 
-import BackLink from '../back-link';
+import { BackLink } from '../back-link';
 import { H1, H3 } from '../../legacy/heading';
 import { MEDIA_QUERIES, GUTTER } from '../../constants';
 

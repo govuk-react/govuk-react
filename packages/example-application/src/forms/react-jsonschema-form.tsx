@@ -152,8 +152,8 @@ const ReactJSONSchemaForm: React.FC = () => {
     <>
       {!hasSubmitted && (
         <>
-          <GovUK.BackLink as={Link} to="/forms">
-            Home
+          <GovUK.BackLink asChild>
+            <Link to="/forms">Home</Link>
           </GovUK.BackLink>
           <Form
             schema={formSchema}

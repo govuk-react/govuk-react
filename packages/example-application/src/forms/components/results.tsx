@@ -27,8 +27,8 @@ const Results: React.FC<ResultsProps> = ({
 
   return (
     <>
-      <GovUK.BackLink as={Link} to={backLink} onClick={onBackClick}>
-        Back
+      <GovUK.BackLink asChild onClick={onBackClick}>
+        <Link to={backLink}>Back</Link>
       </GovUK.BackLink>
       <GovUK.Panel.Composite title="Application complete">Reference: XBR1N21R3</GovUK.Panel.Composite>
       <GovUK.Body size="l">

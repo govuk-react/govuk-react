@@ -105,8 +105,8 @@ const FinalForm: React.FC = () => {
             return (
               <Form>
                 <GovUK.LoadingBox loading={isSubmitting}>
-                  <GovUK.BackLink as={Link} to="/forms">
-                    Home
+                  <GovUK.BackLink asChild>
+                    <Link to="/forms">Home</Link>
                   </GovUK.BackLink>
                   {!!errorsToShow?.length && (
                     <GovUK.ErrorSummary
