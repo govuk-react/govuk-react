@@ -1,159 +1,160 @@
-import type { StoryFn } from '@storybook/react';
-
+import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
+import { useState } from 'react';
+import { Heading } from '../heading';
 import * as Table from '../table';
-import { H2 } from '../../legacy/heading';
 
-import { Tabs } from '.';
-import {
-  HooksExample,
-  ProposedClassPropertiesPlugin,
-  SimpleTabs,
-  SimpleMapTabs,
-  TableTabs,
-  ReactRouterExample,
-  ReactRouterSinglePanelExample,
-} from './fixtures';
+import * as Tabs from '.';
 
-export default {
+const meta = {
   title: 'Navigation/Tabs',
   id: 'tabs',
-  component: Tabs,
-};
+  component: Tabs.Composite,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'Tabs can be a helpful way of letting users quickly switch between related information. From tablet width up they are tabs; below it, and without JavaScript, they are a list of links to every panel.',
+      },
+    },
+  },
+} satisfies Meta<typeof Tabs.Composite>;
 
-export const Default: StoryFn = (args) => (
-  <Tabs {...args}>
-    <Tabs.Title>Contents</Tabs.Title>
-    <Tabs.List>
-      <Tabs.Tab href="#0" selected>
-        Past day
-      </Tabs.Tab>
-      <Tabs.Tab href="#1">Past week</Tabs.Tab>
-      <Tabs.Tab href="#2">Past month</Tabs.Tab>
-      <Tabs.Tab href="#3">Past year</Tabs.Tab>
-    </Tabs.List>
-    <Tabs.Panel selected id="0">
-      <H2>Past day</H2>
-      <Table.Composite
-        head={
-          <>
-            <Table.ColumnHeader>Case manager</Table.ColumnHeader>
-            <Table.ColumnHeader>Cases opened</Table.ColumnHeader>
-            <Table.ColumnHeader>Cases closed</Table.ColumnHeader>
-          </>
-        }
-      >
-        <Table.Row>
-          <Table.Cell>David Francis</Table.Cell>
-          <Table.Cell>3</Table.Cell>
-          <Table.Cell>0</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>Paul Farmer</Table.Cell>
-          <Table.Cell>1</Table.Cell>
-          <Table.Cell>0</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>Rita Patel</Table.Cell>
-          <Table.Cell>2</Table.Cell>
-          <Table.Cell>0</Table.Cell>
-        </Table.Row>
-      </Table.Composite>
-    </Tabs.Panel>
-    <Tabs.Panel id="1">
-      <H2>Past week</H2>
-      <Table.Composite
-        head={
-          <>
-            <Table.ColumnHeader>Case manager</Table.ColumnHeader>
-            <Table.ColumnHeader>Cases opened</Table.ColumnHeader>
-            <Table.ColumnHeader>Cases closed</Table.ColumnHeader>
-          </>
-        }
-      >
-        <Table.Row>
-          <Table.Cell>David Francis</Table.Cell>
-          <Table.Cell>24</Table.Cell>
-          <Table.Cell>18</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>Paul Farmer</Table.Cell>
-          <Table.Cell>16</Table.Cell>
-          <Table.Cell>20</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>Rita Patel</Table.Cell>
-          <Table.Cell>24</Table.Cell>
-          <Table.Cell>27</Table.Cell>
-        </Table.Row>
-      </Table.Composite>
-    </Tabs.Panel>
-    <Tabs.Panel id="1">
-      <H2>Past month</H2>
-      <Table.Composite
-        head={
-          <>
-            <Table.ColumnHeader>Case manager</Table.ColumnHeader>
-            <Table.ColumnHeader>Cases opened</Table.ColumnHeader>
-            <Table.ColumnHeader>Cases closed</Table.ColumnHeader>
-          </>
-        }
-      >
-        <Table.Row>
-          <Table.Cell>David Francis</Table.Cell>
-          <Table.Cell>98</Table.Cell>
-          <Table.Cell>95</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>Paul Farmer</Table.Cell>
-          <Table.Cell>122</Table.Cell>
-          <Table.Cell>133</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>Rita Patel</Table.Cell>
-          <Table.Cell>126</Table.Cell>
-          <Table.Cell>142</Table.Cell>
-        </Table.Row>
-      </Table.Composite>
-    </Tabs.Panel>
-    <Tabs.Panel id="1">
-      <H2>Past year</H2>
-      <Table.Composite
-        head={
-          <>
-            <Table.ColumnHeader>Case manager</Table.ColumnHeader>
-            <Table.ColumnHeader>Cases opened</Table.ColumnHeader>
-            <Table.ColumnHeader>Cases closed</Table.ColumnHeader>
-          </>
-        }
-      >
-        <Table.Row>
-          <Table.Cell>David Francis</Table.Cell>
-          <Table.Cell>1380</Table.Cell>
-          <Table.Cell>1472</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>Paul Farmer</Table.Cell>
-          <Table.Cell>1129</Table.Cell>
-          <Table.Cell>1083</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>Rita Patel</Table.Cell>
-          <Table.Cell>1539</Table.Cell>
-          <Table.Cell>1265</Table.Cell>
-        </Table.Row>
-      </Table.Composite>
-    </Tabs.Panel>
-  </Tabs>
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+const cases = (rows: [string, string, string][]) => (
+  <Table.Composite
+    head={
+      <>
+        <Table.ColumnHeader>Case manager</Table.ColumnHeader>
+        <Table.ColumnHeader>Cases opened</Table.ColumnHeader>
+        <Table.ColumnHeader>Cases closed</Table.ColumnHeader>
+      </>
+    }
+  >
+    {rows.map(([manager, opened, closed]) => (
+      <Table.Row key={manager}>
+        <Table.Cell>{manager}</Table.Cell>
+        <Table.Cell>{opened}</Table.Cell>
+        <Table.Cell>{closed}</Table.Cell>
+      </Table.Row>
+    ))}
+  </Table.Composite>
 );
 
-export const Simple: StoryFn = () => <SimpleTabs />;
-export const SimpleWithMapFunction: StoryFn = () => <SimpleMapTabs />;
-export const SimpleWithMapAndBabelSProposedClassPropertiesPlugin: StoryFn = () => <ProposedClassPropertiesPlugin />;
-export const ComplexMappedTable: StoryFn = () => <TableTabs />;
-export const Hooks: StoryFn = (args) => <HooksExample {...args} />;
-Hooks.args = {
-  defaultIndex: 1,
+const items = [
+  {
+    id: 'past-day',
+    label: 'Past day',
+    panel: (
+      <>
+        <Heading size="l">Past day</Heading>
+        {cases([
+          ['David Francis', '3', '0'],
+          ['Paul Farmer', '1', '0'],
+          ['Rita Patel', '2', '0'],
+        ])}
+      </>
+    ),
+  },
+  {
+    id: 'past-week',
+    label: 'Past week',
+    panel: (
+      <>
+        <Heading size="l">Past week</Heading>
+        {cases([
+          ['David Francis', '24', '18'],
+          ['Paul Farmer', '16', '20'],
+          ['Rita Patel', '24', '27'],
+        ])}
+      </>
+    ),
+  },
+  {
+    id: 'past-month',
+    label: 'Past month',
+    panel: (
+      <>
+        <Heading size="l">Past month</Heading>
+        {cases([
+          ['David Francis', '98', '95'],
+          ['Paul Farmer', '122', '131'],
+          ['Rita Patel', '126', '142'],
+        ])}
+      </>
+    ),
+  },
+  {
+    id: 'past-year',
+    label: 'Past year',
+    panel: (
+      <>
+        <Heading size="l">Past year</Heading>
+        {cases([
+          ['David Francis', '1380', '1472'],
+          ['Paul Farmer', '1129', '1083'],
+          ['Rita Patel', '1539', '1265'],
+        ])}
+      </>
+    ),
+  },
+];
+
+export const Default: Story = {
+  args: { items },
 };
-export const UsingReactRouter: StoryFn = () => <ReactRouterExample />;
-export const UsingReactRouterSinglePanelOnly: StoryFn = () => <ReactRouterSinglePanelExample />;
+
+export const RadiosFallback: Story = {
+  args: { items, fallback: 'radios', name: 'cases-radios' },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'With `fallback="radios"`, the tabs switch without JavaScript too, through a hidden radio in each panel. Without JavaScript the tabs can’t be reached by keyboard.',
+      },
+    },
+  },
+};
+
+export const WithParts: Story = {
+  args: { items: [] },
+  render: () => (
+    <Tabs.Root defaultValue="parts-past-week">
+      <Tabs.Title />
+      <Tabs.List>
+        {items.map((item) => (
+          <Tabs.ListItem key={item.id} value={`parts-${item.id}`}>
+            <Tabs.Tab value={`parts-${item.id}`}>{item.label}</Tabs.Tab>
+          </Tabs.ListItem>
+        ))}
+      </Tabs.List>
+      {items.map((item) => (
+        <Tabs.Panel key={item.id} value={`parts-${item.id}`}>
+          {item.panel}
+        </Tabs.Panel>
+      ))}
+    </Tabs.Root>
+  ),
+};
+
+function ControlledTabs() {
+  const [value, setValue] = useState('controlled-past-day');
+  return (
+    <>
+      <p className="govuk-body">Selected: {value}</p>
+      <Tabs.Composite
+        value={value}
+        onValueChange={setValue}
+        items={items.map((item) => ({ ...item, id: `controlled-${item.id}` }))}
+      />
+    </>
+  );
+}
+
+export const Controlled: Story = {
+  args: { items: [] },
+  render: () => <ControlledTabs />,
+};

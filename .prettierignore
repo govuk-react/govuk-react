@@ -6,3 +6,4 @@ coverage
 storybook-static
 test-results
 pnpm-lock.yaml
+**/.astro

@@ -384,3 +384,18 @@ govuk-react now exports `overrideClasses`, which returns govuk-frontend's overri
 | `<SearchBox><SearchBox.Input /><SearchBox.Button /></SearchBox>` | `<SearchBox.Composite id="search" name="q" label="Search on GOV.UK" />` |
 | `placeholder` as the only label                                  | `label`, visible by default. A placeholder is not a label               |
 | `mb` and other whitespace props                                  | `className`                                                             |
+
+## Tabs
+
+`Tabs` is now a module of parts: govuk-frontend-react's Tabs markup, with tab behaviour from the new `@govuk-react/primitives` package. As in govuk-frontend, they are tabs from tablet width up, and a list of links to every panel below it or without JavaScript. `Tabs.Composite` renders the tabs from `items`. `Root`, `Title`, `List`, `ListItem`, `Tab` and `Panel` are available for custom markup.
+
+Each tab now has a `value`, which is its panel's id. The tabs keep track of the selected tab: use `defaultValue`, or `value` with `onValueChange` to control them. `fallback="radios"` makes the tabs switch without JavaScript too.
+
+| 0.x                                                | 1.0                                                                |
+| -------------------------------------------------- | ------------------------------------------------------------------ |
+| `import Tabs from 'govuk-react/tabs'`              | `import * as Tabs from 'govuk-react/tabs'`                         |
+| `<Tabs>`                                           | `<Tabs.Composite items={[{ id, label, panel }]}>` or `<Tabs.Root>` |
+| `<Tabs.Tab href="#past-day" selected onClick={…}>` | `<Tabs.ListItem value="past-day"><Tabs.Tab value="past-day">`      |
+| `<Tabs.Panel id="past-day" selected>`              | `<Tabs.Panel value="past-day">`                                    |
+| Your own state for the selected tab                | `defaultValue`, or `value` and `onValueChange`                     |
+| `<Tabs.Title>Contents</Tabs.Title>`                | `<Tabs.Title>`, which defaults to "Contents"                       |
