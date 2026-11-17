@@ -470,8 +470,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       govuk-frontend-react:
-        specifier: 1.0.0-alpha.1
-        version: 1.0.0-alpha.1(govuk-frontend@6.6.0)(react@19.3.1)
+        specifier: 1.0.0-alpha.2
+        version: 1.0.0-alpha.2(govuk-frontend@6.6.0)(react@19.3.1)
       hex-rgb:
         specifier: ^4.0.0
         version: 4.3.0
@@ -3704,8 +3704,8 @@ packages:
   govuk-colours@1.1.0:
     resolution: {integrity: sha512-EcwnP9PsWubmTcsJtLF8w0D5b69j43LwYtSqGyPtO3903J0bbwB2t5ujWZ9UhsbLamuUmigBkNpLItU3/KuFqw==}
 
-  govuk-frontend-react@1.0.0-alpha.1:
-    resolution: {integrity: sha512-RBxnK9UZmmfg1PF2k2pwyaF6WGB+ZQir9jxZbivgcUKGtz5RUYpFGwtZYS5le8jBeNGCHqB9yayr/SWQhZUt6A==}
+  govuk-frontend-react@1.0.0-alpha.2:
+    resolution: {integrity: sha512-ZQCsUX6ROVWlSPqzvHr3JdaLb7HBehho9CYfWu0mr8drshxZK/XqP20Unf4kS7Tu2CW0ouDws3lxWqWL/45kBw==}
     engines: {node: '>=20'}
     peerDependencies:
       govuk-frontend: ~6.6.0
@@ -9899,7 +9899,7 @@ snapshots:
 
   govuk-colours@1.1.0: {}
 
-  govuk-frontend-react@1.0.0-alpha.1(govuk-frontend@6.6.0)(react@19.3.1):
+  govuk-frontend-react@1.0.0-alpha.2(govuk-frontend@6.6.0)(react@19.3.1):
     dependencies:
       '@govuk-react/icon-crown': 0.2.0(react@19.3.1)
       clsx: 2.1.1
