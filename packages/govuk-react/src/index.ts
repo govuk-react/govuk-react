@@ -24,7 +24,7 @@ export { default as InputField } from './components/input-field';
 export { InsetText } from './components/inset-text';
 export { default as Label } from './components/label';
 export { default as LabelText } from './components/label-text';
-export { default as Link } from './components/link';
+export { Link } from './components/link';
 export { List } from './components/list';
 export { default as LoadingBox } from './components/loading-box';
 export { default as Main } from './components/main';

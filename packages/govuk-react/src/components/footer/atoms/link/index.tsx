@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { FOOTER_LINK, FOOTER_LINK_HOVER } from 'govuk-colours';
-import Link from '../../../link';
+import Link from '../../../../legacy/link';
 
 const FooterLink = styled(Link)({
   ':link, :visited': {

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 
 import * as PhaseBanner from '.';
-import Link from '../link';
+import { Link } from '../link';
 
 const meta = {
   title: 'Typography/Phase banner',

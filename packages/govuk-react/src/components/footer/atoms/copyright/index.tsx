@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import Link from '../../../link';
+import Link from '../../../../legacy/link';
 import { FOOTER_LINK, FOOTER_LINK_HOVER } from 'govuk-colours';
 
 const StyledCopyright = styled(Link)<CopyrightProps>(

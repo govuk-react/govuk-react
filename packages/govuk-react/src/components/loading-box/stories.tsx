@@ -5,7 +5,7 @@ import * as React from 'react';
 import { H1, H2 } from '../../legacy/heading';
 import InputField from '../input-field';
 import Button from '../button';
-import Link from '../link';
+import { Link } from '../link';
 import Radio from '../radio';
 import * as PhaseBanner from '../phase-banner';
 import MultiChoice from '../multi-choice';

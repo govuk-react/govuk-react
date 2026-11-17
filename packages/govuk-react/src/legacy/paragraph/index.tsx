@@ -11,7 +11,7 @@ import type { ReactMarkdownProps } from 'react-markdown';
 
 import ReactMarkdown from 'react-markdown';
 import { spacing, typography } from '../../lib';
-import Link from '../../components/link';
+import Link from '../link';
 
 const StyledParagraph = styled(ReactMarkdown)<ParagraphProps>(
   {
