@@ -35,7 +35,7 @@ export { default as SearchBox } from './components/search-box';
 export { SectionBreak } from './components/section-break';
 export * as Select from './components/select';
 export { SkipLink } from './components/skip-link';
-export { default as Table } from './components/table';
+export * as Table from './components/table';
 export { default as Tabs } from './components/tabs';
 export { Tag } from './components/tag';
 export * as Textarea from './components/textarea';
@@ -46,3 +46,6 @@ export { WidthContainer } from './components/width-container';
 
 // Icons
 export { Search as SearchIcon, ArrowLeft, Spinner, ButtonArrow } from './icons';
+
+// govuk-frontend override classes (govuk-!-*)
+export { overrideClasses, type OverrideProps, type FluidWidth, type Spacing } from 'govuk-frontend-react/overrides';

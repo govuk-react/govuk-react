@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { BREAKPOINTS } from '../../constants';
 import { H2, H4 } from '../../legacy/heading';
 import { SectionBreak } from '../section-break';
-import Table from '../table';
+import * as Table from '../table';
 import { MemoryRouter, Route, Link, Routes, useParams, useLocation } from 'react-router-dom';
 
 import { Tabs } from '.';
@@ -34,11 +34,11 @@ interface SharedProps {
 }
 
 const tableHead = (
-  <Table.Row>
-    <Table.CellHeader>Case manager</Table.CellHeader>
-    <Table.CellHeader>Cases opened</Table.CellHeader>
-    <Table.CellHeader>Cases closed</Table.CellHeader>
-  </Table.Row>
+  <>
+    <Table.ColumnHeader>Case manager</Table.ColumnHeader>
+    <Table.ColumnHeader>Cases opened</Table.ColumnHeader>
+    <Table.ColumnHeader>Cases closed</Table.ColumnHeader>
+  </>
 );
 
 const arrTabularTabs = [
@@ -110,7 +110,7 @@ class TableTabs extends Component<SharedProps, { tabIndex: number }> {
         {arrTabularTabs.map(({ arr, id, title }, index) => (
           <Tabs.Panel selected={tabIndex === index} key={`${title}-tabPanel`} id={id}>
             <H2>{title}</H2>
-            <Table head={tableHead}>
+            <Table.Composite head={tableHead}>
               {[['David Francis', 'Paul Farmer', 'Rita Patel'], ...arr].reduce(flip2dArray, []).map((innerArr) => (
                 <Table.Row key={`${innerArr.join()}-col`}>
                   {innerArr.map((elem) => (
@@ -118,7 +118,7 @@ class TableTabs extends Component<SharedProps, { tabIndex: number }> {
                   ))}
                 </Table.Row>
               ))}
-            </Table>
+            </Table.Composite>
           </Tabs.Panel>
         ))}
       </Tabs>

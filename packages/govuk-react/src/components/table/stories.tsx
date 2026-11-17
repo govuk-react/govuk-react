@@ -1,124 +1,98 @@
-import type { StoryFn } from '@storybook/react';
-
+import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 
-import { Table } from '.';
+import { overrideClasses } from '../..';
+import * as Table from '.';
 
-export default {
+const meta = {
   title: 'Typography/Table',
   id: 'table',
-  component: Table,
+  component: Table.Composite,
+} satisfies Meta<typeof Table.Composite>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    caption: 'Dates and amounts',
+    captionSize: 'm',
+    head: (
+      <>
+        <Table.ColumnHeader>Date</Table.ColumnHeader>
+        <Table.ColumnHeader>Amount</Table.ColumnHeader>
+      </>
+    ),
+    children: (
+      <>
+        <Table.Row>
+          <Table.RowHeader>First 6 weeks</Table.RowHeader>
+          <Table.Cell>£109.80 per week</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.RowHeader>Next 33 weeks</Table.RowHeader>
+          <Table.Cell>£109.80 per week</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.RowHeader>Total estimated pay</Table.RowHeader>
+          <Table.Cell>£4,282.20</Table.Cell>
+        </Table.Row>
+      </>
+    ),
+  },
 };
 
-const Template: StoryFn<React.ComponentProps<typeof Table>> = (args) => <Table {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  children: [
-    <Table.Row>
-      <Table.CellHeader>First 6 weeks</Table.CellHeader>
-      <Table.Cell>£109.80 per week</Table.Cell>
-    </Table.Row>,
-    <Table.Row>
-      <Table.CellHeader>Next 33 weeks</Table.CellHeader>
-      <Table.Cell>£109.80 per week</Table.Cell>
-    </Table.Row>,
-    <Table.Row>
-      <Table.CellHeader>Total estimated pay</Table.CellHeader>
-      <Table.Cell>£4,282.20</Table.Cell>
-    </Table.Row>,
-    <Table.Row>
-      <Table.CellHeader>Tell the mother&rsquo;s employer</Table.CellHeader>
-      <Table.Cell>28 days before they want to start maternity pay</Table.Cell>
-    </Table.Row>,
-  ],
+export const NumbersInATable: Story = {
+  args: {
+    caption: 'Months and rates',
+    captionSize: 'm',
+    head: (
+      <>
+        <Table.ColumnHeader>Month you apply</Table.ColumnHeader>
+        <Table.ColumnHeader numeric>Rate for bicycles</Table.ColumnHeader>
+        <Table.ColumnHeader numeric>Rate for vehicles</Table.ColumnHeader>
+      </>
+    ),
+    children: (
+      <>
+        <Table.Row>
+          <Table.RowHeader>January</Table.RowHeader>
+          <Table.Cell numeric>£85</Table.Cell>
+          <Table.Cell numeric>£95</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.RowHeader>February</Table.RowHeader>
+          <Table.Cell numeric>£75</Table.Cell>
+          <Table.Cell numeric>£55</Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.RowHeader>March</Table.RowHeader>
+          <Table.Cell numeric>£165</Table.Cell>
+          <Table.Cell numeric>£125</Table.Cell>
+        </Table.Row>
+      </>
+    ),
+  },
 };
 
-export const WithACaption = Template.bind({});
-WithACaption.args = {
-  caption: 'Dates and amounts',
-  children: [
-    <Table.Row>
-      <Table.CellHeader>First 6 weeks</Table.CellHeader>
-      <Table.Cell>£109.80 per week</Table.Cell>
-    </Table.Row>,
-    <Table.Row>
-      <Table.CellHeader>Next 33 weeks</Table.CellHeader>
-      <Table.Cell>£109.80 per week</Table.Cell>
-    </Table.Row>,
-    <Table.Row>
-      <Table.CellHeader>Total estimated pay</Table.CellHeader>
-      <Table.Cell>£4,282.20</Table.Cell>
-    </Table.Row>,
-  ],
-};
-
-export const WithAHeadRowAndNumericTabularData = Template.bind({});
-WithAHeadRowAndNumericTabularData.args = {
-  caption: 'Attention, I am the caption of this ship!',
-  head: (
-    <Table.Row>
-      <Table.CellHeader>Month you apply</Table.CellHeader>
-      <Table.CellHeader numeric>Rate for vehicles</Table.CellHeader>
-      <Table.CellHeader numeric>Rate for bicycles</Table.CellHeader>
-    </Table.Row>
-  ),
-  children: [
-    <Table.Row>
-      <Table.CellHeader>January</Table.CellHeader>
-      <Table.Cell numeric>£165.00</Table.Cell>
-      <Table.Cell numeric>£85.00</Table.Cell>
-    </Table.Row>,
-    <Table.Row>
-      <Table.CellHeader>February</Table.CellHeader>
-      <Table.Cell numeric>£165.00</Table.Cell>
-      <Table.Cell numeric>£85.00</Table.Cell>
-    </Table.Row>,
-    <Table.Row>
-      <Table.CellHeader>March</Table.CellHeader>
-      <Table.Cell numeric>£151.00</Table.Cell>
-      <Table.Cell numeric>£77.00</Table.Cell>
-    </Table.Row>,
-    <Table.Row>
-      <Table.CellHeader>April</Table.CellHeader>
-      <Table.Cell numeric>£136.00</Table.Cell>
-      <Table.Cell numeric>£70.00</Table.Cell>
-    </Table.Row>,
-  ],
-};
-
-export const WithAThreeQuarterWidthColumnAndOneQuarter = Template.bind({});
-WithAThreeQuarterWidthColumnAndOneQuarter.args = {
-  caption: 'Three quarters, one quarter',
-  head: (
-    <Table.Row>
-      <Table.CellHeader setWidth="three-quarters">three-quarters</Table.CellHeader>
-      <Table.CellHeader setWidth="one-quarter">one-quarter</Table.CellHeader>
-    </Table.Row>
-  ),
-  children: (
-    <Table.Row>
-      <Table.Cell>Column uses setWidth=&quot;three-quarters&quot; in header</Table.Cell>
-      <Table.Cell>setWidth=&quot;one-quarter&quot;</Table.Cell>
-    </Table.Row>
-  ),
-};
-
-export const WithCustomColumnWidths = Template.bind({});
-WithCustomColumnWidths.args = {
-  caption: 'Custom widths',
-  head: (
-    <Table.Row>
-      <Table.CellHeader setWidth="one-half">one-half</Table.CellHeader>
-      <Table.CellHeader setWidth="22%">22%</Table.CellHeader>
-      <Table.CellHeader>Normal</Table.CellHeader>
-    </Table.Row>
-  ),
-  children: (
-    <Table.Row>
-      <Table.Cell>Column uses setWidth=&quot;one-half&quot; in header</Table.Cell>
-      <Table.Cell>setWidth=&quot;22%&quot;</Table.Cell>
-      <Table.Cell>Not specified</Table.Cell>
-    </Table.Row>
-  ),
+export const CustomColumnWidths: Story = {
+  args: {
+    caption: 'Month you apply',
+    captionSize: 'm',
+    head: (
+      <>
+        <Table.ColumnHeader className={overrideClasses({ width: 'one-half' })}>Date</Table.ColumnHeader>
+        <Table.ColumnHeader className={overrideClasses({ width: 'one-quarter' })}>Rate for vehicles</Table.ColumnHeader>
+        <Table.ColumnHeader className={overrideClasses({ width: 'one-quarter' })}>Rate for bicycles</Table.ColumnHeader>
+      </>
+    ),
+    children: (
+      <Table.Row>
+        <Table.RowHeader>First 6 weeks</Table.RowHeader>
+        <Table.Cell>£109.80 per week</Table.Cell>
+        <Table.Cell>£159.80 per week</Table.Cell>
+      </Table.Row>
+    ),
+  },
 };
