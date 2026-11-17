@@ -35,7 +35,7 @@ type FormValues = {
 const shownError = (meta: { touched?: boolean; submitFailed?: boolean; error?: string }) =>
   meta.touched && meta.submitFailed ? meta.error : undefined;
 
-/** A checkbox Field's own value is the checkbox value, so validate the group's array from all values. */
+/** The checkbox Field is typed by its checkbox value, not the group's array, so read the array from all values. */
 const validateNationalityField = (_value: unknown, allValues: object) =>
   validateNationality('nationality' in allValues && Array.isArray(allValues.nationality) ? allValues.nationality : []);
 

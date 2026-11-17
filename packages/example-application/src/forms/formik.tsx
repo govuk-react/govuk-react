@@ -69,7 +69,7 @@ const FinalForm: React.FC = () => {
           validateOnChange={false}
           validateOnBlur={false}
           onSubmit={handleFormSubmit}
-          render={({ errors, touched, setFieldValue }) => {
+          render={({ errors, touched, setFieldValue, setFieldTouched }) => {
             const errorsToShow = Object.keys(errors).filter((key) => touched[key]);
             return (
               <Form>
@@ -140,6 +140,7 @@ const FinalForm: React.FC = () => {
                           name={field.name}
                           value={field.value}
                           onChange={(value) => setFieldValue('dob', value)}
+                          onBlur={() => setFieldTouched('dob', true, false)}
                           errorMessage={meta.touched ? firstError(meta.error) : undefined}
                         />
                       )}

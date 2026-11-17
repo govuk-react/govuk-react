@@ -108,7 +108,7 @@ Import from the package root, or from a component's own subpath:
 
 ```js
 import { Body, Heading } from 'govuk-react';
-import DateField from 'govuk-react/date-field';
+import * as DateInput from 'govuk-react/date-input';
 ```
 
 ## Migrating to 1.0
