@@ -27,8 +27,8 @@ export const Large: Story = {
   args: { label: 'Search GOV.UK', labelSize: 'm', large: true },
 };
 
-export const OnGovukBlue: Story = {
-  args: { label: 'Search', labelSize: 's', large: true, onGovukBlue: true },
+export const Inverse: Story = {
+  args: { label: 'Search', labelSize: 's', large: true, inverse: true },
   decorators: [
     (Story) => (
       <div style={{ backgroundColor: 'var(--govuk-brand-colour, #1d70b8)', padding: 20 }}>

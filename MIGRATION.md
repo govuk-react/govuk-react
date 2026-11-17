@@ -374,7 +374,7 @@ govuk-react now exports `overrideClasses`, which returns govuk-frontend's overri
 
 ## SearchBox
 
-`SearchBox` is now a module of parts with no CSS-in-JS, based on GOV.UK’s search component. `SearchBox.Composite` renders a label, a `govuk-input` search input and a submit button with a search icon. Put it inside your own `form`. It takes `labelSize`, `labelVisuallyHidden`, `large` and `onGovukBlue`. `Root`, `Label`, `Wrapper`, `Input` and `Button` are available for custom markup. The layout and button styles come from a small stylesheet that React hoists into the head, using govuk-frontend's colour custom properties.
+`SearchBox` is now a module of parts with no CSS-in-JS, based on GOV.UK’s search component. `SearchBox.Composite` renders a label, a `govuk-input` search input and a submit button with a search icon. Put it inside your own `form`. It takes `labelSize`, `labelVisuallyHidden`, `large` and `inverse`. `Root`, `Label`, `Wrapper`, `Input` and `Button` are available for custom markup. The layout and button styles come from a small stylesheet that React hoists into the head, using govuk-frontend's colour custom properties.
 
 | 0.x                                                              | 1.0                                                                     |
 | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |

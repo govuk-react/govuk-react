@@ -14,31 +14,28 @@ export const searchBoxCss = `
 .${name}__button:hover{background-color:color-mix(in srgb,${brand} 75%,#000)}
 .${name}__button:focus{z-index:1;outline:3px solid var(--govuk-focus-colour,#fd0);box-shadow:inset 0 0 0 4px #0b0c0c}
 .${name}__icon{position:absolute;inset:0;width:100%;height:100%;transform:scale(.5);pointer-events:none}
-.${name}:not(.${name}--on-govuk-blue) .${name}__input{border-right-width:0}
-.${name}:not(.${name}--on-govuk-blue) .${name}__input:focus{border-right-width:2px}
-.${name}--on-govuk-blue .${name}__label{color:#fff}
-.${name}--on-govuk-blue .${name}__input{border-width:0}
-.${name}--on-govuk-blue .${name}__button{background-color:color-mix(in srgb,${brand} 20%,#fff);color:${brand}}
-.${name}--on-govuk-blue .${name}__button:hover{background-color:color-mix(in srgb,${brand} 5%,#fff)}
+.${name}:not(.${name}--inverse) .${name}__input{border-right-width:0}
+.${name}:not(.${name}--inverse) .${name}__input:focus{border-right-width:2px}
+.${name}--inverse .${name}__label{color:#fff}
+.${name}--inverse .${name}__input{border-width:0}
+.${name}--inverse .${name}__button{background-color:color-mix(in srgb,${brand} 20%,#fff);color:${brand}}
+.${name}--inverse .${name}__button:hover{background-color:color-mix(in srgb,${brand} 5%,#fff)}
 .${name}--large .${name}__input{height:3.125rem}
 .${name}--large .${name}__button{width:3.125rem;height:3.125rem}
 .${name}--large .${name}__icon{transform:scale(.4)}
 `;
 
 export type RootProps = ComponentProps<'div'> & {
-  /** For use on a GOV.UK blue background, such as a homepage banner. */
-  onGovukBlue?: boolean;
+  /** For use on dark backgrounds, such as a GOV.UK blue homepage banner. */
+  inverse?: boolean;
   /** A larger input and button. */
   large?: boolean;
 };
 
 /** Wraps the search label, input and submit button. */
-export function Root({ onGovukBlue, large, className, children, ...props }: RootProps) {
+export function Root({ inverse, large, className, children, ...props }: RootProps) {
   return (
-    <div
-      className={clsx(name, onGovukBlue && `${name}--on-govuk-blue`, large && `${name}--large`, className)}
-      {...props}
-    >
+    <div className={clsx(name, inverse && `${name}--inverse`, large && `${name}--large`, className)} {...props}>
       <style href={name} precedence="default">
         {searchBoxCss}
       </style>
@@ -108,7 +105,7 @@ export function Button({ className, children = 'Search', ...props }: ButtonProps
 }
 
 export type CompositeProps = Omit<InputProps, 'id'> &
-  Pick<RootProps, 'onGovukBlue' | 'large'> & {
+  Pick<RootProps, 'inverse' | 'large'> & {
     /** The input’s id, which the label points to. */
     id: string;
     /** The label text. */
@@ -132,12 +129,12 @@ export function Composite({
   labelSize,
   labelVisuallyHidden,
   buttonText,
-  onGovukBlue,
+  inverse,
   large,
   ...props
 }: CompositeProps) {
   return (
-    <Root onGovukBlue={onGovukBlue} large={large}>
+    <Root inverse={inverse} large={large}>
       <Label htmlFor={id} size={labelSize} visuallyHidden={labelVisuallyHidden}>
         {label}
       </Label>
