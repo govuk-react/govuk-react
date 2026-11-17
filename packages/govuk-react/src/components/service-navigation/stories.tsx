@@ -30,20 +30,22 @@ export const WithParts = {
             <ServiceNavigation.Link href="#">Service name</ServiceNavigation.Link>
           </ServiceNavigation.ServiceName>
           <ServiceNavigation.Wrapper>
-            <ServiceNavigation.Toggle />
-            <ServiceNavigation.List>
-              <ServiceNavigation.Item>
-                <ServiceNavigation.Link href="#">Navigation item 1</ServiceNavigation.Link>
-              </ServiceNavigation.Item>
-              <ServiceNavigation.Item active>
-                <ServiceNavigation.Link href="#">
-                  <ServiceNavigation.ActiveFallback>Navigation item 2</ServiceNavigation.ActiveFallback>
-                </ServiceNavigation.Link>
-              </ServiceNavigation.Item>
-              <ServiceNavigation.Item>
-                <ServiceNavigation.Link href="#">Navigation item 3</ServiceNavigation.Link>
-              </ServiceNavigation.Item>
-            </ServiceNavigation.List>
+            <ServiceNavigation.Menu>
+              <ServiceNavigation.Toggle />
+              <ServiceNavigation.List>
+                <ServiceNavigation.Item>
+                  <ServiceNavigation.Link href="#">Navigation item 1</ServiceNavigation.Link>
+                </ServiceNavigation.Item>
+                <ServiceNavigation.Item active>
+                  <ServiceNavigation.Link href="#">
+                    <ServiceNavigation.ActiveFallback>Navigation item 2</ServiceNavigation.ActiveFallback>
+                  </ServiceNavigation.Link>
+                </ServiceNavigation.Item>
+                <ServiceNavigation.Item>
+                  <ServiceNavigation.Link href="#">Navigation item 3</ServiceNavigation.Link>
+                </ServiceNavigation.Item>
+              </ServiceNavigation.List>
+            </ServiceNavigation.Menu>
           </ServiceNavigation.Wrapper>
         </ServiceNavigation.Container>
       </ServiceNavigation.WidthContainer>
@@ -73,4 +75,68 @@ export const Controlled = {
       </ServiceNavigation.Composite>
     );
   },
+};
+
+/** The menu open, below tablet width. */
+export const MenuOpen = {
+  render: () => (
+    <ServiceNavigation.Composite serviceName="Service name" serviceHref="#" open>
+      <ServiceNavigation.ItemComposite href="#">Navigation item 1</ServiceNavigation.ItemComposite>
+      <ServiceNavigation.ItemComposite href="#" current>
+        Navigation item 2
+      </ServiceNavigation.ItemComposite>
+      <ServiceNavigation.ItemComposite href="#">Navigation item 3</ServiceNavigation.ItemComposite>
+    </ServiceNavigation.Composite>
+  ),
+};
+
+/** A menu that works without JavaScript, through a native `details`. */
+export const Details = {
+  render: () => (
+    <ServiceNavigation.DetailsComposite serviceName="Service name" serviceHref="#">
+      <ServiceNavigation.ItemComposite href="#">Navigation item 1</ServiceNavigation.ItemComposite>
+      <ServiceNavigation.ItemComposite href="#" current>
+        Navigation item 2
+      </ServiceNavigation.ItemComposite>
+      <ServiceNavigation.ItemComposite href="#">Navigation item 3</ServiceNavigation.ItemComposite>
+    </ServiceNavigation.DetailsComposite>
+  ),
+};
+
+/** The `details` menu open, below tablet width. */
+export const DetailsOpen = {
+  render: () => (
+    <ServiceNavigation.DetailsComposite serviceName="Service name" serviceHref="#" open>
+      <ServiceNavigation.ItemComposite href="#">Navigation item 1</ServiceNavigation.ItemComposite>
+      <ServiceNavigation.ItemComposite href="#" current>
+        Navigation item 2
+      </ServiceNavigation.ItemComposite>
+      <ServiceNavigation.ItemComposite href="#">Navigation item 3</ServiceNavigation.ItemComposite>
+    </ServiceNavigation.DetailsComposite>
+  ),
+};
+
+export const DetailsWithParts = {
+  render: () => (
+    <ServiceNavigation.Root as="section">
+      <ServiceNavigation.WidthContainer>
+        <ServiceNavigation.Container>
+          <ServiceNavigation.ServiceName>
+            <ServiceNavigation.Link href="#">Service name</ServiceNavigation.Link>
+          </ServiceNavigation.ServiceName>
+          <ServiceNavigation.Wrapper>
+            <ServiceNavigation.DetailsMenu>
+              <ServiceNavigation.Summary />
+              <ServiceNavigation.List>
+                <ServiceNavigation.ItemComposite href="#">Navigation item 1</ServiceNavigation.ItemComposite>
+                <ServiceNavigation.ItemComposite href="#" current>
+                  Navigation item 2
+                </ServiceNavigation.ItemComposite>
+              </ServiceNavigation.List>
+            </ServiceNavigation.DetailsMenu>
+          </ServiceNavigation.Wrapper>
+        </ServiceNavigation.Container>
+      </ServiceNavigation.WidthContainer>
+    </ServiceNavigation.Root>
+  ),
 };

@@ -32,6 +32,8 @@ export const tagName = 'govuk-react-disclosure';
 export interface DisclosureElement extends HTMLElement {
   /** Whether the content is open, once upgraded, even while `media` shows it anyway. */
   readonly expanded: boolean | undefined;
+  /** The user's last choice before `open` was first set, such as before React hydrated. */
+  readonly pickedOpen: boolean | undefined;
 }
 
 if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined') {
@@ -50,9 +52,16 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     private isOpen = false;
 
+    private picked?: boolean;
+
+    private controlled = false;
+
     private readonly onClick = () => {
       const open = !this.isOpen;
-      if (!this.hasAttribute('open')) this.apply(open);
+      if (!this.hasAttribute('open')) {
+        this.apply(open);
+        if (!this.controlled) this.picked = open;
+      }
       this.dispatchEvent(new CustomEvent('govuk-react-disclosure:change', { detail: { open }, bubbles: true }));
     };
 
@@ -60,6 +69,10 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     get expanded() {
       return this.toggle ? this.isOpen : undefined;
+    }
+
+    get pickedOpen() {
+      return this.picked;
     }
 
     connectedCallback() {
@@ -82,7 +95,9 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     attributeChangedCallback() {
       const open = this.getAttribute('open');
-      if (open !== null) this.apply(open === 'true');
+      if (open === null) return;
+      this.controlled = true;
+      this.apply(open === 'true');
     }
 
     private own<E extends Element>(selector: string, type: new () => E): E | undefined {

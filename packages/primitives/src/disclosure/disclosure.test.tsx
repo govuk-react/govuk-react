@@ -40,6 +40,13 @@ describe('Disclosure', () => {
     expect(screen.getByText('Navigation')).toBeVisible();
   });
 
+  test('when controlled, starts as open says', async () => {
+    render(<Example open />);
+    await upgraded();
+    expect(screen.getByRole('button', { name: 'Menu' })).toHaveAttribute('aria-expanded', 'true');
+    expect(screen.getByText('Navigation')).toBeVisible();
+  });
+
   test('when controlled, changes only when open does', async () => {
     function Controlled() {
       const [open, setOpen] = useState(false);

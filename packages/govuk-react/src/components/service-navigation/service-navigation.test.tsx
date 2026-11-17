@@ -34,3 +34,21 @@ describe('ServiceNavigation', () => {
     expect(onOpenChange).toHaveBeenLastCalledWith(true);
   });
 });
+
+describe('ServiceNavigation.DetailsComposite', () => {
+  test('renders govuk-frontend-react’s markup, with a details and summary for the menu', () => {
+    const html = renderToStaticMarkup(<ServiceNavigation.DetailsComposite serviceName="Service name" items={items} />);
+    expect(html).toContain('<details class="govuk-react-service-navigation__details">');
+    expect(html).toContain('<summary class="govuk-service-navigation__toggle">Menu</summary>');
+  });
+
+  test('reports the menu opening and closing', () => {
+    const onOpenChange = vi.fn();
+    const { container } = render(<ServiceNavigation.DetailsComposite items={items} onOpenChange={onOpenChange} />);
+    const details = container.querySelector('details');
+    if (!details) throw new Error('No details');
+    details.open = true;
+    fireEvent(details, new Event('toggle'));
+    expect(onOpenChange).toHaveBeenLastCalledWith(true);
+  });
+});

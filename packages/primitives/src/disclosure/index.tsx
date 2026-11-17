@@ -24,7 +24,7 @@ export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'onChange'> & {
   onOpenChange?: (open: boolean) => void;
 };
 
-const isDisclosure = (element: HTMLElement): element is DisclosureElement => 'expanded' in element;
+const isDisclosure = (element: HTMLElement): element is DisclosureElement => 'pickedOpen' in element;
 
 export function Root({ media, open, defaultOpen, onOpenChange, ...props }: RootProps) {
   const element = useRef<HTMLElement>(null);
@@ -53,9 +53,9 @@ export function Root({ media, open, defaultOpen, onOpenChange, ...props }: RootP
     }
     if (!synced.current) {
       synced.current = true;
-      const expanded = isDisclosure(node) ? node.expanded : undefined;
-      if (expanded !== undefined && expanded !== open) {
-        onOpenChangeRef.current?.(expanded);
+      const picked = isDisclosure(node) ? node.pickedOpen : undefined;
+      if (picked !== undefined && picked !== open && onOpenChangeRef.current) {
+        onOpenChangeRef.current(picked);
         return;
       }
     }
