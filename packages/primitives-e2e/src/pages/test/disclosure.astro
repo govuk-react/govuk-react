@@ -1,0 +1,16 @@
+---
+import DisclosureDemo from '../../components/DisclosureDemo.tsx';
+---
+
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Disclosure</title><link rel="icon" href="data:," /></head>
+  <body>
+    <DisclosureDemo client:load id="hydrated" />
+    <DisclosureDemo client:load id="controlled" controlled />
+    <!-- No client directive: the element upgrades the server markup, and React never hydrates. -->
+    <DisclosureDemo id="upgraded" />
+    <script>
+      import '@govuk-react/primitives/disclosure-element';
+    </script>
+  </body>
+</html>

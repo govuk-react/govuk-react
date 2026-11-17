@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import type { Meta } from '@storybook/react';
 import * as ServiceNavigation from '.';
 
@@ -48,4 +49,28 @@ export const WithParts = {
       </ServiceNavigation.WidthContainer>
     </ServiceNavigation.Root>
   ),
+};
+
+/** Below tablet width, choosing a link closes the menu, as a single-page app would after navigating. */
+export const Controlled = {
+  render: function Render() {
+    const [open, setOpen] = useState(false);
+    const close = (event: React.MouseEvent) => {
+      event.preventDefault();
+      setOpen(false);
+    };
+    return (
+      <ServiceNavigation.Composite serviceName="Service name" serviceHref="#" open={open} onOpenChange={setOpen}>
+        <ServiceNavigation.ItemComposite href="#" onClick={close}>
+          Navigation item 1
+        </ServiceNavigation.ItemComposite>
+        <ServiceNavigation.ItemComposite href="#" current onClick={close}>
+          Navigation item 2
+        </ServiceNavigation.ItemComposite>
+        <ServiceNavigation.ItemComposite href="#" onClick={close}>
+          Navigation item 3
+        </ServiceNavigation.ItemComposite>
+      </ServiceNavigation.Composite>
+    );
+  },
 };
