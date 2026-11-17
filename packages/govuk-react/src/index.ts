@@ -37,7 +37,7 @@ export * as Panel from './components/panel';
 export * as PhaseBanner from './components/phase-banner';
 export * as Radios from './components/radios';
 export { default as RelatedItems } from './components/related-items';
-export { default as SearchBox } from './components/search-box';
+export * as SearchBox from './components/search-box';
 export { SectionBreak } from './components/section-break';
 export * as Select from './components/select';
 export * as ServiceNavigation from './components/service-navigation';

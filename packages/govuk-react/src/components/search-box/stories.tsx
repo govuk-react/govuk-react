@@ -1,18 +1,35 @@
-import type { StoryFn } from '@storybook/react';
-
+import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 
-import { SearchBox } from '.';
+import * as SearchBox from '.';
 
-export default {
+const meta = {
   title: 'Form/Search box',
   id: 'search-box',
-  component: SearchBox,
+  component: SearchBox.Composite,
+  args: { id: 'search', name: 'q', label: 'Search on GOV.UK' },
+} satisfies Meta<typeof SearchBox.Composite>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  render: (args) => (
+    <form role="search" action="#">
+      <SearchBox.Composite {...args} />
+    </form>
+  ),
 };
 
-export const Default: StoryFn = (args) => (
-  <SearchBox {...args}>
-    <SearchBox.Input placeholder="Search GOV.UK" />
-    <SearchBox.Button />
-  </SearchBox>
-);
+export const WithParts: Story = {
+  render: () => (
+    <form role="search" action="#">
+      <SearchBox.Root>
+        <SearchBox.Label htmlFor="search-parts">Search on GOV.UK</SearchBox.Label>
+        <SearchBox.Input id="search-parts" name="q" />
+        <SearchBox.Button />
+      </SearchBox.Root>
+    </form>
+  ),
+};
