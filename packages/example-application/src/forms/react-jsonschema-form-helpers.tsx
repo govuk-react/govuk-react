@@ -8,8 +8,10 @@ import React, { useCallback, useState } from 'react';
 import * as GovUK from 'govuk-react';
 import BaseForm from '@rjsf/core';
 
-const dobObjToString = ({ year, month, day }: { year?: string; month?: string; day?: string }) =>
-  `${year || ''}-${month ? month.padStart(2, '0') : ''}-${day ? day.padStart(2, '0') : ''}`;
+import DateOfBirth, { type DateValue } from './components/date-of-birth';
+
+const dobObjToString = ({ year, month, day }: DateValue) =>
+  `${year || ''}-${month ? String(month).padStart(2, '0') : ''}-${day ? String(day).padStart(2, '0') : ''}`;
 
 export const dobStringToObj: (dob: string) => { year?: number; month?: number; day?: number } = (dob) => {
   if (!dob) return {};
@@ -17,91 +19,77 @@ export const dobStringToObj: (dob: string) => { year?: number; month?: number; d
   return { year: parseInt(year, 10), month: parseInt(month, 10), day: parseInt(day, 10) };
 };
 
-const DateField = ({ schema, onChange, children, rawErrors }) => {
-  const [value, setValue] = useState({ day: '', month: '', year: '' });
+const DateField = ({ name, onChange, rawErrors }) => {
+  const [value, setValue] = useState<DateValue>({ day: '', month: '', year: '' });
   const handleChange = useCallback(
-    ({ year, month, day }) => {
-      setValue({ year, month, day });
-      return onChange(dobObjToString({ year, month, day }));
+    (newValue: DateValue) => {
+      setValue(newValue);
+      return onChange(dobObjToString(newValue));
     },
     [onChange]
   );
 
-  return (
-    <GovUK.DateField
-      errorText={rawErrors?.[0]}
-      input={{
-        value,
-        onChange: handleChange,
-      }}
-    >
-      {schema.title}
-    </GovUK.DateField>
-  );
+  return <DateOfBirth name={name} value={value} onChange={handleChange} errorMessage={rawErrors?.[0]} />;
 };
 
-// interface AnyOfProps {
-//   name: string;
-//   schema: JSONSchema7;
-//   formData: { const: string }[];
-//   onChange: (value: string) => void;
-//   rawErrors?: string[];
-// }
 const AnyOf: React.FC<FieldProps> = ({ name, schema, formData = [], onChange, rawErrors }) => (
-  <GovUK.FormGroup error={!!rawErrors?.length}>
-    <GovUK.Label mb={4}>
-      <GovUK.LabelText>{schema.title}</GovUK.LabelText>
-      {rawErrors?.length && <GovUK.ErrorText>{rawErrors[0]}</GovUK.ErrorText>}
-      {(Array.isArray(schema?.items) ? schema.items : [schema?.items]).map(
-        (items) =>
-          typeof items !== 'boolean' &&
-          items?.anyOf?.map(
-            (item) =>
-              typeof item !== 'boolean' && (
-                <GovUK.Checkbox
-                  key={String(item.const)}
-                  name={name}
-                  value={String(item.const)}
-                  hint={item.description}
-                  onChange={(e) =>
-                    onChange(e.target.checked ? formData.concat(item.const) : formData.filter((i) => i !== item.const))
-                  }
-                >
-                  {item.title}
-                </GovUK.Checkbox>
-              )
-          )
-      )}
-    </GovUK.Label>
-  </GovUK.FormGroup>
+  <GovUK.Checkboxes.Field idPrefix={name} legend={schema.title} errorMessage={rawErrors?.[0]}>
+    {(Array.isArray(schema?.items) ? schema.items : [schema?.items]).map(
+      (items) =>
+        typeof items !== 'boolean' &&
+        items?.anyOf?.map(
+          (item, index) =>
+            typeof item !== 'boolean' && (
+              <GovUK.Checkboxes.ItemComposite
+                key={String(item.const)}
+                id={index ? `${name}-${index + 1}` : name}
+                name={name}
+                value={String(item.const)}
+                label={item.title}
+                hint={item.description}
+                onChange={(e) =>
+                  onChange(e.target.checked ? formData.concat(item.const) : formData.filter((i) => i !== item.const))
+                }
+              />
+            )
+        )
+    )}
+  </GovUK.Checkboxes.Field>
 );
 
 const OneOf = ({ schema, uiSchema, name, onChange, rawErrors }) => {
   if (uiSchema?.['ui:widget'] === 'radio') {
     return (
-      <GovUK.MultiChoice mb={4} label={schema.title} meta={{ error: rawErrors?.[0], touched: !!rawErrors?.length }}>
-        {schema?.oneOf?.map((item) => (
-          <GovUK.Radio key={item.const} value={item.const} name={name} onChange={(e) => onChange(e.target.value)}>
-            {item.title}
-          </GovUK.Radio>
+      <GovUK.Radios.Field idPrefix={name} legend={schema.title} errorMessage={rawErrors?.[0]}>
+        {schema?.oneOf?.map((item, index) => (
+          <GovUK.Radios.ItemComposite
+            key={item.const}
+            id={index ? `${name}-${index + 1}` : name}
+            value={item.const}
+            name={name}
+            label={item.title}
+            onChange={(e) => onChange(e.target.value)}
+          />
         ))}
-      </GovUK.MultiChoice>
+      </GovUK.Radios.Field>
     );
   }
   return (
-    <GovUK.Select
+    <GovUK.Select.Field
+      id={name}
+      name={name}
       label={schema.title}
-      mb={4}
-      input={{ name, onChange: (e) => onChange(e.target.value) }}
-      meta={{ error: rawErrors?.[0], touched: !!rawErrors?.length }}
+      hint={schema.description}
+      errorMessage={rawErrors?.[0]}
+      onChange={(e) => onChange(e.target.value)}
     >
-      <option>Please select...</option>
+      <option value="">Please select...</option>
       {schema?.oneOf?.map((item) => (
         <option key={item.const} value={item.const}>
           {item.title}
         </option>
       ))}
-    </GovUK.Select>
+    </GovUK.Select.Field>
   );
 };
 
@@ -118,41 +106,36 @@ const handleFilesChanged =
   };
 
 const FileUpload = ({ rawErrors, schema, onChange, name }) => (
-  <GovUK.FileUpload
-    meta={{ error: rawErrors?.[0], touched: !!rawErrors?.[0] }}
-    onChange={handleFilesChanged(onChange)}
+  <GovUK.FileUpload.Field
+    id={name}
     name={name}
-  >
-    {schema.title}
-  </GovUK.FileUpload>
+    label={schema.title}
+    hint={schema.description}
+    errorMessage={rawErrors?.[0]}
+    onChange={handleFilesChanged(onChange)}
+  />
 );
 
 const TextArea = ({ schema, rawErrors, onChange, name }) => (
-  <GovUK.TextArea
-    input={{
-      onChange: (e) => onChange(e.target.value),
-      name,
-    }}
-    mb={4}
+  <GovUK.Textarea.Field
+    id={name}
+    name={name}
+    label={schema.title}
     hint={schema.description}
-    meta={{ error: rawErrors?.[0], touched: !!rawErrors?.[0] }}
-  >
-    {schema.title}
-  </GovUK.TextArea>
+    errorMessage={rawErrors?.[0]}
+    onChange={(e) => onChange(e.target.value)}
+  />
 );
 
 const InputField = ({ schema, rawErrors, onChange, name }) => (
-  <GovUK.InputField
-    input={{
-      onChange: (e) => onChange(e.target.value),
-      name,
-    }}
-    mb={4}
+  <GovUK.Input.Field
+    id={name}
+    name={name}
+    label={schema.title}
     hint={schema.description}
-    meta={{ error: rawErrors?.[0], touched: !!rawErrors?.[0] }}
-  >
-    {schema.title}
-  </GovUK.InputField>
+    errorMessage={rawErrors?.[0]}
+    onChange={(e) => onChange(e.target.value)}
+  />
 );
 
 // interface StringFieldProps {
@@ -179,10 +162,16 @@ const StringField: React.FC<FieldProps> = ({ uiSchema, schema, onChange, rawErro
   return <Component uiSchema={uiSchema} schema={schema} onChange={onChange} rawErrors={rawErrors} name={name} />;
 };
 
-const BooleanField: React.FC<FieldProps> = ({ schema, onChange }) => (
-  <GovUK.Checkbox onChange={onChange} hint={schema.description}>
-    {schema.title}
-  </GovUK.Checkbox>
+const BooleanField: React.FC<FieldProps> = ({ name, schema, onChange }) => (
+  <GovUK.Checkboxes.Root>
+    <GovUK.Checkboxes.ItemComposite
+      id={name}
+      name={name}
+      label={schema.title}
+      hint={schema.description}
+      onChange={(e) => onChange(e.target.checked)}
+    />
+  </GovUK.Checkboxes.Root>
 );
 
 export const customFields = {
@@ -204,10 +193,9 @@ export const ErrorListTemplate: React.FC<{ errors: AjvError[] }> = ({ errors }) 
 
 export const ObjectFieldTemplate: React.FC<ObjectFieldTemplateProps> = ({ title, properties }) => {
   return (
-    <GovUK.Fieldset>
-      {title && <GovUK.Fieldset.Legend size="M">{title}</GovUK.Fieldset.Legend>}
+    <GovUK.Fieldset.Composite legend={title} legendSize="m">
       {properties.map((element) => element.content)}
-    </GovUK.Fieldset>
+    </GovUK.Fieldset.Composite>
   );
 };
 

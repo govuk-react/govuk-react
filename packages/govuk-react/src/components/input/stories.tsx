@@ -1,29 +1,36 @@
-import type { StoryFn } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
-import * as React from 'react';
-import Label from '../label';
-import LabelText from '../label-text';
-import HintText from '../hint-text';
-import ErrorText from '../error-text';
+import * as Input from '.';
 
-import { Input } from '.';
-
-export default {
+const meta = {
   title: 'Form/Input',
   id: 'input',
-  component: Input,
+  component: Input.Field,
+  args: { id: 'event-name', name: 'event-name', label: 'What is the name of the event?' },
+} satisfies Meta<typeof Input.Field>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};
+
+export const InputWithHintText: Story = {
+  args: { hint: 'The name you’ll use on promotional material' },
 };
 
-export const Default: StoryFn = (args) => <Input type="text" {...args} />;
+export const InputWithHintTextError: Story = {
+  args: { hint: 'The name you’ll use on promotional material', errorMessage: 'Enter an event name' },
+};
 
-export const WithLabel: StoryFn = (args) => (
-  <Label>
-    <LabelText>Example label</LabelText>
-    <HintText>Example hint</HintText>
-    <ErrorText>Example error</ErrorText>
-    <Input />
-  </Label>
-);
-WithLabel.parameters = {
-  chromatic: { disable: true }, // visual regression for this combination is managed by Label component
+export const WithPrefixAndSuffix: Story = {
+  args: { id: 'cost', name: 'cost', label: 'What is the cost?', prefix: '£', suffix: 'per item', width: 5 },
+};
+
+export const WithTypeAndAutoComplete: Story = {
+  args: { id: 'email', name: 'email', label: 'Email address', type: 'email', autoComplete: 'email', spellCheck: false },
+};
+
+export const AsPageHeading: Story = {
+  args: { labelSize: 'l', labelIsPageHeading: true },
 };

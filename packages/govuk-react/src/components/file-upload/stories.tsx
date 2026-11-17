@@ -1,39 +1,24 @@
-import type { StoryFn } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
-import * as React from 'react';
+import * as FileUpload from '.';
 
-import { FileUpload } from '.';
-
-export default {
+const meta = {
   title: 'Form/File upload',
   id: 'file-upload',
-  component: FileUpload,
+  component: FileUpload.Field,
+  args: { id: 'file-upload', name: 'file-upload', label: 'Upload a file' },
+} satisfies Meta<typeof FileUpload.Field>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};
+
+export const InputWithHintText: Story = {
+  args: { hint: 'This can be in either JPG or PNG format', accept: '.jpg, .png' },
 };
 
-const Template: StoryFn<React.ComponentProps<typeof FileUpload>> = (args) => <FileUpload {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  name: 'group0',
-  children: 'Upload a document',
-};
-
-export const InputWithHintText = Template.bind({});
-InputWithHintText.args = {
-  name: 'group1',
-  children: 'Upload a photo',
-  acceptedFormats: '.jpg, .png',
-  hint: 'This can be in either JPG or PNG format',
-};
-
-export const InputWithHintTextError = Template.bind({});
-InputWithHintTextError.args = {
-  name: 'group1',
-  children: 'Upload a photo',
-  acceptedFormats: '.jpg, .png',
-  hint: 'This can be in either JPG or PNG format',
-  meta: {
-    touched: true,
-    error: 'Example',
-  },
+export const InputWithHintTextError: Story = {
+  args: { hint: 'This can be in either JPG or PNG format', errorMessage: 'The selected file must be a JPG or PNG' },
 };

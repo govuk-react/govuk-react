@@ -1,10 +1,7 @@
-/* eslint-disable react/prop-types */
-import type { FieldProps as FFFieldProps, FieldRenderProps } from 'react-final-form';
-
 import React, { useState, useCallback } from 'react';
 import * as GovUK from 'govuk-react';
 import { Link } from 'react-router-dom';
-import { Form, Field as FFField } from 'react-final-form';
+import { Form, Field } from 'react-final-form';
 
 import {
   validateNationality,
@@ -17,6 +14,8 @@ import {
 } from './validators/validators';
 
 import Results from './components/results';
+import DateOfBirth, { type DateValue } from './components/date-of-birth';
+import { animalOptions, nationalities } from './components/options';
 
 type FormValues = {
   firstName: string;
@@ -32,41 +31,13 @@ type FormValues = {
   petPhoto?: FileList;
   petPhotoString?: string;
 };
-interface FieldProps<T, I> extends Omit<FFFieldProps<T, FieldRenderProps<T, HTMLElement>>, 'component'> {
-  component: React.ComponentType<{
-    name?: string;
-    input?: I;
-    meta?: { touched?: boolean };
-  }>;
-}
+/** Final Form only shows errors after a failed submit. */
+const shownError = (meta: { touched?: boolean; submitFailed?: boolean; error?: string }) =>
+  meta.touched && meta.submitFailed ? meta.error : undefined;
 
-function Field<T, I>({ component: Component, name, ...props }: FieldProps<T, I>) {
-  return (
-    <FFField name={name} {...props}>
-      {({ input, meta }) => (
-        <Component
-          name={name}
-          {...props}
-          input={input as I}
-          meta={{ ...meta, touched: meta.touched && meta.submitFailed }}
-        />
-      )}
-    </FFField>
-  );
-}
-
-const Checkbox = ({ input, ...props }) => <GovUK.Checkbox {...input} {...props} />;
-const DateField: React.FC<
-  React.ComponentProps<typeof GovUK.DateField> & { meta: { touched: boolean; error: string } }
-> = ({ meta, ...props }) => (
-  <GovUK.DateField errorText={meta.touched && meta.error ? meta.error : undefined} {...props} />
-);
-const Radio = ({ input, ...props }) => <GovUK.Radio {...input} {...props} />;
-const FileUpload: React.FC<
-  React.ComponentProps<typeof GovUK.FileUpload> & { input: { value: string; onChange: (any: FileList) => void } }
-> = ({ input: { value, onChange, ...input }, ...props }) => (
-  <GovUK.FileUpload {...input} {...props} onChange={({ target }) => onChange(target.files)} />
-);
+/** The checkbox Field is typed by its checkbox value, not the group's array, so read the array from all values. */
+const validateNationalityField = (_value: unknown, allValues: object) =>
+  validateNationality('nationality' in allValues && Array.isArray(allValues.nationality) ? allValues.nationality : []);
 
 const FinalForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -92,7 +63,7 @@ const FinalForm: React.FC = () => {
         <Form<FormValues>
           onSubmit={handleFormSubmit}
           initialValues={{ dob: { day: '', month: '', year: '' } }}
-          render={({ handleSubmit: handleSubmitInner, errors, touched, form }) => {
+          render={({ handleSubmit: handleSubmitInner, errors, touched, submitFailed, form }) => {
             const errorsToShow = Object.keys(errors).filter((key) => touched[key]);
             form.pauseValidation();
             const handleSubmit = (e) => {
@@ -117,107 +88,120 @@ const FinalForm: React.FC = () => {
                       }))}
                     />
                   )}
-                  <GovUK.Fieldset>
-                    <GovUK.Fieldset.Legend size="M">About you</GovUK.Fieldset.Legend>
-                    <Field
-                      name="firstName"
-                      mb={4}
-                      hint="You can find this on your passport"
-                      validate={validateFirstName}
-                      component={GovUK.InputField}
-                    >
-                      First name
+                  <GovUK.Fieldset.Composite legend="About you" legendSize="m">
+                    <Field name="firstName" validate={validateFirstName}>
+                      {({ input, meta }) => (
+                        <GovUK.Input.Field
+                          {...input}
+                          id="firstName"
+                          label="First name"
+                          hint="You can find this on your passport"
+                          errorMessage={shownError(meta)}
+                        />
+                      )}
                     </Field>
-                    <Field
-                      mb={8}
-                      name="description"
-                      hint="Enter as many words as you like"
-                      validate={validateDescription}
-                      component={GovUK.TextArea}
-                    >
-                      Description of what you saw
+                    <Field name="description" validate={validateDescription}>
+                      {({ input, meta }) => (
+                        <GovUK.Textarea.Field
+                          {...input}
+                          id="description"
+                          label="Description of what you saw"
+                          hint="Enter as many words as you like"
+                          errorMessage={shownError(meta)}
+                        />
+                      )}
                     </Field>
-
-                    <GovUK.FormGroup error={touched?.nationality && !!errors?.nationality}>
-                      <GovUK.Label mb={4}>
-                        <GovUK.LabelText>Nationality</GovUK.LabelText>
-                        {touched?.nationality && errors?.nationality && (
-                          <GovUK.ErrorText>{errors?.nationality}</GovUK.ErrorText>
-                        )}
-                        <Field
+                    <GovUK.Checkboxes.Field
+                      idPrefix="nationality"
+                      legend="Nationality"
+                      errorMessage={touched?.nationality && submitFailed ? errors?.nationality : undefined}
+                    >
+                      {nationalities.map(({ value, label, hint }, index) => (
+                        <Field<string>
+                          key={value}
                           type="checkbox"
                           name="nationality"
-                          value="british"
-                          validate={validateNationality}
-                          component={Checkbox}
-                          hint="including English, Scottish, Welsh and Northern Irish"
+                          value={value}
+                          validate={index === 0 ? validateNationalityField : undefined}
                         >
-                          British
+                          {({ input }) => (
+                            <GovUK.Checkboxes.ItemComposite
+                              {...input}
+                              id={index ? `nationality-${index + 1}` : 'nationality'}
+                              label={label}
+                              hint={hint}
+                            />
+                          )}
                         </Field>
-                        <Field type="checkbox" name="nationality" value="irish" component={Checkbox}>
-                          Irish
+                      ))}
+                    </GovUK.Checkboxes.Field>
+                    <Field<DateValue> name="dob" validate={validateDateOfBirth}>
+                      {({ input, meta }) => (
+                        <DateOfBirth
+                          name={input.name}
+                          value={input.value}
+                          onChange={input.onChange}
+                          onBlur={() => input.onBlur()}
+                          errorMessage={shownError(meta)}
+                        />
+                      )}
+                    </Field>
+                  </GovUK.Fieldset.Composite>
+                  <GovUK.Fieldset.Composite legend="About your pet" legendSize="m">
+                    <Field name="animal" validate={validateAnimal}>
+                      {({ input, meta }) => (
+                        <GovUK.Select.Field
+                          {...input}
+                          id="animal"
+                          label="What animal is your pet"
+                          hint="A cat for example"
+                          errorMessage={shownError(meta)}
+                        >
+                          {animalOptions}
+                        </GovUK.Select.Field>
+                      )}
+                    </Field>
+                    <Field<FileList> name="petPhoto" validate={validatePetPhoto}>
+                      {({ input: { value, onChange, ...input }, meta }) => (
+                        <GovUK.FileUpload.Field
+                          {...input}
+                          id="petPhoto"
+                          label="Please upload a recent photograph"
+                          hint="This can be in either JPG or PNG format"
+                          accept=".jpg, .png"
+                          errorMessage={shownError(meta)}
+                          onChange={({ target }) => onChange(target.files)}
+                        />
+                      )}
+                    </Field>
+                    <GovUK.Radios.Field
+                      idPrefix="hasMultiplePets"
+                      legend="Do you have more than one pet?"
+                      errorMessage={touched?.hasMultiplePets && submitFailed ? errors?.hasMultiplePets : undefined}
+                      inline
+                    >
+                      {['yes', 'no'].map((value, index) => (
+                        <Field<string>
+                          key={value}
+                          type="radio"
+                          name="hasMultiplePets"
+                          value={value}
+                          validate={index === 0 ? validateMultiplePets : undefined}
+                        >
+                          {({ input }) => (
+                            <GovUK.Radios.ItemComposite
+                              {...input}
+                              id={index ? 'hasMultiplePets-2' : 'hasMultiplePets'}
+                              label={value === 'yes' ? 'Yes' : 'No'}
+                            />
+                          )}
                         </Field>
-                        <Field type="checkbox" name="nationality" value="other" component={Checkbox}>
-                          Citizen of another country
-                        </Field>
-                      </GovUK.Label>
-                    </GovUK.FormGroup>
-                    <Field name="dob" component={DateField} validate={validateDateOfBirth}>
-                      Date of birth
-                    </Field>
-                  </GovUK.Fieldset>
-                  <GovUK.Fieldset>
-                    <GovUK.Fieldset.Legend size="M">About your pet</GovUK.Fieldset.Legend>
-                    <Field
-                      component={GovUK.Select}
-                      mb={8}
-                      name="animal"
-                      label="What animal is your pet"
-                      hint="A cat for example"
-                      validate={validateAnimal}
-                    >
-                      <option value="">Please select...</option>
-                      <option value="cat">Cat</option>
-                      <option value="other-feline">Other feline</option>
-                      <option value="other-non-feline">Other non feline</option>
-                    </Field>
-                    {/*
-                    TODO: need to be able to pass props to file input
-                    https://github.com/final-form/react-final-form/issues/663
-                    */}
-                    <Field
-                      component={FileUpload}
-                      mb={8}
-                      acceptedFormats=".jpg, .png"
-                      hint="This can be in either JPG or PNG format"
-                      name="petPhoto"
-                      validate={validatePetPhoto}
-                    >
-                      Please upload a recent photograph
-                    </Field>
-                    <GovUK.MultiChoice
-                      mb={8}
-                      label="Do you have more than one pet?"
-                      meta={{ error: errors?.hasMultiplePets, touched: !!touched?.hasMultiplePets }}
-                    >
-                      <Field
-                        component={Radio}
-                        type="radio"
-                        name="hasMultiplePets"
-                        inline
-                        value="yes"
-                        validate={validateMultiplePets}
-                      >
-                        Yes
-                      </Field>
-                      <Field component={Radio} type="radio" name="hasMultiplePets" inline value="no">
-                        No
-                      </Field>
-                    </GovUK.MultiChoice>
-                  </GovUK.Fieldset>
-                  <GovUK.Button onClick={handleSubmit} disabled={isSubmitting}>
+                      ))}
+                    </GovUK.Radios.Field>
+                  </GovUK.Fieldset.Composite>
+                  <GovUK.Button.Composite onClick={handleSubmit} disabled={isSubmitting}>
                     Submit
-                  </GovUK.Button>
+                  </GovUK.Button.Composite>
                 </GovUK.LoadingBox>
               </form>
             );
