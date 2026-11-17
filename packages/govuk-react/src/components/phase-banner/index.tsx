@@ -10,7 +10,7 @@ import styled from 'styled-components';
 import { BORDER_COLOUR } from 'govuk-colours';
 import { SPACING_POINTS } from '../../constants';
 import { spacing, typography } from '../../lib';
-import Tag from '../tag';
+import Tag from '../../legacy/tag';
 
 const StyledBanner = styled('div')(
   {

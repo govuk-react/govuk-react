@@ -111,3 +111,23 @@ There is no equivalent for the whitespace props (`mb`, `margin`, `padding` and s
 | `<WarningText>`                                      | `<WarningText.Composite>`                                 |
 
 The composite adds govuk-frontend's visually hidden "Warning" text before the message. Change it with `iconFallbackText`. The whitespace props (`mb` and so on) are removed.
+
+## Tag
+
+`Tag` is now govuk-frontend-react's `Tag`. It's a named export, and `tint` is replaced by govuk-frontend's `colour`.
+
+| 0.x                                 | 1.0                                             |
+| ----------------------------------- | ----------------------------------------------- |
+| `import Tag from 'govuk-react/tag'` | `import { Tag } from 'govuk-react/tag'`         |
+| `tint="SOLID"` (default)            | no `colour` (govuk-frontend's default blue tag) |
+| `tint="GREY"` or `inactive`         | `colour="grey"`                                 |
+| `tint="GREEN"`                      | `colour="green"`                                |
+| `tint="TURQUOISE"`                  | `colour="teal"`                                 |
+| `tint="BLUE"`                       | `colour="blue"`                                 |
+| `tint="PURPLE"`                     | `colour="purple"`                               |
+| `tint="PINK"`                       | `colour="magenta"`                              |
+| `tint="RED"`                        | `colour="red"`                                  |
+| `tint="ORANGE"`                     | `colour="orange"`                               |
+| `tint="YELLOW"`                     | `colour="yellow"`                               |
+
+govuk-frontend's tags are no longer uppercase, and the default is a light blue tag rather than solid blue. `light-blue` is a new colour. Custom `backgroundColor` and `color` props are removed.

@@ -41,7 +41,7 @@ export { default as Select } from './components/select';
 export { default as SkipLink } from './components/skip-link';
 export { default as Table } from './components/table';
 export { default as Tabs } from './components/tabs';
-export { default as Tag } from './components/tag';
+export { Tag } from './components/tag';
 export { default as TextArea } from './components/text-area';
 export { default as TopNav } from './components/top-nav';
 export { default as VisuallyHidden } from './components/visually-hidden';
