@@ -45,6 +45,25 @@ Without React, use the `<govuk-react-tabs>` element from `@govuk-react/primitive
 
 It follows the Tabs reference in [react-design-system-apis](https://github.com/penx/react-design-system-apis). Browser tests in `packages/primitives-e2e` cover it without JavaScript, upgraded without React, hydrated, before hydration, controlled, nested, in islands and rendered only on the client.
 
+## Disclosure
+
+```tsx
+import * as Disclosure from '@govuk-react/primitives/disclosure';
+
+<nav aria-label="Menu">
+  <Disclosure.Root media="(min-width: 40.0625em)">
+    <Disclosure.Toggle>Menu</Disclosure.Toggle>
+    <Disclosure.Content asChild>
+      <ul id="navigation">…</ul>
+    </Disclosure.Content>
+  </Disclosure.Root>
+</nav>;
+```
+
+A button that shows and hides some content, such as a navigation menu on small screens. Without JavaScript the content is shown and the button hidden. While `media` matches, the content is always shown and the button hidden.
+
+`open` and `onOpenChange` control it once hydrated, such as to close a menu after navigating. A user's click before hydration is reported through `onOpenChange` rather than undone. `defaultOpen` starts it open.
+
 ## Modal
 
 ```tsx
