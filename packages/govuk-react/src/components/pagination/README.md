@@ -2,9 +2,11 @@ Pagination
 ==========
 
 ### Import
+
 ```js
-  import Pagination from 'govuk-react/pagination';
+import Pagination from 'govuk-react/pagination';
 ```
+
 <!-- STORY -->
 
 Navigational links that allow users to navigate within a series of pages or elements.
@@ -13,8 +15,6 @@ Navigational links that allow users to navigate within a series of pages or elem
 - https://components.publishing.service.gov.uk/component-guide/previous_and_next_navigation
 
 ### Properties
-Prop | Required | Default | Type | Description
-:--- | :------- | :------ | :--- | :----------
 
-
-
+| Prop | Required | Default | Type | Description |
+| :--- | :------- | :------ | :--- | :---------- |
