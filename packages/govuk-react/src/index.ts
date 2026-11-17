@@ -12,11 +12,10 @@ export { ErrorMessage, ErrorMessageComposite } from './components/error-message'
 export { default as ErrorSummary } from './components/error-summary';
 export * as Fieldset from './components/fieldset';
 export * as FileUpload from './components/file-upload';
-export { default as Footer } from './components/footer';
+export * as Footer from './components/footer';
 export { FormGroup } from './components/form-group';
-export { default as GlobalStyle } from './components/global-style';
-export { default as GridCol } from './components/grid-col';
-export { default as GridRow } from './components/grid-row';
+export { GridColumn } from './components/grid-column';
+export { GridRow } from './components/grid-row';
 export { Heading } from './components/heading';
 export { Hint } from './components/hint';
 export * as Input from './components/input';
@@ -25,8 +24,8 @@ export { Label, LabelComposite, LabelWrapper } from './components/label';
 export { Link } from './components/link';
 export { List } from './components/list';
 export { default as LoadingBox } from './components/loading-box';
-export { default as Main } from './components/main';
-export { default as Page } from './components/page';
+export { MainWrapper } from './components/main-wrapper';
+export { Page } from './components/page';
 export { default as Pagination } from './components/pagination';
 export * as Panel from './components/panel';
 export * as PhaseBanner from './components/phase-banner';
@@ -43,6 +42,7 @@ export * as Textarea from './components/textarea';
 export { default as TopNav } from './components/top-nav';
 export { VisuallyHidden } from './components/visually-hidden';
 export * as WarningText from './components/warning-text';
+export { WidthContainer } from './components/width-container';
 
 // Icons
 export { Search as SearchIcon, ArrowLeft, Spinner, ButtonArrow } from './icons';

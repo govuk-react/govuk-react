@@ -9,36 +9,36 @@ import Forms from './forms/forms';
 const ExampleApplication: React.FC<ExampleApplicationProps> = ({ routerEntries }: ExampleApplicationProps) => (
   <React.StrictMode>
     <Router initialEntries={routerEntries}>
-      <GovUK.GlobalStyle />
-      <GovUK.TopNav
-        serviceTitle={
-          <GovUK.TopNav.Anchor as={Link} to="/">
-            React
-          </GovUK.TopNav.Anchor>
+      <GovUK.Page
+        header={
+          <GovUK.TopNav
+            serviceTitle={
+              <GovUK.TopNav.Anchor as={Link} to="/">
+                React
+              </GovUK.TopNav.Anchor>
+            }
+            search={
+              <GovUK.SearchBox>
+                <GovUK.SearchBox.Input placeholder="Search GOV.UK" />
+                <GovUK.SearchBox.Button />
+              </GovUK.SearchBox>
+            }
+          >
+            <GovUK.TopNav.NavLink as={Link} to="/">
+              Home
+            </GovUK.TopNav.NavLink>
+            <GovUK.TopNav.NavLink as={Link} to="/forms">
+              Forms
+            </GovUK.TopNav.NavLink>
+          </GovUK.TopNav>
         }
-        search={
-          <GovUK.SearchBox>
-            <GovUK.SearchBox.Input placeholder="Search GOV.UK" />
-            <GovUK.SearchBox.Button />
-          </GovUK.SearchBox>
-        }
+        footer={<GovUK.Footer.Composite />}
       >
-        <GovUK.TopNav.NavLink as={Link} to="/">
-          Home
-        </GovUK.TopNav.NavLink>
-        <GovUK.TopNav.NavLink as={Link} to="/forms">
-          Forms
-        </GovUK.TopNav.NavLink>
-      </GovUK.TopNav>
-      <GovUK.Page.WidthContainer>
-        <GovUK.Page.Main>
-          <Routes>
-            <Route path="/forms/*" element={<Forms />} />
-            <Route path="/" element={<Home />} />
-          </Routes>
-        </GovUK.Page.Main>
-      </GovUK.Page.WidthContainer>
-      <GovUK.Footer />
+        <Routes>
+          <Route path="/forms/*" element={<Forms />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </GovUK.Page>
     </Router>
   </React.StrictMode>
 );

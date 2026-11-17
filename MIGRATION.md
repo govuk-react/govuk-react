@@ -235,3 +235,27 @@ The form components are now govuk-frontend-react's. Each control is a module of 
 Subpath imports follow the new names: `govuk-react/checkboxes`, `govuk-react/radios`, `govuk-react/date-input`, `govuk-react/textarea`, `govuk-react/hint` and `govuk-react/error-message`. `govuk-react/checkbox`, `radio`, `multi-choice`, `date-field`, `input-field`, `text-area`, `label-text`, `hint-text` and `error-text` are removed.
 
 `Checkboxes.Field`, `Radios.Field` and `DateInput.Field` need an id prefix or id, because govuk-frontend uses it to link hints and errors with `aria-describedby`. `DateInput.Field` no longer manages the day, month and year state; see the example application's `DateOfBirth` for a controlled version.
+
+## Layout
+
+The layout components are now govuk-frontend-react's. The whitespace props (`mb` and so on) are removed.
+
+| 0.x                                                               | 1.0                                                                                                             |
+| ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `<GridRow>`                                                       | `<GridRow>` (named import)                                                                                      |
+| `<GridCol setWidth="one-half">` or `<GridCol columnOneHalf>`      | `<GridColumn width="one-half">`                                                                                 |
+| `<GridCol setDesktopWidth="one-third">`                           | `<GridColumn width="one-third-from-desktop">` (a different tablet width as well needs your own class)           |
+| `<Main>` (a centred container)                                    | `<WidthContainer>`, with `<MainWrapper>` inside for a `<main>` landmark                                         |
+| `<Page.Main>`                                                     | `<MainWrapper>`                                                                                                 |
+| `<Page.WidthContainer>` or `<Footer.WidthContainer>`              | `<WidthContainer>`                                                                                              |
+| `<Footer>`                                                        | `<Footer.Composite>`                                                                                            |
+| `<Footer>` children (navigation)                                  | `navigation` prop                                                                                               |
+| `<Footer meta={…}>`                                               | `metaLinks` and `metaContent` props                                                                             |
+| `<Footer.MetaLinks heading="…">`                                  | `metaHeading` prop                                                                                              |
+| `<Footer.MetaLinks>`, `<Footer.Link>`                             | `<Footer.InlineListItem>` and `<Footer.Link>` inside `metaLinks`                                                |
+| `<Footer.Navigation>`, `<Footer.NavigationLinks listColumns={2}>` | `<Footer.Section>`, `<Footer.Heading>`, `<Footer.List columns={2}>` and `<Footer.ListItem>` inside `navigation` |
+| `<GlobalStyle />`                                                 | removed: govuk-frontend's CSS styles the page                                                                   |
+
+`GridColumn` needs a `width`, and custom column widths (`setWidth="25%"`) are removed. `Footer.Composite` shows the crown, the Open Government Licence and "© Crown copyright" by default. The old footer showed no copyright unless given one; `copyright` is now the text to show, and its `link` and `image` are removed.
+
+`Page` keeps `header`, `footer`, `beforeChildren` and `id`, and gains `skipLinkText`. It wraps `header` and `footer` in `<header>` and `<footer>` landmarks, as govuk-frontend's template does. It no longer defaults the header to `TopNav`, and the `main` and `container` overrides and the `Page.Main` and `Page.WidthContainer` properties are removed: for a custom layout, compose `SkipLink`, `WidthContainer` and `MainWrapper` yourself. The main wrapper's id now defaults to `main-content`, matching govuk-frontend.

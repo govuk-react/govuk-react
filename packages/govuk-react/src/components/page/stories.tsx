@@ -1,49 +1,31 @@
-import type { StoryFn } from '@storybook/react';
-
+import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
-import styled from 'styled-components';
 
 import { BackLink } from '../back-link';
-import { H1, H3 } from '../../legacy/heading';
-import { MEDIA_QUERIES, GUTTER } from '../../constants';
-
+import { Heading } from '../heading';
+import * as Footer from '../footer';
 import { Page } from '.';
 
-export default {
+const meta = {
   title: 'Page & Layout/Page',
   id: 'page',
   component: Page,
+} satisfies Meta<typeof Page>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    beforeChildren: <BackLink href="#" />,
+    children: <Heading size="xl">Page title</Heading>,
+  },
 };
 
-const Template: StoryFn<React.ComponentProps<typeof Page>> = (args) => <Page {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  beforeChildren: <BackLink href="#" />,
-  children: <H1>Page Title</H1>,
-};
-
-export const CustomWidthContainerNoWidthLimit = Template.bind({});
-CustomWidthContainerNoWidthLimit.args = {
-  container: styled(Page.WidthContainer)({
-    maxWidth: 'inherit',
-    [MEDIA_QUERIES.MAX]: {
-      margin: `0 ${GUTTER}`,
-    },
-  }),
-  children: <H3>Page container has no maxWidth</H3>,
-};
-
-export const CustomMainContainerBackgroundColour = Template.bind({});
-CustomMainContainerBackgroundColour.args = {
-  main: styled(Page.Main)({
-    backgroundColor: '#ddd',
-  }),
-  children: <H3>Main container with custom background colour</H3>,
-};
-
-export const CustomMainContainerAdjustedPadding = Template.bind({});
-CustomMainContainerAdjustedPadding.args = {
-  main: (props) => <Page.Main padding={{ size: 1 }} {...props} />,
-  children: <H3>Main container with adjusted padding using withWhiteSpace padding prop</H3>,
+export const WithFooter: Story = {
+  args: {
+    children: <Heading size="xl">Page title</Heading>,
+    footer: <Footer.Composite />,
+  },
 };
