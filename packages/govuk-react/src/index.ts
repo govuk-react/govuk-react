@@ -28,7 +28,7 @@ export { Label, LabelComposite, LabelWrapper } from './components/label';
 export * as LanguageNavigation from './components/language-navigation';
 export { Link } from './components/link';
 export { List } from './components/list';
-export { default as LoadingBox } from './components/loading-box';
+export { LoadingBox } from './components/loading-box';
 export { MainWrapper } from './components/main-wrapper';
 export * as NotificationBanner from './components/notification-banner';
 export { Page } from './components/page';

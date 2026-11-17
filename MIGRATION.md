@@ -325,3 +325,13 @@ govuk-react now exports `overrideClasses`, which returns govuk-frontend's overri
 | No numbered pages                                             | `<Pagination.ItemComposite href="/page-2" number={2} current />` children, with `ellipsis` for gaps                   |
 | `<Pagination.Anchor as={RouterLink} to="/next" nextPage>`     | `<Pagination.NextLink asChild><RouterLink to="/next">…</RouterLink></Pagination.NextLink>` inside a `Pagination.Next` |
 | `mb` and other whitespace props                               | `className`                                                                                                           |
+
+## LoadingBox
+
+`LoadingBox` no longer uses styled-components or react-transition-group. Its styles are a small stylesheet that React hoists into the head, with your props passed in as CSS custom properties, so it works with server rendering and without a CSS-in-JS runtime.
+
+| 0.x                                                | 1.0                                                                                              |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `import LoadingBox from 'govuk-react/loading-box'` | `import { LoadingBox } from 'govuk-react/loading-box'`                                           |
+| `spinnerColor`, `backgroundColor` took hex colours | Any CSS colour. They default to govuk-frontend's text and page background colours                |
+| The overlay unmounted when `loading` was `false`   | The overlay stays in the DOM, hidden, so it can fade out. The box sets `aria-busy` while loading |
