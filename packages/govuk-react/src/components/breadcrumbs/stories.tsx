@@ -17,9 +17,9 @@ export const Default: Story = {
   args: {
     children: (
       <>
-        <Breadcrumbs.ItemComposite href="/section">Section</Breadcrumbs.ItemComposite>
-        <Breadcrumbs.ItemComposite href="/section/sub-section">Sub-section</Breadcrumbs.ItemComposite>
-        <Breadcrumbs.ItemComposite>Current page</Breadcrumbs.ItemComposite>
+        <Breadcrumbs.ItemComposite href="#">Home</Breadcrumbs.ItemComposite>
+        <Breadcrumbs.ItemComposite href="#">Passports, travel and living abroad</Breadcrumbs.ItemComposite>
+        <Breadcrumbs.ItemComposite>Travel abroad</Breadcrumbs.ItemComposite>
       </>
     ),
   },

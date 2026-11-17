@@ -20,5 +20,5 @@ export const InputWithHintText: Story = {
 };
 
 export const InputWithHintTextError: Story = {
-  args: { hint: 'This can be in either JPG or PNG format', errorMessage: 'The selected file must be a JPG or PNG' },
+  args: { hint: 'This can be in either JPG or PNG format', errorMessage: 'The CSV must be smaller than 2MB' },
 };

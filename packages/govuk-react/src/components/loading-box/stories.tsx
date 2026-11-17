@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react';
 
 import * as React from 'react';
 
-import { H1, H2 } from '../../legacy/heading';
+import { Heading } from '../heading';
 import * as Input from '../input';
 import * as Button from '../button';
 import { Link } from '../link';
@@ -26,7 +26,7 @@ Default.args = {
     <PhaseBanner.Composite tag="Alpha">
       This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
     </PhaseBanner.Composite>,
-    <H2 mb={3}>Example</H2>,
+    <Heading size="l">Example</Heading>,
     <Input.Field id="email-address" name="email-address" label="Email address" />,
     <Button.Composite start>Continue</Button.Composite>,
   ],
@@ -46,7 +46,7 @@ PartialCover.decorators = [
 PartialCover.args = {
   loading: true,
   children: [
-    <H2 mb={3}>Example</H2>,
+    <Heading size="l">Example</Heading>,
     <Input.Field id="email-address" name="email-address" label="Email address" />,
     <Button.Composite start>Continue</Button.Composite>,
   ],
@@ -59,7 +59,7 @@ LoadingBoxLong.args = {
     <PhaseBanner.Composite tag="Alpha">
       This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
     </PhaseBanner.Composite>,
-    <H2 mb={3}>Example</H2>,
+    <Heading size="l">Example</Heading>,
     <Input.Field id="first-name" name="first-name" label="First name" />,
     <Input.Field id="last-name" name="last-name" label="Last name" />,
     <Input.Field id="email-address" name="email-address" label="Email address" />,
@@ -87,7 +87,66 @@ export const WithBoldText = Template.bind({});
 WithBoldText.args = {
   loading: true,
   children: [
-    <H1>Lorem ipsum dolor sit amet</H1>,
-    <H2>Consectetur adipisicing elit. Quia incidunt, earum molestiae omnis labore adipisci.</H2>,
+    <Heading size="xl" headingLevel={1}>
+      Lorem ipsum dolor sit amet
+    </Heading>,
+    <Heading size="l">Consectetur adipisicing elit. Quia incidunt, earum molestiae omnis labore adipisci.</Heading>,
   ],
+};
+
+export const Toggle: StoryFn<React.ComponentProps<typeof LoadingBox>> = (args) => {
+  const [loading, setLoading] = React.useState(false);
+  return (
+    <>
+      <Button.Root type="button" onClick={() => setLoading((value) => !value)}>
+        {loading ? 'Stop loading' : 'Start loading'}
+      </Button.Root>
+      <LoadingBox {...args} loading={loading}>
+        <Heading size="l">Example</Heading>
+        <Input.Field id="toggle-email-address" name="email-address" label="Email address" />
+      </LoadingBox>
+    </>
+  );
+};
+
+export const SubmittingAForm: StoryFn<React.ComponentProps<typeof LoadingBox>> = () => {
+  const [state, setState] = React.useState<'editing' | 'sending' | 'sent'>('editing');
+  const sending = React.useRef(false);
+  const confirmation = React.useRef<HTMLHeadingElement>(null);
+  React.useEffect(() => {
+    if (state === 'sent') confirmation.current?.focus();
+  }, [state]);
+  if (state === 'sent') {
+    return (
+      <Heading size="l" ref={confirmation} tabIndex={-1}>
+        Details sent
+      </Heading>
+    );
+  }
+  return (
+    <LoadingBox loading={state === 'sending'} statusText="Sending your details" inertWhileLoading>
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          // Ignore repeat submissions rather than disabling the button.
+          if (sending.current) return;
+          sending.current = true;
+          setState('sending');
+          // Keep the loading state for at least a couple of seconds.
+          setTimeout(() => setState('sent'), 2000);
+        }}
+      >
+        <Input.Field id="form-email-address" name="email-address" label="Email address" />
+        <Button.Root type="submit">Continue</Button.Root>
+      </form>
+    </LoadingBox>
+  );
+};
+SubmittingAForm.parameters = {
+  docs: {
+    description: {
+      story:
+        'Announces what’s happening, shows for at least 2 seconds, blocks interaction without disabling the button, ignores repeat submissions and moves focus to the result.',
+    },
+  },
 };

@@ -16,14 +16,11 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     title: 'There is a problem',
-    description: 'Optional description of the errors and how to correct them',
     children: (
       <>
-        <ErrorSummary.ListItemComposite href="#national-insurance-number">
-          Enter a National Insurance number
-        </ErrorSummary.ListItemComposite>
-        <ErrorSummary.ListItemComposite href="#description">
-          Enter a description of what you saw
+        <ErrorSummary.ListItemComposite href="#">Enter your full name</ErrorSummary.ListItemComposite>
+        <ErrorSummary.ListItemComposite href="#">
+          The date your passport was issued must be in the past
         </ErrorSummary.ListItemComposite>
       </>
     ),

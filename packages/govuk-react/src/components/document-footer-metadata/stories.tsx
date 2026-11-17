@@ -4,13 +4,21 @@ import * as React from 'react';
 
 import { Link } from '../link';
 
-import { DocumentFooterMetadata } from '.';
+import * as DocumentFooterMetadata from '.';
 
-const fromData = [<Link href="/government/organisations/ministry-of-defence">Ministry of Defence</Link>];
+const fromData = [
+  <Link key="mod" href="/government/organisations/ministry-of-defence">
+    Ministry of Defence
+  </Link>,
+];
 
 const partOfData = [
-  <Link href="/government/topics/energy">Energy</Link>,
-  <Link href="/government/topics/environment">Environment</Link>,
+  <Link key="energy" href="/government/topics/energy">
+    Energy
+  </Link>,
+  <Link key="environment" href="/government/topics/environment">
+    Environment
+  </Link>,
 ];
 
 const otherData = [
@@ -39,11 +47,11 @@ const otherData = [
 export default {
   title: 'Typography/Document Footer Metadata',
   id: 'document-footer-metadata',
-  component: DocumentFooterMetadata,
+  component: DocumentFooterMetadata.Composite,
 };
 
-const Template: StoryFn<React.ComponentProps<typeof DocumentFooterMetadata>> = (args) => (
-  <DocumentFooterMetadata {...args} />
+const Template: StoryFn<React.ComponentProps<typeof DocumentFooterMetadata.Composite>> = (args) => (
+  <DocumentFooterMetadata.Composite {...args} />
 );
 
 export const Default = Template.bind({});
@@ -61,4 +69,14 @@ export const DfmFromOtherDataExample = Template.bind({});
 DfmFromOtherDataExample.args = {
   from: fromData,
   other: otherData,
+};
+
+export const WithItems = Template.bind({});
+WithItems.args = {
+  children: (
+    <>
+      <DocumentFooterMetadata.ItemComposite term="From" definitions={fromData} />
+      <DocumentFooterMetadata.ItemComposite term="Published" definitions={['20 January 2012']} />
+    </>
+  ),
 };

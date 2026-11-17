@@ -311,3 +311,76 @@ govuk-react now exports `overrideClasses`, which returns govuk-frontend's overri
 | `setWidth="22%"` (other widths)         | `style={{ width: '22%' }}`                                         |
 | `numeric`                               | `numeric` (unchanged)                                              |
 | `mb` and other whitespace props         | `className={overrideClasses({ marginBottom: n })}`                 |
+
+## Pagination
+
+`Pagination` is now govuk-frontend-react's `Pagination`, a module of parts. `Pagination.Composite` renders the nav, previous and next links, and the list of pages from its `Pagination.ItemComposite` children. With no list, the previous and next links stack as a block, for navigating between related pages. `Root`, `Previous`, `Next`, `PreviousLink`, `NextLink`, `List`, `Item` and `ItemLink` are available for custom markup.
+
+| 0.x                                                           | 1.0                                                                                                                   |
+| ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `import Pagination from 'govuk-react/pagination'`             | `import * as Pagination from 'govuk-react/pagination'`                                                                |
+| `<Pagination>`                                                | `<Pagination.Composite>`                                                                                              |
+| `<Pagination.Anchor href="/prev" previousPage pageTitle="…">` | `previousHref="/prev"`, with `previousText` for the link text and `previousLabel` for the page title                  |
+| `<Pagination.Anchor href="/next" nextPage pageTitle="…">`     | `nextHref="/next"`, with `nextText` and `nextLabel`                                                                   |
+| No numbered pages                                             | `<Pagination.ItemComposite href="/page-2" number={2} current />` children, with `ellipsis` for gaps                   |
+| `<Pagination.Anchor as={RouterLink} to="/next" nextPage>`     | `<Pagination.NextLink asChild><RouterLink to="/next">…</RouterLink></Pagination.NextLink>` inside a `Pagination.Next` |
+| `mb` and other whitespace props                               | `className`                                                                                                           |
+
+## TopNav
+
+`TopNav` is removed. Use `Header` for the GOV.UK header and `ServiceNavigation` for your service name and navigation, as the Design System recommends. Their link parts take `asChild` for router links.
+
+| 0.x                                                    | 1.0                                                                                                                    |
+| ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| `<TopNav>`                                             | `<Header.Composite />` followed by `<ServiceNavigation.Composite>`                                                     |
+| `serviceTitle`                                         | `serviceName` and `serviceHref` on `ServiceNavigation.Composite`                                                       |
+| `<TopNav.NavLink href="/forms">Forms</TopNav.NavLink>` | `<ServiceNavigation.ItemComposite href="/forms">Forms</ServiceNavigation.ItemComposite>`                               |
+| `<TopNav.NavLink as={RouterLink} to="/forms">`         | `<ServiceNavigation.Link asChild><RouterLink to="/forms">Forms</RouterLink></ServiceNavigation.Link>` inside an `Item` |
+| `company`                                              | `productName` on `Header.Composite`, or `Header` parts                                                                 |
+| `search`                                               | Removed: place a search form in your page                                                                              |
+| `bgColor`, `color`                                     | Removed: the header uses govuk-frontend's styles                                                                       |
+
+## LoadingBox
+
+`LoadingBox` no longer uses styled-components or react-transition-group. Its styles are a small stylesheet that React hoists into the head, with your props passed in as CSS custom properties, so it works with server rendering and without a CSS-in-JS runtime.
+
+| 0.x                                                | 1.0                                                                                                                |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `import LoadingBox from 'govuk-react/loading-box'` | `import { LoadingBox } from 'govuk-react/loading-box'`                                                             |
+| `spinnerColor`, `backgroundColor` took hex colours | Any CSS colour. They default to govuk-frontend's text and page background colours                                  |
+| The overlay unmounted when `loading` was `false`   | The overlay stays in the DOM, hidden, so it can fade out. The box sets `aria-busy` while loading                   |
+| `title` (the spinner's text alternative)           | `statusText`, announced in a `role="status"` region while loading. Say what's happening                            |
+| The whole box had `aria-busy`                      | Only the content has `aria-busy`, so the status is still announced. `inertWhileLoading` blocks interaction with it |
+
+## RelatedItems
+
+`RelatedItems` is now a module of parts with no CSS-in-JS. `RelatedItems.Composite` renders the main heading (“Related content” by default), and each `RelatedItems.SectionComposite` renders a labelled navigation section with a heading and a list of `RelatedItems.Item`s. `Root`, `Heading`, `Section`, `SectionHeading` and `List` are available for custom markup. The blue top border comes from a small stylesheet that React hoists into the head.
+
+| 0.x                                                    | 1.0                                                                      |
+| ------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `import RelatedItems from 'govuk-react/related-items'` | `import * as RelatedItems from 'govuk-react/related-items'`              |
+| `<RelatedItems>` with your own headings and lists      | `<RelatedItems.Composite>`, or `<RelatedItems.Root>` for your own markup |
+| `<H3>Travel</H3><UnorderedList listStyleType="none">…` | `<RelatedItems.SectionComposite title="Travel"><RelatedItems.Item>…`     |
+| `mb` and other whitespace props                        | `className`                                                              |
+
+## DocumentFooterMetadata
+
+`DocumentFooterMetadata` is now a module of parts with no CSS-in-JS. It renders a description list (`dl`) with govuk-frontend classes. `DocumentFooterMetadata.Composite` keeps the `from`, `partOf` and `other` props, and also takes `ItemComposite` children. `Root`, `Term` and `Definition` are available for custom markup.
+
+| 0.x                                                                         | 1.0                                                                                                        |
+| --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `import DocumentFooterMetadata from 'govuk-react/document-footer-metadata'` | `import * as DocumentFooterMetadata from 'govuk-react/document-footer-metadata'`                           |
+| `<DocumentFooterMetadata from={…} partOf={…} other={…}>`                    | `<DocumentFooterMetadata.Composite from={…} partOf={…} other={…}>`                                         |
+| `other={[{ id, title: 'Published', content: '20 January 2012' }]}`          | The same, or `<DocumentFooterMetadata.ItemComposite term="Published" definitions={['20 January 2012']} />` |
+| `mb` and other whitespace props                                             | `className`                                                                                                |
+
+## SearchBox
+
+`SearchBox` is now a module of parts with no CSS-in-JS, based on GOV.UK’s search component. `SearchBox.Composite` renders a label, a `govuk-input` search input and a submit button with a search icon. Put it inside your own `form`. It takes `labelSize`, `labelVisuallyHidden`, `large` and `inverse`. `Root`, `Label`, `Wrapper`, `Input` and `Button` are available for custom markup. The layout and button styles come from a small stylesheet that React hoists into the head, using govuk-frontend's colour custom properties.
+
+| 0.x                                                              | 1.0                                                                     |
+| ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `import SearchBox from 'govuk-react/search-box'`                 | `import * as SearchBox from 'govuk-react/search-box'`                   |
+| `<SearchBox><SearchBox.Input /><SearchBox.Button /></SearchBox>` | `<SearchBox.Composite id="search" name="q" label="Search on GOV.UK" />` |
+| `placeholder` as the only label                                  | `label`, visible by default. A placeholder is not a label               |
+| `mb` and other whitespace props                                  | `className`                                                             |
