@@ -1,40 +1,43 @@
-import type { StoryFn } from '@storybook/react';
-
+import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
-import Paragraph from '../../legacy/paragraph';
-import { Details } from '.';
 
-export default {
+import * as Details from '.';
+import { Body } from '../body';
+
+const meta = {
   title: 'Typography/Details',
   id: 'details',
-  component: Details,
-};
+  component: Details.Composite,
+} satisfies Meta<typeof Details.Composite>;
 
-const summaryText = 'Help with nationality';
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+const summary = 'Help with nationality';
 
 const paragraphs = [
   'If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.',
   'We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.',
 ];
 
-const Template: StoryFn<React.ComponentProps<typeof Details>> = (args) => <Details {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  summary: summaryText,
-  children: paragraphs[0],
+export const Default: Story = {
+  args: { summary, children: paragraphs[0] },
 };
 
-export const SetAsOpen = Template.bind({});
-SetAsOpen.args = {
-  open: true,
-  summary: summaryText,
-  children: paragraphs[0],
+export const SetAsOpen: Story = {
+  args: { open: true, summary, children: paragraphs[0] },
 };
 
-export const WithParagraphContents = Template.bind({});
-WithParagraphContents.args = {
-  summary: summaryText,
-  open: true,
-  children: <Paragraph>{`${paragraphs[0]}\n\n${paragraphs[1]}`}</Paragraph>,
+export const WithParagraphContents: Story = {
+  args: {
+    open: true,
+    summary,
+    children: (
+      <>
+        <Body>{paragraphs[0]}</Body>
+        <Body>{paragraphs[1]}</Body>
+      </>
+    ),
+  },
 };
