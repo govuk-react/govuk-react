@@ -466,6 +466,9 @@ importers:
       '@govuk-react/icon-crown':
         specifier: 0.1.0
         version: 0.1.0(react@19.3.1)
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       govuk-colours:
         specifier: ^1.1.0
         version: 1.1.0
