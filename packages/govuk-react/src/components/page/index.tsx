@@ -5,7 +5,7 @@
  * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_width-container.scss
  */
 import * as React from 'react';
-import SkipLink from '../skip-link';
+import { SkipLink } from '../skip-link';
 import TopNav from '../top-nav';
 // import Footer from '../footer';
 
@@ -29,7 +29,7 @@ export const Page: PageType = ({
   container: Container = Page.WidthContainer,
 }: PageProps) => (
   <>
-    <SkipLink href={`#${id}`} />
+    <SkipLink href={`#${id}`}>Skip to main content</SkipLink>
     {header}
     <Container>
       {beforeChildren}

@@ -35,7 +35,7 @@ export { default as RelatedItems } from './components/related-items';
 export { default as SearchBox } from './components/search-box';
 export { SectionBreak } from './components/section-break';
 export * as Select from './components/select';
-export { default as SkipLink } from './components/skip-link';
+export { SkipLink } from './components/skip-link';
 export { default as Table } from './components/table';
 export { default as Tabs } from './components/tabs';
 export { Tag } from './components/tag';

@@ -197,6 +197,17 @@ The `focusable` prop is removed, as govuk-frontend 6 no longer has a focusable v
 
 The whitespace props (`mb` and so on) are removed. `BackLink` gains an `inverse` prop.
 
+## SkipLink
+
+`SkipLink` is now govuk-frontend-react's `SkipLink`. It still defaults to `href="#content"`, but no longer has default text, so pass the text as `children`. `Page` passes "Skip to main content".
+
+| 0.x                                            | 1.0                                                |
+| ---------------------------------------------- | -------------------------------------------------- |
+| `import SkipLink from 'govuk-react/skip-link'` | `import { SkipLink } from 'govuk-react/skip-link'` |
+| `<SkipLink />`                                 | `<SkipLink>Skip to main content</SkipLink>`        |
+
+The `as` prop is removed.
+
 ## Form controls
 
 The form components are now govuk-frontend-react's. Each control is a module of parts with a `Field` composite that renders the label or legend, hint and error message for you. The `input`/`meta` props (the old Redux Form and Final Form shape) are gone: pass `value`, `onChange`, `ref` and other DOM props directly, and pass the error text as `errorMessage`. The whitespace props (`mb` and so on) are removed.
