@@ -7,4 +7,4 @@ allowBuilds:
   esbuild: true
 linkWorkspacePackages: true
 minimumReleaseAgeExclude:
-  - govuk-frontend-react@1.0.0-alpha.2
+  - govuk-frontend-react@1.0.0-alpha.4
