@@ -1,62 +1,25 @@
-import type { StoryFn } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
+import * as React from 'react';
 
-import React, { Component } from 'react';
-
-import Paragraph from '../../legacy/paragraph';
-import Button from '../button';
-
+import { Body } from '../body';
 import { VisuallyHidden } from '.';
 
-export default {
+const meta = {
   title: 'Utility/Visually hidden',
   id: 'visually-hidden',
   component: VisuallyHidden,
-};
+} satisfies Meta<typeof VisuallyHidden>;
 
-export const Default: StoryFn = (args) => (
-  <>
-    <Paragraph>
-      Following this paragraph is some hidden content. If `focusable` is enabled then you should be able to tab to it.
-    </Paragraph>
-    <VisuallyHidden {...args}>Some hidden content</VisuallyHidden>
-  </>
-);
-Default.args = {
-  focusable: true,
-};
+export default meta;
 
-class Focusable extends Component<React.ComponentProps<typeof VisuallyHidden>> {
-  focusableRef;
+type Story = StoryObj<typeof meta>;
 
-  constructor(props) {
-    super(props);
-    // create a ref to store the focusable DOM element
-    this.focusableRef = React.createRef();
-  }
-
-  componentDidMount() {
-    this.focusableRef.current?.focus();
-  }
-
-  render() {
-    return <VisuallyHidden ref={this.focusableRef} focusable {...this.props} />;
-  }
-}
-
-export const FocussedFocusable: StoryFn = () => <Focusable>Focussed focusable VisuallyHidden element</Focusable>;
-FocussedFocusable.parameters = {
-  docs: {
-    storyDescription:
-      'This story focusses the VisuallHideen component when it mounts. This is for visual regression testing.',
-  },
-};
-
-export const FocussedFocusableAsAButton: StoryFn = () => (
-  <Focusable as={Button}>VisuallyHidden as Button (focusable)</Focusable>
-);
-FocussedFocusableAsAButton.parameters = {
-  docs: {
-    storyDescription:
-      'This story focusses the VisuallHideen component when it mounts. This is for visual regression testing.',
-  },
+export const Default: Story = {
+  args: { children: 'Some hidden content' },
+  render: (args) => (
+    <>
+      <Body>Following this paragraph is some content that is only available to screen readers.</Body>
+      <VisuallyHidden {...args} />
+    </>
+  ),
 };

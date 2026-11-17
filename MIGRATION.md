@@ -162,3 +162,13 @@ The whitespace props (`mb` and so on) are removed.
 | --------------------------------------- | ------------------------------------------------ |
 | `import Panel from 'govuk-react/panel'` | `import * as Panel from 'govuk-react/panel'`     |
 | `<Panel title="Application complete">`  | `<Panel.Composite title="Application complete">` |
+
+## VisuallyHidden
+
+`VisuallyHidden` is now govuk-frontend-react's `VisuallyHidden`, a `span` with the `govuk-visually-hidden` class.
+
+| 0.x                                                        | 1.0                                                            |
+| ---------------------------------------------------------- | -------------------------------------------------------------- |
+| `import VisuallyHidden from 'govuk-react/visually-hidden'` | `import { VisuallyHidden } from 'govuk-react/visually-hidden'` |
+
+The `focusable` prop is removed, as govuk-frontend 6 no longer has a focusable variant. Hidden content that appears on focus is confusing for sighted keyboard users; use a visible control or `SkipLink` instead. The `important` and `as` props are also removed.

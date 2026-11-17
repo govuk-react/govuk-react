@@ -44,7 +44,7 @@ export { default as Tabs } from './components/tabs';
 export { Tag } from './components/tag';
 export { default as TextArea } from './components/text-area';
 export { default as TopNav } from './components/top-nav';
-export { default as VisuallyHidden } from './components/visually-hidden';
+export { VisuallyHidden } from './components/visually-hidden';
 export * as WarningText from './components/warning-text';
 
 // Icons
