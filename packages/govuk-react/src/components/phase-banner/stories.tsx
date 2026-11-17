@@ -1,33 +1,29 @@
-import type { StoryFn } from '@storybook/react';
-
+import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 
+import * as PhaseBanner from '.';
 import Link from '../link';
 
-import { PhaseBanner } from '.';
-
-export default {
+const meta = {
   title: 'Typography/Phase banner',
   id: 'phase-banner',
-  component: PhaseBanner,
+  component: PhaseBanner.Composite,
+} satisfies Meta<typeof PhaseBanner.Composite>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+const text = (
+  <>
+    This part of GOV.UK is being rebuilt – <Link href="https://example.com">find out what that means</Link>
+  </>
+);
+
+export const Default: Story = {
+  args: { tag: 'Alpha', children: text },
 };
 
-const Template: StoryFn<React.ComponentProps<typeof PhaseBanner>> = (args) => <PhaseBanner {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  level: 'alpha',
-  children: [
-    'This part of GOV.UK is being rebuilt – ',
-    <Link href="https://example.com">find out what that means</Link>,
-  ],
-};
-
-export const BetaPhaseTag = Template.bind({});
-BetaPhaseTag.args = {
-  level: 'beta',
-  children: [
-    'This part of GOV.UK is being rebuilt – ',
-    <Link href="https://example.com">find out what that means</Link>,
-  ],
+export const BetaPhaseTag: Story = {
+  args: { tag: 'Beta', children: text },
 };
