@@ -14,6 +14,10 @@ describe('Exports', () => {
   );
 });
 
+// Function components, or objects such as styled components; module namespaces are neither
+const isComponent = (value: unknown) =>
+  typeof value === 'function' || (typeof value === 'object' && value !== null && '$$typeof' in value);
+
 // https://stackoverflow.com/questions/18112204/get-all-directories-within-directory-nodejs?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
 const dirs = (p) => fs.readdirSync(p).filter((f) => fs.statSync(path.join(p, f)).isDirectory());
 
@@ -34,7 +38,7 @@ describe('Components', () => {
       });
 
       // Multi-part components are namespaces of parts, so only single components have a name
-      it.skipIf('Root' in packageExports[pascal])(`is named ${pascal}`, () => {
+      it.skipIf(!isComponent(packageExports[pascal]))(`is named ${pascal}`, () => {
         expect(packageExports[pascal].displayName ?? packageExports[pascal].name).toBe(pascal);
       });
 

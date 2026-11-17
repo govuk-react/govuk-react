@@ -3,12 +3,11 @@ import type { StoryFn } from '@storybook/react';
 import * as React from 'react';
 
 import { H1, H2 } from '../../legacy/heading';
-import InputField from '../input-field';
-import Button from '../button';
+import * as Input from '../input';
+import * as Button from '../button';
 import { Link } from '../link';
-import Radio from '../radio';
+import * as Radios from '../radios';
 import * as PhaseBanner from '../phase-banner';
-import MultiChoice from '../multi-choice';
 
 import { LoadingBox } from '.';
 
@@ -28,8 +27,8 @@ Default.args = {
       This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
     </PhaseBanner.Composite>,
     <H2 mb={3}>Example</H2>,
-    <InputField mb={6}>Email address</InputField>,
-    <Button start>Continue</Button>,
+    <Input.Field id="email-address" name="email-address" label="Email address" />,
+    <Button.Composite start>Continue</Button.Composite>,
   ],
 };
 
@@ -46,7 +45,11 @@ PartialCover.decorators = [
 ];
 PartialCover.args = {
   loading: true,
-  children: [<H2 mb={3}>Example</H2>, <InputField mb={6}>Email address</InputField>, <Button start>Continue</Button>],
+  children: [
+    <H2 mb={3}>Example</H2>,
+    <Input.Field id="email-address" name="email-address" label="Email address" />,
+    <Button.Composite start>Continue</Button.Composite>,
+  ],
 };
 
 export const LoadingBoxLong = Template.bind({});
@@ -57,21 +60,20 @@ LoadingBoxLong.args = {
       This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
     </PhaseBanner.Composite>,
     <H2 mb={3}>Example</H2>,
-    <InputField mb={3}>First name</InputField>,
-    <InputField mb={3}>Last name</InputField>,
-    <InputField mb={3}>Email address</InputField>,
-    <MultiChoice label="Do you want us to contact you?" mb={3}>
-      <Radio name="group1" inline>
-        Yes
-      </Radio>
-      <Radio name="group1" inline>
-        No
-      </Radio>
-    </MultiChoice>,
-    <InputField hint="It’s on your National Insurance card" mb={3}>
-      National Insurance number
-    </InputField>,
-    <Button start>Continue</Button>,
+    <Input.Field id="first-name" name="first-name" label="First name" />,
+    <Input.Field id="last-name" name="last-name" label="Last name" />,
+    <Input.Field id="email-address" name="email-address" label="Email address" />,
+    <Radios.Field idPrefix="contact" legend="Do you want us to contact you?" inline>
+      <Radios.ItemComposite id="contact" name="contact" value="yes" label="Yes" />
+      <Radios.ItemComposite id="contact-2" name="contact" value="no" label="No" />
+    </Radios.Field>,
+    <Input.Field
+      id="national-insurance-number"
+      name="national-insurance-number"
+      label="National Insurance number"
+      hint="It’s on your National Insurance card"
+    />,
+    <Button.Composite start>Continue</Button.Composite>,
   ],
 };
 
