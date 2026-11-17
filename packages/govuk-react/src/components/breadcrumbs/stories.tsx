@@ -1,19 +1,30 @@
-import type { StoryFn } from '@storybook/react';
-
+import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 
-import { Breadcrumbs } from '.';
+import * as Breadcrumbs from '.';
 
-export default {
+const meta = {
   title: 'Navigation/Breadcrumbs',
   id: 'breadcrumbs',
-  component: Breadcrumbs,
+  component: Breadcrumbs.Composite,
+} satisfies Meta<typeof Breadcrumbs.Composite>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    children: (
+      <>
+        <Breadcrumbs.ItemComposite href="/section">Section</Breadcrumbs.ItemComposite>
+        <Breadcrumbs.ItemComposite href="/section/sub-section">Sub-section</Breadcrumbs.ItemComposite>
+        <Breadcrumbs.ItemComposite>Current page</Breadcrumbs.ItemComposite>
+      </>
+    ),
+  },
 };
 
-export const Default: StoryFn = (args) => (
-  <Breadcrumbs {...args}>
-    <Breadcrumbs.Link href="/section">Section</Breadcrumbs.Link>
-    <Breadcrumbs.Link href="/section/sub-section">Sub-section</Breadcrumbs.Link>
-    Current page
-  </Breadcrumbs>
-);
+export const CollapseOnMobile: Story = {
+  args: { ...Default.args, collapseOnMobile: true },
+};

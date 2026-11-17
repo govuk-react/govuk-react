@@ -1,7 +1,7 @@
 // Components
 export { BackLink } from './components/back-link';
 export { Body } from './components/body';
-export { default as Breadcrumbs } from './components/breadcrumbs';
+export * as Breadcrumbs from './components/breadcrumbs';
 export * as Button from './components/button';
 export { Caption } from './components/caption';
 export * as Checkboxes from './components/checkboxes';

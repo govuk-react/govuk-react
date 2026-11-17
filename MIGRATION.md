@@ -259,3 +259,15 @@ The layout components are now govuk-frontend-react's. The whitespace props (`mb`
 `GridColumn` needs a `width`, and custom column widths (`setWidth="25%"`) are removed. `Footer.Composite` shows the crown, the Open Government Licence and "© Crown copyright" by default. The old footer showed no copyright unless given one; `copyright` is now the text to show, and its `link` and `image` are removed.
 
 `Page` keeps `header`, `footer`, `beforeChildren` and `id`, and gains `skipLinkText`. It wraps `header` and `footer` in `<header>` and `<footer>` landmarks, as govuk-frontend's template does. It no longer defaults the header to `TopNav`, and the `main` and `container` overrides and the `Page.Main` and `Page.WidthContainer` properties are removed: for a custom layout, compose `SkipLink`, `WidthContainer` and `MainWrapper` yourself. The main wrapper's id now defaults to `main-content`, matching govuk-frontend.
+
+## Breadcrumbs
+
+`Breadcrumbs` is now govuk-frontend-react's `Breadcrumbs`, a module of parts. `Breadcrumbs.Composite` renders the nav and list, and each `Breadcrumbs.ItemComposite` renders a link, or the current page when it has no `href`. `Root`, `List`, `Item` and `Link` are available for custom markup. The composite also takes `collapseOnMobile` and `inverse`.
+
+| 0.x                                                 | 1.0                                                                   |
+| --------------------------------------------------- | --------------------------------------------------------------------- |
+| `import Breadcrumbs from 'govuk-react/breadcrumbs'` | `import * as Breadcrumbs from 'govuk-react/breadcrumbs'`              |
+| `<Breadcrumbs>`                                     | `<Breadcrumbs.Composite>`                                             |
+| `<Breadcrumbs.Link href="/section">`                | `<Breadcrumbs.ItemComposite href="/section">`                         |
+| Plain text child for the current page               | `<Breadcrumbs.ItemComposite>Current page</Breadcrumbs.ItemComposite>` |
+| `mb` and other whitespace props                     | `className`                                                           |
