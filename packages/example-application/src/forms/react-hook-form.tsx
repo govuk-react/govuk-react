@@ -71,14 +71,13 @@ const ReactHookForm: React.FC = () => {
               <Link to="/forms">Home</Link>
             </GovUK.BackLink>
             {!!errorsToShow?.length && (
-              <GovUK.ErrorSummary
-                heading="Error summary"
-                description="Please address the following issues"
-                errors={errorsToShow.map((key) => ({
-                  targetName: key,
-                  text: errors[key].message,
-                }))}
-              />
+              <GovUK.ErrorSummary.Composite title="Error summary" description="Please address the following issues">
+                {errorsToShow.map((key) => (
+                  <GovUK.ErrorSummary.ListItemComposite key={key} href={`#${key}`}>
+                    {errors[key].message}
+                  </GovUK.ErrorSummary.ListItemComposite>
+                ))}
+              </GovUK.ErrorSummary.Composite>
             )}
             <GovUK.Fieldset.Composite legend="About you" legendSize="m">
               <GovUK.Input.Field

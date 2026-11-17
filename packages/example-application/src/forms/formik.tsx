@@ -78,14 +78,16 @@ const FinalForm: React.FC = () => {
                     <Link to="/forms">Home</Link>
                   </GovUK.BackLink>
                   {!!errorsToShow?.length && (
-                    <GovUK.ErrorSummary
-                      heading="Error summary"
+                    <GovUK.ErrorSummary.Composite
+                      title="Error summary"
                       description="Please address the following issues"
-                      errors={errorsToShow.map((key) => ({
-                        targetName: key,
-                        text: Array.isArray(errors[key]) ? errors[key][0] : errors[key],
-                      }))}
-                    />
+                    >
+                      {errorsToShow.map((key) => (
+                        <GovUK.ErrorSummary.ListItemComposite key={key} href={`#${key}`}>
+                          {Array.isArray(errors[key]) ? errors[key][0] : errors[key]}
+                        </GovUK.ErrorSummary.ListItemComposite>
+                      ))}
+                    </GovUK.ErrorSummary.Composite>
                   )}
                   <GovUK.Fieldset.Composite legend="About you" legendSize="m">
                     <Field name="firstName" validate={validateFirstName}>

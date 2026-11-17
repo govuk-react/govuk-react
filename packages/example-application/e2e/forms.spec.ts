@@ -33,6 +33,11 @@ async function expectAllErrors(page: Page) {
   for (const message of Object.values(errors)) {
     await expect(summary.getByText(message)).toBeVisible();
   }
+  for (const href of await summary
+    .getByRole('link')
+    .evaluateAll((links) => links.map((link) => link.getAttribute('href')))) {
+    await expect(page.locator(href ?? 'missing-href'), `${href} links to a field`).toHaveCount(1);
+  }
   const describedBy = (label: string, message: string) =>
     expect(page.getByLabel(label, { exact: true })).toHaveAccessibleDescription(new RegExp(message));
   const group = (name: string, message: string) =>
