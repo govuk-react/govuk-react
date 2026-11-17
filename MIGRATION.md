@@ -349,3 +349,25 @@ govuk-react now exports `overrideClasses`, which returns govuk-frontend's overri
 | `import LoadingBox from 'govuk-react/loading-box'` | `import { LoadingBox } from 'govuk-react/loading-box'`                                           |
 | `spinnerColor`, `backgroundColor` took hex colours | Any CSS colour. They default to govuk-frontend's text and page background colours                |
 | The overlay unmounted when `loading` was `false`   | The overlay stays in the DOM, hidden, so it can fade out. The box sets `aria-busy` while loading |
+
+## RelatedItems
+
+`RelatedItems` is now a module of parts with no CSS-in-JS. `RelatedItems.Composite` renders the main heading (“Related content” by default), and each `RelatedItems.SectionComposite` renders a labelled navigation section with a heading and a list of `RelatedItems.Item`s. `Root`, `Heading`, `Section`, `SectionHeading` and `List` are available for custom markup. The blue top border comes from a small stylesheet that React hoists into the head.
+
+| 0.x                                                    | 1.0                                                                      |
+| ------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `import RelatedItems from 'govuk-react/related-items'` | `import * as RelatedItems from 'govuk-react/related-items'`              |
+| `<RelatedItems>` with your own headings and lists      | `<RelatedItems.Composite>`, or `<RelatedItems.Root>` for your own markup |
+| `<H3>Travel</H3><UnorderedList listStyleType="none">…` | `<RelatedItems.SectionComposite title="Travel"><RelatedItems.Item>…`     |
+| `mb` and other whitespace props                        | `className`                                                              |
+
+## DocumentFooterMetadata
+
+`DocumentFooterMetadata` is now a module of parts with no CSS-in-JS. It renders a description list (`dl`) with govuk-frontend classes. `DocumentFooterMetadata.Composite` keeps the `from`, `partOf` and `other` props, and also takes `ItemComposite` children. `Root`, `Term` and `Definition` are available for custom markup.
+
+| 0.x                                                                         | 1.0                                                                                                        |
+| --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `import DocumentFooterMetadata from 'govuk-react/document-footer-metadata'` | `import * as DocumentFooterMetadata from 'govuk-react/document-footer-metadata'`                           |
+| `<DocumentFooterMetadata from={…} partOf={…} other={…}>`                    | `<DocumentFooterMetadata.Composite from={…} partOf={…} other={…}>`                                         |
+| `other={[{ id, title: 'Published', content: '20 January 2012' }]}`          | The same, or `<DocumentFooterMetadata.ItemComposite term="Published" definitions={['20 January 2012']} />` |
+| `mb` and other whitespace props                                             | `className`                                                                                                |
