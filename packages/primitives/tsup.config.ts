@@ -7,6 +7,8 @@ export default defineConfig({
     'tabs-element': 'src/tabs/element.ts',
     modal: 'src/modal/index.tsx',
     'modal-element': 'src/modal/element.ts',
+    'password-input': 'src/password-input/index.tsx',
+    'password-input-element': 'src/password-input/element.ts',
   },
   format: ['esm'],
   dts: true,

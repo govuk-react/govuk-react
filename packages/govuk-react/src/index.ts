@@ -33,6 +33,7 @@ export { MainWrapper } from './components/main-wrapper';
 export * as NotificationBanner from './components/notification-banner';
 export { Page } from './components/page';
 export * as Modal from './components/modal';
+export * as PasswordInput from './components/password-input';
 export * as Pagination from './components/pagination';
 export * as Panel from './components/panel';
 export * as PhaseBanner from './components/phase-banner';
