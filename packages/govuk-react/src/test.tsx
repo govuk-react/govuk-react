@@ -33,7 +33,8 @@ describe('Components', () => {
         expect(!!packageExports[pascal]).toBe(true);
       });
 
-      it(`is named ${pascal}`, () => {
+      // Multi-part components are namespaces of parts, so only single components have a name
+      it.skipIf('Root' in packageExports[pascal])(`is named ${pascal}`, () => {
         expect(packageExports[pascal].displayName ?? packageExports[pascal].name).toBe(pascal);
       });
 

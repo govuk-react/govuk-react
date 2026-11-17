@@ -45,7 +45,7 @@ export { default as Tag } from './components/tag';
 export { default as TextArea } from './components/text-area';
 export { default as TopNav } from './components/top-nav';
 export { default as VisuallyHidden } from './components/visually-hidden';
-export { default as WarningText } from './components/warning-text';
+export * as WarningText from './components/warning-text';
 
 // Icons
 export { Search as SearchIcon, ArrowLeft, Spinner, ButtonArrow } from './icons';
