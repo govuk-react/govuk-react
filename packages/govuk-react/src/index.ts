@@ -6,7 +6,7 @@ export { default as Button } from './components/button';
 export { Caption } from './components/caption';
 export { default as Checkbox } from './components/checkbox';
 export { default as DateField } from './components/date-field';
-export { default as Details } from './components/details';
+export * as Details from './components/details';
 export { default as DocumentFooterMetadata } from './components/document-footer-metadata';
 export { default as ErrorSummary } from './components/error-summary';
 export { default as ErrorText } from './components/error-text';

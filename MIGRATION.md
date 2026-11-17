@@ -142,3 +142,14 @@ govuk-frontend's tags are no longer uppercase, and the default is a light blue t
 | `<PhaseBanner level="alpha">`                        | `<PhaseBanner.Composite tag="Alpha">`                     |
 
 The whitespace props (`mb` and so on) are removed.
+
+## Details
+
+`Details` is now govuk-frontend-react's `Details`, a module of parts. `Details.Composite` renders the whole component, and `Root`, `Summary`, `SummaryText` and `Text` are available for custom markup.
+
+| 0.x                                         | 1.0                                              |
+| ------------------------------------------- | ------------------------------------------------ |
+| `import Details from 'govuk-react/details'` | `import * as Details from 'govuk-react/details'` |
+| `<Details summary="Help">`                  | `<Details.Composite summary="Help">`             |
+
+The whitespace props (`mb` and so on) are removed.
