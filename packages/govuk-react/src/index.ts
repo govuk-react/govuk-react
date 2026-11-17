@@ -32,7 +32,7 @@ export { default as LoadingBox } from './components/loading-box';
 export { MainWrapper } from './components/main-wrapper';
 export * as NotificationBanner from './components/notification-banner';
 export { Page } from './components/page';
-export { default as Pagination } from './components/pagination';
+export * as Pagination from './components/pagination';
 export * as Panel from './components/panel';
 export * as PhaseBanner from './components/phase-banner';
 export * as Radios from './components/radios';

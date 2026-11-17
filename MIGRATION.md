@@ -311,3 +311,17 @@ govuk-react now exports `overrideClasses`, which returns govuk-frontend's overri
 | `setWidth="22%"` (other widths)         | `style={{ width: '22%' }}`                                         |
 | `numeric`                               | `numeric` (unchanged)                                              |
 | `mb` and other whitespace props         | `className={overrideClasses({ marginBottom: n })}`                 |
+
+## Pagination
+
+`Pagination` is now govuk-frontend-react's `Pagination`, a module of parts. `Pagination.Composite` renders the nav, previous and next links, and the list of pages from its `Pagination.ItemComposite` children. With no list, the previous and next links stack as a block, for navigating between related pages. `Root`, `Previous`, `Next`, `PreviousLink`, `NextLink`, `List`, `Item` and `ItemLink` are available for custom markup.
+
+| 0.x                                                           | 1.0                                                                                                                   |
+| ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `import Pagination from 'govuk-react/pagination'`             | `import * as Pagination from 'govuk-react/pagination'`                                                                |
+| `<Pagination>`                                                | `<Pagination.Composite>`                                                                                              |
+| `<Pagination.Anchor href="/prev" previousPage pageTitle="…">` | `previousHref="/prev"`, with `previousText` for the link text and `previousLabel` for the page title                  |
+| `<Pagination.Anchor href="/next" nextPage pageTitle="…">`     | `nextHref="/next"`, with `nextText` and `nextLabel`                                                                   |
+| No numbered pages                                             | `<Pagination.ItemComposite href="/page-2" number={2} current />` children, with `ellipsis` for gaps                   |
+| `<Pagination.Anchor as={RouterLink} to="/next" nextPage>`     | `<Pagination.NextLink asChild><RouterLink to="/next">…</RouterLink></Pagination.NextLink>` inside a `Pagination.Next` |
+| `mb` and other whitespace props                               | `className`                                                                                                           |
