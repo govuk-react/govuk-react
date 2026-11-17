@@ -26,7 +26,7 @@
   "dependencies": {
     "@govuk-react/icon-crown": "0.1.0",
     "govuk-colours": "^1.1.0",
-    "govuk-frontend-react": "1.0.0-alpha.1",
+    "govuk-frontend-react": "1.0.0-alpha.2",
     "hex-rgb": "^4.0.0",
     "multi-input-input": "0.0.3",
     "polished": "^4.3.1",
