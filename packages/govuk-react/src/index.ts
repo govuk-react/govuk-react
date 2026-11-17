@@ -31,7 +31,7 @@ export { default as Main } from './components/main';
 export { default as MultiChoice } from './components/multi-choice';
 export { default as Page } from './components/page';
 export { default as Pagination } from './components/pagination';
-export { default as Panel } from './components/panel';
+export * as Panel from './components/panel';
 export * as PhaseBanner from './components/phase-banner';
 export { default as Radio } from './components/radio';
 export { default as RelatedItems } from './components/related-items';

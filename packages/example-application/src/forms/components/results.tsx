@@ -30,7 +30,7 @@ const Results: React.FC<ResultsProps> = ({
       <GovUK.BackLink as={Link} to={backLink} onClick={onBackClick}>
         Back
       </GovUK.BackLink>
-      <GovUK.Panel title="Application complete">Reference: XBR1N21R3</GovUK.Panel>
+      <GovUK.Panel.Composite title="Application complete">Reference: XBR1N21R3</GovUK.Panel.Composite>
       <GovUK.Body size="l">
         Enim pariatur pariatur commodo incididunt ad nulla ex eu sunt ut ex id veniam veniam.
       </GovUK.Body>
