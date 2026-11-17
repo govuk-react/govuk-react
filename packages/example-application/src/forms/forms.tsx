@@ -24,28 +24,28 @@ const Forms: React.FC = () => (
           <GovUK.Body>Which form example would you like to run?</GovUK.Body>
           <GovUK.List variant="bullet">
             <li>
-              <GovUK.Link as={Link} to="/forms/form">
-                Basic
+              <GovUK.Link asChild>
+                <Link to="/forms/form">Basic</Link>
               </GovUK.Link>
             </li>
             <li>
-              <GovUK.Link as={Link} to="/forms/final-form">
-                Final Form
+              <GovUK.Link asChild>
+                <Link to="/forms/final-form">Final Form</Link>
               </GovUK.Link>
             </li>
             <li>
-              <GovUK.Link as={Link} to="/forms/formik">
-                Formik
+              <GovUK.Link asChild>
+                <Link to="/forms/formik">Formik</Link>
               </GovUK.Link>
             </li>
             <li>
-              <GovUK.Link as={Link} to="/forms/react-hook-form">
-                React Hook Form
+              <GovUK.Link asChild>
+                <Link to="/forms/react-hook-form">React Hook Form</Link>
               </GovUK.Link>
             </li>
             <li>
-              <GovUK.Link as={Link} to="/forms/react-jsonschema-form">
-                React JSON Schema Form
+              <GovUK.Link asChild>
+                <Link to="/forms/react-jsonschema-form">React JSON Schema Form</Link>
               </GovUK.Link>
             </li>
           </GovUK.List>

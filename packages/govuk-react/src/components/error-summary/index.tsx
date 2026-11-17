@@ -12,7 +12,7 @@ import { TEXT_COLOUR, ERROR_COLOUR, FOCUS_COLOUR } from 'govuk-colours';
 import { H2 } from '../../legacy/heading';
 import Paragraph from '../../legacy/paragraph';
 import UnorderedList from '../../legacy/unordered-list';
-import Link from '../link';
+import Link from '../../legacy/link';
 import ListItem from '../../legacy/list-item';
 
 import {

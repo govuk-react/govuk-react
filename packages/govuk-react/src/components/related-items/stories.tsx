@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import { H3 } from '../../legacy/heading';
 import UnorderedList from '../../legacy/unordered-list';
-import Link from '../link';
+import { Link } from '../link';
 import ListItem from '../../legacy/list-item';
 
 import { RelatedItems } from '.';

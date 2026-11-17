@@ -172,3 +172,16 @@ The whitespace props (`mb` and so on) are removed.
 | `import VisuallyHidden from 'govuk-react/visually-hidden'` | `import { VisuallyHidden } from 'govuk-react/visually-hidden'` |
 
 The `focusable` prop is removed, as govuk-frontend 6 no longer has a focusable variant. Hidden content that appears on focus is confusing for sighted keyboard users; use a visible control or `SkipLink` instead. The `important` and `as` props are also removed.
+
+## Link
+
+`Link` is now govuk-frontend-react's `Link`, an `a` with the `govuk-link` class.
+
+| 0.x                                            | 1.0                                                             |
+| ---------------------------------------------- | --------------------------------------------------------------- |
+| `import Link from 'govuk-react/link'`          | `import { Link } from 'govuk-react/link'`                       |
+| `<Link muted>`                                 | `<Link variant="muted">`                                        |
+| `<Link textColour>`                            | `<Link variant="text-colour">`                                  |
+| `<Link as={RouterLink} to="/page">Page</Link>` | `<Link asChild><RouterLink to="/page">Page</RouterLink></Link>` |
+
+`noVisitedState` is unchanged. `Link` also gains `variant="inverse"` and `noUnderline`.
