@@ -22,33 +22,33 @@ const Forms: React.FC = () => (
         <>
           <GovUK.Heading size="l">Forms</GovUK.Heading>
           <GovUK.Body>Which form example would you like to run?</GovUK.Body>
-          <GovUK.UnorderedList>
-            <GovUK.ListItem>
+          <GovUK.List variant="bullet">
+            <li>
               <GovUK.Link as={Link} to="/forms/form">
                 Basic
               </GovUK.Link>
-            </GovUK.ListItem>
-            <GovUK.ListItem>
+            </li>
+            <li>
               <GovUK.Link as={Link} to="/forms/final-form">
                 Final Form
               </GovUK.Link>
-            </GovUK.ListItem>
-            <GovUK.ListItem>
+            </li>
+            <li>
               <GovUK.Link as={Link} to="/forms/formik">
                 Formik
               </GovUK.Link>
-            </GovUK.ListItem>
-            <GovUK.ListItem>
+            </li>
+            <li>
               <GovUK.Link as={Link} to="/forms/react-hook-form">
                 React Hook Form
               </GovUK.Link>
-            </GovUK.ListItem>
-            <GovUK.ListItem>
+            </li>
+            <li>
               <GovUK.Link as={Link} to="/forms/react-jsonschema-form">
                 React JSON Schema Form
               </GovUK.Link>
-            </GovUK.ListItem>
-          </GovUK.UnorderedList>
+            </li>
+          </GovUK.List>
         </>
       }
     />

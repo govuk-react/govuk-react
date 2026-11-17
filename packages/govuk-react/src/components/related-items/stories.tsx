@@ -3,9 +3,9 @@ import type { StoryFn } from '@storybook/react';
 import * as React from 'react';
 
 import { H3 } from '../../legacy/heading';
-import UnorderedList from '../unordered-list';
+import UnorderedList from '../../legacy/unordered-list';
 import Link from '../link';
-import ListItem from '../list-item';
+import ListItem from '../../legacy/list-item';
 
 import { RelatedItems } from '.';
 
