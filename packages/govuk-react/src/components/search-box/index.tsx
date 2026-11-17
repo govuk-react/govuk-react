@@ -3,24 +3,42 @@ import type { ComponentProps, ReactNode } from 'react';
 import { clsx } from 'clsx';
 
 const name = 'govuk-react-search-box';
+const brand = 'var(--govuk-brand-colour,#1d70b8)';
 
-/** Styles govuk-frontend has no class for, hoisted and deduplicated by React. */
+/** Styles govuk-frontend has no class for, hoisted and deduplicated by React. Based on GOV.UK’s search component. */
 export const searchBoxCss = `
-.${name}{display:flex}
-.${name}__input{margin:0;border-right-width:0}
+.${name}__wrapper{display:flex;background-color:#fff}
+.${name}__input{margin:0;-webkit-appearance:none;appearance:none}
 .${name}__input:focus{z-index:1}
-.${name}__button{position:relative;flex:0 0 auto;width:2.5rem;height:2.5rem;margin:0;padding:0;border:0;border-radius:0;background-color:var(--govuk-brand-colour,#1d70b8);color:var(--govuk-inverse-text-colour,#fff);cursor:pointer}
-.${name}__button:hover{background-color:color-mix(in srgb,var(--govuk-brand-colour,#1d70b8),#000 20%)}
-.${name}__button:focus{outline:3px solid transparent;background-color:var(--govuk-focus-colour,#fd0);color:var(--govuk-focus-text-colour,#0b0c0c);box-shadow:inset 0 0 0 4px var(--govuk-focus-text-colour,#0b0c0c)}
-.${name}__icon{display:block;width:1.25rem;height:1.25rem;margin:auto;fill:currentcolor}
+.${name}__button{position:relative;flex:0 0 auto;width:2.5rem;height:2.5rem;margin:0;padding:0;border:0;border-radius:0;outline:2px solid transparent;outline-offset:0;cursor:pointer;background-color:${brand};color:#fff}
+.${name}__button:hover{background-color:color-mix(in srgb,${brand} 75%,#000)}
+.${name}__button:focus{z-index:1;outline:3px solid var(--govuk-focus-colour,#fd0);box-shadow:inset 0 0 0 4px #0b0c0c}
+.${name}__icon{position:absolute;inset:0;width:100%;height:100%;transform:scale(.5);pointer-events:none}
+.${name}:not(.${name}--on-govuk-blue) .${name}__input{border-right-width:0}
+.${name}:not(.${name}--on-govuk-blue) .${name}__input:focus{border-right-width:2px}
+.${name}--on-govuk-blue .${name}__label{color:#fff}
+.${name}--on-govuk-blue .${name}__input{border-width:0}
+.${name}--on-govuk-blue .${name}__button{background-color:color-mix(in srgb,${brand} 20%,#fff);color:${brand}}
+.${name}--on-govuk-blue .${name}__button:hover{background-color:color-mix(in srgb,${brand} 5%,#fff)}
+.${name}--large .${name}__input{height:3.125rem}
+.${name}--large .${name}__button{width:3.125rem;height:3.125rem}
+.${name}--large .${name}__icon{transform:scale(.4)}
 `;
 
-export type RootProps = ComponentProps<'div'>;
+export type RootProps = ComponentProps<'div'> & {
+  /** For use on a GOV.UK blue background, such as a homepage banner. */
+  onGovukBlue?: boolean;
+  /** A larger input and button. */
+  large?: boolean;
+};
 
-/** Lays out a search input and its submit button side by side. */
-export function Root({ className, children, ...props }: RootProps) {
+/** Wraps the search label, input and submit button. */
+export function Root({ onGovukBlue, large, className, children, ...props }: RootProps) {
   return (
-    <div className={clsx(name, className)} {...props}>
+    <div
+      className={clsx(name, onGovukBlue && `${name}--on-govuk-blue`, large && `${name}--large`, className)}
+      {...props}
+    >
       <style href={name} precedence="default">
         {searchBoxCss}
       </style>
@@ -29,21 +47,41 @@ export function Root({ className, children, ...props }: RootProps) {
   );
 }
 
-export type LabelProps = ComponentProps<'label'>;
+export type LabelProps = ComponentProps<'label'> & {
+  /** The label size, from govuk-frontend’s label sizes. */
+  size?: 's' | 'm' | 'l' | 'xl';
+  /** Hide the label visually. It’s still read by screen readers. */
+  visuallyHidden?: boolean;
+};
 
-/** The label for the search input. Visually hidden. */
-export function Label({ className, children, ...props }: LabelProps) {
+export function Label({ size, visuallyHidden, className, children, ...props }: LabelProps) {
   return (
-    <label className={clsx('govuk-visually-hidden', className)} {...props}>
+    <label
+      className={clsx(
+        visuallyHidden ? 'govuk-visually-hidden' : ['govuk-label', size && `govuk-label--${size}`],
+        `${name}__label`,
+        className
+      )}
+      {...props}
+    >
       {children}
     </label>
   );
 }
 
+export type WrapperProps = ComponentProps<'div'>;
+
+/** Lays out the input and submit button side by side. */
+export function Wrapper({ className, ...props }: WrapperProps) {
+  return <div className={clsx(`${name}__wrapper`, className)} {...props} />;
+}
+
 export type InputProps = ComponentProps<'input'>;
 
 export function Input({ className, type = 'search', ...props }: InputProps) {
-  return <input type={type} className={clsx('govuk-input', `${name}__input`, className)} {...props} />;
+  return (
+    <input type={type} enterKeyHint="search" className={clsx('govuk-input', `${name}__input`, className)} {...props} />
+  );
 }
 
 export type ButtonProps = ComponentProps<'button'>;
@@ -52,32 +90,61 @@ export type ButtonProps = ComponentProps<'button'>;
 export function Button({ className, children = 'Search', ...props }: ButtonProps) {
   return (
     <button type="submit" className={clsx(`${name}__button`, className)} {...props}>
-      <svg className={`${name}__icon`} viewBox="0 0 57 57" aria-hidden="true" focusable="false">
-        <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23 s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92 c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17 s-17-7.626-17-17S14.61,6,23.984,6z" />
+      <svg
+        className={`${name}__icon`}
+        width="27"
+        height="27"
+        viewBox="0 0 27 27"
+        fill="none"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <circle cx="12.0161" cy="11.0161" r="8.51613" stroke="currentColor" strokeWidth="3" />
+        <line x1="17.8668" y1="17.3587" x2="26.4475" y2="25.9393" stroke="currentColor" strokeWidth="3" />
       </svg>
       <span className="govuk-visually-hidden">{children}</span>
     </button>
   );
 }
 
-export type CompositeProps = Omit<InputProps, 'id'> & {
-  /** The input’s id, which the label points to. */
-  id: string;
-  /** The visually hidden label. */
-  label?: ReactNode;
-  /** The submit button’s visually hidden text. */
-  buttonText?: ReactNode;
-};
+export type CompositeProps = Omit<InputProps, 'id'> &
+  Pick<RootProps, 'onGovukBlue' | 'large'> & {
+    /** The input’s id, which the label points to. */
+    id: string;
+    /** The label text. */
+    label?: ReactNode;
+    /** The label size, from govuk-frontend’s label sizes. */
+    labelSize?: LabelProps['size'];
+    /** Hide the label visually. It’s still read by screen readers. */
+    labelVisuallyHidden?: boolean;
+    /** The submit button’s visually hidden text. */
+    buttonText?: ReactNode;
+  };
 
 /**
- * A search input with a visually hidden label and an attached submit button. Put it in your own `form`. Other props go on the input.
+ * A search input with a label and an attached submit button, based on GOV.UK’s search component. Put it in your own `form`. Other props go on the input.
+ *
+ * @see https://components.publishing.service.gov.uk/component-guide/search
  */
-export function Composite({ id, label = 'Search', buttonText, ...props }: CompositeProps) {
+export function Composite({
+  id,
+  label = 'Search on GOV.UK',
+  labelSize,
+  labelVisuallyHidden,
+  buttonText,
+  onGovukBlue,
+  large,
+  ...props
+}: CompositeProps) {
   return (
-    <Root>
-      <Label htmlFor={id}>{label}</Label>
-      <Input id={id} {...props} />
-      <Button>{buttonText}</Button>
+    <Root onGovukBlue={onGovukBlue} large={large}>
+      <Label htmlFor={id} size={labelSize} visuallyHidden={labelVisuallyHidden}>
+        {label}
+      </Label>
+      <Wrapper>
+        <Input id={id} {...props} />
+        <Button>{buttonText}</Button>
+      </Wrapper>
     </Root>
   );
 }
