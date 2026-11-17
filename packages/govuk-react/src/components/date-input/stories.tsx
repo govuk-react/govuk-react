@@ -11,7 +11,7 @@ const meta = {
     id: 'passport-issued',
     namePrefix: 'passport-issued',
     legend: 'When was your passport issued?',
-    hint: 'For example, 12 11 2007',
+    hint: 'For example, 27 3 2007',
   },
 } satisfies Meta<typeof DateInput.Field>;
 
@@ -22,7 +22,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 export const DateWithDefaultValues: Story = {
-  args: { values: { day: '12', month: '11', year: '2007' } },
+  args: { values: { day: '27', month: '3', year: '2007' } },
 };
 
 export const DateWithHintTextError: Story = {
