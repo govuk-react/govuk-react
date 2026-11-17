@@ -3,6 +3,8 @@ import { defineConfig } from 'tsup';
 export default defineConfig({
   entry: {
     index: 'src/index.ts',
+    disclosure: 'src/disclosure/index.tsx',
+    'disclosure-element': 'src/disclosure/element.ts',
     tabs: 'src/tabs/index.tsx',
     'tabs-element': 'src/tabs/element.ts',
     modal: 'src/modal/index.tsx',

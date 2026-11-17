@@ -55,6 +55,33 @@ export const WithParts: Story = {
   ),
 };
 
+/** Open from the start, for visual regression. Left out of the docs page, where it would cover everything else. */
+export const Open: Story = {
+  args: { ...Default.args, open: true },
+  tags: ['!autodocs'],
+};
+
+/** The timeout warning, open from the start. */
+export const WithPartsOpen: Story = {
+  args: Default.args,
+  tags: ['!autodocs'],
+  render: () => (
+    <Modal.Root open>
+      <Modal.Trigger variant="secondary">Show the timeout warning</Modal.Trigger>
+      <Modal.Content>
+        <Modal.Title>You’re about to be signed out</Modal.Title>
+        <p className="govuk-body">For your security, we will sign you out in 2 minutes.</p>
+        <div className="govuk-button-group">
+          <Modal.Close variant={undefined}>Stay signed in</Modal.Close>
+          <a className="govuk-link" href="#sign-out">
+            Sign out
+          </a>
+        </div>
+      </Modal.Content>
+    </Modal.Root>
+  ),
+};
+
 function ControlledModal() {
   const [open, setOpen] = useState(false);
   return (
