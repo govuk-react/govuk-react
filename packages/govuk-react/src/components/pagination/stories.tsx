@@ -1,139 +1,83 @@
-import type { StoryFn } from '@storybook/react';
-
+import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import * as Pagination from '.';
 
-import { Pagination } from '.';
-
-export default {
+const meta = {
   title: 'Navigation/Pagination',
   id: 'pagination',
-  component: Pagination,
+  component: Pagination.Composite,
+} satisfies Meta<typeof Pagination.Composite>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    previousHref: '#',
+    nextHref: '#',
+    children: (
+      <>
+        <Pagination.ItemComposite href="#" number={1} />
+        <Pagination.ItemComposite href="#" number={2} current />
+        <Pagination.ItemComposite href="#" number={3} />
+      </>
+    ),
+  },
 };
 
-const Template: StoryFn<React.ComponentProps<typeof Pagination>> = (args) => <Pagination {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  children: [
-    <Pagination.Anchor href="#prev" previousPage>
-      Previous page
-    </Pagination.Anchor>,
-    <Pagination.Anchor href="#next" nextPage>
-      Next page
-    </Pagination.Anchor>,
-  ],
+export const WithEllipsis: Story = {
+  args: {
+    previousHref: '#',
+    nextHref: '#',
+    children: (
+      <>
+        <Pagination.ItemComposite href="#" number={1} />
+        <Pagination.ItemComposite ellipsis />
+        <Pagination.ItemComposite href="#" number={6} />
+        <Pagination.ItemComposite href="#" number={7} current />
+        <Pagination.ItemComposite href="#" number={8} />
+        <Pagination.ItemComposite ellipsis />
+        <Pagination.ItemComposite href="#" number={42} />
+      </>
+    ),
+  },
 };
 
-export const PaginationDefaultReactRouterLink = Template.bind({});
-PaginationDefaultReactRouterLink.args = {
-  children: [
-    <Router>
-      <Pagination.Anchor as={Link} to="/prev" previousPage>
-        Previous page
-      </Pagination.Anchor>
-    </Router>,
-    <Router>
-      <Pagination.Anchor as={Link} to="/next" nextPage>
-        Next page
-      </Pagination.Anchor>
-    </Router>,
-  ],
+export const FirstPage: Story = {
+  args: {
+    nextHref: '#',
+    children: (
+      <>
+        <Pagination.ItemComposite href="#" number={1} current />
+        <Pagination.ItemComposite href="#" number={2} />
+        <Pagination.ItemComposite href="#" number={3} />
+      </>
+    ),
+  },
 };
 
-export const PaginationWithNumbersAnchorTag = Template.bind({});
-PaginationWithNumbersAnchorTag.args = {
-  children: [
-    <Pagination.Anchor href="#prev" previousPage pageTitle="1 of 3">
-      Previous page
-    </Pagination.Anchor>,
-    <Pagination.Anchor href="#next" nextPage pageTitle="3 of 3">
-      Next page
-    </Pagination.Anchor>,
-  ],
+export const LastPage: Story = {
+  args: {
+    previousHref: '#',
+    children: (
+      <>
+        <Pagination.ItemComposite href="#" number={1} />
+        <Pagination.ItemComposite href="#" number={2} />
+        <Pagination.ItemComposite href="#" number={3} current />
+      </>
+    ),
+  },
 };
 
-export const PaginationWithNumbersReactRouterLink = Template.bind({});
-PaginationWithNumbersReactRouterLink.args = {
-  children: [
-    <Router>
-      <Pagination.Anchor as={Link} to="#prev" previousPage pageTitle="1 of 3">
-        Previous page
-      </Pagination.Anchor>
-    </Router>,
-    <Router>
-      <Pagination.Anchor as={Link} to="#next" nextPage pageTitle="3 of 3">
-        Next page
-      </Pagination.Anchor>
-    </Router>,
-  ],
-};
-
-export const PaginationWithTitlesAnchorTag = Template.bind({});
-PaginationWithTitlesAnchorTag.args = {
-  children: [
-    <Pagination.Anchor href="#prev" previousPage pageTitle="Applying for a provisional lorry or bus licence">
-      Previous
-    </Pagination.Anchor>,
-    <Pagination.Anchor href="#next" nextPage pageTitle="Driver CPC part 1 test: theory">
-      Next
-    </Pagination.Anchor>,
-  ],
-};
-
-export const PaginationWithTitlesReactRouterLink = Template.bind({});
-PaginationWithTitlesReactRouterLink.args = {
-  children: [
-    <Router>
-      <Pagination.Anchor as={Link} to="#prev" previousPage pageTitle="Applying for a provisional lorry or bus licence">
-        Previous
-      </Pagination.Anchor>
-    </Router>,
-    <Router>
-      <Pagination.Anchor as={Link} to="#next" nextPage pageTitle="Driver CPC part 1 test: theory">
-        Next
-      </Pagination.Anchor>
-    </Router>,
-  ],
-};
-
-export const PaginationWithNumbersJustWithNextPageAnchorTag = Template.bind({});
-PaginationWithNumbersJustWithNextPageAnchorTag.args = {
-  children: (
-    <Pagination.Anchor href="#next" nextPage pageTitle="2 of 12">
-      Next page
-    </Pagination.Anchor>
-  ),
-};
-
-export const PaginationWithNumbersJustWithNextPageReactRouterLink = Template.bind({});
-PaginationWithNumbersJustWithNextPageReactRouterLink.args = {
-  children: (
-    <Router>
-      <Pagination.Anchor as={Link} to="#next" nextPage pageTitle="2 of 12">
-        Next page
-      </Pagination.Anchor>
-    </Router>
-  ),
-};
-
-export const PaginationWithNumbersJustWithPreviousPageAnchorTag = Template.bind({});
-PaginationWithNumbersJustWithPreviousPageAnchorTag.args = {
-  children: (
-    <Pagination.Anchor href="#prev" previousPage pageTitle="11 of 12">
-      Previous page
-    </Pagination.Anchor>
-  ),
-};
-
-export const PaginationWithNumbersJustWithPreviousPageReactRouterLink = Template.bind({});
-PaginationWithNumbersJustWithPreviousPageReactRouterLink.args = {
-  children: (
-    <Router>
-      <Pagination.Anchor as={Link} to="#prev" previousPage pageTitle="11 of 12">
-        Previous page
-      </Pagination.Anchor>
-    </Router>
-  ),
+export const ForNavigatingBetweenRelatedPages: Story = {
+  args: {
+    previousHref: '#',
+    previousText: 'Previous page',
+    previousLabel: 'Applying for a provisional lorry or bus licence',
+    nextHref: '#',
+    nextText: 'Next page',
+    nextLabel: 'Driver CPC part 1 test: theory',
+  },
 };
