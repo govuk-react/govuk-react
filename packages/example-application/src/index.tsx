@@ -9,7 +9,6 @@ import Forms from './forms/forms';
 const ExampleApplication: React.FC<ExampleApplicationProps> = ({ routerEntries }: ExampleApplicationProps) => (
   <React.StrictMode>
     <Router initialEntries={routerEntries}>
-      <GovUK.GlobalStyle />
       <GovUK.TopNav
         serviceTitle={
           <GovUK.TopNav.Anchor as={Link} to="/">
@@ -30,15 +29,15 @@ const ExampleApplication: React.FC<ExampleApplicationProps> = ({ routerEntries }
           Forms
         </GovUK.TopNav.NavLink>
       </GovUK.TopNav>
-      <GovUK.Page.WidthContainer>
-        <GovUK.Page.Main>
+      <GovUK.WidthContainer>
+        <GovUK.MainWrapper>
           <Routes>
             <Route path="/forms/*" element={<Forms />} />
             <Route path="/" element={<Home />} />
           </Routes>
-        </GovUK.Page.Main>
-      </GovUK.Page.WidthContainer>
-      <GovUK.Footer />
+        </GovUK.MainWrapper>
+      </GovUK.WidthContainer>
+      <GovUK.Footer.Composite />
     </Router>
   </React.StrictMode>
 );

@@ -1,84 +1,48 @@
-/**
- * ### References
- *
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_main-wrapper.scss
- * - https://github.com/alphagov/govuk-frontend/blob/main/src/govuk/objects/_width-container.scss
- */
 import * as React from 'react';
-import { SkipLink } from '../skip-link';
-import TopNav from '../top-nav';
-// import Footer from '../footer';
 
-import Main from './atoms/main';
-import WidthContainer from './atoms/width-container';
+import { SkipLink } from '../skip-link';
+import { WidthContainer } from '../width-container';
+import { MainWrapper } from '../main-wrapper';
+
+export type PageProps = {
+  /** Page contents, rendered inside the main wrapper. */
+  children?: React.ReactNode;
+  /** Id of the main wrapper, which the skip link points to. */
+  id?: string;
+  /** Page header, such as `Header.Composite` or `ServiceNavigation`. */
+  header?: React.ReactNode;
+  /** Page footer, such as `Footer.Composite`. */
+  footer?: React.ReactNode;
+  /** Content outside the main wrapper but inside the width container, such as a back link, breadcrumbs or phase banner. */
+  beforeChildren?: React.ReactNode;
+  /** Text for the skip link. */
+  skipLinkText?: React.ReactNode;
+};
 
 /**
- * Use this template to keep your pages consistent with the rest of GOV.UK.
+ * Lays out the body of a GOV.UK page: skip link, header, width container, main wrapper and footer.
+ * For custom layouts, compose `SkipLink`, `WidthContainer` and `MainWrapper` directly.
  *
- * - https://govuk-react.github.io/govuk-react/?path=/docs/page
  * - https://design-system.service.gov.uk/styles/page-template/
  * - https://design-system.service.gov.uk/styles/layout/#page-wrappers
  */
-export const Page: PageType = ({
-  header = <TopNav />,
+export function Page({
+  header,
   footer,
   children,
-  id = 'content',
+  id = 'main-content',
   beforeChildren,
-  main: MainComponent = Page.Main,
-  container: Container = Page.WidthContainer,
-}: PageProps) => (
-  <>
-    <SkipLink href={`#${id}`}>Skip to main content</SkipLink>
-    {header}
-    <Container>
-      {beforeChildren}
-      <MainComponent id={id}>{children}</MainComponent>
-    </Container>
-    {footer}
-  </>
-);
-
-export interface PageType extends React.FC<PageProps> {
-  Main: typeof Main;
-  WidthContainer: typeof WidthContainer;
+  skipLinkText = 'Skip to main content',
+}: PageProps) {
+  return (
+    <>
+      <SkipLink href={`#${id}`}>{skipLinkText}</SkipLink>
+      {header}
+      <WidthContainer>
+        {beforeChildren}
+        <MainWrapper id={id}>{children}</MainWrapper>
+      </WidthContainer>
+      {footer}
+    </>
+  );
 }
-export interface PageProps {
-  /**
-   * Page contents
-   */
-  children?: React.ReactNode;
-  /**
-   * ID for page content
-   */
-  id?: string;
-  /**
-   * Override the default page header component.
-   */
-  header?: React.ReactNode;
-  /**
-   * Override the default page footer component.
-   */
-  footer?: React.ReactNode;
-  /**
-   * Override the default wrapper component for main page content
-   */
-  main?: React.ElementType;
-  /**
-   * Content that needs to appear outside the main page wrapper (see `main`).
-   * For example: A back link component, breadcrumbs, phase banner component
-   */
-  beforeChildren?: React.ReactNode;
-  /**
-   * Override the default page container component.
-   * `beforeChildren` and `children` (wrapped in `main`) will be placed inside this component.
-   */
-  container?: React.ElementType;
-}
-
-Page.Main = Main;
-Page.WidthContainer = WidthContainer;
-
-Page.displayName = 'Page';
-
-export default Page;

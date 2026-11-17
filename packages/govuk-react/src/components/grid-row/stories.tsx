@@ -1,31 +1,26 @@
-import type { StoryFn } from '@storybook/react';
-
+import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
-import styled from 'styled-components';
-import GridCol from '../grid-col';
 
+import { GridColumn } from '../grid-column';
 import { GridRow } from '.';
 
-export default {
+const meta = {
   title: 'Page & Layout/Grid row',
   id: 'grid-row',
   component: GridRow,
+} satisfies Meta<typeof GridRow>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    children: (
+      <>
+        <GridColumn width="two-thirds">Two thirds</GridColumn>
+        <GridColumn width="one-third">One third</GridColumn>
+      </>
+    ),
+  },
 };
-
-const Content = styled('div')({
-  textIndent: '-999em',
-  backgroundColor: '#7DADD3',
-  backgroundImage: 'repeating-linear-gradient(180deg, #7DADD3, #7DADD3 15px, #B7CFE1 15px, #B7CFE1 30px)',
-});
-Content.displayName = 'div';
-
-export const Default: StoryFn = (args) => (
-  <GridRow {...args}>
-    <GridCol>
-      <Content>Example</Content>
-    </GridCol>
-    <GridCol>
-      <Content>Example</Content>
-    </GridCol>
-  </GridRow>
-);

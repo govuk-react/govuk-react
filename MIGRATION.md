@@ -207,3 +207,23 @@ The whitespace props (`mb` and so on) are removed. `BackLink` gains an `inverse`
 | `<SkipLink />`                                 | `<SkipLink>Skip to main content</SkipLink>`        |
 
 The `as` prop is removed.
+
+## Layout
+
+The layout components are now govuk-frontend-react's. The whitespace props (`mb` and so on) are removed.
+
+| 0.x                                                          | 1.0                                                                                                                 |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
+| `<GridRow>`                                                  | `<GridRow>` (named import)                                                                                          |
+| `<GridCol setWidth="one-half">` or `<GridCol columnOneHalf>` | `<GridColumn width="one-half">`                                                                                     |
+| `<GridCol setDesktopWidth="one-third">`                      | `<GridColumn width="one-third-from-desktop">`                                                                       |
+| `<Main>` or `<Page.Main>`                                    | `<MainWrapper>`                                                                                                     |
+| `<Page.WidthContainer>` or `<Footer.WidthContainer>`         | `<WidthContainer>`                                                                                                  |
+| `<Footer>`                                                   | `<Footer.Composite>`, with `navigation`, `metaHeading`, `metaLinks`, `metaContent`, `licence` and `copyright` props |
+| `<Footer.MetaLinks>`, `<Footer.Link>`                        | `<Footer.InlineListItem>` and `<Footer.Link>` inside `metaLinks`                                                    |
+| `<Footer.Navigation>`, `<Footer.NavigationLinks>`            | `<Footer.Section>`, `<Footer.Heading>`, `<Footer.List>` and `<Footer.ListItem>` inside `navigation`                 |
+| `<GlobalStyle />`                                            | removed: govuk-frontend's CSS styles the page                                                                       |
+
+`GridColumn` needs a `width`, and custom column widths (`setWidth="25%"`) are removed. `Footer.Composite` shows the crown and the Open Government Licence by default; `copyright` is now text, not an object with an image.
+
+`Page` keeps `header`, `footer`, `beforeChildren` and `id`, and gains `skipLinkText`. It no longer defaults the header to `TopNav`, and the `main` and `container` overrides and the `Page.Main` and `Page.WidthContainer` properties are removed: for a custom layout, compose `SkipLink`, `WidthContainer` and `MainWrapper` yourself. The main wrapper's id now defaults to `main-content`, matching govuk-frontend.
