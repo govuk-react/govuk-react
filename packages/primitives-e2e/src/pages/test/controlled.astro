@@ -1,0 +1,15 @@
+---
+import ControlledTabs from '../../components/ControlledTabs.tsx';
+---
+
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Tabs</title><link rel="icon" href="data:," /></head>
+  <body>
+    <ControlledTabs client:load id="cv" preHydration="ignore" />
+    <ControlledTabs client:load id="cs" preHydration="report" />
+    <ControlledTabs client:load id="ck" keep />
+    <script>
+      import '@govuk-react/primitives/tabs-element';
+    </script>
+  </body>
+</html>

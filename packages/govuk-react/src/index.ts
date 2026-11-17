@@ -44,7 +44,7 @@ export * as ServiceNavigation from './components/service-navigation';
 export { SkipLink } from './components/skip-link';
 export * as SummaryList from './components/summary-list';
 export * as Table from './components/table';
-export { default as Tabs } from './components/tabs';
+export * as Tabs from './components/tabs';
 export { Tag } from './components/tag';
 export * as TaskList from './components/task-list';
 export * as Textarea from './components/textarea';

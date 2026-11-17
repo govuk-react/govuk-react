@@ -5,6 +5,8 @@ allowBuilds:
   core-js: false
   core-js-pure: false
   esbuild: true
+  # Astro's image service, unused by the primitives browser tests.
+  sharp: false
 linkWorkspacePackages: true
 minimumReleaseAgeExclude:
   - govuk-frontend-react@1.0.0-alpha.4

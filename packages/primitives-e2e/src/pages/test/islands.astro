@@ -1,0 +1,24 @@
+---
+import * as Tabs from '@govuk-react/primitives/tabs';
+---
+
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Tabs</title><link rel="icon" href="data:," /></head>
+  <body>
+    <!-- Parts rendered without a Root, each panel its own island, so no React context links them. -->
+    <govuk-react-tabs data-testid="islands" fallback="radios" default-value="i-documents">
+      <div data-tabs-list>
+        <Tabs.Trigger value="i-account" fallback="radios" name="i">Account</Tabs.Trigger>
+        <Tabs.Trigger value="i-documents" fallback="radios" name="i">Documents</Tabs.Trigger>
+      </div>
+      <Tabs.Content client:load value="i-account" fallback="radios" name="i">Account panel</Tabs.Content>
+      <Tabs.Content client:load value="i-documents" fallback="radios" name="i" defaultSelected>Documents panel</Tabs.Content>
+    </govuk-react-tabs>
+    <style is:inline>
+      govuk-react-tabs:not([data-upgraded]) [data-tabs-content]:has(> input[data-tabs-fallback]):not(:has(> input:checked)) { display: none; }
+    </style>
+    <script>
+      import '@govuk-react/primitives/tabs-element';
+    </script>
+  </body>
+</html>

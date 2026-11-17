@@ -26,9 +26,10 @@
     "vite": "^7.0.0"
   },
   "scripts": {
+    "prestart": "pnpm --filter @govuk-react/primitives build",
     "start": "storybook dev -p 9009",
     "storybook": "storybook dev -p 9009",
-    "build": "storybook build",
+    "build": "pnpm --filter @govuk-react/primitives build && storybook build",
     "version": "yarn version"
   },
   "main": "lib/index.js",

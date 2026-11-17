@@ -8,7 +8,18 @@ import prettier from 'eslint-config-prettier';
 import globals from 'globals';
 
 export default tseslint.config(
-  { ignores: ['**/dist', '**/lib', '**/es', 'coverage', '**/node_modules', '**/storybook-static', 'test-results'] },
+  {
+    ignores: [
+      '**/dist',
+      '**/lib',
+      '**/es',
+      'coverage',
+      '**/node_modules',
+      '**/storybook-static',
+      'test-results',
+      '**/.astro',
+    ],
+  },
   { linterOptions: { reportUnusedDisableDirectives: 'off' } },
   js.configs.recommended,
   ...tseslint.configs.recommended,
