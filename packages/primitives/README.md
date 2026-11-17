@@ -27,11 +27,13 @@ import * as Tabs from '@govuk-react/primitives/tabs';
 `fallback` sets how the tabs work without JavaScript:
 
 - `links` (the default): each tab links to its panel, and every panel shows.
-- `radios`: each tab is a label for a visually hidden radio in its panel, so tabs switch with no JavaScript, by mouse or arrow keys. It needs `defaultValue` or `value`. Pass `name` when tabs render in separate React roots, such as islands.
+- `radios`: each tab is a label for a hidden radio in its panel, so tabs switch with no JavaScript when clicked. It needs `defaultValue` or `value`. Without JavaScript the labels can't be reached by keyboard, as in the reference. Pass `name` when tabs render in separate React roots, such as islands. Root adds the fallback's CSS inline; under a strict CSP, add `radiosFallbackCss` to a stylesheet instead.
 
 When controlled with `value`, a user's choice calls `onValueChange` and the tab changes only when `value` does.
 
-`media` limits the tab behaviour to a media query. `upgradedClass`, `activeItemClass` and `hiddenContentClass` add classes for styles that key off classes rather than `data-state`, `aria-selected` and `hidden`.
+`media` limits the tab behaviour to a media query. Below it, `links` tabs are a list of links to panels, and `radios` tabs keep switching through their radios. With `links`, the URL hash follows the selected tab, as in govuk-frontend.
+
+In an island without a `Root`, pass `fallback`, `name` and `defaultSelected` to `Trigger` and `Content`. `upgradedClass`, `activeItemClass` and `hiddenContentClass` add classes for styles that key off classes rather than `data-state`, `aria-selected` and `hidden`.
 
 Without React, use the `<govuk-react-tabs>` element from `@govuk-react/primitives/tabs-element` with the same markup. See [the element's source](src/tabs/element.ts) for its attributes.
 

@@ -7,45 +7,22 @@ import { Slot } from '../utils/slot';
 import { tagName, type TabsElement } from './element';
 
 /*
- * Headless tabs: unstyled parts over the <govuk-react-tabs> custom element (./element.ts),
- * which adds the tab behaviour once it upgrades. Every part takes `asChild` to render your
- * own element instead, with the part's props merged onto it.
+ * Headless tabs: unstyled parts over the <govuk-react-tabs> element (./element.ts), which adds
+ * the tab behaviour on upgrade. Every part except Root takes `asChild`.
  *
- * Uncontrolled with `defaultValue`, or controlled with `value` and `onValueChange`.
- * `preHydration` chooses what happens to a tab picked before React hydrated: "ignore" (the
- * default) applies the controlled `value`, "report" reports the pick through `onValueChange`.
- * Uncontrolled tabs always report it.
- *
- * `fallback` sets how the tabs work without JavaScript:
- * - "links" (the default): each tab links to its panel, and all the panels show.
- * - "radios": each tab is a label for a hidden radio in its panel, and only the checked
- *   panel shows, so tabs switch with no JavaScript.
- *
- * Each `value` is also its panel's id, so it must be unique on the page. In a single React
- * tree the radios are grouped by a generated `name`. Pass `name` when composing across islands,
- * or when separate React roots render tabs, since each root generates the same ids.
+ * Context only fills in defaults: in an island without a Root, pass `fallback`, `name` and
+ * `defaultSelected` to the parts. Each `value` is also its panel's id, so must be unique.
  */
 
 type Fallback = 'links' | 'radios';
 
-const TabsContext = createContext<{ selected?: string; fallback: Fallback; name: string }>({
-  fallback: 'links',
-  name: tagName,
-});
+const TabsContext = createContext<{ selected?: string; fallback?: Fallback; name?: string }>({});
 
-// Before the element upgrades, only the checked radio's panel shows.
-const radiosFallbackCss = `${tagName}:not(:defined) [data-tabs-content]:has(> input[type=radio]):not(:has(> input:checked)){display:none}`;
-
-const visuallyHidden: React.CSSProperties = {
-  position: 'absolute',
-  width: 1,
-  height: 1,
-  margin: -1,
-  padding: 0,
-  overflow: 'hidden',
-  clip: 'rect(0 0 0 0)',
-  border: 0,
-};
+/**
+ * Shows only the checked radio's panel until the element upgrades, and below its `media`.
+ * Root renders it inline; under a strict CSP, add it to a stylesheet instead.
+ */
+export const radiosFallbackCss = `${tagName}:not([data-upgraded]) [data-tabs-content]:has(> input[type=radio]):not(:has(> input:checked)){display:none}`;
 
 const radioId = (name: string, value: string) => `${name}-${value}`;
 
@@ -68,8 +45,7 @@ type BaseRootProps = {
   activeItemClass?: string;
   /** Classes added to inactive panels. */
   hiddenContentClass?: string;
-  className?: string;
-};
+} & Omit<React.HTMLAttributes<HTMLElement>, 'defaultValue' | 'onChange'>;
 
 export type RootProps = BaseRootProps &
   (
@@ -92,6 +68,7 @@ export function Root({
   activeItemClass,
   hiddenContentClass,
   className,
+  ...props
 }: RootProps) {
   const generatedName = useId();
   const groupName = name ?? generatedName;
@@ -134,6 +111,7 @@ export function Root({
       {React.createElement(
         tagName,
         {
+          ...props,
           ref,
           // The radios fallback switches tabs before upgrade, so it is styled as tabs from the start.
           className: [className, fallback === 'radios' && upgradedClass].filter(Boolean).join(' ') || undefined,
@@ -174,15 +152,32 @@ export function Item({ asChild, value, ...props }: ItemProps) {
   return <Element data-tabs-item="" data-value={value} suppressHydrationWarning {...props} />;
 }
 
-export type TriggerProps = React.HTMLAttributes<HTMLElement> & {
-  /** Render the only child instead, with this part's props merged onto it. */
-  asChild?: boolean;
-  value: string;
+/** Set by Root. Pass them to a part rendered without a Root, such as in an island. */
+type IslandProps = {
+  fallback?: Fallback;
+  /** The radios' group name, for the "radios" fallback. */
+  name?: string;
 };
 
+function useIsland({ fallback, name }: IslandProps) {
+  const context = useContext(TabsContext);
+  return {
+    fallback: fallback ?? context.fallback ?? 'links',
+    name: name ?? context.name ?? tagName,
+    selected: context.selected,
+  };
+}
+
+export type TriggerProps = React.HTMLAttributes<HTMLElement> &
+  IslandProps & {
+    /** Render the only child instead, with this part's props merged onto it. */
+    asChild?: boolean;
+    value: string;
+  };
+
 /** A link to its panel, or with the "radios" fallback a label for its panel's radio. */
-export function Trigger({ asChild, value, children, ...props }: TriggerProps) {
-  const { fallback, name } = useContext(TabsContext);
+export function Trigger({ asChild, value, children, fallback: fallbackProp, name: nameProp, ...props }: TriggerProps) {
+  const { fallback, name } = useIsland({ fallback: fallbackProp, name: nameProp });
   const shared = { 'data-tabs-trigger': '', 'data-value': value, suppressHydrationWarning: true };
   if (asChild) {
     return (
@@ -209,11 +204,24 @@ export function Trigger({ asChild, value, children, ...props }: TriggerProps) {
   );
 }
 
-export type ContentProps = PartProps<'div'> & { value: string };
+export type ContentProps = PartProps<'div'> &
+  IslandProps & {
+    value: string;
+    /** Whether this panel's radio is checked at first, for the "radios" fallback. Defaults to Root's value. */
+    defaultSelected?: boolean;
+  };
 
 /** A panel. Its id is its `value`. */
-export function Content({ asChild, value, children, ...props }: ContentProps) {
-  const { fallback, name, selected } = useContext(TabsContext);
+export function Content({
+  asChild,
+  value,
+  children,
+  fallback: fallbackProp,
+  name: nameProp,
+  defaultSelected,
+  ...props
+}: ContentProps) {
+  const { fallback, name, selected } = useIsland({ fallback: fallbackProp, name: nameProp });
   const radio = fallback === 'radios' && (
     // The no-JS state. `form` names no form, so the radio is never submitted with a form around it.
     <input
@@ -221,9 +229,8 @@ export function Content({ asChild, value, children, ...props }: ContentProps) {
       name={name}
       id={radioId(name, value)}
       form={`${name}-none`}
-      defaultChecked={value === selected}
-      // Visually hidden but focusable, so the arrow keys switch tabs without JavaScript.
-      style={visuallyHidden}
+      defaultChecked={defaultSelected ?? value === selected}
+      hidden
       suppressHydrationWarning
     />
   );

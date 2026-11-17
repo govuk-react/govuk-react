@@ -22,6 +22,8 @@ function Example(props: Tabs.RootProps) {
 const upgraded = () => act(() => Promise.resolve());
 
 describe('Tabs', () => {
+  afterEach(() => window.history.replaceState(null, '', window.location.pathname));
+
   test('upgrades to a tablist with the first tab selected', async () => {
     render(<Example />);
     await upgraded();
@@ -212,5 +214,63 @@ describe('Tabs', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Change' }));
     await upgraded();
     expect(container.querySelector('govuk-react-tabs')).toHaveClass('two', 'upgraded');
+  });
+
+  test('arrow keys move from the focused tab when a controlled parent keeps its value', async () => {
+    const onValueChange = vi.fn();
+    render(<Example value="day" onValueChange={onValueChange} />);
+    await upgraded();
+    fireEvent.keyDown(screen.getByRole('tab', { name: 'Past day' }), { key: 'ArrowRight' });
+    fireEvent.keyDown(screen.getByRole('tab', { name: 'Past week' }), { key: 'ArrowRight' });
+    expect(onValueChange.mock.calls).toEqual([['week'], ['month']]);
+  });
+
+  test('with links, the URL hash follows the selected tab and selects it', async () => {
+    render(<Example />);
+    await upgraded();
+    fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
+    expect(window.location.hash).toBe('#week');
+    window.location.hash = '#month';
+    fireEvent(window, new HashChangeEvent('hashchange'));
+    expect(screen.getByRole('tab', { name: 'Past month' })).toHaveAttribute('aria-selected', 'true');
+  });
+
+  test('below its media query, radios keep switching tabs and the selection is kept', async () => {
+    const listeners = new Set<() => void>();
+    const query = {
+      matches: true,
+      addEventListener: (_: string, l: () => void) => listeners.add(l),
+      removeEventListener: () => {},
+    };
+    const matchMedia = vi.fn(() => query);
+    vi.stubGlobal('matchMedia', matchMedia);
+    const { container } = render(<Example fallback="radios" defaultValue="day" media="(min-width: 40rem)" />);
+    await upgraded();
+    fireEvent.click(screen.getByRole('tab', { name: 'Past month' }));
+    query.matches = false;
+    listeners.forEach((listener) => listener());
+    const element = container.querySelector('govuk-react-tabs');
+    expect(element).not.toHaveAttribute('data-upgraded');
+    expect(screen.queryByRole('tab')).not.toBeInTheDocument();
+    expect(document.getElementById(screen.getByText('Past month').closest('label')?.htmlFor ?? '')).toBeChecked();
+    query.matches = true;
+    listeners.forEach((listener) => listener());
+    expect(screen.getByRole('tab', { name: 'Past month' })).toHaveAttribute('aria-selected', 'true');
+    vi.unstubAllGlobals();
+  });
+
+  test('parts work without a Root, as in an island', () => {
+    render(
+      <>
+        <Tabs.Trigger value="day" fallback="radios" name="island">
+          Past day
+        </Tabs.Trigger>
+        <Tabs.Content value="day" fallback="radios" name="island" defaultSelected>
+          Day content
+        </Tabs.Content>
+      </>
+    );
+    expect(screen.getByText('Past day').closest('label')).toHaveAttribute('for', 'island-day');
+    expect(document.getElementById('island-day')).toBeChecked();
   });
 });

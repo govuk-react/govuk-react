@@ -1,7 +1,7 @@
 {
   "name": "@govuk-react/primitives",
   "version": "0.0.0",
-  "description": "Behaviour for govuk-frontend-react markup: custom elements with React parts over them.",
+  "description": "Headless, progressively enhanced behaviour for design system components: custom elements with React parts over them.",
   "type": "module",
   "types": "./dist/index.d.ts",
   "exports": {
