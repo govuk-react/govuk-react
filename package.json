@@ -2,7 +2,7 @@
   "name": "@govuk-react/monorepo",
   "scripts": {
     "build:dist": "pnpm build && rimraf dist && webpack --node-env=production --devtool source-map --entry ./packages/govuk-react/dist/index.js --output-library-type commonjs2",
-    "build:storybook": "pnpm --filter @govuk-react/primitives build && pnpm --filter @govuk-react/storybook build",
+    "build:storybook": "pnpm --filter @govuk-react/storybook build",
     "build:types": "tsc --emitDeclarationOnly --declaration",
     "build": "pnpm -r run build",
     "bundlesize": "bundlesize",
