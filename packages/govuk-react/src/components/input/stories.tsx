@@ -24,7 +24,15 @@ export const InputWithHintTextError: Story = {
 };
 
 export const WithPrefixAndSuffix: Story = {
-  args: { id: 'cost', name: 'cost', label: 'What is the cost?', prefix: '£', suffix: 'per item', width: 5 },
+  args: {
+    id: 'cost-per-item',
+    name: 'costPerItem',
+    label: 'What is the cost per item, in pounds?',
+    prefix: '£',
+    suffix: 'per item',
+    width: 5,
+    spellCheck: false,
+  },
 };
 
 export const WithTypeAndAutoComplete: Story = {

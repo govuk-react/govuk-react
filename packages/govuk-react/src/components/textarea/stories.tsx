@@ -16,12 +16,14 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 export const TextareaWithHintText: Story = {
-  args: { hint: 'Do not include personal or financial information, like your National Insurance number.' },
+  args: {
+    hint: 'Do not include personal or financial information, like your National Insurance number or credit card details',
+  },
 };
 
 export const TextareaWithHintTextError: Story = {
   args: {
-    hint: 'Do not include personal or financial information, like your National Insurance number.',
+    hint: 'Do not include personal or financial information, like your National Insurance number or credit card details',
     errorMessage: 'Enter more detail',
   },
 };

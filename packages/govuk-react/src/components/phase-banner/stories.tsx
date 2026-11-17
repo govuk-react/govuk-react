@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import * as React from 'react';
 
 import * as PhaseBanner from '.';
-import { Link } from '../link';
 
 const meta = {
   title: 'Typography/Phase banner',
@@ -14,11 +12,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const text = (
-  <>
-    This part of GOV.UK is being rebuilt – <Link href="https://example.com">find out what that means</Link>
-  </>
-);
+const text = "This is a new service. We're still working on ways to improve it.";
 
 export const Default: Story = {
   args: { tag: 'Alpha', children: text },

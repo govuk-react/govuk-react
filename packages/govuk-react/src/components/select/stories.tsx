@@ -26,9 +26,9 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 export const SelectWithHintText: Story = {
-  args: { hint: 'Choose how to order the results' },
+  args: { hint: 'This can be different to where you went before' },
 };
 
 export const SelectWithHintTextError: Story = {
-  args: { hint: 'Choose how to order the results', errorMessage: 'Select how to sort the results' },
+  args: { hint: 'This can be different to where you went before', errorMessage: 'Select a location' },
 };
