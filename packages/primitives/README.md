@@ -27,7 +27,9 @@ import * as Tabs from '@govuk-react/primitives/tabs';
 `fallback` sets how the tabs work without JavaScript:
 
 - `links` (the default): each tab links to its panel, and every panel shows.
-- `radios`: each tab is a label for a hidden radio in its panel, so tabs switch with no JavaScript.
+- `radios`: each tab is a label for a visually hidden radio in its panel, so tabs switch with no JavaScript, by mouse or arrow keys. It needs `defaultValue` or `value`. Pass `name` when tabs render in separate React roots, such as islands.
+
+When controlled with `value`, a user's choice calls `onValueChange` and the tab changes only when `value` does.
 
 `media` limits the tab behaviour to a media query. `upgradedClass`, `activeItemClass` and `hiddenContentClass` add classes for styles that key off classes rather than `data-state`, `aria-selected` and `hidden`.
 

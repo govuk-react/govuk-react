@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import * as Tabs from '.';
 
-function Example(props: Omit<Tabs.RootProps, 'children'>) {
+function Example(props: Tabs.RootProps) {
   return (
     <Tabs.Root {...props}>
       <Tabs.List>
@@ -85,13 +85,13 @@ describe('Tabs', () => {
   test('the radios fallback labels a hidden radio in each panel', async () => {
     render(<Example fallback="radios" defaultValue="week" />);
     const label = screen.getByText('Past week').closest('label');
-    const radio = document.getElementById('week-radio');
-    expect(label).toHaveAttribute('for', 'week-radio');
+    const radio = document.getElementById(label?.htmlFor ?? '');
+    expect(radio).toBeInstanceOf(HTMLInputElement);
     expect(radio).toBeChecked();
     expect(radio?.parentElement).toHaveAttribute('id', 'week');
     await upgraded();
     fireEvent.click(screen.getByRole('tab', { name: 'Past month' }));
-    expect(document.getElementById('month-radio')).toBeChecked();
+    expect(document.getElementById(screen.getByText('Past month').closest('label')?.htmlFor ?? '')).toBeChecked();
   });
 
   test('asChild parts render your own elements', async () => {
@@ -124,5 +124,93 @@ describe('Tabs', () => {
     expect(screen.getByText('Past day').closest('li')).toHaveClass('selected');
     expect(screen.getByText('Week content').tagName).toBe('SECTION');
     expect(screen.getByText('Week content')).toHaveClass('hidden');
+  });
+
+  test('does not report a change on mount', async () => {
+    const onValueChange = vi.fn();
+    render(
+      <React.StrictMode>
+        <Example onValueChange={onValueChange} />
+      </React.StrictMode>
+    );
+    await upgraded();
+    expect(onValueChange).not.toHaveBeenCalled();
+  });
+
+  test('when controlled, a choice is only reported until the value changes', async () => {
+    const onValueChange = vi.fn();
+    render(<Example value="day" onValueChange={onValueChange} />);
+    await upgraded();
+    fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
+    expect(onValueChange.mock.calls).toEqual([['week']]);
+    expect(screen.getByRole('tab', { name: 'Past day' })).toHaveAttribute('aria-selected', 'true');
+  });
+
+  test('a change in nested tabs is not reported by the outer tabs', async () => {
+    const outer = vi.fn();
+    render(
+      <Tabs.Root onValueChange={outer}>
+        <Tabs.List>
+          <Tabs.Trigger value="outer-a">Outer A</Tabs.Trigger>
+        </Tabs.List>
+        <Tabs.Content value="outer-a">
+          <Example />
+        </Tabs.Content>
+      </Tabs.Root>
+    );
+    await upgraded();
+    fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
+    expect(outer).not.toHaveBeenCalled();
+  });
+
+  test('tabs added after upgrade are wired up', async () => {
+    function Growing() {
+      const [more, setMore] = useState(false);
+      return (
+        <>
+          <button type="button" onClick={() => setMore(true)}>
+            Add
+          </button>
+          <Tabs.Root>
+            <Tabs.List>
+              <Tabs.Trigger value="a">A</Tabs.Trigger>
+              {more && <Tabs.Trigger value="b">B</Tabs.Trigger>}
+            </Tabs.List>
+            <Tabs.Content value="a">A content</Tabs.Content>
+            {more && <Tabs.Content value="b">B content</Tabs.Content>}
+          </Tabs.Root>
+        </>
+      );
+    }
+    render(<Growing />);
+    await upgraded();
+    fireEvent.click(screen.getByRole('button', { name: 'Add' }));
+    await upgraded();
+    expect(screen.getByRole('tab', { name: 'B' })).toHaveAttribute('aria-selected', 'false');
+    expect(screen.getByText('B content')).not.toBeVisible();
+  });
+
+  test('classes the element adds survive React re-rendering className', async () => {
+    function Rerendered() {
+      const [className, setClassName] = useState('one');
+      return (
+        <>
+          <button type="button" onClick={() => setClassName('two')}>
+            Change
+          </button>
+          <Tabs.Root className={className} upgradedClass="upgraded">
+            <Tabs.List>
+              <Tabs.Trigger value="a">A</Tabs.Trigger>
+            </Tabs.List>
+            <Tabs.Content value="a">A content</Tabs.Content>
+          </Tabs.Root>
+        </>
+      );
+    }
+    const { container } = render(<Rerendered />);
+    await upgraded();
+    fireEvent.click(screen.getByRole('button', { name: 'Change' }));
+    await upgraded();
+    expect(container.querySelector('govuk-react-tabs')).toHaveClass('two', 'upgraded');
   });
 });

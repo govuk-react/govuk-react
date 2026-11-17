@@ -11,5 +11,6 @@ export default defineConfig({
   tsconfig: 'tsconfig.build.json',
   sourcemap: true,
   clean: true,
-  treeshake: true,
+  // Keep the React parts out of React Server Components. esbuild drops the directive from the source.
+  banner: { js: "'use client';" },
 });
