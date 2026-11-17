@@ -326,6 +326,20 @@ govuk-react now exports `overrideClasses`, which returns govuk-frontend's overri
 | `<Pagination.Anchor as={RouterLink} to="/next" nextPage>`     | `<Pagination.NextLink asChild><RouterLink to="/next">…</RouterLink></Pagination.NextLink>` inside a `Pagination.Next` |
 | `mb` and other whitespace props                               | `className`                                                                                                           |
 
+## TopNav
+
+`TopNav` is removed. Use `Header` for the GOV.UK header and `ServiceNavigation` for your service name and navigation, as the Design System recommends. Their link parts take `asChild` for router links.
+
+| 0.x                                                    | 1.0                                                                                                                    |
+| ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| `<TopNav>`                                             | `<Header.Composite />` followed by `<ServiceNavigation.Composite>`                                                     |
+| `serviceTitle`                                         | `serviceName` and `serviceHref` on `ServiceNavigation.Composite`                                                       |
+| `<TopNav.NavLink href="/forms">Forms</TopNav.NavLink>` | `<ServiceNavigation.ItemComposite href="/forms">Forms</ServiceNavigation.ItemComposite>`                               |
+| `<TopNav.NavLink as={RouterLink} to="/forms">`         | `<ServiceNavigation.Link asChild><RouterLink to="/forms">Forms</RouterLink></ServiceNavigation.Link>` inside an `Item` |
+| `company`                                              | `productName` on `Header.Composite`, or `Header` parts                                                                 |
+| `search`                                               | Removed: place a search form in your page                                                                              |
+| `bgColor`, `color`                                     | Removed: the header uses govuk-frontend's styles                                                                       |
+
 ## LoadingBox
 
 `LoadingBox` no longer uses styled-components or react-transition-group. Its styles are a small stylesheet that React hoists into the head, with your props passed in as CSS custom properties, so it works with server rendering and without a CSS-in-JS runtime.
