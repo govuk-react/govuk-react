@@ -287,3 +287,27 @@ Error links are now plain fragment links (`href="#field-id"`), so they work with
 | `onHandleErrorClick`                                      | Removed. For custom handling, use `ListItem` and `ListItemLink` parts with your own `onClick`                                                                      |
 | `heading` defaulted to "There is a problem"               | `title` is required                                                                                                                                                |
 | `mb` and other whitespace props                           | `className`                                                                                                                                                        |
+
+## Table
+
+`Table` is now govuk-frontend-react's `Table`, a module of parts. `Table.Composite` renders the table, with `caption`, `captionSize` and `head` props, and its children are the body rows. `Root`, `Caption`, `Head`, `Body`, `Row`, `Header`, `ColumnHeader`, `RowHeader` and `Cell` are available for custom markup.
+
+`head` now takes the header cells, not a row: the composite wraps them in a row.
+
+govuk-react now exports `overrideClasses`, which returns govuk-frontend's override classes (`govuk-!-*`) for typed props such as `width`, `textAlign` and `marginBottom`.
+
+| 0.x                                     | 1.0                                                                |
+| --------------------------------------- | ------------------------------------------------------------------ |
+| `import Table from 'govuk-react/table'` | `import * as Table from 'govuk-react/table'`                       |
+| `<Table>`                               | `<Table.Composite>`                                                |
+| `body={rows}`                           | Children                                                           |
+| `head={<Table.Row>{cells}</Table.Row>}` | `head={cells}`                                                     |
+| `<Table.Header>` (the `thead`)          | `<Table.Head>`                                                     |
+| `<Table.CellHeader>` in the head        | `<Table.ColumnHeader>`                                             |
+| `<Table.CellHeader>` in a body row      | `<Table.RowHeader>`                                                |
+| `<Table.Cell alignRight>`               | `<Table.Cell className={overrideClasses({ textAlign: 'right' })}>` |
+| `<Table.Cell bold>`                     | `<Table.Cell className={overrideClasses({ fontWeight: 'bold' })}>` |
+| `setWidth="one-half"` (fluid widths)    | `className={overrideClasses({ width: 'one-half' })}`               |
+| `setWidth="22%"` (other widths)         | `style={{ width: '22%' }}`                                         |
+| `numeric`                               | `numeric` (unchanged)                                              |
+| `mb` and other whitespace props         | `className={overrideClasses({ marginBottom: n })}`                 |
