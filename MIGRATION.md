@@ -371,3 +371,14 @@ govuk-react now exports `overrideClasses`, which returns govuk-frontend's overri
 | `<DocumentFooterMetadata from={…} partOf={…} other={…}>`                    | `<DocumentFooterMetadata.Composite from={…} partOf={…} other={…}>`                                         |
 | `other={[{ id, title: 'Published', content: '20 January 2012' }]}`          | The same, or `<DocumentFooterMetadata.ItemComposite term="Published" definitions={['20 January 2012']} />` |
 | `mb` and other whitespace props                                             | `className`                                                                                                |
+
+## SearchBox
+
+`SearchBox` is now a module of parts with no CSS-in-JS, based on GOV.UK’s search component. `SearchBox.Composite` renders a label, a `govuk-input` search input and a submit button with a search icon. Put it inside your own `form`. It takes `labelSize`, `labelVisuallyHidden`, `large` and `inverse`. `Root`, `Label`, `Wrapper`, `Input` and `Button` are available for custom markup. The layout and button styles come from a small stylesheet that React hoists into the head, using govuk-frontend's colour custom properties.
+
+| 0.x                                                              | 1.0                                                                     |
+| ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `import SearchBox from 'govuk-react/search-box'`                 | `import * as SearchBox from 'govuk-react/search-box'`                   |
+| `<SearchBox><SearchBox.Input /><SearchBox.Button /></SearchBox>` | `<SearchBox.Composite id="search" name="q" label="Search on GOV.UK" />` |
+| `placeholder` as the only label                                  | `label`, visible by default. A placeholder is not a label               |
+| `mb` and other whitespace props                                  | `className`                                                             |
