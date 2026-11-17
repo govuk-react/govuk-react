@@ -17,24 +17,28 @@ We aim to track the following projects (in priority order) as to which component
 This project is being or has been used by:
 
 - [Connected Open Government Statistics](https://github.com/GSS-Cogs/chart-builder) [2](https://github.com/GSS-Cogs/dd-cms)
+- [Data to Insight](https://github.com/data-to-insight/quality-lac-data-beta)
 - [Department for Education](https://github.com/DFE-Digital/meeting-timer)
 - [Department for Environment, Food & Rural Affairs](https://github.com/atoscerebro/defra-wtp) [2](https://github.com/DEFRA/eutd-mmo-cc-external-frontend)
 - [Department for International Trade](https://github.com/uktrade/data-science-frontend) [2](https://github.com/uktrade/data-hub-frontend) [3](https://github.com/uktrade/statement-of-works) [4](https://github.com/uktrade/data-hub-components)
 - [Department of Business, Energy and Industrial Strategy](https://github.com/UKGovernmentBEIS/beis-cosmetics-spa)
-- [Department of Health](https://github.com/DepartmentOfHealth-htbhf/htbhf-management-web-ui-spike)
+- [Department for Energy Security and Net Zero](https://github.com/Integrated-Corporate-Services/desnz-syeia-frontend-beta)
+- [Department of Health and Social Care](https://github.com/DepartmentOfHealth-htbhf/htbhf-management-web-ui-spike) [2](https://github.com/dhsc-govuk/FingertipsNext) [3](https://github.com/dhsc-govuk/HealthyBabies) [4](https://github.com/dhsc-govuk/gamblinglevy)
 - [Department for Environment, Food and Rural Affairs](https://github.com/DEFRA/eutd-mmo-cc-external-frontend)
-- [Department for Transport](https://github.com/fares-data-build-tool/fdbt-admin)
+- [Department for Transport](https://github.com/fares-data-build-tool/fdbt-admin) [2](https://github.com/department-for-transport-BODS/create-disruptions-data) [3](https://github.com/department-for-transport-BODS/publish-devolved-bus-registration-data)
+- [Driver and Vehicle Licensing Agency](https://github.com/dvla/lab-gen-ui)
 - [Food Standards Agency](https://github.com/FoodStandardsAgency/register-a-food-business-healthcheck-dashboard) [2](https://github.com/FSA-Civica/govuk-react/tree/slice-and-dice-packages/base)
 - [HM Courts & Tribunals Service](https://github.com/hmcts/mytime-frontend) [2](https://github.com/hmcts/rse-next-prototype)
 - [HM Land Registry](https://github.com/LandRegistry/title-token)
 - [HM Passport Office](https://github.com/UKHomeOffice/lev-react-components)
-- [HM Prison and Probation Services](https://github.com/ministryofjustice/prisonstaffhub) [2](https://github.com/ministryofjustice/prison-services-feedback-and-support)
+- [HM Prison and Probation Services](https://github.com/ministryofjustice/prisonstaffhub) [2](https://github.com/ministryofjustice/prison-services-feedback-and-support) [3](https://github.com/ministryofjustice/digital-prison-services)
 - [Home Office](https://github.com/UKHomeOffice/system-register) [2]
 - [Made Tech](https://github.com/madetech/govuk-react-form) [2](https://github.com/madetech/academy20-zingtech-frontend)
 - [Ministry of Justice](https://github.com/ministryofjustice/manage-key-workers) [2](https://github.com/ministryofjustice/bichard7-next-ui)
 - [London Borough of Hackney](https://github.com/LBHackney-IT/document-evidence-store-frontend)
 - [Public Health England/UK Health Security Agency](https://web.archive.org/web/20220216110415if_/https://get-home-lateral-flow-testing-kit.service.gov.uk/static/js/2.dad2ad18.chunk.js.map)
 - [Skills Funding Agency](https://github.com/SkillsFundingAgency/CFS-Frontend) [2](https://github.com/SkillsFundingAgency/das-qna-config)
+- [UK Research and Innovation](https://github.com/ukriorg/ukripoc-application) [2](https://github.com/ukriorg/ukripoc-opportunity) [3](https://github.com/ukriorg/ukripoc-front-door)
 
 The project is currently maintained for free by a small number of volunteers. If you would like to contribute, help maintain or sponsor this project, please get in touch via [Discussions](https://github.com/govuk-react/govuk-react/discussions) or [Twitter](https://twitter.com/penx).
 
