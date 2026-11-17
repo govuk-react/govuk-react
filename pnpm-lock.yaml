@@ -467,7 +467,7 @@ importers:
         specifier: 0.1.0
         version: 0.1.0(react@19.3.1)
       '@govuk-react/primitives':
-        specifier: workspace:*
+        specifier: 0.1.0
         version: link:../primitives
       clsx:
         specifier: ^2.1.1
