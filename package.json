@@ -14,7 +14,7 @@
     "eslint:fix": "eslint --fix .",
     "eslint": "eslint .",
     "start": "pnpm --filter @govuk-react/storybook start",
-    "test:e2e": "pnpm --filter @govuk-react/example-application test:e2e",
+    "test:e2e": "pnpm --filter @govuk-react/example-application test:e2e && pnpm --filter @govuk-react/primitives-e2e test:e2e && pnpm --filter @govuk-react/primitives-e2e test:e2e:hydration",
     "test:debug": "vitest --inspect-brk --no-file-parallelism",
     "test:snapshot": "vitest run -u",
     "test:unit": "vitest run",

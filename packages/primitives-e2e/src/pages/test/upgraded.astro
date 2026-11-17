@@ -1,0 +1,16 @@
+---
+import TabsDemo from '../../components/TabsDemo.tsx';
+---
+
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Tabs</title><link rel="icon" href="data:," /></head>
+  <body>
+    <!-- No client directive: the element upgrades the server markup, and React never hydrates. -->
+    <TabsDemo id="up" name="up" />
+    <TabsDemo id="ul" fallback="links" />
+    <TabsDemo id="um" fallback="links" media="(min-width: 40.0625em)" />
+    <script>
+      import '@govuk-react/primitives/tabs-element';
+    </script>
+  </body>
+</html>

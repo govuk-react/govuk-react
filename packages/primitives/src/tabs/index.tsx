@@ -10,19 +10,27 @@ import { tagName, type TabsElement } from './element';
  * Headless tabs: unstyled parts over the <govuk-react-tabs> element (./element.ts), which adds
  * the tab behaviour on upgrade. Every part except Root takes `asChild`.
  *
+ * Each panel holds a hidden radio, and the radio group is the source of truth. A user's choice
+ * fires the radio's native change, which React reports through the radio's `onChange`.
+ *
  * Context only fills in defaults: in an island without a Root, pass `fallback`, `name` and
  * `defaultSelected` to the parts. Each `value` is also its panel's id, so must be unique.
  */
 
 type Fallback = 'links' | 'radios';
 
-const TabsContext = createContext<{ selected?: string; fallback?: Fallback; name?: string }>({});
+const TabsContext = createContext<{
+  selected?: string;
+  fallback?: Fallback;
+  name?: string;
+  onValueChange?: (value: string) => void;
+}>({});
 
 /**
  * Shows only the checked radio's panel until the element upgrades, and below its `media`.
  * Root renders it inline; under a strict CSP, add it to a stylesheet instead.
  */
-export const radiosFallbackCss = `${tagName}:not([data-upgraded]) [data-tabs-content]:has(> input[type=radio]):not(:has(> input:checked)){display:none}`;
+export const radiosFallbackCss = `${tagName}:not([data-upgraded]) [data-tabs-content]:has(> input[data-tabs-fallback]):not(:has(> input:checked)){display:none}`;
 
 const radioId = (name: string, value: string) => `${name}-${value}`;
 
@@ -34,7 +42,13 @@ type BaseRootProps = {
   defaultValue?: string;
   /** Called when the user selects a tab. */
   onValueChange?: (value: string) => void;
+  /**
+   * When controlled, what happens to a tab the user picked before hydration: "ignore" keeps
+   * `value`, "report" calls `onValueChange` with the pick so you can adopt it.
+   */
   preHydration?: 'ignore' | 'report';
+  /** The axis of the arrow keys. */
+  orientation?: 'horizontal' | 'vertical';
   /** The radios' group name, for the "radios" fallback. */
   name?: string;
   /** Only behave as tabs when this media query matches. */
@@ -61,6 +75,7 @@ export function Root({
   defaultValue,
   onValueChange,
   preHydration = 'ignore',
+  orientation,
   fallback = 'links',
   name,
   media,
@@ -73,36 +88,21 @@ export function Root({
   const generatedName = useId();
   const groupName = name ?? generatedName;
   const ref = useRef<TabsElement>(null);
-  const onValueChangeRef = useRef(onValueChange);
-  useEffect(() => {
-    onValueChangeRef.current = onValueChange;
-  });
 
-  useEffect(() => {
-    const element = ref.current;
-    if (!element) return undefined;
-    const handleChange = (event: CustomEvent<{ value: string }>) => {
-      // Ignore changes from nested tabs.
-      if (event.target === element) onValueChangeRef.current?.(event.detail.value);
-    };
-    element.addEventListener('govuk-react-tabs:change', handleChange);
-    return () => element.removeEventListener('govuk-react-tabs:change', handleChange);
-  }, []);
-
-  // A tab the user picked before hydration fired no event that React saw.
+  // A tab the user picked before hydration fired no onChange that React saw, so report it once.
+  // When controlled with "ignore", `value` wins, so there is nothing to report.
   const reported = useRef(false);
-  const initial = useRef({ value, preHydration });
+  const initial = useRef({ value, preHydration, onValueChange });
   useEffect(() => {
-    const element = ref.current;
-    const picked = element?.pickedValue;
-    if (reported.current || !element || picked === undefined) return;
+    const picked = ref.current?.pickedValue;
+    if (reported.current || picked === undefined) return;
     reported.current = true;
     const start = initial.current;
-    if (start.value === undefined || start.preHydration === 'report') onValueChangeRef.current?.(picked);
+    if (start.value === undefined || start.preHydration === 'report') start.onValueChange?.(picked);
   }, []);
 
   return (
-    <TabsContext.Provider value={{ selected: value ?? defaultValue, fallback, name: groupName }}>
+    <TabsContext.Provider value={{ selected: value ?? defaultValue, fallback, name: groupName, onValueChange }}>
       {fallback === 'radios' && (
         <style href={`${tagName}-radios-fallback`} precedence="default">
           {radiosFallbackCss}
@@ -118,6 +118,7 @@ export function Root({
           value,
           'default-value': defaultValue,
           fallback,
+          orientation,
           'prefer-pick': preHydration === 'report' ? '' : undefined,
           media,
           'upgraded-class': upgradedClass,
@@ -165,6 +166,7 @@ function useIsland({ fallback, name }: IslandProps) {
     fallback: fallback ?? context.fallback ?? 'links',
     name: name ?? context.name ?? tagName,
     selected: context.selected,
+    onValueChange: context.onValueChange,
   };
 }
 
@@ -221,9 +223,10 @@ export function Content({
   defaultSelected,
   ...props
 }: ContentProps) {
-  const { fallback, name, selected } = useIsland({ fallback: fallbackProp, name: nameProp });
-  const radio = fallback === 'radios' && (
-    // The no-JS state. `form` names no form, so the radio is never submitted with a form around it.
+  const { fallback, name, selected, onValueChange } = useIsland({ fallback: fallbackProp, name: nameProp });
+  const radio = (
+    // The selection, and with "radios" the no-JS state. `form` names no form, so the radio is
+    // never submitted with a form around it.
     <input
       type="radio"
       name={name}
@@ -231,7 +234,9 @@ export function Content({
       form={`${name}-none`}
       defaultChecked={defaultSelected ?? value === selected}
       hidden
+      data-tabs-fallback={fallback === 'radios' ? '' : undefined}
       suppressHydrationWarning
+      onChange={() => onValueChange?.(value)}
     />
   );
   const shared = {

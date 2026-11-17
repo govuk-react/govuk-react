@@ -1,0 +1,15 @@
+---
+import TabsDemo from '../../components/TabsDemo.tsx';
+---
+
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Tabs</title><link rel="icon" href="data:," /></head>
+  <body>
+    <TabsDemo client:load id="h" name="h" />
+    <TabsDemo client:load id="v" name="v" orientation="vertical" />
+    <TabsDemo client:load id="l" fallback="links" />
+    <script>
+      import '@govuk-react/primitives/tabs-element';
+    </script>
+  </body>
+</html>

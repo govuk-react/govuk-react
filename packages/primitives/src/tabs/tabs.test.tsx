@@ -148,6 +148,46 @@ describe('Tabs', () => {
     expect(screen.getByRole('tab', { name: 'Past day' })).toHaveAttribute('aria-selected', 'true');
   });
 
+  test('when controlled and the value is kept, choosing the same tab again is reported again', async () => {
+    const onValueChange = vi.fn();
+    render(<Example value="day" onValueChange={onValueChange} />);
+    await upgraded();
+    fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
+    await upgraded();
+    fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
+    expect(onValueChange.mock.calls).toEqual([['week'], ['week']]);
+  });
+
+  test('after a controlled value changes, choosing the old tab again is reported', async () => {
+    function Controlled({ onValueChange }: { onValueChange: (value: string) => void }) {
+      const [value, setValue] = useState('day');
+      return (
+        <>
+          <button type="button" onClick={() => setValue('month')}>
+            Show month
+          </button>
+          <Example value={value} onValueChange={onValueChange} />
+        </>
+      );
+    }
+    const onValueChange = vi.fn();
+    render(<Controlled onValueChange={onValueChange} />);
+    await upgraded();
+    fireEvent.click(screen.getByRole('button', { name: 'Show month' }));
+    fireEvent.click(screen.getByRole('tab', { name: 'Past day' }));
+    expect(onValueChange.mock.calls).toEqual([['day']]);
+  });
+
+  test('a choice checks its panel’s radio, which reports it through React', async () => {
+    const onValueChange = vi.fn();
+    const { container } = render(<Example onValueChange={onValueChange} />);
+    await upgraded();
+    container.addEventListener('govuk-react-tabs:change', (event) => onValueChange(`event:${event.detail.value}`));
+    fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
+    expect(screen.getByText('Week content').querySelector('input[type=radio]')).toBeChecked();
+    expect(onValueChange.mock.calls).toEqual([['week'], ['event:week']]);
+  });
+
   test('a change in nested tabs is not reported by the outer tabs', async () => {
     const outer = vi.fn();
     render(
