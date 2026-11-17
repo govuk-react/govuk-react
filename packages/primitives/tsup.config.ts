@@ -5,6 +5,8 @@ export default defineConfig({
     index: 'src/index.ts',
     tabs: 'src/tabs/index.tsx',
     'tabs-element': 'src/tabs/element.ts',
+    'password-input': 'src/password-input/index.tsx',
+    'password-input-element': 'src/password-input/element.ts',
   },
   format: ['esm'],
   dts: true,
