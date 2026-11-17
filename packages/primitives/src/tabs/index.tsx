@@ -13,15 +13,16 @@ import { tagName, type TabsElement } from './element';
  * Each panel holds a hidden radio, and the radio group is the source of truth. A user's choice
  * fires the radio's native change, which React reports through the radio's `onChange`.
  *
- * Context only fills in defaults: in an island without a Root, pass `fallback`, `name` and
- * `defaultSelected` to the parts. Each `value` is also its panel's id, so must be unique.
+ * Without JavaScript, `Root`'s tabs are links to every panel, and `RadiosRoot`'s are labels for the
+ * panels' radios, so they switch panels without JavaScript too. Use `Trigger` and `Content` in a
+ * `Root`, and `RadioTrigger` and `RadioContent` in a `RadiosRoot`.
+ *
+ * Context only fills in defaults: in an island without a Root, pass `name` and `defaultSelected`
+ * to the parts. Each `value` is also its panel's id, so must be unique.
  */
-
-type Fallback = 'links' | 'radios';
 
 const TabsContext = createContext<{
   selected?: string;
-  fallback?: Fallback;
   name?: string;
   onValueChange?: (value: string) => void;
 }>({});
@@ -49,7 +50,7 @@ type BaseRootProps = {
   preHydration?: 'ignore' | 'report';
   /** The axis of the arrow keys. */
   orientation?: 'horizontal' | 'vertical';
-  /** The radios' group name, for the "radios" fallback. */
+  /** The panels' radio group name. Defaults to a generated one. */
   name?: string;
   /** Only behave as tabs when this media query matches. */
   media?: string;
@@ -61,22 +62,33 @@ type BaseRootProps = {
   hiddenContentClass?: string;
 } & Omit<React.HTMLAttributes<HTMLElement>, 'defaultValue' | 'onChange'>;
 
-export type RootProps = BaseRootProps &
-  (
-    | { fallback?: 'links' }
-    // Without JavaScript only the checked radio's panel shows, so one must be checked from the start.
-    | { fallback: 'radios'; value: string }
-    | { fallback: 'radios'; defaultValue: string }
-  );
+export type RootProps = BaseRootProps;
 
-export function Root({
+/** Tabs that are links to every panel without JavaScript. Use `Trigger` and `Content` inside it. */
+export function Root(props: RootProps) {
+  return <TabsRoot fallback="links" {...props} />;
+}
+
+export type RadiosRootProps = BaseRootProps &
+  // Without JavaScript only the checked radio's panel shows, so one must be checked from the start.
+  ({ value: string } | { defaultValue: string });
+
+/**
+ * Tabs that switch panels without JavaScript too, through the panels' radios. Use `RadioTrigger`
+ * and `RadioContent` inside it.
+ */
+export function RadiosRoot(props: RadiosRootProps) {
+  return <TabsRoot fallback="radios" {...props} />;
+}
+
+function TabsRoot({
   children,
   value,
   defaultValue,
   onValueChange,
   preHydration = 'ignore',
   orientation,
-  fallback = 'links',
+  fallback,
   name,
   media,
   upgradedClass,
@@ -84,7 +96,7 @@ export function Root({
   hiddenContentClass,
   className,
   ...props
-}: RootProps) {
+}: BaseRootProps & { fallback: 'links' | 'radios' }) {
   const generatedName = useId();
   const groupName = name ?? generatedName;
   const ref = useRef<TabsElement>(null);
@@ -102,7 +114,7 @@ export function Root({
   }, []);
 
   return (
-    <TabsContext.Provider value={{ selected: value ?? defaultValue, fallback, name: groupName, onValueChange }}>
+    <TabsContext.Provider value={{ selected: value ?? defaultValue, name: groupName, onValueChange }}>
       {fallback === 'radios' && (
         <style href={`${tagName}-radios-fallback`} precedence="default">
           {radiosFallbackCss}
@@ -153,79 +165,79 @@ export function Item({ asChild, value, ...props }: ItemProps) {
   return <Element data-tabs-item="" data-value={value} suppressHydrationWarning {...props} />;
 }
 
-/** Set by Root. Pass them to a part rendered without a Root, such as in an island. */
+/** Set by Root. Pass it to a part rendered without a Root, such as in an island. */
 type IslandProps = {
-  fallback?: Fallback;
-  /** The radios' group name, for the "radios" fallback. */
+  /** The panels' radio group name. */
   name?: string;
 };
 
-function useIsland({ fallback, name }: IslandProps) {
+function useIsland({ name }: IslandProps) {
   const context = useContext(TabsContext);
   return {
-    fallback: fallback ?? context.fallback ?? 'links',
     name: name ?? context.name ?? tagName,
     selected: context.selected,
     onValueChange: context.onValueChange,
   };
 }
 
-export type TriggerProps = React.HTMLAttributes<HTMLElement> &
-  IslandProps & {
-    /** Render the only child instead, with this part's props merged onto it. */
-    asChild?: boolean;
-    value: string;
-  };
+export type TriggerProps = React.HTMLAttributes<HTMLElement> & {
+  /** Render the only child instead, with this part's props merged onto it. */
+  asChild?: boolean;
+  value: string;
+};
 
-/** A link to its panel, or with the "radios" fallback a label for its panel's radio. */
-export function Trigger({ asChild, value, children, fallback: fallbackProp, name: nameProp, ...props }: TriggerProps) {
-  const { fallback, name } = useIsland({ fallback: fallbackProp, name: nameProp });
-  const shared = { 'data-tabs-trigger': '', 'data-value': value, suppressHydrationWarning: true };
-  if (asChild) {
-    return (
-      <Slot
-        {...shared}
-        {...(fallback === 'radios' ? { htmlFor: radioId(name, value) } : { href: `#${value}` })}
-        {...props}
-      >
-        {children}
-      </Slot>
-    );
-  }
-  if (fallback === 'radios') {
-    return (
-      <label {...shared} htmlFor={radioId(name, value)} {...props}>
-        {children}
-      </label>
-    );
-  }
-  return (
-    <a {...shared} href={`#${value}`} {...props}>
-      {children}
-    </a>
-  );
+const triggerData = (value: string) => ({
+  'data-tabs-trigger': '',
+  'data-value': value,
+  suppressHydrationWarning: true,
+});
+
+/** A tab in a `Root`: a link to its panel. */
+export function Trigger({ asChild, value, ...props }: TriggerProps) {
+  const Element = asChild ? Slot : 'a';
+  return <Element {...triggerData(value)} href={`#${value}`} {...props} />;
+}
+
+export type RadioTriggerProps = TriggerProps & IslandProps;
+
+/** A tab in a `RadiosRoot`: a label for its panel's radio. */
+export function RadioTrigger({ asChild, value, name: nameProp, ...props }: RadioTriggerProps) {
+  const { name } = useIsland({ name: nameProp });
+  const Element = asChild ? Slot : 'label';
+  return <Element {...triggerData(value)} htmlFor={radioId(name, value)} {...props} />;
 }
 
 export type ContentProps = PartProps<'div'> &
   IslandProps & {
     value: string;
-    /** Whether this panel's radio is checked at first, for the "radios" fallback. Defaults to Root's value. */
+    /** Whether this panel's radio is checked at first. Defaults to Root's value. */
     defaultSelected?: boolean;
   };
 
-/** A panel. Its id is its `value`. */
-export function Content({
+/** A panel in a `Root`. Its id is its `value`. */
+export function Content(props: ContentProps) {
+  return <Panel {...props} />;
+}
+
+export type RadioContentProps = ContentProps;
+
+/** A panel in a `RadiosRoot`, shown without JavaScript only while its radio is checked. Its id is its `value`. */
+export function RadioContent(props: RadioContentProps) {
+  return <Panel radios {...props} />;
+}
+
+function Panel({
   asChild,
   value,
   children,
-  fallback: fallbackProp,
   name: nameProp,
   defaultSelected,
+  radios = false,
   ...props
-}: ContentProps) {
-  const { fallback, name, selected, onValueChange } = useIsland({ fallback: fallbackProp, name: nameProp });
+}: ContentProps & { radios?: boolean }) {
+  const { name, selected, onValueChange } = useIsland({ name: nameProp });
   const radio = (
-    // The selection, and with "radios" the no-JS state. `form` names no form, so the radio is
+    // The selection, and in a RadiosRoot the no-JS state. `form` names no form, so the radio is
     // never submitted with a form around it.
     <input
       type="radio"
@@ -234,7 +246,7 @@ export function Content({
       form={`${name}-none`}
       defaultChecked={defaultSelected ?? value === selected}
       hidden
-      data-tabs-fallback={fallback === 'radios' ? '' : undefined}
+      data-tabs-fallback={radios ? '' : undefined}
       suppressHydrationWarning
       onChange={() => onValueChange?.(value)}
     />

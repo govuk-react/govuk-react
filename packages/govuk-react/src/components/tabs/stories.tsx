@@ -107,13 +107,14 @@ export const Default: Story = {
   args: { items },
 };
 
-export const RadiosFallback: Story = {
-  args: { items, fallback: 'radios', name: 'cases-radios' },
+export const Radios: Story = {
+  args: { items },
+  render: () => <Tabs.RadiosComposite items={items} name="cases-radios" />,
   parameters: {
     docs: {
       description: {
         story:
-          'With `fallback="radios"`, the tabs switch without JavaScript too, through a hidden radio in each panel. Without JavaScript the tabs can’t be reached by keyboard.',
+          '`RadiosComposite`, and `RadiosRoot` with `RadioTab` and `RadioPanel`, switch tabs without JavaScript too, through a hidden radio in each panel. Without JavaScript the tabs can’t be reached by keyboard.',
       },
     },
   },

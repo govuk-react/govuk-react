@@ -36,9 +36,8 @@ export default function ControlledTabs({
       </button>
       <p data-testid={`${id}-value`}>{value}</p>
       <p data-testid={`${id}-changes`}>{changes}</p>
-      <Tabs.Root
+      <Tabs.RadiosRoot
         name={id}
-        fallback="radios"
         value={value}
         preHydration={preHydration}
         onValueChange={(next) => {
@@ -48,17 +47,17 @@ export default function ControlledTabs({
       >
         <Tabs.List>
           {items.map((item) => (
-            <Tabs.Trigger key={item.value} value={`${id}-${item.value}`}>
+            <Tabs.RadioTrigger key={item.value} value={`${id}-${item.value}`}>
               {item.label}
-            </Tabs.Trigger>
+            </Tabs.RadioTrigger>
           ))}
         </Tabs.List>
         {items.map((item) => (
-          <Tabs.Content key={item.value} value={`${id}-${item.value}`}>
+          <Tabs.RadioContent key={item.value} value={`${id}-${item.value}`}>
             {item.label} panel
-          </Tabs.Content>
+          </Tabs.RadioContent>
         ))}
-      </Tabs.Root>
+      </Tabs.RadiosRoot>
     </div>
   );
 }

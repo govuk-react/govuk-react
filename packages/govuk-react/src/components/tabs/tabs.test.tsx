@@ -42,8 +42,8 @@ describe('Tabs', () => {
     expect(onValueChange).toHaveBeenCalledWith('past-week');
   });
 
-  test('the radios fallback makes each tab a label', () => {
-    render(<Tabs.Composite items={items} fallback="radios" name="cases" />);
+  test('RadiosComposite makes each tab a label for its panel’s radio', () => {
+    render(<Tabs.RadiosComposite items={items} name="cases" />);
     expect(screen.getByText('Past week').closest('label')).toHaveClass('govuk-tabs__tab');
     expect(document.getElementById('cases-past-day')).toBeChecked();
   });
