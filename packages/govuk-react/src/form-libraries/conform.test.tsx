@@ -63,10 +63,10 @@ function Example({
   onSubmit = () => {},
 }: {
   lastResult?: SubmissionResult<string[]>;
-  defaultValue?: Partial<Values>;
+  defaultValue?: Omit<Values, 'photo'>;
   onSubmit?: (values: Values) => void;
 }) {
-  const [form, fields] = useForm({
+  const [form, fields] = useForm<Values>({
     id: 'example',
     lastResult,
     defaultValue,
