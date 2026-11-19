@@ -6,6 +6,7 @@ import button from 'inline:button';
 import characterCount from 'inline:character-count';
 import choices from 'inline:choices';
 import disclosure from 'inline:disclosure';
+import exitThisPage from 'inline:exit-this-page';
 import fileUpload from 'inline:file-upload';
 import focusLinks from 'inline:focus-links';
 import modal from 'inline:modal';

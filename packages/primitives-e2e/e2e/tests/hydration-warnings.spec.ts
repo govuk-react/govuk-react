@@ -16,6 +16,7 @@ const pages = [
   { path: '/test/choices', role: 'radio', name: 'Email' },
   { path: '/test/focus', role: 'button', name: 'Save' },
   { path: '/test/button', role: 'button', name: 'Save and continue' },
+  { path: '/test/exit-this-page', role: 'textbox', name: 'Name' },
   { path: '/test/file-upload', role: 'button', name: 'Disable' },
 ] as const;
 

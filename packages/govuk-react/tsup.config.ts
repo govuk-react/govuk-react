@@ -17,6 +17,7 @@ export default defineConfig({
     'document-footer-metadata': 'src/components/document-footer-metadata/index.tsx',
     'error-message': 'src/components/error-message/index.tsx',
     'error-summary': 'src/components/error-summary/index.tsx',
+    'exit-this-page': 'src/components/exit-this-page/index.tsx',
     feedback: 'src/components/feedback/index.tsx',
     fieldset: 'src/components/fieldset/index.tsx',
     'file-upload': 'src/components/file-upload/index.tsx',

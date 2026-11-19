@@ -8,6 +8,7 @@ const tags = [
   'character-count',
   'choices',
   'disclosure',
+  'exit-this-page',
   'file-upload',
   'focus-links',
   'modal',
