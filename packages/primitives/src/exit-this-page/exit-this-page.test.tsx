@@ -89,8 +89,33 @@ describe('ExitThisPage', () => {
     const location = vi.spyOn(window, 'location', 'get').mockReturnValue({ ...window.location, href: '' });
     fireEvent.click(screen.getAllByRole('link')[1]);
     expect(screen.getByRole('alert')).toHaveTextContent('Loading.');
-    window.dispatchEvent(new Event('pageshow'));
+    // `pageshow` on load leaves it, and coming back from the browser's cache removes it.
+    window.dispatchEvent(new PageTransitionEvent('pageshow', { persisted: false }));
+    expect(screen.getByRole('alert')).toBeInTheDocument();
+    window.dispatchEvent(new PageTransitionEvent('pageshow', { persisted: true }));
     expect(screen.queryByRole('alert')).toBeNull();
     location.mockRestore();
+  });
+
+  test('when the exit is cancelled, the presses are cleared', () => {
+    render(<Demo />);
+    shift();
+    shift();
+    shift();
+    expect(exits).toHaveLength(1);
+    expect(screen.getByRole('status')).toHaveTextContent('');
+    expect(document.querySelector('[data-exit-this-page-indicator]')).not.toHaveClass('visible');
+  });
+
+  test('a moved element starts counting again', () => {
+    render(<Demo />);
+    shift();
+    shift();
+    const element = document.querySelector('govuk-react-exit-this-page');
+    if (!element?.parentElement) throw new Error('No element');
+    element.parentElement.appendChild(element);
+    shift();
+    expect(exits).toEqual([]);
+    expect(screen.getByRole('status')).toHaveTextContent('Shift, press 2 more times to exit.');
   });
 });

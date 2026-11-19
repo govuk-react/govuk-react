@@ -87,16 +87,26 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       document.removeEventListener('click', this.onClick);
       window.removeEventListener('pageshow', this.reset);
       this.clearTimers();
+      // Moved elements start counting again.
+      this.presses = 0;
+      this.setStatus('');
+      this.updateIndicator();
     }
 
     exit() {
       const button = this.own('[data-exit-this-page-button]');
       const href = button instanceof HTMLAnchorElement ? button.href : undefined;
-      if (!href) return;
-      const proceed = this.dispatchEvent(
-        new CustomEvent('govuk-react-exit-this-page:exit', { detail: { href }, bubbles: true, cancelable: true })
-      );
-      if (!proceed) return;
+      const proceed =
+        href !== undefined &&
+        this.dispatchEvent(
+          new CustomEvent('govuk-react-exit-this-page:exit', { detail: { href }, bubbles: true, cancelable: true })
+        );
+      if (!href || !proceed) {
+        // Staying on the page: clear the presses.
+        this.setStatus('');
+        this.updateIndicator();
+        return;
+      }
       this.setStatus('');
       classesOf(this.getAttribute('hide-content-class')).forEach((name) => document.body.classList.add(name));
       this.overlay?.remove();
@@ -178,7 +188,9 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     };
 
     /** Shows the page again when the browser brings it back from its cache. */
-    private readonly reset = () => {
+    private readonly reset = (event: PageTransitionEvent) => {
+      // `pageshow` fires on every load too, which mustn't lose presses made before it.
+      if (!event.persisted) return;
       classesOf(this.getAttribute('hide-content-class')).forEach((name) => document.body.classList.remove(name));
       this.overlay?.remove();
       this.overlay = undefined;

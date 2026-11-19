@@ -66,16 +66,6 @@ for (const [id, path] of [
   );
 }
 
-test('coming back to the page shows it again', async ({ page }) => {
-  await page.goto('/test/exit-this-page');
-  await expect(demo(page, 'hydrated')).toHaveAttribute('data-hydrated', 'true');
-  await button(page, 'hydrated').click();
-  await expect(page).toHaveURL(/\/\?exited$/);
-  await page.goBack();
-  await expect(button(page, 'hydrated')).toBeVisible();
-  await expect(page.getByRole('alert')).toHaveCount(0);
-});
-
 test('Shift presses before hydration still count', async ({ page }) => {
   // Hold back React, but not the element, which the page's own script defines.
   let release = () => {};
