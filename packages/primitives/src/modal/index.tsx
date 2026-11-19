@@ -105,8 +105,19 @@ export function Content({ asChild, id, onClose, ref, ...props }: ContentProps) {
     reported.current = dialog.open;
     onOpenChange.current?.(dialog.open);
   };
+  // A dialog the user opened before hydration, through its invoker command or the element, fired
+  // nothing React heard, so report it once.
+  const dialogRef = useRef<HTMLDialogElement | null>(null);
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (dialog?.open && reported.current === undefined) {
+      reported.current = true;
+      onOpenChange.current?.(true);
+    }
+  }, []);
   // React doesn't listen for `toggle` on a dialog, so listen natively.
   const listen = (dialog: HTMLDialogElement | null) => {
+    dialogRef.current = dialog;
     if (typeof ref === 'function') ref(dialog);
     else if (ref) ref.current = dialog;
     if (!dialog) return undefined;
