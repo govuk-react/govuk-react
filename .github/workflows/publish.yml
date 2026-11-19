@@ -31,7 +31,7 @@ jobs:
 
       - run: npm install -g npm@^11.15.0
       - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter "{./packages/${{ inputs.package }}}..." build
       - run: pnpm test
-      - run: pnpm --filter "./packages/${{ inputs.package }}" build
       - run: npm stage publish --access public --tag "$(node -p "require('./package.json').version.split('-')[1]?.split('.')[0] ?? 'latest'")"
         working-directory: packages/${{ inputs.package }}

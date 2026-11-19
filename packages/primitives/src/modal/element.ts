@@ -20,6 +20,8 @@
  *   "close" or "request-close"
  */
 
+import { setUpWhenReady } from '../utils/set-up-when-ready';
+
 declare global {
   interface HTMLElementEventMap {
     'govuk-react-modal:change': CustomEvent<{ open: boolean }>;
@@ -70,11 +72,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     connectedCallback() {
       if (!supportsCommands()) this.addEventListener('click', this.onClick);
-      if (this.setup()) return;
-      this.observer = new MutationObserver(() => {
-        if (this.setup()) this.observer?.disconnect();
-      });
-      this.observer.observe(this, { childList: true, subtree: true });
+      this.observer = setUpWhenReady(this, () => this.setup());
     }
 
     disconnectedCallback() {

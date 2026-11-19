@@ -23,6 +23,7 @@
  *   `hidden` on it.
  */
 
+import { classesOf } from '../utils/dom';
 import { onPropertySet } from '../utils/on-property-set';
 
 export const tagName = 'govuk-react-choices';
@@ -31,8 +32,6 @@ export interface ChoicesElement extends HTMLElement {
   /** Shows and hides the reveals to match the choices, such as after setting `checked`. */
   sync(): void;
 }
-
-const classesOf = (attribute: string | null) => attribute?.split(/\s+/).filter(Boolean) ?? [];
 
 const isChoice = (element: EventTarget | null): element is HTMLInputElement =>
   element instanceof HTMLInputElement && (element.type === 'radio' || element.type === 'checkbox');
