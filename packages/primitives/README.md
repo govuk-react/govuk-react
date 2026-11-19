@@ -142,3 +142,27 @@ import * as Choices from '@govuk-react/primitives/choices';
 ```
 
 For a group of radios or checkboxes. Without JavaScript every `Conditional` is shown. On upgrade, each one shows only while the choice that `controls` it is checked, and that choice gets `aria-controls` and `aria-expanded`. A checkbox with `exclusive`, such as "None of these", unchecks the other checkboxes with its name when checked, and is unchecked when one of them is. They're unchecked with `click()`, so `change` events fire and controlled React inputs hear about it. Control the inputs as usual, with `checked` and `onChange`.
+
+## AutoFocus
+
+```tsx
+import * as AutoFocus from '@govuk-react/primitives/auto-focus';
+
+<AutoFocus.Root>
+  <AutoFocus.Target role="alert">There is a problem</AutoFocus.Target>
+</AutoFocus.Root>;
+```
+
+Moves focus to `Target` when it appears, such as an error summary after a form is submitted. The server renders the target with `tabindex="-1"` and `autofocus`, so the browser focuses it when the page loads, even without JavaScript. As in govuk-frontend, the target loses its `tabindex` once focus moves on. Pass `disabled` to both parts to leave focus alone.
+
+## FocusLinks
+
+```tsx
+import * as FocusLinks from '@govuk-react/primitives/focus-links';
+
+<FocusLinks.Root focusedClass="focused">
+  <a href="#main-content">Skip to main content</a>
+</FocusLinks.Root>;
+```
+
+Makes links inside it, to a part of the same page, move focus there. A link to a form field focuses the field and scrolls its label into view, or its fieldset's legend, as govuk-frontend's error summary does. A link to anything else focuses it with `tabindex="-1"` and `focusedClass` until focus moves on, as govuk-frontend's skip link does. Without JavaScript the browser follows the link as usual.

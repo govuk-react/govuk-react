@@ -5,3 +5,5 @@ export * as PasswordInput from './password-input';
 export * as Disclosure from './disclosure';
 export * as CharacterCount from './character-count';
 export * as Choices from './choices';
+export * as AutoFocus from './auto-focus';
+export * as FocusLinks from './focus-links';
