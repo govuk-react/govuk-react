@@ -6,6 +6,7 @@ export const inlineElements = [
   'character-count',
   'choices',
   'disclosure',
+  'file-upload',
   'focus-links',
   'modal',
   'password-input',
