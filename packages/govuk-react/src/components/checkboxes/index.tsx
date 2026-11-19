@@ -20,9 +20,13 @@ export {
   type DividerProps,
 } from 'govuk-frontend-react/checkboxes';
 
-/** Hides a reveal whose checkbox isn't checked, before or without JavaScript. */
-export const checkboxesCss =
-  '.govuk-checkboxes__item:has(>.govuk-checkboxes__input:not(:checked))+.govuk-checkboxes__conditional{display:none}';
+/** Shows a reveal only while its checkbox is checked, before or without JavaScript. */
+export const checkboxesCss = [
+  // Hides a reveal whose checkbox isn't checked.
+  '.govuk-checkboxes__item:has(>.govuk-checkboxes__input:not(:checked))+.govuk-checkboxes__conditional{display:none}',
+  // Shows one whose checkbox is, over govuk-frontend's hidden class, until the element upgrades.
+  '.govuk-checkboxes__item:has(>.govuk-checkboxes__input:checked)+.govuk-checkboxes__conditional{display:block}',
+].join('');
 
 /** The element and styles around the checkboxes, for `Root` and `Field`. */
 function Behaviour({ children }: { children: React.ReactNode }) {
@@ -64,12 +68,15 @@ export type InputProps = Markup.InputProps & {
    * checkboxes with its name, and checking one of them unchecks it.
    */
   exclusive?: boolean;
+  /** govuk-frontend's way to make it exclusive: "exclusive". */
+  'data-behaviour'?: string;
 };
 
-export function Input({ controls, exclusive, ...props }: InputProps) {
+export function Input({ controls, exclusive, 'data-behaviour': behaviour, ...props }: InputProps) {
   return (
-    // govuk-frontend's `data-behaviour="exclusive"` works too.
-    <Primitives.Input asChild controls={controls} exclusive={exclusive ?? props['data-behaviour'] === 'exclusive'}>
+    // govuk-frontend's `data-behaviour="exclusive"` works too. It isn't rendered, so govuk-frontend's
+    // own script doesn't handle it as well.
+    <Primitives.Input asChild controls={controls} exclusive={exclusive ?? behaviour === 'exclusive'}>
       <Markup.Input {...props} />
     </Primitives.Input>
   );

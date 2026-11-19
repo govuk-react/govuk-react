@@ -13,7 +13,9 @@
  *   checkboxes with its name when checked, and is unchecked when one of them is.
  * - `[data-choices-conditional]`: the content a choice reveals, with an id.
  *
- * Choices are unchecked with `click()`, so `change` events fire and React's `onChange` sees them.
+ * As in govuk-frontend, that covers checkboxes with the same name and form anywhere on the page,
+ * and checking a radio updates the reveals of its whole group, even across elements. Choices are
+ * unchecked with `click()`, so `change` events fire and React's `onChange` sees them.
  *
  * Attributes:
  * - `upgraded-class`: classes for the element once upgraded.
@@ -43,25 +45,40 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       const input = event.target;
       if (!isChoice(input) || !this.owns(input)) return;
       if (input.type === 'radio') {
-        // Checking a radio unchecks another, with no event for it.
-        this.sync();
+        // Checking a radio unchecks another, with no event for it, maybe in another group.
+        this.syncAll();
         return;
       }
       this.syncInput(input);
       if (!input.checked) return;
       const exclusive = input.hasAttribute('data-choices-exclusive');
-      const others = this.choices().filter(
+      // As govuk-frontend: every checkbox with the name in the form, even in another group.
+      const others = this.inputsNamed(input).filter(
         (other) =>
           other !== input &&
           other.type === 'checkbox' &&
-          other.name === input.name &&
-          other.form === input.form &&
           other.checked &&
           (exclusive || other.hasAttribute('data-choices-exclusive'))
       );
       // Unchecked once this click, and React's updates for it, are done, so each is its own event
       // that React sees.
-      window.setTimeout(() => others.filter((other) => other.checked).forEach((other) => other.click()));
+      window.setTimeout(() => {
+        others
+          .filter((other) => other.checked)
+          .forEach((other) => {
+            // A disabled checkbox ignores `click()`.
+            if (other.disabled) other.checked = false;
+            else other.click();
+          });
+        this.syncAll();
+      });
+    };
+
+    // `reset` changes the choices with no event for each, after it fires.
+    private readonly onReset = (event: Event) => {
+      if (event.target instanceof HTMLFormElement && this.choices().some((input) => input.form === event.target)) {
+        window.setTimeout(() => this.sync());
+      }
     };
 
     private readonly onChange = (event: Event) => {
@@ -74,13 +91,18 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     connectedCallback() {
       this.observer = new MutationObserver((records) => {
         if (records.some((record) => record.type === 'childList')) this.setup();
-        else this.sync();
+        else {
+          // React can rewrite the element's own class.
+          if (this.upgraded) this.addUpgradedClasses();
+          this.sync();
+        }
       });
       // Choices rendered later, and a class React rewrites.
       this.observer.observe(this, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] });
       this.addEventListener('click', this.onClick);
       this.addEventListener('change', this.onChange);
       window.addEventListener('pageshow', this.onPageShow);
+      document.addEventListener('reset', this.onReset, true);
       this.setup();
     }
 
@@ -89,6 +111,26 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.removeEventListener('click', this.onClick);
       this.removeEventListener('change', this.onChange);
       window.removeEventListener('pageshow', this.onPageShow);
+      document.removeEventListener('reset', this.onReset, true);
+    }
+
+    private get root() {
+      const root = this.getRootNode();
+      return root instanceof Document || root instanceof ShadowRoot ? root : document;
+    }
+
+    /** The inputs with the same name and form, anywhere on the page. */
+    private inputsNamed(input: HTMLInputElement) {
+      return Array.from(this.root.querySelectorAll('input')).filter(
+        (other) => other.type === input.type && other.name === input.name && other.form === input.form
+      );
+    }
+
+    /** Syncs every element on the page, for choices that changed in another group. */
+    private syncAll() {
+      Array.from(this.root.querySelectorAll(tagName)).forEach((element) => {
+        if (element instanceof GovukReactChoices) element.sync();
+      });
     }
 
     private owns(element: Element) {
@@ -113,9 +155,14 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       if (!this.upgraded) {
         this.upgraded = true;
         this.dataset.upgraded = '';
-        classesOf(this.getAttribute('upgraded-class')).forEach((name) => this.classList.toggle(name, true));
+        this.addUpgradedClasses();
       }
       this.sync();
+    }
+
+    private addUpgradedClasses() {
+      // `toggle` with force leaves a class that's already there alone, so the observer isn't woken.
+      classesOf(this.getAttribute('upgraded-class')).forEach((name) => this.classList.toggle(name, true));
     }
 
     sync() {

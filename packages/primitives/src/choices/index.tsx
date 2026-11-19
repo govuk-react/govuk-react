@@ -26,7 +26,8 @@ const isChoices = (element: HTMLElement): element is ChoicesElement => 'sync' in
 export function Root({ upgradedClass, hiddenConditionalClass, ...props }: RootProps) {
   const element = useRef<HTMLElement>(null);
 
-  // A `checked` set by React fires no event.
+  // A `checked` set by React fires no event. A change that re-renders only an `Input`, not Root,
+  // shows once Root re-renders or the user next picks.
   useEffect(() => {
     const node = element.current;
     if (node && isChoices(node)) node.sync();

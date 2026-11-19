@@ -151,4 +151,62 @@ describe('Choices', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Choose email' }));
     expect(screen.getByText('Email address')).toBeVisible();
   });
+
+  test('a radio group split across elements keeps every reveal in step', async () => {
+    render(
+      <>
+        <Choices.Root>
+          <Choices.Input type="radio" id="email" name="contact" controls="conditional-email" />
+          <label htmlFor="email">Email</label>
+          <Choices.Conditional id="conditional-email">Email address</Choices.Conditional>
+        </Choices.Root>
+        <Choices.Root>
+          <Choices.Input type="radio" id="phone" name="contact" />
+          <label htmlFor="phone">Phone</label>
+        </Choices.Root>
+      </>
+    );
+    await upgraded();
+    fireEvent.click(screen.getByLabelText('Email'));
+    fireEvent.click(screen.getByLabelText('Phone'));
+    expect(screen.getByText('Email address')).not.toBeVisible();
+    expect(screen.getByLabelText('Email')).toHaveAttribute('aria-expanded', 'false');
+  });
+
+  test('an exclusive checkbox unchecks others with its name in another group, even disabled ones', async () => {
+    render(
+      <>
+        <Choices.Root>
+          <Choices.Input type="checkbox" id="france" name="countries" defaultChecked />
+          <label htmlFor="france">France</label>
+          <Choices.Input type="checkbox" id="spain" name="countries" defaultChecked disabled />
+          <label htmlFor="spain">Spain</label>
+        </Choices.Root>
+        <Choices.Root>
+          <Choices.Input type="checkbox" id="none" name="countries" exclusive />
+          <label htmlFor="none">None</label>
+        </Choices.Root>
+      </>
+    );
+    await upgraded();
+    fireEvent.click(screen.getByLabelText('None'));
+    await settled();
+    expect(screen.getByLabelText('France')).not.toBeChecked();
+    expect(screen.getByLabelText('Spain')).not.toBeChecked();
+  });
+
+  test('a form reset puts the reveals back', async () => {
+    render(
+      <form>
+        <Contact />
+        <button type="reset">Reset</button>
+      </form>
+    );
+    await upgraded();
+    fireEvent.click(screen.getByLabelText('Email'));
+    expect(screen.getByText('Email address')).toBeVisible();
+    screen.getByRole('button', { name: 'Reset' }).closest('form')?.reset();
+    await settled();
+    expect(screen.getByText('Email address')).not.toBeVisible();
+  });
 });
