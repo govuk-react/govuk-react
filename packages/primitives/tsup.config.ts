@@ -17,6 +17,8 @@ export default defineConfig({
     'auto-focus': 'src/auto-focus/index.tsx',
     'auto-focus-element': 'src/auto-focus/element.ts',
     button: 'src/button/index.tsx',
+    'exit-this-page': 'src/exit-this-page/index.tsx',
+    'exit-this-page-element': 'src/exit-this-page/element.ts',
     'button-element': 'src/button/element.ts',
     choices: 'src/choices/index.tsx',
     'choices-element': 'src/choices/element.ts',

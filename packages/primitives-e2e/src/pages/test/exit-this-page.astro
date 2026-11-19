@@ -1,0 +1,14 @@
+---
+import ExitThisPageDemo from '../../components/ExitThisPageDemo.tsx';
+---
+
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Exit this page</title><link rel="icon" href="data:," /></head>
+  <body>
+    <ExitThisPageDemo client:load id="hydrated" />
+    <script>
+      import '@govuk-react/primitives/exit-this-page-element';
+    </script>
+    <style is:inline>.hide-content > :not([role=alert]) { display: none; }</style>
+  </body>
+</html>
