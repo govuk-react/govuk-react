@@ -38,7 +38,10 @@ export function Root({ media, open, defaultOpen, onOpenChange, ...props }: RootP
   useEffect(() => {
     const node = element.current;
     if (!node) return undefined;
-    const onChange = (event: CustomEvent<{ open: boolean }>) => onOpenChangeRef.current?.(event.detail.open);
+    // A nested disclosure's change bubbles through this one.
+    const onChange = (event: CustomEvent<{ open: boolean }>) => {
+      if (event.target === node) onOpenChangeRef.current?.(event.detail.open);
+    };
     node.addEventListener('govuk-react-disclosure:change', onChange);
     return () => node.removeEventListener('govuk-react-disclosure:change', onChange);
   }, []);

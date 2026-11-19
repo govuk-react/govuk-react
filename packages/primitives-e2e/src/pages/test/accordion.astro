@@ -1,0 +1,16 @@
+---
+import AccordionDemo from '../../components/AccordionDemo.tsx';
+---
+
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Accordion</title><link rel="icon" href="data:," /></head>
+  <body>
+    <AccordionDemo client:load id="hydrated" />
+    <AccordionDemo client:load id="controlled" controlled />
+    <!-- No client directive: the element upgrades the server markup, and React never hydrates. -->
+    <AccordionDemo id="upgraded" />
+    <script>
+      import '@govuk-react/primitives/accordion-element';
+    </script>
+  </body>
+</html>

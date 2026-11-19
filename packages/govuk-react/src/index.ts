@@ -1,4 +1,5 @@
 // Components
+export * as Accordion from './components/accordion';
 export { BackLink } from './components/back-link';
 export { Body } from './components/body';
 export * as Breadcrumbs from './components/breadcrumbs';
