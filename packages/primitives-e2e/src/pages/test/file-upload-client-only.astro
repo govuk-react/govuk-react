@@ -1,0 +1,11 @@
+---
+import FileUploadDemo from '../../components/FileUploadDemo.tsx';
+---
+
+<html lang="en">
+  <head><meta charset="utf-8" /><title>File upload</title><link rel="icon" href="data:," /></head>
+  <body>
+    <!-- Rendered only in the browser, with no define script: the React parts define the element. -->
+    <FileUploadDemo client:only="react" id="client" />
+  </body>
+</html>
