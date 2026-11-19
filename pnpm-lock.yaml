@@ -511,18 +511,6 @@ importers:
       '@govuk-react/example-application':
         specifier: ^0.10.7
         version: link:../example-application
-      '@rjsf/core':
-        specifier: ^3.1.0
-        version: 3.1.0(react@19.3.1)
-      final-form:
-        specifier: ^4.20.10
-        version: 4.20.10
-      formik:
-        specifier: ^2.4.5
-        version: 2.4.5(react@19.3.1)
-      react-final-form:
-        specifier: ^6.5.9
-        version: 6.5.9(final-form@4.20.10)(react@19.3.1)
       react-hook-form:
         specifier: ^7.51.1
         version: 7.51.1(react@19.3.1)
