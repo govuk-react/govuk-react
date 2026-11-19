@@ -15,6 +15,7 @@ const pages = [
   { path: '/test/character-count', role: 'button', name: 'Clear' },
   { path: '/test/choices', role: 'radio', name: 'Email' },
   { path: '/test/focus', role: 'button', name: 'Save' },
+  { path: '/test/button', role: 'button', name: 'Save and continue' },
 ] as const;
 
 for (const { path, role, name } of pages) {
