@@ -3,10 +3,16 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import * as FileUpload from '.';
 
-function Example({ disabled, multiple, ...props }: FileUpload.RootProps & { disabled?: boolean; multiple?: boolean }) {
+function Example({
+  disabled,
+  multiple,
+  id = 'upload',
+  describedBy = 'upload-hint',
+  ...props
+}: FileUpload.RootProps & { disabled?: boolean; multiple?: boolean; id?: string; describedBy?: string }) {
   return (
     <form>
-      <label htmlFor="upload">Upload a file</label>
+      <label htmlFor={id}>Upload a file</label>
       <p id="upload-hint">This can be in either JPG or PNG format</p>
       <FileUpload.Root {...props}>
         <FileUpload.DropZone data-testid="zone">
@@ -16,9 +22,9 @@ function Example({ disabled, multiple, ...props }: FileUpload.RootProps & { disa
             Choose file
           </FileUpload.Button>
           <FileUpload.Input
-            id="upload"
+            id={id}
             name="upload"
-            aria-describedby="upload-hint"
+            aria-describedby={describedBy}
             disabled={disabled}
             multiple={multiple}
           />
@@ -170,5 +176,49 @@ describe('FileUpload', () => {
     expect(screen.getByRole('button')).toHaveAttribute('id', 'upload');
     expect(input()).toHaveAttribute('id', 'upload-input');
     expect(screen.getByTestId('status')).toHaveTextContent('passport.jpg');
+  });
+
+  test('follows a new description or id from React', async () => {
+    const { rerender } = render(<Example />);
+    await upgraded();
+    rerender(<Example describedBy="upload-hint upload-error" />);
+    await upgraded();
+    expect(screen.getByRole('button')).toHaveAttribute('aria-describedby', 'upload-hint upload-error');
+    rerender(<Example id="photo" />);
+    await upgraded();
+    expect(screen.getByRole('button')).toHaveAttribute('id', 'photo');
+    expect(screen.getByRole('button')).toHaveAttribute('aria-labelledby', 'upload-label photo-comma photo');
+    expect(input()).toHaveAttribute('id', 'photo-input');
+  });
+
+  test('follows new plural forms', async () => {
+    const { rerender } = render(<Example multipleFilesChosen={{ other: '%{count} chosen' }} />);
+    await upgraded();
+    choose('a.png', 'b.png');
+    rerender(<Example multipleFilesChosen={{ other: '%{count} ffeil' }} />);
+    await upgraded();
+    expect(screen.getByTestId('status')).toHaveTextContent('2 ffeil');
+  });
+
+  test('announces entering the drop zone again after a drop', async () => {
+    render(<Example />);
+    await upgraded();
+    const button = screen.getByRole('button');
+    fireEvent.dragEnter(button, { dataTransfer: dataTransfer(1) });
+    const first = screen.getByTestId('announcements').firstChild;
+    Object.defineProperty(input(), 'files', { configurable: true, writable: true });
+    fireEvent.drop(button, { dataTransfer: dataTransfer(1) });
+    fireEvent.dragEnter(button, { dataTransfer: dataTransfer(1) });
+    expect(screen.getByTestId('announcements')).toHaveTextContent('Entered drop zone');
+    expect(screen.getByTestId('announcements').firstChild).not.toBe(first);
+  });
+
+  test('stops listening to the form once unmounted', async () => {
+    const remove = vi.spyOn(HTMLFormElement.prototype, 'removeEventListener');
+    const { unmount } = render(<Example />);
+    await upgraded();
+    unmount();
+    expect(remove).toHaveBeenCalledWith('reset', expect.any(Function));
+    remove.mockRestore();
   });
 });

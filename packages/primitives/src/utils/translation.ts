@@ -17,6 +17,9 @@ export function translationAttributes(name: string, message: Translation | undef
   );
 }
 
+/** Every attribute `translationAttributes` can write for a message, to observe. */
+export const translationAttributeNames = (name: string) => [name, ...pluralForms.map((form) => `${name}-${form}`)];
+
 /** Reads a message back from attributes written by `translationAttributes`. */
 export function translationFromAttributes(element: Element, name: string): Translation | undefined {
   const message = element.getAttribute(name);

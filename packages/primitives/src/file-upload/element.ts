@@ -33,7 +33,12 @@
  * - `disabled-class`: classes for the drop zone while the input is disabled.
  */
 
-import { translate, translationFromAttributes, type Translation } from '../utils/translation';
+import {
+  translate,
+  translationAttributeNames,
+  translationFromAttributes,
+  type Translation,
+} from '../utils/translation';
 
 export const tagName = 'govuk-react-file-upload';
 
@@ -81,12 +86,19 @@ const countFiles = (items: DataTransferItemList) => Array.from(items).filter((it
 if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined') {
   class GovukReactFileUpload extends HTMLElement implements FileUploadElement {
     static get observedAttributes() {
-      return ['empty-class', 'dragging-class', 'disabled-class', ...Object.keys(defaults)];
+      return [
+        'empty-class',
+        'dragging-class',
+        'disabled-class',
+        ...Object.keys(defaults).flatMap(translationAttributeNames),
+      ];
     }
 
     private input?: HTMLInputElement;
 
     private button?: HTMLButtonElement;
+
+    private form?: HTMLFormElement | null;
 
     /** The input's id before upgrade, which the button takes. */
     private fieldId = '';
@@ -141,16 +153,13 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     };
 
     connectedCallback() {
-      // The parts may be parsed or rendered later, and React can rewrite a class or `disabled`.
-      this.observer = new MutationObserver((records) => {
-        if (records.some((record) => record.type === 'childList')) this.setup();
-        else this.update();
-      });
+      // The parts may be parsed or rendered later, and React can rewrite the input's attributes.
+      this.observer = new MutationObserver(() => this.setup());
       this.observer.observe(this, {
         childList: true,
         subtree: true,
         attributes: true,
-        attributeFilter: ['class', 'disabled'],
+        attributeFilter: ['class', 'disabled', 'id', 'aria-describedby'],
       });
       document.addEventListener('dragenter', this.onDocumentDragEnter);
       document.addEventListener('dragleave', this.onDocumentDragLeave);
@@ -189,15 +198,16 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       const input = this.own<HTMLInputElement>('input[type="file"]');
       const button = this.own<HTMLButtonElement>('button[data-file-upload-button]');
       if (!input || !button) return;
+      // A new input, or a new id from React, rather than the one the element gave it.
+      if (input.id !== `${this.fieldId}-input`) this.fieldId = input.id;
+      if (!this.fieldId) return;
       if (input !== this.input || button !== this.button) {
         this.unbind();
-        // A new input from React has its first id back.
-        this.fieldId = this.fieldId && input.id === `${this.fieldId}-input` ? this.fieldId : input.id;
-        if (!this.fieldId) return;
         this.input = input;
         this.button = button;
+        this.form = input.form;
         input.addEventListener('change', this.onChange);
-        input.form?.addEventListener('reset', this.onReset);
+        this.form?.addEventListener('reset', this.onReset);
         button.addEventListener('click', this.onClick);
         button.addEventListener('dragover', this.onDragOver);
         button.addEventListener('drop', this.onDrop);
@@ -208,12 +218,13 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     private unbind() {
       this.input?.removeEventListener('change', this.onChange);
-      this.input?.form?.removeEventListener('reset', this.onReset);
+      this.form?.removeEventListener('reset', this.onReset);
       this.button?.removeEventListener('click', this.onClick);
       this.button?.removeEventListener('dragover', this.onDragOver);
       this.button?.removeEventListener('drop', this.onDrop);
       this.input = undefined;
       this.button = undefined;
+      this.form = undefined;
     }
 
     /** Moves the id to the button, names it, and swaps it for the input, as govuk-frontend does. */
@@ -282,7 +293,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     private announce(name: 'entered-drop-zone' | 'left-drop-zone') {
       const announcements = this.own('[data-file-upload-announcements]');
-      if (announcements) setText(announcements, translate(this.message(name), 0, this.locale));
+      // Replaces the text node every time, so screen readers hear the same message again.
+      if (announcements) announcements.textContent = translate(this.message(name), 0, this.locale);
     }
 
     private canDrop(dataTransfer: DataTransfer) {

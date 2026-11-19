@@ -134,7 +134,7 @@ Without JavaScript the `Description` is shown and both statuses are hidden. On u
 ```tsx
 import * as FileUpload from '@govuk-react/primitives/file-upload';
 
-<label htmlFor="photo">Upload a photo</label>
+<label id="photo-label" htmlFor="photo">Upload a photo</label>
 <FileUpload.Root>
   <FileUpload.DropZone>
     <FileUpload.Button>
@@ -148,7 +148,7 @@ import * as FileUpload from '@govuk-react/primitives/file-upload';
 </FileUpload.Root>;
 ```
 
-Without JavaScript the native file input is shown and the `Button` is hidden. On upgrade the element hides the input and shows the button, which opens the file picker, takes files dropped on it, and says in `Status` which files are chosen. As in govuk-frontend, the button takes the input's `id` (the input's gets `-input` added), so the input's label names it, along with its `aria-describedby` and `disabled`. `Announcements` tells screen readers when files are dragged into and out of the `DropZone`.
+Without JavaScript the native file input is shown and the `Button` is hidden. On upgrade the element hides the input and shows the button, which opens the file picker, takes files dropped on it, and says in `Status` which files are chosen. As in govuk-frontend, the button takes the input's `id` (the input's gets `-input` added), so the input's label names it, along with its `aria-describedby` and `disabled`. Give the label an id: without one the element adds it, which React warns about when it hydrates. `Announcements` tells screen readers when files are dragged into and out of the `DropZone`.
 
 The input's files are the state, so there is nothing to control. Dropped files fire bubbling `input` and `change` events, so React's `onChange` hears them. The text is English by default, and `multipleFilesChosen` takes a message for each plural form. The button gets `data-empty` and `data-dragging`, and the drop zone `data-disabled`, for styling, or pass class names such as `emptyClass`.
 
