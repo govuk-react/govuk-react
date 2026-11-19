@@ -106,7 +106,14 @@ export const WithConditional: Story = {
           defaultChecked
           conditional={<Input.Field id="contact-by-email" name="contact-by-email" type="email" label="Email address" />}
         />
-        <Radios.ItemComposite id="contact-2" name="contact" value="phone" label="Phone" />
+        <Radios.ItemComposite
+          id="contact-2"
+          name="contact"
+          value="phone"
+          label="Phone"
+          conditional={<Input.Field id="contact-by-phone" name="contact-by-phone" type="tel" label="Phone number" />}
+        />
+        <Radios.ItemComposite id="contact-3" name="contact" value="text" label="Text message" />
       </>
     ),
   },
