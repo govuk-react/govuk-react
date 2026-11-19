@@ -1,0 +1,11 @@
+---
+import ButtonDemo from '../../components/ButtonDemo.tsx';
+---
+
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Button</title><link rel="icon" href="data:," /></head>
+  <body>
+    <!-- Rendered only in the browser, with no listeners script: the React part adds them. -->
+    <ButtonDemo client:only="react" id="client" />
+  </body>
+</html>
