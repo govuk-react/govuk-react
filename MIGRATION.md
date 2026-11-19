@@ -15,6 +15,8 @@ Load govuk-frontend's CSS once in your app, for example:
 import 'govuk-frontend/dist/govuk/govuk-frontend.min.css';
 ```
 
+Serve govuk-frontend's font and image assets at `/assets`: see [Fonts and images](README.md#fonts-and-images).
+
 | 0.x                                                          | 1.0                                                                         |
 | ------------------------------------------------------------ | --------------------------------------------------------------------------- |
 | `styled-components` peer dependency                          | `govuk-frontend` peer dependency (`~6.6.0`), and its CSS loaded in your app |

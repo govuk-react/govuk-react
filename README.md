@@ -69,6 +69,14 @@ See the [Storybook](https://govuk-react.github.io/govuk-react) for examples of a
 
 Also see the [Example Application](packages/example-application/src) for basic usage.
 
+## Fonts and images
+
+govuk-frontend's CSS loads its fonts and images from `/assets`. Serve `node_modules/govuk-frontend/dist/govuk/assets` at `/assets`, or copy its `fonts` and `images` folders and `manifest.json` into your app's `assets` folder. See govuk-frontend's guide to [importing font and images assets](https://frontend.design-system.service.gov.uk/import-font-and-images-assets/).
+
+"If your service is on the service.gov.uk subdomain you must use the GDS Transport font."
+
+"If your service is publicly available on a subdomain other than service.gov.uk, use an alternative typeface." See the Design System's [typeface guidance](https://design-system.service.gov.uk/styles/typeface/) and [using GOV.UK Frontend without GOV.UK branding](https://frontend.design-system.service.gov.uk/using-govuk-frontend-without-govuk-branding/), which sets `$govuk-font-family` with govuk-frontend's Sass API.
+
 ## Using Link with a Router Link
 
 `Link`, `BackLink` and the navigation link parts take `asChild`, which applies their classes to your router link instead of rendering an `a`:
@@ -89,7 +97,7 @@ const MyComponent = () => (
 Use of these components assumes the following from the peer project:
 
 - `govuk-frontend` is installed and its CSS (`govuk-frontend/dist/govuk/govuk-frontend.min.css`) is loaded.
-- The GDS Transport font face is included ([for gov.uk domains only](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk))
+- govuk-frontend's font and image assets are served at `/assets` (see [Fonts and images](#fonts-and-images)).
 - No other styles affecting generic elements (without classes, IDs etc) are present in the CSS.
 
 ## Imports
@@ -104,10 +112,6 @@ import * as DateInput from 'govuk-react/date-input';
 ## Migrating to 1.0
 
 See [MIGRATION.md](MIGRATION.md).
-
-## About the GDS font
-
-Unfortunately the GDS transport font has a relatively restrictive license [described on the gov.uk blog](https://designnotes.blog.gov.uk/2015/03/11/can-i-use-the-gov-uk-fonts/). We are investigating rendering an elegant alternative before falling back to Arial on [issue 272](https://github.com/govuk-react/govuk-react/issues/272).
 
 ## Related sites and projects
 
