@@ -1,1 +1,27 @@
-export * from 'govuk-frontend-react/summary-list';
+export {
+  Action,
+  ActionComposite,
+  Actions,
+  ActionsList,
+  ActionsListItem,
+  Card,
+  Composite,
+  Key,
+  Root,
+  Row,
+  RowComposite,
+  Value,
+} from 'govuk-frontend-react/summary-list';
+export type {
+  ActionCompositeProps,
+  ActionProps,
+  ActionsListItemProps,
+  ActionsListProps,
+  ActionsProps,
+  CompositeProps,
+  KeyProps,
+  RootProps,
+  RowCompositeProps,
+  RowProps,
+  ValueProps,
+} from 'govuk-frontend-react/summary-list';

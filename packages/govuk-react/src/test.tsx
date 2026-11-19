@@ -1,8 +1,10 @@
 import fs from 'fs';
 import path from 'path';
+import { pathToFileURL } from 'url';
 
 import * as packageExports from '.';
 
+const sources = import.meta.glob<Record<string, unknown>>('./components/*/index.tsx');
 const stories = import.meta.glob<{ default: { id: string } }>('./components/*/stories.tsx', { eager: true });
 
 describe('Exports', () => {
@@ -45,6 +47,28 @@ describe('Components', () => {
       it(`has a stories.tsx file with id set to "${component}""`, () => {
         expect(stories[`./components/${component}/stories.tsx`].default.id).toBe(component);
       });
+    })
+  );
+});
+
+const distDir = path.join(__dirname, '../dist');
+const importBuilt = (entry: string): Promise<Record<string, unknown>> =>
+  import(/* @vite-ignore */ pathToFileURL(path.join(distDir, `${entry}.js`)).href);
+
+// GitHub Actions builds before testing; locally, run `pnpm build` first
+describe.runIf(process.env.GITHUB_ACTIONS || fs.existsSync(distDir))('Built entries', () => {
+  it('govuk-react has the same exports as its source', async () => {
+    const built = await importBuilt('index');
+    expect(Object.keys(built).sort()).toEqual(Object.keys(packageExports).sort());
+  });
+
+  dirs(path.join(__dirname, 'components')).map((component) =>
+    it(`govuk-react/${component} has the same exports as its source`, async () => {
+      const [built, source] = await Promise.all([
+        importBuilt(component),
+        sources[`./components/${component}/index.tsx`](),
+      ]);
+      expect(Object.keys(built).sort()).toEqual(Object.keys(source).sort());
     })
   );
 });

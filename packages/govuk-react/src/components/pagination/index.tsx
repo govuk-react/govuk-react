@@ -1,1 +1,32 @@
-export * from 'govuk-frontend-react/pagination';
+export {
+  Composite,
+  Item,
+  ItemComposite,
+  ItemLink,
+  Link,
+  LinkLabel,
+  LinkTitle,
+  List,
+  Next,
+  NextIcon,
+  NextLink,
+  NextLinkTitleComposite,
+  Previous,
+  PreviousIcon,
+  PreviousLink,
+  PreviousLinkTitleComposite,
+  Root,
+} from 'govuk-frontend-react/pagination';
+export type {
+  CompositeProps,
+  IconProps,
+  ItemCompositeProps,
+  ItemProps,
+  LinkLabelProps,
+  LinkProps,
+  LinkTitleProps,
+  ListProps,
+  NextProps,
+  PreviousProps,
+  RootProps,
+} from 'govuk-frontend-react/pagination';
