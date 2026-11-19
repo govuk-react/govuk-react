@@ -9,6 +9,22 @@ Each primitive:
 - adds React state (`value`, `defaultValue`, `onValueChange`) once hydrated
 - takes `asChild` on every part, so you render your own elements
 
+## Inline scripts
+
+Each element is also built as a small, self-contained classic script, with no imports and no React, at `@govuk-react/primitives/inline/<name>-element.js`, such as `inline/tabs-element.js`. Inline the ones your page uses, so the markup is interactive as soon as it loads, before React has downloaded and hydrated. React's parts then pick up from the elements, including anything the user did before hydration. Each element is defined only once, whichever runs first: the inline script or React's bundle.
+
+To render them from React on the server, `inline-script` has each script as a string, and an `InlineScript` component:
+
+```tsx
+import { InlineScript, tabs } from '@govuk-react/primitives/inline-script';
+
+<head>
+  <InlineScript script={tabs} nonce={nonce} />
+</head>;
+```
+
+The scripts are `accordion`, `autoFocus`, `button`, `characterCount`, `choices`, `disclosure`, `exitThisPage`, `fileUpload`, `focusLinks`, `modal`, `passwordInput` and `tabs`. `InlineScript` isn't a client component, so the scripts stay out of client bundles. A script React adds in the browser doesn't run, and isn't needed, since React's parts define their elements.
+
 ## Accordion
 
 ```tsx
