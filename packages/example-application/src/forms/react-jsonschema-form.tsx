@@ -162,7 +162,7 @@ const ReactJSONSchemaForm: React.FC = () => {
             validate={validate}
             onError={() => null}
           >
-            <GovUK.Button.Composite type="submit">Submit</GovUK.Button.Composite>
+            <GovUK.Button type="submit">Submit</GovUK.Button>
           </Form>
         </>
       )}

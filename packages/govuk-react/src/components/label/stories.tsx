@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 
-import * as Input from '../input';
+import { Input } from '../input';
 import { LabelComposite } from '.';
 
 const meta = {
@@ -21,7 +21,7 @@ export const WithInput: Story = {
   render: (args) => (
     <>
       <LabelComposite {...args} />
-      <Input.Control id="example" name="example" />
+      <Input id="example" name="example" />
     </>
   ),
 };

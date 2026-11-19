@@ -4,5 +4,10 @@
   "commit": false,
   "access": "public",
   "baseBranch": "main",
-  "ignore": ["@govuk-react/api-docs", "@govuk-react/example-application", "@govuk-react/images", "@govuk-react/storybook"]
+  "ignore": [
+    "@govuk-react/api-docs",
+    "@govuk-react/example-application",
+    "@govuk-react/images",
+    "@govuk-react/storybook"
+  ]
 }

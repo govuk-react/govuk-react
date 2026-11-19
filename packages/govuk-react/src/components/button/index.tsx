@@ -1,10 +1,15 @@
 import * as React from 'react';
 import type { ElementType, ReactNode } from 'react';
 import * as Primitives from '@govuk-react/primitives/button';
-import * as Markup from 'govuk-frontend-react/button';
+import {
+  Button as MarkupButton,
+  StartButton as MarkupStartButton,
+  type ButtonLinkProps,
+  type ButtonProps,
+} from 'govuk-frontend-react/button';
 
-export { StartContent, StartIcon } from 'govuk-frontend-react/button';
-export type { LinkProps, RootProps, StartIconProps, Variant } from 'govuk-frontend-react/button';
+export { StartButtonContent, StartButtonIcon } from 'govuk-frontend-react/button';
+export type { ButtonLinkProps, ButtonProps, ButtonVariant, StartButtonIconProps } from 'govuk-frontend-react/button';
 
 /**
  * Use the button component to help users carry out an action.
@@ -14,32 +19,32 @@ export type { LinkProps, RootProps, StartIconProps, Variant } from 'govuk-fronte
  *
  * @see https://design-system.service.gov.uk/components/button/
  */
-export function Root(props: Markup.LinkProps): ReactNode;
-export function Root<As extends ElementType = 'button'>(props: Markup.RootProps<As>): ReactNode;
-export function Root(props: Markup.RootProps<ElementType>) {
+export function Button(props: ButtonLinkProps): ReactNode;
+export function Button<As extends ElementType = 'button'>(props: ButtonProps<As>): ReactNode;
+export function Button(props: ButtonProps<ElementType>) {
   return (
     // Covers `as` components too, which govuk-frontend-react doesn't mark. Links can't be double submitted.
     <Primitives.Root asChild preventDoubleClick={props.href ? undefined : props.preventDoubleClick}>
-      <Markup.Root {...props} />
+      <MarkupButton {...props} />
     </Primitives.Root>
   );
 }
 
 /**
- * Use the button component to help users carry out an action.
+ * Use a start button for the main call to action on your service's start page.
  *
  * As in govuk-frontend, with `preventDoubleClick` a second click within a second is ignored, and
  * Space activates a link button.
  *
- * @see https://design-system.service.gov.uk/components/button/
+ * @see https://design-system.service.gov.uk/components/button/#start-buttons
  */
-export function Composite(props: Markup.LinkProps): ReactNode;
-export function Composite<As extends ElementType = 'button'>(props: Markup.RootProps<As>): ReactNode;
-export function Composite(props: Markup.RootProps<ElementType>) {
+export function StartButton(props: Omit<ButtonLinkProps, 'start'>): ReactNode;
+export function StartButton<As extends ElementType = 'button'>(props: Omit<ButtonProps<As>, 'start'>): ReactNode;
+export function StartButton(props: Omit<ButtonProps<ElementType>, 'start'>) {
   return (
     // Covers `as` components too, which govuk-frontend-react doesn't mark. Links can't be double submitted.
     <Primitives.Root asChild preventDoubleClick={props.href ? undefined : props.preventDoubleClick}>
-      <Markup.Composite {...props} />
+      <MarkupStartButton {...props} />
     </Primitives.Root>
   );
 }

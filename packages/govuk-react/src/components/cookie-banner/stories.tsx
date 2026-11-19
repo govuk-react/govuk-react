@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { Meta } from '@storybook/react';
-import * as Button from '../button';
+import { Button } from '../button';
 import { Body } from '../body';
 import { Link } from '../link';
 import * as CookieBanner from '.';
@@ -18,8 +18,8 @@ export const Default = {
         heading="Cookies on [name of service]"
         actions={
           <>
-            <Button.Root type="button">Accept analytics cookies</Button.Root>{' '}
-            <Button.Root type="button">Reject analytics cookies</Button.Root> <Link href="#">View cookies</Link>
+            <Button type="button">Accept analytics cookies</Button>{' '}
+            <Button type="button">Reject analytics cookies</Button> <Link href="#">View cookies</Link>
           </>
         }
       >

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 
 import * as Radios from '.';
-import * as Input from '../input';
+import { InputField } from '../input';
 
 const meta = {
   title: 'Form/Radios',
@@ -104,14 +104,14 @@ export const WithConditional: Story = {
           value="email"
           label="Email"
           defaultChecked
-          conditional={<Input.Field id="contact-by-email" name="contact-by-email" type="email" label="Email address" />}
+          conditional={<InputField id="contact-by-email" name="contact-by-email" type="email" label="Email address" />}
         />
         <Radios.ItemComposite
           id="contact-2"
           name="contact"
           value="phone"
           label="Phone"
-          conditional={<Input.Field id="contact-by-phone" name="contact-by-phone" type="tel" label="Phone number" />}
+          conditional={<InputField id="contact-by-phone" name="contact-by-phone" type="tel" label="Phone number" />}
         />
         <Radios.ItemComposite id="contact-3" name="contact" value="text" label="Text message" />
       </>

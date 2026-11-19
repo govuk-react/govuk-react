@@ -75,7 +75,7 @@ const OneOf = ({ schema, uiSchema, name, onChange, rawErrors }) => {
     );
   }
   return (
-    <GovUK.Select.Field
+    <GovUK.SelectField
       id={name}
       name={name}
       label={schema.title}
@@ -89,7 +89,7 @@ const OneOf = ({ schema, uiSchema, name, onChange, rawErrors }) => {
           {item.title}
         </option>
       ))}
-    </GovUK.Select.Field>
+    </GovUK.SelectField>
   );
 };
 
@@ -106,7 +106,7 @@ const handleFilesChanged =
   };
 
 const FileUpload = ({ rawErrors, schema, onChange, name }) => (
-  <GovUK.FileUpload.Field
+  <GovUK.FileUploadField
     id={name}
     name={name}
     label={schema.title}
@@ -117,7 +117,7 @@ const FileUpload = ({ rawErrors, schema, onChange, name }) => (
 );
 
 const TextArea = ({ schema, rawErrors, onChange, name }) => (
-  <GovUK.Textarea.Field
+  <GovUK.TextareaField
     id={name}
     name={name}
     label={schema.title}
@@ -128,7 +128,7 @@ const TextArea = ({ schema, rawErrors, onChange, name }) => (
 );
 
 const InputField = ({ schema, rawErrors, onChange, name }) => (
-  <GovUK.Input.Field
+  <GovUK.InputField
     id={name}
     name={name}
     label={schema.title}

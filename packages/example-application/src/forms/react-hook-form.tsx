@@ -80,14 +80,14 @@ const ReactHookForm: React.FC = () => {
               </GovUK.ErrorSummary.Composite>
             )}
             <GovUK.Fieldset.Composite legend="About you" legendSize="m">
-              <GovUK.Input.Field
+              <GovUK.InputField
                 id="firstName"
                 label="First name"
                 hint="You can find this on your passport"
                 errorMessage={shownError(errors?.firstName?.message)}
                 {...register('firstName', { validate: validateFirstName })}
               />
-              <GovUK.Textarea.Field
+              <GovUK.TextareaField
                 id="description"
                 label="Description of what you saw"
                 hint="Enter as many words as you like"
@@ -127,7 +127,7 @@ const ReactHookForm: React.FC = () => {
               />
             </GovUK.Fieldset.Composite>
             <GovUK.Fieldset.Composite legend="About your pet" legendSize="m">
-              <GovUK.Select.Field
+              <GovUK.SelectField
                 id="animal"
                 label="What animal is your pet"
                 hint="A cat for example"
@@ -135,8 +135,8 @@ const ReactHookForm: React.FC = () => {
                 {...register('animal', { validate: validateAnimal })}
               >
                 {animalOptions}
-              </GovUK.Select.Field>
-              <GovUK.FileUpload.Field
+              </GovUK.SelectField>
+              <GovUK.FileUploadField
                 id="petPhoto"
                 label="Please upload a recent photograph"
                 hint="This can be in either JPG or PNG format"
@@ -164,9 +164,9 @@ const ReactHookForm: React.FC = () => {
                 />
               </GovUK.Radios.Field>
             </GovUK.Fieldset.Composite>
-            <GovUK.Button.Composite type="submit" disabled={isSubmitting}>
+            <GovUK.Button type="submit" disabled={isSubmitting}>
               Submit
-            </GovUK.Button.Composite>
+            </GovUK.Button>
           </GovUK.LoadingBox>
         </form>
       )}

@@ -93,7 +93,7 @@ const FinalForm: React.FC = () => {
                   <GovUK.Fieldset.Composite legend="About you" legendSize="m">
                     <Field name="firstName" validate={validateFirstName}>
                       {({ input, meta }) => (
-                        <GovUK.Input.Field
+                        <GovUK.InputField
                           {...input}
                           id="firstName"
                           label="First name"
@@ -104,7 +104,7 @@ const FinalForm: React.FC = () => {
                     </Field>
                     <Field name="description" validate={validateDescription}>
                       {({ input, meta }) => (
-                        <GovUK.Textarea.Field
+                        <GovUK.TextareaField
                           {...input}
                           id="description"
                           label="Description of what you saw"
@@ -152,7 +152,7 @@ const FinalForm: React.FC = () => {
                   <GovUK.Fieldset.Composite legend="About your pet" legendSize="m">
                     <Field name="animal" validate={validateAnimal}>
                       {({ input, meta }) => (
-                        <GovUK.Select.Field
+                        <GovUK.SelectField
                           {...input}
                           id="animal"
                           label="What animal is your pet"
@@ -160,12 +160,12 @@ const FinalForm: React.FC = () => {
                           errorMessage={shownError(meta)}
                         >
                           {animalOptions}
-                        </GovUK.Select.Field>
+                        </GovUK.SelectField>
                       )}
                     </Field>
                     <Field<FileList> name="petPhoto" validate={validatePetPhoto}>
                       {({ input: { value, onChange, ...input }, meta }) => (
-                        <GovUK.FileUpload.Field
+                        <GovUK.FileUploadField
                           {...input}
                           id="petPhoto"
                           label="Please upload a recent photograph"
@@ -201,9 +201,9 @@ const FinalForm: React.FC = () => {
                       ))}
                     </GovUK.Radios.Field>
                   </GovUK.Fieldset.Composite>
-                  <GovUK.Button.Composite onClick={handleSubmit} disabled={isSubmitting}>
+                  <GovUK.Button onClick={handleSubmit} disabled={isSubmitting}>
                     Submit
-                  </GovUK.Button.Composite>
+                  </GovUK.Button>
                 </GovUK.LoadingBox>
               </form>
             );

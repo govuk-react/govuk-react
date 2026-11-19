@@ -2,14 +2,14 @@ import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 import { BrowserRouter, Link as RouterLink } from 'react-router-dom';
 
-import * as Button from '.';
+import { Button, StartButton } from '.';
 
 const meta = {
   title: 'Form/Button',
   id: 'button',
-  component: Button.Composite,
+  component: Button,
   args: { children: 'Save and continue' },
-} satisfies Meta<typeof Button.Composite>;
+} satisfies Meta<typeof Button>;
 
 export default meta;
 
@@ -18,7 +18,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 export const Start: Story = {
-  args: { start: true, children: 'Start now' },
+  render: () => <StartButton href="#">Start now</StartButton>,
 };
 
 export const Secondary: Story = {
@@ -45,9 +45,9 @@ export const LinkButton: Story = {
 export const RouterLinkButton: Story = {
   render: () => (
     <BrowserRouter>
-      <Button.Root as={RouterLink} to="/">
+      <Button as={RouterLink} to="/">
         Router link button
-      </Button.Root>
+      </Button>
     </BrowserRouter>
   ),
 };

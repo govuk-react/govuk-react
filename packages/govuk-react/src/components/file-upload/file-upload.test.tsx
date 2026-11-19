@@ -3,7 +3,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { act, fireEvent, render } from '@testing-library/react';
 import { FileUpload as FrontendFileUpload } from 'govuk-frontend';
 import * as Markup from 'govuk-frontend-react/file-upload';
-import * as FileUpload from '.';
+import { EnhancedFileUpload, FileUploadField } from '.';
 
 // The element upgrades in connectedCallback, after React commits.
 const upgraded = () => act(() => Promise.resolve());
@@ -44,7 +44,7 @@ const choose = (container: Element, ...names: string[]) => {
 };
 
 // From govuk-frontend's fixtures.
-const cases: Record<string, FileUpload.EnhancedFieldProps> = {
+const cases: Record<string, EnhancedFileUpload.FieldProps> = {
   enhanced: { id: 'file-upload-1', name: 'file-upload-1', label: 'Upload a file' },
   'enhanced, with error message and hint': {
     id: 'file-upload-2',
@@ -85,13 +85,15 @@ describe('FileUpload', () => {
   afterEach(() => document.body.classList.remove('govuk-frontend-supported'));
 
   test.each(Object.entries(cases))('without JavaScript, renders govuk-frontend-react’s markup: %s', (_, props) => {
-    const ours = parse(renderToStaticMarkup(<FileUpload.EnhancedField {...props} />));
+    const ours = parse(renderToStaticMarkup(<EnhancedFileUpload.Field {...props} />));
     ours.querySelectorAll('[data-file-upload-button], [data-file-upload-announcements]').forEach((element) => {
       element.remove();
     });
     // The id govuk-frontend's script gives the label, which ours renders up front.
     ours.querySelector('label')?.removeAttribute('id');
-    expect(normalise(ours)).toBe(normalise(parse(renderToStaticMarkup(<Markup.Field javascript {...props} />))));
+    expect(normalise(ours)).toBe(
+      normalise(parse(renderToStaticMarkup(<Markup.FileUploadField javascript {...props} />)))
+    );
   });
 
   test.each(Object.entries(cases))(
@@ -99,7 +101,7 @@ describe('FileUpload', () => {
     async (_, props) => {
       // govuk-frontend finds the label in the document, so run it on its own first.
       document.body.classList.add('govuk-frontend-supported');
-      const theirs = parse(renderToStaticMarkup(<Markup.Field javascript {...props} />));
+      const theirs = parse(renderToStaticMarkup(<Markup.FileUploadField javascript {...props} />));
       document.body.appendChild(theirs);
       const root = theirs.querySelector<HTMLElement>('.govuk-file-upload-wrapper');
       if (!root) throw new Error('No file upload');
@@ -111,7 +113,7 @@ describe('FileUpload', () => {
       const theirsTwoFiles = normalise(theirs);
       theirs.remove();
 
-      const { container } = render(<FileUpload.EnhancedField {...props} />);
+      const { container } = render(<EnhancedFileUpload.Field {...props} />);
       await upgraded();
       expect(normalise(container)).toBe(theirsAtFirst);
       choose(container, 'passport.jpg');
@@ -122,7 +124,7 @@ describe('FileUpload', () => {
   );
 
   test('Field is the native file input, with no button', () => {
-    const { container } = render(<FileUpload.Field id="file-upload-1" name="fileUpload1" label="Upload a file" />);
+    const { container } = render(<FileUploadField id="file-upload-1" name="fileUpload1" label="Upload a file" />);
     expect(container.querySelector('button')).toBeNull();
     expect(container.querySelector('.govuk-file-upload-wrapper')).toBeNull();
   });

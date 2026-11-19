@@ -26,18 +26,17 @@ import 'govuk-frontend/dist/govuk/govuk-frontend.min.css';
 
 ## Imports
 
-Every export is named. Multi-part components are modules of parts, such as `Input.Field` and `Input.Control`, with a `Composite` or `Field` that renders the whole component. Import from the package root, or from a component's subpath:
+Every export is named. Single components have flat names, such as `Button`, `Input` and `InputField`. Multi-part components are modules of parts, such as `DateInput.Item`, with a `Composite` or `Field` that renders the whole component. Import from the package root, or from a component's subpath:
 
 ```js
 import { Heading, Input } from 'govuk-react';
 import * as DateInput from 'govuk-react/date-input';
 ```
 
-| 0.x                                         | 1.0                                                               |
-| ------------------------------------------- | ----------------------------------------------------------------- |
-| `import Button from '@govuk-react/button'`  | `import * as Button from 'govuk-react/button'`                    |
-| `import { Button } from 'govuk-react'`      | `import { Button } from 'govuk-react'`, then `<Button.Composite>` |
-| `import Heading from 'govuk-react/heading'` | `import { Heading } from 'govuk-react/heading'`                   |
+| 0.x                                         | 1.0                                             |
+| ------------------------------------------- | ----------------------------------------------- |
+| `import Button from '@govuk-react/button'`  | `import { Button } from 'govuk-react/button'`   |
+| `import Heading from 'govuk-react/heading'` | `import { Heading } from 'govuk-react/heading'` |
 
 ## Props that every component had
 
@@ -52,12 +51,12 @@ import * as DateInput from 'govuk-react/date-input';
 
 ## Removed modules
 
-| 0.x                                                                                               | 1.0                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `@govuk-react/constants` (`SPACING`, `MEDIA_QUERIES`, `FONT_SIZE`, `BREAKPOINTS` and so on)       | removed: use govuk-frontend's classes, its Sass settings, or its custom properties such as `--govuk-breakpoint-tablet`                           |
-| `@govuk-react/lib` (`spacing`, `typography`, `link`, `shape`, `visuallyHidden`, `withWhiteSpace`) | removed: use `overrideClasses`, govuk-frontend's classes, `Link` or `VisuallyHidden`                                                             |
-| `govuk-colours`                                                                                   | removed: use govuk-frontend's colour custom properties, such as `var(--govuk-brand-colour)`                                                      |
-| `@govuk-react/icons` and the `SearchIcon`, `ArrowLeft`, `Spinner` and `ButtonArrow` exports       | removed: the components that need an icon render it. `<Button.Composite start>`, `BackLink`, `SearchBox.Composite` and `LoadingBox` replace them |
+| 0.x                                                                                               | 1.0                                                                                                                                   |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `@govuk-react/constants` (`SPACING`, `MEDIA_QUERIES`, `FONT_SIZE`, `BREAKPOINTS` and so on)       | removed: use govuk-frontend's classes, its Sass settings, or its custom properties such as `--govuk-breakpoint-tablet`                |
+| `@govuk-react/lib` (`spacing`, `typography`, `link`, `shape`, `visuallyHidden`, `withWhiteSpace`) | removed: use `overrideClasses`, govuk-frontend's classes, `Link` or `VisuallyHidden`                                                  |
+| `govuk-colours`                                                                                   | removed: use govuk-frontend's colour custom properties, such as `var(--govuk-brand-colour)`                                           |
+| `@govuk-react/icons` and the `SearchIcon`, `ArrowLeft`, `Spinner` and `ButtonArrow` exports       | removed: the components that need an icon render it. `<StartButton>`, `BackLink`, `SearchBox.Composite` and `LoadingBox` replace them |
 
 ## New components
 
@@ -164,14 +163,14 @@ There is no equivalent for the whitespace props (`mb`, `margin`, `padding` and s
 
 ## WarningText
 
-`WarningText` is now govuk-frontend-react's `WarningText`, a module of parts. `WarningText.Composite` renders the whole component, and `Root`, `Icon`, `Text` and `TextComposite` are available for custom markup.
+`WarningText` is now govuk-frontend-react's `WarningText`.
 
-| 0.x                                                  | 1.0                                                       |
-| ---------------------------------------------------- | --------------------------------------------------------- |
-| `import WarningText from 'govuk-react/warning-text'` | `import * as WarningText from 'govuk-react/warning-text'` |
-| `<WarningText>`                                      | `<WarningText.Composite>`                                 |
+| 0.x                                                  | 1.0                                                      |
+| ---------------------------------------------------- | -------------------------------------------------------- |
+| `import WarningText from 'govuk-react/warning-text'` | `import { WarningText } from 'govuk-react/warning-text'` |
+| `<WarningText>`                                      | `<WarningText>`                                          |
 
-The composite adds govuk-frontend's visually hidden "Warning" text before the message. Change it with `iconFallbackText`. The whitespace props (`mb` and so on) are removed.
+It adds govuk-frontend's visually hidden "Warning" text before the message. Change it with `iconFallbackText`. The whitespace props (`mb` and so on) are removed.
 
 ## Tag
 
@@ -271,19 +270,19 @@ The `as` prop is removed.
 
 ## Form controls
 
-The form components are now govuk-frontend-react's. Each control is a module of parts with a `Field` composite that renders the label or legend, hint and error message for you. The `input`/`meta` props (the old Redux Form and Final Form shape) are gone, as are Button's `icon` and colour props, and `DateField.Container` and `DateField.Input`: pass `value`, `onChange`, `ref` and other DOM props directly, and pass the error text as `errorMessage`. The whitespace props (`mb` and so on) are removed.
+The form components are now govuk-frontend-react's. Each control has a flat name, such as `Input`, and a `Field` composite, such as `InputField`, that renders the label or legend, hint and error message for you. The `input`/`meta` props (the old Redux Form and Final Form shape) are gone, as are Button's `icon` and colour props, and `DateField.Container` and `DateField.Input`: pass `value`, `onChange`, `ref` and other DOM props directly, and pass the error text as `errorMessage`. The whitespace props (`mb` and so on) are removed.
 
 | 0.x                                                          | 1.0                                                                                                                                                 |
 | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `<Button>`                                                   | `<Button.Composite>` (`Button.Root` for custom markup)                                                                                              |
-| `<Button start>`                                             | `<Button.Composite start>`                                                                                                                          |
+| `<Button>`                                                   | `<Button>`                                                                                                                                          |
+| `<Button start>`                                             | `<StartButton>`                                                                                                                                     |
 | `<Button buttonColour="…">` and the other colour props       | removed: use `variant` (`secondary`, `warning` or `inverse`) or your own CSS                                                                        |
-| `<Button as={RouterLink} to="/">`                            | `<Button.Composite as={RouterLink} to="/">`                                                                                                         |
-| `<InputField hint="…" input={…} meta={…}>Label</InputField>` | `<Input.Field id="…" name="…" label="Label" hint="…" errorMessage={error} />`                                                                       |
-| `<Input>`                                                    | `<Input.Control>`                                                                                                                                   |
-| `<TextArea>`                                                 | `<Textarea.Field>` (`Textarea.Control` for the bare control)                                                                                        |
-| `<Select label="…">`                                         | `<Select.Field label="…">` (`Select.Control` for the bare control)                                                                                  |
-| `<FileUpload acceptedFormats="…">Label</FileUpload>`         | `<FileUpload.Field id="…" name="…" label="Label" accept="…" />`                                                                                     |
+| `<Button as={RouterLink} to="/">`                            | `<Button as={RouterLink} to="/">`                                                                                                                   |
+| `<InputField hint="…" input={…} meta={…}>Label</InputField>` | `<InputField id="…" name="…" label="Label" hint="…" errorMessage={error} />`                                                                        |
+| `<Input>`                                                    | `<Input>`                                                                                                                                           |
+| `<TextArea>`                                                 | `<TextareaField>` (`Textarea` for the bare control)                                                                                                 |
+| `<Select label="…">`                                         | `<SelectField label="…">` (`Select` for the bare control)                                                                                           |
+| `<FileUpload acceptedFormats="…">Label</FileUpload>`         | `<FileUploadField id="…" name="…" label="Label" accept="…" />` (`EnhancedFileUpload.Field` for the improved file upload)                            |
 | `<Checkbox hint="…" sizeVariant="SMALL">Label</Checkbox>`    | `<Checkboxes.ItemComposite id="…" name="…" value="…" label="Label" hint="…" />` inside `<Checkboxes.Field idPrefix="…" legend="…" small>`           |
 | `<MultiChoice label="…">` with `<Radio inline>`              | `<Radios.Field idPrefix="…" legend="…" inline>` with `<Radios.ItemComposite id="…" label="…" />`                                                    |
 | `<DateField errorText hintText defaultValues inputNames>`    | `<DateInput.Field id="…" legend="…" errorMessage hint values namePrefix>`; for controlled inputs or other names, pass `DateInput.Item`s as children |

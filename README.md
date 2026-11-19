@@ -60,7 +60,7 @@ import { Button } from 'govuk-react';
 const MyComponent = ({ title }) => (
   <div>
     <h1>{title}</h1>
-    <Button.Composite>Save and continue</Button.Composite>
+    <Button>Save and continue</Button>
   </div>
 );
 ```
