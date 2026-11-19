@@ -1,8 +1,69 @@
 # Migrating to govuk-react 1.0
 
-govuk-react 1.0 is built on [govuk-frontend-react](https://github.com/govuk-react/govuk-frontend-react), which renders govuk-frontend's markup. Load govuk-frontend's CSS in your app (`govuk-frontend/dist/govuk/govuk-frontend.min.css`) and install `govuk-frontend` as a peer dependency.
+govuk-react 1.0 is a clean break from 0.x. It's built on [govuk-frontend-react](https://github.com/govuk-react/govuk-frontend-react), which renders govuk-frontend's markup and classes, so govuk-frontend's CSS styles every component. There is no CSS-in-JS.
 
-Components move over one at a time. Anything not listed here is unchanged for now.
+## Install
+
+```sh
+npm uninstall styled-components @types/styled-components
+npm install govuk-react govuk-frontend
+```
+
+Load govuk-frontend's CSS once in your app, for example:
+
+```js
+import 'govuk-frontend/dist/govuk/govuk-frontend.min.css';
+```
+
+| 0.x                                                          | 1.0                                                                         |
+| ------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| `styled-components` peer dependency                          | `govuk-frontend` peer dependency (`~6.6.0`), and its CSS loaded in your app |
+| React 16.8 or later                                          | React 19 or later                                                           |
+| CommonJS and ES module builds                                | ES modules only                                                             |
+| `@govuk-react/*` packages, one per component                 | the single `govuk-react` package                                            |
+| `<GlobalStyle />`                                            | removed: govuk-frontend's CSS styles the page                               |
+| Server rendering needs styled-components' `ServerStyleSheet` | nothing extra: components render plain markup                               |
+
+## Imports
+
+Every export is named. Multi-part components are modules of parts, such as `Input.Field` and `Input.Control`, with a `Composite` or `Field` that renders the whole component. Import from the package root, or from a component's subpath:
+
+```js
+import { Heading, Input } from 'govuk-react';
+import * as DateInput from 'govuk-react/date-input';
+```
+
+| 0.x                                         | 1.0                                                               |
+| ------------------------------------------- | ----------------------------------------------------------------- |
+| `import Button from '@govuk-react/button'`  | `import * as Button from 'govuk-react/button'`                    |
+| `import { Button } from 'govuk-react'`      | `import { Button } from 'govuk-react'`, then `<Button.Composite>` |
+| `import Heading from 'govuk-react/heading'` | `import { Heading } from 'govuk-react/heading'`                   |
+
+## Props that every component had
+
+| 0.x                                                    | 1.0                                                                                                                         |
+| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| Whitespace props (`mb`, `margin`, `padding` and so on) | `className={overrideClasses({ marginBottom: 6 })}`, which returns govuk-frontend's `govuk-!-*` classes                      |
+| `setWidth` and other width props                       | `width` on the controls that take one, or `overrideClasses({ width: 'one-half' })`                                          |
+| `as={RouterLink}` for router links                     | `asChild` on `Link`, `BackLink` and the navigation link parts, with your router link as the only child. `Button` keeps `as` |
+| Wrapping with `styled(Component)` to restyle           | your own CSS, with `className` and govuk-frontend's colour custom properties such as `var(--govuk-text-colour)`             |
+
+`overrideClasses` takes spacing (`margin`, `marginTop`, `padding` and the rest, 0 to 9, with `staticSpacing`), `width`, `fontSize`, `fontWeight`, `tabularNumbers`, `textAlign`, `breakWord`, `display` and `hideWhenPrinting`.
+
+## Removed modules
+
+| 0.x                                                                                               | 1.0                                                                                                                                              |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `@govuk-react/constants` (`SPACING`, `MEDIA_QUERIES`, `FONT_SIZE`, `BREAKPOINTS` and so on)       | removed: use govuk-frontend's classes, its Sass settings, or its custom properties such as `--govuk-breakpoint-tablet`                           |
+| `@govuk-react/lib` (`spacing`, `typography`, `link`, `shape`, `visuallyHidden`, `withWhiteSpace`) | removed: use `overrideClasses`, govuk-frontend's classes, `Link` or `VisuallyHidden`                                                             |
+| `govuk-colours`                                                                                   | removed: use govuk-frontend's colour custom properties, such as `var(--govuk-brand-colour)`                                                      |
+| `@govuk-react/icons` and the `SearchIcon`, `ArrowLeft`, `Spinner` and `ButtonArrow` exports       | removed: the components that need an icon render it. `<Button.Composite start>`, `BackLink`, `SearchBox.Composite` and `LoadingBox` replace them |
+
+## New components
+
+These have no 0.x equivalent: `Accordion`, `CharacterCount`, `CookieBanner`, `Feedback`, `GenericHeader`, `Header`, `LanguageNavigation`, `Modal`, `NotificationBanner`, `PasswordInput`, `ServiceNavigation`, `SummaryList` and `TaskList`.
+
+The sections below cover each 0.x component.
 
 ## Heading
 
