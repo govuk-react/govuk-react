@@ -3,10 +3,17 @@
  * parts, so the server can render the message the element starts with.
  */
 
-export type CountType = 'length' | 'characters' | 'words';
+import {
+  translate,
+  translationAttributes,
+  translationFromAttributes,
+  withLocale,
+  type Translation,
+} from '../utils/translation';
 
-/** A message, or one message for each plural form, as in govuk-frontend's localisation. */
-export type Translation = string | Partial<Record<Intl.LDMLPluralRule, string>>;
+export type { Translation };
+
+export type CountType = 'length' | 'characters' | 'words';
 
 export const messageNames = [
   'characters-under-limit',
@@ -35,44 +42,12 @@ export const defaultMessages: Record<MessageName, Translation> = {
   'words-over-limit': { one: 'You have %{count} word too many', other: 'You have %{count} words too many' },
 };
 
-const pluralForms: Intl.LDMLPluralRule[] = ['zero', 'one', 'two', 'few', 'many', 'other'];
-
 /** The attributes for a message: the message itself, or one attribute for each plural form. */
-export function messageAttributes(name: MessageName, message: Translation | undefined) {
-  if (message === undefined) return {};
-  if (typeof message === 'string') return { [name]: message };
-  return Object.fromEntries(
-    pluralForms.filter((form) => message[form] !== undefined).map((form) => [`${name}-${form}`, message[form]])
-  );
-}
+export const messageAttributes = (name: MessageName, message: Translation | undefined) =>
+  translationAttributes(name, message);
 
 /** Reads a message back from attributes written by `messageAttributes`. */
-export function messageFromAttributes(element: Element, name: MessageName): Translation | undefined {
-  const message = element.getAttribute(name);
-  if (message !== null) return message;
-  const forms = pluralForms.flatMap((form) => {
-    const text = element.getAttribute(`${name}-${form}`);
-    return text === null ? [] : [[form, text] as const];
-  });
-  return forms.length ? Object.fromEntries(forms) : undefined;
-}
-
-// An invalid `lang` makes Intl throw.
-function safely<T>(create: (locale: string | undefined) => T): T {
-  try {
-    return create(undefined);
-  } catch {
-    return create('en');
-  }
-}
-
-function withLocale<T>(locale: string | undefined, create: (locale: string | undefined) => T): T {
-  try {
-    return create(locale);
-  } catch {
-    return safely(create);
-  }
-}
+export const messageFromAttributes = (element: Element, name: MessageName) => translationFromAttributes(element, name);
 
 /** Counts the text as govuk-frontend does: UTF-16 code units, characters as users see them, or words. */
 export function countOf(text: string, countType: CountType, locale?: string) {
@@ -99,13 +74,5 @@ export function countMessage(
   const state = remaining < 0 ? 'over' : remaining === 0 ? 'at' : 'under';
   const name: MessageName = `${countType === 'words' ? 'words' : 'characters'}-${state}-limit`;
   const message = messages[name] ?? defaultMessages[name];
-  const count = Math.abs(remaining);
-  let text: string | undefined;
-  if (typeof message === 'string') text = message;
-  else {
-    const form = withLocale(locale, (l) => new Intl.PluralRules(l)).select(count);
-    text = message[form] ?? message.other;
-  }
-  const number = withLocale(locale, (l) => new Intl.NumberFormat(l)).format(count);
-  return { state, text: (text ?? '').replaceAll('%{count}', number) };
+  return { state, text: translate(message, Math.abs(remaining), locale) };
 }

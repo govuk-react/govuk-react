@@ -1,7 +1,7 @@
 {
   "name": "govuk-react",
   "version": "0.10.7",
-  "description": "govuk-react: A port of the govuk-frontend components for React using styled-components.",
+  "description": "govuk-react: React components for the GOV.UK Design System, built on govuk-frontend-react.",
   "type": "module",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -27,17 +27,12 @@
     "@govuk-react/icon-crown": "0.1.0",
     "@govuk-react/primitives": "0.2.0",
     "clsx": "^2.1.1",
-    "govuk-colours": "^1.1.0",
-    "govuk-frontend-react": "1.0.0-alpha.4",
-    "multi-input-input": "0.0.3",
-    "polished": "^4.3.1",
-    "react-markdown": "^5.0.3"
+    "govuk-frontend-react": "1.0.0-alpha.4"
   },
   "peerDependencies": {
     "govuk-frontend": "~6.6.0",
     "react": ">=19",
-    "react-dom": ">=19",
-    "styled-components": ">=5.1"
+    "react-dom": ">=19"
   },
   "author": "Alasdair McLeay",
   "license": "MIT",

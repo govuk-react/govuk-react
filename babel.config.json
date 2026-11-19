@@ -15,7 +15,6 @@
     "@babel/preset-typescript"
   ],
   "plugins": [
-    "babel-plugin-styled-components",
     ["@babel/plugin-transform-runtime", { "helpers": false, "regenerator": true }]
   ]
 }

@@ -25,6 +25,8 @@ export default defineConfig({
     'focus-links': 'src/focus-links/index.tsx',
     'focus-links-element': 'src/focus-links/element.ts',
     'character-count-element': 'src/character-count/element.ts',
+    'file-upload': 'src/file-upload/index.tsx',
+    'file-upload-element': 'src/file-upload/element.ts',
   },
   format: ['esm'],
   dts: true,
