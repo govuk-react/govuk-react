@@ -1,0 +1,18 @@
+---
+import AutocompleteDemo from '../../components/AutocompleteDemo.tsx';
+---
+
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Autocomplete</title><link rel="icon" href="data:," /></head>
+  <body>
+    <AutocompleteDemo client:load id="hydrated" />
+    <AutocompleteDemo client:load id="remote" remote />
+    <AutocompleteDemo client:load id="submit" submitOnConfirm />
+    <!-- No client directive: the element upgrades the server markup, and React never hydrates. -->
+    <AutocompleteDemo id="upgraded" />
+    <AutocompleteDemo id="upgraded-submit" submitOnConfirm />
+    <script>
+      import '@govuk-react/primitives/autocomplete-element';
+    </script>
+  </body>
+</html>

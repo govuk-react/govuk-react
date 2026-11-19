@@ -1,6 +1,7 @@
 import * as React from 'react';
 import type { ComponentProps } from 'react';
 import accordion from 'inline:accordion';
+import autocomplete from 'inline:autocomplete';
 import autoFocus from 'inline:auto-focus';
 import button from 'inline:button';
 import characterCount from 'inline:character-count';
@@ -23,6 +24,7 @@ import tabs from 'inline:tabs';
 
 export {
   accordion,
+  autocomplete,
   autoFocus,
   button,
   characterCount,

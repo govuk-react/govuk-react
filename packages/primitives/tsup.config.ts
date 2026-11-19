@@ -65,6 +65,8 @@ export default defineConfig([
       'character-count-element': 'src/character-count/element.ts',
       'file-upload': 'src/file-upload/index.tsx',
       'file-upload-element': 'src/file-upload/element.ts',
+      autocomplete: 'src/autocomplete/index.tsx',
+      'autocomplete-element': 'src/autocomplete/element.ts',
     },
     // Keep the React parts out of React Server Components. esbuild drops the directive from the source.
     banner: { js: "'use client';" },

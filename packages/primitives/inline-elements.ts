@@ -1,6 +1,7 @@
 /** The elements built as inline scripts, by folder name. */
 export const inlineElements = [
   'accordion',
+  'autocomplete',
   'auto-focus',
   'button',
   'character-count',

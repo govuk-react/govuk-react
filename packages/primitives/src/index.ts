@@ -10,3 +10,4 @@ export * as FocusLinks from './focus-links';
 export * as Button from './button';
 export * as ExitThisPage from './exit-this-page';
 export * as FileUpload from './file-upload';
+export * as Autocomplete from './autocomplete';
