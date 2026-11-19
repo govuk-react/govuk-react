@@ -37,6 +37,7 @@
 
 import { translationAttributeNames } from '../utils/translation';
 import { countMessage, countOf, messageFromAttributes, messageNames, type CountType } from './messages';
+import { classesOf, setText } from '../utils/dom';
 
 export const tagName = 'govuk-react-character-count';
 
@@ -59,16 +60,6 @@ const visuallyHidden: Record<string, string> = {
   'clip-path': 'inset(50%)',
   border: '0',
   'white-space': 'nowrap',
-};
-
-const classesOf = (attribute: string | null) => attribute?.split(/\s+/).filter(Boolean) ?? [];
-
-// Keeps the text node React rendered, so React can still update it.
-const setText = (element: Element, text: string) => {
-  if (element.textContent === text) return;
-  const { firstChild } = element;
-  if (firstChild instanceof Text && element.childNodes.length === 1) firstChild.nodeValue = text;
-  else element.textContent = text;
 };
 
 const isField = (element: Element | undefined): element is HTMLTextAreaElement | HTMLInputElement =>

@@ -31,6 +31,8 @@
  * "links", the URL hash follows the selected tab and selects it, as in govuk-frontend.
  */
 
+import { classesOf } from '../utils/dom';
+
 declare global {
   interface HTMLElementEventMap {
     'govuk-react-tabs:change': CustomEvent<{ value: string }>;
@@ -53,8 +55,6 @@ export interface TabsElement extends HTMLElement {
 
 const valueOf = (element: Element | null | undefined) =>
   element instanceof HTMLElement ? element.dataset.value : undefined;
-
-const classesOf = (attribute: string | null) => attribute?.split(/\s+/).filter(Boolean) ?? [];
 
 // `classList.add` always rewrites the attribute, which would wake the MutationObserver again.
 const addClasses = (element: Element, classes: string[]) => {

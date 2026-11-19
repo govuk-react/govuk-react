@@ -21,6 +21,8 @@
  * code that doesn't use React.
  */
 
+import { setUpWhenReady } from '../utils/set-up-when-ready';
+
 declare global {
   interface HTMLElementEventMap {
     'govuk-react-disclosure:change': CustomEvent<{ open: boolean }>;
@@ -76,12 +78,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     connectedCallback() {
-      if (this.setup()) return;
-      // The parts may not be parsed or rendered yet.
-      this.observer = new MutationObserver(() => {
-        if (this.setup()) this.observer?.disconnect();
-      });
-      this.observer.observe(this, { childList: true, subtree: true });
+      this.observer = setUpWhenReady(this, () => this.setup());
     }
 
     disconnectedCallback() {

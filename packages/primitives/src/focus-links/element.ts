@@ -14,10 +14,9 @@
  */
 
 import { setFocus } from '../utils/set-focus';
+import { classesOf } from '../utils/dom';
 
 export const tagName = 'govuk-react-focus-links';
-
-const classesOf = (attribute: string | null) => attribute?.split(/\s+/).filter(Boolean) ?? [];
 
 const isField = (element: Element) =>
   element instanceof HTMLInputElement ||
