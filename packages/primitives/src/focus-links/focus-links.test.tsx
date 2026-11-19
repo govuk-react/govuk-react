@@ -65,4 +65,25 @@ describe('FocusLinks', () => {
     expect(main).not.toHaveClass('focused');
     expect(main).not.toHaveAttribute('tabindex');
   });
+
+  test('a bare #id is this page, whatever the base, and a stray % does no harm', async () => {
+    const base = document.createElement('base');
+    base.href = 'https://example.com/elsewhere/';
+    document.head.appendChild(base);
+    render(
+      <>
+        <FocusLinks.Root>
+          <a href="#full-name">Enter your full name</a>
+          <a href="#50%off">Offer</a>
+        </FocusLinks.Root>
+        <label htmlFor="full-name">Full name</label>
+        <input id="full-name" />
+      </>
+    );
+    await connected();
+    fireEvent.click(screen.getByRole('link', { name: 'Enter your full name' }));
+    expect(screen.getByLabelText('Full name')).toHaveFocus();
+    expect(() => fireEvent.click(screen.getByRole('link', { name: 'Offer' }))).not.toThrow();
+    base.remove();
+  });
 });

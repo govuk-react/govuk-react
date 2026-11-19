@@ -33,6 +33,9 @@ export type RootProps = Markup.RootProps;
 /**
  * Use an error summary when there is a validation error.
  *
+ * It takes focus when it appears. To move focus to it again, such as after another invalid submit,
+ * give it a new `key`.
+ *
  * @see https://design-system.service.gov.uk/components/error-summary/
  */
 export function Root({ disableAutoFocus, ...props }: RootProps) {

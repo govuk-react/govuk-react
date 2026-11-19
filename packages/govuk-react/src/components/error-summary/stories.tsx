@@ -14,7 +14,9 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+// On the docs page, where every story renders at once, none takes focus.
 export const Default: Story = {
+  render: (args, { viewMode }) => <ErrorSummary.Composite {...args} disableAutoFocus={viewMode === 'docs'} />,
   args: {
     title: 'There is a problem',
     children: (
@@ -31,9 +33,9 @@ export const Default: Story = {
 /** The summary takes focus when it appears, and its link moves focus to the field, with its label in view. */
 export const WithField: Story = {
   args: { title: 'There is a problem' },
-  render: () => (
+  render: (_, { viewMode }) => (
     <>
-      <ErrorSummary.Composite title="There is a problem">
+      <ErrorSummary.Composite title="There is a problem" disableAutoFocus={viewMode === 'docs'}>
         <ErrorSummary.ListItemComposite href="#full-name">Enter your full name</ErrorSummary.ListItemComposite>
       </ErrorSummary.Composite>
       <Input.Field id="full-name" name="fullName" label="Full name" errorMessage="Enter your full name" />

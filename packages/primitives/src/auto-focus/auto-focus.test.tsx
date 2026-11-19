@@ -62,4 +62,39 @@ describe('AutoFocus', () => {
     fireEvent.blur(button);
     expect(button).toHaveAttribute('tabindex', '0');
   });
+
+  test('server markup: leaves the user where they moved to before the script ran', async () => {
+    const container = document.createElement('div');
+    container.innerHTML = `<button type="button">Continue</button>${renderToStaticMarkup(
+      <AutoFocus.Target role="alert">There is a problem</AutoFocus.Target>
+    )}`;
+    document.body.appendChild(container);
+    container.querySelector('button')?.focus();
+    const element = document.createElement('govuk-react-auto-focus');
+    const target = container.querySelector('[role=alert]');
+    if (!target) throw new Error('No target');
+    container.appendChild(element);
+    element.appendChild(target);
+    await connected();
+    expect(screen.getByRole('button')).toHaveFocus();
+    expect(target).not.toHaveAttribute('tabindex');
+    expect(target).not.toHaveAttribute('autofocus');
+    container.remove();
+  });
+
+  test('tries again when a target that could not take focus moves into place', async () => {
+    const hidden = document.createElement('div');
+    hidden.hidden = true;
+    document.body.appendChild(hidden);
+    const element = document.createElement('govuk-react-auto-focus');
+    element.innerHTML = '<div data-auto-focus role="alert">There is a problem</div>';
+    hidden.appendChild(element);
+    await connected();
+    expect(screen.getByRole('alert', { hidden: true })).not.toHaveFocus();
+    document.body.appendChild(element);
+    await connected();
+    expect(screen.getByRole('alert')).toHaveFocus();
+    element.remove();
+    hidden.remove();
+  });
 });

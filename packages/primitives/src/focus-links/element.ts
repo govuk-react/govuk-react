@@ -49,8 +49,19 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey) return;
       const link = event.target instanceof Element ? event.target.closest('a[href]') : null;
       if (!(link instanceof HTMLAnchorElement) || !this.contains(link)) return;
-      if (link.origin !== window.location.origin || link.pathname !== window.location.pathname) return;
-      const id = decodeURIComponent(link.hash.slice(1));
+      // A bare `#id` is this page whatever the `<base>`, as govuk-frontend's error summary treats it.
+      const samePage =
+        link.getAttribute('href')?.startsWith('#') ||
+        (link.origin === window.location.origin &&
+          link.pathname === window.location.pathname &&
+          link.search === window.location.search);
+      if (!samePage) return;
+      let id = link.hash.slice(1);
+      try {
+        id = decodeURIComponent(id);
+      } catch {
+        // A stray `%`: use the id as written.
+      }
       const target = id ? document.getElementById(id) : null;
       if (!target) return;
       if (isField(target)) {

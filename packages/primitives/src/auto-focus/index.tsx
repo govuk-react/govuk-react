@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import { isValidElement } from 'react';
 import type { ComponentProps } from 'react';
 import { Slot } from '../utils/slot';
 import { tagName } from './element';
@@ -27,6 +28,12 @@ export type TargetProps = ComponentProps<'div'> & {
   disabled?: boolean;
 };
 
+/** The tabindex of the target, or with `asChild`, of its child. */
+function tabIndexOf({ asChild, tabIndex, children }: TargetProps) {
+  if (tabIndex !== undefined || !asChild) return tabIndex;
+  return isValidElement<{ tabIndex?: number }>(children) ? children.props.tabIndex : undefined;
+}
+
 /** What gets focus. */
 export function Target({ asChild, disabled, ...props }: TargetProps) {
   const Element = asChild ? Slot : 'div';
@@ -34,7 +41,9 @@ export function Target({ asChild, disabled, ...props }: TargetProps) {
   if (!disabled) {
     // `data-focus-tabindex` says the tabindex is only for this, so it goes when focus moves on.
     focus =
-      props.tabIndex === undefined ? { tabIndex: -1, autoFocus: true, 'data-focus-tabindex': '' } : { autoFocus: true };
+      tabIndexOf({ asChild, ...props }) === undefined
+        ? { tabIndex: -1, autoFocus: true, 'data-focus-tabindex': '' }
+        : { autoFocus: true };
   }
   // The element owns `tabindex` and `autofocus` after it has moved focus.
   return <Element data-auto-focus="" suppressHydrationWarning {...focus} {...props} />;
