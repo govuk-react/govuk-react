@@ -24,6 +24,7 @@
  */
 
 import { classesOf } from '../utils/dom';
+import { onPropertySet } from '../utils/on-property-set';
 
 export const tagName = 'govuk-react-choices';
 
@@ -40,6 +41,22 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     private upgraded = false;
 
     private observer?: MutationObserver;
+
+    /** Puts back each choice's `checked` setter. */
+    private readonly watched = new Map<HTMLInputElement, () => void>();
+
+    private syncQueued = false;
+
+    // A `checked` set by a script, such as a form library's, fires no event. Checking a radio can
+    // uncheck one in another element.
+    private readonly onCheckedSet = () => {
+      if (this.syncQueued) return;
+      this.syncQueued = true;
+      queueMicrotask(() => {
+        this.syncQueued = false;
+        this.syncAll();
+      });
+    };
 
     private readonly onClick = (event: Event) => {
       const input = event.target;
@@ -112,6 +129,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.removeEventListener('change', this.onChange);
       window.removeEventListener('pageshow', this.onPageShow);
       document.removeEventListener('reset', this.onReset, true);
+      this.watched.forEach((stop) => stop());
+      this.watched.clear();
     }
 
     private get root() {
@@ -149,8 +168,20 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       return target instanceof HTMLElement && target.hasAttribute('data-choices-conditional') ? target : undefined;
     }
 
+    private watch(choices: HTMLInputElement[]) {
+      this.watched.forEach((stop, input) => {
+        if (choices.includes(input)) return;
+        stop();
+        this.watched.delete(input);
+      });
+      choices.forEach((input) => {
+        if (!this.watched.has(input)) this.watched.set(input, onPropertySet(input, 'checked', this.onCheckedSet));
+      });
+    }
+
     private setup() {
       const choices = this.choices();
+      this.watch(choices);
       if (!choices.length) return;
       if (!this.upgraded) {
         this.upgraded = true;

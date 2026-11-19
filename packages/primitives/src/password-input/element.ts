@@ -2,8 +2,8 @@
  * <govuk-react-password-input>: a headless, light-DOM custom element that adds a show and hide
  * button to a password field, with or without React.
  *
- * The input's `type` is the state. Without JavaScript the field stays a password field and the
- * button stays hidden. On upgrade the element shows the button, which switches the input between
+ * The input's `type` is the state, kept when React sets it again. Without JavaScript the field
+ * stays a password field and the button stays hidden. On upgrade the element shows the button, which switches the input between
  * "password" and "text", updates its own text and label, and announces the change.
  *
  * Markup inside the element:
@@ -17,10 +17,11 @@
  * - `show-label`, `hide-label`: the button's accessible name.
  * - `shown-announcement`, `hidden-announcement`: announced when the password is shown or hidden.
  *
- * As in govuk-frontend, the password is hidden again when its form is submitted, and when the
- * page is restored from the back-forward cache.
+ * As in govuk-frontend, the password is hidden again when its form is submitted, unless by a hidden
+ * submit button such as a form library's, and when the page is restored from the back-forward cache.
  */
 
+import { onPropertySet } from '../utils/on-property-set';
 import { setUpWhenReady } from '../utils/set-up-when-ready';
 
 export const tagName = 'govuk-react-password-input';
@@ -46,16 +47,31 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     private status?: HTMLElement;
 
-    private form?: HTMLFormElement | null;
-
     private observer?: MutationObserver;
+
+    private visible = false;
+
+    private stopWatchingType?: () => void;
+
+    // React sets `type` again whenever it updates a controlled input.
+    private readonly onTypeSet = () => {
+      const type = this.visible ? 'text' : 'password';
+      if (this.input && this.input.type !== type) this.input.type = type;
+    };
 
     private readonly onToggle = (event: MouseEvent) => {
       event.preventDefault();
-      if (this.input) this.setVisible(this.input.type === 'password');
+      this.setVisible(!this.visible);
     };
 
-    private readonly onSubmit = () => this.setVisible(false);
+    // A hidden submitter isn't the user submitting, but a script, such as Conform validating as the
+    // user types.
+    private readonly onSubmit = (event: Event) => {
+      const submitter = event instanceof SubmitEvent ? event.submitter : null;
+      if (event.target === this.input?.form && !(submitter instanceof HTMLElement && submitter.hidden)) {
+        this.setVisible(false);
+      }
+    };
 
     private readonly onPageShow = (event: PageTransitionEvent) => {
       if (event.persisted) this.setVisible(false);
@@ -68,11 +84,11 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     disconnectedCallback() {
       this.observer?.disconnect();
       this.toggle?.removeEventListener('click', this.onToggle);
-      this.form?.removeEventListener('submit', this.onSubmit);
+      document.removeEventListener('submit', this.onSubmit);
       window.removeEventListener('pageshow', this.onPageShow);
+      this.stopWatchingType?.();
       this.input = undefined;
       this.toggle = undefined;
-      this.form = undefined;
     }
 
     private text(name: keyof typeof defaults) {
@@ -101,18 +117,20 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       }
       toggle.hidden = false;
       toggle.addEventListener('click', this.onToggle);
-      this.form = input.form;
-      this.form?.addEventListener('submit', this.onSubmit);
+      document.addEventListener('submit', this.onSubmit);
       window.addEventListener('pageshow', this.onPageShow);
       // Start hidden, with the text set but nothing announced.
+      this.visible = false;
       input.type = 'password';
+      this.stopWatchingType = onPropertySet(input, 'type', this.onTypeSet);
       this.label(false);
       return true;
     }
 
     private setVisible(visible: boolean) {
       const { input } = this;
-      if (!input || visible === (input.type === 'text')) return;
+      if (!input || visible === this.visible) return;
+      this.visible = visible;
       input.type = visible ? 'text' : 'password';
       this.label(visible);
       if (this.status) this.status.textContent = this.text(visible ? 'shown-announcement' : 'hidden-announcement');

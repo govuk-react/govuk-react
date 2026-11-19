@@ -133,6 +133,24 @@ describe('CharacterCount', () => {
     expect(screen.getByTestId('status')).toHaveTextContent('You have 5 characters remaining');
   });
 
+  test('counts a value a script sets, as form libraries do, and a form reset', async () => {
+    render(
+      <form>
+        <Example />
+      </form>
+    );
+    await upgraded();
+    const field = screen.getByLabelText('Message');
+    if (!(field instanceof HTMLTextAreaElement)) throw new Error('No textarea');
+    act(() => {
+      field.value = 'Hello';
+    });
+    expect(screen.getByTestId('status')).toHaveTextContent('You have 5 characters remaining');
+    field.form?.reset();
+    await act(() => new Promise((resolve) => setTimeout(resolve)));
+    expect(screen.getByTestId('status')).toHaveTextContent('You have 10 characters remaining');
+  });
+
   test('a new limit keeps the field free of maxlength, and React leaves the counts alone', async () => {
     const { rerender } = render(<Example />);
     await upgraded();

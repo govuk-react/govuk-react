@@ -7,6 +7,7 @@ import { FormGroup } from 'govuk-frontend-react/form-group';
 import { Hint } from 'govuk-frontend-react/hint';
 import { LabelComposite } from 'govuk-frontend-react/label';
 import { FileUpload, type FileUploadProps, type FileUploadTexts } from './control';
+import { joinIds } from '../../utils/join-ids';
 
 export type RootProps = Omit<
   Primitives.RootProps,
@@ -193,7 +194,7 @@ export function Field({
   const id = idProp || name;
   const hintId = isSet(hint) ? `${id}-hint` : undefined;
   const errorId = isSet(errorMessage) ? `${id}-error` : undefined;
-  const ariaDescribedBy = [describedBy, hintId, errorId].filter(Boolean).join(' ') || undefined;
+  const ariaDescribedBy = joinIds(describedBy, hintId, errorId);
 
   return (
     <FormGroup error={Boolean(errorId)}>

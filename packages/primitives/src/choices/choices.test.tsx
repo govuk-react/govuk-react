@@ -195,6 +195,17 @@ describe('Choices', () => {
     expect(screen.getByLabelText('Spain')).not.toBeChecked();
   });
 
+  test('follows a checked value a script sets, as form libraries do', async () => {
+    render(<Contact />);
+    await upgraded();
+    const phone = screen.getByLabelText('Phone');
+    if (!(phone instanceof HTMLInputElement)) throw new Error('No radio');
+    phone.checked = true;
+    await upgraded();
+    expect(screen.getByText('Phone number')).toBeVisible();
+    expect(phone).toHaveAttribute('aria-expanded', 'true');
+  });
+
   test('a form reset puts the reveals back', async () => {
     render(
       <form>

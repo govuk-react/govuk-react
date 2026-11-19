@@ -44,9 +44,12 @@
     "@babel/preset-react": "7.23.3",
     "@babel/preset-typescript": "7.23.0",
     "@changesets/cli": "^3.0.3",
+    "@conform-to/react": "^1.21.3",
+    "@conform-to/zod": "^1.21.3",
     "@eslint/js": "^9.39.5",
     "@govuk-react/api-docs": "0.10.7",
     "@storybook/react": "10.6.7",
+    "@tanstack/react-form": "^1.33.5",
     "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^16.3.3",
@@ -79,6 +82,7 @@
     "react-docgen-typescript": "^2.1.0",
     "react-dom": "^19.3.1",
     "react-final-form": "^6.5.9",
+    "react-hook-form": "^7.92.0",
     "react-is": "^19.3.1",
     "react-router-dom": "^6.3.0",
     "rimraf": "^5.0.5",
@@ -89,7 +93,8 @@
     "vite": "^7.3.8",
     "vitest": "5.1.0",
     "webpack": "^5.94.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "zod": "^4.6.7"
   },
   "repository": {
     "type": "git",
