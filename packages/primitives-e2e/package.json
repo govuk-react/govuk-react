@@ -6,14 +6,14 @@
   "description": "Browser tests for @govuk-react/primitives: without JavaScript, upgraded, hydrated, in islands and client-only",
   "scripts": {
     "build:site": "pnpm --filter @govuk-react/primitives build && astro build",
-    "preview": "astro preview",
+    "preview": "astro preview --ignore-lock",
     "test:e2e": "playwright test",
     "test:e2e:hydration": "playwright test --config playwright.hydration.config.ts"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.7",
     "@govuk-react/primitives": "workspace:*",
-    "astro": "^6.4.8",
+    "astro": "^7.4.7",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
