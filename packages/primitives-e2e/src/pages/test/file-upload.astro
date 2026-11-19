@@ -1,0 +1,16 @@
+---
+import FileUploadDemo from '../../components/FileUploadDemo.tsx';
+---
+
+<html lang="en">
+  <head><meta charset="utf-8" /><title>File upload</title><link rel="icon" href="data:," /></head>
+  <body>
+    <FileUploadDemo client:load id="hydrated" />
+    <FileUploadDemo client:load id="multiple" multiple />
+    <!-- No client directive: the element upgrades the server markup, and React never hydrates. -->
+    <FileUploadDemo id="upgraded" />
+    <script>
+      import '@govuk-react/primitives/file-upload-element';
+    </script>
+  </body>
+</html>

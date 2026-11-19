@@ -35,6 +35,7 @@
  * - `input-over-limit-class`: classes for the field while over the limit.
  */
 
+import { translationAttributeNames } from '../utils/translation';
 import { countMessage, countOf, messageFromAttributes, messageNames, type CountType } from './messages';
 
 export const tagName = 'govuk-react-character-count';
@@ -84,7 +85,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
         'over-limit-class',
         'below-threshold-class',
         'input-over-limit-class',
-        ...messageNames,
+        ...messageNames.flatMap(translationAttributeNames),
       ];
     }
 
