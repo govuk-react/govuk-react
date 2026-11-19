@@ -28,3 +28,13 @@ test('the inner and outer tabs use their own radio groups', async ({ page }) => 
     .evaluateAll((radios) => [...new Set(radios.map((radio) => radio.getAttribute('name')))]);
   expect(names).toHaveLength(2);
 });
+
+test('arrow keys in the inner tabs move only the inner tabs', async ({ page }) => {
+  const inner = page.getByTestId('inner');
+  await inner.getByRole('tab', { name: 'Profile' }).focus();
+  await page.keyboard.press('ArrowRight');
+  await expect(inner.getByRole('tab', { name: 'Email' })).toBeFocused();
+  await expect(inner.getByRole('tab', { name: 'Email' })).toHaveAttribute('aria-selected', 'true');
+  await expect(page.getByRole('tab', { name: 'Account' })).toHaveAttribute('aria-selected', 'true');
+  await expect(inner).toBeVisible();
+});
