@@ -25,15 +25,12 @@
     "changeset": "changeset",
     "version-packages": "changeset version && pnpm install --lockfile-only"
   },
-  "description": "A port of the govuk-frontend components for React using styled-components.",
+  "description": "React components for the GOV.UK Design System, built on govuk-frontend-react.",
   "main": "lib/index.js",
   "module": "es/index.js",
   "engines": {
     "node": ">=20.19",
     "pnpm": ">=12"
-  },
-  "dependencies": {
-    "govuk-colours": "^1.1.0"
   },
   "peerDependencies": {
     "react": ">=19"
@@ -58,11 +55,9 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@types/react-router-dom": "5",
-    "@types/styled-components": "^5.1.14",
     "@vitejs/plugin-react": "^5.2.0",
     "@vitest/coverage-v8": "5.1.0",
     "babel-plugin-add-module-exports": "^1.0.4",
-    "babel-plugin-styled-components": "^2.1.4",
     "bundlesize2": "^0.0.31",
     "chalk": "^4.1.1",
     "codacy-coverage": "^3.0.0",
@@ -77,7 +72,6 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "final-form": "^4.20.10",
     "globals": "^17.14.0",
-    "jest-styled-components": "^7.2.0",
     "jsdom": "^31.0.1",
     "mkdirp-promise": "^5.0.1",
     "prettier": "^3.10.1",
@@ -89,7 +83,6 @@
     "react-router-dom": "^6.3.0",
     "rimraf": "^5.0.5",
     "storybook": "10.6.7",
-    "styled-components": "^5.3.0",
     "tsup": "^9.0.0",
     "typescript": "^5.4.2",
     "typescript-eslint": "^8.72.2",

@@ -1,6 +1,6 @@
 # govuk-react
 
-An implementation of the [GOV.UK Design System](https://govuk-design-system-production.cloudapps.digital) in [React](https://reactjs.org) using [CSSinJS](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660) using Object notation (with [styled-components](https://www.styled-components.com/docs/advanced#style-objects)).
+An implementation of the [GOV.UK Design System](https://design-system.service.gov.uk) in [React](https://react.dev), built on [govuk-frontend-react](https://github.com/govuk-react/govuk-frontend-react) and styled by govuk-frontend's CSS.
 
 [![codecov](https://codecov.io/gh/govuk-react/govuk-react/branch/master/graph/badge.svg)](https://codecov.io/gh/govuk-react/govuk-react)
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/govuk-react)
@@ -45,7 +45,13 @@ The project is currently maintained for free by a small number of volunteers. If
 ## Usage
 
 ```sh
-npm install govuk-react styled-components @types/styled-components --save
+npm install govuk-react govuk-frontend
+```
+
+Load govuk-frontend's CSS once in your app:
+
+```js
+import 'govuk-frontend/dist/govuk/govuk-frontend.min.css';
 ```
 
 ```jsx
@@ -54,7 +60,7 @@ import { Button } from 'govuk-react';
 const MyComponent = ({ title }) => (
   <div>
     <h1>{title}</h1>
-    <Button />
+    <Button.Composite>Save and continue</Button.Composite>
   </div>
 );
 ```
@@ -65,22 +71,16 @@ Also see the [Example Application](packages/example-application/src) for basic u
 
 ## Using Link with a Router Link
 
-We provide a Link component which creates an element styled as a GDS link. As we are using styled-components it is possible to apply that style to an existing component using the `as` prop. Other props will be passed through.
-
-For example;
+`Link`, `BackLink` and the navigation link parts take `asChild`, which applies their classes to your router link instead of rendering an `a`:
 
 ```jsx
-import { BrowserRouter, Link as RouterLink } from 'react-router';
+import { Link as RouterLink } from 'react-router';
 import { Link } from 'govuk-react/link';
 
 const MyComponent = () => (
-  <nav>
-    <BrowserRouter>
-      <Link as={RouterLink} to="https://example.com">
-        example
-      </Link>
-    </BrowserRouter>
-  </nav>
+  <Link asChild>
+    <RouterLink to="/page">Page</RouterLink>
+  </Link>
 );
 ```
 
@@ -88,22 +88,10 @@ const MyComponent = () => (
 
 Use of these components assumes the following from the peer project:
 
-- `govuk-frontend` is installed and its CSS (`govuk-frontend/dist/govuk/govuk-frontend.min.css`) is loaded. Components migrated to govuk-frontend-react rely on it; see [MIGRATION.md](MIGRATION.md).
+- `govuk-frontend` is installed and its CSS (`govuk-frontend/dist/govuk/govuk-frontend.min.css`) is loaded.
 - The GDS Transport font face is included ([for gov.uk domains only](https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk))
 - Optionally, either [normalize.css](https://necolas.github.io/normalize.css/) or [sanitize.css](https://csstools.github.io/sanitize.css/) is used as a CSS reset. We don't test for this, so please raise an issue if you find any problems with compatibility.
 - Other than the reset, no other styles affecting generic elements (without classes, IDs etc) are present in the CSS.
-
-## Why CSS-in-JS?
-
-See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
-
-This project is part of a larger initiative to componetise large scale React applications. Using CSSinJS allows us to include styles inside a module bundle that can be published (using `npm publish`) and consumed by a peer application, without putting dependencies on the peer application to implement a specific CSS build system.
-
-## Why not use GDS styles/classes directly
-
-1. We want to be free to write different DOM structure and/or CSS that is more in keeping with a React and bem-ish architecture. (e.g. in React you often don't need to specify IDs for field inputs, and can wrap inputs with labels so that they are automatically associated. We want to leave the decision of whether to use input IDs to the parent project. GDS styles don't wrap inputs with labels and require IDs and for attributes).
-2. We want a parent project to not have to worry about a specific build system (e.g. for handling `import styles.css`, particularly if you want universal support) or including certain CSS files. We want a simple `npm install govuk-react` to be enough to get govuk styled components on to your page, irrespective of your build system.
-3. We want to distribute React applications as modules that have self contained styles. CSS in JS allows all styles to be contained in distributable JS modules that can be ported across projects.
 
 ## Imports
 
