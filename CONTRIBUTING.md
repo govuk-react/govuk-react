@@ -58,8 +58,8 @@ pnpm run docs
 Versions and changelogs are managed with [Changesets](https://github.com/changesets/changesets). We are in prerelease mode, so versions are `1.0.0-alpha.x`.
 
 - in each PR that changes the published package, run `pnpm changeset` and commit the generated file
-- on `main`, the Release workflow keeps a "Version packages" PR open that bumps the version and updates `CHANGELOG.md`
-- merge that PR, then run the [Publish workflow](https://github.com/govuk-react/govuk-react/actions/workflows/publish.yml) from `main` with the `alpha` dist-tag
+- to release, run `pnpm version-packages` on a branch, which bumps the versions and updates the changelogs, and open a "Version packages" PR
+- merge that PR, then run the [Publish workflow](https://github.com/govuk-react/govuk-react/actions/workflows/publish.yml) from `main` for each package to publish, primitives before a govuk-react version that needs it
 - the workflow stages the package on npm; a maintainer approves it on npm to publish it
 
 Write changeset summaries for users of the package. Changes with no user-facing effect, such as workflow changes, don't need a changeset.
