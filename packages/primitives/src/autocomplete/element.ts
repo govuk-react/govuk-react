@@ -55,6 +55,7 @@ import {
   withLocale,
   type Translation,
 } from '../utils/translation';
+import { setText, setAttribute } from '../utils/dom';
 
 export const tagName = 'govuk-react-autocomplete';
 
@@ -92,15 +93,6 @@ const isIosDevice = () =>
   typeof navigator !== 'undefined' &&
   /(iPod|iPhone|iPad)/.test(navigator.userAgent) &&
   /AppleWebKit/.test(navigator.userAgent);
-
-const setAttribute = (element: Element, name: string, value: string | null) => {
-  if (value === null) element.removeAttribute(name);
-  else if (element.getAttribute(name) !== value) element.setAttribute(name, value);
-};
-
-const setText = (element: Element, text: string) => {
-  if (element.textContent !== text) element.textContent = text;
-};
 
 const valueSetter =
   typeof HTMLInputElement === 'undefined'

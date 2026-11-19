@@ -28,6 +28,8 @@
  *   inline styles.
  */
 
+import { classesOf } from '../utils/dom';
+
 export const tagName = 'govuk-react-exit-this-page';
 
 export const messageNames = ['activated', 'timed-out', 'press-two-more-times', 'press-one-more-time'] as const;
@@ -57,8 +59,6 @@ declare global {
 }
 
 const timeoutMs = 5000;
-
-const classesOf = (value: string | null) => (value ?? '').split(/\s+/).filter(Boolean);
 
 const overlayStyles: Record<string, string> = {
   position: 'fixed',

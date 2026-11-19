@@ -21,6 +21,8 @@
  * page is restored from the back-forward cache.
  */
 
+import { setUpWhenReady } from '../utils/set-up-when-ready';
+
 export const tagName = 'govuk-react-password-input';
 
 const defaults = {
@@ -60,12 +62,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     };
 
     connectedCallback() {
-      if (this.setup()) return;
-      // The parts may not be parsed or rendered yet.
-      this.observer = new MutationObserver(() => {
-        if (this.setup()) this.observer?.disconnect();
-      });
-      this.observer.observe(this, { childList: true, subtree: true });
+      this.observer = setUpWhenReady(this, () => this.setup());
     }
 
     disconnectedCallback() {

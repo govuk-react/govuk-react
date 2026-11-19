@@ -39,6 +39,7 @@ import {
   translationFromAttributes,
   type Translation,
 } from '../utils/translation';
+import { classesOf, setText, setAttribute } from '../utils/dom';
 
 export const tagName = 'govuk-react-file-upload';
 
@@ -65,21 +66,6 @@ export function statusText(
   if (files.length === 1) return files[0].name;
   return translate(messages['multiple-files-chosen'] ?? defaults['multiple-files-chosen'], files.length, locale);
 }
-
-const classesOf = (attribute: string | null) => attribute?.split(/\s+/).filter(Boolean) ?? [];
-
-// Keeps the text node React rendered, so React can still update it.
-const setText = (element: Element, text: string) => {
-  if (element.textContent === text) return;
-  const { firstChild } = element;
-  if (firstChild instanceof Text && element.childNodes.length === 1) firstChild.nodeValue = text;
-  else element.textContent = text;
-};
-
-const setAttribute = (element: Element, name: string, value: string | null) => {
-  if (value === null) element.removeAttribute(name);
-  else if (element.getAttribute(name) !== value) element.setAttribute(name, value);
-};
 
 const countFiles = (items: DataTransferItemList) => Array.from(items).filter((item) => item.kind === 'file').length;
 

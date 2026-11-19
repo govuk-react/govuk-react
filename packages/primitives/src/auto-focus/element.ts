@@ -17,6 +17,7 @@
  */
 
 import { dropAutoFocus, setFocus } from '../utils/set-focus';
+import { setUpWhenReady } from '../utils/set-up-when-ready';
 
 export const tagName = 'govuk-react-auto-focus';
 
@@ -27,12 +28,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     private observer?: MutationObserver;
 
     connectedCallback() {
-      if (this.focusTarget()) return;
       // The target may not be parsed or rendered yet.
-      this.observer = new MutationObserver(() => {
-        if (this.focusTarget()) this.observer?.disconnect();
-      });
-      this.observer.observe(this, { childList: true, subtree: true });
+      this.observer = setUpWhenReady(this, () => this.focusTarget());
     }
 
     disconnectedCallback() {

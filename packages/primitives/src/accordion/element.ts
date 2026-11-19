@@ -35,6 +35,8 @@
  * sections' values.
  */
 
+import { classesOf, setText } from '../utils/dom';
+
 declare global {
   interface HTMLElementEventMap {
     'govuk-react-accordion:change': CustomEvent<{ value: string[] }>;
@@ -60,13 +62,6 @@ const defaults = {
 };
 
 const valuesOf = (attribute: string | null) => attribute?.split(/\s+/).filter(Boolean);
-
-// Writing the same text again would still wake the MutationObserver.
-const setText = (element: Element, text: string) => {
-  if (element.textContent !== text) element.textContent = text;
-};
-
-const classesOf = (attribute: string | null) => attribute?.split(/\s+/).filter(Boolean) ?? [];
 
 if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined') {
   class GovukReactAccordion extends HTMLElement implements AccordionElement {
