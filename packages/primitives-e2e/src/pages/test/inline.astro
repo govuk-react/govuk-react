@@ -1,0 +1,24 @@
+---
+import TabsDemo from '../../components/TabsDemo.tsx';
+import * as Inline from '@govuk-react/primitives/inline-script';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Inline</title><link rel="icon" href="data:," />
+    <!-- Every element's inline script, as classic scripts. React's parts then load as usual. -->
+    <Inline.InlineScript script={Inline.accordion} />
+    <Inline.InlineScript script={Inline.autoFocus} />
+    <Inline.InlineScript script={Inline.button} />
+    <Inline.InlineScript script={Inline.characterCount} />
+    <Inline.InlineScript script={Inline.choices} />
+    <Inline.InlineScript script={Inline.disclosure} />
+    <Inline.InlineScript script={Inline.focusLinks} />
+    <Inline.InlineScript script={Inline.modal} />
+    <Inline.InlineScript script={Inline.passwordInput} />
+    <Inline.InlineScript script={Inline.tabs} />
+  </head>
+  <body>
+    <TabsDemo client:load id="h" name="h" />
+  </body>
+</html>
