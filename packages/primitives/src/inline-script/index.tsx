@@ -28,6 +28,7 @@ export {
   characterCount,
   choices,
   disclosure,
+  exitThisPage,
   fileUpload,
   focusLinks,
   modal,
