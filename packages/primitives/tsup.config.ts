@@ -13,6 +13,8 @@ export default defineConfig({
     'modal-element': 'src/modal/element.ts',
     'password-input': 'src/password-input/index.tsx',
     'password-input-element': 'src/password-input/element.ts',
+    'character-count': 'src/character-count/index.tsx',
+    'character-count-element': 'src/character-count/element.ts',
   },
   format: ['esm'],
   dts: true,

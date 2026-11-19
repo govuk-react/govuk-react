@@ -110,3 +110,21 @@ import * as Modal from '@govuk-react/primitives/modal';
 `Title` names the dialog, so always include one, or pass `aria-label` to `Content`. Pass `closedby="any"` to `Content` to also close it when the user clicks outside it.
 
 `open` and `onOpenChange` control the dialog once hydrated. In an island without a `Root`, pass `dialogId` to `Trigger` and `Close`, and `id` and `aria-labelledby` to `Content`.
+
+## Character count
+
+```tsx
+import * as CharacterCount from '@govuk-react/primitives/character-count';
+
+<CharacterCount.Root maxLength={200}>
+  <label htmlFor="more-detail">Can you provide more detail?</label>
+  <CharacterCount.Input id="more-detail" aria-describedby="more-detail-info" maxLength={200} />
+  <CharacterCount.Description id="more-detail-info">You can enter up to 200 characters</CharacterCount.Description>
+  <CharacterCount.Status />
+  <CharacterCount.ScreenReaderStatus className="visually-hidden" />
+</CharacterCount.Root>;
+```
+
+Without JavaScript the `Description` is shown and both statuses are hidden. On upgrade the element visually hides the description, removes the field's `maxlength` so users can see by how much they're over, and shows `Status`, which updates as the user types. As in govuk-frontend, `ScreenReaderStatus` updates once the user pauses, rather than on every key, and is hidden from screen readers below `threshold`.
+
+`countType` is "length" (the default, as `maxlength` counts), "characters" (as users see them, such as an emoji as one) or "words". The messages are English by default, and take a message for each plural form. The statuses get `data-state` ("under", "at" or "over") for styling, or pass class names such as `overLimitClass`. The field's value is the state, so a value React sets is counted too.

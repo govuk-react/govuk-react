@@ -5,6 +5,7 @@ export { Body } from './components/body';
 export * as Breadcrumbs from './components/breadcrumbs';
 export * as Button from './components/button';
 export { Caption } from './components/caption';
+export * as CharacterCount from './components/character-count';
 export * as Checkboxes from './components/checkboxes';
 export * as CookieBanner from './components/cookie-banner';
 export * as DateInput from './components/date-input';
