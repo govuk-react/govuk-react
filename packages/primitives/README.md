@@ -23,7 +23,7 @@ import { InlineScript, tabs } from '@govuk-react/primitives/inline-script';
 </head>;
 ```
 
-The scripts are `accordion`, `autoFocus`, `button`, `characterCount`, `choices`, `disclosure`, `exitThisPage`, `fileUpload`, `focusLinks`, `modal`, `passwordInput` and `tabs`. `InlineScript` isn't a client component, so the scripts stay out of client bundles. A script React adds in the browser doesn't run, and isn't needed, since React's parts define their elements.
+The scripts are `accordion`, `autocomplete`, `autoFocus`, `button`, `characterCount`, `choices`, `disclosure`, `exitThisPage`, `fileUpload`, `focusLinks`, `modal`, `passwordInput` and `tabs`. `InlineScript` isn't a client component, so the scripts stay out of client bundles. A script React adds in the browser doesn't run, and isn't needed, since React's parts define their elements.
 
 ## Accordion
 
@@ -144,6 +144,37 @@ import * as CharacterCount from '@govuk-react/primitives/character-count';
 Without JavaScript the `Description` is shown and both statuses are hidden. On upgrade the element visually hides the description, removes the field's `maxlength` so users can see by how much they're over, and shows `Status`, which updates as the user types. As in govuk-frontend, `ScreenReaderStatus` updates once the user pauses, rather than on every key, and is hidden from screen readers below `threshold`.
 
 `countType` is "length" (the default, as `maxlength` counts), "characters" (as users see them, such as an emoji as one) or "words". The messages are English by default, and take a message for each plural form. The statuses get `data-state` ("under", "at" or "over") for styling, or pass class names such as `overLimitClass`. The field's value is the state, so a value React sets is counted too.
+
+## Autocomplete
+
+```tsx
+import * as Autocomplete from '@govuk-react/primitives/autocomplete';
+
+<label htmlFor="country">Country</label>
+<Autocomplete.Root onQueryChange={fetchCountries} onConfirm={setCountry}>
+  <Autocomplete.Input id="country" name="country" />
+  <Autocomplete.Listbox>
+    {countries.map((country) => (
+      <Autocomplete.Option key={country} value={country}>
+        {country}
+      </Autocomplete.Option>
+    ))}
+    <Autocomplete.NoResults />
+  </Autocomplete.Listbox>
+  <Autocomplete.Status />
+  <Autocomplete.AssistiveHint />
+</Autocomplete.Root>;
+```
+
+A port of GOV.UK's [accessible-autocomplete](https://github.com/alphagov/accessible-autocomplete) that enhances your own input. Without JavaScript the input is a plain input. On upgrade it's a combobox with accessible-autocomplete's behaviour: options that match the query show in the `Listbox`, Up and Down move focus through them, Enter, Space or a click confirms one, and Escape closes the menu. `Status` tells screen readers how many options there are once the user pauses, and `AssistiveHint` describes the input while the query is empty.
+
+The input's value is the query, and the options are whatever you render, so there is nothing else to control. `onQueryChange` is called when options are due, such as to fetch them, including for a query typed before hydration. `filter` sets which options match the query: "contains" (the default), "starts-with", or "none" for options that already match, such as results from a server. Leave out `NoResults` to show nothing when no option matches.
+
+`minLength` is the length the query needs before options show. `onConfirm` is called when the user confirms an option. With `submitOnConfirm`, confirming an option submits the form, and Enter submits it while no option is highlighted. As in accessible-autocomplete, focus leaving a highlighted option confirms it, unless `confirmOnBlur` is `false`. The status messages are English by default, and take a message for each plural form.
+
+Not ported from accessible-autocomplete: `showAllValues` and its dropdown arrow, `enhanceSelectElement`, `autoselect` and its inline hint, `displayMenu` (style the `Listbox` instead) and the iOS position workaround.
+
+accessible-autocomplete is Copyright (c) 2017 Crown Copyright (Government Digital Service), under the [MIT licence](licences/accessible-autocomplete.txt).
 
 ## File upload
 

@@ -17,7 +17,8 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "dist"
+    "dist",
+    "licences"
   ],
   "scripts": {
     "build": "rm -rf dist && tsup --config tsup.inline.config.ts && tsup"

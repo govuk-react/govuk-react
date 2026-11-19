@@ -18,6 +18,7 @@ const pages = [
   { path: '/test/button', role: 'button', name: 'Save and continue' },
   { path: '/test/exit-this-page', role: 'textbox', name: 'Name' },
   { path: '/test/file-upload', role: 'button', name: 'Disable' },
+  { path: '/test/autocomplete', role: 'combobox', name: 'Country' },
 ] as const;
 
 for (const { path, role, name } of pages) {
