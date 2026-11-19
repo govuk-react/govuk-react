@@ -93,7 +93,10 @@ export function Root({
   useEffect(() => {
     const node = element.current;
     if (!node) return undefined;
-    const onChange = (event: CustomEvent<{ value: string[] }>) => onValueChangeRef.current?.(event.detail.value);
+    // A nested accordion's change bubbles through this one.
+    const onChange = (event: CustomEvent<{ value: string[] }>) => {
+      if (event.target === node) onValueChangeRef.current?.(event.detail.value);
+    };
     node.addEventListener('govuk-react-accordion:change', onChange);
     return () => node.removeEventListener('govuk-react-accordion:change', onChange);
   }, []);

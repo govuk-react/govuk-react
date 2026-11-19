@@ -112,4 +112,59 @@ describe('Accordion', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Close all' }));
     expect(screen.getByText('Writing well for the web content')).not.toBeVisible();
   });
+
+  test('sets up sections added after upgrade', async () => {
+    function Growing() {
+      const [more, setMore] = useState(false);
+      return (
+        <>
+          <Accordion.Root rememberExpanded={false}>
+            {['first', ...(more ? ['second'] : [])].map((value) => (
+              <Accordion.Section key={value} value={value}>
+                <Accordion.Fallback>{value}</Accordion.Fallback>
+                <Accordion.Trigger>
+                  <Accordion.Label>{value}</Accordion.Label>
+                </Accordion.Trigger>
+                <Accordion.Content id={`${value}-content`}>{value} content</Accordion.Content>
+              </Accordion.Section>
+            ))}
+          </Accordion.Root>
+          <button type="button" onClick={() => setMore(true)}>
+            Add
+          </button>
+        </>
+      );
+    }
+    render(<Growing />);
+    await upgraded();
+    fireEvent.click(screen.getByRole('button', { name: 'Add' }));
+    await upgraded();
+    const second = button(/^second/);
+    expect(second).toBeVisible();
+    expect(second).toHaveAttribute('aria-controls', 'second-content');
+    expect(screen.getByText('second content')).not.toBeVisible();
+    fireEvent.click(second);
+    expect(screen.getByText('second content')).toBeVisible();
+  });
+
+  test("a nested accordion's changes aren't reported by the outer one", async () => {
+    const outer = vi.fn();
+    render(
+      <Accordion.Root rememberExpanded={false} onValueChange={outer}>
+        <Accordion.Section value="outer">
+          <Accordion.Trigger>
+            <Accordion.Label>Outer</Accordion.Label>
+          </Accordion.Trigger>
+          <Accordion.Content id="outer-content">
+            <Example />
+          </Accordion.Content>
+        </Accordion.Section>
+      </Accordion.Root>
+    );
+    await upgraded();
+    fireEvent.click(button(/^Outer/));
+    fireEvent.click(button(/^Writing well for the web/));
+    expect(outer).toHaveBeenCalledTimes(1);
+    expect(outer).toHaveBeenLastCalledWith(['outer']);
+  });
 });

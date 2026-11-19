@@ -61,6 +61,11 @@ const defaults = {
 
 const valuesOf = (attribute: string | null) => attribute?.split(/\s+/).filter(Boolean);
 
+// Writing the same text again would still wake the MutationObserver.
+const setText = (element: Element, text: string) => {
+  if (element.textContent !== text) element.textContent = text;
+};
+
 const classesOf = (attribute: string | null) => attribute?.split(/\s+/).filter(Boolean) ?? [];
 
 if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined') {
@@ -76,6 +81,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     private controlled = false;
 
     private picked?: string[];
+
+    private readonly prepared = new WeakSet<HTMLElement>();
 
     private observer?: MutationObserver;
 
@@ -115,25 +122,36 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     connectedCallback() {
-      if (this.setup()) return;
-      // The sections may not be parsed or rendered yet.
-      this.observer = new MutationObserver(() => {
-        if (this.setup()) this.observer?.disconnect();
+      // Sections can be parsed or rendered later, and React can rewrite a class attribute.
+      this.observer = new MutationObserver((records) => {
+        if (!this.upgraded) {
+          this.setup();
+          return;
+        }
+        if (records.some((record) => record.type === 'childList'))
+          this.sections.forEach((section) => this.prepare(section));
+        this.render();
       });
-      this.observer.observe(this, { childList: true, subtree: true });
+      this.observer.observe(this, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] });
+      if (this.upgraded) {
+        // Moved, rather than new: keep the open sections.
+        this.listen();
+        this.render();
+      } else {
+        this.setup();
+      }
     }
 
     disconnectedCallback() {
       this.observer?.disconnect();
       this.removeEventListener('click', this.onClick);
       this.removeEventListener('beforematch', this.onBeforeMatch, true);
-      this.upgraded = false;
     }
 
     attributeChangedCallback() {
       const value = valuesOf(this.getAttribute('value'));
+      this.controlled = value !== undefined;
       if (!value) return;
-      this.controlled = true;
       this.open = new Set(value);
       this.render();
     }
@@ -175,72 +193,73 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     private setup() {
-      if (this.upgraded) return true;
       const sections = this.sections;
-      if (!sections.length || sections.some((section) => !this.find(section, 'button[data-accordion-trigger]'))) {
-        return false;
-      }
+      if (!sections.some((section) => this.find(section, 'button[data-accordion-trigger]'))) return;
       this.upgraded = true;
       const value = valuesOf(this.getAttribute('value'));
-      const defaultValue = valuesOf(this.getAttribute('default-value'));
       this.controlled = value !== undefined;
-      this.open = new Set(
-        value ??
-          defaultValue ??
-          sections
-            .filter((section) => section.hasAttribute('data-expanded'))
-            .map((section) => section.dataset.value ?? '')
-      );
-      if (!this.controlled) this.restore();
+      this.open = new Set(value ?? valuesOf(this.getAttribute('default-value')));
       this.dataset.upgraded = '';
       const upgradedClasses = classesOf(this.getAttribute('upgraded-class'));
       if (upgradedClasses.length) this.classList.add(...upgradedClasses);
       this.own('[data-accordion-controls]').forEach((controls) => {
         controls.hidden = false;
       });
-      sections.forEach((section) => {
-        Array.from(section.querySelectorAll<HTMLElement>('[data-accordion-fallback]'))
-          .filter((fallback) => this.sectionOf(fallback) === section)
-          .forEach((fallback) => {
-            fallback.hidden = true;
-          });
-        const trigger = this.find(section, 'button[data-accordion-trigger]');
-        const content = this.find(section, '[data-accordion-content]');
-        if (!trigger) return;
-        trigger.hidden = false;
-        if (content?.id) trigger.setAttribute('aria-controls', content.id);
-      });
+      sections.forEach((section) => this.prepare(section));
+      this.listen();
+      this.render();
+    }
+
+    private listen() {
       this.addEventListener('click', this.onClick);
       // `beforematch` doesn't bubble.
       this.addEventListener('beforematch', this.onBeforeMatch, true);
-      this.render();
-      return true;
     }
 
-    /** The sections remembered from earlier in the session, as in govuk-frontend. */
-    private restore() {
-      if (!this.remember) return;
-      this.sections.forEach((section) => {
-        const id = this.find(section, '[data-accordion-content]')?.id;
-        const value = section.dataset.value;
-        if (!id || value === undefined) return;
-        try {
-          const state = window.sessionStorage.getItem(id);
-          if (state === 'true') this.open.add(value);
-          else if (state === 'false') this.open.delete(value);
-        } catch {
-          // Storage can be unavailable.
-        }
-      });
+    /** Swaps a section's fallback for its trigger, once, and sets its first state. */
+    private prepare(section: HTMLElement) {
+      const trigger = this.find(section, 'button[data-accordion-trigger]');
+      if (!trigger || this.prepared.has(section)) return;
+      this.prepared.add(section);
+      const value = section.dataset.value ?? '';
+      if (!this.controlled) {
+        const defaultValue = valuesOf(this.getAttribute('default-value'));
+        if (defaultValue ? defaultValue.includes(value) : section.hasAttribute('data-expanded')) this.open.add(value);
+        this.restore(section);
+      }
+      Array.from(section.querySelectorAll<HTMLElement>('[data-accordion-fallback]'))
+        .filter((fallback) => this.sectionOf(fallback) === section)
+        .forEach((fallback) => {
+          fallback.hidden = true;
+        });
+      trigger.hidden = false;
+      const content = this.find(section, '[data-accordion-content]');
+      if (content?.id) trigger.setAttribute('aria-controls', content.id);
     }
 
-    private store() {
+    /** A section remembered from earlier in the session, as in govuk-frontend. */
+    private restore(section: HTMLElement) {
+      const id = this.find(section, '[data-accordion-content]')?.id;
+      const value = section.dataset.value;
+      if (!this.remember || !id || value === undefined) return;
+      try {
+        const state = window.sessionStorage.getItem(id);
+        if (state === 'true') this.open.add(value);
+        else if (state === 'false') this.open.delete(value);
+      } catch {
+        // Storage can be unavailable.
+      }
+    }
+
+    /** Remembers the sections that changed, as govuk-frontend does. */
+    private store(previous: Set<string>) {
       if (!this.remember) return;
       this.sections.forEach((section) => {
+        const value = section.dataset.value ?? '';
         const id = this.find(section, '[data-accordion-content]')?.id;
-        if (!id) return;
+        if (!id || previous.has(value) === this.open.has(value)) return;
         try {
-          window.sessionStorage.setItem(id, String(this.open.has(section.dataset.value ?? '')));
+          window.sessionStorage.setItem(id, String(this.open.has(value)));
         } catch {
           // Storage can be unavailable.
         }
@@ -251,10 +270,11 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       const value = this.sections.map((section) => section.dataset.value ?? '').filter((v) => next.has(v));
       // Find in page must show the match, so it opens the section even when controlled.
       if (!this.controlled || force) {
+        const previous = this.open;
         this.open = new Set(value);
         if (!this.controlled) {
           this.picked = value;
-          this.store();
+          this.store(previous);
         }
         this.render();
       }
@@ -290,14 +310,14 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
           [...labels, this.text(expanded ? 'hide-section-label' : 'show-section-label')].join(' , ')
         );
         const toggleText = trigger.querySelector('[data-accordion-toggle-text]');
-        if (toggleText) toggleText.textContent = this.text(expanded ? 'hide-section-text' : 'show-section-text');
+        if (toggleText) setText(toggleText, this.text(expanded ? 'hide-section-text' : 'show-section-text'));
         setIcon(trigger, expanded);
       });
       const allOpen = this.allOpen;
       this.own('button[data-accordion-show-all]').forEach((showAll) => {
         showAll.setAttribute('aria-expanded', String(allOpen));
         const text = showAll.querySelector('[data-accordion-show-all-text]');
-        if (text) text.textContent = this.text(allOpen ? 'hide-all-sections-text' : 'show-all-sections-text');
+        if (text) setText(text, this.text(allOpen ? 'hide-all-sections-text' : 'show-all-sections-text'));
         setIcon(showAll, allOpen);
       });
     }
