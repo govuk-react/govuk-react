@@ -31,7 +31,7 @@
  * "links", the URL hash follows the selected tab and selects it, as in govuk-frontend.
  */
 
-import { classesOf } from '../utils/dom';
+import { classesOf } from '../utils/dom.js';
 
 declare global {
   interface HTMLElementEventMap {

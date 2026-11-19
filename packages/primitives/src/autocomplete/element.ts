@@ -54,8 +54,8 @@ import {
   translationFromAttributes,
   withLocale,
   type Translation,
-} from '../utils/translation';
-import { setText, setAttribute } from '../utils/dom';
+} from '../utils/translation.js';
+import { setText, setAttribute } from '../utils/dom.js';
 
 export const tagName = 'govuk-react-autocomplete';
 

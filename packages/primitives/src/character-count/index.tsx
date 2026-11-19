@@ -3,11 +3,11 @@
 import * as React from 'react';
 import { createContext, useContext, useEffect, useRef, useState } from 'react';
 import type { ComponentProps } from 'react';
-import { Slot } from '../utils/slot';
-import { tagName, type CharacterCountElement } from './element';
-import { countMessage, messageAttributes, type CountType, type Translation } from './messages';
+import { Slot } from '../utils/slot.js';
+import { tagName, type CharacterCountElement } from './element.js';
+import { countMessage, messageAttributes, type CountType, type Translation } from './messages.js';
 
-export { countOf, countMessage, type CountType, type Translation } from './messages';
+export { countOf, countMessage, type CountType, type Translation } from './messages.js';
 
 /*
  * Headless character count: unstyled parts over the <govuk-react-character-count> element

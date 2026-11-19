@@ -3,8 +3,8 @@
 import * as React from 'react';
 import { isValidElement } from 'react';
 import type { ComponentProps } from 'react';
-import { Slot } from '../utils/slot';
-import { tagName } from './element';
+import { Slot } from '../utils/slot.js';
+import { tagName } from './element.js';
 
 /*
  * Headless auto focus: the <govuk-react-auto-focus> element (./element.ts) moves focus to its

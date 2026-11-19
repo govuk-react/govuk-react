@@ -1,8 +1,11 @@
 import fs from 'fs';
 import path from 'path';
+import { createRequire } from 'module';
+import { pathToFileURL } from 'url';
 
 import * as packageExports from '.';
 
+const sources = import.meta.glob<Record<string, unknown>>('./components/*/index.tsx');
 const stories = import.meta.glob<{ default: { id: string } }>('./components/*/stories.tsx', { eager: true });
 
 describe('Exports', () => {
@@ -23,15 +26,10 @@ const dirs = (p) => fs.readdirSync(p).filter((f) => fs.statSync(path.join(p, f))
 
 describe('Components', () => {
   const components = dirs(path.join(__dirname, 'components'));
-  const tsupConfig = fs.readFileSync(path.join(__dirname, '../tsup.config.ts'), 'utf8');
 
   components.map((component) =>
     describe(`govuk-react/${component}`, () => {
       const pascal = kebabCaseToPascalCase(component);
-
-      it(`has a build entry`, () => {
-        expect(tsupConfig).toContain(`'src/components/${component}/index.tsx'`);
-      });
 
       it(`is exported as ${pascal}`, () => {
         expect(!!packageExports[pascal]).toBe(true);
@@ -45,6 +43,29 @@ describe('Components', () => {
       it(`has a stories.tsx file with id set to "${component}""`, () => {
         expect(stories[`./components/${component}/stories.tsx`].default.id).toBe(component);
       });
+    })
+  );
+});
+
+const distDir = path.join(__dirname, '../dist');
+// Resolved through package.json's exports, as consumers resolve them
+const importBuilt = (entry: string): Promise<Record<string, unknown>> =>
+  import(/* @vite-ignore */ pathToFileURL(createRequire(__filename).resolve(entry)).href);
+
+// GitHub Actions builds before testing; locally, run `pnpm build` first
+describe.runIf(process.env.GITHUB_ACTIONS || fs.existsSync(distDir))('Built entries', () => {
+  it('govuk-react has the same exports as its source', async () => {
+    const built = await importBuilt('govuk-react');
+    expect(Object.keys(built).sort()).toEqual(Object.keys(packageExports).sort());
+  });
+
+  dirs(path.join(__dirname, 'components')).map((component) =>
+    it(`govuk-react/${component} has the same exports as its source`, async () => {
+      const [built, source] = await Promise.all([
+        importBuilt(`govuk-react/${component}`),
+        sources[`./components/${component}/index.tsx`](),
+      ]);
+      expect(Object.keys(built).sort()).toEqual(Object.keys(source).sort());
     })
   );
 });

@@ -3,11 +3,11 @@
 import * as React from 'react';
 import { createContext, useContext, useState } from 'react';
 import type { ComponentProps } from 'react';
-import { Slot } from '../utils/slot';
-import { translationAttributes, type Translation } from '../utils/translation';
-import { defaults, statusText, tagName } from './element';
+import { Slot } from '../utils/slot.js';
+import { translationAttributes, type Translation } from '../utils/translation.js';
+import { defaults, statusText, tagName } from './element.js';
 
-export type { Translation } from '../utils/translation';
+export type { Translation } from '../utils/translation.js';
 
 /*
  * Headless file upload: unstyled parts over the <govuk-react-file-upload> element (./element.ts),

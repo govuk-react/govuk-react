@@ -16,8 +16,8 @@
  * - `disabled`: don't move focus.
  */
 
-import { dropAutoFocus, setFocus } from '../utils/set-focus';
-import { setUpWhenReady } from '../utils/set-up-when-ready';
+import { dropAutoFocus, setFocus } from '../utils/set-focus.js';
+import { setUpWhenReady } from '../utils/set-up-when-ready.js';
 
 export const tagName = 'govuk-react-auto-focus';
 

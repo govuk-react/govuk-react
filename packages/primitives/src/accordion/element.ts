@@ -35,7 +35,7 @@
  * sections' values.
  */
 
-import { classesOf, setText } from '../utils/dom';
+import { classesOf, setText } from '../utils/dom.js';
 
 declare global {
   interface HTMLElementEventMap {

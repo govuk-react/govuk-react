@@ -3,8 +3,8 @@
 import * as React from 'react';
 import { useEffect, useRef } from 'react';
 import type { ComponentProps } from 'react';
-import { Slot } from '../utils/slot';
-import { tagName, type DisclosureElement } from './element';
+import { Slot } from '../utils/slot.js';
+import { tagName, type DisclosureElement } from './element.js';
 
 /*
  * Headless disclosure: unstyled parts over the <govuk-react-disclosure> element (./element.ts),

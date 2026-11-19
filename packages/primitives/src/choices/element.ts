@@ -23,8 +23,8 @@
  *   `hidden` on it.
  */
 
-import { classesOf } from '../utils/dom';
-import { onPropertySet } from '../utils/on-property-set';
+import { classesOf } from '../utils/dom.js';
+import { onPropertySet } from '../utils/on-property-set.js';
 
 export const tagName = 'govuk-react-choices';
 

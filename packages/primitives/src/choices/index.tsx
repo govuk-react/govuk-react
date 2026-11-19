@@ -3,8 +3,8 @@
 import * as React from 'react';
 import { useEffect, useRef } from 'react';
 import type { ComponentProps } from 'react';
-import { Slot } from '../utils/slot';
-import { tagName, type ChoicesElement } from './element';
+import { Slot } from '../utils/slot.js';
+import { tagName, type ChoicesElement } from './element.js';
 
 /*
  * Headless radios and checkboxes behaviour: unstyled parts over the <govuk-react-choices> element

@@ -3,8 +3,8 @@
 import * as React from 'react';
 import { createContext, useContext, useEffect, useId, useRef } from 'react';
 import type { ComponentProps, ReactNode, SyntheticEvent } from 'react';
-import { Slot } from '../utils/slot';
-import { tagName } from './element';
+import { Slot } from '../utils/slot.js';
+import { tagName } from './element.js';
 
 /*
  * Headless modal dialog: unstyled parts over a native `dialog` and the <govuk-react-modal>

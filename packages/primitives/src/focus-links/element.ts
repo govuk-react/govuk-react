@@ -13,8 +13,8 @@
  * - `focused-class`: classes for a target that isn't a form field while it has focus.
  */
 
-import { setFocus } from '../utils/set-focus';
-import { classesOf } from '../utils/dom';
+import { setFocus } from '../utils/set-focus.js';
+import { classesOf } from '../utils/dom.js';
 
 export const tagName = 'govuk-react-focus-links';
 

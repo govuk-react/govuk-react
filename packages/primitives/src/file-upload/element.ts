@@ -38,8 +38,8 @@ import {
   translationAttributeNames,
   translationFromAttributes,
   type Translation,
-} from '../utils/translation';
-import { classesOf, setText, setAttribute } from '../utils/dom';
+} from '../utils/translation.js';
+import { classesOf, setText, setAttribute } from '../utils/dom.js';
 
 export const tagName = 'govuk-react-file-upload';
 

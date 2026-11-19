@@ -10,8 +10,8 @@
       "default": "./dist/index.js"
     },
     "./*": {
-      "types": "./dist/*.d.ts",
-      "default": "./dist/*.js"
+      "types": "./dist/components/*/index.d.ts",
+      "default": "./dist/components/*/index.js"
     },
     "./package.json": "./package.json"
   },
@@ -20,7 +20,7 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "NODE_OPTIONS=--max-old-space-size=4096 tsup && pnpm copy-readme",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && pnpm copy-readme",
     "copy-readme": "cp ../../README.md ../../LICENSE ."
   },
   "dependencies": {

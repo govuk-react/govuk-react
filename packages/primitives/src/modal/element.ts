@@ -20,7 +20,7 @@
  *   "close" or "request-close"
  */
 
-import { setUpWhenReady } from '../utils/set-up-when-ready';
+import { setUpWhenReady } from '../utils/set-up-when-ready.js';
 
 declare global {
   interface HTMLElementEventMap {

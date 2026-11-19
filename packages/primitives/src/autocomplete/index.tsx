@@ -3,12 +3,12 @@
 import * as React from 'react';
 import { useEffect, useRef } from 'react';
 import type { ComponentProps, CSSProperties } from 'react';
-import { Slot } from '../utils/slot';
-import { translationAttributes, type Translation } from '../utils/translation';
-import { tagName, type AutocompleteElement, type Filter } from './element';
+import { Slot } from '../utils/slot.js';
+import { translationAttributes, type Translation } from '../utils/translation.js';
+import { tagName, type AutocompleteElement, type Filter } from './element.js';
 
-export type { Filter } from './element';
-export type { Translation } from '../utils/translation';
+export type { Filter } from './element.js';
+export type { Translation } from '../utils/translation.js';
 
 /*
  * Headless autocomplete: unstyled parts over the <govuk-react-autocomplete> element

@@ -5,7 +5,7 @@ import * as Markup from 'govuk-frontend-react/character-count';
 import { ErrorMessageComposite } from 'govuk-frontend-react/error-message';
 import { Hint } from 'govuk-frontend-react/hint';
 import { LabelComposite } from 'govuk-frontend-react/label';
-import { joinIds } from '../../utils/join-ids';
+import { joinIds } from '../../utils/join-ids.js';
 
 /*
  * govuk-frontend-react's CharacterCount markup, with the count from @govuk-react/primitives.

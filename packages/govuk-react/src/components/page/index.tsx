@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { SkipLink } from '../skip-link';
-import { WidthContainer } from '../width-container';
-import { MainWrapper } from '../main-wrapper';
+import { SkipLink } from '../skip-link/index.js';
+import { WidthContainer } from '../width-container/index.js';
+import { MainWrapper } from '../main-wrapper/index.js';
 import { Header as TemplateHeader, Footer as TemplateFooter } from 'govuk-frontend-react/template';
 
 export type PageProps = {

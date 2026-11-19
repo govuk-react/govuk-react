@@ -20,7 +20,7 @@ pnpm start
 
 ## Creating a new component
 
-Add a folder in `packages/govuk-react/src/components` with the component (`index.tsx`), a test (`test.tsx`) and stories (`stories.tsx`). Export it from `packages/govuk-react/src/index.ts` and add an entry in `packages/govuk-react/tsup.config.ts`.
+Add a folder in `packages/govuk-react/src/components` with the component (`index.tsx`), a test (`test.tsx`) and stories (`stories.tsx`). Export it from `packages/govuk-react/src/index.ts`.
 
 ## Unit testing
 
