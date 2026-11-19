@@ -511,21 +511,6 @@ importers:
       '@govuk-react/example-application':
         specifier: ^0.10.7
         version: link:../example-application
-      '@rjsf/core':
-        specifier: ^3.1.0
-        version: 3.1.0(react@19.3.1)
-      final-form:
-        specifier: ^4.20.10
-        version: 4.20.10
-      formik:
-        specifier: ^2.4.5
-        version: 2.4.5(react@19.3.1)
-      normalize.css:
-        specifier: ^8.0.0
-        version: 8.0.1
-      react-final-form:
-        specifier: ^6.5.9
-        version: 6.5.9(final-form@4.20.10)(react@19.3.1)
       react-hook-form:
         specifier: ^7.51.1
         version: 7.51.1(react@19.3.1)
@@ -5192,9 +5177,6 @@ packages:
   normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
-
-  normalize.css@8.0.1:
-    resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==}
 
   npm-run-path@4.0.1:
     resolution: {integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==}
@@ -12405,8 +12387,6 @@ snapshots:
   node-releases@2.0.64: {}
 
   normalize-path@3.0.0: {}
-
-  normalize.css@8.0.1: {}
 
   npm-run-path@4.0.1:
     dependencies:
