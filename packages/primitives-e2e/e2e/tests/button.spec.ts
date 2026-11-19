@@ -59,3 +59,21 @@ test.describe('upgraded without React', () => {
     await expect(page).toHaveURL(/#upgraded-linked$/);
   });
 });
+
+test.describe('rendered only in the browser', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/test/button-client-only');
+    await expect(demo(page, 'client')).toHaveAttribute('data-hydrated', 'true');
+  });
+
+  test('a double click submits the form once', async ({ page }) => {
+    await demo(page, 'client').getByRole('button', { name: 'Save and continue' }).dblclick();
+    await expect(page.getByTestId('submits')).toHaveText('1');
+  });
+
+  test('Space activates a link button', async ({ page }) => {
+    await demo(page, 'client').getByRole('button', { name: 'Link button' }).focus();
+    await page.keyboard.press('Space');
+    await expect(page).toHaveURL(/#client-linked$/);
+  });
+});

@@ -65,3 +65,25 @@ test('works when rendered only in the browser', async ({ page }) => {
   await demo(page, 'client').getByRole('link', { name: 'Enter your full name' }).click();
   await expect(demo(page, 'client').getByLabel('Full name')).toBeFocused();
 });
+
+test('hydrated: focus moved before hydration stays where the user moved it', async ({ page }) => {
+  // Hold back React, but not the elements, which the page's own script defines.
+  let release = () => {};
+  const gate = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  await page.route(/\/_astro\/(FocusDemo|client)\.[^/]*\.js$/, async (route) => {
+    await gate;
+    await route.continue();
+  });
+  await page.goto('/test/focus', { waitUntil: 'commit' });
+  const summary = demo(page, 'hydrated').getByRole('alert');
+  await expect(summary).toBeFocused();
+  await demo(page, 'hydrated').getByRole('link', { name: 'Enter your full name' }).click();
+  const field = demo(page, 'hydrated').getByLabel('Full name');
+  await expect(field).toBeFocused();
+  release();
+  await expect(demo(page, 'hydrated')).toHaveAttribute('data-hydrated', 'true');
+  await expect(field).toBeFocused();
+  await expect(summary).not.toHaveAttribute('tabindex');
+});
