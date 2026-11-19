@@ -166,3 +166,19 @@ import * as FocusLinks from '@govuk-react/primitives/focus-links';
 ```
 
 Makes links inside it, to a part of the same page, move focus there. A link to a form field focuses the field and scrolls its label into view, or its fieldset's legend, as govuk-frontend's error summary does. A link to anything else focuses it with `tabindex="-1"` and `focusedClass` until focus moves on, as govuk-frontend's skip link does. Without JavaScript the browser follows the link as usual.
+
+## Button
+
+```tsx
+import * as Button from '@govuk-react/primitives/button';
+
+<Button.Root preventDoubleClick>Save and continue</Button.Root>;
+
+<Button.Root asChild>
+  <a href="/start" role="button">
+    Start now
+  </a>
+</Button.Root>;
+```
+
+With `preventDoubleClick`, a second click within a second of the first is ignored, so a form isn't submitted twice. The click is stopped before React hears it, so `onClick` doesn't run twice either. Space activates a link with `role="button"`, as it does a button. Unlike the other primitives there's no wrapper element, which would change a button group's layout: importing the module adds one click and one keydown listener to the document, for any element marked by `Root`. Without React, import `@govuk-react/primitives/button-element` and mark buttons with `data-button`.

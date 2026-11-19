@@ -16,6 +16,8 @@ export default defineConfig({
     'character-count': 'src/character-count/index.tsx',
     'auto-focus': 'src/auto-focus/index.tsx',
     'auto-focus-element': 'src/auto-focus/element.ts',
+    button: 'src/button/index.tsx',
+    'button-element': 'src/button/element.ts',
     choices: 'src/choices/index.tsx',
     'choices-element': 'src/choices/element.ts',
     'focus-links': 'src/focus-links/index.tsx',

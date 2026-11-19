@@ -33,6 +33,11 @@ export const Disabled: Story = {
   args: { disabled: true, children: 'Disabled button' },
 };
 
+export const PreventDoubleClick: Story = {
+  name: 'Stop a form being submitted twice',
+  args: { preventDoubleClick: true, children: 'Confirm and send' },
+};
+
 export const LinkButton: Story = {
   args: { href: '#', children: 'Link button' },
 };
