@@ -1,0 +1,16 @@
+---
+import CharacterCountDemo from '../../components/CharacterCountDemo.tsx';
+---
+
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Character count</title><link rel="icon" href="data:," /></head>
+  <body>
+    <CharacterCountDemo client:load id="hydrated" />
+    <CharacterCountDemo client:load id="controlled" controlled />
+    <!-- No client directive: the element upgrades the server markup, and React never hydrates. -->
+    <CharacterCountDemo id="upgraded" />
+    <script>
+      import '@govuk-react/primitives/character-count-element';
+    </script>
+  </body>
+</html>

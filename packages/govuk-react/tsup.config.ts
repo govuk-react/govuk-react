@@ -9,6 +9,7 @@ export default defineConfig({
     breadcrumbs: 'src/components/breadcrumbs/index.tsx',
     button: 'src/components/button/index.tsx',
     caption: 'src/components/caption/index.tsx',
+    'character-count': 'src/components/character-count/index.tsx',
     checkboxes: 'src/components/checkboxes/index.tsx',
     'cookie-banner': 'src/components/cookie-banner/index.tsx',
     'date-input': 'src/components/date-input/index.tsx',
