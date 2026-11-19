@@ -2,21 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 import { useEffect, useRef } from 'react';
 
-import {
-  EnhancedFileUpload,
-  EnhancedFileUploadAnnouncements,
-  EnhancedFileUploadButton,
-  EnhancedFileUploadComma,
-  EnhancedFileUploadField,
-  type EnhancedFileUploadFieldProps,
-  EnhancedFileUploadInstruction,
-  EnhancedFileUploadPseudoButton,
-  EnhancedFileUploadPseudoButtonContainer,
-  EnhancedFileUploadStatus,
-  EnhancedFileUploadWrapper,
-  FileUpload,
-  FileUploadField,
-} from '.';
+import { EnhancedFileUpload, FileUpload, FileUploadField } from '.';
 
 const meta = {
   title: 'Form/File upload',
@@ -53,7 +39,7 @@ export const WithErrorMessage: Story = {
 
 export const Enhanced: Story = {
   args: { id: 'file-upload-1', name: 'fileUpload1' },
-  render: (args) => <EnhancedFileUploadField {...args} />,
+  render: (args) => <EnhancedFileUpload.Field {...args} />,
 };
 
 export const EnhancedWithHintAndError: Story = {
@@ -63,17 +49,17 @@ export const EnhancedWithHintAndError: Story = {
     hint: 'Your photo may be in your Pictures, Photos, Downloads or Desktop folder. Or in an app like iPhoto.',
     errorMessage: 'Error message goes here',
   },
-  render: (args) => <EnhancedFileUploadField {...args} />,
+  render: (args) => <EnhancedFileUpload.Field {...args} />,
 };
 
 export const EnhancedMultipleFiles: Story = {
   args: { id: 'file-upload-3', name: 'fileUpload3', multiple: true },
-  render: (args) => <EnhancedFileUploadField {...args} />,
+  render: (args) => <EnhancedFileUpload.Field {...args} />,
 };
 
 export const EnhancedDisabled: Story = {
   args: { id: 'file-upload-4', name: 'fileUpload4', disabled: true },
-  render: (args) => <EnhancedFileUploadField {...args} />,
+  render: (args) => <EnhancedFileUpload.Field {...args} />,
 };
 
 const transferOf = (names: string[]) => {
@@ -87,7 +73,7 @@ function WithFiles({
   names,
   dragging = false,
   ...props
-}: EnhancedFileUploadFieldProps & { names: string[]; dragging?: boolean }) {
+}: EnhancedFileUpload.FieldProps & { names: string[]; dragging?: boolean }) {
   const container = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
@@ -105,7 +91,7 @@ function WithFiles({
   }, [names, dragging]);
   return (
     <div ref={container}>
-      <EnhancedFileUploadField {...props} />
+      <EnhancedFileUpload.Field {...props} />
     </div>
   );
 }
@@ -134,20 +120,20 @@ export const WithParts: Story = {
       <label className="govuk-label" id="file-upload-8-label" htmlFor="file-upload-8">
         Upload a file
       </label>
-      <EnhancedFileUpload>
-        <EnhancedFileUploadWrapper>
-          <EnhancedFileUploadButton>
-            <EnhancedFileUploadStatus />
-            <EnhancedFileUploadComma />
-            <EnhancedFileUploadPseudoButtonContainer>
-              <EnhancedFileUploadPseudoButton>Choose photo</EnhancedFileUploadPseudoButton>{' '}
-              <EnhancedFileUploadInstruction>or drop photo</EnhancedFileUploadInstruction>
-            </EnhancedFileUploadPseudoButtonContainer>
-          </EnhancedFileUploadButton>
+      <EnhancedFileUpload.Root>
+        <EnhancedFileUpload.Wrapper>
+          <EnhancedFileUpload.Button>
+            <EnhancedFileUpload.Status />
+            <EnhancedFileUpload.Comma />
+            <EnhancedFileUpload.PseudoButtonContainer>
+              <EnhancedFileUpload.PseudoButton>Choose photo</EnhancedFileUpload.PseudoButton>{' '}
+              <EnhancedFileUpload.Instruction>or drop photo</EnhancedFileUpload.Instruction>
+            </EnhancedFileUpload.PseudoButtonContainer>
+          </EnhancedFileUpload.Button>
           <FileUpload id="file-upload-8" name="fileUpload8" accept="image/*" />
-        </EnhancedFileUploadWrapper>
-        <EnhancedFileUploadAnnouncements />
-      </EnhancedFileUpload>
+        </EnhancedFileUpload.Wrapper>
+        <EnhancedFileUpload.Announcements />
+      </EnhancedFileUpload.Root>
     </div>
   ),
 };

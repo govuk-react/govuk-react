@@ -3,7 +3,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { act, fireEvent, render } from '@testing-library/react';
 import { FileUpload as FrontendFileUpload } from 'govuk-frontend';
 import * as Markup from 'govuk-frontend-react/file-upload';
-import { EnhancedFileUploadField, type EnhancedFileUploadFieldProps, FileUploadField } from '.';
+import { EnhancedFileUpload, FileUploadField } from '.';
 
 // The element upgrades in connectedCallback, after React commits.
 const upgraded = () => act(() => Promise.resolve());
@@ -44,7 +44,7 @@ const choose = (container: Element, ...names: string[]) => {
 };
 
 // From govuk-frontend's fixtures.
-const cases: Record<string, EnhancedFileUploadFieldProps> = {
+const cases: Record<string, EnhancedFileUpload.FieldProps> = {
   enhanced: { id: 'file-upload-1', name: 'file-upload-1', label: 'Upload a file' },
   'enhanced, with error message and hint': {
     id: 'file-upload-2',
@@ -85,7 +85,7 @@ describe('FileUpload', () => {
   afterEach(() => document.body.classList.remove('govuk-frontend-supported'));
 
   test.each(Object.entries(cases))('without JavaScript, renders govuk-frontend-react’s markup: %s', (_, props) => {
-    const ours = parse(renderToStaticMarkup(<EnhancedFileUploadField {...props} />));
+    const ours = parse(renderToStaticMarkup(<EnhancedFileUpload.Field {...props} />));
     ours.querySelectorAll('[data-file-upload-button], [data-file-upload-announcements]').forEach((element) => {
       element.remove();
     });
@@ -113,7 +113,7 @@ describe('FileUpload', () => {
       const theirsTwoFiles = normalise(theirs);
       theirs.remove();
 
-      const { container } = render(<EnhancedFileUploadField {...props} />);
+      const { container } = render(<EnhancedFileUpload.Field {...props} />);
       await upgraded();
       expect(normalise(container)).toBe(theirsAtFirst);
       choose(container, 'passport.jpg');
