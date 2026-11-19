@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import { Heading } from '../heading';
 import { InputField } from '../input';
-import { Button } from '../button';
+import { Button, StartButton } from '../button';
 import { Link } from '../link';
 import * as Radios from '../radios';
 import * as PhaseBanner from '../phase-banner';
@@ -28,7 +28,7 @@ Default.args = {
     </PhaseBanner.Composite>,
     <Heading size="l">Example</Heading>,
     <InputField id="email-address" name="email-address" label="Email address" />,
-    <Button start>Continue</Button>,
+    <StartButton>Continue</StartButton>,
   ],
 };
 
@@ -48,7 +48,7 @@ PartialCover.args = {
   children: [
     <Heading size="l">Example</Heading>,
     <InputField id="email-address" name="email-address" label="Email address" />,
-    <Button start>Continue</Button>,
+    <StartButton>Continue</StartButton>,
   ],
 };
 
@@ -73,7 +73,7 @@ LoadingBoxLong.args = {
       label="National Insurance number"
       hint="It’s on your National Insurance card"
     />,
-    <Button start>Continue</Button>,
+    <StartButton>Continue</StartButton>,
   ],
 };
 
