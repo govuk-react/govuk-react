@@ -8,7 +8,7 @@ function Example(props: CharacterCount.RootProps) {
   return (
     <CharacterCount.Root maxLength={10} {...props}>
       <label htmlFor="message">Message</label>
-      <CharacterCount.Input id="message" aria-describedby="message-info" maxLength={10} />
+      <CharacterCount.Input id="message" aria-describedby="message-info" maxLength={props.maxLength ?? 10} />
       <CharacterCount.Description id="message-info">You can enter up to 10 characters</CharacterCount.Description>
       <CharacterCount.Status data-testid="status" />
       <CharacterCount.ScreenReaderStatus data-testid="sr-status" />
@@ -131,5 +131,39 @@ describe('CharacterCount', () => {
     await upgraded();
     fireEvent.click(screen.getByRole('button', { name: 'Fill' }));
     expect(screen.getByTestId('status')).toHaveTextContent('You have 5 characters remaining');
+  });
+
+  test('a new limit keeps the field free of maxlength, and React leaves the counts alone', async () => {
+    const { rerender } = render(<Example />);
+    await upgraded();
+    type('abc');
+    rerender(<Example maxLength={20} />);
+    await upgraded();
+    expect(screen.getByLabelText('Message')).not.toHaveAttribute('maxlength');
+    expect(screen.getByTestId('status')).toHaveTextContent('You have 17 characters remaining');
+    expect(screen.getByTestId('sr-status')).toHaveTextContent('You have 10 characters remaining');
+  });
+
+  test('without a limit, goes back to the markup without JavaScript', async () => {
+    const { rerender } = render(<Example hiddenDescriptionClass="visually-hidden" />);
+    await upgraded();
+    rerender(<Example hiddenDescriptionClass="visually-hidden" maxLength={undefined} />);
+    await upgraded();
+    expect(screen.getByTestId('status')).not.toBeVisible();
+    expect(screen.getByText('You can enter up to 10 characters')).not.toHaveClass('visually-hidden');
+  });
+
+  test('uses the plural forms of the field’s language', async () => {
+    render(
+      <CharacterCount.Root maxLength={4} charactersUnderLimit={{ two: '%{count} nod (dau)', other: '%{count} nod' }}>
+        <div lang="cy">
+          <CharacterCount.Input aria-label="Message" />
+          <CharacterCount.Status data-testid="status" />
+        </div>
+      </CharacterCount.Root>
+    );
+    await upgraded();
+    type('ab');
+    expect(screen.getByTestId('status')).toHaveTextContent('2 nod (dau)');
   });
 });

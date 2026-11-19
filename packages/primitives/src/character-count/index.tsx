@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { createContext, useContext, useEffect, useRef } from 'react';
+import { createContext, useContext, useEffect, useRef, useState } from 'react';
 import type { ComponentProps } from 'react';
 import { Slot } from '../utils/slot';
 import { tagName, type CharacterCountElement } from './element';
@@ -90,7 +90,10 @@ export function Root({
     if (node && isCharacterCount(node)) node.update();
   });
 
-  const initial = maxLength === undefined ? undefined : countMessage(maxLength, countType, messages, props.lang).text;
+  // Rendered once and then left to the element, so a re-render never puts back a stale count.
+  const [initial] = useState(() =>
+    maxLength === undefined ? undefined : countMessage(maxLength, countType, messages, props.lang || 'en').text
+  );
 
   return (
     <InitialMessage.Provider value={initial}>

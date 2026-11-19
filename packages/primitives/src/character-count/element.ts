@@ -130,9 +130,15 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       // The parts may be parsed or rendered later, and React can rewrite a class attribute.
       this.observer = new MutationObserver((records) => {
         if (records.some((record) => record.type === 'childList')) this.setup();
-        else this.render();
+        else this.update();
       });
-      this.observer.observe(this, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] });
+      // React can rewrite a class, or put back the field's `maxlength`.
+      this.observer.observe(this, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ['class', 'maxlength'],
+      });
       window.addEventListener('pageshow', this.onPageShow);
       this.setup();
     }
@@ -147,8 +153,17 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     attributeChangedCallback() {
       // Wait for every attribute: React sets them one by one before connecting the element.
       if (!this.isConnected) return;
-      if (this.input) this.update();
-      else this.setup();
+      if (!this.input) {
+        this.setup();
+        return;
+      }
+      if (this.maxLength === undefined) {
+        this.downgrade();
+        return;
+      }
+      // Screen readers hear the new count when the user next pauses.
+      this.lastAnnouncedValue = undefined;
+      this.update();
     }
 
     private own(selector: string) {
@@ -167,8 +182,9 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       return type === 'characters' || type === 'words' ? type : 'length';
     }
 
+    // As govuk-frontend: the field's closest `lang`, which can be inside the element, or English.
     private get locale() {
-      return this.closest('[lang]')?.getAttribute('lang') || undefined;
+      return (this.input ?? this).closest('[lang]')?.getAttribute('lang') || 'en';
     }
 
     private setup() {
@@ -202,11 +218,35 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       input.removeEventListener('input', this.onInput);
       input.removeEventListener('focus', this.onFocus);
       input.removeEventListener('blur', this.onBlur);
+      window.clearInterval(this.checker);
       this.input = undefined;
+    }
+
+    /** Back to the markup without JavaScript, when the limit is removed. */
+    private downgrade() {
+      const { input } = this;
+      if (!input) return;
+      classesOf(this.getAttribute('input-over-limit-class')).forEach((name) => input.classList.toggle(name, false));
+      this.unbind();
+      delete this.dataset.upgraded;
+      const description = this.own('[data-character-count-description]');
+      if (description) {
+        if (this.hasAttribute('hidden-description-class')) {
+          classesOf(this.getAttribute('hidden-description-class')).forEach((name) =>
+            description.classList.toggle(name, false)
+          );
+        } else {
+          Object.keys(visuallyHidden).forEach((name) => description.style.removeProperty(name));
+        }
+      }
+      [this.own('[data-character-count-status]'), this.own('[data-character-count-sr-status]')].forEach((status) => {
+        if (status) status.hidden = true;
+      });
     }
 
     update() {
       if (!this.input) return;
+      this.input.removeAttribute('maxlength');
       this.currentCount = countOf(this.input.value, this.countType, this.locale);
       this.render();
     }
