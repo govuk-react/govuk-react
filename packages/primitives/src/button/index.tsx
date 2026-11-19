@@ -2,8 +2,8 @@
 
 import * as React from 'react';
 import type { ComponentProps } from 'react';
-import { Slot } from '../utils/slot';
-import './element';
+import { Slot } from '../utils/slot.js';
+import './element.js';
 
 /*
  * Headless button behaviour (./element.ts): `Root` marks a button or link button for it. Prevents

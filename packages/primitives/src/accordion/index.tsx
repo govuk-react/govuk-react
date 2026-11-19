@@ -3,8 +3,8 @@
 import * as React from 'react';
 import { createContext, useContext, useEffect, useRef } from 'react';
 import type { ComponentProps } from 'react';
-import { Slot } from '../utils/slot';
-import { tagName, type AccordionElement } from './element';
+import { Slot } from '../utils/slot.js';
+import { tagName, type AccordionElement } from './element.js';
 
 /*
  * Headless accordion: unstyled parts over the <govuk-react-accordion> element (./element.ts).

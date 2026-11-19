@@ -28,7 +28,7 @@
  *   inline styles.
  */
 
-import { classesOf } from '../utils/dom';
+import { classesOf } from '../utils/dom.js';
 
 export const tagName = 'govuk-react-exit-this-page';
 

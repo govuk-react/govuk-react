@@ -2,8 +2,8 @@
 
 import * as React from 'react';
 import type { ComponentProps } from 'react';
-import { Slot } from '../utils/slot';
-import { tagName } from './element';
+import { Slot } from '../utils/slot.js';
+import { tagName } from './element.js';
 
 /*
  * Headless password input: unstyled parts over the <govuk-react-password-input> element

@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { tagName } from './element';
+import { tagName } from './element.js';
 
 /*
  * Headless focus links: the <govuk-react-focus-links> element (./element.ts) makes links to a part

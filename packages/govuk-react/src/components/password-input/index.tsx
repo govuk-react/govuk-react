@@ -5,7 +5,7 @@ import * as Markup from 'govuk-frontend-react/password-input';
 import { ErrorMessageComposite } from 'govuk-frontend-react/error-message';
 import { Hint } from 'govuk-frontend-react/hint';
 import { LabelComposite } from 'govuk-frontend-react/label';
-import { joinIds } from '../../utils/join-ids';
+import { joinIds } from '../../utils/join-ids.js';
 
 /*
  * govuk-frontend-react's PasswordInput markup, with the show and hide button from

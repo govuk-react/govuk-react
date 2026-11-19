@@ -6,8 +6,8 @@ import { ErrorMessageComposite } from 'govuk-frontend-react/error-message';
 import { FormGroup } from 'govuk-frontend-react/form-group';
 import { Hint } from 'govuk-frontend-react/hint';
 import { LabelComposite } from 'govuk-frontend-react/label';
-import { FileUpload, type FileUploadProps, type FileUploadTexts } from './control';
-import { joinIds } from '../../utils/join-ids';
+import { FileUpload, type FileUploadProps, type FileUploadTexts } from './control.js';
+import { joinIds } from '../../utils/join-ids.js';
 
 export type RootProps = Omit<
   Primitives.RootProps,

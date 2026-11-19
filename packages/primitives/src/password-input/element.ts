@@ -21,8 +21,8 @@
  * submit button such as a form library's, and when the page is restored from the back-forward cache.
  */
 
-import { onPropertySet } from '../utils/on-property-set';
-import { setUpWhenReady } from '../utils/set-up-when-ready';
+import { onPropertySet } from '../utils/on-property-set.js';
+import { setUpWhenReady } from '../utils/set-up-when-ready.js';
 
 export const tagName = 'govuk-react-password-input';
 

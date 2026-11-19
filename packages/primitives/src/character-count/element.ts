@@ -35,10 +35,10 @@
  * - `input-over-limit-class`: classes for the field while over the limit.
  */
 
-import { onPropertySet } from '../utils/on-property-set';
-import { translationAttributeNames } from '../utils/translation';
-import { countMessage, countOf, messageFromAttributes, messageNames, type CountType } from './messages';
-import { classesOf, setText } from '../utils/dom';
+import { onPropertySet } from '../utils/on-property-set.js';
+import { translationAttributeNames } from '../utils/translation.js';
+import { countMessage, countOf, messageFromAttributes, messageNames, type CountType } from './messages.js';
+import { classesOf, setText } from '../utils/dom.js';
 
 export const tagName = 'govuk-react-character-count';
 

@@ -1,6 +1,14 @@
 {
   "extends": "../../tsconfig.json",
-  "compilerOptions": { "types": [], "noEmit": false },
+  "compilerOptions": {
+    "types": [],
+    "noEmit": false,
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "rootDir": "src",
+    "outDir": "dist",
+    "inlineSources": true
+  },
   "include": ["src"],
   "exclude": ["src/**/stories.tsx", "src/**/test.tsx", "src/**/fixtures.tsx", "src/**/*.test.tsx"]
 }

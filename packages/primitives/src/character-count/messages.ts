@@ -9,7 +9,7 @@ import {
   translationFromAttributes,
   withLocale,
   type Translation,
-} from '../utils/translation';
+} from '../utils/translation.js';
 
 export type { Translation };
 

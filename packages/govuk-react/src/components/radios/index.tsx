@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Children } from 'react';
 import * as Primitives from '@govuk-react/primitives/choices';
 import * as Markup from 'govuk-frontend-react/radios';
-import { joinIds } from '../../utils/join-ids';
+import { joinIds } from '../../utils/join-ids.js';
 
 /*
  * govuk-frontend-react's Radios markup, with conditional reveals from @govuk-react/primitives.

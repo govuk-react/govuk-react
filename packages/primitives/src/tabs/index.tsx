@@ -3,8 +3,8 @@
 import * as React from 'react';
 import { createContext, useContext, useEffect, useId, useRef } from 'react';
 import type { ComponentProps, ReactElement, ReactNode } from 'react';
-import { Slot } from '../utils/slot';
-import { tagName, type TabsElement } from './element';
+import { Slot } from '../utils/slot.js';
+import { tagName, type TabsElement } from './element.js';
 
 /*
  * Headless tabs: unstyled parts over the <govuk-react-tabs> element (./element.ts), which adds

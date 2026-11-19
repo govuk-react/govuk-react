@@ -10,9 +10,13 @@
       "default": "./dist/index.js"
     },
     "./inline/*": "./dist/inline/*",
+    "./*-element": {
+      "types": "./dist/*/element.d.ts",
+      "default": "./dist/*/element.js"
+    },
     "./*": {
-      "types": "./dist/*.d.ts",
-      "default": "./dist/*.js"
+      "types": "./dist/*/index.d.ts",
+      "default": "./dist/*/index.js"
     },
     "./package.json": "./package.json"
   },
@@ -21,7 +25,7 @@
     "licences"
   ],
   "scripts": {
-    "build": "rm -rf dist && tsup --config tsup.inline.config.ts && tsup"
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && node build-inline-scripts.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1"
@@ -40,5 +44,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
   }
 }

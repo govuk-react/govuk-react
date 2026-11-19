@@ -492,6 +492,10 @@ importers:
       react-dom:
         specifier: '>=19'
         version: 19.3.1(react@19.3.1)
+    devDependencies:
+      esbuild:
+        specifier: ^0.28.2
+        version: 0.28.2
 
   packages/primitives-e2e:
     dependencies:

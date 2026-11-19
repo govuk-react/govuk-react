@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as Markup from 'govuk-frontend-react/file-upload';
-import type { FileUploadTexts } from './control';
+import type { FileUploadTexts } from './control.js';
 
 /*
  * govuk-frontend-react's FileUpload markup. `FileUploadField` is the native file input. `EnhancedFileUpload.Field` is
@@ -8,7 +8,7 @@ import type { FileUploadTexts } from './control';
  * JavaScript it's the native file input too, and once JavaScript runs it's a button and drop zone.
  */
 
-export { FileUpload, type FileUploadProps } from './control';
+export { FileUpload, type FileUploadProps } from './control.js';
 
 export type FileUploadFieldProps = Omit<Markup.FileUploadFieldProps, 'javascript' | keyof FileUploadTexts>;
 
@@ -21,4 +21,4 @@ export function FileUploadField(props: FileUploadFieldProps) {
   return <Markup.FileUploadField {...props} />;
 }
 
-export * as EnhancedFileUpload from './enhanced';
+export * as EnhancedFileUpload from './enhanced.js';
