@@ -1,0 +1,16 @@
+---
+import ChoicesDemo from '../../components/ChoicesDemo.tsx';
+---
+
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Choices</title><link rel="icon" href="data:," /></head>
+  <body>
+    <ChoicesDemo client:load id="hydrated" />
+    <ChoicesDemo client:load id="controlled" controlled />
+    <!-- No client directive: the element upgrades the server markup, and React never hydrates. -->
+    <ChoicesDemo id="upgraded" />
+    <script>
+      import '@govuk-react/primitives/choices-element';
+    </script>
+  </body>
+</html>

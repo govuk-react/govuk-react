@@ -4,3 +4,4 @@ export * as Modal from './modal';
 export * as PasswordInput from './password-input';
 export * as Disclosure from './disclosure';
 export * as CharacterCount from './character-count';
+export * as Choices from './choices';

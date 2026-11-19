@@ -128,3 +128,17 @@ import * as CharacterCount from '@govuk-react/primitives/character-count';
 Without JavaScript the `Description` is shown and both statuses are hidden. On upgrade the element visually hides the description, removes the field's `maxlength` so users can see by how much they're over, and shows `Status`, which updates as the user types. As in govuk-frontend, `ScreenReaderStatus` updates once the user pauses, rather than on every key, and is hidden from screen readers below `threshold`.
 
 `countType` is "length" (the default, as `maxlength` counts), "characters" (as users see them, such as an emoji as one) or "words". The messages are English by default, and take a message for each plural form. The statuses get `data-state` ("under", "at" or "over") for styling, or pass class names such as `overLimitClass`. The field's value is the state, so a value React sets is counted too.
+
+## Choices
+
+```tsx
+import * as Choices from '@govuk-react/primitives/choices';
+
+<Choices.Root>
+  <Choices.Input type="radio" id="email" name="contact" value="email" controls="email-reveal" />
+  <label htmlFor="email">Email</label>
+  <Choices.Conditional id="email-reveal">…</Choices.Conditional>
+</Choices.Root>;
+```
+
+For a group of radios or checkboxes. Without JavaScript every `Conditional` is shown. On upgrade, each one shows only while the choice that `controls` it is checked, and that choice gets `aria-controls` and `aria-expanded`. A checkbox with `exclusive`, such as "None of these", unchecks the other checkboxes with its name when checked, and is unchecked when one of them is. They're unchecked with `click()`, so `change` events fire and controlled React inputs hear about it. Control the inputs as usual, with `checked` and `onChange`.

@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 
 import * as Checkboxes from '.';
+import * as Input from '../input';
 
 const meta = {
   title: 'Form/Checkboxes',
@@ -62,8 +63,12 @@ export const WithError: Story = {
   args: { errorMessage: 'Select if you are British, Irish or a citizen of a different country', children: items },
 };
 
-export const WithItemsArray: Story = {
+/** As in the Design System's example, checking "No" unchecks the countries, and checking a country unchecks "No". */
+export const WithNoneOption: Story = {
   args: {
+    idPrefix: 'countries',
+    legend: 'Will you be travelling to any of these countries?',
+    hint: 'Select all countries that apply',
     items: [
       { id: 'countries', name: 'countries', value: 'france', label: 'France' },
       { id: 'countries-2', name: 'countries', value: 'portugal', label: 'Portugal' },
@@ -74,7 +79,36 @@ export const WithItemsArray: Story = {
         name: 'countries',
         value: 'none',
         label: 'No, I will not be travelling to any of these countries',
+        exclusive: true,
       },
     ],
+  },
+};
+
+export const WithConditional: Story = {
+  args: {
+    idPrefix: 'contact',
+    legend: 'How would you like to be contacted?',
+    hint: 'Select all options that are relevant to you',
+    children: (
+      <>
+        <Checkboxes.ItemComposite
+          id="contact"
+          name="contact"
+          value="email"
+          label="Email"
+          defaultChecked
+          conditional={<Input.Field id="contact-by-email" name="contactByEmail" type="email" label="Email address" />}
+        />
+        <Checkboxes.ItemComposite
+          id="contact-2"
+          name="contact"
+          value="phone"
+          label="Phone"
+          conditional={<Input.Field id="contact-by-phone" name="contactByPhone" type="tel" label="Phone number" />}
+        />
+        <Checkboxes.ItemComposite id="contact-3" name="contact" value="text" label="Text message" />
+      </>
+    ),
   },
 };

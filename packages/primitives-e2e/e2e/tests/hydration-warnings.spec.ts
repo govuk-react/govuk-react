@@ -13,6 +13,7 @@ const pages = [
   { path: '/test/modal', role: 'button', name: 'Open from outside' },
   { path: '/test/password', role: 'button', name: 'Show password' },
   { path: '/test/character-count', role: 'button', name: 'Clear' },
+  { path: '/test/choices', role: 'radio', name: 'Email' },
 ] as const;
 
 for (const { path, role, name } of pages) {

@@ -14,6 +14,8 @@ export default defineConfig({
     'password-input': 'src/password-input/index.tsx',
     'password-input-element': 'src/password-input/element.ts',
     'character-count': 'src/character-count/index.tsx',
+    choices: 'src/choices/index.tsx',
+    'choices-element': 'src/choices/element.ts',
     'character-count-element': 'src/character-count/element.ts',
   },
   format: ['esm'],
