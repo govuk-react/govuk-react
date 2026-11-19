@@ -52,8 +52,8 @@ const distDir = path.join(__dirname, '../dist');
 const importBuilt = (entry: string): Promise<Record<string, unknown>> =>
   import(/* @vite-ignore */ pathToFileURL(createRequire(__filename).resolve(entry)).href);
 
-// GitHub Actions builds before testing; locally, run `pnpm build` first
-describe.runIf(process.env.GITHUB_ACTIONS || fs.existsSync(distDir))('Built entries', () => {
+// CI builds before testing; publishing primitives builds only primitives
+describe.runIf(fs.existsSync(distDir))('Built entries', () => {
   it('govuk-react has the same exports as its source', async () => {
     const built = await importBuilt('govuk-react');
     expect(Object.keys(built).sort()).toEqual(Object.keys(packageExports).sort());
