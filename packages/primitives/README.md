@@ -182,3 +182,21 @@ import * as Button from '@govuk-react/primitives/button';
 ```
 
 With `preventDoubleClick`, a second click within a second of the first is ignored, so a form isn't submitted twice. The click is stopped before React hears it, so `onClick` doesn't run twice either. Space activates a link with `role="button"`, as it does a button. Unlike the other primitives there's no wrapper element, which would change a button group's layout: importing the module adds one click and one keydown listener to the document, for any element marked by `Root`. Without React, import `@govuk-react/primitives/button-element` and mark buttons with `data-button`.
+
+## ExitThisPage
+
+```tsx
+import * as ExitThisPage from '@govuk-react/primitives/exit-this-page';
+
+<ExitThisPage.SkipLink href="https://www.bbc.co.uk/weather">Exit this page</ExitThisPage.SkipLink>;
+
+<ExitThisPage.Root hideContentClass="hide-content" overlayClass="overlay">
+  <ExitThisPage.Button href="https://www.bbc.co.uk/weather">
+    Exit this page
+    <ExitThisPage.Indicator />
+  </ExitThisPage.Button>
+  <ExitThisPage.Status className="visually-hidden" />
+</ExitThisPage.Root>;
+```
+
+Lets users leave the page quickly. Without JavaScript the button is a plain link. Once upgraded, the button, a `SkipLink`, or pressing Shift 3 times within 5 seconds hides the page behind an overlay that says it's loading, and goes to the button's `href`. `Indicator` shows the presses, and `Status` tells screen readers how many more are needed. Only the page's first `Root` listens for Shift and skip links. Before leaving, the element fires a cancelable `govuk-react-exit-this-page:exit` event, so a test can stay on the page.
