@@ -1,0 +1,15 @@
+---
+import FocusDemo from '../../components/FocusDemo.tsx';
+---
+
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Focus</title><link rel="icon" href="data:," /></head>
+  <body>
+    <!-- No client directive: the elements upgrade the server markup, and React never hydrates. -->
+    <FocusDemo id="upgraded" />
+    <script>
+      import '@govuk-react/primitives/auto-focus-element';
+      import '@govuk-react/primitives/focus-links-element';
+    </script>
+  </body>
+</html>

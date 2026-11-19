@@ -25,9 +25,10 @@ export const Default = {
   ),
 };
 
+// On the docs page, where every story renders at once, it doesn't take focus.
 export const Success = {
-  render: () => (
-    <NotificationBanner.Root success>
+  render: (_: unknown, { viewMode }: { viewMode?: string }) => (
+    <NotificationBanner.Root success disableAutoFocus={viewMode === 'docs'}>
       <NotificationBanner.Header>
         <NotificationBanner.Title>Success</NotificationBanner.Title>
       </NotificationBanner.Header>
