@@ -41,6 +41,37 @@ describe('PasswordInput', () => {
     expect(screen.getByLabelText('Password')).toHaveAttribute('type', 'password');
   });
 
+  test('keeps the password shown when a hidden button submits, as form libraries do to validate', async () => {
+    render(<Example />);
+    await upgraded();
+    fireEvent.click(screen.getByRole('button', { name: 'Show password' }));
+    const form = screen.getByRole('button', { name: 'Sign in' }).closest('form');
+    const submitter = document.createElement('button');
+    submitter.hidden = true;
+    form?.appendChild(submitter);
+    form?.requestSubmit(submitter);
+    expect(screen.getByLabelText('Password')).toHaveAttribute('type', 'text');
+  });
+
+  test('keeps the password shown when React updates the input', async () => {
+    function Controlled() {
+      const [value, setValue] = React.useState('');
+      return (
+        <PasswordInput.Root>
+          <label htmlFor="password">Password</label>
+          <PasswordInput.Input id="password" value={value} onChange={(event) => setValue(event.target.value)} />
+          <PasswordInput.Toggle />
+        </PasswordInput.Root>
+      );
+    }
+    render(<Controlled />);
+    await upgraded();
+    fireEvent.click(screen.getByRole('button', { name: 'Show password' }));
+    fireEvent.change(screen.getByLabelText('Password'), { target: { value: 'violin' } });
+    expect(screen.getByLabelText('Password')).toHaveValue('violin');
+    expect(screen.getByLabelText('Password')).toHaveAttribute('type', 'text');
+  });
+
   test('uses the text it is given', async () => {
     render(<Example showText="Dangos" showLabel="Dangos cyfrinair" hideText="Cuddio" />);
     await upgraded();

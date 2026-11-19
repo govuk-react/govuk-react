@@ -5,6 +5,7 @@ import * as Markup from 'govuk-frontend-react/character-count';
 import { ErrorMessageComposite } from 'govuk-frontend-react/error-message';
 import { Hint } from 'govuk-frontend-react/hint';
 import { LabelComposite } from 'govuk-frontend-react/label';
+import { joinIds } from '../../utils/join-ids';
 
 /*
  * govuk-frontend-react's CharacterCount markup, with the count from @govuk-react/primitives.
@@ -163,7 +164,7 @@ export function Field({
   const errorId = isSet(errorMessage) ? `${id}-error` : undefined;
   const limit = maxWords || maxLength;
   const words = (countType ?? (maxWords ? 'words' : undefined)) === 'words';
-  const ariaDescribedBy = [describedBy, infoId, hintId, errorId].filter(Boolean).join(' ') || undefined;
+  const ariaDescribedBy = joinIds(describedBy, infoId, hintId, errorId);
 
   return (
     <Root

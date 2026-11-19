@@ -5,6 +5,7 @@ import * as Markup from 'govuk-frontend-react/password-input';
 import { ErrorMessageComposite } from 'govuk-frontend-react/error-message';
 import { Hint } from 'govuk-frontend-react/hint';
 import { LabelComposite } from 'govuk-frontend-react/label';
+import { joinIds } from '../../utils/join-ids';
 
 /*
  * govuk-frontend-react's PasswordInput markup, with the show and hide button from
@@ -113,7 +114,7 @@ export function Field({
   const id = idProp || name;
   const hintId = isSet(hint) ? `${id}-hint` : undefined;
   const errorId = isSet(errorMessage) ? `${id}-error` : undefined;
-  const ariaDescribedBy = [describedBy, hintId, errorId].filter(Boolean).join(' ') || undefined;
+  const ariaDescribedBy = joinIds(describedBy, hintId, errorId);
 
   return (
     <Root

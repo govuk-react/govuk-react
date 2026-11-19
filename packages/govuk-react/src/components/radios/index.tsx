@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Children } from 'react';
 import * as Primitives from '@govuk-react/primitives/choices';
 import * as Markup from 'govuk-frontend-react/radios';
+import { joinIds } from '../../utils/join-ids';
 
 /*
  * govuk-frontend-react's Radios markup, with conditional reveals from @govuk-react/primitives.
@@ -101,12 +102,7 @@ export function ItemComposite({
   return (
     <>
       <Markup.Item>
-        <Input
-          id={id}
-          controls={conditionalId}
-          aria-describedby={[describedBy, hintId].filter(Boolean).join(' ') || undefined}
-          {...props}
-        />
+        <Input id={id} controls={conditionalId} aria-describedby={joinIds(describedBy, hintId)} {...props} />
         <Markup.Label htmlFor={id}>{label}</Markup.Label>
         {hintId && <Markup.Hint id={hintId}>{hint}</Markup.Hint>}
       </Markup.Item>

@@ -35,6 +35,7 @@
  * - `input-over-limit-class`: classes for the field while over the limit.
  */
 
+import { onPropertySet } from '../utils/on-property-set';
 import { translationAttributeNames } from '../utils/translation';
 import { countMessage, countOf, messageFromAttributes, messageNames, type CountType } from './messages';
 
@@ -101,6 +102,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     private observer?: MutationObserver;
 
+    private stopWatchingValue?: () => void;
+
     private readonly onInput = () => {
       this.update();
       this.lastInputTime = Date.now();
@@ -115,6 +118,11 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     };
 
     private readonly onBlur = () => window.clearInterval(this.checker);
+
+    // `reset` changes the value with no event, after it fires.
+    private readonly onReset = (event: Event) => {
+      if (this.input && event.target === this.input.form) window.setTimeout(() => this.update());
+    };
 
     // A page restored from the back-forward cache, or a browser that restores the field's value.
     private readonly onPageShow = () => {
@@ -141,12 +149,14 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
         attributeFilter: ['class', 'maxlength'],
       });
       window.addEventListener('pageshow', this.onPageShow);
+      document.addEventListener('reset', this.onReset, true);
       this.setup();
     }
 
     disconnectedCallback() {
       this.observer?.disconnect();
       window.removeEventListener('pageshow', this.onPageShow);
+      document.removeEventListener('reset', this.onReset, true);
       window.clearInterval(this.checker);
       this.unbind();
     }
@@ -198,6 +208,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
         input.addEventListener('input', this.onInput);
         input.addEventListener('focus', this.onFocus);
         input.addEventListener('blur', this.onBlur);
+        // A value set by a script, such as a form library's, fires no `input` event.
+        this.stopWatchingValue = onPropertySet(input, 'value', () => this.update());
         input.removeAttribute('maxlength');
         this.lastAnnouncedValue = undefined;
       }
@@ -219,6 +231,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       input.removeEventListener('input', this.onInput);
       input.removeEventListener('focus', this.onFocus);
       input.removeEventListener('blur', this.onBlur);
+      this.stopWatchingValue?.();
       window.clearInterval(this.checker);
       this.input = undefined;
     }
