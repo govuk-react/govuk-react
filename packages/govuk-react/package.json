@@ -1,6 +1,6 @@
 {
   "name": "govuk-react",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "govuk-react: React components for the GOV.UK Design System, built on govuk-frontend-react.",
   "type": "module",
   "types": "./dist/index.d.ts",

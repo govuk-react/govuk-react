@@ -1,5 +1,12 @@
 # govuk-react
 
+## 1.0.0-alpha.1
+
+### Patch Changes
+
+- d3e258a: Build with `tsc` instead of tsup: each source module is published as its own file, with no bundling, so shared modules exist once whichever entries you import. This fixes 20 component entries (such as `govuk-react/input`, `govuk-react/table` and `govuk-react/footer`) that were published without their exports, and adds `Input`, `Select`, `Textarea` and `WarningText` back to the package root.
+- a3c9e0f: Fix form library integration: the character count and conditional reveals follow values a script sets, such as React Hook Form's `setValue`, and a form reset; a shown password stays shown when React updates the input or a form library validates with a hidden submit button; and `aria-describedby` lists each id once.
+
 ## 1.0.0-alpha.0
 
 ### Major Changes
