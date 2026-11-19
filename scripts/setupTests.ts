@@ -4,8 +4,6 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom/vitest';
 
-import 'jest-styled-components';
-
 if (!window.matchMedia) {
   // jsdom doesn't include support for matchmedia, so we'll add that here
   Object.defineProperty(window, 'matchMedia', {

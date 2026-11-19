@@ -14,7 +14,7 @@ describe('Exports', () => {
   );
 });
 
-// Function components, or objects such as styled components; module namespaces are neither
+// Function components, or exotic components such as memo; module namespaces are neither
 const isComponent = (value: unknown) =>
   typeof value === 'function' || (typeof value === 'object' && value !== null && '$$typeof' in value);
 

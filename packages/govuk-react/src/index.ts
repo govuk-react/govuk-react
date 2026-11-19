@@ -56,8 +56,5 @@ export { VisuallyHidden } from './components/visually-hidden';
 export * as WarningText from './components/warning-text';
 export { WidthContainer } from './components/width-container';
 
-// Icons
-export { Search as SearchIcon, ArrowLeft, Spinner, ButtonArrow } from './icons';
-
 // govuk-frontend override classes (govuk-!-*)
 export { overrideClasses, type OverrideProps, type FluidWidth, type Spacing } from 'govuk-frontend-react/overrides';
