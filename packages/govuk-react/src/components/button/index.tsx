@@ -18,7 +18,8 @@ export function Root(props: Markup.LinkProps): ReactNode;
 export function Root<As extends ElementType = 'button'>(props: Markup.RootProps<As>): ReactNode;
 export function Root(props: Markup.RootProps<ElementType>) {
   return (
-    <Primitives.Root asChild>
+    // Covers `as` components too, which govuk-frontend-react doesn't mark. Links can't be double submitted.
+    <Primitives.Root asChild preventDoubleClick={props.href ? undefined : props.preventDoubleClick}>
       <Markup.Root {...props} />
     </Primitives.Root>
   );
@@ -36,7 +37,8 @@ export function Composite(props: Markup.LinkProps): ReactNode;
 export function Composite<As extends ElementType = 'button'>(props: Markup.RootProps<As>): ReactNode;
 export function Composite(props: Markup.RootProps<ElementType>) {
   return (
-    <Primitives.Root asChild>
+    // Covers `as` components too, which govuk-frontend-react doesn't mark. Links can't be double submitted.
+    <Primitives.Root asChild preventDoubleClick={props.href ? undefined : props.preventDoubleClick}>
       <Markup.Composite {...props} />
     </Primitives.Root>
   );

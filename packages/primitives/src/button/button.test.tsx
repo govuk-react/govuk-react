@@ -51,4 +51,20 @@ describe('Button', () => {
     // Space doesn't scroll the page.
     expect(notCancelled).toBe(false);
   });
+
+  test('Space activates a link button once while held, and not when a handler took the key', () => {
+    const onClick = vi.fn((event: React.MouseEvent) => event.preventDefault());
+    render(
+      <Button.Root asChild>
+        <a href="#next" role="button" onClick={onClick} onKeyDown={(event) => event.shiftKey && event.preventDefault()}>
+          Continue
+        </a>
+      </Button.Root>
+    );
+    const link = screen.getByRole('button');
+    fireEvent.keyDown(link, { key: ' ' });
+    fireEvent.keyDown(link, { key: ' ', repeat: true });
+    fireEvent.keyDown(link, { key: ' ', shiftKey: true });
+    expect(onClick).toHaveBeenCalledTimes(1);
+  });
 });

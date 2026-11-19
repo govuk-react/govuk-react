@@ -18,11 +18,16 @@ const installed = Symbol.for('govuk-react-button');
 
 const lastClicks = new WeakMap<Element, number>();
 
-const buttonOf = (target: EventTarget | null) =>
-  target instanceof Element ? target.closest<HTMLElement>('[data-button]') : null;
+// The path, rather than the target, reaches into shadow roots.
+const buttonOf = (event: Event) => {
+  for (const target of event.composedPath()) {
+    if (target instanceof HTMLElement && target.hasAttribute('data-button')) return target;
+  }
+  return null;
+};
 
 function onClick(event: MouseEvent) {
-  const button = buttonOf(event.target);
+  const button = buttonOf(event);
   if (!button || button.getAttribute('data-prevent-double-click') !== 'true') return;
   const last = lastClicks.get(button);
   if (last !== undefined && event.timeStamp - last < debounceMs) {
@@ -34,9 +39,10 @@ function onClick(event: MouseEvent) {
 }
 
 function onKeyDown(event: KeyboardEvent) {
-  if (event.key !== ' ') return;
-  const button = buttonOf(event.target);
-  if (!button || button !== event.target || button.getAttribute('role') !== 'button') return;
+  // Held down, Space activates once, as on a button. A handler that took the key keeps it.
+  if (event.key !== ' ' || event.repeat || event.defaultPrevented) return;
+  const button = buttonOf(event);
+  if (!button || button !== event.composedPath()[0] || button.getAttribute('role') !== 'button') return;
   if (button instanceof HTMLButtonElement) return;
   // Space would scroll the page.
   event.preventDefault();

@@ -37,4 +37,17 @@ describe('Button', () => {
     fireEvent.keyDown(screen.getByRole('button'), { key: ' ' });
     expect(onClick).toHaveBeenCalledTimes(1);
   });
+
+  test('preventDoubleClick works on a button rendered by another component', () => {
+    const onClick = vi.fn();
+    const MyButton = (props: React.ComponentProps<'button'>) => <button {...props} />;
+    render(
+      <Button.Root as={MyButton} type="button" preventDoubleClick onClick={onClick}>
+        Save
+      </Button.Root>
+    );
+    fireEvent.click(screen.getByRole('button'));
+    fireEvent.click(screen.getByRole('button'));
+    expect(onClick).toHaveBeenCalledTimes(1);
+  });
 });
