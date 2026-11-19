@@ -1,6 +1,6 @@
 # Migrating to govuk-react 1.0
 
-govuk-react 1.0 is built on [govuk-frontend-react](https://github.com/penx/govuk-frontend-react), which renders govuk-frontend's markup. Load govuk-frontend's CSS in your app (`govuk-frontend/dist/govuk/govuk-frontend.min.css`) and install `govuk-frontend` as a peer dependency.
+govuk-react 1.0 is built on [govuk-frontend-react](https://github.com/govuk-react/govuk-frontend-react), which renders govuk-frontend's markup. Load govuk-frontend's CSS in your app (`govuk-frontend/dist/govuk/govuk-frontend.min.css`) and install `govuk-frontend` as a peer dependency.
 
 Components move over one at a time. Anything not listed here is unchanged for now.
 
