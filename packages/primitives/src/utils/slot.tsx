@@ -10,7 +10,7 @@ export type SlotProps<P extends object> = P & { children?: ReactNode };
  * Renders its only child, merging its own props onto it, for parts that
  * take `asChild`. Class names are joined, styles are merged and event
  * handlers both run (the child's first). For any other prop, the child's
- * value wins.
+ * value wins. Undefined props are ignored.
  */
 export function Slot<P extends object>({ children, ...slotProps }: SlotProps<P>) {
   const child = Children.only(children);
@@ -18,6 +18,8 @@ export function Slot<P extends object>({ children, ...slotProps }: SlotProps<P>)
 
   const merged: Props = { ...child.props };
   for (const [key, slotValue] of Object.entries(slotProps)) {
+    // A prop left out stays left out, and doesn't hide one the child sets itself.
+    if (slotValue === undefined) continue;
     const childValue: unknown = child.props[key];
     if (childValue === undefined) {
       merged[key] = slotValue;

@@ -7,3 +7,4 @@ export * as CharacterCount from './character-count';
 export * as Choices from './choices';
 export * as AutoFocus from './auto-focus';
 export * as FocusLinks from './focus-links';
+export * as Button from './button';
