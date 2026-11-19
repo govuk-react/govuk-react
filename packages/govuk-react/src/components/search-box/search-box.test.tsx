@@ -28,7 +28,7 @@ describe('SearchBox.AutocompleteComposite', () => {
     ]);
     fireEvent.click(screen.getByRole('option', { name: 'Tax credits' }));
     expect(input).toHaveValue('Tax credits');
-    expect(onSubmit).toHaveBeenCalledTimes(1);
+    await vi.waitFor(() => expect(onSubmit).toHaveBeenCalledTimes(1));
   });
 
   test('tells screen readers about search suggestions', async () => {

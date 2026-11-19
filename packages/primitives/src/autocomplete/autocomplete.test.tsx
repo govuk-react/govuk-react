@@ -72,6 +72,25 @@ describe('Autocomplete', () => {
     expect(screen.getByTestId('status')).toHaveTextContent('3 o ganlyniadau');
   });
 
+  test('works with an input that has no text selection, such as an email input', async () => {
+    render(
+      <Autocomplete.Root>
+        <Autocomplete.Input id="email" type="email" aria-label="Email" />
+        <Autocomplete.Listbox>
+          <Autocomplete.Option>ali@example.com</Autocomplete.Option>
+        </Autocomplete.Listbox>
+        <Autocomplete.Status data-testid="status" />
+      </Autocomplete.Root>
+    );
+    await upgraded();
+    vi.useFakeTimers();
+    const input = screen.getByLabelText('Email');
+    fireEvent.focus(input);
+    fireEvent.input(input, { target: { value: 'ali' } });
+    act(() => vi.advanceTimersByTime(1400));
+    expect(screen.getByTestId('status')).toHaveTextContent('1 result is available.');
+  });
+
   test('calls onConfirm, and a cancelled confirm doesn’t submit the form', async () => {
     const onSubmit = vi.fn((event: SubmitEvent) => event.preventDefault());
     const onConfirm = vi.fn((_value: string, event: CustomEvent) => event.preventDefault());

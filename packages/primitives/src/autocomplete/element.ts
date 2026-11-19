@@ -222,7 +222,11 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     private setup() {
       const input = this.own('[data-autocomplete-input]');
       const listbox = this.own('[data-autocomplete-listbox]');
-      if (!(input instanceof HTMLInputElement) || !input.id || !listbox) return;
+      if (!(input instanceof HTMLInputElement) || !input.id || !listbox) {
+        this.unbind();
+        delete this.dataset.upgraded;
+        return;
+      }
       if (input === this.input && listbox === this.listbox) {
         this.render();
         return;
@@ -374,7 +378,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
         });
         return;
       }
-      if (!(target instanceof HTMLElement)) return;
+      // An option React removed while focused: the new options move focus back to the input.
+      if (!(target instanceof HTMLElement) || !target.isConnected) return;
       const index = this.options.indexOf(target);
       if (index === -1) return;
       const focusingOutsideComponent = relatedTarget === null;
@@ -437,7 +442,9 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.setQuery(value);
       this.render();
       const proceed = this.confirmEvent(value);
-      if (proceed && this.submitOnConfirm) this.input?.form?.requestSubmit();
+      // After React has updated a controlled input's state, so an `onSubmit` sees the option.
+      const form = this.input?.form;
+      if (proceed && this.submitOnConfirm && form) window.setTimeout(() => form.requestSubmit());
     }
 
     private focusOption(index: number) {
@@ -603,7 +610,10 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       if (focused !== this.lastFocused && focused !== null) {
         const element = focused === -1 ? input : options[focused];
         if (element && document.activeElement !== element) element.focus();
-        if (focused === -1 && this.lastFocused === null) input.setSelectionRange(0, input.value.length);
+        // Some input types, such as email, have no selection.
+        if (focused === -1 && this.lastFocused === null && input.selectionStart !== null) {
+          input.setSelectionRange(0, input.value.length);
+        }
       }
       this.lastFocused = focused;
 
@@ -623,8 +633,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       if (option === undefined || this.selected === null) return results;
       const position = withLocale(locale, (l) => new Intl.NumberFormat(l)).format(this.selected + 1);
       const highlighted = translate(this.message('status-selected-option'), options.length, locale)
-        .replaceAll('%{option}', option)
-        .replaceAll('%{position}', position);
+        .replaceAll('%{option}', () => option)
+        .replaceAll('%{position}', () => position);
       return `${results} ${highlighted}`;
     }
 

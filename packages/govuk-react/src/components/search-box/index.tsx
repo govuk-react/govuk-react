@@ -29,13 +29,14 @@ export const searchBoxCss = `
 .${name}__autocomplete{display:block;position:relative}
 .${name}__menu{position:absolute;z-index:100;top:100%;left:0;right:0;margin:0;padding:0;list-style:none;overflow-x:hidden;background-color:#fff;border:1px solid #b1b4b6;border-top:0}
 .${name}--inverse .${name}__menu{border-top:1px solid #b1b4b6}
-.${name}__option{display:block;cursor:pointer;font-family:"GDS Transport",arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:1rem;line-height:1.25;color:#0b0c0c}
+.${name}__option{cursor:pointer;font-family:"GDS Transport",arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:1rem;line-height:1.25;color:#0b0c0c}
 @media (min-width:40.0625em){.${name}__option{font-size:1.1875rem;line-height:1.3157894737}}
 .${name}__option>*{pointer-events:none}
 .${name}__option[data-focused],.${name}__option:hover,.${name}__option:focus-visible{background-color:#f3f3f3;outline:none;text-decoration:underline;text-decoration-thickness:max(3px,.1875rem,.12em);text-underline-offset:.1578em}
 .${name}__option:focus-visible .${name}__suggestion-text{background-color:var(--govuk-focus-colour,#fd0)}
-.${name}__option-wrapper{display:flex;align-items:center;margin:0 15px;padding:5px 0;border-bottom:1px solid #b1b4b6}
-.${name}__option:last-child .${name}__option-wrapper{border-bottom:0}
+.${name}__option[hidden]{display:none}
+.${name}__option-wrapper{display:flex;align-items:center;margin:0 15px;padding:5px 0}
+.${name}__option:not([hidden])~.${name}__option:not([hidden]) .${name}__option-wrapper{border-top:1px solid #b1b4b6}
 .${name}__suggestion-icon{flex:none;width:20px;height:2.5rem;margin-right:10px;background-color:#505a5f;-webkit-mask:url("${suggestionIcon}") center/contain no-repeat;mask:url("${suggestionIcon}") center/contain no-repeat}
 .${name}__option[data-focused] .${name}__suggestion-icon,.${name}__option:hover .${name}__suggestion-icon,.${name}__option:focus-visible .${name}__suggestion-icon{background-color:#0b0c0c}
 .${name}__suggestion-text{font-weight:700}
@@ -234,7 +235,11 @@ export function AssistiveHint({
 
 export type AutocompleteCompositeProps = CompositeProps &
   Pick<AutocompleteProps, 'minLength' | 'filter' | 'onQueryChange' | 'onConfirm'> & {
-    /** The suggestions for the query, such as from `onQueryChange`. Children are an alternative. */
+    /**
+     * The suggestions for the query, such as from `onQueryChange`. Only those containing the query
+     * show, unless `filter` is "none", such as for suggestions a server has already matched.
+     * Children are an alternative.
+     */
     suggestions?: string[];
     /** `Option`s, rather than `suggestions`, such as to highlight the query with `Match`. */
     children?: ReactNode;

@@ -70,7 +70,7 @@ export const Autocomplete: StoryObj<typeof SearchBox.AutocompleteComposite> = {
   args: { id: 'search-autocomplete', name: 'q', suggestions },
 };
 
-/** Types a query on load, so the suggestions are open for visual regression. */
+/** Types a query on load, so the matching suggestions are open for visual regression. */
 export const AutocompleteOpen: StoryObj<typeof SearchBox.AutocompleteComposite> = {
   render: function AutocompleteOpen(args) {
     const typed = useRef(false);
@@ -80,7 +80,7 @@ export const AutocompleteOpen: StoryObj<typeof SearchBox.AutocompleteComposite> 
       // After the element upgrades.
       window.setTimeout(() => {
         input.focus();
-        input.value = 'tax';
+        input.value = 'tax r';
         input.dispatchEvent(new Event('input', { bubbles: true }));
       });
     };
