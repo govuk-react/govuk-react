@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import * as Textarea from '.';
+import { TextareaField } from '.';
 
 const meta = {
   title: 'Form/Textarea',
   id: 'textarea',
-  component: Textarea.Field,
+  component: TextareaField,
   args: { id: 'more-detail', name: 'more-detail', label: 'Can you provide more detail?' },
-} satisfies Meta<typeof Textarea.Field>;
+} satisfies Meta<typeof TextareaField>;
 
 export default meta;
 

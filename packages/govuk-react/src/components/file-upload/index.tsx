@@ -8,24 +8,24 @@ import { Hint } from 'govuk-frontend-react/hint';
 import { LabelComposite } from 'govuk-frontend-react/label';
 
 /*
- * govuk-frontend-react's FileUpload markup. `Field` is the native file input. `EnhancedField` is
+ * govuk-frontend-react's FileUpload markup. `FileUploadField` is the native file input. `EnhancedFileUploadField` is
  * govuk-frontend's improved file upload, with behaviour from @govuk-react/primitives: without
  * JavaScript it's the native file input too, and once JavaScript runs it's a button and drop zone.
  */
 
-export type ControlProps = Markup.ControlProps;
+export type FileUploadProps = Markup.FileUploadProps;
 
 /** The file input. */
-export function Control(props: ControlProps) {
+export function FileUpload(props: FileUploadProps) {
   return (
     <Primitives.Input asChild>
-      <Markup.Control {...props} />
+      <Markup.FileUpload {...props} />
     </Primitives.Input>
   );
 }
 
 type Texts = Pick<
-  Markup.WrapperProps,
+  Markup.FileUploadWrapperProps,
   | 'chooseFilesButtonText'
   | 'noFileChosenText'
   | 'multipleFilesChosenText'
@@ -34,18 +34,18 @@ type Texts = Pick<
   | 'leftDropZoneText'
 >;
 
-export type FieldProps = Omit<Markup.FieldProps, 'javascript' | keyof Texts>;
+export type FileUploadFieldProps = Omit<Markup.FileUploadFieldProps, 'javascript' | keyof Texts>;
 
 /**
  * Help users select and upload a file.
  *
  * @see https://design-system.service.gov.uk/components/file-upload/
  */
-export function Field(props: FieldProps) {
-  return <Markup.Field {...props} />;
+export function FileUploadField(props: FileUploadFieldProps) {
+  return <Markup.FileUploadField {...props} />;
 }
 
-export type RootProps = Omit<
+export type EnhancedFileUploadProps = Omit<
   Primitives.RootProps,
   | 'noFileChosen'
   | 'multipleFilesChosen'
@@ -57,14 +57,14 @@ export type RootProps = Omit<
 > &
   Pick<Texts, 'noFileChosenText' | 'multipleFilesChosenText' | 'enteredDropZoneText' | 'leftDropZoneText'>;
 
-/** Holds `Wrapper` and `Announcements`, and turns the file input into a button and drop zone once JavaScript runs. */
-export function Root({
+/** Holds `EnhancedFileUploadWrapper` and `EnhancedFileUploadAnnouncements`, and turns the file input into a button and drop zone once JavaScript runs. */
+export function EnhancedFileUpload({
   noFileChosenText,
   multipleFilesChosenText,
   enteredDropZoneText,
   leftDropZoneText,
   ...props
-}: RootProps) {
+}: EnhancedFileUploadProps) {
   return (
     <Primitives.Root
       noFileChosen={noFileChosenText}
@@ -79,49 +79,56 @@ export function Root({
   );
 }
 
-export type WrapperProps = Markup.WrapperProps;
+export type EnhancedFileUploadWrapperProps = Markup.FileUploadWrapperProps;
 
-/** The drop zone, holding `Button` and `Control`. */
-export function Wrapper(props: WrapperProps) {
+/** The drop zone, holding `EnhancedFileUploadButton` and `FileUpload`. */
+export function EnhancedFileUploadWrapper(props: EnhancedFileUploadWrapperProps) {
   return (
     <Primitives.DropZone asChild>
-      <Markup.Wrapper {...props} />
+      <Markup.FileUploadWrapper {...props} />
     </Primitives.DropZone>
   );
 }
 
-export type ButtonProps = Omit<Primitives.ButtonProps, 'asChild'>;
+export type EnhancedFileUploadButtonProps = Omit<Primitives.ButtonProps, 'asChild'>;
 
-/** Opens the file picker, and takes dropped files. Shown once JavaScript runs, before `Control`. */
-export function Button({ className, ...props }: ButtonProps) {
+/** Opens the file picker, and takes dropped files. Shown once JavaScript runs, before `FileUpload`. */
+export function EnhancedFileUploadButton({ className, ...props }: EnhancedFileUploadButtonProps) {
   return <Primitives.Button className={clsx('govuk-file-upload-button', className)} {...props} />;
 }
 
-export type StatusProps = Omit<Primitives.StatusProps, 'asChild'>;
+export type EnhancedFileUploadStatusProps = Omit<Primitives.StatusProps, 'asChild'>;
 
-/** Which files are chosen, in `Button`. */
-export function Status({ className, ...props }: StatusProps) {
+/** Which files are chosen, in `EnhancedFileUploadButton`. */
+export function EnhancedFileUploadStatus({ className, ...props }: EnhancedFileUploadStatusProps) {
   return <Primitives.Status className={clsx('govuk-body', 'govuk-file-upload-button__status', className)} {...props} />;
 }
 
-export type CommaProps = Omit<Primitives.SeparatorProps, 'asChild'>;
+export type EnhancedFileUploadCommaProps = Omit<Primitives.SeparatorProps, 'asChild'>;
 
-/** A visually hidden comma between the label and the button's text in its accessible name, after `Status`. */
-export function Comma({ className, ...props }: CommaProps) {
+/** A visually hidden comma between the label and the button's text in its accessible name, after `EnhancedFileUploadStatus`. */
+export function EnhancedFileUploadComma({ className, ...props }: EnhancedFileUploadCommaProps) {
   return <Primitives.Separator className={clsx('govuk-visually-hidden', className)} {...props} />;
 }
 
-export type PseudoButtonContainerProps = React.ComponentProps<'span'>;
+export type EnhancedFileUploadPseudoButtonContainerProps = React.ComponentProps<'span'>;
 
-/** Holds `PseudoButton` and `Instruction`, in `Button`. */
-export function PseudoButtonContainer({ className, ...props }: PseudoButtonContainerProps) {
+/** Holds `EnhancedFileUploadPseudoButton` and `EnhancedFileUploadInstruction`, in `EnhancedFileUploadButton`. */
+export function EnhancedFileUploadPseudoButtonContainer({
+  className,
+  ...props
+}: EnhancedFileUploadPseudoButtonContainerProps) {
   return <span className={clsx('govuk-file-upload-button__pseudo-button-container', className)} {...props} />;
 }
 
-export type PseudoButtonProps = React.ComponentProps<'span'>;
+export type EnhancedFileUploadPseudoButtonProps = React.ComponentProps<'span'>;
 
 /** Looks like a secondary button. Defaults to "Choose file". */
-export function PseudoButton({ className, children = 'Choose file', ...props }: PseudoButtonProps) {
+export function EnhancedFileUploadPseudoButton({
+  className,
+  children = 'Choose file',
+  ...props
+}: EnhancedFileUploadPseudoButtonProps) {
   return (
     <span
       className={clsx('govuk-button', 'govuk-button--secondary', 'govuk-file-upload-button__pseudo-button', className)}
@@ -132,10 +139,14 @@ export function PseudoButton({ className, children = 'Choose file', ...props }: 
   );
 }
 
-export type InstructionProps = React.ComponentProps<'span'>;
+export type EnhancedFileUploadInstructionProps = React.ComponentProps<'span'>;
 
 /** Tells users they can drop files. Defaults to "or drop file". */
-export function Instruction({ className, children = 'or drop file', ...props }: InstructionProps) {
+export function EnhancedFileUploadInstruction({
+  className,
+  children = 'or drop file',
+  ...props
+}: EnhancedFileUploadInstructionProps) {
   return (
     <span className={clsx('govuk-body', 'govuk-file-upload-button__instruction', className)} {...props}>
       {children}
@@ -143,26 +154,31 @@ export function Instruction({ className, children = 'or drop file', ...props }: 
   );
 }
 
-export type ButtonCompositeProps = Omit<ButtonProps, 'children'> &
+export type EnhancedFileUploadButtonCompositeProps = Omit<EnhancedFileUploadButtonProps, 'children'> &
   Pick<Texts, 'chooseFilesButtonText' | 'dropInstructionText'>;
 
-/** `Button`, with its status and text. */
-export function ButtonComposite({ chooseFilesButtonText, dropInstructionText, ...props }: ButtonCompositeProps) {
+/** `EnhancedFileUploadButton`, with its status and text. */
+export function EnhancedFileUploadButtonComposite({
+  chooseFilesButtonText,
+  dropInstructionText,
+  ...props
+}: EnhancedFileUploadButtonCompositeProps) {
   return (
-    <Button {...props}>
-      <Status />
-      <Comma />
-      <PseudoButtonContainer>
-        <PseudoButton>{chooseFilesButtonText}</PseudoButton> <Instruction>{dropInstructionText}</Instruction>
-      </PseudoButtonContainer>
-    </Button>
+    <EnhancedFileUploadButton {...props}>
+      <EnhancedFileUploadStatus />
+      <EnhancedFileUploadComma />
+      <EnhancedFileUploadPseudoButtonContainer>
+        <EnhancedFileUploadPseudoButton>{chooseFilesButtonText}</EnhancedFileUploadPseudoButton>{' '}
+        <EnhancedFileUploadInstruction>{dropInstructionText}</EnhancedFileUploadInstruction>
+      </EnhancedFileUploadPseudoButtonContainer>
+    </EnhancedFileUploadButton>
   );
 }
 
-export type AnnouncementsProps = Omit<Primitives.AnnouncementsProps, 'asChild'>;
+export type EnhancedFileUploadAnnouncementsProps = Omit<Primitives.AnnouncementsProps, 'asChild'>;
 
-/** Tells screen reader users when they drag files into or out of the drop zone, after `Wrapper`. */
-export function Announcements({ className, ...props }: AnnouncementsProps) {
+/** Tells screen reader users when they drag files into or out of the drop zone, after `EnhancedFileUploadWrapper`. */
+export function EnhancedFileUploadAnnouncements({ className, ...props }: EnhancedFileUploadAnnouncementsProps) {
   return (
     <Primitives.Announcements
       className={clsx('govuk-file-upload-announcements', 'govuk-visually-hidden', className)}
@@ -171,10 +187,10 @@ export function Announcements({ className, ...props }: AnnouncementsProps) {
   );
 }
 
-export type CompositeProps = ControlProps & Texts;
+export type EnhancedFileUploadCompositeProps = FileUploadProps & Texts;
 
-/** `Root`, with the drop zone, button, file input and announcements. Takes the file input's props. */
-export function Composite({
+/** `EnhancedFileUpload`, with the drop zone, button, file input and announcements. Takes the file input's props. */
+export function EnhancedFileUploadComposite({
   chooseFilesButtonText,
   noFileChosenText,
   multipleFilesChosenText,
@@ -182,15 +198,15 @@ export function Composite({
   enteredDropZoneText,
   leftDropZoneText,
   ...props
-}: CompositeProps) {
+}: EnhancedFileUploadCompositeProps) {
   return (
-    <Root
+    <EnhancedFileUpload
       noFileChosenText={noFileChosenText}
       multipleFilesChosenText={multipleFilesChosenText}
       enteredDropZoneText={enteredDropZoneText}
       leftDropZoneText={leftDropZoneText}
     >
-      <Wrapper
+      <EnhancedFileUploadWrapper
         chooseFilesButtonText={chooseFilesButtonText}
         noFileChosenText={noFileChosenText}
         multipleFilesChosenText={multipleFilesChosenText}
@@ -198,15 +214,18 @@ export function Composite({
         enteredDropZoneText={enteredDropZoneText}
         leftDropZoneText={leftDropZoneText}
       >
-        <ButtonComposite chooseFilesButtonText={chooseFilesButtonText} dropInstructionText={dropInstructionText} />
-        <Control {...props} />
-      </Wrapper>
-      <Announcements />
-    </Root>
+        <EnhancedFileUploadButtonComposite
+          chooseFilesButtonText={chooseFilesButtonText}
+          dropInstructionText={dropInstructionText}
+        />
+        <FileUpload {...props} />
+      </EnhancedFileUploadWrapper>
+      <EnhancedFileUploadAnnouncements />
+    </EnhancedFileUpload>
   );
 }
 
-export type EnhancedFieldProps = Omit<Markup.FieldProps, 'javascript'>;
+export type EnhancedFileUploadFieldProps = Omit<Markup.FileUploadFieldProps, 'javascript'>;
 
 const isSet = (node: React.ReactNode) => node !== undefined && node !== null && node !== false && node !== '';
 
@@ -216,7 +235,7 @@ const isSet = (node: React.ReactNode) => node !== undefined && node !== null && 
  *
  * @see https://design-system.service.gov.uk/components/file-upload/#using-the-improved-file-upload-component
  */
-export function EnhancedField({
+export function EnhancedFileUploadField({
   id: idProp,
   name,
   label,
@@ -226,7 +245,7 @@ export function EnhancedField({
   errorMessage,
   'aria-describedby': describedBy,
   ...props
-}: EnhancedFieldProps) {
+}: EnhancedFileUploadFieldProps) {
   const id = idProp || name;
   const hintId = isSet(hint) ? `${id}-hint` : undefined;
   const errorId = isSet(errorMessage) ? `${id}-error` : undefined;
@@ -240,7 +259,13 @@ export function EnhancedField({
       </LabelComposite>
       {hintId && <Hint id={hintId}>{hint}</Hint>}
       {errorId && <ErrorMessageComposite id={errorId}>{errorMessage}</ErrorMessageComposite>}
-      <Composite id={id} name={name} error={Boolean(errorId)} aria-describedby={ariaDescribedBy} {...props} />
+      <EnhancedFileUploadComposite
+        id={id}
+        name={name}
+        error={Boolean(errorId)}
+        aria-describedby={ariaDescribedBy}
+        {...props}
+      />
     </FormGroup>
   );
 }

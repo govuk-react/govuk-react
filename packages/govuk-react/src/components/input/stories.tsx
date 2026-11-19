@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import * as Input from '.';
+import { InputField } from '.';
 
 const meta = {
   title: 'Form/Input',
   id: 'input',
-  component: Input.Field,
+  component: InputField,
   args: { id: 'event-name', name: 'event-name', label: 'What is the name of the event?' },
-} satisfies Meta<typeof Input.Field>;
+} satisfies Meta<typeof InputField>;
 
 export default meta;
 

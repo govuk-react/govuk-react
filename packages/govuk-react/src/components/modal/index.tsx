@@ -2,7 +2,7 @@ import * as React from 'react';
 import type { ReactNode } from 'react';
 import { clsx } from 'clsx';
 import * as Primitives from '@govuk-react/primitives/modal';
-import * as Button from 'govuk-frontend-react/button';
+import { Button, type ButtonProps } from 'govuk-frontend-react/button';
 
 /*
  * A modal dialog on GOV.UK styles, with the behaviour from @govuk-react/primitives. govuk-frontend
@@ -36,13 +36,13 @@ export function Root({ children, ...props }: RootProps) {
   );
 }
 
-export type TriggerProps = Omit<Button.RootProps, 'as' | 'href' | 'type'> & Pick<Primitives.TriggerProps, 'dialogId'>;
+export type TriggerProps = Omit<ButtonProps, 'as' | 'href' | 'type'> & Pick<Primitives.TriggerProps, 'dialogId'>;
 
 /** A button that opens the modal. */
 export function Trigger({ dialogId, ...props }: TriggerProps) {
   return (
     <Primitives.Trigger dialogId={dialogId} asChild>
-      <Button.Root type="button" {...props} />
+      <Button type="button" {...props} />
     </Primitives.Trigger>
   );
 }
@@ -53,7 +53,7 @@ export type CloseProps = TriggerProps;
 export function Close({ dialogId, ...props }: CloseProps) {
   return (
     <Primitives.Close dialogId={dialogId} asChild>
-      <Button.Root type="button" variant="secondary" {...props} />
+      <Button type="button" variant="secondary" {...props} />
     </Primitives.Close>
   );
 }

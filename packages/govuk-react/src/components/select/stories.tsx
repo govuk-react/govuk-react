@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 
-import * as Select from '.';
+import { SelectField } from '.';
 
 const options = (
   <>
@@ -15,9 +15,9 @@ const options = (
 const meta = {
   title: 'Form/Select',
   id: 'select',
-  component: Select.Field,
+  component: SelectField,
   args: { id: 'sort', name: 'sort', label: 'Sort by', children: options },
-} satisfies Meta<typeof Select.Field>;
+} satisfies Meta<typeof SelectField>;
 
 export default meta;
 

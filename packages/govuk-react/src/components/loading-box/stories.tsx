@@ -3,8 +3,8 @@ import type { StoryFn } from '@storybook/react';
 import * as React from 'react';
 
 import { Heading } from '../heading';
-import * as Input from '../input';
-import * as Button from '../button';
+import { InputField } from '../input';
+import { Button } from '../button';
 import { Link } from '../link';
 import * as Radios from '../radios';
 import * as PhaseBanner from '../phase-banner';
@@ -27,8 +27,8 @@ Default.args = {
       This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
     </PhaseBanner.Composite>,
     <Heading size="l">Example</Heading>,
-    <Input.Field id="email-address" name="email-address" label="Email address" />,
-    <Button.Composite start>Continue</Button.Composite>,
+    <InputField id="email-address" name="email-address" label="Email address" />,
+    <Button start>Continue</Button>,
   ],
 };
 
@@ -47,8 +47,8 @@ PartialCover.args = {
   loading: true,
   children: [
     <Heading size="l">Example</Heading>,
-    <Input.Field id="email-address" name="email-address" label="Email address" />,
-    <Button.Composite start>Continue</Button.Composite>,
+    <InputField id="email-address" name="email-address" label="Email address" />,
+    <Button start>Continue</Button>,
   ],
 };
 
@@ -60,20 +60,20 @@ LoadingBoxLong.args = {
       This part of GOV.UK is being rebuilt &#8211; <Link href="https://example.com">find out what that means</Link>
     </PhaseBanner.Composite>,
     <Heading size="l">Example</Heading>,
-    <Input.Field id="first-name" name="first-name" label="First name" />,
-    <Input.Field id="last-name" name="last-name" label="Last name" />,
-    <Input.Field id="email-address" name="email-address" label="Email address" />,
+    <InputField id="first-name" name="first-name" label="First name" />,
+    <InputField id="last-name" name="last-name" label="Last name" />,
+    <InputField id="email-address" name="email-address" label="Email address" />,
     <Radios.Field idPrefix="contact" legend="Do you want us to contact you?" inline>
       <Radios.ItemComposite id="contact" name="contact" value="yes" label="Yes" />
       <Radios.ItemComposite id="contact-2" name="contact" value="no" label="No" />
     </Radios.Field>,
-    <Input.Field
+    <InputField
       id="national-insurance-number"
       name="national-insurance-number"
       label="National Insurance number"
       hint="It’s on your National Insurance card"
     />,
-    <Button.Composite start>Continue</Button.Composite>,
+    <Button start>Continue</Button>,
   ],
 };
 
@@ -98,12 +98,12 @@ export const Toggle: StoryFn<React.ComponentProps<typeof LoadingBox>> = (args) =
   const [loading, setLoading] = React.useState(false);
   return (
     <>
-      <Button.Root type="button" onClick={() => setLoading((value) => !value)}>
+      <Button type="button" onClick={() => setLoading((value) => !value)}>
         {loading ? 'Stop loading' : 'Start loading'}
-      </Button.Root>
+      </Button>
       <LoadingBox {...args} loading={loading}>
         <Heading size="l">Example</Heading>
-        <Input.Field id="toggle-email-address" name="email-address" label="Email address" />
+        <InputField id="toggle-email-address" name="email-address" label="Email address" />
       </LoadingBox>
     </>
   );
@@ -136,8 +136,8 @@ export const SubmittingAForm: StoryFn<React.ComponentProps<typeof LoadingBox>> =
           setTimeout(() => setState('sent'), 2000);
         }}
       >
-        <Input.Field id="form-email-address" name="email-address" label="Email address" />
-        <Button.Root type="submit">Continue</Button.Root>
+        <InputField id="form-email-address" name="email-address" label="Email address" />
+        <Button type="submit">Continue</Button>
       </form>
     </LoadingBox>
   );

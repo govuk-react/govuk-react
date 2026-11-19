@@ -6,9 +6,9 @@ const Home: React.FC = () => (
   <>
     <GovUK.Heading size="l">Welcome to the govuk-react example application.</GovUK.Heading>
     <GovUK.Body>Click Start to continue.</GovUK.Body>
-    <GovUK.Button.Composite start as={Link} to="/forms">
+    <GovUK.StartButton as={Link} to="/forms">
       Start now
-    </GovUK.Button.Composite>
+    </GovUK.StartButton>
   </>
 );
 

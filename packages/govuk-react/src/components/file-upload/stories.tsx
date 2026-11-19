@@ -2,12 +2,26 @@ import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 import { useEffect, useRef } from 'react';
 
-import * as FileUpload from '.';
+import {
+  EnhancedFileUpload,
+  EnhancedFileUploadAnnouncements,
+  EnhancedFileUploadButton,
+  EnhancedFileUploadComma,
+  EnhancedFileUploadField,
+  type EnhancedFileUploadFieldProps,
+  EnhancedFileUploadInstruction,
+  EnhancedFileUploadPseudoButton,
+  EnhancedFileUploadPseudoButtonContainer,
+  EnhancedFileUploadStatus,
+  EnhancedFileUploadWrapper,
+  FileUpload,
+  FileUploadField,
+} from '.';
 
 const meta = {
   title: 'Form/File upload',
   id: 'file-upload',
-  component: FileUpload.Field,
+  component: FileUploadField,
   args: { id: 'file-upload', name: 'file-upload', label: 'Upload a file' },
   parameters: {
     docs: {
@@ -17,7 +31,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof FileUpload.Field>;
+} satisfies Meta<typeof FileUploadField>;
 
 export default meta;
 
@@ -39,7 +53,7 @@ export const WithErrorMessage: Story = {
 
 export const Enhanced: Story = {
   args: { id: 'file-upload-1', name: 'fileUpload1' },
-  render: (args) => <FileUpload.EnhancedField {...args} />,
+  render: (args) => <EnhancedFileUploadField {...args} />,
 };
 
 export const EnhancedWithHintAndError: Story = {
@@ -49,17 +63,17 @@ export const EnhancedWithHintAndError: Story = {
     hint: 'Your photo may be in your Pictures, Photos, Downloads or Desktop folder. Or in an app like iPhoto.',
     errorMessage: 'Error message goes here',
   },
-  render: (args) => <FileUpload.EnhancedField {...args} />,
+  render: (args) => <EnhancedFileUploadField {...args} />,
 };
 
 export const EnhancedMultipleFiles: Story = {
   args: { id: 'file-upload-3', name: 'fileUpload3', multiple: true },
-  render: (args) => <FileUpload.EnhancedField {...args} />,
+  render: (args) => <EnhancedFileUploadField {...args} />,
 };
 
 export const EnhancedDisabled: Story = {
   args: { id: 'file-upload-4', name: 'fileUpload4', disabled: true },
-  render: (args) => <FileUpload.EnhancedField {...args} />,
+  render: (args) => <EnhancedFileUploadField {...args} />,
 };
 
 const transferOf = (names: string[]) => {
@@ -73,7 +87,7 @@ function WithFiles({
   names,
   dragging = false,
   ...props
-}: FileUpload.EnhancedFieldProps & { names: string[]; dragging?: boolean }) {
+}: EnhancedFileUploadFieldProps & { names: string[]; dragging?: boolean }) {
   const container = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
@@ -91,7 +105,7 @@ function WithFiles({
   }, [names, dragging]);
   return (
     <div ref={container}>
-      <FileUpload.EnhancedField {...props} />
+      <EnhancedFileUploadField {...props} />
     </div>
   );
 }
@@ -120,20 +134,20 @@ export const WithParts: Story = {
       <label className="govuk-label" id="file-upload-8-label" htmlFor="file-upload-8">
         Upload a file
       </label>
-      <FileUpload.Root>
-        <FileUpload.Wrapper>
-          <FileUpload.Button>
-            <FileUpload.Status />
-            <FileUpload.Comma />
-            <FileUpload.PseudoButtonContainer>
-              <FileUpload.PseudoButton>Choose photo</FileUpload.PseudoButton>{' '}
-              <FileUpload.Instruction>or drop photo</FileUpload.Instruction>
-            </FileUpload.PseudoButtonContainer>
-          </FileUpload.Button>
-          <FileUpload.Control id="file-upload-8" name="fileUpload8" accept="image/*" />
-        </FileUpload.Wrapper>
-        <FileUpload.Announcements />
-      </FileUpload.Root>
+      <EnhancedFileUpload>
+        <EnhancedFileUploadWrapper>
+          <EnhancedFileUploadButton>
+            <EnhancedFileUploadStatus />
+            <EnhancedFileUploadComma />
+            <EnhancedFileUploadPseudoButtonContainer>
+              <EnhancedFileUploadPseudoButton>Choose photo</EnhancedFileUploadPseudoButton>{' '}
+              <EnhancedFileUploadInstruction>or drop photo</EnhancedFileUploadInstruction>
+            </EnhancedFileUploadPseudoButtonContainer>
+          </EnhancedFileUploadButton>
+          <FileUpload id="file-upload-8" name="fileUpload8" accept="image/*" />
+        </EnhancedFileUploadWrapper>
+        <EnhancedFileUploadAnnouncements />
+      </EnhancedFileUpload>
     </div>
   ),
 };

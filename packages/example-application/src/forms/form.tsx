@@ -83,7 +83,7 @@ const Form: React.FC = () => {
             </GovUK.ErrorSummary.Composite>
           )}
           <GovUK.Fieldset.Composite legend="About you" legendSize="m">
-            <GovUK.Input.Field
+            <GovUK.InputField
               id="firstName"
               name="firstName"
               label="First name"
@@ -92,7 +92,7 @@ const Form: React.FC = () => {
               onChange={(e) => setFirstName(e.target.value)}
               value={firstName}
             />
-            <GovUK.Textarea.Field
+            <GovUK.TextareaField
               id="description"
               name="description"
               label="Description of what you saw"
@@ -118,7 +118,7 @@ const Form: React.FC = () => {
             <DateOfBirth name="dob" value={dob} onChange={setDob} errorMessage={errors?.dob} />
           </GovUK.Fieldset.Composite>
           <GovUK.Fieldset.Composite legend="About your pet" legendSize="m">
-            <GovUK.Select.Field
+            <GovUK.SelectField
               id="animal"
               name="animal"
               label="What animal is your pet"
@@ -128,8 +128,8 @@ const Form: React.FC = () => {
               value={animal ?? ''}
             >
               {animalOptions}
-            </GovUK.Select.Field>
-            <GovUK.FileUpload.Field
+            </GovUK.SelectField>
+            <GovUK.FileUploadField
               id="petPhoto"
               name="petPhoto"
               label="Please upload a recent photograph"
@@ -162,9 +162,9 @@ const Form: React.FC = () => {
               />
             </GovUK.Radios.Field>
           </GovUK.Fieldset.Composite>
-          <GovUK.Button.Composite onClick={handleSubmit} disabled={isSubmitting}>
+          <GovUK.Button onClick={handleSubmit} disabled={isSubmitting}>
             Submit
-          </GovUK.Button.Composite>
+          </GovUK.Button>
         </GovUK.LoadingBox>
       )}
       {hasSubmitted && (

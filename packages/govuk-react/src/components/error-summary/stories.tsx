@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 
 import * as ErrorSummary from '.';
-import * as Input from '../input';
+import { InputField } from '../input';
 
 const meta = {
   title: 'Form/Error summary',
@@ -38,7 +38,7 @@ export const WithField: Story = {
       <ErrorSummary.Composite title="There is a problem" disableAutoFocus={viewMode === 'docs'}>
         <ErrorSummary.ListItemComposite href="#full-name">Enter your full name</ErrorSummary.ListItemComposite>
       </ErrorSummary.Composite>
-      <Input.Field id="full-name" name="fullName" label="Full name" errorMessage="Enter your full name" />
+      <InputField id="full-name" name="fullName" label="Full name" errorMessage="Enter your full name" />
     </>
   ),
 };

@@ -2,15 +2,19 @@ import * as React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { fireEvent, render, screen } from '@testing-library/react';
 import * as Markup from 'govuk-frontend-react/button';
-import * as Button from '.';
+import { Button, StartButton } from '.';
 
 describe('Button', () => {
-  test.each([
-    ['a button', { preventDoubleClick: true, children: 'Save and continue' }],
-    ['a start button', { start: true, href: '/start', children: 'Start now' }],
-  ])('renders govuk-frontend’s markup, marked for the behaviour: %s', (_, props) => {
-    const ours = renderToStaticMarkup(<Button.Composite {...props} />);
-    const theirs = renderToStaticMarkup(<Markup.Composite {...props} />);
+  test('renders govuk-frontend’s markup, marked for the behaviour', () => {
+    const ours = renderToStaticMarkup(<Button preventDoubleClick>Save and continue</Button>);
+    const theirs = renderToStaticMarkup(<Markup.Button preventDoubleClick>Save and continue</Markup.Button>);
+    expect(ours.replace(' data-button=""', '')).toBe(theirs);
+    expect(ours).toContain('data-button=""');
+  });
+
+  test('StartButton renders govuk-frontend’s markup, marked for the behaviour', () => {
+    const ours = renderToStaticMarkup(<StartButton href="/start">Start now</StartButton>);
+    const theirs = renderToStaticMarkup(<Markup.StartButton href="/start">Start now</Markup.StartButton>);
     expect(ours.replace(' data-button=""', '')).toBe(theirs);
     expect(ours).toContain('data-button=""');
   });
@@ -19,7 +23,7 @@ describe('Button', () => {
     const onSubmit = vi.fn((event: React.FormEvent) => event.preventDefault());
     render(
       <form onSubmit={onSubmit}>
-        <Button.Composite preventDoubleClick>Save and continue</Button.Composite>
+        <Button preventDoubleClick>Save and continue</Button>
       </form>
     );
     fireEvent.click(screen.getByRole('button'));
@@ -30,9 +34,9 @@ describe('Button', () => {
   test('Space activates a link button, as in govuk-frontend', () => {
     const onClick = vi.fn((event: React.MouseEvent) => event.preventDefault());
     render(
-      <Button.Root href="/start" onClick={onClick}>
+      <Button href="/start" onClick={onClick}>
         Start now
-      </Button.Root>
+      </Button>
     );
     fireEvent.keyDown(screen.getByRole('button'), { key: ' ' });
     expect(onClick).toHaveBeenCalledTimes(1);
@@ -42,9 +46,9 @@ describe('Button', () => {
     const onClick = vi.fn();
     const MyButton = (props: React.ComponentProps<'button'>) => <button {...props} />;
     render(
-      <Button.Root as={MyButton} type="button" preventDoubleClick onClick={onClick}>
+      <Button as={MyButton} type="button" preventDoubleClick onClick={onClick}>
         Save
-      </Button.Root>
+      </Button>
     );
     fireEvent.click(screen.getByRole('button'));
     fireEvent.click(screen.getByRole('button'));
