@@ -26,12 +26,12 @@ test('uncontrolled: a tab picked once upgraded, before hydration, is reported', 
   await expect(page.getByTestId('last-h')).toHaveText('h-settings');
 });
 
-test('controlled "report": a tab picked once upgraded, before hydration, is adopted', async ({ page }) => {
+test('controlled "report": a tab picked once upgraded, before hydration, switches and is adopted', async ({ page }) => {
   const release = await holdReact(page);
   await page.goto('/test/controlled', { waitUntil: 'commit' });
   const tab = page.getByTestId('ctrl-cs').getByRole('tab', { name: 'Settings' });
-  await expect(tab).toBeVisible();
   await tab.click();
+  await expect(tab).toHaveAttribute('aria-selected', 'true');
   release();
   await expect(page.getByTestId('ctrl-cs')).toHaveAttribute('data-hydrated', 'true');
   await expect(page.getByTestId('cs-value')).toHaveText('cs-settings');

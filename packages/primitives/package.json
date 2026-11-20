@@ -20,6 +20,10 @@
     },
     "./package.json": "./package.json"
   },
+  "sideEffects": [
+    "./dist/*/element.js",
+    "./dist/inline/*.js"
+  ],
   "files": [
     "dist",
     "licences"

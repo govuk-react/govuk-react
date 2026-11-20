@@ -39,6 +39,8 @@ export function Root({
 }: RootProps) {
   return React.createElement(tagName, {
     ...props,
+    // The element owns `data-upgraded`.
+    suppressHydrationWarning: true,
     'show-text': showText,
     'hide-text': hideText,
     'show-label': showLabel,

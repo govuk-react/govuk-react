@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { isValidElement } from 'react';
+import { createContext, isValidElement, useContext } from 'react';
 import type { ComponentProps } from 'react';
 import { Slot } from '../utils/slot.js';
 import { tagName } from './element.js';
@@ -10,7 +10,11 @@ import { tagName } from './element.js';
  * Headless auto focus: the <govuk-react-auto-focus> element (./element.ts) moves focus to its
  * `Target` when it appears. The server renders the target with `autofocus`, so the browser focuses
  * it when the page loads, even without JavaScript.
+ *
+ * Context only fills in a default: in an island without a Root, pass `disabled` to Target.
  */
+
+const AutoFocusContext = createContext<{ disabled?: boolean }>({});
 
 export type RootProps = React.HTMLAttributes<HTMLElement> & {
   /** Don't move focus. */
@@ -18,13 +22,17 @@ export type RootProps = React.HTMLAttributes<HTMLElement> & {
 };
 
 export function Root({ disabled, ...props }: RootProps) {
-  return React.createElement(tagName, { ...props, disabled: disabled ? '' : undefined });
+  return (
+    <AutoFocusContext.Provider value={{ disabled }}>
+      {React.createElement(tagName, { ...props, disabled: disabled ? '' : undefined })}
+    </AutoFocusContext.Provider>
+  );
 }
 
 export type TargetProps = ComponentProps<'div'> & {
   /** Render the only child instead, with this part's props merged onto it. */
   asChild?: boolean;
-  /** Don't move focus. Pass the same as to `Root`. */
+  /** Don't move focus. Defaults to Root's. */
   disabled?: boolean;
 };
 
@@ -35,7 +43,9 @@ function tabIndexOf({ asChild, tabIndex, children }: TargetProps) {
 }
 
 /** What gets focus. */
-export function Target({ asChild, disabled, ...props }: TargetProps) {
+export function Target({ asChild, disabled: disabledProp, ...props }: TargetProps) {
+  const context = useContext(AutoFocusContext);
+  const disabled = disabledProp ?? context.disabled;
   const Element = asChild ? Slot : 'div';
   let focus = {};
   if (!disabled) {

@@ -49,6 +49,12 @@ export interface CharacterCountElement extends HTMLElement {
   update(): void;
 }
 
+declare global {
+  interface HTMLElementTagNameMap {
+    'govuk-react-character-count': CharacterCountElement;
+  }
+}
+
 // The same visually hidden styles as govuk-frontend's.
 const visuallyHidden: Record<string, string> = {
   position: 'absolute',

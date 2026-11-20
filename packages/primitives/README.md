@@ -6,12 +6,22 @@ Each primitive:
 
 - works without JavaScript, through a fallback you choose
 - upgrades to the full WAI-ARIA pattern when its custom element is defined, with or without React
-- adds React state (`value`, `defaultValue`, `onValueChange`) once hydrated
-- takes `asChild` on every part, so you render your own elements
+- adds React props for its state once hydrated, where it has any, such as `value` and `onValueChange`, or `open` and `onOpenChange`
+- takes `asChild` on its parts, so you render your own elements. A `Root` is the custom element, except Button's
+
+Import each primitive from its own path, such as `@govuk-react/primitives/tabs`. Each path defines its element when imported.
+
+## Without React
+
+Each element is also exported on its own, with no React, from `@govuk-react/primitives/<name>-element`, such as `tabs-element`. Importing it defines the element, such as `<govuk-react-tabs>`. Render the same markup as the React parts do: the element finds its parts by `data-` attributes, takes its options as attributes, and reports changes with bubbling events named after it, such as `govuk-react-tabs:change`. The comment at the top of each element's source lists its markup, attributes and events:
+
+[accordion](src/accordion/element.ts), [auto-focus](src/auto-focus/element.ts), [autocomplete](src/autocomplete/element.ts), [button](src/button/element.ts), [character-count](src/character-count/element.ts), [choices](src/choices/element.ts), [disclosure](src/disclosure/element.ts), [exit-this-page](src/exit-this-page/element.ts), [file-upload](src/file-upload/element.ts), [focus-links](src/focus-links/element.ts), [modal](src/modal/element.ts), [password-input](src/password-input/element.ts) and [tabs](src/tabs/element.ts).
+
+Each element that changes how its markup shows sets `data-upgraded` on itself once upgraded, to style it apart from its fallback.
 
 ## Inline scripts
 
-Each element is also built as a small, self-contained classic script, with no imports and no React, at `@govuk-react/primitives/inline/<name>-element.js`, such as `inline/tabs-element.js`. Inline the ones your page uses, so the markup is interactive as soon as it loads, before React has downloaded and hydrated. React's parts then pick up from the elements, including anything the user did before hydration. Each element is defined only once, whichever runs first: the inline script or React's bundle.
+Each element is also built as a small, self-contained classic script, with no imports and no React, at `@govuk-react/primitives/inline/<name>-element.js`, such as `inline/tabs-element.js`. Inline the ones your page uses, so the markup is interactive as soon as it loads, before React has downloaded and hydrated. React's parts then pick up from the elements, including anything the user did before hydration. Each element is defined only once, whichever runs first: the inline script or React's bundle. So inline the scripts from the same version of this package as the one in your bundle.
 
 To render them from React on the server, `inline-script` has each script as a string, and an `InlineScript` component:
 
@@ -76,17 +86,19 @@ The root sets how the tabs work without JavaScript, and its parts match it:
 
 They are separate components rather than a prop, because a prop can change after the first render, and the markup each needs can't.
 
-When controlled with `value`, a user's choice calls `onValueChange` and the tab changes only when `value` does. `preHydration` sets what happens to a tab the user picked before React hydrated: `"ignore"` (the default) keeps `value`, `"report"` calls `onValueChange` with it. When uncontrolled, the pick is always reported.
+When controlled with `value`, a user's choice calls `onValueChange` and the tab changes only when `value` does. `value` applies once hydrated, so tabs still switch before then. `preHydration` sets what happens to a tab the user picked before React hydrated: `"ignore"` (the default) goes back to `value`, `"report"` calls `onValueChange` with it. When uncontrolled, the pick is always reported.
 
 `orientation` (`"horizontal"` or `"vertical"`) sets the axis of the arrow keys.
 
-`media` limits the tab behaviour to a media query. Below it, `Root`'s tabs are a list of links to panels, and `RadiosRoot`'s keep switching through their radios. With `Root`, the URL hash follows the selected tab, as in govuk-frontend.
+`media` limits the tab behaviour to a media query, and can change. Below it, `Root`'s tabs are a list of links to panels, and `RadiosRoot`'s keep switching through their radios. With `Root`, the URL hash follows the selected tab, as in govuk-frontend.
+
+Each `value` is also its panel's `id`, and its tab links to it, so it must be unique on the page and valid as an id. For another id, pass `id` to the panel and the matching `href` to its `Trigger`.
 
 In an island without a root, pass `name` and `defaultSelected` to the triggers and panels. `upgradedClass`, `activeItemClass` and `hiddenContentClass` add classes for styles that key off classes rather than `data-state`, `aria-selected` and `hidden`.
 
-Without React, use the `<govuk-react-tabs>` element from `@govuk-react/primitives/tabs-element` with the same markup, including a hidden radio as the first child of each panel. Listen for its `govuk-react-tabs:change` event. See [the element's source](src/tabs/element.ts) for its attributes.
+Without React, the markup includes a hidden radio as the first child of each panel.
 
-It follows the Tabs reference in [react-design-system-apis](https://github.com/penx/react-design-system-apis). Browser tests in `packages/primitives-e2e` cover it without JavaScript, upgraded without React, hydrated, before hydration, controlled, nested, in islands and rendered only on the client.
+It follows the Tabs reference in [react-design-system-apis](https://github.com/penx/react-design-system-apis).
 
 ## Disclosure
 
@@ -213,7 +225,24 @@ import * as Choices from '@govuk-react/primitives/choices';
 
 For a group of radios or checkboxes. Without JavaScript every `Conditional` is shown. On upgrade, each one shows only while the choice that `controls` it is checked, and that choice gets `aria-controls` and `aria-expanded`. A checkbox with `exclusive`, such as "None of these", unchecks the other checkboxes with its name when checked, and is unchecked when one of them is. They're unchecked with `click()`, so `change` events fire and controlled React inputs hear about it. Control the inputs as usual, with `checked` and `onChange`.
 
-## AutoFocus
+## Password input
+
+```tsx
+import * as PasswordInput from '@govuk-react/primitives/password-input';
+
+<label htmlFor="password">Password</label>
+<PasswordInput.Root>
+  <PasswordInput.Input id="password" name="password" autoComplete="current-password" />
+  <PasswordInput.Toggle />
+  <PasswordInput.Status className="visually-hidden" />
+</PasswordInput.Root>;
+```
+
+Without JavaScript the field is a plain password field and the `Toggle` is hidden. On upgrade the element shows the button, which switches the input between `type="password"` and `type="text"`, sets its own text ("Show" or "Hide") and accessible name ("Show password" or "Hide password"), and announces the change in `Status`. Leave out `Status` and the element adds a visually hidden one after the input.
+
+The input's `type` is the state, kept when React renders the input again, so there is nothing to control. As in govuk-frontend, the password is hidden again when its form is submitted and when the page is restored from the back-forward cache. The text is English by default: pass `showText`, `hideText`, `showLabel`, `hideLabel`, `shownAnnouncement` and `hiddenAnnouncement` to `Root`.
+
+## Auto focus
 
 ```tsx
 import * as AutoFocus from '@govuk-react/primitives/auto-focus';
@@ -223,9 +252,9 @@ import * as AutoFocus from '@govuk-react/primitives/auto-focus';
 </AutoFocus.Root>;
 ```
 
-Moves focus to `Target` when it appears, such as an error summary after a form is submitted. The server renders the target with `tabindex="-1"` and `autofocus`, so the browser focuses it when the page loads, even without JavaScript. As in govuk-frontend, the target loses its `tabindex` once focus moves on. Pass `disabled` to both parts to leave focus alone.
+Moves focus to `Target` when it appears, such as an error summary after a form is submitted. The server renders the target with `tabindex="-1"` and `autofocus`, so the browser focuses it when the page loads, even without JavaScript. As in govuk-frontend, the target loses its `tabindex` once focus moves on. Pass `disabled` to `Root` to leave focus alone, or to `Target` in an island without a `Root`.
 
-## FocusLinks
+## Focus links
 
 ```tsx
 import * as FocusLinks from '@govuk-react/primitives/focus-links';
@@ -251,9 +280,9 @@ import * as Button from '@govuk-react/primitives/button';
 </Button.Root>;
 ```
 
-With `preventDoubleClick`, a second click within a second of the first is ignored, so a form isn't submitted twice. The click is stopped before React hears it, so `onClick` doesn't run twice either. Space activates a link with `role="button"`, as it does a button. Unlike the other primitives there's no wrapper element, which would change a button group's layout: importing the module adds one click and one keydown listener to the document, for any element marked by `Root`. Without React, import `@govuk-react/primitives/button-element` and mark buttons with `data-button`.
+With `preventDoubleClick`, a second click within a second of the first is ignored, so a form isn't submitted twice. The click is stopped before React hears it, so `onClick` doesn't run twice either. Space activates a link with `role="button"`, as it does a button. Unlike the other primitives there's no wrapper element, which would change a button group's layout: importing the module adds one click and one keydown listener to the document, for any element marked by `Root`. Without React, mark buttons with `data-button`.
 
-## ExitThisPage
+## Exit this page
 
 ```tsx
 import * as ExitThisPage from '@govuk-react/primitives/exit-this-page';

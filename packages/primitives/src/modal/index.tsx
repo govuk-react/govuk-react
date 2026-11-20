@@ -1,9 +1,9 @@
 'use client';
 
 import * as React from 'react';
-import { createContext, useContext, useEffect, useId, useRef } from 'react';
+import { createContext, useCallback, useContext, useEffect, useId, useRef } from 'react';
 import type { ComponentProps, ReactNode, SyntheticEvent } from 'react';
-import { Slot } from '../utils/slot.js';
+import { composeRefs, Slot } from '../utils/slot.js';
 import { tagName } from './element.js';
 
 /*
@@ -100,11 +100,11 @@ export function Content({ asChild, id, onClose, ref, ...props }: ContentProps) {
   });
   // Report each change once: `toggle` fires on opening and closing where the browser fires it on
   // dialogs, and `close` on closing everywhere.
-  const report = (dialog: HTMLDialogElement) => {
+  const report = useCallback((dialog: HTMLDialogElement) => {
     if (reported.current === dialog.open) return;
     reported.current = dialog.open;
     onOpenChange.current?.(dialog.open);
-  };
+  }, []);
   // A dialog the user opened before hydration, through its invoker command or the element, fired
   // nothing React heard, so report it once.
   const dialogRef = useRef<HTMLDialogElement | null>(null);
@@ -116,15 +116,21 @@ export function Content({ asChild, id, onClose, ref, ...props }: ContentProps) {
     }
   }, []);
   // React doesn't listen for `toggle` on a dialog, so listen natively.
-  const listen = (dialog: HTMLDialogElement | null) => {
-    dialogRef.current = dialog;
-    if (typeof ref === 'function') ref(dialog);
-    else if (ref) ref.current = dialog;
-    if (!dialog) return undefined;
-    const onToggle = () => report(dialog);
-    dialog.addEventListener('toggle', onToggle);
-    return () => dialog.removeEventListener('toggle', onToggle);
-  };
+  const listen = useCallback(
+    (dialog: HTMLDialogElement | null) => {
+      dialogRef.current = dialog;
+      if (!dialog) return undefined;
+      const forget = composeRefs(ref)(dialog);
+      const onToggle = () => report(dialog);
+      dialog.addEventListener('toggle', onToggle);
+      return () => {
+        dialog.removeEventListener('toggle', onToggle);
+        dialogRef.current = null;
+        forget();
+      };
+    },
+    [ref, report]
+  );
   const shared = {
     id: id ?? context.dialogId,
     'aria-labelledby': props['aria-label'] ? undefined : context.titleId,

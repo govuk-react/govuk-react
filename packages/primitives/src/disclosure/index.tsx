@@ -68,6 +68,8 @@ export function Root({ media, open, defaultOpen, onOpenChange, ...props }: RootP
   return React.createElement(tagName, {
     ...props,
     ref: element,
+    // The element owns `data-upgraded`.
+    suppressHydrationWarning: true,
     media,
     'default-open': defaultOpen ? '' : undefined,
   });

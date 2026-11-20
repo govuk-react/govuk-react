@@ -48,6 +48,12 @@ export interface FileUploadElement extends HTMLElement {
   update(): void;
 }
 
+declare global {
+  interface HTMLElementTagNameMap {
+    'govuk-react-file-upload': FileUploadElement;
+  }
+}
+
 /** govuk-frontend's English text. */
 export const defaults = {
   'no-file-chosen': 'No file chosen',

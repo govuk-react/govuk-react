@@ -67,6 +67,9 @@ export interface AutocompleteElement extends HTMLElement {
 }
 
 declare global {
+  interface HTMLElementTagNameMap {
+    'govuk-react-autocomplete': AutocompleteElement;
+  }
   interface HTMLElementEventMap {
     'govuk-react-autocomplete:query': CustomEvent<{ query: string }>;
     'govuk-react-autocomplete:confirm': CustomEvent<{ value: string }>;

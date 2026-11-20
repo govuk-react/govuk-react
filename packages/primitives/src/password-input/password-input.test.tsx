@@ -92,3 +92,19 @@ describe('PasswordInput', () => {
     expect(screen.getByText('Your password is visible')).toHaveAttribute('aria-live', 'polite');
   });
 });
+
+test('keeps the text node React rendered in the button, and marks the element upgraded', async () => {
+  render(
+    <PasswordInput.Root data-testid="root">
+      <PasswordInput.Input aria-label="Password" />
+      <PasswordInput.Toggle />
+    </PasswordInput.Root>
+  );
+  const button = screen.getByText('Show');
+  const text = button.firstChild;
+  await upgraded();
+  fireEvent.click(button);
+  expect(button.firstChild).toBe(text);
+  expect(button).toHaveTextContent('Hide');
+  expect(screen.getByTestId('root')).toHaveAttribute('data-upgraded');
+});

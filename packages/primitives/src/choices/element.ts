@@ -33,6 +33,12 @@ export interface ChoicesElement extends HTMLElement {
   sync(): void;
 }
 
+declare global {
+  interface HTMLElementTagNameMap {
+    'govuk-react-choices': ChoicesElement;
+  }
+}
+
 const isChoice = (element: EventTarget | null): element is HTMLInputElement =>
   element instanceof HTMLInputElement && (element.type === 'radio' || element.type === 'checkbox');
 
