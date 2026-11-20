@@ -70,14 +70,6 @@ export function Toggle(props: ToggleProps) {
 
 const detailsClass = 'govuk-react-service-navigation__details';
 
-/** Styles govuk-frontend has no class for, hoisted and deduplicated by React. */
-export const detailsCss = `
-.${detailsClass}>summary{list-style:none}
-.${detailsClass}>summary::-webkit-details-marker{display:none}
-.${detailsClass}[open]>summary::after{transform:rotate(180deg)}
-@supports selector(::details-content){@media ${tablet}{.${detailsClass}>summary{display:none}.${detailsClass}::details-content{content-visibility:visible;display:contents}}}
-`;
-
 export type DetailsMenuProps = Omit<ComponentProps<'details'>, 'open'> & MenuState;
 
 /**
@@ -120,9 +112,6 @@ export function DetailsMenu({ open, onOpenChange, onToggle, className, children,
       suppressHydrationWarning
       {...props}
     >
-      <style href={detailsClass} precedence="default">
-        {detailsCss}
-      </style>
       {children}
     </details>
   );

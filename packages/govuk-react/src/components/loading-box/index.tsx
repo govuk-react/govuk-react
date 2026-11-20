@@ -3,22 +3,6 @@ import type { CSSProperties, ComponentProps, ReactNode } from 'react';
 
 const name = 'govuk-react-loading-box';
 
-/** Static styles, hoisted and deduplicated by React. Dynamic values come in through custom properties. */
-export const loadingBoxCss = `
-.${name}{position:relative;padding-bottom:2px;min-height:10px}
-.${name}__overlay{position:absolute;inset:0;z-index:100;display:flex;justify-content:center;visibility:hidden;transition:visibility 0s linear var(--${name}-time-out)}
-.${name}__backdrop{position:absolute;inset:0;background-color:var(--${name}-background-colour);opacity:0;transition:opacity var(--${name}-time-out) ease-in-out}
-.${name}__spinner{position:absolute;z-index:1;display:block;width:50px;height:100%;max-height:calc(50vh + 100px);opacity:0;transition:opacity var(--${name}-time-out) ease-in-out}
-.${name}__spinner rect{animation:${name}-fade 1s infinite linear}
-.${name}--loading>.${name}__overlay{visibility:visible;transition-delay:0s}
-.${name}--loading>.${name}__overlay>.${name}__backdrop{opacity:var(--${name}-background-opacity);transition-duration:var(--${name}-time-in)}
-.${name}--loading>.${name}__overlay>.${name}__spinner{opacity:1;transition-duration:var(--${name}-time-in);transition-delay:calc(var(--${name}-time-in) / 2)}
-
-.${name}__text{display:none;position:absolute;z-index:1;margin:0;padding-top:20px}
-@media (prefers-reduced-motion:reduce){.${name}__overlay,.${name}__backdrop,.${name}__spinner{transition:none}.${name}__spinner{display:none}.${name}__text{display:block}}
-@keyframes ${name}-fade{0%{opacity:.250075}.01%{opacity:.25}.03%{opacity:1}100%{opacity:.250075}}
-`;
-
 export type LoadingBoxProps = Omit<ComponentProps<'div'>, 'title'> & {
   /** Content that the loading box overlays. */
   children?: ReactNode;
@@ -77,9 +61,6 @@ export function LoadingBox({
       style={variables}
       {...props}
     >
-      <style href={name} precedence="default">
-        {loadingBoxCss}
-      </style>
       <div className={`${name}__overlay`} aria-hidden="true">
         <svg
           className={`${name}__spinner`}

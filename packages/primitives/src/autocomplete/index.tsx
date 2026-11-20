@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { cloneElement, isValidElement, useEffect, useRef } from 'react';
-import type { ComponentProps, CSSProperties, ReactElement, ReactNode } from 'react';
+import type { ComponentProps, ReactElement, ReactNode } from 'react';
 import { Slot } from '../utils/slot.js';
 import { translationAttributes, type Translation } from '../utils/translation.js';
 import { tagName, type AutocompleteElement, type Filter } from './element.js';
@@ -160,20 +160,6 @@ export function NoResults({ asChild, children = 'No results found', ...props }: 
   );
 }
 
-// The same visually hidden styles as accessible-autocomplete's.
-const visuallyHidden: CSSProperties = {
-  border: 0,
-  clip: 'rect(0 0 0 0)',
-  height: 1,
-  marginBottom: -1,
-  marginRight: -1,
-  overflow: 'hidden',
-  padding: 0,
-  position: 'absolute',
-  whiteSpace: 'nowrap',
-  width: 1,
-};
-
 export type StatusProps = PartProps<'div'>;
 
 // An empty string, rather than no children, lets the element set the text before hydration.
@@ -190,9 +176,9 @@ const statusRegion = (key: string) => (
   </div>
 );
 
-/** What screen readers hear about the options, once the user pauses. Visually hidden. */
-export function Status({ asChild, style, children, ...props }: StatusProps) {
-  const shared = { 'data-autocomplete-status': '', style: { ...visuallyHidden, ...style } };
+/** What screen readers hear about the options, once the user pauses. Hide it visually yourself. */
+export function Status({ asChild, children, ...props }: StatusProps) {
+  const shared = { 'data-autocomplete-status': '' };
   const regions = [statusRegion('first'), statusRegion('second')];
   if (asChild && isValidElement<{ children?: ReactNode }>(children)) {
     const child: ReactElement<{ children?: ReactNode }> = children;

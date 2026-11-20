@@ -28,12 +28,6 @@ const AccordionContext = createContext<{ open?: string[]; texts: Texts }>({ text
 
 const SectionContext = createContext<{ expanded?: boolean }>({});
 
-/**
- * Hides the parts the element hides, over styles that set their `display`. Root renders it
- * inline; under a strict CSP, add it to a stylesheet instead.
- */
-export const accordionCss = `${tagName} :is([data-accordion-fallback],[data-accordion-trigger],[data-accordion-controls])[hidden]{display:none!important}`;
-
 const isAccordion = (element: HTMLElement): element is AccordionElement => 'pickedValue' in element;
 
 export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'defaultValue' | 'onChange'> & {
@@ -126,9 +120,6 @@ export function Root({
     <AccordionContext.Provider
       value={{ open: initial, texts: { showSectionText, hideSectionText, showAllSectionsText, hideAllSectionsText } }}
     >
-      <style href={`${tagName}-css`} precedence="default">
-        {accordionCss}
-      </style>
       {React.createElement(
         tagName,
         {

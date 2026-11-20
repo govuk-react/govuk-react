@@ -21,14 +21,6 @@ export {
   type DividerProps,
 } from 'govuk-frontend-react/checkboxes';
 
-/** Shows a reveal only while its checkbox is checked, before or without JavaScript. */
-export const checkboxesCss = [
-  // Hides a reveal whose checkbox isn't checked.
-  '.govuk-checkboxes__item:has(>.govuk-checkboxes__input:not(:checked))+.govuk-checkboxes__conditional{display:none}',
-  // Shows one whose checkbox is, over govuk-frontend's hidden class, until the element upgrades.
-  '.govuk-checkboxes__item:has(>.govuk-checkboxes__input:checked)+.govuk-checkboxes__conditional{display:block}',
-].join('');
-
 /** The element and styles around the checkboxes, for `Root` and `Field`. */
 function Behaviour({ children }: { children: React.ReactNode }) {
   return (
@@ -36,9 +28,6 @@ function Behaviour({ children }: { children: React.ReactNode }) {
       upgradedClass="govuk-frontend-supported"
       hiddenConditionalClass="govuk-checkboxes__conditional--hidden"
     >
-      <style href="govuk-react-checkboxes" precedence="default">
-        {checkboxesCss}
-      </style>
       {children}
     </Primitives.Root>
   );

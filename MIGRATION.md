@@ -1,6 +1,6 @@
 # Migrating to govuk-react 1.0
 
-govuk-react 1.0 is a clean break from 0.x. It's built on [govuk-frontend-react](https://github.com/govuk-react/govuk-frontend-react), which renders govuk-frontend's markup and classes, so govuk-frontend's CSS styles every component. There is no CSS-in-JS.
+govuk-react 1.0 is a clean break from 0.x. It's built on [govuk-frontend-react](https://github.com/govuk-react/govuk-frontend-react), which renders govuk-frontend's markup and classes, so govuk-frontend's CSS styles every component. There is no CSS-in-JS. Styles for the components govuk-frontend has no classes for are in `govuk-react/styles.css`, which you load after govuk-frontend's CSS.
 
 ## Install
 
@@ -404,7 +404,7 @@ govuk-react now exports `overrideClasses`, which returns govuk-frontend's overri
 
 ## LoadingBox
 
-`LoadingBox` no longer uses styled-components or react-transition-group. Its styles are a small stylesheet that React hoists into the head, with your props passed in as CSS custom properties, so it works with server rendering and without a CSS-in-JS runtime.
+`LoadingBox` no longer uses styled-components or react-transition-group. Its styles are in `govuk-react/styles.css`, with your props passed in as CSS custom properties, so it works with server rendering and without a CSS-in-JS runtime.
 
 | 0.x                                                | 1.0                                                                                                                |
 | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -416,7 +416,7 @@ govuk-react now exports `overrideClasses`, which returns govuk-frontend's overri
 
 ## RelatedItems
 
-`RelatedItems` is now a module of parts with no CSS-in-JS. `RelatedItems.Composite` renders the main heading (“Related content” by default), and each `RelatedItems.SectionComposite` renders a labelled navigation section with a heading and a list of `RelatedItems.Item`s. `Root`, `Heading`, `Section`, `SectionHeading` and `List` are available for custom markup. The blue top border comes from a small stylesheet that React hoists into the head.
+`RelatedItems` is now a module of parts with no CSS-in-JS. `RelatedItems.Composite` renders the main heading (“Related content” by default), and each `RelatedItems.SectionComposite` renders a labelled navigation section with a heading and a list of `RelatedItems.Item`s. `Root`, `Heading`, `Section`, `SectionHeading` and `List` are available for custom markup. The blue top border comes from `govuk-react/styles.css`.
 
 | 0.x                                                    | 1.0                                                                      |
 | ------------------------------------------------------ | ------------------------------------------------------------------------ |
@@ -438,7 +438,7 @@ govuk-react now exports `overrideClasses`, which returns govuk-frontend's overri
 
 ## SearchBox
 
-`SearchBox` is now a module of parts with no CSS-in-JS, based on GOV.UK’s search component. `SearchBox.Composite` renders a label, a `govuk-input` search input and a submit button with a search icon. Put it inside your own `form`. It takes `labelSize`, `labelVisuallyHidden`, `large` and `inverse`. `Root`, `Label`, `Wrapper`, `Input` and `Button` are available for custom markup. The layout and button styles come from a small stylesheet that React hoists into the head, using govuk-frontend's colour custom properties.
+`SearchBox` is now a module of parts with no CSS-in-JS, based on GOV.UK’s search component. `SearchBox.Composite` renders a label, a `govuk-input` search input and a submit button with a search icon. Put it inside your own `form`. It takes `labelSize`, `labelVisuallyHidden`, `large` and `inverse`. `Root`, `Label`, `Wrapper`, `Input` and `Button` are available for custom markup. The layout and button styles come from `govuk-react/styles.css`, using govuk-frontend's colour custom properties.
 
 | 0.x                                                              | 1.0                                                                     |
 | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |

@@ -5,18 +5,12 @@ import { clsx } from 'clsx';
 
 const name = 'govuk-react-related-items';
 
-/** Styles govuk-frontend has no class for, hoisted and deduplicated by React. */
-export const relatedItemsCss = `.${name}{border-top:2px solid var(--govuk-brand-colour,#1d70b8);padding-top:10px}`;
-
 export type RootProps = ComponentProps<'div'>;
 
 /** Related content, such as topics, guidance and collections. */
 export function Root({ className, children, ...props }: RootProps) {
   return (
     <div className={clsx(name, className)} {...props}>
-      <style href={name} precedence="default">
-        {relatedItemsCss}
-      </style>
       {children}
     </div>
   );

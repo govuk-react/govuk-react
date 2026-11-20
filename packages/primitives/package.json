@@ -9,6 +9,7 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
+    "./styles.css": "./dist/styles.css",
     "./inline/*": "./dist/inline/*",
     "./*-element": {
       "types": "./dist/*/element.d.ts",
@@ -22,14 +23,15 @@
   },
   "sideEffects": [
     "./dist/*/element.js",
-    "./dist/inline/*.js"
+    "./dist/inline/*.js",
+    "./dist/styles.css"
   ],
   "files": [
     "dist",
     "licences"
   ],
   "scripts": {
-    "build": "rm -rf dist && tsc -p tsconfig.build.json && node build-inline-scripts.mjs"
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && node build-inline-scripts.mjs && cp src/styles.css dist/styles.css"
   },
   "dependencies": {
     "clsx": "^2.1.1"

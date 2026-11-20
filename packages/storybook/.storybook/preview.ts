@@ -1,5 +1,7 @@
 import type { Preview } from '@storybook/react-vite';
 import 'govuk-frontend/dist/govuk/govuk-frontend.min.css';
+import '../../primitives/src/styles.css';
+import '../../govuk-react/src/styles.css';
 
 const preview: Preview = {
   tags: ['autodocs'],

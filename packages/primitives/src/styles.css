@@ -1,0 +1,11 @@
+/* Rules the primitives' fallbacks need. They set no look, only `display`. */
+
+/* Tabs: the radios fallback shows only the checked tab's panel, until the element upgrades. */
+govuk-react-tabs:not([data-upgraded]) [data-tabs-content]:has(> input[data-tabs-fallback]):not(:has(> input:checked)) {
+  display: none;
+}
+
+/* Accordion: `hidden` wins over a display set on a fallback heading, trigger or controls. */
+govuk-react-accordion :is([data-accordion-fallback], [data-accordion-trigger], [data-accordion-controls])[hidden] {
+  display: none !important;
+}

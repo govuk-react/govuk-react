@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import * as Accordion from '@govuk-react/primitives/accordion';
+import '@govuk-react/primitives/styles.css';
 
 const sections = [
   { value: 'web', heading: 'Writing well for the web', summary: 'An introduction' },

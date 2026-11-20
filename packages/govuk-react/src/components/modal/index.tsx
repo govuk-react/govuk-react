@@ -13,27 +13,11 @@ import { Button, type ButtonProps } from 'govuk-frontend-react/button';
 
 const name = 'govuk-react-modal';
 
-/** Styles govuk-frontend has no class for, hoisted and deduplicated by React. */
-export const modalCss = `
-.${name}{box-sizing:border-box;width:calc(100% - 30px);max-width:640px;max-height:calc(100% - 30px);padding:30px;border:5px solid var(--govuk-text-colour,#0b0c0c);background:var(--govuk-body-background-colour,#fff);color:var(--govuk-text-colour,#0b0c0c)}
-.${name}:focus{outline:3px solid var(--govuk-focus-colour,#fd0);outline-offset:0}
-.${name}::backdrop{background:rgb(11 12 12 / .8)}
-.${name}>:last-child{margin-bottom:0}
-@media (max-width:40.0525em){.${name}{padding:15px}}
-`;
-
 export type RootProps = Primitives.RootProps;
 
 /** Holds the modal and the buttons that open and close it. */
 export function Root({ children, ...props }: RootProps) {
-  return (
-    <Primitives.Root {...props}>
-      <style href={name} precedence="default">
-        {modalCss}
-      </style>
-      {children}
-    </Primitives.Root>
-  );
+  return <Primitives.Root {...props}>{children}</Primitives.Root>;
 }
 
 export type TriggerProps = Omit<ButtonProps, 'as' | 'href' | 'type'> & Pick<Primitives.TriggerProps, 'dialogId'>;

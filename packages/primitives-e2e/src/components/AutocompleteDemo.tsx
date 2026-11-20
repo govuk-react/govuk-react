@@ -53,7 +53,7 @@ export default function AutocompleteDemo({ id, remote = false, submitOnConfirm =
             ))}
             {!remote && <Autocomplete.NoResults />}
           </Autocomplete.Listbox>
-          <Autocomplete.Status data-testid={`status-${id}`} />
+          <Autocomplete.Status style={{ position: 'absolute', left: '-9999px' }} data-testid={`status-${id}`} />
           <Autocomplete.AssistiveHint />
         </Autocomplete.Root>
         <button type="submit">Continue</button>
