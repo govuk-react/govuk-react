@@ -7,7 +7,7 @@ import { Slot } from '../utils/slot.js';
 import { tagName, type CharacterCountElement } from './element.js';
 import { countMessage, messageAttributes, type CountType, type Translation } from './messages.js';
 
-export { countOf, countMessage, type CountType, type Translation } from './messages.js';
+export type { CountType, Translation } from './messages.js';
 
 /*
  * Headless character count: unstyled parts over the <govuk-react-character-count> element

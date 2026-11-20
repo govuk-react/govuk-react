@@ -203,6 +203,15 @@ Without JavaScript the `Description` is shown and both statuses are hidden. On u
 
 `countType` is "length" (the default, as `maxlength` counts), "characters" (as users see them, such as an emoji as one) or "words". The messages are English by default, and take a message for each plural form. The statuses get `data-state` ("under", "at" or "over") for styling, or pass class names such as `overLimitClass`. The field's value is the state, so a value React sets is counted too.
 
+`countOf` and `countMessage` count text and build the message as the element does. They are in their own entry point, which has no `'use client'`, so a server component can call them:
+
+```tsx
+import { countOf, countMessage } from '@govuk-react/primitives/character-count-text';
+
+const remaining = 200 - countOf(value, 'characters');
+const { state, text } = countMessage(remaining, 'characters', {});
+```
+
 ## Autocomplete
 
 ```tsx
