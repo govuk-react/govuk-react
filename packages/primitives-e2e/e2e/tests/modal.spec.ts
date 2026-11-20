@@ -90,12 +90,128 @@ test.describe('controlled', () => {
     await expect(page.getByTestId('controlled-open')).toHaveText('false');
   });
 
+  test('a form with method="dialog" closes it through `onOpenChange`', async ({ page }) => {
+    await page.getByRole('button', { name: 'Open from outside' }).click();
+    const controlled = page.getByRole('dialog', { name: 'Controlled' });
+    await controlled.getByRole('button', { name: 'Submit' }).click();
+    await expect(controlled).toBeHidden();
+    await expect(page.getByTestId('controlled-open')).toHaveText('false');
+  });
+
   test('the trigger opens it and reports it open', async ({ page }) => {
     await page.getByTestId('controlled').getByRole('button', { name: 'Open', exact: true }).click();
     await expect(page.getByRole('dialog', { name: 'Controlled' })).toBeVisible();
     await expect(page.getByTestId('controlled-open')).toHaveText('true');
     await page.getByRole('dialog', { name: 'Controlled' }).getByRole('button', { name: 'Close' }).click();
     await expect(page.getByTestId('controlled-open')).toHaveText('false');
+  });
+});
+
+async function checkHeld(page: Page) {
+  await page.getByLabel('Ignore changes').check();
+  const controlled = page.getByRole('dialog', { name: 'Controlled' });
+  await page.getByTestId('controlled').getByRole('button', { name: 'Open', exact: true }).click();
+  await expect(page.getByTestId('controlled-asked')).toHaveText('true');
+  await expect(controlled).toBeHidden();
+  await page.getByRole('button', { name: 'Open from outside' }).click();
+  await expect(controlled).toBeVisible();
+  await controlled.getByRole('button', { name: 'Close' }).click();
+  await expect(page.getByTestId('controlled-asked')).toHaveText('false');
+  await expect(controlled).toBeVisible();
+}
+
+test.describe('controlled, when the app ignores a change', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/test/modal');
+    await expect(page.getByTestId('controlled')).toHaveAttribute('data-hydrated', 'true');
+  });
+
+  test('the buttons only ask, and the dialog stays as `open` says', async ({ page }) => {
+    await checkHeld(page);
+  });
+
+  test('Escape only asks', async ({ page }) => {
+    await page.getByLabel('Ignore changes').check();
+    await page.getByRole('button', { name: 'Open from outside' }).click();
+    const controlled = page.getByRole('dialog', { name: 'Controlled' });
+    await expect(controlled).toBeVisible();
+    await page.keyboard.press('Escape');
+    await expect(page.getByTestId('controlled-asked')).toHaveText('false');
+    await expect(controlled).toBeVisible();
+  });
+
+  test('a form with method="dialog" only asks', async ({ page }) => {
+    await page.getByLabel('Ignore changes').check();
+    await page.getByRole('button', { name: 'Open from outside' }).click();
+    const controlled = page.getByRole('dialog', { name: 'Controlled' });
+    await controlled.getByRole('button', { name: 'Submit' }).click();
+    await expect(page.getByTestId('controlled-asked')).toHaveText('false');
+    await expect(controlled).toBeVisible();
+  });
+
+  test('Escape closes a popover open in the dialog, and doesn’t ask', async ({ page }) => {
+    await page.getByRole('button', { name: 'Open from outside' }).click();
+    const controlled = page.getByRole('dialog', { name: 'Controlled' });
+    await controlled.getByRole('button', { name: 'More' }).click();
+    await expect(page.getByText('More about this')).toBeVisible();
+    // Focus stays on the button, outside the popover.
+    await page.keyboard.press('Escape');
+    await expect(page.getByText('More about this')).toBeHidden();
+    await expect(controlled).toBeVisible();
+    await expect(page.getByTestId('controlled-open')).toHaveText('true');
+  });
+
+  test('Escape that a React handler in the dialog prevented doesn’t ask', async ({ page }) => {
+    await page.getByRole('button', { name: 'Open from outside' }).click();
+    const controlled = page.getByRole('dialog', { name: 'Controlled' });
+    await controlled.getByLabel('Escape is mine').focus();
+    await page.keyboard.press('Escape');
+    await page.keyboard.press('Escape');
+    await expect(controlled).toBeVisible();
+    await expect(page.getByTestId('controlled-open')).toHaveText('true');
+  });
+
+  test('a script’s showModal() only asks', async ({ page }) => {
+    await page.getByLabel('Ignore changes').check();
+    const opened = await page.locator('#controlled-dialog').evaluate((dialog) => {
+      if (!(dialog instanceof HTMLDialogElement)) return undefined;
+      dialog.showModal();
+      return dialog.open;
+    });
+    expect(opened).toBe(false);
+    await expect(page.getByTestId('controlled-asked')).toHaveText('true');
+  });
+
+  test('Escape pressed again and again only asks, and never closes it', async ({ page }) => {
+    await page.getByLabel('Ignore changes').check();
+    await page.getByRole('button', { name: 'Open from outside' }).click();
+    const controlled = page.getByRole('dialog', { name: 'Controlled' });
+    await expect(controlled).toBeVisible();
+    await page.evaluate(() => {
+      document.querySelector('#controlled-dialog')?.addEventListener('close', () => {
+        document.body.dataset.closed = 'true';
+      });
+    });
+    // Nothing between the presses: a browser lets a page cancel only the first `cancel` in a row,
+    // and the test's own checks would count as the user doing something.
+    for (let press = 0; press < 4; press += 1) await page.keyboard.press('Escape');
+    await expect(page.getByTestId('controlled-asked')).toHaveText('false');
+    await expect(controlled).toBeVisible();
+    expect(await page.locator('body').getAttribute('data-closed')).toBeNull();
+    expect(await controlled.evaluate((element) => element.matches(':modal'))).toBe(true);
+  });
+
+  test('a close the browser won’t let the page cancel is reported, then undone', async ({ page }) => {
+    await page.getByLabel('Ignore changes').check();
+    await page.getByRole('button', { name: 'Open from outside' }).click();
+    const controlled = page.getByRole('dialog', { name: 'Controlled' });
+    await expect(controlled).toBeVisible();
+    await controlled.evaluate((dialog) => {
+      if (dialog instanceof HTMLDialogElement) dialog.close();
+    });
+    await expect(page.getByTestId('controlled-asked')).toHaveText('false');
+    await expect(controlled).toBeVisible();
+    expect(await controlled.evaluate((element) => element.matches(':modal'))).toBe(true);
   });
 });
 
@@ -117,6 +233,42 @@ test.describe('in a browser without invoker commands', () => {
 
   test('the element opens a true modal', async ({ page }) => {
     await checkModal(page, 'upgraded');
+  });
+
+  test('controlled: the buttons only ask, and the dialog stays as `open` says', async ({ page }) => {
+    await expect(page.getByTestId('controlled')).toHaveAttribute('data-hydrated', 'true');
+    await checkHeld(page);
+  });
+});
+
+test.describe('in a browser that fires no toggle events on dialogs', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => {
+      for (const name of ['beforetoggle', 'toggle'])
+        window.addEventListener(name, (event) => event.stopImmediatePropagation(), true);
+    });
+    await page.goto('/test/modal');
+  });
+
+  test('reports opening and closing through onOpenChange', async ({ page }) => {
+    await expect(demo(page, 'hydrated')).toHaveAttribute('data-hydrated', 'true');
+    await demo(page, 'hydrated').getByRole('button', { name: 'Delete account' }).click();
+    await expect(page.getByTestId('last-hydrated')).toHaveText('true');
+    await page.keyboard.press('Escape');
+    await expect(page.getByTestId('last-hydrated')).toHaveText('false');
+  });
+
+  test('controlled: a script’s showModal() is reported, then undone', async ({ page }) => {
+    await expect(page.getByTestId('controlled')).toHaveAttribute('data-hydrated', 'true');
+    await page.getByLabel('Ignore changes').check();
+    const opened = await page.locator('#controlled-dialog').evaluate((dialog) => {
+      if (!(dialog instanceof HTMLDialogElement)) return undefined;
+      dialog.showModal();
+      return dialog.open;
+    });
+    expect(opened).toBe(true);
+    await expect(page.getByTestId('controlled-asked')).toHaveText('true');
+    await expect(page.locator('#controlled-dialog')).toBeHidden();
   });
 });
 
