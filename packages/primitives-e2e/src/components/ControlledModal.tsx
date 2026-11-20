@@ -34,6 +34,9 @@ export default function ControlledModal() {
         <Modal.Content>
           <Modal.Title>Controlled</Modal.Title>
           <Modal.Close>Close</Modal.Close>
+          <form method="dialog">
+            <button type="submit">Submit</button>
+          </form>
         </Modal.Content>
       </Modal.Root>
     </div>

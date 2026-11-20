@@ -12,9 +12,10 @@
  * - `open` (when present) controls the dialog: "true" opens it with `showModal()`, anything
  *   else closes it. Changing `open` fires no change event. While `open` is present, the buttons
  *   and Escape don't open or close the dialog: they fire the change event with the state asked
- *   for, and the dialog changes only when `open` does. A close the browser doesn't let a page
- *   cancel still closes it: a `form` with `method="dialog"`, a script calling `close()`, or a
- *   second Escape in a row in Chromium.
+ *   for, and the dialog changes only when `open` does. That covers a `form` with
+ *   `method="dialog"` too. A change the browser doesn't let a page cancel, such as a script
+ *   calling `close()` or a second Escape in a row in Chromium, fires the change event, and the
+ *   dialog goes back to `open` a moment later unless `open` has changed.
  * - It fires a bubbling `govuk-react-modal:change` event with `{ open }` when the dialog opens
  *   or closes, for code that doesn't use React.
  *
@@ -36,6 +37,9 @@ declare global {
 
 export const tagName = 'govuk-react-modal';
 
+// How long the page has to accept a change the element couldn't cancel, before it's undone.
+const restoreDelay = 100;
+
 /** Whether the browser runs invoker commands itself. */
 export const supportsCommands = () =>
   typeof HTMLButtonElement !== 'undefined' && 'command' in HTMLButtonElement.prototype;
@@ -51,6 +55,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     private observer?: MutationObserver;
 
     private wasOpen = false;
+
+    private restoreTimeout?: number;
 
     // Runs the commands of the element's own buttons when the browser can't.
     private readonly onClick = (event: MouseEvent) => {
@@ -84,20 +90,41 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       if (this.request(dialog, 'request-close')) event.preventDefault();
     };
 
+    // A form with `method="dialog"` closes its dialog when submitted.
+    private readonly onSubmit = (event: SubmitEvent) => {
+      const { dialog } = this;
+      const form = event.target;
+      if (!dialog || !(form instanceof HTMLFormElement) || form.closest('dialog') !== dialog) return;
+      const { submitter } = event;
+      const method =
+        (submitter instanceof HTMLButtonElement || submitter instanceof HTMLInputElement) &&
+        submitter.hasAttribute('formmethod')
+          ? submitter.formMethod
+          : form.method;
+      if (method === 'dialog' && this.request(dialog, 'close')) event.preventDefault();
+    };
+
     private readonly onToggle = () => {
       const { dialog } = this;
       if (!dialog || dialog.open === this.wasOpen) return;
       this.wasOpen = dialog.open;
       this.dispatchEvent(new CustomEvent('govuk-react-modal:change', { detail: { open: dialog.open }, bubbles: true }));
+      // While controlled, this is a change the element couldn't cancel.
+      if (!this.hasAttribute('open')) return;
+      window.clearTimeout(this.restoreTimeout);
+      this.restoreTimeout = window.setTimeout(() => this.sync(), restoreDelay);
     };
 
     connectedCallback() {
       if (!supportsCommands()) this.addEventListener('click', this.onClick);
+      this.addEventListener('submit', this.onSubmit);
       this.observer = setUpWhenReady(this, () => this.setup());
     }
 
     disconnectedCallback() {
       this.removeEventListener('click', this.onClick);
+      this.removeEventListener('submit', this.onSubmit);
+      window.clearTimeout(this.restoreTimeout);
       this.observer?.disconnect();
       this.dialog?.removeEventListener('close', this.onToggle);
       this.dialog?.removeEventListener('command', this.onCommand);

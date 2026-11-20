@@ -20,7 +20,7 @@ Control a primitive only when your app has to set its state, such as closing a m
 - A controlled prop applies once React has hydrated. Until then the primitive is uncontrolled, so it still works, and what the user did by then is reported through the change handler rather than undone. If your handler doesn't accept it, the state stays as the user left it until the prop next changes.
 - Without JavaScript, a controlled prop does nothing.
 - Each change waits for React to render, where an uncontrolled one happens in the browser straight away.
-- A controlled Modal can't hold a dialog open against a close the browser doesn't let a page cancel: a `form` with `method="dialog"`, a script calling `close()`, or a second Escape in a row in Chromium. It reports the close through `onOpenChange`, and the dialog stays closed until `open` next changes.
+- A browser doesn't let a page cancel every change to a dialog: a script calling `close()` or `showModal()`, or a second Escape in a row in Chromium. A controlled Modal reports such a change through `onOpenChange` and, unless `open` changes within 100ms, puts the dialog back as `open` says. So it always ends up matching `open`, but the user can see it close and open again.
 
 ## Styles
 

@@ -124,6 +124,8 @@ export function Content({ asChild, id, onClose, ref, ...props }: ContentProps) {
   const report = useCallback((dialog: HTMLDialogElement) => {
     if (reported.current === dialog.open) return;
     reported.current = dialog.open;
+    // A controlled dialog that arrives at `open` is no news.
+    if (dialog.closest(tagName)?.getAttribute('open') === String(dialog.open)) return;
     onOpenChange.current?.(dialog.open);
   }, []);
   // A dialog the user opened before hydration, through its invoker command or the element, fired
@@ -148,7 +150,6 @@ export function Content({ asChild, id, onClose, ref, ...props }: ContentProps) {
       const root = dialog.closest(tagName);
       const onRequest = (event: CustomEvent<{ open: boolean }>) => {
         if (event.target !== root || event.detail.open === dialog.open) return;
-        reported.current = event.detail.open;
         onOpenChange.current?.(event.detail.open);
       };
       root?.addEventListener('govuk-react-modal:change', onRequest);

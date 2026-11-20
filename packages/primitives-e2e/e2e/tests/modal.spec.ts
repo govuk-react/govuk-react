@@ -90,6 +90,14 @@ test.describe('controlled', () => {
     await expect(page.getByTestId('controlled-open')).toHaveText('false');
   });
 
+  test('a form with method="dialog" closes it through `onOpenChange`', async ({ page }) => {
+    await page.getByRole('button', { name: 'Open from outside' }).click();
+    const controlled = page.getByRole('dialog', { name: 'Controlled' });
+    await controlled.getByRole('button', { name: 'Submit' }).click();
+    await expect(controlled).toBeHidden();
+    await expect(page.getByTestId('controlled-open')).toHaveText('false');
+  });
+
   test('the trigger opens it and reports it open', async ({ page }) => {
     await page.getByTestId('controlled').getByRole('button', { name: 'Open', exact: true }).click();
     await expect(page.getByRole('dialog', { name: 'Controlled' })).toBeVisible();
@@ -126,10 +134,35 @@ test.describe('controlled, when the app ignores a change', () => {
     await page.getByLabel('Ignore changes').check();
     await page.getByRole('button', { name: 'Open from outside' }).click();
     const controlled = page.getByRole('dialog', { name: 'Controlled' });
-    await expect(page.getByTestId('controlled-asked')).toHaveText('true');
+    await expect(controlled).toBeVisible();
     await page.keyboard.press('Escape');
     await expect(page.getByTestId('controlled-asked')).toHaveText('false');
     await expect(controlled).toBeVisible();
+  });
+
+  test('a form with method="dialog" only asks', async ({ page }) => {
+    await page.getByLabel('Ignore changes').check();
+    await page.getByRole('button', { name: 'Open from outside' }).click();
+    const controlled = page.getByRole('dialog', { name: 'Controlled' });
+    await controlled.getByRole('button', { name: 'Submit' }).click();
+    await expect(page.getByTestId('controlled-asked')).toHaveText('false');
+    await expect(controlled).toBeVisible();
+  });
+
+  test('a close the browser won’t let the page cancel is reported, then undone', async ({ page }) => {
+    await page.getByLabel('Ignore changes').check();
+    await page.getByRole('button', { name: 'Open from outside' }).click();
+    const controlled = page.getByRole('dialog', { name: 'Controlled' });
+    await expect(controlled).toBeVisible();
+    // A second Escape in a row closes the dialog in Chromium, as a script's close() does.
+    await page.keyboard.press('Escape');
+    await page.keyboard.press('Escape');
+    await controlled.evaluate((dialog) => {
+      if (dialog instanceof HTMLDialogElement) dialog.close();
+    });
+    await expect(page.getByTestId('controlled-asked')).toHaveText('false');
+    await expect(controlled).toBeVisible();
+    expect(await controlled.evaluate((element) => element.matches(':modal'))).toBe(true);
   });
 });
 
