@@ -3,6 +3,7 @@ import * as React from 'react';
 
 import * as Checkboxes from '.';
 import { InputField } from '../input';
+import { TextareaField } from '../textarea';
 
 const meta = {
   title: 'Form/Checkboxes',
@@ -110,5 +111,35 @@ export const WithConditional: Story = {
         <Checkboxes.ItemComposite id="contact-3" name="contact" value="text" label="Text message" />
       </>
     ),
+  },
+};
+
+/** Checking "Another access need" reveals a question. Checking "None of these" unchecks the others, and checking another option unchecks "None of these". */
+export const WithNoneOptionAndConditional: Story = {
+  args: {
+    idPrefix: 'access-needs',
+    legend: 'Do you have any access needs?',
+    hint: undefined,
+    items: [
+      { id: 'access-needs', name: 'accessNeeds', value: 'accessible-toilets', label: 'Accessible toilets available' },
+      { id: 'access-needs-2', name: 'accessNeeds', value: 'braille', label: 'Braille translation service available' },
+      {
+        id: 'access-needs-3',
+        name: 'accessNeeds',
+        value: 'disabled-car-parking',
+        label: 'Disabled car parking available',
+      },
+      {
+        id: 'access-needs-4',
+        name: 'accessNeeds',
+        value: 'another-access-need',
+        label: 'Another access need',
+        conditional: (
+          <TextareaField id="other-access-needs" name="otherAccessNeeds" label="Other access needs" width="one-third" />
+        ),
+      },
+      { divider: 'or' },
+      { id: 'access-needs-5', name: 'accessNeeds', value: 'none', label: 'None of these', exclusive: true },
+    ],
   },
 };
