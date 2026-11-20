@@ -1,5 +1,11 @@
 # govuk-react
 
+## 1.0.0-alpha.3
+
+### Patch Changes
+
+- Updated dependency: `@govuk-react/primitives@0.4.0`, which moves `countOf` and `countMessage` to `@govuk-react/primitives/character-count-text` so server components can call them.
+
 ## 1.0.0-alpha.2
 
 ### Major Changes
