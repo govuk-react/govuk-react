@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 test.beforeEach(async ({ page }) => {
   await page.goto('/test/controlled');
   // Controlled behaviour needs React: wait for hydration, not just the upgrade.
-  for (const id of ['cv', 'cs', 'ck']) {
+  for (const id of ['cv', 'ck']) {
     await expect(page.getByTestId(`ctrl-${id}`)).toHaveAttribute('data-hydrated', 'true');
   }
 });
@@ -50,12 +50,4 @@ test('when the value is kept, the tab stays and each choice is reported', async 
   await expect(demo.getByRole('tab', { name: 'Account' })).toHaveAttribute('aria-selected', 'true');
   await expect(demo.getByText('Account panel')).toBeVisible();
   await expect(page.locator('#ck-ck-account')).toBeChecked();
-});
-
-// "ignore" and "report" differ only for a choice made before hydration: see pre-hydration.spec.ts.
-test('"report" hydrates and responds to choices', async ({ page }) => {
-  const demo = page.getByTestId('ctrl-cs');
-  await expect(demo.getByRole('tab', { name: 'Account' })).toHaveAttribute('aria-selected', 'true');
-  await demo.getByRole('tab', { name: 'Settings' }).click();
-  await expect(page.getByTestId('cs-value')).toHaveText('cs-settings');
 });

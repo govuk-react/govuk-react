@@ -42,7 +42,7 @@ type MenuState = {
   /** Whether the menu is open below tablet width, to control it once hydrated, such as to close it after navigating. */
   open?: boolean;
   /** Called when the user opens or closes the menu. */
-  onOpenChange?: (open: boolean) => void;
+  onOpenChange?: (open: boolean, details: Primitives.ChangeDetails) => void;
 };
 
 export type MenuProps = Omit<Primitives.RootProps, 'media' | 'defaultOpen'> & MenuState;
@@ -96,7 +96,7 @@ export function DetailsMenu({ open, onOpenChange, onToggle, className, children,
   useEffect(() => {
     const node = details.current;
     if (node && initialOpen.current !== undefined && node.open !== initialOpen.current) {
-      onOpenChangeRef.current?.(node.open);
+      onOpenChangeRef.current?.(node.open, { beforeHydration: true });
     }
   }, []);
   return (
@@ -106,7 +106,7 @@ export function DetailsMenu({ open, onOpenChange, onToggle, className, children,
       open={open}
       onToggle={(event) => {
         onToggle?.(event);
-        if (event.currentTarget.open !== open) onOpenChange?.(event.currentTarget.open);
+        if (event.currentTarget.open !== open) onOpenChange?.(event.currentTarget.open, { beforeHydration: false });
       }}
       // The user can open it before hydration.
       suppressHydrationWarning

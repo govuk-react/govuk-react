@@ -38,6 +38,8 @@ function RadiosExample(props: Tabs.RadiosRootProps) {
 // The element upgrades in connectedCallback, after React commits.
 const upgraded = () => act(() => Promise.resolve());
 
+const live = { beforeHydration: false };
+
 describe('Tabs', () => {
   afterEach(() => window.history.replaceState(null, '', window.location.pathname));
 
@@ -58,7 +60,7 @@ describe('Tabs', () => {
     fireEvent.click(screen.getByRole('tab', { name: 'Past month' }));
     expect(screen.getByRole('tab', { name: 'Past month' })).toHaveAttribute('aria-selected', 'true');
     expect(screen.getByText('Month content')).toBeVisible();
-    expect(onValueChange.mock.calls).toEqual([['month']]);
+    expect(onValueChange.mock.calls).toEqual([['month', live]]);
   });
 
   test('arrow, Home and End keys move and select, with a roving tabindex', async () => {
@@ -161,7 +163,7 @@ describe('Tabs', () => {
     render(<Example value="day" onValueChange={onValueChange} />);
     await upgraded();
     fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
-    expect(onValueChange.mock.calls).toEqual([['week']]);
+    expect(onValueChange.mock.calls).toEqual([['week', live]]);
     expect(screen.getByRole('tab', { name: 'Past day' })).toHaveAttribute('aria-selected', 'true');
   });
 
@@ -172,7 +174,10 @@ describe('Tabs', () => {
     fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
     await upgraded();
     fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
-    expect(onValueChange.mock.calls).toEqual([['week'], ['week']]);
+    expect(onValueChange.mock.calls).toEqual([
+      ['week', live],
+      ['week', live],
+    ]);
   });
 
   test('after a controlled value changes, choosing the old tab again is reported', async () => {
@@ -192,7 +197,7 @@ describe('Tabs', () => {
     await upgraded();
     fireEvent.click(screen.getByRole('button', { name: 'Show month' }));
     fireEvent.click(screen.getByRole('tab', { name: 'Past day' }));
-    expect(onValueChange.mock.calls).toEqual([['day']]);
+    expect(onValueChange.mock.calls).toEqual([['day', live]]);
   });
 
   test('a choice checks its panel’s radio, which reports it through React', async () => {
@@ -202,7 +207,7 @@ describe('Tabs', () => {
     container.addEventListener('govuk-react-tabs:change', (event) => onValueChange(`event:${event.detail.value}`));
     fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
     expect(screen.getByText('Week content').querySelector('input[type=radio]')).toBeChecked();
-    expect(onValueChange.mock.calls).toEqual([['week'], ['event:week']]);
+    expect(onValueChange.mock.calls).toEqual([['week', live], ['event:week']]);
   });
 
   test('a change in nested tabs is not reported by the outer tabs', async () => {
@@ -279,7 +284,10 @@ describe('Tabs', () => {
     await upgraded();
     fireEvent.keyDown(screen.getByRole('tab', { name: 'Past day' }), { key: 'ArrowRight' });
     fireEvent.keyDown(screen.getByRole('tab', { name: 'Past week' }), { key: 'ArrowRight' });
-    expect(onValueChange.mock.calls).toEqual([['week'], ['month']]);
+    expect(onValueChange.mock.calls).toEqual([
+      ['week', live],
+      ['month', live],
+    ]);
   });
 
   test('with links, the URL hash follows the selected tab and selects it', async () => {
@@ -342,40 +350,49 @@ test('server markup: controlled tabs still switch before React hydrates', async 
   container.remove();
 });
 
-test.each([
-  ['ignore', 'Past day', 0],
-  ['report', 'Past week', 1],
-] as const)(
-  'server markup: with preHydration "%s", a tab picked before hydration leaves "%s" selected',
-  async (preHydration, selected, reports) => {
-    const onValueChange = vi.fn();
-    function Controlled() {
-      const [value, setValue] = useState('day');
-      return (
-        <Example
-          value={value}
-          preHydration={preHydration}
-          onValueChange={(next) => {
-            onValueChange(next);
-            setValue(next);
-          }}
-        />
-      );
-    }
-    const container = document.createElement('div');
-    document.body.appendChild(container);
-    container.innerHTML = renderToString(<Controlled />);
-    await upgraded();
-    fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
-    await act(async () => {
-      hydrateRoot(container, <Controlled />);
-    });
-    await upgraded();
-    expect(screen.getByRole('tab', { name: selected })).toHaveAttribute('aria-selected', 'true');
-    expect(onValueChange).toHaveBeenCalledTimes(reports);
-    container.remove();
+test('server markup: a tab picked before hydration is reported once and stays selected', async () => {
+  const onValueChange = vi.fn();
+  function Controlled() {
+    const [value, setValue] = useState('day');
+    return (
+      <Example
+        value={value}
+        onValueChange={(next, details) => {
+          onValueChange(next, details);
+          setValue(next);
+        }}
+      />
+    );
   }
-);
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  container.innerHTML = renderToString(<Controlled />);
+  await upgraded();
+  fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
+  await act(async () => {
+    hydrateRoot(container, <Controlled />);
+  });
+  await upgraded();
+  expect(screen.getByRole('tab', { name: 'Past week' })).toHaveAttribute('aria-selected', 'true');
+  expect(onValueChange.mock.calls).toEqual([['week', { beforeHydration: true }]]);
+  container.remove();
+});
+
+test('server markup: a tab picked before hydration that the handler does not adopt goes back to the value', async () => {
+  const onValueChange = vi.fn();
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  container.innerHTML = renderToString(<Example value="day" onValueChange={onValueChange} />);
+  await upgraded();
+  fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
+  await act(async () => {
+    hydrateRoot(container, <Example value="day" onValueChange={onValueChange} />);
+  });
+  await upgraded();
+  expect(onValueChange.mock.calls).toEqual([['week', { beforeHydration: true }]]);
+  expect(screen.getByRole('tab', { name: 'Past day' })).toHaveAttribute('aria-selected', 'true');
+  container.remove();
+});
 
 test('a new media query takes over from the old one', async () => {
   vi.stubGlobal(

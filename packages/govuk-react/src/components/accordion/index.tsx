@@ -21,7 +21,7 @@ export type RootProps = Omit<Markup.RootProps, 'defaultValue' | 'onChange'> & {
   /** The sections open at first. */
   defaultValue?: string[];
   /** Called with the open sections' values when the user opens or closes a section. */
-  onValueChange?: (value: string[]) => void;
+  onValueChange?: (value: string[], details: Primitives.ChangeDetails) => void;
 };
 
 /**

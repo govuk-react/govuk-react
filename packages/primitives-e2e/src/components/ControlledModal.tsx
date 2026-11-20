@@ -2,8 +2,11 @@ import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import * as Modal from '@govuk-react/primitives/modal';
 
-/** A controlled modal, opened from outside as well as by its trigger. */
-export default function ControlledModal() {
+/**
+ * A controlled modal, opened from outside as well as by its trigger. With `ignoreBeforeHydration`,
+ * it doesn't adopt a change the user made before hydration.
+ */
+export default function ControlledModal({ ignoreBeforeHydration = false }: { ignoreBeforeHydration?: boolean }) {
   const [open, setOpen] = useState(false);
   const [locked, setLocked] = useState(false);
   const [asked, setAsked] = useState('');
@@ -25,9 +28,9 @@ export default function ControlledModal() {
       <Modal.Root
         dialogId="controlled-dialog"
         open={open}
-        onOpenChange={(next) => {
-          setAsked(String(next));
-          if (!locked) setOpen(next);
+        onOpenChange={(next, details) => {
+          setAsked(details.beforeHydration ? `${next} before hydration` : String(next));
+          if (!locked && !(ignoreBeforeHydration && details.beforeHydration)) setOpen(next);
         }}
       >
         <Modal.Trigger>Open</Modal.Trigger>

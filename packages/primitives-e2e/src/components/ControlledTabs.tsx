@@ -14,15 +14,7 @@ const items = [
  * calls, so tests can tell a user's choice (reported) from a value change (not reported).
  * With `keep`, the value ignores the user's choices.
  */
-export default function ControlledTabs({
-  id,
-  preHydration,
-  keep = false,
-}: {
-  id: string;
-  preHydration?: 'ignore' | 'report';
-  keep?: boolean;
-}) {
+export default function ControlledTabs({ id, keep = false }: { id: string; keep?: boolean }) {
   const [value, setValue] = useState(`${id}-account`);
   const [changes, setChanges] = useState(0);
   // Marks hydration on the DOM, so tests can wait for it.
@@ -40,7 +32,6 @@ export default function ControlledTabs({
       <Tabs.RadiosRoot
         name={id}
         value={value}
-        preHydration={preHydration}
         onValueChange={(next) => {
           if (!keep) setValue(next);
           setChanges((count) => count + 1);

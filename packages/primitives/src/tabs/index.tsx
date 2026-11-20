@@ -1,10 +1,13 @@
 'use client';
 
 import * as React from 'react';
-import { createContext, useContext, useEffect, useId, useRef } from 'react';
+import { createContext, useContext, useEffect, useId, useReducer, useRef } from 'react';
 import type { ComponentProps, ReactElement, ReactNode } from 'react';
+import { early, live, type ChangeDetails } from '../utils/change-details.js';
 import { Slot } from '../utils/slot.js';
 import { tagName, type TabsElement } from './element.js';
+
+export type { ChangeDetails };
 
 /*
  * Headless tabs: unstyled parts over the <govuk-react-tabs> element (./element.ts), which adds
@@ -24,7 +27,7 @@ import { tagName, type TabsElement } from './element.js';
 const TabsContext = createContext<{
   selected?: string;
   name?: string;
-  onValueChange?: (value: string) => void;
+  onValueChange?: (value: string, details: ChangeDetails) => void;
 }>({});
 
 const radioId = (name: string, value: string) => `${name}-${value}`;
@@ -36,12 +39,7 @@ type BaseRootProps = {
   /** The tab selected at first, when uncontrolled. Defaults to the first tab. */
   defaultValue?: string;
   /** Called when the user selects a tab. */
-  onValueChange?: (value: string) => void;
-  /**
-   * When controlled, what happens to a tab the user picked before hydration: "ignore" keeps
-   * `value`, "report" calls `onValueChange` with the pick so you can adopt it.
-   */
-  preHydration?: 'ignore' | 'report';
+  onValueChange?: (value: string, details: ChangeDetails) => void;
   /** The axis of the arrow keys. */
   orientation?: 'horizontal' | 'vertical';
   /** The panels' radio group name. Defaults to a generated one. */
@@ -80,7 +78,6 @@ function TabsRoot({
   value,
   defaultValue,
   onValueChange,
-  preHydration = 'ignore',
   orientation,
   fallback,
   name,
@@ -97,18 +94,22 @@ function TabsRoot({
 
   // `value` is set once hydrated, so the server markup is uncontrolled and a choice made before
   // hydration still switches tab. That choice fired no onChange that React saw, so it is reported
-  // once, unless controlled with "ignore", where `value` wins.
+  // once.
   const synced = useRef(false);
+  const [, render] = useReducer((count: number) => count + 1, 0);
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
     if (!synced.current) {
       synced.current = true;
       const picked = node.pickedValue;
-      if (picked !== undefined && (value === undefined || preHydration === 'report')) {
-        onValueChange?.(picked);
-        // Controlled: leave the pick showing, for the app to adopt.
-        if (value !== undefined && picked !== value) return;
+      if (picked !== undefined) {
+        onValueChange?.(picked, early);
+        if (value !== undefined && picked !== value) {
+          // The pick shows until the next render, which adopts it or goes back to `value`.
+          render();
+          return;
+        }
       }
     }
     if (value === undefined) node.removeAttribute('value');
@@ -127,7 +128,6 @@ function TabsRoot({
           'default-value': value ?? defaultValue,
           fallback,
           orientation,
-          'prefer-pick': preHydration === 'report' ? '' : undefined,
           media,
           'upgraded-class': upgradedClass,
           'active-item-class': activeItemClass,
@@ -244,7 +244,7 @@ function Panel({
       hidden
       data-tabs-fallback={radios ? '' : undefined}
       suppressHydrationWarning
-      onChange={() => onValueChange?.(value)}
+      onChange={() => onValueChange?.(value, live)}
     />
   );
   const shared = {
