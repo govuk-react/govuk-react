@@ -13,9 +13,11 @@
  *   else closes it. Changing `open` fires no change event. While `open` is present, the buttons
  *   and Escape don't open or close the dialog: they fire the change event with the state asked
  *   for, and the dialog changes only when `open` does. That covers a `form` with
- *   `method="dialog"` too. A change the browser doesn't let a page cancel, such as a script
- *   calling `close()` or a second Escape in a row in Chromium, fires the change event, and the
- *   dialog goes back to `open` a moment later unless `open` has changed.
+ *   `method="dialog"`, and a script calling `showModal()` where the browser fires `beforetoggle`
+ *   on dialogs. The browser doesn't let a page cancel a script calling `close()`, or a second
+ *   Escape in a row with no other key or click between, whose `cancel` event isn't cancelable.
+ *   Those fire the change event, and the dialog goes back to `open` a moment later unless `open`
+ *   has changed.
  * - It fires a bubbling `govuk-react-modal:change` event with `{ open }` when the dialog opens
  *   or closes, for code that doesn't use React.
  *
@@ -58,6 +60,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     private restoreTimeout?: number;
 
+    private syncing = false;
+
     // Runs the commands of the element's own buttons when the browser can't.
     private readonly onClick = (event: MouseEvent) => {
       const button = event.target instanceof Element ? event.target.closest('button[commandfor]') : null;
@@ -82,6 +86,14 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       const command: unknown = Reflect.get(event, 'command');
       if (!dialog || event.target !== dialog || typeof command !== 'string') return;
       if (this.request(dialog, command)) event.preventDefault();
+    };
+
+    // A script opening the dialog, where the browser fires `beforetoggle` on dialogs.
+    private readonly onBeforeToggle = (event: Event) => {
+      const { dialog } = this;
+      if (!dialog || event.target !== dialog || this.syncing || !event.cancelable) return;
+      if (Reflect.get(event, 'newState') !== 'open' || this.getAttribute('open') === 'true') return;
+      if (this.request(dialog, 'show-modal')) event.preventDefault();
     };
 
     private readonly onCancel = (event: Event) => {
@@ -129,6 +141,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.dialog?.removeEventListener('close', this.onToggle);
       this.dialog?.removeEventListener('command', this.onCommand);
       this.dialog?.removeEventListener('cancel', this.onCancel);
+      this.dialog?.removeEventListener('beforetoggle', this.onBeforeToggle);
       this.dialog?.removeEventListener('toggle', this.onToggle);
       this.dialog = undefined;
     }
@@ -149,6 +162,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       dialog.addEventListener('close', this.onToggle);
       dialog.addEventListener('command', this.onCommand);
       dialog.addEventListener('cancel', this.onCancel);
+      dialog.addEventListener('beforetoggle', this.onBeforeToggle);
       this.sync();
       return true;
     }
@@ -174,8 +188,13 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       const open = controlled === 'true';
       if (open === dialog.open) return;
       this.wasOpen = open;
-      if (open && dialog.isConnected) dialog.showModal();
-      else if (!open) dialog.close();
+      this.syncing = true;
+      try {
+        if (open && dialog.isConnected) dialog.showModal();
+        else if (!open) dialog.close();
+      } finally {
+        this.syncing = false;
+      }
     }
   }
 

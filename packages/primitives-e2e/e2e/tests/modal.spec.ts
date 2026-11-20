@@ -149,14 +149,41 @@ test.describe('controlled, when the app ignores a change', () => {
     await expect(controlled).toBeVisible();
   });
 
+  test('a script’s showModal() only asks', async ({ page }) => {
+    await page.getByLabel('Ignore changes').check();
+    const opened = await page.locator('#controlled-dialog').evaluate((dialog) => {
+      if (!(dialog instanceof HTMLDialogElement)) return undefined;
+      dialog.showModal();
+      return dialog.open;
+    });
+    expect(opened).toBe(false);
+    await expect(page.getByTestId('controlled-asked')).toHaveText('true');
+  });
+
+  test('a second Escape in a row can’t be cancelled, so it’s reported, then undone', async ({ page }) => {
+    await page.getByLabel('Ignore changes').check();
+    await page.getByRole('button', { name: 'Open from outside' }).click();
+    const controlled = page.getByRole('dialog', { name: 'Controlled' });
+    await expect(controlled).toBeVisible();
+    await page.evaluate(() => {
+      document.querySelector('#controlled-dialog')?.addEventListener('close', () => {
+        document.body.dataset.closed = 'true';
+      });
+    });
+    // Nothing between the presses: the test's own checks would count as the user doing something.
+    await page.keyboard.press('Escape');
+    await page.keyboard.press('Escape');
+    await expect(page.locator('body')).toHaveAttribute('data-closed', 'true');
+    await expect(page.getByTestId('controlled-asked')).toHaveText('false');
+    await expect(controlled).toBeVisible();
+    expect(await controlled.evaluate((element) => element.matches(':modal'))).toBe(true);
+  });
+
   test('a close the browser won’t let the page cancel is reported, then undone', async ({ page }) => {
     await page.getByLabel('Ignore changes').check();
     await page.getByRole('button', { name: 'Open from outside' }).click();
     const controlled = page.getByRole('dialog', { name: 'Controlled' });
     await expect(controlled).toBeVisible();
-    // A second Escape in a row closes the dialog in Chromium, as a script's close() does.
-    await page.keyboard.press('Escape');
-    await page.keyboard.press('Escape');
     await controlled.evaluate((dialog) => {
       if (dialog instanceof HTMLDialogElement) dialog.close();
     });
