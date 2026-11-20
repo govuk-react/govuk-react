@@ -342,40 +342,33 @@ test('server markup: controlled tabs still switch before React hydrates', async 
   container.remove();
 });
 
-test.each([
-  ['ignore', 'Past day', 0],
-  ['report', 'Past week', 1],
-] as const)(
-  'server markup: with preHydration "%s", a tab picked before hydration leaves "%s" selected',
-  async (preHydration, selected, reports) => {
-    const onValueChange = vi.fn();
-    function Controlled() {
-      const [value, setValue] = useState('day');
-      return (
-        <Example
-          value={value}
-          preHydration={preHydration}
-          onValueChange={(next) => {
-            onValueChange(next);
-            setValue(next);
-          }}
-        />
-      );
-    }
-    const container = document.createElement('div');
-    document.body.appendChild(container);
-    container.innerHTML = renderToString(<Controlled />);
-    await upgraded();
-    fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
-    await act(async () => {
-      hydrateRoot(container, <Controlled />);
-    });
-    await upgraded();
-    expect(screen.getByRole('tab', { name: selected })).toHaveAttribute('aria-selected', 'true');
-    expect(onValueChange).toHaveBeenCalledTimes(reports);
-    container.remove();
+test('server markup: a tab picked before hydration is reported once and stays selected', async () => {
+  const onValueChange = vi.fn();
+  function Controlled() {
+    const [value, setValue] = useState('day');
+    return (
+      <Example
+        value={value}
+        onValueChange={(next) => {
+          onValueChange(next);
+          setValue(next);
+        }}
+      />
+    );
   }
-);
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  container.innerHTML = renderToString(<Controlled />);
+  await upgraded();
+  fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
+  await act(async () => {
+    hydrateRoot(container, <Controlled />);
+  });
+  await upgraded();
+  expect(screen.getByRole('tab', { name: 'Past week' })).toHaveAttribute('aria-selected', 'true');
+  expect(onValueChange).toHaveBeenCalledTimes(1);
+  container.remove();
+});
 
 test('a new media query takes over from the old one', async () => {
   vi.stubGlobal(

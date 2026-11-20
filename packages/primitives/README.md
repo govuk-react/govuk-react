@@ -108,7 +108,7 @@ The root sets how the tabs work without JavaScript, and its parts match it:
 
 They are separate components rather than a prop, because a prop can change after the first render, and the markup each needs can't.
 
-When controlled with `value`, a user's choice calls `onValueChange` and the tab changes only when `value` does. `value` applies once hydrated, so tabs still switch before then. `preHydration` sets what happens to a tab the user picked before React hydrated: `"ignore"` (the default) goes back to `value`, `"report"` calls `onValueChange` with it. When uncontrolled, the pick is always reported.
+When controlled with `value`, a user's choice calls `onValueChange` and the tab changes only when `value` does. `value` applies once hydrated, so tabs still switch before then, and a tab picked before hydration is reported through `onValueChange` rather than undone.
 
 `orientation` (`"horizontal"` or `"vertical"`) sets the axis of the arrow keys.
 

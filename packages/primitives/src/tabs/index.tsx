@@ -37,11 +37,6 @@ type BaseRootProps = {
   defaultValue?: string;
   /** Called when the user selects a tab. */
   onValueChange?: (value: string) => void;
-  /**
-   * When controlled, what happens to a tab the user picked before hydration: "ignore" keeps
-   * `value`, "report" calls `onValueChange` with the pick so you can adopt it.
-   */
-  preHydration?: 'ignore' | 'report';
   /** The axis of the arrow keys. */
   orientation?: 'horizontal' | 'vertical';
   /** The panels' radio group name. Defaults to a generated one. */
@@ -80,7 +75,6 @@ function TabsRoot({
   value,
   defaultValue,
   onValueChange,
-  preHydration = 'ignore',
   orientation,
   fallback,
   name,
@@ -97,7 +91,7 @@ function TabsRoot({
 
   // `value` is set once hydrated, so the server markup is uncontrolled and a choice made before
   // hydration still switches tab. That choice fired no onChange that React saw, so it is reported
-  // once, unless controlled with "ignore", where `value` wins.
+  // once.
   const synced = useRef(false);
   useEffect(() => {
     const node = ref.current;
@@ -105,7 +99,7 @@ function TabsRoot({
     if (!synced.current) {
       synced.current = true;
       const picked = node.pickedValue;
-      if (picked !== undefined && (value === undefined || preHydration === 'report')) {
+      if (picked !== undefined) {
         onValueChange?.(picked);
         // Controlled: leave the pick showing, for the app to adopt.
         if (value !== undefined && picked !== value) return;
@@ -127,7 +121,6 @@ function TabsRoot({
           'default-value': value ?? defaultValue,
           fallback,
           orientation,
-          'prefer-pick': preHydration === 'report' ? '' : undefined,
           media,
           'upgraded-class': upgradedClass,
           'active-item-class': activeItemClass,

@@ -41,31 +41,34 @@ test('uncontrolled links: a URL hash on load is reported', async ({ page }) => {
   await expect(page.getByTestId('last-l')).toHaveText('l-documents');
 });
 
-test('controlled "ignore": the value wins over a choice made before hydration', async ({ page }) => {
+test('controlled: a choice made before hydration is reported and adopted', async ({ page }) => {
   const release = await holdScripts(page);
   await page.goto('/test/controlled', { waitUntil: 'commit' });
   await page.getByTestId('ctrl-cv').locator('label', { hasText: 'Settings' }).click();
   await expect(page.locator('#cv-cv-settings')).toBeChecked();
   release();
   await expect(page.getByTestId('ctrl-cv')).toHaveAttribute('data-hydrated', 'true');
-  await expect(page.getByTestId('ctrl-cv').getByRole('tab', { name: 'Account' })).toHaveAttribute(
+  await expect(page.getByTestId('cv-value')).toHaveText('cv-settings');
+  await expect(page.getByTestId('cv-changes')).toHaveText('1');
+  await expect(page.getByTestId('ctrl-cv').getByRole('tab', { name: 'Settings' })).toHaveAttribute(
     'aria-selected',
     'true'
   );
-  await expect(page.getByTestId('cv-value')).toHaveText('cv-account');
-  await expect(page.getByTestId('cv-changes')).toHaveText('0');
 });
 
-test('controlled "report": a choice made before hydration is reported and adopted', async ({ page }) => {
+test('controlled: a choice made before hydration that the app does not adopt is reported, then undone', async ({
+  page,
+}) => {
   const release = await holdScripts(page);
   await page.goto('/test/controlled', { waitUntil: 'commit' });
-  await page.getByTestId('ctrl-cs').locator('label', { hasText: 'Settings' }).click();
-  await expect(page.locator('#cs-cs-settings')).toBeChecked();
+  await page.getByTestId('ctrl-ck').locator('label', { hasText: 'Settings' }).click();
+  await expect(page.locator('#ck-ck-settings')).toBeChecked();
   release();
-  await expect(page.getByTestId('ctrl-cs')).toHaveAttribute('data-hydrated', 'true');
-  await expect(page.getByTestId('cs-value')).toHaveText('cs-settings');
-  await expect(page.getByTestId('ctrl-cs').getByRole('tab', { name: 'Settings' })).toHaveAttribute(
+  await expect(page.getByTestId('ctrl-ck')).toHaveAttribute('data-hydrated', 'true');
+  await expect(page.getByTestId('ck-changes')).toHaveText('1');
+  await expect(page.getByTestId('ctrl-ck').getByRole('tab', { name: 'Account' })).toHaveAttribute(
     'aria-selected',
     'true'
   );
+  await expect(page.locator('#ck-ck-account')).toBeChecked();
 });

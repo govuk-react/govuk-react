@@ -24,7 +24,6 @@
  * - `media`: below this media query the element leaves the no-JS behaviour as it is.
  * - `upgraded-class`, `active-item-class`, `hidden-content-class`: classes to add, for styles
  *   keyed off classes rather than `data-state`, `aria-selected` and `hidden`.
- * - `prefer-pick`: a tab picked before upgrade (checked radio or URL hash) wins over `value`.
  *
  * While upgraded it sets `data-upgraded`. A user's choice fires a bubbling
  * `govuk-react-tabs:change` event with `{ value }`, for code that doesn't use React. With
@@ -331,12 +330,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       const remembered = this.triggerFor(this.dataset.value);
       const picked = this.pickedTrigger();
       const fallback = this.triggerFor(this.getAttribute('default-value'));
-      const initial =
-        (this.hasAttribute('prefer-pick') && !remembered ? picked : undefined) ??
-        controlled ??
-        remembered ??
-        picked ??
-        fallback;
+      const initial = controlled ?? remembered ?? picked ?? fallback;
       this.provisional = !initial;
       return initial ?? this.triggers[0];
     }

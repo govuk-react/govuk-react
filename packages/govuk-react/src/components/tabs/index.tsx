@@ -19,11 +19,6 @@ const tablet = '(min-width: 40.0625em)';
 type BaseRootProps = Omit<Markup.RootProps, 'defaultValue' | 'onChange'> & {
   /** Called when the user selects a tab. */
   onValueChange?: (value: string) => void;
-  /**
-   * When controlled, what happens to a tab the user picked before hydration: "ignore" keeps
-   * `value`, "report" calls `onValueChange` with the pick so you can adopt it.
-   */
-  preHydration?: 'ignore' | 'report';
   /** The panels' radio group name. Defaults to a generated one. */
   name?: string;
 };
@@ -52,17 +47,10 @@ const classes = {
  *
  * @see https://design-system.service.gov.uk/components/tabs/
  */
-export function Root({ value, defaultValue, onValueChange, preHydration, name, ...props }: RootProps) {
+export function Root({ value, defaultValue, onValueChange, name, ...props }: RootProps) {
   return (
     <TabsContext.Provider value={{ selected: value ?? defaultValue }}>
-      <Primitives.Root
-        value={value}
-        defaultValue={defaultValue}
-        onValueChange={onValueChange}
-        preHydration={preHydration}
-        name={name}
-        {...classes}
-      >
+      <Primitives.Root value={value} defaultValue={defaultValue} onValueChange={onValueChange} name={name} {...classes}>
         <Markup.Root {...props} />
       </Primitives.Root>
     </TabsContext.Provider>
@@ -79,19 +67,13 @@ export type RadiosRootProps = BaseRootProps &
  *
  * @see https://design-system.service.gov.uk/components/tabs/
  */
-export function RadiosRoot({ value, defaultValue, onValueChange, preHydration, name, ...props }: RadiosRootProps) {
+export function RadiosRoot({ value, defaultValue, onValueChange, name, ...props }: RadiosRootProps) {
   const selection: Pick<Primitives.RadiosRootProps, 'value' | 'defaultValue'> &
     ({ value: string } | { defaultValue: string }) =
     value !== undefined ? { value, defaultValue } : { defaultValue: defaultValue ?? '' };
   return (
     <TabsContext.Provider value={{ selected: value ?? defaultValue }}>
-      <Primitives.RadiosRoot
-        {...selection}
-        onValueChange={onValueChange}
-        preHydration={preHydration}
-        name={name}
-        {...classes}
-      >
+      <Primitives.RadiosRoot {...selection} onValueChange={onValueChange} name={name} {...classes}>
         <Markup.Root {...props} />
       </Primitives.RadiosRoot>
     </TabsContext.Provider>
