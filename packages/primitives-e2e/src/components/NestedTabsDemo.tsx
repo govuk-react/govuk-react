@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useEffect, useRef } from 'react';
 import * as Tabs from '@govuk-react/primitives/tabs';
+import '@govuk-react/primitives/styles.css';
 
 // Tabs in the "account" panel of other tabs. useId keeps their radio groups apart.
 export default function NestedTabsDemo() {

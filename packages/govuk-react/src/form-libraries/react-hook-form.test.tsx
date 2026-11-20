@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { act, render, screen } from '@testing-library/react';
+import { act, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { useForm, useWatch, type Control } from 'react-hook-form';
 import {
@@ -275,9 +275,9 @@ describe('React Hook Form', () => {
     expect(revealed(phone)).toBe(false);
 
     await user.click(screen.getByRole('button', { name: 'Load draft' }));
-    await upgraded();
     expect(phone).toBeChecked();
-    expect(revealed(phone)).toBe(true);
+    // The element reads `checked` on an interval, since `setValue` fires no event.
+    await waitFor(() => expect(revealed(phone)).toBe(true));
     expect(screen.getByLabelText('Wales')).toBeChecked();
     expect(revealed(screen.getByLabelText('Wales'))).toBe(true);
   });
@@ -294,6 +294,6 @@ describe('React Hook Form', () => {
     await settled();
     expect(count()).toHaveTextContent('You have 10 characters remaining');
     await user.click(screen.getByRole('button', { name: 'Load draft' }));
-    expect(count()).toHaveTextContent('You have 1 character remaining');
+    await waitFor(() => expect(count()).toHaveTextContent('You have 1 character remaining'));
   });
 });
