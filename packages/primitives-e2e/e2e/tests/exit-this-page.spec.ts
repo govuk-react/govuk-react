@@ -53,7 +53,7 @@ for (const [id, path] of [
         await page.evaluate(() => {
           new MutationObserver(() => {
             const overlay = document.querySelector('[role=alert]');
-            const exitButton = document.querySelector('[data-exit-this-page-button]');
+            const exitButton = document.querySelector('[data-exit-this-page-trigger]');
             if (!overlay?.textContent || !exitButton) return;
             sessionStorage.setItem(
               'exiting',

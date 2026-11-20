@@ -86,7 +86,7 @@ describe('FileUpload', () => {
 
   test.each(Object.entries(cases))('without JavaScript, renders govuk-frontend-react’s markup: %s', (_, props) => {
     const ours = parse(renderToStaticMarkup(<EnhancedFileUpload.Field {...props} />));
-    ours.querySelectorAll('[data-file-upload-button], [data-file-upload-announcements]').forEach((element) => {
+    ours.querySelectorAll('[data-file-upload-trigger], [data-file-upload-announcements]').forEach((element) => {
       element.remove();
     });
     // The id govuk-frontend's script gives the label, which ours renders up front.

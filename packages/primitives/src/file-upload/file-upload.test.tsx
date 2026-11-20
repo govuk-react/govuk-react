@@ -16,11 +16,11 @@ function Example({
       <p id="upload-hint">This can be in either JPG or PNG format</p>
       <FileUpload.Root {...props}>
         <FileUpload.DropZone data-testid="zone">
-          <FileUpload.Button>
+          <FileUpload.Trigger>
             <FileUpload.Status data-testid="status" />
             <FileUpload.Separator />
             Choose file
-          </FileUpload.Button>
+          </FileUpload.Trigger>
           <FileUpload.Input
             id={id}
             name="upload"
@@ -84,7 +84,7 @@ describe('FileUpload', () => {
 
   test('says which files are chosen, with the plural forms it is given', async () => {
     render(
-      <Example emptyClass="empty" multipleFilesChosen={{ one: '%{count} ffeil', other: '%{count} o ffeiliau' }} />
+      <Example emptyClass="empty" multipleFilesChosenText={{ one: '%{count} ffeil', other: '%{count} o ffeiliau' }} />
     );
     await upgraded();
     choose('passport.jpg');
@@ -171,7 +171,7 @@ describe('FileUpload', () => {
     const { rerender } = render(<Example />);
     await upgraded();
     choose('passport.jpg');
-    rerender(<Example leftDropZone="Wedi gadael" />);
+    rerender(<Example leftDropZoneAnnouncement="Wedi gadael" />);
     await upgraded();
     expect(screen.getByRole('button')).toHaveAttribute('id', 'upload');
     expect(input()).toHaveAttribute('id', 'upload-input');
@@ -192,10 +192,10 @@ describe('FileUpload', () => {
   });
 
   test('follows new plural forms', async () => {
-    const { rerender } = render(<Example multipleFilesChosen={{ other: '%{count} chosen' }} />);
+    const { rerender } = render(<Example multipleFilesChosenText={{ other: '%{count} chosen' }} />);
     await upgraded();
     choose('a.png', 'b.png');
-    rerender(<Example multipleFilesChosen={{ other: '%{count} ffeil' }} />);
+    rerender(<Example multipleFilesChosenText={{ other: '%{count} ffeil' }} />);
     await upgraded();
     expect(screen.getByTestId('status')).toHaveTextContent('2 ffeil');
   });

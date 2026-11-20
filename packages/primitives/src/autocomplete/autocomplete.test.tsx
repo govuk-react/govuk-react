@@ -64,7 +64,7 @@ describe('Autocomplete', () => {
   });
 
   test('announces the results with the messages it is given', async () => {
-    render(<Example statusResults={{ one: '%{count} canlyniad', other: '%{count} o ganlyniadau' }} />);
+    render(<Example resultsAnnouncement={{ one: '%{count} canlyniad', other: '%{count} o ganlyniadau' }} />);
     await upgraded();
     vi.useFakeTimers();
     type('g');

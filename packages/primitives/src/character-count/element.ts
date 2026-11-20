@@ -24,9 +24,9 @@
  * - `count-type`: "length" (the default) counts UTF-16 code units, as `maxlength` does;
  *   "characters" counts characters as users see them; "words" counts words.
  * - `threshold`: the percentage of the limit from which the count is shown.
- * - `characters-under-limit`, `characters-at-limit`, `characters-over-limit`, `words-under-limit`,
- *   `words-at-limit`, `words-over-limit`: the messages, English by default, with `%{count}` for
- *   the number. Add a plural form to the name, such as `characters-under-limit-one`, for a
+ * - `characters-under-limit-text`, `characters-at-limit-text`, `characters-over-limit-text`, `words-under-limit-text`,
+ *   `words-at-limit-text`, `words-over-limit-text`: the messages, English by default, with `%{count}` for
+ *   the number. Add a plural form to the name, such as `characters-under-limit-text-one`, for a
  *   message for each form.
  * - `hidden-description-class`: classes that visually hide the description. Without them, the
  *   element visually hides it with inline styles.

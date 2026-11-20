@@ -48,15 +48,15 @@ export default function ControlledTabs({
       >
         <Tabs.List>
           {items.map((item) => (
-            <Tabs.RadioTrigger key={item.value} value={`${id}-${item.value}`}>
+            <Tabs.RadiosTrigger key={item.value} value={`${id}-${item.value}`}>
               {item.label}
-            </Tabs.RadioTrigger>
+            </Tabs.RadiosTrigger>
           ))}
         </Tabs.List>
         {items.map((item) => (
-          <Tabs.RadioContent key={item.value} value={`${id}-${item.value}`}>
+          <Tabs.RadiosContent key={item.value} value={`${id}-${item.value}`}>
             {item.label} panel
-          </Tabs.RadioContent>
+          </Tabs.RadiosContent>
         ))}
       </Tabs.RadiosRoot>
     </div>

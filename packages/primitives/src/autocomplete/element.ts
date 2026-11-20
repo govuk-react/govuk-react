@@ -37,10 +37,10 @@
  *   as in accessible-autocomplete, the highlighted option is confirmed.
  * - `submit-on-confirm`: submit the input's form when the user confirms an option, and let Enter
  *   submit it while the menu is open with no option highlighted.
- * - `status-query-too-short`, `status-no-results`, `status-selected-option`, `status-results`:
+ * - `query-too-short-announcement`, `no-results-announcement`, `selected-option-announcement`, `results-announcement`:
  *   what screen readers hear, English by default, with `%{count}` for the number and, in
- *   `status-selected-option`, `%{option}` and `%{position}`. Add a plural form to the name, such
- *   as `status-results-one`, for a message for each form.
+ *   `selected-option-announcement`, `%{option}` and `%{position}`. Add a plural form to the name, such
+ *   as `results-announcement-one`, for a message for each form.
  *
  * Events, which bubble:
  * - `govuk-react-autocomplete:query`, when the user changes the query and options are due.
@@ -78,10 +78,10 @@ declare global {
 
 /** accessible-autocomplete's English text. */
 export const defaults = {
-  'status-query-too-short': 'Type in %{count} or more characters for results',
-  'status-no-results': 'No search results',
-  'status-selected-option': '%{option} %{position} of %{count} is highlighted',
-  'status-results': { one: '%{count} result is available.', other: '%{count} results are available.' },
+  'query-too-short-announcement': 'Type in %{count} or more characters for results',
+  'no-results-announcement': 'No search results',
+  'selected-option-announcement': '%{option} %{position} of %{count} is highlighted',
+  'results-announcement': { one: '%{count} result is available.', other: '%{count} results are available.' },
 } satisfies Record<string, Translation>;
 
 type MessageName = keyof typeof defaults;
@@ -621,13 +621,13 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     private statusText() {
       const { locale, options } = this;
-      if (!this.queryLongEnough) return translate(this.message('status-query-too-short'), this.minLength, locale);
-      if (options.length === 0) return translate(this.message('status-no-results'), 0, locale);
-      const results = translate(this.message('status-results'), options.length, locale);
+      if (!this.queryLongEnough) return translate(this.message('query-too-short-announcement'), this.minLength, locale);
+      if (options.length === 0) return translate(this.message('no-results-announcement'), 0, locale);
+      const results = translate(this.message('results-announcement'), options.length, locale);
       const option = this.valueOf(this.selectedOption);
       if (option === undefined || this.selected === null) return results;
       const position = withLocale(locale, (l) => new Intl.NumberFormat(l)).format(this.selected + 1);
-      const highlighted = translate(this.message('status-selected-option'), options.length, locale)
+      const highlighted = translate(this.message('selected-option-announcement'), options.length, locale)
         .replaceAll('%{option}', () => option)
         .replaceAll('%{position}', () => position);
       return `${results} ${highlighted}`;

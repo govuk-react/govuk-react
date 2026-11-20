@@ -21,7 +21,7 @@ export default function PasswordDemo({ id }: { id: string }) {
         <label htmlFor={`${id}-password`}>Password</label>
         <PasswordInput.Input id={`${id}-password`} name="password" />
         <PasswordInput.Status style={{ position: 'absolute', left: '-9999px' }} />
-        <PasswordInput.Toggle />
+        <PasswordInput.Trigger />
       </PasswordInput.Root>
       <button type="submit">Sign in</button>
     </form>

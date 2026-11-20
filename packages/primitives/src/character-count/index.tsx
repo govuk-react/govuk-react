@@ -29,17 +29,17 @@ export type RootProps = React.HTMLAttributes<HTMLElement> & {
   /** The percentage of the limit from which the count is shown. */
   threshold?: number;
   /** Shown while under the limit. `%{count}` is the number left. */
-  charactersUnderLimit?: Translation;
+  charactersUnderLimitText?: Translation;
   /** Shown at the limit. */
-  charactersAtLimit?: Translation;
+  charactersAtLimitText?: Translation;
   /** Shown while over the limit. `%{count}` is the number too many. */
-  charactersOverLimit?: Translation;
+  charactersOverLimitText?: Translation;
   /** Shown while under the limit when counting words. `%{count}` is the number left. */
-  wordsUnderLimit?: Translation;
+  wordsUnderLimitText?: Translation;
   /** Shown at the limit when counting words. */
-  wordsAtLimit?: Translation;
+  wordsAtLimitText?: Translation;
   /** Shown while over the limit when counting words. `%{count}` is the number too many. */
-  wordsOverLimit?: Translation;
+  wordsOverLimitText?: Translation;
   /** Classes that visually hide the description once upgraded. Without them, inline styles do. */
   hiddenDescriptionClass?: string;
   /** Classes for the visible count while within the limit. */
@@ -61,12 +61,12 @@ export function Root({
   maxLength,
   countType = 'length',
   threshold,
-  charactersUnderLimit,
-  charactersAtLimit,
-  charactersOverLimit,
-  wordsUnderLimit,
-  wordsAtLimit,
-  wordsOverLimit,
+  charactersUnderLimitText,
+  charactersAtLimitText,
+  charactersOverLimitText,
+  wordsUnderLimitText,
+  wordsAtLimitText,
+  wordsOverLimitText,
   hiddenDescriptionClass,
   withinLimitClass,
   overLimitClass,
@@ -76,12 +76,12 @@ export function Root({
 }: RootProps) {
   const element = useRef<HTMLElement>(null);
   const messages = {
-    'characters-under-limit': charactersUnderLimit,
-    'characters-at-limit': charactersAtLimit,
-    'characters-over-limit': charactersOverLimit,
-    'words-under-limit': wordsUnderLimit,
-    'words-at-limit': wordsAtLimit,
-    'words-over-limit': wordsOverLimit,
+    'characters-under-limit-text': charactersUnderLimitText,
+    'characters-at-limit-text': charactersAtLimitText,
+    'characters-over-limit-text': charactersOverLimitText,
+    'words-under-limit-text': wordsUnderLimitText,
+    'words-at-limit-text': wordsAtLimitText,
+    'words-over-limit-text': wordsOverLimitText,
   };
 
   // A value set by React, rather than typed, fires no `input` event.
@@ -105,12 +105,12 @@ export function Root({
         maxlength: maxLength,
         'count-type': countType,
         threshold,
-        ...messageAttributes('characters-under-limit', charactersUnderLimit),
-        ...messageAttributes('characters-at-limit', charactersAtLimit),
-        ...messageAttributes('characters-over-limit', charactersOverLimit),
-        ...messageAttributes('words-under-limit', wordsUnderLimit),
-        ...messageAttributes('words-at-limit', wordsAtLimit),
-        ...messageAttributes('words-over-limit', wordsOverLimit),
+        ...messageAttributes('characters-under-limit-text', charactersUnderLimitText),
+        ...messageAttributes('characters-at-limit-text', charactersAtLimitText),
+        ...messageAttributes('characters-over-limit-text', charactersOverLimitText),
+        ...messageAttributes('words-under-limit-text', wordsUnderLimitText),
+        ...messageAttributes('words-at-limit-text', wordsAtLimitText),
+        ...messageAttributes('words-over-limit-text', wordsOverLimitText),
         'hidden-description-class': hiddenDescriptionClass,
         'within-limit-class': withinLimitClass,
         'over-limit-class': overLimitClass,

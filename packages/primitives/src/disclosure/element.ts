@@ -7,7 +7,7 @@
  * `aria-expanded` is the state.
  *
  * Markup inside the element:
- * - `[data-disclosure-toggle]`: a `button` of type "button", rendered `hidden`.
+ * - `[data-disclosure-trigger]`: a `button` of type "button", rendered `hidden`.
  * - `[data-disclosure-content]`: the content, with an id for the button's `aria-controls`.
  *
  * Attributes:
@@ -111,7 +111,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     private setup() {
       if (this.toggle) return true;
-      const toggle = this.own('[data-disclosure-toggle]', HTMLButtonElement);
+      const toggle = this.own('[data-disclosure-trigger]', HTMLButtonElement);
       const content = this.own('[data-disclosure-content]', HTMLElement);
       if (!toggle || !content) return false;
       this.toggle = toggle;

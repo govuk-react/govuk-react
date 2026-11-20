@@ -18,13 +18,13 @@ export { defaultMessages, type ExitThisPageElement, type MessageName } from './e
 
 export type RootProps = React.HTMLAttributes<HTMLElement> & {
   /** Announced once activated. Defaults to "Loading.". */
-  activatedText?: string;
+  activatedAnnouncement?: string;
   /** Announced when the Shift presses time out. Defaults to "Exit this page expired.". */
-  timedOutText?: string;
+  timedOutAnnouncement?: string;
   /** Announced after one press of Shift. Defaults to "Shift, press 2 more times to exit.". */
-  pressTwoMoreTimesText?: string;
+  pressTwoMoreTimesAnnouncement?: string;
   /** Announced after two presses of Shift. Defaults to "Shift, press 1 more time to exit.". */
-  pressOneMoreTimeText?: string;
+  pressOneMoreTimeAnnouncement?: string;
   /** Classes for the indicator while counting presses. */
   indicatorVisibleClass?: string;
   /** Classes for each light of the indicator once pressed. */
@@ -36,10 +36,10 @@ export type RootProps = React.HTMLAttributes<HTMLElement> & {
 };
 
 export function Root({
-  activatedText,
-  timedOutText,
-  pressTwoMoreTimesText,
-  pressOneMoreTimeText,
+  activatedAnnouncement,
+  timedOutAnnouncement,
+  pressTwoMoreTimesAnnouncement,
+  pressOneMoreTimeAnnouncement,
   indicatorVisibleClass,
   lightOnClass,
   hideContentClass,
@@ -48,10 +48,10 @@ export function Root({
 }: RootProps) {
   return React.createElement(tagName, {
     ...props,
-    activated: activatedText,
-    'timed-out': timedOutText,
-    'press-two-more-times': pressTwoMoreTimesText,
-    'press-one-more-time': pressOneMoreTimeText,
+    'activated-announcement': activatedAnnouncement,
+    'timed-out-announcement': timedOutAnnouncement,
+    'press-two-more-times-announcement': pressTwoMoreTimesAnnouncement,
+    'press-one-more-time-announcement': pressOneMoreTimeAnnouncement,
     'indicator-visible-class': indicatorVisibleClass,
     'light-on-class': lightOnClass,
     'hide-content-class': hideContentClass,
@@ -66,12 +66,12 @@ type PartProps<E extends keyof React.JSX.IntrinsicElements> = ComponentProps<E> 
   asChild?: boolean;
 };
 
-export type ButtonProps = PartProps<'a'>;
+export type TriggerProps = PartProps<'a'>;
 
 /** The link to a safe page, which the element follows once it has hidden the page. */
-export function Button({ asChild, ...props }: ButtonProps) {
+export function Trigger({ asChild, ...props }: TriggerProps) {
   const Element = asChild ? Slot : 'a';
-  return <Element data-exit-this-page-button="" {...props} />;
+  return <Element data-exit-this-page-trigger="" {...props} />;
 }
 
 export type SkipLinkProps = PartProps<'a'>;

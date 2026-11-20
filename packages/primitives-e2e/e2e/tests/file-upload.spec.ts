@@ -1,7 +1,7 @@
 import { expect, test, type Page } from '@playwright/test';
 
 const demo = (page: Page, id: string) => page.getByTestId(`file-upload-${id}`);
-const button = (page: Page, id: string) => demo(page, id).locator('button[data-file-upload-button]');
+const button = (page: Page, id: string) => demo(page, id).locator('button[data-file-upload-trigger]');
 const status = (page: Page, id: string) => page.getByTestId(`status-${id}`);
 const chosen = (page: Page, id: string) => page.getByTestId(`chosen-${id}`);
 const file = (name: string) => ({ name, mimeType: 'image/png', buffer: Buffer.from('png') });

@@ -24,13 +24,13 @@ function RadiosExample(props: Tabs.RadiosRootProps) {
   return (
     <Tabs.RadiosRoot {...props}>
       <Tabs.List>
-        <Tabs.RadioTrigger value="day">Past day</Tabs.RadioTrigger>
-        <Tabs.RadioTrigger value="week">Past week</Tabs.RadioTrigger>
-        <Tabs.RadioTrigger value="month">Past month</Tabs.RadioTrigger>
+        <Tabs.RadiosTrigger value="day">Past day</Tabs.RadiosTrigger>
+        <Tabs.RadiosTrigger value="week">Past week</Tabs.RadiosTrigger>
+        <Tabs.RadiosTrigger value="month">Past month</Tabs.RadiosTrigger>
       </Tabs.List>
-      <Tabs.RadioContent value="day">Day content</Tabs.RadioContent>
-      <Tabs.RadioContent value="week">Week content</Tabs.RadioContent>
-      <Tabs.RadioContent value="month">Month content</Tabs.RadioContent>
+      <Tabs.RadiosContent value="day">Day content</Tabs.RadiosContent>
+      <Tabs.RadiosContent value="week">Week content</Tabs.RadiosContent>
+      <Tabs.RadiosContent value="month">Month content</Tabs.RadiosContent>
     </Tabs.RadiosRoot>
   );
 }
@@ -319,12 +319,12 @@ describe('Tabs', () => {
   test('parts work without a Root, as in an island', () => {
     render(
       <>
-        <Tabs.RadioTrigger value="day" name="island">
+        <Tabs.RadiosTrigger value="day" name="island">
           Past day
-        </Tabs.RadioTrigger>
-        <Tabs.RadioContent value="day" name="island" defaultSelected>
+        </Tabs.RadiosTrigger>
+        <Tabs.RadiosContent value="day" name="island" defaultSelected>
           Day content
-        </Tabs.RadioContent>
+        </Tabs.RadiosContent>
       </>
     );
     expect(screen.getByText('Past day').closest('label')).toHaveAttribute('for', 'island-day');

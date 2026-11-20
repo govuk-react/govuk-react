@@ -9,7 +9,7 @@ function Example(props: PasswordInput.RootProps) {
         <label htmlFor="password">Password</label>
         <PasswordInput.Input id="password" />
         <PasswordInput.Status />
-        <PasswordInput.Toggle />
+        <PasswordInput.Trigger />
       </PasswordInput.Root>
       <button type="submit">Sign in</button>
     </form>
@@ -60,7 +60,7 @@ describe('PasswordInput', () => {
         <PasswordInput.Root>
           <label htmlFor="password">Password</label>
           <PasswordInput.Input id="password" value={value} onChange={(event) => setValue(event.target.value)} />
-          <PasswordInput.Toggle />
+          <PasswordInput.Trigger />
         </PasswordInput.Root>
       );
     }
@@ -85,7 +85,7 @@ describe('PasswordInput', () => {
     render(
       <PasswordInput.Root>
         <PasswordInput.Input aria-label="Password" />
-        <PasswordInput.Toggle />
+        <PasswordInput.Trigger />
       </PasswordInput.Root>
     );
     await upgraded();
@@ -98,7 +98,7 @@ test('keeps the text node React rendered in the button, and marks the element up
   render(
     <PasswordInput.Root data-testid="root">
       <PasswordInput.Input aria-label="Password" />
-      <PasswordInput.Toggle />
+      <PasswordInput.Trigger />
     </PasswordInput.Root>
   );
   const button = screen.getByText('Show');

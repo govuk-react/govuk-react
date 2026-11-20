@@ -16,30 +16,30 @@ export type { Translation };
 export type CountType = 'length' | 'characters' | 'words';
 
 export const messageNames = [
-  'characters-under-limit',
-  'characters-at-limit',
-  'characters-over-limit',
-  'words-under-limit',
-  'words-at-limit',
-  'words-over-limit',
+  'characters-under-limit-text',
+  'characters-at-limit-text',
+  'characters-over-limit-text',
+  'words-under-limit-text',
+  'words-at-limit-text',
+  'words-over-limit-text',
 ] as const;
 
 export type MessageName = (typeof messageNames)[number];
 
 /** govuk-frontend's English messages. `%{count}` is replaced with the number. */
 export const defaultMessages: Record<MessageName, Translation> = {
-  'characters-under-limit': {
+  'characters-under-limit-text': {
     one: 'You have %{count} character remaining',
     other: 'You have %{count} characters remaining',
   },
-  'characters-at-limit': 'You have 0 characters remaining',
-  'characters-over-limit': {
+  'characters-at-limit-text': 'You have 0 characters remaining',
+  'characters-over-limit-text': {
     one: 'You have %{count} character too many',
     other: 'You have %{count} characters too many',
   },
-  'words-under-limit': { one: 'You have %{count} word remaining', other: 'You have %{count} words remaining' },
-  'words-at-limit': 'You have 0 words remaining',
-  'words-over-limit': { one: 'You have %{count} word too many', other: 'You have %{count} words too many' },
+  'words-under-limit-text': { one: 'You have %{count} word remaining', other: 'You have %{count} words remaining' },
+  'words-at-limit-text': 'You have 0 words remaining',
+  'words-over-limit-text': { one: 'You have %{count} word too many', other: 'You have %{count} words too many' },
 };
 
 /** The attributes for a message: the message itself, or one attribute for each plural form. */
@@ -72,7 +72,7 @@ export function countMessage(
   locale?: string
 ) {
   const state = remaining < 0 ? 'over' : remaining === 0 ? 'at' : 'under';
-  const name: MessageName = `${countType === 'words' ? 'words' : 'characters'}-${state}-limit`;
+  const name: MessageName = `${countType === 'words' ? 'words' : 'characters'}-${state}-limit-text`;
   const message = messages[name] ?? defaultMessages[name];
   return { state, text: translate(message, Math.abs(remaining), locale) };
 }
