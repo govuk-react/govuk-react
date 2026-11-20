@@ -12,6 +12,17 @@ Each primitive:
 
 Import each primitive from its own path, such as `@govuk-react/primitives/tabs`. Each path defines its element when imported.
 
+## Controlled state
+
+Prefer uncontrolled: leave out `value` and `open`, start from `defaultValue` or `defaultOpen` where there is one, and listen with `onValueChange` or `onOpenChange`. The markup then holds the state, so it's the same before hydration, without React and without JavaScript.
+
+Control a primitive only when your app has to set its state, such as closing a menu after navigating. When controlled, a user's action calls the change handler and the primitive changes only when the prop does. That has limits that can't be removed:
+
+- A controlled prop applies once React has hydrated. Until then the primitive is uncontrolled, so it still works, and what the user did by then is reported through the change handler rather than undone. If your handler doesn't accept it, the primitive goes back to the prop the next time it renders.
+- Without JavaScript, a controlled prop does nothing.
+- Each change waits for React to render, where an uncontrolled one happens in the browser straight away.
+- A browser doesn't let a page cancel a script calling `close()` on a dialog, nor a script calling `showModal()` before it fired `beforetoggle` on dialogs (Chrome 132, Firefox 133 and Safari 26). A controlled Modal reports such a change through `onOpenChange` and, unless `open` changes within 100ms, puts the dialog back as `open` says. So it always ends up matching `open`, but the user can see it change and change back.
+
 ## Styles
 
 Two fallbacks need a CSS rule each, which only set `display`: the Tabs radios fallback and the Accordion. Load the package's stylesheet once, or copy its rules into your own:
@@ -148,7 +159,7 @@ import * as Modal from '@govuk-react/primitives/modal';
 
 `Title` names the dialog, so always include one, or pass `aria-label` to `Content`. Pass `closedby="any"` to `Content` to also close it when the user clicks outside it.
 
-`open` and `onOpenChange` control the dialog once hydrated. In an island without a `Root`, pass `dialogId` to `Trigger` and `Close`, and `id` and `aria-labelledby` to `Content`.
+`open` and `onOpenChange` control the dialog once hydrated: `Trigger`, `Close` and Escape then call `onOpenChange`, and the dialog changes only when `open` does. See [Controlled state](#controlled-state) for its limits. In an island without a `Root`, pass `dialogId` to `Trigger` and `Close`, and `id` and `aria-labelledby` to `Content`.
 
 ## Character count
 

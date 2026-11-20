@@ -48,19 +48,22 @@ for (const [id, path] of [
       });
 
       test('the skip link exits, hiding the page behind an overlay first', async ({ page }) => {
-        // The page can't be inspected once it starts to leave, so it reports what it shows.
+        // The page can't be inspected once it starts to leave, so it records what it shows for the
+        // safe page, on the same origin, to read.
         await page.evaluate(() => {
           new MutationObserver(() => {
             const overlay = document.querySelector('[role=alert]');
             const exitButton = document.querySelector('[data-exit-this-page-trigger]');
             if (!overlay?.textContent || !exitButton) return;
-            console.log(`exiting: ${overlay.textContent}, button ${exitButton.checkVisibility() ? 'shown' : 'hidden'}`);
+            sessionStorage.setItem(
+              'exiting',
+              `${overlay.textContent}, button ${exitButton.checkVisibility() ? 'shown' : 'hidden'}`
+            );
           }).observe(document.body, { childList: true, subtree: true, characterData: true });
         });
-        const exiting = page.waitForEvent('console', (message) => message.text().startsWith('exiting'));
         await demo(page, id).getByRole('link', { name: 'Exit this page', exact: true }).click();
-        expect((await exiting).text()).toBe('exiting: Loading., button hidden');
         await expect(page).toHaveURL(/\/\?exited$/);
+        expect(await page.evaluate(() => sessionStorage.getItem('exiting'))).toBe('Loading., button hidden');
       });
     }
   );
