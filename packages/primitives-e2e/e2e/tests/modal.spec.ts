@@ -160,7 +160,7 @@ test.describe('controlled, when the app ignores a change', () => {
     await expect(page.getByTestId('controlled-asked')).toHaveText('true');
   });
 
-  test('a second Escape in a row can’t be cancelled, so it’s reported, then undone', async ({ page }) => {
+  test('Escape pressed again and again only asks, and never closes it', async ({ page }) => {
     await page.getByLabel('Ignore changes').check();
     await page.getByRole('button', { name: 'Open from outside' }).click();
     const controlled = page.getByRole('dialog', { name: 'Controlled' });
@@ -170,12 +170,12 @@ test.describe('controlled, when the app ignores a change', () => {
         document.body.dataset.closed = 'true';
       });
     });
-    // Nothing between the presses: the test's own checks would count as the user doing something.
-    await page.keyboard.press('Escape');
-    await page.keyboard.press('Escape');
-    await expect(page.locator('body')).toHaveAttribute('data-closed', 'true');
+    // Nothing between the presses: a browser lets a page cancel only the first `cancel` in a row,
+    // and the test's own checks would count as the user doing something.
+    for (let press = 0; press < 4; press += 1) await page.keyboard.press('Escape');
     await expect(page.getByTestId('controlled-asked')).toHaveText('false');
     await expect(controlled).toBeVisible();
+    expect(await page.locator('body').getAttribute('data-closed')).toBeNull();
     expect(await controlled.evaluate((element) => element.matches(':modal'))).toBe(true);
   });
 

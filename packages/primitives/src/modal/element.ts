@@ -14,10 +14,10 @@
  *   and Escape don't open or close the dialog: they fire the change event with the state asked
  *   for, and the dialog changes only when `open` does. That covers a `form` with
  *   `method="dialog"`, and a script calling `showModal()` where the browser fires `beforetoggle`
- *   on dialogs. The browser doesn't let a page cancel a script calling `close()`, or a second
- *   Escape in a row with no other key or click between, whose `cancel` event isn't cancelable.
- *   Those fire the change event, and the dialog goes back to `open` a moment later unless `open`
- *   has changed.
+ *   on dialogs. Escape is cancelled at its `keydown`, since the `cancel` event of a
+ *   second Escape in a row isn't cancelable. The browser doesn't let a page cancel a script
+ *   calling `close()`: that fires the change event, and the dialog goes back to `open` a moment
+ *   later unless `open` has changed.
  * - It fires a bubbling `govuk-react-modal:change` event with `{ open }` when the dialog opens
  *   or closes, for code that doesn't use React.
  *
@@ -96,6 +96,17 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       if (this.request(dialog, 'show-modal')) event.preventDefault();
     };
 
+    // Escape, before the browser asks the dialog to close: it lets a page cancel that only once in
+    // a row. A key that something inside the dialog handled, or that closes a popover, is left.
+    private readonly onKeydown = (event: KeyboardEvent) => {
+      const { dialog } = this;
+      const { target } = event;
+      if (!dialog || event.key !== 'Escape' || event.defaultPrevented || event.isComposing) return;
+      if (!(target instanceof Element) || target.closest('dialog') !== dialog) return;
+      if (target.closest(':popover-open') || dialog.getAttribute('closedby') === 'none') return;
+      if (this.request(dialog, 'request-close')) event.preventDefault();
+    };
+
     private readonly onCancel = (event: Event) => {
       const { dialog } = this;
       if (!dialog || event.target !== dialog) return;
@@ -141,6 +152,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.dialog?.removeEventListener('close', this.onToggle);
       this.dialog?.removeEventListener('command', this.onCommand);
       this.dialog?.removeEventListener('cancel', this.onCancel);
+      this.dialog?.removeEventListener('keydown', this.onKeydown);
       this.dialog?.removeEventListener('beforetoggle', this.onBeforeToggle);
       this.dialog?.removeEventListener('toggle', this.onToggle);
       this.dialog = undefined;
@@ -162,6 +174,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       dialog.addEventListener('close', this.onToggle);
       dialog.addEventListener('command', this.onCommand);
       dialog.addEventListener('cancel', this.onCancel);
+      dialog.addEventListener('keydown', this.onKeydown);
       dialog.addEventListener('beforetoggle', this.onBeforeToggle);
       this.sync();
       return true;
