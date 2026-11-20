@@ -69,6 +69,7 @@ describe('PasswordInput', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Show password' }));
     fireEvent.change(screen.getByLabelText('Password'), { target: { value: 'violin' } });
     expect(screen.getByLabelText('Password')).toHaveValue('violin');
+    await upgraded();
     expect(screen.getByLabelText('Password')).toHaveAttribute('type', 'text');
   });
 

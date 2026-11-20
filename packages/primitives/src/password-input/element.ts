@@ -24,7 +24,6 @@
  */
 
 import { setText } from '../utils/dom.js';
-import { onPropertySet } from '../utils/on-property-set.js';
 import { setUpWhenReady } from '../utils/set-up-when-ready.js';
 
 export const tagName = 'govuk-react-password-input';
@@ -64,13 +63,11 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     private visible = false;
 
-    private stopWatchingType?: () => void;
-
     // React sets `type` again whenever it updates a controlled input.
-    private readonly onTypeSet = () => {
+    private readonly typeObserver = new MutationObserver(() => {
       const type = this.visible ? 'text' : 'password';
       if (this.input && this.input.type !== type) this.input.type = type;
-    };
+    });
 
     private readonly onToggle = (event: MouseEvent) => {
       event.preventDefault();
@@ -99,7 +96,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.toggle?.removeEventListener('click', this.onToggle);
       document.removeEventListener('submit', this.onSubmit);
       window.removeEventListener('pageshow', this.onPageShow);
-      this.stopWatchingType?.();
+      this.typeObserver.disconnect();
       this.input = undefined;
       this.toggle = undefined;
     }
@@ -138,7 +135,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       // Start hidden, with the text set but nothing announced.
       this.visible = false;
       input.type = 'password';
-      this.stopWatchingType = onPropertySet(input, 'type', this.onTypeSet);
+      this.typeObserver.observe(input, { attributes: true, attributeFilter: ['type'] });
       this.label(false);
       return true;
     }

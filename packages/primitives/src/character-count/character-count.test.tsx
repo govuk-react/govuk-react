@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { act, fireEvent, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import * as CharacterCount from '.';
 
 function Example(props: CharacterCount.RootProps) {
@@ -142,10 +142,8 @@ describe('CharacterCount', () => {
     await upgraded();
     const field = screen.getByLabelText('Message');
     if (!(field instanceof HTMLTextAreaElement)) throw new Error('No textarea');
-    act(() => {
-      field.value = 'Hello';
-    });
-    expect(screen.getByTestId('status')).toHaveTextContent('You have 5 characters remaining');
+    field.value = 'Hello';
+    await waitFor(() => expect(screen.getByTestId('status')).toHaveTextContent('You have 5 characters remaining'));
     field.form?.reset();
     await act(() => new Promise((resolve) => setTimeout(resolve)));
     expect(screen.getByTestId('status')).toHaveTextContent('You have 10 characters remaining');

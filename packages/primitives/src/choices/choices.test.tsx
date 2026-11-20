@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState } from 'react';
 import { hydrateRoot } from 'react-dom/client';
 import { renderToStaticMarkup, renderToString } from 'react-dom/server';
-import { act, fireEvent, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import * as Choices from '.';
 
 // The element upgrades in connectedCallback, after React commits.
@@ -202,8 +202,7 @@ describe('Choices', () => {
     const phone = screen.getByLabelText('Phone');
     if (!(phone instanceof HTMLInputElement)) throw new Error('No radio');
     phone.checked = true;
-    await upgraded();
-    expect(screen.getByText('Phone number')).toBeVisible();
+    await waitFor(() => expect(screen.getByText('Phone number')).toBeVisible());
     expect(phone).toHaveAttribute('aria-expanded', 'true');
   });
 
