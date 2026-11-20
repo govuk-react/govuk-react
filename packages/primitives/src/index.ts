@@ -4,6 +4,7 @@ export * as Modal from './modal/index.js';
 export * as PasswordInput from './password-input/index.js';
 export * as Disclosure from './disclosure/index.js';
 export * as CharacterCount from './character-count/index.js';
+export * as CharacterCountText from './character-count-text/index.js';
 export * as Choices from './choices/index.js';
 export * as AutoFocus from './auto-focus/index.js';
 export * as FocusLinks from './focus-links/index.js';
