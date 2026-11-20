@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
+import { hydrateRoot } from 'react-dom/client';
+import { renderToString } from 'react-dom/server';
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import * as Tabs from '.';
 
@@ -328,4 +330,63 @@ describe('Tabs', () => {
     expect(screen.getByText('Past day').closest('label')).toHaveAttribute('for', 'island-day');
     expect(document.getElementById('island-day')).toBeChecked();
   });
+});
+
+test('server markup: controlled tabs still switch before React hydrates', async () => {
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  container.innerHTML = renderToString(<Example value="day" />);
+  await upgraded();
+  fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
+  expect(screen.getByRole('tab', { name: 'Past week' })).toHaveAttribute('aria-selected', 'true');
+  container.remove();
+});
+
+test.each([
+  ['ignore', 'Past day', 0],
+  ['report', 'Past week', 1],
+] as const)(
+  'server markup: with preHydration "%s", a tab picked before hydration leaves "%s" selected',
+  async (preHydration, selected, reports) => {
+    const onValueChange = vi.fn();
+    function Controlled() {
+      const [value, setValue] = useState('day');
+      return (
+        <Example
+          value={value}
+          preHydration={preHydration}
+          onValueChange={(next) => {
+            onValueChange(next);
+            setValue(next);
+          }}
+        />
+      );
+    }
+    const container = document.createElement('div');
+    document.body.appendChild(container);
+    container.innerHTML = renderToString(<Controlled />);
+    await upgraded();
+    fireEvent.click(screen.getByRole('tab', { name: 'Past week' }));
+    await act(async () => {
+      hydrateRoot(container, <Controlled />);
+    });
+    await upgraded();
+    expect(screen.getByRole('tab', { name: selected })).toHaveAttribute('aria-selected', 'true');
+    expect(onValueChange).toHaveBeenCalledTimes(reports);
+    container.remove();
+  }
+);
+
+test('a new media query takes over from the old one', async () => {
+  vi.stubGlobal(
+    'matchMedia',
+    vi.fn((media: string) => ({ matches: media === 'wide', addEventListener: vi.fn(), removeEventListener: vi.fn() }))
+  );
+  const { rerender } = render(<Example media="narrow" />);
+  await upgraded();
+  expect(screen.queryByRole('tablist')).not.toBeInTheDocument();
+  rerender(<Example media="wide" />);
+  await upgraded();
+  expect(screen.getByRole('tablist')).toBeInTheDocument();
+  vi.unstubAllGlobals();
 });

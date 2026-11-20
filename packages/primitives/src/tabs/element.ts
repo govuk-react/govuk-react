@@ -34,6 +34,9 @@
 import { classesOf } from '../utils/dom.js';
 
 declare global {
+  interface HTMLElementTagNameMap {
+    'govuk-react-tabs': TabsElement;
+  }
   interface HTMLElementEventMap {
     'govuk-react-tabs:change': CustomEvent<{ value: string }>;
   }
@@ -65,7 +68,7 @@ const addClasses = (element: Element, classes: string[]) => {
 if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined') {
   class GovukReactTabs extends HTMLElement implements TabsElement {
     static get observedAttributes() {
-      return ['value'];
+      return ['value', 'media'];
     }
 
     private mql?: MediaQueryList;
@@ -207,9 +210,13 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.teardown();
     }
 
-    attributeChangedCallback(_name: string, oldValue: string | null, value: string | null) {
-      // Until it starts, the element reads `value` when it sets up, after any pick before upgrade.
+    attributeChangedCallback(name: string, oldValue: string | null, value: string | null) {
+      // Until it starts, the element reads its attributes when it sets up, after any pick before upgrade.
       if (!this.started) return;
+      if (name === 'media') {
+        if (oldValue !== value) this.watchMedia();
+        return;
+      }
       if (value != null && oldValue !== value && value !== this.dataset.value) this.select(value);
     }
 
@@ -292,11 +299,14 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       document.removeEventListener('DOMContentLoaded', this.onReady);
       if (this.started) return;
       this.started = true;
+      this.watchMedia();
+    }
+
+    private watchMedia() {
+      this.mql?.removeEventListener('change', this.onModeChange);
       const media = this.getAttribute('media');
-      if (media) {
-        this.mql = window.matchMedia(media);
-        this.mql.addEventListener('change', this.onModeChange);
-      }
+      this.mql = media ? window.matchMedia(media) : undefined;
+      this.mql?.addEventListener('change', this.onModeChange);
       this.checkMode();
     }
 

@@ -101,17 +101,25 @@ function TabsRoot({
   const groupName = name ?? generatedName;
   const ref = useRef<TabsElement>(null);
 
-  // A tab the user picked before hydration fired no onChange that React saw, so report it once.
-  // When controlled with "ignore", `value` wins, so there is nothing to report.
-  const reported = useRef(false);
-  const initial = useRef({ value, preHydration, onValueChange });
+  // `value` is set once hydrated, so the server markup is uncontrolled and a choice made before
+  // hydration still switches tab. That choice fired no onChange that React saw, so it is reported
+  // once, unless controlled with "ignore", where `value` wins.
+  const synced = useRef(false);
   useEffect(() => {
-    const picked = ref.current?.pickedValue;
-    if (reported.current || picked === undefined) return;
-    reported.current = true;
-    const start = initial.current;
-    if (start.value === undefined || start.preHydration === 'report') start.onValueChange?.(picked);
-  }, []);
+    const node = ref.current;
+    if (!node) return;
+    if (!synced.current) {
+      synced.current = true;
+      const picked = node.pickedValue;
+      if (picked !== undefined && (value === undefined || preHydration === 'report')) {
+        onValueChange?.(picked);
+        // Controlled: leave the pick showing, for the app to adopt.
+        if (value !== undefined && picked !== value) return;
+      }
+    }
+    if (value === undefined) node.removeAttribute('value');
+    else if (node.getAttribute('value') !== value) node.setAttribute('value', value);
+  });
 
   return (
     <TabsContext.Provider value={{ selected: value ?? defaultValue, name: groupName, onValueChange }}>
@@ -127,8 +135,7 @@ function TabsRoot({
           ref,
           // The radios fallback switches tabs before upgrade, so it is styled as tabs from the start.
           className: [className, fallback === 'radios' && upgradedClass].filter(Boolean).join(' ') || undefined,
-          value,
-          'default-value': defaultValue,
+          'default-value': value ?? defaultValue,
           fallback,
           orientation,
           'prefer-pick': preHydration === 'report' ? '' : undefined,

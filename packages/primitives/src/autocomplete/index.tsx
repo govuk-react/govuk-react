@@ -1,8 +1,8 @@
 'use client';
 
 import * as React from 'react';
-import { useEffect, useRef } from 'react';
-import type { ComponentProps, CSSProperties } from 'react';
+import { cloneElement, isValidElement, useEffect, useRef } from 'react';
+import type { ComponentProps, CSSProperties, ReactElement, ReactNode } from 'react';
 import { Slot } from '../utils/slot.js';
 import { translationAttributes, type Translation } from '../utils/translation.js';
 import { tagName, type AutocompleteElement, type Filter } from './element.js';
@@ -176,31 +176,36 @@ const visuallyHidden: CSSProperties = {
 
 export type StatusProps = PartProps<'div'>;
 
+// An empty string, rather than no children, lets the element set the text before hydration.
+const statusRegion = (key: string) => (
+  <div
+    key={key}
+    data-autocomplete-status-region=""
+    role="status"
+    aria-atomic="true"
+    aria-live="polite"
+    suppressHydrationWarning
+  >
+    {''}
+  </div>
+);
+
 /** What screen readers hear about the options, once the user pauses. Visually hidden. */
-export function Status({ asChild, style, ...props }: StatusProps) {
-  const Element = asChild ? Slot : 'div';
+export function Status({ asChild, style, children, ...props }: StatusProps) {
+  const shared = { 'data-autocomplete-status': '', style: { ...visuallyHidden, ...style } };
+  const regions = [statusRegion('first'), statusRegion('second')];
+  if (asChild && isValidElement<{ children?: ReactNode }>(children)) {
+    const child: ReactElement<{ children?: ReactNode }> = children;
+    return (
+      <Slot {...shared} {...props}>
+        {cloneElement(child, undefined, ...regions)}
+      </Slot>
+    );
+  }
   return (
-    <Element data-autocomplete-status="" style={{ ...visuallyHidden, ...style }} {...props}>
-      {/* An empty string, rather than no children, lets the element set the text before hydration. */}
-      <div
-        data-autocomplete-status-region=""
-        role="status"
-        aria-atomic="true"
-        aria-live="polite"
-        suppressHydrationWarning
-      >
-        {''}
-      </div>
-      <div
-        data-autocomplete-status-region=""
-        role="status"
-        aria-atomic="true"
-        aria-live="polite"
-        suppressHydrationWarning
-      >
-        {''}
-      </div>
-    </Element>
+    <div {...shared} {...props}>
+      {regions}
+    </div>
   );
 }
 

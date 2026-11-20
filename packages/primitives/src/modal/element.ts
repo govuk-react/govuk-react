@@ -14,6 +14,8 @@
  * - It fires a bubbling `govuk-react-modal:change` event with `{ open }` when the dialog opens
  *   or closes, for code that doesn't use React.
  *
+ * While upgraded it sets `data-upgraded`.
+ *
  * Markup inside the element:
  * - a `dialog` with an id
  * - `button`s with `commandfor` set to the dialog's id, and `command` set to "show-modal",
@@ -92,6 +94,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       const dialog = Array.from(this.querySelectorAll('dialog')).find((found) => found.closest(tagName) === this);
       if (!dialog) return false;
       this.dialog = dialog;
+      this.dataset.upgraded = '';
       this.wasOpen = dialog.open;
       // `toggle` fires on open and close where supported, and `close` everywhere.
       dialog.addEventListener('toggle', this.onToggle);

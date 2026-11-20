@@ -46,6 +46,17 @@ describe('AutoFocus', () => {
     expect(screen.getByRole('alert')).not.toHaveAttribute('tabindex');
   });
 
+  test('a disabled Root disables its Target', async () => {
+    render(
+      <AutoFocus.Root disabled>
+        <AutoFocus.Target role="alert">There is a problem</AutoFocus.Target>
+      </AutoFocus.Root>
+    );
+    await connected();
+    expect(screen.getByRole('alert')).not.toHaveFocus();
+    expect(screen.getByRole('alert')).not.toHaveAttribute('tabindex');
+  });
+
   test('keeps a tabindex the target already had', async () => {
     render(
       <AutoFocus.Root>

@@ -28,7 +28,7 @@
  *   inline styles.
  */
 
-import { classesOf } from '../utils/dom.js';
+import { classesOf, setText } from '../utils/dom.js';
 
 export const tagName = 'govuk-react-exit-this-page';
 
@@ -136,13 +136,9 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       return this.getAttribute(name) ?? defaultMessages[name];
     }
 
-    // Keeps the text node React rendered, if any, so React can still update it.
     private setStatus(text: string) {
       const status = this.own('[data-exit-this-page-status]');
-      if (!status || status.textContent === text) return;
-      const { firstChild } = status;
-      if (firstChild instanceof Text && status.childNodes.length === 1) firstChild.nodeValue = text;
-      else status.textContent = text;
+      if (status) setText(status, text);
     }
 
     private readonly onClick = (event: MouseEvent) => {

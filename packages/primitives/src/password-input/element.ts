@@ -12,6 +12,8 @@
  * - `[data-password-status]` (optional): a visually hidden live region for the announcements.
  *   Without one, the element adds one after the input.
  *
+ * While upgraded it sets `data-upgraded`.
+ *
  * Attributes, for the text (English by default):
  * - `show-text`, `hide-text`: the button's text.
  * - `show-label`, `hide-label`: the button's accessible name.
@@ -21,6 +23,7 @@
  * submit button such as a form library's, and when the page is restored from the back-forward cache.
  */
 
+import { setText } from '../utils/dom.js';
 import { onPropertySet } from '../utils/on-property-set.js';
 import { setUpWhenReady } from '../utils/set-up-when-ready.js';
 
@@ -36,8 +39,18 @@ const defaults = {
 };
 
 // The same visually hidden styles as govuk-frontend's, for a live region the element adds itself.
-const visuallyHidden =
-  'position:absolute;width:1px;height:1px;margin:0;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);border:0;white-space:nowrap';
+const visuallyHidden: Record<string, string> = {
+  position: 'absolute',
+  width: '1px',
+  height: '1px',
+  margin: '0',
+  padding: '0',
+  overflow: 'hidden',
+  clip: 'rect(0 0 0 0)',
+  'clip-path': 'inset(50%)',
+  border: '0',
+  'white-space': 'nowrap',
+};
 
 if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined') {
   class GovukReactPasswordInput extends HTMLElement {
@@ -112,9 +125,12 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
         this.status = document.createElement('div');
         this.status.dataset.passwordStatus = '';
         this.status.setAttribute('aria-live', 'polite');
-        this.status.setAttribute('style', visuallyHidden);
+        // Set one by one: a Content Security Policy can block a whole `style` attribute.
+        const { style } = this.status;
+        Object.entries(visuallyHidden).forEach(([name, value]) => style.setProperty(name, value));
         input.insertAdjacentElement('afterend', this.status);
       }
+      this.dataset.upgraded = '';
       toggle.hidden = false;
       toggle.addEventListener('click', this.onToggle);
       document.addEventListener('submit', this.onSubmit);
@@ -138,7 +154,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     private label(visible: boolean) {
       if (!this.toggle) return;
-      this.toggle.textContent = this.text(visible ? 'hide-text' : 'show-text');
+      setText(this.toggle, this.text(visible ? 'hide-text' : 'show-text'));
       this.toggle.setAttribute('aria-label', this.text(visible ? 'hide-label' : 'show-label'));
     }
   }

@@ -104,3 +104,13 @@ describe('Autocomplete', () => {
     expect(onSubmit).not.toHaveBeenCalled();
   });
 });
+
+test('Status with asChild keeps both of its live regions', () => {
+  render(
+    <Autocomplete.Status asChild>
+      <section data-testid="status" />
+    </Autocomplete.Status>
+  );
+  expect(screen.getByTestId('status').tagName).toBe('SECTION');
+  expect(screen.getAllByRole('status')).toHaveLength(2);
+});

@@ -21,7 +21,10 @@ export function dropAutoFocus(element: HTMLElement) {
  * `tabindex="-1"` until it loses focus again, and `focusedClasses` while it has it. Says whether it
  * took focus.
  */
-export function setFocus(element: HTMLElement, { focusedClasses = [] as string[], preventScroll = false } = {}) {
+export function setFocus(
+  element: HTMLElement,
+  { focusedClasses = [], preventScroll = false }: { focusedClasses?: string[]; preventScroll?: boolean } = {}
+) {
   const added = tabIndexAdded(element);
   if (!element.hasAttribute('tabindex')) element.setAttribute('tabindex', '-1');
   if (document.activeElement !== element) {

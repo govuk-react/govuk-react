@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { renderToStaticMarkup } from 'react-dom/server';
+import { hydrateRoot } from 'react-dom/client';
+import { renderToStaticMarkup, renderToString } from 'react-dom/server';
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import * as Choices from '.';
 
@@ -220,4 +221,25 @@ describe('Choices', () => {
     await settled();
     expect(screen.getByText('Email address')).not.toBeVisible();
   });
+});
+
+test('server markup: React still tracks the choices once hydrated, so a checked radio clicked again reports nothing', async () => {
+  const onChange = vi.fn();
+  const ui = (
+    <Choices.Root>
+      <Choices.Input type="radio" name="hydrated-contact" value="email" aria-label="Email" onChange={onChange} />
+    </Choices.Root>
+  );
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  container.innerHTML = renderToString(ui);
+  await upgraded();
+  await act(async () => {
+    hydrateRoot(container, ui);
+  });
+  const radio = screen.getByRole('radio', { name: 'Email' });
+  fireEvent.click(radio);
+  fireEvent.click(radio);
+  expect(onChange).toHaveBeenCalledTimes(1);
+  container.remove();
 });

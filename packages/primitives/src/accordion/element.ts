@@ -38,6 +38,9 @@
 import { classesOf, setText } from '../utils/dom.js';
 
 declare global {
+  interface HTMLElementTagNameMap {
+    'govuk-react-accordion': AccordionElement;
+  }
   interface HTMLElementEventMap {
     'govuk-react-accordion:change': CustomEvent<{ value: string[] }>;
   }

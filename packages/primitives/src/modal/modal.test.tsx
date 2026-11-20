@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import * as Modal from '.';
 
 function Example(props: Modal.RootProps) {
@@ -26,4 +26,23 @@ describe('Modal', () => {
     expect(dialog).toHaveAttribute('aria-labelledby', 'confirm-title');
     expect(document.getElementById('confirm-title')).toHaveTextContent('Are you sure?');
   });
+});
+
+test('with asChild, reports through the dialog’s own ref as well as the child’s', () => {
+  const onOpenChange = vi.fn();
+  const childRef = React.createRef<HTMLDialogElement>();
+  const { unmount } = render(
+    <Modal.Root onOpenChange={onOpenChange}>
+      <Modal.Content asChild>
+        <dialog ref={childRef} aria-label="Confirm" />
+      </Modal.Content>
+    </Modal.Root>
+  );
+  const dialog = childRef.current;
+  if (!dialog) throw new Error('No dialog');
+  dialog.setAttribute('open', '');
+  fireEvent(dialog, new Event('toggle'));
+  expect(onOpenChange).toHaveBeenCalledExactlyOnceWith(true);
+  unmount();
+  expect(childRef.current).toBeNull();
 });

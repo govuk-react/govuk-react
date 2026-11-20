@@ -17,13 +17,16 @@
  *   fires the change event, and the content changes when `open` does.
  * - `default-open`: start with the content shown.
  *
- * A user's click fires a bubbling `govuk-react-disclosure:change` event with `{ open }`, for
- * code that doesn't use React.
+ * While upgraded it sets `data-upgraded`. A user's click fires a bubbling
+ * `govuk-react-disclosure:change` event with `{ open }`, for code that doesn't use React.
  */
 
 import { setUpWhenReady } from '../utils/set-up-when-ready.js';
 
 declare global {
+  interface HTMLElementTagNameMap {
+    'govuk-react-disclosure': DisclosureElement;
+  }
   interface HTMLElementEventMap {
     'govuk-react-disclosure:change': CustomEvent<{ open: boolean }>;
   }
@@ -41,7 +44,7 @@ export interface DisclosureElement extends HTMLElement {
 if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined') {
   class GovukReactDisclosure extends HTMLElement implements DisclosureElement {
     static get observedAttributes() {
-      return ['open'];
+      return ['open', 'media'];
     }
 
     private toggle?: HTMLButtonElement;
@@ -90,7 +93,11 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.mql = undefined;
     }
 
-    attributeChangedCallback() {
+    attributeChangedCallback(name: string) {
+      if (name === 'media') {
+        if (this.toggle) this.watchMedia();
+        return;
+      }
       const open = this.getAttribute('open');
       if (open === null) return;
       this.controlled = true;
@@ -111,14 +118,18 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.content = content;
       const open = this.getAttribute('open');
       this.isOpen = open === null ? this.hasAttribute('default-open') : open === 'true';
-      const media = this.getAttribute('media');
-      if (media) {
-        this.mql = window.matchMedia(media);
-        this.mql.addEventListener('change', this.onModeChange);
-      }
+      this.dataset.upgraded = '';
       toggle.addEventListener('click', this.onClick);
-      this.render();
+      this.watchMedia();
       return true;
+    }
+
+    private watchMedia() {
+      this.mql?.removeEventListener('change', this.onModeChange);
+      const media = this.getAttribute('media');
+      this.mql = media ? window.matchMedia(media) : undefined;
+      this.mql?.addEventListener('change', this.onModeChange);
+      this.render();
     }
 
     private apply(open: boolean) {
