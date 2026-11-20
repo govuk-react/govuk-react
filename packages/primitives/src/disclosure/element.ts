@@ -17,7 +17,8 @@
  *   fires the change event, and the content changes when `open` does.
  * - `default-open`: start with the content shown.
  *
- * While upgraded it sets `data-upgraded`. A user's click fires a bubbling
+ * While upgraded it sets `data-upgraded`, and `data-state` ("open" or "closed") on itself, the
+ * button and the content. A user's click fires a bubbling
  * `govuk-react-disclosure:change` event with `{ open }`, for code that doesn't use React.
  */
 
@@ -141,6 +142,10 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     private render() {
       const { toggle, content } = this;
       if (!toggle || !content) return;
+      const state = this.mql?.matches || this.isOpen ? 'open' : 'closed';
+      [this, toggle, content].forEach((element) => {
+        element.dataset.state = state;
+      });
       if (this.mql?.matches) {
         content.hidden = false;
         toggle.hidden = true;

@@ -20,7 +20,7 @@ function Example(props: Accordion.RootProps) {
         </Accordion.ShowAll>
       </Accordion.Controls>
       {sections.map((section) => (
-        <Accordion.Section key={section.value} value={section.value}>
+        <Accordion.Item key={section.value} value={section.value}>
           <h2>
             <Accordion.Fallback>{section.heading}</Accordion.Fallback>
             <Accordion.Trigger>
@@ -31,7 +31,7 @@ function Example(props: Accordion.RootProps) {
             </Accordion.Trigger>
           </h2>
           <Accordion.Content id={`${section.value}-content`}>{section.heading} content</Accordion.Content>
-        </Accordion.Section>
+        </Accordion.Item>
       ))}
     </Accordion.Root>
   );
@@ -71,6 +71,23 @@ describe('Accordion', () => {
       expect.stringMatching(/Hide this section$/)
     );
     expect(onValueChange).toHaveBeenLastCalledWith(['writing'], { beforeHydration: false });
+  });
+
+  test('marks each item, trigger and content with data-state', async () => {
+    render(<Example defaultValue={['specialists']} />);
+    await upgraded();
+    const parts = (name: RegExp) => {
+      const trigger = button(name);
+      return [
+        trigger.closest('[data-accordion-item]'),
+        trigger,
+        document.getElementById(trigger.getAttribute('aria-controls') ?? ''),
+      ];
+    };
+    parts(/^Writing well for the web/).forEach((part) => expect(part).toHaveAttribute('data-state', 'closed'));
+    parts(/^Writing well for specialists/).forEach((part) => expect(part).toHaveAttribute('data-state', 'open'));
+    fireEvent.click(button(/^Writing well for the web/));
+    parts(/^Writing well for the web/).forEach((part) => expect(part).toHaveAttribute('data-state', 'open'));
   });
 
   test('"show all" opens every section, then hides them all', async () => {
@@ -122,13 +139,13 @@ describe('Accordion', () => {
         <>
           <Accordion.Root rememberExpanded={false}>
             {['first', ...(more ? ['second'] : [])].map((value) => (
-              <Accordion.Section key={value} value={value}>
+              <Accordion.Item key={value} value={value}>
                 <Accordion.Fallback>{value}</Accordion.Fallback>
                 <Accordion.Trigger>
                   <Accordion.Label>{value}</Accordion.Label>
                 </Accordion.Trigger>
                 <Accordion.Content id={`${value}-content`}>{value} content</Accordion.Content>
-              </Accordion.Section>
+              </Accordion.Item>
             ))}
           </Accordion.Root>
           <button type="button" onClick={() => setMore(true)}>
@@ -153,14 +170,14 @@ describe('Accordion', () => {
     const outer = vi.fn();
     render(
       <Accordion.Root rememberExpanded={false} onValueChange={outer}>
-        <Accordion.Section value="outer">
+        <Accordion.Item value="outer">
           <Accordion.Trigger>
             <Accordion.Label>Outer</Accordion.Label>
           </Accordion.Trigger>
           <Accordion.Content id="outer-content">
             <Example />
           </Accordion.Content>
-        </Accordion.Section>
+        </Accordion.Item>
       </Accordion.Root>
     );
     await upgraded();

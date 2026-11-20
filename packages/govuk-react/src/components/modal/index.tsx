@@ -56,6 +56,13 @@ export function Title({ className, ...props }: TitleProps) {
   return <Primitives.Title className={clsx('govuk-heading-m', className)} {...props} />;
 }
 
+export type DescriptionProps = Omit<Primitives.DescriptionProps, 'asChild'>;
+
+/** Text that describes the modal, read out when it opens. */
+export function Description({ className, ...props }: DescriptionProps) {
+  return <Primitives.Description className={clsx('govuk-body', className)} {...props} />;
+}
+
 export type CompositeProps = Omit<RootProps, 'title'> & {
   /** The text of the button that opens the modal. */
   triggerText: ReactNode;

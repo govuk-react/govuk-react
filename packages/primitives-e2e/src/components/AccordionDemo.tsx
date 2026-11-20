@@ -40,7 +40,7 @@ export default function AccordionDemo({ id, controlled = false }: { id: string; 
           </Accordion.ShowAll>
         </Accordion.Controls>
         {sections.map((section) => (
-          <Accordion.Section key={section.value} value={section.value}>
+          <Accordion.Item key={section.value} value={section.value}>
             <h2>
               <Accordion.Fallback>{section.heading}</Accordion.Fallback>
               <Accordion.Trigger>
@@ -54,7 +54,7 @@ export default function AccordionDemo({ id, controlled = false }: { id: string; 
               </Accordion.Fallback>
             )}
             <Accordion.Content id={`${id}-${section.value}`}>{section.heading} content</Accordion.Content>
-          </Accordion.Section>
+          </Accordion.Item>
         ))}
       </Accordion.Root>
       <p data-testid={`last-${id}`}>{last}</p>

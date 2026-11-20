@@ -77,6 +77,31 @@ describe('Tabs', () => {
     expect(tab('Past month')).toHaveAttribute('aria-selected', 'true');
   });
 
+  test('in a right-to-left direction, the left arrow moves forward', async () => {
+    render(
+      <div dir="rtl" style={{ direction: 'rtl' }}>
+        <Example />
+      </div>
+    );
+    await upgraded();
+    const tab = (name: string) => screen.getByRole('tab', { name });
+    fireEvent.keyDown(tab('Past day'), { key: 'ArrowLeft' });
+    expect(tab('Past week')).toHaveAttribute('aria-selected', 'true');
+    fireEvent.keyDown(tab('Past week'), { key: 'ArrowRight' });
+    expect(tab('Past day')).toHaveAttribute('aria-selected', 'true');
+  });
+
+  test('marks the parts with data-orientation', async () => {
+    const { container } = render(<Example orientation="vertical" />);
+    await upgraded();
+    [
+      container.firstElementChild,
+      screen.getByRole('tablist'),
+      screen.getByRole('tab', { name: 'Past day' }),
+      screen.getByRole('tabpanel', { name: 'Past day' }),
+    ].forEach((part) => expect(part).toHaveAttribute('data-orientation', 'vertical'));
+  });
+
   test('a controlled value drives the selected tab', async () => {
     function Controlled() {
       const [value, setValue] = useState('day');
