@@ -39,7 +39,7 @@ describe('Tabs', () => {
     expect(screen.getByRole('tab', { name: 'Past week' }).closest('li')).toHaveClass('govuk-tabs__list-item--selected');
     expect(screen.getByText('Day content')).toHaveClass('govuk-tabs__panel--hidden');
     expect(screen.getByText('Week content')).not.toHaveClass('govuk-tabs__panel--hidden');
-    expect(onValueChange).toHaveBeenCalledWith('past-week');
+    expect(onValueChange).toHaveBeenCalledWith('past-week', { beforeHydration: false });
   });
 
   test('RadiosComposite makes each tab a label for its panel’s radio', () => {

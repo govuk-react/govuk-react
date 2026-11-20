@@ -38,8 +38,21 @@ test('controlled: a modal opened before hydration is reported, so the app can ke
   release();
   await expect(page.getByTestId('controlled')).toHaveAttribute('data-hydrated', 'true');
   await expect(page.getByTestId('controlled-open')).toHaveText('true');
+  await expect(page.getByTestId('controlled-asked')).toHaveText('true before hydration');
   await expect(dialog).toBeVisible();
   await page.keyboard.press('Escape');
   await expect(dialog).toBeHidden();
+  await expect(page.getByTestId('controlled-open')).toHaveText('false');
+});
+
+test('controlled: a modal opened before hydration closes when the app does not adopt it', async ({ page }) => {
+  const release = await holdReact(page);
+  await page.goto('/test/modal-ignored', { waitUntil: 'commit' });
+  await page.getByTestId('controlled').getByRole('button', { name: 'Open', exact: true }).click();
+  await expect(page.locator('#controlled-dialog')).toBeVisible();
+  release();
+  await expect(page.getByTestId('controlled')).toHaveAttribute('data-hydrated', 'true');
+  await expect(page.getByTestId('controlled-asked')).toHaveText('true before hydration');
+  await expect(page.locator('#controlled-dialog')).toBeHidden();
   await expect(page.getByTestId('controlled-open')).toHaveText('false');
 });

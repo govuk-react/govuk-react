@@ -1,10 +1,13 @@
 'use client';
 
 import * as React from 'react';
-import { useEffect, useRef } from 'react';
+import { useEffect, useReducer, useRef } from 'react';
 import type { ComponentProps } from 'react';
+import { early, live, type ChangeDetails } from '../utils/change-details.js';
 import { Slot } from '../utils/slot.js';
 import { tagName, type DisclosureElement } from './element.js';
+
+export type { ChangeDetails };
 
 /*
  * Headless disclosure: unstyled parts over the <govuk-react-disclosure> element (./element.ts),
@@ -21,7 +24,7 @@ export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'onChange'> & {
   /** Whether the content starts shown once the element upgrades. */
   defaultOpen?: boolean;
   /** Called when the user shows or hides the content. */
-  onOpenChange?: (open: boolean) => void;
+  onOpenChange?: (open: boolean, details: ChangeDetails) => void;
 };
 
 const isDisclosure = (element: HTMLElement): element is DisclosureElement => 'pickedOpen' in element;
@@ -30,6 +33,7 @@ export function Root({ media, open, defaultOpen, onOpenChange, ...props }: RootP
   const element = useRef<HTMLElement>(null);
   const onOpenChangeRef = useRef(onOpenChange);
   const synced = useRef(false);
+  const [, render] = useReducer((count: number) => count + 1, 0);
 
   useEffect(() => {
     onOpenChangeRef.current = onOpenChange;
@@ -40,7 +44,7 @@ export function Root({ media, open, defaultOpen, onOpenChange, ...props }: RootP
     if (!node) return undefined;
     // A nested disclosure's change bubbles through this one.
     const onChange = (event: CustomEvent<{ open: boolean }>) => {
-      if (event.target === node) onOpenChangeRef.current?.(event.detail.open);
+      if (event.target === node) onOpenChangeRef.current?.(event.detail.open, live);
     };
     node.addEventListener('govuk-react-disclosure:change', onChange);
     return () => node.removeEventListener('govuk-react-disclosure:change', onChange);
@@ -50,19 +54,21 @@ export function Root({ media, open, defaultOpen, onOpenChange, ...props }: RootP
   // hydration still works. That click is then reported, rather than undone.
   useEffect(() => {
     const node = element.current;
-    if (!node || open === undefined) {
-      node?.removeAttribute('open');
-      return;
-    }
+    if (!node) return;
     if (!synced.current) {
       synced.current = true;
       const picked = isDisclosure(node) ? node.pickedOpen : undefined;
-      if (picked !== undefined && picked !== open && onOpenChangeRef.current) {
-        onOpenChangeRef.current(picked);
-        return;
+      if (picked !== undefined && picked !== (open ?? defaultOpen ?? false) && onOpenChangeRef.current) {
+        onOpenChangeRef.current(picked, early);
+        if (open !== undefined) {
+          // The click shows until the next render, which adopts it or goes back to `open`.
+          render();
+          return;
+        }
       }
     }
-    node.setAttribute('open', String(open));
+    if (open === undefined) node.removeAttribute('open');
+    else node.setAttribute('open', String(open));
   });
 
   return React.createElement(tagName, {

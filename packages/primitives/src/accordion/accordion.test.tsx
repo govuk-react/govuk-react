@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
+import { hydrateRoot } from 'react-dom/client';
+import { renderToString } from 'react-dom/server';
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import * as Accordion from '.';
 
@@ -68,7 +70,7 @@ describe('Accordion', () => {
       'aria-label',
       expect.stringMatching(/Hide this section$/)
     );
-    expect(onValueChange).toHaveBeenLastCalledWith(['writing']);
+    expect(onValueChange).toHaveBeenLastCalledWith(['writing'], { beforeHydration: false });
   });
 
   test('"show all" opens every section, then hides them all', async () => {
@@ -165,6 +167,41 @@ describe('Accordion', () => {
     fireEvent.click(button(/^Outer/));
     fireEvent.click(button(/^Writing well for the web/));
     expect(outer).toHaveBeenCalledTimes(1);
-    expect(outer).toHaveBeenLastCalledWith(['outer']);
+    expect(outer).toHaveBeenLastCalledWith(['outer'], { beforeHydration: false });
   });
+});
+
+test('server markup: a section opened before hydration is reported as such, and closed when the handler does not adopt it', async () => {
+  const onValueChange = vi.fn();
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  container.innerHTML = renderToString(<Example value={[]} onValueChange={onValueChange} />);
+  await upgraded();
+  fireEvent.click(button(/^Writing well for the web/));
+  expect(screen.getByText('Writing well for the web content')).toBeVisible();
+  await act(async () => {
+    hydrateRoot(container, <Example value={[]} onValueChange={onValueChange} />);
+  });
+  await upgraded();
+  expect(onValueChange.mock.calls).toEqual([[['writing'], { beforeHydration: true }]]);
+  expect(button(/^Writing well for the web/)).toHaveAttribute('aria-expanded', 'false');
+  container.remove();
+  window.sessionStorage.clear();
+});
+
+test('server markup: an uncontrolled section opened before hydration is reported as such', async () => {
+  const onValueChange = vi.fn();
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  container.innerHTML = renderToString(<Example onValueChange={onValueChange} />);
+  await upgraded();
+  fireEvent.click(button(/^Writing well for the web/));
+  await act(async () => {
+    hydrateRoot(container, <Example onValueChange={onValueChange} />);
+  });
+  await upgraded();
+  expect(onValueChange.mock.calls).toEqual([[['writing'], { beforeHydration: true }]]);
+  expect(button(/^Writing well for the web/)).toHaveAttribute('aria-expanded', 'true');
+  container.remove();
+  window.sessionStorage.clear();
 });

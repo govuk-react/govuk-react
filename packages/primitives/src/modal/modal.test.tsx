@@ -41,7 +41,7 @@ test('with asChild, reports through the dialogâ€™s own ref as well as the childâ
   const dialog = childRef.current;
   if (!dialog) throw new Error('No dialog');
   dialog.setAttribute('open', '');
-  await waitFor(() => expect(onOpenChange).toHaveBeenCalledExactlyOnceWith(true));
+  await waitFor(() => expect(onOpenChange).toHaveBeenCalledExactlyOnceWith(true, { beforeHydration: false }));
   unmount();
   expect(childRef.current).toBeNull();
 });

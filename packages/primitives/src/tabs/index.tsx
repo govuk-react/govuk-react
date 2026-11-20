@@ -1,10 +1,13 @@
 'use client';
 
 import * as React from 'react';
-import { createContext, useContext, useEffect, useId, useRef } from 'react';
+import { createContext, useContext, useEffect, useId, useReducer, useRef } from 'react';
 import type { ComponentProps, ReactElement, ReactNode } from 'react';
+import { early, live, type ChangeDetails } from '../utils/change-details.js';
 import { Slot } from '../utils/slot.js';
 import { tagName, type TabsElement } from './element.js';
+
+export type { ChangeDetails };
 
 /*
  * Headless tabs: unstyled parts over the <govuk-react-tabs> element (./element.ts), which adds
@@ -24,7 +27,7 @@ import { tagName, type TabsElement } from './element.js';
 const TabsContext = createContext<{
   selected?: string;
   name?: string;
-  onValueChange?: (value: string) => void;
+  onValueChange?: (value: string, details: ChangeDetails) => void;
 }>({});
 
 const radioId = (name: string, value: string) => `${name}-${value}`;
@@ -36,7 +39,7 @@ type BaseRootProps = {
   /** The tab selected at first, when uncontrolled. Defaults to the first tab. */
   defaultValue?: string;
   /** Called when the user selects a tab. */
-  onValueChange?: (value: string) => void;
+  onValueChange?: (value: string, details: ChangeDetails) => void;
   /** The axis of the arrow keys. */
   orientation?: 'horizontal' | 'vertical';
   /** The panels' radio group name. Defaults to a generated one. */
@@ -93,6 +96,7 @@ function TabsRoot({
   // hydration still switches tab. That choice fired no onChange that React saw, so it is reported
   // once.
   const synced = useRef(false);
+  const [, render] = useReducer((count: number) => count + 1, 0);
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
@@ -100,9 +104,12 @@ function TabsRoot({
       synced.current = true;
       const picked = node.pickedValue;
       if (picked !== undefined) {
-        onValueChange?.(picked);
-        // Controlled: leave the pick showing, for the app to adopt.
-        if (value !== undefined && picked !== value) return;
+        onValueChange?.(picked, early);
+        if (value !== undefined && picked !== value) {
+          // The pick shows until the next render, which adopts it or goes back to `value`.
+          render();
+          return;
+        }
       }
     }
     if (value === undefined) node.removeAttribute('value');
@@ -237,7 +244,7 @@ function Panel({
       hidden
       data-tabs-fallback={radios ? '' : undefined}
       suppressHydrationWarning
-      onChange={() => onValueChange?.(value)}
+      onChange={() => onValueChange?.(value, live)}
     />
   );
   const shared = {

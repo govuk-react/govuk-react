@@ -18,7 +18,7 @@ const tablet = '(min-width: 40.0625em)';
 
 type BaseRootProps = Omit<Markup.RootProps, 'defaultValue' | 'onChange'> & {
   /** Called when the user selects a tab. */
-  onValueChange?: (value: string) => void;
+  onValueChange?: (value: string, details: Primitives.ChangeDetails) => void;
   /** The panels' radio group name. Defaults to a generated one. */
   name?: string;
 };

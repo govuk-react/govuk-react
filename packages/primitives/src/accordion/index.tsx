@@ -1,10 +1,13 @@
 'use client';
 
 import * as React from 'react';
-import { createContext, useContext, useEffect, useRef } from 'react';
+import { createContext, useContext, useEffect, useReducer, useRef } from 'react';
 import type { ComponentProps } from 'react';
+import { early, live, type ChangeDetails } from '../utils/change-details.js';
 import { Slot } from '../utils/slot.js';
 import { tagName, type AccordionElement } from './element.js';
+
+export type { ChangeDetails };
 
 /*
  * Headless accordion: unstyled parts over the <govuk-react-accordion> element (./element.ts).
@@ -36,7 +39,7 @@ export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'defaultValue' |
   /** The sections open at first. */
   defaultValue?: string[];
   /** Called with the open sections' values when the user opens or closes a section. */
-  onValueChange?: (value: string[]) => void;
+  onValueChange?: (value: string[], details: ChangeDetails) => void;
   /** Whether to remember the open sections for the rest of the session, keyed by content id. Defaults to `true`, as in govuk-frontend. */
   rememberExpanded?: boolean;
   /** Each button's text while its section is closed. Defaults to "Show". */
@@ -79,6 +82,7 @@ export function Root({
   const element = useRef<HTMLElement>(null);
   const onValueChangeRef = useRef(onValueChange);
   const synced = useRef(false);
+  const [, render] = useReducer((count: number) => count + 1, 0);
 
   useEffect(() => {
     onValueChangeRef.current = onValueChange;
@@ -89,7 +93,7 @@ export function Root({
     if (!node) return undefined;
     // A nested accordion's change bubbles through this one.
     const onChange = (event: CustomEvent<{ value: string[] }>) => {
-      if (event.target === node) onValueChangeRef.current?.(event.detail.value);
+      if (event.target === node) onValueChangeRef.current?.(event.detail.value, live);
     };
     node.addEventListener('govuk-react-accordion:change', onChange);
     return () => node.removeEventListener('govuk-react-accordion:change', onChange);
@@ -98,21 +102,24 @@ export function Root({
   // `value` is set once hydrated, so the server markup is uncontrolled and a click before
   // hydration still works. That click is then reported, rather than undone.
   const controlled = value?.join(' ');
+  const initialValue = (value ?? defaultValue ?? []).join(' ');
   useEffect(() => {
     const node = element.current;
-    if (!node || controlled === undefined) {
-      node?.removeAttribute('value');
-      return;
-    }
+    if (!node) return;
     if (!synced.current) {
       synced.current = true;
       const picked = isAccordion(node) ? node.pickedValue : undefined;
-      if (picked !== undefined && picked.join(' ') !== controlled && onValueChangeRef.current) {
-        onValueChangeRef.current(picked);
-        return;
+      if (picked !== undefined && picked.join(' ') !== initialValue && onValueChangeRef.current) {
+        onValueChangeRef.current(picked, early);
+        if (controlled !== undefined) {
+          // The pick shows until the next render, which adopts it or goes back to `value`.
+          render();
+          return;
+        }
       }
     }
-    node.setAttribute('value', controlled);
+    if (controlled === undefined) node.removeAttribute('value');
+    else node.setAttribute('value', controlled);
   });
 
   const initial = value ?? defaultValue;

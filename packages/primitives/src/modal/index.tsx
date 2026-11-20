@@ -1,10 +1,13 @@
 'use client';
 
 import * as React from 'react';
-import { createContext, useCallback, useContext, useEffect, useId, useRef } from 'react';
+import { createContext, useCallback, useContext, useEffect, useId, useReducer, useRef } from 'react';
 import type { ComponentProps, ReactNode, SyntheticEvent } from 'react';
+import { early, live, type ChangeDetails } from '../utils/change-details.js';
 import { composeRefs, Slot } from '../utils/slot.js';
 import { tagName } from './element.js';
+
+export type { ChangeDetails };
 
 /*
  * Headless modal dialog: unstyled parts over a native `dialog` and the <govuk-react-modal>
@@ -22,7 +25,7 @@ import { tagName } from './element.js';
 const ModalContext = createContext<{
   dialogId?: string;
   titleId?: string;
-  onOpenChange?: (open: boolean) => void;
+  onOpenChange?: (open: boolean, details: ChangeDetails) => void;
 }>({});
 
 export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'onChange'> & {
@@ -34,7 +37,7 @@ export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'onChange'> & {
    */
   open?: boolean;
   /** Called when the dialog opens or closes. */
-  onOpenChange?: (open: boolean) => void;
+  onOpenChange?: (open: boolean, details: ChangeDetails) => void;
   /** The dialog's id, which the buttons' `commandfor` names. Defaults to a generated one. */
   dialogId?: string;
 };
@@ -44,6 +47,7 @@ export function Root({ children, open, onOpenChange, dialogId: dialogIdProp, ...
   const dialogId = dialogIdProp ?? generatedId;
   const element = useRef<HTMLElement>(null);
   const synced = useRef(false);
+  const [, render] = useReducer((count: number) => count + 1, 0);
   // `open` is set once hydrated, so the server markup is uncontrolled and the buttons work before
   // hydration. A dialog opened by then is reported by Content, rather than closed.
   useEffect(() => {
@@ -55,7 +59,11 @@ export function Root({ children, open, onOpenChange, dialogId: dialogIdProp, ...
     if (!synced.current) {
       synced.current = true;
       const dialog = document.getElementById(dialogId);
-      if (onOpenChange && !open && dialog instanceof HTMLDialogElement && dialog.open) return;
+      if (onOpenChange && !open && dialog instanceof HTMLDialogElement && dialog.open) {
+        // The dialog stays open until the next render, which adopts it or closes it.
+        render();
+        return;
+      }
     }
     node.setAttribute('open', String(open));
   });
@@ -125,7 +133,7 @@ export function Content({ asChild, id, onClose, ref, ...props }: ContentProps) {
     reported.current = dialog.open;
     // A controlled dialog that arrives at `open` is no news.
     if (dialog.closest(tagName)?.getAttribute('open') === String(dialog.open)) return;
-    onOpenChange.current?.(dialog.open);
+    onOpenChange.current?.(dialog.open, live);
   }, []);
   // A dialog the user opened before hydration, through its invoker command or the element, fired
   // nothing React heard, so report it once.
@@ -134,7 +142,7 @@ export function Content({ asChild, id, onClose, ref, ...props }: ContentProps) {
     const dialog = dialogRef.current;
     if (dialog?.open && reported.current === undefined) {
       reported.current = true;
-      onOpenChange.current?.(true);
+      onOpenChange.current?.(true, early);
     }
   }, []);
   // Not every browser fires `toggle` on dialogs, so watch the dialog's `open` attribute.
@@ -149,7 +157,7 @@ export function Content({ asChild, id, onClose, ref, ...props }: ContentProps) {
       const root = dialog.closest(tagName);
       const onRequest = (event: CustomEvent<{ open: boolean }>) => {
         if (event.target !== root || event.detail.open === dialog.open) return;
-        onOpenChange.current?.(event.detail.open);
+        onOpenChange.current?.(event.detail.open, live);
       };
       root?.addEventListener('govuk-react-modal:change', onRequest);
       return () => {

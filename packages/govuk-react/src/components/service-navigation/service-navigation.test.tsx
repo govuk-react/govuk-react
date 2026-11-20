@@ -31,7 +31,7 @@ describe('ServiceNavigation', () => {
     fireEvent.click(button);
     expect(button).toHaveAttribute('aria-expanded', 'true');
     expect(screen.getByRole('list')).toBeVisible();
-    expect(onOpenChange).toHaveBeenLastCalledWith(true);
+    expect(onOpenChange).toHaveBeenLastCalledWith(true, { beforeHydration: false });
   });
 });
 
@@ -49,6 +49,6 @@ describe('ServiceNavigation.DetailsComposite', () => {
     if (!details) throw new Error('No details');
     details.open = true;
     fireEvent(details, new Event('toggle'));
-    expect(onOpenChange).toHaveBeenLastCalledWith(true);
+    expect(onOpenChange).toHaveBeenLastCalledWith(true, { beforeHydration: false });
   });
 });
