@@ -80,12 +80,12 @@ type PartProps<E extends keyof React.JSX.IntrinsicElements> = ComponentProps<E> 
   asChild?: boolean;
 };
 
-export type ToggleProps = PartProps<'button'>;
+export type TriggerProps = PartProps<'button'>;
 
 /** The show and hide button. Hidden until the element upgrades. */
-export function Toggle({ asChild, ...props }: ToggleProps) {
+export function Trigger({ asChild, ...props }: TriggerProps) {
   // The element owns `hidden`, `aria-hidden` and `aria-expanded` after upgrade.
-  const shared = { 'data-disclosure-toggle': '', hidden: true, suppressHydrationWarning: true };
+  const shared = { 'data-disclosure-trigger': '', hidden: true, suppressHydrationWarning: true };
   if (asChild) return <Slot {...shared} {...props} />;
   return <button type="button" {...shared} {...props} />;
 }

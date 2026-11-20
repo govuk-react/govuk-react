@@ -41,13 +41,13 @@ export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'onChange'> & {
   /** Called when the user confirms an option. Call `preventDefault` on the event to stop `submitOnConfirm`. */
   onConfirm?: (value: string, event: CustomEvent<{ value: string }>) => void;
   /** Heard while the query is too short. `%{count}` is `minLength`. */
-  statusQueryTooShort?: Translation;
+  queryTooShortAnnouncement?: Translation;
   /** Heard when no option matches. */
-  statusNoResults?: Translation;
+  noResultsAnnouncement?: Translation;
   /** Heard after the results while an option is highlighted. `%{option}`, `%{position}` and `%{count}`. */
-  statusSelectedOption?: Translation;
+  selectedOptionAnnouncement?: Translation;
   /** Heard when options match. `%{count}` is the number of options. */
-  statusResults?: Translation;
+  resultsAnnouncement?: Translation;
 };
 
 const isAutocomplete = (element: HTMLElement): element is AutocompleteElement => 'query' in element;
@@ -59,10 +59,10 @@ export function Root({
   submitOnConfirm,
   onQueryChange,
   onConfirm,
-  statusQueryTooShort,
-  statusNoResults,
-  statusSelectedOption,
-  statusResults,
+  queryTooShortAnnouncement,
+  noResultsAnnouncement,
+  selectedOptionAnnouncement,
+  resultsAnnouncement,
   ...props
 }: RootProps) {
   const element = useRef<HTMLElement>(null);
@@ -105,10 +105,10 @@ export function Root({
     filter,
     'confirm-on-blur': confirmOnBlur === false ? 'false' : undefined,
     'submit-on-confirm': submitOnConfirm ? '' : undefined,
-    ...translationAttributes('status-query-too-short', statusQueryTooShort),
-    ...translationAttributes('status-no-results', statusNoResults),
-    ...translationAttributes('status-selected-option', statusSelectedOption),
-    ...translationAttributes('status-results', statusResults),
+    ...translationAttributes('query-too-short-announcement', queryTooShortAnnouncement),
+    ...translationAttributes('no-results-announcement', noResultsAnnouncement),
+    ...translationAttributes('selected-option-announcement', selectedOptionAnnouncement),
+    ...translationAttributes('results-announcement', resultsAnnouncement),
   });
 }
 

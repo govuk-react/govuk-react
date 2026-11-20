@@ -11,10 +11,10 @@ import { joinIds } from '../../utils/join-ids.js';
 
 export type RootProps = Omit<
   Primitives.RootProps,
-  | 'noFileChosen'
-  | 'multipleFilesChosen'
-  | 'enteredDropZone'
-  | 'leftDropZone'
+  | 'noFileChosenText'
+  | 'multipleFilesChosenText'
+  | 'enteredDropZoneAnnouncement'
+  | 'leftDropZoneAnnouncement'
   | 'emptyClass'
   | 'draggingClass'
   | 'disabledClass'
@@ -31,10 +31,10 @@ export function Root({
 }: RootProps) {
   return (
     <Primitives.Root
-      noFileChosen={noFileChosenText}
-      multipleFilesChosen={multipleFilesChosenText}
-      enteredDropZone={enteredDropZoneText}
-      leftDropZone={leftDropZoneText}
+      noFileChosenText={noFileChosenText}
+      multipleFilesChosenText={multipleFilesChosenText}
+      enteredDropZoneAnnouncement={enteredDropZoneText}
+      leftDropZoneAnnouncement={leftDropZoneText}
       emptyClass="govuk-file-upload-button--empty"
       draggingClass="govuk-file-upload-button--dragging"
       disabledClass="govuk-file-upload-wrapper--disabled"
@@ -54,11 +54,11 @@ export function Wrapper(props: WrapperProps) {
   );
 }
 
-export type ButtonProps = Omit<Primitives.ButtonProps, 'asChild'>;
+export type ButtonProps = Omit<Primitives.TriggerProps, 'asChild'>;
 
 /** Opens the file picker, and takes dropped files. Shown once JavaScript runs, before `FileUpload`. */
 export function Button({ className, ...props }: ButtonProps) {
-  return <Primitives.Button className={clsx('govuk-file-upload-button', className)} {...props} />;
+  return <Primitives.Trigger className={clsx('govuk-file-upload-button', className)} {...props} />;
 }
 
 export type StatusProps = Omit<Primitives.StatusProps, 'asChild'>;

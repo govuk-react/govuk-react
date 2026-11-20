@@ -13,7 +13,7 @@
  *
  * Markup inside the element:
  * - `input[type="file"]`: the field, with an `id` and a `label`. Hidden on upgrade.
- * - `button[data-file-upload-button]`: rendered `hidden`, with `type="button"`.
+ * - `button[data-file-upload-trigger]`: rendered `hidden`, with `type="button"`.
  *   - `[data-file-upload-status]`: which files are chosen.
  *   - `[data-file-upload-separator]` (optional): between the label and the button's text in its
  *     accessible name, such as a visually hidden comma.
@@ -26,9 +26,9 @@
  * over the drop zone, and the drop zone gets `data-disabled`.
  *
  * Attributes:
- * - `no-file-chosen`, `multiple-files-chosen`, `entered-drop-zone`, `left-drop-zone`: the text,
+ * - `no-file-chosen-text`, `multiple-files-chosen-text`, `entered-drop-zone-announcement`, `left-drop-zone-announcement`: the text,
  *   English by default, with `%{count}` for the number of files. Add a plural form to the name,
- *   such as `multiple-files-chosen-one`, for a message for each form.
+ *   such as `multiple-files-chosen-text-one`, for a message for each form.
  * - `empty-class`, `dragging-class`: classes for the button while empty and while dragging.
  * - `disabled-class`: classes for the drop zone while the input is disabled.
  */
@@ -56,21 +56,26 @@ declare global {
 
 /** govuk-frontend's English text. */
 export const defaults = {
-  'no-file-chosen': 'No file chosen',
-  'multiple-files-chosen': { one: '%{count} file chosen', other: '%{count} files chosen' },
-  'entered-drop-zone': 'Entered drop zone',
-  'left-drop-zone': 'Left drop zone',
+  'no-file-chosen-text': 'No file chosen',
+  'multiple-files-chosen-text': { one: '%{count} file chosen', other: '%{count} files chosen' },
+  'entered-drop-zone-announcement': 'Entered drop zone',
+  'left-drop-zone-announcement': 'Left drop zone',
 } satisfies Record<string, Translation>;
 
 /** What the status says for the files chosen. */
 export function statusText(
   files: ArrayLike<{ name: string }>,
-  messages: { 'no-file-chosen'?: Translation; 'multiple-files-chosen'?: Translation },
+  messages: { 'no-file-chosen-text'?: Translation; 'multiple-files-chosen-text'?: Translation },
   locale?: string
 ) {
-  if (files.length === 0) return translate(messages['no-file-chosen'] ?? defaults['no-file-chosen'], 0, locale);
+  if (files.length === 0)
+    return translate(messages['no-file-chosen-text'] ?? defaults['no-file-chosen-text'], 0, locale);
   if (files.length === 1) return files[0].name;
-  return translate(messages['multiple-files-chosen'] ?? defaults['multiple-files-chosen'], files.length, locale);
+  return translate(
+    messages['multiple-files-chosen-text'] ?? defaults['multiple-files-chosen-text'],
+    files.length,
+    locale
+  );
 }
 
 const countFiles = (items: DataTransferItemList) => Array.from(items).filter((item) => item.kind === 'file').length;
@@ -127,11 +132,11 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       if (this.dropZone.contains(event.target)) {
         if (event.dataTransfer && this.canDrop(event.dataTransfer) && !this.dragging) {
           this.setDragging(true);
-          this.announce('entered-drop-zone');
+          this.announce('entered-drop-zone-announcement');
         }
       } else if (this.dragging) {
         this.setDragging(false);
-        this.announce('left-drop-zone');
+        this.announce('left-drop-zone-announcement');
       }
     };
 
@@ -139,7 +144,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     private readonly onDocumentDragLeave = () => {
       if (!this.enteredAnotherElement && this.dragging && !this.button?.disabled) {
         this.setDragging(false);
-        this.announce('left-drop-zone');
+        this.announce('left-drop-zone-announcement');
       }
       this.enteredAnotherElement = false;
     };
@@ -188,7 +193,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     private setup() {
       const input = this.own<HTMLInputElement>('input[type="file"]');
-      const button = this.own<HTMLButtonElement>('button[data-file-upload-button]');
+      const button = this.own<HTMLButtonElement>('button[data-file-upload-trigger]');
       if (!input || !button) return;
       // A new input, or a new id from React, rather than the one the element gave it.
       if (input.id !== `${this.fieldId}-input`) this.fieldId = input.id;
@@ -253,8 +258,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
           statusText(
             files ?? [],
             {
-              'no-file-chosen': this.message('no-file-chosen'),
-              'multiple-files-chosen': this.message('multiple-files-chosen'),
+              'no-file-chosen-text': this.message('no-file-chosen-text'),
+              'multiple-files-chosen-text': this.message('multiple-files-chosen-text'),
             },
             this.locale
           )
@@ -283,7 +288,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       classesOf(this.getAttribute('dragging-class')).forEach((name) => button.classList.toggle(name, dragging));
     }
 
-    private announce(name: 'entered-drop-zone' | 'left-drop-zone') {
+    private announce(name: 'entered-drop-zone-announcement' | 'left-drop-zone-announcement') {
       const announcements = this.own('[data-file-upload-announcements]');
       // Replaces the text node every time, so screen readers hear the same message again.
       if (announcements) announcements.textContent = translate(this.message(name), 0, this.locale);

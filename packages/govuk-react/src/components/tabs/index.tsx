@@ -151,11 +151,11 @@ export type RadioTabProps = TabProps & {
 /** A tab in a `RadiosRoot`: a label for its panel's radio. */
 export function RadioTab({ value, name, children, ...props }: RadioTabProps) {
   return (
-    <Primitives.RadioTrigger value={value} name={name} asChild>
+    <Primitives.RadiosTrigger value={value} name={name} asChild>
       <Markup.Tab asChild {...props}>
         <label>{children}</label>
       </Markup.Tab>
-    </Primitives.RadioTrigger>
+    </Primitives.RadiosTrigger>
   );
 }
 
@@ -182,9 +182,9 @@ export type RadioPanelProps = PanelProps;
 export function RadioPanel({ value, selected, name, ...props }: RadioPanelProps) {
   const isSelected = useSelected(value, selected);
   return (
-    <Primitives.RadioContent value={value} name={name} defaultSelected={isSelected} asChild>
+    <Primitives.RadiosContent value={value} name={name} defaultSelected={isSelected} asChild>
       <Markup.Panel selected={isSelected} {...props} />
-    </Primitives.RadioContent>
+    </Primitives.RadiosContent>
   );
 }
 

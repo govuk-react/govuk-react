@@ -13,10 +13,10 @@ export default function ExitThisPageDemo({ id }: { id: string }) {
     <div ref={hydrated} data-testid={`exit-${id}`} data-hydrated="false" suppressHydrationWarning>
       <ExitThisPage.SkipLink href="/?exited">Exit this page</ExitThisPage.SkipLink>
       <ExitThisPage.Root hideContentClass="hide-content" lightOnClass="on">
-        <ExitThisPage.Button href="/?exited">
+        <ExitThisPage.Trigger href="/?exited">
           Exit this page now
           <ExitThisPage.Indicator />
-        </ExitThisPage.Button>
+        </ExitThisPage.Trigger>
         <ExitThisPage.Status />
       </ExitThisPage.Root>
       <input aria-label="Name" />

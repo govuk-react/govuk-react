@@ -51,12 +51,12 @@ export function Root({
       maxLength={maxLength ?? maxWords}
       countType={countType ?? (maxWords && maxLength === undefined ? 'words' : 'length')}
       threshold={threshold}
-      charactersUnderLimit={charactersUnderLimitText}
-      charactersAtLimit={charactersAtLimitText}
-      charactersOverLimit={charactersOverLimitText}
-      wordsUnderLimit={wordsUnderLimitText}
-      wordsAtLimit={wordsAtLimitText}
-      wordsOverLimit={wordsOverLimitText}
+      charactersUnderLimitText={charactersUnderLimitText}
+      charactersAtLimitText={charactersAtLimitText}
+      charactersOverLimitText={charactersOverLimitText}
+      wordsUnderLimitText={wordsUnderLimitText}
+      wordsAtLimitText={wordsAtLimitText}
+      wordsOverLimitText={wordsOverLimitText}
       hiddenDescriptionClass="govuk-visually-hidden"
       withinLimitClass="govuk-hint"
       overLimitClass="govuk-error-message"

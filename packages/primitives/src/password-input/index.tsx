@@ -64,11 +64,11 @@ export function Input({ asChild, ...props }: InputProps) {
   return <input type="password" data-password-input="" suppressHydrationWarning {...props} />;
 }
 
-export type ToggleProps = PartProps<'button'>;
+export type TriggerProps = PartProps<'button'>;
 
 /** The show and hide button. Hidden until the element upgrades, which then sets its text and label. */
-export function Toggle({ asChild, children = 'Show', ...props }: ToggleProps) {
-  const shared = { 'data-password-toggle': '', hidden: true, suppressHydrationWarning: true };
+export function Trigger({ asChild, children = 'Show', ...props }: TriggerProps) {
+  const shared = { 'data-password-trigger': '', hidden: true, suppressHydrationWarning: true };
   if (asChild)
     return (
       <Slot {...shared} {...props}>

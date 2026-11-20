@@ -17,7 +17,7 @@ describe('ServiceNavigation', () => {
   test('renders govuk-frontend-react’s markup, inside the disclosure element', () => {
     const html = renderToStaticMarkup(<ServiceNavigation.Composite serviceName="Service name" items={items} />);
     const unwrapped = html.replace(/<govuk-react-disclosure[^>]*>/, '').replace('</govuk-react-disclosure>', '');
-    const strip = (markup: string) => markup.replace(/ data-disclosure-(toggle|content)=""/g, '');
+    const strip = (markup: string) => markup.replace(/ data-disclosure-(trigger|content)=""/g, '');
     expect(strip(unwrapped)).toBe(renderToStaticMarkup(<Markup.Composite serviceName="Service name" items={items} />));
   });
 

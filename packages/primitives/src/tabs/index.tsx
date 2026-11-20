@@ -15,7 +15,7 @@ import { tagName, type TabsElement } from './element.js';
  *
  * Without JavaScript, `Root`'s tabs are links to every panel, and `RadiosRoot`'s are labels for the
  * panels' radios, so they switch panels without JavaScript too. Use `Trigger` and `Content` in a
- * `Root`, and `RadioTrigger` and `RadioContent` in a `RadiosRoot`.
+ * `Root`, and `RadiosTrigger` and `RadiosContent` in a `RadiosRoot`.
  *
  * Context only fills in defaults: in an island without a Root, pass `name` and `defaultSelected`
  * to the parts. Each `value` is also its panel's id, so must be unique.
@@ -68,8 +68,8 @@ export type RadiosRootProps = BaseRootProps &
   ({ value: string } | { defaultValue: string });
 
 /**
- * Tabs that switch panels without JavaScript too, through the panels' radios. Use `RadioTrigger`
- * and `RadioContent` inside it.
+ * Tabs that switch panels without JavaScript too, through the panels' radios. Use `RadiosTrigger`
+ * and `RadiosContent` inside it.
  */
 export function RadiosRoot(props: RadiosRootProps) {
   return <TabsRoot fallback="radios" {...props} />;
@@ -194,10 +194,10 @@ export function Trigger({ asChild, value, ...props }: TriggerProps) {
   return <Element {...triggerData(value)} href={`#${value}`} {...props} />;
 }
 
-export type RadioTriggerProps = TriggerProps & IslandProps;
+export type RadiosTriggerProps = TriggerProps & IslandProps;
 
 /** A tab in a `RadiosRoot`: a label for its panel's radio. */
-export function RadioTrigger({ asChild, value, name: nameProp, ...props }: RadioTriggerProps) {
+export function RadiosTrigger({ asChild, value, name: nameProp, ...props }: RadiosTriggerProps) {
   const { name } = useIsland({ name: nameProp });
   const Element = asChild ? Slot : 'label';
   return <Element {...triggerData(value)} htmlFor={radioId(name, value)} {...props} />;
@@ -215,10 +215,10 @@ export function Content(props: ContentProps) {
   return <Panel {...props} />;
 }
 
-export type RadioContentProps = ContentProps;
+export type RadiosContentProps = ContentProps;
 
 /** A panel in a `RadiosRoot`, shown without JavaScript only while its radio is checked. Its id is its `value`. */
-export function RadioContent(props: RadioContentProps) {
+export function RadiosContent(props: RadiosContentProps) {
   return <Panel radios {...props} />;
 }
 
