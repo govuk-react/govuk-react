@@ -27,7 +27,11 @@ const ModalContext = createContext<{
 
 export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'onChange'> & {
   children?: ReactNode;
-  /** Whether the dialog is open, to control it. Without it, the buttons alone open and close it. */
+  /**
+   * Whether the dialog is open, to control it once hydrated: the buttons and Escape then call
+   * `onOpenChange`, and the dialog changes only when `open` does. Without it, the buttons alone
+   * open and close it, which is best unless you need to open or close it yourself.
+   */
   open?: boolean;
   /** Called when the dialog opens or closes. */
   onOpenChange?: (open: boolean) => void;
@@ -38,13 +42,30 @@ export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'onChange'> & {
 export function Root({ children, open, onOpenChange, dialogId: dialogIdProp, ...props }: RootProps) {
   const generatedId = useId();
   const dialogId = dialogIdProp ?? generatedId;
+  const element = useRef<HTMLElement>(null);
+  const synced = useRef(false);
+  // `open` is set once hydrated, so the server markup is uncontrolled and the buttons work before
+  // hydration. A dialog opened by then is reported by Content, rather than closed.
+  useEffect(() => {
+    const node = element.current;
+    if (!node || open === undefined) {
+      node?.removeAttribute('open');
+      return;
+    }
+    if (!synced.current) {
+      synced.current = true;
+      const dialog = document.getElementById(dialogId);
+      if (onOpenChange && !open && dialog instanceof HTMLDialogElement && dialog.open) return;
+    }
+    node.setAttribute('open', String(open));
+  });
   return (
     <ModalContext.Provider value={{ dialogId, titleId: `${dialogId}-title`, onOpenChange }}>
       {React.createElement(
         tagName,
         {
           ...props,
-          open: open === undefined ? undefined : String(open),
+          ref: element,
           suppressHydrationWarning: true,
         },
         children
@@ -123,8 +144,17 @@ export function Content({ asChild, id, onClose, ref, ...props }: ContentProps) {
       const forget = composeRefs(ref)(dialog);
       const onToggle = () => report(dialog);
       dialog.addEventListener('toggle', onToggle);
+      // While controlled, the element asks for a change the dialog hasn't made.
+      const root = dialog.closest(tagName);
+      const onRequest = (event: CustomEvent<{ open: boolean }>) => {
+        if (event.target !== root || event.detail.open === dialog.open) return;
+        reported.current = event.detail.open;
+        onOpenChange.current?.(event.detail.open);
+      };
+      root?.addEventListener('govuk-react-modal:change', onRequest);
       return () => {
         dialog.removeEventListener('toggle', onToggle);
+        root?.removeEventListener('govuk-react-modal:change', onRequest);
         dialogRef.current = null;
         forget();
       };

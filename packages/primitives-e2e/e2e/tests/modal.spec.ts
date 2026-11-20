@@ -99,6 +99,40 @@ test.describe('controlled', () => {
   });
 });
 
+async function checkHeld(page: Page) {
+  await page.getByLabel('Ignore changes').check();
+  const controlled = page.getByRole('dialog', { name: 'Controlled' });
+  await page.getByTestId('controlled').getByRole('button', { name: 'Open', exact: true }).click();
+  await expect(page.getByTestId('controlled-asked')).toHaveText('true');
+  await expect(controlled).toBeHidden();
+  await page.getByRole('button', { name: 'Open from outside' }).click();
+  await expect(controlled).toBeVisible();
+  await controlled.getByRole('button', { name: 'Close' }).click();
+  await expect(page.getByTestId('controlled-asked')).toHaveText('false');
+  await expect(controlled).toBeVisible();
+}
+
+test.describe('controlled, when the app ignores a change', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/test/modal');
+    await expect(page.getByTestId('controlled')).toHaveAttribute('data-hydrated', 'true');
+  });
+
+  test('the buttons only ask, and the dialog stays as `open` says', async ({ page }) => {
+    await checkHeld(page);
+  });
+
+  test('Escape only asks', async ({ page }) => {
+    await page.getByLabel('Ignore changes').check();
+    await page.getByRole('button', { name: 'Open from outside' }).click();
+    const controlled = page.getByRole('dialog', { name: 'Controlled' });
+    await expect(page.getByTestId('controlled-asked')).toHaveText('true');
+    await page.keyboard.press('Escape');
+    await expect(page.getByTestId('controlled-asked')).toHaveText('false');
+    await expect(controlled).toBeVisible();
+  });
+});
+
 test.describe('in a browser without invoker commands', () => {
   test.beforeEach(async ({ page }) => {
     // Stop the browser running the commands, and hide its support, so only the element runs them.
@@ -117,6 +151,11 @@ test.describe('in a browser without invoker commands', () => {
 
   test('the element opens a true modal', async ({ page }) => {
     await checkModal(page, 'upgraded');
+  });
+
+  test('controlled: the buttons only ask, and the dialog stays as `open` says', async ({ page }) => {
+    await expect(page.getByTestId('controlled')).toHaveAttribute('data-hydrated', 'true');
+    await checkHeld(page);
   });
 });
 

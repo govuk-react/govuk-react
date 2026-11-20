@@ -11,6 +11,17 @@ Each primitive:
 
 Import each primitive from its own path, such as `@govuk-react/primitives/tabs`. Each path defines its element when imported.
 
+## Controlled state
+
+Prefer uncontrolled: leave out `value` and `open`, start from `defaultValue` or `defaultOpen` where there is one, and listen with `onValueChange` or `onOpenChange`. The markup then holds the state, so it's the same before hydration, without React and without JavaScript.
+
+Control a primitive only when your app has to set its state, such as closing a menu after navigating. When controlled, a user's action calls the change handler and the primitive changes only when the prop does. That has limits that can't be removed:
+
+- A controlled prop applies once React has hydrated. Until then the primitive is uncontrolled, so it still works, and what the user did by then is reported through the change handler rather than undone. If your handler doesn't accept it, the state stays as the user left it until the prop next changes.
+- Without JavaScript, a controlled prop does nothing.
+- Each change waits for React to render, where an uncontrolled one happens in the browser straight away.
+- A controlled Modal can't hold a dialog open against a close the browser doesn't let a page cancel: a `form` with `method="dialog"`, a script calling `close()`, or a second Escape in a row in Chromium. It reports the close through `onOpenChange`, and the dialog stays closed until `open` next changes.
+
 ## Without React
 
 Each element is also exported on its own, with no React, from `@govuk-react/primitives/<name>-element`, such as `tabs-element`. Importing it defines the element, such as `<govuk-react-tabs>`. Render the same markup as the React parts do: the element finds its parts by `data-` attributes, takes its options as attributes, and reports changes with bubbling events named after it, such as `govuk-react-tabs:change`. The comment at the top of each element's source lists its markup, attributes and events:
@@ -137,7 +148,7 @@ import * as Modal from '@govuk-react/primitives/modal';
 
 `Title` names the dialog, so always include one, or pass `aria-label` to `Content`. Pass `closedby="any"` to `Content` to also close it when the user clicks outside it.
 
-`open` and `onOpenChange` control the dialog once hydrated. In an island without a `Root`, pass `dialogId` to `Trigger` and `Close`, and `id` and `aria-labelledby` to `Content`.
+`open` and `onOpenChange` control the dialog once hydrated: `Trigger`, `Close` and Escape then call `onOpenChange`, and the dialog changes only when `open` does. See [Controlled state](#controlled-state) for its limits. In an island without a `Root`, pass `dialogId` to `Trigger` and `Close`, and `id` and `aria-labelledby` to `Content`.
 
 ## Character count
 

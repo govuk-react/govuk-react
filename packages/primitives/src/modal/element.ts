@@ -10,7 +10,11 @@
  * The element only adds what HTML can't do on its own:
  * - In a browser without invoker commands, it runs the commands of its own buttons.
  * - `open` (when present) controls the dialog: "true" opens it with `showModal()`, anything
- *   else closes it. Changing `open` fires no change event.
+ *   else closes it. Changing `open` fires no change event. While `open` is present, the buttons
+ *   and Escape don't open or close the dialog: they fire the change event with the state asked
+ *   for, and the dialog changes only when `open` does. A close the browser doesn't let a page
+ *   cancel still closes it: a `form` with `method="dialog"`, a script calling `close()`, or a
+ *   second Escape in a row in Chromium.
  * - It fires a bubbling `govuk-react-modal:change` event with `{ open }` when the dialog opens
  *   or closes, for code that doesn't use React.
  *
@@ -55,6 +59,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       const dialog = document.getElementById(button.getAttribute('commandfor') ?? '');
       if (!(dialog instanceof HTMLDialogElement)) return;
       const command = button.getAttribute('command');
+      if (this.request(dialog, command)) return;
       if (command === 'show-modal' && !dialog.open) dialog.showModal();
       else if (command === 'close' && dialog.open) dialog.close();
       else if (command === 'request-close' && dialog.open) {
@@ -63,6 +68,20 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
         if (typeof requestClose === 'function') requestClose.call(dialog);
         else dialog.close();
       }
+    };
+
+    // While controlled, the browser's own commands and Escape only ask for a change.
+    private readonly onCommand = (event: Event) => {
+      const { dialog } = this;
+      const command: unknown = Reflect.get(event, 'command');
+      if (!dialog || event.target !== dialog || typeof command !== 'string') return;
+      if (this.request(dialog, command)) event.preventDefault();
+    };
+
+    private readonly onCancel = (event: Event) => {
+      const { dialog } = this;
+      if (!dialog || event.target !== dialog) return;
+      if (this.request(dialog, 'request-close')) event.preventDefault();
     };
 
     private readonly onToggle = () => {
@@ -81,6 +100,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.removeEventListener('click', this.onClick);
       this.observer?.disconnect();
       this.dialog?.removeEventListener('close', this.onToggle);
+      this.dialog?.removeEventListener('command', this.onCommand);
+      this.dialog?.removeEventListener('cancel', this.onCancel);
       this.dialog?.removeEventListener('toggle', this.onToggle);
       this.dialog = undefined;
     }
@@ -99,7 +120,22 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       // `toggle` fires on open and close where supported, and `close` everywhere.
       dialog.addEventListener('toggle', this.onToggle);
       dialog.addEventListener('close', this.onToggle);
+      dialog.addEventListener('command', this.onCommand);
+      dialog.addEventListener('cancel', this.onCancel);
       this.sync();
+      return true;
+    }
+
+    /**
+     * While controlled, fires the change event for the state a command asks for, in place of
+     * running it. Returns whether the command was handled.
+     */
+    private request(dialog: HTMLDialogElement, command: string | null) {
+      if (!this.hasAttribute('open')) return false;
+      const open = command === 'show-modal';
+      if (!open && command !== 'close' && command !== 'request-close') return false;
+      if (open !== dialog.open)
+        this.dispatchEvent(new CustomEvent('govuk-react-modal:change', { detail: { open }, bubbles: true }));
       return true;
     }
 
