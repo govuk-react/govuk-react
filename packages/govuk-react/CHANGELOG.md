@@ -1,5 +1,12 @@
 # govuk-react
 
+## 1.0.0-alpha.4
+
+### Minor Changes
+
+- `Modal.Description` sets the dialog's `aria-describedby`.
+- Updated dependency: `@govuk-react/primitives@0.5.0`. Accordion, Tabs and Disclosure parts get `data-state` or `data-orientation`, and Tabs arrow keys follow right-to-left text.
+
 ## 1.0.0-alpha.3
 
 ### Patch Changes
