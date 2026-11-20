@@ -1,5 +1,19 @@
 # govuk-react
 
+## 1.0.0-alpha.2
+
+### Major Changes
+
+- Static CSS ships as a file. Import `govuk-react/styles.css` once, after govuk-frontend's CSS. No component renders a `style` element any more, so they work under a strict Content Security Policy.
+- `Tabs.Root` and `Tabs.RadiosRoot` lose `preHydration`. A change the user made before React hydrated is always reported, and `onValueChange` and `onOpenChange` on `Tabs`, `Accordion`, `Modal` and `ServiceNavigation` get a second argument, `{ beforeHydration }`, so a handler can tell and ignore it. A controlled component whose handler doesn't adopt the change goes back to its prop.
+- A controlled `Modal` holds its state: its buttons, Escape, a dialog form and a script's `showModal()` call `onOpenChange`, and the dialog changes only when `open` does.
+
+### Patch Changes
+
+- The character count, radios, checkboxes and password input no longer wrap setters on built-in prototypes. A value a script sets is followed within 100ms.
+- Fix change tracking after hydration in the character count, radios and checkboxes, refs with `asChild`, and controlled tabs before hydration.
+- Updated dependency: `@govuk-react/primitives@0.3.0`.
+
 ## 1.0.0-alpha.1
 
 ### Patch Changes
