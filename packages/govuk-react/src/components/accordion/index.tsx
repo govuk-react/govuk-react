@@ -57,7 +57,7 @@ export function Root({
         showSectionLabel={showSectionAriaLabelText}
         // govuk-frontend styles the accordion under `govuk-frontend-supported`, which its JavaScript adds to the body.
         upgradedClass="govuk-frontend-supported"
-        expandedSectionClass="govuk-accordion__section--expanded"
+        expandedItemClass="govuk-accordion__section--expanded"
         collapsedIconClass="govuk-accordion-nav__chevron--down"
       >
         <Markup.Root {...props} />
@@ -89,9 +89,9 @@ export function Section({ value, expanded, ...props }: SectionProps) {
   const context = useContext(AccordionContext);
   const isExpanded = expanded ?? context.open?.includes(value) ?? false;
   return (
-    <Primitives.Section value={value} defaultExpanded={isExpanded} asChild>
+    <Primitives.Item value={value} defaultExpanded={isExpanded} asChild>
       <Markup.Section expanded={isExpanded} {...props} />
-    </Primitives.Section>
+    </Primitives.Item>
   );
 }
 

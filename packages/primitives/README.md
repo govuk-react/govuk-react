@@ -92,7 +92,7 @@ import * as Accordion from '@govuk-react/primitives/accordion';
       <Accordion.ShowAllText />
     </Accordion.ShowAll>
   </Accordion.Controls>
-  <Accordion.Section value="web">
+  <Accordion.Item value="web">
     <h2>
       <Accordion.Fallback>Writing well for the web</Accordion.Fallback>
       <Accordion.Trigger>
@@ -100,13 +100,15 @@ import * as Accordion from '@govuk-react/primitives/accordion';
       </Accordion.Trigger>
     </h2>
     <Accordion.Content id="web-content">…</Accordion.Content>
-  </Accordion.Section>
+  </Accordion.Item>
 </Accordion.Root>;
 ```
 
 Without JavaScript every section is shown under its `Fallback` heading. It needs the package's [stylesheet](#styles). Each section also renders a hidden `Trigger` with the same heading, which the element shows on upgrade while hiding the fallback. Nothing is moved, so React can keep rendering the markup. Closed content gets `hidden="until-found"`, so find in page opens it. `Label`s name the trigger, followed by "Show this section" or "Hide this section".
 
-`ShowAll` opens every section, or closes them all when every one is open. `value` and `onValueChange` control the open sections once hydrated, and a section opened before hydration is reported rather than undone. As in govuk-frontend, open sections are remembered for the session by content id, unless `rememberExpanded` is `false`. In an island without a `Root`, pass `defaultExpanded` to `Section`.
+Once upgraded, each item, trigger and content has `data-state` ("open" or "closed").
+
+`ShowAll` opens every section, or closes them all when every one is open. `value` and `onValueChange` control the open sections once hydrated, and a section opened before hydration is reported rather than undone. As in govuk-frontend, open sections are remembered for the session by content id, unless `rememberExpanded` is `false`. In an island without a `Root`, pass `defaultExpanded` to `Item`.
 
 ## Tabs
 
@@ -134,7 +136,7 @@ They are separate components rather than a prop, because a prop can change after
 
 When controlled with `value`, a user's choice calls `onValueChange` and the tab changes only when `value` does. `value` applies once hydrated, so tabs still switch before then, and a tab picked before hydration is reported through `onValueChange` rather than undone.
 
-`orientation` (`"horizontal"` or `"vertical"`) sets the axis of the arrow keys.
+`orientation` (`"horizontal"` or `"vertical"`) sets the axis of the arrow keys. Horizontal arrow keys follow the page's direction, so in right-to-left text the left arrow moves to the next tab. Once upgraded, the root, list, tabs and panels have `data-orientation`, and the tabs, items and panels have `data-state` ("active" or "inactive").
 
 `media` limits the tab behaviour to a media query, and can change. Below it, `Root`'s tabs are a list of links to panels, and `RadiosRoot`'s keep switching through their radios. With `Root`, the URL hash follows the selected tab, as in govuk-frontend.
 
@@ -163,7 +165,7 @@ import * as Disclosure from '@govuk-react/primitives/disclosure';
 
 A button that shows and hides some content, such as a navigation menu on small screens. Without JavaScript the content is shown and the button hidden. While `media` matches, the content is always shown and the button hidden.
 
-`open` and `onOpenChange` control it once hydrated, such as to close a menu after navigating. A user's click before hydration is reported through `onOpenChange` rather than undone. `defaultOpen` starts it open.
+`open` and `onOpenChange` control it once hydrated, such as to close a menu after navigating. A user's click before hydration is reported through `onOpenChange` rather than undone. `defaultOpen` starts it open. Once upgraded, the root, button and content have `data-state` ("open" or "closed"), and "open" while `media` matches.
 
 ## Modal
 
@@ -174,6 +176,7 @@ import * as Modal from '@govuk-react/primitives/modal';
   <Modal.Trigger>Delete account</Modal.Trigger>
   <Modal.Content>
     <Modal.Title>Are you sure?</Modal.Title>
+    <Modal.Description>You cannot undo this.</Modal.Description>
     <Modal.Close>Cancel</Modal.Close>
   </Modal.Content>
 </Modal.Root>;
@@ -181,7 +184,7 @@ import * as Modal from '@govuk-react/primitives/modal';
 
 `Content` is a native `dialog`, and `Trigger` and `Close` are buttons with invoker commands (`command="show-modal"` and `command="close"`, with `commandfor` naming the dialog). Where the browser supports them (Chrome and Edge 135, Firefox 144, Safari 26.2), the dialog opens as a true modal without JavaScript: the page behind is inert, focus moves into the dialog and Escape closes it. In older browsers, the `<govuk-react-modal>` element runs the commands once its script loads.
 
-`Title` names the dialog, so always include one, or pass `aria-label` to `Content`. Pass `closedby="any"` to `Content` to also close it when the user clicks outside it.
+`Title` names the dialog, so always include one, or pass `aria-label` to `Content`. `Description`, if you include one, describes it through the dialog's `aria-describedby`, unless you pass your own. Pass `closedby="any"` to `Content` to also close it when the user clicks outside it.
 
 `open` and `onOpenChange` control the dialog once hydrated: `Trigger`, `Close` and Escape then call `onOpenChange`, and the dialog changes only when `open` does. See [Controlled state](#controlled-state) for its limits. In an island without a `Root`, pass `dialogId` to `Trigger` and `Close`, and `id` and `aria-labelledby` to `Content`.
 

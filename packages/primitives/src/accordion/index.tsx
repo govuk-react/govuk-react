@@ -17,7 +17,7 @@ export type { ChangeDetails };
  * holds a hidden `Trigger` with the same heading, which the element shows on upgrade. Put the
  * heading text in a `Label` inside the trigger, so the element can name the button.
  *
- * Context only fills in defaults: in an island without a Root, pass `defaultExpanded` to Section.
+ * Context only fills in defaults: in an island without a Root, pass `defaultExpanded` to Item.
  */
 
 type Texts = {
@@ -29,7 +29,7 @@ type Texts = {
 
 const AccordionContext = createContext<{ open?: string[]; texts: Texts }>({ texts: {} });
 
-const SectionContext = createContext<{ expanded?: boolean }>({});
+const ItemContext = createContext<{ expanded?: boolean }>({});
 
 const isAccordion = (element: HTMLElement): element is AccordionElement => 'pickedValue' in element;
 
@@ -57,7 +57,7 @@ export type RootProps = Omit<React.HTMLAttributes<HTMLElement>, 'defaultValue' |
   /** Classes added to the element when it upgrades. */
   upgradedClass?: string;
   /** Classes added to open sections. */
-  expandedSectionClass?: string;
+  expandedItemClass?: string;
   /** Classes added to the icons of closed sections, and the "show all" icon while a section is closed. */
   collapsedIconClass?: string;
 };
@@ -74,7 +74,7 @@ export function Root({
   showAllSectionsText,
   hideAllSectionsText,
   upgradedClass,
-  expandedSectionClass,
+  expandedItemClass,
   collapsedIconClass,
   children,
   ...props
@@ -141,7 +141,7 @@ export function Root({
           'show-all-sections-text': showAllSectionsText,
           'hide-all-sections-text': hideAllSectionsText,
           'upgraded-class': upgradedClass,
-          'expanded-section-class': expandedSectionClass,
+          'expanded-item-class': expandedItemClass,
           'collapsed-icon-class': collapsedIconClass,
           // The element adds attributes on upgrade, so they can differ from the server's.
           suppressHydrationWarning: true,
@@ -187,26 +187,27 @@ export function ShowAllText({ asChild, children, ...props }: ShowAllTextProps) {
   );
 }
 
-export type SectionProps = PartProps<'div'> & {
+export type ItemProps = PartProps<'div'> & {
   value: string;
   /** Whether it's open at first. Defaults to whether Root's value includes it. */
   defaultExpanded?: boolean;
 };
 
-export function Section({ asChild, value, defaultExpanded, ...props }: SectionProps) {
+/** A section: its trigger and content. */
+export function Item({ asChild, value, defaultExpanded, ...props }: ItemProps) {
   const context = useContext(AccordionContext);
   const expanded = defaultExpanded ?? context.open?.includes(value) ?? false;
   const Element = asChild ? Slot : 'div';
   return (
-    <SectionContext.Provider value={{ expanded }}>
+    <ItemContext.Provider value={{ expanded }}>
       <Element
-        data-accordion-section=""
+        data-accordion-item=""
         data-value={value}
         data-expanded={expanded ? '' : undefined}
         suppressHydrationWarning
         {...props}
       />
-    </SectionContext.Provider>
+    </ItemContext.Provider>
   );
 }
 
@@ -240,7 +241,7 @@ export type ToggleTextProps = PartProps<'span'>;
 /** The trigger's show or hide text, which the element sets. */
 export function ToggleText({ asChild, children, ...props }: ToggleTextProps) {
   const { texts } = useContext(AccordionContext);
-  const { expanded } = useContext(SectionContext);
+  const { expanded } = useContext(ItemContext);
   const Element = asChild ? Slot : 'span';
   // Rendered as the server would, so the element's text replaces it rather than adding to it.
   return (

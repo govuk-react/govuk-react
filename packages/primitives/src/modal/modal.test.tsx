@@ -26,6 +26,38 @@ describe('Modal', () => {
     expect(dialog).toHaveAttribute('aria-labelledby', 'confirm-title');
     expect(document.getElementById('confirm-title')).toHaveTextContent('Are you sure?');
   });
+
+  test('Description describes the dialog, and without one nothing does', () => {
+    const { rerender } = render(
+      <Modal.Root dialogId="confirm">
+        <Modal.Content>
+          <Modal.Title>Are you sure?</Modal.Title>
+          <Modal.Description>You cannot undo this.</Modal.Description>
+        </Modal.Content>
+      </Modal.Root>
+    );
+    expect(document.getElementById('confirm')).toHaveAttribute('aria-describedby', 'confirm-description');
+    expect(document.getElementById('confirm-description')).toHaveTextContent('You cannot undo this.');
+    rerender(
+      <Modal.Root dialogId="confirm">
+        <Modal.Content>
+          <Modal.Title>Are you sure?</Modal.Title>
+        </Modal.Content>
+      </Modal.Root>
+    );
+    expect(document.getElementById('confirm')).not.toHaveAttribute('aria-describedby');
+  });
+
+  test('Description leaves a dialog’s own aria-describedby', () => {
+    render(
+      <Modal.Root dialogId="confirm">
+        <Modal.Content aria-describedby="other">
+          <Modal.Description>You cannot undo this.</Modal.Description>
+        </Modal.Content>
+      </Modal.Root>
+    );
+    expect(document.getElementById('confirm')).toHaveAttribute('aria-describedby', 'other');
+  });
 });
 
 test('with asChild, reports through the dialog’s own ref as well as the child’s', async () => {

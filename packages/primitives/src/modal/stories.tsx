@@ -19,7 +19,7 @@ export const Default: Story = {
       <Modal.Trigger>Delete account</Modal.Trigger>
       <Modal.Content>
         <Modal.Title>Are you sure you want to delete your account?</Modal.Title>
-        <p>You cannot undo this.</p>
+        <Modal.Description>You cannot undo this.</Modal.Description>
         <Modal.Close>Cancel</Modal.Close>
       </Modal.Content>
     </Modal.Root>
@@ -34,7 +34,7 @@ export const Open: Story = {
       <Modal.Trigger>Delete account</Modal.Trigger>
       <Modal.Content>
         <Modal.Title>Are you sure you want to delete your account?</Modal.Title>
-        <p>You cannot undo this.</p>
+        <Modal.Description>You cannot undo this.</Modal.Description>
         <Modal.Close>Cancel</Modal.Close>
       </Modal.Content>
     </Modal.Root>

@@ -11,7 +11,7 @@
  * Markup inside the element:
  * - `[data-accordion-controls]` (optional): holds the "show all" button. Rendered `hidden`.
  *   - `button[data-accordion-show-all]`, with a `[data-accordion-show-all-text]` for its text.
- * - `[data-accordion-section][data-value]`: a section. `data-expanded` opens it at first.
+ * - `[data-accordion-item][data-value]`: a section. `data-expanded` opens it at first.
  *   - `[data-accordion-fallback]`: the plain heading and summary, hidden on upgrade.
  *   - `button[data-accordion-trigger]`: rendered `hidden`. Its accessible name is the text of its
  *     `[data-accordion-label]` elements and the show or hide label. Its
@@ -28,8 +28,11 @@
  *   keyed by content id, as govuk-frontend does.
  * - `show-section-text`, `hide-section-text`, `show-section-label`, `hide-section-label`,
  *   `show-all-sections-text`, `hide-all-sections-text`: the text, English by default.
- * - `upgraded-class`, `expanded-section-class`, `collapsed-icon-class`: classes to add, for styles
+ * - `upgraded-class`, `expanded-item-class`, `collapsed-icon-class`: classes to add, for styles
  *   keyed off classes rather than `data-upgraded`, `data-state` and `aria-expanded`.
+ *
+ * While upgraded it sets `data-upgraded`, and `data-state` ("open" or "closed") on each item,
+ * trigger and content.
  *
  * A user's click fires a bubbling `govuk-react-accordion:change` event with `{ value }`, the open
  * sections' values.
@@ -88,7 +91,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       const target = event.target instanceof Element ? event.target : null;
       const trigger = target?.closest('button[data-accordion-trigger]');
       if (trigger && this.ownsElement(trigger)) {
-        const value = this.sectionOf(trigger)?.dataset.value;
+        const value = this.itemOf(trigger)?.dataset.value;
         if (value === undefined) return;
         const next = new Set(this.open);
         if (next.has(value)) next.delete(value);
@@ -98,15 +101,15 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       }
       const showAll = target?.closest('button[data-accordion-show-all]');
       if (showAll && this.ownsElement(showAll)) {
-        const values = this.sections.map((section) => section.dataset.value ?? '');
+        const values = this.items.map((item) => item.dataset.value ?? '');
         this.change(new Set(this.allOpen ? [] : values));
       }
     };
 
     // Find in page opens a collapsed section that holds the match.
     private readonly onBeforeMatch = (event: Event) => {
-      const section = event.target instanceof Element ? this.sectionOf(event.target) : undefined;
-      const value = section?.dataset.value;
+      const item = event.target instanceof Element ? this.itemOf(event.target) : undefined;
+      const value = item?.dataset.value;
       if (value === undefined || this.open.has(value)) return;
       this.change(new Set([...this.open, value]), true);
     };
@@ -126,8 +129,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
           this.setup();
           return;
         }
-        if (records.some((record) => record.type === 'childList'))
-          this.sections.forEach((section) => this.prepare(section));
+        if (records.some((record) => record.type === 'childList')) this.items.forEach((item) => this.prepare(item));
         this.render();
       });
       this.observer.observe(this, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] });
@@ -154,12 +156,12 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.render();
     }
 
-    private get sections() {
-      return this.own('[data-accordion-section]');
+    private get items() {
+      return this.own('[data-accordion-item]');
     }
 
     private get allOpen() {
-      return this.sections.every((section) => this.open.has(section.dataset.value ?? ''));
+      return this.items.every((item) => this.open.has(item.dataset.value ?? ''));
     }
 
     private own(selector: string) {
@@ -171,15 +173,13 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       return element.closest(tagName) === this;
     }
 
-    private sectionOf(element: Element) {
-      const section = element.closest<HTMLElement>('[data-accordion-section]');
-      return section && this.ownsElement(section) ? section : undefined;
+    private itemOf(element: Element) {
+      const item = element.closest<HTMLElement>('[data-accordion-item]');
+      return item && this.ownsElement(item) ? item : undefined;
     }
 
-    private find(section: HTMLElement, selector: string) {
-      return Array.from(section.querySelectorAll<HTMLElement>(selector)).find(
-        (element) => this.sectionOf(element) === section
-      );
+    private find(item: HTMLElement, selector: string) {
+      return Array.from(item.querySelectorAll<HTMLElement>(selector)).find((element) => this.itemOf(element) === item);
     }
 
     private text(name: keyof typeof defaults) {
@@ -191,8 +191,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     private setup() {
-      const sections = this.sections;
-      if (!sections.some((section) => this.find(section, 'button[data-accordion-trigger]'))) return;
+      const items = this.items;
+      if (!items.some((item) => this.find(item, 'button[data-accordion-trigger]'))) return;
       this.upgraded = true;
       const value = valuesOf(this.getAttribute('value'));
       this.controlled = value !== undefined;
@@ -203,7 +203,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.own('[data-accordion-controls]').forEach((controls) => {
         controls.hidden = false;
       });
-      sections.forEach((section) => this.prepare(section));
+      items.forEach((item) => this.prepare(item));
       this.listen();
       this.render();
     }
@@ -215,30 +215,30 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     /** Swaps a section's fallback for its trigger, once, and sets its first state. */
-    private prepare(section: HTMLElement) {
-      const trigger = this.find(section, 'button[data-accordion-trigger]');
-      if (!trigger || this.prepared.has(section)) return;
-      this.prepared.add(section);
-      const value = section.dataset.value ?? '';
+    private prepare(item: HTMLElement) {
+      const trigger = this.find(item, 'button[data-accordion-trigger]');
+      if (!trigger || this.prepared.has(item)) return;
+      this.prepared.add(item);
+      const value = item.dataset.value ?? '';
       if (!this.controlled) {
         const defaultValue = valuesOf(this.getAttribute('default-value'));
-        if (defaultValue ? defaultValue.includes(value) : section.hasAttribute('data-expanded')) this.open.add(value);
-        this.restore(section);
+        if (defaultValue ? defaultValue.includes(value) : item.hasAttribute('data-expanded')) this.open.add(value);
+        this.restore(item);
       }
-      Array.from(section.querySelectorAll<HTMLElement>('[data-accordion-fallback]'))
-        .filter((fallback) => this.sectionOf(fallback) === section)
+      Array.from(item.querySelectorAll<HTMLElement>('[data-accordion-fallback]'))
+        .filter((fallback) => this.itemOf(fallback) === item)
         .forEach((fallback) => {
           fallback.hidden = true;
         });
       trigger.hidden = false;
-      const content = this.find(section, '[data-accordion-content]');
+      const content = this.find(item, '[data-accordion-content]');
       if (content?.id) trigger.setAttribute('aria-controls', content.id);
     }
 
     /** A section remembered from earlier in the session, as in govuk-frontend. */
-    private restore(section: HTMLElement) {
-      const id = this.find(section, '[data-accordion-content]')?.id;
-      const value = section.dataset.value;
+    private restore(item: HTMLElement) {
+      const id = this.find(item, '[data-accordion-content]')?.id;
+      const value = item.dataset.value;
       if (!this.remember || !id || value === undefined) return;
       try {
         const state = window.sessionStorage.getItem(id);
@@ -252,9 +252,9 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     /** Remembers the sections that changed, as govuk-frontend does. */
     private store(previous: Set<string>) {
       if (!this.remember) return;
-      this.sections.forEach((section) => {
-        const value = section.dataset.value ?? '';
-        const id = this.find(section, '[data-accordion-content]')?.id;
+      this.items.forEach((item) => {
+        const value = item.dataset.value ?? '';
+        const id = this.find(item, '[data-accordion-content]')?.id;
         if (!id || previous.has(value) === this.open.has(value)) return;
         try {
           window.sessionStorage.setItem(id, String(this.open.has(value)));
@@ -265,7 +265,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     private change(next: Set<string>, force = false) {
-      const value = this.sections.map((section) => section.dataset.value ?? '').filter((v) => next.has(v));
+      const value = this.items.map((item) => item.dataset.value ?? '').filter((v) => next.has(v));
       // Find in page must show the match, so it opens the section even when controlled.
       if (!this.controlled || force) {
         const previous = this.open;
@@ -281,24 +281,27 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     private render() {
       if (!this.upgraded) return;
-      const expandedClasses = classesOf(this.getAttribute('expanded-section-class'));
+      const expandedClasses = classesOf(this.getAttribute('expanded-item-class'));
       const collapsedIconClasses = classesOf(this.getAttribute('collapsed-icon-class'));
       const setIcon = (root: HTMLElement, expanded: boolean) => {
         Array.from(root.querySelectorAll<HTMLElement>('[data-accordion-icon]')).forEach((icon) => {
           collapsedIconClasses.forEach((name) => icon.classList.toggle(name, !expanded));
         });
       };
-      this.sections.forEach((section) => {
-        const expanded = this.open.has(section.dataset.value ?? '');
-        const trigger = this.find(section, 'button[data-accordion-trigger]');
-        const content = this.find(section, '[data-accordion-content]');
-        section.dataset.state = expanded ? 'open' : 'closed';
-        expandedClasses.forEach((name) => section.classList.toggle(name, expanded));
+      this.items.forEach((item) => {
+        const expanded = this.open.has(item.dataset.value ?? '');
+        const trigger = this.find(item, 'button[data-accordion-trigger]');
+        const content = this.find(item, '[data-accordion-content]');
+        const state = expanded ? 'open' : 'closed';
+        item.dataset.state = state;
+        expandedClasses.forEach((name) => item.classList.toggle(name, expanded));
         if (content) {
+          content.dataset.state = state;
           if (expanded) content.removeAttribute('hidden');
           else content.setAttribute('hidden', 'until-found');
         }
         if (!trigger) return;
+        trigger.dataset.state = state;
         trigger.setAttribute('aria-expanded', String(expanded));
         const labels = Array.from(trigger.querySelectorAll('[data-accordion-label]')).map(
           (label) => label.textContent?.trim() ?? ''

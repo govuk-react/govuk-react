@@ -32,7 +32,7 @@ export const Default: Story = {
         </Accordion.ShowAll>
       </Accordion.Controls>
       {sections.map((section) => (
-        <Accordion.Section key={section.value} value={section.value}>
+        <Accordion.Item key={section.value} value={section.value}>
           <h2>
             <Accordion.Fallback>{section.heading}</Accordion.Fallback>
             <Accordion.Trigger>
@@ -42,7 +42,7 @@ export const Default: Story = {
           <Accordion.Content id={`accordion-${section.value}`}>
             <p>{section.content}</p>
           </Accordion.Content>
-        </Accordion.Section>
+        </Accordion.Item>
       ))}
     </Accordion.Root>
   ),

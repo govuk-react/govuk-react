@@ -25,6 +25,7 @@ export type { ChangeDetails };
 const ModalContext = createContext<{
   dialogId?: string;
   titleId?: string;
+  descriptionId?: string;
   onOpenChange?: (open: boolean, details: ChangeDetails) => void;
 }>({});
 
@@ -68,7 +69,9 @@ export function Root({ children, open, onOpenChange, dialogId: dialogIdProp, ...
     node.setAttribute('open', String(open));
   });
   return (
-    <ModalContext.Provider value={{ dialogId, titleId: `${dialogId}-title`, onOpenChange }}>
+    <ModalContext.Provider
+      value={{ dialogId, titleId: `${dialogId}-title`, descriptionId: `${dialogId}-description`, onOpenChange }}
+    >
       {React.createElement(
         tagName,
         {
@@ -191,4 +194,31 @@ export function Title({ asChild, ...props }: TitleProps) {
   const context = useContext(ModalContext);
   const Element = asChild ? Slot : 'h2';
   return <Element id={context.titleId} {...props} />;
+}
+
+export type DescriptionProps = PartProps<'p'>;
+
+/**
+ * Text that describes the dialog, such as what happens next. Content's `aria-describedby` names
+ * it, unless you pass your own.
+ */
+export function Description({ asChild, ref, ...props }: DescriptionProps) {
+  const context = useContext(ModalContext);
+  const id = props.id ?? context.descriptionId;
+  // Set from here, not by Content, so a dialog with no Description names nothing.
+  const describe = useCallback(
+    (description: HTMLParagraphElement | null) => {
+      const forget = composeRefs(ref)(description);
+      const dialog = description?.closest('dialog');
+      if (!dialog || !id || dialog.hasAttribute('aria-describedby')) return forget;
+      dialog.setAttribute('aria-describedby', id);
+      return () => {
+        if (dialog.getAttribute('aria-describedby') === id) dialog.removeAttribute('aria-describedby');
+        forget();
+      };
+    },
+    [id, ref]
+  );
+  const Element = asChild ? Slot : 'p';
+  return <Element id={id} ref={describe} {...props} />;
 }

@@ -20,14 +20,17 @@
  *   tab changes when `value` does.
  * - `default-value` is the first selected tab.
  * - `fallback`: "links" (the default) or "radios".
- * - `orientation`: "horizontal" (the default) or "vertical", the axis of the arrow keys.
+ * - `orientation`: "horizontal" (the default) or "vertical", the axis of the arrow keys. In a
+ *   right-to-left direction, horizontal arrow keys follow it.
  * - `media`: below this media query the element leaves the no-JS behaviour as it is.
  * - `upgraded-class`, `active-item-class`, `hidden-content-class`: classes to add, for styles
  *   keyed off classes rather than `data-state`, `aria-selected` and `hidden`.
  *
- * While upgraded it sets `data-upgraded`. A user's choice fires a bubbling
- * `govuk-react-tabs:change` event with `{ value }`, for code that doesn't use React. With
- * "links", the URL hash follows the selected tab and selects it, as in govuk-frontend.
+ * While upgraded it sets `data-upgraded`, `data-orientation` on itself, the list, tabs and
+ * panels, and `data-state` ("active" or "inactive") on the items, tabs and panels. A user's
+ * choice fires a bubbling `govuk-react-tabs:change` event with `{ value }`, for code that
+ * doesn't use React. With "links", the URL hash follows the selected tab and selects it, as in
+ * govuk-frontend.
  */
 
 import { classesOf } from '../utils/dom.js';
@@ -110,9 +113,12 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       const current = triggers.indexOf(trigger);
       const last = triggers.length - 1;
       const vertical = this.getAttribute('orientation') === 'vertical';
+      const rtl = !vertical && getComputedStyle(this).direction === 'rtl';
+      const forward = vertical ? 'ArrowDown' : rtl ? 'ArrowLeft' : 'ArrowRight';
+      const back = vertical ? 'ArrowUp' : rtl ? 'ArrowRight' : 'ArrowLeft';
       const next = {
-        [vertical ? 'ArrowDown' : 'ArrowRight']: current === last ? 0 : current + 1,
-        [vertical ? 'ArrowUp' : 'ArrowLeft']: current === 0 ? last : current - 1,
+        [forward]: current === last ? 0 : current + 1,
+        [back]: current === 0 ? last : current - 1,
         Home: 0,
         End: last,
       }[event.key];
@@ -352,15 +358,19 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     /** Roles and ids for the tabs and panels. */
     private wire() {
       const orientation = this.getAttribute('orientation') === 'vertical' ? 'vertical' : 'horizontal';
+      this.dataset.orientation = orientation;
       this.own('[data-tabs-list]').forEach((list) => {
         list.setAttribute('role', 'tablist');
         list.setAttribute('aria-orientation', orientation);
+        list.dataset.orientation = orientation;
       });
       this.own('[data-tabs-item]').forEach((item) => item.setAttribute('role', 'presentation'));
       this.triggers.forEach((trigger) => {
         const { content } = this.parts(valueOf(trigger));
         trigger.setAttribute('role', 'tab');
+        trigger.dataset.orientation = orientation;
         if (!content) return;
+        content.dataset.orientation = orientation;
         if (!content.id) {
           content.id = `${valueOf(trigger)}-panel`;
           content.dataset.tabsGeneratedId = '';
@@ -379,6 +389,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       if (!this.active) return;
       this.active = false;
       delete this.dataset.upgraded;
+      delete this.dataset.orientation;
       this.removeEventListener('click', this.onClick);
       this.removeEventListener('keydown', this.onKeydown);
       window.removeEventListener('hashchange', this.onHashChange);
@@ -387,6 +398,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.own('[data-tabs-list]').forEach((list) => {
         list.removeAttribute('role');
         list.removeAttribute('aria-orientation');
+        list.removeAttribute('data-orientation');
       });
       const removeGeneratedId = (element: HTMLElement) => {
         if (element.dataset.tabsGeneratedId === undefined) return;
@@ -399,13 +411,13 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       });
       this.triggers.forEach((trigger) => {
         removeGeneratedId(trigger);
-        ['role', 'aria-controls', 'aria-selected', 'tabindex', 'data-state'].forEach((name) =>
+        ['role', 'aria-controls', 'aria-selected', 'tabindex', 'data-state', 'data-orientation'].forEach((name) =>
           trigger.removeAttribute(name)
         );
       });
       this.own('[data-tabs-content]').forEach((content) => {
         removeGeneratedId(content);
-        ['role', 'aria-labelledby', 'tabindex', 'hidden', 'data-state'].forEach((name) =>
+        ['role', 'aria-labelledby', 'tabindex', 'hidden', 'data-state', 'data-orientation'].forEach((name) =>
           content.removeAttribute(name)
         );
         content.classList.remove(...classesOf(this.getAttribute('hidden-content-class')));

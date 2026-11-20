@@ -35,6 +35,19 @@ describe('Disclosure', () => {
     expect(onOpenChange).toHaveBeenLastCalledWith(false, { beforeHydration: false });
   });
 
+  test('marks the root, button and content with data-state', async () => {
+    const { container } = render(<Example />);
+    await upgraded();
+    const parts = [
+      container.firstElementChild,
+      screen.getByRole('button', { name: 'Menu' }),
+      screen.getByText('Navigation'),
+    ];
+    parts.forEach((part) => expect(part).toHaveAttribute('data-state', 'closed'));
+    fireEvent.click(screen.getByRole('button', { name: 'Menu' }));
+    parts.forEach((part) => expect(part).toHaveAttribute('data-state', 'open'));
+  });
+
   test('starts open with defaultOpen', async () => {
     render(<Example defaultOpen />);
     await upgraded();
