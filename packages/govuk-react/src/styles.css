@@ -1,0 +1,339 @@
+/*
+ * Styles for govuk-react's own components, which govuk-frontend has no classes for. Load after
+ * govuk-frontend's CSS. The published file starts with @govuk-react/primitives' styles.
+ */
+
+/* Checkboxes: shows a reveal only while its checkbox is checked, before or without JavaScript. */
+.govuk-checkboxes__item:has(> .govuk-checkboxes__input:not(:checked)) + .govuk-checkboxes__conditional {
+  display: none;
+}
+.govuk-checkboxes__item:has(> .govuk-checkboxes__input:checked) + .govuk-checkboxes__conditional {
+  display: block;
+}
+
+/* Radios: shows a reveal only while its radio is checked, before or without JavaScript. */
+.govuk-radios__item:has(> .govuk-radios__input:not(:checked)) + .govuk-radios__conditional {
+  display: none;
+}
+.govuk-radios__item:has(> .govuk-radios__input:checked) + .govuk-radios__conditional {
+  display: block;
+}
+
+/* Loading box */
+.govuk-react-loading-box {
+  position: relative;
+  padding-bottom: 2px;
+  min-height: 10px;
+}
+.govuk-react-loading-box__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  transition: visibility 0s linear var(--govuk-react-loading-box-time-out);
+}
+.govuk-react-loading-box__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: var(--govuk-react-loading-box-background-colour);
+  opacity: 0;
+  transition: opacity var(--govuk-react-loading-box-time-out) ease-in-out;
+}
+.govuk-react-loading-box__spinner {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: 50px;
+  height: 100%;
+  max-height: calc(50vh + 100px);
+  opacity: 0;
+  transition: opacity var(--govuk-react-loading-box-time-out) ease-in-out;
+}
+.govuk-react-loading-box__spinner rect {
+  animation: govuk-react-loading-box-fade 1s infinite linear;
+}
+.govuk-react-loading-box--loading > .govuk-react-loading-box__overlay {
+  visibility: visible;
+  transition-delay: 0s;
+}
+.govuk-react-loading-box--loading > .govuk-react-loading-box__overlay > .govuk-react-loading-box__backdrop {
+  opacity: var(--govuk-react-loading-box-background-opacity);
+  transition-duration: var(--govuk-react-loading-box-time-in);
+}
+.govuk-react-loading-box--loading > .govuk-react-loading-box__overlay > .govuk-react-loading-box__spinner {
+  opacity: 1;
+  transition-duration: var(--govuk-react-loading-box-time-in);
+  transition-delay: calc(var(--govuk-react-loading-box-time-in) / 2);
+}
+
+.govuk-react-loading-box__text {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  padding-top: 20px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .govuk-react-loading-box__overlay,
+  .govuk-react-loading-box__backdrop,
+  .govuk-react-loading-box__spinner {
+    transition: none;
+  }
+  .govuk-react-loading-box__spinner {
+    display: none;
+  }
+  .govuk-react-loading-box__text {
+    display: block;
+  }
+}
+@keyframes govuk-react-loading-box-fade {
+  0% {
+    opacity: 0.250075;
+  }
+  .01% {
+    opacity: 0.25;
+  }
+  .03% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.250075;
+  }
+}
+
+/* Modal */
+.govuk-react-modal {
+  box-sizing: border-box;
+  width: calc(100% - 30px);
+  max-width: 640px;
+  max-height: calc(100% - 30px);
+  padding: 30px;
+  border: 5px solid var(--govuk-text-colour, #0b0c0c);
+  background: var(--govuk-body-background-colour, #fff);
+  color: var(--govuk-text-colour, #0b0c0c);
+}
+.govuk-react-modal:focus {
+  outline: 3px solid var(--govuk-focus-colour, #fd0);
+  outline-offset: 0;
+}
+.govuk-react-modal::backdrop {
+  background: rgb(11 12 12 / 0.8);
+}
+.govuk-react-modal > :last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 40.0525em) {
+  .govuk-react-modal {
+    padding: 15px;
+  }
+}
+
+/* Related items */
+.govuk-react-related-items {
+  border-top: 2px solid var(--govuk-brand-colour, #1d70b8);
+  padding-top: 10px;
+}
+
+/* Search box, based on GOV.UK’s search component */
+.govuk-react-search-box__wrapper {
+  display: flex;
+  background-color: #fff;
+}
+.govuk-react-search-box__input {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.govuk-react-search-box__input:focus {
+  z-index: 1;
+}
+.govuk-react-search-box__button {
+  position: relative;
+  flex: 0 0 auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  outline: 2px solid transparent;
+  outline-offset: 0;
+  cursor: pointer;
+  background-color: var(--govuk-brand-colour, #1d70b8);
+  color: #fff;
+}
+.govuk-react-search-box__button:hover {
+  background-color: color-mix(in srgb, var(--govuk-brand-colour, #1d70b8) 75%, #000);
+}
+.govuk-react-search-box__button:focus {
+  z-index: 1;
+  outline: 3px solid var(--govuk-focus-colour, #fd0);
+  box-shadow: inset 0 0 0 4px #0b0c0c;
+}
+.govuk-react-search-box__icon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.5);
+  pointer-events: none;
+}
+.govuk-react-search-box:not(.govuk-react-search-box--inverse) .govuk-react-search-box__input {
+  border-right-width: 0;
+}
+.govuk-react-search-box:not(.govuk-react-search-box--inverse) .govuk-react-search-box__input:focus {
+  border-right-width: 2px;
+}
+.govuk-react-search-box--inverse .govuk-react-search-box__label {
+  color: #fff;
+}
+.govuk-react-search-box--inverse .govuk-react-search-box__input {
+  border-width: 0;
+}
+.govuk-react-search-box--inverse .govuk-react-search-box__button {
+  background-color: color-mix(in srgb, var(--govuk-brand-colour, #1d70b8) 20%, #fff);
+  color: var(--govuk-brand-colour, #1d70b8);
+}
+.govuk-react-search-box--inverse .govuk-react-search-box__button:hover {
+  background-color: color-mix(in srgb, var(--govuk-brand-colour, #1d70b8) 5%, #fff);
+}
+.govuk-react-search-box--large .govuk-react-search-box__input {
+  height: 3.125rem;
+}
+.govuk-react-search-box--large .govuk-react-search-box__button {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.govuk-react-search-box--large .govuk-react-search-box__icon {
+  transform: scale(0.4);
+}
+.govuk-react-search-box__autocomplete {
+  display: block;
+  position: relative;
+}
+.govuk-react-search-box__menu {
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: hidden;
+  background-color: #fff;
+  border: 1px solid #b1b4b6;
+  border-top: 0;
+}
+.govuk-react-search-box--inverse .govuk-react-search-box__menu {
+  border-top: 1px solid #b1b4b6;
+}
+.govuk-react-search-box__option {
+  cursor: pointer;
+  font-family: 'GDS Transport', arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #0b0c0c;
+}
+@media (min-width: 40.0625em) {
+  .govuk-react-search-box__option {
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+  }
+}
+.govuk-react-search-box__option > * {
+  pointer-events: none;
+}
+.govuk-react-search-box__option[data-focused],
+.govuk-react-search-box__option:hover,
+.govuk-react-search-box__option:focus-visible {
+  background-color: #f3f3f3;
+  outline: none;
+  text-decoration: underline;
+  text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+  text-underline-offset: 0.1578em;
+}
+.govuk-react-search-box__option:focus-visible .govuk-react-search-box__suggestion-text {
+  background-color: var(--govuk-focus-colour, #fd0);
+}
+.govuk-react-search-box__option[hidden] {
+  display: none;
+}
+.govuk-react-search-box__option-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+  padding: 5px 0;
+}
+.govuk-react-search-box__option:not([hidden])
+  ~ .govuk-react-search-box__option:not([hidden])
+  .govuk-react-search-box__option-wrapper {
+  border-top: 1px solid #b1b4b6;
+}
+.govuk-react-search-box__suggestion-icon {
+  flex: none;
+  width: 20px;
+  height: 2.5rem;
+  margin-right: 10px;
+  background-color: #505a5f;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 27'%3E%3Ccircle cx='12' cy='11' r='8.5' fill='none' stroke='%23000' stroke-width='3'/%3E%3Cpath d='m17.9 17.4 8.5 8.5' stroke='%23000' stroke-width='3'/%3E%3C/svg%3E")
+    center/contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 27'%3E%3Ccircle cx='12' cy='11' r='8.5' fill='none' stroke='%23000' stroke-width='3'/%3E%3Cpath d='m17.9 17.4 8.5 8.5' stroke='%23000' stroke-width='3'/%3E%3C/svg%3E")
+    center/contain no-repeat;
+}
+.govuk-react-search-box__option[data-focused] .govuk-react-search-box__suggestion-icon,
+.govuk-react-search-box__option:hover .govuk-react-search-box__suggestion-icon,
+.govuk-react-search-box__option:focus-visible .govuk-react-search-box__suggestion-icon {
+  background-color: #0b0c0c;
+}
+.govuk-react-search-box__suggestion-text {
+  font-weight: 700;
+}
+.govuk-react-search-box__suggestion-highlight {
+  font-weight: 400;
+  background: none;
+  color: inherit;
+}
+.govuk-react-search-box--large .govuk-react-search-box__option {
+  min-height: 3.125rem;
+}
+@media (forced-colors: active) {
+  .govuk-react-search-box__menu {
+    border-color: FieldText;
+  }
+  .govuk-react-search-box__option[data-focused],
+  .govuk-react-search-box__option:hover {
+    forced-color-adjust: none;
+    background-color: Highlight;
+    color: HighlightText;
+  }
+  .govuk-react-search-box__suggestion-icon {
+    background-color: currentcolor;
+  }
+}
+
+/* Service navigation: the details menu */
+.govuk-react-service-navigation__details > summary {
+  list-style: none;
+}
+.govuk-react-service-navigation__details > summary::-webkit-details-marker {
+  display: none;
+}
+.govuk-react-service-navigation__details[open] > summary::after {
+  transform: rotate(180deg);
+}
+@supports selector(::details-content) {
+  @media (min-width: 40.0625em) {
+    .govuk-react-service-navigation__details > summary {
+      display: none;
+    }
+    .govuk-react-service-navigation__details::details-content {
+      content-visibility: visible;
+      display: contents;
+    }
+  }
+}

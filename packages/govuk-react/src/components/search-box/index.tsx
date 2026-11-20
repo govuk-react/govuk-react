@@ -4,47 +4,6 @@ import { clsx } from 'clsx';
 import * as Primitives from '@govuk-react/primitives/autocomplete';
 
 const name = 'govuk-react-search-box';
-const brand = 'var(--govuk-brand-colour,#1d70b8)';
-const suggestionIcon =
-  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 27'%3E%3Ccircle cx='12' cy='11' r='8.5' fill='none' stroke='%23000' stroke-width='3'/%3E%3Cpath d='m17.9 17.4 8.5 8.5' stroke='%23000' stroke-width='3'/%3E%3C/svg%3E";
-
-/** Styles govuk-frontend has no class for, hoisted and deduplicated by React. Based on GOV.UK’s search component. */
-export const searchBoxCss = `
-.${name}__wrapper{display:flex;background-color:#fff}
-.${name}__input{margin:0;-webkit-appearance:none;appearance:none}
-.${name}__input:focus{z-index:1}
-.${name}__button{position:relative;flex:0 0 auto;width:2.5rem;height:2.5rem;margin:0;padding:0;border:0;border-radius:0;outline:2px solid transparent;outline-offset:0;cursor:pointer;background-color:${brand};color:#fff}
-.${name}__button:hover{background-color:color-mix(in srgb,${brand} 75%,#000)}
-.${name}__button:focus{z-index:1;outline:3px solid var(--govuk-focus-colour,#fd0);box-shadow:inset 0 0 0 4px #0b0c0c}
-.${name}__icon{position:absolute;inset:0;width:100%;height:100%;transform:scale(.5);pointer-events:none}
-.${name}:not(.${name}--inverse) .${name}__input{border-right-width:0}
-.${name}:not(.${name}--inverse) .${name}__input:focus{border-right-width:2px}
-.${name}--inverse .${name}__label{color:#fff}
-.${name}--inverse .${name}__input{border-width:0}
-.${name}--inverse .${name}__button{background-color:color-mix(in srgb,${brand} 20%,#fff);color:${brand}}
-.${name}--inverse .${name}__button:hover{background-color:color-mix(in srgb,${brand} 5%,#fff)}
-.${name}--large .${name}__input{height:3.125rem}
-.${name}--large .${name}__button{width:3.125rem;height:3.125rem}
-.${name}--large .${name}__icon{transform:scale(.4)}
-.${name}__autocomplete{display:block;position:relative}
-.${name}__menu{position:absolute;z-index:100;top:100%;left:0;right:0;margin:0;padding:0;list-style:none;overflow-x:hidden;background-color:#fff;border:1px solid #b1b4b6;border-top:0}
-.${name}--inverse .${name}__menu{border-top:1px solid #b1b4b6}
-.${name}__option{cursor:pointer;font-family:"GDS Transport",arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:1rem;line-height:1.25;color:#0b0c0c}
-@media (min-width:40.0625em){.${name}__option{font-size:1.1875rem;line-height:1.3157894737}}
-.${name}__option>*{pointer-events:none}
-.${name}__option[data-focused],.${name}__option:hover,.${name}__option:focus-visible{background-color:#f3f3f3;outline:none;text-decoration:underline;text-decoration-thickness:max(3px,.1875rem,.12em);text-underline-offset:.1578em}
-.${name}__option:focus-visible .${name}__suggestion-text{background-color:var(--govuk-focus-colour,#fd0)}
-.${name}__option[hidden]{display:none}
-.${name}__option-wrapper{display:flex;align-items:center;margin:0 15px;padding:5px 0}
-.${name}__option:not([hidden])~.${name}__option:not([hidden]) .${name}__option-wrapper{border-top:1px solid #b1b4b6}
-.${name}__suggestion-icon{flex:none;width:20px;height:2.5rem;margin-right:10px;background-color:#505a5f;-webkit-mask:url("${suggestionIcon}") center/contain no-repeat;mask:url("${suggestionIcon}") center/contain no-repeat}
-.${name}__option[data-focused] .${name}__suggestion-icon,.${name}__option:hover .${name}__suggestion-icon,.${name}__option:focus-visible .${name}__suggestion-icon{background-color:#0b0c0c}
-.${name}__suggestion-text{font-weight:700}
-.${name}__suggestion-highlight{font-weight:400;background:none;color:inherit}
-.${name}--large .${name}__option{min-height:3.125rem}
-@media (forced-colors:active){.${name}__menu{border-color:FieldText}.${name}__option[data-focused],.${name}__option:hover{forced-color-adjust:none;background-color:Highlight;color:HighlightText}.${name}__suggestion-icon{background-color:currentcolor}}
-`;
-
 export type RootProps = ComponentProps<'div'> & {
   /** For use on dark backgrounds, such as a GOV.UK blue homepage banner. */
   inverse?: boolean;
@@ -56,9 +15,6 @@ export type RootProps = ComponentProps<'div'> & {
 export function Root({ inverse, large, className, children, ...props }: RootProps) {
   return (
     <div className={clsx(name, inverse && `${name}--inverse`, large && `${name}--large`, className)} {...props}>
-      <style href={name} precedence="default">
-        {searchBoxCss}
-      </style>
       {children}
     </div>
   );
@@ -219,8 +175,8 @@ export function Match({ className, ...props }: MatchProps) {
 export type StatusProps = Primitives.StatusProps;
 
 /** What screen readers hear about the suggestions. Visually hidden. */
-export function Status(props: StatusProps) {
-  return <Primitives.Status {...props} />;
+export function Status({ className, ...props }: StatusProps) {
+  return <Primitives.Status className={clsx('govuk-visually-hidden', className)} {...props} />;
 }
 
 export type AssistiveHintProps = Primitives.AssistiveHintProps;

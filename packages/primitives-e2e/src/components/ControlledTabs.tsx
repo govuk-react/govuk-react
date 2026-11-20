@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import * as Tabs from '@govuk-react/primitives/tabs';
+import '@govuk-react/primitives/styles.css';
 
 const items = [
   { value: 'account', label: 'Account' },

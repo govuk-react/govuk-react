@@ -27,12 +27,6 @@ const TabsContext = createContext<{
   onValueChange?: (value: string) => void;
 }>({});
 
-/**
- * Shows only the checked radio's panel until the element upgrades, and below its `media`.
- * Root renders it inline; under a strict CSP, add it to a stylesheet instead.
- */
-export const radiosFallbackCss = `${tagName}:not([data-upgraded]) [data-tabs-content]:has(> input[data-tabs-fallback]):not(:has(> input:checked)){display:none}`;
-
 const radioId = (name: string, value: string) => `${name}-${value}`;
 
 type BaseRootProps = {
@@ -123,11 +117,6 @@ function TabsRoot({
 
   return (
     <TabsContext.Provider value={{ selected: value ?? defaultValue, name: groupName, onValueChange }}>
-      {fallback === 'radios' && (
-        <style href={`${tagName}-radios-fallback`} precedence="default">
-          {radiosFallbackCss}
-        </style>
-      )}
       {React.createElement(
         tagName,
         {

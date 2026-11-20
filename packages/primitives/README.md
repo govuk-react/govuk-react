@@ -1,6 +1,6 @@
 # @govuk-react/primitives
 
-Headless behaviour for design system components, as light-DOM custom elements with unstyled React parts over them. It ships no styles and no GOV.UK markup, so any library can use it. govuk-react's components are the reference implementation, built with govuk-frontend-react's markup.
+Headless behaviour for design system components, as light-DOM custom elements with unstyled React parts over them. It sets no look and ships no GOV.UK markup, so any library can use it. govuk-react's components are the reference implementation, built with govuk-frontend-react's markup.
 
 Each primitive:
 
@@ -10,6 +10,16 @@ Each primitive:
 - takes `asChild` on its parts, so you render your own elements. A `Root` is the custom element, except Button's
 
 Import each primitive from its own path, such as `@govuk-react/primitives/tabs`. Each path defines its element when imported.
+
+## Styles
+
+Two fallbacks need a CSS rule each, which only set `display`: the Tabs radios fallback and the Accordion. Load the package's stylesheet once, or copy its rules into your own:
+
+```ts
+import '@govuk-react/primitives/styles.css';
+```
+
+No part renders a `style` element or attribute, so the primitives work under a strict Content Security Policy.
 
 ## Without React
 
@@ -58,7 +68,7 @@ import * as Accordion from '@govuk-react/primitives/accordion';
 </Accordion.Root>;
 ```
 
-Without JavaScript every section is shown under its `Fallback` heading. Each section also renders a hidden `Trigger` with the same heading, which the element shows on upgrade while hiding the fallback. Nothing is moved, so React can keep rendering the markup. Closed content gets `hidden="until-found"`, so find in page opens it. `Label`s name the trigger, followed by "Show this section" or "Hide this section".
+Without JavaScript every section is shown under its `Fallback` heading. It needs the package's [stylesheet](#styles). Each section also renders a hidden `Trigger` with the same heading, which the element shows on upgrade while hiding the fallback. Nothing is moved, so React can keep rendering the markup. Closed content gets `hidden="until-found"`, so find in page opens it. `Label`s name the trigger, followed by "Show this section" or "Hide this section".
 
 `ShowAll` opens every section, or closes them all when every one is open. `value` and `onValueChange` control the open sections once hydrated, and a section opened before hydration is reported rather than undone. As in govuk-frontend, open sections are remembered for the session by content id, unless `rememberExpanded` is `false`. In an island without a `Root`, pass `defaultExpanded` to `Section`.
 
@@ -82,7 +92,7 @@ Each panel holds a hidden radio, and the radio group is the source of truth, as 
 The root sets how the tabs work without JavaScript, and its parts match it:
 
 - `Root`, with `Trigger` and `Content`: each tab links to its panel, and every panel shows.
-- `RadiosRoot`, with `RadioTrigger` and `RadioContent`: each tab is a label for a hidden radio in its panel, so tabs switch with no JavaScript when clicked. It needs `defaultValue` or `value`. Without JavaScript the labels can't be reached by keyboard, as in the reference. Pass `name` when tabs render in separate React roots, such as islands. `RadiosRoot` adds the fallback's CSS inline; under a strict CSP, add `radiosFallbackCss` to a stylesheet instead.
+- `RadiosRoot`, with `RadioTrigger` and `RadioContent`: each tab is a label for a hidden radio in its panel, so tabs switch with no JavaScript when clicked. It needs `defaultValue` or `value`. Without JavaScript the labels can't be reached by keyboard, as in the reference. Pass `name` when tabs render in separate React roots, such as islands. It needs the package's [stylesheet](#styles).
 
 They are separate components rather than a prop, because a prop can change after the first render, and the markup each needs can't.
 
@@ -173,12 +183,12 @@ import * as Autocomplete from '@govuk-react/primitives/autocomplete';
     ))}
     <Autocomplete.NoResults />
   </Autocomplete.Listbox>
-  <Autocomplete.Status />
+  <Autocomplete.Status className="visually-hidden" />
   <Autocomplete.AssistiveHint />
 </Autocomplete.Root>;
 ```
 
-A port of GOV.UK's [accessible-autocomplete](https://github.com/alphagov/accessible-autocomplete) that enhances your own input. Without JavaScript the input is a plain input. On upgrade it's a combobox with accessible-autocomplete's behaviour: options that match the query show in the `Listbox`, Up and Down move focus through them, Enter, Space or a click confirms one, and Escape closes the menu. `Status` tells screen readers how many options there are once the user pauses, and `AssistiveHint` describes the input while the query is empty.
+A port of GOV.UK's [accessible-autocomplete](https://github.com/alphagov/accessible-autocomplete) that enhances your own input. Without JavaScript the input is a plain input. On upgrade it's a combobox with accessible-autocomplete's behaviour: options that match the query show in the `Listbox`, Up and Down move focus through them, Enter, Space or a click confirms one, and Escape closes the menu. `Status` tells screen readers how many options there are once the user pauses, so hide it visually with your own class, and `AssistiveHint` describes the input while the query is empty.
 
 The input's value is the query, and the options are whatever you render, so there is nothing else to control. `onQueryChange` is called when options are due, such as to fetch them, including for a query typed before hydration. `filter` sets which options match the query: "contains" (the default), "starts-with", or "none" for options that already match, such as results from a server. Leave out `NoResults` to show nothing when no option matches.
 

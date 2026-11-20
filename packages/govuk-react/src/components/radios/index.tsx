@@ -21,14 +21,6 @@ export {
   type DividerProps,
 } from 'govuk-frontend-react/radios';
 
-/** Shows a reveal only while its radio is checked, before or without JavaScript. */
-export const radiosCss = [
-  // Hides a reveal whose radio isn't checked.
-  '.govuk-radios__item:has(>.govuk-radios__input:not(:checked))+.govuk-radios__conditional{display:none}',
-  // Shows one whose radio is, over govuk-frontend's hidden class, until the element upgrades.
-  '.govuk-radios__item:has(>.govuk-radios__input:checked)+.govuk-radios__conditional{display:block}',
-].join('');
-
 /** The element and styles around the radios, for `Root` and `Field`. */
 function Behaviour({ children }: { children: React.ReactNode }) {
   return (
@@ -36,9 +28,6 @@ function Behaviour({ children }: { children: React.ReactNode }) {
       upgradedClass="govuk-frontend-supported"
       hiddenConditionalClass="govuk-radios__conditional--hidden"
     >
-      <style href="govuk-react-radios" precedence="default">
-        {radiosCss}
-      </style>
       {children}
     </Primitives.Root>
   );
