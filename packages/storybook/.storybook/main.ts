@@ -7,6 +7,7 @@ const config: StorybookConfig = {
     '../src/*.mdx',
     '../../../packages/example-application/src/**/?(*.)stories.[jt]s?(x)',
     '../../govuk-react/src/**/?(*.)stories.[jt]s?(x)',
+    '../../primitives/src/**/?(*.)stories.[jt]s?(x)',
   ],
   staticDirs: [{ from: '../node_modules/govuk-frontend/dist/govuk/assets', to: '/assets' }],
   addons: ['@storybook/addon-docs'],
