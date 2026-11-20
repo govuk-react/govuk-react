@@ -149,6 +149,28 @@ test.describe('controlled, when the app ignores a change', () => {
     await expect(controlled).toBeVisible();
   });
 
+  test('Escape closes a popover open in the dialog, and doesn’t ask', async ({ page }) => {
+    await page.getByRole('button', { name: 'Open from outside' }).click();
+    const controlled = page.getByRole('dialog', { name: 'Controlled' });
+    await controlled.getByRole('button', { name: 'More' }).click();
+    await expect(page.getByText('More about this')).toBeVisible();
+    // Focus stays on the button, outside the popover.
+    await page.keyboard.press('Escape');
+    await expect(page.getByText('More about this')).toBeHidden();
+    await expect(controlled).toBeVisible();
+    await expect(page.getByTestId('controlled-open')).toHaveText('true');
+  });
+
+  test('Escape that a React handler in the dialog prevented doesn’t ask', async ({ page }) => {
+    await page.getByRole('button', { name: 'Open from outside' }).click();
+    const controlled = page.getByRole('dialog', { name: 'Controlled' });
+    await controlled.getByLabel('Escape is mine').focus();
+    await page.keyboard.press('Escape');
+    await page.keyboard.press('Escape');
+    await expect(controlled).toBeVisible();
+    await expect(page.getByTestId('controlled-open')).toHaveText('true');
+  });
+
   test('a script’s showModal() only asks', async ({ page }) => {
     await page.getByLabel('Ignore changes').check();
     const opened = await page.locator('#controlled-dialog').evaluate((dialog) => {

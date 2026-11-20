@@ -34,6 +34,13 @@ export default function ControlledModal() {
         <Modal.Content>
           <Modal.Title>Controlled</Modal.Title>
           <Modal.Close>Close</Modal.Close>
+          <button type="button" popoverTarget="controlled-popover">
+            More
+          </button>
+          <div id="controlled-popover" popover="auto">
+            More about this
+          </div>
+          <input aria-label="Escape is mine" onKeyDown={(event) => event.key === 'Escape' && event.preventDefault()} />
           <form method="dialog">
             <button type="submit">Submit</button>
           </form>

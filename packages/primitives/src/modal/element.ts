@@ -46,6 +46,18 @@ const restoreDelay = 100;
 export const supportsCommands = () =>
   typeof HTMLButtonElement !== 'undefined' && 'command' in HTMLButtonElement.prototype;
 
+/** Whether Escape would close a popover in the dialog, not the dialog. A manual popover stays. */
+function hasOpenPopover(dialog: HTMLDialogElement) {
+  try {
+    return Array.from(dialog.querySelectorAll(':popover-open')).some(
+      (popover) => popover.getAttribute('popover') !== 'manual'
+    );
+  } catch {
+    // No popovers in this browser.
+    return false;
+  }
+}
+
 if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined') {
   class GovukReactModal extends HTMLElement {
     static get observedAttributes() {
@@ -99,13 +111,14 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     };
 
     // Escape, before the browser asks the dialog to close: it lets a page cancel that only once in
-    // a row. A key that something inside the dialog handled, or that closes a popover, is left.
+    // a row. Heard on the window, so a key that anything else handled first, React's handlers
+    // included, is left. So is one that closes a popover open in the dialog.
     private readonly onKeydown = (event: KeyboardEvent) => {
       const { dialog } = this;
       const { target } = event;
       if (!dialog || event.key !== 'Escape' || event.defaultPrevented || event.isComposing) return;
       if (!(target instanceof Element) || target.closest('dialog') !== dialog) return;
-      if (target.closest(':popover-open') || dialog.getAttribute('closedby') === 'none') return;
+      if (dialog.getAttribute('closedby') === 'none' || hasOpenPopover(dialog)) return;
       if (this.request(dialog, 'request-close')) event.preventDefault();
     };
 
@@ -143,18 +156,19 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     connectedCallback() {
       if (!supportsCommands()) this.addEventListener('click', this.onClick);
       this.addEventListener('submit', this.onSubmit);
+      window.addEventListener('keydown', this.onKeydown);
       this.observer = setUpWhenReady(this, () => this.setup());
     }
 
     disconnectedCallback() {
       this.removeEventListener('click', this.onClick);
       this.removeEventListener('submit', this.onSubmit);
+      window.removeEventListener('keydown', this.onKeydown);
       window.clearTimeout(this.restoreTimeout);
       this.observer?.disconnect();
       this.openObserver?.disconnect();
       this.dialog?.removeEventListener('command', this.onCommand);
       this.dialog?.removeEventListener('cancel', this.onCancel);
-      this.dialog?.removeEventListener('keydown', this.onKeydown);
       this.dialog?.removeEventListener('beforetoggle', this.onBeforeToggle);
       this.dialog = undefined;
     }
@@ -175,7 +189,6 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.openObserver.observe(dialog, { attributes: true, attributeFilter: ['open'] });
       dialog.addEventListener('command', this.onCommand);
       dialog.addEventListener('cancel', this.onCancel);
-      dialog.addEventListener('keydown', this.onKeydown);
       dialog.addEventListener('beforetoggle', this.onBeforeToggle);
       this.sync();
       return true;
