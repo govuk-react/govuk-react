@@ -13,23 +13,23 @@ export default function NestedTabsDemo() {
     <div data-testid="nested-tabs" ref={hydrated} data-hydrated="false" suppressHydrationWarning>
       <Tabs.RadiosRoot defaultValue="account">
         <Tabs.List>
-          <Tabs.RadioTrigger value="account">Account</Tabs.RadioTrigger>
-          <Tabs.RadioTrigger value="settings">Settings</Tabs.RadioTrigger>
+          <Tabs.RadiosTrigger value="account">Account</Tabs.RadiosTrigger>
+          <Tabs.RadiosTrigger value="settings">Settings</Tabs.RadiosTrigger>
         </Tabs.List>
-        <Tabs.RadioContent value="account">
+        <Tabs.RadiosContent value="account">
           <p>Outer account panel.</p>
           <div data-testid="inner">
             <Tabs.RadiosRoot defaultValue="profile">
               <Tabs.List>
-                <Tabs.RadioTrigger value="profile">Profile</Tabs.RadioTrigger>
-                <Tabs.RadioTrigger value="email">Email</Tabs.RadioTrigger>
+                <Tabs.RadiosTrigger value="profile">Profile</Tabs.RadiosTrigger>
+                <Tabs.RadiosTrigger value="email">Email</Tabs.RadiosTrigger>
               </Tabs.List>
-              <Tabs.RadioContent value="profile">Inner profile.</Tabs.RadioContent>
-              <Tabs.RadioContent value="email">Inner email.</Tabs.RadioContent>
+              <Tabs.RadiosContent value="profile">Inner profile.</Tabs.RadiosContent>
+              <Tabs.RadiosContent value="email">Inner email.</Tabs.RadiosContent>
             </Tabs.RadiosRoot>
           </div>
-        </Tabs.RadioContent>
-        <Tabs.RadioContent value="settings">Outer settings panel.</Tabs.RadioContent>
+        </Tabs.RadiosContent>
+        <Tabs.RadiosContent value="settings">Outer settings panel.</Tabs.RadiosContent>
       </Tabs.RadiosRoot>
     </div>
   );

@@ -24,7 +24,7 @@ export default function DisclosureDemo({ id, controlled = false }: { id: string;
     <div ref={hydrated} data-testid={`disclosure-${id}`} data-hydrated="false" suppressHydrationWarning>
       <nav aria-label={`Menu ${id}`}>
         <Disclosure.Root media={tablet} open={controlled ? open : undefined} onOpenChange={onOpenChange}>
-          <Disclosure.Toggle aria-controls={`${id}-menu`}>Menu</Disclosure.Toggle>
+          <Disclosure.Trigger aria-controls={`${id}-menu`}>Menu</Disclosure.Trigger>
           <Disclosure.Content asChild>
             <ul id={`${id}-menu`}>
               <li>

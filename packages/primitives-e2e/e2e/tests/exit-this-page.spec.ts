@@ -52,7 +52,7 @@ for (const [id, path] of [
         await page.evaluate(() => {
           new MutationObserver(() => {
             const overlay = document.querySelector('[role=alert]');
-            const exitButton = document.querySelector('[data-exit-this-page-button]');
+            const exitButton = document.querySelector('[data-exit-this-page-trigger]');
             if (!overlay?.textContent || !exitButton) return;
             console.log(`exiting: ${overlay.textContent}, button ${exitButton.checkVisibility() ? 'shown' : 'hidden'}`);
           }).observe(document.body, { childList: true, subtree: true, characterData: true });

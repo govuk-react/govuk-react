@@ -6,7 +6,7 @@ import * as Disclosure from '.';
 function Example(props: Disclosure.RootProps) {
   return (
     <Disclosure.Root {...props}>
-      <Disclosure.Toggle>Menu</Disclosure.Toggle>
+      <Disclosure.Trigger>Menu</Disclosure.Trigger>
       <Disclosure.Content id="menu">Navigation</Disclosure.Content>
     </Disclosure.Root>
   );

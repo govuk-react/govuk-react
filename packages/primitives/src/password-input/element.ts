@@ -8,7 +8,7 @@
  *
  * Markup inside the element:
  * - `[data-password-input]`: an `input` of type "password".
- * - `[data-password-toggle]`: a `button` of type "button", rendered `hidden`.
+ * - `[data-password-trigger]`: a `button` of type "button", rendered `hidden`.
  * - `[data-password-status]` (optional): a visually hidden live region for the announcements.
  *   Without one, the element adds one after the input.
  *
@@ -116,7 +116,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     private setup() {
       if (this.input) return true;
       const input = this.own('[data-password-input]', HTMLInputElement);
-      const toggle = this.own('[data-password-toggle]', HTMLButtonElement);
+      const toggle = this.own('[data-password-trigger]', HTMLButtonElement);
       if (!input || !toggle) return false;
       this.input = input;
       this.toggle = toggle;

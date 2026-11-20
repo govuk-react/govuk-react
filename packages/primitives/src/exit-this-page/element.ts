@@ -7,7 +7,7 @@
  * and goes to the button's `href`. A status tells screen readers how many more presses are needed.
  *
  * Markup inside the element:
- * - `[data-exit-this-page-button]`: the link to the safe page.
+ * - `[data-exit-this-page-trigger]`: the link to the safe page.
  * - `[data-exit-this-page-indicator]`: shows how many times Shift has been pressed, with
  *   `[data-exit-this-page-light]` children. It gets `data-visible` while counting, and each light
  *   `data-on` once pressed.
@@ -20,7 +20,7 @@
  * event. Cancel it to stay on the page.
  *
  * Attributes:
- * - `activated`, `timed-out`, `press-two-more-times`, `press-one-more-time`: the messages,
+ * - `activated-announcement`, `timed-out-announcement`, `press-two-more-times-announcement`, `press-one-more-time-announcement`: the messages,
  *   English by default.
  * - `indicator-visible-class`, `light-on-class`: classes for the indicator and its lights.
  * - `hide-content-class`: classes for `body` that hide the page behind the overlay.
@@ -32,16 +32,21 @@ import { classesOf, setText } from '../utils/dom.js';
 
 export const tagName = 'govuk-react-exit-this-page';
 
-export const messageNames = ['activated', 'timed-out', 'press-two-more-times', 'press-one-more-time'] as const;
+export const messageNames = [
+  'activated-announcement',
+  'timed-out-announcement',
+  'press-two-more-times-announcement',
+  'press-one-more-time-announcement',
+] as const;
 
 export type MessageName = (typeof messageNames)[number];
 
 /** govuk-frontend's English messages. */
 export const defaultMessages: Record<MessageName, string> = {
-  activated: 'Loading.',
-  'timed-out': 'Exit this page expired.',
-  'press-two-more-times': 'Shift, press 2 more times to exit.',
-  'press-one-more-time': 'Shift, press 1 more time to exit.',
+  'activated-announcement': 'Loading.',
+  'timed-out-announcement': 'Exit this page expired.',
+  'press-two-more-times-announcement': 'Shift, press 2 more times to exit.',
+  'press-one-more-time-announcement': 'Shift, press 1 more time to exit.',
 };
 
 export interface ExitThisPageElement extends HTMLElement {
@@ -94,7 +99,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     exit() {
-      const button = this.own('[data-exit-this-page-button]');
+      const button = this.own('[data-exit-this-page-trigger]');
       const href = button instanceof HTMLAnchorElement ? button.href : undefined;
       const proceed =
         href !== undefined &&
@@ -116,7 +121,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       if (overlayClasses.length) overlay.classList.add(...overlayClasses);
       else Object.entries(overlayStyles).forEach(([name, value]) => overlay.style.setProperty(name, value));
       document.body.appendChild(overlay);
-      overlay.textContent = this.message('activated');
+      overlay.textContent = this.message('activated-announcement');
       this.overlay = overlay;
       window.location.href = href;
     }
@@ -145,7 +150,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       if (event.defaultPrevented || event.button !== 0) return;
       const link = event.target instanceof Element ? event.target.closest('a') : null;
       if (!link) return;
-      const own = link.matches('[data-exit-this-page-button]') && link.closest(tagName) === this;
+      const own = link.matches('[data-exit-this-page-trigger]') && link.closest(tagName) === this;
       const skipLink = link.matches('[data-exit-this-page-skiplink]') && this.listening;
       if (!own && !skipLink) return;
       event.preventDefault();
@@ -164,7 +169,9 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
           this.pressTimeout = undefined;
           this.exit();
         } else {
-          this.setStatus(this.message(this.presses === 1 ? 'press-two-more-times' : 'press-one-more-time'));
+          this.setStatus(
+            this.message(this.presses === 1 ? 'press-two-more-times-announcement' : 'press-one-more-time-announcement')
+          );
           window.clearTimeout(this.pressTimeout);
           this.pressTimeout = window.setTimeout(this.timeOut, timeoutMs);
         }
@@ -178,7 +185,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       window.clearTimeout(this.pressTimeout);
       this.pressTimeout = undefined;
       this.presses = 0;
-      this.setStatus(this.message('timed-out'));
+      this.setStatus(this.message('timed-out-announcement'));
       this.messageTimeout = window.setTimeout(() => this.setStatus(''), timeoutMs);
       this.updateIndicator();
     };

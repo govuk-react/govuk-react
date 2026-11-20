@@ -21,11 +21,11 @@ export default function FileUploadDemo({ id, multiple = false }: { id: string; m
       <p id={`${id}-hint`}>This can be in either JPG or PNG format</p>
       <FileUpload.Root emptyClass="empty" draggingClass="dragging" disabledClass="disabled">
         <FileUpload.DropZone data-testid={`zone-${id}`}>
-          <FileUpload.Button>
+          <FileUpload.Trigger>
             <FileUpload.Status data-testid={`status-${id}`} />
             <FileUpload.Separator style={visuallyHidden} />
             <span>Choose file</span> <span>or drop file</span>
-          </FileUpload.Button>
+          </FileUpload.Trigger>
           <FileUpload.Input
             id={id}
             name={id}

@@ -62,9 +62,9 @@ export type ToggleProps = Markup.ToggleProps;
 /** The menu button, inside `Menu`. Hidden from tablet width up, and without JavaScript. */
 export function Toggle(props: ToggleProps) {
   return (
-    <Primitives.Toggle asChild>
+    <Primitives.Trigger asChild>
       <Markup.Toggle {...props} />
-    </Primitives.Toggle>
+    </Primitives.Trigger>
   );
 }
 

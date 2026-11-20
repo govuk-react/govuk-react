@@ -25,10 +25,10 @@ export type RootProps = Markup.RootProps;
 export function Root({ children, ...props }: RootProps) {
   return (
     <Primitives.Root
-      activatedText={props.activatedText}
-      timedOutText={props.timedOutText}
-      pressTwoMoreTimesText={props.pressTwoMoreTimesText}
-      pressOneMoreTimeText={props.pressOneMoreTimeText}
+      activatedAnnouncement={props.activatedText}
+      timedOutAnnouncement={props.timedOutText}
+      pressTwoMoreTimesAnnouncement={props.pressTwoMoreTimesText}
+      pressOneMoreTimeAnnouncement={props.pressOneMoreTimeText}
       indicatorVisibleClass="govuk-exit-this-page__indicator--visible"
       lightOnClass="govuk-exit-this-page__indicator-light--on"
       hideContentClass="govuk-exit-this-page-hide-content"
@@ -49,12 +49,12 @@ export type ButtonProps = Markup.ButtonProps;
 /** The link to a safe page. Shows how many times Shift has been pressed. */
 export function Button({ children, ...props }: ButtonProps) {
   return (
-    <Primitives.Button asChild>
+    <Primitives.Trigger asChild>
       <Markup.Button {...props}>
         {children}
         <Indicator />
       </Markup.Button>
-    </Primitives.Button>
+    </Primitives.Trigger>
   );
 }
 

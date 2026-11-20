@@ -27,10 +27,10 @@ function Demo() {
     <>
       <ExitThisPage.SkipLink href="https://www.bbc.co.uk/weather">Exit this page</ExitThisPage.SkipLink>
       <ExitThisPage.Root lightOnClass="on" indicatorVisibleClass="visible">
-        <ExitThisPage.Button href="https://www.bbc.co.uk/weather">
+        <ExitThisPage.Trigger href="https://www.bbc.co.uk/weather">
           Exit this page
           <ExitThisPage.Indicator />
-        </ExitThisPage.Button>
+        </ExitThisPage.Trigger>
         <ExitThisPage.Status />
       </ExitThisPage.Root>
     </>

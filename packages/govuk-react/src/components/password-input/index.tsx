@@ -67,9 +67,9 @@ export type ToggleProps = Markup.ToggleProps;
 /** The show and hide button. Hidden until JavaScript runs. */
 export function Toggle(props: ToggleProps) {
   return (
-    <Primitives.Toggle asChild>
+    <Primitives.Trigger asChild>
       <Markup.Toggle {...props} />
-    </Primitives.Toggle>
+    </Primitives.Trigger>
   );
 }
 

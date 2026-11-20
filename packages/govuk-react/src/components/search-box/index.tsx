@@ -280,9 +280,9 @@ export function AutocompleteComposite({
         onConfirm={onConfirm}
         confirmOnBlur={false}
         submitOnConfirm
-        statusNoResults="No search suggestions found"
-        statusQueryTooShort="Type in %{count} or more characters for search suggestions"
-        statusResults={{
+        noResultsAnnouncement="No search suggestions found"
+        queryTooShortAnnouncement="Type in %{count} or more characters for search suggestions"
+        resultsAnnouncement={{
           one: '%{count} search suggestion is available.',
           other: '%{count} search suggestions are available.',
         }}

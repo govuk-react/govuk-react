@@ -20,13 +20,13 @@ export type { Translation } from '../utils/translation.js';
 
 export type RootProps = React.HTMLAttributes<HTMLElement> & {
   /** Shown while no file is chosen. Defaults to "No file chosen". */
-  noFileChosen?: string;
+  noFileChosenText?: string;
   /** Shown when more than one file is chosen. `%{count}` is the number. Defaults to "%{count} files chosen". */
-  multipleFilesChosen?: Translation;
+  multipleFilesChosenText?: Translation;
   /** Announced when the user drags files into the drop zone. Defaults to "Entered drop zone". */
-  enteredDropZone?: string;
+  enteredDropZoneAnnouncement?: string;
   /** Announced when the user drags files out of the drop zone. Defaults to "Left drop zone". */
-  leftDropZone?: string;
+  leftDropZoneAnnouncement?: string;
   /** Classes for the button while no file is chosen. */
   emptyClass?: string;
   /** Classes for the button while files are dragged over the drop zone. */
@@ -36,30 +36,30 @@ export type RootProps = React.HTMLAttributes<HTMLElement> & {
 };
 
 // What the status starts with, so the element only changes text React rendered.
-const InitialStatus = createContext<string>(defaults['no-file-chosen']);
+const InitialStatus = createContext<string>(defaults['no-file-chosen-text']);
 
 export function Root({
-  noFileChosen,
-  multipleFilesChosen,
-  enteredDropZone,
-  leftDropZone,
+  noFileChosenText,
+  multipleFilesChosenText,
+  enteredDropZoneAnnouncement,
+  leftDropZoneAnnouncement,
   emptyClass,
   draggingClass,
   disabledClass,
   ...props
 }: RootProps) {
   // Rendered once and then left to the element, so a re-render never puts back a stale status.
-  const [initial] = useState(() => statusText([], { 'no-file-chosen': noFileChosen }, props.lang || 'en'));
+  const [initial] = useState(() => statusText([], { 'no-file-chosen-text': noFileChosenText }, props.lang || 'en'));
   return (
     <InitialStatus.Provider value={initial}>
       {React.createElement(tagName, {
         ...props,
         // The element owns `data-upgraded`.
         suppressHydrationWarning: true,
-        'no-file-chosen': noFileChosen,
-        ...translationAttributes('multiple-files-chosen', multipleFilesChosen),
-        'entered-drop-zone': enteredDropZone,
-        'left-drop-zone': leftDropZone,
+        'no-file-chosen-text': noFileChosenText,
+        ...translationAttributes('multiple-files-chosen-text', multipleFilesChosenText),
+        'entered-drop-zone-announcement': enteredDropZoneAnnouncement,
+        'left-drop-zone-announcement': leftDropZoneAnnouncement,
         'empty-class': emptyClass,
         'dragging-class': draggingClass,
         'disabled-class': disabledClass,
@@ -91,21 +91,21 @@ export function Input({ asChild, ...props }: InputProps) {
   return <Element type="file" suppressHydrationWarning {...props} />;
 }
 
-export type ButtonProps = PartProps<'button'>;
+export type TriggerProps = PartProps<'button'>;
 
 /**
  * Opens the file picker, and takes dropped files. Hidden until the element upgrades, when it
  * takes the input's id, so the input's label names it. Holds `Status`.
  */
-export function Button({ asChild, ...props }: ButtonProps) {
+export function Trigger({ asChild, ...props }: TriggerProps) {
   const Element = asChild ? Slot : 'button';
   // The element owns `id`, `hidden`, `disabled`, its ARIA and its classes after upgrade.
-  return <Element data-file-upload-button="" type="button" hidden suppressHydrationWarning {...props} />;
+  return <Element data-file-upload-trigger="" type="button" hidden suppressHydrationWarning {...props} />;
 }
 
 export type StatusProps = PartProps<'span'>;
 
-/** Which files are chosen: "No file chosen", the file's name, or how many files. In `Button`. */
+/** Which files are chosen: "No file chosen", the file's name, or how many files. In `Trigger`. */
 export function Status({ asChild, children, ...props }: StatusProps) {
   const initial = useContext(InitialStatus);
   const Element = asChild ? Slot : 'span';
@@ -119,7 +119,7 @@ export function Status({ asChild, children, ...props }: StatusProps) {
 
 export type SeparatorProps = PartProps<'span'>;
 
-/** Between the label and the button's text in the button's accessible name. Defaults to ", ". In `Button`. */
+/** Between the label and the button's text in the button's accessible name. Defaults to ", ". In `Trigger`. */
 export function Separator({ asChild, children = ', ', ...props }: SeparatorProps) {
   const Element = asChild ? Slot : 'span';
   // The element owns its `id` after upgrade.

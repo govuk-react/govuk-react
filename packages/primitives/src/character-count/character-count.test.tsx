@@ -91,7 +91,7 @@ describe('CharacterCount', () => {
       <Example
         countType="words"
         maxLength={3}
-        wordsUnderLimit={{ one: '%{count} gair ar ôl', other: '%{count} o eiriau ar ôl' }}
+        wordsUnderLimitText={{ one: '%{count} gair ar ôl', other: '%{count} o eiriau ar ôl' }}
       />
     );
     await upgraded();
@@ -173,7 +173,10 @@ describe('CharacterCount', () => {
 
   test('uses the plural forms of the field’s language', async () => {
     render(
-      <CharacterCount.Root maxLength={4} charactersUnderLimit={{ two: '%{count} nod (dau)', other: '%{count} nod' }}>
+      <CharacterCount.Root
+        maxLength={4}
+        charactersUnderLimitText={{ two: '%{count} nod (dau)', other: '%{count} nod' }}
+      >
         <div lang="cy">
           <CharacterCount.Input aria-label="Message" />
           <CharacterCount.Status data-testid="status" />

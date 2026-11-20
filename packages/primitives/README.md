@@ -8,6 +8,7 @@ Each primitive:
 - upgrades to the full WAI-ARIA pattern when its custom element is defined, with or without React
 - adds React props for its state once hydrated, where it has any, such as `value` and `onValueChange`, or `open` and `onOpenChange`
 - takes `asChild` on its parts, so you render your own elements. A `Root` is the custom element, except Button's
+- names its parts and props alike: the control that operates it is `Trigger`, and a text prop ends in `Text` when it's shown, `Label` when it's an accessible name and `Announcement` when only screen readers hear it
 
 Import each primitive from its own path, such as `@govuk-react/primitives/tabs`. Each path defines its element when imported.
 
@@ -82,7 +83,7 @@ Each panel holds a hidden radio, and the radio group is the source of truth, as 
 The root sets how the tabs work without JavaScript, and its parts match it:
 
 - `Root`, with `Trigger` and `Content`: each tab links to its panel, and every panel shows.
-- `RadiosRoot`, with `RadioTrigger` and `RadioContent`: each tab is a label for a hidden radio in its panel, so tabs switch with no JavaScript when clicked. It needs `defaultValue` or `value`. Without JavaScript the labels can't be reached by keyboard, as in the reference. Pass `name` when tabs render in separate React roots, such as islands. `RadiosRoot` adds the fallback's CSS inline; under a strict CSP, add `radiosFallbackCss` to a stylesheet instead.
+- `RadiosRoot`, with `RadiosTrigger` and `RadiosContent`: each tab is a label for a hidden radio in its panel, so tabs switch with no JavaScript when clicked. It needs `defaultValue` or `value`. Without JavaScript the labels can't be reached by keyboard, as in the reference. Pass `name` when tabs render in separate React roots, such as islands. `RadiosRoot` adds the fallback's CSS inline; under a strict CSP, add `radiosFallbackCss` to a stylesheet instead.
 
 They are separate components rather than a prop, because a prop can change after the first render, and the markup each needs can't.
 
@@ -107,7 +108,7 @@ import * as Disclosure from '@govuk-react/primitives/disclosure';
 
 <nav aria-label="Menu">
   <Disclosure.Root media="(min-width: 40.0625em)">
-    <Disclosure.Toggle>Menu</Disclosure.Toggle>
+    <Disclosure.Trigger>Menu</Disclosure.Trigger>
     <Disclosure.Content asChild>
       <ul id="navigation">…</ul>
     </Disclosure.Content>
@@ -196,20 +197,20 @@ import * as FileUpload from '@govuk-react/primitives/file-upload';
 <label id="photo-label" htmlFor="photo">Upload a photo</label>
 <FileUpload.Root>
   <FileUpload.DropZone>
-    <FileUpload.Button>
+    <FileUpload.Trigger>
       <FileUpload.Status />
       <FileUpload.Separator className="visually-hidden" />
       Choose file or drop file
-    </FileUpload.Button>
+    </FileUpload.Trigger>
     <FileUpload.Input id="photo" name="photo" />
   </FileUpload.DropZone>
   <FileUpload.Announcements className="visually-hidden" />
 </FileUpload.Root>;
 ```
 
-Without JavaScript the native file input is shown and the `Button` is hidden. On upgrade the element hides the input and shows the button, which opens the file picker, takes files dropped on it, and says in `Status` which files are chosen. As in govuk-frontend, the button takes the input's `id` (the input's gets `-input` added), so the input's label names it, along with its `aria-describedby` and `disabled`. Give the label an id: without one the element adds it, which React warns about when it hydrates. `Announcements` tells screen readers when files are dragged into and out of the `DropZone`.
+Without JavaScript the native file input is shown and the `Trigger` is hidden. On upgrade the element hides the input and shows the button, which opens the file picker, takes files dropped on it, and says in `Status` which files are chosen. As in govuk-frontend, the button takes the input's `id` (the input's gets `-input` added), so the input's label names it, along with its `aria-describedby` and `disabled`. Give the label an id: without one the element adds it, which React warns about when it hydrates. `Announcements` tells screen readers when files are dragged into and out of the `DropZone`.
 
-The input's files are the state, so there is nothing to control. Dropped files fire bubbling `input` and `change` events, so React's `onChange` hears them. The text is English by default, and `multipleFilesChosen` takes a message for each plural form. The button gets `data-empty` and `data-dragging`, and the drop zone `data-disabled`, for styling, or pass class names such as `emptyClass`.
+The input's files are the state, so there is nothing to control. Dropped files fire bubbling `input` and `change` events, so React's `onChange` hears them. The text is English by default, and `multipleFilesChosenText` takes a message for each plural form. The button gets `data-empty` and `data-dragging`, and the drop zone `data-disabled`, for styling, or pass class names such as `emptyClass`.
 
 ## Choices
 
@@ -233,12 +234,12 @@ import * as PasswordInput from '@govuk-react/primitives/password-input';
 <label htmlFor="password">Password</label>
 <PasswordInput.Root>
   <PasswordInput.Input id="password" name="password" autoComplete="current-password" />
-  <PasswordInput.Toggle />
+  <PasswordInput.Trigger />
   <PasswordInput.Status className="visually-hidden" />
 </PasswordInput.Root>;
 ```
 
-Without JavaScript the field is a plain password field and the `Toggle` is hidden. On upgrade the element shows the button, which switches the input between `type="password"` and `type="text"`, sets its own text ("Show" or "Hide") and accessible name ("Show password" or "Hide password"), and announces the change in `Status`. Leave out `Status` and the element adds a visually hidden one after the input.
+Without JavaScript the field is a plain password field and the `Trigger` is hidden. On upgrade the element shows the button, which switches the input between `type="password"` and `type="text"`, sets its own text ("Show" or "Hide") and accessible name ("Show password" or "Hide password"), and announces the change in `Status`. Leave out `Status` and the element adds a visually hidden one after the input.
 
 The input's `type` is the state, kept when React renders the input again, so there is nothing to control. As in govuk-frontend, the password is hidden again when its form is submitted and when the page is restored from the back-forward cache. The text is English by default: pass `showText`, `hideText`, `showLabel`, `hideLabel`, `shownAnnouncement` and `hiddenAnnouncement` to `Root`.
 
@@ -290,10 +291,10 @@ import * as ExitThisPage from '@govuk-react/primitives/exit-this-page';
 <ExitThisPage.SkipLink href="https://www.bbc.co.uk/weather">Exit this page</ExitThisPage.SkipLink>;
 
 <ExitThisPage.Root hideContentClass="hide-content" overlayClass="overlay">
-  <ExitThisPage.Button href="https://www.bbc.co.uk/weather">
+  <ExitThisPage.Trigger href="https://www.bbc.co.uk/weather">
     Exit this page
     <ExitThisPage.Indicator />
-  </ExitThisPage.Button>
+  </ExitThisPage.Trigger>
   <ExitThisPage.Status className="visually-hidden" />
 </ExitThisPage.Root>;
 ```

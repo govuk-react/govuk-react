@@ -8,11 +8,11 @@ import * as Tabs from '@govuk-react/primitives/tabs';
     <!-- Parts rendered without a Root, each panel its own island, so no React context links them. -->
     <govuk-react-tabs data-testid="islands" fallback="radios" default-value="i-documents">
       <div data-tabs-list>
-        <Tabs.RadioTrigger value="i-account" name="i">Account</Tabs.RadioTrigger>
-        <Tabs.RadioTrigger value="i-documents" name="i">Documents</Tabs.RadioTrigger>
+        <Tabs.RadiosTrigger value="i-account" name="i">Account</Tabs.RadiosTrigger>
+        <Tabs.RadiosTrigger value="i-documents" name="i">Documents</Tabs.RadiosTrigger>
       </div>
-      <Tabs.RadioContent client:load value="i-account" name="i">Account panel</Tabs.RadioContent>
-      <Tabs.RadioContent client:load value="i-documents" name="i" defaultSelected>Documents panel</Tabs.RadioContent>
+      <Tabs.RadiosContent client:load value="i-account" name="i">Account panel</Tabs.RadiosContent>
+      <Tabs.RadiosContent client:load value="i-documents" name="i" defaultSelected>Documents panel</Tabs.RadiosContent>
     </govuk-react-tabs>
     <style is:inline>
       govuk-react-tabs:not([data-upgraded]) [data-tabs-content]:has(> input[data-tabs-fallback]):not(:has(> input:checked)) { display: none; }
