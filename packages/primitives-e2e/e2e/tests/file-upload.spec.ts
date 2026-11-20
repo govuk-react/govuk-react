@@ -27,7 +27,7 @@ test.describe('without JavaScript', () => {
     await expect(demo(page, 'upgraded').getByLabel('Upload a file')).toHaveAttribute('type', 'file');
     await expect(button(page, 'upgraded')).toBeHidden();
     await demo(page, 'upgraded').getByLabel('Upload a file').setInputFiles(file('passport.png'));
-    await expect(demo(page, 'upgraded').getByLabel('Upload a file')).toHaveJSProperty('files.length', 1);
+    await expect(demo(page, 'upgraded').getByLabel('Upload a file')).toHaveValue(/passport\.png$/);
   });
 });
 
