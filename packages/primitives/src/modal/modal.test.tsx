@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import * as Modal from '.';
 
 function Example(props: Modal.RootProps) {
@@ -28,7 +28,7 @@ describe('Modal', () => {
   });
 });
 
-test('with asChild, reports through the dialog’s own ref as well as the child’s', () => {
+test('with asChild, reports through the dialog’s own ref as well as the child’s', async () => {
   const onOpenChange = vi.fn();
   const childRef = React.createRef<HTMLDialogElement>();
   const { unmount } = render(
@@ -41,8 +41,7 @@ test('with asChild, reports through the dialog’s own ref as well as the child�
   const dialog = childRef.current;
   if (!dialog) throw new Error('No dialog');
   dialog.setAttribute('open', '');
-  fireEvent(dialog, new Event('toggle'));
-  expect(onOpenChange).toHaveBeenCalledExactlyOnceWith(true);
+  await waitFor(() => expect(onOpenChange).toHaveBeenCalledExactlyOnceWith(true));
   unmount();
   expect(childRef.current).toBeNull();
 });

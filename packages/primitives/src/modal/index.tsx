@@ -119,8 +119,7 @@ export function Content({ asChild, id, onClose, ref, ...props }: ContentProps) {
   useEffect(() => {
     onOpenChange.current = context.onOpenChange;
   });
-  // Report each change once: `toggle` fires on opening and closing where the browser fires it on
-  // dialogs, and `close` on closing everywhere.
+  // Report each change once.
   const report = useCallback((dialog: HTMLDialogElement) => {
     if (reported.current === dialog.open) return;
     reported.current = dialog.open;
@@ -138,14 +137,14 @@ export function Content({ asChild, id, onClose, ref, ...props }: ContentProps) {
       onOpenChange.current?.(true);
     }
   }, []);
-  // React doesn't listen for `toggle` on a dialog, so listen natively.
+  // Not every browser fires `toggle` on dialogs, so watch the dialog's `open` attribute.
   const listen = useCallback(
     (dialog: HTMLDialogElement | null) => {
       dialogRef.current = dialog;
       if (!dialog) return undefined;
       const forget = composeRefs(ref)(dialog);
-      const onToggle = () => report(dialog);
-      dialog.addEventListener('toggle', onToggle);
+      const observer = new MutationObserver(() => report(dialog));
+      observer.observe(dialog, { attributes: true, attributeFilter: ['open'] });
       // While controlled, the element asks for a change the dialog hasn't made.
       const root = dialog.closest(tagName);
       const onRequest = (event: CustomEvent<{ open: boolean }>) => {
@@ -154,7 +153,7 @@ export function Content({ asChild, id, onClose, ref, ...props }: ContentProps) {
       };
       root?.addEventListener('govuk-react-modal:change', onRequest);
       return () => {
-        dialog.removeEventListener('toggle', onToggle);
+        observer.disconnect();
         root?.removeEventListener('govuk-react-modal:change', onRequest);
         dialogRef.current = null;
         forget();

@@ -219,6 +219,37 @@ test.describe('in a browser without invoker commands', () => {
   });
 });
 
+test.describe('in a browser that fires no toggle events on dialogs', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => {
+      for (const name of ['beforetoggle', 'toggle'])
+        window.addEventListener(name, (event) => event.stopImmediatePropagation(), true);
+    });
+    await page.goto('/test/modal');
+  });
+
+  test('reports opening and closing through onOpenChange', async ({ page }) => {
+    await expect(demo(page, 'hydrated')).toHaveAttribute('data-hydrated', 'true');
+    await demo(page, 'hydrated').getByRole('button', { name: 'Delete account' }).click();
+    await expect(page.getByTestId('last-hydrated')).toHaveText('true');
+    await page.keyboard.press('Escape');
+    await expect(page.getByTestId('last-hydrated')).toHaveText('false');
+  });
+
+  test('controlled: a script’s showModal() is reported, then undone', async ({ page }) => {
+    await expect(page.getByTestId('controlled')).toHaveAttribute('data-hydrated', 'true');
+    await page.getByLabel('Ignore changes').check();
+    const opened = await page.locator('#controlled-dialog').evaluate((dialog) => {
+      if (!(dialog instanceof HTMLDialogElement)) return undefined;
+      dialog.showModal();
+      return dialog.open;
+    });
+    expect(opened).toBe(true);
+    await expect(page.getByTestId('controlled-asked')).toHaveText('true');
+    await expect(page.locator('#controlled-dialog')).toBeHidden();
+  });
+});
+
 test('works when rendered only in the browser', async ({ page }) => {
   await page.goto('/test/modal-client-only');
   await expect(demo(page, 'client')).toHaveAttribute('data-hydrated', 'true');

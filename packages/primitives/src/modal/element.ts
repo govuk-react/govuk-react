@@ -14,7 +14,7 @@
  *   and Escape don't open or close the dialog: they fire the change event with the state asked
  *   for, and the dialog changes only when `open` does. That covers a `form` with
  *   `method="dialog"`, and a script calling `showModal()` where the browser fires `beforetoggle`
- *   on dialogs. Escape is cancelled at its `keydown`, since the `cancel` event of a
+ *   on dialogs (Chrome 132, Firefox 133, Safari 26). Escape is cancelled at its `keydown`, since the `cancel` event of a
  *   second Escape in a row isn't cancelable. The browser doesn't let a page cancel a script
  *   calling `close()`: that fires the change event, and the dialog goes back to `open` a moment
  *   later unless `open` has changed.
@@ -55,6 +55,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     private dialog?: HTMLDialogElement;
 
     private observer?: MutationObserver;
+
+    private openObserver?: MutationObserver;
 
     private wasOpen = false;
 
@@ -149,12 +151,11 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.removeEventListener('submit', this.onSubmit);
       window.clearTimeout(this.restoreTimeout);
       this.observer?.disconnect();
-      this.dialog?.removeEventListener('close', this.onToggle);
+      this.openObserver?.disconnect();
       this.dialog?.removeEventListener('command', this.onCommand);
       this.dialog?.removeEventListener('cancel', this.onCancel);
       this.dialog?.removeEventListener('keydown', this.onKeydown);
       this.dialog?.removeEventListener('beforetoggle', this.onBeforeToggle);
-      this.dialog?.removeEventListener('toggle', this.onToggle);
       this.dialog = undefined;
     }
 
@@ -169,9 +170,9 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.dialog = dialog;
       this.dataset.upgraded = '';
       this.wasOpen = dialog.open;
-      // `toggle` fires on open and close where supported, and `close` everywhere.
-      dialog.addEventListener('toggle', this.onToggle);
-      dialog.addEventListener('close', this.onToggle);
+      // Not every browser fires `toggle` on dialogs, so watch the dialog's `open` attribute.
+      this.openObserver = new MutationObserver(this.onToggle);
+      this.openObserver.observe(dialog, { attributes: true, attributeFilter: ['open'] });
       dialog.addEventListener('command', this.onCommand);
       dialog.addEventListener('cancel', this.onCancel);
       dialog.addEventListener('keydown', this.onKeydown);
