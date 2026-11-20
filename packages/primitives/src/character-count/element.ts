@@ -35,7 +35,7 @@
  * - `input-over-limit-class`: classes for the field while over the limit.
  */
 
-import { onPropertySet } from '../utils/on-property-set.js';
+import { onPropertyChange } from '../utils/on-property-change.js';
 import { translationAttributeNames } from '../utils/translation.js';
 import { countMessage, countOf, messageFromAttributes, messageNames, type CountType } from './messages.js';
 import { classesOf, setText } from '../utils/dom.js';
@@ -206,7 +206,10 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
         input.addEventListener('focus', this.onFocus);
         input.addEventListener('blur', this.onBlur);
         // A value set by a script, such as a form library's, fires no `input` event.
-        this.stopWatchingValue = onPropertySet(input, 'value', () => this.update());
+        this.stopWatchingValue = onPropertyChange(
+          () => input.value,
+          () => this.update()
+        );
         input.removeAttribute('maxlength');
         this.lastAnnouncedValue = undefined;
       }

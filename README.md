@@ -48,10 +48,11 @@ The project is currently maintained for free by a small number of volunteers. If
 npm install govuk-react govuk-frontend
 ```
 
-Load govuk-frontend's CSS once in your app:
+Load govuk-frontend's CSS once in your app, then govuk-react's, which styles what govuk-frontend has no classes for:
 
 ```js
 import 'govuk-frontend/dist/govuk/govuk-frontend.min.css';
+import 'govuk-react/styles.css';
 ```
 
 ```jsx
@@ -96,7 +97,7 @@ const MyComponent = () => (
 
 Use of these components assumes the following from the peer project:
 
-- `govuk-frontend` is installed and its CSS (`govuk-frontend/dist/govuk/govuk-frontend.min.css`) is loaded.
+- `govuk-frontend` is installed and its CSS (`govuk-frontend/dist/govuk/govuk-frontend.min.css`) is loaded, followed by `govuk-react/styles.css`.
 - govuk-frontend's font and image assets are served at `/assets` (see [Fonts and images](#fonts-and-images)).
 - No other styles affecting generic elements (without classes, IDs etc) are present in the CSS.
 
