@@ -110,6 +110,14 @@ Once upgraded, each item, trigger and content has `data-state` ("open" or "close
 
 `ShowAll` opens every section, or closes them all when every one is open. `value` and `onValueChange` control the open sections once hydrated, and a section opened before hydration is reported rather than undone. As in govuk-frontend, open sections are remembered for the session by content id, unless `rememberExpanded` is `false`. In an island without a `Root`, pass `defaultExpanded` to `Item`.
 
+Like govuk-frontend's accordion, it doesn't use `details` and `summary`:
+
+- Each section's heading has to stay a heading, so users can find sections with a screen reader's heading navigation. A `summary` is a button, and screen readers don't reliably announce a heading inside one. Here the heading holds the button, as in the WAI-ARIA accordion pattern.
+- Without JavaScript every section is shown, as the Design System asks. A closed `details` hides its content without JavaScript.
+- The trigger's accessible name says what it does ("Show this section" or "Hide this section") and "show all" opens or closes every section together, neither of which `details` offers.
+
+For a single section the user can open, use `details`.
+
 ## Tabs
 
 ```tsx
