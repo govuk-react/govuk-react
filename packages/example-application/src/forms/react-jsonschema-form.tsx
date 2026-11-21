@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import type { JSONSchema7 } from 'json-schema';
+import type { FormValidation, ISubmitEvent } from '@rjsf/core';
 
 import React, { useCallback, useState } from 'react';
 import * as GovUK from 'govuk-react';
@@ -98,21 +99,37 @@ const uiSchema = {
   },
 };
 
-const conditionalAddError = (value, validator, errors) => {
+type FieldValidation = FormValidation[string];
+
+const isFieldValidation = (value: unknown): value is FieldValidation =>
+  typeof value === 'object' && value !== null && 'addError' in value && typeof value.addError === 'function';
+
+/** rjsf's types only describe one level of nesting, so look up each section's fields at runtime. */
+const fieldErrors = (errors: FormValidation, section: 0 | 1, field: string) => {
+  const sectionErrors = errors[section];
+  const value: unknown = Object.getOwnPropertyDescriptor(sectionErrors, field)?.value;
+  return isFieldValidation(value) ? value : undefined;
+};
+
+const conditionalAddError = <T,>(
+  value: T,
+  validator: (value: T) => string | undefined,
+  errors: FieldValidation | undefined
+) => {
   const error = validator(value);
   if (error) {
-    errors.addError(error);
+    errors?.addError(error);
   }
 };
 
-const validate = (formData, errors) => {
-  conditionalAddError(formData[0].nationality, validateNationality, errors[0].nationality);
-  conditionalAddError(formData[0].firstName, validateFirstName, errors[0].firstName);
-  conditionalAddError(formData[0].description, validateDescription, errors[0].description);
-  conditionalAddError(dobStringToObj(formData[0].dob), validateDateOfBirth, errors[0].dob);
-  conditionalAddError(formData[1].hasMultiplePets, validateMultiplePets, errors[1].hasMultiplePets);
-  conditionalAddError(formData[1].animal, validateAnimal, errors[1].animal);
-  conditionalAddError(formData[1].petPhoto, validatePetPhotoString, errors[1].petPhoto);
+const validate = (formData: SubmittedData, errors: FormValidation) => {
+  conditionalAddError(formData[0].nationality, validateNationality, fieldErrors(errors, 0, 'nationality'));
+  conditionalAddError(formData[0].firstName, validateFirstName, fieldErrors(errors, 0, 'firstName'));
+  conditionalAddError(formData[0].description, validateDescription, fieldErrors(errors, 0, 'description'));
+  conditionalAddError(dobStringToObj(formData[0].dob), validateDateOfBirth, fieldErrors(errors, 0, 'dob'));
+  conditionalAddError(formData[1].hasMultiplePets, validateMultiplePets, fieldErrors(errors, 1, 'hasMultiplePets'));
+  conditionalAddError(formData[1].animal, validateAnimal, fieldErrors(errors, 1, 'animal'));
+  conditionalAddError(formData[1].petPhoto, validatePetPhotoString, fieldErrors(errors, 1, 'petPhoto'));
   return errors;
 };
 
@@ -120,7 +137,7 @@ interface SubmittedData {
   0: {
     firstName: string;
     description: string;
-    nationality: [string];
+    nationality: string[];
     dob: string;
   };
   1: {
@@ -135,7 +152,7 @@ const ReactJSONSchemaForm: React.FC = () => {
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [submittedData, setSubmittedData] = useState<SubmittedData>();
   const handleFormSubmit = useCallback(
-    ({ formData }, e) => {
+    ({ formData }: ISubmitEvent<SubmittedData>) => {
       if (isSubmitting) return;
       setIsSubmitting(true);
       setTimeout(() => {

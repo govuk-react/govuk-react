@@ -64,9 +64,9 @@ const FinalForm: React.FC = () => {
           onSubmit={handleFormSubmit}
           initialValues={{ dob: { day: '', month: '', year: '' } }}
           render={({ handleSubmit: handleSubmitInner, errors, touched, submitFailed, form }) => {
-            const errorsToShow = Object.keys(errors).filter((key) => touched[key]);
+            const errorsToShow = Object.keys(errors ?? {}).filter((key) => touched?.[key]);
             form.pauseValidation();
-            const handleSubmit = (e) => {
+            const handleSubmit = (e?: React.SyntheticEvent) => {
               form.resumeValidation();
               const res = handleSubmitInner(e);
               form.pauseValidation();
@@ -85,7 +85,7 @@ const FinalForm: React.FC = () => {
                     >
                       {errorsToShow.map((key) => (
                         <GovUK.ErrorSummary.ListItemComposite key={key} href={`#${key}`}>
-                          {errors[key]}
+                          {errors?.[key]}
                         </GovUK.ErrorSummary.ListItemComposite>
                       ))}
                     </GovUK.ErrorSummary.Composite>
@@ -210,7 +210,7 @@ const FinalForm: React.FC = () => {
           }}
         />
       )}
-      {hasSubmitted && (
+      {hasSubmitted && submittedData && (
         <Results backLink="/forms/final-form" onBackClick={() => setHasSubmitted(false)} {...submittedData} />
       )}
     </>

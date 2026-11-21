@@ -14,12 +14,12 @@ const Results: React.FC<ResultsProps> = ({
   petPhoto,
   petPhotoString,
 }: ResultsProps) => {
-  const [photoString, setPhotoString] = useState<string>(petPhotoString);
+  const [photoString, setPhotoString] = useState(petPhotoString);
   useEffect(() => {
     if (petPhoto && petPhoto[0]) {
       const reader = new FileReader();
       reader.addEventListener('load', () => {
-        setPhotoString(reader.result as string);
+        if (typeof reader.result === 'string') setPhotoString(reader.result);
       });
       reader.readAsDataURL(petPhoto[0]);
     }
@@ -63,8 +63,8 @@ interface ResultsProps {
     month?: string | number;
     day?: string | number;
   };
-  animal: string;
-  hasMultiplePets: string;
+  animal?: string;
+  hasMultiplePets?: string;
   petPhoto?: FileList;
   petPhotoString?: string;
 }
