@@ -2,7 +2,6 @@
   "name": "@govuk-react/example-application",
   "version": "0.10.7",
   "dependencies": {
-    "@govuk-react/primitives": "workspace:*",
     "@rjsf/core": "^3.1.0",
     "final-form": "^4.20.10",
     "formik": "^2.4.5",

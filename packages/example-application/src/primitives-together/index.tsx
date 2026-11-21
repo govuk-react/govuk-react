@@ -1,6 +1,4 @@
 import * as React from 'react';
-import { useState } from 'react';
-import type { FormEvent } from 'react';
 import {
   Accordion,
   CharacterCount,
@@ -10,15 +8,13 @@ import {
   Modal,
   PasswordInput,
   Radios,
-  SearchBox,
   Tabs,
 } from 'govuk-react';
-import * as AutoFocus from '@govuk-react/primitives/auto-focus';
 
 type Section = { id: string; heading: string };
 type Tab = { id: string; label: string; sections: Section[] };
 
-export const tabs: Tab[] = [
+const tabs: Tab[] = [
   {
     id: 'applications',
     label: 'Applications',
@@ -48,38 +44,20 @@ export const tabs: Tab[] = [
   },
 ];
 
-const ids = (tab: Tab) => tab.sections.map((section) => section.id);
-
-const sections = tabs.flatMap((tab) => tab.sections.map((section) => ({ ...section, tab: tab.id })));
-
-export type State = {
-  /** The selected tab. */
-  tab: string;
-  /** The tab whose modal is open. */
-  modal?: string;
-  /** The open accordion sections. */
-  expanded: string[];
-  /** The section whose first field takes focus, and how many times focus has been asked for. */
-  focus?: { section: string; request: number };
-};
-
-function SectionForm({ section, focus }: { section: Section; focus: State['focus'] }) {
+function SectionForm({ section }: { section: Section }) {
   const id = (field: string) => `${section.id}-${field}`;
-  const focusHere = focus?.section === section.id;
   return (
     <form onSubmit={(event) => event.preventDefault()} noValidate>
       <Radios.Field idPrefix={id('contact')} legend="How would you prefer to be contacted?" legendSize="s">
-        <AutoFocus.Root focusKey={focusHere ? focus.request : undefined} disabled={!focusHere}>
-          <Radios.Item>
-            <AutoFocus.Target asChild>
-              <Radios.Input id={id('contact')} name={id('contact')} value="email" controls={id('contact-email')} />
-            </AutoFocus.Target>
-            <Radios.Label htmlFor={id('contact')}>Email</Radios.Label>
-          </Radios.Item>
-          <Radios.Conditional id={id('contact-email')} checked={false}>
+        <Radios.ItemComposite
+          id={id('contact')}
+          name={id('contact')}
+          value="email"
+          label="Email"
+          conditional={
             <InputField id={id('email')} name={id('email')} type="email" autoComplete="email" label="Email address" />
-          </Radios.Conditional>
-        </AutoFocus.Root>
+          }
+        />
         <Radios.ItemComposite
           id={id('contact-2')}
           name={id('contact')}
@@ -105,98 +83,54 @@ function SectionForm({ section, focus }: { section: Section; focus: State['focus
   );
 }
 
-export function PrimitivesTogether({ initialState }: { initialState?: State }) {
-  const [state, setState] = useState<State>(initialState ?? { tab: tabs[0].id, expanded: [] });
+export type PrimitivesTogetherProps = {
+  /** The tab selected at first. */
+  defaultTab?: string;
+  /** The tab whose modal is open from the start, for visual regression. */
+  openModal?: string;
+  /** The accordion sections open at first. */
+  defaultExpanded?: string[];
+};
 
-  const find = (query: string) => {
-    const section = sections.find((found) => found.heading.toLowerCase() === query.trim().toLowerCase());
-    if (!section) return;
-    setState((previous) => ({
-      tab: section.tab,
-      modal: section.tab,
-      expanded: previous.expanded.includes(section.id) ? previous.expanded : [...previous.expanded, section.id],
-      focus: { section: section.id, request: (previous.focus?.request ?? 0) + 1 },
-    }));
-  };
-
-  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const query = new FormData(event.currentTarget).get('q');
-    if (typeof query === 'string') find(query);
-  };
-
+export function PrimitivesTogether({ defaultTab, openModal, defaultExpanded }: PrimitivesTogetherProps) {
   return (
-    <>
-      <form role="search" onSubmit={onSubmit}>
-        <SearchBox.AutocompleteComposite
-          id="primitives-together-search"
-          name="q"
-          label="Find a form"
-          labelSize="m"
-          minLength={1}
-          suggestions={sections.map((section) => section.heading)}
-          onConfirm={(value, event) => {
-            event.preventDefault();
-            find(value);
-          }}
-        />
-      </form>
-      <Tabs.Root value={state.tab} onValueChange={(tab) => setState((previous) => ({ ...previous, tab }))}>
-        <Tabs.Title />
-        <Tabs.List>
-          {tabs.map((tab) => (
-            <Tabs.ListItem key={tab.id} value={tab.id}>
-              <Tabs.Tab value={tab.id}>{tab.label}</Tabs.Tab>
-            </Tabs.ListItem>
-          ))}
-        </Tabs.List>
+    <Tabs.Root defaultValue={defaultTab ?? tabs[0].id}>
+      <Tabs.Title />
+      <Tabs.List>
         {tabs.map((tab) => (
-          <Tabs.Panel key={tab.id} value={tab.id}>
-            <Heading size="l">{tab.label}</Heading>
-            <Modal.Root
-              open={state.modal === tab.id}
-              onOpenChange={(open) =>
-                setState((previous) => ({
-                  ...previous,
-                  modal: open ? tab.id : undefined,
-                }))
-              }
-            >
-              <Modal.Trigger variant="secondary">Update {tab.label.toLowerCase()}</Modal.Trigger>
-              <Modal.Content>
-                <Modal.Title>{tab.label}</Modal.Title>
-                <Accordion.Root
-                  id={`${tab.id}-accordion`}
-                  rememberExpanded={false}
-                  value={state.expanded.filter((section) => ids(tab).includes(section))}
-                  onValueChange={(expanded) =>
-                    setState((previous) => ({
-                      ...previous,
-                      expanded: [...previous.expanded.filter((section) => !ids(tab).includes(section)), ...expanded],
-                    }))
-                  }
-                >
-                  <Accordion.Controls />
-                  {tab.sections.map((section, index) => (
-                    <Accordion.SectionComposite
-                      key={section.id}
-                      accordionId={`${tab.id}-accordion`}
-                      index={index + 1}
-                      value={section.id}
-                      heading={section.heading}
-                    >
-                      <SectionForm section={section} focus={state.focus} />
-                    </Accordion.SectionComposite>
-                  ))}
-                </Accordion.Root>
-                <div className="govuk-button-group">
-                  <Modal.Close>Close</Modal.Close>
-                </div>
-              </Modal.Content>
-            </Modal.Root>
-          </Tabs.Panel>
+          <Tabs.ListItem key={tab.id} value={tab.id}>
+            <Tabs.Tab value={tab.id}>{tab.label}</Tabs.Tab>
+          </Tabs.ListItem>
         ))}
-      </Tabs.Root>
-    </>
+      </Tabs.List>
+      {tabs.map((tab) => (
+        <Tabs.Panel key={tab.id} value={tab.id}>
+          <Heading size="l">{tab.label}</Heading>
+          <Modal.Root open={openModal === tab.id || undefined}>
+            <Modal.Trigger variant="secondary">Update {tab.label.toLowerCase()}</Modal.Trigger>
+            <Modal.Content>
+              <Modal.Title>{tab.label}</Modal.Title>
+              <Accordion.Root id={`${tab.id}-accordion`} rememberExpanded={false} defaultValue={defaultExpanded}>
+                <Accordion.Controls />
+                {tab.sections.map((section, index) => (
+                  <Accordion.SectionComposite
+                    key={section.id}
+                    accordionId={`${tab.id}-accordion`}
+                    index={index + 1}
+                    value={section.id}
+                    heading={section.heading}
+                  >
+                    <SectionForm section={section} />
+                  </Accordion.SectionComposite>
+                ))}
+              </Accordion.Root>
+              <div className="govuk-button-group">
+                <Modal.Close>Close</Modal.Close>
+              </div>
+            </Modal.Content>
+          </Modal.Root>
+        </Tabs.Panel>
+      ))}
+    </Tabs.Root>
   );
 }

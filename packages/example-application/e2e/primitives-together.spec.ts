@@ -3,20 +3,14 @@ import { test, expect, type Page } from '@playwright/test';
 
 const story = '/iframe.html?id=primitives-together--default&viewMode=story';
 
-async function choose(page: Page, query: string, option: string) {
-  const search = page.getByRole('combobox', { name: 'Find a form' });
-  await search.fill(query);
-  await page.getByRole('option', { name: option }).click();
-}
-
-async function expectFormFocused(page: Page, tab: string, section: string, sectionId: string) {
-  const dialog = page.getByRole('dialog', { name: tab });
+async function openTaxDecision(page: Page) {
+  await page.getByRole('button', { name: 'Update appeals' }).click();
+  const dialog = page.getByRole('dialog', { name: 'Appeals' });
   await expect(dialog).toBeVisible();
-  await expect(dialog.getByRole('button', { name: new RegExp(`^${section}`) })).toHaveAttribute(
-    'aria-expanded',
-    'true'
-  );
-  await expect(page.locator(`#${sectionId}-contact`)).toBeFocused();
+  const button = dialog.getByRole('button', { name: /^Tax decision/ });
+  await button.click();
+  await expect(button).toHaveAttribute('aria-expanded', 'true');
+  return { dialog, form: dialog.locator('#appeals-accordion-content-2') };
 }
 
 test.use({ viewport: { width: 1024, height: 800 } });
@@ -34,90 +28,35 @@ test.afterEach(async ({ page }) => {
   expect(await page.evaluate(() => Reflect.get(window, 'consoleErrors'))).toEqual([]);
 });
 
-for (const { name, width } of [
-  { name: 'tabs', width: 1024 },
-  { name: 'a list of links to the panels', width: 375 },
-]) {
-  test.describe(`with ${name}`, () => {
-    test.use({ viewport: { width, height: 800 } });
+test('a tab’s button opens its modal, and Escape closes it and puts focus back on the button', async ({ page }) => {
+  await page.getByRole('tab', { name: 'Appeals' }).click();
+  await expect(page.getByRole('tab', { name: 'Appeals' })).toHaveAttribute('aria-selected', 'true');
+  const trigger = page.getByRole('button', { name: 'Update appeals' });
+  await expect(trigger).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Update applications' })).toBeHidden();
 
-    test('choosing a form selects its tab, opens its modal, expands it and focuses its first field', async ({
-      page,
-    }) => {
-      await choose(page, 'tax', 'Tax decision');
-      await expectFormFocused(page, 'Appeals', 'Tax decision', 'tax-decision');
-      if (width > 640) {
-        await expect(page.getByRole('tab', { name: 'Appeals' })).toHaveAttribute('aria-selected', 'true');
-      }
-    });
+  await trigger.click();
+  const dialog = page.getByRole('dialog', { name: 'Appeals' });
+  await expect(dialog).toBeVisible();
+  await expect(dialog.getByRole('button', { name: 'Show all sections' })).toBeFocused();
+  await page.keyboard.press('Escape');
+  await expect(dialog).toBeHidden();
+  await expect(trigger).toBeFocused();
+});
+
+test.describe('with a list of links to the panels', () => {
+  test.use({ viewport: { width: 375, height: 800 } });
+
+  test('each panel’s button opens its modal', async ({ page }) => {
+    await page.getByRole('button', { name: 'Update complaints' }).click();
+    await expect(page.getByRole('dialog', { name: 'Complaints' })).toBeVisible();
   });
-}
-
-test('the search works from the keyboard', async ({ page }) => {
-  await page.getByRole('combobox', { name: 'Find a form' }).fill('pass');
-  await page.keyboard.press('ArrowDown');
-  await page.keyboard.press('Enter');
-  await expectFormFocused(page, 'Applications', 'Passport', 'passport');
-});
-
-test('submitting the search goes to a form whose name matches', async ({ page }) => {
-  await page.getByRole('combobox', { name: 'Find a form' }).fill('Transport');
-  await page.getByRole('button', { name: 'Search' }).click();
-  await expectFormFocused(page, 'Complaints', 'Transport', 'transport');
-});
-
-test('after closing the modal, choosing a form on another tab moves there', async ({ page }) => {
-  await choose(page, 'blue', 'Blue Badge');
-  await expectFormFocused(page, 'Applications', 'Blue Badge', 'blue-badge');
-  await page.keyboard.press('Escape');
-  await expect(page.getByRole('dialog')).toHaveCount(0);
-  await choose(page, 'health', 'Health services');
-  await expectFormFocused(page, 'Complaints', 'Health services', 'health-services');
-  await expect(page.getByRole('tab', { name: 'Complaints' })).toHaveAttribute('aria-selected', 'true');
-  await expect(page.getByRole('button', { name: /^Blue Badge/ })).toBeHidden();
-});
-
-test('choosing the same form again focuses its first field again', async ({ page }) => {
-  await choose(page, 'tax', 'Tax decision');
-  await expectFormFocused(page, 'Appeals', 'Tax decision', 'tax-decision');
-  await page.getByRole('button', { name: 'Close' }).click();
-  await expect(page.getByRole('dialog')).toHaveCount(0);
-  await choose(page, 'tax', 'Tax decision');
-  await expectFormFocused(page, 'Appeals', 'Tax decision', 'tax-decision');
-});
-
-test('closing the modal puts focus back on the search', async ({ page }) => {
-  await choose(page, 'tax', 'Tax decision');
-  await expectFormFocused(page, 'Appeals', 'Tax decision', 'tax-decision');
-  await page.keyboard.press('Escape');
-  await expect(page.getByRole('combobox', { name: 'Find a form' })).toBeFocused();
-});
-
-test('what the user entered survives closing the modal and searching again', async ({ page }) => {
-  await choose(page, 'tax', 'Tax decision');
-  await expectFormFocused(page, 'Appeals', 'Tax decision', 'tax-decision');
-  const form = page.getByRole('dialog', { name: 'Appeals' }).locator('#appeals-accordion-content-2');
-  await form.getByLabel('Email', { exact: true }).check();
-  await form.getByLabel('Email address').fill('name@example.com');
-  await page.getByRole('button', { name: 'Close' }).click();
-  await expect(page.getByRole('dialog')).toHaveCount(0);
-
-  await page.getByRole('button', { name: 'Update appeals' }).click();
-  await expect(form.getByLabel('Email', { exact: true })).toBeChecked();
-  await expect(form.getByLabel('Email address')).toHaveValue('name@example.com');
-  await page.getByRole('button', { name: 'Close' }).click();
-  await expect(page.getByRole('dialog')).toHaveCount(0);
-
-  await choose(page, 'tax', 'Tax decision');
-  await expectFormFocused(page, 'Appeals', 'Tax decision', 'tax-decision');
-  await expect(form.getByLabel('Email', { exact: true })).toBeChecked();
-  await expect(form.getByLabel('Email address')).toHaveValue('name@example.com');
 });
 
 test('the form’s components work inside the modal', async ({ page }) => {
-  await choose(page, 'tax', 'Tax decision');
-  const dialog = page.getByRole('dialog', { name: 'Appeals' });
-  const form = dialog.locator('#appeals-accordion-content-2');
+  await page.getByRole('tab', { name: 'Appeals' }).click();
+  const { dialog, form } = await openTaxDecision(page);
+  await expect(dialog.locator('#appeals-accordion-content-1')).toBeHidden();
 
   await expect(form.getByLabel('Phone number')).toBeHidden();
   await form.getByLabel('Phone', { exact: true }).check();
@@ -134,7 +73,19 @@ test('the form’s components work inside the modal', async ({ page }) => {
 
   await form.locator('input[type="file"]').setInputFiles(path.join(__dirname, 'logo.png'));
   await expect(form.getByText('logo.png')).toBeVisible();
+});
 
-  await page.keyboard.press('Escape');
-  await expect(dialog).toBeHidden();
+test('what the user entered survives closing the modal and switching tabs', async ({ page }) => {
+  await page.getByRole('tab', { name: 'Appeals' }).click();
+  const { form } = await openTaxDecision(page);
+  await form.getByLabel('Email', { exact: true }).check();
+  await form.getByLabel('Email address').fill('name@example.com');
+  await page.getByRole('button', { name: 'Close' }).click();
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+
+  await page.getByRole('tab', { name: 'Complaints' }).click();
+  await page.getByRole('tab', { name: 'Appeals' }).click();
+  await page.getByRole('button', { name: 'Update appeals' }).click();
+  await expect(form.getByLabel('Email', { exact: true })).toBeChecked();
+  await expect(form.getByLabel('Email address')).toHaveValue('name@example.com');
 });

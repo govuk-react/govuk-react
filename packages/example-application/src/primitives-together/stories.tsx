@@ -10,7 +10,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'Tabs, each with a modal holding an accordion of forms with radios, a character count, a file upload and a password input. Choosing a form in the search selects its tab, opens its modal, expands its section and moves focus to its first field. It checks that the primitives work together.',
+          'Tabs, each with a modal holding an accordion of forms with radios, a character count, a file upload and a password input. It checks that the primitives work together.',
       },
     },
   },
@@ -24,6 +24,6 @@ export const Default: Story = {};
 
 /** The Appeals modal open with Tax decision expanded, for visual regression. Left out of the docs page, where it would cover everything else. */
 export const Open: Story = {
-  args: { initialState: { tab: 'appeals', modal: 'appeals', expanded: ['tax-decision'] } },
+  args: { defaultTab: 'appeals', openModal: 'appeals', defaultExpanded: ['tax-decision'] },
   tags: ['!autodocs'],
 };
