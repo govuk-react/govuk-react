@@ -30,6 +30,7 @@
  */
 
 import { setUpWhenReady } from '../utils/set-up-when-ready.js';
+import { upgradeProperty } from '../utils/upgrade-property.js';
 
 declare global {
   interface HTMLElementTagNameMap {
@@ -160,6 +161,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     };
 
     connectedCallback() {
+      upgradeProperty(this, 'open');
       if (!supportsCommands()) this.addEventListener('click', this.onClick);
       this.addEventListener('submit', this.onSubmit);
       window.addEventListener('keydown', this.onKeydown);

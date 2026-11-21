@@ -36,6 +36,7 @@
  */
 
 import { classesOf } from '../utils/dom.js';
+import { upgradeProperty } from '../utils/upgrade-property.js';
 
 declare global {
   interface HTMLElementTagNameMap {
@@ -192,6 +193,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     connectedCallback() {
+      upgradeProperty(this, 'value');
       this.addEventListener('change', this.onChange);
       // Tabs can be added or removed later, and React can rewrite a class attribute.
       this.observer = new MutationObserver((records) => {

@@ -44,6 +44,7 @@
  */
 
 import { classesOf, setHidden, setText } from '../utils/dom.js';
+import { upgradeProperty } from '../utils/upgrade-property.js';
 
 declare global {
   interface HTMLElementTagNameMap {
@@ -126,6 +127,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     }
 
     connectedCallback() {
+      upgradeProperty(this, 'value');
       // Sections can be parsed or rendered later, and React can rewrite a class attribute.
       this.observer = new MutationObserver((records) => {
         if (!this.upgraded) {
