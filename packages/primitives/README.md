@@ -7,7 +7,7 @@ Each primitive:
 - works without JavaScript, through a fallback you choose
 - upgrades to the full WAI-ARIA pattern when its custom element is defined, with or without React
 - adds React props for its state once hydrated, where it has any, such as `value` and `onValueChange`, or `open` and `onOpenChange`
-- takes `asChild` on its parts, so you render your own elements. A `Root` is the custom element, except Button's
+- takes `asChild` on its parts, so you render your own elements. A `Root` is the custom element, except Button's and Details'
 - names its parts and props alike: the control that operates it is `Trigger`, and a text prop ends in `Text` when it's shown, `Label` when it's an accessible name and `Announcement` when only screen readers hear it
 
 Import each primitive from its own path, such as `@govuk-react/primitives/tabs`. Each path defines its element when imported.
@@ -25,7 +25,7 @@ Control a primitive only when your app has to set its state, such as closing a m
 
 ### Changes made before hydration
 
-`onValueChange` and `onOpenChange` on Tabs, Accordion, Disclosure and Modal get a second argument, `{ beforeHydration }`. It's `true` for a change the user made before React hydrated, which is reported once React has hydrated, whether or not the primitive is controlled.
+`onValueChange` and `onOpenChange` on Tabs, Accordion, Disclosure, Details and Modal get a second argument, `{ beforeHydration }`. It's `true` for a change the user made before React hydrated, which is reported once React has hydrated, whether or not the primitive is controlled.
 
 Such a report differs from a live change:
 
@@ -191,6 +191,20 @@ Like govuk-frontend's service navigation, it doesn't use `details` and `summary`
 - The content has to show, with no button, while `media` matches, such as on wider screens. A `details` can't be open at one screen width and closed at another without JavaScript, and its `summary` can't be hidden while its content shows.
 
 For a menu that opens and closes without JavaScript, govuk-react's service navigation also has a `details` version.
+
+
+## Details
+
+```tsx
+import * as Details from '@govuk-react/primitives/details';
+
+<Details.Root onOpenChange={(open) => console.log(open)}>
+  <summary>Menu</summary>
+  <ul>…</ul>
+</Details.Root>;
+```
+
+A native `details`, for content that shows and hides without JavaScript. It has no custom element, because the browser holds its state before React hydrates. `open` and `onOpenChange` control it once hydrated. A user's change before hydration is reported through `onOpenChange` rather than undone. See Disclosure for why it may not suit a menu.
 
 ## Modal
 
