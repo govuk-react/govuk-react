@@ -9,15 +9,15 @@
  *
  * The element only adds what HTML can't do on its own:
  * - In a browser without invoker commands, it runs the commands of its own buttons.
- * - `open` (when present) controls the dialog: "true" opens it with `showModal()`, anything
- *   else closes it. Changing `open` fires no change event. While `open` is present, the buttons
+ * - The `open` property, when `true` or `false`, controls the dialog: `true` opens it with
+ *   `showModal()` and `false` closes it. Setting it fires no change event. While it's set, the buttons
  *   and Escape don't open or close the dialog: they fire the change event with the state asked
  *   for, and the dialog changes only when `open` does. That covers a `form` with
  *   `method="dialog"`, and a script calling `showModal()` where the browser fires `beforetoggle`
  *   on dialogs (Chrome 132, Firefox 133, Safari 26). Escape is cancelled at its `keydown`, since the `cancel` event of a
  *   second Escape in a row isn't cancelable. The browser doesn't let a page cancel a script
  *   calling `close()`: that fires the change event, and the dialog goes back to `open` a moment
- *   later unless `open` has changed.
+ *   later unless `open` has changed. Set it to `undefined` to stop controlling the dialog.
  * - It fires a bubbling `govuk-react-modal:change` event with `{ open }` when the dialog opens
  *   or closes, for code that doesn't use React.
  *
@@ -30,14 +30,23 @@
  */
 
 import { setUpWhenReady } from '../utils/set-up-when-ready.js';
+import { upgradeProperty } from '../utils/upgrade-property.js';
 
 declare global {
+  interface HTMLElementTagNameMap {
+    'govuk-react-modal': ModalElement;
+  }
   interface HTMLElementEventMap {
     'govuk-react-modal:change': CustomEvent<{ open: boolean }>;
   }
 }
 
 export const tagName = 'govuk-react-modal';
+
+export interface ModalElement extends HTMLElement {
+  /** Controls the dialog when `true` or `false`. While `undefined`, the buttons open and close it. */
+  open: boolean | undefined;
+}
 
 // How long the page has to accept a change the element couldn't cancel, before it's undone.
 const restoreDelay = 100;
@@ -59,10 +68,8 @@ function hasOpenPopover(dialog: HTMLDialogElement) {
 }
 
 if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined') {
-  class GovukReactModal extends HTMLElement {
-    static get observedAttributes() {
-      return ['open'];
-    }
+  class GovukReactModal extends HTMLElement implements ModalElement {
+    private controlledOpen?: boolean;
 
     private dialog?: HTMLDialogElement;
 
@@ -106,7 +113,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     private readonly onBeforeToggle = (event: Event) => {
       const { dialog } = this;
       if (!dialog || event.target !== dialog || this.syncing || !event.cancelable) return;
-      if (Reflect.get(event, 'newState') !== 'open' || this.getAttribute('open') === 'true') return;
+      if (Reflect.get(event, 'newState') !== 'open' || this.controlledOpen === true) return;
       if (this.request(dialog, 'show-modal')) event.preventDefault();
     };
 
@@ -148,12 +155,13 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.wasOpen = dialog.open;
       this.dispatchEvent(new CustomEvent('govuk-react-modal:change', { detail: { open: dialog.open }, bubbles: true }));
       // While controlled, this is a change the element couldn't cancel.
-      if (!this.hasAttribute('open')) return;
+      if (this.controlledOpen === undefined) return;
       window.clearTimeout(this.restoreTimeout);
       this.restoreTimeout = window.setTimeout(() => this.sync(), restoreDelay);
     };
 
     connectedCallback() {
+      upgradeProperty(this, 'open');
       if (!supportsCommands()) this.addEventListener('click', this.onClick);
       this.addEventListener('submit', this.onSubmit);
       window.addEventListener('keydown', this.onKeydown);
@@ -173,7 +181,12 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.dialog = undefined;
     }
 
-    attributeChangedCallback() {
+    get open() {
+      return this.controlledOpen;
+    }
+
+    set open(open: boolean | undefined) {
+      this.controlledOpen = open;
       this.sync();
     }
 
@@ -199,7 +212,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
      * running it. Returns whether the command was handled.
      */
     private request(dialog: HTMLDialogElement, command: string | null) {
-      if (!this.hasAttribute('open')) return false;
+      if (this.controlledOpen === undefined) return false;
       const open = command === 'show-modal';
       if (!open && command !== 'close' && command !== 'request-close') return false;
       if (open !== dialog.open)
@@ -210,9 +223,8 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     /** Opens or closes the dialog to match `open`, without reporting it. */
     private sync() {
       const { dialog } = this;
-      const controlled = this.getAttribute('open');
-      if (!dialog || controlled === null) return;
-      const open = controlled === 'true';
+      const open = this.controlledOpen;
+      if (!dialog || open === undefined) return;
       if (open === dialog.open) return;
       this.wasOpen = open;
       this.syncing = true;
