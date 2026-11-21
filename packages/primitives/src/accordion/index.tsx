@@ -259,11 +259,25 @@ export function Icon({ asChild, ...props }: IconProps) {
   return <Element data-accordion-icon="" suppressHydrationWarning {...props} />;
 }
 
-export type ContentProps = PartProps<'div'>;
+export type ContentProps = Omit<PartProps<'div'>, 'hidden'> & {
+  /**
+   * How to hide the content while its section is closed: "until-found", so find in page opens
+   * the section, or `true` for plain `hidden`. Defaults to "until-found". It's shown without
+   * JavaScript either way.
+   */
+  hidden?: true | 'until-found';
+};
 
 /** The section's content. Give it an id, which the trigger's `aria-controls` names. */
-export function Content({ asChild, ...props }: ContentProps) {
+export function Content({ asChild, hidden, ...props }: ContentProps) {
   const Element = asChild ? Slot : 'div';
   // The element hides it after upgrade.
-  return <Element data-accordion-content="" suppressHydrationWarning {...props} />;
+  return (
+    <Element
+      data-accordion-content=""
+      data-hidden={hidden === true ? '' : hidden}
+      suppressHydrationWarning
+      {...props}
+    />
+  );
 }

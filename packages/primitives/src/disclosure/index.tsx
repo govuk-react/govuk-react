@@ -96,11 +96,24 @@ export function Trigger({ asChild, ...props }: TriggerProps) {
   return <button type="button" {...shared} {...props} />;
 }
 
-export type ContentProps = PartProps<'div'>;
+export type ContentProps = Omit<PartProps<'div'>, 'hidden'> & {
+  /**
+   * How to hide the content while closed: `true` for plain `hidden`, or "until-found", so find in
+   * page opens it. Defaults to `true`. It's shown without JavaScript either way.
+   */
+  hidden?: true | 'until-found';
+};
 
 /** The content the button shows and hides. Give it an id for the button's `aria-controls`. */
-export function Content({ asChild, ...props }: ContentProps) {
+export function Content({ asChild, hidden, ...props }: ContentProps) {
   const Element = asChild ? Slot : 'div';
   // The element owns `hidden` after upgrade.
-  return <Element data-disclosure-content="" suppressHydrationWarning {...props} />;
+  return (
+    <Element
+      data-disclosure-content=""
+      data-hidden={hidden === true ? '' : hidden}
+      suppressHydrationWarning
+      {...props}
+    />
+  );
 }

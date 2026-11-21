@@ -22,3 +22,13 @@ export function setAttribute(element: Element, name: string, value: string | nul
   if (value === null) element.removeAttribute(name);
   else if (element.getAttribute(name) !== value) element.setAttribute(name, value);
 }
+
+/**
+ * Shows or hides some content. A `data-hidden` attribute on it says how to hide it: "until-found"
+ * so find in page can still reach it, or empty for plain `hidden`. Without one, `fallback` does.
+ */
+export function setHidden(content: HTMLElement, hidden: boolean, fallback: '' | 'until-found') {
+  const requested = content.getAttribute('data-hidden');
+  const value = requested === null ? fallback : requested === 'until-found' ? 'until-found' : '';
+  setAttribute(content, 'hidden', hidden ? value : null);
+}

@@ -8,7 +8,9 @@
  *
  * Markup inside the element:
  * - `[data-disclosure-trigger]`: a `button` of type "button", rendered `hidden`.
- * - `[data-disclosure-content]`: the content, with an id for the button's `aria-controls`.
+ * - `[data-disclosure-content]`: the content, with an id for the button's `aria-controls`. It's
+ *   hidden with plain `hidden`, or with `hidden="until-found"` if its `data-hidden` is
+ *   "until-found", so find in page can open it.
  *
  * Attributes:
  * - `media`: while this media query matches, the content is always shown and the button hidden,
@@ -22,6 +24,7 @@
  * `govuk-react-disclosure:change` event with `{ open }`, for code that doesn't use React.
  */
 
+import { setHidden } from '../utils/dom.js';
 import { setUpWhenReady } from '../utils/set-up-when-ready.js';
 
 declare global {
@@ -62,14 +65,20 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     private controlled = false;
 
-    private readonly onClick = () => {
-      const open = !this.isOpen;
+    private readonly onClick = () => this.change(!this.isOpen);
+
+    // `beforematch` doesn't bubble.
+    private readonly onBeforeMatch = () => {
+      if (!this.isOpen) this.change(true);
+    };
+
+    private change(open: boolean) {
       if (!this.hasAttribute('open')) {
         this.apply(open);
         if (!this.controlled) this.picked = open;
       }
       this.dispatchEvent(new CustomEvent('govuk-react-disclosure:change', { detail: { open }, bubbles: true }));
-    };
+    }
 
     private readonly onModeChange = () => this.render();
 
@@ -88,6 +97,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
     disconnectedCallback() {
       this.observer?.disconnect();
       this.toggle?.removeEventListener('click', this.onClick);
+      this.content?.removeEventListener('beforematch', this.onBeforeMatch);
       this.mql?.removeEventListener('change', this.onModeChange);
       this.toggle = undefined;
       this.content = undefined;
@@ -121,6 +131,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       this.isOpen = open === null ? this.hasAttribute('default-open') : open === 'true';
       this.dataset.upgraded = '';
       toggle.addEventListener('click', this.onClick);
+      content.addEventListener('beforematch', this.onBeforeMatch);
       this.watchMedia();
       return true;
     }
@@ -147,7 +158,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
         element.dataset.state = state;
       });
       if (this.mql?.matches) {
-        content.hidden = false;
+        setHidden(content, false, '');
         toggle.hidden = true;
         toggle.setAttribute('aria-hidden', 'true');
         toggle.removeAttribute('aria-expanded');
@@ -157,7 +168,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
       toggle.removeAttribute('aria-hidden');
       toggle.setAttribute('aria-expanded', String(this.isOpen));
       if (content.id) toggle.setAttribute('aria-controls', content.id);
-      content.hidden = !this.isOpen;
+      setHidden(content, !this.isOpen, '');
     }
   }
 
