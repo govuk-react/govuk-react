@@ -89,7 +89,7 @@ if (typeof HTMLElement !== 'undefined' && typeof customElements !== 'undefined')
 
     private readonly onModeChange = () => this.render();
 
-    get open() {
+    get open(): boolean | undefined {
       return this.controlledOpen;
     }
 
